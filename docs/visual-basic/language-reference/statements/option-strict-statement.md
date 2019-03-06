@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: 1fce65b70c663ca56427122abb604d16fcd029d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981539"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355125"
 ---
 # <a name="option-strict-statement"></a>Long
 會限制僅限於擴展轉換的隱含資料類型轉換，不允許晚期繫結，不允許隱含型別，會導致`Object`型別。  
@@ -113,7 +113,7 @@ Option Strict { On | Off }
   
 2.  在 [**編譯**索引標籤上，在設定的值**Option Strict** ] 方塊中。  
   
-###  <a name="conditions"></a> 在 IDE 中設定警告組態  
+### <a name="conditions"></a> 在 IDE 中設定警告組態  
  當您使用[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`陳述式中，您可以額外控制產生錯誤的條件。 **警告組態**一節**編譯的頁面**已對應至三個條件會造成編譯時期錯誤設定時`Option Strict`上。 以下是這些設定：  
   
 -   **隱含轉換**  

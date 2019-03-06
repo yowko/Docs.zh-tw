@@ -5,12 +5,12 @@ helpviewer_keywords:
 - style design for controls [WPF]
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
-ms.openlocfilehash: 02333d05bc1c0f9804caa36af1a1842cba22908c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f03b8084b0160e5c61bfdc4dc6984fbd1cddde
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545026"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352980"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>設計可設定樣式控制項的方針
 本文摘要說明當設計要能夠容易設定樣式及範本化的控制項時，可考量的一組最佳做法。 我們是在研究內建之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項集的佈景主題控制項樣式時，經過許多嘗試和錯誤，才得出這組最佳做法。 我們了解到成功的樣式設定對設計良好的物件模型來說，不僅是樣式本身，也是一項功能。 本文件的適用對象是控制項作者，而不是樣式作者。  
@@ -27,7 +27,7 @@ ms.locfileid: "54545026"
   
 -   資料範本。  
   
- 如需樣式設定和範本化的簡介，請參閱[樣式設定和範本化範例](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 如需樣式設定和範本化的簡介，請參閱[樣式設定和範本化範例](styling-and-templating.md)。  
   
 <a name="Before_You_Start__Understanding_Your_Control"></a>   
 ## <a name="before-you-start-understanding-your-control"></a>在開始之前：了解您的控制項  
@@ -119,5 +119,5 @@ ms.locfileid: "54545026"
 -   **佈景主題樣式不需要在所有佈景主題都具有一致的「版面配置」語意**。 例如，預設樣式不需要保證控制項在所有佈景主題中都佔據相同的大小，或是保證控制項在所有佈景主題中都具有相同的內容邊界/邊框間距。  
   
 ## <a name="see-also"></a>另請參閱
-- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)
+- [樣式設定和範本化](styling-and-templating.md)
+- [控制項撰寫概觀](control-authoring-overview.md)

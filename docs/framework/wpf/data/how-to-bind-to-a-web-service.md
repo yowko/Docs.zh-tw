@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 0a738d52cfb01fff1cb21d0e6ebb8f1b7b28d57f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695763"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353929"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>HOW TO：繫結至 Web 服務
 此範例示範如何繫結至 Web 服務方法呼叫所傳回的物件。  
@@ -34,18 +34,18 @@ ms.locfileid: "54695763"
   
  接下來，您可以呼叫 Web 服務方法，並設定<xref:System.Windows.FrameworkElement.DataContext%2A>適當的控制項或視窗中傳回的物件。 **GetContent** MTPS 服務的方法，會參考**getContentRequest**物件。 因此，下列範例會先設定要求物件：  
   
- [!code-csharp[BindToWebService#Namespace](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
- [!code-vb[BindToWebService#Namespace](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
-[!code-csharp[BindToWebService#WebServiceCall](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
-[!code-vb[BindToWebService#WebServiceCall](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
+ [!code-csharp[BindToWebService#Namespace](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#namespace)]
+ [!code-vb[BindToWebService#Namespace](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#namespace)]  
+[!code-csharp[BindToWebService#WebServiceCall](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml.cs#webservicecall)]
+[!code-vb[BindToWebService#WebServiceCall](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BindToWebService/VisualBasic/Window1.xaml.vb#webservicecall)]  
   
  在後<xref:System.Windows.FrameworkElement.DataContext%2A>已設定，您可以建立繫結至物件的屬性，<xref:System.Windows.FrameworkElement.DataContext%2A>已設為。 在此範例中，<xref:System.Windows.FrameworkElement.DataContext%2A>設定為**getContentResponse**所傳回的物件**GetContent**方法。 在下列範例中，<xref:System.Windows.Controls.ItemsControl>繫結至並顯示**地區設定**的值**availableVersionsAndLocales**的**getContentResponse**。  
   
- [!code-xaml[BindToWebService#Binding](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
+ [!code-xaml[BindToWebService#Binding](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToWebService/CSharp/Window1.xaml#binding)]  
   
  如需結構的詳細資訊**getContentResponse**，請參閱[內容的服務文件](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [繫結來源概觀](../../../../docs/framework/wpf/data/binding-sources-overview.md)
-- [讓資料可於 XAML 中繫結](../../../../docs/framework/wpf/data/how-to-make-data-available-for-binding-in-xaml.md)
+- [資料繫結概觀](data-binding-overview.md)
+- [繫結來源概觀](binding-sources-overview.md)
+- [讓資料可於 XAML 中繫結](how-to-make-data-available-for-binding-in-xaml.md)

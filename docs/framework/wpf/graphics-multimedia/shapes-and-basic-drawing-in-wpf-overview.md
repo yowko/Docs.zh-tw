@@ -12,12 +12,12 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: e3a18d1cf788dfa8f2a9b05077b30af7eeabe584
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665899"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372733"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中圖案和基本繪圖概觀
 本主題概要說明如何使用繪圖<xref:System.Windows.Shapes.Shape>物件。 A<xref:System.Windows.Shapes.Shape>是一種<xref:System.Windows.UIElement>，可讓您將圖形描繪至螢幕。 因為它們是 UI 元素<xref:System.Windows.Shapes.Shape>物件都可以使用內部<xref:System.Windows.Controls.Panel>元素以及大部分的控制項。  
@@ -41,28 +41,28 @@ ms.locfileid: "54665899"
   
  <xref:System.Windows.Shapes.Line>類別可讓您在兩點之間繪製一條線。 下列範例示範用來指定線段座標和筆觸屬性的數種方法。  
   
- [!code-xaml[drawingwithshapeelements#LineExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
+ [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- [!code-cpp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
- [!code-csharp[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
- [!code-vb[shapesprocedural#ShapesProceduralLine](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
+ [!code-cpp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/cpp/VS_Snippets_Wpf/ShapesProcedural/CPP/ShapesProcedural.cpp#shapesproceduralline)]
+ [!code-csharp[shapesprocedural#ShapesProceduralLine](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapesProcedural/Csharp/ShapesProcedural.cs#shapesproceduralline)]
+ [!code-vb[shapesprocedural#ShapesProceduralLine](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ShapesProcedural/VisualBasic/ShapesProceduralVB.vb#shapesproceduralline)]  
   
  下圖顯示轉譯<xref:System.Windows.Shapes.Line>。  
   
- ![線段圖例](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-line2.gif "shape_ovw_line2")  
+ ![線段圖例](./media/shape-ovw-line2.gif "shape_ovw_line2")  
   
  雖然<xref:System.Windows.Shapes.Line>類別會提供<xref:System.Windows.Shapes.Shape.Fill%2A>屬性，並將它沒有任何作用，因為<xref:System.Windows.Shapes.Line>沒有任何區域。  
   
  另一個常見的圖形是<xref:System.Windows.Shapes.Ellipse>。  建立<xref:System.Windows.Shapes.Ellipse>藉由定義形狀<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>屬性。 若要繪製圓形，指定<xref:System.Windows.Shapes.Ellipse>其<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>值是否相等。  
   
- [!code-xaml[ShapeOverviews#ShapesOVW1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
+ [!code-xaml[ShapeOverviews#ShapesOVW1](~/samples/snippets/csharp/VS_Snippets_Wpf/ShapeOverviews/CS/Window1.xaml#shapesovw1)]  
   
- [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
- [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
+ [!code-csharp[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/CSharp/SetBackgroundColorOfShapeExample.cs#setbackgroundcolorofshapecodeexamplewholepage)]
+ [!code-vb[brushesmiscsnippets_procedural_snip#SetBackgroundColorOfShapeCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesMiscSnippets_procedural_snip/visualbasic/setbackgroundcolorofshapeexample.vb#setbackgroundcolorofshapecodeexamplewholepage)]  
   
  下圖顯示呈現的範例<xref:System.Windows.Shapes.Ellipse>。  
   
- ![橢圓形圖例](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
+ ![橢圓形圖例](./media/shape-ovw-ellipse2.png "shape_ovw_ellipse2")  
   
 <a name="paths"></a>   
 ## <a name="using-paths-and-geometries"></a>使用路徑和幾何  
@@ -76,13 +76,13 @@ ms.locfileid: "54665899"
   
  在下列範例中，<xref:System.Windows.Shapes.Path>會用來繪製二次方貝茲曲線。  
   
- [!code-xaml[geometrysample#34](../../../../samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
+ [!code-xaml[geometrysample#34](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
  下列影像顯示轉譯的圖形。  
   
- ![路徑圖例](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path2.gif "shape_ovw_path2")  
+ ![路徑圖例](./media/shape-ovw-path2.gif "shape_ovw_path2")  
   
- 如需詳細資訊<xref:System.Windows.Media.PathGeometry>和其他<xref:System.Windows.Media.Geometry>類別，請參閱[幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)。  
+ 如需詳細資訊<xref:System.Windows.Media.PathGeometry>和其他<xref:System.Windows.Media.Geometry>類別，請參閱[幾何概觀](geometry-overview.md)。  
   
 <a name="pathdatastring"></a>   
 ### <a name="xaml-abbreviated-syntax"></a>XAML 縮寫語法  
@@ -95,13 +95,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  下圖顯示轉譯<xref:System.Windows.Shapes.Path>。  
   
- ![路徑圖例](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-path.PNG "shape_ovw_path")  
+ ![路徑圖例](./media/shape-ovw-path.PNG "shape_ovw_path")  
   
  <xref:System.Windows.Shapes.Path.Data%2A>屬性字串的開頭"moveto"命令，以 M 指示，以建立路徑的開始點的座標系統中<xref:System.Windows.Controls.Canvas>。 <xref:System.Windows.Shapes.Path> 資料參數會區分大小寫。 大寫 M 表示新的目前點的絕對位置。 小寫 m 則表示相對座標。 第一個線段是三次方貝茲曲線，開始於 (100,200) 並結束於 (400,175)，使用 (100,25) 和 (400,350) 這兩個控制點繪製。 此區段會以中的 C 命令<xref:System.Windows.Shapes.Path.Data%2A>屬性字串。 同樣地，大寫 C 表示絕對路徑；小寫 c 表示相對路徑。  
   
  第二個線段的開頭為絕對水平 "lineto" 命令 H，它會指定從前面的子路徑的端點 (400,175) 到新端點 (280,175) 繪製的線段。 它是水平"lineto"命令，因為指定的值是*x*-協調。  
   
- 如需完整的路徑語法，請參閱<xref:System.Windows.Shapes.Path.Data%2A>參考和[使用 PathGeometry 建立圖案](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-shape-by-using-a-pathgeometry.md)。  
+ 如需完整的路徑語法，請參閱<xref:System.Windows.Shapes.Path.Data%2A>參考和[使用 PathGeometry 建立圖案](how-to-create-a-shape-by-using-a-pathgeometry.md)。  
   
 <a name="fillpaint"></a>   
 ## <a name="painting-shapes"></a>繪製圖形  
@@ -122,7 +122,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  下圖顯示轉譯<xref:System.Windows.Shapes.Ellipse>。  
   
- ![橢圓形](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
+ ![橢圓形](./media/shape-ovw-ellipsefill.PNG "shape_ovw_ellipsefill")  
   
  或者，您可以使用屬性元素語法明確建立<xref:System.Windows.Media.SolidColorBrush>物件來繪製圖案和純色。  
   
@@ -145,13 +145,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  下圖顯示轉譯的圖形。  
   
- ![SolidColorBrush 圖例](../../../../docs/framework/wpf/graphics-multimedia/media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
+ ![SolidColorBrush 圖例](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- 您也可以使用漸層、影像、圖樣等等繪製圖形的筆觸或填滿。 如需詳細資訊，請參閱 <<c0> [ 使用純色和漸層概觀繪製](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)。  
+ 您也可以使用漸層、影像、圖樣等等繪製圖形的筆觸或填滿。 如需詳細資訊，請參閱 <<c0> [ 使用純色和漸層概觀繪製](painting-with-solid-colors-and-gradients-overview.md)。  
   
 <a name="stretchableshapessection"></a>   
 ## <a name="stretchable-shapes"></a>可縮放的圖形  
- <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，並<xref:System.Windows.Shapes.Rectangle>類別都有<xref:System.Windows.Shapes.Shape.Stretch%2A>屬性。 此屬性會決定如何<xref:System.Windows.Shapes.Shape>物件的內容 （要繪製的圖形） 會縮放以填滿<xref:System.Windows.Shapes.Shape>物件的版面配置空間。 A<xref:System.Windows.Shapes.Shape>物件的版面配置空間是空間數量<xref:System.Windows.Shapes.Shape>配置版面配置系統，因為明確<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>設定或因為其<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>設定。 如需其他有關 Windows Presentation Foundation 中版面配置的詳細資訊，請參閱[版面配置](../../../../docs/framework/wpf/advanced/layout.md)概觀。  
+ <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，並<xref:System.Windows.Shapes.Rectangle>類別都有<xref:System.Windows.Shapes.Shape.Stretch%2A>屬性。 此屬性會決定如何<xref:System.Windows.Shapes.Shape>物件的內容 （要繪製的圖形） 會縮放以填滿<xref:System.Windows.Shapes.Shape>物件的版面配置空間。 A<xref:System.Windows.Shapes.Shape>物件的版面配置空間是空間數量<xref:System.Windows.Shapes.Shape>配置版面配置系統，因為明確<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>設定或因為其<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>設定。 如需其他有關 Windows Presentation Foundation 中版面配置的詳細資訊，請參閱[版面配置](../advanced/layout.md)概觀。  
   
  Stretch 屬性可接受下列其中一個值：  
   
@@ -202,21 +202,21 @@ myPolygon.StrokeThickness = 2;
   
  在下列範例中，<xref:System.Windows.Media.RotateTransform>來旋轉圖形的左上角 (0，0) 圖形 45 度。  
   
- [!code-xaml[transformssample#14](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
+ [!code-xaml[transformssample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#14)]  
   
  在下一個範例中，另一個圖形也旋轉 45 度，但這次是從點 (25,50) 旋轉。  
   
- [!code-xaml[transformssample#15](../../../../samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
+ [!code-xaml[transformssample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/transformsSample/CS/RotateTransformExample.xaml#15)]  
   
  下圖顯示套用兩種轉換的結果。  
   
- ![不同中心點的 45 度旋轉](../../../../docs/framework/wpf/graphics-multimedia/media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
+ ![不同中心點的 45 度旋轉](./media/wcpsdk-graphicsmm-rotatetransform45degrees.gif "wcpsdk_graphicsmm_rotatetransform45degrees")  
   
  在上一個範例中，已將單一轉換套用至每個圖形物件。 若要將多個轉換套用至圖形 （或任何其他 UI 項目），使用<xref:System.Windows.Media.TransformGroup>。  
   
 ## <a name="see-also"></a>另請參閱
-- [2D 圖形和影像處理](../../../../docs/framework/wpf/advanced/optimizing-performance-2d-graphics-and-imaging.md)
-- [使用純色和漸層繪製的概觀](../../../../docs/framework/wpf/graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)
-- [幾何概觀](../../../../docs/framework/wpf/graphics-multimedia/geometry-overview.md)
-- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
+- [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)
+- [幾何概觀](geometry-overview.md)
+- [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
+- [動畫概觀](animation-overview.md)

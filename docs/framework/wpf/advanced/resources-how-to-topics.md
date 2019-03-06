@@ -7,23 +7,23 @@ helpviewer_keywords:
 - reusing resources [WPF]
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
-ms.openlocfilehash: e0dc707419e975fa57a47e6c51a40c295b8e62ec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33546156"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57356200"
 ---
 # <a name="resources-how-to-topics"></a>資源 HOW TO 主題
-本節中的主題描述如何使用 Windows Presentation Foundation (WPF) 資源。  
+在本節中的主題描述如何使用 Windows Presentation Foundation (WPF) 資源。  
   
 ## <a name="in-this-section"></a>本節內容  
- [定義和參考資源](../../../../docs/framework/wpf/advanced/how-to-define-and-reference-a-resource.md)  
- [使用應用程式資源](../../../../docs/framework/wpf/advanced/how-to-use-application-resources.md)  
- [使用 SystemFonts](../../../../docs/framework/wpf/advanced/how-to-use-systemfonts.md)  
- [使用系統字型索引鍵](../../../../docs/framework/wpf/advanced/how-to-use-system-fonts-keys.md)  
- [使用 SystemParameters](../../../../docs/framework/wpf/advanced/how-to-use-systemparameters.md)  
- [使用系統參數索引鍵](../../../../docs/framework/wpf/advanced/how-to-use-system-parameters-keys.md)  
+ [定義和參考資源](how-to-define-and-reference-a-resource.md)  
+ [使用應用程式資源](how-to-use-application-resources.md)  
+ [使用 SystemFonts](how-to-use-systemfonts.md)  
+ [使用系統字型索引鍵](how-to-use-system-fonts-keys.md)  
+ [使用 SystemParameters](how-to-use-systemparameters.md)  
+ [使用系統參數索引鍵](how-to-use-system-parameters-keys.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.FrameworkTemplate.Resources%2A>  
@@ -35,4 +35,4 @@ ms.locfileid: "33546156"
  <xref:System.Windows.SystemFonts>  
   
 ## <a name="related-sections"></a>相關章節  
- [XAML 資源](../../../../docs/framework/wpf/advanced/xaml-resources.md)
+ [XAML 資源](xaml-resources.md)

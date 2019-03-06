@@ -5,12 +5,12 @@ helpviewer_keywords:
 - walkthroughs [WPF]
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
-ms.openlocfilehash: 1060e755ff5da3a3ef7f40417054cf0e23241652
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835261"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352408"
 ---
 # <a name="wpf-walkthroughs"></a>WPF 逐步解說
 逐步解說提供常見案例的逐步指示。 因此是開始學習產品或特定功能領域的最佳入門。  
@@ -31,20 +31,20 @@ ms.locfileid: "56835261"
   
 |標題|描述|  
 |-----------|-----------------|  
-|[逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)|示範如何建立 WPF 應用程式使用許多 WPF 包括控制項、 版面配置和資料繫結的常見功能。|  
-|[使用 XAML 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-xaml.md)|示範如何建立動畫的按鈕。|  
-|[使用 Microsoft Expression Blend 建立按鈕](../../../../docs/framework/wpf/controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|示範使用 Microsoft Expression Blend 中建立自訂的按鈕的程序。|  
-|[逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫](../../../../docs/framework/wpf/controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|示範如何從 SQL Server 資料庫擷取資料，並顯示該資料<xref:System.Windows.Controls.DataGrid>控制項。|  
+|[逐步解說：我的第一個 WPF 傳統型應用程式](walkthrough-my-first-wpf-desktop-application.md)|示範如何建立 WPF 應用程式使用許多 WPF 包括控制項、 版面配置和資料繫結的常見功能。|  
+|[使用 XAML 建立按鈕](../controls/walkthrough-create-a-button-by-using-xaml.md)|示範如何建立動畫的按鈕。|  
+|[使用 Microsoft Expression Blend 建立按鈕](../controls/walkthrough-create-a-button-by-using-microsoft-expression-blend.md)|示範使用 Microsoft Expression Blend 中建立自訂的按鈕的程序。|  
+|[逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫](../controls/walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|示範如何從 SQL Server 資料庫擷取資料，並顯示該資料<xref:System.Windows.Controls.DataGrid>控制項。|  
   
 ## <a name="migration-and-interoperability-in-wpf"></a>移轉和互通性，在 WPF 中  
   
 |標題|描述|  
 |-----------|-----------------|  
-|[逐步解說：裝載在 WPF 中的 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|示範如何裝載 Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF 應用程式中的控制項。|  
-|[逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|示範如何裝載 Windows Form 資料輸入中的複合控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。|  
-|[逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|示範如何裝載 Windows Forms 應用程式中的 WPF 資料項目複合控制項。|  
-|[逐步解說：在 WPF 中排列 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|示範如何使用 WPF 版面配置功能來排列混合式應用程式中的 Windows Form 控制項。|  
-|[逐步解說：繫結至混合應用程式中的資料](../../../../docs/framework/wpf/advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|示範如何在包含 Windows Forms 和 WPF 控制項的混合式應用程式中使用資料繫結。|  
+|[逐步解說：裝載在 WPF 中的 Windows Forms 控制項](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|示範如何裝載 Windows Form <xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType> WPF 應用程式中的控制項。|  
+|[逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|示範如何裝載 Windows Form 資料輸入中的複合控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。|  
+|[逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](../advanced/walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)|示範如何裝載 Windows Forms 應用程式中的 WPF 資料項目複合控制項。|  
+|[逐步解說：在 WPF 中排列 Windows Forms 控制項](../advanced/walkthrough-arranging-windows-forms-controls-in-wpf.md)|示範如何使用 WPF 版面配置功能來排列混合式應用程式中的 Windows Form 控制項。|  
+|[逐步解說：繫結至混合應用程式中的資料](../advanced/walkthrough-binding-to-data-in-hybrid-applications.md)|示範如何在包含 Windows Forms 和 WPF 控制項的混合式應用程式中使用資料繫結。|  
   
 ## <a name="related-sections"></a>相關章節  
   

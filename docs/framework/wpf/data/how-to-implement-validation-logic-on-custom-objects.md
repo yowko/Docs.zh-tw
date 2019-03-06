@@ -10,12 +10,12 @@ helpviewer_keywords:
 - implementing validation logic on custom objects [WPF]
 - custom objects [WPF], implementing validation logic on
 ms.assetid: 751fda9b-44f9-4d63-b4f2-1df07ac41e0f
-ms.openlocfilehash: e2b77ef65c92ae596c5620c9122dcf3db0bf9462
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e183d286e4b9cd037c352126203b1ecdcca89ebb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525985"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365356"
 ---
 # <a name="how-to-implement-validation-logic-on-custom-objects"></a>HOW TO：對自訂物件實作驗證邏輯
 此範例示範如何對自訂物件實作驗證邏輯，然後再繫結到它。  
@@ -23,16 +23,16 @@ ms.locfileid: "54525985"
 ## <a name="example"></a>範例  
  您可以提供驗證邏輯的商務層上，如果您的來源物件會實作<xref:System.ComponentModel.IDataErrorInfo>，如下列範例中，以定義`Person`可實作物件<xref:System.ComponentModel.IDataErrorInfo>:  
   
- [!code-csharp[BusinessLayerValidation#IDataErrorInfo](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Data.cs#idataerrorinfo)]
- [!code-vb[BusinessLayerValidation#IDataErrorInfo](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BusinessLayerValidation/VisualBasic/Data.vb#idataerrorinfo)]  
+ [!code-csharp[BusinessLayerValidation#IDataErrorInfo](~/samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Data.cs#idataerrorinfo)]
+ [!code-vb[BusinessLayerValidation#IDataErrorInfo](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BusinessLayerValidation/VisualBasic/Data.vb#idataerrorinfo)]  
   
  在下列範例中，文字方塊的 text 屬性繫結至`Person.Age`屬性，可透過指定的資源宣告的繫結`x:Key` `data`。 <xref:System.Windows.Controls.DataErrorValidationRule>會檢查所產生之驗證錯誤<xref:System.ComponentModel.IDataErrorInfo>實作。  
   
- [!code-xaml[BusinessLayerValidation#BoundTextBox](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Window1.xaml?highlight=8,11-19,25-42)]  
+ [!code-xaml[BusinessLayerValidation#BoundTextBox](~/samples/snippets/csharp/VS_Snippets_Wpf/BusinessLayerValidation/CSharp/Window1.xaml?highlight=8,11-19,25-42)]  
   
  或者，而不是使用<xref:System.Windows.Controls.DataErrorValidationRule>，您可以設定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>屬性設`true`。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.ExceptionValidationRule>
-- [實作繫結驗證](../../../../docs/framework/wpf/data/how-to-implement-binding-validation.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [實作繫結驗證](how-to-implement-binding-validation.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

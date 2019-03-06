@@ -24,12 +24,12 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: 8b42104522be854fe4e49d08e110497469d64980
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555358"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371485"
 ---
 # <a name="object-lifetime-events"></a>物件存留期事件
 本主題說明特定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件，表示物件的建立、使用和解構存留期階段。  
@@ -38,7 +38,7 @@ ms.locfileid: "54555358"
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)主題。 為了解本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (請參閱 [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)) 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
+ 本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)主題。 為了解本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (請參閱 [XAML 概觀 (WPF)](xaml-overview-wpf.md)) 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>物件存留期事件  
@@ -68,12 +68,12 @@ ms.locfileid: "54555358"
 ## <a name="lifetime-events-application-model-elements"></a>存留期事件應用程式模型項目  
  建置通用的存留期事件項目為下列應用程式模型項目： <xref:System.Windows.Application>， <xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>。 這些會延伸共通存留期事件及與其特定用途相關的其他事件。 下列位置對這些有詳細討論：  
   
--   <xref:System.Windows.Application>：[應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)。  
+-   <xref:System.Windows.Application>：[應用程式管理概觀](../app-development/application-management-overview.md)。  
   
--   <xref:System.Windows.Window>：[WPF Windows 概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)。  
+-   <xref:System.Windows.Window>：[WPF Windows 概觀](../app-development/wpf-windows-overview.md)。  
   
--   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)。  
+-   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[瀏覽概觀](../app-development/navigation-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [相依性屬性值優先順序](../../../../docs/framework/wpf/advanced/dependency-property-value-precedence.md)
-- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
+- [相依性屬性值優先順序](dependency-property-value-precedence.md)
+- [路由事件概觀](routed-events-overview.md)

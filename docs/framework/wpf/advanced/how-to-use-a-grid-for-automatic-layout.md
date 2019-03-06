@@ -5,12 +5,12 @@ helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 0eda70a7d8cc5abb70b5043cbaa1d4fc418bb1f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611419"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357478"
 ---
 # <a name="how-to-use-a-grid-for-automatic-layout"></a>HOW TO：針對自動配置使用格線
 此範例說明如何使用自動版面配置方法中的格線，以建立當地語系化的應用程式。  
@@ -22,13 +22,13 @@ ms.locfileid: "54611419"
 ## <a name="example"></a>範例  
  下列範例示範如何使用格線。  
   
- [!code-xaml[LocalizationGrid#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
+ [!code-xaml[LocalizationGrid#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationGrid/CS/Pane1.xaml#1)]  
   
  下圖顯示程式碼範例的輸出。  
   
- ![格線範例](../../../../docs/framework/wpf/advanced/media/glob-grid.png "glob_grid")  
+ ![格線範例](./media/glob-grid.png "glob_grid")  
 Grid  
   
 ## <a name="see-also"></a>另請參閱
-- [使用自動配置概觀](../../../../docs/framework/wpf/advanced/use-automatic-layout-overview.md)
-- [使用自動版面配置建立按鈕](../../../../docs/framework/wpf/advanced/how-to-use-automatic-layout-to-create-a-button.md)
+- [使用自動配置概觀](use-automatic-layout-overview.md)
+- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)

@@ -15,15 +15,15 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: ec3c7a15627cf423d27221b870286009a8f7606f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534784"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57371628"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全性
-<a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和用戶端指令碼語言都不能存取重要的系統資源。 您可以從瀏覽器中啟動 Windows Presentation Foundation (WPF) 瀏覽器裝載的應用程式，因為它們應該符合一組類似的限制。 若要強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同時依賴[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]並[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](請參閱[WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。 根據預設，瀏覽器裝載的應用程式會要求網際網路區域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]組權限，無論是否啟動從網際網路、 近端內部網路或在本機電腦。 使用少於完整權限集執行的應用程式便是以部分信任執行。  
+<a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和用戶端指令碼語言都不能存取重要的系統資源。 您可以從瀏覽器中啟動 Windows Presentation Foundation (WPF) 瀏覽器裝載的應用程式，因為它們應該符合一組類似的限制。 若要強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同時依賴[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]並[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](請參閱[WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md))。 根據預設，瀏覽器裝載的應用程式會要求網際網路區域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]組權限，無論是否啟動從網際網路、 近端內部網路或在本機電腦。 使用少於完整權限集執行的應用程式便是以部分信任執行。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 提供各種不同的支援，以確保，最多的功能，盡可能安全地使用在部分信任，並連同[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]，提供額外的部分信任程式設計支援。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54534784"
   
  下表涵蓋[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高的層級功能。 如需詳細資訊，請[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]文件中的每個成員所需的權限[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]。 此外，下列功能有關於部分信任執行的更詳細資訊，包括特殊考量。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (請參閱[XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md))。  
+-   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (請參閱[XAML 概觀 (WPF)](./advanced/xaml-overview-wpf.md))。  
   
 -   快顯視窗 (請參閱<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
   
--   將拖放 (請參閱[拖放概觀](../../../docs/framework/wpf/advanced/drag-and-drop-overview.md))。  
+-   將拖放 (請參閱[拖放概觀](./advanced/drag-and-drop-overview.md))。  
   
 -   剪貼簿 (請參閱<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
   
@@ -95,10 +95,10 @@ ms.locfileid: "54534784"
 ### <a name="detecting-permissions-using-cas"></a>使用 CAS 偵測權限  
  在某些情況下，有可能可供這兩個獨立應用程式的程式庫組件中的共用程式碼和[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]。 在這些情況下，程式碼執行的功能，所需的權限可能會超過應用程式的已授與權限集合所允許的權限。 不論是否使用 Microsoft.NET Framework 的安全性有特定的權限，可以偵測到您的應用程式。 具體來說，它可以測試是否有特定的權限藉由呼叫<xref:System.Security.CodeAccessPermission.Demand%2A>所需的權限的執行個體上的方法。 這會顯示在下列的範例中，程式碼會查詢它是否能夠將檔案儲存到本機磁碟︰  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandling.cs#detectpermscode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandling.vb#detectpermscode2)]  
   
  如果應用程式沒有所需的權限，呼叫<xref:System.Security.CodeAccessPermission.Demand%2A>將會擲回安全性例外狀況。 否則，便已授與權限。 `IsPermissionGranted` 會封裝這個行為，並傳回`true`或`false`視情況。  
   
@@ -106,14 +106,14 @@ ms.locfileid: "54534784"
 ### <a name="graceful-degradation-of-functionality"></a>功能正常降級  
  能夠偵測程式碼是否有權執行它需要做的事，對於可以從不同區域執行的程式碼而言很有趣。 不過偵測區域是一件事，可能的話，為使用者提供替代方式會好上許多。 比方說，完全信任應用程式通常可讓使用者在任何想要的地方建立檔案，而部分信任應用程式則只能在隔離儲存區建立檔案。 如果建立檔案的程式碼存在於完全信任 (獨立式) 應用程式和部分信任 (瀏覽器裝載) 應用程式所共用的組件中，而且兩個應用程式都想要讓使用者能夠建立檔案，則共用的程式碼應該先偵測它是在部分信任還是完全信任中執行，然後才能在適當位置中建立檔案。 下列程式碼可示範兩種情況。  
   
- [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
- [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
-[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
-[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
+ [!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode1)]
+ [!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode1)]  
+[!code-csharp[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/csharp/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/CSharp/FileHandlingGraceful.cs#detectpermsgracefulcode2)]
+[!code-vb[PartialTrustSecurityOverviewSnippets#DetectPermsGracefulCODE2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PartialTrustSecurityOverviewSnippets/VisualBasic/FileHandlingGraceful.vb#detectpermsgracefulcode2)]  
   
  在許多情況下，您應該能夠找到部分信任的替代方法。  
   
- 在受控制的環境中，內部網路，例如自訂的受管理的架構可以安裝在用戶端到基底[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]。 這些程式庫可以執行需要完全信任，程式碼，並且從只使用允許部分信任的應用程式參考<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(如需詳細資訊，請參閱 <<c2> [ 安全性](../../../docs/framework/wpf/security-wpf.md)和[WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md))。  
+ 在受控制的環境中，內部網路，例如自訂的受管理的架構可以安裝在用戶端到基底[!INCLUDE[TLA#tla_gac](../../../includes/tlasharptla-gac-md.md)]。 這些程式庫可以執行需要完全信任，程式碼，並且從只使用允許部分信任的應用程式參考<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(如需詳細資訊，請參閱 <<c2> [ 安全性](security-wpf.md)和[WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md))。  
   
 <a name="Browser_Host_Detection"></a>   
 ### <a name="browser-host-detection"></a>瀏覽器裝載偵測  
@@ -151,19 +151,19 @@ ms.locfileid: "54534784"
 > [!NOTE]
 >  在部分信任中，只有在使用者啟動時，才允許剪下和貼上。  
   
- 如果您需要提高權限，您需要變更專案設定和 ClickOnce 應用程式資訊清單。 如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](../../../docs/framework/wpf/app-development/wpf-xaml-browser-applications-overview.md)。 下列文件可能有用。  
+ 如果您需要提高權限，您需要變更專案設定和 ClickOnce 應用程式資訊清單。 如需詳細資訊，請參閱 [WPF XAML 瀏覽器應用程式概觀](./app-development/wpf-xaml-browser-applications-overview.md)。 下列文件可能有用。  
   
--   [Mage.exe (資訊清單產生和編輯工具)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)。  
+-   [Mage.exe (資訊清單產生和編輯工具)](../tools/mage-exe-manifest-generation-and-editing-tool.md)。  
   
--   [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
+-   [MageUI.exe (圖形用戶端、資訊清單產生和編輯工具)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)。  
   
 -   [保護 ClickOnce 應用程式](/visualstudio/deployment/securing-clickonce-applications)。  
   
  如果您[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]需要完全信任，您可以使用相同的工具，以增加要求的權限。 雖然[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]如果它是安裝在並從本機電腦，也就是內部網路，或從受信任或允許的網站，在瀏覽器中列出的 URL 啟動，則只會得到完全信任。 如果應用程式是從內部網路或受信任的網站安裝，使用者會收到標準 ClickOnce 提示，通知他們權限已提高。 使用者可以選擇繼續或取消安裝。  
   
- 或者，您可以使用 ClickOnce 受信任部署模型，以從任何安全性區域進行完全信任部署。 如需詳細資訊，請參閱 < [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)並[安全性](../../../docs/framework/wpf/security-wpf.md)。  
+ 或者，您可以使用 ClickOnce 受信任部署模型，以從任何安全性區域進行完全信任部署。 如需詳細資訊，請參閱 < [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)並[安全性](security-wpf.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [安全性](../../../docs/framework/wpf/security-wpf.md)
-- [WPF 安全性策略 – 平台安全性](../../../docs/framework/wpf/wpf-security-strategy-platform-security.md)
-- [WPF 安全性策略 – 安全性工程](../../../docs/framework/wpf/wpf-security-strategy-security-engineering.md)
+- [安全性](security-wpf.md)
+- [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
+- [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)

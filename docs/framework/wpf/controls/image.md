@@ -7,18 +7,18 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: f8a7e9adb8ca7d9e21bbc30a346b12d8b584067a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695795"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357556"
 ---
 # <a name="image"></a>Image
 <xref:System.Windows.Controls.Image>項目用來顯示中的點陣圖影像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。  
   
 ## <a name="in-this-section"></a>本節內容  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/image-how-to-topics.md)  
+ [HOW-TO 主題](image-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Image>  
@@ -28,5 +28,5 @@ ms.locfileid: "54695795"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>另請參閱
-- [影像處理概觀](../../../../docs/framework/wpf/graphics-multimedia/imaging-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/imaging-how-to-topics.md)
+- [影像處理概觀](../graphics-multimedia/imaging-overview.md)
+- [HOW-TO 主題](../graphics-multimedia/imaging-how-to-topics.md)

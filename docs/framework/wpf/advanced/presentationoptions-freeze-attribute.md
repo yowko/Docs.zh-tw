@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 9909a4170bdb217f91a1fc5713e89bb3a979a999
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512169"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57378856"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 屬性
 設定組<xref:System.Windows.Freezable.IsFrozen%2A>狀態`true`上包含<xref:System.Windows.Freezable>項目。 預設行為<xref:System.Windows.Freezable>而不需要`PresentationOptions:Freeze`指定的屬性是<xref:System.Windows.Freezable.IsFrozen%2A>是`false`在載入時間和在一般的相依<xref:System.Windows.Freezable>在執行階段的行為。  
@@ -35,7 +35,7 @@ ms.locfileid: "54512169"
 |`freezableElement`|具現化任何項目衍生的類別<xref:System.Windows.Freezable>。|  
   
 ## <a name="remarks"></a>備註  
- `Freeze`屬性是唯一的屬性或其他程式設計項目定義在`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`XML 命名空間。 `Freeze`屬性存在這個特殊的命名空間中，好讓它可以為忽略，使用指定特別[mc: Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)做為根項目宣告的一部分。 原因，`Freeze`必須是能夠忽略因為不是所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作都能 freeze<xref:System.Windows.Freezable>在載入時，這項功能不屬於[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]規格。  
+ `Freeze`屬性是唯一的屬性或其他程式設計項目定義在`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`XML 命名空間。 `Freeze`屬性存在這個特殊的命名空間中，好讓它可以為忽略，使用指定特別[mc: Ignorable 屬性](mc-ignorable-attribute.md)做為根項目宣告的一部分。 原因，`Freeze`必須是能夠忽略因為不是所有[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作都能 freeze<xref:System.Windows.Freezable>在載入時，這項功能不屬於[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]規格。  
   
  處理能力`Freeze`屬性特別是內建[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器處理[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]編譯的應用程式。 任何類別中，不支援的屬性和屬性語法不是可延伸或修改。 如果您要實作您自己[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]您可以選擇平行的凍結行為的處理器[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器在處理時`Freeze`屬性<xref:System.Windows.Freezable>在載入時間的項目。  
   
@@ -43,5 +43,5 @@ ms.locfileid: "54512169"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Freezable>
-- [Freezable 物件概觀](../../../../docs/framework/wpf/advanced/freezable-objects-overview.md)
-- [mc:Ignorable 屬性](../../../../docs/framework/wpf/advanced/mc-ignorable-attribute.md)
+- [Freezable 物件概觀](freezable-objects-overview.md)
+- [mc:Ignorable 屬性](mc-ignorable-attribute.md)

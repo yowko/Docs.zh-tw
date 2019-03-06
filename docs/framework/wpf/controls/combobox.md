@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ComboBox
 - ComboBox control [WPF]
 ms.assetid: fe0c2f62-fec2-4c41-a37e-5773d284170c
-ms.openlocfilehash: e3ca368f8b7b2b3cd956bdaac498874a806dd876
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d8684ac382fefa308b671d5459125bd755960142
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747028"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374839"
 ---
 # <a name="combobox"></a>ComboBox
 <xref:System.Windows.Controls.ComboBox>控制項將使用者提供的選項清單。 清單是顯示和隱藏控制項展開和摺疊。 在其預設狀態下，清單會摺疊，顯示只有一個選擇。 使用者按一下按鈕，以查看完整的選項清單。  
   
  下圖顯示<xref:System.Windows.Controls.ComboBox>不同狀態。  
   
- ![下拉式方塊的預設和按下狀態](../../../../docs/framework/wpf/controls/media/ss-ctl-combobox.gif "SS_CTL_combobox")  
+ ![下拉式方塊的預設和按下狀態](./media/ss-ctl-combobox.gif "SS_CTL_combobox")  
 摺疊和展開  
   
 ## <a name="reference"></a>參考資料  

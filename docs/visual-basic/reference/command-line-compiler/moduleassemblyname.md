@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: f88a0001bb2ba55c0a3eac3ed208f14292d86734
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a16dd616c8a38dea4bd1779e4feea779b3a18e2d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745660"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375294"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 指定將包含此模組的組件名稱。  
@@ -37,7 +37,7 @@ ms.locfileid: "56745660"
   
 -   參考的組件具有 friend 組件存取權限授與將在其中建置模組的組件。  
   
- 如需建立模組的詳細資訊，請參閱[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。 如需 friend 組件的詳細資訊，請參閱[Friend 組件](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)。  
+ 如需建立模組的詳細資訊，請參閱[/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)。 如需 friend 組件的詳細資訊，請參閱[Friend 組件](../../../standard/assembly/friend-assemblies.md)。  
   
 > [!NOTE]
 >  `-moduleassemblyname`選項不是從 Visual Studio 開發環境中使用; 它是使用只有當您編譯的命令提示字元。  
@@ -49,6 +49,6 @@ ms.locfileid: "56745660"
 - [-main](../../../visual-basic/reference/command-line-compiler/main.md)
 - [-參考 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/reference.md)
 - [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)
-- [在.NET 中的組件](../../../standard/assembly/index.md)
+- [.NET 中的組件](../../../standard/assembly/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Friend 組件](../../programming-guide/concepts/assemblies-gac/friend-assemblies.md)
+- [Friend 組件](../../../standard/assembly/friend-assemblies.md)

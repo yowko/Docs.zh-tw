@@ -5,11 +5,11 @@ helpviewer_keywords:
 - msmqIntegrationBinding Element
 ms.assetid: edf277f3-e3bf-4ed8-9f55-83b5788430a7
 ms.openlocfilehash: eaa08ae1d708f2498f459519683b4ffa05be9e49
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355030"
 ---
 # <a name="msmqintegrationbinding"></a>\<msmqIntegrationBinding>
 定義繫結，此繫結可透過 MSMQ 傳遞訊息來提供查詢支援。  
@@ -95,7 +95,7 @@ msmqIntegrationBinding
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   
 ## <a name="remarks"></a>備註  
- 此繫結項目可用來讓 Windows Communication Foundation (WCF) 應用程式傳送和接收訊息，從現有的 MSMQ 應用程式使用 COM、 MSMQ 原生 Api 或定義中的型別<xref:System.Messaging?displayProperty=nameWithType>命名空間您可以使用這個組態項目，指定如何定址佇列、 傳輸保證、 是否永久儲存訊息，以及應如何保護和驗證訊息。 如需詳細資訊，請參閱[＜How to：與 WCF 端點交換訊息和訊息佇列應用程式](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
+ 此繫結項目可用來讓 Windows Communication Foundation (WCF) 應用程式傳送和接收訊息，從現有的 MSMQ 應用程式使用 COM、 MSMQ 原生 Api 或定義中的型別<xref:System.Messaging?displayProperty=nameWithType>命名空間您可以使用這個組態項目，指定如何定址佇列、 傳輸保證、 是否永久儲存訊息，以及應如何保護和驗證訊息。 如需詳細資訊，請參閱[如何：與 WCF 端點交換訊息和訊息佇列應用程式](../../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)。  
   
 ## <a name="example"></a>範例  
   

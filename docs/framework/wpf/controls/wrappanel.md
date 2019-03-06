@@ -8,15 +8,15 @@ helpviewer_keywords:
 - WrapPanel control [WPF]
 - content [WPF], sequentially positioning
 ms.assetid: f0acb1b4-df71-4c5a-b4a4-98f189002537
-ms.openlocfilehash: a8072a90984e5b9b926ab28d7f0239a71b754b73
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 530c41938ae4abb893fd91d64804c7aaa2d430b5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33554024"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362145"
 ---
 # <a name="wrappanel"></a>WrapPanel
-<xref:System.Windows.Controls.WrapPanel>元素的從左到右，從內容換至下一行，其包含的方塊邊緣的連續位置放置子項目。  
+<xref:System.Windows.Controls.WrapPanel>項目從左到右，內容換至下一行，其包含的方塊邊緣的連續位置中放置子項目。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Panel>  
@@ -34,8 +34,8 @@ ms.locfileid: "33554024"
  <xref:System.Windows.Controls.WrapPanel>  
   
 ## <a name="related-sections"></a>相關章節  
- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)  
+ [版面配置](../advanced/layout.md)  
   
- [逐步解說：我的第一個 WPF 傳統型應用程式](../../../../docs/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application.md)  
+ [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)  
   
- [ScrollViewer 概觀](../../../../docs/framework/wpf/controls/scrollviewer-overview.md)
+ [ScrollViewer 概觀](scrollviewer-overview.md)

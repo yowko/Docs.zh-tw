@@ -12,12 +12,12 @@ helpviewer_keywords:
 - animation [WPF], color of GradientStop objects
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
-ms.openlocfilehash: 48f10d418c4f584fd9d24f9292efbca5a941643c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d8c1bb5cd133b2ee9d50a7e851d2ca3b4fff023
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711131"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368882"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>HOW TO：建立漸層停駐點位置或色彩的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.GradientStop.Color%2A>並<xref:System.Windows.Media.GradientStop.Offset%2A>的<xref:System.Windows.Media.GradientStop>物件。  
@@ -31,9 +31,9 @@ ms.locfileid: "54711131"
   
 -   第三個的動畫，另一個<xref:System.Windows.Media.Animation.ColorAnimation>，以動畫顯示的第三個漸層停駐的不透明度<xref:System.Windows.Media.GradientStop.Color%2A>-1，然後重新開機。 如此一來，漸層中的第三個色彩或淡出，然後再次不透明。  
   
- [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
- [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
- [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
+ [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
+ [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]
+ [!code-xaml[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/GradientStopAnimationExample.xaml#graphicsmmgradientanimationexampleswholepage)]  
   
  雖然此範例會使用<xref:System.Windows.Media.LinearGradientBrush>，會以動畫顯示相同的程序<xref:System.Windows.Media.GradientStop>物件內<xref:System.Windows.Media.RadialGradientBrush>。  
   
@@ -41,5 +41,5 @@ ms.locfileid: "54711131"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.GradientStop>
-- [動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)
-- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [動畫概觀](animation-overview.md)
+- [分鏡腳本概觀](storyboards-overview.md)

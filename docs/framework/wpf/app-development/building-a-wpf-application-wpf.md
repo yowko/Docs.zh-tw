@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 682563937de0bb907b97ee4237d33c76307493da
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364290"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可執行檔 (.exe)、 程式庫 (.dll) 或這兩種類型的組件的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
@@ -32,7 +32,7 @@ Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprd
 ## <a name="wpf-build-pipeline"></a>WPF 組建管線  
  建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 專案時，會叫用特定語言和特定 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 之目標的組合。 執行這些目標的程序稱為組建管線，下圖說明主要步驟。  
   
- ![WPF 建置流程](../../../../docs/framework/wpf/app-development/media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
+ ![WPF 建置流程](./media/wpfbuildsystem-figure1.png "WPFBuildSystem_Figure1")  
   
 <a name="Pre_Build_Initializations"></a>   
 ### <a name="pre-build-initializations"></a>建置前初始化  
@@ -167,7 +167,7 @@ End Sub
 -   不重新編譯任何項目 (如果專案中沒有任何變更)。  
   
 ## <a name="see-also"></a>另請參閱
-- [部署 WPF 應用程式](../../../../docs/framework/wpf/app-development/deploying-a-wpf-application-wpf.md)
+- [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild 參考](/visualstudio/msbuild/wpf-msbuild-reference)
-- [WPF 中的 Pack URI](../../../../docs/framework/wpf/app-development/pack-uris-in-wpf.md)
-- [WPF 應用程式資源、內容和資料檔案](../../../../docs/framework/wpf/app-development/wpf-application-resource-content-and-data-files.md)
+- [WPF 中的 Pack URI](pack-uris-in-wpf.md)
+- [WPF 應用程式資源、內容和資料檔案](wpf-application-resource-content-and-data-files.md)

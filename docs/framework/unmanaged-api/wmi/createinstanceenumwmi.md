@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ba59d9d47d5c120eb2ff0a3a3c65e0fe8cdf75e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498290"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373045"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 函式
-傳回列舉值，傳回符合指定的選取準則指定之類別的執行個體。 
+
+傳回會傳回滿足指定選取條件之指定類別執行個體的列舉程式。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```cpp
 HRESULT CreateInstanceEnumWmi (
    [in] BSTR                    strFilter,
    [in] long                    lFlags,
@@ -42,16 +43,16 @@ HRESULT CreateInstanceEnumWmi (
    [in] BSTR                    strUser,
    [in] BSTR                    strPassword,
    [in] BSTR                    strAuthority
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>參數
 
-`strFilter`    
+`strFilter`\
 [in]執行個體所需的類別名稱。 這個參數不可以是 `null`。
 
-`lFlags`   
-[in]旗標的組合會影響此函式的行為。 下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼： 
+`lFlags`\
+[in]旗標的組合會影響此函式的行為。 下列的值會定義於*WbemCli.h*標頭檔，或者您可以將其定義為常數中程式碼：
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -60,31 +61,32 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_FLAG_SHALLOW` | 1 | 列舉型別包含這個類別只單純執行個體，並排除所有執行個體，提供這個類別中找不到屬性的子類別。 |
 | `WBEM_FLAG_RETURN_IMMEDIATELY` | 0x10 | 旗標會導致半同步呼叫。 |
 | `WBEM_FLAG_FORWARD_ONLY` | 0x20 | 函數會傳回順向的列舉值。 一般而言，順向的列舉值會比較快，並使用較少的記憶體，比傳統的列舉值，但不是允許呼叫[複製品](clone.md)。 |
-| `WBEM_FLAG_BIDIRECTIONAL` | 0 | 之前在發行時，WMI 就會保留在 enumration 物件的指標。 | 
+| `WBEM_FLAG_BIDIRECTIONAL` | 0 | 之前在發行時，WMI 就會保留在列舉中的物件的指標。 |
 
 建議的旗標`WBEM_FLAG_RETURN_IMMEDIATELY`和`WBEM_FLAG_FORWARD_ONLY`為了達到最佳效能。
 
-`pCtx`  
+`pCtx`\
 [in]一般而言，這個值是`null`。 否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)可用的提供者所提供的要求的執行個體的執行個體。
 
-`ppEnum`  
+`ppEnum`\
 [out]接收列舉值的指標。
 
-`authLevel`  
+`authLevel`\
 [in]授權層級。
 
-`impLevel` [in]模擬等級。
+`impLevel`\
+[in]模擬等級。
 
-`pCurrentNamespace`   
+`pCurrentNamespace`\
 [in]指標[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件，表示目前的命名空間。
 
-`strUser`   
+`strUser`\
 [in]使用者名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
 
-`strPassword`   
+`strPassword`\
 [in]密碼。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
 
-`strAuthority`   
+`strAuthority`\
 [in]使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
 
 ## <a name="return-value"></a>傳回值
@@ -101,7 +103,7 @@ HRESULT CreateInstanceEnumWmi (
 | `WBEM_E_SHUTTING_DOWN` | 0x80041033 | WMI 是可能已停止和重新啟動。 呼叫[ConnectServerWmi](connectserverwmi.md)一次。 |
 | `WBEM_E_TRANSPORT_FAILURE` | 0x80041015 | 目前的處理序與 WMI 的遠端程序呼叫 (RPC) 連結失敗。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[iwbemservices:: Createclassenum](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemservices-createinstanceenum)方法。
@@ -110,12 +112,14 @@ HRESULT CreateInstanceEnumWmi (
 
 如果函式呼叫失敗，您可以藉由呼叫來取得其他錯誤資訊[GetErrorInfo](geterrorinfo.md)函式。
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** WMINet_Utils.idl
+
+**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

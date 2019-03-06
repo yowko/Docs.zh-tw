@@ -16,21 +16,21 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a561c5af868968624ee9ee81050d87b17c4591be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eb6b870beabb71e340b0ec39c489cedb02128cf
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624414"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57366630"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 函式
-表示使用者認證是否允許指定的存取[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件。   
-  
+表示使用者認證是否允許指定的存取[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件。 
+
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-  
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -39,24 +39,27 @@ HRESULT BlessIWbemServicesObject (
    [in] DWORD impLevel, 
    [in] DWORD authnLevel
 );
-```  
+```
 
 ## <a name="parameters"></a>參數
 
-`pIWbemServices`  
+`pIWbemServices`\
 [in]WMI 服務物件的指標。
 
-`strUser`  
+`strUser`\
 [in]使用者名稱。
 
-`strPassword`  
+`strPassword`\
 [in]與相關聯的密碼`strUser`。
 
-`strAuthority` [in]使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
+`strAuthority`\
+[in]使用者的網域名稱。 請參閱[ConnectServerWmi](connectserverwmi.md)函式，如需詳細資訊。
 
-`impLevel` [in]模擬等級。
+`impLevel`\
+[in]模擬等級。
 
-`authnLevel` [in]授權層級。
+`authnLevel`\
+[in]授權層級。
 
 ## <a name="return-value"></a>傳回值
 
@@ -70,12 +73,14 @@ HRESULT BlessIWbemServicesObject (
 | `E_OUTOFMEMORY` | 0x80000002 | 沒有足夠的記憶體可供執行作業。 | 
 | `S_OK` | 0 | 函式呼叫成功。 | 
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+ **標頭：** WMINet_Utils.idl
+
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

@@ -8,24 +8,25 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 50656f0d8ca1eafa62d65a2fe275398c9694cc69
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57367566"
 ---
 # <a name="tooltip"></a>ToolTip
-工具提示是小型的快顯視窗出現時，使用者將滑鼠指標停留在項目，例如為 [過度] <xref:System.Windows.Controls.Button>。  
+工具提示是一個小型的快顯視窗出現時的使用者將滑鼠指標停留的項目，可能會透過<xref:System.Windows.Controls.Button>。  
   
- 下圖顯示滑鼠指標的指向**關閉**<xref:System.Windows.Controls.Button>，這會將會顯示其識別<xref:System.Windows.Controls.ToolTip>。  
+ 下圖顯示滑鼠指標指向**關閉**<xref:System.Windows.Controls.Button>，然後顯示其識別<xref:System.Windows.Controls.ToolTip>。  
   
- 關閉 按鈕以顯示其工具提示  
+ 與顯示其工具提示 [關閉] 按鈕  
   
- ![工具提示螢幕擷取畫面](../../../../docs/framework/wpf/controls/media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
+ ![工具提示的螢幕擷取畫面](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>本節內容  
- [工具提示概觀](../../../../docs/framework/wpf/controls/tooltip-overview.md)  
-  [HOW-TO 主題](../../../../docs/framework/wpf/controls/tooltip-how-to-topics.md)  
+ [工具提示概觀](tooltip-overview.md)  
+  [HOW-TO 主題](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ToolTip>  
@@ -33,5 +34,5 @@ ms.lasthandoff: 05/04/2018
   <xref:System.Windows.Controls.Primitives.Popup>  
   
 ## <a name="related-sections"></a>相關章節  
- [快顯功能表概觀](../../../../docs/framework/wpf/controls/popup-overview.md)  
-  [HOW-TO 主題](../../../../docs/framework/wpf/controls/popup-how-to-topics.md)
+ [快顯功能表概觀](popup-overview.md)  
+  [HOW-TO 主題](popup-how-to-topics.md)

@@ -7,29 +7,29 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], how-to topics
 ms.assetid: aafce40c-9bfe-45ec-86a3-599616a11276
-ms.openlocfilehash: 0e99793a1c8ec179ee01744f8618ff6463766704
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2665fc60e1366f30fb7f3621bb0669db1ea3db0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33555798"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374241"
 ---
 # <a name="listview-how-to-topics"></a>ListView HOW TO 主題
-本節中的主題描述如何使用<xref:System.Windows.Controls.ListView>控制項來顯示一組資料的項目。  
+在本節中的主題描述如何使用<xref:System.Windows.Controls.ListView>控制項來顯示一組資料的項目。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在按一下標頭時排序 GridView 資料行](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
- [建立 ListView 的自訂檢視模式](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)  
- [使用範本為使用 GridView 的 ListView 設定樣式](../../../../docs/framework/wpf/controls/how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
- [為已拖曳的 GridView 資料行行首建立樣式](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
- [使用 GridView 顯示 ListView 內容](../../../../docs/framework/wpf/controls/how-to-display-listview-contents-by-using-a-gridview.md)  
- [使用觸發程式設定 ListView 中的選取項目樣式](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
- [使用 CheckBox 建立 ListViewItems](../../../../docs/framework/wpf/controls/how-to-create-listviewitems-with-a-checkbox.md)  
- [使用 GridViewRowPresenter 顯示資料](../../../../docs/framework/wpf/controls/how-to-display-data-by-using-gridviewrowpresenter.md)  
- [實作 GridView 之 ListView 中的群組項目](../../../../docs/framework/wpf/controls/how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
- [在實作 GridView 的 ListView 中設定資料列的樣式](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
- [變更 ListView 中資料行的水平對齊](../../../../docs/framework/wpf/controls/how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
- [處理 ListView 中每個項目的 MouseDoubleClick 事件](../../../../docs/framework/wpf/controls/how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
+ [在按一下標頭時排序 GridView 資料行](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)  
+ [建立 ListView 的自訂檢視模式](how-to-create-a-custom-view-mode-for-a-listview.md)  
+ [使用範本為使用 GridView 的 ListView 設定樣式](how-to-use-templates-to-style-a-listview-that-uses-gridview.md)  
+ [為已拖曳的 GridView 資料行行首建立樣式](how-to-create-a-style-for-a-dragged-gridview-column-header.md)  
+ [使用 GridView 顯示 ListView 內容](how-to-display-listview-contents-by-using-a-gridview.md)  
+ [使用觸發程式設定 ListView 中的選取項目樣式](how-to-use-triggers-to-style-selected-items-in-a-listview.md)  
+ [使用 CheckBox 建立 ListViewItems](how-to-create-listviewitems-with-a-checkbox.md)  
+ [使用 GridViewRowPresenter 顯示資料](how-to-display-data-by-using-gridviewrowpresenter.md)  
+ [實作 GridView 之 ListView 中的群組項目](how-to-group-items-in-a-listview-that-implements-a-gridview.md)  
+ [在實作 GridView 的 ListView 中設定資料列的樣式](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)  
+ [變更 ListView 中資料行的水平對齊](how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md)  
+ [處理 ListView 中每個項目的 MouseDoubleClick 事件](how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ListView>  
@@ -39,4 +39,4 @@ ms.locfileid: "33555798"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>相關章節  
- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)
+ [ListView 概觀](listview-overview.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 161c42254144fca0e76bfb5e4aa10f1afb5b11d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578529"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360195"
 ---
 # <a name="gridview-overview"></a>GridView 概觀
 <xref:System.Windows.Controls.GridView> 檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別讓您和您的使用者可以檢視通常使用按鈕作為互動式資料行標頭的資料表中的集合項目。 本主題將介紹<xref:System.Windows.Controls.GridView>類別並概述其用法。  
@@ -29,19 +29,19 @@ ms.locfileid: "54578529"
   
  **ListView 內容的 GridView 檢視**  
   
- ![已設定樣式的 ListView](../../../../docs/framework/wpf/controls/media/styledlistview.PNG "StyledListView")  
+ ![已設定樣式的 ListView](./media/styledlistview.PNG "StyledListView")  
   
  <xref:System.Windows.Controls.GridView> 資料行都由<xref:System.Windows.Controls.GridViewColumn>其內容可以自動調整大小的物件。 （選擇性） 您可以明確設定<xref:System.Windows.Controls.GridViewColumn>為特定寬度。 您可以藉由拖曳資料行標頭間的移駐夾來調整資料行大小。 您可以也會動態地新增、 移除、 取代和重新排列資料行，因為這項功能內建在<xref:System.Windows.Controls.GridView>。 不過，<xref:System.Windows.Controls.GridView>無法直接更新它所顯示的資料。  
   
  下列範例示範如何定義<xref:System.Windows.Controls.GridView>顯示員工資料。 在此範例中，<xref:System.Windows.Controls.ListView>定義`EmployeeInfoDataSource`做為<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。 屬性定義<xref:System.Windows.Controls.GridViewColumn.DisplayMemberBinding%2A>繫結<xref:System.Windows.Controls.GridViewColumn>內容`EmployeeInfoDataSource`資料類別。  
   
- [!code-xaml[ListViewCode#ListViewEmployee](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
+ [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
  下圖顯示上一個範例所建立的表格。  
   
  **顯示來自 ItemsSource 之資料的 GridView**  
   
- ![含有 GridView 輸出的 ListView](../../../../docs/framework/wpf/controls/media/listviewgridview.JPG "ListViewGridView")  
+ ![含有 GridView 輸出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView 版面配置和樣式  
@@ -55,7 +55,7 @@ ms.locfileid: "54578529"
   
  若要指定的資料行中的內容的對齊<xref:System.Windows.Controls.GridView>，定義<xref:System.Windows.Controls.GridViewColumn.CellTemplate%2A>。 請勿使用<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>並<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>屬性<xref:System.Windows.Controls.ListView>會顯示所使用的內容<xref:System.Windows.Controls.GridView>。  
   
- 若要指定資料行行首的範本和樣式屬性，請使用<xref:System.Windows.Controls.GridView>， <xref:System.Windows.Controls.GridViewColumn>，和<xref:System.Windows.Controls.GridViewColumnHeader>類別。 如需詳細資訊，請參閱 [GridView 資料行標頭樣式和範本概觀](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)。  
+ 若要指定資料行行首的範本和樣式屬性，請使用<xref:System.Windows.Controls.GridView>， <xref:System.Windows.Controls.GridViewColumn>，和<xref:System.Windows.Controls.GridViewColumnHeader>類別。 如需詳細資訊，請參閱 [GridView 資料行標頭樣式和範本概觀](gridview-column-header-styles-and-templates-overview.md)。  
   
 <a name="AddingVisualElementstoaGridViewView"></a>   
 ### <a name="adding-visual-elements-to-a-gridview"></a>將視覺元素新增到 GridView  
@@ -65,7 +65,7 @@ ms.locfileid: "54578529"
   
 <a name="StylingRowsinaGridViewView"></a>   
 ### <a name="styling-rows-in-a-gridview"></a>設定 GridView 中資料列的樣式  
- 使用<xref:System.Windows.Controls.GridViewRowPresenter>並<xref:System.Windows.Controls.GridViewHeaderRowPresenter>類別來格式化和顯示的資料列<xref:System.Windows.Controls.GridView>。 如需如何的樣式中的資料列的範例<xref:System.Windows.Controls.GridView>檢視模式，請參閱[資料列的樣式的 ListView，實作 GridView](../../../../docs/framework/wpf/controls/how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)。  
+ 使用<xref:System.Windows.Controls.GridViewRowPresenter>並<xref:System.Windows.Controls.GridViewHeaderRowPresenter>類別來格式化和顯示的資料列<xref:System.Windows.Controls.GridView>。 如需如何的樣式中的資料列的範例<xref:System.Windows.Controls.GridView>檢視模式，請參閱[資料列的樣式的 ListView，實作 GridView](how-to-style-a-row-in-a-listview-that-implements-a-gridview.md)。  
   
 <a name="AlignmentIssuesWhenUsingItemContainerStyle"></a>   
 ### <a name="alignment-issues-when-you-use-itemcontainerstyle"></a>使用 ItemContainerStyle 時的對齊問題  
@@ -83,7 +83,7 @@ ms.locfileid: "54578529"
   
      使用者可以重新排列資料行中的<xref:System.Windows.Controls.GridView>資料行標頭上方時，請按下滑鼠左的按鈕，然後再將該資料行拖曳到新位置。 當使用者拖曳資料行標頭時，除了會顯示一條指出資料行插入位置的實心黑線之外，也會顯示該標頭的浮動版本。  
   
-     如果您想要修改標頭的浮動版本的預設樣式，指定<xref:System.Windows.Controls.ControlTemplate>for<xref:System.Windows.Controls.GridViewColumnHeader>類型，它是時觸發<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>屬性設定為<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 如需詳細資訊，請參閱[為已拖曳的 GridView 資料行標頭建立樣式](../../../../docs/framework/wpf/controls/how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
+     如果您想要修改標頭的浮動版本的預設樣式，指定<xref:System.Windows.Controls.ControlTemplate>for<xref:System.Windows.Controls.GridViewColumnHeader>類型，它是時觸發<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>屬性設定為<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 如需詳細資訊，請參閱[為已拖曳的 GridView 資料行標頭建立樣式](how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
   
 -   **依資料行內容調整資料行大小。**  
   
@@ -96,7 +96,7 @@ ms.locfileid: "54578529"
   
      使用者可以選取一或多個項目中的<xref:System.Windows.Controls.GridView>。  
   
-     如果您想要變更<xref:System.Windows.Style>的 選取的項目，請參閱[樣式的 ListView 中的選取項目使用之觸發程序](../../../../docs/framework/wpf/controls/how-to-use-triggers-to-style-selected-items-in-a-listview.md)。  
+     如果您想要變更<xref:System.Windows.Style>的 選取的項目，請參閱[樣式的 ListView 中的選取項目使用之觸發程序](how-to-use-triggers-to-style-selected-items-in-a-listview.md)。  
   
 -   **捲動以檢視一開始在畫面上看不到的內容。**  
   
@@ -110,7 +110,7 @@ ms.locfileid: "54578529"
   
 <a name="Obtaining_Other_Custom_Views"></a>   
 ## <a name="obtaining-other-custom-views"></a>取得其他自訂檢視  
- <xref:System.Windows.Controls.GridView>類別，衍生自<xref:System.Windows.Controls.ViewBase>抽象類別，只是其中一個可能檢視模式的<xref:System.Windows.Controls.ListView>類別。 您可以建立其他自訂檢視<xref:System.Windows.Controls.ListView>藉由衍生自<xref:System.Windows.Controls.ViewBase>類別。 如需自訂檢視模式的範例，請參閱[建立 ListView 的自訂檢視模式](../../../../docs/framework/wpf/controls/how-to-create-a-custom-view-mode-for-a-listview.md)。  
+ <xref:System.Windows.Controls.GridView>類別，衍生自<xref:System.Windows.Controls.ViewBase>抽象類別，只是其中一個可能檢視模式的<xref:System.Windows.Controls.ListView>類別。 您可以建立其他自訂檢視<xref:System.Windows.Controls.ListView>藉由衍生自<xref:System.Windows.Controls.ViewBase>類別。 如需自訂檢視模式的範例，請參閱[建立 ListView 的自訂檢視模式](how-to-create-a-custom-view-mode-for-a-listview.md)。  
   
 <a name="GridViewSupportingClasses"></a>   
 ## <a name="gridview-supporting-classes"></a>支援 GridView 的類別  
@@ -136,6 +136,6 @@ ms.locfileid: "54578529"
 - <xref:System.Windows.Controls.GridViewRowPresenter>
 - <xref:System.Windows.Controls.GridViewHeaderRowPresenter>
 - <xref:System.Windows.Controls.ViewBase>
-- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [在按一下標頭時排序 GridView 資料行](../../../../docs/framework/wpf/controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+- [ListView 概觀](listview-overview.md)
+- [在按一下標頭時排序 GridView 資料行](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
+- [HOW-TO 主題](listview-how-to-topics.md)

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 47cea4810b764005e87d00966c15cf138f5913a7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825949"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352590"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData 方法
 
@@ -41,19 +41,25 @@ HRESULT GetMethodDescData(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
-`methodDesc` [in]MethodDesc 位址。
+`methodDesc`\
+[in]MethodDesc 位址。
 
-`ip` [in]方法的 IP 位址。
+`ip`\
+[in]方法的 IP 位址。
 
-`data` [out]傳回從內部 Api，與 MethodDesc 相關的資料。
+`data`\
+[out]傳回從內部 Api，與 MethodDesc 相關的資料。
 
-`cRevertedRejitVersions` [out]已還原的 rejit 版本數目。
+`cRevertedRejitVersions`\
+[out]已還原的 rejit 版本數目。
 
-`rgRevertedRejitData` [out]傳回的內部 Api，以還原的 rejit 版本相關聯的資料。
+`rgRevertedRejitData`\
+[out]傳回的內部 Api，以還原的 rejit 版本相關聯的資料。
 
-`pcNeededRevertedRejitData` [out]儲存與還原的 ReJit 版本相關聯的資料所需的位元組數目。
+`pcNeededRevertedRejitData`\
+[out]儲存與還原的 ReJit 版本相關聯的資料所需的位元組數目。
 
 ## <a name="remarks"></a>備註
 
@@ -68,5 +74,5 @@ HRESULT GetMethodDescData(
 
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [ISOSDacInterface 介面](../../../../docs/framework/unmanaged-api/debugging/isosdacinterface-interface.md)
+- [偵錯](index.md)
+- [ISOSDacInterface 介面](isosdacinterface-interface.md)

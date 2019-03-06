@@ -5,12 +5,12 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 7c6f658558618e0812ea2537837577cbf011edd4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648744"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57363510"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 <xref:System.Windows.PropertyPath>物件支援複雜的內嵌[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]語法來設定各種屬性採用<xref:System.Windows.PropertyPath>做為其值的型別。 本主題說明<xref:System.Windows.PropertyPath>套用至繫結和動畫語法的語法。  
@@ -28,7 +28,7 @@ ms.locfileid: "54648744"
 ## <a name="propertypath-for-objects-in-data-binding"></a>資料繫結中物件的 PropertyPath  
  資料繫結是一個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能，您可藉以繫結至任何相依性屬性的目標值。 不過，這類資料繫結的來源不需要是相依性屬性；它可以是適用的資料提供者所能辨識的任何屬性類型。 屬性路徑特別用於<xref:System.Windows.Data.ObjectDataProvider>，後者用來取得繫結來源，從[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件和其屬性。  
   
- 請注意，資料繫結[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不會使用<xref:System.Windows.PropertyPath>，因為它不會使用<xref:System.Windows.Data.Binding.Path%2A>在<xref:System.Windows.Data.Binding>。 相反地，您使用<xref:System.Windows.Data.Binding.XPath%2A>並指定有效的 XPath 語法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的資料。 <xref:System.Windows.Data.Binding.XPath%2A> 也會指定為字串，但這裡; 不記錄請參閱[XMLDataProvider 和 XPath 查詢，繫結至 XML 資料使用](../../../../docs/framework/wpf/data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
+ 請注意，資料繫結[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]不會使用<xref:System.Windows.PropertyPath>，因為它不會使用<xref:System.Windows.Data.Binding.Path%2A>在<xref:System.Windows.Data.Binding>。 相反地，您使用<xref:System.Windows.Data.Binding.XPath%2A>並指定有效的 XPath 語法，到[!INCLUDE[TLA#tla_xmldom](../../../../includes/tlasharptla-xmldom-md.md)]的資料。 <xref:System.Windows.Data.Binding.XPath%2A> 也會指定為字串，但這裡; 不記錄請參閱[XMLDataProvider 和 XPath 查詢，繫結至 XML 資料使用](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)。  
   
  若要了解資料繫結中的屬性路徑，關鍵在於您可以將繫結的目標設為個別的屬性值，也可以改為繫結至要取得清單或集合的目標屬性。 如果您要繫結集合，例如繫結<xref:System.Windows.Controls.ListBox>，將會根據多少資料的項目位於集合中，展開，則屬性路徑應該參考集合物件，而不是個別的收集項目。 資料繫結引擎會比對集合做為資料來源的繫結目標型別自動產生的行為，例如填入<xref:System.Windows.Controls.ListBox>項目陣列。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "54648744"
 <object Path="propertyName/propertyNameX" .../>  
 ```  
   
- 此語法中的 / 是用來在階層式資料來源物件內進行巡覽，並支援含有連續 / 字元之階層的多個步驟。 來源周遊負責目前的記錄指標位置，這是藉由將資料與其檢視的 UI 同步處理來判斷。 如需與階層式資料來源物件繫結的詳細資訊，以及資料繫結中目前記錄指標的概念，請參閱[使用含階層式資料的主從式模式](../../../../docs/framework/wpf/data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ 此語法中的 / 是用來在階層式資料來源物件內進行巡覽，並支援含有連續 / 字元之階層的多個步驟。 來源周遊負責目前的記錄指標位置，這是藉由將資料與其檢視的 UI 同步處理來判斷。 如需與階層式資料來源物件繫結的詳細資訊，以及資料繫結中目前記錄指標的概念，請參閱[使用含階層式資料的主從式模式](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)或[資料繫結概觀](../data/data-binding-overview.md)。  
   
 > [!NOTE]
 >  此語法外表上類似 [!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]。 真正[!INCLUDE[TLA2#tla_xpath](../../../../includes/tla2sharptla-xpath-md.md)]繫結運算式[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料來源不會用作<xref:System.Windows.Data.Binding.Path%2A>值，而且應該改為用於互斥<xref:System.Windows.Data.Binding.XPath%2A>屬性。  
@@ -142,7 +142,7 @@ or
   
 <a name="general"></a>   
 ### <a name="general-object-property-considerations-for-animations"></a>動畫的一般物件-屬性考量  
- 如需一般動畫概念的詳細資訊，請參閱[分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)和[動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/animation-overview.md)。  
+ 如需一般動畫概念的詳細資訊，請參閱[分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)和[動畫概觀](../graphics-multimedia/animation-overview.md)。  
   
  實值型別或要繪製之屬性必須是<xref:System.Windows.Freezable>類型或基本類型。 開始路徑的屬性必須解析為存在於指定的相依性屬性的名稱<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型別。  
   
@@ -168,7 +168,7 @@ or
   
  `propertyName2` 必須是存在於值為 `propertyName` 之物件上的相依性屬性名稱。 亦即`propertyName2`相依性屬性的型別上必須存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   
- 由於已套用樣式和範本，因此需要間接設定動畫的目標。 若要設定動畫的目標，您必須<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>目標物件，而且該名稱藉由[X:name](../../../../docs/framework/xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 雖然範本和樣式元素也可以有名稱，但那些名稱只在樣式和範本的名稱範圍內有效 (如果範本和樣式會與應用程式標記共用名稱範圍，則名稱不能是唯一的。 樣式和範本實際上會在執行個體之間共用，因此會永久保存重複的名稱)。所以，如果您希望顯示為動畫之元素的個別屬性是來自樣式或範本，您就必須從不是來自樣式範本的具名元素執行個體開始，然後將目標設為樣式或範本視覺化樹狀結構中，以到達您要顯示為動畫的屬性。  
+ 由於已套用樣式和範本，因此需要間接設定動畫的目標。 若要設定動畫的目標，您必須<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>目標物件，而且該名稱藉由[X:name](../../xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 雖然範本和樣式元素也可以有名稱，但那些名稱只在樣式和範本的名稱範圍內有效 (如果範本和樣式會與應用程式標記共用名稱範圍，則名稱不能是唯一的。 樣式和範本實際上會在執行個體之間共用，因此會永久保存重複的名稱)。所以，如果您希望顯示為動畫之元素的個別屬性是來自樣式或範本，您就必須從不是來自樣式範本的具名元素執行個體開始，然後將目標設為樣式或範本視覺化樹狀結構中，以到達您要顯示為動畫的屬性。  
   
  比方說，<xref:System.Windows.Controls.Panel.Background%2A>的屬性<xref:System.Windows.Controls.Panel>是一份完整<xref:System.Windows.Media.Brush>(實際上<xref:System.Windows.Media.SolidColorBrush>)，來自主題範本。 若要動畫顯示<xref:System.Windows.Media.Brush>完全，就必須為 BrushAnimation (可能是一個用於每個<xref:System.Windows.Media.Brush>類型) 並沒有這類的型別。 若要建立筆刷的動畫，就要改為顯示的特定屬性<xref:System.Windows.Media.Brush>型別。 您必須向<xref:System.Windows.Media.SolidColorBrush>至其<xref:System.Windows.Media.SolidColorBrush.Color%2A>套用<xref:System.Windows.Media.Animation.ColorAnimation>那里。 此範例的屬性路徑就是 `Background.Color`。  
   
@@ -198,5 +198,5 @@ or
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.PropertyPath>
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [分鏡腳本概觀](../../../../docs/framework/wpf/graphics-multimedia/storyboards-overview.md)
+- [資料繫結概觀](../data/data-binding-overview.md)
+- [分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)

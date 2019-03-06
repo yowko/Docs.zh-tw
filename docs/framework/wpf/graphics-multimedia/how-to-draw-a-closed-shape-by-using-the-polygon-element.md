@@ -1,5 +1,5 @@
 ---
-title: 如何：使用 Polygon 項目繪製封閉的形狀
+title: HOW TO：使用 Polygon 項目繪製封閉的形狀
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], Polygon elements
@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Polygon elements [WPF]
 - drawing [WPF], closed shapes with Polygon elements
 ms.assetid: 4b0ca008-29ce-48dd-8bc3-f3a20ffca6a6
-ms.openlocfilehash: 89c78877e196e803f6b4139ffcfa2b4def1a07d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 533c341e2fae528ec896bf38bafa13974af1d127
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45698217"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360031"
 ---
-# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>如何：使用 Polygon 項目繪製封閉的形狀
+# <a name="how-to-draw-a-closed-shape-by-using-the-polygon-element"></a>HOW TO：使用 Polygon 項目繪製封閉的形狀
 此範例示範如何使用來繪製封閉的形狀<xref:System.Windows.Shapes.Polygon>項目。 若要繪製封閉的形狀，建立<xref:System.Windows.Shapes.Polygon>項目，並使用其<xref:System.Windows.Shapes.Polygon.Points%2A>屬性來指定圖形的頂點。 自動繪製線條連接的第一個和最後一個點。 最後，指定<xref:System.Windows.Shapes.Shape.Fill%2A>、 <xref:System.Windows.Shapes.Shape.Stroke%2A>，或兩者。  
   
 ## <a name="example"></a>範例  
  在  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，有效的語法，點是以逗號分隔的 x 和 y 座標組的逗號分隔清單。  
   
- [!code-xaml[drawingwithshapeelements#PolygonExample1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
+ [!code-xaml[drawingwithshapeelements#PolygonExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/polygonexample.xaml#polygonexample1)]  
   
  雖然此範例會使用<xref:System.Windows.Controls.Canvas>包含多邊形，您可以使用 polygon 項目 （和其他圖形元素） 與任何<xref:System.Windows.Controls.Panel>或<xref:System.Windows.Controls.Control>支援非文字內容。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: cd7c9c514c90a94e3329bec9614624ee399481ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523992"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351992"
 ---
 # <a name="property-change-events"></a>屬性變更事件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 會定義數個要引發來回應屬性值變更的事件。 屬性通常是相依性屬性。 事件本身有時是路由事件，有時是標準的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定義會因案例而異，因為某些屬性變更較適合透過元素樹狀結構進行路由傳送，而其他屬性變更通常只會與變更屬性的物件有關。  
@@ -33,7 +33,7 @@ ms.locfileid: "54523992"
   
  由於您有舊值與新值，因此，您可能想要使用此事件處理常式做為屬性值的驗證程式。 不過，大多數屬性已變更事件的設計意圖並不在此。 一般來說，之所以提供值，是要讓您在程式碼的其他邏輯區域對那些值執行動作，但不建議在事件處理常式內實際變更值，而且根據處理常式的實作方式而定，這可能會導致意外遞迴。  
   
- 如果您的屬性是自訂的相依性屬性，或如果您正在使用衍生的類別定義具現化程式碼，有更好的機制來追蹤內建的屬性變更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統：屬性系統回呼<xref:System.Windows.CoerceValueCallback>和<xref:System.Windows.PropertyChangedCallback>。 如需您如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統進行驗證和強制型轉的詳細資訊，請參閱[相依性屬性回呼和驗證](../../../../docs/framework/wpf/advanced/dependency-property-callbacks-and-validation.md)及[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。  
+ 如果您的屬性是自訂的相依性屬性，或如果您正在使用衍生的類別定義具現化程式碼，有更好的機制來追蹤內建的屬性變更[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性系統：屬性系統回呼<xref:System.Windows.CoerceValueCallback>和<xref:System.Windows.PropertyChangedCallback>。 如需您如何使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統進行驗證和強制型轉的詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)及[自訂相依性屬性](custom-dependency-properties.md)。  
   
 ### <a name="dependencypropertychanged-events"></a>DependencyPropertyChanged 事件  
  另一組屬於屬性已變更的事件案例的類型是<xref:System.Windows.DependencyPropertyChangedEventArgs>和<xref:System.Windows.DependencyPropertyChangedEventHandler>。 這些屬性變更的事件不會進行路由傳送；它們是標準的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 事件。 <xref:System.Windows.DependencyPropertyChangedEventArgs> 報告類型，因為它不是衍生自不尋常的事件資料<xref:System.EventArgs>;<xref:System.Windows.DependencyPropertyChangedEventArgs>結構，而不是類別。  
@@ -59,8 +59,8 @@ ms.locfileid: "54523992"
   
  一般適合使用屬性觸發程序的情況是，一或多個外觀屬性會根據同一個元素上的其他屬性狀態而變更。  
   
- 若要深入了解屬性觸發程序，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+ 若要深入了解屬性觸發程序，請參閱[設定樣式和範本](../controls/styling-and-templating.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
+- [路由事件概觀](routed-events-overview.md)
+- [相依性屬性概觀](dependency-properties-overview.md)

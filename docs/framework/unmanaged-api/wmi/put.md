@@ -16,51 +16,51 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3c37bae87f56745cf75031923db820ec2439fe04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625766"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369186"
 ---
 # <a name="put-function"></a>Put 函式
+
 將具名屬性設定為新值。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```cpp
 HRESULT Put (
-   [in] int               vFunc, 
-   [in] IWbemClassObject* ptr, 
+   [in] int               vFunc,
+   [in] IWbemClassObject* ptr,
    [in] LPCWSTR           wszName,
    [in] LONG              lFlags,
    [in] VARIANT*          pVal,
    [in] CIMTYPE           vtType
-); 
-```  
+);
+```
 
 ## <a name="parameters"></a>參數
 
-`vFunc`  
+`vFunc`\
 [in]未使用此參數。
 
-`ptr`  
+`ptr`\
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
-`wszName`  
+`wszName`\
 [in]屬性的名稱。 這個參數不可以是 `null`。
 
-`lFlags`  
+`lFlags`\
 [in] 保留。 這個參數必須是 0。
 
-`pVal`   
-[in]有效的指標`VARIANT`會變成新的屬性值。 如果`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`，屬性設定為`null`。 
+`pVal`\
+[in]有效的指標`VARIANT`會變成新的屬性值。 如果`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`，屬性設定為`null`。
 
-`vtType`  
+`vtType`\
 [in]型別`VARIANT`所指向`pVal`。 請參閱[備註](#remarks)節的詳細資訊。
- 
 
 ## <a name="return-value"></a>傳回值
 
@@ -74,7 +74,7 @@ HRESULT Put (
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 | `WBEM_E_TYPE_MISMATCH` | 0x80041005 | 執行個體：指出`pVal`指向`VARIANT`屬性的型別不正確。 <br/> 如需類別定義：屬性中已存在的父類別，新的 COM 型別是從舊的 COM 型別不同。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。 |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
@@ -85,20 +85,22 @@ HRESULT Put (
 
 使用者無法建立屬性，其開頭或結尾底線 ("_") 的名稱。 這被保留給系統的類別和屬性。
 
-如果設定的屬性`Put`函式父類別中，屬性的預設值已變更，除非屬性型別不符的父類別型別。 如果屬性不存在，而且它不是類型不符，則屬性會是 visio 建立。
+如果設定的屬性`Put`函式父類別中，屬性的預設值已變更，除非屬性型別不符的父類別型別。 如果屬性不存在，而且它不是類型不符，則會建立屬性。
 
-使用`vtType`只有在 CIM 類別定義中建立新的屬性時的參數和`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`。 在此情況下，`vType`參數指定之屬性的 CIM 型別。 在每個其他情況下，`vtType`必須是 0。 `vtType` 如果基礎的物件執行個體，則也必須是 0 (即使`Val`是`null`) 因為屬性的型別固定的無法變更。   
+使用`vtType`只有在 CIM 類別定義中建立新的屬性時的參數和`pVal`是`null`或指向`VARIANT`型別的`VT_NULL`。 在此情況下，`vType`參數指定之屬性的 CIM 型別。 在每個其他情況下，`vtType`必須是 0。 `vtType` 如果基礎的物件執行個體，則也必須是 0 (即使`Val`是`null`) 因為屬性的型別固定的無法變更。
 
 ## <a name="example"></a>範例
 
 如需範例，請參閱[IWbemClassObject::Put](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-put)方法。
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+**標頭：** WMINet_Utils.idl
+
+**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

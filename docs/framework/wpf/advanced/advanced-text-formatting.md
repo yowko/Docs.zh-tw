@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [WPF]
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
-ms.openlocfilehash: 03d0c5096876305f9a181cc28ff2158066e4d56f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d2408104ee3cf206734c5a1904129c3b71f7229
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577377"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368229"
 ---
 # <a name="advanced-text-formatting"></a>進階文字格式化
 Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]針對在您的應用程式中包含文字。 版面配置並[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，例如<xref:System.Windows.Controls.TextBlock>、 提供最常見和一般用途的文字表示的項目。 繪製[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，這類<xref:System.Windows.Media.GlyphRunDrawing>和<xref:System.Windows.Media.FormattedText>，提供在繪圖中包括格式化的文字的方法。 在最進階層級，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供可延伸的文字格式設定引擎，以控制文字表示，例如文字存放區管理、 文字執行格式設定管理，以及內嵌的物件管理的各個層面。  
@@ -28,7 +28,7 @@ Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api
   
 <a name="prereq"></a>   
 ## <a name="prerequisites"></a>必要條件  
- 本主題假設您已熟悉的較高的層級[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]用於文字呈現。 大部分使用者情節不需要進階的文字格式化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]本主題中討論。 如需不同的文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，請參閱 < [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)。  
+ 本主題假設您已熟悉的較高的層級[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]用於文字呈現。 大部分使用者情節不需要進階的文字格式化[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]本主題中討論。 如需不同的文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，請參閱 < [WPF 中的文件](documents-in-wpf.md)。  
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>進階文字格式化  
@@ -42,15 +42,15 @@ Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api
   
  不同於傳統的文字[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，則<xref:System.Windows.Media.TextFormatting.TextFormatter>互動文字配置用戶端透過一組回呼方法。 它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。 下圖說明用戶端應用程式之間的文字版面配置互動和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
- ![文字配置用戶端和 TextFormatter 的圖表](../../../../docs/framework/wpf/advanced/media/textformatter01.png "TextFormatter01")  
+ ![文字配置用戶端和 TextFormatter 的圖表](./media/textformatter01.png "TextFormatter01")  
 應用程式和 TextFormatter 之間的互動  
   
  文字格式子用來擷取格式化的文字行從文字存放區中，這是實作<xref:System.Windows.Media.TextFormatting.TextSource>。 這是藉由先建立文字格式子的執行個體使用<xref:System.Windows.Media.TextFormatting.TextFormatter.Create%2A>方法。 這個方法會建立文字格式子的執行個體，並設定最大線條高度和寬度的值。 一旦建立文字格式子的執行個體，啟動列的建立程序呼叫<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>方法。 <xref:System.Windows.Media.TextFormatting.TextFormatter> 呼叫回到文字來源以擷取的文字和文字執行格式設定參數該表單一條線。  
   
  在下列範例中，會顯示格式設定文字存放區的程序。 <xref:System.Windows.Media.TextFormatting.TextFormatter>物件用來從文字存放區擷取文字行，然後格式化文字行，以便繪製到<xref:System.Windows.Media.DrawingContext>。  
   
- [!code-csharp[TextFormatterExample#100](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
- [!code-vb[TextFormatterExample#100](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
+ [!code-csharp[TextFormatterExample#100](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/Window1.xaml.cs#100)]
+ [!code-vb[TextFormatterExample#100](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/Window1.xaml.vb#100)]  
   
 <a name="section3"></a>   
 ## <a name="implementing-the-client-text-store"></a>實作用戶端文字存放區  
@@ -84,8 +84,8 @@ Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api
   
  下列範例示範<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>方法。 此文字存放區傳回<xref:System.Windows.Media.TextFormatting.TextRun>文字格式子進行處理的物件。  
   
- [!code-csharp[TextFormatterExample#101](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
- [!code-vb[TextFormatterExample#101](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
+ [!code-csharp[TextFormatterExample#101](~/samples/snippets/csharp/VS_Snippets_Wpf/TextFormatterExample/CSharp/CustomTextSource.cs#101)]
+ [!code-vb[TextFormatterExample#101](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextFormatterExample/VisualBasic/CustomTextSource.vb#101)]  
   
 > [!NOTE]
 >  在此範例中，文字存放區提供相同的文字屬性給所有文字。 進階的文字存放區必須實作自己的範圍管理，以允許個別字元可以有不同的屬性。  
@@ -95,5 +95,5 @@ Windows Presentation Foundation (WPF) 提供一組強固的[!INCLUDE[TLA#tla_api
  <xref:System.Windows.Media.TextFormatting.TextRun> 使用文字存放區所提供的屬性時，會格式化物件。 這些屬性可分成兩種類型，<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>。 <xref:System.Windows.Media.TextFormatting.TextParagraphProperties> 處理段落包含的屬性，例如<xref:System.Windows.TextAlignment>和<xref:System.Windows.FlowDirection>。 <xref:System.Windows.Media.TextFormatting.TextRunProperties> 屬性可以有不同的每個文字執行中的段落，例如前景筆刷， <xref:System.Windows.Media.Typeface>，和字型大小。 若要實作自訂的段落和自訂的文字執行屬性類型，您的應用程式必須建立衍生自類別<xref:System.Windows.Media.TextFormatting.TextParagraphProperties>和<xref:System.Windows.Media.TextFormatting.TextRunProperties>分別。  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF 中的印刷樣式](../../../../docs/framework/wpf/advanced/typography-in-wpf.md)
-- [WPF 中的文件](../../../../docs/framework/wpf/advanced/documents-in-wpf.md)
+- [WPF 中的印刷樣式](typography-in-wpf.md)
+- [WPF 中的文件](documents-in-wpf.md)

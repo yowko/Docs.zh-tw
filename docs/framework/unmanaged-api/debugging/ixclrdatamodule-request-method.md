@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 2cc712e6560fc58af7526428ba40c424be388eee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336e47d531fc880571165cd55f117825cd1a2abb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746657"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374865"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request 方法
 
@@ -39,15 +39,20 @@ HRESULT Request([in] ULONG32 reqCode,
 
 ### <a name="parameters"></a>參數
 
-`reqCode` [in]要求傳送的型別。
+`reqCode`\
+[in]要求傳送的型別。
 
-`inBufferSize` [in] 要傳入的輸入緩衝區的大小。
+`inBufferSize`\
+[in] 要傳入的輸入緩衝區的大小。
 
-`inBuffer` [in、 size_is(inBufferSize)]若要在要求中傳送未經處理資料的緩衝區指標。
+`inBuffer`\
+[in、 size_is(inBufferSize)]若要在要求中傳送未經處理資料的緩衝區指標。
 
-`outBufferSize` [in]輸出緩衝區的大小。
+`outBufferSize`\
+[in]輸出緩衝區的大小。
 
-`outBuffer` [out，size_is(outBufferSize)]用來儲存要求回應的緩衝區指標。
+`outBuffer`\
+[out，size_is(outBufferSize)]用來儲存要求回應的緩衝區指標。
 
 ## <a name="remarks"></a>備註
 
@@ -61,5 +66,5 @@ HRESULT Request([in] ULONG32 reqCode,
 **.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataModule 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamodule-interface.md)
+- [偵錯](index.md)
+- [IXCLRDataModule 介面](ixclrdatamodule-interface.md)

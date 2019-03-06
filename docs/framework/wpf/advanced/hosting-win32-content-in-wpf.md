@@ -6,16 +6,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: fa0457cd44304084355f3882d9fc5c82b29c4827
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9764b995cea0ba5c93625495509b7ee2dd8393ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725463"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370029"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>在 WPF 中裝載 Win32 內容
 ## <a name="prerequisites"></a>必要條件  
- 請參閱[WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)。  
+ 請參閱[WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)。  
   
 ## <a name="a-walkthrough-of-win32-inside-windows-presentation-framework-hwndhost"></a>逐步解說中的 Win32 內 Windows Presentation Framework (HwndHost)  
  若要重複使用[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]內的內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，使用<xref:System.Windows.Interop.HwndHost>，即會看起來像 Hwnd 控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。  類似<xref:System.Windows.Interop.HwndSource>，<xref:System.Windows.Interop.HwndHost>是直接使用： 衍生自<xref:System.Windows.Interop.HwndHost>並實作`BuildWindowCore`並`DestroyWindowCore`方法，然後具現化您<xref:System.Windows.Interop.HwndHost>衍生類別，並將其內部放置您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
@@ -357,7 +357,7 @@ public partial class Window1 : Window {
   
  可讓您：  
   
- ![WPF 應用程式螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/interoparch09.PNG "InteropArch09")  
+ ![WPF 應用程式螢幕擷取畫面](./media/interoparch09.PNG "InteropArch09")  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF 和 Win32 交互操作](../../../../docs/framework/wpf/advanced/wpf-and-win32-interoperation.md)
+- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)

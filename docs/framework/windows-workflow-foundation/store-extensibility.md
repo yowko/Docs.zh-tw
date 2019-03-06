@@ -2,12 +2,12 @@
 title: 存放區擴充性
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 8cfbf96256d4b8416beb526875a1e9ac09c3bfbb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 8f317e8e0864dd6c4595ac669611594c843b277c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33517916"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375424"
 ---
 # <a name="store-extensibility"></a>存放區擴充性
 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 可讓使用者提升應用程式專屬的自訂屬性，用來查詢持續性資料庫中的執行個體。 提升屬性的動作會讓值用於資料庫中的特殊檢視表。 這些提升屬性 (可用於使用者查詢中的屬性) 可以屬於簡單型別 (例如 Int64、GUID、String 及 DateTime)，也可以屬於序列化的二進位型別 (byte[])。  
@@ -35,9 +35,9 @@ ms.locfileid: "33517916"
     application.Extensions.Add(documentStatusExtension);  
     ```  
   
-     如需有關加入自訂持續性參與者的詳細資訊，請參閱[持續性參與者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)範例。  
+     如需有關加入自訂持續性參與者的詳細資訊，請參閱 <<c0> [ 持續性參與者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)範例。  
   
-3.  DP 應用程式中的自訂活動擴展中的各種狀態欄位**Execute**方法。  
+3.  DP 應用程式中的自訂活動填入中的各種狀態欄位**Execute**方法。  
   
     ```  
     public override void Execute(CodeActivityContext context)  
@@ -73,7 +73,7 @@ ms.locfileid: "33517916"
     ```  
   
     > [!NOTE]
-    >  所有這些屬性會傳遞至**SqlWorkflowInstanceStore**持續性架構會透過**Sqlworkflowinstancestore**集合。  
+    >  所有這些屬性會傳遞給**SqlWorkflowInstanceStore**持續性架構會透過**Sqlworkflowinstancestore**集合。  
   
 5.  DP 應用程式初始化 SQL 工作流程執行個體存放區，並叫用**升階**來提升這個資料的方法。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "33517916"
     store.Promote("DocumentStatus", variantProperties, null);  
     ```  
   
-     根據這項提升資訊， **SqlWorkflowInstanceStore**置於的資料行的資料屬性[InstancePromotedProperties](#InstancePromotedProperties)檢視。
+     根據這項提升資訊， **SqlWorkflowInstanceStore**將資料屬性的資料行中放[InstancePromotedProperties](#InstancePromotedProperties)檢視。
   
 6.  為了要查詢提升表中的資料子集，DP 應用程式會將自訂檢視加入到提升檢視上方。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "33517916"
     go  
     ```  
   
-##  <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] 檢視  
+## <a name="InstancePromotedProperties"></a> [System.Activities.DurableInstancing.InstancePromotedProperties] view  
   
 |資料行名稱|資料行型別|描述|  
 |-----------------|-----------------|-----------------|  

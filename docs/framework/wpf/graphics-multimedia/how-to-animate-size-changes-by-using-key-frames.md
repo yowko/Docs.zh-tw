@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 9efaaebdf08a6079bff7179e9ec035b4f38bb3ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678443"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374179"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>HOW TO：使用主要畫面格建立大小變更的動畫
 這個範例示範如何使用主要畫面格建立大小變更的動畫。  
@@ -25,7 +25,7 @@ ms.locfileid: "54678443"
   
 3.  最後兩秒，透過使用的執行個體<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>類別來增加弧線的大小。曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A>屬性。 在此範例中，弧線的大小一開始會緩慢增加，然後在接近時間區段結尾時以指數方式增加。  
   
- [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](../../../../samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
+ [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
@@ -36,5 +36,5 @@ ms.locfileid: "54678443"
 - <xref:System.Windows.Media.Animation.LinearSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
-- [主要畫面格動畫概觀](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animations-overview.md)
-- [主要畫面格操作說明主題](../../../../docs/framework/wpf/graphics-multimedia/key-frame-animation-how-to-topics.md)
+- [主要畫面格動畫概觀](key-frame-animations-overview.md)
+- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)

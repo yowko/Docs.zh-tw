@@ -7,35 +7,35 @@ helpviewer_keywords:
 - graphics [WPF], brushes
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
-ms.openlocfilehash: b62830da6f48e07c60df731a8ba29998d6145217
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33557533"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373253"
 ---
 # <a name="brushes-how-to-topics"></a>筆刷 HOW TO 主題
-下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]才能繪製到螢幕內容的筆刷。  
+下列主題示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以便繪製到螢幕內容的筆刷。  
   
 ## <a name="in-this-section"></a>本節內容  
- [建立 SolidColorBrush 色彩或不透明效果的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
- [建立漸層停駐點位置或色彩的動畫](../../../../docs/framework/wpf/graphics-multimedia/how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
- [建立反映](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-a-reflection.md)  
- [使用 TileBrush 建立不同的並排顯示模式](../../../../docs/framework/wpf/graphics-multimedia/how-to-create-different-tile-patterns-with-a-tilebrush.md)  
- [定義畫筆](../../../../docs/framework/wpf/graphics-multimedia/how-to-define-a-pen.md)  
- [使用繪圖繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-drawing.md)  
- [使用影像繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-an-image.md)  
- [使用線形漸層繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-linear-gradient.md)  
- [使用放射狀漸層繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-radial-gradient.md)  
- [使用純色繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-solid-color.md)  
- [使用系統筆刷繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)  
- [繪製含有視訊的區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-video.md)  
- [使用 Visual 繪製區域](../../../../docs/framework/wpf/graphics-multimedia/how-to-paint-an-area-with-a-visual.md)  
- [保留當做背景之影像的外觀比例](../../../../docs/framework/wpf/graphics-multimedia/how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
- [設定 TileBrush 的水平和垂直對齊](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
- [設定 TileBrush 的並排顯示大小](../../../../docs/framework/wpf/graphics-multimedia/how-to-set-the-tile-size-for-a-tilebrush.md)  
- [轉換筆刷](../../../../docs/framework/wpf/graphics-multimedia/how-to-transform-a-brush.md)  
- [在漸層中使用系統色彩](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-system-colors-in-a-gradient.md)  
+ [建立 SolidColorBrush 色彩或不透明效果的動畫](how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md)  
+ [建立漸層停駐點位置或色彩的動畫](how-to-animate-the-position-or-color-of-a-gradient-stop.md)  
+ [建立反映](how-to-create-a-reflection.md)  
+ [使用 TileBrush 建立不同的並排顯示模式](how-to-create-different-tile-patterns-with-a-tilebrush.md)  
+ [定義畫筆](how-to-define-a-pen.md)  
+ [使用繪圖繪製區域](how-to-paint-an-area-with-a-drawing.md)  
+ [使用影像繪製區域](how-to-paint-an-area-with-an-image.md)  
+ [使用線形漸層繪製區域](how-to-paint-an-area-with-a-linear-gradient.md)  
+ [使用放射狀漸層繪製區域](how-to-paint-an-area-with-a-radial-gradient.md)  
+ [使用純色繪製區域](how-to-paint-an-area-with-a-solid-color.md)  
+ [使用系統筆刷繪製區域](how-to-paint-an-area-with-a-system-brush.md)  
+ [繪製含有視訊的區域](how-to-paint-an-area-with-a-video.md)  
+ [使用 Visual 繪製區域](how-to-paint-an-area-with-a-visual.md)  
+ [保留當做背景之影像的外觀比例](how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md)  
+ [設定 TileBrush 的水平和垂直對齊](how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md)  
+ [設定 TileBrush 的並排顯示大小](how-to-set-the-tile-size-for-a-tilebrush.md)  
+ [轉換筆刷](how-to-transform-a-brush.md)  
+ [在漸層中使用系統色彩](how-to-use-system-colors-in-a-gradient.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Media.Brush>  
@@ -51,6 +51,6 @@ ms.locfileid: "33557533"
  <xref:System.Windows.Media.VisualBrush>  
   
 ## <a name="related-sections"></a>相關章節  
- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)  
+ [圖形和多媒體](index.md)  
   
- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
+ [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)

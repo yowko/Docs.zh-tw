@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e996a299de7b365a1513d5b1fb7ca0e758f6005b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7534d760f902f80d42c6c20c57a34d52012997a7
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966056"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57369652"
 ---
 # <a name="get-function"></a>Get 函式
+
 若有的話，則擷取指定的屬性值。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
-    
-## <a name="syntax"></a>語法  
-  
-```  
+
+## <a name="syntax"></a>語法
+
+```
 HRESULT Get (
    [in] int               vFunc, 
    [in] IWbemClassObject* ptr, 
@@ -40,26 +41,30 @@ HRESULT Get (
    [out] CIMTYPE*         pvtType,
    [out] LONG*            plFlavor
 ); 
-```  
+```
 
 ## <a name="parameters"></a>參數
 
-`vFunc`  
+`vFunc`\
 [in]未使用此參數。
 
-`ptr`  
+`ptr`\
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
-`wszName`  
+`wszName`\
 [in]屬性的名稱。
 
-`lFlags` [in]保留。 這個參數必須是 0。
+`lFlags`\
+[in] 保留。 這個參數必須是 0。
 
-`pVal` [out]如果函式會傳回成功，則包含值的`wszName`屬性。 `pval`引數指派正確的型別和辨識符號值。
+`pVal`\
+[out]如果函式會傳回成功，則包含值的`wszName`屬性。 `pval`引數指派正確的型別和辨識符號值。
 
-`pvtType` [out]如果函式會傳回成功，就會包含[CIM 類型常數](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)表示的屬性型別。 其值也可以是`null`。 
+`pvtType`\
+[out]如果函式會傳回成功，就會包含[CIM 類型常數](/windows/desktop/api/wbemcli/ne-wbemcli-tag_cimtype_enumeration)表示的屬性型別。 其值也可以是`null`。 
 
-`plFlavor` [out]如果函式會傳回成功，會收到之屬性的原點資訊。 其值可以是`null`，或其中一個定義中的下列 WBEM_FLAVOR_TYPE 常數*WbemCli.h*標頭檔： 
+`plFlavor`\
+[out]如果函式會傳回成功，會收到之屬性的原點資訊。 其值可以是`null`，或其中一個定義中的下列 WBEM_FLAVOR_TYPE 常數*WbemCli.h*標頭檔： 
 
 |常數  |值  |描述  |
 |---------|---------|---------|
@@ -78,7 +83,7 @@ HRESULT Get (
 |`WBEM_E_NOT_FOUND` | 0x80041002 | 找不到指定的屬性。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
-  
+
 ## <a name="remarks"></a>備註
 
 此函式會包裝在呼叫[IWbemClassObject::Get](/windows/desktop/api/wbemcli/nf-wbemcli-iwbemclassobject-get)方法。
@@ -87,12 +92,14 @@ HRESULT Get (
 
 `pVal`引數指派正確的型別和值限定詞和 COM [VariantInit](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantinit)函式
 
-## <a name="requirements"></a>需求  
- **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-  
- **標頭：** WMINet_Utils.idl  
-  
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
-  
+## <a name="requirements"></a>需求
+
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+
+ **標頭：** WMINet_Utils.idl
+
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+
 ## <a name="see-also"></a>另請參閱
+
 - [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

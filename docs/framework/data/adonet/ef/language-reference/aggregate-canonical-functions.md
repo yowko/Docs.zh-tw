@@ -2,18 +2,18 @@
 title: 彙總標準函式
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
-ms.openlocfilehash: f65557703070a43f586a668903d049a374ef70d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708970"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57372798"
 ---
 # <a name="aggregate-canonical-functions"></a>彙總標準函式
 
 彙總 (Aggregate) 是指將一連串輸入值縮減成單一值的運算式。 彙總通常會與 SELECT 運算式的 GROUP BY 子句搭配使用，而且它們的使用位置具有一些條件約束 (Constraint)。
 
-## <a name="aggegate-entity-sql-canonical-functions"></a>Aggegate Entity SQL 標準函式
+## <a name="aggregate-entity-sql-canonical-functions"></a>彙總的 Entity SQL 標準函式
 
 以下是彙總的 Entity SQL 標準函式。
 
@@ -31,7 +31,7 @@ ms.locfileid: "54708970"
 
 **範例**
 
-[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)] 
+[!code-csharp[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_avg)]
 [!code-sql[DP EntityServices Concepts#EDM_AVG](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_avg)]
 
 ### <a name="bigcountexpression"></a>BigCount(expression)
@@ -48,10 +48,10 @@ ms.locfileid: "54708970"
 
 **範例**
 
-[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)] 
+[!code-csharp[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_bigcount)]
 [!code-sql[DP EntityServices Concepts#EDM_BIGCOUNT](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_bigcount)]
 
-### <a name="countexpression"></a>Count(expression) 
+### <a name="countexpression"></a>Count(expression)
 
 傳回包含 null 和重複值的彙總大小。
 
@@ -74,7 +74,8 @@ ms.locfileid: "54708970"
 
 **引數**
 
-`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+
+  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **傳回值**
 
@@ -91,7 +92,8 @@ ms.locfileid: "54708970"
 
 **引數**
 
-`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+
+  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **傳回值**
 
@@ -108,7 +110,8 @@ ms.locfileid: "54708970"
 
 **引數**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -125,7 +128,8 @@ ms.locfileid: "54708970"
 
 **引數**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -142,7 +146,8 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **引數**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -159,7 +164,8 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **引數**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -176,7 +182,8 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 
 **引數**
 
-`Int32`、`Int64`、`Double`、`Decimal`。
+
+  `Int32`、`Int64`、`Double`、`Decimal`。
 
 **傳回值**
 
@@ -185,7 +192,7 @@ A `Double`，或`null`如果所有輸入的值為`null`值。
 **範例**
 
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
-[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)] 
+[!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
 Microsoft SQL Client Managed Provider 中提供了對等的功能。 如需詳細資訊，請參閱 <<c0> [ 適用於 Entity Framework 函式的 SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)。
 
@@ -206,7 +213,7 @@ min(select value o.ShipDate from LOB.Orders as o)
 下列範例會計算針對每個產品訂購的平均數量：
 
 ```sql
-select p, avg(ol.Quantity) from LOB.OrderLines as ol 
+select p, avg(ol.Quantity) from LOB.OrderLines as ol
   group by ol.Product as p
 ```
 
@@ -224,7 +231,7 @@ select avg(ol.Quantity) from LOB.OrderLines as ol group by 1
 
 以群組為基礎之彙總內部的運算式是在 WHERE 子句運算式可見的名稱解析範圍內評估。
 
-依照[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，群組為基礎的彙總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。  
+依照[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，群組為基礎的彙總也可以指定 ALL 或 DISTINCT 修飾詞。 如果有指定 DISTINCT 修飾詞，系統就會在計算彙總之前，從彙總輸入集合中刪除重複項目。 如果指定的是 ALL 修飾詞 (或沒有指定任何修飾詞)，就不會執行重複項目刪除作業。
 
 ## <a name="see-also"></a>另請參閱
 

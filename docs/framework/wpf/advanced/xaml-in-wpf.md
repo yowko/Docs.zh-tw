@@ -7,39 +7,39 @@ helpviewer_keywords:
 - XAML [WPF]
 - Extensible Application Markup Language [WPF]
 ms.assetid: 5d858575-a83b-42df-ad3f-047ed2d6e3c8
-ms.openlocfilehash: 5a1db973be51d98ad6e55062fac23e31926f2bb1
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 0d04b656492dd934199164920e35bdaaa0663032
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46710760"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362899"
 ---
 # <a name="xaml-in-wpf"></a>WPF 中的 XAML
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 一種宣告式應用程式標記語言撰寫。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 實作 aXAML 處理器實作中，並提供 XAML 語言支援。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]類型會實作，因此它們可以提供所需的類型支援的 XAML 表示法。 一般情況下，您可以在其中建立大部分的程式[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML 標記中的應用程式 UI。  
   
 ## <a name="in-this-section"></a>本節內容  
- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)  
- [XAML 語法詳細資料](../../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)  
- [WPF 中的程式碼後置和 XAML](../../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)  
- [WPF 的 XAML 和自訂類別](../../../../docs/framework/wpf/advanced/xaml-and-custom-classes-for-wpf.md)  
- [標記延伸和 WPF XAML](../../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)  
- [WPF XAML 的 XAML 命名空間和命名空間對應](../../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
- [WPF XAML 名稱範圍](../../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)  
- [內嵌樣式和範本](../../../../docs/framework/wpf/advanced/inline-styles-and-templates.md)  
- [在 XAML 中處理泛空白字元](../../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)  
- [TypeConverter 和 XAML](../../../../docs/framework/wpf/advanced/typeconverters-and-xaml.md)  
- [XML 字元實體和 XAML](../../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)  
- [XAML 命名空間 (x:) 語言功能](../../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)  
- [WPF XAML 延伸](../../../../docs/framework/wpf/advanced/wpf-xaml-extensions.md)  
- [標記相容性 (mc:) 語言功能](../../../../docs/framework/wpf/advanced/markup-compatibility-mc-language-features.md)  
+ [XAML 概觀 (WPF)](xaml-overview-wpf.md)  
+ [XAML 語法詳細資料](xaml-syntax-in-detail.md)  
+ [WPF 中的程式碼後置和 XAML](code-behind-and-xaml-in-wpf.md)  
+ [WPF 的 XAML 和自訂類別](xaml-and-custom-classes-for-wpf.md)  
+ [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)  
+ [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)  
+ [WPF XAML 名稱範圍](wpf-xaml-namescopes.md)  
+ [內嵌樣式和範本](inline-styles-and-templates.md)  
+ [在 XAML 中處理泛空白字元](../../xaml-services/whitespace-processing-in-xaml.md)  
+ [TypeConverter 和 XAML](typeconverters-and-xaml.md)  
+ [XML 字元實體和 XAML](../../xaml-services/xml-character-entities-and-xaml.md)  
+ [XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)  
+ [WPF XAML 延伸](wpf-xaml-extensions.md)  
+ [標記相容性 (mc:)語言功能](markup-compatibility-mc-language-features.md)  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [基底項目](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [項目樹狀結構和序列化](../../../../docs/framework/wpf/advanced/element-tree-and-serialization.md)  
-  [屬性](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [資源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 架構](wpf-architecture.md)  
+  [基底項目](base-elements.md)  
+  [項目樹狀結構和序列化](element-tree-and-serialization.md)  
+  [屬性](properties-wpf.md)  
+  [事件](events-wpf.md)  
+  [輸入](input-wpf.md)  
+  [資源](resources-wpf.md)  
+  [樣式設定和範本化](../controls/styling-and-templating.md)  
+  [執行緒模型](threading-model.md)

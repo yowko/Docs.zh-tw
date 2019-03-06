@@ -1,47 +1,46 @@
 ---
-title: ScrollBar 樣式和範本
+title: Thumb 樣式和範本
 ms.date: 03/30/2017
 helpviewer_keywords:
-- styles [WPF], ScrollBar
-- ControlTemplate [WPF], ScrollBar
-- states [WPF], ScrollBar
-- ScrollBar [WPF], styles and templates
-- templates [WPF], ScrollBar
-- parts [WPF], ScrollBar
-ms.assetid: 066ea45a-e27d-43b0-adfe-cce6934c22f5
-ms.openlocfilehash: f85a6fb31adac71541eed31a1ccfde9e06028af7
+- states [WPF], Thumb
+- styles [WPF], Thumb
+- templates [WPF], Thumb
+- Thumb [WPF], styles and templates
+- ControlTemplate [WPF], Thumb
+- parts [WPF], Thumb
+ms.assetid: 86a49235-62d9-414e-923e-53126e3f930a
+ms.openlocfilehash: ffeec38cef04f49afc114a1946d88621063d700a
 ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361144"
+ms.locfileid: "57367631"
 ---
-# <a name="scrollbar-styles-and-templates"></a>ScrollBar 樣式和範本
-本主題描述的樣式和範本<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
+# <a name="thumb-syles-and-templates"></a>Thumb 樣式和範本
+本主題描述的樣式和範本<xref:System.Windows.Controls.Primitives.Thumb>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
   
-## <a name="scrollbar-parts"></a>捲軸的組件  
- 下表列出的具名組件<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。  
+## <a name="thumb-parts"></a>捲動方塊的組件  
+ <xref:System.Windows.Controls.Primitives.Thumb>控制項沒有任何具名組件。  
   
-|組件|類型|描述|  
-|-|-|-|  
-|PART_Track|<xref:System.Windows.Controls.Primitives.Track>|指出的位置之項目的容器<xref:System.Windows.Controls.Primitives.ScrollBar>。|  
-  
-## <a name="scrollbar-states"></a>捲軸狀態  
- 下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。  
+## <a name="thumb-states"></a>捲動方塊的狀態  
+ 下表列出的視覺狀態<xref:System.Windows.Controls.Primitives.Thumb>控制項。  
   
 |VisualState 名稱|VisualStateGroup 名稱|描述|  
-|----------------------|---------------------------|-----------------|  
+|-|-|-|  
 |一般|CommonStates|預設狀態。|  
 |MouseOver|CommonStates|滑鼠指標移到控制項上。|  
+|按下|CommonStates|已按下控制項。|  
 |已停用|CommonStates|已停用控制項。|  
+|已取得焦點|FocusStates|控制項已取得焦點。|  
+|未取得焦點|FocusStates|控制項未取得焦點。|  
 |驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
 |InvalidUnfocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`有控制項沒有焦點。|  
   
-## <a name="scrollbar-controltemplate-example"></a>ScrollBar 的 ControlTemplate 範例  
- 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.Primitives.ScrollBar>控制項。  
+## <a name="thumb-controltemplate-example"></a>Thumb ControlTemplate 範例  
+ 下列範例示範如何定義<xref:System.Windows.Controls.ControlTemplate>針對<xref:System.Windows.Controls.Primitives.Thumb>控制項。  
   
- [!code-xaml[ControlTemplateExamples#ScrollBar](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/scrollbar.xaml#scrollbar)]  
+ [!code-xaml[ControlTemplateExamples#Thumb](~/samples/snippets/csharp/VS_Snippets_Wpf/ControlTemplateExamples/CS/resources/slider.xaml#thumb)]  
   
  上述範例使用下列一或多項資源。  
   

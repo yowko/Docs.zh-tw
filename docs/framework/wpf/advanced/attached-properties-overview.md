@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: e4f2b88b075a7806d2ca4c4a1e2cf3f027e71f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706228"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370120"
 ---
 # <a name="attached-properties-overview"></a>附加屬性概觀
 
@@ -20,7 +20,7 @@ ms.locfileid: "54706228"
 
 ## 必要條件 <a name="prerequisites"></a>
 
-本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)。 若要遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。
+本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)。 若要遵循本主題中的範例，您也應該了解 XAML 並知道如何撰寫 WPF 應用程式。
 
 ## 為何使用附加的屬性 <a name="attached_properties_usage"></a>
 
@@ -32,11 +32,11 @@ ms.locfileid: "54706228"
 
 以下是如何您也可以設定的範例<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>在 XAML 中：
 
-[!code-xaml[PropertiesOvwSupport#APBasicUsage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
+[!code-xaml[PropertiesOvwSupport#APBasicUsage](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml#apbasicusage)]
 
 請注意，使用方式有點類似靜態屬性;您永遠參考型別<xref:System.Windows.Controls.DockPanel>所擁有且註冊附加的屬性，而不是參考依名稱指定任何執行個體。
 
-此外，因為 XAML 中的附加屬性是您在標記中設定的屬性，所以只有設定作業才會有任何相關性。 雖然有一些間接機制可比較值 (例如樣式中的觸發程序)，但是您無法在 XAML 中直接取得屬性 (如需詳細資訊，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md))。
+此外，因為 XAML 中的附加屬性是您在標記中設定的屬性，所以只有設定作業才會有任何相關性。 雖然有一些間接機制可比較值 (例如樣式中的觸發程序)，但是您無法在 XAML 中直接取得屬性 (如需詳細資訊，請參閱[設定樣式和範本](../controls/styling-and-templating.md))。
 
 ### <a name="attached-property-implementation-in-wpf"></a>WPF 中的附加屬性實作
 
@@ -64,8 +64,8 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 下列範例示範如何在程式碼中設定附加屬性。 在此範例中，`myCheckBox`的執行個體<xref:System.Windows.Controls.CheckBox>類別。
 
-[!code-csharp[PropertiesOvwSupport#APCode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
-[!code-vb[PropertiesOvwSupport#APCode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
+[!code-csharp[PropertiesOvwSupport#APCode](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertiesOvwSupport/CSharp/page4.xaml.cs#apcode)]
+[!code-vb[PropertiesOvwSupport#APCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertiesOvwSupport/visualbasic/page4.xaml.vb#apcode)]
 
 類似於 XAML 情況下，如果`myCheckBox`有尚未新增為子元素`myDockPanel`由第三行程式碼，程式碼的第四行不會引發例外狀況，但屬性值不會與互動<xref:System.Windows.Controls.DockPanel>父代，因此會執行任何動作。 只有<xref:System.Windows.Controls.DockPanel.Dock%2A?displayProperty=nameWithType>值的結合出現與否的子項目設定<xref:System.Windows.Controls.DockPanel>父項目會造成轉譯應用程式的有效的行為。 (在此情況下，您可以設定附加屬性，然後將其附加至樹狀結構。 或者，您可以將其附加至樹狀結構，然後設定附加屬性。 任一個動作順序都會提供相同的結果)。
 
@@ -73,7 +73,7 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 註冊屬性時<xref:System.Windows.FrameworkPropertyMetadata>設為指定的屬性，例如屬性是否影響轉譯、 測量和等等的特性。 附加屬性的中繼資料一般與相依性屬性並無不同。 如果您在附加屬性中繼資料的覆寫中指定預設值，該值會變成覆寫類別執行個體上的隱含附加屬性預設值。 具體而言，如果某個處理序透過該屬性的 `Get` 方法存取子來查詢附加屬性值，並指定已指定中繼資料之類別的執行個體，則會報告預設值，否則不會設定該附加屬性的值。
 
-如果您想要啟用屬性的屬性值繼承，則應該使用附加屬性，而不是使用非附加相依性屬性。 如需詳細資訊，請參閱[屬性值繼承](../../../../docs/framework/wpf/advanced/property-value-inheritance.md)。
+如果您想要啟用屬性的屬性值繼承，則應該使用附加屬性，而不是使用非附加相依性屬性。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。
 
 ## 自訂附加屬性 <a name="custom"></a>
 
@@ -83,7 +83,7 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 另一個使用附加屬性的情節是類別代表一項服務，而且想要類別能夠更緊密地整合服務。
 
-但另一個案例是收到 Visual Studio WPF 設計工具支援，例如**屬性**視窗編輯。 如需詳細資訊，請參閱[控制項撰寫概觀](../../../../docs/framework/wpf/controls/control-authoring-overview.md)。
+但另一個案例是收到 Visual Studio WPF 設計工具支援，例如**屬性**視窗編輯。 如需詳細資訊，請參閱[控制項撰寫概觀](../controls/control-authoring-overview.md)。
 
 如前所述，如果您想要使用屬性值繼承，則應該註冊為附加屬性。
 
@@ -118,8 +118,8 @@ WPF 定義附加的屬性的地方的最常見案例是當父項目支援子項�
 
 下列範例示範相依性屬性註冊 (使用<xref:System.Windows.DependencyProperty.RegisterAttached%2A>方法)，以及**Get_PropertyName_** 並**Set_PropertyName_** 存取子。 在此範例中，附加屬性名稱為 `IsBubbleSource`。 因此，存取子必須命名為 `GetIsBubbleSource` 和 `SetIsBubbleSource`。
 
-[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
-[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
+[!code-csharp[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFAquariumSln/CSharp/WPFAquariumObjects/Class1.cs#registerattachedbubbler)]
+[!code-vb[WPFAquariumSln#RegisterAttachedBubbler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#registerattachedbubbler)]
 
 #### <a name="attached-property-attributes"></a>附加屬性 (property) 的屬性 (attribute)
 
@@ -135,16 +135,16 @@ WPF 定義數個[!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/t
 
 ## 深入了解附加屬性 <a name="more"></a>
 
--   如需建立附加屬性的詳細資訊，請參閱[註冊附加屬性](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)。
+-   如需建立附加屬性的詳細資訊，請參閱[註冊附加屬性](how-to-register-an-attached-property.md)。
 
--   如需相依性屬性和附加屬性的更進階使用方式情節，請參閱[自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)。
+-   如需相依性屬性和附加屬性的更進階使用方式情節，請參閱[自訂相依性屬性](custom-dependency-properties.md)。
 
 -   您也可以將屬性註冊為附加屬性和相依性屬性，但仍公開「包裝函式」實作。 在此情況下，可以在該項目上設定屬性，或透過 XAML 附加屬性語法的任何項目上設定屬性。 舉例來說，標準和附加使用方式之適當情節的屬性是<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.DependencyProperty>
-- [相依性屬性概觀](../../../../docs/framework/wpf/advanced/dependency-properties-overview.md)
-- [自訂相依性屬性](../../../../docs/framework/wpf/advanced/custom-dependency-properties.md)
-- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [註冊附加屬性](../../../../docs/framework/wpf/advanced/how-to-register-an-attached-property.md)
+- [相依性屬性概觀](dependency-properties-overview.md)
+- [自訂相依性屬性](custom-dependency-properties.md)
+- [XAML 概觀 (WPF)](xaml-overview-wpf.md)
+- [註冊附加屬性](how-to-register-an-attached-property.md)

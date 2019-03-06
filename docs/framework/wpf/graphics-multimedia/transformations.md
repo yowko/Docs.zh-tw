@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Transforms [WPF]
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
-ms.openlocfilehash: 0f663cd95c979ec9f2b81ccf173b4418321228f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 614f4fac288e53677d072c6c88edfa46df18f40a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570521"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352447"
 ---
 # <a name="transformations"></a>轉換
 轉換用來旋轉、 縮放、 轉譯，或扭曲<xref:System.Windows.FrameworkElement>物件。  
   
 ## <a name="in-this-section"></a>本節內容  
- [轉換概觀](../../../../docs/framework/wpf/graphics-multimedia/transforms-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/graphics-multimedia/transformations-how-to-topics.md)  
+ [轉換概觀](transforms-overview.md)  
+ [HOW-TO 主題](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Media.Transform>
-- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
-- [WPF 圖形轉譯概觀](../../../../docs/framework/wpf/graphics-multimedia/wpf-graphics-rendering-overview.md)
-- [版面配置](../../../../docs/framework/wpf/advanced/layout.md)
+- [圖形和多媒體](index.md)
+- [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)
+- [版面配置](../advanced/layout.md)

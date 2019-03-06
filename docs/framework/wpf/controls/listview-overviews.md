@@ -7,20 +7,20 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], using
 ms.assetid: 49dfef1a-dddf-4fc6-a511-6d5f925a4781
-ms.openlocfilehash: a488432dadcfb700c62fd7f847cb31c8ed95aba7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 734b5265c1d25e4538c40f5a43bff220d675eedb
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33551044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57370328"
 ---
 # <a name="listview-overviews"></a>ListView 概觀
-此章節的主題會示範如何使用<xref:System.Windows.Controls.ListView>控制項。  
+在本節中的主題會示範如何使用<xref:System.Windows.Controls.ListView>控制項。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)  
- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)  
- [GridView 資料行標頭樣式和範本概觀](../../../../docs/framework/wpf/controls/gridview-column-header-styles-and-templates-overview.md)  
+ [ListView 概觀](listview-overview.md)  
+ [GridView 概觀](gridview-overview.md)  
+ [GridView 資料行標頭樣式和範本概觀](gridview-column-header-styles-and-templates-overview.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ListView>  
@@ -28,4 +28,4 @@ ms.locfileid: "33551044"
  <xref:System.Windows.Controls.GridView>  
   
 ## <a name="related-sections"></a>相關章節  
- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
+ [HOW-TO 主題](listview-how-to-topics.md)

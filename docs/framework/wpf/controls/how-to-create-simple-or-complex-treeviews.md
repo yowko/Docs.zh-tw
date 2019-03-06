@@ -5,12 +5,12 @@ helpviewer_keywords:
 - TreeView control [WPF], creating
 - Control class [WPF], TreeView [WPF], creating
 ms.assetid: 1defbb78-b8e7-4c0e-b650-576453ac828d
-ms.openlocfilehash: d6f9653304b67948d8a8995d1582cb10b012ee06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b19443c80818809122b0bbfc7c7dae7b4b40da5
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609131"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368906"
 ---
 # <a name="how-to-create-simple-or-complex-treeviews"></a>HOW TO：建立簡單或複雜的 TreeView
 此範例示範如何建立簡單或複雜<xref:System.Windows.Controls.TreeView>控制項。  
@@ -22,26 +22,26 @@ ms.locfileid: "54609131"
   
  下列範例示範如何明確地定義<xref:System.Windows.Controls.TreeViewItem>藉由設定內容<xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>屬性設為文字字串。  
   
- [!code-xaml[TreeViewSimple#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
+ [!code-xaml[TreeViewSimple#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#1)]  
   
  下列範例示範如何定義子項目的<xref:System.Windows.Controls.TreeViewItem>藉由定義<xref:System.Windows.Controls.ItemsControl.Items%2A>屬於<xref:System.Windows.Controls.Button>控制項。  
   
- [!code-xaml[TreeViewSimple#3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
+ [!code-xaml[TreeViewSimple#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#3)]  
   
  下列範例示範如何建立<xref:System.Windows.Controls.TreeView>何處<xref:System.Windows.Data.XmlDataProvider>提供<xref:System.Windows.Controls.TreeViewItem>內容和<xref:System.Windows.HierarchicalDataTemplate>定義內容的外觀。  
   
- [!code-xaml[TreeViewSimple#6](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
+ [!code-xaml[TreeViewSimple#6](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#6)]  
   
- [!code-xaml[TreeViewSimple#7](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#7)]  
+ [!code-xaml[TreeViewSimple#7](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#7)]  
   
- [!code-xaml[TreeViewSimple#5](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
+ [!code-xaml[TreeViewSimple#5](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#5)]  
   
  下列範例示範如何建立<xref:System.Windows.Controls.TreeView>何處<xref:System.Windows.Controls.TreeViewItem>內容包含<xref:System.Windows.Controls.DockPanel>有內嵌內容的控制項。  
   
- [!code-xaml[TreeViewSimple#9](../../../../samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
+ [!code-xaml[TreeViewSimple#9](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewSimple/CS/Window1.xaml#9)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.TreeView>
 - <xref:System.Windows.Controls.TreeViewItem>
-- [TreeView 概觀](../../../../docs/framework/wpf/controls/treeview-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/controls/treeview-how-to-topics.md)
+- [TreeView 概觀](treeview-overview.md)
+- [HOW-TO 主題](treeview-how-to-topics.md)

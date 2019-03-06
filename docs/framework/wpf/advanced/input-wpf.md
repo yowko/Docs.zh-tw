@@ -7,24 +7,24 @@ helpviewer_keywords:
 - input API [WPF]
 - commanding [WPF]
 ms.assetid: 9a7ccd30-095b-4f34-b284-8fb7e8f95a9b
-ms.openlocfilehash: 1510c037dcb3d5e386e1d4c4dd3a3fe002f13c59
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: c72aa41aeb4c2da5577f1581a8f65afbefb222c6
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33544228"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57350744"
 ---
 # <a name="input-wpf"></a>輸入 (WPF)
-Windows Presentation Foundation (WPF) 包含支援數種類型的輸入。 此輸入包含文字、 觸控、 滑鼠、 命令、 焦點、 觸控、 拖放及數位筆跡。 本章節描述在 WPF 中輸入的相關主題。  
+Windows Presentation Foundation (WPF) 包含支援數種類型的輸入。 此輸入包含文字、 觸控、 滑鼠、 命令、 焦點、 觸控、 拖放，以及數位筆跡。 本章節描述在 WPF 中輸入的相關主題。  
   
 ## <a name="in-this-section"></a>本節內容  
- [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)  
- [命令概觀](../../../../docs/framework/wpf/advanced/commanding-overview.md)  
- [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)  
- [設定控制項中焦點的樣式和 FocusVisualStyle](../../../../docs/framework/wpf/advanced/styling-for-focus-in-controls-and-focusvisualstyle.md)  
- [逐步解說：建立您的第一個觸控應用程式](../../../../docs/framework/wpf/advanced/walkthrough-creating-your-first-touch-application.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/input-and-commands-how-to-topics.md)  
- [數位筆跡](../../../../docs/framework/wpf/advanced/digital-ink.md)  
+ [輸入概觀](input-overview.md)  
+ [命令概觀](commanding-overview.md)  
+ [焦點概觀](focus-overview.md)  
+ [設定控制項中焦點的樣式和 FocusVisualStyle](styling-for-focus-in-controls-and-focusvisualstyle.md)  
+ [逐步解說：建立您的第一個觸控應用程式](walkthrough-creating-your-first-touch-application.md)  
+ [HOW-TO 主題](input-and-commands-how-to-topics.md)  
+ [數位筆跡](digital-ink.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.UIElement>  
@@ -42,5 +42,5 @@ Windows Presentation Foundation (WPF) 包含支援數種類型的輸入。 此�
  <xref:System.Windows.Input.FocusManager>  
   
 ## <a name="related-sections"></a>相關章節  
- [控制項](../../../../docs/framework/wpf/controls/index.md)  
-  [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)
+ [控制項](../controls/index.md)  
+  [事件](events-wpf.md)

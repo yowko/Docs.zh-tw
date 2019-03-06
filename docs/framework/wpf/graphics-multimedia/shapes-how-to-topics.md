@@ -9,24 +9,24 @@ helpviewer_keywords:
 - Shape objects [WPF]
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
-ms.openlocfilehash: 0a218df17412f713eec272e49c13956b2efb71b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f1d22d2f7070bb93d175c28c166c434ff16ae19
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620223"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358063"
 ---
 # <a name="shapes-how-to-topics"></a>圖案 HOW TO 主題
 在本節中的主題將示範如何使用<xref:System.Windows.Shapes.Shape>物件基本圖形描繪至螢幕。  
   
 ## <a name="in-this-section"></a>本節內容  
- [使用 Polygon 元素繪製封閉的圖形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
- [繪製橢圓形或圓形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-an-ellipse-or-a-circle.md)  
- [繪製線條](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-line.md)  
- [使用 Polyline 元素繪製聚合線](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-polyline-by-using-the-polyline-element.md)  
- [繪製矩形](../../../../docs/framework/wpf/graphics-multimedia/how-to-draw-a-rectangle.md)  
- [修改線條或線段結尾的端點](../../../../docs/framework/wpf/graphics-multimedia/how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
+ [使用 Polygon 元素繪製封閉的圖形](how-to-draw-a-closed-shape-by-using-the-polygon-element.md)  
+ [繪製橢圓形或圓形](how-to-draw-an-ellipse-or-a-circle.md)  
+ [繪製線條](how-to-draw-a-line.md)  
+ [使用 Polyline 元素繪製聚合線](how-to-draw-a-polyline-by-using-the-polyline-element.md)  
+ [繪製矩形](how-to-draw-a-rectangle.md)  
+ [修改線條或線段結尾的端點](how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Shapes.Shape>
-- [圖形和多媒體](../../../../docs/framework/wpf/graphics-multimedia/index.md)
+- [圖形和多媒體](index.md)

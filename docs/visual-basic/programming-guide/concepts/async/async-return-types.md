@@ -2,22 +2,22 @@
 title: 非同步方法的傳回類型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 6fffd94a4b9ca531af58138b7613e0b3c5364c56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498407"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57352577"
 ---
 # <a name="async-return-types-visual-basic"></a>非同步方法的傳回類型 (Visual Basic)
-非同步方法有三種可能的傳回型別：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需有關非同步方法的詳細資訊，請參閱[使用 Async 和 Await (Visual Basic) 的非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
+非同步方法有三種可能的傳回類型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需有關非同步方法的詳細資訊，請參閱[使用 Async 和 Await (Visual Basic) 的非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
   
  每個傳回型別在下列其中一節探討，您可以在主題結尾處找到使用全部三種類型的完整範例。  
   
 > [!NOTE]
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task(T) 傳回型別  
+## <a name="BKMK_TaskTReturnType"></a> Task(T) 傳回型別  
  <xref:System.Threading.Tasks.Task%601>傳回型別用於非同步方法，其中包含[會傳回](../../../../visual-basic/language-reference/statements/return-statement.md)陳述式中運算元的型別`TResult`。  
   
  在下列範例中，`TaskOfT_MethodAsync` 非同步方法包含一個傳回整數的 return 陳述式。 因此，方法宣告必須指定 `Task(Of Integer)` 傳回型別。  
@@ -79,7 +79,7 @@ textBox1.Text &= String.Format("Value of result2 variable:   {0}" & vbCrLf, resu
 textBox1.Text &= String.Format("Value of resultTask.Result:  {0}" & vbCrLf, integerTask.Result)  
 ```  
   
-##  <a name="BKMK_TaskReturnType"></a> 工作傳回型別  
+## <a name="BKMK_TaskReturnType"></a> 工作傳回型別  
  不包含 return 陳述式的非同步方法，或包含不會傳回運算元的 return 陳述式的非同步方法，通常具有傳回型別 <xref:System.Threading.Tasks.Task>。 這類方法會是[Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md)如果它們撰寫成同步執行的程序。 如果您針對非同步方法使用 `Task` 傳回型別，則除非被呼叫的非同步方法完成，否則呼叫的方法可以使用 `Await` 運算子暫止呼叫端完成。  
   
  在下列範例中，非同步方法 `Task_MethodAsync` 不包含 return 陳述式。 因此，您為方法指定 `Task` 傳回型別，如此可等候 `Task_MethodAsync`。 `Task` 類型的定義不包含用來儲存傳回值的 `Result` 屬性。  
@@ -121,7 +121,7 @@ textBox1.Text &= String.Format(vbCrLf & "Application can continue working while 
 Await simpleTask  
 ```  
   
-##  <a name="BKMK_VoidReturnType"></a> Void 傳回型別  
+## <a name="BKMK_VoidReturnType"></a> Void 傳回型別  
  主要用途`Sub`程序處於事件處理常式，其中沒有傳回型別 （稱為 void 的傳回型別，以其他語言）。 void 傳回也可用來覆寫傳回 void 的方法，或執行可分類為「射後不理」(fire and forget) 之活動的方法。 不過，您應該盡可能傳回 `Task`，因為無法等候傳回 void 的非同步方法。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。  
   
  傳回 void 的非同步方法的呼叫端無法攔截方法擲回的例外狀況，這類未處理的例外狀況有可能造成應用程式失敗。 如果例外狀況發生在會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的非同步方法，則例外狀況會儲存在傳回的工作中，並在等候工作時再次擲回。 因此，請確定任何可能會產生例外狀況的非同步方法具有傳回型別 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601>，且會等候對方法的呼叫。  
@@ -145,7 +145,7 @@ Async Sub button1_Click(sender As Object, e As RoutedEventArgs) Handles button1.
 End Sub  
 ```  
   
-##  <a name="BKMK_Example"></a> 完整範例  
+## <a name="BKMK_Example"></a> 完整範例  
  下列 Windows Presentation Foundation (WPF) 專案包含本土的程式碼範例。  
   
  若要執行專案，請執行下列步驟：  

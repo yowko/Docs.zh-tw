@@ -8,21 +8,21 @@ helpviewer_keywords:
 - serialization [WPF]
 - tree [WPF]
 ms.assetid: 8f57e879-180b-421f-b3d0-ac007ff2ce80
-ms.openlocfilehash: 9fcaf10bbed23a6c8b8cdc8355a2575574d2207a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 4c178213e08add247311f0b71517ed292bd6658a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33542857"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355801"
 ---
 # <a name="element-tree-and-serialization"></a>項目樹狀結構和序列化
 WPF 的程式設計項目通常存在於彼此間某種形式的樹狀結構關聯性。 例如，以 XAML 建立的應用程式 UI 可以概念化為物件樹狀結構。 項目樹狀結構可以進一步細分為兩個不連續但有時平行的樹狀結構︰邏輯樹狀結構和視覺化樹狀結構。 WPF 中的序列化牽涉到儲存這兩種樹狀結構的狀態和應用程式狀態，並可能以 XAML 寫入至檔案。  
   
 ## <a name="in-this-section"></a>本節內容  
- [WPF 中的樹狀結構](../../../../docs/framework/wpf/advanced/trees-in-wpf.md)  
- [XamlWriter.Save 的序列化限制](../../../../docs/framework/wpf/advanced/serialization-limitations-of-xamlwriter-save.md)  
- [初始化物件樹狀結構以外的物件項目](../../../../docs/framework/wpf/advanced/initialization-for-object-elements-not-in-an-object-tree.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/advanced/element-tree-and-serialization-how-to-topics.md)  
+ [WPF 中的樹狀結構](trees-in-wpf.md)  
+ [XamlWriter.Save 的序列化限制](serialization-limitations-of-xamlwriter-save.md)  
+ [初始化物件樹狀結構以外的物件項目](initialization-for-object-elements-not-in-an-object-tree.md)  
+ [HOW-TO 主題](element-tree-and-serialization-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Markup>  
@@ -32,12 +32,12 @@ WPF 的程式設計項目通常存在於彼此間某種形式的樹狀結構關�
  <xref:System.Windows.Media.VisualTreeHelper>  
   
 ## <a name="related-sections"></a>相關章節  
- [WPF 架構](../../../../docs/framework/wpf/advanced/wpf-architecture.md)  
-  [WPF 中的 XAML](../../../../docs/framework/wpf/advanced/xaml-in-wpf.md)  
-  [基底項目](../../../../docs/framework/wpf/advanced/base-elements.md)  
-  [屬性](../../../../docs/framework/wpf/advanced/properties-wpf.md)  
-  [事件](../../../../docs/framework/wpf/advanced/events-wpf.md)  
-  [輸入](../../../../docs/framework/wpf/advanced/input-wpf.md)  
-  [資源](../../../../docs/framework/wpf/advanced/resources-wpf.md)  
-  [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)  
-  [執行緒模型](../../../../docs/framework/wpf/advanced/threading-model.md)
+ [WPF 架構](wpf-architecture.md)  
+  [WPF 中的 XAML](xaml-in-wpf.md)  
+  [基底項目](base-elements.md)  
+  [屬性](properties-wpf.md)  
+  [事件](events-wpf.md)  
+  [輸入](input-wpf.md)  
+  [資源](resources-wpf.md)  
+  [樣式設定和範本化](../controls/styling-and-templating.md)  
+  [執行緒模型](threading-model.md)

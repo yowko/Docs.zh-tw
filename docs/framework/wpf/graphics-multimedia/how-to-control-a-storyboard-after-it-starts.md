@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 2fd9f34cdd6aac56ee5a29d972f18979292c69e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98eba600f64c8b656e3597b429cc69766f398f7b
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570144"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361053"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>HOW TO：分鏡腳本開始後進行控制
-此範例示範如何使用程式碼，以控制<xref:System.Windows.Media.Animation.Storyboard>啟動之後。 若要控制在分鏡腳本[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Trigger>並<xref:System.Windows.TriggerAction>物件; 如需範例，請參閱[使用事件觸發程序來控制分鏡腳本開始後](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
+此範例示範如何使用程式碼，以控制<xref:System.Windows.Media.Animation.Storyboard>啟動之後。 若要控制在分鏡腳本[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，使用<xref:System.Windows.Trigger>並<xref:System.Windows.TriggerAction>物件; 如需範例，請參閱[使用事件觸發程序來控制分鏡腳本開始後](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
   
  若要啟動分鏡腳本，您使用其<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>方法，將它們建立動畫，並啟動分鏡腳本的屬性的分鏡腳本的動畫。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "54570144"
   
  在下列範例中，數個分鏡腳本的方法來以互動方式控制分鏡腳本。  
   
- **注意：** 若要控制使用觸發程序及分鏡腳本的範例，請參閱[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，請參閱 <<c2> [ 來控制分鏡腳本開始後使用事件觸發程序](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
+ **注意：** 若要控制使用觸發程序及分鏡腳本的範例，請參閱[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，請參閱 <<c2> [ 來控制分鏡腳本開始後使用事件觸發程序](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
- [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
+ [!code-csharp[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_procedural_snip/CSharp/ControlStoryboardExample.cs#controlstoryboardexampleusingwholepage)]
+ [!code-vb[timingbehaviors_procedural_snip#ControlStoryboardExampleUsingWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/timingbehaviors_procedural_snip/visualbasic/controlstoryboardexample.vb#controlstoryboardexampleusingwholepage)]  
   
 ## <a name="see-also"></a>另請參閱
-- [在分鏡腳本開始後使用事件觸發程式進行控制](../../../../docs/framework/wpf/graphics-multimedia/how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)
+- [在分鏡腳本開始後使用事件觸發程式進行控制](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)

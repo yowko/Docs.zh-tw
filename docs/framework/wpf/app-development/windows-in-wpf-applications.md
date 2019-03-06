@@ -7,20 +7,20 @@ helpviewer_keywords:
 - windows [WPF]
 - WPF application [WPF], windows
 ms.assetid: dc091d04-68cf-4592-9695-75fda037db76
-ms.openlocfilehash: 04622255ea70d3d8161dc18919cb2833fe706639
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 798f8def03cb396224b7ba61bd17974609a5ff54
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33550773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57353851"
 ---
 # <a name="windows-in-wpf-applications"></a>WPF 應用程式中的視窗
-使用者透過 windows 應用程式與互動。 視窗的主要目的是將裝載，並顯示內容。 確認視窗主機取決於資料類型，應用程式上運作，其中可包含媒體、 Extensible Application Markup Language (XAML) 頁面、 網頁、 文件、 資料庫資料表和記錄，以及系統資訊的內容類型。  
+使用者透過 windows 的應用程式與互動。 視窗的基本目的是裝載，並顯示內容。 視窗主機取決於資料類型的應用程式上運作，其中可以包含媒體、 Extensible Application Markup Language (XAML) 頁面、 網頁、 文件、 資料庫資料表和記錄，以及系統資訊的內容類型。  
   
 ## <a name="in-this-section"></a>本節內容  
- [WPF 視窗概觀](../../../../docs/framework/wpf/app-development/wpf-windows-overview.md)  
- [對話方塊概觀](../../../../docs/framework/wpf/app-development/dialog-boxes-overview.md)  
- [HOW-TO 主題](../../../../docs/framework/wpf/app-development/window-management-how-to-topics.md)  
+ [WPF 視窗概觀](wpf-windows-overview.md)  
+ [對話方塊概觀](dialog-boxes-overview.md)  
+ [HOW-TO 主題](window-management-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Window>  
@@ -28,7 +28,7 @@ ms.locfileid: "33550773"
  <xref:System.Windows.Navigation.NavigationWindow>  
   
 ## <a name="related-sections"></a>相關章節  
- [應用程式管理概觀](../../../../docs/framework/wpf/app-development/application-management-overview.md)  
-  [瀏覽概觀](../../../../docs/framework/wpf/app-development/navigation-overview.md)  
-  [裝載](../../../../docs/framework/wpf/app-development/hosting-wpf-applications.md)  
-  [建置和部署](../../../../docs/framework/wpf/app-development/building-and-deploying-wpf-applications.md)
+ [應用程式管理概觀](application-management-overview.md)  
+  [瀏覽概觀](navigation-overview.md)  
+  [裝載](hosting-wpf-applications.md)  
+  [建置和部署](building-and-deploying-wpf-applications.md)

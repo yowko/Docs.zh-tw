@@ -11,12 +11,12 @@ helpviewer_keywords:
 - views [WPF], sorting data
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
-ms.openlocfilehash: 62b0f46e710180ef53fba086bdfed9e7cf45be9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cbd113502c3f953bd701930df6db090844fefa
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610600"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57351420"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>HOW TO：使用 XAML 排序和分組資料
 此範例示範如何建立資料集合中的檢視[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 檢視允許的分組、 排序、 篩選、 功能和目前的項目的概念。  
@@ -26,20 +26,20 @@ ms.locfileid: "54610600"
   
  下列範例會建立依城市名稱排序和依狀態分組的資料集合的檢視。  
   
- [!code-xaml[CollectionViewSource#1](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
+ [!code-xaml[CollectionViewSource#1](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#1)]  
   
  檢視即可繫結來源，如下列範例所示：  
   
- [!code-xaml[CollectionViewSource#2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
+ [!code-xaml[CollectionViewSource#2](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#2)]  
   
  XML 資料中定義的繫結<xref:System.Windows.Data.XmlDataProvider>資源，與 XML 名稱前面加上 @ 符號。  
   
- [!code-xaml[CollectionViewSource#XDPChunk](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
+ [!code-xaml[CollectionViewSource#XDPChunk](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#xdpchunk)]  
   
- [!code-xaml[CollectionViewSource#Attribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
+ [!code-xaml[CollectionViewSource#Attribute](~/samples/snippets/csharp/VS_Snippets_Wpf/CollectionViewSource/CS/window1.xaml#attribute)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Data.CollectionViewSource>
-- [取得資料集合的預設檢視](../../../../docs/framework/wpf/data/how-to-get-the-default-view-of-a-data-collection.md)
-- [資料繫結概觀](../../../../docs/framework/wpf/data/data-binding-overview.md)
-- [HOW-TO 主題](../../../../docs/framework/wpf/data/data-binding-how-to-topics.md)
+- [取得資料集合的預設檢視](how-to-get-the-default-view-of-a-data-collection.md)
+- [資料繫結概觀](data-binding-overview.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

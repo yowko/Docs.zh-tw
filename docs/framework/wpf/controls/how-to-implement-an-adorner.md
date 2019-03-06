@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], implementing
 ms.assetid: 56ae32b6-0599-455c-b52f-2ff97e6f1ec2
-ms.openlocfilehash: f34bdeb87d0bf34a998f9b2e2fb6c42aedec5063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53a25396ba5d8a5c78e850e636b7c882c03d5152
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591678"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57362639"
 ---
 # <a name="how-to-implement-an-adorner"></a>HOW TO：實作裝飾項
 此範例中顯示的最小的裝飾項實作。  
@@ -26,8 +26,8 @@ ms.locfileid: "54591678"
  藉由實作繼承自抽象類別來建立自訂裝飾項<xref:System.Windows.Documents.Adorner>類別。  裝飾項範例只會裝飾的邊角<xref:System.Windows.UIElement>具有藉由覆寫的圓圈<xref:System.Windows.UIElement.OnRender%2A>方法。  
   
 ### <a name="code"></a>程式碼  
- [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
- [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
+ [!code-csharp[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/csharp/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/CSharp/Window1.xaml.cs#_simplecircleadornerbody)]
+ [!code-vb[Adorners_SimpleCircleAdorner#_SimpleCircleAdornerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_simplecircleadornerbody)]  
   
 ## <a name="see-also"></a>另請參閱
-- [裝飾項概觀](../../../../docs/framework/wpf/controls/adorners-overview.md)
+- [裝飾項概觀](adorners-overview.md)

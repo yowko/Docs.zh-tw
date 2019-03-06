@@ -6,12 +6,12 @@ helpviewer_keywords:
 - focus [WPF], visual styling
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
-ms.openlocfilehash: e1cbab51d1c59cb8402617fa3a17c5d18ff7ccb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762abf9524b8dfc7903d5e33bdbe99f4d0eb7192
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562585"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377041"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>設定控制項中焦點的樣式和 FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供兩種平行機制，在控制項接收到鍵盤焦點時，用來變更它的視覺外觀。 第一種機制是使用屬性 setter 屬性，例如<xref:System.Windows.UIElement.IsKeyboardFocused%2A>樣式或範本套用至控制項內。 第二個機制是提供個別的樣式值<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>屬性; 「 焦點視覺化樣式 」 會為繪製控制項，而不是變更控制項或其他 UI 的視覺化樹狀結構上方的提示建立個別的視覺化樹狀結構藉由取代的項目。 本主題將討論每一種機制的適用案例。  
@@ -25,7 +25,7 @@ ms.locfileid: "54562585"
   
 <a name="Default"></a>   
 ## <a name="default-focus-visual-style-behavior"></a>預設的焦點視覺化樣式行為  
- 只有當焦點動作是由鍵盤所起始時，焦點視覺化樣式才會運作。 任何的滑鼠動作或程式設計焦點變更，都會停用焦點視覺化樣式的模式。 如需焦點模式之間差異的詳細資訊，請參閱[焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)。  
+ 只有當焦點動作是由鍵盤所起始時，焦點視覺化樣式才會運作。 任何的滑鼠動作或程式設計焦點變更，都會停用焦點視覺化樣式的模式。 如需焦點模式之間差異的詳細資訊，請參閱[焦點概觀](focus-overview.md)。  
   
  控制項的佈景主題包括預設的焦點視覺化樣式行為，其會成為佈景主題中所有控制項的焦點視覺化樣式。 此佈景主題樣式由靜態索引鍵的值<xref:System.Windows.SystemParameters.FocusVisualStyleKey%2A>。 當您在應用程式層級宣告自己的焦點視覺化樣式時，會取代佈景主題的這個預設樣式行為。 或者，如果您定義整個佈景主題，則您應該使用這個相同的索引鍵，針對整個佈景主題定義預設行為的樣式。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54562585"
 ## <a name="alternatives-to-using-a-focus-visual-style"></a>使用焦點視覺化樣式的替代方案  
  針對不適合使用焦點視覺化樣式的情況 (可能是因為您只設定單一控制項的樣式，或因為您想要對控制項範本有更大的控制權)，有許多其他可存取的屬性和技術可用於建立視覺化行為來回應焦點的變更。  
   
- 如需所有對觸發程序、setter 及事件 setter 的詳細討論，請參閱[設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。 [路由事件概觀](../../../../docs/framework/wpf/advanced/routed-events-overview.md)中則會討論如何處理路由事件。  
+ 如需所有對觸發程序、setter 及事件 setter 的詳細討論，請參閱[設定樣式和範本](../controls/styling-and-templating.md)。 [路由事件概觀](routed-events-overview.md)中則會討論如何處理路由事件。  
   
 ### <a name="iskeyboardfocused"></a>IsKeyboardFocused  
  如果您特別感興趣鍵盤焦點<xref:System.Windows.UIElement.IsKeyboardFocused%2A>相依性屬性可用於屬性<xref:System.Windows.Trigger>。 若要定義非常專屬於單一控制項的鍵盤焦點行為，樣式或範本中的屬性觸發程序是更為合適的技術，而這可能不會以視覺化方式符合其他控制項的鍵盤焦點行為。  
@@ -78,6 +78,6 @@ ms.locfileid: "54562585"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>
-- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [焦點概觀](../../../../docs/framework/wpf/advanced/focus-overview.md)
-- [輸入概觀](../../../../docs/framework/wpf/advanced/input-overview.md)
+- [樣式設定和範本化](../controls/styling-and-templating.md)
+- [焦點概觀](focus-overview.md)
+- [輸入概觀](input-overview.md)

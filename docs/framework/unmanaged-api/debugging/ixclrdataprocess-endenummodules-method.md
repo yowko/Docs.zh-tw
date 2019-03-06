@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 50ad55674360d7b880af3ddf701cf17005f30ce7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b7050e92af6fc58b45837840b2796a5deac955c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722734"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375333"
 ---
 # <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess::EndEnumModules 方法
 
@@ -35,8 +35,10 @@ HRESULT EndEnumModules(
 );
 ```
 
-### <a name="parameters"></a>參數
-`handle` [out]列舉模組控制代碼。
+## <a name="parameters"></a>參數
+
+`handle`\
+[out]列舉模組控制代碼。
 
 ## <a name="remarks"></a>備註
 
@@ -51,5 +53,5 @@ HRESULT EndEnumModules(
 
 ## <a name="see-also"></a>另請參閱
 
-- [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [IXCLRDataProcess 介面](../../../../docs/framework/unmanaged-api/debugging/ixclrdataprocess-interface.md)
+- [偵錯](index.md)
+- [IXCLRDataProcess 介面](ixclrdataprocess-interface.md)

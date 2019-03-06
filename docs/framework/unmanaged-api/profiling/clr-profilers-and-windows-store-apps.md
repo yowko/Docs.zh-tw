@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c8eb2e7-f20a-42f9-a795-71503486a0f5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4dedc6b527706fc9f22add903feb30ad2884eab
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 93344e1c5aa62e86d29a0110a9d8cffc3cea66ff
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188816"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358544"
 ---
 # <a name="clr-profilers-and-windows-store-apps"></a>CLR 分析工具和 Windows 市集應用程式
 
@@ -126,7 +126,7 @@ NET Runtime version 4.0.30319.17929 - Loading profiler failed during CoCreateIns
 
 您可以使用<xref:Windows.Management.Deployment.PackageManager>類別來產生這份清單。 `PackageManager` 是適用於桌面應用程式，Windows 執行階段類別，而且事實上*只*用於桌面應用程式。
 
-下列程式碼範例從撰寫為傳統型應用程式在 C# yses 假設 Profiler UI`PackageManager`來產生 Windows 應用程式清單：
+下列程式碼範例假設 Profiler UI 撰寫為傳統型應用程式中從C#會使用`PackageManager`產生的 Windows 應用程式清單：
 
 ```csharp
 string currentUserSID = WindowsIdentity.GetCurrent().User.ToString();
@@ -143,7 +143,7 @@ IEnumerable<Package> packages = packageManager.FindPackagesForUser(currentUserSI
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine, 
+pkgDebugSettings.EnableDebugging(packageFullName, debuggerCommandLine,
                                                                  (IntPtr)fixedEnvironmentPzz);
 ```
 
@@ -168,7 +168,7 @@ pkgDebugSettings.EnableDebugging(packgeFullName, debuggerCommandLine,
         // Parse command line here
         // …
 
-        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, 
+        HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME,
                                                                   FALSE /* bInheritHandle */, nThreadID);
         ResumeThread(hThread);
         CloseHandle(hThread);
@@ -235,7 +235,7 @@ appActivationMgr.ActivateApplication(appUserModelId, appArgs, ACTIVATEOPTIONS.AO
 
 ```csharp
 IPackageDebugSettings pkgDebugSettings = new PackageDebugSettings();
-pkgDebugSettings.EnableDebugging(packgeFullName, null /* debuggerCommandLine */, 
+pkgDebugSettings.EnableDebugging(packageFullName, null /* debuggerCommandLine */,
                                                                  IntPtr.Zero /* environment */);
 ```
 
@@ -384,7 +384,7 @@ Managed 的堆積的記憶體回收行程不完全不同的 Windows 市集應用
 
 相關的點是，在您的分析工具所建立的執行緒上所做的呼叫一律是同步的即使這些呼叫會從外部 Profiler DLL 的其中一項的實作進行[ICorProfilerCallback](icorprofilercallback-interface.md)方法。 至少，用這種情況。 現在，CLR 已轉換成 managed 執行緒分析工具的執行緒因為呼叫[ForceGC 方法](icorprofilerinfo-forcegc-method.md)，執行緒不會再視為您的分析工具執行緒。 因此，CLR 會強制執行更嚴格定義的項目會限定為該執行緒同步 — 也就是呼叫必須來自 Profiler DLL 的其中一項[ICorProfilerCallback](icorprofilercallback-interface.md)限定為同步的方法。
 
-這代表在實務上什麼？ 大部分[ICorProfilerInfo](icorprofilerinfo-interface.md)方法僅提供以同步方式呼叫的安全，否則將會立即失敗。 因此，如果您 Profiler 的 DLL 會重複使用您[ForceGC 方法](icorprofilerinfo-forcegc-method.md)通常做程式碼剖析工具所建立執行緒上的其他呼叫的執行緒 (例如，若要[RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)， [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)，或[RequestRevert](icorprofilerinfo4-requestrevert-method.md))，您要有問題。 即使這類非同步安全函式[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)已從受管理的執行緒呼叫時的特殊規則。 (請參閱部落格文章[Profiler 堆疊查核行程： 基礎及更新版本](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)如需詳細資訊。)
+這代表在實務上什麼？ 大部分[ICorProfilerInfo](icorprofilerinfo-interface.md)方法僅提供以同步方式呼叫的安全，否則將會立即失敗。 因此，如果您 Profiler 的 DLL 會重複使用您[ForceGC 方法](icorprofilerinfo-forcegc-method.md)通常做程式碼剖析工具所建立執行緒上的其他呼叫的執行緒 (例如，若要[RequestProfilerDetach](icorprofilerinfo3-requestprofilerdetach-method.md)， [RequestReJIT](icorprofilerinfo4-requestrejit-method.md)，或[RequestRevert](icorprofilerinfo4-requestrevert-method.md))，您要有問題。 即使這類非同步安全函式[DoStackSnapshot](icorprofilerinfo2-dostacksnapshot-method.md)已從受管理的執行緒呼叫時的特殊規則。 (請參閱部落格文章[Profiler 堆疊查核行程：基本概念及更新版本](https://blogs.msdn.microsoft.com/davbr/2005/10/06/profiler-stack-walking-basics-and-beyond/)如需詳細資訊。)
 
 因此，我們建議您 Profiler 的 DLL 會呼叫建立任何執行緒[ForceGC 方法](icorprofilerinfo-forcegc-method.md)應*只*為了觸發 Gc，然後回應 GC 回呼。 它不應該呼叫程式碼剖析 API 來執行其他工作，例如 stack 取樣或中斷連結。
 

@@ -4,17 +4,17 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: aab9759bcadd52c0af03034cc18512ced01046ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508644"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364004"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大化 WPF 3D 效能
 當您使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]建置 3D 的控制項，並納入您的應用程式的 3D 場景，務必考慮效能最佳化。 本主題提供 3D 類別和應用程式，以及最佳化效能，當您使用它們時的建議會影響效能的屬性的清單。  
   
- 本主題假設有進階了解[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 功能。 這份文件中的建議套用到 「 轉譯層 2 」，大致上定義為支援的像素著色器版本 2.0 和頂點著色器 2.0 版的硬體。 如需詳細資訊，請參閱 <<c0> [ 圖形轉譯層](../../../../docs/framework/wpf/advanced/graphics-rendering-tiers.md)。  
+ 本主題假設有進階了解[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]3D 功能。 這份文件中的建議套用到 「 轉譯層 2 」，大致上定義為支援的像素著色器版本 2.0 和頂點著色器 2.0 版的硬體。 如需詳細資訊，請參閱 <<c0> [ 圖形轉譯層](../advanced/graphics-rendering-tiers.md)。  
   
 ## <a name="performance-impact-high"></a>對效能的影響：High  
   
@@ -60,4 +60,4 @@ ms.locfileid: "54508644"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|若要將大型集合中的建構時間降至最低[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，例如 MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>，和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，預先調整大小的集合值的母體擴展之前。 可能的話，請傳遞集合的建構函式預先填入的資料結構，例如陣列或清單。|  
   
 ## <a name="see-also"></a>另請參閱
-- [立體圖形概觀](../../../../docs/framework/wpf/graphics-multimedia/3-d-graphics-overview.md)
+- [立體圖形概觀](3-d-graphics-overview.md)

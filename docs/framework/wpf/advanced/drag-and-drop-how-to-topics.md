@@ -6,23 +6,23 @@ f1_keywords:
 helpviewer_keywords:
 - drag-and-drop [WPF], how-to topics
 ms.assetid: 559c0804-c62a-4640-b6b9-cbd2aa9fb99c
-ms.openlocfilehash: 48f846329d8463f9519a2a7654f9a42f6bca5384
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd7bccdd28f433893a988f95c5e1d804f6e138de
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721864"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57358804"
 ---
 # <a name="drag-and-drop-how-to-topics"></a>拖放 HOW TO 主題
 下列範例示範如何完成一般工作，使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]拖放 framework。  
   
 ## <a name="in-this-section"></a>本節內容  
- [開啟置放在 RichTextBox 控制項上的檔案](../../../../docs/framework/wpf/advanced/how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
- [建立資料庫物件](../../../../docs/framework/wpf/advanced/how-to-create-a-data-object.md)  
- [判斷資料格式是否出現在資料物件中](../../../../docs/framework/wpf/advanced/how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
- [列出資料物件中的資料格式](../../../../docs/framework/wpf/advanced/how-to-list-the-data-formats-in-a-data-object.md)  
- [擷取特定資料格式的資料](../../../../docs/framework/wpf/advanced/how-to-retrieve-data-in-a-particular-data-format.md)  
- [將多個資料格式儲存在資料物件中](../../../../docs/framework/wpf/advanced/how-to-store-multiple-data-formats-in-a-data-object.md)  
+ [開啟置放在 RichTextBox 控制項上的檔案](how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md)  
+ [建立資料庫物件](how-to-create-a-data-object.md)  
+ [判斷資料格式是否出現在資料物件中](how-to-determine-if-a-data-format-is-present-in-a-data-object.md)  
+ [列出資料物件中的資料格式](how-to-list-the-data-formats-in-a-data-object.md)  
+ [擷取特定資料格式的資料](how-to-retrieve-data-in-a-particular-data-format.md)  
+ [將多個資料格式儲存在資料物件中](how-to-store-multiple-data-formats-in-a-data-object.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [拖放概觀](../../../../docs/framework/wpf/advanced/drag-and-drop-overview.md)
+- [拖放概觀](drag-and-drop-overview.md)

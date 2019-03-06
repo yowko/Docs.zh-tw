@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: efe3d06c533d4d2be7364da66ccd3f101c8869d4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: fbbd400ae842ae24bae0307c362642d8fe1d5bea
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188153"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57364056"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF 中的雙向功能概觀
 不同於任何其他開發平台[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有許多支援雙向內容的快速開發功能，例如混合使用由左至右和由右至左相同的文件中的資料。 在此同時，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]建立需要雙向功能，如阿拉伯文和希伯來文談到使用者之使用者的絕佳體驗。  
@@ -27,23 +27,23 @@ ms.locfileid: "50188153"
   
  **由左至右的流向**  
   
- [!code-xaml[LTRRTL#LTR](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
+ [!code-xaml[LTRRTL#LTR](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#ltr)]  
   
  **由右至左的流向**  
   
- [!code-xaml[LTRRTL#RTL](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
+ [!code-xaml[LTRRTL#RTL](~/samples/snippets/csharp/VS_Snippets_Wpf/LTRRTL/CS/Pane1.xaml#rtl)]  
   
  下圖顯示如何轉譯先前的程式碼。  
   
  **說明 FlowDirection 的圖形**  
   
- ![TextBlock 對齊](../../../../docs/framework/wpf/advanced/media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
+ ![TextBlock 對齊](./media/lefttorightrighttoleft.PNG "LefttoRightRighttoLeft")  
   
  內的項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]樹狀結構會繼承<xref:System.Windows.FrameworkElement.FlowDirection%2A>從其容器。 在下列範例中，<xref:System.Windows.Controls.TextBlock>內<xref:System.Windows.Controls.Grid>，而後者則位在<xref:System.Windows.Window>。 設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>for<xref:System.Windows.Window>隱含設定進行<xref:System.Windows.Controls.Grid>和<xref:System.Windows.Controls.TextBlock>以及。  
   
  下列範例示範如何設定<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
- [!code-xaml[FlowDirection#FlowDirection](../../../../samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
+ [!code-xaml[FlowDirection#FlowDirection](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowDirection/CS/Window1.xaml#flowdirection)]  
   
  最上層<xref:System.Windows.Window>已經<xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.FlowDirection>，因此，其內所含的所有項目也會繼承相同<xref:System.Windows.FrameworkElement.FlowDirection%2A>。 若要覆寫指定的項目<xref:System.Windows.FrameworkElement.FlowDirection%2A>它必須新增明確方向變更，例如第二個<xref:System.Windows.Controls.TextBlock>變更為上一個範例中<xref:System.Windows.FlowDirection.LeftToRight>。 若未<xref:System.Windows.FrameworkElement.FlowDirection%2A>定義，則預設<xref:System.Windows.FlowDirection.LeftToRight>套用。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "50188153"
   
  **說明明確指派之 FlowDirection 的圖形**  
   
- ![向圖例](../../../../docs/framework/wpf/advanced/media/flowdir.PNG "FlowDir")  
+ ![向圖例](./media/flowdir.PNG "FlowDir")  
   
 <a name="FlowDocument"></a>   
 ## <a name="flowdocument"></a>FlowDocument  
@@ -65,7 +65,7 @@ ms.locfileid: "50188153"
   
  **說明使用 Span 項目的圖形**  
   
- ![流向為由右至左的文件](../../../../docs/framework/wpf/advanced/media/flowdocument.PNG "FlowDocument")  
+ ![流向為由右至左的文件](./media/flowdocument.PNG "FlowDocument")  
   
  因為文字<xref:System.Windows.FlowDirection.RightToLeft>、 所有特殊字元，例如 「\\"，區隔文字由右至左的順序。 這會導致不正確的順序顯示的連結，因此若要解決此問題，必須內嵌文字，以保留個別<xref:System.Windows.Documents.Run>流動<xref:System.Windows.FlowDirection.LeftToRight>。 而不是個別<xref:System.Windows.Documents.Run>針對每種語言，更好的方法，來解決問題就是將較不常用的英文文字內嵌到較大的阿拉伯文<xref:System.Windows.Documents.Span>。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "50188153"
   
  **說明使用內嵌在 Span 項目之 Run 項目的圖形**  
   
- ![XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/runspan.PNG "RunSpan")  
+ ![XamlPad 螢幕擷取畫面](./media/runspan.PNG "RunSpan")  
   
  下列範例示範如何使用<xref:System.Windows.Documents.Run>和<xref:System.Windows.Documents.Span>文件中的項目。  
   
- [!code-xaml[RunSpan#RunSpan](../../../../samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
+ [!code-xaml[RunSpan#RunSpan](~/samples/snippets/csharp/VS_Snippets_Wpf/RunSpan/CS/Window1.xaml#runspan)]  
   
 <a name="SpanElements"></a>   
 ## <a name="span-elements"></a>Span 項目  
@@ -87,11 +87,11 @@ ms.locfileid: "50188153"
   
  **說明數個 TextBlock 項目中 FlowDirection 的圖形**  
   
- ![向不同的文字區塊](../../../../docs/framework/wpf/advanced/media/span.PNG "Span")  
+ ![向不同的文字區塊](./media/span.PNG "Span")  
   
  下列範例示範如何使用<xref:System.Windows.Documents.Span>和<xref:System.Windows.Documents.Run>項目來產生上圖所示結果。  
   
- [!code-xaml[Span#Span](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
+ [!code-xaml[Span#Span](~/samples/snippets/csharp/VS_Snippets_Wpf/Span/CS/Window1.xaml#span)]  
   
  在<xref:System.Windows.Controls.TextBlock>項目，在範例中，<xref:System.Windows.Documents.Span>項目根據配置<xref:System.Windows.FlowDirection>其父代，但在每個文字<xref:System.Windows.Documents.Span>根據自己的項目流程<xref:System.Windows.FlowDirection>。 這適用於拉丁文和阿拉伯文，或任何其他語言。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "50188153"
   
  **顯示只使用 FlowDirection 之數字的圖形**  
   
- ![向由右至左的數字](../../../../docs/framework/wpf/advanced/media/langattribute.PNG "LangAttribute")  
+ ![向由右至左的數字](./media/langattribute.PNG "LangAttribute")  
   
  此應用程式的使用者將會對輸出失望，即使<xref:System.Windows.FlowDirection>正確無誤，會形成阿拉伯數字，不會形成數字。  
   
@@ -110,11 +110,11 @@ ms.locfileid: "50188153"
   
  **說明使用 xml:lang 屬性的圖形**  
   
- ![向由右至左的阿拉伯數字](../../../../docs/framework/wpf/advanced/media/langattribute2.PNG "LangAttribute2")  
+ ![向由右至左的阿拉伯數字](./media/langattribute2.PNG "LangAttribute2")  
   
  下列範例會將`xml:lang`應用程式。  
   
- [!code-xaml[LangAttribute#LangAttribute](../../../../samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
+ [!code-xaml[LangAttribute#LangAttribute](~/samples/snippets/csharp/VS_Snippets_Wpf/LangAttribute/CS/Window1.xaml#langattribute)]  
   
  請注意，許多語言會有不同`xml:lang`取決於目標區域，例如，值`"ar-SA"`和`"ar-EG"`代表阿拉伯文的兩種變化。 先前的範例說明您需要同時定義`xml:lang`和<xref:System.Windows.FlowDirection>值。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "50188153"
   
  **顯示具有由左至右漸層之工具列的圖形**  
   
- ![漸層螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/gradient.PNG "Gradient")  
+ ![漸層螢幕擷取畫面](./media/gradient.PNG "Gradient")  
   
  在設定之後<xref:System.Windows.FlowDirection>要<xref:System.Windows.FlowDirection.RightToLeft>，不只<xref:System.Windows.Controls.ToolBar>由右至左，但即使排列按鈕<xref:System.Windows.Media.LinearGradientBrush>會其位移來由右至左。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "50188153"
   
  **顯示具有由右至左漸層之工具列的圖形**  
   
- ![向由右至左的漸層](../../../../docs/framework/wpf/advanced/media/gradient2-wpf.PNG "Gradient2_WPF")  
+ ![向由右至左的漸層](./media/gradient2-wpf.PNG "Gradient2_WPF")  
   
  下列範例會繪製<xref:System.Windows.FlowDirection.RightToLeft> <xref:System.Windows.Controls.ToolBar>。 (若要繪製左到右，移除<xref:System.Windows.FlowDirection>屬性上<xref:System.Windows.Controls.ToolBar>。  
   
- [!code-xaml[Gradient#Gradient](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
+ [!code-xaml[Gradient#Gradient](~/samples/snippets/csharp/VS_Snippets_Wpf/Gradient/CS/Window1.xaml#gradient)]  
   
 <a name="FlowDirectionExceptions"></a>   
 ### <a name="flowdirection-exceptions"></a>FlowDirection 例外狀況  
@@ -152,11 +152,11 @@ ms.locfileid: "50188153"
   
  **說明已翻轉影像的圖形**  
   
- ![XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/image.PNG "Image")  
+ ![XamlPad 螢幕擷取畫面](./media/image.PNG "Image")  
   
- 下列範例示範<xref:System.Windows.Controls.Image>無法繼承<xref:System.Windows.FlowDirection>從<xref:System.Windows.Controls.StackPanel>包含它。 **附註**您必須擁有名為的檔案**ms_logo.jpg** C:\ 磁碟機執行此範例。  
+ 下列範例示範<xref:System.Windows.Controls.Image>無法繼承<xref:System.Windows.FlowDirection>從<xref:System.Windows.Controls.StackPanel>包含它。 **附註**您必須擁有名為的檔案**ms_logo.jpg**在您的 C:\ 上若要執行此範例中的磁碟機。  
   
- [!code-xaml[Image#Image](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
+ [!code-xaml[Image#Image](~/samples/snippets/csharp/VS_Snippets_Wpf/Image/CS/Window1.xaml#image)]  
   
  **附註**下載檔案中的包含已**ms_logo.jpg**檔案。 這個程式碼假設 .jpg 檔案不在您的專案內，而是在 C:\ 磁碟機的某個位置。 您必須將 .jpg 從專案檔複製至 C:\ 磁碟機，或變更程式碼來尋找專案內的檔案。 若要執行這項變更`Source="file://c:/ms_logo.jpg"`至`Source="ms_logo.jpg"`。  
   
@@ -166,13 +166,13 @@ ms.locfileid: "50188153"
   
  下列範例會繪製一個使用 3 條線的簡單箭號。 第一個箭號繼承<xref:System.Windows.FlowDirection.RightToLeft>資料流程方向從<xref:System.Windows.Controls.StackPanel>使其開始和結束點測量從右側的根。 具有明確的第二個箭號<xref:System.Windows.FlowDirection.RightToLeft><xref:System.Windows.FlowDirection>也會啟動在右邊。 不過，第三個箭號的起始根在左邊。 如需有關繪圖，請參閱<xref:System.Windows.Media.LineGeometry>和<xref:System.Windows.Media.GeometryGroup>。  
   
- [!code-xaml[Paths#Paths](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
+ [!code-xaml[Paths#Paths](~/samples/snippets/csharp/VS_Snippets_Wpf/Paths/CS/Window1.xaml#paths)]  
   
  下圖顯示上述範例的輸出。  
   
  **說明使用 Path 項目所繪製箭號的圖形**  
   
- ![路徑](../../../../docs/framework/wpf/advanced/media/paths.PNG "Paths")  
+ ![路徑](./media/paths.PNG "Paths")  
   
  <xref:System.Windows.Controls.Image>並<xref:System.Windows.Shapes.Path>是兩個範例[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]使用<xref:System.Windows.FlowDirection>。 旁邊的版面配置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]元素在容器內，以特定方向<xref:System.Windows.FlowDirection>適用於項目這類<xref:System.Windows.Controls.InkPresenter>會呈現在介面上的筆墨<xref:System.Windows.Media.LinearGradientBrush>， <xref:System.Windows.Media.RadialGradientBrush>。 每當您正確的行為，模擬的內容需由右至左的行為，反之亦然，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供這項功能。  
   
@@ -190,11 +190,11 @@ ms.locfileid: "50188153"
   
  這個屬性指定如何判斷數字的文化特性。 它會採用三個問題之一<xref:System.Windows.Media.NumberCultureSource>列舉值。  
   
--   覆寫︰ 數字文化特性是<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>屬性。  
+-   覆寫：數字的文化特性就是<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>屬性。  
   
--   文字︰數字文化特性是文字執行的文化特性。 在標記中，這會是`xml:lang`，或其別名`Language`屬性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。 此外，它是衍生自的類別的預設值<xref:System.Windows.FrameworkContentElement>。 這類類別包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>，<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>等等。  
+-   文字：數字文化特性為文字執行的文化特性。 在標記中，這會是`xml:lang`，或其別名`Language`屬性 (<xref:System.Windows.FrameworkElement.Language%2A>或<xref:System.Windows.FrameworkContentElement.Language%2A>)。 此外，它是衍生自的類別的預設值<xref:System.Windows.FrameworkContentElement>。 這類類別包括<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>， <xref:System.Windows.Documents.Table?displayProperty=nameWithType>，<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>等等。  
   
--   使用者︰數字文化特性是目前執行緒的文化特性。 這個屬性是所有的子類別的預設值<xref:System.Windows.FrameworkElement>這類<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。  
+-   使用者: 數字文化特性是目前執行緒文化特性。 這個屬性是所有的子類別的預設值<xref:System.Windows.FrameworkElement>這類<xref:System.Windows.Controls.Page>，<xref:System.Windows.Window>和<xref:System.Windows.Controls.TextBlock>。  
   
  **CultureOverride**：  
   
@@ -204,25 +204,25 @@ ms.locfileid: "50188153"
   
  這個屬性指定要執行的數字替代類型。 它會採用下列其中一種<xref:System.Windows.Media.NumberSubstitutionMethod>列舉值。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>: 取代方法取決於數字的文化特性<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性。 這是預設值。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>：替代方法取決於數字的文化特性<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>屬性。 這是預設值。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>： 如果數字的文化特性為阿拉伯文或波斯文文化特性，它會指定數字依賴內容。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>：如果數字的文化特性為阿拉伯文或波斯文文化特性，它會指定數字依賴內容。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>： 數字永遠會轉譯為歐洲數字。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.European>：數字永遠會轉譯為歐洲數字。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>： 數字的轉譯國家數字用於數字的文化特性，所指定的文化特性的<xref:System.Globalization.CultureInfo.NumberFormat%2A>。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>：數字的轉譯國家數字用於數字的文化特性，所指定的文化特性的<xref:System.Globalization.CultureInfo.NumberFormat%2A>。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>： 使用傳統數字的數字的文化特性，會呈現數字。 對於大部分的文化特性，這等同於<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 不過，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>導致拉丁數字用於一些阿拉伯文文化特性，而這個值會導致阿拉伯數字用於所有阿拉伯文文化特性。  
+-   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>：使用傳統數字的數字的文化特性會呈現數字。 對於大部分的文化特性，這等同於<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>。 不過，<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>導致拉丁數字用於一些阿拉伯文文化特性，而這個值會導致阿拉伯數字用於所有阿拉伯文文化特性。  
   
  這些值對雙向內容開發人員的意義為何？ 在大部分情況下，開發人員可能只需要定義<xref:System.Windows.FlowDirection>及每個文字的語言[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]項目，例如`Language="ar-SA"`並<xref:System.Windows.Media.NumberSubstitution>邏輯會負責顯示根據正確的數字[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 下列範例示範如何使用阿拉伯和英文中的數字[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]阿拉伯文版本中執行的應用程式[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。  
   
- [!code-xaml[Numbers#Numbers](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
+ [!code-xaml[Numbers#Numbers](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers/CS/Window1.xaml#numbers)]  
   
  下圖顯示先前範例的輸出，如果您在阿拉伯文版執行[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。  
   
  **顯示其中顯示阿拉伯和英文數字的圖形**  
   
- ![顯示數字的 XamlPad 螢幕擷取畫面](../../../../docs/framework/wpf/advanced/media/numbers.PNG "Numbers")  
+ ![顯示數字的 XamlPad 螢幕擷取畫面](./media/numbers.PNG "Numbers")  
   
  <xref:System.Windows.FlowDirection>很重要，在此情況下因為設定<xref:System.Windows.FlowDirection>到<xref:System.Windows.FlowDirection.LeftToRight>而是會產生歐洲數字。 下列各節討論如何統一顯示整個文件的數字。 如果此範例不是在阿拉伯文 Windows 上執行，則所有數字會顯示為歐洲數字。  
   
@@ -259,17 +259,17 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  您的最終[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]範例應該類似下列的範例。  
   
- [!code-xaml[Numbers2#Numbers2](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
+ [!code-xaml[Numbers2#Numbers2](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers2/CS/Window1.xaml#numbers2)]  
   
  您的最終C#範例應該類似下面的。  
   
- [!code-csharp[NumbersCSharp#NumbersCSharp](../../../../samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
+ [!code-csharp[NumbersCSharp#NumbersCSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/NumbersCSharp/CSharp/Window1.xaml.cs#numberscsharp)]  
   
  下圖顯示任一程式設計語言之視窗的外觀。  
   
  **顯示阿拉伯數字的圖形**  
   
- ![阿拉伯數字](../../../../docs/framework/wpf/advanced/media/numbers2.PNG "Numbers2")  
+ ![阿拉伯數字](./media/numbers2.PNG "Numbers2")  
   
  **使用替代屬性**  
   
@@ -279,4 +279,4 @@ text1.Language = System.Windows.Markup.XmlLanguage.GetLanguage(System.Globalizat
   
  在下列範例中，第一個<xref:System.Windows.Controls.TextBlock>沒有<xref:System.Windows.Media.NumberSubstitution.Substitution%2A>設定屬性，因此演算法會如預期般，顯示阿拉伯數字。 不過在第二個<xref:System.Windows.Controls.TextBlock>，替代會設定為 「 歐洲覆寫阿拉伯數字的預設替代，並顯示歐洲數字。  
   
- [!code-xaml[Numbers3#Numbers3](../../../../samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]
+ [!code-xaml[Numbers3#Numbers3](~/samples/snippets/csharp/VS_Snippets_Wpf/Numbers3/CS/Window1.xaml#numbers3)]

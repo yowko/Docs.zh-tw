@@ -2,12 +2,12 @@
 title: 呼叫端資訊 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: 7b0776425b41c8fef975355f3547a64c33fd96b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619009"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57375541"
 ---
 # <a name="caller-information-visual-basic"></a>呼叫端資訊 (Visual Basic)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
@@ -55,7 +55,7 @@ End Sub
   
  您可以明確提供選擇性引數來控制呼叫端資訊，或是隱藏呼叫端資訊。  
   
-###  <a name="MEMBERNAMES"></a> 成員名稱  
+### <a name="MEMBERNAMES"></a> 成員名稱  
  您可以使用 `CallerMemberName` 屬性避免指定成員名稱做為所呼叫方法的 `String` 引數。 利用這個技巧就可以避免發生 [重新命名重構] 未變更 `String` 值這個問題。 這項優點對於下列工作特別有用：  
   
 -   使用追蹤和診斷常式。  

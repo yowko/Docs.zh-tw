@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ListView controls [WPF], creating custom View mode
 ms.assetid: 71077349-eeb9-4344-ab29-b5df96df3314
-ms.openlocfilehash: 336e4ee911d18836eafa6f444c8d900c117acad3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609781e9ac2db9c9beef049886617e541199e5dd
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545273"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374761"
 ---
 # <a name="how-to-create-a-custom-view-mode-for-a-listview"></a>HOW TO：建立 ListView 的自訂檢視模式
 此範例示範如何建立自訂<xref:System.Windows.Controls.ListView.View%2A>模式<xref:System.Windows.Controls.ListView>控制項。  
@@ -20,31 +20,31 @@ ms.locfileid: "54545273"
 ## <a name="example"></a>範例  
  您必須使用<xref:System.Windows.Controls.ViewBase>類別，在您建立的自訂檢視<xref:System.Windows.Controls.ListView>控制項。 下列範例示範呼叫的檢視模式`PlainView`，其係衍生自<xref:System.Windows.Controls.ViewBase>類別。  
   
- [!code-csharp[ListViewCustomView#PlainView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
- [!code-vb[ListViewCustomView#PlainView](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
+ [!code-csharp[ListViewCustomView#PlainView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/PlainView.cs#plainview)]
+ [!code-vb[ListViewCustomView#PlainView](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/plainview.vb#plainview)]  
   
  若要將樣式套用至自訂的檢視，使用<xref:System.Windows.Style>類別。 下列範例會定義<xref:System.Windows.Style>針對`PlainView`檢視模式。 在上述範例中，這個樣式設定的值<xref:System.Windows.Controls.ViewBase.DefaultStyleKey%2A>屬性所定義`PlainView`。  
   
- [!code-xaml[ListViewCustomView#PlainViewStyle](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
+ [!code-xaml[ListViewCustomView#PlainViewStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Themes/Generic.xaml#plainviewstyle)]  
   
  若要定義的資料配置的自訂檢視模式中，定義<xref:System.Windows.DataTemplate>物件。 下列範例會定義<xref:System.Windows.DataTemplate>，可以用來顯示資料在`PlainView`檢視模式。  
   
- [!code-xaml[ListViewCustomView#PlainViewDataTemplate](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
+ [!code-xaml[ListViewCustomView#PlainViewDataTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewdatatemplate)]  
   
  下列範例示範如何定義<xref:System.Windows.ResourceKey>for`PlainView`使用的檢視模式<xref:System.Windows.DataTemplate>在上述範例中定義。  
   
- [!code-xaml[ListViewCustomView#PlainViewtileView](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
+ [!code-xaml[ListViewCustomView#PlainViewtileView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml#plainviewtileview)]  
   
  A<xref:System.Windows.Controls.ListView>控制項可以使用自訂的檢視，如果您將設定<xref:System.Windows.Controls.ListView.View%2A>資源索引鍵的屬性。 下列範例示範如何指定`PlainView`做為檢視模式的<xref:System.Windows.Controls.ListView>。  
   
- [!code-csharp[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
- [!code-vb[ListViewCustomView#ListViewtileViewmode](../../../../samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
+ [!code-csharp[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp/Window1.xaml.cs#listviewtileviewmode)]
+ [!code-vb[ListViewCustomView#ListViewtileViewmode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic/window1.xaml.vb#listviewtileviewmode)]  
   
  如需完整的範例，請參閱[具有多個檢視的 ListView (C#)](https://github.com/dotnet/samples/tree/master/snippets/csharp/VS_Snippets_Wpf/ListViewCustomView/CSharp)或[與多個 Views(Visual Basic) ListView](https://github.com/dotnet/samples/tree/master/snippets/visualbasic/VS_Snippets_Wpf/ListViewCustomView/visualbasic)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [HOW-TO 主題](../../../../docs/framework/wpf/controls/listview-how-to-topics.md)
-- [ListView 概觀](../../../../docs/framework/wpf/controls/listview-overview.md)
-- [GridView 概觀](../../../../docs/framework/wpf/controls/gridview-overview.md)
+- [HOW-TO 主題](listview-how-to-topics.md)
+- [ListView 概觀](listview-overview.md)
+- [GridView 概觀](gridview-overview.md)
