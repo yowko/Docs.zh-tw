@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d1c3edd15ce1994c43a5c9419f7c0edb9421fca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 943c119ae32a45034a53fae4ee08c4e23c2abd15
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503004"
 ---
 # <a name="iclrdebugmanagersetdacl-method"></a>ICLRDebugManager::SetDacl 方法
 這個方法尚未實作。  
@@ -35,7 +35,7 @@ HRESULT SetDacl (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pacl`  
  [in]指標的存取控制清單 (ACL)。  
   

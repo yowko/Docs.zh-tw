@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c16cb5d85ddffc1646bee893c5644682812025
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 082ed24eb65de12f337ab4a379b088da0f6eea5a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560577"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497375"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo 函式
 釋出配置給資源[AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)結構。  
@@ -28,12 +28,12 @@ HRESULT CertFreeAuthenticodeTimestamperInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pTimestamperInfo`  
  [in, out] 所要發行的時間戳記程式資訊。 請參閱[AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)結構。  
   
 ## <a name="return-value"></a>傳回值  
- 若函式成功則傳回 `S_OK`。 反之則傳回錯誤碼。  
+ 若函式成功則傳回 `S_OK`。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

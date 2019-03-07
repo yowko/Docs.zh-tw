@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff4fe6f73370a28bf4f874b697616c08e7b40a3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d09877d9ca8dde601d2b515bce63bfdca53b6ab0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736662"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498129"
 ---
 # <a name="importfileex2-method"></a>ImportFileEx2 方法
 匯入組件和未繫結的模組。 這個方法就像是[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但即使正在匯入的檔案不存在磁碟上的運作方式。  
@@ -41,7 +41,7 @@ HRESULT ImportFileEx2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pszFilename`  
  要匯入的檔案名稱。  
   

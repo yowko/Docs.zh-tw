@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad9e07e76d39ce25dc339eb5fb02635866966093
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afe3cb631590964e9b5e9acff471f4b15491eabc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612121"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500274"
 ---
 # <a name="iclrtaskmanagersetlocale-method"></a>ICLRTaskManager::SetLocale 方法
 主應用程式已修改地區設定識別碼 （這會對應到地理的文化特性和語言） 上目前執行之工作的值會告知 common language runtime (CLR)。  
@@ -35,7 +35,7 @@ HRESULT SetLocale (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `lcid`  
  [in]可對應到新指派的地理文化特性和語言的地區設定識別碼值。  
   

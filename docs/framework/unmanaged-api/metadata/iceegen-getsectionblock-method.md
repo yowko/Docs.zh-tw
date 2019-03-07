@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb1268d9fd892a4400491aca7966d81a3e23f9c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e264a63dcea9c351289d1f63e1907f7c68779011
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515348"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496751"
 ---
 # <a name="iceegengetsectionblock-method"></a>ICeeGen::GetSectionBlock 方法
 取得區段的區塊程式碼基底。  
@@ -40,7 +40,7 @@ HRESULT GetSectionBlock (
 );   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `section`  
  [in]要從中擷取的程式碼基底區塊一節。  
   

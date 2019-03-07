@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3692471e0652a1a812b1d0cbed9e38cc32112ef4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8ed1db49be78d7d16648a9ef9735e79ef1b3ab98
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33404306"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487323"
 ---
 # <a name="getstartupnotificationevent-function"></a>GetStartupNotificationEvent 函式
 建立或開啟任何載入指定目標處理序的 Common Language Runtime (CLR) 將對其發出信號的事件控制代碼。  
@@ -38,7 +38,7 @@ HRESULT GetStartupNotificationEvent
     );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `debuggeePID`  
  [in] 從其接收 CLR 啟動通知的目標處理序的處理序識別碼。  
   
@@ -56,12 +56,12 @@ HRESULT GetStartupNotificationEvent
  無法取得啟動通知事件的控制代碼。  
   
 ## <a name="remarks"></a>備註  
- 在 Windows 作業系統上，`debuggeePID` 對應至 OS 處理識別碼。  
+ 在 Windows 作業系統上，`debuggeePID` 對應至 OS 處理序識別碼。  
   
  在對事件發出信號的 CLR 執行任何 Managed 程式碼之前，會對事件發出信號。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** dbgshim.h  
   

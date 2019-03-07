@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 886e47028ec445b0a96af367afccd09c0759d0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e3cd977b7709f48ddf9938b9882a4ecb55cd6f0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727595"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484494"
 ---
 # <a name="ihostsecuritymanageropenthreadtoken-method"></a>IHostSecurityManager::OpenThreadToken 方法
 開啟與目前執行中執行緒相關聯的 discretionary 存取權杖。  
@@ -37,7 +37,7 @@ HRESULT OpenThreadToken (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwDesiredAccess`  
  [in]存取值，指定的存取權的執行緒 token 的要求的類型的遮罩。 這些值會定義在 Win32 中`OpenThreadToken`函式。 要求的存取類型會協調對權杖的判別存取控制清單 (DACL)，以判斷哪些類型的存取權授與或拒絕。  
   

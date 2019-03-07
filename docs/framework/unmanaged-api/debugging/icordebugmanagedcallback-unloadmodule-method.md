@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 10f2b65b65a5e15239f731ddcb471ee7548e1631
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae4c1cb251f7786a8415449f16b4eb26d15a4fb2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638052"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491265"
 ---
 # <a name="icordebugmanagedcallbackunloadmodule-method"></a>ICorDebugManagedCallback::UnloadModule 方法
 告知偵錯工具通用語言執行階段模組 (DLL)，已卸載。  
@@ -36,7 +36,7 @@ HRESULT UnloadModule (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]表示包含模組的應用程式定義域的 ICorDebugAppDomain 物件指標。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
-ms.openlocfilehash: a1f76bf42da9a311633de39e42dee2055fac4a27
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745181"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494177"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
 接下來`celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)在列舉值的清單中，將其傳回在結構`rgelt`中列舉項目的實際數目`pceltFetched`。  
@@ -23,7 +23,7 @@ HRESULT Next(
       [out] ULONG *pceltFetched);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `celt`  
   
  [in]數目[RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)中傳回的結構`rgelt`。  

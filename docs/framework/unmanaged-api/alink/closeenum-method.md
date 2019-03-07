@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 009f7d20dfd6efc279b3187af8f5c95132ae51e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 145f92badf39b6456a82df8f7de23f1784d2ce50
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525231"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495737"
 ---
 # <a name="closeenum-method"></a>CloseEnum 方法
 關閉指定的列舉型別，並釋放相關聯的資源。  
@@ -35,7 +35,7 @@ HRESULT CloseEnum(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hEnum`  
  若要關閉的列舉型別的控制代碼。  
   

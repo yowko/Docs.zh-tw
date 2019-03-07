@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bcbae7b5de54bd2134adbbdee1986c4e1dfae3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fda1964ab29287b2a3a108a15f42d1ea28a4feb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667007"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486912"
 ---
 # <a name="gethashfromassemblyfilew-function"></a>GetHashFromAssemblyFileW 函式
 使用指定的雜湊演算法取得所指定組件檔案的雜湊。 組件檔案的路徑必須指定為 Unicode 字串。  
@@ -40,7 +40,7 @@ HRESULT GetHashFromAssemblyFileW (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszFilePath`  
  [in]要雜湊檔案的路徑。 這個參數必須是 Unicode 字串。  
   

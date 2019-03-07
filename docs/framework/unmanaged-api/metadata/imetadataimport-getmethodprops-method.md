@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2ca43ebc257ee4eb9d0ef17f3399e87c03b9f9c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57604d80d40130ca147c026852b7bcd23f8f90bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740004"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496452"
 ---
 # <a name="imetadataimportgetmethodprops-method"></a>IMetaDataImport::GetMethodProps 方法
 取得與指定 MethodDef 語彙基元所參考方法相關聯的中繼資料。  
@@ -44,7 +44,7 @@ HRESULT GetMethodProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `mb`  
  [in]MethodDef 語彙基元，表示要傳回的中繼資料的方法。  
   

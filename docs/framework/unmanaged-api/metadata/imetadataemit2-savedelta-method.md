@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 27d9b891475d0fb45c9ec34f3363b0d76fe394c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a1963221942134d148d5417ebafea97a26aead5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54493200"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494281"
 ---
 # <a name="imetadataemit2savedelta-method"></a>IMetaDataEmit2::SaveDelta 方法
 將目前的編輯和繼續工作階段的變更儲存至指定的檔案。  
@@ -36,7 +36,7 @@ HRESULT SaveDelta (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szFile`  
  [in]用來儲存檔案名稱會變更。  
   

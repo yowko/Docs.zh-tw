@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a6383761b878c7e916064f9a046641d00a1c6ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86aa020b2fac6d1405d8f24488184f3f7dd618a1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734258"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471559"
 ---
 # <a name="iclrtaskgetmemstats-method"></a>ICLRTask::GetMemStats 方法
 取得與工作相關的統計的記憶體使用量資訊的目前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體表示。  
@@ -35,7 +35,7 @@ HRESULT GetMemStats (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pMemUsage`  
  [out]指標[COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)包含相關的工作，包括配置的位元組數目的記憶體使用量詳細資料的執行個體。  
   

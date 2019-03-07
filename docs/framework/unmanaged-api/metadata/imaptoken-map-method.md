@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31c18061ad5f21e26665cd0d6883b0eb26afd1d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ece12247e48a0a005fd542bf76a32a1c6eeaa7cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557470"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478398"
 ---
 # <a name="imaptokenmap-method"></a>IMapToken::Map 方法
 對應使用中繼資料簽章的組件之間的關聯性。  
@@ -36,7 +36,7 @@ HRESULT Map (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tkImp`  
  [in]表示匯入的程式碼物件的中繼資料語彙基元。  
   

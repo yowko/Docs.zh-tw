@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1fd0cf4f47781afb397c1fdd4b42715c710982e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83461f89be9a16305da2732536dcc6847b45027d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580755"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482557"
 ---
 # <a name="ihostcontrolsetappdomainmanager-method"></a>IHostControl::SetAppDomainManager 方法
 主應用程式已建立的應用程式定義域。  
@@ -36,7 +36,7 @@ HRESULT SetAppDomainManager (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwAppDomainID`  
  [in]所選的數值識別碼<xref:System.AppDomain>。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ae9bc5925634f8bba71731a0c51eb19cf9eec04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efbcd6f9eca426cd230653e38d527e184b378fa0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663949"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503147"
 ---
 # <a name="icordebugmodulegetname-method"></a>ICorDebugModule::GetName 方法
 取得模組的檔案名稱。  
@@ -37,7 +37,7 @@ HRESULT GetName(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cchname`  
  [in] `szName` 陣列的大小。  
   
