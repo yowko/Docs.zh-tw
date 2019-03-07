@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e11b447ebd03746730a86dbbcda31edd4196f13b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d17609e585f6e0ecd685d893bb0f8b3e4c0fe0cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484822"
 ---
-# <a name="ihostsecuritymanagergetsecuritycontext-method"></a><span data-ttu-id="4de0b-102">IHostSecurityManager::GetSecurityContext 方法</span><span class="sxs-lookup"><span data-stu-id="4de0b-102">IHostSecurityManager::GetSecurityContext Method</span></span>
-<span data-ttu-id="4de0b-103">取得要求[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)從主應用程式。</span><span class="sxs-lookup"><span data-stu-id="4de0b-103">Gets the requested [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) from the host.</span></span>  
+# <a name="ihostsecuritymanagergetsecuritycontext-method"></a><span data-ttu-id="147cd-102">IHostSecurityManager::GetSecurityContext 方法</span><span class="sxs-lookup"><span data-stu-id="147cd-102">IHostSecurityManager::GetSecurityContext Method</span></span>
+<span data-ttu-id="147cd-103">取得要求[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)從主應用程式。</span><span class="sxs-lookup"><span data-stu-id="147cd-103">Gets the requested [IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md) from the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4de0b-104">語法</span><span class="sxs-lookup"><span data-stu-id="4de0b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="147cd-104">語法</span><span class="sxs-lookup"><span data-stu-id="147cd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSecurityContext (  
@@ -36,37 +36,37 @@ HRESULT GetSecurityContext (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="4de0b-105">參數</span><span class="sxs-lookup"><span data-stu-id="4de0b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="147cd-105">參數</span><span class="sxs-lookup"><span data-stu-id="147cd-105">Parameters</span></span>  
  `eContextType`  
- <span data-ttu-id="4de0b-106">[in]其中一個[EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)值，表示要傳回的安全性內容的類型。</span><span class="sxs-lookup"><span data-stu-id="4de0b-106">[in] One of the [EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) values, indicating what type of security context to return.</span></span>  
+ <span data-ttu-id="147cd-106">[in]其中一個[EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)值，表示要傳回的安全性內容的類型。</span><span class="sxs-lookup"><span data-stu-id="147cd-106">[in] One of the [EContextType](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md) values, indicating what type of security context to return.</span></span>  
   
  `ppSecurityContext`  
- <span data-ttu-id="4de0b-107">[out]介面指標的位址`IHostSecurityContext`的`eContextType`。</span><span class="sxs-lookup"><span data-stu-id="4de0b-107">[out] The address of an interface pointer to the `IHostSecurityContext` of `eContextType`.</span></span>  
+ <span data-ttu-id="147cd-107">[out]介面指標的位址`IHostSecurityContext`的`eContextType`。</span><span class="sxs-lookup"><span data-stu-id="147cd-107">[out] The address of an interface pointer to the `IHostSecurityContext` of `eContextType`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="4de0b-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="4de0b-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="147cd-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="147cd-108">Return Value</span></span>  
   
-|<span data-ttu-id="4de0b-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="4de0b-109">HRESULT</span></span>|<span data-ttu-id="4de0b-110">描述</span><span class="sxs-lookup"><span data-stu-id="4de0b-110">Description</span></span>|  
+|<span data-ttu-id="147cd-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="147cd-109">HRESULT</span></span>|<span data-ttu-id="147cd-110">描述</span><span class="sxs-lookup"><span data-stu-id="147cd-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="4de0b-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="4de0b-111">S_OK</span></span>|<span data-ttu-id="4de0b-112">`GetSecurityContext` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="4de0b-112">`GetSecurityContext` returned successfully.</span></span>|  
-|<span data-ttu-id="4de0b-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="4de0b-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="4de0b-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="4de0b-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="4de0b-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="4de0b-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="4de0b-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="4de0b-116">The call timed out.</span></span>|  
-|<span data-ttu-id="4de0b-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="4de0b-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="4de0b-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="4de0b-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="4de0b-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="4de0b-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="4de0b-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="4de0b-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="4de0b-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="4de0b-121">E_FAIL</span></span>|<span data-ttu-id="4de0b-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="4de0b-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="4de0b-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="4de0b-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="4de0b-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="4de0b-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="147cd-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="147cd-111">S_OK</span></span>|<span data-ttu-id="147cd-112">`GetSecurityContext` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="147cd-112">`GetSecurityContext` returned successfully.</span></span>|  
+|<span data-ttu-id="147cd-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="147cd-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="147cd-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="147cd-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="147cd-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="147cd-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="147cd-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="147cd-116">The call timed out.</span></span>|  
+|<span data-ttu-id="147cd-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="147cd-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="147cd-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="147cd-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="147cd-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="147cd-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="147cd-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="147cd-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="147cd-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="147cd-121">E_FAIL</span></span>|<span data-ttu-id="147cd-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="147cd-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="147cd-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="147cd-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="147cd-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="147cd-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="4de0b-125">備註</span><span class="sxs-lookup"><span data-stu-id="4de0b-125">Remarks</span></span>  
- <span data-ttu-id="4de0b-126">主機可以控制執行緒權杖的所有程式碼存取 CLR 和使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="4de0b-126">A host can control all code access to thread tokens by both the CLR and user code.</span></span> <span data-ttu-id="4de0b-127">它也可以確保完整的安全性內容資訊傳遞到非同步作業或受限制的程式碼存取的字碼指標。</span><span class="sxs-lookup"><span data-stu-id="4de0b-127">It can also ensure that complete security context information is passed across asynchronous operations or code points with restricted code access.</span></span> <span data-ttu-id="4de0b-128">`IHostSecurityContext` 封裝此資訊安全內容資訊，也就是對 CLR 不透明。</span><span class="sxs-lookup"><span data-stu-id="4de0b-128">`IHostSecurityContext` encapsulates this security context information, which is opaque to the CLR.</span></span> <span data-ttu-id="4de0b-129">CLR 會擷取這項資訊，並會將它移到跨執行緒集區背景工作項目分派、 完成項執行和模組和類別的建構。</span><span class="sxs-lookup"><span data-stu-id="4de0b-129">The CLR captures this information and moves it across thread pool worker item dispatch, finalizer execution, and module and class construction.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="147cd-125">備註</span><span class="sxs-lookup"><span data-stu-id="147cd-125">Remarks</span></span>  
+ <span data-ttu-id="147cd-126">主機可以控制執行緒權杖的所有程式碼存取 CLR 和使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="147cd-126">A host can control all code access to thread tokens by both the CLR and user code.</span></span> <span data-ttu-id="147cd-127">它也可以確保完整的安全性內容資訊傳遞到非同步作業或受限制的程式碼存取的字碼指標。</span><span class="sxs-lookup"><span data-stu-id="147cd-127">It can also ensure that complete security context information is passed across asynchronous operations or code points with restricted code access.</span></span> <span data-ttu-id="147cd-128">`IHostSecurityContext` 封裝此資訊安全內容資訊，也就是對 CLR 不透明。</span><span class="sxs-lookup"><span data-stu-id="147cd-128">`IHostSecurityContext` encapsulates this security context information, which is opaque to the CLR.</span></span> <span data-ttu-id="147cd-129">CLR 會擷取這項資訊，並會將它移到跨執行緒集區背景工作項目分派、 完成項執行和模組和類別的建構。</span><span class="sxs-lookup"><span data-stu-id="147cd-129">The CLR captures this information and moves it across thread pool worker item dispatch, finalizer execution, and module and class construction.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="4de0b-130">需求</span><span class="sxs-lookup"><span data-stu-id="4de0b-130">Requirements</span></span>  
- <span data-ttu-id="4de0b-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4de0b-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="147cd-130">需求</span><span class="sxs-lookup"><span data-stu-id="147cd-130">Requirements</span></span>  
+ <span data-ttu-id="147cd-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="147cd-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4de0b-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="4de0b-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="147cd-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="147cd-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="4de0b-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="4de0b-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="147cd-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="147cd-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="4de0b-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4de0b-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="147cd-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="147cd-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="4de0b-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4de0b-135">See also</span></span>
-- [<span data-ttu-id="4de0b-136">EContextType 列舉</span><span class="sxs-lookup"><span data-stu-id="4de0b-136">EContextType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)
-- [<span data-ttu-id="4de0b-137">IHostSecurityContext 介面</span><span class="sxs-lookup"><span data-stu-id="4de0b-137">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
-- [<span data-ttu-id="4de0b-138">IHostSecurityManager 介面</span><span class="sxs-lookup"><span data-stu-id="4de0b-138">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="147cd-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="147cd-135">See also</span></span>
+- [<span data-ttu-id="147cd-136">EContextType 列舉</span><span class="sxs-lookup"><span data-stu-id="147cd-136">EContextType Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/econtexttype-enumeration.md)
+- [<span data-ttu-id="147cd-137">IHostSecurityContext 介面</span><span class="sxs-lookup"><span data-stu-id="147cd-137">IHostSecurityContext Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)
+- [<span data-ttu-id="147cd-138">IHostSecurityManager 介面</span><span class="sxs-lookup"><span data-stu-id="147cd-138">IHostSecurityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-interface.md)

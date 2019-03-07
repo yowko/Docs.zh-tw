@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a2be03e82d5be9bae64d7169709d16c40b66e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90ddc540115a60154953ac6e8cb931103a650752
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54511874"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492409"
 ---
-# <a name="imetadataemitsave-method"></a><span data-ttu-id="15dd5-102">IMetaDataEmit::Save 方法</span><span class="sxs-lookup"><span data-stu-id="15dd5-102">IMetaDataEmit::Save Method</span></span>
-<span data-ttu-id="15dd5-103">將所有的中繼資料儲存在指定的位址檔案目前的範圍中。</span><span class="sxs-lookup"><span data-stu-id="15dd5-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
+# <a name="imetadataemitsave-method"></a><span data-ttu-id="c0601-102">IMetaDataEmit::Save 方法</span><span class="sxs-lookup"><span data-stu-id="c0601-102">IMetaDataEmit::Save Method</span></span>
+<span data-ttu-id="c0601-103">將所有的中繼資料儲存在指定的位址檔案目前的範圍中。</span><span class="sxs-lookup"><span data-stu-id="c0601-103">Saves all metadata in the current scope to the file at the specified address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15dd5-104">語法</span><span class="sxs-lookup"><span data-stu-id="15dd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c0601-104">語法</span><span class="sxs-lookup"><span data-stu-id="c0601-104">Syntax</span></span>  
   
 ```  
 HRESULT Save (   
@@ -36,22 +36,22 @@ HRESULT Save (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15dd5-105">參數</span><span class="sxs-lookup"><span data-stu-id="15dd5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c0601-105">參數</span><span class="sxs-lookup"><span data-stu-id="c0601-105">Parameters</span></span>  
  `wzFile`  
- <span data-ttu-id="15dd5-106">[in]若要將儲存至檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="15dd5-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="15dd5-107">如果此值是 null，記憶體中複本會儲存到最後一個使用的位置。</span><span class="sxs-lookup"><span data-stu-id="15dd5-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
+ <span data-ttu-id="c0601-106">[in]若要將儲存至檔案的名稱。</span><span class="sxs-lookup"><span data-stu-id="c0601-106">[in] The name of the file to save to.</span></span> <span data-ttu-id="c0601-107">如果此值是 null，記憶體中複本會儲存到最後一個使用的位置。</span><span class="sxs-lookup"><span data-stu-id="c0601-107">If this value is null, the in-memory copy will be saved to the last location that was used.</span></span>  
   
  `dwSaveFlags`  
- <span data-ttu-id="15dd5-108">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="15dd5-108">[in] Reserved.</span></span> <span data-ttu-id="15dd5-109">必須是零。</span><span class="sxs-lookup"><span data-stu-id="15dd5-109">Must be zero.</span></span>  
+ <span data-ttu-id="c0601-108">[in] 保留。</span><span class="sxs-lookup"><span data-stu-id="c0601-108">[in] Reserved.</span></span> <span data-ttu-id="c0601-109">必須是零。</span><span class="sxs-lookup"><span data-stu-id="c0601-109">Must be zero.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15dd5-110">需求</span><span class="sxs-lookup"><span data-stu-id="15dd5-110">Requirements</span></span>  
- <span data-ttu-id="15dd5-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15dd5-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c0601-110">需求</span><span class="sxs-lookup"><span data-stu-id="c0601-110">Requirements</span></span>  
+ <span data-ttu-id="c0601-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c0601-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15dd5-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="15dd5-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c0601-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c0601-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="15dd5-113">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="15dd5-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c0601-113">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c0601-113">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="15dd5-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15dd5-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="c0601-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c0601-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15dd5-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15dd5-115">See also</span></span>
-- [<span data-ttu-id="15dd5-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="15dd5-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="15dd5-117">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="15dd5-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c0601-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0601-115">See also</span></span>
+- [<span data-ttu-id="c0601-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="c0601-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="c0601-117">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="c0601-117">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

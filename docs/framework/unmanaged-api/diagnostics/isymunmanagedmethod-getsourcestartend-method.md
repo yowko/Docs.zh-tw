@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4ecb726f275a694fded2c486448a60b28fadb168
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d9a02ea338dd2c1366256434eacda51327b7d5f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561864"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479463"
 ---
-# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="de44b-102">ISymUnmanagedMethod::GetSourceStartEnd 方法</span><span class="sxs-lookup"><span data-stu-id="de44b-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
-<span data-ttu-id="de44b-103">取得這個方法的來源的開始和結束文件位置。</span><span class="sxs-lookup"><span data-stu-id="de44b-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="de44b-104">第一個陣列位置是起點，而第二個陣列位置是結束。</span><span class="sxs-lookup"><span data-stu-id="de44b-104">The first array position is the start, and the second array position is the end.</span></span>  
+# <a name="isymunmanagedmethodgetsourcestartend-method"></a><span data-ttu-id="4c1ef-102">ISymUnmanagedMethod::GetSourceStartEnd 方法</span><span class="sxs-lookup"><span data-stu-id="4c1ef-102">ISymUnmanagedMethod::GetSourceStartEnd Method</span></span>
+<span data-ttu-id="4c1ef-103">取得這個方法的來源的開始和結束文件位置。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-103">Gets the start and end document positions for the source of this method.</span></span> <span data-ttu-id="4c1ef-104">第一個陣列位置是起點，而第二個陣列位置是結束。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-104">The first array position is the start, and the second array position is the end.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de44b-105">語法</span><span class="sxs-lookup"><span data-stu-id="de44b-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4c1ef-105">語法</span><span class="sxs-lookup"><span data-stu-id="4c1ef-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSourceStartEnd(  
@@ -37,24 +37,24 @@ HRESULT GetSourceStartEnd(
     [out] BOOL                   *pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="de44b-106">參數</span><span class="sxs-lookup"><span data-stu-id="de44b-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4c1ef-106">參數</span><span class="sxs-lookup"><span data-stu-id="4c1ef-106">Parameters</span></span>  
  `docs`  
- <span data-ttu-id="de44b-107">[in]開始和結束的來源文件。</span><span class="sxs-lookup"><span data-stu-id="de44b-107">[in] The starting and ending source documents.</span></span>  
+ <span data-ttu-id="4c1ef-107">[in]開始和結束的來源文件。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-107">[in] The starting and ending source documents.</span></span>  
   
  `lines`  
- <span data-ttu-id="de44b-108">[in]開始和結束行在對應來源文件。</span><span class="sxs-lookup"><span data-stu-id="de44b-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
+ <span data-ttu-id="4c1ef-108">[in]開始和結束行在對應來源文件。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-108">[in] The starting and ending lines in the corresponding source documents.</span></span>  
   
  `columns`  
- <span data-ttu-id="de44b-109">[in]開始和結束資料行中對應的來源文件。</span><span class="sxs-lookup"><span data-stu-id="de44b-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
+ <span data-ttu-id="4c1ef-109">[in]開始和結束資料行中對應的來源文件。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-109">[in] The starting and ending columns in the corresponding source documents.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="de44b-110">[out]`true`位置所定義; 否則如果`false`。</span><span class="sxs-lookup"><span data-stu-id="de44b-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
+ <span data-ttu-id="4c1ef-110">[out]`true`位置所定義; 否則如果`false`。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-110">[out] `true` if positions were defined; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="de44b-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="de44b-111">Return Value</span></span>  
- <span data-ttu-id="de44b-112">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="de44b-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4c1ef-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="4c1ef-111">Return Value</span></span>  
+ <span data-ttu-id="4c1ef-112">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="4c1ef-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de44b-113">需求</span><span class="sxs-lookup"><span data-stu-id="de44b-113">Requirements</span></span>  
- <span data-ttu-id="de44b-114">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="de44b-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4c1ef-113">需求</span><span class="sxs-lookup"><span data-stu-id="4c1ef-113">Requirements</span></span>  
+ <span data-ttu-id="4c1ef-114">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4c1ef-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="de44b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de44b-115">See also</span></span>
-- [<span data-ttu-id="de44b-116">ISymUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="de44b-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4c1ef-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4c1ef-115">See also</span></span>
+- [<span data-ttu-id="4c1ef-116">ISymUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="4c1ef-116">ISymUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)
