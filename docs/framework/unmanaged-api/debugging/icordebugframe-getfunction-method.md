@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b622d1bd82e53d5fa232e07b1f49e6fbba3ccba
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a48396f8ef668cfe7755b2718180317b465793b6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414831"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475277"
 ---
 # <a name="icordebugframegetfunction-method"></a>ICorDebugFrame::GetFunction 方法
 取得包含此堆疊框架相關聯的程式碼的函式。  
@@ -35,18 +35,18 @@ HRESULT GetFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppFunction`  
- [out]ICorDebugFunction 物件，代表包含此堆疊框架相關聯的程式碼的函式的位址指標。  
+ [out]ICorDebugFunction 物件，表示包含此堆疊框架相關聯的程式碼的函式的位址指標。  
   
 ## <a name="remarks"></a>備註  
  `GetFunction`如果框架不是任何特定的函式相關聯，方法可能會失敗。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

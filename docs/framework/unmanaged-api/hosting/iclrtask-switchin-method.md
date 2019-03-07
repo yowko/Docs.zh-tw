@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d518d5149e43718ae14dcdde96febe63fed7709
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0adee689949b4e3303d8921a826cdec56cc1b3f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744594"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484884"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn 方法
 會告知 common language runtime (CLR)，工作的目前[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體表示現在處於運作狀態。  
@@ -35,7 +35,7 @@ HRESULT SwitchIn (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `threadHandle`  
  [in]實體代表由目前的工作的執行緒的控制代碼`ICLRTask`執行個體正在執行。  
   

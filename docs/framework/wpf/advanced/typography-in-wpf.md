@@ -4,17 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 086e02601e527229eed7dc3e2fab73df1f918a8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359545"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482687"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
-  
-
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>提升文字的品質與效能  
@@ -36,13 +34,11 @@ ms.locfileid: "57359545"
   
  Pericles [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 字型包含其他字符，可為標準的字符組提供文體替代字。 下列文字顯示文體替代字符。  
   
- ![使用 OpenType 文體替代字符的文字](./media/opentypefont02.gif "opentypefont02")  
-使用 OpenType 文體替代圖像的文字  
+ ![使用 OpenType 文體替代字符的文字](./media/typography-in-wpf/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 文體替代字符的文字")  
   
  花飾字是裝飾性字符，會使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
   
- ![使用 OpenType 標準和花飾字字符的文字](./media/opentypefont08.gif "opentypefont08")  
-使用 OpenType 標準和勾耳圖像的文字  
+ ![使用 OpenType 標準和花飾字字符的文字](./media/typography-in-wpf/opentype-standard-swash-glyphs.gif "使用 OpenType 標準和花飾字字符的文字")  
   
  如需 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] 功能的詳細資訊，請參閱 [OpenType 字型功能](opentype-font-features.md)。  
   
@@ -175,4 +171,4 @@ ms.locfileid: "57359545"
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [進階文字格式化](advanced-text-formatting.md)
 - [Text](optimizing-performance-text.md)
-- [Microsoft 印刷樣式](https://www.microsoft.com/typography/default.mspx)
+- [Microsoft 印刷樣式](https://docs.microsoft.com/typography/)

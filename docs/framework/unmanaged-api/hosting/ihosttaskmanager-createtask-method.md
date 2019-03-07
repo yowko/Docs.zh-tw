@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 33cffb086609432f5207310fc565bd34cccd7642
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93deb2d0457fef6f190d90cc4084b9bb5997680d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698641"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488479"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask 方法
 主應用程式建立新工作的要求。  
@@ -38,7 +38,7 @@ HRESULT CreateTask (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `stacksize`  
  [in]要求的大小，以位元組為單位，要求的堆疊，或預設大小為 0 （零）。  
   

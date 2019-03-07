@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8c2151494a2ddfc200edc9c6c6cc3f7639bcf19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc2b919cf2f3f4bbd3d06a12734a10534210adcc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466579"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage 方法
 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
@@ -38,7 +38,7 @@ HRESULT StrongNameSignatureVerificationFromImage (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pbBase`  
  [in]對應的組件資訊清單的相對虛擬位址。  
   

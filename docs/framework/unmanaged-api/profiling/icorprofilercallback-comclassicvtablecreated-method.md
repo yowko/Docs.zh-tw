@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c23c52108c5c6534f5b8e8b41517ed2129590466
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86d0ff4f9dd2957213974b2723734e49729256a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574829"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466475"
 ---
 # <a name="icorprofilercallbackcomclassicvtablecreated-method"></a>ICorProfilerCallback::COMClassicVTableCreated 方法
 通知分析工具已建立的 COM interop 的 vtable，所指定的 IID 和類別。  
@@ -37,7 +37,7 @@ HRESULT COMClassicVTableCreated(
     [in] ULONG   cSlots);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wrappedClasId`  
  [in]已建立 vtable 類別的識別碼。  
   

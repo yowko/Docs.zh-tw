@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f6f16ebe57be0d09e97fe8aa95df892c2b02394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a46f7b277987df7e15eb2d534d1bbacc3250f4e1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696252"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466007"
 ---
 # <a name="imetadatatablesgetstringheapsize-method"></a>IMetaDataTables::GetStringHeapSize 方法
 取得大小，以位元組為單位對字串堆積。  
@@ -35,7 +35,7 @@ HRESULT GetStringHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcbStrings`  
  [out]大小 （位元組），對字串堆積的指標。  
   

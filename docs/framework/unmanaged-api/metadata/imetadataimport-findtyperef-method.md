@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b47369e8cee2215b3e7a21e9f069d18dffda847a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6364f9091b399182a44f143cef9e47a4fe667913
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691737"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485027"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef 方法
 取得 TypeRef 語彙基元的指標<xref:System.Type>，位於指定的範圍內且具有指定的名稱的參考。  
@@ -37,7 +37,7 @@ HRESULT FindTypeRef (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tkResolutionScope`  
  [in]ModuleRef、 一個 AssemblyRef 或 TypeRef 語彙基元，指定模組、 組件或類型，分別在型別參考的定義。  
   

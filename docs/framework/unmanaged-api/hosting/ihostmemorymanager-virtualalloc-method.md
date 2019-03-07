@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd9bdd7ce0a5d9cfde91143cc5dcfdfc834abb18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1e5ce46e1cf034e6b86d738d8ec69332df1ff9fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588258"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486256"
 ---
 # <a name="ihostmemorymanagervirtualalloc-method"></a>IHostMemoryManager::VirtualAlloc 方法
 可做為對應的 Win32 函式的邏輯包裝函式。 Win32 實作`VirtualAlloc`保留或認可呼叫處理序虛擬位址空間中的頁面區域。  
@@ -40,7 +40,7 @@ HRESULT VirtualAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAddress`  
  [in]要配置的區域的起始位址指標。  
   

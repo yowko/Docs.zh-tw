@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c45da047d384e56440ca5f883a4cfd755a7d0299
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 162341ee8cb27e5edc455207bbe094356c5167e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719705"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466072"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority 函式
 取得指標[IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)管理應用程式身分識別和參考的索引鍵的執行個體。  
@@ -35,7 +35,7 @@ HRESULT GetAppIdAuthority (
  );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppIAppIdAuthority`  
  [out]傳回`IAppIdAuthority`指標。  
   

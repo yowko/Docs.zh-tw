@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae6ee287778fba00114a4a8cbdbbf475d0affa18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad3f65b559b30be0c619930ed35ddf1d6a251045
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740413"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482648"
 ---
 # <a name="icorpublishenumreset-method"></a>ICorPublishEnum::Reset 方法
 移動資料指標的列舉型別的開頭。  
@@ -33,7 +33,7 @@ ms.locfileid: "54740413"
 HRESULT Reset ();  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `Reset` 不接受任何參數。  
   
 ## <a name="requirements"></a>需求  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - include XML tag
 - <include> XML tag
 ms.assetid: ba8e9173-82cd-460b-8938-a075a2dfb36d
-ms.openlocfilehash: bf7a434569bf82066c79962ae24741759b97e5ce
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8159613036942d6c79f50b59a9b24ede02b6e4d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973687"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483584"
 ---
 # <a name="include-visual-basic"></a>\<包含 > (Visual Basic)
 參考描述的類型和成員在原始程式碼中的另一個檔案。  
@@ -21,7 +21,7 @@ ms.locfileid: "56973687"
 <include file="filename" path="tagpath[@name='id']" />  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `filename`  
  必要項。 包含文件的檔案名稱。 檔案名稱可以使用路徑進行限定。 括住`filename`以雙引號 ("")。  
   

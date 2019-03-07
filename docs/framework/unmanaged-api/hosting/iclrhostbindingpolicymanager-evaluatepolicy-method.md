@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 970e57e3caee7631c8e85aef428df52ec293b9cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3310f584475a4d6a6f0e3e790db13875faf60cf2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648806"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466683"
 ---
 # <a name="iclrhostbindingpolicymanagerevaluatepolicy-method"></a>ICLRHostBindingPolicyManager::EvaluatePolicy 方法
 代表主應用程式，會評估繫結原則。  
@@ -40,7 +40,7 @@ HRESULT EvaluatePolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzReferenceIdentity`  
  [in]之前的原則評估的組件的參考。  
   

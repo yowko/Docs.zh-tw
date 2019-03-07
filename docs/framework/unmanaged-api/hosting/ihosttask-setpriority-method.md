@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9335cb182355931b31040f164c9e51a67598f7b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a73982cb4cb7b6e80579714b32cf7aba620272af
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54748034"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467099"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority 方法
 表示由目前的工作要求主應用程式調整的執行緒優先權層級[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體。  
@@ -35,7 +35,7 @@ HRESULT SetPriority (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `newPriority`  
  [in]整數，表示要求的執行緒優先順序值，表示由目前的工作`IHostTask`執行個體。  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6591fb4a2b4944dc0d02f70f0f90ffd87e071c47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734996"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487950"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
 匯入的類型，從透過匯入每個範圍的起始[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
@@ -39,7 +39,7 @@ HRESULT ImportTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `AssemblyID`  
  若要匯入的組件識別碼。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad5a285fc2280dc062b0f4cbb69977a7e605e9c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 6feef7b1e1f09107cd2a57555df07bebec86effa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412765"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466978"
 ---
 # <a name="icordebugeval2newparameterizedobjectnoconstructor-method"></a>ICorDebugEval2::NewParameterizedObjectNoConstructor 方法
 產生指定類別的新參數化型的別物件，而不會嘗試呼叫建構函式方法。  
@@ -37,24 +37,24 @@ HRESULT NewParameterizedObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pClass`  
  [in]ICorDebugClass 物件，表示要具現化物件類別的指標。  
   
  `nTypeArgs`  
- [in]傳遞的型別引數數目。  
+ [in]傳遞的類型引數數目。  
   
  `ppTypeArgs`  
- [in]指標的陣列，其中每個指向 ICorDebugType 物件，表示要具現化的物件型別引數。  
+ [in]指標的陣列，其中每一個指向 ICorDebugType 物件，表示要具現化的物件型別引數。  
   
 ## <a name="remarks"></a>備註  
- `NewParameterizedObjectNoConstructor`方法將會失敗，如果型別引數數目不正確，或未傳遞的型別引數不正確的類型。  
+ `NewParameterizedObjectNoConstructor`方法將會失敗，如果型別引數數目不正確或錯誤類型的類型引數會傳遞。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

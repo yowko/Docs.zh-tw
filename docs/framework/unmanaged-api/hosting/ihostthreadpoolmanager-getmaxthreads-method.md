@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 887197af49a402df73005906e539791f6d7f7be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8758bd416b721a95f48b8c8edb933cf617e13455
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623855"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466488"
 ---
 # <a name="ihostthreadpoolmanagergetmaxthreads-method"></a>IHostThreadPoolManager::GetMaxThreads 方法
 執行緒集區中，同時取得主機維護執行緒的數目上限。  
@@ -35,7 +35,7 @@ HRESULT GetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pdwMaxWorkerThreads`  
  [out]指標的主控件保留在執行緒集區中的執行緒數目上限。  
   

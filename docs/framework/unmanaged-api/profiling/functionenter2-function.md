@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f01117d52ba49012120546db5095ccad8baa6e73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fb9dd56cb19b62543d14ae02fe6f198c0164107
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531619"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468815"
 ---
 # <a name="functionenter2-function"></a>FunctionEnter2 函式
 控制項已傳遞至函式，並提供資訊堆疊框架和函式的引數，請通知分析工具。 這個函數會取代[FunctionEnter](../../../../docs/framework/unmanaged-api/profiling/functionenter-function.md)函式。  
@@ -37,7 +37,7 @@ void __stdcall FunctionEnter2 (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `funcId`  
  [in]控制權會傳遞函式的識別碼。  
   

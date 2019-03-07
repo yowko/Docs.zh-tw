@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddae8f64eca348afa337b986ac81d59c37e51701
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf83c7755bc099275c02ff0049f663573c582faf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469557"
 ---
 # <a name="ihostcrstsetspincount-method"></a>IHostCrst::SetSpinCount 方法
 設定目前的微調計數[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)執行個體。  
@@ -35,7 +35,7 @@ HRESULT SetSpinCount (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwSpinCount`  
  [in]新的微調計數，目前`IHostCrst`執行個體。  
   

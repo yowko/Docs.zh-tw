@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 276a45c9f7b66fecdc4df07da94f813fe025fcb8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48d07c7bcf21dafbf3cacb0b37d232c4433109bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592506"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474549"
 ---
 # <a name="icordebugmanagedcallback3customnotification-method"></a>ICorDebugManagedCallback3::CustomNotification 方法
 表示已引發自訂的偵錯工具通知。  
@@ -34,7 +34,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
                            ICorDebugAppDomain * pAppDomain);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pThread`  
  [in]引發通知的執行緒指標。  
   
@@ -42,7 +42,7 @@ HRESULT CustomNotification(ICorDebugThread *    pThread,
  [in]指標，包含引發通知之執行緒的應用程式定義域。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

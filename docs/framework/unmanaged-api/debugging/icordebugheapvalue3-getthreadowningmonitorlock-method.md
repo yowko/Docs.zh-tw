@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d3e10a3dbae0d1b790c0d80c9286affedaa4c8b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 361cc3b897b4c85297b597f80aaffc2a2760f88e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709139"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468474"
 ---
 # <a name="icordebugheapvalue3getthreadowningmonitorlock-method"></a>ICorDebugHeapValue3::GetThreadOwningMonitorLock 方法
 傳回擁有此物件的監視器鎖定的 managed 的執行緒。  
@@ -36,7 +36,7 @@ HRESULT GetThreadOwningMonitorLock (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppThread`  
  [out]擁有此物件的監視器鎖定的 managed 的執行緒。  
   
@@ -44,7 +44,7 @@ HRESULT GetThreadOwningMonitorLock (
  [out]此執行緒就必須釋放鎖定之前它會返回正在未擁有的次數。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

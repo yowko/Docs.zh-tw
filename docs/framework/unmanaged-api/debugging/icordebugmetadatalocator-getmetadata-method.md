@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3677b38854ada67c4f2d30043bf80a83d9268971
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c787a93ac98a086dfb6218d1b4891de87e0e107d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654993"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486981"
 ---
 # <a name="icordebugmetadatalocatorgetmetadata-method"></a>ICorDebugMetaDataLocator::GetMetaData 方法
 要求偵錯工具傳回完整路徑到模組，其需要中繼資料以完成偵錯工具的要求。  
@@ -41,7 +41,7 @@ HRESULT GetMetaData(
       );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszImagePath`  
  [in] 以 null 結束的字串，表示檔案的完整路徑。 如果沒有提供的完整路徑的名稱和副檔名的檔案 (*檔名*。*延伸模組*)。  
   
@@ -65,7 +65,7 @@ HRESULT GetMetaData(
  `ofReadOnly`加上旗標，從[CorOpenFlags](../../../../docs/framework/unmanaged-api/metadata/coropenflags-enumeration.md)列舉型別用來要求此檔案中的中繼資料的唯讀存取。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。 所有其他失敗的 HRESULT 表示無法擷取檔案。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。 所有其他失敗的 HRESULT 表示無法擷取檔案。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

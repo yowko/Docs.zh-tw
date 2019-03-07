@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a93ef073d4dd2eaf58c057d4cdf25fa39082e14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b4e501629198c9bac627979547a5603d3e7866a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706322"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467121"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
 傳回統一資源定位器 (URL)，這份文件。  
@@ -36,7 +36,7 @@ HRESULT GetURL(
     [out, size_is(cchUrl), length_is(*pcchUrl)] WCHAR szUrl[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cchUrl`  
  [in]大小，以字元為單位的`szURL`緩衝區。  
   

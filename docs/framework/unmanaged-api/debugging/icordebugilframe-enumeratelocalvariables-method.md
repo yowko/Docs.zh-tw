@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6fd7694901534ad6897bbf78239081af6314e4bd
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 3cc9601105d05740e6db0a41bae521bd9a276d74
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33415462"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471312"
 ---
 # <a name="icordebugilframeenumeratelocalvariables-method"></a>ICorDebugILFrame::EnumerateLocalVariables 方法
-取得在這個框架中區域變數的列舉值。  
+取得這個框架中區域變數的列舉值。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT EnumerateLocalVariables(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppValueEnum`  
- [out]ICorDebugValueEnum 物件是這個框架中區域變數的列舉值的位址指標。  
+ [out]ICorDebugValueEnum 物件，這個框架中區域變數的列舉值的位址指標。  
   
 ## <a name="remarks"></a>備註  
- `EnumerateLocalVariables` 取得可以列出可用此 ICorDebugILFrame 物件所代表的呼叫框架中區域變數的列舉值。 清單可能不包含所有的本機變數中執行的函式，因為其中部分可能不在作用中。  
+ `EnumerateLocalVariables` 取得可以列出可用此 ICorDebugILFrame 物件所代表的呼叫框架中區域變數的列舉值。 清單可能不包含所有的本機變數中執行的函式，因為其中部分可能不是作用中。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e71930460c5db77950efdaaba3cead8c49697a97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 573949f50135ddf29ac9aa88bf4d1dd480001219
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696278"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471702"
 ---
 # <a name="icordebugnativeframegetlocaldoubleregistervalue-method"></a>ICorDebugNativeFrame::GetLocalDoubleRegisterValue 方法
 取得引數或儲存在兩個指定的暫存器，這個原生框架中區域變數的值。  
@@ -39,7 +39,7 @@ HRESULT GetLocalDoubleRegisterValue (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `highWordReg`  
  [in]指定的暫存器包含值的高位文字"CorDebugRegister 」 列舉值。  
   

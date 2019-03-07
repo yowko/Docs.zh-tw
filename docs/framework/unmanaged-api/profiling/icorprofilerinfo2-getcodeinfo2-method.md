@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 22463a56911354c9706bbfbc7d1824aee5d3c74d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0beb952cf658c19b596263e7f8b7721394efae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725021"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482375"
 ---
 # <a name="icorprofilerinfo2getcodeinfo2-method"></a>ICorProfilerInfo2::GetCodeInfo2 方法
 取得與指定 `FunctionID` 相關聯的原生程式碼範圍。  
@@ -38,7 +38,7 @@ HRESULT GetCodeInfo2(
     COR_PRF_CODE_INFO codeInfos[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `functionID`  
  [in] 與機器碼關聯的函式識別碼。  
   

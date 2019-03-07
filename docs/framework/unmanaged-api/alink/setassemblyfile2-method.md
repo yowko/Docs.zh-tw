@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3882998d3155b49251fbe091b72ef11022ebfd2b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41e10855a7254da4124ac0bf9aa247b90311632b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540204"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479073"
 ---
 # <a name="setassemblyfile2-method"></a>SetAssemblyFile2 方法
 設定的名稱和新的組件的選項。 當您產生未繫結的模組時，請勿呼叫這個方法。  
@@ -37,7 +37,7 @@ HRESULT SetAssemblyFile2(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pszFilename`  
  資訊清單檔案的名稱。  
   

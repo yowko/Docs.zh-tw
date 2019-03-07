@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 697a59d80e152fb78164491c2a0eaaa8707f8914
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: ed9bae4fde96f0878e40ed73b81cc8776571ada5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745916"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468054"
 ---
 # <a name="imetadataimportgetparamprops-method"></a>IMetaDataImport::GetParamProps 方法
 取得指定 ParamDef 語彙基元所參考參數的中繼資料值。  
@@ -44,7 +44,7 @@ HRESULT GetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tk`  
  [in]ParamDef 語彙基元，表示要傳回的中繼資料的參數。  
   

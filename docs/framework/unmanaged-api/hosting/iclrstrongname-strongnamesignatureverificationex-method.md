@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad25603f5acd32aa21192f86364976eb93d23540
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce72f46b4cfc6098a95c4eb4b403e38a294a004
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717541"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472014"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationex-method"></a>ICLRStrongName::StrongNameSignatureVerificationEx 方法
 取得值，指出是否提供之路徑上的組件資訊清單包含強式名稱簽章。  
@@ -37,7 +37,7 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszFilePath`  
  [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
   

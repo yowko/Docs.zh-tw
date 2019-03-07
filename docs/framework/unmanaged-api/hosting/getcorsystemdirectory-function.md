@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8608a5438b31cad64bb27d2866109f479dad441
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9afe4afcaefb9409edb93bd1da96a02db20dbd20
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466718"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 函式
 傳回 common language runtime (CLR) 載入到處理程序的安裝的目錄。 安裝目錄是完整名稱，例如，"c:\windows\microsoft.net\framework\v1.0.3705 」。  
@@ -39,7 +39,7 @@ HRESULT GetCORSystemDirectory (
 );   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pbuffer`  
  [out]執行階段會傳回字串，包含載入到處理序的執行階段安裝目錄的完整格式的名稱緩衝區。 如果執行階段尚未載入到處理序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。  
   

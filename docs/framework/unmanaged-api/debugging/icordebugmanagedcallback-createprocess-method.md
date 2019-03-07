@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7693111427f3181adcd2127ad5ecb2a317e30921
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 36e26101a21471fd840a07deef9f5085a88f2730
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515611"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487027"
 ---
 # <a name="icordebugmanagedcallbackcreateprocess-method"></a>ICorDebugManagedCallback::CreateProcess 方法
 已附加或第一次啟動處理程序時，請告知偵錯工具。  
@@ -35,7 +35,7 @@ HRESULT CreateProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pProcess`  
  [in]表示已附加或啟動的處理序的 ICorDebugProcess 物件指標。  
   

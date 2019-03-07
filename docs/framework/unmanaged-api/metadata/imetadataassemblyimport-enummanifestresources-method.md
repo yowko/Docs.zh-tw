@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cffafe9c8eac03d31c2b0b45dd65ed2c5b28861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a13e750029fed2f2261064dd69d6c1d800d59989
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722632"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473899"
 ---
 # <a name="imetadataassemblyimportenummanifestresources-method"></a>IMetaDataAssemblyImport::EnumManifestResources 方法
 取得列舉值的指標，在目前的組件資訊清單中所參考的資源。  
@@ -38,7 +38,7 @@ HRESULT EnumManifestResources (
 );   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 這必須是 null 值時`EnumManifestResources`第一次呼叫方法。  
   

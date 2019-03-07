@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9018ccc27d0afc35b9dfa2d2ebad323c9150ae60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4ab183bbe82c8e64b833c8fcdbc1e05ceb18e1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482245"
 ---
 # <a name="iclrdatatargetsetthreadcontext-method"></a>ICLRDataTarget::SetThreadContext 方法
 目標處理序中設定指定之執行緒的目前內容。 這個方法是由通用語言執行平台 (CLR) 資料存取服務呼叫。  
@@ -38,7 +38,7 @@ HRESULT SetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `threadID`  
  [in]目標處理序中的執行緒作業系統識別項。  
   

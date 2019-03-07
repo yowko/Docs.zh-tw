@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 746b61a303869ff03d41cd6005ca0f5635ac0fd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29c999d1561cd4ee035bec379e0f78e762f6946a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521711"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476266"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>IDebuggerThreadControl::StartBlockingForDebugger 方法
 主應用程式的偵錯服務即將開始封鎖所有執行緒。  
@@ -35,7 +35,7 @@ HRESULT StartBlockingForDebugger (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwUnused`  
  [in]保留供日後使用。  
   

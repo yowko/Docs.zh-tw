@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7e276e93bc1b05dd34e1111cc53c880f8836bf09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b0acee31017fd02ac3e51f9e585669b9c90ec48
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494882"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57467009"
 ---
 # <a name="isymunmanagedmethodgettoken-method"></a>ISymUnmanagedMethod::GetToken 方法
 傳回此方法的中繼資料語彙基元。  
@@ -34,7 +34,7 @@ HRESULT GetToken(
    [out, retval]  mdMethodDef  *pToken);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pToken`  
  [out]指標`mdMethodDef`接收大小，以字元為單位，以包含中繼資料所需的緩衝區。  
   

@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e2d99d85a6e6b09558e5941d08a7f522aaf66cb
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 2016795e7b2c0588e2bd69e764fb96f7f90b24d0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480659"
 ---
 # <a name="icordebugthreadcreateeval-method"></a>ICorDebugThread::CreateEval 方法
-建立會收集及公開功能的這個 ICorDebugThread ICorDebugEval 物件。  
+建立 ICorDebugEval 物件會收集及公開此 ICorDebugThread 的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT CreateEval (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppEval`  
- [out]位址指標`ICorDebugEval`物件，會收集並公開這個執行緒的功能。  
+ [out]位址指標`ICorDebugEval`會收集並公開的功能，此執行緒的物件。  
   
 ## <a name="remarks"></a>備註  
- 評估物件會將推送新鏈結的執行緒上執行其計算之前。 這會中斷目前正在執行的執行緒上評估完成之前的計算。  
+ 評估物件會將推送新鏈結的執行緒上才能執行其運算。 這會中斷目前正在執行的執行緒上評估完成之前的計算。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

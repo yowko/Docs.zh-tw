@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3cfc222930359e1d7ab1a1720834e88c93c035e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737253"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468997"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 將指定的程式碼剖析工具附加至指定的處理序。  
@@ -39,7 +39,7 @@ HRESULT AttachProfiler(
   [in] UINT cbClientData);                          // optional  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwProfileeProcessID`  
  [in] 程式碼剖析工具應該附加到處理序的處理序識別碼。 在 64 位元電腦上，已剖析程式碼的處理序的位元必須符合正在呼叫 `AttachProfiler` 的觸發處理序的位元。 如果呼叫 `AttachProfiler` 用的使用者帳戶具有系統管理權限，則目標處理序可以是系統上的任何處理序。 否則目標處理序必須由相同的使用者帳戶所擁有。  
   
@@ -47,13 +47,15 @@ HRESULT AttachProfiler(
  [in] 讓 `AttachProfiler` 完成的持續時間，以毫秒為單位。 觸發處理序應該傳遞已知足以讓特定程式碼剖析工具完成初始化的逾時值。  
   
  `pClsidProfiler`  
- [in] 要載入程式碼剖析工具的 CLSID 指標。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。  
+ [in] 要載入程式碼剖析工具的 CLSID 指標。 
+  `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。  
   
  `wszProfilerPath`  
  [in] 要載入之程式碼剖析工具 DLL 檔的完整路徑。 此字串應該包含不超過 260 個字元，包括 null 結束字元。 如果 `wszProfilerPath` 是 null 或空字串，Common Language Runtime (CLR) 會嘗試在登錄中尋找 `pClsidProfiler` 指向的 CLSID，以尋找程式碼剖析工具 DLL 檔的位置。  
   
  `pvClientData`  
- [in]要傳遞至分析工具的資料指標[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。 如果 `pvClientData` 為 null，則 `cbClientData` 必須是 0 (零)。  
+ [in]要傳遞至分析工具的資料指標[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 
+  `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。 如果 `pvClientData` 為 null，則 `cbClientData` 必須是 0 (零)。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的資料大小 (以位元組為單位)。  

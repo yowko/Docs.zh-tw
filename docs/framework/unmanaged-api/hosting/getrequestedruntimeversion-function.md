@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4cdcee35f92fb79177caf7d00a99027fa179334e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87728ea52bc257920041acc2e2ecfc040cdbbfb0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651517"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471793"
 ---
 # <a name="getrequestedruntimeversion-function"></a>GetRequestedRuntimeVersion 函式
 取得 common language runtime (CLR) 所指定的應用程式要求的版本號碼。 如果未安裝該版本，取得要求的版本之前已安裝最新版本。  
@@ -40,7 +40,7 @@ HRESULT GetRequestedRuntimeVersion (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pExe`  
  [in]應用程式的名稱。  
   

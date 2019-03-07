@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4b48ff81fad397adcd5b2d0caae961484bfea5e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c5e1cc3b47c6752017db19f7981a3810d19aca4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706387"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492136"
 ---
 # <a name="imetadataimportcountenum-method"></a>IMetaDataImport::CountEnum 方法
 已擷取所指定的列舉值的列舉中取得的項目數。  
@@ -36,7 +36,7 @@ HRESULT CountEnum (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hEnum`  
  [in]列舉值控制代碼。  
   

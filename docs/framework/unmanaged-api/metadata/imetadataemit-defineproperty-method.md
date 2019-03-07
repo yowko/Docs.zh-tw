@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 71cdfc6b05288fef020e1aed1870a9a155588d47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ee9f771a3df1de67bef70cdb6f8c166040150e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543077"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468737"
 ---
 # <a name="imetadataemitdefineproperty-method"></a>IMetaDataEmit::DefineProperty 方法
 建立具有指定的屬性定義指定的型別，如`get`和`set`方法存取子，並取得該屬性定義的語彙基元。  
@@ -46,7 +46,7 @@ HRESULT DefineProperty (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]類別或介面定義屬性之語彙基元。  
   

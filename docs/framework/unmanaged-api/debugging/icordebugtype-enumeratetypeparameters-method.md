@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12b002aaad65fd5f2a1207700c8de2ca8dd60eec
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b8fa39a54437e60737aa052c495f58422bc0d3fe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33421875"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474445"
 ---
 # <a name="icordebugtypeenumeratetypeparameters-method"></a>ICorDebugType::EnumerateTypeParameters 方法
-取得包含 ICorDebugTypeEnum 介面指標<xref:System.Type>此 ICorDebugType 所參考類別的參數。  
+取得包含 ICorDebugTypeEnum 介面指標<xref:System.Type>類別此 ICorDebugType 所參考的參數。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,24 +35,24 @@ HRESULT EnumerateTypeParameters (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppTyParEnum`  
  [out]位址指標`ICorDebugTypeEnum`包含類型的參數。  
   
 ## <a name="remarks"></a>備註  
- 您可以使用`EnumerateTypeParameters`如果 CorElementType 值傳回[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ELEMENT_TYPE_CLASS、 ELEMENT_TYPE_VALUETYPE、 ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF、 ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_FNPTR。 參數數目和它們的順序取決於類型：  
+ 您可以使用`EnumerateTypeParameters`如果所傳回的 CorElementType 值[icordebugtype:: Gettype](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-gettype-method.md) ELEMENT_TYPE_CLASS、 ELEMENT_TYPE_VALUETYPE、 ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF、 ELEMENT_TYPE_PTR,2001 年或 typ ELEMENT_TYPE_FNPTR。 參數數目和它們的順序取決於類型：  
   
--   ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE： 中所包含的型別參數數目`ICorDebugTypeEnum`，此方法傳回時，將取決於對應的類別的型式型別參數數目。 例如，如果類型是`class Dict<String,int32>`，然後`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含代表物件`String`和`int32`序列中。  
+-   ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE:中所包含的型別參數數目`ICorDebugTypeEnum`，這個方法傳回時，將取決於對應的類別的型式的型別參數數目。 例如，如果類型是`class Dict<String,int32>`，然後`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含物件，代表`String`和`int32`序列中。  
   
--   ELEMENT_TYPE_FNPTR: 中所包含的類型參數的數目`ICorDebugTypeEnum`將會大於函式接受引數數目。 中所包含的第一個型別參數`ICorDebugTypeEnum`函數的傳回型別，而後續的型別參數是函式的參數。  
+-   TYP ELEMENT_TYPE_FNPTR:中所包含的型別參數數目`ICorDebugTypeEnum`會是其中一個大於函式所接受的引數數目。 第一個型別參數中包含`ICorDebugTypeEnum`是函式，傳回的型別，而後續的型別參數是函式的參數。  
   
--   ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF 或 ELEMENT_TYPE_PTR： 將會傳回一個型別參數。 例如，如果類型是陣列類型，例如`int32[]`，`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含物件，代表`int32`。  
+-   ELEMENT_TYPE_ARRAY、 ELEMENT_TYPE_SZARRAY、 ELEMENT_TYPE_BYREF，還是 ELEMENT_TYPE_PTR:會傳回一個型別參數。 例如，如果類型是陣列類型這類`int32[]`，`EnumerateTypeParameters`會傳回`ICorDebugTypeEnum`，其中包含這個物件代表`int32`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

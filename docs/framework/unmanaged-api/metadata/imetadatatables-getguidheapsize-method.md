@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f9a7ddb85865545698809e1865ec571f7c5e9c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0b41c03f5e6e08144ae566a3543d352c168555f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674215"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472105"
 ---
 # <a name="imetadatatablesgetguidheapsize-method"></a>IMetaDataTables::GetGuidHeapSize 方法
 取得大小，以位元組為單位，GUID 堆積。  
@@ -35,7 +35,7 @@ HRESULT GetGuidHeapSize (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcbGuids`  
  [out]大小 （位元組），GUID 堆積的指標。  
   

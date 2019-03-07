@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac0cee9affff03a95cd7635a8b1afd42e6edc6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684319"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468262"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
 列舉遠端電腦上所執行之指定處理序中的 Common Language Runtime (CLR)。  
@@ -39,7 +39,7 @@ HRESULT EnumRuntimes (
     );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwInternalProcessID`  
  [in] 要列舉執行階段之處理序的內部處理序 ID。 這會是`m_dwInternalID`從相對應[CoreClrDebugProcInfo](../../../../docs/framework/unmanaged-api/debugging/coreclrdebugprocinfo-structure.md)。  
   

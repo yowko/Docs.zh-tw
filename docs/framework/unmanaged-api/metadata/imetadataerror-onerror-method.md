@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ebb7fdbcf8c17991928df2dc621ec651b9cd4f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011183d2f60e4abb967e5381d30a4c28e619e34c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479775"
 ---
 # <a name="imetadataerroronerror-method"></a>IMetaDataError::OnError 方法
 提供中繼資料合併期間所發生之錯誤的通知。  
@@ -36,7 +36,7 @@ HRESULT OnError (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hrError`  
  [in]HRESULT 錯誤值傳回至呼叫的方法。  
   

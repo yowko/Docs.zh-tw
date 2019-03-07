@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8d0c16000c78fab0371b68c3a350bd2018aa1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5a35072b788321d22cec6de2f05a2863341417dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664521"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474757"
 ---
 # <a name="icordebugnativeframegetlocalmemoryvalue-method"></a>ICorDebugNativeFrame::GetLocalMemoryValue 方法
 取得引數或儲存在指定的記憶體位置，這個原生框架中區域變數的值。  
@@ -38,7 +38,7 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `address`  
  [in]A`CORDB_ADDRESS`值，指定記憶體位置包含的值。  
   

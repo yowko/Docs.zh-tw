@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3fe9edf7a635e54aac881a242aca3bc32e21fe1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f24a1434f737e8281a0c68dd09d2e17b34371694
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33408121"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471650"
 ---
 # <a name="icordebugarrayvaluegetbaseindicies-method"></a>ICorDebugArrayValue::GetBaseIndicies 方法
 取得陣列中的每個維度的基底的索引。  
@@ -37,18 +37,18 @@ HRESULT GetBaseIndicies (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cdim`  
- [in]這個維度的數目`ICorDebugArrayValue`物件。 此值也是大小`indicies`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。  
+ [in]這個維度的數目`ICorDebugArrayValue`物件。 此值也是的大小`indicies`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。  
   
  `indicies`  
- [out]整數的陣列，其中每一個都是這個維度的基底的索引 （也就是說，起始索引）`ICorDebugArrayValue`物件。  
+ [out]整數的陣列，每個都是這個維度的基底的索引 （也就是說，起始的索引）`ICorDebugArrayValue`物件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

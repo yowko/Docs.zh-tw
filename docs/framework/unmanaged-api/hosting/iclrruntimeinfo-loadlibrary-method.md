@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7dbcbf1b66793a67c815b420e6d5fe221febe719
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878d68dd690a8764ef26f5f180fabd6c22841a25
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716878"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466828"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary 方法
 從 common language runtime (CLR) 所表示載入的.NET Framework 程式庫[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)介面。  
@@ -37,7 +37,7 @@ HRESULT LoadLibrary(
      [out, retval] HMODULE *phndModule);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzDllName`  
  [in]要載入之組件名稱。  
   
@@ -45,12 +45,12 @@ HRESULT LoadLibrary(
  [out]載入的組件控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_POINTER|`pwzDllName` 或 `phndModule` 為 null。|  
+|E_POINTER|`pwzDllName` 或`phndModule`為 null。|  
 |E_OUTOFMEMORY|沒有足夠的記憶體是可用來處理要求。|  
   
 ## <a name="remarks"></a>備註  

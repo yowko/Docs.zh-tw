@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 578f79136f6ccc8a6b7eac644b2a5084d30d2ba0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2b3e5c452a5fc79e7a1cc0342cfc1d119a5fbd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481985"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef 方法
 定義目前的範圍外的模組成員的參考，並取得該參考定義的語彙基元。  
@@ -39,7 +39,7 @@ HRESULT DefineMemberRef (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tkImport`  
  [in]權杖的目標成員的類別或介面，如果在成員不是全域;如果成員是全域、`mdModuleRef`該其他檔案的語彙基元。  
   

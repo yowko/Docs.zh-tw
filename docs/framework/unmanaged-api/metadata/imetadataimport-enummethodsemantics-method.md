@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c20e2787eb8071b10e06b980572c347959fe3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6021cd0126f4dd85b796a3110cd95a83c0f77ff4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619444"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466787"
 ---
 # <a name="imetadataimportenummethodsemantics-method"></a>IMetaDataImport::EnumMethodSemantics 方法
 列舉和指定方法相關的屬性及屬性變更事件。  
@@ -39,7 +39,7 @@ HRESULT EnumMethodSemantics (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   

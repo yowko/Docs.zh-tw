@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52136426be9e8f220d8eb5fc93659f588f007498
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67447e90198ded258645ad7d9173eed37bb60915
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625094"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479411"
 ---
 # <a name="imetadataimportgetclasslayout-method"></a>IMetaDataImport::GetClassLayout 方法
 取得指定 TypeDef 語彙基元所參考類別的配置資訊。  
@@ -40,7 +40,7 @@ HRESULT GetClassLayout  (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]使用版面配置，以傳回類別的 TypeDef 語彙基元。  
   

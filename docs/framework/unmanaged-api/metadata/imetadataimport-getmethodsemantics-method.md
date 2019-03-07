@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a12310f1281da99706589894a4793c2a28c5b938
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 35b99240a99341ddf78ab43c444b503702af66c9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745952"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479164"
 ---
 # <a name="imetadataimportgetmethodsemantics-method"></a>IMetaDataImport::GetMethodSemantics 方法
 取得旗標，表示與指定 EventProp 所參考的事件與指定的 MethodDef 語彙基元和成對的屬性所參考的方法之間的關聯性的語彙基元。  
@@ -37,7 +37,7 @@ HRESULT GetMethodSemantics (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `mb`  
  [in]表示要取得的語意的角色資訊的方法的 MethodDef 語彙基元。  
   

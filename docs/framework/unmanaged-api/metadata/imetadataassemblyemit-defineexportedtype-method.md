@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 071466858c79fdb74d9055fed09990cdb02a88b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 984eef16ff576d63a445b199eba8c2364285f62e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624337"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483864"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType 方法
 為指定的已匯出類型，建立包含其中繼資料的 `ExportedType` 結構，並且傳回關聯的中繼資料語彙基元。  
@@ -39,7 +39,7 @@ HRESULT DefineExportedType (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szName`  
  [in]若要匯出的型別名稱。 1.1 版的 common language runtime，匯出的型別名稱必須完全相符的名稱，`TypeDef`類型。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8e12c6bd67ea5d22bb891057cae37e3c41ca233
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c34acd93deefa5ac9fff8726b4dc3862f46c6fcb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716852"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470936"
 ---
 # <a name="ihostsyncmanagercreatemanualevent-method"></a>IHostSyncManager::CreateManualEvent 方法
 建立手動重設事件物件。  
@@ -36,7 +36,7 @@ HRESULT CreateManualEvent (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `bInitialState`  
  [in]`true`，則物件為已收到訊號，否則`false`。  
   

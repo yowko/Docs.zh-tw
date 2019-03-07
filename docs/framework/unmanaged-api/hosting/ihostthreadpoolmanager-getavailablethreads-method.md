@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb2c7aa5b2bb301cf047ee465ac2e3a755974e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f9eb28ea1a60991d047494336035aaf239b9edd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615295"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478592"
 ---
 # <a name="ihostthreadpoolmanagergetavailablethreads-method"></a>IHostThreadPoolManager::GetAvailableThreads 方法
 取得目前未處理的工作項目之執行緒集區中的執行緒數目。  
@@ -35,7 +35,7 @@ HRESULT GetAvailableThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pdwAvailableWorkerThreads`  
  [out]執行緒集區中目前未處理的工作項目的執行緒數目的指標。  
   

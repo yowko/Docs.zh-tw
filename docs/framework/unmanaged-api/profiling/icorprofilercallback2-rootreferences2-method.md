@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b4383bf8b7369f5906fe4664056f1cd938f04584
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2164350ff94e53e6144298aab621065faba4a0dc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607536"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475338"
 ---
 # <a name="icorprofilercallback2rootreferences2-method"></a>ICorProfilerCallback2::RootReferences2 方法
 進行記憶體回收發生後，請通知分析工具之根參考。 這個方法是擴充功能[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)方法。  
@@ -38,7 +38,7 @@ HRESULT RootReferences2(
     [in, size_is(cRootRefs)] UINT_PTR rootIds[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cRootRefs`  
  [in]中的項目數`rootRefIds`， `rootKinds`， `rootFlags`，和`rootIds`陣列。  
   

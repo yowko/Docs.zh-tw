@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 126cc9d407e2653fdb3f4ea7b03fa05c24a572d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8832d6c19108459ffe261a5cf66f921ff521ddf9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629110"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465825"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA 方法
 取得相對虛擬位址 (RVA) 和欄位指定的語彙基元所代表之方法的實作旗標。  
@@ -37,7 +37,7 @@ HRESULT GetRVA (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tk`  
  [in]MethodDef 或 FieldDef 中繼資料語彙基元，表示要傳回的 RVA 的程式碼物件。 如果 FieldDef 語彙基元，欄位必須是全域變數。  
   

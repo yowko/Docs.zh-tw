@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ece5173ce2a80ceb46d535eb8cbc6eb18e18fd1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5347d25f3fe1d5136917564b1fed24df5df0449c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621876"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468074"
 ---
 # <a name="iassemblycacheuninstallassembly-method"></a>IAssemblyCache::UninstallAssembly 方法
 從全域組件快取，解除安裝指定的組件。  
@@ -38,7 +38,7 @@ HRESULT UninstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwFlags`  
  [in]支援下列值： 旗標。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86736f885e40e553195cf2a5f84575a5384e6b60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a4ab6dac8302d4e03f5d8adad1267f209f131c00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564704"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476475"
 ---
 # <a name="icordebugmanagedcallback2functionremapopportunity-method"></a>ICorDebugManagedCallback2::FunctionRemapOpportunity 方法
 告知偵錯工具執行程式碼已達到較舊版本的已編輯的函式中的序列點。  
@@ -39,7 +39,7 @@ HRESULT FunctionRemapOpportunity (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]ICorDebugAppDomain 物件，表示應用程式定義域，其中包含已編輯的函式指標。  
   

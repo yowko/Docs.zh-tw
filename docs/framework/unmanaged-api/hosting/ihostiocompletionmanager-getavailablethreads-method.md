@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ef25267f6af5d1f8503825e2784383a0eb241e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27922c1b1b576ae34bfbe363f3d46e10d0f2551c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535527"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485170"
 ---
 # <a name="ihostiocompletionmanagergetavailablethreads-method"></a>IHostIoCompletionManager::GetAvailableThreads 方法
 取得 I/O 完成執行緒、 執行緒管理的主機，目前不會服務要求總數的數目。  
@@ -35,7 +35,7 @@ HRESULT GetAvailableThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pdwAvailableIoCompletionThreads`  
  [out]I/O 完成執行緒主機所管理目前可供服務要求的數目指標。  
   

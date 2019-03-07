@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63b597c6d15310c78397b9aac7b618c52df743ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6764fe1472052e2657fd32078abe987b68cf9643
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711917"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465890"
 ---
 # <a name="isymunmanagedreadersymbolsearchinfogetsymbolsearchinfocount-method"></a>ISymUnmanagedReaderSymbolSearchInfo::GetSymbolSearchInfoCount 方法
 取得符號搜尋資訊的計數。  
@@ -34,7 +34,7 @@ HRESULT GetSymbolSearchInfoCount(
     [out] ULONG32 *pcSearchInfo);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcSearchInfo`  
  ] out] 的指標`ULONG32`接收包含搜尋資訊所需的緩衝區大小。  
   

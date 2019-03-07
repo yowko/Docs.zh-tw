@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 905ce9183d295568977eb7e216e5327d6b4ee8bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0afd3b187b0424be939146f02f4baed837be444c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636088"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466813"
 ---
 # <a name="ihostthreadpoolmanagersetmaxthreads-method"></a>IHostThreadPoolManager::SetMaxThreads 方法
 設定主應用程式可以維護執行緒集區中的執行緒最大數目。  
@@ -35,7 +35,7 @@ HRESULT SetMaxThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `MaxThreads`  
  執行緒集區中的背景工作執行緒最大數目。  
   

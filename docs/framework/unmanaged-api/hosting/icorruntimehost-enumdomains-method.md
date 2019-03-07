@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8e4db2330c6d46610bbb3da8b732b1c098659c97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27587c391b1d5cf5f5edb87cf5aa81d227869315
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729076"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57464668"
 ---
 # <a name="icorruntimehostenumdomains-method"></a>ICorRuntimeHost::EnumDomains 方法
 取得目前的處理序中的網域列舉值。  
@@ -35,7 +35,7 @@ HRESULT EnumDomains (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hEnum`  
  [out]網域列舉值。  
   

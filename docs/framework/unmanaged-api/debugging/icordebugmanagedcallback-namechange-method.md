@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c33f287cf7ccadeb75ba0bbccf9118aeedc1f942
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8bc4eb1895fe67c25354b42fe3ae1ffe80bca58
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607422"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491317"
 ---
 # <a name="icordebugmanagedcallbacknamechange-method"></a>ICorDebugManagedCallback::NameChange 方法
 告知偵錯工具的應用程式定義域或執行緒名稱已變更。  
@@ -36,7 +36,7 @@ HRESULT NameChange (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]ICorDebugAppDomain 物件，表示必須變更名稱或應用程式定義域的指標會包含具有名稱變更的執行緒。  
   

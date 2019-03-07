@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b4ad9590b57b629587af8f421a3f5902e5527f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469062"
 ---
 # <a name="ihostmemorymanagergetmemoryload-method"></a>IHostMemoryManager::GetMemoryLoad 方法
 取得目前為使用中，因此無法使用，與主應用程式所報告的實體記憶體數量。  
@@ -36,7 +36,7 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pMemoryLoad`  
  [out]目前正在使用的總實體記憶體的近似百分比指標。  
   

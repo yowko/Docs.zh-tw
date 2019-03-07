@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 784a879b262008e1d999498fcbf4b43bb1137e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e92707e7b24709d64915e29823196bb0f827175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674241"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485228"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats 方法
 取得一組有關 common language runtime 的記憶體回收系統目前的統計資料。  
@@ -35,7 +35,7 @@ HRESULT GetStats (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pStats`  
  [in、 out]A [COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)包含要求的統計資料的執行個體。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f5fddeb6-b82e-4ebb-b432-849ce8513c77
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9c01898bcbd76f7e6de9445d5d1f511203c100ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4ddae1da8b07afff6ade28fb6dcae942cddd8c2e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585181"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471611"
 ---
 # <a name="icordebugassembly3getcontainerassembly-method"></a>ICorDebugAssembly3::GetContainerAssembly 方法
 傳回這個 `ICorDebugAssembly3` 物件的容器組件。  
@@ -22,7 +22,7 @@ HRESULT GetContainerAssembly(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppAssembly`  
  ICorDebugAssembly 物件，代表容器組件的位址指標或**null**如果方法呼叫失敗。  
   
@@ -33,7 +33,7 @@ HRESULT GetContainerAssembly(
  如果這個組件與其他組件已合併到單一容器組件內，這個方法會傳回該容器組件。 如需詳細資訊和術語，請參閱 < [ICorDebugProcess6::EnableVirtualModuleSplitting](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-enablevirtualmodulesplitting-method.md)主題。  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
