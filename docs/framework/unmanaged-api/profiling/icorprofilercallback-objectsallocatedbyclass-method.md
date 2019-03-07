@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e26e7ac9b89e005d9520ad860cf3acee7d3cc6cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479749"
 ---
-# <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a><span data-ttu-id="fb6cb-102">ICorProfilerCallback::ObjectsAllocatedByClass 方法</span><span class="sxs-lookup"><span data-stu-id="fb6cb-102">ICorProfilerCallback::ObjectsAllocatedByClass Method</span></span>
-<span data-ttu-id="fb6cb-103">通知分析工具有關的每個指定的類別已自最新的回收之後建立的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span></span>  
+# <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a><span data-ttu-id="b97ff-102">ICorProfilerCallback::ObjectsAllocatedByClass 方法</span><span class="sxs-lookup"><span data-stu-id="b97ff-102">ICorProfilerCallback::ObjectsAllocatedByClass Method</span></span>
+<span data-ttu-id="b97ff-103">通知分析工具有關的每個指定的類別已自最新的回收之後建立的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="b97ff-103">Notifies the profiler about the number of instances of each specified class that have been created since the most recent garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fb6cb-104">語法</span><span class="sxs-lookup"><span data-stu-id="fb6cb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b97ff-104">語法</span><span class="sxs-lookup"><span data-stu-id="b97ff-104">Syntax</span></span>  
   
 ```  
 HRESULT ObjectsAllocatedByClass(  
@@ -36,31 +36,31 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="fb6cb-105">參數</span><span class="sxs-lookup"><span data-stu-id="fb6cb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b97ff-105">參數</span><span class="sxs-lookup"><span data-stu-id="b97ff-105">Parameters</span></span>  
  `cClassCount`  
- <span data-ttu-id="fb6cb-106">[in]大小`classIds`和`cObjects`陣列。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-106">[in] The size of the `classIds` and `cObjects` arrays.</span></span>  
+ <span data-ttu-id="b97ff-106">[in]大小`classIds`和`cObjects`陣列。</span><span class="sxs-lookup"><span data-stu-id="b97ff-106">[in] The size of the `classIds` and `cObjects` arrays.</span></span>  
   
  `classIds`  
- <span data-ttu-id="fb6cb-107">[in]類別識別碼，其中每個識別碼指定的類別與一或多個執行個體的陣列。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-107">[in] An array of class IDs, where each ID specifies a class with one or more instances.</span></span>  
+ <span data-ttu-id="b97ff-107">[in]類別識別碼，其中每個識別碼指定的類別與一或多個執行個體的陣列。</span><span class="sxs-lookup"><span data-stu-id="b97ff-107">[in] An array of class IDs, where each ID specifies a class with one or more instances.</span></span>  
   
  `cObjects`  
- <span data-ttu-id="fb6cb-108">[in]整數，指定每個整數中的對應類別的執行個體數目的陣列`classIds`陣列。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-108">[in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.</span></span>  
+ <span data-ttu-id="b97ff-108">[in]整數，指定每個整數中的對應類別的執行個體數目的陣列`classIds`陣列。</span><span class="sxs-lookup"><span data-stu-id="b97ff-108">[in] An array of integers, where each integer specifies the number of instances for the corresponding class in the `classIds` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="fb6cb-109">備註</span><span class="sxs-lookup"><span data-stu-id="fb6cb-109">Remarks</span></span>  
- <span data-ttu-id="fb6cb-110">`classIds`和`cObjects`陣列是平行陣列。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-110">The `classIds` and `cObjects` arrays are parallel arrays.</span></span> <span data-ttu-id="fb6cb-111">例如，`classIds[i]`和`cObjects[i]`參考相同的類別。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-111">For example, `classIds[i]` and `cObjects[i]` reference the same class.</span></span> <span data-ttu-id="fb6cb-112">如果自上一個記憶體回收之後建立的類別執行個體之後，即會省略的類別。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-112">If no instance of a class has been created since the previous garbage collection, the class is omitted.</span></span> <span data-ttu-id="fb6cb-113">`ObjectsAllocatedByClass`回呼將不會報告在大型物件堆積中配置的物件。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-113">The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b97ff-109">備註</span><span class="sxs-lookup"><span data-stu-id="b97ff-109">Remarks</span></span>  
+ <span data-ttu-id="b97ff-110">`classIds`和`cObjects`陣列是平行陣列。</span><span class="sxs-lookup"><span data-stu-id="b97ff-110">The `classIds` and `cObjects` arrays are parallel arrays.</span></span> <span data-ttu-id="b97ff-111">例如，`classIds[i]`和`cObjects[i]`參考相同的類別。</span><span class="sxs-lookup"><span data-stu-id="b97ff-111">For example, `classIds[i]` and `cObjects[i]` reference the same class.</span></span> <span data-ttu-id="b97ff-112">如果自上一個記憶體回收之後建立的類別執行個體之後，即會省略的類別。</span><span class="sxs-lookup"><span data-stu-id="b97ff-112">If no instance of a class has been created since the previous garbage collection, the class is omitted.</span></span> <span data-ttu-id="b97ff-113">`ObjectsAllocatedByClass`回呼將不會報告在大型物件堆積中配置的物件。</span><span class="sxs-lookup"><span data-stu-id="b97ff-113">The `ObjectsAllocatedByClass` callback will not report objects allocated in the large object heap.</span></span>  
   
- <span data-ttu-id="fb6cb-114">所報告的數字`ObjectsAllocatedByClass`是只是估計值。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-114">The numbers reported by `ObjectsAllocatedByClass` are only estimates.</span></span> <span data-ttu-id="fb6cb-115">確切的計數，請使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-115">For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).</span></span>  
+ <span data-ttu-id="b97ff-114">所報告的數字`ObjectsAllocatedByClass`是只是估計值。</span><span class="sxs-lookup"><span data-stu-id="b97ff-114">The numbers reported by `ObjectsAllocatedByClass` are only estimates.</span></span> <span data-ttu-id="b97ff-115">確切的計數，請使用[icorprofilercallback:: Objectallocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md)。</span><span class="sxs-lookup"><span data-stu-id="b97ff-115">For exact counts, use [ICorProfilerCallback::ObjectAllocated](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectallocated-method.md).</span></span>  
   
- <span data-ttu-id="fb6cb-116">`classIds`陣列可能包含一或多個 null 的項目，如果對應`cObjects`陣列有要卸載的類型。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-116">The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.</span></span>  
+ <span data-ttu-id="b97ff-116">`classIds`陣列可能包含一或多個 null 的項目，如果對應`cObjects`陣列有要卸載的類型。</span><span class="sxs-lookup"><span data-stu-id="b97ff-116">The `classIds` array may contain one or more null entries if the corresponding `cObjects` array has types that are unloading.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fb6cb-117">需求</span><span class="sxs-lookup"><span data-stu-id="fb6cb-117">Requirements</span></span>  
- <span data-ttu-id="fb6cb-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fb6cb-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b97ff-117">需求</span><span class="sxs-lookup"><span data-stu-id="b97ff-117">Requirements</span></span>  
+ <span data-ttu-id="b97ff-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b97ff-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fb6cb-119">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="fb6cb-119">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="b97ff-119">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b97ff-119">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="fb6cb-120">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fb6cb-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b97ff-120">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b97ff-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="fb6cb-121">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fb6cb-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="b97ff-121">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b97ff-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fb6cb-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb6cb-122">See also</span></span>
-- [<span data-ttu-id="fb6cb-123">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="fb6cb-123">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b97ff-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b97ff-122">See also</span></span>
+- [<span data-ttu-id="b97ff-123">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="b97ff-123">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

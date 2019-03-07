@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3cc8c980c3f9dbfa0b262b30a56756f148676de7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ea97084351bdc0a9dbd85d7a6a38a34acffaac8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602243"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489272"
 ---
-# <a name="iclrpolicymanagersettimeoutandaction-method"></a><span data-ttu-id="7df36-102">ICLRPolicyManager::SetTimeoutAndAction 方法</span><span class="sxs-lookup"><span data-stu-id="7df36-102">ICLRPolicyManager::SetTimeoutAndAction Method</span></span>
-<span data-ttu-id="7df36-103">設定指定之作業的逾時值，並指定發生作業時，應該採取 common language runtime (CLR) 的原則動作。</span><span class="sxs-lookup"><span data-stu-id="7df36-103">Sets a timeout value for the specified operation, and specifies the policy action the common language runtime (CLR) should take when the operation occurs.</span></span>  
+# <a name="iclrpolicymanagersettimeoutandaction-method"></a><span data-ttu-id="0d2bd-102">ICLRPolicyManager::SetTimeoutAndAction 方法</span><span class="sxs-lookup"><span data-stu-id="0d2bd-102">ICLRPolicyManager::SetTimeoutAndAction Method</span></span>
+<span data-ttu-id="0d2bd-103">設定指定之作業的逾時值，並指定發生作業時，應該採取 common language runtime (CLR) 的原則動作。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-103">Sets a timeout value for the specified operation, and specifies the policy action the common language runtime (CLR) should take when the operation occurs.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7df36-104">語法</span><span class="sxs-lookup"><span data-stu-id="7df36-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0d2bd-104">語法</span><span class="sxs-lookup"><span data-stu-id="0d2bd-104">Syntax</span></span>  
   
 ```  
 HRESULT SetTimeoutAndAction (  
@@ -37,54 +37,54 @@ HRESULT SetTimeoutAndAction (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7df36-105">參數</span><span class="sxs-lookup"><span data-stu-id="7df36-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0d2bd-105">參數</span><span class="sxs-lookup"><span data-stu-id="0d2bd-105">Parameters</span></span>  
  `operation`  
- <span data-ttu-id="7df36-106">[in]其中一個[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，表示要設定的逾時和原則作業`action`。</span><span class="sxs-lookup"><span data-stu-id="7df36-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the operation for which to set the timeout and policy `action`.</span></span> <span data-ttu-id="7df36-107">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="7df36-107">The following values are supported:</span></span>  
+ <span data-ttu-id="0d2bd-106">[in]其中一個[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)值，表示要設定的逾時和原則作業`action`。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-106">[in] One of the [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md) values, indicating the operation for which to set the timeout and policy `action`.</span></span> <span data-ttu-id="0d2bd-107">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="0d2bd-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="7df36-108">OPR_AppDomainUnload</span><span class="sxs-lookup"><span data-stu-id="7df36-108">OPR_AppDomainUnload</span></span>  
+-   <span data-ttu-id="0d2bd-108">OPR_AppDomainUnload</span><span class="sxs-lookup"><span data-stu-id="0d2bd-108">OPR_AppDomainUnload</span></span>  
   
--   <span data-ttu-id="7df36-109">OPR_ProcessExit</span><span class="sxs-lookup"><span data-stu-id="7df36-109">OPR_ProcessExit</span></span>  
+-   <span data-ttu-id="0d2bd-109">OPR_ProcessExit</span><span class="sxs-lookup"><span data-stu-id="0d2bd-109">OPR_ProcessExit</span></span>  
   
--   <span data-ttu-id="7df36-110">OPR_ThreadRudeAbortInCriticalRegion</span><span class="sxs-lookup"><span data-stu-id="7df36-110">OPR_ThreadRudeAbortInCriticalRegion</span></span>  
+-   <span data-ttu-id="0d2bd-110">OPR_ThreadRudeAbortInCriticalRegion</span><span class="sxs-lookup"><span data-stu-id="0d2bd-110">OPR_ThreadRudeAbortInCriticalRegion</span></span>  
   
--   <span data-ttu-id="7df36-111">OPR_ThreadRudeAbortInNonCriticalRegion</span><span class="sxs-lookup"><span data-stu-id="7df36-111">OPR_ThreadRudeAbortInNonCriticalRegion</span></span>  
+-   <span data-ttu-id="0d2bd-111">OPR_ThreadRudeAbortInNonCriticalRegion</span><span class="sxs-lookup"><span data-stu-id="0d2bd-111">OPR_ThreadRudeAbortInNonCriticalRegion</span></span>  
   
  `dwMilliseconds`  
- <span data-ttu-id="7df36-112">[in]新逾時值，以毫秒為單位。</span><span class="sxs-lookup"><span data-stu-id="7df36-112">[in] The new timeout value, in milliseconds.</span></span> <span data-ttu-id="7df36-113">值是無限的可能原因`operation`永遠不會以逾時。</span><span class="sxs-lookup"><span data-stu-id="7df36-113">A value of INFINITE causes `operation` never to time out.</span></span>  
+ <span data-ttu-id="0d2bd-112">[in]新逾時值，以毫秒為單位。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-112">[in] The new timeout value, in milliseconds.</span></span> <span data-ttu-id="0d2bd-113">值是無限的可能原因`operation`永遠不會以逾時。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-113">A value of INFINITE causes `operation` never to time out.</span></span>  
   
  `action`  
- <span data-ttu-id="7df36-114">[in]其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，表示 CLR 應該時採取的原則動作`operation`，就會發生。</span><span class="sxs-lookup"><span data-stu-id="7df36-114">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the policy action that the CLR should take when `operation` occurs.</span></span>  
+ <span data-ttu-id="0d2bd-114">[in]其中一個[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)值，表示 CLR 應該時採取的原則動作`operation`，就會發生。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-114">[in] One of the [EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md) values, indicating the policy action that the CLR should take when `operation` occurs.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7df36-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="7df36-115">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0d2bd-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="0d2bd-115">Return Value</span></span>  
   
-|<span data-ttu-id="7df36-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="7df36-116">HRESULT</span></span>|<span data-ttu-id="7df36-117">描述</span><span class="sxs-lookup"><span data-stu-id="7df36-117">Description</span></span>|  
+|<span data-ttu-id="0d2bd-116">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0d2bd-116">HRESULT</span></span>|<span data-ttu-id="0d2bd-117">描述</span><span class="sxs-lookup"><span data-stu-id="0d2bd-117">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="7df36-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="7df36-118">S_OK</span></span>|<span data-ttu-id="7df36-119">`SetTimeoutAndAction` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="7df36-119">`SetTimeoutAndAction` returned successfully.</span></span>|  
-|<span data-ttu-id="7df36-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="7df36-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="7df36-121">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="7df36-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="7df36-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="7df36-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="7df36-123">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="7df36-123">The call timed out.</span></span>|  
-|<span data-ttu-id="7df36-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="7df36-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="7df36-125">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="7df36-125">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="7df36-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="7df36-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="7df36-127">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="7df36-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="7df36-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="7df36-128">E_FAIL</span></span>|<span data-ttu-id="7df36-129">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="7df36-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="7df36-130">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="7df36-130">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="7df36-131">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="7df36-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="7df36-132">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="7df36-132">E_INVALIDARG</span></span>|<span data-ttu-id="7df36-133">無法設定逾時指定`operation`，或為無效的值提供`action`。</span><span class="sxs-lookup"><span data-stu-id="7df36-133">A timeout cannot be set for the specified `operation`, or an invalid value was supplied for `action`.</span></span>|  
+|<span data-ttu-id="0d2bd-118">S_OK</span><span class="sxs-lookup"><span data-stu-id="0d2bd-118">S_OK</span></span>|<span data-ttu-id="0d2bd-119">`SetTimeoutAndAction` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-119">`SetTimeoutAndAction` returned successfully.</span></span>|  
+|<span data-ttu-id="0d2bd-120">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="0d2bd-120">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="0d2bd-121">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-121">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="0d2bd-122">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="0d2bd-122">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="0d2bd-123">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-123">The call timed out.</span></span>|  
+|<span data-ttu-id="0d2bd-124">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="0d2bd-124">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="0d2bd-125">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-125">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="0d2bd-126">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="0d2bd-126">HOST_E_ABANDONED</span></span>|<span data-ttu-id="0d2bd-127">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-127">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="0d2bd-128">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="0d2bd-128">E_FAIL</span></span>|<span data-ttu-id="0d2bd-129">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-129">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="0d2bd-130">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-130">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="0d2bd-131">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-131">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="0d2bd-132">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="0d2bd-132">E_INVALIDARG</span></span>|<span data-ttu-id="0d2bd-133">無法設定逾時指定`operation`，或為無效的值提供`action`。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-133">A timeout cannot be set for the specified `operation`, or an invalid value was supplied for `action`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7df36-134">備註</span><span class="sxs-lookup"><span data-stu-id="7df36-134">Remarks</span></span>  
- <span data-ttu-id="7df36-135">`SetTimeoutAndAction` 封裝的功能[iclrpolicymanager:: Settimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)並[iclrpolicymanager:: Setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)方法，並可取代循序呼叫這兩個方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="7df36-135">`SetTimeoutAndAction` encapsulates the capabilities of the [ICLRPolicyManager::SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) and [ICLRPolicyManager::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) methods, and can be called in place of sequential calls to these two methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0d2bd-134">備註</span><span class="sxs-lookup"><span data-stu-id="0d2bd-134">Remarks</span></span>  
+ <span data-ttu-id="0d2bd-135">`SetTimeoutAndAction` 封裝的功能[iclrpolicymanager:: Settimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md)並[iclrpolicymanager:: Setactionontimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)方法，並可取代循序呼叫這兩個方法呼叫。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-135">`SetTimeoutAndAction` encapsulates the capabilities of the [ICLRPolicyManager::SetTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeout-method.md) and [ICLRPolicyManager::SetActionOnTimeout](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md) methods, and can be called in place of sequential calls to these two methods.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="7df36-136">並非所有的原則動作值可以指定為 CLR 作業的逾時行為。</span><span class="sxs-lookup"><span data-stu-id="7df36-136">Not all policy action values can be specified as the timeout behavior for CLR operations.</span></span> <span data-ttu-id="7df36-137">請參閱 < 備註 > 一節，有效值這兩種方法的主題。</span><span class="sxs-lookup"><span data-stu-id="7df36-137">See the Remarks sections of the topics for these two methods for valid values.</span></span>  
+>  <span data-ttu-id="0d2bd-136">並非所有的原則動作值可以指定為 CLR 作業的逾時行為。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-136">Not all policy action values can be specified as the timeout behavior for CLR operations.</span></span> <span data-ttu-id="0d2bd-137">請參閱 < 備註 > 一節，有效值這兩種方法的主題。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-137">See the Remarks sections of the topics for these two methods for valid values.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7df36-138">需求</span><span class="sxs-lookup"><span data-stu-id="7df36-138">Requirements</span></span>  
- <span data-ttu-id="7df36-139">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7df36-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0d2bd-138">需求</span><span class="sxs-lookup"><span data-stu-id="0d2bd-138">Requirements</span></span>  
+ <span data-ttu-id="0d2bd-139">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0d2bd-139">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7df36-140">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7df36-140">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="0d2bd-140">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="0d2bd-140">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="7df36-141">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7df36-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="0d2bd-141">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0d2bd-141">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="7df36-142">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7df36-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="0d2bd-142">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0d2bd-142">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7df36-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7df36-143">See also</span></span>
-- [<span data-ttu-id="7df36-144">EClrOperation 列舉</span><span class="sxs-lookup"><span data-stu-id="7df36-144">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
-- [<span data-ttu-id="7df36-145">EPolicyAction 列舉</span><span class="sxs-lookup"><span data-stu-id="7df36-145">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
-- [<span data-ttu-id="7df36-146">ICLRPolicyManager 介面</span><span class="sxs-lookup"><span data-stu-id="7df36-146">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
-- [<span data-ttu-id="7df36-147">SetActionOnTimeout 方法</span><span class="sxs-lookup"><span data-stu-id="7df36-147">SetActionOnTimeout Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)
-- [<span data-ttu-id="7df36-148">ICLRPolicyManager::SetTimeoutAndAction</span><span class="sxs-lookup"><span data-stu-id="7df36-148">ICLRPolicyManager::SetTimeoutAndAction</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)
+## <a name="see-also"></a><span data-ttu-id="0d2bd-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0d2bd-143">See also</span></span>
+- [<span data-ttu-id="0d2bd-144">EClrOperation 列舉</span><span class="sxs-lookup"><span data-stu-id="0d2bd-144">EClrOperation Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)
+- [<span data-ttu-id="0d2bd-145">EPolicyAction 列舉</span><span class="sxs-lookup"><span data-stu-id="0d2bd-145">EPolicyAction Enumeration</span></span>](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)
+- [<span data-ttu-id="0d2bd-146">ICLRPolicyManager 介面</span><span class="sxs-lookup"><span data-stu-id="0d2bd-146">ICLRPolicyManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-interface.md)
+- [<span data-ttu-id="0d2bd-147">SetActionOnTimeout 方法</span><span class="sxs-lookup"><span data-stu-id="0d2bd-147">SetActionOnTimeout Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactionontimeout-method.md)
+- [<span data-ttu-id="0d2bd-148">ICLRPolicyManager::SetTimeoutAndAction</span><span class="sxs-lookup"><span data-stu-id="0d2bd-148">ICLRPolicyManager::SetTimeoutAndAction</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-settimeoutandaction-method.md)

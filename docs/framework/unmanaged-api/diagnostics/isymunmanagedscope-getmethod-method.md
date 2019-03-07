@@ -17,32 +17,32 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12dd485f2b89dc76076410e76a132ff547681597
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a18689563cb3d5fb8460893f9a429507cf93b8f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616819"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486962"
 ---
-# <a name="isymunmanagedscopegetmethod-method"></a><span data-ttu-id="f9b75-102">ISymUnmanagedScope::GetMethod 方法</span><span class="sxs-lookup"><span data-stu-id="f9b75-102">ISymUnmanagedScope::GetMethod Method</span></span>
-<span data-ttu-id="f9b75-103">取得包含此範圍的方法。</span><span class="sxs-lookup"><span data-stu-id="f9b75-103">Gets the method that contains this scope.</span></span>  
+# <a name="isymunmanagedscopegetmethod-method"></a><span data-ttu-id="0f2ef-102">ISymUnmanagedScope::GetMethod 方法</span><span class="sxs-lookup"><span data-stu-id="0f2ef-102">ISymUnmanagedScope::GetMethod Method</span></span>
+<span data-ttu-id="0f2ef-103">取得包含此範圍的方法。</span><span class="sxs-lookup"><span data-stu-id="0f2ef-103">Gets the method that contains this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f9b75-104">語法</span><span class="sxs-lookup"><span data-stu-id="f9b75-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0f2ef-104">語法</span><span class="sxs-lookup"><span data-stu-id="0f2ef-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethod(  
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f9b75-105">參數</span><span class="sxs-lookup"><span data-stu-id="f9b75-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0f2ef-105">參數</span><span class="sxs-lookup"><span data-stu-id="0f2ef-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="f9b75-106">[out]所傳回的指標[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="f9b75-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
+ <span data-ttu-id="0f2ef-106">[out]所傳回的指標[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="0f2ef-106">[out] A pointer to the returned [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f9b75-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="f9b75-107">Return Value</span></span>  
- <span data-ttu-id="f9b75-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="f9b75-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0f2ef-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="0f2ef-107">Return Value</span></span>  
+ <span data-ttu-id="0f2ef-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="0f2ef-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f9b75-109">需求</span><span class="sxs-lookup"><span data-stu-id="f9b75-109">Requirements</span></span>  
- <span data-ttu-id="f9b75-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="f9b75-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0f2ef-109">需求</span><span class="sxs-lookup"><span data-stu-id="0f2ef-109">Requirements</span></span>  
+ <span data-ttu-id="0f2ef-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="0f2ef-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f9b75-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f9b75-111">See also</span></span>
-- [<span data-ttu-id="f9b75-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="f9b75-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="0f2ef-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0f2ef-111">See also</span></span>
+- [<span data-ttu-id="0f2ef-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="0f2ef-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b641f463eb9b664597b4806a6353278e8027d5b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14a8acc2e3babd376cb9754d35ce8fc5eaa1fd7c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492318"
 ---
-# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="9658a-102">ISymUnmanagedWriter3::OpenMethod2 方法</span><span class="sxs-lookup"><span data-stu-id="9658a-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
-<span data-ttu-id="9658a-103">開啟的方法，並提供映像中的實際的區段位移。</span><span class="sxs-lookup"><span data-stu-id="9658a-103">Opens a method and provides its real section offset in the image.</span></span>  
+# <a name="isymunmanagedwriter3openmethod2-method"></a><span data-ttu-id="73d81-102">ISymUnmanagedWriter3::OpenMethod2 方法</span><span class="sxs-lookup"><span data-stu-id="73d81-102">ISymUnmanagedWriter3::OpenMethod2 Method</span></span>
+<span data-ttu-id="73d81-103">開啟的方法，並提供映像中的實際的區段位移。</span><span class="sxs-lookup"><span data-stu-id="73d81-103">Opens a method and provides its real section offset in the image.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9658a-104">語法</span><span class="sxs-lookup"><span data-stu-id="9658a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="73d81-104">語法</span><span class="sxs-lookup"><span data-stu-id="73d81-104">Syntax</span></span>  
   
 ```  
 HRESULT OpenMethod2(   
@@ -36,22 +36,22 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9658a-105">參數</span><span class="sxs-lookup"><span data-stu-id="9658a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="73d81-105">參數</span><span class="sxs-lookup"><span data-stu-id="73d81-105">Parameters</span></span>  
  `method`  
- <span data-ttu-id="9658a-106">[in]若要開啟方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="9658a-106">[in] The metadata token for the method to be opened.</span></span>  
+ <span data-ttu-id="73d81-106">[in]若要開啟方法的中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="73d81-106">[in] The metadata token for the method to be opened.</span></span>  
   
  `isect`  
- <span data-ttu-id="9658a-107">[in]一節中的位移映像。</span><span class="sxs-lookup"><span data-stu-id="9658a-107">[in] The section offset in the image.</span></span>  
+ <span data-ttu-id="73d81-107">[in]一節中的位移映像。</span><span class="sxs-lookup"><span data-stu-id="73d81-107">[in] The section offset in the image.</span></span>  
   
  `offset`  
- <span data-ttu-id="9658a-108">[in]映像中的位移。</span><span class="sxs-lookup"><span data-stu-id="9658a-108">[in] The offset in the image.</span></span>  
+ <span data-ttu-id="73d81-108">[in]映像中的位移。</span><span class="sxs-lookup"><span data-stu-id="73d81-108">[in] The offset in the image.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9658a-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="9658a-109">Return Value</span></span>  
- <span data-ttu-id="9658a-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="9658a-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="73d81-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="73d81-109">Return Value</span></span>  
+ <span data-ttu-id="73d81-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="73d81-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9658a-111">需求</span><span class="sxs-lookup"><span data-stu-id="9658a-111">Requirements</span></span>  
- <span data-ttu-id="9658a-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="9658a-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="73d81-111">需求</span><span class="sxs-lookup"><span data-stu-id="73d81-111">Requirements</span></span>  
+ <span data-ttu-id="73d81-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="73d81-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9658a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9658a-113">See also</span></span>
-- [<span data-ttu-id="9658a-114">ISymUnmanagedWriter3 介面</span><span class="sxs-lookup"><span data-stu-id="9658a-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
-- [<span data-ttu-id="9658a-115">OpenMethod 方法</span><span class="sxs-lookup"><span data-stu-id="9658a-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+## <a name="see-also"></a><span data-ttu-id="73d81-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="73d81-113">See also</span></span>
+- [<span data-ttu-id="73d81-114">ISymUnmanagedWriter3 介面</span><span class="sxs-lookup"><span data-stu-id="73d81-114">ISymUnmanagedWriter3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter3-interface.md)
+- [<span data-ttu-id="73d81-115">OpenMethod 方法</span><span class="sxs-lookup"><span data-stu-id="73d81-115">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

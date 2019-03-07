@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cadf208fc95cb4c90b0903b0e2de9317ae6b6ec0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9803ca3b5047b6819ef76958a169b62dfe9d675d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735658"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499507"
 ---
-# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="c8f49-102">ICLRStrongName::StrongNameKeyInstall 方法</span><span class="sxs-lookup"><span data-stu-id="c8f49-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
-<span data-ttu-id="c8f49-103">將公開/私密金鑰組匯入到容器中。</span><span class="sxs-lookup"><span data-stu-id="c8f49-103">Imports a public/private key pair into a container.</span></span>  
+# <a name="iclrstrongnamestrongnamekeyinstall-method"></a><span data-ttu-id="52235-102">ICLRStrongName::StrongNameKeyInstall 方法</span><span class="sxs-lookup"><span data-stu-id="52235-102">ICLRStrongName::StrongNameKeyInstall Method</span></span>
+<span data-ttu-id="52235-103">將公開/私密金鑰組匯入到容器中。</span><span class="sxs-lookup"><span data-stu-id="52235-103">Imports a public/private key pair into a container.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c8f49-104">語法</span><span class="sxs-lookup"><span data-stu-id="c8f49-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52235-104">語法</span><span class="sxs-lookup"><span data-stu-id="52235-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameKeyInstall (  
@@ -37,31 +37,31 @@ HRESULT StrongNameKeyInstall (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="c8f49-105">參數</span><span class="sxs-lookup"><span data-stu-id="c8f49-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52235-105">參數</span><span class="sxs-lookup"><span data-stu-id="52235-105">Parameters</span></span>  
  `wszKeyContainer`  
- <span data-ttu-id="c8f49-106">[in]金鑰容器的名稱。</span><span class="sxs-lookup"><span data-stu-id="c8f49-106">[in] The name of the key container.</span></span> <span data-ttu-id="c8f49-107">`wszKeyContainer` 必須是非空白字串。</span><span class="sxs-lookup"><span data-stu-id="c8f49-107">`wszKeyContainer` must be a non-empty string.</span></span>  
+ <span data-ttu-id="52235-106">[in]金鑰容器的名稱。</span><span class="sxs-lookup"><span data-stu-id="52235-106">[in] The name of the key container.</span></span> <span data-ttu-id="52235-107">`wszKeyContainer` 必須是非空白字串。</span><span class="sxs-lookup"><span data-stu-id="52235-107">`wszKeyContainer` must be a non-empty string.</span></span>  
   
  `pbKeyBlob`  
- <span data-ttu-id="c8f49-108">[in]二進位金鑰組。</span><span class="sxs-lookup"><span data-stu-id="c8f49-108">[in] The binary key pair.</span></span>  
+ <span data-ttu-id="52235-108">[in]二進位金鑰組。</span><span class="sxs-lookup"><span data-stu-id="52235-108">[in] The binary key pair.</span></span>  
   
  `cbKeyBlob`  
- <span data-ttu-id="c8f49-109">[in]大小，以位元組為單位的`pbKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="c8f49-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
+ <span data-ttu-id="52235-109">[in]大小，以位元組為單位的`pbKeyBlob`。</span><span class="sxs-lookup"><span data-stu-id="52235-109">[in] The size, in bytes, of `pbKeyBlob`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c8f49-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="c8f49-110">Return Value</span></span>  
- <span data-ttu-id="c8f49-111">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="c8f49-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="52235-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="52235-110">Return Value</span></span>  
+ <span data-ttu-id="52235-111">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="52235-111">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c8f49-112">備註</span><span class="sxs-lookup"><span data-stu-id="c8f49-112">Remarks</span></span>  
- <span data-ttu-id="c8f49-113">使用[iclrstrongname:: Strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)方法來刪除金鑰容器。</span><span class="sxs-lookup"><span data-stu-id="c8f49-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52235-112">備註</span><span class="sxs-lookup"><span data-stu-id="52235-112">Remarks</span></span>  
+ <span data-ttu-id="52235-113">使用[iclrstrongname:: Strongnamekeydelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)方法來刪除金鑰容器。</span><span class="sxs-lookup"><span data-stu-id="52235-113">Use the [ICLRStrongName::StrongNameKeyDelete](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md) method to delete the key container.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c8f49-114">需求</span><span class="sxs-lookup"><span data-stu-id="c8f49-114">Requirements</span></span>  
- <span data-ttu-id="c8f49-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c8f49-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52235-114">需求</span><span class="sxs-lookup"><span data-stu-id="52235-114">Requirements</span></span>  
+ <span data-ttu-id="52235-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="52235-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c8f49-116">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="c8f49-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="52235-116">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="52235-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="c8f49-117">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c8f49-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="52235-117">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="52235-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="c8f49-118">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c8f49-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="52235-118">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="52235-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c8f49-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c8f49-119">See also</span></span>
-- [<span data-ttu-id="c8f49-120">StrongNameKeyDelete 方法</span><span class="sxs-lookup"><span data-stu-id="c8f49-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
-- [<span data-ttu-id="c8f49-121">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="c8f49-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="52235-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52235-119">See also</span></span>
+- [<span data-ttu-id="52235-120">StrongNameKeyDelete 方法</span><span class="sxs-lookup"><span data-stu-id="52235-120">StrongNameKeyDelete Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamekeydelete-method.md)
+- [<span data-ttu-id="52235-121">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="52235-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

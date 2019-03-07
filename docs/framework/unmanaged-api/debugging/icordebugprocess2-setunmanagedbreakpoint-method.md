@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472781"
 ---
-# <a name="icordebugprocess2setunmanagedbreakpoint-method"></a><span data-ttu-id="8c3fd-102">ICorDebugProcess2::SetUnmanagedBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="8c3fd-102">ICorDebugProcess2::SetUnmanagedBreakpoint Method</span></span>
-<span data-ttu-id="8c3fd-103">在指定的原生映像位移設定未受管理的中斷點。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-103">Sets an unmanaged breakpoint at the specified native image offset.</span></span>  
+# <a name="icordebugprocess2setunmanagedbreakpoint-method"></a><span data-ttu-id="b2441-102">ICorDebugProcess2::SetUnmanagedBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="b2441-102">ICorDebugProcess2::SetUnmanagedBreakpoint Method</span></span>
+<span data-ttu-id="b2441-103">指定的原生映像的位移設定為未受管理的中斷點。</span><span class="sxs-lookup"><span data-stu-id="b2441-103">Sets an unmanaged breakpoint at the specified native image offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8c3fd-104">語法</span><span class="sxs-lookup"><span data-stu-id="8c3fd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b2441-104">語法</span><span class="sxs-lookup"><span data-stu-id="b2441-104">Syntax</span></span>  
   
 ```  
 HRESULT SetUnmanagedBreakpoint (  
@@ -39,27 +39,27 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="8c3fd-105">參數</span><span class="sxs-lookup"><span data-stu-id="8c3fd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b2441-105">參數</span><span class="sxs-lookup"><span data-stu-id="b2441-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="8c3fd-106">[in]A`CORDB_ADDRESS`物件，指定的原生映像的位移。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-106">[in] A `CORDB_ADDRESS` object that specifies the native image offset.</span></span>  
+ <span data-ttu-id="b2441-106">[in]A`CORDB_ADDRESS`物件，指定的原生映像的位移。</span><span class="sxs-lookup"><span data-stu-id="b2441-106">[in] A `CORDB_ADDRESS` object that specifies the native image offset.</span></span>  
   
  `bufsize`  
- <span data-ttu-id="8c3fd-107">[in]大小，以位元組為單位的`buffer`陣列。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-107">[in] The size, in bytes, of the `buffer` array.</span></span>  
+ <span data-ttu-id="b2441-107">[in]大小，以位元組為單位的`buffer`陣列。</span><span class="sxs-lookup"><span data-stu-id="b2441-107">[in] The size, in bytes, of the `buffer` array.</span></span>  
   
  `buffer`  
- <span data-ttu-id="8c3fd-108">[out]陣列，其中包含中斷點取代 opcode。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-108">[out] An array that contains the opcode that is replaced by the breakpoint.</span></span>  
+ <span data-ttu-id="b2441-108">[out]陣列，其中包含會取代中斷點的 opcode。</span><span class="sxs-lookup"><span data-stu-id="b2441-108">[out] An array that contains the opcode that is replaced by the breakpoint.</span></span>  
   
  `bufLen`  
- <span data-ttu-id="8c3fd-109">[out]在傳回的位元組數目的指標`buffer`陣列。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-109">[out] A pointer to the number of bytes returned in the `buffer` array.</span></span>  
+ <span data-ttu-id="b2441-109">[out]中傳回的位元組數目的指標`buffer`陣列。</span><span class="sxs-lookup"><span data-stu-id="b2441-109">[out] A pointer to the number of bytes returned in the `buffer` array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="8c3fd-110">備註</span><span class="sxs-lookup"><span data-stu-id="8c3fd-110">Remarks</span></span>  
- <span data-ttu-id="8c3fd-111">如果原生映像位移為 common language runtime (CLR) 中，將會忽略中斷點。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-111">If the native image offset is within the common language runtime (CLR), the breakpoint will be ignored.</span></span> <span data-ttu-id="8c3fd-112">這可讓 CLR 避免分派的頻外中斷點時設定中斷點，偵錯工具。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-112">This allows the CLR to avoid dispatching an out-of-band breakpoint, when the breakpoint is set by the debugger.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b2441-110">備註</span><span class="sxs-lookup"><span data-stu-id="b2441-110">Remarks</span></span>  
+ <span data-ttu-id="b2441-111">如果原生映像位移為 common language runtime (CLR) 中，將會忽略中斷點。</span><span class="sxs-lookup"><span data-stu-id="b2441-111">If the native image offset is within the common language runtime (CLR), the breakpoint will be ignored.</span></span> <span data-ttu-id="b2441-112">這可讓 CLR 避免分派-頻中斷點，當偵錯工具設定中斷點。</span><span class="sxs-lookup"><span data-stu-id="b2441-112">This allows the CLR to avoid dispatching an out-of-band breakpoint, when the breakpoint is set by the debugger.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8c3fd-113">需求</span><span class="sxs-lookup"><span data-stu-id="8c3fd-113">Requirements</span></span>  
- <span data-ttu-id="8c3fd-114">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8c3fd-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b2441-113">需求</span><span class="sxs-lookup"><span data-stu-id="b2441-113">Requirements</span></span>  
+ <span data-ttu-id="b2441-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b2441-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8c3fd-115">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="8c3fd-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b2441-115">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b2441-115">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="8c3fd-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8c3fd-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b2441-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b2441-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="8c3fd-117">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8c3fd-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="b2441-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b2441-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

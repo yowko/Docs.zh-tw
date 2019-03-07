@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb38c61e8dbd29a0ff87165b5daf49e733b34047
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466540"
 ---
-# <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="53ba9-102">IMetaDataImport::GetInterfaceImplProps 方法</span><span class="sxs-lookup"><span data-stu-id="53ba9-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
-<span data-ttu-id="53ba9-103">取得中繼資料語彙基元的指標<xref:System.Type>實作指定的方法和介面宣告該方法。</span><span class="sxs-lookup"><span data-stu-id="53ba9-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>
+# <a name="imetadataimportgetinterfaceimplprops-method"></a><span data-ttu-id="7a85d-102">IMetaDataImport::GetInterfaceImplProps 方法</span><span class="sxs-lookup"><span data-stu-id="7a85d-102">IMetaDataImport::GetInterfaceImplProps Method</span></span>
+<span data-ttu-id="7a85d-103">取得中繼資料語彙基元的指標<xref:System.Type>實作指定的方法和介面宣告該方法。</span><span class="sxs-lookup"><span data-stu-id="7a85d-103">Gets a pointer to the metadata tokens for the <xref:System.Type> that implements the specified method, and for the interface that declares that method.</span></span>
   
-## <a name="syntax"></a><span data-ttu-id="53ba9-104">語法</span><span class="sxs-lookup"><span data-stu-id="53ba9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a85d-104">語法</span><span class="sxs-lookup"><span data-stu-id="7a85d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetInterfaceImplProps (  
@@ -37,52 +37,52 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="53ba9-105">參數</span><span class="sxs-lookup"><span data-stu-id="53ba9-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7a85d-105">參數</span><span class="sxs-lookup"><span data-stu-id="7a85d-105">Parameters</span></span>  
  `iiImpl`  
- <span data-ttu-id="53ba9-106">[in]中繼資料語彙基元，代表這個方法傳回的類別和介面 token。</span><span class="sxs-lookup"><span data-stu-id="53ba9-106">[in] The metadata token representing the method to return the class and interface tokens for.</span></span>  
+ <span data-ttu-id="7a85d-106">[in]中繼資料語彙基元，代表這個方法傳回的類別和介面 token。</span><span class="sxs-lookup"><span data-stu-id="7a85d-106">[in] The metadata token representing the method to return the class and interface tokens for.</span></span>  
   
  `pClass`  
- <span data-ttu-id="53ba9-107">[out]中繼資料語彙基元，表示實作方法的類別。</span><span class="sxs-lookup"><span data-stu-id="53ba9-107">[out] The metadata token representing the class that implements the method.</span></span>  
+ <span data-ttu-id="7a85d-107">[out]中繼資料語彙基元，表示實作方法的類別。</span><span class="sxs-lookup"><span data-stu-id="7a85d-107">[out] The metadata token representing the class that implements the method.</span></span>  
   
  `ptkIface`  
- <span data-ttu-id="53ba9-108">[out]中繼資料語彙基元，代表定義的實作的方法的介面。</span><span class="sxs-lookup"><span data-stu-id="53ba9-108">[out] The metadata token representing the interface that defines the implemented method.</span></span>  
+ <span data-ttu-id="7a85d-108">[out]中繼資料語彙基元，代表定義的實作的方法的介面。</span><span class="sxs-lookup"><span data-stu-id="7a85d-108">[out] The metadata token representing the interface that defines the implemented method.</span></span>  
 
-## <a name="remarks"></a><span data-ttu-id="53ba9-109">備註</span><span class="sxs-lookup"><span data-stu-id="53ba9-109">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="7a85d-109">備註</span><span class="sxs-lookup"><span data-stu-id="7a85d-109">Remarks</span></span>
 
- <span data-ttu-id="53ba9-110">取得值，如`iImpl`藉由呼叫[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="53ba9-110">You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.</span></span>
+ <span data-ttu-id="7a85d-110">取得值，如`iImpl`藉由呼叫[EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="7a85d-110">You obtain the value for `iImpl` by calling the [EnumInterfaceImpls](imetadataimport-enuminterfaceimpls-method.md) method.</span></span>
  
- <span data-ttu-id="53ba9-111">例如，假設 的類別有`mdTypeDef`k 0x02000007 的值，它會實作它的型別具有權杖的三個介面：</span><span class="sxs-lookup"><span data-stu-id="53ba9-111">For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens:</span></span> 
+ <span data-ttu-id="7a85d-111">例如，假設 的類別有`mdTypeDef`k 0x02000007 的值，它會實作它的型別具有權杖的三個介面：</span><span class="sxs-lookup"><span data-stu-id="7a85d-111">For example, suppose that a class has an `mdTypeDef` token value of 0x02000007 and that it implements three interfaces whose types have tokens:</span></span> 
 
-- <span data-ttu-id="53ba9-112">0x02000003 (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="53ba9-112">0x02000003 (TypeDef)</span></span>
-- <span data-ttu-id="53ba9-113">0x0100000A (TypeRef)</span><span class="sxs-lookup"><span data-stu-id="53ba9-113">0x0100000A (TypeRef)</span></span>
-- <span data-ttu-id="53ba9-114">0x0200001C (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="53ba9-114">0x0200001C (TypeDef)</span></span>
+- <span data-ttu-id="7a85d-112">0x02000003 (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="7a85d-112">0x02000003 (TypeDef)</span></span>
+- <span data-ttu-id="7a85d-113">0x0100000A (TypeRef)</span><span class="sxs-lookup"><span data-stu-id="7a85d-113">0x0100000A (TypeRef)</span></span>
+- <span data-ttu-id="7a85d-114">0x0200001C (TypeDef)</span><span class="sxs-lookup"><span data-stu-id="7a85d-114">0x0200001C (TypeDef)</span></span>
 
-<span data-ttu-id="53ba9-115">就概念而言，這項資訊會儲存至介面實作資料表為：</span><span class="sxs-lookup"><span data-stu-id="53ba9-115">Conceptually, this information is stored into an interface implementation table as:</span></span>
+<span data-ttu-id="7a85d-115">就概念而言，這項資訊會儲存至介面實作資料表為：</span><span class="sxs-lookup"><span data-stu-id="7a85d-115">Conceptually, this information is stored into an interface implementation table as:</span></span>
 
-| <span data-ttu-id="53ba9-116">資料列數目</span><span class="sxs-lookup"><span data-stu-id="53ba9-116">Row number</span></span> | <span data-ttu-id="53ba9-117">類別的語彙基元</span><span class="sxs-lookup"><span data-stu-id="53ba9-117">Class token</span></span> | <span data-ttu-id="53ba9-118">介面的語彙基元</span><span class="sxs-lookup"><span data-stu-id="53ba9-118">Interface token</span></span> |
+| <span data-ttu-id="7a85d-116">資料列數目</span><span class="sxs-lookup"><span data-stu-id="7a85d-116">Row number</span></span> | <span data-ttu-id="7a85d-117">類別的語彙基元</span><span class="sxs-lookup"><span data-stu-id="7a85d-117">Class token</span></span> | <span data-ttu-id="7a85d-118">介面的語彙基元</span><span class="sxs-lookup"><span data-stu-id="7a85d-118">Interface token</span></span> |
 |------------|-------------|-----------------|
-| <span data-ttu-id="53ba9-119">4</span><span class="sxs-lookup"><span data-stu-id="53ba9-119">4</span></span>          |             |                 |
-| <span data-ttu-id="53ba9-120">5</span><span class="sxs-lookup"><span data-stu-id="53ba9-120">5</span></span>          | <span data-ttu-id="53ba9-121">02000007</span><span class="sxs-lookup"><span data-stu-id="53ba9-121">02000007</span></span>    | <span data-ttu-id="53ba9-122">02000003</span><span class="sxs-lookup"><span data-stu-id="53ba9-122">02000003</span></span>        |
-| <span data-ttu-id="53ba9-123">6</span><span class="sxs-lookup"><span data-stu-id="53ba9-123">6</span></span>          | <span data-ttu-id="53ba9-124">02000007</span><span class="sxs-lookup"><span data-stu-id="53ba9-124">02000007</span></span>    | <span data-ttu-id="53ba9-125">0100000A</span><span class="sxs-lookup"><span data-stu-id="53ba9-125">0100000A</span></span>        |
-| <span data-ttu-id="53ba9-126">7</span><span class="sxs-lookup"><span data-stu-id="53ba9-126">7</span></span>          |             |                 |
-| <span data-ttu-id="53ba9-127">8</span><span class="sxs-lookup"><span data-stu-id="53ba9-127">8</span></span>          | <span data-ttu-id="53ba9-128">02000007</span><span class="sxs-lookup"><span data-stu-id="53ba9-128">02000007</span></span>    | <span data-ttu-id="53ba9-129">0200001C</span><span class="sxs-lookup"><span data-stu-id="53ba9-129">0200001C</span></span>        |
+| <span data-ttu-id="7a85d-119">4</span><span class="sxs-lookup"><span data-stu-id="7a85d-119">4</span></span>          |             |                 |
+| <span data-ttu-id="7a85d-120">5</span><span class="sxs-lookup"><span data-stu-id="7a85d-120">5</span></span>          | <span data-ttu-id="7a85d-121">02000007</span><span class="sxs-lookup"><span data-stu-id="7a85d-121">02000007</span></span>    | <span data-ttu-id="7a85d-122">02000003</span><span class="sxs-lookup"><span data-stu-id="7a85d-122">02000003</span></span>        |
+| <span data-ttu-id="7a85d-123">6</span><span class="sxs-lookup"><span data-stu-id="7a85d-123">6</span></span>          | <span data-ttu-id="7a85d-124">02000007</span><span class="sxs-lookup"><span data-stu-id="7a85d-124">02000007</span></span>    | <span data-ttu-id="7a85d-125">0100000A</span><span class="sxs-lookup"><span data-stu-id="7a85d-125">0100000A</span></span>        |
+| <span data-ttu-id="7a85d-126">7</span><span class="sxs-lookup"><span data-stu-id="7a85d-126">7</span></span>          |             |                 |
+| <span data-ttu-id="7a85d-127">8</span><span class="sxs-lookup"><span data-stu-id="7a85d-127">8</span></span>          | <span data-ttu-id="7a85d-128">02000007</span><span class="sxs-lookup"><span data-stu-id="7a85d-128">02000007</span></span>    | <span data-ttu-id="7a85d-129">0200001C</span><span class="sxs-lookup"><span data-stu-id="7a85d-129">0200001C</span></span>        |
 
-<span data-ttu-id="53ba9-130">請記住，此語彙基元是 4 位元組值：</span><span class="sxs-lookup"><span data-stu-id="53ba9-130">Recall, the token is a 4-byte value:</span></span>
+<span data-ttu-id="7a85d-130">請記住，此語彙基元是 4 位元組值：</span><span class="sxs-lookup"><span data-stu-id="7a85d-130">Recall, the token is a 4-byte value:</span></span>
 
-- <span data-ttu-id="53ba9-131">較低的 3 個位元組會保存資料列數目，或 RID。</span><span class="sxs-lookup"><span data-stu-id="53ba9-131">The lower 3 bytes hold the row number, or RID.</span></span>
-- <span data-ttu-id="53ba9-132">上方的位元組會保存語彙基元的型別 – 為 0x09 `mdtInterfaceImpl`。</span><span class="sxs-lookup"><span data-stu-id="53ba9-132">The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.</span></span>
+- <span data-ttu-id="7a85d-131">較低的 3 個位元組會保存資料列數目，或 RID。</span><span class="sxs-lookup"><span data-stu-id="7a85d-131">The lower 3 bytes hold the row number, or RID.</span></span>
+- <span data-ttu-id="7a85d-132">上方的位元組會保存語彙基元的型別 – 為 0x09 `mdtInterfaceImpl`。</span><span class="sxs-lookup"><span data-stu-id="7a85d-132">The upper byte holds the token type – 0x09 for `mdtInterfaceImpl`.</span></span>
 
-<span data-ttu-id="53ba9-133">`GetInterfaceImplProps` 傳回的資訊保留在資料列中提供的語彙基元`iImpl`引數。</span><span class="sxs-lookup"><span data-stu-id="53ba9-133">`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument.</span></span> 
+<span data-ttu-id="7a85d-133">`GetInterfaceImplProps` 傳回的資訊保留在資料列中提供的語彙基元`iImpl`引數。</span><span class="sxs-lookup"><span data-stu-id="7a85d-133">`GetInterfaceImplProps` returns the information held in the row whose token you provide in the `iImpl` argument.</span></span> 
   
-## <a name="requirements"></a><span data-ttu-id="53ba9-134">需求</span><span class="sxs-lookup"><span data-stu-id="53ba9-134">Requirements</span></span>  
- <span data-ttu-id="53ba9-135">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="53ba9-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a85d-134">需求</span><span class="sxs-lookup"><span data-stu-id="7a85d-134">Requirements</span></span>  
+ <span data-ttu-id="7a85d-135">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7a85d-135">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="53ba9-136">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="53ba9-136">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7a85d-136">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7a85d-136">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="53ba9-137">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="53ba9-137">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="7a85d-137">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7a85d-137">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="53ba9-138">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="53ba9-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7a85d-138">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a85d-138">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="53ba9-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="53ba9-139">See also</span></span>
-- [<span data-ttu-id="53ba9-140">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="53ba9-140">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="53ba9-141">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="53ba9-141">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7a85d-139">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7a85d-139">See also</span></span>
+- [<span data-ttu-id="7a85d-140">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="7a85d-140">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="7a85d-141">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="7a85d-141">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

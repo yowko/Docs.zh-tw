@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489809"
 ---
-# <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="b5f18-102">ICorDebugILFrame2::RemapFunction 方法</span><span class="sxs-lookup"><span data-stu-id="b5f18-102">ICorDebugILFrame2::RemapFunction Method</span></span>
-<span data-ttu-id="b5f18-103">藉由指定新的 Microsoft intermediate language (MSIL) 位移重新對應已編輯函式</span><span class="sxs-lookup"><span data-stu-id="b5f18-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  
+# <a name="icordebugilframe2remapfunction-method"></a><span data-ttu-id="ec2b3-102">ICorDebugILFrame2::RemapFunction 方法</span><span class="sxs-lookup"><span data-stu-id="ec2b3-102">ICorDebugILFrame2::RemapFunction Method</span></span>
+<span data-ttu-id="ec2b3-103">將編輯過的函式藉由指定新的 Microsoft intermediate language (MSIL) 位移重新對應</span><span class="sxs-lookup"><span data-stu-id="ec2b3-103">Remaps an edited function by specifying the new Microsoft intermediate language (MSIL) offset</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b5f18-104">語法</span><span class="sxs-lookup"><span data-stu-id="b5f18-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ec2b3-104">語法</span><span class="sxs-lookup"><span data-stu-id="ec2b3-104">Syntax</span></span>  
   
 ```  
 HRESULT RemapFunction (  
@@ -35,29 +35,29 @@ HRESULT RemapFunction (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="b5f18-105">參數</span><span class="sxs-lookup"><span data-stu-id="b5f18-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ec2b3-105">參數</span><span class="sxs-lookup"><span data-stu-id="ec2b3-105">Parameters</span></span>  
  `newILOffset`  
- <span data-ttu-id="b5f18-106">[in]堆疊框架的新 MSIL 指令指標應該將放入其中的位移。</span><span class="sxs-lookup"><span data-stu-id="b5f18-106">[in] The stack frame's new MSIL offset at which the instruction pointer should be placed.</span></span> <span data-ttu-id="b5f18-107">此值必須是序列點。</span><span class="sxs-lookup"><span data-stu-id="b5f18-107">This value must be a sequence point.</span></span>  
+ <span data-ttu-id="ec2b3-106">[in]堆疊框架的新 MSIL 位移應該放置指令指標。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-106">[in] The stack frame's new MSIL offset at which the instruction pointer should be placed.</span></span> <span data-ttu-id="ec2b3-107">此值必須是序列點。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-107">This value must be a sequence point.</span></span>  
   
- <span data-ttu-id="b5f18-108">它是呼叫者的責任在於確保此值的有效性。</span><span class="sxs-lookup"><span data-stu-id="b5f18-108">It is the caller’s responsibility to ensure the validity of this value.</span></span> <span data-ttu-id="b5f18-109">比方說，MSIL 位移不正確，如果它是函式的範圍外。</span><span class="sxs-lookup"><span data-stu-id="b5f18-109">For example, the MSIL offset is not valid if it is outside the bounds of the function.</span></span>  
+ <span data-ttu-id="ec2b3-108">是以確保此值之有效性的呼叫者的責任。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-108">It is the caller’s responsibility to ensure the validity of this value.</span></span> <span data-ttu-id="ec2b3-109">比方說，MSIL 位移不超出界限的函式是否有效。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-109">For example, the MSIL offset is not valid if it is outside the bounds of the function.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b5f18-110">備註</span><span class="sxs-lookup"><span data-stu-id="b5f18-110">Remarks</span></span>  
- <span data-ttu-id="b5f18-111">當已經編輯框架的函式時，偵錯工具可以呼叫`RemapFunction`交換中框架的函式的最新版本，讓它可以執行的方法。</span><span class="sxs-lookup"><span data-stu-id="b5f18-111">When a frame’s function has been edited, the debugger can call the `RemapFunction` method to swap in the latest version of the frame's function so it can be executed.</span></span> <span data-ttu-id="b5f18-112">執行程式碼將會開始於指定的 MSIL 位移。</span><span class="sxs-lookup"><span data-stu-id="b5f18-112">The code execution will begin at the given MSIL offset.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ec2b3-110">備註</span><span class="sxs-lookup"><span data-stu-id="ec2b3-110">Remarks</span></span>  
+ <span data-ttu-id="ec2b3-111">偵錯工具時已編輯框架的函式，可以呼叫`RemapFunction`交換中框架的函式的最新版本，因此可以執行的方法。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-111">When a frame’s function has been edited, the debugger can call the `RemapFunction` method to swap in the latest version of the frame's function so it can be executed.</span></span> <span data-ttu-id="ec2b3-112">執行程式碼將會在指定的 MSIL 位移開始。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-112">The code execution will begin at the given MSIL offset.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="b5f18-113">呼叫`RemapFunction`、 like 呼叫[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)，將會立即使產生執行緒的堆疊追蹤相關的所有偵錯介面。</span><span class="sxs-lookup"><span data-stu-id="b5f18-113">Calling `RemapFunction`, like calling [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), will immediately invalidate all debugging interfaces that are related to generating a stack trace for the thread.</span></span> <span data-ttu-id="b5f18-114">這些介面包括[ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)，ICorDebugILFrame、 ICorDebugInternalFrame 和 ICorDebugNativeFrame。</span><span class="sxs-lookup"><span data-stu-id="b5f18-114">These interfaces include [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame, and ICorDebugNativeFrame.</span></span>  
+>  <span data-ttu-id="ec2b3-113">呼叫`RemapFunction`，例如呼叫[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)，將會立即失效與產生的執行緒堆疊追蹤相關的所有偵錯介面。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-113">Calling `RemapFunction`, like calling [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md), will immediately invalidate all debugging interfaces that are related to generating a stack trace for the thread.</span></span> <span data-ttu-id="ec2b3-114">這些介面包括[ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)，ICorDebugILFrame、 ICorDebugInternalFrame 和 ICorDebugNativeFrame。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-114">These interfaces include [ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md), ICorDebugILFrame, ICorDebugInternalFrame, and ICorDebugNativeFrame.</span></span>  
   
- <span data-ttu-id="b5f18-115">`RemapFunction`可呼叫方法，只在目前的框架，內容中，且只有在下列情況的其中一個：</span><span class="sxs-lookup"><span data-stu-id="b5f18-115">The `RemapFunction` method can be called only in the context of the current frame, and only in one of the following cases:</span></span>  
+ <span data-ttu-id="ec2b3-115">`RemapFunction`可以呼叫方法，只在目前的框架的內容中，而且只用於下列案例之一：</span><span class="sxs-lookup"><span data-stu-id="ec2b3-115">The `RemapFunction` method can be called only in the context of the current frame, and only in one of the following cases:</span></span>  
   
--   <span data-ttu-id="b5f18-116">在回條之後[icordebugmanagedcallback2:: Functionremapopportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)具有未尚未已繼續的回呼。</span><span class="sxs-lookup"><span data-stu-id="b5f18-116">After receipt of a [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) callback that has not yet been continued.</span></span>  
+-   <span data-ttu-id="ec2b3-116">之後的回條[ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)已不還繼續執行的回呼。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-116">After receipt of a [ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md) callback that has not yet been continued.</span></span>  
   
--   <span data-ttu-id="b5f18-117">因為停止執行程式碼時[icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)這個畫面格的事件。</span><span class="sxs-lookup"><span data-stu-id="b5f18-117">While code execution is stopped because of an [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) event for this frame.</span></span>  
+-   <span data-ttu-id="ec2b3-117">因為停止執行程式碼時[icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)這個框架的事件。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-117">While code execution is stopped because of an [ICorDebugManagedCallback::EditAndContinueRemap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md) event for this frame.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b5f18-118">需求</span><span class="sxs-lookup"><span data-stu-id="b5f18-118">Requirements</span></span>  
- <span data-ttu-id="b5f18-119">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b5f18-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ec2b3-118">需求</span><span class="sxs-lookup"><span data-stu-id="ec2b3-118">Requirements</span></span>  
+ <span data-ttu-id="ec2b3-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ec2b3-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b5f18-120">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b5f18-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ec2b3-120">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ec2b3-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="b5f18-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b5f18-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ec2b3-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ec2b3-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="b5f18-122">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b5f18-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="ec2b3-122">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ec2b3-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
