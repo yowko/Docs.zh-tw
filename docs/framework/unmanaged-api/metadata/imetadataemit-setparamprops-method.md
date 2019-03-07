@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2885d89883ab6312c2ad9d3feac405eef2fbede
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e51cb1049737e6b325656057060a88123f69a9b4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693687"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493319"
 ---
 # <a name="imetadataemitsetparamprops-method"></a>IMetaDataEmit::SetParamProps 方法
 設定或變更已由先前呼叫的方法參數的功能[imetadataemit:: Defineparam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineparam-method.md)。  
@@ -40,7 +40,7 @@ HRESULT SetParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pd`  
  [in]目標參數的語彙基元。  
   
@@ -57,7 +57,7 @@ HRESULT SetParamProps (
  [in]參數的常值。  
   
  `cchValue`  
- [in](Unicode) 字元的大小`pValue`。  
+ [in]\(Unicode) 字元的大小`pValue`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

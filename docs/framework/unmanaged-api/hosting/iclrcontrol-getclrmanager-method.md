@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8c92bd83c9a2bd03e9e2187cd8d9ff87af87678
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d3712b9a2100d4efcefe691d68989a1971b045d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521318"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488404"
 ---
 # <a name="iclrcontrolgetclrmanager-method"></a>ICLRControl::GetCLRManager 方法
 取得任何主應用程式可用來設定 common language runtime (CLR) 的管理員型別的執行個體的介面指標。  
@@ -36,7 +36,7 @@ HRESULT GetCLRManager (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `riid`  
  [in]`IID`管理員類型，傳回。 下列`IID`支援值。  
   

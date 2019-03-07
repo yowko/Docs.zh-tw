@@ -5,13 +5,8 @@ author: billwagner
 ms.author: billwagner
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: 226482d1d385078811f2b1c5ee138e24287a785e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154329"
 ---
+
 # <a name="the-roslyn-based-analyzers"></a>Roslyn 分析器
 
 Roslyn 分析器會使用 .NET Compiler SDK (Roslyn API) 來分析您專案的原始程式碼，以找出問題並建議修正。 不同的分析器會尋找不同類別的問題，範圍從可能導致錯誤 (bug) 的作法，以及安全性考量與 API 相容性等等。
@@ -27,12 +22,12 @@ Roslyn 分析器能夠以互動方式運作，也可以在建置期間運作。 
 在您的專案中，您可以 NuGet 套件來安裝 Roslyn 分析器。 這會還原已設定的分析器以及各個分析器的所有設定，並在任何開發人員電腦上為該專案執行。
 
 > [!NOTE]
-> Roslyn 分析器的使用者體驗有別於「程式碼分析」程式庫 (例如舊版 FxCop 和安全性分析工具)。  您不需要明確地執行 Roslyn 分析器。 不需要使用 Visual Studio 中 [分析] 功能表上的 [執行程式碼分析] 功能表項目。 Roslyn 分析器會在您工作時以非同步方式執行。 
+> Roslyn 分析器的使用者體驗有別於「程式碼分析」程式庫 (例如舊版 FxCop 和安全性分析工具)。  您不需要明確地執行 Roslyn 分析器。 不需要使用 Visual Studio 中 [分析] 功能表上的 [執行程式碼分析] 功能表項目。 Roslyn 分析器會在您工作時以非同步方式執行。
 
 ## <a name="more-information-on-specific-analyzers"></a>特定分析器的詳細資訊
 
 此章節將討論下列分析器：
 
-* [API 分析器](api-analyzer.md)：此分析器會在您的程式碼中檢查潛在的相容性風險，或者檢查程式碼中是否使用已被取代的 API。    
+* [API 分析器](api-analyzer.md)：此分析器會在您的程式碼中檢查是否有潛在的相容性風險，或使用了已淘汰的 API。
 * [架構分析器](framework-analyzer.md)：此分析器會檢查您的程式碼，以確保程式碼遵循適用於 .NET Framework 應用程式的指導方針。 這些規則包含數個安全性建議。
-* [.NET 可攜性分析器](portability-analyzer.md)：此分析器會檢查您的程式碼，以查看需要多少工作才能讓您的應用程式相容於其他 .NET 實作與設定檔 (包括 .NET Core、.NET Standard、UWP 和適用於 iOS、Android 與 Mac 的 Xamarin)。 
+* [.NET 移植能力分析器](portability-analyzer.md)：此分析器會檢查您的程式碼，以了解要花多少力氣才能讓您的應用程式相容於其他 .NET 實作與設定檔，包括 .NET Core、.NET Standard、UWP 和適用於 iOS、Android 與 Mac 的 Xamarin。

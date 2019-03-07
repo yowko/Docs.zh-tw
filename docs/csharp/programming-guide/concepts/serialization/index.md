@@ -1,12 +1,6 @@
 ---
-title: 序列化 (C#)
+title: '序列化 (C#)'
 ms.date: 04/26/2018
-ms.openlocfilehash: 7d72be92e5568037264438e3fde1e7565366c962
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43858313"
 ---
 # <a name="serialization-c"></a>序列化 (C#)
 
@@ -68,12 +62,12 @@ XML 序列化會將物件的公用欄位和屬性，或是方法的參數和傳�
 
 設計工具序列化是特殊格式的序列化，其中包含一種與開發工具相關聯的物件持續性。 設計工具序列化程序的作用是將物件圖形轉換成來源檔案，而該檔案稍後可用於復原物件圖形。 來源檔案可以包含程式碼、標記，或甚至 SQL 資料表資訊。
 
-##  <a name="BKMK_RelatedTopics"></a> 相關主題和範例  
-[逐步解說：在 Visual Studio 中保存物件 (#C)](walkthrough-persisting-an-object-in-visual-studio.md)  
+## <a name="BKMK_RelatedTopics"></a> 相關主題和範例  
+[逐步解說：在 Visual Studio 中保存物件 (C#)](walkthrough-persisting-an-object-in-visual-studio.md)  
 示範序列化能如何用來保存物件在執行個體之間的資料，可讓您儲存值，並且在下次物件具現化時擷取它們。
 
 [如何：從 XML 檔案讀取物件資料 (C#)](how-to-read-object-data-from-an-xml-file.md)  
  示範如何讀取先前使用 <xref:System.Xml.Serialization.XmlSerializer> 類別來寫入 XML 檔案的物件資料。
 
-[如何：將物件資料寫入到 XML 檔案 (C#)](how-to-write-object-data-to-an-xml-file.md)  
+[如何：將物件資料寫入 XML 檔案 (C#)](how-to-write-object-data-to-an-xml-file.md)  
 示範如何使用 <xref:System.Xml.Serialization.XmlSerializer> 類別，將來自某個類別的物件寫入 XML 檔案。

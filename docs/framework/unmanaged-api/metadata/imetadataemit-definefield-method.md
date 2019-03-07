@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dfe888f74face85179306c982f7b5a888752987e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f8553665ba64a1c8e1cb6398d94cd1f772a566ed
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742795"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466657"
 ---
 # <a name="imetadataemitdefinefield-method"></a>IMetaDataEmit::DefineField 方法
 建立欄位的定義，具有指定之中繼資料簽章，並取得該欄位定義的語彙基元。  
@@ -43,7 +43,7 @@ HRESULT DefineField (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]`mdTypeDef`封入類別或介面的語彙基元。  
   
@@ -66,7 +66,7 @@ HRESULT DefineField (
  [in]欄位的常值。  
   
  `cchValue`  
- [in](Unicode) 字元的大小`pValue`。  
+ [in]\(Unicode) 字元的大小`pValue`。  
   
  `pmd`  
  [out]`mdFieldDef`指派權杖。  
