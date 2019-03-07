@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e03a618144ca322d51337e84486a8f5051a3d2a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42e86b1eac788b709432d39e320ebea49c696c14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568877"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481699"
 ---
-# <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="10b2c-102">ICorProfilerInfo::GetObjectSize 方法</span><span class="sxs-lookup"><span data-stu-id="10b2c-102">ICorProfilerInfo::GetObjectSize Method</span></span>
-<span data-ttu-id="10b2c-103">取得指定之物件的大小。</span><span class="sxs-lookup"><span data-stu-id="10b2c-103">Gets the size of a specified object.</span></span>  
+# <a name="icorprofilerinfogetobjectsize-method"></a><span data-ttu-id="86788-102">ICorProfilerInfo::GetObjectSize 方法</span><span class="sxs-lookup"><span data-stu-id="86788-102">ICorProfilerInfo::GetObjectSize Method</span></span>
+<span data-ttu-id="86788-103">取得指定之物件的大小。</span><span class="sxs-lookup"><span data-stu-id="86788-103">Gets the size of a specified object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="10b2c-104">語法</span><span class="sxs-lookup"><span data-stu-id="10b2c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="86788-104">語法</span><span class="sxs-lookup"><span data-stu-id="86788-104">Syntax</span></span>  
   
 ```  
 HRESULT GetObjectSize(  
@@ -35,34 +35,34 @@ HRESULT GetObjectSize(
     [out] ULONG  *pcSize);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="10b2c-105">參數</span><span class="sxs-lookup"><span data-stu-id="10b2c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="86788-105">參數</span><span class="sxs-lookup"><span data-stu-id="86788-105">Parameters</span></span>  
  `objectId`  
- <span data-ttu-id="10b2c-106">[in]物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="10b2c-106">[in] The ID of the object.</span></span>  
+ <span data-ttu-id="86788-106">[in]物件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="86788-106">[in] The ID of the object.</span></span>  
   
  `pcSize`  
- <span data-ttu-id="10b2c-107">[out]物件的大小，以位元組為單位的指標。</span><span class="sxs-lookup"><span data-stu-id="10b2c-107">[out] A pointer to the object's size, in bytes.</span></span>  
+ <span data-ttu-id="86788-107">[out]物件的大小，以位元組為單位的指標。</span><span class="sxs-lookup"><span data-stu-id="86788-107">[out] A pointer to the object's size, in bytes.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="10b2c-108">備註</span><span class="sxs-lookup"><span data-stu-id="10b2c-108">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="86788-108">備註</span><span class="sxs-lookup"><span data-stu-id="86788-108">Remarks</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="10b2c-109">這個方法已過時。</span><span class="sxs-lookup"><span data-stu-id="10b2c-109">This method is obsolete.</span></span> <span data-ttu-id="10b2c-110">它會傳回 COR_E_OVERFLOW 物件大於 4 GB 64 位元平台上。</span><span class="sxs-lookup"><span data-stu-id="10b2c-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span></span> <span data-ttu-id="10b2c-111">使用[ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="10b2c-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span></span>  
+>  <span data-ttu-id="86788-109">這個方法已過時。</span><span class="sxs-lookup"><span data-stu-id="86788-109">This method is obsolete.</span></span> <span data-ttu-id="86788-110">它會傳回 COR_E_OVERFLOW 物件大於 4 GB 64 位元平台上。</span><span class="sxs-lookup"><span data-stu-id="86788-110">It returns COR_E_OVERFLOW for objects greater than 4GB on 64-bit platforms.</span></span> <span data-ttu-id="86788-111">使用[ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="86788-111">Use the  [ICorProfilerInfo4::GetObjectSize2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-getobjectsize2-method.md) method instead.</span></span>  
   
- <span data-ttu-id="10b2c-112">不同的物件相同的類型通常會有相同的大小。</span><span class="sxs-lookup"><span data-stu-id="10b2c-112">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="10b2c-113">不過，某些類型，例如陣列或字串，可能會有不同的大小，為每個物件。</span><span class="sxs-lookup"><span data-stu-id="10b2c-113">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
+ <span data-ttu-id="86788-112">不同的物件相同的類型通常會有相同的大小。</span><span class="sxs-lookup"><span data-stu-id="86788-112">Different objects of the same types often have the same size.</span></span> <span data-ttu-id="86788-113">不過，某些類型，例如陣列或字串，可能會有不同的大小，為每個物件。</span><span class="sxs-lookup"><span data-stu-id="86788-113">However, some types, such as arrays or strings, may have a different size for each object.</span></span>  
   
- <span data-ttu-id="10b2c-114">所傳回的大小`GetObjectSize`方法不包含在記憶體回收堆積上物件之後，可能會出現任何對齊填補。</span><span class="sxs-lookup"><span data-stu-id="10b2c-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span></span> <span data-ttu-id="10b2c-115">如果您使用`GetObjectSize`方法前進 object 物件在記憶體回收堆積，新增以手動方式，視需要填補的對齊方式。</span><span class="sxs-lookup"><span data-stu-id="10b2c-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span></span>  
+ <span data-ttu-id="86788-114">所傳回的大小`GetObjectSize`方法不包含在記憶體回收堆積上物件之後，可能會出現任何對齊填補。</span><span class="sxs-lookup"><span data-stu-id="86788-114">The size returned by the `GetObjectSize` method does not include any alignment padding that may appear after the object is on the garbage collection heap.</span></span> <span data-ttu-id="86788-115">如果您使用`GetObjectSize`方法前進 object 物件在記憶體回收堆積，新增以手動方式，視需要填補的對齊方式。</span><span class="sxs-lookup"><span data-stu-id="86788-115">If you use the `GetObjectSize` method to advance from object to object on the garbage collection heap, add alignment padding manually, as necessary.</span></span>  
   
--   <span data-ttu-id="10b2c-116">在 32 位元 Windows COR_PRF_GC_GEN_0、 COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用 4 位元組對齊，而 COR_PRF_GC_LARGE_OBJECT_HEAP 會使用 8 位元組對齊。</span><span class="sxs-lookup"><span data-stu-id="10b2c-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span></span>  
+-   <span data-ttu-id="86788-116">在 32 位元 Windows COR_PRF_GC_GEN_0、 COR_PRF_GC_GEN_1 和 COR_PRF_GC_GEN_2 使用 4 位元組對齊，而 COR_PRF_GC_LARGE_OBJECT_HEAP 會使用 8 位元組對齊。</span><span class="sxs-lookup"><span data-stu-id="86788-116">On 32-bit Windows, COR_PRF_GC_GEN_0, COR_PRF_GC_GEN_1, and COR_PRF_GC_GEN_2 use 4-byte alignment, and COR_PRF_GC_LARGE_OBJECT_HEAP uses 8-byte alignment.</span></span>  
   
--   <span data-ttu-id="10b2c-117">在 64 位元 Windows 上的對齊方式一定是 8 個位元組。</span><span class="sxs-lookup"><span data-stu-id="10b2c-117">On 64-bit Windows, the alignment is always 8 bytes.</span></span>  
+-   <span data-ttu-id="86788-117">在 64 位元 Windows 上的對齊方式一定是 8 個位元組。</span><span class="sxs-lookup"><span data-stu-id="86788-117">On 64-bit Windows, the alignment is always 8 bytes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="10b2c-118">需求</span><span class="sxs-lookup"><span data-stu-id="10b2c-118">Requirements</span></span>  
- <span data-ttu-id="10b2c-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="10b2c-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="86788-118">需求</span><span class="sxs-lookup"><span data-stu-id="86788-118">Requirements</span></span>  
+ <span data-ttu-id="86788-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="86788-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="10b2c-120">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="10b2c-120">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="86788-120">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="86788-120">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="10b2c-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="10b2c-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="86788-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="86788-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="10b2c-122">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="10b2c-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="86788-122">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="86788-122">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10b2c-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="10b2c-123">See also</span></span>
-- [<span data-ttu-id="10b2c-124">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="10b2c-124">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="86788-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="86788-123">See also</span></span>
+- [<span data-ttu-id="86788-124">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="86788-124">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

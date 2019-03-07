@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6a1bbe5674ba11b5ee6033c65f229d698eff15ae
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 051491173bbcef3d87d9a3dbe854eece46c49e0d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420637"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468776"
 ---
-# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="1b5b5-102">ICorDebugThread::GetActiveFrame 方法</span><span class="sxs-lookup"><span data-stu-id="1b5b5-102">ICorDebugThread::GetActiveFrame Method</span></span>
-<span data-ttu-id="1b5b5-103">取得此 ICorDebugThread 物件上使用中 （最新的） 框架的介面指標。</span><span class="sxs-lookup"><span data-stu-id="1b5b5-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetactiveframe-method"></a><span data-ttu-id="ed2cf-102">ICorDebugThread::GetActiveFrame 方法</span><span class="sxs-lookup"><span data-stu-id="ed2cf-102">ICorDebugThread::GetActiveFrame Method</span></span>
+<span data-ttu-id="ed2cf-103">取得這個 ICorDebugThread 物件上使用中 （最新的） 框架的介面指標。</span><span class="sxs-lookup"><span data-stu-id="ed2cf-103">Gets an interface pointer to the active (most recent) frame on this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b5b5-104">語法</span><span class="sxs-lookup"><span data-stu-id="1b5b5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed2cf-104">語法</span><span class="sxs-lookup"><span data-stu-id="ed2cf-104">Syntax</span></span>  
   
 ```  
 HRESULT GetActiveFrame (  
@@ -35,18 +35,18 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1b5b5-105">參數</span><span class="sxs-lookup"><span data-stu-id="1b5b5-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed2cf-105">參數</span><span class="sxs-lookup"><span data-stu-id="ed2cf-105">Parameters</span></span>  
  `ppFrame`  
- <span data-ttu-id="1b5b5-106">[out]ICorDebugFrame 介面物件，表示框架的位址指標。</span><span class="sxs-lookup"><span data-stu-id="1b5b5-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
+ <span data-ttu-id="ed2cf-106">[out]ICorDebugFrame 介面物件，表示框架的位址指標。</span><span class="sxs-lookup"><span data-stu-id="ed2cf-106">[out] A pointer to the address of an ICorDebugFrame interface object that represents a frame.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1b5b5-107">備註</span><span class="sxs-lookup"><span data-stu-id="1b5b5-107">Remarks</span></span>  
- <span data-ttu-id="1b5b5-108">`ppFrame`參數為 null，如果沒有畫面格是目前作用中。</span><span class="sxs-lookup"><span data-stu-id="1b5b5-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ed2cf-107">備註</span><span class="sxs-lookup"><span data-stu-id="ed2cf-107">Remarks</span></span>  
+ <span data-ttu-id="ed2cf-108">`ppFrame`參數為 null，如果沒有框架目前為使用。</span><span class="sxs-lookup"><span data-stu-id="ed2cf-108">The `ppFrame` parameter is null if no frame is currently active.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b5b5-109">需求</span><span class="sxs-lookup"><span data-stu-id="1b5b5-109">Requirements</span></span>  
- <span data-ttu-id="1b5b5-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1b5b5-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed2cf-109">需求</span><span class="sxs-lookup"><span data-stu-id="ed2cf-109">Requirements</span></span>  
+ <span data-ttu-id="ed2cf-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ed2cf-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b5b5-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1b5b5-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="ed2cf-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ed2cf-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1b5b5-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b5b5-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ed2cf-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ed2cf-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1b5b5-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b5b5-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="ed2cf-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed2cf-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

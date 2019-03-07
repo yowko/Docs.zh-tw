@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4afbc41e680d8a20166095aeb1afbc0de9bbacbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e44ee4a1a2cdd40d93c487ccb41316f729038a5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631736"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469140"
 ---
-# <a name="icorpublishappdomaingetname-method"></a><span data-ttu-id="1b33f-102">ICorPublishAppDomain::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="1b33f-102">ICorPublishAppDomain::GetName Method</span></span>
-<span data-ttu-id="1b33f-103">取得表示此應用程式定義域的名稱[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="1b33f-103">Gets the name of the application domain that is represented by this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
+# <a name="icorpublishappdomaingetname-method"></a><span data-ttu-id="4e34e-102">ICorPublishAppDomain::GetName 方法</span><span class="sxs-lookup"><span data-stu-id="4e34e-102">ICorPublishAppDomain::GetName Method</span></span>
+<span data-ttu-id="4e34e-103">取得表示此應用程式定義域的名稱[ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="4e34e-103">Gets the name of the application domain that is represented by this [ICorPublishAppDomain](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1b33f-104">語法</span><span class="sxs-lookup"><span data-stu-id="1b33f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4e34e-104">語法</span><span class="sxs-lookup"><span data-stu-id="4e34e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetName (  
@@ -38,29 +38,29 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="1b33f-105">參數</span><span class="sxs-lookup"><span data-stu-id="1b33f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4e34e-105">參數</span><span class="sxs-lookup"><span data-stu-id="4e34e-105">Parameters</span></span>  
  `cchName`  
- <span data-ttu-id="1b33f-106">[in] `szName` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="1b33f-106">[in] The size of the `szName` array.</span></span>  
+ <span data-ttu-id="4e34e-106">[in] `szName` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="4e34e-106">[in] The size of the `szName` array.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="1b33f-107">[out]包含在傳回的 null 字元的寬字元數目的指標`szName`陣列。</span><span class="sxs-lookup"><span data-stu-id="1b33f-107">[out] A pointer to the number of wide characters, including the null character, returned in the `szName` array.</span></span>  
+ <span data-ttu-id="4e34e-107">[out]包含在傳回的 null 字元的寬字元數目的指標`szName`陣列。</span><span class="sxs-lookup"><span data-stu-id="4e34e-107">[out] A pointer to the number of wide characters, including the null character, returned in the `szName` array.</span></span>  
   
  `szName`  
- <span data-ttu-id="1b33f-108">[out]用來儲存名稱的陣列。</span><span class="sxs-lookup"><span data-stu-id="1b33f-108">[out] An array in which to store the name.</span></span>  
+ <span data-ttu-id="4e34e-108">[out]用來儲存名稱的陣列。</span><span class="sxs-lookup"><span data-stu-id="4e34e-108">[out] An array in which to store the name.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1b33f-109">備註</span><span class="sxs-lookup"><span data-stu-id="1b33f-109">Remarks</span></span>  
- <span data-ttu-id="1b33f-110">如果`szName`為非 null`GetName`方法會複製達`cchName`字元 （包括 null 結束字元） 到`szName`。</span><span class="sxs-lookup"><span data-stu-id="1b33f-110">If `szName` is non-null, the `GetName` method copies up to `cchName` characters (including the null terminator) into `szName`.</span></span> <span data-ttu-id="1b33f-111">如果非 null 會傳入`pcchName`，實際數目的名稱 （包括 null 結束字元） 中的字元會儲存在`szName`陣列。</span><span class="sxs-lookup"><span data-stu-id="1b33f-111">If a non-null is returned in `pcchName`, the actual number of characters in the name (including the null terminator) is stored in the `szName` array.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4e34e-109">備註</span><span class="sxs-lookup"><span data-stu-id="4e34e-109">Remarks</span></span>  
+ <span data-ttu-id="4e34e-110">如果`szName`為非 null`GetName`方法會複製達`cchName`字元 （包括 null 結束字元） 到`szName`。</span><span class="sxs-lookup"><span data-stu-id="4e34e-110">If `szName` is non-null, the `GetName` method copies up to `cchName` characters (including the null terminator) into `szName`.</span></span> <span data-ttu-id="4e34e-111">如果非 null 會傳入`pcchName`，實際數目的名稱 （包括 null 結束字元） 中的字元會儲存在`szName`陣列。</span><span class="sxs-lookup"><span data-stu-id="4e34e-111">If a non-null is returned in `pcchName`, the actual number of characters in the name (including the null terminator) is stored in the `szName` array.</span></span>  
   
- <span data-ttu-id="1b33f-112">`GetName`方法會傳回 S_OK HRESULT，不論已複製的字元數。</span><span class="sxs-lookup"><span data-stu-id="1b33f-112">The `GetName` method returns an S_OK HRESULT regardless of how many characters were copied.</span></span>  
+ <span data-ttu-id="4e34e-112">`GetName`方法會傳回 S_OK HRESULT，不論已複製的字元數。</span><span class="sxs-lookup"><span data-stu-id="4e34e-112">The `GetName` method returns an S_OK HRESULT regardless of how many characters were copied.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1b33f-113">需求</span><span class="sxs-lookup"><span data-stu-id="1b33f-113">Requirements</span></span>  
- <span data-ttu-id="1b33f-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1b33f-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4e34e-113">需求</span><span class="sxs-lookup"><span data-stu-id="4e34e-113">Requirements</span></span>  
+ <span data-ttu-id="4e34e-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4e34e-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1b33f-115">**標頭：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="1b33f-115">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="4e34e-115">**標頭：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="4e34e-115">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="1b33f-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1b33f-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4e34e-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4e34e-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="1b33f-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1b33f-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="4e34e-117">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4e34e-117">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1b33f-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1b33f-118">See also</span></span>
-- [<span data-ttu-id="1b33f-119">ICorPublishAppDomain 介面</span><span class="sxs-lookup"><span data-stu-id="1b33f-119">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4e34e-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4e34e-118">See also</span></span>
+- [<span data-ttu-id="4e34e-119">ICorPublishAppDomain 介面</span><span class="sxs-lookup"><span data-stu-id="4e34e-119">ICorPublishAppDomain Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomain-interface.md)

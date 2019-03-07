@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc34ab9c8dbfe10282f36a241a4e433debef7dd0
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f4dcfb977f5ca87f2219fd3ed8ef87d16c2defd2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420491"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472638"
 ---
-# <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="aa366-102">ICorDebugProcess2::ClearUnmanagedBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="aa366-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
-<span data-ttu-id="aa366-103">移除先前設定在指定的位址中斷點。</span><span class="sxs-lookup"><span data-stu-id="aa366-103">Removes a previously set breakpoint at the given address.</span></span>  
+# <a name="icordebugprocess2clearunmanagedbreakpoint-method"></a><span data-ttu-id="c35e2-102">ICorDebugProcess2::ClearUnmanagedBreakpoint 方法</span><span class="sxs-lookup"><span data-stu-id="c35e2-102">ICorDebugProcess2::ClearUnmanagedBreakpoint Method</span></span>
+<span data-ttu-id="c35e2-103">移除先前設定中斷點，在指定的位址。</span><span class="sxs-lookup"><span data-stu-id="c35e2-103">Removes a previously set breakpoint at the given address.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="aa366-104">語法</span><span class="sxs-lookup"><span data-stu-id="aa366-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c35e2-104">語法</span><span class="sxs-lookup"><span data-stu-id="c35e2-104">Syntax</span></span>  
   
 ```  
 HRESULT ClearUnmanagedBreakpoint (  
@@ -35,22 +35,22 @@ HRESULT ClearUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="aa366-105">參數</span><span class="sxs-lookup"><span data-stu-id="aa366-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c35e2-105">參數</span><span class="sxs-lookup"><span data-stu-id="c35e2-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="aa366-106">[in]A`CORDB_ADDRESS`值，指定 中斷點設定的位址。</span><span class="sxs-lookup"><span data-stu-id="aa366-106">[in] A `CORDB_ADDRESS` value that specifies the address at which the breakpoint was set.</span></span>  
+ <span data-ttu-id="c35e2-106">[in]A`CORDB_ADDRESS`值，指定已設定中斷點所在的位址。</span><span class="sxs-lookup"><span data-stu-id="c35e2-106">[in] A `CORDB_ADDRESS` value that specifies the address at which the breakpoint was set.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="aa366-107">備註</span><span class="sxs-lookup"><span data-stu-id="aa366-107">Remarks</span></span>  
- <span data-ttu-id="aa366-108">指定的中斷點會先前已設定的之前呼叫[icordebugprocess2:: Setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。</span><span class="sxs-lookup"><span data-stu-id="aa366-108">The specified breakpoint would have been previously set by an earlier call to [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c35e2-107">備註</span><span class="sxs-lookup"><span data-stu-id="c35e2-107">Remarks</span></span>  
+ <span data-ttu-id="c35e2-108">指定的中斷點會之前尚未設定先前呼叫所[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c35e2-108">The specified breakpoint would have been previously set by an earlier call to [ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md).</span></span>  
   
- <span data-ttu-id="aa366-109">`ClearUnmanagedBreakpoint`正在偵錯處理序正在執行時，就可以呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="aa366-109">The `ClearUnmanagedBreakpoint` method can be called while the process being debugged is running.</span></span>  
+ <span data-ttu-id="c35e2-109">`ClearUnmanagedBreakpoint`執行處理序偵錯時，就可以呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="c35e2-109">The `ClearUnmanagedBreakpoint` method can be called while the process being debugged is running.</span></span>  
   
- <span data-ttu-id="aa366-110">`ClearUnmanagedBreakpoint`如果偵錯工具是以僅限 managed 的模式，或如果沒有中斷點存在於指定的位址，方法會傳回失敗碼。</span><span class="sxs-lookup"><span data-stu-id="aa366-110">The `ClearUnmanagedBreakpoint` method returns a failure code if the debugger is attached in managed-only mode or if no breakpoint exists at the specified address.</span></span>  
+ <span data-ttu-id="c35e2-110">`ClearUnmanagedBreakpoint`方法會傳回失敗碼，如果偵錯工具是以僅限受控的模式，或如果沒有中斷點已有指定的位址。</span><span class="sxs-lookup"><span data-stu-id="c35e2-110">The `ClearUnmanagedBreakpoint` method returns a failure code if the debugger is attached in managed-only mode or if no breakpoint exists at the specified address.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="aa366-111">需求</span><span class="sxs-lookup"><span data-stu-id="aa366-111">Requirements</span></span>  
- <span data-ttu-id="aa366-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aa366-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c35e2-111">需求</span><span class="sxs-lookup"><span data-stu-id="c35e2-111">Requirements</span></span>  
+ <span data-ttu-id="c35e2-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c35e2-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="aa366-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aa366-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c35e2-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c35e2-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="aa366-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aa366-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c35e2-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c35e2-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="aa366-115">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aa366-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="c35e2-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c35e2-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

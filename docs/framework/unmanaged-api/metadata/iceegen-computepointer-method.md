@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 496082bbf89ceb93ba3dceef9a9222425db71784
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fb63d4fe1e736ca1ff0c729d8d83cfe092eaaf5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522410"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57465526"
 ---
-# <a name="iceegencomputepointer-method"></a><span data-ttu-id="05b33-102">ICeeGen::ComputePointer 方法</span><span class="sxs-lookup"><span data-stu-id="05b33-102">ICeeGen::ComputePointer Method</span></span>
-<span data-ttu-id="05b33-103">判斷指定的程式碼區段的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="05b33-103">Determines the buffer for the specified code section.</span></span>  
+# <a name="iceegencomputepointer-method"></a><span data-ttu-id="d006f-102">ICeeGen::ComputePointer 方法</span><span class="sxs-lookup"><span data-stu-id="d006f-102">ICeeGen::ComputePointer Method</span></span>
+<span data-ttu-id="d006f-103">判斷指定的程式碼區段的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="d006f-103">Determines the buffer for the specified code section.</span></span>  
   
- <span data-ttu-id="05b33-104">這個方法已經過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="05b33-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="d006f-104">這個方法已經過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="d006f-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05b33-105">語法</span><span class="sxs-lookup"><span data-stu-id="05b33-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d006f-105">語法</span><span class="sxs-lookup"><span data-stu-id="d006f-105">Syntax</span></span>  
   
 ```  
 HRESULT ComputePointer (  
@@ -39,24 +39,24 @@ HRESULT ComputePointer (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="05b33-106">參數</span><span class="sxs-lookup"><span data-stu-id="05b33-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d006f-106">參數</span><span class="sxs-lookup"><span data-stu-id="d006f-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="05b33-107">[in]要傳回之緩衝區的程式碼區段。</span><span class="sxs-lookup"><span data-stu-id="05b33-107">[in] The code section for which to return a buffer.</span></span>  
+ <span data-ttu-id="d006f-107">[in]要傳回之緩衝區的程式碼區段。</span><span class="sxs-lookup"><span data-stu-id="d006f-107">[in] The code section for which to return a buffer.</span></span>  
   
  `RVA`  
- <span data-ttu-id="05b33-108">[in]要取得的指標方法的相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="05b33-108">[in] The relative virtual address of the method for which to get a pointer.</span></span>  
+ <span data-ttu-id="d006f-108">[in]要取得的指標方法的相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="d006f-108">[in] The relative virtual address of the method for which to get a pointer.</span></span>  
   
  `lpBuffer`  
- <span data-ttu-id="05b33-109">[out]傳回緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="05b33-109">[out] A pointer to the returned buffer.</span></span>  
+ <span data-ttu-id="d006f-109">[out]傳回緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="d006f-109">[out] A pointer to the returned buffer.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="05b33-110">需求</span><span class="sxs-lookup"><span data-stu-id="05b33-110">Requirements</span></span>  
- <span data-ttu-id="05b33-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05b33-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d006f-110">需求</span><span class="sxs-lookup"><span data-stu-id="d006f-110">Requirements</span></span>  
+ <span data-ttu-id="d006f-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d006f-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05b33-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="05b33-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="d006f-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d006f-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="05b33-113">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="05b33-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="d006f-113">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d006f-113">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="05b33-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="05b33-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d006f-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d006f-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05b33-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="05b33-115">See also</span></span>
-- [<span data-ttu-id="05b33-116">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="05b33-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d006f-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d006f-115">See also</span></span>
+- [<span data-ttu-id="d006f-116">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="d006f-116">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

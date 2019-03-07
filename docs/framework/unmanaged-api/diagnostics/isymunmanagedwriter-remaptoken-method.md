@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ec3f94d290423130e3718b32cd8058f59d797d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec4a486b9dfb72c05a9e614fca22626dd84a83f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694512"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468453"
 ---
-# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="2a415-102">ISymUnmanagedWriter::RemapToken 方法</span><span class="sxs-lookup"><span data-stu-id="2a415-102">ISymUnmanagedWriter::RemapToken Method</span></span>
-<span data-ttu-id="2a415-103">通知的符號寫入器中繼資料語彙基元已重新對應，因為在發出中繼資料。</span><span class="sxs-lookup"><span data-stu-id="2a415-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="2a415-104">如果符號寫入器已存放在符號存放區中舊的語彙基元，則它必須的更新為新的值，或者使用儲存的權杖必須儲存對應的符號讀取器在讀取階段期間重新對應的對應。</span><span class="sxs-lookup"><span data-stu-id="2a415-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
+# <a name="isymunmanagedwriterremaptoken-method"></a><span data-ttu-id="ea250-102">ISymUnmanagedWriter::RemapToken 方法</span><span class="sxs-lookup"><span data-stu-id="ea250-102">ISymUnmanagedWriter::RemapToken Method</span></span>
+<span data-ttu-id="ea250-103">通知的符號寫入器中繼資料語彙基元已重新對應，因為在發出中繼資料。</span><span class="sxs-lookup"><span data-stu-id="ea250-103">Notifies the symbol writer that a metadata token has been remapped as the metadata was emitted.</span></span> <span data-ttu-id="ea250-104">如果符號寫入器已存放在符號存放區中舊的語彙基元，則它必須的更新為新的值，或者使用儲存的權杖必須儲存對應的符號讀取器在讀取階段期間重新對應的對應。</span><span class="sxs-lookup"><span data-stu-id="ea250-104">If the symbol writer has stored the old token within the symbol store, it must either update the stored token with the new value, or it must save the map for the corresponding symbol reader to remap during the read phase.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2a415-105">語法</span><span class="sxs-lookup"><span data-stu-id="2a415-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ea250-105">語法</span><span class="sxs-lookup"><span data-stu-id="ea250-105">Syntax</span></span>  
   
 ```  
 HRESULT RemapToken(  
@@ -35,18 +35,18 @@ HRESULT RemapToken(
     [in] mdToken  newToken);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2a415-106">參數</span><span class="sxs-lookup"><span data-stu-id="2a415-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ea250-106">參數</span><span class="sxs-lookup"><span data-stu-id="ea250-106">Parameters</span></span>  
  `oldToken`  
- <span data-ttu-id="2a415-107">[in]已重新對應中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="2a415-107">[in] The metadata token that was remapped.</span></span>  
+ <span data-ttu-id="ea250-107">[in]已重新對應中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="ea250-107">[in] The metadata token that was remapped.</span></span>  
   
  `newToken`  
- <span data-ttu-id="2a415-108">[in]新的中繼資料語彙基元的`oldToken`已重新對應。</span><span class="sxs-lookup"><span data-stu-id="2a415-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
+ <span data-ttu-id="ea250-108">[in]新的中繼資料語彙基元的`oldToken`已重新對應。</span><span class="sxs-lookup"><span data-stu-id="ea250-108">[in] The new metadata token to which `oldToken` was remapped.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="2a415-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="2a415-109">Return Value</span></span>  
- <span data-ttu-id="2a415-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="2a415-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ea250-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="ea250-109">Return Value</span></span>  
+ <span data-ttu-id="ea250-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="ea250-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2a415-111">需求</span><span class="sxs-lookup"><span data-stu-id="2a415-111">Requirements</span></span>  
- <span data-ttu-id="2a415-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="2a415-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ea250-111">需求</span><span class="sxs-lookup"><span data-stu-id="ea250-111">Requirements</span></span>  
+ <span data-ttu-id="ea250-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ea250-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2a415-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2a415-113">See also</span></span>
-- [<span data-ttu-id="2a415-114">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="2a415-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ea250-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea250-113">See also</span></span>
+- [<span data-ttu-id="ea250-114">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="ea250-114">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

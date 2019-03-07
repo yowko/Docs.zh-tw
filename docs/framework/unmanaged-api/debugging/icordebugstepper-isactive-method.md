@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dcb276e6fba6a1b46b6be630804dc6f07c211b86
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: d4166b63e0bb0ae276c48abb961e381809cc9792
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420504"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471416"
 ---
-# <a name="icordebugstepperisactive-method"></a><span data-ttu-id="2df20-102">ICorDebugStepper::IsActive 方法</span><span class="sxs-lookup"><span data-stu-id="2df20-102">ICorDebugStepper::IsActive Method</span></span>
-<span data-ttu-id="2df20-103">取得值，指出是否此 ICorDebugStepper 目前正在執行的步驟。</span><span class="sxs-lookup"><span data-stu-id="2df20-103">Gets a value that indicates whether this ICorDebugStepper is currently executing a step.</span></span>  
+# <a name="icordebugstepperisactive-method"></a><span data-ttu-id="2fd31-102">ICorDebugStepper::IsActive 方法</span><span class="sxs-lookup"><span data-stu-id="2fd31-102">ICorDebugStepper::IsActive Method</span></span>
+<span data-ttu-id="2fd31-103">取得值，指出此 ICorDebugStepper 目前是否正在執行的步驟。</span><span class="sxs-lookup"><span data-stu-id="2fd31-103">Gets a value that indicates whether this ICorDebugStepper is currently executing a step.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2df20-104">語法</span><span class="sxs-lookup"><span data-stu-id="2df20-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2fd31-104">語法</span><span class="sxs-lookup"><span data-stu-id="2fd31-104">Syntax</span></span>  
   
 ```  
 HRESULT IsActive (  
@@ -35,18 +35,18 @@ HRESULT IsActive (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="2df20-105">參數</span><span class="sxs-lookup"><span data-stu-id="2df20-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2fd31-105">參數</span><span class="sxs-lookup"><span data-stu-id="2fd31-105">Parameters</span></span>  
  `pbActive`  
- <span data-ttu-id="2df20-106">[out]傳回`true`如果 stepper 正在執行一個步驟中; 否則傳回`false`。</span><span class="sxs-lookup"><span data-stu-id="2df20-106">[out] Returns `true` if the stepper is currently executing a step; otherwise, returns `false`.</span></span>  
+ <span data-ttu-id="2fd31-106">[out]會傳回`true`步進目前正在執行的步驟; 否則會傳回`false`。</span><span class="sxs-lookup"><span data-stu-id="2fd31-106">[out] Returns `true` if the stepper is currently executing a step; otherwise, returns `false`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2df20-107">備註</span><span class="sxs-lookup"><span data-stu-id="2df20-107">Remarks</span></span>  
- <span data-ttu-id="2df20-108">任何步驟動作維持作用，直到接收偵錯工具[icordebugmanagedcallback:: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)呼叫時，它會自動停用 stepper。</span><span class="sxs-lookup"><span data-stu-id="2df20-108">Any step action remains active until the debugger receives a [ICorDebugManagedCallback::StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) call, which automatically deactivates the stepper.</span></span> <span data-ttu-id="2df20-109">Stepper 可能會一併被停用不當藉由呼叫[icordebugstepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)在回呼之前條件為止。</span><span class="sxs-lookup"><span data-stu-id="2df20-109">A stepper may also be deactivated prematurely by calling [ICorDebugStepper::Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) before the callback condition is reached.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2fd31-107">備註</span><span class="sxs-lookup"><span data-stu-id="2fd31-107">Remarks</span></span>  
+ <span data-ttu-id="2fd31-108">任何步驟動作維持作用，直到偵錯工具收到[icordebugmanagedcallback:: Stepcomplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md)呼叫，這會自動停用步進。</span><span class="sxs-lookup"><span data-stu-id="2fd31-108">Any step action remains active until the debugger receives a [ICorDebugManagedCallback::StepComplete](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-stepcomplete-method.md) call, which automatically deactivates the stepper.</span></span> <span data-ttu-id="2fd31-109">步進可能也會停用不當藉由呼叫[icordebugstepper:: Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md)在回呼之前條件為止。</span><span class="sxs-lookup"><span data-stu-id="2fd31-109">A stepper may also be deactivated prematurely by calling [ICorDebugStepper::Deactivate](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-deactivate-method.md) before the callback condition is reached.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2df20-110">需求</span><span class="sxs-lookup"><span data-stu-id="2df20-110">Requirements</span></span>  
- <span data-ttu-id="2df20-111">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2df20-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2fd31-110">需求</span><span class="sxs-lookup"><span data-stu-id="2fd31-110">Requirements</span></span>  
+ <span data-ttu-id="2fd31-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2fd31-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2df20-112">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2df20-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="2fd31-112">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2fd31-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2df20-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2df20-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2fd31-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2fd31-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2df20-114">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2df20-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="2fd31-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2fd31-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

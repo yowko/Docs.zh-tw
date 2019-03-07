@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 313dd7526478377ca457d165de4b95e7e81d93f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fff5b25706353d999ab6875092e31f554438f28c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599776"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469153"
 ---
-# <a name="icorprofilercallbackremotingclientreceivingreply-method"></a><span data-ttu-id="dfaed-102">ICorProfilerCallback::RemotingClientReceivingReply 方法</span><span class="sxs-lookup"><span data-stu-id="dfaed-102">ICorProfilerCallback::RemotingClientReceivingReply Method</span></span>
-<span data-ttu-id="dfaed-103">通知分析工具的遠端呼叫的伺服器端部分已完成，而且用戶端正在接收以及有關處理回覆。</span><span class="sxs-lookup"><span data-stu-id="dfaed-103">Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.</span></span>  
+# <a name="icorprofilercallbackremotingclientreceivingreply-method"></a><span data-ttu-id="d06c6-102">ICorProfilerCallback::RemotingClientReceivingReply 方法</span><span class="sxs-lookup"><span data-stu-id="d06c6-102">ICorProfilerCallback::RemotingClientReceivingReply Method</span></span>
+<span data-ttu-id="d06c6-103">通知分析工具的遠端呼叫的伺服器端部分已完成，而且用戶端正在接收以及有關處理回覆。</span><span class="sxs-lookup"><span data-stu-id="d06c6-103">Notifies the profiler that the server-side portion of a remoting call has completed and the client is now receiving and about to process the reply.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="dfaed-104">語法</span><span class="sxs-lookup"><span data-stu-id="dfaed-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d06c6-104">語法</span><span class="sxs-lookup"><span data-stu-id="d06c6-104">Syntax</span></span>  
   
 ```  
 HRESULT RemotingClientReceivingReply(  
@@ -35,29 +35,29 @@ HRESULT RemotingClientReceivingReply(
     [in] BOOL fIsAsync);   
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="dfaed-105">參數</span><span class="sxs-lookup"><span data-stu-id="dfaed-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d06c6-105">參數</span><span class="sxs-lookup"><span data-stu-id="d06c6-105">Parameters</span></span>  
  `pCookie`  
- <span data-ttu-id="dfaed-106">[in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)在這些情況下：</span><span class="sxs-lookup"><span data-stu-id="dfaed-106">[in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:</span></span>  
+ <span data-ttu-id="d06c6-106">[in]值，這個值會對應中提供的價值[icorprofilercallback:: Remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)在這些情況下：</span><span class="sxs-lookup"><span data-stu-id="d06c6-106">[in] A value that will correspond with the value provided in [ICorProfilerCallback::RemotingServerSendingReply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md) under these conditions:</span></span>  
   
--   <span data-ttu-id="dfaed-107">遠端處理 GUID cookie 在作用中。</span><span class="sxs-lookup"><span data-stu-id="dfaed-107">Remoting GUID cookies are active.</span></span>  
+-   <span data-ttu-id="d06c6-107">遠端處理 GUID cookie 在作用中。</span><span class="sxs-lookup"><span data-stu-id="d06c6-107">Remoting GUID cookies are active.</span></span>  
   
--   <span data-ttu-id="dfaed-108">成功的訊息傳輸通道。</span><span class="sxs-lookup"><span data-stu-id="dfaed-108">The channel succeeds in transmitting the message.</span></span>  
+-   <span data-ttu-id="d06c6-108">成功的訊息傳輸通道。</span><span class="sxs-lookup"><span data-stu-id="d06c6-108">The channel succeeds in transmitting the message.</span></span>  
   
--   <span data-ttu-id="dfaed-109">GUID cookie 上為作用中伺服器端處理序。</span><span class="sxs-lookup"><span data-stu-id="dfaed-109">GUID cookies are active on the server-side process.</span></span>  
+-   <span data-ttu-id="d06c6-109">GUID cookie 上為作用中伺服器端處理序。</span><span class="sxs-lookup"><span data-stu-id="d06c6-109">GUID cookies are active on the server-side process.</span></span>  
   
- <span data-ttu-id="dfaed-110">這可讓您輕易地配對的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="dfaed-110">This allows easy pairing of remoting calls.</span></span>  
+ <span data-ttu-id="d06c6-110">這可讓您輕易地配對的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="d06c6-110">This allows easy pairing of remoting calls.</span></span>  
   
  `fIsAsync`  
- <span data-ttu-id="dfaed-111">[in]值是`true`的呼叫是非同步，否則如果`false`。</span><span class="sxs-lookup"><span data-stu-id="dfaed-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
+ <span data-ttu-id="d06c6-111">[in]值是`true`的呼叫是非同步，否則如果`false`。</span><span class="sxs-lookup"><span data-stu-id="d06c6-111">[in] A value that is `true` if the call is asynchronous; otherwise, `false`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="dfaed-112">需求</span><span class="sxs-lookup"><span data-stu-id="dfaed-112">Requirements</span></span>  
- <span data-ttu-id="dfaed-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="dfaed-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d06c6-112">需求</span><span class="sxs-lookup"><span data-stu-id="d06c6-112">Requirements</span></span>  
+ <span data-ttu-id="d06c6-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d06c6-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="dfaed-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="dfaed-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d06c6-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d06c6-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="dfaed-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="dfaed-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d06c6-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d06c6-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="dfaed-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="dfaed-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="d06c6-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d06c6-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dfaed-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dfaed-117">See also</span></span>
-- [<span data-ttu-id="dfaed-118">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="dfaed-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d06c6-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d06c6-117">See also</span></span>
+- [<span data-ttu-id="d06c6-118">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="d06c6-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)

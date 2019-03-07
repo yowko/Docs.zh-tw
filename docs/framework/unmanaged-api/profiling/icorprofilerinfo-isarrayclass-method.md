@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c131c5531d52f5ee81c70bddb67e8bc6071f39e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bf8e74094b15163fe86e18c397f4637557df8329
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599657"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468230"
 ---
-# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="7a7ff-102">ICorProfilerInfo::IsArrayClass 方法</span><span class="sxs-lookup"><span data-stu-id="7a7ff-102">ICorProfilerInfo::IsArrayClass Method</span></span>
-<span data-ttu-id="7a7ff-103">判斷指定的類別是否為陣列類別。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-103">Determines whether the specified class is an array class.</span></span>  
+# <a name="icorprofilerinfoisarrayclass-method"></a><span data-ttu-id="a5fd6-102">ICorProfilerInfo::IsArrayClass 方法</span><span class="sxs-lookup"><span data-stu-id="a5fd6-102">ICorProfilerInfo::IsArrayClass Method</span></span>
+<span data-ttu-id="a5fd6-103">判斷指定的類別是否為陣列類別。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-103">Determines whether the specified class is an array class.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7a7ff-104">語法</span><span class="sxs-lookup"><span data-stu-id="7a7ff-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a5fd6-104">語法</span><span class="sxs-lookup"><span data-stu-id="a5fd6-104">Syntax</span></span>  
   
 ```  
 HRESULT IsArrayClass(  
@@ -37,30 +37,30 @@ HRESULT IsArrayClass(
     [out] ULONG          *pcRank);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="7a7ff-105">參數</span><span class="sxs-lookup"><span data-stu-id="7a7ff-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a5fd6-105">參數</span><span class="sxs-lookup"><span data-stu-id="a5fd6-105">Parameters</span></span>  
  `classId`  
- <span data-ttu-id="7a7ff-106">[in]要檢查類別的識別碼。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-106">[in] The ID of the class to be examined.</span></span>  
+ <span data-ttu-id="a5fd6-106">[in]要檢查類別的識別碼。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-106">[in] The ID of the class to be examined.</span></span>  
   
  `pBaseElemType`  
- <span data-ttu-id="7a7ff-107">[out]CorElementType 列舉型別，表示陣列項目類型值的指標。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
+ <span data-ttu-id="a5fd6-107">[out]CorElementType 列舉型別，表示陣列項目類型值的指標。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-107">[out] A pointer to a value of the CorElementType enumeration that indicates the type of the array elements.</span></span>  
   
  `pBaseClassId`  
- <span data-ttu-id="7a7ff-108">[out]陣列項目時可用的類別識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
+ <span data-ttu-id="a5fd6-108">[out]陣列項目時可用的類別識別碼指標。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-108">[out] A pointer to the class ID of the array elements, when available.</span></span>  
   
  `pcRank`  
- <span data-ttu-id="7a7ff-109">[out]表示陣列的陣序 （也就是維度的數目） 的整數指標。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
+ <span data-ttu-id="a5fd6-109">[out]表示陣列的陣序 （也就是維度的數目） 的整數指標。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-109">[out] A pointer to an integer that indicates the rank (that is, number of dimensions) of the array.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7a7ff-110">備註</span><span class="sxs-lookup"><span data-stu-id="7a7ff-110">Remarks</span></span>  
- <span data-ttu-id="7a7ff-111">如果指定的類別是陣列類別，`IsArrayClass`方法會傳回 S_OK HRESULT 和任何非 null 輸出參數的值。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="7a7ff-112">否則，它會傳回 S_FALSE。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-112">Otherwise, it returns S_FALSE.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a5fd6-110">備註</span><span class="sxs-lookup"><span data-stu-id="a5fd6-110">Remarks</span></span>  
+ <span data-ttu-id="a5fd6-111">如果指定的類別是陣列類別，`IsArrayClass`方法會傳回 S_OK HRESULT 和任何非 null 輸出參數的值。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-111">If the specified class is an array class, the `IsArrayClass` method returns an S_OK HRESULT and values for any non-null output parameters.</span></span> <span data-ttu-id="a5fd6-112">否則，它會傳回 S_FALSE。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-112">Otherwise, it returns S_FALSE.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7a7ff-113">需求</span><span class="sxs-lookup"><span data-stu-id="7a7ff-113">Requirements</span></span>  
- <span data-ttu-id="7a7ff-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7a7ff-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a5fd6-113">需求</span><span class="sxs-lookup"><span data-stu-id="a5fd6-113">Requirements</span></span>  
+ <span data-ttu-id="a5fd6-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a5fd6-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7a7ff-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7a7ff-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="a5fd6-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="a5fd6-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7a7ff-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7a7ff-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a5fd6-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a5fd6-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7a7ff-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a7ff-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a5fd6-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5fd6-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7a7ff-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7a7ff-118">See also</span></span>
-- [<span data-ttu-id="7a7ff-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="7a7ff-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a5fd6-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5fd6-118">See also</span></span>
+- [<span data-ttu-id="a5fd6-119">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="a5fd6-119">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd294037774721839b0c4f1f09bdc2a6e3b87841
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42c677ae5aeb1e1b70ab68be8920fc71215cfe63
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471984"
 ---
-# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="93000-102">ISymENCUnmanagedMethod::GetDocumentsForMethod 方法</span><span class="sxs-lookup"><span data-stu-id="93000-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
-<span data-ttu-id="93000-103">取得這個方法有幾行中的文件。</span><span class="sxs-lookup"><span data-stu-id="93000-103">Gets the documents that this method has lines in.</span></span>  
+# <a name="isymencunmanagedmethodgetdocumentsformethod-method"></a><span data-ttu-id="b69db-102">ISymENCUnmanagedMethod::GetDocumentsForMethod 方法</span><span class="sxs-lookup"><span data-stu-id="b69db-102">ISymENCUnmanagedMethod::GetDocumentsForMethod Method</span></span>
+<span data-ttu-id="b69db-103">取得這個方法有幾行中的文件。</span><span class="sxs-lookup"><span data-stu-id="b69db-103">Gets the documents that this method has lines in.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="93000-104">語法</span><span class="sxs-lookup"><span data-stu-id="93000-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b69db-104">語法</span><span class="sxs-lookup"><span data-stu-id="b69db-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentsForMethod(  
@@ -36,21 +36,21 @@ HRESULT GetDocumentsForMethod(
     [in, size_is(cDocs)] ISymUnmanagedDocument* documents[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="93000-105">參數</span><span class="sxs-lookup"><span data-stu-id="93000-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b69db-105">參數</span><span class="sxs-lookup"><span data-stu-id="b69db-105">Parameters</span></span>  
  `cDocs`  
- <span data-ttu-id="93000-106">[in]所指向緩衝區的長度`pcDocs`。</span><span class="sxs-lookup"><span data-stu-id="93000-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
+ <span data-ttu-id="b69db-106">[in]所指向緩衝區的長度`pcDocs`。</span><span class="sxs-lookup"><span data-stu-id="b69db-106">[in] The length of the buffer pointed to by `pcDocs`.</span></span>  
   
  `pcDocs`  
- <span data-ttu-id="93000-107">[out]指標`ULONG32`接收大小，以字元為單位，包含文件所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="93000-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
+ <span data-ttu-id="b69db-107">[out]指標`ULONG32`接收大小，以字元為單位，包含文件所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="b69db-107">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the documents.</span></span>  
   
  `documents`  
- <span data-ttu-id="93000-108">[in]包含文件的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="93000-108">[in] The buffer that contains the documents.</span></span>  
+ <span data-ttu-id="b69db-108">[in]包含文件的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="b69db-108">[in] The buffer that contains the documents.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="93000-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="93000-109">Return Value</span></span>  
- <span data-ttu-id="93000-110">如果方法成功，則為 S_OK否則，出現錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="93000-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b69db-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="b69db-109">Return Value</span></span>  
+ <span data-ttu-id="b69db-110">如果方法成功，則為 S_OK否則，出現錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="b69db-110">S_OK if the method succeeds; otherwise, an error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="93000-111">需求</span><span class="sxs-lookup"><span data-stu-id="93000-111">Requirements</span></span>  
- <span data-ttu-id="93000-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="93000-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b69db-111">需求</span><span class="sxs-lookup"><span data-stu-id="b69db-111">Requirements</span></span>  
+ <span data-ttu-id="b69db-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="b69db-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="93000-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="93000-113">See also</span></span>
-- [<span data-ttu-id="93000-114">ISymENCUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="93000-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b69db-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b69db-113">See also</span></span>
+- [<span data-ttu-id="b69db-114">ISymENCUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="b69db-114">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

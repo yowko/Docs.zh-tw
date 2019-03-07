@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b4ad9590b57b629587af8f421a3f5902e5527f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53001d6dfef2813df86dc4bb4f9647900143aae7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704026"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469062"
 ---
-# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="94cd8-102">IHostMemoryManager::GetMemoryLoad 方法</span><span class="sxs-lookup"><span data-stu-id="94cd8-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
-<span data-ttu-id="94cd8-103">取得目前為使用中，因此無法使用，與主應用程式所報告的實體記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="94cd8-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
+# <a name="ihostmemorymanagergetmemoryload-method"></a><span data-ttu-id="42ece-102">IHostMemoryManager::GetMemoryLoad 方法</span><span class="sxs-lookup"><span data-stu-id="42ece-102">IHostMemoryManager::GetMemoryLoad Method</span></span>
+<span data-ttu-id="42ece-103">取得目前為使用中，因此無法使用，與主應用程式所報告的實體記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="42ece-103">Gets the amount of physical memory that is currently in use, and therefore unavailable, as reported by the host.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="94cd8-104">語法</span><span class="sxs-lookup"><span data-stu-id="94cd8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="42ece-104">語法</span><span class="sxs-lookup"><span data-stu-id="42ece-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMemoryLoad (  
@@ -36,38 +36,38 @@ HRESULT GetMemoryLoad (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="94cd8-105">參數</span><span class="sxs-lookup"><span data-stu-id="94cd8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="42ece-105">參數</span><span class="sxs-lookup"><span data-stu-id="42ece-105">Parameters</span></span>  
  `pMemoryLoad`  
- <span data-ttu-id="94cd8-106">[out]目前正在使用的總實體記憶體的近似百分比指標。</span><span class="sxs-lookup"><span data-stu-id="94cd8-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
+ <span data-ttu-id="42ece-106">[out]目前正在使用的總實體記憶體的近似百分比指標。</span><span class="sxs-lookup"><span data-stu-id="42ece-106">[out] A pointer to the approximate percentage of total physical memory that is currently in use.</span></span>  
   
  `pAvailableBytes`  
- <span data-ttu-id="94cd8-107">[out]Common language runtime (CLR) 可用的位元組數目指標。</span><span class="sxs-lookup"><span data-stu-id="94cd8-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
+ <span data-ttu-id="42ece-107">[out]Common language runtime (CLR) 可用的位元組數目指標。</span><span class="sxs-lookup"><span data-stu-id="42ece-107">[out] A pointer to the number of bytes available to the common language runtime (CLR).</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="94cd8-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="94cd8-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="42ece-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="42ece-108">Return Value</span></span>  
   
-|<span data-ttu-id="94cd8-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="94cd8-109">HRESULT</span></span>|<span data-ttu-id="94cd8-110">描述</span><span class="sxs-lookup"><span data-stu-id="94cd8-110">Description</span></span>|  
+|<span data-ttu-id="42ece-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="42ece-109">HRESULT</span></span>|<span data-ttu-id="42ece-110">描述</span><span class="sxs-lookup"><span data-stu-id="42ece-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="94cd8-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="94cd8-111">S_OK</span></span>|<span data-ttu-id="94cd8-112">`GetMemoryLoad` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="94cd8-112">`GetMemoryLoad` returned successfully.</span></span>|  
-|<span data-ttu-id="94cd8-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="94cd8-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="94cd8-114">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="94cd8-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="94cd8-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="94cd8-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="94cd8-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="94cd8-116">The call timed out.</span></span>|  
-|<span data-ttu-id="94cd8-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="94cd8-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="94cd8-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="94cd8-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="94cd8-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="94cd8-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="94cd8-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="94cd8-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="94cd8-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="94cd8-121">E_FAIL</span></span>|<span data-ttu-id="94cd8-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="94cd8-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="94cd8-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="94cd8-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="94cd8-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="94cd8-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="42ece-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="42ece-111">S_OK</span></span>|<span data-ttu-id="42ece-112">`GetMemoryLoad` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="42ece-112">`GetMemoryLoad` returned successfully.</span></span>|  
+|<span data-ttu-id="42ece-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="42ece-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="42ece-114">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="42ece-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="42ece-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="42ece-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="42ece-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="42ece-116">The call timed out.</span></span>|  
+|<span data-ttu-id="42ece-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="42ece-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="42ece-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="42ece-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="42ece-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="42ece-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="42ece-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="42ece-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="42ece-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="42ece-121">E_FAIL</span></span>|<span data-ttu-id="42ece-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="42ece-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="42ece-123">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="42ece-123">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="42ece-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="42ece-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="94cd8-125">備註</span><span class="sxs-lookup"><span data-stu-id="94cd8-125">Remarks</span></span>  
- <span data-ttu-id="94cd8-126">`GetMemoryLoad` 包裝 Win32`GlobalMemoryStatus`函式。</span><span class="sxs-lookup"><span data-stu-id="94cd8-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="94cd8-127">值`pMemoryLoad`相當於`dwMemoryLoad`欄位中`MEMORYSTATUS`所傳回的結構`GlobalMemoryStatus`。</span><span class="sxs-lookup"><span data-stu-id="94cd8-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="42ece-125">備註</span><span class="sxs-lookup"><span data-stu-id="42ece-125">Remarks</span></span>  
+ <span data-ttu-id="42ece-126">`GetMemoryLoad` 包裝 Win32`GlobalMemoryStatus`函式。</span><span class="sxs-lookup"><span data-stu-id="42ece-126">`GetMemoryLoad` wraps the Win32 `GlobalMemoryStatus` function.</span></span> <span data-ttu-id="42ece-127">值`pMemoryLoad`相當於`dwMemoryLoad`欄位中`MEMORYSTATUS`所傳回的結構`GlobalMemoryStatus`。</span><span class="sxs-lookup"><span data-stu-id="42ece-127">The value of `pMemoryLoad` is the equivalent of the `dwMemoryLoad` field in the `MEMORYSTATUS` structure returned from `GlobalMemoryStatus`.</span></span>  
   
- <span data-ttu-id="94cd8-128">執行階段會使用啟發學習法為傳回值，記憶體回收行程。</span><span class="sxs-lookup"><span data-stu-id="94cd8-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="94cd8-129">比方說，如果主應用程式會報告使用中大部分的記憶體，記憶體回收行程可能會選擇收集來自多個層代增加可能變成可用的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="94cd8-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
+ <span data-ttu-id="42ece-128">執行階段會使用啟發學習法為傳回值，記憶體回收行程。</span><span class="sxs-lookup"><span data-stu-id="42ece-128">The runtime uses the return value as a heuristic for the garbage collector.</span></span> <span data-ttu-id="42ece-129">比方說，如果主應用程式會報告使用中大部分的記憶體，記憶體回收行程可能會選擇收集來自多個層代增加可能變成可用的記憶體數量。</span><span class="sxs-lookup"><span data-stu-id="42ece-129">For example, if the host reports that the majority of memory is in use, the garbage collector may elect to collect from multiple generations to increase the amount of memory that can potentially become available.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="94cd8-130">需求</span><span class="sxs-lookup"><span data-stu-id="94cd8-130">Requirements</span></span>  
- <span data-ttu-id="94cd8-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="94cd8-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="42ece-130">需求</span><span class="sxs-lookup"><span data-stu-id="42ece-130">Requirements</span></span>  
+ <span data-ttu-id="42ece-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="42ece-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="94cd8-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="94cd8-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="42ece-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="42ece-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="94cd8-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="94cd8-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="42ece-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="42ece-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="94cd8-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="94cd8-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="42ece-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="42ece-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="94cd8-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="94cd8-135">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42ece-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42ece-135">See also</span></span>
 - <xref:System.GC?displayProperty=nameWithType>
-- [<span data-ttu-id="94cd8-136">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="94cd8-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+- [<span data-ttu-id="42ece-136">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="42ece-136">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
