@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9f03d8c993be1ac83ca84275bcb94f1bb3cdf884
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b92885d2a6514839a864d6a345dd8af8b07b90c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33414979"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489809"
 ---
 # <a name="icordebugilframe2remapfunction-method"></a>ICorDebugILFrame2::RemapFunction 方法
-藉由指定新的 Microsoft intermediate language (MSIL) 位移重新對應已編輯函式  
+將編輯過的函式藉由指定新的 Microsoft intermediate language (MSIL) 位移重新對應  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,29 +35,29 @@ HRESULT RemapFunction (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `newILOffset`  
- [in]堆疊框架的新 MSIL 指令指標應該將放入其中的位移。 此值必須是序列點。  
+ [in]堆疊框架的新 MSIL 位移應該放置指令指標。 此值必須是序列點。  
   
- 它是呼叫者的責任在於確保此值的有效性。 比方說，MSIL 位移不正確，如果它是函式的範圍外。  
+ 是以確保此值之有效性的呼叫者的責任。 比方說，MSIL 位移不超出界限的函式是否有效。  
   
 ## <a name="remarks"></a>備註  
- 當已經編輯框架的函式時，偵錯工具可以呼叫`RemapFunction`交換中框架的函式的最新版本，讓它可以執行的方法。 執行程式碼將會開始於指定的 MSIL 位移。  
+ 偵錯工具時已編輯框架的函式，可以呼叫`RemapFunction`交換中框架的函式的最新版本，因此可以執行的方法。 執行程式碼將會在指定的 MSIL 位移開始。  
   
 > [!NOTE]
->  呼叫`RemapFunction`、 like 呼叫[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)，將會立即使產生執行緒的堆疊追蹤相關的所有偵錯介面。 這些介面包括[ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)，ICorDebugILFrame、 ICorDebugInternalFrame 和 ICorDebugNativeFrame。  
+>  呼叫`RemapFunction`，例如呼叫[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)，將會立即失效與產生的執行緒堆疊追蹤相關的所有偵錯介面。 這些介面包括[ICorDebugChain](../../../../docs/framework/unmanaged-api/debugging/icordebugchain-interface.md)，ICorDebugILFrame、 ICorDebugInternalFrame 和 ICorDebugNativeFrame。  
   
- `RemapFunction`可呼叫方法，只在目前的框架，內容中，且只有在下列情況的其中一個：  
+ `RemapFunction`可以呼叫方法，只在目前的框架的內容中，而且只用於下列案例之一：  
   
--   在回條之後[icordebugmanagedcallback2:: Functionremapopportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)具有未尚未已繼續的回呼。  
+-   之後的回條[ICorDebugManagedCallback2::FunctionRemapOpportunity](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-functionremapopportunity-method.md)已不還繼續執行的回呼。  
   
--   因為停止執行程式碼時[icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)這個畫面格的事件。  
+-   因為停止執行程式碼時[icordebugmanagedcallback:: Editandcontinueremap](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-editandcontinueremap-method.md)這個框架的事件。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

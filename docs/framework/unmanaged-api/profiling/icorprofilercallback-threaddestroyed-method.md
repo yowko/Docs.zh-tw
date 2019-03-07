@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 40bbde940538d7b06aa74ab55986da2dca3ec225
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09c2aef9cc27a2e9aba34f36c1fbfd0973d3b0fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599500"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474224"
 ---
 # <a name="icorprofilercallbackthreaddestroyed-method"></a>ICorProfilerCallback::ThreadDestroyed 方法
 通知分析工具已終結執行緒。  
@@ -34,7 +34,7 @@ HRESULT ThreadDestroyed(
     [in] ThreadID threadId);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `threadId`  
  [in]已終結執行緒的識別碼。  
   

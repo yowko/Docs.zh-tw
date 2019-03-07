@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a2a26e32040f705fd46f9d9d8909fd47e963baa8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5d061227e4094c96f14bd8f4f3e80e869b838a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510777"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487148"
 ---
 # <a name="iclrtaskneedspriorityscheduling-method"></a>ICLRTask::NeedsPriorityScheduling 方法
 取得值，指出目前的工作中，正在切換移出，是否需要標示為高優先順序的重新排程。  
@@ -35,7 +35,7 @@ HRESULT NeedsPriorityScheduling (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pbNeedsPriorityRescheduling`  
  [out]`true`，如果主應用程式應該嘗試重新排程目前的工作執行個體，儘速，否則`false`。  
   

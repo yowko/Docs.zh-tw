@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8e270f45300bd5f8c2e6cd87f9b84f31ec42320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5e74d625cadb2febe45aa4c000e5b63f96aada55
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722188"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494099"
 ---
 # <a name="iceegenaddsectionreloc-method"></a>ICeeGen::AddSectionReloc 方法
 將程式碼基底.reloc 指令。  
@@ -40,7 +40,7 @@ HRESULT AddSectionReloc (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `section`  
  [in]要加入.reloc 指令的記憶體中程式碼區段。  
   

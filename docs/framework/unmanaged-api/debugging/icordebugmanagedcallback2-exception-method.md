@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46dcd43ffe6963d1177a395b855a287182cdff0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1f776f20f163df91d65509e5dbab31fe9c29a965
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492097"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 方法
 已開始搜尋例外狀況處理常式會告知偵錯工具。  
@@ -40,7 +40,7 @@ HRESULT Exception (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]ICorDebugAppDomain 物件，表示應用程式定義域包含的執行緒例外狀況的指標。  
   

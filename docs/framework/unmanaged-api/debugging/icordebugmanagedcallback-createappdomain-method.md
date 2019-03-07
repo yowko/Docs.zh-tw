@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36ded85cd2d8ebe49ee0b1e190266061cb56dfb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0682aec060d5f65a3034d482c92a04e0880f7a6b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496737"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484767"
 ---
 # <a name="icordebugmanagedcallbackcreateappdomain-method"></a>ICorDebugManagedCallback::CreateAppDomain 方法
 已建立的應用程式定義域會告知偵錯工具。  
@@ -36,7 +36,7 @@ HRESULT CreateAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pProcess`  
  [in]ICorDebugProcess 物件，表示所建立的應用程式定義域中的程序的指標。  
   

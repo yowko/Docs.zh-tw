@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 905de2745be085391bef8ea32b8f82a5da78f3a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4ffbd2bc3042f7e37e90dceeb28ec50b3c73cef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681192"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491967"
 ---
 # <a name="imetadatadispenseropenscope-method"></a>IMetaDataDispenser::OpenScope 方法
 開啟現有磁碟上的檔案，並將它的中繼資料對應到記憶體。  
@@ -38,7 +38,7 @@ HRESULT OpenScope (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szScope`  
  [in]要開啟之檔案的名稱。 此檔案必須包含 common language runtime (CLR) 中繼資料。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e897daddee7eec354f79f7d970431c6950a341d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9933948a5e67b91106cdadc6f747c1b1c4121813
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501825"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489991"
 ---
 # <a name="ihostsemaphorewait-method"></a>IHostSemaphore::Wait 方法
 造成目前[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)等候，直到它擁有的執行個體或指定的時間量。  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwMilliseconds`  
  [in]如果在傳回之前，等待的毫秒數目前`IHostSemaphore`不屬於執行個體。  
   

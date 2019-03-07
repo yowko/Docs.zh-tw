@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 759b2a9a419989cfec1020b1a6662bd6f8416739
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 990910b8b30e9794550d71cf9eaf8cd53639f696
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492240"
 ---
 # <a name="imetadataimportenumpermissionsets-method"></a>IMetaDataImport::EnumPermissionSets 方法
 列舉指定中繼資料範圍內的物件權限。  
@@ -40,7 +40,7 @@ HRESULT EnumPermissionSets
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   

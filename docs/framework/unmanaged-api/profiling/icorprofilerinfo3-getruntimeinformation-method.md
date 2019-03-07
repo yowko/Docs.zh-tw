@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5262ba6ef0d2d36372326df24b519072e2aa6fc6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da116de6bde01ea7fd17f7ab27605501ae723f30
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587511"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473003"
 ---
 # <a name="icorprofilerinfo3getruntimeinformation-method"></a>ICorProfilerInfo3::GetRuntimeInformation 方法
 提供 common language runtime (CLR) 所分析的版本資訊。  
@@ -43,7 +43,7 @@ HRESULT GetRuntimeInformation(
                    WCHAR  szVersionString[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pClrInstanceId`  
  [out]代表處理序中執行 CLR 執行個體的識別碼。 這是與相同`ClrInstanceID`Windows (ETW) 啟動事件的事件追蹤報告。  
   

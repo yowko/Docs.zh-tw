@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550dddea9be711d5821dbc86ab3ca54ab0d967ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6d0036a1f4c499505743fd15a115f870e9cb50
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598473"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492396"
 ---
 # <a name="iassemblynameclone-method"></a>IAssemblyName::Clone 方法
 建立這個的淺層複製[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。  
@@ -35,7 +35,7 @@ HRESULT Clone (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pName`  
  [out]這個傳回的複本`IAssemblyName`物件。  
   

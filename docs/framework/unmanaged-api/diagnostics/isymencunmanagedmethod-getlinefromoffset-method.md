@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 98015af4a79a9fca4945708e6d0baeb61e46876f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d993bc6b947d309ce1a0fb10ad231a429be567
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531222"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471910"
 ---
 # <a name="isymencunmanagedmethodgetlinefromoffset-method"></a>ISymENCUnmanagedMethod::GetLineFromOffset 方法
 取得位移與相關聯的行資訊。 如果位移的參數 (`dwOffset`) 不是序列點，這個方法會取得先前的位移與相關聯的行資訊。  
@@ -39,7 +39,7 @@ HRESULT GetLineFromOffset(
      [out] ULONG32*  pdwStartOffset);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwOffset`  
  [in]A`ULONG32`包含位移。  
   

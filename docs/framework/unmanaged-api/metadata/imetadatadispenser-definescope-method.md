@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9f9cac2b59f783a81663af0c5eb148367d54e8aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8df46a3c6beed26e885e7dc13f97a7c68d2abcdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605151"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487976"
 ---
 # <a name="imetadatadispenserdefinescope-method"></a>IMetaDataDispenser::DefineScope 方法
 您可以在其中建立新的中繼資料的記憶體中建立新的區域。  
@@ -38,7 +38,7 @@ HRESULT DefineScope (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `rclsid`  
  [in]若要建立的中繼資料結構版本 CLSID。 此值必須是 CLSID_CorMetaDataRuntime 適用於.NET Framework 2.0 版。  
   

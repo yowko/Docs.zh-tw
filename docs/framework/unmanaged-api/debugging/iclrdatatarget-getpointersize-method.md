@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80ed86526c99c36254f2b9c71f00483095e771ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b85739f0f9b6771b204f0e0297ab025cd112a12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734337"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476699"
 ---
 # <a name="iclrdatatargetgetpointersize-method"></a>ICLRDataTarget::GetPointerSize 方法
 取得大小，以位元組為單位，目標處理序會使用與指標類型。 這個方法是由通用語言執行階段資料存取服務呼叫。  
@@ -35,7 +35,7 @@ HRESULT GetPointerSize (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pointerSize`  
  [out]整數值，指定的大小，以位元組為單位，在目標處理序上之指標的指標。  
   

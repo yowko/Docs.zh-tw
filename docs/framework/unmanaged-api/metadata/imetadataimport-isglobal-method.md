@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 52a00496c3b4d5ccd96adaf569c25c64a5709a9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7032e55d52804d559d1faed810ca7cccd6a9e628
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717583"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475635"
 ---
 # <a name="imetadataimportisglobal-method"></a>IMetaDataImport::IsGlobal 方法
 取得一個值，用來表示指定中繼資料語彙基元所代表的欄位、方法或類型值是否具有全域範圍。  
@@ -36,7 +36,7 @@ HRESULT IsGlobal (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pd`  
  [in]中繼資料語彙基元，表示型別、 欄位或方法。  
   

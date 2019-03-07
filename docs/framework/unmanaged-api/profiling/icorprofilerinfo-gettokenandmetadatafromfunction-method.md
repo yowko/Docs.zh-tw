@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0561f76c70da603d50b96ce5b5162efac4eff2de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb81972a7f52889d10a59cd5cd9ea0e8e1e3e571
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492973"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492877"
 ---
 # <a name="icorprofilerinfogettokenandmetadatafromfunction-method"></a>ICorProfilerInfo::GetTokenAndMetadataFromFunction 方法
 取得中繼資料語彙基元和中繼資料介面執行個體可以使用語彙基元，為指定的函式。  
@@ -37,7 +37,7 @@ HRESULT GetTokenAndMetaDataFromFunction(
     [out] mdToken    *pToken);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `functionId`  
  [in]要取得的中繼資料語彙基元和中繼資料介面函式的識別碼。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2b4285cf667bfb929956f23e9dc051e0070fff9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8cabf9d059a14411af48c165ab9c913156e696a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500742"
 ---
 # <a name="iclrassemblyidentitymanagergetprobingassembliesfromreference-method"></a>ICLRAssemblyIdentityManager::GetProbingAssembliesFromReference 方法
 取得[ICLRProbingAssemblyEnum](../../../../docs/framework/unmanaged-api/hosting/iclrprobingassemblyenum-interface.md)具有指定的識別類型的組件所參考的組件身分識別的列舉值。  
@@ -38,7 +38,7 @@ HRESULT GetProbingAssembliesFromReference (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwMachineType`  
  [in]有效的值，指定處理器架構，因為在 WinNT.h 中定義。  
   

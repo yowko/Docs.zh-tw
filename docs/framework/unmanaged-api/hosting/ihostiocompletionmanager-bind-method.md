@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c03cdb9f9205676d17d6e18b9b2e074132ee26f1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 826543a224c4d6850f345b187d3aaafc8e1de8cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594768"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491486"
 ---
 # <a name="ihostiocompletionmanagerbind-method"></a>IHostIoCompletionManager::Bind 方法
 將指定的控制代碼繫結至已經由先前呼叫建立 I/O 完成通訊埠[CreateIoCompletionPort](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-createiocompletionport-method.md)。  
@@ -36,7 +36,7 @@ HRESULT Bind (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hPort`  
  [in]I/O 完成連接埠要繫結至`hHandle`。 如果值`hPort`為 null，`hHandle`繫結至預設 I/O 完成連接埠。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf9f8241459f566eb0724596640fd6036ae799a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 655b2af2efcaba82af46e92ae94abf3a4adc349c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659614"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500404"
 ---
 # <a name="icorprofilercallbackremotingserversendingreply-method"></a>ICorProfilerCallback::RemotingServerSendingReply 方法
 通知分析工具，處理程序已完成處理遠端方法引動過程要求，並將要傳輸的回覆，透過的通道。  
@@ -35,7 +35,7 @@ HRESULT RemotingServerSendingReply(
     [in] BOOL fIsAsync);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pCookie`  
  [in]中提供的值會對應至 GUID 的指標[icorprofilercallback:: Remotingclientreceivingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingclientreceivingreply-method.md)在這些情況下：  
   

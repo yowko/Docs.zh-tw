@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 09c19f5f-afc4-4e0c-bffe-cd7147bc7a43
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09b50af49f8379539773d2000a6c1f8222fee875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8c7b70638b963968fb3ed7e294f1767718f9bc34
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563830"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501288"
 ---
 # <a name="icordebugvariablesymbolgetslotindex-method"></a>ICorDebugVariableSymbol::GetSlotIndex Method
 取得區域變數的 Managed 位置索引。  
@@ -22,7 +22,7 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pSlotIndex`  
  [out] 區域變數位置索引的指標。  
   
@@ -33,7 +33,7 @@ HRESULT GetSlotIndex(
  區域變數的 Managed 位置索引可用來擷取變數的中繼資料資訊。  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

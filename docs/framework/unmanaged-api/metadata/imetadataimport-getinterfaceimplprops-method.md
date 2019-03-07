@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc16d01d45364d1a17f281f859b27c3e48342ff0
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: cb38c61e8dbd29a0ff87165b5daf49e733b34047
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835716"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466540"
 ---
 # <a name="imetadataimportgetinterfaceimplprops-method"></a>IMetaDataImport::GetInterfaceImplProps 方法
 取得中繼資料語彙基元的指標<xref:System.Type>實作指定的方法和介面宣告該方法。
@@ -37,7 +37,7 @@ HRESULT GetInterfaceImplProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `iiImpl`  
  [in]中繼資料語彙基元，代表這個方法傳回的類別和介面 token。  
   

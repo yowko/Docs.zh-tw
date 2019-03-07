@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f6a862f0861416ebc80c7b6107267bcbb5ec51f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccaaee614b1ec4d03271e70338fff82d629a7c28
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657359"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57468455"
 ---
 # <a name="isymunmanagedwriteropenscope-method"></a>ISymUnmanagedWriter::OpenScope 方法
 開啟目前方法中的新語彙範圍。 範圍會成為新的目前範圍，並推送至堆疊的範圍。 範圍必須形成階層。 同層級項目不允許重疊。  
@@ -35,7 +35,7 @@ HRESULT OpenScope(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `startOffset`  
  [in]在語彙範圍中，以位元組為單位，從方法開頭的第一個指令的位移。  
   

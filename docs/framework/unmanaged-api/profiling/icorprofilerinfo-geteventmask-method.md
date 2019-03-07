@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4852df791b179f1a5ee130bd185be8527c14b7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1051f42788b3c2a63780f43f5784b063ef23027
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541920"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57483987"
 ---
 # <a name="icorprofilerinfogeteventmask-method"></a>ICorProfilerInfo::GetEventMask 方法
 取得分析工具想要從 Common Language Runtime (CLR) 接收事件通知的目前事件分類。  
@@ -34,9 +34,9 @@ HRESULT GetEventMask(
     [out] DWORD *pdwEvents);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pdwEvents`  
- [out] 指定事件分類的 4 位元組值的指標。 每個位元分別控制不同的功能、行為或事件類型。 位元所述[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別。  
+ [out] 指定事件分類的 4 位元組值的指標。 每個位元各控制事件的不同功能、行為或類型。 位元所述[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別。  
   
 ## <a name="remarks"></a>備註  
   

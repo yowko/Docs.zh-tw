@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12dd485f2b89dc76076410e76a132ff547681597
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a18689563cb3d5fb8460893f9a429507cf93b8f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616819"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486962"
 ---
 # <a name="isymunmanagedscopegetmethod-method"></a>ISymUnmanagedScope::GetMethod 方法
 取得包含此範圍的方法。  
@@ -34,7 +34,7 @@ HRESULT GetMethod(
     [out, retval] ISymUnmanagedMethod** pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pRetVal`  
  [out]所傳回的指標[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)介面。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 814073b766d5d562b414a566ae3f92abd664ce35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 956de98fca1caec0ac1b94afc7251f9741246f94
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494775"
 ---
 # <a name="icorruntimehostmapfile-method"></a>ICorRuntimeHost::MapFile 方法
 將指定的檔案對應到記憶體中。 這個方法已過時。  
@@ -36,7 +36,7 @@ HRESULT MapFile(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hFile`  
  [in]要對應的檔案控制代碼。  
   

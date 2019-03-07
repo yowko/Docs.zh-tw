@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ec8e5dfc92a818bfc23c28f3058086c3bd1a8ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c3185bdc0776d6536458ce03c348ed77b8ba0b9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597940"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499091"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 函式
 將 HRESULT 值轉譯成適當的錯誤訊息指定的文化特性。  
@@ -41,7 +41,7 @@ HRESULT LoadStringRCEx (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `lcid`  
  [in]文化特性識別項。 傳遞 – 1`lcid`若要使用的預設文化特性。  
   

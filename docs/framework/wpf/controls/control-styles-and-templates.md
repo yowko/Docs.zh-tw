@@ -10,12 +10,12 @@ helpviewer_keywords:
 - states [WPF]
 - templates [WPF]
 ms.assetid: c19049bb-5ceb-492d-afd2-751dca0ed8e3
-ms.openlocfilehash: 36589b13fc336b78ec87cccba0a2790d8242f5d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c5c33327c5a80a4e275d1eaa505c1d20d3d7ba4c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488834"
 ---
 # <a name="control-styles-and-templates"></a>控制項的樣式和範本
 在 Windows Presentation Foundation (WPF) 控制項有<xref:System.Windows.Controls.ControlTemplate>包含該控制項的視覺化樹狀結構。 您可以變更的結構和外觀的控制項，藉由修改<xref:System.Windows.Controls.ControlTemplate>該控制項。 沒有任何方法來取代一部分控制項之視覺化樹狀結構若要變更，您必須設定的控制項的視覺化樹狀結構<xref:System.Windows.Controls.Control.Template%2A>至其新且完整的控制項屬性<xref:System.Windows.Controls.ControlTemplate>。  
@@ -50,18 +50,18 @@ ms.locfileid: "57373191"
  [ListView 樣式和範本](listview-styles-and-templates.md)  
  [Menu 樣式和範本](menu-styles-and-templates.md)  
  [NavigationWindow 樣式和範本](navigationwindow-styles-and-templates.md)  
- [PasswordBox 樣式和範本](passwordbox-syles-and-templates.md)  
+ [PasswordBox 樣式和範本](passwordbox-styles-and-templates.md)  
  [ProgressBar 樣式和範本](progressbar-styles-and-templates.md)  
  [RadioButton 樣式和範本](radiobutton-styles-and-templates.md)  
- [RepeatButton 樣式和範本](repeatbutton-syles-and-templates.md)  
+ [RepeatButton 樣式和範本](repeatbutton-styles-and-templates.md)  
  [ScrollBar 樣式和範本](scrollbar-styles-and-templates.md)  
  [ScrollViewer 樣式和範本](scrollviewer-styles-and-templates.md)  
  [Slider 樣式和範本](slider-styles-and-templates.md)  
  [StatusBar 樣式和範本](statusbar-styles-and-templates.md)  
  [TabControl 樣式和範本](tabcontrol-styles-and-templates.md)  
  [TextBox 樣式和範本](textbox-styles-and-templates.md)  
- [Thumb 樣式和範本](thumb-syles-and-templates.md)  
- [ToggleButton 樣式和範本](togglebutton-syles-and-templates.md)  
+ [Thumb 樣式和範本](thumb-styles-and-templates.md)  
+ [ToggleButton 樣式和範本](togglebutton-styles-and-templates.md)  
  [ToolBar 樣式和範本](toolbar-styles-and-templates.md)  
  [ToolTip 樣式和範本](tooltip-styles-and-templates.md)  
  [TreeView 樣式和範本](treeview-styles-and-templates.md)  

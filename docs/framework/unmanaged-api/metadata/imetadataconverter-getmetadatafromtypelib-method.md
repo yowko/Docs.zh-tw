@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d8d931b2f96045c53b895d7de5204e2d971b1c64
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1c6c3b9dda990d6eb7d33239fedf35e2236f998
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561032"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479398"
 ---
 # <a name="imetadataconvertergetmetadatafromtypelib-method"></a>IMetaDataConverter::GetMetaDataFromTypeLib 方法
 取得的介面指標[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)執行個體，表示指定所代表的類型程式庫的中繼資料簽章`ITypeLib`執行個體。  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pITL`  
  [in]指標`ITypeLib`物件，表示型別程式庫。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1b02792a0547b9b8ba6215069c3c0abf48726ded
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b04f51040e32aa38fbd84c46e1a3b55af7ec0a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508651"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497453"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx 方法
 會產生新公用/私密金鑰組以指定的金鑰大小，用於強式名稱。  
@@ -39,7 +39,7 @@ HRESULT StrongNameKeyGenEx (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszKeyContainer`  
  [in]要求的金鑰容器名稱。 `wszKeyContainer` 必須是非空白字串或 null 來產生暫存名稱。  
   

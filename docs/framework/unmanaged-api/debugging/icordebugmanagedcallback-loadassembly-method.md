@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2143524b92ca34299877fe935ae5a603c3e86563
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8fde6772a43cc763df82ec109c11f8548ba240e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540503"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476174"
 ---
 # <a name="icordebugmanagedcallbackloadassembly-method"></a>ICorDebugManagedCallback::LoadAssembly 方法
 已成功載入 common language runtime (CLR) 組件會告知偵錯工具。  
@@ -36,7 +36,7 @@ HRESULT LoadAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]表示應用程式定義域到其中的組件已載入的 ICorDebugAppDomain 物件指標。  
   

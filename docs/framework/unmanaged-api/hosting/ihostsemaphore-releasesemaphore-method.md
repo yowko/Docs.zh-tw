@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 580603bf04afe353aeb124a8c1e548d897033d23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ae78d7e5b91c0955a0be8e8d85f4421dfc1871
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652835"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474302"
 ---
 # <a name="ihostsemaphorereleasesemaphore-method"></a>IHostSemaphore::ReleaseSemaphore 方法
 增加的目前計數[IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)指定數量的執行個體。  
@@ -36,7 +36,7 @@ HRESULT ReleaseSemaphore (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `lReleaseCount`  
  [in]用來在目前的計數增加數量`IHostSemaphore`執行個體。 這個數量必須小於或等於零。  
   

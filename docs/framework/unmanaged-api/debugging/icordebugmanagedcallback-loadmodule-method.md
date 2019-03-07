@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 597c5071f9ea0ceacaf429ca10cc899f115772eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e49c20d7627f666efd6561cee19ca505f723b714
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715630"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474432"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule 方法
 已成功載入的 common language runtime (CLR) 模組會告知偵錯工具。  
@@ -36,7 +36,7 @@ HRESULT LoadModule (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]表示模組已經載入的應用程式定義域的 ICorDebugAppDomain 物件指標。  
   

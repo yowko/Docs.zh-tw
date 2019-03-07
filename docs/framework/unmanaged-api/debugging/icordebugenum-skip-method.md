@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb651aa394022182b6730d57942199f570508436
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8e9e13c8acf4f60a7b43a9b4181bb03da8f0aa45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965891"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497011"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip 方法
 將游標移往前列舉中所指定的項目數。  
@@ -35,7 +35,7 @@ HRESULT Skip (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `celt`  
  [in]用來將游標向前移動的項目數目。  
   

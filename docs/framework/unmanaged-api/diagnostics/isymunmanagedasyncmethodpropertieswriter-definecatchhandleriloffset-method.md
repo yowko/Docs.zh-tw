@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55d35db387d6184f68ff31a74253d3d1610c806f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d000e61736f3250c677014cce50a2b7dcdecf1b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741233"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491682"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset 方法
 設定的 IL 偏移編譯器所產生的 catch 處理常式包裝非同步方法。  
@@ -22,7 +22,7 @@ ms.locfileid: "54741233"
 HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
 |參數|描述|  
 |---------------|-----------------|  

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5365b05db58d807cc010b763ca338ce76c8d7632
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c44260d3b5baa18bc24f85cdbea94016b43291e2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54578766"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489779"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes 方法
 如果合併組件中有相對虛擬位址 (RVA)，則會從合併組件讀取資料。  
@@ -24,7 +24,7 @@ HRESULT GetAssemblyImageBytes(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `rva`  
  [in] 合併組件中的相對虛擬位址 (RVA)。  
   
@@ -37,7 +37,7 @@ HRESULT GetAssemblyImageBytes(
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

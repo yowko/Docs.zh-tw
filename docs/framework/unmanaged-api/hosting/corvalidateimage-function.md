@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a84869281ec27aface96d722603186382c6e15e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c6d3b50cb3589dcd98c53e1abf0ce2be144d8f9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501990"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 函式
 驗證 managed 的模組映像，並載入後通知作業系統載入器。  
@@ -35,7 +35,7 @@ STDAPI _CorValidateImage (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ImageBase`  
  [in]指向要驗證的映像的起始位置的 managed 程式碼。 映像必須已被載入到記憶體中。  
   

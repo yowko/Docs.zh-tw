@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70784106798748eeaabd8e6b6c3787e27b0ece74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cae8f326a293a40164120dc17c13e451c4e93f1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746670"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489432"
 ---
 # <a name="iassemblynameisequal-method"></a>IAssemblyName::IsEqual 方法
 判斷指定[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件是否等於這個`IAssemblyName`，根據指定的比較旗標。  
@@ -36,7 +36,7 @@ HRESULT IsEqual (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pName`  
  [in]`IAssemblyName`物件所要比較這`IAssemblyName`。  
   

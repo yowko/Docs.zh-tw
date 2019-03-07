@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 8d0494e53705493de814ed4d4caa869e1e8a700f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41b6ff0a3c44d3ad997c54b1c82590cc3583fe52
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374566"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474601"
 ---
 # <a name="ixclrdataprocessstartenummethodinstancesbyaddress-method"></a>IXCLRDataProcess::StartEnumMethodInstancesByAddress 方法
 
@@ -38,7 +38,7 @@ HRESULT StartEnumMethodInstancesByAddress(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
 `address`\
 [in]第一個方法執行個體的位址。

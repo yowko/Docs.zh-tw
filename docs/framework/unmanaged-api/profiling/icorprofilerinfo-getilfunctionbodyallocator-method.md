@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0ae8b209ad03594cb77029193b0e9dec773a6e02
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432ebff36f3b4ee0362e01fc5ecd1bfdb35bc493
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603322"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493007"
 ---
 # <a name="icorprofilerinfogetilfunctionbodyallocator-method"></a>ICorProfilerInfo::GetILFunctionBodyAllocator 方法
 取得的介面會提供方法來配置記憶體來用於交換的 Microsoft intermediate language (MSIL) 程式碼中的方法主體。  
@@ -35,7 +35,7 @@ HRESULT GetILFunctionBodyAllocator(
     [out] IMethodMalloc **ppMalloc);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `moduleId`  
  [in]此方法所在的模組識別碼。  
   

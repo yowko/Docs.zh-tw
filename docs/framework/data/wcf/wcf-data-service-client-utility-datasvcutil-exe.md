@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 3442142eb249d04dabba455a57f02f3cdc7f4b91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492643"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)
 
@@ -23,7 +23,7 @@ DataSvcUtil.exe 是命令列工具所使用的 WCF Data Services 提供[!INCLUDE
 
 -   使用 Entity Framework 提供之實體資料模型所建立的 .edmx 檔案。 如需詳細資訊，請參閱 < [ \[MC-EDMX\]:資料服務封裝格式的實體資料模型](https://go.microsoft.com/fwlink/?LinkID=178833)規格。
 
-如需詳細資訊，請參閱[＜How to：手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。
+如需詳細資訊，請參閱[如何：手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。
 
 DataSvcUtil.exe 工具安裝在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 目錄中。 在許多情況下，這位於*C:\Windows\Microsoft.NET\Framework\v4.0*。 適用於 64 位元系統，這位於*C:\Windows\Microsoft.NET\Framework64\v4.0*。 您也可以存取 DataSvcUtil.exe 工具從開發人員命令提示字元適用於 Visual Studio。
 
@@ -33,7 +33,7 @@ DataSvcUtil.exe 工具安裝在 [!INCLUDE[dnprdnshort](../../../../includes/dnpr
 datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/language:devlang] [/nologo] [/version:ver] [/help]
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
 |選項|描述|
 |------------|-----------------|

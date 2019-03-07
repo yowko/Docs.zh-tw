@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e8baa73594823c6b2f19b2af87e6a681ad71e3b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56d2c28529d3f3ee87fe3fdedd91634133ebf864
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492201"
 ---
 # <a name="icordebugnativeframe2ismatchingparentframe-method"></a>ICorDebugNativeFrame2::IsMatchingParentFrame 方法
 判斷指定的範圍是否為目前的畫面格的父代。  
@@ -35,7 +35,7 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
                               [out] BOOL *pIsParent);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pPotentialParentFrame`  
  [in]您想要評估父狀態框架物件的指標。  
   
@@ -43,13 +43,13 @@ HRESULT IsMatchingParentFrame([in] ICorDebugNativeFrame2
  [out]`true`如果`pPotentialParentFrame`是目前畫面格的父代，則為`false`。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功地傳回父代的狀態。|  
 |E_FAIL|不會傳回父代的狀態。|  
-|E_INVALIDARG|`pPotentialParentFrame` 或 `pIsParent` 為 null。|  
+|E_INVALIDARG|`pPotentialParentFrame` 或`pIsParent`為 null。|  
   
 ## <a name="exceptions"></a>例外狀況  
   

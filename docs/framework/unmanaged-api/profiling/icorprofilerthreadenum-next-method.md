@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 25a6baea0cdd92d6d214ab8a697b0c00c44c42bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8a014a4e06464f461af25103037b349b2f18a2a5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664573"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488704"
 ---
 # <a name="icorprofilerthreadenumnext-method"></a>ICorProfilerThreadEnum::Next 方法
 從循序執行緒集合中取得指定的連續執行緒數目，從序列中列舉值的目前位置開始。  
@@ -37,7 +37,7 @@ HRESULT Next (    [in]  ULONG      celt,
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `celt`  
  [in] 要擷取的執行緒數目。  
   
@@ -48,7 +48,7 @@ HRESULT Next (    [in]  ULONG      celt,
  [out] `ids` 陣列中實際傳回之執行緒數目的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

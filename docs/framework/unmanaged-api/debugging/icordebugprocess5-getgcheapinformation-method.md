@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf3d362902eb338e5d797b66c5fe2af4f3e1ae9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c590dd1f3f6682179645fb384cdd82d1d7ed96
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508323"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503251"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation 方法
 提供記憶體回收堆積，包括其是否目前可列舉的一般資訊。  
@@ -35,7 +35,7 @@ HRESULT GetGCHeapInformation(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pHeapInfo`  
  [out]指標[COR_HEAPINFO](../../../../docs/framework/unmanaged-api/debugging/cor-heapinfo-structure.md)提供記憶體回收堆積的一般資訊的值。  
   

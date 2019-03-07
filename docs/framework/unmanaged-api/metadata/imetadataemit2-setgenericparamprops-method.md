@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c998d70fa5dd41ab4c1656f129bb77767a8ab97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 406a8ea4600c1e5ef55c0d905ff3aa4a30d068e7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574617"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485209"
 ---
 # <a name="imetadataemit2setgenericparamprops-method"></a>IMetaDataEmit2::SetGenericParamProps 方法
 設定指定的語彙基元所參考的泛型參數定義的屬性值。  
@@ -39,7 +39,7 @@ HRESULT SetGenericParamProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `gp`  
  [in]如需泛型參數定義為其設定值語彙基元。  
   

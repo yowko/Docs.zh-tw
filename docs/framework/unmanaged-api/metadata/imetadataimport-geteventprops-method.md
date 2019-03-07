@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a9d156d7c7ada8309e501ba44720dfa285ce50d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6f2eec9fce1909f6a83190f5ba3e99162461bbc4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552355"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492149"
 ---
 # <a name="imetadataimportgeteventprops-method"></a>IMetaDataImport::GetEventProps 方法
 取得指定的事件語彙基元，包括宣告的型別、 新增和移除方法委派，和任何旗標和其他相關聯的資料所代表的事件的中繼資料資訊。  
@@ -47,7 +47,7 @@ HRESULT GetEventProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ev`  
  [in]事件中繼資料語彙基元，表示要取得中繼資料的事件。  
   

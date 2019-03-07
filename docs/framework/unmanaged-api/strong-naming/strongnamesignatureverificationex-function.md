@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a9887a05236b213fb439e334cdf1455f8f445e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3f9dbbdf7ff560f292fed327a2ca1dd26c29a19
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671924"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491889"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 函式
 取得指出位於指定路徑的組件資訊清單是否包含強式名稱簽章的值。  
@@ -39,7 +39,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszFilePath`  
  [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
   

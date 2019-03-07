@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 648a2c044920b7524ad96ff656e83268ffd55652
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a24f51884b5dc55e45d22f33735fe07db770d06
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612212"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466908"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentsurvived-method"></a>ICLRAppDomainResourceMonitor::GetCurrentSurvived 方法
 取得最後一個完整的封鎖記憶體回收回收的和目前的應用程式定義域所參考之位元組數目。  
@@ -36,7 +36,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
              [out] ULONGLONG *pTotalBytesSurvived);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwAppDomainId`  
  [in]要求的應用程式定義域的識別碼。  
   
@@ -47,7 +47,7 @@ HRESULT STDMETHODCALLTYPE GetCurrentSurvived(
  [out]從上一個記憶體回收中存活下來的位元組總數目指標。 在完整收集之後, 這個數字代表 managed 堆積保留的位元組數目。 在暫時的集合之後, 這個數字會代表持有即時暫時層代中的位元組數目。 這個參數可以是 `null`。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

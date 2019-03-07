@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8be698d27ce69f955e5c1f17f5258602880c4021
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 32b44cb3a96205e8a784c81a05324370fb5ac67e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618694"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478540"
 ---
 # <a name="icorprofilerinfogetcurrentthreadid-method"></a>ICorProfilerInfo::GetCurrentThreadID 方法
 如果它是受管理的執行緒，請取得目前執行緒的識別碼。  
@@ -34,7 +34,7 @@ HRESULT GetCurrentThreadID(
     [out] ThreadID *pThreadId);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pThreadId`  
  [out]傳回的識別碼，managed 執行緒的指標。  
   

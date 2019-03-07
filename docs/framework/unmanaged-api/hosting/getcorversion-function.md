@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0741e5773b946186a452e191cc3ae987e6067c44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3d30603f16841a92013dd5cc2032799365e8c76
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606883"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471884"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 函式
 傳回 common language runtime (CLR) 在目前的處理序中執行的版本號碼。  
@@ -39,7 +39,7 @@ HRESULT GetCORVersion (
 );   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pbuffer`  
  CLR 會傳回字串，指定目前已載入到處理序的執行階段版本的緩衝區指標。 傳回的字串會採用相同的格式字串傳遞至[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)，例如"v1.0.1216 」。 如果執行階段尚未載入到處理序，則函數會傳回最新版本的執行階段電腦上安裝適當的目錄資訊。  
   

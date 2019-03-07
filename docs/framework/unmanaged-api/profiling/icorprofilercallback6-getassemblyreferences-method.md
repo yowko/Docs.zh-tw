@@ -15,15 +15,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3b63756fd300dc300932d070e451d2d072adc6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6a705257c150fe0272674c08c7b316ab968766cb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621405"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475329"
 ---
 # <a name="icorprofilercallback6getassemblyreferences-method"></a>ICorProfilerCallback6::GetAssemblyReferences 方法
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  當 Common Language Runtime 執行組件參考關閉查核時，通知分析工具組件處於非常早期的載入中階段。  
   
@@ -35,7 +35,7 @@ HRESULT GetAssemblyReferences(        [in, string] const WCHAR* wszAssemblyPath,
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszAssemblyPath`  
  [in] 要修改其中繼資料之組件的路徑及名稱。  
   

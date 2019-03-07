@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f2a05009caed7bef6da9edee57a4a54b876b18f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e10a92b1748fcdf518fa68cb7054731f4511396b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580989"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487183"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函式
 啟動指定的網路路徑，使用指定的資訊清單和其他應用程式資料的應用程式。  
@@ -43,7 +43,7 @@ HRESULT CorLaunchApplication (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwClickOnceHost`  
  [in]值為[HOST_TYPE](../../../../docs/framework/unmanaged-api/hosting/host-type-enumeration.md)列舉，指定正在啟動應用程式的主控件的型別。  
   

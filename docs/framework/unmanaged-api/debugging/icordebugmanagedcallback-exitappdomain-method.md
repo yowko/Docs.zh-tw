@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: baeac4ee3e4a22b023420caa7caffa238ff5a5c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1b6d23ab5d773f6f25becefd45895c365271e6a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696109"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476187"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain 方法
 已結束應用程式定義域會告知偵錯工具。  
@@ -36,7 +36,7 @@ HRESULT ExitAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pProcess`  
  [in]ICorDebugProcess 物件，表示包含指定的應用程式定義域的處理序的指標。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3ce303e8bcf33d192dbc7e2447ea6737577dcc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00fa0fb7c257500eb0bc24c6c43bd0dd265bc00b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554867"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481634"
 ---
 # <a name="ihostmallocdebugalloc-method"></a>IHostMAlloc::DebugAlloc 方法
 要求主機指定的記憶體數量從堆積配置，並另外追蹤記憶體配置的位置。  
@@ -39,7 +39,7 @@ HRESULT DebugAlloc (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cbSize`  
  [in]以位元組為單位，目前的記憶體配置要求的大小。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd54792e37523ea5bf0c2e7a4082ee00c30d00ea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eef04dfb305978c81f465ecb37eda75a52f25e4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496288"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502944"
 ---
 # <a name="icordebugcontrollerisrunning-method"></a>ICorDebugController::IsRunning 方法
 取得值，指出是否在程序中的執行緒目前正在自由。  
@@ -35,7 +35,7 @@ HRESULT IsRunning (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pbRunning`  
  [out]為值的指標`true`自由; 否則執行程序中的執行緒如果`false`。  
   

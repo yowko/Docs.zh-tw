@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7a51d1ddf7a5a65ce8713161c53c1c54a5d8861
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdc617039ac8328e0153abc7cc3752c54060a8c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617690"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481461"
 ---
 # <a name="imetadataimport2enumgenericparamconstraints-method"></a>IMetaDataImport2::EnumGenericParamConstraints 方法
 取得與指定的語彙基元所代表的泛型參數相關聯的泛型參數條件約束的陣列的列舉值。  
@@ -39,7 +39,7 @@ HRESULT EnumGenericParamConstraints (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。  
   

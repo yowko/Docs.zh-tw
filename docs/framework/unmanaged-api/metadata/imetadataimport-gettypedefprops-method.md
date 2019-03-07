@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 12adffbfeb2ce6271774cf44c1a913d7a1414ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4994dedcaac26f06f605532cc4579c78f4e8366
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718607"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501340"
 ---
 # <a name="imetadataimportgettypedefprops-method"></a>IMetaDataImport::GetTypeDefProps 方法
 傳回中繼資料資訊<xref:System.Type>指定 TypeDef 語彙基元所代表。  
@@ -40,7 +40,7 @@ HRESULT GetTypeDefProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]TypeDef 語彙基元，表示要傳回的中繼資料的型別。  
   

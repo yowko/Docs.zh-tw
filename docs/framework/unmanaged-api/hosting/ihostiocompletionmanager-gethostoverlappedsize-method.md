@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f21e25c077ae6ca837a41d3e2227d12dd517d95
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1482baf1a5ac951ce94ce55e50de2562597bdb8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555501"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490719"
 ---
 # <a name="ihostiocompletionmanagergethostoverlappedsize-method"></a>IHostIoCompletionManager::GetHostOverlappedSize 方法
 取得主應用程式想要附加至 I/O 要求的任何自訂資料的大小。  
@@ -35,7 +35,7 @@ HRESULT GetHostOverlappedSize (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcbSize`  
  [out]除了 Win32 的大小應該配置的 common language runtime (CLR) 的位元組數目的指標`OVERLAPPED`物件。  
   

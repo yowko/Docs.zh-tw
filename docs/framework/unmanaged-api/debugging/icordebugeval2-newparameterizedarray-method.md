@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 552d2fa8a7c35066e32fb9f8e9455b3092b1e65b
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 8c639204fa207774b0e362f1ba8fe71937494ae2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33413276"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487680"
 ---
 # <a name="icordebugeval2newparameterizedarray-method"></a>ICorDebugEval2::NewParameterizedArray 方法
 配置的指定項目類型和維度的新陣列。  
@@ -38,27 +38,27 @@ HRESULT NewParameterizedArray(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pElementType`  
- [in]ICorDebugType 物件代表儲存在陣列中的項目類型的指標。  
+ [in]ICorDebugType 物件，表示儲存在陣列中元素的類型指標。  
   
  `rank`  
- [in]陣列維度的數目。 在.NET Framework 2.0 版中，這個值必須是 1。  
+ [in]陣列維度的數目。 在.NET Framework 2.0 版中，此值必須是 1。  
   
  `dims`  
- [in]單位為位元組陣列的每個維度大小。  
+ [in]以位元組為單位，每個陣列維度大小。  
   
  `lowBounds`  
  [in] 選用。 陣列的每個維度的下限。 如果省略此值，則會假設每個維度下限為零。  
   
 ## <a name="remarks"></a>備註  
- 陣列的項目可能是泛型類型的執行個體。 陣列一律是目前執行中執行緒的應用程式定義域中建立的。 在.NET Framework 2.0 中，值`rank`必須是 1。  
+ 陣列的項目可以是泛型類型的執行個體。 這個陣列是一律會建立目前執行中執行緒的應用程式定義域中。 在.NET Framework 2.0 的值`rank`必須是 1。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

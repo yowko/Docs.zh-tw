@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee91abb0-cb74-41dd-927b-e117fb8ffdf4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 47545d590682236d7a19813b15a144731b64c9e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c2927195b650f1098292f3d59cd887e084aea21
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555075"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490056"
 ---
 # <a name="iclrdomainmanagersetappdomainmanagertype-method"></a>ICLRDomainManager::SetAppDomainManagerType 方法
 指定的型別，衍生自<xref:System.AppDomainManager?displayProperty=nameWithType>類別，將會用來初始化預設應用程式定義域的應用程式定義域管理員。  
@@ -35,7 +35,7 @@ HRESULT SetAppDomainManagerType(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszAppDomainManagerAssembly`  
  [in]包含應用程式定義域管理員類型; 組件的顯示名稱例如：「 AdMgrExample，version=1.0.0.0，Culture = neutral，PublicKeyToken = 6856bccf150f00b3"。  
   
@@ -46,7 +46,7 @@ HRESULT SetAppDomainManagerType(
  [in]組合[EInitializeNewDomainFlags](../../../../docs/framework/unmanaged-api/hosting/einitializenewdomainflags-enumeration.md)提供應用程式定義域管理員的相關資訊的列舉值。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

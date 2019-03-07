@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dbd7cd2d5ec515c529905ad524cedf257155b7e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88516a5ab7fa6ce3cd27422b32cb467a94f50f92
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492773"
 ---
 # <a name="gettypelibinfo-function"></a>GetTypeLibInfo 函式
 傳回指定的類型程式庫的相關資訊，藉由檢查其[TLIBATTR](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagtlibattr)結構。  
@@ -39,7 +39,7 @@ HRESULT GetTypeLibInfo(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szFile`  
  [in]型別程式庫檔案名稱。  
   
@@ -61,7 +61,7 @@ HRESULT GetTypeLibInfo(
 ## <a name="remarks"></a>備註  
  `GetTypeLibInfo`函式會呼叫[Tlbexp.exe （類型程式庫匯出工具）](../../../../docs/framework/tools/tlbexp-exe-type-library-exporter.md)。 此工具會產生類型程式庫，描述 common language runtime (CLR) 組件中的類型。  
   
- 如果任何參數為 null，則函數會傳回`HRESULT`的`E_POINTER`。 否則它會傳回 `S_OK`。  
+ 如果任何參數為 null，則函數會傳回`HRESULT`的`E_POINTER`。 否則，它會傳回 `S_OK`。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

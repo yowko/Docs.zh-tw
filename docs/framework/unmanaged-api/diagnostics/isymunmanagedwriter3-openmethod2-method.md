@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b641f463eb9b664597b4806a6353278e8027d5b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14a8acc2e3babd376cb9754d35ce8fc5eaa1fd7c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709100"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492318"
 ---
 # <a name="isymunmanagedwriter3openmethod2-method"></a>ISymUnmanagedWriter3::OpenMethod2 方法
 開啟的方法，並提供映像中的實際的區段位移。  
@@ -36,7 +36,7 @@ HRESULT OpenMethod2(
     [in] ULONG32 offset);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `method`  
  [in]若要開啟方法的中繼資料語彙基元。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ad20bdee5fee83b62d5da7f52c607835055616f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e99477bd8750f79ae711d47f295b6b39b90c92c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492123"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent::GetModule 方法
 取得剛載入或卸載的合併模組。  
@@ -22,7 +22,7 @@ HRESULT GetModule(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppModule`  
  [out]ICorDebugModule 物件，代表剛載入或卸載的合併的模組的位址指標。  
   
@@ -30,7 +30,7 @@ HRESULT GetModule(
  您可以呼叫[GetEventKind](../../../../docs/framework/unmanaged-api/debugging/icordebugdebugevent-geteventkind-method.md)方法，以判斷是否載入或卸載模組。  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

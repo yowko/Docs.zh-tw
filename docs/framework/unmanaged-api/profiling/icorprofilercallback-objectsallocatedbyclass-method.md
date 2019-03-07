@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1200ca14b91c101a8145a3aed8023002ddb9298b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e26e7ac9b89e005d9520ad860cf3acee7d3cc6cc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479749"
 ---
 # <a name="icorprofilercallbackobjectsallocatedbyclass-method"></a>ICorProfilerCallback::ObjectsAllocatedByClass 方法
 通知分析工具有關的每個指定的類別已自最新的回收之後建立的執行個體數目。  
@@ -36,7 +36,7 @@ HRESULT ObjectsAllocatedByClass(
     [in, size_is(cClassCount)] ULONG   cObjects[] );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cClassCount`  
  [in]大小`classIds`和`cObjects`陣列。  
   

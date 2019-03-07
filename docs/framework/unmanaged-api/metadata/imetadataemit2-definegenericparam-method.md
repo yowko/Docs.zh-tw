@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b54f5bb47135bcf56c91cd07b916c959e75b9fb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3af185e8e30c840eebb22124ff0131d2cc1fc7c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745290"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475719"
 ---
 # <a name="imetadataemit2definegenericparam-method"></a>IMetaDataEmit2::DefineGenericParam 方法
 建立泛型類型參數的定義，並取得該泛型型別參數的語彙基元。  
@@ -41,7 +41,7 @@ HRESULT DefineGenericParam (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tk`  
  [in]`mdTypeDef`或`mdMethodDef`語彙基元，表示方法或建構函式為其定義的泛型參數。  
   

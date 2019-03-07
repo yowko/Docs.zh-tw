@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a4273b36ce3e761348a091df3acb41212e1df05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4babdd6e0cea0d951b4cd8708d8007d431f97cf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722311"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500287"
 ---
 # <a name="imetadataimportenumtypespecs-method"></a>IMetaDataImport::EnumTypeSpecs 方法
 列舉在目前中繼資料範圍中定義的 TypeSpec 語彙基元。  
@@ -38,7 +38,7 @@ HRESULT EnumTypeSpecs (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 首次呼叫這個方法，這個值必須是 NULL。  
   

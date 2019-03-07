@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4fc7bda648dd19f614eb27ff514da653dcd347fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d91791517350137c71937b4e1b02e070d62efd38
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619407"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472586"
 ---
 # <a name="ihostiocompletionmanagercreateiocompletionport-method"></a>IHostIoCompletionManager::CreateIoCompletionPort 方法
 主應用程式建立新的 I/O 完成連接埠的要求。  
@@ -35,7 +35,7 @@ HRESULT CreateIoCompletionPort (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phPort`  
  [out]新建立的 I/O 完成通訊埠或 0 （零），如果無法建立連接埠的控制代碼指標。  
   

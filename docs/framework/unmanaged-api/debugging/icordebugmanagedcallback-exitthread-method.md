@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8abe1b63aad7b73b3260553550112ded75b77bb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a928aed73c0287a4cad2432fa6b6ebec43ea285
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537734"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489562"
 ---
 # <a name="icordebugmanagedcallbackexitthread-method"></a>ICorDebugManagedCallback::ExitThread 方法
 已結束執行緒所執行的 managed 程式碼會告知偵錯工具。  
@@ -36,7 +36,7 @@ HRESULT ExitThread (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]表示包含 managed 的執行緒的應用程式網域的 ICorDebugAppDomain 物件指標。  
   

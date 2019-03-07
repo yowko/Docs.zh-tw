@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 626f313c41c85e08901648f429d99c829ba35e2f
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 89182739633984011aaab3d7900d376b6db5ef99
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418996"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476200"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper 方法
-建立可讓您逐步執行此 ICorDebugThread 的使用中框架的 ICorDebugStepper 物件。  
+建立可讓您逐步完成每個使用中畫面格的這個 ICorDebugThread ICorDebugStepper 物件。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +35,20 @@ HRESULT CreateStepper (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppStepper`  
- [out]位址指標`ICorDebugStepper`物件，可讓您逐步執行此執行緒的作用中框架。  
+ [out]位址指標`ICorDebugStepper`物件，可讓您逐步執行此執行緒的使用中畫面格。  
   
 ## <a name="remarks"></a>備註  
- 使用中畫面格可能是 unmanaged 程式碼。  
+ 使用中畫面格可能未受管理的程式碼。  
   
  `ICorDebugStepper`介面必須用來執行實際的逐步執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

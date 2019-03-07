@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b6afe0f0d8780a93a7d98f24a11bb67ef65ebf63
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 308207e100a9770474dd896ea4cba42d7db5d241
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485547"
 ---
 # <a name="isymunmanagedmethodgetranges-method"></a>ISymUnmanagedMethod::GetRanges 方法
 指定的文件中的位置，傳回陣列的開始和結束位移組對應的 Microsoft intermediate language (MSIL，其中涵蓋在這個方法內的位置) 範圍。 陣列是一個整數的陣列，並具有 [開始、 結束、 開始、 結束] 格式。 範圍組的數目會除以 2 陣列的長度。  
@@ -40,7 +40,7 @@ HRESULT GetRanges(
         length_is(*pcRanges)] ULONG32 ranges[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `document`  
  [in]要求位移的文件。  
   

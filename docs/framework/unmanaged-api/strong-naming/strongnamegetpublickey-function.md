@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38879fbb296fa2ce0058e137499e25cd78cdb87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 89aaf70b6809ca00b1c8df8b99a4e08e7d86a3a1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702336"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492344"
 ---
 # <a name="strongnamegetpublickey-function"></a>StrongNameGetPublicKey 函式
 從私密/公開金鑰組取得公開金鑰。 可以提供的金鑰組，做為密碼編譯服務提供者 (CSP) 內的金鑰容器名稱，或是為未經處理位元組的集合。  
@@ -41,7 +41,7 @@ BOOLEAN StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szKeyContainer`  
  [in]包含 public/private 金鑰組的金鑰容器名稱。 如果`pbKeyBlob`為 null，`szKeyContainer`必須指定 CSP 內是有效的容器。 在此情況下，`StrongNameGetPublicKey`從容器中所儲存的金鑰組擷取公開金鑰。  
   

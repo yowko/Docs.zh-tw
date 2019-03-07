@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 5e6fde6e4e5bf006da00b62b035cee112efae1d7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e88897342bf18111ebd4914948ab45085c35ea08
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373487"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484115"
 ---
 # <a name="ixclrdatamethodinstancegetiladdressmap-method"></a>IXCLRDataMethodInstance::GetILAddressMap 方法
 
@@ -38,7 +38,7 @@ HRESULT GetILAddressMap(
 );
 ```
 
-### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
 `mapLen`\
 [in]提供的對應陣列的長度。

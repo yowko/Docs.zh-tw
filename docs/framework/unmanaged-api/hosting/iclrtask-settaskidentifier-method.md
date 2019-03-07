@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c57ac26fd08f585af7ff92f700c6cdd60815675
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58a010def407751a49cbb1de51c59a3df85cfb18
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734297"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487761"
 ---
 # <a name="iclrtasksettaskidentifier-method"></a>ICLRTask::SetTaskIdentifier 方法
 指示 common language runtime (CLR)，表示由目前的工作相關聯的指定之識別碼值[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)執行個體。  
@@ -35,7 +35,7 @@ HRESULT SetTaskIdentifier (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `Asked`  
  [in]通用語言執行平台，表示由目前的工作相關聯的唯一識別碼`ICLRTask`執行個體。  
   

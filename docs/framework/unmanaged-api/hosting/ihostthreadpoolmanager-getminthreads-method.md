@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8010ac602c82c7da2af9d0678227a6ce1c91391a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec323daf7c0d612d84c86c950c0c7235c7f9ebe7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521461"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485248"
 ---
 # <a name="ihostthreadpoolmanagergetminthreads-method"></a>IHostThreadPoolManager::GetMinThreads 方法
 執行緒集區預期的要求中取得主控件保留的閒置執行緒的數目下限。  
@@ -35,7 +35,7 @@ HRESULT GetMinThreads (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `MinThreads`  
  [out]主控件目前保留閒置的工作者執行緒的最小數目指標。  
   

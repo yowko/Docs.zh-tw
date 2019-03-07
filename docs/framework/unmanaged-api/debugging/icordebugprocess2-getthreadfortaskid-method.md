@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cd04e6d8bed86039b6f43985a8fb712b4612f76d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: aa1f6852544dddcdf514b14710ade3949818c93e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418346"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487307"
 ---
 # <a name="icordebugprocess2getthreadfortaskid-method"></a>ICorDebugProcess2::GetThreadForTaskID 方法
-取得具有指定識別碼的工作執行的執行緒。  
+取得具有指定識別碼的工作執行所在的執行緒。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,7 +36,7 @@ HRESULT GetThreadForTaskID (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `taskid`  
  [in]工作的識別碼。  
   
@@ -44,13 +44,13 @@ HRESULT GetThreadForTaskID (
  [out]ICorDebugThread2 物件，表示要擷取執行緒的位址指標。  
   
 ## <a name="remarks"></a>備註  
- 主機可以使用設定的工作識別碼[iclrtask:: Settaskidentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)方法。  
+ 主機可以透過設定的工作識別項[iclrtask:: Settaskidentifier](../../../../docs/framework/unmanaged-api/hosting/iclrtask-settaskidentifier-method.md)方法。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

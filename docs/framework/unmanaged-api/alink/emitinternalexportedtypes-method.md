@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 68373e9277a9d87bba6941259588f25a92af90a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6cee275dab33b847bb3a6e9839164615bdaa4a14
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710543"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502575"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 方法
 會發出新增至組件的類型。 呼叫這個方法之後稱為已加入內部的類型。  
@@ -35,7 +35,7 @@ HRESULT EmitInternalExportedTypes(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `AssemblyID`  
  組件識別碼。  
   

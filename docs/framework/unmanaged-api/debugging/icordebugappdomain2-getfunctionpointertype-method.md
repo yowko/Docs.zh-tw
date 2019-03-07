@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d497fd8e659a24add25df63c4ce48e710dcb0c6d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: ec1a9968dbec10783c6f1383fb523e95ff79561e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403789"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489744"
 ---
 # <a name="icordebugappdomain2getfunctionpointertype-method"></a>ICorDebugAppDomain2::GetFunctionPointerType 方法
-取得具有指定簽章的函式指標。  
+取得具有指定的簽章的函式的指標。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,21 +37,21 @@ HRESULT GetFunctionPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `nTypeArgs`  
- [in]此函式的型別引數數目。  
+ [in]函式的型別引數數目。  
   
  `ppTypeArgs`  
- [in]指標的陣列，其中每個指向 ICorDebugType 物件，表示型別引數的函式。 第一個項目是傳回的型別。每個其他項目是參數型別。  
+ [in]指標的陣列，其中每一個指向 ICorDebugType 物件，表示型別引數的函式。 第一個項目是所傳回的型別;其他項目都是參數型別。  
   
  `ppType`  
  [out]位址指標`ICorDebugType`物件，表示函式的指標。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

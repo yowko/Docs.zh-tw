@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 483f59ee3e81861ec1b05a0fee9c5db797aab68f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43009a81298fa5414df94e0664306859f0c9b851
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491140"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478735"
 ---
 # <a name="imetadataemitdefinesecurityattributeset-method"></a>IMetaDataEmit::DefineSecurityAttributeSet 方法
 建立一組安全性權限，將附加到指定的語彙基元所參考的物件。  
@@ -38,7 +38,7 @@ HRESULT DefineSecurityAttributeSet (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tkObj`  
  [in]要附加的安全性資訊之語彙基元。  
   

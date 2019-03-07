@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 12898f75d2575e539b018ea367bc870a3dc738a9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f546d7707c40f7f26a46177ae972a988e54e1e45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406327"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487859"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 函式
-建立偵錯工具介面 ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) 針對受管理的偵錯工作階段，在遠端處理序上具現化提供的功能。  
+建立偵錯工具介面 ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md))，具現化 managed 偵錯工作階段遠端處理序上的提供的功能。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,12 +37,12 @@ HRESULT CordbCreateObject (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `iDebuggerVersion`  
  [in] 目標處理序的偵錯工具版本。 這個參數必須是 CorDebugVersion_2_0，才能進行遠端偵錯。  
   
  `ppCordb`  
- [out]指標可以轉換成物件的指標[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面，並傳回。  
+ [out]指標會轉換成物件的指標[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)介面，並傳回。  
   
 ## <a name="return-value"></a>傳回值  
  S_OK  
@@ -58,10 +58,10 @@ HRESULT CordbCreateObject (
  其他失敗。  
   
 ## <a name="remarks"></a>備註  
- [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)中傳回的介面`ppCordb`是所有受管理的偵錯服務的最上層的偵錯介面。  
+ [ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)中傳回的介面`ppCordb`是最上層的偵錯介面，所有 managed 偵錯服務。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CoreClrRemoteDebuggingInterfaces.h  
   

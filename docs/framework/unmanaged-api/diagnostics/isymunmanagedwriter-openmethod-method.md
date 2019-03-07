@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a5e50327e74e0b893bd5f8e6f716827f2168e37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e6ee68fe3ffed0ae19c2f528a49a863b99fa7f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557951"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499546"
 ---
 # <a name="isymunmanagedwriteropenmethod-method"></a>ISymUnmanagedWriter::OpenMethod 方法
 開啟到的符號資訊就會發出的方法。 指定的方法會變成目前的方法，來定義序列點、 參數和語彙範圍的呼叫。 沒有隱含的語彙範圍，整個方法。 重新開啟先前已關閉的方法，就會清除任何先前定義的符號，該方法。 一次可以有只有一個開啟的方法。  
@@ -34,7 +34,7 @@ HRESULT OpenMethod(
     [in] mdMethodDef method);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `method`  
  [in]若要開啟方法的中繼資料語彙基元。  
   

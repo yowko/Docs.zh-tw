@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b0b5c6e70afffd12d3f0cdbbb92b20ac3a949e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61f82a34c287c62e1180c9c6bbe090914763afa3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634999"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479082"
 ---
 # <a name="linkresource-method"></a>LinkResource 方法
 在資源中的連結。  
@@ -38,7 +38,7 @@ HRESULT LinkResource(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `AssemblyID`  
  組件的識別碼。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 77a37d70b0e8675ad4edaf304e08e069073f76af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ff47576fb6a9d1f681aba1157efd63190b8dc23
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499050"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491382"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection 方法
 告知偵錯工具與指定的連接相關聯的工作集合已變更。  
@@ -36,7 +36,7 @@ HRESULT ChangeConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pProcess`  
  [in]代表包含已變更的連接程序 」 ICorDebugProcess 」 物件的指標。  
   

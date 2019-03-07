@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4326c6d8a3ee780cf63652badc8c527f55a075c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: b374720bd7bdad48222da006b809702de6462a62
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33420813"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472781"
 ---
 # <a name="icordebugprocess2setunmanagedbreakpoint-method"></a>ICorDebugProcess2::SetUnmanagedBreakpoint 方法
-在指定的原生映像位移設定未受管理的中斷點。  
+指定的原生映像的位移設定為未受管理的中斷點。  
   
 ## <a name="syntax"></a>語法  
   
@@ -39,7 +39,7 @@ HRESULT SetUnmanagedBreakpoint (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `address`  
  [in]A`CORDB_ADDRESS`物件，指定的原生映像的位移。  
   
@@ -47,19 +47,19 @@ HRESULT SetUnmanagedBreakpoint (
  [in]大小，以位元組為單位的`buffer`陣列。  
   
  `buffer`  
- [out]陣列，其中包含中斷點取代 opcode。  
+ [out]陣列，其中包含會取代中斷點的 opcode。  
   
  `bufLen`  
- [out]在傳回的位元組數目的指標`buffer`陣列。  
+ [out]中傳回的位元組數目的指標`buffer`陣列。  
   
 ## <a name="remarks"></a>備註  
- 如果原生映像位移為 common language runtime (CLR) 中，將會忽略中斷點。 這可讓 CLR 避免分派的頻外中斷點時設定中斷點，偵錯工具。  
+ 如果原生映像位移為 common language runtime (CLR) 中，將會忽略中斷點。 這可讓 CLR 避免分派-頻中斷點，當偵錯工具設定中斷點。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

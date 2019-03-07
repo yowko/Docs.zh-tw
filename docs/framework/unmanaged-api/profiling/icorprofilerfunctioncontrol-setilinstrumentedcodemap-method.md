@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81880f5f97d1c8f16c80f3e3cb2a1be506d44e2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 328702b48de8f3c471783743fb84a271f608a97a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571031"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477123"
 ---
 # <a name="icorprofilerfunctioncontrolsetilinstrumentedcodemap-method"></a>ICorProfilerFunctionControl::SetILInstrumentedCodeMap 方法
-使用指定的通用中繼語言 (CIL) 對應項目，設定指定函式的程式碼對應。  
+使用指定的通用中間語言 (CIL) 對應項目，為所指定的函式設定程式碼對應。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,7 +35,7 @@ HRESULT SetILInstrumentedCodeMap(
     [in, size_is(cILMapEntries)] COR_IL_MAP rgILMapEntries[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cILMapEntries`  
  [in] 對應中的項目數。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f41eb1864ca2cc0640941abbbd8bc95801a0b31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a87d18b15f858b608d99a511ed9bdad73fd2b251
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539008"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493676"
 ---
 # <a name="imetadataemitdefinemoduleref-method"></a>IMetaDataEmit::DefineModuleRef 方法
 建立具有指定名稱的模組的中繼資料簽章。  
@@ -36,7 +36,7 @@ HRESULT DefineModuleRef (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szName`  
  [in]其他中繼資料檔案，通常是 DLL 名稱。 這是檔案名稱。 請勿使用完整路徑名稱。  
   

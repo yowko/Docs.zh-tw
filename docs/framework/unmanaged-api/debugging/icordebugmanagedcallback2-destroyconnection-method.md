@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c38846dc142cf011cd7fe859626aa8c19426074
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e2d054057b1813e163193b14a754ebeda034563
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563791"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491330"
 ---
 # <a name="icordebugmanagedcallback2destroyconnection-method"></a>ICorDebugManagedCallback2::DestroyConnection 方法
 指定的連接已終止會告知偵錯工具。  
@@ -36,7 +36,7 @@ HRESULT DestroyConnection (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pProcess`  
  [in]代表包含已被終結的連接程序 ICorDebugProcess 物件的指標。  
   

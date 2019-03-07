@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d3b01deedd5cd7225c9e54b59ed82a708bad937
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e87d466e463cad2d9cd57c341812a0b57e025256
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513175"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479424"
 ---
 # <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a>ICorProfilerFunctionControl::SetILFunctionBody 方法
 取代方法的 Common Intermediate Language (CIL) 主體。  
@@ -35,7 +35,7 @@ HRESULT SetILFunctionBody(
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cbNewILMethodHeader`  
  [in] 新 CIL 的大小總計，包括主體後面的標頭和任何結構。  
   

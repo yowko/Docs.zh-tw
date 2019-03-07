@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4dd08afba664a491b3ba398f3da4c6a73cda5378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1725f637e5050afecd142be5574e4cb01517f909
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517132"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481574"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName 方法
 取得定義在指定的範圍內，也就是目前範圍以外的類型中繼資料語彙基元。  
@@ -37,7 +37,7 @@ HRESULT DefineTypeRefByName (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tkResolutionScope`  
  [in]指定的解析範圍語彙基元。 下列的語彙基元型別是有效的：  
   

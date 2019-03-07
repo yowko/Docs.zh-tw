@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1d669ae15c01a560f2cefb6e361ca32411652fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7cfa82ae8bbc87a884887f826d947c2d3f2c5341
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732969"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473522"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding 方法
 函數一樣[GetDebugInfo 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md)不同之處在於路徑字串以下列結束的 null 字元，讓字串資料的固定的大小的零來填補`MAX_PATH`。 如果路徑字串的長度本身是只指定填補小於`MAX_PATH`。  
@@ -22,7 +22,7 @@ ms.locfileid: "54732969"
 HRESULT GetDebugInfoWithPadding(    [in, out] IMAGE_DEBUG_DIRECTORY *pIDD,    [in] DWORD cData,    [out] DWORD *pcData,    [out, size_is(cData), length_is(*pcData)] BYTE data[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
 |參數|描述|  
 |---------------|-----------------|  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c765cb2e0e59fe2fcac562fdb2e926e878298c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f55675bf79b98a7af47f6bec561704a4e5dd565
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530271"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57486104"
 ---
 # <a name="icordebugcode4enumeratevariablehomes-method"></a>ICorDebugCode4::EnumerateVariableHomes 方法
 取得列舉值的本機變數和引數的函式中。  
@@ -35,7 +35,7 @@ HRESULT EnumerateVariableHomes(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppEnum`  
  位址指標[ICorDebugVariableHomeEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)介面物件的本機變數和引數的函式中的列舉值。  
   

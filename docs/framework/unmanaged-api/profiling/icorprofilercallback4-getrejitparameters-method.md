@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 14c0da3192bb5488c71527a70ed47b03933c0ae1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7aae292daefe9333585a50d1d8c9ce49b1008cd9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721213"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57470779"
 ---
 # <a name="icorprofilercallback4getrejitparameters-method"></a>ICorProfilerCallback4::GetReJITParameters 方法
 可讓程式碼剖析工具，來設定新的重新編譯的方法主體的替代程式碼產生旗標。  
@@ -33,7 +33,7 @@ ms.locfileid: "54721213"
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `moduleID`  
  [in]包含 CLR 必須 JIT 重新編譯參數之方法的模組。  
   

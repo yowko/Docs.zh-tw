@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2b65a621541f2b4a800f6b3708a6b257374c5866
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 039dc0d9befb038e643abc4e2524c133234f460b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419815"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492071"
 ---
 # <a name="icordebugprocessisossuspended-method"></a>ICorDebugProcess::IsOSSuspended 方法
-取得值，指出指定的執行緒是否已暫止偵錯工具停止此處理序的結果。  
+取得值，指出指定的執行緒是否已暫停偵錯工具停止此程序的結果。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,23 +35,23 @@ HRESULT IsOSSuspended(
     [out] BOOL  *pbSuspended);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `threadID`  
  [in]有問題的執行緒識別碼。  
   
  `pbSuspended`  
- [out]為的布林值的指標`true`如果指定的執行緒已經暫止的; 否則為 *`pbSuspended`是`false`。  
+ [out]布林值的指標`true`如果指定的執行緒已經暫止，否則為 *`pbSuspended`是`false`。  
   
 ## <a name="remarks"></a>備註  
- 指定的執行緒的 Win32 時指定的執行緒已暫停偵錯工具停止此處理序的結果，暫停計數就會累加 1。 偵錯工具使用者介面 (UI) 可能會想要取得這項資訊納入考量，如果它顯示作業系統 (OS) 暫停的使用者執行緒計數。  
+ 指定的執行緒的 Win32 時指定的執行緒已暫停偵錯工具停止此程序的結果，暫停計數會遞增 1。 偵錯工具使用者介面 (UI) 可能想要讓這項資訊列入考量，如果它會顯示作業系統 (OS) 暫止的執行緒給使用者的計數。  
   
- `IsOSSuspended`方法有意義的 unmanaged 偵錯內容中。 Managed 偵錯期間，執行緒會以合作方式暫止，而非 OS 暫停。  
+ `IsOSSuspended`方法有意義的非受控偵錯內容中。 Managed 偵錯期間，執行緒是以合作方式暫止而不是不是 OS 暫止。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
