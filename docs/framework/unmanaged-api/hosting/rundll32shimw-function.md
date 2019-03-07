@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 883f987eb168bf5996baba66f5081875e67f2000
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 336fba6defc00eb87fcfa7e6b1aaafa0fcb15691
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698722"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494203"
 ---
-# <a name="rundll32shimw-function"></a><span data-ttu-id="82328-102">RunDll32ShimW 函式</span><span class="sxs-lookup"><span data-stu-id="82328-102">RunDll32ShimW Function</span></span>
-<span data-ttu-id="82328-103">執行指定命令。</span><span class="sxs-lookup"><span data-stu-id="82328-103">Executes the specified command.</span></span>  
+# <a name="rundll32shimw-function"></a><span data-ttu-id="da07f-102">RunDll32ShimW 函式</span><span class="sxs-lookup"><span data-stu-id="da07f-102">RunDll32ShimW Function</span></span>
+<span data-ttu-id="da07f-103">執行指定命令。</span><span class="sxs-lookup"><span data-stu-id="da07f-103">Executes the specified command.</span></span>  
   
- <span data-ttu-id="82328-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="82328-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="da07f-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="da07f-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="82328-105">語法</span><span class="sxs-lookup"><span data-stu-id="82328-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da07f-105">語法</span><span class="sxs-lookup"><span data-stu-id="da07f-105">Syntax</span></span>  
   
 ```  
 HRESULT RunDll32ShimW (  
@@ -39,27 +39,27 @@ HRESULT RunDll32ShimW (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="82328-106">參數</span><span class="sxs-lookup"><span data-stu-id="82328-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da07f-106">參數</span><span class="sxs-lookup"><span data-stu-id="da07f-106">Parameters</span></span>  
  `hwnd`  
- <span data-ttu-id="82328-107">[in]將在其中顯示命令輸出的視窗控制代碼。</span><span class="sxs-lookup"><span data-stu-id="82328-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
+ <span data-ttu-id="da07f-107">[in]將在其中顯示命令輸出的視窗控制代碼。</span><span class="sxs-lookup"><span data-stu-id="da07f-107">[in] A handle to a window in which the command output will be displayed.</span></span>  
   
  `hinst`  
- <span data-ttu-id="82328-108">[in]包含命令的文件庫控制代碼。</span><span class="sxs-lookup"><span data-stu-id="82328-108">[in] A handle to the library that contains the command.</span></span>  
+ <span data-ttu-id="da07f-108">[in]包含命令的文件庫控制代碼。</span><span class="sxs-lookup"><span data-stu-id="da07f-108">[in] A handle to the library that contains the command.</span></span>  
   
  `lpszCmdLine`  
- <span data-ttu-id="82328-109">[in]字串，指定要執行的命令。</span><span class="sxs-lookup"><span data-stu-id="82328-109">[in] A string that specifies the command to be executed.</span></span>  
+ <span data-ttu-id="da07f-109">[in]字串，指定要執行的命令。</span><span class="sxs-lookup"><span data-stu-id="da07f-109">[in] A string that specifies the command to be executed.</span></span>  
   
  `nCmdShow`  
- <span data-ttu-id="82328-110">[in]整數，指定 [輸出] 視窗的顯示模式。</span><span class="sxs-lookup"><span data-stu-id="82328-110">[in] An integer that specifies the display mode for the output window.</span></span>  
+ <span data-ttu-id="da07f-110">[in]整數，指定 [輸出] 視窗的顯示模式。</span><span class="sxs-lookup"><span data-stu-id="da07f-110">[in] An integer that specifies the display mode for the output window.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="82328-111">需求</span><span class="sxs-lookup"><span data-stu-id="82328-111">Requirements</span></span>  
- <span data-ttu-id="82328-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="82328-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da07f-111">需求</span><span class="sxs-lookup"><span data-stu-id="da07f-111">Requirements</span></span>  
+ <span data-ttu-id="da07f-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da07f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="82328-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="82328-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="da07f-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="da07f-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="82328-114">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="82328-114">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="da07f-114">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="da07f-114">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="82328-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="82328-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="da07f-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="da07f-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="82328-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="82328-116">See also</span></span>
-- [<span data-ttu-id="82328-117">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="82328-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="da07f-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da07f-116">See also</span></span>
+- [<span data-ttu-id="da07f-117">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="da07f-117">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

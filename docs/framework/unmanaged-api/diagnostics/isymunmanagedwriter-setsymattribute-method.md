@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ab637b33797ebc5b6d16873cb460c465405b6849
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ee3e96a25a224fb5b025e22fa43169a64f6c0d2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645648"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501665"
 ---
-# <a name="isymunmanagedwritersetsymattribute-method"></a><span data-ttu-id="d89a1-102">ISymUnmanagedWriter::SetSymAttribute 方法</span><span class="sxs-lookup"><span data-stu-id="d89a1-102">ISymUnmanagedWriter::SetSymAttribute Method</span></span>
-<span data-ttu-id="d89a1-103">定義自訂屬性，根據其名稱。</span><span class="sxs-lookup"><span data-stu-id="d89a1-103">Defines a custom attribute based upon its name.</span></span> <span data-ttu-id="d89a1-104">這些屬性會保存在符號存放區，不同於中繼資料的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="d89a1-104">These attributes are held in the symbol store, unlike metadata custom attributes.</span></span>  
+# <a name="isymunmanagedwritersetsymattribute-method"></a><span data-ttu-id="5fbe1-102">ISymUnmanagedWriter::SetSymAttribute 方法</span><span class="sxs-lookup"><span data-stu-id="5fbe1-102">ISymUnmanagedWriter::SetSymAttribute Method</span></span>
+<span data-ttu-id="5fbe1-103">定義自訂屬性，根據其名稱。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-103">Defines a custom attribute based upon its name.</span></span> <span data-ttu-id="5fbe1-104">這些屬性會保存在符號存放區，不同於中繼資料的自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-104">These attributes are held in the symbol store, unlike metadata custom attributes.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d89a1-105">語法</span><span class="sxs-lookup"><span data-stu-id="d89a1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5fbe1-105">語法</span><span class="sxs-lookup"><span data-stu-id="5fbe1-105">Syntax</span></span>  
   
 ```  
 HRESULT SetSymAttribute(  
@@ -37,24 +37,24 @@ HRESULT SetSymAttribute(
     [in, size_is(cData)] unsigned char data[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d89a1-106">參數</span><span class="sxs-lookup"><span data-stu-id="d89a1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5fbe1-106">參數</span><span class="sxs-lookup"><span data-stu-id="5fbe1-106">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="d89a1-107">[in]中繼資料語彙基元，為其定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="d89a1-107">[in] The metadata token for which the attribute is being defined.</span></span>  
+ <span data-ttu-id="5fbe1-107">[in]中繼資料語彙基元，為其定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-107">[in] The metadata token for which the attribute is being defined.</span></span>  
   
  `name`  
- <span data-ttu-id="d89a1-108">[in]指標`WCHAR`，其中包含屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="d89a1-108">[in] A pointer to a `WCHAR` that contains the attribute name.</span></span>  
+ <span data-ttu-id="5fbe1-108">[in]指標`WCHAR`，其中包含屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-108">[in] A pointer to a `WCHAR` that contains the attribute name.</span></span>  
   
  `cData`  
- <span data-ttu-id="d89a1-109">[in]A`ULONG32`表示的大小`data`陣列。</span><span class="sxs-lookup"><span data-stu-id="d89a1-109">[in] A `ULONG32` that indicates the size of the `data` array.</span></span>  
+ <span data-ttu-id="5fbe1-109">[in]A`ULONG32`表示的大小`data`陣列。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-109">[in] A `ULONG32` that indicates the size of the `data` array.</span></span>  
   
  `data`  
- <span data-ttu-id="d89a1-110">[in]屬性值。</span><span class="sxs-lookup"><span data-stu-id="d89a1-110">[in] The attribute value.</span></span>  
+ <span data-ttu-id="5fbe1-110">[in]屬性值。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-110">[in] The attribute value.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="d89a1-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="d89a1-111">Return Value</span></span>  
- <span data-ttu-id="d89a1-112">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d89a1-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="5fbe1-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="5fbe1-111">Return Value</span></span>  
+ <span data-ttu-id="5fbe1-112">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="5fbe1-112">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d89a1-113">需求</span><span class="sxs-lookup"><span data-stu-id="d89a1-113">Requirements</span></span>  
- <span data-ttu-id="d89a1-114">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d89a1-114">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5fbe1-113">需求</span><span class="sxs-lookup"><span data-stu-id="5fbe1-113">Requirements</span></span>  
+ <span data-ttu-id="5fbe1-114">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="5fbe1-114">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d89a1-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d89a1-115">See also</span></span>
-- [<span data-ttu-id="d89a1-116">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="d89a1-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5fbe1-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5fbe1-115">See also</span></span>
+- [<span data-ttu-id="5fbe1-116">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="5fbe1-116">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

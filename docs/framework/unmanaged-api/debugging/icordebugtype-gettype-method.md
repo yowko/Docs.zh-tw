@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d881a1fe3965b6e1d89e6172c887061434cd52ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f6b36c524921a4fecf8bc5ddcbace62af6450b6d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492420"
 ---
-# <a name="icordebugtypegettype-method"></a><span data-ttu-id="e9ca6-102">ICorDebugType::GetType 方法</span><span class="sxs-lookup"><span data-stu-id="e9ca6-102">ICorDebugType::GetType Method</span></span>
-<span data-ttu-id="e9ca6-103">取得 CorElementType 值描述 common language runtime (CLR) 的原生類型<xref:System.Type>此 ICorDebugType 所表示。</span><span class="sxs-lookup"><span data-stu-id="e9ca6-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  
+# <a name="icordebugtypegettype-method"></a><span data-ttu-id="aefb6-102">ICorDebugType::GetType 方法</span><span class="sxs-lookup"><span data-stu-id="aefb6-102">ICorDebugType::GetType Method</span></span>
+<span data-ttu-id="aefb6-103">取得描述 common language runtime (CLR) 的原生類型 CorElementType 值<xref:System.Type>此 ICorDebugType 所表示。</span><span class="sxs-lookup"><span data-stu-id="aefb6-103">Gets a CorElementType value that describes the native type of the common language runtime (CLR) <xref:System.Type> represented by this ICorDebugType.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e9ca6-104">語法</span><span class="sxs-lookup"><span data-stu-id="e9ca6-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aefb6-104">語法</span><span class="sxs-lookup"><span data-stu-id="aefb6-104">Syntax</span></span>  
   
 ```  
 HRESULT GetType (  
@@ -35,18 +35,18 @@ HRESULT GetType (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="e9ca6-105">參數</span><span class="sxs-lookup"><span data-stu-id="e9ca6-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aefb6-105">參數</span><span class="sxs-lookup"><span data-stu-id="aefb6-105">Parameters</span></span>  
  `ty`  
- <span data-ttu-id="e9ca6-106">[out]值的指標`CorElementType`列舉，指出 CLR<xref:System.Type>這個`ICorDebugType`代表。</span><span class="sxs-lookup"><span data-stu-id="e9ca6-106">[out] A pointer to a value of the `CorElementType` enumeration that indicates the CLR <xref:System.Type> that this `ICorDebugType` represents.</span></span>  
+ <span data-ttu-id="aefb6-106">[out]值的指標`CorElementType`列舉，指出 CLR<xref:System.Type>這個`ICorDebugType`表示。</span><span class="sxs-lookup"><span data-stu-id="aefb6-106">[out] A pointer to a value of the `CorElementType` enumeration that indicates the CLR <xref:System.Type> that this `ICorDebugType` represents.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="e9ca6-107">備註</span><span class="sxs-lookup"><span data-stu-id="e9ca6-107">Remarks</span></span>  
- <span data-ttu-id="e9ca6-108">如果值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE， [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可能會呼叫以取得泛型類型的未具現化的類型; 否則請勿呼叫`ICorDebugType::GetClass`。</span><span class="sxs-lookup"><span data-stu-id="e9ca6-108">If the value of `ty` is either ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, the [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) method may be called to get the uninstantiated type for a generic type; otherwise, do not call `ICorDebugType::GetClass`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="aefb6-107">備註</span><span class="sxs-lookup"><span data-stu-id="aefb6-107">Remarks</span></span>  
+ <span data-ttu-id="aefb6-108">如果值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE， [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可能會呼叫以取得泛型型別未具現化的型別; 否則請勿呼叫`ICorDebugType::GetClass`。</span><span class="sxs-lookup"><span data-stu-id="aefb6-108">If the value of `ty` is either ELEMENT_TYPE_CLASS or ELEMENT_TYPE_VALUETYPE, the [ICorDebugType::GetClass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md) method may be called to get the uninstantiated type for a generic type; otherwise, do not call `ICorDebugType::GetClass`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e9ca6-109">需求</span><span class="sxs-lookup"><span data-stu-id="e9ca6-109">Requirements</span></span>  
- <span data-ttu-id="e9ca6-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e9ca6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aefb6-109">需求</span><span class="sxs-lookup"><span data-stu-id="aefb6-109">Requirements</span></span>  
+ <span data-ttu-id="aefb6-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aefb6-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e9ca6-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e9ca6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="aefb6-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="aefb6-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="e9ca6-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e9ca6-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="aefb6-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="aefb6-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e9ca6-113">**.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e9ca6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>
+ <span data-ttu-id="aefb6-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="aefb6-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8897eda39a0ff5f1a11a95aeea4e2887912592ec
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 262895d64b80ca5f382aad66d6cc6a4ca95b53c3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519251"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499221"
 ---
-# <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="00feb-102">ICorRuntimeHost::LocksHeldByLogicalThread 方法</span><span class="sxs-lookup"><span data-stu-id="00feb-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
-<span data-ttu-id="00feb-103">擷取目前的執行緒持有的鎖定數目。</span><span class="sxs-lookup"><span data-stu-id="00feb-103">Retrieves the number of locks that current thread holds.</span></span>  
+# <a name="icorruntimehostlocksheldbylogicalthread-method"></a><span data-ttu-id="869de-102">ICorRuntimeHost::LocksHeldByLogicalThread 方法</span><span class="sxs-lookup"><span data-stu-id="869de-102">ICorRuntimeHost::LocksHeldByLogicalThread Method</span></span>
+<span data-ttu-id="869de-103">擷取目前的執行緒持有的鎖定數目。</span><span class="sxs-lookup"><span data-stu-id="869de-103">Retrieves the number of locks that current thread holds.</span></span>  
   
- <span data-ttu-id="00feb-104">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="00feb-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+ <span data-ttu-id="869de-104">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="869de-104">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="00feb-105">語法</span><span class="sxs-lookup"><span data-stu-id="00feb-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="869de-105">語法</span><span class="sxs-lookup"><span data-stu-id="869de-105">Syntax</span></span>  
   
 ```  
 HRESULT LocksHeldByLogicalThread(  
@@ -37,18 +37,18 @@ HRESULT LocksHeldByLogicalThread(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="00feb-106">參數</span><span class="sxs-lookup"><span data-stu-id="00feb-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="869de-106">參數</span><span class="sxs-lookup"><span data-stu-id="869de-106">Parameters</span></span>  
  `pCount`  
- <span data-ttu-id="00feb-107">[out]目前的執行緒持有的鎖定數目指標。</span><span class="sxs-lookup"><span data-stu-id="00feb-107">[out] A pointer to the number of locks that the current thread holds.</span></span>  
+ <span data-ttu-id="869de-107">[out]目前的執行緒持有的鎖定數目指標。</span><span class="sxs-lookup"><span data-stu-id="869de-107">[out] A pointer to the number of locks that the current thread holds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="00feb-108">需求</span><span class="sxs-lookup"><span data-stu-id="00feb-108">Requirements</span></span>  
- <span data-ttu-id="00feb-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="00feb-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="869de-108">需求</span><span class="sxs-lookup"><span data-stu-id="869de-108">Requirements</span></span>  
+ <span data-ttu-id="869de-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="869de-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="00feb-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="00feb-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="869de-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="869de-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="00feb-111">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="00feb-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="869de-111">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="869de-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="00feb-112">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="00feb-112">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="869de-112">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="869de-112">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="00feb-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="00feb-113">See also</span></span>
-- [<span data-ttu-id="00feb-114">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="00feb-114">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="869de-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="869de-113">See also</span></span>
+- [<span data-ttu-id="869de-114">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="869de-114">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

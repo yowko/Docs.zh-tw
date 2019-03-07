@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b773203ef390122626ea3c51644e43e571740ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc4f24ae28be49dec7de2c0b9ebf9cc930989bfc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569306"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485131"
 ---
-# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="38b61-102">ICLRStrongName::StrongNameSignatureVerification 方法</span><span class="sxs-lookup"><span data-stu-id="38b61-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
-<span data-ttu-id="38b61-103">取得值，指出是否提供之路徑上的組件資訊清單包含強式名稱簽章，根據指定的旗標加以確認。</span><span class="sxs-lookup"><span data-stu-id="38b61-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
+# <a name="iclrstrongnamestrongnamesignatureverification-method"></a><span data-ttu-id="ed186-102">ICLRStrongName::StrongNameSignatureVerification 方法</span><span class="sxs-lookup"><span data-stu-id="ed186-102">ICLRStrongName::StrongNameSignatureVerification Method</span></span>
+<span data-ttu-id="ed186-103">取得值，指出是否提供之路徑上的組件資訊清單包含強式名稱簽章，根據指定的旗標加以確認。</span><span class="sxs-lookup"><span data-stu-id="ed186-103">Gets a value that indicates whether the assembly manifest at the supplied path contains a strong name signature, which is verified according to the specified flags.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="38b61-104">語法</span><span class="sxs-lookup"><span data-stu-id="38b61-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ed186-104">語法</span><span class="sxs-lookup"><span data-stu-id="ed186-104">Syntax</span></span>  
   
 ```  
 HRESULT StrongNameSignatureVerification (  
@@ -37,42 +37,42 @@ HRESULT StrongNameSignatureVerification (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="38b61-105">參數</span><span class="sxs-lookup"><span data-stu-id="38b61-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ed186-105">參數</span><span class="sxs-lookup"><span data-stu-id="ed186-105">Parameters</span></span>  
  `wszFilePath`  
- <span data-ttu-id="38b61-106">[in]可攜式可執行檔 （.dll 或.exe） 檔來確認組件路徑。</span><span class="sxs-lookup"><span data-stu-id="38b61-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
+ <span data-ttu-id="ed186-106">[in]可攜式可執行檔 （.dll 或.exe） 檔來確認組件路徑。</span><span class="sxs-lookup"><span data-stu-id="ed186-106">[in] The path to the portable executable (.dll or .exe) file for the assembly to verify.</span></span>  
   
  `dwInFlags`  
- <span data-ttu-id="38b61-107">[in]若要修改的驗證行為的旗標。</span><span class="sxs-lookup"><span data-stu-id="38b61-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="38b61-108">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="38b61-108">The following values are supported:</span></span>  
+ <span data-ttu-id="ed186-107">[in]若要修改的驗證行為的旗標。</span><span class="sxs-lookup"><span data-stu-id="ed186-107">[in] Flags to modify the verification behavior.</span></span> <span data-ttu-id="ed186-108">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="ed186-108">The following values are supported:</span></span>  
   
--   <span data-ttu-id="38b61-109">`SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。</span><span class="sxs-lookup"><span data-stu-id="38b61-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
+-   <span data-ttu-id="ed186-109">`SN_INFLAG_FORCE_VER` (0x00000001)-強制執行驗證，即使它是需要覆寫登錄設定。</span><span class="sxs-lookup"><span data-stu-id="ed186-109">`SN_INFLAG_FORCE_VER` (0x00000001) - Forces verification even if it is necessary to override registry settings.</span></span>  
   
--   <span data-ttu-id="38b61-110">`SN_INFLAG_INSTALL` (0x00000002)-指定驗證資訊清單的第一次。</span><span class="sxs-lookup"><span data-stu-id="38b61-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
+-   <span data-ttu-id="ed186-110">`SN_INFLAG_INSTALL` (0x00000002)-指定驗證資訊清單的第一次。</span><span class="sxs-lookup"><span data-stu-id="ed186-110">`SN_INFLAG_INSTALL` (0x00000002) - Specifies that this is the first time the manifest is verified.</span></span>  
   
--   <span data-ttu-id="38b61-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。</span><span class="sxs-lookup"><span data-stu-id="38b61-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
+-   <span data-ttu-id="ed186-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004)-指定快取可讓具有系統管理權限的使用者存取。</span><span class="sxs-lookup"><span data-stu-id="ed186-111">`SN_INFLAG_ADMIN_ACCESS` (0x00000004) - Specifies that the cache will allow access only to users who have administrative privileges.</span></span>  
   
--   <span data-ttu-id="38b61-112">`SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。</span><span class="sxs-lookup"><span data-stu-id="38b61-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
+-   <span data-ttu-id="ed186-112">`SN_INFLAG_USER_ACCESS` (0x00000008)-指定的組件都是僅供目前的使用者存取。</span><span class="sxs-lookup"><span data-stu-id="ed186-112">`SN_INFLAG_USER_ACCESS` (0x00000008) - Specifies that the assembly will be accessible only to the current user.</span></span>  
   
--   <span data-ttu-id="38b61-113">`SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。</span><span class="sxs-lookup"><span data-stu-id="38b61-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
+-   <span data-ttu-id="ed186-113">`SN_INFLAG_ALL_ACCESS` (0x00000010)-指定快取會提供任何保證的存取限制。</span><span class="sxs-lookup"><span data-stu-id="ed186-113">`SN_INFLAG_ALL_ACCESS` (0x00000010) - Specifies that the cache will provide no guarantees of access restriction.</span></span>  
   
--   <span data-ttu-id="38b61-114">`SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。</span><span class="sxs-lookup"><span data-stu-id="38b61-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
+-   <span data-ttu-id="ed186-114">`SN_INFLAG_RUNTIME` (0x80000000)-保留給內部偵錯。</span><span class="sxs-lookup"><span data-stu-id="ed186-114">`SN_INFLAG_RUNTIME` (0x80000000) - Reserved for internal debugging.</span></span>  
   
  `pdwOutFlags`  
- <span data-ttu-id="38b61-115">[out]旗標，指出是否已驗證的強式名稱簽章。</span><span class="sxs-lookup"><span data-stu-id="38b61-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="38b61-116">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="38b61-116">The following value is supported:</span></span>  
+ <span data-ttu-id="ed186-115">[out]旗標，指出是否已驗證的強式名稱簽章。</span><span class="sxs-lookup"><span data-stu-id="ed186-115">[out] Flags indicating whether the strong name signature was verified.</span></span> <span data-ttu-id="ed186-116">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="ed186-116">The following value is supported:</span></span>  
   
--   <span data-ttu-id="38b61-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。</span><span class="sxs-lookup"><span data-stu-id="38b61-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
+-   <span data-ttu-id="ed186-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001)-此值設為`false`，指定驗證成功，因為登錄設定。</span><span class="sxs-lookup"><span data-stu-id="ed186-117">`SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - This value is set to `false` to specify that the verification succeeded due to registry settings.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="38b61-118">傳回值</span><span class="sxs-lookup"><span data-stu-id="38b61-118">Return Value</span></span>  
- <span data-ttu-id="38b61-119">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="38b61-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ed186-118">傳回值</span><span class="sxs-lookup"><span data-stu-id="ed186-118">Return Value</span></span>  
+ <span data-ttu-id="ed186-119">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="ed186-119">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="38b61-120">需求</span><span class="sxs-lookup"><span data-stu-id="38b61-120">Requirements</span></span>  
- <span data-ttu-id="38b61-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="38b61-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ed186-120">需求</span><span class="sxs-lookup"><span data-stu-id="ed186-120">Requirements</span></span>  
+ <span data-ttu-id="ed186-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ed186-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="38b61-122">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="38b61-122">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="ed186-122">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="ed186-122">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="38b61-123">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="38b61-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="ed186-123">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ed186-123">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="38b61-124">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="38b61-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="ed186-124">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ed186-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="38b61-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="38b61-125">See also</span></span>
-- [<span data-ttu-id="38b61-126">StrongNameSignatureVerificationEx 方法</span><span class="sxs-lookup"><span data-stu-id="38b61-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
-- [<span data-ttu-id="38b61-127">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="38b61-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ed186-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ed186-125">See also</span></span>
+- [<span data-ttu-id="ed186-126">StrongNameSignatureVerificationEx 方法</span><span class="sxs-lookup"><span data-stu-id="ed186-126">StrongNameSignatureVerificationEx Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationex-method.md)
+- [<span data-ttu-id="ed186-127">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="ed186-127">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

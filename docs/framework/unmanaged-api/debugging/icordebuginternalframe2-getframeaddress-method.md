@@ -17,48 +17,48 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ab729bafdd8987a7c5a03145e02f5c8e5d441a3e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3293c3b0d5fa4615c351949afdb1acf8cd560b5e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711612"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57480711"
 ---
-# <a name="icordebuginternalframe2getframeaddress-method"></a><span data-ttu-id="51f62-102">ICorDebugInternalFrame2::GetFrameAddress 方法</span><span class="sxs-lookup"><span data-stu-id="51f62-102">ICorDebugInternalFrame2::GetFrameAddress Method</span></span>
-<span data-ttu-id="51f62-103">傳回內部框架的堆疊位址。</span><span class="sxs-lookup"><span data-stu-id="51f62-103">Returns the stack address of the internal frame.</span></span>  
+# <a name="icordebuginternalframe2getframeaddress-method"></a><span data-ttu-id="19d7e-102">ICorDebugInternalFrame2::GetFrameAddress 方法</span><span class="sxs-lookup"><span data-stu-id="19d7e-102">ICorDebugInternalFrame2::GetFrameAddress Method</span></span>
+<span data-ttu-id="19d7e-103">傳回內部框架的堆疊位址。</span><span class="sxs-lookup"><span data-stu-id="19d7e-103">Returns the stack address of the internal frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="51f62-104">語法</span><span class="sxs-lookup"><span data-stu-id="51f62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="19d7e-104">語法</span><span class="sxs-lookup"><span data-stu-id="19d7e-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="51f62-105">參數</span><span class="sxs-lookup"><span data-stu-id="51f62-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="19d7e-105">參數</span><span class="sxs-lookup"><span data-stu-id="19d7e-105">Parameters</span></span>  
  `pAddress`  
- <span data-ttu-id="51f62-106">[out]指標`CORDB_ADDRESS`內部框架。</span><span class="sxs-lookup"><span data-stu-id="51f62-106">[out] Pointer to the `CORDB_ADDRESS` for the internal frame.</span></span>  
+ <span data-ttu-id="19d7e-106">[out]指標`CORDB_ADDRESS`內部框架。</span><span class="sxs-lookup"><span data-stu-id="19d7e-106">[out] Pointer to the `CORDB_ADDRESS` for the internal frame.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="51f62-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="51f62-107">Return Value</span></span>  
- <span data-ttu-id="51f62-108">這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="51f62-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="19d7e-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="19d7e-107">Return Value</span></span>  
+ <span data-ttu-id="19d7e-108">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="19d7e-108">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="51f62-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="51f62-109">HRESULT</span></span>|<span data-ttu-id="51f62-110">描述</span><span class="sxs-lookup"><span data-stu-id="51f62-110">Description</span></span>|  
+|<span data-ttu-id="19d7e-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="19d7e-109">HRESULT</span></span>|<span data-ttu-id="19d7e-110">描述</span><span class="sxs-lookup"><span data-stu-id="19d7e-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="51f62-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="51f62-111">S_OK</span></span>|<span data-ttu-id="51f62-112">已成功地傳回內部框架的位址。</span><span class="sxs-lookup"><span data-stu-id="51f62-112">The address of the internal frame was successfully returned.</span></span>|  
-|<span data-ttu-id="51f62-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="51f62-113">E_FAIL</span></span>|<span data-ttu-id="51f62-114">不會傳回內部框架的位址。</span><span class="sxs-lookup"><span data-stu-id="51f62-114">The address of the internal frame could not be returned.</span></span>|  
-|<span data-ttu-id="51f62-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="51f62-115">E_INVALIDARG</span></span>|<span data-ttu-id="51f62-116">`pAddress` 為 `null`。</span><span class="sxs-lookup"><span data-stu-id="51f62-116">`pAddress` is `null`.</span></span>|  
+|<span data-ttu-id="19d7e-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="19d7e-111">S_OK</span></span>|<span data-ttu-id="19d7e-112">已成功地傳回內部框架的位址。</span><span class="sxs-lookup"><span data-stu-id="19d7e-112">The address of the internal frame was successfully returned.</span></span>|  
+|<span data-ttu-id="19d7e-113">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="19d7e-113">E_FAIL</span></span>|<span data-ttu-id="19d7e-114">不會傳回內部框架的位址。</span><span class="sxs-lookup"><span data-stu-id="19d7e-114">The address of the internal frame could not be returned.</span></span>|  
+|<span data-ttu-id="19d7e-115">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="19d7e-115">E_INVALIDARG</span></span>|<span data-ttu-id="19d7e-116">`pAddress` 為 `null`。</span><span class="sxs-lookup"><span data-stu-id="19d7e-116">`pAddress` is `null`.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="51f62-117">備註</span><span class="sxs-lookup"><span data-stu-id="51f62-117">Remarks</span></span>  
- <span data-ttu-id="51f62-118">中傳回的值`pAddress`可用來判斷內部相對於其他框架在堆疊上框架的位置。</span><span class="sxs-lookup"><span data-stu-id="51f62-118">The value returned in `pAddress` can be used to determine the location of the internal frame relative to other frames on the stack.</span></span> <span data-ttu-id="51f62-119">即使在 IA-64 為主的電腦內部框架都位於堆疊，而沒有備份存放區相對應的指標。</span><span class="sxs-lookup"><span data-stu-id="51f62-119">Even on IA-64-based computers, the internal frame lives on the stack only, and there is no corresponding pointer to a backing store.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="19d7e-117">備註</span><span class="sxs-lookup"><span data-stu-id="19d7e-117">Remarks</span></span>  
+ <span data-ttu-id="19d7e-118">中傳回的值`pAddress`可用來判斷內部相對於其他框架在堆疊上框架的位置。</span><span class="sxs-lookup"><span data-stu-id="19d7e-118">The value returned in `pAddress` can be used to determine the location of the internal frame relative to other frames on the stack.</span></span> <span data-ttu-id="19d7e-119">即使在 IA-64 為主的電腦內部框架都位於堆疊，而沒有備份存放區相對應的指標。</span><span class="sxs-lookup"><span data-stu-id="19d7e-119">Even on IA-64-based computers, the internal frame lives on the stack only, and there is no corresponding pointer to a backing store.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="51f62-120">需求</span><span class="sxs-lookup"><span data-stu-id="51f62-120">Requirements</span></span>  
- <span data-ttu-id="51f62-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="51f62-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="19d7e-120">需求</span><span class="sxs-lookup"><span data-stu-id="19d7e-120">Requirements</span></span>  
+ <span data-ttu-id="19d7e-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="19d7e-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="51f62-122">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="51f62-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="19d7e-122">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="19d7e-122">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="51f62-123">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="51f62-123">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="19d7e-123">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19d7e-123">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="51f62-124">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="51f62-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="19d7e-124">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19d7e-124">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="51f62-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51f62-125">See also</span></span>
-- [<span data-ttu-id="51f62-126">ICorDebugInternalFrame2 介面</span><span class="sxs-lookup"><span data-stu-id="51f62-126">ICorDebugInternalFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
-- [<span data-ttu-id="51f62-127">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="51f62-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="51f62-128">偵錯</span><span class="sxs-lookup"><span data-stu-id="51f62-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="19d7e-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19d7e-125">See also</span></span>
+- [<span data-ttu-id="19d7e-126">ICorDebugInternalFrame2 介面</span><span class="sxs-lookup"><span data-stu-id="19d7e-126">ICorDebugInternalFrame2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
+- [<span data-ttu-id="19d7e-127">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="19d7e-127">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="19d7e-128">偵錯</span><span class="sxs-lookup"><span data-stu-id="19d7e-128">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

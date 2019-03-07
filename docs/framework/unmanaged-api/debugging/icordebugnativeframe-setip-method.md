@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2d0628d3c8bf5912c811ddf4b2a00b9dfca4687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33a4315d8908906e9ae1511aa9501969752d4af6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639200"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484858"
 ---
-# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="9b535-102">ICorDebugNativeFrame::SetIP 方法</span><span class="sxs-lookup"><span data-stu-id="9b535-102">ICorDebugNativeFrame::SetIP Method</span></span>
-<span data-ttu-id="9b535-103">指令指標設定為原生程式碼中指定的位移位置。</span><span class="sxs-lookup"><span data-stu-id="9b535-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
+# <a name="icordebugnativeframesetip-method"></a><span data-ttu-id="cd006-102">ICorDebugNativeFrame::SetIP 方法</span><span class="sxs-lookup"><span data-stu-id="cd006-102">ICorDebugNativeFrame::SetIP Method</span></span>
+<span data-ttu-id="cd006-103">指令指標設定為原生程式碼中指定的位移位置。</span><span class="sxs-lookup"><span data-stu-id="cd006-103">Sets the instruction pointer to the specified offset location in native code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b535-104">語法</span><span class="sxs-lookup"><span data-stu-id="9b535-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd006-104">語法</span><span class="sxs-lookup"><span data-stu-id="cd006-104">Syntax</span></span>  
   
 ```  
 HRESULT SetIP (  
@@ -35,25 +35,25 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="9b535-105">參數</span><span class="sxs-lookup"><span data-stu-id="9b535-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cd006-105">參數</span><span class="sxs-lookup"><span data-stu-id="cd006-105">Parameters</span></span>  
  `nOffset`  
- <span data-ttu-id="9b535-106">[in]原生程式碼中的位移的位置。</span><span class="sxs-lookup"><span data-stu-id="9b535-106">[in] The offset location in the native code.</span></span>  
+ <span data-ttu-id="cd006-106">[in]原生程式碼中的位移的位置。</span><span class="sxs-lookup"><span data-stu-id="cd006-106">[in] The offset location in the native code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9b535-107">備註</span><span class="sxs-lookup"><span data-stu-id="9b535-107">Remarks</span></span>  
- <span data-ttu-id="9b535-108">呼叫`SetIP`立即使其失效，所有的框架和目前執行緒的鏈結。</span><span class="sxs-lookup"><span data-stu-id="9b535-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="9b535-109">如果偵錯工具必須在呼叫之後的畫面格資訊`SetIP`，它必須執行新的堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="9b535-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="cd006-107">備註</span><span class="sxs-lookup"><span data-stu-id="cd006-107">Remarks</span></span>  
+ <span data-ttu-id="cd006-108">呼叫`SetIP`立即使其失效，所有的框架和目前執行緒的鏈結。</span><span class="sxs-lookup"><span data-stu-id="cd006-108">Calls to `SetIP` immediately invalidate all frames and chains for the current thread.</span></span> <span data-ttu-id="cd006-109">如果偵錯工具必須在呼叫之後的畫面格資訊`SetIP`，它必須執行新的堆疊追蹤。</span><span class="sxs-lookup"><span data-stu-id="cd006-109">If the debugger needs frame information after a call to `SetIP`, it must perform a new stack trace.</span></span>  
   
- <span data-ttu-id="9b535-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)會嘗試將保留的堆疊框架處於有效狀態。</span><span class="sxs-lookup"><span data-stu-id="9b535-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="9b535-111">不過，即使框架是處於有效狀態，只要執行階段而言，仍可能有問題，例如未初始化的本機變數，依此類推。</span><span class="sxs-lookup"><span data-stu-id="9b535-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="9b535-112">呼叫端必須負責確保執行程式的一致性。</span><span class="sxs-lookup"><span data-stu-id="9b535-112">The caller is responsible for insuring coherency of the running program.</span></span>  
+ <span data-ttu-id="cd006-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)會嘗試將保留的堆疊框架處於有效狀態。</span><span class="sxs-lookup"><span data-stu-id="cd006-110">[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md) will attempt to keep the stack frame in a valid state.</span></span> <span data-ttu-id="cd006-111">不過，即使框架是處於有效狀態，只要執行階段而言，仍可能有問題，例如未初始化的本機變數，依此類推。</span><span class="sxs-lookup"><span data-stu-id="cd006-111">However, even if the frame is in a valid state, as far as the runtime is concerned, there still may be problems, such as uninitialized local variables, and so on.</span></span> <span data-ttu-id="cd006-112">呼叫端必須負責確保執行程式的一致性。</span><span class="sxs-lookup"><span data-stu-id="cd006-112">The caller is responsible for insuring coherency of the running program.</span></span>  
   
- <span data-ttu-id="9b535-113">在 64 位元平台，指令指標無法移出`catch`或`finally`區塊。</span><span class="sxs-lookup"><span data-stu-id="9b535-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="9b535-114">如果`SetIP`呼叫進行的 64 位元平台上的這類移動，它會傳回 HRESULT，指出失敗。</span><span class="sxs-lookup"><span data-stu-id="9b535-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
+ <span data-ttu-id="cd006-113">在 64 位元平台，指令指標無法移出`catch`或`finally`區塊。</span><span class="sxs-lookup"><span data-stu-id="cd006-113">On 64-bit platforms, the instruction pointer cannot be moved out of a `catch` or `finally` block.</span></span> <span data-ttu-id="cd006-114">如果`SetIP`呼叫進行的 64 位元平台上的這類移動，它會傳回 HRESULT，指出失敗。</span><span class="sxs-lookup"><span data-stu-id="cd006-114">If `SetIP` is called to make such a move on a 64-bit platform, it will return an HRESULT indicating failure.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b535-115">需求</span><span class="sxs-lookup"><span data-stu-id="9b535-115">Requirements</span></span>  
- <span data-ttu-id="9b535-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9b535-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd006-115">需求</span><span class="sxs-lookup"><span data-stu-id="cd006-115">Requirements</span></span>  
+ <span data-ttu-id="cd006-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd006-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b535-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="9b535-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cd006-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cd006-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="9b535-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="9b535-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cd006-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd006-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="9b535-119">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b535-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="cd006-119">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cd006-119">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9b535-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b535-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="cd006-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd006-120">See also</span></span>
 

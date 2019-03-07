@@ -20,19 +20,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5103490da7f3056cf95f7986b46837e059f8212f
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: c1c576bd4a7bc29be2647a858a680b91e602d2c4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211828"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488873"
 ---
-# <a name="clrcreatemanagedinstance-function"></a><span data-ttu-id="632ce-102">ClrCreateManagedInstance 函式</span><span class="sxs-lookup"><span data-stu-id="632ce-102">ClrCreateManagedInstance Function</span></span>
-<span data-ttu-id="632ce-103">建立指定之 managed 型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="632ce-103">Creates an instance of the specified managed type.</span></span>  
+# <a name="clrcreatemanagedinstance-function"></a><span data-ttu-id="5a079-102">ClrCreateManagedInstance 函式</span><span class="sxs-lookup"><span data-stu-id="5a079-102">ClrCreateManagedInstance Function</span></span>
+<span data-ttu-id="5a079-103">建立指定之 managed 型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="5a079-103">Creates an instance of the specified managed type.</span></span>  
   
- <span data-ttu-id="632ce-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="632ce-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="632ce-105">若要建立的 managed 類型中，執行個體中使用 COM 啟動，或使用裝載 (請參閱[CLR 裝載介面中加入.NET Framework 4 和 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md))。</span><span class="sxs-lookup"><span data-stu-id="632ce-105">Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span></span>  
+ <span data-ttu-id="5a079-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="5a079-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span> <span data-ttu-id="5a079-105">若要建立的 managed 類型中，執行個體中使用 COM 啟動，或使用裝載 (請參閱[CLR 裝載介面中加入.NET Framework 4 和 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md))。</span><span class="sxs-lookup"><span data-stu-id="5a079-105">Use COM activation to create an instance of the managed type, or use hosting (see [CLR Hosting Interfaces Added in the .NET Framework 4 and 4.5](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="632ce-106">語法</span><span class="sxs-lookup"><span data-stu-id="632ce-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a079-106">語法</span><span class="sxs-lookup"><span data-stu-id="5a079-106">Syntax</span></span>  
   
 ```  
 STDAPI ClrCreateManagedInstance (  
@@ -42,28 +42,28 @@ STDAPI ClrCreateManagedInstance (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="632ce-107">參數</span><span class="sxs-lookup"><span data-stu-id="632ce-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5a079-107">參數</span><span class="sxs-lookup"><span data-stu-id="5a079-107">Parameters</span></span>  
  `pTypeName`  
- <span data-ttu-id="632ce-108">[in]所要求的執行個體類型的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="632ce-108">[in] A pointer to the name of the instance type being requested.</span></span>  
+ <span data-ttu-id="5a079-108">[in]所要求的執行個體類型的名稱指標。</span><span class="sxs-lookup"><span data-stu-id="5a079-108">[in] A pointer to the name of the instance type being requested.</span></span>  
   
  `riid`  
- <span data-ttu-id="632ce-109">[in]`IID`所要求的執行個體類型。</span><span class="sxs-lookup"><span data-stu-id="632ce-109">[in] The `IID` of the instance type being requested.</span></span>  
+ <span data-ttu-id="5a079-109">[in]`IID`所要求的執行個體類型。</span><span class="sxs-lookup"><span data-stu-id="5a079-109">[in] The `IID` of the instance type being requested.</span></span>  
   
  `ppObject`  
- <span data-ttu-id="632ce-110">[out]指標的指標，呼叫端所要求之 managed 型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="632ce-110">[out] A pointer to a pointer to an instance of the managed type that was requested by the caller.</span></span>  
+ <span data-ttu-id="5a079-110">[out]指標的指標，呼叫端所要求之 managed 型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="5a079-110">[out] A pointer to a pointer to an instance of the managed type that was requested by the caller.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="632ce-111">備註</span><span class="sxs-lookup"><span data-stu-id="632ce-111">Remarks</span></span>  
- <span data-ttu-id="632ce-112">Common language runtime 已應載入的程序。</span><span class="sxs-lookup"><span data-stu-id="632ce-112">The common language runtime should already be loaded into a process.</span></span> <span data-ttu-id="632ce-113">例如，藉由呼叫載入[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函式之前`ClrCreateManagedInstance`呼叫函式。</span><span class="sxs-lookup"><span data-stu-id="632ce-113">For example, it can be loaded by using a call to the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function before the `ClrCreateManagedInstance` function is called.</span></span> <span data-ttu-id="632ce-114">如果未載入執行階段，`ClrCreateManagedInstance`第一次嘗試載入 v1.0.3705 的執行階段。</span><span class="sxs-lookup"><span data-stu-id="632ce-114">If the runtime is not loaded, `ClrCreateManagedInstance` first tries to load v1.0.3705 of the runtime.</span></span> <span data-ttu-id="632ce-115">如果失敗，它會嘗試載入的執行階段的最新版本。</span><span class="sxs-lookup"><span data-stu-id="632ce-115">If that fails, it attempts to load the latest version of the runtime.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a079-111">備註</span><span class="sxs-lookup"><span data-stu-id="5a079-111">Remarks</span></span>  
+ <span data-ttu-id="5a079-112">Common language runtime 已應載入的程序。</span><span class="sxs-lookup"><span data-stu-id="5a079-112">The common language runtime should already be loaded into a process.</span></span> <span data-ttu-id="5a079-113">例如，藉由呼叫載入[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函式之前`ClrCreateManagedInstance`呼叫函式。</span><span class="sxs-lookup"><span data-stu-id="5a079-113">For example, it can be loaded by using a call to the [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) function before the `ClrCreateManagedInstance` function is called.</span></span> <span data-ttu-id="5a079-114">如果未載入執行階段，`ClrCreateManagedInstance`第一次嘗試載入 v1.0.3705 的執行階段。</span><span class="sxs-lookup"><span data-stu-id="5a079-114">If the runtime is not loaded, `ClrCreateManagedInstance` first tries to load v1.0.3705 of the runtime.</span></span> <span data-ttu-id="5a079-115">如果失敗，它會嘗試載入的執行階段的最新版本。</span><span class="sxs-lookup"><span data-stu-id="5a079-115">If that fails, it attempts to load the latest version of the runtime.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="632ce-116">需求</span><span class="sxs-lookup"><span data-stu-id="632ce-116">Requirements</span></span>  
- <span data-ttu-id="632ce-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="632ce-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a079-116">需求</span><span class="sxs-lookup"><span data-stu-id="5a079-116">Requirements</span></span>  
+ <span data-ttu-id="5a079-117">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a079-117">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="632ce-118">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="632ce-118">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="5a079-118">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="5a079-118">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="632ce-119">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="632ce-119">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="5a079-119">**程式庫：** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="5a079-119">**Library:** MSCorEE.dll</span></span>  
   
- <span data-ttu-id="632ce-120">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="632ce-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="5a079-120">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a079-120">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="632ce-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="632ce-121">See also</span></span>
-- [<span data-ttu-id="632ce-122">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="632ce-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
-- [<span data-ttu-id="632ce-123">裝載</span><span class="sxs-lookup"><span data-stu-id="632ce-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)
+## <a name="see-also"></a><span data-ttu-id="5a079-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a079-121">See also</span></span>
+- [<span data-ttu-id="5a079-122">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="5a079-122">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="5a079-123">裝載</span><span class="sxs-lookup"><span data-stu-id="5a079-123">Hosting</span></span>](../../../../docs/framework/unmanaged-api/hosting/index.md)

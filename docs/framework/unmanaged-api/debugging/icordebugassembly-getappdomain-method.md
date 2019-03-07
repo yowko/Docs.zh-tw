@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e22d112d1414b13033f73723821e5e4b5764e1c8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: a9ba09b80d7118b0ccd9b1647011a7fc7cd74e22
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33401975"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485105"
 ---
-# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="ea0dc-102">ICorDebugAssembly::GetAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="ea0dc-102">ICorDebugAssembly::GetAppDomain Method</span></span>
-<span data-ttu-id="ea0dc-103">取得包含這個應用程式定義域的介面指標`ICorDebugAssembly`執行個體。</span><span class="sxs-lookup"><span data-stu-id="ea0dc-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
+# <a name="icordebugassemblygetappdomain-method"></a><span data-ttu-id="4d3bc-102">ICorDebugAssembly::GetAppDomain 方法</span><span class="sxs-lookup"><span data-stu-id="4d3bc-102">ICorDebugAssembly::GetAppDomain Method</span></span>
+<span data-ttu-id="4d3bc-103">取得包含這個應用程式定義域的介面指標`ICorDebugAssembly`執行個體。</span><span class="sxs-lookup"><span data-stu-id="4d3bc-103">Gets an interface pointer to the application domain that contains this `ICorDebugAssembly` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ea0dc-104">語法</span><span class="sxs-lookup"><span data-stu-id="ea0dc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4d3bc-104">語法</span><span class="sxs-lookup"><span data-stu-id="4d3bc-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAppDomain (  
@@ -35,18 +35,18 @@ HRESULT GetAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ea0dc-105">參數</span><span class="sxs-lookup"><span data-stu-id="ea0dc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4d3bc-105">參數</span><span class="sxs-lookup"><span data-stu-id="4d3bc-105">Parameters</span></span>  
  `ppAppDomain`  
- <span data-ttu-id="ea0dc-106">[out]ICorDebugAppDomain 介面，表示應用程式定義域的位址指標。</span><span class="sxs-lookup"><span data-stu-id="ea0dc-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
+ <span data-ttu-id="4d3bc-106">[out]ICorDebugAppDomain 介面，代表應用程式定義域的位址指標。</span><span class="sxs-lookup"><span data-stu-id="4d3bc-106">[out] A pointer to the address of an ICorDebugAppDomain interface that represents the application domain.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ea0dc-107">備註</span><span class="sxs-lookup"><span data-stu-id="ea0dc-107">Remarks</span></span>  
- <span data-ttu-id="ea0dc-108">如果這個組件是系統組件`GetAppDomain`會傳回 null。</span><span class="sxs-lookup"><span data-stu-id="ea0dc-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="4d3bc-107">備註</span><span class="sxs-lookup"><span data-stu-id="4d3bc-107">Remarks</span></span>  
+ <span data-ttu-id="4d3bc-108">如果這個組件是系統組件`GetAppDomain`會傳回 null。</span><span class="sxs-lookup"><span data-stu-id="4d3bc-108">If this assembly is the system assembly, `GetAppDomain` returns null.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ea0dc-109">需求</span><span class="sxs-lookup"><span data-stu-id="ea0dc-109">Requirements</span></span>  
- <span data-ttu-id="ea0dc-110">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ea0dc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4d3bc-109">需求</span><span class="sxs-lookup"><span data-stu-id="4d3bc-109">Requirements</span></span>  
+ <span data-ttu-id="4d3bc-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4d3bc-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ea0dc-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ea0dc-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4d3bc-111">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4d3bc-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ea0dc-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ea0dc-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4d3bc-112">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4d3bc-112">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ea0dc-113">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ea0dc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4d3bc-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4d3bc-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

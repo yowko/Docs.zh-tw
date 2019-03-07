@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1a37edd38cd8dc6971ee9185f73d6c6d8ab5332b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f025bf8f6e71192ca128f8c9908780a159700757
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657126"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482193"
 ---
-# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="0617b-102">IMetaDataEmit::SetParent 方法</span><span class="sxs-lookup"><span data-stu-id="0617b-102">IMetaDataEmit::SetParent Method</span></span>
-<span data-ttu-id="0617b-103">建立所指定的成員，由先前呼叫所定義[imetadataemit:: Definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)，是由先前呼叫定義的指定類型的成員[imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)。</span><span class="sxs-lookup"><span data-stu-id="0617b-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
+# <a name="imetadataemitsetparent-method"></a><span data-ttu-id="7a10e-102">IMetaDataEmit::SetParent 方法</span><span class="sxs-lookup"><span data-stu-id="7a10e-102">IMetaDataEmit::SetParent Method</span></span>
+<span data-ttu-id="7a10e-103">建立所指定的成員，由先前呼叫所定義[imetadataemit:: Definememberref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md)，是由先前呼叫定義的指定類型的成員[imetadataemit:: Definetypedef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)。</span><span class="sxs-lookup"><span data-stu-id="7a10e-103">Establishes that the specified member, as defined by a prior call to [IMetaDataEmit::DefineMemberRef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definememberref-method.md), is a member of the specified type, as defined by a prior call to [IMetaDataEmit::DefineTypeDef](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="0617b-104">語法</span><span class="sxs-lookup"><span data-stu-id="0617b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7a10e-104">語法</span><span class="sxs-lookup"><span data-stu-id="7a10e-104">Syntax</span></span>  
   
 ```  
 HRESULT SetParent (   
@@ -36,22 +36,22 @@ HRESULT SetParent (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="0617b-105">參數</span><span class="sxs-lookup"><span data-stu-id="0617b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7a10e-105">參數</span><span class="sxs-lookup"><span data-stu-id="7a10e-105">Parameters</span></span>  
  `mr`  
- <span data-ttu-id="0617b-106">[in]`mdMemberRef`接收新的父項的權杖。</span><span class="sxs-lookup"><span data-stu-id="0617b-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
+ <span data-ttu-id="7a10e-106">[in]`mdMemberRef`接收新的父項的權杖。</span><span class="sxs-lookup"><span data-stu-id="7a10e-106">[in] The `mdMemberRef` token to receive a new parent.</span></span>  
   
  `tk`  
- <span data-ttu-id="0617b-107">[in]`mdToken` ，新的父代。</span><span class="sxs-lookup"><span data-stu-id="0617b-107">[in] The `mdToken` for the new parent.</span></span>  
+ <span data-ttu-id="7a10e-107">[in]`mdToken` ，新的父代。</span><span class="sxs-lookup"><span data-stu-id="7a10e-107">[in] The `mdToken` for the new parent.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="0617b-108">需求</span><span class="sxs-lookup"><span data-stu-id="0617b-108">Requirements</span></span>  
- <span data-ttu-id="0617b-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0617b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7a10e-108">需求</span><span class="sxs-lookup"><span data-stu-id="7a10e-108">Requirements</span></span>  
+ <span data-ttu-id="7a10e-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7a10e-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="0617b-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0617b-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="7a10e-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="7a10e-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="0617b-111">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0617b-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7a10e-111">**程式庫：** 做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7a10e-111">**Library:** Used as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="0617b-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0617b-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="7a10e-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7a10e-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="0617b-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0617b-113">See also</span></span>
-- [<span data-ttu-id="0617b-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="0617b-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="0617b-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="0617b-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7a10e-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7a10e-113">See also</span></span>
+- [<span data-ttu-id="7a10e-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="7a10e-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="7a10e-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="7a10e-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

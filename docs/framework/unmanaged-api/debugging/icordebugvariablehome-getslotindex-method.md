@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3534160e14c46bc3f8f5da81c4c14a3191a6238b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 186f4a939cb3e01a527cf6ef06029232e7f5c22a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553187"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489350"
 ---
-# <a name="icordebugvariablehomegetslotindex-method"></a><span data-ttu-id="15089-102">ICorDebugVariableHome::GetSlotIndex 方法</span><span class="sxs-lookup"><span data-stu-id="15089-102">ICorDebugVariableHome::GetSlotIndex Method</span></span>
-<span data-ttu-id="15089-103">取得區域變數的 managed 的位置索引。</span><span class="sxs-lookup"><span data-stu-id="15089-103">Gets the managed slot-index of a local variable.</span></span>  
+# <a name="icordebugvariablehomegetslotindex-method"></a><span data-ttu-id="b52fa-102">ICorDebugVariableHome::GetSlotIndex 方法</span><span class="sxs-lookup"><span data-stu-id="b52fa-102">ICorDebugVariableHome::GetSlotIndex Method</span></span>
+<span data-ttu-id="b52fa-103">取得區域變數的 managed 的位置索引。</span><span class="sxs-lookup"><span data-stu-id="b52fa-103">Gets the managed slot-index of a local variable.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="15089-104">語法</span><span class="sxs-lookup"><span data-stu-id="15089-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b52fa-104">語法</span><span class="sxs-lookup"><span data-stu-id="b52fa-104">Syntax</span></span>  
   
 ```  
 HRESULT GetSlotIndex(  
@@ -35,29 +35,29 @@ HRESULT GetSlotIndex(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="15089-105">參數</span><span class="sxs-lookup"><span data-stu-id="15089-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b52fa-105">參數</span><span class="sxs-lookup"><span data-stu-id="b52fa-105">Parameters</span></span>  
  `pSlotIndex`  
- <span data-ttu-id="15089-106">[out]區域變數位置索引指標。</span><span class="sxs-lookup"><span data-stu-id="15089-106">[out] A pointer to the slot-index of a local variable.</span></span>  
+ <span data-ttu-id="b52fa-106">[out]區域變數位置索引指標。</span><span class="sxs-lookup"><span data-stu-id="b52fa-106">[out] A pointer to the slot-index of a local variable.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="15089-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="15089-107">Return Value</span></span>  
- <span data-ttu-id="15089-108">方法會傳回下列值。</span><span class="sxs-lookup"><span data-stu-id="15089-108">The method returns the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b52fa-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="b52fa-107">Return Value</span></span>  
+ <span data-ttu-id="b52fa-108">方法會傳回下列值。</span><span class="sxs-lookup"><span data-stu-id="b52fa-108">The method returns the following values.</span></span>  
   
-|<span data-ttu-id="15089-109">值</span><span class="sxs-lookup"><span data-stu-id="15089-109">Value</span></span>|<span data-ttu-id="15089-110">描述</span><span class="sxs-lookup"><span data-stu-id="15089-110">Description</span></span>|  
+|<span data-ttu-id="b52fa-109">值</span><span class="sxs-lookup"><span data-stu-id="b52fa-109">Value</span></span>|<span data-ttu-id="b52fa-110">描述</span><span class="sxs-lookup"><span data-stu-id="b52fa-110">Description</span></span>|  
 |-----------|-----------------|  
-|`S_OK`|<span data-ttu-id="15089-111">方法呼叫傳回的位置索引值`pSlotIndex`。</span><span class="sxs-lookup"><span data-stu-id="15089-111">The method call returned a slot-index value in `pSlotIndex`.</span></span>|  
-|`E_FAIL`|<span data-ttu-id="15089-112">目前[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)執行個體代表的函式引數。</span><span class="sxs-lookup"><span data-stu-id="15089-112">The current [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance represents a function argument.</span></span>|  
+|`S_OK`|<span data-ttu-id="b52fa-111">方法呼叫傳回的位置索引值`pSlotIndex`。</span><span class="sxs-lookup"><span data-stu-id="b52fa-111">The method call returned a slot-index value in `pSlotIndex`.</span></span>|  
+|`E_FAIL`|<span data-ttu-id="b52fa-112">目前[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)執行個體代表的函式引數。</span><span class="sxs-lookup"><span data-stu-id="b52fa-112">The current [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instance represents a function argument.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="15089-113">備註</span><span class="sxs-lookup"><span data-stu-id="15089-113">Remarks</span></span>  
- <span data-ttu-id="15089-114">位置索引可用來擷取這個區域變數的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="15089-114">The slot-index can be used to retrieve the metadata for this local variable.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="b52fa-113">備註</span><span class="sxs-lookup"><span data-stu-id="b52fa-113">Remarks</span></span>  
+ <span data-ttu-id="b52fa-114">位置索引可用來擷取這個區域變數的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="b52fa-114">The slot-index can be used to retrieve the metadata for this local variable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="15089-115">需求</span><span class="sxs-lookup"><span data-stu-id="15089-115">Requirements</span></span>  
- <span data-ttu-id="15089-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="15089-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b52fa-115">需求</span><span class="sxs-lookup"><span data-stu-id="b52fa-115">Requirements</span></span>  
+ <span data-ttu-id="b52fa-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b52fa-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="15089-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="15089-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="b52fa-117">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="b52fa-117">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="15089-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="15089-118">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="b52fa-118">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b52fa-118">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="15089-119">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="15089-119">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="b52fa-119">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="b52fa-119">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="15089-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="15089-120">See also</span></span>
-- [<span data-ttu-id="15089-121">ICorDebugVariableHome 介面</span><span class="sxs-lookup"><span data-stu-id="15089-121">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b52fa-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b52fa-120">See also</span></span>
+- [<span data-ttu-id="b52fa-121">ICorDebugVariableHome 介面</span><span class="sxs-lookup"><span data-stu-id="b52fa-121">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c3d20b1b9470c744f6dca9ef638555b9322c1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bdd1a22a771a8d0c3cbab511e14eb3456df5032
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658113"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497778"
 ---
-# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="f96d8-102">IAssemblyCache::QueryAssemblyInfo 方法</span><span class="sxs-lookup"><span data-stu-id="f96d8-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
-<span data-ttu-id="f96d8-103">取得指定的組件的相關要求的資料。</span><span class="sxs-lookup"><span data-stu-id="f96d8-103">Gets the requested data about the specified assembly.</span></span>  
+# <a name="iassemblycachequeryassemblyinfo-method"></a><span data-ttu-id="a6e1a-102">IAssemblyCache::QueryAssemblyInfo 方法</span><span class="sxs-lookup"><span data-stu-id="a6e1a-102">IAssemblyCache::QueryAssemblyInfo Method</span></span>
+<span data-ttu-id="a6e1a-103">取得指定的組件的相關要求的資料。</span><span class="sxs-lookup"><span data-stu-id="a6e1a-103">Gets the requested data about the specified assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f96d8-104">語法</span><span class="sxs-lookup"><span data-stu-id="f96d8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a6e1a-104">語法</span><span class="sxs-lookup"><span data-stu-id="a6e1a-104">Syntax</span></span>  
   
 ```  
 HRESULT QueryAssemblyInfo (  
@@ -37,26 +37,26 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f96d8-105">參數</span><span class="sxs-lookup"><span data-stu-id="f96d8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="a6e1a-105">參數</span><span class="sxs-lookup"><span data-stu-id="a6e1a-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="f96d8-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="f96d8-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="f96d8-107">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="f96d8-107">The following values are supported:</span></span>  
+ <span data-ttu-id="a6e1a-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="a6e1a-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="a6e1a-107">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="a6e1a-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="f96d8-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="f96d8-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
+-   <span data-ttu-id="a6e1a-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="a6e1a-108">QUERYASMINFO_FLAG_VALIDATE (0x00000001)</span></span>  
   
--   <span data-ttu-id="f96d8-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="f96d8-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
+-   <span data-ttu-id="a6e1a-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="a6e1a-109">QUERYASMINFO_FLAG_GETSIZE (0x00000002)</span></span>  
   
  `pszAssemblyName`  
- <span data-ttu-id="f96d8-110">[in]將擷取資料的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="f96d8-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
+ <span data-ttu-id="a6e1a-110">[in]將擷取資料的組件名稱。</span><span class="sxs-lookup"><span data-stu-id="a6e1a-110">[in] The name of the assembly for which data will be retrieved.</span></span>  
   
  `pAsmInfo`  
- <span data-ttu-id="f96d8-111">[in、 out][ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)包含組件的相關資料結構。</span><span class="sxs-lookup"><span data-stu-id="f96d8-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
+ <span data-ttu-id="a6e1a-111">[in、 out][ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md)包含組件的相關資料結構。</span><span class="sxs-lookup"><span data-stu-id="a6e1a-111">[in, out] An [ASSEMBLY_INFO](../../../../docs/framework/unmanaged-api/fusion/assembly-info-structure.md) structure that contains data about the assembly.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f96d8-112">需求</span><span class="sxs-lookup"><span data-stu-id="f96d8-112">Requirements</span></span>  
- <span data-ttu-id="f96d8-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f96d8-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a6e1a-112">需求</span><span class="sxs-lookup"><span data-stu-id="a6e1a-112">Requirements</span></span>  
+ <span data-ttu-id="a6e1a-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a6e1a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f96d8-114">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="f96d8-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="a6e1a-114">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="a6e1a-114">**Header:** Fusion.h</span></span>  
   
- <span data-ttu-id="f96d8-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f96d8-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="a6e1a-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a6e1a-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f96d8-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f96d8-116">See also</span></span>
-- [<span data-ttu-id="f96d8-117">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="f96d8-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+## <a name="see-also"></a><span data-ttu-id="a6e1a-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a6e1a-116">See also</span></span>
+- [<span data-ttu-id="a6e1a-117">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="a6e1a-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

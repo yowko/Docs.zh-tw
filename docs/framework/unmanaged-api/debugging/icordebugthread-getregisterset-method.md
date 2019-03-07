@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc218370779742055e14dc62a8475c42c344c40c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 909bcad035516c494d1f867b71bb8f52939eba13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418730"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496426"
 ---
-# <a name="icordebugthreadgetregisterset-method"></a><span data-ttu-id="ffc4b-102">ICorDebugThread::GetRegisterSet 方法</span><span class="sxs-lookup"><span data-stu-id="ffc4b-102">ICorDebugThread::GetRegisterSet Method</span></span>
-<span data-ttu-id="ffc4b-103">取得為這個 ICorDebugThread 物件的使用中部分相關聯的登錄設定的介面指標。</span><span class="sxs-lookup"><span data-stu-id="ffc4b-103">Gets an interface pointer to the register set that is associated with the active part of this ICorDebugThread object.</span></span>  
+# <a name="icordebugthreadgetregisterset-method"></a><span data-ttu-id="4b9bd-102">ICorDebugThread::GetRegisterSet 方法</span><span class="sxs-lookup"><span data-stu-id="4b9bd-102">ICorDebugThread::GetRegisterSet Method</span></span>
+<span data-ttu-id="4b9bd-103">取得與這個 ICorDebugThread 物件的使用中部分相關聯的暫存器集的介面指標。</span><span class="sxs-lookup"><span data-stu-id="4b9bd-103">Gets an interface pointer to the register set that is associated with the active part of this ICorDebugThread object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ffc4b-104">語法</span><span class="sxs-lookup"><span data-stu-id="ffc4b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4b9bd-104">語法</span><span class="sxs-lookup"><span data-stu-id="4b9bd-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRegisterSet (  
@@ -35,15 +35,15 @@ HRESULT GetRegisterSet (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="ffc4b-105">參數</span><span class="sxs-lookup"><span data-stu-id="ffc4b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4b9bd-105">參數</span><span class="sxs-lookup"><span data-stu-id="4b9bd-105">Parameters</span></span>  
  `ppRegisters`  
- <span data-ttu-id="ffc4b-106">[out]位址指標[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)介面物件，表示登錄設定這個執行緒的使用中部分。</span><span class="sxs-lookup"><span data-stu-id="ffc4b-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interface object that represents the register set for the active part of this thread.</span></span>  
+ <span data-ttu-id="4b9bd-106">[out]位址指標[ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)介面的物件，代表註冊為此執行緒的使用中部分。</span><span class="sxs-lookup"><span data-stu-id="4b9bd-106">[out] A pointer to the address of an [ICorDebugRegisterSet](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md) interface object that represents the register set for the active part of this thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ffc4b-107">需求</span><span class="sxs-lookup"><span data-stu-id="ffc4b-107">Requirements</span></span>  
- <span data-ttu-id="ffc4b-108">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ffc4b-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4b9bd-107">需求</span><span class="sxs-lookup"><span data-stu-id="4b9bd-107">Requirements</span></span>  
+ <span data-ttu-id="4b9bd-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4b9bd-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ffc4b-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="ffc4b-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="4b9bd-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="4b9bd-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="ffc4b-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ffc4b-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="4b9bd-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="4b9bd-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="ffc4b-111">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="ffc4b-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="4b9bd-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4b9bd-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>

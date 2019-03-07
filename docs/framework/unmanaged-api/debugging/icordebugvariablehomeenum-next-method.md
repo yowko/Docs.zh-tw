@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d383d4bf0f3d203c331ff00981885cbc6c0c35d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8dd2d188b273d857ba92914f490e3448ba01601c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519199"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492474"
 ---
-# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="85d1d-102">ICorDebugVariableHomeEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="85d1d-102">ICorDebugVariableHomeEnum::Next Method</span></span>
-<span data-ttu-id="85d1d-103">取得指定的數目[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)包含區域變數和函式中的引數的相關資訊的執行個體。</span><span class="sxs-lookup"><span data-stu-id="85d1d-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
+# <a name="icordebugvariablehomeenumnext-method"></a><span data-ttu-id="c783f-102">ICorDebugVariableHomeEnum::Next 方法</span><span class="sxs-lookup"><span data-stu-id="c783f-102">ICorDebugVariableHomeEnum::Next Method</span></span>
+<span data-ttu-id="c783f-103">取得指定的數目[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)包含區域變數和函式中的引數的相關資訊的執行個體。</span><span class="sxs-lookup"><span data-stu-id="c783f-103">Gets the specified number of [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) instances that contain information about the local variables and arguments in a function.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="85d1d-104">語法</span><span class="sxs-lookup"><span data-stu-id="85d1d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c783f-104">語法</span><span class="sxs-lookup"><span data-stu-id="c783f-104">Syntax</span></span>  
   
 ```  
 HRESULT Next(  
@@ -37,36 +37,36 @@ HRESULT Next(
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="85d1d-105">參數</span><span class="sxs-lookup"><span data-stu-id="85d1d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c783f-105">參數</span><span class="sxs-lookup"><span data-stu-id="c783f-105">Parameters</span></span>  
  `celt`  
- <span data-ttu-id="85d1d-106">[in] 要擷取的物件數目。</span><span class="sxs-lookup"><span data-stu-id="85d1d-106">[in] The number of objects to be retrieved.</span></span>  
+ <span data-ttu-id="c783f-106">[in] 要擷取的物件數目。</span><span class="sxs-lookup"><span data-stu-id="c783f-106">[in] The number of objects to be retrieved.</span></span>  
   
  `homes`  
- <span data-ttu-id="85d1d-107">指標的陣列，其中每一個指向[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)提供的本機變數或函式的引數的相關資訊的物件。</span><span class="sxs-lookup"><span data-stu-id="85d1d-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
+ <span data-ttu-id="c783f-107">指標的陣列，其中每一個指向[ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)提供的本機變數或函式的引數的相關資訊的物件。</span><span class="sxs-lookup"><span data-stu-id="c783f-107">An array of pointers, each of which points to a [ICorDebugVariableHome](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md) object that provides information about  a local variable or argument of a function.</span></span>  
   
  `pceltFetched`  
- <span data-ttu-id="85d1d-108">[out]物件中實際傳回的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="85d1d-108">[out] The number of instances actually returned in objects.</span></span>  
+ <span data-ttu-id="c783f-108">[out]物件中實際傳回的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="c783f-108">[out] The number of instances actually returned in objects.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="85d1d-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="85d1d-109">Return Value</span></span>  
- <span data-ttu-id="85d1d-110">方法會傳回下列值。</span><span class="sxs-lookup"><span data-stu-id="85d1d-110">The method returns the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c783f-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="c783f-109">Return Value</span></span>  
+ <span data-ttu-id="c783f-110">方法會傳回下列值。</span><span class="sxs-lookup"><span data-stu-id="c783f-110">The method returns the following values.</span></span>  
   
-|<span data-ttu-id="85d1d-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="85d1d-111">HRESULT</span></span>|<span data-ttu-id="85d1d-112">描述</span><span class="sxs-lookup"><span data-stu-id="85d1d-112">Description</span></span>|  
+|<span data-ttu-id="c783f-111">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c783f-111">HRESULT</span></span>|<span data-ttu-id="c783f-112">描述</span><span class="sxs-lookup"><span data-stu-id="c783f-112">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="85d1d-113">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="85d1d-113">The method completed successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="85d1d-114">擷取執行個體的實際數目，如中所反映`pceltFetched`，小於要求的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="85d1d-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
+|`S_OK`|<span data-ttu-id="c783f-113">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="c783f-113">The method completed successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="c783f-114">擷取執行個體的實際數目，如中所反映`pceltFetched`，小於要求的執行個體數目。</span><span class="sxs-lookup"><span data-stu-id="c783f-114">The actual number of instances retrieved, as reflected in `pceltFetched`, is less than the number of instances requested.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="85d1d-115">備註</span><span class="sxs-lookup"><span data-stu-id="85d1d-115">Remarks</span></span>  
- <span data-ttu-id="85d1d-116">[ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)方法會擷取最多`celt`列舉值目前位置開始的物件。</span><span class="sxs-lookup"><span data-stu-id="85d1d-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="85d1d-117">方法傳回時，`pceltFetched`包含的實際擷取的物件數目。</span><span class="sxs-lookup"><span data-stu-id="85d1d-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c783f-115">備註</span><span class="sxs-lookup"><span data-stu-id="c783f-115">Remarks</span></span>  
+ <span data-ttu-id="c783f-116">[ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md)方法會擷取最多`celt`列舉值目前位置開始的物件。</span><span class="sxs-lookup"><span data-stu-id="c783f-116">The [ICorDebugVariableHomeEnum::Next](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-next-method.md) method retrieves a maximum of  `celt` objects starting at the current position of the enumerator.</span></span> <span data-ttu-id="c783f-117">方法傳回時，`pceltFetched`包含的實際擷取的物件數目。</span><span class="sxs-lookup"><span data-stu-id="c783f-117">When the method returns, `pceltFetched` contains the actual number of objects retrieved.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="85d1d-118">需求</span><span class="sxs-lookup"><span data-stu-id="85d1d-118">Requirements</span></span>  
- <span data-ttu-id="85d1d-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="85d1d-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c783f-118">需求</span><span class="sxs-lookup"><span data-stu-id="c783f-118">Requirements</span></span>  
+ <span data-ttu-id="c783f-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c783f-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="85d1d-120">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="85d1d-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c783f-120">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c783f-120">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="85d1d-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="85d1d-121">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c783f-121">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c783f-121">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="85d1d-122">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="85d1d-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
+ <span data-ttu-id="c783f-122">**.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c783f-122">**.NET Framework Versions:** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="85d1d-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85d1d-123">See also</span></span>
-- [<span data-ttu-id="85d1d-124">ICorDebugVariableHomeEnum 介面</span><span class="sxs-lookup"><span data-stu-id="85d1d-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
-- [<span data-ttu-id="85d1d-125">ICorDebugVariableHome 介面</span><span class="sxs-lookup"><span data-stu-id="85d1d-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c783f-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c783f-123">See also</span></span>
+- [<span data-ttu-id="c783f-124">ICorDebugVariableHomeEnum 介面</span><span class="sxs-lookup"><span data-stu-id="c783f-124">ICorDebugVariableHomeEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehomeenum-interface.md)
+- [<span data-ttu-id="c783f-125">ICorDebugVariableHome 介面</span><span class="sxs-lookup"><span data-stu-id="c783f-125">ICorDebugVariableHome Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugvariablehome-interface.md)

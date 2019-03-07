@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cacf2990fd63120e02d897646ab84376db0d5e36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8e5a0af2d2f3db5b1d44def3af067bc1c3a9e1aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659198"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485287"
 ---
-# <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a><span data-ttu-id="f8af7-102">IHostMemoryManager::RegisterMemoryNotificationCallback 方法</span><span class="sxs-lookup"><span data-stu-id="f8af7-102">IHostMemoryManager::RegisterMemoryNotificationCallback Method</span></span>
-<span data-ttu-id="f8af7-103">註冊以通知 common language runtime (CLR) 的主應用程式會叫用的回呼函式指標的目前的記憶體負載，在電腦上。</span><span class="sxs-lookup"><span data-stu-id="f8af7-103">Registers a pointer to a callback function that the host invokes to notify the common language runtime (CLR) of the current memory load on the computer.</span></span>  
+# <a name="ihostmemorymanagerregistermemorynotificationcallback-method"></a><span data-ttu-id="50483-102">IHostMemoryManager::RegisterMemoryNotificationCallback 方法</span><span class="sxs-lookup"><span data-stu-id="50483-102">IHostMemoryManager::RegisterMemoryNotificationCallback Method</span></span>
+<span data-ttu-id="50483-103">註冊以通知 common language runtime (CLR) 的主應用程式會叫用的回呼函式指標的目前的記憶體負載，在電腦上。</span><span class="sxs-lookup"><span data-stu-id="50483-103">Registers a pointer to a callback function that the host invokes to notify the common language runtime (CLR) of the current memory load on the computer.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8af7-104">語法</span><span class="sxs-lookup"><span data-stu-id="f8af7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="50483-104">語法</span><span class="sxs-lookup"><span data-stu-id="50483-104">Syntax</span></span>  
   
 ```  
 HRESULT RegisterMemoryNotificationCallback (  
@@ -35,36 +35,36 @@ HRESULT RegisterMemoryNotificationCallback (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="f8af7-105">參數</span><span class="sxs-lookup"><span data-stu-id="f8af7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="50483-105">參數</span><span class="sxs-lookup"><span data-stu-id="50483-105">Parameters</span></span>  
  `pCallback`  
- <span data-ttu-id="f8af7-106">[in]介面指標[ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)由 CLR 實作的執行個體。</span><span class="sxs-lookup"><span data-stu-id="f8af7-106">[in] An interface pointer to an [ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md) instance that is implemented by the CLR.</span></span>  
+ <span data-ttu-id="50483-106">[in]介面指標[ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)由 CLR 實作的執行個體。</span><span class="sxs-lookup"><span data-stu-id="50483-106">[in] An interface pointer to an [ICLRMemoryNotificationCallback](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md) instance that is implemented by the CLR.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="f8af7-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="f8af7-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="50483-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="50483-107">Return Value</span></span>  
   
-|<span data-ttu-id="f8af7-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="f8af7-108">HRESULT</span></span>|<span data-ttu-id="f8af7-109">描述</span><span class="sxs-lookup"><span data-stu-id="f8af7-109">Description</span></span>|  
+|<span data-ttu-id="50483-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="50483-108">HRESULT</span></span>|<span data-ttu-id="50483-109">描述</span><span class="sxs-lookup"><span data-stu-id="50483-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="f8af7-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="f8af7-110">S_OK</span></span>|<span data-ttu-id="f8af7-111">`RegisterMemoryNotificationCallback` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="f8af7-111">`RegisterMemoryNotificationCallback` returned successfully.</span></span>|  
-|<span data-ttu-id="f8af7-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="f8af7-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="f8af7-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="f8af7-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="f8af7-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="f8af7-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="f8af7-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="f8af7-115">The call timed out.</span></span>|  
-|<span data-ttu-id="f8af7-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="f8af7-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="f8af7-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="f8af7-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="f8af7-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="f8af7-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="f8af7-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="f8af7-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="f8af7-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="f8af7-120">E_FAIL</span></span>|<span data-ttu-id="f8af7-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="f8af7-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="f8af7-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="f8af7-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="f8af7-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="f8af7-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="50483-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="50483-110">S_OK</span></span>|<span data-ttu-id="50483-111">`RegisterMemoryNotificationCallback` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="50483-111">`RegisterMemoryNotificationCallback` returned successfully.</span></span>|  
+|<span data-ttu-id="50483-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="50483-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="50483-113">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="50483-113">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="50483-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="50483-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="50483-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="50483-115">The call timed out.</span></span>|  
+|<span data-ttu-id="50483-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="50483-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="50483-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="50483-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="50483-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="50483-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="50483-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="50483-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="50483-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="50483-120">E_FAIL</span></span>|<span data-ttu-id="50483-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="50483-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="50483-122">方法會傳回 E_FAIL CLR 已不再可在此程序中使用。</span><span class="sxs-lookup"><span data-stu-id="50483-122">When a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="50483-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="50483-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f8af7-124">備註</span><span class="sxs-lookup"><span data-stu-id="f8af7-124">Remarks</span></span>  
- <span data-ttu-id="f8af7-125">因為`ICLRMemoryNotificationCallback`介面會定義只有一個方法 ([iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md))，而且因為`pCallback`是一個指向`ICLRMemoryNotificationCallback`CLR，所提供的執行個體註冊實際上是回呼函式本身。</span><span class="sxs-lookup"><span data-stu-id="f8af7-125">Because the `ICLRMemoryNotificationCallback` interface defines only one method ([ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)), and because `pCallback` is a pointer to an `ICLRMemoryNotificationCallback` instance provided by the CLR, the registration is effectively for the callback function itself.</span></span> <span data-ttu-id="f8af7-126">主機會叫用`OnMemoryNotification`報告的記憶體不足的壓力條件，而不是使用標準的 Win32`CreateMemoryResourceNotification`函式。</span><span class="sxs-lookup"><span data-stu-id="f8af7-126">The host invokes `OnMemoryNotification` to report memory pressure conditions, rather than using the standard Win32 `CreateMemoryResourceNotification` function.</span></span> <span data-ttu-id="f8af7-127">如需詳細資訊，請參閱 Windows 平台的文件。</span><span class="sxs-lookup"><span data-stu-id="f8af7-127">For more information, see the Windows Platform documentation.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="50483-124">備註</span><span class="sxs-lookup"><span data-stu-id="50483-124">Remarks</span></span>  
+ <span data-ttu-id="50483-125">因為`ICLRMemoryNotificationCallback`介面會定義只有一個方法 ([iclrmemorynotificationcallback:: Onmemorynotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md))，而且因為`pCallback`是一個指向`ICLRMemoryNotificationCallback`CLR，所提供的執行個體註冊實際上是回呼函式本身。</span><span class="sxs-lookup"><span data-stu-id="50483-125">Because the `ICLRMemoryNotificationCallback` interface defines only one method ([ICLRMemoryNotificationCallback::OnMemoryNotification](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-onmemorynotification-method.md)), and because `pCallback` is a pointer to an `ICLRMemoryNotificationCallback` instance provided by the CLR, the registration is effectively for the callback function itself.</span></span> <span data-ttu-id="50483-126">主機會叫用`OnMemoryNotification`報告的記憶體不足的壓力條件，而不是使用標準的 Win32`CreateMemoryResourceNotification`函式。</span><span class="sxs-lookup"><span data-stu-id="50483-126">The host invokes `OnMemoryNotification` to report memory pressure conditions, rather than using the standard Win32 `CreateMemoryResourceNotification` function.</span></span> <span data-ttu-id="50483-127">如需詳細資訊，請參閱 Windows 平台的文件。</span><span class="sxs-lookup"><span data-stu-id="50483-127">For more information, see the Windows Platform documentation.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f8af7-128">呼叫`OnMemoryNotification`絕對不會封鎖。</span><span class="sxs-lookup"><span data-stu-id="f8af7-128">Calls to `OnMemoryNotification` never block.</span></span> <span data-ttu-id="f8af7-129">它們永遠會立即回傳。</span><span class="sxs-lookup"><span data-stu-id="f8af7-129">They always return immediately.</span></span>  
+>  <span data-ttu-id="50483-128">呼叫`OnMemoryNotification`絕對不會封鎖。</span><span class="sxs-lookup"><span data-stu-id="50483-128">Calls to `OnMemoryNotification` never block.</span></span> <span data-ttu-id="50483-129">它們永遠會立即回傳。</span><span class="sxs-lookup"><span data-stu-id="50483-129">They always return immediately.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8af7-130">需求</span><span class="sxs-lookup"><span data-stu-id="f8af7-130">Requirements</span></span>  
- <span data-ttu-id="f8af7-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f8af7-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="50483-130">需求</span><span class="sxs-lookup"><span data-stu-id="50483-130">Requirements</span></span>  
+ <span data-ttu-id="50483-131">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="50483-131">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8af7-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f8af7-132">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="50483-132">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="50483-132">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f8af7-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f8af7-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="50483-133">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="50483-133">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f8af7-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8af7-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ <span data-ttu-id="50483-134">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50483-134">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f8af7-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8af7-135">See also</span></span>
-- [<span data-ttu-id="f8af7-136">ICLRMemoryNotificationCallback 介面</span><span class="sxs-lookup"><span data-stu-id="f8af7-136">ICLRMemoryNotificationCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
-- [<span data-ttu-id="f8af7-137">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="f8af7-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="50483-135">另請參閱</span><span class="sxs-lookup"><span data-stu-id="50483-135">See also</span></span>
+- [<span data-ttu-id="50483-136">ICLRMemoryNotificationCallback 介面</span><span class="sxs-lookup"><span data-stu-id="50483-136">ICLRMemoryNotificationCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrmemorynotificationcallback-interface.md)
+- [<span data-ttu-id="50483-137">IHostMemoryManager 介面</span><span class="sxs-lookup"><span data-stu-id="50483-137">IHostMemoryManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)

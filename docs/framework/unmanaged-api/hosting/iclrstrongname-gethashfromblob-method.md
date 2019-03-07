@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b85f8ffade19cee8f0703af823d91a6ea7bf50b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34e8bcdda30c890fc40bab206bc6757afc073177
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475199"
 ---
-# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="3abf7-102">ICLRStrongName::GetHashFromBlob 方法</span><span class="sxs-lookup"><span data-stu-id="3abf7-102">ICLRStrongName::GetHashFromBlob Method</span></span>
-<span data-ttu-id="3abf7-103">使用指定的雜湊演算法取得位於指定記憶體位址之組件的雜湊。</span><span class="sxs-lookup"><span data-stu-id="3abf7-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromblob-method"></a><span data-ttu-id="6b574-102">ICLRStrongName::GetHashFromBlob 方法</span><span class="sxs-lookup"><span data-stu-id="6b574-102">ICLRStrongName::GetHashFromBlob Method</span></span>
+<span data-ttu-id="6b574-103">使用指定的雜湊演算法取得位於指定記憶體位址之組件的雜湊。</span><span class="sxs-lookup"><span data-stu-id="6b574-103">Gets a hash of the assembly at the specified memory address, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3abf7-104">語法</span><span class="sxs-lookup"><span data-stu-id="3abf7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6b574-104">語法</span><span class="sxs-lookup"><span data-stu-id="6b574-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromBlob (  
@@ -40,36 +40,36 @@ HRESULT GetHashFromBlob (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3abf7-105">參數</span><span class="sxs-lookup"><span data-stu-id="3abf7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6b574-105">參數</span><span class="sxs-lookup"><span data-stu-id="6b574-105">Parameters</span></span>  
  `pbBlob`  
- <span data-ttu-id="3abf7-106">[in]要雜湊的記憶體區塊的位址指標。</span><span class="sxs-lookup"><span data-stu-id="3abf7-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
+ <span data-ttu-id="6b574-106">[in]要雜湊的記憶體區塊的位址指標。</span><span class="sxs-lookup"><span data-stu-id="6b574-106">[in] A pointer to the address of the memory block to be hashed.</span></span>  
   
  `cchBlob`  
- <span data-ttu-id="3abf7-107">[in]記憶體區塊的長度，以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="3abf7-107">[in] The length, in bytes, of the memory block.</span></span>  
+ <span data-ttu-id="6b574-107">[in]記憶體區塊的長度，以位元組為單位。</span><span class="sxs-lookup"><span data-stu-id="6b574-107">[in] The length, in bytes, of the memory block.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="3abf7-108">[in、 out]常數，指定的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="3abf7-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="3abf7-109">使用零的預設演算法。</span><span class="sxs-lookup"><span data-stu-id="3abf7-109">Use zero for the default algorithm.</span></span>  
+ <span data-ttu-id="6b574-108">[in、 out]常數，指定的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="6b574-108">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="6b574-109">使用零的預設演算法。</span><span class="sxs-lookup"><span data-stu-id="6b574-109">Use zero for the default algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="3abf7-110">[out]傳回的雜湊緩衝區。</span><span class="sxs-lookup"><span data-stu-id="3abf7-110">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="6b574-110">[out]傳回的雜湊緩衝區。</span><span class="sxs-lookup"><span data-stu-id="6b574-110">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="3abf7-111">[in]要求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="3abf7-111">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="6b574-111">[in]要求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="6b574-111">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="3abf7-112">[out]大小，以位元組為單位傳回`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="3abf7-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
+ <span data-ttu-id="6b574-112">[out]大小，以位元組為單位傳回`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="6b574-112">[out] The size, in bytes, of the returned `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3abf7-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="3abf7-113">Return Value</span></span>  
- <span data-ttu-id="3abf7-114">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="3abf7-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6b574-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="6b574-113">Return Value</span></span>  
+ <span data-ttu-id="6b574-114">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="6b574-114">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3abf7-115">需求</span><span class="sxs-lookup"><span data-stu-id="3abf7-115">Requirements</span></span>  
- <span data-ttu-id="3abf7-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3abf7-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6b574-115">需求</span><span class="sxs-lookup"><span data-stu-id="6b574-115">Requirements</span></span>  
+ <span data-ttu-id="6b574-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6b574-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3abf7-117">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="3abf7-117">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="6b574-117">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="6b574-117">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="3abf7-118">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="3abf7-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6b574-118">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="6b574-118">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="3abf7-119">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="3abf7-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ <span data-ttu-id="6b574-119">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6b574-119">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3abf7-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3abf7-120">See also</span></span>
-- [<span data-ttu-id="3abf7-121">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="3abf7-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6b574-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6b574-120">See also</span></span>
+- [<span data-ttu-id="6b574-121">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="6b574-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

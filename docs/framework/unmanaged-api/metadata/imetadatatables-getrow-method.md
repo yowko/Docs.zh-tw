@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f6f3018d5e9a1b49191d8e82f91ac8e5c21b77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7216e2aacf344a5e606e34451cde01eca4a1e175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472183"
 ---
-# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="d0015-102">IMetaDataTables::GetRow 方法</span><span class="sxs-lookup"><span data-stu-id="d0015-102">IMetaDataTables::GetRow Method</span></span>
-<span data-ttu-id="d0015-103">取得指定的資料列索引，在指定的資料表索引的資料表中的資料列。</span><span class="sxs-lookup"><span data-stu-id="d0015-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
+# <a name="imetadatatablesgetrow-method"></a><span data-ttu-id="427a3-102">IMetaDataTables::GetRow 方法</span><span class="sxs-lookup"><span data-stu-id="427a3-102">IMetaDataTables::GetRow Method</span></span>
+<span data-ttu-id="427a3-103">取得指定的資料列索引，在指定的資料表索引的資料表中的資料列。</span><span class="sxs-lookup"><span data-stu-id="427a3-103">Gets the row at the specified row index, in the table at the specified table index.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0015-104">語法</span><span class="sxs-lookup"><span data-stu-id="d0015-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="427a3-104">語法</span><span class="sxs-lookup"><span data-stu-id="427a3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetRow (   
@@ -37,28 +37,28 @@ HRESULT GetRow (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d0015-105">參數</span><span class="sxs-lookup"><span data-stu-id="d0015-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="427a3-105">參數</span><span class="sxs-lookup"><span data-stu-id="427a3-105">Parameters</span></span>  
  `ixTbl`  
- <span data-ttu-id="d0015-106">[in]將從中擷取的資料列之資料表的索引。</span><span class="sxs-lookup"><span data-stu-id="d0015-106">[in] The index of the table from which the row will be retrieved.</span></span>  
+ <span data-ttu-id="427a3-106">[in]將從中擷取的資料列之資料表的索引。</span><span class="sxs-lookup"><span data-stu-id="427a3-106">[in] The index of the table from which the row will be retrieved.</span></span>  
   
  `rid`  
- <span data-ttu-id="d0015-107">[in]若要取得的資料列索引。</span><span class="sxs-lookup"><span data-stu-id="d0015-107">[in] The index of the row to get.</span></span>  
+ <span data-ttu-id="427a3-107">[in]若要取得的資料列索引。</span><span class="sxs-lookup"><span data-stu-id="427a3-107">[in] The index of the row to get.</span></span>  
   
  `ppRow`  
- <span data-ttu-id="d0015-108">[out]指向資料列的指標。</span><span class="sxs-lookup"><span data-stu-id="d0015-108">[out] A pointer to a pointer to the row.</span></span>  
+ <span data-ttu-id="427a3-108">[out]指向資料列的指標。</span><span class="sxs-lookup"><span data-stu-id="427a3-108">[out] A pointer to a pointer to the row.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0015-109">備註</span><span class="sxs-lookup"><span data-stu-id="d0015-109">Remarks</span></span>  
- <span data-ttu-id="d0015-110">我們不建議使用這個方法，因為它不會傳回一致的結果。</span><span class="sxs-lookup"><span data-stu-id="d0015-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="d0015-111">GUID 資料表的相關資訊，請參閱 Common Language Infrastructure (CLI) 文件，特別是 「 第二部分：中繼資料定義和語意 」。</span><span class="sxs-lookup"><span data-stu-id="d0015-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="d0015-112">您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](https://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。</span><span class="sxs-lookup"><span data-stu-id="d0015-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="427a3-109">備註</span><span class="sxs-lookup"><span data-stu-id="427a3-109">Remarks</span></span>  
+ <span data-ttu-id="427a3-110">我們不建議使用這個方法，因為它不會傳回一致的結果。</span><span class="sxs-lookup"><span data-stu-id="427a3-110">We do not recommend the use of this method, because it does not return consistent results.</span></span> <span data-ttu-id="427a3-111">GUID 資料表的相關資訊，請參閱 Common Language Infrastructure (CLI) 文件，特別是 「 第二部分：中繼資料定義和語意 」。</span><span class="sxs-lookup"><span data-stu-id="427a3-111">For information about the GUID table, see the Common Language Infrastructure (CLI) documentation, especially "Partition II: Metadata Definition and Semantics".</span></span> <span data-ttu-id="427a3-112">您可以線上取得這份文件；請參閱 MSDN 上的 [ECMA C# 和通用語言基礎結構標準](https://go.microsoft.com/fwlink/?LinkID=99212)，以及 Ecma International 網站上的[標準 ECMA-335 - 通用語言基礎結構 (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)。</span><span class="sxs-lookup"><span data-stu-id="427a3-112">The documentation is available online; see [ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212) on MSDN and [Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552) on the Ecma International Web site.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0015-113">需求</span><span class="sxs-lookup"><span data-stu-id="d0015-113">Requirements</span></span>  
- <span data-ttu-id="d0015-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0015-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="427a3-113">需求</span><span class="sxs-lookup"><span data-stu-id="427a3-113">Requirements</span></span>  
+ <span data-ttu-id="427a3-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="427a3-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0015-115">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d0015-115">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="427a3-115">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="427a3-115">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d0015-116">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d0015-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="427a3-116">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="427a3-116">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="d0015-117">**.NET framework 版本**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d0015-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ <span data-ttu-id="427a3-117">**.NET framework 版本**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="427a3-117">**.NET Framework Versions**  [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0015-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0015-118">See also</span></span>
-- [<span data-ttu-id="d0015-119">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="d0015-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
-- [<span data-ttu-id="d0015-120">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="d0015-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="427a3-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="427a3-118">See also</span></span>
+- [<span data-ttu-id="427a3-119">IMetaDataTables 介面</span><span class="sxs-lookup"><span data-stu-id="427a3-119">IMetaDataTables Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
+- [<span data-ttu-id="427a3-120">IMetaDataTables2 介面</span><span class="sxs-lookup"><span data-stu-id="427a3-120">IMetaDataTables2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

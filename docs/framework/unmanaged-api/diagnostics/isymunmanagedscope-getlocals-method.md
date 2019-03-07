@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d0e1b764691fd2582e1225cb90003e2a644061f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d6c48a7ae62155dc558fb4a62b3e2573bea77594
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643685"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499169"
 ---
-# <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="3cc50-102">ISymUnmanagedScope::GetLocals 方法</span><span class="sxs-lookup"><span data-stu-id="3cc50-102">ISymUnmanagedScope::GetLocals Method</span></span>
-<span data-ttu-id="3cc50-103">取得此範圍內定義的本機變數。</span><span class="sxs-lookup"><span data-stu-id="3cc50-103">Gets the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocals-method"></a><span data-ttu-id="7c29c-102">ISymUnmanagedScope::GetLocals 方法</span><span class="sxs-lookup"><span data-stu-id="7c29c-102">ISymUnmanagedScope::GetLocals Method</span></span>
+<span data-ttu-id="7c29c-103">取得此範圍內定義的本機變數。</span><span class="sxs-lookup"><span data-stu-id="7c29c-103">Gets the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3cc50-104">語法</span><span class="sxs-lookup"><span data-stu-id="3cc50-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7c29c-104">語法</span><span class="sxs-lookup"><span data-stu-id="7c29c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocals(  
@@ -37,21 +37,21 @@ HRESULT GetLocals(
         length_is(*pcLocals)] ISymUnmanagedVariable* locals[]);  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="3cc50-105">參數</span><span class="sxs-lookup"><span data-stu-id="3cc50-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7c29c-105">參數</span><span class="sxs-lookup"><span data-stu-id="7c29c-105">Parameters</span></span>  
  `cLocals`  
- <span data-ttu-id="3cc50-106">[in]A`ULONG32`表示的大小`locals`陣列。</span><span class="sxs-lookup"><span data-stu-id="3cc50-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span></span>  
+ <span data-ttu-id="7c29c-106">[in]A`ULONG32`表示的大小`locals`陣列。</span><span class="sxs-lookup"><span data-stu-id="7c29c-106">[in] A `ULONG32` that indicates the size of the `locals` array.</span></span>  
   
  `pcLocals`  
- <span data-ttu-id="3cc50-107">[out]指標`ULONG32`接收包含本機變數所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="3cc50-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span></span>  
+ <span data-ttu-id="7c29c-107">[out]指標`ULONG32`接收包含本機變數所需的緩衝區大小。</span><span class="sxs-lookup"><span data-stu-id="7c29c-107">[out] A pointer to a `ULONG32` that receives the size of the buffer required to contain the local variables.</span></span>  
   
  `locals`  
- <span data-ttu-id="3cc50-108">[out]接收的本機變數的陣列。</span><span class="sxs-lookup"><span data-stu-id="3cc50-108">[out] The array that receives the local variables.</span></span>  
+ <span data-ttu-id="7c29c-108">[out]接收的本機變數的陣列。</span><span class="sxs-lookup"><span data-stu-id="7c29c-108">[out] The array that receives the local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3cc50-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="3cc50-109">Return Value</span></span>  
- <span data-ttu-id="3cc50-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="3cc50-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="7c29c-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="7c29c-109">Return Value</span></span>  
+ <span data-ttu-id="7c29c-110">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="7c29c-110">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3cc50-111">需求</span><span class="sxs-lookup"><span data-stu-id="3cc50-111">Requirements</span></span>  
- <span data-ttu-id="3cc50-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="3cc50-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7c29c-111">需求</span><span class="sxs-lookup"><span data-stu-id="7c29c-111">Requirements</span></span>  
+ <span data-ttu-id="7c29c-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7c29c-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3cc50-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3cc50-113">See also</span></span>
-- [<span data-ttu-id="3cc50-114">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="3cc50-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="7c29c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c29c-113">See also</span></span>
+- [<span data-ttu-id="7c29c-114">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="7c29c-114">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

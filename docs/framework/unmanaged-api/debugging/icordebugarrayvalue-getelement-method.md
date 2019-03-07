@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 500e01955666c7a8e2bd1dcf9d34afe3aeb6b421
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 1be7eaeccb53e8b180aeb9492cd887f952bbaea5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33403340"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485300"
 ---
-# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="d86fa-102">ICorDebugArrayValue::GetElement 方法</span><span class="sxs-lookup"><span data-stu-id="d86fa-102">ICorDebugArrayValue::GetElement Method</span></span>
-<span data-ttu-id="d86fa-103">取得指定的陣列項目的值。</span><span class="sxs-lookup"><span data-stu-id="d86fa-103">Gets the value of the given array element.</span></span>  
+# <a name="icordebugarrayvaluegetelement-method"></a><span data-ttu-id="1c9d3-102">ICorDebugArrayValue::GetElement 方法</span><span class="sxs-lookup"><span data-stu-id="1c9d3-102">ICorDebugArrayValue::GetElement Method</span></span>
+<span data-ttu-id="1c9d3-103">取得指定之陣列元素的值。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-103">Gets the value of the given array element.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d86fa-104">語法</span><span class="sxs-lookup"><span data-stu-id="d86fa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1c9d3-104">語法</span><span class="sxs-lookup"><span data-stu-id="1c9d3-104">Syntax</span></span>  
   
 ```  
 HRESULT GetElement (  
@@ -38,25 +38,25 @@ HRESULT GetElement (
 );  
 ```  
   
-#### <a name="parameters"></a><span data-ttu-id="d86fa-105">參數</span><span class="sxs-lookup"><span data-stu-id="d86fa-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1c9d3-105">參數</span><span class="sxs-lookup"><span data-stu-id="1c9d3-105">Parameters</span></span>  
  `cdim`  
- <span data-ttu-id="d86fa-106">[in]這個維度的數目`ICorDebugArrayValue`物件。</span><span class="sxs-lookup"><span data-stu-id="d86fa-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="1c9d3-106">[in]這個維度的數目`ICorDebugArrayValue`物件。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-106">[in] The number of dimensions of this `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="d86fa-107">此值也是大小`indices`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。</span><span class="sxs-lookup"><span data-stu-id="d86fa-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="1c9d3-107">此值也是的大小`indices`因為其大小的維度數目等於陣列`ICorDebugArrayValue`物件。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-107">This value is also the size of the `indices` array because its size is equal to the number of dimensions of the `ICorDebugArrayValue` object.</span></span>  
   
  `indices`  
- <span data-ttu-id="d86fa-108">[in]陣列的索引值，其中每個指定的維度內的位置`ICorDebugArrayValue`物件。</span><span class="sxs-lookup"><span data-stu-id="d86fa-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
+ <span data-ttu-id="1c9d3-108">[in]陣列的索引值，其中每個指定的維度內的位置`ICorDebugArrayValue`物件。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-108">[in] An array of index values, each of which specifies a position within a dimension of the `ICorDebugArrayValue` object.</span></span>  
   
- <span data-ttu-id="d86fa-109">此值不能為 null。</span><span class="sxs-lookup"><span data-stu-id="d86fa-109">This value must not be null.</span></span>  
+ <span data-ttu-id="1c9d3-109">此值不能為 null。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-109">This value must not be null.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="d86fa-110">[out]ICorDebugValue 物件，表示指定的項目值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="d86fa-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
+ <span data-ttu-id="1c9d3-110">[out]ICorDebugValue 物件，表示指定的項目值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-110">[out] A pointer to the address of an ICorDebugValue object that represents the value of the specified element.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d86fa-111">需求</span><span class="sxs-lookup"><span data-stu-id="d86fa-111">Requirements</span></span>  
- <span data-ttu-id="d86fa-112">**平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d86fa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1c9d3-111">需求</span><span class="sxs-lookup"><span data-stu-id="1c9d3-111">Requirements</span></span>  
+ <span data-ttu-id="1c9d3-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1c9d3-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d86fa-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="d86fa-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="1c9d3-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1c9d3-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="d86fa-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d86fa-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="1c9d3-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1c9d3-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="d86fa-115">**.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d86fa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
+ <span data-ttu-id="1c9d3-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1c9d3-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>
