@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02bba59a1c4445b3e432d5e44f2bccc4b72ce1da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8d2f6a716c65596c781015bad0dea52705611a0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711651"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487150"
 ---
 # <a name="iclrdatatarget2freevirtual-method"></a>ICLRDataTarget2::FreeVirtual 方法
 由通用語言執行平台 (CLR) 資料存取服務先前配置的目標處理序的位址空間中的可用記憶體來呼叫。  
@@ -37,7 +37,7 @@ HRESULT FreeVirtual(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `addr`  
  [in]A`CLRDATA_ADDRESS`值，指定要釋放記憶體的起始位址。  
   

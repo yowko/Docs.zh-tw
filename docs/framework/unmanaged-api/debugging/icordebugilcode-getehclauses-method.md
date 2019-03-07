@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 455b8f5434974f2bb424faf23bb2a49e91214e7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731084"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488132"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses 方法
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  傳回針對此中繼語言 (IL) 所定義之例外狀況處理 (EH) 子句清單的指標。  
   
@@ -35,9 +35,9 @@ HRESULT GetEHClauses(
    [out, size_is(cClauses), length_is(*pcClauses)] CorDebugEHClause clauses[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cClauses`  
- [in] `clauses` 陣列的儲存容量。 如需詳細資訊，請參閱「備註」一節。  
+ [in] `clauses` 陣列的儲存體容量。 如需詳細資訊，請參閱「備註」一節。  
   
  `pcClauses`  
  [out] 其資訊寫入至 `clauses` 陣列的子句數。  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83bd2f3b0c1d58528624ac730756fb3bcdf4ba47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1c8f5ea20d00d692e0eea0cba93ec4e73038e8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744839"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497440"
 ---
 # <a name="iclrmetahostgetversionfromfile-method"></a>ICLRMetaHost::GetVersionFromFile 方法
 取得組件的原始.NET Framework 編譯版本 （儲存於中繼資料），提供其檔案路徑。 這個方法會取代[GetFileVersion](../../../../docs/framework/unmanaged-api/hosting/getfileversion-function.md)函式。  
@@ -37,7 +37,7 @@ HRESULT GetVersionFromFile (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzFilePath`  
  [in]完整的組件檔案路徑。  
   
@@ -53,12 +53,12 @@ HRESULT GetVersionFromFile (
  [in、 out]大小`pwzbuffer`以避免緩衝區滿溢。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_POINTER|`pwzbuffer` 或 `pcchBuffer` 為 null。|  
+|E_POINTER|`pwzbuffer` 或`pcchBuffer`為 null。|  
 |HRESULT_FROM_WIN32(ERROR_INSUFFICIENT_BUFFER)|緩衝區是太小。|  
   
 ## <a name="requirements"></a>需求  

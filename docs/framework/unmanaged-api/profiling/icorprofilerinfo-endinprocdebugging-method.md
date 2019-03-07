@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea9acdb20392e1ded8695bc4d64ef87c6d0af9e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f86c680a10a3dcb1009b4f0cedd777ab9da5ac1f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706663"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501743"
 ---
 # <a name="icorprofilerinfoendinprocdebugging-method"></a>ICorProfilerInfo::EndInprocDebugging 方法
 關閉同處理序偵錯工作階段。 這個方法是在.NET Framework 2.0 版中已過時。  
@@ -34,7 +34,7 @@ HRESULT EndInprocDebugging(
     [in]  DWORD dwProfilerContext);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwProfilerContext`  
  [in]值，這個值識別的偵錯工作階段。 此值必須在收到的相同[icorprofilerinfo:: Begininprocdebugging](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-begininprocdebugging-method.md)方法。  
   

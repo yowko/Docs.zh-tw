@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 242c13a381445d5fe9551553cd1e3febc81cb2fc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a70d5daf6626a26842d91ff6a35d0abf26d79ad1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638215"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492565"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait 方法
 造成目前[IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md)等候，直到它所屬於的執行個體或指定的時間量。  
@@ -36,7 +36,7 @@ HRESULT Wait (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwMilliseconds`  
  [in]如果在傳回之前，等待的毫秒數目前`IHostManualEvent`不屬於執行個體。  
   

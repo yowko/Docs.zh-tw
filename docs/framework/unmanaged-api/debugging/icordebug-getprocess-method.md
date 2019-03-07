@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6020950a7ee742f09af67fe856692e19c066e288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e04bef30d4a9edf9898b27e15a79b2b70e3a7f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658037"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477852"
 ---
 # <a name="icordebuggetprocess-method"></a>ICorDebug::GetProcess 方法
 取得指定的處理序 」 ICorDebugProcess 」 執行個體的指標。  
@@ -36,7 +36,7 @@ HRESULT GetProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwProcessId`  
  [in]處理序識別碼。  
   

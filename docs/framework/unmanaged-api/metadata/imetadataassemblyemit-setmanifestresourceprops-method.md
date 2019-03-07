@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d92129bd7c51ba2fa574f8337ba2b3727ab7b172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d3dabd48ed63a023e830e1c2b8c983ef3af4519
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599045"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481708"
 ---
 # <a name="imetadataassemblyemitsetmanifestresourceprops-method"></a>IMetaDataAssemblyEmit::SetManifestResourceProps 方法
 修改指定的 `ManifestResource` 中繼資料結構。  
@@ -38,7 +38,7 @@ HRESULT SetManifestResourceProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `mr`  
  [in]指定的語彙基元`ManifestResource`要修改的中繼資料結構。  
   

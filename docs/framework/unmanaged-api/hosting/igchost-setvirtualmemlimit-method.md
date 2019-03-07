@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d38b174a7e959647a9c1f5287b8acbbcdaf5ca7b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b25e9c738c95a918b79d3fd324787e4aaf3aaa7f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564275"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502471"
 ---
 # <a name="igchostsetvirtualmemlimit-method"></a>IGCHost::SetVirtualMemLimit 方法
 設定執行階段的虛擬記憶體的大小上限。  
@@ -35,7 +35,7 @@ HRESULT SetVirtualMemLimit (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `sztMaxVirtualMemMB`  
  [in]最大大小 （mb），執行階段的虛擬記憶體。  
   

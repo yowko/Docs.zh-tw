@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5984addb41c33468068f7ad24a15533f75dc367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fdf5e6e52b0c650e56368493074ea7db8e5bac9
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714720"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485430"
 ---
 # <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize 方法
 取得以位元組為單位的記憶體緩衝區大小。  
@@ -22,14 +22,14 @@ HRESULT GetSize(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcbBufferLength`  
  [out] 記憶體緩衝區大小的指標。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

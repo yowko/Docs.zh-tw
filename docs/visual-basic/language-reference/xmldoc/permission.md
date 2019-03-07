@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <permission> XML tag
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
-ms.openlocfilehash: 6c684a674e8d6e3bf218e0131e5fac2821855456
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d8fe70445b2a2500f99a0156604238665b7bbd1c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966361"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473496"
 ---
 # <a name="permission-visual-basic"></a>\<權限 > (Visual Basic)
 指定必要的權限的成員。  
@@ -21,7 +21,7 @@ ms.locfileid: "56966361"
 <permission cref="member">description</permission>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `member`  
  可從目前編譯環境呼叫的成員或欄位參考。 編譯器會檢查指定的程式碼項目是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。 括住`member`引號 ("")。  
   

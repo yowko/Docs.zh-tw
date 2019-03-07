@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9086cff38e0232d6054d6b1f590be6d8d76ed1af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527368"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501041"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
 載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何的內部參考的型別程式庫。  
@@ -36,7 +36,7 @@ HRESULT LoadTypeLibWithResolver(
     [out] ITypeLib          **pptlib);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `szFile`  
  [in]型別程式庫檔案路徑。  
   

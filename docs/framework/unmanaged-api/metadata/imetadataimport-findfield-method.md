@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b07d75b6a8839f9a223ef2c0be52830e107e4088
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527597"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490407"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 方法
 取得指標 FieldDef 語彙基元的欄位，以指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
@@ -39,7 +39,7 @@ HRESULT FindField (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]類別或介面，包含要搜尋的欄位之 TypeDef 語彙基元。 如果此值為`mdTokenNil`，會在完成查詢的全域變數。  
   

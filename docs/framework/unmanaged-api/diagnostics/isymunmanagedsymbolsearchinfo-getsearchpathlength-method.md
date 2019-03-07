@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0672ee0e47e28afb42a533d44e83e3807b08d659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 892da7ec41c75e50f7f2cb086b05e466478e1ced
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744527"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484091"
 ---
 # <a name="isymunmanagedsymbolsearchinfogetsearchpathlength-method"></a>ISymUnmanagedSymbolSearchInfo::GetSearchPathLength 方法
 取得搜尋路徑長度。  
@@ -34,7 +34,7 @@ HRESULT GetSearchPathLength(
     [out] ULONG32 *pcchPath);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcchPath`  
  [out]指標`ULONG32`接收大小，以字元為單位，以包含搜尋路徑長度所需的緩衝區。  
   

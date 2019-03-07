@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aa1025d3f24126c6f8b8585e39dda0201fad3d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ecea5911771d12df74b260845523dd2b7a012aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623309"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494515"
 ---
 # <a name="icorprofilercallbackinitialize-method"></a>ICorProfilerCallback::Initialize 方法
 呼叫以初始化程式碼剖析工具，每次啟動新的 common language runtime (CLR) 應用程式時。  
@@ -34,7 +34,7 @@ HRESULT Initialize(
     [in] IUnknown     *pICorProfilerInfoUnk);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pICorProfilerInfoUnk`  
  [在 ](/cpp/atl/iunknown)分析工具必須查詢的介面[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)介面指標。  
   

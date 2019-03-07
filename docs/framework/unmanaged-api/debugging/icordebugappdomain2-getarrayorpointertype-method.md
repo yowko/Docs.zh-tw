@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb3f0ca6d930b22f30fe9bbc5b5a04bf1e034f34
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 58a39771bd89fc9c4947f80a3c87b4d340b5461c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33405821"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484234"
 ---
 # <a name="icordebugappdomain2getarrayorpointertype-method"></a>ICorDebugAppDomain2::GetArrayOrPointerType 方法
-取得指定的型別，或是指標或參考指定之類型的陣列。  
+取得指定的型別，或是指標或參考指定的型別陣列。  
   
 ## <a name="syntax"></a>語法  
   
@@ -38,15 +38,15 @@ HRESULT GetArrayOrPointerType (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `elementType`  
- [in]指定基礎原生類型 （陣列、 指標或參考） 來建立 CorElementType 列舉值。  
+ [in]CorElementType 列舉，指定基礎的原生型別 （陣列、 指標或參考） 若要建立的值。  
   
  `nRank`  
- [in]陣列陣序 （亦即，維度數目）。 此值必須是 0，如果`elementType`指定指標或參考類型。  
+ [in]陣列陣序 （也就是維度的數目）。 此值必須是 0，如果`elementType`指定指標或參考類型。  
   
  `pTypeArg`  
- [in]ICorDebugType 物件代表的類型陣列的指標、 指標或建立參考。  
+ [in]ICorDebugType 物件，表示陣列類型的指標、 指標或參考來建立。  
   
  `ppType`  
  [out]位址指標`ICorDebugType`代表建構的陣列、 指標類型或參考的物件類型。  
@@ -63,10 +63,10 @@ HRESULT GetArrayOrPointerType (
  如果值*elementType* ELEMENT_TYPE_PTR 或 ELEMENT_TYPE_BYREF， *nRank*必須為零。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5ad52580fef538a6878efb0febe41dec7c9de1de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f44b7e073840d4d425cfc91c3156293cee07b4ab
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520629"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501469"
 ---
 # <a name="imetadataemitdeleteclasslayout-method"></a>IMetaDataEmit::DeleteClassLayout 方法
 終結指定的語彙基元所代表的型別類別配置中繼資料簽章。  
@@ -35,7 +35,7 @@ HRESULT DeleteClassLayout (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]`mdTypeDef`表示刪除類別配置之類型的中繼資料語彙基元。  
   

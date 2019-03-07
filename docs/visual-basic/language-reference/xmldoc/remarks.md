@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <remarks> XML tag
 - remarks XML tag
 ms.assetid: c6241773-a7ed-41c9-9a8b-9722a0c606a9
-ms.openlocfilehash: 90f358aad8e3219b2e3cb3e9b996a24b3138828b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5065d43a0d3262ebe89d25351f791022bfd87077
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970827"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502562"
 ---
 # <a name="remarks-visual-basic"></a>\<備註 > (Visual Basic)
 指定成員的 < 備註 > 一節。  
@@ -21,7 +21,7 @@ ms.locfileid: "56970827"
 <remarks>description</remarks>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `description`  
  成員的描述。  
   

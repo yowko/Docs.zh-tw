@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ebc86ad9c1f84156e7e228c1ddf3fe7b86b7e60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b59c7393d9d4e9cbdeaa1a2efd9965f969f985
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576261"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497791"
 ---
 # <a name="imetadataemitmerge-method"></a>IMetaDataEmit::Merge 方法
 將指定的匯入的範圍加入至要合併的範圍清單。  
@@ -37,7 +37,7 @@ HRESULT Merge (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pImport`  
  [in]指標[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)可識別要合併之匯入的範圍的物件。  
   

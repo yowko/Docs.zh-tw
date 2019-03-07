@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae7bbc41d0e2cca1cf25a5ec34535b20fc9163d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 41ece0f8ca804acb1614ceaa651ce2ec199c11c0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498251"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499078"
 ---
 # <a name="iclrruntimehostexecuteindefaultappdomain-method"></a>ICLRRuntimeHost::ExecuteInDefaultAppDomain 方法
 指定 managed 組件中會呼叫指定之型別的指定的方法。  
@@ -39,7 +39,7 @@ HRESULT ExecuteInDefaultAppDomain (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzAssemblyPath`  
  [in]通往<xref:System.Reflection.Assembly>定義<xref:System.Type>其方法是叫用。  
   

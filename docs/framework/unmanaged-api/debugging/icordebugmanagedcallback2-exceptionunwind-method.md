@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80503d180da835f1e5e17538b90883ca8cba4a86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 802d4987b3be86b5a6302b78f75e4f0c02d49f3e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668505"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492032"
 ---
 # <a name="icordebugmanagedcallback2exceptionunwind-method"></a>ICorDebugManagedCallback2::ExceptionUnwind 方法
 提供例外狀況回溯程序期間的狀態通知。  
@@ -38,7 +38,7 @@ HRESULT ExceptionUnwind (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pAppDomain`  
  [in]ICorDebugAppDomain 物件，表示應用程式定義域包含的執行緒例外狀況的指標。  
   

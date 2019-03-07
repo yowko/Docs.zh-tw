@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f404fef10f83dac8938953e29b233d3a01135559
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6406e280cd9fd86e32169a77dbb5ef468b8cf564
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547341"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473721"
 ---
 # <a name="ihosttaskjoin-method"></a>IHostTask::Join 方法
 表示由目前的工作之前會封鎖呼叫的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體完成後，將指定的時間間隔過去後，或[ihosttask:: Alert](../../../../docs/framework/unmanaged-api/hosting/ihosttask-alert-method.md)呼叫。  
@@ -36,7 +36,7 @@ HRESULT Join (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `milliseconds`  
  [in]時間間隔，以毫秒為單位，等候工作結束。 如果在工作結束之前，經過此間隔，會解除封鎖呼叫的工作。  
   

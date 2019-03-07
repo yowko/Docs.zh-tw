@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: c6858b06-ae26-4312-b325-ea6025016675
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4895610ba3a8e8e8eb1a1c360ecb2b707f9cee4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 762ac20c376f4161aa9c053f6e5213ba24c792ba
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622087"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499760"
 ---
 # <a name="icordebugmergedassemblyrecordgetversion-method"></a>ICorDebugMergedAssemblyRecord::GetVersion 方法
 取得組件的版本資訊。  
@@ -25,7 +25,7 @@ HRESULT GetVersion(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pMajor`  
  [out] 主要版本號碼的指標。  
   
@@ -42,7 +42,7 @@ HRESULT GetVersion(
  如需組件版本號碼的相關資訊，請參閱 <xref:System.Version> 類別主題。  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 874bbf46e74550b325631a00acc16f49d818dc61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9985b5a5547097c0474eb3a5797388d1444083e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574933"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471581"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 函式
 函式傳回給呼叫者，並提供堆疊框架和函式傳回值的相關資訊，請通知分析工具。  
@@ -37,7 +37,7 @@ void __stdcall FunctionLeave2 (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `funcId`  
  [in]函式傳回的識別項。  
   

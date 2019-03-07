@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 709769c336d875ee5ddd00b4e1cf919c61e2c394
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6b5aa78efcc19f1fc50c8e9bfc5105f9afd7d50
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746618"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495204"
 ---
 # <a name="createapplicationcontext-function"></a>CreateApplicationContext 函式
 此函式支援.NET Framework 基礎結構，並不是直接從您的程式碼使用。  
@@ -35,7 +35,7 @@ HRESULT CreateApplicationContext (
  );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pName`  
  [in]好記的名稱指標。  
   

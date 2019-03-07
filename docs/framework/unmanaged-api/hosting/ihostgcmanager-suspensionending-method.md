@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf915af48262a0f48e85623de95b76ad94d860b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1995321e8598d010188fee2437640b4489eaa294
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573292"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472027"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding 方法
 通知主機 common language runtime (CLR) 會繼續已暫止記憶體回收的執行緒上的工作執行。  
@@ -35,7 +35,7 @@ HRESULT SuspensionEnding (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `generation`  
  [in]記憶體回收層代是剛完成，從中執行緒正在繼續。  
   

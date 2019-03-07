@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5e0afe278b22e54b326ef17dc416b4632a853eda
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: a93e73fa8345b48e604d6f63d16170d850ead451
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484572"
 ---
 # <a name="corexitprocess-function"></a>CorExitProcess 函式
 關閉目前未受管理的處理序。  
@@ -40,7 +40,7 @@ void STDMETHODCALLTYPE CorExitProcess (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `exitCode`  
  整數，指定處理序結束碼。  
   

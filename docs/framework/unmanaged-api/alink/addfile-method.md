@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c04bc008d0279601e90d13e6a57c52a458fca1d7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec16776550765924e17de35674c5774212427e1a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967876"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498454"
 ---
 # <a name="addfile-method"></a>AddFile 方法
 將檔案加入至組件。 也可以用來建立未繫結的模組。  
@@ -39,7 +39,7 @@ HRESULT AddFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `AssemblyID`  
  要當做引數的組件的唯一識別碼。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 76d3be88065d4f29020a794db30c616774db1f4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4210dedd77c6ab041189fa287e192bb7038080b2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580846"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491400"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
 在目前的方法內定義一組序列點。 每個起始行和起始資料行定義中方法的陳述式開頭。 每個結束行和結束資料行定義方法內的陳述式的結尾。 要以位移的遞增順序排序的陣列。 位移一律是從方法，以位元組為單位的開頭進行測量。  
@@ -40,7 +40,7 @@ HRESULT DefineSequencePoints(
     [in, size_is(spCount)] ULONG32     endColumns[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `document`  
  [in]文件物件，其定義序列點。  
   

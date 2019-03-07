@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9e54b4c4b1b3184b6aa0d50f82a501312db6a8e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6462496a8804d9aa5304107a6c01122b745038fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655656"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500248"
 ---
 # <a name="imetadataimportgetnestedclassprops-method"></a>IMetaDataImport::GetNestedClassProps 方法
 取得父代語彙基元 TypeDef<xref:System.Type>指定巢狀類型。  
@@ -36,7 +36,7 @@ HRESULT GetNestedClassProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tdNestedClass`  
  [in]TypeDef 語彙基元，代表<xref:System.Type>傳回父類別的語彙基元。  
   

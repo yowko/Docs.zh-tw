@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b6640e42328fdf840fb0f6d0672b1fdc2c0bc12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5651415b9565f71e7c899996708c0b263bf0154a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694499"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487989"
 ---
 # <a name="strongnamegetpublickeyex-method"></a>StrongNameGetPublicKeyEx 方法
 公開/私密金鑰組，從取得的公開金鑰，並指定雜湊演算法和簽章演算法。  
@@ -41,7 +41,7 @@ HRESULT StrongNameGetPublicKey (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzKeyContainer`  
  [in]包含 public/private 金鑰組的金鑰容器名稱。 如果`pbKeyBlob`為 null，`szKeyContainer`必須指定有效的容器內的密碼編譯服務提供者 (CSP)。 在此情況下，`StrongNameGetPublicKeyEx`方法會從容器中所儲存的金鑰組擷取公開金鑰。  
   

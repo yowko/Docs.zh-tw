@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48d43d9107d010b12167b977acd2e500437c039f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a08a0ed8303804df1889973fe3ffab6db93249d5
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501708"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481439"
 ---
 # <a name="icorprofilercallbackappdomaincreationfinished-method"></a>ICorProfilerCallback::AppDomainCreationFinished 方法
 通知分析工具已建立的應用程式定義域。  
@@ -35,7 +35,7 @@ HRESULT AppDomainCreationFinished(
     [in] HRESULT     hrStatus);   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `appDomainId`  
  [in]識別已建立的網域。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 112c42f15b39c72ba8519877e5ee6a8700953ba5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50152b72cade763a5b890c0c9d45109d88ce65a7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625847"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469205"
 ---
 # <a name="iassemblycacheinstallassembly-method"></a>IAssemblyCache::InstallAssembly 方法
 指定的組件安裝在全域組件快取中。  
@@ -37,7 +37,7 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwFlags`  
  [in]支援下列值： 旗標。 支援下列值：  
   

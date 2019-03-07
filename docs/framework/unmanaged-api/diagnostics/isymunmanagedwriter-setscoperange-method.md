@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da50542d9f57e008b31ce2e6ed9698df1275d5eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618802"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57489016"
 ---
 # <a name="isymunmanagedwritersetscoperange-method"></a>ISymUnmanagedWriter::SetScopeRange 方法
 定義指定語彙範圍的位移範圍。 範圍會成為新的目前範圍，並推送至堆疊的範圍。 範圍必須形成階層。 同層級項目不允許重疊。  
@@ -36,7 +36,7 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `scopeId`  
  [in]範圍的範圍識別項。  
   

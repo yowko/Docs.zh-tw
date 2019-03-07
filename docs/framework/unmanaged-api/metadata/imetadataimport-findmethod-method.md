@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c0f25b50bf2948bb6f096db70fff208cef799bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 857ea06ad8aba2a6de87bdf670ad0462a2f7dde1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587303"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487277"
 ---
 # <a name="imetadataimportfindmethod-method"></a>IMetaDataImport::FindMethod 方法
 取得指標的 MethodDef 語彙基元的方法，以指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
@@ -39,7 +39,7 @@ HRESULT FindMethod (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `td`  
  [in]`mdTypeDef`括住要搜尋之成員的類型 （類別或介面） 的語彙基元。 如果此值為`mdTokenNil`，則會在完成查詢的全域函式。  
   

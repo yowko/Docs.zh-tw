@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f770182ef8489d503ed092bb4c6cf43ae5b9ce10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ab2cf814297397bcc6eddcb4ce7379e7444eb60
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663345"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478891"
 ---
 # <a name="icordebugilframe4enumeratelocalvariablesex-method"></a>ICorDebugILFrame4::EnumerateLocalVariablesEx 方法
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  在框架中取得區域變數的列舉程式，並選擇性地包含在分析工具 ReJIT 檢測中加入的變數。  
   
@@ -35,7 +35,7 @@ HRESULT EnumerateLocalVariablesEx(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `flags`  
  [in][ILCodeKind](../../../../docs/framework/unmanaged-api/debugging/ilcodekind-enumeration.md)列舉的成員，指定在分析工具 ReJIT 檢測中加入的變數是否包含在框架中。  
   

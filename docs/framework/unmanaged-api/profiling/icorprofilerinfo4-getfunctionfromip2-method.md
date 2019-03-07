@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bded97c23013e60bf2d3c32c4eb25285870977e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 51f8768fc3cd73f0fd5bdb84842af03b900fafdf
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554188"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57495343"
 ---
 # <a name="icorprofilerinfo4getfunctionfromip2-method"></a>ICorProfilerInfo4::GetFunctionFromIP2 方法
 Managed 程式碼指令指標會對應至函式的 JIT 重新編譯版本。  
@@ -36,7 +36,7 @@ HRESULT GetFunctionFromIP2(
     [out] ReJITID *pReJitId);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ip`  
  [in]在 managed 程式碼指令指標。  
   

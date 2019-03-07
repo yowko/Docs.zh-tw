@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 511105fef030dbc189b463864035f86d39327032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ada84df2a08b992aa178c2fb63c713b05a8937a2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732523"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503212"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler 方法
 設定所指定參考的方法`IUnknown`指標當做權杖的重新對應的通知回呼。  
@@ -35,7 +35,7 @@ HRESULT SetHandler (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pUnk`  
  [in]若要註冊處理常式。  
   

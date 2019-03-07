@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0d5702f5df1e2d31a4e01de6be7c70af03b54296
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258d6967d1586974a4258e7906fd71db6c461b07
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519680"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482180"
 ---
 # <a name="isymunmanagedreader2getsymattributepreremap-method"></a>ISymUnmanagedReader2::GetSymAttributePreRemap 方法
 取得自訂屬性，根據其名稱。 不同於中繼資料的自訂屬性，這些屬性會保存在符號存放區。  
@@ -39,7 +39,7 @@ HRESULT GetSymAttributePreRemap(
         length_is(*pcBuffer)] BYTE buffer[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `parent`  
  [in]父代的中繼資料語彙基元。  
   

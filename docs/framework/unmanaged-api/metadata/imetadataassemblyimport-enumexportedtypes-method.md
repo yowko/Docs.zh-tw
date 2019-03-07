@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1beb76012d5f0351ee644c8dea89cabdbe2c8970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10982b34add7e42cb54872afdea96df82c1fdc54
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555020"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487907"
 ---
 # <a name="imetadataassemblyimportenumexportedtypes-method"></a>IMetaDataAssemblyImport::EnumExportedTypes 方法
 列舉在目前的中繼資料範圍內的組件資訊清單中參考的匯出的類型。  
@@ -38,7 +38,7 @@ HRESULT EnumExportedTypes (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 這必須是 null 值時`EnumExportedTypes`第一次呼叫方法。  
   

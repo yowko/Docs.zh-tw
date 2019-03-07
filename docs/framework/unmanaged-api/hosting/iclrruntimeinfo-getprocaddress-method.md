@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f956ed33e0a168dca0c0e5de92d38ba32db3fb05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da9ae70056e3ef5d6d9e03fde1dcf8775e5d118e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703454"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498948"
 ---
 # <a name="iclrruntimeinfogetprocaddress-method"></a>ICLRRuntimeInfo::GetProcAddress 方法
 取得指定的函式匯出從 common language runtime (CLR) 與此介面相關聯的位址。  
@@ -37,7 +37,7 @@ HRESULT GetProcAddress(
      [out, retval] LPVOID *ppProc);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pszProcName`  
  [in]匯出的函式的名稱。  
   
@@ -45,12 +45,12 @@ HRESULT GetProcAddress(
  [out]匯出的函式的位址。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_POINTER|`pszProcName` 或 `ppProc` 為 null。|  
+|E_POINTER|`pszProcName` 或`ppProc`為 null。|  
 |CLR_E_SHIM_RUNTIMEEXPORT|指定的函式不是匯出的函式。|  
   
 ## <a name="remarks"></a>備註  

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0f551e2f8a89cf2988ce43bf72a1e87e0ddaf713
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543207"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474276"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset 方法
 取得這個變數，其父系內的起始位移。 如果這是本機變數的範圍內，起始位移會落在定義範圍的位移。  
@@ -34,7 +34,7 @@ HRESULT GetStartOffset(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pRetVal`  
  [out]指標`ULONG32`接收的開始位移。  
   

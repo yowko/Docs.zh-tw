@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 467be5a02b2e202b2e0e4f6a36b748ab6e0e8dbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c68668c1d591a8fb53d04d632027b0d8effb0c42
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731214"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474794"
 ---
 # <a name="icorprofilerinfo5geteventmask2-method"></a>ICorProfilerInfo5::GetEventMask2 方法
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  取得分析工具想要從 Common Language Runtime (CLR) 接收通知的目前事件分類。  它會提供不是由提供的功能[icorprofilerinfo:: Geteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)方法。  
   
@@ -35,15 +35,16 @@ HRESULT GetEventMask2(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pdwEventsLow`  
- [out] 指定事件分類的 4 位元組值的指標。 每個位元分別控制不同的功能、行為或事件類型。 位元所述[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別。  
+ [out] 指定事件分類的 4 位元組值的指標。 每個位元各控制事件的不同功能、行為或類型。 位元所述[COR_PRF_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-monitor-enumeration.md)列舉型別。  
   
  `pdwEventsHigh`  
- [out] 指定事件分類的 4 位元組值的指標。  每個位元分別控制不同的功能、行為或事件類型。 位元所述[COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)列舉型別。  
+ [out] 指定事件分類的 4 位元組值的指標。  每個位元各控制事件的不同功能、行為或類型。 位元所述[COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)列舉型別。  
   
 ## <a name="remarks"></a>備註  
- `GetEventMask2` 方法可用於判斷分析工具已訂閱哪些回呼。 一般而言，您可以執行的邏輯 OR`pdwEventsLow`並`pdwEventsHigh`值和您想要設定，然後再呼叫任何新位元[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
+ 
+  `GetEventMask2` 方法可用於判斷分析工具已訂閱哪些回呼。 一般而言，您可以執行的邏輯 OR`pdwEventsLow`並`pdwEventsHigh`值和您想要設定，然後再呼叫任何新位元[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
   
  這個方法會以建議的替代做法[GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)方法。  
   

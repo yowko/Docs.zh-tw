@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a8d14deae1923e2904818fc01ffa3665fdf5ea6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dffe95df75fafe293c225c513db7ff7896765fa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710569"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501769"
 ---
 # <a name="icordebugcontrollersetallthreadsdebugstate-method"></a>ICorDebugController::SetAllThreadsDebugState 方法
 設定程序中的所有 managed 執行緒的偵錯狀態。  
@@ -36,7 +36,7 @@ HRESULT SetAllThreadsDebugState (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `state`  
  [in]指定偵錯執行緒的狀態 」 CorDebugThreadState 」 列舉值。  
   

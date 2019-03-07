@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2086b12cac75af1c75a13997784e04113630c4f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78f246f90e7e3b7c9fff984092a0b5eefcba5a13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496162"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478059"
 ---
 # <a name="icordebugcodeisil-method"></a>ICorDebugCode::IsIL 方法
 取得值，指出是否此 「 ICorDebugCode"代表已編譯的 Microsoft intermediate language (MSIL) 程式碼。  
@@ -35,7 +35,7 @@ HRESULT IsIL (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pbIL`  
  [out]`true`如果這個`ICorDebugCode`表示 MSIL 中編譯; 否則程式碼`false`。  
   

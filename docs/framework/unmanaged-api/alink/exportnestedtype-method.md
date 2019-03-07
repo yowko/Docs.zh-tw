@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5c7ea671af5c6c725df136810bb8cf6610a6f83f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710335"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498038"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
 指定巢狀型別為可匯出。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)也可以匯出巢狀類型，但這個方法會比較快。  
@@ -41,7 +41,7 @@ HRESULT ExportNestedType(
 ) PURE;   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `AssemblyID`  
  若要從匯出的組件識別碼。  
   

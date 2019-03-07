@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c46f2636d397f7f71cf3c119b177f721c6fc091
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5e2d0ed5ba5411f637c8370d366a96f0e028838
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620941"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484613"
 ---
 # <a name="inotifysource2setnotifyfilter-method"></a>INotifySource2::SetNotifyFilter 方法
 會指定與此來源使用的通知篩選器。  
@@ -37,7 +37,7 @@ HRESULT SetNotifyFilter
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `in_NotifyFilter`  
  [in]位元組合[NOTIFY_FILTER](../../../../docs/framework/unmanaged-api/diagnostics/notify-filter-enumeration.md)識別回呼偵錯工具 API 的列舉值。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 44093f84ea644757a5f5c73da54ce5bcfa717a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54e2648765d896c189cc2deb5590a0a2a9b3f410
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728081"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476476"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences 方法
 取得要進行記憶體回收處理序中的所有物件的列舉值。  
@@ -36,7 +36,7 @@ HRESULT EnumerateGCReferences(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `enumerateWeakReferences`  
  [in]布林值，指出弱式參考是否也要列舉。 如果`enumerateWeakReferences`已`true`，則`ppEnum`強式參考和弱式參考，包含列舉值。 如果`enumerateWeakReferences`是`false`，此列舉值會包含只有強式參考。  
   

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a253503f3046c004cc7109a31b5aa8fd8e8dc195
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22927b388a62ee6025c987bb107b2dfd51da0e3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618047"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57488990"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile 方法
 可讓您指定或重設時它會建立組件連結器所使用之資訊清單檔案。  
@@ -34,7 +34,7 @@ HRESULT SetManifestFile(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pszFile`  
   
  Win32 資源的 blob 內容會放入資訊清單檔案的名稱。  

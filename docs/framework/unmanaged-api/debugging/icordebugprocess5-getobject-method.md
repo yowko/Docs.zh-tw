@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9588a22feb27d2bd40af2b003179638ef6f34e83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56b5796a6edb3d9fb7e0dc1072951a93a6e508a3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660862"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502510"
 ---
 # <a name="icordebugprocess5getobject-method"></a>ICorDebugProcess5::GetObject 方法
 將轉換的物件位址為"ICorDebugObjectValue 」 物件。  
@@ -36,7 +36,7 @@ HRESULT GetObject(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `addr`  
  [in]物件的位址。  
   

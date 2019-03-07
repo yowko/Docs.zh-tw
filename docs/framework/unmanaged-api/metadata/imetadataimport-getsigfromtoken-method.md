@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b25eb71d78797b5f764cfe4de7abd45f0143fde4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 292ab8684f20c7ec5dcb87784c0ffff7416e8880
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717632"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476343"
 ---
 # <a name="imetadataimportgetsigfromtoken-method"></a>IMetaDataImport::GetSigFromToken 方法
 取得與指定語彙基元相關聯的二進位中繼資料簽章。  
@@ -37,7 +37,7 @@ HRESULT GetSigFromToken (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `mdSig`  
  [in]要傳回的二進位中繼資料簽章的權杖。  
   

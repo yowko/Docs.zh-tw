@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6e222f1a39276b6debc348bfb25e8db65cb648ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 930c78386eca5a2a9b8662129c1470f6170aed77
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478527"
 ---
 # <a name="imetadataassemblyimportgetexportedtypeprops-method"></a>IMetaDataAssemblyImport::GetExportedTypeProps 方法
 取得具有指定之中繼資料簽章之匯出類型的屬性集。  
@@ -41,7 +41,7 @@ HRESULT GetExportedTypeProps (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `mdct`  
  [in]`mdExportedType`中繼資料語彙基元，表示匯出的型別。  
   

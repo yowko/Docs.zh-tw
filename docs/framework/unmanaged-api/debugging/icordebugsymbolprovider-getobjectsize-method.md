@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3c564396-ac64-4ef3-b4f6-df96f1d46fc7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 99714a50d0b3966476cea2f7ed02f04a2ebf6cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10374f76edb9446093b89d064570ce05193129b3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512407"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498324"
 ---
 # <a name="icordebugsymbolprovidergetobjectsize-method"></a>ICorDebugSymbolProvider::GetObjectSize 方法
 傳回根據某物件之 typespec 簽章的該物件大小。  
@@ -24,7 +24,7 @@ HRESULT GetObjectSize(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cbSignature`  
  [in] Typespec 簽章中的位元組數目。  
   
@@ -37,7 +37,7 @@ HRESULT GetObjectSize(
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

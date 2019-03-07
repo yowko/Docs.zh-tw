@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd0c1edf5eb01c3cb94633b5185ef5b21bd9716e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 255e2ced8cf7ed06234f8eb8e5423c0bd6541e9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557848"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484520"
 ---
 # <a name="imetadatafiltermarktoken-method"></a>IMetaDataFilter::MarkToken 方法
 設定值，指出指定的中繼資料語彙基元已處理。  
@@ -35,7 +35,7 @@ HRESULT MarkToken (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tk`  
  [in]要標記為已處理的權杖。  
   

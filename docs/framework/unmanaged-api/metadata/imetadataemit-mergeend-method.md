@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45d85be4e4987e5a5234ca2d57c85a56f9f544bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8602405a743f1ced6485d84a34a267771716d9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657021"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57469010"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd 方法
 合併到目前的範圍由一或多個先前的呼叫，以指定的所有中繼資料領域[imetadataemit:: Merge](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-merge-method.md)。  
@@ -33,7 +33,7 @@ ms.locfileid: "54657021"
 HRESULT MergeEnd ();  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  這個方法會接受任何參數。  
   
 ## <a name="remarks"></a>備註  

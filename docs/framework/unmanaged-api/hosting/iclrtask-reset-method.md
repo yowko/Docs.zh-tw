@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f4e25cfabbf18a9f0733d245259d9bb8f9c7757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae0a2a3af532b81d7b346cdd17da1712dfa3cba8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715539"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499923"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 方法
 通知 common language runtime (CLR) 主機已完成一項工作，並可讓重複使用目前的 CLR [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)來代表另一項工作的執行個體。  
@@ -35,7 +35,7 @@ HRESULT Reset (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `fFull`  
  [in]`true`，如果執行階段應該重設所有執行緒相關靜態值除了與目前的安全性和地區設定資訊`ICLRTask`執行個體; 否則`false`。  
   

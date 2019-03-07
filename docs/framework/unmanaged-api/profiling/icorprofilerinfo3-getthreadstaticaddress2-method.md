@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99f9162cc01d68d25304aed5cb8102b6cc21f7a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49139f5b1f65bc2e258362d9b47f4e0d44cc6894
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727088"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481517"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 方法
 取得指定執行緒靜態欄位的位址，這位於指定之執行緒和應用程式定義域的範圍內。  
@@ -38,7 +38,7 @@ HRESULT GetThreadStaticAddress2(
                 [out] void **ppAddress);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `classId`  
  [in]包含要求的執行緒靜態欄位的類別識別碼。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1c3d20b1b9470c744f6dca9ef638555b9322c1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bdd1a22a771a8d0c3cbab511e14eb3456df5032
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658113"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497778"
 ---
 # <a name="iassemblycachequeryassemblyinfo-method"></a>IAssemblyCache::QueryAssemblyInfo 方法
 取得指定的組件的相關要求的資料。  
@@ -37,7 +37,7 @@ HRESULT QueryAssemblyInfo (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwFlags`  
  [in]支援下列值： 旗標。 支援下列值：  
   

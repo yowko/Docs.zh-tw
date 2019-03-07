@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f6f3018d5e9a1b49191d8e82f91ac8e5c21b77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7216e2aacf344a5e606e34451cde01eca4a1e175
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681946"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472183"
 ---
 # <a name="imetadatatablesgetrow-method"></a>IMetaDataTables::GetRow 方法
 取得指定的資料列索引，在指定的資料表索引的資料表中的資料列。  
@@ -37,7 +37,7 @@ HRESULT GetRow (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ixTbl`  
  [in]將從中擷取的資料列之資料表的索引。  
   

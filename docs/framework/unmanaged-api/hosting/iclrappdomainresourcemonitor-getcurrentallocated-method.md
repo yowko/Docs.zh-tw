@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 43d3234a6bd579238068dba9b37ff48a758f6ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97b00ff01125e000dec7840f122ed0c69ec9878f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693781"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502524"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentallocated-method"></a>ICLRAppDomainResourceMonitor::GetCurrentAllocated 方法
 取得以位元組為單位，因為它已建立，但不減去已回收的記憶體已建立的應用程式定義域的所有記憶體配置的大小總計。  
@@ -34,7 +34,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
                             [out] ULONGLONG* pBytesAllocated);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwAppDomainId`  
  [in]要求的應用程式定義域的識別碼。  
   
@@ -42,7 +42,7 @@ HRESULT GetCurrentAllocated([in]  DWORD dwAppDomainId,
  [out]所有記憶體配置的總大小指標。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

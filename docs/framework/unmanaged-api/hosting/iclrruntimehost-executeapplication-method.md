@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a68c210c8c87597e2f3e664ff67ff4ba3557323d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c2a56d153fcd7238f58c9650b8db08b3f39edaa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54656358"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496270"
 ---
 # <a name="iclrruntimehostexecuteapplication-method"></a>ICLRRuntimeHost::ExecuteApplication 方法
 用於以指定要啟動新的網域中的應用程式的資訊清單為基礎的 ClickOnce 部署案例。 如需有關這些案例的詳細資訊，請參閱 < [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)。  
@@ -40,7 +40,7 @@ HRESULT ExecuteApplication(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzAppFullName`  
  [in]應用程式，針對所定義的完整名稱<xref:System.ApplicationIdentity>。  
   

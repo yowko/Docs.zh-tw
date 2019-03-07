@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7859beae572f05863fb24f0257aae8b0ec16bbcf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe0b465d0e15fadde48c2278aa367632bda3f9ef
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640871"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57473816"
 ---
 # <a name="iassemblynamegetname-method"></a>IAssemblyName::GetName 方法
 取得所參考的組件的簡單且未加密名稱[IAssemblyName](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)物件。  
@@ -36,7 +36,7 @@ HRESULT GetName (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `lpcwBuffer`  
  [in、 out]大小`pwzName`寬字元，包括 null 結束字元。  
   

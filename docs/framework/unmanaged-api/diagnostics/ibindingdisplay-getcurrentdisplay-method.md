@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 992626fb3fa085c85d61b9bdd25c985436e96aea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f9cc44db9c93a8b018d0586bc1faeda7cfbc9bc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550561"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498428"
 ---
 # <a name="ibindingdisplaygetcurrentdisplay-method"></a>IBindingDisplay::GetCurrentDisplay 方法
 傳回目前的繫結顯示資訊。  
@@ -35,7 +35,7 @@ HRESULT GetCurrentDisplay (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `display`  
  [out，retval]包含繫結顯示資訊的 safearray 指標。  
   

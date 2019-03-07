@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eab43bce4dbd4ea8f88a9137ce5574252dae8a61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06c74509a0435fe54f754c6e47603bd74b5b09fe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743851"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493592"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters 方法
 取得每個暫存器值 （適用於目前執行所在的程式碼的平台） 所指定的特定位元遮罩。  
@@ -38,7 +38,7 @@ HRESULT GetRegisters (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `maskCount`  
  [in]大小，以位元組為單位的`mask`陣列。  
   

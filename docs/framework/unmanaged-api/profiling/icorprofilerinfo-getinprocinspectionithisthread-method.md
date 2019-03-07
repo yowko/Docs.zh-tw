@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 019a85d6d58c99adb7c16be5cc3b31b029b0312d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1bcf52a3745b22df58e67e892bf3a2b77c542d43
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513128"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478995"
 ---
 # <a name="icorprofilerinfogetinprocinspectionithisthread-method"></a>ICorProfilerInfo::GetInprocInspectionIThisThread 方法
 ICorDebugThread 介面取得的可查詢的物件。 這個方法是在.NET Framework 2.0 版中已過時。  
@@ -34,7 +34,7 @@ HRESULT GetInprocInspectionIThisThread(
     [out] IUnknown **ppicd);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppicd`  
  [out](/cpp/atl/iunknown)物件，可以查詢`ICorDebugThread`介面。  
   

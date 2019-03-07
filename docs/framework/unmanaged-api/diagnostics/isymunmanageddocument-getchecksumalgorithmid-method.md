@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c5861f598a653f433ffaa611d6f1be3ba6f69a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 116792c6a669f31b0c69dcc0b25134af7e72f9f2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585600"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501028"
 ---
 # <a name="isymunmanageddocumentgetchecksumalgorithmid-method"></a>ISymUnmanagedDocument::GetCheckSumAlgorithmId 方法
 取得總和檢查碼演算法識別項，或如果沒有任何總和檢查碼會傳回全部為零的 GUID。  
@@ -34,7 +34,7 @@ HRESULT GetCheckSumAlgorithmId(
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pRetVal`  
  [out]收到的總和檢查碼演算法識別項變數的指標。  
   

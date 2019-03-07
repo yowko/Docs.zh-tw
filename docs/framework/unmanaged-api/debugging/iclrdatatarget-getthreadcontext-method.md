@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bac7e46bd499a680906e67b41175e099f96ecc3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c2e1dc374a5205c774e4470363b38c604fa0862
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604440"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500495"
 ---
 # <a name="iclrdatatargetgetthreadcontext-method"></a>ICLRDataTarget::GetThreadContext 方法
 取得目標處理序中指定的執行緒目前的執行內容。 這個方法是由通用語言執行階段資料存取服務呼叫。  
@@ -39,7 +39,7 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `threadID`  
  [in]目標處理序中的執行緒作業系統識別項。  
   

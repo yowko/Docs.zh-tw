@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dbf52a352000150766cd9a8277278491ad7d5152
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fe1fa99cb7376aae6dffb2a0973955f417b0b8f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616728"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494336"
 ---
 # <a name="icorprofilerinfogetappdomaininfo-method"></a>ICorProfilerInfo::GetAppDomainInfo 方法
 接受應用程式定義域 ID。 傳回應用程式定義域名稱和包含該處理序的 ID。  
@@ -39,7 +39,7 @@ HRESULT GetAppDomainInfo(
     [out] ProcessID   *pProcessId);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `appDomainId`  
  [in] 應用程式定義域的 ID。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 752dcf90f790d6403c37fcee377c35656b655b36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1002aa9e01fedaacf80622952bbba82caa7081c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491062"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498003"
 ---
 # <a name="imetadataimportgetnativecallconvfromsig-method"></a>IMetaDataImport::GetNativeCallConvFromSig 方法
 取得由指定簽章指標代表的方法之原生呼叫慣例。  
@@ -37,7 +37,7 @@ HRESULT GetNativeCallConvFromSig (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pvSig`  
  [in]中繼資料簽章，這個方法傳回的呼叫慣例的指標。  
   

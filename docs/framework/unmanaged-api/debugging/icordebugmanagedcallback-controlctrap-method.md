@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f13800bcecbf6e7bdc5fede4e11c2ea15ecdec93
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd84293b3414a8622c6b91717e9f1b2f2ce85286
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603894"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57472469"
 ---
 # <a name="icordebugmanagedcallbackcontrolctrap-method"></a>ICorDebugManagedCallback::ControlCTrap 方法
 CTRL + C 會陷入正在偵錯的處理程序會告知偵錯工具。  
@@ -35,7 +35,7 @@ HRESULT ControlCTrap (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pProcess`  
  [in]表示處理程序的 CTRL + C 會被截取的 ICorDebugProcess 物件指標。  
   

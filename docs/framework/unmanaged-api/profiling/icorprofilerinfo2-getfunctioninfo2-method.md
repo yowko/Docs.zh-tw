@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 45a7e0c793baa31d9efde2763570cd46a072fe86
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e2b0273c0e757be9d6d69a02565f8509a196b803
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546315"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478579"
 ---
 # <a name="icorprofilerinfo2getfunctioninfo2-method"></a>ICorProfilerInfo2::GetFunctionInfo2 方法
-取得函式的父類別、中繼資料語彙基元和每個型別引數的 `ClassID` (如果有的話)。  
+取得函式的父類別、中繼資料語彙基元和每個類型引數的 `ClassID` (如果有的話)。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,7 +41,7 @@ HRESULT GetFunctionInfo2(
     [out] ClassID typeArgs[]);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `funcId`  
  [in] 用來取得父類別和其他資訊的函式 ID。  
   
@@ -64,7 +64,7 @@ HRESULT GetFunctionInfo2(
  [out] `ClassID` 值總數的指標。  
   
  `typeArgs`  
- [out] 一組 `ClassID` 值的陣列，其中每一項為該函式型別引數的 ID。 方法傳回時， `typeArgs` 將包含部分或所有的 `ClassID` 值。  
+ [out] 一組 `ClassID`  值的陣列，其中每一項為該函式型別引數的 ID。 方法傳回時， `typeArgs` 將包含部分或所有的 `ClassID` 值。  
   
 ## <a name="remarks"></a>備註  
  分析工具程式碼可以呼叫[icorprofilerinfo:: Getmodulemetadata](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getmodulemetadata-method.md)若要取得[中繼資料](../../../../docs/framework/unmanaged-api/metadata/index.md)提供之模組的介面。 然後，傳回至 `pToken` 所參考位置的中繼資料語彙基元可以用來存取此函式的中繼資料。  
@@ -73,7 +73,7 @@ HRESULT GetFunctionInfo2(
   
 |`frameInfo` 參數的值|結果|  
 |----------------------------------------|------------|  
-|從 `COR_PRF_FRAME_INFO` 回呼取得的 `FunctionEnter2` 值|在 `pClassId` 所參考位置中傳回的 `ClassID` 和 `typeArgs` 陣列傳回的所有類型引數，都會是精確的。|  
+|從 `FunctionEnter2` 回呼取得的 `COR_PRF_FRAME_INFO` 值|在 `pClassId` 所參考位置中傳回的 `ClassID` 和 `typeArgs` 陣列傳回的所有類型引數，都會是精確的。|  
 |從 `FunctionEnter2` 回呼以外來源取得的 `COR_PRF_FRAME_INFO`。|無法決定精確的 `ClassID` 和類型引數。 也就是說，`ClassID` 可能是 null，而且可能會有某些類型引數做為 <xref:System.Object> 傳回。|  
 |零|無法決定精確的 `ClassID` 和類型引數。 也就是說，`ClassID` 可能是 null，而且可能會傳回某些類型引數做為 <xref:System.Object>。|  
   

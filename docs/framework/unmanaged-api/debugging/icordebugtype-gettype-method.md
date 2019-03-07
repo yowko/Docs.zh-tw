@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d881a1fe3965b6e1d89e6172c887061434cd52ff
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: f6b36c524921a4fecf8bc5ddcbace62af6450b6d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418714"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492420"
 ---
 # <a name="icordebugtypegettype-method"></a>ICorDebugType::GetType 方法
-取得 CorElementType 值描述 common language runtime (CLR) 的原生類型<xref:System.Type>此 ICorDebugType 所表示。  
+取得描述 common language runtime (CLR) 的原生類型 CorElementType 值<xref:System.Type>此 ICorDebugType 所表示。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,18 +35,18 @@ HRESULT GetType (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ty`  
- [out]值的指標`CorElementType`列舉，指出 CLR<xref:System.Type>這個`ICorDebugType`代表。  
+ [out]值的指標`CorElementType`列舉，指出 CLR<xref:System.Type>這個`ICorDebugType`表示。  
   
 ## <a name="remarks"></a>備註  
- 如果值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE， [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可能會呼叫以取得泛型類型的未具現化的類型; 否則請勿呼叫`ICorDebugType::GetClass`。  
+ 如果值`ty`ELEMENT_TYPE_CLASS 或 ELEMENT_TYPE_VALUETYPE， [icordebugtype:: Getclass](../../../../docs/framework/unmanaged-api/debugging/icordebugtype-getclass-method.md)方法可能會呼叫以取得泛型型別未具現化的型別; 否則請勿呼叫`ICorDebugType::GetClass`。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]

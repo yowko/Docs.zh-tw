@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 46e039aeec352c215046bebfb17e6fbd803962a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19d7284399719dd848af43765a392802a589fc33
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597485"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492526"
 ---
 # <a name="pfnclrdatacreateinstance-function-pointer"></a>PFN_CLRDataCreateInstance 函式指標
 指向函式來建立指定的目標項目介面物件。  
@@ -36,7 +36,7 @@ typedef HRESULT (STDAPICALLTYPE* PFN_CLRDataCreateInstance) (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `iid`  
  [in]要具現化的介面識別項。  
   

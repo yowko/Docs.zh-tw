@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0063e33a6a7861815ebb9d9eb3dabec64dd4b9d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419649"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492162"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory 方法
-讀取指定的這個處理序的記憶體區域。  
+讀取指定的此程序的記憶體區域。  
   
 ## <a name="syntax"></a>語法  
   
@@ -37,31 +37,31 @@ HRESULT ReadMemory(
     [out] SIZE_T *read);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `address`  
- [in]A`CORDB_ADDRESS`值，指定讀取記憶體的基底位址。  
+ [in]A`CORDB_ADDRESS`值，指定要讀取的記憶體的基底位址。  
   
  `size`  
- [in]要從記憶體讀取的位元組數目。  
+ [in]若要從記憶體讀取的位元組數目。  
   
  `buffer`  
  [out]接收內容的記憶體緩衝區。  
   
  `read`  
- [out]位元組數目的指標傳送至指定的緩衝區。  
+ [out]指標的位元組數傳送至指定的緩衝區。  
   
 ## <a name="remarks"></a>備註  
- `ReadMemory`方法主要是要用來檢查正在使用的 unmanaged 偵錯項目一部分的記憶體區域的 interop 偵錯。 這個方法也可用來讀取 Microsoft intermediate language (MSIL) 程式碼和原生的 JIT 編譯程式碼。  
+ `ReadMemory`方法主要是用來檢查正在使用的 unmanaged 偵錯項目一部分的記憶體區域的 interop 偵錯。 這個方法也可用來讀取 Microsoft intermediate language (MSIL) 程式碼和原生的 JIT 編譯程式碼。  
   
- 任何受管理的中斷點會移除資料中傳回`buffer`參數。 沒有進行調整將成為所設定的原生中斷點[icordebugprocess2:: Setunmanagedbreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。  
+ 將移除任何受管理的中斷點，從資料中傳回的`buffer`參數。 將進行不會調整，藉由設定原生的中斷點[ICorDebugProcess2::SetUnmanagedBreakpoint](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess2-setunmanagedbreakpoint-method.md)。  
   
- 執行任何快取的處理序記憶體。  
+ 無快取的程序記憶體會執行。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

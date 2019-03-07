@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e7ba2d6f143b6bbb9ddc5a056191e53f719bfeb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf9cc16ba2702e814f27adb009a5e9b63acc97e3
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643945"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500185"
 ---
 # <a name="imetadataemitdeletefieldmarshal-method"></a>IMetaDataEmit::DeleteFieldMarshal 方法
 終結的 PInvoke 封送處理指定的語彙基元所參考之物件的中繼資料簽章。  
@@ -35,7 +35,7 @@ HRESULT DeleteFieldMarshal (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `tk`  
  [in]`mdFieldDef`或`mdParamDef`語彙基元，表示要刪除封送處理的中繼資料簽章的參數的欄位。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b768c8f7880a2317d1b72878657158e839b731f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c29859a54b89956e017f06b8eeb97a6171eabbb
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569725"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57476213"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach 方法
 會傳回 HRESULT，指出是否有可能在目前的電腦以及執行階段組態的內容中啟動新的處理序，或附加至指定的現有處理序。  
@@ -36,7 +36,7 @@ HRESULT CanLaunchOrAttach (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `dwProcessId`  
  [in]現有的處理序的識別碼。  
   

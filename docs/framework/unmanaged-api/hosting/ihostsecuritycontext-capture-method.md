@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01d8821cdcb27ed44491db41da22309147da8a36
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92b593248a7a196247a5b4c71a90cd8944665bbe
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706731"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57485274"
 ---
 # <a name="ihostsecuritycontextcapture-method"></a>IHostSecurityContext::Capture 方法
 取得的複製品[IHostSecurityContext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritycontext-interface.md)呼叫所傳回的執行個體[ihostsecuritymanager:: Getsecuritycontext](../../../../docs/framework/unmanaged-api/hosting/ihostsecuritymanager-getsecuritycontext-method.md)。  
@@ -35,7 +35,7 @@ HRESULT Capture (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppClonedContext`  
  [out]建立複製的位址指標`IHostSecurityContext`来擷取的物件。  
   

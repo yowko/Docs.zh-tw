@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 5a6c9a5a-ec72-4c40-a9c3-cee7baa63687
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 331f335364542fd299a51d25e54d5b6606d19e59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78df94fdc4190a43c80b0a8e3457f164e38eb00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498051"
 ---
 # <a name="icordebugstaticfieldsymbolgetaddress-method"></a>ICorDebugStaticFieldSymbol::GetAddress 方法
 取得靜態欄位的位址。  
@@ -22,14 +22,14 @@ HRESULT GetAddress(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  pRVA  
  [out] 靜態欄位的相對虛擬位址 (RVA) 指標。  
   
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

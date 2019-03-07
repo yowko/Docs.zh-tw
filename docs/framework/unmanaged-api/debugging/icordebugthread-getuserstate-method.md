@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 06ff8f0f13d7710d2d3d59aac4b5fdcadfe707be
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: e4deaa3ab4b14fbd32d45841966cfac9e33b9f31
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33418388"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487846"
 ---
 # <a name="icordebugthreadgetuserstate-method"></a>ICorDebugThread::GetUserState 方法
 取得此 ICorDebugThread 的目前使用者狀態。  
@@ -35,18 +35,18 @@ HRESULT GetUserState (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pState`  
  [out]CorDebugUserState 列舉值，描述這個執行緒的目前使用者狀態的位元組合指標。  
   
 ## <a name="remarks"></a>備註  
- 執行緒的使用者狀態時進行檢查的程式進行偵錯執行緒的狀態。 執行緒可能會有多個設定的狀態位元。  
+ 使用者狀態的執行緒時它由正在進行偵錯的程式會檢查執行緒的狀態。 執行緒可能會有多個設定的狀態位元。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

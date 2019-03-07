@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d10fb391953e924feb553ae4516fb7674345ed3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba85ec920777189940a05864d19e4c24a65b4564
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592005"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499471"
 ---
 # <a name="imetadataassemblyimportenumassemblyrefs-method"></a>IMetaDataAssemblyImport::EnumAssemblyRefs 方法
 列舉`mdAssemblyRef`組件資訊清單中所定義的執行個體。  
@@ -38,7 +38,7 @@ HRESULT EnumAssemblyRefs (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 這必須是 null 值時`EnumAssemblyRefs`第一次呼叫方法。  
   

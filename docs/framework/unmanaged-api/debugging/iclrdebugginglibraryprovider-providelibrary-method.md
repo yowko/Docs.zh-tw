@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f66d91434fd92ff80bb17e04bf38bb0b631e819
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 3dd1038fdc8b22b99e1c8c7b753b46b9ce877355
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825494"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496439"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary 方法
 取得程式庫提供者回呼介面，可讓 common language runtime (CLR) 版本特定偵錯程式庫尋找並載入需求。  
@@ -37,7 +37,7 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwszFilename`  
  [in]所要求的模組名稱。  
   
@@ -51,7 +51,7 @@ HRESULT ProvideLibrary(
  [out]要求的模組控制代碼。  
   
 ## <a name="return-value"></a>傳回值  
- 這個方法會傳回下列特定的 HRESULT 以及表示方法失敗的 HRESULT 錯誤。  
+ 這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。  
   
 |HRESULT|描述|  
 |-------------|-----------------|  

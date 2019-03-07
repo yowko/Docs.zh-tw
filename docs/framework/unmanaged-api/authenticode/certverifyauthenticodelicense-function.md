@@ -10,12 +10,12 @@ api_type:
 ms.assetid: 00118de7-33c6-41c4-8e1f-5d5e35e0da83
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c6e9a10dabc778b91fc738d28e9f841538d7c3f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a644e3e2df2544e8164cdaf3bbef3c44d3cd567f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701803"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502541"
 ---
 # <a name="certverifyauthenticodelicense-function"></a>CertVerifyAuthenticodeLicense 函式
 驗證 Authenticode XrML 授權的有效性。  
@@ -31,7 +31,7 @@ HRESULT CertVerifyAuthenticodeLicense (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pLicenseBlob`  
  [in] 要驗證的 Authenticode XrML 授權。  
   
@@ -63,7 +63,7 @@ HRESULT CertVerifyAuthenticodeLicense (
  請參閱[AXL_AUTHENTICODE_TIMESTAMPER_INFO 結構](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)。  
   
 ## <a name="return-value"></a>傳回值  
- 若成功，會傳回 `S_OK`。 反之則傳回錯誤碼。  
+ 若成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

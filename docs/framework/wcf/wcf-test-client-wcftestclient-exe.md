@@ -2,12 +2,12 @@
 title: WCF 測試用戶端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: edce9d2eb2d0bcd915beae0c75d3474d93d8fd51
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903992"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57499286"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請將該服務中，輸入送出，並檢視服務傳回的回應。 它提供了完善的服務測試經驗搭配 WCF 服務主機。  
@@ -125,7 +125,7 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
  在 Proxy 產生、二進位編譯或服務叫用期間，會停用支援重新整理服務的功能表項目。 同時也會停用服務叫用。  
   
 ## <a name="location-of-files-generated-by-the-test-client"></a>測試用戶端產生的檔案位置  
- 根據預設，WCF 測試用戶端存放區會在"%appdata%\Local\temp\Test Client Projects"資料夾中產生用戶端程式碼和組態檔。 WCF 測試用戶端結束之後，會刪除此資料夾。 如果在 WCF 測試用戶端修改設定檔和**重新產生組態啟動服務時永遠**選項會停用，修改過的檔案會複製到"My Documents\Test Client Projects"下的"Cached Config"資料夾做為索引對應 （中繼資料-位址-至-檔名） XML 檔案。  
+ 根據預設，WCF 測試用戶端存放區會在"%appdata%\Local\temp\Test Client Projects"資料夾中產生用戶端程式碼和組態檔。 WCF 測試用戶端結束之後，會刪除此資料夾。 如果在 WCF 測試用戶端修改設定檔和**重新產生組態啟動服務時永遠**選項會停用，修改過的檔案會複製到"My Documents\Test Client Projects"下的"CachedConfig 」 資料夾做為索引對應 （中繼資料-位址-至-檔名） XML 檔案。  
   
  您也可以在命令列中，使用啟動 WCF 測試用戶端`/ProjectPath`參數來指定所要的新路徑，用於儲存產生的檔案，或使用`/RestoreProjectPath`參數還原預設位置。 語法如下：  
   

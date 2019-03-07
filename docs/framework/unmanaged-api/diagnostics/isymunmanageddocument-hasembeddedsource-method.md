@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: acff919cbeb6b5d71197664139cdc9212961e314
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 620d303bcd33a4d04155850ec2c1b6293bf788d1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629510"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493254"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource 方法
 會傳回`true`文件具有來源內嵌在偵錯的符號; 否則會傳回`false`。  
@@ -34,7 +34,7 @@ HRESULT HasEmbeddedSource(
    [out, retval]  BOOL  *pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pRetVal`  
  [out]此變數會指出是否有來源文件的指標會內嵌在偵錯符號。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f5e4a36f633b215faaf5930cd2487c26c1d5ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ded2fe4ab9c3ed8795f42f9bb0c550fad6ac867d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696226"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487206"
 ---
 # <a name="imetadatatablesgetnextuserstring-method"></a>IMetaDataTables::GetNextUserString 方法
 取得包含目前的資料表資料行中的下一步 硬式編碼字串的資料列索引。  
@@ -36,7 +36,7 @@ HRESULT GetNextUserString (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ixUserString`  
  [in]從目前的字串資料行索引值。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb1e0aec9ce746c3082ad9cc57b572cbca0fd7e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc4ba4f87cd53e12baa0a7cf8b853db0e948201f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552254"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500380"
 ---
 # <a name="iclrdatatargetgetcurrentthreadid-method"></a>ICLRDataTarget::GetCurrentThreadID 方法
 取得目前執行緒的作業系統識別項。  
@@ -35,7 +35,7 @@ HRESULT GetCurrentThreadID (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `threadID`  
  [out]目標處理序的目前執行緒的作業系統識別碼指標。  
   

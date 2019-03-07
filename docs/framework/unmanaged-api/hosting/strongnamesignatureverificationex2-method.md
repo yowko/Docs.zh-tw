@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 641aaa42dca173de41afa099c91f78fecf691a7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc8b3096bd0c60e826fec4c8daf535c3c4086630
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689938"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482778"
 ---
 # <a name="strongnamesignatureverificationex2-method"></a>StrongNameSignatureVerificationEx2 方法
 驗證強式名稱的組件中，簽章，並提供實際的索引鍵與 ECMA 索引鍵的對應。  
@@ -38,7 +38,7 @@ HRESULT StrongNameSignatureVerificationEx (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `wszFilePath`  
  [in]可攜式可執行檔 （.exe 或.dll） 檔來進行驗證的組件的路徑。  
   

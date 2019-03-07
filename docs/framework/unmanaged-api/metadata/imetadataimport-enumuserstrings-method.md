@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79e65d86eda2f01e1d6f2af46c5ee8e15ff03ccb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a82456c8bc53e7828e447de3bab79388aa102cd
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730239"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493735"
 ---
 # <a name="imetadataimportenumuserstrings-method"></a>IMetaDataImport::EnumUserStrings 方法
 列舉字串語彙基元，其代表目前中繼資料範圍內的硬式編碼字串。  
@@ -38,7 +38,7 @@ HRESULT EnumUserStrings (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]列舉值的指標。 首次呼叫這個方法，這必須是 NULL。  
   

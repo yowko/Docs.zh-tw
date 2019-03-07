@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f62ad2c9ec6e1c9672ac5c78e838e926b02359f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e3c529e77cad16f0bde12e34491829b58add17aa
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512368"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500371"
 ---
 # <a name="cordllmain-function"></a>_CorDllMain 函式
 初始化 common language runtime (CLR)、 在 DLL 組件的 CLR 標頭，尋找 managed 的進入點，並開始執行。  
@@ -36,7 +36,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `hInst`  
  [in]載入模組的執行個體控制代碼。  
   
@@ -54,7 +54,7 @@ BOOL STDMETHODCALLTYPE _CorDllMain (
   
  作業系統載入器會呼叫這個方法，不論在 DLL 檔案中指定的進入點。  
   
- 在 Windows 98、 Windows ME、 Windows NT 和 Windows 2000`_CorDllMain`函式間接透過呼叫 fixupin 作業系統載入器。 在所有其他 Windows 版本，它會呼叫直接由作業系統載入器。  
+`_CorDllMain`直接由作業系統載入器呼叫函式。
   
  如需詳細資訊，請參閱 < 備註 > 一節[_CorValidateImage](../../../../docs/framework/unmanaged-api/hosting/corvalidateimage-function.md)主題。  
   

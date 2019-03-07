@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ca656aeba04526164a65760af990455965c5288e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d8e848a7664e3573bd369addce2b2f5a8c91821
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665210"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481491"
 ---
 # <a name="icordebugprocess5enablengenpolicy-method"></a>ICorDebugProcess5::EnableNGENPolicy 方法
 設定值，這個值會決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。  
@@ -35,7 +35,7 @@ HRESULT EnableNGENPolicy(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ePolicy`  
  [in]A [CorDebugNGenPolicy](../../../../docs/framework/unmanaged-api/debugging/cordebugngenpolicy-enumeration.md)常數，決定應用程式載入 managed 偵錯工具下執行時的原生映像的方式。  
   

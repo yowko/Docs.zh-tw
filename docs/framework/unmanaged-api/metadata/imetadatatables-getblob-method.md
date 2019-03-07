@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa631721965123c4427a5d1ff2e0cec2a1ab2395
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be7e375f2683ef7f37f2e1e141e1c8a3b00da09a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637676"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497037"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob 方法
 取得二進位大型物件 (BLOB) 的指標，在指定的資料行索引。  
@@ -37,7 +37,7 @@ HRESULT GetBlob (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ixBlob`  
  [in]要取得的記憶體位址`ppData`。  
   

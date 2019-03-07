@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a324dc07d450a7ca8992ab3a16f064233692581
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5d28118ea1cc26f80ecc67ccedd160447aa69a4
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711625"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479029"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface 方法
 取得可用來檢查模組的中繼資料的中繼資料介面物件。  
@@ -36,7 +36,7 @@ HRESULT GetMetaDataInterface (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `riid`  
  [in]指定的中繼資料介面的參考識別碼。  
   

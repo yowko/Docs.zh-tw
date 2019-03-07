@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <exception> XML tag
 - exception XML tag
 ms.assetid: c0517549-171e-4dae-ab88-a9c1700b6eee
-ms.openlocfilehash: 157287ce5c85ec51f1711934cf9a5e4f568957ef
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84cadad8f6e4dfcf276400cf8831520b89728cdc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977174"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498709"
 ---
 # <a name="exception-visual-basic"></a>\<例外狀況 > (Visual Basic)
 指定可以擲回的例外狀況。  
@@ -21,7 +21,7 @@ ms.locfileid: "56977174"
 <exception cref="member">description</exception>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `member`  
  可從目前編譯環境取得之例外狀況的參考。 編譯器會檢查指定的例外狀況是否存在，並將 `member` 轉譯為輸出 XML 中的標準項目名稱。 `member` 必須出現在雙引號內 (" ")。  
   

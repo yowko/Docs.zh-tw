@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a104d4d3cc74a6c1cb343818c9b0b3e8978b97df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c14b48a29993a65a0a0ab9fcb63bcb1e0d882042
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33402795"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494062"
 ---
 # <a name="icordebugchaingetactiveframe-method"></a>ICorDebugChain::GetActiveFrame 方法
-取得作用中 (也就是最新) 鏈結上的框架。  
+取得使用 (也就是最新) 鏈結上的框架。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,20 +35,20 @@ HRESULT GetActiveFrame (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppFrame`  
- [out]ICorDebugFrame 物件，表示使用中的位址指標 (也就是最新) 鏈結上的框架。  
+ [out]ICorDebugFrame 物件，表示使用中位址的指標 (也就是最新) 鏈結上的框架。  
   
 ## <a name="remarks"></a>備註  
- 如果沒有受管理的堆疊框架，則`ppFrame`設為 null。  
+ 如果任何受管理的堆疊框架，不可供使用，`ppFrame`設為 null。  
   
- 如果找不到使用中畫面格，則呼叫會成功並`ppFrame`將會是 null。 使用中框架將會無法使用鏈結 CHAIN_ENTER_UNMANAGED，因為起始，因為 CHAIN_CLASS_INIT 起始部分鏈結。 請參閱 CorDebugChainReason 列舉。  
+ 如果找不到使用中畫面格，則呼叫會成功並`ppFrame`將會是 null。 使用中框架將無法使用鏈結 CHAIN_ENTER_UNMANAGED，因為起始，並起始 CHAIN_CLASS_INIT 因為某些鏈結。 CorDebugChainReason 列舉，請參閱。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

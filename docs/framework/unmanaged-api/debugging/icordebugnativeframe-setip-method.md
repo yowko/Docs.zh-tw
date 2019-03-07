@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2d0628d3c8bf5912c811ddf4b2a00b9dfca4687
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33a4315d8908906e9ae1511aa9501969752d4af6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639200"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484858"
 ---
 # <a name="icordebugnativeframesetip-method"></a>ICorDebugNativeFrame::SetIP 方法
 指令指標設定為原生程式碼中指定的位移位置。  
@@ -35,7 +35,7 @@ HRESULT SetIP (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `nOffset`  
  [in]原生程式碼中的位移的位置。  
   

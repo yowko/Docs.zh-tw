@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cc4c510d-550d-4941-af34-81987caf3425
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b85baf5249c1423d01cbf4d6a9e4bf2f6aadf8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a979fd3dd8fc8fc4266f7bd69be0e71b8a400a6
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586484"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57477675"
 ---
 # <a name="icordebugsymbolprovidergetmergedassemblyrecords-method"></a>ICorDebugSymbolProvider::GetMergedAssemblyRecords 方法
 取得所有合併組件的符號記錄。  
@@ -24,7 +24,7 @@ HRESULT GetMergedAssemblyRecords(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `cRequestedRecords`  
  [in] 要求的符號記錄數目。  
   
@@ -37,7 +37,7 @@ HRESULT GetMergedAssemblyRecords(
 ## <a name="remarks"></a>備註  
   
 > [!NOTE]
->  本方法只適用於 .NET 原生。  
+>  這個方法僅適用於 .NET Native。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  

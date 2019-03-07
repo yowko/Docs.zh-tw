@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3f9f49219b810ac85b1f021c206bfab21d11a055
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72624eb1d1d43eecb5052ebceec38b1bc32750ff
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745956"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474341"
 ---
 # <a name="imetadatatablesgetblobheapsize-method"></a>IMetaDataTables::GetBlobHeapSize 方法
 取得大小，以位元組為單位的二進位大型物件 (BLOB) 堆積。  
@@ -35,7 +35,7 @@ HRESULT GetBlobHeapSize (
 );   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pcbBlobs`  
  [out]大小 （位元組），對 BLOB 堆積的指標。  
   

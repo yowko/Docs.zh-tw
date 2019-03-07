@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 02665d2a00a779ac73a19ec5513790f3862833b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1a81c816915eda6a90b5dac9cc6e044575076f7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735005"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502978"
 ---
 # <a name="iceegengetimaptokeniface-method"></a>ICeeGen::GetIMapTokenIface 方法
 取得指定語彙基元所參考的介面。  
@@ -37,7 +37,7 @@ HRESULT GetIMapTokenIface (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pIMapToken`  
  [in、 out]要傳回的介面之中繼資料語彙基元。  
   

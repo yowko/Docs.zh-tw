@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1043a7efe70798fbbc52ce6d1d0e16510e7c0503
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09a7cd3afd87653ba2b4270b32077c9946f1ce04
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499141"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57478917"
 ---
 # <a name="isymunmanagedconstantgetvalue-method"></a>ISymUnmanagedConstant::GetValue 方法
 取得常數的值。  
@@ -35,7 +35,7 @@ HRESULT GetValue(
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pValue`  
  [out]接收值的變數指標。  
   

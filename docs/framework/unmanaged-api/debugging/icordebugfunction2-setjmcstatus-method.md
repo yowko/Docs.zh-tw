@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 15b102be5a792f982edeb320199576bdddbd859a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: 49ced1b4be888c7550c3927d1b319ab2f0bef086
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412356"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501002"
 ---
 # <a name="icordebugfunction2setjmcstatus-method"></a>ICorDebugFunction2::SetJMCStatus 方法
-標示函式，由這個 ICorDebugFunction2 代表 Just My Code 逐步執行。  
+表示此 ICorDebugFunction2 Just My Code 的函式會將標示逐步執行。  
   
 ## <a name="syntax"></a>語法  
   
@@ -35,25 +35,25 @@ HRESULT SetJMCStatus (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `bIsJustMyCode`  
- [in]設定為`true`標示標示為使用者程式碼; 否則設定為`false`。  
+ [in]設定為`true`來標記的功能與使用者程式碼; 否則設定為`false`。  
   
 ## <a name="return-values"></a>傳回值  
   
 |HRESULT|描述|  
 |-------------|-----------------|  
 |`S_OK`|已成功地標示函式。|  
-|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|函式不被標記為使用者程式碼，因為它無法偵錯。|  
+|`CORDBG_E_FUNCTION_NOT_DEBUGGABLE`|此函式無法標示為使用者程式碼，因為它不進行偵錯。|  
   
 ## <a name="remarks"></a>備註  
- Just My Code stepper 將略過的非使用者程式碼。 使用者程式碼必須是可偵錯的程式碼的子集。  
+ Just My Code 步進會略過的非使用者程式碼。 使用者程式碼必須是可偵錯的程式碼的子集。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 70405d774d665e3add03c510f3b99a3280da4860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef51ad511d1b7d8064d4bd141e2952bf723afff7
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625142"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57501678"
 ---
 # <a name="corexemain2-function"></a>_CorExeMain2 函式
 指定記憶體對應的程式碼中執行的進入點。 作業系統載入器會呼叫此函式。  
@@ -38,7 +38,7 @@ __int32 STDMETHODCALLTYPE _CorExeMain2 (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pUnmappedPE`  
  [in]記憶體對應的程式碼指標。  
   

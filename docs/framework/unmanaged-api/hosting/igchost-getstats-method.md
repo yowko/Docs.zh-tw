@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9a3775f453cb432ce6b92d067f93ca54c329c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b8af1de3daf08a8389a5b0e6ebb278646345f9b
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674176"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57482609"
 ---
 # <a name="igchostgetstats-method"></a>IGCHost::GetStats 方法
 取得記憶體回收系統的目前狀態的統計資料。  
@@ -35,7 +35,7 @@ HRESULT GetStats (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pStats`  
  [in、 out]指標[COR_GC_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)結構，包含記憶體回收系統的目前狀態的統計資料。  
   

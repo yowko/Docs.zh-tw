@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d714e83eb0b75b31b08e7a356eb9ea699e1794
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e15b1ab33dd6ab5e9cd9887000c0f91e0bd4a9a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496647"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函式
 可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。  
@@ -41,7 +41,7 @@ HRESULT CorBindToRuntime (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwszVersion`  
  [in]想要載入的字串，描述的 CLR 版本。  
   

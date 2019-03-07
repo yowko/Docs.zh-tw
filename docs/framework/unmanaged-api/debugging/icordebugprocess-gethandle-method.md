@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60bd7567f541a0bbaa3591d2f2905d13064dec3c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.openlocfilehash: c5d81564a34ed8e7ef75840e3a174661c36f5411
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33423438"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498082"
 ---
 # <a name="icordebugprocessgethandle-method"></a>ICorDebugProcess::GetHandle 方法
 取得處理程序的控制代碼。  
@@ -33,18 +33,18 @@ ms.locfileid: "33423438"
 HRESULT GetHandle([out] HPROCESS *phProcessHandle);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phProcessHandle`  
  [out]指標`HPROCESS`也就是處理程序的控制代碼。  
   
 ## <a name="remarks"></a>備註  
- 擷取控制代碼的擁有者偵錯介面。 偵錯工具應該重複的控制代碼後才能使用它。  
+ 擷取的控制代碼是由偵錯介面所擁有。 偵錯工具應該重複使用它之前的控制代碼。  
   
 ## <a name="requirements"></a>需求  
- **平台：** 看到[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
+ **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
  **標頭：** CorDebug.idl、 CorDebug.h  
   
  **程式庫：** CorGuids.lib  
   
- **.NET framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

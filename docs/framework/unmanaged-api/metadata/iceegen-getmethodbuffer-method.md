@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 324d8ce19f202cb6e9d0e4378ca61cf2a956d70e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8ccaa1b03ae1afc87eb7b0a66dd517bba8fcf8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648747"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57497466"
 ---
 # <a name="iceegengetmethodbuffer-method"></a>ICeeGen::GetMethodBuffer 方法
 取得方法的適當大小的緩衝區，在指定的相對虛擬位址。  
@@ -38,7 +38,7 @@ HRESULT GetMethodBuffer (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `RVA`  
  [in]要傳回緩衝區方法的相對虛擬位址。  
   

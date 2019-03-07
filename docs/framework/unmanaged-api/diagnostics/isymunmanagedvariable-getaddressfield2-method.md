@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2a283915f8326a19c7d2c9b45851b9879fe0ec17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ee4e18d34cfc2836bd0017dd01e700662ffe7c2
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634983"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57484221"
 ---
 # <a name="isymunmanagedvariablegetaddressfield2-method"></a>ISymUnmanagedVariable::GetAddressField2 方法
 取得這個變數中的第二個 [位址] 欄位。 其意義取決於位址的類型。  
@@ -34,7 +34,7 @@ HRESULT GetAddressField2(
     [out, retval] ULONG32* pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pRetVal`  
  [out]指標`ULONG32`接收第二個 [位址] 欄位。  
   

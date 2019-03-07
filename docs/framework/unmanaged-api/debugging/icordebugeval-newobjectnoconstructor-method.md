@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d9db6853d3bd4bb7faae54b746a5a940c7dec8a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93fff7ec315edec8b20b4149650b27e7792fb2f1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54561787"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57475043"
 ---
 # <a name="icordebugevalnewobjectnoconstructor-method"></a>ICorDebugEval::NewObjectNoConstructor 方法
 配置新的物件執行個體，指定的類型，而不會嘗試呼叫建構函式方法。  
@@ -37,7 +37,7 @@ HRESULT NewObjectNoConstructor (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pClass`  
  [in]ICorDebugClass 物件，表示要具現化的物件類型的指標。  
   

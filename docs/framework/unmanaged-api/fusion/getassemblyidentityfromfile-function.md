@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: feb8e5c56ee6ea766cd5f1d10af42699777db453
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20ea800b86a169eff984b6068db3e9887235a034
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654879"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496972"
 ---
 # <a name="getassemblyidentityfromfile-function"></a>GetAssemblyIdentityFromFile 函式
 取得指標`IUnknown`使用指定的物件`IID`中指定的檔案路徑中的組件。  
@@ -38,7 +38,7 @@ HRESULT GetAssemblyIdentityFromFile (
  );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzFilePath`  
  [in]要求的組件的有效路徑。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - see XML tag
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
-ms.openlocfilehash: c0f1293fa0161a9a11b4e80301f5c4c4ddffe7b1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c26e818276eb4654fec77230372a0ae090952961
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969293"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57474835"
 ---
 # <a name="see-visual-basic"></a>\<請參閱 > (Visual Basic)
 指定另一個成員的連結。  
@@ -21,7 +21,7 @@ ms.locfileid: "56969293"
 <see cref="member"/>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `member`  
  可從目前編譯環境呼叫的成員或欄位參考。 編譯器會檢查指定的程式碼項目是否存在，並將 `member` 傳遞給輸出 XML 中的項目名稱。 `member` 必須出現在雙引號內 (" ")。  
   

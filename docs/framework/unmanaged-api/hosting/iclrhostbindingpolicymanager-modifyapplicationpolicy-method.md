@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45e0099ea60a338f0ea1ef414f4d2fa1c33c9d70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da21cda0872080272e6b2c2fda32bef2bf9f1f7d
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726880"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57494528"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy 方法
 指定之組件，會修改繫結原則，並建立原則的新版本。  
@@ -41,7 +41,7 @@ HRESULT  ModifyApplicationPolicy (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pwzSourceAssemblyIdentity`  
  [in]若要修改的組件身分識別。  
   

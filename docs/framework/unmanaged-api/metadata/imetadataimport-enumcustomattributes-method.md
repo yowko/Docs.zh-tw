@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b53347e9f446d6340bfc5dab2d8f898ebbbf93f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b7197f905c974bafc5b3892e498083f6abc18c12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527103"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498311"
 ---
 # <a name="imetadataimportenumcustomattributes-method"></a>IMetaDataImport::EnumCustomAttributes 方法
 列舉指定的型別或成員相關聯的自訂屬性定義語彙基元。  
@@ -40,7 +40,7 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `phEnum`  
  [in、 out]要傳回的列舉值的指標。  
   

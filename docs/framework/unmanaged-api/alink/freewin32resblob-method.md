@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6f7ffef0af68bee3e7184fe8bde9264f570230be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e52984e12f22486212f0a2ec02d452a77242400e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573631"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57491824"
 ---
 # <a name="freewin32resblob-method"></a>FreeWin32ResBlob 方法
 釋放的 Win32 資源的 blob 和相關聯的資源。  
@@ -34,7 +34,7 @@ HRESULT FreeWin32ResBlob(
 ) PURE;  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppResBlob`  
  若要釋出資源 blob。 這個方法會將 blob 指標指派給 NULL。  
   

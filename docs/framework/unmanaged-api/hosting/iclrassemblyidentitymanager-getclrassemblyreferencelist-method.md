@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bfb3e07504570f8cedceddb43410b48691c4695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65ec26384b88ba3048666f3b6e3affcb90d8f070
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595756"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479307"
 ---
 # <a name="iclrassemblyidentitymanagergetclrassemblyreferencelist-method"></a>ICLRAssemblyIdentityManager::GetCLRAssemblyReferenceList 方法
 取得的介面指標[ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)提供的清單中的部分組件身分識別執行個體。  
@@ -37,9 +37,9 @@ HRESULT  GetCLRAssemblyReferenceList (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `ppwzAssemblyReferences`  
- [in]形式的 null 終止字串的陣列 」 名稱、 屬性 = 值...」，以指定的部分組件身分識別清單。  
+ [in]在表單中的 null 終止字串的陣列 」 名稱、 屬性 = 值...」指定部分組件身分識別的清單。  
   
  `dwNumOfReferences`  
  [in]中的項目數`ppwzAssemblyReferences`。  

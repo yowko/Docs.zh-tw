@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adad8854052d76476076e5e1357f6d3e2dec1052
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629471"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57493371"
 ---
 # <a name="isymunmanageddocumentgetdocumenttype-method"></a>ISymUnmanagedDocument::GetDocumentType 方法
 取得此文件的文件類型。  
@@ -34,7 +34,7 @@ HRESULT GetDocumentType(
     [out, retval] GUID*  pRetVal);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pRetVal`  
  [out]接收文件類型的變數的指標。  
   

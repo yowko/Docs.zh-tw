@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbf3c00eafe47556c6b46e1acb687a19df5a2b28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eed86f37ccab2d7eefead4997362fb82d310a1d1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601750"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57502368"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess 方法
 嘗試先關閉所有已載入的執行階段依正常程序，然後終止處理序。 會取代[CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)函式。  
@@ -34,7 +34,7 @@ HRESULT ExitProcess (
     [in] INT32 iExitCode);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `iExitCode`  
  [in]處理序結束代碼。  
   

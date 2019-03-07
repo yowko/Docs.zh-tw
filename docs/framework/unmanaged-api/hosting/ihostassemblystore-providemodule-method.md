@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb0e3bcb563387c5ee7f95d2aa6f6b5ec771f3a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1d61e7495a3d95b5326e5051775e23e19cb1b45
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717528"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57503082"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule 方法
 解析組件或連結 （但非內嵌） 內的模組資源檔案。  
@@ -38,7 +38,7 @@ HRESULT ProvideModule (
 );  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `pBindInfo`  
  [in]指標[ModuleBindInfo](../../../../docs/framework/unmanaged-api/hosting/modulebindinfo-structure.md)執行個體，描述要求的模組<xref:System.AppDomain>，組件，以及模組名稱。  
   

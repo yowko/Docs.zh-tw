@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d725110dd6bae2047ff680b4caa02f5583903ed6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2204ee8adaf433152b203cbe93f8db9bb45de53c
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591402"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498025"
 ---
 # <a name="functiontailcall3-function"></a>FunctionTailcall3 函式
 通知分析工具目前正在執行的函式即將執行的另一個函式的 tail 呼叫。  
@@ -32,7 +32,7 @@ ms.locfileid: "54591402"
 void __stdcall FunctionTailcall3 (FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `functionOrRemappedID`  
  [in]目前正在執行時進行呼叫的結尾的函式的識別項。  
   

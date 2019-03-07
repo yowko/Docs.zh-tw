@@ -5,12 +5,12 @@ helpviewer_keywords:
 - <para> XML tag
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
-ms.openlocfilehash: 96ef62d53fd1cc806c0dc72d2d0781b1c6297dc6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: cbb8e3b1e67150473159835ba2cd58d9ddf0c1c1
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970866"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57479004"
 ---
 # <a name="para-visual-basic"></a>\<para > (Visual Basic)
 指定的內容會格式化為一個段落。  
@@ -21,7 +21,7 @@ ms.locfileid: "56970866"
 <para>content</para>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `content`  
  段落的文字。  
   
