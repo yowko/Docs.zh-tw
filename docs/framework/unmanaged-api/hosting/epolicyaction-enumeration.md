@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 80a0e8d37e834ea0a7623517e2e1228a79d9ea10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa8589b3f27ba97d32e77dbfecb190edc69dbc18
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655708"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677327"
 ---
 # <a name="epolicyaction-enumeration"></a>EPolicyAction 列舉
 描述所描述的作業可以設定主應用程式的原則動作[EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)和所描述的失敗[EClrFailure](../../../../docs/framework/unmanaged-api/hosting/eclrfailure-enumeration.md)。  
@@ -50,7 +50,7 @@ typedef enum {
 |`eAbortThread`|指定 common language runtime (CLR) 應該依正常程序中止執行緒。 依正常程序中止包含嘗試對執行所有`finally`封鎖任何`catch`區塊與執行緒中止和完成項。|  
 |`eDisableRuntime`|指定 CLR 應該輸入停用的狀態。 沒有進一步執行 managed 程式碼，在受影響的程序，並進入 CLR 會封鎖執行緒。|  
 |`eExitProcess`|指定 CLR 應該嘗試處理序，包括執行完成項，以及執行清理和記錄作業的非失誤性結束。|  
-|`eFastExitProcess`|指定的 CLR 應該處理程序立即結束，而不需要執行完成項，或執行清理和記錄作業。 但是，通知會傳送至偵錯工具。|  
+|`eFastExitProcess`|指定的 CLR 應該處理程序立即結束，而不需要執行完成項，或執行清理和記錄作業。 不過，通知會傳送至偵錯工具。|  
 |`eNoAction`|指定應該採取任何動作。|  
 |`eRudeAbortThread`|指定 CLR 應該執行執行緒粗暴中止。 只有`catch`並`finally`區塊標記為<xref:System.EnterpriseServices.MustRunInClientContextAttribute>會執行。|  
 |`eRudeExitProcess`|指定 CLR 應該結束處理程序，而不執行完成項，或記錄作業。|  

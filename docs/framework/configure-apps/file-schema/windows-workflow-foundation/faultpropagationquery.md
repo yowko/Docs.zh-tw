@@ -3,60 +3,64 @@ title: <faultPropagationQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fb5c2b1-3dad-4eca-9c7f-3efb51899813
-ms.openlocfilehash: 1a6899eaa04ad16192e07f4bc2ad1abe6e4aedd5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f3e281ff8a9de9be41dd6ad9d01ab52798d8e89e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257361"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679355"
 ---
 # <a name="faultpropagationquery"></a>\<faultPropagationQuery>
-表示用來追蹤活動中發生之錯誤處理的查詢。  每當 FaultHandler 處理錯誤時，都會發生這個事件。 您應該使用這種查詢來追蹤活動中發生的錯誤處理。 追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。  
-  
- 如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。  
-  
-\<system.serviceModel>  
-\<tracking>  
-\<trackingProfile>  
-\<workflow>  
-\<faultPropagationQueries>  
-\<faultPropagationQuery>  
-  
-## <a name="syntax"></a>語法  
-  
-```xml  
+
+表示用來追蹤活動中發生之錯誤處理的查詢。  每當 FaultHandler 處理錯誤時，都會發生這個事件。 您應該使用這種查詢來追蹤活動中發生的錯誤處理。 追蹤參與者必須要具備查詢，才能訂閱錯誤傳播記錄。
+
+ 如需有關追蹤設定檔查詢的詳細資訊，請參閱 <<c0> [ 追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)。
+
+\<system.serviceModel>\
+\<tracking>\
+\<trackingProfile>\
+\<工作流程 > \
+\<faultPropagationQueries>\
+\<faultPropagationQuery>
+
+## <a name="syntax"></a>語法
+
+```xml
 <tracking>
   <trackingProfile name="Name">
     <workflow>
       <faultPropagationQueries>
-        <faultPropagationQuery activityName="String" 
+        <faultPropagationQuery activityName="String"
                                faultHandlerActivityName="String" />
       </faultPropagationQueries>
     </workflow>
   </trackingProfile>
-</tracking>  
-```  
-  
-## <a name="attributes-and-elements"></a>屬性和項目  
- 下列各節描述屬性、子項目和父項目。  
-  
-### <a name="attributes"></a>屬性  
-  
-|屬性|描述|  
-|---------------|-----------------|  
-|activityName|字串，可指定傳用錯誤之錯誤處理常式活動的名稱。 預設為 *，表示會針對所有活動傳回錯誤傳用記錄。|  
-|faultHandlerActivityName|字串，可指定本身是錯誤來源的活動名稱。|  
-  
-### <a name="child-elements"></a>子元素  
- 無。  
-  
-### <a name="parent-elements"></a>父項目  
-  
-|項目|描述|  
-|-------------|-----------------|  
-|[\<faultPropagationQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationqueries.md)|代表組態項目的清單，可用來追蹤活動內發生之錯誤的處理。  每當 FaultHandler 處理錯誤時，都會發生這個事件。|  
-  
+</tracking>
+```
+
+## <a name="attributes-and-elements"></a>屬性和項目
+
+下列各節描述屬性、子項目和父項目。
+
+### <a name="attributes"></a>屬性
+
+|屬性|描述|
+|---------------|-----------------|
+|activityName|字串，指定傳用錯誤之錯誤處理常式活動的名稱。 預設為 *，表示會針對所有活動傳回錯誤傳用記錄。|
+|faultHandlerActivityName|字串，可指定本身是錯誤來源的活動名稱。|
+
+### <a name="child-elements"></a>子元素
+
+無。
+
+### <a name="parent-elements"></a>父項目
+
+|項目|描述|
+|-------------|-----------------|
+|[\<faultPropagationQueries>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/faultpropagationqueries.md)|代表組態項目的清單，可用來追蹤活動內發生之錯誤的處理。  每當 FaultHandler 處理錯誤時，都會發生這個事件。|
+
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.FaultPropagationQueryElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.FaultPropagationQuery?displayProperty=nameWithType>
 - [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
