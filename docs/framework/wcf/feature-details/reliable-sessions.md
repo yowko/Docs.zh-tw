@@ -9,12 +9,12 @@ helpviewer_keywords:
 - instances [WCF]
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
-ms.openlocfilehash: 1d87f6f4d94763dc8f6ac7e929c22b17940097ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735419"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679122"
 ---
 # <a name="reliable-sessions"></a>可靠工作階段
 
@@ -26,20 +26,15 @@ ms.locfileid: "54735419"
 
 ## <a name="in-this-section"></a>本節內容
 
-[可靠工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)   
-說明可靠工作階段、使用時機、支援可靠工作階段的各種不同繫結，以及這些工作階段的運作方式。
+[可靠工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)說明可靠工作階段，使用支援可靠工作階段的不同繫結的時機，以及其運作方式。
 
-[如何：可靠工作階段內交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)   
-說明如何使用組態中指定的自訂繫結，透過 HTTP 來建立可靠工作階段。
+[如何：Exchange 訊息在可靠工作階段](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-within-a-reliable-session.md)說明如何透過使用自訂繫結組態中指定的 HTTP 建立可靠工作階段。
 
-[如何：保護可靠工作階段內的訊息](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md)   
-說明如何保護可靠工作階段的安全。
+[如何：保護可靠工作階段內的訊息](../../../../docs/framework/wcf/feature-details/how-to-secure-messages-within-reliable-sessions.md)說明如何保護可靠工作階段。
 
-[如何：使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)   
-說明如何透過 HTTPS 建立可靠工作階段。
+[如何：使用 HTTPS 建立自訂可靠工作階段繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)說明如何透過 HTTPS 建立可靠工作階段。
 
-[可靠工作階段的最佳作法](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)   
-說明一些與使用可靠工作階段相關的最佳做法。
+[最佳做法的可靠工作階段](../../../../docs/framework/wcf/feature-details/best-practices-for-reliable-sessions.md)說明一些與使用可靠工作階段相關聯的最佳作法。
 
 ## <a name="reference"></a>參考資料
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - UI Automation, Menu control type
 - Menu control type
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 4cd467e06672b2fad6b977bb12dc4731b3a09ace
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d711aeb2f02bc5630fd5a773b80cccfb661dedb
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729901"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676183"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>Menu 控制項類型的 UI 自動化支援
 > [!NOTE]

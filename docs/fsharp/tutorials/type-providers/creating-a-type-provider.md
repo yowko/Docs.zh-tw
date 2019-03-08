@@ -2,12 +2,12 @@
 title: 教學課程：建立型別提供者
 description: 了解如何建立您自己F#型別中的提供者F#3.0 藉由檢查幾個簡單的型別提供者，來說明基本概念。
 ms.date: 02/02/2019
-ms.openlocfilehash: ec26f25ad39ca432d6ef11238268e1704bd9638b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371553"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678419"
 ---
 # <a name="tutorial-create-a-type-provider"></a>教學課程：建立型別提供者
 
@@ -469,7 +469,7 @@ let r = reg.Match("425-123-2345").Groups.["AreaCode"].Value //r equals "425"
 
 - 提供的屬性，會產生每個具名的群組，並存取屬性的相符項目上的索引子會產生`Groups`集合。
 
-下列的程式碼來實作這類提供者，邏輯的核心，而且這個範例省略了提供的型別所有成員的加入。 如需每個新增的成員，請參閱本主題稍後的適當區段。 完整的程式碼，下載範例[ F# 3.0 範例套件](https://fsharp3sample.codeplex.com)Codeplex 網站上。
+下列的程式碼來實作這類提供者，邏輯的核心，而且這個範例省略了提供的型別所有成員的加入。 如需每個新增的成員，請參閱本主題稍後的適當區段。 完整的程式碼，下載範例[ F# 3.0 範例套件](https://archive.codeplex.com/?p=fsharp3sample)CodePlex 網站上。
 
 ```fsharp
 namespace Samples.FSharp.RegexTypeProvider

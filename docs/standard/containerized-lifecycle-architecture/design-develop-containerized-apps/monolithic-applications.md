@@ -4,16 +4,16 @@ description: 了解容器化整合型應用程式的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: eff764472b4a9fc5b699545fc9629cc12d0186ca
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747258"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676833"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
-在此案例中，您會建置單一的整合型 web 應用程式或服務，並將它部署為容器。 在應用程式中，結構可能不是單體式;它可能包含數個程式庫、 元件或甚至是階層 （應用程式層、 領域層、 資料存取層等等）。 在外部，它是單一容器，像是單一處理序、 單一 web 應用程式或單一服務。
+在此案例中，您要建置單一的整合型 web 應用程式或服務，並將它部署為容器。 在應用程式中，結構可能不是單體式;它可能包含數個程式庫、 元件或甚至是階層 （應用程式層、 領域層、 資料存取層等等）。 在外部，它是單一容器，像是單一處理序、 單一 web 應用程式或單一服務。
 
 為了管理此模型，您會部署單一容器來代表應用程式。 調整其規模，只新增幾個使用負載平衡器前端的多個複本。 管理單一部署中的單一容器或虛擬機器 (VM) 很簡單。
 
@@ -71,7 +71,7 @@ ms.locfileid: "56747258"
 
 使用 Azure App Service 是直覺式，您可以啟動並快速執行，因為它提供絕佳的 Git 整合，以取得程式碼，建置在 Microsoft Visual Studio 中，並直接將它部署至 Azure。 但傳統上 （使用任何 Docker)，視其他的功能、 架構或相依性，不支援的應用程式服務，您需要等待直到 Azure 團隊更新 App Service 中的這些相依性或切換到其他服務，例如Service Fabric、 雲端服務或甚至純文字的 Vm，您還有其他控制項和可以為您的應用程式安裝的必要的元件或架構。
 
-現在，當顯示在 圖 4-4，當使用 Visual Studio 2017 時，Azure App Service 中的容器支援可讓您以包含您想在您的應用程式環境中的任何內容。 如果因為您在容器中執行它，您可以新增至您的應用程式的相依性，您會取得您的 Dockerfile 或 Docker 映像中包括這些相依性的功能。
+現在，當顯示在 圖 4-4，當使用 Visual Studio 2017 時，Azure App Service 中的容器支援可讓您以包含您想在您的應用程式環境中的任何內容。 如果因為您在容器中執行，您可以新增至您的應用程式的相依性，您會取得您的 Dockerfile 或 Docker 映像中包括這些相依性的功能。
 
 ![Visual Studio 精靈發行至 Azure app service 中，反白顯示容器登錄的選取器的檢視。](./media/image4.png)
 

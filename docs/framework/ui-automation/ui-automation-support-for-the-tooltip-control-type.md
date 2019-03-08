@@ -6,14 +6,12 @@ helpviewer_keywords:
 - ToolTip control type
 - control types, ToolTip
 ms.assetid: c3779d78-3164-43ae-8dae-bfaeafffdd65
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 4f3eb840bcbfa6dea224247a9a2553f6d57cbf4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa8ddc3fb8f1f46349eeb1f7dd7af203a7459457
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497482"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680157"
 ---
 # <a name="ui-automation-support-for-the-tooltip-control-type"></a>ToolTip 控制項類型的 UI 自動化支援
 > [!NOTE]

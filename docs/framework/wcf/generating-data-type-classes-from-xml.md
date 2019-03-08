@@ -2,23 +2,23 @@
 title: 從 XML 產生資料型別類型
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: 6b38a0aea3101c70b3c3ec0c8feb4ee88018b64e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6666f1ba23dd563bd7a005d458cd7fe8253c3af
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498663"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679082"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>從 XML 產生資料型別類型
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包含可以從 XML 產生資料類型類別的新功能。 本主題描述如何自動產生資料型別之.NET 部落格 rss 摘要。  
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 包含可以從 XML 產生資料類型類別的新功能。 本主題描述如何自動產生.NET 部落格 rss 摘要的 資料類型。  
   
-### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>取得 XML，從.NET 部落格 RSS 摘要  
+### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>取得 XML.NET 部落格 rss 摘要  
   
-1.  在 Internet Explorer 中，瀏覽至[.NET 部落格 RSS 摘要](https://blogs.msdn.microsoft.com/dotnet/feed/)。  
+1.  在 Internet Explorer 中，瀏覽至[.NET 部落格 RSS 摘要](https://devblogs.microsoft.com/dotnet/feed/)。  
   
-2.  頁面上按一下滑鼠右鍵，然後選取**檢視原始檔**。  
+2.  以滑鼠右鍵按一下  頁面上，然後選取**檢視原始檔**。  
   
-3.  複製摘要的文字，按**Ctrl + A**選取所有文字，並**Ctrl + C**複製。  
+3.  複製摘要的文字，按下**Ctrl + A**以選取所有文字，並**Ctrl + C**複製。  
   
 ### <a name="creating-the-data-types"></a>建立資料類型  
   
@@ -26,9 +26,9 @@ ms.locfileid: "33498663"
   
 2.  將游標放在檔案中任何現有類別以外的位置。  
   
-3.  選取**編輯**，**貼上特殊**，**貼上 XML 做為類別**。  
+3.  選取 **編輯**，**貼上特殊**，**貼上做為類別的 XML**。  
   
-4.  類別，稱為`link`， `rss`， `rssChannel`， `rssChannelImage`，`rssChannelItem`和`rssChannelItemGuid`存取 RSS 摘要中的項目建立具有所需的成員。  
+4.  類別，稱為`link`， `rss`， `rssChannel`， `rssChannelImage`，`rssChannelItem`和`rssChannelItemGuid`存取 RSS 摘要中的項目會建立具有必要的成員。  
   
 ### <a name="using-the-generated-classes"></a>使用產生的類別  
   

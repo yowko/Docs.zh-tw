@@ -4,16 +4,16 @@ description: 了解開發 Docker 應用程式的 「 內部迴圈 」 工作流�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1134ff439235609db840c85a1e67bc9fe4ccec84
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 1ed0feeec682f5a79bc38db6a101b751ea4dbc3a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835677"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676664"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker 應用程式的內部迴圈開發工作流程
 
-之前觸發外部迴圈工作流程跨越整個 DevOps 循環，所有開始每位開發人員在電腦上，應用程式本身程式碼撰寫、 使用其慣用的語言或平台，以及在本機進行測試 (圖 4-21)。 但在每個案例中，您會有很重要的一點共通點，無論選擇何種語言、 架構或平台。 在此特定的工作流程，您一律開發和測試 Docker 容器，但只能在本機。
+之前觸發外部迴圈工作流程跨越整個 DevOps 循環，所有開始每位開發人員在電腦上，應用程式本身程式碼撰寫、 使用其慣用的語言或平台，以及在本機進行測試 (圖 4-21)。 但在每個案例中，您有很重要的一點共通點，無論選擇何種語言、 架構或平台。 在此特定的工作流程，您一律開發並測試 Docker 容器，但只能在本機。
 
 ![步驟 1-程式碼/執行/偵錯](./media/image18.png)
 
@@ -43,7 +43,7 @@ Docker 映像的執行個體的容器將會包含這些元件：
 
 ### <a name="step-1-start-coding-in-visual-studio-code-and-create-your-initial-appservice-baseline"></a>步驟 1：開始在 Visual Studio Code 中撰寫程式碼，並建立初始應用程式/服務基準
 
-開發您的應用程式的方式是類似於未 Docker 的方式。 差別在於，在開發時，您部署和測試您的應用程式或服務放在您的本機環境 （例如 Linux VM 或 Windows） 中的 Docker 容器內執行。
+開發您的應用程式的方式是類似於未 Docker 的方式。 差別在於，在開發時，您要部署與測試您的應用程式或服務放在您的本機環境 （例如 Linux VM 或 Windows） 中的 Docker 容器內執行。
 
 **設定您的本機環境**
 
@@ -91,9 +91,9 @@ Microsoft 提供的 Visual Studio Code 中，也就是支援 Mac、 Windows、 �
 
 ### <a name="step-2-create-a-dockerfile-related-to-an-existing-image-plain-os-or-dev-environments-like-net-core-nodejs-and-ruby"></a>步驟 2：建立 DockerFile，現有的映像 （純文字的 OS 或開發環境，例如.NET Core、 Node.js 和 Ruby） 相關
 
-您將需要`DockerFile`每個要建置的自訂映像，以及每個要部署的容器。 如果您的應用程式組成單一的自訂服務，您需要單一`DockerFile`。 但如果您的應用程式所組成 （就像在微服務架構） 的多個服務，您將需要一個`Dockerfile`每項服務。
+您將需要`DockerFile`每個要建置的自訂映像，以及每個要部署的容器。 如果您的應用程式組成單一的自訂服務，您將需要單一`DockerFile`。 但如果您的應用程式所組成 （就像在微服務架構） 的多個服務，您將需要一個`Dockerfile`每項服務。
 
-`DockerFile`常放在您的應用程式或服務的根資料夾，而包含必要的命令，因此 Docker 知道如何設定及執行該應用程式或服務。 您可以建立您`DockerFile`並將它新增至您的專案，以及您的程式碼 (.NET Core、 node.js 等)，或如果您不熟悉的環境，看看以下的提示。
+`DockerFile`常放在您的應用程式或服務的根資料夾，而包含必要的命令，因此 Docker 知道如何設定及執行該應用程式或服務。 您可以建立您`DockerFile`並將它新增至您的專案，以及您的程式碼 (.NET Core、 node.js 等)，或如果您還不熟悉的環境，看看以下的提示。
 
 > [!TIP]
 >

@@ -4,12 +4,12 @@ description: 實際生產應用程式需要可部署和管理處理健康狀態�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e1ff3282c1fdf952177a1faa957398c33045a01c
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b8c947ffc34b62204b6a370f1133111a3e2d3198
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836158"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679040"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>協調微服務和多容器應用程式的高延展性和可用性
 
@@ -56,7 +56,7 @@ AKS 可讓您以簡化的方式，在 Azure 中建立、組態及管理預先設
 
 Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放原始碼工具和技術的最佳化組態。 這樣的開放解決方案，可賦予您容器和應用程式組態的可攜性。 您只要選取主機大小和數目，其餘工作全都由協調器工具和 AKS 處理。
 
-![Kubernetes 叢集結構：沒有處理 DNS、 排程器，proxy 等的一個主要節點和數個背景工作節點，裝載的容器。](media/image36.png)
+![Kubernetes 叢集結構：有一個處理 DNS、排程器、Proxy 等的主要節點，以及裝載容器的數個背景工作節點。](media/image36.png)
 
 **圖 4-7**. Kubernetes 叢集的簡化結構和拓撲
 
@@ -80,7 +80,7 @@ Azure Kubernetes Service 特別針對 Azure，提供熱門 Docker 叢集開放�
 
 ## <a name="deploy-with-helm-charts-into-kubernetes-clusters"></a>使用 Helm 圖表部署到 Kubernetes 叢集
 
-當應用程式部署到 Kubernetes 叢集，您可以使用原始`kubectl.exe`CLI 工具部署檔案為基礎的原生格式 (`.yaml`檔案)，如先前所提到的上一節。 不過，對於更複雜的 Kubernetes 應用程式例如時部署複雜的微服務架構應用程式，建議使用[Helm](https://helm.sh/)。
+當應用程式部署到 Kubernetes 叢集，您可以使用原始`kubectl.exe`CLI 工具部署檔案為基礎的原生格式 (`.yaml`檔案)，如先前所提到的上一節。 不過，對於更複雜的 Kubernetes 應用程式 (例如部署複雜的微服務應用程式時)，則建議使用 [Helm](https://helm.sh/)。
 
 Helm 圖表可協助您定義、 版本、 安裝、 共用、 升級或復原即使最複雜的 Kubernetes 應用程式。
 
@@ -149,7 +149,7 @@ Service Fabric 不在乎您用什麼方法來建置服務，所以您可以使�
 
 Service Fabric 是平台的理想範例，您可以在其中定義相同的邏輯架構 （商務微服務或限定內容） 比實體實作。 比方說，如果您實作[具狀態 Reliable Services](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction)中[Azure Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview)，在下一步 區段中，會介紹 「[無狀態與具狀態微服務](#stateless-versus-stateful-microservices)，「 您有與多個實體服務的商務微服務概念。
 
-在 圖 4-10，就邏輯/商務微服務的觀點而言，實作 Service Fabric 具狀態可靠服務時所示，您通常必須實作兩層級的服務。 第一項是後端具狀態可靠服務，處理多個分割 (每個分割都是一項具狀態服務)。 第二項是前端服務，或稱閘道服務，負責跨多個分割或具狀態服務執行個體的路由及資料彙總。 閘道服務也會使用存取後端服務的重試迴圈來處理用戶端通訊。 它稱為閘道服務，如果您實作自訂服務，或或者您也可以使用的立即可用的 Service Fabric[反向 proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)。
+在 圖 4-10，就邏輯/商務微服務的觀點而言，實作 Service Fabric 具狀態可靠服務時所示，您通常必須實作兩層級的服務。 第一項是後端具狀態可靠服務，處理多個分割 (每個分割都是一項具狀態服務)。 第二項是前端服務，或稱閘道服務，負責跨多個分割或具狀態服務執行個體的路由及資料彙總。 閘道服務也會使用存取後端服務的重試迴圈來處理用戶端通訊。 如果您實作您的自訂服務，它就稱為閘道服務；或者您也可以使用現成可用的 Service Fabric [反向 Proxy](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)。
 
 ![Service Fabric 具有支援數個具狀態可靠服務在容器中的指示。](./media/service-fabric-stateful-business-microservice.png)
 
@@ -187,9 +187,9 @@ Service Fabric 是平台的理想範例，您可以在其中定義相同的邏�
 
 **圖 4-14**. 無狀態微服務與具狀態微服務
 
-無狀態方法完全有效，而且比具狀態微服務更容易實作，因為方法類似於傳統和已知的模式。 但無狀態微服務會強制程序及資料來源之間的延遲。 當您嘗試使用額外的快取和佇列改善效能時，它們也牽涉到更多移動的片段。 您最後會得到有太多層的複雜架構。
+無狀態方法完全有效，而且比具狀態微服務更容易實作，因為方法類似於傳統和已知的模式。 但無狀態微服務會強制程序及資料來源之間的延遲。 當您嘗試使用其他快取和佇列來改善效能時，它們也牽涉到更多移動片段。 您最後會得到有太多層的複雜架構。
 
-相反地，[具狀態微服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)在進階案例中勝出，因為網域邏輯和資料之間沒有任何延遲。 大量的資料處理、競先搶回終點、資料庫即服務，以及其他低延遲狀況皆得益於具狀態服務，它讓本機狀態可供更快速存取。
+相反地，[具狀態微服務](https://docs.microsoft.com/azure/service-fabric/service-fabric-reliable-services-introduction#when-to-use-reliable-services-apis)在進階案例中勝出，因為領域邏輯和資料之間沒有任何延遲。 大量的資料處理、競先搶回終點、資料庫即服務，以及其他低延遲狀況皆得益於具狀態服務，它讓本機狀態可供更快速存取。
 
 無狀態與具狀態服務是互補的。 比方說，您可以看到 圖 4-31 的右邊圖表中，具狀態服務可以分割成多個資料分割。 若要存取這些分割，您可能需要作為閘道服務的無狀態服務，它知道如何根據分割索引鍵處理每個分割。
 

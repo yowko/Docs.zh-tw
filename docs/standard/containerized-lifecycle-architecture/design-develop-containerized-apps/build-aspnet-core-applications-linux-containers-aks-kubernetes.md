@@ -4,12 +4,12 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/25/2019
-ms.openlocfilehash: cb84f4ebb0681792a820f8ed7bc32c5d1d8c08b5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6d778d345466b1b852d06bc01ce40ccfdebf964
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967161"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676651"
 ---
 # <a name="build-aspnet-core-21-applications-deployed-as-linux-containers-into-an-akskubernetes-orchestrator"></a>建置 ASP.NET Core 2.1 應用程式與 Linux 容器部署至 AKS/Kubernetes orchestrator
 
@@ -27,7 +27,7 @@ AKS 主要功能如下：
 
 ## <a name="creating-the-aspnet-core-21-project-using-visual-studio-2017"></a>建立 ASP.NET Core 2.1 專案使用 Visual Studio 2017
 
-ASP.NET Core 是由 Microsoft 與 GitHub 上的.NET 社群維護的一般用途開發平台。 它可以跨平台支援 Windows、macOS 及 Linux，並可用於裝置、雲端和內嵌式系統/IoT等應用情境。
+ASP.NET Core 是由 Microsoft 與 GitHub 上的.NET 社群維護的一般用途開發平台。 它是跨平台，支援 Windows、 macOS 和 Linux，而且可以用於裝置、 雲端和內嵌 /iot 情節。
 
 此範例會使用簡單的專案，因此您不需要任何額外的知識，來建立範例，根據 Visual Studio Web API 範本。 您只需要使用標準的範本，其中包含透過 REST API，使用 ASP.NET Core 2.1 技術執行小型專案的所有項目建立專案。
 
@@ -39,7 +39,7 @@ ASP.NET Core 是由 Microsoft 與 GitHub 上的.NET 社群維護的一般用途�
 
 Visual Studio 會列出 web 專案範本。 我們的範例中，選取**API**建立 ASP.NET Web API 應用程式。
 
-請確認您已選取 ASP.NET Core 2.1 作為架構。 .NET core 2.1 包含 Visual Studio 2017 的最後一個版本中是自動安裝及設定和為您安裝 Visual Studio 2017 時。
+確認您已選取 ASP.NET Core 2.1 作為架構。 .NET core 2.1 包含 Visual Studio 2017 的最後一個版本中是自動安裝及設定和為您安裝 Visual Studio 2017 時。
 
 ![針對選取的 API 選項，選取 [ASP.NET Core Web 應用程式類型的 visual Studio] 對話方塊。](media/create-web-api-application.png)
 

@@ -6,14 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 89ab623da3fc26234eaab8c6d8d087ce0df9561b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c9873638bca43e5e0d005d36053e7c75d48168b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506949"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679069"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>DataGrid 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -102,7 +100,7 @@ ms.locfileid: "54506949"
   
 |[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
-|<ul><li>DataGrid (Table, Grid, Selection)</li><li>頁首<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>群組"Contoso"(TableItem GridItem、 SelectionItem、 表格 *、 方格\*)<br /><br /> <ul><li>DataItem"帳戶 Receivable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li><li>DataItem"帳戶 Payable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>群組"Contoso"(TableItem GridItem、 SelectionItem、 表格 *、 方格\*)<br /><br /> <ul><li>DataItem"帳戶 Receivable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li><li>DataItem"帳戶 Payable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li></ul></li></ul>|  
+|<ul><li>DataGrid (Table, Grid, Selection)</li><li>標頭<br /><br /> <ul><li>HeaderItem "Name" (Invoke)</li><li>HeaderItem "Date Modified" (Invoke)</li><li>HeaderItem "Size" (Invoke)</li></ul></li><li>群組"Contoso"(TableItem GridItem、 SelectionItem、 表格 *、 方格\*)<br /><br /> <ul><li>DataItem"帳戶 Receivable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li><li>DataItem"帳戶 Payable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li></ul></li></ul>|<ul><li>DataGrid (Table, Grid, Selection)</li><li>群組"Contoso"(TableItem GridItem、 SelectionItem、 表格 *、 方格\*)<br /><br /> <ul><li>DataItem"帳戶 Receivable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li><li>DataItem"帳戶 Payable.doc"(SelectionItem，叫用，TableItem\*，GridItem\*)</li></ul></li></ul>|  
   
  *前述範例顯示的 DataGrid 包含多層控制項。 Group ("Contoso") 控制項包含兩個 DataItem 控制項 ("Accounts Receivable.doc" 和 "Accounts Payable.doc")。 DataGrid/GridItem 對組與另一層級的對組無關， Group 底下的 DataItem 控制項也可以公開為 ListItem 控制項類型，如此可以更清楚將其表明為可選取的物件，而非僅是簡單的資料項目。 本範例不包含群組資料項目的子項目。  
   

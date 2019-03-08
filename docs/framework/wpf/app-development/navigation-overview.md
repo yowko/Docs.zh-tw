@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: 75d891052abffe3362c13aa09fe880404564639a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7636a7d9a100d0df95f7d5462672819624ba52a4
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377180"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679966"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使用的瀏覽器樣式巡覽︰ 獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 封裝內容以供巡覽，來[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>類別。 您可以從一個巡覽<xref:System.Windows.Controls.Page>到另一個以宣告方式，利用<xref:System.Windows.Documents.Hyperlink>，或以程式設計方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用日誌記憶曾經巡覽過的頁面，以利返回巡覽。  
@@ -136,7 +136,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  在此範例中，`StartupUri`屬性設為相對 pack[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]可識別 HomePage.xaml。 當[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]會啟動，HomePage.xaml 自動巡覽及顯示。 下圖中，它會顯示所示[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]從 Web 伺服器啟動。  
   
- ![XBAP 網頁](./media/navigationoverviewfigure9.png "NavigationOverviewFigure9")  
+ ![XBAP 網頁](./media/navigation-overview/xbap-launched-from-a-web-server.png "這會顯示從 Web 伺服器啟動 XBAP。")  
   
 > [!NOTE]
 >  如需開發和部署的詳細資訊[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]，請參閱 < [WPF XAML 瀏覽器應用程式概觀](wpf-xaml-browser-applications-overview.md)並[部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)。  
@@ -151,7 +151,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  其結果如下圖所示。  
   
- ![視窗標題、高度、寬度](./media/navigationoverviewfigure2.png "NavigationOverviewFigure2")  
+ ![視窗標題、 高度、 寬度](./media/navigation-overview/window-title-width-height.png "這會顯示視窗標題、 高度和寬度，您可以設定。")  
   
 <a name="NavigatingBetweenXAMLPages"></a>   
 ### <a name="hyperlink-navigation"></a>超連結巡覽  
@@ -169,11 +169,11 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  下圖顯示[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]具有<xref:System.Windows.Controls.Page>具有<xref:System.Windows.Documents.Hyperlink>。  
   
- ![具有超連結的頁面](./media/navigationoverviewfigure3.png "NavigationOverviewFigure3")  
+ ![具有超連結的頁面](./media/navigation-overview/xbap-with-a-page-with-a-hyperlink.png "這會顯示與超連結的頁面 XBAP。")  
   
  如您所預期，請按一下<xref:System.Windows.Documents.Hyperlink>會導致[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]瀏覽至<xref:System.Windows.Controls.Page>識別`NavigateUri`屬性。 此外，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]上一個加入的項目<xref:System.Windows.Controls.Page>中的最近存取的頁面清單[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]。 如下圖所示。  
   
- ![上一頁及下一頁按鈕](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![上一頁及下一頁按鈕](./media/navigation-overview/back-and-forward-navigation.png "瀏覽使用 [上一頁] 和 [下一頁] 按鈕。")  
   
  以及支援從一個巡覽<xref:System.Windows.Controls.Page>到另一個，<xref:System.Windows.Documents.Hyperlink>也支援片段巡覽。  
   
@@ -309,7 +309,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  下圖顯示巡覽事件的引發順序。  
   
- ![頁面巡覽流程圖](./media/navigationoverviewfigure11.png "NavigationOverviewFigure11")  
+ ![頁面巡覽流程圖](./media/navigation-overview/order-of-navigation-events.png "頁面巡覽事件流程圖")  
   
  一般情況下，<xref:System.Windows.Controls.Page>不擔心這些事件。 就越有可能與它們有關應用程式及基於這個理由，這些事件也會引發<xref:System.Windows.Application>類別：  
   
@@ -345,7 +345,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
 #### <a name="navigating-the-journal-from-internet-explorer"></a>從 Internet Explorer 巡覽日誌  
  就概念而言，日誌運作方式相同方式來**回**並**向前**按鈕[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]執行。 如下圖所示。  
   
- ![上一頁及下一頁按鈕](./media/navigationoverviewfigure4.png "NavigationOverviewFigure4")  
+ ![上一頁及下一頁按鈕](./media/navigation-overview/back-and-forward-navigation.png "瀏覽使用 [上一頁] 和 [下一頁] 按鈕。")  
   
  針對[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]所裝載的[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]將日誌整合到瀏覽[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]的[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]。 這可讓使用者瀏覽中的分頁[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]利用**回**，**向前**，和**最近存取的頁面**按鈕[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]。 日誌尚未整合至[!INCLUDE[TLA2#tla_ie6](../../../../includes/tla2sharptla-ie6-md.md)]相同的方式會因[!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]或 Internet Explorer 8。 相反地，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]轉譯替代的巡覽[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
@@ -402,7 +402,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  基於這個理由，日誌的預設行為是儲存<xref:System.Windows.Controls.Page>中繼資料在各日誌項目，而不是參考<xref:System.Windows.Controls.Page>物件。 當巡覽日誌項目時，其<xref:System.Windows.Controls.Page>中繼資料用來建立的新執行個體指定的<xref:System.Windows.Controls.Page>。 如此一來，每個<xref:System.Windows.Controls.Page>，巡覽至具有如下圖所示的存留期。  
   
- ![網頁存留期](./media/navigationoverviewfigure10.PNG "NavigationOverviewFigure10")  
+ ![網頁存留期](./media/navigation-overview/navigated-page-lifetime.png "這會顯示網頁被巡覽時的存留期。")  
   
  雖然使用預設的日誌行為可以節省記憶體耗用量，可能會降低每頁的轉譯效能;重新具現化<xref:System.Windows.Controls.Page>可以大量時間，特別是當它有許多內容。 如果您需要保留<xref:System.Windows.Controls.Page>執行個體在筆記本中，您可以在兩種技術，這種方式上繪製。 首先，您以程式設計方式巡覽至<xref:System.Windows.Controls.Page>藉由呼叫物件<xref:System.Windows.Navigation.NavigationService.Navigate%2A?displayProperty=nameWithType>方法。  
   
@@ -412,7 +412,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  存留期<xref:System.Windows.Controls.Page>也就是保持運作是不是由稍有不同。 第一次<xref:System.Windows.Controls.Page>保持運作巡覽至，就像具現化<xref:System.Windows.Controls.Page>，不保持運作。 不過，因為執行個體<xref:System.Windows.Controls.Page>會保留在筆記本中，它會永遠不會再次具現化的只要它會保留在日誌。 因此，如果<xref:System.Windows.Controls.Page>具有需要每次呼叫的初始化邏輯<xref:System.Windows.Controls.Page>瀏覽時，應該把它從建構函式的處理常式到<xref:System.Windows.FrameworkElement.Loaded>事件。 下圖所示<xref:System.Windows.FrameworkElement.Loaded>並<xref:System.Windows.FrameworkElement.Unloaded>事件仍會引發每次<xref:System.Windows.Controls.Page>分別巡覽到或離開。  
   
- ![引發 Loaded 和 Unloaded 事件時](./media/navigationoverviewfigure17.png "NavigationOverviewFigure17")  
+ ![引發 Loaded 和 Unloaded 事件時](./media/navigation-overview/loaded-and-unloaded-events.png "來回巡覽頁面時引發 Loaded 和 unloaded 的事件。")  
   
  當<xref:System.Windows.Controls.Page>不是保持運作，您不應該執行下列其中一項：  
   
@@ -474,7 +474,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  如果<xref:System.Windows.Controls.Page>會使用這些控制項，輸入至其中的資料會記住跨<xref:System.Windows.Controls.Page>巡覽，如所示**偏愛顏色**<xref:System.Windows.Controls.ListBox>在下圖中。  
   
- ![具有可記憶狀態之控制項的頁面](./media/navigationoverviewfigure13.png "NavigationOverviewFigure13")  
+ ![使用記憶狀態之控制項的頁面](./media/navigation-overview/data-remembered-across-page-navigations.png "輸入資料會記住所有頁面巡覽。")  
   
  當<xref:System.Windows.Controls.Page>已在上述清單中，以外的控制項，或當狀態儲存在自訂物件，您需要撰寫程式碼，讓日誌記住之間的狀態<xref:System.Windows.Controls.Page>巡覽。  
   
@@ -549,7 +549,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  下圖顯示<xref:System.Windows.Navigation.NavigationWindow>作為獨立應用程式的主視窗。  
   
- ![主視窗](./media/navigationoverviewfigure18.png "NavigationOverviewFigure18")  
+ ![主視窗](./media/navigation-overview/navigation-window-as-main-window.png "主要視窗的 瀏覽視窗")  
   
  從圖中，您可以看到<xref:System.Windows.Navigation.NavigationWindow>有標題，即使它不設定<xref:System.Windows.Navigation.NavigationWindow>前述範例中的實作程式碼。 相反地，使用設定標題<xref:System.Windows.Controls.Page.WindowTitle%2A>屬性，下列程式碼所示。  
   
@@ -569,11 +569,11 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  其結果如下圖所示。  
   
- ![對話方塊](./media/navigationoverviewfigure19.png "NavigationOverviewFigure19")  
+ ![對話方塊](./media/navigation-overview/navigation-window-as-dialog-box.png "作為對話方塊的 瀏覽視窗")  
   
  如您所見，<xref:System.Windows.Navigation.NavigationWindow>會顯示[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]-樣式**回**並**向前**按鈕，可讓使用者巡覽日誌。 這些按鈕提供相同的使用者體驗，如下圖所示。  
   
- ![NavigationWindow 中的 [上一頁] 和 [下一頁] 按鈕](./media/navigationoverviewfigure20.png "NavigationOverviewFigure20")  
+ ![上一頁及下一頁按鈕在 NavigationWindow](./media/navigation-overview/back-and-forward-buttons-in-navigation-window.png "向後和向前瀏覽視窗中的按鈕")  
   
  如果您的頁面會提供其本身日誌巡覽支援及 UI，您可以隱藏**回**並**向前**所顯示的按鈕<xref:System.Windows.Navigation.NavigationWindow>藉由設定的值<xref:System.Windows.Navigation.NavigationWindow.ShowsNavigationUI%2A>屬性`false`.  
   
@@ -591,13 +591,13 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  此標記會將`Source`的屬性`Frame`組件的項目[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]如<xref:System.Windows.Controls.Page>，<xref:System.Windows.Controls.Frame>應該一開始瀏覽至。 下圖顯示[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]具有<xref:System.Windows.Controls.Page>具有<xref:System.Windows.Controls.Frame>已往復巡覽數個頁面。  
   
- ![已在多個頁面之間巡覽過的框架](./media/navigationoverviewfigure5.png "NavigationOverviewFigure5")  
+ ![具有多個頁面之間巡覽框架](./media/navigation-overview/frame-navigation-between-multiple-pages.png "這會顯示多個頁面之間的畫面格巡覽。")  
   
  您不必只使用<xref:System.Windows.Controls.Frame>的內容當中<xref:System.Windows.Controls.Page>。 它也是通用的裝載<xref:System.Windows.Controls.Frame>的內容當中<xref:System.Windows.Window>。  
   
  根據預設，<xref:System.Windows.Controls.Frame>只會使用其本身的日誌，如果沒有其他日誌。 如果<xref:System.Windows.Controls.Frame>是任何一個區塊所裝載之內容的一部分<xref:System.Windows.Navigation.NavigationWindow>或有[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]，<xref:System.Windows.Controls.Frame>會使用屬於日誌<xref:System.Windows.Navigation.NavigationWindow>或[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]。 有時候，不過，<xref:System.Windows.Controls.Frame>可能要負責使用其本身的日誌。 若要這樣做的其中一個原因是允許日誌巡覽裝載的頁面內<xref:System.Windows.Controls.Frame>。 如下圖所示。  
   
- ![框架和頁面圖表](./media/navigationoverviewfigure7.png "NavigationOverviewFigure7")  
+ ![框架和頁面圖表](./media/navigation-overview/journal-navigation-within-pages-hosted-by-a-frame.png "這會顯示依畫面格所裝載的頁面中的日誌巡覽。")  
   
  在此情況下，您可以設定<xref:System.Windows.Controls.Frame>藉由設定使用其本身的日誌<xref:System.Windows.Controls.Frame.JournalOwnership%2A>屬性<xref:System.Windows.Controls.Frame>至<xref:System.Windows.Navigation.JournalOwnership.OwnsJournal>。 下列標記顯示此做法。  
   
@@ -607,7 +607,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  下圖說明內巡覽的效果<xref:System.Windows.Controls.Frame>使用其本身的日誌。  
   
- ![使用本身之日誌的框架](./media/navigationoverviewfigure8.png "NavigationOverviewFigure8")  
+ ![使用其本身的日誌的框架](./media/navigation-overview/frame-uses-its-own-journal.png "這會顯示使用其本身的日誌的框架內巡覽的效果。")  
   
  請注意，日誌項目會顯示經由巡覽[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中<xref:System.Windows.Controls.Frame>，而非以[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]。  
   
@@ -624,19 +624,19 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
 ## <a name="navigation-hosts"></a>巡覽裝載  
  <xref:System.Windows.Controls.Frame> 和<xref:System.Windows.Navigation.NavigationWindow>是稱為巡覽裝載的類別。 A*巡覽裝載*是類別，可以瀏覽至並顯示內容。 若要達成此目的，每個巡覽裝載都會使用自己<xref:System.Windows.Navigation.NavigationService>和日誌。 巡覽裝載的基本建構如下圖所示。  
   
- ![導覽器圖表](./media/navigationoverviewfigure15.png "NavigationOverviewFigure15")  
+ ![導覽器圖表](./media/navigation-overview/navigation-host-construction.png "巡覽裝載的基本建構")  
   
  基本上，這可讓<xref:System.Windows.Navigation.NavigationWindow>並<xref:System.Windows.Controls.Frame>提供相同巡覽支援，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]提供裝載於瀏覽器時。  
   
  除了使用<xref:System.Windows.Navigation.NavigationService>和日誌，巡覽裝載實作相同的成員，<xref:System.Windows.Navigation.NavigationService>實作。 如下圖所示。  
   
- ![框架和 NavigationWindow 中的日誌](./media/naivgationoverviewfigure24.png "NaivgationOverviewFigure24")  
+ ![在框架和 NavigationWindow 中的日誌](./media/navigation-overview/navigation-window-and-frame.png "瀏覽 視窗和框架")  
   
  這可讓您針對它們直接設計巡覽支援程式。 如果您需要提供自訂的瀏覽您可以考慮這[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]for<xref:System.Windows.Controls.Frame>裝載在<xref:System.Windows.Window>。 此外，這兩種類型會實作其他的巡覽相關成員，包括`BackStack`(<xref:System.Windows.Navigation.NavigationWindow.BackStack%2A?displayProperty=nameWithType>， <xref:System.Windows.Controls.Frame.BackStack%2A?displayProperty=nameWithType>) 及`ForwardStack`(<xref:System.Windows.Navigation.NavigationWindow.ForwardStack%2A?displayProperty=nameWithType>， <xref:System.Windows.Controls.Frame.ForwardStack%2A?displayProperty=nameWithType>)，可讓您列舉背後的日誌項目堆疊，並分別轉寄堆疊。  
   
  如前所述，應用程式中可有多個日誌。 下圖提供這種情況的範例。  
   
- ![一個應用程式中包含多個日誌](./media/naivgationoverviewfigure25.png "NaivgationOverviewFigure25")  
+ ![一個應用程式中的多個日誌](./media/navigation-overview/multiple-journals-in-one-application.png "這是應用程式中的多個日誌的範例。")  
   
 <a name="Navigating_to_Content_Other_than_Pages"></a>   
 ## <a name="navigating-to-content-other-than-xaml-pages"></a>巡覽至 XAML 頁面以外的內容  
@@ -660,7 +660,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  當您按兩下檔案時，瀏覽器會開啟、巡覽至並顯示內容。 如下圖所示。  
   
- ![顯示 Person.XAML 檔案中的內容](./media/navigationoverviewfigure21.png "NavigationOverviewFigure21")  
+ ![顯示 Person.XAML 檔案中的內容](./media/navigation-overview/contents-of-person-xaml-file.png "顯示 Person.XAML 檔案的內容。")  
   
  您可以顯示鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]下列檔案：  
   
@@ -711,7 +711,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  其結果如下圖所示。  
   
- ![巡覽至類別的頁面](./media/navigationoverviewfigure22.png "NavigationOverviewFigure22")  
+ ![巡覽至類別的頁面](./media/navigation-overview/page-navigates-to-an-object.png "這是巡覽至物件的頁面的範例。")  
   
  在此圖中，您看不到任何有用的內容。 事實上，顯示的值是傳回值`ToString`方法**人員**物件; 根據預設，這是唯一值[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可用來代表您的物件。 您可以覆寫`ToString`方法，以傳回更有意義的資訊，雖然它仍然只是一個字串值。 您可以使用的技術會充分利用的簡報功能[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]是使用資料範本。 您可以實作資料範本，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]可以與特定類型的物件建立關聯。 下列程式碼顯示的資料範本`Person`物件。  
   
@@ -719,7 +719,7 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  在這裡，與相關聯的資料範本`Person`使用的型別`x:Type`中的標記延伸`DataType`屬性。 資料範本接著會繫結`TextBlock`項目 (請參閱 < <xref:System.Windows.Controls.TextBlock>) 的屬性`Person`類別。 下圖顯示更新後的外觀`Person`物件。  
   
- ![巡覽至具有資料範本的類別](./media/navigationoverviewfigure23.png "NavigationOverviewFigure23")  
+ ![巡覽至具有資料範本類別](./media/navigation-overview/navigating-to-a-class.png "巡覽至具有資料範本的類別。")  
   
  這項技術的優點是可以取得一致性，因為能夠重複使用資料範本，所以應用程式任何位置都可顯示一致的物件。  
   

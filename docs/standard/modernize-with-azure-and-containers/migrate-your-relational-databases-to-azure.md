@@ -4,12 +4,12 @@ description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: a2aedc9729c674a7b4958506b90c285e54d8d724
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153757"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677548"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將關聯式資料庫移轉至 azure
 
@@ -49,7 +49,7 @@ ms.locfileid: "53153757"
 
   - 原生備份及還原，記錄傳送
 
-使用這些功能，當您將現有的應用程式資料庫移轉至 Azure SQL Database 受控執行個體模型提供幾乎 100%的 Paas 優點適用於 SQL Server。 受控執行個體是 SQL Server 環境，您可以繼續使用執行個體層級功能，而不需要變更您的應用程式設計。
+使用這些功能，當您將現有的應用程式資料庫移轉至 Azure SQL Database 受控執行個體模型提供幾乎 100%的 PaaS 優點適用於 SQL Server。 受控執行個體是 SQL Server 環境，您可以繼續使用執行個體層級功能，而不需要變更您的應用程式設計。
 
 受控執行個體可能是最好的選擇，適用於企業目前使用之 SQL Server，而且必須在其雲端中的網路安全性的彈性。 就像您的 SQL database 的私人虛擬網路。
 
@@ -114,7 +114,7 @@ Azure SQL Database 提供下列優點：
 
     [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
 
-- **SQL Server 資料庫移轉至雲端中的 SQL Database**
+- **SQL Server 資料庫移轉至雲端 SQL Database**
 
     [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
 
@@ -126,6 +126,6 @@ Azure SQL Database 提供下列優點：
 
     [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
 
->[!div class="step-by-step"]
->[上一頁](lift-and-shift-existing-apps-azure-iaas.md)
->[下一頁](modernize-existing-apps-to-cloud-optimized/index.md)
+> [!div class="step-by-step"]
+> [上一頁](lift-and-shift-existing-apps-azure-iaas.md)
+> [下一頁](modernize-existing-apps-to-cloud-optimized/index.md)

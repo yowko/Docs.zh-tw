@@ -2,12 +2,12 @@
 title: 配量 (F#)
 description: 深入了解如何使用現有的配量F#資料類型以及如何定義您自己的配量的其他資料型別。
 ms.date: 01/22/2019
-ms.openlocfilehash: 60b57d4eea40bb26dc43d8255dd933b63ac6303c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d8bb029ad18c8853ab58888959967ed279fb368
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970101"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675273"
 ---
 # <a name="slices"></a>配量
 
@@ -86,7 +86,7 @@ printfn "%A" subA'
 
 // Slice a 2x2 matrix out of the full 3x3 matrix
 let twoByTwo = A.[0..1,0..1]
-printfn "%A" twobyTwo
+printfn "%A" twoByTwo
 ```
 
 F#核心程式庫不會定義`GetSlice`的 3D 的陣列。 如果您想要配量或其他陣列或多個維度，您必須定義`GetSlice`成員自己。

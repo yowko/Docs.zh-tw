@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: 7ff8f8b0c047601e092b8ccb347095d9d1d0a1d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cb46ec5b203451cb2f9fd1c87457ad52552359c
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54575153"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674675"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的儲存格樣式
 每個資料格內<xref:System.Windows.Forms.DataGridView>控制項可以有它自己的樣式，例如文字格式、 背景色彩、 前景色彩和字型。 一般而言，不過，多個資料格會共用特定樣式特性。  
@@ -87,7 +87,7 @@ ms.locfileid: "54575153"
   
  下圖說明此程序。  
   
- ![DataGridViewCellStyle 類型的](../../../../docs/framework/winforms/controls/media/datagridviewcells1.gif "DataGridViewCells1")  
+ ![DataGridViewCellStyle 類型的](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-inheritance-diagram.gif "DataGridViewCells 繼承圖表")  
   
  您也可以存取特定的資料列和資料行所繼承的樣式。 資料行<xref:System.Windows.Forms.DataGridViewColumn.InheritedStyle%2A>屬性繼承自下列屬性的值。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "54575153"
   
  下圖說明不同<xref:System.Windows.Forms.DataGridViewCellStyle>屬性可以繼承它們的值，從不同的地方。  
   
- ![DataGridView 屬性&#45;值繼承](../../../../docs/framework/winforms/controls/media/datagridviewcells2.gif "DataGridViewCells2")  
+ ![DataGridView 屬性&#45;值繼承](./media/cell-styles-in-the-windows-forms-datagridview-control/datagridviewcells-value-inheritance-diagram.gif "DataGridViewCells 值繼承圖表")  
   
  利用樣式繼承，您可以提供適當的樣式整個控制項而不需要在多個位置指定相同的資訊。  
   

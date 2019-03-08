@@ -4,12 +4,12 @@ description: 了解可用的選項，以將狀態儲存在容器化應用程式�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 1e30a545ba0003acb8b85dee9896d54934f0d737
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 30dde3ce44aa61fff3fad1841ae4a8b941573877
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745994"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678075"
 ---
 # <a name="state-and-data-in-docker-applications"></a>Docker 應用程式中的狀態和資料
 
@@ -19,7 +19,7 @@ ms.locfileid: "56745994"
 
 從 Docker 主機，透過 [Docker Volumes](https://docs.docker.com/engine/admin/volumes/) (Docker 磁碟區)：
 
-- **磁碟區**會儲存在所管理的 Docker 主機檔案系統的區域。
+- **磁碟區**會儲存在主機檔案系統中由 Docker 管理的一個區域內。
 
 - **繫結掛接**可以對應至主機檔案系統中任何資料夾中，以便存取無法控制從 Docker 處理序，而且可能會造成安全性風險，容器可能存取機密的作業系統資料夾。
 
@@ -47,13 +47,13 @@ ms.locfileid: "56745994"
 
 **`tmpfs` 掛接**是 live 只在主機的記憶體中，永遠不會寫到檔案系統的虛擬資料夾。 它們既快速又安全，但會使用記憶體，且僅適用於非持續性資料。
 
-如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，不能夠管理不同 Docker 主機執行，雖然可以透過磁碟區驅動程式支援遠端主機的容器之間共用的資料。
+如圖 4-5 所示，一般 Docker 磁碟區可儲存在容器本身之外，但必須在主機伺服器或 VM 的實體界限內。 不過，Docker 容器無法從一部主機伺服器或 VM 存取另一部主機伺服器或 VM 的磁碟區。 換句話說，使用這些磁碟區，將無法管理在不同 Docker 主機上執行容器間所共用的資料，雖然仍可透過支援遠端主機的磁碟區驅動程式來達到此目的。
 
 ![磁碟區可以在容器間共用，但僅限位於相同的主機，除非您使用支援遠端主機的遠端驅動程式。 ](./media/image5.png)
 
 **圖 4-5**： 容器式應用程式的磁碟區和外部資料來源
 
-此外，當 Docker 容器是由協調器所管理時，容器可能會根據叢集所執行的最佳化，在主機之間「移動」。 因此，不建議您使用資料磁碟區來存放商務資料。 但它們的好方法來使用追蹤檔案、 時態性檔案，或類似，可將不會影響商務資料的一致性。
+此外，當 Docker 容器是由協調器所管理時，容器可能會根據叢集所執行的最佳化，在主機之間「移動」。 因此，不建議您使用資料磁碟區來儲存商務資料。 但它們的好方法來使用追蹤檔案、 時態性檔案，或類似，可將不會影響商務資料的一致性。
 
 **遠端資料來源和快取**工具 (例如 Azure SQL Database、Azure Cosmos DB) 或遠端快取 (例如 Redis) 可用於容器化應用程式，就像是在沒有容器時用於開發一樣。 此方法經過實證，可儲存商務應用程式資料。
 

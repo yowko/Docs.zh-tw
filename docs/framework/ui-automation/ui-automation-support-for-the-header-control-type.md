@@ -6,14 +6,12 @@ helpviewer_keywords:
 - Header control type
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 8ded3804950867288408fa77d0ff6dede9ee006e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7876bf593ba76fc0173734f8dc31b5ee43bfc23
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718828"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674354"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Header 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -31,7 +29,7 @@ ms.locfileid: "54718828"
   
 |控制項檢視|內容檢視|  
 |------------------|------------------|  
-|頁首<br /><br /> -HeaderItem （1 或多個）|無|  
+|標頭<br /><br /> -HeaderItem （1 或多個）|無|  
   
  標題控制項在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視中一律會有 1 個以上的子系。  
   
@@ -49,7 +47,7 @@ ms.locfileid: "54718828"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|如果有一個以上的資料列標題或資料行標題，標題控制項就需要名稱。 如此可識別標題內的資訊。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|標題控制項沒有靜態標籤。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|頁首|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|標頭|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「標題」|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|水平|這個屬性值會公開標題控制項的位置，即表示它是資料列標題或資料行標題。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsContentElementProperty>|False|此標題控制項不會包含在 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的內容檢視中。|  

@@ -4,12 +4,12 @@ description: 了解最重要的開發工具選項可支援 Docker 開發生命�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 09d15d4221d948b654912a8890df66052e68f6eb
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836171"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677236"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 

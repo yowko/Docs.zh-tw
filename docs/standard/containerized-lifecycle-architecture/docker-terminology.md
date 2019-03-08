@@ -4,12 +4,12 @@ description: 了解使用 Docker 時，已使用每天的一些基本術語。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a7f0106eed81c28634a079ce61f48d7d56f6ffd2
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 07371bee6881b1fa7edf64b9bb50d387dcbf9dde
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584196"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677164"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -23,7 +23,7 @@ ms.locfileid: "56584196"
 
 **容器**：Docker 映像的執行個體。 容器代表單一應用程式、處理序或服務的執行。 其中包含 Docker 映像的內容、執行環境和一組標準的指示。 擴充服務時，您會從同一個映像建立容器的多個執行個體。 或者，一個批次工作可以從同一個映像建立多個容器，並將不同的參數傳遞至每個執行個體。
 
-**磁碟區**：提供容器可使用的可寫入檔案系統。 因為映像是唯讀的，但是大部分程式需要寫入到檔案系統 (磁碟區會在容器映像上方新增可寫入的層)，因此程式能夠存取可寫入的檔案系統。 程式並不知道它正在存取分層的檔案系統，它就像是一般的檔案系統。 磁碟區位於主機系統，而且由 Docker 管理。
+**磁碟區**：提供容器可使用的可寫入檔案系統。 因為映像是唯讀的，但是大部分程式需要寫入到檔案系統 (磁碟區會在容器映像上方新增可寫入的層)，因此程式能夠存取可寫入的檔案系統。 程式並不知道它正在存取分層的檔案系統，如往常般是檔案系統。 磁碟區位於主機系統，而且由 Docker 管理。
 
 **標籤**：您可以套用至映像的標記或標籤，以便識別相同映像的不同映像版本 (視版本號碼或目標環境而定)。
 
@@ -37,15 +37,15 @@ ms.locfileid: "56584196"
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 
-**Azure Container Registry**：Azure 中使用 Docker 映像及其元件的公用資源。 這會提供接近 Azure 部署的登錄，並可讓您控制存取權，以便使用您的 Azure Active Directory 群組和權限。
+**Azure Container Registry**：Azure 中使用 Docker 映像及其元件的公用資源。 這提供的登錄，即將在 Azure 中部署，並可讓您控制存取權，讓您可以使用您的 Azure Active Directory 群組和權限。
 
-**Docker Trusted Registry (DTR)**：可在內部部署安裝的 Docker 登錄服務 (來自 Docker)，以便存在於組織的資料中心和網路內。 這會方便在企業內管理私人映像。 Docker Trusted Registry 隨附於 Docker Datacenter 產品中。 如需詳細資訊，請參閱 [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
+**Docker Trusted Registry (DTR)**：可在內部部署安裝的 Docker 登錄服務 (來自 Docker)，以便存在於組織的資料中心和網路內。 這對很方便應管理企業內的私人映像。 Docker Trusted Registry 隨附於 Docker Datacenter 產品中。 如需詳細資訊，請參閱 [Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/)。
 
 **Dotfuscator Community Edition (CE)**：適用於 Windows 和 macOS 的開發工具，可在本機建置、執行及測試容器。 Docker CE for Windows 提供適用於 Linux 和 Windows 容器的開發環境。 Windows 上的 Linux Docker 主機是以 [Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 虛擬機器為基礎。 Windows 容器的主機則是直接以 Windows 為基礎。 Docker CE for Mac 是以 Apple Hypervisor 架構和 [xhyve hypervisor](https://github.com/mist64/xhyve) 為基礎，其提供 Mac OS X 版的 Linux Docker 主機虛擬機器。Docker CE for Windows 和 Docker CE for Mac 取代以 Oracle VirtualBox 為基礎的 Docker Toolbox。
 
 **Docker Enterprise Edition (EE)**：適用於 Linux 和 Windows 開發之企業級版本的 Docker 工具。
 
-**撰寫**：命令列工具和 YAML 檔案格式，其中繼資料可定義及執行多容器應用程式。 您可以使用一或多個 .yml 檔案，來定義以多個映像為基礎的單一應用程式，這些檔案可能會覆寫相依於環境的值。 建立定義之後，您可以使用單一命令 (docker-compose up) 來部署整個多容器應用程式，以在 Docker 主機上針對每個映像建立一個容器。
+**撰寫**：命令列工具和 YAML 檔案格式，其中繼資料可定義及執行多容器應用程式。 您可以使用一或多個 .yml 檔案，來定義以多個映像為基礎的單一應用程式，這些檔案可能會覆寫相依於環境的值。 您已建立的定義之後，您可以部署整個多容器應用程式使用單一命令 (docker-docker-compose up) Docker 主機上建立一個容器，每個影像。
 
 **叢集**：以單一虛擬 Docker 主機形式公開的 Docker 主機集合，讓應用程式可以擴充為分散到叢集內多部主機的多個服務執行個體。 您可以使用 Kubernetes、Azure Service Fabric、Docker Swarm 和 Mesosphere DC/OS 來建立 Docker 叢集。
 

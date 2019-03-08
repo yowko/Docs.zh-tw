@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], workflow security
 ms.assetid: d712a566-f435-44c0-b8c0-49298e84b114
-ms.openlocfilehash: 25cdd90250f256588d8ac72c0f98464eeae35938
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 62564823338ee071f09036929a3a11cd5f3bbbe1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441748"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676560"
 ---
 # <a name="workflow-security"></a>工作流程安全性
 Windows Workflow Foundation (WF) 與數個不同的技術，例如 Microsoft SQL Server 和 Windows Communication Foundation (WCF) 整合。 如果與這些技術互動的方式不適當，可能會造成工作流程上的安全性問題。
@@ -55,4 +55,4 @@ Windows Workflow Foundation (WF) 與數個不同的技術，例如 Microsoft SQL
 
 4.  使用 WS-Trust ActAs 將用戶端安全性權杖傳到後端服務 (以宣告為基礎的委派)
 
-如需詳細資訊和下載 WF Security Pack CTP，請參閱：[WF Security Pack CTP](https://wf.codeplex.com/releases/view/48114)
+如需詳細資訊和下載 WF Security Pack CTP，請參閱：[WF Security Pack CTP](https://archive.codeplex.com/?p=wf)

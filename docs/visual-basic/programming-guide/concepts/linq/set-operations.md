@@ -2,12 +2,12 @@
 title: 設定作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 3aaccd2b91e842bb433fe97e59314860c631341e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200750"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679290"
 ---
 # <a name="set-operations-visual-basic"></a>設定作業 (Visual Basic)
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。  
@@ -33,7 +33,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ### <a name="except"></a>例外  
  下圖說明 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行為。 所傳回的序列只包含第一個輸入序列中不在第二個輸入序列中的項目。  
   
- ![顯示 Except&#40;&#41; 動作的圖形。](../../../../csharp/programming-guide/concepts/linq/media/except.png "Except")  
+ ![顯示動作的圖形除外&#40;&#41;。](./media/set-operations/except-behavior-graphic.png "顯示的行為除外。")  
   
 ### <a name="intersect"></a>交集  
  下圖說明 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行為。 所傳回的序列包含兩個輸入序列共有的項目。  

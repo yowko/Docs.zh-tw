@@ -4,12 +4,12 @@ description: 了解 DevOps 工作流程的 「 外部迴圈 」 的步驟
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7043f34557651c3e8e79baf263bd0bcefd5a847a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836405"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676196"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 
@@ -202,7 +202,7 @@ Azure DevOps 服務範本可讓您產生包含特定的登錄機映像的組建�
 
 ## <a name="step-5-run-and-manage"></a>步驟 5：執行和管理
 
-因為執行及管理應用程式在生產環境的企業層級是主要的主旨在本身，並因為作業的類型和工作該層級 （IT 作業），以及此區域的大範圍的人，我們有專門提供整個下一步若要說明的章節。
+因為執行及管理應用程式在生產環境的企業層級是主要的主旨在本身，並因為作業的類型和工作該層級 （IT 作業），以及此區域的大範圍的人，整個的下一步 一章專用於說明。
 
 ## <a name="step-6-monitor-and-diagnose"></a>步驟 6：監視和診斷
 
