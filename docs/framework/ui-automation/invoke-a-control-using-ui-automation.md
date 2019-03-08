@@ -9,36 +9,34 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: b630e98390ac5ffbbb503bc618aeb3f648129a53
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 455811b1cf5da6c71225b2c3aaf25d213b3170b1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304618"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677249"
 ---
-# <a name="invoke-a-control-using-ui-automation"></a><span data-ttu-id="a5275-102">使用 UI 自動化叫用控制項</span><span class="sxs-lookup"><span data-stu-id="a5275-102">Invoke a Control Using UI Automation</span></span>
+# <a name="invoke-a-control-using-ui-automation"></a><span data-ttu-id="903e1-102">使用 UI 自動化叫用控制項</span><span class="sxs-lookup"><span data-stu-id="903e1-102">Invoke a Control Using UI Automation</span></span>
 > [!NOTE]
->  <span data-ttu-id="a5275-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="a5275-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="a5275-104">如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="a5275-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
+>  <span data-ttu-id="903e1-103">這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。</span><span class="sxs-lookup"><span data-stu-id="903e1-103">This documentation is intended for .NET Framework developers who want to use the managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] classes defined in the <xref:System.Windows.Automation> namespace.</span></span> <span data-ttu-id="903e1-104">如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。</span><span class="sxs-lookup"><span data-stu-id="903e1-104">For the latest information about [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)], see [Windows Automation API: UI Automation](https://go.microsoft.com/fwlink/?LinkID=156746).</span></span>  
   
- <span data-ttu-id="a5275-105">本主題示範如何執行下列工作：</span><span class="sxs-lookup"><span data-stu-id="a5275-105">This topic demonstrates how to perform the following tasks:</span></span>  
+ <span data-ttu-id="903e1-105">本主題示範如何執行下列工作：</span><span class="sxs-lookup"><span data-stu-id="903e1-105">This topic demonstrates how to perform the following tasks:</span></span>  
   
--   <span data-ttu-id="a5275-106">藉由查核目標應用程式之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視，尋找符合特定屬性條件的控制項。</span><span class="sxs-lookup"><span data-stu-id="a5275-106">Find a control that matches specific property conditions by walking the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree for the target application.</span></span>  
+-   <span data-ttu-id="903e1-106">藉由查核目標應用程式之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視，尋找符合特定屬性條件的控制項。</span><span class="sxs-lookup"><span data-stu-id="903e1-106">Find a control that matches specific property conditions by walking the control view of the [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] tree for the target application.</span></span>  
   
--   <span data-ttu-id="a5275-107">建立每個控制項的 <xref:System.Windows.Automation.AutomationElement> 。</span><span class="sxs-lookup"><span data-stu-id="a5275-107">Create an <xref:System.Windows.Automation.AutomationElement> for each control.</span></span>  
+-   <span data-ttu-id="903e1-107">建立每個控制項的 <xref:System.Windows.Automation.AutomationElement> 。</span><span class="sxs-lookup"><span data-stu-id="903e1-107">Create an <xref:System.Windows.Automation.AutomationElement> for each control.</span></span>  
   
--   <span data-ttu-id="a5275-108">從任何找到可支援 <xref:System.Windows.Automation.InvokePattern> 控制項模式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目中，取得 <xref:System.Windows.Automation.InvokePattern> 物件。</span><span class="sxs-lookup"><span data-stu-id="a5275-108">Obtain an <xref:System.Windows.Automation.InvokePattern> object from any [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element found that supports the <xref:System.Windows.Automation.InvokePattern> control pattern.</span></span>  
+-   <span data-ttu-id="903e1-108">從任何找到可支援 <xref:System.Windows.Automation.InvokePattern> 控制項模式的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目中，取得 <xref:System.Windows.Automation.InvokePattern> 物件。</span><span class="sxs-lookup"><span data-stu-id="903e1-108">Obtain an <xref:System.Windows.Automation.InvokePattern> object from any [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] element found that supports the <xref:System.Windows.Automation.InvokePattern> control pattern.</span></span>  
   
--   <span data-ttu-id="a5275-109">使用 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 以叫用來自用戶端事件處理常式的控制項。</span><span class="sxs-lookup"><span data-stu-id="a5275-109">Use <xref:System.Windows.Automation.InvokePattern.Invoke%2A> to invoke the control from a client event handler.</span></span>  
+-   <span data-ttu-id="903e1-109">使用 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 以叫用來自用戶端事件處理常式的控制項。</span><span class="sxs-lookup"><span data-stu-id="903e1-109">Use <xref:System.Windows.Automation.InvokePattern.Invoke%2A> to invoke the control from a client event handler.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a5275-110">範例</span><span class="sxs-lookup"><span data-stu-id="a5275-110">Example</span></span>  
- <span data-ttu-id="a5275-111">此範例使用 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 類別的 <xref:System.Windows.Automation.AutomationElement> 方法，產生 <xref:System.Windows.Automation.InvokePattern> 物件並利用 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法叫用控制項。</span><span class="sxs-lookup"><span data-stu-id="a5275-111">This example uses the <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> method of the <xref:System.Windows.Automation.AutomationElement> class to generate an <xref:System.Windows.Automation.InvokePattern> object and invoke a control by using the <xref:System.Windows.Automation.InvokePattern.Invoke%2A> method.</span></span>  
+## <a name="example"></a><span data-ttu-id="903e1-110">範例</span><span class="sxs-lookup"><span data-stu-id="903e1-110">Example</span></span>  
+ <span data-ttu-id="903e1-111">此範例使用 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 類別的 <xref:System.Windows.Automation.AutomationElement> 方法，產生 <xref:System.Windows.Automation.InvokePattern> 物件並利用 <xref:System.Windows.Automation.InvokePattern.Invoke%2A> 方法叫用控制項。</span><span class="sxs-lookup"><span data-stu-id="903e1-111">This example uses the <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> method of the <xref:System.Windows.Automation.AutomationElement> class to generate an <xref:System.Windows.Automation.InvokePattern> object and invoke a control by using the <xref:System.Windows.Automation.InvokePattern.Invoke%2A> method.</span></span>  
   
  [!code-csharp[InvokePatternApp#1100](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1100)]
  [!code-vb[InvokePatternApp#1100](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1100)]  
 [!code-csharp[InvokePatternApp#1102](../../../samples/snippets/csharp/VS_Snippets_Wpf/InvokePatternApp/CSharp/InvokePatternApp.cs#1102)]
 [!code-vb[InvokePatternApp#1102](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/InvokePatternApp/VisualBasic/Client.vb#1102)]  
   
-## <a name="see-also"></a><span data-ttu-id="a5275-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5275-112">See also</span></span>
-- [<span data-ttu-id="a5275-113">InvokePattern、 ExpandCollapsePattern 和 TogglePattern 範例</span><span class="sxs-lookup"><span data-stu-id="a5275-113">InvokePattern, ExpandCollapsePattern, and TogglePattern Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)
+## <a name="see-also"></a><span data-ttu-id="903e1-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="903e1-112">See also</span></span>
+- [<span data-ttu-id="903e1-113">InvokePattern、 ExpandCollapsePattern 和 TogglePattern 範例</span><span class="sxs-lookup"><span data-stu-id="903e1-113">InvokePattern, ExpandCollapsePattern, and TogglePattern Sample</span></span>](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InvokePattern)

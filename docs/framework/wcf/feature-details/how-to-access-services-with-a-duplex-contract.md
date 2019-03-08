@@ -7,30 +7,30 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
-ms.openlocfilehash: 2f83b8ac71bfc53791f7de42d127badbda0d3881
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610303"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678679"
 ---
-# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="58a39-102">HOW TO：Access services 搭配雙工合約</span><span class="sxs-lookup"><span data-stu-id="58a39-102">How to: Access services with a duplex contract</span></span>
+# <a name="how-to-access-services-with-a-duplex-contract"></a><span data-ttu-id="143ec-102">HOW TO：Access services 搭配雙工合約</span><span class="sxs-lookup"><span data-stu-id="143ec-102">How to: Access services with a duplex contract</span></span>
 
-<span data-ttu-id="58a39-103">Windows Communication Foundation (WCF) 的一項功能是能夠建立使用雙工訊息模式的服務。</span><span class="sxs-lookup"><span data-stu-id="58a39-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="58a39-104">這個模式可讓服務透過回呼與用戶端通訊。</span><span class="sxs-lookup"><span data-stu-id="58a39-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="58a39-105">本主題說明建立 WCF 用戶端實作回呼介面的用戶端類別中的步驟。</span><span class="sxs-lookup"><span data-stu-id="58a39-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>
+<span data-ttu-id="143ec-103">Windows Communication Foundation (WCF) 的一項功能是能夠建立使用雙工訊息模式的服務。</span><span class="sxs-lookup"><span data-stu-id="143ec-103">One feature of Windows Communication Foundation (WCF) is the ability to create a service that uses a duplex messaging pattern.</span></span> <span data-ttu-id="143ec-104">這個模式可讓服務透過回呼與用戶端通訊。</span><span class="sxs-lookup"><span data-stu-id="143ec-104">This pattern allows a service to communicate with the client through a callback.</span></span> <span data-ttu-id="143ec-105">本主題說明建立 WCF 用戶端實作回呼介面的用戶端類別中的步驟。</span><span class="sxs-lookup"><span data-stu-id="143ec-105">This topic shows the steps to create a WCF client in a client class that implements the callback interface.</span></span>
 
-<span data-ttu-id="58a39-106">雙重繫結會向服務公開用戶端的 IP 位址，</span><span class="sxs-lookup"><span data-stu-id="58a39-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="58a39-107">用戶端應該利用安全性來確保它只與信任的服務連接。</span><span class="sxs-lookup"><span data-stu-id="58a39-107">The client should use security to ensure that it connects only to services it trusts.</span></span>
+<span data-ttu-id="143ec-106">雙重繫結會向服務公開用戶端的 IP 位址，</span><span class="sxs-lookup"><span data-stu-id="143ec-106">A dual binding exposes the IP address of the client to the service.</span></span> <span data-ttu-id="143ec-107">用戶端應該利用安全性來確保它只與信任的服務連接。</span><span class="sxs-lookup"><span data-stu-id="143ec-107">The client should use security to ensure that it connects only to services it trusts.</span></span>
 
-<span data-ttu-id="58a39-108">如需建立基本的 WCF 服務和用戶端的教學課程，請參閱 <<c0> [ 入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="58a39-108">For a tutorial on creating a basic WCF service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>
+<span data-ttu-id="143ec-108">如需建立基本的 WCF 服務和用戶端的教學課程，請參閱 <<c0> [ 入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="143ec-108">For a tutorial on creating a basic WCF service and client, see [Getting Started Tutorial](../../../../docs/framework/wcf/getting-started-tutorial.md).</span></span>
 
-## <a name="to-access-a-duplex-service"></a><span data-ttu-id="58a39-109">若要存取雙工服務</span><span class="sxs-lookup"><span data-stu-id="58a39-109">To access a duplex service</span></span>
+## <a name="to-access-a-duplex-service"></a><span data-ttu-id="143ec-109">若要存取雙工服務</span><span class="sxs-lookup"><span data-stu-id="143ec-109">To access a duplex service</span></span>
 
-1. <span data-ttu-id="58a39-110">建立包含兩個介面的服務。</span><span class="sxs-lookup"><span data-stu-id="58a39-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="58a39-111">第一個介面主要供服務使用，第二個則是供回呼使用。</span><span class="sxs-lookup"><span data-stu-id="58a39-111">The first interface is for the service, the second is for the callback.</span></span> <span data-ttu-id="58a39-112">如需建立雙工服務的詳細資訊，請參閱[How to:建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="58a39-112">For more information about creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>
+1. <span data-ttu-id="143ec-110">建立包含兩個介面的服務。</span><span class="sxs-lookup"><span data-stu-id="143ec-110">Create a service that contains two interfaces.</span></span> <span data-ttu-id="143ec-111">第一個介面主要供服務使用，第二個則是供回呼使用。</span><span class="sxs-lookup"><span data-stu-id="143ec-111">The first interface is for the service, the second is for the callback.</span></span> <span data-ttu-id="143ec-112">如需建立雙工服務的詳細資訊，請參閱[How to:建立雙工合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)。</span><span class="sxs-lookup"><span data-stu-id="143ec-112">For more information about creating a duplex service, see [How to: Create a Duplex Contract](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md).</span></span>
 
-2. <span data-ttu-id="58a39-113">執行服務。</span><span class="sxs-lookup"><span data-stu-id="58a39-113">Run the service.</span></span>
+2. <span data-ttu-id="143ec-113">執行服務。</span><span class="sxs-lookup"><span data-stu-id="143ec-113">Run the service.</span></span>
 
-3. <span data-ttu-id="58a39-114">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)用戶端產生合約 （介面）。</span><span class="sxs-lookup"><span data-stu-id="58a39-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="58a39-115">如需如何執行這項操作的資訊，請參閱[How to:建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。</span><span class="sxs-lookup"><span data-stu-id="58a39-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>
+3. <span data-ttu-id="143ec-114">使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)用戶端產生合約 （介面）。</span><span class="sxs-lookup"><span data-stu-id="143ec-114">Use the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) to generate contracts (interfaces) for the client.</span></span> <span data-ttu-id="143ec-115">如需如何執行這項操作的資訊，請參閱[How to:建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。</span><span class="sxs-lookup"><span data-stu-id="143ec-115">For information about how to do this, see  [How to: Create a Client](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md).</span></span>
 
-4. <span data-ttu-id="58a39-116">依下列範例所示，在用戶端類別中實作回呼介面。</span><span class="sxs-lookup"><span data-stu-id="58a39-116">Implement the callback interface in the client class, as shown in the following example.</span></span>
+4. <span data-ttu-id="143ec-116">依下列範例所示，在用戶端類別中實作回呼介面。</span><span class="sxs-lookup"><span data-stu-id="143ec-116">Implement the callback interface in the client class, as shown in the following example.</span></span>
 
     ```csharp
     public class CallbackHandler : ICalculatorDuplexCallback
@@ -53,12 +53,12 @@ ms.locfileid: "54610303"
           Console.WriteLine("Result ({0})", result)
        End Sub
         Public Sub Equation(ByVal equation As String)
-            Console.Writeline("Equation({0})", equation)
+            Console.WriteLine("Equation({0})", equation)
         End Sub
     End Class
     ```
 
-5. <span data-ttu-id="58a39-117">建立 <xref:System.ServiceModel.InstanceContext> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="58a39-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="58a39-118">建構函式需要用戶端類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="58a39-118">The constructor requires an instance of the client class.</span></span>
+5. <span data-ttu-id="143ec-117">建立 <xref:System.ServiceModel.InstanceContext> 類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="143ec-117">Create an instance of the <xref:System.ServiceModel.InstanceContext> class.</span></span> <span data-ttu-id="143ec-118">建構函式需要用戶端類別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="143ec-118">The constructor requires an instance of the client class.</span></span>
 
     ```csharp
     InstanceContext site = new InstanceContext(new CallbackHandler());
@@ -68,7 +68,7 @@ ms.locfileid: "54610303"
     Dim site As InstanceContext = New InstanceContext(new CallbackHandler())
     ```
 
-6. <span data-ttu-id="58a39-119">建立 WCF 用戶端會使用需要的建構函式的執行個體<xref:System.ServiceModel.InstanceContext>物件。</span><span class="sxs-lookup"><span data-stu-id="58a39-119">Create an instance of the WCF client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="58a39-120">建構函式的第二個參數就是組態檔中找到的端點名稱。</span><span class="sxs-lookup"><span data-stu-id="58a39-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>
+6. <span data-ttu-id="143ec-119">建立 WCF 用戶端會使用需要的建構函式的執行個體<xref:System.ServiceModel.InstanceContext>物件。</span><span class="sxs-lookup"><span data-stu-id="143ec-119">Create an instance of the WCF client using the constructor that requires an <xref:System.ServiceModel.InstanceContext> object.</span></span> <span data-ttu-id="143ec-120">建構函式的第二個參數就是組態檔中找到的端點名稱。</span><span class="sxs-lookup"><span data-stu-id="143ec-120">The second parameter of the constructor is the name of an endpoint found in the configuration file.</span></span>
 
     ```csharp
     CalculatorDuplexClient wcfClient = new CalculatorDuplexClient(site, "default");
@@ -78,19 +78,19 @@ ms.locfileid: "54610303"
     Dim wcfClient As New CalculatorDuplexClient(site, "default")
     ```
 
-7. <span data-ttu-id="58a39-121">呼叫的 WCF 用戶端所需的方法。</span><span class="sxs-lookup"><span data-stu-id="58a39-121">Call the methods of the WCF client as required.</span></span>
+7. <span data-ttu-id="143ec-121">呼叫的 WCF 用戶端所需的方法。</span><span class="sxs-lookup"><span data-stu-id="143ec-121">Call the methods of the WCF client as required.</span></span>
 
-## <a name="example"></a><span data-ttu-id="58a39-122">範例</span><span class="sxs-lookup"><span data-stu-id="58a39-122">Example</span></span>
+## <a name="example"></a><span data-ttu-id="143ec-122">範例</span><span class="sxs-lookup"><span data-stu-id="143ec-122">Example</span></span>
 
-<span data-ttu-id="58a39-123">下列程式碼範例會示範如何建立會存取雙工合約的用戶端類別。</span><span class="sxs-lookup"><span data-stu-id="58a39-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>
+<span data-ttu-id="143ec-123">下列程式碼範例會示範如何建立會存取雙工合約的用戶端類別。</span><span class="sxs-lookup"><span data-stu-id="143ec-123">The following code example demonstrates how to create a client class that accesses a duplex contract.</span></span>
 
 [!code-csharp[S_DuplexClients#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_duplexclients/cs/client.cs#1)]
 [!code-vb[S_DuplexClients#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_duplexclients/vb/client.vb#1)]
 
-## <a name="see-also"></a><span data-ttu-id="58a39-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="58a39-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="143ec-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="143ec-124">See also</span></span>
 
-- [<span data-ttu-id="58a39-125">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="58a39-125">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [<span data-ttu-id="58a39-126">如何：建立雙工合約</span><span class="sxs-lookup"><span data-stu-id="58a39-126">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
-- [<span data-ttu-id="58a39-127">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="58a39-127">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [<span data-ttu-id="58a39-128">如何：建立用戶端</span><span class="sxs-lookup"><span data-stu-id="58a39-128">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [<span data-ttu-id="58a39-129">如何：使用 ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="58a39-129">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [<span data-ttu-id="143ec-125">快速入門教學課程</span><span class="sxs-lookup"><span data-stu-id="143ec-125">Getting Started Tutorial</span></span>](../../../../docs/framework/wcf/getting-started-tutorial.md)
+- [<span data-ttu-id="143ec-126">如何：建立雙工合約</span><span class="sxs-lookup"><span data-stu-id="143ec-126">How to: Create a Duplex Contract</span></span>](../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [<span data-ttu-id="143ec-127">ServiceModel 中繼資料公用程式工具 (Svcutil.exe)</span><span class="sxs-lookup"><span data-stu-id="143ec-127">ServiceModel Metadata Utility Tool (Svcutil.exe)</span></span>](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [<span data-ttu-id="143ec-128">如何：建立用戶端</span><span class="sxs-lookup"><span data-stu-id="143ec-128">How to: Create a Client</span></span>](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [<span data-ttu-id="143ec-129">如何：使用 ChannelFactory</span><span class="sxs-lookup"><span data-stu-id="143ec-129">How to: Use the ChannelFactory</span></span>](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
