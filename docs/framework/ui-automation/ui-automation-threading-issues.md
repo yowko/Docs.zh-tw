@@ -5,18 +5,16 @@ helpviewer_keywords:
 - UI Automation, threading issues
 - threading issues with UI Automation
 ms.assetid: 0ab8d42c-5b8b-481b-b788-2caecc2f0191
-author: Xansky
-ms.author: mhopkins
-ms.openlocfilehash: 7d8df325d18c3657d4955fa534d29bb7fdbc595c
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 83b8ec67cff7006e736e0f65a7339b340b20d458
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846496"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678588"
 ---
 # <a name="ui-automation-threading-issues"></a>UI 自動化執行緒問題
 > [!NOTE]
->  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱 < [Windows Automation API： 使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
+>  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
  因為 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 使用 Windows 訊息的方式，當用戶端應用程式嘗試在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 執行緒上與其自己的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 互動時，會發生衝突。 這些衝突可能會導致效能變得非常緩慢，甚至會讓應用程式停止回應。  
   

@@ -2,12 +2,12 @@
 title: 服務追蹤檢視器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: be6879810bde30a81ee9fb23e5cf031c4ff1976e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442889"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680382"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析由 WCF 所產生的診斷追蹤。 服務追蹤檢視器可讓您輕鬆合併、 檢視及篩選記錄檔中的追蹤訊息，以便您可以診斷、 修復以及驗證 WCF 服務問題的辦法。  
@@ -50,7 +50,13 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
 |ActivityTracing|介於處理活動與元件之間的流程事件。<br /><br /> 這個層級可以讓系統管理員與開發人員相互關聯相同應用程式定義域中的多個應用程式。<br /><br /> -活動界限追蹤： 啟動/停止。<br />-傳輸追蹤。|  
   
  您可以使用 `add` 來指定要使用的追蹤接聽項名稱與型別。 在範例組態中，接聽項命名為 `sdt`，而標準 .NET Framework 追蹤接聽項 (`System.Diagnostics.XmlWriterTraceListener`) 會當成型別加入。 請使用 `initializeData` 來設定該接聽項的記錄檔名稱。 此外，您可以使用完整路徑來取代簡單檔名。  
-  
+
+從.NET Framework 4.8，下拉式方塊控制項，在某些高對比佈景主題中的會顯示在正確的色彩。 您可以藉由移除下列設定，從停用這項變更*svcTraceViewer.exe.config*檔案：
+
+```xml
+<AppContextSwitchOverrides value="Switch.UseLegacyAccessibilityFeatures=false;Switch.UseLegacyAccessibilityFeatures.2=false" />
+```
+
 ## <a name="using-the-service-trace-viewer-tool"></a>使用服務追蹤檢視器工具  
   
 ### <a name="opening-and-viewing-wcf-trace-files"></a>開啟和檢視 WCF 追蹤檔案  

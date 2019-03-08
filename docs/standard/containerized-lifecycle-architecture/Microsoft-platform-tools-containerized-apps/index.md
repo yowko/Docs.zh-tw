@@ -47,7 +47,7 @@ ms.date: 02/15/2019
 
   - **Application Insights**是 Azure soution 監視生產環境的每個角度。 您可以只將其 SDK 設定至您的服務，讓您可以從應用程式取得系統產生的記錄資料來監視生產 Docker 應用程式。
 
-因此，Microsoft 會提供端對端容器化 Docker 應用程式生命週期的完整基礎。 不過，它是「產品和技術集合，可讓您選擇性地進行選取，以及與現有工具和處理序整合」。 廣泛方式的彈性以及功能深度的強度讓 Microsoft 十分適合進行容器化 Docker 應用程式開發。
+因此，Microsoft 會提供端對端容器化 Docker 應用程式生命週期的完整基礎。 不過，很*集合的產品和技術，讓您選擇性地選取，並整合現有工具和程序*。 廣泛方式的彈性以及功能深度的強度讓 Microsoft 十分適合進行容器化 Docker 應用程式開發。
 
 >[!div class="step-by-step"]
 >[上一頁](../Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md)
