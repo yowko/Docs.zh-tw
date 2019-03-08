@@ -1,24 +1,14 @@
 ---
-title: 範例和教學課程
-description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。
-keywords: .NET, .NET Core, ASP.NET, C#, sample, tutorial, 範例, 教學課程
+title: .NET 範例與教學課程
+description: '針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。'
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.topic: article
-ms.prod: .net
-ms.devlang: dotnet
-ms.assetid: 617310e7-336b-4864-8dab-7e2021512929
-ms.openlocfilehash: f69aa704b05bffeaf932a093b991810f8678251c
-ms.sourcegitcommit: b750a8e3979749b214e7e10c82efb0a0524dfcb1
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2018
-ms.locfileid: "30957642"
 ---
-# <a name="samples-and-tutorials"></a>範例和教學課程
 
-.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](http://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您想要使用線上程式碼編輯器來探索 C#，可先從[這個互動式教學課程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)開始，再繼續進行 [C# 互動式快速入門](../csharp/quick-starts/index.md)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
+# <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
+
+.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](https://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您想要使用線上程式碼編輯器來探索 C#，可先從[這個互動式教學課程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)開始，再繼續進行 [C# 互動式教學課程](../csharp/tutorials/intro-to-csharp/index.md)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。
 
 ## <a name="net-core"></a>.NET Core
 
@@ -30,7 +20,7 @@ ms.locfileid: "30957642"
 
 ### <a name="tutorials"></a>教學課程
 
-**[使用 CLI 工具撰寫 .NET Core 主控台應用程式︰逐步指南](../core/tutorials/using-with-xplat-cli.md)**
+**[使用 CLI 工具撰寫 .NET Core 主控台應用程式：逐步指南](../core/tutorials/using-with-xplat-cli.md)**
 
 此指南說明如何使用 .NET Core CLI 工具，來建置跨平台的主控台應用程式。 它會從基本的主控台應用程式開始，最終會跨越多個專案 (包括測試)。 您會逐步新增各種功能，並同時增加您的知識。 [完整範例](https://github.com/dotnet/samples/tree/master/core/console-apps) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
@@ -66,6 +56,10 @@ ms.locfileid: "30957642"
 
 這一系列範例示範 Language Integrated Query (LINQ) 的許多功能。 [完整範例](https://github.com/dotnet/samples/tree/master/core/linq/csharp) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
+**Microsoft Office PIA 範例**
+
+[ExcelDemo](https://github.com/dotnet/samples/tree/master/core/extensions/ExcelDemo) 範例示範了在 .NET Core 中取用 [Microsoft Office PIA](/visualstudio/vsto/office-primary-interop-assemblies)。
+
 ### <a name="tutorials"></a>教學課程
 
 **[主控台應用程式](../csharp/tutorials/console-teleprompter.md)**
@@ -80,10 +74,6 @@ ms.locfileid: "30957642"
 
 此教學課程示範 LINQ 的許多功能及支援的語言項目。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
-**[裝載於 Docker 的微服務](../csharp/tutorials/microservices.md)**
-
-此教學課程示範如何建置 ASP.NET Core 微服務並將其裝載於 Docker 中。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/WeatherMicroservice) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
-
 **[使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](../core/tutorials/using-on-mac-vs.md)**
 
 此教學課程示範如何使用 Visual Studio for Mac 建置簡單 .NET Core 主控台應用程式。
@@ -91,6 +81,10 @@ ms.locfileid: "30957642"
 **[使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
 本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
+
+**[建立支援外掛程式的 .NET Core 應用程式](../core/tutorials/creating-app-with-plugin-support.md)**
+
+本教學課程會向您示範如何在支援外掛程式架構的 .NET Core 上建置簡單的應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ## <a name="deploying-to-containers"></a>部署至容器
 
@@ -113,6 +107,6 @@ ms.locfileid: "30957642"
 1. 於存放庫的資料夾內瀏覽至範例的位置。 範例位置的相對路徑會在您依循範例連結時，顯示於瀏覽器的網址列中。
 1. 您有數個選項可以執行範例：
    * 使用 [dotnet CLI 工具](../core/tools/index.md)：在主控台視窗中，瀏覽至範例的資料夾，並使用 dotnet CLI 命令。
-   * 使用 [Visual Studio](https://www.visualstudio.com/) 或 [Visual Studio for Mac](https://www.visualstudio.com/vs/visual-studio-mac/)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。
-   * 使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
+   * 使用 [Visual Studio](https://visualstudio.microsoft.com/) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。
+   * 使用 [Visual Studio Code](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
    * 使用支援 .NET Core 專案的另一個 IDE。
