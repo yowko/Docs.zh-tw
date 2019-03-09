@@ -1,15 +1,8 @@
 ---
 title: 從 project.json 進行的 .NET Core 移轉
 description: 了解如何使用 project.json 來移轉舊版 .NET Core 專案
-author: blackdwarf
 ms.date: 07/19/2017
 ms.custom: seodec18
-ms.openlocfilehash: 40a0aaf9d687a580b83e11811effad458f708a85
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170687"
 ---
 # <a name="migrating-net-core-projects-from-projectjson"></a>從 project.json 移轉 .NET Core 專案
 
@@ -89,7 +82,7 @@ Visual Studio 會自動移轉所選擇的專案。 移轉方案時，如果您�
 
 完成這些步驟之後，您的專案應該會與 RTM .NET Core csproj 格式完全相容。
 
-如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://blogs.msdn.microsoft.com/dotnet/2016/12/12/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
+如需從舊的 csproj 格式移轉至新格式的前後範例，請參閱 .NET 部落格上的 [Updating Visual Studio 2017 RC - .NET Core Tooling improvements](https://devblogs.microsoft.com/dotnet/updating-visual-studio-2017-rc-net-core-tooling-improvements/) (更新 Visual Studio 2017 RC - .NET Core 工具改進) 文章。
 
 ## <a name="see-also"></a>另請參閱
 

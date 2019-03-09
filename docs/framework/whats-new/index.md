@@ -171,7 +171,7 @@ PFX 匯入可以選擇性地從記憶體中直接載入私密金鑰，並略過�
 
 從 .NET Framework 4.7.2 開始，工作負載可以產生憑證簽署要求 (CSR)，這可讓憑證要求產生作業暫存到現有工具中。 這在測試案例中通常很有用。
 
-如需詳細資訊與程式碼範例，請參閱 [.NET 部落格](https://blogs.msdn.microsoft.com/dotnet/2018/03/08/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/)中的＜以程式設計方式建立 PKCS#10 憑證簽署要求和 X.509 公開金鑰憑證＞。
+如需詳細資訊與程式碼範例，請參閱 [.NET 部落格](https://devblogs.microsoft.com/dotnet/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/)中的＜以程式設計方式建立 PKCS#10 憑證簽署要求和 X.509 公開金鑰憑證＞。
 
 **新的 SignerInfo 成員**
 
@@ -302,7 +302,7 @@ c.SameSite = SameSiteMode.Lax
 
 在舊版 .NET Framework 中，SQL 連接性只支援 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryPassword?displayProperty=nameWithType> 和 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryIntegrated?displayProperty=nameWithType> 選項。 這兩種屬於非互動式 [ADAL 通訊協定](/azure/active-directory/develop/active-directory-authentication-libraries)，因此不支援 MFA。 利用新的 <xref:System.Data.SqlClient.SqlAuthenticationMethod.ActiveDirectoryInteractive?displayProperty=nameWithType> 選項，SQL 連接性支援 MFA 以及現有的驗證方法 (密碼和整合式驗證)，可讓使用者以互動方式輸入使用者密碼，而不需要將密碼保存到連接字串中。
 
-如需詳細資訊和範例，請參閱 [.NET 部落格](https://blogs.msdn.microsoft.com/dotnet/2018/03/08/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/)中的＜Azure AD 通用和多重要素驗證＞。
+如需詳細資訊和範例，請參閱 [.NET 部落格](https://devblogs.microsoft.com/dotnet/net-framework-4-7-2-developer-pack-early-access-build-3056-is-available/)中的＜Azure AD 通用和多重要素驗證＞。
 
 **支援 Always Encrypted 第 2 版**
 
@@ -440,13 +440,13 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **.NET Standard 2.0 的支援**
 
-[.NET Standard](~/docs/standard/net-standard.md) 定義一組必須在每個 .NET 實作上提供的 API，而 .NET 實作支援該版本的標準。 .NET Framework 4.7.1 完全支援 .NET Standard 2.0，並新增[大約 200 個 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，而這些 API 定義於 .NET Standard 2.0，並在 .NET Framework 4.6.1、4.6.2 和 4.7 中遺失  (請注意，只有在目標系統上一併部署其他 .NET Standard 支援檔案時，這些版本的 .NET Framework 才支援 .NET Standard 2.0)。如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜BCL - .NET Standard 2.0 支援＞。
+[.NET Standard](~/docs/standard/net-standard.md) 定義一組必須在每個 .NET 實作上提供的 API，而 .NET 實作支援該版本的標準。 .NET Framework 4.7.1 完全支援 .NET Standard 2.0，並新增[大約 200 個 API](https://github.com/dotnet/standard/blob/master/netstandard/src/ApiCompatBaseline.net461.txt)，而這些 API 定義於 .NET Standard 2.0，並在 .NET Framework 4.6.1、4.6.2 和 4.7 中遺失  (請注意，只有在目標系統上一併部署其他 .NET Standard 支援檔案時，這些版本的 .NET Framework 才支援 .NET Standard 2.0)。如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜BCL - .NET Standard 2.0 支援＞。
 
 **組態產生器的支援**
 
 組態產生器可讓開發人員在執行階段動態插入和建置應用程式的組態設定。 自訂組態產生器可以用來修改組態區段中的現有資料，或從頭開始全新建置組態區段。 如果沒有組態產生器，則 .config 檔案是靜態的，而且在啟動應用程式之前的某個時間定義其設定。
 
-若要建立自訂組態產生器，您可以從抽象 <xref:System.Configuration.ConfigurationBuilder> 類別衍生產生器，並覆寫其 <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> 和 <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>。 您也可以在 .config 檔案中定義產生器。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜組態產生器＞一節。
+若要建立自訂組態產生器，您可以從抽象 <xref:System.Configuration.ConfigurationBuilder> 類別衍生產生器，並覆寫其 <xref:System.Configuration.ConfigurationBuilder.ProcessConfigurationSection%2A?displayProperty=nameWithType> 和 <xref:System.Configuration.ConfigurationBuilder.ProcessRawXml%2A?displayProperty=nameWithType>。 您也可以在 .config 檔案中定義產生器。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜組態產生器＞一節。
 
 **執行階段功能偵測**
 
@@ -454,11 +454,11 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **實值元組類型為可序列化**
 
-從 .NET Framework 4.7.1 開始，<xref:System.ValueTuple?displayProperty=nameWithType> 和其相關聯泛型型別會標示為 [Serializable](xref:System.SerializableAttribute)，以允許二進位序列化。 這應該會讓將元組類型 (例如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>) 移轉至實值元組類型更為簡單。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ValueTuple 可序列化＞。
+從 .NET Framework 4.7.1 開始，<xref:System.ValueTuple?displayProperty=nameWithType> 和其相關聯泛型型別會標示為 [Serializable](xref:System.SerializableAttribute)，以允許二進位序列化。 這應該會讓將元組類型 (例如 <xref:System.Tuple%603> 和 <xref:System.Tuple%604>) 移轉至實值元組類型更為簡單。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜編譯器 - ValueTuple 可序列化＞。
 
 **唯讀參考的支援**
 
-.NET Framework 4.7.1 新增 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>。 語言編譯器會使用此屬性來標示具有唯讀 ref 傳回類型或參數的成員。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features)部落格文章中的＜編譯器 - ReadOnlyReferences 支援＞。 如需 ref 傳回值的資訊，請參閱 [ref 傳回值和 ref 區域變數 (C# 指南)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) 和 [ref 傳回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
+.NET Framework 4.7.1 新增 <xref:System.Runtime.CompilerServices.IsReadOnlyAttribute?displayProperty=nameWithType>。 語言編譯器會使用此屬性來標示具有唯讀 ref 傳回類型或參數的成員。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜編譯器 - ReadOnlyReferences 支援＞。 如需 ref 傳回值的資訊，請參閱 [ref 傳回值和 ref 區域變數 (C# 指南)](~/docs/csharp/programming-guide/classes-and-structs/ref-returns.md) 和 [ref 傳回值 (Visual Basic)](../../visual-basic/programming-guide/language-features/procedures/ref-return-values.md)。
 
 <a name="clr" />
 
@@ -466,7 +466,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **記憶體回收效能改善**
 
-.NET Framework 4.7.1 中的記憶體回收 (GC) 變更可改善整體效能，特別是大型物件堆積 (LOH) 配置。 在 .NET Framework 4.7.1 中，會將不同的鎖定用於小型物件堆積 (SOH) 和 LOH 配置，這允許在背景 GC (BGC) 清除 SOH 時進行 LOH 配置。 因此，進行大量 LOH 配置的應用程式應該會看到配置鎖定爭用降低並改善效能。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/28/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜執行階段 -- GC 效能改善＞。
+.NET Framework 4.7.1 中的記憶體回收 (GC) 變更可改善整體效能，特別是大型物件堆積 (LOH) 配置。 在 .NET Framework 4.7.1 中，會將不同的鎖定用於小型物件堆積 (SOH) 和 LOH 配置，這允許在背景 GC (BGC) 清除 SOH 時進行 LOH 配置。 因此，進行大量 LOH 配置的應用程式應該會看到配置鎖定爭用降低並改善效能。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 執行階段和編譯器功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-runtime-and-compiler-features/)部落格文章中的＜執行階段 -- GC 效能改善＞。
 
 <a name="net471"/>
 
@@ -474,7 +474,7 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **Message.HashAlgorithm 的 SHA-2 支援**
 
-在 .NET Framework 4.7 和更舊版本中，<xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 屬性只支援 <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> 的值。 從 .NET Framework 4.7.1 開始，也支援 <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>、<xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>。 實際使用的這個值取決於 MSMQ，因為 <xref:System.Messaging.Message> 執行個體本身不會進行任何雜湊處理，而只會將值傳入 MSMQ。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜Message.HashAlgorithm 的 SHA-2 支援＞一節。
+在 .NET Framework 4.7 和更舊版本中，<xref:System.Messaging.Message.HashAlgorithm%2A?displayProperty=nameWithType> 屬性只支援 <xref:System.Messaging.HashAlgorithm.Md5?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha?displayProperty=nameWithType> 的值。 從 .NET Framework 4.7.1 開始，也支援 <xref:System.Messaging.HashAlgorithm.Sha256?displayProperty=nameWithType>、<xref:System.Messaging.HashAlgorithm.Sha384?displayProperty=nameWithType> 和 <xref:System.Messaging.HashAlgorithm.Sha512?displayProperty=nameWithType>。 實際使用的這個值取決於 MSMQ，因為 <xref:System.Messaging.Message> 執行個體本身不會進行任何雜湊處理，而只會將值傳入 MSMQ。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜Message.HashAlgorithm 的 SHA-2 支援＞一節。
 
 <a name="asp-net471" />
 
@@ -482,11 +482,11 @@ public class StaticResourceResolvedEventArgs : EventArgs
 
 **ASP.NET 應用程式中的執行步驟**
 
-ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET 會將每個事件處理常式執行為執行步驟。 在 .NET Framework 4.7 之前的 ASP.NET 版本中，ASP.NET 因切換原生與受控執行緒而無法讓執行內容流動。 相反地，ASP.NET 選擇性地只會讓 <xref:System.Web.HttpContext> 流動。 從 .NET Framework 4.7.1 開始，<xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> 方法也允許模組還原環境資料。 此功能的目標是關注於追蹤、分析、診斷或異動的程式庫，例如關心應用程式的執行流程。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET 執行步驟功能＞一節。
+ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET 會將每個事件處理常式執行為執行步驟。 在 .NET Framework 4.7 之前的 ASP.NET 版本中，ASP.NET 因切換原生與受控執行緒而無法讓執行內容流動。 相反地，ASP.NET 選擇性地只會讓 <xref:System.Web.HttpContext> 流動。 從 .NET Framework 4.7.1 開始，<xref:System.Web.HttpApplication.OnExecuteRequestStep(System.Action{System.Web.HttpContextBase,System.Action})?displayProperty=nameWithType> 方法也允許模組還原環境資料。 此功能的目標是關注於追蹤、分析、診斷或異動的程式庫，例如關心應用程式的執行流程。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜ASP.NET 執行步驟功能＞一節。
 
 **ASP.NET HttpCookie 剖析**
 
-.NET Framework 4.7.1 包含的新方法 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 提供標準化方式，以從字串建立 <xref:System.Web.HttpCookie> 物件，並精確地指派 Cookie 值 (例如到期日和路徑)。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://blogs.msdn.microsoft.com/dotnet/2017/09/13/net-framework-4-7-1-asp-net-and-configuration-features)部落格文章中的＜ASP.NET HttpCookie 剖析＞一節。
+.NET Framework 4.7.1 包含的新方法 <xref:System.Web.HttpCookie.TryParse%2A?displayProperty=nameWithType> 提供標準化方式，以從字串建立 <xref:System.Web.HttpCookie> 物件，並精確地指派 Cookie 值 (例如到期日和路徑)。 如需詳細資訊，請參閱 [.NET Framework 4.7.1 ASP.NET 和組態功能](https://devblogs.microsoft.com/dotnet/net-framework-4-7-1-asp-net-and-configuration-features/)部落格文章中的＜ASP.NET HttpCookie 剖析＞一節。
 
 **ASP.NET 表單驗證認證的 SHA-2 雜湊選項**
 
@@ -517,7 +517,7 @@ ASP.NET 會在包含 23 個事件的預先定義管線中處理要求。 ASP.NET
 - [Windows Form](#wf47)
 - [Windows Presentation Foundation (WPF)](#WPF47)
 
-如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.7](https://blogs.msdn.microsoft.com/dotnet/2017/04/05/announcing-the-net-framework-4-7/)。
+如需 .NET Framework 4.7 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.7 API 變更 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-api-changes.md)。 如需 .NET Framework 4.7 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.7 變更清單 (英文)](https://github.com/Microsoft/dotnet/blob/master/releases/net47/dotnet47-changes.md)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.7](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-7/)。
 
 <a name="Core47" />
 
@@ -640,7 +640,7 @@ WPF 在 <xref:System.Printing.PrintQueue?displayProperty=nameWithType> 類別中
 
 - [偵錯改進](#Debug462)
 
-如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](https://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://blogs.msdn.microsoft.com/dotnet/2016/08/02/announcing-net-framework-4-6-2/)。
+如需 .NET Framework 4.6.2 中加入的新 API 清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 API 變更](https://github.com/Microsoft/dotnet/blob/master/releases/net462/dotnet462-api-changes.md)。 如需 .NET Framework 4..6.2 中的功能改進以及錯誤 (Bug) 修正清單，請參閱 GitHub 上的 [.NET Framework 4.6.2 變更清單 (英文)](https://go.microsoft.com/fwlink/?LinkId=708778)。  如需詳細資訊，請參閱 .NET 部落格中的[宣告 .NET Framework 4.6.2](https://devblogs.microsoft.com/dotnet/announcing-net-framework-4-6-2/)。
 
 <a name="ASPNET462" />
 
@@ -1666,7 +1666,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - .NET Framework 內容集現在包含 [!INCLUDE[net_native](../../../includes/net-native-md.md)] (用於建置及部署 Windows 應用程式的先行編譯技術) 的文件。 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 會將您的應用程式直接編譯為機器碼 (而不是中繼語言 (IL)) 以提升效能。 如需詳細資訊，請參閱[使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)。
 
-- [.NET Framework 參考來源](https://referencesource.microsoft.com/)提供新瀏覽體驗和增強功能。 您現在可以在線上瀏覽 .NET Framework 原始程式碼、[下載參考](https://referencesource.microsoft.com/download.html)以供離線檢視，並在偵錯時逐步執行原始程式碼 (包含修補程式和更新)。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://blogs.msdn.microsoft.com/dotnet/2014/02/24/a-new-look-for-net-reference-source/)。
+- [.NET Framework 參考來源](https://referencesource.microsoft.com/)提供新瀏覽體驗和增強功能。 您現在可以在線上瀏覽 .NET Framework 原始程式碼、[下載參考](https://referencesource.microsoft.com/download.html)以供離線檢視，並在偵錯時逐步執行原始程式碼 (包含修補程式和更新)。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)。
 
 .NET Framework 4.5.1 的核心新功能和增強功能包括：
 
@@ -1676,7 +1676,7 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
 - 可在記憶體回收期間明確壓縮大型物件堆積 (LOH) 的功能。 如需詳細資訊，請參閱 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> 屬性 (Property)。
 
-- 其他效能改進功能包括 ASP.NET 應用程式暫止、多核心 JIT 改進功能，以及 .NET Framework 更新後應用程式更快速啟動。 如需詳細資訊，請參閱 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)和 [ASP.NET 應用程式暫止 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/10/09/asp-net-app-suspend-responsive-shared-net-web-hosting/) 部落格文章。
+- 其他效能改進功能包括 ASP.NET 應用程式暫止、多核心 JIT 改進功能，以及 .NET Framework 更新後應用程式更快速啟動。 如需詳細資訊，請參閱 [.NET Framework 4.5.1 公告 (英文)](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)和 [ASP.NET 應用程式暫止 (英文)](https://devblogs.microsoft.com/dotnet/asp-net-app-suspend-responsive-shared-net-web-hosting/) 部落格文章。
 
 Windows Forms 的增強功能包括：
 
@@ -1696,13 +1696,13 @@ Windows Forms 的增強功能包括：
 
 在 Visual Studio 2013 中對您的 .NET Framework 應用程式進行偵錯時的改進功能包括：
 
-- 在 Visual Studio Debugger 中傳回值。 當您在 Visual Studio 2013 中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱[檢查方法呼叫的傳回值](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn32325728%v=vs.120%29)。
+- 在 Visual Studio Debugger 中傳回值。 當您在 Visual Studio 2013 中對 Managed 應用程式進行偵錯時，[自動變數] 視窗會顯示方法的傳回類型和值。 這項資訊適用於桌面、Windows 市集和 Windows Phone 應用程式。 如需詳細資訊，請參閱[檢查方法呼叫的傳回值](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/dn323257(v=vs.120))。
 
 - 64 位元應用程式的 [編輯後繼續] 功能。 Visual Studio 2013 對傳統型、Windows 市集和 Windows Phone 的 64 位元 Managed 應用程式支援「編輯後繼續」功能。 對 32 位元和 64 位元應用程式的現有限制仍然有效 (請參閱[支援的程式碼變更 (C#)](/visualstudio/debugger/supported-code-changes-csharp) 文章的最後一節)。
 
-- 非同步感知偵錯。 為了在 Visual Studio 2013 中更容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鏈結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
+- 非同步感知偵錯。 為了在 Visual Studio 2013 中更容易對非同步應用程式進行偵錯，呼叫堆疊會隱藏編譯器提供的基礎結構程式碼來支援非同步程式設計，以及提供邏輯父框架中的鏈結，讓您可以更清楚地了解邏輯程式執行的方式。 [工作] 視窗會取代 [平行工作] 視窗，並顯示與特定中斷點相關的工作，同時也會顯示應用程式中目前為作用中或已排程的任何其他工作。 您可以在 [.NET Framework 4.5.1 公告 (英文)](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的＜Async-aware debugging＞ (非同步感知偵錯) 一節中，閱讀此功能的相關資訊。
 
-- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://blogs.msdn.microsoft.com/dotnet/2013/06/26/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。
+- 對 Windows 執行階段元件提供更佳的例外狀況支援。 在 [!INCLUDE[win81](../../../includes/win81-md.md)] 中，Windows 市集應用程式所引發的例外狀況會保留造成例外狀況之錯誤的資訊，甚至跨語言界限。 您可以在 [.NET Framework 4.5.1 公告](https://devblogs.microsoft.com/dotnet/announcing-the-net-framework-4-5-1-preview/)的＜Windows 市集應用程式開發＞一節中，閱讀這項功能的相關資訊。
 
 自 Visual Studio 2013 開始，您可以使用[由受控設定檔導引的最佳化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 來最佳化[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式與傳統型應用程式。
 
