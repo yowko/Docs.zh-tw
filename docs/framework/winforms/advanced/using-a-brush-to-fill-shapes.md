@@ -6,28 +6,28 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: dad26479a3790f40e50760ac9e9282aa692a4ea7
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33523727"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708895"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>使用筆刷填滿形狀
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush>物件用來填滿的封閉圖形內部。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 定義數個填滿樣式： 單色、 規劃圖樣、 映像紋理和色彩漸層。  
+A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush>物件用來填滿內部的封閉的形狀。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 定義數個填滿樣式： 單色、 規劃圖樣、 影像材質和色彩漸層。  
   
 ## <a name="in-this-section"></a>本節內容  
- [操作說明：使用純色填滿形狀](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-solid-color.md)  
- 描述如何使用純色筆刷填滿形狀。  
+ [如何：填滿形狀純色](how-to-fill-a-shape-with-a-solid-color.md)  
+ 描述如何使用單色筆刷填滿形狀。  
   
- [操作說明：以規劃圖樣填滿形狀](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-a-hatch-pattern.md)  
+ [如何：填滿形狀以規劃圖樣](how-to-fill-a-shape-with-a-hatch-pattern.md)  
  示範如何使用規劃筆刷填滿形狀。  
   
- [操作說明：使用影像材質填滿圖案](../../../../docs/framework/winforms/advanced/how-to-fill-a-shape-with-an-image-texture.md)  
+ [如何：填滿形狀影像材質](how-to-fill-a-shape-with-an-image-texture.md)  
  說明如何使用紋理筆刷填滿形狀。  
   
- [操作說明：使用影像並排顯示圖案](../../../../docs/framework/winforms/advanced/how-to-tile-a-shape-with-an-image.md)  
- 描述如何以並排顯示圖形中的映像。  
+ [如何：並排顯示影像與圖案](how-to-tile-a-shape-with-an-image.md)  
+ 說明如何以並排顯示圖形中的映像。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Drawing.Brush?displayProperty=nameWithType>  
@@ -37,20 +37,20 @@ A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:Syst
  描述這個類別，並且包含其所有成員的連結  
   
  <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>  
- 描述這個類別，並包含其所有成員的連結。  
+ 描述這個類別，並且包含其所有成員的連結。  
   
  <xref:System.Drawing.Drawing2D.HatchBrush?displayProperty=nameWithType>  
- 描述這個類別，並包含其所有成員的連結。  
+ 描述這個類別，並且包含其所有成員的連結。  
   
  <xref:System.Drawing.Drawing2D.PathGradientBrush?displayProperty=nameWithType>  
- 描述這個類別，並包含其所有成員的連結。  
+ 描述這個類別，並且包含其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [使用漸層筆刷填滿形狀](../../../../docs/framework/winforms/advanced/using-a-gradient-brush-to-fill-shapes.md)  
- 包含一份主題示範如何使用漸層筆刷。  
+ [使用漸層筆刷填滿形狀](using-a-gradient-brush-to-fill-shapes.md)  
+ 包含示範如何使用漸層筆刷的主題清單。  
   
- [使用畫筆繪製線條和形狀](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)  
+ [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)  
  提供示範如何繪製外框的圖案的主題清單。  
   
- [使用 Managed 圖形類別](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)  
+ [使用 Managed 圖形類別](using-managed-graphics-classes.md)  
  包含主題描述如何使用 managed 的圖形類別的清單。

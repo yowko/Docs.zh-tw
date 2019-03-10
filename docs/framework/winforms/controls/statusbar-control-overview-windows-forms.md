@@ -7,18 +7,18 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: c3e52a91a31eb898d0176bc35a97cda7de9a8368
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 516462aa92e2cd836820ec34440f34bb4c5b577d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491346"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703799"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar 控制項概觀 (Windows Form)
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip>及<xref:System.Windows.Forms.ToolStripStatusLabel>控制項會取代及新增功能<xref:System.Windows.Forms.StatusBar>並<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項保留回溯相容性和未來使用，如果您選擇。  
   
- Windows Forms [StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)可在表單區域的區域，通常會顯示在視窗中，以何種應用程式可以顯示各種狀態資訊的底部。 <xref:System.Windows.Forms.StatusBar> 控制項可以有狀態列面板上顯示的文字或圖示以表示狀態或一系列的動畫表示正在處理程序; 的圖示比方說，[!INCLUDE[ofprword](../../../../includes/ofprword-md.md)]表示正在儲存文件。  
+ Windows Forms [StatusBar 控制項](statusbar-control-windows-forms.md)可在表單區域的區域，通常會顯示在視窗中，以何種應用程式可以顯示各種狀態資訊的底部。 <xref:System.Windows.Forms.StatusBar> 控制項可以有狀態列面板上顯示的文字或圖示以表示狀態或一系列的動畫表示正在處理程序; 的圖示比方說，[!INCLUDE[ofprword](../../../../includes/ofprword-md.md)]表示正在儲存文件。  
   
 ## <a name="using-the-statusbar-control"></a>使用 StatusBar 控制項  
  Internet Explorer 使用狀態列來表示頁面的 URL，當滑鼠跨過超連結;[!INCLUDE[ofprword](../../../../includes/ofprword-md.md)]提供您資訊所在位置、 區段的位置，以及編輯模式，例如取代和修訂追蹤; 和 Visual Studio 的 [狀態] 列則會提供內容相關的資訊，例如告訴您如何操作可停駐視窗使用為停駐或浮動。  
@@ -28,4 +28,4 @@ ms.locfileid: "54491346"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)

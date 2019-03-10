@@ -19,16 +19,17 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: a327b225dca3dfcab8444567d37a6a5ebe7490ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7ff88f877f73382f69874c58392c3374a83c019
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710530"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705996"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控制項概觀 (Windows Form)
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  
+  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  使用<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示和編輯多種不同的資料來源的表格式資料。  
   
@@ -46,41 +47,41 @@ ms.locfileid: "54710530"
   
  <xref:System.Windows.Forms.DataGridView>控制項支援資料繫結至這些介面所傳回的物件的公用屬性或所傳回的屬性集合<xref:System.ComponentModel.ICustomTypeDescriptor>介面，如果傳回的物件上實作。  
   
- 一般而言，您會繫結，來<xref:System.Windows.Forms.BindingSource>元件，並繫結<xref:System.Windows.Forms.BindingSource>元件到另一個資料來源，或商務物件以進行擴展。 <xref:System.Windows.Forms.BindingSource>元件是慣用的資料來源，因為它可以繫結至各種資料來源，而且可以自動解決許多資料繫結的問題。 如需詳細資訊，請參閱 < [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)。  
+ 一般而言，您會繫結，來<xref:System.Windows.Forms.BindingSource>元件，並繫結<xref:System.Windows.Forms.BindingSource>元件到另一個資料來源，或商務物件以進行擴展。 <xref:System.Windows.Forms.BindingSource>元件是慣用的資料來源，因為它可以繫結至各種資料來源，而且可以自動解決許多資料繫結的問題。 如需詳細資訊，請參閱 < [BindingSource 元件](bindingsource-component.md)。  
   
- <xref:System.Windows.Forms.DataGridView>控制項也會用於*未繫結*模式中的，沒有基礎資料存放區。 使用未繫結的程式碼範例<xref:System.Windows.Forms.DataGridView>控制項，請參閱[逐步解說：建立未繫結的 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)。  
+ <xref:System.Windows.Forms.DataGridView>控制項也會用於*未繫結*模式中的，沒有基礎資料存放區。 使用未繫結的程式碼範例<xref:System.Windows.Forms.DataGridView>控制項，請參閱[逐步解說：建立未繫結的 Windows Form DataGridView 控制項](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)。  
   
  <xref:System.Windows.Forms.DataGridView>控制項是高度可設定和擴充性，並提供許多屬性、 方法和事件，以自訂其外觀和行為。 當您想要顯示表格式資料，Windows Forms 應用程式時，請考慮使用<xref:System.Windows.Forms.DataGridView>比其他控制項 (例如<xref:System.Windows.Forms.DataGrid>)。 如果您要顯示的唯讀值的小型格線，或如果您要啟用使用者無法編輯的資料表的數百萬筆記錄，<xref:System.Windows.Forms.DataGridView>控制會提供您隨時可程式化、 記憶體有效率的解決方案。  
   
 ## <a name="in-this-section"></a>本節內容  
- [DataGridView 控制項技術摘要](../../../../docs/framework/winforms/controls/datagridview-control-technology-summary-windows-forms.md)  
+ [DataGridView 控制項技術摘要](datagridview-control-technology-summary-windows-forms.md)  
  摘要說明<xref:System.Windows.Forms.DataGridView>控制概念和使用相關的類別。  
   
- [DataGridView 控制項架構](../../../../docs/framework/winforms/controls/datagridview-control-architecture-windows-forms.md)  
+ [DataGridView 控制項架構](datagridview-control-architecture-windows-forms.md)  
  描述的架構<xref:System.Windows.Forms.DataGridView>控制項，說明它的型別階層架構和繼承結構。  
   
- [DataGridView 控制項案例](../../../../docs/framework/winforms/controls/datagridview-control-scenarios-windows-forms.md)  
+ [DataGridView 控制項案例](datagridview-control-scenarios-windows-forms.md)  
  描述最常見的案例，在其中<xref:System.Windows.Forms.DataGridView>控制項可用。  
   
- [DataGridView 控制項程式碼目錄](../../../../docs/framework/winforms/controls/datagridview-control-code-directory-windows-forms.md)  
+ [DataGridView 控制項程式碼目錄](datagridview-control-code-directory-windows-forms.md)  
  提供各種文件中的程式碼範例連結<xref:System.Windows.Forms.DataGridView>工作。 這些範例是以工作類型分類。  
   
 ## <a name="related-sections"></a>相關章節  
- [Windows Forms DataGridView 控制項中的資料行類型](../../../../docs/framework/winforms/controls/column-types-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)  
  討論 Windows Form 中的資料行類型<xref:System.Windows.Forms.DataGridView>用來顯示資訊，並允許使用者修改或新增資訊的控制項。  
   
- [在 Windows Forms DataGridView 控制項中顯示資料](../../../../docs/framework/winforms/controls/displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何以手動方式或從外部資料來源將資料填入控制項。  
   
- [自訂 Windows Forms DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)  
+ [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)  
  提供主題描述自訂繪製 <xref:System.Windows.Forms.DataGridView> 儲存格和資料列，並建立衍生儲存格、資料行和資料列類型。  
   
- [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供主題描述處理大量資料時，如何有效率地使用控制項來避免發生效能問題。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [Windows Forms DataGridView 控制項的預設功能](../../../../docs/framework/winforms/controls/default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠處理](../../../../docs/framework/winforms/controls/default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [DataGridView 控制項](datagridview-control-windows-forms.md)
+- [Windows Forms DataGridView 控制項的預設功能](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠處理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

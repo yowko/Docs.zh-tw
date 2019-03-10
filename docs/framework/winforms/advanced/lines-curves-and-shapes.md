@@ -8,49 +8,49 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: f37e30959d5d802376f17a0537188bfcbd6a196e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524699"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707387"
 ---
 # <a name="lines-curves-and-shapes"></a>線條、曲線和形狀
-向量圖形部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]用來繪製線條、 繪製曲線，以及繪製，並填滿圖案。  
+向量圖形部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]用來繪製線條、 繪製曲線，以及繪製，並填滿形狀。  
   
 ## <a name="in-this-section"></a>本節內容  
- [向量圖形概觀](../../../../docs/framework/winforms/advanced/vector-graphics-overview.md)  
+ [向量圖形概觀](vector-graphics-overview.md)  
  討論向量圖形。  
   
- [GDI+ 中的畫筆、線條和矩形](../../../../docs/framework/winforms/advanced/pens-lines-and-rectangles-in-gdi.md)  
+ [GDI+ 中的畫筆、線條和矩形](pens-lines-and-rectangles-in-gdi.md)  
  說明繪製線條和矩形。  
   
- [GDI+ 中的橢圓形和弧形](../../../../docs/framework/winforms/advanced/ellipses-and-arcs-in-gdi.md)  
- 定義弧形和省略符號和識別以進行繪製所需的類別。  
+ [GDI+ 中的橢圓形和弧形](ellipses-and-arcs-in-gdi.md)  
+ 定義弧線和省略符號和識別以進行繪製所需的類別。  
   
- [GDI+ 中的多邊形](../../../../docs/framework/winforms/advanced/polygons-in-gdi.md)  
- 定義的多邊形，並指出它們繪製所需的類別。  
+ [GDI+ 中的多邊形](polygons-in-gdi.md)  
+ 定義的多邊形，並識別以進行繪製所需的類別。  
   
- [GDI+ 中的基本曲線](../../../../docs/framework/winforms/advanced/cardinal-splines-in-gdi.md)  
- 定義曲線，並指出它們繪製所需的類別。  
+ [GDI+ 中的基本曲線](cardinal-splines-in-gdi.md)  
+ 定義基本曲線，並識別以進行繪製所需的類別。  
   
- [GDI+ 中的貝茲曲線](../../../../docs/framework/winforms/advanced/bezier-splines-in-gdi.md)  
- 定義貝茲曲線，並指出它們繪製所需的類別。  
+ [GDI+ 中的貝茲曲線](bezier-splines-in-gdi.md)  
+ 定義貝茲曲線，並識別以進行繪製所需的類別。  
   
- [GDI+ 中的圖形路徑](../../../../docs/framework/winforms/advanced/graphics-paths-in-gdi.md)  
+ [GDI+ 中的圖形路徑](graphics-paths-in-gdi.md)  
  描述路徑，以及如何建立和繪製。  
   
- [GDI+ 中的筆刷和填滿的形狀](../../../../docs/framework/winforms/advanced/brushes-and-filled-shapes-in-gdi.md)  
- 描述筆刷類型和使用方式。  
+ [GDI+ 中的筆刷和填滿的形狀](brushes-and-filled-shapes-in-gdi.md)  
+ 描述筆刷類型，以及如何使用它們。  
   
- [GDI+ 中的開放型和封閉型曲線](../../../../docs/framework/winforms/advanced/open-and-closed-curves-in-gdi.md)  
- 開啟和封閉型曲線，以及如何繪製及填滿其定義。  
+ [GDI+ 中的開放型和封閉型曲線](open-and-closed-curves-in-gdi.md)  
+ 定義開啟和封閉型曲線，以及如何繪製，並填入其資料。  
   
- [GDI+ 中的區域](../../../../docs/framework/winforms/advanced/regions-in-gdi.md)  
+ [GDI+ 中的區域](regions-in-gdi.md)  
  描述與區域相關聯的方法。  
   
- [限制 GDI+ 中的繪圖介面](../../../../docs/framework/winforms/advanced/restricting-the-drawing-surface-in-gdi.md)  
+ [限制 GDI+ 中的繪圖介面](restricting-the-drawing-surface-in-gdi.md)  
  描述裁剪及如何使用它。  
   
- [線條和曲線的反鋸齒功能](../../../../docs/framework/winforms/advanced/antialiasing-with-lines-and-curves.md)  
- 定義反鋸齒功能以及如何使用反鋸齒功能時繪製線條和曲線。
+ [線條和曲線的反鋸齒功能](antialiasing-with-lines-and-curves.md)  
+ 定義反鋸齒功能，以及如何使用反鋸齒功能時繪製線條和曲線。

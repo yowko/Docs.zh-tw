@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms controls, locking
 - controls [Windows Forms], locking
 ms.assetid: 94efe0d2-c14e-4d14-b903-63ea9b07e290
-ms.openlocfilehash: a59e5997104b9438681702d460dd8f6937df41b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cff3b0a3ba547c15e7b1c896bde49931a6a3c742
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741453"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702642"
 ---
 # <a name="how-to-lock-controls-to-windows-forms"></a>HOW TO：鎖定控制項新增至 Windows Forms
 當您設計您的 Windows 應用程式的使用者介面 (UI) 時，您可以在之後放置的位置正確，因此，您不小心移動或調整其大小設定其他屬性時，鎖定控制項。  
@@ -47,8 +47,8 @@ ms.locfileid: "54741453"
 1.  在 [**屬性**] 視窗中，按一下**鎖定**屬性，並選取`false`。 （按兩下名稱切換屬性設定）。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
-- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

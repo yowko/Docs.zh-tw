@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: 285a35012c4417e4ee39bf8c72e85bd6102d3e23
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d8efb783fcb5bcbe9c4ee99bc784e27a1aebb0cf
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594443"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707660"
 ---
 # <a name="system-information-and-windows-forms"></a>系統資訊和 Windows Form
 有時候就必須蒐集電腦上執行您的應用程式以在您的程式碼中進行決策的相關資訊。 例如，您可能只是適用於連線到特定的網路網域; 函式在此情況下，您必須判斷網域和停用此函式，如果網域不存在的方法。  
@@ -44,4 +44,4 @@ MessageBox.Show("Good morning " + User + ". You are connected to " _
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.SystemInformation>
-- [Windows Forms 中的電源管理](../../../../docs/framework/winforms/advanced/power-management-in-windows-forms.md)
+- [Windows Forms 中的電源管理](power-management-in-windows-forms.md)

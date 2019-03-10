@@ -6,15 +6,15 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 540388e316a761df3c32842cbe626e9e52f7e3f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645479"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718021"
 ---
 # <a name="how-keyboard-input-works"></a>鍵盤輸入的運作方式
-Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)。  
+Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](using-keyboard-events.md)。  
   
 ## <a name="types-of-keys"></a>按鍵類型  
  Windows Form 識別為表示的位元虛擬按鍵碼的鍵盤輸入<xref:System.Windows.Forms.Keys>列舉型別。 使用<xref:System.Windows.Forms.Keys>列舉型別，您可以結合一系列的已按下按鍵來產生單一值。 這些值對應於伴隨 WM_KEYDOWN 和 WM_SYSKEYDOWN Windows 訊息的值。 您可以藉由處理來偵測大多數實體按鍵<xref:System.Windows.Forms.Control.KeyDown>或<xref:System.Windows.Forms.Control.KeyUp>事件。 字元按鍵是子集<xref:System.Windows.Forms.Keys>列舉型別，並對應至伴隨 WM_CHAR 和 WM_SYSCHAR Windows 訊息的值。 如果已按下按鍵的組合產生一個字元，您可以藉由處理來偵測字元<xref:System.Windows.Forms.Control.KeyPress>事件。 或者，您可以使用<xref:Microsoft.VisualBasic.Devices.Keyboard>Visual Basic 程式設計介面，以探索哪些按鍵已按下及傳送按鍵所公開。 如需詳細資訊，請參閱[存取鍵盤](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)。  
@@ -74,4 +74,4 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>
 - [My.Computer.Keyboard 物件](~/docs/visual-basic/language-reference/objects/my-computer-keyboard-object.md)
 - [存取鍵盤](~/docs/visual-basic/developing-apps/programming/computer-resources/accessing-the-keyboard.md)
-- [使用鍵盤事件](../../../docs/framework/winforms/using-keyboard-events.md)
+- [使用鍵盤事件](using-keyboard-events.md)

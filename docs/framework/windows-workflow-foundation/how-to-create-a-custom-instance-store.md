@@ -2,16 +2,16 @@
 title: HOW TO：建立自訂執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: 593c4e9d-8a49-4e12-8257-cee5e6b4c075
-ms.openlocfilehash: de3602b928a861500e7984fe88bbb2176d58b840
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cacee7d95a543525ba031de0cc0636d05fc72fc8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57503186"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707764"
 ---
 # <a name="how-to-create-a-custom-instance-store"></a>HOW TO：建立自訂執行個體存放區
 
-[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，這是使用 SQL Server 來保存工作流程資料的執行個體存放區。 如果您的應用程式需要將工作流程資料保存在另一個媒體中，例如不同的資料庫或檔案系統，您可以實作自訂的執行個體存放區。 擴充抽象的 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別，並實作進行實作所需的方法，即可建立自訂執行個體存放區。 自訂執行個體存放區的完整實作，請參閱[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，這是使用 SQL Server 來保存工作流程資料的執行個體存放區。 如果您的應用程式需要將工作流程資料保存在另一個媒體中，例如不同的資料庫或檔案系統，您可以實作自訂的執行個體存放區。 擴充抽象的 <xref:System.Runtime.DurableInstancing.InstanceStore> 類別，並實作進行實作所需的方法，即可建立自訂執行個體存放區。 自訂執行個體存放區的完整實作，請參閱[公司購買程序](./samples/corporate-purchase-process.md)範例。
 
 ## <a name="implementing-the-begintrycommand-method"></a>實作 BeginTryCommand 方法
 
@@ -227,11 +227,11 @@ ms.locfileid: "57503186"
 
 ## <a name="using-a-custom-instance-store"></a>使用自訂執行個體存放區
 
-若要實作自訂執行個體存放區，請將該執行個體存放區的執行個體指派至 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，並且實作 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>方法。 請參閱[How to:建立並執行 a Long Running Workflow](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md)教學課程，如需詳細資訊。
+若要實作自訂執行個體存放區，請將該執行個體存放區的執行個體指派至 <xref:System.Activities.WorkflowApplication.InstanceStore%2A>，並且實作 <xref:System.Activities.WorkflowApplication.PersistableIdle%2A>方法。 請參閱[How to:建立並執行 a Long Running Workflow](how-to-create-and-run-a-long-running-workflow.md)教學課程，如需詳細資訊。
 
 ## <a name="a-sample-instance-store"></a>執行個體存放區範例
 
-下列程式碼範例是完整的執行個體存放區實作，取自[公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)範例。 此執行個體存放區會使用 XML 將工作流程資料保存至檔案。
+下列程式碼範例是完整的執行個體存放區實作，取自[公司購買程序](./samples/corporate-purchase-process.md)範例。 此執行個體存放區會使用 XML 將工作流程資料保存至檔案。
 
 ```csharp
 using System;

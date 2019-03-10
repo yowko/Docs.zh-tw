@@ -9,12 +9,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: e1f8f7fa1f3f351314ac1d454d591f46654d8f81
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2936a64338f47107b11b5f6eb85c5e94707bf926
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643594"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707959"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>HOW TO：判斷 Windows Form CheckedListBox 控制項中選取的項目
 呈現 Windows Forms 中的資料時<xref:System.Windows.Forms.CheckedListBox>控制項，您可以請逐一查看集合中儲存<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>屬性或逐步執行清單使用<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，以判斷選取的項目。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法會將項目索引編號，做為其引數並傳回`true`或`false`。 相對於您預期，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>屬性不會決定選取哪一個項目，它們會判斷哪些項目會反白顯示。  
@@ -112,4 +112,4 @@ ms.locfileid: "54643594"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

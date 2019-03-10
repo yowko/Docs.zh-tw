@@ -8,12 +8,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], for scaling colors
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
-ms.openlocfilehash: ff6172d571a7ca449ab21d1f7a7f9a699bf40f8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea4abc38968b929412945cddaca3ca3fe6f377d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737971"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707426"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用轉換調整色彩
 一或多個所提供的數字的四個色彩元件，將乘上縮放轉換。 下表提供代表調整色彩矩陣項目。  
@@ -28,12 +28,12 @@ ms.locfileid: "54737971"
 ## <a name="scaling-one-color"></a>調整的一種色彩  
  下列範例會建構<xref:System.Drawing.Image>ColorBars2.bmp 檔案中的物件。 然後程式碼會調整每個像素的藍色元件映像中的 2 倍。 原始的映像與已轉換的映像一起繪製。  
   
- [!code-csharp[System.Drawing.RecoloringImages#41](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
- [!code-vb[System.Drawing.RecoloringImages#41](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
+ [!code-csharp[System.Drawing.RecoloringImages#41](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#41)]
+ [!code-vb[System.Drawing.RecoloringImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#41)]  
   
  下圖顯示在右側的原始的映像，在左邊和縮放的影像。  
   
- ![調整色彩](../../../../docs/framework/winforms/advanced/media/colortrans3.png "colortrans3")  
+ ![調整色彩](./media/colortrans3.png "colortrans3")  
   
  下表列出四個橫條的色彩向量之前, 和之後的藍色的縮放比例。 請注意，在第四個彩色橫條的藍色元件發生從 0.8 0.6。 這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]會保留結果的小數部分。 例如，(2)(0.8) version=1.6 應用程式，而 1.6 的小數部分是 0.6。 保留小數部分，可確保結果一定是在間隔 [0，1]。  
   
@@ -47,12 +47,12 @@ ms.locfileid: "54737971"
 ## <a name="scaling-multiple-colors"></a>多個色彩調整  
  下列範例會建構<xref:System.Drawing.Image>ColorBars2.bmp 檔案中的物件。 然後程式碼會調整映像中每個像素的紅色、 綠色和藍色元件。 紅色元件相應減少百分之 25 的綠色元件相應減少 35%，藍色元件相應減少 50%。  
   
- [!code-csharp[System.Drawing.RecoloringImages#42](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
- [!code-vb[System.Drawing.RecoloringImages#42](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
+ [!code-csharp[System.Drawing.RecoloringImages#42](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#42)]
+ [!code-vb[System.Drawing.RecoloringImages#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#42)]  
   
  下圖顯示在右側的原始的映像，在左邊和縮放的影像。  
   
- ![調整色彩](../../../../docs/framework/winforms/advanced/media/colortrans4.png "colortrans4")  
+ ![調整色彩](./media/colortrans4.png "colortrans4")  
   
  下表列出四個橫條的色彩向量之前, 和之後紅色、 綠色和藍色的調整。  
   
@@ -66,5 +66,5 @@ ms.locfileid: "54737971"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [為影像重新著色](../../../../docs/framework/winforms/advanced/recoloring-images.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [為影像重新著色](recoloring-images.md)

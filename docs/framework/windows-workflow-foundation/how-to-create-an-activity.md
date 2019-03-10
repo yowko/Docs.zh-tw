@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 8aa6900b26bbe9f77fe0802a7929febe5af61269
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 271f26888e8b140b64464f5c9c4eabb7170afe05
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48872953"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709012"
 ---
 # <a name="how-to-create-an-activity"></a>HOW TO：建立活動
 
@@ -42,8 +42,8 @@ ms.locfileid: "48872953"
 
 4.  以下列定義取代現有的 `ReadInt` 定義。
 
-     [!code-csharp[CFX_WF_GettingStarted#1](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
-     [!code-vb[CFX_WF_GettingStarted#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
+     [!code-csharp[CFX_WF_GettingStarted#1](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/readint.cs#1)]
+     [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
     > `ReadInt` 活動衍生自 <xref:System.Activities.NativeActivity%601>，而不是程式碼活動範本預設的 <xref:System.Activities.CodeActivity>。 如果活動提供單一結果 (透過 <xref:System.Activities.CodeActivity%601> 引數公開)，則可使用 <xref:System.Activities.Activity%601.Result%2A>，但 <xref:System.Activities.CodeActivity%601> 不支援使用書籤，因而會使用 <xref:System.Activities.NativeActivity%601>。
@@ -100,13 +100,13 @@ ms.locfileid: "48872953"
 
 ## <a name="next-steps"></a>後續步驟
 
-如需如何使用這些活動中，建立工作流程的指示，請參閱下一步在教學課程中，[如何： 建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。
+如需如何使用這些活動中，建立工作流程的指示，請參閱下一步在教學課程中， [How to:建立工作流程](how-to-create-a-workflow.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Activities.CodeActivity>
 - <xref:System.Activities.NativeActivity%601>
-- [設計及實作自訂活動](../../../docs/framework/windows-workflow-foundation/designing-and-implementing-custom-activities.md)
-- [快速入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)
-- [如何：建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)
-- [在自訂活動設計工具中使用 ExpressionTextBox](../../../docs/framework/windows-workflow-foundation/samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)
+- [設計及實作自訂活動](designing-and-implementing-custom-activities.md)
+- [快速入門教學課程](getting-started-tutorial.md)
+- [如何：建立工作流程](how-to-create-a-workflow.md)
+- [在自訂活動設計工具中使用 ExpressionTextBox](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

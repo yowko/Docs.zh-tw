@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: 60d024dcb023b3d6cfafb68263291acefb38e14a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7177daef469f6c601cfa468c6437deb9653ffc85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519152"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707465"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>HOW TO：使用 ToolStrip 控制項中的工具提示
 您可以顯示<xref:System.Windows.Forms.ToolTip>for<xref:System.Windows.Forms.ToolStrip>您想要藉由設定控制項的控制項<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性設`true`。  
@@ -40,4 +40,4 @@ ms.locfileid: "54519152"
 - <xref:System.Windows.Forms.ToolStripButton>
 - <xref:System.Windows.Forms.ToolStripDropDownButton>
 - <xref:System.Windows.Forms.ToolStripSplitButton>
-- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

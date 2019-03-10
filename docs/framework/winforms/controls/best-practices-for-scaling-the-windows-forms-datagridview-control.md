@@ -9,12 +9,12 @@ helpviewer_keywords:
 - best practices [Windows Forms], dataGridView control
 - DataGridView control [Windows Forms], scaling
 ms.assetid: 8321a8a6-6340-4fd1-b475-fa090b905aaf
-ms.openlocfilehash: 5adbcdb4aa34b3878e278d47337defe4388dd892
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 895dd132c070157355c28a935e43240f2750159e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710868"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706413"
 ---
 # <a name="best-practices-for-scaling-the-windows-forms-datagridview-control"></a>縮放 Windows Form DataGridView 控制項的最佳作法
 <xref:System.Windows.Forms.DataGridView>控制項的設計是可提供最大的延展性。 如果您要顯示大量的資料，您應該遵循本主題，以避免消耗大量的記憶體，或降低回應能力的使用者介面 (UI) 中所述的指導方針。 本主題將討論下列問題：  
@@ -31,16 +31,16 @@ ms.locfileid: "54710868"
   
 -   防止資料列變成非共用  
   
- 如果您有特殊效能需求，您可以實作虛擬模式，並提供您自己的資料管理作業。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的資料顯示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)。  
+ 如果您有特殊效能需求，您可以實作虛擬模式，並提供您自己的資料管理作業。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="using-cell-styles-efficiently"></a>有效率地使用的儲存格樣式  
  每個資料格、 資料列和資料行可以有它自己的樣式資訊。 樣式資訊會儲存在<xref:System.Windows.Forms.DataGridViewCellStyle>物件。 建立針對許多個別儲存格樣式物件<xref:System.Windows.Forms.DataGridView>項目可以是效率不佳，尤其是使用大量的資料。 若要避免對效能產生影響，請使用下列指導方針：  
   
 -   請避免設定個別的儲存格樣式屬性<xref:System.Windows.Forms.DataGridViewCell>或<xref:System.Windows.Forms.DataGridViewRow>物件。 這包括所指定的資料列物件<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>屬性。 每個新的資料列作為複製來源資料列範本，將會收到它自己的範本的儲存格樣式物件的複本。 最大延展性，設定儲存格樣式屬性，在<xref:System.Windows.Forms.DataGridView>層級。 例如，設定<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>屬性而非<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>屬性。  
   
--   如果某些資料格需要格式而非預設的格式設定，請使用相同<xref:System.Windows.Forms.DataGridViewCellStyle>跨越的資料格、 資料列或資料行群組的執行個體。 請避免直接設定屬性的型別<xref:System.Windows.Forms.DataGridViewCellStyle>個別儲存格、 資料列和資料行上。 如需的儲存格樣式共用的範例，請參閱[How to:設定 Windows Form DataGridView 控制項的預設儲存格樣式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 您也可以藉由處理個別設定儲存格樣式時避免對效能帶來負面影響<xref:System.Windows.Forms.DataGridView.CellFormatting>事件處理常式。 如需範例，請參閱[如何：自訂 Windows Form DataGridView 控制項中的資料格式](../../../../docs/framework/winforms/controls/how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
+-   如果某些資料格需要格式而非預設的格式設定，請使用相同<xref:System.Windows.Forms.DataGridViewCellStyle>跨越的資料格、 資料列或資料行群組的執行個體。 請避免直接設定屬性的型別<xref:System.Windows.Forms.DataGridViewCellStyle>個別儲存格、 資料列和資料行上。 如需的儲存格樣式共用的範例，請參閱[How to:設定 Windows Form DataGridView 控制項的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。 您也可以藉由處理個別設定儲存格樣式時避免對效能帶來負面影響<xref:System.Windows.Forms.DataGridView.CellFormatting>事件處理常式。 如需範例，請參閱[如何：自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。  
   
--   在決定的儲存格樣式，請使用<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>屬性而非<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>屬性。 存取<xref:System.Windows.Forms.DataGridViewCell.Style%2A>屬性建立的新執行個體<xref:System.Windows.Forms.DataGridViewCellStyle>類別已經尚未使用的屬性。 此外，如果某些樣式繼承自資料列、 資料行或控制這個物件可能並未包含儲存格的完整樣式資訊。 如需有關儲存格樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+-   在決定的儲存格樣式，請使用<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A?displayProperty=nameWithType>屬性而非<xref:System.Windows.Forms.DataGridViewCell.Style%2A?displayProperty=nameWithType>屬性。 存取<xref:System.Windows.Forms.DataGridViewCell.Style%2A>屬性建立的新執行個體<xref:System.Windows.Forms.DataGridViewCellStyle>類別已經尚未使用的屬性。 此外，如果某些樣式繼承自資料列、 資料行或控制這個物件可能並未包含儲存格的完整樣式資訊。 如需有關儲存格樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="using-shortcut-menus-efficiently"></a>有效率地使用快顯功能表  
  每個資料格、 資料列和資料行可以有它自己的快顯功能表。 中的快顯功能表<xref:System.Windows.Forms.DataGridView>控制項由<xref:System.Windows.Forms.ContextMenuStrip>控制項。 如同儲存格樣式的物件，建立快顯功能表針對許多個別<xref:System.Windows.Forms.DataGridView>項目將會對效能產生負面影響。 若要避免這種效能損失，請使用下列指導方針：  
@@ -60,7 +60,7 @@ ms.locfileid: "54710868"
   
 -   最大延展性，關閉自動調整大小，並使用以程式設計方式調整大小。  
   
- 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的調整大小選項](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+ 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="using-the-selected-cells-rows-and-columns-collections-efficiently"></a>有效率地使用選取的資料格、 列和資料行集合  
  <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>大型的選取項目後的集合不會有效率地執行。 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>並<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>集合也可以是效率不佳，雖然是以壓縮的程度會因為有許多資料列少於在典型的資料格<xref:System.Windows.Forms.DataGridView>控制和資料列比許多較少的資料行。 若要使用這些集合時，請避免效能的負面影響，請使用下列指導方針：  
@@ -137,9 +137,9 @@ ms.locfileid: "54710868"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Forms DataGridView 控制項中的效能微調](../../../../docs/framework/winforms/controls/performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的虛擬模式](../../../../docs/framework/winforms/controls/virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項的資料顯示模式](../../../../docs/framework/winforms/controls/data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)
-- [如何：為 Windows Form DataGridView 控制項中的預設儲存格樣式](../../../../docs/framework/winforms/controls/how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的調整大小選項](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [如何：為 Windows Form DataGridView 控制項中的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)

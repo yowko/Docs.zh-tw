@@ -2,12 +2,12 @@
 title: 命令式的程式碼式驗證
 ms.date: 03/30/2017
 ms.assetid: ae12537c-455e-42b1-82f4-cea4c46c023e
-ms.openlocfilehash: ac77132e3469bdffa6f88f8c6d617c6faa1c9323
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 333e1e200825dd1fc8ed750abbecbb309da66663
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/13/2018
-ms.locfileid: "49308288"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707829"
 ---
 # <a name="imperative-code-based-validation"></a>命令式的程式碼式驗證
 
@@ -18,7 +18,7 @@ ms.locfileid: "49308288"
 由衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 和 <xref:System.Activities.NativeActivity> 的活動可支援程式碼驗證。 驗證碼可以放在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中，而且可以將驗證錯誤或警告加入至中繼資料引數。 在下列範例中，如果 `Cost` 大於 `Price`，就會將驗證錯誤加入至中繼資料。  
   
 > [!NOTE]
-> 請注意，`Cost`和 `Price` 不是活動的引數，而是在設計階段設定的屬性。 這就是為什麼可以在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中驗證其值的原因。 在設計階段不能驗證流經引數的資料值，因為在執行階段之前，資料不會流過，但是可以驗證活動引數，以確保已使用 `RequiredArgument` 屬性和多載群組來繫結這些引數。 此程式碼範例會查看 `RequiredArgument` 引數的 `Description` 屬性，如果未繫結程序，則會產生驗證錯誤。 必要的引數所述[所需的引數與多載群組](../../../docs/framework/windows-workflow-foundation/required-arguments-and-overload-groups.md)。  
+> 請注意，`Cost`和 `Price` 不是活動的引數，而是在設計階段設定的屬性。 這就是為什麼可以在 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中驗證其值的原因。 在設計階段不能驗證流經引數的資料值，因為在執行階段之前，資料不會流過，但是可以驗證活動引數，以確保已使用 `RequiredArgument` 屬性和多載群組來繫結這些引數。 此程式碼範例會查看 `RequiredArgument` 引數的 `Description` 屬性，如果未繫結，則會產生驗證錯誤。 必要的引數所述[所需的引數與多載群組](required-arguments-and-overload-groups.md)。  
   
 ```csharp  
 public sealed class CreateProduct : CodeActivity  
@@ -51,8 +51,8 @@ public sealed class CreateProduct : CodeActivity
   
  根據預設，當呼叫 <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> 時，會將驗證錯誤加入至中繼資料。 若要加入驗證警告，請使用採取 <xref:System.Activities.CodeActivityMetadata.AddValidationError%2A> 的 <xref:System.Activities.Validation.ValidationError> 多載，並設定 <xref:System.Activities.Validation.ValidationError> 屬性來指定 <xref:System.Activities.Validation.ValidationError.IsWarning%2A> 表示警告。  
   
- 在工作流程設計工具中修改工作流程時，若工作流程設計工具中顯示任何驗證錯誤或警告，就會進行驗證。 叫用工作流程時，也會在執行階段進行驗證，而且如果發生任何驗證錯誤，預設驗證邏輯會擲回 <xref:System.Activities.InvalidWorkflowException>。 如需叫用驗證及存取任何驗證警告或錯誤的詳細資訊，請參閱[叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。  
+ 在工作流程設計工具中修改工作流程時，若工作流程設計工具中顯示任何驗證錯誤或警告，就會進行驗證。 叫用工作流程時，也會在執行階段進行驗證，而且如果發生任何驗證錯誤，預設驗證邏輯會擲回 <xref:System.Activities.InvalidWorkflowException>。 如需叫用驗證及存取任何驗證警告或錯誤的詳細資訊，請參閱[叫用活動驗證](invoking-activity-validation.md)。  
   
  從 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 擲回的任何例外狀況都不會被視為驗證錯誤。 這些例外狀況會從 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中逸出，而且必須由呼叫端處理。  
   
- 程式碼驗證對於驗證包含程式碼的活動很有用，但工作流程中的其他活動並不會顯示出來。 宣告式條件約束驗證讓您能夠驗證活動與工作流程中的其他活動之間的關聯性，並涵蓋[宣告式條件約束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)主題。
+ 程式碼驗證對於驗證包含程式碼的活動很有用，但工作流程中的其他活動並不會顯示出來。 宣告式條件約束驗證讓您能夠驗證活動與工作流程中的其他活動之間的關聯性，並涵蓋[宣告式條件約束](declarative-constraints.md)主題。

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 48f333fbae816748813b370bccc559cea2714fa5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694044"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705378"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>HOW TO：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件來檢視資料集或其他資料來源內的資料行錯誤。 針對<xref:System.Windows.Forms.ErrorProvider>元件，以在表單上顯示資料的錯誤不一定要直接控制項相關聯。 一旦它已繫結至資料來源，它可以顯示錯誤圖示旁邊繫結至相同的資料來源的任何控制項。  
@@ -63,5 +63,5 @@ ms.locfileid: "54694044"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [ErrorProvider 元件概觀](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
-- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)
+- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)

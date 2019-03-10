@@ -8,15 +8,15 @@ helpviewer_keywords:
 - error messages [Windows Forms], displaying
 - ErrorProvider component [Windows Forms], about ErrorProvider component
 ms.assetid: ced189f2-b5c8-46a7-a6f1-37f5af95dc99
-ms.openlocfilehash: 8d6c509d8e603063309dada6f536c43b8ada5f6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61a8d4baba35a7a8a8ae221b054029eb59107d0e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591730"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716253"
 ---
 # <a name="errorprovider-component-overview-windows-forms"></a>ErrorProvider 元件概觀 (Windows Form)
-Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/errorprovider-component-windows-forms.md)元件用來驗證使用者輸入，在表單或控制項上的。 通常用於搭配驗證在表單上的使用者輸入或顯示在資料集內的錯誤。 錯誤提供者會是較好的選擇，比在訊息方塊中，顯示一則錯誤訊息，因為一旦關閉訊息方塊，出現錯誤訊息不再顯示。 <xref:System.Windows.Forms.ErrorProvider>元件會顯示錯誤圖示 (![ErrorProvider 圖示](../../../../docs/framework/winforms/controls/media/vberrorprovidericon.gif "vbErrorProviderIcon")) 相關的控制項，例如文字方塊，使用者將滑鼠指標置於上時旁邊錯誤圖示時，工具提示隨即出現，顯示錯誤訊息字串。  
+Windows Forms [ErrorProvider](errorprovider-component-windows-forms.md)元件用來驗證使用者輸入，在表單或控制項上的。 通常用於搭配驗證在表單上的使用者輸入或顯示在資料集內的錯誤。 錯誤提供者會是較好的選擇，比在訊息方塊中，顯示一則錯誤訊息，因為一旦關閉訊息方塊，出現錯誤訊息不再顯示。 <xref:System.Windows.Forms.ErrorProvider>元件會顯示錯誤圖示 (![ErrorProvider 圖示](./media/vberrorprovidericon.gif "vbErrorProviderIcon")) 相關的控制項，例如文字方塊，使用者將滑鼠指標置於上時旁邊錯誤圖示時，工具提示隨即出現，顯示錯誤訊息字串。  
   
 ## <a name="key-properties"></a>索引鍵內容  
  <xref:System.Windows.Forms.ErrorProvider>元件的索引鍵屬性是<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>， <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>，和<xref:System.Windows.Forms.ErrorProvider.Icon%2A>。 使用時<xref:System.Windows.Forms.ErrorProvider>元件與資料繫結控制項<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性必須設定為適當的容器 （通常為 Windows 表單），以在表單上顯示錯誤圖示之元件的順序。 在設計師中，加入元件時<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性設定為包含表單; 如果您在程式碼中加入控制項，您必須自行設定。  
@@ -28,5 +28,5 @@ Windows Forms [ErrorProvider](../../../../docs/framework/winforms/controls/error
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ErrorProvider>
-- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
-- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](../../../../docs/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider.md)
+- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示](display-error-icons-for-form-validation-with-wf-errorprovider.md)

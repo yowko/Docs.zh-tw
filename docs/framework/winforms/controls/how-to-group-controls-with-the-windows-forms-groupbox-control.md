@@ -6,12 +6,12 @@ helpviewer_keywords:
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 44f0116511165c021f8e3dc35fb14e5cfb6f619e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686916"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708534"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>HOW TO：使用 Windows Forms GroupBox 控制項的群組控制項
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項用來分組其他控制項。 有三個群組控制項的原因：  
@@ -34,4 +34,4 @@ Windows Form<xref:System.Windows.Forms.GroupBox>控制項用來分組其他控�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.GroupBox>
-- [GroupBox 控制項](../../../../docs/framework/winforms/controls/groupbox-control-windows-forms.md)
+- [GroupBox 控制項](groupbox-control-windows-forms.md)

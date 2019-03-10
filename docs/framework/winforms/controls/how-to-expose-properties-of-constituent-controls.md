@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: f3ad37032ee2bb85f37a0eb754277cc9bc040a38
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75ee93b7a601b4fc1480dca708d78740664c9a85
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532158"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704512"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>HOW TO：公開組成控制項的屬性
 組成複合控制項的控制項稱為*組成控制項*。 這些控制項通常宣告為私用，因此開發人員無法存取。 如果您想要讓未來的使用者都可以使用這些控制項的屬性，您必須將它們公開給使用者。 組成控制項的屬性會公開在使用者控制項中，建立屬性，並使用`get`和`set`該屬性的存取子中組成控制項的私用屬性的變更生效。  
@@ -59,5 +59,5 @@ public Color ButtonColor
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.UserControl>
-- [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [各種自訂控制項](varieties-of-custom-controls.md)

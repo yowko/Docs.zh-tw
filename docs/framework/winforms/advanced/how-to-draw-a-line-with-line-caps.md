@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: a0d4d92d7201c4ac09eadd11d8f2e38a3c80c287
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 05c678b25563eb7a4e2e5ce0e49138b5445b4764
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713128"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707595"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>HOW TO：繪製包含線條帽緣的線條
 您可以在其中一種稱為線條帽緣的數個圖形中繪製的開頭或行結尾。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援數個線條端點，例如循、 正方形、 菱形、 和箭頭。  
@@ -25,10 +25,10 @@ ms.locfileid: "54713128"
   
  下列範例會繪製含有某一端點上的箭頭和圓形的帽緣，另一端的線條。 圖例中顯示產生的列：  
   
- ![畫筆](../../../../docs/framework/winforms/advanced/media/pens4.gif "pens4")  
+ ![畫筆](./media/pens4.gif "pens4")  
   
- [!code-csharp[System.Drawing.UsingAPen#71](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
- [!code-vb[System.Drawing.UsingAPen#71](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  
+ [!code-csharp[System.Drawing.UsingAPen#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
+ [!code-vb[System.Drawing.UsingAPen#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
@@ -37,5 +37,5 @@ ms.locfileid: "54713128"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LineCap?displayProperty=nameWithType>
-- [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [使用畫筆繪製線條和形狀](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)

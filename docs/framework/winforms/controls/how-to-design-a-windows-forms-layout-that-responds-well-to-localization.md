@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Windows Forms, localization
 - localization [Windows Forms], Windows Forms layout
 ms.assetid: d13eff2d-701c-4b6e-8838-3885cbfb7223
-ms.openlocfilehash: a4d0b19698a5f7fd4980fe1e945ee64c7f527ece
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: ff88d876ffc05c85c6d3c1011df776b814ed7aea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261813"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709711"
 ---
 # <a name="how-to-design-a-windows-forms-layout-that-responds-well-to-localization"></a>HOW TO：設計可適當回應當地語系化的 Windows Forms 配置
 建立準備好當地語系化的表單，將會大幅加速開發國際市場。 您可以使用 <xref:System.Windows.Forms.TableLayoutPanel> 控制項來實作版面配置，當控制項因 <xref:System.Windows.Forms.Control.Text%2A> 屬性值變更而調整大小時，它會依正常程序回應。  
   
 ## <a name="example"></a>範例  
- 在您翻譯顯示字串值為其他語言時，此表單會示範如何建立可按比例調整的版面配置。 這個翻譯的過程稱為「當地語系化」(localization)。 如需詳細資訊，請參閱[當地語系化](../../../../docs/standard/globalization-localization/localization.md)。  
+ 在您翻譯顯示字串值為其他語言時，此表單會示範如何建立可按比例調整的版面配置。 這個翻譯的過程稱為「當地語系化」(localization)。 如需詳細資訊，請參閱[當地語系化](../../../standard/globalization-localization/localization.md)。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  另請參閱[逐步解說：建立版面配置調整比例以配合當地語系化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7k9fa71y(v=vs.100))。  
   
- [!code-csharp[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/CS/localizableform.cs#1)]
- [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
+ [!code-csharp[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/CS/localizableform.cs#1)]
+ [!code-vb[System.Windows.Forms.TableLayoutPanel.LocalizableForm#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.TableLayoutPanel.LocalizableForm/VB/localizableform.vb#1)]  
   
 ## <a name="additional-resources"></a>其他資源
 1.  [如何：對齊和縮放 TableLayoutPanel 控制項中的控制項](how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md)  
@@ -57,4 +57,4 @@ ms.locfileid: "56261813"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>
-- [當地語系化](../../../../docs/standard/globalization-localization/localization.md)
+- [當地語系化](../../../standard/globalization-localization/localization.md)

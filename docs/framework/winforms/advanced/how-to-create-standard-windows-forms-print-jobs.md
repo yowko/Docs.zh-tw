@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 18078c5e6bf518487707a8dc5639b3d6aa8a5783
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0568472dadceb46257a8d35211034a718aef74c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723338"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705216"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>HOW TO：建立標準的 Windows Forms 列印工作
 是在 Windows Forms 中列印的基礎<xref:System.Drawing.Printing.PrintDocument>元件 — 更具體來說，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。 藉由撰寫程式碼來處理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，您可以指定要列印的項目，以及如何列印它。  
@@ -72,10 +72,10 @@ ms.locfileid: "54723338"
      您也可以在撰寫程式碼<xref:System.Drawing.Printing.PrintDocument.BeginPrint>和<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件，可能包括整數，表示頁面總數來列印，因為每一頁會列印會遞減。  
   
     > [!NOTE]
-    >  您可以新增<xref:System.Windows.Forms.PrintDialog>元件至您的表單，以提供全新且有效率的使用者介面 (UI) 給您的使用者。 設定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性<xref:System.Windows.Forms.PrintDialog>元件可讓您設定屬性與列印文件正在使用您的表單上。 如需詳細資訊<xref:System.Windows.Forms.PrintDialog>元件，請參閱 < [PrintDialog 元件](../../../../docs/framework/winforms/controls/printdialog-component-windows-forms.md)。  
+    >  您可以新增<xref:System.Windows.Forms.PrintDialog>元件至您的表單，以提供全新且有效率的使用者介面 (UI) 給您的使用者。 設定<xref:System.Windows.Forms.PrintDialog.Document%2A>屬性<xref:System.Windows.Forms.PrintDialog>元件可讓您設定屬性與列印文件正在使用您的表單上。 如需詳細資訊<xref:System.Windows.Forms.PrintDialog>元件，請參閱 < [PrintDialog 元件](../controls/printdialog-component-windows-forms.md)。  
   
      如需詳細資訊的 Windows Forms 列印工作，包括如何建立列印工作，以程式設計的方式，請參閱<xref:System.Drawing.Printing.PrintPageEventArgs>。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows Forms 列印支援](windows-forms-print-support.md)

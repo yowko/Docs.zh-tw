@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 4c4d3c2f323492cafaa2dc4d52ab994323eba69b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375320"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705840"
 ---
 # <a name="windows-forms-overview"></a>Windows Forms 概觀
 
@@ -26,9 +26,9 @@ ms.locfileid: "57375320"
 
  在 Windows Forms 中，「表單」是一種視覺化介面，您可以在上面顯示要提供給使用者的資訊。 通常在建置 Windows Forms 應用程式時，您會將控制項加入表單，以及開發對使用者動作的回應，例如滑鼠點選或是按下按鍵。 「控制項」是獨立的使用者介面 (UI) 項目，可顯示資料或接受資料輸入。
 
- 當使用者對您的表單或其中一個控制項執行某個動作時，該動作會產生事件。 您的應用程式會使用程式碼對這些事件做出反應，並且在事件發生時加以處理。 如需詳細資訊，請參閱[在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)。
+ 當使用者對您的表單或其中一個控制項執行某個動作時，該動作會產生事件。 您的應用程式會使用程式碼對這些事件做出反應，並且在事件發生時加以處理。 如需詳細資訊，請參閱[在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)。
 
- Windows Form 包含可讓您加入表單中的各種控制項：顯示文字方塊、按鈕、下拉式清單方塊、選項按鈕甚至網頁的控制項。 如需您可以在表單上使用之所有控制項的清單，請參閱[要在 Windows Forms 上使用的控制項](../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)。 如果現有的控制項不符合您的需求，Windows Form 也支援使用 <xref:System.Windows.Forms.UserControl> 類別來建立您自己的自訂控制項。
+ Windows Form 包含可讓您加入表單中的各種控制項：顯示文字方塊、按鈕、下拉式清單方塊、選項按鈕甚至網頁的控制項。 如需您可以在表單上使用之所有控制項的清單，請參閱[要在 Windows Forms 上使用的控制項](./controls/controls-to-use-on-windows-forms.md)。 如果現有的控制項不符合您的需求，Windows Form 也支援使用 <xref:System.Windows.Forms.UserControl> 類別來建立您自己的自訂控制項。
 
  Windows Form 有豐富的 UI 控制項，可以模擬高階應用程式 (例如 Microsoft Office) 中的功能。 當您使用 <xref:System.Windows.Forms.ToolStrip> 和 <xref:System.Windows.Forms.MenuStrip> 控制項時，您可以建立包含文字和影像的工具列和功能表、顯示子功能表，以及裝載其他控制項，例如文字方塊和下拉式方塊。
 
@@ -45,10 +45,10 @@ ms.locfileid: "57375320"
 
 |描述|說明主題|
 |-----------------|----------------|
-|在表單上使用控制項|[如何：將控制項新增至 Windows Forms](../../../docs/framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|
-|使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[如何：建立具有使用設計工具的標準項目的基本 ToolStrip](../../../docs/framework/winforms/controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
-|使用 <xref:System.Drawing> 建立圖形|[圖形程式設計入門](../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)|
-|建立自訂控制項|[如何：繼承自 UserControl 類別](../../../docs/framework/winforms/controls/how-to-inherit-from-the-usercontrol-class.md)|
+|在表單上使用控制項|[如何：將控制項新增至 Windows Forms](./controls/how-to-add-controls-to-windows-forms.md)|
+|使用 <xref:System.Windows.Forms.ToolStrip> 控制項|[如何：建立具有使用設計工具的標準項目的基本 ToolStrip](./controls/create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md)|
+|使用 <xref:System.Drawing> 建立圖形|[圖形程式設計入門](./advanced/getting-started-with-graphics-programming.md)|
+|建立自訂控制項|[如何：繼承自 UserControl 類別](./controls/how-to-inherit-from-the-usercontrol-class.md)|
 
 ### <a name="display-and-manipulate-data"></a>顯示和操作資料
  許多應用程式必須顯示來自資料庫、XML 檔案、XML Web 服務或其他資料來源的資料。 Windows Form 提供名為 <xref:System.Windows.Forms.DataGridView> 控制項的彈性控制項，以傳統的資料列和資料行格式，來顯示這類表格式資料，讓每項資料佔有自己的儲存格。 當您使用 <xref:System.Windows.Forms.DataGridView> 時，您可以自訂個別儲存格的外觀、將任意資料列和資料行鎖定位置，以及顯示儲存格中的複雜控制項，還有其他功能。
@@ -66,10 +66,10 @@ ms.locfileid: "57375320"
 
 |描述|說明主題|
 |-----------------|----------------|
-|使用 <xref:System.Windows.Forms.BindingSource> 元件|[如何：繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](../../../docs/framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|
-|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[如何：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件](../../../docs/framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|使用 <xref:System.Windows.Forms.BindingSource> 元件|[如何：繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](./controls/bind-wf-controls-with-the-bindingsource.md)|
+|使用 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] 資料來源|[如何：排序和篩選 ADO.NET 資料，使用 Windows Form BindingSource 元件](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |使用資料來源視窗|[將 Windows Forms 控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
-|使用應用程式設定|[如何：建立應用程式設定](../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)|
+|使用應用程式設定|[如何：建立應用程式設定](./advanced/how-to-create-application-settings.md)|
 
 ### <a name="deploy-apps-to-client-computers"></a>將應用程式部署至用戶端電腦
 
@@ -99,15 +99,15 @@ Windows Form 中還有許多其他功能，可讓您快速、輕鬆地實作一�
 
 |描述|說明主題|
 |-----------------|----------------|
-|列印表單的內容|[如何：列印 Windows Form 中的圖形](../../../docs/framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：列印 Windows Form 中的多頁文字檔](../../../docs/framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
-|深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)|
+|列印表單的內容|[如何：列印 Windows Form 中的圖形](./advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [如何：列印 Windows Form 中的多頁文字檔](./advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|
+|深入了解 Windows Form 安全性|[Windows Forms 中的安全性概觀](security-in-windows-forms-overview.md)|
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
-- [建立新的 Windows Forms](../../../docs/framework/winforms/creating-a-new-windows-form.md)
-- [ToolStrip 控制項概觀](../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [DataGridView 控制項概觀](../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
-- [BindingSource 元件概觀](../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
-- [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
+- [建立新的 Windows Forms](creating-a-new-windows-form.md)
+- [ToolStrip 控制項概觀](./controls/toolstrip-control-overview-windows-forms.md)
+- [DataGridView 控制項概觀](./controls/datagridview-control-overview-windows-forms.md)
+- [BindingSource 元件概觀](./controls/bindingsource-component-overview.md)
+- [應用程式設定概觀](./advanced/application-settings-overview.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)

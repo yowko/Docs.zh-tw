@@ -2,25 +2,25 @@
 title: 使用 WorkflowIdentity 與版本控制
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: ad1d3385801b451795c6be321094851339a55f81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64abab815c523abce88b00515239155499de9c4c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373422"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708167"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>使用 WorkflowIdentity 與版本控制
-<xref:System.Activities.WorkflowIdentity> 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和 <xref:System.Version> 與工作流程定義建立關聯，並為這項資訊與持續性的工作流程執行個體建立關聯。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 本主題提供使用 <xref:System.Activities.WorkflowIdentity> 搭配 <xref:System.Activities.WorkflowApplication> 裝載的概觀。 並排顯示執行工作流程服務中的工作流程定義的資訊，請參閱[WorkflowServiceHost 中的並存版本控制](../../../docs/framework/wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 如需動態更新的資訊，請參閱[動態更新](../../../docs/framework/windows-workflow-foundation/dynamic-update.md)。  
+<xref:System.Activities.WorkflowIdentity> 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和 <xref:System.Version> 與工作流程定義建立關聯，並為這項資訊與持續性的工作流程執行個體建立關聯。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 本主題提供使用 <xref:System.Activities.WorkflowIdentity> 搭配 <xref:System.Activities.WorkflowApplication> 裝載的概觀。 並排顯示執行工作流程服務中的工作流程定義的資訊，請參閱[WorkflowServiceHost 中的並存版本控制](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)。 如需動態更新的資訊，請參閱[動態更新](dynamic-update.md)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
--   [使用 WorkflowIdentity](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+-   [使用 WorkflowIdentity](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [使用 WorkflowIdentity 的並排顯示執行](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#SxS)  
+    -   [使用 WorkflowIdentity 的並排顯示執行](using-workflowidentity-and-versioning.md#SxS)  
   
--   [升級.NET Framework 4 持續性資料庫，以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+-   [升級.NET Framework 4 持續性資料庫，以支援工作流程版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [若要升級資料庫結構描述](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#ToUpgrade)  
+    -   [若要升級資料庫結構描述](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> 使用 WorkflowIdentity  
  若要使用 <xref:System.Activities.WorkflowIdentity>，請建立執行個體、加以設定，並將其與 <xref:System.Activities.WorkflowApplication> 執行個體建立關聯。 <xref:System.Activities.WorkflowIdentity> 執行個體包含三項識別資訊。 <xref:System.Activities.WorkflowIdentity.Name%2A> 和 <xref:System.Activities.WorkflowIdentity.Version%2A> 包含名稱及 <xref:System.Version>，兩者都是必要項，而 <xref:System.Activities.WorkflowIdentity.Package%2A> 則是選用項，可用來指定包含資訊 (例如組件名稱或其他所需資訊) 的其他字串。 如果 <xref:System.Activities.WorkflowIdentity> 的三個屬性中有任何屬性與另一個 <xref:System.Activities.WorkflowIdentity> 的不同，則其為唯一識別。  
@@ -83,7 +83,7 @@ wfApp.Load(instanceId);
  為了擷取持續性工作流程執行個體的 <xref:System.Activities.WorkflowIdentity>，會使用 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 方法。 <xref:System.Activities.WorkflowApplication.GetInstance%2A> 方法會採用持續性工作流程執行個體的 <xref:System.Activities.WorkflowApplication.Id%2A> 及包含持續性執行個體的 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore>，並且傳回 <xref:System.Activities.WorkflowApplicationInstance>。 <xref:System.Activities.WorkflowApplicationInstance> 包含持續性工作流程執行個體的相關資訊，包括與其相關聯的 <xref:System.Activities.WorkflowIdentity>。 載入及繼續工作流程執行個體時，主機可以使用此相關聯的 <xref:System.Activities.WorkflowIdentity> 來提供正確的工作流程定義。  
   
 > [!NOTE]
->  Null <xref:System.Activities.WorkflowIdentity> 為有效，而且可讓主機用來將沒有相關聯 <xref:System.Activities.WorkflowIdentity> 的持續性執行個體，對應至適當的工作流程定義。 當工作流程應用程式一開始未以工作流程版本控制撰寫時，或是當應用程式從 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]升級時，就會發生這種案例。 如需詳細資訊，請參閱 <<c0> [ 升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
+>  Null <xref:System.Activities.WorkflowIdentity> 為有效，而且可讓主機用來將沒有相關聯 <xref:System.Activities.WorkflowIdentity> 的持續性執行個體，對應至適當的工作流程定義。 當工作流程應用程式一開始未以工作流程版本控制撰寫時，或是當應用程式從 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]升級時，就會發生這種案例。 如需詳細資訊，請參閱 <<c0> [ 升級.NET Framework 4 持續性資料庫以支援工作流程版本控制](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)。  
   
  在下列範例中`Dictionary<WorkflowIdentity, Activity>`用來建立關聯<xref:System.Activities.WorkflowIdentity>執行個體，其比對的工作流程定義和工作流程會使用啟動`MortgageWorkflow`相關聯的工作流程定義`identityV1` <xref:System.Activities.WorkflowIdentity>.  
   

@@ -11,16 +11,17 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609586"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707543"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>HOW TO：觸發程序的工具列按鈕的功能表事件
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
+>  
+  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
  如果您的 Windows Form 功能<xref:System.Windows.Forms.ToolBar>控制項工具列按鈕，您會想要知道的按鈕使用者按。  
   
@@ -136,6 +137,6 @@ ms.locfileid: "54609586"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ToolBar>
-- [如何：將按鈕加入至 ToolBar 控制項](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [如何：定義工具列按鈕的圖示](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [ToolBar 控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [如何：將按鈕加入至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)
+- [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
+- [ToolBar 控制項](toolbar-control-windows-forms.md)

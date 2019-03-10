@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 0f8c2ef747a160adc292a3330a4478b7a8c432d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562306"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702253"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>HOW TO：設定所顯示的映像的 Windows Form 控制項使用設計工具
 數個 Windows Form 控制項來顯示影像。 映像可以釐清的控制項，例如磁碟圖示 按鈕，表示目的圖示**儲存**命令。 或者，圖示可以是您想要的外觀，讓控制項的背景影像。  
@@ -26,7 +26,7 @@ ms.locfileid: "54562306"
   
 1.  在 **屬性**視窗中，選取**映像**或是**BackgroundImage**屬性的控制項，然後按一下省略符號按鈕 （  
   
-     ![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")  
   
      ) 來顯示**選取資源** 對話方塊。  
   
@@ -36,4 +36,4 @@ ms.locfileid: "54562306"
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

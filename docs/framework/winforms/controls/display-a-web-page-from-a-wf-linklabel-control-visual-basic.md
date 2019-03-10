@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 05b127099b85188b0df2f1f7821ceb147cc41e1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698956"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705224"
 ---
 # <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>HOW TO：顯示網頁，自 Windows Forms LinkLabel 控制項 (Visual Basic)
 此範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。  
@@ -51,4 +51,4 @@ End Sub
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.LinkLabel>
-- [LinkLabel 控制項](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel 控制項](linklabel-control-windows-forms.md)

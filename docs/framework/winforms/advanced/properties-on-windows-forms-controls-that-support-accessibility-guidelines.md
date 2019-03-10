@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, accessibility properties of controls
 - accessibility [Windows Forms], Windows Forms control properties
 ms.assetid: ad3567a6-313b-4708-9e15-f487a831f049
-ms.openlocfilehash: b731f277620925a333c8d9eba64c8900674327da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eee7499373809538355227633ab9a1a66aedb9ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552202"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716396"
 ---
 # <a name="properties-on-windows-forms-controls-that-support-accessibility-guidelines"></a>支援可及性方針的 Windows Form 控制項屬性
 標準 Windows forms 工具箱控制項都支援許多協助工具指導方針，包括鍵盤焦點的顯示，而且已公開螢幕項目。  
@@ -31,4 +31,4 @@ ms.locfileid: "54552202"
 |BackgroundImage|此屬性留讓文字更容易閱讀。|  
   
 ## <a name="see-also"></a>另請參閱
-- [逐步解說：建立可存取的 Windows 架構應用程式](../../../../docs/framework/winforms/advanced/walkthrough-creating-an-accessible-windows-based-application.md)
+- [逐步解說：建立可存取的 Windows 架構應用程式](walkthrough-creating-an-accessible-windows-based-application.md)

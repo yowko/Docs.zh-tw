@@ -8,25 +8,25 @@ helpviewer_keywords:
 - GDI+, Windows Forms
 - graphics
 ms.assetid: 94084509-2c6f-477d-923b-d25d37a36b1c
-ms.openlocfilehash: 197f9dfcc14260017911b37dd6e6b7ce49e44ed4
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: fce756fc9c6a22372bd849c8bd60f0e416f3031e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33521752"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714319"
 ---
 # <a name="graphics-overview-windows-forms"></a>圖形概觀 (Windows Form)
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是可讓程式設計人員撰寫的應用程式與裝置無關的圖形裝置介面。 服務的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]公開會透過一組 managed 類別。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 是可讓程式設計人員撰寫與裝置無關的應用程式的圖形裝置介面。 服務[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]透過一組受管理的類別公開。  
   
 ## <a name="in-this-section"></a>本節內容  
- [圖形概觀](../../../../docs/framework/winforms/advanced/overview-of-graphics.md)  
- 提供一般簡介[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ [圖形概觀](overview-of-graphics.md)  
+ 提供的一般簡介[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   
- [圖形服務的三個分類](../../../../docs/framework/winforms/advanced/three-categories-of-graphics-services.md)  
- 描述三個類別構成的程式設計[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ [圖形服務的三個分類](three-categories-of-graphics-services.md)  
+ 描述構成使用程式設計的三個類別目錄[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   
- [圖形介面的結構](../../../../docs/framework/winforms/advanced/structure-of-the-graphics-interface.md)  
- 描述 managed 的類別介面[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
+ [圖形介面的結構](structure-of-the-graphics-interface.md)  
+ 描述 managed 的類別介面的[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Drawing>  
@@ -42,7 +42,7 @@ ms.locfileid: "33521752"
  提供進階 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 印刷樣式功能。  
   
  <xref:System.Drawing.Printing>  
- 提供與列印相關服務。  
+ 提供列印相關服務。  
   
  <xref:System.Windows.Forms.TextRenderer>  
- 提供[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]繪製及測量功能的文字。
+ 提供[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]文字繪圖中並正在測量功能。

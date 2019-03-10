@@ -13,12 +13,12 @@ helpviewer_keywords:
 - INotifyPropertyChanged interface [Windows Forms], using with BindingSource
 - BindingSource component [Windows Forms], examples
 ms.assetid: 7fa2cf51-c09f-4375-adf0-e36c5617f099
-ms.openlocfilehash: b3ac3982905bf3d84c9cc570d901d95ca14cc92e
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: b637d69556cd96b0cc2ec427527c511d1db2f326
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664064"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707244"
 ---
 # <a name="how-to-raise-change-notifications-using-a-bindingsource-and-the-inotifypropertychanged-interface"></a>HOW TO：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更通知
 當資料來源中包含的類型實作 <xref:System.ComponentModel.INotifyPropertyChanged> 介面，並且在屬性值變更時引發 <xref:System.ComponentModel.INotifyPropertyChanged.PropertyChanged> 事件，<xref:System.Windows.Forms.BindingSource> 元件將會自動偵測資料來源中的變更。 這很有用，因為當資料來源值變更時，繫結至 <xref:System.Windows.Forms.BindingSource> 的控制項就會自動更新。  
@@ -31,8 +31,8 @@ ms.locfileid: "56664064"
   
  如果您使用 `CallerMemberName` 屬性 (attribute)，呼叫 `NotifyPropertyChanged` 方法時，不需要指定屬性 (property) 名稱做為字串引數。 如需詳細資訊，請參閱 <<c0> [ 呼叫端資訊 (C#)](../../../csharp/programming-guide/concepts/caller-information.md)或是[呼叫端資訊 (Visual Basic)](../../../visual-basic/programming-guide/concepts/caller-information.md)。</c0>  
   
- [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
- [!code-vb[System.ComponentModel.IPropertyChangeExample#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  
+ [!code-csharp[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/CS/Form1.cs#1)]
+ [!code-vb[System.ComponentModel.IPropertyChangeExample#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.IPropertyChangeExample/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
@@ -43,5 +43,5 @@ ms.locfileid: "56664064"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ComponentModel.INotifyPropertyChanged>
-- [BindingSource 元件](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [如何：使用 BindingSource ResetItem 方法引發變更通知](../../../../docs/framework/winforms/controls/how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)
+- [BindingSource 元件](bindingsource-component.md)
+- [如何：使用 BindingSource ResetItem 方法引發變更通知](how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md)

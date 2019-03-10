@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: 2e361b5af5c360869ef51650bb6926a24d1f560d
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304020"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708427"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 **Windows Form 設計工具**提供您許多版面配置工具，來完成這項作業。 三個最重要的是<xref:System.Windows.Forms.Control.Margin%2A>， <xref:System.Windows.Forms.Control.Padding%2A>，和<xref:System.Windows.Forms.Control.AutoSize%2A>都存在於所有 Windows Form 控制項的屬性。  
@@ -32,7 +32,7 @@ ms.locfileid: "56304020"
   
  下圖顯示控制項上的 <xref:System.Windows.Forms.Control.Padding%2A> 和 <xref:System.Windows.Forms.Control.Margin%2A> 屬性。  
   
- ![邊框距離及邊界 Windows Forms 控制項](../../../../docs/framework/winforms/controls/media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
+ ![邊框距離及邊界 Windows Forms 控制項](./media/vs-winformpadmargin.gif "VS_WinFormPadMargin")  
   
  <xref:System.Windows.Forms.Control.AutoSize%2A>屬性會告知自動本身自行調整大小，其內容的控制項。 它不會調整大小必須小於其原始值本身<xref:System.Windows.Forms.Control.Size%2A>屬性，然後它會負責處理的值及其<xref:System.Windows.Forms.Control.Padding%2A>屬性。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "56304020"
   
 2.  選取其中一個<xref:System.Windows.Forms.Button>控制，並移動接近另一個，直到幾乎碰觸。  
   
-     觀察出現在它們之間的對齊線。 這個距離很的兩個控制項的總和<xref:System.Windows.Forms.Control.Margin%2A>值。 您要移動的控制項會貼齊至這個距離。 如需詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
+     觀察出現在它們之間的對齊線。 這個距離很的兩個控制項的總和<xref:System.Windows.Forms.Control.Margin%2A>值。 您要移動的控制項會貼齊至這個距離。 如需詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
 3.  變更<xref:System.Windows.Forms.Control.Margin%2A>屬性的其中一個方法是展開的控制項<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性為 20。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "56304020"
 ## <a name="automatically-sizing-your-controls"></a>自動調整控制項大小  
  在某些應用程式，控制項的大小將不會相同執行階段是在設計階段。 文字<xref:System.Windows.Forms.Button>控制項，例如，可能會從資料庫中，並會事先知道它的長度。  
   
- 當<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設定為`true`，控制項將其內容調整本身。 如需詳細資訊，請參閱 < [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。  
+ 當<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設定為`true`，控制項將其內容調整本身。 如需詳細資訊，請參閱 < [AutoSize 屬性概觀](autosize-property-overview.md)。  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>若要排列使用 AutoSize 屬性在表單上的控制項  
   
@@ -179,9 +179,9 @@ ms.locfileid: "56304020"
 ## <a name="next-steps"></a>後續步驟  
  有許多其他版面配置功能，用來排列 Windows Forms 應用程式中的控制項。 以下是一些您可以嘗試的組合：  
   
--   建置表單，使用<xref:System.Windows.Forms.TableLayoutPanel>控制項。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。 請嘗試變更的值<xref:System.Windows.Forms.TableLayoutPanel>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性，以及<xref:System.Windows.Forms.Control.Margin%2A>上它的子控制項的屬性。  
+-   建置表單，使用<xref:System.Windows.Forms.TableLayoutPanel>控制項。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)。 請嘗試變更的值<xref:System.Windows.Forms.TableLayoutPanel>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性，以及<xref:System.Windows.Forms.Control.Margin%2A>上它的子控制項的屬性。  
   
--   請嘗試相同的實驗使用<xref:System.Windows.Forms.FlowLayoutPanel>控制項。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
+-   請嘗試相同的實驗使用<xref:System.Windows.Forms.FlowLayoutPanel>控制項。 如需詳細資訊，請參閱[逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)。  
   
 -   實驗中的子控制項的停駐<xref:System.Windows.Forms.Panel>控制項。 <xref:System.Windows.Forms.Control.Padding%2A>值的較通用實現<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>屬性，而且可以滿足您自己，是藉由將子控制項置於<xref:System.Windows.Forms.Panel>控制項，並設定子控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Fill>. 設定<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性，以不同的值和附註的效果。  
   
@@ -190,7 +190,7 @@ ms.locfileid: "56304020"
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
-- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [逐步解說：使用對齊線的 Windows Form 上排列控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [AutoSize 屬性概觀](autosize-property-overview.md)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

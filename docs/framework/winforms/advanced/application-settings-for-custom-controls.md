@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: 96145a6205c3e80b23f3c69750f7faaec04aabba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526739"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714342"
 ---
 # <a name="application-settings-for-custom-controls"></a>自訂控制項的應用程式設定
 您必須完成某些工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。  
@@ -26,7 +26,7 @@ ms.locfileid: "54526739"
   
 2.  已建立並放置在表單上，例如在表單的控制項之後，請建立此自訂設定類別<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
- 如需建立自訂設定類別的指示，請參閱[How to:建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 如需建立自訂設定類別的指示，請參閱[How to:建立應用程式設定](how-to-create-application-settings.md)。  
   
 ## <a name="settings-keys-and-shared-settings"></a>設定索引鍵和共用的設定  
  有些控制項可用於多次相同的格式。 大部分的情況下，您會想要保存其自己的個別設定這些控制項。 具有<xref:System.Configuration.IPersistComponentSettings.SettingsKey%2A>屬性上的<xref:System.Configuration.IPersistComponentSettings>，您可以提供用來釐清多個版本的表單上控制項的唯一字串。  
@@ -48,4 +48,4 @@ ms.locfileid: "54526739"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [應用程式設定架構](application-settings-architecture.md)

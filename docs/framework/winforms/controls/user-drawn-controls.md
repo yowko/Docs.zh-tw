@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: e9eab78695db128c0538914c5364aaa54c135403
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509957"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709669"
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
 .NET Framework 會提供您能夠輕鬆地開發自己的控制項。 您可以建立使用者控制項，也就是一組標準的控制項繫結在一起的程式碼，或您可以設計自己的控制項所打造的註冊。 您甚至可以使用繼承建立繼承自現有控制項的控制項，並將新增至其固有的功能。 任何方法使用時，.NET Framework 提供的功能，以繪製自訂的圖形化介面，以您所建立的任何控制項。  
@@ -25,7 +25,7 @@ ms.locfileid: "54509957"
   
 -   <xref:System.Drawing.Graphics> 物件-封裝數個圖形導向物件和方法，可提供繪製控制項所需的功能。  
   
- 如需詳細資訊<xref:System.Drawing.Graphics>物件，以及如何使用它，請參閱[How to:建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)。  
+ 如需詳細資訊<xref:System.Drawing.Graphics>物件，以及如何使用它，請參閱[How to:建立繪圖的圖形物件](../advanced/how-to-create-graphics-objects-for-drawing.md)。  
   
  <xref:System.Windows.Forms.Control.OnPaint%2A>繪製或在畫面上，重新整理控制項時，會引發事件和<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件都代表在其中繪製，就會進行的矩形。 如果要重新整理，需要整個控制項<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>將代表整個控制項的大小。 如果只有部分控制項需要重新整理，不過，<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>物件將代表需要重新繪製的區域。 這種情況的範例就是當控制項已由另一個控制項或表單的使用者介面中此部分遮蔽。  
   
@@ -81,6 +81,6 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [如何：建立繪圖的圖形物件](../../../../docs/framework/winforms/advanced/how-to-create-graphics-objects-for-drawing.md)
-- [組成控制項](../../../../docs/framework/winforms/controls/constituent-controls.md)
-- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [如何：建立繪圖的圖形物件](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [組成控制項](constituent-controls.md)
+- [各種自訂控制項](varieties-of-custom-controls.md)

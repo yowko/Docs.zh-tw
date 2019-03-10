@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c2870e79d82d92bd0c853e6e042add3b4243f888
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 750bddce508a72c6aaac659feac90b7c17e53137
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835482"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708401"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援
 
@@ -41,7 +41,7 @@ ms.locfileid: "56835482"
 
     -   僅包裝作業系統 API 的功能也會移除，因為 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 很容易就可從 Managed 程式碼呼叫。
 
-     若要深入了解[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，請參閱 <<c2> [ 適用於 Windows 市集應用程式的概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要深入了解 API 選擇程序，請參閱[適用於 Metro 樣式應用程式的.NET](https://blogs.msdn.microsoft.com/dotnet/2012/04/17/net-for-metro-style-apps/) .NET 部落格中的項目。
+     若要深入了解[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]，請參閱 <<c2> [ 適用於 Windows 市集應用程式的概觀](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140))。 若要深入了解 API 選擇程序，請參閱[適用於 Metro 樣式應用程式的.NET](https://devblogs.microsoft.com/dotnet/net-for-metro-style-apps/) .NET 部落格中的項目。
 
 -   [Windows 執行階段](/uwp/api/)提供使用者介面項目，用於建立[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式，並提供作業系統功能的存取權。 如同 .NET Framework，[!INCLUDE[wrt](../../../includes/wrt-md.md)] 的中繼資料可讓 C# 和 Visual Basic 編譯器使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，方式就如同使用 .NET Framework 類別庫一樣。 .NET Framework 可讓您更輕鬆地使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)]，方法是隱藏一些差異︰
 

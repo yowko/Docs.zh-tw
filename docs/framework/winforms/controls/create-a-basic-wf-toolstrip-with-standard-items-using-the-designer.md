@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: f36df117ee7bb7bcdb79ccb134c914288ec6903d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c93db7b333f231bc328b3a16d51cfb5243ba098
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602672"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714030"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>HOW TO：建立具有標準項目的使用設計工具的基本 Windows Form
 下列程序示範如何建立<xref:System.Windows.Forms.ToolStrip>並新增七個<xref:System.Windows.Forms.ToolStripButton>代表一般工作的控制項。  
@@ -30,7 +30,7 @@ ms.locfileid: "54602672"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ToolStrip>
-- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)
-- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
+- [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 控制項](toolstrip-control-windows-forms.md)
+- [ToolStrip 控制項架構](toolstrip-control-architecture.md)
+- [ToolStrip 技術摘要](toolstrip-technology-summary.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], about ListView control
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
-ms.openlocfilehash: 8ceed741e72dae46f7f791b7564b7f5c38f82bc2
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: d62c0081c128693861a9fd21360f09f65d485a79
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664623"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709771"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的項目清單。 若要建立像 Windows 檔案總管右窗格的使用者介面，您可以使用清單檢視。 控制項有四種檢視模式：LargeIcon、 SmallIcon、 清單和詳細資料。  
@@ -21,9 +21,9 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
 ## <a name="what-you-can-do-with-the-listview-control"></a>您可以執行與 ListView 控制項  
   
 > [!NOTE]
->  額外的檢視模式中，圖格，才可使用 Windows XP 和 Windows Server 2003 作業系統上。 如需詳細資訊，請參閱[如何：啟用並排顯示檢視中的 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
+>  額外的檢視模式中，圖格，才可使用 Windows XP 和 Windows Server 2003 作業系統上。 如需詳細資訊，請參閱[如何：啟用並排顯示檢視中的 Windows Form ListView 控制項](how-to-enable-tile-view-in-a-windows-forms-listview-control.md)。  
   
- LargeIcon 模式會顯示項目文字旁的大圖示如果控制項是夠大，項目會出現在多個資料行。 不同之處在於它會顯示小圖示的 [smallicon] 模式都是相同的。 清單模式會顯示小圖示，但一律為單一資料行。 詳細資料模式會顯示多個資料行中的項目。 如需詳細資訊，請參閱[如何：資料行以 Windows Form ListView 控制項中加入](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)。 檢視模式由<xref:System.Windows.Forms.ListView.View%2A>屬性。 所有的檢視模式來顯示從影像清單的影像。 如需詳細資訊，請參閱[如何：顯示 Windows Form ListView 控制項的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)。  
+ LargeIcon 模式會顯示項目文字旁的大圖示如果控制項是夠大，項目會出現在多個資料行。 不同之處在於它會顯示小圖示的 [smallicon] 模式都是相同的。 清單模式會顯示小圖示，但一律為單一資料行。 詳細資料模式會顯示多個資料行中的項目。 如需詳細資訊，請參閱[如何：資料行以 Windows Form ListView 控制項中加入](how-to-add-columns-to-the-windows-forms-listview-control.md)。 檢視模式由<xref:System.Windows.Forms.ListView.View%2A>屬性。 所有的檢視模式來顯示從影像清單的影像。 如需詳細資訊，請參閱[如何：顯示 Windows Form ListView 控制項的圖示](how-to-display-icons-for-the-windows-forms-listview-control.md)。  
   
  下表列出一些<xref:System.Windows.Forms.ListView>成員和檢視中有效。  
   
@@ -49,14 +49,14 @@ Windows Form <xref:System.Windows.Forms.ListView> 控制項顯示具有圖示的
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ListView>
-- [ListView 控制項](../../../../docs/framework/winforms/controls/listview-control-windows-forms.md)
-- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [如何：資料行加入 Windows Form ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [如何：Windows Form ListView 控制項中顯示的圖示](../../../../docs/framework/winforms/controls/how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [如何：使用 Windows Forms ListView 控制項的資料行顯示子項目](../../../../docs/framework/winforms/controls/how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [如何：在 Windows Form ListView 控制項中選取的項目](../../../../docs/framework/winforms/controls/how-to-select-an-item-in-the-windows-forms-listview-control.md)
-- [如何：在 Windows Form ListView 控制項中的群組項目](../../../../docs/framework/winforms/controls/how-to-group-items-in-a-windows-forms-listview-control.md)
-- [如何：在 Windows Form ListView 控制項中顯示插入標記](../../../../docs/framework/winforms/controls/how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
-- [如何：將搜尋功能加入至 ListView 控制項](../../../../docs/framework/winforms/controls/how-to-add-search-capabilities-to-a-listview-control.md)
-- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](../../../../docs/framework/winforms/controls/add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [如何：利用 Windows Form 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)
+- [ListView 控制項](listview-control-windows-forms.md)
+- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [如何：資料行加入 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [如何：Windows Form ListView 控制項中顯示的圖示](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [如何：使用 Windows Forms ListView 控制項的資料行顯示子項目](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [如何：在 Windows Form ListView 控制項中選取的項目](how-to-select-an-item-in-the-windows-forms-listview-control.md)
+- [如何：在 Windows Form ListView 控制項中的群組項目](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [如何：在 Windows Form ListView 控制項中顯示插入標記](how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md)
+- [如何：將搜尋功能加入至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)
+- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [如何：利用 Windows Form 建立多窗格使用者介面](how-to-create-a-multipane-user-interface-with-windows-forms.md)

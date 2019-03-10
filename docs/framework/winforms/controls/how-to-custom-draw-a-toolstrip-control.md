@@ -16,15 +16,16 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 6df1f2bf3190fb1453930c0553266cc27234f46d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701426"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705745"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>HOW TO：自訂繪製 ToolStrip 控制項
-<xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
+
+  <xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
   
@@ -137,6 +138,6 @@ ms.locfileid: "54701426"
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
-- [使用內建主控描繪支援的控制項](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
-- [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
-- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [使用內建主控描繪支援的控制項](controls-with-built-in-owner-drawing-support.md)
+- [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

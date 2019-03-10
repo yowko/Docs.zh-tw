@@ -10,12 +10,12 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 118785e14dddcd5ff19aa8c143f9e8df05d8980b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675176"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705872"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>HOW TO：在 Windows Form 上設定定位順序
 定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。 每個表單有它自己的定位順序。 根據預設，定位順序是您可以在其中建立控制項的順序相同。 定位順序編號從 0 開始。  
@@ -32,7 +32,7 @@ ms.locfileid: "54675176"
 2.  按一下控制項以循序方式建立您想要的索引標籤順序。  
   
     > [!NOTE]
-    >  在定位順序中的控制項位置可以設定為任何值，大於或等於 0。 重複項目發生時，會評估兩個控制項疊置順序，並在最上層控制項定位為第一個。 （圖層順序是沿著表單的 z 軸 [深度] 表單上控制項的視覺分層。 疊置順序會決定哪些控制項其他控制項的前面）。如需有關疊置順序的詳細資訊，請參閱[Windows Forms 上的分層物件](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
+    >  在定位順序中的控制項位置可以設定為任何值，大於或等於 0。 重複項目發生時，會評估兩個控制項疊置順序，並在最上層控制項定位為第一個。 （圖層順序是沿著表單的 z 軸 [深度] 表單上控制項的視覺分層。 疊置順序會決定哪些控制項其他控制項的前面）。如需有關疊置順序的詳細資訊，請參閱[Windows Forms 上的分層物件](how-to-layer-objects-on-windows-forms.md)。  
   
 3.  當您完成時，按一下**定位順序**上**檢視**以離開定位順序模式的功能表。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "54675176"
      控制項<xref:System.Windows.Forms.Control.TabStop%2A>屬性已設定為`false`仍保持在定位順序中中的位置，即使當您使用 TAB 鍵循環的控制項時，會略過控制項。  
   
     > [!NOTE]
-    >  選項按鈕群組有一個索引標籤停止在執行階段。 [選取] 按鈕 (也就是具有按鈕其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性會自動設定為`true`，而其他按鈕有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性設定為`false`。 如需有關分組<xref:System.Windows.Forms.RadioButton>控制項，請參閱[當成一組群組 Windows Form RadioButton 控制項](../../../../docs/framework/winforms/controls/how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
+    >  選項按鈕群組有一個索引標籤停止在執行階段。 [選取] 按鈕 (也就是具有按鈕其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性會自動設定為`true`，而其他按鈕有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性設定為`false`。 如需有關分組<xref:System.Windows.Forms.RadioButton>控制項，請參閱[當成一組群組 Windows Form RadioButton 控制項](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
-- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

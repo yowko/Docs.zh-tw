@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: fa8bdf17f7dc7f6d09059e54b208acaec6207e48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021cb448e5dbcb3ea1405d5cedaed1ae6d4f1b53
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604778"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709779"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>HOW TO：修改的大小或位置的圖片，在執行階段 (Windows Form)
 如果您使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項在表單中，您可以設定<xref:System.Windows.Forms.PictureBox.SizeMode%2A>上它的屬性：  
@@ -84,7 +84,7 @@ ms.locfileid: "54604778"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.PictureBox>
-- [如何：使用設計工具載入圖片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [如何：在執行階段設定圖案](../../../../docs/framework/winforms/controls/how-to-set-pictures-at-run-time-windows-forms.md)
-- [PictureBox 控制項](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [如何：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [PictureBox 控制項概觀](picturebox-control-overview-windows-forms.md)
+- [如何：在執行階段設定圖案](how-to-set-pictures-at-run-time-windows-forms.md)
+- [PictureBox 控制項](picturebox-control-windows-forms.md)

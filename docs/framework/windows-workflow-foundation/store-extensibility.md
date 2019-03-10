@@ -2,12 +2,12 @@
 title: 存放區擴充性
 ms.date: 03/30/2017
 ms.assetid: 7c3f4a46-4bac-4138-ae6a-a7c7ee0d28f5
-ms.openlocfilehash: 0c6f67469db04705a9ac7827ef301ff226ea3bdb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 46c1ea40925a5c79180171da9a705d7e6b7c8b89
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465723"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703256"
 ---
 # <a name="store-extensibility"></a>存放區擴充性
 
@@ -36,7 +36,7 @@ ms.locfileid: "57465723"
     application.Extensions.Add(documentStatusExtension);
     ```
 
-     如需有關加入自訂持續性參與者的詳細資訊，請參閱 <<c0> [ 持續性參與者](../../../docs/framework/windows-workflow-foundation/persistence-participants.md)範例。
+     如需有關加入自訂持續性參與者的詳細資訊，請參閱 <<c0> [ 持續性參與者](persistence-participants.md)範例。
 
 3. DP 應用程式中的自訂活動填入中的各種狀態欄位**Execute**方法。
 
