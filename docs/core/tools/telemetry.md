@@ -4,16 +4,16 @@ description: 探索收集使用量資訊以進行分析的 .NET Core SDK 遙測�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8b0b546d70eab837c2e075f839990870ae9ea6b1
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168841"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718034"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 遙測
 
-[.NET Core SDK](index.md) 包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)。 .NET 小組必須了解使用者如何使用這些工具，以便進行改善。 如需詳細資訊，請參閱 [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)。
+[.NET Core SDK](index.md) 包含收集使用資訊的[遙測功能](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry)。 .NET 小組必須了解使用者如何使用這些工具，以便進行改善。 如需詳細資訊，請參閱 [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)。
 
 所收集的資料是匿名的，而且將會以彙總形式發行，供 Microsoft 和社群工程師根據 [Creative Commons Attribution 授權](https://creativecommons.org/licenses/by/4.0/)使用。
 
@@ -130,6 +130,6 @@ Read more about .NET Core CLI Tools telemetry: https://aka.ms/dotnet-cli-telemet
 
 ## <a name="see-also"></a>另請參閱
 
-- [What we've learned from .NET Core SDK Telemetry](https://blogs.msdn.microsoft.com/dotnet/2017/07/21/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)
+- [What we've learned from .NET Core SDK Telemetry](https://devblogs.microsoft.com/dotnet/what-weve-learned-from-net-core-sdk-telemetry/) (我們從 .NET Core SDK 遙測學到什麼)
 - [Telemetry reference source (dotnet/cli repo)](https://github.com/dotnet/cli/tree/master/src/dotnet/Telemetry) (遙測參考來源 (dotnet/cli 存放庫)
 - [.NET Core SDK Usage Data](https://github.com/dotnet/core/blob/master/release-notes/cli-usage-data.md) (.NET Core SDK 使用方式資料)

@@ -4,12 +4,12 @@ description: 了解 Windows 相容性套件，以及如何使用它將現有的 
 author: terrajobst
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 09c5533dbc46d16585b7f3cbfd2a3a70819ceb75
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c4fd888e0fbce86ab317f18fd77374af5d3ca244
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903756"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717891"
 ---
 # <a name="use-the-windows-compatibility-pack-to-port-code-to-net-core"></a>使用 Windows 相容性套件將程式碼移植到 .NET Core
 
@@ -53,7 +53,7 @@ ms.locfileid: "55903756"
 
 3. 如果您想要留在 Windows，即已完成所有準備。
 
-4. 如果您想要在 Linux 或 macOS 上執行 .NET Core 應用程式或 .NET Standard 程式庫，請使用 [API 分析器](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/)尋找無法跨平台運作的 API 使用方式。
+4. 如果您想要在 Linux 或 macOS 上執行 .NET Core 應用程式或 .NET Standard 程式庫，請使用 [API 分析器](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/)尋找無法跨平台運作的 API 使用方式。
 
 5. 移除這些 API 的使用方式，以跨平台的替代方案取代，或使用平台檢查保護它們，例如：
 

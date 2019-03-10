@@ -4,16 +4,16 @@ description: 撰寫以 project.json 為基礎的程式庫時，請降低套件�
 author: cartermp
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 932344ff40dd32793727fbce7bc0d6cd02592f8b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 9d4f9d7f6e7a736b7d07062f3cd31d6f45176cb1
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168269"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674961"
 ---
 # <a name="reducing-package-dependencies-with-projectjson"></a>減少與 project.json 的封裝相依性
 
-本文涵蓋撰寫 `project.json` 程式庫時，您需要了解的降低封裝相依性的內容。 在本文的最後，您會了解如何撰寫程式庫，令它只使用需要的相依性。 
+本文涵蓋撰寫 `project.json` 程式庫時，您需要了解的降低封裝相依性的內容。 在本文的最後，您會了解如何撰寫程式庫，令它只使用需要的相依性。
 
 ## <a name="why-its-important"></a>為何重要
 
@@ -27,18 +27,17 @@ ms.locfileid: "53168269"
 
 1. 參考您 `project.json` 的 `dependencies` 區段的 `NETStandard.Library` 版本 `1.6.0`。
 2. 從命令列使用 `dotnet restore` ([請參閱附註](#dotnet-restore-note)) 還原套件。
-3. 檢查 `project.lock.json` 檔案，找出 `NETSTandard.Library` 區段。  它在靠近檔案開頭處。
+3. 檢查 `project.lock.json` 檔案，找出 `NETStandard.Library` 區段。  它在靠近檔案開頭處。
 4. 複製 `dependencies` 下列出的所有封裝。
 5. 移除 `.NETStandard.Library` 參考，並以複製的封裝取而代之。
 6. 移除您不需要的封裝參考。
-
 
 您可以下列方法之一，找出不需要的封裝︰
 
 1. 試驗與錯誤。  這牽涉到移除封裝、還原、查看程式庫是否仍在編譯，以及重複此程序。
 2. 使用諸如 [ILSpy](https://github.com/icsharpcode/ILSpy#ilspy-------) 或 [.NET 反射程式](https://www.red-gate.com/products/dotnet-development/reflector)等工具預覽參考，查看程式碼實際使用的參考。  接著移除與所用類型不對應的封裝。
 
-## <a name="example"></a>範例 
+## <a name="example"></a>範例
 
 假設您撰寫的程式庫提供了泛型集合類型的額外功能。  這類程式庫需要依賴如 `System.Collections` 的封裝，但可能完全不依賴如 `System.Net.Http` 的封裝。  如此，將封裝相依性修剪至此程式庫所需就很好！
 
@@ -56,7 +55,7 @@ ms.locfileid: "53168269"
 }
 ```
 
-接下來，使用 `dotnet restore` ([請參閱附註](#dotnet-restore-note)) 還原套件、檢查 `project.lock.json` 檔案，找出所有還原的 `NETSTandard.Library` 套件。
+接下來，使用 `dotnet restore` ([請參閱附註](#dotnet-restore-note)) 還原套件、檢查 `project.lock.json` 檔案，找出所有還原的 `NETStandard.Library` 套件。
 
 以下是以 `netstandard1.0` 為目標時，`project.lock.json` 檔案中相關區段的樣貌：
 

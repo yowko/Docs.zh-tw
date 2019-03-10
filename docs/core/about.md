@@ -3,12 +3,12 @@ title: 關於 .NET Core
 description: 了解 .NET Core。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: c9247a33d59571c10dc59e91968c2b1c60006a50
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 6c76d5e80cba6947eb5a91fb31fc3e511970d165
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058551"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675962"
 ---
 # <a name="about-net-core"></a>關於 .NET Core
 
@@ -34,7 +34,7 @@ C#、Visual Basic 及 F# 語言可用於撰寫 .NET Core 應用程式和程式�
 - 集合，例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 及 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType>。
 - 公用程式類型，例如 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 及 <xref:System.IO.FileStream?displayProperty=nameWithType>。
 - 資料類型，例如 <xref:System.Data.DataSet?displayProperty=nameWithType> 與 [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) \(英文\)。
-- 高效能類型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 與 [Pipelines](https://blogs.msdn.microsoft.com/dotnet/2018/07/09/system-io-pipelines-high-performance-io-in-net/)\(英文\)。
+- 高效能類型，例如 <xref:System.Numerics.Vector?displayProperty=nameWithType> 與 [Pipelines](https://devblogs.microsoft.com/dotnet/system-io-pipelines-high-performance-io-in-net/)\(英文\)。
 
 藉由實作 [.NET Standard](../standard/net-standard.md) 規格，.NET Core 可提供與 NET Framework 及 Mono API 的相容性。
 
@@ -95,7 +95,7 @@ Windows 與 Unix 實作大小相近。 因為 CoreFX 實作一些 Windows 專屬
 
 .NET Core 和 .NET Framework 的主要差異︰
 
-- **應用程式模型** -- .NET Core 並不支援所有的 .NET Framwork 應用程式模型。 尤其不支援 ASP.NET Web Forms 和 ASP.NET MVC，但支援 ASP.NET Core MVC。 已宣布 [.NET Core 3 將會支援 WPF 和 Windows Forms](https://blogs.msdn.microsoft.com/dotnet/2018/05/07/net-core-3-and-support-for-windows-desktop-applications/)。
+- **應用程式模型** -- .NET Core 並不支援所有的 .NET Framwork 應用程式模型。 尤其不支援 ASP.NET Web Forms 和 ASP.NET MVC，但支援 ASP.NET Core MVC。 已宣布 [.NET Core 3 將會支援 WPF 和 Windows Forms](https://devblogs.microsoft.com/dotnet/net-core-3-and-support-for-windows-desktop-applications/)。
 - **API** -- .NET Core 包含大型的 .NET Framework 基底類別庫，但構成方式不同 (組件名稱不同；於類型上公開的成員在重要案例中也不同)。 這些差異在某些情況下需要將連接埠來源變更為 .NET Core (請參閱 [microsoft/dotnet-apiport](https://github.com/microsoft/dotnet-apiport))。 .NET Core 會實作 [.NET Standard](../standard/net-standard.md) API 規格。
 - **子系統**：.NET Core 在 .NET Framework 中實作子系統的子集，目標是更簡單的實作和程式設計模型。 例如，不支援程式碼存取安全性 (CAS)，但支援反映。
 - **平台**：.NET Framework 支援 Windows 和 Windows Server，但 .NET Core 也支援 macOS 及 Linux。

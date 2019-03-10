@@ -1,21 +1,20 @@
 ---
 title: .NET Core 命令列工具架構
 description: 深入了解 .NET Core 工具層級，以及最新版本中已變更的內容。
-author: blackdwarf
 ms.date: 03/06/2017
-ms.openlocfilehash: 85987129421e8ee22f7cf7fe1d44e0768d95a214
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: e9226a314932eb73c6474c0fd17c77c87683e6db
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46696325"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675689"
 ---
 # <a name="high-level-overview-of-changes-in-the-net-core-tools"></a>.NET Core 工具中變更的高階概觀
 
-本文件說明從 *project.json* 移轉至 MSBuild 以及 *csproj* 專案系統相關聯的變更，包含 .NET Core 工具分層與 CLI 命令實作之變更的相關資訊。 2017 年 3 月 7 日發行的 .NET Core SDK 1.0 與 Visual Studio 2017 會進行這些變更 (請參閱[公告](https://blogs.msdn.microsoft.com/dotnet/2017/03/07/announcing-net-core-tools-1-0/))，但一開始是隨 .NET Core SDK Preview 3 版本實作。
+本文件說明從 *project.json* 移轉至 MSBuild 以及 *csproj* 專案系統相關聯的變更，包含 .NET Core 工具分層與 CLI 命令實作之變更的相關資訊。 2017 年 3 月 7 日發行的 .NET Core SDK 1.0 與 Visual Studio 2017 會進行這些變更 (請參閱[公告](https://devblogs.microsoft.com/dotnet/announcing-net-core-tools-1-0/))，但一開始是隨 .NET Core SDK Preview 3 版本實作。
 
 ## <a name="moving-away-from-projectjson"></a>從 project.json 移開
-.NET Core 的工具中最大的變更，絕對是將專案系統[從 project.json 改為使用 csproj](https://blogs.msdn.microsoft.com/dotnet/2016/05/23/changes-to-project-json/)。 命令列工具的最新版本不支援 *project.json* 檔案。 這表示它無法用來建置、執行或發佈以 project.json 為基礎的應用程式與程式庫。 若要使用此版本的工具，您必須移轉您現有的專案，或開始新的專案。 
+.NET Core 的工具中最大的變更，絕對是將專案系統[從 project.json 改為使用 csproj](https://devblogs.microsoft.com/dotnet/changes-to-project-json/)。 命令列工具的最新版本不支援 *project.json* 檔案。 這表示它無法用來建置、執行或發佈以 project.json 為基礎的應用程式與程式庫。 若要使用此版本的工具，您必須移轉您現有的專案，或開始新的專案。 
 
 做為移動的一部分，開發用來建置 project.json 專案的自訂建置引擎會以成熟且功能完整、名稱為 [MSBuild](https://github.com/Microsoft/msbuild) 的建置引擎取代。 MSBuild 是 .NET 社群中眾所周知的引擎，因為它從該平台首次發行以來一直就是關鍵技術。 當然，因為它需要建置 .NET Core 應用程式，MSBuild 已經移植到 .NET Core，且可以在執行 .NET Core 的任何平台上使用。 .NET Core 其中一個主要承諾就是跨平台開發堆疊，而我們也以確認此移動不會中斷該承諾。
 

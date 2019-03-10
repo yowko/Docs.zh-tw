@@ -1,15 +1,14 @@
 ---
 title: 管理 .NET Core 工具中的相依性
 description: 說明如何利用 .NET Core 工具來管理相依性。
-author: blackdwarf
 ms.date: 03/06/2017
 ms.custom: seodec18
-ms.openlocfilehash: 2dd8ebd2cddcb1eea9d9a04a931d9bfb4c428ea3
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 701100476b8b08aa4b0229bd0de30d02c54ddce9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169057"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673869"
 ---
 # <a name="managing-dependencies-with-net-core-sdk-10"></a>使用 .NET Core SDK 1.0 管理相依性
 
