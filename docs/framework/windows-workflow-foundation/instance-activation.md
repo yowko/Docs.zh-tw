@@ -2,12 +2,12 @@
 title: 執行個體啟動
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 78f134ca2d78261a5f6ff9376bd9a98116315f0c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366041"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703394"
 ---
 # <a name="instance-activation"></a>執行個體啟動
 SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵測持續性資料庫中可執行或可啟動的工作流程執行個體。 如果找到可執行的工作流程執行個體，就會通知工作流程主機，表示主機可以啟動該執行個體。 如果執行個體存放區找到可啟動的工作流程執行個體，則會通知啟動工作流程主機的泛型主機，再由該主機執行工作流程執行個體。 本主題中的下列章節詳細說明執行個體啟動處理序。  
@@ -40,4 +40,4 @@ SQL 工作流程執行個體存放區會執行內部工作，定期喚醒及偵�
  針對 WAS 啟動，泛型主機需要一組啟動參數，才能衍生能夠用於啟動新主機的端點位址。 WAS 啟動的啟動參數是網站的名稱、應用程式的路徑 (相對於網站)，以及服務的路徑 (相對於應用程式)。 SQL 工作流程執行個體存放區會在執行 <xref:System.Activities.DurableInstancing.SaveWorkflowCommand> 的期間存放這些啟動參數。  
   
 ## <a name="runnable-instances-detection-period"></a>可執行的執行個體偵測週期  
- **可執行的執行個體偵測週期**SQL 工作流程執行個體存放區的屬性會指定時間週期之後，SQL 工作流程執行個體存放區會執行偵測工作，以偵測任何可執行或可啟動的工作流程在上一個偵測循環之後持續性資料庫中的執行個體。 請參閱[可執行的執行個體偵測週期](../../../docs/framework/windows-workflow-foundation/runnable-instances-detection-period.md)如需有關這個屬性的詳細資訊。
+ **可執行的執行個體偵測週期**SQL 工作流程執行個體存放區的屬性會指定時間週期之後，SQL 工作流程執行個體存放區會執行偵測工作，以偵測任何可執行或可啟動的工作流程在上一個偵測循環之後持續性資料庫中的執行個體。 請參閱[可執行的執行個體偵測週期](runnable-instances-detection-period.md)如需有關這個屬性的詳細資訊。

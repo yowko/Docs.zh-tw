@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ecd167b46a3d600852b5b12a7f18d0013502523d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442967"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712274"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>對 Windows Forms 應用程式的雙向支援
 您可以使用 Visual Studio 建立以 Windows 為基礎的應用程式，支援阿拉伯文和希伯來文等雙向 （由右至左） 語言。 這包括標準表單、對話方塊、MDI 表單，以及您可以在這些表單中使用的所有控制項，也就是 <xref:System.Windows.Forms.Control> 命名空間中的所有物件。  
@@ -79,7 +79,7 @@ ms.locfileid: "56442967"
 |<xref:System.Windows.Forms.VScrollBar>|顯示在可捲動的控制項右邊，而不是左邊|無效果|否|  
   
 ## <a name="encoding"></a>編碼  
- Windows Form 支援 Unicode，因此當您建立雙向應用程式時，可以包含任何字元集。 不過，並非所有 Windows Form 控制項在所有平台上都支援 Unicode。 如需詳細資訊，請參閱[編碼和 Windows Forms 全球化](../../../../docs/framework/winforms/advanced/encoding-and-windows-forms-globalization.md)。  
+ Windows Form 支援 Unicode，因此當您建立雙向應用程式時，可以包含任何字元集。 不過，並非所有 Windows Form 控制項在所有平台上都支援 Unicode。 如需詳細資訊，請參閱[編碼和 Windows Forms 全球化](encoding-and-windows-forms-globalization.md)。  
   
 ## <a name="gdi"></a>GDI+  
  您可以使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，以由右至左的讀取順序來繪製文字。 用來繪製文字的 <xref:System.Drawing.Graphics.DrawString%2A> 方法可支援 `StringFormat` 參數，您可以將其設為 <xref:System.Drawing.StringFormatFlags> 列舉的 <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> 成員，以反轉文字原始起點。  

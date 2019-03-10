@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], about
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
-ms.openlocfilehash: 919098fd5eb6578b91a7b44cf99ba3aef9076081
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc998fd88f3487aa20f6cef73aacb6c07f92c7ad
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610977"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710091"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控制項概觀
 <xref:System.Windows.Forms.WebBrowser>控制項會提供 WebBrowser ActiveX 控制項的 managed 包裝函式。 Managed 包裝函式可讓您在 Windows Form 用戶端應用程式中顯示網頁的網頁。 您可以使用<xref:System.Windows.Forms.WebBrowser>複製您的應用程式，或者您的 Internet Explorer Web 瀏覽功能的控制項可以停用 Internet Explorer 的預設功能，並將簡單的 HTML 文件檢視器控制項。 您也可以使用控制項將 DHTML 為基礎的使用者介面項目新增至您的表單，隱藏的事實，它們裝載於<xref:System.Windows.Forms.WebBrowser>控制項。 這種方法可讓您順暢地結合在單一應用程式中的 Windows Form 控制項使用的 Web 控制項。  
@@ -52,9 +52,9 @@ ms.locfileid: "54610977"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [如何：瀏覽至 URL，以使用 WebBrowser 控制項](../../../../docs/framework/winforms/controls/how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [如何：使用 WebBrowser 控制項列印](../../../../docs/framework/winforms/controls/how-to-print-with-a-webbrowser-control.md)
-- [如何：將 Web 瀏覽器功能加入至 Windows Forms 應用程式](../../../../docs/framework/winforms/controls/how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [如何：建立 Windows Forms 應用程式中的 HTML 文件檢視器](../../../../docs/framework/winforms/controls/how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊](../../../../docs/framework/winforms/controls/implement-two-way-com-between-dhtml-and-client.md)
-- [WebBrowser 安全性](../../../../docs/framework/winforms/controls/webbrowser-security.md)
+- [如何：瀏覽至 URL，以使用 WebBrowser 控制項](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [如何：使用 WebBrowser 控制項列印](how-to-print-with-a-webbrowser-control.md)
+- [如何：將 Web 瀏覽器功能加入至 Windows Forms 應用程式](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [如何：建立 Windows Forms 應用程式中的 HTML 文件檢視器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊](implement-two-way-com-between-dhtml-and-client.md)
+- [WebBrowser 安全性](webbrowser-security.md)

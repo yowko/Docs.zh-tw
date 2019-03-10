@@ -10,15 +10,15 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: c72ed5e6db6149f2161e0586c783e041eb0b731b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713534"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713198"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>HOW TO：使用 PageSetupDialog 元件決定頁面屬性
-[PageSetupDialog](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md) 元件會向文件使用者呈現配置、紙張大小和其他頁面配置選項。  
+[PageSetupDialog](pagesetupdialog-component-windows-forms.md) 元件會向文件使用者呈現配置、紙張大小和其他頁面配置選項。  
   
  您需要指定 <xref:System.Drawing.Printing.PrintDocument> 類別執行個體，這是要列印文件。 此外，使用者必須在其電腦上安裝印表機 (本機或透過網路)，因為這有一部分是 <xref:System.Windows.Forms.PageSetupDialog> 元件如何決定呈現給使用者的頁面格式選項。  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54713534"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [如何：建立標準的 Windows Forms 列印工作](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)
-- [PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [如何：建立標準的 Windows Forms 列印工作](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [PageSetupDialog 元件](pagesetupdialog-component-windows-forms.md)

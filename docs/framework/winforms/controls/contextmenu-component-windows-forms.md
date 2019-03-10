@@ -10,12 +10,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], for Windows Forms
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
-ms.openlocfilehash: 9f24bfceaf4e2e21916624da6d970dd90a0fdbd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 240a85ed4c68a7f22bee8b884a416ff1dc68b66c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552810"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724523"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 元件 (Windows Form)
 > [!NOTE]
@@ -24,10 +24,10 @@ ms.locfileid: "54552810"
  Windows Form`ContextMenu`元件可用來為使用者提供與所選物件相關聯的常用命令的更容易存取的捷徑功能表。 快顯功能表中的項目通常是從主應用程式中其他地方出現的功能表項目的子集。 快顯功能表通常都可以按一下滑鼠右鍵。 在 Windows Forms 上與其相關聯的其他控制項項目。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ContextMenu 元件概觀](../../../../docs/framework/winforms/controls/contextmenu-component-overview-windows-forms.md)  
+ [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)  
  導入的一般概念`ContextMenu`元件，可讓使用者建立與所選物件相關聯的常用命令的功能表。  
   
- [如何：新增和移除功能表項目，使用 Windows Form ContextMenu 元件](../../../../docs/framework/winforms/controls/add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [如何：新增和移除功能表項目，使用 Windows Form ContextMenu 元件](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  說明如何新增和移除 Windows Form 中的捷徑功能表項目。  
   
 ## <a name="reference"></a>參考資料  
@@ -35,7 +35,7 @@ ms.locfileid: "54552810"
  提供這個 <xref:System.Windows.Forms.ContextMenu> 類別及其成員的參考資訊。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
 ## <a name="see-also"></a>另請參閱

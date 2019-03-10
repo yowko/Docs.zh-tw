@@ -2,12 +2,12 @@
 title: 追蹤參與者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 3165e08a02954facb7e016606e2f94662c6edfe9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 934c49aaa48ecb319d55fa997aaac4eec93b54c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613511"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711963"
 ---
 # <a name="tracking-participants"></a>追蹤參與者
 追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄以做為 Windows 事件追蹤 (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
@@ -60,10 +60,10 @@ ms.locfileid: "54613511"
   
  下圖顯示透過 ETW 追蹤參與者追蹤資料的流程。 一旦追蹤資料到達 ETW 工作階段，就可以透過多種方式加以存取。 其中最實用的方式之一就是透過事件檢視器，這是常用的 Windows 工具，可用來檢視記錄並從應用程式和服務進行追蹤。  
   
- ![追蹤與 ETW 追蹤提供者的流程](../../../docs/framework/windows-workflow-foundation/media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
+ ![追蹤與 ETW 追蹤提供者的流程](./media/trackingdatathroughetwparticipant.gif "TrackingDatathroughETWParticipant")  
   
 ## <a name="tracking-participant-event-data"></a>追蹤參與者事件資料  
- 追蹤參與者會以每個追蹤記錄包含一個事件的形式，將已追蹤的事件資料序列化至 ETW 工作階段。  事件會使用從 100 到 199 範圍的 ID 來識別。 如需追蹤事件的定義記錄發出的追蹤參與者，請參閱[追蹤事件參考](../../../docs/framework/windows-workflow-foundation/tracking-events-reference.md)主題。  
+ 追蹤參與者會以每個追蹤記錄包含一個事件的形式，將已追蹤的事件資料序列化至 ETW 工作階段。  事件會使用從 100 到 199 範圍的 ID 來識別。 如需追蹤事件的定義記錄發出的追蹤參與者，請參閱[追蹤事件參考](tracking-events-reference.md)主題。  
   
  ETW 事件大小會受到 ETW 緩衝區大小或 ETW 事件的最大承載所限制，兩者的值都較小。 如果事件大小超過這裡任一種 ETW 限制，則會截斷事件，並任意移除其內容。 變數、引數、附註和自訂資料都不可選擇性移除。 發生截斷情形時，不論造成事件大小超出 ETW 限制的值大小為何，這些元素全都會遭到截斷。  已移除的資料會以 `<item>..<item>` 來取代。  
   
@@ -114,7 +114,8 @@ class ConsoleTrackingParticipant : TrackingParticipant
 myInstance.Extensions.Add(new ConsoleTrackingParticipant());  
 ```  
   
- 在以下範例中，會建立由 <xref:System.Activities.Statements.Sequence> 活動構成的工作流程，此工作流程包含 <xref:System.Activities.Statements.WriteLine> 活動。 `ConsoleTrackingParticipant` 會加入擴充，並叫用工作流程。  
+ 在以下範例中，會建立由 <xref:System.Activities.Statements.Sequence> 活動構成的工作流程，此工作流程包含 <xref:System.Activities.Statements.WriteLine> 活動。 
+  `ConsoleTrackingParticipant` 會加入擴充，並叫用工作流程。  
   
 ```csharp  
 Activity activity= new Sequence()  

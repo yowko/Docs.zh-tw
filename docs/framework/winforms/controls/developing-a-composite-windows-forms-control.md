@@ -7,15 +7,15 @@ helpviewer_keywords:
 - composite controls [Windows Forms], Windows Forms
 - controls [Windows Forms], composite
 ms.assetid: d086f2a3-baa3-4e09-b40c-a5bb3cfc51a6
-ms.openlocfilehash: 1d2c6419e19aee73717bed6cfc17782d2a3f5a4a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 3b829b1eea68eed7ff8ded80496620af628d3510
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442733"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707354"
 ---
 # <a name="developing-a-composite-windows-forms-control"></a>開發複合 Windows Form 控制項
-您可以結合其他的 Windows Form 控制項來開發複合 Windows Form 控制項。 複合控制項是衍生自<xref:System.Web.UI.UserControl>稱為使用者控制項。 基底類別 <xref:System.Windows.Forms.UserControl> 提供鍵盤路徑給子控制項，以確保子控制項可以接收焦點。 如需使用者控制項的範例，請參閱 <<c0> <xref:System.Windows.Forms.UserControl> 範例中[How to:在 Windows Form 控制項中套用屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)。  
+您可以結合其他的 Windows Form 控制項來開發複合 Windows Form 控制項。 複合控制項是衍生自<xref:System.Web.UI.UserControl>稱為使用者控制項。 基底類別 <xref:System.Windows.Forms.UserControl> 提供鍵盤路徑給子控制項，以確保子控制項可以接收焦點。 如需使用者控制項的範例，請參閱 <<c0> <xref:System.Windows.Forms.UserControl> 範例中[How to:在 Windows Form 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)。  
   
  在 Visual Studio 中的 Windows Form 設計工具對於撰寫使用者控制項，提供豐富的設計階段支援。  
   
@@ -54,6 +54,6 @@ ms.locfileid: "56442733"
 -   [如何：建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：在 Windows Form 控制項中套用屬性](../../../../docs/framework/winforms/controls/how-to-apply-attributes-in-windows-forms-controls.md)
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [各種自訂控制項](../../../../docs/framework/winforms/controls/varieties-of-custom-controls.md)
+- [如何：在 Windows Form 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [各種自訂控制項](varieties-of-custom-controls.md)

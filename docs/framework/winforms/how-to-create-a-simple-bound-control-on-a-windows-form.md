@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: 129301354c67d43783e997bcf42f848c5c39ab3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643568"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708336"
 ---
 # <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>HOW TO：建立 Windows Form 上的簡單繫結控制項
 具有*簡單繫結*，您可以在控制項中顯示單一資料元素，例如資料集資料表中的資料行值。 您可以簡單繫結控制項的任何屬性的資料值。  
@@ -20,7 +20,7 @@ ms.locfileid: "54643568"
   
 ### <a name="to-simple-bind-a-control"></a>以簡單繫結控制項  
   
-1.  連接至資料來源。 如需詳細資訊，請參閱 <<c0> [ 連接到資料來源](../../../docs/framework/data/adonet/connecting-to-a-data-source.md)。  
+1.  連接至資料來源。 如需詳細資訊，請參閱 <<c0> [ 連接到資料來源](../data/adonet/connecting-to-a-data-source.md)。  
   
 2.  在表單中，選取控制項，並顯示**屬性**視窗。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54643568"
   
      最常繫結的屬性會顯示底下 **(DataBindings)** 屬性。 例如，在大部分的控制項**文字**屬性最常繫結。  
   
-4.  如果您想要將屬性繫結不是其中一個常見的繫結的屬性，請按一下**省略符號** 按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（進階）** 方塊，以顯示**格式化與進階繫結**該控制項屬性的對話方塊中的完整清單。  
+4.  如果您想要將屬性繫結不是其中一個常見的繫結的屬性，請按一下**省略符號** 按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](./media/vbellipsesbutton.png "vbEllipsesButton")) 中 **（進階）** 方塊，以顯示**格式化與進階繫結**該控制項屬性的對話方塊中的完整清單。  
   
 5.  選取您想要繫結，然後按一下下方的下拉式箭頭的屬性**繫結**。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "54643568"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Binding>
-- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)
