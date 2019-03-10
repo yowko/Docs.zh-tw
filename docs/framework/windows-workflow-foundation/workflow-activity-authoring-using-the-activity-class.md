@@ -2,15 +2,15 @@
 title: 使用活動類別撰寫工作流程活動
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
-ms.openlocfilehash: bfe117de9d284353ce46766c828ce209e5391f38
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: abdabc46aa54e19d5a04c5b34d6d2b9be07488d6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48580020"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711859"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>使用活動類別撰寫工作流程活動
-最基本的方式，來建立使用 Windows Workflow Foundation (WF) 中的活動[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]是建立繼承自類別<xref:System.Activities.Activity>建立功能的組合自訂活動或活動從[內建活動程式庫](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)。 本主題示範如何建立會寫入兩個訊息至主控台的活動。
+最基本的方式，來建立使用 Windows Workflow Foundation (WF) 中的活動[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]是建立繼承自類別<xref:System.Activities.Activity>建立功能的組合自訂活動或活動從[內建活動程式庫](net-framework-4-5-built-in-activity-library.md)。 本主題示範如何建立會寫入兩個訊息至主控台的活動。
 
 ### <a name="to-create-a-custom-activity-using-the-activity-designer"></a>若要使用活動設計工具建立自訂活動
 

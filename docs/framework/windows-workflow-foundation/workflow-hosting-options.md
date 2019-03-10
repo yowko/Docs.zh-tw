@@ -2,15 +2,15 @@
 title: 工作流程裝載選項
 ms.date: 03/30/2017
 ms.assetid: 37bcd668-9c5c-4e7c-81da-a1f1b3a16514
-ms.openlocfilehash: 7713044e40532c431d090b1cb1795876ead2a899
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 2a03c7b5e15b76eabc714f44624f04d3385720d4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33516548"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713315"
 ---
 # <a name="workflow-hosting-options"></a>工作流程裝載選項
-大部分的 Windows Workflow Foundation (WF) 範例使用主控台應用程式中裝載的工作流程，但這不是實際案例中的實際工作流程。 實際商務應用程式中的工作流程會裝載在持續性程序中，可能是開發人員撰寫的 Windows 服務，或是像 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之類的伺服器應用程式。 這些方法之間差異如下。  
+大部分的 Windows Workflow Foundation (WF) 範例使用主控台應用程式中裝載的工作流程，但這不是真實世界工作流程的實際案例。 實際商務應用程式中的工作流程會裝載在持續性程序中，可能是開發人員撰寫的 Windows 服務，或是像 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 或 AppFabric 之類的伺服器應用程式。 這些方法之間差異如下。  
   
 ## <a name="hosting-workflows-in-iis-with-windows-appfabric"></a>在具有 Windows AppFabric 的 IIS 中裝載工作流程  
  使用具有 AppFabric 的 IIS 是工作流程的慣用主機。 使用 AppFabric 的工作流程主應用程式是 Windows 啟用服務，它會單獨由 IIS 中移除對 HTTP 的相依性。  
@@ -19,7 +19,7 @@ ms.locfileid: "33516548"
  不建議單獨使用 [!INCLUDE[iisver](../../../includes/iisver-md.md)]，因為 AppFabric 有管理和監視工具，可協助維護執行中的應用程式。 如果有移至 AppFabric 的相關基礎結構顧慮，則工作流程應該只裝載在 [!INCLUDE[iisver](../../../includes/iisver-md.md)]。  
   
 > [!WARNING]
->  [!INCLUDE[iisver](../../../includes/iisver-md.md)] 會因為各種理由定期回收應用程式集區。 回收應用程式集區時，IIS 會停止接受訊息至舊集區，並產生新的應用程式集區以接受新的要求。 如果工作流程在傳送回應之後繼續運作，[!INCLUDE[iisver](../../../includes/iisver-md.md)] 不會感知已執行的工作，且可能會回收進行裝載的應用程式集區。 如果發生這種情況，將會中止工作流程，並追蹤服務會記錄[1004-WorkflowInstanceAborted](../../../docs/framework/windows-workflow-foundation/1004-workflowinstanceaborted.md)空白的 [原因] 欄位的訊息。  
+>  [!INCLUDE[iisver](../../../includes/iisver-md.md)] 會因為各種理由定期回收應用程式集區。 回收應用程式集區時，IIS 會停止接受訊息至舊集區，並產生新的應用程式集區以接受新的要求。 如果工作流程在傳送回應之後繼續運作，[!INCLUDE[iisver](../../../includes/iisver-md.md)] 不會感知已執行的工作，且可能會回收進行裝載的應用程式集區。 如果發生這種情況，工作流程會中止，而追蹤服務會記錄[1004-WorkflowInstanceAborted](1004-workflowinstanceaborted.md)空白的 [原因] 欄位的訊息。  
 >   
 >  如果使用持續性，主機必須從上次的保存點，明確地將中止的執行個體重新啟動。  
 >   

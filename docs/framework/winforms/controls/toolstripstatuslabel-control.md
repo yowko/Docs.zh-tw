@@ -6,18 +6,18 @@ helpviewer_keywords:
 - status bars
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
-ms.openlocfilehash: e665b6e99d1c294d87130a6cceba76ca5bd7e522
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 809590ff19619b3693466d4f6a0567ff1e5ab38a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678573"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722646"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel 控制項
 <xref:System.Windows.Forms.ToolStripStatusLabel>提供中的顯示區域<xref:System.Windows.Forms.StatusStrip>文字、 影像或兩者。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ToolStripStatusLabel 控制項概觀](../../../../docs/framework/winforms/controls/toolstripstatuslabel-control-overview.md)  
+ [ToolStripStatusLabel 控制項概觀](toolstripstatuslabel-control-overview.md)  
  提供描述 Windows Form <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項的用途和主要概念的主題。  
   
 ## <a name="reference"></a>參考資料  
@@ -31,4 +31,4 @@ ms.locfileid: "54678573"
  提供 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項的參考文件。  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

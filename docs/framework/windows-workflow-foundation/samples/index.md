@@ -2,12 +2,6 @@
 title: Windows Workflow (WF) 範例文件
 ms.date: 09/24/2018
 ms.assetid: e0aef017-4381-4f2f-a904-6e1ed898687e
-ms.openlocfilehash: e451ecd18b68ba42aa2c8a71e394077ee6b492ce
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201330"
 ---
 # <a name="windows-workflow-wf-samples"></a>Windows Workflow (WF) 範例
 
@@ -20,8 +14,8 @@ ms.locfileid: "50201330"
 
 ## <a name="in-this-section"></a>本節內容
 
-[應用程式](../../../../docs/framework/windows-workflow-foundation/samples/application.md)-提供工作流程應用程式相關的範例。
+[應用程式](application.md)-提供工作流程應用程式相關的範例。
 
-[基本](../../../../docs/framework/windows-workflow-foundation/samples/basic.md)-提供示範基本的 Windows Workflow Foundation (WF) 功能的範例。
+[基本](basic.md)-提供示範基本的 Windows Workflow Foundation (WF) 功能的範例。
 
-[案例](../../../../docs/framework/windows-workflow-foundation/samples/scenario.md)-提供 Windows Workflow Foundation (WF) 案例的範例。
+[案例](scenario.md)-提供 Windows Workflow Foundation (WF) 案例的範例。

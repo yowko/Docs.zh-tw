@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Font dialog box
 - FontDialog component [Windows Forms], about FontDialog component
 ms.assetid: daf46e57-1b4b-4b7a-bad0-b50ca7ba75dc
-ms.openlocfilehash: 854f54454c0c88f965d9ac8240c11f6821f0c64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26bfb561c1050438b78c4ae0a3e6e8da32458cdd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594560"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725034"
 ---
 # <a name="fontdialog-component-overview-windows-forms"></a>FontDialog 元件概觀 (Windows Form)
 Windows Forms<xref:System.Windows.Forms.FontDialog>元件是預先設定的對話方塊中，這是標準的 Windows**字型**對話方塊用來公開 （expose） 目前已安裝在系統的字型。 用於在您以 Windows 為基礎的應用程式，做為簡單的解決方案不需設定您自己的對話方塊中的字型選項。  
@@ -25,4 +25,4 @@ Windows Forms<xref:System.Windows.Forms.FontDialog>元件是預先設定的對�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.FontDialog>
-- [FontDialog 元件](../../../../docs/framework/winforms/controls/fontdialog-component-windows-forms.md)
+- [FontDialog 元件](fontdialog-component-windows-forms.md)

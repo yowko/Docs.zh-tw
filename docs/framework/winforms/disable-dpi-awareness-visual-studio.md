@@ -6,12 +6,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 0820450fb9ae257cba87b3055ea1dde91112b19e
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655994"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710533"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>停用 Visual Studio 中的 DPI 感知
 
@@ -21,11 +21,11 @@ Visual Studio 是為 dots per inch (DPI) 感知應用程式，這表示顯示標
 
 **Windows Form 設計工具**Visual Studio 中沒有縮放支援。 這會導致顯示問題，當您開啟中的某些表單**Windows Form 設計工具**在 hdpi () 監視的高 dpi。 如需範例，控制項可能會出現重疊，如下圖所示：
 
-![HDPI 監視器上的 Windows Form 設計工具](media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
+![HDPI 監視器上的 Windows Form 設計工具](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
 在 Visual Studio 2017 版本 15.8 和更新版本，當您開啟中的表單**Windows Form 設計工具**在 HDPI 監視器中，Visual Studio 會顯示黃色列的參考設計工具的頂端：
 
-![在以 DPI 感知的模式重新啟動 Visual Studio 中的資訊列](media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
+![在以 DPI 感知的模式重新啟動 Visual Studio 中的資訊列](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 訊息讀取**主顯示器上的縮放比例設為 200%(192 dpi)。設計師視窗中，這可能造成轉譯問題。**
 
@@ -51,14 +51,14 @@ Visual Studio 執行時做為 DPI 感知的處理序，設計工具的版面配�
 
 您可以藉由修改登錄，以將 Visual Studio 標記為 DPI 感知。 開啟**登錄編輯程式** ，並新增一個項目**您可以 NT\CurrentVersion\AppCompatFlags\Layers**子機碼：
 
-**項目**:C:\Program 檔案 (x86) \Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**項目**:C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
 
    > [!NOTE]
    > 如果您使用 Visual Studio 2017 Professional 或 Enterprise edition，將**社群**使用**Professional**或是**Enterprise**項目中。 也取代為所需的磁碟機代號。
 
 **型別**:REG_SZ
 
-**值**:DPIUNAWARE
+**值**：DPIUNAWARE
 
 > [!NOTE]
 > Visual Studio 會保留在 DPI 感知的模式，直到您移除登錄項目。
@@ -75,7 +75,7 @@ Visual Studio 執行時做為 DPI 感知的處理序，設計工具的版面配�
 
 若要停用通知，請選擇**工具** > **選項**以開啟**選項**對話方塊。 然後選擇  **Windows Form 設計工具** > **一般**，並將**DPI 縮放比例通知**至**False**。
 
-![DPI 縮放比例通知選項，在 Visual Studio 中](media/disable-dpi-awareness-visual-studio/notifications-option.png)
+![DPI 縮放比例通知選項，在 Visual Studio 中](./media/disable-dpi-awareness-visual-studio/notifications-option.png)
 
 如果您想要稍後重新啟用調整的通知，將屬性設定為 **，則為 True**。
 

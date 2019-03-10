@@ -15,19 +15,19 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: 4220e3e7d750e0d0caf0adbcbd2e1d96131e7c88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698367"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709922"
 ---
 # <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>HOW TO：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料
 您可以繫結<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>資料，以執行工作，例如瀏覽資料庫中的資料，以在輸入新的資料，或編輯現有的資料。  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>將 ComboBox 或 ListBox 控制項繫結  
   
-1.  設定`DataSource`資料來源物件的屬性。 可能的資料來源包括<xref:System.Windows.Forms.BindingSource>管理員、 陣列或任何實作類別的繫結至資料、 資料表、 資料檢視、 資料集，資料檢視<xref:System.Collections.IList>介面。 如需詳細資訊，請參閱 <<c0> [ 支援的 Windows Form 資料來源](../../../../docs/framework/winforms/data-sources-supported-by-windows-forms.md)。  
+1.  設定`DataSource`資料來源物件的屬性。 可能的資料來源包括<xref:System.Windows.Forms.BindingSource>管理員、 陣列或任何實作類別的繫結至資料、 資料表、 資料檢視、 資料集，資料檢視<xref:System.Collections.IList>介面。 如需詳細資訊，請參閱 <<c0> [ 支援的 Windows Form 資料來源](../data-sources-supported-by-windows-forms.md)。  
   
 2.  如果您要繫結至資料表，將設定`DisplayMember`屬性設為資料來源中的資料行的名稱。  
   
@@ -56,6 +56,6 @@ ms.locfileid: "54698367"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows Forms 資料繫結](../../../../docs/framework/winforms/windows-forms-data-binding.md)
-- [資料繫結和 Windows Forms](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
+- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](../data-binding-and-windows-forms.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

@@ -2,12 +2,12 @@
 title: 移轉指引
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: b3a3e1efee44ef11f3c5a91dddb1172f20ea01ed
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441212"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719672"
 ---
 # <a name="migration-guidance"></a>移轉指引
 在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 即將發行的第二個主要版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中發佈 (其中包含 System.Workflow.* 命名空間中的型別；現在則是指 WF3)，並在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中增強。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但它有與新的工作流程技術 (System.Activities。 中的型別\*命名空間; 以 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  
@@ -35,7 +35,7 @@ ms.locfileid: "56441212"
  [WF 指引：狀態機器](https://go.microsoft.com/fwlink/?LinkId=153855)  
  討論在缺乏狀態機器活動的情況下如何建立 WF4 控制流程的模型。  
   
- 請注意，此指引只適用於以 .NET Framework 4 為目標的工作流程專案。 狀態機器工作流程已加入在含有 Platform Update 1 版本的 .NET 4.0.1 中，並且包含在 .NET Framework 4.5 中。 如需有關狀態機器工作流程，在.NET 4.0.1-4.0.3 以及.NET Framework 4.5 中，請參閱[Update 4.0.1 for Microsoft.NET Framework 4 功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))並[狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/state-machine-workflows.md)。  
+ 請注意，此指引只適用於以 .NET Framework 4 為目標的工作流程專案。 狀態機器工作流程已加入在含有 Platform Update 1 版本的 .NET 4.0.1 中，並且包含在 .NET Framework 4.5 中。 如需有關狀態機器工作流程，在.NET 4.0.1-4.0.3 以及.NET Framework 4.5 中，請參閱[Update 4.0.1 for Microsoft.NET Framework 4 功能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/hh290669(v=vs.100))並[狀態機器工作流程](state-machine-workflows.md)。  
   
  [WF 移轉做法指南：自訂活動](https://go.microsoft.com/fwlink/?LinkId=153856)  
  提供在 WF4 上重新設計 WF3 自訂活動的範例與指引。  

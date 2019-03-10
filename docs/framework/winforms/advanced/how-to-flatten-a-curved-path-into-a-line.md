@@ -8,17 +8,17 @@ helpviewer_keywords:
 - paths [Windows Forms], flattening
 - drawing [Windows Forms], flattening curves
 ms.assetid: e654b8de-25f4-4735-9208-42e4514a589c
-ms.openlocfilehash: aa47a655417cdf82d79fb222dc6ff6f6d8c3a947
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d4847124c7af2e0b35d6874f53b85be4891b22df
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601814"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711040"
 ---
 # <a name="how-to-flatten-a-curved-path-into-a-line"></a>HOW TO：曲線的路徑簡維的線條
 A<xref:System.Drawing.Drawing2D.GraphicsPath>物件會儲存一串線和貝茲曲線。 您可以將數種類型的曲線 （省略符號，弧線，基線曲線） 加入路徑，但之前它會儲存在路徑中的每條曲線轉換成貝茲曲線。 壓平合併的路徑將每個路徑中的貝茲曲線轉換成一連串的直線，線條所組成。 壓平合併的前後，如下圖所顯示的路徑。  
   
- ![直線和曲線](../../../../docs/framework/winforms/advanced/media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
+ ![直線和曲線](./media/aboutgdip02-art32a.gif "AboutGdip02_Art32A")  
   
 ### <a name="to-flatten-a-path"></a>若要壓平合併的路徑  
   
@@ -26,5 +26,5 @@ A<xref:System.Drawing.Drawing2D.GraphicsPath>物件會儲存一串線和貝茲�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Drawing.Drawing2D.GraphicsPath?displayProperty=nameWithType>
-- [線條、曲線和形狀](../../../../docs/framework/winforms/advanced/lines-curves-and-shapes.md)
-- [建構和繪製路徑](../../../../docs/framework/winforms/advanced/constructing-and-drawing-paths.md)
+- [線條、曲線和形狀](lines-curves-and-shapes.md)
+- [建構和繪製路徑](constructing-and-drawing-paths.md)

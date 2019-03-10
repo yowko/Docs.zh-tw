@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: 91da6409eb3a02709332d8d1a5a2d7fe54d3f401
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543064"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717917"
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
 Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windows Form 控制項和元件，根據一般的函式。 此外，其中有多個控制項提供相同的功能，建議使用的控制項都會列出它所取代的控制項的相關附註。 在個別的後續資料表，其建議的取代項目會列出已被取代的控制項。  
   
 > [!NOTE]
->  下表待辦事項清單，每個控制項或 Windows Form; 中，您可以使用的元件如需更完整的清單，請參閱[Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+>  下表待辦事項清單，每個控制項或 Windows Form; 中，您可以使用的元件如需更完整的清單，請參閱[Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
   
 ## <a name="recommended-controls-and-components-by-function"></a>建議的控制項和元件，由函式  
   
 |功能|控制項|描述|  
 |--------------|-------------|-----------------|  
-|資料顯示|<xref:System.Windows.Forms.DataGridView> 控制項|<xref:System.Windows.Forms.DataGridView>控制項提供可自訂的資料表顯示資料。 <xref:System.Windows.Forms.DataGridView>類別可讓您自訂的資料格、 資料列、 資料行和框線。 **注意：**<xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱[差異 Windows Form DataGridView 和 DataGrid 控制項之間](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|資料顯示|<xref:System.Windows.Forms.DataGridView> 控制項|<xref:System.Windows.Forms.DataGridView>控制項提供可自訂的資料表顯示資料。 <xref:System.Windows.Forms.DataGridView>類別可讓您自訂的資料格、 資料列、 資料行和框線。 **注意：**<xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱[差異 Windows Form DataGridView 和 DataGrid 控制項之間](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |資料繫結和瀏覽|<xref:System.Windows.Forms.BindingSource> 元件|提供貨幣管理、 變更通知和其他服務，以簡化將控制項繫結至資料的表單上。|  
 ||<xref:System.Windows.Forms.BindingNavigator> 控制項|提供工具列型別介面來瀏覽和操作表單上的資料。|  
 |文字編輯|<xref:System.Windows.Forms.TextBox> 控制項|顯示可編輯的使用者在執行階段，或以程式設計方式變更設計階段時輸入的文字。|  
@@ -85,5 +85,5 @@ Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windo
 |表單配置|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

@@ -5,33 +5,34 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms]
 - status bars [Windows Forms], creating
 ms.assetid: 6f543e27-cf78-4b7f-b4d0-6a8030155d48
-ms.openlocfilehash: 66ec834778bd0eeacea642250c5430be8929b732
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 9ef6bc125a641538e7fd2da4c17c5f25dfc62709
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33537342"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57718463"
 ---
 # <a name="statusbar-control-windows-forms"></a>StatusBar 控制項 (Windows Form)
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。  
+>  
+  <xref:System.Windows.Forms.ToolStripStatusLabel> 控制項會取代 <xref:System.Windows.Forms.StatusBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.StatusBar> 控制項，以提供回溯相容性及未來使用。  
   
- Windows Form <xref:System.Windows.Forms.StatusBar> 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 <xref:System.Windows.Forms.StatusBar> 控制項可以有顯示圖示，表示狀態或一系列的動畫圖示，以指出程序運作; 的狀態列面板上例如，指出此問題的 Microsoft Word 文件正在儲存。  
+ Windows Form <xref:System.Windows.Forms.StatusBar> 控制項在表單裡被當做區域來使用，通常會顯示在視窗底部，在其中應用程式可以顯示各種狀態資訊。 <xref:System.Windows.Forms.StatusBar> 可以在其上顯示的圖示指出狀態或一系列的動畫圖示，表示正在處理程序; 的狀態列面板控制項。比方說，指出 Microsoft Word 文件正在儲存。  
   
 ## <a name="in-this-section"></a>本節內容  
- [StatusBar 控制項概觀](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)  
- 導入的一般概念<xref:System.Windows.Forms.StatusBar>控制項，讓使用者查看具有焦點的控制項的相關資訊。  
+ [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)  
+ 導入的一般概念<xref:System.Windows.Forms.StatusBar>控制，可讓使用者看到具有焦點之控制項的相關資訊。  
   
- [操作說明：將面板新增至 StatusBar 控制項](../../../../docs/framework/winforms/controls/how-to-add-panels-to-a-statusbar-control.md)  
+ [如何：將面板新增至 StatusBar 控制項](how-to-add-panels-to-a-statusbar-control.md)  
  說明如何將可程式化的面板加入<xref:System.Windows.Forms.StatusBar>控制項。  
   
- [操作說明：判斷在 Windows Forms StatusBar 控制項中按下的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)  
+ [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)  
  說明如何處理<xref:System.Windows.Forms.Control.Click>事件引發從<xref:System.Windows.Forms.StatusBar>控制項。  
   
- [操作說明：設定狀態列面板的大小](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)  
- 詳細的屬性來控制寬度，並在執行階段調整大小行為的狀態列面板。  
+ [如何：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)  
+ 提供控制項的寬度和調整大小行為的狀態列面板，在執行階段屬性的詳細資料。  
   
- [逐步解說：在執行階段更新狀態列資訊](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)  
+ [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)  
  說明如何以程式設計方式控制狀態列面板內的資料。  
   
 ## <a name="reference"></a>參考資料  
@@ -39,8 +40,8 @@ ms.locfileid: "33537342"
  提供這個類別及其成員的相關參考資訊。  
   
  <xref:System.Windows.Forms.ToolStripStatusLabel>  
- 取代，並將功能加入<xref:System.Windows.Forms.StatusBar>控制項。  
+ 會取代並且將功能加入<xref:System.Windows.Forms.StatusBar>控制項。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

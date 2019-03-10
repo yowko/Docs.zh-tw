@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 1b67fa4da987778b08bad59d2e2829d0a974512a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710556"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719659"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的預設功能
 Windows Form<xref:System.Windows.Forms.DataGridView>控制項提供使用者一段很長的預設功能。  
@@ -48,4 +48,4 @@ Windows Form<xref:System.Windows.Forms.DataGridView>控制項提供使用者一�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
+- [DataGridView 控制項](datagridview-control-windows-forms.md)

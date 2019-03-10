@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: 49f544727ee82b1e36357fc4312bcd449ffc3c0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558744"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719373"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯的類別提供通用的架構結合工具列、 狀態列和功能表的使用者介面項目。 <xref:System.Windows.Forms.ToolStrip> 控制項都能提供豐富的設計階段體驗，包括就地啟用和編輯、 自訂的版面配置和浮動定位，這是能夠的工具列共用水平或垂直空間。  
@@ -77,7 +77,7 @@ Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯�
 |<xref:System.Windows.Forms.ToolStripControlHost>|裝載其他控制項，不會特別<xref:System.Windows.Forms.ToolStrip>控制項但您要為其<xref:System.Windows.Forms.ToolStrip>功能。|  
 |<xref:System.Windows.Forms.ToolStripItemPlacement>|指定是否<xref:System.Windows.Forms.ToolStripItem>是配置在主要<xref:System.Windows.Forms.ToolStrip>，在溢位上<xref:System.Windows.Forms.ToolStrip>，或兩者都關閉。|  
   
- 如需詳細資訊，請參閱 < [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)並[ToolStrip 控制項架構](../../../../docs/framework/winforms/controls/toolstrip-control-architecture.md)。  
+ 如需詳細資訊，請參閱 < [ToolStrip 技術摘要](toolstrip-technology-summary.md)並[ToolStrip 控制項架構](toolstrip-control-architecture.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ToolStrip>

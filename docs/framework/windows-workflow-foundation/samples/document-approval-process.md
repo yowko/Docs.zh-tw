@@ -2,12 +2,12 @@
 title: 文件核准程序
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: 34b63acaacde274210343a1135f3ed39a2df885e
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48582706"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717704"
 ---
 # <a name="document-approval-process"></a>文件核准程序
 這個範例會示範一起使用的許多 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。
@@ -24,7 +24,7 @@ ms.locfileid: "48582706"
 ## <a name="sample-details"></a>範例詳細資料  
  下圖示範此文件核准程序工作流程。  
   
- ![文件核准工作流程](../../../../docs/framework/windows-workflow-foundation/samples/media/approvalprocess.jpg "ApprovalProcess")  
+ ![文件核准工作流程](./media/approvalprocess.jpg "ApprovalProcess")  
   
  從用戶端的觀點來看，核准程序的運作方式如下：  
   
@@ -106,7 +106,8 @@ ms.locfileid: "48582706"
   
 6.  在 `UserType1` 用戶端中，從下拉式功能表中選取單一核准類型，然後輸入文件名稱和內容。 按一下 **要求核准**。  
   
-7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或是**拒絕**。 `UserType1` 用戶端中應該會顯示結果。  
+7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或是**拒絕**。 
+  `UserType1` 用戶端中應該會顯示結果。  
   
 ##### <a name="to-run-the-quorum-approval-scenario"></a>若要執行仲裁核准案例  
   
@@ -122,7 +123,8 @@ ms.locfileid: "48582706"
   
 6.  在 `UserType1` 用戶端中，從下拉式功能表中選取仲裁核准類型，然後輸入文件名稱和內容。 按一下 **要求核准**。 這會要求兩個 `UserType2` 用戶端核准或拒絕文件。 雖然兩個 `UserType2` 用戶端都必須回應，但是只要一個用戶端核准文件，文件就會獲得已核准狀態。  
   
-7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或是**拒絕**。 `UserType1` 用戶端中應該會顯示結果。  
+7.  在 `UserType2` 用戶端中，待核准的文件隨即出現。 選取它，然後按**核准**或是**拒絕**。 
+  `UserType1` 用戶端中應該會顯示結果。  
   
 ##### <a name="to-run-the-complex-approval-scenario"></a>若要執行複雜核准案例  
   

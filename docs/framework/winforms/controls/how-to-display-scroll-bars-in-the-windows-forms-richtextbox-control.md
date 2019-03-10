@@ -6,12 +6,12 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], displaying in controls
 - RichTextBox control [Windows Forms], displaying scroll bars
 ms.assetid: cdeb42e1-86e8-410c-ba46-18aec264ef5f
-ms.openlocfilehash: 6b6cfb8c21c8f3a48bb85a0591f3390d5b5575b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 119cf736dfa7b8b8fce57b7e8fcb24dd09f01ce0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610392"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716487"
 ---
 # <a name="how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control"></a>HOW TO：顯示捲軸，在 Windows Forms RichTextBox 控制項
 根據預設，Windows Forms<xref:System.Windows.Forms.RichTextBox>控制項會視需要顯示水平和垂直捲軸。 有七個可能的值，如<xref:System.Windows.Forms.RichTextBox.ScrollBars%2A>屬性<xref:System.Windows.Forms.RichTextBox>控制項，如下表所述。  
@@ -24,7 +24,7 @@ ms.locfileid: "54610392"
   
     |值|描述|  
     |-----------|-----------------|  
-    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (預設值)|只會顯示水平或垂直捲軸或兩者，文字超過寬度或控制項的長度。|  
+    |<xref:System.Windows.Forms.RichTextBoxScrollBars.Both> (預設)|只會顯示水平或垂直捲軸或兩者，文字超過寬度或控制項的長度。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.None>|永遠不會顯示任何捲軸的類型。|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Horizontal>|顯示水平捲軸僅當文字超過控制項的寬度。 (這種情形，如<xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>屬性必須設為`false`。)|  
     |<xref:System.Windows.Forms.RichTextBoxScrollBars.Vertical>|顯示垂直捲軸僅當文字超過控制項的高度。|  
@@ -37,10 +37,10 @@ ms.locfileid: "54610392"
     |值|描述|  
     |-----------|-----------------|  
     |`false`|控制項中的文字不會自動調整以符合控制項的寬度，因此它會向右捲動，直到達到分行符號。 如果您選擇上述的水平捲軸或兩者，請使用此值。|  
-    |`true` (預設值)|控制項中的文字會自動調整以配合控制項的寬度。 不會出現水平捲軸。 如果您選擇垂直捲軸或 none、 上方，顯示一或多個段落，請使用此值。|  
+    |`true` (預設)|控制項中的文字會自動調整以配合控制項的寬度。 不會出現水平捲軸。 如果您選擇垂直捲軸或 none、 上方，顯示一或多個段落，請使用此值。|  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.RichTextBoxScrollBars>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 控制項](richtextbox-control-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

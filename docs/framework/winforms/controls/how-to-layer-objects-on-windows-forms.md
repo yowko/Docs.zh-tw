@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - z-order
 ms.assetid: 1acc4281-2976-4715-86f4-bda68134baaf
-ms.openlocfilehash: 2911542f93bf6afaf1560d0f627af3de1b2871ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea97e26d31d2cdda353b6ada554cac27c5b56c62
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509181"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719100"
 ---
 # <a name="how-to-layer-objects-on-windows-forms"></a>HOW TO：在 Windows Forms 上的物件分層
 當您建立複雜的使用者介面，或使用多個文件介面 (MDI) 表單時，您通常要控制項和子表單，以建立更複雜的使用者介面 (UI) 層級。 移動和追蹤的控制項和 windows 群組的內容中，您可以使用他們的疊置順序。 *疊置順序*是沿著表單的 z 軸 （深度） 的表單上控制項的視覺分層。 在頂端的疊置順序的視窗重疊所有其他視窗。 所有其他視窗重疊視窗底部的疊置順序。  
@@ -53,8 +53,8 @@ ms.locfileid: "54509181"
 >  Windows Form 支援*控制項內含項目*。 控制項內含項目牽涉到將多個控制項內包含的控制項，例如數目<xref:System.Windows.Forms.RadioButton>控制項內<xref:System.Windows.Forms.GroupBox>控制項。 然後，您可以層中包含的控制項的控制項。 移動 [群組] 中移動了控制項，因為它們包含在其中。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
-- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-by-function.md)
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

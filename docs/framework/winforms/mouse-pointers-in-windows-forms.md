@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cursors [Windows Forms], setting
 - mouse [Windows Forms], cursors
 ms.assetid: c3400d85-de5b-42e8-abc3-d6088d69ee53
-ms.openlocfilehash: 02f93a85ecaa13f5f72cd0f31a1f5ffc24c59f68
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c018986498bfbd7e492c3e7a26c94e0baa0576d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491775"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712730"
 ---
 # <a name="mouse-pointers-in-windows-forms"></a>Windows Form 中的滑鼠指標
 滑鼠*指標*，這有時稱為資料指標，是指定婧鎏鶗懘為使用者輸入，使用滑鼠在螢幕的點陣圖。 本主題提供在 Windows Form 中的滑鼠指標的概觀，並說明一些修改和控制滑鼠指標的方式。  
@@ -32,5 +32,5 @@ ms.locfileid: "54491775"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Cursor>
-- [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms 中的拖放功能](../../../docs/framework/winforms/drag-and-drop-functionality-in-windows-forms.md)
+- [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms 中的拖放功能](drag-and-drop-functionality-in-windows-forms.md)

@@ -9,45 +9,46 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 6d2f0a2f4acebaac59f2d8180f2de4ccb88b2965
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33526830"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710455"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>使用影像、點陣圖、圖示和中繼檔
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 `Bitmap` 類別來使用點陣影像，且提供 `Metafile` 類別來使用向量影像。 `Bitmap` 類別和 `Metafile` 類別都是繼承自 `Image` 類別。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供 `Bitmap` 類別來使用點陣影像，且提供 `Metafile` 類別來使用向量影像。 
+  `Bitmap` 類別和 `Metafile` 類別都是繼承自 `Image` 類別。  
   
 ## <a name="in-this-section"></a>本節內容  
- [操作說明：將現有點陣圖描繪至螢幕](../../../../docs/framework/winforms/advanced/how-to-draw-an-existing-bitmap-to-the-screen.md)  
+ [如何：將現有點陣圖描繪至螢幕](how-to-draw-an-existing-bitmap-to-the-screen.md)  
  描述如何載入及繪製點陣圖。  
   
- [操作說明：載入和顯示中繼檔](../../../../docs/framework/winforms/advanced/how-to-load-and-display-metafiles.md)  
+ [如何：載入和顯示中繼檔](how-to-load-and-display-metafiles.md)  
  顯示如何載入及繪製中繼檔。  
   
- [在 GDI+ 中裁剪和縮放影像](../../../../docs/framework/winforms/advanced/cropping-and-scaling-images-in-gdi.md)  
+ [在 GDI+ 中裁剪和縮放影像](cropping-and-scaling-images-in-gdi.md)  
  說明如何裁剪及縮放向量和點陣影像。  
   
- [操作說明：旋轉、反射和傾斜影像](../../../../docs/framework/winforms/advanced/how-to-rotate-reflect-and-skew-images.md)  
+ [如何：旋轉、 反射和傾斜影像](how-to-rotate-reflect-and-skew-images.md)  
  描述如何繪製旋轉、反射和傾斜的影像。  
   
- [操作說明：縮放期間使用插補法模式控制影像品質](../../../../docs/framework/winforms/advanced/how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
+ [如何：在調整期間使用插補法模式控制影像品質](how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
  示範如何使用 <xref:System.Drawing.Drawing2D.InterpolationMode> 列舉變更影像品質。  
   
- [操作說明：建立縮圖影像](../../../../docs/framework/winforms/advanced/how-to-create-thumbnail-images.md)  
+ [如何：建立縮圖影像](how-to-create-thumbnail-images.md)  
  描述如何建立縮圖影像。  
   
- [操作說明：避免自動縮放以提高效能](../../../../docs/framework/winforms/advanced/how-to-improve-performance-by-avoiding-automatic-scaling.md)  
+ [如何：避免自動縮放來改善效能](how-to-improve-performance-by-avoiding-automatic-scaling.md)  
  說明如何在沒有自動縮放比例的情況下繪製影像。  
   
- [操作說明：讀取影像中繼資料](../../../../docs/framework/winforms/advanced/how-to-read-image-metadata.md)  
+ [如何：讀取影像中繼資料](how-to-read-image-metadata.md)  
  描述如何讀取影像的中繼資料。  
   
- [操作說明：在執行階段時建立點陣圖](../../../../docs/framework/winforms/advanced/how-to-create-a-bitmap-at-run-time.md)  
+ [如何：在執行階段建立點陣圖](how-to-create-a-bitmap-at-run-time.md)  
  示範如何在執行階段繪製點陣圖。  
   
- [操作說明：擷取與 Windows Forms 中檔案相關的圖示](../../../../docs/framework/winforms/advanced/how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
+ [如何：擷取與 Windows Form 中檔案相關聯的圖示](how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md)  
  描述如何擷取檔案內嵌資源的圖示。  
   
 ## <a name="reference"></a>參考資料  
@@ -61,5 +62,5 @@ ms.locfileid: "33526830"
  描述這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)  
+ [影像、點陣圖和中繼檔](images-bitmaps-and-metafiles.md)  
  包含主題連結，討論不同類型的點陣圖和在您的應用程式中管理它們。

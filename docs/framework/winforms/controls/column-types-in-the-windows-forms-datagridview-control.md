@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column types
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
-ms.openlocfilehash: d4331d5f502165a73c7f322358b2d6ee88d92977
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fd3ad0da369702c2a5e27c0b8b9a39a71c372ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591577"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724566"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行類型
 <xref:System.Windows.Forms.DataGridView>控制項會用來顯示其資訊，並讓使用者能夠修改或新增資訊的許多資料行類型。  
@@ -30,7 +30,7 @@ ms.locfileid: "54591577"
 |<xref:System.Windows.Forms.DataGridViewButtonColumn>|用來在儲存格中顯示按鈕。 繫結時，不會自動產生。 通常做為未繫結的資料行。|  
 |<xref:System.Windows.Forms.DataGridViewComboBoxColumn>|用來顯示下拉式清單中的資料格。 繫結時，不會自動產生。 通常資料繫結以手動方式。|  
 |<xref:System.Windows.Forms.DataGridViewLinkColumn>|用來在儲存格中顯示連結。 繫結時，不會自動產生。 通常資料繫結以手動方式。|  
-|您的自訂資料行類型|您可以建立您自己的資料行類別繼承<xref:System.Windows.Forms.DataGridViewColumn>類別或任何其衍生的類別，以提供自訂外觀、 行為或裝載的控制項。 如需詳細資訊，請參閱[＜How to：自訂儲存格和 Windows Form DataGridView 控制項中的資料行，藉由擴充其行為和外觀](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
+|您的自訂資料行類型|您可以建立您自己的資料行類別繼承<xref:System.Windows.Forms.DataGridViewColumn>類別或任何其衍生的類別，以提供自訂外觀、 行為或裝載的控制項。 如需詳細資訊，請參閱[如何：自訂儲存格和 Windows Form DataGridView 控制項中的資料行，藉由擴充其行為和外觀](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)|  
   
  這些資料行類型是以更多詳細資料，在下列各節中所述。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54591577"
 ## <a name="datagridviewcomboboxcolumn"></a>DataGridViewComboBoxColumn  
  使用<xref:System.Windows.Forms.DataGridViewComboBoxColumn>，您可以顯示包含下拉式清單方塊的資料格的資料行。 這非常有用的資料中的項目只能包含特定值，例如 Northwind 範例資料庫中的 [產品] 資料表的類別資料行的欄位。  
   
- 您可以填入下拉式清單中的所有儲存格使用相同的方式會填入<xref:System.Windows.Forms.ComboBox>下拉式清單中，以手動方式透過所傳回的集合<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>屬性，或繫結至資料來源 」、 「 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>， <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>，和<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>屬性。 如需詳細資訊，請參閱 < [ComboBox 控制項](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)。  
+ 您可以填入下拉式清單中的所有儲存格使用相同的方式會填入<xref:System.Windows.Forms.ComboBox>下拉式清單中，以手動方式透過所傳回的集合<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>屬性，或繫結至資料來源 」、 「 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>， <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A>，和<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>屬性。 如需詳細資訊，請參閱 < [ComboBox 控制項](combobox-control-windows-forms.md)。  
   
  您可以繫結所使用的資料來源的實際資料格值<xref:System.Windows.Forms.DataGridView>控制項，藉由設定<xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A>屬性<xref:System.Windows.Forms.DataGridViewComboBoxColumn?displayProperty=nameWithType>。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "54591577"
 - <xref:System.Windows.Forms.DataGridViewImageColumn>
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
-- [DataGridView 控制項](../../../../docs/framework/winforms/controls/datagridview-control-windows-forms.md)
-- [如何：Windows Forms DataGridView 控制項的儲存格的顯示影像](../../../../docs/framework/winforms/controls/how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [如何：使用 Windows Form DataGridView 控制項中的影像資料行](../../../../docs/framework/winforms/controls/how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [自訂 Windows Forms DataGridView 控制項](../../../../docs/framework/winforms/controls/customizing-the-windows-forms-datagridview-control.md)
+- [DataGridView 控制項](datagridview-control-windows-forms.md)
+- [如何：Windows Forms DataGridView 控制項的儲存格的顯示影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [如何：使用 Windows Form DataGridView 控制項中的影像資料行](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)

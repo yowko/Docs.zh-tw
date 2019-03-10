@@ -2,12 +2,12 @@
 title: 叫用活動驗證
 ms.date: 03/30/2017
 ms.assetid: 22bef766-c505-4fd4-ac0f-7b363b238969
-ms.openlocfilehash: 61491e906bfc58bbd19cf43a5980b2781493411b
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
+ms.openlocfilehash: 19c2d4773cf15245ba20ff8523ebd7e67d5b9c1d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48035132"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711144"
 ---
 # <a name="invoking-activity-validation"></a>叫用活動驗證
 活動驗證提供的方法可在活動執行前識別及報告任何活動之組態中的錯誤。 在工作流程設計工具中修改工作流程時，若工作流程設計工具中顯示任何驗證錯誤或警告，就會進行驗證。 叫用工作流程時，也會在執行階段進行驗證，而且如果發生任何驗證錯誤，預設驗證邏輯會擲回 <xref:System.Activities.InvalidWorkflowException>。 Windows Workflow Foundation (WF) 提供<xref:System.Activities.Validation.ActivityValidationServices>可以由工作流程應用程式和工具開發人員用來明確驗證活動的類別。 本主題描述如何使用 <xref:System.Activities.Validation.ActivityValidationServices> 執行活動驗證。  
@@ -76,8 +76,8 @@ else
   
  在此工作流程範例中呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 時，會傳回兩個驗證錯誤。  
   
- **錯誤： 未提供必要的活動引數 'Operand2' 的值。**  
-**錯誤： 未提供必要的活動引數 'Operand1' 的值。**  如果叫用這個工作流程，就會擲回 <xref:System.Activities.InvalidWorkflowException>，如下列範例所示。  
+ **錯誤：未提供必要的活動引數 'Operand2' 的值。**  
+**錯誤：未提供必要的活動引數 'Operand1' 的值。**  如果叫用這個工作流程，就會擲回 <xref:System.Activities.InvalidWorkflowException>，如下列範例所示。  
   
 ```csharp  
 try  
@@ -92,8 +92,8 @@ catch (Exception ex)
   
  **System.Activities.InvalidWorkflowException:**  
 **處理工作流程樹狀結構時發生下列錯誤：**   
-**'Add': 未提供必要的活動引數 'Operand2' 的值。**   
-**'Add': 未提供必要的活動引數 'Operand1' 的值。**  若要讓這個工作流程範例生效，就必須繫結 `Add` 活動的兩個必要引數。 在下列範例中，兩個必要引數會與結果值一同繫結於工作流程變數。 在此範例中，<xref:System.Activities.Activity%601.Result%2A> 引數會與兩個必要的引數一同繫結。 <xref:System.Activities.Activity%601.Result%2A> 引數不需繫結，若不繫結此引數，也不會導致驗證錯誤。 如果工作流程中的其他位置會使用 <xref:System.Activities.Activity%601.Result%2A> 的值，工作流程作者必須負責繫結該值。  
+**' Add':未提供必要的活動引數 'Operand2' 的值。**   
+**' Add':未提供必要的活動引數 'Operand1' 的值。**  若要讓這個工作流程範例生效，就必須繫結 `Add` 活動的兩個必要引數。 在下列範例中，兩個必要引數會與結果值一同繫結於工作流程變數。 在此範例中，<xref:System.Activities.Activity%601.Result%2A> 引數會與兩個必要的引數一同繫結。 <xref:System.Activities.Activity%601.Result%2A> 引數不需繫結，若不繫結此引數，也不會導致驗證錯誤。 如果工作流程中的其他位置會使用 <xref:System.Activities.Activity%601.Result%2A> 的值，工作流程作者必須負責繫結該值。  
   
 ```csharp  
 new Add  
@@ -123,10 +123,10 @@ catch (Exception ex)
 }  
 ```  
   
- **System.ArgumentException： 根活動之引數設定不正確。**  
+ **System.ArgumentException:根活動之引數設定不正確。**  
 **請修正工作流程定義，或提供輸入的值來修正這些錯誤：**   
-**'Add': 未提供必要的活動引數 'Operand2' 的值。**   
-**'Add': 未提供必要的活動引數 'Operand1' 的值。**  傳遞正確的引數後，工作流程就會成功完成，如下列範例所示。  
+**' Add':未提供必要的活動引數 'Operand2' 的值。**   
+**' Add':未提供必要的活動引數 'Operand1' 的值。**  傳遞正確的引數後，工作流程就會成功完成，如下列範例所示。  
   
 ```csharp  
 Add wf = new Add();  
@@ -228,13 +228,13 @@ else
 }  
 ```  
   
- **錯誤： 成本必須小於或等於價格。**  
-**錯誤： 未提供必要的活動引數 'Description' 的值。**    
+ **錯誤：成本必須小於或等於價格。**  
+**錯誤：未提供必要的活動引數 'Description' 的值。**    
 > [!NOTE]
 >  自訂活動作者可以在活動的 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 覆寫中提供驗證邏輯。 從 <xref:System.Activities.CodeActivity.CacheMetadata%2A> 擲回的任何例外狀況都不會被視為驗證錯誤。 這些例外狀況會從 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中逸出，而且必須由呼叫端處理。  
   
 ## <a name="using-validationsettings"></a>使用 ValidationSettings  
- 根據預設，當 <xref:System.Activities.Validation.ActivityValidationServices> 叫用驗證時，會評估活動樹狀結構中的所有活動。 <xref:System.Activities.Validation.ValidationSettings> 允許透過設定驗證的三個屬性，以數種不同的方式自訂驗證。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定驗證程式是否應逐一查核整個活動樹狀結構，或者只需將驗證邏輯套用於所提供的活動。 此值的預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 會指定從型別至條件約束清單的其他條件約束對應。 為取得要驗證之活動樹狀結構中每個活動的基底型別，會查詢 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到相符的條件約束清單，會為該活動評估清單中的所有條件約束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定驗證程式是否應評估所有條件約束，或者只需評估 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的條件約束。 預設值是 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 適合讓工作流程主機作者用來新增額外的工作流程驗證，例如 FxCop 等工具的原則條件約束。 如需有關條件約束的詳細資訊，請參閱[宣告式條件約束](../../../docs/framework/windows-workflow-foundation/declarative-constraints.md)。  
+ 根據預設，當 <xref:System.Activities.Validation.ActivityValidationServices> 叫用驗證時，會評估活動樹狀結構中的所有活動。 <xref:System.Activities.Validation.ValidationSettings> 允許透過設定驗證的三個屬性，以數種不同的方式自訂驗證。 <xref:System.Activities.Validation.ValidationSettings.SingleLevel%2A> 指定驗證程式是否應逐一查核整個活動樹狀結構，或者只需將驗證邏輯套用於所提供的活動。 此值的預設值為 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 會指定從型別至條件約束清單的其他條件約束對應。 為取得要驗證之活動樹狀結構中每個活動的基底型別，會查詢 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>。 如果找到相符的條件約束清單，會為該活動評估清單中的所有條件約束。 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 指定驗證程式是否應評估所有條件約束，或者只需評估 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A> 中指定的條件約束。 預設值是 `false`。 <xref:System.Activities.Validation.ValidationSettings.AdditionalConstraints%2A>和 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 適合讓工作流程主機作者用來新增額外的工作流程驗證，例如 FxCop 等工具的原則條件約束。 如需有關條件約束的詳細資訊，請參閱[宣告式條件約束](declarative-constraints.md)。  
   
  若要使用 <xref:System.Activities.Validation.ValidationSettings>，請設定所需的屬性，然後在對 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 的呼叫中傳遞它。 在此範例中，會驗證包含 <xref:System.Activities.Statements.Sequence> 的活動 (該活動具有 `Add` 活動)。 `Add` 活動具有兩個必要引數。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: 5e9e75876862a73be7ace08c09610923d007de4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540854"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717618"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>管理圖形物件的狀態
 <xref:System.Drawing.Graphics>類別的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。 若要繪製的任何項目，取得<xref:System.Drawing.Graphics>物件、 設定其屬性，並呼叫其方法<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>， <xref:System.Drawing.Graphics.DrawString%2A>，等等)。  
@@ -67,7 +67,7 @@ graphics.DrawEllipse(pen, 0, 150, 200, 100);
 ```  
   
 ### <a name="transformations"></a>轉換  
- A<xref:System.Drawing.Graphics>物件會維護套用至所有項目所繪製的兩個轉換 （全局和頁面）<xref:System.Drawing.Graphics>物件。 任何仿射轉換可以儲存在全局轉換。 仿射轉換包括縮放、 旋轉、 反射、 扭曲，和轉譯。 可用於頁面轉換，調整和變更單位 （例如，像素為單位為英吋）。 如需詳細資訊，請參閱 <<c0> [ 座標系統和轉換](../../../../docs/framework/winforms/advanced/coordinate-systems-and-transformations.md)。  
+ A<xref:System.Drawing.Graphics>物件會維護套用至所有項目所繪製的兩個轉換 （全局和頁面）<xref:System.Drawing.Graphics>物件。 任何仿射轉換可以儲存在全局轉換。 仿射轉換包括縮放、 旋轉、 反射、 扭曲，和轉譯。 可用於頁面轉換，調整和變更單位 （例如，像素為單位為英吋）。 如需詳細資訊，請參閱 <<c0> [ 座標系統和轉換](coordinate-systems-and-transformations.md)。  
   
  下列範例會設定全局和頁面轉換<xref:System.Drawing.Graphics>物件。 全局轉換設定為 30 度的旋轉。 「 頁面 」 轉換會設定以便座標傳遞給第二個<xref:System.Drawing.Graphics.DrawEllipse%2A>會被視為公釐為單位，而不是像素為單位。 程式碼會建立兩個相同呼叫<xref:System.Drawing.Graphics.DrawEllipse%2A>方法。 全局轉換會套用至第一個<xref:System.Drawing.Graphics.DrawEllipse%2A>呼叫時，並 （全局和頁面） 這兩種轉換會套用至第二個<xref:System.Drawing.Graphics.DrawEllipse%2A>呼叫。  
   
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  下圖顯示兩個橢圓形。 請注意，30 度旋轉的座標系統 （用戶端區域的左上角） 原點，不需橢圓形的中心。 也請注意畫筆寬度為 1，表示第二個橢圓形的 1 個像素的第一個橢圓形和 1 公釐。  
   
- ![橢圓形](../../../../docs/framework/winforms/advanced/media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![橢圓形](./media/csgraphicsascon1.png "csgraphicsascon1")  
   
 ### <a name="clipping-region"></a>裁剪區域  
  A<xref:System.Drawing.Graphics>物件會維護適用於所有的項目所繪製的裁剪區域<xref:System.Drawing.Graphics>物件。 您可以藉由呼叫設定的裁剪區域<xref:System.Drawing.Graphics.SetClip%2A>方法。  
@@ -148,8 +148,8 @@ graphics.DrawLine(pen, 40, 20, 190, 150);
   
  下圖顯示裁剪的線條。  
   
- ![有限的裁剪區域](../../../../docs/framework/winforms/advanced/media/graphicsascon2.png "graphicsascon2")  
+ ![有限的裁剪區域](./media/graphicsascon2.png "graphicsascon2")  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 中的圖形和繪圖](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
-- [使用巢狀圖形容器](../../../../docs/framework/winforms/advanced/using-nested-graphics-containers.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [使用巢狀圖形容器](using-nested-graphics-containers.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: d3082da455df7497a4c54f963017910e54ac677a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536304"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717904"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的調整大小選項
 <xref:System.Windows.Forms.DataGridView> 資料列、 資料行和標頭可以變更大小，因為許多不同的項目。 下表顯示這些項目。  
@@ -61,7 +61,7 @@ ms.locfileid: "54536304"
 ## <a name="automatic-sizing"></a>自動調整大小  
  有兩種類型中的自動調整大小的<xref:System.Windows.Forms.DataGridView>控制項： 資料行填滿模式和以內容為基礎的自動調整大小。  
   
- 資料行填入模式會導致要填滿控制項的顯示區域寬度的控制項中的可見資料行。 如需有關此模式的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的資料行填滿模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)。  
+ 資料行填入模式會導致要填滿控制項的顯示區域寬度的控制項中的可見資料行。 如需有關此模式的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的資料行填滿模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)。  
   
  您也可以設定資料列、 資料行，以及自動調整其大小以適合其儲存格內容的標頭。 在此情況下，儲存格的內容變更時，就會發生大小調整。  
   
@@ -154,6 +154,6 @@ ms.locfileid: "54536304"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](../../../../docs/framework/winforms/controls/resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料行填入模式](../../../../docs/framework/winforms/controls/column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [如何：設定 Windows Forms DataGridView 控制項的縮放模式](../../../../docs/framework/winforms/controls/how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的資料行填入模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [如何：設定 Windows Forms DataGridView 控制項的縮放模式](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

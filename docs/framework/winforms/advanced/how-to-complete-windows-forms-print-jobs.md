@@ -9,17 +9,17 @@ helpviewer_keywords:
 - print jobs [Windows Forms], completing in Windows Forms
 - printing [Windows Forms], print jobs
 ms.assetid: 23ec74f7-34c5-4710-82a0-ee2914518548
-ms.openlocfilehash: f7504d645ea1fca6f45b17f79eb576919b782263
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ae20e4fdc3a4fc3de8c462c355bcc700eddf22e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572821"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711729"
 ---
 # <a name="how-to-complete-windows-forms-print-jobs"></a>HOW TO：完整的 Windows Forms 列印工作
 通常，文書處理器和其他應用程式牽涉到列印會提供對列印工作已完成的使用者顯示一則訊息的選項。 您可以在 Windows Forms 中提供這項功能，藉由處理<xref:System.Drawing.Printing.PrintDocument.EndPrint>事件的<xref:System.Drawing.Printing.PrintDocument>元件。  
   
- 下列程序需要您已建立的 Windows 應用程式與<xref:System.Drawing.Printing.PrintDocument>它，也就是標準的方式，啟用從以 Windows 為基礎的應用程式列印的元件。 如需有關從使用 Windows Form 列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:建立標準的 Windows Forms 列印工作](../../../../docs/framework/winforms/advanced/how-to-create-standard-windows-forms-print-jobs.md)。  
+ 下列程序需要您已建立的 Windows 應用程式與<xref:System.Drawing.Printing.PrintDocument>它，也就是標準的方式，啟用從以 Windows 為基礎的應用程式列印的元件。 如需有關從使用 Windows Form 列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:建立標準的 Windows Forms 列印工作](how-to-create-standard-windows-forms-print-jobs.md)。  
   
 ### <a name="to-complete-a-print-job"></a>若要完成列印工作  
   
@@ -82,4 +82,4 @@ ms.locfileid: "54572821"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Drawing.Printing.PrintDocument>
-- [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
+- [Windows Forms 列印支援](windows-forms-print-support.md)
