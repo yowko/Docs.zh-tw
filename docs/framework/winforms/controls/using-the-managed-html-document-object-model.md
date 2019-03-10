@@ -4,38 +4,38 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: 5c3882e29caa0c327242ed3e815b7c17ef0e2075
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746674"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721897"
 ---
-# <a name="using-the-managed-html-document-object-model"></a><span data-ttu-id="84ac0-102">使用 Managed HTML 文件物件模型</span><span class="sxs-lookup"><span data-stu-id="84ac0-102">Using the Managed HTML Document Object Model</span></span>
-<span data-ttu-id="84ac0-103">受管理的 HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]HTML 類別公開的 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="84ac0-103">The managed HTML document object model (DOM) provides a wrapper based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for the HTML classes exposed by Internet Explorer.</span></span> <span data-ttu-id="84ac0-104">使用這些類別來操作中裝載的 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或建置新的頁面，從一開始。</span><span class="sxs-lookup"><span data-stu-id="84ac0-104">Use these classes to manipulate HTML pages hosted in the <xref:System.Windows.Forms.WebBrowser> control, or to build new pages from the beginning.</span></span>  
+# <a name="using-the-managed-html-document-object-model"></a><span data-ttu-id="19de1-102">使用 Managed HTML 文件物件模型</span><span class="sxs-lookup"><span data-stu-id="19de1-102">Using the Managed HTML Document Object Model</span></span>
+<span data-ttu-id="19de1-103">受管理的 HTML 文件物件模型 (DOM) 提供的包裝函式，根據[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]HTML 類別公開的 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="19de1-103">The managed HTML document object model (DOM) provides a wrapper based on the [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] for the HTML classes exposed by Internet Explorer.</span></span> <span data-ttu-id="19de1-104">使用這些類別來操作中裝載的 HTML 網頁<xref:System.Windows.Forms.WebBrowser>控制項，或建置新的頁面，從一開始。</span><span class="sxs-lookup"><span data-stu-id="19de1-104">Use these classes to manipulate HTML pages hosted in the <xref:System.Windows.Forms.WebBrowser> control, or to build new pages from the beginning.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="84ac0-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="84ac0-105">In This Section</span></span>  
- [<span data-ttu-id="84ac0-106">如何：存取 Managed 的 HTML 文件物件模型</span><span class="sxs-lookup"><span data-stu-id="84ac0-106">How to: Access the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-access-the-managed-html-document-object-model.md)  
- <span data-ttu-id="84ac0-107">說明如何取得有效的執行個體的<xref:System.Windows.Forms.HtmlDocument>從 Windows Form 應用程式或<xref:System.Windows.Forms.UserControl>裝載於 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="84ac0-107">Describes how to obtain a valid instance of <xref:System.Windows.Forms.HtmlDocument> from either a Windows Forms application or a <xref:System.Windows.Forms.UserControl> hosted in Internet Explorer.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="19de1-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="19de1-105">In This Section</span></span>  
+ [<span data-ttu-id="19de1-106">如何：存取 Managed 的 HTML 文件物件模型</span><span class="sxs-lookup"><span data-stu-id="19de1-106">How to: Access the Managed HTML Document Object Model</span></span>](how-to-access-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="19de1-107">說明如何取得有效的執行個體的<xref:System.Windows.Forms.HtmlDocument>從 Windows Form 應用程式或<xref:System.Windows.Forms.UserControl>裝載於 Internet Explorer。</span><span class="sxs-lookup"><span data-stu-id="19de1-107">Describes how to obtain a valid instance of <xref:System.Windows.Forms.HtmlDocument> from either a Windows Forms application or a <xref:System.Windows.Forms.UserControl> hosted in Internet Explorer.</span></span>  
   
- [<span data-ttu-id="84ac0-108">如何：存取 Managed 的 HTML 文件物件模型中的 HTML 原始檔</span><span class="sxs-lookup"><span data-stu-id="84ac0-108">How to: Access the HTML Source in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-access-the-html-source-in-the-managed-html-document-object-model.md)  
- <span data-ttu-id="84ac0-109">描述濆爧髍孮原始、 未修改的 HTML 原始檔，以及如何取得的 「 即時 」 的來源，以反映 DOM 的目前狀態</span><span class="sxs-lookup"><span data-stu-id="84ac0-109">Describes how to obtain the original, unmodified HTML source, and how to obtain the "live" source that reflects the current state of the DOM.</span></span>  
+ [<span data-ttu-id="19de1-108">如何：存取 Managed 的 HTML 文件物件模型中的 HTML 原始檔</span><span class="sxs-lookup"><span data-stu-id="19de1-108">How to: Access the HTML Source in the Managed HTML Document Object Model</span></span>](how-to-access-the-html-source-in-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="19de1-109">描述濆爧髍孮原始、 未修改的 HTML 原始檔，以及如何取得的 「 即時 」 的來源，以反映 DOM 的目前狀態</span><span class="sxs-lookup"><span data-stu-id="19de1-109">Describes how to obtain the original, unmodified HTML source, and how to obtain the "live" source that reflects the current state of the DOM.</span></span>  
   
- [<span data-ttu-id="84ac0-110">如何：變更 Managed 的 HTML 文件物件模型中的項目樣式</span><span class="sxs-lookup"><span data-stu-id="84ac0-110">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md)  
- <span data-ttu-id="84ac0-111">描述如何管理樣式，可用來控制視覺顯示的項目。</span><span class="sxs-lookup"><span data-stu-id="84ac0-111">Describes how to manipulate styles, which are used to control the visual display of elements.</span></span>  
+ [<span data-ttu-id="19de1-110">如何：變更 Managed 的 HTML 文件物件模型中的項目樣式</span><span class="sxs-lookup"><span data-stu-id="19de1-110">How to: Change Styles on an Element in the Managed HTML Document Object Model</span></span>](how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="19de1-111">描述如何管理樣式，可用來控制視覺顯示的項目。</span><span class="sxs-lookup"><span data-stu-id="19de1-111">Describes how to manipulate styles, which are used to control the visual display of elements.</span></span>  
   
- [<span data-ttu-id="84ac0-112">存取 Managed HTML 文件物件模型中的框架</span><span class="sxs-lookup"><span data-stu-id="84ac0-112">Accessing Frames in the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/accessing-frames-in-the-managed-html-document-object-model.md)  
- <span data-ttu-id="84ac0-113">描述框架和框架是什麼，以及如何存取框架的 DOM。</span><span class="sxs-lookup"><span data-stu-id="84ac0-113">Describes what frames and framesets are, and how to access the DOM of a frame.</span></span>  
+ [<span data-ttu-id="19de1-112">存取 Managed HTML 文件物件模型中的框架</span><span class="sxs-lookup"><span data-stu-id="19de1-112">Accessing Frames in the Managed HTML Document Object Model</span></span>](accessing-frames-in-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="19de1-113">描述框架和框架是什麼，以及如何存取框架的 DOM。</span><span class="sxs-lookup"><span data-stu-id="19de1-113">Describes what frames and framesets are, and how to access the DOM of a frame.</span></span>  
   
- [<span data-ttu-id="84ac0-114">存取 Managed HTML 文件物件模型上未公開的成員</span><span class="sxs-lookup"><span data-stu-id="84ac0-114">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>](../../../../docs/framework/winforms/controls/accessing-unexposed-members-on-the-managed-html-document-object-model.md)  
- <span data-ttu-id="84ac0-115">描述如何存取基礎 DOM 的受管理的對等項目沒有的成員。</span><span class="sxs-lookup"><span data-stu-id="84ac0-115">Describes how to access members of the underlying DOM that do not have a managed equivalent.</span></span>  
+ [<span data-ttu-id="19de1-114">存取 Managed HTML 文件物件模型上未公開的成員</span><span class="sxs-lookup"><span data-stu-id="19de1-114">Accessing Unexposed Members on the Managed HTML Document Object Model</span></span>](accessing-unexposed-members-on-the-managed-html-document-object-model.md)  
+ <span data-ttu-id="19de1-115">描述如何存取基礎 DOM 的受管理的對等項目沒有的成員。</span><span class="sxs-lookup"><span data-stu-id="19de1-115">Describes how to access members of the underlying DOM that do not have a managed equivalent.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="84ac0-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="84ac0-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="19de1-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="19de1-116">Reference</span></span>  
  <xref:System.Windows.Forms.HtmlDocument>  
   
  <xref:System.Windows.Forms.HtmlElement>  
   
  <xref:System.Windows.Forms.HtmlWindow>  
   
-## <a name="related-sections"></a><span data-ttu-id="84ac0-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="84ac0-117">Related Sections</span></span>  
- [<span data-ttu-id="84ac0-118">WebBrowser 控制項</span><span class="sxs-lookup"><span data-stu-id="84ac0-118">WebBrowser Control</span></span>](../../../../docs/framework/winforms/controls/webbrowser-control-windows-forms.md)  
+## <a name="related-sections"></a><span data-ttu-id="19de1-117">相關章節</span><span class="sxs-lookup"><span data-stu-id="19de1-117">Related Sections</span></span>  
+ [<span data-ttu-id="19de1-118">WebBrowser 控制項</span><span class="sxs-lookup"><span data-stu-id="19de1-118">WebBrowser Control</span></span>](webbrowser-control-windows-forms.md)  

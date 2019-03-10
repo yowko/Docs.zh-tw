@@ -7,38 +7,38 @@ helpviewer_keywords:
 - examples [Windows Forms], pens
 - drawing
 ms.assetid: 8a7542ab-3e9e-443f-8405-2d6053528e20
-ms.openlocfilehash: 667a5b13c5e8cb5d9a693d6f8512b254f130d606
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3846c59712cec6003c35f336714041544dec94b3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33524338"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716272"
 ---
-# <a name="using-a-pen-to-draw-lines-and-shapes"></a><span data-ttu-id="ebde4-102">使用畫筆繪製線條和形狀</span><span class="sxs-lookup"><span data-stu-id="ebde4-102">Using a Pen to Draw Lines and Shapes</span></span>
-<span data-ttu-id="ebde4-103">使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`繪製直線線段、 曲線和形狀框線的物件。</span><span class="sxs-lookup"><span data-stu-id="ebde4-103">Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objects to draw line segments, curves, and the outlines of shapes.</span></span> <span data-ttu-id="ebde4-104">在本節中，*列*指的是這些項目，除非另有指定，意指只直線線段。</span><span class="sxs-lookup"><span data-stu-id="ebde4-104">In this section, *line* refers to any of these, unless specified to mean only a line segment.</span></span> <span data-ttu-id="ebde4-105">設定的畫筆用來控制色彩、 寬度、 對齊方式和使用該畫筆繪製的直線樣式屬性。</span><span class="sxs-lookup"><span data-stu-id="ebde4-105">Set the properties of a pen to control the color, width, alignment, and style of lines drawn with that pen.</span></span>  
+# <a name="using-a-pen-to-draw-lines-and-shapes"></a><span data-ttu-id="45806-102">使用畫筆繪製線條和形狀</span><span class="sxs-lookup"><span data-stu-id="45806-102">Using a Pen to Draw Lines and Shapes</span></span>
+<span data-ttu-id="45806-103">使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]`Pen`繪製直線線段、 曲線和圖形的外框輪廓的物件。</span><span class="sxs-lookup"><span data-stu-id="45806-103">Use [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] `Pen` objects to draw line segments, curves, and the outlines of shapes.</span></span> <span data-ttu-id="45806-104">在本節中，*列*指的是任何一個，除非另有指定，意指只直線線段。</span><span class="sxs-lookup"><span data-stu-id="45806-104">In this section, *line* refers to any of these, unless specified to mean only a line segment.</span></span> <span data-ttu-id="45806-105">設定的畫筆用來控制色彩、 寬度、 對齊和使用該畫筆繪製線條的樣式屬性。</span><span class="sxs-lookup"><span data-stu-id="45806-105">Set the properties of a pen to control the color, width, alignment, and style of lines drawn with that pen.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="ebde4-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="ebde4-106">In This Section</span></span>  
- [<span data-ttu-id="ebde4-107">操作說明：使用畫筆繪製線條</span><span class="sxs-lookup"><span data-stu-id="ebde4-107">How to: Use a Pen to Draw Lines</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-lines.md)  
- <span data-ttu-id="ebde4-108">說明如何繪製線條。</span><span class="sxs-lookup"><span data-stu-id="ebde4-108">Explains how to draw lines.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="45806-106">本節內容</span><span class="sxs-lookup"><span data-stu-id="45806-106">In This Section</span></span>  
+ [<span data-ttu-id="45806-107">如何：使用畫筆繪製線條</span><span class="sxs-lookup"><span data-stu-id="45806-107">How to: Use a Pen to Draw Lines</span></span>](how-to-use-a-pen-to-draw-lines.md)  
+ <span data-ttu-id="45806-108">說明如何繪製線條。</span><span class="sxs-lookup"><span data-stu-id="45806-108">Explains how to draw lines.</span></span>  
   
- [<span data-ttu-id="ebde4-109">操作說明：使用畫筆繪製矩形</span><span class="sxs-lookup"><span data-stu-id="ebde4-109">How to: Use a Pen to Draw Rectangles</span></span>](../../../../docs/framework/winforms/advanced/how-to-use-a-pen-to-draw-rectangles.md)  
- <span data-ttu-id="ebde4-110">描述如何繪製矩形。</span><span class="sxs-lookup"><span data-stu-id="ebde4-110">Describes how to draw rectangles.</span></span>  
+ [<span data-ttu-id="45806-109">如何：使用畫筆繪製矩形</span><span class="sxs-lookup"><span data-stu-id="45806-109">How to: Use a Pen to Draw Rectangles</span></span>](how-to-use-a-pen-to-draw-rectangles.md)  
+ <span data-ttu-id="45806-110">描述如何繪製矩形。</span><span class="sxs-lookup"><span data-stu-id="45806-110">Describes how to draw rectangles.</span></span>  
   
- [<span data-ttu-id="ebde4-111">操作說明：設定畫筆寬度和對齊</span><span class="sxs-lookup"><span data-stu-id="ebde4-111">How to: Set Pen Width and Alignment</span></span>](../../../../docs/framework/winforms/advanced/how-to-set-pen-width-and-alignment.md)  
- <span data-ttu-id="ebde4-112">說明如何變更的寬度和對齊`Pen`物件。</span><span class="sxs-lookup"><span data-stu-id="ebde4-112">Explains how to change the width and alignment of a `Pen` object.</span></span>  
+ [<span data-ttu-id="45806-111">如何：設定畫筆寬度和對齊方式</span><span class="sxs-lookup"><span data-stu-id="45806-111">How to: Set Pen Width and Alignment</span></span>](how-to-set-pen-width-and-alignment.md)  
+ <span data-ttu-id="45806-112">說明如何變更寬度和對齊方式`Pen`物件。</span><span class="sxs-lookup"><span data-stu-id="45806-112">Explains how to change the width and alignment of a `Pen` object.</span></span>  
   
- [<span data-ttu-id="ebde4-113">操作說明：繪製包含線條形式的線條</span><span class="sxs-lookup"><span data-stu-id="ebde4-113">How to: Draw a Line with Line Caps</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-with-line-caps.md)  
- <span data-ttu-id="ebde4-114">描述如何繪製一條線時加入端點。</span><span class="sxs-lookup"><span data-stu-id="ebde4-114">Describes how to add end caps when drawing a line.</span></span>  
+ [<span data-ttu-id="45806-113">如何：繪製包含線條帽緣的線條</span><span class="sxs-lookup"><span data-stu-id="45806-113">How to: Draw a Line with Line Caps</span></span>](how-to-draw-a-line-with-line-caps.md)  
+ <span data-ttu-id="45806-114">描述如何繪製一條線時，加入端點。</span><span class="sxs-lookup"><span data-stu-id="45806-114">Describes how to add end caps when drawing a line.</span></span>  
   
- [<span data-ttu-id="ebde4-115">操作說明：聯結線條</span><span class="sxs-lookup"><span data-stu-id="ebde4-115">How to: Join Lines</span></span>](../../../../docs/framework/winforms/advanced/how-to-join-lines.md)  
- <span data-ttu-id="ebde4-116">示範如何聯結兩個線條。</span><span class="sxs-lookup"><span data-stu-id="ebde4-116">Shows how to join two lines.</span></span>  
+ [<span data-ttu-id="45806-115">如何：聯結線條</span><span class="sxs-lookup"><span data-stu-id="45806-115">How to: Join Lines</span></span>](how-to-join-lines.md)  
+ <span data-ttu-id="45806-116">示範如何聯結兩個線條。</span><span class="sxs-lookup"><span data-stu-id="45806-116">Shows how to join two lines.</span></span>  
   
- [<span data-ttu-id="ebde4-117">操作說明：繪製自訂短折線</span><span class="sxs-lookup"><span data-stu-id="ebde4-117">How to: Draw a Custom Dashed Line</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-custom-dashed-line.md)  
- <span data-ttu-id="ebde4-118">描述如何繪製虛線。</span><span class="sxs-lookup"><span data-stu-id="ebde4-118">Describes how to draw a dashed line.</span></span>  
+ [<span data-ttu-id="45806-117">如何：繪製自訂短折線</span><span class="sxs-lookup"><span data-stu-id="45806-117">How to: Draw a Custom Dashed Line</span></span>](how-to-draw-a-custom-dashed-line.md)  
+ <span data-ttu-id="45806-118">描述如何繪製虛線的線條。</span><span class="sxs-lookup"><span data-stu-id="45806-118">Describes how to draw a dashed line.</span></span>  
   
- [<span data-ttu-id="ebde4-119">操作說明：繪製填滿材質的線條</span><span class="sxs-lookup"><span data-stu-id="ebde4-119">How to: Draw a Line Filled with a Texture</span></span>](../../../../docs/framework/winforms/advanced/how-to-draw-a-line-filled-with-a-texture.md)  
- <span data-ttu-id="ebde4-120">說明如何繪製填滿材質的線條。</span><span class="sxs-lookup"><span data-stu-id="ebde4-120">Explains how to draw a texture-filled line.</span></span>  
+ [<span data-ttu-id="45806-119">如何：繪製填滿材質的線條</span><span class="sxs-lookup"><span data-stu-id="45806-119">How to: Draw a Line Filled with a Texture</span></span>](how-to-draw-a-line-filled-with-a-texture.md)  
+ <span data-ttu-id="45806-120">說明如何繪製填滿紋理的線條。</span><span class="sxs-lookup"><span data-stu-id="45806-120">Explains how to draw a texture-filled line.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="ebde4-121">參考資料</span><span class="sxs-lookup"><span data-stu-id="ebde4-121">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="45806-121">參考資料</span><span class="sxs-lookup"><span data-stu-id="45806-121">Reference</span></span>  
  <xref:System.Drawing.Pen>  
- <span data-ttu-id="ebde4-122">描述這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="ebde4-122">Describes this class and has links to all its members.</span></span>
+ <span data-ttu-id="45806-122">說明這個類別，並且提供其所有成員的連結。</span><span class="sxs-lookup"><span data-stu-id="45806-122">Describes this class and has links to all its members.</span></span>

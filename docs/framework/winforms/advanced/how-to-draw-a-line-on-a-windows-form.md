@@ -12,29 +12,29 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
-ms.openlocfilehash: 4274072b55c79cfe88e906d1401d275b414ebe97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68c1d9220754e40e8eef4b5ed63c1fba63b541e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586739"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713731"
 ---
-# <a name="how-to-draw-a-line-on-a-windows-form"></a><span data-ttu-id="98264-102">HOW TO：在 Windows Form 上繪製線條</span><span class="sxs-lookup"><span data-stu-id="98264-102">How to: Draw a Line on a Windows Form</span></span>
-<span data-ttu-id="98264-103">此範例會在表單上繪製一條線。</span><span class="sxs-lookup"><span data-stu-id="98264-103">This example draws a line on a form.</span></span> <span data-ttu-id="98264-104">一般而言，當您在表單上繪製時，您處理表單的<xref:System.Windows.Forms.Control.Paint>事件並執行使用繪圖<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>，在此範例中所示</span><span class="sxs-lookup"><span data-stu-id="98264-104">Typically, when you draw on a form, you handle the form’s  <xref:System.Windows.Forms.Control.Paint> event and perform the drawing using the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property of the <xref:System.Windows.Forms.PaintEventArgs>, as shown in this example</span></span>  
+# <a name="how-to-draw-a-line-on-a-windows-form"></a><span data-ttu-id="770ce-102">HOW TO：在 Windows Form 上繪製線條</span><span class="sxs-lookup"><span data-stu-id="770ce-102">How to: Draw a Line on a Windows Form</span></span>
+<span data-ttu-id="770ce-103">此範例會在表單上繪製一條線。</span><span class="sxs-lookup"><span data-stu-id="770ce-103">This example draws a line on a form.</span></span> <span data-ttu-id="770ce-104">一般而言，當您在表單上繪製時，您處理表單的<xref:System.Windows.Forms.Control.Paint>事件並執行使用繪圖<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>，在此範例中所示</span><span class="sxs-lookup"><span data-stu-id="770ce-104">Typically, when you draw on a form, you handle the form’s  <xref:System.Windows.Forms.Control.Paint> event and perform the drawing using the <xref:System.Windows.Forms.PaintEventArgs.Graphics%2A> property of the <xref:System.Windows.Forms.PaintEventArgs>, as shown in this example</span></span>  
   
-## <a name="example"></a><span data-ttu-id="98264-105">範例</span><span class="sxs-lookup"><span data-stu-id="98264-105">Example</span></span>  
- [!code-csharp[System.Drawing.UsingAPen#11](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#11)]
- [!code-vb[System.Drawing.UsingAPen#11](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
+## <a name="example"></a><span data-ttu-id="770ce-105">範例</span><span class="sxs-lookup"><span data-stu-id="770ce-105">Example</span></span>  
+ [!code-csharp[System.Drawing.UsingAPen#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#11)]
+ [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="98264-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="98264-106">Compiling the Code</span></span>  
- <span data-ttu-id="98264-107">上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="98264-107">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="770ce-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="770ce-106">Compiling the Code</span></span>  
+ <span data-ttu-id="770ce-107">上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。</span><span class="sxs-lookup"><span data-stu-id="770ce-107">The preceding example is designed for use with Windows Forms, and it requires <xref:System.Windows.Forms.PaintEventArgs>`e`, which is a parameter of the <xref:System.Windows.Forms.Control.Paint> event handler.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="98264-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="98264-108">Robust Programming</span></span>  
- <span data-ttu-id="98264-109">您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>物件。</span><span class="sxs-lookup"><span data-stu-id="98264-109">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="770ce-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="770ce-108">Robust Programming</span></span>  
+ <span data-ttu-id="770ce-109">您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>物件。</span><span class="sxs-lookup"><span data-stu-id="770ce-109">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="98264-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="98264-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="770ce-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="770ce-110">See also</span></span>
 - <xref:System.Drawing.Graphics.DrawLine%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
-- [<span data-ttu-id="98264-111">圖形程式設計入門</span><span class="sxs-lookup"><span data-stu-id="98264-111">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="98264-112">使用畫筆繪製線條和形狀</span><span class="sxs-lookup"><span data-stu-id="98264-112">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [<span data-ttu-id="98264-113">Windows Forms 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="98264-113">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="770ce-111">圖形程式設計入門</span><span class="sxs-lookup"><span data-stu-id="770ce-111">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="770ce-112">使用畫筆繪製線條和形狀</span><span class="sxs-lookup"><span data-stu-id="770ce-112">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
+- [<span data-ttu-id="770ce-113">Windows Forms 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="770ce-113">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
