@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], cross-thread calls
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
-ms.openlocfilehash: ef7836721df6c090a4d09c38c176641331c3e8a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362561"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714004"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>HOW TO：進行對 Windows Form 控制項的安全執行緒呼叫
 
-多執行緒可以改善效能的 Windows Forms 應用程式，但存取 Windows Form 控制項不是原本就是執行緒安全。 多執行緒可以公開您的程式碼非常嚴重且複雜的錯誤。 管理控制項的兩個或多個執行緒可以強制控制項進入不一致的狀態，並會導致競爭情況、 死結和凍結或停止回應。 如果您實作多執行緒在您的應用程式，務必以安全執行緒方式呼叫跨執行緒的控制項。 如需詳細資訊，請參閱 < [Managed 執行緒最佳做法](../../../../docs/standard/threading/managed-threading-best-practices.md)。 
+多執行緒可以改善效能的 Windows Forms 應用程式，但存取 Windows Form 控制項不是原本就是執行緒安全。 多執行緒可以公開您的程式碼非常嚴重且複雜的錯誤。 管理控制項的兩個或多個執行緒可以強制控制項進入不一致的狀態，並會導致競爭情況、 死結和凍結或停止回應。 如果您實作多執行緒在您的應用程式，務必以安全執行緒方式呼叫跨執行緒的控制項。 如需詳細資訊，請參閱 < [Managed 執行緒最佳做法](../../../standard/threading/managed-threading-best-practices.md)。 
 
 有兩種方式可安全地從未建立該控制項的執行緒中呼叫的 Windows Form 控制項。 您可以使用<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>方法來呼叫在主執行緒，也就會呼叫控制項中建立的委派。 或者，您可以實作<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>，這會使用事件驅動的模型來分隔結果報告在背景執行緒完成工作。 
 
@@ -75,8 +75,8 @@ Visual Studio 偵錯工具偵測到這些不安全的執行緒呼叫，藉由引
 
 `SafeCallDelegate`可讓設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 `WriteTextSafe`方法查詢<xref:System.Windows.Forms.Control.InvokeRequired%2A>。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>會傳回`true`，`WriteTextSafe`傳遞`SafeCallDelegate`到<xref:System.Windows.Forms.Control.Invoke%2A>進行控制項實際呼叫的方法。 如果<xref:System.Windows.Forms.Control.InvokeRequired%2A>會傳回`false`，`WriteTextSafe`設定<xref:System.Windows.Forms.TextBox.Text%2A?displayProperty=nameWithType>直接。 `Button1_Click`事件處理常式會建立新的執行緒，並執行`WriteTextSafe`方法。 
 
- [!code-csharp[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#1](../../../../samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#1](~/samples/snippets/winforms/thread-safe/example1/vb/Form1.vb)]  
 
 ## <a name="example-use-a-backgroundworker-event-handler"></a>範例：使用 BackgroundWorker 事件處理常式
 
@@ -86,12 +86,12 @@ Visual Studio 偵錯工具偵測到這些不安全的執行緒呼叫，藉由引
 
 此範例會使用<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>若要設定的事件處理常式<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 使用範例<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件，請參閱<xref:System.ComponentModel.BackgroundWorker>。 
 
- [!code-csharp[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
- [!code-vb[ThreadSafeCalls#2](../../../../samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
+ [!code-csharp[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/cs/Form1.cs)]
+ [!code-vb[ThreadSafeCalls#2](~/samples/snippets/winforms/thread-safe/example2/vb/Form1.vb)]  
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker>
-- [如何：在背景執行作業](../../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [如何：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [開發以.NET Framework 的自訂 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
+- [如何：在背景執行作業](how-to-run-an-operation-in-the-background.md)
+- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [開發以.NET Framework 的自訂 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

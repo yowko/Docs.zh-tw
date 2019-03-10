@@ -20,12 +20,12 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597849"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707998"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>HOW TO：建立 Windows Form 控制項的便捷鍵
 *便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。 使用存取金鑰，使用者可以 「 按一下 」 按鈕在組合中按 ALT 鍵，以預先定義的存取金鑰。 例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將新增連字號，再以字母"P"會導致字母"P"中加上底線按鈕的文字在執行階段。 使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。 您不能有無法接收焦點的控制項的便捷鍵。  
@@ -54,6 +54,6 @@ ms.locfileid: "54597849"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Button>
-- [如何：回應 Windows Form Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [如何：設定所顯示之文字的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [標記個別 Windows Forms 控制項並提供其捷徑](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

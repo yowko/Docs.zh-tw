@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: 43641b89ae405caf9807b00b4b3c84f25c4e5e67
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332191"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713757"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>HOW TO：模擬滑鼠和鍵盤事件的程式碼
 Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選項。 本主題提供這些選項的概觀。  
@@ -31,7 +31,7 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 2.  呼叫 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，並以這個 <xref:System.Windows.Forms.MouseEventArgs> 做為引數。  
   
- 如需自訂控制項的詳細資訊，請參閱[在設計階段開發 Windows Form 控制項](../../../docs/framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)。  
+ 如需自訂控制項的詳細資訊，請參閱[在設計階段開發 Windows Form 控制項](./controls/developing-windows-forms-controls-at-design-time.md)。  
   
  還有其他方式可以模擬滑鼠輸入。 例如，您可以透過程式設計方式設定代表狀態的控制項屬性，這個狀態通常是透過滑鼠輸入來設定 (例如 <xref:System.Windows.Forms.CheckBox.Checked%2A> 控制項的 <xref:System.Windows.Forms.CheckBox> 屬性)，您也可以直接呼叫附加至所要模擬之事件的委派。  
   
@@ -60,9 +60,9 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 1.  請呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 類別的 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 或 <xref:System.Windows.Forms.SendKeys> 方法。 應用程式的作用控制項會接收指定的按鍵動作。 下列程式碼範例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 來模擬當使用者按兩下表單介面時，按下 ENTER 鍵的動作。 這個範例假設 <xref:System.Windows.Forms.Form> 含有一個定位點索引為 0 的 <xref:System.Windows.Forms.Button> 控制項。  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#10)]  
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>將按鍵動作傳送至不同的應用程式  
   
@@ -71,16 +71,16 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
     > [!NOTE]
     >  用於尋找 [小算盤] 應用程式之 `FindWindow` 呼叫的正確參數會隨您的 Windows 版本而異。  下列程式碼會尋找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的 [小算盤] 應用程式。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，將第一個參數變更為 "SciCalc"。 您可以使用 Visual Studio 隨附的 Spy++ 工具來判斷正確的參數。  
   
-     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
-     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
-     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
+     [!code-cpp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#5)]
+     [!code-csharp[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#5)]
+     [!code-vb[System.Windows.Forms.SimulateKeyPress#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#5)]  
   
 ## <a name="example"></a>範例  
  下列程式碼範例是先前程式碼範例的完整應用。  
   
- [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
- [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
- [!code-vb[System.Windows.Forms.SimulateKeyPress#0](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
+ [!code-cpp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#0)]
+ [!code-csharp[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#0)]
+ [!code-vb[System.Windows.Forms.SimulateKeyPress#0](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/VB/form1.vb#0)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
@@ -90,4 +90,4 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 中的使用者輸入](../../../docs/framework/winforms/user-input-in-windows-forms.md)
+- [Windows Forms 中的使用者輸入](user-input-in-windows-forms.md)

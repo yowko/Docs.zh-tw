@@ -11,15 +11,15 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], about TextBox controls
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
-ms.openlocfilehash: ed4a40c172e527c6210bc31ab2575ebc08ead1bd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 716195238e99938c8c416466fc84c2eff0bc7ba9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671235"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57709775"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox 控制項概觀 (Windows Form)
-Windows Form 文字方塊用來從使用者取得輸入，或顯示的文字。 <xref:System.Windows.Forms.TextBox>控制項通常使用於可編輯的文字，雖然它可以也成為唯讀狀態。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 <xref:System.Windows.Forms.TextBox>控制項提供單一的格式樣式顯示，或輸入控制項的文字。 若要顯示多種類型的格式化文字，請使用<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 < [RichTextBox 控制項概觀](../../../../docs/framework/winforms/controls/richtextbox-control-overview-windows-forms.md)。  
+Windows Form 文字方塊用來從使用者取得輸入，或顯示的文字。 <xref:System.Windows.Forms.TextBox>控制項通常使用於可編輯的文字，雖然它可以也成為唯讀狀態。 文字方塊可以顯示多行、 文字換行到控制項的大小和加入基本的格式。 <xref:System.Windows.Forms.TextBox>控制項提供單一的格式樣式顯示，或輸入控制項的文字。 若要顯示多種類型的格式化文字，請使用<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 < [RichTextBox 控制項概觀](richtextbox-control-overview-windows-forms.md)。  
   
 ## <a name="working-with-the-textbox-control"></a>使用 TextBox 控制項  
  控制項所顯示的文字包含在<xref:System.Windows.Forms.TextBox.Text%2A>屬性。 根據預設，您可以輸入最多 2048年個字元，在文字方塊中。 如果您設定<xref:System.Windows.Forms.TextBox.Multiline%2A>屬性設`true`，您可以輸入最多 32 KB 的文字。 <xref:System.Windows.Forms.TextBox.Text%2A>屬性可以在 [屬性] 視窗中，以在執行階段程式碼，或由使用者輸入，在執行階段的設計階段設定。 目前文字方塊的內容可以在執行階段擷取，請閱讀<xref:System.Windows.Forms.TextBox.Text%2A>屬性。  
@@ -51,10 +51,10 @@ private:
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TextBox>
-- [如何：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [如何：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：將引號放入字串](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [如何：在 Windows Forms TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [如何：在 Windows Forms TextBox 控制項中檢視多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：將引號放入字串](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中選取文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [如何：在 Windows Forms TextBox 控制項中檢視多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox 控制項](textbox-control-windows-forms.md)

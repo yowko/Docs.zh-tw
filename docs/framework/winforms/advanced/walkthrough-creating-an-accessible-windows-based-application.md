@@ -1,18 +1,19 @@
 ---
-title: 逐步解說：建立 Windows 架構的可及性應用程式
+title: 逐步解說：建立可存取的 Windows 架構應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6c798d0f6a454c7ee819d5556970bca12f1812e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708271"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的可及性應用程式
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立可存取的 Windows 架構應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  
   
  本逐步解說將提出「Windows 憑證」標誌的五項協助工具需求。 根據這些需求，協助工具應用程式將會：  
@@ -29,7 +30,7 @@ ms.lasthandoff: 05/04/2018
   
  如需詳細資訊，請參閱[設計可及性應用程式的資源](/visualstudio/ide/reference/resources-for-designing-accessible-applications)。  
   
- 如需支援各種鍵盤配置的資訊，請參閱[開發世界性的應用程式的最佳做法](../../../../docs/standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)。  
+ 如需支援各種鍵盤配置的資訊，請參閱[開發世界性的應用程式的最佳做法](../../../standard/globalization-localization/best-practices-for-developing-world-ready-apps.md)。  
   
 ## <a name="creating-the-project"></a>建立專案  
  本逐步解說會建立一個接受披薩訂單的應用程式使用者介面， 其中包含輸入顧客名稱的 <xref:System.Windows.Forms.TextBox>、選取披薩尺寸的 <xref:System.Windows.Forms.RadioButton> 群組、選取配料的 <xref:System.Windows.Forms.CheckedListBox>、兩個標示為 [訂購] 和 [取消] 的 Button 控制項，以及一個含有結束命令的功能表。  
@@ -40,12 +41,12 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-begin-making-the-application"></a>開始建立應用程式  
   
--   在 Visual Basic 或 Visual C# 中建立新的 Windows 應用程式。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。  
+-   建立新的 Windows 應用程式在 Visual Basic 或 Visual C#。 將專案命名為 **PizzaOrder** (如需詳細資訊，請參閱[建立新的方案和專案](/visualstudio/ide/creating-solutions-and-projects))。  
   
 ## <a name="adding-the-controls-to-the-form"></a>將控制項加入表單  
  將控制項加入表單時，請注意下列建立協助工具應用程式的方針：  
   
--   設定 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 屬性。 在這個範例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的預設值便已足夠。 如需協助工具屬性的詳細資訊，請參閱[提供 Windows Forms 上控制項的協助工具資訊](../../../../docs/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
+-   設定 <xref:System.Windows.Forms.Control.AccessibleDescription%2A> 和 <xref:System.Windows.Forms.Control.AccessibleName%2A> 屬性。 在這個範例中，<xref:System.Windows.Forms.Control.AccessibleRole%2A> 的預設值便已足夠。 如需協助工具屬性的詳細資訊，請參閱[提供 Windows Forms 上控制項的協助工具資訊](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)。  
   
 -   將字型大小設定為 10 或更大的點數。  
   
@@ -136,11 +137,11 @@ ms.lasthandoff: 05/04/2018
     |MenuItem|名稱|exitApp|  
     ||Text|結束(&X)|  
   
-     ![比薩訂購表單](../../../../docs/framework/winforms/advanced/media/vbpizzaorderform.gif "vbPizzaOrderForm")  
+     ![比薩訂購表單](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
 您的表單看起來會如下所示：  
   
 ## <a name="supporting-high-contrast-mode"></a>支援高對比模式  
- 高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性會提供用來判斷是否設定為高對比模式。  
+ 高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性可用來判斷是否已設定高對比模式。  
   
  如果 SystemInformation.HighContrast 為 `true`，應用程式應該：  
   
@@ -152,7 +153,7 @@ ms.lasthandoff: 05/04/2018
   
  當應用程式啟動並回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 系統事件時，應該會檢查 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的設定。 只要 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> 的值變更，便會引發 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
   
- 在應用程式中，唯一不使用色彩系統設定的項目是 `lblCompanyName`。 <xref:System.Drawing.SystemColors>類別用來為使用者選取系統色彩變更標籤的色彩設定。  
+ 在應用程式中，唯一不使用色彩系統設定的項目是 `lblCompanyName`。 <xref:System.Drawing.SystemColors>類別用來將標籤的色彩設定變更為使用者選取的系統色彩。  
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>有效啟用高對比模式  
   
@@ -286,7 +287,7 @@ ms.lasthandoff: 05/04/2018
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>透過音效以外的其他方式提供資訊  
   
-1.  使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows 應用程式開發介面函式的範例，請參閱[逐步解說：呼叫 Windows API](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
+1.  使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例，請參閱[逐步解說：呼叫 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
     > [!NOTE]
     >  使用者可以啟動 Windows 聲音感測服務，當系統音效透過電腦內建喇叭播放時，同時能使視窗閃爍。  
@@ -295,7 +296,7 @@ ms.lasthandoff: 05/04/2018
   
 3.  顯示取得鍵盤焦點的訊息方塊， 但是如果使用者可能會輸入資料，則應避免使用這個方法。  
   
-4.  在工作列的狀態通知區域中顯示狀態標記。 如需詳細資訊，請參閱[如何：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
+4.  在工作列的狀態通知區域中顯示狀態標記。 如需詳細資訊，請參閱[如何：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
 ## <a name="testing-the-application"></a>測試應用程式  
  在部署應用程式之前，您應該測試已實作的協助工具功能。  

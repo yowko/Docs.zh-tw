@@ -2,12 +2,12 @@
 title: 動態更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: 9dc733e0fa9cc6fead51eb8105b7b1e37de8cd91
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496738"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724466"
 ---
 # <a name="dynamic-update"></a>動態更新
 
@@ -17,13 +17,13 @@ ms.locfileid: "57496738"
 
 若要將動態更新套用於持續性的工作流程執行個體，需建立<xref:System.Activities.DynamicUpdate.DynamicUpdateMap>，其中包含執行階段指示，描述如何修改保存的工作流程執行個體以反映所需的變更。 建立更新對應之後，會將其套用至所需保存的工作流程執行個體。 套用動態更新後，可以使用新更新的工作流程定義繼續工作流程執行個體。 建立及套用更新對應需要四個步驟。
 
-1. [準備動態更新工作流程定義](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Prepare)
+1. [準備動態更新工作流程定義](dynamic-update.md#Prepare)
 
-2. [更新工作流程定義，以反映所需的變更](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Update)
+2. [更新工作流程定義，以反映所需的變更](dynamic-update.md#Update)
 
-3. [建立更新對應](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Create)
+3. [建立更新對應](dynamic-update.md#Create)
 
-4. [將更新對應套用至所需的持續性工作流程執行個體](../../../docs/framework/windows-workflow-foundation/dynamic-update.md#Apply)
+4. [將更新對應套用至所需的持續性工作流程執行個體](dynamic-update.md#Apply)
 
 > [!NOTE]
 > 請注意，步驟 1 到 3 涵蓋更新對應的建立程序，不需套用更新也可執行。 常見的案例，工作流程開發人員會建立更新對應離線時，，然後以系統管理員將會套用在稍後更新。
@@ -37,7 +37,7 @@ ms.locfileid: "57496738"
 為準備 XAML 工作流程以進行動態更新，會將其載入到 <xref:System.Activities.ActivityBuilder> 中，然後將 <xref:System.Activities.ActivityBuilder> 傳遞到 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 中。
 
 > [!NOTE]
-> 如需有關使用序列化工作流程並<xref:System.Activities.ActivityBuilder>，請參閱 <<c2> [ 序列化工作流程和活動與 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。
+> 如需有關使用序列化工作流程並<xref:System.Activities.ActivityBuilder>，請參閱 <<c2> [ 序列化工作流程和活動與 XAML](serializing-workflows-and-activities-to-and-from-xaml.md)。
 
 以下範例中，會將 `MortgageWorkflow` 定義 (包含有數個子活動的 <xref:System.Activities.Statements.Sequence>) 載入到 <xref:System.Activities.ActivityBuilder> 中，然後準備進行動態更新。 方法傳回後，<xref:System.Activities.ActivityBuilder> 會包含原始工作流程定義及複本。
 
@@ -171,7 +171,7 @@ foreach (Guid id in ids)
 套用動態更新之後，即可繼續該工作流程執行個體。 請注意，必須使用更新過的新定義和 <xref:System.Activities.WorkflowIdentity>。
 
 > [!NOTE]
-> 如需使用詳細資訊<xref:System.Activities.WorkflowApplication>並<xref:System.Activities.WorkflowIdentity>，請參閱[使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。
+> 如需使用詳細資訊<xref:System.Activities.WorkflowApplication>並<xref:System.Activities.WorkflowIdentity>，請參閱[使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)。
 
 在下列範例中，上一個範例中的 `MortgageWorkflow_v1.1.xaml` 工作流程已編譯完畢，並且已使用更新過的工作流程定義載入及繼續。
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
-ms.openlocfilehash: 06d75abe814ed25fbb9d729705a6afd3bc03baed
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cb552752c1693ce8008eb57e0703882b7281830
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366697"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705983"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>HOW TO：裝載工作流程-並存的多個的版本
 `WorkflowIdentity` 提供一種方法，讓工作流程應用程式開發人員能夠將名稱和版本與工作流程定義產生關聯性，並為這項資訊與持續性工作流程執行個體建立關聯性。 此身分識別資訊可由工作流程應用程式開發人員使用以啟用案例 (例如並存執行多個版本的工作流程定義)，以及提供動態更新等其他功能的基礎。 教學課程中的此步驟示範如何使用 `WorkflowIdentity` 同時裝載工作流程的多個版本。
@@ -21,22 +21,22 @@ ms.locfileid: "57366697"
 ## <a name="in-this-topic"></a>本主題內容  
  在教學課程的這個步驟中，會修改工作流程的 `WriteLine` 活動以提供其他資訊，並新增 `WriteLine` 活動。 我們會儲存原始工作流程組件的複本，並更新主應用程式，以便同時執行原始和更新的工作流程。  
   
--   [製作 NumberGuessWorkflowActivities 專案的複本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
+-   [製作 NumberGuessWorkflowActivities 專案的複本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BackupCopy)  
   
--   [更新工作流程](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
+-   [更新工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [若要更新的狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [若要更新的狀態機器工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
-    -   [更新流程圖工作流程](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
+    -   [更新流程圖工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
-    -   [若要更新循序工作流程](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
+    -   [若要更新循序工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [若要更新 WorkflowVersionMap 以包含舊版的工作流程](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [若要更新 WorkflowVersionMap 以包含舊版的工作流程](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [若要建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [若要建置並執行應用程式](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
->  依照本主題中的步驟進行之前，請執行應用程式、啟動每種型別的數個工作流程，然後針對每個工作流程進行一或兩次猜測。 在此步驟和下一個步驟，使用這些保存的工作流程[How to:更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+>  依照本主題中的步驟進行之前，請執行應用程式、啟動每種型別的數個工作流程，然後針對每個工作流程進行一或兩次猜測。 在此步驟和下一個步驟，使用這些保存的工作流程[How to:更新執行中工作流程執行個體的定義](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
 > [!NOTE]
 >  「快速入門教學課程」中的每個步驟都與之前的步驟息息相關。 如果您未完成上述步驟，您就可以下載完整的版的教學課程[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
@@ -60,7 +60,7 @@ ms.locfileid: "57366697"
     > [!NOTE]
     >  本主題中的步驟示範管理組件的方法，這些組件用於包含多個工作流程版本。 您也可以使用其他方法，例如強式命名組件以及在全域組件快取中登錄這些組件。
 
-8.  建立新的資料夾，名為**NumberGuessWorkflowActivities_du**相同的資料夾中**NumberGuessWorkflowHost**， **NumberGuessWorkflowActivities**，而新新增**PreviousVersions**資料夾，並複製所有檔案和子**NumberGuessWorkflowActivities**到新的資料夾**NumberGuessWorkflowActivities_du**資料夾。 此活動的初始版本之專案的備份副本會在[How to:更新執行中工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)。
+8.  建立新的資料夾，名為**NumberGuessWorkflowActivities_du**相同的資料夾中**NumberGuessWorkflowHost**， **NumberGuessWorkflowActivities**，而新新增**PreviousVersions**資料夾，並複製所有檔案和子**NumberGuessWorkflowActivities**到新的資料夾**NumberGuessWorkflowActivities_du**資料夾。 此活動的初始版本之專案的備份副本會在[How to:更新執行中工作流程執行個體的定義](how-to-update-the-definition-of-a-running-workflow-instance.md)。
 
 9. 重新開啟**WF45GettingStartedTutorial** Visual Studio 2012 中的方案。
 
@@ -581,4 +581,4 @@ ms.locfileid: "57366697"
 
 4.  切換回猜數字應用程式，並選取其中一個在更新之前啟動的工作流程。 您可以查看顯示在狀態視窗下方的版本資訊，找出目前選取之工作流程的版本。 輸入一些猜測，請注意，狀態更新會比對 `WriteLine` 活動輸出與舊版的輸出，而且不包含使用者的猜測。 這是因為這些工作流程使用的舊版工作流程定義不含 `WriteLine` 更新。
 
-     在下一個步驟中， [How to:更新執行的工作流程執行個體的定義](../../../docs/framework/windows-workflow-foundation/how-to-update-the-definition-of-a-running-workflow-instance.md)，執行`v1`使其包含與新的功能，會更新工作流程執行個體`v2`執行個體。
+     在下一個步驟中， [How to:更新執行的工作流程執行個體的定義](how-to-update-the-definition-of-a-running-workflow-instance.md)，執行`v1`使其包含與新的功能，會更新工作流程執行個體`v2`執行個體。

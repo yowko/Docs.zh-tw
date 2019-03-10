@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], grouping
 - Windows Forms controls, grouping
 ms.assetid: 7e1cd708-fdb1-49d8-9ca2-5640b276bf2e
-ms.openlocfilehash: 706a020bfb007250b9a1b708da25704aacd755e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f1aa3b54eb842bb92e4ae2cbb562a11464acac63
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601529"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717439"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-panel-control-using-the-designer"></a>HOW TO：搭配 Windows Form Panel 控制項使用設計工具群組控制項
 Windows Form<xref:System.Windows.Forms.Panel>控制項用來分組其他控制項。 有三個群組控制項的原因。 其中一個是視覺化群組相關的表單項目，清楚的使用者介面;另一個是以程式設計方式分組，選項按鈕： 例如，最後一個適用於在設計階段將控制項移動做為一個單位。  
@@ -30,6 +30,6 @@ Windows Form<xref:System.Windows.Forms.Panel>控制項用來分組其他控制�
 3.  （選擇性）如果您想要將框線加入至面板，設定其<xref:System.Windows.Forms.BorderStyle>屬性。 有三種選擇： <xref:System.Windows.Forms.BorderStyle.Fixed3D>， <xref:System.Windows.Forms.BorderStyle.FixedSingle>，和<xref:System.Windows.Forms.BorderStyle.None>。  
   
 ## <a name="see-also"></a>另請參閱
-- [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [Panel 控制項概觀](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
-- [如何：設定面板背景](../../../../docs/framework/winforms/controls/how-to-set-the-background-of-a-windows-forms-panel.md)
+- [Panel 控制項](panel-control-windows-forms.md)
+- [Panel 控制項概觀](panel-control-overview-windows-forms.md)
+- [如何：設定面板背景](how-to-set-the-background-of-a-windows-forms-panel.md)

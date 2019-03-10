@@ -2,12 +2,12 @@
 title: 宣告式條件約束
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
-ms.openlocfilehash: 5599513405c77aa213b329b085075660baed5c47
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48842368"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708142"
 ---
 # <a name="declarative-constraints"></a>宣告式條件約束
 宣告式條件約束提供強大的驗證方法，適用於驗證活動及該活動與其他活動之間的關聯性。 條件約束是在撰寫處理序期間針對活動所設定的，但工作流程主機亦可指定其他條件約束。 本主題介紹使用宣告式條件約束來提供活動驗證的概觀。  
@@ -63,7 +63,8 @@ public sealed class SampleActivity : CodeActivity
 
 有幾種驗證活動可供使用，其提供有關正在驗證的活動在工作流程中的其他活動資訊。 <xref:System.Activities.Validation.GetParentChain> 會傳回活動集合，其中包含目前活動與根活動之間的所有活動。 <xref:System.Activities.Validation.GetChildSubtree> 會提供活動集合，其中包含遞迴模式中的子活動，且 <xref:System.Activities.Validation.GetWorkflowTree> 會取得工作流程中的所有活動。  
   
-在下列範例中，會定義 `CreateState` 活動。 `CreateState` 活動必須包含在 `CreateCountry` 活動中，而 `GetParent` 方法會傳回強制此要求的條件約束。 `GetParent` 會將 <xref:System.Activities.Validation.GetParentChain> 活動與 <xref:System.Activities.Statements.ForEach%601> 活動搭配使用，以檢查 `CreateState` 活動的父活動，判斷是否滿足要求。  
+在下列範例中，會定義 `CreateState` 活動。 
+  `CreateState` 活動必須包含在 `CreateCountry` 活動中，而 `GetParent` 方法會傳回強制此要求的條件約束。 `GetParent` 會將 <xref:System.Activities.Validation.GetParentChain> 活動與 <xref:System.Activities.Statements.ForEach%601> 活動搭配使用，以檢查 `CreateState` 活動的父活動，判斷是否滿足要求。  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -176,4 +177,4 @@ else
 }  
 ```  
   
- 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 屬性是 `true`，則當透過呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 來叫用驗證時，只會評估指定的其他條件約束。 這項功能非常適合用於檢查工作流程中的特定驗證組態。 但是請注意，叫用工作流程時會評估工作流程中設定的驗證邏輯，而且必須通過驗證，工作流程才能順利開始。 如需有關如何叫用驗證的詳細資訊，請參閱 <<c0> [ 叫用活動驗證](../../../docs/framework/windows-workflow-foundation/invoking-activity-validation.md)。
+ 如果 <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> 的 <xref:System.Activities.Validation.ValidationSettings> 屬性是 `true`，則當透過呼叫 <xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> 來叫用驗證時，只會評估指定的其他條件約束。 這項功能非常適合用於檢查工作流程中的特定驗證組態。 但是請注意，叫用工作流程時會評估工作流程中設定的驗證邏輯，而且必須通過驗證，工作流程才能順利開始。 如需有關如何叫用驗證的詳細資訊，請參閱 <<c0> [ 叫用活動驗證](invoking-activity-validation.md)。

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: a46f1fd14400995fef91c117502df24eae613fac
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442551"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714654"
 ---
 # <a name="application-settings-attributes"></a>應用程式設定屬性
 應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作的自訂包裝函式所述的需求。  
@@ -40,5 +40,5 @@ ms.locfileid: "56442551"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
-- [應用程式設定架構](../../../../docs/framework/winforms/advanced/application-settings-architecture.md)
+- [應用程式設定架構](application-settings-architecture.md)
 - [如何：建立應用程式設定](how-to-create-application-settings.md)

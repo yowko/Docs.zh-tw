@@ -11,12 +11,12 @@ helpviewer_keywords:
 - TextBox control [Windows Forms], viewing multiple lines
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
-ms.openlocfilehash: 11047b9308905b153662c5449abeeae8c23af26c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d80a0262455b9b5e0e8535d88eb6292ab60e3ea8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565627"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716006"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>HOW TO：在 Windows Forms TextBox 控制項中檢視多行
 根據預設，Windows Forms<xref:System.Windows.Forms.TextBox>控制項顯示單行文字，並不會顯示捲軸。 如果文字是超過可用的空間，只有部分的文字會顯示。 您可以設定來變更此預設行為<xref:System.Windows.Forms.TextBox.Multiline%2A>， <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>，和<xref:System.Windows.Forms.TextBox.ScrollBars%2A>屬性，以適當的值。  
@@ -44,14 +44,14 @@ ms.locfileid: "54565627"
     |值|描述|  
     |-----------|-----------------|  
     |`false`|控制項中的文字會不會自動換行，因此它會向右捲動，直到達到分行符號。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Horizontal>捲軸或<xref:System.Windows.Forms.ScrollBars.Both>上面。|  
-    |`true` (預設值)|不會出現水平捲軸。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Vertical>捲軸或<xref:System.Windows.Forms.ScrollBars.None>上面，來顯示一或多個段落。|  
+    |`true` (預設)|不會出現水平捲軸。 使用此值，如果您選擇<xref:System.Windows.Forms.ScrollBars.Vertical>捲軸或<xref:System.Windows.Forms.ScrollBars.None>上面，來顯示一或多個段落。|  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [如何：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：將引號放入字串](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [如何：在 Windows Forms TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：將引號放入字串](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中選取文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [TextBox 控制項](textbox-control-windows-forms.md)

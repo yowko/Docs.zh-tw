@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, ClickOnce deployment
 - walkthroughs [Windows Forms], ClickOnce deployment
 ms.assetid: 1451fce9-1965-4a03-b4d3-831b5fe4ad66
-ms.openlocfilehash: b30bb28e816f27cc8661d478758a05e52fb45037
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 9e3e05a1327f2f1d5f4c064a7982b2d6e38940d9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442122"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702564"
 ---
 # <a name="clickonce-deployment-for-windows-forms"></a>Windows Form 的 ClickOnce 部署
 下列主題描述 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，您可以使用這項技術輕鬆地將 Windows Form 應用程式部署到用戶端電腦。  
@@ -63,7 +63,7 @@ ms.locfileid: "56442122"
  示範如何標記檔案，以便在 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 資料目錄中使用。  
   
 ## <a name="see-also"></a>另請參閱
-- [應用程式設定概觀](../../../docs/framework/winforms/advanced/application-settings-overview.md)
+- [應用程式設定概觀](./advanced/application-settings-overview.md)
 - [發行 ClickOnce 應用程式](/visualstudio/deployment/publishing-clickonce-applications)
 - [從命令列建置 ClickOnce 應用程式](/visualstudio/deployment/building-clickonce-applications-from-the-command-line)
 - [偵錯使用 System.Deployment.Application 的 ClickOnce 應用程式](/visualstudio/deployment/debugging-clickonce-applications-that-use-system-deployment-application)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], calendar controls
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
-ms.openlocfilehash: f182a65a74507411f2474aca294c479e3b2b9ca6
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 2e26f7a9db8e19b584000089f99e99aab7c25a32
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584040"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716370"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>HOW TO：變更 Windows Form MonthCalendar 控制項的外觀
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在許多方面的行事曆的外觀。 例如，您可以設定色彩配置，以及選擇要顯示或隱藏週數和目前的日期。  
@@ -104,7 +104,7 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可讓您自訂在
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [MonthCalendar 控制項](../../../../docs/framework/winforms/controls/monthcalendar-control-windows-forms.md)
-- [如何：在 Windows Form MonthCalendar 控制項中選取一個日期範圍](../../../../docs/framework/winforms/controls/how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [如何：粗體的顯示特定日期中的使用 Windows Form MonthCalendar 控制項](../../../../docs/framework/winforms/controls/display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [如何：在 Windows Form MonthCalendar 控制項中顯示超過一個月](../../../../docs/framework/winforms/controls/display-more-than-one-month-wf-monthcalendar-control.md)
+- [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
+- [如何：在 Windows Form MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [如何：粗體的顯示特定日期中的使用 Windows Form MonthCalendar 控制項](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [如何：在 Windows Form MonthCalendar 控制項中顯示超過一個月](display-more-than-one-month-wf-monthcalendar-control.md)

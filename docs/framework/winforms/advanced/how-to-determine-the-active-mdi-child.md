@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 581fbb839d06aebc6487bb7b4933f0c1e39af3e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512550"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714318"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>HOW TO：決定作用中的 MDI 子系
 在某些情況下，您要在目前作用中的子表單具有焦點的控制項上提供作業的命令。 例如，假設您想要選取的文字複製到剪貼簿的子表單的文字方塊。 您會建立一個程序，將選取的文字複製到剪貼簿使用<xref:System.Windows.Forms.Control.Click>的複製功能表項目，標準的 [編輯] 功能表上的事件。  
@@ -30,7 +30,7 @@ ms.locfileid: "54512550"
 1.  在方法中，將作用中的子表單的作用中控制項的文字複製到剪貼簿。  
   
     > [!NOTE]
-    >  這個範例假設沒有 MDI 父表單 (`Form1`)，其包含的一或多個 MDI 子視窗<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 <<c0> [ 建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)。  
+    >  這個範例假設沒有 MDI 父表單 (`Form1`)，其包含的一或多個 MDI 子視窗<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 <<c0> [ 建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  
   
     ```vb  
     Public Sub mniCopy_Click(ByVal sender As Object, _  
@@ -84,8 +84,8 @@ ms.locfileid: "54512550"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [多重文件介面 (MDI) 應用程式](../../../../docs/framework/winforms/advanced/multiple-document-interface-mdi-applications.md)
-- [如何：建立 MDI 父表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-parent-forms.md)
-- [如何：建立 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-create-mdi-child-forms.md)
-- [如何：將資料傳送至作用中的 MDI 子系](../../../../docs/framework/winforms/advanced/how-to-send-data-to-the-active-mdi-child.md)
-- [如何：排列 MDI 子表單](../../../../docs/framework/winforms/advanced/how-to-arrange-mdi-child-forms.md)
+- [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
+- [如何：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
+- [如何：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
+- [如何：將資料傳送至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
+- [如何：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)

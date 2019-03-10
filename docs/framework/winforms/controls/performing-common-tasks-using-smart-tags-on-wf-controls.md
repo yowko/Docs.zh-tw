@@ -6,12 +6,12 @@ helpviewer_keywords:
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 93a477bcaed8ebdc2c7cb4daaa1dce1651cccd12
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664311"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705853"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
 您建構表單和控制項的 Windows Forms 應用程式時，有許多重複執行的工作。 以下是一些經常執行的工作就會發生：  
@@ -53,7 +53,7 @@ ms.locfileid: "56664311"
   
 #### <a name="to-use-smart-tags"></a>若要使用智慧標籤  
   
-1.  拖曳<xref:System.Windows.Forms.TabControl>從**工具箱**拖曳至表單。 請注意智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，會出現在並存的<xref:System.Windows.Forms.TabControl>。  
+1.  拖曳<xref:System.Windows.Forms.TabControl>從**工具箱**拖曳至表單。 請注意智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，會出現在並存的<xref:System.Windows.Forms.TabControl>。  
   
 2.  按一下智慧標籤圖像 （glyph）。 在字符旁邊會出現快顯功能表中，選取**加入索引標籤**項目。 觀察新的索引標籤頁加入<xref:System.Windows.Forms.TabControl>。  
   

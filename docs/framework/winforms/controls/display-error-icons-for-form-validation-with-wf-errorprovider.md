@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: fa230e326a91853d6b23d5901317a86f628f6c72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679106"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707634"
 ---
 # <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>HOW TO：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件，以在使用者輸入無效的資料時顯示錯誤圖示。 您必須擁有至少兩個控制項其間索引標籤，並藉此叫用的驗證程式碼以在表單上。  
@@ -27,7 +27,7 @@ ms.locfileid: "54679106"
   
 2.  新增<xref:System.Windows.Forms.ErrorProvider>元件至表單。  
   
-3.  選取第一個控制項，然後將程式碼加入其<xref:System.Windows.Forms.Control.Validating>事件處理常式。 為了讓此程式碼才能正常執行，程序必須連接到事件。 如需詳細資訊，請參閱[＜How to：在執行階段建立 Windows Forms 事件處理常式](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+3.  選取第一個控制項，然後將程式碼加入其<xref:System.Windows.Forms.Control.Validating>事件處理常式。 為了讓此程式碼才能正常執行，程序必須連接到事件。 如需詳細資訊，請參閱[如何：在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
      下列程式碼測試使用者輸入; 的資料的有效性如果資料無效，<xref:System.Windows.Forms.ErrorProvider.SetError%2A>呼叫方法。 第一個引數<xref:System.Windows.Forms.ErrorProvider.SetError%2A>方法會指定哪一個控制項旁邊顯示圖示。 第二個引數是要顯示的錯誤文字。  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54679106"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
-- [ErrorProvider 元件概觀](../../../../docs/framework/winforms/controls/errorprovider-component-overview-windows-forms.md)
-- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](../../../../docs/framework/winforms/controls/view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)
+- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 908751401d812be0403af5517d9bbf2ad7344f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86ef0da37ec35b991557af97a97bc9ca3da2d68c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573799"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717254"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>選取 Windows Form Button 控制項的方法
 將 Windows Form 按鈕可以下列方式選取：  
@@ -20,7 +20,7 @@ ms.locfileid: "54573799"
   
 -   藉由按下 TAB 鍵，將焦點移至 按鈕，然後選擇該按鈕按下空格鍵或 ENTER 鍵。  
   
--   按下便捷鍵 （ALT + 加底線的字母） 按鈕。 如需存取金鑰的詳細資訊，請參閱[How to:建立 Windows form 控制項的便捷鍵](../../../../docs/framework/winforms/controls/how-to-create-access-keys-for-windows-forms-controls.md)。  
+-   按下便捷鍵 （ALT + 加底線的字母） 按鈕。 如需存取金鑰的詳細資訊，請參閱[How to:建立 Windows form 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)。  
   
 -   如果表單的 接受 按鈕的按鈕，按下 ENTER 鍵會選擇該按鈕，即使另一個控制項有焦點，但如果控制項是另一個按鈕、 多行文字 方塊中或自訂控制項的設陷 enter 鍵。  
   
@@ -29,6 +29,6 @@ ms.locfileid: "54573799"
 -   呼叫<xref:System.Windows.Forms.Button.PerformClick%2A>方法來以程式設計方式選取的按鈕。  
   
 ## <a name="see-also"></a>另請參閱
-- [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [如何：回應 Windows Form Button 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Button 控制項概觀](button-control-overview-windows-forms.md)
+- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [Button 控制項](button-control-windows-forms.md)

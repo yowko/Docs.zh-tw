@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: 6ebdf1ee74e3ed41b02fdeb545ffc57aaa2d6d7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96323e0edd643e20338bd10a9eb1744c3b0aef2f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496279"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705827"
 ---
 # <a name="how-to-validate-application-settings"></a>HOW TO：驗證應用程式設定
 本主題示範如何在保存應用程式設定之前先行驗證。  
@@ -40,9 +40,9 @@ ms.locfileid: "54496279"
   
 -   事件引發之前其相關聯的動作，例如<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>並<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>，會使用<xref:System.ComponentModel.CancelEventArgs>取消作業的引數。  
   
- 如需處理事件的詳細資訊，請參閱[事件處理常式概觀](../../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
+ 如需處理事件的詳細資訊，請參閱[事件處理常式概觀](../event-handlers-overview-windows-forms.md)。  
   
- 下列程序示範如何測試使用有效的出生日期<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 我們在撰寫這些程序時，是假設您已建立應用程式設定；在此範例中，我們會對名為 `DateOfBirth` 的設定執行界限檢查。 如需建立設定的詳細資訊，請參閱[How to:建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 下列程序示範如何測試使用有效的出生日期<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>或<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>事件。 我們在撰寫這些程序時，是假設您已建立應用程式設定；在此範例中，我們會對名為 `DateOfBirth` 的設定執行界限檢查。 如需建立設定的詳細資訊，請參閱[How to:建立應用程式設定](how-to-create-application-settings.md)。  
   
 ### <a name="to-obtain-the-application-settings-object"></a>取得應用程式設定物件  
   
@@ -161,5 +161,5 @@ ms.locfileid: "54496279"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 中建立事件處理常式](../../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
-- [如何：建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)
+- [在 Windows Forms 中建立事件處理常式](../creating-event-handlers-in-windows-forms.md)
+- [如何：建立應用程式設定](how-to-create-application-settings.md)

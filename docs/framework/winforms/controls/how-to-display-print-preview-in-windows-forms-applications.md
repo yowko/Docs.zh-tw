@@ -10,17 +10,17 @@ helpviewer_keywords:
 - printing [Windows Forms], print preview
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
-ms.openlocfilehash: d348c89e3334543cf935e5faec29e546d848a984
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13510086edb13ff54f5551296c1b64c51873f649
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526726"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715356"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>HOW TO：顯示預覽列印在 Windows Forms 應用程式
 您可以使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項，讓使用者以顯示文件，通常要列印之前。  
   
- 若要這樣做，您需要指定的執行個體<xref:System.Drawing.Printing.PrintDocument>類別; 這是要列印的文件。 如需有關使用使用預覽列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:使用預覽列印 Windows Forms 中列印](../../../../docs/framework/winforms/advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
+ 若要這樣做，您需要指定的執行個體<xref:System.Drawing.Printing.PrintDocument>類別; 這是要列印的文件。 如需有關使用使用預覽列印<xref:System.Drawing.Printing.PrintDocument>元件，請參閱[How to:使用預覽列印 Windows Forms 中列印](../advanced/how-to-print-in-windows-forms-using-print-preview.md)。  
   
 > [!NOTE]
 >  若要使用<xref:System.Windows.Forms.PrintPreviewDialog>控制項在執行階段，使用者必須擁有在本機或透過網路，在他們的電腦上安裝印表機，這有一部分是如何<xref:System.Windows.Forms.PrintPreviewDialog>元件可讓您判斷文件列印的樣子。  
@@ -82,7 +82,7 @@ ms.locfileid: "54526726"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [PrintDocument 元件](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)
-- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [Windows Forms 列印支援](../../../../docs/framework/winforms/advanced/windows-forms-print-support.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [PrintDocument 元件](printdocument-component-windows-forms.md)
+- [PrintPreviewDialog 控制項](printpreviewdialog-control-windows-forms.md)
+- [Windows Forms 列印支援](../advanced/windows-forms-print-support.md)
+- [Windows Forms](../index.md)

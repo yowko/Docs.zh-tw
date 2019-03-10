@@ -2,24 +2,24 @@
 title: .NET Framework 4.5 中的外顯化原則活動
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 1c2f66caeb9932422681ba7176346a5e5e084c11
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850228"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57706363"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 
-這個範例會示範 ExternalizedPolicy4 活動如何讓執行現有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接透過使用 「 規則引擎的 Windows Workflow Foundation (WF 4.5)WF 3.5 隨附的。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需有關 Windows Workflow Foundation 的一部分的 WF 3.5 規則引擎的詳細資訊，請閱讀[Windows Workflow Foundation Rules Engine 簡介](https://go.microsoft.com/fwlink/?LinkId=166079)。 如需有關移轉規則至[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，請閱讀移轉指引[移轉指引](../../../../docs/framework/windows-workflow-foundation/migration-guidance.md)。
+這個範例會示範 ExternalizedPolicy4 活動如何讓執行現有[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]Windows Workflow Foundation (WF 3.5)<xref:System.Workflow.Activities.Rules.RuleSet>中的物件[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]直接透過使用 「 規則引擎的 Windows Workflow Foundation (WF 4.5)WF 3.5 隨附的。 您可以使用這個活動來開啟及執行任何現有的 WF 3.5 <xref:System.Workflow.Activities.Rules.RuleSet>。 如需有關 Windows Workflow Foundation 的一部分的 WF 3.5 規則引擎的詳細資訊，請閱讀[Windows Workflow Foundation Rules Engine 簡介](https://go.microsoft.com/fwlink/?LinkId=166079)。 如需有關移轉規則至[!INCLUDE[wf1](../../../../includes/wf1-md.md)]中[!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)]，請閱讀移轉指引[移轉指引](../migration-guidance.md)。
 
 ## <a name="projects-in-this-sample"></a>這個範例中的專案
 
 |專案名稱|描述|主要檔案|
 |-|-|-|
-|ExternalizedPolicy4|包含 ExternalizedPolicy4 活動及其 WF 4.5 設計工具。|**ExternalizedPolicy4.cs**： 活動定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**: ExternalizedPolicy4 活動的自訂設計工具。 它使用 WF 3.5 規則引擎中的規則編輯器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
-|ImperativeCodeClientSample|範例用戶端應用程式，透過使用命令式 C# 程式碼 (未使用設計工具) 的 ExternalizedPolicy4 應用程式，來設定及執行工作流程。|**ApplyDiscount.rules**： 檔案[!INCLUDE[wf1](../../../../includes/wf1-md.md)]規則定義。<br /><br /> **Order.cs**： 代表客戶訂單的型別。 規則套用至這個類型的物件。<br /><br /> **Program.cs**： 設定及執行的工作流程，有 Policy4 活動會套用至 Order 物件執行個體的 ApplyDiscount.rules 中定義的規則。<br /><br /> App.config：具有規則檔路徑的組態檔。|
-|DesignerClientSample|範例用戶端應用程式，透過使用 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 設計工具的 ExternalPolicy4 應用程式，來設定及執行工作流程。|**Sequence1.xaml**： 使用 Policy4 活動執行規則評估的循序工作流程。<br /><br /> **Program.cs**： 執行 Sequence1.xaml 中定義的工作流程執行個體。|
+|ExternalizedPolicy4|包含 ExternalizedPolicy4 活動及其 WF 4.5 設計工具。|**ExternalizedPolicy4.cs**： 活動定義。<br /><br /> **ExternalizedPolicy4Designer.xaml**:ExternalizedPolicy4 活動的自訂設計工具。 它使用 WF 3.5 規則引擎中的規則編輯器 (<xref:System.Workflow.Activities.Rules.Design.RuleSetDialog>)。|
+|ImperativeCodeClientSample|範例用戶端應用程式，透過使用命令式 C# 程式碼 (未使用設計工具) 的 ExternalizedPolicy4 應用程式，來設定及執行工作流程。|**ApplyDiscount.rules**:檔案與[!INCLUDE[wf1](../../../../includes/wf1-md.md)]規則定義。<br /><br /> **Order.cs**:代表客戶訂單的型別。 規則套用至這個類型的物件。<br /><br /> **Program.cs**：設定及執行工作流程具有 Policy4 活動會套用至 Order 物件執行個體的 ApplyDiscount.rules 中定義的規則。<br /><br /> App.config:組態檔的規則檔路徑。|
+|DesignerClientSample|範例用戶端應用程式，透過使用 [!INCLUDE[wf1](../../../../includes/wf1-md.md)] 設計工具的 ExternalPolicy4 應用程式，來設定及執行工作流程。|**Sequence1.xaml**:若要執行規則評估使用 Policy4 活動的循序工作流程。<br /><br /> **Program.cs**：執行 Sequence1.xaml 中定義的工作流程執行個體。|
 
 ## <a name="the-externalizedpolicy4-activity"></a>ExternalizedPolicy4 活動
 
@@ -56,7 +56,8 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
-[原則] 活動可讓您建立及執行 WF 4.5 工作流程中的.NET Framework 3.5 RuleSet。 <xref:System.Workflow.Activities.Rules.RuleSet> 已序列化，內嵌於 Policy4 活動 XAML 定義中。 ExternalizedPolicy4 範例示範如何使用現有的外部 <xref:System.Workflow.Activities.Rules.RuleSet> (包含在 .rules 檔案中)。
+[原則] 活動可讓您建立及執行 WF 4.5 工作流程中的.NET Framework 3.5 RuleSet。 
+  <xref:System.Workflow.Activities.Rules.RuleSet> 已序列化，內嵌於 Policy4 活動 XAML 定義中。 ExternalizedPolicy4 範例示範如何使用現有的外部 <xref:System.Workflow.Activities.Rules.RuleSet> (包含在 .rules 檔案中)。
 
 ## <a name="use-this-sample"></a>使用此範例
 

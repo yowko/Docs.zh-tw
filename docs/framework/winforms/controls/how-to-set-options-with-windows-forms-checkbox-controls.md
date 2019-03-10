@@ -12,12 +12,12 @@ helpviewer_keywords:
 - check boxes [Windows Forms], using to set options
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
-ms.openlocfilehash: a8159e9e9a2484b95399aba67b1a10b1252a4357
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3eb68d76d936f13e78d13629455c6ac7fb537b40
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525556"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714784"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>HOW TO：設定使用 Windows Form 核取方塊控制項的選項
 Windows Form<xref:System.Windows.Forms.CheckBox>控制項用來授權使用者 True/False 或 Yes/No 選項。 選取時，控制項就會顯示核取記號。  
@@ -67,6 +67,6 @@ Windows Form<xref:System.Windows.Forms.CheckBox>控制項用來授權使用者 T
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.CheckBox>
-- [CheckBox 控制項概觀](../../../../docs/framework/winforms/controls/checkbox-control-overview-windows-forms.md)
-- [如何：回應 Windows Form CheckBox 按一下動作](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-checkbox-clicks.md)
-- [CheckBox 控制項](../../../../docs/framework/winforms/controls/checkbox-control-windows-forms.md)
+- [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)
+- [如何：回應 Windows Form CheckBox 按一下動作](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [CheckBox 控制項](checkbox-control-windows-forms.md)

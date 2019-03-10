@@ -8,12 +8,12 @@ helpviewer_keywords:
 - unexposed members
 - managed HTML DOM [Windows Forms], accessing unexposed members
 ms.assetid: 762295bd-2355-4aa7-b43c-5bff997a33e6
-ms.openlocfilehash: 1de8afcd7167406f10c4d541e95a0fa68be16611
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 844e03891cce41566300409ad1bec67c875718a7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658948"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704501"
 ---
 # <a name="accessing-unexposed-members-on-the-managed-html-document-object-model"></a>存取 Managed HTML 文件物件模型上未公開的成員
 Managed HTML 文件物件模型 (DOM) 包含類別，稱為<xref:System.Windows.Forms.HtmlElement>公開屬性、 方法和所有 HTML 項目都有共通的事件。 有時候，不過，您將需要存取受管理的介面不會直接公開的成員。 本主題討論兩種方式來存取未公開的成員，包括[!INCLUDE[jsprjscript](../../../../includes/jsprjscript-md.md)]以及 Web 網頁內定義的 VBScript 函式。  
@@ -49,8 +49,8 @@ Managed HTML 文件物件模型 (DOM) 包含類別，稱為<xref:System.Windows.
   
  載入到這個頁面之後<xref:System.Windows.Forms.WebBrowser>控制項，您可以使用<xref:System.Windows.Forms.HtmlDocument.GetElementById%2A>方法來擷取`FORM`在執行的階段使用`form1`做為引數。  
   
- [!code-csharp[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
- [!code-vb[System.Windows.Forms.HtmlElement#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
+ [!code-csharp[System.Windows.Forms.HtmlElement#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/CS/Form1.cs#10)]
+ [!code-vb[System.Windows.Forms.HtmlElement#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.HtmlElement/VB/Form1.vb#10)]  
   
 ## <a name="accessing-unmanaged-interfaces"></a>存取未受管理的介面  
  您也可以使用 DOM 中的每個類別所公開的 unmanaged 的元件物件模型 (COM) 介面來存取 managed HTML DOM 中未公開的成員。 如果您必須呼叫幾個針對未公開的成員，或未公開的成員會傳回其他受管理的 HTML dom。 未包裝的 unmanaged 的介面，這被建議  
@@ -72,4 +72,4 @@ Managed HTML 文件物件模型 (DOM) 包含類別，稱為<xref:System.Windows.
  您可以呼叫您定義 HTML 頁面使用的任何指令碼函式<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>方法。 如果指令碼方法傳回的 HTML 項目，您可以使用轉換來轉換這個傳回的結果，加<xref:System.Windows.Forms.HtmlElement>。 如需詳細資訊和範例程式碼，請參閱<xref:System.Windows.Forms.HtmlDocument.InvokeScript%2A>。  
   
 ## <a name="see-also"></a>另請參閱
-- [使用 Managed HTML 文件物件模型](../../../../docs/framework/winforms/controls/using-the-managed-html-document-object-model.md)
+- [使用 Managed HTML 文件物件模型](using-the-managed-html-document-object-model.md)

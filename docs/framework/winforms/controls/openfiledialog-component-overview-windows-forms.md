@@ -7,15 +7,15 @@ helpviewer_keywords:
 - OpenFileDialog component [Windows Forms], about OpenFileDialog
 - Open File dialog box [Windows Forms], displaying in Windows Forms
 ms.assetid: cd717300-46b6-4f82-8207-b218fa7fa407
-ms.openlocfilehash: 1aea4466fd66d84e5c6ede74ecb46d6d659db8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ad2fea74f0f3110ab2868064c588a7611d4261e3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564262"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702902"
 ---
 # <a name="openfiledialog-component-overview-windows-forms"></a>OpenFileDialog 元件概觀 (Windows Form)
-Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊， 它會是相同**開啟檔案**Windows 作業系統所公開的對話方塊。 它繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
+Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的對話方塊。 它會是相同**開啟檔案**Windows 作業系統所公開的對話方塊。 這個元件繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
   
 ## <a name="using-this-component"></a>使用此元件  
  使用您以 Windows 為基礎的應用程式中的此元件做為簡單的解決方案，不需設定您自己的對話方塊中選擇的檔案。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。 不過，要注意，當使用<xref:System.Windows.Forms.OpenFileDialog>元件，您必須撰寫您自己的檔案開啟邏輯。  
@@ -26,4 +26,4 @@ Windows Form <xref:System.Windows.Forms.OpenFileDialog> 元件是預先設定的
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.OpenFileDialog>
-- [OpenFileDialog 元件](../../../../docs/framework/winforms/controls/openfiledialog-component-windows-forms.md)
+- [OpenFileDialog 元件](openfiledialog-component-windows-forms.md)

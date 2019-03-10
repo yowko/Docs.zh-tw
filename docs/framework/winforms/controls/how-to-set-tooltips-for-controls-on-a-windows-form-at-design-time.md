@@ -9,15 +9,15 @@ helpviewer_keywords:
 - tooltips [Windows Forms], for controls
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
-ms.openlocfilehash: ebefe596728b5cabd9d24720d8c39f13c8836bd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 541e50a8ee9c5338acc7c5e347549fd03a0f6323
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609404"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710715"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>HOW TO：在設計階段設定 Windows Form 上控制項的工具提示
-您可以設定<xref:System.Windows.Forms.ToolTip>在程式碼，或在 Windows Form 設計工具中的字串。 如需詳細資訊<xref:System.Windows.Forms.ToolTip>元件，請參閱 < [ToolTip 元件概觀](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)。  
+您可以設定<xref:System.Windows.Forms.ToolTip>在程式碼，或在 Windows Form 設計工具中的字串。 如需詳細資訊<xref:System.Windows.Forms.ToolTip>元件，請參閱 < [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -77,6 +77,6 @@ ms.locfileid: "54609404"
 2.  在 [**屬性**] 視窗中，刪除中的文字**ToolTip1 的**。  
 
 ## <a name="see-also"></a>另請參閱
-- [ToolTip 元件概觀](../../../../docs/framework/winforms/controls/tooltip-component-overview-windows-forms.md)
-- [如何：變更 Windows Form ToolTip 元件的延遲時間](../../../../docs/framework/winforms/controls/how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
-- [ToolTip 元件](../../../../docs/framework/winforms/controls/tooltip-component-windows-forms.md)
+- [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)
+- [如何：變更 Windows Form ToolTip 元件的延遲時間](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [ToolTip 元件](tooltip-component-windows-forms.md)

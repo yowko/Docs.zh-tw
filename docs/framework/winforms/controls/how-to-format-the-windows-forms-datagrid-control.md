@@ -14,16 +14,17 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: 58735e372793f18a3dd14ded3d5e8729d06309af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 696fdc09d285e0a04148e82b0cece6108b7d5a45
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616741"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705905"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>HOW TO：格式化 Windows Forms DataGrid 控制項
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  
+  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  將不同的色彩套用至各個部分<xref:System.Windows.Forms.DataGrid>控制項可以協助讓您更輕鬆地閱讀及解譯中的資訊。 色彩可以套用至資料列和資料行中。 資料列和資料行也可以隱藏或顯示您自行斟酌。  
   
@@ -64,7 +65,7 @@ ms.locfileid: "54616741"
     > [!NOTE]
     >  請記住，當自訂控制項，就可以將控制項設為無法存取，因為不佳的色彩選擇 （例如，紅色和綠色） 的色彩。 使用上可用的色彩**系統色彩**調色盤，若要避免這個問題。  
   
-     下列程序假設您的表單具有<xref:System.Windows.Forms.DataGrid>控制項繫結至資料表。 如需詳細資訊，請參閱 <<c0> [ 繫結至資料來源的 Windows Forms DataGrid 控制項](../../../../docs/framework/winforms/controls/how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+     下列程序假設您的表單具有<xref:System.Windows.Forms.DataGrid>控制項繫結至資料表。 如需詳細資訊，請參閱 <<c0> [ 繫結至資料來源的 Windows Forms DataGrid 控制項](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>以程式設計方式設定資料表的資料表和資料行樣式  
   
@@ -157,5 +158,5 @@ ms.locfileid: "54616741"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](../../../../docs/framework/winforms/controls/how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
-- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [DataGrid 控制項](datagrid-control-windows-forms.md)

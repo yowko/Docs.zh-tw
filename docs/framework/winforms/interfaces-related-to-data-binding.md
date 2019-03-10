@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 5a83198a665563c3d283cac042c9fec95c60f8e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec72b67da72bde9392d523787e8c0d4d0981ad7b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547127"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703526"
 ---
 # <a name="interfaces-related-to-data-binding"></a>與資料繫結相關的介面
 透過 [!INCLUDE[vstecado](../../../includes/vstecado-md.md)]，您可以建立許多不同的資料結構，以滿足您正在使用之應用程式和資料的繫結需求。 您或許會想要建立自有類別以在 Windows Forms 中提供或取用資料。 這些物件可以提供不同程度的功能和複雜度，從基本的資料繫結，到提供設計階段支援、錯誤檢查、變更通知，或甚至對資料本身所做變更的結構化回復支援。  
@@ -150,6 +150,6 @@ ms.locfileid: "54547127"
     >  類別繼承自<xref:System.Windows.Forms.Control>管理繫結會自動透過其<xref:System.Windows.Forms.Control.BindingContext%2A>屬性，因此您需要實作的情況下<xref:System.Windows.Forms.ICurrencyManagerProvider>很少見。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [如何：建立 Windows Form 上的簡單繫結控制項](../../../docs/framework/winforms/how-to-create-a-simple-bound-control-on-a-windows-form.md)
-- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)
+- [如何：建立 Windows Form 上的簡單繫結控制項](how-to-create-a-simple-bound-control-on-a-windows-form.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 40a07ddffa68d0dac3cb9b4956510fa7dc124a7c
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 145e14f4a6e11209e46e8761f8a0551c1400a605
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664740"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711296"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows Form 支援的資料來源
 傳統上，資料繫結已使用的應用程式中利用儲存在資料庫中的資料。 使用 Windows Form 資料繫結，您可以從資料庫，以及其他的結構，例如陣列和集合中的資料存取資料，只要已符合特定最低需求。  
   
 ## <a name="structures-to-bind-to"></a>要繫結至結構  
- 在 Windows Forms 中，您可以繫結至各種不同的結構，從簡單到複雜的清單，例如 ADO.NET 資料資料表 （複雜繫結） 的物件 （簡單繫結）。 簡單繫結，Windows Forms 會支援簡單的物件上的公用屬性的繫結。 Windows Form 清單為基礎的繫結通常需要物件支援<xref:System.Collections.IList>介面或<xref:System.ComponentModel.IListSource>介面。 此外，如果您要透過繫結與<xref:System.Windows.Forms.BindingSource>元件，您可以繫結至支援的物件<xref:System.Collections.IEnumerable>介面。 如需有關資料繫結介面的詳細資訊，請參閱[相關的資料繫結介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)。  
+ 在 Windows Forms 中，您可以繫結至各種不同的結構，從簡單到複雜的清單，例如 ADO.NET 資料資料表 （複雜繫結） 的物件 （簡單繫結）。 簡單繫結，Windows Forms 會支援簡單的物件上的公用屬性的繫結。 Windows Form 清單為基礎的繫結通常需要物件支援<xref:System.Collections.IList>介面或<xref:System.ComponentModel.IListSource>介面。 此外，如果您要透過繫結與<xref:System.Windows.Forms.BindingSource>元件，您可以繫結至支援的物件<xref:System.Collections.IEnumerable>介面。 如需有關資料繫結介面的詳細資訊，請參閱[相關的資料繫結介面](interfaces-related-to-data-binding.md)。  
   
  下列清單會顯示您可以在 Windows Form 中繫結至結構。  
   
@@ -58,6 +58,6 @@ ms.locfileid: "56664740"
 -   <xref:System.Data.DataViewManager>. A<xref:System.Data.DataViewManager>是自訂的檢視的整個<xref:System.Data.DataSet>，類似於<xref:System.Data.DataView>，但包含的關聯性。 具有<xref:System.Data.DataViewManager.DataViewSettings%2A>集合中，您可以設定預設篩選和排序選項的任何檢視，<xref:System.Data.DataViewManager>具有指定的資料表。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [資料繫結和 Windows Forms](../../../docs/framework/winforms/data-binding-and-windows-forms.md)
-- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)

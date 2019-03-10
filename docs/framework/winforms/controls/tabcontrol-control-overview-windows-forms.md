@@ -9,12 +9,12 @@ helpviewer_keywords:
 - property pages [Windows Forms], Windows Forms
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
-ms.openlocfilehash: 10faaeba9e4de46447809df545cad4b4170acac9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 266421ac7182b80a0628b92d1f357afd48ca5e7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520694"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712756"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.TabControl> 顯示多個索引標籤，像是在筆記本中的分隔線或在檔案櫃中一組資料夾的標籤。 索引標籤可以包含圖片和其他控制項。 您可以使用索引標籤控制項，以產生會顯示 Windows 作業系統，例如控制面板的顯示內容中的許多地方的多頁對話方塊中的類型。 此外，<xref:System.Windows.Forms.TabControl>可用來建立屬性頁，會用來設定一組相關的屬性。  
@@ -24,9 +24,9 @@ Windows Form <xref:System.Windows.Forms.TabControl> 顯示多個索引標籤，�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TabControl>
-- [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [如何：變更 Windows Form TabControl 的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [如何：將控制項加入索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [如何：新增和移除使用 Windows Form TabControl 的索引標籤](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [如何：停用索引標籤頁](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [Windows Forms 中的對話方塊](../../../../docs/framework/winforms/dialog-boxes-in-windows-forms.md)
+- [TabControl 控制項](tabcontrol-control-windows-forms.md)
+- [如何：變更 Windows Form TabControl 的外觀](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [如何：將控制項加入索引標籤頁](how-to-add-a-control-to-a-tab-page.md)
+- [如何：新增和移除使用 Windows Form TabControl 的索引標籤](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [如何：停用索引標籤頁](how-to-disable-tab-pages.md)
+- [Windows Forms 中的對話方塊](../dialog-boxes-in-windows-forms.md)

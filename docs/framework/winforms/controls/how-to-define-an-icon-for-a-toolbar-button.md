@@ -13,18 +13,19 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: 84db98b4-8566-49ce-b2c8-1fd66a5eb3a0
-ms.openlocfilehash: fa622245155a1e7bdeb0184b0cd5ff07f651bfbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb4a492b081cd9f9e3ccc1d47a4120c705058dd0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54644790"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712743"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button"></a>HOW TO：定義工具列按鈕的圖示
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
+>  
+  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
- <xref:System.Windows.Forms.ToolBar> 按鈕可顯示使用者能方便識別其中的圖示。 這透過將影像加入至達成[ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)元件，並再建立關聯<xref:System.Windows.Forms.ImageList>元件與<xref:System.Windows.Forms.ToolBar>控制項。  
+ <xref:System.Windows.Forms.ToolBar> 按鈕可顯示使用者能方便識別其中的圖示。 這透過將影像加入至達成[ImageList 元件](imagelist-component-windows-forms.md)元件，並再建立關聯<xref:System.Windows.Forms.ImageList>元件與<xref:System.Windows.Forms.ToolBar>控制項。  
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-programmatically"></a>以程式設計方式設定工具列按鈕的圖示  
   
@@ -117,6 +118,6 @@ ms.locfileid: "54644790"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ToolBar>
-- [如何：觸發程序的工具列按鈕的功能表事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [ToolBar 控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
-- [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
+- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [ToolBar 控制項](toolbar-control-windows-forms.md)
+- [ImageList 元件](imagelist-component-windows-forms.md)

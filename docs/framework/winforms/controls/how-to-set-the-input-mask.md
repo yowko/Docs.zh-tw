@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 68a3e72f23e881bc68441e8aee9674f1a822882a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658909"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702356"
 ---
 # <a name="how-to-set-the-input-mask"></a>HOW TO：設定輸入的遮罩
 遮罩的文字方塊控制項是支援的宣告式語法，以接受或拒絕使用者輸入增強的文字方塊控制項。 藉由設定 [遮罩] 屬性，您可以指定允許使用者輸入，而不需要撰寫任何自訂驗證邏輯應用程式中。 如需詳細資訊，請參閱的 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox>類別。  
@@ -59,9 +59,9 @@ ms.locfileid: "54658909"
   
 4.  選取或清除**使用 ValidatingType**核取方塊。 **使用 ValidatingType**核取方塊可讓您指定的資料類型是否用來驗證資料輸入的使用者。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> 屬性 (Property)。  
   
-5.  按一下 [確定 **Deploying Office Solutions**]。  
+5.  按一下 [確定] 。  
   
      在 輸入遮罩**遮罩**中的屬性**屬性**視窗。  
   
 ## <a name="see-also"></a>另請參閱
-- [逐步解說：使用 MaskedTextBox 控制項](../../../../docs/framework/winforms/controls/walkthrough-working-with-the-maskedtextbox-control.md)
+- [逐步解說：使用 MaskedTextBox 控制項](walkthrough-working-with-the-maskedtextbox-control.md)

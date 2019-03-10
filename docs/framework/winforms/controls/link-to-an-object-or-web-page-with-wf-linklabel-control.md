@@ -15,15 +15,15 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: fd397f9a6462ad9da06b1cc258a51b3cccf5d21c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628444"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705180"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>HOW TO：連結的物件，或使用 Windows Forms LinkLabel 控制項的網頁
-Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上建立 Web 樣式連結。 按一下連結時，您可以變更其色彩會指出已瀏覽連結。 如需有關如何變更色彩的詳細資訊，請參閱[How to:變更 Windows Forms LinkLabel 控制項的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
+Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上建立 Web 樣式連結。 按一下連結時，您可以變更其色彩會指出已瀏覽連結。 如需有關如何變更色彩的詳細資訊，請參閱[How to:變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
   
 ## <a name="linking-to-another-form"></a>連結至另一個表單  
   
@@ -180,6 +180,6 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
-- [LinkLabel 控制項概觀](../../../../docs/framework/winforms/controls/linklabel-control-overview-windows-forms.md)
-- [如何：變更 Windows Forms LinkLabel 控制項的外觀](../../../../docs/framework/winforms/controls/how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
-- [LinkLabel 控制項](../../../../docs/framework/winforms/controls/linklabel-control-windows-forms.md)
+- [LinkLabel 控制項概觀](linklabel-control-overview-windows-forms.md)
+- [如何：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [LinkLabel 控制項](linklabel-control-windows-forms.md)
