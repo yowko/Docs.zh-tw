@@ -11,26 +11,27 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 6459c61e49a49001d490d5213f23ff652d4a1939
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6d0404f22c7db72b096ef130d9a9f4815db4059
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609586"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707543"
 ---
-# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="1926f-102">HOW TO：觸發程序的工具列按鈕的功能表事件</span><span class="sxs-lookup"><span data-stu-id="1926f-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
+# <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a><span data-ttu-id="0e85e-102">HOW TO：觸發程序的工具列按鈕的功能表事件</span><span class="sxs-lookup"><span data-stu-id="0e85e-102">How to: Trigger Menu Events for Toolbar Buttons</span></span>
 > [!NOTE]
->  <span data-ttu-id="1926f-103"><xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="1926f-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
+>  <span data-ttu-id="0e85e-103">
+  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。</span><span class="sxs-lookup"><span data-stu-id="0e85e-103">The <xref:System.Windows.Forms.ToolStrip> control replaces and adds functionality to the <xref:System.Windows.Forms.ToolBar> control; however, the <xref:System.Windows.Forms.ToolBar> control is retained for both backward compatibility and future use, if you choose.</span></span>  
   
- <span data-ttu-id="1926f-104">如果您的 Windows Form 功能<xref:System.Windows.Forms.ToolBar>控制項工具列按鈕，您會想要知道的按鈕使用者按。</span><span class="sxs-lookup"><span data-stu-id="1926f-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
+ <span data-ttu-id="0e85e-104">如果您的 Windows Form 功能<xref:System.Windows.Forms.ToolBar>控制項工具列按鈕，您會想要知道的按鈕使用者按。</span><span class="sxs-lookup"><span data-stu-id="0e85e-104">If your Windows Form features a <xref:System.Windows.Forms.ToolBar> control with toolbar buttons, you will want to know which button the user clicks.</span></span>  
   
- <span data-ttu-id="1926f-105">在 <xref:System.Windows.Forms.ToolBar.ButtonClick>事件的<xref:System.Windows.Forms.ToolBar>控制項，您可以評估<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>屬性<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別。</span><span class="sxs-lookup"><span data-stu-id="1926f-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="1926f-106">在下列範例中，會顯示訊息方塊，指出所按的按鈕。</span><span class="sxs-lookup"><span data-stu-id="1926f-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="1926f-107">如需詳細資訊，請參閱 <xref:System.Windows.Forms.MessageBox>。</span><span class="sxs-lookup"><span data-stu-id="1926f-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
+ <span data-ttu-id="0e85e-105">在 <xref:System.Windows.Forms.ToolBar.ButtonClick>事件的<xref:System.Windows.Forms.ToolBar>控制項，您可以評估<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>屬性<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別。</span><span class="sxs-lookup"><span data-stu-id="0e85e-105">On the <xref:System.Windows.Forms.ToolBar.ButtonClick> event of the <xref:System.Windows.Forms.ToolBar> control, you can evaluate the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A> property of the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class.</span></span> <span data-ttu-id="0e85e-106">在下列範例中，會顯示訊息方塊，指出所按的按鈕。</span><span class="sxs-lookup"><span data-stu-id="0e85e-106">In the example below, a message box is shown, indicating which button was clicked.</span></span> <span data-ttu-id="0e85e-107">如需詳細資訊，請參閱 <xref:System.Windows.Forms.MessageBox>。</span><span class="sxs-lookup"><span data-stu-id="0e85e-107">For details, see <xref:System.Windows.Forms.MessageBox>.</span></span>  
   
- <span data-ttu-id="1926f-108">下列範例假設<xref:System.Windows.Forms.ToolBar>控制項已經加入至 Windows 表單。</span><span class="sxs-lookup"><span data-stu-id="1926f-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
+ <span data-ttu-id="0e85e-108">下列範例假設<xref:System.Windows.Forms.ToolBar>控制項已經加入至 Windows 表單。</span><span class="sxs-lookup"><span data-stu-id="0e85e-108">The example below assumes a <xref:System.Windows.Forms.ToolBar> control has been added to a Windows Form.</span></span>  
   
-### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="1926f-109">處理工具列上的 Click 事件</span><span class="sxs-lookup"><span data-stu-id="1926f-109">To handle the Click event on a toolbar</span></span>  
+### <a name="to-handle-the-click-event-on-a-toolbar"></a><span data-ttu-id="0e85e-109">處理工具列上的 Click 事件</span><span class="sxs-lookup"><span data-stu-id="0e85e-109">To handle the Click event on a toolbar</span></span>  
   
-1.  <span data-ttu-id="1926f-110">在程序中，新增工具列按鈕以<xref:System.Windows.Forms.ToolBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="1926f-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
+1.  <span data-ttu-id="0e85e-110">在程序中，新增工具列按鈕以<xref:System.Windows.Forms.ToolBar>控制項。</span><span class="sxs-lookup"><span data-stu-id="0e85e-110">In a procedure, add toolbar buttons to the <xref:System.Windows.Forms.ToolBar> control.</span></span>  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,10 +71,10 @@ ms.locfileid: "54609586"
        }  
     ```  
   
-2.  <span data-ttu-id="1926f-111">新增事件處理常式<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ButtonClick>事件。</span><span class="sxs-lookup"><span data-stu-id="1926f-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="1926f-112">使用案例切換陳述式和<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別，以判斷所按下工具列按鈕。</span><span class="sxs-lookup"><span data-stu-id="1926f-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="1926f-113">有鑑於此，會顯示適當的訊息方塊。</span><span class="sxs-lookup"><span data-stu-id="1926f-113">Based on this, show an appropriate message box.</span></span>  
+2.  <span data-ttu-id="0e85e-111">新增事件處理常式<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ButtonClick>事件。</span><span class="sxs-lookup"><span data-stu-id="0e85e-111">Add an event handler for the <xref:System.Windows.Forms.ToolBar> control's <xref:System.Windows.Forms.ToolBar.ButtonClick> event.</span></span> <span data-ttu-id="0e85e-112">使用案例切換陳述式和<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別，以判斷所按下工具列按鈕。</span><span class="sxs-lookup"><span data-stu-id="0e85e-112">Use a case switching statement and the <xref:System.Windows.Forms.ToolBarButtonClickEventArgs> class to determine the toolbar button that was clicked.</span></span> <span data-ttu-id="0e85e-113">有鑑於此，會顯示適當的訊息方塊。</span><span class="sxs-lookup"><span data-stu-id="0e85e-113">Based on this, show an appropriate message box.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="1926f-114">在此範例中，訊息方塊僅作為預留位置使用。</span><span class="sxs-lookup"><span data-stu-id="1926f-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="1926f-115">依需要新增要在按一下工具列按鈕時執行的其他程式碼。</span><span class="sxs-lookup"><span data-stu-id="1926f-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
+    >  <span data-ttu-id="0e85e-114">在此範例中，訊息方塊僅作為預留位置使用。</span><span class="sxs-lookup"><span data-stu-id="0e85e-114">A message box is being used solely as a placeholder in this example.</span></span> <span data-ttu-id="0e85e-115">依需要新增要在按一下工具列按鈕時執行的其他程式碼。</span><span class="sxs-lookup"><span data-stu-id="0e85e-115">Feel free to add other code to execute when the toolbar buttons are clicked.</span></span>  
   
     ```vb  
     Protected Sub ToolBar1_ButtonClick(ByVal sender As Object, _  
@@ -134,8 +135,8 @@ ms.locfileid: "54609586"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="1926f-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1926f-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0e85e-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0e85e-116">See also</span></span>
 - <xref:System.Windows.Forms.ToolBar>
-- [<span data-ttu-id="1926f-117">如何：將按鈕加入至 ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="1926f-117">How to: Add Buttons to a ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/how-to-add-buttons-to-a-toolbar-control.md)
-- [<span data-ttu-id="1926f-118">如何：定義工具列按鈕的圖示</span><span class="sxs-lookup"><span data-stu-id="1926f-118">How to: Define an Icon for a ToolBar Button</span></span>](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [<span data-ttu-id="1926f-119">ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="1926f-119">ToolBar Control</span></span>](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [<span data-ttu-id="0e85e-117">如何：將按鈕加入至 ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="0e85e-117">How to: Add Buttons to a ToolBar Control</span></span>](how-to-add-buttons-to-a-toolbar-control.md)
+- [<span data-ttu-id="0e85e-118">如何：定義工具列按鈕的圖示</span><span class="sxs-lookup"><span data-stu-id="0e85e-118">How to: Define an Icon for a ToolBar Button</span></span>](how-to-define-an-icon-for-a-toolbar-button.md)
+- [<span data-ttu-id="0e85e-119">ToolBar 控制項</span><span class="sxs-lookup"><span data-stu-id="0e85e-119">ToolBar Control</span></span>](toolbar-control-windows-forms.md)

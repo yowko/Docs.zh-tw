@@ -12,33 +12,33 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-ms.openlocfilehash: fca356c258b482a9f4e4fd64f48801de428f8426
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 06204c909987041ac6bf4e64e6f72a850910ca67
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260825"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710104"
 ---
-# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a><span data-ttu-id="f4acf-102">HOW TO：反映 Windows Form 控制項使用 BindingSource 中的資料來源更新</span><span class="sxs-lookup"><span data-stu-id="f4acf-102">How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource</span></span>
-<span data-ttu-id="f4acf-103">當您使用資料繫結控制項時，如果資料來源未引發清單變更事件，您有時必須回應資料來源中的變更。</span><span class="sxs-lookup"><span data-stu-id="f4acf-103">When you use data-bound controls, you sometimes have to respond to changes in the data source when the data source does not raise list-changed events.</span></span> <span data-ttu-id="f4acf-104">當您使用 <xref:System.Windows.Forms.BindingSource> 元件將資料來源繫結至 Windows Form 控制項時，可藉由呼叫 <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> 方法來通知控制項資料來源已變更。</span><span class="sxs-lookup"><span data-stu-id="f4acf-104">When you use the <xref:System.Windows.Forms.BindingSource> component to bind your data source to a Windows Forms control, you can notify the control that your data source has changed by calling the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method.</span></span>  
+# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a><span data-ttu-id="8143c-102">HOW TO：反映 Windows Form 控制項使用 BindingSource 中的資料來源更新</span><span class="sxs-lookup"><span data-stu-id="8143c-102">How to: Reflect Data Source Updates in a Windows Forms Control with the BindingSource</span></span>
+<span data-ttu-id="8143c-103">當您使用資料繫結控制項時，如果資料來源未引發清單變更事件，您有時必須回應資料來源中的變更。</span><span class="sxs-lookup"><span data-stu-id="8143c-103">When you use data-bound controls, you sometimes have to respond to changes in the data source when the data source does not raise list-changed events.</span></span> <span data-ttu-id="8143c-104">當您使用 <xref:System.Windows.Forms.BindingSource> 元件將資料來源繫結至 Windows Form 控制項時，可藉由呼叫 <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> 方法來通知控制項資料來源已變更。</span><span class="sxs-lookup"><span data-stu-id="8143c-104">When you use the <xref:System.Windows.Forms.BindingSource> component to bind your data source to a Windows Forms control, you can notify the control that your data source has changed by calling the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f4acf-105">範例</span><span class="sxs-lookup"><span data-stu-id="f4acf-105">Example</span></span>  
- <span data-ttu-id="f4acf-106">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> 方法來通知繫結控制項有關資料來源中的更新。</span><span class="sxs-lookup"><span data-stu-id="f4acf-106">The following code example demonstrates using the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method to notify a bound control about an update in the data source.</span></span>  
+## <a name="example"></a><span data-ttu-id="8143c-105">範例</span><span class="sxs-lookup"><span data-stu-id="8143c-105">Example</span></span>  
+ <span data-ttu-id="8143c-106">下列程式碼範例示範如何使用 <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> 方法來通知繫結控制項有關資料來源中的更新。</span><span class="sxs-lookup"><span data-stu-id="8143c-106">The following code example demonstrates using the <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> method to notify a bound control about an update in the data source.</span></span>  
   
- [!code-cpp[System.Windows.Forms.DataConnector.ResetBindings#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CPP/form1.cpp#1)]
- [!code-csharp[System.Windows.Forms.DataConnector.ResetBindings#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CS/form1.cs#1)]
- [!code-vb[System.Windows.Forms.DataConnector.ResetBindings#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/VB/form1.vb#1)]  
+ [!code-cpp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CPP/form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/CS/form1.cs#1)]
+ [!code-vb[System.Windows.Forms.DataConnector.ResetBindings#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnector.ResetBindings/VB/form1.vb#1)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="f4acf-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="f4acf-107">Compiling the Code</span></span>  
- <span data-ttu-id="f4acf-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="f4acf-108">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="8143c-107">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="8143c-107">Compiling the Code</span></span>  
+ <span data-ttu-id="8143c-108">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="8143c-108">This example requires:</span></span>  
   
--   <span data-ttu-id="f4acf-109">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="f4acf-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
+-   <span data-ttu-id="8143c-109">System、System.Drawing 和 System.Windows.Forms 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="8143c-109">References to the System, System.Drawing and System.Windows.Forms assemblies.</span></span>  
   
- <span data-ttu-id="f4acf-110">Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="f4acf-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="f4acf-111">您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="f4acf-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
+ <span data-ttu-id="8143c-110">Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。</span><span class="sxs-lookup"><span data-stu-id="8143c-110">For information about building this example from the command line for Visual Basic or Visual C#, see [Building from the Command Line](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md) or [Command-line Building With csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md).</span></span> <span data-ttu-id="8143c-111">您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。</span><span class="sxs-lookup"><span data-stu-id="8143c-111">You can also build this example in Visual Studio by pasting the code into a new project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="f4acf-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f4acf-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="8143c-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8143c-112">See also</span></span>
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [<span data-ttu-id="f4acf-113">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="f4acf-113">BindingSource Component</span></span>](../../../../docs/framework/winforms/controls/bindingsource-component.md)
-- [<span data-ttu-id="f4acf-114">如何：將 Windows Forms 控制項繫結至型別</span><span class="sxs-lookup"><span data-stu-id="f4acf-114">How to: Bind a Windows Forms Control to a Type</span></span>](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-control-to-a-type.md)
+- [<span data-ttu-id="8143c-113">BindingSource 元件</span><span class="sxs-lookup"><span data-stu-id="8143c-113">BindingSource Component</span></span>](bindingsource-component.md)
+- [<span data-ttu-id="8143c-114">如何：將 Windows Forms 控制項繫結至型別</span><span class="sxs-lookup"><span data-stu-id="8143c-114">How to: Bind a Windows Forms Control to a Type</span></span>](how-to-bind-a-windows-forms-control-to-a-type.md)

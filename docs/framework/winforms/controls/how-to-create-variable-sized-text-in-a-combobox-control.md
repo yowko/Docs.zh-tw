@@ -10,17 +10,17 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms], examples [C#]
 - ComboBox control [Windows Forms], drawing custom text
 ms.assetid: ce39b9ea-e626-49fe-bd5a-f567f6d157df
-ms.openlocfilehash: 2a9f6e8a1c96c2a9bf9e56c1c6acefc4181a18dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b55a6b66416aa79427035abdfbc19d1b0e21d94e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54526986"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707786"
 ---
-# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="ad084-102">HOW TO：建立下拉式方塊控制項中的變數文字大小</span><span class="sxs-lookup"><span data-stu-id="ad084-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
-<span data-ttu-id="ad084-103">此範例示範自訂繪圖中的文字<xref:System.Windows.Forms.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="ad084-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="ad084-104">當項目符合特定準則時，它是以較大的字型繪製，而且變成紅色。</span><span class="sxs-lookup"><span data-stu-id="ad084-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
+# <a name="how-to-create-variable-sized-text-in-a-combobox-control"></a><span data-ttu-id="ff331-102">HOW TO：建立下拉式方塊控制項中的變數文字大小</span><span class="sxs-lookup"><span data-stu-id="ff331-102">How to: Create Variable Sized Text in a ComboBox Control</span></span>
+<span data-ttu-id="ff331-103">此範例示範自訂繪圖中的文字<xref:System.Windows.Forms.ComboBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="ff331-103">This example demonstrates custom drawing of text in a <xref:System.Windows.Forms.ComboBox> control.</span></span> <span data-ttu-id="ff331-104">當項目符合特定準則時，它是以較大的字型繪製，而且變成紅色。</span><span class="sxs-lookup"><span data-stu-id="ff331-104">When an item meets a certain criteria, it is drawn in a larger font and turned red.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="ad084-105">範例</span><span class="sxs-lookup"><span data-stu-id="ad084-105">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="ff331-105">範例</span><span class="sxs-lookup"><span data-stu-id="ff331-105">Example</span></span>  
   
 ```vb  
 Private Sub ComboBox1_MeasureItem(ByVal sender As Object, ByVal e As _  
@@ -55,22 +55,23 @@ e.Bounds.X, e.Bounds.Y)
 End Sub  
 ```  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="ad084-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="ad084-106">Compiling the Code</span></span>  
- <span data-ttu-id="ad084-107">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="ad084-107">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="ff331-106">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="ff331-106">Compiling the Code</span></span>  
+ <span data-ttu-id="ff331-107">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="ff331-107">This example requires:</span></span>  
   
--   <span data-ttu-id="ad084-108">Windows 表單。</span><span class="sxs-lookup"><span data-stu-id="ad084-108">A Windows form.</span></span>  
+-   <span data-ttu-id="ff331-108">Windows 表單。</span><span class="sxs-lookup"><span data-stu-id="ff331-108">A Windows form.</span></span>  
   
--   <span data-ttu-id="ad084-109">A<xref:System.Windows.Forms.ComboBox>控制項，名為`ListBox1`中的三個項目與<xref:System.Windows.Forms.ComboBox.Items%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="ad084-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="ad084-110">在此範例中，三個項目會命名為`"One", Two", and Three"`。</span><span class="sxs-lookup"><span data-stu-id="ad084-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="ad084-111"><xref:System.Windows.Forms.ComboBox.DrawMode%2A>的屬性`ComboBox1`必須設為<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。</span><span class="sxs-lookup"><span data-stu-id="ad084-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
+-   <span data-ttu-id="ff331-109">A<xref:System.Windows.Forms.ComboBox>控制項，名為`ListBox1`中的三個項目與<xref:System.Windows.Forms.ComboBox.Items%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="ff331-109">A <xref:System.Windows.Forms.ComboBox> control named `ListBox1` with three items in the <xref:System.Windows.Forms.ComboBox.Items%2A> property.</span></span> <span data-ttu-id="ff331-110">在此範例中，三個項目會命名為`"One", Two", and Three"`。</span><span class="sxs-lookup"><span data-stu-id="ff331-110">In this example, the three items are named `"One", Two", and Three"`.</span></span> <span data-ttu-id="ff331-111"><xref:System.Windows.Forms.ComboBox.DrawMode%2A>的屬性`ComboBox1`必須設為<xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>。</span><span class="sxs-lookup"><span data-stu-id="ff331-111">The <xref:System.Windows.Forms.ComboBox.DrawMode%2A> property of `ComboBox1` must be set to <xref:System.Windows.Forms.DrawMode.OwnerDrawVariable>.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="ad084-112">這項技術也是適用於<xref:System.Windows.Forms.ListBox>控制項，您可以使用替代<xref:System.Windows.Forms.ListBox>如<xref:System.Windows.Forms.ComboBox>。</span><span class="sxs-lookup"><span data-stu-id="ad084-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
+    >  <span data-ttu-id="ff331-112">這項技術也是適用於<xref:System.Windows.Forms.ListBox>控制項，您可以使用替代<xref:System.Windows.Forms.ListBox>如<xref:System.Windows.Forms.ComboBox>。</span><span class="sxs-lookup"><span data-stu-id="ff331-112">This technique is also applicable to the <xref:System.Windows.Forms.ListBox> control — you can substitute a <xref:System.Windows.Forms.ListBox> for the <xref:System.Windows.Forms.ComboBox>.</span></span>  
   
--   <span data-ttu-id="ad084-113"><xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="ad084-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
+-   <span data-ttu-id="ff331-113">
+  <xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 命名空間的參考。</span><span class="sxs-lookup"><span data-stu-id="ff331-113">References to the <xref:System.Windows.Forms?displayProperty=nameWithType> and <xref:System.Drawing?displayProperty=nameWithType> namespaces.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ad084-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ad084-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ff331-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ff331-114">See also</span></span>
 - <xref:System.Windows.Forms.ComboBox.DrawItem>
 - <xref:System.Windows.Forms.DrawItemEventArgs>
 - <xref:System.Windows.Forms.ComboBox.MeasureItem>
-- [<span data-ttu-id="ad084-115">使用內建主控描繪支援的控制項</span><span class="sxs-lookup"><span data-stu-id="ad084-115">Controls with Built-In Owner-Drawing Support</span></span>](../../../../docs/framework/winforms/controls/controls-with-built-in-owner-drawing-support.md)
-- [<span data-ttu-id="ad084-116">ListBox 控制項</span><span class="sxs-lookup"><span data-stu-id="ad084-116">ListBox Control</span></span>](../../../../docs/framework/winforms/controls/listbox-control-windows-forms.md)
-- [<span data-ttu-id="ad084-117">ComboBox 控制項</span><span class="sxs-lookup"><span data-stu-id="ad084-117">ComboBox Control</span></span>](../../../../docs/framework/winforms/controls/combobox-control-windows-forms.md)
+- [<span data-ttu-id="ff331-115">使用內建主控描繪支援的控制項</span><span class="sxs-lookup"><span data-stu-id="ff331-115">Controls with Built-In Owner-Drawing Support</span></span>](controls-with-built-in-owner-drawing-support.md)
+- [<span data-ttu-id="ff331-116">ListBox 控制項</span><span class="sxs-lookup"><span data-stu-id="ff331-116">ListBox Control</span></span>](listbox-control-windows-forms.md)
+- [<span data-ttu-id="ff331-117">ComboBox 控制項</span><span class="sxs-lookup"><span data-stu-id="ff331-117">ComboBox Control</span></span>](combobox-control-windows-forms.md)
