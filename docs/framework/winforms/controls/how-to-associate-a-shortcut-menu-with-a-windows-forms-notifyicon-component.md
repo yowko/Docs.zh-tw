@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 142d40040872a0fbe4e679a8ad67ef0ca48b4753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573682"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720380"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>HOW TO：使用 Windows Forms NotifyIcon 元件關聯的捷徑功能表
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "54573682"
   
 1.  新增<xref:System.Windows.Forms.NotifyIcon>元件至表單，以及設定重要的屬性，例如<xref:System.Windows.Forms.NotifyIcon.Icon%2A>和<xref:System.Windows.Forms.NotifyIcon.Visible%2A>屬性。  
   
-     如需詳細資訊，請參閱[＜How to：新增應用程式圖示加入工作列使用 Windows Form NotifyIcon 元件](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
+     如需詳細資訊，請參閱[如何：新增應用程式圖示加入工作列使用 Windows Form NotifyIcon 元件](app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
 2.  新增<xref:System.Windows.Forms.ContextMenu>元件至您的 Windows 表單。  
   
@@ -129,6 +129,6 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [如何：應用程式圖示加入工作列使用 Windows Forms NotifyIcon 元件](../../../../docs/framework/winforms/controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)
-- [NotifyIcon 元件](../../../../docs/framework/winforms/controls/notifyicon-component-windows-forms.md)
-- [NotifyIcon 元件概觀](../../../../docs/framework/winforms/controls/notifyicon-component-overview-windows-forms.md)
+- [如何：應用程式圖示加入工作列使用 Windows Forms NotifyIcon 元件](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [NotifyIcon 元件](notifyicon-component-windows-forms.md)
+- [NotifyIcon 元件概觀](notifyicon-component-overview-windows-forms.md)

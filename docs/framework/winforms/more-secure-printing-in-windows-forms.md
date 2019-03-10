@@ -7,12 +7,12 @@ helpviewer_keywords:
 - printing [Windows Forms], security
 - security [Windows Forms], printing
 ms.assetid: 48fd36ac-872f-4de0-902a-e52969cd4367
-ms.openlocfilehash: 2bf05461014c3511725cb28caf2de0eb4c2e1d5c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd61ea1c56ee2dbe7ff725d9f9f79df6b6cdfd8
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621795"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723029"
 ---
 # <a name="more-secure-printing-in-windows-forms"></a>Windows Form 中更安全的列印
 Windows Forms 應用程式通常會包括列印功能。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]會使用<xref:System.Drawing.Printing.PrintingPermission>類別，以控制列印功能的存取和相關聯<xref:System.Drawing.Printing.PrintingPermissionLevel>列舉值，指出存取層級。 根據預設，近端內部網路和網際網路區域; 中預設啟用列印不過，存取層級受限於這兩個區域中。 是否可以列印您的應用程式，需要使用者互動，或無法列印值而定的權限授與應用程式。 根據預設，近端內部網路區域會收到<xref:System.Drawing.Printing.PrintingPermissionLevel.DefaultPrinting>存取，而且內部網路區域會收到<xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting>存取。  
@@ -27,7 +27,7 @@ Windows Forms 應用程式通常會包括列印功能。 [!INCLUDE[dnprdnshort](
 |<xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting>|無法存取印表機。 <xref:System.Drawing.Printing.PrintingPermissionLevel.NoPrinting> 是 <xref:System.Drawing.Printing.PrintingPermissionLevel.SafePrinting> 的子集。|  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 中更安全的檔案和資料存取](../../../docs/framework/winforms/more-secure-file-and-data-access-in-windows-forms.md)
-- [Windows Forms 中的其他安全性考量](../../../docs/framework/winforms/additional-security-considerations-in-windows-forms.md)
-- [Windows Forms 中的安全性概觀](../../../docs/framework/winforms/security-in-windows-forms-overview.md)
-- [Windows Forms 安全性](../../../docs/framework/winforms/windows-forms-security.md)
+- [Windows Forms 中更安全的檔案和資料存取](more-secure-file-and-data-access-in-windows-forms.md)
+- [Windows Forms 中的其他安全性考量](additional-security-considerations-in-windows-forms.md)
+- [Windows Forms 中的安全性概觀](security-in-windows-forms-overview.md)
+- [Windows Forms 安全性](windows-forms-security.md)

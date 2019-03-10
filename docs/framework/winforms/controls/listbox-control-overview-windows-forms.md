@@ -7,12 +7,12 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
-ms.openlocfilehash: 58fb5c40ab054a71b6d15beaa00190f3eaff3019
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bba90f704458e1c724328feccaaf6f04b98ecb4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591548"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723981"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ListBox>控制項顯示使用者可以從中選取一或多個項目清單。 如果項目總數超過可顯示的數字，捲軸會自動新增至<xref:System.Windows.Forms.ListBox>控制項。 當<xref:System.Windows.Forms.ListBox.MultiColumn%2A>屬性設定為`true`，清單方塊會顯示在多個資料行中的項目，且水平捲軸會顯示。 當<xref:System.Windows.Forms.ListBox.MultiColumn%2A>屬性設定為`false`，清單方塊會顯示單一資料行中的項目，而垂直捲軸會顯示。 當<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>設為`true`，捲軸出現，不論項目數目。 <xref:System.Windows.Forms.ListBox.SelectionMode%2A>屬性會決定可以一次選取多少個清單項目。  
@@ -24,10 +24,10 @@ Windows Form<xref:System.Windows.Forms.ListBox>控制項顯示使用者可以從
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ListBox>
-- [如何：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項](../../../../docs/framework/winforms/controls/add-and-remove-items-from-a-wf-combobox.md)
-- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](../../../../docs/framework/winforms/controls/sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料](../../../../docs/framework/winforms/controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
-- [ComboBox 控制項概觀](../../../../docs/framework/winforms/controls/combobox-control-overview-windows-forms.md)
-- [CheckedListBox 控制項概觀](../../../../docs/framework/winforms/controls/checkedlistbox-control-overview-windows-forms.md)
-- [用來列出選項的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/windows-forms-controls-used-to-list-options.md)
-- [如何：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表](../../../../docs/framework/winforms/controls/create-a-lookup-table-for-a-wf-combobox-listbox.md)
+- [如何：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項](add-and-remove-items-from-a-wf-combobox.md)
+- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [如何：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料](how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)
+- [ComboBox 控制項概觀](combobox-control-overview-windows-forms.md)
+- [CheckedListBox 控制項概觀](checkedlistbox-control-overview-windows-forms.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [如何：Windows form 的 ComboBox、 ListBox 或 CheckedListBox 控制項建立查閱資料表](create-a-lookup-table-for-a-wf-combobox-listbox.md)

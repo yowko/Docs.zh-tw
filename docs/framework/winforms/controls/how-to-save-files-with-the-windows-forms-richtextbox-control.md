@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: 739cc33df873ef2c8ec7a2f5eaf867abadb8da75
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c9a5d471a58c646c786cf441ee7d7ec235788f10
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539775"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723019"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>HOW TO：使用 Windows Forms RichTextBox 控制項儲存檔案
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在幾種格式之一中顯示的資訊：  
@@ -41,7 +41,7 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在�
   
 1.  判斷要儲存之檔案的路徑。  
   
-     若要在真實世界應用程式中這樣做，您通常會使用<xref:System.Windows.Forms.SaveFileDialog>元件。 如需概觀，請參閱[SaveFileDialog 元件概觀](../../../../docs/framework/winforms/controls/savefiledialog-component-overview-windows-forms.md)。  
+     若要在真實世界應用程式中這樣做，您通常會使用<xref:System.Windows.Forms.SaveFileDialog>元件。 如需概觀，請參閱[SaveFileDialog 元件概觀](savefiledialog-component-overview-windows-forms.md)。  
   
 2.  呼叫<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法的<xref:System.Windows.Forms.RichTextBox>控制項，指定要儲存的檔案和選擇性的檔案類型。 如果您呼叫具有某檔案名稱為其唯一引數的方法，該檔案會儲存為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
   
@@ -90,5 +90,5 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在�
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.RichTextBox.SaveFile%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RichTextBox>
-- [RichTextBox 控制項](../../../../docs/framework/winforms/controls/richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [RichTextBox 控制項](richtextbox-control-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

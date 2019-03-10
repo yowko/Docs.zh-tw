@@ -5,12 +5,12 @@ helpviewer_keywords:
 - splitter windows
 - SplitContainer control [Windows Forms]
 ms.assetid: 2e36f17f-5c39-4fb4-bb09-7ce3ef823402
-ms.openlocfilehash: 0afc1aba32852406b975cc65ab4d4bff334d3ff7
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 504a2396902fecf2ac17c2db434fef68ff2ece45
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745459"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723656"
 ---
 # <a name="splitcontainer-control-windows-forms"></a>SplitContainer 控制項 (Windows Form)
 Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
@@ -22,16 +22,16 @@ Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中�
  `SplitContainer` 控制項可讓您建立複雜的使用者介面；通常，在某個面板中選取的項目會決定在另一個面板中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 擁有兩個面板可讓您彙總區域中的資訊，而分隔列 (或「分隔器」) 可讓使用者輕鬆調整面板的大小。  
   
 ## <a name="in-this-section"></a>本節內容  
- [SplitContainer 控制項概觀](../../../../docs/framework/winforms/controls/splitcontainer-control-overview-windows-forms.md)  
+ [SplitContainer 控制項概觀](splitcontainer-control-overview-windows-forms.md)  
  介紹 `SplitContainer` 控制項，並描述常用的屬性、方法和事件。  
   
- [如何：定義調整大小和位置行為在分隔視窗](../../../../docs/framework/winforms/controls/how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
+ [如何：定義調整大小和位置行為在分隔視窗](how-to-define-resize-and-positioning-behavior-in-a-split-window.md)  
  描述如何在 `SplitContainer` 控制項中控制分隔器。  
   
- [如何：水平分隔視窗](../../../../docs/framework/winforms/controls/how-to-split-a-window-horizontally.md)  
+ [如何：水平分隔視窗](how-to-split-a-window-horizontally.md)  
  描述如何在 `SplitContainer` 控制項中控制分隔器的方向。  
   
- [如何：利用 Windows Form 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/how-to-create-a-multipane-user-interface-with-windows-forms.md)  
+ [如何：利用 Windows Form 建立多窗格使用者介面](how-to-create-a-multipane-user-interface-with-windows-forms.md)  
  建立與 Microsoft Outlook 中所用類似的多窗格使用者介面。  
   
  另請參閱[How to:分隔視窗，使用設計工具水平](how-to-split-a-window-horizontally-using-the-designer.md)， [How to:Windows Form 上建立 Windows 檔案總管樣式介面](how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md)， [How to:使用設計工具的 Windows form 建立多窗格使用者介面](create-a-multipane-user-interface-with-wf-using-the-designer.md)。  
@@ -41,8 +41,8 @@ Windows Form `SplitContainer` 控制項可視為一個複合控制項，其中�
  說明這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)  
+ [Windows Forms 控制項](index.md)  
  提供專為搭配 Windows Form 使用所設計之控制項的相關主題連結。  
   
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

@@ -2,39 +2,39 @@
 title: C# 運算式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: ac123a396bd43bc7b91aff6ce928b18ef4fbe6bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2ffc380d9c65ec398084bfcbeadfe0fd2c3d6720
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354724"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720575"
 ---
 # <a name="c-expressions"></a>C# 運算式
 從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立新的 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式和 Visual Basic 工作流程專案中使用 Visual Basic 運算式。 不論是否支援專案語言，使用 Visual Basic 運算式的現有 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 工作流程專案均可移轉至 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]。 本主題提供 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 中的 C# 運算式概觀。
 
 ## <a name="using-c-expressions-in-workflows"></a>在工作流程中使用 C# 運算式
 
--   [在工作流程設計工具中使用 C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFDesigner)
+-   [在工作流程設計工具中使用 C# 運算式](csharp-expressions.md#WFDesigner)
 
-    -   [回溯相容性](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#BackwardCompat)
+    -   [回溯相容性](csharp-expressions.md#BackwardCompat)
 
--   [在程式碼工作流程中使用 C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows)
+-   [在程式碼工作流程中使用 C# 運算式](csharp-expressions.md#CodeWorkflows)
 
--   [XAML 工作流程中使用 C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#XamlWorkflows)
+-   [XAML 工作流程中使用 C# 運算式](csharp-expressions.md#XamlWorkflows)
 
-    -   [已編譯的 Xaml](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CompiledXaml)
+    -   [已編譯的 Xaml](csharp-expressions.md#CompiledXaml)
 
-    -   [鬆散的 Xaml](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#LooseXaml)
+    -   [鬆散的 Xaml](csharp-expressions.md#LooseXaml)
 
--   [在 XAMLX 工作流程服務中使用 C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#WFServices)
+-   [在 XAMLX 工作流程服務中使用 C# 運算式](csharp-expressions.md#WFServices)
 
 ### <a name="WFDesigner"></a> 在工作流程設計工具中使用 C# 運算式
  從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，在 Windows Workflow Foundation (WF) 支援 C# 運算式。 Visual Studio 2012 中建立 C# 工作流程專案目標[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]使用 C# 運算式，而 Visual Basic 工作流程專案則使用 Visual Basic 運算式。 若要指定所需的 C# 運算式，方塊中輸入標示**輸入 C# 運算式**。 在設計工具中選取活動時，會在屬性視窗中顯示此標籤，而此標籤也會顯示在工作流程設計工具中的活動之上。 在下列範例中，`WriteLine` 內的 `Sequence` 包含兩個 `NoPersistScope` 活動。
 
- ![自動建立的序列活動](../../../docs/framework/windows-workflow-foundation/media/autosurround2.png "AutoSurround2")
+ ![自動建立的序列活動](./media/autosurround2.png "AutoSurround2")
 
 > [!NOTE]
->  C# 運算式只支援 Visual Studio 中，並在重新裝載工作流程設計工具中不支援。 如需有關支援在重新裝載設計工具中的新 WF45 功能的詳細資訊，請參閱[的新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具支援](../../../docs/framework/windows-workflow-foundation/wf-features-in-the-rehosted-workflow-designer.md)。
+>  C# 運算式只支援 Visual Studio 中，並在重新裝載工作流程設計工具中不支援。 如需有關支援在重新裝載設計工具中的新 WF45 功能的詳細資訊，請參閱[的新 Workflow Foundation 4.5 功能，在重新裝載工作流程設計工具支援](wf-features-in-the-rehosted-workflow-designer.md)。
 
 #### <a name="BackwardCompat"></a> 回溯相容性
  支援已移轉至 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 之現有 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 工作流程專案中的 Visual Basic 運算式。 當在工作流程設計工具中檢視 Visual Basic 運算式時，取代現有的 Visual Basic 運算式的文字**XAML 中設定的值**，除非 Visual Basic 運算式是有效的 C# 語法。 如果 Visual Basic 運算式為有效的 C# 語法，則會顯示該運算式。 若要將 Visual Basic 運算式更新為 C#，您可以在工作流程設計工具中編輯這些運算式，並指定相等的 C# 運算式。 您不需要將 Visual Basic 運算式更新為 C#，不過一旦這些運算式在工作流程設計工具中更新，將會轉換為 C#，且可能無法還原為 Visual Basic。
@@ -185,14 +185,14 @@ static void CompileExpressions(DynamicActivity dynamicActivity)
 
 -   呼叫 `CompiledExpressionInvoker.SetCompiledExpressionRootForImplementation`，而不是 `CompiledExpressionInvoker.SetCompiledExpressionRoot`。
 
- 如需有關使用程式碼中的運算式的詳細資訊，請參閱[撰寫工作流程、 活動和運算式使用命令式程式碼](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)。
+ 如需有關使用程式碼中的運算式的詳細資訊，請參閱[撰寫工作流程、 活動和運算式使用命令式程式碼](authoring-workflows-activities-and-expressions-using-imperative-code.md)。
 
 ### <a name="XamlWorkflows"></a> XAML 工作流程中使用 C# 運算式
  XAML 工作流程支援 C# 運算式。 編譯的 XAML 工作流程會編譯為型別，而鬆散的 XAML 工作流程會在工作流程執行時，由執行階段載入並編譯為活動樹狀。
 
--   [已編譯的 Xaml](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CompiledXaml)
+-   [已編譯的 Xaml](csharp-expressions.md#CompiledXaml)
 
--   [鬆散的 Xaml](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#LooseXaml)
+-   [鬆散的 Xaml](csharp-expressions.md#LooseXaml)
 
 #### <a name="CompiledXaml"></a> 已編譯的 Xaml
  編譯為型別的 XAML 工作流程支援 C# 運算式，當做部分以 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 為目標的 C# 工作流程專案。 已編譯的 XAML 是在 Visual Studio 中撰寫工作流程的預設型別和 C# 工作流程專案中建立 Visual Studio 目標[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]使用 C# 運算式。
@@ -209,10 +209,10 @@ ActivityXamlServicesSettings settings = new ActivityXamlServicesSettings
 DynamicActivity<int> wf = ActivityXamlServices.Load(new StringReader(serializedAB), settings) as DynamicActivity<int>;
 ```
 
- 如需有關使用 XAML 工作流程的詳細資訊，請參閱[序列化工作流程和活動與 XAML](../../../docs/framework/windows-workflow-foundation/serializing-workflows-and-activities-to-and-from-xaml.md)。
+ 如需有關使用 XAML 工作流程的詳細資訊，請參閱[序列化工作流程和活動與 XAML](serializing-workflows-and-activities-to-and-from-xaml.md)。
 
 ### <a name="WFServices"></a> 在 XAMLX 工作流程服務中使用 C# 運算式
- XAMLX 工作流程服務支援 C# 運算式。 如果工作流程服務是以 IIS 或 WAS 裝載，則不需要其他步驟；但是，如果 XAML 工作流程服務為自我裝載，則必須編譯 C# 運算式。 若要編譯的自我裝載的 XAMLX 工作流程服務中的 C# 運算式，先將 XAMLX 檔案載入到`WorkflowService`，然後將傳遞`Body`的`WorkflowService`來`CompileExpressions`先前所述的方法[使用 C#在程式碼工作流程中的使用運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows)一節。 下列範例將載入 XAMLX 工作流程服務、編譯 C# 運算式，然後開啟工作流程服務並等候要求。
+ XAMLX 工作流程服務支援 C# 運算式。 如果工作流程服務是以 IIS 或 WAS 裝載，則不需要其他步驟；但是，如果 XAML 工作流程服務為自我裝載，則必須編譯 C# 運算式。 若要編譯的自我裝載的 XAMLX 工作流程服務中的 C# 運算式，先將 XAMLX 檔案載入到`WorkflowService`，然後將傳遞`Body`的`WorkflowService`來`CompileExpressions`先前所述的方法[使用 C#在程式碼工作流程中的使用運算式](csharp-expressions.md#CodeWorkflows)一節。 下列範例將載入 XAMLX 工作流程服務、編譯 C# 運算式，然後開啟工作流程服務並等候要求。
 
 ```csharp
 // Load the XAMLX workflow service.
@@ -237,7 +237,7 @@ Console.WriteLine("Press enter to quit");
 Console.ReadLine();
 ```
 
- 如果未編譯 C# 運算式，`Open` 作業會成功，但工作流程在叫用時會失敗。 下列`CompileExpressions`方法是從先前的方法相同[程式碼工作流程中的使用 C# 運算式](../../../docs/framework/windows-workflow-foundation/csharp-expressions.md#CodeWorkflows)一節。
+ 如果未編譯 C# 運算式，`Open` 作業會成功，但工作流程在叫用時會失敗。 下列`CompileExpressions`方法是從先前的方法相同[程式碼工作流程中的使用 C# 運算式](csharp-expressions.md#CodeWorkflows)一節。
 
 ```csharp
 static void CompileExpressions(Activity activity)

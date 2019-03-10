@@ -2,12 +2,12 @@
 title: 使用 DynamicActivity 在執行階段建立活動
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
-ms.openlocfilehash: 17dda5643f86690c25067e70680a6b797dd172d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58dea5f6e469f871da35fc57aa4d9d8a1266bfed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733203"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724617"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>使用 DynamicActivity 在執行階段建立活動
 <xref:System.Activities.DynamicActivity> 是含公用建構函式的具體密封類別。 <xref:System.Activities.DynamicActivity> 可在執行階段中使用活動 DOM 來組合活動功能。  
@@ -98,4 +98,4 @@ ms.locfileid: "54733203"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用命令式程式碼撰寫工作流程、活動與運算式](../../../docs/framework/windows-workflow-foundation/authoring-workflows-activities-and-expressions-using-imperative-code.md)
+- [使用命令式程式碼撰寫工作流程、活動與運算式](authoring-workflows-activities-and-expressions-using-imperative-code.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], manipulating
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
-ms.openlocfilehash: dc91a4a91d26cd51a06b1c08dcb76f8966c52594
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d86ded0b93d876eac4b97938678cafbb22c3ac8a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671105"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722434"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>HOW TO：將載入、 儲存，和 [取消] 按鈕，以 Windows Forms BindingNavigator 控制項
 <xref:System.Windows.Forms.BindingNavigator>控制項是特殊用途<xref:System.Windows.Forms.ToolStrip>適用於瀏覽和操作您的表單上繫結至資料的控制項的控制項。  
@@ -34,7 +34,7 @@ ms.locfileid: "54671105"
   
 5.  選取 <xref:System.Windows.Forms.BindingNavigator> 控制項。  
   
-6.  按一下智慧標籤圖像 (![智慧標籤圖像](../../../../docs/framework/winforms/controls/media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 因此**BindingNavigator 工作** 對話方塊隨即出現，並選取**編輯項目**.  
+6.  按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 因此**BindingNavigator 工作** 對話方塊隨即出現，並選取**編輯項目**.  
   
      **項目集合編輯器**隨即出現。  
   
@@ -113,5 +113,5 @@ ms.locfileid: "54671105"
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.ToolStrip>
-- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
-- [BindingSource 元件概觀](../../../../docs/framework/winforms/controls/bindingsource-component-overview.md)
+- [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)
+- [BindingSource 元件概觀](bindingsource-component-overview.md)

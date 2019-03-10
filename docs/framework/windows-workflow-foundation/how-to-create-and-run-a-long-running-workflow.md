@@ -5,43 +5,43 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 4ca19b8f9c0fad17c012bffbdd95917a4d4e47bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cbb00797944f63ab695c7af87ac02b49e0ad15fa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356860"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721160"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>HOW TO：建立及執行長時間執行的工作流程
-其中一項集中功能的 Windows Workflow Foundation (WF) 是保存和卸載閒置的工作流程，以資料庫的執行階段的功能。 中的步驟[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)所示範的工作流程裝載的主控台應用程式基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。  
+其中一項集中功能的 Windows Workflow Foundation (WF) 是保存和卸載閒置的工作流程，以資料庫的執行階段的功能。 中的步驟[How to:執行工作流程](how-to-run-a-workflow.md)所示範的工作流程裝載的主控台應用程式基本概念。 範例包括啟動工作流程、工作流程開發週期處理常式，以及繼續使用書籤。 為有效示範工作流程持續性，必須要有較複雜的工作流程主機，以支援啟動與繼續使用多個工作流程執行個體。 教學課程中的這個步驟，示範如何建立 Windows 表單主應用程式，以支援啟動與繼續使用多個工作流程執行個體、工作流程持續性，並且為後續教學課程步驟中示範的追蹤和版本設定等進階功能提供基礎。  
   
 > [!NOTE]
->  本教學課程的步驟和後續步驟使用的所有三個工作流程類型[How to:建立工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow.md)。 如果您未完成所有的三種類型，您就可以下載完整的版的步驟[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
+>  本教學課程的步驟和後續步驟使用的所有三個工作流程類型[How to:建立工作流程](how-to-create-a-workflow.md)。 如果您未完成所有的三種類型，您就可以下載完整的版的步驟[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 > [!NOTE]
 >  若要下載完整的版或觀看視訊逐步解說教學課程，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
--   [若要建立持續性資料庫](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+-   [若要建立持續性資料庫](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [若要加入至 DurableInstancing 組件參考](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+-   [若要加入至 DurableInstancing 組件參考](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [若要建立工作流程主表單](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+-   [若要建立工作流程主表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [若要新增的屬性和 helper 方法的表單](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [若要新增的屬性和 helper 方法的表單](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [若要設定的執行個體存放區、 工作流程開發週期處理常式和延伸模組](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [若要設定的執行個體存放區、 工作流程開發週期處理常式和延伸模組](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [若要啟用啟動與繼續使用多個工作流程類型](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [若要啟用啟動與繼續使用多個工作流程類型](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [若要啟動新的工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+-   [若要啟動新的工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [若要繼續工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+-   [若要繼續工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [終止工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+-   [終止工作流程](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [若要建置並執行應用程式](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [若要建置並執行應用程式](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 若要建立持續性資料庫  
   
@@ -76,7 +76,7 @@ ms.locfileid: "57356860"
 ### <a name="BKMK_CreateForm"></a> 若要建立工作流程主表單  
   
 > [!NOTE]
->  此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 若要下載教學課程檔案，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。 一旦下載檔案時，以滑鼠右鍵按一下**NumberGuessWorkflowHost** ，然後選擇**加入參考**。 將參考加入**System.Windows.Forms**並**System.Drawing**。 這些參考會自動新增，如果您加入新的表單，從**新增**，**新項目** 功能表中，但當匯入表單必須以手動方式新增。 一旦加入參考，以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**現有項目**。 瀏覽至`Form`資料夾中的專案檔，請選取**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然後按一下**新增**。 如果您選擇匯入表單，則您可以直接跳到下一步 區段中，[添加屬性和 helper 方法，在表單的](../../../docs/framework/windows-workflow-foundation/how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。  
+>  此程序中的步驟描述如何手動加入及設定表單。 如果需要，可以下載教學課程的方案檔，並將完成的表單加入到專案中。 若要下載教學課程檔案，請參閱[Windows Workflow Foundation (WF45)-入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。 一旦下載檔案時，以滑鼠右鍵按一下**NumberGuessWorkflowHost** ，然後選擇**加入參考**。 將參考加入**System.Windows.Forms**並**System.Drawing**。 這些參考會自動新增，如果您加入新的表單，從**新增**，**新項目** 功能表中，但當匯入表單必須以手動方式新增。 一旦加入參考，以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**現有項目**。 瀏覽至`Form`資料夾中的專案檔，請選取**WorkflowHostForm.cs** (或**WorkflowHostForm.vb**)，然後按一下**新增**。 如果您選擇匯入表單，則您可以直接跳到下一步 區段中，[添加屬性和 helper 方法，在表單的](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)。  
   
 1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**新項目**。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "57356860"
   
  下列範例示範完成的表單。  
   
- ![WF45 使用者入門教學課程的工作流程主應用程式表單](../../../docs/framework/windows-workflow-foundation/media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![WF45 使用者入門教學課程的工作流程主應用程式表單](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
   
 ### <a name="BKMK_AddHelperMethods"></a> 若要新增的屬性和 helper 方法的表單  
  本節中的步驟會將設定表單 UI 的屬性和 Helper 方法加入到表單類別中，以支援執行及繼續使用數字猜測工作流程。  
@@ -692,7 +692,7 @@ ms.locfileid: "57356860"
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> 若要啟用啟動與繼續使用多個工作流程類型  
- 主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需詳細資訊`WorkflowIdentity`及版本設定，請參閱 <<c2> [ 使用 WorkflowIdentity 與版本控制](../../../docs/framework/windows-workflow-foundation/using-workflowidentity-and-versioning.md)。  
+ 主機必須提供工作流程定義，才能繼續工作流程執行個體。 本教學課程包含三種工作流程型別，後續的教學課程將介紹這些類型的多個版本。 `WorkflowIdentity` 提供方法，讓主應用程式能夠將識別資訊與持續的工作流程執行個體建立關聯。 本節中的步驟示範如何建立公用程式類別，以協助將持續性工作流程執行個體的工作流程識別對應至相對應的工作流程定義。 如需詳細資訊`WorkflowIdentity`及版本設定，請參閱 <<c2> [ 使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)。  
   
 1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**類別**。 型別`WorkflowVersionMap`成**名稱**方塊，然後按一下**新增**。  
   
@@ -1307,7 +1307,7 @@ ms.locfileid: "57356860"
     using System.Windows.Forms;  
     ```  
   
-3.  移除或註解現有的工作流程裝載程式碼從[How to:執行工作流程](../../../docs/framework/windows-workflow-foundation/how-to-run-a-workflow.md)，並將它取代為下列程式碼。  
+3.  移除或註解現有的工作流程裝載程式碼從[How to:執行工作流程](how-to-run-a-workflow.md)，並將它取代為下列程式碼。  
   
     ```vb  
     Sub Main()  
@@ -1334,4 +1334,4 @@ ms.locfileid: "57356860"
   
 8.  啟動數個使用不同的工作流程類型和數字範圍、 輸入猜測，和從選取的工作流程之間切換**工作流程執行個體識別碼**清單。  
   
-     請注意，當您切換到新的工作流程時，先前的猜測和工作流程的進度都不會顯示在狀態視窗中。 不顯示狀態的原因是未擷取狀態，也未儲存在任何位置。 教學課程中，下一個步驟中[How to:建立自訂追蹤參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-tracking-participant.md)，建立自訂追蹤參與者會儲存這項資訊。
+     請注意，當您切換到新的工作流程時，先前的猜測和工作流程的進度都不會顯示在狀態視窗中。 不顯示狀態的原因是未擷取狀態，也未儲存在任何位置。 教學課程中，下一個步驟中[How to:建立自訂追蹤參與者](how-to-create-a-custom-tracking-participant.md)，建立自訂追蹤參與者會儲存這項資訊。

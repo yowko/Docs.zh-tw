@@ -2,12 +2,12 @@
 title: 狀態機器工作流程
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: 89819f6b37fdaf601cf4e8b99fd5156c8e40af99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 78ce1124137e3b97978f3522a59ad1febd23135d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521292"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724956"
 ---
 # <a name="state-machine-workflows"></a>狀態機器工作流程
 狀態機器是用來開發程式的知名範例。 <xref:System.Activities.Statements.StateMachine> 活動以及 <xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> 和其他活動皆可用來建置狀態機器工作流程程式。 本主題提供建立狀態機器工作流程的概觀。  
@@ -21,16 +21,16 @@ ms.locfileid: "54521292"
   
 -   <xref:System.Activities.Statements.Transition>  
   
- 若要建立狀態機器工作流程，必須將狀態加入至 <xref:System.Activities.Statements.StateMachine> 活動，並使用轉換來控制狀態之間的流向。 下列螢幕擷取畫面中，從[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)，會顯示三種狀態和三個轉換的狀態機器工作流程。 **初始化目標**是初始狀態，並代表工作流程中的第一個狀態。 這連接到從該程式行所指定**啟動**節點。 名為工作流程中的最終狀態**FinalState**，代表工作流程完成時點。  
+ 若要建立狀態機器工作流程，必須將狀態加入至 <xref:System.Activities.Statements.StateMachine> 活動，並使用轉換來控制狀態之間的流向。 下列螢幕擷取畫面中，從[入門教學課程](getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)，會顯示三種狀態和三個轉換的狀態機器工作流程。 **初始化目標**是初始狀態，並代表工作流程中的第一個狀態。 這連接到從該程式行所指定**啟動**節點。 名為工作流程中的最終狀態**FinalState**，代表工作流程完成時點。  
   
- ![已完成狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![已完成狀態機器工作流程](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
   
  狀態機器工作流程必須且只能有一個初始狀態，以及至少有一個最終狀態。 每個不是最終狀態的狀態都至少要有一個轉換。 以下各節將說明建立和設定狀態及轉換。  
   
 ## <a name="creating-and-configuring-states"></a>建立和設定狀態  
  <xref:System.Activities.Statements.State> 代表狀態機器可以具有的狀態。 若要新增<xref:System.Activities.Statements.State>至工作流程中，拖曳**狀態**活動設計工具，從**狀態機器**一節**工具箱**拖曳至<xref:System.Activities.Statements.StateMachine>上的活動[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]介面。  
   
- ![WF4 狀態機器活動](../../../docs/framework/windows-workflow-foundation/media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![WF4 狀態機器活動](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
   
  若要將狀態設定為**初始狀態**，以滑鼠右鍵按一下狀態，然後選取**設為初始狀態**。 此外，如果沒有目前的初始狀態，初始狀態，即可指定將從線條**啟動**的所需狀態之工作流程的頂端節點。 當<xref:System.Activities.Statements.StateMachine>活動拖曳至工作流程設計工具上，它會預先設定名為初始狀態**State1**。 狀態機器工作流程必須且只能有一個初始狀態。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54521292"
 > [!NOTE]
 >  請注意，如果轉換的 <xref:System.Activities.Statements.Transition.Condition%2A> 值評估為 `False` (或所有共用觸發轉換的條件皆評估為 `False`)，則不會發生轉換，且會重新排程該狀態之所有轉換的所有觸發。  
   
- 如需有關如何建立狀態機器工作流程的詳細資訊，請參閱[How to:建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)， [StateMachine 活動設計工具](/visualstudio/workflow-designer/statemachine-activity-designer)，[狀態活動設計工具](/visualstudio/workflow-designer/state-activity-designer)， [FinalState 活動設計工具](/visualstudio/workflow-designer/finalstate-activity-designer)，並[轉換活動設計工具](/visualstudio/workflow-designer/transition-activity-designer)。  
+ 如需有關如何建立狀態機器工作流程的詳細資訊，請參閱[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)， [StateMachine 活動設計工具](/visualstudio/workflow-designer/statemachine-activity-designer)，[狀態活動設計工具](/visualstudio/workflow-designer/state-activity-designer)， [FinalState 活動設計工具](/visualstudio/workflow-designer/finalstate-activity-designer)，並[轉換活動設計工具](/visualstudio/workflow-designer/transition-activity-designer)。  
   
 ## <a name="state-machine-terminology"></a>狀態機器術語  
  本節定義在本主題中使用的狀態機器詞彙。  
@@ -101,7 +101,7 @@ ms.locfileid: "54521292"
  代表狀態機器完成的狀態。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立狀態機器工作流程](../../../docs/framework/windows-workflow-foundation/how-to-create-a-state-machine-workflow.md)
+- [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)
 - [StateMachine 活動設計工具](/visualstudio/workflow-designer/statemachine-activity-designer)
 - [State 活動設計工具](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState 活動設計工具](/visualstudio/workflow-designer/finalstate-activity-designer)

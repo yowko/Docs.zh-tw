@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 - DataGridView control [Windows Forms], scenarios
 ms.assetid: 09a5fd05-3447-47ec-a4ec-6082a2b7f0dd
-ms.openlocfilehash: c8d6f3d9b1d0380ccf78badd44484c96e0593bd8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 882b210a19f1ec5515bd7f37ccc55343f84767bc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621431"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721301"
 ---
 # <a name="datagridview-control-scenarios-windows-forms"></a>DataGridView 控制項案例 (Windows Form)
 使用<xref:System.Windows.Forms.DataGridView>控制項，您可以顯示各種資料來源的表格式資料。 如需簡單的用法，您可以手動填入<xref:System.Windows.Forms.DataGridView>和操作直接透過控制項的資料。 一般而言，不過，您會將資料儲存在外部資料來源並將控制項繫結至其透過<xref:System.Windows.Forms.BindingSource>元件。  
@@ -19,7 +19,7 @@ ms.locfileid: "54621431"
  本主題描述一些常見案例涉及<xref:System.Windows.Forms.DataGridView>控制項。  
   
 ## <a name="scenario-1-displaying-small-amounts-of-data"></a>案例 1:顯示少量的資料  
- 您不必將資料儲存在外部資料來源將它顯示在<xref:System.Windows.Forms.DataGridView>控制項。 如果您正在使用少量的資料，您可以自行填入控制項，並管理透過控制項的資料。 這就叫做*režim bez vazby*。 如需詳細資訊，請參閱[＜How to：建立未繫結的 Windows Forms DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
+ 您不必將資料儲存在外部資料來源將它顯示在<xref:System.Windows.Forms.DataGridView>控制項。 如果您正在使用少量的資料，您可以自行填入控制項，並管理透過控制項的資料。 這就叫做*režim bez vazby*。 如需詳細資訊，請參閱[如何：建立未繫結的 Windows Forms DataGridView 控制項](how-to-create-an-unbound-windows-forms-datagridview-control.md)。  
   
 ### <a name="scenario-key-points"></a>案例重點  
   
@@ -30,7 +30,7 @@ ms.locfileid: "54621431"
 -   未繫結的模式也適用於類似試算表或稀疏填入的資料表。  
   
 ## <a name="scenario-2-viewing-and-updating-data-stored-in-an-external-data-source"></a>案例 2:檢視和更新儲存在外部資料來源中的資料  
- 您可以使用<xref:System.Windows.Forms.DataGridView>做為使用者介面 (UI) 控制哪些使用者可以透過存取保留在資料來源，例如資料庫資料表或商務物件的集合中的資料。 如需詳細資訊，請參閱[＜How to：資料繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
+ 您可以使用<xref:System.Windows.Forms.DataGridView>做為使用者介面 (UI) 控制哪些使用者可以透過存取保留在資料來源，例如資料庫資料表或商務物件的集合中的資料。 如需詳細資訊，請參閱[如何：資料繫結至 Windows Form DataGridView 控制項](how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   
 ### <a name="scenario-key-points"></a>案例重點  
   
@@ -47,14 +47,14 @@ ms.locfileid: "54621431"
   
  例如，如果您使用大量資料時，您可能想要實作虛擬模式，以確保最佳的效率。 虛擬模式也適合用於維護，以及從另一個資料來源擷取的資料行顯示未繫結資料行的值。  
   
- 如需有關虛擬模式的詳細資訊，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](../../../../docs/framework/winforms/controls/implementing-virtual-mode-wf-datagridview-control.md)。  
+ 如需有關虛擬模式的詳細資訊，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)。  
   
 ### <a name="scenario-key-points"></a>案例重點  
   
 -   虛擬模式很適合您要微調效能時，顯示非常大量的資料。  
   
 ## <a name="scenario-4-automatically-resizing-rows-and-columns"></a>案例 4:自動調整資料列和資料行的大小  
- 當您顯示會定期更新的資料時，您可以自動調整資料列和資料行以確保所有內容都是可見。 <xref:System.Windows.Forms.DataGridView>控制項提供數個選項，可讓您啟用或停用手動調整大小、 調整大小以程式設計方式在特定時間，或調整大小自動每當內容變更。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的調整大小選項](../../../../docs/framework/winforms/controls/sizing-options-in-the-windows-forms-datagridview-control.md)。  
+ 當您顯示會定期更新的資料時，您可以自動調整資料列和資料行以確保所有內容都是可見。 <xref:System.Windows.Forms.DataGridView>控制項提供數個選項，可讓您啟用或停用手動調整大小、 調整大小以程式設計方式在特定時間，或調整大小自動每當內容變更。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
 ### <a name="scenario-key-points"></a>案例重點  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54621431"
 -   以程式設計方式調整大小，可讓您調整儲存格大小以避免連續的自動調整大小的效能負面影響的特定時間。  
   
 ## <a name="scenario-5-simple-customization"></a>案例 5:簡單的自訂  
- <xref:System.Windows.Forms.DataGridView>控制項提供許多方式來改變其基本外觀和行為。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的儲存格樣式](../../../../docs/framework/winforms/controls/cell-styles-in-the-windows-forms-datagridview-control.md)。  
+ <xref:System.Windows.Forms.DataGridView>控制項提供許多方式來改變其基本外觀和行為。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ### <a name="scenario-key-points"></a>案例重點  
   
@@ -78,14 +78,14 @@ ms.locfileid: "54621431"
   
 ### <a name="scenario-key-points"></a>案例重點  
   
--   您可以提供自己的儲存格的繪製程式碼。 如需詳細資訊，請參閱[＜How to：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)。  
+-   您可以提供自己的儲存格的繪製程式碼。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)。  
   
--   您可以提供您自己的資料列繪製。 這是很有用，例如，具有跨越多個資料行的內容中建立資料列。 如需詳細資訊，請參閱[＜How to：自訂 Windows Form DataGridView 控制項中的資料列的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)。  
+-   您可以提供您自己的資料列繪製。 這是很有用，例如，具有跨越多個資料行的內容中建立資料列。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的資料列的外觀](customize-the-appearance-of-rows-in-the-datagrid.md)。  
   
--   您可以實作您自己的儲存格和資料行的類別，以自訂儲存格的外觀。 如需詳細資訊，請參閱[＜How to：自訂資料格資料行中的 Windows Form DataGridView 控制項和擴充其行為和外觀](../../../../docs/framework/winforms/controls/customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)。  
+-   您可以實作您自己的儲存格和資料行的類別，以自訂儲存格的外觀。 如需詳細資訊，請參閱[如何：自訂資料格資料行中的 Windows Form DataGridView 控制項和擴充其行為和外觀](customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md)。  
   
--   您可以實作您自己的儲存格和資料行的類別，來提供的內建的資料行類型以外的主控制項。 如需詳細資訊，請參閱[＜How to：Windows Forms DataGridView 儲存格主控制項](../../../../docs/framework/winforms/controls/how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
+-   您可以實作您自己的儲存格和資料行的類別，來提供的內建的資料行類型以外的主控制項。 如需詳細資訊，請參閱[如何：Windows Forms DataGridView 儲存格主控制項](how-to-host-controls-in-windows-forms-datagridview-cells.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.DataGridView>
-- [DataGridView 控制項概觀](../../../../docs/framework/winforms/controls/datagridview-control-overview-windows-forms.md)
+- [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)

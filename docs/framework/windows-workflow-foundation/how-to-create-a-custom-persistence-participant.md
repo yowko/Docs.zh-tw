@@ -1,16 +1,16 @@
 ---
-title: HOW TO：建立自訂非持續性參與者
+title: HOW TO：建立自訂持續性參與者
 ms.date: 03/30/2017
 ms.assetid: 1d9cc47a-8966-4286-94d5-4221403d9c06
-ms.openlocfilehash: 8daf4924db48c79486e85660357e3b28a2583836
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: fca8db41a415965f10990069682c561f680bf386
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43855838"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725073"
 ---
-# <a name="how-to-create-a-custom-persistence-participant"></a>HOW TO：建立自訂非持續性參與者
-下列程序包含建立持續性參與者的步驟。 請參閱[參與持續性](https://go.microsoft.com/fwlink/?LinkID=177735)範例並[存放區擴充性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)持續性參與者的實作範例的主題。  
+# <a name="how-to-create-a-custom-persistence-participant"></a>HOW TO：建立自訂持續性參與者
+下列程序包含建立持續性參與者的步驟。 請參閱[參與持續性](https://go.microsoft.com/fwlink/?LinkID=177735)範例並[存放區擴充性](store-extensibility.md)持續性參與者的實作範例的主題。  
   
 1.  建立從 <xref:System.Activities.Persistence.PersistenceParticipant> 或 <xref:System.Activities.Persistence.PersistenceIOParticipant> 類別衍生的類別。 外，PersistenceIOParticipant 類別會提供相同的擴充點，與 PersistenceParticipant 類別，除了能夠參與 I/O 作業。 請依照下列其中一個或多個步驟進行。  
   
@@ -28,7 +28,8 @@ ms.locfileid: "43855838"
     protected virtual IDictionary<XName,Object> MapValues (IDictionary<XName,Object> readWriteValues,IDictionary<XName,Object> writeOnlyValues)  
     ```  
   
-     <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法提供 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 不提供的功能，可允許與另一個尚未經 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 處理過的持續性參與者所提供的值產生相依性。  
+     
+  <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法提供 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 不提供的功能，可允許與另一個尚未經 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 處理過的持續性參與者所提供的值產生相依性。  
   
 4.  實作**PublishValues**方法。 **PublishValues**方法會接收字典，其中包含從持續性存放區載入的所有值。  
   
@@ -36,7 +37,7 @@ ms.locfileid: "43855838"
     protected virtual void PublishValues (IDictionary<XName,Object> readWriteValues)  
     ```  
   
-5.  實作**BeginOnSave**如果參與者是持續性 I/O 參與者的方法。 系統會在儲存作業期間呼叫這個方法。 在此方法中，您應該執行 I/O 附屬於持續性 （儲存） 工作流程執行個體。  如果主機使用對應持續性命令的異動，則同樣的異動會在 Transaction.Current 中提供。  此外，PersistenceIOParticipants 可能會通告異動一致性需求，此時，主機會為持續性時段建立異動 (如果未使用任何異動)。  
+5.  實作**BeginOnSave**如果參與者是持續性 I/O 參與者的方法。 系統會在儲存作業期間呼叫這個方法。 在此方法中，您應該執行 I/O 附屬於持續性 （儲存） 工作流程執行個體。  如果主機使用對應持續性命令的異動，則同樣的異動會在 Transaction.Current 中提供。  此外，PersistenceIOParticipants 可能會通告交易一致性需求，此時，主機會為持續性時段建立交易 (如果未使用任何交易)。  
   
     ```  
     protected virtual IAsyncResult BeginOnSave (IDictionary<XName,Object> readWriteValues, IDictionary<XName,Object> writeOnlyValues, TimeSpan timeout, AsyncCallback callback, Object state)  

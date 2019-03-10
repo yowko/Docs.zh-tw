@@ -9,17 +9,17 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 29b32cd91cefe80f2f0a331f901fcabe55aa9c60
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558978"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720861"
 ---
 # <a name="how-to-inherit-windows-forms"></a>HOW TO：繼承 Windows Forms
 藉由繼承自基底表單建立新的 Windows Form，可以很快地複製您的最佳成果，而無須在每次需要它時都要完成重建表單的程序。  
   
- 如需有關繼承在設計階段使用的表單**繼承選取器** 對話方塊中，以及如何以視覺化方式區分的安全性層級繼承控制項，請參閱[How to:使用繼承選取器對話方塊繼承表單](../../../../docs/framework/winforms/advanced/how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)。  
+ 如需有關繼承在設計階段使用的表單**繼承選取器** 對話方塊中，以及如何以視覺化方式區分的安全性層級繼承控制項，請參閱[How to:使用繼承選取器對話方塊繼承表單](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)。  
   
  **附註：** 為了繼承自表單，包含該表單的檔案或命名空間必須已建置為可執行檔或 DLL。 若要建置專案，請從 [建置] 功能表中選擇 [建置]。 此外，命名空間的參考也必須加入至繼承表單的類別。 根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
   
@@ -44,5 +44,5 @@ ms.locfileid: "54558978"
 - [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [修改基底表單外觀的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)
+- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)

@@ -10,17 +10,17 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: a4bb4f0e1c54429e1d014050fc85d956493f9080
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536320"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723162"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>HOW TO：使用背景執行緒搜尋檔案
-<xref:System.ComponentModel.BackgroundWorker>元件會取代並且將功能加入<xref:System.Threading>命名空間; 然而，<xref:System.Threading>命名空間會保留回溯相容性和未來使用，如果您選擇。 如需詳細資訊，請參閱 < [BackgroundWorker 元件概觀](../../../../docs/framework/winforms/controls/backgroundworker-component-overview.md)。  
+<xref:System.ComponentModel.BackgroundWorker>元件會取代並且將功能加入<xref:System.Threading>命名空間; 然而，<xref:System.Threading>命名空間會保留回溯相容性和未來使用，如果您選擇。 如需詳細資訊，請參閱 < [BackgroundWorker 元件概觀](backgroundworker-component-overview.md)。  
   
- Windows Forms 使用單一執行緒 apartment (STA) 模型，因為 Windows Forms 以原本就是 apartment 執行緒的原生 Win32 windows 為基礎。 STA 模型表示視窗可由任何執行緒上，但它無法切換執行緒一次建立，並給它的所有函式呼叫必須在其建立執行緒上發生。 外部 Windows Form，.NET Framework 中的類別會使用可用的執行緒模型。 如需.NET Framework 中的執行緒資訊，請參閱[執行緒](../../../../docs/standard/threading/index.md)。  
+ Windows Forms 使用單一執行緒 apartment (STA) 模型，因為 Windows Forms 以原本就是 apartment 執行緒的原生 Win32 windows 為基礎。 STA 模型表示視窗可由任何執行緒上，但它無法切換執行緒一次建立，並給它的所有函式呼叫必須在其建立執行緒上發生。 外部 Windows Form，.NET Framework 中的類別會使用可用的執行緒模型。 如需.NET Framework 中的執行緒資訊，請參閱[執行緒](../../../standard/threading/index.md)。  
   
  STA 模型需要的任何方法需要從呼叫控制項的建立執行緒之外的控制項上必須封送處理 （在上執行） 的控制項建立執行緒。 基底類別<xref:System.Windows.Forms.Control>提供數種方法 (<xref:System.Windows.Forms.Control.Invoke%2A>， <xref:System.Windows.Forms.Control.BeginInvoke%2A>，和<xref:System.Windows.Forms.Control.EndInvoke%2A>) 針對此目的。 <xref:System.Windows.Forms.Control.Invoke%2A> 呼叫同步方法;<xref:System.Windows.Forms.Control.BeginInvoke%2A>非同步方法呼叫。  
   
@@ -764,5 +764,5 @@ namespace SampleUsage
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ComponentModel.BackgroundWorker>
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](../../../../docs/framework/winforms/controls/developing-custom-windows-forms-controls.md)
-- [事件架構非同步模式概觀](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

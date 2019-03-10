@@ -2,48 +2,48 @@
 title: 合約優先工作流程服務開發
 ms.date: 03/30/2017
 ms.assetid: e5dbaa7b-005f-4330-848d-58ac4f42f093
-ms.openlocfilehash: 3b015b8c58e5ee3acbb1277d00523a85ee96da46
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c326f91bc8673180db755a91ab080bcf0ba72052
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373058"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721784"
 ---
 # <a name="contract-first-workflow-service-development"></a>合約優先工作流程服務開發
-從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更佳的 web 服務與合約優先工作流程開發形式中的工作流程之間的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。 本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。 如需建立合約優先工作流程服務的逐步範例，請參閱[How to:建立會取用現有服務合約的工作流程服務](../../../docs/framework/windows-workflow-foundation/how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
+從開始[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]，Windows Workflow Foundation (WF) 功能更佳的 web 服務與合約優先工作流程開發形式中的工作流程之間的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。 本主題提供工作流程服務概觀，說明如何將工作流程服務中的活動和屬性 (property) 對應至服務合約的屬性 (attribute)。 如需建立合約優先工作流程服務的逐步範例，請參閱[How to:建立會取用現有服務合約的工作流程服務](how-to-create-a-workflow-service-that-consumes-an-existing-service-contract.md)。  
   
 ## <a name="in-this-topic"></a>本主題內容  
   
--   [將服務合約屬性對應至工作流程屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MappingAttributes)  
+-   [將服務合約屬性對應至工作流程屬性](contract-first-workflow-service-development.md#MappingAttributes)  
   
-    -   [服務合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+    -   [服務合約屬性](contract-first-workflow-service-development.md#ServiceContract)  
   
-    -   [作業合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+    -   [作業合約屬性](contract-first-workflow-service-development.md#OperationContract)  
   
-    -   [訊息合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+    -   [訊息合約屬性](contract-first-workflow-service-development.md#MessageContract)  
   
-    -   [資料合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+    -   [資料合約屬性](contract-first-workflow-service-development.md#DataContract)  
   
-    -   [錯誤合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+    -   [錯誤合約屬性](contract-first-workflow-service-development.md#FaultContract)  
   
--   [其他支援和實作資訊](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#AdditionalSupport)  
+-   [其他支援和實作資訊](contract-first-workflow-service-development.md#AdditionalSupport)  
   
-    -   [不支援的服務合約功能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+    -   [不支援的服務合約功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
-    -   [產生的設定之傳訊活動](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+    -   [產生的設定之傳訊活動](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ## <a name="MappingAttributes"></a> 將服務合約屬性對應至工作流程屬性  
  下列各節中的表格會指定不同的 WCF 屬性 (attribute) 和屬性 (property)，以及其如何對應至合約優先工作流程中的傳訊活動和屬性 (property)。  
   
--   [服務合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ServiceContract)  
+-   [服務合約屬性](contract-first-workflow-service-development.md#ServiceContract)  
   
--   [作業合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#OperationContract)  
+-   [作業合約屬性](contract-first-workflow-service-development.md#OperationContract)  
   
--   [訊息合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#MessageContract)  
+-   [訊息合約屬性](contract-first-workflow-service-development.md#MessageContract)  
   
--   [資料合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#DataContract)  
+-   [資料合約屬性](contract-first-workflow-service-development.md#DataContract)  
   
--   [錯誤合約屬性](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#FaultContract)  
+-   [錯誤合約屬性](contract-first-workflow-service-development.md#FaultContract)  
   
 ### <a name="ServiceContract"></a> 服務合約屬性  
   
@@ -109,9 +109,9 @@ ms.locfileid: "57373058"
   
 ## <a name="AdditionalSupport"></a> 其他支援和實作資訊  
   
--   [不支援的服務合約功能](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#UnsupportedFeatures)  
+-   [不支援的服務合約功能](contract-first-workflow-service-development.md#UnsupportedFeatures)  
   
--   [產生的設定之傳訊活動](../../../docs/framework/windows-workflow-foundation/contract-first-workflow-service-development.md#ActivityGeneration)  
+-   [產生的設定之傳訊活動](contract-first-workflow-service-development.md#ActivityGeneration)  
   
 ### <a name="UnsupportedFeatures"></a> 不支援的服務合約功能  
   

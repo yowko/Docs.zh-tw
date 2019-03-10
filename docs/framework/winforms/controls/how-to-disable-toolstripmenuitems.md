@@ -13,12 +13,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: 2516080708bba207c3a1d028f2e5a2411974ae5b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c18935239a4355d5416a0a79d0fa9f5c504cc7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705332"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720208"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>HOW TO：停用 ToolStripMenuItems
 您可以限制，或擴大使用者可能會進行啟用和停用功能表項目，以回應使用者活動的命令。 依預設會啟用功能表項目，當建立，但這可以透過調整<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性。 您可以使用這個屬性在設計階段**屬性**視窗或以程式設計方式在程式碼中設定它。  
@@ -45,5 +45,5 @@ ms.locfileid: "54705332"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [如何：隱藏 ToolStripMenuItems](../../../../docs/framework/winforms/controls/how-to-hide-toolstripmenuitems.md)
-- [MenuStrip 控制項概觀](../../../../docs/framework/winforms/controls/menustrip-control-overview-windows-forms.md)
+- [如何：隱藏 ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
+- [MenuStrip 控制項概觀](menustrip-control-overview-windows-forms.md)

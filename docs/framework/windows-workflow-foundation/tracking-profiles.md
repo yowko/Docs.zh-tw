@@ -2,12 +2,12 @@
 title: 追蹤設定檔
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: f7acb46e16894dd287512541ad4c2be1adafb42a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482297"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721368"
 ---
 # <a name="tracking-profiles"></a>追蹤設定檔
 
@@ -347,7 +347,7 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 > [!WARNING]
 > 針對使用工作流程服務主機的 WF，追蹤設定檔通常會使用組態檔建立。 您也可以使用追蹤設定檔和追蹤查詢 API，以程式碼建立追蹤設定檔。
 
-設定為 XML 組態檔的設定檔會使用行為擴充套用至追蹤參與者。 這加入至 WorkflowServiceHost，如稍後章節所述[設定工作流程追蹤](../../../docs/framework/windows-workflow-foundation/configuring-tracking-for-a-workflow.md)。
+設定為 XML 組態檔的設定檔會使用行為擴充套用至追蹤參與者。 這加入至 WorkflowServiceHost，如稍後章節所述[設定工作流程追蹤](configuring-tracking-for-a-workflow.md)。
 
 主機發出之追蹤記錄的詳細資訊取決於追蹤設定檔內的組態設定。 追蹤參與者可將查詢加入至追蹤設定檔，以訂閱追蹤記錄。 若要訂閱所有追蹤記錄，追蹤設定檔，必須先指定所有追蹤查詢，使用"\*」 在每個查詢中的 [名稱] 欄位中。
 
@@ -390,6 +390,6 @@ TrackingProfile sampleTrackingProfile = new TrackingProfile()
 
 ## <a name="see-also"></a>另請參閱
 
-- [SQL 追蹤](../../../docs/framework/windows-workflow-foundation/samples/sql-tracking.md)
+- [SQL 追蹤](./samples/sql-tracking.md)
 - [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

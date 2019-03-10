@@ -5,15 +5,15 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: ac6cdbdb690a1e5e6693f2e5d1c5d2236a643ddb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496003"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725320"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>滑鼠輸入在 Windows Form 中的運作方式
-接收和處理滑鼠輸入是每個 Windows 應用程式中很重要的一部分。 您可以處理滑鼠事件，以在您的應用程式中執行的動作，或使用滑鼠位置資訊來執行點擊測試或其他動作。 此外，您可以變更您的應用程式中的控制項處理滑鼠輸入的方式。 本主題將描述這些詳細資料，以及如何取得和變更系統設定滑鼠的滑鼠事件。 如需使用滑鼠所提供的資料事件並在其中按一下滑鼠事件的順序引發，請參閱 < [Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。  
+接收和處理滑鼠輸入是每個 Windows 應用程式中很重要的一部分。 您可以處理滑鼠事件，以在您的應用程式中執行的動作，或使用滑鼠位置資訊來執行點擊測試或其他動作。 此外，您可以變更您的應用程式中的控制項處理滑鼠輸入的方式。 本主題將描述這些詳細資料，以及如何取得和變更系統設定滑鼠的滑鼠事件。 如需使用滑鼠所提供的資料事件並在其中按一下滑鼠事件的順序引發，請參閱 < [Windows Form 中的滑鼠事件](mouse-events-in-windows-forms.md)。  
   
 ## <a name="mouse-location-and-hit-testing"></a>滑鼠位置和點擊測試  
  當使用者移動滑鼠時，作業系統會將滑鼠指標移至。 將滑鼠指標包含單一像素，稱為 「 作用點，它會追蹤的作業系統，且會辨識為指標的位置。 當使用者移動滑鼠，或按下滑鼠按鈕<xref:System.Windows.Forms.Control>，其中包含<xref:System.Windows.Forms.Cursor.HotSpot%2A>引發適當的滑鼠事件。 您可以取得與目前的滑鼠位置<xref:System.Windows.Forms.MouseEventArgs.Location%2A>的屬性<xref:System.Windows.Forms.MouseEventArgs>處理滑鼠事件時，或使用<xref:System.Windows.Forms.Cursor.Position%2A>屬性<xref:System.Windows.Forms.Cursor>類別。 您可以接著使用滑鼠位置資訊來執行點擊測試，然後再執行動作的滑鼠位置為基礎。 點擊測試的功能已內建在 Windows Form 中的數個控制項這類<xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.TreeView>，<xref:System.Windows.Forms.MonthCalendar>和<xref:System.Windows.Forms.DataGridView>控制項。 搭配適當的滑鼠事件，<xref:System.Windows.Forms.Control.MouseHover>比方說，點擊測試是非常有助於判斷您的應用程式時應該執行特定動作。  
@@ -53,6 +53,6 @@ ms.locfileid: "54496003"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|取得轉動滑鼠滾輪時要捲動的行數。|  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 應用程式中的滑鼠輸入](../../../docs/framework/winforms/mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms 中的滑鼠捕捉](../../../docs/framework/winforms/mouse-capture-in-windows-forms.md)
-- [Windows Forms 中的滑鼠指標](../../../docs/framework/winforms/mouse-pointers-in-windows-forms.md)
+- [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
+- [Windows Forms 中的滑鼠捕捉](mouse-capture-in-windows-forms.md)
+- [Windows Forms 中的滑鼠指標](mouse-pointers-in-windows-forms.md)

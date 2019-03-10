@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: b7fed8c40c998ff0ecc0080139690614d985fc42
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492587"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721849"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
@@ -43,9 +43,9 @@ A`BestPriceFinder`服務會呼叫多個航空公司服務，以便尋找最佳�
 
 - 您可以在下列章節中找到 <xref:System.ServiceModel.WorkflowServiceHost> 的範例：
 
-    - [執行](samples/execution.md)
+    - [執行](./samples/execution.md)
 
-    - 應用程式：[暫停的執行個體管理](samples/suspended-instance-management.md)
+    - 應用程式：[暫停的執行個體管理](./samples/suspended-instance-management.md)
 
 - [裝載工作流程服務概觀](../wcf/feature-details/hosting-workflow-services-overview.md)
 
@@ -121,7 +121,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 使用者無法指定想要顯示在 Wire 上的 xsi:type，以便降低 Wire 上序列化執行個體的大小。
 
-[DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)可以解決這些問題在.NET 4.5 中的。
+[DataContractResolver](../wcf/samples/datacontractresolver.md)可以解決這些問題在.NET 4.5 中的。
 
 ### <a name="getting-started"></a>快速入門
 
@@ -131,9 +131,9 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 範例：
 
-    - [DataContractResolver](../../../docs/framework/wcf/samples/datacontractresolver.md)
+    - [DataContractResolver](../wcf/samples/datacontractresolver.md)
 
-    - [KnownAssemblyAttribute](../../../docs/framework/wcf/samples/knownassemblyattribute.md)
+    - [KnownAssemblyAttribute](../wcf/samples/knownassemblyattribute.md)
 
 ### <a name="data-contract-resolver-scenarios"></a>資料合約解析程式案例
 
@@ -163,9 +163,9 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 範例：
 
-    - [使用 TryCatch 錯誤處理流程圖活動](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+    - [使用 TryCatch 錯誤處理流程圖活動](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
-    - [招聘程序](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [招聘程序](./samples/hiring-process.md)
 
 - 設計工具文件：
 
@@ -197,9 +197,9 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 範例：
 
-    - [招聘程序](../../../docs/framework/windows-workflow-foundation/samples/hiring-process.md)
+    - [招聘程序](./samples/hiring-process.md)
 
-    - [公司購買程序](../../../docs/framework/windows-workflow-foundation/samples/corporate-purchase-process.md)
+    - [公司購買程序](./samples/corporate-purchase-process.md)
 
 - 設計工具文件：
 
@@ -237,7 +237,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.TryCatch> 活動。
 
-- 範例：[使用 TryCatch 錯誤處理流程圖活動](../../../docs/framework/windows-workflow-foundation/samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
+- 範例：[使用 TryCatch 錯誤處理流程圖活動](./samples/fault-handling-in-a-flowchart-activity-using-trycatch.md)
 
 - 設計工具文件：[Error Handling 活動設計工具](/visualstudio/workflow-designer/error-handling-activity-designers)
 
@@ -253,7 +253,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 在 Visual Studio 2012 中，建立工作流程主控台應用程式。 在工作流程設計工具中加入 <xref:System.Activities.Statements.Pick> 活動。
 
-- 範例：[使用 Pick 活動](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md)
+- 範例：[使用 Pick 活動](./samples/using-the-pick-activity.md)
 
 - 設計工具的文件：[Pick 活動設計工具](/visualstudio/workflow-designer/pick-activity-designer)
 
@@ -283,9 +283,9 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 ### <a name="getting-started"></a>快速入門
 
-1. 文件：[路由傳送](../../../docs/framework/wcf/feature-details/routing.md)
+1. 文件：[路由傳送](../wcf/feature-details/routing.md)
 
-2. 範例：[路由服務&#91;WCF 範例&#93;](../../../docs/framework/wcf/samples/routing-services.md)
+2. 範例：[路由服務&#91;WCF 範例&#93;](../wcf/samples/routing-services.md)
 
 3. 部落格：[路由規則 ！](https://go.microsoft.com/fwlink/?LinkId=204956)
 
@@ -317,9 +317,9 @@ WCF 探索是一種架構的技術，可讓您將應用程式基礎結構的探�
 
 ### <a name="getting-started"></a>快速入門
 
-- 文件：[WCF 探索](../../../docs/framework/wcf/feature-details/wcf-discovery.md)
+- 文件：[WCF 探索](../wcf/feature-details/wcf-discovery.md)
 
-- 範例：[探索 （範例）](../../../docs/framework/wcf/samples/discovery-samples.md)
+- 範例：[探索 （範例）](../wcf/samples/discovery-samples.md)
 
 ### <a name="discovery-scenarios"></a>探索案例
 
@@ -343,9 +343,9 @@ WCF 探索是一種架構的技術，可讓您將應用程式基礎結構的探�
 
     4. 在事件檢視器中查看工作流程追蹤事件。
 
-3. 範例：[追蹤](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)
+3. 範例：[追蹤](./samples/tracking.md)
 
-4. 概念文件：[工作流程追蹤及追蹤](../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+4. 概念文件：[工作流程追蹤及追蹤](workflow-tracking-and-tracing.md)
 
 ## <a name="sql-workflow-instance-store"></a>SQL 工作流程執行個體存放區
 
@@ -355,6 +355,6 @@ WCF 探索是一種架構的技術，可讓您將應用程式基礎結構的探�
 
 1. 在 Visual Studio 2012 中，建立包含隱含或明確的工作流程<xref:System.Activities.Statements.Persist>活動。 將 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> 行為加入至工作流程服務主機。 您可以在程式碼或應用程式組態檔中進行這項作業。
 
-2. 範例：[持續性](../../../docs/framework/windows-workflow-foundation/samples/persistence.md)
+2. 範例：[持續性](./samples/persistence.md)
 
-3. 概念文件：[SQL 工作流程執行個體存放區](../../../docs/framework/windows-workflow-foundation/sql-workflow-instance-store.md)。
+3. 概念文件：[SQL 工作流程執行個體存放區](sql-workflow-instance-store.md)。

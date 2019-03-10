@@ -15,12 +15,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: 98b52e914a891baec0b52dcc7b38d4f9f2198c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539539"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724982"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>HOW TO：回應 Windows Form Button 按一下動作
 Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在按下按鈕時執行某些程式碼。  
@@ -31,7 +31,7 @@ Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在
   
 ### <a name="to-respond-to-a-button-click"></a>若要回應按下按鈕  
   
--   在按鈕的`Click`<xref:System.EventHandler>撰寫程式碼來執行。 `Button1_Click` 必須繫結至控制項。 如需詳細資訊，請參閱[＜How to：在執行階段建立 Windows Forms 事件處理常式](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+-   在按鈕的`Click`<xref:System.EventHandler>撰寫程式碼來執行。 `Button1_Click` 必須繫結至控制項。 如需詳細資訊，請參閱[如何：在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -56,6 +56,6 @@ Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [Button 控制項概觀](../../../../docs/framework/winforms/controls/button-control-overview-windows-forms.md)
-- [選取 Windows Forms Button 控制項的方法](../../../../docs/framework/winforms/controls/ways-to-select-a-windows-forms-button-control.md)
-- [Button 控制項](../../../../docs/framework/winforms/controls/button-control-windows-forms.md)
+- [Button 控制項概觀](button-control-overview-windows-forms.md)
+- [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
+- [Button 控制項](button-control-windows-forms.md)

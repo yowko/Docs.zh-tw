@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 00ee19f343d8f471d84f3dc8180e61b7354e3985
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb05842eb7cd30611c68f685ea3dae9200d87d35
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738598"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57724930"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>HOW TO：在 Windows 應用程式中提供說明
 您可以使用的<xref:System.Windows.Forms.HelpProvider>附加至 Windows Form 上的特定控制項的說明檔內的 [說明] 主題的元件。 說明檔可以是 HTML 或 HTMLHelp 1.x 或更高的格式。  
@@ -53,10 +53,10 @@ ms.locfileid: "54738598"
 > [!IMPORTANT]
 >  請先仔細檢查用戶端所傳送的任何資訊，再將它用於應用程式中。 惡意使用者可能會嘗試傳送或插入可執行的指令碼、SQL 陳述式或其他程式碼。 在顯示使用者的輸入、將它儲存在資料庫中，或使用它之前，請先檢查它未包含可能不安全的資訊。 一般檢查方式是在您收到來自使用者的輸入時，使用規則運算式來尋找關鍵字，例如 "SCRIPT"。  
   
- 您也可以使用<xref:System.Windows.Forms.HelpProvider>元件來顯示快顯說明，即使您將它設定為顯示在 Windows Forms 上控制項的說明檔案。 如需詳細資訊，請參閱[＜How to：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)。  
+ 您也可以使用<xref:System.Windows.Forms.HelpProvider>元件來顯示快顯說明，即使您將它設定為顯示在 Windows Forms 上控制項的說明檔案。 如需詳細資訊，請參閱[如何：顯示快顯說明](how-to-display-pop-up-help.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：顯示快顯說明](../../../../docs/framework/winforms/advanced/how-to-display-pop-up-help.md)
-- [使用工具提示來顯示控制項說明](../../../../docs/framework/winforms/advanced/control-help-using-tooltips.md)
-- [整合 Windows Forms 中的使用者說明](../../../../docs/framework/winforms/advanced/integrating-user-help-in-windows-forms.md)
-- [Windows Forms](../../../../docs/framework/winforms/index.md)
+- [如何：顯示快顯說明](how-to-display-pop-up-help.md)
+- [使用工具提示來顯示控制項說明](control-help-using-tooltips.md)
+- [整合 Windows Forms 中的使用者說明](integrating-user-help-in-windows-forms.md)
+- [Windows Forms](../index.md)

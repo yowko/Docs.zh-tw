@@ -2,12 +2,12 @@
 title: 持續性參與者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 66178adda593192678542ebf5ed8906e0dffc908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8392bd756d8315a72d9df131476414f8982cf03
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569501"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723760"
 ---
 # <a name="persistence-participants"></a>持續性參與者
 持續性參與者可參與由應用程式主機所觸發的持續性作業 (「儲存」或「載入」)。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附兩個抽象類別， **PersistenceParticipant**並**PersistenceIOParticipant**，這可用來建立持續性參與者。 持續性參與者會衍生自這些類別的其中一個、實作感興趣的方法，然後將類別的執行個體加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 應用程式主機保存工作流程執行個體時，可能會尋找此類工作流程擴充功能，並且在適當的時間於持續性參與者上叫用適當的方法。  
@@ -26,7 +26,7 @@ ms.locfileid: "54569501"
   
 6.  叫用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A>所有 I/O 的持續性參與者上的方法。 如果參與者並非 I/O 參與者，會略過這項工作。 如果持續性的時段屬於交易性質，則交易會在 Transaction.Current 屬性中提供。  
   
-7.  等候所有持續性參與者完成。 如果所有參與者成功保存執行個體資料，則認可交易。  
+7.  等候所有持續性參與者完成。 如果所有參與者成功保存執行個體資料，則認可異動。  
   
  持續性參與者衍生自**PersistenceParticipant**類別，並可能實作**CollectValues**並**MapValues**方法。 I/O 的持續性參與者衍生自**PersistenceIOParticipant**類別，並可能實作**BeginOnSave**除了實作方法**CollectValues**並**MapValues**方法。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "54569501"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [如何：建立自訂持續性參與者](../../../docs/framework/windows-workflow-foundation/how-to-create-a-custom-persistence-participant.md)  
+-   [如何：建立自訂持續性參與者](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [存放區擴充性](../../../docs/framework/windows-workflow-foundation/store-extensibility.md)
+- [存放區擴充性](store-extensibility.md)

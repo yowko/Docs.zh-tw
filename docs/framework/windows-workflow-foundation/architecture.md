@@ -2,12 +2,12 @@
 title: Windows 工作流程架構
 ms.date: 03/30/2017
 ms.assetid: 1d4c6495-d64a-46d0-896a-3a01fac90aa9
-ms.openlocfilehash: c0e21e514e807196f3a09ae2a6eed6a9e7c55a18
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 5d6e1ead9184bfb61eb466389671ca2e74264ae3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513093"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723735"
 ---
 # <a name="windows-workflow-architecture"></a>Windows 工作流程架構
 Windows Workflow Foundation (WF) 會引發開發互動式長期執行應用程式的抽象層級。 工作的單元會封裝為活動。 活動會在環境中執行，該環境會為流程控制、例外狀況處理、錯誤傳播、狀態資料保存、從記憶體載入及卸載處理中的工作流程、追蹤，以及交易流程提供機能。  
@@ -38,7 +38,7 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
 ## <a name="activity-context"></a>活動內容  
  <xref:System.Activities.ActivityContext> 是活動作者的工作流程執行階段介面，可提供存取執行階段各種豐富的功能。 下列範例會定義使用執行內容建立書籤的活動 (這種機制可讓活動在其執行中註冊持續點，以供傳遞資料至活動的主機繼續)。  
   
- [!code-csharp[CFX_WorkflowApplicationExample#15](../../../samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
+ [!code-csharp[CFX_WorkflowApplicationExample#15](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#15)]  
   
 ## <a name="activity-life-cycle"></a>活動開發週期  
  活動的執行個體會在 <xref:System.Activities.ActivityInstanceState.Executing> 狀態中啟動。 除非發生例外狀況，否則活動的執行個體會維持在這個狀態中，直到所有子活動皆執行完畢，而且其他所有暫止中的工作 (例如 <xref:System.Activities.Bookmark> 物件) 皆已完成，此時，該執行個體就會轉換成 <xref:System.Activities.ActivityInstanceState.Closed> 狀態。 活動執行個體的父系可以要求子系取消，如果子系可以取消，則會在 <xref:System.Activities.ActivityInstanceState.Canceled> 狀態下完成。 如果在執行期間擲回例外狀況，執行階段會將活動設為 <xref:System.Activities.ActivityInstanceState.Faulted> 狀態，並將例外狀況向上傳播至活動的父鏈結。 以下是活動的三種完成狀態：  
@@ -47,6 +47,6 @@ xmlns="http://schemas.microsoft.com/2009/workflow">
   
 -   **已取消：** 活動已正常放棄其工作並結束。 進入此狀態時，不會明確地復原工作。  
   
--   **發生錯誤：** 活動而發生錯誤，並已結束而不會完成其工作。  
+-   **發生錯誤：** 活動發生錯誤，且已結束而不會完成其工作。  
   
  當活動被保存或卸載時，會繼續處於 <xref:System.Activities.ActivityInstanceState.Executing> 狀態。
