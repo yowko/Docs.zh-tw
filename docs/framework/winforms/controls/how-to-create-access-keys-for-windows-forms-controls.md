@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: 1bfbd2c6cd8aae410dfed506437bc85fbcb1d311
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5713bc9fa02e6122cc42348160dbe9315e023bc4
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597849"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707998"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="abfe4-102">HOW TO：建立 Windows Form 控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="abfe4-102">How to: Create Access Keys for Windows Forms Controls</span></span>
-<span data-ttu-id="abfe4-103">*便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。</span><span class="sxs-lookup"><span data-stu-id="abfe4-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="abfe4-104">使用存取金鑰，使用者可以 「 按一下 」 按鈕在組合中按 ALT 鍵，以預先定義的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="abfe4-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="abfe4-105">例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將新增連字號，再以字母"P"會導致字母"P"中加上底線按鈕的文字在執行階段。</span><span class="sxs-lookup"><span data-stu-id="abfe4-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="abfe4-106">使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。</span><span class="sxs-lookup"><span data-stu-id="abfe4-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="abfe4-107">您不能有無法接收焦點的控制項的便捷鍵。</span><span class="sxs-lookup"><span data-stu-id="abfe4-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
+# <a name="how-to-create-access-keys-for-windows-forms-controls"></a><span data-ttu-id="b5bb5-102">HOW TO：建立 Windows Form 控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="b5bb5-102">How to: Create Access Keys for Windows Forms Controls</span></span>
+<span data-ttu-id="b5bb5-103">*便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-103">An *access key* is an underlined character in the text of a menu, menu item, or the label of a control such as a button.</span></span> <span data-ttu-id="b5bb5-104">使用存取金鑰，使用者可以 「 按一下 」 按鈕在組合中按 ALT 鍵，以預先定義的存取金鑰。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-104">With an access key, the user can "click" a button by pressing the ALT key in combination with the predefined access key.</span></span> <span data-ttu-id="b5bb5-105">例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將新增連字號，再以字母"P"會導致字母"P"中加上底線按鈕的文字在執行階段。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-105">For example, if a button runs a procedure to print a form, and therefore its `Text` property is set to "Print," adding an ampersand before the letter "P" causes the letter "P" to be underlined in the button text at run time.</span></span> <span data-ttu-id="b5bb5-106">使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-106">The user can run the command associated with the button by pressing ALT+P.</span></span> <span data-ttu-id="b5bb5-107">您不能有無法接收焦點的控制項的便捷鍵。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-107">You cannot have an access key for a control that cannot receive focus.</span></span>  
   
-### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="abfe4-108">若要建立控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="abfe4-108">To create an access key for a control</span></span>  
+### <a name="to-create-an-access-key-for-a-control"></a><span data-ttu-id="b5bb5-108">若要建立控制項的便捷鍵</span><span class="sxs-lookup"><span data-stu-id="b5bb5-108">To create an access key for a control</span></span>  
   
-1.  <span data-ttu-id="abfe4-109">設定`Text`屬性設為字串，包含連字號 (&) 會快顯的字母前面。</span><span class="sxs-lookup"><span data-stu-id="abfe4-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
+1.  <span data-ttu-id="b5bb5-109">設定`Text`屬性設為字串，包含連字號 (&) 會快顯的字母前面。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-109">Set the `Text` property to a string that includes an ampersand (&) before the letter that will be the shortcut.</span></span>  
   
     ```vb  
     ' Set the letter "P" as an access key.  
@@ -50,10 +50,10 @@ ms.locfileid: "54597849"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="abfe4-110">若要包含在標題中的連字號，而不需建立存取金鑰，包含兩個連字號 (& &)。</span><span class="sxs-lookup"><span data-stu-id="abfe4-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="abfe4-111">單一連字號會顯示在標題中並沒有字元加上底線。</span><span class="sxs-lookup"><span data-stu-id="abfe4-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
+    >  <span data-ttu-id="b5bb5-110">若要包含在標題中的連字號，而不需建立存取金鑰，包含兩個連字號 (& &)。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-110">To include an ampersand in a caption without creating an access key, include two ampersands (&&).</span></span> <span data-ttu-id="b5bb5-111">單一連字號會顯示在標題中並沒有字元加上底線。</span><span class="sxs-lookup"><span data-stu-id="b5bb5-111">A single ampersand is displayed in the caption and no characters are underlined.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="abfe4-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="abfe4-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="b5bb5-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b5bb5-112">See also</span></span>
 - <xref:System.Windows.Forms.Button>
-- [<span data-ttu-id="abfe4-113">如何：回應 Windows Form Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="abfe4-113">How to: Respond to Windows Forms Button Clicks</span></span>](../../../../docs/framework/winforms/controls/how-to-respond-to-windows-forms-button-clicks.md)
-- [<span data-ttu-id="abfe4-114">如何：設定所顯示之文字的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="abfe4-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="abfe4-115">標記個別 Windows Forms 控制項並提供其捷徑</span><span class="sxs-lookup"><span data-stu-id="abfe4-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](../../../../docs/framework/winforms/controls/labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [<span data-ttu-id="b5bb5-113">如何：回應 Windows Form Button 按一下動作</span><span class="sxs-lookup"><span data-stu-id="b5bb5-113">How to: Respond to Windows Forms Button Clicks</span></span>](how-to-respond-to-windows-forms-button-clicks.md)
+- [<span data-ttu-id="b5bb5-114">如何：設定所顯示之文字的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="b5bb5-114">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="b5bb5-115">標記個別 Windows Forms 控制項並提供其捷徑</span><span class="sxs-lookup"><span data-stu-id="b5bb5-115">Labeling Individual Windows Forms Controls and Providing Shortcuts to Them</span></span>](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
