@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: fdcb4bccefe814554148aaac6e2d42e49893b7e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e4fc00c3966d44ba36a0c59b37ae2fa1cd431014
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685226"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703032"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>HOW TO：合併資料列和 TableLayoutPanel 控制項中的資料行
 中的控制項<xref:System.Windows.Forms.TableLayoutPanel>控制項可以跨越相鄰的資料列和資料行。  
@@ -36,4 +36,4 @@ ms.locfileid: "54685226"
 5.  設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性設**1**。 請注意，<xref:System.Windows.Forms.Button>控制項將移至第一個資料行，而且跨越的第一個和第二個資料列。  
   
 ## <a name="see-also"></a>另請參閱
-- [TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/tablelayoutpanel-control-windows-forms.md)
+- [TableLayoutPanel 控制項](tablelayoutpanel-control-windows-forms.md)

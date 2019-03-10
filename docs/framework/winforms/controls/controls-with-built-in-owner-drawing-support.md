@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: 5206289eaab1195e5314e21b0d49e4b8a5455b72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50f180f2f3fe825f617ae441906a7414a6b8bced
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696301"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707349"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>使用內建主控描繪支援的控制項
 Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項的視覺外觀的技術。  
@@ -86,7 +86,7 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [如何：建立下拉式方塊控制項中的變數文字大小](../../../../docs/framework/winforms/controls/how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [如何：建立下拉式方塊控制項中的變數文字大小](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem 元件  
  <xref:System.Windows.Forms.MenuItem>元件表示的單一功能表項目<xref:System.Windows.Forms.MainMenu>或<xref:System.Windows.Forms.ContextMenu>元件。  
@@ -172,9 +172,9 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [如何：自訂 Windows Form DataGridView 控制項中的資料列的外觀](../../../../docs/framework/winforms/controls/customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [如何：自訂 Windows Form DataGridView 控制項中的資料列的外觀](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip 控制項  
  <xref:System.Windows.Forms.ToolStrip> 和衍生的控制項可讓您自訂其外觀的任何層面。  
@@ -185,9 +185,9 @@ Windows Forms 中的主控描繪也稱為自訂繪圖，是變更特定控制項
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](../../../../docs/framework/winforms/controls/create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [如何：自訂繪製 ToolStrip 控制項](../../../../docs/framework/winforms/controls/how-to-custom-draw-a-toolstrip-control.md)  
+-   [如何：自訂繪製 ToolStrip 控制項](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

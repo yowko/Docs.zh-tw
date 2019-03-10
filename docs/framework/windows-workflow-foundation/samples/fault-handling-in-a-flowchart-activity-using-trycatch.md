@@ -2,12 +2,12 @@
 title: 使用 TryCatch 錯誤處理流程圖活動
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 56215ecf1b5f2b54333271f2086b831f564ff7c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507495"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57708830"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>使用 TryCatch 錯誤處理流程圖活動
 這個範例示範 <xref:System.Activities.Statements.TryCatch> 活動在複雜控制流程活動中的使用方式。
@@ -47,5 +47,5 @@ ms.locfileid: "54507495"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>另請參閱
-- [流程圖工作流程](../../../../docs/framework/windows-workflow-foundation/flowchart-workflows.md)
-- [例外狀況](../../../../docs/framework/windows-workflow-foundation/exceptions.md)
+- [流程圖工作流程](../flowchart-workflows.md)
+- [例外狀況](../exceptions.md)

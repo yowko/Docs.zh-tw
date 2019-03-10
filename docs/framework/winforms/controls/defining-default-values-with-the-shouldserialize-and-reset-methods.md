@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property methods
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
-ms.openlocfilehash: 23b4ddb3399c12f5bf3c387991676e7ea93b8a29
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cb23220be2b4a3564c4869016c05065afe7c27c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497429"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704441"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>使用 ShouldSerialize 和 Reset 方法定義預設值
 `ShouldSerialize` 和`Reset`是選擇性屬性，您可以提供的方法，如果屬性未具有簡單的預設值。 如果屬性具有簡單的預設值，則應套用<xref:System.ComponentModel.DefaultValueAttribute>並改為提供屬性的類別建構函式的預設值。 是一種機制可讓設計工具中的下列功能：  
@@ -144,6 +144,6 @@ public class MyControl : Control {
  在此情況下，藉由存取私用變數的值時，即使`MyFont`屬性是`null`，屬性瀏覽器不會顯示`null`; 相反地，它會顯示<xref:System.Windows.Forms.Control.Font%2A>屬性的父代，如果不是`null`，預設值<xref:System.Windows.Forms.Control.Font%2A>中所定義的值<xref:System.Windows.Forms.Control>。 因此的預設值`MyFont`無法直接設定，和<xref:System.ComponentModel.DefaultValueAttribute>無法套用至這個屬性。 相反地，`ShouldSerialize`並`Reset`方法必須實作`MyFont`屬性。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/properties-in-windows-forms-controls.md)
-- [定義屬性](../../../../docs/framework/winforms/controls/defining-a-property-in-windows-forms-controls.md)
-- [屬性變更事件](../../../../docs/framework/winforms/controls/property-changed-events.md)
+- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [定義屬性](defining-a-property-in-windows-forms-controls.md)
+- [屬性變更事件](property-changed-events.md)

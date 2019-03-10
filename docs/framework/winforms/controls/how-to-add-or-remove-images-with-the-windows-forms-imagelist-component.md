@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding to ImageList component
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
-ms.openlocfilehash: a81cf11ea5ca405e2013b7c7375a863aeb1f110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81c85186d2f15917a6aa1067814a0119edf3f460
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609612"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705164"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>HOW TO：新增或移除映像使用 Windows Form ImageList 元件
 Windows Form<xref:System.Windows.Forms.ImageList>元件通常是填入映像之前與控制項相關聯。 不過，您可以新增並移除與控制項產生關聯的影像清單後的映像。  
@@ -142,6 +142,6 @@ imageList1.Images.RemoveByKey("myPhoto");
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)
-- [ImageList 元件概觀](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)
-- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
+- [ImageList 元件](imagelist-component-windows-forms.md)
+- [ImageList 元件概觀](imagelist-component-overview-windows-forms.md)
+- [影像、點陣圖和中繼檔](../advanced/images-bitmaps-and-metafiles.md)

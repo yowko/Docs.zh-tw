@@ -11,12 +11,12 @@ helpviewer_keywords:
 - tabs [Windows Forms], controlling appearance
 - buttons [Windows Forms], displaying tabs as
 ms.assetid: 7c6cc443-ed62-4d26-b94d-b8913b44f773
-ms.openlocfilehash: 1ed062b3991d7738269d30a6ff13cda3c80927c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 642115eeb61649eb369058947e5347d4389182a0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630316"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702408"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-tabcontrol"></a>HOW TO：變更 Windows Form TabControl 的外觀
 您可以使用的屬性來變更 Windows Form 中的索引標籤的外觀<xref:System.Windows.Forms.TabControl>而<xref:System.Windows.Forms.TabPage>組成控制項的個別索引標籤的物件。 藉由設定這些屬性，，您可以索引標籤上顯示的映像、 顯示垂直方式而非水平索引標籤，顯示多個資料列的索引標籤，並啟用或以程式設計方式停用索引標籤。  
@@ -27,7 +27,7 @@ ms.locfileid: "54630316"
   
 2.  將影像新增至映像清單中。  
   
-     如需有關影像清單的詳細資訊，請參閱[ImageList 元件](../../../../docs/framework/winforms/controls/imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
+     如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 3.  設定<xref:System.Windows.Forms.TabControl.ImageList%2A>的屬性<xref:System.Windows.Forms.TabControl>到<xref:System.Windows.Forms.ImageList>控制項。  
   
@@ -66,8 +66,8 @@ ms.locfileid: "54630316"
 -   設定<xref:System.Windows.Forms.TabControl.Appearance%2A>的屬性<xref:System.Windows.Forms.TabControl>要<xref:System.Windows.Forms.TabAppearance.Buttons>或<xref:System.Windows.Forms.TabAppearance.FlatButtons>。  
   
 ## <a name="see-also"></a>另請參閱
-- [TabControl 控制項](../../../../docs/framework/winforms/controls/tabcontrol-control-windows-forms.md)
-- [TabControl 控制項概觀](../../../../docs/framework/winforms/controls/tabcontrol-control-overview-windows-forms.md)
-- [如何：將控制項加入索引標籤頁](../../../../docs/framework/winforms/controls/how-to-add-a-control-to-a-tab-page.md)
-- [如何：停用索引標籤頁](../../../../docs/framework/winforms/controls/how-to-disable-tab-pages.md)
-- [如何：新增和移除使用 Windows Form TabControl 的索引標籤](../../../../docs/framework/winforms/controls/how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [TabControl 控制項](tabcontrol-control-windows-forms.md)
+- [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)
+- [如何：將控制項加入索引標籤頁](how-to-add-a-control-to-a-tab-page.md)
+- [如何：停用索引標籤頁](how-to-disable-tab-pages.md)
+- [如何：新增和移除使用 Windows Form TabControl 的索引標籤](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)

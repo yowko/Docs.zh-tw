@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, dynamic layout
 - FlowLayoutPanel control [Windows Forms], about FlowLayoutPanel control
 ms.assetid: 3883e024-f5a0-456d-9c27-b4dfa1cc9045
-ms.openlocfilehash: 2b08566f4b13ed54bfc0bb83c39777410251dafa
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 02d111a630459344efbc5d1e45b53daffcde427f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441766"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57702605"
 ---
 # <a name="flowlayoutpanel-control-overview"></a>FlowLayoutPanel 控制項概觀
 
@@ -31,4 +31,4 @@ ms.locfileid: "56441766"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/flowlayoutpanel-control-windows-forms.md)
+- [FlowLayoutPanel 控制項](flowlayoutpanel-control-windows-forms.md)

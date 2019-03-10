@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ElementHost control
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: 2e92d8e8-f0e4-4df7-9f07-2acf35cd798c
-ms.openlocfilehash: cc5e1acd26763e2dd4324497f5d9ecde216ea975
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: ed48db399ba47f0e6be96f7bca33d3892b19e433
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441459"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57707907"
 ---
 # <a name="walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容
 
@@ -104,16 +104,16 @@ ms.locfileid: "56441459"
 
 Windows Form 和 WPF 是不同的技術，不過可以藉由設計密切地相互操作。 若要提供更豐富的外觀和行為在您的應用程式，請嘗試下列方法：
 
-- 將 Windows Form 控制項裝載到 WPF 頁面中。 如需詳細資訊，請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../../../../docs/framework/wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
+- 將 Windows Form 控制項裝載到 WPF 頁面中。 如需詳細資訊，請參閱[逐步解說：在 WPF 中裝載 Windows Forms 控制項](../../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)。
 
-- 將 Windows Form 視覺化樣式套用至 WPF 內容。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](../../../../docs/framework/wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。
+- 將 Windows Form 視覺化樣式套用至 WPF 內容。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](../../wpf/advanced/how-to-enable-visual-styles-in-a-hybrid-application.md)。
 
-- 變更 WPF 內容的樣式。 如需詳細資訊，請參閱[逐步解說：設定 WPF 內容的樣式](../../../../docs/framework/winforms/advanced/walkthrough-styling-wpf-content.md)。
+- 變更 WPF 內容的樣式。 如需詳細資訊，請參閱[逐步解說：設定 WPF 內容的樣式](walkthrough-styling-wpf-content.md)。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控制項](using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
