@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
-ms.openlocfilehash: 723916eb0c1e242df301c49bf0716e0262a3ba42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a059726ea410e88121a0b755295c3c492c11962a
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614974"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57705515"
 ---
-# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="4667c-102">HOW TO：在 ToolStrip 控制項中建立切換按鈕</span><span class="sxs-lookup"><span data-stu-id="4667c-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
-<span data-ttu-id="4667c-103">當使用者按一下切換按鈕時，它會出現下凹的連線，並保留下凹的外觀，直到使用者按一下按鈕時一次。</span><span class="sxs-lookup"><span data-stu-id="4667c-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>  
+# <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a><span data-ttu-id="7a2c7-102">HOW TO：在 ToolStrip 控制項中建立切換按鈕</span><span class="sxs-lookup"><span data-stu-id="7a2c7-102">How to: Create Toggle Buttons in ToolStrip Controls</span></span>
+<span data-ttu-id="7a2c7-103">當使用者按一下切換按鈕時，它會出現下凹的連線，並保留下凹的外觀，直到使用者按一下按鈕時一次。</span><span class="sxs-lookup"><span data-stu-id="7a2c7-103">When a user clicks a toggle button, it appears sunken and retains the sunken appearance until the user clicks the button again.</span></span>  
   
-### <a name="to-create-a-toggling-toolstripbutton"></a><span data-ttu-id="4667c-104">若要建立切換 prvek ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="4667c-104">To create a toggling ToolStripButton</span></span>  
+### <a name="to-create-a-toggling-toolstripbutton"></a><span data-ttu-id="7a2c7-104">若要建立切換 prvek ToolStripButton</span><span class="sxs-lookup"><span data-stu-id="7a2c7-104">To create a toggling ToolStripButton</span></span>  
   
--   <span data-ttu-id="4667c-105">使用程式碼，如下列程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="4667c-105">Use code such as the following code example.</span></span> <span data-ttu-id="4667c-106">此程式碼假設您的表單包含<xref:System.Windows.Forms.ToolStrip>控制項，且其<xref:System.Windows.Forms.ToolStrip.Items%2A>集合包含<xref:System.Windows.Forms.ToolStripButton>稱為`toolStripButton1`。</span><span class="sxs-lookup"><span data-stu-id="4667c-106">This code assumes that your form contains a <xref:System.Windows.Forms.ToolStrip> control, and that its <xref:System.Windows.Forms.ToolStrip.Items%2A> collection contains a <xref:System.Windows.Forms.ToolStripButton> called `toolStripButton1`.</span></span> <span data-ttu-id="4667c-107">同時也假設您已經呼叫事件處理常式`toolStripButton1_CheckedChanged`。</span><span class="sxs-lookup"><span data-stu-id="4667c-107">It also assumes that you have an event handler called `toolStripButton1_CheckedChanged`.</span></span>  
+-   <span data-ttu-id="7a2c7-105">使用程式碼，如下列程式碼範例。</span><span class="sxs-lookup"><span data-stu-id="7a2c7-105">Use code such as the following code example.</span></span> <span data-ttu-id="7a2c7-106">此程式碼假設您的表單包含<xref:System.Windows.Forms.ToolStrip>控制項，且其<xref:System.Windows.Forms.ToolStrip.Items%2A>集合包含<xref:System.Windows.Forms.ToolStripButton>稱為`toolStripButton1`。</span><span class="sxs-lookup"><span data-stu-id="7a2c7-106">This code assumes that your form contains a <xref:System.Windows.Forms.ToolStrip> control, and that its <xref:System.Windows.Forms.ToolStrip.Items%2A> collection contains a <xref:System.Windows.Forms.ToolStripButton> called `toolStripButton1`.</span></span> <span data-ttu-id="7a2c7-107">同時也假設您已經呼叫事件處理常式`toolStripButton1_CheckedChanged`。</span><span class="sxs-lookup"><span data-stu-id="7a2c7-107">It also assumes that you have an event handler called `toolStripButton1_CheckedChanged`.</span></span>  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  
@@ -35,6 +35,6 @@ ms.locfileid: "54614974"
     EventHandler(toolStripButton1_CheckedChanged);  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="4667c-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4667c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7a2c7-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7a2c7-108">See also</span></span>
 - <xref:System.Windows.Forms.ToolStripButton>
-- [<span data-ttu-id="4667c-109">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="4667c-109">ToolStrip Control Overview</span></span>](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="7a2c7-109">ToolStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="7a2c7-109">ToolStrip Control Overview</span></span>](toolstrip-control-overview-windows-forms.md)

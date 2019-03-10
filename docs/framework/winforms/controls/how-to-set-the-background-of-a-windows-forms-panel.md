@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Panel control [Windows Forms], background
 - colors [Windows Forms], Windows Forms Panel controls
 ms.assetid: 096cbd8d-45cc-47b8-b1ef-a27f60ea8be0
-ms.openlocfilehash: 1c4eadaadf561e127ac2eaa87f62aea4e1dc7ea4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0cf7666e6d969b3d02d13e86eb45904307d3ce3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636075"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722681"
 ---
-# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a><span data-ttu-id="f6806-102">HOW TO：設定 Windows Form 面板的背景</span><span class="sxs-lookup"><span data-stu-id="f6806-102">How to: Set the Background of a Windows Forms Panel</span></span>
-<span data-ttu-id="f6806-103">Windows Form<xref:System.Windows.Forms.Panel>控制項可以顯示的背景色彩和背景影像。</span><span class="sxs-lookup"><span data-stu-id="f6806-103">A Windows Forms <xref:System.Windows.Forms.Panel> control can display both a background color and a background image.</span></span> <span data-ttu-id="f6806-104"><xref:System.Windows.Forms.Control.BackColor%2A>屬性會設定包含的控制項，例如標籤和選項按鈕的背景色彩。</span><span class="sxs-lookup"><span data-stu-id="f6806-104">The <xref:System.Windows.Forms.Control.BackColor%2A> property sets the background color for the contained controls, such as labels and radio buttons.</span></span> <span data-ttu-id="f6806-105">如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未設定屬性，<xref:System.Windows.Forms.Control.BackColor%2A>選取項目將會填滿整個面板。</span><span class="sxs-lookup"><span data-stu-id="f6806-105">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is not set, the <xref:System.Windows.Forms.Control.BackColor%2A> selection will fill the entire panel.</span></span> <span data-ttu-id="f6806-106">如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>屬性設定時，影像會顯示包含的控制項後面。</span><span class="sxs-lookup"><span data-stu-id="f6806-106">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is set, the image will be displayed behind the contained controls.</span></span>  
+# <a name="how-to-set-the-background-of-a-windows-forms-panel"></a><span data-ttu-id="85c2e-102">HOW TO：設定 Windows Form 面板的背景</span><span class="sxs-lookup"><span data-stu-id="85c2e-102">How to: Set the Background of a Windows Forms Panel</span></span>
+<span data-ttu-id="85c2e-103">Windows Form<xref:System.Windows.Forms.Panel>控制項可以顯示的背景色彩和背景影像。</span><span class="sxs-lookup"><span data-stu-id="85c2e-103">A Windows Forms <xref:System.Windows.Forms.Panel> control can display both a background color and a background image.</span></span> <span data-ttu-id="85c2e-104"><xref:System.Windows.Forms.Control.BackColor%2A>屬性會設定包含的控制項，例如標籤和選項按鈕的背景色彩。</span><span class="sxs-lookup"><span data-stu-id="85c2e-104">The <xref:System.Windows.Forms.Control.BackColor%2A> property sets the background color for the contained controls, such as labels and radio buttons.</span></span> <span data-ttu-id="85c2e-105">如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>未設定屬性，<xref:System.Windows.Forms.Control.BackColor%2A>選取項目將會填滿整個面板。</span><span class="sxs-lookup"><span data-stu-id="85c2e-105">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is not set, the <xref:System.Windows.Forms.Control.BackColor%2A> selection will fill the entire panel.</span></span> <span data-ttu-id="85c2e-106">如果<xref:System.Windows.Forms.Control.BackgroundImage%2A>屬性設定時，影像會顯示包含的控制項後面。</span><span class="sxs-lookup"><span data-stu-id="85c2e-106">If the <xref:System.Windows.Forms.Control.BackgroundImage%2A> property is set, the image will be displayed behind the contained controls.</span></span>  
   
-### <a name="to-set-the-background-programmatically"></a><span data-ttu-id="f6806-107">以程式設計方式設定背景</span><span class="sxs-lookup"><span data-stu-id="f6806-107">To set the background programmatically</span></span>  
+### <a name="to-set-the-background-programmatically"></a><span data-ttu-id="85c2e-107">以程式設計方式設定背景</span><span class="sxs-lookup"><span data-stu-id="85c2e-107">To set the background programmatically</span></span>  
   
-1.  <span data-ttu-id="f6806-108">設定面板<xref:System.Windows.Forms.Control.BackColor%2A>屬性設為值型別的<xref:System.Drawing.Color?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="f6806-108">Set the panel's <xref:System.Windows.Forms.Control.BackColor%2A> property to a value of type <xref:System.Drawing.Color?displayProperty=nameWithType>.</span></span>  
+1.  <span data-ttu-id="85c2e-108">設定面板<xref:System.Windows.Forms.Control.BackColor%2A>屬性設為值型別的<xref:System.Drawing.Color?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="85c2e-108">Set the panel's <xref:System.Windows.Forms.Control.BackColor%2A> property to a value of type <xref:System.Drawing.Color?displayProperty=nameWithType>.</span></span>  
   
     ```vb  
     Panel1.BackColor = Color.AliceBlue  
@@ -37,7 +37,7 @@ ms.locfileid: "54636075"
     panel1->BackColor = Color::AliceBlue;  
     ```  
   
-2.  <span data-ttu-id="f6806-109">設定面板<xref:System.Windows.Forms.Control.BackgroundImage%2A>屬性使用<xref:System.Drawing.Image.FromFile%2A>方法<xref:System.Drawing.Image?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="f6806-109">Set the panel's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image?displayProperty=nameWithType> class.</span></span>  
+2.  <span data-ttu-id="85c2e-109">設定面板<xref:System.Windows.Forms.Control.BackgroundImage%2A>屬性使用<xref:System.Drawing.Image.FromFile%2A>方法<xref:System.Drawing.Image?displayProperty=nameWithType>類別。</span><span class="sxs-lookup"><span data-stu-id="85c2e-109">Set the panel's <xref:System.Windows.Forms.Control.BackgroundImage%2A> property using the <xref:System.Drawing.Image.FromFile%2A> method of the <xref:System.Drawing.Image?displayProperty=nameWithType> class.</span></span>  
   
     ```vb  
     ' You should replace the bolded image   
@@ -67,8 +67,8 @@ ms.locfileid: "54636075"
        "\\Image.gif"));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="f6806-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f6806-110">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="85c2e-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="85c2e-110">See also</span></span>
 - <xref:System.Windows.Forms.Control.BackColor%2A>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [<span data-ttu-id="f6806-111">Panel 控制項</span><span class="sxs-lookup"><span data-stu-id="f6806-111">Panel Control</span></span>](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
-- [<span data-ttu-id="f6806-112">Panel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="f6806-112">Panel Control Overview</span></span>](../../../../docs/framework/winforms/controls/panel-control-overview-windows-forms.md)
+- [<span data-ttu-id="85c2e-111">Panel 控制項</span><span class="sxs-lookup"><span data-stu-id="85c2e-111">Panel Control</span></span>](panel-control-windows-forms.md)
+- [<span data-ttu-id="85c2e-112">Panel 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="85c2e-112">Panel Control Overview</span></span>](panel-control-overview-windows-forms.md)

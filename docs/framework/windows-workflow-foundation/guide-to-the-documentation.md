@@ -5,34 +5,34 @@ helpviewer_keywords:
 - WF [WF], guide to
 - Windows Workflow Foundation [WF], guide to
 ms.assetid: a75025be-f225-430f-90cf-98f7022db436
-ms.openlocfilehash: 9e5b363f28dce86e254540ff5e2f3ac9e7ca7d0e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 1f36ca516995c625b55f771a6a49e62f2d9d6efa
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33513122"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714823"
 ---
-# <a name="guide-to-the-windows-workflow-documentation"></a><span data-ttu-id="7fcbb-102">Windows Workflow 文件指南</span><span class="sxs-lookup"><span data-stu-id="7fcbb-102">Guide to the Windows Workflow Documentation</span></span>
-<span data-ttu-id="7fcbb-103">本主題包含如何使用 Windows Workflow Foundation 文件的資訊。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-103">This topic contains information about how to use the Windows Workflow Foundation documentation.</span></span> <span data-ttu-id="7fcbb-104">連結文件是建議的起點，並且根據特定興趣和專業等級分群組。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  
+# <a name="guide-to-the-windows-workflow-documentation"></a><span data-ttu-id="fd047-102">Windows Workflow 文件指南</span><span class="sxs-lookup"><span data-stu-id="fd047-102">Guide to the Windows Workflow Documentation</span></span>
+<span data-ttu-id="fd047-103">本主題包含如何使用 Windows Workflow Foundation 文件的資訊。</span><span class="sxs-lookup"><span data-stu-id="fd047-103">This topic contains information about how to use the Windows Workflow Foundation documentation.</span></span> <span data-ttu-id="fd047-104">連結文件是建議的起點，並且根據特定興趣和專業等級分群組。</span><span class="sxs-lookup"><span data-stu-id="fd047-104">The linked documents are recommended starting points grouped according to specific interests and levels of expertise.</span></span>  
   
-## <a name="new-to-windows-workflow-foundation-programming"></a><span data-ttu-id="7fcbb-105">Windows Workflow Foundation 程式設計新手指南</span><span class="sxs-lookup"><span data-stu-id="7fcbb-105">New to Windows Workflow Foundation Programming</span></span>  
+## <a name="new-to-windows-workflow-foundation-programming"></a><span data-ttu-id="fd047-105">Windows Workflow Foundation 程式設計新手指南</span><span class="sxs-lookup"><span data-stu-id="fd047-105">New to Windows Workflow Foundation Programming</span></span>  
   
--   <span data-ttu-id="7fcbb-106">如果您是使用 Windows Workflow Foundation 程式設計的新手，而且您只想要查看一些工作，請參閱底下列出的主題的範例應用程式[Windows Workflow 範例](../../../docs/framework/windows-workflow-foundation/samples/index.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-106">If you are new to programming with Windows Workflow Foundation and you just want to see some sample applications that work, see the topics listed under [Windows Workflow Samples](../../../docs/framework/windows-workflow-foundation/samples/index.md).</span></span>  
+-   <span data-ttu-id="fd047-106">如果您是使用 Windows Workflow Foundation 程式設計的新手，而且只想要查看一些範例應用程式運作，請參閱底下所列的主題[Windows Workflow 範例](./samples/index.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-106">If you are new to programming with Windows Workflow Foundation and you just want to see some sample applications that work, see the topics listed under [Windows Workflow Samples](./samples/index.md).</span></span>  
   
--   <span data-ttu-id="7fcbb-107">如需各種 Windows Workflow Foundation 的流程控制模型的討論，請參閱[設計工作流程](../../../docs/framework/windows-workflow-foundation/designing-workflows.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-107">For a discussion of the various Windows Workflow Foundation flow-control models, see [Designing Workflows](../../../docs/framework/windows-workflow-foundation/designing-workflows.md).</span></span>  
+-   <span data-ttu-id="fd047-107">如需各種 Windows Workflow Foundation 流程控制模型的討論，請參閱 <<c0> [ 設計工作流程](designing-workflows.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-107">For a discussion of the various Windows Workflow Foundation flow-control models, see [Designing Workflows](designing-workflows.md).</span></span>  
   
--   <span data-ttu-id="7fcbb-108">逐步解說建立的 Windows Workflow Foundation 應用程式的基本步驟的教學課程，請參閱[入門教學課程](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-108">For a tutorial that walks through the basic steps of creating a Windows Workflow Foundation application, see [Getting Started Tutorial](../../../docs/framework/windows-workflow-foundation/getting-started-tutorial.md).</span></span>  
+-   <span data-ttu-id="fd047-108">逐步解說建立的 Windows Workflow Foundation 應用程式的基本步驟的教學課程，請參閱[入門教學課程](getting-started-tutorial.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-108">For a tutorial that walks through the basic steps of creating a Windows Workflow Foundation application, see [Getting Started Tutorial](getting-started-tutorial.md).</span></span>  
   
--   <span data-ttu-id="7fcbb-109">如果您想要在 Windows Workflow Foundation 的基本概念，請參閱[Windows Workflow Conceptual 概觀](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md)> 一節。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-109">If you are interested in the concepts behind Windows Workflow Foundation, see the topics in the [Windows Workflow Conceptual Overview](../../../docs/framework/windows-workflow-foundation/conceptual-overview.md) section.</span></span>  
+-   <span data-ttu-id="fd047-109">如果您想要在 Windows Workflow Foundation 的基本概念，請參閱中的主題[Windows Workflow Conceptual 概觀](conceptual-overview.md)一節。</span><span class="sxs-lookup"><span data-stu-id="fd047-109">If you are interested in the concepts behind Windows Workflow Foundation, see the topics in the [Windows Workflow Conceptual Overview](conceptual-overview.md) section.</span></span>  
   
--   <span data-ttu-id="7fcbb-110">如需使用 Windows Workflow Foundation 文件中的條款，請參閱[.NET Framework 4.5 的 Windows Workflow Foundation 字彙](../../../docs/framework/windows-workflow-foundation/glossary.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-110">For a list of terms used in the Windows Workflow Foundation documentation, see [Windows Workflow Foundation Glossary for .NET Framework 4.5](../../../docs/framework/windows-workflow-foundation/glossary.md).</span></span>  
+-   <span data-ttu-id="fd047-110">如需 Windows Workflow Foundation 文件中所用詞彙的清單，請參閱 <<c0> [ 的.NET Framework 4.5 的 Windows Workflow Foundation 字彙](glossary.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-110">For a list of terms used in the Windows Workflow Foundation documentation, see [Windows Workflow Foundation Glossary for .NET Framework 4.5](glossary.md).</span></span>  
   
--   <span data-ttu-id="7fcbb-111">如需新的概念和功能的清單，請參閱[What's New in Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-111">For a list of new concepts and functionalities, see [What's New in Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/whats-new.md).</span></span>  
+-   <span data-ttu-id="fd047-111">如需概念和功能的清單，請參閱 < [What's New in Windows Workflow Foundation](whats-new.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-111">For a list of new concepts and functionalities, see [What's New in Windows Workflow Foundation](whats-new.md).</span></span>  
   
-## <a name="programming-in-depth"></a><span data-ttu-id="7fcbb-112">程式設計深入說明</span><span class="sxs-lookup"><span data-stu-id="7fcbb-112">Programming In-Depth</span></span>  
+## <a name="programming-in-depth"></a><span data-ttu-id="fd047-112">程式設計深入說明</span><span class="sxs-lookup"><span data-stu-id="fd047-112">Programming In-Depth</span></span>  
   
--   <span data-ttu-id="7fcbb-113">Windows Workflow Foundation 物件模型的深入討論，請參閱[Windows 工作流程架構](../../../docs/framework/windows-workflow-foundation/architecture.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-113">For an in-depth discussion of the Windows Workflow Foundation object model, see [Windows Workflow Architecture](../../../docs/framework/windows-workflow-foundation/architecture.md).</span></span>  
+-   <span data-ttu-id="fd047-113">Windows Workflow Foundation 物件模型的深入討論，請參閱 < [Windows 工作流程架構](architecture.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-113">For an in-depth discussion of the Windows Workflow Foundation object model, see [Windows Workflow Architecture](architecture.md).</span></span>  
   
--   <span data-ttu-id="7fcbb-114">如果您已經準備好開始開發應用程式，請參閱[Windows Workflow Foundation 程式設計](../../../docs/framework/windows-workflow-foundation/programming.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-114">If you are ready to start developing an application, see [Windows Workflow Foundation Programming](../../../docs/framework/windows-workflow-foundation/programming.md).</span></span>  
+-   <span data-ttu-id="fd047-114">如果您已準備好開始開發應用程式，請參閱[Windows Workflow Foundation 程式設計](programming.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-114">If you are ready to start developing an application, see [Windows Workflow Foundation Programming](programming.md).</span></span>  
   
--   <span data-ttu-id="7fcbb-115">如果您想要擴充或自訂以符合您的需求，請參閱 < Windows Workflow Foundation[擴充 Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md)。</span><span class="sxs-lookup"><span data-stu-id="7fcbb-115">If you would like to extend or customize Windows Workflow Foundation to suit your requirements, see [Extending Windows Workflow Foundation](../../../docs/framework/windows-workflow-foundation/extend.md).</span></span>
+-   <span data-ttu-id="fd047-115">如果您想要擴充或自訂符合您的需求，請參閱 Windows Workflow Foundation[擴充 Windows Workflow Foundation](extend.md)。</span><span class="sxs-lookup"><span data-stu-id="fd047-115">If you would like to extend or customize Windows Workflow Foundation to suit your requirements, see [Extending Windows Workflow Foundation](extend.md).</span></span>

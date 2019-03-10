@@ -19,31 +19,31 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 8a7bd12fb1bdab6ea429a889521b7dd6c649a5e7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512589"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722629"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="9beb9-102">HOW TO：繪製外框的形狀</span><span class="sxs-lookup"><span data-stu-id="9beb9-102">How to: Draw an Outlined Shape</span></span>
-<span data-ttu-id="9beb9-103">此範例會在表單上繪製外框的橢圓形和矩形。</span><span class="sxs-lookup"><span data-stu-id="9beb9-103">This example draws outlined ellipses and rectangles on a form.</span></span>  
+# <a name="how-to-draw-an-outlined-shape"></a><span data-ttu-id="2b5c8-102">HOW TO：繪製外框的形狀</span><span class="sxs-lookup"><span data-stu-id="2b5c8-102">How to: Draw an Outlined Shape</span></span>
+<span data-ttu-id="2b5c8-103">此範例會在表單上繪製外框的橢圓形和矩形。</span><span class="sxs-lookup"><span data-stu-id="2b5c8-103">This example draws outlined ellipses and rectangles on a form.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9beb9-104">範例</span><span class="sxs-lookup"><span data-stu-id="9beb9-104">Example</span></span>  
- [!code-cpp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
- [!code-csharp[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
- [!code-vb[System.Drawing.ConceptualHowTos#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
+## <a name="example"></a><span data-ttu-id="2b5c8-104">範例</span><span class="sxs-lookup"><span data-stu-id="2b5c8-104">Example</span></span>  
+ [!code-cpp[System.Drawing.ConceptualHowTos#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/cpp/form1.cpp#6)]
+ [!code-csharp[System.Drawing.ConceptualHowTos#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/CS/form1.cs#6)]
+ [!code-vb[System.Drawing.ConceptualHowTos#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConceptualHowTos/VB/form1.vb#6)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="9beb9-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="9beb9-105">Compiling the Code</span></span>  
- <span data-ttu-id="9beb9-106">您不能呼叫這個方法<xref:System.Windows.Forms.Form.Load>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="9beb9-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="9beb9-107">如果調整大小或遮蔽另一種形式的表單時，將不會重新繪製的繪製的內容。</span><span class="sxs-lookup"><span data-stu-id="9beb9-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="9beb9-108">若要讓您自動重新繪製的內容，您應該覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="9beb9-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="2b5c8-105">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="2b5c8-105">Compiling the Code</span></span>  
+ <span data-ttu-id="2b5c8-106">您不能呼叫這個方法<xref:System.Windows.Forms.Form.Load>事件處理常式。</span><span class="sxs-lookup"><span data-stu-id="2b5c8-106">You cannot call this method in the <xref:System.Windows.Forms.Form.Load> event handler.</span></span> <span data-ttu-id="2b5c8-107">如果調整大小或遮蔽另一種形式的表單時，將不會重新繪製的繪製的內容。</span><span class="sxs-lookup"><span data-stu-id="2b5c8-107">The drawn content will not be redrawn if the form is resized or obscured by another form.</span></span> <span data-ttu-id="2b5c8-108">若要讓您自動重新繪製的內容，您應該覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法。</span><span class="sxs-lookup"><span data-stu-id="2b5c8-108">To make your content automatically repaint, you should override the <xref:System.Windows.Forms.Control.OnPaint%2A> method.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="9beb9-109">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="9beb9-109">Robust Programming</span></span>  
- <span data-ttu-id="9beb9-110">您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>和<xref:System.Drawing.Graphics>物件。</span><span class="sxs-lookup"><span data-stu-id="9beb9-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> and <xref:System.Drawing.Graphics> objects.</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="2b5c8-109">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="2b5c8-109">Robust Programming</span></span>  
+ <span data-ttu-id="2b5c8-110">您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>和<xref:System.Drawing.Graphics>物件。</span><span class="sxs-lookup"><span data-stu-id="2b5c8-110">You should always call <xref:System.IDisposable.Dispose%2A> on any objects that consume system resources, such as <xref:System.Drawing.Pen> and <xref:System.Drawing.Graphics> objects.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9beb9-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9beb9-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2b5c8-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2b5c8-111">See also</span></span>
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
-- [<span data-ttu-id="9beb9-112">圖形程式設計入門</span><span class="sxs-lookup"><span data-stu-id="9beb9-112">Getting Started with Graphics Programming</span></span>](../../../../docs/framework/winforms/advanced/getting-started-with-graphics-programming.md)
-- [<span data-ttu-id="9beb9-113">使用畫筆繪製線條和形狀</span><span class="sxs-lookup"><span data-stu-id="9beb9-113">Using a Pen to Draw Lines and Shapes</span></span>](../../../../docs/framework/winforms/advanced/using-a-pen-to-draw-lines-and-shapes.md)
-- [<span data-ttu-id="9beb9-114">Windows Forms 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="9beb9-114">Graphics and Drawing in Windows Forms</span></span>](../../../../docs/framework/winforms/advanced/graphics-and-drawing-in-windows-forms.md)
+- [<span data-ttu-id="2b5c8-112">圖形程式設計入門</span><span class="sxs-lookup"><span data-stu-id="2b5c8-112">Getting Started with Graphics Programming</span></span>](getting-started-with-graphics-programming.md)
+- [<span data-ttu-id="2b5c8-113">使用畫筆繪製線條和形狀</span><span class="sxs-lookup"><span data-stu-id="2b5c8-113">Using a Pen to Draw Lines and Shapes</span></span>](using-a-pen-to-draw-lines-and-shapes.md)
+- [<span data-ttu-id="2b5c8-114">Windows Forms 中的圖形和繪圖</span><span class="sxs-lookup"><span data-stu-id="2b5c8-114">Graphics and Drawing in Windows Forms</span></span>](graphics-and-drawing-in-windows-forms.md)
