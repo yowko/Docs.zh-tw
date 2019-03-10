@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: ad91f7591e2fa07605fe4f7ac026b7c969ab7ef0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678927"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712769"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>HOW TO：變更 Managed 的 HTML 文件物件模型中的項目樣式
 
@@ -63,20 +63,19 @@ ms.locfileid: "57678927"
 6. 將下列程式碼新增至您的專案程式碼檔案。
 
     > [!IMPORTANT]
-    > 請確認`webBrowser1_DocumentCompleted`事件處理常式設定為接聽程式<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件。 在 Visual Studio 中，按兩下<xref:System.Windows.Forms.WebBrowser>控制; 請在文字編輯器中，設定接聽程式以程式設計的方式。
-
-    [!code-csharp[ManagedDOMStyles#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-    [!code-vb[ManagedDOMStyles#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
-
-7. 執行專案。 執行您的資料指標在第一個`DIV`觀察程式碼的效果。
-
-## <a name="example"></a>範例
-
-下列程式碼範例顯示的完整程式碼`StyleGenerator`類別，它會剖析現有的樣式值，支援加入、 變更和移除設定的樣式，並傳回新的樣式值，變更要求。
-
-[!code-csharp[ManagedDOMStyles#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
-[!code-vb[ManagedDOMStyles#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
-
+    >  請確認`webBrowser1_DocumentCompleted`事件處理常式設定為接聽程式<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>事件。 在 Visual Studio 中，按兩下<xref:System.Windows.Forms.WebBrowser>控制; 請在文字編輯器中，設定接聽程式以程式設計的方式。  
+  
+     [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
+  
+7.  執行專案。 執行您的資料指標在第一個`DIV`觀察程式碼的效果。  
+  
+## <a name="example"></a>範例  
+ 下列程式碼範例顯示的完整程式碼`StyleGenerator`類別，它會剖析現有的樣式值，支援加入、 變更和移除設定的樣式，並傳回新的樣式值，變更要求。  
+  
+ [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+ [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
+  
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.HtmlElement>

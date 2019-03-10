@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: ef81d9272acdddfc7d547de6f44725481e55dc3e
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303721"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712392"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>逐步解說：設定 WPF 內容的樣式
 本逐步解說示範如何將樣式套用至 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項。
@@ -47,7 +47,7 @@ ms.locfileid: "56303721"
   
 #### <a name="to-create-wpf-control-types"></a>建立 WPF 控制項類型  
   
-1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](../../../../docs/framework/winforms/advanced/walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
 2.  在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動設計介面上的項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "56303721"
   
 4.  在 [XAML] 檢視中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。  
   
-     此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../../../docs/framework/wpf/controls/styling-and-templating.md)。  
+     此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。  
   
 ```xaml  
 <UserControl.Resources>  
@@ -153,8 +153,8 @@ ms.locfileid: "56303721"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [移轉和互通性](../../../../docs/framework/wpf/advanced/migration-and-interoperability.md)
-- [使用 WPF 控制項](../../../../docs/framework/winforms/advanced/using-wpf-controls.md)
+- [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)
+- [使用 WPF 控制項](using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [XAML 概觀 (WPF)](../../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [樣式設定和範本化](../../../../docs/framework/wpf/controls/styling-and-templating.md)
+- [XAML 概觀 (WPF)](../../wpf/advanced/xaml-overview-wpf.md)
+- [樣式設定和範本化](../../wpf/controls/styling-and-templating.md)

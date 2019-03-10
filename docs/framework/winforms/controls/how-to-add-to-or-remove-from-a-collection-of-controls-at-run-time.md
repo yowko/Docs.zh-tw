@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 88a743cc6d0a1e90d2912c9ec610fae326ff5770
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744904"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720887"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>HOW TO：若要新增或移除集合中的控制項在執行階段
 在應用程式開發的一般工作會將控制項加入和移除您的表單上的任何容器控制項的控制項 (例如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控制項或甚至是表單本身)。 在設計階段，可以將控制項直接拖曳至面板或群組方塊。 在執行階段，這些控制項會維護 `Controls` 集合，以便持續追蹤有哪些控制項置於其上。  
@@ -102,4 +102,4 @@ ms.locfileid: "54744904"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.Panel>
-- [Panel 控制項](../../../../docs/framework/winforms/controls/panel-control-windows-forms.md)
+- [Panel 控制項](panel-control-windows-forms.md)

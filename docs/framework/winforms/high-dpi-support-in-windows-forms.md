@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b5ad28fbfd668819b0bcab30c33892679b4bd8c
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674915"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711783"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms 中的高 DPI 支援
 
@@ -49,7 +49,7 @@ ms.locfileid: "55674915"
 
 - 啟用個別監視器 DPI 感知*app.config*檔案。
 
-  引進新的 Windows Forms [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../../../docs/framework/configure-apps/file-schema/winforms/index.md)以支援新功能和自訂項目加入從.NET Framework 4.7 開始的項目。 若要充分利用支援高 DPI 的新功能，將下列內容新增至您的應用程式組態檔。   
+  引進新的 Windows Forms [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)以支援新功能和自訂項目加入從.NET Framework 4.7 開始的項目。 若要充分利用支援高 DPI 的新功能，將下列內容新增至您的應用程式組態檔。   
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
@@ -84,7 +84,7 @@ ms.locfileid: "55674915"
 </System.Windows.Forms.ApplicationConfigurationSection>    
 ```
 
-如需個別的索引鍵和其值的清單，請參閱 < [Windows Form 加入組態項目](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
+如需個別的索引鍵和其值的清單，請參閱 < [Windows Form 加入組態項目](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。
 
 ## <a name="new-dpi-change-events"></a>新的 DPI 變更事件
 
@@ -132,5 +132,5 @@ Console.WriteLine(AppDomain.CurrentDomain.SetupInformation.TargetFrameworkName);
 
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 加入組態項目](../../../docs/framework/configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
-- [調整 Windows Forms 的大小和比例](../../../docs/framework/winforms/adjusting-the-size-and-scale-of-windows-forms.md)
+- [Windows Form 加入組態項目](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)
+- [調整 Windows Forms 的大小和比例](adjusting-the-size-and-scale-of-windows-forms.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 - MDI forms [Windows Forms], creating
 ms.assetid: d198ef8e-f7c4-4b3f-a7f5-ce858cb90cec
-ms.openlocfilehash: 0877a88e018766287f47c9ce851973faf4bfa822
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 9b3297acabbb05c25ae195acbb6fb9274ad02651
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219382"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725385"
 ---
 # <a name="how-to-create-an-mdi-form-with-toolstrippanel-controls"></a>HOW TO：使用 ToolStripPanel 控制項建立 MDI 表單
 您可以建立在四邊都讓 <xref:System.Windows.Forms.ToolStrip> 控制項框架處理的多重文件介面 (MDI) 表單。  
@@ -27,10 +27,10 @@ ms.locfileid: "56219382"
   
  在範例中，<xref:System.Windows.Forms.ToolStripPanel.Join%2A> 方法會附加至 <xref:System.Windows.Forms.ToolStrip> 控制項以對應 <xref:System.Windows.Forms.ToolStripPanel> 控制項。  
   
- [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
- [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
-[!code-csharp[System.Windows.Forms.ToolStrip.Misc#10](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#10)]
-[!code-vb[System.Windows.Forms.ToolStrip.Misc#10](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#10)]  
+ [!code-csharp[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#1)]
+ [!code-vb[System.Windows.Forms.ToolStrip.Misc#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#1)]  
+[!code-csharp[System.Windows.Forms.ToolStrip.Misc#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/CS/Program.cs#10)]
+[!code-vb[System.Windows.Forms.ToolStrip.Misc#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.Misc/VB/Program.vb#10)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
@@ -45,4 +45,4 @@ ms.locfileid: "56219382"
 - <xref:System.Windows.Forms.ToolStripPanel.Join%2A>
 - <xref:System.Windows.Forms.ToolStripItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
+- [ToolStrip 控制項](toolstrip-control-windows-forms.md)

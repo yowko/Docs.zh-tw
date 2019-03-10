@@ -9,15 +9,15 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 29a268f645810d84d9f6fb722e4728842b04ee14
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443168"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720770"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>HOW TO：將控制項新增至 Windows Forms
-大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。 A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。 如需控制項的詳細資訊，請參閱[Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)。  
+大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。 A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。 如需控制項的詳細資訊，請參閱[Windows Forms 控制項](index.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -90,8 +90,8 @@ ms.locfileid: "56443168"
     >  您可能會公開本機電腦透過網路的安全性風險，藉由參考惡意`UserControl`。 這只會在惡意人士建立破壞性的自訂控制項，且您不小心將它新增至您的專案的情況下需要考量。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
-- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [如何：調整 Windows Forms 上的控制項的大小](../../../../docs/framework/winforms/controls/how-to-resize-controls-on-windows-forms.md)
-- [如何：設定所顯示之文字的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [如何：調整 Windows Forms 上的控制項的大小](how-to-resize-controls-on-windows-forms.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

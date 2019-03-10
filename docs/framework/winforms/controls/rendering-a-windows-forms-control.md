@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9d2cb5041fbceb2e5c2d35d37a2001deffab40d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c32d6bff7171bb43d1f288500c9b24e8b288340b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659367"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712158"
 ---
 # <a name="rendering-a-windows-forms-control"></a>呈現 Windows Form 控制項
 轉譯是指使用者的畫面上建立的視覺表示法的程序。 Windows Form 使用[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]（的新 Windows 圖形程式庫） 進行轉譯。 Managed 的類別，可提供存取權[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]位於<xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間。  
@@ -31,7 +31,7 @@ ms.locfileid: "54659367"
 -   釋放圖形資源的程序。  
   
 ## <a name="drawing-functionality-provided-by-control"></a>繪製控制項所提供的功能  
- 基底類別<xref:System.Windows.Forms.Control>提供的繪圖功能，透過其<xref:System.Windows.Forms.Control.Paint>事件。 控制項會引發<xref:System.Windows.Forms.Control.Paint>每當需要更新其顯示的事件。 如需.NET Framework 中的事件的詳細資訊，請參閱[處理和引發事件](../../../../docs/standard/events/index.md)。  
+ 基底類別<xref:System.Windows.Forms.Control>提供的繪圖功能，透過其<xref:System.Windows.Forms.Control.Paint>事件。 控制項會引發<xref:System.Windows.Forms.Control.Paint>每當需要更新其顯示的事件。 如需.NET Framework 中的事件的詳細資訊，請參閱[處理和引發事件](../../../standard/events/index.md)。  
   
  事件資料類別<xref:System.Windows.Forms.Control.Paint>事件， <xref:System.Windows.Forms.PaintEventArgs>，保存的控制項繪製所需的資料-圖形物件，表示要在其中繪製區域的矩形物件的控制代碼。 這些物件會顯示在粗體顯示在下列程式碼片段。  
   
@@ -73,7 +73,7 @@ Protected Overridable Sub OnPaint(pe As PaintEventArgs)
 protected virtual void OnPaint(PaintEventArgs pe);  
 ```  
   
- <xref:System.Windows.Forms.Control.OnPaint%2A>方法的基底<xref:System.Windows.Forms.Control>類別不會實作任何繪製功能，但是只會叫用事件委派，會向<xref:System.Windows.Forms.Control.Paint>事件。 當您覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您通常應該叫用<xref:System.Windows.Forms.Control.OnPaint%2A>方法的基底類別，好讓註冊的委派能接收<xref:System.Windows.Forms.Control.Paint>事件。 不過，繪製其整個介面的控制項不應該叫用基底類別的<xref:System.Windows.Forms.Control.OnPaint%2A>，因為這會引入閃爍。 如需範例，會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>事件，請參閱[How to:建立顯示進度的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ <xref:System.Windows.Forms.Control.OnPaint%2A>方法的基底<xref:System.Windows.Forms.Control>類別不會實作任何繪製功能，但是只會叫用事件委派，會向<xref:System.Windows.Forms.Control.Paint>事件。 當您覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您通常應該叫用<xref:System.Windows.Forms.Control.OnPaint%2A>方法的基底類別，好讓註冊的委派能接收<xref:System.Windows.Forms.Control.Paint>事件。 不過，繪製其整個介面的控制項不應該叫用基底類別的<xref:System.Windows.Forms.Control.OnPaint%2A>，因為這會引入閃爍。 如需範例，會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>事件，請參閱[How to:建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 > [!NOTE]
 >  不會叫用<xref:System.Windows.Forms.Control.OnPaint%2A>直接從您的控制項; 相反地，叫用<xref:System.Windows.Forms.Control.Invalidate%2A>方法 (繼承自<xref:System.Windows.Forms.Control>) 或透過其他方法會叫用<xref:System.Windows.Forms.Control.Invalidate%2A>。 <xref:System.Windows.Forms.Control.Invalidate%2A>方法會接著叫用<xref:System.Windows.Forms.Control.OnPaint%2A>。 <xref:System.Windows.Forms.Control.Invalidate%2A>多載方法，並根據引數提供給<xref:System.Windows.Forms.Control.Invalidate%2A> `e`，部分或所有其螢幕區域，會重新繪製控制項。  
@@ -93,29 +93,29 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  雖然<xref:System.Windows.Forms.Control.OnPaintBackground%2A>具有類似事件的命名法，而且會採用相同的引數當做`OnPaint`方法，<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不是真正事件的方法。 沒有任何`PaintBackground`事件和<xref:System.Windows.Forms.Control.OnPaintBackground%2A>不叫用事件委派。 當覆寫<xref:System.Windows.Forms.Control.OnPaintBackground%2A>方法，衍生的類別不需要叫用<xref:System.Windows.Forms.Control.OnPaintBackground%2A>其基底類別的方法。  
   
 ## <a name="gdi-basics"></a>GDI + 基本概念  
- <xref:System.Drawing.Graphics>類別提供方法來繪製各種圖案，例如圓形、 三角形、 弧線和省略符號，以及顯示文字的方法。 <xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間包含類別來封裝圖形項目，例如 （圓形、 矩形、 弧線和其他項目） 的圖形、 色彩、 字型、 筆刷等等。 如需詳細資訊[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]，請參閱 <<c2> [ 使用 Managed 圖形類別](../../../../docs/framework/winforms/advanced/using-managed-graphics-classes.md)。 基本知識[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]也有說明[How to:建立顯示進度的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ <xref:System.Drawing.Graphics>類別提供方法來繪製各種圖案，例如圓形、 三角形、 弧線和省略符號，以及顯示文字的方法。 <xref:System.Drawing?displayProperty=nameWithType>命名空間和其子命名空間包含類別來封裝圖形項目，例如 （圓形、 矩形、 弧線和其他項目） 的圖形、 色彩、 字型、 筆刷等等。 如需詳細資訊[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]，請參閱 <<c2> [ 使用 Managed 圖形類別](../advanced/using-managed-graphics-classes.md)。 基本知識[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]也有說明[How to:建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
 ## <a name="geometry-of-the-drawing-region"></a>幾何的繪圖區域  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A>控制項的屬性會指定在使用者的畫面上，控制項可用之矩形區域雖然<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>指定實際繪製的區域。 (請記得在中完成繪製<xref:System.Windows.Forms.Control.Paint>採用的事件方法<xref:System.Windows.Forms.PaintEventArgs>作為其引數的執行個體)。 控制項可能需要繪製只有部分可用的區域中，在此情況下當一小部分的控制項的顯示變更。 控制項開發人員必須在這些情況下，計算實際的矩形繪製，並傳遞至<xref:System.Windows.Forms.Control.Invalidate%2A>。 多載的版本<xref:System.Windows.Forms.Control.Invalidate%2A>採用<xref:System.Drawing.Rectangle>或是<xref:System.Drawing.Region>做為引數使用該引數來產生<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>。  
   
- 下列程式碼片段示範如何`FlashTrackBar`自訂控制項計算要在其中繪製的矩形區域。 `client`變數代表<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性。 如需完整範例，請參閱[How to:建立顯示進度的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ 下列程式碼片段示範如何`FlashTrackBar`自訂控制項計算要在其中繪製的矩形區域。 `client`變數代表<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>屬性。 如需完整範例，請參閱[How to:建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#6](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#6)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#6](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#6)]  
   
 ## <a name="freeing-graphics-resources"></a>釋放圖形資源  
  圖形物件很耗費資源，因為它們使用系統資源。 這類物件包含的執行個體<xref:System.Drawing.Graphics?displayProperty=nameWithType>類別的執行個體及<xref:System.Drawing.Brush?displayProperty=nameWithType>， <xref:System.Drawing.Pen?displayProperty=nameWithType>，和其他圖形類別。 請務必只有在您需要它，並釋放它時，建立圖形資源因為您使用完畢之後推出。 如果您建立的類型可實作<xref:System.IDisposable>介面，請呼叫其<xref:System.IDisposable.Dispose%2A>方法，當您完成時使用它以釋放資源。  
   
- 下列程式碼片段示範如何`FlashTrackBar`建立自訂控制項，並釋放<xref:System.Drawing.Brush>資源。 如需完整的原始程式碼，請參閱[How to:建立顯示進度的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)。  
+ 下列程式碼片段示範如何`FlashTrackBar`建立自訂控制項，並釋放<xref:System.Drawing.Brush>資源。 如需完整的原始程式碼，請參閱[How to:建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)。  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#5)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#5)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#4)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#4)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#4)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#4)]  
   
- [!code-csharp[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#3)]
- [!code-vb[System.Windows.Forms.FlashTrackBar#3](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
+ [!code-csharp[System.Windows.Forms.FlashTrackBar#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/CS/FlashTrackBar.cs#3)]
+ [!code-vb[System.Windows.Forms.FlashTrackBar#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立顯示進度的 Windows Form 控制項](../../../../docs/framework/winforms/controls/how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [如何：建立顯示進度的 Windows Form 控制項](how-to-create-a-windows-forms-control-that-shows-progress.md)

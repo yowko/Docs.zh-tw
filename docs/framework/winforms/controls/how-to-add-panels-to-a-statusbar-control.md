@@ -10,18 +10,18 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: d94f43d250e9b6bacca59e1e5e310ab6866ba4cc
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441732"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713278"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>HOW TO：將面板新增至 StatusBar 控制項
 > [!IMPORTANT]
 >  <xref:System.Windows.Forms.StatusStrip>及<xref:System.Windows.Forms.ToolStripStatusLabel>控制項會取代及新增功能<xref:System.Windows.Forms.StatusBar>並<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項保留回溯相容性和未來使用，如果您選擇。  
   
- 可程式化的區域內[StatusBar 控制項](../../../../docs/framework/winforms/controls/statusbar-control-windows-forms.md)控制項的執行個體包含<xref:System.Windows.Forms.StatusBarPanel>類別。 透過新增這些<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>類別。  
+ 可程式化的區域內[StatusBar 控制項](statusbar-control-windows-forms.md)控制項的執行個體包含<xref:System.Windows.Forms.StatusBarPanel>類別。 透過新增這些<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>類別。  
   
 ### <a name="to-add-panels-to-a-status-bar"></a>若要將面板新增至狀態列  
   
@@ -124,7 +124,7 @@ ms.locfileid: "56441732"
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
 - [集合編輯器對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [如何：設定狀態列面板的大小](../../../../docs/framework/winforms/controls/how-to-set-the-size-of-status-bar-panels.md)
-- [逐步解說：在執行階段更新狀態列資訊](../../../../docs/framework/winforms/controls/walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](../../../../docs/framework/winforms/controls/determine-which-panel-wf-statusbar-control-was-clicked.md)
-- [StatusBar 控制項概觀](../../../../docs/framework/winforms/controls/statusbar-control-overview-windows-forms.md)
+- [如何：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)
+- [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
+- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], adding shortcut menus
 - tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
-ms.openlocfilehash: 7c9e2a2fc51628116a7762e343f36f9f7e93fe67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 537593399db7deb775929cd742a749ce47890db6
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685200"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57703607"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>HOW TO：將捷徑功能表附加至 TreeView 節點
 Windows Form<xref:System.Windows.Forms.TreeView>控制項顯示的節點，類似於檔案和資料夾顯示在 Windows 檔案總管的左窗格中的階層。 藉由設定<xref:System.Windows.Forms.Control.ContextMenuStrip%2A>屬性，您可以向使用者提供即時線上作業，當他們以滑鼠右鍵按一下<xref:System.Windows.Forms.TreeView>控制項。 產生關聯<xref:System.Windows.Forms.ContextMenuStrip>元件的個別<xref:System.Windows.Forms.TreeNode>項目，您可以加入自訂的層級的快顯功能表功能，以您<xref:System.Windows.Forms.TreeView>控制項。  
@@ -32,10 +32,10 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項顯示的節點，類�
   
  下列程式碼範例會建立基本<xref:System.Windows.Forms.TreeView>並<xref:System.Windows.Forms.ContextMenuStrip>根目錄相關聯<xref:System.Windows.Forms.TreeNode>的<xref:System.Windows.Forms.TreeView>。 您必須自訂功能表選項，以符合<xref:System.Windows.Forms.TreeView>您正在開發。 此外，您會想要撰寫程式碼來處理<xref:System.Windows.Forms.ToolStripItem.Click>事件的這些功能表項目。  
   
- [!code-cpp[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/cpp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/cpp/Form1.cpp#1)]
- [!code-csharp[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.TreeNodeContextMenuStrip#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/VB/Form1.vb#1)]  
+ [!code-cpp[System.Windows.Forms.TreeNodeContextMenuStrip#1](~/samples/snippets/cpp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/cpp/Form1.cpp#1)]
+ [!code-csharp[System.Windows.Forms.TreeNodeContextMenuStrip#1](~/samples/snippets/csharp/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.TreeNodeContextMenuStrip#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/system.windows.forms.TreeNodeContextMenuStrip/VB/Form1.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ContextMenuStrip>
-- [TreeView 控制項](../../../../docs/framework/winforms/controls/treeview-control-windows-forms.md)
+- [TreeView 控制項](treeview-control-windows-forms.md)

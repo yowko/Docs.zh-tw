@@ -2,21 +2,21 @@
 title: 工作 3:建立工具箱與 PropertyGrid 窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: 8e332c2caa43e1c9703272d7f2be16b545c44fd3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45819577c39185a5d95da81521cd541087a64efc
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558419"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721214"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>工作 3:建立工具箱與 PropertyGrid 窗格
 在這個工作中，您將建立**工具箱**並**PropertyGrid**窗格並將其新增至重新裝載[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。  
   
- 如需參考之後完成三個, 進行的 MainWindow.xaml.cs 檔案中的程式碼中的工作[重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)系列的主題提供在本主題結尾處。  
+ 如需參考之後完成三個, 進行的 MainWindow.xaml.cs 檔案中的程式碼中的工作[重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)系列的主題提供在本主題結尾處。  
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>若要建立工具箱，並將它加入至方格  
   
-1.  開啟您依照所述的程序取得的 HostingApplication 專案[工作 2:裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)。  
+1.  開啟您依照所述的程序取得的 HostingApplication 專案[工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)。  
   
 2.  在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
   
@@ -213,6 +213,6 @@ namespace HostingApplication
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [工作 1:建立新的 Windows Presentation Foundation 應用程式](../../../docs/framework/windows-workflow-foundation/task-1-create-a-new-wpf-app.md)
-- [工作 2:裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)
+- [工作 1:建立新的 Windows Presentation Foundation 應用程式](task-1-create-a-new-wpf-app.md)
+- [工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)

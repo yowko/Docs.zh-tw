@@ -12,12 +12,12 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: b6fe0e615cc5bbd0f549505ed9e6add8d7a51433
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93be2378e812ce909adaf9b640b37f8056fc09c3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523983"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710806"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>HOW TO：使用 Windows Forms TextBox 控制項建立密碼文字方塊
 密碼方塊是 Windows Form 的文字方塊中，會顯示預留位置字元，而使用者輸入字串。  
@@ -73,10 +73,10 @@ ms.locfileid: "54523983"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：將引號放入字串](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [如何：在 Windows Forms TextBox 控制項中選取文字](../../../../docs/framework/winforms/controls/how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [如何：在 Windows Forms TextBox 控制項中檢視多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：將引號放入字串](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中選取文字](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [如何：在 Windows Forms TextBox 控制項中檢視多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox 控制項](textbox-control-windows-forms.md)

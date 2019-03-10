@@ -10,12 +10,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: df2aec3ff108c0106f29e453a93b06c60e67c6af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649410"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722280"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>HOW TO：在 Windows Forms TextBox 控制項中選取文字
 您可以在 Windows Forms 中，以程式設計方式選取文字<xref:System.Windows.Forms.TextBox>控制項。 比方說，如果您建立函式，以搜尋特定字串的文字時，您可以選取要以視覺化方式警示找到的字串位置的讀取器的文字。  
@@ -32,7 +32,7 @@ ms.locfileid: "54649410"
   
 3.  （選擇性）存取選取的文字，透過<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>屬性。  
   
-     選取以下的程式碼的文字內容方塊時的控制項<xref:System.Windows.Forms.Control.Enter>就會發生事件。 這個範例會檢查文字方塊是否為值<xref:System.Windows.Forms.TextBox.Text%2A>不是屬性`null`或空字串。 當文字方塊取得焦點時，會選取目前的文字在文字方塊中。 `TextBox1_Enter`事件處理常式必須繫結至控制項; 如需詳細資訊，請參閱[How to:在執行階段建立 Windows Forms 事件處理常式](../../../../docs/framework/winforms/how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
+     選取以下的程式碼的文字內容方塊時的控制項<xref:System.Windows.Forms.Control.Enter>就會發生事件。 這個範例會檢查文字方塊是否為值<xref:System.Windows.Forms.TextBox.Text%2A>不是屬性`null`或空字串。 當文字方塊取得焦點時，會選取目前的文字在文字方塊中。 `TextBox1_Enter`事件處理常式必須繫結至控制項; 如需詳細資訊，請參閱[How to:在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   
      若要測試此範例中，請按 Tab 鍵，直到文字方塊具有焦點為止。 如果您按一下文字方塊中，文字會是未選取。  
   
@@ -69,10 +69,10 @@ ms.locfileid: "54649410"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.TextBox>
-- [TextBox 控制項概觀](../../../../docs/framework/winforms/controls/textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows Forms TextBox 控制項中的插入點](../../../../docs/framework/winforms/controls/how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [如何：建立唯讀文字方塊](../../../../docs/framework/winforms/controls/how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：將引號放入字串](../../../../docs/framework/winforms/controls/how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [如何：在 Windows Forms TextBox 控制項中檢視多行](../../../../docs/framework/winforms/controls/how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [TextBox 控制項](../../../../docs/framework/winforms/controls/textbox-control-windows-forms.md)
+- [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)
+- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [如何：將引號放入字串](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [如何：在 Windows Forms TextBox 控制項中檢視多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [TextBox 控制項](textbox-control-windows-forms.md)

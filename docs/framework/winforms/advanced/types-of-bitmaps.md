@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: 3083c075bfbbd21a26f7442f9bbccbe800d73cf1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674764"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713211"
 ---
 # <a name="types-of-bitmaps"></a>點陣圖類型
 點陣圖會指定每個像素色彩的像素矩形陣列中的位元陣列。 組成個別像素的位元數目會決定可以指派給該像素的色彩數目。 比方說，如果每個像素 4 個位元來表示，然後指定像素可以指派其中一個 16 不同的色彩 (2 ^4 = 16 個)。 下表顯示一些範例可以指派給像素，以表示指定之位元數的色彩數目。  
@@ -41,7 +41,7 @@ ms.locfileid: "54674764"
   
  通常儲存點陣圖的磁碟檔案包含一或多個資訊區塊儲存在陣列中的資訊，例如每個像素、 像素的每個資料列，以及資料列數目的位元數。 這類檔案可能也會包含色彩表 （有時稱為調色盤）。 色彩表會將點陣圖中的數字對應到特定的色彩。 下圖顯示放大的影像，以及其點陣圖和色彩的資料表。 每個像素以 4 位元數字，因此會有 2 ^4 = 16 個色彩，色彩表中。 在資料表中的每一種色彩被以 24 位元數字：8 位元用於紅色、 綠色的 8 位元和 8 位元用於藍色。 數字是以十六進位 (基底 16) 格式所示：A = 10，B = 11，C = 12，D = 13，E = 14、 F = 15。  
   
- ![點陣圖範例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
+ ![點陣圖範例](./media/aboutgdip03-art01.gif "AboutGdip03_Art01")  
   
  看看第 3 欄 5 的映像的資料列中的像素。 點陣圖中對應的數字為 1。 色彩表將告訴我們，1 代表紅色的色彩，因此像素都是紅色。 在頂端列中的所有項目都是點陣圖的 3。 色彩表會告訴我們 3 代表藍色，因此會以藍色顯示之影像的頂端列中的所有像素。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "54674764"
   
  將索引儲存到色彩表的點陣圖稱為調色盤編製索引的點陣圖。 有些點陣圖並不需要色彩表。 比方說，如果點陣圖使用每像素 24 位元，該點陣圖可以儲存自己的色彩，而不是索引色彩表中。 下圖顯示儲存直接 （24 位元 / 像素） 色彩的點陣圖，而不是使用色彩表。 此圖解同時顯示對應的影像的放大的檢視。 在點陣圖，FFFFFF 表示白色、 FF0000 代表紅色、 00FF00 代表綠色，而 0000ff> 中代表藍色。  
   
- ![點陣圖範例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
+ ![點陣圖範例](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>圖形檔格式  
  有許多標準格式，將點陣圖儲存在磁碟檔案。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援的圖形檔案下列段落中所述的格式。  
@@ -66,11 +66,11 @@ ms.locfileid: "54674764"
   
  JPEG 影像壓縮層級設定，但較高的壓縮層級 （較小的檔案） 會造成多個遺失的資訊。 20:1 的壓縮比率通常會產生肉眼難以區別從原始的映像。 下圖顯示 BMP 影像和兩個從該 BMP 影像已壓縮的 JPEG 影像。 第一個 JPEG 壓縮比率為 4:1，第二個 JPEG 大約 8:1 壓縮率。  
   
- ![檔案類型範例](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
+ ![檔案類型範例](./media/aboutgdip03-art03.gif "AboutGdip03_Art03")  
   
  JPEG 壓縮不會適用於線條繪圖，區塊的單色，並明確的界限。 下圖顯示兩個 Jpeg GIF 及 BMP。 BMP 從壓縮的 Jpeg 和 GIF。 壓縮比率為 4:1 GIF、 4:1，較小的 jpeg，和 8:3 的較大的 JPEG。 請注意 GIF 維護程式碼行，以及明確的界限，但 Jpeg 似乎比較模糊的界限。  
   
- ![Filetypes](../../../../docs/framework/winforms/advanced/media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
+ ![Filetypes](./media/aboutgdip03-art03a.gif "AboutGdip03_Art03A")  
   
  JPEG 是一種壓縮配置，不是檔案格式。 JPEG 檔案交換格式 (JFIF) 是常用於儲存和轉送已根據 JPEG 配置壓縮的影像檔案格式。 網頁瀏覽器所顯示的 JFIF 檔案使用.jpg 副檔名。  
   
@@ -89,5 +89,5 @@ ms.locfileid: "54674764"
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>
-- [影像、點陣圖和中繼檔](../../../../docs/framework/winforms/advanced/images-bitmaps-and-metafiles.md)
-- [使用影像、點陣圖、圖示和中繼檔](../../../../docs/framework/winforms/advanced/working-with-images-bitmaps-icons-and-metafiles.md)
+- [影像、點陣圖和中繼檔](images-bitmaps-and-metafiles.md)
+- [使用影像、點陣圖、圖示和中繼檔](working-with-images-bitmaps-icons-and-metafiles.md)

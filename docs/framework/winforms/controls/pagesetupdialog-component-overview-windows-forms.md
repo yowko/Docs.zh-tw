@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Page Setup dialog box [Windows Forms], displaying
 - PageSetupDialog component
 ms.assetid: 791caacb-a5ca-4fca-bad9-1a5721ad697c
-ms.openlocfilehash: 3f864bb986401a5d1498f2c5c8dbb8484dfaad39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 702e9a40652e00cc2f93dd52af29a61a50c90ae0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674046"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715798"
 ---
 # <a name="pagesetupdialog-component-overview-windows-forms"></a>PageSetupDialog 元件概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.PageSetupDialog>元件是預先設定的對話方塊，用於以 Windows 為基礎的應用程式中設定列印的頁面詳細資料。 它用於應用程式內以 Windows 為基礎的簡單解決方案，為使用者設定頁面的喜好設定，不需設定您自己的對話方塊。 您可以讓使用者設定框線和邊界調整、 頁首和頁尾和直向或橫向方向。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。  
@@ -24,4 +24,4 @@ Windows Form<xref:System.Windows.Forms.PageSetupDialog>元件是預先設定的�
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [PageSetupDialog 元件](../../../../docs/framework/winforms/controls/pagesetupdialog-component-windows-forms.md)
+- [PageSetupDialog 元件](pagesetupdialog-component-windows-forms.md)

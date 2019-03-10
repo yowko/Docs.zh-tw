@@ -2,12 +2,12 @@
 title: 工作 1:建立新的 Windows Presentation Foundation 應用程式
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
-ms.openlocfilehash: 39cd901c0129124bece8e8d3a573fd45209cfb00
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533b4a1030ab5f47eb96ca62dc2805eae7933b9b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679405"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711881"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>工作 1:建立新的 Windows Presentation Foundation 應用程式
 在這個工作中，您會使用 WPF 應用程式的 Visual Studio 範本建立空白的 Windows Presentation Foundation (WPF) 應用程式，並將參考加入至適當[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]工作流程組件。  
@@ -38,10 +38,10 @@ ms.locfileid: "54679405"
   
     -   System.Activities.Core.Presentation  
   
-10. 按一下 [確定 **Deploying Office Solutions**]。  
+10. 按一下 [確定] 。  
   
-11. 請參閱[工作 2:裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)以了解如何裝載工作流程設計工具設計畫布。  
+11. 請參閱[工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)以了解如何裝載工作流程設計工具設計畫布。  
   
 ## <a name="see-also"></a>另請參閱
-- [重新裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/rehosting-the-workflow-designer.md)
-- [工作 2:裝載工作流程設計工具](../../../docs/framework/windows-workflow-foundation/task-2-host-the-workflow-designer.md)
+- [重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)
+- [工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)

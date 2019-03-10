@@ -12,17 +12,17 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 1f7ba0ab7f0701fe39c3cefb979b9226eeeddffe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531404"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721966"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>HOW TO：利用 Windows Form 建立多窗格使用者介面
 在下列程序中，您將建立類似於使用 Microsoft Outlook 中所使用的多窗格使用者介面**資料夾** 清單中，**訊息**窗格中，和**預覽**  窗格。 這種排列方式是主要透過停駐控制項的表單來達成的。  
   
- 當您將控制項停駐時，您決定父容器的邊緣控制項固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Right>，右邊緣的控制項所停駐到其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to:停駐在 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。  
+ 當您將控制項停駐時，您決定父容器的邊緣控制項固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Right>，右邊緣的控制項所停駐到其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to:停駐在 Windows Forms 上的控制項](how-to-dock-controls-on-windows-forms.md)。  
   
  此程序著重於排列<xref:System.Windows.Forms.SplitContainer>和其他控制項在表單上，而不加入讓模仿 Microsoft Outlook 應用程式的功能。  
   
@@ -178,5 +178,5 @@ ms.locfileid: "54531404"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
-- [如何：使用設計工具的 Windows form 建立多窗格使用者介面](../../../../docs/framework/winforms/controls/create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [SplitContainer 控制項](splitcontainer-control-windows-forms.md)
+- [如何：使用設計工具的 Windows form 建立多窗格使用者介面](create-a-multipane-user-interface-with-wf-using-the-designer.md)

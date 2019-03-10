@@ -8,12 +8,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
-ms.openlocfilehash: 5efda369b2059afd350fc947b706fb9f4c27ae14
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f188e14b304970840bfc35a592a445f68f9d7af7
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664441"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713900"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>HOW TO：變更 Windows Form 的框線
 在決定 Windows Form 的外觀和行為時，您有幾種框線樣式可以選擇。 藉由變更 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 屬性，您可以控制表單的調整大小行為。 此外，設定 <xref:System.Windows.Forms.Form.FormBorderStyle%2A> 也會影響標題列的顯示方式，以及所出現在標題列上的按鈕。 如需詳細資訊，請參閱<xref:System.Windows.Forms.FormBorderStyle>。  
@@ -46,4 +46,4 @@ ms.locfileid: "56664441"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Windows Forms 使用者入門](../../../docs/framework/winforms/getting-started-with-windows-forms.md)
+- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)

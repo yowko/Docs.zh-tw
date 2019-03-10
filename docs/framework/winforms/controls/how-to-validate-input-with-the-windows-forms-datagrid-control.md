@@ -11,18 +11,18 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], validating input
 - validation [Windows Forms], user input
 ms.assetid: f1e9c3a0-d0a1-4893-a615-b4b0db046c63
-ms.openlocfilehash: 84057a2d9709963c7a7302110ab11931b86fcad9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dc8c8f157e6673c1bddc68bfb511683e6d2b99be
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497622"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720328"
 ---
 # <a name="how-to-validate-input-with-the-windows-forms-datagrid-control"></a>HOW TO：使用 Windows Forms DataGrid 控制項驗證輸入
 
 > [!NOTE]
 > 
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](../../../../docs/framework/winforms/controls/differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
+  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。
 
 有兩種類型的輸入驗證適用於 Windows Forms<xref:System.Windows.Forms.DataGrid>控制項。 如果使用者嘗試輸入的值，是無法接受的資料類型的資料格，例如整數，將字串的新無效的值會取代舊值。 這種輸入驗證會自動完成，且無法自訂。
 
@@ -90,4 +90,4 @@ ms.locfileid: "57497622"
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Data.DataTable.ColumnChanging>
 - <xref:System.Data.DataRow.SetColumnError%2A>
-- [DataGrid 控制項](../../../../docs/framework/winforms/controls/datagrid-control-windows-forms.md)
+- [DataGrid 控制項](datagrid-control-windows-forms.md)

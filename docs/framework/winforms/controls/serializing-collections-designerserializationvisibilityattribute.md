@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 5ec32f5c365162883797b3f3f9ece4305dce7551
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: b5b5295e61f2a417c3565e62000021019381536f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747660"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712184"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
 您的自訂控制項有時候會公開為屬性的集合。 本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。 套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保會序列化屬性。  
@@ -55,22 +55,22 @@ ms.locfileid: "56747660"
   
 6.  在 **程式碼編輯器**，宣告名為字串陣列欄位`stringsValue`在`SerializationDemoControl`。  
   
-     [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
-     [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
-     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
+     [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
+     [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
+     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
   
 7.  定義`Strings`屬性上的`SerializationDemoControl`。  
   
 > [!NOTE]
 >  <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>值用來啟用集合的序列化。  
   
- [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
- [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
- [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
+ [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
+ [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
+ [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
   
 1.  按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。  
   
-2.  尋找`Strings`中的屬性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 測試容器**。 按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.  
+2.  尋找`Strings`中的屬性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 測試容器**。 按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.  
   
 3.  輸入中的數個字串**字串集合編輯器**。 藉由按下 ENTER 鍵，每個字串的結尾分隔。 按一下 **確定**當您完成輸入字串。  
   
@@ -84,11 +84,11 @@ ms.locfileid: "56747660"
   
 1.  將 Windows 應用程式專案加入方案。 將專案命名為 `SerializationDemoControlTest`。  
   
-2.  在 **工具箱**，尋找名為  索引標籤**SerializationDemoControlLib 元件**。 在此索引標籤中，您會發現`SerializationDemoControl`。 如需詳細資訊，請參閱[逐步解說：自動將 [工具箱] 中的以自訂元件填入](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
+2.  在 **工具箱**，尋找名為  索引標籤**SerializationDemoControlLib 元件**。 在此索引標籤中，您會發現`SerializationDemoControl`。 如需詳細資訊，請參閱[逐步解說：自動將 [工具箱] 中的以自訂元件填入](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。  
   
 3.  位置`SerializationDemoControl`您的表單上。  
   
-4.  尋找`Strings`中的屬性**屬性**視窗。 按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../../../../docs/framework/winforms/media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.  
+4.  尋找`Strings`中的屬性**屬性**視窗。 按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.  
   
 5.  輸入中的數個字串**字串集合編輯器**。 藉由按下 ENTER 鍵，每個字串的結尾分隔。 按一下 **確定**當您完成輸入字串。  
   
@@ -131,14 +131,14 @@ ms.locfileid: "56747660"
   
 -   [設計階段架構](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
--   [Windows Forms 控制項中的屬性](../../../../docs/framework/winforms/controls/attributes-in-windows-forms-controls.md)  
+-   [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)  
   
 -   [設計工具序列化概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
--   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](../../../../docs/framework/winforms/controls/creating-a-wf-control-design-time-features.md)  
+-   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
 - [設計工具序列化概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
 - [如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [逐步解說：自動填入 [工具箱] 中的以自訂元件](../../../../docs/framework/winforms/controls/walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [逐步解說：自動填入 [工具箱] 中的以自訂元件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

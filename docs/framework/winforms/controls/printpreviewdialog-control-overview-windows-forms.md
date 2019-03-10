@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e28a6c82a8dd40885c04c56f2adfb3d38e674066
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667553"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711274"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 控制項概觀 (Windows Form)
-Windows Forms<xref:System.Windows.Forms.PrintPreviewDialog>控制項是預先設定的對話方塊，用來顯示如何[PrintDocument](../../../../docs/framework/winforms/controls/printdocument-component-windows-forms.md)列印時，會出現。 您可以使用它在您以 Windows 為基礎的應用程式，做為簡單的解決方案，而不是設定您自己的對話方塊。 這個控制項包含列印、放大、顯示一或多頁及關閉對話方塊等按鈕。  
+Windows Forms<xref:System.Windows.Forms.PrintPreviewDialog>控制項是預先設定的對話方塊，用來顯示如何[PrintDocument](printdocument-component-windows-forms.md)列印時，會出現。 您可以使用它在您以 Windows 為基礎的應用程式，做為簡單的解決方案，而不是設定您自己的對話方塊。 這個控制項包含列印、放大、顯示一或多頁及關閉對話方塊等按鈕。  
   
 ## <a name="key-properties-and-methods"></a>索引鍵屬性和方法  
  控制項的索引鍵屬性是<xref:System.Windows.Forms.PrintPreviewDialog.Document%2A>，可設定要預覽的文件。 必須是文件<xref:System.Drawing.Printing.PrintDocument>物件。 若要顯示對話方塊，您必須呼叫其<xref:System.Windows.Forms.Form.ShowDialog%2A>方法。 消除鋸齒可以讓文字出現更順暢，但可能也會使速度較慢; 顯示若要使用它，將<xref:System.Windows.Forms.PrintPreviewDialog.UseAntiAlias%2A>屬性設`true`。  
@@ -53,6 +53,6 @@ Windows Forms<xref:System.Windows.Forms.PrintPreviewDialog>控制項是預先設
 
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.PrintPreviewDialog>
-- [PrintPreviewControl 控制項概觀](../../../../docs/framework/winforms/controls/printpreviewcontrol-control-overview-windows-forms.md)
-- [PrintPreviewDialog 控制項](../../../../docs/framework/winforms/controls/printpreviewdialog-control-windows-forms.md)
-- [對話方塊控制項和元件](../../../../docs/framework/winforms/controls/dialog-box-controls-and-components-windows-forms.md)
+- [PrintPreviewControl 控制項概觀](printpreviewcontrol-control-overview-windows-forms.md)
+- [PrintPreviewDialog 控制項](printpreviewdialog-control-windows-forms.md)
+- [對話方塊控制項和元件](dialog-box-controls-and-components-windows-forms.md)

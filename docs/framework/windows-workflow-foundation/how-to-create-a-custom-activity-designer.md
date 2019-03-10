@@ -2,12 +2,12 @@
 title: HOW TO：建立自訂活動設計工具
 ms.date: 03/30/2017
 ms.assetid: 2f3aade6-facc-44ef-9657-a407ef8b9b31
-ms.openlocfilehash: 755aea092d5906d7313234d7ddd1c99d87a7e54d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e455d00ebd128c37eacb19df0e7f864505df04e0
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466878"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57716825"
 ---
 # <a name="how-to-create-a-custom-activity-designer"></a>HOW TO：建立自訂活動設計工具
 
@@ -21,9 +21,9 @@ ms.locfileid: "57466878"
 
 本主題將說明兩種程序。
 
-1. 第一種程序描述如何使用提供接收其他活動之卸除區的 <xref:System.Activities.Presentation.WorkflowItemPresenter> 建立自訂活動設計工具。 此程序為基礎[自訂複合設計工具-工作流程項目展示器](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-item-presenter.md)範例。
+1. 第一種程序描述如何使用提供接收其他活動之卸除區的 <xref:System.Activities.Presentation.WorkflowItemPresenter> 建立自訂活動設計工具。 此程序為基礎[自訂複合設計工具-工作流程項目展示器](./samples/custom-composite-designers-workflow-item-presenter.md)範例。
 
-2. 第二種程序描述如何使用提供編輯所包含項目集合時需要之功能的 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 建立自訂活動設計工具。 此程序為基礎[自訂複合設計工具-工作流程項目展示器](../../../docs/framework/windows-workflow-foundation/samples/custom-composite-designers-workflow-items-presenter.md)範例。
+2. 第二種程序描述如何使用提供編輯所包含項目集合時需要之功能的 <xref:System.Activities.Presentation.WorkflowItemsPresenter> 建立自訂活動設計工具。 此程序為基礎[自訂複合設計工具-工作流程項目展示器](./samples/custom-composite-designers-workflow-items-presenter.md)範例。
 
 ## <a name="to-create-a-custom-activity-designer-with-a-drop-zone-using-workflowitempresenter"></a>若要使用 WorkflowItemPresenter 建立含有卸除區的自訂活動設計工具
 
@@ -351,4 +351,4 @@ ms.locfileid: "57466878"
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - <xref:System.Activities.Presentation.WorkflowViewElement>
 - <xref:System.Activities.Presentation.Model.ModelItem>
-- [自訂工作流程設計體驗](../../../docs/framework/windows-workflow-foundation/customizing-the-workflow-design-experience.md)
+- [自訂工作流程設計體驗](customizing-the-workflow-design-experience.md)

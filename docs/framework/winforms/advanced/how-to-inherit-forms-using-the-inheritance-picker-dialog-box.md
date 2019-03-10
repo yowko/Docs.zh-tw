@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 94fe3d551e8f846d8deec6f2b6ab9e96d91e8335
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601827"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719349"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>HOW TO：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  
@@ -41,7 +41,7 @@ ms.locfileid: "54601827"
   
 6.  選取元件  
   
-     在 [方案總管] 中，此元件已新增至您的專案。 如果它具有 UI，則屬於受繼承表單一部分的控制項會以圖像 (![VisualBasicInheritanceSymbol 螢幕擷取畫面](../../../../docs/framework/winforms/advanced/media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 標記。當您選取它的時候，則會有框線，表示在 Superclass 表單上此控制項的安全性層級。 對應至不同的安全性層級的行為會在下表中列出。  
+     在 [方案總管] 中，此元件已新增至您的專案。 如果它具有 UI，則屬於受繼承表單一部分的控制項會以圖像 (![VisualBasicInheritanceSymbol 螢幕擷取畫面](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 標記。當您選取它的時候，則會有框線，表示在 Superclass 表單上此控制項的安全性層級。 對應至不同的安全性層級的行為會在下表中列出。  
   
     |控制項的安全性層級|設計工具和程式碼編輯器與繼承表單之可用的互動|  
     |-------------------------------|--------------------------------------------------------------------------------|  
@@ -51,13 +51,13 @@ ms.locfileid: "54601827"
     |Internal (在 Visual Basic 中為 Friend)|在表單上顯示的沒有縮放控點之標準框線，其屬性於 [屬性] 視窗中可見。 不過，此控制項的所有層面都會被視為唯讀。 您無法移動、調整控制項大小，或變更其屬性。 如果控制項為其他控制項的容器，例如群組方塊，則無法加入新的控制項，也不能移除現有的控制項，即使這些控制項為公用。 該控制項只能由包含它的組件之其他成員存取。|  
     |Private|在表單上顯示的沒有縮放控點之標準框線，其屬性於 [屬性] 視窗中可見。 不過，此控制項的所有層面都會被視為唯讀。 您無法移動、調整控制項大小，或變更其屬性。 如果控制項為其他控制項的容器，例如群組方塊，則無法加入新的控制項，也不能移除現有的控制項，即使這些控制項為公用。 該控制項只能由宣告它的類別存取。|  
   
-     如需更改基底表單外觀的相關資訊，請參閱[修改基底表單外觀的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)。  
+     如需更改基底表單外觀的相關資訊，請參閱[修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)。  
   
     > [!NOTE]
-    >  當您將繼承的控制項和元件與標準控制項和 Windows Form 上的元件結合時，您可能會遇到疊置順序衝突。 您可以藉由修改疊置順序來修正，其作法是在 [格式]  功能表中按一下，指向 [順序]，然後按一下 [提到最上層] 或 [移到最下層]。 控制項的疊置順序的相關資訊，請參閱[How to:在 Windows Forms 上的物件分層](../../../../docs/framework/winforms/controls/how-to-layer-objects-on-windows-forms.md)。  
+    >  當您將繼承的控制項和元件與標準控制項和 Windows Form 上的元件結合時，您可能會遇到疊置順序衝突。 您可以藉由修改疊置順序來修正，其作法是在 [格式]  功能表中按一下，指向 [順序]，然後按一下 [提到最上層] 或 [移到最下層]。 控制項的疊置順序的相關資訊，請參閱[How to:在 Windows Forms 上的物件分層](../controls/how-to-layer-objects-on-windows-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
-- [修改基底表單外觀的效果](../../../../docs/framework/winforms/advanced/effects-of-modifying-base-form-appearance.md)
-- [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)
+- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)

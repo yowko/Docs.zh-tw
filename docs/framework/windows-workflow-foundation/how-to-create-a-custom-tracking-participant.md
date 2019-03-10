@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: 4afa3f46532e365760c0dd5a9e1880a82e5ae82b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54150626"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720952"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>HOW TO：建立自訂追蹤參與者
 工作流程追蹤會提供工作流程執行狀態的可見性。 工作流程執行階段會發出追蹤記錄，其中描述工作流程開發週期事件、活動開發週期事件、書籤繼續及錯誤。 這些追蹤記錄由追蹤參與者使用。 Windows Workflow Foundation (WF) 包含寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。 本教學課程步驟描述如何建立擷取 `WriteLine` 活動輸出的自訂追蹤參與者和追蹤設定檔，以便向使用者顯示這些項目。  
@@ -328,7 +328,7 @@ ms.locfileid: "54150626"
     ```
     
     > [!NOTE]
-    > 此資訊可用於判斷隨機數字的範圍，但不包含任何先前猜測的相關資訊。 這項資訊會在下一個步驟中， [How to:裝載的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
+    > 此資訊可用於判斷隨機數字的範圍，但不包含任何先前猜測的相關資訊。 這項資訊會在下一個步驟中， [How to:裝載的工作流程-並存的多個版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)。
 
     請記下工作流程執行個體識別碼，並玩遊戲直到結束。
   
@@ -342,4 +342,4 @@ ms.locfileid: "54150626"
     Please enter a number between 1 and 10
     ```
 
-    除了使用者沒有猜測的情況外，此追蹤資料也不包含工作流程最後猜測的相關資訊。 這是因為追蹤資訊僅包含工作流程的 `WriteLine` 輸出，在工作流程完成後顯示的最後一個訊息，是由 `Completed` 處理常式完成的。 在下一個步驟的教學課程中， [How to:裝載多個版本的工作流程-並存](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，現有`WriteLine`活動會修改成顯示該使用者的猜測和額外`WriteLine`活動加入顯示最終的結果。 整合這些變更之後， [How to:裝載的工作流程-並存的多個版本](../../../docs/framework/windows-workflow-foundation/how-to-host-multiple-versions-of-a-workflow-side-by-side.md)示範如何同時裝載工作流程的多個版本。
+    除了使用者沒有猜測的情況外，此追蹤資料也不包含工作流程最後猜測的相關資訊。 這是因為追蹤資訊僅包含工作流程的 `WriteLine` 輸出，在工作流程完成後顯示的最後一個訊息，是由 `Completed` 處理常式完成的。 在下一個步驟的教學課程中， [How to:裝載多個版本的工作流程-並存](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)，現有`WriteLine`活動會修改成顯示該使用者的猜測和額外`WriteLine`活動加入顯示最終的結果。 整合這些變更之後， [How to:裝載的工作流程-並存的多個版本](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)示範如何同時裝載工作流程的多個版本。

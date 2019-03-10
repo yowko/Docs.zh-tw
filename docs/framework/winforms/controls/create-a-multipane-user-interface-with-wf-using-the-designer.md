@@ -6,17 +6,17 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 923f913d8dd44aeef5d0b661e9408c6c50acd98b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ad446fde4ccfc9ad9c48e619321deed044f1014
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664222"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713770"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>HOW TO：使用設計工具的 Windows form 建立多窗格使用者介面
 在下列程序中，您將建立類似於使用 Microsoft Outlook 中所使用的多窗格使用者介面**資料夾** 清單中，**訊息**窗格中，和**預覽**  窗格。 這種排列方式是主要透過停駐控制項的表單來達成的。  
   
- 當您將控制項停駐時，您決定父容器的邊緣控制項固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Right>，右邊緣的控制項所停駐到其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to:停駐在 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)。  
+ 當您將控制項停駐時，您決定父容器的邊緣控制項固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Right>，右邊緣的控制項所停駐到其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to:停駐在 Windows Forms 上的控制項](how-to-dock-controls-on-windows-forms.md)。  
   
  此程序著重於排列<xref:System.Windows.Forms.SplitContainer>和其他控制項在表單上，而不加入讓模仿 Microsoft Outlook 應用程式的功能。  
   
@@ -44,8 +44,8 @@ ms.locfileid: "54664222"
     > [!NOTE]
     >  將滑鼠指標放在分隔器透過<xref:System.Windows.Forms.SplitContainer>控制項，您可以調整大小的內部的維度。  
   
-     此時在應用程式開發中，您已經製作精緻的使用者介面。 下一個步驟繼續進行應用程式本身，程式設計可能是藉由連接<xref:System.Windows.Forms.TreeView>控制項和<xref:System.Windows.Forms.ListView>到某種資料來源的控制項。 如需有關如何連接至資料控制項的詳細資訊，請參閱[資料繫結和 Windows Form](../../../../docs/framework/winforms/data-binding-and-windows-forms.md)。  
+     此時在應用程式開發中，您已經製作精緻的使用者介面。 下一個步驟繼續進行應用程式本身，程式設計可能是藉由連接<xref:System.Windows.Forms.TreeView>控制項和<xref:System.Windows.Forms.ListView>到某種資料來源的控制項。 如需有關如何連接至資料控制項的詳細資訊，請參閱[資料繫結和 Windows Form](../data-binding-and-windows-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.SplitContainer>
-- [SplitContainer 控制項](../../../../docs/framework/winforms/controls/splitcontainer-control-windows-forms.md)
+- [SplitContainer 控制項](splitcontainer-control-windows-forms.md)

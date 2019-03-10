@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: c6930acb57aa3c311c76b1a2acd3bbca213d1f24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558887"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57721381"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>HOW TO：請確定多個控制項繫結至相同的資料來源都能保持同步
 使用 Windows Form 中的資料繫結時，有時候多個控制項繫結至相同的資料來源中。 在某些情況下，可能必須採取額外步驟以確保控制項的繫結的內容維持彼此以及與資料來源同步處理。 這些步驟會需要有兩種情況：  
@@ -29,19 +29,20 @@ ms.locfileid: "54558887"
   
  此範例會使用<xref:System.Windows.Forms.BindingSource>繫結資料來源和控制項。 或者，您可以直接繫結控制項至資料來源，並擷取<xref:System.Windows.Forms.BindingManagerBase>從表單的繫結<xref:System.Windows.Forms.Control.BindingContext%2A>，然後處理<xref:System.Windows.Forms.BindingManagerBase.BindingComplete>事件<xref:System.Windows.Forms.BindingManagerBase>。 如何執行這項操作的範例，請參閱 [說明] 頁面，關於<xref:System.Windows.Forms.BindingManagerBase.BindingComplete>事件的<xref:System.Windows.Forms.BindingManagerBase>。  
   
- [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
- [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
+ [!code-csharp[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/CS/Form1.cs#1)]
+ [!code-vb[System.Windows.Forms.BindingSourceMultipleControls#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BindingSourceMultipleControls/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
 -   此程式碼範例需要  
   
--   <xref:System>、<xref:System.Windows.Forms> 和 <xref:System.Drawing> 組件的參考。  
+-   
+  <xref:System>、<xref:System.Windows.Forms> 和 <xref:System.Drawing> 組件的參考。  
   
 -   使用表單<xref:System.Windows.Forms.Form.Load>處理的事件和呼叫`InitializeControlsAndDataSource`方法，在範例中，從表單的<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：使用 BindingSource 元件跨表單共用繫結的資料](../../../docs/framework/winforms/controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Windows Forms 資料繫結中的變更告知](../../../docs/framework/winforms/change-notification-in-windows-forms-data-binding.md)
-- [與資料繫結相關的介面](../../../docs/framework/winforms/interfaces-related-to-data-binding.md)
-- [Windows Forms 資料繫結](../../../docs/framework/winforms/windows-forms-data-binding.md)
+- [如何：使用 BindingSource 元件跨表單共用繫結的資料](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [與資料繫結相關的介面](interfaces-related-to-data-binding.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)

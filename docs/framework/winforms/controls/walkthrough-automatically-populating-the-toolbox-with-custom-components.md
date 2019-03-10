@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: b4c6bf42bdd1ba6b0f9ccddb730dc517dbaab963
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 8ddb248d2e011714ddc7fb68474f0e92e9ad8b5e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304085"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723968"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動填入 [工具箱] 中的以自訂元件
 如果您的元件會定義目前開啟的方案中的專案，它們會自動顯示，在**工具箱**，您需要採取任何動作。 您可以手動填入**工具箱**以使用您自訂元件[選擇工具箱項目對話方塊 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
@@ -97,4 +97,4 @@ ms.locfileid: "56304085"
 - [選項對話方塊、 Windows Form 設計工具、 一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
 - [如何：操作工具箱索引標籤](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
 - [選擇工具箱項目對話方塊 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
-- [將控制項加入 Windows Forms](../../../../docs/framework/winforms/controls/putting-controls-on-windows-forms.md)
+- [將控制項加入 Windows Forms](putting-controls-on-windows-forms.md)

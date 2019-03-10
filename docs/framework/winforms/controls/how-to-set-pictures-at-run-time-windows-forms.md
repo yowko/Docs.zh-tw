@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: c7a65bcc65710324a4457c17dd728b4771550c06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694070"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711213"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>HOW TO：在執行階段 (Windows Form) 設定的圖片
 您可以透過程式設計方式設定顯示 Windows Form 的影像<xref:System.Windows.Forms.PictureBox>控制項。  
@@ -93,14 +93,14 @@ ms.locfileid: "54694070"
     ```  
   
     > [!NOTE]
-    >  如需有關為什麼您應該使用<xref:System.Drawing.Image.Dispose%2A>方法，如此一來，請參閱[清除 Unmanaged 資源總](../../../../docs/standard/garbage-collection/unmanaged.md)。  
+    >  如需有關為什麼您應該使用<xref:System.Drawing.Image.Dispose%2A>方法，如此一來，請參閱[清除 Unmanaged 資源總](../../../standard/garbage-collection/unmanaged.md)。  
   
      此程式碼將會清除映像，即使圖形在設計階段時載入控制項。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
-- [PictureBox 控制項概觀](../../../../docs/framework/winforms/controls/picturebox-control-overview-windows-forms.md)
-- [如何：使用設計工具載入圖片](../../../../docs/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [如何：在執行階段修改的大小或位置的圖片](../../../../docs/framework/winforms/controls/how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [PictureBox 控制項](../../../../docs/framework/winforms/controls/picturebox-control-windows-forms.md)
+- [PictureBox 控制項概觀](picturebox-control-overview-windows-forms.md)
+- [如何：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [如何：在執行階段修改的大小或位置的圖片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [PictureBox 控制項](picturebox-control-windows-forms.md)

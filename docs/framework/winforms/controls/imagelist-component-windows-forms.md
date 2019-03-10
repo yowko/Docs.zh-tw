@@ -5,29 +5,29 @@ helpviewer_keywords:
 - ImageList component [Windows Forms]
 - image controls
 ms.assetid: 83b48634-782b-464d-9b7d-568dc6e0bef2
-ms.openlocfilehash: ce847507785b06874425e2efe678b86fc868507e
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 61939c427a8a74ef85f269d9e8788d4c3c3b3035
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43805477"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57722031"
 ---
 # <a name="imagelist-component-windows-forms"></a>ImageList 元件 (Windows Form)
 Windows Form `ImageList` 元件可用來儲存影像，然後可以用控制項來顯示這些影像。 影像清單可讓您針對單一且一致的影像目錄來撰寫程式碼。  
   
 ## <a name="in-this-section"></a>本節內容  
- [ImageList 元件概觀](../../../../docs/framework/winforms/controls/imagelist-component-overview-windows-forms.md)  
+ [ImageList 元件概觀](imagelist-component-overview-windows-forms.md)  
  說明此元件是什麼，並說明其主要功能與屬性。  
   
- [操作說明：使用 Windows Forms ImageList 元件加入或移除影像](../../../../docs/framework/winforms/controls/how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  
+ [如何：新增或移除映像使用 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)  
  說明如何在影像清單中加入和移除影像。  
   
- 另請參閱[如何： 加入或移除 ImageList 影像與設計工具](how-to-add-or-remove-imagelist-images-with-the-designer.md)。  
+ 另請參閱[How to:新增或移除 ImageList 影像與設計工具](how-to-add-or-remove-imagelist-images-with-the-designer.md)。  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Forms.ImageList>  
- 描述這個類別，並且提供其所有成員的連結。  
+ 說明這個類別，並且提供其所有成員的連結。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 Windows Forms 上使用的控制項](../../../../docs/framework/winforms/controls/controls-to-use-on-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。

@@ -2,12 +2,12 @@
 title: 活動定義範圍和可視性
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: f3a8936c1bc3275468e1e4dbd23d0d001edad021
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33518498"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723838"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活動定義範圍和可視性
 就像物件的範圍和可視性一樣，活動定義範圍和可視性是其他物件或活動存取活動成員的能力。 活動定義是由下列實作所執行：  
@@ -22,7 +22,7 @@ ms.locfileid: "33518498"
  除了資料範圍以外，活動模型可視性也可以限制存取活動的其他層面，例如驗證、偵錯或追蹤。 執行屬性會使用可視性與範圍，將執行特性限制為特定的定義範圍。 次要根項目會使用可視性與範圍，將 <xref:System.Activities.Statements.CompensableActivity> 所擷取的狀態限制為使用可補償之活動的定義範圍。  
   
 ## <a name="definition-and-usage"></a>定義與使用  
- 繼承自基底活動類別，以及使用中的活動撰寫新的活動所撰寫的工作流程[內建活動程式庫](../../../docs/framework/windows-workflow-foundation/net-framework-4-5-built-in-activity-library.md)。 為了能夠使用活動，活動作者必須設定其定義之每一個元件的可視性。  
+ 撰寫新的活動，藉由繼承自基底活動類別，以及使用中的活動所撰寫的工作流程[內建活動程式庫](net-framework-4-5-built-in-activity-library.md)。 為了能夠使用活動，活動作者必須設定其定義之每一個元件的可視性。  
   
 ### <a name="activity-members"></a>活動成員  
  活動模型會定義該活動提供給消費者使用的引數、變數、委派和子活動。 這些成員的每一個都可以宣告為 `public` 或 `private`。 Public 成員是由活動的消費者所設定，而 `private` 成員則會使用活動作者所固定的實作。 資料範圍的可視性規則如下所示：  

@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms, resizing
 - controls [Windows Forms], positioning
 ms.assetid: 59ea914f-fbd3-427a-80fe-decd02f7ae6d
-ms.openlocfilehash: d1f1fba28eec39202b37eb410a74df400ea461a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3dd413793c8a6da900acbf60cc5a20edf908906
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580938"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720367"
 ---
 # <a name="how-to-anchor-controls-on-windows-forms"></a>HOW TO：在 Windows Forms 上控制項的錨定
 如果您要設計的表單，使用者可以在執行階段調整大小，您的表單上的控制項應該調整大小，並適當地重新調整位置。 若要調整大小以動態方式與所在表單的控制項，您可以使用<xref:System.Windows.Forms.Control.Anchor%2A>Windows Form 控制項的屬性。 <xref:System.Windows.Forms.Control.Anchor%2A>屬性會定義控制項的錨點位置。 當控制項錨定至表單和表單的大小時，控制項就會維護控制項的錨點位置之間的距離。 例如，如果您有<xref:System.Windows.Forms.TextBox>表單會調整大小時，left、 right 和表單的下邊緣錨定的控制項<xref:System.Windows.Forms.TextBox>水平控制項調整大小，使它可以維持相同的距離，從表單的左邊和右邊側邊。 此外，控制項本身也會做垂直定位，使其位置一律相同從表單的下邊緣的距離。 如果控制項不會錨定和表單的大小時，會變更控制項相對於表單的邊緣的位置。  
   
- <xref:System.Windows.Forms.Control.Anchor%2A>屬性互動<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。 如需詳細資訊，請參閱 < [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)。  
+ <xref:System.Windows.Forms.Control.Anchor%2A>屬性互動<xref:System.Windows.Forms.Control.AutoSize%2A>屬性。 如需詳細資訊，請參閱 < [AutoSize 屬性概觀](autosize-property-overview.md)。  
   
 > [!NOTE]
 >  根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。 若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。 如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。  
@@ -54,10 +54,10 @@ ms.locfileid: "54580938"
  繼承的控制項必須`Protected`能夠錨定。 若要變更控制項的存取層級，設定其`Modifiers`中的屬性**屬性**視窗。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項](../../../../docs/framework/winforms/controls/index.md)
-- [排列 Windows Forms 上的控制項](../../../../docs/framework/winforms/controls/arranging-controls-on-windows-forms.md)
-- [AutoSize 屬性概觀](../../../../docs/framework/winforms/controls/autosize-property-overview.md)
-- [如何：停駐在 Windows Forms 上控制項](../../../../docs/framework/winforms/controls/how-to-dock-controls-on-windows-forms.md)
-- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](../../../../docs/framework/winforms/controls/walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](../../../../docs/framework/winforms/controls/windows-forms-controls-padding-autosize.md)
+- [Windows Forms 控制項](index.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [AutoSize 屬性概觀](autosize-property-overview.md)
+- [如何：停駐在 Windows Forms 上控制項](how-to-dock-controls-on-windows-forms.md)
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)

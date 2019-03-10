@@ -12,16 +12,17 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 134cda4aa0042323e39966d60a7d51fda54cb954
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 347ca067a5ae5544351f29afe3ebcfe11d0b1e0f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711547"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713233"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>HOW TO：將按鈕加入至 ToolBar 控制項
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
+>  
+  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
  不可或缺的一部分<xref:System.Windows.Forms.ToolBar>控制項是您加入的按鈕。 這些可以用來讓您輕鬆存取功能表命令，或者，或者，他們可以放在您的應用程式的命令公開給您的使用者功能表結構中所沒有的使用者介面的另一個區域。  
   
@@ -150,7 +151,7 @@ ms.locfileid: "54711547"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.ToolBar>
-- [如何：定義工具列按鈕的圖示](../../../../docs/framework/winforms/controls/how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：觸發程序的工具列按鈕的功能表事件](../../../../docs/framework/winforms/controls/how-to-trigger-menu-events-for-toolbar-buttons.md)
-- [工具列控制項概觀](../../../../docs/framework/winforms/controls/toolbar-control-overview-windows-forms.md)
-- [ToolBar 控制項](../../../../docs/framework/winforms/controls/toolbar-control-windows-forms.md)
+- [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
+- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [工具列控制項概觀](toolbar-control-overview-windows-forms.md)
+- [ToolBar 控制項](toolbar-control-windows-forms.md)

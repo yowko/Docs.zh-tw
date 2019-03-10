@@ -10,19 +10,19 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 238d269f9c3d3b2612eab70341200221c5b43d3a
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260916"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719269"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>HOW TO：循環播放 Windows Form 上播放的音效
 下列程式碼範例會重複播放音效。 當 `stopPlayingButton_Click` 事件處理常式中的程式碼執行時，會停止目前正在播放任何聲音。 如果未播放聲音，就不會發生任何事。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
- [!code-vb[System.Media.SoundPlayer.PlayLooping#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
+ [!code-csharp[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/CS/Form1.cs#1)]
+ [!code-vb[System.Media.SoundPlayer.PlayLooping#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Media.SoundPlayer.PlayLooping/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
@@ -55,5 +55,5 @@ ms.locfileid: "56260916"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [如何：從 Windows Form 播放的音效](../../../../docs/framework/winforms/controls/how-to-play-a-sound-from-a-windows-form.md)
-- [SoundPlayer 類別概觀](../../../../docs/framework/winforms/controls/soundplayer-class-overview.md)
+- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [SoundPlayer 類別概觀](soundplayer-class-overview.md)

@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c9d38533d11497bd4404e4f8795d8a1ce9b17df9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491252"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719399"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -67,7 +67,7 @@ instance.Extensions.Add(trackingParticipant);
 此外，對於裝載於 <xref:System.ServiceModel.WorkflowServiceHost> 中的工作流程服務，您可以透過程式碼加入 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行為擴充。 若要加入自訂的追蹤參與者，請建立一個新的行為擴充，並將它加入至 <xref:System.ServiceModel.ServiceHost>，如下列範例程式碼所示。
 
 > [!NOTE]
-> 如果您想要檢視示範如何建立自訂行為項目加入自訂追蹤參與者的範例程式碼，請參閱[追蹤](../../../docs/framework/windows-workflow-foundation/samples/tracking.md)範例。
+> 如果您想要檢視示範如何建立自訂行為項目加入自訂追蹤參與者的範例程式碼，請參閱[追蹤](./samples/tracking.md)範例。
 
 ```csharp
 ServiceHost svcHost = new ServiceHost(typeof(WorkflowService), new
@@ -141,7 +141,7 @@ if (null != workflowServiceHost)
 
 ### <a name="configuring-tracking-using-workflowinvoker"></a>使用 WorkflowInvoker 設定追蹤
 
-若要為使用 <xref:System.Activities.WorkflowInvoker> 執行的工作流程設定追蹤，請加入追蹤提供者做為 <xref:System.Activities.WorkflowInvoker> 執行個體的延伸。 下列程式碼範例取自[自訂追蹤](../../../docs/framework/windows-workflow-foundation/samples/custom-tracking.md)範例。
+若要為使用 <xref:System.Activities.WorkflowInvoker> 執行的工作流程設定追蹤，請加入追蹤提供者做為 <xref:System.Activities.WorkflowInvoker> 執行個體的延伸。 下列程式碼範例取自[自訂追蹤](./samples/custom-tracking.md)範例。
 
 ```csharp
 WorkflowInvoker invoker = new WorkflowInvoker(BuildSampleWorkflow());
@@ -185,7 +185,7 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
 
 下圖顯示事件檢視器中的追蹤事件。
 
-![追蹤記錄的事件檢視器顯示](../../../docs/framework/windows-workflow-foundation/media/trackingeventviewer.PNG "TrackingEventViewer")
+![追蹤記錄的事件檢視器顯示](./media/trackingeventviewer.PNG "TrackingEventViewer")
 
 ### <a name="registering-an-application-specific-provider-id"></a>註冊應用程式特定的提供者識別碼
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: 9702728631f794c0cc8f69a1117da69bc15a0836
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 83be9440eb566740566025c659c0a4909e634b73
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261761"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711170"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>HOW TO：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
@@ -30,8 +30,8 @@ ms.locfileid: "56261761"
  另請參閱[逐步解說：在背景執行作業](walkthrough-running-an-operation-in-the-background.md)。  
   
 ## <a name="example"></a>範例  
- [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
- [!code-vb[System.ComponentModel.BackgroundWorker.Example#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#1)]  
+ [!code-csharp[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#1)]
+ [!code-vb[System.ComponentModel.BackgroundWorker.Example#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
@@ -43,5 +43,5 @@ ms.locfileid: "56261761"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [如何：實作使用背景作業的表單](../../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
-- [BackgroundWorker 元件](../../../../docs/framework/winforms/controls/backgroundworker-component.md)
+- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [BackgroundWorker 元件](backgroundworker-component.md)

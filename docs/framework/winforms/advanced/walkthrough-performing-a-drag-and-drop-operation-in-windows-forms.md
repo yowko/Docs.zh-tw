@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, drag and drop operations
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
-ms.openlocfilehash: b582043b3b576b3750b897b17a5f6e0cbdeb84f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 664c78ce3fff9651acf6ad720360cdb077f23108
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647630"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715239"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>逐步解說：在 Windows Form 中執行拖放作業
 若要執行以 Windows 為基礎的應用程式中的拖放作業，您必須處理一系列的事件，最值得注意的是<xref:System.Windows.Forms.Control.DragEnter>， <xref:System.Windows.Forms.Control.DragLeave>，和<xref:System.Windows.Forms.Control.DragDrop>事件。 使用這些事件的事件引數中所提供的資訊，即可輕鬆地運用拖放作業。  
@@ -107,6 +107,6 @@ ms.locfileid: "54647630"
     >  此外，您可以使用<xref:System.Windows.Forms.DragEventArgs.KeyState%2A>屬性，以便根據索引鍵按下拖放作業期間，會發生特定效果 （例如，它是標準，以在按下 CTRL 鍵時，複製所拖曳的資料）。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：將資料加入至剪貼簿](../../../../docs/framework/winforms/advanced/how-to-add-data-to-the-clipboard.md)
-- [如何：從剪貼簿擷取資料](../../../../docs/framework/winforms/advanced/how-to-retrieve-data-from-the-clipboard.md)
-- [拖放作業和剪貼簿支援](../../../../docs/framework/winforms/advanced/drag-and-drop-operations-and-clipboard-support.md)
+- [如何：將資料加入至剪貼簿](how-to-add-data-to-the-clipboard.md)
+- [如何：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
+- [拖放作業和剪貼簿支援](drag-and-drop-operations-and-clipboard-support.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - base forms
 - inheritance [Windows Forms], forms
 ms.assetid: 1c3f2b29-a05c-4c6f-aa1a-4e66b94f343a
-ms.openlocfilehash: fc0edaa8ca115a09eb6d8382a12d9a7c0c0db7f6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a253fef2bc7220d13c0ca373a38a5bf2f5842415
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260160"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715551"
 ---
 # <a name="effects-of-modifying-a-base-forms-appearance"></a>修改基底表單外觀的效果
 在應用程式開發期間，您通常可能需要變更專案中 (或其他專案中) 的其他表單所繼承之基底表單的外觀。  
@@ -27,5 +27,5 @@ ms.locfileid: "55260160"
   
 ## <a name="see-also"></a>另請參閱
 - [base](~/docs/csharp/language-reference/keywords/base.md)
-- [如何：繼承 Windows Forms](../../../../docs/framework/winforms/advanced/how-to-inherit-windows-forms.md)
-- [Windows Forms 視覺繼承](../../../../docs/framework/winforms/advanced/windows-forms-visual-inheritance.md)
+- [如何：繼承 Windows Forms](how-to-inherit-windows-forms.md)
+- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)

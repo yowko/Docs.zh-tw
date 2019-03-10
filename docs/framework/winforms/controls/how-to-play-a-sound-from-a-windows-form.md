@@ -11,12 +11,12 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 02b0cb2952e11946f994819bb09a55167781137c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607247"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57714706"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>HOW TO：從 Windows Form 播放的音效
 這個範例會在執行階段播放所指定路徑的音效。  
@@ -66,5 +66,5 @@ private void playSimpleSound()
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Media.SoundPlayer>
-- [如何：在 Windows Form 中的非同步載入音效](../../../../docs/framework/winforms/controls/how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+- [如何：在 Windows Form 中的非同步載入音效](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2b84d36bd15d61fb21444e01302da86563cced9c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615958"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719425"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>HOW TO：使用 SaveFileDialog 元件儲存檔案
 <xref:System.Windows.Forms.SaveFileDialog>元件可讓使用者瀏覽檔案系統，然後選取要儲存的檔案。 對話方塊會傳回使用者在對話方塊中所選取之檔案的路徑和名稱。 不過，您必須撰寫程式碼，以實際將檔案寫入至磁碟。  
@@ -32,7 +32,7 @@ ms.locfileid: "54615958"
      在下列範例中，沒有<xref:System.Windows.Forms.Button>控制項指派給它的映像。 當您按一下按鈕，<xref:System.Windows.Forms.SaveFileDialog>元件具現化允許檔案類型.gif、.jpeg 和.bmp 的篩選條件。 如果在 [儲存檔案] 對話方塊中選取這類型的檔案，則會儲存按鈕的影像。  
   
     > [!IMPORTANT]
-    >  取得或設定<xref:System.Windows.Forms.FileDialog.FileName%2A>屬性，您的組件需要權限層級授與由<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>類別。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../docs/framework/misc/code-access-security-basics.md)。  
+    >  取得或設定<xref:System.Windows.Forms.FileDialog.FileName%2A>屬性，您的組件需要權限層級授與由<xref:System.Security.Permissions.FileIOPermission?displayProperty=nameWithType>類別。 若在部分信任內容中執行，程序可能會因為權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../misc/code-access-security-basics.md)。  
   
      此範例假設您的表單具有<xref:System.Windows.Forms.Button>用來控制其<xref:System.Windows.Forms.ButtonBase.Image%2A>屬性設定為 檔案類型.gif、.jpeg 或.bmp。  
   
@@ -179,4 +179,4 @@ ms.locfileid: "54615958"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.SaveFileDialog>
-- [SaveFileDialog 元件](../../../../docs/framework/winforms/controls/savefiledialog-component-windows-forms.md)
+- [SaveFileDialog 元件](savefiledialog-component-windows-forms.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: d972e738305b14f44910acf755e0ffc1d7297e49
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547049"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57719382"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控制項架構
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>類別提供具彈性且可擴充的系統顯示工具列、 狀態和功能表項目。 這些類別包含在<xref:System.Windows.Forms>命名空間和其所有通常以"ToolStrip"前置詞命名 (例如<xref:System.Windows.Forms.ToolStripOverflow>) 或 「 帶狀 」 的後置詞 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -19,7 +19,7 @@ ms.locfileid: "54547049"
   
  <xref:System.Windows.Forms.ToolStrip> 是抽象的基底類別，如<xref:System.Windows.Forms.MenuStrip>， <xref:System.Windows.Forms.StatusStrip>，和<xref:System.Windows.Forms.ContextMenuStrip>。 下列物件模型顯示<xref:System.Windows.Forms.ToolStrip>繼承階層架構。  
   
- ![ToolStrip 物件模型](../../../../docs/framework/winforms/controls/media/toolstripobjectmodel.gif "ToolStripObjectModel")  
+ ![ToolStrip 物件模型](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
 ToolStrip 物件模型  
   
  您可以存取中的所有項目<xref:System.Windows.Forms.ToolStrip>透過<xref:System.Windows.Forms.ToolStrip.Items%2A>集合。 您可以存取中的所有項目<xref:System.Windows.Forms.ToolStripDropDownItem>透過<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A>集合。 從衍生類別中<xref:System.Windows.Forms.ToolStrip>，您也可以使用<xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A>屬性來存取目前顯示這些項目。 這些是目前不是溢位功能表中的項目。  
@@ -251,7 +251,7 @@ ToolStrip 物件模型
   
  <xref:System.Windows.Forms.ToolStripItem> 是抽象的基底類別的所有項目移入<xref:System.Windows.Forms.ToolStrip>。 下列物件模型顯示<xref:System.Windows.Forms.ToolStripItem>繼承階層架構。  
   
- ![ToolStripItem 物件模型](../../../../docs/framework/winforms/controls/media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
+ ![ToolStripItem 物件模型](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
 ToolStripItem 物件模型  
   
  <xref:System.Windows.Forms.ToolStripItem> 類別是直接繼承自<xref:System.Windows.Forms.ToolStripItem>，或它們間接繼承自<xref:System.Windows.Forms.ToolStripItem>透過<xref:System.Windows.Forms.ToolStripControlHost>或<xref:System.Windows.Forms.ToolStripDropDownItem>。  
@@ -379,10 +379,10 @@ ToolStripItem 物件模型
 -   <xref:System.Windows.Forms.ToolStripPanel> 提供位置來移動和排列<xref:System.Windows.Forms.ToolStrip>控制項。 您可以使用只有一個面板，如果您選擇如此，和<xref:System.Windows.Forms.ToolStripPanel>在 MDI 狀況下順利運作。  
   
 ## <a name="see-also"></a>另請參閱
-- [ToolStrip 控制項概觀](../../../../docs/framework/winforms/controls/toolstrip-control-overview-windows-forms.md)
-- [ToolStrip 技術摘要](../../../../docs/framework/winforms/controls/toolstrip-technology-summary.md)
-- [ToolStrip 控制項](../../../../docs/framework/winforms/controls/toolstrip-control-windows-forms.md)
-- [MenuStrip 控制項](../../../../docs/framework/winforms/controls/menustrip-control-windows-forms.md)
-- [StatusStrip 控制項](../../../../docs/framework/winforms/controls/statusstrip-control.md)
-- [ContextMenuStrip 控制項](../../../../docs/framework/winforms/controls/contextmenustrip-control.md)
-- [BindingNavigator 控制項](../../../../docs/framework/winforms/controls/bindingnavigator-control-windows-forms.md)
+- [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)
+- [ToolStrip 技術摘要](toolstrip-technology-summary.md)
+- [ToolStrip 控制項](toolstrip-control-windows-forms.md)
+- [MenuStrip 控制項](menustrip-control-windows-forms.md)
+- [StatusStrip 控制項](statusstrip-control.md)
+- [ContextMenuStrip 控制項](contextmenustrip-control.md)
+- [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)

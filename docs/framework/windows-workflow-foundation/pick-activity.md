@@ -2,19 +2,22 @@
 title: Pick 活動
 ms.date: 03/30/2017
 ms.assetid: b3e49b7f-0285-4720-8c09-11ae18f0d53e
-ms.openlocfilehash: b6a49207c6c2e800c2e894f6223abdf0f5f6820d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 7626dda3689f89831d98ad484d7eab62c25def5b
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33520311"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57717943"
 ---
 # <a name="pick-activity"></a>Pick 活動
-<xref:System.Activities.Statements.Pick> 活動會簡化一組後續有對應處理常式之事件觸發程序的模型。  <xref:System.Activities.Statements.Pick> 活動包含<xref:System.Activities.Statements.PickBranch> 活動的集合，其中每個 <xref:System.Activities.Statements.PickBranch> 是 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活動和 <xref:System.Activities.Statements.PickBranch.Action%2A> 活動間的配對。  在執行時間，會平行執行所有分支的觸發程序。  當一個觸發程序完成時，就會執行對應的動作，然後取消所有其他的觸發程序。  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]<xref:System.Activities.Statements.Pick> 活動的行為與 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity> 活動相似。  
+
+  <xref:System.Activities.Statements.Pick> 活動會簡化一組後續有對應處理常式之事件觸發程序的模型。  <xref:System.Activities.Statements.Pick> 活動包含<xref:System.Activities.Statements.PickBranch> 活動的集合，其中每個 <xref:System.Activities.Statements.PickBranch> 是 <xref:System.Activities.Statements.PickBranch.Trigger%2A> 活動和 <xref:System.Activities.Statements.PickBranch.Action%2A> 活動間的配對。  在執行時間，會平行執行所有分支的觸發程序。  當一個觸發程序完成時，就會執行對應的動作，然後取消所有其他的觸發程序。  
+  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]
+  <xref:System.Activities.Statements.Pick> 活動的行為與 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]<xref:System.Workflow.Activities.ListenActivity> 活動相似。  
   
- 以下螢幕擷取畫面是出自[使用 Pick 活動](../../../docs/framework/windows-workflow-foundation/samples/using-the-pick-activity.md) SDK 範例，示範兩個分支的 Pick 活動。  分支有稱為 [讀取輸入] 的觸發程序，而這是從命令列讀取輸入的自訂活動。 第二個分支有 <xref:System.Activities.Statements.Delay> 活動觸發程序。 如果**讀取輸入**活動接收資料，然後才<xref:System.Activities.Statements.Delay>活動一完成，<xref:System.Activities.Statements.Delay>延遲將會取消，且問候語將會寫入至主控台。  否則，如果在分配的時間內 [讀取輸入] 活動沒有收到資料，就會取消它，並且將逾時訊息寫入主控台。  這是用來將逾時加入至任何動作的常見形式。  
+ 以下螢幕擷取畫面是出自[使用 Pick 活動](./samples/using-the-pick-activity.md) SDK 範例，示範兩個分支的 Pick 活動。  分支有稱為 [讀取輸入] 的觸發程序，而這是從命令列讀取輸入的自訂活動。 第二個分支有 <xref:System.Activities.Statements.Delay> 活動觸發程序。 如果**讀取輸入**活動接收資料，然後才<xref:System.Activities.Statements.Delay>活動完成<xref:System.Activities.Statements.Delay>取消延遲，並且將祝賀詞寫入主控台。  否則，如果在分配的時間內 [讀取輸入] 活動沒有收到資料，就會取消它，並且將逾時訊息寫入主控台。  這是用來將逾時加入至任何動作的常見形式。  
   
- ![Pick 活動](../../../docs/framework/windows-workflow-foundation/media/pickconceptual.JPG "PickConceptual")  
+ ![Pick 活動](./media/pickconceptual.JPG "PickConceptual")  
   
 ## <a name="best-practices"></a>最佳作法  
  使用 Pick 時，執行的分支是先完成其觸發程序的分支。  概念上，所有觸發程序會平行執行，且在一個觸發程序完成而取消另一個觸發程序之前，會先執行其主要邏輯。  請記住，使用 Pick 活動時要遵循的一般指導原則，就是將觸發程序視為單一事件的表示，並盡量少放入邏輯。  理想上，觸發程序應包含剛好足以擷取事件的邏輯，且該事件的所有處理，都應在分支中採取行動。  這個方法會最小化觸發程序間的重疊執行量。  例如，試想具有兩個觸發程序的 <xref:System.Activities.Statements.Pick>，其中每個觸發程序都包含後續有其他邏輯的 <xref:System.ServiceModel.Activities.Receive> 活動。  如果其他邏輯引起閒置點，則很可能兩個 <xref:System.ServiceModel.Activities.Receive> 活動都成功完成。  一個觸發程序會全部完成，而另一個觸發程序會部分完成。  在部分案例中，接受訊息然後完成部分的處理是不被接受的。  因此，當使用例如 <xref:System.ServiceModel.Activities.Receive> 和 <xref:System.ServiceModel.Activities.SendReply> 的內建 WF 訊息活動時 (<xref:System.ServiceModel.Activities.Receive> 常用於觸發程序)，就應盡量讓 <xref:System.ServiceModel.Activities.SendReply> 和其他邏輯採取行動。  

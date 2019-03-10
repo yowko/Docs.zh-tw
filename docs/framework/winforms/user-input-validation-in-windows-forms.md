@@ -7,12 +7,12 @@ helpviewer_keywords:
 - user input [Windows Forms], validating in Windows Forms
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
-ms.openlocfilehash: 87124438118f05d426d5a33c914634922e657c1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb804e6596de14d93ec6f0405480b60c03c7cbf9
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498904"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57711313"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows Form 中的使用者輸入驗證
 當使用者將資料輸入您的應用程式時，您可以確認資料有效，您的應用程式會使用它之前。 您可能需要某些文字欄位不是零長度、 欄位會格式化為電話號碼或其他類型的格式正確的資料，或字串不包含任何不安全的字元可以用來危害的資料庫安全性。 Windows Form 提供幾種方式可以驗證您的應用程式中的輸入。  
@@ -22,14 +22,14 @@ ms.locfileid: "54498904"
   
  所使用的遮罩語言<xref:System.Windows.Forms.MaskedTextBox>極具彈性。 它可讓您指定必要的字元、 選擇性字元、 常值字元，例如連字號和括號、 貨幣字元和日期分隔符號。 控制項也適用於也當繫結至資料來源。 <xref:System.Windows.Forms.Binding.Format>事件的資料繫結可用來將內送的資料，以符合與遮罩，重新格式化和<xref:System.Windows.Forms.Binding.Parse>事件可用來重新格式化傳出的資料，以符合與資料欄位的規格。  
   
- 如需詳細資訊，請參閱 < [MaskedTextBox 控制項](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)。  
+ 如需詳細資訊，請參閱 < [MaskedTextBox 控制項](./controls/maskedtextbox-control-windows-forms.md)。  
   
 ## <a name="event-driven-validation"></a>事件導向的驗證  
  如果您想要完整的程式設計控制驗證，或需要來執行複雜的驗證檢查，您應該使用內建大部分的 Windows Form 控制項的驗證事件。 每個控制項可接受自由格式的使用者輸入具有<xref:System.Windows.Forms.Control.Validating>每當控制項需要資料驗證會發生的事件。 在 <xref:System.Windows.Forms.Control.Validating>事件處理方法，您可以驗證使用者輸入以數種方式。 比方說，如果您有必須包含郵遞區號文字方塊中，您可以透過下列方式來執行驗證：  
   
 -   如果郵遞區號必須屬於特定群組的郵遞區號，您可以執行字串比較，來驗證使用者輸入的資料輸入。 比方說，如果郵遞區號必須是集中 {10001、 10002，10003}，然後您可以使用字串比較的資料進行驗證。  
   
--   如果郵遞區號必須位於特定的表單，您可以使用規則運算式來驗證使用者輸入的資料。 例如，若要驗證的表單`#####`或是`#####-####`，您可以使用規則運算式`^(\d{5})(-\d{4})?$`。 若要驗證的表單`A#A #A#`，您可以使用規則運算式`[A-Z]\d[A-Z] \d[A-Z]\d`。 如需有關規則運算式的詳細資訊，請參閱 < [.NET Framework 規則運算式](../../../docs/standard/base-types/regular-expressions.md)並[規則運算式範例](../../../docs/standard/base-types/regular-expression-examples.md)。  
+-   如果郵遞區號必須位於特定的表單，您可以使用規則運算式來驗證使用者輸入的資料。 例如，若要驗證的表單`#####`或是`#####-####`，您可以使用規則運算式`^(\d{5})(-\d{4})?$`。 若要驗證的表單`A#A #A#`，您可以使用規則運算式`[A-Z]\d[A-Z] \d[A-Z]\d`。 如需有關規則運算式的詳細資訊，請參閱 < [.NET Framework 規則運算式](../../standard/base-types/regular-expressions.md)並[規則運算式範例](../../standard/base-types/regular-expression-examples.md)。  
   
 -   如果郵遞區號必須是有效的美國郵遞區號，您可以呼叫郵遞區號 Web 服務，以驗證使用者輸入的資料。  
   
@@ -94,5 +94,5 @@ ms.locfileid: "54498904"
 - <xref:System.Windows.Forms.Control.Validating?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Form.Closing?displayProperty=nameWithType>
 - <xref:System.ComponentModel.CancelEventArgs?displayProperty=nameWithType>
-- [MaskedTextBox 控制項](../../../docs/framework/winforms/controls/maskedtextbox-control-windows-forms.md)
-- [規則運算式範例](../../../docs/standard/base-types/regular-expression-examples.md)
+- [MaskedTextBox 控制項](./controls/maskedtextbox-control-windows-forms.md)
+- [規則運算式範例](../../standard/base-types/regular-expression-examples.md)
