@@ -1,16 +1,14 @@
 ---
 title: .NET 字彙表
 description: 了解 .NET 文件中所使用之特定詞彙的意義。
-author: tdykstra
-ms.author: tdykstra
 ms.date: 01/22/2019
 ms.technology: dotnet-standard
-ms.openlocfilehash: b9654bf7f6cbc1019d00db986ba883cbab0abbb5
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 2d19ec0b79abdcce9797767d1280d055a9c77a87
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857967"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674506"
 ---
 # <a name="net-glossary"></a>.NET 字彙表
 
@@ -223,7 +221,7 @@ NuGet 套件 (簡稱套件) 是 *.zip* 檔案，其中包含一或多個同名�
 
 .NET 文件經常使用「.NET 平台」來表示 .NET 實作或包含所有實作的 .NET 堆疊。 這兩種用法通常會與主要 (OS/硬體) 意義混淆，因此我們計劃從文件中排除這些用法。
 
-## <a name="runtime"></a>runtime
+## <a name="runtime"></a>執行階段
 
 受管理程式的執行環境。
 

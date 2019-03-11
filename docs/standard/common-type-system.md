@@ -1,17 +1,15 @@
 ---
 title: 一般類型系統和 Common Language Specification
 description: 了解一般型別系統 (CTS) 和 Common Language Specification (CLS) 如何讓 .NET 能夠支援多種語言。
-author: blackdwarf
-ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: 992f70cc7c2e55a0a2cfd08e08a3a9f16aad8c8a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33569544"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675364"
 ---
 # <a name="common-type-system--common-language-specification"></a>一般類型系統和 Common Language Specification
 

@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: fa0e81f6eb54ad01b3f2f84a37499302ff9abd06
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066254"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676365"
 ---
 # <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -78,7 +78,7 @@ Eric Evans 提到，「許多物件沒有概念性身分識別。 這些物件�
 
 值物件在關聯式資料庫和 EF 等 ORM 中很難管理，但在文件導向資料庫中則更容易實作和使用。
 
-EF Core 2.0 包含[擁有的實體](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，可更輕鬆地處理值物件，我們將於稍後看到詳細的說明。
+EF Core 2.0 包含[擁有的實體](https://devblogs.microsoft.com/dotnet/announcing-entity-framework-core-2-0/#owned-entities-and-table-splitting)功能，可更輕鬆地處理值物件，我們將於稍後看到詳細的說明。
 
 #### <a name="additional-resources"></a>其他資源
 
@@ -135,13 +135,13 @@ public class Order : Entity, IAggregateRoot
 
 #### <a name="additional-resources"></a>其他資源
 
-- **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate** (有效的彙總設計 - 第一節：將單一彙總模組化**) (來源 <http://dddcommunity.org/>) \
+- **Vaughn Vernon：Effective Aggregate Design - Part I: Modeling a Single Aggregate (有效的彙總設計 - 第一節：將單一彙總模組化**) (來源 <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_1.pdf>
 
-- **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together** (有效的彙總設計 - 第二節：讓彙總搭配運作**) (來源 <http://dddcommunity.org/>) \
+- **Vaughn Vernon：Effective Aggregate Design - Part II: Making Aggregates Work Together (有效的彙總設計 - 第二節：讓彙總搭配運作**) (來源 <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf>
 
-- **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery** (有效的彙總設計 - 第三節：透過探索取得見解**) (來源 <http://dddcommunity.org/>) \
+- **Vaughn Vernon：Effective Aggregate Design - Part III: Gaining Insight Through Discovery (有效的彙總設計 - 第三節：透過探索取得見解**) (來源 <http://dddcommunity.org/>) \
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak：DDD Tactical Design Patterns** \ (DDD 戰術設計模式)

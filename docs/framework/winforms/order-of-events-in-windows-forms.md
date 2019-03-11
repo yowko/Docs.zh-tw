@@ -9,18 +9,18 @@ helpviewer_keywords:
 - validation events [Windows Forms], order of
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
-ms.openlocfilehash: 814c788285d974db5a8ef2bbaec1368a860c21d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a88fd7b912063af5961a2bb366b42b0f67411f5f
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643958"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57720285"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Form 中事件的順序
-關於 Windows Forms 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 滑鼠輸入事件的順序有關的特定詳細資訊，請參閱[Windows Form 中的滑鼠事件](../../../docs/framework/winforms/mouse-events-in-windows-forms.md)。 如需 Windows Form 中事件的概觀，請參閱 <<c0> [ 事件概觀](../../../docs/framework/winforms/events-overview-windows-forms.md)。 如需結構的事件處理常式的詳細資訊，請參閱[事件處理常式概觀](../../../docs/framework/winforms/event-handlers-overview-windows-forms.md)。  
+關於 Windows Form 應用程式中被引發的事件，程式開發人員會特別關注他們的順序，並且盡力依次處理每個事件。 當遇到需要謹慎處理事件的狀況，例如當您重新繪製部分表單時，對於在執行階段時被引發的事件，感知其精確的順序是必需的。 本主題提供一些有關在應用程式以及控制項存留期中，幾個重要階段裡事件順序的詳細資料。 滑鼠輸入事件的順序有關的特定詳細資訊，請參閱[Windows Form 中的滑鼠事件](mouse-events-in-windows-forms.md)。 如需 Windows Form 中事件的概觀，請參閱 <<c0> [ 事件概觀](events-overview-windows-forms.md)。 如需結構的事件處理常式的詳細資訊，請參閱[事件處理常式概觀](event-handlers-overview-windows-forms.md)。  
   
 ## <a name="application-startup-and-shutdown-events"></a>應用程式啟動和關閉事件  
-  <xref:System.Windows.Forms.Form> 和 <xref:System.Windows.Forms.Control> 類別會公開一組關於應用程式啟動和關閉的事件。 當 Windows Forms 應用程式啟動時，主要表單的啟動事件會依照下列順序引發：  
+  <xref:System.Windows.Forms.Form> 和 <xref:System.Windows.Forms.Control> 類別會公開一組關於應用程式啟動和關閉的事件。 當 Windows Form 應用程式啟動時，主要表單的啟動事件會依照下列順序引發：  
   
 -   <xref:System.Windows.Forms.Control.HandleCreated?displayProperty=nameWithType>  
   
@@ -46,6 +46,7 @@ ms.locfileid: "54643958"
   
 -   <xref:System.Windows.Forms.Form.Deactivate?displayProperty=nameWithType>  
   
+ 
   <xref:System.Windows.Forms.Application> 類別的 <xref:System.Windows.Forms.Application.ApplicationExit> 事件會在主要表單的關閉事件之後引發。  
   
 > [!NOTE]
@@ -81,4 +82,4 @@ ms.locfileid: "54643958"
 -   <xref:System.Windows.Forms.Control.Validated>  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 中建立事件處理常式](../../../docs/framework/winforms/creating-event-handlers-in-windows-forms.md)
+- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)

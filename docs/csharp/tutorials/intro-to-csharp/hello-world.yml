@@ -11,12 +11,12 @@ metadata:
   displayType: two-column
   interactive: csharp
   ms.custom: mvc
-  ms.openlocfilehash: 86c2226796d5632281f2b6b2cb533bfeacebd288
-  ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+  ms.openlocfilehash: ef52031f75bd2004bcb5927524a9c82ac8fbf36f
+  ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
   ms.translationtype: HT
   ms.contentlocale: zh-TW
-  ms.lasthandoff: 01/04/2019
-  ms.locfileid: "54030512"
+  ms.lasthandoff: 03/05/2019
+  ms.locfileid: "57370315"
 items:
 - durationInMinutes: 1
   content: >
@@ -259,7 +259,7 @@ items:
     還有兩個類似的 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A> 方法，也可以搜尋字串中的子字串。 這兩個方法會在字串的開頭或結尾尋找子字串。 嘗試修改先前的範例，以使用 <xref:System.String.StartsWith%2A> 和 <xref:System.String.EndsWith%2A>，而不是 <xref:System.String.Contains%2A>。 在字串的開頭搜尋 "You" 或 "goodbye"。 在字串的結尾搜尋 "You" 或 "goodbye"。
 
 
-    > [!Note]
+    > [!NOTE]
 
     > 當您測試字串結尾的文字時，請注意標點符號。 如果字串是以句號結尾，則檢查的字串也必須以句號結尾。
 

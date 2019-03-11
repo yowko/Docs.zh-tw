@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5220fe58-5aaf-4e8e-8bc3-b78c63025804
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc349e13aba84de8c266442e9be8130e5f8604c2
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b80df56c9f45f7dd195e1f7bbd03063fa30abb3a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219772"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466729"
 ---
 # <a name="regsvcsexe-net-services-installation-tool"></a>Regsvcs.exe (.NET 服務安裝工具)
 .NET 服務安裝工具會執行下列動作：  
@@ -39,13 +39,13 @@ ms.locfileid: "56219772"
 [/nologo] [/quiet]assemblyFile.dll   
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*assemblyFile.dll*|來源組件檔。 這個組件必須以強式名稱簽署。 如需詳細資訊，請參閱[以強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/appdir:<路徑>** |指定應用程式的根目錄。|  
 |**/appname:<應用程式名稱>** |指定要尋找或建立之 COM+ 應用程式的名稱。|  

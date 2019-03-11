@@ -2,12 +2,12 @@
 title: 非同步方法的傳回型別 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: 4587ec66df91683a1fd02f0ec09c09099d922b0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548235"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57368177"
 ---
 # <a name="async-return-types-c"></a>非同步方法的傳回型別 (C#)
 非同步方法可有下列傳回型別：
@@ -24,7 +24,7 @@ ms.locfileid: "54548235"
   
 每個傳回型別在下列其中一節探討，您可以在主題結尾處找到使用全部三種類型的完整範例。  
   
-##  <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> 傳回型別  
+## <a name="BKMK_TaskTReturnType"></a> Task\<TResult\> 傳回型別  
 <xref:System.Threading.Tasks.Task%601> 傳回型別用於非同步方法，此方法包含 [return](../../../../csharp/language-reference/keywords/return.md) (C#) 陳述式，其運算元的類型為 `TResult`。  
   
 在下列範例中，`GetLeisureHours` 非同步方法包含一個傳回整數的 `return` 陳述式。 因此，方法宣告必須指定 `Task<int>` 傳回型別。  <xref:System.Threading.Tasks.Task.FromResult%2A> 非同步方法是傳回字串作業的預留位置。
@@ -40,7 +40,7 @@ ms.locfileid: "54548235"
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   
-##  <a name="BKMK_TaskReturnType"></a> 工作傳回型別  
+## <a name="BKMK_TaskReturnType"></a> 工作傳回型別  
 不包含 `return` 陳述式的非同步方法，或包含不會傳回運算元的 `return` 陳述式的非同步方法，通常具有傳回型別 <xref:System.Threading.Tasks.Task>。 這類方法如果以同步方式執行，會傳回 `void`。 如果您針對非同步方法使用 <xref:System.Threading.Tasks.Task> 傳回型別，則除非被呼叫的非同步方法完成，否則呼叫的方法可以使用 `await` 運算子暫止呼叫端完成。  
   
 在下列範例中，`WaitAndApologize` 非同步方法不包含 `return` 陳述式，所以方法傳回 <xref:System.Threading.Tasks.Task> 物件。 這就讓 `WaitAndApologize` 成為等候的。 請注意，<xref:System.Threading.Tasks.Task> 類型不包含 `Result` 屬性，因為它沒有傳回值。  
@@ -55,7 +55,7 @@ ms.locfileid: "54548235"
  
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns2a.cs#1)]  
  
-##  <a name="BKMK_VoidReturnType"></a> Void 傳回型別
+## <a name="BKMK_VoidReturnType"></a> Void 傳回型別
 
 您在非同步事件處理常式中使用 `void` 傳回型別，這需要 `void` 傳回型別。 對於不傳回值的事件處理常式以外的方法，您應該要改傳回 <xref:System.Threading.Tasks.Task>，因為傳回 `void` 的非同步方法不能是等候的。 這種方法的任何呼叫端必須要能夠繼續完成而不需等待呼叫的非同步方法完成，且呼叫端必須與非同步方法產生的任何值或例外狀況無關。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - typeparamref C# XML tag
 - <typeparamref> C# XML tag
 ms.assetid: 6d8ffc58-12c5-4688-8db6-833a7ded5886
-ms.openlocfilehash: 0ee9e3571ab601f56ddee2fd9a02bb19f50bac62
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a9b0b9dec09e891105336b3cf0088ed279386d13
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967356"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471923"
 ---
 # <a name="typeparamref-c-programming-guide"></a>\<typeparamref> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -22,7 +22,7 @@ ms.locfileid: "56967356"
 <typeparamref name="name"/>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `name`  
  型別參數的名稱。 以雙引號 (" ") 括住名稱。  
   

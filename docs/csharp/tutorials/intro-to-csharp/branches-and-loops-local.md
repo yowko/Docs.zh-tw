@@ -3,12 +3,12 @@ title: 分支和迴圈 - C# 教學課程簡介
 description: 在這個關於分支和迴圈的教學課程中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: bfb260ccfd0cf2b922c1bc3eaa98aa2c26b464d8
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153770"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677782"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>透過分支和迴圈陳述式了解條件式邏輯
 
@@ -20,7 +20,7 @@ ms.locfileid: "53153770"
 
 建立名為 **branches-tutorial** 的目錄。 將該目錄設為目前的目錄，並執行 `dotnet new console -n BranchesAndLoops -o .`。 此命令會在目前的目錄中建立新的 .NET Core 主控台應用程式。
 
-在您最愛的編輯器中開啟 **Program.cs**，並以下列程式碼取代 `Console.Writeline("Hello World!");` 程式碼行：
+在您最愛的編輯器中開啟 **Program.cs**，並以下列程式碼取代 `Console.WriteLine("Hello World!");` 程式碼行：
 
 ```csharp
 int a = 5;
@@ -31,7 +31,7 @@ if (a + b > 10)
 
 在主控台視窗中鍵入 `dotnet run` 來嘗試此程式碼。 您應該會看見訊息 "The answer is greater than 10" 顯示於主控台中。
 
-修改 `b` 的宣告，讓總和小於 10： 
+修改 `b` 的宣告，讓總和小於 10：
 
 ```csharp
 int b = 3;
@@ -63,7 +63,8 @@ else
 
 > [!IMPORTANT]
 > `if` 和 `else` 陳述式之下的縮排是為了方便人類閱讀。
-> C# 語言不會將縮排或空白字元視為有意義的內容。 `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。
+> C# 語言不會將縮排或空白字元視為有意義的內容。
+> `if` 或 `else` 關鍵字之後的陳述式將會根據條件來執行。 此教學課程中的所有範例都遵循常見的實務，根據陳述式的控制流程縮排程式碼行。
 
 因為縮排沒有意義，當您要依條件執行的區塊中有超過一個陳述式時，就需要使用 `{` 和 `}` 來表示。 C# 程式設計人員通常會在所有的 `if` 和 `else` 子句上使用這些大括號。 下列範例與您剛剛所建立的內容相同。 修改程式碼，使它符合下列程式碼：
 
@@ -158,7 +159,7 @@ namespace BranchesAndLoops
             {
                 Console.WriteLine("The answer is not greater than 10");
                 Console.WriteLine("And the first number is not greater than the second");
-            }            
+            }
         }
 
         static void Main(string[] args)
@@ -218,7 +219,7 @@ do
 for(int index = 0; index < 10; index++)
 {
     Console.WriteLine($"Hello World! The index is {index}");
-} 
+}
 ```
 
 這與先前使用的 `while` 迴圈和 `do` 迴圈有相同的功能。 `for` 陳述式有三個部分來控制其運作方式。
@@ -252,7 +253,7 @@ for(int index = 0; index < 10; index++)
 
 您可以在下列主題中深入了解這些概念：
 
-[If 和 else 陳述式](../../language-reference/keywords/if-else.md)  
-[While 陳述式](../../language-reference/keywords/while.md)  
-[Do 陳述式](../../language-reference/keywords/do.md)  
-[For 陳述式](../../language-reference/keywords/for.md)  
+- [If 和 else 陳述式](../../language-reference/keywords/if-else.md)
+- [While 陳述式](../../language-reference/keywords/while.md)
+- [Do 陳述式](../../language-reference/keywords/do.md)
+- [For 陳述式](../../language-reference/keywords/for.md)

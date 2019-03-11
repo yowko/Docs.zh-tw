@@ -5,16 +5,19 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 08e5f31502555ed1a04a6a4afa70bc98e8fd015a
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57250958"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57466943"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>什麼是 ML.NET 以及如何了解機器學習服務的基本概念？
 
 ML.NET 是免費的跨平台開放原始碼機器學習服務架構，可供您建置量身打造的機器學習解決方案，以及與您的 .NET 應用程式相整合。 您可利用 ML.NET API，使用已具備的 .NET 技能，完全無須離開 .NET，即可在您的應用程式中納入 AI。
+
+> [!NOTE]
+> 此文件指的是 ML.NET，它目前處於預覽階段。 資料可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
 
 ## <a name="what-is-machine-learning"></a>什麼是機器學習服務？
 

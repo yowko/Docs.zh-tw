@@ -2,12 +2,12 @@
 title: 集合 (C#)
 ms.date: 07/20/2015
 ms.assetid: 317d7dc3-8587-4873-8b3e-556f86497939
-ms.openlocfilehash: ddbbc60c497b324bdeb2614149569d5de5f4c114
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: d5e3aeab2e035ec2b5f97fd41c84ffa7625ba0b4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675409"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57373435"
 ---
 # <a name="collections-c"></a>集合 (C#)
 在許多應用程式中，您想要建立和管理相關物件的群組。 有兩種方式可以群組物件：建立物件的陣列和建立物件的集合。  
@@ -193,7 +193,7 @@ public class Galaxy
   
  下表列出 <xref:System.Collections.Generic?displayProperty=nameWithType> 命名空間的一些常用類別：  
 
-|類別|描述| 
+|類別|說明| 
 |---|---|  
 |<xref:System.Collections.Generic.Dictionary%602>|表示根據索引鍵所整理的索引鍵/值組集合。|  
 |<xref:System.Collections.Generic.List%601>|表示可以依照索引存取的物件清單。 提供搜尋、排序和修改清單的方法。|  
@@ -219,7 +219,7 @@ public class Galaxy
   
  下表列出 `System.Collections` 命名空間的一些常用類別：  
   
-|類別|描述|  
+|類別|說明|  
 |---|---|  
 |<xref:System.Collections.ArrayList>|代表會視需要動態增加大小的物件陣列。|  
 |<xref:System.Collections.Hashtable>|代表根據索引鍵的雜湊程式碼，所整理的索引鍵/值組集合。|  
@@ -541,7 +541,7 @@ public class Color
 ```  
 
 <a name="BKMK_Iterators"></a> 
-##  <a name="iterators"></a>迭代器  
+## <a name="iterators"></a>迭代器  
  「迭代器」是用來在集合上執行自訂反覆項目。 迭代器可以是方法或 `get` 存取子。 迭代器會使用 [yield return](../../../csharp/language-reference/keywords/yield.md) 陳述式，一次一個地傳回集合中的每個項目。  
   
  您會使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 陳述式來呼叫迭代器。 `foreach` 迴圈的每個反覆項目都會呼叫迭代器。 在迭代器中到達 `yield return` 陳述式時，會傳回運算式，並保留程式碼中的目前位置。 下一次呼叫迭代器時，便會從這個位置重新開始執行。  

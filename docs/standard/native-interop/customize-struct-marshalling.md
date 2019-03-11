@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: c4d2d84a59aebedda2d1e6380caeef170051c0a3
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411396"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675780"
 ---
 # <a name="customizing-structure-marshalling"></a>自訂結構封送處理
 
@@ -65,7 +65,7 @@ struct WinBool
 };
 ```
 
-使用下面的 `UmanagedType.U1` 或 `UnmanagedType.I1` 值，您可以告訴執行階段將 `b` 欄位封送處理為 1 位元的原生 `bool` 類型。
+使用下面的 `UnmanagedType.U1` 或 `UnmanagedType.I1` 值，您可以告訴執行階段將 `b` 欄位封送處理為 1 位元的原生 `bool` 類型。
 
 ```csharp
 public struct CBool
@@ -342,7 +342,7 @@ struct Currency
 在 Windows 上，您可以將 `object` 型別欄位封送處理為機器碼。 您可以將這些欄位封送處理為下列三種類型的其中一種：
 - [`VARIANT`](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)
 - [`IUnknown*`](/windows/desktop/api/unknwn/nn-unknwn-iunknown)
-- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch). 
+- [`IDispatch*`](/windows/desktop/api/oaidl/nn-oaidl-idispatch)
 
 根據預設，`object` 型別的欄位將會封送處理為會封裝物件的 `IUnknown*`。
 

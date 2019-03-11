@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec0a8d63-11b3-4acd-b398-da1e37e97382
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 286399a7049f47640ccef07e834ee47a0761b963
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: da36cfb86aae52af90451e92b8b17088e29481da
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219019"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57481751"
 ---
 # <a name="tlbimpexe-type-library-importer"></a>Tlbimp.exe (類型程式庫匯入工具)
 類型程式庫匯入工具會將 COM 類型程式庫中找到的類型定義轉換為通用語言執行平台組件中的對等定義。 Tlbimp.exe 的輸出是二進位檔案 (組件)，它包含原始類型程式庫中所定義類型的執行階段中繼資料。 您可以使用像是 [Ildasm.exe](ildasm-exe-il-disassembler.md) 這類工具來檢查這個檔案。  
@@ -32,13 +32,13 @@ ms.locfileid: "56219019"
 tlbimp tlbFile [options]  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |*tlbFile*|任何包含 COM 類型程式庫之檔案的名稱。|  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**/asmversion:** *versionnumber*|指定要產生之組件的版本號碼。 以 *major.minor.build.revision* 格式指定 *versionnumber*。|  
 |**/company:** `companyinformation`|將公司資訊加入至輸出組件。|  

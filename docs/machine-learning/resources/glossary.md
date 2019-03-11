@@ -2,17 +2,20 @@
 title: 機器學習字彙 - ML.NET
 description: 對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習詞彙。
 ms.custom: seodec18
-ms.date: 12/20/2018
-ms.openlocfilehash: 3dfa17e9264bf913465adb63ce0a90a9d196e617
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.date: 03/05/2019
+ms.openlocfilehash: 52f4aa7300edbbdabcc37d7710654dab455d27b0
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092432"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57498896"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機器學習詞彙的重要字詞
 
 以下清單匯集了對於您在 ML.NET 中建置自訂模型來說，相當實用的重要機器學習字詞。
+
+> [!NOTE]
+> 此文件指的是 ML.NET，它目前處於預覽階段。 資料可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
 
 ## <a name="accuracy"></a>準確率
 

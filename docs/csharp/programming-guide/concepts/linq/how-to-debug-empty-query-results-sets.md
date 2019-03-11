@@ -1,15 +1,15 @@
 ---
-title: HOW TO：偵錯空的查詢結果集 (C#)
+title: 作法：偵錯空的查詢結果集 (C#)
 ms.date: 07/20/2015
 ms.assetid: b569f0dc-425e-45a6-acbf-770fb761c981
-ms.openlocfilehash: 0503c09bbdd28276ea4fdc1147e0bca5471fa6e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d77a92acf54420b5add3bb9ae8b3f0b8c5448d18
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723179"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57357907"
 ---
-# <a name="how-to-debug-empty-query-results-sets-c"></a>HOW TO：偵錯空的查詢結果集 (C#)
+# <a name="how-to-debug-empty-query-results-sets-c"></a>作法：偵錯空的查詢結果集 (C#)
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
   
  本主題中的第一組範例會顯示將 XML 載入預設命名空間而且查詢錯誤的常見方式。  
@@ -50,7 +50,7 @@ End of result set
 ## <a name="example"></a>範例  
  此範例顯示 XML 在命名空間中的建立，以及編碼正確的查詢。  
   
- 解決方案是要宣告與初始化 <xref:System.Xml.Linq.XNamespace> 物件，並在指定 <xref:System.Xml.Linq.XName> 物件時使用。 在這個情況下，<xref:System.Xml.Linq.XElement.Elements%2A> 方法的引數為 <xref:System.Xml.Linq.XName> 物件。  
+ 解決方案是要宣告與初始化 <xref:System.Xml.Linq.XNamespace> 物件，並在指定 <xref:System.Xml.Linq.XName> 物件時使用。 在這個情況下，<xref:System.Xml.Linq.XContainer.Elements%2A> 方法的引數為 <xref:System.Xml.Linq.XName> 物件。  
   
 ```csharp  
 XElement root = XElement.Parse(  

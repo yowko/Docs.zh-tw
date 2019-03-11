@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d5fe3d3b913724729bb7cc8582450dfb6f50ee53
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54223191"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57492253"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (組件連結器)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54223191"
 al sources options
 ```
 
-#### <a name="parameters"></a>參數
+## <a name="parameters"></a>參數
 
 您可以指定一個或多個下列 `sources`。
 

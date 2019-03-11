@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcf1afdadf9294981674d7e007a6bbda2268969d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701829"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496816"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (Managed 特性指引最佳化工具)
 
@@ -41,7 +41,7 @@ mpgo –Scenario <command> [-Import <directory>] –AssemblyList <assembly1>  <a
 mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  Mpgo.exe 的所有引數都不區分大小寫。 命令前面會加上虛線。  
   
 > [!NOTE]

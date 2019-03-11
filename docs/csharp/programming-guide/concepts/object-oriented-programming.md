@@ -2,12 +2,12 @@
 title: 物件導向程式設計 (C#)
 ms.date: 07/20/2015
 ms.assetid: 89574786-65ef-4335-88bc-fbacd094f183
-ms.openlocfilehash: 8f7a810b3f3ec74723ca5e715b7428e1b60928f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7822b9afa4b568563222d6096ea1b1ecc5d5ee0a
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702479"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377920"
 ---
 # <a name="object-oriented-programming-c"></a>物件導向程式設計 (C#)
 C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完整支援。  
@@ -54,7 +54,7 @@ C# 為包括封裝、繼承和多型在內的物件導向程式設計提供完�
   
 -   [委派](#Delegates)  
   
-##  <a name="Classes"></a>類別與物件  
+## <a name="Classes"></a>類別與物件  
  「類別」和「物件」有時會交換使用，但事實上，類別說的是物件的「型別」，而物件則是類別之可使用的「執行個體」。 因此，建立物件的動作稱為「具現化」。 再以藍圖作比喻，若類別是藍圖，物件就是根據藍圖所蓋的建築物。  
   
  若要定義類別：  
@@ -81,10 +81,10 @@ struct SampleStruct
   
 -   [struct](../../../csharp/language-reference/keywords/struct.md)  
   
-###  <a name="Members"></a> 類別成員  
+### <a name="Members"></a> 類別成員  
  每個類別都有不同的「類別成員」，包括描述類別資料的屬性、定義類別行為的方法，以及提供不同類別與物件之間通訊的事件。  
   
-####  <a name="Properties"></a> 屬性與欄位  
+#### <a name="Properties"></a> 屬性與欄位  
  欄位和屬性表示物件包含的資訊。 欄位就像是變數，可直接讀取或設定。  
   
  若要定義欄位：  
@@ -133,7 +133,7 @@ class SampleClass
   
 -   [set](../../../csharp/language-reference/keywords/set.md)  
   
-####  <a name="Methods"></a> 方法  
+#### <a name="Methods"></a> 方法  
  「方法」是物件可執行的動作。  
   
  若要定義類別的方法：  
@@ -165,7 +165,7 @@ public int sampleMethod(int sampleParam) {}
   
 -   [擴充方法](../../../csharp/programming-guide/classes-and-structs/extension-methods.md)  
   
-####  <a name="Constructors"></a> 建構函式  
+#### <a name="Constructors"></a> 建構函式  
  建構函式是類別方法，會在建立指定類型的物件時自動執行。 建構函式通常用來初始化新物件的資料成員， 而且只能在建立類別時執行一次。 此外，建構函式中的程式碼永遠會在類別中的任何其他程式碼執行之前執行。 不過，就和其他任何方法一樣，您可以建立多個建構函式多載。  
   
  若要定義類別的建構函式：  
@@ -184,12 +184,12 @@ public class SampleClass
   
  [建構函式](../../../csharp/programming-guide/classes-and-structs/constructors.md)。  
   
-####  <a name="Finalizers"></a> 完成項  
+#### <a name="Finalizers"></a> 完成項  
  完成項是用來解構類別的執行個體。 在 .NET Framework 中，記憶體回收行程會自動管理應用程式中 Managed 物件的記憶體配置及釋放。 不過，您可能仍需要使用完成項來清除應用程式建立的任何 Unmanaged 資源。 一個類別只能有一個完成項。  
   
  如需 .NET Framework 的完成項和記憶體回收的詳細資訊，請參閱[記憶體回收](../../../standard/garbage-collection/index.md)。  
   
-####  <a name="Events"></a> 事件  
+#### <a name="Events"></a> 事件  
  事件可讓類別或物件在某些相關的事情發生時，告知其他類別或物件。 傳送 (或引發) 事件的類別稱為「發行者」，而接收 (或處理) 事件的類別則稱為「訂閱者」。 如需事件的詳細資訊以及如何引發和處理事件，請參閱[處理和引發事件](../../../standard/events/index.md)。  
   
 -   若要宣告類別中的事件，請使用 [event](../../../csharp/language-reference/keywords/event.md) 關鍵字。  
@@ -198,7 +198,7 @@ public class SampleClass
   
 -   若要訂閱事件，請使用 `+=` 運算子；若要取消訂閱事件，則使用 `-=` 運算子。  
   
-####  <a name="NestedClasses"></a>巢狀類別  
+#### <a name="NestedClasses"></a>巢狀類別  
  在類別中定義的另一個類別即稱為「巢狀」類別。 巢狀類別預設為私用。  
   
 ```csharp  
@@ -217,7 +217,7 @@ class Container
 Container.Nested nestedInstance = new Container.Nested()  
 ```  
   
-###  <a name="AccessModifiers"></a> 存取修飾詞與存取層級  
+### <a name="AccessModifiers"></a> 存取修飾詞與存取層級  
  所有類別及類別成員都可以使用「存取修飾詞」，指定要提供給其他類別的存取層級。  
   
  下列為可用的存取修飾詞：  
@@ -233,7 +233,7 @@ Container.Nested nestedInstance = new Container.Nested()
   
  如需詳細資訊，請參閱[存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)。  
   
-###  <a name="InstantiatingClasses"></a> 具現化類別  
+### <a name="InstantiatingClasses"></a> 具現化類別  
  若要建立物件，您必須將類別執行個體化，或是建立類別執行個體。  
   
 ```csharp  
@@ -263,7 +263,7 @@ SampleClass sampleObject = new SampleClass
   
 -   [物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)  
   
-###  <a name="Static"></a> 靜態類別與成員  
+### <a name="Static"></a> 靜態類別與成員  
  類別的靜態成員是類別所有執行個體共用的屬性、程序或欄位。  
   
  定義靜態成員：  
@@ -285,7 +285,7 @@ Console.WriteLine(SampleClass.SampleString);
   
  如需詳細資訊，請參閱[靜態](../../../csharp/language-reference/keywords/static.md)。  
   
-###  <a name="AnonymousTypes"></a> 匿名型別  
+### <a name="AnonymousTypes"></a> 匿名型別  
  使用匿名類型建立物件時，您不需要撰寫資料類型的類別定義， 編譯器 (Compiler) 會自動幫您建立類別 (Class)。 這個類別沒有可使用的名稱，但是包含您在宣告物件時指定的屬性。  
   
  若要建立匿名類型的執行個體：  
@@ -298,7 +298,7 @@ var sampleObject =
   
  如需詳細資訊，請參閱:[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。  
   
-##  <a name="Inheritance"></a> 繼承  
+## <a name="Inheritance"></a> 繼承  
  繼承可讓您建立新類別以重複使用、擴充和修改其他類別中定義的行為。 成員被繼承的類別稱為「基底類別」，而繼承這種成員的類別即稱為「衍生類別」。 不過，C# 中的所有類別都隱含繼承 <xref:System.Object> 類別，這個類別會支援 .NET 類別階層架構，並為所有類別提供低階服務。  
   
 > [!NOTE]
@@ -330,7 +330,7 @@ public abstract class B { }
   
 -   [abstract](../../../csharp/language-reference/keywords/abstract.md)  
   
-###  <a name="Overriding"></a> 覆寫成員  
+### <a name="Overriding"></a> 覆寫成員  
  衍生類別預設會從其基底類別繼承所有成員。 如果想要變更所繼承成員的行為，您必須覆寫這個成員。 也就是說，您可以定義衍生類別中方法、屬性或事件的新實作。  
   
  下列修飾詞是用來控制如何覆寫屬性及方法：  
@@ -342,7 +342,7 @@ public abstract class B { }
 |[abstract](../../../csharp/language-reference/keywords/abstract.md)|要求在衍生類別中覆寫類別成員。|  
 |[new 修飾詞](../../../csharp/language-reference/keywords/new-modifier.md)|隱藏繼承自基底類別的成員。|  
   
-##  <a name="Interfaces"></a> 介面  
+## <a name="Interfaces"></a> 介面  
  介面就像類別，可定義屬性、方法和事件集。 但與類別不同的是，介面並不提供實作。 介面是由類別實作，並定義為與類別不同的實體。 介面就代表著一種合約，因為實作介面的類別必須完全依介面的定義來實作這個介面的各個方面。  
   
  若要定義介面：  
@@ -372,7 +372,7 @@ class SampleClass : ISampleInterface
   
  [interface](../../../csharp/language-reference/keywords/interface.md)  
   
-##  <a name="Generics"></a> 泛型  
+## <a name="Generics"></a> 泛型  
  .NET Framework 中的類別、結構、介面和方法可以包括「型別參數」，這些參數會定義可儲存或使用之物件的類型。 泛型最常見的範例是集合，您可以在其中指定要儲存於集合之物件的類型。  
   
  若要定義泛型類別：  
@@ -397,7 +397,7 @@ sampleObject.Field = "Sample string";
   
 -   [泛型](../../../csharp/programming-guide/generics/index.md)  
   
-##  <a name="Delegates"></a> 委派  
+## <a name="Delegates"></a> 委派  
  「委派」是定義方法簽章的類型，可以提供任何具有相容簽章之方法的參考。 您可以透過委派叫用 (Invoke) 或呼叫方法。 委派可以用來將方法當做引數傳遞給其他方法。  
   
 > [!NOTE]

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb1fed9455add5a6fa48443bc7b862112b74a871
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220636"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496829"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows 執行階段中繼資料匯出工具)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 中繼資料匯出工具 (Winmdexp.exe) 會將 .NET Framework 模組轉換為包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中繼資料的檔案。 雖然 .NET Framework 組件和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中繼資料檔案使用相同的實體格式，但是中繼資料資料表的內容有些差異，也就是說，.NET Framework 組件不會自動做為 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件使用。 將 .NET Framework 模組轉換為 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件的程序稱為「匯出」。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，產生的 Windows 中繼資料 (.winmd) 檔案同時包含中繼資料和實作。  
@@ -29,9 +29,9 @@ ms.locfileid: "56220636"
 winmdexp [options] winmdmodule  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
-|引數或選項|描述|  
+|引數或選項|說明|  
 |------------------------|-----------------|  
 |`winmdmodule`|指定要匯出的模組 (.winmdobj)。 只允許一個模組。 若要建立這個模組，請使用 `/target` 編譯器選項搭配 `winmdobj` 目標。 請參閱 [/target:winmdobj (C# 編譯器選項)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md) 或 [/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md)。|  
 |`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|指定 Winmdexp.exe 將產生的輸出 XML 文件檔。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，輸出檔案基本上與輸入 XML 文件檔相同。|  

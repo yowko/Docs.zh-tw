@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <example> C# XML tag
 - example C# XML tag
 ms.assetid: 32d6e73b-2554-4abb-83ee-a1e321334fd2
-ms.openlocfilehash: e7a829596d167e470790294f19e2d5b5aa86cfcf
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 16b4e8d2d62c2930411bb61abd4d4b65ab7989fc
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972816"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57487833"
 ---
 # <a name="example-c-programming-guide"></a>\<example> (C# 程式設計指南)
 ## <a name="syntax"></a>語法  
@@ -23,7 +23,7 @@ ms.locfileid: "56972816"
 <example>description</example>  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
  `description`  
  程式碼範例的描述。  
   

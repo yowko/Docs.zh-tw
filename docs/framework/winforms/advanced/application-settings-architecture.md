@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: 0e26684933ee2e35dfb0daa52588c2c87505f3f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687241"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57710676"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -34,12 +34,12 @@ ms.locfileid: "54687241"
   
 -   在設定變更之前或儲存之前驗證設定  
   
- 可以使用多個定義內的屬性所設定的描述<xref:System.Configuration>命名空間; 這些所述[應用程式設定屬性](../../../../docs/framework/winforms/advanced/application-settings-attributes.md)。 當您定義一項設定時，您就必須將它套用以<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>，其中描述此設定套用至整個應用程式，或只用於目前的使用者。  
+ 可以使用多個定義內的屬性所設定的描述<xref:System.Configuration>命名空間; 這些所述[應用程式設定屬性](application-settings-attributes.md)。 當您定義一項設定時，您就必須將它套用以<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>，其中描述此設定套用至整個應用程式，或只用於目前的使用者。  
   
  下列程式碼範例定義具有單一設定的自訂設定類別：`BackgroundColor`。  
   
- [!code-csharp[ApplicationSettings.Create#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
- [!code-vb[ApplicationSettings.Create#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
+ [!code-csharp[ApplicationSettings.Create#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Create/CS/MyAppSettings.cs#1)]
+ [!code-vb[ApplicationSettings.Create#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Create/VB/MyAppSettings.vb#1)]  
   
 ## <a name="settings-persistence"></a>設定持續性  
  <xref:System.Configuration.ApplicationSettingsBase>類別不會自行保存或載入設定，這項工作由設定提供者類別衍生自<xref:System.Configuration.SettingsProvider>。 如果在衍生類別的<xref:System.Configuration.ApplicationSettingsBase>未指定設定提供者透過<xref:System.Configuration.SettingsProviderAttribute>，則預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會使用。  
@@ -88,7 +88,7 @@ ms.locfileid: "54687241"
 </configuration>  
 ```  
   
- 如需組態檔的應用程式設定區段中的元素定義，請參閱[應用程式設定結構描述](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)。  
+ 如需組態檔的應用程式設定區段中的元素定義，請參閱[應用程式設定結構描述](../../configure-apps/file-schema/application-settings-schema.md)。  
   
 ### <a name="settings-bindings"></a>設定繫結關係  
  應用程式設定使用 Windows Forms 資料繫結架構，提供設定物件和元件之間設定更新的雙向通訊。 如果您使用 Visual Studio 建立應用程式設定，並將它們指派給元件的屬性，則會自動產生這些繫結關係。  
@@ -106,7 +106,7 @@ ms.locfileid: "54687241"
   
 3.  根據設定的屬性，判斷哪些設定在哪些檔案中。  
   
- 如果您實作您自己的設定類別，您可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>將設定標示為針對二進位或自訂序列化使用<xref:System.Configuration.SettingsSerializeAs>列舉型別。 如需有關如何在程式碼中建立您自己的設定類別的詳細資訊，請參閱[How to:建立應用程式設定](../../../../docs/framework/winforms/advanced/how-to-create-application-settings.md)。  
+ 如果您實作您自己的設定類別，您可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>將設定標示為針對二進位或自訂序列化使用<xref:System.Configuration.SettingsSerializeAs>列舉型別。 如需有關如何在程式碼中建立您自己的設定類別的詳細資訊，請參閱[How to:建立應用程式設定](how-to-create-application-settings.md)。  
   
 ### <a name="settings-file-locations"></a>設定檔案位置  
  根據應用程式的安裝方式，`app`.exe.config 和 *user*.config 檔案的位置會有所不同。 Windows Forms 應用程式複製到本機電腦，如`app`.exe.config 所在相同的目錄，做為基底目錄的應用程式的主要可執行檔，並*使用者*.config 位於所指定的位置<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>屬性。 對於透過 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 安裝的應用程式，這兩個檔案都位於 %InstallRoot%\Documents and Settings\\*username*\Local Settings 下的 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 資料目錄中。  
@@ -127,8 +127,8 @@ ms.locfileid: "54687241"
   
  您的提供者必須實作一個屬性和一個方法，其實作可能不明顯。 <xref:System.Configuration.SettingsProvider.ApplicationName%2A>屬性是抽象屬性<xref:System.Configuration.SettingsProvider>; 您應設計程式，它會傳回下列：  
   
- [!code-csharp[ApplicationSettings.Architecture#2](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
- [!code-vb[ApplicationSettings.Architecture#2](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
+ [!code-csharp[ApplicationSettings.Architecture#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#2)]
+ [!code-vb[ApplicationSettings.Architecture#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#2)]  
   
  您的衍生類別也必須實作 `Initialize` 方法，不接受任何引數，也不傳回任何值。 這個方法不由定義<xref:System.Configuration.SettingsProvider>。  
   
@@ -136,8 +136,8 @@ ms.locfileid: "54687241"
   
  實作並編譯您的提供者之後，您必須指示設定類別使用此提供者來代替預設值。 完成這項工作<xref:System.Configuration.SettingsProviderAttribute>。 如果套用至整個設定類別，提供者用於每個類別定義的設定如果套用至個別的設定，應用程式設定架構的這些設定，請使用該提供者，並使用<xref:System.Configuration.LocalFileSettingsProvider>其餘部分。 下列程式碼範例示範如何指示設定類別來使用您的自訂提供者。  
   
- [!code-csharp[ApplicationSettings.Architecture#1](../../../../samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
- [!code-vb[ApplicationSettings.Architecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
+ [!code-csharp[ApplicationSettings.Architecture#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ApplicationSettings.Architecture/CS/DummyClass.cs#1)]
+ [!code-vb[ApplicationSettings.Architecture#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ApplicationSettings.Architecture/VB/DummyProviderClass.vb#1)]  
   
  一個提供者可供多個執行緒同時呼叫，但永遠寫入相同的儲存位置。因此，應用程式設定架構只會具現化提供者類別的單一執行個體。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "54687241"
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
-- [應用程式設定概觀](../../../../docs/framework/winforms/advanced/application-settings-overview.md)
-- [Application Settings for Custom Controls](../../../../docs/framework/winforms/advanced/application-settings-for-custom-controls.md)
+- [應用程式設定概觀](application-settings-overview.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
 - [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)
-- [應用程式設定結構描述](../../../../docs/framework/configure-apps/file-schema/application-settings-schema.md)
+- [應用程式設定結構描述](../../configure-apps/file-schema/application-settings-schema.md)

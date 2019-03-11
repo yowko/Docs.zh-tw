@@ -4,6 +4,7 @@ description: 了解如何執行特定工作協助建立自訂 AI 解決方案，
 ms.custom: seodec18
 ms.date: 03/01/2019
 ---
+
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 機器學習操作指南 - ML.NET
 
 您可以在《ML.NET 指南》的＜操作說明＞一節中尋找常見問題的正確解答。 在某些情況下，文章可能會同時列在多個小節中，以利使用者搜尋。
@@ -44,7 +45,7 @@ ms.date: 03/01/2019
 
 * [套用功能工程以使用 ML.NET 對文字資料進行模型定型。](train-model-textual-ml-net.md)
 
-## <a name="run"></a>執行 
+## <a name="run"></a>執行
 
 * [在 ML.NET 管線處理期間檢查中繼資料值。](inspect-intermediate-data-ml-net.md)
 
@@ -52,7 +53,6 @@ ms.date: 03/01/2019
 
 * [使用 PredictionFunction 一次進行一個預測。](single-predict-model-ml-net.md)
 
-## <a name="probabalistic-infernet"></a>概率 (Infer.NET)
+## <a name="probabilistic-infernet"></a>概率 (Infer.NET)
 
 * [使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式。](matchup-app-infer-net.md)
-

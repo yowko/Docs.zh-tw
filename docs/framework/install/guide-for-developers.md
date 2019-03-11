@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 01bbd3e4fd113c39fe6fdd95945381978ab49f9f
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ac6dbf4792df9e287c849ba2a1a93468a444d221
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093940"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57715681"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -228,7 +228,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
 - 如需將應用程式從 .NET Framework 4 移轉至 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 或其中一個點版本的資訊，請參閱[移轉手冊](~/docs/framework/migration-guide/index.md)。
 
-- 請參閱 [.NET Framework 參考來源](https://referencesource.microsoft.com/)在線上瀏覽 .NET Framework 原始程式碼。 [Github](https://github.com/Microsoft/referencesource) 亦提供該參考來源。 您可以[下載參考來源](https://referencesource.microsoft.com/download.html)供離線檢視，以及在偵錯期間逐步執行原始檔 (包含修補程式和更新) 之用。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://blogs.msdn.com/b/dotnet/archive/2014/02/24/a-new-look-for-net-reference-source.aspx)。
+- 請參閱 [.NET Framework 參考來源](https://referencesource.microsoft.com/)在線上瀏覽 .NET Framework 原始程式碼。 [Github](https://github.com/Microsoft/referencesource) 亦提供該參考來源。 您可以[下載參考來源](https://referencesource.microsoft.com/download.html)供離線檢視，以及在偵錯期間逐步執行原始檔 (包含修補程式和更新) 之用。 如需詳細資訊，請參閱部落格文章：[.NET 參考來源的新風貌 (英文)](https://devblogs.microsoft.com/dotnet/a-new-look-for-net-reference-source/)。
 
 ## <a name="see-also"></a>另請參閱
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c3c875cf5b8d1b5e69cd76cb0ee4df0a989a35a0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202895"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57704904"
 ---
 # <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
@@ -65,7 +65,7 @@ condition ? ref consequence : ref alternative
 
 [!code-csharp[conditional ref](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalRef)]
 
-如需詳細資訊，請參閱[功能提案注意事項](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-7.2/conditional-ref.md) \(英文\)。
+如需詳細資訊，請參閱[功能提案注意事項](../../../../_csharplang/proposals/csharp-7.2/conditional-ref.md) \(英文\)。
 
 ## <a name="conditional-operator-and-an-ifelse-statement"></a>條件運算子和 `if..else` 陳述式
 
