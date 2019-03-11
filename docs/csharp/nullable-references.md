@@ -2,12 +2,12 @@
 title: 可為 Null 的參考型別
 description: 本文提供可為 Null 參考型別的概觀，這種型別是在 C# 8 中新增的功能。 您會了解此功能如何為新及現有的專案，針對 Null 參考例外狀況提供安全。
 ms.date: 02/19/2019
-ms.openlocfilehash: 1eb4ccb5ec4397cb81aab37c13a31c41533238e9
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ce9efb890f0eff5a6c6747f96c143a4d093dbfb
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57411543"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57725021"
 ---
 # <a name="nullable-reference-types"></a>可為 Null 的參考型別
 
@@ -41,7 +41,7 @@ string? name;
 name!.Length;
 ```
 
-您可以在 GitHub 上的 [draft nullable reference types](https://github.com/dotnet/csharplang/blob/master/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) (草稿可為 Null 參考型別) 規格提案中閱讀此運算子的詳細資料。
+您可以在 GitHub 上的 [draft nullable reference types](../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md#the-null-forgiving-operator) (草稿可為 Null 參考型別) 規格提案中閱讀此運算子的詳細資料。
 
 ## <a name="nullability-of-types"></a>型別的可 NULL 性
 
