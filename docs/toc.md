@@ -197,6 +197,7 @@
 ### [針對 .NET Core 組織專案](core/porting/project-structure.md)
 ### [協助移轉到 .NET Core 的工具](core/porting/tools.md)
 ### [使用 Windows 相容性套件](core/porting/windows-compat-pack.md)
+### [移植 Windows Forms 專案](core/porting/winforms.md)
 <!--### [🔧 NuGet packages](core/porting/nuget-packages.md)-->
 ## [從原始檔建置 .NET Core](core/build/index.md)
 ### [.NET Core 發佈封裝](core/build/distribution-packaging.md)
