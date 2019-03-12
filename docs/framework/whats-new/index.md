@@ -12,7 +12,7 @@ author: rpetrusha
 ms.author: ronpet
 ---
 
-# .NET Framework 的新功能<a name="introduction"></a>
+# <a name="whats-new-in-the-net-framework"></a>.NET Framework 中的新功能
 
 本文摘要說明下列 .NET Framework 版本中重要的新功能和增強功能：
 
@@ -1571,8 +1571,6 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
      .NET Core 套件 (例如不可變的集合)、[SIMD API](https://go.microsoft.com/fwlink/?LinkID=518639) 及網路功能 API (例如在 <xref:System.Net.Http> 命名空間中找到的 API) 現在都在 [GitHub](https://github.com/) 上以開放原始碼套件的形式提供。 若要存取這些程式碼，請參閱 [GitHub 上的 CoreFx](https://github.com/dotnet/corefx)。 如需詳細資訊以及如何參與這些套件的建立，請前往 [itHub 上的 .NET 首頁](https://github.com/dotnet/home)，並參閱 [.NET Core 和開放原始碼](../../../docs/framework/get-started/net-core-and-open-source.md)。
 
-[回到頁首](#introduction)
-
 <a name="v452" />
 
 ## <a name="whats-new-in-the-net-framework-452"></a>.NET Framework 4.5.2 中的新增功能
@@ -1644,8 +1642,6 @@ WPF 包含 [NuGet 套件](https://go.microsoft.com/fwlink/?LinkID=691342)，提�
 
      此方法可讓先前由 <xref:System.Transactions.Transaction.EnlistPromotableSinglePhase%2A?displayProperty=nameWithType> 所建立的登錄用來回應 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 方法。 它會要求 `System.Transactions` 將交易升級為 MSDTC 交易，並將可升級登記「轉換」為永久性登記。 這個方法成功完成之後，<xref:System.Transactions.IPromotableSinglePhaseNotification> 介面將不再受 `System.Transactions` 參考，且會將任何未來的通知送至所提供的  <xref:System.Transactions.ISinglePhaseNotification> 介面。 登記必須做為永久性登記，才可支援交易記錄和復原。 如需詳細資訊，請參閱 <xref:System.Transactions.Transaction.EnlistDurable%2A?displayProperty=nameWithType>。 此外，登記必須支援 <xref:System.Transactions.ISinglePhaseNotification>。  只有在處理 <xref:System.Transactions.ITransactionPromoter.Promote%2A?displayProperty=nameWithType> 呼叫時，「才」可以呼叫此方法。 若否，則會擲回 <xref:System.Transactions.TransactionException> 例外狀況。
 
-[回到頁首](#introduction)
-
 <a name="v451" />
 
 ## <a name="whats-new-in-the-net-framework-451"></a>.NET Framework 4.5.1 中的新增功能
@@ -1707,8 +1703,6 @@ Windows Forms 的增強功能包括：
 自 Visual Studio 2013 開始，您可以使用[由受控設定檔導引的最佳化工具 (Mpgo.exe)](../../../docs/framework/tools/mpgo-exe-managed-profile-guided-optimization-tool.md) 來最佳化[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式與傳統型應用程式。
 
 若要了解 ASP.NET 4.5.1 的新功能，請參閱[適用於 Visual Studio 2013 的 ASP.NET 及 Web 工具版本資訊](/aspnet/visual-studio/overview/2013/release-notes)。
-
-[回到頁首](#introduction)
 
 <a name="v45" />
 
