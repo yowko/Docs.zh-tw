@@ -1,33 +1,38 @@
 ---
 title: 套用特徵工程以對類別目錄資料進行模型定型 - ML.NET
 description: 了解如何使用 ML.NET 在類別目錄資料上為機器學習模型套用特徵工程
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: eedbe0499784e7a99b0101c42892652daef3a114
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968409"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677275"
 ---
-# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="c04cf-103">套用特徵工程以對類別目錄資料進行模型定型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="c04cf-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
+# <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a><span data-ttu-id="88f80-103">套用特徵工程以對類別目錄資料進行模型定型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="88f80-103">Apply feature engineering for model training on categorical data - ML.NET</span></span>
 
-<span data-ttu-id="c04cf-104">因為所有 ML.NET `learners` 都預期功能會是 `float vector`，所以您需要將所有非 float 資料轉換成 `float` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="c04cf-104">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
+> [!NOTE]
+> <span data-ttu-id="88f80-104">本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。</span><span class="sxs-lookup"><span data-stu-id="88f80-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="88f80-105">如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。</span><span class="sxs-lookup"><span data-stu-id="88f80-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="c04cf-105">如果資料集包含 `categorical` 資料 (例如，'enum')，ML.NET 提供幾種方法將它轉換成特徵：</span><span class="sxs-lookup"><span data-stu-id="c04cf-105">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
+<span data-ttu-id="88f80-106">本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。</span><span class="sxs-lookup"><span data-stu-id="88f80-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="88f80-107">如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="88f80-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-- <span data-ttu-id="c04cf-106">One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="c04cf-106">One-hot encoding</span></span>
-- <span data-ttu-id="c04cf-107">雜湊型 One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="c04cf-107">Hash-based one-hot encoding</span></span>
-- <span data-ttu-id="c04cf-108">二進位編碼 (將類別索引轉換成位元序列，並使用位元作為特徵)</span><span class="sxs-lookup"><span data-stu-id="c04cf-108">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
+<span data-ttu-id="88f80-108">因為所有 ML.NET `learners` 都預期功能會是 `float vector`，所以您需要將所有非 float 資料轉換成 `float` 資料類型。</span><span class="sxs-lookup"><span data-stu-id="88f80-108">You need to convert any non float data to `float` data types since all ML.NET `learners` expect features as a `float vector`.</span></span>
 
-<span data-ttu-id="c04cf-109">如果某些類別是非常高基數的 (有許多不同的值，經常出現的為小型集合)，則使用 `one-hot encoding` 可能會浪費資源。</span><span class="sxs-lookup"><span data-stu-id="c04cf-109">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="c04cf-110">在此情況下，請減少使用計數型特徵選取來編碼之位置的數目。</span><span class="sxs-lookup"><span data-stu-id="c04cf-110">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
+<span data-ttu-id="88f80-109">如果資料集包含 `categorical` 資料 (例如，'enum')，ML.NET 提供幾種方法將它轉換成特徵：</span><span class="sxs-lookup"><span data-stu-id="88f80-109">If the dataset contains `categorical` data (for example, 'enum'), ML.NET offers several ways of converting it to features:</span></span>
 
-<span data-ttu-id="c04cf-111">將類別目錄特徵化直接包含在 ML.NET 學習管線中，以確保類別目錄轉換：</span><span class="sxs-lookup"><span data-stu-id="c04cf-111">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+- <span data-ttu-id="88f80-110">One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="88f80-110">One-hot encoding</span></span>
+- <span data-ttu-id="88f80-111">雜湊型 One-Hot 編碼</span><span class="sxs-lookup"><span data-stu-id="88f80-111">Hash-based one-hot encoding</span></span>
+- <span data-ttu-id="88f80-112">二進位編碼 (將類別索引轉換成位元序列，並使用位元作為特徵)</span><span class="sxs-lookup"><span data-stu-id="88f80-112">Binary encoding (convert category index into a bit sequence and use bits as features)</span></span>
 
-- <span data-ttu-id="c04cf-112">只在定型資料 (而不在測試資料) 上接受「定型」、</span><span class="sxs-lookup"><span data-stu-id="c04cf-112">is only 'trained' on the training data, and not on your test data,</span></span>
-- <span data-ttu-id="c04cf-113">正確地套用至新的內送資料、在預測時間沒有額外的前置處理。</span><span class="sxs-lookup"><span data-stu-id="c04cf-113">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+<span data-ttu-id="88f80-113">如果某些類別是非常高基數的 (有許多不同的值，經常出現的為小型集合)，則使用 `one-hot encoding` 可能會浪費資源。</span><span class="sxs-lookup"><span data-stu-id="88f80-113">A `one-hot encoding` can be wasteful if some categories are very high-cardinality (lots of different values, with a small set commonly occurring.</span></span> <span data-ttu-id="88f80-114">在此情況下，請減少使用計數型特徵選取來編碼之位置的數目。</span><span class="sxs-lookup"><span data-stu-id="88f80-114">In that case, reduce the number of slots to encode with count-based feature selection.</span></span>
 
-<span data-ttu-id="c04cf-114">以下範例說明[成人人口普查資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的類別目錄處理：</span><span class="sxs-lookup"><span data-stu-id="c04cf-114">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
+<span data-ttu-id="88f80-115">將類別目錄特徵化直接包含在 ML.NET 學習管線中，以確保類別目錄轉換：</span><span class="sxs-lookup"><span data-stu-id="88f80-115">Include categorical featurization directly in the ML.NET learning pipeline to ensure that the categorical transformation:</span></span>
+
+- <span data-ttu-id="88f80-116">只在定型資料 (而不在測試資料) 上接受「定型」、</span><span class="sxs-lookup"><span data-stu-id="88f80-116">is only 'trained' on the training data, and not on your test data,</span></span>
+- <span data-ttu-id="88f80-117">正確地套用至新的內送資料、在預測時間沒有額外的前置處理。</span><span class="sxs-lookup"><span data-stu-id="88f80-117">is correctly applied to new incoming data, without extra pre-processing at prediction time.</span></span>
+
+<span data-ttu-id="88f80-118">以下範例說明[成人人口普查資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的類別目錄處理：</span><span class="sxs-lookup"><span data-stu-id="88f80-118">The following example illustrates categorical handling for the [adult census dataset](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt):</span></span>
 
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week

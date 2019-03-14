@@ -97,7 +97,7 @@
 ### [在 macOS 上開始使用 .NET Core](core/tutorials/using-on-macos.md)
 ### [使用 Visual Studio for Mac 在 macOS 上開始使用 .NET Core](core/tutorials/using-on-mac-vs.md)
 ### [使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 方案](core/tutorials/using-on-mac-vs-full-solution.md)
-### [從使用 CLI 工具開始使用 .NET Core](core/tutorials/using-with-xplat-cli.md)
+### [使用 CLI 工具開始使用 .NET Core](core/tutorials/using-with-xplat-cli.md)
 ### [使用 .NET Core 命令列組織和測試專案](core/tutorials/testing-with-cli.md)
 ### [使用跨平台工具開發程式庫](core/tutorials/libraries.md)
 ### [開發 ASP.NET Core 應用程式](core/tutorials/aspnet-core.md)
@@ -1209,6 +1209,7 @@
 ### 使用已定型模型
 #### [使用 PredictionEngine 一次進行一個預測](machine-learning/how-to-guides/single-predict-model-ml-net.md)
 #### [讓已定型模型運作](machine-learning/how-to-guides/consuming-model-ml-net.md)
+#### [提供模型 Azure Functions](machine-learning/how-to-guides/serve-model-serverless-azure-functions-ml-net.md)
 ### Infer.NET
 #### [使用 Infer.NET 進行概率性程式設計](machine-learning/how-to-guides/matchup-app-infer-net.md)
 ## 參考資料
