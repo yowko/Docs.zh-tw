@@ -4,18 +4,18 @@ description: 了解如何在多類別分類案例中使用 ML.NET 來分類 GitH
 ms.date: 02/20/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: fdb6621078854d80f0af484ae1b92526f0f9cbb8
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 4f6a95fbd470c688c977b406d1813d6a453e8a79
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584287"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57471470"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>教學課程：在多類別分類案例中使用 ML.NET 來為 GitHub 問題分類
 
 此範例教學課程說明如何使用 Visual Studio 2017 中的 C#，透過 .NET Core 主控台應用程式，以 ML.NET 建立 GitHub 問題分類器。
 
-在本教學課程中，您將了解如何：
+在此教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習演算法
@@ -29,13 +29,15 @@ ms.locfileid: "56584287"
 > [!NOTE]
 > 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
 
+此教學課程與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
+
 ## <a name="github-issue-sample-overview"></a>GitHub 問題範例概觀
 
 該範例是主控台應用程式，會使用 ML.NET 來定型模型，以針對 GitHub 問題分類並預測 Area 標籤。 它也會使用第二資料集來評估模型，以進行品質分析。 問題的資料集來自 dotnet/corefx GitHub 存放庫。
 
-您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
+您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到此教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
@@ -44,7 +46,7 @@ ms.locfileid: "56584287"
 
 ## <a name="machine-learning-workflow"></a>機器學習工作流程
 
-本教學課程依循機器學習工作流程，可讓程序按順序移入。
+此教學課程依循機器學習工作流程，可讓程序按順序移入。
 
 工作流程階段如下：
 
@@ -62,7 +64,7 @@ ms.locfileid: "56584287"
 
 您必須先了解問題，以便將其分解成可支援模型建置和定型的組件。 細分問題可讓您預測及評估結果。
 
-本教學課程旨在釐清傳入的 GitHub 問題屬於哪個區域，才能正確地標記這些問題，方便安排優先順序與排程。
+此教學課程旨在釐清傳入的 GitHub 問題屬於哪個區域，才能正確地標記這些問題，方便安排優先順序與排程。
 
 您可以將問題拆解成下列幾個部分：
 
@@ -96,7 +98,7 @@ ms.locfileid: "56584287"
 
 ### <a name="about-the-classification-learning-algorithm"></a>關於分類學習演算法
 
-分類是一項機器學習演算法，會使用資料來**判斷**項目或資料列的分類、類型或類別。 例如，您可以使用分類來：
+分類是一個機器學習演算法，會使用資料來**判斷**項目或資料列的分類、類型或類別。 例如，您可以使用分類來：
 
 * 識別情感是正面還是負面。
 * 將電子郵件分類為垃圾郵件或正常郵件。
@@ -191,7 +193,7 @@ ms.locfileid: "56584287"
 
  `DataView` 是 [`Transforms`](../basic-concepts-model-training-in-mldotnet.md#transformer) 的輸入和輸出，屬於基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
-在 ML.NET 中，資料相當於 `SQL view`。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在本教學課程中，它會載入具有問題標題、描述和相對應區域 GitHub 標籤的資料集。 `DataView` 用於建立並定型模型。
+在 ML.NET 中，資料相當於 `SQL view`。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在此教學課程中，它會載入具有問題標題、描述和相對應區域 GitHub 標籤的資料集。 `DataView` 用於建立並定型模型。
 
 因為您先前建立的 `GitHubIssue` 資料模型類型符合資料集結構描述，所以您可以將初始化、對應和資料集載入合併成一行程式碼。
 
@@ -471,11 +473,11 @@ The model is saved to C:\Users\johalex\dotnet-samples\samples\machine-learning\t
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-恭喜您！ 您現在已成功建置可對 GitHub 問題分類和預測 Area 標籤的機器學習模型。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到本教學課程的原始程式碼。
+恭喜您！ 您現在已成功建置可對 GitHub 問題分類和預測 Area 標籤的機器學習模型。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) 存放庫中找到此教學課程的原始程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在此教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習演算法

@@ -2,17 +2,17 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: 7ee6d06750f82c9529beaed3cc665f876af08888
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148171"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673219"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
 C# 7.2 是另一個小數點版本，其中新增了一些實用的功能。
-此版本的主題之一是能夠避免不必要的複製或配置，讓實質型別作業能夠更有效率。 
+此版本的主題之一是能夠避免不必要的複製或配置，讓實質型別作業能夠更有效率。
 
 其餘功能則無足輕重。
 
@@ -48,9 +48,9 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 ## <a name="leading-underscores-in-numeric-literals"></a>數值常值中的前置底線
 
-C# 7.0 中的數字分隔符號之實作支援，並不允許將 `_` 作為常值的第一個字元。 十六進位與二進位數值常值現在可以使用 `_` 開頭。 
+C# 7.0 中的數字分隔符號之實作支援，並不允許將 `_` 作為常值的第一個字元。 十六進位與二進位數值常值現在可以使用 `_` 開頭。
 
-例如: 
+例如：
 
 ```csharp
 int binaryValue = 0b_0101_0101;

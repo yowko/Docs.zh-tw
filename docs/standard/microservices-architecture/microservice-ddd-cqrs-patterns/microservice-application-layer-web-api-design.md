@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 用於設計�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: f31c712143a448e12350db1ed242da7561a7a286
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: fa292cb97db612506eb7a6f83bb24f37425d690a
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147486"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678653"
 ---
 # <a name="design-the-microservice-application-layer-and-web-api"></a>設計微服務應用程式層及 Web API
 
@@ -33,11 +33,11 @@ SOLID 與您設計應用程式或微服務的內部層及減少其之間的相�
 
 藉由遵循 SOLID 準則，您的類別自然而然會傾向小型、構造良好且輕鬆的測試。 但是如何才能知道您的類別已插入太多相依性？ 若您是透過建構函式使用 DI，您可以藉由查看您建構函式參數的數量來進行偵測。 若有太多的相依性，這通常表示 ([code smell (程式碼異味)](https://deviq.com/code-smells/)) 您的類別嘗試完成太多事項，並且可能違反了單一責任準則。
 
-通常需要其他指南才能完整涵蓋 SOLID 的詳細資料。 因此，本指南僅需要您具備關於這些主題的最低程度知識。
+通常需要其他指南才能完整涵蓋 SOLID 的詳細資料。 因此，此指南僅需要您具備關於這些主題的最低程度知識。
 
 #### <a name="additional-resources"></a>其他資源
 
-- **SOLID: Fundamental OOP Principles (SOLID：基本 OOP 準則)** \
+- **SOLID：基本 OOP 準則** \
   [*https://deviq.com/solid/*](https://deviq.com/solid/%20)
 
 - **Inversion of Control Containers and the Dependency Injection pattern (逆轉控制容器和相依性插入模式)** \
@@ -46,6 +46,6 @@ SOLID 與您設計應用程式或微服務的內部層及減少其之間的相�
 - **Steve Smith.New is Glue (接著劑：New)** \
   [*https://ardalis.com/new-is-glue*](https://ardalis.com/new-is-glue)
 
->[!div class="step-by-step"]
->[上一頁](nosql-database-persistence-infrastructure.md)
->[下一頁](microservice-application-layer-implementation-web-api.md)
+> [!div class="step-by-step"]
+> [上一頁](nosql-database-persistence-infrastructure.md)
+> [下一頁](microservice-application-layer-implementation-web-api.md)

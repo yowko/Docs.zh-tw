@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解整�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: cf1757531fc9eceee17f1faec66668945b9c2758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b451d896186ffb650e495c10786106c37ab16131
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967967"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676014"
 ---
 # <a name="implementing-event-based-communication-between-microservices-integration-events"></a>實作微服務之間的事件通訊 (整合事件)
 
@@ -66,7 +66,7 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 事件匯流排允許微服務之間的發佈/訂閱樣式通訊，而不需要元件明確知道彼此，如圖 6-19 所示。
 
-![基本的發佈/訂閱模式，微服務 A 發佈至事件匯流排，事件匯流排會散發以訂閱微服務 B 和 C，而不需要發行者知道這些訂閱者。](./media/image20.png)
+![基本的發佈/訂閱模式，微服務 A 發佈至事件匯流排，事件匯流排會散發至訂閱方微服務 B 和 C，而不需要發行者知道這些訂閱者。](./media/image20.png)
 
 **圖 6-19**。 事件匯流排的發行/訂閱基本概念
 
@@ -76,25 +76,25 @@ public class ProductPriceChangedIntegrationEvent : IntegrationEvent
 
 在[觀察者模式](https://en.wikipedia.org/wiki/Observer_pattern)中，您的主要物件 (稱為可預見物件) 會將相關資訊 (事件) 通知其他有興趣的物件 (稱為觀察者)。
 
-### <a name="publishsubscribe-pubsub-pattern"></a>發佈/訂閱 (Pub/Sub) 模式 
+### <a name="publishsubscribe-pubsub-pattern"></a>發佈/訂閱 (Pub/Sub) 模式
 
-[發佈/訂閱模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一項重要的差異。 在觀察者模式中，廣播是直接從可預見物件對觀察者執行，讓他們「知道」彼此。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
+[發佈/訂閱模式](https://docs.microsoft.com/previous-versions/msp-n-p/ff649664(v=pandp.10))的目的與觀察者模式相同：您想要在特定事件發生時通知其他服務。 但觀察者和 Pub/Sub 模式之間有一個重要的差異。 在觀察者模式中，廣播是直接從可預見物件對觀察者執行，讓他們「知道」彼此。 但在使用 Pub/Sub 模式時，有一個稱為代理程式或訊息代理程式或事件匯流排的第三個元件，發行者和訂閱者都知道它。 因此，在使用 Pub/Sub 模式時，發行者和訂閱者會因為提及的事件匯流排或訊息代理程式而精確地分離。
 
-### <a name="the-middleman-or-event-bus"></a>中間人或事件匯流排 
+### <a name="the-middleman-or-event-bus"></a>中間人或事件匯流排
 
 您要如何達到發行者和訂閱者之間的匿名？ 簡單的方法是讓中間人負責處理所有通訊。 事件匯流排便是一個這類的中間人。
 
 事件匯流排通常是由兩個部分組成：
 
--   抽象或介面。
+- 抽象或介面。
 
--   一或多個實作。
+- 一或多個實作。
 
 在圖 6-19 中，您可以看到從應用程式的觀點而言，事件匯流排只不過是發佈/訂閱通道。 實作這個非同步通訊的方式可能有所不同。 它可能有多種實作，因此您可以根據環境需求 (例如，生產與開發環境)，在兩者之間交換。
 
 在圖 6-20 中，您可以看到事件匯流排的抽象概念，其中具有根據基礎結構傳訊技術 (例如 RabbitMQ、Azure 服務匯流排或其他事件/訊息代理程式) 的多個實作。
 
-![最好是透過介面定義事件匯流排，因此便可使用數種技術 (例如 RabbitMQ Azure 服務匯流排或其他技術) 加以實作。](./media/image21.png)
+![最好是透過介面定義事件匯流排，因此便可使用數種技術 (例如 RabbitMQ Azure 服務匯流排或其他技術) 來實作。](./media/image21.png)
 
 **圖 6-20**。 事件匯流排的多個實作
 
@@ -129,6 +129,6 @@ public interface IEventBus
 
 `Subscribe` 方法 (您可以有根據引數而定的數種實作) 是由想要收到事件的微服務所使用。 這個方法有兩個引數。 第一個是要訂閱的整合事件 (`IntegrationEvent`)。 第二個引數是整合事件處理常式 (或回呼方法)，名為 `IIntegrationEventHandler<T>`，且將在接收者微服務取得該整合事件訊息時執行。
 
->[!div class="step-by-step"]
->[上一頁](database-server-container.md)
->[下一頁](rabbitmq-event-bus-development-test-environment.md)
+> [!div class="step-by-step"]
+> [上一頁](database-server-container.md)
+> [下一頁](rabbitmq-event-bus-development-test-environment.md)

@@ -1,5 +1,5 @@
 ---
-title: 如何：接聽多個取消要求
+title: 作法：接聽多個取消要求
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 6f4f3804-2ed7-41b4-a97a-6e32b93f6e05
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16ba8000544d0b7d35a818d41a75f38e6fd0293d
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 17874b8b9733ea18d4877e2c79810fcd6247db0b
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44178558"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680227"
 ---
-# <a name="how-to-listen-for-multiple-cancellation-requests"></a>如何：接聽多個取消要求
+# <a name="how-to-listen-for-multiple-cancellation-requests"></a>作法：接聽多個取消要求
 此範例顯示如何同時接聽兩個取消權杖，讓您可以在其中一個權杖要求作業時將作業取消。  
   
 > [!NOTE]
@@ -32,7 +32,7 @@ ms.locfileid: "44178558"
   
  當連結的權杖擲回 <xref:System.OperationCanceledException> 時，傳遞給例外狀況的權杖是連結的權杖，而非其中一個前置項權杖。 若要判斷哪一個權杖已取消，請直接檢查前置項權杖的狀態。  
   
- 在此範例中，應該永遠不會擲回 <xref:System.AggregateException>，但是卻在這裡攔截到它，是因為在真實案例中，<xref:System.OperationCanceledException> 以外從工作委派擲回的任何其他例外狀況，都會包裝在 <xref:System.OperationCanceledException> 中。  
+ 在此範例中，應該永遠不會擲回 <xref:System.AggregateException>，但是卻在這裡攔截到它，是因為在真實案例中，<xref:System.OperationCanceledException> 以外從工作委派擲回的任何其他例外狀況，都會包裝在 <xref:System.AggregateException> 中。  
   
 ## <a name="see-also"></a>另請參閱
 

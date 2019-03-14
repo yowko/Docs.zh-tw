@@ -3,24 +3,26 @@ title: 透過 ML.NET 使用迴歸學習工具預測價格
 description: 透過 ML.NET 使用迴歸學習工具預測價格。
 author: aditidugar
 ms.author: johalex
-ms.date: 02/08/2019
+ms.date: 03/05/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d9c87c4f4a81c02979259a47e8c4167d80f06377
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 543411f58f2d7c5c4e8658bd90cf52c7a3291ec3
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251088"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678385"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>教學課程：透過 ML.NET 使用迴歸學習工具預測價格
+
+此教學課程說明如何使用 ML.NET 建置用於預測價格 (特別是紐約市計程車車資) 的[迴歸模型](../resources/glossary.md#regression)。
 
 > [!NOTE]
 > 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文)。
 
-本教學課程說明如何使用 ML.NET 建置用於預測價格 (特別是紐約市計程車車資) 的[迴歸模型](../resources/glossary.md#regression)。
+此教學課程與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
-在本教學課程中，您將了解如何：
+在此教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習工作
@@ -32,7 +34,7 @@ ms.locfileid: "57251088"
 > * 評估模型
 > * 使用模型來進行預測
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
@@ -68,12 +70,12 @@ ms.locfileid: "57251088"
 
 提供的資料集包含下列資料行：
 
-* **vendor_id：** 計程車廠商的識別碼是一項特徵。
-* **rate_code：** 計程車行程的費率類型是一項特徵。
-* **passenger_count：** 行程的乘客數目是一項特徵。
-* **trip_time_in_secs：** 行程所花費的時間長度。 您想要在行程結束之前預測行程的車資。 那時，您並不知道行程需要多長的時間。 因此，行程時間不是一項特徵，您將從模型中排除這個資料行。
-* **trip_distance：** 行程的距離是一項特徵。
-* **payment_type：** 付款方式 (現金或信用卡) 是一項特徵。
+* **vendor_id：** 計程車廠商的識別碼是一個特徵。
+* **rate_code：** 計程車行程的費率類型是一個特徵。
+* **passenger_count：** 行程的乘客數目是一個特徵。
+* **trip_time_in_secs：** 行程所花費的時間長度。 您想要在行程結束之前預測行程的車資。 那時，您並不知道行程需要多長的時間。 因此，行程時間不是一個特徵，您將從模型中排除這個資料行。
+* **trip_distance：** 行程的距離是一個特徵。
+* **payment_type：** 付款方式 (現金或信用卡) 是一個特徵。
 * **fare_amount：** 計程車車資總計是標籤。
 
 ## <a name="create-data-classes"></a>建立資料類別
@@ -157,7 +159,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 我們將使用 `_textLoader` 全域變數搭配 `dataPath` 參數載入資料。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。 作為轉換的輸入和輸出，`IDataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
-在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在本教學課程中，它會載入具有計程車車程資訊的實用資料集來預測費用。 這會用來建立模型，並將模型定型。
+在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在此教學課程中，它會載入具有計程車車程資訊的實用資料集來預測費用。 這會用來建立模型，並將模型定型。
 
  將下列程式碼新增為 `Train` 方法的第一行：
 
@@ -228,7 +230,7 @@ Console.WriteLine("The model is saved to {0}", _modelPath);
 
 ## <a name="evaluate-the-model"></a>評估模型
 
-評估係指檢查模型預測標籤值之良好程度的程序。 對模型來說，能夠針對其定型時未使用的資料做出良好的預測是相當重要的。 若要達到此目的，其中一個做法是將資料分割成訓練和測試資料集，就像在本教學課程中所做的一樣。 既然您已依據訓練資料來訓練模型，現在即可查看模型對測試資料的表現。
+評估係指檢查模型預測標籤值之良好程度的程序。 對模型來說，能夠針對其定型時未使用的資料做出良好的預測是相當重要的。 若要達到此目的，其中一個做法是將資料分割成訓練和測試資料集，就像在此教學課程中所做的一樣。 既然您已依據訓練資料來訓練模型，現在即可查看模型對測試資料的表現。
 
 `Evaluate` 方法會評估模型。 若要建立該方法，請在 `Train` 方法底下新增下列程式碼：
 
@@ -311,7 +313,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 [!code-csharp[MakePredictionEngine](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
   
-本教學課程會使用此類別內的一個測試行程。 您可以稍後新增其他案例來對此方法進行實驗。 透過建立 `TaxiTrip` 的執行個體，在 `TestSinglePrediction` 方法中新增車程，以測試定型模型的費用預測：
+此教學課程會使用此類別內的一個測試行程。 您可以稍後新增其他案例來對此方法進行實驗。 透過建立 `TaxiTrip` 的執行個體，在 `TestSinglePrediction` 方法中新增車程，以測試定型模型的費用預測：
 
 [!code-csharp[PredictionData](../../../samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
@@ -325,11 +327,11 @@ private static void TestSinglePrediction(MLContext mlContext)
 
 執行程式以查看您測試案例的預測計程車車資。
 
-恭喜您！ 您現在已成功建置可預測計程車車資的機器學習模型、評估了它的準確率，並且也使用它進行了預測。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub 存放庫中找到本教學課程的原始程式碼。
+恭喜您！ 您現在已成功建置可預測計程車車資的機器學習模型、評估了它的準確率，並且也使用它進行了預測。 您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/TaxiFarePrediction) GitHub 存放庫中找到此教學課程的原始程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 
-在本教學課程中，您將了解如何：
+在此教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習工作

@@ -4,22 +4,22 @@ description: 描述如何建立通用工具。 通用工具是透過 .NET Core C
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: 045b8f7707b8ee36ea9674bba3974197a57c482d
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826417"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677860"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>使用 .NET Core CLI 建立 .NET Core 通用工具
 
-本文會教導您如何建立及封裝 .NET Core 通用工具。 .NET Core CLI 可讓您建立作為通用工具的主控台應用程式，其他人也可以輕鬆地安裝及執行該工具。 .NET Core 通用工具是從 .NET Core CLI 安裝的 NuGet 套件。 如需通用工具的詳細資訊，請參閱 [.NET Core 通用工具概觀](global-tools.md)。
+此文章會教導您如何建立及封裝 .NET Core 通用工具。 .NET Core CLI 可讓您建立作為通用工具的主控台應用程式，其他人也可以輕鬆地安裝及執行該工具。 .NET Core 通用工具是從 .NET Core CLI 安裝的 NuGet 套件。 如需通用工具的詳細資訊，請參閱 [.NET Core 通用工具概觀](global-tools.md)。
 
 [!INCLUDE [topic-appliesto-net-core-21plus.md](../../../includes/topic-appliesto-net-core-21plus.md)]
 
 ## <a name="create-a-project"></a>建立專案
 
-本文使用 .NET Core CLI 來建立和管理專案。
+此文章使用 .NET Core CLI 來建立和管理專案。
 
 我們的範例工具是會產生 ASCII Bot 並列印訊息的主控台應用程式。 首先，建立新的 .NET Core 主控台應用程式。
 
@@ -50,7 +50,7 @@ static void Main(string[] args)
                                 .GetCustomAttribute<AssemblyInformationalVersionAttribute>()
                                 .InformationalVersion
                                 .ToString();
-                                
+
         Console.WriteLine($"botsay v{versionString}");
         Console.WriteLine("-------------");
         Console.WriteLine("\nUsage:");
@@ -129,13 +129,13 @@ dotnet run -- hello from the bot
 
 在您可以將應用程式封裝及散佈為通用工具之前，您應該修改專案檔案。 開啟 `botsay.csproj` 檔案，然後將三個新 XML 節點新增至 `<Project><PropertyGroup>` 節點：
 
-- `<PackAsTool>`  
+- `<PackAsTool>`\
 [必要] 表示會封裝應用程式以安裝為通用工具。
 
-- `<ToolCommandName>`  
+- `<ToolCommandName>`\
 [選用] 工具的替代名稱，否則工具的命令名稱會跟隨著專案檔案命名。 您在套件中可以有多個工具，選擇唯一且易記的名稱，有助於與相同套件中的其他工具區分。
 
-- `<PackageOutputPath>`  
+- `<PackageOutputPath>`\
 [選用] 在其中產生 NuGet 套件的位置。 NuGet 套件是 .NET Core CLI 通用工具用來安裝工具的套件。
 
 ```xml
@@ -164,7 +164,7 @@ dotnet pack
 
 `botsay.1.0.0.nupkg` 檔案是在資料夾 (由 `botsay.csproj` 檔案中的 `<PackageOutputPath>` XML 值識別) 中建立的，在此範例中是 `./nupkg` 資料夾。 這可讓您輕鬆地安裝和測試。 當您想要公開發行工具時，請將它上傳至 [https://www.nuget.org](https://www.nuget.org)。在工具於 NuGet 上可供使用之後，開發人員便可使用 [dotnet tool install](dotnet-tool-install.md) 命令的 `--global` 選項來為所有使用者安裝該工具。
 
-既然您已經有了套件，請從該套件安裝工具： 
+既然您已經有了套件，請從該套件安裝工具：
 
 ```console
 dotnet tool install --global --add-source ./nupkg botsay

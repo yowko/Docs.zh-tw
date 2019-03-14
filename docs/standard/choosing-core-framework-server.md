@@ -1,19 +1,19 @@
 ---
 title: 針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
-description: 本指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
+description: 此指南說明您在 .NET 中建置伺服器應用程式時應考量要使用哪種 .NET 實作。
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 398a504e60ce47da6923eebb261ff68e8ca3c5ee
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828510"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57678796"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>針對伺服器應用程式在 .NET Core 和 .NET Framework 之間進行選擇
 
-有兩個支援的實作，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及 .NET Core。 這兩者共用許多相同的元件，而您可以在這兩者間共用程式碼。 不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。  本文提供有關每一個選項使用時機的指引。
+有兩個支援的實作，可使用 .NET 來建置伺服器端應用程式：.NET Framework 及 .NET Core。 這兩者共用許多相同的元件，而您可以在這兩者間共用程式碼。 不過，兩者間有一些基本差異，而您的選擇取決於您想要完成的目標。  此文章提供有關每一個選項使用時機的指引。
 
 在下列情況中，請針對伺服器應用程式使用 .NET Core：
 
@@ -52,7 +52,7 @@ ms.locfileid: "55828510"
 
 容器通常會與微服務架構搭配使用。 容器也可用來將遵循任何架構模式的 Web 應用程式或服務容器化。 .NET Framework 可用於 Windows 容器，但 .NET Core 的模組化和輕量型本質讓它成為容器的更佳選擇。 建立和部署容器時，使用 .NET Core 的映像大小遠小於 .NET Framework。 舉例來說，因為它是跨平台的，您可以將伺服器應用程式部署到 Linux Docker 容器。
 
-您可以在自己的 Linux 或 Windows 基礎結構中，或在 [Azure Container Service](https://azure.microsoft.com/services/container-service/) 等雲端服務中裝載 Docker 容器。 Azure Container Service 可在雲端中管理、協調及調整容器型應用程式。
+您可以在自己的 Linux 或 Windows 基礎結構中，或在 [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/) 等雲端服務中裝載 Docker 容器。 Azure Kubernetes Service 可在雲端中管理、協調及調整容器型應用程式。
 
 ### <a name="a-need-for-high-performance-and-scalable-systems"></a>需要高效能且可調整的系統
 
@@ -77,7 +77,7 @@ ms.locfileid: "55828510"
 程式庫會快速採用 .NET Standard。 .NET Standard 可跨所有 .NET 實作 (包括 .NET Core) 共用程式碼。 透過 .NET Standard 2.0，甚至會更容易達成：
 
 - API 介面變得更大。 
-- 引入了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 程式庫。 若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://blogs.msdn.microsoft.com/dotnet/2017/08/14/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。
+- 引入了 .NET Framework 相容性模式。 此相容性模式可讓 .NET Standard/.NET Core 專案參考 .NET Framework 程式庫。 若要深入了解相容性模式，請參閱 [Announcing .NET Standard 2.0](https://devblogs.microsoft.com/dotnet/announcing-net-standard-2-0/) (宣告 .NET Standard 2.0)。
 
 因此，只有在程式庫或 NuGet 套件使用的技術不適用於 .NET Standard/.NET Core 時，才需要使用 .NET Framework。
 

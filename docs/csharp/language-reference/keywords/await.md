@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 86da57c0f8ecca7e5dada3ae6756739197c3f206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618968"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57713042"
 ---
 # <a name="await-c-reference"></a>await (C# 參考)
 `await` 運算子會套用至非同步方法中的工作，以在執行方法中插入暫停點，直到等候的工作完成為止。 工作代表進行中的工作。  
@@ -21,17 +21,16 @@ ms.locfileid: "54618968"
 `await` 只能用於 [async](../../../csharp/language-reference/keywords/async.md) 關鍵字所修改的非同步方法中。 這種方法是使用 `async` 修飾詞所定義，且通常包含一或多個 `await` 運算式，我們稱之為「非同步方法」。  
   
 > [!NOTE]
->  `async` 和 `await` 關鍵字是在 C# 5 中引入。 如需非同步程式設計的簡介，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。  
+> `async` 和 `await` 關鍵字是在 C# 5 中引入。 如需非同步程式設計的簡介，請參閱[使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)。  
   
-套用了 `await` 運算子的工作，通常是呼叫傳回給實作[工作式非同步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法。 它們包括傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 和 `System.Threading.Tasks.ValueType<TResult>` 物件的方法。  
+套用了 `await` 運算子的工作，通常是呼叫傳回給實作[工作式非同步模式](../../../standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md)的方法。 它們包括傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.ValueTask> 和 <xref:System.Threading.Tasks.ValueTask%601> 物件的方法。  
 
-  
- 在下列範例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法會傳回 `Task<byte[]>`。 這個工作可保證工作完成時，一定會產生實際位元組陣列。 `await` 運算子會暫停執行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法的工作完成為止。 同時，控制權會返回 `GetPageSizeAsync` 的呼叫端。 在工作執行完成後，`await` 運算式評估為位元組陣列。  
+在下列範例中，<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A?displayProperty=nameWithType> 方法會傳回 `Task<byte[]>`。 這個工作可保證工作完成時，一定會產生實際位元組陣列。 `await` 運算子會暫停執行，直到 <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> 方法的工作完成為止。 同時，控制權會返回 `GetPageSizeAsync` 的呼叫端。 在工作執行完成後，`await` 運算式評估為位元組陣列。  
 
 [!code-csharp[await-example](../../../../samples/snippets/csharp/language-reference/keywords/await/await1.cs)]  
 
 > [!IMPORTANT]
->  如需完整的範例，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
+> 如需完整的範例，請參閱[逐步解說：使用 Async 和 Await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)。 您可以從 Microsoft 網站的[開發人員程式碼範例](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) 下載此範例。 此範例位於 AsyncWalkthrough_HttpClient 專案中。  
   
 如先前範例所示，如果將 `await` 套用至傳回 `Task<TResult>` 之方法呼叫的結果，則 `await` 運算式的類型為 `TResult`。 如果將 `await` 套用至傳回 `Task` 之方法呼叫的結果，則 `await` 運算式的類型為 `void`。 下列範例會說明其間的差異。  
   

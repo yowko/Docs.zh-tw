@@ -5,18 +5,18 @@ author: jpreese
 ms.author: wiwagn
 ms.date: 07/28/2018
 ms.custom: seodec18
-ms.openlocfilehash: 812b89ff163c9d39a658f817495ac12616c28f6f
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: b543ab2e200e8169a251db8ddfb1493c5583ed69
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836249"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57360247"
 ---
 # <a name="unit-testing-best-practices-with-net-core-and-net-standard"></a>.NET Core 和 .NET Standard 的單元測試最佳做法
 
-撰寫單元測試有許多優點；運用迴歸加以協助、提供文件，並增進良好的設計。 不過，難以閱讀且容易損毀的單元測試可能會破壞程式碼基底。 本文描述有關為 .NET Core 和 .NET Standard 專案設計單元測試的一些最佳做法。
+撰寫單元測試有許多優點；運用迴歸加以協助、提供文件，並增進良好的設計。 不過，難以閱讀且容易損毀的單元測試可能會破壞程式碼基底。 此文章描述有關為 .NET Core 和 .NET Standard 專案設計單元測試的一些最佳做法。
 
-本指南中，您將了解一些撰寫單元測試時的最佳做法，讓您的測試保有復原能力且易於了解。
+在此指南中，您將了解一些撰寫單元測試時的最佳做法，讓您的測試保有復原能力且易於了解。
 
 作者：[John Reese](https://reese.dev) (特別感謝 [Roy Osherove](http://osherove.com/))
 
@@ -234,7 +234,7 @@ Assert.True(mockOrder.Validated);
 將多個判定帶進測試案例時，並不保證所有的判定皆會執行。 在大部分的單元測試架構中，一旦判定在單元測試中失敗，進行中的測試將自動視為失敗。 這可能會令人困惑，因為實際運作的功能會顯示為失敗。
 
 > [!NOTE]
-> 這項規則的常見例外狀況是針對物件進行判定時。 在此情況下，通常可以接受對每個屬性擁有多個判定，確保物件處於您預期的狀態。
+> 此規則的常見例外狀況是針對物件進行判定時。 在此情況下，通常可以接受對每個屬性擁有多個判定，確保物件處於您預期的狀態。
 
 #### <a name="bad"></a>不良：
 [!code-csharp[BeforeMultipleAsserts](../../../samples/csharp/unit-testing-best-practices/before/StringCalculatorTests.cs#BeforeMultipleAsserts)]
@@ -318,8 +318,8 @@ public void GetDiscountedPrice_OnTuesday_ReturnsHalfPrice()
 
 不幸的是，您很快就會發現測試有幾個問題。 
 
-- 如果測試套件是在星期二執行，第二項測試會通過，但第一項測試會失敗。
-- 如果測試套件是在其他天執行，第一項測試會通過，但第二項測試會失敗。
+- 如果測試套件是在星期二執行，第二項測試會通過，但第一個測試會失敗。
+- 如果測試套件是在其他天執行，第一個測試會通過，但第二項測試會失敗。
 
 若要解決這些問題，您需要將「接合線」帶進生產環境程式碼。 其中一個方法是在介面中包裝您需要控制的程式碼，並使生產環境程式碼相依於該介面。
 

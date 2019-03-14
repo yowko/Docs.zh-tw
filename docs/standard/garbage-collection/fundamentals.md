@@ -1,6 +1,7 @@
 ---
 title: 記憶體回收的基本概念
-ms.date: 03/30/2017
+description: 了解記憶體回收行程如何運作，以及如何為它設定最佳效能。
+ms.date: 03/08/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - garbage collection, generations
@@ -12,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3eae9ea2c5a776d702d0868bdc858f8489f8f78
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066316"
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57712470"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -30,28 +31,8 @@ ms.locfileid: "55066316"
   
 -   確保某個物件無法使用另一個物件的內容，藉以提供記憶體安全性。  
   
- 本主題描述記憶體回收的核心概念。 它包含以下各節：  
-  
--   [記憶體的基本概念](#fundamentals_of_memory)  
-  
--   [記憶體回收的條件](#conditions_for_a_garbage_collection)  
-  
--   [Managed 堆積](#the_managed_heap)  
-  
--   [層代](#generations)  
-  
--   [記憶體回收期間進行的作業](#what_happens_during_a_garbage_collection)  
-  
--   [管理 Unmanaged 資源](#manipulating_unmanaged_resources)  
-  
--   [工作站和伺服器記憶體回收](#workstation_and_server_garbage_collection)  
-  
--   [並行的記憶體回收](#concurrent_garbage_collection)  
-  
--   [背景工作站記憶體回收](#background_garbage_collection)  
-  
--   [背景伺服器記憶體回收](#background_server_garbage_collection)  
-  
+ 本主題描述記憶體回收的核心概念。 
+ 
 <a name="fundamentals_of_memory"></a>   
 ## <a name="fundamentals-of-memory"></a>記憶體的基本概念  
  下列清單摘要說明重要的 CLR 記憶體概念。  
@@ -109,9 +90,9 @@ ms.locfileid: "55066316"
   
  記憶體回收的干擾程度 (頻率和持續期間) 是 Managed 堆積上之配置量和未被回收記憶體數量的結果。  
   
- 您可以將此堆積視為兩個堆積的累積：大型物件堆積和小型物件堆積。  
+ 您可以將此堆積視為兩個堆積的累積：[大型物件堆積](large-object-heap.md)和小型物件堆積。  
   
- 大型物件堆積包含 85,000 個位元組以上的超大型物件。 大型物件堆積上的物件通常是陣列。 超大型的執行個體物件非常罕見。  
+ [大型物件堆積](large-object-heap.md)包含 85,000 個位元組以上的超大型物件。 大型物件堆積上的物件通常是陣列。 超大型的執行個體物件非常罕見。  
   
  [回到頁首](#top)  
   
@@ -217,7 +198,7 @@ ms.locfileid: "55066316"
 ### <a name="configuring-garbage-collection"></a>設定記憶體回收  
  您可以使用執行階段組態結構描述的 [\<gcServer> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)來指定您想讓 CLR 執行的記憶體回收類型。 當此項目的 `enabled` 屬性設定為 `false` (預設值) 時，CLR 就會執行工作站記憶體回收。 當您將 `enabled` 屬性設定為 `true`時，CLR 就會執行伺服器記憶體回收。  
   
- 並行記憶體回收是使用執行階段組態結構描述的 [\<gcConcurrent> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來指定。 預設的設定值是 `enabled`。 這項設定可控制並行和背景記憶體回收。  
+ 並行記憶體回收是使用執行階段組態結構描述的 [\<gcConcurrent> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來指定。 預設的設定值是 `enabled`。 此設定可控制並行和背景記憶體回收。  
   
  您也可以使用 Unmanaged 裝載介面來指定伺服器記憶體回收。 請注意，ASP.NET 和 SQL Server 會自動啟用伺服器記憶體回收 (如果您的應用程式裝載在其中一個環境內部的話)。  
   

@@ -4,12 +4,12 @@ description: 探索 ML.NET 中支援的特徵工程元件。
 author: JRAlexander
 ms.custom: seodec18
 ms.date: 01/14/2019
-ms.openlocfilehash: 54dffec37318b79edf546ba1f6e1145e35782bfb
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: e649c9a27f0409cb9cdfb554963b5c0e732991f2
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "54415347"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57355401"
 ---
 # <a name="machine-learning-data-transforms---mlnet"></a>機器學習資料轉換 - ML.NET
 
@@ -25,18 +25,17 @@ ms.locfileid: "54415347"
 | <xref:Microsoft.ML.Transforms.GroupTransform> | 將純量資料行的值組成以連續群組識別碼為基礎的向量。 |
 | <xref:Microsoft.ML.Transforms.UngroupTransform> | 取消向量資料行的群組並分成資料列序列；Group 轉換的相反。 |
 
-## <a name="conversions"></a>轉換 
+## <a name="conversions"></a>轉換
 
 | 資料轉換 | 定義 |
 | --- | --- |
 | <xref:Microsoft.ML.Transforms.Conversions.HashingTransformer> | 雜湊處理單一值資料行或向量資料行。 針對向量資料行，它會個別雜湊處理每個位置。 它可以雜湊處理文字值或索引鍵值。 |
-| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 將多個資料行值轉換成雜湊。 這項轉換接受數值及文字輸入，也接受單一及向量值資料行。 |
+| <xref:Microsoft.ML.Transforms.Conversions.HashJoiningTransform> | 將多個資料行值轉換成雜湊。 此轉換接受數值及文字輸入，也接受單一及向量值資料行。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToBinaryVectorMappingTransformer> | 將索引鍵轉換成二進位向量資料行。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToValueMappingTransformer > | 利用 KeyValues 中繼資料，將索引鍵索引對應至 KeyValues 中繼資料中的對應值。 |
 | <xref:Microsoft.ML.Transforms.Conversions.KeyToVectorMappingTransformer> | 將索引鍵轉換成向量資料行。 |
 | <xref:Microsoft.ML.Transforms.Conversions.TypeConvertingTransformer> | 變更基礎資料行類型 (前提是該類型可以轉換)。 |
 | <xref:Microsoft.ML.Transforms.Conversions.ValueToKeyMappingTransformer> | 將輸入值 (文字、數字等) 轉換成字典中的索引。 |
-
 
 ## <a name="deep-learning"></a>深度學習
 
@@ -49,17 +48,17 @@ ms.locfileid: "54415347"
 
 | 資料轉換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 透過比較個別語彙基元 (不區分大小寫的比較) 與停用字詞，來移除指定的停用字詞清單。| 
+| <xref:Microsoft.ML.Transforms.Text.CustomStopWordsRemovingTransform> | 透過比較個別語彙基元 (不區分大小寫的比較) 與停用字詞，來移除指定的停用字詞清單。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageGrayscaleTransform> | 擷取一或多個 ImageType 資料行，並將其轉換成相同影像的灰階表示。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageLoaderTransform> | 擷取一或多個 ReadOnlyMemory 資料行，並以 ImageType 形式載入。 |
 | <xref:Microsoft.ML.ImageAnalytics.ImagePixelExtractorTransform> | 擷取一或多個 ImageType 資料行，並將其轉換成向量表示。|
 | <xref:Microsoft.ML.ImageAnalytics.ImageResizerTransform> | 擷取一或多個 ImageType 資料行，並將其大小調整為提供的高度和寬度。|
 | <xref:Microsoft.ML.Transforms.Text.LatentDirichletAllocationTransformer> | 實作 LightLDA，這是隱含狄利克雷分布 (Latent Dirichlet Allocation) 的最新實作。|
 | <xref:Microsoft.ML.Transforms.LoadTransform> | 從指定的模型檔載入特定轉換。 可讓您從序列化鏈結進行「揀選」轉換，或將預先定型的轉換套用至不同 (但仍相容) 的資料檢視。 |
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 在指定的索引鍵向量中產生一袋 ngrams 計數 (長度為 1-n 的連續值序列)。 它會透過建置 ngrams 字典，並在袋中使用字典內的識別碼作為索引，來進行此動作。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 將語彙基元化的文字集合 (ReadOnlyMemory 向量) 或索引鍵向量轉換成數值特徵向量。 特徵向量是 n 元語法計數 (長度為 1-n 的連續語彙基元 (字組或索引鍵) 序列)。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 使用雜湊，將語彙基元化的文字集合 (ReadOnlyMemory 向量) 轉換成數值特徵向量。 | 
-| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 在指定的文字中產生一袋 n 元語法計數 (長度為 1-n 的連續字組序列)。 | 
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractingTransformer> | 在指定的索引鍵向量中產生一袋 ngrams 計數 (長度為 1-n 的連續值序列)。 它會透過建置 ngrams 字典，並在袋中使用字典內的識別碼作為索引，來進行此動作。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramExtractorTransform> | 將語彙基元化的文字集合 (ReadOnlyMemory 向量) 或索引鍵向量轉換成數值特徵向量。 特徵向量是 n 元語法計數 (長度為 1-n 的連續語彙基元 (字組或索引鍵) 序列)。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashExtractingTransformer> | 使用雜湊，將語彙基元化的文字集合 (ReadOnlyMemory 向量) 轉換成數值特徵向量。 |
+| <xref:Microsoft.ML.Transforms.Text.NgramHashingTransformer> | 在指定的文字中產生一袋 n 元語法計數 (長度為 1-n 的連續字組序列)。 |
 | <xref:Microsoft.ML.Transforms.Categorical.OneHotEncodingTransformer> | 透過建置以資料為依據的類別字典，並使用字典中的識別碼作為陣列中索引，來將類別值轉換成指標陣列 |
 | <xref:Microsoft.ML.Transforms.Projections.PcaTransform> | 計算特徵向量在低順位子空間上的投影。 |
 | <xref:Microsoft.ML.Transforms.Text.SentimentAnalyzingTransformer> | 使用預先訓練的情感模型來為輸入字串計分。 |
@@ -73,7 +72,7 @@ ms.locfileid: "54415347"
 
 | 資料轉換 | 定義 |
 | --- | --- |
-| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 這是搭配 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 使用的延伸模組方法，以便使用預先定型的 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 模型。 包含此延伸模組的 NuGet 也一定會包含二進位模型檔。 | 
+| <xref:Microsoft.ML.Transforms.AlexNetExtension> | 這是搭配 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 使用的延伸模組方法，以便使用預先定型的 [AlexNet](https://en.wikipedia.org/wiki/AlexNet) 模型。 包含此延伸模組的 NuGet 也一定會包含二進位模型檔。 |
 | <xref:Microsoft.ML.Transforms.ResNet18Extension> | 這是搭配 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 使用的延伸模組方法，以便使用預先定型的 ResNet18 模型。 包含此延伸模組的 NuGet 也一定會包含二進位模型檔。 |
 | <xref:Microsoft.ML.Transforms.ResNet50Extension> | 這是搭配 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 使用的延伸模組方法，以便使用預先定型的 ResNet50 模型。 包含此延伸模組的 NuGet 也一定會包含二進位模型檔。 |
 | <xref:Microsoft.ML.Transforms.ResNet101Extension> | 這是搭配 <xref:Microsoft.ML.Transforms.DnnImageFeaturizerEstimator> 使用的延伸模組方法，以便使用預先定型的 ResNet101 模型。 包含此延伸模組的 NuGet 也一定會包含二進位模型檔。 |

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: d2bf6123-7b0c-4e60-87ad-a39a1c3eb2e0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74d2f9df5f9a9d34baa6a487730d5a1614d2d142
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7d64e254f5dd1f7d35150953c31854f45eb06b12
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219928"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496946"
 ---
 # <a name="caspolexe-code-access-security-policy-tool"></a>Caspol.exe (程式碼存取安全性原則工具)
 程式碼存取安全性 (CAS) 原則工具 (Caspol.exe) 可以讓使用者和系統管理員修改電腦原則層級、使用者原則層級和企業原則層級的安全性原則。  
@@ -43,9 +43,9 @@ ms.locfileid: "56219928"
 caspol [options]  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
-|選項|描述|  
+|選項|說明|  
 |------------|-----------------|  
 |**-addfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-af** *assembly_file*|將實作自訂安全物件 (例如，自訂授權或自訂成員資格條件) 的組件加入至特定原則層級的完全信任組件清單。 *assembly_file* 引數會指定要新增的組件。 此檔案必須使用[強式名稱](../../../docs/framework/app-domains/strong-named-assemblies.md)簽署。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)，以強式名稱來簽署組件。<br /><br /> 只要將包含自訂權限的權限集合加入至原則，就必須將實作自訂權限的組件加入至該原則層級的完全信任清單。 實作安全性原則 (例如，電腦原則) 中所使用之自訂安全性物件 (例如自訂程式碼群組或成員資格條件) 的組件，應一律加入至完全信任組件清單。 **注意：** 如果實作自訂安全性物件的組件參考其他組件，您必須先將參考的組件加入至完全信任組件清單中。 使用 Visual Basic、C++ 和 JScript 建立的自訂安全性物件會分別參考 Microsoft.VisualBasic.dll、Microsoft.VisualC.dll 或 Microsoft.JScript.dll。 依預設，這些組件不在完全信任組件清單中。 您必須在加入自訂安全性物件之前，先將適當的組件加入至完全信任清單中， 否則將會破壞安全性系統，造成所有的組件都無法載入。 在這種情況下，Caspol.exe **-all -reset** 選項將不會修復安全性。 若要修復安全性，您必須手動編輯安全性檔案，以移除自訂安全性物件。|  
 |**-addgroup** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]<br /><br /> 或<br /><br /> **-ag** {*parent_label &#124; parent_name*} *mship pset_name* [*flags*]|將新的程式碼群組加入至程式碼群組階層架構。 您可以指定 *parent_label* 或 *parent_name*。 *parent_label* 引數會指定所新增程式碼群組之父代的程式碼群組標籤 (例如 1. 或 1.1.)。 *parent_name* 引數會指定要新增之程式碼群組父代的程式碼群組名稱。 由於 *parent_label* 和 *parent_name* 可以交替使用，所以 Caspol.exe 必須能夠區分這兩者。 因此，*parent_name* 不能以數字開頭。 此外，*parent_name* 只能包含 A-Z、0-9 以及底線字元。<br /><br /> *mship* 引數會指定新程式碼群組的成員資格條件。 如需詳細資訊，請參閱本節稍後的 *mship* 引數表。<br /><br /> *pset_name* 引數是權限集合的名稱，其會與新的程式碼群組產生關聯。 您也可以為新群組設定一個或多個 *flags*。 如需詳細資訊，請參閱本節稍後的 *flags* 引數表。|  
@@ -68,7 +68,7 @@ caspol [options]
 |**-polchgprompt** {**on** &#124; **off**}<br /><br /> 或<br /><br /> **-pp** {**on** &#124; **off**}|啟用或停用每當使用會造成原則變更的選項來執行 Caspol.exe 時所顯示的提示。|  
 |**-quiet**<br /><br /> 或<br /><br /> **-q**|暫時停用通常會對造成原則變更的選項顯示的提示。 不過，全域變更提示設定不會變更。 僅針對單一命令使用這個選項，如此才不會停用所有 Caspol.exe 命令的提示。|  
 |**-r**[**ecover**]|從備份檔復原原則。 每當原則變更時，Caspol.exe 都會將舊原則儲存到備份檔中。|  
-|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行這項作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
+|**-remfulltrust** *assembly_file*<br /><br /> 或<br /><br /> **-rf**  *assembly_file*|從原則層級的完全信任清單中移除組件。 如果原則不再使用包含自訂權限的權限集合，則應該執行此作業。 不過，只有在組件未實作任何其他仍在使用的自訂權限時，才可以從完全信任清單中移除實作自訂權限的組件。 當您從清單中移除組件時，也應該移除該組件所依存的任何其他組件。|  
 |**-remgroup** {*label &#124;name*}<br /><br /> 或<br /><br /> **-rg** {l*abel &#124; name*}|移除以標籤或名稱指定的程式碼群組。 如果指定的程式碼群組包含子程式碼群組，Caspol.exe 也會移除所有子程式碼群組。|  
 |**-rempset** *pset_name*<br /><br /> 或<br /><br /> **-rp** *pset_name*|從原則中移除指定的權限集合。 *pset_name* 引數會指出要移除的權限集合。 只有在權限集合未與任何程式碼群組相關聯時，Caspol.exe 才會將該權限集合移除。 無法移除預設 (內建) 權限集合。|  
 |**-reset**<br /><br /> 或<br /><br /> **-rs**|將原則回復到其預設狀態並保存 (Persist) 到磁碟中。 每當變更的原則似乎無法修復，而您想要以安裝預設值重新開始時，這樣做會非常有用。 當您想要使用預設原則做為修改特定安全性設定檔的起點時，重設也會很方便。 如需詳細資訊，請參閱[手動編輯安全性組態檔](#cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1)。|  
@@ -81,7 +81,7 @@ caspol [options]
   
  *mship* 引數可以搭配 **-addgroup** 和 **-chggroup** 選項使用，以指定程式碼群組的成員資格條件 。 系統會以 .NET Framework 類別的形式來實作每個 *mship* 引數。 若要指定 *mship,*，請使用下列其中一種方式。  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |**-allcode**|指定所有程式碼。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.AllMembershipCondition?displayProperty=nameWithType>。|  
 |**-appdir**|指定應用程式目錄。 如果您將 **–appdir** 指定為成員資格條件，系統會比較程式碼的 URL 辨識項與該程式碼的應用程式目錄辨識項。 如果兩個辨識項的值相同，表示符合這個成員條件。 如需這個成員資格條件的詳細資訊，請參閱 <xref:System.Security.Policy.ApplicationDirectoryMembershipCondition?displayProperty=nameWithType>。|  
@@ -95,7 +95,7 @@ caspol [options]
   
  *flags* 引數是使用下列其中一種方式指定，並且可以搭配 **–addgroup** 和 **–chggroup** 選項使用。  
   
-|引數|描述|  
+|引數|說明|  
 |--------------|-----------------|  
 |**-description** "*description*"|如果搭配 **–addgroup** 選項使用，可指定要新增的程式碼群組描述。 如果搭配 **–chggroup** 選項使用，可指定要編輯的程式碼群組描述。 *description* 引數必須括在雙引號中。|  
 |**-exclusive** {**on**&#124;**off**}|設為 **on** 時，表示當部分程式碼符合程式碼群組的成員資格條件時，只會考慮與您要新增或修改的程式碼群組相關聯的權限集合。 這個選項設為 **off** 時，Caspol.exe 會考慮原則層級中所有相符程式碼群組的權限集合。|  
@@ -119,7 +119,7 @@ caspol [options]
   
  當未具備管理權限的使用者執行 Caspol.exe 時，除非指定 **–machine** 選項，否則所有選項都會參考使用者層級原則。 當系統管理員執行 Caspol.exe 時，除非指定 **–user** 選項，否則所有選項都會參考電腦原則。  
   
- Caspol.exe 必須具有與 **Everything** 權限集合對等的權限才能運作。 此工具有保護機制，可防止原則遭到修改，而造成 Caspol.exe 無法獲得執行所需的權限。 如果您嘗試進行這類變更，Caspol.exe 會通知您要求的原則變更將中斷工具，並且拒絕原則變更。 您可以使用 **–force** 選項，針對特定命令關閉這項保護機制。  
+ Caspol.exe 必須具有與 **Everything** 權限集合對等的權限才能運作。 此工具有保護機制，可防止原則遭到修改，而造成 Caspol.exe 無法獲得執行所需的權限。 如果您嘗試進行這類變更，Caspol.exe 會通知您要求的原則變更將中斷工具，並且拒絕原則變更。 您可以使用 **–force** 選項，針對特定命令關閉此保護機制。  
   
 <a name="cpgrfcodeaccesssecuritypolicyutilitycaspolexeanchor1"></a>   
 ## <a name="manually-editing-the-security-configuration-files"></a>手動編輯安全性設定檔  

@@ -7,12 +7,12 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.date: 12/04/2018
-ms.openlocfilehash: 058e7ee1dc834ff23a9a4aa191f7eaeb1016375c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49a65dd44159e9800f7cf50a1edaa3d9e9b82e47
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679773"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677262"
 ---
 # <a name="whats-new-in-net-core-22"></a>.NET Core 2.2 的新功能
 
@@ -28,9 +28,9 @@ ms.locfileid: "54679773"
 
 **處理執行階段服務中的事件**
 
-您可能常常會想要監視應用程式的執行階段服務使用情況 (例如 GC、JIT 及 ThreadPool)，以了解這些服務對您應用程式的影響。 在 Windows 系統上，通常是藉由監視目前程序的 ETW 事件來達到此目的。 雖然此方法持續行得通，但如果您是在低權限環境或是在 Linux 或 macOS 中執行，則未必總是能夠使用 ETW。  
+您可能常常會想要監視應用程式的執行階段服務使用情況 (例如 GC、JIT 及 ThreadPool)，以了解這些服務對您應用程式的影響。 在 Windows 系統上，通常是藉由監視目前程序的 ETW 事件來達到此目的。 雖然此方法持續行得通，但如果您是在低權限環境或是在 Linux 或 macOS 中執行，則未必總是能夠使用 ETW。 
 
-從 .NET Core 2.2 開始，現在已可使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithtype> 類別來取用 CoreCLR 事件。 這些事件將這類執行階段服務的行為描述為 GC、JIT、ThreadPool 及 Interop。 這些事件與 CoreCLR ETW 提供者所含的事件相同。  這可讓應用程式取用這些事件，或使用傳輸機制將事件傳送給遙測彙總服務。 您可以從下列程式碼範例了解如何訂閱事件：
+從 .NET Core 2.2 開始，現在已可使用 <xref:System.Diagnostics.Tracing.EventListener?displayProperty=nameWithType> 類別來取用 CoreCLR 事件。 這些事件將這類執行階段服務的行為描述為 GC、JIT、ThreadPool 及 Interop。 這些是作為 CoreCLR ETW 提供者之一部分公開的相同事件。  這可讓應用程式取用這些事件，或使用傳輸機制將事件傳送給遙測彙總服務。 您可以從下列程式碼範例了解如何訂閱事件：
 
 ```csharp
 internal sealed class SimpleEventListener : EventListener
@@ -76,13 +76,13 @@ internal sealed class SimpleEventListener : EventListener
 
 **階層式編譯仍然是可選擇加入的功能**
 
-在 .NET Core 2.1 中，JIT 編譯器已實作「階層式編譯」這項新編譯器技術作為可選擇加入的功能。 階層式編譯的目標是要提升效能。 由 JIT 編譯器所執行的其中一項重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
+在 .NET Core 2.1 中，JIT 編譯器已實作「階層式編譯」這個新編譯器技術作為可選擇加入的功能。 階層式編譯的目標是要提升效能。 由 JIT 編譯器所執行的其中一個重要工作，是將程式碼的執行最佳化。 不過，針對很少使用的程式碼路徑，編譯器將程式碼最佳化的時間，可能會比執行階段執行未最佳化程式碼的時間還要久。 階層式編譯會在 JIT 編譯中引入兩個階段：
 
 - **第一層**：盡快產生程式碼。
 
 - **第二層**：針對那些經常執行的方法產生最佳化的程式碼。 編譯的第二層會以平行方式執行以增強效能。
 
-如需了解階層式編譯所能產生的效能改進，請參閱[宣布推出 .NET Core 2.2 Preview 2](https://blogs.msdn.microsoft.com/dotnet/2018/09/12/announcing-net-core-2-2-preview-2/) \(英文\)。 
+如需了解階層式編譯所能產生的效能改進，請參閱[宣布推出 .NET Core 2.2 Preview 2](https://devblogs.microsoft.com/dotnet/announcing-net-core-2-2-preview-2/) \(英文\)。
 
 在 .NET Core 2.2 Preview 2 中，階層式編譯是預設啟用的功能。 不過，我們已判定我們尚未做好預設啟用階層式編譯的準備。 因此，在 .NET Core 2.2 中，階層式編譯仍繼續維持為可選擇加入的功能。 如需有關如何選擇加入階層式編譯的資訊，請參閱 [.NET Core 2.1 的新功能](dotnet-core-2-1.md)中的 [Jit 編譯器的改進項目](dotnet-core-2-1.md#jit-compiler-improvements)。
 

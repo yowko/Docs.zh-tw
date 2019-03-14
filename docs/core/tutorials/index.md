@@ -19,7 +19,7 @@ ms.custom: seodec18
 - [使用 Visual Basic 建立類別庫](vb-library-with-visual-studio.md)
 - [測試類別庫](testing-library-with-visual-studio.md)
 - [使用類別庫](consuming-library-with-visual-studio.md)
-- [Azure Cosmos DB：Azure Cosmos DB：開始使用 SQL API 和 .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
+- [Azure Cosmos DB：開始使用 SQL API 和 .NET Core](/azure/cosmos-db/sql-api-dotnetcore-get-started)
 
 ## <a name="building-applications-with-visual-studio-code"></a>使用 Visual Studio Code 建置應用程式
 
@@ -33,7 +33,7 @@ ms.custom: seodec18
 
 ## <a name="building-applications-with-the-net-core-cli-tools"></a>使用 .NET Core CLI 工具建置應用程式
 
-- [使用 .NET Core CLI 工具在 Windows/Linux/MacOS 上開始使用 .NET Core](using-with-xplat-cli.md)
+- [使用 .NET Core CLI 工具在 Windows/Linux/macOS 上開始使用 .NET Core](using-with-xplat-cli.md)
 - [使用 .NET Core CLI 工具組織和測試專案](testing-with-cli.md)
 - [開始使用 F#](../../fsharp/get-started/get-started-command-line.md)
 

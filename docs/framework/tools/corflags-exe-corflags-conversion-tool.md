@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: ef900f8f-71ca-4dde-9b8c-95ddb0d7d89c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae2efe619d9c6ebcf2c570b5a63d569faf3b3343
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a97ba44cfadc27582b2ae9119c01b392f14a19f
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690744"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57496491"
 ---
 # <a name="corflagsexe-corflags-conversion-tool"></a>CorFlags.exe (CorFlags 轉換工具)
 CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區段。  
   
- 此工具會自動與 Visual Studio 一起安裝。 若要執行這項工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
+ 此工具會自動與 Visual Studio 一起安裝。 若要執行此工具，請使用 [Visual Studio 開發人員命令提示字元] (或 Windows 7 中的 [Visual Studio 命令提示字元])。 如需詳細資訊，請參閱[命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)。  
   
  在命令提示字元下輸入下列命令：  
   
@@ -28,7 +28,7 @@ CorFlags 轉換工具可讓您設定可攜式執行映像標頭的 CorFlags 區�
 CorFlags.exe assembly [options]  
 ```  
   
-#### <a name="parameters"></a>參數  
+## <a name="parameters"></a>參數  
   
 |必要參數|說明|  
 |------------------------|-----------------|  
@@ -47,7 +47,7 @@ CorFlags.exe assembly [options]
 |**/ILONLY-**|清除 ILONLY 旗標。|  
 |**/nologo**|隱藏 Microsoft 程式啟始資訊顯示。|  
 |**/RevertCLRHeader**|將 CLR 標頭版本還原為 2.0。|  
-|**/UpgradeCLRHeader**|將 CLR 標頭版本升級到 2.5。 **注意：** 組件的 CLR 標頭必須是 2.5 (含) 以上版本，才能以原本的形式執行。|  
+|**/UpgradeCLRHeader**|將 CLR 標頭版本升級到 2.5。 **注意：** 組件的 CLR 標頭必須是 2.5 (含) 以上版本，才能以原生的形式執行。|  
   
 ## <a name="remarks"></a>備註  
  如果未指定任何選項，則 CorFlags 轉換工具會針對所指定組件顯示旗標。  

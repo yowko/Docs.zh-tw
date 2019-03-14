@@ -6,16 +6,16 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 24b2792d1e48eb213c047cb589c52016e11c631d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285021"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677522"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
-撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。本文說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
+撰寫 I/O-bound 和 CPU-bound 非同步程式碼的直接做法，就是使用以 .NET 工作為基礎的非同步模型。 在 C# 和 Visual Basic 中，此模型是由 `Task` 和 `Task<T>` 類型以及 `async` 和 `await` 關鍵字所公開。 (您可以在[另請參閱](#see-also)一節中找到特定語言資源)。此文章說明如何使用 .NET 非同步，並深入解析幕後所使用的非同步架構。
 
 ## <a name="task-and-taskt"></a>Task 與 Task\<T>
 
@@ -28,7 +28,7 @@ Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org
 
 Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 (如果是 `Task<T>`)。 與 `await` 關鍵字的語言整合提供更高層級的抽象層來使用 Task。 
 
-使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行這項作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將工作完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
+使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行此作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將工作完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
 
 如需工作及與其互動之不同方式的詳細資訊，請參閱[工作架構非同步模式 (TAP)](~/docs/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap.md) 主題。
 
@@ -142,7 +142,7 @@ public async Task<int> CalculateResult(InputData data)
 
 ### <a name="why-does-async-help-here"></a>為什麼非同步有助於此作業？
 
-當您需要快速回應，`async` 與 `await` 是管理 CPU-bound 工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以這項新功能為主的程式碼。
+當您需要快速回應，`async` 與 `await` 是管理 CPU 瓶頸工作的最佳做法。 搭配 CPU-bound 工作使用 async 的模式有許多種。 請務必注意使用 async 會耗費少量成本，而且不建議用於緊密迴圈。  您必須自行決定要如何撰寫以此新功能為主的程式碼。
 
 ## <a name="see-also"></a>另請參閱
 

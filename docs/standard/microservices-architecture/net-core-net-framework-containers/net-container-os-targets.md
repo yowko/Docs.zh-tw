@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 針對 .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: bef268a180584c47486a16960ca13fd63201fbe2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9e1d07e48d88376efb5fbdbdadc999c8dcd5082d
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479863"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57374904"
 ---
 # <a name="what-os-to-target-with-net-containers"></a>針對 .NET 容器要設為目標的作業系統
 
@@ -57,6 +57,6 @@ ms.locfileid: "55479863"
 </tbody>
 </table>
 
->[!div class="step-by-step"]
->[上一頁](container-framework-choice-factors.md)
->[下一頁](official-net-docker-images.md)
+> [!div class="step-by-step"]
+> [上一頁](container-framework-choice-factors.md)
+> [下一頁](official-net-docker-images.md)

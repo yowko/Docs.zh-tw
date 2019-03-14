@@ -5,16 +5,16 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/18/2016
 ms.assetid: 0b0c4b0f-4a47-4f66-9b8e-f5c63b195960
-ms.openlocfilehash: 90c693790398509a810d93d8504e1eb748637bb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c24c1ec04bdd7ce7ee2061c2551652e26a28cf9
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710247"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679329"
 ---
 # <a name="deconstructing-tuples-and-other-types"></a>解構元組和其他類型
 
-元組可讓您輕鬆地從方法呼叫擷取多個值。 但擷取元組之後，您必須處理其個別項目。 逐項目執行這項作業很麻煩，如下列範例所示。 `QueryCityData` 方法會傳回 3 元組，並以不同作業將其每個項目指派給個別變數。
+元組可讓您輕鬆地從方法呼叫擷取多個值。 但擷取元組之後，您必須處理其個別項目。 逐項目執行此作業很麻煩，如下列範例所示。 `QueryCityData` 方法會傳回 3 元組，並以不同作業將其每個項目指派給個別變數。
 
 [!code-csharp[WithoutDeconstruction](../../samples/snippets/csharp/programming-guide/deconstructing-tuples/deconstruct-tuple1.cs)]
 

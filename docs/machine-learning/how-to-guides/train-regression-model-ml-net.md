@@ -1,16 +1,21 @@
 ---
 title: 使用 ML.NET 將迴歸模型定型以預測值
 description: 探索如何使用 ML.NET 將機器學習迴歸模型定型以預測值
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: faee51550250f08443d4d9349fa2f1c92bf411dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e7ea07471e155804a7ad36481aa469beda7028ae
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092900"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673141"
 ---
 # <a name="train-a-regression-model-to-predict-a-value-using-mlnet"></a>使用 ML.NET 將迴歸模型定型以預測值
+
+> [!NOTE]
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+
+本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 一般而言，ML.NET 中的模型定型有三個步驟：
 

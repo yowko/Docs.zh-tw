@@ -1,16 +1,21 @@
 ---
 title: 從文字檔載入資料以進行機器學習處理 - ML.NET
 description: 探索如何使用 ML.NET，從文字檔載入資料，供機器學習模型建置、訓練及評分之用
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 70c7ccdeaa27b78a412c2bc82f524d4bf42a740a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 62f68bd950d6a2c116baaba86ba7e27a10cec69d
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091704"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57676287"
 ---
 # <a name="load-data-from-a-text-file-for-machine-learning-processing---mlnet"></a>從文字檔載入資料以進行機器學習處理 - ML.NET
+
+> [!NOTE]
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+
+本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 `TextLoader` 是用來從文字檔載入資料。 您需要指定資料行、其類型，以及它們在文字檔中的位置。
 

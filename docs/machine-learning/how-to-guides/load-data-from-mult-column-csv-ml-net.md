@@ -1,18 +1,23 @@
 ---
 title: 從 CSV 檔案的許多資料行載入資料以進行機器學習處理 - ML.NET
 description: 了解如何從 CSV 檔案的許多資料行載入資料，以用於使用 ML.NET 進行機器學習模型建立、定型及評分
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: b295653d1bd3a955c2e6da929dc8f2d4d0a4c14d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: e33fdf1d71b02545e3ea284cc317f5d244c3fc13
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091964"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675949"
 ---
 # <a name="load-data-with-many-columns-from-a-csv-file-for-machine-learning-processing---mlnet"></a>從 CSV 檔案的許多資料行載入資料以進行機器學習處理 - ML.NET
 
-`TextLoader` 是用來從文字檔案載入資料。 您需要指定資料行、其類型，以及它們在文字檔中的位置。
+> [!NOTE]
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+
+本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
+
+`TextLoader` 是用來從文字檔載入資料。 您需要指定資料行、其類型，以及它們在文字檔中的位置。
 
 當輸入檔案包含許多相同類型且一律一起使用的資料行時，請將它們讀取為「向量資料行」。 此策略可產生簡潔的資料結構描述，且可避免不必要的效能成本，如下列範例所示：
 

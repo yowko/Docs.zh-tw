@@ -1,23 +1,25 @@
 ---
 title: ML.NET 模型定型的基本概念
-description: 本文章說明的基本概念涵蓋 ML.NET 中的*模型定型*情節。 並非所有概念都與*使用現有模型進行預測*的更簡單情節相關。
-ms.date: 02/13/2019
+description: 此文章說明的基本概念涵蓋 ML.NET 中的*模型定型*情節。 並非所有概念都與*使用現有模型進行預測*的更簡單情節相關。
+ms.date: 03/05/2019
 ms.topic: overview
 ms.custom: mvc
-ms.openlocfilehash: c47d5832527dca1416abfc55756dca48f1daf493
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 78554cfd1dfdb3dba82a325d47245aeb313bb6fe
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303656"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675559"
 ---
 # <a name="basic-concepts-for-model-training-in-mlnet"></a>ML.NET 模型定型的基本概念
 
-本文章說明的基本概念涵蓋 ML.NET 中的*模型定型*情節。 並非所有概念都與「使用現有模型進行預測」的更簡單案例相關。
+此文章說明的基本概念涵蓋 ML.NET 中的*模型定型*情節。 並非所有概念都與「使用現有模型進行預測」的更簡單案例相關。
+
+此文章與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 ## <a name="model-training-concepts"></a>模型定型概念
 
-本文件涵蓋下列與 ML.NET 模型定型相關的概念：
+此文件涵蓋下列與 ML.NET 模型定型相關的概念：
 
 - [*資料*](#data)，以 `IDataView` 介面表示。
   - 在 ML.NET 中，資料相當於 SQL 檢視：它是延遲評估、不可變、可支援資料指標、異質性、結構描述化的資料集。 

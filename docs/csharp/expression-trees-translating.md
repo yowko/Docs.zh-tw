@@ -3,12 +3,12 @@ title: 轉譯運算式樹狀架構
 description: 了解如何瀏覽運算式樹狀架構中的每個節點，同時建立修改後的運算式樹狀架構複本。
 ms.date: 06/20/2016
 ms.assetid: b453c591-acc6-4e08-8175-97e5bc65958e
-ms.openlocfilehash: 6fe35983119bba443ed9132ff0c52361e1f07da8
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 4c14837c1d92845991d8ea9990b77eb9052757d8
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50200531"
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57490069"
 ---
 # <a name="translating-expression-trees"></a>轉譯運算式樹狀架構
 
@@ -75,7 +75,7 @@ var addition = Expression.Add(one, two);
 var add2 = Expression.Add(three, four);
 var sum = Expression.Add(addition, add2);
 
-// Declare the delegate, so we can call it 
+// Declare the delegate, so we can call it
 // from itself recursively:
 Func<Expression, int> aggregate = null;
 // Aggregate, return constants, or the sum of the left and right operand.

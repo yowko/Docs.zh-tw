@@ -4,28 +4,28 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解發佈�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: eef1ad347cb621e1f26c9c65d46d71e83a2c3a23
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8ddc966710f6a9a949983726fd93505fbc88391f
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971776"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57675026"
 ---
 # <a name="subscribing-to-events"></a>訂閱事件
 
 使用事件匯流排的第一個步驟是訂閱所要接收之事件的微服務。 這應該在接收者微服務中完成。
 
-下列簡單程式碼顯示每個接收者微服務在啟動服務時必須實作的項目 (也就是在 `Startup` 類別中)，以便訂閱所需的事件。 在本例中，`basket.api` 微服務需要訂閱 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 訊息。 
+下列簡單程式碼顯示每個接收者微服務在啟動服務時必須實作的項目 (也就是在 `Startup` 類別中)，以便訂閱所需的事件。 在本例中，`basket.api` 微服務需要訂閱 `ProductPriceChangedIntegrationEvent` 和 `OrderStartedIntegrationEvent` 訊息。
 
 例如，訂閱 `ProductPriceChangedIntegrationEvent` 事件時，可讓購物籃微服務注意到產品價格的任何變更，並在使用者的購物籃中有該項產品時，警告使用者有此變更。
 
 ```csharp
 var eventBus = app.ApplicationServices.GetRequiredService<IEventBus>();
 
-eventBus.Subscribe<ProductPriceChangedIntegrationEvent, 
+eventBus.Subscribe<ProductPriceChangedIntegrationEvent,
                    ProductPriceChangedIntegrationEventHandler>();
 
-eventBus.Subscribe<OrderStartedIntegrationEvent, 
+eventBus.Subscribe<OrderStartedIntegrationEvent,
                    OrderStartedIntegrationEventHandler>();
 
 ```
@@ -87,9 +87,9 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 }
 ```
 
-在本例中，由於來源微服務是簡單的 CRUD 微服務，因此該程式碼會直接放在 Web API 控制器中。 
- 
-在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `Handle()` 方法的 `CommandHandler` 類別中實作。 
+在本例中，由於來源微服務是簡單的 CRUD 微服務，因此該程式碼會直接放在 Web API 控制器中。
+
+在更進階的微服務中，例如使用 CQRS 方法時，它可以在 `Handle()` 方法的 `CommandHandler` 類別中實作。
 
 ### <a name="designing-atomicity-and-resiliency-when-publishing-to-the-event-bus"></a>設計發行至事件匯流排時的不可部分完成性和復原
 
@@ -103,11 +103,11 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 如稍早的＜架構＞一節中所述，您有數個方法可解決這個問題：
 
--   使用完整的[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
+- 使用完整的[事件溯源模式](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)。
 
--   使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
+- 使用[交易記錄採礦](https://www.scoop.it/t/sql-server-transaction-log-mining)。
 
--   使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
+- 使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)。 這是交易式資料表，可儲存整合事件 (以延伸本機交易)。
 
 在此案例中，使用完整的事件溯源 (ES) 模式即使不是「最佳」方法，也是最佳方法之一。 不過，在許多應用程式案例中，您可能無法實作完整的 ES 系統。 ES 表示只會將領域事件儲存在您的交易式資料庫中，而不會儲存目前的狀態資料。 只儲存領域事件可能有許多好處，例如提供系統歷程記錄，以及能夠判斷過去任何時間的系統狀態。 不過，實作完整的 ES 系統需要您重新架構大部分的系統，因而引進許多其他的複雜度和需求。 例如，您會想要使用專為事件溯源所建立的資料庫 (例如[事件存放區](https://eventstore.org/))，或文件導向資料庫 (例如 Azure Cosmos DB、MongoDB、Cassandra、CouchDB 或 RavenDB)。 ES 是解決這個問題的最好方法，但除非您已熟悉事件溯源，否則並不是最簡單的解決方法。
 
@@ -125,19 +125,19 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 逐步程序如下：
 
-1.  應用程式開始本機資料庫交易。
+1. 應用程式開始本機資料庫交易。
 
-2.  它接著會更新您的領域實體狀態，並將事件插入整合事件資料表。
+2. 它接著會更新您的領域實體狀態，並將事件插入整合事件資料表。
 
-3.  最後，其會認可交易，您即可如預期得到不可部份完成的作業，然後
+3. 最後，其會認可交易，您即可如預期得到不可部份完成的作業，然後
 
-4.  您會以某種方式發佈事件 (下一步)。
+4. 您會以某種方式發佈事件 (下一步)。
 
 實作發行事件的步驟時，您有下列選擇：
 
--   在認可交易之後直接發行整合事件，並使用另一個本機交易將資料表中的事件標示為已發行。 然後，使用資料表作為成品，以在遠端微服務發生問題時追蹤整合事件，並根據儲存的整合事件來執行補償動作。
+- 在認可交易之後直接發行整合事件，並使用另一個本機交易將資料表中的事件標示為已發行。 然後，使用資料表作為成品，以在遠端微服務發生問題時追蹤整合事件，並根據儲存的整合事件來執行補償動作。
 
--   使用資料表作為一種佇列。 另一個應用程式執行緒或處理序會查詢整合事件資料表、將事件發行至事件匯流排，然後使用本機交易將事件標示為已發行。
+- 使用資料表作為一種佇列。 另一個應用程式執行緒或處理序會查詢整合事件資料表、將事件發行至事件匯流排，然後使用本機交易將事件標示為已發行。
 
 圖 6-22 顯示這些方法中第一個方法的架構。
 
@@ -159,62 +159,62 @@ public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem product)
 
 下列程式碼示範如何建立涉及多個 DbContext 物件的單一交易：一個內容與要更新的原始資料相關，第二個內容與 IntegrationEventLog 資料表相關。
 
-請注意，如果資料庫連接在執行程式碼時發生任何問題，下列範例程式碼中的交易將不會復原。 在 Azure SQL DB 等雲端式系統中，由於可能會在伺服器之間移動資料庫，因此可能會發生此情況。 若要在多個內容之間實作復原交易，請參閱本指南稍後的[實作具有恢復功能的 Entity Framework Core SQL 連接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)一節。
+請注意，如果資料庫連接在執行程式碼時發生任何問題，下列範例程式碼中的交易將不會復原。 在 Azure SQL DB 等雲端式系統中，由於可能會在伺服器之間移動資料庫，因此可能會發生此情況。 若要在多個內容之間實作復原交易，請參閱此指南稍後的[實作具有恢復功能的 Entity Framework Core SQL 連接](../implement-resilient-applications/implement-resilient-entity-framework-core-sql-connections.md)一節。
 
 為了清楚起見，下列範例會在單一程式碼片段中顯示整個程序。 不過，eShopOnContainers 實作實際上已重構，並將此邏輯分割成多個類別，因此很容易維護。
 
 ```csharp
 // Update Product from the Catalog microservice
 //
-public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate) 
+public async Task<IActionResult> UpdateProduct([FromBody]CatalogItem productToUpdate)
 {
-  var catalogItem = 
-       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id == 
-                                                               productToUpdate.Id); 
+  var catalogItem =
+       await _catalogContext.CatalogItems.SingleOrDefaultAsync(i => i.Id ==
+                                                               productToUpdate.Id);
   if (catalogItem == null) return NotFound();
 
-  bool raiseProductPriceChangedEvent = false; 
-  IntegrationEvent priceChangedEvent = null; 
+  bool raiseProductPriceChangedEvent = false;
+  IntegrationEvent priceChangedEvent = null;
 
-  if (catalogItem.Price != productToUpdate.Price) 
-          raiseProductPriceChangedEvent = true; 
+  if (catalogItem.Price != productToUpdate.Price)
+          raiseProductPriceChangedEvent = true;
 
   if (raiseProductPriceChangedEvent) // Create event if price has changed
   {
-      var oldPrice = catalogItem.Price; 
+      var oldPrice = catalogItem.Price;
       priceChangedEvent = new ProductPriceChangedIntegrationEvent(catalogItem.Id,
-                                                                  productToUpdate.Price, 
-                                                                  oldPrice); 
+                                                                  productToUpdate.Price,
+                                                                  oldPrice);
   }
   // Update current product
-  catalogItem = productToUpdate; 
+  catalogItem = productToUpdate;
 
   // Just save the updated product if the Product's Price hasn't changed.
-  if (!raiseProductPriceChangedEvent) 
+  if (!raiseProductPriceChangedEvent)
   {
       await _catalogContext.SaveChangesAsync();
   }
   else  // Publish to event bus only if product price changed
   {
-        // Achieving atomicity between original DB and the IntegrationEventLog 
+        // Achieving atomicity between original DB and the IntegrationEventLog
         // with a local transaction
         using (var transaction = _catalogContext.Database.BeginTransaction())
         {
-           _catalogContext.CatalogItems.Update(catalogItem); 
+           _catalogContext.CatalogItems.Update(catalogItem);
            await _catalogContext.SaveChangesAsync();
 
            // Save to EventLog only if product price changed
-           if(raiseProductPriceChangedEvent) 
-               await _integrationEventLogService.SaveEventAsync(priceChangedEvent); 
+           if(raiseProductPriceChangedEvent)
+               await _integrationEventLogService.SaveEventAsync(priceChangedEvent);
 
            transaction.Commit();
-        }   
+        }
 
-      // Publish the intergation event through the event bus
-      _eventBus.Publish(priceChangedEvent); 
+      // Publish the integration event through the event bus
+      _eventBus.Publish(priceChangedEvent);
 
       integrationEventLogService.MarkEventAsPublishedAsync(
-                                                priceChangedEvent); 
+                                                priceChangedEvent);
   }
 
   return Ok();
@@ -289,7 +289,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 更新訊息事件的一個重點是，通訊期間任何時間失敗都應該導致重試訊息。 否則，背景工作可能會嘗試發行已發行的事件，並建立競爭條件。 您需要確定更新為等冪或提供足夠的資訊，以確保您可以偵測重複項、將它捨棄，並只傳回一個回應。
 
-如稍早所述，等冪性表示作業可執行多次而不會變更結果。 在傳訊環境中，當傳達事件時，如果可傳遞事件多次而不會變更接收者微服務的結果，事件會是等冪。 由於事件本身的本質，或由於系統處理事件的方式，這可能會是必要條件。 訊息等冪性在使用傳訊的任何應用程式中都很重要，不是只有在實作事件匯流排模式的應用程式中才重要。
+如稍早所述，等冪性表示作業可執行多次而不會變更結果。 在傳訊環境中，當傳達事件時，如果可傳遞事件多次而不會變更接收者微服務的結果，事件會是等冪。 由於事件本身的本質，或由於系統處理事件的方式，這可能會是先決條件。 訊息等冪性在使用傳訊的任何應用程式中都很重要，不是只有在實作事件匯流排模式的應用程式中才重要。
 
 等冪作業的一個範例是 SQL 陳述式，該陳述式只有在資料表中還沒有資料時，才會將該資料插入資料表。 該 INSERT SQL 陳述式的執行次數並不重要；結果會相同，資料表將會包含該資料。 如果可能不只一次傳送並處理訊息，當處理訊息時，也可能需要類似的等冪性。 例如，如果重試邏輯導致傳送者多次傳送完全相同的訊息，您需要確定它是等冪的。
 
@@ -303,7 +303,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
--   **遵循訊息冪等** <br/>
+- **遵循訊息冪等** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591565(v=pandp.10)#honoring-message-idempotency>
 
 ## <a name="deduplicating-integration-event-messages"></a>刪除重複的整合事件訊息
@@ -324,69 +324,69 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>其他資源
 
--   **使用 NServiceBus (特定軟體) 派生的 eShopOnContainers** <br/>
+- **使用 NServiceBus (特定軟體) 派生的 eShopOnContainers** <br/>
     [*https://go.particular.net/eShopOnContainers*](https://go.particular.net/eShopOnContainers)
 
--   **事件驅動傳訊** <br/>
+- **事件驅動傳訊** <br/>
     [*http://soapatterns.org/design\_patterns/event\_driven\_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
 
--   **Jimmy Bogard：重構以提高彈性：評估結合程度** <br/>
+- **Jimmy Bogard：重構以提高彈性：評估結合程度** <br/>
     [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
--   **發佈訂閱通道** <br/>
+- **發佈訂閱通道** <br/>
     [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
--   **在繫結的內容之間通訊** <br/>
+- **在繫結的內容之間通訊** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
--   **最終一致性** <br/>
+- **最終一致性** <br/>
     [*https://en.wikipedia.org/wiki/Eventual\_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
 
--   **Philip Brown：整合已繫結內容的策略** <br/>
+- **Philip Brown：整合已繫結內容的策略** <br/>
     [*https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/*](https://www.culttt.com/2014/11/26/strategies-integrating-bounded-contexts/)
 
--   **Chris Richardson：使用彙總、事件溯源及 CQRS 開發交易微服務 - 第 2 部分** <br/>
+- **Chris Richardson：使用彙總、事件溯源及 CQRS 開發交易微服務 - 第 2 部分** <br/>
     [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-2-richardson)
 
--   **Chris Richardson：事件溯源模式** <br/>
+- **Chris Richardson：事件溯源模式** <br/>
     [*https://microservices.io/patterns/data/event-sourcing.html*](https://microservices.io/patterns/data/event-sourcing.html)
 
--   **事件溯源簡介** <br/>
+- **事件溯源簡介** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/jj591559(v=pandp.10)>
 
--   **Event Store 資料庫**. 官方網站。 <br/>
+- **Event Store 資料庫**. 官方網站。 <br/>
     [*https://geteventstore.com/*](https://geteventstore.com/)
 
--   **Patrick Nommensen：微服務的事件驅動資料管理** <br/>
+- **Patrick Nommensen：微服務的事件驅動資料管理** <br/>
     *<https://dzone.com/articles/event-driven-data-management-for-microservices-1> *
 
--   **CAP 定理** <br/>
+- **CAP 定理** <br/>
     [*https://en.wikipedia.org/wiki/CAP\_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
 
--   **什麼是 CAP 定理？** <br/>
+- **什麼是 CAP 定理？** <br/>
     [*https://www.quora.com/What-Is-CAP-Theorem-1*](https://www.quora.com/What-Is-CAP-Theorem-1)
 
--   **資料一致性入門** <br/>
+- **資料一致性入門** <br/>
     <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
--   **Rick Saling：CAP 定理：為何雲端及網際網路的「一切都不同」** <br/>
+- **Rick Saling：CAP 定理：為何雲端及網際網路的「一切都不同」** <br/>
     [*https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/*](https://blogs.msdn.microsoft.com/rickatmicrosoft/2013/01/03/the-cap-theorem-why-everything-is-different-with-the-cloud-and-internet/)
 
--   **Eric Brewer：十二年後的 CAP：「規則」變更的方式** <br/>
+- **Eric Brewer：十二年後的 CAP：「規則」變更的方式** <br/>
     [*https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed*](https://www.infoq.com/articles/cap-twelve-years-later-how-the-rules-have-changed)
 
--   **Azure 服務匯流排：代理傳訊：重複項目偵測**  <br/>
+- **Azure 服務匯流排：代理傳訊：重複項目偵測**  <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **可靠性指南** (RabbitMQ 文件)* <br/>
+- **可靠性指南** (RabbitMQ 文件)* <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html#consumer)
 
--   **Azure 服務匯流排：代理傳訊：重複項目偵測** <br/>
+- **Azure 服務匯流排：代理傳訊：重複項目偵測** <br/>
     [*https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25*](https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25)
 
--   **可靠性指南** (RabbitMQ 文件) <br/>
+- **可靠性指南** (RabbitMQ 文件) <br/>
     [*https://www.rabbitmq.com/reliability.html\#consumer*](https://www.rabbitmq.com/reliability.html%23consumer)
 
->[!div class="step-by-step"]
->[上一頁](rabbitmq-event-bus-development-test-environment.md)
->[下一頁](test-aspnet-core-services-web-apps.md)
+> [!div class="step-by-step"]
+> [上一頁](rabbitmq-event-bus-development-test-environment.md)
+> [下一頁](test-aspnet-core-services-web-apps.md)

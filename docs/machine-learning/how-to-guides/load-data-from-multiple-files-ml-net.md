@@ -1,16 +1,21 @@
 ---
 title: 從多個檔案載入資料，供機器學習處理之用 - ML.NET
 description: 學習如何使用 ML.NET，從多個檔案載入資料，供機器學習模型建置、訓練及評分之用
-ms.date: 02/06/2019
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f5108aaed80769f2bc7ed2f974f9a729abe8455e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: fbf5e4b5ab9a1a686edb933bdec818fc532bbf42
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092042"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679017"
 ---
 # <a name="load-data-from-multiple-files-for-machine-learning-processing---mlnet"></a>從多個檔案載入資料，供機器學習處理之用 - ML.NET
+
+> [!NOTE]
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+
+本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 使用 `TextLoader`，並為 `Read` 方法指定檔案陣列。 所有檔案的結構描述必須相同 (相同數量及相同的資料行類型)：
 

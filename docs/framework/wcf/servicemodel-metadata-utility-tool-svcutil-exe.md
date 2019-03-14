@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 9682d79a912ac24e549093e0713cf65fb61bb4d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54533204"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788423"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
 
@@ -39,11 +39,11 @@ ServiceModel Metadata Utility Tool 位於 Windows SDK 安裝位置，特別 *%Pr
 >
 > 颾魤 ㄛ`/r`和`/ct`的參考型別參數可用於產生資料合約。 使用 XmlSerializer 時，這些參數不會運作。
 
-### <a name="timeout"></a>等候逾時
+### <a name="timeout"></a>逾時
 
 擷取中繼資料時，此工具會有五分鐘的逾時。 這個逾時只適用於在網路上擷取中繼資料， 不適用於該中繼資料的任何處理。
 
-### <a name="multi-targetting"></a>多目標
+### <a name="multi-targeting"></a>多目標
 
 這個工具不支援多目標。 如果您想要產生從.NET 4 成品*svcutil.exe*，使用*svcutil.exe*從.NET 4 SDK。 若要產生 .NET 3.5 成品，請使用 .NET 3.5 SDK 中的可執行檔。
 
@@ -69,9 +69,9 @@ ServiceModel Metadata Utility Tool 位於 Windows SDK 安裝位置，特別 *%Pr
 
 Svcutil.exe 可從中繼資料文件產生服務合約、用戶端和資料型別的程式碼。 這些中繼資料文件可在永久性儲存裝置或線上擷取。 線上擷取會遵循 WS-Metadata Exchange 通訊協定或 DISCO 通訊協定 (如需詳細資訊，請參閱「中繼資料下載」一節)。
 
-您可以使用*SvcUtil.exe*工具，以產生根據預先定義的 WSDL 文件的服務與資料合約。 使用 /serviceContract 參數，並指定可以下載或找到 WSDL 文件的 URL 或檔案位置。 這會產生 WSDL 文件，然後可以用來實作投訴服務中定義的服務和資料合約。 如需詳細資訊，請參閱[＜How to：擷取中繼資料，並實作相容服務](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
+您可以使用*SvcUtil.exe*工具，以產生根據預先定義的 WSDL 文件的服務與資料合約。 使用 /serviceContract 參數，並指定可以下載或找到 WSDL 文件的 URL 或檔案位置。 這會產生 WSDL 文件，然後可以用來實作投訴服務中定義的服務和資料合約。 如需詳細資訊，請參閱[如何：擷取中繼資料，並實作相容服務](../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)。
 
-含 BasicHttpContextbinding 端點，服務*Svcutil.exe*會產生 BasicHttpBinding，其`allowCookies`屬性設為`true`改。 Cookie 用於伺服器上的內容。 如果您要在服務使用 Cookie 時管理用戶端上的內容，您可以手動修改組態以使用內容繫結。
+含 BasicHttpContextBinding 端點，服務*Svcutil.exe*會產生 BasicHttpBinding，其`allowCookies`屬性設為`true`改。 Cookie 用於伺服器上的內容。 如果您要在服務使用 Cookie 時管理用戶端上的內容，您可以手動修改組態以使用內容繫結。
 
 > [!CAUTION]
 > Svcutil.exe 會根據 WSDL 或從服務收到的原則檔產生用戶端。 使用者主體名稱 (UPN) 藉由串連使用者名稱，產生 「\@"和完整網域名稱 (FQDN)。 但是，對於在 Active Directory 上登錄的使用者而言，這個格式無效，且此工具產生的 UPN 會造成 Kerberos 驗證失敗，並顯示「登入嘗試失敗」錯誤訊息。 若要解決這個問題，您應手動修復由這個工具產生的用戶端檔案。
@@ -176,7 +176,7 @@ Svcutil 會同時發出以下中繼資料要求，以擷取中繼資料。
 > [!NOTE]
 > 預先產生的序列化程式碼只能用於用戶端應用程式中，而不能用於服務中。
 
-Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程式碼，因此可改善這些應用程式的啟動效能。 如需詳細資訊，請參閱[＜How to：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
+Svcutil.exe 可從應用程式的已編譯組件產生必要的 C# 序列化程式碼，因此可改善這些應用程式的啟動效能。 如需詳細資訊，請參閱[如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。
 
 > [!NOTE]
 > Svcutil.exe 只會針對輸入組件中的服務合約所使用的型別產生程式碼。

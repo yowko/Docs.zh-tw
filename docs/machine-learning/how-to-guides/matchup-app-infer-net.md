@@ -1,24 +1,29 @@
 ---
 title: 使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
 description: 了解如何使用 Infer.NET 進行概率程式設計，以 TrueSkill 的簡化版本為基礎，建立遊戲配對清單應用程式。
-ms.date: 10/04/2018
+ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: ceeb0f43e03c7ce93f105498f44bf243eec86bbf
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152460"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679128"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式
+
+> [!NOTE]
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+
+本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 本操作指南將教導您如何使用 Infer.NET 進行概率程式設計。 概率程式設計是一種機器學習方法，其中自訂模型會以電腦程式表示。 它可將網域知識融入模型中，使機器學習系統更具可解譯性。 它也支援線上推斷 - 也就是隨著新資料的到來而學習的程序。 Microsoft 的 Azure、Xbox 和 Bing 中的各種產品，都使用 Infer.NET。
 
 ## <a name="what-is-probabilistic-programming"></a>什麼是概率程式設計？
 
-概率程式設計可讓我們建立真實世界處理的統計模型。 
+概率程式設計可讓您建立真實世界處理的統計模型。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - 本機開發環境設定
 
@@ -45,9 +50,9 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 ## <a name="design-your-model"></a>設計您的模型
 
-使用在辦公室玩的乒乓球或桌上足球比賽作為範例。 我們有每場比賽的參賽者和結果。  我們想從此資料中推斷出玩家的技巧。 我們假設每位玩家有常態分佈的潛在技巧，並且他們在指定比賽中的表現是該技巧的嘈雜版本。 資料限制為優勝者的表現大於失敗者的表現。 這是熱門 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的簡化版本，它還支援組隊、抽籤，與其他延伸用途。 此模型的[進階版本](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)用於暢銷遊戲作品「最後一戰」和「戰爭機器」中的配對。
+使用在辦公室玩的乒乓球或桌上足球比賽作為範例。 您有每場比賽的參賽者和結果。  您想從此資料中推斷出玩家的技巧。 假設每位玩家有常態分佈的潛在技巧，並且他們在指定比賽中的表現是該技巧的嘈雜版本。 資料限制為優勝者的表現大於失敗者的表現。 這是熱門 [TrueSkill](https://www.microsoft.com/en-us/research/project/trueskill-ranking-system/) 模型的簡化版本，它還支援組隊、抽籤，與其他延伸用途。 此模型的[進階版本](https://www.microsoft.com/en-us/research/publication/trueskill-2-improved-bayesian-skill-rating-system/)用於暢銷遊戲作品「最後一戰」和「戰爭機器」中的配對。
 
-我們需要列出推斷的玩家技巧，以及他們的差異，也就是技能不確定性的度量。
+您需要列出推斷的玩家技巧，以及他們的差異，也就是技能不確定性的度量。
 
 *遊戲結果範例資料*
 
@@ -85,7 +90,7 @@ namespace myApp
             var winnerData = new[] { 0, 0, 0, 1, 3, 4 };
             var loserData = new[] { 1, 3, 4, 2, 1, 2 };
 
-            // Define the statistical model as a probabilistic program 
+            // Define the statistical model as a probabilistic program
             var game = new Range(winnerData.Length);
             var player = new Range(winnerData.Concat(loserData).Max() + 1);
             var playerSkills = Variable.Array<double>(player);
@@ -149,11 +154,11 @@ Player 1 skill: Gaussian(4.955, 3.503)
 Player 2 skill: Gaussian(2.639, 4.288)
 ```
 
-在結果中，請注意，根據我們的模型，玩家 3 的排名略高於玩家 4。 這是因為玩家 3 對玩家 1 的勝利，比玩家 4 對玩家 2 的勝利更重要 - 請注意玩家 1 擊敗玩家 2。 玩家 0 是整體冠軍！  
+在結果中，請注意，根據我們的模型，玩家 3 的排名略高於玩家 4。 這是因為玩家 3 對玩家 1 的勝利，比玩家 4 對玩家 2 的勝利更重要 - 請注意玩家 1 擊敗玩家 2。 玩家 0 是整體冠軍！
 
 ## <a name="keep-learning"></a>持續學習
 
-設計統計模型本身就是一項技能。 Microsoft 研究劍橋團隊撰寫了一本[免費線上書籍](http://mbmlbook.com/) \(英文\)，該書對該文章進行了初步介紹。 該書的第 3 章更詳細地介紹了 TrueSkill 模型。 一旦您在心中有一個模型，就可以使用 Infer.NET 網站上的[詳盡文件](https://dotnet.github.io/infer/) \(英文\) 將其轉換成程式碼。
+設計統計模型本身就是一個技能。 Microsoft 研究劍橋團隊撰寫了一本[免費線上書籍](http://mbmlbook.com/) \(英文\)，該書對該文章進行了初步介紹。 該書的第 3 章更詳細地介紹了 TrueSkill 模型。 一旦您在心中有一個模型，就可以使用 Infer.NET 網站上的[詳盡文件](https://dotnet.github.io/infer/) \(英文\) 將其轉換成程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 

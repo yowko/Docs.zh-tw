@@ -1,14 +1,14 @@
 ---
 title: 處理 LINQ
-description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
+description: 此教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: b7faa75234dec62be63e96c0f15f97c6d2aa4c99
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170804"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57679648"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -16,19 +16,19 @@ ms.locfileid: "53170804"
 
 此教學課程會教導您 .NET Core 和 C# 語言中的功能。 您將了解：
 
-*   如何使用 LINQ 產生序列。
-*   如何撰寫可輕鬆用於 LINQ 查詢的方法。
-*   如何區分立即和延遲評估。
+- 如何使用 LINQ 產生序列。
+- 如何撰寫可輕鬆用於 LINQ 查詢的方法。
+- 如何區分立即和延遲評估。
 
 您將建置一個應用程式來學習這些技術，其中將示範任何魔術師都會的基礎技巧：[完美洗牌 (英文)](https://en.wikipedia.org/wiki/Faro_shuffle)。 簡單地說，完美洗牌是將牌組確實分成兩半，然後互相交錯每一張紙牌來重建原始牌堆的技術。
 
-魔術師使用這項技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。 
+魔術師使用此技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。
 
 基於您的目的，這是以較輕鬆的方式來了解對資料序列的操作。 您將建置的應用程式會建構牌堆，然後執行一連串的洗牌，每次洗牌都會寫出序列。 您也會比較原始的順序與更新過的順序。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+此教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Ubuntu Linux、OS X 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
@@ -36,7 +36,7 @@ ms.locfileid: "53170804"
 
 第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。
 
-如果您從未使用過 C#，[此教學課程](console-teleprompter.md)會說明 C# 程式的結構。 您可以閱讀該教學課程，然後再回到這裡以深入了解 LINQ。 
+如果您從未使用過 C#，[此教學課程](console-teleprompter.md)會說明 C# 程式的結構。 您可以閱讀該教學課程，然後再回到這裡以深入了解 LINQ。
 
 ## <a name="creating-the-data-set"></a>建立資料集
 
@@ -82,6 +82,7 @@ static IEnumerable<string> Ranks()
     yield return "ace";
 }
 ```
+
 將這些方法放置於 `Program.cs` 檔案中的 `Main` 方法下方。 這兩個方法都利用 `yield return` 語法，來在執行時產生序列。 編譯器會建置能實作 <xref:System.Collections.Generic.IEnumerable%601>，並會在要求它們時產生字串序列的物件。
 
 現在，使用這些迭代器方法來建立一副牌。 您將在 `Main` 方法中放置 LINQ 查詢。 以下就來看看此程序：
@@ -98,16 +99,18 @@ static void Main(string[] args)
     foreach (var card in startingDeck)
     {
         Console.WriteLine(card);
-    } 
+    }
 }
 ```
 
 多個 `from` 子句會產生 <xref:System.Linq.Enumerable.SelectMany%2A>，這會將第一個序列與第二個序列中的每個元素相互結合，來建立單一序列。 其順序對我們來說很重要。 第一個來源序列 (花色) 中的第一個元素，會與第二個序列 (順位) 中的每個元素結合。 這樣會產生第一個花色的十三張紙牌。 該程序會針對第一個序列 (花色) 中的每個元素重複執行。 最終結果是一疊先依花色，並接著依值排序的牌堆。
 
 請務必牢記在心，無論您選擇要在上述使用的查詢語法中撰寫 LINQ，還是改用方法語法，一律可從某種語法形式移至另一種語法形式。 上述以查詢語法撰寫的查詢可利用方法語法撰寫為：
+
 ```csharp
 var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit = suit, Rank = rank }));
 ```
+
 編譯器會將以查詢語法撰寫的 LINQ 陳述式轉譯為相等的方法呼叫語法。 因此，不論您的語法選擇為何，這兩個查詢版本都會產生相同的結果。 選擇最適合您情況的語法：例如，如果您所在的小組中有部分成員對於使用方法語法有困難，請嘗試使用查詢語法。
 
 現在，請執行您目前所建置的範例。 它會顯示牌堆中全部 52 張紙牌。 您會發現以偵錯工具執行此範例，對於觀察 `Suits()` 和 `Ranks()` 方法的執行方式非常有用。 您可以清楚地看見每個序列中的每個字串都只會在需要時產生。
@@ -131,7 +134,7 @@ public static void Main(string[] args)
         Console.WriteLine(c);
     }
 
-    // 52 cards in a deck, so 52 / 2 = 26    
+    // 52 cards in a deck, so 52 / 2 = 26
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
 }
@@ -141,7 +144,7 @@ public static void Main(string[] args)
 
 若要針對您與從 LINQ 查詢中取回的 <xref:System.Collections.Generic.IEnumerable%601> 進行互動的方式新增一些功能，您必須撰寫一些稱為[擴充方法](../../csharp/programming-guide/classes-and-structs/extension-methods.md)的特殊種類方法。 簡單地說，擴充方法是具有特殊用途的「靜態方法」，其會將新功能新增到已經存在的類型，而不需修改您想要將功能新增到其中的原始類型。
 
-藉由將新的「靜態」類別檔案新增到名為 `Extensions.cs` 的程式，來為您的擴充方法提供一個新家，然後開始建置第一個擴充方法： 
+藉由將新的「靜態」類別檔案新增到名為 `Extensions.cs` 的程式，來為您的擴充方法提供一個新家，然後開始建置第一個擴充方法：
 
 ```csharp
 // Extensions.cs
@@ -191,7 +194,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     var top = startingDeck.Take(26);
     var bottom = startingDeck.Skip(26);
     var shuffle = top.InterleaveSequenceWith(bottom);
@@ -211,7 +214,7 @@ public static void Main(string[] args)
 
 [!CODE-csharp[SequenceEquals](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet2)]
 
-這裡示範第二個 LINQ 慣用語：終端方法。 它們會將序列 (在此範例中為兩個序列) 當作輸入，並傳回單一純量值。 使用終端方法時，它們永遠都是適用於 LINQ 查詢之方法鏈結中的最終方法，因此有「終端」的名稱。 
+這裡示範第二個 LINQ 慣用語：終端方法。 它們會將序列 (在此範例中為兩個序列) 當作輸入，並傳回單一純量值。 使用終端方法時，它們永遠都是適用於 LINQ 查詢之方法鏈結中的最終方法，因此有「終端」的名稱。
 
 當您使用它來判斷牌堆何時回到原始順序時，便可以看到其作用。 將洗牌程式碼放到迴圈中，並透過套用 `SequenceEquals()` 方法，來在序列回到原始順序時停止迴圈。 您可以看到它在任何查詢中都一律是最終方法，因為它會傳回單一值而非序列：
 
@@ -279,7 +282,7 @@ public static void Main(string[] args)
     {
         Console.WriteLine(c);
     }
-        
+
     Console.WriteLine();
     var times = 0;
     var shuffle = startingDeck;
@@ -321,24 +324,24 @@ public static void Main(string[] args)
 
 現在，已將外部洗牌減少至 30 個查詢。 搭配內部洗牌再次執行，您將會看到類似的改善：它現在會執行 162 個查詢。
 
-請注意這個範例的**設計**，用意在於凸顯因延遲執行而造成效能問題的使用案例。 儘管查看延遲評估可能會影響程式碼效能的位置很重要，但了解並非所有查詢都應立即執行也很重要。 您在不使用 <xref:System.Linq.Enumerable.ToArray%2A> 的情況下所遇到的效能影響，是因為對於這副牌的每個排列都是從前一個排列建置的。 使用延遲評估表示每個新的牌堆設定都是從原始牌堆建立，甚至會執行建置 `startingDeck` 的程式碼。 這會導致大量的額外工作。 
+請注意這個範例的**設計**，用意在於凸顯因延遲執行而造成效能問題的使用案例。 儘管查看延遲評估可能會影響程式碼效能的位置很重要，但了解並非所有查詢都應立即執行也很重要。 您在不使用 <xref:System.Linq.Enumerable.ToArray%2A> 的情況下所遇到的效能影響，是因為對於這副牌的每個排列都是從前一個排列建置的。 使用延遲評估表示每個新的牌堆設定都是從原始牌堆建立，甚至會執行建置 `startingDeck` 的程式碼。 這會導致大量的額外工作。
 
 實際上，某些演算法適合使用立即評估來執行，而其他演算法則適合使用延遲評估來執行。 針對每日使用方式，當資料來源為獨立程序 (例如資料庫引擎) 時，通常比較適合選擇延遲評估。 針對資料庫，延遲評估讓更複雜的查詢僅針對資料庫程序執行單次來回行程，並返回您程式碼的剩餘部分。 無論您選擇利用延遲或立即評估，LINQ 都極具彈性，因此，請測量您的程序，並挑選可為您提供最佳效能的評估種類。
 
 ## <a name="conclusion"></a>結論
 
 在此專案中，您已涵蓋：
-* 使用 LINQ 查詢來將資料彙總到有意義的序列
-* 撰寫擴充方法，將自己的自訂功能新增到 LINQ 查詢
-* 在程式碼中尋找 LINQ 查詢可能遇到效能問題 (例如降低速度) 的區域
-* 有關 LINQ 查詢的延遲和立即評估，以及它們可能對查詢效能產生的影響
+- 使用 LINQ 查詢來將資料彙總到有意義的序列
+- 撰寫擴充方法，將自己的自訂功能新增到 LINQ 查詢
+- 在程式碼中尋找 LINQ 查詢可能遇到效能問題 (例如降低速度) 的區域
+- 有關 LINQ 查詢的延遲和立即評估，以及它們可能對查詢效能產生的影響
 
 除了 LINQ，您還了解到魔術師使用撲克牌的技巧。 魔術師之所以使用完美洗牌，是因為他們可以控制每張牌在牌堆中的動向。 既然您已經知道，就不要為其他人破壞了它！
 
 如需有關 LINQ 的詳細資訊，請參閱：
-* [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
-    * [LINQ 簡介](../programming-guide/concepts/linq/introduction-to-linq.md)
-    * [開始使用 C# 中的 LINQ](../programming-guide/concepts/linq/getting-started-with-linq.md)
+- [Language-Integrated Query (LINQ)](../programming-guide/concepts/linq/index.md)
+    - [LINQ 簡介](../programming-guide/concepts/linq/introduction-to-linq.md)
+    - [開始使用 C# 中的 LINQ](../programming-guide/concepts/linq/getting-started-with-linq.md)
         - [基本 LINQ 查詢作業 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
         - [使用 LINQ 轉換資料 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
         - [LINQ 中的查詢語法及方法語法 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 5d338834724c3c5733f2a8a3de1b236e270d28d2
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 84ff3390912f808e6b5733049d9f0b3889576776
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55480084"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57677431"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -33,7 +33,7 @@ eShopOnContainers 應用程式範例的目錄微服務即為這種簡單資料�
 
 請注意，在 Docker 容器中執行像是 SQL Server 這種資料庫伺服器對開發環境來說是非常適合的，因為您可以設定所有的相依性並使其順利執行，而無須在雲端或內部部署環境佈建資料庫。 這在執行整合測試時會非常方便。 然而，針對生產環境，我們不建議在容器內執行資料庫伺服器，因為使用此方法，您通常無法取得高度的可用性。 針對 Azure 中的生產環境，通常建議您使用 Azure SQL DB 或任何其他可提供高度可用性及延展性的資料庫技術。 舉例來說，若要採用 NoSQL 方法，您可能會選擇 CosmosDB。
 
-最後，藉由編輯 Dockerfile 和 docker-compose.yml 中繼檔案，您可以設定此容器映像建立的方式—使用的基底映像，以及設計設定例如內部及外部名稱和 TCP 連接埠。 
+最後，藉由編輯 Dockerfile 和 docker-compose.yml 中繼檔案，您可以設定此容器映像建立的方式—使用的基底映像，以及設計設定例如內部及外部名稱和 TCP 連接埠。
 
 ## <a name="implementing-a-simple-crud-microservice-with-aspnet-core"></a>使用 ASP.NET Core 實作簡單 CRUD 微服務
 
@@ -100,9 +100,9 @@ public class CatalogContext : DbContext
 }
 ```
 
-您可以有其他 `DbContext` 實作。 例如，在範例 Catalog API 微服務中，有一個名為 `CatalogContextSeed` 的第二個 `DbContext`，其會在第一次嘗試存取資料庫時自動填入範例資料。 這個方法對示範資料及自動化測試案例來說也非常有用。 
+您可以有其他 `DbContext` 實作。 例如，在範例 Catalog API 微服務中，有一個名為 `CatalogContextSeed` 的第二個 `DbContext`，其會在第一次嘗試存取資料庫時自動填入範例資料。 這個方法對示範資料及自動化測試案例來說也非常有用。
 
-在 `DbContext` 內，您會使用 `OnModelCreating` 方法來自訂物件/資料庫實體對應及其他 [EF 擴充點](https://blogs.msdn.microsoft.com/dotnet/2016/09/29/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
+在 `DbContext` 內，您會使用 `OnModelCreating` 方法來自訂物件/資料庫實體對應及其他 [EF 擴充點](https://devblogs.microsoft.com/dotnet/implementing-seeding-custom-conventions-and-interceptors-in-ef-core-1-0/)。
 
 ##### <a name="querying-data-from-web-api-controllers"></a>從 Web API 控制器查詢資料
 
@@ -116,7 +116,7 @@ public class CatalogController : ControllerBase
     private readonly CatalogSettings _settings;
     private readonly ICatalogIntegrationEventService _catalogIntegrationEventService;
 
-    public CatalogController(CatalogContext context, 
+    public CatalogController(CatalogContext context,
                              IOptionsSnapshot<CatalogSettings> settings,
                              ICatalogIntegrationEventService catalogIntegrationEventService)
     {
@@ -131,7 +131,7 @@ public class CatalogController : ControllerBase
     [HttpGet]
     [Route("[action]")]
     [ProducesResponseType(typeof(PaginatedItemsViewModel<CatalogItem>), (int)HttpStatusCode.OK)]
-    public async Task<IActionResult> Items([FromQuery]int pageSize = 10, 
+    public async Task<IActionResult> Items([FromQuery]int pageSize = 10,
                                            [FromQuery]int pageIndex = 0)
 
     {
@@ -150,7 +150,7 @@ public class CatalogController : ControllerBase
             pageIndex, pageSize, totalItems, itemsOnPage);
 
         return Ok(model);
-    } 
+    }
     //...
 }
 ```
@@ -172,7 +172,7 @@ _context.SaveChanges();
 
 在上述 `CatalogController` 類別的範例中，我們透過 `CatalogController()` 建構函式插入了 `CatalogContext` 類型的物件及其他物件。
 
-要在 Web API 專案中設定的一項重要組態，是將 DbContext 類別註冊至服務的 IoC 容器內。 您通常會藉由在 `Startup` 類別中的 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 來執行此動作，如下列範例所示：
+要在 Web API 專案中設定的一個重要組態，是將 DbContext 類別註冊至服務的 IoC 容器內。 您通常會藉由在 `Startup` 類別中的 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 來執行此動作，如下列範例所示：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -253,19 +253,19 @@ catalog.api:
     - "5101:80"
 ```
 
-位於解決方案層級的 docker-compose.yml 檔案不僅比位於專案或微服務層級的組態檔更有彈性，當您使用在部署工具 (例如 Azure DevOps Services Docker 部署工作) 中設定的值來覆寫 docker-compose 檔案中宣告的環境變數時，還會更安全。 
+位於解決方案層級的 docker-compose.yml 檔案不僅比位於專案或微服務層級的組態檔更有彈性，當您使用在部署工具 (例如 Azure DevOps Services Docker 部署工作) 中設定的值來覆寫 docker-compose 檔案中宣告的環境變數時，還會更安全。
 
 最後，您可以使用 Configuration\["ConnectionString"\] 來在您的程式碼中取得該值，如先前程式碼範例中的 ConfigurationServices 方法所示。
 
 然而，針對生產環境，建議您探索其他儲存像是連接字串這種機密資料的方式。 使用 [Azure Key Vault](https://azure.microsoft.com/services/key-vault/) 是管理應用程式祕密的絕佳方法。
 
-Azure Key Vault 可協助儲存及保護您雲端應用程式及服務所使用的密碼編譯金鑰及祕密。 任何您想要嚴格控管的項目都是祕密，例如 API 金鑰、連接字串、密碼等，而嚴格控管的方法包括使用方式記錄、設定到期日、管理存取權<span class="underline">等等</span>。
+Azure Key Vault 可協助儲存及保護您雲端應用程式及服務所使用的密碼編譯金鑰及祕密。 任何您想要嚴格控管的項目都是祕密，例如 API 金鑰、連接字串、密碼等，而嚴格控管的方法包括使用方式記錄、設定到期日、管理存取權*等等*。
 
 Azure Key Vault 提供非常細微的應用程式祕密使用控制層級，且不須讓任何人知悉。 祕密甚至可以在不中斷開發或營運的狀況下輪替，以加強安全性。
 
 應用程式必須在組織的 Active Directory 註冊，才能使用 Key Vault。
 
-如需詳細資料，請查看 <span class="underline">Key Vault 概念文件</span>。
+如需詳細資料，請查看 *Key Vault 概念文件*。
 
 ### <a name="implementing-versioning-in-aspnet-web-apis"></a>在 ASP.NET Web API 中實作版本控制
 
@@ -305,7 +305,7 @@ public class CatalogController : ControllerBase
 - **Roy Fielding。版本設定、超媒體及 REST** \
   [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
-## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料 
+## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料
 
 [Swagger](https://swagger.io/) 是一種常用的開放原始碼架構，由可協助您設計、建置、記錄文件及取用您 RESTful API 的龐大工具生態系統所支援。 它已逐漸成為 API 描述中繼資料領域的標準。 您應在任何形式的微服務中包含 Swagger 描述中繼資料，無論是資料驅動微服務，或是更進階的網域驅動微服務 (如下一節所述)。
 
@@ -333,9 +333,9 @@ Swagger 的核心是 Swagger 規格，即儲存於 JSON 或 YAML 檔案中的 AP
 
 Microsoft Flow、PowerApps 及 Azure Logic Apps 都使用 Swagger 的中繼資料來了解如何使用及連線至 API。
 
-有許多選項可用來依據 <span class="underline">swagger-ui</span>，以功能 API 說明頁面的形式為 ASP.NET Core REST API 應用程式自動產生 Swagger 中繼資料。
+有許多選項可用來依據 *swagger-ui*，以功能 API 說明頁面的形式為 ASP.NET Core REST API 應用程式自動產生 Swagger 中繼資料。
 
-最為人知的大概是目前用於 [eShopOnCntainers](https://github.com/dotnet-architecture/eShopOnContainers) 的 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore)，我們會在本指南中提到其部份細節，但您也可以選擇使用 [NSwag](https://github.com/RSuter/NSwag)，其可以從 Swagger 或 OpenAPI 規格，甚至藉由使用 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) 掃描包含控制器的 .dll，來產生 Typescript 及 C\# API 用戶端及 C\# 控制器。
+最為人知的大概是目前用於 [eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) \(英文\) 中的 [Swashbuckle](https://github.com/domaindrivendev/Swashbuckle.AspNetCore) \(英文\) (我們會在此指南中提到其部份細節)，但您也可以選擇使用 [NSwag](https://github.com/RSuter/NSwag) \(英文\)，其可以從 Swagger 或 OpenAPI 規格，甚至藉由使用 [NSwagStudio](https://github.com/RSuter/NSwag/wiki/NSwagStudio) \(英文\) 掃描包含控制器的 .dll，來產生 Typescript 及 C\# API 用戶端，以及 C\# 控制器。
 
 ### <a name="how-to-automate-api-swagger-metadata-generation-with-the-swashbuckle-nuget-package"></a>如何使用 Swashbuckle NuGet 套件來自動化產生 API Swagger 中繼資料
 
@@ -402,17 +402,17 @@ public class Startup
 
 ```url
   http://<your-root-url>/swagger/v1/swagger.json
-  
+
   http://<your-root-url>/swagger/
 ```
 
-您先前已看到 Swashbuckle 為 URL 建立的所產生 UI，例如 http://\<您的根目錄 URL\>/swagger。 在圖 6-9 中，您也可以看到該如何測試任一 API 方法。
+您先前曾看過 Swashbuckle 為 URL 產生的 UI，像是 `http://<your-root-url>/swagger`。 在圖 6-9 中，您也可以看到該如何測試任一 API 方法。
 
 ![Swagger UI API 詳細資料會顯示回應的範例，並可用於執行實際 API，對於開發人員探索很有助益。](./media/image10.png)
 
 **圖 6-9**。 Swashbuckle UI 測試目錄/項目 API 方法
 
-圖 6-10 顯示了當您使用 [Postman](https://www.getpostman.com/) 向 \<您的根目錄 URL\>/swagger/v1/swagger.json 發出請求時，從 eShopOnContainers 微服務 (即於幕後使用的工具) 產生的 Swagger JSON 中繼資料。
+圖 6-10 顯示了當您使用 [Postman](https://www.getpostman.com/) \(英文\) 要求 `http://<your-root-url>/swagger/v1/swagger.json` 時，從 eShopOnContainers 微服務 (即於幕後使用的工具) 產生的 Swagger JSON 中繼資料。
 
 ![範例 Postman UI 顯示了 Swagger JSON 中繼資料](./media/image11.png)
 
@@ -431,6 +431,6 @@ public class Startup
 - **開始使用 NSwag 及 ASP.NET Core** \
   [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
 
->[!div class="step-by-step"]
->[上一頁](microservice-application-design.md)
->[下一頁](multi-container-applications-docker-compose.md)
+> [!div class="step-by-step"]
+> [上一頁](microservice-application-design.md)
+> [下一頁](multi-container-applications-docker-compose.md)

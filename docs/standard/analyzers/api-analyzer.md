@@ -5,12 +5,12 @@ author: oliag
 ms.author: mairaw
 ms.date: 05/31/2018
 ms.technology: dotnet-standard
-ms.openlocfilehash: d27e5299ad9b1a3dcd89d5a947d91f06a54549e2
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84dd0717725f3538f9c9b2e3b5573f1385e549ac
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759128"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680265"
 ---
 # <a name="net-api-analyzer"></a>.NET API 分析器
 
@@ -21,7 +21,7 @@ ms.locfileid: "55759128"
 > [!NOTE]
 > .NET API 分析器目前仍然是發行前版本。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 * Visual Studio 2017 或 Visual Studio for Mac (所有版本)。
 
@@ -44,7 +44,7 @@ ms.locfileid: "55759128"
 
 [錯誤清單] 視窗會包含警告，其中每個已被取代的 API 都會有一個唯一識別碼 ，如以下範例所示 (`DE004`)： 
 
-![「顯示警告識別碼和描述之 [錯誤清單] 視窗的螢幕擷取畫面」](media/api-analyzer/warnings.jpg)
+![「顯示警告之識別碼和描述的 [錯誤清單] 視窗螢幕擷取畫面」](media/api-analyzer/warnings-id-and-descriptions.jpg "包含警告的 [錯誤清單] 視窗。")
 
 藉由按一下識別碼，您便可以前往含有詳細資訊的網頁，當中會說明 API 被取代的原因，並提供有關可使用之替代 API 的建議。
 
@@ -112,5 +112,5 @@ if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
 
 ## <a name="see-also"></a>另請參閱
 
-- [API 分析器簡介](https://blogs.msdn.microsoft.com/dotnet/2017/10/31/introducing-api-analyzer/) \(英文\) 部落格文章。
+- [API 分析器簡介](https://devblogs.microsoft.com/dotnet/introducing-api-analyzer/) \(英文\) 部落格文章。
 - YouTube 上的 [API 分析器](https://youtu.be/eeBEahYXGd0)示範影片。

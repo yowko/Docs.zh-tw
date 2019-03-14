@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 官方 .NET D
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: be1830ccf2fe4566aa7d50a4664be2d8d2c4e2e8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: c4fce49b079473ddcc2b840527b8aeb951fec780
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479603"
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674649"
 ---
 # <a name="official-net-docker-images"></a>官方 .NET Docker 映像
 
@@ -23,9 +23,9 @@ ms.locfileid: "55479603"
 
 在建置開發人員 Docker 映像時，Microsoft 會著重在下列主要案例︰
 
--   映像用來「開發」與建置 .NET Core 應用程式。
+- 映像用來「開發」與建置 .NET Core 應用程式。
 
--   映像用來「執行」.NET Core 應用程式。
+- 映像用來「執行」.NET Core 應用程式。
 
 為何有多個映像？ 在開發、建置及執行容器化應用程式時，您通常有不同的優先考量。 透過提供這些個別工作的不同映像，Microsoft 會協助最佳化開發、建置及部署應用程式的個別處理程序。
 
@@ -50,6 +50,6 @@ ms.locfileid: "55479603"
 | microsoft/dotnet:**2.2-aspnetcore-runtime** | Linux 和 Windows 上的 ASP.NET Core，具有僅執行階段和 ASP.NET Core 最佳化 (多架構) |
 | microsoft/dotnet:**2.2-sdk**                | Linux 和 Windows 上的 .NET Core，包含 SDK (多架構)                                  |
 
->[!div class="step-by-step"]
->[上一頁](net-container-os-targets.md)
->[下一頁](../architect-microservice-container-applications/index.md)
+> [!div class="step-by-step"]
+> [上一頁](net-container-os-targets.md)
+> [下一頁](../architect-microservice-container-applications/index.md)
