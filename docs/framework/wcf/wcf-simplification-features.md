@@ -2,12 +2,12 @@
 title: WCF 簡化功能
 ms.date: 03/30/2017
 ms.assetid: 4535a511-6064-4da0-b361-80262a891663
-ms.openlocfilehash: f4c5d1c0dc5aa9df92368de1266044db3a6c294a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54255e07df5a46cc975ffd4db5c18dc828a1de44
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467177"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845267"
 ---
 # <a name="wcf-simplification-features"></a>WCF 簡化功能
 
@@ -96,7 +96,7 @@ WCF 會在寫入 WCF 服務時提供 ASP.NET 相容模式，將 ASP.NET HTTP 管
 
 |屬性|開啟|新的預設值|更多資訊|
 |--------------|--------|-----------------|----------------------|
-|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|這個屬性決定 TCP 連接可以花費多少時間來使用 .Net Framing 通訊協定自行驗證。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 逾時會故意設定為小於 ReceiveTimeout (10 分鐘)，使未經驗證的惡意用戶端無法長時間保持與伺服器的連接。 預設值為 30 秒。 如需詳細資訊 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
+|channelInitializationTimeout|<xref:System.ServiceModel.NetTcpBinding>|30 秒|此屬性會決定需要多少時間的 TCP 連接可以使用.NET Framing 通訊協定自行驗證。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 逾時會故意設定為小於 ReceiveTimeout (10 分鐘)，使未經驗證的惡意用戶端無法長時間保持與伺服器的連接。 預設值為 30 秒。 如需詳細資訊 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.ChannelInitializationTimeout%2A>|
 |listenBacklog|<xref:System.ServiceModel.NetTcpBinding>|16 * 處理器數量|此為通訊端層級的屬性，用來說明要排入佇列之「擱置接受」要求的數目。 如果接聽待辦項目佇列已滿，將會拒絕新的通訊端要求。 如需詳細資訊 <xref:System.ServiceModel.NetTcpBinding.ListenBacklog%2A>|
 |maxPendingAccepts|ConnectionOrientedTransportBindingElement<br /><br /> SMSvcHost.exe|2 * 用於傳輸的處理器數量<br /><br /> 4\*用於 SMSvcHost.exe 的處理器數量|這個屬性會限制伺服器可以在接聽程式上等待的通道數量。 MaxPendingAccepts 太低時，會有一小段時間間隔讓所有等待中的通道開始提供連接服務，但不會有任何新的通道開始接聽。 在這段時間間隔內出現的連接都會失敗，因為伺服器上沒有任何要等待的連接。 這個屬性可以藉由將 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A> 屬性設為較大數目的方式進行設定。 如需詳細資訊，請參閱 <<c0> <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingAccepts%2A> 和[設定 Net.TCP Port Sharing Service](../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)|
 |maxPendingConnections|ConnectionOrientedTransportBindingElement|12 * 處理器的數量|這個屬性控制傳輸已接受但未經 ServiceModel 發送器擷取的連接數量。 若要設定這個值，請使用繫結上的 `MaxConnections` 或繫結項目上的 `maxOutboundConnectionsPerEndpoint`。 如需詳細資訊 <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement.MaxPendingConnections%2A>|

@@ -2,12 +2,12 @@
 title: HOW TO：建立會取用現有服務合約的工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: 57babf216821665613da053f972ff25488418b7d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06d4d4f6687979f4fd54e919ca6f236a5b5402e8
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705060"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843004"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>HOW TO：建立會取用現有服務合約的工作流程服務
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 採用合約優先工作流程開發形式，可在 Web 服務和工作流程中提供更好的整合。 合約優先工作流程開發工具可讓您在 Code First 中設計合約。 此工具會自動在合約中的作業工具箱內產生活動範本。  
@@ -57,7 +57,7 @@ ms.locfileid: "57705060"
   
 4.  在 [**方案總管] 中**，開啟.Service1.xamlx。 工作流程服務會出現在設計工具中。  
   
-5.  選取 **順序**活動。 在 屬性 視窗中，按一下  **...** 按鈕**ImplementedContract**屬性。 在 **型別集合編輯器**視窗中，按一下 **型別**下拉式清單中，選取**瀏覽型別...** 項目。 在 [**瀏覽並選取.Net 型別**] 對話方塊底下**\<目前專案 >** 開啟所有子節點，然後選取**IBookService**。 按一下 [確定] 。 在 [**型別集合編輯器**] 對話方塊中，按一下**確定**。  
+5.  選取 **順序**活動。 在 屬性 視窗中，按一下  **...** 按鈕**ImplementedContract**屬性。 在 **型別集合編輯器**視窗中，按一下 **型別**下拉式清單中，選取**瀏覽型別...** 項目。 在 **瀏覽並選取.NET 型別**對話方塊底下**\<目前專案 >** 開啟所有子節點，然後選取**IBookService**。 按一下 [確定] 。 在 [**型別集合編輯器**] 對話方塊中，按一下**確定**。  
   
 6.  選取並刪除**ReceiveRequest**並**SendResponse**活動。  
   

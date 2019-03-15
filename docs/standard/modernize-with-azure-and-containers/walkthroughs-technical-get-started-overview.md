@@ -4,12 +4,12 @@ description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 15ea074693a75aa04b4f3a03e6e5e3d7f748cea1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674935"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846255"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術開始入門的概觀
 
@@ -83,7 +83,7 @@ ms.locfileid: "57674935"
 探索 GitHub wiki 上的此更深入的內容：
 
 - [基準 ASP.NET MVC 教學課程和 Web Forms 「 舊版 」 應用程式](https://github.com/dotnet-architecture/eShopModernizing/wiki/01.-Tour-on-the-ASP.NET-MVC-and-WebForms-apps-implementation-code)
--   [基準 WCF 服務及 WinForms （3 層） 的 「 舊版 」 應用程式的教學課程](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
+- [基準 WCF 服務及 WinForms （3 層） 的 「 舊版 」 應用程式的教學課程](https://github.com/dotnet-architecture/eShopModernizing/wiki/21.-Tour-on-the-WCF-service-and-WinForms-apps)
 
 ## <a name="walkthrough-2-containerize-your-existing-net-applications-with-windows-containers"></a>逐步解說 2:將您現有的.NET 應用程式與 Windows 容器的容器化
 

@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 78ea3e553e4e449b307bc3585ed66fa48d2c0d8e
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680356"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844245"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>在 Windows 上的 Visual Studio 2017 中使用 Docker 工具
 
@@ -20,7 +20,8 @@ ms.locfileid: "57680356"
 
 使用 Docker for Windows 的最新版本，就比以往若要開發 Docker 應用程式因為下列參考中所述，安裝程式很簡單，更容易。
 
-> [!若要深入了解安裝 Docker for Windows，請移至的資訊] (<https://docs.docker.com/docker-for-windows/>)。
+> [!TIP]
+> 若要深入了解安裝 Docker for Windows，請移至 (<https://docs.docker.com/docker-for-windows/>)。
 
 ## <a name="docker-support-in-visual-studio-2017"></a>Visual Studio 2017 中的 docker 支援
 
@@ -83,7 +84,8 @@ ms.locfileid: "57680356"
 > [!WARNING]
 > 如果 localhost SSL 憑證不受信任，而且您核取方塊來隱藏提示，則 HTTPS web 要求可能會在您的應用程式或服務執行階段失敗。 在此情況下，取消核取**不要提示**核取方塊，執行您的專案，並指出在提示字元中的信任。
 
-> [!資訊] 如需詳細的服務實作和使用 Visual Studio Tools for Docker，請閱讀下列文章：
+> [!TIP]
+> 如需詳細的服務實作和使用 Visual Studio Tools for Docker，閱讀下列文章：
 >
 >偵錯本機 Docker 容器中的應用程式： <https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh>
 >

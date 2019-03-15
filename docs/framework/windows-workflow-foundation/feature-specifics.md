@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 功能內容
 ms.date: 03/30/2017
 ms.assetid: e84d12da-a055-45f6-b4d1-878d127b46b6
-ms.openlocfilehash: 4b9a9c5c6395ed27845c8b618e49150a02aa3bda
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fae42332c19a8b39070d9922b6fec4aadd73505b
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721849"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846541"
 ---
 # <a name="windows-workflow-foundation-feature-specifics"></a>Windows Workflow Foundation 功能內容
 
@@ -101,7 +101,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - [標準端點項目](https://go.microsoft.com/fwlink/?LinkId=204942)
 
-- [服務組態改良在.Net Framework 4](https://go.microsoft.com/fwlink/?LinkId=204943)
+- [.NET Framework 4 中的服務組態改良](https://go.microsoft.com/fwlink/?LinkId=204943)
 
 - [.NET 4 中的常見使用者錯誤：拼錯 WF/WCF 服務組態名稱](https://go.microsoft.com/fwlink/?LinkId=204944)
 
@@ -263,7 +263,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 ## <a name="wcf-routing-service"></a>WCF 路由服務
 
-路由服務被設計為泛型軟體路由器，可讓您控制 WCF 訊息如何在您的用戶端和服務之間流動。 路由服務可讓您減少您的用戶端，從您的服務，讓您根據設定的更多自由可支援，和彈性，您必須考慮如何裝載您的服務時。 在.NET 3.5 中，用戶端和服務必須緊密關聯;用戶端必須知道的所有服務與互動所需和它們所在位置。 此外，.Net Framework 3.5 中的 WCF 具有下列限制：
+路由服務被設計為泛型軟體路由器，可讓您控制 WCF 訊息如何在您的用戶端和服務之間流動。 路由服務可讓您減少您的用戶端，從您的服務，讓您根據設定的更多自由可支援，和彈性，您必須考慮如何裝載您的服務時。 在.NET 3.5 中，用戶端和服務必須緊密關聯;用戶端必須知道的所有服務與互動所需和它們所在位置。 此外，.NET Framework 3.5 中的 WCF 具有下列限制：
 
 - 錯誤處理很複雜，因為此邏輯必須透過硬式編碼寫入用戶端。
 
@@ -271,7 +271,7 @@ WCF 組態結構描述很複雜，而且使用者提供許多不易發現的功�
 
 - 很少妥善分解服務：讓用戶端與實作所有功能的單一服務通訊會比在多個服務之間選擇更簡單。
 
-.Net 4 中路由服務的設計目的是要讓上述問題更容易解決。 新的路由服務具有下列功能：
+.NET 4 中的路由服務可讓您更輕鬆地解決這些問題。 新的路由服務具有下列功能：
 
 1. 以內容為基礎的路由 (<xref:System.ServiceModel.Dispatcher.MessageFilter> 物件會檢查訊息來判斷應該傳送的目的地)。
 
@@ -327,7 +327,7 @@ WCF 探索是一種架構的技術，可讓您將應用程式基礎結構的探�
 
 ## <a name="tracking"></a>追蹤
 
-工作流程追蹤可執行的工作流程執行個體的深入解析。 從工作流程工作流程執行個體層級，並在工作流程內的活動執行時，會發出追蹤事件。 您必須將工作流程追蹤參與者加入至工作流程主機，才能訂閱追蹤記錄。 系統會使用追蹤設定檔來篩選追蹤記錄。 .Net Framework 提供了 ETW (Windows 事件追蹤) 追蹤參與者，而且基本設定檔安裝在 machine.config 檔案中。
+工作流程追蹤可執行的工作流程執行個體的深入解析。 從工作流程工作流程執行個體層級，並在工作流程內的活動執行時，會發出追蹤事件。 您必須將工作流程追蹤參與者加入至工作流程主機，才能訂閱追蹤記錄。 系統會使用追蹤設定檔來篩選追蹤記錄。 .NET Framework 提供了 ETW (事件追蹤的 Windows) 追蹤參與者，以及基本的設定檔安裝在 machine.config 檔案。
 
 ### <a name="getting-started"></a>快速入門
 

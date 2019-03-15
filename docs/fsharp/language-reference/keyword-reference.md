@@ -2,12 +2,12 @@
 title: 關鍵字參考
 description: 尋找所有的相關資訊的連結F#語言關鍵字。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5a94a30ca0f73538cc22e76fa75bd76741b70d99
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "54857901"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845290"
 ---
 # <a name="keyword-reference"></a>關鍵字參考
 
@@ -50,7 +50,7 @@ ms.locfileid: "54857901"
 |`inline`|[函式](functions/index.md)<br /><br />[內嵌函式](functions/inline-functions.md)|用來指出應該會直接整合至呼叫端的程式碼的函式。|
 |`interface`|[介面](interfaces.md)|用來宣告和實作介面。|
 |`internal`|[存取控制](access-control.md)|用來指定成員可見組件內，但超出它。|
-|`lazy`|[延遲運算](lazy-computations.md)|用來指定只在需要結果時，才要執行的計算。|
+|`lazy`|[延遲運算式](lazy-expressions.md)|用來指定只在需要結果時，才要執行的運算式。|
 |`let`|[`let` Bindings](functions/let-bindings.md)|用來建立關聯，或繫結至值或函式的名稱。|
 |`let!`|[非同步工作流程](asynchronous-workflows.md)<br /><br />[計算運算式](computation-expressions.md)|若要將名稱繫結的非同步計算，結果的非同步工作流程中，或在其他計算運算式中，用來將名稱繫結至結果，也就是計算類型的使用。|
 |`match`|[比對運算式](match-expressions.md)|用來分支藉由比較模式的值。|

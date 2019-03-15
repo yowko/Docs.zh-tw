@@ -3,12 +3,12 @@ title: 開始使用 Azure Blob 儲存體使用F#
 description: 使用 Azure Blob 儲存體在雲端中儲存非結構化的資料。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: e38f58fefa63f922bcb1a78254249a3626bfac43
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981903"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846424"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>開始使用 Azure Blob 儲存體使用 F\#
 
@@ -102,14 +102,14 @@ Azure Blob 儲存體支援區塊 blob 和分頁 blob。 在大部分情況下，
 
 例如，請考慮下列一組區塊 blob 容器內`photos`:
 
-*photo1.jpg*
-*2015/architecture/description.txt*
-*2015/architecture/photo3.jpg*
-*2015/architecture/photo4.jpg*
-*2016/architecture/photo5.jpg*
-*2016/architecture/photo6.jpg*
-*2016/architecture/description.txt*
-*2016/photo7.jpg*
+*photo1.jpg*\
+*2015/architecture/description.txt*\
+*2015/architecture/photo3.jpg*\
+*2015/architecture/photo4.jpg*\
+*2016/architecture/photo5.jpg*\
+*2016/architecture/photo6.jpg*\
+*2016/architecture/description.txt*\
+*2016/photo7.jpg*\
 
 當您呼叫`ListBlobs`（如同上述範例中） 的容器，會傳回階層式清單。 如果它同時包含`CloudBlobDirectory`和`CloudBlockBlob`物件，代表目錄和 blob 容器中，分別則產生的輸出看起來如下所示：
 

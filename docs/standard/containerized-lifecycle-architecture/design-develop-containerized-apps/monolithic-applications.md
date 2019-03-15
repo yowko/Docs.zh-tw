@@ -4,12 +4,12 @@ description: 了解容器化整合型應用程式的核心概念。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 76e1db8886fe75b79cea2e28ef05e62ca519ae58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843541"
 ---
 # <a name="monolithic-applications"></a>整合型應用程式
 
@@ -63,7 +63,7 @@ ms.locfileid: "57676833"
 
 雖然整合型應用程式可以從 Docker 獲益，我們要碰觸的優點的祕訣上。 部署與管理各種不同的執行個體和每個容器執行個體的生命週期的容器 orchestrator 來自管理容器的較大的優勢。 將整合型應用程式分成可個別擴充、開發及部署的多個子系統，是您開始使用微服務的不錯起點。
 
-若要深入了解如何使用容器的 「 隨即轉移 」 整合型應用程式，以及如何將現代化您的應用程式，您可以讀取此其他的 Microsoft 指南，[現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容器](https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/)，，您也可以下載為 PDF 從<https://aka.ms/LiftAndShiftWithContainersEbook>。
+若要深入了解如何使用容器的 「 隨即轉移 」 整合型應用程式，以及如何將現代化您的應用程式，您可以讀取此其他的 Microsoft 指南，[現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容器](../../modernize-with-azure-and-containers/index.md)，，您也可以下載為 PDF 從<https://aka.ms/LiftAndShiftWithContainersEbook>。
 
 ## <a name="publish-a-single-docker-container-app-to-azure-app-service"></a>將單一 Docker 容器應用程式發佈至 Azure App Service
 

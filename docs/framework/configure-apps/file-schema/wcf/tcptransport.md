@@ -2,12 +2,12 @@
 title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
-ms.openlocfilehash: 20591186448fa1c3b4a91ed303bd2a5c6e452491
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 683c28d626f32971e7e1fa5f50343b3e7ea125be
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272015"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845956"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 定義 TCP 傳輸，通道可使用此傳輸來傳輸自訂繫結的訊息。  
@@ -49,7 +49,7 @@ ms.locfileid: "55272015"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|channelInitializationTimeout|取得或設定接受通道初始化的時間限制。  通道在中斷連接之前，可以處於初始化狀態中的最長時間 (以秒為單位)。 這個配額包含 TCP 連接可以使用 .Net Message Framing 通訊協定自行驗證所花費的時間。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 預設為 30 秒。|  
+|channelInitializationTimeout|取得或設定接受通道初始化的時間限制。  通道在中斷連接之前，可以處於初始化狀態中的最長時間 (以秒為單位)。 這個配額包含 TCP 連接可以使用.NET Message Framing 通訊協定自行驗證所花費的時間。 用戶端必須先傳送一些初始資料，讓伺服器有足夠的資訊來執行驗證。 預設為 30 秒。|  
 |connectionBufferSize|取得或設定用來在用戶端或服務的網路上，傳輸已序列化訊息區塊 (Chunk) 的緩衝區大小。|  
 |hostNameComparisonMode|取得或設定值，這個值會指出在比對 URI 時主機名稱是否會用來取用服務。|  
 |listenBacklog|Web 服務可擱置之佇列連線要求的最大數目。 `connectionLeaseTimeout` 屬性會限制用戶端在擲回連線例外狀況之前，等待連線的持續時間。 這是通訊端層級屬性，用來控制 Web 服務可擱置之佇列連線要求的最大數目。 當 ListenBacklog 太低，WCF 將會停止接受要求，並因此卸除新的連接，直到伺服器認可的一些現有已排入佇列的連線。 預設值為 16 * 處理器數量。|  

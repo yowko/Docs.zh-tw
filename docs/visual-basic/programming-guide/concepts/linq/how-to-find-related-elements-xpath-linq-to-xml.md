@@ -2,12 +2,12 @@
 title: HOW TO：尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6b0ef058-d704-48a5-98cd-33f00d088af9
-ms.openlocfilehash: ced58274773b9a5c16331805f9a5513a5231c5ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be7dc6d28c6f176108e33a5c783863fdfc5aed81
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655409"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845943"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-visual-basic"></a>HOW TO：尋找相關項目 (XPATH-LINQ to XML) (Visual Basic)
 本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
@@ -19,9 +19,9 @@ ms.locfileid: "54655409"
 ## <a name="example"></a>範例  
  此範例會尋找第 12 個 `Order` 項目，然後尋找該順序的客戶。  
   
- 請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
+ 請注意，編製索引的清單，在.NET 中為 'zero' 架構。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
   
- 此範例使用下列 XML 文件：[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim co As XDocument = XDocument.Load("CustomersOrders.xml")  

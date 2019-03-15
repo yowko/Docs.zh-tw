@@ -8,18 +8,18 @@ helpviewer_keywords:
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
 author: guardrex
 ms.author: mairaw
-ms.openlocfilehash: 74496726aa2fe5c88a273a22f096c585aa54de0c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693790"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845705"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler 和 DictionarySectionHandler 的自訂項目
 
 定義設定使用的自訂組態區段<xref:System.Configuration.NameValueSectionHandler>和<xref:System.Configuration.DictionarySectionHandler>類別。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
 &nbsp;&nbsp;**\<sectionName>**
 
 ## <a name="attributes"></a>屬性
@@ -37,7 +37,7 @@ ms.locfileid: "54693790"
 |     | 描述 |
 | --- | ----------- |
 | [**\<加入 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler>  | 加入自訂應用程式設定。 |
-| [**\<移除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> |    移除先前定義的設定。 |
+| [**\<移除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 移除先前定義的設定。 |
 | [**\<清除 >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)如<xref:System.Configuration.NameValueSectionHandler>和 <xref:System.Configuration.DictionarySectionHandler> | 清除所有先前定義的設定區段中。 |
 
 ## <a name="remarks"></a>備註
@@ -46,14 +46,14 @@ ms.locfileid: "54693790"
 
 下表顯示每個組態區段處理常式會傳回物件 ConfigurationSettings.GetConfig 方法的型別：
 
-| 組態區段處理常式                        | 傳回型別                                                |
+| 組態區段處理常式                        | 傳回類型                                                |
 | ---------------------------------------------------- | ---------------------------------------------------------- |
 | <xref:System.Configuration.NameValueSectionHandler>  | <xref:System.Collections.Specialized.NameValueCollection>  |
 | <xref:System.Configuration.DictionarySectionHandler> | <xref:System.Collections.IDictionary>                      |
 
 ## <a name="example"></a>範例
 
-下列範例示範如何宣告使用的各節<xref:System.Configuration.DictionarySectionHandler>和<xref:System.Configuration.NameValueSectionHandler>類別。 
+下列範例示範如何宣告使用的各節<xref:System.Configuration.DictionarySectionHandler>和<xref:System.Configuration.NameValueSectionHandler>類別。
 
 第一個自訂項目 **\<dictionarySample >**，其中包含設定讀取<xref:System.Configuration.DictionarySectionHandler>類別`System.dll`組件。 第二個自訂項目 **\<mySection >**，其中包含設定讀取<xref:System.Configuration.NameValueSectionHandler>類別`System.dll`組件。
 

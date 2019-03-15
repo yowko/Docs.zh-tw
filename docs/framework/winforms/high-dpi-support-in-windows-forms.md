@@ -9,18 +9,18 @@ helpviewer_keywords:
 ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dbb5af9c5cf1d8796544592602c645584d21a04
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711783"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843605"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows Forms 中的高 DPI 支援
 
-從.NET Framework 4.7 開始，Windows Form 包含常見的高 DPI 與動態 DPI 情節的增強功能。 它們包括： 
+從.NET Framework 4.7 開始，Windows Form 包含常見的高 DPI 與動態 DPI 情節的增強功能。 它們包括：
 
-- 改進調整和配置數個 Windows Form 控制項，例如<xref:System.Windows.Forms.MonthCalendar>控制項和<xref:System.Windows.Forms.CheckedListBox>控制項。 
+- 改進調整和配置數個 Windows Form 控制項，例如<xref:System.Windows.Forms.MonthCalendar>控制項和<xref:System.Windows.Forms.CheckedListBox>控制項。
 
 - 單一行程調整。  在.NET Framework 4.6 和更早版本中，透過多個行程，這造成一些控制項進行調整，多個必須執行調整。
 
@@ -30,7 +30,7 @@ ms.locfileid: "57711783"
 
 ## <a name="configuring-your-windows-forms-app-for-high-dpi-support"></a>設定您的 Windows Forms 應用程式的高 DPI 支援
 
-支援高 DPI 感知的新 Windows Forms 功能是僅適用於.NET Framework 4.7 為目標，並從 Windows 10 Creators Update 開始的 Windows 作業系統上執行的應用程式。 
+支援高 DPI 感知的新 Windows Forms 功能是僅適用於.NET Framework 4.7 為目標，並從 Windows 10 Creators Update 開始的 Windows 作業系統上執行的應用程式。
 
 此外，若要設定您的 Windows Forms 應用程式中的高 DPI 支援，您必須執行下列作業：
 
@@ -49,27 +49,27 @@ ms.locfileid: "57711783"
 
 - 啟用個別監視器 DPI 感知*app.config*檔案。
 
-  引進新的 Windows Forms [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)以支援新功能和自訂項目加入從.NET Framework 4.7 開始的項目。 若要充分利用支援高 DPI 的新功能，將下列內容新增至您的應用程式組態檔。   
+  引進新的 Windows Forms [ `<System.Windows.Forms.ApplicationConfigurationSection>` ](../configure-apps/file-schema/winforms/index.md)以支援新功能和自訂項目加入從.NET Framework 4.7 開始的項目。 若要充分利用支援高 DPI 的新功能，將下列內容新增至您的應用程式組態檔。
 
   ```xml
   <System.Windows.Forms.ApplicationConfigurationSection>
     <add key="DpiAwareness" value="PerMonitorV2" />
-  </System.Windows.Forms.ApplicationConfigurationSection>      
+  </System.Windows.Forms.ApplicationConfigurationSection>
   ```
-   
+
   > [!IMPORTANT]
   > 在舊版的.NET Framework 中，您會使用資訊清單新增高 DPI 支援。 不建議這種方法，因為它會覆寫 app.config 檔案中所定義的設定。
-   
+
 - 呼叫靜態<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法。
-   
+
   這應該是第一個方法呼叫中的應用程式的進入點。 例如: 
-   
+
   ```csharp
   static void Main()
   {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new Form2());   
+      Application.Run(new Form2());
   }
   ```
 
@@ -80,8 +80,8 @@ ms.locfileid: "57711783"
 ```xml
 <System.Windows.Forms.ApplicationConfigurationSection>
   <add key="DpiAwareness" value="PerMonitorV2" />
-  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" /> 
-</System.Windows.Forms.ApplicationConfigurationSection>    
+  <add key="EnableWindowsFormsHighDpiAutoResizing" value="false" />
+</System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
 如需個別的索引鍵和其值的清單，請參閱 < [Windows Form 加入組態項目](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)。

@@ -2,12 +2,12 @@
 title: ADO.NET 中的連接字串
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: c765eee661858499240344cb5059fe1fa9a58ab5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627560"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57844868"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET 中的連接字串
 
@@ -16,9 +16,9 @@ ms.locfileid: "54627560"
 ## <a name="connection-string-syntax"></a>連接字串語法
 
 連接字串是以分號分隔清單的索引鍵/值參數組：
-  
+
     keyword1=value; keyword2=value;
-  
+
 關鍵字不區分大小寫。 值，不過，可能會區分大小寫，根據資料來源。 關鍵字和值可能會包含[空白字元](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)。 前置和尾端空白字元是忽略關鍵字中並不具引號的值。
 
 如果值包含分號[Unicode 控制字元](https://en.wikipedia.org/wiki/Unicode_control_characters)，或前置或尾端空格，它必須以單引號或雙引號括起來。 例如: 
@@ -44,19 +44,21 @@ ms.locfileid: "54627560"
 
 從未經驗證的使用者輸入的執行階段以手動方式建構的連接字串受到字串插入式攻擊，並危及安全性，在資料來源。 為了解決這些問題中， *ADO.NET* 2.0 導入了[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)每個 *.NET Framework*資料提供者。 這些連接字串產生器參數為強型別屬性，公開 （expose），並使它能夠傳送到資料來源之前，驗證連接字串。
 
-## <a name="in-this-section"></a>本節內容  
- [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)  
- 示範如何使用 `ConnectionStringBuilder` 類別在執行階段建構有效的連接字串。
-  
- [連接字串和組態檔](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)  
- 示範如何在組態檔中儲存及擷取連接字串。
-  
- [連接字串語法](../../../../docs/framework/data/adonet/connection-string-syntax.md)  
- 說明如何針對`SqlClient`、`OracleClient`、`OleDb` 和 `Odbc` 設定提供者專用的連接字串。
-  
- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)  
- 示範的技術可保護用於連接至資料來源的資訊。
-  
+## <a name="in-this-section"></a>本節內容
+
+[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)\
+示範如何使用 `ConnectionStringBuilder` 類別在執行階段建構有效的連接字串。
+
+[連接字串和組態檔](../../../../docs/framework/data/adonet/connection-strings-and-configuration-files.md)\
+示範如何在組態檔中儲存及擷取連接字串。
+
+[連接字串語法](../../../../docs/framework/data/adonet/connection-string-syntax.md)\
+說明如何針對`SqlClient`、`OracleClient`、`OleDb` 和 `Odbc` 設定提供者專用的連接字串。
+
+[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)\
+示範的技術可保護用於連接至資料來源的資訊。
+
 ## <a name="see-also"></a>另請參閱
+
 - [連接至資料來源](/cpp/data/odbc/connecting-to-a-data-source)
 - [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

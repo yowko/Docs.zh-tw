@@ -2,12 +2,12 @@
 title: 非同步程式設計
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: 30eb07f9f6f3a9e1d1d6a346ca0dca272c262bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366123"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846125"
 ---
 # <a name="asynchronous-programming"></a>非同步程式設計
 
@@ -39,9 +39,9 @@ ms.locfileid: "57366123"
 
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)
 
-- [在.Net 4.5 (第 1 部分) 中使用 SqlDataReader 的新非同步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
+- [在.NET 4.5 (第 1 部分) 中使用 SqlDataReader 的新非同步方法](https://blogs.msdn.microsoft.com/adonet/2012/04/20/using-sqldatareaders-new-async-methods-in-net-4-5/)
 
-- [在.Net 4.5 (第 2 部分) 中使用 SqlDataReader 的新非同步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
+- [在.NET 4.5 (第 2 部分) 中使用 SqlDataReader 的新非同步方法](https://blogs.msdn.microsoft.com/adonet/2012/07/15/using-sqldatareaders-new-async-methods-in-net-4-5-part-2-examples/)
 
 當您的使用者介面沒有回應或不能擴充伺服器時，您可能就需要使程式碼更加非同步。 傳統的非同步程式碼編寫涉及安裝回呼 (也稱為接續)，以表示非同步作業完成後發生的邏輯。 這會使非同步程式碼的結構比同步程式碼更複雜。
 
