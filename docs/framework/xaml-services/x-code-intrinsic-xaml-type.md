@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 74fcc158c0556b85ac5175584fa4948513c69053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641105"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58050594"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 內建 XAML 類型
 可讓 XAML 生產環境中的程式碼的位置。 可以將 XAML 或留在稍後使用，例如解譯的 XAML 生產環境中的執行階段編譯任何 XAML 處理器實作編譯這類程式碼。  
@@ -40,7 +40,7 @@ ms.locfileid: "54641105"
   
 -   `x:Code`指示詞項目必須是 XAML 生產的根元素的直系子元素。  
   
--   [X:class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)必須提供在父根項目。  
+-   [X:class 指示詞](x-class-directive.md)必須提供在父根項目。  
   
 -   程式碼置於`x:Code`會被編譯到已建立該 XAML 頁面的部分類別的範圍內。 因此您所定義的所有程式碼必須是成員或該部分類別的變數。  
   
@@ -49,6 +49,6 @@ ms.locfileid: "54641105"
 -   部分類別的 CLR 命名空間外部的程式碼實體的參考必須全部是完整名稱。 如果宣告的成員會覆寫部分類別可覆寫成員，這必須指定與語言特定覆寫的關鍵字。 如果成員宣告中`x:Code`與 XAML 建立的部分類別的成員相衝突的範圍，一種，編譯器會報告衝突，XAML 檔案無法編譯或載入。  
   
 ## <a name="see-also"></a>另請參閱
-- [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)
-- [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [x:Class 指示詞](x-class-directive.md)
+- [WPF 中的程式碼後置和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

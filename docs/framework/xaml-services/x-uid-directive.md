@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 361240c2d2c140c7bf521ece423df4aaed075ba4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745411"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042967"
 ---
 # <a name="xuid-directive"></a>x:Uid 指示詞
 提供標記項目的唯一識別碼。 在許多情況下，這個唯一識別碼使用 XAML 的當地語系化程序和工具。  
@@ -39,9 +39,9 @@ ms.locfileid: "54745411"
  架構可以為的別名，其物件模型中指定特定的屬性`x:Uid`藉由將屬性套用<xref:System.Windows.Markup.UidPropertyAttribute>成定義的型別。 如果一種架構指定特定的屬性，它無效，無法同時指定`x:Uid`和別名化成員相同的物件。 如果兩個`x:Uid`並指定別名化成員，.NET Framework XAML 服務 API 通常會擲回<xref:System.Xaml.XamlDuplicateMemberException>在此情況下。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
- 如需有關所扮演的角色`x:Uid`在 WPF 當地語系化程序和 BAML 形式的 XAML，請參閱[WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
+ 如需有關所扮演的角色`x:Uid`在 WPF 當地語系化程序和 BAML 形式的 XAML，請參閱[WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
-- [WPF 的全球化](../../../docs/framework/wpf/advanced/globalization-for-wpf.md)
+- [WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)
