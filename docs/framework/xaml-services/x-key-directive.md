@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Key attribute in XAML [XAML Services]
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
-ms.openlocfilehash: 23c483daed0156dd29134b255e9da2f7922980ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8474fd5ee6f9f6e6dccda5fb57fbed9ddd787c26
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492778"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58046201"
 ---
 # <a name="xkey-directive"></a>x:Key 指示詞
 可唯一識別建立和參考 XAML 定義的字典中的項目。 新增`x:Key`XAML 物件元素的值是最常見的方式，來識別資源字典中，例如在 WPF 中的資源<xref:System.Windows.ResourceDictionary>。  
@@ -44,15 +44,15 @@ ms.locfileid: "54492778"
   
 |||  
 |-|-|  
-|`stringKeyValue`|文字字串做為索引鍵使用。 文字字串必須符合[XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md)。|  
+|`stringKeyValue`|文字字串做為索引鍵使用。 文字字串必須符合[XamlName 文法](xamlname-grammar.md)。|  
 |`markupExtensionUsage`|標記延伸分隔符號內{}，標記延伸使用方式，提供做為索引鍵的物件。 請參閱＜備註＞。|  
   
 ## <a name="remarks"></a>備註  
- `x:Key` 支援 XAML 資源字典概念。 XAML 作為語言未定義的資源字典實作，保留給特定的 UI 架構。 若要深入了解如何在 WPF 中實作 XAML 資源字典，請參閱[XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ `x:Key` 支援 XAML 資源字典概念。 XAML 作為語言未定義的資源字典實作，保留給特定的 UI 架構。 若要深入了解如何在 WPF 中實作 XAML 資源字典，請參閱[XAML 資源](../wpf/advanced/xaml-resources.md)。  
   
  在 XAML 2006 和 WPF，`x:Key`必須提供做為屬性。 您仍然可以使用非字串索引鍵，但這需要標記延伸使用方式，才能提供以屬性形式的非字串值。 如果您使用 XAML 2009`x:Key`都可以指定為項目，以明確支援以外的其他索引的物件類型的字典字串而不需要標記延伸中繼。 請參閱本主題的 < XAML 2009 > 一節。 < 備註 > 一節的其餘部分專門適用於 XAML 2006 實作。  
   
- 屬性值`x:Key`可以任何字串中定義[XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md)也可以是透過標記延伸評估的物件。 如需 WPF 的範例，請參閱 < WPF 使用方式附註 >。  
+ 屬性值`x:Key`可以任何字串中定義[XamlName 文法](xamlname-grammar.md)也可以是透過標記延伸評估的物件。 如需 WPF 的範例，請參閱 < WPF 使用方式附註 >。  
   
  是父項目的子項目<xref:System.Collections.IDictionary>通常必須包含實作`x:Key`指定該字典內的唯一索引鍵值的屬性。 架構可能會實作別名索引鍵屬性，來替代`x:Key`特定類型上定義這類屬性的類型應該屬性具有<xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>。  
   
@@ -63,19 +63,19 @@ ms.locfileid: "54492778"
   
 -   一些 WPF 類型宣告字典使用方式的隱含索引鍵。 比方說，<xref:System.Windows.Style>具有<xref:System.Windows.Style.TargetType%2A>，或<xref:System.Windows.DataTemplate>具有<xref:System.Windows.DataTemplate.DataType%2A>，可以是<xref:System.Windows.ResourceDictionary>，並使用隱含的索引鍵。  
   
--   WPF 支援合併的資源字典概念。 金鑰可以共用之間合併的字典和可存取的共用金鑰的行為，使用<xref:System.Windows.FrameworkContentElement.FindResource%2A>。 如需詳細資訊，請參閱[合併的資源字典](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
+-   WPF 支援合併的資源字典概念。 金鑰可以共用之間合併的字典和可存取的共用金鑰的行為，使用<xref:System.Windows.FrameworkContentElement.FindResource%2A>。 如需詳細資訊，請參閱[合併的資源字典](../wpf/advanced/merged-resource-dictionaries.md)。  
   
  在整體 WPF XAML 實作和應用程式模型中，XAML 標記編譯器不會檢查索引鍵唯一性。 相反地，缺少或非唯一`x:Key`值會導致載入時間 XAML 剖析器錯誤。 不過，Visual Studio 的字典中的處理 wpf 可以通常在設計階段注意這類錯誤。  
   
- 請注意，在顯示的語法<xref:System.Windows.ResourceDictionary>物件是隱含在 WPF XAML 處理器如何產生集合以填入<xref:System.Windows.FrameworkElement.Resources%2A>集合。 A<xref:System.Windows.ResourceDictionary>通常並非明確為項目在標記中，但如果想為了清楚起見，也可以是在某些情況下 (它會是集合物件項目之間<xref:System.Windows.FrameworkElement.Resources%2A>屬性項目並在其中的項目填入字典）。 如需為什麼集合物件幾乎都是隱含的項目在標記中的資訊，請參閱[XAML 語法詳細資料](../../../docs/framework/wpf/advanced/xaml-syntax-in-detail.md)。  
+ 請注意，在顯示的語法<xref:System.Windows.ResourceDictionary>物件是隱含在 WPF XAML 處理器如何產生集合以填入<xref:System.Windows.FrameworkElement.Resources%2A>集合。 A<xref:System.Windows.ResourceDictionary>通常並非明確為項目在標記中，但如果想為了清楚起見，也可以是在某些情況下 (它會是集合物件項目之間<xref:System.Windows.FrameworkElement.Resources%2A>屬性項目並在其中的項目填入字典）。 如需為什麼集合物件幾乎都是隱含的項目在標記中的資訊，請參閱[XAML 語法詳細資料](../wpf/advanced/xaml-syntax-in-detail.md)。  
   
  在 WPF XAML 實作中，資源字典索引鍵的處理由定義<xref:System.Windows.ResourceKey>抽象類別。 不過，WPF XAML 處理器會產生不同的基礎擴充類型，根據其使用方式索引鍵。 例如，索引鍵<xref:System.Windows.DataTemplate>或任何衍生的類別處理分開，而且會產生不同<xref:System.Windows.DataTemplateKey>物件。  
   
- 索引鍵和名稱使用不同的指示詞和語言項目 (`x:Key`與`x:Name`) 基本 XAML 定義中。 索引鍵和名稱也會在不同的情況下由 WPF 定義和這些概念的應用程式。 如需詳細資訊，請參閱 < [WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ 索引鍵和名稱使用不同的指示詞和語言項目 (`x:Key`與`x:Name`) 基本 XAML 定義中。 索引鍵和名稱也會在不同的情況下由 WPF 定義和這些概念的應用程式。 如需詳細資訊，請參閱 < [WPF XAML Namescopes](../wpf/advanced/wpf-xaml-namescopes.md)。  
   
- 如先前所述，機碼的值可以透過標記延伸提供，並可以是字串值以外的值。 WPF 即為一例，值`x:Key`可能[ComponentResourceKey](../../../docs/framework/wpf/advanced/componentresourcekey-markup-extension.md)。 特定控制項會公開該類型的樣式索引鍵，而不取代樣式影響組件的外觀和行為，該控制項的自訂樣式資源。 舉例來說，這類金鑰<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>。  
+ 如先前所述，機碼的值可以透過標記延伸提供，並可以是字串值以外的值。 WPF 即為一例，值`x:Key`可能[ComponentResourceKey](../wpf/advanced/componentresourcekey-markup-extension.md)。 特定控制項會公開該類型的樣式索引鍵，而不取代樣式影響組件的外觀和行為，該控制項的自訂樣式資源。 舉例來說，這類金鑰<xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>。  
   
- WPF 合併的字典功能導入了索引鍵唯一性和索引鍵查閱行為的其他考量。 如需詳細資訊，請參閱[合併的資源字典](../../../docs/framework/wpf/advanced/merged-resource-dictionaries.md)。  
+ WPF 合併的字典功能導入了索引鍵唯一性和索引鍵查閱行為的其他考量。 如需詳細資訊，請參閱[合併的資源字典](../wpf/advanced/merged-resource-dictionaries.md)。  
   
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 放寬了這項限制，`x:Key`一律會以屬性形式提供。  
@@ -111,6 +111,6 @@ keyObject
  `x:Key` silverlight 會另外記載。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)。  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [資源和程式碼](../../../docs/framework/wpf/advanced/resources-and-code.md)
-- [StaticResource 標記延伸](../../../docs/framework/wpf/advanced/staticresource-markup-extension.md)
+- [XAML 資源](../wpf/advanced/xaml-resources.md)
+- [資源和程式碼](../wpf/advanced/resources-and-code.md)
+- [StaticResource 標記延伸](../wpf/advanced/staticresource-markup-extension.md)

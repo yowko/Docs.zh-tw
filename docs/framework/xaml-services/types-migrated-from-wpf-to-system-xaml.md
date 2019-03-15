@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: bc895313ae89d464c4ddc16607d19b2e6160f80c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fc9d1b2666db05fc4fb902cf8db03d9d876001b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524256"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58031479"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>從 WPF 移轉至 System.Xaml 的類型
 在 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]並[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]，這兩個[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]和 Windows Workflow Foundation 隨附 XAML 語言實作。 有許多為 WPF XAML 實作提供擴充性的公用類型，存在於 WindowsBase、PresentationCore 和 PresentationFramework 組件中。 同樣地，Windows Workflow Foundation XAML 提供擴充性的公用型別存在於 System.Workflow.ComponentModel 組件。 在 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]中，某些與 XAML 相關的類型已移轉至 System.Xaml 組件。 .NET Framework 有一項常見的 XAML 語言服務實作，可用以執行許多 XAML 擴充性情節，這些情節原先由特定架構的 XAML 實作所定義，但現在已納入整體 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 語言支援中。 本主題會列出移轉的類型，並討論與移轉相關的問題。  
@@ -65,7 +65,7 @@ ms.locfileid: "54524256"
 |<xref:System.Windows.Markup.StaticExtension>|`{x:Static ...}`|  
 |<xref:System.Windows.Markup.TypeExtension>|`{x:Type ...}`|  
   
- 雖然 System.Xaml 可能沒有特定支援類別，但處理 XAML 語言的語言功能時所需的一般邏輯，現已常駐於 System.Xaml 以及其實作的 XAML 讀取器和 XAML 寫入器中。 例如， `x:TypeArguments` 是由 XAML 讀取器和 XAML 寫入器透過 System.Xaml 實作處理的屬性。該屬性可在 XAML 節點資料流中標註、在預設 (CLR 型) XAML 結構描述內容中有處理邏輯、具有 XAML 類型系統表示等。 因此，所有 XAML 語言層級功能的參考文件，都會是 [XAML Services](../../../docs/framework/xaml-services/index.md) 和 .NET Framework 文件集該一般區域的子主題，而不會是 WPF 文件集中 [進階 (Windows Presentation Foundation)](../../../docs/framework/wpf/advanced/index.md) 的子主題 (在 3.5 文件集中仍為如此)。  
+ 雖然 System.Xaml 可能沒有特定支援類別，但處理 XAML 語言的語言功能時所需的一般邏輯，現已常駐於 System.Xaml 以及其實作的 XAML 讀取器和 XAML 寫入器中。 例如， `x:TypeArguments` 是由 XAML 讀取器和 XAML 寫入器透過 System.Xaml 實作處理的屬性。該屬性可在 XAML 節點資料流中標註、在預設 (CLR 型) XAML 結構描述內容中有處理邏輯、具有 XAML 類型系統表示等。 因此，所有 XAML 語言層級功能的參考文件，都會是 [XAML Services](index.md) 和 .NET Framework 文件集該一般區域的子主題，而不會是 WPF 文件集中 [進階 (Windows Presentation Foundation)](../wpf/advanced/index.md) 的子主題 (在 3.5 文件集中仍為如此)。  
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer 和支援類別  
@@ -126,4 +126,4 @@ ms.locfileid: "54524256"
  如果您同時納入 WPF 組件和 System.Xaml 的參考，並且同時對 `include` 和 <xref:System.Windows.Markup> 命名空間使用 <xref:System.Xaml> 陳述式，則您可能必須完整限定對這些 API 的呼叫，以明確解析類型。  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML Services](../../../docs/framework/xaml-services/index.md)
+- [XAML Services](index.md)

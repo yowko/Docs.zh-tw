@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID7
 ms.assetid: 96cc12e1-d40a-425f-b365-1ac39e5ddcb0
-ms.openlocfilehash: 59d4a267653a4f1b46d24786d4f41e3385155ec3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0fb6d22a71e9b2f859fec64fd0f11af37817b4e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600501"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58028914"
 ---
 # <a name="out-of-memory-visual-basic-run-time-error"></a>記憶體不足 (Visual Basic 執行階段錯誤)
 需要提供更多的記憶體。  
@@ -27,4 +27,5 @@ ms.locfileid: "54600501"
 5.  減少公用變數的數量。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)

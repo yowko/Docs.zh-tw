@@ -2,16 +2,10 @@
 title: XAML 服務
 ms.date: 03/30/2017
 helpviewer_keywords:
-- XAML [XAML Services], System.Xaml concepts
-- XAML Services in WPF [XAML Services]
-- System.Xaml [XAML Services], conceptual documentation
+  - 'XAML [XAML Services], System.Xaml concepts'
+  - 'XAML Services in WPF [XAML Services]'
+  - 'System.Xaml [XAML Services], conceptual documentation'
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 373478e8c21fca66cbfbf7a58fc7d53f65ce5d0b
-ms.sourcegitcommit: 6eac9a01ff5d70c6d18460324c016a3612c5e268
-ms.translationtype: MT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45617379"
 ---
 # <a name="xaml-services"></a>XAML 服務
 本主題說明的技術集合，稱為.NET Framework XAML 服務的功能。 大部分的服務和描述 Api 位於 System.Xaml，這是組件所引進的組件[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET core 組件集。 服務包括讀取器和寫入，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言內建支援和其他 XAML 語言功能。  
@@ -33,14 +27,14 @@ ms.locfileid: "45617379"
   
 -   使用`Lookup`或`Invoker`技術，以影響 XAML 型別系統和型別 backings 的評估方式。  
   
- 如果您要尋找在 XAML 做為語言的簡介教材，您可以試試[XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)。 該主題討論 XAML 的新功能的對象來[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]以及使用 XAML 標記和 XAML 語言功能。 另一個有用的文件是在簡介教材[XAML 語言規格](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ 如果您要尋找在 XAML 做為語言的簡介教材，您可以試試[XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)。 該主題討論 XAML 的新功能的對象來[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]以及使用 XAML 標記和 XAML 語言功能。 另一個有用的文件是在簡介教材[XAML 語言規格](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML 服務和 System.Xaml 中的.NET 架構  
  在舊版的 Microsoft.NET Framework 中，對 XAML 語言功能實作的 Microsoft.NET Framework 建置的架構支援 ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]，Windows Workflow Foundation 和 Windows Communication Foundation (WCF))，因此其行為和 API 所使用的特定架構根據您所使用的各不相同。 這包含 XAML 剖析器和其物件圖形建立機制、 XAML 語言內建函式、 序列化支援等等。  
   
  在  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]，.NET Framework XAML 服務和 System.Xaml 組件定義大部分所需的支援 XAML 語言功能。 這可以包括基底類別的 XAML 讀取器和 XAML 寫入器。 加入不存在於任何架構特定 XAML 實作的.NET Framework XAML 服務的最重要功能是針對 XAML 類型系統表示法。 類型系統表示法呈現 XAML 著重 XAML 功能，但不採取相依性的架構的特定功能以物件導向的方式。  
   
- XAML 類型系統不受限於標記形式或 XAML 原點; 的執行階段特性也不它受到任何特定的支援型別系統。 XAML 類型系統包含類型、 成員、 XAML 結構描述的內容，XML 層級概念，和其他 XAML 語言概念或 XAML 內建函式的物件的表示。 使用或擴充的 XAML 型別系統可讓您從 XAML 讀取器和 XAML 寫入器，例如類別衍生並擴充到啟用的一種架構、 一種技術或使用應用程式的特定功能的 XAML 表示的功能或XAML 就會發出。 XAML 結構描述內容的概念可讓 XAML 物件寫入器實作，因為通訊透過內容和 XAML 節點中的組件資訊的技術支援型別系統的組合的實際物件 graph 寫入作業來源。 如需有關 XAML 結構描述概念的詳細資訊。 請參閱[預設 XAML 結構描述內容和 WPF XAML 結構描述內容](../../../docs/framework/xaml-services/default-xaml-schema-context-and-wpf-xaml-schema-context.md)。  
+ XAML 類型系統不受限於標記形式或 XAML 原點; 的執行階段特性也不它受到任何特定的支援型別系統。 XAML 類型系統包含類型、 成員、 XAML 結構描述的內容，XML 層級概念，和其他 XAML 語言概念或 XAML 內建函式的物件的表示。 使用或擴充的 XAML 型別系統可讓您從 XAML 讀取器和 XAML 寫入器，例如類別衍生並擴充到啟用的一種架構、 一種技術或使用應用程式的特定功能的 XAML 表示的功能或XAML 就會發出。 XAML 結構描述內容的概念可讓 XAML 物件寫入器實作，因為通訊透過內容和 XAML 節點中的組件資訊的技術支援型別系統的組合的實際物件 graph 寫入作業來源。 如需有關 XAML 結構描述概念的詳細資訊。 請參閱[預設 XAML 結構描述內容和 WPF XAML 結構描述內容](default-xaml-schema-context-and-wpf-xaml-schema-context.md)。  
   
 ## <a name="xaml-node-streams-xaml-readers-and-xaml-writers"></a>XAML 節點資料流，XAML 讀取器和 XAML 寫入器  
  若要了解.NET Framework XAML 服務 XAML 語言和 XAML 作為語言的特定技術之間的關聯性中所扮演的角色，最好先了解的概念，XAML 節點資料流，以及該概念圖形 API 的方式和術語。 XAML 節點資料流是 XAML 語言表示法與 XAML 表示，或定義的物件圖形之間的概念中繼。  
@@ -79,7 +73,7 @@ ms.locfileid: "45617379"
   
 -   呼叫<xref:System.Xaml.XamlXmlWriter.Flush%2A>取得最終輸出。  
   
- 如需有關 XAML 節點資料流概念的詳細資訊，請參閱 <<c0> [ 了解 XAML 節點 Stream 結構和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)。  
+ 如需有關 XAML 節點資料流概念的詳細資訊，請參閱 <<c0> [ 了解 XAML 節點 Stream 結構和概念](understanding-xaml-node-stream-structures-and-concepts.md)。  
   
 ### <a name="the-xamlservices-class"></a>XamlServices 類別  
  您不一定需要處理 XAML 節點資料流。 如果您想要的基本載入路徑或儲存路徑的基本，您可以使用中的 Api<xref:System.Xaml.XamlServices>類別。  
@@ -90,7 +84,7 @@ ms.locfileid: "45617379"
   
 -   <xref:System.Xaml.XamlServices.Transform%2A> 將 XAML 轉換藉由連結的載入路徑和儲存路徑做為單一作業。 ，則可以使用不同的結構描述內容或不同的支援型別系統<xref:System.Xaml.XamlReader>和<xref:System.Xaml.XamlWriter>，這是影響產生的 XAML 轉換的方式。  
   
- 如需有關如何使用<xref:System.Xaml.XamlServices>，請參閱 < [XAMLServices 類別和基本 XAML 讀取或寫入](../../../docs/framework/xaml-services/xamlservices-class-and-basic-xaml-reading-or-writing.md)。  
+ 如需有關如何使用<xref:System.Xaml.XamlServices>，請參閱 < [XAMLServices 類別和基本 XAML 讀取或寫入](xamlservices-class-and-basic-xaml-reading-or-writing.md)。  
   
 ## <a name="xaml-type-system"></a>XAML 類型系統  
  XAML 類型系統會提供與指定之個別節點的 XAML 節點資料流所需的 Api。  
@@ -104,4 +98,4 @@ ms.locfileid: "45617379"
  .NET Framework XAML 服務實作的 XAML 類型系統的預設行為根據 common language runtime (CLR)、 和靜態分析的組件中的 CLR 類型使用反映。 因此，針對特定的 CLR 類型，XAML 類型系統的預設實作可以公開該類型和其成員的 XAML 結構描述，並報告方面的 XAML 類型系統。 在預設 XAML 類型系統中，類型的指派性的概念對應到 CLR 繼承，並執行個體、 實值型別等等的概念也會對應至支援的行為和 CLR 功能。  
   
 ## <a name="reference-for-xaml-language-features"></a>XAML 語言功能的參考  
- 若要支援 XAML，.NET Framework XAML 服務會提供為 XAML 語言 XAML 命名空間所定義的 XAML 語言概念的特定實作。 這些會記載為特定的參考頁面。 從 XAML 讀取器或.NET Framework XAML 服務所定義的 XAML 寫入器處理它們時，這些語言功能的行為方式的觀點來看記載的語言功能。 如需詳細資訊，請參閱 [XAML Namespace (x:) Language Features](../../../docs/framework/xaml-services/xaml-namespace-x-language-features.md)。
+ 若要支援 XAML，.NET Framework XAML 服務會提供為 XAML 語言 XAML 命名空間所定義的 XAML 語言概念的特定實作。 這些會記載為特定的參考頁面。 從 XAML 讀取器或.NET Framework XAML 服務所定義的 XAML 寫入器處理它們時，這些語言功能的行為方式的觀點來看記載的語言功能。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能](xaml-namespace-x-language-features.md)。

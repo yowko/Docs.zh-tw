@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 084837a87d878982ad4138ab508d24100e183b64
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8593dbc8a419048950a852a02057f40f80d992a
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679342"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58024564"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<Appcontextswitchoverrides> > 項目
 定義一或多個由 <xref:System.AppContext> 類別所使用的參數，以提供新功能的退出機制。  
@@ -65,10 +65,10 @@ ms.locfileid: "57679342"
 |交換器名稱|描述|導入|  
 |-----------------|-----------------|----------------|  
 |`Switch.MS.Internal.`<br/>`DoNotApplyLayoutRoundingToMarginsAndBorderThickness`|控制 Windows Presentation Foundation 是否使用傳統演算法的控制項配置。 如需詳細資訊，請參閱[風險降低：WPF 版面配置](../../../migration-guide/mitigation-wpf-layout.md)。|.NET Framework 4.6|  
-|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|控制用來簽署套件各部分的 PackageDigitalSignatureManager 的預設演算法是 SHA1 或 SHA256。|.NET Framework 4.7.1|
+|`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|控制用來簽署套件各部分的 PackageDigitalSignatureManager 的預設演算法是 SHA1 或 SHA256。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|當設定為`false`，允許偵錯使用 Visual Studio 的 XAML 型工作流程專案時都啟用 FIPS。 否則， <xref:System.NullReferenceException> System.Activities 組件中的方法呼叫中會擲回。|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|控制偵錯工具中的工作流程執行個體的總和檢查碼是否使用 MD5 或 SHA1。 | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|控制工作流程總和檢查碼雜湊是否會使用 SHA1 演算法引進為.NET Framework 4.7 中的預設值 (`true`)，或者是否要使用預設的 SHA256 演算法引進為.NET Framework 4.8 中的預設值 (`false`)。|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|控制工作流程總和檢查碼雜湊是否會使用 SHA1 演算法引進為.NET Framework 4.7 中的預設值 (`true`)，或者是否要使用預設的 SHA256 演算法引進為.NET Framework 4.8 中的預設值 (`false`)。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|堆疊追蹤是取得使用可攜式 Pdb 時可以包含來源檔案和行資訊的控制項。 `false` 包含來源檔案和行資訊;否則， `true`。|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|控制項是否<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>方法會擲回的例外狀況時<xref:System.Drawing.Icon>物件具有 PNG 畫面格。 如需詳細資訊，請參閱[風險降低：圖示物件中的 PNG 畫面格](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)。|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|決定是否<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>新增至集合時，正確地處置物件<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType>方法。 `true` 若要維護舊版的行為。`false`來進行處置的私用字型的所有物件。 |.NET Framework 4.7.2|
@@ -96,8 +96,8 @@ ms.locfileid: "57679342"
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|控制項是否<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>建構函式會設定新的物件<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>與現有的物件參考的屬性。 如需詳細資訊，請參閱[風險降低：ClaimsIdentity 建構函式](../../../migration-guide/mitigation-claimsidentity-constructor.md)。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|控制是否要重複使用嘗試<xref:System.Security.Cryptography.AesCryptoServiceProvider>解密程式會擲回<xref:System.Security.Cryptography.CryptographicException>。 如需詳細資訊，請參閱 < [AesCryptoServiceProvider 解密程式提供可重複使用的轉換](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|控制項是否的值[cspparameters.parentwindowhandle 應該](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)屬性是[IntPtr](xref:System.IntPtr)代表視窗的記憶體位置處理，或它是否視窗控制代碼 (HWND)。 如需詳細資訊，請參閱[風險降低：Cspparameters.parentwindowhandle 應該有 HWND](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)。 |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedCMS 作業的預設值是 SHA1 或 SHA256。 |.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedXML 作業的預設值是 SHA1 或 SHA256。 |.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedCMS 作業的預設值是 SHA1 或 SHA256。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|判斷某些 SignedXML 作業的預設值是 SHA1 或 SHA256。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|決定是否`TransportWithMessageCredential`安全性模式可讓訊息與不帶正負號"to"標頭。 這是選擇性參數。 如需詳細資訊，請參閱 < [.NET Framework 4.6.1 中的執行階段變更](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|控制項是否<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>建構函式會擲回<xref:System.ArgumentException>如果其中一個項目是`null`。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|決定是否在嘗試使用 X509 憑證使用 CSG 金鑰儲存提供者會擲回例外狀況。 如需詳細資訊，請參閱 < [WCF 傳輸安全性支援使用 CNG 儲存的憑證](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)。|.NET Framework 4.6.1|
@@ -105,8 +105,8 @@ ms.locfileid: "57679342"
 |`Switch.System.ServiceModel.`<br/>`DisableOperationContextAsyncFlow`|處理死結 （deadlock） 所產生的單一執行緒執行一次的限制可重新進入服務的執行個體。|.NET Framework 4.6.2|
 |`Switch.System.ServiceModel.`<br/>`DisableUsingServicePointManagerSecurityProtocols`|連同`Switch.System.Net.DontEnableSchUseStrongCrypto`，決定 WCF 訊息安全性使用 TLS 1.1 和 TLS 1.2。|.NET Framework 4.7 |    
 |`Switch.System.ServiceModel.`<br/>`DontEnableSystemDefaultTlsVersions`|值為`false`設定預設設定，以允許作業系統選擇通訊協定。 值為`true`最高的通訊協定設定預設值。 （也適用於服務的舊版 framework 的分支）|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|決定的預設訊息簽署在 WCF 中的 MSMQ 訊息的演算法是 SHA1 或 SHA256。|.NET Framework 4.7.1|
-|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|控制 WCF 來產生的具名管道的隨機名稱是否使用 SHA1 或 SHA256 雜湊。|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InMsmqEncryptionAlgorithm`|決定的預設訊息簽署在 WCF 中的 MSMQ 訊息的演算法是 SHA1 或 SHA256。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.7.1|
+|`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|控制 WCF 來產生的具名管道的隨機名稱是否使用 SHA1 或 SHA256 雜湊。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|控制是否要擲回[NullReferenceException](xref:System.NullReferenceException)當例外狀況訊息為 null。|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|控制是否在服務啟動時擲回例外狀況會傳播到呼叫端<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>方法。|.NET Framework 4.7.1|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|決定是否某些有時已解碼的百分比編碼字元現在一致保持編碼。 如果`true`，它們是解碼，否則`false`。|.NET Framework 4.7.2|
@@ -122,11 +122,11 @@ ms.locfileid: "57679342"
 |`Switch.System.Windows.Forms.`<br/>`UseLegacyContextMenuStripSourceControlValue`|決定是否<xref:System.Windows.Forms.ContextMenuStrip.SourceControl?displayProperty=nameWithType>屬性會傳回原始檔控制當使用者開啟功能表，從巢狀<xref:System.Windows.Forms.ToolStripMenuItem>控制項。 `true` 要傳回`null`，舊版的行為。`false`返回原始檔控制。|.NET Framework 4.7.2|
 |`Switch.System.Windows.Forms.UseLegacyToolTipDisplay`|控制是否要停用工具提示引動過程的支援 (`true`) 或啟用 (`false`)。 啟用工具提示引動過程的支援也會需要所定義的舊版協助工具功能`Switch.UseLegacyAccessibilityFeatures`， `Switch.UseLegacyAccessibilityFeatures.2`，並`Switch.UseLegacyAccessibilityFeatures.3`所有停用 (設為`false`)。|.NET Framework 4.8|
 |`Switch.System.Windows.Input.Stylus.`<br/>`EnablePointerSupport`|決定是否選用`WM_POINTER`為基礎的觸控/手寫筆堆疊已啟用 WPF 應用程式中。 如需詳細資訊，請參閱[風險降低：指標為基礎的觸控及手寫筆支援](../../../migration-guide/mitigation-pointer-based-touch-and-stylus-support.md)|.NET Framework 4.7|
-|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|決定是否使用總和檢查碼的預設雜湊演算法是 SHA256 (`false`) 或 SHA1 (`true`)。|.NET Framework 4.7.2|
+|`Switch.System.Windows.Markup.`<br/>`DoNotUseSha256ForMarkupCompilerChecksumAlgorithm`|決定是否使用總和檢查碼的預設雜湊演算法是 SHA256 (`false`) 或 SHA1 (`true`)。<br>因為 SHA1 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.7.2|
 |`Switch.System.Windows.Media.ImageSourceConverter.`<br/>`OverrideExceptionWithNullReferenceException`|控制是否舊式[NullReferenceException](xref:System.NullReferenceException)而不是更明確地指出造成例外狀況的例外狀況擲回 (例如[DirectoryNotFoundException](xref:System.IO.DirectoryNotFoundException)或[FileNotFoundException](xref:System.IO.FileNotFoundException)。 它取決於處理的程式碼適用於[NullReferenceException](xref:System.NullReferenceException)。 | .NET Framework 4.7 |
-|`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|控制項的工作流程專案中 XOML 檔案的總和檢查碼雜湊組建是否使用 MD5 演算法 (`true`)，或使用 SHA256 演算法引進為.NET Framework 4.8 中的預設值。|.NET Framework 4.8|
-|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|控制是否透過 SqlTrackingService 的總和檢查碼雜湊使用 MD5 演算法 (`true`) 針對快取的字串，或是否會使用 SHA256 演算法引進為.NET Framework 4.8 中的預設值。|.NET Framework 4.8|
-|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForWorkflowDefinitionDispenserCacheKey`|控制是否由工作流程執行階段的總和檢查碼雜湊使用 MD5 演算法 (`true`) 如需快取的工作流程定義，或是否會使用 SHA256 演算法引進為.NET Framework 4.8 中的預設值。|.NET Framework 4.8|
+|`Switch.System.Workflow.ComponentModel.`<br/>`UseLegacyHashForXomlFileChecksum`|控制項的工作流程專案中 XOML 檔案的總和檢查碼雜湊組建是否使用 MD5 演算法 (`true`)，或使用 SHA256 演算法引進為.NET Framework 4.8 中的預設值。<br>因為 MD5 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.8|
+|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForSqlTrackingCacheKey`|控制是否透過 SqlTrackingService 的總和檢查碼雜湊使用 MD5 演算法 (`true`) 針對快取的字串，或是否會使用 SHA256 演算法引進為.NET Framework 4.8 中的預設值。<br>因為 MD5 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.8|
+|`Switch.System.Workflow.Runtime.`<br/>`UseLegacyHashForWorkflowDefinitionDispenserCacheKey`|控制是否由工作流程執行階段的總和檢查碼雜湊使用 MD5 演算法 (`true`) 如需快取的工作流程定義，或是否會使用 SHA256 演算法引進為.NET Framework 4.8 中的預設值。<br>因為 MD5 衝突問題，Microsoft 會建議 SHA256。|.NET Framework 4.8|
 |`Switch.UseLegacyAccessibilityFeatures`|控制項是否可從.NET Framework 4.7.1 的協助工具功能會啟用或停用。 | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|協助工具功能提供於.NET Framework 4.7.2 是否已啟用的控制項 (`false`) 或停用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`也必須是`true`啟用.NET Framework 4.7.1 協助工具功能。|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|協助工具功能是否在.NET Framework 4.8 中導入啟用的控制項 (`false`) 或停用 (`true`)。 如果`true`，`Switch.UseLegacyAccessibilityFeatures`並`Switch.UseLegacyAccessibilityFeatures.2`也必須是`true`。|.NET Framework 4.8|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Name attribute
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
-ms.openlocfilehash: 164b0283864cdeb60ef7b8e19c9d457f80ee4eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3d188038526570761c2e50dc607fd4aac165fda5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696460"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034350"
 ---
 # <a name="xname-directive"></a>x:Name 指示詞
 可唯一識別 XAML 定義 XAML 名稱範圍中的項目。 XAML 名稱範圍和其唯一性模型可以套用至具現化的物件，當架構提供的 Api，或實作在執行階段存取 XAML 建立的物件圖形的行為。  
@@ -30,12 +30,12 @@ ms.locfileid: "54696460"
   
 |||  
 |-|-|  
-|`XAMLNameValue`|字串，符合的限制[XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md)。|  
+|`XAMLNameValue`|字串，符合的限制[XamlName 文法](xamlname-grammar.md)。|  
   
 ## <a name="remarks"></a>備註  
  之後`x:Name`會套用到一種架構之支援的程式設計模型，名稱就相當於保留物件參考或執行個體建構函式所傳回的變數。  
   
- 值`x:Name`指示詞的使用方式中必須是唯一的 XAML 名稱範圍。 根據預設時使用的.NET Framework XAML 服務 API，主要的 XAML 名稱範圍定義於單一的 XAML 生產環境中，XAML 根項目，並包含該 XAML 生產環境中所包含的項目。 其他離散 XAML 名稱範圍，可能是單一的 XAML 生產環境中可以定義來解決此特定案例的架構。 例如，在 WPF 中，新的 XAML 名稱範圍定義和任何也會定義在該 XAML 生產的範本所建立。 如需有關 （但相關的許多 XAML 名稱範圍概念方式撰寫 for WPF） XAML 名稱範圍的詳細資訊，請參閱[WPF XAML Namescopes](../../../docs/framework/wpf/advanced/wpf-xaml-namescopes.md)。  
+ 值`x:Name`指示詞的使用方式中必須是唯一的 XAML 名稱範圍。 根據預設時使用的.NET Framework XAML 服務 API，主要的 XAML 名稱範圍定義於單一的 XAML 生產環境中，XAML 根項目，並包含該 XAML 生產環境中所包含的項目。 其他離散 XAML 名稱範圍，可能是單一的 XAML 生產環境中可以定義來解決此特定案例的架構。 例如，在 WPF 中，新的 XAML 名稱範圍定義和任何也會定義在該 XAML 生產的範本所建立。 如需有關 （但相關的許多 XAML 名稱範圍概念方式撰寫 for WPF） XAML 名稱範圍的詳細資訊，請參閱[WPF XAML Namescopes](../wpf/advanced/wpf-xaml-namescopes.md)。  
   
  一般情況下，`x:Name`也使用的情況下應該不會套用`x:Key`。 現有的架構特定 XAML 實作引進了替代概念之間`x:Key`和`x:Name`，但並不是建議的作法。 .NET framework XAML 服務不支援這類替代概念，例如處理名稱/金鑰資訊時<xref:System.Windows.Markup.INameScope>或<xref:System.Windows.Markup.DictionaryKeyPropertyAttribute>。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "54696460"
  Using.NET Framework XAML 服務 XAML 名稱範圍支援的支援邏輯可以藉由實作定義的 framework 中性方式<xref:System.Windows.Markup.INameScope>介面。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
- 底下的標準組建組態[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]應用程式使用 XAML、 部分類別和程式碼後置，指定`x:Name`就會變成在基礎建立的欄位名稱程式碼時[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理標記編譯建置工作，而該欄位會保留物件的參考。 根據預設，[建立] 欄位則是內部項目。 您可以變更欄位的存取，藉由指定[X:fieldmodifier 屬性](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)。 在 WPF 和 Silverlight 中，序列會是標記編譯的定義，而且名稱欄位中的部分類別，但是這個值最初是空的。 然後，產生的方法名為`InitializeComponent`類別建構函式中呼叫。 `InitializeComponent` 組成`FindName`使用每個呼叫`x:Name`存在於 XAML 定義的一部分做為部分類別中的值輸入字串。 以填滿與從 XAML 所建立的物件的欄位值剖析，會再傳回的值指派給命名相似的欄位參考。 執行`InitializeComponent`可讓執行的階段物件 graph 使用的參考`x:Name`/ 直接，欄位名稱，而不必呼叫`FindName`明確每當您需要的 XAML 定義物件的參考。  
+ 底下的標準組建組態[!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)]應用程式使用 XAML、 部分類別和程式碼後置，指定`x:Name`就會變成在基礎建立的欄位名稱程式碼時[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理標記編譯建置工作，而該欄位會保留物件的參考。 根據預設，[建立] 欄位則是內部項目。 您可以變更欄位的存取，藉由指定[X:fieldmodifier 屬性](x-fieldmodifier-directive.md)。 在 WPF 和 Silverlight 中，序列會是標記編譯的定義，而且名稱欄位中的部分類別，但是這個值最初是空的。 然後，產生的方法名為`InitializeComponent`類別建構函式中呼叫。 `InitializeComponent` 組成`FindName`使用每個呼叫`x:Name`存在於 XAML 定義的一部分做為部分類別中的值輸入字串。 以填滿與從 XAML 所建立的物件的欄位值剖析，會再傳回的值指派給命名相似的欄位參考。 執行`InitializeComponent`可讓執行的階段物件 graph 使用的參考`x:Name`/ 直接，欄位名稱，而不必呼叫`FindName`明確每當您需要的 XAML 定義物件的參考。  
   
- 使用 Microsoft Visual Basic 應用程式目標，包含與 XAML 檔案的 WPF`Page`加入編譯期間建立的建置動作，個別的參考屬性`WithEvents`關鍵字的所有項目來`x:Name`，以支援`Handles`事件處理常式委派的語法。 這個屬性一定是公用的。 如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../../../docs/framework/wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
+ 使用 Microsoft Visual Basic 應用程式目標，包含與 XAML 檔案的 WPF`Page`加入編譯期間建立的建置動作，個別的參考屬性`WithEvents`關鍵字的所有項目來`x:Name`，以支援`Handles`事件處理常式委派的語法。 這個屬性一定是公用的。 如需詳細資訊，請參閱 [Visual Basic 和 WPF 事件處理](../wpf/advanced/visual-basic-and-wpf-event-handling.md)。  
   
- `x:Name` 是由 WPF XAML 處理器用來註冊至 XAML 名稱範圍的名稱，在載入時，即使的情況，頁面未編譯標記的建置動作 (例如，鬆散式 XAML 資源字典)。 此行為的一個原因是因為`x:Name`可能需要<xref:System.Windows.Data.Binding.ElementName%2A>繫結。 如需詳細資訊，請參閱 <<c0> [ 資料繫結概觀](../../../docs/framework/wpf/data/data-binding-overview.md)。  
+ `x:Name` 是由 WPF XAML 處理器用來註冊至 XAML 名稱範圍的名稱，在載入時，即使的情況，頁面未編譯標記的建置動作 (例如，鬆散式 XAML 資源字典)。 此行為的一個原因是因為`x:Name`可能需要<xref:System.Windows.Data.Binding.ElementName%2A>繫結。 如需詳細資訊，請參閱 <<c0> [ 資料繫結概觀](../wpf/data/data-binding-overview.md)。  
   
  如先前所述`x:Name`(或`Name`) 也使用的情況下應該不會套用`x:Key`。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.ResourceDictionary>有特殊的行為本身定義為 XAML 名稱範圍，但未實作或 null 值傳回<xref:System.Windows.Markup.INameScope>Api 來強制執行此行為。 如果 WPF XAML 剖析器碰到`Name`或是`x:Name`中的 XAML 定義<xref:System.Windows.ResourceDictionary>，名稱不會加入至任何 XAML 名稱範圍。 嘗試尋找該名稱，從任何 XAML 名稱範圍和`FindName`方法不會傳回有效的結果。  
   
@@ -69,4 +69,4 @@ ms.locfileid: "54696460"
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>
 - <xref:System.Windows.FrameworkContentElement.Name%2A?displayProperty=nameWithType>
-- [WPF 中的樹狀結構](../../../docs/framework/wpf/advanced/trees-in-wpf.md)
+- [WPF 中的樹狀結構](../wpf/advanced/trees-in-wpf.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 03ce1645b859e9c3ebe470131ae2aee578cb366f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661331"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048056"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字元實體和 XAML
 XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一些特定字元實體，以及針對 XAML 中其他 XML 概念的一般考量。  
@@ -34,7 +34,7 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>XAML 特有的字元實體和逸出問題  
  XAML 標記通常會使用 XML 中定義的相同字元實體和逸出序列。  
   
- 主要的差異在於大括號 ({ 和 }) 在 XAML 中具有顯著意義，因為這些字元會通知 XAML 處理器，包含在大括號內的字元序列必須解譯為標記延伸。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ 主要的差異在於大括號 ({ 和 }) 在 XAML 中具有顯著意義，因為這些字元會通知 XAML 處理器，包含在大括號內的字元序列必須解譯為標記延伸。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
  不過，您還是可以使用 XAML (而不是 XML) 特有的逸出序列，將大括號顯示為常值字元。 如需詳細資訊，請參閱 [{}逸出序列-標記延伸](escape-sequence-markup-extension.md)。  
   
@@ -47,12 +47,12 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
 |字元|實體|注意|  
 |---------------|------------|-----------|  
 |& (連字號)|\&amp;|必須用於屬性值和項目內容。|  
-|> (大於字元)|\&gt;|必須用於屬性值，但可接受 > 做為項目內容，只要前面沒有 < 即可。|  
-|< (小於字元)|\&lt;|必須用於屬性值，但\<是可接受的項目，只要內容 > 未遵循。|  
+|> (大於-字元)|\&gt;|必須用於屬性值，但 > 是，只要元素的內容可接受 < 前面沒有它。|  
+|< (小於-字元)|\&lt;|必須用於屬性值，但\<是可接受的項目，只要內容 > 未遵循。|  
 |" (雙引號)|\&quot;|必須用於屬性值，但可接受雙引號 (") 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
 |' (單引號)|\&apos;|必須用於屬性值，但可接受單引號 (') 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
 |(數字字元對應)|&#*[整數]*; 或 & #x *[十六進位]*;|XAML 支援將數字字元對應至使用中的編碼方式。|  
-|(不分行空格)|&\#160;（假設為 utf-8 編碼）|對於非固定格式文件項目，或是接受文字的項目 (例如 WPF <xref:System.Windows.Controls.TextBox>)，即使 `xml:space="default"`，也不會在標記外部將不分行空格標準化。 (如需詳細資訊，請參閱 [ 泛空白字元處理中 XAML](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)。)|  
+|(不分行空格)|&\#160;（假設為 utf-8 編碼）|對於非固定格式文件項目，或是接受文字的項目 (例如 WPF <xref:System.Windows.Controls.TextBox>)，即使 `xml:space="default"`，也不會在標記外部將不分行空格標準化。 (如需詳細資訊，請參閱 [ 泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。)|  
   
 <a name="xml_comment_format"></a>   
 ## <a name="xml-comment-format"></a>XML 註解格式  
@@ -63,7 +63,7 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
  XAML 會根據 XML 規格來處理 XML 處理指令，該規格表示必須將指令傳遞通過。 在.NET Framework XAML 服務所處理的 XAML 不會使用任何處理指示。 其他使用 XAML 的現有架構，也都不會使用 XAML 的處理指令。  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
-- [XamlName 文法](../../../docs/framework/xaml-services/xamlname-grammar.md)
-- [在 XAML 中處理泛空白字元](../../../docs/framework/xaml-services/whitespace-processing-in-xaml.md)
+- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [XamlName 文法](xamlname-grammar.md)
+- [在 XAML 中處理泛空白字元](whitespace-processing-in-xaml.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 1c718522a20fb2047ebf500adbf4044265e3af3d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542247"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58039401"
 ---
 # <a name="xshared-attribute"></a>x:Shared 屬性
 當設定為`false`，修改 WPF 擷取資源的行為，讓屬性化資源的要求建立新的執行個體，針對每個要求，而不是共用相同的執行個體的所有要求。  
@@ -33,7 +33,7 @@ ms.locfileid: "54542247"
   
  修改物件，例如傳回資源的 API，透過<xref:System.Windows.FrameworkElement.FindResource%2A>，或修改物件直接內<xref:System.Windows.ResourceDictionary>，變更原始的資源。 如果該資源的參考動態資源參考，該資源的取用者會取得已變更的資源。  
   
- 如果資源的參考靜態資源參考，變更後的資源為[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理時間無關。 如需靜態與動態資源參考的詳細資訊，請參閱[XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)。  
+ 如果資源的參考靜態資源參考，變更後的資源為[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理時間無關。 如需靜態與動態資源參考的詳細資訊，請參閱[XAML 資源](../wpf/advanced/xaml-resources.md)。  
   
  明確指定`x:Shared="true"`很罕見，因為這已經是預設值。 沒有對等的程式碼直接`x:Shared`WPF 中的物件模型; 它只能指定在 XAML 用法，並必須處理的預設 WPF 行為或中繼上載入路徑 XAML 節點資料流中，如果使用.NET Framework XAML Se 處理rvices 和其 XAML 讀取器。  
   
@@ -51,5 +51,5 @@ ms.locfileid: "54542247"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.ResourceDictionary>
-- [XAML 資源](../../../docs/framework/wpf/advanced/xaml-resources.md)
-- [基底項目](../../../docs/framework/wpf/advanced/base-elements.md)
+- [XAML 資源](../wpf/advanced/xaml-resources.md)
+- [基底項目](../wpf/advanced/base-elements.md)
