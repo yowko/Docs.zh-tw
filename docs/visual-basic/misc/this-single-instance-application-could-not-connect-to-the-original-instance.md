@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 80c1ec0bf1aa4b6dbf885294c680b3bfe8897eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565705"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037511"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此單一執行個體應用程式無法連接到原始執行個體
 此單一執行個體應用程式無法連接到原始執行個體。 此問題的部分可能原因如下：  
@@ -33,5 +33,5 @@ ms.locfileid: "54565705"
 5.  記下錯誤發生時的情況，並致電 Microsoft 產品支援服務。  
   
 ## <a name="see-also"></a>另請參閱
-- [偵錯工具基礎](/visualstudio/debugger/debugger-basics)
 
+- [偵錯工具基礎](/visualstudio/debugger/debugger-basics)
