@@ -2,12 +2,12 @@
 title: FileName 指定的檔案未使用 FileEncoding 指定的編碼方式
 ms.date: 07/20/2015
 ms.assetid: 2129f8df-96cd-4c2e-a4ca-f08a49f07d3f
-ms.openlocfilehash: 40d2d653279978bbb82217f8055b18a02f143e92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa80960365d751cdb3b9b5ac4f169e5e1a3a62ed
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495795"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049425"
 ---
 # <a name="file-specified-by-filename-does-not-use-the-encoding-specified-by-fileencoding"></a>FileName 指定的檔案未使用 FileEncoding 指定的編碼方式
 已嘗試讀取自檔案，但該檔案未使用指定的編碼方式。  
@@ -17,6 +17,7 @@ ms.locfileid: "54495795"
 -   確定您提供的檔案編碼方式正確。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Computer.FileSystem.ReadAllText](xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A)
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [檔案編碼方式](../../visual-basic/developing-apps/programming/drives-directories-files/file-encodings.md)
