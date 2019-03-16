@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 2fc44163db99be5a0f2ddb2820053a5bdda3ccbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668986"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58042090"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 標記延伸
 提供 CLR<xref:System.Type>是指定的 XAML 類型的基礎類型的物件。  
@@ -52,7 +52,8 @@ ms.locfileid: "54668986"
   
  在特定架構實作中，某些屬性會採用<xref:System.Type>值所能直接接受型別的名稱 (類型的字串值`Name`)。 不過，實作此行為是複雜的案例。 如需範例，請參閱 < WPF 使用方式附註 > 一節。  
   
- 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `x:Type` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 延伸類別的 <xref:System.Windows.Markup.TypeExtension> 值。 在.NET Framework XAML 服務中，此作業取決於 CLR 型別的預設 XAML 結構描述內容的值，這個屬性是<xref:System.Reflection.MemberInfo.Name%2A>所需的類型，或包含的<xref:System.Reflection.MemberInfo.Name%2A>加上非預設 XAML 命名空間的前置詞對應。  
+ 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 
+  `x:Type` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 延伸類別的 <xref:System.Windows.Markup.TypeExtension> 值。 在.NET Framework XAML 服務中，此作業取決於 CLR 型別的預設 XAML 結構描述內容的值，這個屬性是<xref:System.Reflection.MemberInfo.Name%2A>所需的類型，或包含的<xref:System.Reflection.MemberInfo.Name%2A>加上非預設 XAML 命名空間的前置詞對應。  
   
  `x:Type`標記延伸可用於物件元素語法。 在此案例中，指定的值<xref:System.Windows.Markup.TypeExtension.TypeName%2A>屬性才能正確地初始化 擴充功能。  
   
@@ -61,7 +62,7 @@ ms.locfileid: "54668986"
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
   
 ### <a name="default-xaml-namespace-and-type-mapping"></a>預設 XAML 命名空間和類型對應  
- WPF 程式設計的預設 XAML 命名空間包含大部分的一般 XAML 案例; 所需的 XAML 類型因此，您通常可以避免前置詞，當參考 XAML 類型的值。 您可能需要您參考的型別時，自訂組件或類型，存在於 WPF 組件，但來自未對應的預設 XAML 命名空間到 CLR 命名空間對應前置詞。 如需有關前置詞、 XAML 命名空間和對應的 CLR 命名空間的詳細資訊，請參閱[XAML 命名空間和 WPF XAML 命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ WPF 程式設計的預設 XAML 命名空間包含大部分的一般 XAML 案例; 所需的 XAML 類型因此，您通常可以避免前置詞，當參考 XAML 類型的值。 您可能需要您參考的型別時，自訂組件或類型，存在於 WPF 組件，但來自未對應的預設 XAML 命名空間到 CLR 命名空間對應前置詞。 如需有關前置詞、 XAML 命名空間和對應的 CLR 命名空間的詳細資訊，請參閱[XAML 命名空間和 WPF XAML 命名空間對應](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ### <a name="type-properties-that-support-typename-as-string"></a>類型屬性，支援類型名稱做為-字串  
  WPF 支援啟用指定的某些類型的屬性值的技巧<xref:System.Type>而不需要`x:Type`標記延伸使用方式。 相反地，您可以指定值的類型命名的字串。 此範例<xref:System.Windows.Controls.ControlTemplate.TargetType%2A?displayProperty=nameWithType>和<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>。 透過型別轉換器或標記延伸模組未提供此行為的支援。 相反地，這是透過實作延遲行為<xref:System.Windows.FrameworkElementFactory>。  
@@ -71,7 +72,7 @@ ms.locfileid: "54668986"
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 還提供其他支援的泛型類型，並修改的功能行為`x:TypeArguments`和`x:Type`提供此支援。  
   
--   `x:TypeArguments` 它的泛型物件具現化的相關聯的物件項目可以是根目錄以外的項目上。 如需詳細資訊，請參閱的 < XAML 2009 > 一節[X:typearguments 指示詞](../../../docs/framework/xaml-services/x-typearguments-directive.md)。  
+-   `x:TypeArguments` 它的泛型物件具現化的相關聯的物件項目可以是根目錄以外的項目上。 如需詳細資訊，請參閱的 < XAML 2009 > 一節[X:typearguments 指示詞](x-typearguments-directive.md)。  
   
 -   XAML 2009 支援語法在標記中指定的泛型類型條件約束。 這可由`x:TypeArguments`，依`x:Type`，或結合兩個特徵。  
   
@@ -81,6 +82,6 @@ ms.locfileid: "54668986"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Style>
-- [樣式設定和範本化](../../../docs/framework/wpf/controls/styling-and-templating.md)
-- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [標記延伸和 WPF XAML](../../../docs/framework/wpf/advanced/markup-extensions-and-wpf-xaml.md)
+- [樣式設定和範本化](../wpf/controls/styling-and-templating.md)
+- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [標記延伸和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [XAML Services], type converter services how-to
 ms.assetid: b4dad00f-03da-4579-a4e9-d8d72d2ccbce
-ms.openlocfilehash: f3417ed53131a695623ea6c365314ab2c5eedd37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04d1a8b1c6f05537f12c3df79fda007332621264
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629290"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049453"
 ---
 # <a name="service-contexts-available-to-type-converters-and-markup-extensions"></a>適用於類型轉換子和標記延伸的服務內容
 在撰寫類型來支援使用類型轉換子和標記延伸時，通常必須先知道會在標記或周圍物件圖形結構中的何處使用類型轉換子和標記延伸。 要有這些資訊，才能正確地具現化所提供的物件，或是在物件圖形中建立對現有物件的物件參考。 使用 .NET Framework XAML 服務時，可能需要的內容會以一系列服務介面的形式公開。 類型轉換子或標記延伸支援程式碼可以使用從 <xref:System.Xaml.XamlObjectWriter> 或相關類型傳來的可用服務提供者內容，來查詢服務。 XAML 結構描述內容可透過這類服務直接提供。 本主題說明如何透過值轉換器實作存取服務內容，並列出通常可用的服務及其角色。  
@@ -129,7 +129,7 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
   
  **服務 API：**  <xref:System.Xaml.IXamlSchemaContextProvider.SchemaContext%2A>  
   
- 所有延後載入作業都需要 XAML 結構描述內容，因為相同的結構描述內容必須套用至延後的區域，才能整合延後的內容。 如需 XAML 結構描述內容所扮演角色的詳細資訊，請參閱 [T:System.Xaml.IDestinationTypeProvider](../../../docs/framework/xaml-services/index.md)。  
+ 所有延後載入作業都需要 XAML 結構描述內容，因為相同的結構描述內容必須套用至延後的區域，才能整合延後的內容。 如需 XAML 結構描述內容所扮演角色的詳細資訊，請參閱 [T:System.Xaml.IDestinationTypeProvider](index.md)。  
   
 ### <a name="irootobjectprovider"></a>IRootObjectProvider  
  **T:System.Xaml.IDestinationTypeProvider**中查詢服務： <xref:System.Xaml.IRootObjectProvider>  
@@ -189,5 +189,5 @@ public override object ConvertFrom(ITypeDescriptorContext typeDescriptorContext,
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Markup.MarkupExtension>
 - <xref:System.Xaml.XamlObjectWriter>
-- [XAML 標記延伸概觀](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)
-- [XAML 類型轉換子概觀](../../../docs/framework/xaml-services/type-converters-for-xaml-overview.md)
+- [XAML 標記延伸概觀](markup-extensions-for-xaml-overview.md)
+- [XAML 類型轉換子概觀](type-converters-for-xaml-overview.md)

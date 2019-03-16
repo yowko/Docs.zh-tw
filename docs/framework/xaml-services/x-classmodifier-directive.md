@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: ef55549b43ecbef539d7e84a7281fa704a328938
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507586"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58026778"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指示詞
 修改 XAML 編譯行為時`x:Class`也會提供。 具體來說，而不是建立在部分`class`具有`Public`存取層級 （預設值），提供`x:Class`會透過`NotPublic`存取層級。 此行為會影響產生的組件中的類別的存取層級。  
@@ -35,7 +35,7 @@ ms.locfileid: "54507586"
 |*NotPublic*|要傳遞至指定的確切字串<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>與<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>各有不同，根據您所使用的程式碼後置程式語言。 請參閱＜備註＞。|  
   
 ## <a name="dependencies"></a>相依性  
- [X:class](../../../docs/framework/xaml-services/x-class-directive.md)也必須提供相同的項目，且該項目必須是在網頁中的根項目。 如需詳細資訊，請參閱 < [ \[MS XAML\]一節 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525)。  
+ [X:class](x-class-directive.md)也必須提供相同的項目，且該項目必須是在網頁中的根項目。 如需詳細資訊，請參閱 < [ \[MS XAML\]一節 4.3.1.8](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
 ## <a name="remarks"></a>備註  
  值`x:ClassModifier`在.NET Framework XAML 服務使用方式會因程式語言。 要使用的字串取決於各種語言的實作方式及其<xref:System.CodeDom.Compiler.CodeDomProvider>和類型轉換器，它會傳回定義的意義<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>和<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>，以及該語言是否區分大小寫。  
@@ -54,8 +54,8 @@ ms.locfileid: "54507586"
  存取層級中宣告`x:ClassModifier`仍受限於特定的架構和其功能的解譯。 WPF 包含載入並具現化類型的功能所在`x:ClassModifier`是`internal`，如果該類別從 WPF 資源，但透過 URI 參考的組件參考。 由於此情況下，可能還有其他像藉由將其他架構，請避免只針對`x:ClassModifier`封鎖所有可能的具現化嘗試。  
   
 ## <a name="see-also"></a>另請參閱
-- [x:Class 指示詞](../../../docs/framework/xaml-services/x-class-directive.md)
-- [WPF 中的程式碼後置和 XAML](../../../docs/framework/wpf/advanced/code-behind-and-xaml-in-wpf.md)
-- [x:FieldModifier 指示詞](../../../docs/framework/xaml-services/x-fieldmodifier-directive.md)
-- [安全性 (WPF)](../../../docs/framework/wpf/security-wpf.md)
-- [從 WPF 移轉至 System.Xaml 的類型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Class 指示詞](x-class-directive.md)
+- [WPF 中的程式碼後置和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
+- [x:FieldModifier 指示詞](x-fieldmodifier-directive.md)
+- [安全性 (WPF)](../wpf/security-wpf.md)
+- [從 WPF 移轉至 System.Xaml 的類型](types-migrated-from-wpf-to-system-xaml.md)

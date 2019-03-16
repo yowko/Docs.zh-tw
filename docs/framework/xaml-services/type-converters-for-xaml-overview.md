@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 79b4d972e5d82eaac6571efebb974ac7d764d30e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659146"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58049497"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 類型轉換子概觀
 物件寫入器的類型轉換器供應邏輯，可將 XAML 標記中的字串轉換為物件圖形中的特定物件。 在 .NET Framework XAML 服務中，類型轉換器必須是衍生自 <xref:System.ComponentModel.TypeConverter>的類別。 有些轉換器也支援 XAML 儲存路徑，而且可用來將序列化標記中的物件序列化成字串格式。 本主題描述如何以及何時叫用 XAML 中的類型轉換器，並提供 <xref:System.ComponentModel.TypeConverter>之方法覆寫的實作建議。  
@@ -29,7 +29,7 @@ ms.locfileid: "54659146"
 >  XAML 語言指示詞不會使用類型轉換器。  
   
 ### <a name="type-converters-and-markup-extensions"></a>類型轉換器和標記延伸  
- XAML 處理器必須先處理標記延伸使用方式，才會檢查屬性類型和其他考量。 例如，如果設為屬性 (Attribute) 的屬性 (Property) 通常具有類型轉換，但在特定情況下是由標記延伸使用方式所設定，則會先處理標記延伸行為。 需要有標記延伸的一個常見情況是參考現有的物件。 在此案例中，無狀態類型轉換器只能產生新的執行個體，但這可能不是令人滿意的情況。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+ XAML 處理器必須先處理標記延伸使用方式，才會檢查屬性類型和其他考量。 例如，如果設為屬性 (Attribute) 的屬性 (Property) 通常具有類型轉換，但在特定情況下是由標記延伸使用方式所設定，則會先處理標記延伸行為。 需要有標記延伸的一個常見情況是參考現有的物件。 在此案例中，無狀態類型轉換器只能產生新的執行個體，但這可能不是令人滿意的情況。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ### <a name="native-type-converters"></a>原生類型轉換器  
  在 WPF 和.NET XAML 服務實作中，有具有原生類型轉換處理特定 CLR 型別，不過，這些 CLR 型別會不依照慣例視為基本類型。 這類類型的範例是 <xref:System.DateTime>。 其中一個原因是 .NET Framework 架構的運作方式：類型 <xref:System.DateTime> 定義於 mscorlib (.NET 中的最基本程式庫)。 <xref:System.DateTime> 不允許使用來自另一個引進相依性的組件進行屬性設定 (<xref:System.ComponentModel.TypeConverterAttribute> 來自系統)；因此，無法支援透過屬性設定的一般類型轉換器探索機制。 而是，XAML 剖析器都有一份需要原生處理的類型清單，而且這些類型的處理方式與 true 基本類型的處理方式類似。 如果是 <xref:System.DateTime>則此處理包含 <xref:System.DateTime.Parse%2A>呼叫。  
@@ -60,7 +60,7 @@ ms.locfileid: "54659146"
  <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是服務查詢 <xref:System.ComponentModel.TypeConverter> 實作之功能時所使用的支援方法。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的文化特性資訊和類型轉換器  
- 每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需有關這項限制之設計原因的詳細資訊，請參閱 XAML 語言規格 ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) 或[WPF 全球化和當地語系化概觀](../../../docs/framework/wpf/advanced/wpf-globalization-and-localization-overview.md).  
+ 每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需有關這項限制之設計原因的詳細資訊，請參閱 XAML 語言規格 ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) 或[WPF 全球化和當地語系化概觀](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
   
  在文化特性可能是問題的範例中，某些文化特性會使用逗號 (而非句號) 做為字串形式中數字的小數點分隔符號。 這項使用與許多現有類型轉換器的行為衝突，後者是使用逗號做為分隔符號。 在周圍 XAML 中透過 `xml:lang` 傳遞文化特性並不能解決問題。  
   
@@ -101,7 +101,7 @@ ms.locfileid: "54659146"
   
 <a name="accessing_service_provider_context_from_a_markup_extension_implementation"></a>   
 ## <a name="accessing-service-provider-context-from-a-markup-extension-implementation"></a>從標記延伸實作存取服務提供者內容  
- 任何值轉換器的可用服務都會相同。 差異在於每個值轉換器如何接收服務內容。 存取服務和可用服務記載於 [Type Converters and Markup Extensions for XAML](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)主題中。  
+ 任何值轉換器的可用服務都會相同。 差異在於每個值轉換器如何接收服務內容。 存取服務和可用服務記載於 [Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)主題中。  
   
 <a name="type_converters_in_the_xaml_node_stream"></a>   
 ## <a name="type-converters-in-the-xaml-node-stream"></a>XAML 節點資料流中的類型轉換器  
@@ -109,5 +109,5 @@ ms.locfileid: "54659146"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ComponentModel.TypeConverterAttribute>
-- [XAML 的類型轉換子和標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
+- [XAML 的類型轉換子和標記延伸](type-converters-and-markup-extensions-for-xaml.md)
+- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

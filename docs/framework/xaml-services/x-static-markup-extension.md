@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Static markup extension in XAML [XAML Services]
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
-ms.openlocfilehash: 5dd454cb323d4dc2ab9b4ebd8b233ffda3e77820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0956bb6daa60f947c1cd410ce4728da7d1bb707d
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619316"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58037690"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static 標記延伸
 參考任何靜態值的程式碼實體中定義[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– 符合規範的方式。 參考的靜態屬性可用來提供的 XAML 中的屬性值。  
@@ -51,7 +51,8 @@ ms.locfileid: "54619316"
 
 當您進行時請特別小心`x:Static`不直接是屬性的值類型的參考。 在 XAML 中處理順序，提供來自標記延伸的值不會叫用其他的值轉換。 也是如此即使您`x:Static`參考建立文字字串，並針對該特定成員或傳回型別的任何成員值，就會發生值的轉換通常根據文字字串的屬性值。  
 
-屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `x:Static` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.StaticExtension.Member%2A> 延伸類別的 <xref:System.Windows.Markup.StaticExtension> 值。  
+屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 
+  `x:Static` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.StaticExtension.Member%2A> 延伸類別的 <xref:System.Windows.Markup.StaticExtension> 值。  
 
 有兩個其他在技術上可行的 XAML 用法。 不過，這些使用方式是較不常見，因為它們是必要的詳細資訊：  
 
@@ -69,7 +70,7 @@ ms.locfileid: "54619316"
 
 在.NET Framework XAML 服務實作中，這個標記延伸的處理由定義<xref:System.Windows.Markup.StaticExtension>類別。  
 
-`x:Static` 是一種標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須提供值的慣例。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](../../../docs/framework/xaml-services/markup-extensions-for-xaml-overview.md)。  
+`x:Static` 是一種標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須提供值的慣例。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ## <a name="wpf-usage-notes"></a>WPF 使用注意事項  
  您用於 WPF 程式設計的預設 XAML 命名空間不包含許多實用的靜態屬性，且大部分的有用的靜態屬性都有支援，像是可簡化使用方式，而不需要型別轉換子`{x:Static}`。 靜態屬性，您必須對應 XAML 命名空間的前置詞，如果下列其中一項為真：  
@@ -78,10 +79,10 @@ ms.locfileid: "54619316"
   
 -   您從自訂組件參考的型別。  
   
--   但是該類型是 CLR 命名空間的未對應到屬於 WPF 預設 XAML 命名空間內，您要參考存在於 WPF 組件的類型。 所對應的 CLR 命名空間至預設 XAML 命名空間的 WPF 藉由各種不同的 WPF 組件中的定義 (如需有關這個概念的詳細資訊，請參閱 < [XAML 命名空間和 WPF XAML 命名空間對應](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果該 CLR 命名空間包含大部分的類別定義，通常不適用於 XAML，這類非對應的 CLR 命名空間中可以存在<xref:System.Windows.Threading>。  
+-   但是該類型是 CLR 命名空間的未對應到屬於 WPF 預設 XAML 命名空間內，您要參考存在於 WPF 組件的類型。 所對應的 CLR 命名空間至預設 XAML 命名空間的 WPF 藉由各種不同的 WPF 組件中的定義 (如需有關這個概念的詳細資訊，請參閱 < [XAML 命名空間和 WPF XAML 命名空間對應](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 如果該 CLR 命名空間包含大部分的類別定義，通常不適用於 XAML，這類非對應的 CLR 命名空間中可以存在<xref:System.Windows.Threading>。  
   
- 如需有關如何使用 wpf 的前置詞和 XAML 命名空間的詳細資訊，請參閱 < [XAML 命名空間和命名空間對應 WPF XAML](../../../docs/framework/wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
+ 如需有關如何使用 wpf 的前置詞和 XAML 命名空間的詳細資訊，請參閱 < [XAML 命名空間和命名空間對應 WPF XAML](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [x:Type 標記延伸模組](../../../docs/framework/xaml-services/x-type-markup-extension.md)
-- [從 WPF 移轉至 System.Xaml 的類型](../../../docs/framework/xaml-services/types-migrated-from-wpf-to-system-xaml.md)
+- [x:Type 標記延伸模組](x-type-markup-extension.md)
+- [從 WPF 移轉至 System.Xaml 的類型](types-migrated-from-wpf-to-system-xaml.md)

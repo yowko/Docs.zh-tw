@@ -15,12 +15,12 @@ helpviewer_keywords:
 - x:Single [XAML Services]
 - x:Int32 [XAML Services]
 ms.assetid: 11de2f08-5b95-4989-b5ec-5178eb968184
-ms.openlocfilehash: f6225dfcc02b90da58ccafd5c70726b6f80f29d4
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.openlocfilehash: feda058a9672a3150f7beb5c1bc124eee1eae9eb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839088"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048681"
 ---
 # <a name="built-in-types-for-common-xaml-language-primitives"></a>通用 XAML 語言基本類型的內建類型
 XAML 2009 引進數種資料類型的 XAML 語言層級支援，而這些資料類型是 Common Language Runtime (CLR) 和其他程式設計語言中的常用基本類型。 XAML 2009 新增下列基本類型的支援： `x:Object`, `x:Boolean`, `x:Char`, `x:String`, `x:Decimal`, `x:Single`, `x:Double`, `x:Int16`, `x:Int32`, `x:Int64`, `x:TimeSpan`, `x:Uri`, `x:Byte`和 `x:Array`。  
@@ -125,7 +125,7 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ### <a name="xarray"></a>x:Array  
  對於 CLR 支援， `x:Array` 基本類型對應至 <xref:System.Array>。  
   
- 使用標記延伸語法，即可在 XAML 2006 中定義陣列；不過，XAML 2009 語法是不需要存取標記延伸的語言定義基本類型。 如需 XAML 2006 支援的詳細資訊，請參閱 [x:Array Markup Extension](../../../docs/framework/xaml-services/x-array-markup-extension.md)。  
+ 使用標記延伸語法，即可在 XAML 2006 中定義陣列；不過，XAML 2009 語法是不需要存取標記延伸的語言定義基本類型。 如需 XAML 2006 支援的詳細資訊，請參閱 [x:Array Markup Extension](x-array-markup-extension.md)。  
   
  如需 XAML 語言規格定義，請參閱[ \[MS XAML\] 5.2.18](https://go.microsoft.com/fwlink/?LinkId=114525)。  
   
@@ -133,4 +133,4 @@ xmlns:sys="clr-namespace:System;assembly=mscorlib">
 ## <a name="wpf-support"></a>WPF 支援  
  在 WPF 中，您可以使用 XAML 2009 功能，但只能針對未編譯標記的 XAML。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。  
   
- 您可以在其中使用 XAML 2009 功能與 WPF 的情況是您編寫鬆散的 XAML，然後將該 XAML 載入 WPF 執行階段和物件圖與至<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>。 WPF<xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType>及其<xref:System.Windows.Markup.XamlReader.Load%2A>可以 XAML 2009 語言關鍵字和功能處理為有效的物件圖表示法。
+ 可以搭配使用 XAML 2009 功能與 WPF 的情況是您編寫鬆散的 XAML，然後使用 <xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>將該 XAML 載入 WPF 執行階段和物件圖。 WPF <xref:System.Windows.Markup.XamlReader?displayProperty=nameWithType> 和其 <xref:System.Windows.Markup.XamlReader.Load%2A> 可以將 XAML 2009 語言關鍵字和功能處理為有效的物件圖表示法。
