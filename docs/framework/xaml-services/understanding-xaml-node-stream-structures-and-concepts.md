@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: 261c44ae06959ed387a4619bf2fdb99b37141c86
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365720"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58034755"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 
@@ -232,7 +232,7 @@ public class GameBoard {
 
 ### <a name="xamlobjectwriter-behavior-and-node-order"></a>XamlObjectWriter 行為和節點順序
 
-`StartObject` 的 <xref:System.Xaml.XamlObjectWriter> 不一定是要 XAML 物件寫入器立即建構物件執行個體的信號。 XAML 包含數種語言功能，可讓您使用其他輸入來初始化物件，並且不要完全依賴叫用預設建構函式來產生初始物件，然後只設定屬性。 這些功能包括： <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初始文字、 [x:TypeArguments](../../../docs/framework/xaml-services/x-typearguments-directive.md)、標記延伸的位置參數、Factory 方法，以及相關聯的 [x:Arguments](../../../docs/framework/xaml-services/x-arguments-directive.md) 節點 (XAML 2009)。 這些案例每個都會延遲實際的物件建構，而且因為節點資料流已重新排列，所以 XAML 物件寫入器可以依賴每當所遇到的開始成員不是特別用於該物件類型的建構指示詞時，就會實際建構執行個體的行為。
+`StartObject` 的 <xref:System.Xaml.XamlObjectWriter> 不一定是要 XAML 物件寫入器立即建構物件執行個體的信號。 XAML 包含數種語言功能，可讓您使用其他輸入來初始化物件，並且不要完全依賴叫用預設建構函式來產生初始物件，然後只設定屬性。 這些功能包括： <xref:System.Windows.Markup.XamlDeferLoadAttribute>、初始文字、 [x:TypeArguments](x-typearguments-directive.md)、標記延伸的位置參數、Factory 方法，以及相關聯的 [x:Arguments](x-arguments-directive.md) 節點 (XAML 2009)。 這些案例每個都會延遲實際的物件建構，而且因為節點資料流已重新排列，所以 XAML 物件寫入器可以依賴每當所遇到的開始成員不是特別用於該物件類型的建構指示詞時，就會實際建構執行個體的行為。
 
 ### <a name="getobject"></a>GetObject
 
@@ -241,5 +241,5 @@ public class GameBoard {
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Xaml.XamlObjectReader>
-- [XAML Services](../../../docs/framework/xaml-services/index.md)
-- [XAML 命名空間](../../../docs/framework/xaml-services/xaml-namespaces-for-net-framework-xaml-services.md)
+- [XAML Services](index.md)
+- [XAML 命名空間](xaml-namespaces-for-net-framework-xaml-services.md)

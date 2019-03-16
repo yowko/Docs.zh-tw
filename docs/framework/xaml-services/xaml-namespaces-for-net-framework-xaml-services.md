@@ -2,12 +2,12 @@
 title: .NET Framework XAML 服務的 XAML 命名空間
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: 2e9e2d9e2257e5e6059210b82a69d7a837254032
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736795"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58030519"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服務的 XAML 命名空間
 XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於 XML 命名空間，您可以定義 XAML 命名空間使用`xmlns`標記中的屬性。 XAML 命名空間也都被表示 XAML 節點資料流和其他 XAML 服務 Api。 本主題定義 XAML 命名空間概念，並描述如何定義 XAML 命名空間，並可供 XAML 結構描述內容與.NET Framework XAML 服務的其他層面。  
@@ -44,14 +44,14 @@ XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於
   
  *assemblyName*表示任何字串做為合法<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>輸入。 這個字串可以包含文化特性、 公開金鑰或版本資訊 (這些概念的定義中的參考主題定義<xref:System.Reflection.Assembly>)。 COFF 格式和辨識項 (所使用的其他多載<xref:System.Reflection.Assembly.Load%2A>) 無關的 XAML 的組件載入之用; 所有的負載資訊必須顯示為字串。  
   
- 指定組件的公開金鑰是 XAML 的安全性，或移除可能模稜兩可，可以存在於，如果組件載入的簡單名稱，或預先快取或應用程式網域中存在很有用的技巧。 如需詳細資訊，請參閱 < [XAML 安全性考量](../../../docs/framework/xaml-services/xaml-security-considerations.md)。  
+ 指定組件的公開金鑰是 XAML 的安全性，或移除可能模稜兩可，可以存在於，如果組件載入的簡單名稱，或預先快取或應用程式網域中存在很有用的技巧。 如需詳細資訊，請參閱 < [XAML 安全性考量](xaml-security-considerations.md)。  
   
 ## <a name="xaml-namespace-declarations-in-the-xaml-services-api"></a>在 XAML 服務 API 的 XAML 命名空間宣告  
  在 XAML 服務 API 中的 XAML 命名空間宣告由<xref:System.Xaml.NamespaceDeclaration>物件。 如果您宣告在程式碼中的 XAML 命名空間，您呼叫<xref:System.Xaml.NamespaceDeclaration.%23ctor%28System.String%2CSystem.String%29>建構函式。 `ns`和`prefix`參數會指定為字串，並提供這些參數的輸入對應至 XAML 命名空間識別項和 XAML 命名空間前置詞的定義，為本主題先前所提供。  
   
  如果您正在檢查 XAML 節點資料流的一部分或透過 XAML 類型系統中，其他存取 XAML 命名空間資訊<xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType>報告的 XAML 命名空間識別項，以及<xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType>報告 XAML 命名空間前置詞。  
   
- XAML 節點資料流，XAML 命名空間資訊可以顯示為 XAML 節點之前它所套用的實體。 這包括其中的 XAML 命名空間資訊之前的情況下`StartObject`的 XAML 根項目。 如需詳細資訊，請參閱 [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)。  
+ XAML 節點資料流，XAML 命名空間資訊可以顯示為 XAML 節點之前它所套用的實體。 這包括其中的 XAML 命名空間資訊之前的情況下`StartObject`的 XAML 根項目。 如需詳細資訊，請參閱 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)。  
   
  使用.NET Framework XAML 服務 API 的許多情況下，至少一個 XAML 命名空間宣告必須要有，，和宣告必須包含或參考的 XAML 結構描述內容所需的資訊。 XAML 命名空間必須指定要載入，或協助解決命名空間和已經載入或已知的 XAML 結構描述內容的組件內的特定類型的組件。  
   
@@ -61,7 +61,7 @@ XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於
   
  如果您要預先填入的 XAML 命名空間的資訊，請在未在標記中，定義您想要使用的 XAML 結構描述內容的 XAML 命名空間的情況下您可以使用其中一種技術是宣告中的 XML 命名空間宣告<xref:System.Xml.XmlParserContext>的<xref:System.Xml.XmlReader>. 然後使用該<xref:System.Xml.XmlReader>做為輸入的 XAML 讀取器建構函式或<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29?displayProperty=nameWithType>。  
   
- 屬性是與相關的.NET Framework XAML 服務中處理的 XAML 命名空間的其他兩個 API<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 這些屬性套用至組件。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 會使用 XAML 結構描述內容來解譯包含 URI 的任何 XAML 命名空間宣告。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 會使用發出 XAML，以便可以序列化特定的 XAML 命名空間，以可預測的前置詞的工具。 如需詳細資訊，請參閱 < [XAML-Related 自訂類型和程式庫的 CLR 屬性](../../../docs/framework/xaml-services/xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
+ 屬性是與相關的.NET Framework XAML 服務中處理的 XAML 命名空間的其他兩個 API<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 這些屬性套用至組件。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 會使用 XAML 結構描述內容來解譯包含 URI 的任何 XAML 命名空間宣告。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 會使用發出 XAML，以便可以序列化特定的 XAML 命名空間，以可預測的前置詞的工具。 如需詳細資訊，請參閱 < [XAML-Related 自訂類型和程式庫的 CLR 屬性](xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [認識 XAML 節點資料流結構和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [認識 XAML 節點資料流結構和概念](understanding-xaml-node-stream-structures-and-concepts.md)

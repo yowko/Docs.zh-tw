@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: bbb5f31516be4e977471ee1250502e58e252f1c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68211babbce2e9512689fa329dcf33be0afa4a0c
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503182"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58027125"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 類別和基本 XAML 的讀取或寫入
 <xref:System.Xaml.XamlServices> 是 .NET Framework XAML 服務所提供的類別，可用來解決不需要特別存取 XAML 節點資料流，或取自這些節點之 XAML 類型系統資訊的 XAML 情節。 <xref:System.Xaml.XamlServices> API 可摘述如下： `Load` 或 `Parse` 支援 XAML 載入路徑、 `Save` 支援 XAML 儲存路徑，而 `Transform` 則提供結合載入路徑和儲存路徑的技術。 `Transform` 可從某個 XAML 結構描述變更為另一個 XAML 結構描述。 本主題摘要說明這些 API 分類，並說明特定方法多載之間的差異。  
@@ -21,7 +21,7 @@ ms.locfileid: "54503182"
   
  就大部分的情節而言，最簡單的多載是 <xref:System.Xaml.XamlServices.Load%28System.String%29>。 這個多載具有 `fileName` 參數，也就是包含要載入之 XAML 的文字檔名稱。 這適用於先前已將狀態或資料序列化至本機電腦上的應用程式情節 (例如完全信任應用程式)。 也適用於您正在定義應用程式模型，並想要載入其中一個標準檔案的架構 (這個標準檔案會定義應用程式行為、起始 UI，或其他由架構定義並使用 XAML 的功能)。  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 具有類似的情節。 如果您要讓使用者選擇要載入的檔案，則這個多載可能會很有用，因為 <xref:System.IO.Stream> 經常是其他可存取檔案系統的 <xref:System.IO> API 的輸出。 或者，您也可以透過非同步下載或其他同樣能夠提供資料流的網路技術，來存取 XAML 來源。 (從資料流或使用者選取的來源載入可能會有安全性隱憂。 如需詳細資訊，請參閱 [XAML Security Considerations](../../../docs/framework/xaml-services/xaml-security-considerations.md)。)  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 具有類似的情節。 如果您要讓使用者選擇要載入的檔案，則這個多載可能會很有用，因為 <xref:System.IO.Stream> 經常是其他可存取檔案系統的 <xref:System.IO> API 的輸出。 或者，您也可以透過非同步下載或其他同樣能夠提供資料流的網路技術，來存取 XAML 來源。 (從資料流或使用者選取的來源載入可能會有安全性隱憂。 如需詳細資訊，請參閱 [XAML Security Considerations](xaml-security-considerations.md)。)  
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 和 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 多載都需要舊版 .NET Framework 的讀取器格式。 若要使用這些多載，您應已建立讀取器執行個體，並使用其 `Create` API 載入相關格式 (文字或 XML) 的 XAML。 如果您已移動其他讀取器中的記錄指標，或使用這些讀取器執行其他作業，則不重要。 <xref:System.Xaml.XamlServices.Load%2A> 中的載入路徑邏輯一律會從根目錄往下處理整個 XAML 輸入。 這些多載的情節可能包括：  
   
@@ -59,9 +59,9 @@ ms.locfileid: "54503182"
 ## <a name="transform"></a>資料轉換  
  <xref:System.Xaml.XamlServices.Transform%2A> 會藉由將載入路徑和儲存路徑連結成單一作業，來轉換 XAML。 <xref:System.Xaml.XamlReader> 和 <xref:System.Xaml.XamlWriter>則可能會使用不同的結構描述內容或支援類型系統，而影響產生之 XAML 的轉換方式。 這適用於各種轉換作業。  
   
- 如果作業需要檢查 XAML 節點資料流中的每個節點，您通常不會使用 <xref:System.Xaml.XamlServices.Transform%2A>。 相反地，您需要定義自己的載入路徑-儲存路徑作業序列，並插入自己的邏輯。 請在其中一個路徑中，在您自己的節點迴圈周圍使用 XAML 讀取器/XAML 寫入器配對。 例如，使用 <xref:System.Xaml.XamlXmlReader> 載入初始 XAML，再以後續的 <xref:System.Xaml.XamlXmlReader.Read%2A> 呼叫逐步執行至各節點。 在 XAML 節點資料流層級上運作時，您現在可以調整個別節點 (類型、成員、其他節點) 以套用轉換，或讓節點保持原狀。 接著，您可以將節點繼續傳送至 `Write` 的相關 <xref:System.Xaml.XamlObjectWriter> API 並寫出物件。 如需詳細資訊，請參閱 [Understanding XAML Node Stream Structures and Concepts](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)。  
+ 如果作業需要檢查 XAML 節點資料流中的每個節點，您通常不會使用 <xref:System.Xaml.XamlServices.Transform%2A>。 相反地，您需要定義自己的載入路徑-儲存路徑作業序列，並插入自己的邏輯。 請在其中一個路徑中，在您自己的節點迴圈周圍使用 XAML 讀取器/XAML 寫入器配對。 例如，使用 <xref:System.Xaml.XamlXmlReader> 載入初始 XAML，再以後續的 <xref:System.Xaml.XamlXmlReader.Read%2A> 呼叫逐步執行至各節點。 在 XAML 節點資料流層級上運作時，您現在可以調整個別節點 (類型、成員、其他節點) 以套用轉換，或讓節點保持原狀。 接著，您可以將節點繼續傳送至 `Write` 的相關 <xref:System.Xaml.XamlObjectWriter> API 並寫出物件。 如需詳細資訊，請參閱 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
-- [XAML Services](../../../docs/framework/xaml-services/index.md)
+- [XAML Services](index.md)

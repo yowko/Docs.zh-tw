@@ -11,12 +11,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - escape sequence [XAML Services]
 ms.assetid: 3ce3e2ad-a868-43f9-9c98-b29561cb146e
-ms.openlocfilehash: 8a065573abb5a230d2a51f1767bd8d2e829bccd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eaee0a1f92d8b7cb3810651eda21f1cc800ebf57
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521266"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018545"
 ---
 # <a name="-escape-sequence--markup-extension"></a>{} 逸出序列 / 標記延伸
 提供屬性值的 XAML 逸出序列。 逸出序列可解譯為常值屬性中讓後續的值。  
@@ -56,8 +56,8 @@ ms.locfileid: "54521266"
   
  逸出序列 ({}) 時，經常必須指定 XML 型別，其中必須包含命名空間限定詞位置中的 XAML 標記延伸模組可能會出現。 這可以包括開頭的 XAML 屬性值，然後在 標記延伸，等號 （=） 的後面。 下列範例會出現在 XAML 屬性值的開頭的 XML 命名空間的逸出序列。  
   
- [!code-xaml[XLINQExample#StackPanelResources](../../../samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
+ [!code-xaml[XLINQExample#StackPanelResources](~/samples/snippets/csharp/VS_Snippets_Wpf/XLinqExample/CSharp/Window1.xaml#stackpanelresources)]  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML 的類型轉換子和標記延伸](../../../docs/framework/xaml-services/type-converters-and-markup-extensions-for-xaml.md)
-- [XML 字元實體和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
+- [XAML 的類型轉換子和標記延伸](type-converters-and-markup-extensions-for-xaml.md)
+- [XML 字元實體和 XAML](xml-character-entities-and-xaml.md)

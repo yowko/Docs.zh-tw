@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
-ms.openlocfilehash: 5062a1435d465c33eaec7ee322f47290ebccc730
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c9d5cab971b5f5a95d4f78df4037788676d9dbb
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652458"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58046304"
 ---
 # <a name="disk-not-ready"></a>磁碟未就緒
 指定的磁碟機中沒有磁片或是磁碟的門沒有關上。  
@@ -21,4 +21,5 @@ ms.locfileid: "54652458"
 2.  關好磁碟機的門。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [錯誤類型](../../visual-basic/programming-guide/language-features/error-types.md)

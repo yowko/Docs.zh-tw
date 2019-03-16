@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMouse_NoWheelIsPresent
 ms.assetid: e924ffba-4af1-4247-9a6f-d19a03738f62
-ms.openlocfilehash: 6c18098c28242b279c26faa6232691b1a545c5ac
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 073d086931d70508b176bf00773b030a55c272ed
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56305047"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58041356"
 ---
 # <a name="no-mouse-wheel-is-present"></a>滑鼠滾輪不存在
 已呼叫 `My.Computer.Mouse.WheelScrollLines` 屬性，但是滑鼠有沒有滾輪。  
@@ -23,6 +23,7 @@ ms.locfileid: "56305047"
 -   在電腦上安裝有滾輪的滑鼠。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Computer.Mouse.WheelScrollLines](xref:Microsoft.VisualBasic.Devices.Mouse.WheelScrollLines)
 - [My.Computer.Mouse.WheelExists](xref:Microsoft.VisualBasic.Devices.Mouse.WheelExists)
 - [在 .NET 中處理和擲回例外狀況](../../standard/exceptions/index.md)
