@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 16897413c31e39be5c1d45b43d6ef816d3f80aad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482687"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125625"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
@@ -18,13 +18,12 @@ ms.locfileid: "57482687"
 ## <a name="improved-quality-and-performance-of-text"></a>提升文字的品質與效能  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 來轉譯，可增強文字的清晰度與可讀性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 使用子像素轉譯，讓文字可利用像素的小數部分來對齊字元，使用更高畫質來顯示它的真正樣貌。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改進是以 y 方向消除鋸齒，這會使文字字元中平滑曲線頂端和底部更平滑。 如需 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能的詳細資訊，請參閱 [ClearType 概觀](cleartype-overview.md)。  
   
- ![以 ClearType y 的文字&#45;反方向&#45;別名](./media/typographyinwpf02.gif "TypographyInWPF02")  
+ ![套用 ClearType Y 方向消除鋸齒功能的文字](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 以 ClearType Y 方向消除鋸齒功能顯示的文字  
   
  整個文字轉譯管線可在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 上啟用硬體加速，但前提是您的機器符合所需硬體的最低層級。 無法使用硬體執行的轉譯會回復為軟體轉譯。 硬體加速會影響文字轉譯管線的所有階段；範圍從儲存個別字符、將字符組合至字符執行、套用效果，到將 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 混色演算法套用至最終顯示的輸出。 如需硬體加速的詳細資訊，請參閱[圖形轉譯層](graphics-rendering-tiers.md)。  
   
- ![文字轉譯管線的圖表](./media/typographyinwpf01.png "TypographyInWPF01")  
-文字轉譯管線的圖表  
+ ![文字轉譯管線的圖表](./media/typography-in-wpf/text-rendering-pipeline.png)  
   
  此外，具動畫效果的文字 (無論是字元或字符) 都可充分利用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 所啟用的圖形硬體功能。 這樣可產生平滑的文字動畫。  
   
@@ -86,70 +85,57 @@ ms.locfileid: "57482687"
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>使用點陣圖效果、轉換和文字效果  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您藉由使用點陣圖效果、轉換和文字效果等功能，對文字建立具視覺效果的趣味用法。 下列範例示範套用至文字之延伸陰影效果的典型類型。  
   
- ![文字陰影濃淡&#61;0.25](./media/shadowtext01.jpg "ShadowText01")  
-具有延伸陰影的文字  
+ ![文字陰影濃淡&#61;0.25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   
  下列範例示範套用至文字的延伸陰影效果與雜點。  
   
- ![具有雜點的文字陰影](./media/shadowtext04.jpg "ShadowText04")  
-具有延伸陰影與雜點的文字  
+ ![具有雜點的文字陰影](./media/typography-in-wpf/drop-shadow-noise-text.jpg) 
   
  下列範例示範套用至文字的外光暈效果。  
   
- ![使用 OuterGlowBitmapEffect 的文字陰影](./media/shadowtext05.jpg "ShadowText05")  
-具有外光暈效果的文字  
+ ![使用 OuterGlowBitmapEffect 的文字陰影](./media/typography-in-wpf/text-shadow-glow-effect.jpg)
   
  下列範例示範套用至文字的模糊效果。  
   
- ![使用 BlurBitmapEffect 的文字陰影](./media/shadowtext06.jpg "ShadowText06")  
-具有模糊效果的文字  
-  
+ ![使用 BlurBitmapEffect 的文字陰影](./media/typography-in-wpf/text-shadow-blur-effect.jpg)  
+
  下列範例示範沿著 X 軸縮放 150% 的第二行文字，以及沿著 Y 軸縮放 150% 的第三行文字。  
   
- ![使用 ScaleTransform 縮放的文字](./media/transformedtext02.jpg "TransformedText02")  
-使用 ScaleTransform 的文字  
+ ![使用 ScaleTransform 縮放的文字](./media/typography-in-wpf/scaled-text-scaletransform.jpg) 
   
  下列範例示範沿著 X 軸傾斜的文字。  
   
- ![使用 skewtransform 傾斜的文字](./media/transformedtext03.jpg "TransformedText03")  
-使用 SkewTransform 的文字  
+ ![使用 SkewTransform 傾斜的文字](./media/typography-in-wpf/skewed-transformed-text.jpg)
   
  A<xref:System.Windows.Media.TextEffect>物件是協助程式物件，可讓您將文字視為文字字串中的字元的一個或多個群組。 下列範例示範旋轉個別字元。 每一個字元會以 1 秒的間隔獨立旋轉。  
   
- ![旋轉文字的文字效果螢幕擷取畫面](./media/texteffect01.jpg "TextEffect01")  
-旋轉文字效果動畫的範例  
+ ![旋轉文字的文字效果螢幕擷取畫面](./media/typography-in-wpf/rotating-text-effect.jpg) 
   
 #### <a name="using-flow-documents"></a>使用非固定格式文件  
  除了一般[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供的文字呈現的版面配置控制項 —<xref:System.Windows.Documents.FlowDocument>項目。 <xref:System.Windows.Documents.FlowDocument>項目，搭配<xref:System.Windows.Controls.DocumentViewer>項目，提供大量具有不同的版面配置需求的文字的控制項。 版面配置控制項提供的存取權透過的進階印刷樣式<xref:System.Windows.Documents.Typography>物件和其他的字型相關屬性[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項。  
   
  下列範例顯示的文字內容裝載於<xref:System.Windows.Controls.FlowDocumentReader>，以提供搜尋、 瀏覽、 分頁及內容縮放支援。  
   
- ![使用 OpenType 字型範例螢幕擷取畫面](./media/typographyinwpf-03.png "TypographyInWPF_03")  
-裝載於 FlowDocumentReader 的文字  
+ ![如果螢幕擷取畫面顯示 OpenType 字型。](./media/typography-in-wpf/typography-text-flowdocumentreader.png)
   
  如需詳細資訊，請參閱 [WPF 中的文件](documents-in-wpf.md)。  
   
 ### <a name="lightweight-text-drawing"></a>輕量型文字繪製  
  您可以直接繪製文字[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用的物件<xref:System.Windows.Media.DrawingContext.DrawText%2A>方法<xref:System.Windows.Media.DrawingContext>物件。 若要使用此方法，您建立<xref:System.Windows.Media.FormattedText>物件。 這個物件可讓您繪製多行文字，且可個別格式化文字中的每個字元。 功能<xref:System.Windows.Media.FormattedText>物件包含許多 Win32 API 中 DrawText 旗標的功能。 颾魤 ㄛ<xref:System.Windows.Media.FormattedText>物件包含像是省略符號支援，當文字超過其範圍時，會顯示省略符號的功能。 下列範例示範的文字具有數種已套用的格式，包括第二個和第三個字的線性漸層。  
   
- ![使用 FormattedText 物件顯示的文字](./media/formattedtext01.jpg "FormattedText01")  
-使用 FormattedText 物件顯示的文字  
+ ![使用 FormattedText 物件顯示的文字](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   
  您可以將轉換成的格式化的文字<xref:System.Windows.Media.Geometry>物件，可讓您建立其他類型的趣味視覺文字。 例如，您可以在其中建立<xref:System.Windows.Media.Geometry>物件根據文字字串的外框。  
   
- ![以線性漸層筆刷繪製外框的文字](./media/outlinedtext02.jpg "OutlinedText02")  
-以線性漸層筆刷繪製外框的文字  
+ ![以線性漸層筆刷繪製外框的文字](./media/typography-in-wpf/text-outline-linear-gradient.jpg)  
   
  下列範例示範數種方式，可透過修改筆劃、填滿和反白顯示轉換的文字，來建立有趣的視覺效果。  
   
- ![以不同的色彩填滿和筆劃的文字](./media/outlinedtext03.jpg "OutlinedText03")  
-設定筆劃並填滿不同色彩的範例  
+ ![使用不同填色和筆觸色彩的文字](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![影像筆刷套用至筆觸的文字](./media/outlinedtext04.jpg "OutlinedText04")  
-影像筆刷套用至筆劃的範例  
+ ![影像筆刷套用至筆觸的文字](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![影像筆刷套用至筆觸的文字](./media/outlinedtext05.jpg "OutlinedText05")  
-影像筆刷套用至筆劃並反白顯示的範例  
+ ![影像筆刷套用至描邊，並反白顯示的文字](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  如需詳細資訊<xref:System.Windows.Media.FormattedText>物件，請參閱 <<c2> [ 繪製格式化的文字](drawing-formatted-text.md)。  
   
@@ -158,8 +144,7 @@ ms.locfileid: "57482687"
   
  不同於傳統的文字[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]，則<xref:System.Windows.Media.TextFormatting.TextFormatter>互動文字配置用戶端透過一組回呼方法。 它需要用戶端提供這些方法的實作中<xref:System.Windows.Media.TextFormatting.TextSource>類別。 下圖說明用戶端應用程式之間的文字版面配置互動和<xref:System.Windows.Media.TextFormatting.TextFormatter>。  
   
- ![文字配置用戶端和 TextFormatter 的圖表](./media/textformatter01.png "TextFormatter01")  
-應用程式和 TextFormatter 之間的互動  
+ ![文字配置用戶端和 TextFormatter 的圖表](./media/typography-in-wpf/text-layout-text-formatter-interaction.png)  
   
  如需如何建立自訂文字版面配置的詳細資訊，請參閱[進階文字格式化](advanced-text-formatting.md)。  
   

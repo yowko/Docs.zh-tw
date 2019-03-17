@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: 6fbe8a78131cb64e28326133a7cc0fbdcbffd46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720393"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126223"
 ---
 # <a name="how-to-create-a-path-gradient"></a>HOW TO：建立路徑漸層
 <xref:System.Drawing.Drawing2D.PathGradientBrush>類別可讓您自訂您逐漸變更色彩填滿圖形的方式。 例如，您可以指定路徑的中心的一種色彩和路徑的界限的另一種色彩。 您也可以指定不同的色彩，每個界限的數個點的路徑。  
@@ -26,13 +26,13 @@ ms.locfileid: "57720393"
   
 -   下列範例會填滿橢圓形使用路徑漸層筆刷。 之中心色彩設定為藍色，邊界色彩設定為青色。 下圖顯示實心的橢圓形。  
   
-     ![路徑漸層停駐](./media/pathgradient1.png "pathgradient1")  
+     ![漸層停駐的路徑會填滿橢圓形。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse.png)  
   
      根據預設，路徑漸層筆刷不會延伸超出路徑的界限。 如果您使用路徑漸層筆刷填滿圖形超出路徑的界限時，在路徑外螢幕區域不會被填入。  
   
-     下圖顯示如果您變更，會發生什麼事<xref:System.Drawing.Graphics.FillEllipse%2A>在下列程式碼中呼叫`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`。  
+     下圖顯示如果您變更，會發生什麼事<xref:System.Drawing.Graphics.FillEllipse%2A>在下列程式碼中呼叫`e.Graphics.FillRectangle(pthGrBrush, 0, 10, 200, 40)`:  
   
-     ![路徑漸層停駐](./media/pathgradient2.png "pathgradient2")  
+     ![擴充到界限路徑的漸層停駐的路徑。](./media/how-to-create-a-path-gradient/gradient-path-extended-beyond-boundary.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#11)]
      [!code-vb[System.Drawing.UsingaGradientBrush#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#11)]  
@@ -46,9 +46,9 @@ ms.locfileid: "57720393"
      [!code-csharp[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#12)]
      [!code-vb[System.Drawing.UsingaGradientBrush#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#12)]  
   
--   下列範例會繪製路徑漸層，而不需要<xref:System.Drawing.Drawing2D.GraphicsPath>程式碼中的物件。 特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>建構函式，在範例中會收到一個點的陣列，但不需要<xref:System.Drawing.Drawing2D.GraphicsPath>物件。 另請注意，<xref:System.Drawing.Drawing2D.PathGradientBrush>用來填滿矩形，而不是路徑。 矩形大於封閉的路徑，用來定義筆刷，因此部分矩形將不會繪製筆刷。 下圖顯示矩形 （虛線） 和路徑的漸層筆刷繪製之矩形的部分。  
+-   下列範例會繪製路徑漸層，而不需要<xref:System.Drawing.Drawing2D.GraphicsPath>程式碼中的物件。 特定<xref:System.Drawing.Drawing2D.PathGradientBrush.%23ctor%2A>建構函式，在範例中會收到一個點的陣列，但不需要<xref:System.Drawing.Drawing2D.GraphicsPath>物件。 另請注意，<xref:System.Drawing.Drawing2D.PathGradientBrush>用來填滿矩形，而不是路徑。 矩形大於封閉的路徑，用來定義筆刷，因此部分矩形將不會繪製筆刷。 下圖顯示矩形 （虛線） 和路徑的漸層筆刷繪製之矩形的部分： 
   
-     ![漸層停駐](./media/gradient4.png "gradient4")  
+     ![路徑漸層筆刷繪製漸層的部分。](./media/how-to-create-a-path-gradient/gradient-painted-path-gradient-brush.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#13)]
      [!code-vb[System.Drawing.UsingaGradientBrush#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#13)]  
@@ -65,7 +65,7 @@ ms.locfileid: "57720393"
   
      下圖顯示下列程式碼的輸出。 在左側的省略符號是 aqua 只在 center 點。 在右邊的省略符號是 aqua everywhere 內的內部路徑。  
   
- ![Gradient](./media/focusscales1nogamma.png "focusscales1NoGamma")  
+ ![漸層效果的焦點標尺](./media/how-to-create-a-path-gradient/focus-scales-aqua-inner-outer-ellipse.png)  
   
  [!code-csharp[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#14)]
  [!code-vb[System.Drawing.UsingaGradientBrush#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#14)]  
@@ -78,7 +78,7 @@ ms.locfileid: "57720393"
   
      下圖顯示填入 自訂路徑漸層筆刷的三角形。  
   
-     ![路徑漸層停駐](./media/pathgradient4.png "pathgradient4")  
+     ![自訂路徑漸層筆刷填滿的三角形。](./media/how-to-create-a-path-gradient/gradient-brush-filled-triangle.png)  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#15)]
      [!code-vb[System.Drawing.UsingaGradientBrush#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#15)]  
@@ -92,18 +92,18 @@ ms.locfileid: "57720393"
      [!code-csharp[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#16)]
      [!code-vb[System.Drawing.UsingaGradientBrush#16](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#16)]  
   
-     下圖顯示實心的橢圓形和路徑的漸層筆刷的中心點。  
+     下圖顯示實心的橢圓形和路徑的漸層筆刷的中心點：  
   
-     ![路徑漸層停駐](./media/pathgradient5.png "pathgradient5")  
+     ![漸層填滿橢圓形和中心點的路徑。](./media/how-to-create-a-path-gradient/gradient-path-filled-ellipse-center-point.png)  
   
 -   您可以設定路徑漸層筆刷的中心點，用來建構筆刷在路徑外的位置。 下列範例會將呼叫以設定<xref:System.Drawing.Drawing2D.PathGradientBrush.CenterPoint%2A>前面的程式碼的屬性。  
   
      [!code-csharp[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/CS/Class1.cs#17)]
      [!code-vb[System.Drawing.UsingaGradientBrush#17](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#17)]  
   
-     下圖顯示這項變更的輸出。  
+     下圖顯示這項變更的輸出：  
   
-     ![路徑漸層停駐](./media/pathgradient6.png "pathgradient6")  
+     ![漸層停駐在路徑外的中心點的路徑。](./media/how-to-create-a-path-gradient/gradient-path-center-point-outside.png)  
   
      在上圖中，最右邊的省略符號的點不是單純的藍色 （不過非常接近）。 在漸層色彩位於如同填滿達到 （145，35） 點，色彩會是純藍色 （0，0，255）。 但永遠不會達到填滿 （145，35） 因為路徑漸層筆刷繪製只在其路徑。  
   

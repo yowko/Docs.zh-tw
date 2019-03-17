@@ -2,12 +2,12 @@
 title: 設定工作流程的追蹤
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c72221eca0d6a8281c68914a3c9eb0557139d329
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719399"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126197"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>設定工作流程的追蹤
 
@@ -183,9 +183,9 @@ WF 4 提供將追蹤記錄寫入至 ETW (Windows 事件追蹤) 工作階段的�
 
 6. 以滑鼠右鍵按一下**分析**節點，然後選取**重新整理。** 追蹤記錄應該會顯示在中央窗格中。
 
-下圖顯示事件檢視器中的追蹤事件。
+下圖顯示事件檢視器中的追蹤事件：
 
-![追蹤記錄的事件檢視器顯示](./media/trackingeventviewer.PNG "TrackingEventViewer")
+![追蹤記錄的事件檢視器顯示的螢幕擷取畫面。](./media/configuring-tracking-for-a-workflow/tracking-event-viewer.png)
 
 ### <a name="registering-an-application-specific-provider-id"></a>註冊應用程式特定的提供者識別碼
 

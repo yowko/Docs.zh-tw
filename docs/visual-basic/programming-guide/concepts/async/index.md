@@ -98,7 +98,7 @@ Dim urlContents As String = Await client.GetStringAsync()
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 非同步方法中執行了哪些工作  
  在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序。  
   
- ![追蹤非同步程式](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![此圖顯示 追蹤非同步程式。](./media/index/navigation-trace-async-program.png)  
   
  圖中的數字對應下列步驟。  
   

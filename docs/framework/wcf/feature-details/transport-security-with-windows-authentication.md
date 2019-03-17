@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: bd4e12a861207e5318e8f3f34b38204f6724e7b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652588"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125443"
 ---
 # <a name="transport-security-with-windows-authentication"></a>Windows 驗證的傳輸安全性
 下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務由 Windows 安全性保護。 如需程式設計的詳細資訊，請參閱[How to:使用 Windows 認證的服務安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
  內部網路 Web 服務顯示人力資源資訊。 用戶端為 Windows Form 應用程式。 應用程式部署於由 Kerberos 控制站負責網域安全的網域內。  
   
- ![傳輸安全性使用 Windows 驗證](../../../../docs/framework/wcf/feature-details/media/securedbywindows.gif "SecuredByWindows")  
+ ![使用 Windows 驗證的傳輸安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  

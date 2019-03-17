@@ -2,19 +2,19 @@
 title: 排序資料 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 6f81065c-0c89-4bf3-a6d8-442273f8810e
-ms.openlocfilehash: e36ccc72689e756105f51c988d4cafd06d4d8da5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5875b15dbdec69aca653b8f6cca4dd07fc9af343
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520122"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58126249"
 ---
 # <a name="sorting-data-visual-basic"></a>排序資料 (Visual Basic)
 排序作業會根據一個或多個屬性來排序序列的項目。 第一個排序準則會執行元素的主要排序； 您可以藉由指定第二個排序準則來排序每一個主要排序群組內的元素。  
   
  下圖顯示對一系列字元執行字母順序排序作業的結果。  
   
- ![LINQ 排序作業](../../../../csharp/programming-guide/concepts/linq/media/linq_ordering.png "LINQ_Ordering")  
+ ![顯示依字母順序排列的排序作業的圖形。](./media/sorting-data/alphabetical-sort-operation.png)  
   
  下節列出可排序資料的標準查詢運算子方法。  
   

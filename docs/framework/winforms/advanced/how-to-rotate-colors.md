@@ -8,38 +8,38 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: cb3824d8a5a5674b83124301dbfbd5a3ba60effa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720614"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125885"
 ---
 # <a name="how-to-rotate-colors"></a>HOW TO：旋轉色彩
 四維色彩空間中的旋轉很難視覺化。 我們可以輕鬆地視覺化起來要保留固定的色彩元件之一。 假設同意將固定為 1 的 alpha 元件 （完全不透明）。 然後我們可以將三維色彩空間視覺化具有紅色、 綠色和藍色的軸，如下圖所示。  
   
- ![重新著色](./media/recoloring03.gif "recoloring03")  
+ ![顯示具有紅色、 綠色和藍色軸的旋轉的圖例。](./media/how-to-rotate-colors/rotation-red-green-blue-axes.gif)  
   
  色彩可以視為在 3d 空間中的點。 比方說，空間中的點 （1，0，0） 表示的色彩為紅色，並在空間中的點 （0、 1、 0） 代表綠色的色彩。  
   
  下圖顯示旋轉的色彩 （1，0，0） 的意義透過紅色、 綠色分別平面中的 60 度的角度。 紅色、 綠色分別平面平行的平面中的循環可視為藍色軸旋轉。  
   
- ![重新著色](./media/recoloring04.gif "recoloring04")  
+ ![顯示藍色軸旋轉的圖例。](./media/how-to-rotate-colors/rotation-about-blue-axis.gif)  
   
- 下圖顯示如何初始化色彩矩陣，以執行每一個的三個座標的軸 （紅色、 綠色、 藍色） 的旋轉。  
+ 下圖顯示如何初始化色彩矩陣，以執行需三個座標的軸 （紅色、 綠色、 藍色） 之每個旋轉：  
   
- ![重新著色](./media/recoloring05.gif "recoloring05")  
+ ![初始化色彩矩陣，以執行需三個座標軸的旋轉。](./media/how-to-rotate-colors/rotation-about-three-axes.gif)  
   
 ## <a name="example"></a>範例  
  下列範例會為所有的一種色彩 （1，0，0.6） 與藍色軸 60 度旋轉套用的映像。 旋轉的角度會是紅色、 綠色分別平面平行的平面中，只要進行清理出。  
   
- 下圖顯示原始的映像，在左邊和右邊的旋轉色彩的映像。  
+ 下圖顯示原始的映像，在左邊和右邊的旋轉色彩的映像：  
   
- ![旋轉色彩](./media/colortrans5.png "colortrans5")  
+ ![顯示原始影像和色彩旋轉影像的圖例。](./media/how-to-rotate-colors/original-color-rotated-images.png)  
   
- 下圖顯示色彩旋轉，執行下列程式碼中的視覺效果。  
+ 下圖顯示色彩旋轉，執行下列程式碼中的視覺效果：
   
- ![重新著色](./media/recoloring06.gif "recoloring06")  
+ ![顯示色彩旋轉的視覺效果的圖例。](./media/how-to-rotate-colors/visualization-color-rotation.gif)  
   
  [!code-csharp[System.Drawing.RotateColors#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RotateColors/CS/Form1.cs#1)]
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  

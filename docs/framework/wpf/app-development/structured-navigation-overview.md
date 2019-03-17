@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0a10a3f5fd07c7e3ceb7e08802f2c821b7d9a7f2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369743"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125599"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 可由裝載的內容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，則<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可由組件識別的頁面所組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和超連結巡覽至。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -37,9 +37,9 @@ ms.locfileid: "57369743"
   
 -   當呼叫端頁面傳回被呼叫的頁面時，巡覽記錄會移除呼叫的頁面，隔離呼叫頁面中的各個執行個體。  
   
- 下圖說明這些行為。  
+ 下圖說明這些行為：  
   
- ![呼叫端頁面和被呼叫端頁面之間的流程](./media/structurednavigationoverviewfigure1.png "StructuredNavigationOverviewFigure1")  
+ ![螢幕擷取畫面顯示呼叫端頁面和被呼叫的頁面之間的流程。](./media/structured-navigation-overview/flow-between-calling-page-called-page.png)  
   
  您可以使用來實作這些行為<xref:System.Windows.Navigation.PageFunction%601>作為呼叫的頁面。  
   

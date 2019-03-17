@@ -10,12 +10,12 @@ helpviewer_keywords:
 - formatted text [WPF]
 - drawing [WPF], formatted text
 ms.assetid: b1d851c1-331c-4814-9964-6fe769db6f1f
-ms.openlocfilehash: 538cc23a3ee7696a28de43e5724dc450328205ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 705e91923f6ab38f7dce83e511027102112539f3
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372174"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125430"
 ---
 # <a name="drawing-formatted-text"></a>繪製格式化的文字
 本主題提供的功能概觀<xref:System.Windows.Media.FormattedText>物件。 這個物件提供在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中繪製文字的低階控制項。  
@@ -24,8 +24,7 @@ ms.locfileid: "57372174"
 ## <a name="technology-overview"></a>技術概觀  
  <xref:System.Windows.Media.FormattedText>物件可讓您繪製多行文字，可以個別格式化文字中的每個字元。 下例顯示已套用多種格式的文字。  
   
- ![使用 FormattedText 物件顯示的文字](./media/formattedtext01.jpg "FormattedText01")  
-使用 FormattedText 方法顯示的文字  
+ ![使用 FormattedText 物件顯示的文字](./media/typography-in-wpf/text-formatted-linear-gradient.jpg)  
   
 > [!NOTE]
 >  針對從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] API 移轉的開發人員，[Win32 移轉](#win32_migration)一節中的資料表會列出 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] DrawText 旗標和 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的大概對等項目。  
@@ -42,8 +41,7 @@ ms.locfileid: "57372174"
   
  使用<xref:System.Windows.Media.FormattedText.MaxTextWidth%2A>屬性，以限制為特定寬度的文字。 文字會自動換行，避免超出指定的寬度。 使用<xref:System.Windows.Media.FormattedText.MaxTextHeight%2A>屬性，以限制特定高度的文字。 超過指定高度的文字會顯示省略符號 "…"。  
   
- ![使用 FormattedText 物件顯示的文字](./media/formattedtext02.png "FormattedText02")  
-顯示換行和省略符號的文字  
+ ![自動換行和省略符號以顯示的文字。](./media/drawing-formatted-text/formatted-text-wordwrap-ellipsis.png)    
   
  您可以將多個格式化樣式套用到一或多個字元。 例如，您可以呼叫這兩<xref:System.Windows.Media.FormattedText.SetFontSize%2A>和<xref:System.Windows.Media.FormattedText.SetForegroundBrush%2A>方法來變更文字中的前五個字元的格式。  
   
@@ -62,19 +60,15 @@ ms.locfileid: "57372174"
 ### <a name="converting-formatted-text-to-a-geometry"></a>將格式化文字轉換成幾何  
  您可以將轉換成的格式化的文字<xref:System.Windows.Media.Geometry>物件，可讓您建立其他類型的趣味視覺文字。 例如，您可以在其中建立<xref:System.Windows.Media.Geometry>物件根據文字字串的外框。  
   
- ![以線性漸層筆刷繪製外框的文字](./media/outlinedtext02.jpg "OutlinedText02")  
-以線性漸層筆刷繪製外框的文字  
+ ![以線性漸層筆刷繪製外框的文字](./media/typography-in-wpf/text-outline-linear-gradient.jpg)    
   
  下列範例示範數種方式，可透過修改筆劃、填滿和反白顯示轉換的文字，來建立有趣的視覺效果。  
   
- ![以不同的色彩填滿和筆劃的文字](./media/outlinedtext03.jpg "OutlinedText03")  
-設定筆劃並填滿不同色彩的範例  
+ ![使用不同填色和筆觸色彩的文字](./media/typography-in-wpf/fill-stroke-text-effect.jpg)  
   
- ![影像筆刷套用至筆觸的文字](./media/outlinedtext04.jpg "OutlinedText04")  
-影像筆刷套用至筆劃的範例  
+ ![影像筆刷套用至筆觸的文字](./media/typography-in-wpf/image-brush-application.jpg)
   
- ![影像筆刷套用至筆觸的文字](./media/outlinedtext05.jpg "OutlinedText05")  
-影像筆刷套用至筆劃並反白顯示的範例  
+ ![影像筆刷套用至描邊，並反白顯示的文字](./media/typography-in-wpf/image-brush-text-application.jpg)
   
  當文字轉換成<xref:System.Windows.Media.Geometry>物件時，它不再是字元集合，您無法修改文字字串中的字元。 不過，您可以修改其筆劃與填滿屬性來影響轉換文字的外觀。 筆劃是指轉換文字的外框，填滿是指轉換文字外框內的區域。 如需詳細資訊，請參閱[建立外框文字](how-to-create-outlined-text.md)。  
   
@@ -82,15 +76,14 @@ ms.locfileid: "57372174"
   
  下列範例顯示格式化的文字已轉換成<xref:System.Windows.Media.PathGeometry>物件。 以動畫顯示的橢圓形會沿著轉譯文字的筆劃路徑行進。  
   
- ![遵循文字路徑幾何的範圍](./media/textpathgeometry01.gif "TextPathGeometry01")  
+ ![遵循文字之路徑幾何的範圍](./media/drawing-formatted-text/sphere-following-geometry-path.gif)  
 遵循文字之路徑幾何的範圍  
   
  如需詳細資訊，請參閱[如何：建立文字的 PathGeometry 動畫](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms743610(v=vs.100))。  
   
  您可以建立其他趣味的使用格式化的文字，一旦轉換成<xref:System.Windows.Media.PathGeometry>物件。 例如，您可以裁剪視訊以顯示在其中。  
   
- ![顯示於文字路徑幾何中視訊](./media/videotextdemo01.png "VideoTextDemo01")  
-顯示於文字之路徑幾何中的視訊  
+ ![顯示於文字之路徑幾何中的視訊](./media/drawing-formatted-text/video-displaying-text-path-geometry.png)
   
 <a name="win32_migration"></a>   
 ## <a name="win32-migration"></a>Win32 移轉  

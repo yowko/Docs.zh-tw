@@ -18,12 +18,12 @@ helpviewer_keywords:
 - nested message processing [WPF]
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
-ms.openlocfilehash: e2a4b1157ec1f114b9e33f220e09fc791cfb9fc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a1417c5ee6fe774214c10b0164eb84dbfb2ed2bb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353032"
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125677"
 ---
 # <a name="threading-model"></a>執行緒模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是設計來避免開發人員遇到執行緒的難題。 如此一來，大部分的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開發人員不需要撰寫介面來使用多個執行緒。 由於多執行緒的程式非常複雜且很難偵錯，因此，若有單一執行緒解決方案，就應避免使用多執行緒程式。  
@@ -63,7 +63,7 @@ ms.locfileid: "57353032"
   
  參考下列範例：  
   
- ![質數螢幕擷取畫面](./media/threadingprimenumberscreenshot.PNG "ThreadingPrimeNumberScreenShot")  
+ ![如果螢幕擷取畫面顯示質數的執行緒。](./media/threading-model/threading-prime-numbers.png)  
   
  這個簡單的應用程式會從三開始向上計算，以搜尋質數。 當使用者按一下**啟動** 按鈕，開始搜尋。 當程式找到質數時，會使用它的發現來更新使用者介面。 使用者隨時都能停止搜尋。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "57353032"
   
  若要計算和事件處理之間分割處理時間，最好是管理計算從<xref:System.Windows.Threading.Dispatcher>。 藉由使用<xref:System.Windows.Threading.Dispatcher.BeginInvoke%2A>方法中，我們可以排程質數檢查，在相同佇列[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]取自 < 事件。 在範例中，我們一次只會排程單一質數檢查。 質數檢查完成之後，我們會立即排程下次檢查。 這項檢查之後才會繼續暫止[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已處理事件。  
   
- ![發送器佇列圖例](./media/threadingdispatcherqueue.PNG "ThreadingDispatcherQueue")  
+ ![如果螢幕擷取畫面顯示發送器佇列。](./media/threading-model/threading-dispatcher-queue.png)  
   
  [!INCLUDE[TLA#tla_word](../../../../includes/tlasharptla-word-md.md)] 會使用這項機制來完成拼字檢查。 拼字檢查是在背景中使用的閒置時間[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 讓我們看看程式碼。  
   
@@ -110,7 +110,7 @@ ms.locfileid: "57353032"
   
  在此範例中，我們模仿遠端程序呼叫來擷取氣象預報。 我們使用不同的背景工作執行緒來執行此呼叫中，和我們排程更新方法中的<xref:System.Windows.Threading.Dispatcher>的[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒完成時。  
   
- ![氣象 UI 螢幕擷取畫面](./media/threadingweatheruiscreenshot.PNG "ThreadingWeatherUIScreenShot")  
+ ![如果螢幕擷取畫面顯示天氣 UI。](./media/threading-model/threading-weather-ui.png)  
   
  [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweathercodebehind)]
  [!code-vb[ThreadingWeatherForecast#ThreadingWeatherCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweathercodebehind)]  
@@ -190,7 +190,7 @@ ms.locfileid: "57353032"
 ### <a name="nested-pumping"></a>巢狀提取  
  有時不可行完全鎖[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]執行緒。 我們來看一下<xref:System.Windows.MessageBox.Show%2A>方法的<xref:System.Windows.MessageBox>類別。 <xref:System.Windows.MessageBox.Show%2A> 不會傳回，直到使用者按一下 [確定] 按鈕。 不過，它會建立必須有訊息迴圈才能互動的視窗。 雖然我們正在等待使用者按下 [OK (確定)]，但原始的應用程式視窗並不會回應使用者輸入。 不過，它會繼續處理繪製訊息。 原始視窗會在涵蓋並顯示時自行重新繪製。  
   
- ![包含 [OK (確定)] 按鈕的 MessageBox](./media/threadingnestedpumping.png "ThreadingNestedPumping")  
+ ![顯示 [確定] 按鈕的 MessageBox 螢幕擷取畫面](./media/threading-model/threading-message-loop.png)  
   
  有些執行緒必須負責訊息方塊視窗。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 只會針對訊息方塊視窗建立新的執行緒，但這個執行緒無法在原始視窗中繪製已停用的元素 (請記住先前討論過的互斥)。 相反地，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用巢狀的訊息處理系統。 <xref:System.Windows.Threading.Dispatcher>類別包含呼叫的特殊方法<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>，這會將儲存應用程式的目前執行點再開始新的訊息迴圈。 巢狀的訊息迴圈完成時，原始之後繼續執行<xref:System.Windows.Threading.Dispatcher.PushFrame%2A>呼叫。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "57353032"
   
  因為開發人員在工作時假設不大部分介面建立的執行緒安全，記住，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]永遠不會由多個執行緒存取。 在此情況下，單一執行緒，可能會非預期的時間進行環境變更導致這些格式不會影響，<xref:System.Windows.Threading.DispatcherObject>互斥機制應解決。 請考慮下列虛擬程式碼：  
   
- ![執行緒重新進入圖表](./media/threadingreentrancy.png "ThreadingReentrancy")  
+ ![以圖表顯示執行緒重新進入。](./media/threading-model/threading-reentrancy.png "ThreadingReentrancy")  
   
  大部分的情況，是正確的但有些時候在[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中這類未預期的重新進入真正會造成問題。 因此，在某些關鍵的時間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]呼叫<xref:System.Windows.Threading.Dispatcher.DisableProcessing%2A>，如此會變更使用該執行緒的鎖定指示[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]重新進入的鎖定，而非平常[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]鎖定。  
   
