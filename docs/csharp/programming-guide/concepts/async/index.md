@@ -98,9 +98,9 @@ string urlContents = await client.GetStringAsync("https://docs.microsoft.com");
  如需舊版 .NET Framework 中非同步的詳細資訊，請參閱 [TPL 和傳統 .NET Framework 非同步程式設計](../../../../standard/parallel-programming/tpl-and-traditional-async-programming.md)。  
   
 ## <a name="BKMK_WhatHappensUnderstandinganAsyncMethod"></a> 非同步方法中執行了哪些工作  
- 在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序。  
+ 在非同步程式設計中要了解的最重要事情，就是控制流程如何在方法之間移動。 下圖將引導您了解整個程序：  
   
- ![追蹤非同步程式](../../../../csharp/programming-guide/concepts/async/media/navigationtrace.png "NavigationTrace")  
+ ![顯示追蹤非同步程式的圖表。](./media/index/navigation-trace-async-program.png)  
   
  圖中的數字對應下列步驟。  
   

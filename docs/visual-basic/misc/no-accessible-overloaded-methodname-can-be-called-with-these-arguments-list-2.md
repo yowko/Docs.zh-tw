@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAmbiguousCall2
 ms.assetid: 13b20ffa-9f02-4971-a3cb-e08b402fd971
-ms.openlocfilehash: 392c8937f7b12a4628b57be37388c350df8fa9c3
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4ec5abcc87940434a830cb56e2e68ddb71bde99b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55290000"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58022249"
 ---
 # <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion-list"></a>沒有可存取的多載 '\<方法名稱 >' 可以呼叫且不用縮小轉換這些引數：\<清單 >
 已呼叫多載方法，但沒有方法可在未縮小轉換的情況下，符合所提供的引數清單。  
@@ -21,5 +21,6 @@ ms.locfileid: "55290000"
 2.  變更引數，以符合多載方法的簽章。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [以傳值和傳址方式傳遞引數](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
 - [擴展和縮小轉換](../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

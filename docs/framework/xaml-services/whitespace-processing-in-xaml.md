@@ -7,12 +7,12 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: 750f054c908cd9d837a18ee6c8a537285b325288
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728347"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048042"
 ---
 # <a name="white-space-processing-in-xaml"></a>在 XAML 中處理泛空白字元
 XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理器實作中。 本主題說明這些 XAML 語言規則， 它還會列出所定義的額外空白字元處理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 處理器和序列化的 XAML 寫入器的實作。  
@@ -35,7 +35,7 @@ XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla
   
 5.  緊接在結束標記之前的空格會遭到刪除。  
   
- 「預設」會對應到 [xml:space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md) 屬性的預設值所表示的狀態。  
+ 「預設」會對應到 [xml:space](xml-space-handling-in-xaml.md) 屬性的預設值所表示的狀態。  
   
 <a name="whitespace_in_inner_text_and_string_primitives"></a>   
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>內部的文字及字串基本類型中的泛空白字元  
@@ -75,6 +75,6 @@ XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla
  此外，某些非固定格式文件模型中的分行符號的內嵌項目應該刻意不引入額外的空間，甚至是中的空白有效集合。 例如，<xref:System.Windows.Documents.LineBreak>項目具有相同的目的\<b R / > 標記中的[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，並以方便閱讀，在標記中，通常<xref:System.Windows.Documents.LineBreak>隔開撰寫的換行字元的任何後續文字。 該換行字元不應該正規化為下一行的前置空格。 若要啟用該行為，類別定義<xref:System.Windows.Documents.LineBreak>項目會套用<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，這樣就會在由解譯[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]周圍的空白字元的處理器<xref:System.Windows.Documents.LineBreak>為一律修剪。  
   
 ## <a name="see-also"></a>另請參閱
-- [XAML 概觀 (WPF)](../../../docs/framework/wpf/advanced/xaml-overview-wpf.md)
-- [XML 字元實體和 XAML](../../../docs/framework/xaml-services/xml-character-entities-and-xaml.md)
-- [在 XAML 中處理的 xml: space](../../../docs/framework/xaml-services/xml-space-handling-in-xaml.md)
+- [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
+- [XML 字元實體和 XAML](xml-character-entities-and-xaml.md)
+- [在 XAML 中處理的 xml: space](xml-space-handling-in-xaml.md)

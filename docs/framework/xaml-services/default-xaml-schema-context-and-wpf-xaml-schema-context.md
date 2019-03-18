@@ -2,12 +2,12 @@
 title: 預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 2bf7d7b3b5a871d358088fe652653fa0e6be5620
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a916d202ab256789a73c713bee49e502ea49ffd3
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492191"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58018530"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境與撰寫行為，包括類型對應的解析，已載入組件的方式、 如何特定讀取器和寫入器物件之間的互動方式在概念實體設定會被解譯。 本主題描述.NET Framework XAML 服務和相關聯的預設 XAML 結構描述內容，以 CLR 型別系統為基礎的功能。 本主題也描述用於 WPF 的 XAML 結構描述內容。  
@@ -89,4 +89,4 @@ XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境
     -   使用簡短名稱 + 公開金鑰語彙基元來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>另請參閱
-- [認識 XAML 節點資料流結構和概念](../../../docs/framework/xaml-services/understanding-xaml-node-stream-structures-and-concepts.md)
+- [認識 XAML 節點資料流結構和概念](understanding-xaml-node-stream-structures-and-concepts.md)

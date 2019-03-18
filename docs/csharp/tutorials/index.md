@@ -43,7 +43,11 @@ ms.date: 10/25/2018
 
 ## <a name="explore-new-features-in-c"></a>探索 C\# 中的新功能
 
-在此[互動式探索](exploration/csharp-6.yml)中嘗試 [C# 6](../whats-new/csharp-6.md) 中的新功能。
+* [以互動方式嘗試 C# 6 中的新功能](exploration/csharp-6.yml)：在您的瀏覽器中以互動方式探索 [C# 6](../whats-new/csharp-6.md) 中新增的功能。
+* [字串插值](string-interpolation.md)：示範如何使用字串插值在 C# 中建立格式化的字串。
+* [可為 Null 的參考型別](nullable-reference-types.md)：示範如何使用可為 Null 的參考型別來表示您的 Null 參考意圖。
+* [更新專案以使用可為 Null 的參考型別](upgrade-to-nullable-references.md)：示範升級現有專案以使用可為 Null 之參考型別的技術。
+* [使用模式比對延伸資料功能](pattern-matching.md)：示範如何使用模式比對來將型別延伸到其核心功能之外。
 
 ## <a name="general-tutorials"></a>一般教學課程
 
@@ -53,6 +57,4 @@ ms.date: 10/25/2018
 * [REST 用戶端](console-webapiclient.md)：示範 Web 通訊、JSON 序列化，以及 C# 語言中的物件導向功能。
 * [C# 和.NET 中的繼承](inheritance.md)︰示範 C# 中的繼承，包括使用繼承來定義基底類別、抽象基底類別和衍生類別。
 * [使用 LINQ](working-with-linq.md)：示範 LINQ 的許多功能和支援的語言元素。
-* [字串插值](string-interpolation.md)：示範如何使用字串插值在 C# 中建立格式化的字串。
 * [使用屬性](attributes.md)：示範如何在 C# 中建立及使用屬性。
-* [可為 Null 的參考型別](nullable-reference-types.md)：示範如何使用可為 Null 的參考型別來表示您的 Null 參考意圖。
