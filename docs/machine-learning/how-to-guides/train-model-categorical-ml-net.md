@@ -3,12 +3,12 @@ title: 套用特徵工程以對類別目錄資料進行模型定型 - ML.NET
 description: 了解如何使用 ML.NET 在類別目錄資料上為機器學習模型套用特徵工程
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: c8e7a6f2429dd5ceda065332770e0ba3af374143
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f0101a3c9398637ece60051257c82eb69ef933d0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677275"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846060"
 ---
 # <a name="apply-feature-engineering-for-model-training-on-categorical-data---mlnet"></a>套用特徵工程以對類別目錄資料進行模型定型 - ML.NET
 
@@ -34,6 +34,7 @@ ms.locfileid: "57677275"
 
 以下範例說明[成人人口普查資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/adult.tiny.with-schema.txt)的類別目錄處理：
 
+<!-- markdownlint-disable MD010 -->
 ```console
 Label   Workclass   education   marital-status  occupation  relationship    ethnicity   sex native-country-region   age fnlwgt  education-num   capital-gain    capital-loss    hours-per-week
 0   Private 11th    Never-married   Machine-op-inspct   Own-child   Black   Male    United-States   25  226802  7   0   0   40
@@ -41,6 +42,7 @@ Label   Workclass   education   marital-status  occupation  relationship    ethn
 1   Local-gov   Assoc-acdm  Married-civ-spouse  Protective-serv Husband White   Male    United-States   28  336951  12  0   0   40
 1   Private Some-college    Married-civ-spouse  Machine-op-inspct   Husband Black   Male    United-States   44  160323  10  7688    0   40
 ```
+<!-- markdownlint-enable MD010 -->
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 

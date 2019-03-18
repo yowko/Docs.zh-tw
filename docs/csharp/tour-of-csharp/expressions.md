@@ -3,12 +3,12 @@ title: C# 運算式 - C# 語言教學課程
 description: 運算式、運算元及運算子是 C# 語言的構成要素
 ms.date: 11/06/2016
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 682f98d51bf4eb3c1641297972afb86956e06d3e
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 7a7f65eb7ba3da3f9630bbcb92d8578d60d2095d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212088"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846593"
 ---
 # <a name="expressions"></a>運算式
 
@@ -18,8 +18,8 @@ ms.locfileid: "57212088"
 
 當兩個優先順序相同的運算子之間有運算元時，運算子的「關聯性」會控制執行運算的順序：
 
-*   除了指派運算子之外，所有二元運算子都具有「左關聯性」，亦即會由左到右執行運算。 例如，`x + y + z` 會判斷值為 `(x + y) + z`。
-*   指派運算子和條件運算子 (`?:`) 具有「右關聯性」，亦即會由右到左執行運算。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
+* 除了指派運算子之外，所有二元運算子都具有「左關聯性」，亦即會由左到右執行運算。 例如，`x + y + z` 會判斷值為 `(x + y) + z`。
+* 指派運算子和條件運算子 (`?:`) 具有「右關聯性」，亦即會由右到左執行運算。 例如，`x = y = z` 會判斷值為 `x = (y = z)`。
 
 您可以使用括弧來控制優先順序和關聯性。 例如，`x + y * z` 會先將 `y` 乘以 `z`，然後再將結果加到 `x`，而 `(x + y) * z` 則會先將 `x` 與 `y` 相加，然後再將結果乘以 `z`。
 

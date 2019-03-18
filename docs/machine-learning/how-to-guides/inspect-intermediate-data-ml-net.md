@@ -3,12 +3,12 @@ title: 在 ML.NET 管線處理期間檢查中繼資料值
 description: 了解如何在 ML.NET 機器學習管線處理期間檢查實際中繼資料值
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 3d20f153be7b502fb5a542a942245546412efde2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 362cb9351c3cb77b6aa67d59154854e882869ad9
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678640"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843412"
 ---
 # <a name="inspect-intermediate-data-values-during-mlnet-pipeline-processing"></a>在 ML.NET 管線處理期間檢查中繼資料值
 
@@ -24,6 +24,8 @@ ms.locfileid: "57678640"
 下列範例顯示 `GetColumn<T>` 擴充方法的使用方法：
 
 [範例檔案](https://github.com/dotnet/machinelearning/tree/master/test/data/adult.tiny.with-schema.txt)：
+
+<!-- markdownlint-disable MD010 -->
 ```
 Label   Workclass   education   marital-status
 0   Private 11th    Never-married
@@ -32,6 +34,7 @@ Label   Workclass   education   marital-status
 1   Private Some-college    Married-civ-spouse
 
 ```
+<!-- markdownlint-enable MD010 -->
 
 我們的類別定義如下：
 
@@ -50,7 +53,7 @@ public class InspectedRow
 ```
 
 ```csharp
-// Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
+// Create a new context for ML.NET operations. It can be used for exception tracking and logging,
 // as a catalog of available operations and as the source of randomness.
 var mlContext = new MLContext();
 

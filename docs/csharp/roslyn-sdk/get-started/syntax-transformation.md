@@ -3,12 +3,12 @@ title: 開始使用語法轉換 (Roslyn API)
 description: 周遊、查詢和查核語法樹狀結構的簡介。
 ms.date: 06/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 3f8d152a2e17bc9e480bd0a76488c563720a63b1
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.openlocfilehash: 3ca6ba19f84366b4e1f74ac4a0dea1edef3cee05
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122562"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788436"
 ---
 # <a name="get-started-with-syntax-transformation"></a>開始使用語法轉換
 
@@ -30,7 +30,7 @@ ms.locfileid: "49122562"
 
 第一個語法轉換將會示範 Factory 方法。 您會使用 `using System.Collections.Generic;` 陳述式取代 `using System.Collections;` 陳述式。 此範例示範如何使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> Factory 方法建立 <xref:Microsoft.CodeAnalysis.CSharp.CSharpSyntaxNode?displayProperty=nameWithType> 物件。 針對每種**節點**、**權杖**或 **Trivia**，會有一個建立該型別執行個體的 Factory 方法。 您會透過由下往上撰寫節點的方式來建立語法樹狀結構。 然後，使用您建立的新樹狀結構來取代現有節點，以轉換現有的程式。
 
-啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定]。
+啟動 Visual Studio，然後建立新的 C# **獨立程式碼分析工具**專案。 在 Visual Studio 中，選擇 [檔案] > [新增] > [專案] 來顯示 [新增專案] 對話方塊。 在 [Visual C#] > [擴充性] 下，選擇 [獨立程式碼分析工具]。 此快速入門有兩個範例專案，因此請將方案命名為 **SyntaxTransformationQuickStart**，並將專案命名為 **ConstructionCS**。 按一下 [確定 **Deploying Office Solutions**]。
 
 此專案使用 <xref:Microsoft.CodeAnalysis.CSharp.SyntaxFactory?displayProperty=nameWithType> 類別方法來建構代表 `System.Collections.Generic` 命名空間的 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.NameSyntax?displayProperty=nameWithType>。
 
@@ -152,7 +152,7 @@ Type variable;
 
 最後，加入下列 `if` 陳述式以在初始設定式運算式符合所指定型別時，使用 `var` 關鍵字取代現有的型別名稱：
 
-[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#BindInitializer "Replace the initializer node")]
+[!code-csharp[ReplaceNode](../../../../samples/csharp/roslyn-sdk/SyntaxTransformationQuickStart/TransformationCS/TypeInferenceRewriter.cs#ReplaceNode "Replace the initializer node")]
 
 條件句是必要項目，因為宣告可能會將初始設定式運算式轉換為基底類別或介面。 若這是預期情況，則位於指派左邊與右邊的型別會不相符。 在這些案例中移除明確型別會使得程式的語意變更。 `var` 是指定為識別碼而非關鍵字，因為 `var` 是內容關鍵字。 前置與結尾 Trivia (空白字元) 會從舊類型名稱轉換為 `var` 關鍵字，以維持垂直空白字元與縮排。 相較於 `With*`，使用 `ReplaceNode` 可以更容易轉換 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax>，因為型別名稱實際上是宣告陳述式的下下層。
 

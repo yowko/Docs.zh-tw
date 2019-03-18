@@ -4,12 +4,12 @@ description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: b51341b25fb81d93f85ff33fe6f2225196126ea0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679485"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846099"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -176,10 +176,10 @@ namespace OcelotApiGw
             var builder = WebHost.CreateDefaultBuilder(args);
 
             builder.ConfigureServices(s => s.AddSingleton(builder))
-                                                          .ConfigureAppConfiguration(
-                              ic => ic.AddJsonFile(Path.Combine("configuration",
-                                                                "configuration.json")))
-                                                                .UseStartup<Startup>();
+                    .ConfigureAppConfiguration(
+                          ic => ic.AddJsonFile(Path.Combine("configuration",
+                                                            "configuration.json")))
+                    .UseStartup<Startup>();
             var host = builder.Build();
             return host;
         }
@@ -541,19 +541,19 @@ services.AddAuthentication(options =>
 
 在 Web 應用程式前端的 Kubernetes 中有一個輸入 Nginx 層加上數個 Ocelot API 閘道/BFF 是理想的架構，如下圖所示。
 
- ![Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。](./media/image41.png)
+![Kubernetes 輸入扮演著所有對應用程式流量的反向 Proxy 角色，其中包括通常不在 API 閘道範圍內的 Web 應用程式。](./media/image41.png)
 
 **圖 6-41**。 部署至 Kubernetes 時之 eShopOnContainers 中的輸入層
 
 當您將 eShopOnContainers 部署到 Kubernetes 時，它只會透過「輸入」公開一些服務或端點，基本上包括 URL 上的下列後置詞清單：
 
--   `/` 代表用戶端 SPA Web 應用程式
--   `/webmvc` 代表用戶端 MVC Web 應用程式
--   `/webstatus` 代表顯示狀態/健康狀態檢查的用戶端 Web 應用程式
--   `/webshoppingapigw` 代表 Web BFF 和購物商務程序
--   `/webmarketingapigw` 代表 Web BFF 和行銷商務程序
--   `/mobileshoppingapigw` 代表行動 BFF 和購物商務程序
--   `/mobilemarketingapigw` 代表行動 BFF 和行銷商務程序
+- `/` 代表用戶端 SPA Web 應用程式
+- `/webmvc` 代表用戶端 MVC Web 應用程式
+- `/webstatus` 代表顯示狀態/健康狀態檢查的用戶端 Web 應用程式
+- `/webshoppingapigw` 代表 Web BFF 和購物商務程序
+- `/webmarketingapigw` 代表 Web BFF 和行銷商務程序
+- `/mobileshoppingapigw` 代表行動 BFF 和購物商務程序
+- `/mobilemarketingapigw` 代表行動 BFF 和行銷商務程序
 
 部署到 Kubernetes 時，每個 Ocelot API 閘道會針對執行 API 閘道的每個 _Pod_ 使用不同的 “configuration.json” 檔案。 您可以透過掛接 (原本使用 deploy.ps1 指令碼) 根據名為 ‘ocelot’ 之 Kubernetes _config map_ 所建立的磁碟區，來提供那些 “configuration.json” 檔案。 每個容器會將其相關的設定檔掛接到名為 `/app/configuration` 的容器資料夾中。
 

@@ -3,12 +3,12 @@ title: 套用功能工程以對文字資料進行模型訓練 - ML.NET
 description: 了解如何使用 ML.NET 套用功能工程以對文字資料進行模型訓練
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 8733db281dbc60ae3f4ac0c139c482b39089f2b8
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e26a4b293869b7cdad3c439237bd0145cafa314a
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680070"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844353"
 ---
 # <a name="apply-feature-engineering-for-machine-learning-model-training-on-textual-data-with-mlnet"></a>使用 ML.NET 套用功能工程以對文字資料進行機器學習模型訓練
 
@@ -30,6 +30,7 @@ ms.locfileid: "57680070"
 
 下列範例示範使用 [Wikipedia detox 資料集](https://github.com/dotnet/machinelearning/blob/master/test/data/wikipedia-detox-250-line-data.tsv)的 ML.NET 文字功能擷取機制：
 
+<!-- markdownlint-disable MD010 -->
 ```console
 Sentiment   SentimentText
 1   Stop trolling, zapatancas, calling me a liar merely demonstartes that you arer Zapatancas. You may choose to chase every legitimate editor from this site and ignore me but I am an editor with a record that isnt 99% trolling and therefore my wishes are not to be completely ignored by a sockpuppet like yourself. The consensus is overwhelmingly against you and your trolling lover Zapatancas,  
@@ -37,6 +38,7 @@ Sentiment   SentimentText
 0   " *::Your POV and propaganda pushing is dully noted. However listing interesting facts in a netral and unacusitory tone is not POV. You seem to be confusing Censorship with POV monitoring. I see nothing POV expressed in the listing of intersting facts. If you want to contribute more facts or edit wording of the cited fact to make them sound more netral then go ahead. No need to CENSOR interesting factual information. "
 0   ::::::::This is a gross exaggeration. Nobody is setting a kangaroo court. There was a simple addition concerning the airline. It is the only one disputed here.   
 ```
+<!-- markdownlint-enable MD010 -->
 
 ```csharp
 // Define the reader: specify the data columns and where to find them in the text file.

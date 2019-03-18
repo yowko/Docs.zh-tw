@@ -3,12 +3,12 @@ title: C# 的歷史 - C# 指南
 description: 最早的語言版本有哪些內容，而在之後有什麼演變？
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: c750bf8e1ae6dd94c11dc887921c5c365cc04b10
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 84274f8ddfd8295d5db1e861c790c134ba30c6e2
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981929"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126145"
 ---
 # <a name="the-history-of-c"></a>C\# 的歷史
 
@@ -79,12 +79,12 @@ C# 2.0 版帶來了迭代器。 簡單的說，迭代器讓您使用 `foreach` �
 
 ## <a name="c-version-30"></a>C# 3.0 版
 
-C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言功能的完整陣容實際上是在 .NET Framework 3.5 版時齊備。 這個版本標記了 C# 發展的一個重大變更。 它將 C# 樹立為真正令人敬佩的程式設計語言。 讓我們看看此版本的一些主要功能：
+C# 3.0 版在 2007 年晚期和 Visual Studio 2008 一起出現，不過語言功能的完整陣容實際上是在 .NET Framework 3.5 版時齊備。 這個版本標記了 C# 發展的一項重大變更。 它將 C# 樹立為真正令人敬佩的程式設計語言。 讓我們看看此版本的一些主要功能：
 
 - [自動實作屬性](../programming-guide/classes-and-structs/auto-implemented-properties.md)
 - [匿名型別](../programming-guide/classes-and-structs/anonymous-types.md)
 - [查詢運算式](../linq/query-expression-basics.md)
-- [Lambda 運算式](../lambda-expressions.md)
+- [Lambda 運算式](../programming-guide/statements-expressions-operators/lambda-expressions.md)
 - [運算式樹狀架構](../expression-trees.md)
 - [擴充方法](../programming-guide/classes-and-structs/extension-methods.md)
 - [隱含型別區域變數](../language-reference/keywords/var.md)
@@ -110,7 +110,7 @@ C# 4.0 版要堅守 3.0 版的奠基狀態會很困難。 3.0 版開始，C# 讓
 - [泛型 covariant 和 contravariant](../../standard/generics/covariance-and-contravariance.md)
 - [內嵌 Interop 型別](../../framework/interop/type-equivalence-and-embedded-interop-types.md)
 
-內嵌 interop 型別能減輕部署痛苦。 泛型 covariance 和 contravariance 可讓您有更強大的功能來使用泛型，但它們有點學術，可能最受架構和程式庫作者欣賞。 具名和選擇性參數可讓您消除許多方法多載，並提供方便性。 但這些功能沒有一個能完全改變典範。
+內嵌 interop 型別能減輕部署痛苦。 泛型 covariance 和 contravariance 可讓您有更強大的功能來使用泛型，但它們有點學術，可能最受架構和程式庫作者欣賞。 具名和選擇性參數可讓您消除許多方法多載，並提供方便性。 但這些功能沒有一項能完全改變典範。
 
 主要功能是導入 `dynamic` 關鍵字。 `dynamic` 關鍵字為 C# 4.0 版導入在編譯時期型別設定時覆寫編譯器的功能。 藉由使用動態關鍵字，您可以建立類似於動態型別語言 (例如 JavaScript) 的建構。 您可以建立 `dynamic x = "a string"` 然後將它加六，留給執行階段找出接下來要採取的動作。
 

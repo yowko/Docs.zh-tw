@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
-description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 2 的最新資訊。
+description: 大致了解 C# 8.0 中可用的新功能。 本文為適用於預覽 2 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: 3a19cc7ffae706769cf1b1a19fdaff7c7cdc07fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674441"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843935"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -29,9 +29,9 @@ ms.locfileid: "57674441"
 - [索引和範圍](#indices-and-ranges)
 
 > [!NOTE]
-> 此文章內容為 C# 8.0 預覽 2 的最新更新。
+> 本文內容為 C# 8.0 預覽 2 的最新更新。
 
-此文章的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
+本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
@@ -51,6 +51,7 @@ public enum Rainbow
     Red,
     Orange,
     Yellow,
+    Green,
     Blue,
     Indigo,
     Violet
@@ -66,6 +67,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
         Rainbow.Red    => new RGBColor(0xFF, 0x00, 0x00),
         Rainbow.Orange => new RGBColor(0xFF, 0x7F, 0x00),
         Rainbow.Yellow => new RGBColor(0xFF, 0xFF, 0x00),
+        Rainbow.Green  => new RGBColor(0x00, 0xFF, 0x00),
         Rainbow.Blue   => new RGBColor(0x00, 0x00, 0xFF),
         Rainbow.Indigo => new RGBColor(0x4B, 0x00, 0x82),
         Rainbow.Violet => new RGBColor(0x94, 0x00, 0xD3),
@@ -83,7 +85,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
 對比該語法與使用傳統 `switch` 陳述式的對等程式碼：
 
 ```csharp
-public static RGBColor fromRainbowClassic(Rainbow colorBand)
+public static RGBColor FromRainbowClassic(Rainbow colorBand)
 {
     switch (colorBand)
     {
@@ -93,6 +95,8 @@ public static RGBColor fromRainbowClassic(Rainbow colorBand)
             return new RGBColor(0xFF, 0x7F, 0x00);
         case Rainbow.Yellow:
             return new RGBColor(0xFF, 0xFF, 0x00);
+        case Rainbow.Green:
+            return new RGBColor(0x00, 0xFF, 0x00);
         case Rainbow.Blue:
             return new RGBColor(0x00, 0x00, 0xFF);
         case Rainbow.Indigo:
@@ -107,7 +111,7 @@ public static RGBColor fromRainbowClassic(Rainbow colorBand)
 
 ### <a name="property-patterns"></a>屬性模式
 
-**屬性模式**使您得以比對所檢查物件的屬性。 試想必須根據購買者地址計算營業稅的電子商務網站。 `Address` 類別的核心功能並非負責進行該計算。 此計算會隨著時間變更，而且可能比地址格式的變更更加頻繁。 營業稅額取決於地址的 `State` 屬性。 下列方法會使用屬性模式，從地址及價格計算營業稅：
+**屬性模式**使您得以比對所檢查物件的屬性。 試想必須根據購買者地址計算營業稅的電子商務網站。 `Address` 類別的核心功能並非負責進行該計算。 這項計算會隨著時間變更，而且可能比地址格式的變更更加頻繁。 營業稅額取決於地址的 `State` 屬性。 下列方法會使用屬性模式，從地址及價格計算營業稅：
 
 ```csharp
 public static decimal ComputeSalesTax(Address location, decimal salePrice) =>

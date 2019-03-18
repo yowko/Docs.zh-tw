@@ -3,16 +3,16 @@ title: 區域函式與 Lambda 運算式的比較
 description: 了解區域函式可能比 Lambda 運算式更適用的原因。
 ms.date: 06/27/2016
 ms.assetid: 368d1752-3659-489a-97b4-f15d87e49ae3
-ms.openlocfilehash: 2b98ebeeb3866779715fa629c2518f739e196ae8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 17ad1e8782adbf9e0f892d72849e58ef9c5ddce1
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43740428"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125768"
 ---
 # <a name="local-functions-compared-to-lambda-expressions"></a>區域函式與 Lambda 運算式的比較
 
-第一眼，[區域函式](programming-guide/classes-and-structs/local-functions.md)和 [Lambda 運算式](lambda-expressions.md)十分類似。 在許多情況下，選擇使用 Lambda 運算式或區域函式與樣式和個人喜好設定相關。 不過，您應該注意可使用任一選項的實際差異。
+第一眼，[區域函式](programming-guide/classes-and-structs/local-functions.md)和 [Lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)十分類似。 在許多情況下，選擇使用 Lambda 運算式或區域函式與樣式和個人喜好設定相關。 不過，您應該注意可使用任一選項的實際差異。
 
 讓我們檢查階乘演算法的區域函式與 Lambda 運算式實作差異。 首先是使用區域函式的版本：
 
