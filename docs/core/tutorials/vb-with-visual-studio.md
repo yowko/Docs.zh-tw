@@ -7,22 +7,22 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: de7a423bb3e9a288d17c86e9e0afc3b00f6fd80b
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 8b9d87922b543f97d4b36a37759d661298318e1e
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362258"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57846281"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 .NET Core SDK 來建置 Visual Basic Hello World 應用程式
 
-本主題提供使用 Visual Studio 2017 的 Visual Basic，針對簡單 .NET Core 主控台應用程式進行建置、偵錯及發行的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
+此主題提供使用 Visual Studio 2017 的 Visual Basic，針對簡單 .NET Core 主控台應用程式進行建置、偵錯及發行的逐步指示。 Visual Studio 2017 提供功能完整的開發環境來建置 .NET Core 應用程式。 只要應用程式沒有平台特定的相依性，應用程式就可以在 .NET Core 的任何目標平台，以及安裝 .NET Core 的任何系統上執行。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 (英文)](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)。 您可以使用 .NET Core 2.0 開發應用程式。
 
-如需詳細資訊，請參閱 [Windows 上 .NET Core 的必要條件](../../core/windows-prerequisites.md)。
+如需詳細資訊，請參閱 [Windows 上 .NET Core 的先決條件](../../core/windows-prerequisites.md)。
 
 ## <a name="a-simple-hello-world-application"></a>簡單的 Hello World 應用程式
 
@@ -82,9 +82,6 @@ ms.locfileid: "54362258"
 
 - 若要發行應用程式可散發版本，請參閱[使用 Visual Studio 2017 發行您的 .NET Core Hello World 應用程式](publishing-with-visual-studio.md)。
 
-<!--
-## Related topics
+## <a name="related-topics"></a>相關主題
 
-Instead of a console application, you can also build a class library with .NET Core and Visual Studio 2017. For a step-by-step introduction, see [Building a class library with C# and .NET Core in Visual Studio 2017](library-with-visual-studio.md).
-
-You can also develop a .NET Core console app on Mac, Linux, and Windows by using [Visual Studio Code](https://code.visualstudio.com/), a downloadable code editor. For a step-by-step tutorial, see [Getting Started with Visual Studio Code](with-visual-studio-code.md). -->
+除了主控台應用程式之外，您也可以使用 Visual Basic、.NET Core 和 Visual Studio 2017 建置 .NET Standard 類別庫。 如需逐步介紹，請參閱[在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core SDK 建置 .NET Standard 程式庫](vb-library-with-visual-studio.md)。

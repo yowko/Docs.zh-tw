@@ -2,15 +2,15 @@
 title: HOW TO：尋找相關項目 (XPath-LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 47609f9bf047000585c56387acf648bcfa6ee5b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617404"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57843335"
 ---
-# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>HOW TO：尋找相關項目 (XPath-LINQ to XML) (C#)
-本主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
+# <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>作法：尋找相關項目 (XPath-LINQ to XML) (C#)
+此主題顯示如何取得在其他項目值所參考的屬性上選取的項目。  
   
  XPath 運算式為：  
   
@@ -19,7 +19,7 @@ ms.locfileid: "54617404"
 ## <a name="example"></a>範例  
  此範例會尋找第 12 個 `Order` 項目，然後尋找該順序的客戶。  
   
- 請注意，在 .Net 的清單中進行索引時，是以「零」為基礎。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
+ 請注意，在 .NET 的清單中進行索引時，是以「零」為基礎。 在 XPath 述詞的節點集合中進行索引時，是以「一」為基礎。 此範例會反映這個差異。  
   
  此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml-2.md)。  
   

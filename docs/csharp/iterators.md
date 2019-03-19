@@ -3,12 +3,12 @@ title: 迭代器
 description: 了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: d9139f565fb1e426cc1b8cef530187877bdde0e9
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33218341"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126041"
 ---
 # <a name="iterators"></a>迭代器
 
@@ -21,13 +21,13 @@ ms.locfileid: "33218341"
 + 擴充 [LINQ](linq/index.md) 或其他程式庫。
 + 建立資料管線，其中的資料會透過迭代器方法有效率地流動。
 
-C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
+C# 語言會為上述兩個案例提供功能。 此文章將概述這些功能。
 
-本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/samples/blob/master/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+此教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/samples/blob/master/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 
-列舉集合很簡單︰`foreach` 關鍵字會列舉集合，並對集合中的每個項目執行一次內嵌陳述式：
+列舉集合很簡單：`foreach` 關鍵字會列舉集合，並對集合中的每個元素執行一次內嵌陳述式：
  
 ```csharp
 foreach (var item in collection)
@@ -105,7 +105,7 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 }
 ```
 
-迭代器方法有一項重要限制︰相同的方法中不能同時有 `return` 陳述式和 `yield return` 陳述式。 系統將不會編譯下列程式碼：
+迭代器方法有一個重要限制︰相同的方法中不能同時有 `return` 陳述式和 `yield return` 陳述式。 系統將不會編譯下列程式碼：
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -122,7 +122,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-這項限制通常不成問題。 您可以選擇在整個方法中使用 `yield return`，或是將原始方法分成多個方法，有些方法使用 `return`，而有些方法使用 `yield return`。
+此限制通常不成問題。 您可以選擇在整個方法中使用 `yield return`，或是將原始方法分成多個方法，有些方法使用 `return`，而有些方法使用 `yield return`。
 
 您可以稍微修改最後一個方法，以在所有位置使用 `yield return`：
 
@@ -191,7 +191,7 @@ while (enumerator.MoveNext())
 }
 ```
 
-因為舊版行為可能會導致很難診斷涉及 Lambda 運算式的 Bug ，所以已變更此行為。 如需詳細資訊，請參閱 [Lambda 運算式](lambda-expressions.md)一節。 
+因為舊版行為可能會導致很難診斷涉及 Lambda 運算式的 Bug ，所以已變更此行為。 如需 Lambda 運算式的詳細資訊，請參閱 [Lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)。
 
 編譯器所產生的實際程式碼稍微複雜一點，而且會處理 `GetEnumerator()` 所傳回的物件實作 `IDisposable` 介面的情況。 完全展開會產生類似如下的程式碼：
 

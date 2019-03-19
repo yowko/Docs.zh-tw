@@ -3,18 +3,18 @@ title: 使用可為 Null 的參考類型進行設計
 description: 本進階教學課程提供可為 Null 的參考類型簡介。 您將了解如何在參考值可能為 Null 時表達您的設計意圖，以及在它們不能為 Null 時強制執行編譯器。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 1c0df9b129e9c434eb3b5e6e50144013c2c0462e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442096"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846580"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>教學課程：使用可為 Null 與不可為 Null 的參考類型更清楚地表達您的設計意圖
 
 C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實值類型補充實值類型的相同方式來補充參考類型。 您可以藉由將 `?` 附加至類型，來將變數宣告為**可為 Null 的參考類型**。 例如，`string?` 代表可為 Null 的 `string`。 您可以使用這些新類型更清楚地表達設計意圖：部分變數「永遠都必須有值」，而其他變數「可能會遺漏值」。
 
-在本教學課程中，您將了解如何：
+在此教學課程中，您將了解如何：
 
 > [!div class="checklist"]
 > * 在設計中併入可為 Null 與不可為 Null 的參考類型
@@ -22,15 +22,15 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 > * 撰寫程式碼，以使編譯器強制執行這些設計決策。
 > * 在您自己的設計中使用可為 Null 的參考功能
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-您將需要設定您的機器，以執行 .NET Core (包括 C# 8.0 搶鮮版 (Beta) 編譯器)。 C# 8 搶鮮版 (Beta) 編譯器可在 [Visual Studio 2019 preview 2](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview)，或 [.NET Core 3.0 preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) 中取得。
+您將需要設定您的機器，以執行 .NET Core (包括 C# 8.0 搶鮮版 (Beta) 編譯器)。 您可以在 [Visual Studio 2019 preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) 或 [.NET Core 3.0 preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) 中找到 C# 8 搶鮮版 (Beta) 編譯器。
 
-本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
+此教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
 ## <a name="incorporate-nullable-reference-types-into-your-designs"></a>在設計中併入可為 Null 的參考類型
 
-在本教學課程中，您會建置程式庫來將問卷執行模型化。 程式碼會使用可為 Null 的參考類型和不可為 Null 的參考類型來代表真實世界的概念。 問卷問題絕對不能是 Null。 受訪者可能不想回答問題。 在此情況下，回應可能是 Null。
+在此教學課程中，您會建置程式庫來將問卷執行模型化。 程式碼會使用可為 Null 的參考類型和不可為 Null 的參考類型來代表真實世界的概念。 問卷問題絕對不能是 Null。 受訪者可能不想回答問題。 在此情況下，回應可能是 Null。
 
 您將為此範例撰寫的程式碼會表達該意圖，而編譯器會強制執行該意圖。
 
@@ -66,7 +66,7 @@ C# 8 引進了**可為 Null 的參考類型**，其可利用可為 Null 的實�
 - 問題的集合不應為 Null。
 - 受訪者的集合不應為 Null。
 
-當您撰寫程式碼時，您會看到將不可為 Null 的參考類型作為參考的預設值，可避免可能導致 Null 參考例外狀況的常見錯誤。 本教學課程的單元之一是您做了哪些變數可以或不可以是 Null 的決策。 此語言不提供語法來表達那些決策。 但現在已提供。
+當您撰寫程式碼時，您會看到將不可為 Null 的參考類型作為參考的預設值，可避免可能導致 Null 參考例外狀況的常見錯誤。 此教學課程的單元之一是您做了哪些變數可以或不可以是 Null 的決策。 此語言不提供語法來表達那些決策。 但現在已提供。
 
 您要建置的應用程式將會執行下列步驟：
 
@@ -146,7 +146,7 @@ surveyRun.AddQuestion(QuestionType.Text, default);
 
 ## <a name="create-respondents-and-get-answers-to-the-survey"></a>建立受訪者並取得問卷的答案
 
-接著，撰寫程式碼來產生問卷的答案。 這項過程涉及幾項小型工作：
+接著，撰寫程式碼來產生問卷的答案。 此程序涉及幾個小型工作：
 
 1. 建置方法來產生受訪者物件。 這些物件代表系統要求您填寫問卷的人員。
 1. 建置邏輯來模擬向受訪者詢問問題，然後收集答案，或記下受訪者沒有回答。
@@ -181,7 +181,7 @@ namespace NullableIntroduction
 
 問卷答案的儲存體是 `Dictionary<int, string>?`，指出它可能是 Null。 您正在使用新的語言功能，來向編譯器和稍後要讀取您程式碼的任何人宣告您的設計意圖。 如果您總是在未先檢查 Null 值的情況下為 `surveyResponses` 取值，將收到編譯器警告。 您不會在 `AnswerSurvey` 方法中收到警告，因為編譯器可判斷並未將 `surveyResponses` 變數設定為上述的非 Null 值。
 
-針對遺漏的問題使用 `null`，醒目提示使用可為 Null 參考型別時的一項關鍵點：您的目標不是從程式中移除所有 `null` 值。 您的目標是確保您所撰寫程式碼能夠表達出設計意圖。 遺漏值是在您程式碼中進行表達的必要概念。 `null` 值是表達那些遺漏值的清楚方式。 嘗試移除所有 `null` 值只會導向定義其他方式，在不使用 `null` 的情況下表達那些遺漏值。
+針對遺漏的問題使用 `null`，醒目提示使用可為 Null 參考型別時的一個關鍵點：您的目標不是從程式中移除所有 `null` 值。 您的目標是確保您所撰寫程式碼能夠表達出設計意圖。 遺漏值是在您程式碼中進行表達的必要概念。 `null` 值是表達那些遺漏值的清楚方式。 嘗試移除所有 `null` 值只會導向定義其他方式，在不使用 `null` 的情況下表達那些遺漏值。
 
 接著，您需要在 `SurveyRun` 類別中撰寫 `PerformSurvey` 方法。 在 `SurveyRun` 類別中新增下列程式碼：
 

@@ -3,16 +3,16 @@ title: 運算式樹狀架構
 description: 了解 .NET Core 中的運算式樹狀架構，以及如何使用它們來表示您可以檢查、修改和執行的程式碼結構。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: 56509f1eb0f2bdca8a8f3a51df958d42e95af6f4
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190732"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125833"
 ---
 # <a name="expression-trees"></a>運算式樹狀架構
 
-如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分 (如果您不熟悉 LINQ，則可能需要閱讀 [LINQ 教學課程](linq/index.md)及有關 [Lambda 運算式](lambda-expressions.md)的教學課程，再開始進行本主題)。「運算式樹狀架構」提供與函式引數更豐富的互動。
+如果您使用過 LINQ，您會有豐富的程式庫使用經驗，其中 `Func` 類型是 API 集合的一部分 (如果您不熟悉 LINQ，則可能需要閱讀 [LINQ 教學課程](linq/index.md)與有關 [Lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)的文章，再開始進行此主題)。「運算式樹狀架構」提供與函式引數更豐富的互動。
 
 當您建立 LINQ 查詢時，通常會使用 Lambda 運算式來撰寫函式引數。 在一般 LINQ 查詢中，這些函式引數會轉換成編譯器所建立的委派。 
 
@@ -22,7 +22,7 @@ ms.locfileid: "50190732"
 您可能已撰寫使用運算式樹狀架構的程式碼。 Entity Framework 的 LINQ API 接受運算式樹狀架構作為 LINQ 查詢運算式模式的引數。
 這可讓 [Entity Framework](/ef/) 將以 C# 撰寫的查詢，轉譯為在資料庫引擎中執行的 SQL。 另一個範例是 [Moq](https://github.com/Moq/moq)，這是 .NET 的熱門模擬架構。
 
-本教學課程的其餘章節會探索運算式樹狀架構為何、查看支援運算式樹狀架構的架構類別，並示範如何使用運算式樹狀架構。 您將了解如何讀取運算式樹狀架構、如何建立運算式樹狀架構、如何建立修改後的運算式樹狀架構，以及如何執行由運算式樹狀架構表示的程式碼。 閱讀完後，您將能夠使用這些結構來建立豐富彈性的演算法。
+此教學課程的其餘章節會探索運算式樹狀架構為何、查看支援運算式樹狀架構的架構類別，並示範如何使用運算式樹狀架構。 您將了解如何讀取運算式樹狀架構、如何建立運算式樹狀架構、如何建立修改後的運算式樹狀架構，以及如何執行由運算式樹狀架構表示的程式碼。 閱讀完後，您將能夠使用這些結構來建立豐富彈性的演算法。
 
 1. [說明運算式樹狀架構](expression-trees-explained.md)
 

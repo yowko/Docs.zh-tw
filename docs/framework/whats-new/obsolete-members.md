@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63d5213ac8544b41d79ccb78d96b232c7c66936
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5920935637393f8cfd11aed85a600dc28d49011
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635971"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58038183"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
-本文中的表格列出 .NET Framework 4.5 和更新版本中依組件分組的已淘汰類型成員。 請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。 本主題不會列出過時的類型成員。 如需過時的型別清單，請參閱[已淘汰類型](../../../docs/framework/whats-new/obsolete-types.md)。  
+此文章中的表格列出 .NET Framework 4.5 和更新版本中依組件分組的已淘汰類型成員。 請使用下列連結，查看每個組件中過時的成員和建議的替代做法清單。 此主題不會列出過時的類型成員。 如需過時的型別清單，請參閱[已淘汰類型](obsolete-types.md)。  
   
 -   [系統組件中過時的成員](#SystemMembers)  
   
@@ -185,7 +185,7 @@ ms.locfileid: "54635971"
 |<xref:System.Reflection.Emit.ParameterBuilder?displayProperty=nameWithType>|<xref:System.Reflection.Emit.ParameterBuilder.SetMarshal%2A>|有可用的替代 API ：請改為發出 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=nameWithType> 自訂屬性。|  
 |<xref:System.Resources.ResourceManager?displayProperty=nameWithType>|<xref:System.Resources.ResourceManager.ResourceSets>|請改為呼叫 <xref:System.Resources.ResourceManager.InternalGetResourceSet%28System.Globalization.CultureInfo%2CSystem.Boolean%2CSystem.Boolean%29?displayProperty=nameWithType>。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A>|<xref:System.Runtime.InteropServices.Marshal.GetManagedThunkForUnmanagedMethodPtr%2A> 方法已被取代，將在未來的版本中移除。|  
-|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> 方法已被取代。 請使用裝載 API 來執行這項作業。|  
+|<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A>|<xref:System.Runtime.InteropServices.Marshal.GetThreadFromFiberCookie%2A> 方法已被取代。 請使用裝載 API 來執行此作業。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetTypeInfoName%28System.Runtime.InteropServices.UCOMITypeInfo%29>|請改用 <xref:System.Runtime.InteropServices.Marshal.GetTypeInfoName%28System.Runtime.InteropServices.ComTypes.ITypeInfo%29?displayProperty=nameWithType>。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibGuid%28System.Runtime.InteropServices.UCOMITypeLib%29>|請改用 <xref:System.Runtime.InteropServices.Marshal.GetTypeLibGuid%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=nameWithType>。|  
 |<xref:System.Runtime.InteropServices.Marshal?displayProperty=nameWithType>|<xref:System.Runtime.InteropServices.Marshal.GetTypeLibLcid%28System.Runtime.InteropServices.UCOMITypeLib%29>|請改用 <xref:System.Runtime.InteropServices.Marshal.GetTypeLibLcid%28System.Runtime.InteropServices.ComTypes.ITypeLib%29?displayProperty=nameWithType>。|  
@@ -732,7 +732,7 @@ ms.locfileid: "54635971"
   
 <a name="IEHost"></a>   
 ### <a name="assembly-iehostdll-and-ieexecexe"></a>組件︰IEHost.dll 和 IEExec.exe  
- IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有類型和成員都已經過時，而且在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中不再支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 這項技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。  
+ IEHost.dll 和 IEExec.exe 組件已經從 .NET Framework 中移除。 其所有類型和成員都已經過時，而且在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中不再支援。 這些組件之前是用來裝載 Windows Form 控制項以及在 Internet Explorer 中執行可執行檔。 此技術的替代做法包括 ClickOnce、XAML 瀏覽器應用程式 (XBAP) 和 Microsoft Silverlight。  
   
 <a name="isymwrapper"></a>   
 ### <a name="assembly-isymwrapperdll"></a>組件︰ISymWrapper.dll  
@@ -799,5 +799,5 @@ ms.locfileid: "54635971"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 登錄機碼僅適用於 Win9x，不再受到這個 .NET Framework 版本的支援。 請改用 `PerformanceData` 登錄機碼。 這個屬性將從未來的 Framework 版本中移除。|  
   
 ## <a name="see-also"></a>另請參閱
-- [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
-- [過時的類型](../../../docs/framework/whats-new/obsolete-types.md)
+- [類別庫中已淘汰的功能](whats-obsolete.md)
+- [過時的類型](obsolete-types.md)

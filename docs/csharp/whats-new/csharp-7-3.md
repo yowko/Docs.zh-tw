@@ -2,12 +2,12 @@
 title: C# 7.3 的新功能
 description: C# 7.3 新功能的概觀
 ms.date: 05/16/2018
-ms.openlocfilehash: 570da53059242c0242609ddcba5cb23f1728aa9f
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48873796"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028681"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 的新功能
 
@@ -51,7 +51,7 @@ unsafe struct S
 }
 ```
 
-在舊版的 C# 中，您需要釘選變數，才能存取屬於 `myFixedField` 的其中一個整數。 現在，下列程式碼會在安全的內容中編譯：
+在舊版的 C# 中，您需要釘選變數，才能存取屬於 `myFixedField` 的其中一個整數。 現在，下列程式碼會進行編譯而不將變數 `p` 固定在個別的 `fixed` 陳述式內：
 
 ```csharp
 class C

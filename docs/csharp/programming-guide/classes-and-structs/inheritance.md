@@ -10,12 +10,12 @@ helpviewer_keywords:
 - virtual methods [C#]
 - C# language, inheritance
 ms.assetid: 81d64ee4-50f9-4d6c-a8dc-257c348d2eea
-ms.openlocfilehash: a6e9e095caaa8c0e4330df3f766dbef927c5acd2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9ad7253fb9efc891e1f0fdea118e1fe7bde6a857
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202349"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58125911"
 ---
 # <a name="inheritance-c-programming-guide"></a>繼承 (C# 程式設計手冊)
 
@@ -30,8 +30,7 @@ ms.locfileid: "57202349"
   
  下圖顯示 `WorkItem` 類別，代表某些商務程序中的工作項目。 它和所有類別一樣，會衍生自 <xref:System.Object?displayProperty=nameWithType> 並繼承其所有方法。 `WorkItem` 會新增自己的五個成員。 由於不會繼承建構函式，因此這些成員會包含一個建構函式。 `ChangeRequest` 類別繼承自 `WorkItem`，並代表特定類型的工作項目。 `ChangeRequest` 會在繼承自 `WorkItem` 和 <xref:System.Object> 的成員中，另外新增兩個成員。 它必須新增自己的建構函式，也會新增 `originalItemID`。 `originalItemID` 屬性可讓 `ChangeRequest` 執行個體與套用變更要求的原始 `WorkItem` 產生關聯。  
   
- ![類別繼承](../../../csharp/programming-guide/classes-and-structs/media/class_inheritance.png "Class_Inheritance")  
-類別繼承  
+ ![顯示類別繼承的圖表](./media/inheritance/class-inheritance-diagram.png)  
   
  下列範例示範如何以 C# 表示上圖所示範的類別關聯性。 此範例也會示範 `WorkItem` 如何覆寫 <xref:System.Object.ToString%2A?displayProperty=nameWithType> 虛擬方法，以及 `ChangeRequest` 類別如何繼承方法的 `WorkItem` 實作。  
   

@@ -4,19 +4,19 @@ description: 探索如何在二元分類案例中使用 ML.NET，以了解如何
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: d7e46b489506f4adad843ba5315afde4c7689b4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723318"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57845787"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
-本範例教學課程說明如何在 Visual Studio 2017 中使用 C#，透過 .NET Core 主控台應用程式使用 ML.NET 來建立情感分類器，以預測正面或負面的情感。 在機器學習的領域中，此類型的預測被稱為二元分類。
+此範例教學課程說明如何在 Visual Studio 2017 中使用 C#，透過 .NET Core 主控台應用程式使用 ML.NET 來建立情感分類器，以預測正面或負面的情感。 在機器學習的領域中，此類型的預測被稱為二元分類。
 
 > [!NOTE]
-> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+> 此主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
 
 此教學課程與關聯的範例目前是使用 **ML.NET 0.11 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊
 
@@ -102,7 +102,7 @@ ms.locfileid: "57723318"
 
 1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，輸入 "SentimentAnalysis"，然後選取 [確定] 按鈕。
 
-2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
+2. 在您的專案中建立名為 *Data* 的目錄以儲存資料集檔案：
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
 
@@ -180,7 +180,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 ```
 ## <a name="load-the-data"></a>載入資料
 
-因為您先前所建立的 `SentimentData` 資料模型類型符合資料集結構描述，所以您可以針對 <xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29> 使用 `MLContext.Data.ReadFromTextFile` 包裝函式，來將初始化、對應和資料集載入合併成一行程式碼。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。 
+因為您先前所建立的 `SentimentData` 資料模型類型符合資料集結構描述，所以您可以針對 [LoadFromTextFile 方法](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)使用 `MLContext.Data.LoadFromTextFile` 包裝函式，來將初始化、對應和資料集載入合併成一行程式碼。 它會傳回 <xref:Microsoft.Data.DataView.IDataView>。 
 
  作為 `Transforms` 的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
@@ -215,7 +215,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 * 根據測試資料預測情感。
 * 傳回模型。
 
-請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `Train` 方法：
+請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `BuildAndTrainModel` 方法：
 
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView splitTrainSet)

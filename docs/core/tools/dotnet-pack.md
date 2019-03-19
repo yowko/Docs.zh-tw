@@ -2,12 +2,12 @@
 title: dotnet pack 命令
 description: dotnet pack 命令會建立 .NET Core 專案的 NuGet 套件。
 ms.date: 12/04/2018
-ms.openlocfilehash: ca88dd4c7dfd45c9295043cd2352ba6bdf5464af
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 43ee31c7cd070cf0e73975c1444ef13496afae91
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170089"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "58020927"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 

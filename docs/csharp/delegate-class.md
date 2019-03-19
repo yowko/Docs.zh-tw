@@ -3,18 +3,18 @@ title: System.Delegate 和 `delegate` 關鍵字
 description: 了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 39dca1053f87a5059bdc60f8b722091ba991cbd5
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827296"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58126171"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
 [上一步](delegates-overview.md)
 
-本文將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
+此文章將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
 
 ## <a name="defining-delegate-types"></a>定義委派型別
 
@@ -67,7 +67,7 @@ int result = comparator(left, right);
 在上述該行中，程式碼會「叫用」附加至委派的方法。
 您可將變數視為方法名稱，並使用一般方法呼叫語法加以叫用。
 
-該行程式碼會進行不安全的假設︰因此無法保證目標已新增至委派。 如果未附加任何目標，上述行會導致系統擲回 `NullReferenceException`。 我們會在本[系列](delegates-patterns.md)稍後說明可用來解決這個問題的慣用語，這些慣用語比簡單的 null 檢查更複雜。
+該程式碼做了一個不安全的假設：無法保證已將目標新增至委派。 如果未附加任何目標，上述行會導致系統擲回 `NullReferenceException`。 我們會在本[系列](delegates-patterns.md)稍後說明可用來解決這個問題的慣用語，這些慣用語比簡單的 null 檢查更複雜。
 
 ## <a name="assigning-adding-and-removing-invocation-targets"></a>指派、加入和移除引動過程的目標
 
@@ -99,14 +99,14 @@ Comparison<string> comparer = CompareLength;
 phrases.Sort(comparer);
 ```
 
-適用於作為委派目標的方法是小型方法的情況，且通常會使用 [Lambda 運算式](lambda-expressions.md)語法來執行指派：
+適用於作為委派目標的方法是小型方法的情況，且通常會使用 [Lambda 運算式](./programming-guide/statements-expressions-operators/lambda-expressions.md)語法來執行指派：
 
 ```csharp
 Comparison<string> comparer = (left, right) => left.Length.CompareTo(right.Length);
 phrases.Sort(comparer);
 ```
 
-[稍後章節](delegates-patterns.md)會進一步說明如何針對委派目標使用 Lambda 運算式。
+[稍後小節](delegates-patterns.md)會進一步說明如何針對委派目標使用 Lambda 運算式。
 
 Sort() 範例通常會將單一的目標方法附加至委派。 即便如此，委派物件仍支援具有多個目標方法 (附加至委派物件) 的引動過程清單。
 

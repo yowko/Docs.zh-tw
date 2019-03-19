@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 1e38f9d9-8f84-46ee-a15f-199aec4f2e34
-ms.openlocfilehash: 45dc8b72bd61fc9aa04c977a2dc67c37384697fc
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 79154713e370029ff31591523525fb05422571d8
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677522"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57844732"
 ---
 # <a name="async-in-depth"></a>深入了解非同步
 
@@ -21,12 +21,12 @@ ms.locfileid: "57677522"
 
 Task 是用來實作稱為 [Promise 並行存取模型](https://en.wikipedia.org/wiki/Futures_and_promises)的建構。  簡單地說，它們會對您「承諾」工作將於稍後完成，讓您以無障礙的 API 來協調此承諾。
 
-*   `Task` 代表不會傳回值的單一作業。
-*   `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
+* `Task` 代表不會傳回值的單一作業。
+* `Task<T>` 代表會傳回類型為 `T` 之值的單一作業。
 
 您必須了解 Task 是以非同步方式執行工作的抽象層，而「不是」透過執行緒的抽象層。 根據預設，Task 會在目前的執行緒上執行，並視需要將工作委派給作業系統。 您可以選擇明確要求透過 `Task.Run` API 在個別執行緒上執行工作。
 
-Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 (如果是 `Task<T>`)。 與 `await` 關鍵字的語言整合提供更高層級的抽象層來使用 Task。 
+Task 會公開 API 通訊協定，以監視、等候及存取 Task 的結果值 (如果是 `Task<T>`)。 與 `await` 關鍵字的語言整合提供更高層級的抽象層來使用 Task。
 
 使用 `await` 可在某個 Task 正在執行時，藉由將控制權轉讓給其呼叫端直到該 Task 完成為止，來允許您的應用程式或服務執行有用的工作。 您的程式碼不需要依賴回呼或事件，就能在 Task 完成之後繼續執行。 語言和工作 API 整合會為您執行此作業。 如果您使用 `Task<T>`，`await` 關鍵字會另外將工作完成時所傳回的值「解除包裝」。  以下將進一步說明其運作方式的細節。
 
@@ -43,7 +43,7 @@ public Task<string> GetHtmlAsync()
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     return client.GetStringAsync("https://www.dotnetfoundation.org");
 }
 ```
@@ -55,14 +55,14 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 {
     // Execution is synchronous here
     var client = new HttpClient();
-    
+
     // Execution of GetFirstCharactersCountAsync() is yielded to the caller here
     // GetStringAsync returns a Task<string>, which is *awaited*
     var page = await client.GetStringAsync("https://www.dotnetfoundation.org");
-    
+
     // Execution resumes when the client.GetStringAsync task completes,
     // becoming synchronous again.
-    
+
     if (count > page.Length)
     {
         return page;
@@ -74,7 +74,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 }
 ```
 
-對 `GetStringAsync()` 的呼叫會在較低層級的 .NET 程式庫中進行 (也可能會呼叫其他非同步方法)，直到抵達原生網路程式庫中的 P/Invoke Interop 呼叫。 接著可能會在系統 API 呼叫中呼叫原生程式庫 (例如對 Linux 上的通訊端呼叫 `write()`)。 系統可能會使用 [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)) 在原生/Managed 界限處建立 Task 物件。 此 Task 物件會向上傳遞給所有層級，可能在其上運作或直接傳回，最後將傳回給初始呼叫端。 
+對 `GetStringAsync()` 的呼叫會在較低層級的 .NET 程式庫中進行 (也可能會呼叫其他非同步方法)，直到抵達原生網路程式庫中的 P/Invoke Interop 呼叫。 接著可能會在系統 API 呼叫中呼叫原生程式庫 (例如對 Linux 上的通訊端呼叫 `write()`)。 系統可能會使用 [TaskCompletionSource](xref:System.Threading.Tasks.TaskCompletionSource%601.SetResult(%600)) 在原生/Managed 界限處建立 Task 物件。 此 Task 物件會向上傳遞給所有層級，可能在其上運作或直接傳回，最後將傳回給初始呼叫端。
 
 在上述第二個範例中，會從 `GetStringAsync` 傳回 `Task<T>` 物件。 使用 `await` 關鍵字會導致方法傳回新建立的 Task 物件。 控制權會從 `GetFirstCharactersCountAsync` 方法的此位置返回呼叫端。 [Task&lt;T&gt;](xref:System.Threading.Tasks.Task%601) 物件的方法和屬性可讓呼叫端監視 Task 的進度，此 Task 將在 GetFirstCharactersCountAsync 中的其餘程式碼都已執行之後完成。
 
@@ -82,7 +82,7 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 例如，在 Windows 中，OS 執行緒會呼叫網路裝置驅動程式，並要求它透過代表網路作業的插斷要求封包 (IRP) 來執行此作業。  裝置驅動程式會接收 IRP、對網路進行呼叫、將 IRP 標記為「擱置」，然後傳回給 OS。  因為 OS 執行緒現在知道 IRP 處於「擱置」狀態，所以沒有任何要讓此作業執行的工作，並且會「傳回」以便用來執行其他工作。
 
-要求完成並透過裝置驅動程式傳回資料之後，它會通知 CPU 透過插斷收到的新資料。  此插斷的處理方式會因 OS 而有所不同，但最後會將資料傳遞通過 OS，直到抵達系統 Interop 呼叫 (例如在 Linux 中，插斷處理常式會排程 IRQ 的後半部，以非同步方式將資料上傳通過 OS)。  請注意，這「也是」以非同步方式進行！  此結果會排入佇列，等候下一個可用的執行緒能夠執行非同步方法並將已完成 Task 的結果「解除包裝」。
+要求完成並透過裝置驅動程式傳回資料之後，它會通知 CPU 透過插斷收到的新資料。  此插斷的處理方式會因 OS 而有所不同，但最後會將資料傳遞通過 OS，直到抵達系統 Interop 呼叫 (例如在 Linux 中，插斷處理常式會排程 IRQ 的後半部，以非同步方式將資料上傳通過 OS)。  請注意，這「也是」以非同步方式進行！  此結果會排入佇列，等候下一個可用的執行緒能夠執行非同步方法並將已完成工作的結果「解除包裝」。
 
 這整個過程的重點是**沒有專門用來執行 Task 的執行緒**。  雖然在某些情況下會執行工作 (也就是，OS 必須將資料傳遞給裝置驅動程式並回應插斷)，但沒有專門用來「等候」所要求資料傳回的執行緒。  比起等候一些 I/O 呼叫完成，這樣做可讓系統處理更大量的工作。
 
@@ -90,9 +90,9 @@ public async Task<string> GetFirstCharactersCountAsync(string url, int count)
 
 0-1————————————————————————————————————————————————–2-3
 
-*   從點 `0` 至 `1` 所花費的時間，會用在非同步方法將控制權轉讓給其呼叫端之前的所有工作。
-*   從點 `1` 至 `2` 所花費的時間，是 I/O 上所花費的時間 (不含 CPU 成本)。
-*   最後，從點 `2` 至 `3` 所花費的時間，會用在將控制權 (可能還有值) 交回給非同步方法，然後再次執行。
+* 從點 `0` 至 `1` 所花費的時間，會用在非同步方法將控制權轉讓給其呼叫端之前的所有工作。
+* 從點 `1` 至 `2` 所花費的時間，是 I/O 上所花費的時間 (不含 CPU 成本)。
+* 最後，從點 `2` 至 `3` 所花費的時間，會用在將控制權 (可能還有值) 交回給非同步方法，然後再次執行。
 
 ### <a name="what-does-this-mean-for-a-server-scenario"></a>這對伺服器案例有何意義？
 
@@ -125,13 +125,13 @@ public async Task<int> CalculateResult(InputData data)
 {
     // This queues up the work on the threadpool.
     var expensiveResultTask = Task.Run(() => DoExpensiveCalculation(data));
-    
+
     // Note that at this point, you can do some other work concurrently,
     // as CalculateResult() is still executing!
-    
+
     // Execution of CalculateResult is yielded here!
     var result = await expensiveResultTask;
-    
+
     return result;
 }
 ```

@@ -1,24 +1,24 @@
 ---
-title: 從使用 CLI 開始使用 .NET Core
+title: 使用 CLI 開始使用 .NET Core
 description: 本逐步教學課程說明如何使用 .NET Core 命令列介面 (CLI) 在 Windows、Linux 或 macOS 上開始使用 .NET Core。
 author: cartermp
 ms.date: 09/10/2018
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: c57326f038eee4069de9064cb2798d2004b0dbdd
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 664ff07bad596ae38b4e31a00c7af0579d8245b8
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212166"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788306"
 ---
-# <a name="getting-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core
+# <a name="get-started-with-net-core-on-windowslinuxmacos-using-the-command-line"></a>使用命令列開始在 Windows/Linux/macOS 上使用 .NET Core
 
-本主題將示範如何使用 .NET Core CLI 工具在電腦上開始開發跨平台應用程式。
+此主題將示範如何使用 .NET Core CLI 工具在電腦上開始開發跨平台應用程式。
 
 如果您不熟悉 .NET Core CLI 工具組，請參閱 [.NET Core SDK 概觀](../tools/index.md)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
 - [.NET Core SDK 2.1](https://www.microsoft.com/net/download/core)。
 - 您選擇的文字編輯器或程式碼編輯器。
@@ -47,7 +47,7 @@ dotnet run
    專案檔會指定還原相依性和建置程式所需的所有內容。
 
    * `OutputType` 標記會指定我們正在建置可執行檔，亦即主控台應用程式。
-   * `TargetFramework` 標記會指定做為目標的 .NET 實作。 在進階案例中，您可以指定多個目標架構，並在單一作業中建置這全部的架構。 在本教學課程中，我們將著重於僅針對 .NET Core 2.1 來建置。
+   * `TargetFramework` 標記會指定做為目標的 .NET 實作。 在進階案例中，您可以指定多個目標架構，並在單一作業中建置這全部的架構。 在此教學課程中，我們將著重於僅針對 .NET Core 2.1 來建置。
 
    `Program.cs`：
 
@@ -154,7 +154,7 @@ dotnet run
 
 就是這麼容易！ 現在，您可以開始使用這裡學到的基本概念，建立您自己的程式。
 
-請注意，本教學課程中所示用於執行應用程式的命令和步驟，僅供開發階段期間使用。 準備好部署應用程式之後，您將需要檢視不同的 .NET Core 應用程式[部署策略](../deploying/index.md)及 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
+請注意，此教學課程中所示用於執行應用程式的命令和步驟，僅供開發階段期間使用。 準備好部署應用程式之後，您將需要檢視不同的 .NET Core 應用程式[部署策略](../deploying/index.md)及 [`dotnet publish`](../tools/dotnet-publish.md) 命令。
 
 ## <a name="see-also"></a>另請參閱
 

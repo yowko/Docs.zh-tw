@@ -1,42 +1,49 @@
 ---
 title: 使用 .NET Core 來建立 REST 用戶端
-description: 本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
+description: 此教學課程會教導您一些 .NET Core 和 C# 語言中的功能。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 521c6edfa7163219ea86c6fb8444bc95859c9aa1
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e7859e9db53e8b126fd66b88d9a5e7565ea1a4ad
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126637"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57846164"
 ---
 # <a name="rest-client"></a>REST 用戶端
 
 ## <a name="introduction"></a>簡介
-本教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
-*   「.NET Core 命令列介面」(CLI) 的基本概念。
-*   「C# 語言」功能的概觀。
-*   使用 NuGet 來管理相依性
-*   HTTP 通訊
-*   處理 JSON 資訊
-*   使用「屬性」來管理組態。 
+
+此教學課程會教導您一些 .NET Core 和 C# 語言中的功能。 您將了解：
+
+* 「.NET Core 命令列介面」(CLI) 的基本概念。
+* 「C# 語言」功能的概觀。
+* 使用 NuGet 來管理相依性
+* HTTP 通訊
+* 處理 JSON 資訊
+* 使用「屬性」來管理組態。
 
 您將建置一個對 GitHub 上的 REST 服務發出「HTTP 要求」的應用程式。 您將讀取 JSON 格式的資訊，並將該 JSON 封包轉換成 C# 物件。 最後，您將了解如何使用 C# 物件。
 
-本教學課程中有許多功能。 讓我們來逐一建置它們。
+此教學課程中有許多功能。 讓我們來逐一建置它們。
 
-如果您偏好追蹤本主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+如果您偏好追蹤此主題的[最終範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)，則可以下載它。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>必要條件
-您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
+## <a name="prerequisites"></a>先決條件
+
+您將必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Linux、macOS 或是 Docker 容器中執行此應用程式。
+您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
+
 ## <a name="create-the-application"></a>建立應用程式
+
 第一個步驟是建立新的應用程式。 請開啟命令提示字元，然後為您的應用程式建立新目錄。 使該目錄成為目前的目錄。 在命令提示字元處輸入命令 `dotnet new console`。 這會建立基本 "Hello World" 應用程式的起始檔案。
 
-在您開始進行修改之前，讓我們先將執行簡單 Hello World 應用程式的所有步驟執行一遍。 在建立應用程式之後，在命令提示字元鍵入 `dotnet restore` ([參閱附註](#dotnet-restore-note))。 此命令會執行 NuGet 套件還原程序。 NuGet 是一個 .NET 套件管理員。 此命令會為您的專案下載任何遺漏的相依性。 由於這是一個新專案，因此沒有任何現有的相依性，所以第一次執行時將會下載 .NET Core 架構。 在這個初始步驟之後，當您新增新的相依套件或更新任何相依性的版本時，將只需要執行 `dotnet restore` ([參閱附註](#dotnet-restore-note))。  
+在您開始進行修改之前，讓我們先將執行簡單 Hello World 應用程式的所有步驟執行一遍。 在建立應用程式之後，在命令提示字元鍵入 `dotnet restore` ([參閱附註](#dotnet-restore-note))。 此命令會執行 NuGet 套件還原程序。 NuGet 是一個 .NET 套件管理員。 此命令會為您的專案下載任何遺漏的相依性。 由於這是一個新專案，因此沒有任何現有的相依性，所以第一次執行時將會下載 .NET Core 架構。 在這個初始步驟之後，當您新增新的相依套件或更新任何相依性的版本時，將只需要執行 `dotnet restore` ([參閱附註](#dotnet-restore-note))。
 
 還原套件之後，您需執行 `dotnet build`。 這會執行建置引擎並建立您的應用程式。 最後，您需執行 `dotnet run` 來執行您的應用程式。
 
 ## <a name="adding-new-dependencies"></a>新增新的相依性
+
 .NET Core 的其中一個主要設計目標就是將 .NET 安裝大小縮減到最小。 如果應用程式的某些功能需要額外的程式庫，您可以將這些相依性新增到 C# 專案檔 (\*.csproj) 中。 就我們的範例而言，您將必須新增 `System.Runtime.Serialization.Json` 套件，以便讓您的應用程式能夠處理 JSON 回應。
 
 請開啟您的 `csproj` 專案檔。 檔案的第一行程應該顯示如下：
@@ -45,18 +52,20 @@ ms.locfileid: "53126637"
 <Project Sdk="Microsoft.NET.Sdk">
 ```
 
-在此行之後，緊接著新增下列程式碼： 
+在此行之後，緊接著新增下列程式碼：
 
 ```xml
    <ItemGroup>
       <PackageReference Include="System.Runtime.Serialization.Json" Version="4.3.0" />
-   </ItemGroup> 
+   </ItemGroup>
 ```
+
 大多數程式碼編輯器都有為這些程式庫的不同版本提供完成功能。 您通常會想要使用所新增之任何套件的最新版本。 不過，請務必確保所有套件的版本都相符，此外，也與 .NET Core 應用程式架構的版本相符。
 
 在您進行這些變更之後，應該重新執行 `dotnet restore` ([參閱附註](#dotnet-restore-note))，讓套件安裝在您的系統上。
 
 ## <a name="making-web-requests"></a>提出 Web 要求
+
 現在您已經準備好開始從 Web 接收資料。 在此應用程式中，您將從 [GitHub API](https://developer.github.com/v3/) 讀取資訊。 讓我們在 [.NET Foundation](https://www.dotnetfoundation.org/) 的庇護下讀取專案的相關資訊。 您將從對 GitHub API 提出要求以擷取專案相關資訊著手。 您將使用的端點：[https://api.github.com/orgs/dotnet/repos](https://api.github.com/orgs/dotnet/repos)。 您想要擷取這些專案的所有相關資訊，因此您將使用 HTTP GET 要求。
 您的瀏覽器也會使用 HTTP GET 要求，因此您可以將該 URL 貼到瀏覽器中，以查看您將接收和處理的資訊。
 
@@ -66,7 +75,6 @@ ms.locfileid: "53126637"
 ```csharp
 private static async Task ProcessRepositories()
 {
-    
 }
 ```
 
@@ -108,7 +116,7 @@ namespace WebAPIClient
 }
 ```
 
- 讓我們回到 `ProcessRepositories` 方法並填入其第一個版本：
+讓我們回到 `ProcessRepositories` 方法並填入其第一個版本：
 
 ```csharp
 private static async Task ProcessRepositories()
@@ -135,10 +143,10 @@ using System.Net.Http.Headers;
 第一個版本會提出 Web 要求來讀取 dotnet foundation 組織底下的所有儲存機制清單。 (.NET Foundation 的 gitHub 識別碼是 'dotnet')。 前幾行會為這個要求設定 <xref:System.Net.Http.HttpClient>。 首先，會將它設定為接受 GitHub JSON 回應。
 此格式就是 JSON。 下一行會將「使用者代理程式」標頭新增到來自此物件的所有要求。 這兩個標頭會受到 GitHub 伺服器程式碼檢查，並且是從 GitHub 擷取資訊的必要標頭。
 
-設定 <xref:System.Net.Http.HttpClient> 之後，您需提出 Web 要求並擷取回應。 在這個第一版中，您會使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 便利方法。 這個便利方法會啟動一個提出 Web 要求的工作，然後當要求返回時，它會讀取回應資料流並從該資料流擷取內容。 回應本文會以 <xref:System.String> 的形式傳回。 當工作完成時，就會提供該字串。 
+設定 <xref:System.Net.Http.HttpClient> 之後，您需提出 Web 要求並擷取回應。 在這個第一版中，您會使用 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 便利方法。 這個便利方法會啟動一個提出 Web 要求的工作，然後當要求返回時，它會讀取回應資料流並從該資料流擷取內容。 回應本文會以 <xref:System.String> 的形式傳回。 當工作完成時，就會提供該字串。
 
 此方法的最後兩行會等候該工作，然後將回應顯示在主控台中。
-請建置應用程式並執行它。 建置警告現在已消失，因為 `ProcessRepositories` 現在確實包含 `await` 運算子。 您將會看到一長串顯示的 JSON 格式文字。   
+請建置應用程式並執行它。 建置警告現在已消失，因為 `ProcessRepositories` 現在確實包含 `await` 運算子。 您將會看到一長串顯示的 JSON 格式文字。
 
 ## <a name="processing-the-json-result"></a>處理 JSON 結果
 
@@ -156,9 +164,9 @@ namespace WebAPIClient
         public string name;
     }
 }
-``` 
+```
 
-請將上述程式碼放在名為 'repo.cs' 的新檔案中。 這個類別版本代表處理 JSON 資料的最簡單路徑。 類別名稱和成員名稱會符合 JSON 封包中使用的名稱，而不是符合下列 C# 慣例。 您將在稍後藉由提供一些其他組態屬性來修正此問題。 此類別示範了 JSON 序列化和還原序列化的另一個重要功能：並非 JSON 封包中的所有欄位都屬於此類別。
+請將上述程式碼放在名為 'repo.cs' 的新檔案中。 這個類別版本代表處理 JSON 資料的最簡單路徑。 類別名稱和成員名稱會符合 JSON 封包中使用的名稱，而不是符合下列 C# 慣例。 您將在稍後藉由提供一些其他組態屬性來修正此問題。 此類別會示範 JSON 序列化和還原序列化的另一個重要功能：並非 JSON 封包中的所有欄位都是此類別的一部分。
 JSON 序列化程式將會忽略未包含在所要使用之類別型別中的資訊。
 這個功能可讓您更容易建立只對 JSON 封包中的欄位子集有作用的型別。
 
@@ -184,7 +192,8 @@ var repositories = serializer.ReadObject(await streamTask) as List<repo>;
 
 請注意，您現在使用的是 <xref:System.Net.Http.HttpClient.GetStreamAsync(System.String)> 而不是 <xref:System.Net.Http.HttpClient.GetStringAsync(System.String)>。 序列化程式會使用資料流 (而不是字串) 作為其來源。 讓我們來說明上述第二行中所使用的一些 C# 語言功能。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 的引數是 `await` 運算式。 Await 運算式可以出現在您程式碼中幾乎任何一個地方，雖然到目前為止，您只在指派陳述式中看到它們。
 
-其次，`as` 運算子會從編譯階段型別 `object` 轉換成 `List<repo>`。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 的宣告會宣告其傳回 <xref:System.Object?displayProperty=nameWithType> 類型的物件。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 會傳回您在加以建構時指定的類型 (在本教學課程中為 `List<repo>`)。 如果轉換並未成功，`as` 運算子就會評估為 `null`，而不是擲回例外狀況。
+其次，`as` 運算子會從編譯階段型別 `object` 轉換成 `List<repo>`。
+<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 的宣告會宣告其傳回 <xref:System.Object?displayProperty=nameWithType> 類型的物件。 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject(System.IO.Stream)> 會傳回您在加以建構時指定的類型 (在此教學課程中為 `List<repo>`)。 如果轉換並未成功，`as` 運算子就會評估為 `null`，而不是擲回例外狀況。
 
 您差不多已經完成這個部分。 現在您已將 JSON 轉換成 C# 物件，讓我們來顯示每個儲存機制的名稱。 將下列幾行：
 
@@ -204,7 +213,7 @@ foreach (var repo in repositories)
 
 ## <a name="controlling-serialization"></a>控制序列化
 
-在您新增更多功能之前，讓我們先處理 `repo` 型別並讓它符合更標準的 C# 慣例。 您將透過在 `repo` 型別上加註控制「JSON 序列化程式」運作方式的「屬性」，來進行這項操作。 在您的案例中，您將使用這些屬性來定義 JSON 機碼名稱與 C# 類別及成員名稱之間的對應。 所使用的兩個屬性為 `DataContract` 屬性和 `DataMember` 屬性。 透過轉換，所有屬性類別都會以後置詞 `Attribute` 結尾。 不過，當您套用屬性時，並不需要使用該後置詞。 
+在您新增更多功能之前，讓我們先處理 `repo` 型別並讓它符合更標準的 C# 慣例。 您將透過在 `repo` 型別上加註控制「JSON 序列化程式」運作方式的「屬性」，來進行此操作。 在您的案例中，您將使用這些屬性來定義 JSON 機碼名稱與 C# 類別及成員名稱之間的對應。 所使用的兩個屬性為 `DataContract` 屬性和 `DataMember` 屬性。 透過轉換，所有屬性類別都會以後置詞 `Attribute` 結尾。 不過，當您套用屬性時，並不需要使用該後置詞。
 
 `DataContract` 和 `DataMember` 屬性位於不同的程式庫中，因此您將必須把該程式庫新增到 C# 專案檔中作為相依性。 請將下列行新增到您專案檔中的 `<ItemGroup>` 區段：
 
@@ -227,7 +236,7 @@ public class Repository
 using System.Runtime.Serialization;
 ```
 
-您已將 `repo` 類別的名稱變更為 `Repository`，因此您將必須在 Program.cs 中進行相同的名稱變更 (有些編輯器可能支援可自動進行這項變更的重新命名重構功能)：
+您已將 `repo` 類別的名稱變更為 `Repository`，因此您將必須在 Program.cs 中進行相同的名稱變更 (有些編輯器可能支援可自動進行此變更的重新命名重構功能)：
 
 ```csharp
 var serializer = new DataContractJsonSerializer(typeof(List<Repository>));
@@ -244,13 +253,13 @@ var repositories = serializer.ReadObject(await streamTask) as List<Repository>;
 public string Name;
 ```
 
-這項變更意謂著您必須變更 program.cs 中寫入每個儲存機制名稱的程式碼：
+此變更意謂著您必須變更 program.cs 中寫入每個儲存機制名稱的程式碼：
 
 ```csharp
 Console.WriteLine(repo.Name);
 ```
 
-請執行 `dotnet build` 再接著執行 `dotnet run` 以確保您的對應正確。 您應該會看到與之前相同的輸出。 在處理更多來自 Web 伺服器的屬性之前，讓我們先對 `Repository` 類別再多進行一項變更。 `Name` 成員是一個可公開存取的欄位。 這並非一個理想的物件導向做法，因此讓我們將它變更成屬性。 就我們的目的而言，當取得或設定該屬性時，我們並不需要執行任何特定的程式碼，但變更成屬性可讓稍後新增這些變更變得更容易，而不會破壞使用 `Repository` 類別的任何程式碼。
+請執行 `dotnet build` 再接著執行 `dotnet run` 以確保您的對應正確。 您應該會看到與之前相同的輸出。 在處理更多來自 Web 伺服器的屬性之前，讓我們先對 `Repository` 類別再多進行一個變更。 `Name` 成員是一個可公開存取的欄位。 這並非一個理想的物件導向做法，因此讓我們將它變更成屬性。 就我們的目的而言，當取得或設定該屬性時，我們並不需要執行任何特定的程式碼，但變更成屬性可讓稍後新增這些變更變得更容易，而不會破壞使用 `Repository` 類別的任何程式碼。
 
 請移除欄位定義，然後以[自動實作的屬性](../programming-guide/classes-and-structs/auto-implemented-properties.md)來取代它：
 
@@ -261,15 +270,15 @@ public string Name { get; set; }
 編譯器除了會產生用來儲存名稱的私用欄位之外，也會產生 `get` 和 `set` 存取子的主體。 它會類似於以下您可以手動輸入的程式碼：
 
 ```csharp
-public string Name 
-{ 
+public string Name
+{
     get { return this._name; }
     set { this._name = value; }
 }
 private string _name;
 ```
 
-讓我們在新增新功能之前，再多進行一項變更。 `ProcessRepositories` 方法可以執行非同步工作，然後傳回儲存機制的集合。 讓我們從該方法傳回 `List<Repository>`，並將寫入資訊的程式碼移到 `Main` 方法中。
+讓我們在新增新功能之前，再多進行一個變更。 `ProcessRepositories` 方法可以執行非同步工作，然後傳回儲存機制的集合。 讓我們從該方法傳回 `List<Repository>`，並將寫入資訊的程式碼移到 `Main` 方法中。
 
 請變更 `ProcessRepositories` 的簽章以傳回其結果為 `Repository` 物件清單的工作：
 
@@ -334,6 +343,7 @@ foreach (var repo in repositories)
     Console.WriteLine();
 }
 ```
+
 在最後一個步驟中，讓我們新增最後一個推送作業的資訊。 此資訊會在 JSON 回應中採用下列形式的格式：
 
 ```json
@@ -375,10 +385,11 @@ Console.WriteLine(repo.LastPush);
 ```
 
 您的版本現在應該與[完成範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient)相符。
- 
+
 ## <a name="conclusion"></a>結論
 
-本教學課程示範了如何提出 Web 要求、剖析結果，以及顯示這些結果的屬性。 您也在專案中新增了新的套件作為相依性。 您已了解一些支援物件導向技術的 C# 語言功能。
+此教學課程示範了如何提出 Web 要求、剖析結果，以及顯示這些結果的屬性。 您也在專案中新增了新的套件作為相依性。 您已了解一些支援物件導向技術的 C# 語言功能。
 
 <a name="dotnet-restore-note"></a>
+
 [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]

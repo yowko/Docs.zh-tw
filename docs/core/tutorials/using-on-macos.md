@@ -1,34 +1,34 @@
 ---
-title: 在 macOS 上開始使用 .NET Core
-description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
+title: 開始在 macOS 上使用 .NET Core
+description: 此文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: ad403ed96435f162899e600a317d00bab00638f2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
+ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170266"
+ms.lasthandoff: 03/12/2019
+ms.locfileid: "57788449"
 ---
-# <a name="getting-started-with-net-core-on-macos"></a>在 macOS 上開始使用 .NET Core
+# <a name="get-started-with-net-core-on-macos"></a>開始在 macOS 上使用 .NET Core
 
-本文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
+此文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
 
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>必要條件
+## <a name="prerequisites"></a>先決條件
 
-安裝 [.NET Core SDK (英文)](https://www.microsoft.com/net/core)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
+安裝 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
-安裝 [Visual Studio Code (英文)](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
+安裝 [Visual Studio Code](https://code.visualstudio.com)。 在此文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
 
-請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 輸入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
-## <a name="getting-started"></a>使用者入門
+## <a name="get-started"></a>開始使用
 
-在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/samples 存放庫[檢視或下載來源](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在此教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/samples 存放庫[檢視或下載來源](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 Visual Studio Code 開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
 
@@ -151,7 +151,7 @@ namespace TestApp
 }
 ```
 
-請注意，當您第一次建立單元測試時，確認值 42 不等於 19+23 (或 42) (`Assert.NotEqual`)，而這項建立作業會失敗。 建置單元測試的重要步驟是建立測試，以確認其邏輯在第一次時失敗一次。
+請注意，當您第一次建立單元測試時，確認值 42 不等於 19+23 (或 42) (`Assert.NotEqual`)，而此建立作業會失敗。 建置單元測試的重要步驟是建立測試，以確認其邏輯在第一次時失敗一次。
 
 從 *golden* 資料夾中，執行下列命令：
 

@@ -1,19 +1,19 @@
 ---
 title: 使用 .NET Core 命令列組織和測試專案
-description: 本教學課程說明如何從命令列組織和測試 .NET Core 專案。
+description: 此教學課程說明如何從命令列組織和測試 .NET Core 專案。
 author: cartermp
 ms.date: 09/10/2018
 ms.custom: seodec18
-ms.openlocfilehash: 9ca9cd1b392912b01ed5ac37d0617d582b993ae8
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ffd15edc633142116089d206135eb16416eb14cb
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242699"
+ms.lasthandoff: 03/17/2019
+ms.locfileid: "57845904"
 ---
 # <a name="organizing-and-testing-projects-with-the-net-core-command-line"></a>使用 .NET Core 命令列組織和測試專案
 
-本教學課程會遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](using-with-xplat-cli.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
+此教學課程遵循[使用命令列在 Windows/Linux/macOS 上開始使用 .NET Core](using-with-xplat-cli.md)，讓您超越建立簡單主控台應用程式來開發進階且井然有序的應用程式。 此教學課程在示範如何使用資料夾來組織您的程式碼之後，會示範如何使用 [xUnit](https://xunit.github.io/) 測試架構來擴充主控台應用程式。
 
 ## <a name="using-folders-to-organize-code"></a>使用資料夾來組織程式碼
 
@@ -48,7 +48,7 @@ ms.locfileid: "53242699"
 
 如需下列步驟，您可以遵循如何使用 [NewTypes Pets Sample](https://github.com/dotnet/samples/tree/master/core/console-apps/NewTypesMsBuild) (NewTypes Pets 範例)，或建立自己的檔案及資料夾。 類型會以邏輯方式組織成資料夾結構以允許稍後新增更多類型，而且測試也會以邏輯方式放在允許稍後新增更多測試的資料夾中。
 
-這個範例包含 `Dog` 及 `Cat` 這兩種類型，並讓它們實作公用介面 `IPet`。 針對 `NewTypes` 專案，您的目標是將寵物相關類型組織到 *Pets* 資料夾。 如果稍後新增另一組類型 (例如，*WildAnimals*)，則會將它們放入 *Pets* 資料夾旁邊的 *NewTypes* 資料夾。 *WildAnimals* 資料夾可能會包含不是寵物之動物的類型，例如 `Squirrel` 及 `Rabbit` 類型。 因此，新增類型時，專案會井然有序。 
+這個範例包含 `Dog` 及 `Cat` 這兩種類型，並讓它們實作公用介面 `IPet`。 針對 `NewTypes` 專案，您的目標是將寵物相關類型組織到 *Pets* 資料夾。 如果稍後新增另一組類型 (例如，*WildAnimals*)，則會將它們放入 *Pets* 資料夾旁邊的 *NewTypes* 資料夾。 *WildAnimals* 資料夾可能會包含不是寵物之動物的類型，例如 `Squirrel` 及 `Rabbit` 類型。 因此，新增類型時，專案會井然有序。
 
 使用所指出的檔案內容來建立下列資料夾結構︰
 
@@ -144,16 +144,16 @@ public class PetTests
     {
         string expected = "Woof!";
         string actual = new Dog().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
-    
+
     [Fact]
     public void CatTalkToOwnerReturnsMeow()
     {
         string expected = "Meow!";
         string actual = new Cat().TalkToOwner();
-        
+
         Assert.NotEqual(expected, actual);
     }
 }
@@ -184,9 +184,8 @@ public class PetTests
 
 從 *test/NewTypesTests* 目錄開始。 使用 [`dotnet restore`](../tools/dotnet-restore.md) 命令還原測試專案。 使用 [`dotnet test`](../tools/dotnet-test.md) 命令執行測試。 這個命令會啟動專案檔中指定的測試執行器。
 
- [!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
+[!INCLUDE[DotNet Restore Note](~/includes/dotnet-restore-note.md)]
 
- 
 如預期，測試會失敗，而且主控台會顯示下列輸出︰
 
 ```
@@ -238,4 +237,3 @@ Test execution time: 1.6029 Seconds
 通過測試。 與擁有者交談時，寵物類型的方法會傳回正確值。
 
 您已了解使用 xUnit 來組織及測試專案的技術。 繼續使用這些技術，以將它們套用至您自己的專案。 *祝各位程式撰寫愉快！*
-

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - compiler options [C#], listed by category
 - Visual C#, compiler options listed by category
 ms.assetid: 96437ecc-6502-4cd3-b070-e9386a298e83
-ms.openlocfilehash: a2b0668b1d55afc331484339d579752646ffa88b
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: bceb6283e202dfa699115edd6e0a1a040095783d
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442408"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58028698"
 ---
 # <a name="c-compiler-options-listed-by-category"></a>依分類列出的 C# 編譯器選項
 
@@ -105,7 +105,7 @@ ms.locfileid: "56442408"
 |[-unsafe](unsafe-compiler-option.md)|啟用使用 [unsafe](../../../csharp/language-reference/keywords/unsafe.md) 關鍵字的程式碼編譯。|
 |[-utf8output](utf8output-compiler-option.md)|使用 UTF-8 編碼顯示編譯器輸出。|
 |-parallel[+&#124;-]|指定是否要使用並行組建 (+)。|
-|-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設) 或 SHA256。|
+|-checksumalgorithm:\<alg>|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設) 或 SHA256。<br>由於 SHA1 的衝突問題，Microsoft 建議使用 SHA256。|
 
 ## <a name="obsolete-options"></a>過時的選項
 

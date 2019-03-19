@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6db80e4cb1f54ed58dabf84f4a88f1b3db616ea
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443110"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58049734"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
-<a name="introduction"></a> 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](../../../docs/framework/whats-new/obsolete-members.md)。
+<a name="introduction"></a> 此文章中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](obsolete-members.md)。
 
 -   [系統組件中的過時類型](#obsolete_types_in_system_assemblies)
 
@@ -779,5 +779,5 @@ ms.locfileid: "56443110"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 
 ## <a name="see-also"></a>另請參閱
-- [類別庫中已淘汰的功能](../../../docs/framework/whats-new/whats-obsolete.md)
-- [過時的成員](../../../docs/framework/whats-new/obsolete-members.md)
+- [類別庫中已淘汰的功能](whats-obsolete.md)
+- [過時的成員](obsolete-members.md)
