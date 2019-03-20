@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 05/04/2018
-ms.openlocfilehash: 20d8899d404ec72e3b1b9c2471524133a6428c44
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: f251aecfeaf2421a5cecf218577369963bc736fb
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53125492"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186100"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>選擇容器型應用程式的 Azure 計算平台
 
@@ -17,12 +17,12 @@ ms.locfileid: "53125492"
 
 作為*預設為*建議，以下是主要的準則，建議您在本指南中：
 
-  - **單一的單體式應用程式：** 選擇 Azure App Service
-  - **多層式架構應用程式：** 如果您有單一或少數的後端服務，請選擇協調器，例如 Azure Kubernetes Service (AKS)、 Service Fabric (SF) 或 App Service
-  - **Linux 的微服務：** 選擇 AKS/Kubernetes
-  - **Windows 的微服務：** 選擇 Service Fabric
-  - **無伺服器函式 （&) 事件處理常式：** 選擇 Azure 函式
-  - **大規模的批次：** 選擇 Azure 批次
+- **單一的單體式應用程式：** 選擇 Azure App Service
+- **多層式架構應用程式：** 如果您有單一或少數的後端服務，請選擇協調器，例如 Azure Kubernetes Service (AKS)、 Service Fabric (SF) 或 App Service
+- **Linux 的微服務：** 選擇 AKS/Kubernetes
+- **Windows 的微服務：** 選擇 Service Fabric
+- **無伺服器函式 （&) 事件處理常式：** 選擇 Azure 函式
+- **大規模的批次：** 選擇 Azure 批次
 
 不過，這項建議應該隨著一小段 salt，如產品的選擇取決於特定應用程式的需求和特性。 一開始它們看起來類似的型別時，即使並非所有應用程式都是相同的。
 
@@ -36,6 +36,6 @@ ms.locfileid: "53125492"
 
 不過，OS 成熟度的這些差異會在未來淡出多個平台會有類似的 OS 成熟度並決定將提供詳細說明根據您的應用程式可能需要或根據每個平台生態系統的特定功能的喜好設定原因。
 
->[!div class="step-by-step"]
->[上一頁](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
->[下一頁](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)
+> [!div class="step-by-step"]
+> [上一頁](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)
+> [下一頁](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 07328a83e431bab02a72c3f252299e4b6b919b82
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379142"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186113"
 ---
 # <a name="listview-overview"></a>ListView 概觀
 <xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。 例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。  
@@ -33,7 +33,7 @@ ms.locfileid: "57379142"
   
  下圖顯示上一個範例的資料顯示方式。  
   
- ![含有 GridView 輸出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![螢幕擷取畫面，顯示 ListView 與 GridView 輸出。](./media/gridview-overview/listview-gridview-output.jpg)  
   
  您可以建立自訂檢視模式定義類別繼承自<xref:System.Windows.Controls.ViewBase>類別。 <xref:System.Windows.Controls.ViewBase>類別會提供您需要建立自訂檢視的基礎結構。 如需有關如何建立自訂檢視的詳細資訊，請參閱[建立 ListView 的自訂檢視模式](how-to-create-a-custom-view-mode-for-a-listview.md)。  
   

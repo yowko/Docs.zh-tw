@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: fec1b4dbca0a4c6979e52fc74ceeb3e8c7ac6cad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520460"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185723"
 ---
 # <a name="nested-control-structures-visual-basic"></a>巢狀控制結構 (Visual Basic)
 您也可以放置控制項陳述式內部的其他控制陳述式，例如`If...Then...Else`區塊`For...Next`迴圈。 控制陳述式置於另一個控制項陳述式即為*巢狀*。  
@@ -25,7 +25,7 @@ ms.locfileid: "54520460"
   
  在下列範例中，此程序`sumRows`一起正值會將元素加入每個資料列的矩陣。  
   
-```  
+```vb
 Public Sub sumRows(ByVal a(,) As Double, ByRef r() As Double)  
     Dim i, j As Integer  
     For i = 0 To UBound(a, 1)  
@@ -49,7 +49,7 @@ End Sub
 ## <a name="nesting-different-kinds-of-control-structures"></a>巢狀處理不同類型的控制結構  
  您可以巢狀控制結構，另一個類型內的一種。 下列範例會使用`With`區塊內`For Each`迴圈和巢狀`If`內封鎖`With`區塊。  
   
-```  
+```vb
 For Each ctl As System.Windows.Forms.Control In Me.Controls  
     With ctl  
         .BackColor = System.Drawing.Color.Yellow  

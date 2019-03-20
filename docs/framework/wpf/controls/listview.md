@@ -7,19 +7,19 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView control [WPF]
 ms.assetid: fc3784a7-c9e8-4e2b-909a-7af37cef9b43
-ms.openlocfilehash: 7de612992c7ccab57259146e8b8fa294e503b733
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c90849c27f7bbef2338ef255350a7dccd40c99e3
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376217"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186048"
 ---
 # <a name="listview"></a>ListView
 <xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。  
   
  下圖顯示<xref:System.Windows.Controls.ListView>。  
   
- ![含有 GridView 輸出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ ![螢幕擷取畫面，顯示 ListView 與 GridView 輸出。](./media/gridview-overview/listview-gridview-output.jpg)  
   
 ## <a name="in-this-section"></a>本節內容  
  [概觀](listview-overviews.md)  

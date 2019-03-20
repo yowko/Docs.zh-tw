@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 37332e529992f963f576a273dac917d671a3c198
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360195"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185437"
 ---
 # <a name="gridview-overview"></a>GridView 概觀
 <xref:System.Windows.Controls.GridView> 檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別讓您和您的使用者可以檢視通常使用按鈕作為互動式資料行標頭的資料表中的集合項目。 本主題將介紹<xref:System.Windows.Controls.GridView>類別並概述其用法。  
@@ -26,10 +26,8 @@ ms.locfileid: "57360195"
 >  按鈕控制項<xref:System.Windows.Controls.GridView>資料行標頭的用途衍生自<xref:System.Windows.Controls.Primitives.ButtonBase>。  
   
  如下圖所示<xref:System.Windows.Controls.GridView>檢視的<xref:System.Windows.Controls.ListView>內容。  
-  
- **ListView 內容的 GridView 檢視**  
-  
- ![已設定樣式的 ListView](./media/styledlistview.PNG "StyledListView")  
+    
+ ![如果螢幕擷取畫面顯示 ListView 內容的 GridView 檢視。](./media/gridview-overview/styled-listview-content.png)  
   
  <xref:System.Windows.Controls.GridView> 資料行都由<xref:System.Windows.Controls.GridViewColumn>其內容可以自動調整大小的物件。 （選擇性） 您可以明確設定<xref:System.Windows.Controls.GridViewColumn>為特定寬度。 您可以藉由拖曳資料行標頭間的移駐夾來調整資料行大小。 您可以也會動態地新增、 移除、 取代和重新排列資料行，因為這項功能內建在<xref:System.Windows.Controls.GridView>。 不過，<xref:System.Windows.Controls.GridView>無法直接更新它所顯示的資料。  
   
@@ -37,11 +35,9 @@ ms.locfileid: "57360195"
   
  [!code-xaml[ListViewCode#ListViewEmployee](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewCode/CSharp/Window1.xaml#listviewemployee)]  
   
- 下圖顯示上一個範例所建立的表格。  
-  
- **顯示來自 ItemsSource 之資料的 GridView**  
-  
- ![含有 GridView 輸出的 ListView](./media/listviewgridview.JPG "ListViewGridView")  
+ 下圖顯示上一個範例所建立的表格。 GridView 控制項中，會顯示來自 ItemsSource 物件的資料：
+    
+ ![螢幕擷取畫面，顯示 ListView 與 GridView 輸出。](./media/gridview-overview/listview-gridview-output.jpg)  
   
 <a name="GridViewLayoutandStyle"></a>   
 ## <a name="gridview-layout-and-style"></a>GridView 版面配置和樣式  
