@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 2213d766435aaafbf37b8646a66ea3007bfcb734
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719633"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262569"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>HOW TO：建立循序工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Sequence>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -21,7 +21,7 @@ ms.locfileid: "57719633"
 > [!NOTE]
 >  若要下載教學課程的完整版本，請參閱 [Windows Workflow Foundation (WF45) - 快速入門教學課程](https://go.microsoft.com/fwlink/?LinkID=248976)。  
   
-### <a name="to-create-the-workflow"></a>建立工作流程  
+## <a name="to-create-the-workflow"></a>建立工作流程  
   
 1.  以滑鼠右鍵按一下**NumberGuessWorkflowActivities**中**方案總管**，然後選取**新增**，**新項目**。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57719633"
   
 4.  拖曳**順序**活動，從**控制流程**一節**工具箱**拖曳至**活動拖曳到這裏**上加上標籤工作流程設計介面。  
   
-### <a name="to-create-the-workflow-variables-and-arguments"></a>若要建立工作流程變數和引數  
+## <a name="to-create-the-workflow-variables-and-arguments"></a>若要建立工作流程變數和引數  
   
 1.  按兩下**SequentialNumberGuessWorkflow.xaml**中**方案總管 中**時所要顯示工作流程設計工具中，在不顯示。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "57719633"
   
 13. 按一下 **變數**關閉的活動設計工具左下角**變數**窗格。  
   
-### <a name="to-add-the-workflow-activities"></a>若要加入工作流程活動  
+## <a name="to-add-the-workflow-activities"></a>若要加入工作流程活動  
   
 1.  拖曳**指派**活動，從**基本型別**一節**工具箱**拖曳至**順序**活動。 型別`Target`成**要** 方塊中，下列運算式**輸入 C# 運算式**或**輸入 VB 運算式** 方塊中。  
   
@@ -138,13 +138,13 @@ ms.locfileid: "57719633"
   
 13. 按一下  **WriteLine**中的活動**然後**區段以選取它，然後輸入下列運算式**文字**屬性值方塊。  
   
-    ```vb  
+    ```text
     "Your guess is too low."  
     ```  
   
 14. 按一下  **WriteLine**中的活動**Else**區段以選取它，然後輸入下列運算式**文字**屬性值方塊。  
   
-    ```vb  
+    ```text
     "Your guess is too high."  
     ```  
   
@@ -152,7 +152,7 @@ ms.locfileid: "57719633"
   
      ![已完成循序工作流程](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
   
-### <a name="to-build-the-workflow"></a>若要建置工作流程  
+## <a name="to-build-the-workflow"></a>若要建置工作流程  
   
 1.  按下 CTRL+SHIFT+B 以建置方案。  
   

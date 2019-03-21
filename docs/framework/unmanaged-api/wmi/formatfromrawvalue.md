@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bef18468ef02e37b857316cd9fa2bf4cf5f9e9b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369329"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262474"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 函式
 將一個原始效能資料值轉換為指定的格式，或轉換為兩個原始效能資料值 (若格式轉換是以時間為基礎)。 
@@ -85,7 +85,7 @@ int FormatFromRawValue (
 
 ## <a name="remarks"></a>備註
 
-此函式會包裝在呼叫[FormatFromRawValue](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms231047%28v=vs.85%29)函式。
+此函式會包裝在呼叫[FormatFromRawValue](https://docs.microsoft.com/previous-versions/ms231047(v=vs.85))函式。
 
 ## <a name="requirements"></a>需求
 
