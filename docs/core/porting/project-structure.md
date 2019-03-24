@@ -4,12 +4,12 @@ description: 協助想要同時針對 .NET Framework 及 .NET Core 編譯解決�
 author: conniey
 ms.date: 12/07/2018
 ms.custom: seodec18
-ms.openlocfilehash: 57bb766f1d91c502a508b6362dc642310009c8c4
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: ab484ccc2c5b51b2ee1dca57df51669d288f3e6b
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904016"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186061"
 ---
 # <a name="organize-your-project-to-support-both-net-framework-and-net-core"></a>組織專案以同時支援 .NET Framework 及 .NET Core
 
@@ -36,7 +36,7 @@ ms.locfileid: "55904016"
 
 請考慮以下的儲存機制︰
 
-![現有專案](media/project-structure/project.png)
+![現有專案](./media/project-structure/existing-project-structure.png)
 
 [**Source Code**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library/) (原始程式碼)
 
@@ -46,7 +46,7 @@ ms.locfileid: "55904016"
 
 重新組織存放庫，以便移除任何現有的 *\*.csproj* 檔案，並建立以多個架構為目標的單一 *\*.csproj* 檔案。 這是很不錯的選擇，因為單一專案能夠編譯不同的架構。 它也可以處理個別目標架構的不同編譯選項及相依性。
 
-![建立以多個架構為目標的 csproj](media/project-structure/project.csproj.png)
+![建立以多個架構為目標的 csproj](./media/project-structure/multi-targeted-project.png)
 
 [**Source Code**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj/) (原始程式碼)
 
@@ -58,7 +58,7 @@ ms.locfileid: "55904016"
 
 如果現有的專案以較舊的架構為目標，您可能想要保持這些專案不變，使用 .NET Core 專案以未來的架構為目標。
 
-![.NET Core 專案與現有專案位在不同的資料夾](media/project-structure/project.csproj.different.png)
+![.NET Core 專案與現有專案位在不同的資料夾](./media/project-structure/separate-projects-same-source.png)
 
 [**Source Code**](https://github.com/dotnet/samples/tree/master/framework/libraries/migrate-library-csproj-keep-existing/) (原始程式碼)
 

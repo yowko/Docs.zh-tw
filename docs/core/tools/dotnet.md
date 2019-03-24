@@ -2,12 +2,12 @@
 title: dotnet 命令
 description: 了解 dotnet 命令 (.NET Core CLI 工具的通用驅動器) 和其用法。
 ms.date: 06/04/2018
-ms.openlocfilehash: 53eb96ee6fe809b2e6e42eec4e7e9b5f7c5edf2a
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 107a529952cce62dac840874fa5d6d8986376adf
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066437"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185632"
 ---
 # <a name="dotnet-command"></a>dotnet 命令
 
@@ -81,9 +81,9 @@ dotnet [command] [arguments] [--additionalprobingpath] [-d|--diagnostics] [--fx-
 `--roll-forward-on-no-candidate-fx <N>`
 
 在必要的共用架構無法使用時定義行為。 `N` 可以是：
- * `0` - 對次要版本也停用向前復原。
- * `1` - 對次要版本向前復原，主要版本則不。 這是預設行為。
- * `2` - 對次要及主要版本向前復原。
+* `0` - 對次要版本也停用向前復原。
+* `1` - 對次要版本向前復原，主要版本則不。 這是預設行為。
+* `2` - 對次要及主要版本向前復原。
 
  如需詳細資訊，請參閱[向前復原](../whats-new/dotnet-core-2-1.md#roll-forward)。
 
