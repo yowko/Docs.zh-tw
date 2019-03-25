@@ -2,12 +2,12 @@
 title: C# 7.2 的新功能
 description: C# 7.2 新功能的概觀。
 ms.date: 08/16/2017
-ms.openlocfilehash: 9525d52e5eab4b8213b8a1920531dc4b4d7ac0a3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b8b2be68aac3cba92e0dbd74dfe4ee3cbbef0e88
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673219"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185346"
 ---
 # <a name="whats-new-in-c-72"></a>C# 7.2 的新功能
 
@@ -35,10 +35,10 @@ C# 7.2 使用了[語言版本選取項目](../language-reference/configure-langu
 
 您可利用 7.2 版新加入的語言功能，於使用參考語意時運用實值型別。 這些功能之設計目的是加強加效能，方法是將複製實質型別最小化，而不產生與使用參考型別相關的記憶體配置。 功能包括：
 
- - 參數上的 `in` 修飾詞，可指定引數將以傳址方式傳遞，但不受呼叫的方法修改。 將 `in` 修飾詞新增至引數是[來源相容變更](version-update-considerations.md#source-compatible-changes)。
- - 方法上 `ref readonly` 修飾詞的傳回內容，可指示方法要以傳址方式傳回其值，但不允許寫入該物件。 如果將傳回項目指派給值。則新增 `ref readonly` 修飾詞是[來源相容變更](version-update-considerations.md#source-compatible-changes)。 將 `readonly` 修飾詞新增至現有 `ref` 傳回陳述式是[不相容的變更](version-update-considerations.md#incompatible-changes)。 需要呼叫端更新 `ref` 本機變數的宣告，以包含 `readonly` 修飾詞。
- - `readonly struct` 宣告，可指示結構會固定，且應以 `in` 參數傳遞至其成員方法。 將 `readonly` 修飾詞新增至現有 struct 宣告是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
- - `ref struct` 宣告，可指示結構類型會直接存取受控記憶體，且一律會配置堆疊。 將 `ref` 修飾詞新增至現有 `struct` 宣告是[不相容的變更](version-update-considerations.md#incompatible-changes)。 `ref struct` 不能是類別的成員，或用於可能會在堆積上配置的其他位置。
+- 參數上的 `in` 修飾詞，可指定引數將以傳址方式傳遞，但不受呼叫的方法修改。 將 `in` 修飾詞新增至引數是[來源相容變更](version-update-considerations.md#source-compatible-changes)。
+- 方法上 `ref readonly` 修飾詞的傳回內容，可指示方法要以傳址方式傳回其值，但不允許寫入該物件。 如果將傳回項目指派給值。則新增 `ref readonly` 修飾詞是[來源相容變更](version-update-considerations.md#source-compatible-changes)。 將 `readonly` 修飾詞新增至現有 `ref` 傳回陳述式是[不相容的變更](version-update-considerations.md#incompatible-changes)。 需要呼叫端更新 `ref` 本機變數的宣告，以包含 `readonly` 修飾詞。
+- `readonly struct` 宣告，可指示結構會固定，且應以 `in` 參數傳遞至其成員方法。 將 `readonly` 修飾詞新增至現有 struct 宣告是[二進位相容變更](version-update-considerations.md#binary-compatible-changes)。
+- `ref struct` 宣告，可指示結構類型會直接存取受控記憶體，且一律會配置堆疊。 將 `ref` 修飾詞新增至現有 `struct` 宣告是[不相容的變更](version-update-considerations.md#incompatible-changes)。 `ref struct` 不能是類別的成員，或用於可能會在堆積上配置的其他位置。
 
 您可以在[撰寫安全、有效率的程式碼](../write-safe-efficient-code.md)深入了解這些變更。
 

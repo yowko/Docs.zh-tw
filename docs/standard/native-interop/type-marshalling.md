@@ -4,12 +4,12 @@ description: 了解 .NET 如何將您的類型封送處理至原生表示法。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 2c62581d34e77f208b7764f955dfa37613615ee4
-ms.sourcegitcommit: b56d59ad42140d277f2acbd003b74d655fdbc9f1
+ms.openlocfilehash: b4846f2e6cd945a25ec6a747c9038d48fe115559
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/19/2019
-ms.locfileid: "56411389"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185411"
 ---
 # <a name="type-marshalling"></a>封送處理類型
 
@@ -38,8 +38,8 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `uint`    | `uint32_t`              |
 | `long`    | `int64_t`               |
 | `ulong`   | `uint64_t`              |
-| `char`    | `char` 或 `char16_t`，取決於 P/Invoke 或結構的 `CharSet`。 請參閱[字元集文件](/.charset.md)。 |
-| `string`  | `char*` 或 `char16_t*`，取決於 P/Invoke 或結構的 `CharSet`。 請參閱[字元集文件](/.charset.md)。 |
+| `char`    | `char` 或 `char16_t`，取決於 P/Invoke 或結構的 `CharSet`。 請參閱[字元集文件](charset.md)。 |
+| `string`  | `char*` 或 `char16_t*`，取決於 P/Invoke 或結構的 `CharSet`。 請參閱[字元集文件](charset.md)。 |
 | `System.IntPtr` | `intptr_t`        |
 | `System.UIntPtr` | `uintptr_t`      |
 | .NET 指標類型 (例如 `void*`)  | `void*` |
@@ -73,7 +73,7 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 
 | .NET 類型 | 原生類型 (僅限參數) |
 |-----------|------------------------------|
-| `System.Text.StringBuilder` | `char*` 或 `char16_t*`，取決於 P/Invoke 的 `CharSet`。  請參閱[字元集文件](/.charset.md)。 |
+| `System.Text.StringBuilder` | `char*` 或 `char16_t*`，取決於 P/Invoke 的 `CharSet`。  請參閱[字元集文件](charset.md)。 |
 | `System.ArgIterator` | `va_list` (僅限 Windows x86/x64/arm64) |
 | `System.Runtime.InteropServices.ArrayWithOffset` | `void*` |
 | `System.Runtime.InteropServices.HandleRef` | `void*` |

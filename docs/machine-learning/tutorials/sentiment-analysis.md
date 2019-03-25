@@ -4,23 +4,23 @@ description: 探索如何在二元分類案例中使用 ML.NET，以了解如何
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b0d02babd126a62ef9a87b251f525a08376069aa
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a88ed38b76a230095f35304aa2b52af0a7c9c22d
+ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57845787"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58307937"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>教學課程：在情感分析二元分類案例中使用 ML.NET
 
-此範例教學課程說明如何在 Visual Studio 2017 中使用 C#，透過 .NET Core 主控台應用程式使用 ML.NET 來建立情感分類器，以預測正面或負面的情感。 在機器學習的領域中，此類型的預測被稱為二元分類。
+本範例教學課程說明如何在 Visual Studio 2017 中使用 C#，透過 .NET Core 主控台應用程式使用 ML.NET 來建立情感分類器，以預測正面或負面的情感。 在機器學習的領域中，此類型的預測被稱為二元分類。
 
 > [!NOTE]
-> 此主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
 
 此教學課程與關聯的範例目前是使用 **ML.NET 0.11 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊
 
-在此教學課程中，您將了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習演算法
@@ -35,9 +35,9 @@ ms.locfileid: "57845787"
 
 範例是一個主控台應用程式，會使用 ML.NET 來定型模型，以將情感分類並預測為正面或負面。 Yelp 情感資料集是來自加州大學爾灣分校 (UCI)，且被分割成定型資料集與測試資料集。 範例使用測試資料集來評估模型，以進行品質分析。 
 
-您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到此教學課程的原始程式碼。
+您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 * 已安裝「.NET Core 跨平台開發」工作負載的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。
 
@@ -45,7 +45,7 @@ ms.locfileid: "57845787"
 
 ## <a name="machine-learning-workflow"></a>機器學習工作流程
 
-此教學課程依循機器學習工作流程，可讓程序按順序移入。
+本教學課程依循機器學習工作流程，可讓程序按順序移入。
 
 工作流程階段如下：
 
@@ -63,7 +63,7 @@ ms.locfileid: "57845787"
 
 您必須先了解問題，以便將其分解成可支援模型建置和定型的組件。 分解問題可讓您預測及評估結果。
 
-此教學課程的問題是要了解傳入的網站評論情感，以採取適當的動作。
+本教學課程的問題是要了解傳入的網站評論情感，以採取適當的動作。
 
 針對要用來將模型定型的資料，您可以將問題分解成情感文字和情感值，以及可評估並操作使用的預測情感值。
 
@@ -84,7 +84,7 @@ ms.locfileid: "57845787"
 
 ### <a name="about-the-classification-algorithm"></a>關於分類演算法
 
-分類是一個機器學習演算法，會使用資料來**判斷**項目或資料列的分類、類型或類別。 例如，您可以使用分類來：
+分類是一項機器學習演算法，會使用資料來**判斷**項目或資料列的分類、類型或類別。 例如，您可以使用分類來：
 
 * 識別情感是正面還是負面。
 * 將電子郵件分類為垃圾郵件或正常郵件。
@@ -102,7 +102,7 @@ ms.locfileid: "57845787"
 
 1. 開啟 Visual Studio 2017。 從功能表列中選取 [檔案]  >  [新增]  >  [專案]。 在 [新增專案] 對話方塊中，選取 [Visual C#] 節點，然後選取 [.NET Core] 節點。 然後選取 [主控台應用程式 (.NET Core)] 專案範本。 在 [名稱] 文字方塊中，輸入 "SentimentAnalysis"，然後選取 [確定] 按鈕。
 
-2. 在您的專案中建立名為 *Data* 的目錄以儲存資料集檔案：
+2. 在您的專案中建立一個名為 *Data* 的目錄以儲存資料集檔案：
 
     在 [方案總管] 中，於您的專案上按一下滑鼠右鍵，然後選取 [新增] > [新增資料夾]。 輸入 "Data"，然後按 Enter。
 
@@ -173,7 +173,7 @@ ms.locfileid: "57845787"
 請使用下列程式碼，在緊接著 `Main` 方法之後，建立 `LoadData` 方法：
 
 ```csharp
-public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlContext)
+public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 {
 
 }
@@ -184,7 +184,7 @@ public static (IDataView trainSet, IDataView testSet) LoadData(MLContext mlConte
 
  作為 `Transforms` 的輸入和輸出，`DataView` 是基本的資料管線類型，相當於 `LINQ` 的 `IEnumerable`。
 
-在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在此教學課程中，它會載入資料集，其中包含評論及所對應的有害的或無害的情感。 這用來建立模型並加以定型。
+在 ML.NET 中，資料相當於 SQL 檢視。 它是延遲評估、結構描述化且異質性的。 物件是管線的第一個部分，並且會載入資料。 在本教學課程中，它會載入資料集，其中包含評論及所對應的有害的或無害的情感。 這用來建立模型並加以定型。
 
  將下列程式碼新增為 `LoadData` 方法的第一行：
 
@@ -322,8 +322,6 @@ private static void SaveModelAsFile(MLContext mlContext, ITransformer model)
 
 [!code-csharp[SaveToMethod](../../../samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#SaveModel "Add the SaveTo Method")]
 
-## <a name="deploy-and-predict-with-a-loaded-model"></a>使用已載入的模型部署和預測
-
 您也可以透過使用下列程式碼，以 `_modelPath` 寫入主控台訊息來顯示檔案寫入的位置：
 
 ```csharp
@@ -456,11 +454,11 @@ Press any key to continue . . .
 
 建立成功的模型是一個需要反覆嘗試的程序。 此模型一開始的品質較低，因為此教學課程是使用小型的資料集來提供快速的模型定型。 如果您對於模型的品質感到不滿意，可以嘗試為它提供較大的定型資料集，或選擇不同的定型演算法，並針對每個演算法搭配不同的超參數來改善它。
 
-您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到此教學課程的原始程式碼。
+您可以在 [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) 存放庫中找到本教學課程的原始程式碼。
 
 ## <a name="next-steps"></a>後續步驟
 
-在此教學課程中，您將了解如何：
+在本教學課程中，您將了解如何：
 > [!div class="checklist"]
 > * 了解問題
 > * 選取適當的機器學習演算法
