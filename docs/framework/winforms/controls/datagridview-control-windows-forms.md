@@ -21,8 +21,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57722319"
 ---
 # <a name="datagridview-control-windows-forms"></a>DataGridView 控制項 (Windows Form)
-
-  `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用 `DataGridView` 控制來顯示少量資料的唯讀檢視，或者您可以調整它的大小，以顯示非常大的資料集之可編輯檢視。  
+`DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用 `DataGridView` 控制來顯示少量資料的唯讀檢視，或者您可以調整它的大小，以顯示非常大的資料集之可編輯檢視。  
   
  您可以數種方式擴充 `DataGridView` 控制項，以建置自訂行為到您的應用程式中。 例如，您可以程式設計方式指定自己的排序演算法，而且也可以建立自己的儲存格類型。 您可以在數種屬性間做選擇，輕鬆自訂 `DataGridView` 控制項的外觀。 許多類型的資料儲存區可用來做為資料來源，不然 `DataGridView` 控制項可在不使用與其繫結的資料來源之情況下運作。  
   
@@ -81,8 +80,7 @@ ms.locfileid: "57722319"
  提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。  
   
  <xref:System.Windows.Forms.BindingSource>  
- 提供 <xref:System.Windows.Forms.BindingSource> 元件的參考文件。 
-  <xref:System.Windows.Forms.DataGridView> 控制項和 <xref:System.Windows.Forms.BindingSource> 元件設計為可密切合作。  
+ 提供 <xref:System.Windows.Forms.BindingSource> 元件的參考文件。 <xref:System.Windows.Forms.DataGridView> 控制項和 <xref:System.Windows.Forms.BindingSource> 元件設計為可密切合作。  
   
 ## <a name="see-also"></a>另請參閱
 - [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)

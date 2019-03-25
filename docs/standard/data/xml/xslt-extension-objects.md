@@ -29,8 +29,7 @@ ms.locfileid: "56836444"
   
  從擴充物件傳回的資料型別，是 `number`、`string`、`Boolean` 及 `node set` 這四種基本 XPath 資料型別之一。  
   
- 
-  `params` 類別目前不支援任何允許傳遞未指定的參數數目，並以 <xref:System.Xml.Xsl.XslCompiledTransform> 關鍵字定義的方法。 使用以 `params` 關鍵字定義之任何方法的 XSLT 樣式表將無法正常運作。 如需詳細資訊，請查看 [params](~/docs/csharp/language-reference/keywords/params.md)。  
+ `params` 類別目前不支援任何允許傳遞未指定的參數數目，並以 <xref:System.Xml.Xsl.XslCompiledTransform> 關鍵字定義的方法。 使用以 `params` 關鍵字定義之任何方法的 XSLT 樣式表將無法正常運作。 如需詳細資訊，請查看 [params](~/docs/csharp/language-reference/keywords/params.md)。  
   
 ### <a name="to-use-an-xslt-extension-object"></a>使用 XSLT 擴充物件  
   

@@ -248,8 +248,7 @@ public class Order {
     </s:schema>  
 ```  
   
- 
-  `XmlRootAttribute` 的效果也可以在 HTTP GET 與 HTTP POST 結果中看到，如下所示。  
+ `XmlRootAttribute` 的效果也可以在 HTTP GET 與 HTTP POST 結果中看到，如下所示。  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  

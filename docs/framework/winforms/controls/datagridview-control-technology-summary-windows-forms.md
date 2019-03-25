@@ -33,8 +33,7 @@ ms.locfileid: "57717631"
   
  `DataGridView`控制項可以顯示從資料存放區的資料列。 支援許多類型的資料存放區。 資料存放區可以保存簡單且不具類型的資料，例如一維陣列，或它可以保留型別的資料，例如<xref:System.Data.DataSet>。 如需詳細資訊，請參閱[如何：資料繫結至 Windows Form DataGridView 控制項](how-to-bind-data-to-the-windows-forms-datagridview-control.md)。  
   
- 
-  `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用控制項來顯示小型到大型資料集的唯讀或可編輯的檢視。  
+ `DataGridView` 控制項以表格式顯示資料，是一項功能強大、有彈性的方式。 您可以使用控制項來顯示小型到大型資料集的唯讀或可編輯的檢視。  
   
  您可以擴充`DataGridView`數種方式在您的應用程式中建置自訂行為的控制項。 例如，您可以程式設計方式指定自己的排序演算法，而且也可以建立自己的儲存格類型。 您可以在數種屬性間做選擇，輕鬆自訂 `DataGridView` 控制項的外觀。 許多類型的資料存放區可用來當做資料來源，或`DataGridView`控制項可以在沒有資料來源繫結至該操作。  
   
