@@ -3,12 +3,12 @@ title: 宣告式身分識別模型
 ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
-ms.openlocfilehash: 7248cf51946d4bf798209c047ec2c7ed3bb04ebe
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 21ed5b7616b51109ef21ee91bdf93b2808e00715
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197938"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411730"
 ---
 # <a name="claims-based-identity-model"></a>宣告式身分識別模型
 當您建置宣告感知應用程式時，使用者識別會在應用程式中以一組宣告表示。 一個宣告可以是使用者的名稱，另一個可能是電子郵件地址。 這個概念是外部識別系統設定為提供應用程式一切必要資訊，使其了解是哪位使用者在提出要求，並且確保會使用密碼編譯您自受信任來源取得的識別資料。  
@@ -73,10 +73,10 @@ ms.locfileid: "47197938"
   
  上圖顯示已設定為使用 WIF 進行驗證的網站 (信賴憑證者應用程式，即 RP) 以及要使用該網站的用戶端 (Web 瀏覽器)。  
   
-1.  當未驗證的使用者要求網頁時，瀏覽器會重新導向至識別提供者 (IP) 頁面。  
+1.  當未驗證的使用者要求網頁時，其瀏覽器重新導向的身分識別提供者 (IdP) 頁面。  
   
-2.  IP 會要求使用者出示其認證 (例如使用者名稱/密碼、Kerberos 等等)。  
+2.  IdP 會要求使用者出示其認證，例如使用者名稱/密碼或 Kerberos 驗證。  
   
-3.  IP 發行權杖，權杖隨即傳回至瀏覽器。  
+3.  權杖，權杖會傳回到瀏覽器 IdP 問題。  
   
 4.  瀏覽器會重新導向至原本要求的頁面，並且 WIF 會判斷該權杖是否有足夠的權限可以存取該頁面。 如果權限沒問題，瀏覽器隨即發行 Cookie 以建立工作階段，因此驗證只需要進行一次，接著就將控制權移交給應用程式。

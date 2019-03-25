@@ -2,19 +2,19 @@
 title: 數量詞作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: ae1a2b73-503c-4f4b-a3fd-31b5adbee67c
-ms.openlocfilehash: 966bc958d6feac77ebe1c229bfe5dbb993031676
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c358c3181ecbefeedcbe22e6f3c877d2924c66b3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976742"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409506"
 ---
 # <a name="quantifier-operations-visual-basic"></a>數量詞作業 (Visual Basic)
 數量詞作業會傳回 <xref:System.Boolean> 值，指出序列中的部分或所有項目是否符合條件。  
   
  下圖說明兩個不同來源序列上的兩個不同數量詞作業。 第一個作業會詢問一個或多個項目是否為字元 'A'，而結果為 `true`。 第二個作業會詢問所有項目是否都為字元 'A'，而結果為 `true`。  
   
- ![LINQ 數量詞作業](../../../../csharp/programming-guide/concepts/linq/media/linq_quantifier.png "LINQ_Quantifier")  
+ ![LINQ 數量詞作業](./media/quantifier-operations/linq-quantifier-operations.png)  
   
  下節列出執行數量詞作業的標準查詢運算子方法。  
   

@@ -52,8 +52,7 @@ ms.locfileid: "56261098"
   
  IIS 可以為每個網站指定多個繫結，讓每個配置都有多個基底位址。 之前[!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]，WCF 會不支援多個位址的結構描述，和指定，會擲回<xref:System.ArgumentException>在啟用期間。  
   
- 
-  [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 可讓網際網路服務提供者在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 可讓網際網路服務提供者在同一個網站上裝載多個應用程式，而且同一個配置中可以有不同的基底位址。  
   
  例如，網站可能包含下列基底位址：  
   
@@ -78,8 +77,7 @@ ms.locfileid: "56261098"
   
  在上述範例中，`net.tcp://payroll.myorg.com:8000`和`http://shipping.myorg.com:8000`會的唯一基底位址，對於其各自的結構描述，都會通過。  
   
- 
-  `baseAddressPrefixFilter` 不支援萬用字元。  
+ `baseAddressPrefixFilter` 不支援萬用字元。  
   
  IIS 提供的基底位址可能會有繫結程序至其他配置，但 `baseAddressPrefixFilters` 清單中不存在的位址， 而且這些位址尚未經過篩選。  
   
@@ -112,8 +110,7 @@ ms.locfileid: "56261098"
   
 -   端點的接聽位址是私用 URI，而且已設為不同於本身 `listenURI` 屬性的值。  
   
- 
-  `via` 指定的傳輸位址，是指訊息在前往由服務所在位置 `to` 參數指定的某個其他遠端位址途中，一開始要傳送到的位置。 在網際網路用途方面，`via` URI 大多與服務最終 <xref:System.ServiceModel.EndpointAddress.Uri%2A> 位址的 `to` 屬性相同。 當您必須手動執行路由傳送時，才需要區分這兩個位址。  
+ `via` 指定的傳輸位址，是指訊息在前往由服務所在位置 `to` 參數指定的某個其他遠端位址途中，一開始要傳送到的位置。 在網際網路用途方面，`via` URI 大多與服務最終 <xref:System.ServiceModel.EndpointAddress.Uri%2A> 位址的 `to` 屬性相同。 當您必須手動執行路由傳送時，才需要區分這兩個位址。  
   
 ### <a name="addressing-headers"></a>定址標頭  
  端點除了可以由其基本 URI 定址之外，還可由一個或多個 SOAP 標頭定址。 有些情況適用這種方式，例如 SOAP 媒介，此時端點需要此端點的用戶端加入目標為媒介的 SOAP 標頭。  
@@ -136,8 +133,7 @@ ms.locfileid: "56261098"
 -   在組態中，指定 使用自訂接聽位址`ListenUri`的服務屬性[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-element.md)項目。  
   
 ### <a name="custom-soap-address-filter"></a>自訂 SOAP 位址篩選條件  
- 
-  <xref:System.ServiceModel.EndpointAddress.Uri%2A> 可以與任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性搭配使用，以定義端點的 SOAP 位址篩選條件 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 根據預設，這項篩選條件會確認傳入訊息所包含的 `To` 訊息標頭符合端點 URI，而且所有必要的端點標頭都出現在訊息中。  
+ <xref:System.ServiceModel.EndpointAddress.Uri%2A> 可以與任何 <xref:System.ServiceModel.EndpointAddress.Headers%2A> 屬性搭配使用，以定義端點的 SOAP 位址篩選條件 (<xref:System.ServiceModel.Dispatcher.EndpointDispatcher.AddressFilter%2A>)。 根據預設，這項篩選條件會確認傳入訊息所包含的 `To` 訊息標頭符合端點 URI，而且所有必要的端點標頭都出現在訊息中。  
   
  在某些情況中，端點會接收抵達基礎傳輸的所有訊息，而不只有包含適當 `To` 標頭的訊息。 若要啟用這項功能，使用者可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。  
   

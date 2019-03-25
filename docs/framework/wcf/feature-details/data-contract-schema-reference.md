@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
-ms.openlocfilehash: 48b151bb718cb05e171909d41ce4415a0988d1b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: decde09c2225da0af420813b477b86f4564d42f7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662578"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411794"
 ---
 # <a name="data-contract-schema-reference"></a>資料合約結構描述參考
 本主題說明 <xref:System.Runtime.Serialization.DataContractSerializer> 用來描述 XML 序列化之 Common Language Runtime (CLR) 型別的 XML 結構描述 (XSD) 子集。  
@@ -523,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 型別對應  
- 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，已將 `ISerializable` 引入為用來序列化物件以便保存或做為資料傳輸用途的一般機制。 有許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別都會實作 `ISerializable` ，而且可以在應用程式之間傳遞。 `DataContractSerializer` 自然會為 `ISerializable` 類別提供支援。 `DataContractSerializer` 會對應至 `ISerializable` 實作結構描述型別 (其中只有型別的 QName 限定名稱不同)，而且是有效的屬性集合。 例如， `DataContractSerializer` 對應 <xref:System.Exception> 至下列 XSD 型別中 `http://schemas.datacontract.org/2004/07/System` 命名空間。  
+ 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 1.0 版中，已將 <xref:System.Runtime.Serialization.ISerializable> 引入為用來序列化物件以便保存或做為資料傳輸用途的一般機制。 有許多 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別都會實作 `ISerializable` ，而且可以在應用程式之間傳遞。 <xref:System.Runtime.Serialization.DataContractSerializer> 自然會為 `ISerializable` 類別提供支援。 `DataContractSerializer` 會對應至 `ISerializable` 實作結構描述型別 (其中只有型別的 QName 限定名稱不同)，而且是有效的屬性集合。 例如， `DataContractSerializer` 對應 <xref:System.Exception> 至下列 XSD 型別中 `http://schemas.datacontract.org/2004/07/System` 命名空間。  
   
 ```xml  
 <xs:complexType name="Exception">  

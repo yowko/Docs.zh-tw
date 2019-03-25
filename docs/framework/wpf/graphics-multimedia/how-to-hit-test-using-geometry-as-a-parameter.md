@@ -9,12 +9,12 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 15a33d05cb3ca4fd40f04170bd1756e466631275
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366357"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410611"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>HOW TO：使用幾何當做參數進行點擊測試
 此範例示範如何在視覺物件使用執行點擊的測試<xref:System.Windows.Media.Geometry>做為點擊測試參數。  
@@ -27,8 +27,7 @@ ms.locfileid: "57366357"
   
  <xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A>的屬性<xref:System.Windows.Media.GeometryHitTestResult>提供的使用點擊測試結果的相關資訊<xref:System.Windows.Media.Geometry>做為點擊測試參數。 下圖顯示點擊測試幾何 (藍色圓形) 和目標視覺物件呈現內容 (紅色矩形) 之間的關係。  
   
- ![在點擊測試中的 IntersectionDetail 的圖表](./media/intersectiondetail01.png "IntersectionDetail01")  
-點擊測試幾何和目標視覺物件之間的交集  
+ ![在點擊測試會顯示 IntersectionDetail 的圖表。](./media/how-to-hit-test-using-geometry-as-a-parameter/intersectiondetail-hit-test.png)  
   
  下列範例示範如何實作點擊的測試回呼時<xref:System.Windows.Media.Geometry>做為點擊的測試參數。 `result`參數會轉換成<xref:System.Windows.Media.GeometryHitTestResult>若要擷取的值<xref:System.Windows.Media.GeometryHitTestResult.IntersectionDetail%2A>屬性。 屬性值可讓您判斷如果<xref:System.Windows.Media.Geometry>點擊的測試參數完全或部分包含在點擊的測試目標呈現內容。 在此情況下，範例程式碼僅將點擊測試結果加入至完全包含在目標範圍內之視覺效果的清單中。  
   

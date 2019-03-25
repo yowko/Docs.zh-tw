@@ -4,12 +4,12 @@ ms.date: 10/22/2008
 ms.technology: dotnet-standard
 ms.assetid: bebb27ac-9712-4196-9931-de19fc04dbac
 author: KrzysztofCwalina
-ms.openlocfilehash: c2a5a69186e41642abf77357db8b04e2611a43f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0ef8ab378fb3898f2d2e134f0b38668f6794ef3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513127"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409207"
 ---
 # <a name="serialization"></a>序列化
 序列化是將物件轉換成的格式，可以輕易地保存或傳輸的程序。 例如，您可以將物件序列化、 傳輸，使用 HTTP 和還原序列化該在目的地電腦在網際網路上。  
@@ -86,14 +86,16 @@ ms.locfileid: "54513127"
   
 ```csharp
 [Serializable]  
-public class Person : ISerializable {  
-    protected Person(SerializationInfo info, StreamingContext context) {  
-        ...  
+public class Person : ISerializable
+{  
+    protected Person(SerializationInfo info, StreamingContext context)
+    {  
+        // ...  
     }  
 }  
 ```
   
- **✓ DO** 實作 `ISerializable` 成員明確。  
+ **✓ DO** 實作 <xref:System.Runtime.Serialization.ISerializable> 成員明確。  
   
  **✓ DO** 套用連結要求即可 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A?displayProperty=nameWithType> 實作。 這可確保，只有完全受信任的核心和執行階段序列化程式可以存取的成員。  
   

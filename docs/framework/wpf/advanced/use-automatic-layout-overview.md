@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: af564c4ca865c47c7efdda6ed86732581f677218
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74c4e10e8f28fb00a5528c1ab860b88d0caa4303
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353591"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408752"
 ---
 # <a name="use-automatic-layout-overview"></a>使用自動配置概觀
 本主題將介紹如何撰寫的開發人員的指導方針[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]含有可當地語系化的應用程式[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]。 在過去，當地語系化的 UI 會是耗時的程序。 針對調整 UI，是每一種語言所需的像素的像素調整。 使用正確的設計和正確的編碼標準，今日[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]可以建構，讓當地語系化人員擁有較少的調整大小和重新調整位置作業執行。 撰寫應用程式都可以更輕鬆地調整大小和重新置放方法稱為自動版面配置，並可藉由使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式的設計。  
@@ -39,10 +39,9 @@ ms.locfileid: "57353591"
   
  [!code-xaml[LocalizationBtn#1](~/samples/snippets/csharp/VS_Snippets_Wpf/LocalizationBtn/CS/Pane1.xaml#1)]  
   
- 下圖顯示程式碼範例的輸出。  
+ 下圖顯示的程式碼範例的輸出：  
   
- ![按鈕相同，但以不同語言的文字](./media/globalizationbutton.png "GlobalizationButton")  
-可自動調整大小的按鈕  
+ ![按鈕相同，但文字的語言不同](./media/use-automatic-layout-overview/auto-resizable-button.png)  
   
 <a name="autolayout_coding"></a>   
 ## <a name="automatic-layout-and-coding-standards"></a>自動版面配置和編碼標準  

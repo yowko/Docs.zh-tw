@@ -74,8 +74,7 @@ ms.locfileid: "57844232"
 
 <xref:System.Data.SqlClient.SqlParameter.SqlValue%2A> 可接受型別 <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 的值。
 
-
-  <xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。
+<xref:System.Xml.XmlReader>、<xref:System.IO.TextReader> 和 <xref:System.IO.Stream> 物件會被轉移到 <xref:System.Data.SqlClient.SqlParameter.Size%2A> 所定義的值。
 
 ## <a name="sample----streaming-from-sql-server"></a>從 SQL Server 中串流範例-
 

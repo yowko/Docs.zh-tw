@@ -41,8 +41,7 @@ public void playExclamation()
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   
-  <xref:System.Media?displayProperty=nameWithType> 命名空間的參考。  
+-   <xref:System.Media?displayProperty=nameWithType> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Media.SoundPlayer>

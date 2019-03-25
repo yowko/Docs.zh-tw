@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 3bca6cd364ed4e0d0179c13fb378449b7cf05739
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705341"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412236"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>HOW TO：在指定的位置繪製文字
 當您執行自訂繪圖時，您可以在單一的水平列，從指定的點開始來繪製文字。 您也可以使用這個方式繪製文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>參數。 <xref:System.Drawing.Graphics.DrawString%2A>方法也需要<xref:System.Drawing.Brush>和 <xref:System.Drawing.Font>  
@@ -24,7 +24,7 @@ ms.locfileid: "57705341"
   
  下圖顯示當您使用時，在指定的點繪製的文字輸出<xref:System.Drawing.Graphics.DrawString%2A>多載的方法。  
   
- ![字型文字](./media/csfontstext1.png "csfontstext1")  
+ ![如果螢幕擷取畫面顯示在指定的時間點的文字輸出。](./media/how-to-draw-text-at-a-specified-location/font-text-specified-point.png)  
   
 ### <a name="to-draw-a-line-of-text-with-gdi"></a>若要繪製一行文字使用 GDI +  
   

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37e6b995a84a54dfcb52460d11e9843a933a5684
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353071"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409870"
 ---
 # <a name="reliability-best-practices"></a>可靠性最佳作法
 
@@ -241,7 +241,7 @@ HPA 只會影響裝載 Common Language Runtime 以及實作主機保護的 Unman
 
 ### <a name="do-not-block-indefinitely-in-unmanaged-code"></a>不要透過 Unmanaged 程式碼無限期封鎖
 
-因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  使用 Win32 同步處理原始物件進行封鎖是不允許事項的清楚範例。  可以的話，應該避免通訊端上 `ReadFile` 呼叫中的封鎖 - 理想上，Win32 API 應該提供讓這類作業逾時的機制。
+因為 CLR 無法中止執行緒，所以使用 Unmanaged 程式碼進行封鎖可能會導致拒絕服務攻擊，而不是使用 Managed 程式碼進行封鎖。  已封鎖的執行緒會防止 CLR 卸載 <xref:System.AppDomain>，至少不執行一些非常不安全的作業。  封鎖使用 Windows 同步處理原始物件是不允許事項的清楚範例。  封鎖的呼叫中`ReadFile`通訊端上應該儘可能避免 — Windows API 應該在理想情況下提供的機制，讓這類作業逾時。
 
 在理想情況下，所有呼叫原生的方法都應該使用具有合理有限逾時的 Win32 呼叫。  如果允許使用者指定逾時，則在沒有某種特定安全性權限時，不應該允許使用者指定無限逾時。  準則是，如果方法將封鎖超過 ~10 秒，則需要使用支援逾時的版本，或需要額外的 CLR 支援。
 

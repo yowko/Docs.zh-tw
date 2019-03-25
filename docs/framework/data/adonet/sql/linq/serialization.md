@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
-ms.openlocfilehash: 12d7dd8d47262f8eefe8f71f144c5648f089be45
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 56ebe888b816972f8d72873e4fca9f5204e6c772
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593572"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408921"
 ---
 # <a name="serialization"></a>序列化
 本主題描述[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]序列化功能。 後續段落會提供有關如何在設計階段的程式碼產生期間加入序列化以及 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 類別 (Class) 的執行階段序列化行為。  
@@ -50,7 +50,7 @@ ms.locfileid: "54593572"
  [!code-csharp[DLinqSerialization#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#3)]
  [!code-vb[DLinqSerialization#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#3)]  
   
- 至於下列範例中的 `Order` 類別，只有對應至 `Customer` 類別的反向關聯屬性 (Property) 會簡短顯示。 該類別沒有 `DataMember` 屬性 (Attribute) 可避免循環。  
+ 至於下列範例中的 `Order` 類別，只有對應至 `Customer` 類別的反向關聯屬性 (Property) 會簡短顯示。 該類別沒有 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 可避免循環。  
   
  [!code-csharp[DLinqSerialization#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSerialization/cs/northwind-ser.cs#4)]
  [!code-vb[DLinqSerialization#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/northwind-ser.vb#4)]  
@@ -65,7 +65,7 @@ ms.locfileid: "54593572"
  [!code-vb[DLinqSerialization#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSerialization/vb/Module1.vb#6)]  
   
 ### <a name="self-recursive-relationships"></a>自我遞迴關聯性  
- 自我遞迴關聯性會依循相同的模式。 對應至外部索引鍵的關聯屬性 (Property) 沒有 `DataMember` 屬性 (Attribute)，然而父屬性 (Property) 卻有該屬性 (Attribute)。  
+ 自我遞迴關聯性會依循相同的模式。 對應至外部索引鍵的關聯屬性 (Property) 沒有 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute)，然而父屬性 (Property) 卻有該屬性 (Attribute)。  
   
  請考慮下列具有兩個自我遞迴關聯性的類別：Employee.manager/reports 和 employee.mentor/mentees。  
   

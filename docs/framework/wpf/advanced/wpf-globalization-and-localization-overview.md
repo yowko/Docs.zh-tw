@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 55a60a74c246e0eefb854bed3d22cfb97eff15b1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492662"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412028"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -144,9 +144,9 @@ ms.locfileid: "57492662"
   
  請注意，此範例會使用的共用大小功能<xref:System.Windows.Controls.Grid>。 最後三個資料行利用此將它們放在同一個<xref:System.Windows.Controls.DefinitionBase.SharedSizeGroup%2A>。 因為其中一個預期來自屬性名稱，所以這可讓資料行共用相同的大小。 因此當 [瀏覽...] 取得當地語系化為較長的字串"Durchsuchen..."，所有按鈕都成長而不是讓小型的 [確定] 按鈕和大的"Durchsuchen..."按鈕的寬度。  
   
- **Xml:lang**
+ **xml:lang**
   
- `Xml:lang="en-US"`  
+ `xml:lang="en-US"`  
   
  請注意[xml: lang 處理中 XAML](../../xaml-services/xml-lang-handling-in-xaml.md)放在根項目[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 此屬性描述所指定項目的文化特性和其子項目。 這個值由幾項功能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，並應該當地語系化期間適當地變更。 此值可變更使用何種語言字典來進行斷字和拼字檢查。 它也會影響顯示的位數，以及字型遞補系統如何選取要使用的字型。 最後，此屬性會影響數字顯示方式，以及使用複雜指令碼所撰寫之文字的形成方式。 預設值是 "en-US"。  
   

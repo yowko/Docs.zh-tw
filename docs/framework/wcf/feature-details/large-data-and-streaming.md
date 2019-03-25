@@ -2,12 +2,12 @@
 title: 大型資料與資料流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: c6514903294147671804b5b8de47fddc764b0547
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674111"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411053"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中定義的標準文字格式[XML 1.0 規格](https://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和架構設計人員通常會關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 帶來的特殊挑戰的二進位資料的傳輸效率。  
@@ -67,7 +67,7 @@ Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎
   
 |編碼器繫結項目|描述|  
 |-----------------------------|-----------------|  
-|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文字訊息編碼器是所有 HTTP 繫結的預設編碼器，以及所有優先考量互通性之自訂繫結的適當選擇。 此編碼器不需特別處理二進位資料，即可讀取及撰寫標準 SOAP 1.1/SOAP 1.2 文字訊息。 如果訊息的 <xref:System.ServiceModel.Channels.MessageVersion> 設定為 `None`，SOAP 信封包裝函式會從輸出中省略，而只會序列化訊息本文內容。|  
+|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>|文字訊息編碼器是所有 HTTP 繫結的預設編碼器，以及所有優先考量互通性之自訂繫結的適當選擇。 此編碼器不需特別處理二進位資料，即可讀取及撰寫標準 SOAP 1.1/SOAP 1.2 文字訊息。 如果<xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType>訊息的屬性設定為<xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>、 SOAP 信封包裝函式會從輸出中省略，而且只有訊息本文內容序列化。|  
 |<xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>|MTOM 訊息編碼器是實作二進位資料特殊處理的文字編碼器，根據預設，它並非用於任何標準繫結中，因為它完全是依個案執行的最佳化公用程式。 如果訊息包含達到 MTOM 編碼可產生功效之臨界值的二進位資料，資料便會在訊息封套之後外顯化為 MIME 部分。 請參閱本節稍後的「啟用 MTOM」。|  
 |<xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>|二進位訊息編碼器是 Net * 繫結和適當的選擇的預設編碼器，每當通訊雙方以 WCF 為基礎。 二進位訊息編碼器是使用 .NET 二進位 XML 格式，這是 XML 資訊設定 (Infoset) 的 Microsoft 特定二進位表示法，通常會產生比同等的 XML 1.0 表示法更小的使用量，並將二進位資料編碼為位元組資料流。|  
   

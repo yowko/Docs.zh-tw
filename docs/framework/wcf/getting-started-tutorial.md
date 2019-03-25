@@ -1,69 +1,76 @@
 ---
-title: 開始使用 Tutorial1
-ms.date: 03/30/2017
+title: 教學課程：開始使用 Windows Communication Foundation 應用程式
+description: 這些教學課程提供建立 WCF 應用程式的簡介。
+ms.date: 01/25/2019
 helpviewer_keywords:
-- WCF [WCF], getting started
-- Windows Communication Foundation [WCF], getting started
-- getting started [WCF]
+- WCF [WCF], get started
+- Windows Communication Foundation [WCF], get started
+- get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: b7ba25795dd69e5bd978c77928f9b9797f4d4e19
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200880"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408856"
 ---
-# <a name="getting-started-tutorial"></a>快速入門教學課程
-在本節中所包含的主題旨在讓您快速獲得至 Windows Communication Foundation (WCF) 程式設計經驗。 每個主題已設計成依本主題結尾的清單順序完成。 循序完成本教學課程可讓您建立 WCF 服務和用戶端應用程式所需的步驟大致了解。 服務會公開一個或多個端點，而其中每個端點都會公開一項或多項服務作業。 *端點*服務的指定位置可以找到服務，包含的資訊，說明服務與合約定義的功能，用戶端必須之間的通訊的繫結位址服務提供給其用戶端。
+# <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>教學課程：開始使用 Windows Communication Foundation 應用程式
+下面一系列教學課程會為您介紹至 Windows Communication Foundation (WCF) 程式設計經驗。 透過這些教學課程中順序的工作會提供您建立 WCF 應用程式所需的步驟大致了解。 完成之後，您必須執行的 WCF 服務和 WCF 用戶端呼叫服務。 
 
- 在您逐步執行本教學課程中各主題的程序之後，您將會有執行中的服務和呼叫服務的用戶端。 前面三個主題說明如何定義服務合約、如何實作服務合約以及如何裝載服務。 建立的這個服務是在主控台應用程式中自我裝載的服務。 服務也可以在網際網路資訊服務 (IIS) 之下進行裝載。 如需這個做法的詳細資訊，請參閱[如何：將 WCF 服務裝載於 IIS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。 服務是在程式碼中進行設定的，但是也可以在組態檔中設定。 如需使用組態檔的詳細資訊，請參閱[設定服務使用組態檔](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)。
+此教學課程假設您使用 Visual Studio 作為開發環境。 如果您使用另一個開發環境，請略過 Visual Studio 特定指示。 
 
- 後面三個主題將說明如何建立用戶端 Proxy、設定用戶端應用程式，以及使用用戶端 Proxy 來呼叫服務所公開的服務作業。 服務會發行定義用戶端應用程式與服務進行通訊所需之資訊的中繼資料。 Visual Studio 2012 會存取此中繼資料的程序自動化，並使用它來建構和設定服務的用戶端應用程式。 如果您不使用 Visual Studio 2012，您可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來建構和設定服務的用戶端應用程式。
+您可以下載並執行範例 WCF 應用程式，請參閱 < [Windows Communication Foundation 範例](samples/index.md)。 如需簡介範例，請參閱 <<c0> [ 開始使用範例](samples/getting-started-sample.md)。
 
-在本節中的主題會假設您使用 Visual Studio 作為開發環境。 如果您使用另一個開發環境，請略過 Visual Studio 特定指示。
+如需建立服務和用戶端的詳細深入資訊，請參閱 <<c0> [ 基本 WCF 程式設計](basic-wcf-programming.md)。
 
-範例應用程式，可以下載到您的硬碟並執行，請參閱中的主題[Windows Communication Foundation (WCF) 範例](./samples/index.md)。 本主題中，特別是，請參閱[開始使用](../../../docs/framework/wcf/samples/getting-started-sample.md)。
+## <a name="wcf-tutorials"></a>WCF 的教學課程
 
-如需建立服務和用戶端的詳細深入資訊，請參閱 <<c0> [ 基本 WCF 程式設計](../../../docs/framework/wcf/basic-wcf-programming.md)。
+前三個教學課程說明如何定義 WCF 服務合約、 如何實作它，以及如何裝載它。 您所建立的服務是自我裝載的主控台應用程式中。 您也可以裝載在 Microsoft Internet Information Services (IIS 服務）。 如需詳細資訊，請參閱[如何：將 WCF 服務裝載於 IIS](feature-details/how-to-host-a-wcf-service-in-iis.md)。 雖然您可以使用程式碼來設定服務在本教學課程中，您也可以[設定服務組態檔內](configuring-services-using-configuration-files.md)。 
 
-## <a name="in-this-section"></a>本節內容
- [如何：定義服務合約](../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [教學課程：定義服務合約](how-to-define-a-wcf-service-contract.md)
 
- 描述如何建立 WCF 合約使用使用者定義的介面。 合約會定義服務所公開的功能。
+    您可以建立 WCF 合約具有使用者定義的介面。 此合約會定義服務所公開的功能。
 
- [如何：實作服務合約](../../../docs/framework/wcf/how-to-implement-a-wcf-contract.md)
+- [教學課程：實作服務合約](how-to-implement-a-wcf-contract.md)
 
- 說明如何實作服務合約。 合約定義之後，必須使用服務類別來實作。
+    定義合約之後，您必須透過服務類別來進行實作。
 
- [如何：裝載和執行基本的服務](../../../docs/framework/wcf/how-to-host-and-run-a-basic-wcf-service.md)
+- [教學課程：裝載和執行基本的服務](how-to-host-and-run-a-basic-wcf-service.md)
 
- 說明如何在程式碼中設定服務的端點，以及如何在主控台應用程式中裝載服務。 如果要成為作用中的服務，必須在執行階段環境中設定與裝載服務。 此環境會建立服務並控制其內容與存留期。
+    設定服務的端點，並將服務裝載於主控台應用程式。 服務才會變成作用中，您必須設定它，並裝載在執行階段環境中。 此執行階段環境中建立服務，並控制其內容和存留期。
 
- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+下面兩個教學課程說明如何建立、 設定和使用用戶端應用程式，來呼叫服務作業公開 （expose）。 服務會發行定義用戶端應用程式與服務進行通訊所需之資訊的中繼資料。 Visual Studio 會存取此中繼資料的程序自動化，並使用它來建構服務的用戶端應用程式。 如果您決定不使用 Visual Studio，您可以使用[ServiceModel Metadata Utility 工具 (*Svcutil.exe*)](servicemodel-metadata-utility-tool-svcutil-exe.md)改。
 
- 描述如何擷取用來從 WCF 服務建立 WCF 用戶端 proxy 的中繼資料。 此程序會使用 Visual Studio 中的新增服務參考 功能。
+- [教學課程：建立用戶端](how-to-create-a-wcf-client.md)
 
- [如何：設定用戶端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+    擷取從 WCF 服務建立 WCF 用戶端 proxy 的中繼資料。 您使用 Visual Studio 加入服務參考來擷取中繼資料，或者您可以使用 ServiceModel Metadata Utility 工具。 您指定用戶端用來存取服務的端點。
 
- 說明如何設定 WCF 用戶端。設定用戶端時，需要指定用戶端用來存取服務的端點。
+- [教學課程：使用用戶端](how-to-use-a-wcf-client.md)
 
- [如何：使用用戶端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)
-
- 描述如何使用 WCF 用戶端 proxy 叫用服務作業。
+    您可以使用 WCF 用戶端 proxy 來呼叫服務作業。
 
 ## <a name="reference"></a>參考資料
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
 
-## <a name="related-sections"></a>相關章節
-
-- [Windows Communication Foundation (WCF) 範例](./samples/index.md)
-- [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)
-
 ## <a name="see-also"></a>另請參閱
 
-- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
-- [文件指南](../../../docs/framework/wcf/guide-to-the-documentation.md)
-- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [WCF 功能詳細資料](../../../docs/framework/wcf/feature-details/index.md)
+- [概念式概觀](conceptual-overview.md)
+- [文件指南](guide-to-the-documentation.md)
+- [什麼是 Windows Communication Foundation](whats-wcf.md)
+- [WCF 功能詳細資料](feature-details/index.md)
+- [基本程式設計週期](basic-programming-lifecycle.md)
+- [建置用戶端](building-clients.md)
+- [基本 WCF 程式設計](basic-wcf-programming.md)
+- [如何：建立雙工合約](feature-details/how-to-create-a-duplex-contract.md)
+- [如何：Access services 搭配雙工合約](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [ServiceModel Metadata Utility 工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
+- [如何：使用 Svcutil.exe 來下載中繼資料文件](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [如何：發佈服務，使用組態檔的中繼資料](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [使用繫結設定服務和用戶端](using-bindings-to-configure-services-and-clients.md)
+- [開始使用範例](samples/getting-started-sample.md)
+- [Windows Communication Foundation 範例](samples/index.md)
+- [自我裝載](samples/self-host.md)
+
+

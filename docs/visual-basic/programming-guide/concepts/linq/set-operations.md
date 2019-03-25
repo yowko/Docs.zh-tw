@@ -2,12 +2,12 @@
 title: 設定作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
-ms.openlocfilehash: 8ec7f2785617c354a1aa506ac0df9eef7d051b59
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7b8dcaaa82ac5a30c35222417245153e55a522cc
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679290"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409246"
 ---
 # <a name="set-operations-visual-basic"></a>設定作業 (Visual Basic)
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。  
@@ -28,23 +28,21 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ### <a name="distinct"></a>Distinct  
  下圖說明一連串字元的 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> 方法行為。 所傳回的序列包含輸入序列中的唯一項目。  
   
- ![顯示 Distinct&#40;&#41; 行為的圖形。](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![圖形： 顯示 Distinct 的行為&#40;&#41;。](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>例外  
  下圖說明 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行為。 所傳回的序列只包含第一個輸入序列中不在第二個輸入序列中的項目。  
   
- ![顯示動作的圖形除外&#40;&#41;。](./media/set-operations/except-behavior-graphic.png "顯示的行為除外。")  
+ ![顯示 Except&#40;&#41; 動作的圖形。](./media/set-operations/except-behavior-graphic.png "顯示 Except 的行為。")  
   
 ### <a name="intersect"></a>交集  
  下圖說明 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行為。 所傳回的序列包含兩個輸入序列共有的項目。  
   
- ![顯示兩種序列交集的圖形。](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![顯示兩種序列交集的圖形。](./media/set-operations/intersection-two-sequences.png)    
 ### <a name="union"></a>聯集  
  下圖說明兩個字元序列的聯合作業。 所傳回的序列包含兩個輸入序列中的唯一項目。  
   
- ![顯示兩個序列聯集的圖形。](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![顯示兩個序列的聯集圖形。](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
  下列範例會使用`Distinct`在 LINQ 查詢中傳回唯一的數字的整數清單的子句。  
   

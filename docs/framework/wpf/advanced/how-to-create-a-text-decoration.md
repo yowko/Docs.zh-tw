@@ -16,33 +16,30 @@ helpviewer_keywords:
 - typography [WPF], text decorations
 - baseline type [WPF]
 ms.assetid: cf3cb4e7-782a-4be7-b2d4-e0935e21e4e0
-ms.openlocfilehash: a142604fdb36ec6f85e9411b37077bfffff587d4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 22ff91770786e39e019de307167007548396ab33
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363913"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411326"
 ---
 # <a name="how-to-create-a-text-decoration"></a>HOW TO：建立文字裝飾
 A<xref:System.Windows.TextDecoration>物件是您可以新增至文字的視覺裝飾。 有四種類型的文字裝飾： 底線、 基準、 刪除線和頂線。 下列範例顯示的文字裝飾，相對於文字的位置。  
   
- ![文字裝飾位置的圖表](./media/textdecoration01.gif "TextDecoration01")  
-文字裝飾型別的範例  
+ ![文字裝飾類型的圖表](./media/how-to-create-a-text-decoration/text-decoration-types.gif)  
   
  若要加入文字裝飾的文字，建立<xref:System.Windows.TextDecoration>物件，並修改其屬性。 使用<xref:System.Windows.TextDecoration.Location%2A>屬性來指定文字裝飾的出現位置，例如底線。 使用<xref:System.Windows.TextDecoration.Pen%2A>屬性來指定文字裝飾，例如純色填滿或漸層色彩的外觀。 如果您未指定的值<xref:System.Windows.TextDecoration.Pen%2A>屬性，則裝飾會預設為相同的文字色彩。 一旦您已定義<xref:System.Windows.TextDecoration>物件，將它新增至<xref:System.Windows.TextDecorations>想要的文字物件的集合。  
   
  下列範例顯示線性漸層筆刷與虛線的畫筆設定樣式的文字裝飾。  
   
- ![使用線性漸層底線的文字裝飾](./media/textdecoration02.png "TextDecoration02")  
-範例中的底線樣式線性漸層筆刷和虛線的畫筆  
+ ![具有線性漸層底線的文字裝飾](./media/how-to-create-a-text-decoration/text-decoration-gradient.png)  
   
  <xref:System.Windows.Documents.Hyperlink>物件是內嵌層級非固定格式內容項目，可讓您將非固定格式內容內超連結。 根據預設，<xref:System.Windows.Documents.Hyperlink>使用<xref:System.Windows.TextDecoration>物件，以顯示底線。 <xref:System.Windows.TextDecoration> 物件可以具現化，需要大量的效能，特別是如果您有許多<xref:System.Windows.Documents.Hyperlink>物件。 若要大量使用<xref:System.Windows.Documents.Hyperlink>項目，您可能要考慮這類觸發事件時，才顯示底線<xref:System.Windows.ContentElement.MouseEnter>事件。  
   
  在下列範例中，「 我的 MSN 」 連結，底線是動態的它才會出現<xref:System.Windows.ContentElement.MouseEnter>觸發事件。  
   
- ![顯示 Textdecoration 的超](./media/textdecoration03.png "TextDecoration03")  
-定義與 Textdecoration 的超連結  
-  
+ ![顯示 TextDecoration 的超連結](./media/how-to-create-a-text-decoration/text-decorations-hyperlinks.png)  
+   
  如需詳細資訊，請參閱[指定超連結是否要加上底線](how-to-specify-whether-a-hyperlink-is-underlined.md)。  
   
 ## <a name="example"></a>範例  

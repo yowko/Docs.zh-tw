@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
-ms.openlocfilehash: c1d7654dc190b00363fa6cc47c362b5f9e90d8f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: da455adb23dd70a915e81217c6c30f2d523e001c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375528"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409649"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF 圖形轉譯概觀
 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺圖層的概觀。 它著重於所扮演的角色<xref:System.Windows.Media.Visual>類別來呈現中的支援[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]模型。  
@@ -49,8 +49,7 @@ ms.locfileid: "57375528"
   
  <xref:System.Windows.Media.Visual> 會公開為公用抽象類別必須從中衍生子類別。 下圖顯示 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中公開之視覺物件的階層。  
   
- ![圖表的類別衍生自 Visual 物件](./media/visualclass01.png "VisualClass01")  
-Visual 類別階層  
+ ![衍生自 Visual 物件之類別的圖表](./media/wpf-graphics-rendering-overview/classes-derived-visual-object.png)    
   
 ### <a name="drawingvisual-class"></a>DrawingVisual 類別  
  <xref:System.Windows.Media.DrawingVisual>的輕量型繪圖類別，用來呈現圖形、 影像或文字。 此類別之所以被視為輕量型，是因為它不提供版面配置或事件處理，而這會改善其執行階段效能。 基於此原因，繪圖適合背景或美工圖案。 <xref:System.Windows.Media.DrawingVisual>可用來建立自訂的視覺物件。 如需詳細資訊，請參閱[使用 DrawingVisual 物件](using-drawingvisual-objects.md)。  
@@ -110,8 +109,7 @@ DrawingGroup 作業的順序
   
  如果您是要列舉組成預設值的視覺物件<xref:System.Windows.Controls.Button>控制項，您會發現下面說明的視覺物件的階層：  
   
- ![視覺化樹狀結構階層架構的圖表](./media/visuallayeroverview03.gif "VisualLayerOverview03")  
-視覺化樹狀階層架構的圖表  
+ ![視覺化樹狀階層架構的圖表](./media/wpf-graphics-rendering-overview/visual-object-diagram.gif) 
   
  <xref:System.Windows.Controls.Button>控制項包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>項目，依序包含<xref:System.Windows.Controls.ContentPresenter>項目。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>項目會負責繪製框線和背景<xref:System.Windows.Controls.Button>。 <xref:System.Windows.Controls.ContentPresenter>項目會負責顯示的內容<xref:System.Windows.Controls.Button>。 在此情況下，因為您要顯示文字<xref:System.Windows.Controls.ContentPresenter>項目包含<xref:System.Windows.Controls.TextBlock>項目。 事實上，<xref:System.Windows.Controls.Button>控制項會使用<xref:System.Windows.Controls.ContentPresenter>表示無法被其他項目，表示內容，例如<xref:System.Windows.Controls.Image>或幾何，例如<xref:System.Windows.Media.EllipseGeometry>。  
   
@@ -124,8 +122,7 @@ DrawingGroup 作業的順序
   
  如果您要列舉視覺物件和向量圖形指示清單構成<xref:System.Windows.Controls.Button>控制項，您會發現下面說明的物件的階層：  
   
- ![視覺化樹狀結構和轉譯資料的圖表](./media/visuallayeroverview04.png "VisualLayerOverview04")  
-視覺化樹狀結構和轉譯資料的圖表  
+ ![視覺化樹狀結構和轉譯資料的圖表](./media/wpf-graphics-rendering-overview/visual-tree-rendering-data.png)  
   
  <xref:System.Windows.Controls.Button>控制項包含<xref:Microsoft.Windows.Themes.ClassicBorderDecorator>項目，依序包含<xref:System.Windows.Controls.ContentPresenter>項目。 <xref:Microsoft.Windows.Themes.ClassicBorderDecorator>元素負責繪製所有離散圖形元素組成的框線和按鈕的背景。 <xref:System.Windows.Controls.ContentPresenter>項目會負責顯示的內容<xref:System.Windows.Controls.Button>。 在此情況下，因為您顯示影像時才<xref:System.Windows.Controls.ContentPresenter>項目包含<xref:System.Windows.Controls.Image>項目。  
   
@@ -149,14 +146,12 @@ DrawingGroup 作業的順序
   
  如果您是要列舉組成的視覺物件<xref:System.Windows.Controls.StackPanel>標記範例中的項目，您會發現下面說明的視覺物件的階層：  
   
- ![視覺化樹狀結構階層架構的圖表](./media/visuallayeroverview05.gif "VisualLayerOverview05")  
-視覺化樹狀階層架構的圖表  
+ ![視覺化樹狀階層架構的圖表](./media/wpf-graphics-rendering-overview/visual-tree-hierarchy.gif)  
   
 ### <a name="rendering-order"></a>轉譯順序  
  視覺化樹狀結構會決定 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 視覺物件和繪圖物件的轉譯順序。 周遊順序會從根視覺物件開始，這是視覺化樹狀結構的最上層節點。 然後，會由左至右周遊根視覺物件的子系。 如果視覺物件具有子系，則會在該視覺物件的同層級項目之前周遊其子系。 這表示子視覺物件的內容會在視覺物件本身的內容前面轉譯。  
   
- ![視覺化樹狀結構轉譯順序的圖表](./media/visuallayeroverview06.gif "VisualLayerOverview06")  
-視覺化樹狀結構轉譯順序的圖表  
+ ![視覺化樹狀結構轉譯順序的圖表](./media/wpf-graphics-rendering-overview/visual-tree-rendering-order.gif) 
   
 ### <a name="root-visual"></a>根視覺物件  
  「根視覺物件」是視覺化樹狀結構階層中最上層的元素。 在大部分的應用程式，根視覺的基底類別是<xref:System.Windows.Window>或<xref:System.Windows.Navigation.NavigationWindow>。 不過，如果您已在 Win32 應用程式中裝載視覺物件，根視覺物件是您在 Win32 視窗中裝載的最上層視覺物件。 如需詳細資訊，請參閱[教學課程：裝載在 Win32 應用程式中的視覺物件](tutorial-hosting-visual-objects-in-a-win32-application.md)。  
@@ -178,9 +173,8 @@ DrawingGroup 作業的順序
 ### <a name="viewing-the-visual-tree-with-xamlpad"></a>使用 XamlPad 檢視視覺化樹狀結構  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 工具 XamlPad 提供了選項，可讓您檢視及探索對應至目前定義之 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 內容的視覺化樹狀結構。 按一下功能表列上的 [顯示視覺化樹狀結構] 按鈕以顯示視覺化樹狀結構。 下圖說明在 XamlPad 的 [視覺化樹狀結構總管] 面板中，[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 內容展開為視覺化樹狀結構節點：  
   
- ![XamlPad 中的視覺化樹狀結構總管面板](./media/visuallayeroverview08.png "VisualLayerOverview08")  
-XamlPad 中的視覺化樹狀結構總管面板  
-  
+ ![XamlPad 中的視覺化樹狀結構總管面板](./media/wpf-graphics-rendering-overview/visual-tree-explorer.png)  
+
  請注意如何<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBox>，並<xref:System.Windows.Controls.Button>每個控制項會顯示在個別的視覺物件階層**視覺化樹狀結構總管**XamlPad 的面板。 這是因為[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項有<xref:System.Windows.Controls.ControlTemplate>包含該控制項的視覺化樹狀結構。 當您明確地參考控制項時，您會以隱含方式參考其視覺階層。  
   
 ### <a name="profiling-visual-performance"></a>分析視覺效能  
@@ -196,14 +190,12 @@ Visual Profiler 顯示輸出
 ### <a name="retained-mode-graphics"></a>保留模式圖形  
  了解視覺物件角色的其中一個關鍵就是要了解「直接模式」和「保留模式」圖形系統之間的差異。 以 GDI 或 GDI+ 為基礎的標準 Win32 應用程式使用直接模式圖形系統。 這表示應用程式負責重新繪製因為像是重新調整視窗大小或者物件正在變更其視覺外觀等動作而無效的用戶端區域部分。  
   
- ![Win32 轉譯序列的圖表](./media/visuallayeroverview01.png "VisualLayerOverview01")  
-Win32 轉譯序列的圖表  
+ ![Win32 轉譯序列的圖表](./media/wpf-graphics-rendering-overview/win32-rendering-squence.png)  
   
  相反地，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用保留模式系統。 這表示具有視覺外觀的應用程式物件會定義一組序列化繪圖資料。 一旦定義繪圖資料，系統此後就會負責回應轉譯應用程式物件的所有重新繪製要求。 即使在執行階段，您也可以修改或建立應用程式物件，並仍需依賴系統以回應繪製要求。 保留模式圖形系統的能力在於繪製資訊一律由應用程式以序列化狀態持續保存，但是轉譯的責任屬於系統。 下圖顯示應用程式如何依賴 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來回應繪製要求。  
   
- ![WPF 轉譯序列的圖表](./media/visuallayeroverview02.png "VisualLayerOverview02")  
-WPF 轉譯序列的圖表  
-  
+ ![WPF 轉譯序列的圖表](./media/wpf-graphics-rendering-overview/wpf-rendering-sequence.png)  
+
 #### <a name="intelligent-redrawing"></a>智慧型重新繪製  
  使用保留模式圖形的一個最大的優點就是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以有效地最佳化應用程式中需要重新繪製的項目。 即使您有一個具有不同層級不透明度的複雜場景，通常也不需要撰寫特殊用途程式碼來最佳化重新繪製作業。 與 Win32 程式設計比較，在 Win32 程式設計中您可能會花費大量精力，透過將更新區域中重新繪製的次數降至最低，來最佳化您的應用程式上。 如需在 Win32 應用程式中最佳化重新繪製所牽涉之複雜性類型的範例，請參閱[在更新區域中重新繪製](/windows/desktop/gdi/redrawing-in-the-update-region)。  
   
@@ -214,8 +206,7 @@ WPF 轉譯序列的圖表
   
  下圖顯示已將大小調整為 300% 的來源影像。 請注意，當來源影像是以點陣圖圖形影像伸展而非以向量圖形影像縮放時，會出現扭曲。  
   
- ![點陣和向量圖形之間的差異](./media/vectorgraphics01.png "VectorGraphics01")  
-點陣圖形和向量圖形之間的差異  
+ ![點陣圖形和向量圖形之間的差異](./media/wpf-graphics-rendering-overview/raster-vector-differences.png)  
   
  下列標記會顯示兩個<xref:System.Windows.Shapes.Path>定義的項目。 第二個項目使用<xref:System.Windows.Media.ScaleTransform>到第一個元素的繪製指示調整 300%。 請注意，中的繪製指示<xref:System.Windows.Shapes.Path>項目會保持不變。  
   

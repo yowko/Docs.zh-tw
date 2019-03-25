@@ -2,12 +2,12 @@
 title: Entity Type - 實體類型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 3955de1873d80e85df713a557750e34e76efeb41
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb542a1750a6b45dd2fca4d32501719470d9a78a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502880"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410884"
 ---
 # <a name="entity-type"></a>Entity Type - 實體類型
 *實體類型*是描述與 Entity Data Model (EDM) 中的資料結構的基本建置組塊。 在概念模型中，實體類型代表最上層概念的結構，例如客戶或訂單。 實體類型是實體類型執行個體的範本。 每個範本包含下列資訊：  
@@ -27,7 +27,7 @@ ms.locfileid: "54502880"
 ## <a name="example"></a>範例  
  下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型：  
   
- ![範例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![具有三種實體類型的範例模型](./media/entity-type/example-model-three-entity-types.gif)  
   
  請注意，構成實體索引鍵的每個實體類型屬性皆加註「(索引鍵)」。  
   

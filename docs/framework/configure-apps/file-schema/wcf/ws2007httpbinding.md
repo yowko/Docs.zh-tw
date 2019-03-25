@@ -2,12 +2,12 @@
 title: <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 8586ecc9-bdaa-44d6-8d4d-7038e4ea1741
-ms.openlocfilehash: 35e47d582a6b8534597945a626904d084fbeeade
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 01b8f20607de1cdd9c6b1ad9fc030c1d050ed749
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376997"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410637"
 ---
 # <a name="ws2007httpbinding"></a>\<ws2007HttpBinding>
 定義可互通的繫結，此繫結支援正確版本的 <xref:System.ServiceModel.WSHttpBinding.Security%2A>、<xref:System.ServiceModel.ReliableSession> 和 <xref:System.ServiceModel.WSHttpBindingBase.TransactionFlow%2A> 繫結項目。  
@@ -66,8 +66,9 @@ ms.locfileid: "57376997"
 |---------------|-----------------|  
 |`allowCookies`|表示用戶端是否接受 Cookie 並在未來的要求傳播 Cookie 的值。 預設為 `false`。<br /><br /> 當您與使用 Cookie 的 ASP.NET Web 服務 (ASMX) 互動時，可以使用這個屬性。 這可確保伺服器傳回的 Cookie 一定會自動複製到該服務未來所有的用戶端要求。|  
 |`bypassProxyOnLocal`|一個指出本機位址是否略過 Proxy 伺服器的值。 預設為 `false`。|  
-|`closeTimeout`|<xref:System.TimeSpan> 值，指定用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`hostnameComparisonMode`|指定用於剖析統一資源識別元 (URI) 的 HTTP 主機名稱比較模式。 這個屬性的型別為 <xref:System.ServiceModel.HostNameComparisonMode>，表示比對 URI 時此主機名稱是否會用來取用服務。 預設值為 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示比對時忽略主機名稱。|  
+|`closeTimeout`|
+  <xref:System.TimeSpan> 值，指定用來讓關閉作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
+|`hostNameComparisonMode`|指定用於剖析統一資源識別元 (URI) 的 HTTP 主機名稱比較模式。 這個屬性的型別為 <xref:System.ServiceModel.HostNameComparisonMode>，表示比對 URI 時此主機名稱是否會用來取用服務。 預設值為 <xref:System.ServiceModel.HostNameComparisonMode.StrongWildcard>，表示比對時忽略主機名稱。|  
 |`maxBufferPoolSize`|此繫結的緩衝集區大小上限。 預設為 524,288 個位元組 (512 × 1,024)。 Windows Communication Foundation (WCF) 的許多部分會使用緩衝區。 每次使用這些組件時建立並終結緩衝區是高度耗費資源的作業，而且緩衝區的記憶體回收也是高度耗費資源的作業。 有了緩衝集區，您就可以從集區取出緩衝區來使用，用完後再還給集區， 這可以避免建立及終結緩衝區的負荷。|  
 |`maxReceivedMessageSize`|使用此繫結所設定之通道可以接收的訊息大小上限 (以位元組為單位，包括標頭)。 超出此限制之訊息的寄件者將會收到 SOAP 錯誤。 收件者會捨棄訊息，然後在追蹤記錄檔中建立此事件的項目。 預設值為 65536。|  
 |`messageEncoding`|定義用來對訊息進行編碼的編碼器。 有效值包括以下的值：<br /><br /> -   `Text`：使用文字訊息編碼器。<br />-   `Mtom`：使用訊息傳輸 Organization Mechanism 1.0 (MTOM) 編碼器。<br /><br /> 預設為 `Text`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.WSMessageEncoding>。|  
@@ -75,15 +76,17 @@ ms.locfileid: "57376997"
 |`openTimeout`|
   <xref:System.TimeSpan> 值，指定提供用來讓開啟作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`proxyAddress`|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  
-|`receiveTimeout`|<xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
-|`sendTimeout`|<xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
+|`receiveTimeout`|
+  <xref:System.TimeSpan> 值，指定接收作業完成其作業之時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
+|`sendTimeout`|
+  <xref:System.TimeSpan> 值，指定提供用來讓傳送作業完成的時間間隔。 這個值應該大於或等於 <xref:System.TimeSpan.Zero>。 預設為 00:01:00。|  
 |`textEncoding`|指定要在繫結上發出訊息時使用的字元集編碼方式。 有效值包括以下的值：<br /><br /> -   `UnicodeFffeTextEncoding`：Unicode Bigendian 編碼方式。<br />-   `Utf16TextEncoding`：16 位元編碼方式。<br />-   `Utf8TextEncoding`：8 位元編碼方式。<br /><br /> 預設為 `Utf8TextEncoding`。<br /><br /> 此屬性的型別為 <xref:System.Text.Encoding>。|  
-|`transactionFlow`|指定繫結是否支援流動 WS-Transactions 的值。 預設為 `false`。|  
+|`transactionFlow`|指定繫結程序是否支援流動 WS-Transactions 的值。 預設為 `false`。|  
 |`useDefaultWebProxy`|指定是否使用系統自動設定之 HTTP Proxy 的值。 預設為 `true`。|  
   
 ### <a name="child-elements"></a>子元素  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)|定義繫結的安全性設定。 此項目的型別為 <xref:System.ServiceModel.Configuration.WSHttpSecurityElement>。|  
 |[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|定義 SOAP 訊息複雜性的條件約束，而這些條件約束可由使用此繫結所設定的端點處理。 此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。|  
@@ -91,7 +94,7 @@ ms.locfileid: "57376997"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<bindings>](../../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)|這個項目會保存標準和自訂繫結的集合。|  
   

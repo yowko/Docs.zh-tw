@@ -36,8 +36,7 @@ ms.locfileid: "57721381"
   
 -   此程式碼範例需要  
   
--   
-  <xref:System>、<xref:System.Windows.Forms> 和 <xref:System.Drawing> 組件的參考。  
+-   <xref:System>、<xref:System.Windows.Forms> 和 <xref:System.Drawing> 組件的參考。  
   
 -   使用表單<xref:System.Windows.Forms.Form.Load>處理的事件和呼叫`InitializeControlsAndDataSource`方法，在範例中，從表單的<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   

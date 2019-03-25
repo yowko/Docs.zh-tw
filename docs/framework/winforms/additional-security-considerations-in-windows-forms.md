@@ -7,17 +7,17 @@ helpviewer_keywords:
 - security [Windows Forms], calling APIs
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
-ms.openlocfilehash: 276def9db2ff610a22b42a88ad658727793b53de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6ab7b4d8fe8366a214d70cd73e7e33cafcc584f8
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718905"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409389"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows Form 中的其他安全性考量
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性設定可能導致您的應用程式在部分信任環境和本機電腦上以不同方式執行。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制存取重要的本機資源，例如檔案系統、網路和 Unmanaged API 等。 安全性設定會影響能否呼叫 Microsoft Win32 API，或其他無法由安全性系統驗證的 API。 安全性也會影響應用程式的其他層面，包括檔案和資料存取及列印。 如需在部分信任環境中存取檔案和資料的詳細資訊，請參閱 [Windows Forms 中更安全的檔案和資料存取](more-secure-file-and-data-access-in-windows-forms.md)。 如需在部分信任環境中列印的詳細資訊，請參閱 [Windows Forms 中更安全的列印](more-secure-printing-in-windows-forms.md)。  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 安全性設定可能導致您的應用程式在部分信任環境和本機電腦上以不同方式執行。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 限制存取重要的本機資源，例如檔案系統、網路和 Unmanaged API 等。 安全性設定會影響 Microsoft Windows API 或其他無法由安全性系統驗證的 Api 呼叫的能力。 安全性也會影響應用程式的其他層面，包括檔案和資料存取及列印。 如需在部分信任環境中存取檔案和資料的詳細資訊，請參閱 [Windows Forms 中更安全的檔案和資料存取](more-secure-file-and-data-access-in-windows-forms.md)。 如需在部分信任環境中列印的詳細資訊，請參閱 [Windows Forms 中更安全的列印](more-secure-printing-in-windows-forms.md)。  
   
- 下列章節討論如何使用剪貼簿、執行視窗操作，以及從部分信任環境中執行的應用程式呼叫 Win32 API。  
+ 下列各節討論如何使用剪貼簿、 執行視窗操作，以及從部分信任環境中執行的應用程式呼叫 Windows API。  
   
 ## <a name="clipboard-access"></a>剪貼簿存取  
  <xref:System.Security.Permissions.UIPermission>類別控制對剪貼簿，和存取相關聯<xref:System.Security.Permissions.UIPermissionClipboard>列舉值指出存取層級。 下表顯示可能的權限層級。  
@@ -69,8 +69,8 @@ ms.locfileid: "57718905"
   
  為了限制這種潛在風險，請只使用您信任的廠商的協力廠商控制項。 如果您使用的協力廠商控制項是從未驗證的來源下載，建議您檢閱原始程式碼中潛在的弱點。 在確認來源沒有惡意之後，您應該自行編譯組件，以確保來源符合組件。  
   
-## <a name="win32-api-calls"></a>Win32 API 呼叫  
- 如果您的應用程式設計需要呼叫 Win32 API 中的函式，這表示您在存取 Unmanaged 程式碼。 在此情況下，當您使用 Win32 API 呼叫或值時，無法判斷程式碼對視窗或作業系統所採取的動作。 <xref:System.Security.Permissions.SecurityPermission>類別和<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>的值<xref:System.Security.Permissions.SecurityPermissionFlag>列舉控制對 unmanaged 程式碼。 應用程式可以存取 unmanaged 程式碼，它會授與時，才<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>權限。 根據預設，只有在本機執行的應用程式才能呼叫 Unmanaged 程式碼。  
+## <a name="windows-api-calls"></a>Windows API 呼叫  
+ 如果您的應用程式設計需要從 Windows API 呼叫的函式，會存取 unmanaged 程式碼。 在此情況下您使用 Windows API 呼叫或值時，無法判斷對視窗或作業系統的程式碼的動作。 <xref:System.Security.Permissions.SecurityPermission>類別和<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>的值<xref:System.Security.Permissions.SecurityPermissionFlag>列舉控制對 unmanaged 程式碼。 應用程式可以存取 unmanaged 程式碼，它會授與時，才<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>權限。 根據預設，只有在本機執行的應用程式才能呼叫 Unmanaged 程式碼。  
   
  某些 Windows Form 成員提供 unmanaged 的存取需要<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>權限。 下表列出中的成員<xref:System.Windows.Forms>需要的權限的命名空間。 如需成員所需權限的詳細資訊，請參閱 .NET Framework Class Library 文件。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "57718905"
 |<xref:System.Windows.Forms.Screen>|-   <xref:System.Windows.Forms.Screen.FromHandle%2A> 方法|  
 |<xref:System.Windows.Forms.SendKeys>|-   <xref:System.Windows.Forms.SendKeys.Send%2A> 方法<br />-   <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法|  
   
- 如果您的應用程式沒有權限呼叫 unmanaged 程式碼，您的應用程式必須要求<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>權限，或是您必須考慮替代方式來實作功能，在許多情況下，Windows Form 提供的 Win32 api 的受控替代用法函式。 如果沒有替代做法，但應用程式必須存取 Unmanaged 程式碼，您必須提高應用程式的權限。  
+ 如果您的應用程式沒有權限呼叫 unmanaged 程式碼，您的應用程式必須要求<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode>權限，或是您必須考慮替代方式來實作功能，在許多情況下，Windows Form 提供以 Windows 的受控替代用法API 函式。 如果沒有替代做法，但應用程式必須存取 Unmanaged 程式碼，您必須提高應用程式的權限。  
   
  呼叫 Unmanaged 程式碼的權限可讓應用程式執行大部分的動作。 因此，呼叫 Unmanaged 程式碼的權限應該只授與來自受信任來源的應用程式。 另外，視應用程式而定，應用程式功能中會呼叫 Unmanaged 程式碼的部分可以是選擇性，或只在完全信任環境中啟用。 如需危險性權限的詳細資訊，請參閱[危險性權限和原則管理](../misc/dangerous-permissions-and-policy-administration.md)。 如需提高權限的詳細資訊，請參閱[一般安全性原則管理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ed5htz45(v=vs.100))。  
   

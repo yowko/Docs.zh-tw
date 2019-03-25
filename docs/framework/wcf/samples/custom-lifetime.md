@@ -2,12 +2,12 @@
 title: 自訂存留期
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
-ms.openlocfilehash: 1946608c69401fb08f6eb458a8adabea24563963
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43520767"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410377"
 ---
 # <a name="custom-lifetime"></a>自訂存留期
 
@@ -64,7 +64,8 @@ using (new OperationContextScope((IClientChannel)proxy2))
 
 <xref:System.ServiceModel.IExtensibleObject%601>介面藉由允許自訂其功能的延伸模組的物件。
 
-<xref:System.ServiceModel.IExtension%601> 介面是由可以是型別 `T` 之類別延伸模組的物件所實作。
+
+  <xref:System.ServiceModel.IExtension%601> 介面是由可以是型別 `T` 之類別延伸模組的物件所實作。
 
 最後<xref:System.ServiceModel.IExtensionCollection%601>介面是一堆<xref:System.ServiceModel.IExtension%601>是用來擷取的實作的實作<xref:System.ServiceModel.IExtension%601>依其類型。
 
@@ -76,7 +77,8 @@ class CustomLeaseExtension : IExtension<InstanceContext>
 }
 ```
 
-<xref:System.ServiceModel.IExtension%601> 介面擁有兩種方法：<xref:System.ServiceModel.IExtension%601.Attach%2A> 和 <xref:System.ServiceModel.IExtension%601.Detach%2A>。 顧名思義，當執行階段將延伸模組連接到 <xref:System.ServiceModel.InstanceContext> 類別的執行個體以及從其中斷時，會呼叫這兩個方法。 在此範例中，`Attach` 方法用於追蹤屬於目前延伸模組執行個體的 <xref:System.ServiceModel.InstanceContext> 物件。
+
+  <xref:System.ServiceModel.IExtension%601> 介面擁有兩種方法：<xref:System.ServiceModel.IExtension%601.Attach%2A> 和 <xref:System.ServiceModel.IExtension%601.Detach%2A>。 顧名思義，當執行階段將延伸模組連接到 <xref:System.ServiceModel.InstanceContext> 類別的執行個體以及從其中斷時，會呼叫這兩個方法。 在此範例中，`Attach` 方法用於追蹤屬於目前延伸模組執行個體的 <xref:System.ServiceModel.InstanceContext> 物件。
 
 ```csharp
 InstanceContext owner;
@@ -142,7 +144,8 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 
 沒有任何新訊息送達執行個體移到閒置狀態時，更新執行中的計時器的方法。
 
-此範例會實作 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 以攔截對 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法的呼叫，並將其路由至 `CustomLeaseExtension`。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 實作包含在 `CustomLifetimeLease` 類別中。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF 即將要釋放服務執行個體時，會叫用方法。 不過，在 ServiceBehavior 的 `ISharedSessionInstance` 集合中，只有一個特定 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 實作的執行個體。 這表示沒有任何方法的了解如果<xref:System.ServiceModel.InstanceContext>已關閉時，WCF 會檢查<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。 因此，此範例會使用執行緒封鎖來序列化要求<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。
+此範例會實作 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 以攔截對 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> 方法的呼叫，並將其路由至 `CustomLeaseExtension`。 
+  <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 實作包含在 `CustomLifetimeLease` 類別中。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF 即將要釋放服務執行個體時，會叫用方法。 不過，在 ServiceBehavior 的 `ISharedSessionInstance` 集合中，只有一個特定 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 實作的執行個體。 這表示沒有任何方法的了解如果<xref:System.ServiceModel.InstanceContext>已關閉時，WCF 會檢查<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。 因此，此範例會使用執行緒封鎖來序列化要求<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>方法。
 
 > [!IMPORTANT]
 > 使用執行緒封鎖並不是建議的方法，因為序列化可能會嚴重影響應用程式的效能。
@@ -201,7 +204,7 @@ public void InitializeInstanceContext(InstanceContext instanceContext,
 }
 ```
 
- 最後<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>實作會連結至服務模型使用<xref:System.ServiceModel.Description.IServiceBehavior>實作。 此實作放在 `CustomLeaseTimeAttribute` 類別中，而且它也衍生自 `Attribute` 基底類別，以便當做屬性公開此行為。
+ 最後<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider>實作會連結至服務模型使用<xref:System.ServiceModel.Description.IServiceBehavior>實作。 此實作放在 `CustomLeaseTimeAttribute` 類別中，而且它也衍生自 <xref:System.Attribute> 基底類別，以便當做屬性公開此行為。
 
 ```csharp
 public void ApplyDispatchBehavior(ServiceDescription description,
@@ -240,7 +243,7 @@ public class EchoService : IEchoService
 
 1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2. 若要建置方案的 C# 或 Visual Basic.NET 版本，請依照下列中的指示[建置 Windows Communication Foundation 範例](building-the-samples.md)。
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](building-the-samples.md)中的指示。
 
 3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](running-the-samples.md)。
 

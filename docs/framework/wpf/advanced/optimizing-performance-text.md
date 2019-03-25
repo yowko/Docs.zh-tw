@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: db0738008766343fa19454cac14e75b318663f34
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352764"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409402"
 ---
 # <a name="optimizing-performance-text"></a>最佳化效能：文字
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援透過使用功能豐富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控制項來呈現文字內容。 一般而言，您可以將文字轉譯劃分為三個層級：  
@@ -133,8 +133,9 @@ ms.locfileid: "57352764"
 ### <a name="showing-underlines-on-hyperlinks-only-on-mouseenter-events"></a>只在 MouseEnter 事件的超連結上顯示底線  
  A<xref:System.Windows.TextDecoration>物件是您可以新增至文字的視覺裝飾; 然而，它可以是效能密集具現化。 若要大量使用<xref:System.Windows.Documents.Hyperlink>項目，請考慮這類觸發事件時，才顯示底線<xref:System.Windows.ContentElement.MouseEnter>事件。 如需詳細資訊，請參閱[指定超連結是否要加上底線](how-to-specify-whether-a-hyperlink-is-underlined.md)。  
   
- ![顯示 Textdecoration 的超](./media/textdecoration03.png "TextDecoration03")  
-MouseEnter 上顯示的超連結  
+  下圖顯示 MouseEnter 事件觸發的加底線的超連結的方式：
+
+  ![顯示 TextDecoration 的超連結](./media/how-to-specify-whether-a-hyperlink-is-underlined/text-decorations-hyperlinks.png)   
   
  下列標記範例示範<xref:System.Windows.Documents.Hyperlink>定義不含底線與：  
   

@@ -2,12 +2,12 @@
 title: FILESTREAM 資料
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: cd496909a387f5726b2d22adae14085a60eae881
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674729"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410273"
 ---
 # <a name="filestream-data"></a>FILESTREAM 資料
 
@@ -180,7 +180,7 @@ FILESTREAM 的完整文件位於 SQL Server 線上叢書 》 中的下列各節�
 |主題|描述|
 |-----------|-----------------|
 |[FILESTREAM (SQL Server)](/sql/relational-databases/blob/filestream-sql-server)|描述使用 FILESTREAM 儲存體的時機，以及它如何整合 SQL Server Database Engine 與 NTFS 檔案系統。|
-|[建立 FILESTREAM 資料的用戶端應用程式](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|描述可用於處理 FILESTREAM 資料的 Win32 API 函式。|
+|[建立 FILESTREAM 資料的用戶端應用程式](/sql/relational-databases/blob/create-client-applications-for-filestream-data)|描述使用 FILESTREAM 資料的 Windows API 函式。|
 |[FILESTREAM 和其他 SQL Server 功能](/sql/relational-databases/blob/filestream-compatibility-with-other-sql-server-features)|針對使用 FILESTREAM 資料搭配其他 SQL Server 功能提供相關的考量、指導方針和限制。|
 
 ## <a name="see-also"></a>另請參閱

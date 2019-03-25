@@ -2,12 +2,12 @@
 title: 關聯類型
 ms.date: 03/30/2017
 ms.assetid: 26c409f6-06e8-4441-ac78-1b1076a3c005
-ms.openlocfilehash: 65fb5c8e37c8edf7f36cc08258874eeaf234c402
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 895d7fdc464741723322717c3ace027dc49eed9c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185593"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411443"
 ---
 # <a name="association-type"></a>關聯類型
 *關聯型別*（亦稱為關聯） 是描述 Entity Data Model (EDM) 中的關聯性的基本建置組塊。 在概念模型中，關聯代表兩個關聯性[實體類型](../../../../docs/framework/data/adonet/entity-type.md)(例如`Customer`和`Order`)。 在應用程式中，關聯的執行個體代表特定的關聯 (例如 `Customer` 執行個體和 `Order` 執行個體之間的關聯)。 關聯執行個體會以邏輯方式分組[關聯集](../../../../docs/framework/data/adonet/association-set.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "58185593"
  下圖顯示包含兩個關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型。 
   `PublishedBy` 關聯的關聯 End 為 `Book` 和 `Publisher` 實體類型。 端點的多重性`Publisher`結尾是一 (1) 和端點的多重性`Book`端是許多 (\*)，表示一個發行者發行許多書籍，以及一本書籍由一個發行者發行。  
   
- ![範例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![具有三種實體類型的範例模型](./media/association-type/example-model-three-entity-types.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 定義上圖中的 `PublishedBy` 關聯。  
   

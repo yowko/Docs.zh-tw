@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 05c678b25563eb7a4e2e5ce0e49138b5445b4764
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7ebb49ad5e1262dcb71dcd31c9073dfe52c49789
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707595"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409857"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>HOW TO：繪製包含線條帽緣的線條
 您可以在其中一種稱為線條帽緣的數個圖形中繪製的開頭或行結尾。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 支援數個線條端點，例如循、 正方形、 菱形、 和箭頭。  
@@ -25,7 +25,7 @@ ms.locfileid: "57707595"
   
  下列範例會繪製含有某一端點上的箭頭和圓形的帽緣，另一端的線條。 圖例中顯示產生的列：  
   
- ![畫筆](./media/pens4.gif "pens4")  
+ ![圖例會顯示一條具有圓端點。](./media/how-to-draw-a-line-with-line-caps/line-cap-arrowhead-example.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#71](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#71)]
  [!code-vb[System.Drawing.UsingAPen#71](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#71)]  

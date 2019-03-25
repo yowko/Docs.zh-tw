@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 2eff66377a3ba9b0e30417cc7dd1e1413d9074d9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369925"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409454"
 ---
 # <a name="expander-overview"></a>Expander 概觀
 <xref:System.Windows.Controls.Expander>控制項提供一個可展開區域類似於視窗並且包含標頭中提供內容的方式。  
@@ -45,7 +45,7 @@ ms.locfileid: "57369925"
   
  **ScrollViewer 中的展開器**  
   
- ![具有 ScrollBar 的展開器](./media/expanderwithscrollbar.JPG "ExpanderWithScrollBar")  
+ ![如果螢幕擷取畫面顯示具有 ScrollBar 的 expander。](./media/expander-overview/expander-scrollbar-control.jpg)  
   
  當您將<xref:System.Windows.Controls.Expander>在中控制可<xref:System.Windows.Controls.ScrollViewer>，將<xref:System.Windows.Controls.ScrollViewer>維度屬性對應至的方向<xref:System.Windows.Controls.Expander>內容的大小將會開啟<xref:System.Windows.Controls.Expander>內容區域。 比方說，如果您設定<xref:System.Windows.Controls.Expander.ExpandDirection%2A>上的屬性<xref:System.Windows.Controls.Expander>要<xref:System.Windows.Controls.ExpandDirection.Down>（內容區域向下開啟），設定<xref:System.Windows.FrameworkElement.Height%2A>屬性<xref:System.Windows.Controls.ScrollViewer>控制項內容區域所需的高度。 如果您在內容本身，改為設定高度維度<xref:System.Windows.Controls.ScrollViewer>無法辨識此設定，因此，無法提供可捲動的內容。  
   

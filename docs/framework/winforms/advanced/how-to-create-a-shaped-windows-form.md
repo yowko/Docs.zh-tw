@@ -36,8 +36,7 @@ ms.locfileid: "57710064"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   
-  <xref:System.Windows.Forms> 和 <xref:System.Drawing> 命名空間的參考。  
+-   <xref:System.Windows.Forms> 和 <xref:System.Drawing> 命名空間的參考。  
   
  此範例會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>方法，以變更表單的圖形。 若要使用此程式碼，將複製的方法宣告，以及在方法內部的繪圖程式碼。  
   

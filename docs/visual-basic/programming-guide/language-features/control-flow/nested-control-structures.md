@@ -10,12 +10,12 @@ helpviewer_keywords:
 - structures [Visual Basic], nested control
 - nested control statements [Visual Basic]
 ms.assetid: cf60b061-65d9-44a8-81f2-b0bdccd23a05
-ms.openlocfilehash: 9b10363e2273a22ac7ee3d9a943a1bec4616d232
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 13e2c5c8d818a09ec5e77ec47fe8a2c83b675d82
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185723"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409792"
 ---
 # <a name="nested-control-structures-visual-basic"></a>巢狀控制結構 (Visual Basic)
 您也可以放置控制項陳述式內部的其他控制陳述式，例如`If...Then...Else`區塊`For...Next`迴圈。 控制陳述式置於另一個控制項陳述式即為*巢狀*。  
@@ -67,8 +67,7 @@ Next ctl
 ## <a name="overlapping-control-structures"></a>重疊的控制結構  
  您不能重疊的控制結構。 這表示任何巢狀的結構必須完全包含在下一步 的最內層結構內。 例如，下列的排列方式不正確因為`For`迴圈終止之前內部`With`區塊會終止。  
   
- ![無效巢狀處理示意圖](../../../../visual-basic/programming-guide/language-features/control-flow/media/nestexampleinvalid.gif "NestExampleInvalid")  
-無效的巢狀結構和結構  
+ ![此圖顯示不正確的巢狀結構的範例。](./media/nested-control-structures/example-invalid-nesting.gif) 
   
  Visual Basic 編譯器會偵測這類重疊的控制結構，並發出編譯時期錯誤。  
   

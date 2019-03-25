@@ -2,12 +2,12 @@
 title: 實體集
 ms.date: 03/30/2017
 ms.assetid: 59ec6ab0-88e5-4d25-b112-7a4eccbe61f0
-ms.openlocfilehash: 3cd212c0bf5eefb73a87aa01c9403d6f2304d506
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d75002d4a5ac55538f76e6bace0fc16095a9ef74
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557116"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412184"
 ---
 # <a name="entity-set"></a>實體集
 *實體集*是邏輯容器的執行個體[實體類型](../../../../docs/framework/data/adonet/entity-type.md)和衍生自該實體類型的任何類型的執行個體。 (有關衍生型別的資訊，請參閱[實體資料模型：繼承](../../../../docs/framework/data/adonet/entity-data-model-inheritance.md)。)實體類型和實體集之間的關聯性相當於一個資料列與關聯式資料庫中的資料表之間的關聯性：資料列，例如實體類型描述資料結構，和資料表，這類實體集包含指定的結構的執行個體。 實體集不是資料模型建構，也就是說，它不會描述資料結構。 反之，實體集會提供建構，讓裝載或儲存環境 (例如 Common Language Runtime 或 SQL Server 資料庫) 群組實體類型執行個體，以將其對應至資料存放區。  
@@ -30,11 +30,11 @@ ms.locfileid: "54557116"
 ## <a name="example"></a>範例  
  下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。  
   
- ![範例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![具有三種實體類型的範例模型](./media/entity-set/example-model-three-entity-types.gif)  
   
  下圖顯示以前述概念模型為基礎的兩個實體集 (`Books` 和 `Publishers`)，以及一個關聯集 `PublishedBy`)。 在 bi`Books`實體集代表的執行個體`Book`在執行階段的實體類型。 同樣地，代表 Pj`Publisher`執行個體中`Publishers`實體集。 BiPj 表示的執行個體`PublishedBy`中的關聯`PublishedBy`關聯集。  
   
- ![設定範例](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![如果螢幕擷取畫面顯示設定範例。](./media/entity-set/sets-example-association.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 定義實體容器，上述概念模型中的每個實體類型皆具有一個實體集。 請注意，每個實體集名稱和實體類型都是使用 XML 屬性定義的。  
   

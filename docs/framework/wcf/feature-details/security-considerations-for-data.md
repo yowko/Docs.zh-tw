@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 3895bb44139a05d1933f1d3af19ccb9799309515
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363081"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411430"
 ---
 # <a name="security-considerations-for-data"></a>資料的安全性考量
 
@@ -276,7 +276,7 @@ XML Infoset 會形成 WCF 中的所有訊息處理的基礎。 接受來自不�
 
 - 請小心使用以 <xref:System.SerializableAttribute> 屬性標示的舊版型別。 其中許多都是設計來使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 遠端處理，只用於受信任的資料。 以此屬性標示之現有型別的設計可能尚未考慮到狀態安全性。
 
-- 就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 `DataMemberAttribute` 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、 `zero`或 `invalid`。
+- 就狀態安全性而言，請勿依賴 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性 (Attribute) 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Property) 來保證資料的存在。 資料可能永遠是 `null`、 `zero`或 `invalid`。
 
 - 在沒有先驗證之前，絕對不要信任從不受信任的資料來源還原序列化的物件圖形。 每個個別物件可能處於一致性狀態，但是整個物件圖形可能不是。 此外，即使物件圖形保留模式已停用，已還原序列化圖形仍可能有相同物件的多個參照，或是有循環參照。 如需詳細資訊，請參閱 <<c0> [ 序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。
 
@@ -312,33 +312,33 @@ XML Infoset 會形成 WCF 中的所有訊息處理的基礎。 接受來自不�
 
 - 如果您允許部分信任的程式碼存取您<xref:System.Runtime.Serialization.DataContractSerializer>執行個體，或者控制[資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)，它可能行使廣大的控制序列化/還原序列化程序。 例如，它會插入任意型別、導致資訊洩漏、竄改結果物件圖形或序列化資料，或溢位結果序列化資料流。 在「安全使用 NetDataContractSerializer Securely」一節中會說明等同的 <xref:System.Runtime.Serialization.NetDataContractSerializer> 威脅。
 
-- 如果 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至型別 (或標示為 `[Serializable]` 但不是 `ISerializable`的型別)，即使所有的建構函式都是非公用或依要求受到保護的，還原序列化程式仍然可以建立此型別的執行個體。
+- 如果 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至型別 (或標示為 <xref:System.SerializableAttribute> 但不是 <xref:System.Runtime.Serialization.ISerializable>的型別)，即使所有的建構函式都是非公用或依要求受到保護的，還原序列化程式仍然可以建立此型別的執行個體。
 
 - 絕對不要信任還原序列化的結果，除非已還原序列化資料受到信任，而且確定所有已知類型都是您信任的類型。 請注意，在部分信任中執行時，已知類型不會從應用程式組態檔載入 (而是從電腦組態檔載入)。
 
-- 如果您以新增的 Surrogate 將 `DataContractSerializer` 執行個體傳遞至部分信任的程式碼，則程式碼會變更該 Surrogate 上任何可修改的設定。
+- 如果您以新增的 Surrogate 將 <xref:System.Runtime.Serialization.DataContractSerializer> 執行個體傳遞至部分信任的程式碼，則程式碼會變更該 Surrogate 上任何可修改的設定。
 
 - 對於已還原序列化物件，如果 XML 讀取器 (或其中的資料) 來自部分信任程式碼，請將結果的已還原序列化物件視為不受信任的資料。
 
 - 事實上， <xref:System.Runtime.Serialization.ExtensionDataObject> 型別沒有 Public 成員不表示其中的資料是安全的。 例如，如果您從有權限的資料來源還原序列化至部分資料所在的物件中，然後將該物件傳遞至部分信任程式碼，部分信任程式碼就可以序列化此物件，以讀取 `ExtensionDataObject` 中的資料。 當從有權限的資料來源還原序列化至稍後將傳遞至部分信任程式碼的物件中時，請考慮將 <xref:System.Runtime.Serialization.DataContractSerializer.IgnoreExtensionDataObject%2A> 設定為 `true` 。
 
-- 在完全信任的情況下，<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> support the serialization of private, protected, internal, 和 public members in full trust. 不過，在部分信任的情況下，只能序列化公用成員。 如果應用程式嘗試序列化非公用成員，就會擲回 `SecurityException` 。
+- 在完全信任的情況下，<xref:System.Runtime.Serialization.DataContractSerializer> 和 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> support the serialization of private, protected, internal, 和 public members in full trust. 不過，在部分信任的情況下，只能序列化公用成員。 如果應用程式嘗試序列化非公用成員，就會擲回 <xref:System.Security.SecurityException> 。
 
-    在部分信任的情況下，若要允許內部或受保護內部成員進行序列化，請使用 `System.Runtime.CompilerServices.InternalsVisibleTo` 組件屬性。 這個屬性會允許組件宣告只有某些其他組件能夠看見其內部成員。 在此情況下，想要序列化其內部成員的組件就會宣告 System.Runtime.Serialization.dll 能夠看見其內部成員。
+    在部分信任的情況下，若要允許內部或受保護內部成員進行序列化，請使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 組件屬性。 這個屬性會允許組件宣告只有某些其他組件能夠看見其內部成員。 在此情況下，想要序列化其內部成員的組件就會宣告 System.Runtime.Serialization.dll 能夠看見其內部成員。
 
     這種方法的優點在於不需要更高的程式碼產生路徑。
 
     同時，也有兩個主要缺點。
 
-    第一個缺點是， `InternalsVisibleTo` 屬性 (Attribute) 的 opt-in 屬性 (Property) 屬於組件範圍。 也就是說，您無法指定只有特定類別能夠序列化其內部成員。 當然，您仍然可以選擇不要序列化特定內部成員，只要不將 `DataMember` 屬性加入至該成員即可。 同樣地，只要稍微考量可視性，開發人員也可以選擇將成員設定為內部而非私用或受保護。
+    第一個缺點是， <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性 (Attribute) 的 opt-in 屬性 (Property) 屬於組件範圍。 也就是說，您無法指定只有特定類別能夠序列化其內部成員。 當然，您仍然可以選擇不要序列化特定內部成員，只要不將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性加入至該成員即可。 同樣地，只要稍微考量可視性，開發人員也可以選擇將成員設定為內部而非私用或受保護。
 
     第二個缺點是，這種方法仍然不支援私用或受保護成員。
 
-    為了在部分信任的情況下說明 `InternalsVisibleTo` 屬性的使用方式，請考慮下列程式：
+    為了在部分信任的情況下說明 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的使用方式，請考慮下列程式：
 
     [!code-csharp[CDF_WCF_SecurityConsiderationsForData#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/cdf_wcf_securityconsiderationsfordata/cs/program.cs#1)]
 
-    在上述範例中， `PermissionsHelper.InternetZone` 會對應至部分信任的 `PermissionSet` 。 此時，如果沒有 `InternalsVisibleToAttribute`，應用程式就會失敗，並擲回 `SecurityException` ，表示在部分信任的情況下，無法序列化非公用成員。
+    在上述範例中， `PermissionsHelper.InternetZone` 會對應至部分信任的 <xref:System.Security.PermissionSet> 。 現在，不含<xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>屬性，應用程式將會失敗，擲回<xref:System.Security.SecurityException>指出，無法在部分信任中序列化非公用成員。
 
     不過，如果我們將下列程式碼加入至原始程式檔，此程式就會順利執行。
 

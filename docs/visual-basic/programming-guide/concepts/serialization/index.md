@@ -9,7 +9,7 @@ ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
 ## <a name="how-serialization-works"></a>序列化的運作方式  
  下圖顯示序列化的整體程序。  
   
- ![序列化圖形](../../../../csharp/programming-guide/concepts/serialization/media/serialization.gif "序列化")  
+![序列化圖形](./media/index/serialization-process.gif)
   
  物件會序列化成資料流，且其中不只包含資料，還有物件型別 (版本、文化特性及組件名稱) 的資訊。 而該資料流可以儲存在資料庫、檔案或記憶體中。  
   

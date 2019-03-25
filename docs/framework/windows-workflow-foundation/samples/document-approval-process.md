@@ -2,12 +2,12 @@
 title: 文件核准程序
 ms.date: 03/30/2017
 ms.assetid: 9b240937-76a7-45cd-8823-7f82c34d03bd
-ms.openlocfilehash: d1e37dcbc21239822937c57d9779a52357aac518
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4451719bfb1d46a4e0e4dcde19666d1f8b2de427
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717704"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409545"
 ---
 # <a name="document-approval-process"></a>文件核准程序
 這個範例會示範一起使用的許多 Windows Workflow Foundation (WF) 和 Windows Communication Foundation (WCF) 的功能。 結合這些功能來實作文件核准程序案例。 用戶端應用程式會提交文件以供核准，以及核准文件。 核准管理員應用程式是用來促進用戶端之間的通訊，以及強制執行核准程序的規則。 核准程序是可執行數個核准類型的工作流程。 活動是用來取得單一核准、仲裁核准 (核准者集合的百分比)，以及在序列中包含仲裁和單一核准的複雜核准程序。
@@ -22,9 +22,9 @@ ms.locfileid: "57717704"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Application\DocumentApprovalProcess`  
   
 ## <a name="sample-details"></a>範例詳細資料  
- 下圖示範此文件核准程序工作流程。  
+ 下圖示範文件核准程序工作流程：  
   
- ![文件核准工作流程](./media/approvalprocess.jpg "ApprovalProcess")  
+ ![文件核准程序工作流程](./media/document-approval-process/document-approval-process.jpg)  
   
  從用戶端的觀點來看，核准程序的運作方式如下：  
   
@@ -144,7 +144,8 @@ ms.locfileid: "57717704"
   
      如果第一個 `UserType2` 仲裁核准文件，文件會傳遞至 `UserType3` 用戶端。  
   
-8.  從 `UserType3` 用戶端核准或拒絕文件。 `UserType1` 用戶端中應該會顯示結果。  
+8.  從 `UserType3` 用戶端核准或拒絕文件。 
+  `UserType1` 用戶端中應該會顯示結果。  
   
 ##### <a name="to-clean-up"></a>若要清除  
   

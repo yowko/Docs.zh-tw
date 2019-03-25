@@ -2,12 +2,12 @@
 title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 5729943f455d4669f047eb2d86fb7292824c0f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 341b56727c910d552a5238d95976884162f1c524
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645414"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409831"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
 這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 此範例示範如何在用戶端和伺服器的案例，其中資料會序列化並傳送 Windows Communication Foundation (WCF) 用戶端與服務之間使用代理。  
@@ -30,7 +30,8 @@ public interface IPersonnelDataService
 }  
 ```  
   
- `AddEmployee` 作業允許使用者新增新進員工的資料，而 `GetEmployee` 作業則支援根據名字搜尋員工。  
+ 
+  `AddEmployee` 作業允許使用者新增新進員工的資料，而 `GetEmployee` 作業則支援根據名字搜尋員工。  
   
  這些作業使用下列資料型別：  
   
@@ -64,9 +65,9 @@ public class Person
 }  
 ```  
   
- 您可以將 `DataContract` 屬性套用至 `Person` 類別，但是不一定可行。 例如，`Person` 類別可能是在您無法控制的其他組件中定義的。  
+ 您可以將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至 `Person` 類別，但是不一定可行。 例如，`Person` 類別可能是在您無法控制的其他組件中定義的。  
   
- 在這個限制下，有一種方法可以序列化 `Person` 類別，即是使用標示為 `DataContractAttribute` 的另一個類別來替代它，然後將必要的資料整個複製到新類別。 這麼做的目的是要將 `Person` 類別對 <xref:System.Runtime.Serialization.DataContractSerializer> 顯示為 DataContract。 請注意，這只是序列化非資料合約類別的其中一種方法。  
+ 在這個限制下，有一種方法可以序列化 `Person` 類別，即是使用標示為 <xref:System.Runtime.Serialization.DataContractAttribute> 的另一個類別來替代它，然後將必要的資料整個複製到新類別。 這麼做的目的是要將 `Person` 類別對 <xref:System.Runtime.Serialization.DataContractSerializer> 顯示為 DataContract。 請注意，這只是序列化非資料合約類別的其中一種方法。  
   
  此範例邏輯上是使用名為 `Person` 的不同類別來取代 `PersonSurrogated` 類別。  
   
@@ -100,7 +101,8 @@ public Type GetDataContractType(Type type)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> 方法會在序列化期間，將 `Person` 執行個體對應至 `PersonSurrogated` 執行個體，如下列範例程式碼所示。  
+ 
+  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%28System.Object%2CSystem.Type%29> 方法會在序列化期間，將 `Person` 執行個體對應至 `PersonSurrogated` 執行個體，如下列範例程式碼所示。  
   
 ```  
 public object GetObjectToSerialize(object obj, Type targetType)  
@@ -118,7 +120,8 @@ public object GetObjectToSerialize(object obj, Type targetType)
 }  
 ```  
   
- <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法會提供反向對應以進行還原序列化，如下列範例程式碼所示。  
+ 
+  <xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%28System.Object%2CSystem.Type%29> 方法會提供反向對應以進行還原序列化，如下列範例程式碼所示。  
   
 ```  
 public object GetDeserializedObject(object obj,   
@@ -188,7 +191,8 @@ public void GetKnownCustomDataTypes(
   
  但對本例而言，這個屬性並非必要，它只是在範例中做示範之用。 使用者也可以選擇使用程式碼或組態，透過手動方式新增類似的 `IContractBehavior`、`IEndpointBehavior` 或 `IOperationBehavior` 來啟用 Surrogate。  
   
- `IContractBehavior` 實作會尋找使用 DataContract 的作業，而尋找的方式是檢查這些作業是否註冊了行為 `DataContractSerializerOperationBehavior`。 如果沒有，就會在該行為上設定 `DataContractSurrogate` 屬性。 下列範例程式碼示範如何做到這點。 在這個作業行為上設定 Surrogate，就可以啟用 Surrogate 來進行序列化和還原序列化。  
+ 
+  `IContractBehavior` 實作會尋找使用 DataContract 的作業，而尋找的方式是檢查這些作業是否註冊了行為 `DataContractSerializerOperationBehavior`。 如果沒有，就會在該行為上設定 `DataContractSurrogate` 屬性。 下列範例程式碼示範如何做到這點。 在這個作業行為上設定 Surrogate，就可以啟用 Surrogate 來進行序列化和還原序列化。  
   
 ```  
 public void ApplyClientBehavior(ContractDescription description, ServiceEndpoint endpoint, System.ServiceModel.Dispatcher.ClientRuntime proxy)  
@@ -220,7 +224,8 @@ private static void ApplyDataContractSurrogate(OperationDescription description)
   
  此外，還必須執行其他步驟，才能將 Surrogate 插入以供中繼資料產生期間使用。 有一個機制可以用來達到這個目的，即提供 `IWsdlExportExtension`，而這也是本範例所示範的。 另一個方法則是直接修改 `WsdlExporter`。  
   
- `AllowNonSerializableTypesAttribute`屬性會實作`IWsdlExportExtension`和`IContractBehavior`。 延伸模組可以是`IContractBehavior`或`IEndpointBehavior`在此情況下。 `IWsdlExportExtension.ExportContract` 方法實作會將此延伸新增至 DataContract 結構描述產生期間所使用的 `XsdDataContractExporter`，以啟用 Surrogate。 下列程式碼片段示範如何執行這項操作。  
+ `AllowNonSerializableTypesAttribute`屬性會實作`IWsdlExportExtension`和`IContractBehavior`。 延伸模組可以是`IContractBehavior`或`IEndpointBehavior`在此情況下。 
+  `IWsdlExportExtension.ExportContract` 方法實作會將此延伸新增至 DataContract 結構描述產生期間所使用的 `XsdDataContractExporter`，以啟用 Surrogate。 下列程式碼片段示範如何執行這項操作。  
   
 ```  
 public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext context)  

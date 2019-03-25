@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 83b55ca42a3cebb6ceb2aec128202f14dc35da0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657554"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410923"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證的服務安全
 本主題說明如何啟用位於 Windows 網域，而且由相同的網域中的用戶端呼叫的 Windows Communication Foundation (WCF) 服務上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱 < [Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
@@ -52,7 +52,7 @@ ms.locfileid: "54657554"
   
 2.  建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 當您使用 Visual Basic，使用`GetType`運算子; 使用 C# 中，使用時`typeof`關鍵字。  
   
-3.  建立第二個名稱為 `Type` 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。  
+3.  建立第二個名稱為 <xref:System.Type> 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。  
   
 4.  使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別元 (URI)"localhost"與連接埠號碼 (8036)，以及基底的端點位址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54657554"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[＜How to：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
 2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
@@ -102,11 +102,11 @@ ms.locfileid: "54657554"
   
 1.  新增[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目區段的組態檔。  
   
-2.  將 <`binding`> 項目新增至 <`WSHttpBinding`> 項目，並將 `configurationName` 屬性設定為適用於您應用程式的值。  
+2.  加入 <`binding`> 項目至 <`WSHttpBinding`> 項目並將`configurationName`屬性適用於您的應用程式的值。  
   
-3.  新增 <`security`> 項目，並將 `mode` 屬性設定為 Message。  
+3.  加入 <`security`> 項目並將`mode`屬性至訊息。  
   
-4.  新增 <`message`> 項目，並將 `clientCredentialType` 屬性設定為 Windows。  
+4.  加入 <`message`> 項目並將`clientCredentialType`屬性設定為 Windows。  
   
 5.  在服務的組態檔中，將 `<bindings>` 區段取代為下列程式碼。 如果您還沒有服務組態檔，請參閱[使用的繫結設定服務及用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "54657554"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>搭配組態在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[＜How to：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)為前一個區段的組態程式碼產生的組態檔區段。  
   

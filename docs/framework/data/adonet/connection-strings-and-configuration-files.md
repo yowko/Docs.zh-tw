@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
-ms.openlocfilehash: 5de30627d6d0e1209b12912437ae3403890f1678
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 5e83d13d24a0b17fd886995e552dd0a7e2cf8ff4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828341"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409948"
 ---
 # <a name="connection-strings-and-configuration-files"></a>連接字串和組態檔
 在應用程式的程式碼中嵌入連接字串可能會導致安全性漏洞和維護問題。 編譯到應用程式原始程式碼中的未加密連接字串，可使用 [Ildasm.exe (IL 反組譯工具)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) 工具進行檢視。 此外，如果連接字串變更，應用程式就必須重新編譯。 基於上述理由，建議您將連接字串儲存在應用程式組態檔中。  
@@ -81,7 +81,7 @@ ms.locfileid: "55828341"
 |<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A>|連接字串。 對應至 **connectionString** 屬性。|  
   
 ### <a name="example-listing-all-connection-strings"></a>範例：列出所有連接字串  
- 此範例逐一查看 `ConnectionStringSettings` 集合，並在主控台 (Console) 視窗中顯示 <xref:System.Configuration.ConnectionStringSettings.Name%2A>、<xref:System.Configuration.ConnectionStringSettings.ProviderName%2A> 和 <xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A> 屬性。  
+ 此範例會逐一<xref:System.Configuration.ConnectionStringSettingsCollection>，並顯示<xref:System.Configuration.ConnectionStringSettings.Name%2A?displayProperty=nameWithType>， <xref:System.Configuration.ConnectionStringSettings.ProviderName%2A?displayProperty=nameWithType>，和<xref:System.Configuration.ConnectionStringSettings.ConnectionString%2A?displayProperty=nameWithType>主控台視窗中的屬性。  
   
 > [!NOTE]
 >  System.Configuration.dll 並未包含在所有專案類型中，您可能需要設定其參考，才能使用該組態類別。 特定應用程式組態檔的名稱和位置會根據應用程式類型及裝載處理序而不同。  
@@ -139,13 +139,16 @@ ms.locfileid: "55828341"
 |<xref:System.Configuration.RsaProtectedConfigurationProvider>|使用 RSA 加密演算法來加密及解密資料。 RSA 演算法可用於公開金鑰 (Public Key) 加密及數位簽章。 這種演算法也稱為「公開金鑰」或非對稱加密，因為它會使用兩種不同的金鑰。 您可以使用 [ASP.NET IIS 註冊工具 (Aspnet_regiis.exe)](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/k6h9cz8h(v=vs.90)) 來加密 Web.config 檔案中的區段並管理加密金鑰。 ASP.NET 會在處理檔案時對組態檔進行解密。 ASP.NET 應用程式的識別必須可以讀取用於對區段進行加密及解密的加密金鑰。|  
 |<xref:System.Configuration.DpapiProtectedConfigurationProvider>|使用 Windows Data Protection API (DPAPI) 來加密組態區段。 DPAPI 使用 Windows 內建的密碼編譯服務，可以針對電腦特定或使用者帳戶特定的保護進行設定。 電腦特定的保護特別適用於相同伺服器上需要共用資訊的多個應用程式。 使用者特定的保護則可用於使用特定使用者識別執行的服務，例如共用的裝載環境。 每個應用程式都會在不同的識別之下執行，如此可限制對檔案和資料庫等資源的存取。|  
   
- 這兩種提供者都提供高度加密的資料。 不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 `RsaProtectedConfigurationProvider` 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。 如需詳細資訊，請參閱[匯入和匯出受保護的組態 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))。  
+ 這兩種提供者都提供高度加密的資料。 不過，如果您打算在多個伺服器 (例如 Web 伺服陣列) 上使用相同的加密組態檔，則只有使用 <xref:System.Configuration.RsaProtectedConfigurationProvider> 才能匯出用於加密資料的加密金鑰並將其匯入另一個伺服器。 如需詳細資訊，請參閱[匯入和匯出受保護的組態 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/yxw286t2(v=vs.100))。  
   
 ### <a name="using-the-configuration-classes"></a>使用組態類別  
- <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果要建立 ASP.NET 應用程式，則可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 類別，此類別不但提供相同的功能，還可用於存取 ASP.NET 應用程式唯一的設定，例如 **\<system.web>** 中的設定。  
+ 
+  <xref:System.Configuration> 命名空間 (Namespace) 提供類別 (Class)，以透過程式設計的方式使用組態設定。 
+  <xref:System.Configuration.ConfigurationManager> 類別可用於存取電腦、應用程式及使用者組態檔。 如果要建立 ASP.NET 應用程式，則可以使用 <xref:System.Web.Configuration.WebConfigurationManager> 類別，此類別不但提供相同的功能，還可用於存取 ASP.NET 應用程式唯一的設定，例如 **\<system.web>** 中的設定。  
   
 > [!NOTE]
->  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))。  
+>  
+  <xref:System.Security.Cryptography> 命名空間包含可為資料加密及解密提供額外選項的類別。 如果需要無法使用受保護組態而提供的密碼編譯服務，請使用這些類別。 這其中某些類別是 Unmanaged Microsoft CryptoAPI 的包裝函式，某些則純粹是 Managed 實作 (Implementation)。 如需詳細資訊，請參閱[密碼編譯服務](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/93bskf9z(v=vs.90))。  
   
 ### <a name="appconfig-example"></a>App.config 範例  
  此範例示範如何在 Windows 應用程式的 **app.config** 檔案中切換 **connectionStrings** 區段的加密。 在此範例中，程序會採用應用程式的名稱做為引數，例如 "MyApplication.exe"。 接下來會加密 **app.config** 檔案，並將其複製到 "MyApplication.exe.config" 名稱下包含可執行檔的資料夾。  
@@ -153,7 +156,8 @@ ms.locfileid: "55828341"
 > [!NOTE]
 >  連接字串只能在當初進行加密的電腦上進行解密。  
   
- 程式碼會使用 <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> 方法來開啟 **app.config** 檔案進行編輯，<xref:System.Configuration.ConfigurationManager.GetSection%2A> 方法則會傳回 **connectionStrings** 區段。 接著程式碼會檢查 <xref:System.Configuration.SectionInformation.IsProtected%2A> 屬性，並呼叫 <xref:System.Configuration.SectionInformation.ProtectSection%2A> 來加密區段 (如果尚未加密)， 然後再叫用 <xref:System.Configuration.SectionInformation.UnprotectSection%2A> 方法來對區段進行解密。 <xref:System.Configuration.Configuration.Save%2A> 方法則會完成作業並儲存變更。  
+ 程式碼會使用 <xref:System.Configuration.ConfigurationManager.OpenExeConfiguration%2A> 方法來開啟 **app.config** 檔案進行編輯，<xref:System.Configuration.ConfigurationManager.GetSection%2A> 方法則會傳回 **connectionStrings** 區段。 接著程式碼會檢查 <xref:System.Configuration.SectionInformation.IsProtected%2A> 屬性，並呼叫 <xref:System.Configuration.SectionInformation.ProtectSection%2A> 來加密區段 (如果尚未加密)， 然後再叫用 <xref:System.Configuration.SectionInformation.UnprotectSection%2A> 方法來對區段進行解密。 
+  <xref:System.Configuration.Configuration.Save%2A> 方法則會完成作業並儲存變更。  
   
 > [!NOTE]
 >  您必須在專案中設定 `System.Configuration.dll` 的參考，程式碼才能執行。  

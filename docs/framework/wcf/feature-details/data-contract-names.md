@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
-ms.openlocfilehash: cd878452f3ec99627507334a26873a004e5b5314
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47196690"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408869"
 ---
 # <a name="data-contract-names"></a>資料合約名稱
 
@@ -64,7 +64,7 @@ ms.locfileid: "47196690"
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>泛型類型的自訂資料合約名稱
 
-有時候無法接收針對泛型類型產生的資料合約名稱 (如同之前所描述)。 例如，您可能事先知道不會產生名稱衝突並且想要移除雜湊。 在此例中，您可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 屬性 (Attribute) 的 `DataContractAttribute` 屬性 (Property) 指定不同的名稱產生方式。 您可以在 `Name` 屬性內使用以大括號包圍的數字，參考泛型參數的資料合約名稱  (0 參考第一個參數，1 參考第二個參數，以此類推)。您可以在大括號中使用數字 (#) 符號以參考雜湊。 您可以多次使用這些參考或完全不用。
+有時候無法接收針對泛型類型產生的資料合約名稱 (如同之前所描述)。 例如，您可能事先知道不會產生名稱衝突並且想要移除雜湊。 在此情況下，您可以使用<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType>屬性來指定不同的方式，來產生名稱。 您可以在 `Name` 屬性內使用以大括號包圍的數字，參考泛型參數的資料合約名稱  (0 參考第一個參數，1 參考第二個參數，以此類推)。您可以在大括號中使用數字 (#) 符號以參考雜湊。 您可以多次使用這些參考或完全不用。
 
 例如，先前的泛型 `Drawing` 型別應該要如下的宣告方式：
 

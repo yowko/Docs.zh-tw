@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: 5712b0f7ef67e0a925207858e17d256dbf50cc60
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826252"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411560"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
   
  相較之下，在 .NET Framework 中執行的 Managed 程式碼具有單獨套用至程式碼的程式碼存取安全性。 系統是否允許執行程式碼會取決於程式碼的來源或程式碼識別的其他層面，而非單獨取決於主體的識別。 這能降低 Managed 程式碼被誤用的可能性。  
   
-## <a name="code-access-permissions"></a>程式碼存取使用權限  
+## <a name="code-access-permissions"></a>程式碼存取權限  
  執行程式碼時，它會顯示 CLR 安全性系統所評估的辨識項。 一般來說，這個辨識項會洩露程式碼的來源，包含 URL、大小和區域，以及用來確保組件識別的數位簽章。  
   
  CLR 僅允許程式碼執行該程式碼有權執行的這些作業。 程式碼可以要求權限，而且系統會根據系統管理員所設定的安全性原則來接受這些要求。  
@@ -31,7 +31,8 @@ ms.locfileid: "55826252"
   
 -   `Identity permissions` 代表可識別組件的特性。 系統會根據辨識項 (可能包含數位簽章或程式碼來源等項目)，將權限授與組件。 識別權限也衍生自 <xref:System.Security.CodeAccessPermission> 基底類別 (Base Class)。  
   
--   `Role-based security permissions`是以主體是否具有指定的識別或屬於指定角色成員為基礎。 <xref:System.Security.Permissions.PrincipalPermission> 類別允許針對使用中主體進行宣告式和必要的權限檢查。  
+-   `Role-based security permissions`是以主體是否具有指定的識別或屬於指定角色成員為基礎。 
+  <xref:System.Security.Permissions.PrincipalPermission> 類別允許針對使用中主體進行宣告式和必要的權限檢查。  
   
  為了判斷程式碼是否經授權可存取資源或執行某項作業，執行階段的安全性系統會周遊呼叫堆疊，並比較每個呼叫端被授與的權限與要求的權限。 如果呼叫堆疊中的任何呼叫端沒有要求的權限，系統就會擲回 <xref:System.Security.SecurityException> 並拒絕存取。  
   
@@ -73,7 +74,7 @@ ms.locfileid: "55826252"
 |`AllowBlankPassword`|啟用或停用在連接字串中使用空白密碼。 有效值為 `true` (表示啟用空白密碼) 和 `false` (表示停用空白密碼)。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`ConnectionString`|識別允許的連接字串。 可識別多個連接字串。 **注意：** 不要在連接字串中包含使用者 ID 或密碼。 在這個發行版本中，您無法使用 .NET Framework 組態工具變更連接字串限制。 <br /><br /> 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`KeyRestrictions`|識別是否為允許的連接字串參數。 在表單中所識別的連接字串參數 *\<參數名稱>=* 。 也可以指定多個參數，只要以分號 (;) 將其分隔即可。 **注意：** 如果您沒有指定 `KeyRestrictions`，卻將 `KeyRestrictionBehavior` 屬性設為 `AllowOnly` 或 `PreventUsage`，則不允許使用其他連接字串參數。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
-|`KeyRestrictionBehavior`|將連接字串參數識別為唯一允許的其他參數 (`AllowOnly`)，或識別不允許的其他參數 (`PreventUsage`)。 `AllowOnly` 是預設值。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
+|`KeyRestrictionBehavior`|將連接字串參數識別為唯一允許的其他參數 (`AllowOnly`)，或識別不允許的其他參數 (`PreventUsage`)。 `AllowOnly` 預設值。 繼承自 <xref:System.Data.Common.DBDataPermissionAttribute>。|  
 |`TypeID`|在衍生類別中實作時，取得唯一識別項。 繼承自 <xref:System.Attribute>。|  
 |`Unrestricted`|指示是否針對資源，宣告不受限的使用權限。 繼承自 <xref:System.Security.Permissions.SecurityAttribute>。|  
   
@@ -190,7 +191,7 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>與 Unmanaged 程式碼的互通性  
- 在 CLR 外部執行的程式碼稱為 Unmanaged 程式碼。 因此，CAS 等安全性機制無法套用至 Unmanaged 程式碼。 COM 元件、ActiveX 介面及 Win32 API 函式都是 Unmanaged 程式碼的範例。 執行 Unmanaged 程式碼時，您應該套用特殊安全性考量，以免危及整體應用程式安全性。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)。  
+ 在 CLR 外部執行的程式碼稱為 Unmanaged 程式碼。 因此，CAS 等安全性機制無法套用至 Unmanaged 程式碼。 COM 元件、 ActiveX 介面及 Windows API 函式是 unmanaged 程式碼的範例。 執行 Unmanaged 程式碼時，您應該套用特殊安全性考量，以免危及整體應用程式安全性。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)。  
   
  .NET Framework 也透過 COM Interop 提供存取，藉以支援現有 COM 元件的回溯相容性 (Backward Compatibility)。 您可以使用 COM Interop 工具來匯入相關的 COM 型別，以便將 COM 元件併入 .NET Framework 應用程式中。 一旦匯入之後，COM 型別便可供使用。 COM Interop 也會將組件中繼資料匯出至型別程式庫並將 Managed 元件註冊為 COM 元件，藉以讓 COM 用戶端存取 Managed 程式碼。 如需詳細資訊，請參閱 <<c0> [ 進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)。  
   

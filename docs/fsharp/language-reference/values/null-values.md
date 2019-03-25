@@ -1,13 +1,13 @@
 ---
 title: Null 值
 description: 了解如何將 null 值會在F#程式設計語言。
-ms.date: 05/16/2016
-ms.openlocfilehash: 58c54065a98a84c4d4e912cbc42d59cfea8c6de1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.date: 03/22/2019
+ms.openlocfilehash: 93ac48eddf36981b9df550e76405c3175ae92e0a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610992"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409636"
 ---
 # <a name="null-values"></a>Null 值
 
@@ -19,7 +19,7 @@ Null 值通常不使用在F#的值或變數。 不過，null 會出現在某些�
 
 中定義的類型為F#和使用嚴格地從F#，唯一的方法來建立 null 值，使用F#程式庫是直接使用[Unchecked.defaultof](https://msdn.microsoft.com/library/9ff97f2a-1bd4-4f4c-afbe-5886a74ab977)或[Array.zeroCreate](https://msdn.microsoft.com/library/fa5b8e7a-1b5b-411c-8622-b58d7a14d3b2)。 不過，對於F#類型，可從其他.NET 語言，或如果您使用該類型的 api，不以F#，例如.NET Framework 中，可能會發生 null 值。
 
-您可以使用`option`中輸入F#當您可能使用參考變數，最可能的 null 值，另一種.NET 語言。 而不是 null，使用F#`option`類型，您使用的選項值`None`如果沒有任何物件。 您使用的選項值`Some(obj)`的物件`obj`物件時。 如需詳細資訊，請參閱 <<c0> [ 選項](../options.md)。
+您可以使用`option`中輸入F#當您可能使用參考變數，最可能的 null 值，另一種.NET 語言。 而不是 null，使用F#`option`類型，您使用的選項值`None`如果沒有任何物件。 您使用的選項值`Some(obj)`的物件`obj`物件時。 如需詳細資訊，請參閱[選項](../options.md)。 請注意，您仍然可以 pack`null`選項值 if、 for `Some x`，`x`剛好是`null`。 基於這個原因，請務必使用`None`值時`null`。
 
 `null`關鍵字是有效的關鍵字，在F#語言，而您必須使用.NET Framework Api 或以另一種.NET 語言所撰寫的其他 Api 時，請使用它。 當您呼叫.NET API，並做為引數，傳遞 null 值，並當您解譯傳回的值或.NET 方法呼叫的輸出參數時，就會是兩個，您可能需要 null 值的情況。
 

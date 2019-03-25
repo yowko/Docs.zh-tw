@@ -1,72 +1,133 @@
 ---
-title: HOW TO：建立 Windows Communication Foundation 用戶端
-ms.date: 09/14/2018
+title: 教學課程：建立 Windows Communication Foundation 用戶端
+ms.dat8: 03/19/2019
 helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 9572f3e2c0cddf75daf343f250b16e94bc2b0dbf
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 051275e56a8e63c6ab8136dbb9e24bdcf4c387df
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181666"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411853"
 ---
-# <a name="how-to-create-a-windows-communication-foundation-client"></a>HOW TO：建立 Windows Communication Foundation 用戶端
+# <a name="tutorial-create-a-windows-communication-foundation-client"></a>教學課程：建立 Windows Communication Foundation 用戶端
 
-這是建立 Windows Communication Foundation (WCF) 應用程式所需的六個工作的第四個。 如需這六個工作的概觀，請參閱[使用者入門教學課程](../../../docs/framework/wcf/getting-started-tutorial.md)主題。
+本教學課程說明建立基本的 Windows Communication Foundation (WCF) 應用程式所需的五個工作的第四個。 如需教學課程的概觀，請參閱[教學課程：開始使用 Windows Communication Foundation 應用程式](getting-started-tutorial.md)。
 
-本主題描述如何從 WCF 服務擷取中繼資料，並使用它來建立 WCF proxy 以存取服務。 這項工作使用來完成**加入服務參考**Visual Studio 所提供的功能。 這個工具會從服務的 MEX 端點取得中繼資料，並以您所選擇的語言 (預設為 C#) 產生用戶端 Proxy 的 Managed 原始程式碼檔。 除了建立用戶端 Proxy，此工具也會建立或更新用戶端的組態檔，讓用戶端應用程式在其中一個端點與服務連線。
-
-> [!NOTE]
-> 您也可以使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具來產生 proxy 類別和組態，而不使用**加入服務參考**Visual Studio 中。
+建立 WCF 應用程式的下一個工作是藉由從 WCF 服務擷取中繼資料來建立用戶端。 您可以使用 Visual Studio 加入服務參考，就會從服務的 MEX 端點取得中繼資料。 Visual Studio 接著會產生您所選擇的語言用戶端 proxy 的 managed 的原始程式碼檔。 它也會建立用戶端組態檔 (*App.config*)。 此檔案可讓用戶端應用程式連接到端點的服務。 
 
 > [!NOTE]
-> 當從 Visual Studio 中的類別庫專案中呼叫 WCF 服務，您可以使用**加入服務參考**功能來自動產生 proxy 和相關聯的組態檔。 類別庫專案將不會使用組態檔。 您要在產生的組態檔中加入呼叫類別庫的可執行檔的 app.config 檔案的設定。
+> 如果您從 Visual Studio 中的類別庫專案中呼叫 WCF 服務，使用**加入服務參考**功能來自動產生 proxy 和相關聯的組態檔。 不過，因為類別庫專案不使用此組態檔，您需要將設定新增至產生的組態檔中*App.config*呼叫類別庫之可執行檔的檔案。
 
-用戶端應用程式會使用產生的 Proxy 類別來建立與服務通訊的用戶端。 此程序所述[如何： 使用用戶端](../../../docs/framework/wcf/how-to-use-a-wcf-client.md)。
+> [!NOTE]
+> 或者，使用[ServiceModel Metadata Utility 工具](#servicemodel-metadata-utility-tool)而非 Visual Studio 來產生 proxy 類別及組態檔。
 
-## <a name="to-create-a-windows-communication-foundation-client"></a>若要建立 Windows Communication Foundation 用戶端
+用戶端應用程式會使用產生的 Proxy 類別來建立與服務通訊的用戶端。 此程序所述[教學課程：使用用戶端](how-to-use-a-wcf-client.md)。
 
-1. Visual Studio 中建立新的主控台應用程式專案。 中的 [入門] 方案上按一下滑鼠右鍵**方案總管**，然後選取**新增** > **新專案**。 在 **加入新的專案** 對話方塊的左側，選取**Windows 桌面** 類別下的**Visual C#** 或**Visual Basic**。 選取 **主控台應用程式 (.NET Framework)** 範本，然後再將專案命名為**GettingStartedClient**。
+在本教學課程中，您將了解如何：
+> [!div class="checklist"]
+> - 建立及設定 WCF 用戶端的主控台應用程式專案。
+> - 加入服務參考至 WCF 服務，以產生 proxy 類別和組態檔。
 
-2. 將 System.ServiceModel 的參考新增至 [gettingstartedclient] 專案中。 以滑鼠右鍵按一下**參考**中 [gettingstartedclient] 專案下的資料夾**方案總管**，然後選取**加入參考**。 在 **加入參考**對話方塊中，選取**Framework**在對話方塊左側**組件**。 尋找並選取**System.ServiceModel**，然後選擇**確定**。 選取儲存方案**檔案** > **全部儲存**。
 
-3. 加入至計算機服務的服務參考。
+## <a name="create-a-windows-communication-foundation-client"></a>建立 Windows Communication Foundation 用戶端
 
-   1. 首先，啟動 GettingStartedHost 主控台應用程式。
+1. Visual Studio 中建立主控台應用程式專案： 
 
-   2. 一旦主機正在執行，以滑鼠右鍵按一下**參考**中 [gettingstartedclient] 專案下的資料夾**方案總管**，然後選取**新增** >  **服務參考**。
+    1. 從**檔案**功能表上，選取**開放** > **專案/方案**並瀏覽至**GettingStarted**解決方案您先前建立 (*GettingStarted.sln*)。 選取 [開啟] 。
 
-   3. 在的 [位址] 方塊中輸入下列 URL**加入服務參考**對話方塊： [http://localhost:8000/GettingStarted/CalculatorService](http://localhost:8000/GettingStarted/CalculatorService)
+    2. 從**檢視**功能表上，選取**方案總管 中**。
 
-   4. 選擇**移**。
+    3. 在 [**方案總管] 中**視窗中，選取**GettingStarted**方案 （最上層節點），然後再選取**新增** > **新專案**快顯功能表中。 
+    
+    4. 在 [**加入新的專案**視窗中的，在左側，選取**Windows 桌面**] 類別下的**Visual C#** 或**Visual Basic**. 
 
-   CalculatorService 所示**Services**清單方塊。 按兩下 CalculatorService 將它展開並顯示服務所實作的服務合約。 保留為預設命名空間-選擇**確定**。
+    5. 選取 **主控台應用程式 (.NET Framework)** 範本，然後輸入*GettingStartedClient*如**名稱**。 選取 [確定]。
 
-    當您將使用 Visual Studio 服務的參考時，新的項目會出現在**方案總管**下方**服務參考**gettingstartedclient 專案底下的資料夾。 如果您使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具、 原始程式碼檔和 app.config 檔案會產生。
+2. 加入參考**GettingStartedClient**專案加入<xref:System.ServiceModel>組件： 
 
-    您也可以使用命令列工具[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)搭配適當的參數，來建立用戶端程式碼。 下列範例會產生服務的程式碼檔案與組態檔。 第一個範例示範如何在 VB 中，產生 proxy 和第二個示範如何在 C# 中產生的 proxy:
+    1.  在 **方案總管 中**視窗中，選取**參考**下的資料夾**GettingStartedClient**專案，然後再選取**加入參考**快顯功能表中。 
 
-    ```shell
-    svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
-    ```
+    2. 在 [**加入參考**] 視窗底下**組件**在視窗的左側，選取**Framework**。
+    
+    3. 尋找並選取**System.ServiceModel**，然後選擇**確定**。 
 
-    ```shell
-    svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
-    ```
+    4. 選取儲存方案**檔案** > **全部儲存**。
+
+3. 加入計算機服務的服務參考：
+
+   1. 在 [**方案總管] 中**視窗中，選取**參考**下的資料夾**GettingStartedClient**專案，然後再選取**加入服務參考**從捷徑功能表。
+
+   2. 在 **加入服務參考**視窗中，選取**Discover**。
+
+      CalculatorService 服務啟動和 Visual Studio 會顯示在**Services**  方塊中。
+
+   3. 選取  **CalculatorService**將它展開並顯示服務所實作的服務合約。 保留預設值**命名空間**，然後選擇**確定**。
+
+      Visual Studio 會加入新項目底下**已連線的服務**中的資料夾**GettingStartedClient**專案。 
+
+
+### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata Utility 工具
+
+下列範例示範如何選擇性地使用[ServiceModel Metadata Utility 工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)來產生 proxy 類別檔案。 此工具會產生 proxy 類別檔案和*App.config*檔案。 下列範例示範如何產生的 proxy，在C#和 Visual Basic 中，分別：
+
+```shell
+svcutil.exe /language:cs /out:generatedProxy.cs /config:app.config http://localhost:8000/GettingStarted/CalculatorService
+```
+
+```shell
+svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localhost:8000/GettingStarted/CalculatorService
+```
+
+### <a name="client-configuration-file"></a>用戶端組態檔
+
+您已建立用戶端之後，Visual Studio 會建立**App.config**中的設定檔**GettingStartedClient**專案，應該會類似下列的範例：
+
+```xml
+    <?xml version="1.0" encoding="utf-8" ?>
+    <configuration>
+        <startup>
+            <!-- specifies the version of WCF to use-->
+            <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.6.1" />
+        </startup>
+        <system.serviceModel>
+            <bindings>
+                <!-- Uses wsHttpBinding-->
+                <wsHttpBinding>
+                    <binding name="WSHttpBinding_ICalculator" />
+                </wsHttpBinding>
+            </bindings>
+            <client>
+                <!-- specifies the endpoint to use when calling the service -->
+                <endpoint address="http://localhost:8000/GettingStarted/CalculatorService"
+                    binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_ICalculator"
+                    contract="ServiceReference1.ICalculator" name="WSHttpBinding_ICalculator">
+                    <identity>
+                        <dns value="localhost" />
+                    </identity>
+                </endpoint>
+            </client>
+        </system.serviceModel>
+    </configuration>
+```
+
+底下[ \<system.serviceModel >](../configure-apps/file-schema/wcf/system-servicemodel.md)區段中，注意[\<端點 >](../configure-apps/file-schema/wcf/endpoint-element.md)項目。 **&lt;端點&gt;** 項目定義的端點，讓用戶端來存取服務，如下所示：
+- 地址： `http://localhost:8000/GettingStarted/CalculatorService`。 端點的位址。
+- 服務合約： `ServiceReference1.ICalculator`。 服務合約處理 WCF 用戶端與服務之間的通訊。 當您使用時，visual Studio 會產生此合約及其**加入服務參考**函式。 它基本上是複本在 GettingStartedLib 專案中所定義的合約。 
+- 繫結： <xref:System.ServiceModel.WSHttpBinding>。 繫結會指定 HTTP 傳輸、 互通安全性，以及其他組態詳細資料。
 
 ## <a name="next-steps"></a>後續步驟
 
-您已建立用戶端應用程式將用來呼叫計算機服務的 proxy。 請繼續進行系列中的下一個主題。
+在本教學課程中，您將了解如何：
+> [!div class="checklist"]
+> - 建立及設定 WCF 用戶端的主控台應用程式專案。
+> - 加入服務參考至 WCF 服務，以產生用戶端應用程式的 proxy 類別和組態檔。
+
+請前進到下一個教學課程，以了解如何使用產生的用戶端。
 
 > [!div class="nextstepaction"]
-> [如何：設定用戶端](../../../docs/framework/wcf/how-to-configure-a-basic-wcf-client.md)
+> [教學課程：使用 WCF 用戶端](how-to-use-a-wcf-client.md)
 
-## <a name="see-also"></a>另請參閱
 
-- [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [快速入門](../../../docs/framework/wcf/samples/getting-started-sample.md)
-- [自我裝載](../../../docs/framework/wcf/samples/self-host.md)
-- [如何：使用組態檔發行服務的中繼資料](../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
-- [如何：使用 Svcutil.exe 來下載中繼資料文件](../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)

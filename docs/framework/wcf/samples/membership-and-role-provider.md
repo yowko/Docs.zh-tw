@@ -126,8 +126,7 @@ ms.locfileid: "56332893"
     >  如果您要執行 SQL Server Express Edition，則伺服器名稱為 .\SQLEXPRESS。 這個伺服器應該會在設定 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 應用程式服務資料庫時，以及在 Web.config 連接字串中使用。  
   
     > [!NOTE]
-    >  
-  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 背景工作處理序帳戶必須具有這個步驟中所建立資料庫的權限。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
+    >  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 背景工作處理序帳戶必須具有這個步驟中所建立資料庫的權限。 請使用 sqlcmd 公用程式或 SQL Server Management Studio 來執行這項操作。  
   
 3.  若要在單一或跨電腦的組態中執行本範例，請使用下列指示。  
   

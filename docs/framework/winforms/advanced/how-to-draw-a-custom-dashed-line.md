@@ -9,12 +9,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 830fa45fc88c35b8aa5f047e065ae1efc161f581
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718938"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410221"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>HOW TO：繪製自訂短折線
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供數個虛線樣式中所列<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準的虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  
@@ -24,7 +24,7 @@ ms.locfileid: "57718938"
   
  下圖顯示產生的虛線。 請注意，最終的 dash 必須是少於 25 個單位，以便在列可以在結束 （405，5）。  
   
- ![畫筆](./media/pens6.gif "pens6")  
+ ![顯示一條虛線的圖例。](./media/how-to-draw-a-custom-dashed-line/dashed-line-illustration.gif "pens6")  
   
  [!code-csharp[System.Drawing.UsingAPen#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.UsingAPen#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#51)]  

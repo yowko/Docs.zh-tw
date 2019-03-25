@@ -15,8 +15,7 @@ ms.locfileid: "56332360"
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 
-  `basicHttpBinding` 的安全性模式可以設定為下列值：`Message`、`Transport`、`TransportWithMessageCredential`、`TransportCredentialOnly` 和 `None`。 在下列範例服務 App.config 檔中，端點定義會指定 `basicHttpBinding`，並參考名為 `Binding1` 的繫結組態，如下列範例組態所示：  
+ `basicHttpBinding` 的安全性模式可以設定為下列值：`Message`、`Transport`、`TransportWithMessageCredential`、`TransportCredentialOnly` 和 `None`。 在下列範例服務 App.config 檔中，端點定義會指定 `basicHttpBinding`，並參考名為 `Binding1` 的繫結組態，如下列範例組態所示：  
   
 ```xml  
 <system.serviceModel>  

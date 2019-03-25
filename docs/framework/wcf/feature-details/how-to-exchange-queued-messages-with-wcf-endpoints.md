@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 938e7825-f63a-4c3d-b603-63772fabfdb3
-ms.openlocfilehash: 11435dc6f941a566427c0e0cb797e84f33dd66a2
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: ea052a2dd843205a8108ea48f17ea84577817215
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56303643"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411027"
 ---
 # <a name="how-to-exchange-queued-messages-with-wcf-endpoints"></a>HOW TO：與 WCF 端點交換佇列訊息
 佇列會確保用戶端和 Windows Communication Foundation (WCF) 服務，之間可能發生可靠的傳訊即使服務目前無法在通訊時。 下列程序示範如何確保實作 WCF 服務時，長期用戶端與服務間通訊使用標準佇列繫結。  
@@ -24,7 +24,7 @@ ms.locfileid: "56303643"
      [!code-csharp[S_Msmq_Transacted#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#1)]
      [!code-vb[S_Msmq_Transacted#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#1)]  
   
-2.  當服務合約通過使用者定義型別，您必須為這些型別定義資料合約。 下列程式碼示範兩份資料合約：`PurchaseOrder` 和 `PurchaseOrderLineItem`。 這兩個型別定義了傳送至服務的資料  (請注意，定義這類資料合約的類別也定義許多方法。 這些方法不被視為資料合約的部分。 只有以 `DataMember` 屬性宣告的成員才屬於資料合約的部分)。  
+2.  當服務合約通過使用者定義型別，您必須為這些型別定義資料合約。 下列程式碼示範兩份資料合約：`PurchaseOrder` 和 `PurchaseOrderLineItem`。 這兩個型別定義了傳送至服務的資料  (請注意，定義這類資料合約的類別也定義許多方法。 這些方法不被視為資料合約的部分。 只有以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性宣告的成員才屬於資料合約的部分)。  
   
      [!code-csharp[S_Msmq_Transacted#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_transacted/cs/service.cs#2)]
      [!code-vb[S_Msmq_Transacted#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_transacted/vb/service.vb#2)]  

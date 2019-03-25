@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 6229e7fff4171f04d35bbc5be0596526f513191a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370185"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410157"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -118,7 +118,7 @@ ms.locfileid: "57370185"
   
 7.  在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
   
-8.  按一下 [確定] 。  
+8.  按一下 [確定 **Deploying Office Solutions**]。  
   
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "57370185"
   
 -   在專案檔中，`<TargetZone>` 元素值變更為 `Custom`。  
   
--   在應用程式資訊清單 (app.manifest) 中，`Unrestricted="true"` 屬性新增至 `PermissionSet` 元素。  
+-   在 應用程式資訊清單 (app.manifest) 中，`Unrestricted="true"`屬性新增至 '<xref:System.Security.PermissionSet>項目。  
   
     ```xml
     <PermissionSet class="System.Security.PermissionSet"   

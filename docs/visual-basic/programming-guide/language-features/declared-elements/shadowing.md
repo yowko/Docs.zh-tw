@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 6ac973493b67fa15ca935f61bbb8e5c07bda1e0f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580859"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411001"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的遮蔽功能
 當兩個程式設計項目共用相同的名稱時，可以隱藏其中一個，或是*陰影*，另一個。 在這種情況下，遮蔽的項目不是可供參考。相反地，當您的程式碼使用的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。  
@@ -41,8 +41,7 @@ ms.locfileid: "54580859"
   
  下圖顯示兩個變數，名為`temp`。 區域變數`temp`遮蔽成員變數`temp`時從自己的程序內存取`p`。 不過，`MyClass`關鍵字會略過的遮蔽功能，並存取成員變數。  
   
- ![透過範圍遮蔽示意圖](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowscope.gif "ShadowScope")  
-透過範圍遮蔽  
+ ![顯示透過範圍遮蔽的圖形。](./media/shadowing/shadow-scope-diagram.gif)
   
  如需透過範圍遮蔽的範例，請參閱[How to:隱藏與您的變數名稱相同的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)。  
   
@@ -51,8 +50,7 @@ ms.locfileid: "54580859"
   
  下圖顯示基底類別`b`和衍生的類別`d`繼承自`b`。 基底類別會定義名為的程序`proc`，並在衍生的類別可遮蔽它具有相同名稱的另一個程序。 第一個`Call`陳述式可讓您存取遮蔽`proc`衍生類別中。 不過，`MyBase`關鍵字會略過的遮蔽功能，並存取遮蔽基底類別中的程序。  
   
- ![透過繼承遮蔽示意圖](../../../../visual-basic/programming-guide/language-features/declared-elements/media/shadowinherit.gif "ShadowInherit")  
-透過繼承遮蔽  
+ ![透過繼承遮蔽示意圖](./media/shadowing/shadowing-inherit-diagram.gif)  
   
  如需透過繼承遮蔽的範例，請參閱[How to:隱藏與您的變數名稱相同的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)和[How to:隱藏繼承的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-an-inherited-variable.md)。  
   

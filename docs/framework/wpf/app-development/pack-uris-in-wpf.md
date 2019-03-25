@@ -9,12 +9,12 @@ helpviewer_keywords:
 - loading non-resource files
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
-ms.openlocfilehash: 9e7ded2869e3553eab302e150d80608b8dd7091f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e84f586e621aa54d7e8a8f62e605ec3016cfb757
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377308"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411274"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF 中的 Pack URI
 在 Windows Presentation Foundation (WPF) 中，[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]用來識別和載入檔案，在許多方面，包括下列：  
@@ -44,7 +44,7 @@ ms.locfileid: "57377308"
 ## <a name="the-pack-uri-scheme"></a>套件 URI 配置  
  組件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置由[Open Packaging Conventions](https://go.microsoft.com/fwlink/?LinkID=71255) (OPC) 規格，描述來組織及識別內容的模型。 此模型中的索引鍵的項目是套件和組件，其中*封裝*是一個邏輯容器，其中一個或多個邏輯*組件*。 下圖說明這個概念。  
   
- ![套件和組件圖表](./media/wpfpackurischemefigure1.PNG "WPFPackURISchemeFigure1")  
+ ![套件和部分圖表](./media/pack-uris-in-wpf/wpf-package-parts-diagram.png)  
   
  若要識別組件，OPC 規格會利用的擴充性 RFC 2396 (統一資源識別元 (URI):泛型語法） 來定義套件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]配置。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "57377308"
   
  下圖說明這個概念︰  
   
- ![套件、授權和路徑之間的關聯性](./media/wpfpackurischemefigure2.PNG "WPFPackURISchemeFigure2")  
+ ![套件、授權和路徑之間的關聯性](./media/pack-uris-in-wpf/wpf-relationship-diagram.png)  
   
  套件和組件與應用程式和檔案類似，其中應用程式 (套件) 可以包括一或多個檔案 (組件)，包括︰  
   
@@ -72,7 +72,7 @@ ms.locfileid: "57377308"
   
  若要存取這些類型的檔案，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]支援兩種授權： 應用程式: / / 和 siteoforigin:///: / /。 application:/// 授權識別在編譯時期已知的應用程式資料檔，包括資源檔和內容檔。 siteoforigin:/// 授權識別來源網站檔案。 下圖顯示每個授權的範圍。  
   
- ![套件 URI 圖表](./media/wpfpackurischemefigure4.png "WPFPackURISchemeFigure4")  
+ ![封裝 URI 圖表](./media/pack-uris-in-wpf/wpf-pack-uri-scheme.png)  
   
 > [!NOTE]
 >  組件的授權元件[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]是內嵌[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]，指向封裝，而且必須符合 RFC 2396。 此外，"/" 字元必須取代為 "," 字元，而且必須逸出 "%" 和 "?" 這類保留字元。 如需詳細資料，請參閱 OPC。  

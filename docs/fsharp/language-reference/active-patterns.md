@@ -2,12 +2,12 @@
 title: 現用模式
 description: 了解如何使用作用中的模式來定義細分輸入的資料中的具名資料分割F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: c830011b69809bd399aab0c8a8bc25d40d5c82cc
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612838"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412080"
 ---
 # <a name="active-patterns"></a>現用模式
 
@@ -86,23 +86,23 @@ BlanchedAlmond
 Something else : Not matched.
 ```
 
-在使用部分作用中的模式時，有時個別選擇可以是脫離或互斥，但它們不一定要是。 在下列範例中，模式平方和 Cube 的模式不是脫離的因為一些數字是平方和 cube，例如 64。 下列程式會列印出所有整數達 1000000 平方和 cube。
+在使用部分作用中的模式時，有時個別選擇可以是脫離或互斥，但它們不一定要是。 在下列範例中，模式平方和 Cube 的模式不是脫離的因為一些數字是平方和 cube，例如 64。 下列程式會使用 AND 模式結合的正方形和立方體的模式。 它印出所有的整數，最多 1000 個的同時平方和 cube，以及會只有 cube。 
 
 [!code-fsharp[Main](~/samples/snippets/fsharp/lang-ref-2/snippet5005.fs)]
 
 其輸出如下：
 
 ```
-1
-64
-729
-4096
-15625
-46656
-117649
-262144
-531441
-1000000
+1 is a cube and a square
+8 is a cube
+27 is a cube
+64 is a cube and a square
+125 is a cube
+216 is a cube
+343 is a cube
+512 is a cube
+729 is a cube and a square
+1000 is a cube
 ```
 
 ## <a name="parameterized-active-patterns"></a>參數化現用模式

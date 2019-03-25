@@ -10,12 +10,12 @@ helpviewer_keywords:
 - extending glass frames into applications [WPF]
 - glass frames [WPF], extending into applications
 ms.assetid: 74388a3a-4b69-4a9d-ba1f-e107636bd660
-ms.openlocfilehash: d7a00f2508769534e49c965d098dbacb01a1f189
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 8da1f49bf5b7d3daf6319906fb49390c008d209c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843528"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412210"
 ---
 # <a name="extend-glass-frame-into-a-wpf-application"></a>將玻璃框架擴充至 WPF 應用程式中
 
@@ -26,11 +26,9 @@ ms.locfileid: "57843528"
 
 ## <a name="example"></a>範例
 
-下圖顯示將玻璃框架擴充至 Internet Explorer 7 的網址列。
+下圖顯示將玻璃框架擴充到的 Internet Explorer 網址列 7:
 
-**Internet Explorer 在網址列後面使用擴充的玻璃框架。**
-
-![IE7 在網址列後面使用擴充的玻璃框架。](./media/ie7glasstopbar.PNG "IE7glasstopbar")
+![螢幕擷取畫面顯示 IE7 在位址列後方已擴充的玻璃框架。](./media/extend-glass-frame-into-a-wpf-application/internet-explorer-glass-frame-extended-address-bar.png)
 
 若要在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式上擴充玻璃框架，請視需要存取 Unmanaged [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 下列程式碼範例針對所需的兩個 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 執行平台叫用 (pinvoke)，將框架擴充到工作區。 這些 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 每一個都會在名為 **NonClientRegionAPI** 的類別中宣告。
 
@@ -147,11 +145,9 @@ void OnLoaded(object sender, RoutedEventArgs e)
 </Window>
 ```
 
-下圖顯示將玻璃框架擴充至 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式。
+下圖顯示將玻璃框架擴充到[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式：
 
-**擴充至**   [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]   **應用程式中的玻璃框架。**
-
-![擴充至 WPF 應用程式中的玻璃框架。](./media/wpfextendedglassintoclient.PNG "WPFextendedGlassIntoClient")
+![顯示玻璃框架擴充至 WPF 應用程式的螢幕擷取畫面。](./media/extend-glass-frame-into-a-wpf-application/glass-frame-extended-wpf-application.png)
 
 ## <a name="see-also"></a>另請參閱
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - Visual Basic code, Sub procedures
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
-ms.openlocfilehash: 4a2e1704e72e608f5b5fd9c6dace42c144f92bb4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5f9ac99078d64387acee9160118928ad8de1764c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973167"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411534"
 ---
 # <a name="declare-statement"></a>Declare Statement
 宣告實作的外部檔案中的程序的參考。  
@@ -127,7 +127,7 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
 -   **機制。** Visual Basic 會使用.NET Framework*平台叫用*(PInvoke) 解析及存取外部程序的機制。 `Declare`陳述式和<xref:System.Runtime.InteropServices.DllImportAttribute>這兩個類別會自動使用這項機制並不需要任何 PInvoke 的知識。 如需詳細資訊，請參閱[逐步解說：呼叫 Windows Api](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
 > [!IMPORTANT]
->  如果外部的程序執行 common language runtime (CLR) 外部，就*unmanaged 程式碼*。 當您呼叫這類的程序，例如 Win32 API 函式或 COM 方法，您可能會公開您的應用程式的安全性風險。 如需詳細資訊，請參閱 < [Unmanaged 程式碼的安全程式碼撰寫指導方針](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  
+>  如果外部的程序執行 common language runtime (CLR) 外部，就*unmanaged 程式碼*。 當您呼叫這類的程序，例如 Windows API 函式或 COM 方法，您可能會公開您的應用程式的安全性風險。 如需詳細資訊，請參閱 < [Unmanaged 程式碼的安全程式碼撰寫指導方針](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)。  
   
 ## <a name="example"></a>範例  
  下列範例宣告的外部參考`Function`傳回目前的使用者名稱的程序。 然後它會呼叫外部程序`GetUserNameA`一部分`getUser`程序。  

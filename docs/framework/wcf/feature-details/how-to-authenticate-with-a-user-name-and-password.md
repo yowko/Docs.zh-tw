@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 2fb384fe0012b5c0a72e961f027c3db629891e09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532288"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412262"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱和密碼進行驗證
 
@@ -21,7 +21,7 @@ ms.locfileid: "54532288"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>若要設定使用 Windows 網域使用者名稱和密碼進行驗證的 WCF 服務
   
-1.  請建立 <xref:System.ServiceModel.WSHttpBinding> 的執行個體，將繫結的安全性模式設定為 `SecurityMode.Message`，將繫結的 `ClientCredentialType` 設定為 `MessageCredentialType.UserName`，然後將使用所設定之繫結的服務端點加入至服務主機，如下列程式碼所示：  
+1.  請建立 <xref:System.ServiceModel.WSHttpBinding> 的執行個體，將繫結的安全性模式設定為 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>，將繫結的 `ClientCredentialType` 設定為 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>，然後將使用所設定之繫結的服務端點加入至服務主機，如下列程式碼所示：  
   
     ```  
     // ...  

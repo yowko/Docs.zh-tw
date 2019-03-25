@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 97a10d79-3e7d-4bd1-9a99-fd9807fd70bc
-ms.openlocfilehash: e8aa8d66e667036f09bd5670e779f14fa9401450
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 480242d519fee6ddabac3b39ff21f8e1b76827f0
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643802"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410663"
 ---
 # <a name="internet-unsecured-client-and-service"></a>沒有安全保障的網際網路用戶端與服務
-下圖顯示的公用、 不安全 Windows Communication Foundation (WCF) 用戶端和服務的範例。  
+下圖顯示的公用、 不安全 Windows Communication Foundation (WCF) 用戶端和服務的範例：  
   
- ![不安全的網際網路用戶端和服務案例](../../../../docs/framework/wcf/feature-details/media/publicunsecured.gif "publicUnsecured")  
+ ![顯示不安全的網際網路案例的螢幕擷取畫面](./media/internet-unsecured-client-and-service/public-unsecured-internet.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|無|  
+|安全性模式|None|  
 |Transport|HTTP|  
 |繫結|<xref:System.ServiceModel.BasicHttpBinding> 在程式碼，或[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)組態中的項目。|  
 |互通性|使用現有的 Web 服務用戶端和服務|  
-|驗證|無|  
-|完整性|無|  
-|機密性|無|  
+|驗證|None|  
+|完整性|None|  
+|機密性|None|  
   
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
@@ -72,7 +72,7 @@ ms.locfileid: "54643802"
   
 -   使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
--   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
+-   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

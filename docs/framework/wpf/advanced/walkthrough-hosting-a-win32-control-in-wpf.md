@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1bb5def111aad850a5f74afaba352394ac2587e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377400"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412314"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：裝載在 WPF 中的 Win32 控制項
 Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程式。 不過，當您已長期開發 Win32 程式碼中，它可能會重複使用至少一些更有效率的 WPF 應用程式中的程式碼而不是完全重寫程式。 WPF 提供簡單的機制，以裝載 Win32 視窗中，WPF 頁面上。  
@@ -23,9 +23,9 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
 <a name="requirements"></a>   
 ## <a name="requirements"></a>需求  
- 本主題假設基本的熟悉 WPF 和 Win32 程式設計。 如需基本 WPF 程式設計簡介，請參閱 <<c0> [ 開始使用](../getting-started/index.md)。 Win32 程式設計的簡介，您應參考有關該主旨，書籍的任何特別*程式設計 Windows* Charles petzold 的。  
+ 本主題假設基本的熟悉 WPF 和 Windows API 的程式設計。 如需基本 WPF 程式設計簡介，請參閱 <<c0> [ 開始使用](../getting-started/index.md)。 Windows API 程式設計簡介，請參閱任何書籍，特別*程式設計 Windows* Charles petzold 的。  
   
- 因為隨附本主題的範例中實作C#，它會使用平台引動服務 (PInvoke) 來存取 Win32 API。 PInvoke 疐裾是很有幫助，但並非必要。  
+ 因為隨附本主題的範例中實作C#，它會使用平台引動服務 (PInvoke) 來存取 Windows API。 PInvoke 疐裾是很有幫助，但並非必要。  
   
 > [!NOTE]
 >  本主題包含一些來自相關聯範例的程式碼範例。 不過，為了方便閱讀，並未包含完整的範例程式碼。 您可以取得，或檢視的完整程式碼[裝載 Win32 ListBox 控制項中 WPF 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)。  

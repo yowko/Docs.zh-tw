@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
-ms.openlocfilehash: 3afb6a9bd62083704a3147df9d1cc5477b4f5921
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 7378ddc8ada198beb005bc8682e6cb131def4ceb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125625"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412132"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
 本主題將介紹 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 的主要印刷樣式功能。 這些功能包括提升文字轉譯的品質與效能、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 印刷樣式支援、已增強的國際文字、已增強的字型支援，以及新的文字應用程式開發介面 (API)。  
@@ -121,7 +121,7 @@ ms.locfileid: "58125625"
  如需詳細資訊，請參閱 [WPF 中的文件](documents-in-wpf.md)。  
   
 ### <a name="lightweight-text-drawing"></a>輕量型文字繪製  
- 您可以直接繪製文字[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用的物件<xref:System.Windows.Media.DrawingContext.DrawText%2A>方法<xref:System.Windows.Media.DrawingContext>物件。 若要使用此方法，您建立<xref:System.Windows.Media.FormattedText>物件。 這個物件可讓您繪製多行文字，且可個別格式化文字中的每個字元。 功能<xref:System.Windows.Media.FormattedText>物件包含許多 Win32 API 中 DrawText 旗標的功能。 颾魤 ㄛ<xref:System.Windows.Media.FormattedText>物件包含像是省略符號支援，當文字超過其範圍時，會顯示省略符號的功能。 下列範例示範的文字具有數種已套用的格式，包括第二個和第三個字的線性漸層。  
+ 您可以直接繪製文字[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]使用的物件<xref:System.Windows.Media.DrawingContext.DrawText%2A>方法<xref:System.Windows.Media.DrawingContext>物件。 若要使用此方法，您建立<xref:System.Windows.Media.FormattedText>物件。 這個物件可讓您繪製多行文字，且可個別格式化文字中的每個字元。 功能<xref:System.Windows.Media.FormattedText>物件包含的許多功能的 Windows API 中 DrawText 旗標。 颾魤 ㄛ<xref:System.Windows.Media.FormattedText>物件包含像是省略符號支援，當文字超過其範圍時，會顯示省略符號的功能。 下列範例示範的文字具有數種已套用的格式，包括第二個和第三個字的線性漸層。  
   
  ![使用 FormattedText 物件顯示的文字](./media/typography-in-wpf/text-formatted-linear-gradient.jpg) 
   

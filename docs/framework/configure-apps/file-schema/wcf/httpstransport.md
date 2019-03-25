@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: efc568990c6af87f24f93790886388e4c505456c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289779"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411313"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
@@ -54,7 +54,7 @@ ms.locfileid: "55289779"
 |maxBufferSize|正整數，指定緩衝區的大小上限。 預設為 524288。|  
 |maxReceivedMessageSize|正整數，指定可接收的可允許訊息大小上限。 預設值為 65536。|  
 |proxyAddress|指定 HTTP Proxy 位址的 URI。 如果 `useSystemWebProxy` 為 `true`，則這項設定必須為 `null`。 預設為 `null`。|  
-|proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。 有效值包括以下的值：<br /><br /> -None:未執行驗證。<br />摘要：指定摘要式驗證。<br />-Negotiate:會與用戶端決定驗證配置來進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm:指定 NTLM 驗證。<br />-基本：指定基本驗證。<br />匿名：指定匿名驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。 請注意，`IntegratedWindowsAuthentication`不支援。|  
+|proxyAuthenticationScheme|指定通訊協定，用於驗證由 HTTP Proxy 處理的用戶端要求。 有效值包括以下的值：<br /><br /> -None:未執行驗證。<br />摘要：指定摘要式驗證。<br />-Negotiate:會與用戶端決定驗證配置來進行交涉。 如果用戶端和伺服器都支援 Kerberos，就使用它，否則使用 NTLM。<br />-Ntlm:指定 NTLM 驗證。<br />-基本：指定基本驗證。<br />匿名：指定匿名驗證。<br /><br /> 預設值為 Anonymous。 此屬性的型別為 <xref:System.Net.AuthenticationSchemes>。 請注意，<xref:System.Net.AuthenticationSchemes.IntegratedWindowsAuthentication?displayProperty=nameWithType>不支援。|  
 |realm|字串，指定在 Proxy/伺服器上使用的領域。 預設為空字串。<br /><br /> 伺服器使用領域來分割受保護的資源。 每個分割都可以有自己的驗證配置和 (或) 授權資料庫。 領域只限於基本和摘要式驗證使用。 當用戶端成功驗證之後，驗證對指定領域中的所有資源都有效。 領域的詳細說明，請參閱在 RFC 2617 [IETF 網站](https://www.ietf.org)。|  
 |requireClientCertificate|布林值，指定伺服器是否需要用戶端提供用戶端憑證做為 HTTPS 信號交換的一部分。 預設為 `false`。|  
 |transferMode|指定訊息是否要經過緩衝處理或資料流處理，或為要求或回應。 有效值包括以下的值：<br /><br /> 緩衝處理：要求和回應訊息會進行緩衝處理。<br />資料流：串流處理的要求和回應訊息。<br />-StreamedRequest:資料流處理要求訊息，緩衝處理回應訊息。<br />-StreamedResponse:緩衝處理要求訊息，資料流處理回應訊息。<br /><br /> 預設為 Buffered。 此屬性的型別為 <xref:System.ServiceModel.TransferMode>。|  
@@ -66,12 +66,13 @@ ms.locfileid: "55289779"
   
 ### <a name="parent-elements"></a>父項目  
   
-|項目|描述|  
+|元素|描述|  
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
- `httpsTransport` 項目是建立自訂繫結時的起點，此繫結會實作 HTTPS 傳輸通訊協定。 HTTPS 是用於安全互通性目的的主要傳輸。 藉由 Windows Communication Foundation (WCF) 以確保與其他 Web 服務堆疊互通時，會支援 HTTPS。  
+ 
+  `httpsTransport` 項目是建立自訂繫結時的起點，此繫結會實作 HTTPS 傳輸通訊協定。 HTTPS 是用於安全互通性目的的主要傳輸。 藉由 Windows Communication Foundation (WCF) 以確保與其他 Web 服務堆疊互通時，會支援 HTTPS。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 297d7ea0fbbd5b066539e6f2341b29390b3d38b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 544ecc3827a698f92ec29855f1e000fce1907386
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738348"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409467"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
 本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱中的主題[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -66,11 +66,12 @@ ms.locfileid: "54738348"
   
 8.  在較新的版本中，可以新增新的資料成員。 它們應永遠遵循下列規則：  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
+    1.  
+  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
   
     2.  如果無法接受成員為 `null` 預設值或零，而成員未出現在傳入的資料流中，就應使用 <xref:System.Runtime.Serialization.OnDeserializingAttribute> 以提供合理的預設值來提供回呼方法。 如需回呼的詳細資訊，請參閱[版本相容序列化回呼](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)。  
   
-    3.  `Order` 上的 `DataMemberAttribute` 屬性應用於確定所有新增的資料成員都會出現在現有的資料成員之後。 執行此動作的建議的方法如下所示：資料成員中的資料合約的第一個版本都不應該有其`Order`屬性集。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
+    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>屬性應該用來確保所有新加入的資料成員都會出現在現有的資料成員之後。 執行此動作的建議的方法如下所示：資料成員中的資料合約的第一個版本都不應該有其`Order`屬性集。 資料合約第二個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 2。 資料合約第三個版本中加入的所有資料成員都不應將其 `Order` 屬性設定為 3，以此類推。 您可以將一個以上的資料成員設定為相同的 `Order` 號碼。  
   
 9. 即使 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性保持為在舊版中 `false` 的預設屬性，也請不要在新版中移除資料成員。  
   

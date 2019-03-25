@@ -2,12 +2,12 @@
 title: 關聯集 End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
-ms.openlocfilehash: 9a71fd434bea87a75e259a3d5caa902fbecf8a57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 61dc00e6c349a25767f6221bed56ef8b65f823d9
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54701634"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412002"
 ---
 # <a name="association-set-end"></a>關聯集 End
 *關聯集 end*識別[實體型別](../../../../docs/framework/data/adonet/entity-type.md)並[實體集](../../../../docs/framework/data/adonet/entity-set.md)結尾[關聯集](../../../../docs/framework/data/adonet/association-set.md)。 關聯集 End 會定義為關聯集的部分。一個關聯集必須擁有兩個關聯集 End。  
@@ -21,11 +21,11 @@ ms.locfileid: "54701634"
 ## <a name="example"></a>範例  
  下圖顯示包含兩個關聯 (`WrittenBy` 和 `PublishedBy`) 的概念模型。  
   
- ![範例模型](../../../../docs/framework/data/adonet/media/examplemodel.gif "ExampleModel")  
+ ![具有三種實體類型的範例模型](./media/association-set-end/example-model-three-entity-types.gif)  
   
  下圖顯示以前述概念模型為基礎的一個關聯集 (`PublishedBy`) 和兩個實體集 (`Books` 和 `Publishers`)。 關聯集 End 為 `Books` 和 `Publishers` 實體集。 在 bi`Books`實體集代表的執行個體`Book`在執行階段的實體類型。 同樣地，Pj 代表`Publisher`執行個體中`Publishers`實體集。 BiPj 表示的執行個體`PublishedBy`中的關聯`PublishedBy`關聯集。  
   
- ![設定範例](../../../../docs/framework/data/adonet/media/setsexample.gif "SetsExample")  
+ ![如果螢幕擷取畫面顯示設定範例。](./media/association-set-end/sets-example-association.gif)  
   
  [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的 DSL ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 定義上圖所示之實體實體容器，每個關聯具有一個關聯集。 請注意，關聯集 End 會定義為每個關聯集定義的一部分。  
   
