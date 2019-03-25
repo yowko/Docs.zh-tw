@@ -29,8 +29,7 @@ ms.locfileid: "57721992"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  Windows Form <xref:System.Windows.Forms.DataGrid> 控制項會在一連串的資料列和資料行中顯示資料。 最簡單的案例是，以沒有包含關聯性的單一資料表，將格線繫結至資料來源。 在此案例中，資料會出現在簡單的資料列和資料行中，就像在試算表中一樣。 如需將資料繫結至其他控制項的詳細資訊，請參閱[資料繫結和 Windows Forms](../data-binding-and-windows-forms.md)。  
   
@@ -41,8 +40,7 @@ ms.locfileid: "57721992"
  ![繫結至具有多個資料表之資料的 DataGrid](./media/vbcontrol1.gif "vbControl1")  
 繫結至具有多個資料表之資料的 DataGrid  
   
- 
-  <xref:System.Windows.Forms.DataGrid> 可以提供資料集的使用者介面、相關資料表之間的巡覽，以及豐富的格式化和編輯功能。  
+ <xref:System.Windows.Forms.DataGrid> 可以提供資料集的使用者介面、相關資料表之間的巡覽，以及豐富的格式化和編輯功能。  
   
  顯示和操作資料是不同的功能：這個控制項負責使用者介面，而 Windows Form 資料繫結架構與處理資料更新[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]資料提供者。 因此，繫結至相同的資料來源的多個控制項將保持同步。  
   
@@ -58,8 +56,7 @@ ms.locfileid: "57721992"
   
  在 <xref:System.Windows.Forms.DataGrid> 中，一次只能顯示一個資料表。 如果資料表之間有定義父子關聯性，則使用者可以在相關的資料表之間移動，以選取要顯示在 <xref:System.Windows.Forms.DataGrid> 控制項中的資料表。 如需有關繫結資訊<xref:System.Windows.Forms.DataGrid>若要控制[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]資料來源在設計階段或執行的階段，請參閱[How to:將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
- 
-  <xref:System.Windows.Forms.DataGrid> 的有效資料來源包括：  
+ <xref:System.Windows.Forms.DataGrid> 的有效資料來源包括：  
   
 -   <xref:System.Data.DataTable> 類別  
   
@@ -102,8 +99,7 @@ ms.locfileid: "57721992"
 ## <a name="columns-and-rows"></a>資料行和資料列  
  <xref:System.Windows.Forms.DataGrid> 是由 <xref:System.Windows.Forms.DataGridTableStyle> 物件的集合所組成，這些物件包含在 <xref:System.Windows.Forms.DataGrid> 控制項的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 屬性中。 資料表樣式可能包含 <xref:System.Windows.Forms.DataGridColumnStyle> 物件的集合，這些物件包含在 <xref:System.Windows.Forms.DataGridTableStyle> 的 <xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A> 屬性中。 您可以編輯<xref:System.Windows.Forms.DataGrid.TableStyles%2A>並<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性使用透過存取的集合編輯器**屬性**視窗。  
   
- 與 <xref:System.Windows.Forms.DataGrid> 控制項相關聯的任何 <xref:System.Windows.Forms.DataGridTableStyle>，都可以透過 <xref:System.Windows.Forms.GridTableStylesCollection> 來存取。 
-  <xref:System.Windows.Forms.GridTableStylesCollection> 可以在具有 <xref:System.Windows.Forms.DataGridTableStyle> 集合編輯器的設計工具中編輯，或是透過 <xref:System.Windows.Forms.DataGrid> 控制項的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 屬性，以程式設計方式編輯。  
+ 與 <xref:System.Windows.Forms.DataGrid> 控制項相關聯的任何 <xref:System.Windows.Forms.DataGridTableStyle>，都可以透過 <xref:System.Windows.Forms.GridTableStylesCollection> 來存取。 <xref:System.Windows.Forms.GridTableStylesCollection> 可以在具有 <xref:System.Windows.Forms.DataGridTableStyle> 集合編輯器的設計工具中編輯，或是透過 <xref:System.Windows.Forms.DataGrid> 控制項的 <xref:System.Windows.Forms.DataGrid.TableStyles%2A> 屬性，以程式設計方式編輯。  
   
  ![DataGrid 控制項中包含的物件](./media/vbcolumns1.gif "vbColumns1")  
 下圖顯示 DataGrid 控制項中所包含的物件。  

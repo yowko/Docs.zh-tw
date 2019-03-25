@@ -71,10 +71,8 @@ ms.locfileid: "57356477"
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.GiveFeedback>|這個事件會在拖放作業期間持續發生，並可讓拖曳來源提供回饋資訊給使用者。 當變更滑鼠指標的外觀以表示置放目標所允許的效果時，通常會提供這個回饋。  這是反昇事件。|  
 |<xref:System.Windows.DragDrop.QueryContinueDrag>|這個事件會在拖曳作業期間鍵盤或滑鼠按鈕狀態變更時發生，並可讓拖曳來源根據按鍵/按鈕狀態來取消拖放作業。 這是反昇事件。|  
-|<xref:System.Windows.DragDrop.PreviewGiveFeedback>|
-  <xref:System.Windows.DragDrop.GiveFeedback> 的通道版本。|  
-|<xref:System.Windows.DragDrop.PreviewQueryContinueDrag>|
-  <xref:System.Windows.DragDrop.QueryContinueDrag> 的通道版本。|  
+|<xref:System.Windows.DragDrop.PreviewGiveFeedback>|<xref:System.Windows.DragDrop.GiveFeedback> 的通道版本。|  
+|<xref:System.Windows.DragDrop.PreviewQueryContinueDrag>|<xref:System.Windows.DragDrop.QueryContinueDrag> 的通道版本。|  
   
 ### <a name="drop-target-events"></a>置放目標事件  
   
@@ -84,14 +82,10 @@ ms.locfileid: "57356477"
 |<xref:System.Windows.DragDrop.DragLeave>|這個事件會在將物件拖曳出置放目標的界限時發生。  這是反昇事件。|  
 |<xref:System.Windows.DragDrop.DragOver>|這個事件會在將物件拖曳 (移動) 到置放目標的界限內時持續發生。 這是反昇事件。|  
 |<xref:System.Windows.DragDrop.Drop>|這個事件會在將物件置放到置放目標上時發生。  這是反昇事件。|  
-|<xref:System.Windows.DragDrop.PreviewDragEnter>|
-  <xref:System.Windows.DragDrop.DragEnter> 的通道版本。|  
-|<xref:System.Windows.DragDrop.PreviewDragLeave>|
-  <xref:System.Windows.DragDrop.DragLeave> 的通道版本。|  
-|<xref:System.Windows.DragDrop.PreviewDragOver>|
-  <xref:System.Windows.DragDrop.DragOver> 的通道版本。|  
-|<xref:System.Windows.DragDrop.PreviewDrop>|
-  <xref:System.Windows.DragDrop.Drop> 的通道版本。|  
+|<xref:System.Windows.DragDrop.PreviewDragEnter>|<xref:System.Windows.DragDrop.DragEnter> 的通道版本。|  
+|<xref:System.Windows.DragDrop.PreviewDragLeave>|<xref:System.Windows.DragDrop.DragLeave> 的通道版本。|  
+|<xref:System.Windows.DragDrop.PreviewDragOver>|<xref:System.Windows.DragDrop.DragOver> 的通道版本。|  
+|<xref:System.Windows.DragDrop.PreviewDrop>|<xref:System.Windows.DragDrop.Drop> 的通道版本。|  
   
  若要處理物件執行個體的拖放事件，請針對上表所列的事件加入處理常式。 若要在類別層級處理拖放事件，請覆寫對應的虛擬 On*Event 和 On\*PreviewEvent 方法。 如需詳細資訊，請參閱[控制項基底類別的路由事件類別處理](marking-routed-events-as-handled-and-class-handling.md#Class_Handling_of_Routed_Events)。  
   
@@ -201,24 +195,21 @@ ms.locfileid: "57356477"
  [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
  [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
- 
-  <xref:System.Windows.DragDrop.DragOver> 事件會在將資料拖曳到置放目標上時持續發生。 這個事件會搭配拖曳來源上的 <xref:System.Windows.DragDrop.GiveFeedback> 事件。 在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中，您通常會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 和 <xref:System.Windows.DataObject.GetData%2A> 方法來檢查傳送的資料格式是否為置放目標可以處理的格式。 您也可以檢查是否按下任何輔助按鍵，這通常會指出使用者是否想要移動或複製動作。 執行這些檢查之後，您可以設定 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性，以通知拖曳來源有關置放資料的效果。 拖曳來源會以 <xref:System.Windows.DragDrop.GiveFeedback> 事件引數接收這項資訊，並可設定適當的資料指標來提供回饋給使用者。  
+ <xref:System.Windows.DragDrop.DragOver> 事件會在將資料拖曳到置放目標上時持續發生。 這個事件會搭配拖曳來源上的 <xref:System.Windows.DragDrop.GiveFeedback> 事件。 在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中，您通常會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 和 <xref:System.Windows.DataObject.GetData%2A> 方法來檢查傳送的資料格式是否為置放目標可以處理的格式。 您也可以檢查是否按下任何輔助按鍵，這通常會指出使用者是否想要移動或複製動作。 執行這些檢查之後，您可以設定 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性，以通知拖曳來源有關置放資料的效果。 拖曳來源會以 <xref:System.Windows.DragDrop.GiveFeedback> 事件引數接收這項資訊，並可設定適當的資料指標來提供回饋給使用者。  
   
  下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragOver> 事件處理常式。 這個程式碼會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.Copy>。 這會向拖曳來源表示資料可以複製到橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。 這會向拖曳來源表示橢圓形不是資料的有效置放目標。  
   
  [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
  [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
- 
-  <xref:System.Windows.DragDrop.DragLeave> 事件會在將資料拖曳出目標的界限但未置放時發生。 您可以處理這個事件，以復原您在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的任何動作。  
+ <xref:System.Windows.DragDrop.DragLeave> 事件會在將資料拖曳出目標的界限但未置放時發生。 您可以處理這個事件，以復原您在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的任何動作。  
   
  下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.Media.Brush> 套用至橢圓形，來復原在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的預覽。  
   
  [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
- 
-  <xref:System.Windows.DragDrop.Drop> 事件會在將資料置放到置放目標上時發生；根據預設，當放開滑鼠按鈕時，就會發生這個事件。 在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，您可以使用 <xref:System.Windows.DataObject.GetData%2A> 方法從 <xref:System.Windows.DataObject> 擷取傳送的資料，並執行應用程式所需的任何資料處理。 <xref:System.Windows.DragDrop.Drop> 事件會結束拖放作業。  
+ <xref:System.Windows.DragDrop.Drop> 事件會在將資料置放到置放目標上時發生；根據預設，當放開滑鼠按鈕時，就會發生這個事件。 在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，您可以使用 <xref:System.Windows.DataObject.GetData%2A> 方法從 <xref:System.Windows.DataObject> 擷取傳送的資料，並執行應用程式所需的任何資料處理。 <xref:System.Windows.DragDrop.Drop> 事件會結束拖放作業。  
   
  下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.Drop> 事件處理常式。 這個程式碼會套用拖放作業的效果，類似 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中的程式碼。 它會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.Media.Brush> 套用至橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
   

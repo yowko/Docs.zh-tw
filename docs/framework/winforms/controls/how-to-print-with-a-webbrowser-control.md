@@ -30,8 +30,7 @@ ms.locfileid: "57702447"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   
-  `System` 和 `System.Windows.Forms` 組件的參考。  
+-   `System` 和 `System.Windows.Forms` 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Forms.WebBrowser>

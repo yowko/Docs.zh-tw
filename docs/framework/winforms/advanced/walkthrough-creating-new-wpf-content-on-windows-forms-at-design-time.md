@@ -86,15 +86,13 @@ ms.locfileid: "57707907"
 
 3. 將 `UserControl1` 的執行個體拖曳到表單上。
 
-    - 
-  <xref:System.Windows.Forms.Integration.ElementHost> 控制項會在表單上自動建立，以裝載 WPF 控制項。
+    - <xref:System.Windows.Forms.Integration.ElementHost> 控制項會在表單上自動建立，以裝載 WPF 控制項。
 
     - <xref:System.Windows.Forms.Integration.ElementHost>控制項的名稱為`elementHost1`然後在**屬性**視窗中，您可以看到其<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性設為**UserControl1**。
 
     - WPF 組件的參考會加入專案中。
 
-    - 
-  `elementHost1` 控制項具有智慧標籤面板，這個面板會顯示可用的裝載選項。
+    - `elementHost1` 控制項具有智慧標籤面板，這個面板會顯示可用的裝載選項。
 
 4. 在  **ElementHost 工作**智慧標籤面板中，選取**停駐於父容器**。
 

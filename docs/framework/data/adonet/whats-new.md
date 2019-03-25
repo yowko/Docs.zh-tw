@@ -49,8 +49,7 @@ ms.locfileid: "57378245"
 -   包含空間資料類型的 Microsoft.SqlServer.Types.dll 組件已從 10.0 版升級至 11.0 版。 參考此組件的應用程式可能會失敗。 如需詳細資訊，請參閱 < [Database Engine 功能的突破性變更](https://go.microsoft.com/fwlink/?LinkId=224367)。  
   
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework  
- 
-  [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。  
+ [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] 新增應用程式開發介面，可在搭配使用 Entity Framework 5.0 時啟用新案例。 如需有關改善和已新增至 Entity Framework 5.0 的功能的詳細資訊，請參閱下列主題：[最新消息](https://go.microsoft.com/fwlink/?LinkID=251106)並[Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。  
   
 ## <a name="see-also"></a>另請參閱
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)

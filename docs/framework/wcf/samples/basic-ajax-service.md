@@ -35,8 +35,7 @@ public interface ICalculator
 <%@ServiceHost language="C#" Debug="true" Service="Microsoft.Samples.SimpleAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebScriptServiceHostFactory" %>
 ```
 
- 
-  <xref:System.ServiceModel.Description.WebScriptEndpoint> 已預先設定，可讓您從 ASP.NET AJAX 用戶端頁面存取服務。 Web.config 中的以下區段可用來針對端點進行其他組態變更。 如果不需要額外的變更，也可以加以移除。  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint> 已預先設定，可讓您從 ASP.NET AJAX 用戶端頁面存取服務。 Web.config 中的以下區段可用來針對端點進行其他組態變更。 如果不需要額外的變更，也可以加以移除。  
   
 ```xml  
 <system.serviceModel>  
@@ -49,8 +48,7 @@ public interface ICalculator
 </system.serviceModel>  
 ```  
   
- 
-  <xref:System.ServiceModel.Description.WebScriptEndpoint> 會將服務的預設資料格式設定為 JSON 而不是 XML。 若要叫用服務，請巡覽至`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`之後完成註冊的集合，並建置本主題稍後所示的步驟。 這個測試功能會在使用 HTTP GET 要求時啟用。  
+ <xref:System.ServiceModel.Description.WebScriptEndpoint> 會將服務的預設資料格式設定為 JSON 而不是 XML。 若要叫用服務，請巡覽至`http://localhost/ServiceModelSamples/service.svc/Add?n1=100&n2=200`之後完成註冊的集合，並建置本主題稍後所示的步驟。 這個測試功能會在使用 HTTP GET 要求時啟用。  
   
  用戶端網頁 SimpleAjaxClientPage.aspx 包含 ASP.NET 程式碼，此程式碼會在使用者每次按下網頁上其中一個作業按鈕時叫用此服務。 `ScriptManager` 控制項會用來設定可透過 JavaScript 存取之服務的 Proxy。  
 

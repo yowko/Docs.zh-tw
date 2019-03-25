@@ -56,8 +56,7 @@ HRESULT QualifierSet_BeginEnumeration (
 
 |常數  |值  |描述  |
 |---------|---------|---------|
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | 
-  `lFlags` 參數無效。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `lFlags` 參數無效。 |
 |`WBEM_E_UNEXPECTED` | 0x8004101d | 第二次呼叫`QualifierSet_BeginEnumeration`而不需要的介入呼叫進行[ `QualifierSet_EndEnumeration` ](qualifierset-endenumeration.md)。 |
 |`WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可供開始新的列舉型別。 |
 |`WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |

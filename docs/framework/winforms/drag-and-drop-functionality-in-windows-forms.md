@@ -41,8 +41,7 @@ Windows Form 包含一組實作拖放行為的方法、事件和類別。 本主
 |<xref:System.Windows.Forms.Control.GiveFeedback>|這個事件會在拖曳作業期間發生。 它提供了一個可對正在發生拖放作業的使用者顯示視覺提示的機會，例如變更滑鼠指標。 這個事件的處理常式會接收 <xref:System.Windows.Forms.GiveFeedbackEventArgs> 類型的引數。|  
 |<xref:System.Windows.Forms.Control.QueryContinueDrag>|這個事件會在拖放作業期間引發，讓拖曳來源能夠決定是否應取消拖放作業。 這個事件的處理常式會接收 <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類型的引數。|  
   
- 
-  <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
+ <xref:System.Windows.Forms.QueryContinueDragEventArgs> 類別提供滑鼠按鈕和鍵盤輔助按鍵的目前狀態、指定是否已按下 ESC 鍵的值，以及可設定以指定是否應該繼續拖放作業的 <xref:System.Windows.Forms.DragAction> 值。  
   
 ## <a name="see-also"></a>另請參閱
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
