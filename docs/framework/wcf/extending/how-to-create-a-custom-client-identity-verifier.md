@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f2d34e43-fa8b-46d2-91cf-d2960e13e16b
-ms.openlocfilehash: a7107e6e0bfdb948b584b5cbd57eafc3aff1bd59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19be92acb16ffb5e98eb39ba36a406d66e58d97b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569371"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464017"
 ---
 # <a name="how-to-create-a-custom-client-identity-verifier"></a>HOW TO：建立自訂用戶端身分識別驗證器
 *識別*功能的 Windows Communication Foundation (WCF) 可讓用戶端預先指定預期的身分識別的服務。 每當伺服器向用戶端驗證自身時，就會比對預期身分識別來檢查身分識別  (如需身分識別及其運作方式的說明，請參閱 <<c0> [ 服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。)  
@@ -86,5 +86,4 @@ ms.locfileid: "54569371"
 - <xref:System.ServiceModel.EndpointIdentity>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
 - [服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)
-- [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)

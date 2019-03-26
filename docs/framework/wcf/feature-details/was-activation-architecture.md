@@ -2,12 +2,12 @@
 title: WAS 啟動架構
 ms.date: 03/30/2017
 ms.assetid: 58aeffb0-8f3f-4b40-80c8-15f3f1652fd3
-ms.openlocfilehash: 2dd11ec9d642f5bfdd08c71487e82a8cb5133520
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71546bf6fb13c9d2fecf09b79460a953f60e4e3b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557103"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465755"
 ---
 # <a name="was-activation-architecture"></a>WAS 啟動架構
 本主題將條列說明並討論 Windows Process Activation Service (亦稱為 WAS) 的元件。  
@@ -27,7 +27,7 @@ ms.locfileid: "54557103"
   
  當 WAS 啟動背景工作處理序執行個體時，會將所需的處理序通訊協定處理常式載入背景工作處理序，然後透過應用程式管理員建立可裝載應用程式的應用程式定義域。 應用程式定義域會依據應用程式需求，同時載入應用程式的程式碼與使用的 AppDomain 通訊協定處理常式。  
   
- ![WAS 架構](../../../../docs/framework/wcf/feature-details/media/wasarchitecture.gif "WASArchitecture")  
+ ![如果螢幕擷取畫面顯示 WAS 架構。](./media/was-activation-architecture/windows-process-application-service-architecture.gif)  
   
 ### <a name="listener-adapters"></a>接聽項配接器  
  接聽項配接器是個別的 Windows 服務，可實作網路通訊邏輯以透過所接聽的網路通訊協定來接收訊息。 下表列出 Windows Communication Foundation (WCF) 通訊協定的接聽程式配接器。  

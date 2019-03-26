@@ -28,12 +28,12 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: d1a93fe81b892b85f77547d48428d3d9a78d5173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373093"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466214"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 windows 的 Windows Presentation Foundation (WPF) 獨立應用程式與互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式提供自己的視窗使用<xref:System.Windows.Window>類別。 本主題將介紹<xref:System.Windows.Window>再介紹建立和管理獨立應用程式中的 windows 的基本概念。  
@@ -44,9 +44,9 @@ ms.locfileid: "57373093"
   
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 類別  
- 下圖說明視窗的組成部分。  
+ 下圖說明視窗的組成部分：  
   
- ![視窗項目](./media/windowoverviewfigure1.PNG "WindowOverviewFigure1")  
+ ![如果螢幕擷取畫面顯示視窗項目。](./media/wpf-windows-overview/window-constituent-elements.png)  
   
  視窗分為兩個區域︰非工作區和工作區。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "57373093"
   
  藉由呼叫最後開啟的視窗<xref:System.Windows.Window.Show%2A>方法; 以下圖所示的結果。  
   
- ![呼叫 Window.Show 而開啟的視窗](./media/windowoverviewfigure8.png "WindowOverviewFigure8")  
+ ![藉由呼叫 window.show 而開啟的視窗](./media/wpf-windows-overview//window-opened-show-method.png)  
   
  藉由呼叫開啟的視窗<xref:System.Windows.Window.Show%2A>會非強制回應視窗中，這表示應用程式的運作模式，可讓使用者啟用相同的應用程式中的其他視窗中。  
   
@@ -282,13 +282,13 @@ ms.locfileid: "57373093"
   
 <a name="Window_Lifetime_Events"></a>   
 ### <a name="window-lifetime-events"></a>視窗存留期事件  
- 下圖顯示在視窗存留期的主體事件順序。  
+ 下圖顯示視窗的存留期的主體事件順序：  
   
- ![視窗存留期](./media/windowlifetimeevents.png "WindowLifetimeEvents")  
+ ![此圖顯示在視窗的存留期的事件。](./media/wpf-windows-overview/window-lifetime-events.png)  
   
- 下圖顯示顯示時沒有啟動視窗的存留期的主體事件順序 (<xref:System.Windows.Window.ShowActivated%2A>設為`false`視窗顯示之前)。  
+ 下圖顯示顯示時沒有啟動視窗的存留期的主體事件順序 (<xref:System.Windows.Window.ShowActivated%2A>設為`false`視窗顯示之前):  
   
- ![視窗存留期 &#40;Window.ShowActivated &#61; False&#41;](./media/windowlifetimenoact.png "WindowLifetimeNoAct")  
+ ![此圖顯示在視窗的存留期，而不需要啟用的事件。](./media/wpf-windows-overview/window-lifetime-no-activation.png)  
   
 <a name="WindowLocation"></a>   
 ## <a name="window-location"></a>視窗位置  
@@ -351,21 +351,21 @@ ms.locfileid: "57373093"
   
  **針對高度屬性：**  
   
-1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinHeight%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxHeight%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Height?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Height%2A?displayProperty=nameWithType>  
   
  **針對寬度屬性：**  
   
-1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType> >  
+1.  <xref:System.Windows.FrameworkElement.MinWidth%2A?displayProperty=nameWithType>
   
-2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType> >  
+2.  <xref:System.Windows.FrameworkElement.MaxWidth%2A?displayProperty=nameWithType>
   
-3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType> >  
+3.  <xref:System.Windows.SizeToContent.Width?displayProperty=nameWithType>/<xref:System.Windows.SizeToContent.WidthAndHeight?displayProperty=nameWithType>
   
 4.  <xref:System.Windows.FrameworkElement.Width%2A?displayProperty=nameWithType>  
   
@@ -437,9 +437,9 @@ ms.locfileid: "57373093"
   
 -   <xref:System.Windows.WindowStyle.ToolWindow>  
   
- 下圖說明這些視窗樣式的效果。  
+ 在下圖說明這些視窗樣式的影響：  
   
- ![視窗樣式](./media/windowoverviewfigure6.PNG "WindowOverviewFigure6")  
+ ![視窗的框線樣式的圖例。](./media/wpf-windows-overview/window-border-styles.png)  
   
  您可以設定<xref:System.Windows.Window.WindowStyle%2A>採用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記或程式碼，因為它是不太可能變更視窗的存留期間，您將最有可能設定使用[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]標記。  
   
@@ -448,9 +448,9 @@ ms.locfileid: "57373093"
 #### <a name="non-rectangular-window-style"></a>非矩形視窗樣式  
  也有些情況下，其中的框線樣式，<xref:System.Windows.Window.WindowStyle%2A>可讓您有不敷使用。 比方說，您可能想要建立具有非矩形框線，應用程式，例如[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]使用。  
   
- 例如，以下圖顯示的語音泡泡視窗為例。  
+ 下圖所示的語音泡泡視窗為例：  
   
- ![非矩形視窗](./media/nonrectangularwindowfigure.PNG "NonRectangularWindowFigure")  
+ ![語音泡泡視窗指出拖曳 me.](./media/wpf-windows-overview/non-rectangular-window-figure.png)  
   
  可以建立這類視窗設定<xref:System.Windows.Window.WindowStyle%2A>屬性，以<xref:System.Windows.WindowStyle.None>，並使用特殊支援，<xref:System.Windows.Window>對透明度。  
   
@@ -460,9 +460,10 @@ ms.locfileid: "57373093"
   
 <a name="Task_Bar_Presence"></a>   
 ### <a name="task-bar-presence"></a>工作列目前狀態  
- 視窗的預設外觀包含工作列按鈕，像下圖所示。  
-  
- ![具有工作列按鈕的視窗](./media/windowoverviewfigure7.PNG "WindowOverviewFigure7")  
+
+視窗的預設外觀包含工作列按鈕時，在下圖所示：
+
+ ![如果螢幕擷取畫面顯示具有工作列按鈕的視窗。](./media/wpf-windows-overview/window-taskbar-button.png)  
   
  某些類型的視窗沒有工作列按鈕，例如訊息方塊和對話方塊 (請參閱[對話方塊概觀](dialog-boxes-overview.md))。 您可以控制是否要將視窗的工作列按鈕顯示藉由設定<xref:System.Windows.Window.ShowInTaskbar%2A>屬性 (`true`預設情況下)。  
   

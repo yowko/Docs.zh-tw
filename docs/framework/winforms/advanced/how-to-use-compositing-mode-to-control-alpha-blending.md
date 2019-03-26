@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1b6ff14de7ff524b8af603ae5fa3969d5230b1a7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714121"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462860"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>HOW TO：使用複合模式控制 Alpha 混色
 可能有您想来建立一個幕外的點陣圖，具有下列特性：  
@@ -34,7 +34,7 @@ ms.locfileid: "57714121"
   
  下圖顯示程式碼範例的輸出。 請注意混合與背景，在省略符號，但它們不能彼此。  
   
- ![來源副本](./media/sourcecopy.png "sourcecopy")  
+ ![圖表顯示省略符號與背景，不互相混合。](./media/how-to-use-compositing-mode-to-control-alpha-blending/ellipses-blended-background.png)  
   
  在程式碼範例包含此陳述式：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "57714121"
   
  下圖顯示修改過的程式碼的輸出。  
   
- ![來源透過](./media/sourceover.png "sourceover")  
+ ![此圖顯示省略符號混合在一起，並具有背景。](./media/how-to-use-compositing-mode-to-control-alpha-blending/blend-ellipses-background.png)  
   
  [!code-csharp[System.Drawing.AlphaBlending#43](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#43)]
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  

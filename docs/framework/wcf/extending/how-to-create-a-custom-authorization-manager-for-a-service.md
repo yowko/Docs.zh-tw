@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 64eb44c948f669ea5364cc38c7416fdd12cdabd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573945"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465135"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>HOW TO：建立自訂授權管理員服務
 身分識別模型基礎結構在 Windows Communication Foundation (WCF) 支援可延伸的宣告型授權模型。 從語彙基元擷取的宣告可以選擇性地由自訂授權原則進行處理並放入 <xref:System.IdentityModel.Policy.AuthorizationContext>。 授權管理員會檢查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的宣告來做出授權決策。  
@@ -119,5 +119,4 @@ ms.locfileid: "54573945"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)
 - [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)

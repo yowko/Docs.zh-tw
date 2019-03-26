@@ -4,12 +4,12 @@ description: 了解，Docker、 容器和微服務架構不是一體適用的解
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: ac4ca2d4a24e2d26fd639eafd62968188dbeb483
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674428"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462678"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>邁向容器為基礎的新式應用程式
 
@@ -24,10 +24,10 @@ Microsoft 已在豐富的指導方針、 範例應用程式及電子書，可協
 您可以找到其他 Microsoft 電子書與下列清單中的 Docker 容器：
 
 - **.NET 微服務：容器化的.NET 應用程式的架構** \
-  [*https://docs.microsoft.com/dotnet/standard/microservices-architecture/*](../microservices-architecture/index.md)
+  [https://docs.microsoft.com/dotnet/standard/microservices-architecture/](../microservices-architecture/index.md)
 
 - **將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化** \
-  [*https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/*](../modernize-with-azure-and-containers/index.md)
+  [https://docs.microsoft.com/dotnet/standard/modernize-with-azure-and-containers/](../modernize-with-azure-and-containers/index.md)
 
 >[!div class="step-by-step"]
 >[上一頁](docker-containers-images-and-registries.md)

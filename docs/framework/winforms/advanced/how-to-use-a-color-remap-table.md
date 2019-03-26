@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom colors [Windows Forms], creating with color remap table
 - color remap tables [Windows Forms], using
 ms.assetid: 977df1ce-8665-42d4-9fb1-ef7f0ff63419
-ms.openlocfilehash: 72965d6968aab256579929acc00e629bcd3c71f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f4f19229a31266b406214e93e2b59acd343ca2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707328"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463887"
 ---
 # <a name="how-to-use-a-color-remap-table"></a>HOW TO：使用色彩重新對應表
 重新對應是轉換的色彩，色彩重新對應表根據映像中的程序。 色彩重新對應表是陣列<xref:System.Drawing.Imaging.ColorMap>物件。 每個<xref:System.Drawing.Imaging.ColorMap>陣列中的物件具有<xref:System.Drawing.Imaging.ColorMap.OldColor%2A>屬性和<xref:System.Drawing.Imaging.ColorMap.NewColor%2A>屬性。  
@@ -28,7 +28,7 @@ ms.locfileid: "57707328"
   
  下圖顯示原始的映像，在左邊和重新對應的映像，在右邊。  
   
- ![色彩重新對應](./media/colortrans7.png "colortrans7")  
+ ![顯示原始的映像和重新對應的映像的螢幕擷取畫面。](./media/how-to-use-a-color-remap-table/original-image-remap-colors.png)  
   
  [!code-csharp[System.Drawing.RecoloringImages#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.RecoloringImages#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#31)]  

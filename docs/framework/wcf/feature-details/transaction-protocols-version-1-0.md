@@ -1,13 +1,13 @@
 ---
-title: 交易通訊協定 1.0 版
+title: 異動通訊協定 1.0 版
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
-ms.openlocfilehash: c28c013bc791b5358a2282dc21446d5f2129aa2c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258015"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463900"
 ---
 # <a name="transaction-protocols-version-10"></a>異動通訊協定 1.0 版
 Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 和 Ws-coordination 通訊協定 1.0 版。 如需有關版本 1.1 的詳細資訊，請參閱[交易通訊協定](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)。  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
   
  此主題描述 WS-Atomic 異動 (WS-AT) 安全性規格的組成，並且描述使用在異動管理員之間通訊的安全繫結程序。 本文件中描述的方法已經使用 WS-AT 和 WS-Coordination 的其他實作成功通過測試，其中包含 IBM、IONA、Sun Microsystems 和其他實作。  
   
- 下圖描述兩個異動管理員之間：異動管理員 1 和異動管理員 2，以及兩個應用程式之間：應用程式 1 和應用程式 2 的互通性。  
+ 下圖說明兩個異動管理員，異動管理員 1 和異動管理員 2，與兩個應用程式，應用程式 1 和 2 應用程式之間的互通性：  
   
- ![異動通訊協定](../../../../docs/framework/wcf/feature-details/media/transactionmanagers.gif "異動管理員")  
+ ![如果螢幕擷取畫面顯示交易之間的互動方式管理員。](./media/transaction-protocols/transaction-managers-flow.gif)  
   
  使用一個啟動器 (I) 和一個參與者 (P) 考量一般的 WS-Coordination/WS-Atomic Transaction 案例。 啟動器和參與者都有異動管理員 (分別是 ITM 和 PTM)。 在此主題中，兩階段交易認可會稱為 2PC。  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
   
 -   應用程式訊息  
   
- 前三個訊息類別會視為交易管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 本章節描述使用這些類別的每個 WCF 的通訊協定繫結。  
+ 前三個訊息類別會視為異動管理員訊息，並且在此主題稍後的「應用程式訊息交換」中會描述其繫結程序組態。 第四個訊息類別是應用程式對應用程式訊息，並且在此主題稍後的「訊息範例」一節中會描述。 本章節描述使用這些類別的每個 WCF 的通訊協定繫結。  
   
  下列 XML 命名空間與關聯的前置詞會使用在整份文件中。  
   
@@ -72,8 +72,8 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
   
  應用程式訊息並不限於這些繫結，並且會在稍後描述。  
   
-### <a name="transaction-manager-https-binding"></a>交易管理員 HTTPS 繫結  
- 交易管理員 HTTPS 繫結僅依賴傳輸安全性來達到安全性，並且在交易樹狀結構中的每個傳送者與接收者組之間建立信任。  
+### <a name="transaction-manager-https-binding"></a>異動管理員 HTTPS 繫結程序  
+ 異動管理員 HTTPS 繫結程序僅依賴傳輸安全性來達到安全性，並且在異動樹狀中的每個傳送者與接收者組之間建立信任。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
  X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明：  
@@ -83,18 +83,18 @@ Windows Communication Foundation (WCF) 第 1 版實作了 Ws-atomic Transaction 
 -   B1112:DNS 必須成功 X.509 主體名稱檢查系統中的每個傳送者與接收者組之間的功能。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>啟動和登錄繫結組態  
- WCF 要求透過 HTTPS 的要求/回覆相互關聯的雙工繫結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 異動」)。  
+ WCF 要求透過 HTTPS 的要求/回覆相互關聯的雙工繫結。 (如需有關相互關聯與要求/回覆訊息交換模式描述的詳細資訊，請參閱第 8 節的「WS-Atomic 交易」)。  
   
 #### <a name="2pc-protocol-binding-configuration"></a>2PC 通訊協定繫結組態  
  WCF 支援透過 HTTPS 的單向 （資料包） 訊息。 訊息間的相互關聯則留待實作詳細資料中說明。  
   
  B2131:實作必須支援`wsa:ReferenceParameters`Ws-addressing 達成的 WCF 的 2PC 訊息相互關聯所述。  
   
-### <a name="transaction-manager-mixed-security-binding"></a>交易管理員混合安全性繫結  
+### <a name="transaction-manager-mixed-security-binding"></a>異動管理員混合安全性繫結程序  
  這是替代 （混合模式） 繫結與身分識別建立目的的 Ws-coordination 發行權杖模型結合該使用傳輸安全性。  啟動與登錄是兩個繫結之間唯一不同的項目。  
   
 #### <a name="https-transport-configuration"></a>HTTPS 傳輸組態  
- X.509 憑證會用來建立異動管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
+ X.509 憑證會用來建立交易管理員身分識別。 需要用戶端/伺服器驗證，而用戶端/伺服器授權則留待實作詳細資料中說明。  
   
 #### <a name="activation-message-binding-configuration"></a>啟動訊息繫結組態  
  啟動訊息通常不會參與互通性，因為啟動訊息一般會發生在應用程式與其本機異動管理員之間。  

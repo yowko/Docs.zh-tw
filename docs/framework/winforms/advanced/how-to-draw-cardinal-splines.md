@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 687143273a07acba4b4d60acb1be25eee165b91d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f5c7a8555130e884b641648d1ffc9865f44dc1e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710481"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464693"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>HOW TO：繪製基本曲線
 基本曲線是一條曲線順利通過一組指定的點。 若要繪製基本曲線，建立<xref:System.Drawing.Graphics>物件，並指向陣列的位址傳遞<xref:System.Drawing.Graphics.DrawCurve%2A>方法。  
@@ -23,16 +23,16 @@ ms.locfileid: "57710481"
   
 -   下列範例會繪製的鐘型基線曲線通過五個指定的點。 下圖顯示曲線和五個點。  
   
-     ![基本曲線](./media/cardinalspline1.png "CardinalSpline1")  
+     ![此圖顯示的鐘型的基本曲線。](./media/how-to-draw-cardinal-splines/bell-shaped-cardinal-spline.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#21)]  
   
 ### <a name="drawing-a-closed-cardinal-spline"></a>繪製封閉的基線曲線  
   
--   使用<xref:System.Drawing.Graphics.DrawClosedCurve%2A>方法的<xref:System.Drawing.Graphics>類別用來繪製封閉的基線曲線。 在封閉的基線曲線曲線會繼續進行到陣列中的最後一個點，並在陣列中的第一個點會連線。 下列範例會繪製封閉的基線曲線通過六個指定的點。 下圖是封閉的曲線，以及六個點。  
+-   使用<xref:System.Drawing.Graphics.DrawClosedCurve%2A>方法的<xref:System.Drawing.Graphics>類別用來繪製封閉的基線曲線。 在封閉的基線曲線曲線會繼續進行到陣列中的最後一個點，並在陣列中的第一個點會連線。 下列範例會繪製封閉的基線曲線通過六個指定的點。 下圖顯示已關閉的曲線，以及六個點：  
   
- ![基本曲線](./media/cardinalspline1a.png "CardinalSpline1A")  
+ ![此圖顯示的封閉的基線曲線。](./media/how-to-draw-cardinal-splines/closed-cardinal-spine.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#22)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#22](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#22)]  
@@ -41,7 +41,7 @@ ms.locfileid: "57710481"
   
 -   變更的方式傳遞的張力引數的彎曲的基本曲線<xref:System.Drawing.Graphics.DrawCurve%2A>方法。 下列範例會繪製通過相同的一組點的三個基本曲線。 下圖顯示三個曲線，以及其張力值。 請注意，張力為 0 時，點是以直線來連接。  
   
- ![基本曲線](./media/cardinalspline2.png "CardinalSpline2")  
+ ![此圖顯示三個基本曲線。](./media/how-to-draw-cardinal-splines/three-cardinal-splines.png)  
   
  [!code-csharp[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/CS/Class1.cs#23)]
  [!code-vb[System.Drawing.ConstructingDrawingCurves#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#23)]  

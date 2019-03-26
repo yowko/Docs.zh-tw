@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services
 - WCF Data Services, about
 ms.assetid: 7924cf94-c9a6-4015-afc9-f5d22b1743bb
-ms.openlocfilehash: eb9adf5ff66a8b45bea79a9abaa139a46abb5b39
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b7e8d0842b705a2fc8897511e1b2e01441d9c6b9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094018"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465837"
 ---
 # <a name="wcf-data-services-overview"></a>WCF 資料服務概觀
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您建立和使用的 Web 或內部的資料服務使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 可讓您將資料公開為可由 Uri 定址的資源。 這可讓您使用具像狀態傳輸 (REST) 的語意存取及變更資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。 本主題提供 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所定義的模式和作法概觀以及 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 所提供的功能，以便在 .NET Framework 應用程式中充分利用 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]。  
@@ -25,14 +25,12 @@ ms.locfileid: "56094018"
 ## <a name="interoperable-data-access"></a>可互通的資料存取  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 若要讓資料服務的互通性與不使用.NET Framework 的應用程式的標準網際網路通訊協定為基礎。 因為您可以使用標準 Uri 來定址資料，您的應用程式可以存取和變更資料，使用具像狀態傳輸 (REST)，特別是標準 HTTP 動詞命令的語意 GET、 PUT、 POST 和 DELETE。 這樣能讓您從任何用戶端存取這些服務 (這些用戶端需可剖析及存取透過標準 HTTP 通訊協定傳輸的資料)。  
   
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會定義 Atom 發行通訊協定 (AtomPub) 的一組延伸。 它可支援採用多種資料格式的 HTTP 要求和回應，配合各種用戶端應用程式和平台。 
-  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要可以表示 Atom、JavaScript 物件標記法 (JSON) 和單純 XML 格式的資料。 雖然 Atom 是預設格式，但是摘要的格式會在 HTTP 要求的標頭中指定。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)和[OData:JSON 格式](https://go.microsoft.com/fwlink/?LinkID=185795)。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會定義 Atom 發行通訊協定 (AtomPub) 的一組延伸。 它可支援採用多種資料格式的 HTTP 要求和回應，配合各種用戶端應用程式和平台。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要可以表示 Atom、JavaScript 物件標記法 (JSON) 和單純 XML 格式的資料。 雖然 Atom 是預設格式，但是摘要的格式會在 HTTP 要求的標頭中指定。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)和[OData:JSON 格式](https://go.microsoft.com/fwlink/?LinkID=185795)。  
   
  發行資料時[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]依賴其他現有的網際網路機能進行此類作業，例如快取和驗證。 若要這麼做，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]與現有的裝載應用程式和服務，例如 ASP.NET、 Windows Communication Foundation (WCF) 和 Internet Information Services (IIS) 整合。  
   
 ## <a name="storage-independence"></a>儲存獨立性  
- 雖然會根據實體-關聯性模型定址資源，但無論基礎資料來源為何，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 都會公開 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。 
-  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 接受 URI 識別之資源所傳來的 HTTP 要求後，會將該要求還原序列化，並將該要求的表示法傳遞至 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供者。 此提供者會將要求轉譯為特定資料來源格式，並且在基礎資料來源執行該要求。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將定址資源的概念模型 ([!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所規定) 與基礎資料來源的特定結構描述區隔開來，以達到儲存獨立性。  
+ 雖然會根據實體-關聯性模型定址資源，但無論基礎資料來源為何，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 都會公開 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 接受 URI 識別之資源所傳來的 HTTP 要求後，會將該要求還原序列化，並將該要求的表示法傳遞至 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供者。 此提供者會將要求轉譯為特定資料來源格式，並且在基礎資料來源執行該要求。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會將定址資源的概念模型 ([!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所規定) 與基礎資料來源的特定結構描述區隔開來，以達到儲存獨立性。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 整合 ADO.NET Entity Framework，可讓您建立公開關聯式資料的資料服務。 您可以使用實體資料模型工具建立以實體形式包含可定址資源的資料模型，同時定義此模型和基礎資料庫中資料表的對應。 如需詳細資訊，請參閱 < [Entity Framework 提供者](../../../../docs/framework/data/wcf/entity-framework-provider-wcf-data-services.md)。  
   
@@ -55,7 +53,7 @@ ms.locfileid: "56094018"
 ## <a name="architecture-overview"></a>架構概觀  
  下圖說明[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]架構來公開[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要和中使用這些摘要[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-啟用用戶端程式庫：  
   
- ![WCF 資料服務架構圖表](../../../../docs/framework/data/wcf/media/astoriaservicearch.gif "AstoriaServiceArch")  
+ ![顯示 WCF 資料服務架構圖表的螢幕擷取畫面。](./media/wcf-data-services-overview/windows-communication-foundation-data-services-architecture.gif)  
   
 ## <a name="see-also"></a>另請參閱
 - [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing alpha blended
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
-ms.openlocfilehash: 44047b5a35c2ca87f3136d082331d2f31a1abbec
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 210916bbaf437d8f71b07e8107eb0cdc0989ea42
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721147"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465616"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>HOW TO：繪製不透明和半透明線條
 當您繪製一條線時，必須傳遞 <xref:System.Drawing.Pen> 物件至 <xref:System.Drawing.Graphics> 類別的 <xref:System.Drawing.Graphics.DrawLine%2A> 方法。 <xref:System.Drawing.Pen.%23ctor%2A> 建構函式的其中一個參數是 <xref:System.Drawing.Color> 物件。 若要繪製不透明的線條，請將色彩的 Alpha 元件設為 255。 若要繪製半透明線條，請將 Alpha 元件設為從 1 到 254 的任何值。  
@@ -25,13 +25,13 @@ ms.locfileid: "57721147"
 ## <a name="example"></a>範例  
  下列範例會繪製點陣圖，然後繪製以該點陣圖做為背景的三條線。 第一條線使用的 Alpha 元件為 255，所以是不透明的。 第二和第三條線使用的 Alpha 元件為 128，因此是半透明的；您可以透過線條看到背景影像。 設定 <xref:System.Drawing.Graphics.CompositingQuality%2A> 屬性的陳述式會讓第三條線搭配 Gamma 修正進行混色。  
   
- 下圖顯示下列程式碼的輸出。  
-  
- ![不透明和半透明](./media/compqualline.png "compqualline")  
-  
  [!code-csharp[System.Drawing.AlphaBlending#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#11)]
  [!code-vb[System.Drawing.AlphaBlending#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#11)]  
   
+ 下圖顯示下列程式碼的輸出：  
+  
+ ![顯示的是不透明和半透明輸出的圖](./media/how-to-draw-opaque-and-semitransparent-lines/opaque-semitransparent-lines.png)  
+
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
   

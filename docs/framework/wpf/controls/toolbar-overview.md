@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 7d591c85211492e4ad0b7e226cffba309e8d418b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379636"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464953"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概觀
 <xref:System.Windows.Controls.ToolBar> 控制項是一組命令或其功能通常彼此相關的控制項的容器。 A<xref:System.Windows.Controls.ToolBar>通常包含會叫用命令的按鈕。  
@@ -28,10 +28,9 @@ ms.locfileid: "57379636"
   
 <a name="ToolBars_with_Overflow_Items"></a>   
 ## <a name="toolbars-with-overflow-items"></a>具有溢位項目的 ToolBar  
- 通常<xref:System.Windows.Controls.ToolBar>控制項包含超過工具列大小可以納入項目。 當發生這種情況時，<xref:System.Windows.Controls.ToolBar>顯示溢位按鈕。 若要查看溢位項目，使用者按一下溢位按鈕和下列快顯視窗中顯示的項目<xref:System.Windows.Controls.ToolBar>。 下圖顯示<xref:System.Windows.Controls.ToolBar>溢位項目。  
+ 通常<xref:System.Windows.Controls.ToolBar>控制項包含超過工具列大小可以納入項目。 當發生這種情況時，<xref:System.Windows.Controls.ToolBar>顯示溢位按鈕。 若要查看溢位項目，使用者按一下溢位按鈕和下列快顯視窗中顯示的項目<xref:System.Windows.Controls.ToolBar>。 下圖顯示<xref:System.Windows.Controls.ToolBar>溢位項目：  
   
- ![溢位的工具列](./media/toolbarwithoverflowitem.png "ToolbarWithOverflowItem")  
-具有溢位項目的工具列  
+ ![如果螢幕擷取畫面顯示具有溢位項目工具列。](./media/toolbar-overview/toolbar-overflow-items.png)  
   
  您可以指定工具列上的項目放置到溢位面板藉由設定當<xref:System.Windows.Controls.ToolBar.OverflowMode%2A?displayProperty=nameWithType>附加屬性<xref:System.Windows.Controls.OverflowMode.Always?displayProperty=nameWithType>， <xref:System.Windows.Controls.OverflowMode.Never?displayProperty=nameWithType>，或<xref:System.Windows.Controls.OverflowMode.AsNeeded?displayProperty=nameWithType>。 下列範例指定工具列上的最後四個按鈕應該一律位於溢位面板上。  
   

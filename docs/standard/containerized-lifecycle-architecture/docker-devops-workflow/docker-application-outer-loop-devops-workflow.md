@@ -4,12 +4,12 @@ description: 了解 DevOps 工作流程的 「 外部迴圈 」 的步驟
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 495e717787c346e451c2f79ef4200b478577aa9d
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 95664e20269f68a2eea5111b6c12ec7f108dc77b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676196"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462977"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker 應用程式的外部迴圈 DevOps 工作流程中的步驟
 
@@ -90,13 +90,13 @@ Visual Studio Azure DevOps 服務包含組建和發行範本，您可以使用�
 > [!資訊] 若要閱讀詳細資訊組合 Azure DevOps 服務 Docker CI 管線，以及檢視的逐步解說，請瀏覽這些網站所示：
 >
 > - 執行 Visual Studio Team Services （現在 Azure DevOps 服務） 代理程式作為 Docker 容器: \
->   [*https://hub.docker.com/r/microsoft/vsts-agent/*](https://hub.docker.com/r/microsoft/vsts-agent/)
+>   [https://hub.docker.com/r/microsoft/vsts-agent/](https://hub.docker.com/r/microsoft/vsts-agent/)
 >
 > - 建置.NET Core Linux Docker 映像，使用 Azure DevOps 服務: \
->   [*https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/*](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
+>   [https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/](https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/)
 >
 > - 建立以 Linux 為基礎 Visual Studio Team Service 組建含 Docker 支援的電腦: \
->   [*http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support*](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
+>   [http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support](http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support)
 
 ### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>整合、 測試及驗證多容器 Docker 應用程式
 

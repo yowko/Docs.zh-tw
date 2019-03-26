@@ -2,12 +2,12 @@
 title: WCF 服務與 ASP.NET
 ms.date: 03/30/2017
 ms.assetid: b980496a-f0b0-4319-8e55-a0f0fa32da70
-ms.openlocfilehash: 837d03bbbac01be48d03c9170fc0a9a36c970da0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 80f4f9a473f223928981ee3f0c2e9f2464cbafaf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282603"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463471"
 ---
 # <a name="wcf-services-and-aspnet"></a>WCF 服務與 ASP.NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "55282603"
 
 裝載在網際網路資訊服務 (IIS) 中的 WCF 服務可以位於與。ASPX 頁面和 ASMX Web 服務位於單一、 共同的應用程式定義域。 ASP.NET 提供通用的基礎結構服務，例如 AppDomain 管理與 WCF 和 ASP.NET HTTP 執行階段動態編譯。 WCF 的預設組態會並排顯示使用 ASP.NET。
 
-![WCF 服務與 ASP.NET： 共用狀態](./media/hostingwcfwithaspnet.gif "HostingWCFwithASPNET")
+![螢幕擷取畫面顯示 WCF 服務與 ASP.NET： 共用狀態。](./media/wcf-services-and-aspnet/windows-communication-foundation-services-asp-dotnet-configuration.gif)
 
 ASP.NET HTTP 執行階段會處理 ASP.NET 要求，但不會參與處理要求目的地的 WCF 服務，即使這些服務裝載於相同的 AppDomain，與是 ASP.NET 的內容。 相反地，WCF 服務模型會攔截訊息定址到 WCF 服務，並透過 WCF 傳輸/通道堆疊路由傳送。
 

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: d2d170679b09eb33bea3569e1e6db8954bde3659
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb7b4c06b87c8c214a6f3ed99a89707ccd0d626e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622282"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464303"
 ---
 # <a name="how-to-create-a-custom-claim"></a>HOW TO：建立自訂宣告
 身分識別模型基礎結構在 Windows Communication Foundation (WCF) 提供一組內建的宣告類型和 helper 函式具有權限建立<xref:System.IdentityModel.Claims.Claim>透過這些類型和權限的執行個體。 這些內建的宣告被設計來在 WCF 支援的用戶端認證類型中找到預設的模型資訊。 在許多情況下，內建宣告就已足夠；不過有些應用程式可能需要自訂宣告。 宣告中包含了宣告類型、宣告適用的資源，以及擁有該資源所需的權限。 這個主題會描述如何建立自訂宣告。  
@@ -80,5 +80,4 @@ ms.locfileid: "54622282"
 - <xref:System.IdentityModel.Claims.ClaimTypes>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], changing colors
 - image colors [Windows Forms]
 ms.assetid: 2106fb9a-4d60-4dcf-9220-9f189a6c4d19
-ms.openlocfilehash: 81aecddb28903649ff2d59e80fc90368df5e2db4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8b2e28cab2d2d04f7c99880f2b35a02ebe80dcd8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703019"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464459"
 ---
 # <a name="how-to-translate-image-colors"></a>HOW TO：轉譯影像色彩
 翻譯加入到一或多個四個色彩元件的值。 下表提供色彩矩陣項目表示的翻譯。  
@@ -29,9 +29,9 @@ ms.locfileid: "57703019"
 ## <a name="example"></a>範例  
  下列範例會建構<xref:System.Drawing.Image>ColorBars.bmp 檔案中的物件。 然後程式碼會新增至映像中的每個像素的紅色元件 0.75。 原始的映像與已轉換的映像一起繪製。  
   
- 下圖顯示原始的映像，在左邊和轉換後的映像，在右邊。  
+ 下圖顯示原始的映像，在左邊和轉換後的映像，在右側：  
   
- ![轉譯色彩](./media/colortrans2.png "colortrans2")  
+ ![螢幕擷取畫面的原始和轉換好的映像。](./media/how-to-translate-image-colors/original-image-translate-colors.png)  
   
  下表列出四個橫條的色彩向量之前, 和之後的紅色的翻譯。 請注意，因為色彩元件的最大值為 1，第二個資料列中的紅色元件不會變更。 （同樣地，色彩元件的最小值是 0）。  
   

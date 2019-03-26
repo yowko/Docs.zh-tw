@@ -11,12 +11,12 @@ helpviewer_keywords:
 - text [Windows Forms], antialiasing
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
-ms.openlocfilehash: b0dc3cf5cff9cf3e163478861ec55a05427ad6ce
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ffd8600c730baca54a9cbd098dd2f37ce5ecb728
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718567"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464719"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>HOW TO：使用文字反鋸齒功能
 *消除鋸齒*指的繪製的圖形和文字，以提高它們的外觀或可讀性的鋸齒狀邊緣變得平滑。 與 managed[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]類別，您可以轉譯高品質的反鋸齒文字，以及較低的品質文字。 一般而言，較高品質的呈現方式會比較低品質的更多處理時間。 若要設定文字的品質層級，設定<xref:System.Drawing.Graphics.TextRenderingHint%2A>的屬性<xref:System.Drawing.Graphics>其中一個項目的<xref:System.Drawing.Text.TextRenderingHint>列舉  
@@ -29,7 +29,7 @@ ms.locfileid: "57718567"
  
  下圖顯示的範例程式碼的輸出：  
   
- ![字型文字](./media/fontstext10.png "FontsText10")  
+ ![如果螢幕擷取畫面顯示兩個不同的品質設定的文字。](./media/how-to-use-antialiasing-with-text/antialiasing-text-quality-settings.png)  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述程式碼範例專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  

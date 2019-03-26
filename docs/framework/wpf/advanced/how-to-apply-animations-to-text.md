@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: e62c8288460206e7ebfbc18787bd9c2f2144a5bc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356958"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463120"
 ---
 # <a name="how-to-apply-animations-to-text"></a>HOW TO：對文字套用動畫
 動畫可以變更應用程式中文字的顯示和外觀。 下列範例會使用不同類型的動畫來影響中的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  
@@ -26,9 +26,8 @@ ms.locfileid: "57356958"
   
  下圖顯示的效果<xref:System.Windows.Controls.TextBlock>變更它的不透明度從控制項`1.00`要`0.00`期間所定義的 5 秒間隔<xref:System.Windows.Media.Animation.Timeline.Duration%2A>。  
   
- ![不透明度從 1.00 變更為 0.00 的文字](./media/fadedtext01.png "FadedText01")  
-不透明度從 1.00 變更為 0.00 的文字  
-  
+ ![不是透明度從 1.00 變更為 0.00 的文字。](./media/how-to-apply-animations-to-text/faded-text-opacity-change.png)  
+   
  下列範例會使用<xref:System.Windows.Media.Animation.ColorAnimation>以動畫顯示文字區塊的前景色彩。 前景色彩值會在 5 秒的期間內從某種色彩變更為第二種色彩，然後回復色彩值並繼續進行。  
   
  [!code-xaml[TextAnimationSample#TextAnimationSample3](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample3)]  

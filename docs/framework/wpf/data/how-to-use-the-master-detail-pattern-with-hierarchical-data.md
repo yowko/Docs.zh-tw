@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 41f02013feb1405e5640afa73b954dc84921c924
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e18bc7d60b47b083a0b102938634473d85b39882
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351476"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463315"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>HOW TO：使用含階層式資料的主從式模式
 此範例示範如何實作主從式案例。  
@@ -23,7 +23,7 @@ ms.locfileid: "57351476"
   
  以下是範例的螢幕擷取畫面。 `Divisions` <xref:System.Windows.Controls.ListBox>會自動追蹤中的選取項目`Leagues`<xref:System.Windows.Controls.ListBox>並顯示對應的資料。 `Teams` <xref:System.Windows.Controls.ListBox>追蹤其他兩個選項<xref:System.Windows.Controls.ListBox>控制項。  
   
- ![主要&#45;detail 範例](./media/databindingmasterdetailsample.png "DataBindingMasterDetailSample")  
+ ![顯示主要的螢幕擷取畫面&#45;範例案例的詳細資料。](./media/how-to-use-the-master-detail-pattern-with-hierarchical-data/databinding-master-detail-scenario.png)  
   
  請注意，在此範例中的兩個事項如下：  
   

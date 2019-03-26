@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c114d7ed22ac01b69f9ad77a69b4089f574c13f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369847"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464563"
 ---
 # <a name="layout"></a>配置
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
@@ -41,7 +41,7 @@ ms.locfileid: "57369847"
   
  下圖顯示簡單的版面配置。  
   
- ![典型的格線，沒有週框方塊疊加於其上。](./media/boundingbox1.png "boundingbox1")  
+ ![如果螢幕擷取畫面顯示典型的 grid，沒有週框方塊疊加。](./media/layout/grid-no-bounding-box-superimpose.png)  
   
  使用下列 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 可達成這個版面配置。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "57369847"
   
  單一<xref:System.Windows.Controls.TextBlock>項目裝載在<xref:System.Windows.Controls.Grid>。 雖然文字填滿只有第一欄，已配置空間左上角<xref:System.Windows.Controls.TextBlock>實際上會較大。 週框方塊的任何<xref:System.Windows.FrameworkElement>可以使用擷取<xref:System.Windows.Controls.Primitives.LayoutInformation.GetLayoutSlot%2A>方法。 下圖顯示週框方塊<xref:System.Windows.Controls.TextBlock>項目。  
   
- ![現在可以看得到 TextBlock 的週框方塊。](./media/boundingbox2.png "boundingbox2")  
+ ![如果螢幕擷取畫面顯示 TextBlock 的週框方塊現在會顯示。](./media/layout/visible-textblock-bounding-box.png)  
   
  如黃色矩形中，配置的空間，如所示<xref:System.Windows.Controls.TextBlock>項目是實際上會遠大於其顯示。 其他項目新增至<xref:System.Windows.Controls.Grid>，此配置可以壓縮或展開時，會新增的項目大小和類型。  
   

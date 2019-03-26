@@ -2,12 +2,12 @@
 title: Windows Workflow 概觀
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: 385be91538bb6ee9ee570107c22d4b0ffc6afcba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 049d955b191e14ac79702df3fe218e23a555e6d3
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718749"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464680"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
 工作流程是一組基本的單位，稱為*活動*，會儲存為描述真實世界的程序的模型。 工作流程能夠描述執行的順序，以及短期工作和長期工作之間的相依關係。 這個工作會從頭到尾經過整個模型，而活動可能會由人員或系統功能執行。  
@@ -31,7 +31,7 @@ ms.locfileid: "57718749"
 ## <a name="interaction-between-workflow-components"></a>工作流程元件之間的互動  
  下圖顯示工作流程元件之間的互動方式。  
   
- ![工作流程互動](./media/workflowinteraction.gif "WorkflowInteraction")  
+ ![顯示工作流程元件如何互動的圖表。](./media/overview/workflow-component-interatction.gif)  
   
  在上圖中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 類別的 <xref:System.Activities.WorkflowInvoker> 方法是用於叫用幾個工作流程執行個體。 <xref:System.Activities.WorkflowInvoker> 是用於不需要從主機管理的輕量工作流程，需要從主機 (例如 <xref:System.Activities.Bookmark> 繼續) 管理的工作流程則必須改用 <xref:System.Activities.WorkflowApplication.Run%2A> 來執行。 不一定要先等候一個工作流程完成，才能叫用另一個工作流程，執行階段引擎支援同時執行多個工作流程執行個體。  叫用的工作流程如下：  
   
@@ -39,8 +39,7 @@ ms.locfileid: "57718749"
   
 -   稱為 `ReadLine` 的自訂活動。 <xref:System.Activities.OutArgument> 活動的 `ReadLine` 會傳回，以呼叫 <xref:System.Activities.WorkflowInvoker.Invoke%2A> 方法。  
   
--   衍生自 <xref:System.Activities.CodeActivity>抽象類別的自訂活動。 
-  <xref:System.Activities.CodeActivity> 可存取使用 <xref:System.Activities.CodeActivityContext> 而可用來做為 <xref:System.Activities.CodeActivity.Execute%2A> 方法之參數的執行階段功能 (例如追蹤與屬性)。 如需這些執行階段功能的詳細資訊，請參閱[工作流程追蹤](workflow-tracking-and-tracing.md)並[工作流程執行屬性](workflow-execution-properties.md)。  
+-   衍生自 <xref:System.Activities.CodeActivity>抽象類別的自訂活動。 <xref:System.Activities.CodeActivity> 可存取使用 <xref:System.Activities.CodeActivityContext> 而可用來做為 <xref:System.Activities.CodeActivity.Execute%2A> 方法之參數的執行階段功能 (例如追蹤與屬性)。 如需這些執行階段功能的詳細資訊，請參閱[工作流程追蹤](workflow-tracking-and-tracing.md)並[工作流程執行屬性](workflow-execution-properties.md)。  
   
 ## <a name="see-also"></a>另請參閱
 - [BizTalk Server 2006 或 WF？選擇適合您專案的正確工作流程工具](https://go.microsoft.com/fwlink/?LinkId=154901)

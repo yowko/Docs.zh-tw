@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 16522424ecd3009cb905bacb39694189a9540318
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54517379"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464095"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 應用程式模型概觀
 Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用程式的行為： 在 Visual Basic 應用程式模型。 此模型包含事件處理應用程式的啟動和關機，以及攔截未處理的例外狀況的事件。 它也會提供單一執行個體的應用程式的開發的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂其可覆寫的方法。  
@@ -26,9 +26,9 @@ Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用�
   
 -   若要啟動應用程式，第一個執行個體執行時，每個後續的嘗試會導致非常不同的行為。 後續的嘗試通知有關命令列引數，第一個執行個體，然後立即結束。 第一個執行個體控制代碼`StartupNextInstance`事件，以判斷哪些後續的執行個體的命令列引數，並繼續執行。  
   
-     下圖顯示後續的執行個體發出第一個執行個體的信號。  
+     下圖顯示後續的執行個體發出第一個執行個體的訊號：  
   
-     ![單一執行個體應用程式映像](../../../visual-basic/developing-apps/development-with-my/media/singleinstance.gif "SingleInstance")  
+     ![此圖顯示單一執行個體的應用程式映像。](./media/overview-of-the-visual-basic-application-model/single-instance-application.gif)  
   
  藉由處理`StartupNextInstance`事件，您可以控制您的單一執行個體應用程式的運作方式。 例如，Microsoft Outlook 通常會執行為單一執行個體應用程式;當 Outlook 正在執行，而且您嘗試啟動 Outlook 同樣地，焦點會轉移到原始執行個體，但不會開啟另一個執行個體。  
   

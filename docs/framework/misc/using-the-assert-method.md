@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31dcaeb6d3adcd658a9844ae5cf8e758172bd7bc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5799ab8e827305fca565064a0ae7290c6c19eb01
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516508"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463003"
 ---
 # <a name="using-the-assert-method"></a>使用 Assert 方法
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -57,8 +57,7 @@ ms.locfileid: "54516508"
   
 -   方法 A 包含在組件 A 中，方法 B 包含在組件 B 中，依此類推。  
   
- ![](../../../docs/framework/misc/media/assert.gif "assert")  
-使用判斷提示  
+ ![此圖顯示判斷提示方法組件。](./media/using-the-assert-method/assert-method-assemblies.gif)    
   
  在此情況下，方法 A 呼叫 B、 B 呼叫 C、 C 呼叫 E、 E 呼叫 f。 方法 C 判斷提示讀取 C 磁碟機 （權限 P1），檔案的權限和讀取 C 磁碟機 （權限 P1A） 上的.txt 檔案的方法 E 要求權限。 在執行階段遇到 F 中的需求時，堆疊查核行程會執行檢查 F 所有呼叫端的權限從 E E 已授與 P1A 權限，因此堆疊查核行程繼續檢查 C，發現 C 的判斷提示的位置的權限。 因為需要的權限 (P1A) 是判斷提示權限 (P1) 的子集，堆疊查核行程會停止，且安全性檢查會自動成功。 組件 A 和 B 未被授與權限 P1A 並不重要。 藉由判斷提示 P1，C 方法可確保其呼叫者可以存取 P1 保護的資源，即使呼叫端未獲得存取該資源的權限亦然。  
   

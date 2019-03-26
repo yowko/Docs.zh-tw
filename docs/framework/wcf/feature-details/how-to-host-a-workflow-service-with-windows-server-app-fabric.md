@@ -2,12 +2,12 @@
 title: HOW TO：使用 Windows Server App Fabric 的工作流程服務主機
 ms.date: 03/30/2017
 ms.assetid: 83b62cce-5fc2-4c6d-b27c-5742ba3bac73
-ms.openlocfilehash: 94eff2a01c70e34e57ff153d0cbdef44b6377b01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 287067391f47a0b4bcbe11bd4bfab971954cd706
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651184"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465122"
 ---
 # <a name="how-to-host-a-workflow-service-with-windows-server-app-fabric"></a>HOW TO：使用 Windows Server App Fabric 的工作流程服務主機
 在 AppFabric 中裝載工作流程服務與在 IIS/WAS 底下裝載很相似。 唯一的差異在於 AppFabric 針對部署、監視和管理工作流程服務所提供的工具。 本主題會使用工作流程服務中建立[建立長時間執行的工作流程服務](../../../../docs/framework/wcf/feature-details/creating-a-long-running-workflow-service.md)。 該主題將逐步引導您建立工作流程服務。 本主題會說明如何使用 AppFabric 來裝載工作流程服務。 如需有關 Windows Server App Fabric 的詳細資訊，請參閱 < [Windows Server App Fabric 文件](https://go.microsoft.com/fwlink/?LinkID=193037&clcid=0x409)。 完成下列步驟之前，請先確定您已安裝 Windows Server AppFabric。  若要執行這會開啟 Internet Information services (inetmgr.exe)，按一下 在您的伺服器名稱**連線**檢視，按一下 網站，然後按一下**Default Web Site**。 在右手邊的畫面應該會看到一個小節稱為**App Fabric**。 如果您沒有看見此區段 (位於右側窗格的頂端)，表示您沒有安裝 App Fabric。 如需安裝 Windows Server App Fabric 的詳細資訊，請參閱[安裝 Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkId=193136)。  
@@ -56,13 +56,13 @@ ms.locfileid: "54651184"
   
 8.  選取 [**自動啟動**] 索引標籤。這樣可讓您針對應用程式中的工作流程服務指定自動啟動設定，如下列螢幕擷取畫面所示。  
   
-     ![App Fabric 自動&#45;啟動組態](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationautostart.gif "AppFabricConfigurationAutostart")  
+     ![顯示 App Fabric 自動螢幕擷取畫面&#45;啟動設定。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-auto-start-configuration.gif)  
   
      如需設定自動啟動的詳細資訊，請參閱[設定自動啟動使用 App Fabric](https://go.microsoft.com/fwlink/?LinkId=193150)。  
   
 9. 選取 [**節流**] 索引標籤。這樣可讓您針對工作流程服務進行節流設定，如下列螢幕擷取畫面所示。  
   
-     ![App Fabric 組態節流](../../../../docs/framework/wcf/feature-details/media/appfabricconfigurationthrottling.gif "AppFabricConfigurationThrottling")  
+     ![如果螢幕擷取畫面會顯示 App Fabric 節流設定。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-throttling-configuration.gif)  
   
      如需設定節流的詳細資訊，請參閱[使用 App Fabric 設定節流](https://go.microsoft.com/fwlink/?LinkId=193149)。  
   
@@ -82,11 +82,11 @@ ms.locfileid: "54651184"
   
 4.  用戶端應用程式會立即呼叫工作流程服務，然後等候。 工作流程服務將處於閒置狀態並保存。 您可以啟動 Internet Information Services (inetmgr.exe)、在 [連線] 窗格中巡覽至 OrderService，然後選取它，藉以確認這點。 接著，在右側窗格中，按一下 [AppFabric 儀表板] 圖示。 在 [持續性 WF 執行個體] 底下，您將看見一個已保存的工作流程服務執行個體，如下列螢幕擷取畫面所示。  
   
-     ![App Fabric 儀表板](../../../../docs/framework/wcf/feature-details/media/appfabricdashboard.gif "AppFabricDashboard")  
+     ![如果螢幕擷取畫面顯示 App Fabric 儀表板。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/app-fabric-dashboard.gif)  
   
      **WF 執行個體記錄**列出工作流程服務的工作流程服務啟用數目、 工作流程服務執行個體完成項數目等失敗的工作流程執行個體數目的相關資訊。 [作用中或閒置的執行個體] 底下會顯示一個連結。按一下此連結就會顯示有關閒置工作流程執行個體的詳細資訊，如下列螢幕擷取畫面所示。  
   
-     ![保存工作流程執行個體詳細資料](../../../../docs/framework/wcf/feature-details/media/persisteddetail.gif "PersistedDetail")  
+     ![如果螢幕擷取畫面會顯示保存的工作流程執行個體詳細資料。](./media/how-to-host-a-workflow-service-with-windows-server-app-fabric/persisted-workflow-instance-detail.gif)  
   
      如需有關 Windows Server Appfabric 功能以及如何使用它們看到[Windows Server Appfabric 裝載功能](https://go.microsoft.com/fwlink/?LinkID=193143&clcid=0x409)  
   

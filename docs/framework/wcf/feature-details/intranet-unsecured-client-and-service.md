@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f450f5d4-3547-47ec-9320-2809e6a12634
-ms.openlocfilehash: 7583eab4673dc14380f18456d1713351dbc74f17
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b8cd2c58efb08523050e19c31201be48ae98ba03
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603114"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466227"
 ---
 # <a name="intranet-unsecured-client-and-service"></a>沒有安全保障的內部網路用戶端與服務
 下圖說明簡單的 Windows Communication Foundation (WCF) 服務，開發 WCF 應用程式的安全私人網路上提供的資訊。 因為資料重要性低、 預期是原本就是安全的網路，或安全性由 WCF 基礎結構下一層提供，則不需要安全性。  
   
- ![內部網路不安全的用戶端和服務情節](../../../../docs/framework/wcf/feature-details/media/unsecuredwebservice.gif "UnsecuredWebService")  
+ ![內部網路不安全的用戶端和服務案例。](./media/intranet-unsecured-client-and-service/unsecured-web-client-service.gif)  
   
 |特性|描述|  
 |--------------------|-----------------|  
-|安全性模式|無|  
+|安全性模式|None|  
 |Transport|TCP|  
 |繫結|<xref:System.ServiceModel.NetTcpBinding>|  
 |互通性|WCF 只|  
-|驗證|無|  
-|完整性|無|  
-|機密性|無|  
+|驗證|None|  
+|完整性|None|  
+|機密性|None|  
   
 ## <a name="service"></a>服務  
  下列程式碼和組態要獨立執行。 執行下列任一步驟：  
@@ -75,7 +75,7 @@ ms.locfileid: "54603114"
   
 -   使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。  
   
--   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如：  
+-   建立未定義任何端點位址的用戶端， 然後改用可接受組態名稱當做引數的用戶端建構函式。 例如:   
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

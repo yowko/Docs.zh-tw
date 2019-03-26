@@ -3,17 +3,17 @@ title: WIF 宣告程式設計模型
 ms.date: 03/30/2017
 ms.assetid: 149cb875-9b1c-4695-b88a-fbf1725a02f9
 author: BrucePerlerMS
-ms.openlocfilehash: 91b719967cd4ab9fd412e5c0799bb5e1921a4801
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.openlocfilehash: 543db91eaa058a87cfe579a23abb710f21ec1b85
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316502"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462808"
 ---
 # <a name="wif-claims-programming-model"></a>WIF 宣告程式設計模型
 ASP.NET 和 Windows Communication Foundation (WCF) 的開發人員通常會使用身分識別和 IPrincipal 介面來處理使用者的身分識別資訊。 在 .NET 4.5 中，Windows Identity Foundation (WIF) 已經過整合，使得目前任何主體一律都存在宣告，如下圖所示：
 
- ![WIF 宣告程式設計模型](../../../docs/framework/security/media/wifclaimsprogrammingmodel.png "WIFClaimsProgrammingModel")
+ ![WIF 宣告程式設計模型的圖表。](./media/wif-claims-programming-model/wif-claims-programming-model.png)
 
  在 .NET 4.5 中，System.Security.Claims 包含新的 ClaimsPrincipal 和 ClaimsIdentity 類別 (請參閱上圖)。 .NET 中所有的主體現在是衍生自 ClaimsPrincipal。 所有內建的身分識別類別 (例如適用於 ASP.NET 的 FormsIdentity 和 WindowsIdentity) 目前則是衍生自 ClaimsIdentity。 同樣地，所有內建的主體類別 (例如 GenericPrincipal 和 WindowsPrincipal) 也衍生自 ClaimsPrincipal。
 
@@ -59,7 +59,7 @@ WIF 支援數個立即可用之驗證機制的組合。 下表列出 WIF 從不�
 |SAML 2.0|與＜SAML 1.1＞相同。|與＜SAML 1.1 對應到 Windows 帳戶＞相同。|
 |X509|1.含有來自 X509 憑證的下列 X500 辨別名稱屬性的宣告：emailName、dnsName、SimpleName、UpnName、UrlName、thumbprin、RsaKey (這可以使用 RSACryptoServiceProvider.ExportParameters 方法從 X509Certificate2.PublicKey.Key 屬性擷取)、DsaKey (這可以使用 DSACryptoServiceProvider.ExportParameters 方法從 X509Certificate2.PublicKey.Key 屬性擷取)、SerialNumber。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/x509` AuthenticationMethod 宣告。 含有 XmlSchema DateTime 格式的憑證驗證時間值的 AuthenticationInstant 宣告。|1.它會使用 Windows 帳戶的完整網域名稱作為 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name` 宣告值。 。<br />2.來自 X509 憑證的宣告未對應到 Windows，但已透過將憑證對應到 Windows 取得來自 Windows 帳戶的宣告。|
 |UPN|1.宣告類似於 Windows 驗證章節中的宣告。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/password` AuthenticationMethod 宣告。 含有 XmlSchema DateTime 格式的密碼驗證時間值的 AuthenticationInstant 宣告。||
-|Windows (Kerberos 或 NTLM)|1.從存取權杖產生的宣告，例如：PrimarySID、DenyOnlyPrimarySID、PrimaryGroupSID、DenyOnlyPrimaryGroupSID、GroupSID、DenyOnlySID 和 Name<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` 的 AuthenticationMethod。 含有 XMLSchema DateTime 格式的 Windows 存取權杖建立時間值的 AuthenticationInstant。||
+|Windows (Kerberos 或 NTLM)|1.從這類的存取權杖產生的宣告：PrimarySID、 DenyOnlyPrimarySID、 PrimaryGroupSID、 DenyOnlyPrimaryGroupSID、 GroupSID、 DenyOnlySID 和名稱<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/windows` 的 AuthenticationMethod。 含有 XMLSchema DateTime 格式的 Windows 存取權杖建立時間值的 AuthenticationInstant。||
 |RSA 金鑰組|1.含有值 RSAKeyValue 的 `http://schemas.xmlsoap.org/ws/2005/05/identity/claims/rsa` 宣告。<br />2.含有值 `http://schemas.microsoft.com/ws/2008/06/identity/authenticationmethod/signature` 的 AuthenticationMethod 宣告。 含有 XMLSchema DateTime 格式的 RSA 金鑰驗證 (也就是驗證簽章) 時間值的 AuthenticationInstant 宣告。||
 
 |驗證類型|"AuthenticationMethod" 宣告中發出的 URI|

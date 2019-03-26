@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: d924d684561a2dd90ff18c803c3b12e8ac3581ce
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262569"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463796"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>HOW TO：建立循序工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Sequence>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -89,8 +89,7 @@ ms.locfileid: "58262569"
     Guess != Target  
     ```  
   
-     
-  <xref:System.Activities.Statements.DoWhile> 活動會執行其子活動，然後評估其 <xref:System.Activities.Statements.DoWhile.Condition%2A>。 如果 <xref:System.Activities.Statements.DoWhile.Condition%2A> 判斷值為 `True`，則會再次執行 <xref:System.Activities.Statements.DoWhile> 中的活動。 此範例中會評估使用者的猜測，而 <xref:System.Activities.Statements.DoWhile> 會繼續，直到猜測正確為止。  
+     <xref:System.Activities.Statements.DoWhile> 活動會執行其子活動，然後評估其 <xref:System.Activities.Statements.DoWhile.Condition%2A>。 如果 <xref:System.Activities.Statements.DoWhile.Condition%2A> 判斷值為 `True`，則會再次執行 <xref:System.Activities.Statements.DoWhile> 中的活動。 此範例中會評估使用者的猜測，而 <xref:System.Activities.Statements.DoWhile> 會繼續，直到猜測正確為止。  
   
 4.  拖曳**提示**活動，從**NumberGuessWorkflowActivities**一節**工具箱**並將它放**DoWhile**活動從上一個步驟。  
   
@@ -148,9 +147,9 @@ ms.locfileid: "58262569"
     "Your guess is too high."  
     ```  
   
-     下列範例示範完成的工作流程。  
+     下列範例說明如何完成的工作流程：  
   
-     ![已完成循序工作流程](./media/wfsequentialgettingstartedtutorialcomplete.JPG "WFSequentialGettingStartedTutorialComplete")  
+     ![如果螢幕擷取畫面顯示完成的循序工作流程。](./media/how-to-create-a-sequential-workflow/complete-sequential-workflow.jpg)  
   
 ## <a name="to-build-the-workflow"></a>若要建置工作流程  
   

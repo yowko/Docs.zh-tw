@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - pens [Windows Forms], drawing rectangles
 ms.assetid: 54a7fa14-3ad8-4d64-b424-2a12005b250c
-ms.openlocfilehash: 2441687cb36d0780b7fbc935c5cb0edc74bc6ba0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a29cae5a360185b7fa5e70fc0181c0cfaac8fc09
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712171"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463185"
 ---
 # <a name="how-to-use-a-pen-to-draw-rectangles"></a>HOW TO：使用畫筆繪製矩形
 若要繪製矩形，您需要<xref:System.Drawing.Graphics>物件和<xref:System.Drawing.Pen>物件。 <xref:System.Drawing.Graphics>物件會提供<xref:System.Drawing.Graphics.DrawRectangle%2A>方法，而<xref:System.Drawing.Pen>物件會儲存的行，例如色彩和寬度的功能。  
@@ -25,7 +25,7 @@ ms.locfileid: "57712171"
   
  下圖顯示產生的矩形。 虛線顯示，其中會有已繪製矩形如果畫筆寬度有一個像素。 矩形左上角的放大的檢視顯示黑色粗線會置於這些點線。  
   
- ![畫筆](./media/pens1.gif "pens1")  
+ ![顯示與黑色虛線繪製的矩形的螢幕擷取畫面。](./media/how-to-use-a-pen-to-draw-rectangles/drawn-rectangle-black-lines-dotted-lines.gif)  
   
  [!code-csharp[System.Drawing.UsingAPen#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.UsingAPen/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.UsingAPen#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#21)]  

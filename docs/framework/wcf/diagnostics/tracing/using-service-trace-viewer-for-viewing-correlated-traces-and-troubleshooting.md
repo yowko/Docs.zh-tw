@@ -2,12 +2,12 @@
 title: 使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: c54585ab8e9d9fc039858b07ab75068e984b78db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594802"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465057"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 本主題說明追蹤資料的格式、檢視方式，以及如何使用服務追蹤檢視器來排解應用程式問題的方法。  
@@ -130,20 +130,23 @@ ms.locfileid: "54594802"
 > [!NOTE]
 >  在 WCF 中，我們會顯示在個別的活動 （處理程序訊息） 中一開始要處理的回應訊息相關聯對應處理動作 」 活動，其中包含要求訊息時，透過傳輸之前。 這種情況會在基礎結構訊息與非同步要求期間發生，而且是因為我們必須檢查訊息、讀取 activityId 標頭，並使用該識別碼來識別現有的「處理動作」活動以便加以關聯時所致。 如果是同步要求，我們會封鎖回應，因此會知道回應所關聯的「處理動作」是哪一個。  
   
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace4.gif "e2eTrace4")  
-依據建立時間 (左面板) 與其巢狀活動及追蹤 (右上方面板) 列出的 WCF 用戶端活動  
+下圖顯示建立時間 （左面板） 及其巢狀的活動與追蹤 （右上角面板） 所列出的 WCF 用戶端活動：
+
+ ![顯示活動建立時所列出的 WCF 用戶端的螢幕擷取畫面。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-activities-creation-time.gif)  
   
  當您選取左面板上的活動時，可以看到巢狀活動與追蹤出現在右上方面板中。 因此，左側的活動清單是依據選取的上層活動產生的精簡版階層架構檢視。 由於選取的「處理動作」(新增) 是第一個要求，此活動包含了「設定安全工作階段」活動 (傳輸目的地、回傳來源)，以及 [新增] 動作的實際處理追蹤。  
   
  如果我們連按兩下左面板中加入活動的 「 處理動作，我們可以看到新增的相關用戶端 WCF 活動的圖形表示法。 左側的第一個活動為根活動 (0000)，也是預設活動。 WCF 傳輸，從環境活動。 如果未定義，WCF 會傳出 0000 傳輸。 此處的第二個活動「處理動作」(新增) 則會傳出 0。 接著，我們會看到「設定安全工作階段」。  
-  
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace5.gif "e2eTrace5")  
-WCF 用戶端活動的圖表檢視：環境活動 (此處為 0)、 程序動作，以及設定安全工作階段  
+
+ 下圖顯示圖表檢視的 WCF 用戶端活動，尤其是環境活動 (此處為 0)，處理動作，並設定安全工作階段：   
+
+ ![在追蹤檢視器中顯示環境活動和程序的動作圖形。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-activities-graph-ambient-process.gif)   
   
  在右上角面板中，我們可以看到所有與「處理動作」(新增活動) 相關的追蹤。 具體來說，我們已將要求訊息 (「已透過通道傳送訊息」) 傳送出去，並在相同的活動中接收了回應 (「已透過通道接收訊息」)。 下圖將顯示此做法。 為求簡單扼要，「設定安全工作階段」活動將於圖形中摺疊起來。  
   
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace6.gif "e2eTrace6")  
-「處理動作」活動的追蹤清單：我們會透過相同的活動來傳送要求與接收回應。  
+ 下圖顯示一份 「 處理動作 」 活動的追蹤。 我們會傳送要求，並接收回應相同的活動。
+ 
+ ![螢幕擷取畫面的追蹤檢視器顯示一份 「 處理動作 」 活動的追蹤](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/process-action-traces.gif)  
   
  在這裡，我們載入用戶端追蹤，只是為了清楚起見，但服務追蹤 （收到的要求訊息和傳送回應訊息） 會出現在相同的活動，如果他們也會在工具中載入並`propagateActivity`已設為`true.`這更新的圖所示。  
   
@@ -162,14 +165,17 @@ WCF 用戶端活動的圖表檢視：環境活動 (此處為 0)、 程序動作�
 6.  跨處理序動作，我們會建立 「 執行使用者程式碼 」 活動，以隔離使用者程式碼，在 WCF 中所發出的追蹤。 在上述範例中，「 服務會傳送新增回應 」 追蹤，就會發出 「 執行使用者程式碼 」 活動不會在用戶端傳播的活動中的話。  
   
  在下列圖示中，左側的第一個活動為根活動 (0000)，也是預設活動。 後續的三個活動都是用來開啟 ServiceHost。 欄 5 的活動為接聽項，而剩餘的活動 (6 至 8) 說明了從位元組處理到使用者程式碼啟動的 WCF 訊息處理。  
+
+ 下圖顯示 WCF 服務活動的圖形檢視：   
+
+ ![螢幕擷取畫面的追蹤檢視器顯示的 WCF 服務活動清單](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
   
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace7.gif "e2eTrace7")  
-WCF 服務活動清單  
   
  下列螢幕擷取畫面同時說明用戶端與服務的活動，並強調處理序之間的「處理動作」(新增活動) (橘色)。 箭頭將把用戶端與服務所傳送與接收的要求與回應訊息關聯起來。 圖表中的「處理動作」追蹤將按照處理序來分門別類，但是將於右上角面板中顯示為相同活動的一部份。 在此面板中，我們可以看到傳送訊息的用戶端追蹤，後面接著已接收及已處理訊息的服務追蹤。  
   
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace8.gif "e2eTrace8")  
-WCF 用戶端與服務活動的圖形檢視  
+ 下圖顯示這兩個 WCF 用戶端與服務活動的圖形檢視  
+ 
+ ![圖形顯示這兩個 WCF 用戶端與服務活動的追蹤檢視器中。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-client-service-activities.gif)   
   
  在下列錯誤案例中，位於服務與用戶端上的錯誤與警告追蹤將相互關聯。 服務中的使用者程式碼將首先擲回例外狀況 (最右側的綠色活動包含「服務無法透過使用者程式碼來處理此要求」例外狀況的警告追蹤)。 當回應傳送至用戶端時，會再一次發出警告追蹤以表示錯誤訊息 (左側的粉紅色活動)。 接著，用戶端會關閉自己的 WCF 用戶端 (左下角的黃色活動)，以中止服務連線。 服務會擲回錯誤 (右側最長的粉紅色活動)。  
   
@@ -181,8 +187,9 @@ WCF 用戶端與服務活動的圖形檢視
 ## <a name="troubleshooting-using-the-service-trace-viewer"></a>使用服務追蹤檢視器來排解疑難  
  當您使用服務追蹤檢視器工具來載入追蹤檔案，可以在左面板中選取任何一項紅色或黃色活動，以便追蹤應用程式的問題成因。 一般來說，000 活動具有能夠反昇至使用者的未處理例外狀況。  
   
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace10.gif "e2eTrace10")  
-選取紅色或黃色活動以找到問題成因  
+  下圖顯示如何選取紅色或黃色活動以找出問題的根目錄。   
+ ![螢幕擷取畫面，找出問題根源的紅色或黃色活動。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
+ 
   
  您可以透過右上角面板，檢查您於左面板中選取的活動追蹤。 接著，您可以檢查該面板中的紅色或黃色追蹤，並檢視它們之間的相互關係。 在上一個圖形中，我們在同一個「處理動作」活動中同時看到用戶端與服務的警告追蹤。  
   
@@ -195,8 +202,9 @@ WCF 用戶端與服務活動的圖形檢視
   
  如果已啟用訊息記錄，則您可以透過 [訊息] 索引標籤來檢視會受到錯誤影響的訊息。 您只要連按兩下紅色或黃色訊息，就可以看到相關活動的圖形檢視。 這些活動即是與發生錯誤之原始要求最相關的活動。  
   
- ![使用追蹤檢視器](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace11.gif "e2eTrace11")  
-若要開始排解疑難，您也可以挑選紅色或黃色訊息追蹤，並連按兩下來追蹤根本原因。  
+ ![螢幕擷取畫面的追蹤檢視器並啟用訊息記錄。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/message-logging-enabled.gif)  
+
+若要開始疑難排解，您也可以挑選紅色或黃色訊息追蹤，並按兩下來追蹤根本原因。  
   
 ## <a name="see-also"></a>另請參閱
 - [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
