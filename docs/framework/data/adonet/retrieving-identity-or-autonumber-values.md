@@ -108,7 +108,7 @@ WHERE ShipperID = SCOPE_IDENTITY();
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#1)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#1)]
 
-`RowUpdated` 事件處理常式與 <xref:System.Data.OleDb.OleDbConnection> 的 `Update` 陳述式都會使用相同的已開啟 `OleDbDataAdapter`。 它會檢查 `StatementType` 的 <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> 是否有插入的資料列。 針對每個插入資料列的新<xref:System.Data.OleDb.OleDbCommand>用來執行 SELECT @@IDENTITY連線時，傳回新的陳述式`Autonumber`值，也就置於**CategoryID**資料行`DataRow`。 然後，`Status` 屬性會設定為 `UpdateStatus.SkipCurrentRow`，以便抑制 `AcceptChanges` 的隱藏呼叫。 在此程序的主要本文中，系統會呼叫 `Merge` 方法來合併兩個 `DataTable` 物件，最後再呼叫 `AcceptChanges`。
+`RowUpdated` 事件處理常式與 <xref:System.Data.OleDb.OleDbConnection> 的 `Update` 陳述式都會使用相同的已開啟 `OleDbDataAdapter`。 它會檢查 `StatementType` 的 <xref:System.Data.OleDb.OleDbRowUpdatedEventArgs> 是否有插入的資料列。 針對每個插入資料列的新 <xref:System.Data.OleDb.OleDbCommand> 用來執行 SELECT @@IDENTITY 連線時，傳回新的陳述式 `Autonumber` 值，也就置於 **CategoryID** 資料行 `DataRow`。 然後，`Status` 屬性會設定為 `UpdateStatus.SkipCurrentRow`，以便抑制 `AcceptChanges` 的隱藏呼叫。 在此程序的主要本文中，系統會呼叫 `Merge` 方法來合併兩個 `DataTable` 物件，最後再呼叫 `AcceptChanges`。
 
 [!code-csharp[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/CS/source.cs#2)]
 [!code-vb[DataWorks OleDb.JetAutonumberMerge#2](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks OleDb.JetAutonumberMerge/VB/source.vb#2)]
