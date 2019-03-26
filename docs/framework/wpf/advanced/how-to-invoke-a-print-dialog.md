@@ -19,8 +19,7 @@ ms.locfileid: "57358427"
 若要讓您能夠從您的應用程式列印，可以只建立並開啟<xref:System.Windows.Controls.PrintDialog>物件。  
   
 ## <a name="example"></a>範例  
- 
-  <xref:System.Windows.Controls.PrintDialog> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 控制項很容易使用且可以具現化使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]標記或程式碼。 下列範例會示範如何具現化，並開啟程式碼中的控制項，以及如何從中進行列印。 它也會示範如何確保對話方塊會授與使用者設定特定的頁面範圍的選項。 範例程式碼假設 c： 磁碟機的根目錄中的檔案 FixedDocumentSequence.xps。  
+ <xref:System.Windows.Controls.PrintDialog> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 控制項很容易使用且可以具現化使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]標記或程式碼。 下列範例會示範如何具現化，並開啟程式碼中的控制項，以及如何從中進行列印。 它也會示範如何確保對話方塊會授與使用者設定特定的頁面範圍的選項。 範例程式碼假設 c： 磁碟機的根目錄中的檔案 FixedDocumentSequence.xps。  
   
  [!code-csharp[printdialog#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PrintDialog/CSharp/Window1.xaml.cs#1)]
  [!code-vb[printdialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintDialog/visualbasic/window1.xaml.vb#1)]  

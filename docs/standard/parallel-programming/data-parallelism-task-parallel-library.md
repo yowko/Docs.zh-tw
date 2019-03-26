@@ -33,8 +33,7 @@ ms.locfileid: "56976222"
 > [!NOTE]
 >  您也可以提供您自己的自訂 Partitioner 或排程器。 如需詳細資訊，請參閱 [PLINQ 和 TPL 的自訂 Partitioner](../../../docs/standard/parallel-programming/custom-partitioners-for-plinq-and-tpl.md) 和[工作排程器](xref:System.Threading.Tasks.TaskScheduler)。  
   
- 
-  <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法都有數個多載，可讓您停止或中斷迴圈執行、監視其他執行緒上的迴圈狀態、維護執行緒區域狀態、完成執行緒區域物件、控制並行程度等等。 啟用這個功能的 Helper 類型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。  
+ <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 和 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法都有數個多載，可讓您停止或中斷迴圈執行、監視其他執行緒上的迴圈狀態、維護執行緒區域狀態、完成執行緒區域物件、控制並行程度等等。 啟用這個功能的 Helper 類型包括 <xref:System.Threading.Tasks.ParallelLoopState>、<xref:System.Threading.Tasks.ParallelOptions>、<xref:System.Threading.Tasks.ParallelLoopResult>、<xref:System.Threading.CancellationToken> 和 <xref:System.Threading.CancellationTokenSource>。  
   
  如需詳細資訊，請參閱 [Patterns for Parallel Programming:Understanding and Applying Parallel Patterns with the .NET Framework 4](https://www.microsoft.com/download/details.aspx?id=19222) (平行程式設計模式：了解及套用使用 .NET Framework 4 的平行模式)。  
   

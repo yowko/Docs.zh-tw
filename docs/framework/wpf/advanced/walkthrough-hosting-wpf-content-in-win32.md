@@ -49,9 +49,9 @@ ms.locfileid: "57363159"
   
     3.  指定的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容物件<xref:System.Windows.Interop.HwndSource.RootVisual%2A>屬性<xref:System.Windows.Interop.HwndSource>。  
   
-    4.  取得內容的 HWND。 <xref:System.Windows.Interop.HwndSource> 物件的 <xref:System.Windows.Interop.HwndSource.Handle%2A> 屬性包含視窗控制代碼 (HWND)。 若要取得可用於應用程式 Unmanaged 部分的 HWND，請將 `Handle.ToPointer()` 轉型為 HWND。  
+    4.  取得內容的 HWND。 <xref:System.Windows.Interop.HwndSource.Handle%2A> 物件的 <xref:System.Windows.Interop.HwndSource> 屬性包含視窗控制代碼 (HWND)。 若要取得可用於應用程式 Unmanaged 部分的 HWND，請將 `Handle.ToPointer()` 轉型為 HWND。  
   
-5.  實作 Managed 類別，其中包含靜態欄位來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的參考。 這個類別可讓您從 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼取得 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的參考。  
+5.  實作 Managed 類別，其中包含靜態欄位來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的參考。 這個類別可讓您從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式碼取得 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 內容的參考。  
   
 6.  將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容指派至靜態欄位。  
   
@@ -116,8 +116,7 @@ ms.locfileid: "57363159"
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>裝載 WPF 內容
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容是簡單的位址輸入應用程式。 它包含數個 <xref:System.Windows.Controls.TextBox> 控制項，以取得使用者名稱、位址等等。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 並**取消**。 當使用者按一下 **[確定]**，按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式會收集的資料<xref:System.Windows.Controls.TextBox>控制、 將它指派給對應的屬性，並引發自訂事件， `OnButtonClicked`。 當使用者按一下**取消**，這個處理常式只會引發`OnButtonClicked`。 
-  `OnButtonClicked` 的事件引數物件包含布林值的欄位，指出所點選的按鈕。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容是簡單的位址輸入應用程式。 它包含數個 <xref:System.Windows.Controls.TextBox> 控制項，以取得使用者名稱、位址等等。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 並**取消**。 當使用者按一下 **[確定]**，按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件處理常式會收集的資料<xref:System.Windows.Controls.TextBox>控制、 將它指派給對應的屬性，並引發自訂事件， `OnButtonClicked`。 當使用者按一下**取消**，這個處理常式只會引發`OnButtonClicked`。 `OnButtonClicked` 的事件引數物件包含布林值的欄位，指出所點選的按鈕。
 
  主應用程式的程式碼[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的處理常式中實作[WM_CREATE](/windows/desktop/winmsg/wm-create)主視窗上的通知。
 
@@ -130,8 +129,7 @@ ms.locfileid: "57363159"
 
  [!code-cpp[Win32HostingWPFPage#GetHwnd](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.cpp#gethwnd)]
 
- 您無法將裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]直接在您的應用程式視窗的內容。 相反地，您要先建立 <xref:System.Windows.Interop.HwndSource> 物件來包裝 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容。 此物件基本上就設計用來裝載的視窗[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 您裝載<xref:System.Windows.Interop.HwndSource>藉由建立為子系的父視窗中的物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]屬於您的應用程式的視窗。 
-  <xref:System.Windows.Interop.HwndSource> 建構函式參數所包含的資訊，與您建立 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 子視窗時，傳遞至 CreateWindow 的資訊類似。
+ 您無法將裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]直接在您的應用程式視窗的內容。 相反地，您要先建立 <xref:System.Windows.Interop.HwndSource> 物件來包裝 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容。 此物件基本上就設計用來裝載的視窗[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 您裝載<xref:System.Windows.Interop.HwndSource>藉由建立為子系的父視窗中的物件[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]屬於您的應用程式的視窗。 <xref:System.Windows.Interop.HwndSource> 建構函式參數所包含的資訊，與您建立 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 子視窗時，傳遞至 CreateWindow 的資訊類似。
 
  您接下來建立的執行個體[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容物件。 在此案例中，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容使用 `WPFPage` 來實作成個別的類別 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]。 您也可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 來實作 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 內容。 不過，若要這樣做您需要設定個別的專案和建置[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容做為[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]。 您可以將該 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 的參考加入您的專案，並使用該參考來建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行個體。
 
@@ -149,8 +147,7 @@ ms.locfileid: "57363159"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageHost](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/Win32HostingWPFPage.h#wpfpagehost)]
 
- 
-  `GetHwnd` 函式的後半部會將值指派給這些欄位，以供日後使用，而 `myPage` 仍在範圍內。
+ `GetHwnd` 函式的後半部會將值指派給這些欄位，以供日後使用，而 `myPage` 仍在範圍內。
 
 <a name="communicating_with_the_page"></a>
 ### <a name="communicating-with-the-wpf-content"></a>與 WPF 內容通訊
@@ -185,8 +182,7 @@ ms.locfileid: "57363159"
 ### <a name="layout"></a>配置
  [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]中的項目[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容包含五個<xref:System.Windows.Controls.TextBox>控制項，與相關聯<xref:System.Windows.Controls.Label>控制項：名稱、 地址、 縣 （市）、 State 和 Zip。 另外還有兩個<xref:System.Windows.Controls.Button>控制項 **[確定]** 和**取消**
 
- 
-  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容會在 `WPFPage` 類別中實作。 配置是以 <xref:System.Windows.Controls.Grid> 配置項目來處理。 類別繼承自 <xref:System.Windows.Controls.Grid>，如此能有效使其成為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容根項目。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容會在 `WPFPage` 類別中實作。 配置是以 <xref:System.Windows.Controls.Grid> 配置項目來處理。 類別繼承自 <xref:System.Windows.Controls.Grid>，如此能有效使其成為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容根項目。
 
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的建構函式會採用所需的寬度和高度和大小<xref:System.Windows.Controls.Grid>據此。 然後它會定義基本版面配置建立一份<xref:System.Windows.Controls.ColumnDefinition>並<xref:System.Windows.Controls.RowDefinition>物件，並將它們加入至<xref:System.Windows.Controls.Grid>基底物件<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>和<xref:System.Windows.Controls.Grid.RowDefinitions%2A>集合，分別。 這會定義一個包含五個資料列和七個資料行的格線，維度則取決於儲存格的內容。
 
@@ -196,7 +192,7 @@ ms.locfileid: "57363159"
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorTitle](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectortitle)]
 
- 下一個資料列包含名稱 <xref:System.Windows.Controls.Label> 控制項及其相關聯的 <xref:System.Windows.Controls.TextBox> 控制項。 由於每一個標籤/文字方塊組都是使用相同的程式碼，所以程式碼會放在一個私用方法組中，然後用於所有五個標籤/文字方塊組。 這些方法會建立適當的控制項，並呼叫 <xref:System.Windows.Controls.Grid> 類別靜態 <xref:System.Windows.Controls.Grid.SetColumn%2A> 和 <xref:System.Windows.Controls.Grid.SetRow%2A> 方法，以將控制項放在適當的儲存格中。 建立控制項之後，此範例會在 <xref:System.Windows.Controls.Grid> 的 <xref:System.Windows.Controls.Panel.Children%2A> 屬性上呼叫 <xref:System.Windows.Controls.UIElementCollection.Add%2A> 方法，以將控制項加入格線中。 用來加入其餘標籤/文字方塊組的程式碼很類似。 如需詳細資訊，請參閱範例程式碼。
+ 下一個資料列包含名稱 <xref:System.Windows.Controls.Label> 控制項及其相關聯的 <xref:System.Windows.Controls.TextBox> 控制項。 由於每一個標籤/文字方塊組都是使用相同的程式碼，所以程式碼會放在一個私用方法組中，然後用於所有五個標籤/文字方塊組。 這些方法會建立適當的控制項，並呼叫 <xref:System.Windows.Controls.Grid> 類別靜態 <xref:System.Windows.Controls.Grid.SetColumn%2A> 和 <xref:System.Windows.Controls.Grid.SetRow%2A> 方法，以將控制項放在適當的儲存格中。 建立控制項之後，此範例會在 <xref:System.Windows.Controls.UIElementCollection.Add%2A> 的 <xref:System.Windows.Controls.Panel.Children%2A> 屬性上呼叫 <xref:System.Windows.Controls.Grid> 方法，以將控制項加入格線中。 用來加入其餘標籤/文字方塊組的程式碼很類似。 如需詳細資訊，請參閱範例程式碼。
 
  [!code-cpp[Win32HostingWPFPage#WPFPageCtorName](~/samples/snippets/cpp/VS_Snippets_Wpf/Win32HostingWPFPage/CPP/WPFPage.cpp#wpfpagectorname)]
 

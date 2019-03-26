@@ -55,7 +55,7 @@ ms.locfileid: "57356477"
  拖放作業的來源和目標是 UI 項目；不過，實際上要傳送的資料通常並沒有視覺表示。 您可以撰寫程式碼，提供拖曳之資料的視覺表示，例如在 Windows 檔案總管中拖曳檔案時所發生的視覺表示。 根據預設，當變更游標時，系統會提供回饋給使用者，以表示這項拖放作業會對資料產生何種效果，例如是否要移動或複製資料。  
   
 ### <a name="drag-and-drop-effects"></a>拖放效果  
- 拖放作業對傳送的資料可以有不同的效果。 例如，您可以複製或移動資料。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義 <xref:System.Windows.DragDropEffects> 列舉，可供您用來指定拖放作業的效果。 在拖曳來源中，您可以指定來源將在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法中允許的效果。 在置放目標中，您可以指定目標預期用於 <xref:System.Windows.DragEventArgs> 類別之 <xref:System.Windows.DragEventArgs.Effects%2A> 屬性的效果。 當置放目標在 <xref:System.Windows.DragDrop.DragOver> 事件中指定其預期效果時，該資訊會在 <xref:System.Windows.DragDrop.GiveFeedback> 事件中傳回拖曳來源。 拖曳來源會使用這項資訊，來通知使用者置放目標預期用於資料的效果。 置放資料之後，置放目標會在 <xref:System.Windows.DragDrop.Drop> 事件中指定其實際效果。 該資訊會當做 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法的傳回值傳回拖曳來源。 如果置放目標傳回的效果不在 `allowedEffects` 的拖曳來源清單中，則會取消拖放作業，而不傳送任何資料。  
+ 拖放作業對傳送的資料可以有不同的效果。 例如，您可以複製或移動資料。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定義 <xref:System.Windows.DragDropEffects> 列舉，可供您用來指定拖放作業的效果。 在拖曳來源中，您可以指定來源將在 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法中允許的效果。 在置放目標中，您可以指定目標預期用於 <xref:System.Windows.DragEventArgs.Effects%2A> 類別之 <xref:System.Windows.DragEventArgs> 屬性的效果。 當置放目標在 <xref:System.Windows.DragDrop.DragOver> 事件中指定其預期效果時，該資訊會在 <xref:System.Windows.DragDrop.GiveFeedback> 事件中傳回拖曳來源。 拖曳來源會使用這項資訊，來通知使用者置放目標預期用於資料的效果。 置放資料之後，置放目標會在 <xref:System.Windows.DragDrop.Drop> 事件中指定其實際效果。 該資訊會當做 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法的傳回值傳回拖曳來源。 如果置放目標傳回的效果不在 `allowedEffects` 的拖曳來源清單中，則會取消拖放作業，而不傳送任何資料。  
   
  請務必記住，在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，<xref:System.Windows.DragDropEffects> 值只能用來提供拖曳來源和置放目標之間有關拖放作業效果的通訊。 拖放作業的實際效果取決於您在應用程式中撰寫的適當程式碼。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "57356477"
   
 ### <a name="drag-source-events"></a>拖曳來源事件  
   
-|事件|總結|  
+|Event - 事件|總結|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.GiveFeedback>|這個事件會在拖放作業期間持續發生，並可讓拖曳來源提供回饋資訊給使用者。 當變更滑鼠指標的外觀以表示置放目標所允許的效果時，通常會提供這個回饋。  這是反昇事件。|  
 |<xref:System.Windows.DragDrop.QueryContinueDrag>|這個事件會在拖曳作業期間鍵盤或滑鼠按鈕狀態變更時發生，並可讓拖曳來源根據按鍵/按鈕狀態來取消拖放作業。 這是反昇事件。|  
@@ -76,7 +76,7 @@ ms.locfileid: "57356477"
   
 ### <a name="drop-target-events"></a>置放目標事件  
   
-|事件|總結|  
+|Event - 事件|總結|  
 |-----------|-------------|  
 |<xref:System.Windows.DragDrop.DragEnter>|這個事件會在將物件拖曳到置放目標的界限內時發生。 這是反昇事件。|  
 |<xref:System.Windows.DragDrop.DragLeave>|這個事件會在將物件拖曳出置放目標的界限時發生。  這是反昇事件。|  
@@ -107,7 +107,7 @@ ms.locfileid: "57356477"
   
 -   在置放目標上，建立 <xref:System.Windows.DragDrop.Drop> 事件處理常式來處理置放的資料。  
   
--   在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 和 <xref:System.Windows.DataObject.GetData%2A> 方法從 <xref:System.Windows.DragEventArgs> 擷取資料。  
+-   在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用 <xref:System.Windows.DragEventArgs> 和 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法從 <xref:System.Windows.DataObject.GetData%2A> 擷取資料。  
   
 -   在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，使用資料來執行所需的拖放作業。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "57356477"
   
  不論允許的動作為何 (移動、複製、無)，拖曳來源也會提供回饋給使用者，並可根據其他使用者輸入 (例如在拖曳時按 ESC 鍵) 來取消拖放作業。  
   
- 您的應用程式會負責判斷何時發生拖曳，然後再呼叫 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法啟始拖放作業。 一般而言，這會是在項目上按下滑鼠按鈕拖曳時所發生的 <xref:System.Windows.UIElement.MouseMove> 事件。 下列範例示範如何從 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.UIElement.MouseMove> 事件處理常式啟始拖放作業，使該項目成為拖曳來源。 傳送的資料是橢圓形之 <xref:System.Windows.Shapes.Shape.Fill%2A> 屬性的字串表示。  
+ 您的應用程式會負責判斷何時發生拖曳，然後再呼叫 <xref:System.Windows.DragDrop.DoDragDrop%2A> 方法啟始拖放作業。 一般而言，這會是在項目上按下滑鼠按鈕拖曳時所發生的 <xref:System.Windows.UIElement.MouseMove> 事件。 下列範例示範如何從 <xref:System.Windows.UIElement.MouseMove> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式啟始拖放作業，使該項目成為拖曳來源。 傳送的資料是橢圓形之 <xref:System.Windows.Shapes.Shape.Fill%2A> 屬性的字串表示。  
   
  [!code-csharp[DragDropSnippets#DoDragDrop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dodragdrop)]
  [!code-vb[DragDropSnippets#DoDragDrop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dodragdrop)]  
@@ -188,30 +188,30 @@ ms.locfileid: "57356477"
   
 3.  <xref:System.Windows.DragDrop.DragLeave> 或 <xref:System.Windows.DragDrop.Drop>  
   
- <xref:System.Windows.DragDrop.DragEnter> 事件會在將資料拖曳到置放目標的界限內時發生。 您通常會處理這個事件來預覽拖放作業的效果 (如果適用於應用程式的話)。 請勿在 <xref:System.Windows.DragDrop.DragEnter> 事件中設定 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性，因為它會在 <xref:System.Windows.DragDrop.DragOver> 事件中遭到覆寫。  
+ <xref:System.Windows.DragDrop.DragEnter> 事件會在將資料拖曳到置放目標的界限內時發生。 您通常會處理這個事件來預覽拖放作業的效果 (如果適用於應用程式的話)。 請勿在 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 事件中設定 <xref:System.Windows.DragDrop.DragEnter> 屬性，因為它會在 <xref:System.Windows.DragDrop.DragOver> 事件中遭到覆寫。  
   
- 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式。 這個程式碼會儲存目前的 <xref:System.Windows.Shapes.Shape.Fill%2A> 筆刷，來預覽拖放作業的效果。 接著它會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法來檢查是否將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會使用 <xref:System.Windows.DataObject.GetData%2A> 方法擷取資料。 接著它會轉換成 <xref:System.Windows.Media.Brush> 並套用至橢圓形。 這項變更會在 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式中還原。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
+ 下列範例示範 <xref:System.Windows.DragDrop.DragEnter> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼會儲存目前的 <xref:System.Windows.Shapes.Shape.Fill%2A> 筆刷，來預覽拖放作業的效果。 接著它會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 方法來檢查是否將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會使用 <xref:System.Windows.DataObject.GetData%2A> 方法擷取資料。 接著它會轉換成 <xref:System.Windows.Media.Brush> 並套用至橢圓形。 這項變更會在 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式中還原。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
   
  [!code-csharp[DragDropSnippets#DragEnter](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragenter)]
  [!code-vb[DragDropSnippets#DragEnter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragenter)]  
   
  <xref:System.Windows.DragDrop.DragOver> 事件會在將資料拖曳到置放目標上時持續發生。 這個事件會搭配拖曳來源上的 <xref:System.Windows.DragDrop.GiveFeedback> 事件。 在 <xref:System.Windows.DragDrop.DragOver> 事件處理常式中，您通常會使用 <xref:System.Windows.DataObject.GetDataPresent%2A> 和 <xref:System.Windows.DataObject.GetData%2A> 方法來檢查傳送的資料格式是否為置放目標可以處理的格式。 您也可以檢查是否按下任何輔助按鍵，這通常會指出使用者是否想要移動或複製動作。 執行這些檢查之後，您可以設定 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性，以通知拖曳來源有關置放資料的效果。 拖曳來源會以 <xref:System.Windows.DragDrop.GiveFeedback> 事件引數接收這項資訊，並可設定適當的資料指標來提供回饋給使用者。  
   
- 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragOver> 事件處理常式。 這個程式碼會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.Copy>。 這會向拖曳來源表示資料可以複製到橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。 這會向拖曳來源表示橢圓形不是資料的有效置放目標。  
+ 下列範例示範 <xref:System.Windows.DragDrop.DragOver> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.Copy>。 這會向拖曳來源表示資料可以複製到橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則會將 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.Windows.DragDropEffects.None>。 這會向拖曳來源表示橢圓形不是資料的有效置放目標。  
   
  [!code-csharp[DragDropSnippets#DragOver](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragover)]
  [!code-vb[DragDropSnippets#DragOver](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragover)]  
   
  <xref:System.Windows.DragDrop.DragLeave> 事件會在將資料拖曳出目標的界限但未置放時發生。 您可以處理這個事件，以復原您在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的任何動作。  
   
- 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.DragLeave> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.Media.Brush> 套用至橢圓形，來復原在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的預覽。  
+ 下列範例示範 <xref:System.Windows.DragDrop.DragLeave> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼透過將儲存的 <xref:System.Windows.Media.Brush> 套用至橢圓形，來復原在 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中執行的預覽。  
   
  [!code-csharp[DragDropSnippets#DragLeave](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#dragleave)]
  [!code-vb[DragDropSnippets#DragLeave](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#dragleave)]  
   
  <xref:System.Windows.DragDrop.Drop> 事件會在將資料置放到置放目標上時發生；根據預設，當放開滑鼠按鈕時，就會發生這個事件。 在 <xref:System.Windows.DragDrop.Drop> 事件處理常式中，您可以使用 <xref:System.Windows.DataObject.GetData%2A> 方法從 <xref:System.Windows.DataObject> 擷取傳送的資料，並執行應用程式所需的任何資料處理。 <xref:System.Windows.DragDrop.Drop> 事件會結束拖放作業。  
   
- 下列範例示範 <xref:System.Windows.Shapes.Ellipse> 項目的 <xref:System.Windows.DragDrop.Drop> 事件處理常式。 這個程式碼會套用拖放作業的效果，類似 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中的程式碼。 它會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.Media.Brush> 套用至橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
+ 下列範例示範 <xref:System.Windows.DragDrop.Drop> 項目的 <xref:System.Windows.Shapes.Ellipse> 事件處理常式。 這個程式碼會套用拖放作業的效果，類似 <xref:System.Windows.DragDrop.DragEnter> 事件處理常式中的程式碼。 它會檢查是否要將 <xref:System.Windows.DataObject> 拖曳到橢圓形上，該橢圓形包含可轉換成 <xref:System.Windows.Media.Brush> 的字串資料。 如果是，則會將 <xref:System.Windows.Media.Brush> 套用至橢圓形。 如果無法將資料轉換成 <xref:System.Windows.Media.Brush>，則不會執行任何動作。  
   
  [!code-csharp[DragDropSnippets#Drop](~/samples/snippets/csharp/VS_Snippets_Wpf/dragdropsnippets/cs/mainwindow.xaml.cs#drop)]
  [!code-vb[DragDropSnippets#Drop](~/samples/snippets/visualbasic/VS_Snippets_Wpf/dragdropsnippets/vb/mainwindow.xaml.vb#drop)]  

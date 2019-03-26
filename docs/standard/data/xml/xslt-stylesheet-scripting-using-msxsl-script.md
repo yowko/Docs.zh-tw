@@ -16,17 +16,14 @@ ms.lasthandoff: 02/26/2019
 ms.locfileid: "56835248"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>使用 \<msxsl:script> 加入 XSLT 樣式表指令碼
-
-  <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
+<xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。  
   
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> 類別在 [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] 中已過時。 您可以使用 <xref:System.Xml.Xsl.XslCompiledTransform> 類別來執行可延伸樣式表語言轉換 (XSLT)。 如需詳細資訊，請參閱[使用 XslCompiledTransform 類別](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)和[從 XslTransform 類別移轉](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)。  
   
- 
-  <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。 載入樣式表時，任何已定義的函式都會被包裝在類別定義內，而編譯成 Microsoft Intermediate Language (MSIL)，因此不會降低效能。  
+ <xref:System.Xml.Xsl.XslTransform> 類別支援使用 `script` 項目的內嵌指令碼。 載入樣式表時，任何已定義的函式都會被包裝在類別定義內，而編譯成 Microsoft Intermediate Language (MSIL)，因此不會降低效能。  
   
- 
-  `<msxsl:script>` 項目的定義如下：  
+ `<msxsl:script>` 項目的定義如下：  
   
 ```xml  
 <msxsl:script language = "language-name" implements-prefix = "prefix of user namespace"> </msxsl:script>  
@@ -34,11 +31,9 @@ ms.locfileid: "56835248"
   
  其中 `msxsl` 是繫結至命名空間 `urn:schemas-microsoft-com:xslt` 的前置詞。  
   
- `language` 屬性並非必要項目，但若指定，則其值必須為下列其中一個值：C#、VB、JScript、JavaScript、VisualBasic 或 CSharp。 如果沒有指定的話，語言預設為 JScript。 
-  `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
+ `language` 屬性並非必要項目，但若指定，則其值必須為下列其中一個值：C#、VB、JScript、JavaScript、VisualBasic 或 CSharp。 如果沒有指定的話，語言預設為 JScript。 `language-name` 不區分大小寫，因此 'JavaScript' 和 'javascript' 是一樣的。  
   
- 
-  `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個命名空間可以被定義在樣式表內的某處。  
+ `implements-prefix` 屬性是必要的。 這個屬性用來宣告命名空間，並把它與指令碼區塊產生關聯。 這個屬性的值是表示命名空間的前置詞。 這個命名空間可以被定義在樣式表內的某處。  
   
  因為 `msxsl:script` 項目屬於命名空間 `urn:schemas-microsoft-com:xslt`，所以樣式表必須包含命名空間宣告 `xmlns:msxsl=urn:schemas-microsoft-com:xslt`。  
   
@@ -46,8 +41,7 @@ ms.locfileid: "56835248"
   
  如果呼叫者端擁有 `UnmanagedCode` 使用權限，則會編譯指令碼，但是所允許的作業則取決於載入時所提供的辨識項。  
   
- 如果使用其中一個採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法來載入樣式表，則必須使用將 <xref:System.Xml.Xsl.XslTransform.Load%2A> 參數做為它的其中一個引數的 <xref:System.Security.Policy.Evidence> 多載。 若要提供辨識項，呼叫端必須具有 <xref:System.Security.Permissions.SecurityPermissionFlag> 使用權限，才可提供指令碼組件的 `Evidence`。 如果呼叫端沒有這項使用權限，則可以將 `Evidence` 參數設為 `null`。 這樣 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函式會在尋找指令碼時失敗。 
-  `ControlEvidence` 使用權限被認為是功能非常強的使用權限，只能授與高度信任的程式碼。  
+ 如果使用其中一個採用 <xref:System.Xml.Xsl.XslTransform.Load%2A> 或 <xref:System.Xml.XmlReader> 的 <xref:System.Xml.XPath.XPathNavigator> 方法來載入樣式表，則必須使用將 <xref:System.Xml.Xsl.XslTransform.Load%2A> 參數做為它的其中一個引數的 <xref:System.Security.Policy.Evidence> 多載。 若要提供辨識項，呼叫端必須具有 <xref:System.Security.Permissions.SecurityPermissionFlag> 使用權限，才可提供指令碼組件的 `Evidence`。 如果呼叫端沒有這項使用權限，則可以將 `Evidence` 參數設為 `null`。 這樣 <xref:System.Xml.Xsl.XslTransform.Load%2A> 函式會在尋找指令碼時失敗。 `ControlEvidence` 使用權限被認為是功能非常強的使用權限，只能授與高度信任的程式碼。  
   
  若要從組件中取得辨識項，請使用 `this.GetType().Assembly.Evidence`。 若要從統一資源識別元 (URI) 取得辨識項，請使用 `Evidence e = XmlSecureResolver.CreateEvidenceForUrl(stylesheetURI)`。  
   

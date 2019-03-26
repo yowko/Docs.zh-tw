@@ -13,8 +13,7 @@ ms.lasthandoff: 03/05/2019
 ms.locfileid: "57375242"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>使用交易範圍實作隱含交易
-
-  <xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
+<xref:System.Transactions.TransactionScope> 類別提供一個簡單的方式，讓您不用與交易互動，即可將一段程式碼標記為參與交易。 交易範圍可以自動選取並管理環境交易。 由於 <xref:System.Transactions.TransactionScope> 類別非常容易使用且很有效率，在您開發交易應用程式時，建議您善加利用。  
   
  此外，您不需要特別針對交易登記資源。 任何的 <xref:System.Transactions> 資源管理員 (例如 SQL Server 2005) 都可以偵測到範圍所建立的環境交易並自動加以登記。  
   
@@ -31,12 +30,11 @@ ms.locfileid: "57375242"
 ## <a name="completing-a-transaction-scope"></a>完成交易範圍  
  當您的應用程式完成所有要在交易中執行的工作後，您應該只呼叫 <xref:System.Transactions.TransactionScope.Complete%2A?displayProperty=nameWIthType> 方法一次，以通知交易管理員可以接受認可交易。 它是很好的作法，以呼叫放<xref:System.Transactions.TransactionScope.Complete%2A>中的最後一個陳述式**使用**區塊。  
   
- 無法呼叫這個方法會中止交易，，因為交易管理員會將此視為系統失敗或對等項目在交易範圍內擲回例外狀況。 不過，呼叫此方法並不保證會認可交易， 這只是將您的狀態告知交易管理員的方式。 在呼叫 <xref:System.Transactions.TransactionScope.Complete%2A> 方法後，您便無法再透過 <xref:System.Transactions.Transaction.Current%2A> 屬性存取環境交易，且嘗試這麼做會導致擲回例外狀況。  
+ 無法呼叫這個方法會中止交易，，因為交易管理員會將此視為系統失敗或對等項目在交易範圍內擲回例外狀況。 不過，呼叫此方法並不保證會認可交易， 這只是將您的狀態告知異動管理員的方式。 在呼叫 <xref:System.Transactions.TransactionScope.Complete%2A> 方法後，您便無法再透過 <xref:System.Transactions.Transaction.Current%2A> 屬性存取環境交易，且嘗試這麼做會導致擲回例外狀況。  
   
  如果<xref:System.Transactions.TransactionScope>物件一開始，建立交易認可此交易由交易管理員的實際工作中的程式碼的最後一行之後，就會發生**使用**區塊。 如果該物件沒有建立交易，則每當 <xref:System.Transactions.CommittableTransaction.Commit%2A> 物件的擁有者呼叫 <xref:System.Transactions.CommittableTransaction> 時，便會發生認可。 此時，交易管理員呼叫資源管理員，並說明認可或回復，根據是否<xref:System.Transactions.TransactionScope.Complete%2A>上呼叫方法<xref:System.Transactions.TransactionScope>物件。  
   
- **使用**陳述式可確保<xref:System.Transactions.TransactionScope.Dispose%2A>方法<xref:System.Transactions.TransactionScope>即使發生例外狀況，會呼叫物件。 
-  <xref:System.Transactions.TransactionScope.Dispose%2A> 方法會標記交易範圍的結尾。 在呼叫這個方法後發生的例外狀況不太可能會影響交易。 這個方法也會將環境交易還原至其先前狀態。  
+ **使用**陳述式可確保<xref:System.Transactions.TransactionScope.Dispose%2A>方法<xref:System.Transactions.TransactionScope>即使發生例外狀況，會呼叫物件。 <xref:System.Transactions.TransactionScope.Dispose%2A> 方法會標記交易範圍的結尾。 在呼叫這個方法後發生的例外狀況不太可能會影響異動。 這個方法也會將環境交易還原至其先前狀態。  
   
  如果範圍建立了交易，而且交易中止，則會擲回 <xref:System.Transactions.TransactionAbortedException>。 如果交易管理員無法做出認可決定，則會擲回 <xref:System.Transactions.TransactionInDoubtException>。 如果認可交易，則不會擲回例外狀況。  
   
@@ -79,7 +77,7 @@ void SomeMethod()
   
 -   完全不會參與交易。 最後也不會產生環境交易。  
   
- 如果使用 <xref:System.Transactions.TransactionScopeOption.Required> 來具現化範圍，且存在環境交易，則範圍會聯結該交易。 另一方面，如果不存在環境交易，則範圍會建立新的交易並成為根範圍。 此為預設值。 如果使用 <xref:System.Transactions.TransactionScopeOption.Required>，則範圍內的程式碼不管本身是否為根，或僅僅聯結環境交易，都不需要做出不一樣的行為。 在兩種情況中，程式碼的行為應該完全一樣。  
+ 如果使用 <xref:System.Transactions.TransactionScopeOption.Required> 來具現化範圍，且存在環境交易，則範圍會聯結該交易。 另一方面，如果不存在環境交易，則範圍會建立新的交易並成為根範圍。 這是預設值。 如果使用 <xref:System.Transactions.TransactionScopeOption.Required>，則範圍內的程式碼不管本身是否為根，或僅僅聯結環境交易，都不需要做出不一樣的行為。 在兩種情況中，程式碼的行為應該完全一樣。  
   
  如果使用 <xref:System.Transactions.TransactionScopeOption.RequiresNew> 來具現化範圍，則一律成為根範圍。 它會開始新的交易，且其交易會成為範圍內全新的環境交易。  
   
@@ -89,10 +87,10 @@ void SomeMethod()
   
 |TransactionScopeOption|環境交易|範圍會參與|  
 |----------------------------|-------------------------|-----------------------------|  
-|必要項|否|新交易 (將為根)|  
+|必要|否|新交易 (將為根)|  
 |必須是新交易|否|新交易 (將為根)|  
 |隱藏|否|無交易|  
-|必要項|是|環境交易|  
+|必要|是|環境交易|  
 |必須是新交易|是|新交易 (將為根)|  
 |隱藏|是|無交易|  
   
@@ -123,11 +121,11 @@ using(TransactionScope scope1 = new TransactionScope())
 }  
 ```  
   
- 在此範例程式碼區段中，不使用任何環境交易，而是以 `scope1` 來建立新範圍 (<xref:System.Transactions.TransactionScopeOption.Required>)。 `scope1` 範圍在建立新交易 (交易 A) 時會成為根範圍，並讓交易 A 成為環境交易。 接著，`Scope1` 會建立另外三個物件，每個都包含不同的 <xref:System.Transactions.TransactionScopeOption> 值。 例如，`scope2` 是由 <xref:System.Transactions.TransactionScopeOption.Required> 所建立，而且因為環境交易已經存在，該範圍就會聯結由 `scope1` 所建立的第一個交易。 請注意，`scope3` 是新交易的根範圍，而且 `scope4` 不包含任何環境交易。  
+ 在此範例程式碼區段中，不使用任何環境交易，而是以 `scope1` 來建立新範圍 (<xref:System.Transactions.TransactionScopeOption.Required>)。 `scope1` 範圍在建立新交易 (交易 A) 時會成為根範圍，並讓交易 A 成為環境交易。 `Scope1` 接著會建立另外三個物件，各有不同<xref:System.Transactions.TransactionScopeOption>值。 例如，`scope2` 是由 <xref:System.Transactions.TransactionScopeOption.Required> 所建立，而且因為環境交易已經存在，該範圍就會聯結由 `scope1` 所建立的第一個交易。 請注意，`scope3` 是新交易的根範圍，而且 `scope4` 不包含任何環境交易。  
   
  儘管預設且最常用的 <xref:System.Transactions.TransactionScopeOption> 值是 <xref:System.Transactions.TransactionScopeOption.Required>，其他所有值每個都具有唯一的用途。  
   
- 當您想要保留程式碼區段所執行的作業，而且不想在作業失敗時中止環境交易，<xref:System.Transactions.TransactionScopeOption.Suppress> 就會很有用處。 例如，當您想要執行記錄或稽核作業，或是當您想要將事件發行到訂閱者時 (不管您的環境交易是否已經認可或中止)。 此值可允許您在交易範圍內保有一段非交易式程式碼，如下列範例所示。  
+ <xref:System.Transactions.TransactionScopeOption.Suppress> 當您想要保留程式碼區段中，所執行的作業，並不想要在作業失敗時中止環境交易，則會是很有用。 例如，當您想要執行記錄或稽核作業，或是當您想要將事件發行到訂閱者時 (不管您的環境交易是否已經認可或中止)。 此值可允許您在交易範圍內保有一段非交易式程式碼，如下列範例所示。  
   
 ```csharp  
 using(TransactionScope scope1 = new TransactionScope())  

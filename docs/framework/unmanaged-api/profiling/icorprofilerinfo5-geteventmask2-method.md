@@ -43,8 +43,7 @@ HRESULT GetEventMask2(
  [out] 指定事件分類的 4 位元組值的指標。  每個位元各控制事件的不同功能、行為或類型。 位元所述[COR_PRF_HIGH_MONITOR](../../../../docs/framework/unmanaged-api/profiling/cor-prf-high-monitor-enumeration.md)列舉型別。  
   
 ## <a name="remarks"></a>備註  
- 
-  `GetEventMask2` 方法可用於判斷分析工具已訂閱哪些回呼。 一般而言，您可以執行的邏輯 OR`pdwEventsLow`並`pdwEventsHigh`值和您想要設定，然後再呼叫任何新位元[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
+ `GetEventMask2` 方法可用於判斷分析工具已訂閱哪些回呼。 一般而言，您可以執行的邏輯 OR`pdwEventsLow`並`pdwEventsHigh`值和您想要設定，然後再呼叫任何新位元[SetEventMask2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo5-seteventmask2-method.md)方法。  
   
  這個方法會以建議的替代做法[GetEventMask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-geteventmask-method.md)方法。  
   

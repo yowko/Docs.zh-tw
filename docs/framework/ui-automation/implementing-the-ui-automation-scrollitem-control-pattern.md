@@ -19,8 +19,7 @@ ms.locfileid: "57673115"
   
  本主題簡介實作 <xref:System.Windows.Automation.Provider.IScrollItemProvider> 的方針和慣例，包括屬性、方法和事件的相關資訊。 其他參考的連結列於主題的結尾。  
   
- 
-  <xref:System.Windows.Automation.ScrollItemPattern> 控制項模式是用以支援實作 <xref:System.Windows.Automation.Provider.IScrollProvider> 之容器的個別子控制項。 此控制項模式會擔任子控制項及其容器之間的通訊通道，以確保容器可變更其顯示子控制項的檢視區內目前可見內容 (或區域)。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <xref:System.Windows.Automation.ScrollItemPattern> 控制項模式是用以支援實作 <xref:System.Windows.Automation.Provider.IScrollProvider> 之容器的個別子控制項。 此控制項模式會擔任子控制項及其容器之間的通訊通道，以確保容器可變更其顯示子控制項的檢視區內目前可見內容 (或區域)。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -34,7 +33,7 @@ ms.locfileid: "57673115"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IScrollItemProvider.ScrollIntoView%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的屬性或事件。  
   

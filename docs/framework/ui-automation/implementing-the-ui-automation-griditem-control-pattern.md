@@ -19,8 +19,7 @@ ms.locfileid: "57675767"
   
  本主題將介紹實作 <xref:System.Windows.Automation.Provider.IGridItemProvider>的方針和慣例，包括屬性的相關資訊。 其他參考的連結會在概觀的結尾列出。  
   
- 
-  <xref:System.Windows.Automation.GridItemPattern> 控制項模式是用以支援實作 <xref:System.Windows.Automation.Provider.IGridProvider> 之容器的個別子控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
+ <xref:System.Windows.Automation.GridItemPattern> 控制項模式是用以支援實作 <xref:System.Windows.Automation.Provider.IGridProvider> 之容器的個別子控制項。 如需實作此控制項模式的控制項範例，請參閱 [Control Pattern Mapping for UI Automation Clients](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)。  
   
 <a name="Implementation_Guidelines_and_Conventions"></a>   
 ## <a name="implementation-guidelines-and-conventions"></a>實作方針和慣例  
@@ -40,11 +39,11 @@ ms.locfileid: "57675767"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|屬性|無|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.RowSpan%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ColumnSpan%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridItemProvider.ContainingGrid%2A>|屬性|None|  
   
  此控制項模式沒有任何相關聯的方法或事件。  
   

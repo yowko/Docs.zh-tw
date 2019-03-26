@@ -18,8 +18,7 @@ ms.locfileid: "58044042"
 關閉編譯器選項。  
   
 ## <a name="remarks"></a>備註  
- 
-  `Off` 關鍵字可用於以下內容：  
+ `Off` 關鍵字可用於以下內容：  
   
  [Option Explicit 陳述式](../../visual-basic/language-reference/statements/option-explicit-statement.md)  
   

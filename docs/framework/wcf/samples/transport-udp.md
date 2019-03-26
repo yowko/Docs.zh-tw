@@ -64,31 +64,24 @@ UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂�
   
 -   發生錯誤：在 Faulted 狀態中，物件會是存取以便檢查，但無法供使用。 當發生無法修復的錯誤時，物件會轉換至此狀態。 在這個狀態中的唯一有效的轉換是`Closed`狀態。  
   
- 每個狀態轉換都會引發一些事件。 
-  <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 方法可在任何時間加以呼叫，讓物件立即從目前的狀態轉換為 Closed 狀態。 呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 會終止任何未完成的工作。  
+ 每個狀態轉換都會引發一些事件。 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 方法可在任何時間加以呼叫，讓物件立即從目前的狀態轉換為 Closed 狀態。 呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 會終止任何未完成的工作。  
   
 <a name="ChannelAndChannelListener"></a>   
 ## <a name="channel-factory-and-channel-listener"></a>通道處理站和通道接聽項  
  撰寫自訂傳輸的下一個步驟是，建立用戶端通道的 <xref:System.ServiceModel.Channels.IChannelFactory> 實作以及服務通道的 <xref:System.ServiceModel.Channels.IChannelListener> 實作。 通道層會使用建構通道所需的處理站模式。 WCF 會提供此程序中的基底類別協助程式。  
   
--   
-  <xref:System.ServiceModel.Channels.CommunicationObject> 類別會實作 <xref:System.ServiceModel.ICommunicationObject>，並強制執行先前在步驟 2 中所述的狀態機器。 
+-   <xref:System.ServiceModel.Channels.CommunicationObject> 類別會實作 <xref:System.ServiceModel.ICommunicationObject>，並強制執行先前在步驟 2 中所述的狀態機器。 
 
--   
-  <xref:System.ServiceModel.Channels.ChannelManagerBase> 類別會實作 <xref:System.ServiceModel.Channels.CommunicationObject>，並為 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供統一的基底類別。 
-  <xref:System.ServiceModel.Channels.ChannelManagerBase> 類別可以和 <xref:System.ServiceModel.Channels.ChannelBase> 一起運作，而後者是實作 <xref:System.ServiceModel.Channels.IChannel> 的基底類別。  
+-   <xref:System.ServiceModel.Channels.ChannelManagerBase> 類別會實作 <xref:System.ServiceModel.Channels.CommunicationObject>，並為 <xref:System.ServiceModel.Channels.ChannelFactoryBase> 和 <xref:System.ServiceModel.Channels.ChannelListenerBase> 提供統一的基底類別。 <xref:System.ServiceModel.Channels.ChannelManagerBase> 類別可以和 <xref:System.ServiceModel.Channels.ChannelBase> 一起運作，而後者是實作 <xref:System.ServiceModel.Channels.IChannel> 的基底類別。  
   
 -   <xref:System.ServiceModel.Channels.ChannelFactoryBase>類別會實作<xref:System.ServiceModel.Channels.ChannelManagerBase>並<xref:System.ServiceModel.Channels.IChannelFactory>並合併`CreateChannel`其中一個多載`OnCreateChannel`抽象方法。  
   
--   
-  <xref:System.ServiceModel.Channels.ChannelListenerBase> 類別會實作 <xref:System.ServiceModel.Channels.IChannelListener>。 它會負責基礎的狀態管理。  
+-   <xref:System.ServiceModel.Channels.ChannelListenerBase> 類別會實作 <xref:System.ServiceModel.Channels.IChannelListener>。 它會負責基礎的狀態管理。  
   
- 在這個範例中，處理站的實作包含在 UdpChannelFactory.cs 中，而接聽項的實作則包含在 UdpChannelListener.cs 中。 
-  <xref:System.ServiceModel.Channels.IChannel> 的實作是在 UdpOutputChannel.cs 和 UdpInputChannel.cs 中。  
+ 在這個範例中，處理站的實作包含在 UdpChannelFactory.cs 中，而接聽項的實作則包含在 UdpChannelListener.cs 中。 <xref:System.ServiceModel.Channels.IChannel> 的實作是在 UdpOutputChannel.cs 和 UdpInputChannel.cs 中。  
   
 ### <a name="the-udp-channel-factory"></a>UDP 通道處理站  
- 
-  `UdpChannelFactory` 是衍生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase>。 範例會覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A>，以提供訊息編碼器之訊息版本的存取權。 範例也會覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A>，以便在狀態機器進行轉換時卸除 <xref:System.ServiceModel.Channels.BufferManager> 的執行個體。  
+ `UdpChannelFactory` 是衍生自 <xref:System.ServiceModel.Channels.ChannelFactoryBase>。 範例會覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase.GetProperty%2A>，以提供訊息編碼器之訊息版本的存取權。 範例也會覆寫 <xref:System.ServiceModel.Channels.ChannelFactoryBase.OnClose%2A>，以便在狀態機器進行轉換時卸除 <xref:System.ServiceModel.Channels.BufferManager> 的執行個體。  
   
 #### <a name="the-udp-output-channel"></a>UDP 輸出通道  
  `UdpOutputChannel` 會實作 <xref:System.ServiceModel.Channels.IOutputChannel>。 建構函式會驗證引數，並根據傳進的 <xref:System.Net.EndPoint> 建構目的地 <xref:System.ServiceModel.EndpointAddress> 物件。  
@@ -116,8 +109,7 @@ this.socket.SendTo(messageBuffer.Array, messageBuffer.Offset, messageBuffer.Coun
 ```  
   
 ### <a name="the-udpchannellistener"></a>UdpChannelListener  
- `UdpChannelListener`此範例會實作衍生自<xref:System.ServiceModel.Channels.ChannelListenerBase>類別。 它會使用單一 UDP 通訊端來接收資料包。 
-  `OnOpen` 方法會透過非同步迴圈的 UDP 通訊端來接收資料， 然後透過下列「訊息編碼架構」將資料轉換為訊息。  
+ `UdpChannelListener`此範例會實作衍生自<xref:System.ServiceModel.Channels.ChannelListenerBase>類別。 它會使用單一 UDP 通訊端來接收資料包。 `OnOpen` 方法會透過非同步迴圈的 UDP 通訊端來接收資料， 然後透過下列「訊息編碼架構」將資料轉換為訊息。  
   
 ```csharp
 message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffer, 0, count), bufferManager);  
@@ -126,8 +118,7 @@ message = MessageEncoderFactory.Encoder.ReadMessage(new ArraySegment<byte>(buffe
  由於相同的資料包通道代表來自幾個來源的訊息，因此 `UdpChannelListener` 是單一接聽程式。 沒有，最多一個作用<xref:System.ServiceModel.Channels.IChannel>與此接聽程式相關聯，一次。 只有當 `AcceptChannel` 方法所傳回的通道被接著處理後，範例才會產生另一個通道。 收到訊息時，就會將它加入此單一通道佇列中。  
   
 #### <a name="udpinputchannel"></a>UdpInputChannel  
- 
-  `UdpInputChannel` 類別會實作 `IInputChannel`。 它包含由 `UdpChannelListener` 通訊端所填入的傳入訊息佇列。 這些訊息佇列會由 `IInputChannel.Receive` 方法加以清除。  
+ `UdpInputChannel` 類別會實作 `IInputChannel`。 它包含由 `UdpChannelListener` 通訊端所填入的傳入訊息佇列。 這些訊息佇列會由 `IInputChannel.Receive` 方法加以清除。  
   
 <a name="AddingABindingElement"></a>   
 ## <a name="adding-a-binding-element"></a>新增繫結項目  
@@ -156,8 +147,7 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
  繫結中的傳輸繫結項目是負責匯出與匯入中繼資料中的定址資訊。 當使用 SOAP 繫結時，傳輸繫結項目也應該匯出中繼資料中的正確傳輸 URI。  
   
 #### <a name="wsdl-export"></a>WSDL 匯出  
- 若要匯出定址資訊，`UdpTransportBindingElement` 會實作 `IWsdlExportExtension` 介面。 
-  `ExportEndpoint` 方法會新增正確的定址資訊至 WSDL 連接埠。  
+ 若要匯出定址資訊，`UdpTransportBindingElement` 會實作 `IWsdlExportExtension` 介面。 `ExportEndpoint` 方法會新增正確的定址資訊至 WSDL 連接埠。  
   
 ```csharp
 if (context.WsdlPort != null)  
@@ -199,9 +189,7 @@ if (soapBinding != null)
   
 2.  將組態區段新增至與 Svcutil.exe 位於相同目錄的 Svcutil.exe.config 中。  
   
- 
-  `UdpBindingElementImporter` 型別會實作 `IWsdlImportExtension` 介面。 
-  `ImportEndpoint` 方法會從 WSDL 連接埠匯入位址。  
+ `UdpBindingElementImporter` 型別會實作 `IWsdlImportExtension` 介面。 `ImportEndpoint` 方法會從 WSDL 連接埠匯入位址。  
   
 ```csharp
 BindingElementCollection bindingElements = context.Endpoint.Binding.CreateBindingElements();  
@@ -271,8 +259,7 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
 -   使用系統提供的繫結，其中包含我們的繫結元素。 WCF 會提供一些這些系統定義的繫結，例如`BasicHttpBinding`， `NetTcpBinding`，和`WsHttpBinding`。 每個這個繫結都會與妥善定義的設定檔相關聯。  
   
- 範例會在衍生自 `SampleProfileUdpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 中實作設定檔繫結。 
-  `SampleProfileUdpBinding` 中最多包含四個繫結項目：`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement` 和 `ReliableSessionBindingElement`。  
+ 範例會在衍生自 `SampleProfileUdpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 中實作設定檔繫結。 `SampleProfileUdpBinding` 中最多包含四個繫結項目：`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement` 和 `ReliableSessionBindingElement`。  
   
 ```csharp
 public override BindingElementCollection CreateBindingElements()  

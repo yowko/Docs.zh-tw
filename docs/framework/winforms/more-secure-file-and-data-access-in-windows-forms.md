@@ -21,8 +21,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57724540"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows Form 中更安全的檔案和資料存取
-
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 使用權限協助保護資源與資料。 您的應用程式可以讀取或寫入資料的位置取決於應用程式授與權限。 當您的應用程式在部分信任的環境中執行時，您可能無法存取您的資料，或者您可能要改變您存取資料的方式。  
   
  當您遇到安全性限制時，您有兩個選項：判斷權限 (假設已授與您的應用程式)，或者使用被寫成具有在部分信任環境運作功能的版本。 下列章節將討論如何使用在部分信任環境執行的應用程式所產生的檔案、資料庫以及登錄存取。  
   
@@ -30,7 +29,7 @@ ms.locfileid: "57724540"
 >  根據預設，產生 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 部署的工具預設這些部署去要求來自執行那些程式之電腦的完全信任。 如果您決定您想要的部分信任中執行的額外的安全性優點，您必須變更此預設值，在 Visual Studio 或其中一個[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]工具 （Mage.exe 或 MageUI.exe）。 如需有關 Windows Forms 安全性，以及如何判斷您的應用程式的適當信任層級的詳細資訊，請參閱[安全性的 Windows Forms Overview](security-in-windows-forms-overview.md)。  
   
 ## <a name="file-access"></a>檔案存取  
-  <xref:System.Security.Permissions.FileIOPermission> 類別控制在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的檔案與資料夾存取。 根據預設，安全性系統並未將 <xref:System.Security.Permissions.FileIOPermission> 授與部分安全性環境，例如近端內部網路或者網際網路區域。 然而，如果您修改您應用程式的設計或使用不同方法來存取檔案，需要檔案存取的應用程式依然能夠在這些環境中運作。 根據預設，近端內部網路區域已經被授與權限能夠存取相同網站與相同目錄、連線到網站的原始來源、以及從其安裝目錄讀取。 根據預設，網際網路區域只被授與連回其原始網站的權限。  
+ <xref:System.Security.Permissions.FileIOPermission> 類別控制在 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的檔案與資料夾存取。 根據預設，安全性系統並未將 <xref:System.Security.Permissions.FileIOPermission> 授與部分安全性環境，例如近端內部網路或者網際網路區域。 然而，如果您修改您應用程式的設計或使用不同方法來存取檔案，需要檔案存取的應用程式依然能夠在這些環境中運作。 根據預設，近端內部網路區域已經被授與權限能夠存取相同網站與相同目錄、連線到網站的原始來源、以及從其安裝目錄讀取。 根據預設，網際網路區域只被授與連回其原始網站的權限。  
   
 ### <a name="user-specified-files"></a>使用者指定的檔案  
  沒有檔案存取權限的處理方法之一是使用 <xref:System.Windows.Forms.OpenFileDialog> 或 <xref:System.Windows.Forms.SaveFileDialog> 類別來提示使用者提供特定的檔案資訊。 這種使用者互動有助於提供在某種程度上保證應用程式無法惡意載入私人檔案或覆寫重要檔案。 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> 與 <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> 方法，藉著開啟使用者指定的檔案資料流來提供讀取與寫入的檔案存取。 本方法也藉由模糊檔案路徑來協助保護使用者的檔案。  
@@ -38,7 +37,7 @@ ms.locfileid: "57724540"
 > [!NOTE]
 >  這些權限會根據您的應用程式是在網際網路區域或內部網路區域而有所不同。 網際網路區域應用程式只能使用 <xref:System.Windows.Forms.OpenFileDialog>，而內部網路應用程式擁有不受限制的檔案對話方塊使用權限。  
   
-  <xref:System.Security.Permissions.FileDialogPermission> 類別會指定您的應用程式能夠使用哪一種對話方塊。 下列表格顯示在您要使用每一種 <xref:System.Windows.Forms.FileDialog> 類別時必需要有的值 。  
+ <xref:System.Security.Permissions.FileDialogPermission> 類別會指定您的應用程式能夠使用哪一種對話方塊。 下列表格顯示在您要使用每一種 <xref:System.Windows.Forms.FileDialog> 類別時必需要有的值 。  
   
 |類別|必需的存取值|  
 |-----------|---------------------------|  
@@ -355,7 +354,7 @@ public void Write()
  如果您因為希望在部分信任中執行您的應用程式而無法直接存取資料庫，您可以使用 Web 服務做為替代方式來存取您的資料。 Web 服務是一種可透過網路以程式設計方式存取的軟體。 透過 Web 服務，應用程式可以在程式碼群組區域之間分享資料。 根據預設，近端內部網路和網際網路區域中的應用程式會被授與權限來存取他們的來源網站，讓他們能夠呼叫相同的伺服器上裝載的 Web 服務。 如需詳細資訊，請參閱[ASP.NET AJAX 中的 Web 服務](https://docs.microsoft.com/previous-versions/aspnet/bb398785(v=vs.100))或是[Windows Communication Foundation](../wcf/index.md)。  
   
 ## <a name="registry-access"></a>登錄存取  
-  <xref:System.Security.Permissions.RegistryPermission> 類別控制作業系統登錄的存取權。 根據預設，只有在本機執行的應用程式可以存取登錄。  <xref:System.Security.Permissions.RegistryPermission> 只授與應用程式嘗試登錄存取；它並不保證存取將會成功，因為作業系統仍然會強制執行登錄上的安全性。  
+ <xref:System.Security.Permissions.RegistryPermission> 類別控制作業系統登錄的存取權。 根據預設，只有在本機執行的應用程式可以存取登錄。  <xref:System.Security.Permissions.RegistryPermission> 只授與應用程式嘗試登錄存取；它並不保證存取將會成功，因為作業系統仍然會強制執行登錄上的安全性。  
   
  因為您無法在部分信任下存取登錄，您可能需要尋找儲存資料的其他方法。 當您儲存應用程式設定時，使用隔離儲存區，而不是登錄。 隔離儲存區也可以用來儲存其他應用程式特定的檔案。 您也可以儲存與伺服器或來源網站相關的全域應用程式資訊，因為根據預設，應用程式被授與存取其來源網站的權限。  
   

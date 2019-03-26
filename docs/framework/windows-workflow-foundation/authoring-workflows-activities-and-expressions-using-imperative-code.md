@@ -52,8 +52,7 @@ new Assign<int>
   
  C# 運算式必須先編譯，才能叫用在包含該 C# 運算式的工作流程。 如果C#運算式不會經過編譯，<xref:System.NotSupportedException>時，使用類似下列的訊息叫用工作流程時擲回：`Expression Activity type 'CSharpValue`1' 需要編譯，才能執行。  請確定已編譯工作流程。 ' 在大部分情況下，涉及在 Visual Studio C# 中建立的工作流程運算式，都會自動編譯，但在某些情況下，程式碼工作流程，例如 C# 運算式必須以手動方式編譯。 如需如何編譯 C# 運算式的範例，請參閱 <<c0> [ 程式碼工作流程中的使用 C# 運算式](csharp-expressions.md#CodeWorkflows)一節[C# 運算式](csharp-expressions.md)主題。  
   
- 
-  <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 是以 Visual Basic 語法表示的運算式，可用來當做運算式中的右值 (r-value)，而 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 是以 C# 語法表示的運算式，可用來當做運算式中的右值。 每次執行包含的活動時會評估這些運算式。 運算式的結果會指派至工作流程變數 `n`，且會由工作流程中的下一個活動使用這些結果。 若要在執行階段時存取工作流程變數 `n` 的值，必須要有 <xref:System.Activities.ActivityContext>。 這可以使用下列 Lambda 運算式來進行存取。  
+ <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 是以 Visual Basic 語法表示的運算式，可用來當做運算式中的右值 (r-value)，而 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 是以 C# 語法表示的運算式，可用來當做運算式中的右值。 每次執行包含的活動時會評估這些運算式。 運算式的結果會指派至工作流程變數 `n`，且會由工作流程中的下一個活動使用這些結果。 若要在執行階段時存取工作流程變數 `n` 的值，必須要有 <xref:System.Activities.ActivityContext>。 這可以使用下列 Lambda 運算式來進行存取。  
   
 > [!NOTE]
 >  請注意這兩個程式碼都是使用 C# 做為程式設計語言的範例，但一個是使用 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>，另一個則是使用 <xref:Microsoft.CSharp.Activities.CSharpValue%601>。 <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> 和 <xref:Microsoft.CSharp.Activities.CSharpValue%601> 可以用在 Visual Basic 和 C# 專案中。 根據預設，在工作流程設計工具中所建立的運算式符合裝載專案的語言。 以程式碼建立工作流程時，由工作流程作者自行決定要使用的語言。  
@@ -134,7 +133,7 @@ new InvokeMethod<int>
  由於 <xref:System.Random.Next%2A> 不是靜態方法，因此會提供 <xref:System.Random> 類別的執行個體給 <xref:System.Activities.Expressions.InvokeMethod%601.TargetObject%2A> 屬性。 在此範例中，會使用 Visual Basic 運算式建立新執行個體，但是該執行個體也可能已建立並儲存在工作流程變數中。 在此範例中，使用 <xref:System.Activities.Statements.Assign%601> 活動而不是 <xref:System.Activities.Expressions.InvokeMethod%601> 活動會比較簡單。 如果最終由 <xref:System.Activities.Statements.Assign%601> 或 <xref:System.Activities.Expressions.InvokeMethod%601> 活動叫用的方法呼叫為長期執行，則 <xref:System.Activities.Expressions.InvokeMethod%601> 具有優勢，因為它有 <xref:System.Activities.Expressions.InvokeMethod%601.RunAsynchronously%2A> 屬性。 當此屬性設為 `true` 時，叫用的方法會以非同步方式執行 (與工作流程有關)。 如果有其他活動平行，當方法以非同步方式執行時，那些活動不會被封鎖。 此外，如果所要叫用的方法沒有傳回值，那麼 <xref:System.Activities.Expressions.InvokeMethod%601> 會是叫用方法的適當方式。  
   
 ## <a name="arguments-and-dynamic-activities"></a>引數與動態活動  
- 工作流程定義是藉由將活動組裝在活動樹狀目錄中，並設定任何屬性與引數，而建立在程式碼中。 可繫結現有的引數，但無法新增新引數至活動。 這包含傳遞至根活動的工作流程引數。 在命令式程式碼中，會將工作流程引數指定為新 CLR 型別的屬性，並且在 XAML 中使用 `x:Class` 與 `x:Member` 來宣告它們。 因為將工作流程定義建立為記憶體內物件的樹狀結構時，並未建立任何新 CLR 型別，所以無法新增引數。 但是，可新增引數至 <xref:System.Activities.DynamicActivity>。 在此範例中會建立 <xref:System.Activities.DynamicActivity%601>，它採用兩個整數引數並將其同時加入，然後傳回結果。 不僅會針對每個引數建立 <xref:System.Activities.DynamicActivityProperty>，且會將作業的結果指派至 <xref:System.Activities.Activity%601.Result%2A> 的 <xref:System.Activities.DynamicActivity%601> 引數。  
+ 工作流程定義是藉由將活動組裝在活動樹狀目錄中，並設定任何屬性與引數，而建立在程式碼中。 可繫結現有的引數，但無法新增新引數至活動。 這包含傳遞至根活動的工作流程引數。 在命令式程式碼中，會將工作流程引數指定為新 CLR 型別的屬性，並且在 XAML 中使用 `x:Class` 與 `x:Member` 來宣告它們。 因為將工作流程定義建立為記憶體內物件的樹狀時，並未建立任何新 CLR 型別，所以無法新增引數。 但是，可新增引數至 <xref:System.Activities.DynamicActivity>。 在此範例中會建立 <xref:System.Activities.DynamicActivity%601>，它採用兩個整數引數並將其同時加入，然後傳回結果。 不僅會針對每個引數建立 <xref:System.Activities.DynamicActivityProperty>，且會將作業的結果指派至 <xref:System.Activities.Activity%601.Result%2A> 的 <xref:System.Activities.DynamicActivity%601> 引數。  
   
  [!code-csharp[CFX_WorkflowApplicationExample#55](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#55)]  
   

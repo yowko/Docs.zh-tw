@@ -25,7 +25,7 @@ ms.lasthandoff: 03/06/2019
 ms.locfileid: "57502278"
 ---
 # <a name="icordebugheapenumnext-method"></a>ICorDebugHeapEnum::Next 方法
-取得指定的數目[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)包含 managed 堆積上物件的相關資訊的執行個體。  
+取得 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 執行個體的指定數目，其中包含 Managed 堆積上物件的相關資訊。  
   
 ## <a name="syntax"></a>語法  
   
@@ -41,21 +41,20 @@ HRESULT Next(
  [in] 要擷取的物件數目。  
   
  物件  
- [out]指標的陣列，其中每一個指向[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) managed 堆積提供物件的相關資訊的物件。  
+ [out] 指標陣列，其中每一個指標會指向提供 Managed 堆積上物件之相關資訊的 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 物件。  
   
  pceltFetched  
- [out]指標的數目[COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md)物件中實際傳回`objects`。 如果 `celt` 為 1，則這個值可能是 `null`。  
+ [out] `objects` 中實際傳回之 [COR_HEAPOBJECT](../../../../docs/framework/unmanaged-api/debugging/cor-heapobject-structure.md) 物件數目的指標。 如果 `celt` 為 1，則這個值可能是 `null`。  
   
 ## <a name="remarks"></a>備註  
- 
-  `COR_HEAPOBJECT.type` 欄位是計算巢狀參考數目之 COM 介面的識別項。 這個參考必須由 `ICorDebugHeapEnum::Next` 的呼叫者釋放。  
+ `COR_HEAPOBJECT.type` 欄位是計算巢狀參考數目之 COM 介面的識別項。 這個參考必須由 `ICorDebugHeapEnum::Next` 的呼叫者釋放。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
  **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   

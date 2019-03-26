@@ -45,8 +45,7 @@ ms.locfileid: "56332337"
  有了這些基礎之後，下列章節將詳述隨附於 <xref:System.ServiceModel.NetMsmqBinding> 與 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>的傳輸安全性屬性。  
   
 #### <a name="msmq-authentication-mode"></a>MSMQ 驗證模式  
- 
-  <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 已排入佇列的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
+ <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A> 會要求使用 Windows 網域安全性或外部以憑證為基礎的安全性，藉此保障訊息的安全。 在這兩種驗證模式中，WCF 已排入佇列的傳輸通道會使用`CertificateValidationMode`服務組態中指定。 憑證驗證模式可指定用來檢查憑證效力的機制。  
   
  啟用傳輸安全性後，預設的設定值為 <xref:System.ServiceModel.MsmqAuthenticationMode.WindowsDomain>。  
   

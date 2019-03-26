@@ -20,8 +20,7 @@ ms.locfileid: "57357127"
 **命名空間：** System.Reflection
 
 > [!IMPORTANT]
-> 
-  `MissingMetadataException` 類別主要僅供　[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。
+> `MissingMetadataException` 類別主要僅供　[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈內部使用。 這主要並非用於協力廠商程式碼中，也不應該在應用程式程式碼中處理此例外狀況。 相反地，請藉由將項目新增至[執行階段指示詞檔案](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)，來消除例外狀況。 如需詳細資訊，請參閱＜備註＞一節。
 
 ## <a name="syntax"></a>語法
 
@@ -83,8 +82,7 @@ ms.locfileid: "57357127"
 > - 針對類型的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/type.html) 。
 > - 針對方法的 [MissingMetadataException 疑難排解工具](https://dotnet.github.io/native/troubleshooter/method.html) 。
 
-
-  `MissingMetadataException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.TypeAccessException>。
+`MissingMetadataException` 類別沒有包含唯一成員；其所有成員都是繼承自其基底類別 <xref:System.TypeAccessException>。
 
 ## <a name="see-also"></a>另請參閱
 

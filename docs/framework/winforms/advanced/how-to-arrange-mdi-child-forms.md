@@ -18,8 +18,7 @@ ms.locfileid: "57711894"
 # <a name="how-to-arrange-mdi-child-forms"></a>HOW TO：排列 MDI 子表單
 應用程式通常會包含 [並排]、[重疊顯示] 和 [排列] 等動作的功能表命令，以便控制所開啟之 MDI 子表單的配置。 您可以搭配使用 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 方法和其中一個 <xref:System.Windows.Forms.MdiLayout> 列舉值，來重新排列 MDI 父表單中的子表單。  
   
- 
-  <xref:System.Windows.Forms.MdiLayout> 列舉值會以重疊顯示、水平或垂直並排方式來顯示子表單，或將子表單當做排列在 MDI 表單下方的子表單圖示來顯示。 這些值有相同的效果，為 Windows 命令**重疊顯示視窗**，**並排顯示視窗**，**堆疊顯示視窗**，和**顯示桌面**分別。  
+ <xref:System.Windows.Forms.MdiLayout> 列舉值會以重疊顯示、水平或垂直並排方式來顯示子表單，或將子表單當做排列在 MDI 表單下方的子表單圖示來顯示。 這些值有相同的效果，為 Windows 命令**重疊顯示視窗**，**並排顯示視窗**，**堆疊顯示視窗**，和**顯示桌面**分別。  
   
  這些方法通常會當做由功能表項目的 <xref:System.Windows.Forms.Control.Click> 事件所呼叫的事件處理常式來使用。 如此一來，具有「重疊顯示視窗」文字的功能表項目就可在 MDI 子視窗上呈現出指定的效果。  
   

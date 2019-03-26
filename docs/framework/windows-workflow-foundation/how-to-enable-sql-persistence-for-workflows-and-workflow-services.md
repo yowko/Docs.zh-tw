@@ -160,8 +160,7 @@ workflowServiceHost.DurableInstancingOptions.InstanceStore = sqlInstanceStoreObj
 
 ### <a name="machineconfig-elements-related-to-the-sql-workflow-instance-store-feature"></a>與 SQL 工作流程執行個體存放區功能相關的 Machine.config 項目
 
-
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝會將下列與 SQL 工作流程執行個體存放區功能相關的項目加入至 Machine.config 檔：
+[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 安裝會將下列與 SQL 工作流程執行個體存放區功能相關的項目加入至 Machine.config 檔：
 
 - 將以下行為延伸項目加入至 Machine.config 檔案，讓您可以使用\<sqlWorkflowInstanceStore > 若要設定服務的持續性組態檔中的服務行為項目。
 

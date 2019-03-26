@@ -145,8 +145,7 @@ public class LineItem
 }
 ```
 
-
-  <xref:System.Runtime.Serialization.DataContractAttribute> 表示要序列化型別的零或多個欄位或屬性，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 則表示會序列化特定的欄位或屬性。 <xref:System.Runtime.Serialization.DataContractAttribute> 可以套用於類別或結構。 
+<xref:System.Runtime.Serialization.DataContractAttribute> 表示要序列化型別的零或多個欄位或屬性，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 則表示會序列化特定的欄位或屬性。 <xref:System.Runtime.Serialization.DataContractAttribute> 可以套用於類別或結構。 
   <xref:System.Runtime.Serialization.DataMemberAttribute> 可以套用至欄位或屬性 (Property)，而套用此屬性 (Attribute) 的欄位和屬性 (Property) 可以是公用或私用。 具有類型的執行個體<xref:System.Runtime.Serialization.DataContractAttribute>套用至它們指在 WCF 中的資料合約。 這些資料合約會使用 <xref:System.Runtime.Serialization.DataContractSerializer> 來序列化為 XML。
 
 下列為使用 <xref:System.Runtime.Serialization.DataContractSerializer> 和使用 <xref:System.Xml.Serialization.XmlSerializer> 之間的重要差異清單，以及 <xref:System.Xml.Serialization> 命名空間的各種屬性。
@@ -180,8 +179,7 @@ public class LineItem
 
 - 對於 <xref:System.Runtime.Serialization.DataContractSerializer> 來說，能夠存取型別的非 Public 成員能力會造成它需要完全信任，而 <xref:System.Xml.Serialization.XmlSerializer> 則不需要。 完全信任的程式碼存取權限可讓使用的認證執行程式碼可以存取的電腦上的所有資源的完整存取。 應該謹慎使用此選項，為完全受信任的程式碼會存取您的電腦上的所有資源。
 
-- 
-  <xref:System.Runtime.Serialization.DataContractSerializer> 併入了一些版本控制功能的支援：
+- <xref:System.Runtime.Serialization.DataContractSerializer> 併入了一些版本控制功能的支援：
 
     - <xref:System.Runtime.Serialization.DataMemberAttribute> 具有 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性，這個屬性可以指派 false 的值以表示新增到資料合約新版本的成員 (沒有出現在舊版本中)，這樣便可以讓擁有新版合約的應用程式可以處理舊版合約。
 
@@ -560,8 +558,7 @@ public interface IEcho
 
 不過，WCF 也會回應 Ws-metadataexchange 要求它所產生用來描述服務的 wsdl。 ASP.NET Web 服務並沒有 WS-MetadataExchange 要求的內建支援。
 
-可廣泛地自訂 WCF 產生的 WSDL。 
-  <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 類別提供了一些可以自訂 WSDL 的功能。 WCF 也可以設定為不產生 WSDL，但而是要在指定的 URL 中使用的靜態 WSDL 檔案。
+可廣泛地自訂 WCF 產生的 WSDL。 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> 類別提供了一些可以自訂 WSDL 的功能。 WCF 也可以設定為不產生 WSDL，但而是要在指定的 URL 中使用的靜態 WSDL 檔案。
 
 ```xml
 <behaviors>

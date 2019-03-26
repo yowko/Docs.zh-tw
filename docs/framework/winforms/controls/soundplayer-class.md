@@ -14,8 +14,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57719295"
 ---
 # <a name="soundplayer-class"></a>SoundPlayer 類別
-
-  `SoundPlayer` 類別可讓您輕鬆地在應用程式中包含音效。  
+`SoundPlayer` 類別可讓您輕鬆地在應用程式中包含音效。  
   
  您也可以使用 <xref:System.Media.SystemSounds> 類別來播放常見的系統音效，包括嗶聲。  
   

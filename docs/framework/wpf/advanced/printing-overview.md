@@ -72,8 +72,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定義基本和進階的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 對於不需廣泛的列印自訂或存取完整 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能集的應用程式，基本的列印支援可供使用。 基本列印支援由需要最少組態的列印對話方塊控制項公開，並具有類似 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 使用這個簡化的列印模型，許多 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能可供使用。  
   
 #### <a name="printdialog"></a>PrintDialog  
- 
-  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
+ <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
   
 ### <a name="advanced-xps-printing"></a>進階的 XPS 列印  
  若要存取一組完整的 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能，則必須使用進階的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 列印。 以下更加詳細地描述幾個相關的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]。 如需完整的清單[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]列印路徑[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，請參閱<xref:System.Windows.Xps>和<xref:System.Printing>命名空間的參考。  
@@ -103,8 +102,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
  [!code-csharp[XpsPrint#PrintQueueSnip](~/samples/snippets/csharp/VS_Snippets_Wpf/XpsPrint/CSharp/XpsPrintHelper.cs#printqueuesnip)]
  [!code-vb[XpsPrint#PrintQueueSnip](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XpsPrint/visualbasic/xpsprinthelper.vb#printqueuesnip)]  
   
- 
-  <xref:System.Printing.PrintQueue.AddJob%2A> 方法也會提供列印的方式。 請參閱[以程式設計方式列印 XPS 檔](how-to-programmatically-print-xps-files.md)。 。  
+ <xref:System.Printing.PrintQueue.AddJob%2A> 方法也會提供列印的方式。 請參閱[以程式設計方式列印 XPS 檔](how-to-programmatically-print-xps-files.md)。 。  
   
 <a name="GDI_Print_Path_intro"></a>   
 ## <a name="gdi-print-path"></a>GDI 列印路徑  

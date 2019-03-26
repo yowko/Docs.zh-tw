@@ -16,8 +16,7 @@ ms.locfileid: "57717592"
 # <a name="bindingsource-component"></a>BindingSource 元件
 封裝資料來源以繫結至控制項。  
   
- 
-  <xref:System.Windows.Forms.BindingSource> 元件有兩種用途。 首先，在將表單上的控制項繫結至資料時，它會提供一層間接取值。 其作法是將 <xref:System.Windows.Forms.BindingSource> 元件繫結至您的資料來源，然後將表單上的控制項繫結至 <xref:System.Windows.Forms.BindingSource> 元件。 與資料的所有進一步互動，包括巡覽、排序、篩選和更新，都會透過呼叫 <xref:System.Windows.Forms.BindingSource> 元件來完成。  
+ <xref:System.Windows.Forms.BindingSource> 元件有兩種用途。 首先，在將表單上的控制項繫結至資料時，它會提供一層間接取值。 其作法是將 <xref:System.Windows.Forms.BindingSource> 元件繫結至您的資料來源，然後將表單上的控制項繫結至 <xref:System.Windows.Forms.BindingSource> 元件。 與資料的所有進一步互動，包括巡覽、排序、篩選和更新，都會透過呼叫 <xref:System.Windows.Forms.BindingSource> 元件來完成。  
   
  第二，<xref:System.Windows.Forms.BindingSource> 元件可以做為強類型資料來源。 使用 <xref:System.Windows.Forms.BindingSource.Add%2A> 方法將類型加入 <xref:System.Windows.Forms.BindingSource> 元件時，會建立該類型的清單。  
   

@@ -154,8 +154,7 @@ ms.locfileid: "57846463"
   
 <a name="Types"></a>   
 ### <a name="types-and-type-member-signatures"></a>類型和類型成員簽章  
- 
-  <xref:System.Object?displayProperty=nameWithType> 類型符合 CLS 標準，並且是 .NET Framework 類型系統中所有物件類型的基底類型。 .NET Framework 中的繼承若不是隱含的 (例如，<xref:System.String> 類別隱含繼承 <xref:System.Object> 類別) 就是明確的 (例如，<xref:System.Globalization.CultureNotFoundException> 類別明確繼承 <xref:System.ArgumentException> 類別，後者又明確繼承 <xref:System.SystemException> 類別，再依次明確繼承 <xref:System.Exception> 類別)。 若要讓衍生類型符合 CLS 標準，其基底類型必須符合 CLS 標準。  
+ <xref:System.Object?displayProperty=nameWithType> 類型符合 CLS 標準，並且是 .NET Framework 類型系統中所有物件類型的基底類型。 .NET Framework 中的繼承若不是隱含的 (例如，<xref:System.String> 類別隱含繼承 <xref:System.Object> 類別) 就是明確的 (例如，<xref:System.Globalization.CultureNotFoundException> 類別明確繼承 <xref:System.ArgumentException> 類別，後者又明確繼承 <xref:System.SystemException> 類別，再依次明確繼承 <xref:System.Exception> 類別)。 若要讓衍生類型符合 CLS 標準，其基底類型必須符合 CLS 標準。  
   
  下面範例會示範其基底類型不符合 CLS 標準的衍生類型。 它會定義基底 `Counter` 類別，這個類別使用不帶正負號的 32 位元整數做為計數器。 因為該類別會藉由包裝不帶正負號的整數提供計數器功能，所以該類別會標記為不符合 CLS 標準。 結果，衍生的類別 `NonZeroCounter` 也不符合 CLS 標準。  
   
@@ -495,9 +494,7 @@ ms.locfileid: "57846463"
   
 <a name="CLSAttribute"></a>   
 ## <a name="the-clscompliantattribute-attribute"></a>CLSCompliantAttribute 屬性  
- 
-  <xref:System.CLSCompliantAttribute> 屬性用於表示程式項目是否符合 Common Language Specification。 
-  <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 建構函式包含單一必要參數 `isCompliant`，表示程式項目是否符合 CLS 標準。  
+ <xref:System.CLSCompliantAttribute> 屬性用於表示程式項目是否符合 Common Language Specification。 <xref:System.CLSCompliantAttribute.%23ctor%28System.Boolean%29?displayProperty=nameWithType> 建構函式包含單一必要參數 `isCompliant`，表示程式項目是否符合 CLS 標準。  
   
  在編譯時間，編譯器會偵測到假設符合 CLS 標準之不符合標準的項目，並發出警告。 對於明確宣告為不符合標準的類型或成員，編譯器不會發出警告。  
   
@@ -510,8 +507,7 @@ ms.locfileid: "57846463"
 > [!WARNING]
 >  在某些情況下，語言編譯器會強制執行符合 CLS 標準的規則，而不論是否使用 <xref:System.CLSCompliantAttribute> 屬性。 例如，定義介面的靜態成員會違反 CLS 規則。 就這一點而言，如果您在介面中定義 `static` (在 C# 中) 或 `Shared` (在 Visual Basic 中) 成員，則 C# 和 Visual Basic 編譯器都會顯示錯誤訊息，並且無法編譯應用程式。  
   
- 
-  <xref:System.CLSCompliantAttribute> 屬性標記著具有 <xref:System.AttributeUsageAttribute> 值的 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 屬性。 此值可讓您將 <xref:System.CLSCompliantAttribute> 屬性套用至任何程式項目，包括組件、模組、類型 (類別、結構、列舉、介面和委派)、類型成員 (建構函式、方法、屬性、欄位和事件)、參數、泛型參數和傳回值。 不過，在實務中，您應該只將該屬性套用至組件、類型和類型成員。 否則，當編譯器在您的程式庫的公用介面中遇到不符合標準的參數、泛型參數或傳回值時，會忽略該屬性並繼續產生編譯器警告。  
+ <xref:System.CLSCompliantAttribute> 屬性標記著具有 <xref:System.AttributeUsageAttribute> 值的 <xref:System.AttributeTargets.All?displayProperty=nameWithType> 屬性。 此值可讓您將 <xref:System.CLSCompliantAttribute> 屬性套用至任何程式項目，包括組件、模組、類型 (類別、結構、列舉、介面和委派)、類型成員 (建構函式、方法、屬性、欄位和事件)、參數、泛型參數和傳回值。 不過，在實務中，您應該只將該屬性套用至組件、類型和類型成員。 否則，當編譯器在您的程式庫的公用介面中遇到不符合標準的參數、泛型參數或傳回值時，會忽略該屬性並繼續產生編譯器警告。  
   
  <xref:System.CLSCompliantAttribute> 屬性的值是由內含的程式項目繼承。 例如，如果組件是標記為符合 CLS 標準，它的類型也會符合 CLS 標準。 如果類型是標記為符合 CLS 標準，其巢狀類型及成員也會符合 CLS 標準。  
   

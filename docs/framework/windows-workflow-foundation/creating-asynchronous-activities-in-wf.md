@@ -31,8 +31,7 @@ ms.locfileid: "57712264"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>在類別上叫用非同步方法  
- 
-  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的許多類別提供非同步功能，而且可以使用 <xref:System.Activities.AsyncCodeActivity> 基底活動，以非同步的方式叫用此功能。 在下列範例中，活動會建立以非同步方式建立方式是使用<xref:System.IO.FileStream>類別。  
+ [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中的許多類別提供非同步功能，而且可以使用 <xref:System.Activities.AsyncCodeActivity> 基底活動，以非同步的方式叫用此功能。 在下列範例中，活動會建立以非同步方式建立方式是使用<xref:System.IO.FileStream>類別。  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   
@@ -40,8 +39,7 @@ ms.locfileid: "57712264"
  上一個範例中，是在 <xref:System.IO.FileStream> 中存取於 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 中建立的 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 物件。 這是可能的，因為 `file` 變數會在 <xref:System.Activities.AsyncCodeActivityContext.UserState%2A?displayProperty=nameWithType> 的 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 屬性中傳遞。 這是在 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 之間共用狀態的正確方法。 在衍生類別 (此範例中為 `FileWriter`) 中使用成員變數來共用 <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> 和 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 之間的狀態並不正確，因為可能會有多個活動執行個體參考該活動物件。 嘗試使用成員變數來共用狀態，可能會導致其中一個 <xref:System.Activities.ActivityInstance> 的值覆寫或耗用另一個 <xref:System.Activities.ActivityInstance> 的值。  
   
 ### <a name="accessing-argument-values"></a>存取引數值  
- 
-  <xref:System.Activities.AsyncCodeActivity> 的環境包含在活動定義的引數。 您可以從存取這些引數<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>覆寫使用<xref:System.Activities.AsyncCodeActivityContext>參數。 您不可以在委派中存取引數，但可以使用其參數將引數值或任何其他所需的資料傳遞至委派。 在下列範例中，會定義產生隨機數字的活動，此活動會從其 `Max` 引數取得內含的上限。 當叫用委派時，會將引數的值傳遞至非同步程式碼。  
+ <xref:System.Activities.AsyncCodeActivity> 的環境包含在活動定義的引數。 您可以從存取這些引數<xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> / <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>覆寫使用<xref:System.Activities.AsyncCodeActivityContext>參數。 您不可以在委派中存取引數，但可以使用其參數將引數值或任何其他所需的資料傳遞至委派。 在下列範例中，會定義產生隨機數字的活動，此活動會從其 `Max` 引數取得內含的上限。 當叫用委派時，會將引數的值傳遞至非同步程式碼。  
   
  [!code-csharp[CFX_ActivityExample#9](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#9)]  
   

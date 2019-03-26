@@ -24,8 +24,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57705745"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>HOW TO：自訂繪製 ToolStrip 控制項
-
-  <xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
+<xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
   
 -   <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
   

@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57706399"
 ---
 # <a name="designing-and-implementing-custom-activities"></a>設計和實作自訂活動
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的自訂活動建立方法，是將系統提供的活動組合到複合活動中，或是建立衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新型別。 本節描述如何以上述兩種方法建立自訂活動。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的自訂活動建立方法，是將系統提供的活動組合到複合活動中，或是建立衍生自 <xref:System.Activities.CodeActivity>、<xref:System.Activities.AsyncCodeActivity> 或 <xref:System.Activities.NativeActivity> 的新型別。 本節描述如何以上述兩種方法建立自訂活動。  
   
 > [!IMPORTANT]
 >  在工作流程設計工具中，自訂活動預設會顯示成附有活動名稱的簡單矩形。 若要在工作流程設計工具中提供自訂的視覺化活動表示形式，您還必須建立自訂的設計工具。 如需詳細資訊，請參閱 <<c0> [ 使用的自訂活動設計工具和範本](using-custom-activity-designers-and-templates.md)。  

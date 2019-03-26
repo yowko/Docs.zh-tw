@@ -43,8 +43,7 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_NewFlowchartCapabilities"></a> 新的流程圖功能
 
-
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖已更新，且具有下列新功能：
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 的流程圖已更新，且具有下列新功能：
 
 - `DisplayName` 或 <xref:System.Activities.Statements.FlowSwitch%601> 活動的 <xref:System.Activities.Statements.FlowDecision> 屬性皆可編輯。 這會讓活動設計工具顯示更多關於活動用途的資訊。
 
@@ -193,8 +192,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_ActivityDelegates"></a> 定義並取用 ActivityDelegate 物件在設計工具
 
-
-  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。 在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。 如需詳細資訊，請參閱[如何：定義和使用工作流程設計工具中的活動委派](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)。
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中的活動使用 <xref:System.Activities.ActivityDelegate> 物件來公開執行點，其中工作流程的其他部分可與工作流程的執行互動，但使用這些執行點通常需要許多程式碼。 在這個版本中，開發人員可以使用工作流程設計工具來定義及取用活動委派。 如需詳細資訊，請參閱[如何：定義和使用工作流程設計工具中的活動委派](/visualstudio/workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer)。
 
 ### <a name="BKMK_BuildTimeValidation"></a> 建置階段驗證
 
@@ -210,8 +208,7 @@ C# 運算式會在設計階段進行驗證。 C# 運算式中的錯誤會用紅�
 
 ### <a name="BKMK_ExpressionExtensibility"></a> 運算式擴充性
 
-
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 有提供一種方法，讓開發人員能夠建立自己的運算式和運算式編寫經驗，並可插入至工作流程設計工具。
+[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 有提供一種方法，讓開發人員能夠建立自己的運算式和運算式編寫經驗，並可插入至工作流程設計工具。
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> 選擇加入的重新裝載設計工具中的 Workflow 4.5 功能
 

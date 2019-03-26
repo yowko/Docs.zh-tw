@@ -370,8 +370,7 @@ public class Employee {
 
 `CreatePO` 方法會建立 `PurchaseOrder`、`Address` 和 `OrderedItem` 類別物件，並且設定公用欄位的值。 該方法也建構用來序列化及還原序列化 <xref:System.Xml.Serialization.XmlSerializer>`PurchaseOrder`之  類別的執行個體。 請注意，程式碼把要序列化之類別的型別傳遞給建構函式。 程式碼也建立用來將 XML 資料流寫入 XML 文件的 `FileStream`。
 
-
-  `ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同`CreatePo`方法中，您必須先建構<xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化建構函式類別的型別。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。
+`ReadPo` 方法比較簡單。 它只會建立要還原序列化的物件，並讀出它們的值。 如同`CreatePo`方法中，您必須先建構<xref:System.Xml.Serialization.XmlSerializer>，傳遞要還原序列化建構函式類別的型別。 同時，需要有 <xref:System.IO.FileStream> 讀取 XML 文件。 若要還原序列化物件，以 <xref:System.Xml.Serialization.XmlSerializer.Deserialize%2A> 做為引數呼叫 <xref:System.IO.FileStream> 方法。 還原序列化物件必須轉型為型別 `PurchaseOrder`的物件變數。 然後程式碼會讀取已還原序列化的 `PurchaseOrder`值。 請注意，您也可以讀取已建立的 PO.xml 檔案，檢視實際的 XML 輸出。
 
 ```vb
 Imports System

@@ -13,8 +13,7 @@ ms.lasthandoff: 02/26/2019
 ms.locfileid: "56836444"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 擴充物件
-擴充物件可用來擴充樣式表的功能。 
-  <xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。  
+擴充物件可用來擴充樣式表的功能。 <xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。  
   
  以下是使用擴充物件而不使用內嵌指令碼的優點：  
   

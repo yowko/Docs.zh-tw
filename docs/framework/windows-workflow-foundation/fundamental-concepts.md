@@ -10,8 +10,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57703409"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>基本 Windows Workflow 概念
-
-  [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的工作流程開發運用了一些開發人員可能未曾使用過的概念。 本主題描述其中的部分概念及其實作方式。  
+[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 中的工作流程開發運用了一些開發人員可能未曾使用過的概念。 本主題描述其中的部分概念及其實作方式。  
   
 ## <a name="workflows-and-activities"></a>工作流程與活動  
  工作流程是結構化的動作集合，這些動作會以處理序為模型。 工作流程中的每一個活動都會製作成活動的模型。 主機與工作流程互動的方式，是使用 <xref:System.Activities.WorkflowInvoker> 將工作流程當成方法來叫用，以 <xref:System.Activities.WorkflowApplication> 明確控制單一工作流程執行個體的執行，並以 <xref:System.ServiceModel.WorkflowServiceHost> 在多執行個體案例中進行以訊息為基礎的互動。 由於工作流程的步驟定義為活動的階層，因此階層中最上方的活動可說是用於定義工作流程本身。 這個階層模型取代了舊版中明確的 `SequentialWorkflow` 及 `StateMachineWorkflow` 類別。 活動本身會開發做為其他活動的集合 (使用 <xref:System.Activities.Activity> 類別做為基底，通常使用 XAML 來定義)，或是使用 <xref:System.Activities.CodeActivity> 類別 (可以使用執行階段進行資料存取) 或 <xref:System.Activities.NativeActivity> 類別 (會向活動作者公開工作執行階段的廣度)，以自訂方式來建立。 使用 <xref:System.Activities.CodeActivity> 和 <xref:System.Activities.NativeActivity> 來開發的活動，是使用 CLR 相容語言 (例如 C#) 開發而成。  

@@ -41,8 +41,7 @@ ms.locfileid: "56836561"
   
 -   允許提供者追蹤觀察者的機制。 一般而言，提供者會使用容器物件 (例如 <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> 物件) 保留已訂閱通知的 <xref:System.IObserver%601> 實作參考。 基於這個目的使用儲存容器，可讓提供者處理零個到無限多個觀察者。 觀察者接收通知的順序並未定義；提供者可自由使用任何方法來決定順序。  
   
--   
-  <xref:System.IDisposable> 實作，可讓提供者在通知完成時移除觀察者。 觀察者會從 <xref:System.IObservable%601.Subscribe%2A> 方法接收 <xref:System.IDisposable> 實作的參考，如此觀察者同樣可以在提供者完成傳送通知之前呼叫 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法來取消訂閱。  
+-   <xref:System.IDisposable> 實作，可讓提供者在通知完成時移除觀察者。 觀察者會從 <xref:System.IObservable%601.Subscribe%2A> 方法接收 <xref:System.IDisposable> 實作的參考，如此觀察者同樣可以在提供者完成傳送通知之前呼叫 <xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> 方法來取消訂閱。  
   
 -   包含提供者傳送給觀察者之資料的物件。 這個物件的類型對應至 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面的泛型類型參數。 雖然這個物件可以與 <xref:System.IObservable%601> 實作相同，但它常是不同的類型。  
   
@@ -50,14 +49,12 @@ ms.locfileid: "56836561"
 >  除了實作觀察者設計模式之外，您可能對探索使用 <xref:System.IObservable%601> 和 <xref:System.IObserver%601> 介面建置的程式庫有興趣。 例如，[Reactive Extensions for .NET (Rx)](https://docs.microsoft.com/previous-versions/dotnet/reactive-extensions/hh242985(v=vs.103)) 是由一組擴充方法和 LINQ 標準序列運算子所組成，可支援非同步程式設計。  
   
 ## <a name="implementing-the-pattern"></a>實作模式  
- 下列範例會使用觀察者設計模式實作機場行李提領資訊系統。 
-  `BaggageInfo` 類別提供有關抵達班機及可提領各班機行李之轉盤的資訊。 下列範例會提供示範。  
+ 下列範例會使用觀察者設計模式實作機場行李提領資訊系統。 `BaggageInfo` 類別提供有關抵達班機及可提領各班機行李之轉盤的資訊。 下列範例會提供示範。  
   
  [!code-csharp[Conceptual.ObserverDesignPattern#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#1)]
  [!code-vb[Conceptual.ObserverDesignPattern#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#1)]  
   
- 
-  `BaggageHandler` 負責接收有關抵達班機和行李提領轉盤的資訊。 它在內部維護兩個集合：  
+ `BaggageHandler` 負責接收有關抵達班機和行李提領轉盤的資訊。 它在內部維護兩個集合：  
   
 -   `observers` - 將接收更新資訊的用戶端集合。  
   
@@ -79,16 +76,12 @@ ms.locfileid: "56836561"
  [!code-csharp[Conceptual.ObserverDesignPattern#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/provider.cs#3)]
  [!code-vb[Conceptual.ObserverDesignPattern#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/provider.vb#3)]  
   
- 下列範例提供名為 `ArrivalsMonitor` 的 <xref:System.IObserver%601> 實作，其為顯示行李提領資訊的基底類別。 資訊會依照起飛城市名稱的英文字母順序顯示。 
-  `ArrivalsMonitor` 的方法會標記為 `overridable` (在 Visual Basic 中) 或 `virtual` (在 C# 中)，如此衍生類別就能一次覆寫所有方法。  
+ 下列範例提供名為 `ArrivalsMonitor` 的 <xref:System.IObserver%601> 實作，其為顯示行李提領資訊的基底類別。 資訊會依照起飛城市名稱的英文字母順序顯示。 `ArrivalsMonitor` 的方法會標記為 `overridable` (在 Visual Basic 中) 或 `virtual` (在 C# 中)，如此衍生類別就能一次覆寫所有方法。  
   
  [!code-csharp[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.observerdesignpattern/cs/observer.cs#4)]
  [!code-vb[Conceptual.ObserverDesignPattern#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.observerdesignpattern/vb/observer.vb#4)]  
   
- 
-  `ArrivalsMonitor` 類別包含 `Subscribe` 和 `Unsubscribe` 方法。 
-  `Subscribe` 方法可讓類別將呼叫 <xref:System.IObservable%601.Subscribe%2A> 所傳回的 <xref:System.IDisposable> 實作儲存至私用變數。 
-  `Unsubscribe` 方法可讓類別藉由呼叫提供者的 <xref:System.IDisposable.Dispose%2A> 實作來取消訂閱通知。 `ArrivalsMonitor` 還提供 <xref:System.IObserver%601.OnNext%2A>、<xref:System.IObserver%601.OnError%2A> 和 <xref:System.IObserver%601.OnCompleted%2A> 方法的實作。 只有 <xref:System.IObserver%601.OnNext%2A> 實作會包含大量程式碼。 這個方法可處理私用且已排序的泛型 <xref:System.Collections.Generic.List%601> 物件，該物件會維護有關抵達班機的起飛機場以及可提領其行李之轉盤的資訊。 如果 `BaggageHandler` 類別報告有新班機抵達，則 <xref:System.IObserver%601.OnNext%2A> 方法實作會將該班機的相關資訊加入清單中。 如果 `BaggageHandler` 類別報告班機的行李已卸載完畢，則 <xref:System.IObserver%601.OnNext%2A> 方法會從清單中移除該班機。 只要發生變更，清單就會排序並顯示於主控台上。  
+ `ArrivalsMonitor` 類別包含 `Subscribe` 和 `Unsubscribe` 方法。 `Subscribe` 方法可讓類別將呼叫 <xref:System.IObservable%601.Subscribe%2A> 所傳回的 <xref:System.IDisposable> 實作儲存至私用變數。 `Unsubscribe` 方法可讓類別藉由呼叫提供者的 <xref:System.IDisposable.Dispose%2A> 實作來取消訂閱通知。 `ArrivalsMonitor` 還提供 <xref:System.IObserver%601.OnNext%2A>、<xref:System.IObserver%601.OnError%2A> 和 <xref:System.IObserver%601.OnCompleted%2A> 方法的實作。 只有 <xref:System.IObserver%601.OnNext%2A> 實作會包含大量程式碼。 這個方法可處理私用且已排序的泛型 <xref:System.Collections.Generic.List%601> 物件，該物件會維護有關抵達班機的起飛機場以及可提領其行李之轉盤的資訊。 如果 `BaggageHandler` 類別報告有新班機抵達，則 <xref:System.IObserver%601.OnNext%2A> 方法實作會將該班機的相關資訊加入清單中。 如果 `BaggageHandler` 類別報告班機的行李已卸載完畢，則 <xref:System.IObserver%601.OnNext%2A> 方法會從清單中移除該班機。 只要發生變更，清單就會排序並顯示於主控台上。  
   
  下列範例包含執行個體化 `BaggageHandler` 類別及 `ArrivalsMonitor` 類別之兩個執行個體的應用程式進入點，並且使用 `BaggageHandler.BaggageStatus` 方法加入和移除抵達班機的相關資訊。 在每個案例中，觀察者都會接收更新並且正確顯示行李提領資訊。  
   

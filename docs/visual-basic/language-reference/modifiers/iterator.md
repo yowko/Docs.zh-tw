@@ -32,8 +32,7 @@ ms.locfileid: "56969280"
  迭代器可以是匿名函式。 如需詳細資訊，請參閱 [Iterator](../../programming-guide/concepts/iterators.md)。  
   
 ## <a name="usage"></a>使用量  
- 
-  `Iterator` 修飾詞可用於以下內容：  
+ `Iterator` 修飾詞可用於以下內容：  
   
 -   [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)  
   

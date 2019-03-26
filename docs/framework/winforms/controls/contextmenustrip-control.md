@@ -14,8 +14,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57719451"
 ---
 # <a name="contextmenustrip-control"></a>ContextMenuStrip 控制項
-
-  <xref:System.Windows.Forms.ContextMenuStrip> 控制項提供您要使其與控制項產生關聯的捷徑功能表。  
+<xref:System.Windows.Forms.ContextMenuStrip> 控制項提供您要使其與控制項產生關聯的捷徑功能表。  
   
 ## <a name="in-this-section"></a>本節內容  
  [ContextMenuStrip 控制項概觀](contextmenustrip-control-overview.md)  

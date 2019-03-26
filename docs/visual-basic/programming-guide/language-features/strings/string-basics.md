@@ -14,16 +14,14 @@ ms.lasthandoff: 02/28/2019
 ms.locfileid: "56965981"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic 中的字串基礎
-
-  `String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中的字串的基本概念。  
+`String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中的字串的基本概念。  
   
 ## <a name="string-variables"></a>字串變數  
  可將代表字元數列的常值指派給字串的執行個體。 例如:   
   
  [!code-vb[VbVbalrStrings#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#63)]  
   
- 
-  `String` 變數也可以接受評估為字串的任何運算式。 範例如下所示：  
+ `String` 變數也可以接受評估為字串的任何運算式。 範例如下所示：  
   
  [!code-vb[VbVbalrStrings#64](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#64)]  
   

@@ -114,8 +114,7 @@ ms.locfileid: "57364771"
 
 ### <a name="determining-an-assemblys-trust-level"></a>決定組件的信任層級
 
-CAS 原則通常用於決定組件或應用程式定義域的權限授權集或信任層級。 
-  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 會公開下列實用的屬性，這些屬性不需要解析安全性原則：
+CAS 原則通常用於決定組件或應用程式定義域的權限授權集或信任層級。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 會公開下列實用的屬性，這些屬性不需要解析安全性原則：
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -127,8 +126,7 @@ CAS 原則通常用於決定組件或應用程式定義域的權限授權集或�
 
 ### <a name="application-domain-sandboxing"></a>應用程式定義域沙箱作業
 
-
-  <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]會公開成員，不需要使用<xref:System.Security.Policy.PolicyLevel>針對此目的。 如需詳細資訊，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
+<xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> 方法通常用於對應用程式定義域中的組件進行沙箱化處理。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]會公開成員，不需要使用<xref:System.Security.Policy.PolicyLevel>針對此目的。 如需詳細資訊，請參閱[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>決定部分信任程式碼的安全或合理權限集合
 

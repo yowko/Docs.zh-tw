@@ -40,8 +40,7 @@ ms.locfileid: "57720575"
  支援已移轉至 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 之現有 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] C# 工作流程專案中的 Visual Basic 運算式。 當在工作流程設計工具中檢視 Visual Basic 運算式時，取代現有的 Visual Basic 運算式的文字**XAML 中設定的值**，除非 Visual Basic 運算式是有效的 C# 語法。 如果 Visual Basic 運算式為有效的 C# 語法，則會顯示該運算式。 若要將 Visual Basic 運算式更新為 C#，您可以在工作流程設計工具中編輯這些運算式，並指定相等的 C# 運算式。 您不需要將 Visual Basic 運算式更新為 C#，不過一旦這些運算式在工作流程設計工具中更新，將會轉換為 C#，且可能無法還原為 Visual Basic。
 
 ### <a name="CodeWorkflows"></a> 在程式碼工作流程中使用 C# 運算式
- 
-  [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 程式碼為主的工作流程支援 C# 運算式，但是您必須使用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType> 編譯 C# 運算式，工作流程才能叫用運算式。 工作流程作者可以使用 `CSharpValue` 來表示運算式的右值 (r-value)，並使用 `CSharpReference` 來表示運算式的左值 (l-value)。 下列範例使用 `Assign` 活動內含的 `WriteLine` 活動和 `Sequence` 活動，來建立工作流程。 該範例為 `CSharpReference` 的 `To` 引數，指定一個 `Assign`，表示運算式的左值。 `CSharpValue` 的 `Value` 引數和 `Assign` 的 `Text` 引數指定一個 `WriteLine`，表示這兩個運算式的右值。
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 程式碼為主的工作流程支援 C# 運算式，但是您必須使用 <xref:System.Activities.XamlIntegration.TextExpressionCompiler.Compile%2A?displayProperty=nameWithType> 編譯 C# 運算式，工作流程才能叫用運算式。 工作流程作者可以使用 `CSharpValue` 來表示運算式的右值 (r-value)，並使用 `CSharpReference` 來表示運算式的左值 (l-value)。 下列範例使用 `Assign` 活動內含的 `WriteLine` 活動和 `Sequence` 活動，來建立工作流程。 該範例為 `CSharpReference` 的 `To` 引數，指定一個 `Assign`，表示運算式的左值。 `CSharpValue` 的 `Value` 引數和 `Assign` 的 `Text` 引數指定一個 `WriteLine`，表示這兩個運算式的右值。
 
 ```csharp
 Variable<int> n = new Variable<int>

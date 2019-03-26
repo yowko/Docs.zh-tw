@@ -22,8 +22,7 @@ ms.locfileid: "56261528"
   
 -   執行當做 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 實作的處理站。  
   
- 
-  <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別都繼承自定義傳回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 之合約的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別。  
+ <xref:System.ServiceModel.Description.ClientCredentials> 和 <xref:System.ServiceModel.Description.ServiceCredentials> 類別都繼承自定義傳回 <xref:System.ServiceModel.Security.SecurityCredentialsManager> 之合約的抽象 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別。  
   
  WCF 中提供的預設實作會支援的系統提供的認證類型，並建立安全性權杖管理員，能夠處理那些認證類型。  
   
