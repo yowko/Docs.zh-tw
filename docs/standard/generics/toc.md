@@ -1,5 +1,0 @@
-# [泛型](index.md)
-## [.NET 中的泛型集合](collections.md)
-## [管理陣列和清單的泛型委派](delegates-for-manipulating-arrays-and-lists.md)
-## [泛型介面](interfaces.md)
-## [共變數和反變數](covariance-and-contravariance.md)

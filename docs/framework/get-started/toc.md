@@ -1,5 +1,0 @@
-# [快速入門](index.md)
-## [概觀](overview.md)
-## [.NET Framework 和不定期發行](the-net-framework-and-out-of-band-releases.md)
-## [.NET Core 和開放原始碼](net-core-and-open-source.md)
-## [系統需求](system-requirements.md)
