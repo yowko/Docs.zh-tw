@@ -839,8 +839,7 @@ End Function
 
 **SHA-2 雜湊的 SignedXml 支援**
 
-
-  [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增 <xref:System.Security.Cryptography.Xml.SignedXml> RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS #1 簽章方法，和 SHA256、SHA384 及 SHA512 參照類別摘要演算法的支援。
+[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 新增 <xref:System.Security.Cryptography.Xml.SignedXml> RSA-SHA256、RSA-SHA384 和 RSA-SHA512 PKCS #1 簽章方法，和 SHA256、SHA384 及 SHA512 參照類別摘要演算法的支援。
 
 URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
 
@@ -869,7 +868,7 @@ URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
 
 新增 `PoolBlockingPeriod` 關鍵字可讓您選取最適合您應用程式的封鎖期間。 這些值包括：
 
-`Auto`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.Auto>
 
 對於連線到 Azure SQL 資料庫的應用程式，已停用連線集區封鎖期間，而對於連線到任何其他 SQL Server 執行個體的應用程式，已啟用連線集區封鎖期間。 這是預設值。 如果伺服器端點名稱結尾是下列任一項，則會被視為 Azure SQL 資料庫︰
 
@@ -881,11 +880,11 @@ URI 常數會公開在 <xref:System.Security.Cryptography.Xml.SignedXml>：
 
 - .database.cloudapi.de
 
-`AlwaysBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock>
 
 一律啟用連線集區封鎖期間。
 
-`NeverBlock`
+<xref:System.Data.SqlClient.PoolBlockingPeriod.NeverBlock>
 
 一律停用連線集區封鎖期間。
 
