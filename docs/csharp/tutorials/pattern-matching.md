@@ -3,29 +3,29 @@ title: 使用模式比對功能來擴充資料類型
 description: 此進階教學課程示範如何使用模式比對技術，以個別建立的資料和演算法來建立功能。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 0d7c853709d0986710bf4d1a72daeb1f7cda3109
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c064af5fdf85587d0c4fa1471894122d6fe0d2f7
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125807"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262514"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>教學課程：使用模式比對功能來擴充資料類型
 
 C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，有了新的運算式和模式。 您可以撰寫行為如同您擴充其他程式庫中之型別的功能。 模式的另一個用途是建立應用程式需要的功能，但該功能不是要擴充之型別的基本功能。
 
-在此教學課程中，您將了解如何：
+在本教學課程中，您將了解如何：
 
 > [!div class="checklist"]
-> * 如何辨識應該使用模式比對的情況。
-> * 如何使用模式比對運算式來根據型別和屬性值實作行為。
-> * 如何結合模式比對與其他技術，以建立完整演算法。
+> * 辨識應該使用模式比對的情況。
+> * 使用模式比對運算式根據類型和屬性值實作行為。
+> * 結合模式比對與其他技術，建立完整的演算法。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 您將需要設定您的機器，以執行 .NET Core (包括 C# 8.0 預覽版編譯器)。 您可以在最新的 [Visual Studio 2019 預覽](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) (或至少 [.NET Core 3.0 預覽版](https://dotnet.microsoft.com/download/dotnet-core/3.0)以上) 取得 C# 8 預覽版編譯器。
 
-此教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
+本教學課程假設您已熟悉 C# 和 .NET，包括 Visual Studio 或 .NET Core CLI。
 
 ## <a name="scenarios-for-pattern-matching"></a>模式比對的案例
 
@@ -45,12 +45,12 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 
 ## <a name="pattern-matching-designs"></a>模式比對設計
 
-用於此教學課程中的案例強調適合使用模式比對來解決的問題類型： 
+本教學課程所使用案例會醒目提示適合以模式比對來解決的問題類型：
 
 - 您要處理的物件不在符合您目標的物件階層中。 您可能會使用屬於不相關之系統的類別。
 - 您要新增的功能不屬於這些類別的核心抽象概念。 車輛付的通行費隨不同類型的車輛而「變更」，但通行費不是車輛的核心函式。
 
-當資料的「圖形」與資料上的「作業」不是一起描述時，C# 中的模式比對功能可讓它變得更容易使用。 
+當資料的「圖形」與資料上的「作業」不是一起描述時，C# 中的模式比對功能可讓它變得更容易使用。
 
 ## <a name="implement-the-basic-toll-calculations"></a>實作基本通行費計算
 
@@ -61,7 +61,7 @@ C# 7 引進基本的模式比對功能。 那些功能已在 C# 8 中擴充，�
 - `Bus` 是 $5.00。
 - `DeliveryTruck` 是 $10.00
 
-建立新的 `TollCalculator` 類別，並在車輛類型上實作模式比對來取得通行費金額。
+建立新的 `TollCalculator` 類別，並在車輛類型上實作模式比對來取得通行費金額。 下列程式碼示範 `TollCalculator` 的初始實作。
 
 ```csharp
 using System;
@@ -87,7 +87,7 @@ namespace toll_calculator
 }
 ```
 
-上述程式碼使用可測試**型別模式**的 **switch 運算式** (與 [`switch`](../language-reference/keywords/switch.md) 陳述式不同)。 **switch 運算式**的開始是變數 (上述程式碼中的 `vehicle`)，接著是 `switch` 關鍵字。 然後所有的 **switch 臂**都在大括號內。 `switch` 運算式會對括住 `switch` 陳述式的語法進行其他細分。 已省略 `case` 關鍵字，且每個臂的結果都是運算式。 最後兩個臂顯示新的語言功能。 `{ }` 案例比對不符合先前臂的任何非 Null 物件。 此臂會攔截傳遞到此方法的任何不正確型別。 最後，`null` 模式會攔截傳遞至這個方法的 `null`。 因為其他型別模式只比對正確型別的非 Null 物件，所以 `null` 可以在最後。
+上述程式碼使用可測試**型別模式**的 **switch 運算式** (與 [`switch`](../language-reference/keywords/switch.md) 陳述式不同)。 **switch 運算式**的開始是變數 (上述程式碼中的 `vehicle`)，接著是 `switch` 關鍵字。 然後所有的 **switch 臂**都在大括號內。 `switch` 運算式會對括住 `switch` 陳述式的語法進行其他細分。 已省略 `case` 關鍵字，且每個臂的結果都是運算式。 最後兩個臂顯示新的語言功能。 `{ }` 案例比對不符合先前臂的任何非 Null 物件。 此臂會攔截傳遞到此方法的任何不正確型別。  `{ }` 案例必須遵循每種車輛類型的案例。 順序如已顛倒，則 `{ }` 案例會優先。 最後，`null` 模式會偵測 `null` 於何時傳遞至這個方法。 因為其他型別模式只比對正確型別的非 Null 物件，所以 `null` 可以在最後。
 
 您可以使用 `Program.cs` 中的下列程式碼來測試此程式碼：
 
@@ -121,7 +121,7 @@ namespace toll_calculator
             }
             catch (ArgumentException e)
             {
-                Console.WriteLine("Caught an argument exception when using the wrong type", DayOfWeek.Friday);
+                Console.WriteLine("Caught an argument exception when using the wrong type");
             }
             try
             {
@@ -150,7 +150,7 @@ namespace toll_calculator
 - 小於 50% 載滿的巴士要付額外的 $2.00。
 - 大於 90% 載滿的巴士可折價 $1.00。
 
-這些規則可以在相同的 switch 運算式中使用**屬性模式**來實作。 一旦判斷出型別，屬性模式就會檢查物件的屬性。  單一的 `Car` 案例展開為四個不同案例：
+這些規則可以在相同的 switch 運算式中使用**屬性模式**來實作。 一旦判斷出型別，屬性模式就會檢查物件的屬性。 單一的 `Car` 案例展開為四個不同案例：
 
 ```csharp
 vehicle switch
@@ -158,13 +158,13 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1 }       => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
+    Car c                       => 2.00m - 1.0m,
 
     // ...
 };
 ```
 
-前三個案例測試型別是否為 `Car`，然後檢查 `Passengers` 屬性的值。 如果兩個都符合，系統就會評估該運算式並傳回。 最後一個子句顯示 switch 臂的 `when` 子句。 您使用 `when` 子句是測試條件，而不是屬性是否相等。 在上述範例中，`when` 子句會測試汽車中的乘客是否大於 2 個。 嚴格來說，它不需要在此範例中。
+前三個案例測試型別是否為 `Car`，然後檢查 `Passengers` 屬性的值。 如果兩個都符合，系統就會評估該運算式並傳回。
 
 您也可以用類似的方式來展開計程車的案例：
 
@@ -192,14 +192,14 @@ vehicle switch
     // ...
 
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     // ...
 };
 ```
 
-通行費主管機關不在意貨車中的乘客數目。 相反地，他們是根據卡車的重量類別來收更多費用。 超過 5000 磅的卡車要付額外的 $5.00。 未滿 3000 磅的輕型卡車可折價 $2.00。  該規則使用下列程式碼來實作：
+通行費主管機關不在意貨車中的乘客數目。 相反地，他們是根據卡車的重量類別來收更多費用。 超過 5000 磅的卡車要付額外的 $5.00。 未滿 3000 磅的輕型卡車有美金 $2.00 元折扣。 該規則使用下列程式碼來實作：
 
 ```csharp
 vehicle switch
@@ -212,7 +212,7 @@ vehicle switch
 };
 ```
 
-當您完成之後，就會有看起來像下面的方法：
+前一個程式碼顯示 switch 臂的 `when` 子句。 您使用 `when` 子句是測試條件，而不是屬性是否相等。 當您完成之後，就會有看起來像下面的方法：
 
 ```csharp
 vehicle switch
@@ -220,17 +220,17 @@ vehicle switch
     Car { Passengers: 0}        => 2.00m + 0.50m,
     Car { Passengers: 1}        => 2.0m,
     Car { Passengers: 2}        => 2.0m - 0.50m,
-    Car c when c.Passengers > 2 => 2.00m - 1.0m,
-   
+    Car c                       => 2.00m - 1.0m,
+
     Taxi { Fares: 0}  => 3.50m + 1.00m,
     Taxi { Fares: 1 } => 3.50m,
     Taxi { Fares: 2}  => 3.50m - 0.50m,
     Taxi t            => 3.50m - 1.00m,
-    
+
     Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+    Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
     Bus b => 5.00m,
-    
+
     DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
     DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
     DeliveryTruck t => 10.00m,
@@ -252,7 +252,7 @@ public decimal CalculateToll(object vehicle) =>
             2 => 2.0m - 0.5m,
             _ => 2.00m - 1.0m
         },
-    
+
         Taxi t => t.Fares switch
         {
             0 => 3.50m + 1.00m,
@@ -260,11 +260,11 @@ public decimal CalculateToll(object vehicle) =>
             2 => 3.50m - 0.50m,
             _ => 3.50m - 1.00m
         },
-    
+
         Bus b when ((double)b.Riders / (double)b.Capacity) < 0.50 => 5.00m + 2.00m,
-        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m, 
+        Bus b when ((double)b.Riders / (double)b.Capacity) > 0.90 => 5.00m - 1.00m,
         Bus b => 5.00m,
-    
+
         DeliveryTruck t when (t.GrossWeightClass > 5000) => 10.00m + 5.00m,
         DeliveryTruck t when (t.GrossWeightClass < 3000) => 10.00m - 2.00m,
         DeliveryTruck t => 10.00m,
@@ -280,7 +280,7 @@ public decimal CalculateToll(object vehicle) =>
 
 針對最後一個功能，通行費主管機關想要新增有時間性的尖峰時段計費。 在早上和晚上尖峰時段，通行費會加倍。 該規則只影響單向的交通：早上尖峰時段進入城市，以及晚上尖峰時段離開城市。 在工作日的其他時間，通行費增加 50%。 在半夜和清晨，通行費減少 25%。 在週末，無論時間皆為一般費率。
 
-您會為此功能使用模式比對，但您會將它與其他技術整合。 您可以建立單一模式比對運算式，納入所有方向、星期幾和時間的組合。 結果會是一個複雜的運算式， 而它會難以閱讀及理解。 這樣會讓確認其正確性變得困難。 反之，結合那些方法來建立值的元組，一致地描述所有那些狀態。 然後使用模式比對來計算通行費的乘數。 元組包含三個不連續的條件：
+您會為此功能使用模式比對，但您會將它與其他技術整合。 您可以建置單一模式比對運算式，納入所有方向、星期幾和時間的組合。 結果會是一個複雜的運算式， 而它會難以閱讀及理解。 這樣會讓確認其正確性變得困難。 反之，結合那些方法來建立值的元組，一致地描述所有那些狀態。 然後使用模式比對來計算通行費的乘數。 元組包含三個不連續的條件：
 
 - 星期是工作日或週末。
 - 收取通行費時的時段。
@@ -288,7 +288,7 @@ public decimal CalculateToll(object vehicle) =>
 
 下表顯示輸入值和尖峰時段計費乘數的組合：
 
-| 星期幾        | 時間         | 方向 | 溢價 |
+| Day        | 時間         | 方向 | 溢價 |
 | ---------- | ------------ | --------- |--------:|
 | 工作日    | 早上尖峰時段 | 進入   | x 2.00  |
 | 工作日    | 早上尖峰時段 | 離開  | x 1.00  |
@@ -309,7 +309,7 @@ public decimal CalculateToll(object vehicle) =>
 
 三個變數的 16 個不同組合。 透過結合一些條件，您將會簡化最終的 switch 運算式。
 
-針對收取通行費時的時間，收取通行費的系統使用 <xref:System.DateTime> 結構。 建置從上述表格建立變數的成員方法。  下列函式會當作模式比對 switch 運算式使用，以表達 <xref:System.DateTime> 是代表週末或工作日：
+針對何時收取通行費，收取通行費的系統會使用 <xref:System.DateTime> 結構。 建置從上述表格建立變數的成員方法。 下列函式會使用模式比對 switch 運算式，表達 <xref:System.DateTime> 代表週末或工作日：
 
 ```csharp
 private static bool IsWeekDay(DateTime timeOfToll) =>
@@ -345,7 +345,7 @@ private static bool IsWeekDay(DateTime timeOfToll) =>
 (false, _, _) => 1.0m,
 ```
 
-進入和離開的流量在工作日日間和夜間，都有相同的乘數。 這四個 switch 臂可以取代為下列兩行：
+進入和離開的流量在工作日日間和夜間，都有相同的乘數。 這四個 switch 臂都可以替換成下列兩行：
 
 ```csharp
 (true, TimeBand.Overnight, _) => 0.75m,
@@ -372,9 +372,9 @@ public decimal PeakTimePremium(DateTime timeOfToll, bool inbound) =>
 
 [!code-csharp[SimplifiedTuplePattern](../../../samples/csharp/tutorials/patterns/finished/toll-calculator/TollCalculator.cs#FinalTuplePattern)]
 
-此範例強調模式比對的其中一個優點。 模式分支是按順序評估。 如果您重新排列它們，使前面的分支處理其中一個後面的案例，此時編譯器會警告您。 那些語言規則讓您可以放心地進行上述簡化，而不需擔心程式碼會變更。
+此範例會醒目提示模式比對的優點之一：依序評估模式分支。 如果您重新排列它們，讓前面分支處理其中一個最近的案例，則編譯器會提出有關無法連線程式碼的警告。 那些語言規則讓您可以放心地進行上述簡化，而不需擔心程式碼會變更。
 
-模式比對提供自然的語法，可實作您使用物件導向技術可能會建立的不同解決方案。 雲端是造成資料和功能分開的原因。 資料的「圖形」與資料上的「作業」不需要一起描述。 在此教學課程中，您以和現有資料原始功能完全不同的方式取用它們。 模式比對讓您能夠透過那些型別撰寫功能，即使您無法擴充那些型別。
+模式比對讓某些類型的程式碼更容易讀取，並在您無法將程式碼新增至類別時，提供物件導向技術的替代方式。 雲端是造成資料和功能分開的原因。 資料的「圖形」與資料上的「作業」不需要一起描述。 在此教學課程中，您以和現有資料原始功能完全不同的方式取用它們。 模式比對讓您能夠撰寫覆寫這些類型的功能，即使您無法擴充它們。
 
 ## <a name="next-steps"></a>後續步驟
 

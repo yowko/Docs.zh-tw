@@ -6,12 +6,12 @@ helpviewer_keywords:
 - types [C#], nested types
 - C# language, type members
 ms.assetid: 4a30a4ab-d690-4936-9124-92ce9448665a
-ms.openlocfilehash: 246ddeeab9814f32b0a3bf0d3586007a434d3953
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9497eb265251f4f8affd5e2c6c7e6ed401263984
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592846"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262475"
 ---
 # <a name="members-c-programming-guide"></a>成員 (C# 程式設計手冊)
 類別和結構的成員可表示其資料與行為。 類別的成員包含在所有類別中宣告的成員，以及在其繼承階層架構之所有類別中宣告的所有成員 (建構函式和完成項除外)。 基底類別中的私用成員可繼承衍生類別，但卻無法從衍生類別進行存取。  
@@ -21,7 +21,7 @@ ms.locfileid: "54592846"
 |成員|說明|  
 |------------|-----------------|  
 |[欄位](../../../csharp/programming-guide/classes-and-structs/fields.md)|欄位是在類別範圍中宣告的變數。 欄位可以是內建的數字類型或其他類別的執行個體。 例如，行事曆類別可能包含目前日期的欄位。|  
-|[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)|常數是欄位或屬性，其值於編譯時期設定且無法變更。|  
+|[常數](../../../csharp/programming-guide/classes-and-structs/constants.md)|常數是其值在編譯階段設定且無法變更的欄位。|  
 |[屬性](../../../csharp/programming-guide/classes-and-structs/properties.md)|屬性是類別上的方法，可供存取，就像類別上的欄位一樣。 屬性可以保護類別欄位，以免在物件不知情的情況下受到變更。|  
 |[方法](../../../csharp/programming-guide/classes-and-structs/methods.md)|方法會定義類別可以執行的動作。 方法可接受參數以提供輸入資料，並藉由參數傳回輸出資料。 方法也可以不使用參數，直接傳回值。|  
 |[事件](../../../csharp/programming-guide/events/index.md)|事件會提供發生次數的通知 (例如按鈕點選) 或針對其他物件成功完成方法的通知。 您可以使用委派來定義和觸發事件。|  

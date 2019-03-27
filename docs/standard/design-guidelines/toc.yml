@@ -1,0 +1,111 @@
+items:
+- name: Framework 設計方針
+  href: index.md
+  items:
+  - name: 命名方針
+    href: naming-guidelines.md
+    items:
+    - name: 大小寫慣例
+      href: capitalization-conventions.md
+    - name: 一般命名慣例
+      href: general-naming-conventions.md
+    - name: 組件和 DLL 的名稱
+      href: names-of-assemblies-and-dlls.md
+    - name: 命名空間的名稱
+      href: names-of-namespaces.md
+    - name: 類別、結構和介面的名稱
+      href: names-of-classes-structs-and-interfaces.md
+    - name: 類型成員名稱
+      href: names-of-type-members.md
+    - name: 命名參數
+      href: naming-parameters.md
+    - name: 命名資源
+      href: naming-resources.md
+  - name: 類型設計方針
+    href: type.md
+    items:
+    - name: 在類別和結構之間選擇
+      href: choosing-between-class-and-struct.md
+    - name: 抽象類別設計
+      href: abstract-class.md
+    - name: 靜態類別設計
+      href: static-class.md
+    - name: 介面設計
+      href: interface.md
+    - name: 結構設計
+      href: struct.md
+    - name: 列舉設計
+      href: enum.md
+    - name: 巢狀類型
+      href: nested-types.md
+  - name: 成員設計方針
+    href: member.md
+    items:
+    - name: 成員多載
+      href: member-overloading.md
+    - name: 屬性設計
+      href: property.md
+    - name: 建構函式設計
+      href: constructor.md
+    - name: 事件設計
+      href: event.md
+    - name: 欄位設計
+      href: field.md
+    - name: 擴充方法
+      href: extension-methods.md
+    - name: 運算子多載
+      href: operator-overloads.md
+    - name: 參數設計
+      href: parameter-design.md
+  - name: 擴充性設計
+    href: designing-for-extensibility.md
+    items:
+    - name: 非密封類別
+      href: unsealed-classes.md
+    - name: Protected 成員
+      href: protected-members.md
+    - name: 事件和回呼
+      href: events-and-callbacks.md
+    - name: 虛擬成員
+      href: virtual-members.md
+    - name: 抽象 (抽象類型和介面)
+      href: abstractions-abstract-types-and-interfaces.md
+    - name: 實作抽象的基底類別
+      href: base-classes-for-implementing-abstractions.md
+    - name: 密封
+      href: sealing.md
+  - name: 例外狀況的設計方針
+    href: exceptions.md
+    items:
+    - name: 擲回例外狀況
+      href: exception-throwing.md
+    - name: 使用標準例外狀況類型
+      href: using-standard-exception-types.md
+    - name: 例外狀況和效能
+      href: exceptions-and-performance.md
+  - name: 用法方針
+    href: usage-guidelines.md
+    items:
+    - name: 陣列
+      href: arrays.md
+    - name: 屬性
+      href: attributes.md
+    - name: 集合
+      href: guidelines-for-collections.md
+    - name: 序列化
+      href: serialization.md
+    - name: System.Xml 使用方式
+      href: system-xml-usage.md
+    - name: 等號比較運算子
+      href: equality-operators.md
+  - name: 通用設計模式
+    href: common-design-patterns.md
+    items:
+    - name: 相依性屬性
+      href: dependency-properties.md
+ms.openlocfilehash: 07d831cd24d35a3876b2d7f2d7465aa663d6f3e0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468237"

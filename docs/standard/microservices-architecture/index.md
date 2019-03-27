@@ -4,12 +4,6 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 微服務是�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 6b75485d34b90b4807e82f629bbb05979add8eea
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479941"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET 微服務：容器化 .NET 應用程式的架構
 
@@ -58,7 +52,7 @@ Docker 成為容器產業的既定標準，並受到 Windows 和 Linux 生態系
 ### <a name="additional-resources"></a>其他資源
 
 -   **Microsoft 平台和工具的容器化 Docker 應用程式生命週期** (可下載的電子書)  
-    [*https://aka.ms/dockerlifecycleebook*](https://aka.ms/dockerlifecycleebook)
+    [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 

@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 3eb19d151140f29e81376d64ecf9976e87459ce1
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202674"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186074"
 ---
 # <a name="methods"></a>方法
 
@@ -62,7 +62,7 @@ ms.locfileid: "57202674"
 
 ## <a name="method-invocation"></a>方法引動過程
 
-方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬型別的名稱來叫用靜態方法，靜態方法運作不會在執行個體資料上操作。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
+方法可以是「執行個體」或「靜態」。 叫用執行個體方法需要您具現化物件並針對該物件呼叫方法，執行個體方法會在該執行個體及資料上運作。 您可以參考方法所屬的類型名稱來叫用靜態方法，靜態方法不操作執行個體資料。 嘗試透過物件執行個體呼叫靜態方法會產生編譯器錯誤。
 
 呼叫方法就像是存取欄位。 在物件名稱後 (如果呼叫的是執行個體方法) 或型別名稱後 (如果呼叫的是 `static` 方法)，加上句點、方法名稱及括弧。 引數會在括號中列出，並以逗號分隔。
 

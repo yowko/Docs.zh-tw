@@ -1,0 +1,16 @@
+items:
+- name: 屬性
+  href: index.md
+  items:
+  - name: 套用屬性
+    href: applying-attributes.md
+  - name: 撰寫自訂屬性
+    href: writing-custom-attributes.md
+  - name: 擷取儲存於屬性中的資訊
+    href: retrieving-information-stored-in-attributes.md
+ms.openlocfilehash: d86731782c3b35fe265ef21ae3d32ced4bd8b6d6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468462"

@@ -1,0 +1,58 @@
+items:
+- name: 非同步程式設計模式
+  href: index.md
+  items:
+  - name: 以工作為基礎的非同步模式 (TAP)
+    href: task-based-asynchronous-pattern-tap.md
+    items:
+    - name: 實作以工作為基礎的非同步模式
+      href: implementing-the-task-based-asynchronous-pattern.md
+    - name: 使用以工作為基礎的非同步模式
+      href: consuming-the-task-based-asynchronous-pattern.md
+    - name: Interop 與其他非同步模式和類型
+      href: interop-with-other-asynchronous-patterns-and-types.md
+  - name: 事件架構非同步模式 (EAP)
+    href: event-based-asynchronous-pattern-eap.md
+    items:
+    - name: 事件架構非同步模式概觀
+      href: event-based-asynchronous-pattern-overview.md
+    - name: 實作事件架構非同步模式
+      href: implementing-the-event-based-asynchronous-pattern.md
+    - name: 實作事件架構非同步模式的最佳作法
+      href: best-practices-for-implementing-the-event-based-asynchronous-pattern.md
+    - name: 決定何時實作事件架構非同步模式
+      href: deciding-when-to-implement-the-event-based-asynchronous-pattern.md
+    - name: 作法：實作支援事件架構非同步模式的元件
+      href: component-that-supports-the-event-based-asynchronous-pattern.md
+    - name: 作法：實作事件架構非同步模式的用戶端
+      href: how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md
+    - name: 作法：使用支援事件架構非同步模式的元件
+      href: how-to-use-components-that-support-the-event-based-asynchronous-pattern.md
+  - name: 非同步程式設計模型 (APM)
+    href: asynchronous-programming-model-apm.md
+    items:
+    - name: 使用 IAsyncResult 呼叫非同步方法
+      href: calling-asynchronous-methods-using-iasyncresult.md
+      items:
+      - name: 使用 AsyncWaitHandle 封鎖應用程式執行
+        href: blocking-application-execution-using-an-asyncwaithandle.md
+      - name: 以結束非同步作業的方式封鎖應用程式執行
+        href: blocking-application-execution-by-ending-an-async-operation.md
+      - name: 輪詢非同步作業的狀態
+        href: polling-for-the-status-of-an-asynchronous-operation.md
+      - name: 使用 AsyncCallback 委派結束非同步作業
+        href: using-an-asynccallback-delegate-to-end-an-asynchronous-operation.md
+        items:
+        - name: 使用 AsyncCallback 委派和狀態物件
+          href: using-an-asynccallback-delegate-and-state-object.md
+    - name: 使用委派非同步設計程式
+      href: asynchronous-programming-using-delegates.md
+      items:
+      - name: 以非同步的方式呼叫同步方法
+        href: calling-synchronous-methods-asynchronously.md
+ms.openlocfilehash: 2f93abd762516ade20948cceb3b2a1617af04885
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468269"

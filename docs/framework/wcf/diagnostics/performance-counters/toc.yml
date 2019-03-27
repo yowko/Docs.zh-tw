@@ -1,0 +1,153 @@
+items:
+- name: 效能計數器
+  href: index.md
+  items:
+  - name: 作業效能計數器
+    href: operation-performance-counters.md
+    items:
+    - name: 呼叫數
+      href: calls.md
+    - name: 每秒的呼叫數
+      href: calls-per-second.md
+    - name: 未處理的呼叫數
+      href: calls-outstanding.md
+    - name: 失敗的呼叫數
+      href: calls-failed.md
+    - name: 每秒失敗的呼叫數
+      href: calls-failed-per-second.md
+    - name: 發生錯誤的呼叫數
+      href: calls-faulted.md
+    - name: 每秒發生錯誤的呼叫數
+      href: calls-faulted-per-second.md
+    - name: 呼叫持續時間
+      href: calls-duration.md
+    - name: 安全性驗證和驗證失敗數
+      href: security-validation-and-authentication-failures.md
+    - name: 每秒的安全性驗證和驗證失敗數
+      href: security-validation-and-authentication-failures-per-second.md
+    - name: 未授權的安全性呼叫數
+      href: security-calls-not-authorized.md
+    - name: 每秒未授權的安全性呼叫數
+      href: security-calls-not-authorized-per-second.md
+    - name: 流動的交易數
+      href: transactions-flowed.md
+    - name: 每秒流動的異動數
+      href: transactions-flowed-per-second.md
+  - name: 服務效能計數器
+    href: service-performance-counters.md
+    items:
+    - name: 呼叫數
+      href: service-calls.md
+    - name: 每秒的呼叫數
+      href: service-calls-per-second.md
+    - name: 未處理的呼叫數
+      href: service-calls-outstanding.md
+    - name: 失敗的呼叫數
+      href: service-calls-failed.md
+    - name: 每秒失敗的呼叫數
+      href: service-calls-failed-per-second.md
+    - name: 發生錯誤的呼叫數
+      href: service-calls-faulted.md
+    - name: 每秒發生錯誤的呼叫數
+      href: service-calls-faulted-per-second.md
+    - name: 呼叫持續時間
+      href: service-calls-duration.md
+    - name: 執行個體
+      href: instances.md
+    - name: 每秒的執行個體數
+      href: instances-per-second.md
+    - name: 最大並行呼叫的百分比
+      href: percent-of-max-concurrent-calls.md
+    - name: 最大並行執行個體的百分比
+      href: percent-of-max-concurrent-instances.md
+    - name: 最大並行工作階段的百分比
+      href: percent-of-max-concurrent-sessions.md
+    - name: 佇列捨棄的訊息
+      href: queue-dropped-messages.md
+    - name: 每秒佇列捨棄的訊息數
+      href: queue-dropped-messages-per-second.md
+    - name: 佇列的有害訊息
+      href: queued-poison-messages.md
+    - name: 每秒佇列的有害訊息數
+      href: queued-poison-messages-per-second.md
+    - name: 佇列拒絕的訊息數
+      href: queued-rejected-messages.md
+    - name: 每秒佇列拒絕的訊息數
+      href: queued-rejected-messages-per-second.md
+    - name: 捨棄的可信賴傳訊訊息數
+      href: reliable-messaging-messages-dropped.md
+    - name: 每秒捨棄的可信賴傳訊訊息數
+      href: reliable-messaging-messages-dropped-per-second.md
+    - name: 發生錯誤的可信賴傳訊工作階段數
+      href: reliable-messaging-sessions-faulted.md
+    - name: 每秒發生錯誤的可信賴傳訊工作階段數
+      href: reliable-messaging-sessions-faulted-per-second.md
+    - name: 未授權的安全性呼叫數
+      href: service-security-calls-not-authorized.md
+    - name: 每秒未授權的安全性呼叫數
+      href: service-security-calls-not-authorized-per-second.md
+    - name: 安全性驗證和驗證失敗數
+      href: service-security-validation-and-authentication-failures.md
+    - name: 每秒的安全性驗證和驗證失敗數
+      href: service-security-validation-and-authentication-failures-per-second.md
+    - name: 流動的交易數
+      href: service-transactions-flowed.md
+    - name: 每秒流動的異動數
+      href: service-transactions-flowed-per-second.md
+    - name: 中止的交易作業數
+      href: transacted-operations-aborted.md
+    - name: 每秒中止的交易作業數
+      href: transacted-operations-aborted-per-second.md
+    - name: 認可的交易作業數
+      href: transacted-operations-committed.md
+    - name: 每秒認可的交易作業數
+      href: transacted-operations-committed-per-second.md
+    - name: 不確定的交易作業數
+      href: transacted-operations-in-doubt.md
+    - name: 每秒不確定的交易作業數
+      href: transacted-operations-in-doubt-per-second.md
+  - name: 端點效能計數器
+    href: endpoint-performance-counters.md
+    items:
+    - name: 呼叫數
+      href: endpoint-calls.md
+    - name: 每秒的呼叫數
+      href: endpoint-calls-per-second.md
+    - name: 未處理的呼叫數
+      href: endpoint-calls-outstanding.md
+    - name: 失敗的呼叫數
+      href: endpoint-calls-failed.md
+    - name: 每秒失敗的呼叫數
+      href: endpoint-calls-failed-per-second.md
+    - name: 發生錯誤的呼叫數
+      href: endpoint-calls-faulted.md
+    - name: 每秒發生錯誤的呼叫數
+      href: endpoint-calls-faulted-per-second.md
+    - name: 呼叫持續時間
+      href: endpoint-calls-duration.md
+    - name: 捨棄的可信賴傳訊訊息數
+      href: endpoint-reliable-messaging-messages-dropped.md
+    - name: 每秒捨棄的可信賴傳訊訊息數
+      href: endpoint-reliable-messaging-messages-dropped-per-second.md
+    - name: 發生錯誤的可信賴傳訊工作階段數
+      href: endpoint-reliable-messaging-sessions-faulted.md
+    - name: 每秒發生錯誤的可信賴傳訊工作階段數
+      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+    - name: 未授權的安全性呼叫數
+      href: endpoint-security-calls-not-authorized.md
+    - name: 每秒未授權的安全性呼叫數
+      href: endpoint-security-calls-not-authorized-per-second.md
+    - name: 安全性驗證和驗證失敗數
+      href: endpoint-security-validation-and-authentication-failures.md
+    - name: 每秒的安全性驗證和驗證失敗數
+      href: endpoint-security-validation-and-authentication-failures-per-second.md
+    - name: 流動的交易數
+      href: endpoint-transactions-flowed.md
+    - name: 每秒流動的異動數
+      href: endpoint-transactions-flowed-per-second.md
+ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468178"

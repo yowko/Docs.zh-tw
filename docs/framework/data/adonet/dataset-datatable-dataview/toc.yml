@@ -1,0 +1,162 @@
+items:
+- name: DataSet、DataTable 和 DataView
+  href: index.md
+  items:
+  - name: 建立資料集
+    href: creating-a-dataset.md
+  - name: 將 DataTable 加入至資料集
+    href: adding-a-datatable-to-a-dataset.md
+  - name: 加入 DataRelation
+    href: adding-datarelations.md
+  - name: 導覽 DataRelation
+    href: navigating-datarelations.md
+  - name: 合併資料集內容
+    href: merging-dataset-contents.md
+  - name: 複製資料集內容
+    href: copying-dataset-contents.md
+  - name: 處理 DataSet 的事件
+    href: handling-dataset-events.md
+  - name: 具類型資料集
+    href: typed-datasets.md
+    items:
+    - name: 產生強類型資料集
+      href: generating-strongly-typed-datasets.md
+    - name: 註釋具類型資料集
+      href: annotating-typed-datasets.md
+  - name: DataTables
+    href: datatables.md
+    items:
+    - name: 建立 DataTable
+      href: creating-a-datatable.md
+    - name: DataTable 結構描述定義
+      href: datatable-schema-definition.md
+      items:
+      - name: 將資料行加入至 DataTable
+        href: adding-columns-to-a-datatable.md
+      - name: 建立運算式資料行
+        href: creating-expression-columns.md
+      - name: 建立自動遞增資料行
+        href: creating-autoincrement-columns.md
+      - name: 定義主索引鍵
+        href: defining-primary-keys.md
+      - name: DataTable 條件約束
+        href: datatable-constraints.md
+    - name: 在 DataTable 中操作資料
+      href: manipulating-data-in-a-datatable.md
+      items:
+      - name: 將資料加入至 DataTable
+        href: adding-data-to-a-datatable.md
+      - name: 在 DataTable 中檢視資料
+        href: viewing-data-in-a-datatable.md
+      - name: Load 方法
+        href: the-load-method.md
+      - name: DataTable 編輯
+        href: datatable-edits.md
+      - name: 資料列狀態和資料列版本
+        href: row-states-and-row-versions.md
+      - name: 刪除 DataRow
+        href: datarow-deletion.md
+      - name: 資料列錯誤資訊
+        href: row-error-information.md
+      - name: AcceptChanges 和 RejectChanges
+        href: acceptchanges-and-rejectchanges.md
+    - name: 處理 DataTable 的事件
+      href: handling-datatable-events.md
+  - name: DataTableReader
+    href: datatablereaders.md
+    items:
+    - name: 建立 DataReader
+      href: creating-a-datareader.md
+    - name: 導覽 DataTable
+      href: navigating-datatables.md
+  - name: DataView
+    href: dataviews.md
+    items:
+    - name: 建立 DataView
+      href: creating-a-dataview.md
+    - name: 排序及篩選資料
+      href: sorting-and-filtering-data.md
+    - name: DataRow 和 DataRowView
+      href: datarows-and-datarowviews.md
+    - name: 尋找資料列
+      href: finding-rows.md
+    - name: 子檢視和關聯
+      href: childviews-and-relations.md
+    - name: 修改 DataView
+      href: modifying-dataviews.md
+    - name: 處理 DataView 的事件
+      href: handling-dataview-events.md
+    - name: 管理 DataView
+      href: managing-dataviews.md
+    - name: 從 DataView 建立 DataTable
+      href: creating-a-datatable-from-a-dataview.md
+  - name: 在資料集中使用 XML
+    href: using-xml-in-a-dataset.md
+    items:
+    - name: DiffGram
+      href: diffgrams.md
+    - name: 從 XML 載入資料集
+      href: loading-a-dataset-from-xml.md
+    - name: 將資料集內容當做 XML 資料寫入
+      href: writing-dataset-contents-as-xml-data.md
+    - name: 從 XML 載入資料集結構描述資訊
+      href: loading-dataset-schema-information-from-xml.md
+    - name: 將資料集結構描述資訊當做 XSD 寫入
+      href: writing-dataset-schema-information-as-xsd.md
+    - name: 資料集和 XmlDataDocument 同步處理
+      href: dataset-and-xmldatadocument-synchronization.md
+      items:
+      - name: 使用 XmlDataDocument 同步處理資料集
+        href: synchronizing-a-dataset-with-an-xmldatadocument.md
+      - name: 對資料集執行 XPath 查詢
+        href: performing-an-xpath-query-on-a-dataset.md
+      - name: 將 XSLT 轉換套用至 DataSet
+        href: applying-an-xslt-transform-to-a-dataset.md
+    - name: 巢狀 DataRelation
+      href: nesting-datarelations.md
+    - name: 從 XML 結構描述 (XSD) 衍生資料集關聯式結構
+      href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+      items:
+      - name: 將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束
+        href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+        items:
+        - name: 將 unique XML 結構描述 (XSD) 條件約束對應至資料集條件約束
+          href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+        - name: 將 key XML 結構描述 (XSD) 條件約束對應至資料集條件約束
+          href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+        - name: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
+          href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+      - name: 從 XML 結構描述 (XSD) 產生資料集關聯
+        href: generating-dataset-relations-from-xml-schema-xsd.md
+        items:
+        - name: 在巢狀結構描述項目之間進行隱含關聯對應
+          href: map-implicit-relations-between-nested-schema-elements.md
+        - name: 針對巢狀項目指定的關聯進行對應
+          href: map-relations-specified-for-nested-elements.md
+        - name: 指定未巢狀放置之項目間的關聯
+          href: specify-relations-between-elements-with-no-nesting.md
+      - name: XML 結構描述條件約束和關聯性
+        href: xml-schema-constraints-and-relationships.md
+    - name: 從 XML 推斷資料集關聯式結構
+      href: inferring-dataset-relational-structure-from-xml.md
+      items:
+      - name: 資料集結構描述推斷程序摘要
+        href: summary-of-the-dataset-schema-inference-process.md
+      - name: 推斷資料表
+        href: inferring-tables.md
+      - name: 推斷資料行
+        href: inferring-columns.md
+      - name: 推斷關聯性
+        href: inferring-relationships.md
+      - name: 推斷項目文字
+        href: inferring-element-text.md
+      - name: 推斷限制
+        href: inference-limitations.md
+  - name: 從 XML Web Service 使用資料集
+    href: consuming-a-dataset-from-an-xml-web-service.md
+ms.openlocfilehash: 739874c03720eac9e49db2f1e80a8bcafd28d1f8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468160"

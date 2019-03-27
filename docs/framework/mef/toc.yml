@@ -1,0 +1,16 @@
+items:
+- name: Managed Extensibility Framework (MEF)
+  href: index.md
+  items:
+  - name: 屬性化程式設計模型概觀 (MEF)
+    href: attributed-programming-model-overview-mef.md
+  - name: 撰寫分析工具 (Mefx)
+    href: composition-analysis-tool-mefx.md
+  - name: 適用於 Windows 市集應用程式的 .NET 的 MEF
+    href: mef-for-net-for-windows-store-apps.md
+ms.openlocfilehash: de9b31206949c867343b112769d71d7b9c9035fa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468152"

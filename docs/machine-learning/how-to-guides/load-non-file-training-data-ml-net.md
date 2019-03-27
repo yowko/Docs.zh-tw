@@ -1,26 +1,27 @@
 ---
 title: 使用文字檔 ML.NET 內容以外的資料，訓練機器學習模型
 description: 探索如何使用 ML.NET，載入此檔案內容以外的訓練資料，供預測管線中的機器學習模型訓練之用。
-ms.date: 03/05/2019
+ms.date: 03/18/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 27b327a63cb55b7fce0f4ff7facd3ee7c4a1c85c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 32de37e45b9e19669ea06d74c7f252ec885fe004
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678609"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58186087"
 ---
 # <a name="train-a-machine-learning-model-with-data-thats-not-in-a-text-file---mlnet"></a>使用文字檔 ML.NET 內容以外的資料，訓練機器學習模型
 
 > [!NOTE]
 > 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
 
-本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
+本操作說明與相關範例目前使用的是 **ML.NET 0.11 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
 使用 `TextLoader` 從檔案讀取訓練資料，是常見用來示範 ML.NET 的情境。
 但在真實的訓練情境下，資料可能俯拾皆是，例如：
 
 * 在 SQL 資料表中
+* JSON/XML
 * 從記錄檔案擷取
 * 即時產生
 
@@ -59,7 +60,7 @@ IEnumerable<CustomerChurnInfo> churnData = GetChurnInfo();
 // Turn the data into the ML.NET data view.
 // We can use CreateDataView or CreateStreamingDataView, depending on whether 'churnData' is an IList,
 // or merely an IEnumerable.
-var trainData = mlContext.Data.ReadFromEnumerable(churnData);
+var trainData = mlContext.Data.LoadFromEnumerable(churnData);
 
 // Build the learning pipeline.
 // In our case, we will one-hot encode the demographic category, and concatenate that with the number of visits.

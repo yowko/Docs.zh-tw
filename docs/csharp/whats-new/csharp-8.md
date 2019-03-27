@@ -2,12 +2,12 @@
 title: C# 8.0 的新功能 - C# 指南
 description: 大致了解 C# 8.0 中可用的新功能。 本文為適用於預覽 2 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: 23197a051109d6c6c22c8855e3772cf4f824264c
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
+ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843935"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58262591"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -180,6 +180,8 @@ static string Quadrant(Point p) => p switch
 ```
 
 當 `x` 或 `y` (非兩者) 為 0 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 若您未在 switch 運算式中涵蓋所有可能的案例，則編譯器會對您產生警告。
+
+您可以在此[模式比對進階教學課程](../tutorials/pattern-matching.md)中探索模式比對技巧。
 
 ## <a name="using-declarations"></a>using 宣告
 
