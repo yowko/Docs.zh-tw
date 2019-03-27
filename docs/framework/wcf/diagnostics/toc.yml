@@ -1,0 +1,38 @@
+items:
+- name: 管理與診斷
+  href: index.md
+- name: 訊息記錄
+  href: message-logging.md
+  items:
+  - name: 訊息流程概觀
+    href: message-flow-overview.md
+  - name: 設定訊息記錄
+    href: configuring-message-logging.md
+  - name: 檢視訊息記錄
+    href: viewing-message-logs.md
+  - name: 訊息記錄的安全性考量
+    href: security-concerns-for-message-logging.md
+  - name: 追蹤
+    href: tracing/
+  - name: 具有 ETW 的分析追蹤
+    href: etw/
+  - name: 效能計數器
+    href: performance-counters/
+  - name: 事件記錄
+    href: event-logging/
+  - name: 使用 Windows Management Instrumentation 進行診斷
+    href: wmi/
+  - name: 例外狀況參考
+    href: exceptions-reference/
+- name: 設定您的應用程式
+  href: configuring-your-application.md
+- name: ServiceModel 註冊工具
+  href: servicemodel-registration-tool.md
+- name: 部署服務
+  href: deploying-services.md
+ms.openlocfilehash: 4d111b1284ffcb29397a6caafdad4df9abc85086
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468606"

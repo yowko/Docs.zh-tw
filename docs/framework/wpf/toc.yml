@@ -1,0 +1,35 @@
+items:
+- name: Windows Presentation Foundation
+  href: index.md
+  items:
+  - name: 快速入門
+    href: getting-started/
+  - name: 應用程式開發
+    href: app-development/
+  - name: 進階
+    href: advanced/
+  - name: 控制項
+    href: controls/
+  - name: 資料
+    href: data/
+  - name: 圖形和多媒體
+    href: graphics-multimedia/
+  - name: 安全性
+    href: security-wpf.md
+    items:
+    - name: WPF 部分信任安全性
+      href: wpf-partial-trust-security.md
+    - name: WPF 安全性策略 – 平台安全性
+      href: wpf-security-strategy-platform-security.md
+    - name: WPF 安全性策略 – 安全性工程
+      href: wpf-security-strategy-security-engineering.md
+  - name: WPF 範例
+    href: wpf-samples.md
+  - name: 類別庫
+    href: class-library-wpf.md
+ms.openlocfilehash: 1e228336e8538f045cbcd2574850a9cf7fac4f21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468315"
