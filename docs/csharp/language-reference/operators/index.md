@@ -1,29 +1,23 @@
 ---
-title: C# 運算子
+title: 'C# 運算子'
 ms.date: 04/04/2018
 f1_keywords:
-- cs.operators
+  - cs.operators
 helpviewer_keywords:
-- boolean operators [C#]
-- expressions [C#], operators
-- logical operators [C#]
-- operators [C#]
-- Visual C#, operators
-- indirection operators [C#]
-- assignment operators [C#]
-- shift operators [C#]
-- relational operators [C#]
-- bitwise operators [C#]
-- address operators [C#]
-- keywords [C#], operators
-- arithmetic operators [C#]
+  - 'boolean operators [C#]'
+  - 'expressions [C#], operators'
+  - 'logical operators [C#]'
+  - 'operators [C#]'
+  - 'Visual C#, operators'
+  - 'indirection operators [C#]'
+  - 'assignment operators [C#]'
+  - 'shift operators [C#]'
+  - 'relational operators [C#]'
+  - 'bitwise operators [C#]'
+  - 'address operators [C#]'
+  - 'keywords [C#], operators'
+  - 'arithmetic operators [C#]'
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 6380fa4ec99f598be0d01db1061900520e94d5f1
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333404"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -47,9 +41,9 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [a&#91;x&#93;](index-operator.md) – 彙總物件索引化。
 
-[x++](increment-operator.md) – 後置遞增。 傳回 x 的值，然後利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。
+[x++](arithmetic-operators.md#increment-operator-) – 後置遞增。 傳回 x 的值，然後利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。
 
-[x--](decrement-operator.md) – 後置遞減。 傳回 x 的值，然後利用小於 x 值的值 (通常會減去整數 1) 更新儲存位置。
+[x--](arithmetic-operators.md#decrement-operator---) – 後置遞減。 傳回 x 的值，然後利用小於 x 值的值 (通常會減去整數 1) 更新儲存位置。
 
 [new](../keywords/new-operator.md) – 型別執行個體化。
 
@@ -79,9 +73,9 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [~x](bitwise-complement-operator.md) – 位元補數。
 
-[++x](increment-operator.md) – 前置遞增。 傳回 x 的值之前，利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。
+[++x](arithmetic-operators.md#increment-operator-) – 前置遞增。 傳回 x 的值之前，利用大於 x 值的值 (通常會加上整數 1) 更新儲存位置。
 
-[--x](decrement-operator.md) – 前置遞減。 更新儲存體位置之後，傳回 x 減一的 x 值 (通常減去整數 1)。
+[--x](arithmetic-operators.md#decrement-operator---) – 前置遞減。 更新儲存體位置之後，傳回 x 減一的 x 值 (通常減去整數 1)。
 
 [(T)x](invocation-operator.md) – 型別轉換。
 
@@ -95,19 +89,19 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 這些運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x * y](multiplication-operator.md) – 乘法。
+[x * y](arithmetic-operators.md#multiplication-operator-) – 乘法。
 
-[x / y](division-operator.md) – 除法。 如果運算元都是整數，則結果會截斷趨近於零的整數 (例如，`-7 / 2 is -3`)。
+[x / y](arithmetic-operators.md#division-operator-) – 除法。 如果運算元都是整數，則結果會截斷趨近於零的整數 (例如，`-7 / 2 is -3`)。
 
-[x % y](remainder-operator.md) – 餘數。 如果運算元都是整數，這會傳回 x 除以 y 的餘數。  若為 `q = x / y` 和 `r = x % y`，則為 `x = q * y + r`。
+[x % y](arithmetic-operators.md#remainder-operator-) – 餘數。 如果運算元都是整數，這會傳回 x 除以 y 的餘數。  若為 `q = x / y` 和 `r = x % y`，則為 `x = q * y + r`。
 
 ## <a name="additive-operators"></a>加法類運算子
 
 這些運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x + y](addition-operator.md) – 加法。
+[x + y](arithmetic-operators.md#addition-operator-) – 加法。
 
-[x – y](subtraction-operator.md) – 減法。
+[x – y](arithmetic-operators.md#subtraction-operator--) – 減法。
 
 ## <a name="shift-operators"></a>移位運算子
 
@@ -195,9 +189,9 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [x *= y](multiplication-assignment-operator.md) – 乘法指派。 將 `y` 的值乘以 `x` 的值，將結果儲存在 `x`，並傳回新的值。
 
-[x /= y](division-assignment-operator.md) – 除法指派。 將 `x` 的值除以 `y` 的值，將結果儲存在 `x`，並傳回新的值。
+[x /= y](arithmetic-operators.md#compound-assignment) – 除法指派。 將 `x` 的值除以 `y` 的值，將結果儲存在 `x`，並傳回新的值。
 
-[x %= y](remainder-assignment-operator.md) – 餘數指派。 將 `x` 的值除以 `y` 的值，將餘數儲存在 `x`，並傳回新的值。
+[x %= y](arithmetic-operators.md#compound-assignment) – 餘數指派。 將 `x` 的值除以 `y` 的值，將餘數儲存在 `x`，並傳回新的值。
 
 [x &= y](and-assignment-operator.md) – AND 指派。 將 `y` 的值和 `x` 的值進行 AND 處理，將結果儲存在 `x`，並傳回新的值。
 
@@ -210,20 +204,6 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 [x >>= y](right-shift-assignment-operator.md) – 右移指派。 將 `x` 的值向右移 `y` 個空格，將結果儲存在 `x`，並傳回新的值。
 
 [=>](lambda-operator.md) – lambda 宣告。
-
-## <a name="arithmetic-overflow"></a>算術溢位
-
-算術運算子 ([+](addition-operator.md)、[-](subtraction-operator.md)、[*](multiplication-operator.md)、[/](division-operator.md)) 可產生數值型別所涉及之可能值範圍以外的結果。 您應該參考特定運算子一節以取得詳細資料，但一般而言：
-
-- 整數算術溢位可能會擲回 <xref:System.OverflowException> 或捨棄結果的最高有效位元。 整數除以零一定會擲回 <xref:System.DivideByZeroException>。
-
-   發生整數溢位時，會發生的事取決於執行內容，可以是 [checked 或 unchecked](../keywords/checked-and-unchecked.md)。 在 checked 內容中，會擲回 <xref:System.OverflowException>。 在 unchecked 內容中，會捨棄結果的最高有效位元並繼續執行。 因此，C# 可讓您選擇處理或忽略溢位。 根據預設，*unchecked* 內容中會發生算術運算。
-
-   除了算術運算之外，整數類資料型別至整數類資料型別的轉換可能會造成溢位 (例如，當您將 [long](../keywords/long.md) 轉換為 [int](../keywords/int.md) 時)，且有可能受 checked 或 unchecked 執行的限制。 不過，位元運算子和移位運算子永遠不會造成溢位。
-
-- 浮點算術溢位或除以零永遠不會擲回例外狀況，因為浮點類型以 IEEE 754 為基礎，所以具有代表無限與 NaN (而非數字) 的佈建。
-
-- [十進位](../keywords/decimal.md)算術溢位一律會擲回 <xref:System.OverflowException>。 十進位除以零一定會擲回 <xref:System.DivideByZeroException>。
 
 ## <a name="see-also"></a>另請參閱
 
