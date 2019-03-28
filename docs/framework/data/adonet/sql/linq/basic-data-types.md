@@ -2,12 +2,12 @@
 title: 基本資料類型
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: d9c79ae70d860c5e86d4338038b3158ebfba184f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704965"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545698"
 ---
 # <a name="basic-data-types"></a>基本資料類型
 由於 LINQ to SQL 查詢會先轉譯成 Transact-SQL，然後才能在 Microsoft SQL Server 上執行。 因此，在基本資料型別方面，LINQ to SQL 所支援的許多內建功能都與 SQL Server 相同。  
@@ -18,7 +18,7 @@ ms.locfileid: "54704965"
 ## <a name="equality-operators"></a>等號比較運算子  
  LINQ to SQL 支援針對 LINQ to SQL 查詢內部的基本資料型別使用下列等號比較運算子：  
   
--   相等和不等比較運算子：相等和不等比較運算子支援數值<xref:System.Boolean>， <xref:System.DateTime>，和<xref:System.TimeSpan>型別。 如需詳細資訊 Visual Basic 運算子`=`並`<>`，請參閱[比較運算子](~/docs/visual-basic/language-reference/operators/comparison-operators.md)。 如需詳細資訊C#比較運算子`==`並`!=`，請參閱[= = 運算子](~/docs/csharp/language-reference/operators/equality-comparison-operator.md)並[！ = 運算子](~/docs/csharp/language-reference/operators/not-equal-operator.md)分別  
+-   相等和不等比較運算子：數值、 支援等號和不等比較運算子<xref:System.Boolean>， <xref:System.DateTime>，和<xref:System.TimeSpan>型別。 如需詳細資訊 Visual Basic 運算子`=`並`<>`，請參閱[比較運算子](~/docs/visual-basic/language-reference/operators/comparison-operators.md)。 如需詳細資訊C#比較運算子`==`並`!=`，請參閱[等號比較運算子](~/docs/csharp/language-reference/operators/equality-operators.md)。
   
 -   是運算子：`IS`使用繼承對應時，運算子具有支援的轉譯。 它可以用來判斷物件是否為特定實體型別，而且可以轉譯為鑑別子資料行上的檢查，而不需要直接測試鑑別子資料行。 如需有關 Visual Basic 和C#是運算子，請參閱[Is 運算子](~/docs/visual-basic/language-reference/operators/is-operator.md)並[是](~/docs/csharp/language-reference/keywords/is.md)。  
   
