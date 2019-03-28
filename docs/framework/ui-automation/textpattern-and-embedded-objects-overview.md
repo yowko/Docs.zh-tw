@@ -75,7 +75,7 @@ ms.locfileid: "57679420"
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetText%2A>|傳回 `The URL https://www.microsoft.com is embedded in text` 字串。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetEnclosingElement%2A>|傳回圍住文字範圍的最內層 <xref:System.Windows.Automation.AutomationElement> ；在此情況下是代表文字提供者本身的 <xref:System.Windows.Automation.AutomationElement> 。|  
 |<xref:System.Windows.Automation.Text.TextPatternRange.GetChildren%2A>|傳回表示超連結控制項的 <xref:System.Windows.Automation.AutomationElement> 。|  
-|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetChildren` 方法傳回的物件。|傳回表示範圍 」 https://www.microsoft.com "。|  
+|<xref:System.Windows.Automation.TextPattern.RangeFromChild%2A> ，其中 <xref:System.Windows.Automation.AutomationElement> 是先前 `GetChildren` 方法傳回的物件。|傳回表示範圍 」 https://www.microsoft.com"。|  
   
  **範例 2 - 部分跨越內嵌文字超連結的文字範圍**  
   

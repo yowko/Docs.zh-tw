@@ -21,8 +21,7 @@ ms.locfileid: "56965731"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   
-  <xref:System.Xml.Linq> 命名空間的參考。  
+-   <xref:System.Xml.Linq> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Xml.Linq.XElement.Attributes%2A?displayProperty=nameWithType>
