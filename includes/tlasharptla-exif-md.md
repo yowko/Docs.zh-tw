@@ -1,1 +1,9 @@
-<span data-ttu-id="9f545-101">可交換影像檔案 (Exif)</span><span class="sxs-lookup"><span data-stu-id="9f545-101">Exchangeable image file (Exif)</span></span>
+---
+ms.openlocfilehash: a220c1ba2089f36ee7483f9d624548a03c3bb4a7
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "25704815"
+---
+<span data-ttu-id="22325-101">可交換影像檔案 (Exif)</span><span class="sxs-lookup"><span data-stu-id="22325-101">Exchangeable image file (Exif)</span></span>
