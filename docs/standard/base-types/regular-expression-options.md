@@ -42,8 +42,7 @@ ms.locfileid: "57677561"
 
 指定規則運算式選項的方式有三種：
 
-- 在 `options` 類別建構函式或靜態 (在 Visual Basic 中為 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 模式比對方法 (例如 `Shared` 或 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>) 的 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數中。 
-  `options` 參數是 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值的位元「或」組合。
+- 在 `options` 類別建構函式或靜態 (在 Visual Basic 中為 <xref:System.Text.RegularExpressions.Regex?displayProperty=nameWithType>) 模式比對方法 (例如 `Shared` 或 <xref:System.Text.RegularExpressions.Regex.%23ctor%28System.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType>) 的 <xref:System.Text.RegularExpressions.Regex.Match%28System.String%2CSystem.String%2CSystem.Text.RegularExpressions.RegexOptions%29?displayProperty=nameWithType> 參數中。 `options` 參數是 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 列舉值的位元「或」組合。
 
     當使用類別建構函式的 `options` 參數提供選項給 <xref:System.Text.RegularExpressions.Regex> 執行個體時，選項會指派給 <xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 屬性。 不過，<xref:System.Text.RegularExpressions.RegexOptions?displayProperty=nameWithType> 屬性不會在規則運算式模式中反映內嵌選項。
 
@@ -115,8 +114,7 @@ ms.locfileid: "57677561"
 
 ## <a name="default-options"></a>預設選項
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 其中包括下列項目：
+<xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項指出未指定任何選項，而規則運算式引擎使用其預設行為。 其中包括下列項目：
 
 - 模式被解譯為標準規則運算式，而不是 ECMAScript 規則運算式。
 
@@ -135,8 +133,7 @@ ms.locfileid: "57677561"
 - 規則運算式模式中的擷取群組是隱含的，也是明確的。
 
 > [!NOTE]
-> 
-  <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項沒有內嵌對等項目。 將規則運算式選項套用為內嵌時，會關閉特定選項，依據各選項逐一還原預設行為。 例如，`(?i)` 會開啟不區分大小寫比較，而 `(?-i)` 會還原預設區分大小寫比較。
+> <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項沒有內嵌對等項目。 將規則運算式選項套用為內嵌時，會關閉特定選項，依據各選項逐一還原預設行為。 例如，`(?i)` 會開啟不區分大小寫比較，而 `(?-i)` 會還原預設區分大小寫比較。
 
 因為 <xref:System.Text.RegularExpressions.RegexOptions.None?displayProperty=nameWithType> 選項代表規則運算式引擎的預設行為，所以很少明確地指定在方法呼叫中， 而是會呼叫不含 `options` 參數的建構函式或靜態模式比對方法。
 
@@ -146,10 +143,9 @@ ms.locfileid: "57677561"
 
 ## <a name="case-insensitive-matching"></a>不區分大小寫比對
 
+<xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 選項 (或 `i` 內嵌選項) 提供不區分大小寫比對。 依預設，會使用目前文化特性的大小寫慣例。
 
-  <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 選項 (或 `i` 內嵌選項) 提供不區分大小寫比對。 依預設，會使用目前文化特性的大小寫慣例。
-
-下列範例定義規則運算式模式 `\bthe\w*\b`，它會比對以 "the" 開頭的所有文字。 因為第一次呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法是使用預設的區分大小寫比較，所以輸出指出未比對句子開頭的 "The" 字串。 選項設為 <xref:System.Text.RegularExpressions.Regex.Match%2A> 來呼叫  <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 方法時，才會加以比對。
+下列範例定義規則運算式模式 `\bthe\w*\b`，它會比對以 "the" 開頭的所有文字。 因為第一次呼叫 <xref:System.Text.RegularExpressions.Regex.Match%2A> 方法是使用預設的區分大小寫比較，所以輸出指出未比對句子開頭的 "The" 字串。 選項設為 <xref:System.Text.RegularExpressions.Regex.Match%2A> 來呼叫 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase> 方法時，才會加以比對。
 
 [!code-csharp[Conceptual.Regex.Language.Options#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/case1.cs#1)]
 [!code-vb[Conceptual.Regex.Language.Options#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/case1.vb#1)]
@@ -165,8 +161,7 @@ ms.locfileid: "57677561"
 
 ## <a name="multiline-mode"></a>多行模式
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項 (或 `m` 內嵌選項) 可讓規則運算式引擎處理構成多行的輸入字串。 它會變更 `^` 和 `$` 語言項目的解譯，以便比對字行的開頭和結尾，而不是輸入字串的開頭和結尾。
+<xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項 (或 `m` 內嵌選項) 可讓規則運算式引擎處理構成多行的輸入字串。 它會變更 `^` 和 `$` 語言項目的解譯，以便比對字行的開頭和結尾，而不是輸入字串的開頭和結尾。
 
 依預設，`$` 只會比對輸入字串的結尾。 如果您指定 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項，則會比對新行字元 (`\n`) 或輸入字串的結尾。 不過，並不會比對歸位字元/換行字元組合。 若要順利比對，請使用子運算式 `\r?$`，而不只是使用 `$`。
 
@@ -197,8 +192,7 @@ ms.locfileid: "57677561"
 
 ## <a name="single-line-mode"></a>單行模式
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項 (或 `s` 內嵌選項) 會使規則運算式引擎將輸入字串當作其包含單行。 其作法是變更句點 (`.`) 語言項目的行為，使其比對每個字元，而不是比對新行字元 `\n` 或 \u000A 以外的每個字元。
+<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項 (或 `s` 內嵌選項) 會使規則運算式引擎將輸入字串當作其包含單行。 其作法是變更句點 (`.`) 語言項目的行為，使其比對每個字元，而不是比對新行字元 `\n` 或 \u000A 以外的每個字元。
 
 下列範例說明，當您使用 `.` 選項時，<xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 語言項目的行為有何變更。 規則運算式 `^.+` 會從字串開頭開始，比對每一個字元。 根據預設，比對會在第一行結尾結束。規則運算式模式會比對歸位字元 `\r` 或 \u000D，但不會比對 `\n`。 由於 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> 選項會將整個輸入字串解譯為單行，因此它會比對輸入字串中的每個字元，包括 `\n`。
 
@@ -273,14 +267,12 @@ ms.locfileid: "57677561"
 
 - 在對規則運算式模式比對方法的多個呼叫中，都會使用代表特定規則運算式的 <xref:System.Text.RegularExpressions.Regex> 物件。
 
-- 
-  <xref:System.Text.RegularExpressions.Regex> 物件不能超出範圍，因此可以重複使用。
+- <xref:System.Text.RegularExpressions.Regex> 物件不能超出範圍，因此可以重複使用。
 
 - 在對規則運算式模式比對方法的多個呼叫中，會使用靜態規則運算式。 (效能提升是有可能的，因為規則運算式引擎會快取靜態方法呼叫中所使用的規則運算式。)
 
 > [!NOTE]
-> 
-  <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項與 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法無關，此方法會建立特殊用途的組件，其中包含預先定義的編譯規則運算式。
+> <xref:System.Text.RegularExpressions.RegexOptions.Compiled?displayProperty=nameWithType> 選項與 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> 方法無關，此方法會建立特殊用途的組件，其中包含預先定義的編譯規則運算式。
 
 [回到頁首](#Top)
 
@@ -290,8 +282,7 @@ ms.locfileid: "57677561"
 
 依預設，規則運算式模式中的空白字元很重要；它會強制規則運算式引擎比對輸入字串中的空白字元。 因此，規則運算式 "`\b\w+\s`" 和 "`\b\w+`" 是大致相等的規則運算式。 此外，在規則運算式模式中遇到數字符號 (#) 時，會將其解譯成常值字元，以供比對。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項 (或 `x` 內嵌選項) 會變更此預設行為，如下所示：
+<xref:System.Text.RegularExpressions.RegexOptions.IgnorePatternWhitespace?displayProperty=nameWithType> 選項 (或 `x` 內嵌選項) 會變更此預設行為，如下所示：
 
 - 規則運算式模式中未逸出的空白字元會被忽略。 若要在規則運算式模式中使用空白字元，就必須將它逸出 (例如，`\s` 或 "`\`")。
 
@@ -336,8 +327,7 @@ ms.locfileid: "57677561"
 > [!NOTE]
 > 若要使用由右至左模式，唯一的方法就是提供 <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 值給 `options` 類別建構函式或靜態模式比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。 無法以內嵌選項來提供此值。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 選項只會變更搜尋方向，並不會由右至左解譯規則運算式模式。 例如，規則運算式 `\bb\w+\s` 會比對字母 "b" 開頭、後接空白字元的文字。 在下列範例中，輸入字串是由包含一或數個 "b" 字元的三個單字所組成。 第一個單字以 "b" 開頭，第二個單字以 "b" 結尾，而第三個單字中間包含兩個 "b" 字元。 如範例輸出所示，只有第一個單字符合規則運算式模式。
+<xref:System.Text.RegularExpressions.RegexOptions.RightToLeft?displayProperty=nameWithType> 選項只會變更搜尋方向，並不會由右至左解譯規則運算式模式。 例如，規則運算式 `\bb\w+\s` 會比對字母 "b" 開頭、後接空白字元的文字。 在下列範例中，輸入字串是由包含一或數個 "b" 字元的三個單字所組成。 第一個單字以 "b" 開頭，第二個單字以 "b" 結尾，而第三個單字中間包含兩個 "b" 字元。 如範例輸出所示，只有第一個單字符合規則運算式模式。
 
 [!code-csharp[Conceptual.Regex.Language.Options#17](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.options/cs/righttoleft1.cs#17)]
 [!code-vb[Conceptual.Regex.Language.Options#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.options/vb/righttoleft1.vb#17)]
@@ -368,8 +358,7 @@ ms.locfileid: "57677561"
 > [!NOTE]
 > 若要使用符合 ECMAScript 的行為，唯一的方法就是提供 <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 值給 `options` 類別建構函式或靜態模式比對方法的 <xref:System.Text.RegularExpressions.Regex> 參數。 無法以內嵌選項來提供此值。
 
-
-  <xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 選項只能與 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項合併使用。 在規則運算式中使用任何其他選項將會導致 <xref:System.ArgumentOutOfRangeException>。
+<xref:System.Text.RegularExpressions.RegexOptions.ECMAScript?displayProperty=nameWithType> 選項只能與 <xref:System.Text.RegularExpressions.RegexOptions.IgnoreCase?displayProperty=nameWithType> 和 <xref:System.Text.RegularExpressions.RegexOptions.Multiline?displayProperty=nameWithType> 選項合併使用。 在規則運算式中使用任何其他選項將會導致 <xref:System.ArgumentOutOfRangeException>。
 
 ECMAScript 的行為與標準規則運算式有三個不同層面：字元類別語法、自我參考擷取群組，以及八進位與反向參考解譯。
 

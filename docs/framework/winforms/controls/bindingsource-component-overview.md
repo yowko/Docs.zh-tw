@@ -15,12 +15,10 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57724459"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 元件概觀
-
-  <xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
+<xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結程序的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
   
 ## <a name="bindingsource-component-as-an-intermediary"></a>做為媒介的 BindingSource 元件  
- 
-  <xref:System.Windows.Forms.BindingSource> 元件可做為表單上部分或全部控制項的資料來源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以藉由控制繫結`DataBindings`屬性，因此可從**屬性**視窗。 另請參閱[How to:繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](bind-wf-controls-with-the-bindingsource.md)。  
+ <xref:System.Windows.Forms.BindingSource> 元件可做為表單上部分或全部控制項的資料來源。 在 Visual Studio 中，<xref:System.Windows.Forms.BindingSource>可以藉由控制繫結`DataBindings`屬性，因此可從**屬性**視窗。 另請參閱[How to:繫結 Windows Form 控制項和 BindingSource 元件加以使用設計工具](bind-wf-controls-with-the-bindingsource.md)。  
   
  您可以將 <xref:System.Windows.Forms.BindingSource> 元件繫結至簡單的資料來源 (例如物件或 <xref:System.Collections.ArrayList> 等基本集合的單一屬性)，也可以繫結至複雜的資料來源 (例如資料庫資料表)。 <xref:System.Windows.Forms.BindingSource> 元件可做為提供繫結和貨幣管理服務的媒介。 您可以在設計階段或執行階段，透過將資料來源的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性分別設定為資料庫和資料表，將 <xref:System.Windows.Forms.BindingSource> 元件繫結至複雜的資料來源。 下圖示範 <xref:System.Windows.Forms.BindingSource> 元件在現有資料繫結架構中的位置。  
   

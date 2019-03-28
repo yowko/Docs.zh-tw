@@ -20,8 +20,7 @@ ms.lasthandoff: 03/09/2019
 ms.locfileid: "57709616"
 ---
 # <a name="how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control"></a>HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項
-
-  <xref:System.Windows.Forms.TableLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
+<xref:System.Windows.Forms.TableLayoutPanel> 控制項在其子控制項中支援 <xref:System.Windows.Forms.Control.Anchor%2A> 和 <xref:System.Windows.Forms.Control.Dock%2A> 屬性。  
   
 ### <a name="to-align-a-child-control-in-a-tablelayoutpanel-cell"></a>若要對齊 TableLayoutPanel 儲存格中的子控制項  
   
@@ -29,17 +28,14 @@ ms.locfileid: "57709616"
   
 2.  設定的值<xref:System.Windows.Forms.TableLayoutPanel>控制項的<xref:System.Windows.Forms.TableLayoutPanel.ColumnCount%2A>並<xref:System.Windows.Forms.TableLayoutPanel.RowCount%2A>屬性，以**1**。  
   
-3.  在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中建立 <xref:System.Windows.Forms.Button> 控制項。 
-  <xref:System.Windows.Forms.Button> 會佔用儲存格的左上角。  
+3.  在 <xref:System.Windows.Forms.TableLayoutPanel> 控制項中建立 <xref:System.Windows.Forms.Button> 控制項。 <xref:System.Windows.Forms.Button> 會佔用儲存格的左上角。  
   
-4.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Left`。 
-  <xref:System.Windows.Forms.Button> 控制項移到與儲存格左框線對齊。  
+4.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Left`。 <xref:System.Windows.Forms.Button> 控制項移到與儲存格左框線對齊。  
   
     > [!NOTE]
     >  此行為不同於其他容器控制項的行為。 在其他容器控制項中，當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，子控制項不會移動，而且當 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性被設定時，錨定的控制項與父容器界限之間的距離固定。  
   
-5.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Top, Left`。 
-  <xref:System.Windows.Forms.Button> 控制項移到佔用儲存格左上角。  
+5.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值為 `Top, Left`。 <xref:System.Windows.Forms.Button> 控制項移到佔用儲存格左上角。  
   
 6.  重複步驟 5 的值`Top, Right`移動<xref:System.Windows.Forms.Button>儲存格右上角的控制項。 使用 `Bottom, Left` 和 `Bottom, Right` 值重複進行。  
   

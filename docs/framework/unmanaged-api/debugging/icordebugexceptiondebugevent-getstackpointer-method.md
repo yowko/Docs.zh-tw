@@ -29,8 +29,7 @@ HRESULT GetStackPointer(
 ## <a name="remarks"></a>備註  
  這個堆疊指標的意義取決於事件類型，如下表所示。  
   
-|事件類型|
-  `pStackPointer` 值的意義|  
+|事件類型|`pStackPointer` 值的意義|  
 |----------------|--------------------------------------|  
 |[MANAGED_EXCEPTION_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|擲回例外狀況之框架的堆疊指標。|  
 |[MANAGED_EXCEPTION_USER_FIRST_CHANCE](../../../../docs/framework/unmanaged-api/debugging/cordebugrecordformat-enumeration.md)|最接近擲回例外狀況位置之使用者程式碼框架的堆疊指標。|  
@@ -45,9 +44,9 @@ HRESULT GetStackPointer(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
  **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
