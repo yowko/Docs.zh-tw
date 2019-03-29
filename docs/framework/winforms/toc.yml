@@ -1,0 +1,145 @@
+items:
+- name: Windows Forms
+  href: index.md
+  items:
+  - name: Windows Form 使用者入門
+    href: getting-started-with-windows-forms.md
+  - name: Windows Form 概觀
+    href: windows-forms-overview.md
+  - name: 建立新的 Windows Form
+    href: creating-a-new-windows-form.md
+    items:
+    - name: 作法：從命令列建立 Windows Forms 應用程式
+      href: how-to-create-a-windows-forms-application-from-the-command-line.md
+    - name: Windows Form 座標
+      href: windows-forms-coordinates.md
+  - name: 在 Windows Form 中建立事件處理常式
+    href: creating-event-handlers-in-windows-forms.md
+    items:
+    - name: 事件概觀
+      href: events-overview-windows-forms.md
+    - name: 事件處理常式概觀
+      href: event-handlers-overview-windows-forms.md
+    - name: 作法：在執行階段建立 Windows Forms 的事件處理常式
+      href: how-to-create-event-handlers-at-run-time-for-windows-forms.md
+    - name: 作法：在 Windows Forms 中將多個事件連接到單一事件處理常式
+      href: how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms.md
+    - name: Windows Form 中事件的順序
+      href: order-of-events-in-windows-forms.md
+  - name: 調整 Windows Forms 的大小和比例
+    href: adjusting-the-size-and-scale-of-windows-forms.md
+    items:
+    - name: 作法：調整 Windows Forms 大小
+      href: how-to-resize-windows-forms.md
+    - name: Windows Form 中的自動縮放比例
+      href: automatic-scaling-in-windows-forms.md
+      items:
+      - name: 作法：回應 Windows Forms 應用程式中的字型配置變更
+        href: how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md
+      - name: 停用 Visual Studio 中的 DPI 感知
+        href: disable-dpi-awareness-visual-studio.md
+    - name: Windows Forms 中的高 DPI 支援
+      href: high-dpi-support-in-windows-forms.md
+  - name: 變更 Windows Form 的外觀
+    href: changing-the-appearance-of-windows-forms.md
+    items:
+    - name: 作法：變更 Windows Forms 的框線
+      href: how-to-change-the-borders-of-windows-forms.md
+  - name: Windows Form 控制項
+    href: ./controls/
+  - name: Windows Form 中的使用者輸入
+    href: user-input-in-windows-forms.md
+    items:
+    - name: Windows Form 應用程式中的使用者輸入
+      href: user-input-in-a-windows-forms-application.md
+    - name: Windows Forms 應用程式中的鍵盤輸入
+      href: keyboard-input-in-a-windows-forms-application.md
+      items:
+      - name: 鍵盤輸入的運作方式
+        href: how-keyboard-input-works.md
+      - name: 使用鍵盤事件
+        href: using-keyboard-events.md
+      - name: 作法：將鍵盤輸入修改為標準控制項
+        href: how-to-modify-keyboard-input-to-a-standard-control.md
+      - name: 作法：判斷按下的輔助按鍵
+        href: how-to-determine-which-modifier-key-was-pressed.md
+      - name: 作法：處理表單層級的鍵盤輸入
+        href: how-to-handle-keyboard-input-at-the-form-level.md
+    - name: Windows Forms 應用程式中的滑鼠輸入
+      href: mouse-input-in-a-windows-forms-application.md
+      items:
+      - name: 滑鼠輸入在 Windows Form 中的運作方式
+        href: how-mouse-input-works-in-windows-forms.md
+      - name: Windows Form 中的滑鼠事件
+        href: mouse-events-in-windows-forms.md
+      - name: 作法：區分按一下和按兩下
+        href: how-to-distinguish-between-clicks-and-double-clicks.md
+      - name: Windows Form 中的滑鼠指標
+        href: mouse-pointers-in-windows-forms.md
+      - name: Windows Form 中的滑鼠捕捉
+        href: mouse-capture-in-windows-forms.md
+      - name: Windows Form 中的拖放功能
+        href: drag-and-drop-functionality-in-windows-forms.md
+    - name: 作法：以程式碼模擬滑鼠和鍵盤事件
+      href: how-to-simulate-mouse-and-keyboard-events-in-code.md
+    - name: 作法：處理 Windows Forms 控制項中的使用者輸入事件
+      href: how-to-handle-user-input-events-in-windows-forms-controls.md
+    - name: Windows Form 中的使用者輸入驗證
+      href: user-input-validation-in-windows-forms.md
+  - name: Windows Form 中的對話方塊
+    href: dialog-boxes-in-windows-forms.md
+    items:
+    - name: 作法：顯示 Windows Forms 的對話方塊
+      href: how-to-display-dialog-boxes-for-windows-forms.md
+  - name: Windows Form 資料繫結
+    href: windows-forms-data-binding.md
+    items:
+    - name: 資料繫結和 Windows Form
+      href: data-binding-and-windows-forms.md
+    - name: Windows Form 支援的資料來源
+      href: data-sources-supported-by-windows-forms.md
+    - name: 與資料繫結相關的介面
+      href: interfaces-related-to-data-binding.md
+    - name: Windows Form 資料繫結中的變更告知
+      href: change-notification-in-windows-forms-data-binding.md
+    - name: 作法：套用 PropertyNameChanged 模式
+      href: how-to-apply-the-propertynamechanged-pattern.md
+    - name: 作法：建立繫結控制項並格式化顯示的資料
+      href: how-to-create-a-bound-control-and-format-the-displayed-data.md
+    - name: 作法：在 Windows Form 上建立簡單繫結控制項
+      href: how-to-create-a-simple-bound-control-on-a-windows-form.md
+    - name: 作法：確保繫結至相同資料來源的多個控制項都能保持同步
+      href: multiple-controls-bound-to-data-source-synchronized.md
+    - name: 作法：確認子資料表中選取的資料列保持在正確位置
+      href: ensure-the-selected-row-in-a-child-table-correct.md
+    - name: 作法：實作 IListSource 介面
+      href: how-to-implement-the-ilistsource-interface.md
+    - name: 作法：實作 INotifyPropertyChanged 介面
+      href: how-to-implement-the-inotifypropertychanged-interface.md
+    - name: 作法：實作 ITypedList 介面
+      href: how-to-implement-the-itypedlist-interface.md
+    - name: 作法：巡覽 Windows Forms 中的資料
+      href: how-to-navigate-data-in-windows-forms.md
+  - name: Windows Form 安全性
+    href: windows-forms-security.md
+    items:
+    - name: Windows Form 中的安全性概觀
+      href: security-in-windows-forms-overview.md
+    - name: Windows Form 中更安全的檔案和資料存取
+      href: more-secure-file-and-data-access-in-windows-forms.md
+    - name: Windows Form 中更安全的列印
+      href: more-secure-printing-in-windows-forms.md
+    - name: Windows Form 中的其他安全性考量
+      href: additional-security-considerations-in-windows-forms.md
+  - name: Windows Form 的 ClickOnce 部署
+    href: clickonce-deployment-for-windows-forms.md
+  - name: 作法：在 Windows Forms 中存取索引鍵集合
+    href: how-to-access-keyed-collections-in-windows-forms.md
+  - name: 增強 Windows Forms 應用程式
+    href: ./advanced/
+ms.openlocfilehash: 4c2f21406d7017943542ff00aa7be95b8e3d5d69
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468149"

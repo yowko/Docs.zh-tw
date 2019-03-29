@@ -1,0 +1,52 @@
+items:
+- name: C# 程式設計手冊
+  href: index.md
+  items:
+  - name: C# 程式內部
+    href: inside-a-program/
+  - name: Main() 和命令列引數
+    href: main-and-command-args/
+  - name: 程式設計概念
+    href: concepts/
+  - name: 陳述式、運算式和運算子
+    href: statements-expressions-operators/
+  - name: 型別
+    href: types/
+  - name: 類別和結構
+    href: classes-and-structs/
+  - name: 介面
+    href: interfaces/
+  - name: 列舉類型
+    href: enumeration-types.md
+  - name: 委派
+    href: delegates/index.md
+  - name: 陣列
+    href: arrays/
+  - name: 字串
+    href: strings/
+  - name: 索引子
+    href: indexers/
+  - name: 事件
+    href: events/
+  - name: 泛型
+    href: generics/
+  - name: 命名空間
+    href: namespaces/
+  - name: 可為 Null 的型別
+    href: nullable-types/
+  - name: 不安全的程式碼和指標
+    href: unsafe-code-pointers/
+  - name: XML 文件註解
+    href: xmldoc/
+  - name: 例外狀況和例外狀況處理
+    href: exceptions/
+  - name: 檔案系統和登錄
+    href: file-system/
+  - name: 互通性
+    href: interop/
+ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58469653"

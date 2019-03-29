@@ -1,0 +1,30 @@
+items:
+- name: 物件和類別
+  href: index.md
+  items:
+  - name: 逐步解說：定義類別
+    href: walkthrough-defining-classes.md
+  - name: 多載屬性和方法
+    href: overloaded-properties-and-methods.md
+  - name: 繼承基本概念
+    href: inheritance-basics.md
+  - name: 物件存留期：如何建立和終結物件
+    href: object-lifetime-how-objects-are-created-and-destroyed.md
+  - name: 物件初始設定式：具名和匿名型別
+    href: object-initializers-named-and-anonymous-types.md
+    items:
+    - name: 作法：使用物件初始設定式宣告物件
+      href: how-to-declare-an-object-by-using-an-object-initializer.md
+  - name: 匿名類型
+    href: anonymous-types.md
+    items:
+    - name: 作法：在匿名型別宣告中推斷屬性名稱和類型
+      href: how-to-infer-property-names-and-types-in-anonymous-type-declarations.md
+    - name: 匿名型別定義
+      href: anonymous-type-definition.md
+ms.openlocfilehash: e048ae6781560ee70ff6121814f5ad93b6ea30f4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468195"

@@ -1,0 +1,32 @@
+items:
+- name: 全球化和當地語系化
+  href: index.md
+  items:
+  - name: 全球化
+    href: globalization.md
+  - name: 當地語系化可行性檢閱
+    href: localizability-review.md
+  - name: 當地語系化
+    href: localization.md
+  - name: 不區分文化特性 (Culture) 的字串作業
+    href: culture-insensitive-string-operations.md
+    items:
+    - name: 執行不區分文化特性 (Culture) 的字串作業
+      href: performing-culture-insensitive-string-operations.md
+      items:
+      - name: 字串比較
+        href: performing-culture-insensitive-string-comparisons.md
+      - name: 大小寫變更
+        href: performing-culture-insensitive-case-changes.md
+      - name: 集合中的字串作業
+        href: performing-culture-insensitive-string-operations-in-collections.md
+      - name: 陣列中的字串作業
+        href: performing-culture-insensitive-string-operations-in-arrays.md
+  - name: 開發世界性應用程式的最佳做法
+    href: best-practices-for-developing-world-ready-apps.md
+ms.openlocfilehash: afbb7d141dd544f0fd36f02f9dd9f4523df94840
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468350"

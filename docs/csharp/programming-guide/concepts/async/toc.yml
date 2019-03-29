@@ -1,0 +1,37 @@
+items:
+- name: 使用 async 和 await 進行非同步程式設計
+  href: index.md
+  items:
+  - name: 非同步工作程式設計模型
+    href: task-asynchronous-programming-model.md
+  - name: 逐步解說：使用 async 和 await 存取 Web
+    href: walkthrough-accessing-the-web-by-using-async-and-await.md
+  - name: 作法：使用 Task.WhenAll 擴充非同步逐步解說的內容
+    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+  - name: 作法：使用 async 和 await 同時發出多個 Web 要求
+    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+  - name: Async 傳回型別
+    href: async-return-types.md
+  - name: 非同步程式中的控制流程
+    href: control-flow-in-async-programs.md
+  - name: 微調非同步應用程式
+    href: fine-tuning-your-async-application.md
+    items:
+    - name: 取消一項非同步工作或工作清單
+      href: cancel-an-async-task-or-a-list-of-tasks.md
+    - name: 在一段時間後取消非同步工作
+      href: cancel-async-tasks-after-a-period-of-time.md
+    - name: 當其中一項非同步工作完成時，取消剩餘的非同步工作
+      href: cancel-remaining-async-tasks-after-one-is-complete.md
+    - name: 啟動多項非同步工作並在它們完成時進行處理
+      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+  - name: 處理非同步應用程式中的重新進入
+    href: handling-reentrancy-in-async-apps.md
+  - name: 使用 Async 存取檔案
+    href: using-async-for-file-access.md
+ms.openlocfilehash: 72bac78b384a76eb7f9b6e4ed83c299129014223
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468378"

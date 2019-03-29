@@ -1,0 +1,103 @@
+items:
+- name: Windows Identity Foundation
+  href: index.md
+  items:
+  - name: Windows Identity Foundation 4.5 的新功能
+    href: whats-new-in-wif.md
+  - name: Windows Identity Foundation 4.5 概觀
+    href: wif-overview.md
+    items:
+    - name: 宣告式身分識別模型
+      href: claims-based-identity-model.md
+    - name: 使用 WIF 進行宣告式授權
+      href: claims-based-authorization-using-wif.md
+    - name: WIF 宣告程式設計模型
+      href: wif-claims-programming-model.md
+  - name: 開始使用 WIF
+    href: getting-started-with-wif.md
+    items:
+    - name: 建置第一個宣告感知 ASP.NET Web 應用程式
+      href: building-my-first-claims-aware-aspnet-web-app.md
+    - name: 建置第一個宣告感知 WCF 服務
+      href: building-my-first-claims-aware-wcf-service.md
+  - name: WIF 功能
+    href: wif-features.md
+    items:
+    - name: 自訂權杖處理常式
+      href: custom-token-handlers.md
+    - name: Visual Studio 2012 的識別和存取工具
+      href: identity-and-access-tool-for-vs.md
+    - name: WIF 工作階段管理
+      href: wif-session-management.md
+    - name: WIF 和 Web 伺服陣列
+      href: wif-and-web-farms.md
+    - name: WSFederation 驗證模組概觀
+      href: wsfederation-authentication-module-overview.md
+    - name: WSTrustChannelFactory 和 WSTrustChannel
+      href: wstrustchannelfactory-and-wstrustchannel.md
+  - name: WIF 的實作索引
+    href: wif-how-tos-index.md
+    items:
+    - name: 如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式
+      href: how-to-build-claims-aware-aspnet-mvc-web-app-using-wif.md
+    - name: 如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式
+      href: how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md
+    - name: 如何：使用表單型驗證建置宣告感知 ASP.NET 應用程式
+      href: claims-aware-aspnet-app-forms-authentication.md
+    - name: 如何：使用 Windows 驗證建置宣告感知 ASP.NET 應用程式
+      href: how-to-build-claims-aware-aspnet-app-using-windows-authentication.md
+    - name: 如何：使用 WIF 追蹤對宣告感知應用程式和服務進行偵錯
+      href: how-to-debug-claims-aware-applications-and-services-using-wif-tracing.md
+    - name: 如何：使用 WIF 顯示登入的狀態
+      href: how-to-display-signed-in-status-using-wif.md
+    - name: 如何：啟用 WIF 追蹤
+      href: how-to-enable-wif-tracing.md
+    - name: 如何：啟用權杖重新執行偵測
+      href: how-to-enable-token-replay-detection.md
+    - name: 如何：啟用 WCF Web 服務應用程式的 WIF
+      href: how-to-enable-wif-for-a-wcf-web-service-application.md
+    - name: 如何：轉換傳入宣告
+      href: how-to-transform-incoming-claims.md
+  - name: WIF 方針
+    href: wif-guidelines.md
+    items:
+    - name: 將使用 WIF 3.5 建置的應用程式移轉至 WIF 4.5 的方針
+      href: guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md
+    - name: WIF 3.5 和 WIF 4.5 之間的命名空間對應
+      href: namespace-mapping-between-wif-3-5-and-wif-4-5.md
+  - name: WIF 程式碼範例索引
+    href: wif-code-sample-index.md
+  - name: WIF 擴充功能
+    href: wif-extensions.md
+    items:
+    - name: JSON Web 語彙基元處理常式
+      href: json-web-token-handler.md
+      items:
+      - name: 下載 JSON Web 語彙基元處理常式套件
+        href: downloading-the-json-web-token-handler-package.md
+      - name: 應用程式開發介面參考
+        href: json-web-token-handler-api-reference.md
+    - name: 驗證簽發者名稱登錄
+      href: validating-issuer-name-registry.md
+      items:
+      - name: 下載驗證簽發者名稱登錄套件
+        href: downloading-the-validating-issuer-name-registry-package.md
+      - name: 應用程式開發介面參考
+        href: validating-issuer-name-registry-api-reference.md
+  - name: WIF API 參考
+    href: wif-api-reference.md
+  - name: WIF 組態參考
+    href: wif-configuration-reference.md
+    items:
+    - name: WIF 組態結構描述慣例
+      href: wif-configuration-schema-conventions.md
+- name: 安全性變更
+  href: security-changes.md
+- name: Unmanaged 程式碼的安全編碼指南
+  href: secure-coding-guidelines-for-unmanaged-code.md
+ms.openlocfilehash: 4f8faea87ecbc2f3cc379aa9ed2eb7c912387e11
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468157"

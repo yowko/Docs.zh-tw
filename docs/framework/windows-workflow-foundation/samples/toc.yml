@@ -1,0 +1,117 @@
+items:
+- name: Windows Workflow 範例
+  href: index.md
+  items:
+  - name: 應用程式
+    href: application.md
+    items:
+    - name: 文件核准程序
+      href: document-approval-process.md
+    - name: 公司購買程序
+      href: corporate-purchase-process.md
+    - name: 招聘程序
+      href: hiring-process.md
+    - name: Visual 工作流程追蹤
+      href: visual-workflow-tracking.md
+    - name: 暫停的執行個體管理
+      href: suspended-instance-management.md
+  - name: 基本
+    href: basic.md
+    items:
+    - name: 內建活動
+      href: built-in-activities.md
+      items:
+      - name: 使用 TryCatch 錯誤處理流程圖活動
+        href: fault-handling-in-a-flowchart-activity-using-trycatch.md
+      - name: 從 XAML 載入
+        href: load-from-xaml.md
+      - name: 使用 InvokeMethod 活動
+        href: using-the-invokemethod-activity.md
+      - name: 使用 Pick 活動
+        href: using-the-pick-activity.md
+    - name: 自訂活動
+      href: custom-activities.md
+      items:
+      - name: Code-Bodied
+        href: code-bodied.md
+        items:
+        - name: 使用 Native 活動的自訂複合
+          href: custom-composite-using-native-activity.md
+      - name: 自訂活動設計工具
+        href: custom-activity-designers.md
+        items:
+        - name: 自訂複合設計工具 - 工作流程項目展示器
+          href: custom-composite-designers-workflow-item-presenter.md
+        - name: 自訂複合設計工具 - 工作流程項目展示器
+          href: custom-composite-designers-workflow-items-presenter.md
+        - name: 使用自訂活動設計工具中的 ExpressionTextBox
+          href: using-the-expressiontextbox-in-a-custom-activity-designer.md
+        - name: 使用編輯範圍
+          href: using-editing-scope.md
+    - name: Designer
+      href: designer.md
+      items:
+      - name: 移除設計工具新增至 XAML 檔案的檢視狀態
+        href: removing-the-view-state-the-designer-adds-to-an-xaml-file.md
+      - name: 程式設計模型項目樹狀
+        href: programming-model-item-tree.md
+      - name: 屬性方格擴充性
+        href: property-grid-extensibility.md
+    - name: 設計工具重新裝載
+      href: designer-rehosting.md
+    - name: 執行
+      href: execution.md
+      items:
+      - name: 建立與執行工作流程執行個體
+        href: creating-and-running-a-workflow-instance.md
+      - name: WorkflowHostingEndpoint 繼續書籤
+        href: workflowhostingendpoint-resume-bookmark.md
+      - name: WorkflowHostingEndpoint 的書籤解析程式
+        href: bookmark-resolver-for-workflowhostingendpoint.md
+    - name: 追蹤
+      href: tracking.md
+      items:
+      - name: 自訂追蹤
+        href: custom-tracking.md
+      - name: 在 Windows 事件追蹤中追蹤事件
+        href: tracking-events-into-event-tracing-in-windows.md
+      - name: SQL 追蹤
+        href: sql-tracking.md
+  - name: 情節
+    href: scenario.md
+    items:
+    - name: 活動程式庫
+      href: activity-library.md
+      items:
+      - name: SendMail 自訂活動
+        href: sendmail-custom-activity.md
+      - name: 流速控制平行 ForEach
+        href: throttled-parallel-foreach.md
+      - name: 資料庫存取活動
+        href: database-access-activities.md
+      - name: .NET Framework 4.5 中的外顯化原則活動
+        href: externalized-policy-activity-in-net-framework-4-5.md
+      - name: 非泛型 ForEach
+        href: non-generic-foreach.md
+      - name: 非泛型 ParallelForEach
+        href: non-generic-parallelforeach.md
+      - name: 取得 WorkflowInstanceId
+        href: get-workflowinstanceid.md
+    - name: 服務
+      items:
+      - name: 存取 OperationContext
+        href: accessing-operationcontext.md
+      - name: LINQ 訊息查詢相互關聯
+        href: linq-message-query-correlation.md
+      - name: 非同步通訊
+        href: asynchronous-communication.md
+    - name: XAML 中的 WPF 及 WF 整合
+      href: wpf-and-wf-integration-in-xaml.md
+    - name: 外部 Ruleset 工具組
+      href: external-ruleset-toolkit.md
+ms.openlocfilehash: 19369f2096ca3e9a15d514d88faec40d861dc752
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468447"

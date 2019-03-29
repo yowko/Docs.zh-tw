@@ -1,0 +1,64 @@
+items:
+- name: 強式命名
+  href: index.md
+  items:
+  - name: GetHashFromAssemblyFile 函式
+    href: gethashfromassemblyfile-function.md
+  - name: GetHashFromAssemblyFileW 函式
+    href: gethashfromassemblyfilew-function.md
+  - name: GetHashFromBlob 函式
+    href: gethashfromblob-function.md
+  - name: GetHashFromFile 函式
+    href: gethashfromfile-function.md
+  - name: GetHashFromFileW 函式
+    href: gethashfromfilew-function.md
+  - name: GetHashFromHandle 函式
+    href: gethashfromhandle-function.md
+  - name: PublicKeyBlob 結構
+    href: publickeyblob-structure.md
+  - name: StrongNameCompareAssemblies 函式
+    href: strongnamecompareassemblies-function.md
+  - name: StrongNameErrorInfo 函式
+    href: strongnameerrorinfo-function.md
+  - name: StrongNameFreeBuffer 函式
+    href: strongnamefreebuffer-function.md
+  - name: StrongNameGetBlob 函式
+    href: strongnamegetblob-function.md
+  - name: StrongNameGetBlobFromImage 函式
+    href: strongnamegetblobfromimage-function.md
+  - name: StrongNameGetPublicKey 函式
+    href: strongnamegetpublickey-function.md
+  - name: StrongNameHashSize 函式
+    href: strongnamehashsize-function.md
+  - name: StrongNameKeyDelete 函式
+    href: strongnamekeydelete-function.md
+  - name: StrongNameKeyGen 函式
+    href: strongnamekeygen-function.md
+  - name: StrongNameKeyGenEx 函式
+    href: strongnamekeygenex-function.md
+  - name: StrongNameKeyInstall 函式
+    href: strongnamekeyinstall-function.md
+  - name: StrongNameSignatureGeneration 函式
+    href: strongnamesignaturegeneration-function.md
+  - name: StrongNameSignatureGenerationEx 函式
+    href: strongnamesignaturegenerationex-function.md
+  - name: StrongNameSignatureSize 函式
+    href: strongnamesignaturesize-function.md
+  - name: StrongNameSignatureVerification 函式
+    href: strongnamesignatureverification-function.md
+  - name: StrongNameSignatureVerificationEx 函式
+    href: strongnamesignatureverificationex-function.md
+  - name: StrongNameSignatureVerificationFromImage 函式
+    href: strongnamesignatureverificationfromimage-function.md
+  - name: StrongNameTokenFromAssembly 函式
+    href: strongnametokenfromassembly-function.md
+  - name: StrongNameTokenFromAssemblyEx 函式
+    href: strongnametokenfromassemblyex-function.md
+  - name: StrongNameTokenFromPublicKey 函式
+    href: strongnametokenfrompublickey-function.md
+ms.openlocfilehash: 4c06fdc28855b0dadf1aca52c372236ffb30b782
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468231"

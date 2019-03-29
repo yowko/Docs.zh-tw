@@ -1,0 +1,256 @@
+items:
+- name: 使用 WCF 以服務為導向的應用程式
+  href: index.md
+  items:
+  - name: Windows Communication Foundation 4.5 的新功能
+    href: whats-new.md
+  - name: WCF 簡化功能
+    href: wcf-simplification-features.md
+  - name: 文件指南
+    href: guide-to-the-documentation.md
+  - name: 概觀說明
+    href: conceptual-overview.md
+    items:
+    - name: 何謂 Windows Communication Foundation
+      href: whats-wcf.md
+    - name: Windows Communication Foundation 的主要概念
+      href: fundamental-concepts.md
+    - name: Windows Communication Foundation 架構
+      href: architecture.md
+    - name: WCF 和 .NET Framework Client Profile
+      href: wcf-and-net-framework-client-profile.md
+  - name: 入門教學課程
+    href: getting-started-tutorial.md
+    items:
+    - name: 定義服務合約
+      href: how-to-define-a-wcf-service-contract.md
+    - name: 實作服務合約
+      href: how-to-implement-a-wcf-contract.md
+    - name: 裝載及執行基本服務
+      href: how-to-host-and-run-a-basic-wcf-service.md
+    - name: 建立用戶端
+      href: how-to-create-a-wcf-client.md
+    - name: 使用用戶端
+      href: how-to-use-a-wcf-client.md
+    - name: 針對入門教學課程進行疑難排解
+      href: troubleshooting-the-getting-started-tutorial.md
+  - name: 基本 WCF 程式設計
+    href: basic-wcf-programming.md
+    items:
+    - name: 基本程式設計週期
+      href: basic-programming-lifecycle.md
+    - name: 設計與實作服務
+      href: designing-and-implementing-services.md
+      items:
+      - name: 設計服務合約
+        href: designing-service-contracts.md
+        items:
+        - name: 指定與處理合約和服務中的錯誤
+          href: specifying-and-handling-faults-in-contracts-and-services.md
+          items:
+          - name: 定義並指定錯誤
+            href: defining-and-specifying-faults.md
+            items:
+            - name: 作法：在服務合約中宣告錯誤
+              href: how-to-declare-faults-in-service-contracts.md
+          - name: 傳送和接收錯誤
+            href: sending-and-receiving-faults.md
+        - name: 使用工作階段
+          href: using-sessions.md
+        - name: 同步和非同步作業
+          href: synchronous-and-asynchronous-operations.md
+          items:
+          - name: 作法：實作非同步服務作業
+            href: how-to-implement-an-asynchronous-service-operation.md
+        - name: 可靠的服務
+          href: reliable-services.md
+        - name: 服務與異動
+          href: services-and-transactions.md
+      - name: 實作服務合約
+        href: implementing-service-contracts.md
+        items:
+        - name: 指定服務執行階段行為
+          href: specifying-service-run-time-behavior.md
+    - name: 設定服務
+      href: configuring-services.md
+      items:
+      - name: 簡化的組態
+        href: simplified-configuration.md
+      - name: 使用組態檔設定服務
+        href: configuring-services-using-configuration-files.md
+      - name: 在程式碼中設定 WCF 服務
+        href: configuring-wcf-services-in-code.md
+      - name: 繫結
+        href: bindings.md
+        items:
+        - name: WCF 繫結概觀
+          href: bindings-overview.md
+        - name: 系統提供的繫結
+          href: system-provided-bindings.md
+        - name: 使用繫結來設定服務和用戶端
+          href: using-bindings-to-configure-services-and-clients.md
+          items:
+          - name: 作法：在程式碼中指定用戶端繫結
+            href: how-to-specify-a-client-binding-in-code.md
+          - name: 作法：在組態中指定用戶端繫結
+            href: how-to-specify-a-client-binding-in-configuration.md
+          - name: 作法：在程式碼中指定服務繫結
+            href: how-to-specify-a-service-binding-in-code.md
+          - name: 作法：在組態中指定服務繫結
+            href: how-to-specify-a-service-binding-in-configuration.md
+        - name: 設定服務的繫結
+          href: configuring-bindings-for-wcf-services.md
+      - name: 端點
+        href: endpoints.md
+        items:
+        - name: 端點建立概觀
+          href: endpoint-creation-overview.md
+        - name: 指定端點位址
+          href: specifying-an-endpoint-address.md
+        - name: 發行中繼資料端點
+          href: publishing-metadata-endpoints.md
+      - name: 保護服務的安全
+        href: securing-services.md
+        items:
+        - name: 作法：使用 Windows 認證來確保服務安全
+          href: how-to-secure-a-service-with-windows-credentials.md
+        - name: 作法：設定安全性模式
+          href: how-to-set-the-security-mode.md
+        - name: 作法：指定用戶端認證類型
+          href: how-to-specify-the-client-credential-type.md
+        - name: 作法：使用 PrincipalPermissionAttribute 類別來限制存取
+          href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
+        - name: 作法：在服務上模擬用戶端
+          href: how-to-impersonate-a-client-on-a-service.md
+        - name: 作法：檢查資訊安全內容
+          href: how-to-examine-the-security-context.md
+        - name: 了解保護層級
+          href: understanding-protection-level.md
+        - name: 作法：設定 ProtectionLevel 屬性
+          href: how-to-set-the-protectionlevel-property.md
+      - name: 建立 WS-I Basic Profile 1.1 互通服務
+        href: creating-ws-i-basic-profile-1-1-interoperable-services.md
+    - name: 裝載服務
+      href: hosting-services.md
+      items:
+      - name: 作法：在受控應用程式中裝載 WCF 服務
+        href: how-to-host-a-wcf-service-in-a-managed-application.md
+      - name: 作法：在 .NET Framework 4 下執行的 IIS 中，裝載以 .NET Framework 3.5 撰寫的 WCF 服務
+        href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
+    - name: 建置用戶端
+      href: building-clients.md
+      items:
+      - name: WCF 用戶端概觀
+        href: wcf-client-overview.md
+      - name: 使用 WCF 用戶端存取服務
+        href: accessing-services-using-a-wcf-client.md
+        items:
+        - name: 將服務參考加入至可攜式子集專案
+          href: add-service-reference-in-a-portable-subset-project.md
+        - name: 指定用戶端執行階段行為
+          href: specifying-client-run-time-behavior.md
+        - name: 設定用戶端行為
+          href: configuring-client-behaviors.md
+      - name: 確保用戶端的安全
+        href: securing-clients.md
+        items:
+        - name: 作法：指定用戶端認證值
+          href: how-to-specify-client-credential-values.md
+    - name: 擴充性簡介
+      href: introduction-to-extensibility.md
+    - name: WCF 疑難排解快速入門
+      href: wcf-troubleshooting-quickstart.md
+    - name: WCF 錯誤處理
+      href: wcf-error-handling.md
+    - name: WCF 和 ASP.NET Web 應用程式開發介面
+      href: wcf-and-aspnet-web-api.md
+  - name: WCF 功能詳細資料
+    href: feature-details/
+  - name: 延伸 WCF
+    href: extending/
+  - name: 方針及最佳作法
+    href: guidelines-and-best-practices.md
+    items:
+    - name: 最佳做法：資料合約版本控制
+      href: best-practices-data-contract-versioning.md
+    - name: 最佳做法：媒介
+      href: best-practices-intermediaries.md
+    - name: 服務版本控制
+      href: service-versioning.md
+    - name: 負載平衡
+      href: load-balancing.md
+    - name: 控制資源使用並改善效能
+      href: controlling-resource-consumption-and-improving-performance.md
+    - name: 使用 ClickOnce 來部署 WCF 應用程式
+      href: deploying-wcf-applications-with-clickonce.md
+  - name: 管理與診斷
+    href: diagnostics/
+  - name: 系統需求
+    href: wcf-system-requirements.md
+  - name: WCF 所需的作業系統資源
+    href: operating-system-resources-required-by-wcf.md
+  - name: 疑難排解安裝程式問題
+    href: troubleshooting-setup-issues.md
+  - name: 從 .NET 遠端處理移轉到 WCF
+    href: migrating-from-net-remoting-to-wcf.md
+  - name: 使用 WCF 開發工具
+    href: using-the-wcf-development-tools.md
+    items:
+    - name: WCF 服務主機 (WcfSvcHost.exe)
+      href: wcf-service-host-wcfsvchost-exe.md
+    - name: WCF 測試用戶端 (WcfTestClient.exe)
+      href: wcf-test-client-wcftestclient-exe.md
+    - name: WCF Visual Studio 範本
+      href: wcf-vs-templates.md
+    - name: WCF 服務發行
+      href: wcf-service-publishing.md
+    - name: 重新命名 WCF 服務
+      href: renaming-a-wcf-service.md
+    - name: 部署 WCF 程式庫專案
+      href: deploying-a-wcf-library-project.md
+    - name: 控制 WCF 服務主機的自動啟動功能
+      href: controlling-auto-launching-of-wcf-service-host.md
+    - name: 從 XML 產生資料型別類型
+      href: generating-data-type-classes-from-xml.md
+  - name: Windows Communication Foundation 工具
+    href: tools.md
+    items:
+    - name: ServiceModel 中繼資料公用程式工具 (Svcutil.exe)
+      href: servicemodel-metadata-utility-tool-svcutil-exe.md
+    - name: 尋找私密金鑰工具 (FindPrivateKey.exe)
+      href: find-private-key-tool-findprivatekey-exe.md
+    - name: ServiceModel 註冊工具 (ServiceModelReg.exe)
+      href: servicemodelreg-exe.md
+    - name: 服務追蹤檢視器工具 (SvcTraceViewer.exe)
+      href: service-trace-viewer-tool-svctraceviewer-exe.md
+    - name: 組態編輯器工具 (SvcConfigEditor.exe)
+      href: configuration-editor-tool-svcconfigeditor-exe.md
+    - name: COM+ 服務模型組態工具 (ComSvcConfig.exe)
+      href: com-service-model-configuration-tool-comsvcconfig-exe.md
+    - name: WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)
+      href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+      items:
+      - name: 解譯 wsatConfig.exe 傳回的錯誤碼
+        href: interpreting-error-codes-returned-by-wsatconfig-exe.md
+    - name: WS-AtomicTransaction 組態 MMC 嵌入式管理單元
+      href: ws-atomictransaction-configuration-mmc-snap-in.md
+    - name: WorkFlow 服務登錄工具 (WFServicesReg.exe)
+      href: workflow-service-registration-tool-wfservicesreg-exe.md
+    - name: Contract-First 工具
+      href: contract-first-tool.md
+  - name: Windows Communication Foundation 範例
+    href: samples/
+  - name: Windows Communication Foundation 字彙
+    href: glossary.md
+  - name: 一般參考
+    href: general-reference.md
+  - name: 意見與社群
+    href: feedback-and-community.md
+  - name: 隱私權資訊
+    href: privacy-information.md
+ms.openlocfilehash: 4bd93b468fb7f077fc070053745d8ac6b2abb810
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468487"

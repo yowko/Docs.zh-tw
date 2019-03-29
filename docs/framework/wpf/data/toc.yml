@@ -1,0 +1,94 @@
+items:
+- name: 資料
+  href: index.md
+  items:
+  - name: 資料繫結
+    href: data-binding-wpf.md
+    items:
+    - name: 資料繫結概觀
+      href: data-binding-overview.md
+    - name: 繫結來源概觀
+      href: binding-sources-overview.md
+    - name: 資料範本化概觀
+      href: data-templating-overview.md
+    - name: 繫結宣告概觀
+      href: binding-declarations-overview.md
+    - name: HOW TO 主題
+      href: data-binding-how-to-topics.md
+      items:
+      - name: 建立簡單繫結
+        href: how-to-create-a-simple-binding.md
+      - name: 指定繫結來源
+        href: how-to-specify-the-binding-source.md
+      - name: 讓資料可於 XAML 中繫結
+        href: how-to-make-data-available-for-binding-in-xaml.md
+      - name: 控制 TextBox 文字更新來源的時機
+        href: how-to-control-when-the-textbox-text-updates-the-source.md
+      - name: 指定繫結的方向
+        href: how-to-specify-the-direction-of-the-binding.md
+      - name: 繫結至集合並根據選取項目顯示資訊
+        href: how-to-bind-to-a-collection-and-display-information-based-on-selection.md
+      - name: 繫結至列舉
+        href: how-to-bind-to-an-enumeration.md
+      - name: 繫結兩個控制項的屬性
+        href: how-to-bind-the-properties-of-two-controls.md
+      - name: 實作繫結驗證
+        href: how-to-implement-binding-validation.md
+      - name: 對自訂物件實作驗證邏輯
+        href: how-to-implement-validation-logic-on-custom-objects.md
+      - name: 從繫結的目標屬性取得繫結物件
+        href: how-to-get-the-binding-object-from-a-bound-target-property.md
+      - name: 實作 CompositeCollection
+        href: how-to-implement-a-compositecollection.md
+      - name: 轉換繫結的資料
+        href: how-to-convert-bound-data.md
+      - name: 使用程式碼建立繫結
+        href: how-to-create-a-binding-in-code.md
+      - name: 取得資料集合的預設檢視
+        href: how-to-get-the-default-view-of-a-data-collection.md
+      - name: 巡覽資料 CollectionView 中的所有物件
+        href: how-to-navigate-through-the-objects-in-a-data-collectionview.md
+      - name: 篩選檢視中的資料
+        href: how-to-filter-data-in-a-view.md
+      - name: 排序檢視中的資料
+        href: how-to-sort-data-in-a-view.md
+      - name: 使用 XAML 中的檢視排序和分組資料
+        href: how-to-sort-and-group-data-using-a-view-in-xaml.md
+      - name: 使用含階層式資料的主從式模式
+        href: how-to-use-the-master-detail-pattern-with-hierarchical-data.md
+      - name: 使用含階層式 XML 資料的主從式模式
+        href: how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md
+      - name: 根據繫結項目的清單產生值
+        href: how-to-produce-a-value-based-on-a-list-of-bound-items.md
+      - name: 實作屬性變更通知
+        href: how-to-implement-property-change-notification.md
+      - name: 建立和繫結至 ObservableCollection
+        href: how-to-create-and-bind-to-an-observablecollection.md
+      - name: 實作 PriorityBinding
+        href: how-to-implement-prioritybinding.md
+      - name: 使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
+        href: how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md
+      - name: 繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ
+        href: how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md
+      - name: 在資料繫結中使用 XML 命名空間
+        href: how-to-use-xml-namespaces-in-data-binding.md
+      - name: 繫結至 ADO.NET 資料來源
+        href: how-to-bind-to-an-ado-net-data-source.md
+      - name: 繫結至方法
+        href: how-to-bind-to-a-method.md
+      - name: 設定繫結更新的通知
+        href: how-to-set-up-notification-of-binding-updates.md
+      - name: 清除繫結
+        href: how-to-clear-bindings.md
+      - name: 尋找 DataTemplate 產生的項目
+        href: how-to-find-datatemplate-generated-elements.md
+      - name: 繫結至 Web 服務
+        href: how-to-bind-to-a-web-service.md
+      - name: 繫結至 LINQ 查詢的結果
+        href: how-to-bind-to-the-results-of-a-linq-query.md
+ms.openlocfilehash: 7dd345771eb00e8d40f89ce4a925e2263763e8da
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468259"

@@ -1,0 +1,27 @@
+items:
+- name: 組件和全域組件快取
+  href: index.md
+  items:
+  - name: Friend 組件
+    href: friend-assemblies.md
+    items:
+    - name: 作法：建立未簽署的 Friend 組件
+      href: how-to-create-unsigned-friend-assemblies.md
+    - name: 作法：建立簽署的 Friend 組件
+      href: how-to-create-signed-friend-assemblies.md
+  - name: 作法：使用命令列建立和使用組件
+    href: how-to-create-and-use-assemblies-using-the-command-line.md
+  - name: 作法：判斷檔案是否為組件
+    href: how-to-determine-if-a-file-is-an-assembly.md
+  - name: 作法：載入和卸載組件
+    href: how-to-load-and-unload-assemblies.md
+  - name: 作法：與其他應用程式共用組件
+    href: how-to-share-an-assembly-with-other-applications.md
+  - name: 逐步解說：在 Visual Studio 中內嵌來自受控組件的類型
+    href: walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md
+ms.openlocfilehash: 7911935ca588b16648250a32574ca6380fcc1dca
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468478"

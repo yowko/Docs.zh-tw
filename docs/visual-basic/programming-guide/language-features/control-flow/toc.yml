@@ -1,0 +1,24 @@
+items:
+- name: 控制流程
+  href: index.md
+  items:
+  - name: 決策結構
+    href: decision-structures.md
+  - name: 迴圈結構
+    href: loop-structures.md
+    items:
+    - name: 逐步解說：實作 IEnumerable(Of T)
+      href: walkthrough-implementing-ienumerable-of-t.md
+  - name: 其他控制結構
+    href: other-control-structures.md
+    items:
+    - name: 作法：處置系統資源
+      href: how-to-dispose-of-a-system-resource.md
+  - name: 巢狀控制結構
+    href: nested-control-structures.md
+ms.openlocfilehash: 8f6ec473d9d635ca93013aa23f21dee916fba1ba
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468330"

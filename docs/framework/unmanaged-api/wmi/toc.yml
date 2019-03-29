@@ -1,0 +1,112 @@
+items:
+- name: WMI 和效能計數器
+  href: index.md
+  items:
+  - name: BeginEnumeration 函式
+    href: beginenumeration.md
+  - name: BeginMethodEnumeration 函式
+    href: beginmethodenumeration.md
+  - name: BlessIWbemServices 函式
+    href: blessiwbemservices.md
+  - name: BlessIWbemServicesObject 函式
+    href: blessiwbemservicesobject.md
+  - name: Clone 函式
+    href: clone.md
+  - name: CloneEnumWbemClassObject 函式
+    href: cloneenumwbemclassobject.md
+  - name: CompareTo 函式
+    href: compareto.md
+  - name: ConnectServerWmi
+    href: connectserverwmi.md
+  - name: CreateClassEnumWmi
+    href: createclassenumwmi.md
+  - name: CreateInstanceEnumWmi
+    href: createinstanceenumwmi.md
+  - name: Delete 函式
+    href: delete.md
+  - name: DeleteMethod 函式
+    href: deletemethod.md
+  - name: EndEnumeration 函式
+    href: endenumeration.md
+  - name: EndMethodEnumeration 函式
+    href: endmethodenumeration.md
+  - name: ExecQueryWmi 函式
+    href: execquerywmi.md
+  - name: ExecNotificationQueryWmi 函式
+    href: execnotificationquerywmi.md
+  - name: FormatFromRawValue 函式
+    href: formatfromrawvalue.md
+  - name: Get 函式
+    href: get.md
+  - name: GetCurrentApartmentType
+    href: getcurrentapartmenttype.md
+  - name: GetDemultiplexedStub
+    href: getdemultiplexedstub.md
+  - name: GetErrorInfo
+    href: geterrorinfo.md
+  - name: GetMethod 函式
+    href: getmethod.md
+  - name: GetMethodOrigin 函式
+    href: getmethodorigin.md
+  - name: GetMethodQualifierSet 函式
+    href: getmethodqualifierset.md
+  - name: GetNames 函式
+    href: getnames.md
+  - name: GetObjectText 函式
+    href: getobjecttext.md
+  - name: GetPropertyHandle 函式
+    href: getpropertyhandle.md
+  - name: GetPropertyOrigin 函式
+    href: getpropertyorigin.md
+  - name: GetPropertyQualifierSet
+    href: getpropertyqualifierset.md
+  - name: GetQualifierSet
+    href: getqualifierset.md
+  - name: InheritsFrom
+    href: inheritsfrom.md
+  - name: Initialize
+    href: initialize.md
+  - name: 下一步
+    href: next.md
+  - name: NextMethod
+    href: nextmethod.md
+  - name: Put
+    href: put.md
+  - name: PubClassWmi
+    href: putclasswmi.md
+  - name: PutInstanceWmi
+    href: putinstancewmi.md
+  - name: PutMethod
+    href: putmethod.md
+  - name: QualifierSet_BeginEnumeration
+    href: qualifierset-beginenumeration.md
+  - name: QualifierSet_Delete
+    href: qualifierset-delete.md
+  - name: QualifierSet_EndEnumeration
+    href: qualifierset-endenumeration.md
+  - name: QualifierSet_Get
+    href: qualifierset-get.md
+  - name: QualifierSet_GetNames
+    href: qualifierset-getnames.md
+  - name: QualifierSet_Next
+    href: qualifierset-next.md
+  - name: QualifierSet_Put
+    href: qualifierset-put.md
+  - name: ResetSecurity
+    href: resetsecurity.md
+  - name: SetSecurity
+    href: setsecurity.md
+  - name: SpawnDerivedClass
+    href: spawnderivedclass.md
+  - name: SpawnInstance
+    href: spawninstance.md
+  - name: VerifyClientKey
+    href: verifyclientkey.md
+  - name: WritePropertyValue
+    href: writepropertyvalue.md
+ms.openlocfilehash: e22d9c08193d105dda8aed748bd9cc3decd7778e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468446"

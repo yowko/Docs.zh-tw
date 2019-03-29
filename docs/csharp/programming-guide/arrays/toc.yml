@@ -1,0 +1,24 @@
+items:
+- name: 陣列
+  href: index.md
+  items:
+  - name: 陣列作為物件
+    href: arrays-as-objects.md
+  - name: 一維陣列
+    href: single-dimensional-arrays.md
+  - name: 多維陣列
+    href: multidimensional-arrays.md
+  - name: 不規則陣列
+    href: jagged-arrays.md
+  - name: 搭配陣列使用 foreach
+    href: using-foreach-with-arrays.md
+  - name: 傳遞陣列作為引數
+    href: passing-arrays-as-arguments.md
+  - name: 隱含型別陣列
+    href: implicitly-typed-arrays.md
+ms.openlocfilehash: b587998861fba9ae9f13da1e58fd24e9279c6224
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468579"

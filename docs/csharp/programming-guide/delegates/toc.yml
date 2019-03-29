@@ -1,0 +1,18 @@
+items:
+- name: 委派
+  href: index.md
+  items:
+  - name: 使用委派
+    href: using-delegates.md
+  - name: 具名方法委派與匿名方法
+    href: delegates-with-named-vs-anonymous-methods.md
+  - name: 作法：組合委派 (多點傳送委派) (C# 程式設計指南)
+    href: how-to-combine-delegates-multicast-delegates.md
+  - name: 作法：宣告、具現化和使用委派
+    href: how-to-declare-instantiate-and-use-a-delegate.md
+ms.openlocfilehash: f9857a805966b3b3c9d1c6776027c77c6183235b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468522"
