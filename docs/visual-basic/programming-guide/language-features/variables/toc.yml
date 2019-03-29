@@ -1,0 +1,51 @@
+items:
+- name: Visual Basic 中的變數
+  href: index.md
+  items:
+  - name: 變數宣告
+    href: variable-declaration.md
+    items:
+    - name: 作法：建立新變數
+      href: how-to-create-a-new-variable.md
+    - name: 作法：建立不變更值的變數
+      href: how-to-create-a-variable-that-does-not-change-in-value.md
+    - name: 作法：移入和移出變數資料
+      href: how-to-move-data-into-and-out-of-a-variable.md
+  - name: 物件變數
+    href: object-variables.md
+    items:
+    - name: 作法：加快存取具有限定性條件長路徑的物件
+      href: how-to-speed-up-access-to-an-object-with-a-long-qualification-path.md
+  - name: 物件變數宣告
+    href: object-variable-declaration.md
+    items:
+    - name: 作法：存取物件的成員
+      href: how-to-access-members-of-an-object.md
+    - name: 物件變數指派
+      href: object-variable-assignment.md
+      items:
+      - name: 作法：宣告物件變數並指派物件給它
+        href: how-to-declare-an-object-variable-and-assign-an-object-to-it.md
+      - name: 作法：讓物件變數不參考任何執行個體
+        href: how-to-make-an-object-variable-not-refer-to-any-instance.md
+    - name: 物件變數值
+      href: object-variable-values.md
+      items:
+      - name: 作法：參考物件目前的執行個體
+        href: how-to-refer-to-the-current-instance-of-an-object.md
+      - name: 作法：判斷定物件變數參考的型別
+        href: how-to-determine-what-type-an-object-variable-refers-to.md
+      - name: 作法：判斷兩個物件是否關聯
+        href: how-to-determine-whether-two-objects-are-related.md
+      - name: 作法：判斷兩個物件是否相同
+        href: how-to-determine-whether-two-objects-are-identical.md
+  - name: 區域類型推斷
+    href: local-type-inference.md
+  - name: 針對變數進行疑難排解
+    href: troubleshooting-variables.md
+ms.openlocfilehash: b62af96e958cd45db593e3334075b432814b51d5
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468423"

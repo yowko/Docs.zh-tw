@@ -1,0 +1,42 @@
+items:
+- name: 宣告項目
+  href: index.md
+  items:
+  - name: Declared Element Names
+    href: declared-element-names.md
+  - name: 宣告項目特性
+    href: declared-element-characteristics.md
+    items:
+    - name: 存留期
+      href: lifetime.md
+    - name: 範圍
+      href: scope.md
+      items:
+      - name: 作法：控制變數的範圍
+        href: how-to-control-the-scope-of-a-variable.md
+      - name: 類型提升
+        href: type-promotion.md
+    - name: 存取層級
+      href: access-levels.md
+      items:
+      - name: 作法：控制變數的可用性
+        href: how-to-control-the-availability-of-a-variable.md
+    - name: References to Declared Elements
+      href: references-to-declared-elements.md
+    - name: 遮蔽
+      href: shadowing.md
+      items:
+      - name: 遮蔽和覆寫的差異
+        href: differences-between-shadowing-and-overriding.md
+      - name: 作法：隱藏與您的變數名稱相同的變數
+        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+      - name: 作法：隱藏繼承的變數
+        href: how-to-hide-an-inherited-variable.md
+      - name: 作法：存取衍生類別所隱藏的變數
+        href: how-to-access-a-variable-hidden-by-a-derived-class.md
+ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468187"

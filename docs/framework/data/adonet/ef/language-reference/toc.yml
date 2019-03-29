@@ -1,0 +1,281 @@
+items:
+- name: 語言參考
+  href: index.md
+  items:
+  - name: LINQ to Entities
+    href: linq-to-entities.md
+    items:
+    - name: LINQ to Entities 中的查詢
+      href: queries-in-linq-to-entities.md
+      items:
+      - name: 以方法為基礎的查詢語法範例：Projection
+        href: method-based-query-syntax-examples-projection.md
+      - name: 以方法為基礎的查詢語法範例：篩選
+        href: method-based-query-syntax-examples-filtering.md
+      - name: 以方法為基礎的查詢語法範例：排序
+        href: method-based-query-syntax-examples-ordering.md
+      - name: 以方法為基礎的查詢語法範例：彙總運算子
+        href: method-based-query-syntax-examples-aggregate-operators.md
+      - name: 以方法為基礎的查詢語法範例：資料分割
+        href: method-based-query-syntax-examples-partitioning.md
+      - name: 以方法為基礎的查詢語法範例：轉換
+        href: method-based-query-syntax-examples-conversion.md
+      - name: 以方法為基礎的查詢語法範例：聯結運算子
+        href: method-based-query-syntax-examples-join-operators.md
+      - name: 以方法為基礎的查詢語法範例：項目運算子
+        href: method-based-query-syntax-examples-element-operators.md
+      - name: 以方法為基礎的查詢語法範例：群組
+        href: method-based-query-syntax-examples-grouping.md
+      - name: 以方法為基礎的查詢語法範例：巡覽關聯性
+        href: method-based-query-syntax-examples-navigating-relationships.md
+      - name: 查詢運算式語法範例：Projection
+        href: query-expression-syntax-examples-projection.md
+      - name: 查詢運算式語法範例：篩選
+        href: query-expression-syntax-examples-filtering.md
+      - name: 查詢運算式語法範例：排序
+        href: query-expression-syntax-examples-ordering.md
+      - name: 查詢運算式語法範例：彙總運算子
+        href: query-expression-syntax-examples-aggregate-operators.md
+      - name: 查詢運算式語法範例：資料分割
+        href: query-expression-syntax-examples-partitioning.md
+      - name: 查詢運算式語法範例：聯結運算子
+        href: query-expression-syntax-examples-join-operators.md
+      - name: 查詢運算式語法範例：項目運算子
+        href: query-expression-syntax-examples-element-operators.md
+      - name: 查詢運算式語法範例：群組
+        href: query-expression-syntax-examples-grouping.md
+      - name: 查詢運算式語法範例：巡覽關聯性
+        href: query-expression-syntax-examples-navigating-relationships.md
+    - name: LINQ to Entities 查詢中的運算式
+      href: expressions-in-linq-to-entities-queries.md
+      items:
+      - name: 常數運算式
+        href: constant-expressions.md
+      - name: 比較運算式
+        href: comparison-expressions.md
+      - name: Null 比較
+        href: null-comparisons.md
+      - name: 初始化運算式
+        href: initialization-expressions.md
+    - name: 在 LINQ to Entities 查詢中呼叫函式
+      href: calling-functions-in-linq-to-entities-queries.md
+      items:
+      - name: 作法：呼叫標準函式
+        href: how-to-call-canonical-functions.md
+      - name: 作法：呼叫資料庫函式
+        href: how-to-call-database-functions.md
+      - name: 作法：呼叫自訂資料庫函式
+        href: how-to-call-custom-database-functions.md
+      - name: 作法：在查詢中呼叫模型定義函式
+        href: how-to-call-model-defined-functions-in-queries.md
+      - name: 作法：將模型定義函式當作物件方法來呼叫
+        href: how-to-call-model-defined-functions-as-object-methods.md
+    - name: 已編譯查詢 (LINQ to Entities)
+      href: compiled-queries-linq-to-entities.md
+    - name: 查詢執行
+      href: query-execution.md
+    - name: 查詢結果
+      href: query-results.md
+    - name: LINQ to Entities 查詢中的標準查詢運算子
+      href: standard-query-operators-in-linq-to-entities-queries.md
+    - name: 標準函式的對應 CLR 方法
+      href: clr-method-to-canonical-function-mapping.md
+    - name: 支援與不支援的 LINQ 方法 (LINQ to Entities)
+      href: supported-and-unsupported-linq-methods-linq-to-entities.md
+    - name: LINQ to Entities 中的已知問題和考量
+      href: known-issues-and-considerations-in-linq-to-entities.md
+  - name: Entity SQL 語言
+    href: entity-sql-language.md
+    items:
+    - name: Entity SQL 概觀
+      href: entity-sql-overview.md
+      items:
+      - name: Entity SQL 與 Transact-SQL 的相異之處
+        href: how-entity-sql-differs-from-transact-sql.md
+      - name: Entity SQL 快速參考
+        href: entity-sql-quick-reference.md
+      - name: 型別系統
+        href: type-system-entity-sql.md
+      - name: 類型定義
+        href: type-definitions-entity-sql.md
+      - name: 建構類型
+        href: constructing-types-entity-sql.md
+      - name: 查詢計劃快取
+        href: query-plan-caching-entity-sql.md
+      - name: 命名空間
+        href: namespaces-entity-sql.md
+      - name: 識別項
+        href: identifiers-entity-sql.md
+      - name: 參數
+        href: parameters-entity-sql.md
+      - name: 變數
+        href: variables-entity-sql.md
+      - name: 不支援的運算式
+        href: unsupported-expressions-entity-sql.md
+      - name: 常值
+        href: literals-entity-sql.md
+      - name: Null 常值和型別推斷
+        href: null-literals-and-type-inference-entity-sql.md
+      - name: 輸入字元集
+        href: input-character-set-entity-sql.md
+      - name: 查詢運算式
+        href: query-expressions-entity-sql.md
+      - name: 函式
+        href: functions-entity-sql.md
+        items:
+        - name: 使用者定義函式
+          href: user-defined-functions-entity-sql.md
+        - name: 函式多載解析
+          href: function-overload-resolution-entity-sql.md
+        - name: 彙總函式
+          href: aggregate-functions-entity-sql.md
+      - name: 運算子優先順序
+        href: operator-precedence-entity-sql.md
+      - name: 分頁
+        href: paging-entity-sql.md
+      - name: 比較語意
+        href: comparison-semantics-entity-sql.md
+      - name: 撰寫巢狀 Entity SQL 查詢
+        href: composing-nested-entity-sql-queries.md
+      - name: 可為 Null 的結構類型
+        href: nullable-structured-types-entity-sql.md
+    - name: Entity SQL 參考
+      href: entity-sql-reference.md
+      items:
+      - name: + (加號)
+        href: add.md
+      - name: + (字串串連)
+        href: string-concatenation-entity-sql.md
+      - name: '- (負號)'
+        href: negative-entity-sql.md
+      - name: '- (減號)'
+        href: subtract-entity-sql.md
+      - name: '* (乘號)'
+        href: multiply-entity-sql.md
+      - name: / (除號)
+        href: divide-entity-sql.md
+      - name: 百分比 (模數)
+        href: modulo-entity-sql.md
+      - name: '&& (AND)'
+        href: and-entity-sql.md
+      - name: '|| (OR)'
+        href: or-entity-sql.md
+      - name: '! (NOT)'
+        href: not-entity-sql.md
+      - name: = (等於)
+        href: equals-entity-sql.md
+      - name: '> (大於)'
+        href: greater-than-entity-sql.md
+      - name: '>= (大於或等於)'
+        href: greater-than-or-equal-to-entity-sql.md
+      - name: < (小於)
+        href: less-than-entity-sql.md
+      - name: <= (小於或等於)
+        href: less-than-or-equal-to-entity-sql.md
+      - name: '!= (不等於)'
+        href: not-equal-to-entity-sql.md
+      - name: 。 (成員存取)
+        href: member-access-entity-sql.md
+      - name: -- (註解)
+        href: comment-entity-sql.md
+      - name: ANYELEMENT
+        href: anyelement-entity-sql.md
+      - name: BETWEEN
+        href: between-entity-sql.md
+      - name: CASE
+        href: case-entity-sql.md
+      - name: CAST
+        href: cast-entity-sql.md
+      - name: COLLECTION
+        href: collection-entity-sql.md
+      - name: CREATEREF
+        href: createref-entity-sql.md
+      - name: DEREF
+        href: deref-entity-sql.md
+      - name: EXCEPT
+        href: except-entity-sql.md
+      - name: EXISTS
+        href: exists-entity-sql.md
+      - name: FLATTEN
+        href: flatten-entity-sql.md
+      - name: FROM
+        href: from-entity-sql.md
+      - name: FUNCTION
+        href: function-entity-sql.md
+      - name: GROUP BY
+        href: group-by-entity-sql.md
+      - name: GROUPPARTITION
+        href: grouppartition-entity-sql.md
+      - name: HAVING
+        href: having-entity-sql.md
+      - name: KEY
+        href: key-entity-sql.md
+      - name: IN
+        href: in-entity-sql.md
+      - name: INTERSECT
+        href: intersect-entity-sql.md
+      - name: ISNULL
+        href: isnull-entity-sql.md
+      - name: ISOF
+        href: isof-entity-sql.md
+      - name: LIKE
+        href: like-entity-sql.md
+      - name: LIMIT
+        href: limit-entity-sql.md
+      - name: MULTISET
+        href: multiset-entity-sql.md
+      - name: 具名類型建構函式
+        href: named-type-constructor-entity-sql.md
+      - name: NAVIGATE
+        href: navigate-entity-sql.md
+      - name: OFTYPE
+        href: oftype-entity-sql.md
+      - name: ORDER BY
+        href: order-by-entity-sql.md
+      - name: OVERLAPS
+        href: overlaps-entity-sql.md
+      - name: REF
+        href: ref-entity-sql.md
+      - name: ROW
+        href: row-entity-sql.md
+      - name: SELECT
+        href: select-entity-sql.md
+      - name: SET
+        href: set-entity-sql.md
+      - name: SKIP
+        href: skip-entity-sql.md
+      - name: THEN
+        href: then-entity-sql.md
+      - name: TOP
+        href: top-entity-sql.md
+      - name: TREAT
+        href: treat-entity-sql.md
+      - name: UNION
+        href: union-entity-sql.md
+      - name: USING
+        href: using-entity-sql.md
+      - name: WHERE
+        href: where-entity-sql.md
+  - name: 標準函式
+    href: canonical-functions.md
+    items:
+    - name: 彙總標準函式
+      href: aggregate-canonical-functions.md
+    - name: 數學標準函式
+      href: math-canonical-functions.md
+    - name: 字串標準函式
+      href: string-canonical-functions.md
+    - name: 日期及時間標準函式
+      href: date-and-time-canonical-functions.md
+    - name: 位元標準函式
+      href: bitwise-canonical-functions.md
+    - name: 空間函式
+      href: spatial-functions.md
+    - name: 其他標準函式
+      href: other-canonical-functions.md
+ms.openlocfilehash: 5886642c5f0074893aa960333fa4d85aa5fa1e46
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468209"

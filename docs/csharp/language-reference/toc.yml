@@ -1,0 +1,138 @@
+items:
+- name: 語言參考
+  href: index.md
+  items:
+  - name: 設定語言版本
+    href: configure-language-version.md
+  - name: C# 關鍵字
+    href: keywords/index.md
+  - name: C# 運算子
+    href: operators/index.md
+  - name: C# 特殊字元
+    href: tokens/index.md
+  - name: C# 前置處理器指示詞
+    href: preprocessor-directives/index.md
+  - name: C# 編譯器選項
+    href: compiler-options/index.md
+  - name: C# 編譯器錯誤
+    href: compiler-messages/index.md
+  - name: C# 6.0 草稿規格
+    items:
+    - name: 簡介
+      href: ../../../_csharplang/spec/introduction.md
+    - name: 語彙結構
+      href: ../../../_csharplang/spec/lexical-structure.md
+    - name: 基本概念
+      href: ../../../_csharplang/spec/basic-concepts.md
+    - name: 型別
+      href: ../../../_csharplang/spec/types.md
+    - name: 變數
+      href: ../../../_csharplang/spec/variables.md
+    - name: 轉換
+      href: ../../../_csharplang/spec/conversions.md
+    - name: 運算式
+      href: ../../../_csharplang/spec/expressions.md
+    - name: 陳述式
+      href: ../../../_csharplang/spec/statements.md
+    - name: 命名空間
+      href: ../../../_csharplang/spec/namespaces.md
+    - name: 類別
+      href: ../../../_csharplang/spec/classes.md
+    - name: 結構
+      href: ../../../_csharplang/spec/structs.md
+    - name: 陣列
+      href: ../../../_csharplang/spec/arrays.md
+    - name: 介面
+      href: ../../../_csharplang/spec/interfaces.md
+    - name: 列舉
+      href: ../../../_csharplang/spec/enums.md
+    - name: 委派
+      href: ../../../_csharplang/spec/delegates.md
+    - name: 例外狀況
+      href: ../../../_csharplang/spec/exceptions.md
+    - name: 屬性
+      href: ../../../_csharplang/spec/attributes.md
+    - name: Unsafe 程式碼
+      href: ../../../_csharplang/spec/unsafe-code.md
+    - name: 文件註解
+      href: ../../../_csharplang/spec/documentation-comments.md
+  - name: C# 7.0 語言提案
+    items:
+    - name: 模式比對
+      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+    - name: 區域函式
+      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+    - name: Out 變數宣告
+      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+    - name: throw 運算式
+      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+    - name: 二進位常值
+      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+    - name: 數字分隔符號
+      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+  - name: C# 7.1 語言提案
+    items:
+    - name: Async main 方法
+      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+    - name: 預設運算式
+      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+    - name: 推斷元組名稱
+      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+    - name: 使用泛型進行模式比對
+      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+  - name: C# 7.2 語言提案
+    items:
+    - name: 唯讀參考
+      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+    - name: 參考樣式類型的編譯時間安全性
+      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+    - name: 無後置具名引數
+      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+    - name: Private protected
+      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+    - name: 條件式參考
+      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+    - name: 前置數字分隔符號
+      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+  - name: C# 7.3 語言提案
+    items:
+    - name: 非受控的泛型型別條件約束
+      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+    - name: 為 `fixed` 欄位編製索引不應該要求釘選，不論可移動/不可移動的內容為何
+      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+    - name: 模式型 `fixed` 陳述式
+      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+    - name: 參考區域重新指派
+      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+    - name: Stackalloc 陣列初始設定式
+      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+    - name: 自動實作的屬性欄位目標屬性
+      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+    - name: 初始設定式中的運算式變數
+      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+    - name: 元組相等 (==) 與不相等 (!=)
+      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+    - name: 改進的多載候選項目
+      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+  - name: C# 8.0 語言提案
+    items:
+    - name: Null 參考型別 - 提案
+      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+    - name: 可為 Null 的參考型別 - 規格
+      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+    - name: 遞迴模式比對
+      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+    - name: 非同步資料流
+      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+    - name: 範圍
+      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+    - name: 模式型 using 與 using 宣告
+      href: ../../../_csharplang/proposals/csharp-8.0/using.md
+    - name: Null 聯合指派
+      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
+ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468410"

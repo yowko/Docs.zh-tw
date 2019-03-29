@@ -1,0 +1,126 @@
+items:
+- name: ADO.NET Entity Framework
+  href: index.md
+- name: Entity Framework 概觀
+  href: overview.md
+- name: 建立模型和對應
+  href: modeling-and-mapping.md
+  items:
+  - name: EDM 產生器 (EdmGen.exe)
+    href: edm-generator-edmgen-exe.md
+    items:
+    - name: 作法：使用 EdmGen.exe 產生模型和對應檔
+      href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+    - name: 作法：使用 EdmGen.exe 產生物件層程式碼
+      href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+    - name: 作法：使用 EdmGen.exe 驗證模型和對應檔
+      href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+  - name: 作法：定義連接字串
+    href: how-to-define-the-connection-string.md
+  - name: 作法：讓模型和對應檔成為內嵌資源
+    href: how-to-make-model-and-mapping-files-embedded-resources.md
+  - name: 使用資料定義語言
+    href: working-with-data-definition-language.md
+- name: 查詢概念模型
+  href: querying-a-conceptual-model.md
+- name: 處理物件
+  href: working-with-objects.md
+- name: 處理資料提供者
+  href: working-with-data-providers.md
+  items:
+  - name: 連接字串
+    href: connection-strings.md
+  - name: Entity Framework 資料提供者
+    href: data-providers.md
+    items:
+    - name: Entity Framework 的 EntityClient 提供者
+      href: entityclient-provider-for-the-entity-framework.md
+      items:
+      - name: 作法：建置 EntityCollection 連接字串
+        href: how-to-build-an-entityconnection-connection-string.md
+      - name: 作法：執行可傳回 PrimitiveType 結果的查詢
+        href: how-to-execute-a-query-that-returns-primitivetype-results.md
+      - name: 作法：執行可傳回 StructuralType 結果的查詢
+        href: how-to-execute-a-query-that-returns-structuraltype-results.md
+      - name: 作法：執行可傳回 RefType 結果的查詢
+        href: how-to-execute-a-query-that-returns-reftype-results.md
+      - name: 作法：執行可傳回複雜類型的查詢
+        href: how-to-execute-a-query-that-returns-complex-types.md
+      - name: 作法：執行可傳回巢狀集合的查詢
+        href: how-to-execute-a-query-that-returns-nested-collections.md
+      - name: 作法：使用 EntityCommand 執行參數化 Entity SQL 查詢
+        href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+      - name: 作法：使用 EntityCommand 執行參數化預存程序
+        href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+      - name: 作法：執行多型查詢
+        href: how-to-execute-a-polymorphic-query.md
+      - name: 作法：使用 Navigate 運算子巡覽關聯性
+        href: how-to-navigate-relationships-with-the-navigate-operator.md
+    - name: 適用於 Entity Framework 的 SqlClient
+      href: sqlclient-for-the-entity-framework.md
+      items:
+      - name: 適用於 Entity Framework 的 SqlClient 函式
+        href: sqlclient-for-ef-functions.md
+        items:
+        - name: 概念模型標準與 SQL Server 函式的對應
+          href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+        - name: 彙總函式
+          href: aggregate-functions-sqlclient-for-entity-framework.md
+        - name: 日期及時間函式
+          href: date-and-time-functions.md
+        - name: 數學函式
+          href: mathematical-functions.md
+        - name: 字串函式
+          href: string-functions.md
+        - name: 系統函式
+          href: system-functions.md
+      - name: 適用於 Entity Framework 之 SqlClient 的類型
+        href: sqlclient-for-ef-types.md
+      - name: 適用於 Entity Framework 的 SqlClient 已知問題
+        href: known-issues-in-sqlclient-for-entity-framework.md
+  - name: 撰寫 Entity Framework 資料提供者
+    href: writing-an-ef-data-provider.md
+    items:
+    - name: SQL 產生
+      href: sql-generation.md
+      items:
+      - name: 命令樹的形狀
+        href: the-shape-of-the-command-trees.md
+      - name: 從命令樹產生 SQL - 最佳作法
+        href: generating-sql-from-command-trees-best-practices.md
+      - name: 範例提供者中的 SQL 產生
+        href: sql-generation-in-the-sample-provider.md
+        items:
+        - name: 架構與設計
+          href: architecture-and-design.md
+        - name: 逐步解說：SQL 產生
+          href: walkthrough-sql-generation.md
+    - name: 修改 SQL 產生
+      href: modification-sql-generation.md
+    - name: 提供者資訊清單規格
+      href: provider-manifest-specification.md
+- name: 開發及部署考量因素
+  href: development-and-deployment-considerations.md
+  items:
+  - name: 安全性考量
+    href: security-considerations.md
+  - name: 效能考量
+    href: performance-considerations.md
+  - name: 移轉考量
+    href: migration-considerations.md
+  - name: 部署考量
+    href: deployment-considerations.md
+- name: Entity Framework 資源
+  href: resources.md
+- name: Entity Framework 詞彙
+  href: terminology.md
+- name: 快速入門
+  href: getting-started.md
+- name: 語言參考
+  href: language-reference/index.md
+ms.openlocfilehash: 7b6de341e548ca64690cf9a17281fcbb30f160cf
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468503"

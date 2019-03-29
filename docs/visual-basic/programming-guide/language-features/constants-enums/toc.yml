@@ -1,0 +1,36 @@
+items:
+- name: 常數和列舉
+  href: index.md
+  items:
+  - name: 常數概觀
+    href: constants-overview.md
+    items:
+    - name: 作法：宣告常數
+      href: how-to-declare-a-constant.md
+    - name: 使用者定義的常數
+      href: user-defined-constants.md
+    - name: 常數和常值資料類型
+      href: constant-and-literal-data-types.md
+    - name: 作法：將相關常數值群組在一起
+      href: how-to-group-related-constant-values-together.md
+  - name: 列舉概觀
+    href: enumerations-overview.md
+    items:
+    - name: 作法：宣告列舉
+      href: how-to-declare-enumerations.md
+    - name: 作法：參考列舉成員
+      href: how-to-refer-to-an-enumeration-member.md
+    - name: 列舉和名稱限定性條件
+      href: enumerations-and-name-qualification.md
+    - name: 作法：逐一查看列舉
+      href: how-to-iterate-through-an-enumeration.md
+    - name: 作法：決定與列舉值相關聯的字串
+      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+    - name: 何時使用列舉類型
+      href: when-to-use-an-enumeration.md
+ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468531"

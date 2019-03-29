@@ -1,0 +1,35 @@
+items:
+- name: 移轉手冊
+  href: index.md
+  items:
+  - name: 應用程式相容性
+    href: application-compatibility.md
+    items:
+    - name: 執行階段變更
+      href: runtime/index.md
+    - name: 重定目標變更
+      href: retargeting/index.md
+  - name: 版本相容性
+    href: version-compatibility.md
+  - name: 版本和相依性
+    href: versions-and-dependencies.md
+    items:
+    - name: 作法：判斷安裝的 .NET Framework 版本
+      href: how-to-determine-which-versions-are-installed.md
+      items:
+      - name: .NET Framework 版本金鑰及 Windows 作業系統版本
+        href: release-keys-and-os-versions.md
+    - name: 作法：判斷安裝的 .NET Framework 更新
+      href: how-to-determine-which-net-framework-updates-are-installed.md
+  - name: 作法：設定應用程式以支援 .NET Framework 4 或更新版本
+    href: how-to-configure-an-app-to-support-net-framework-4-or-4-5.md
+  - name: 從 .NET Framework 1.1 移轉
+    href: migrating-from-the-net-framework-1-1.md
+  - name: .NET Framework 4 移轉問題
+    href: net-framework-4-migration-issues.md
+ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468383"

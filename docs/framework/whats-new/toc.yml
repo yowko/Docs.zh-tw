@@ -1,0 +1,19 @@
+items:
+- name: 新功能
+  href: index.md
+  items:
+  - name: 協助工具的新功能
+    href: whats-new-in-accessibility.md
+  - name: 類別庫中已淘汰的功能
+    href: whats-obsolete.md
+    items:
+    - name: 已淘汰的類型
+      href: obsolete-types.md
+    - name: 已淘汰的成員
+      href: obsolete-members.md
+ms.openlocfilehash: 2c01bcec7ed118bc8d32338a04686d158770d140
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468175"

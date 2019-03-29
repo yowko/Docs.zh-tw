@@ -66,10 +66,12 @@ ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
   
 -   CTS 中的每個型別都會定義為「實值型別」或「參考型別」。 這包括 .NET 類別庫中的所有自訂型別以及您自己的使用者定義型別。 您使用 [struct](../../../csharp/language-reference/keywords/struct.md) 關鍵字定義的型別為實值型別；所有內建的數字型別都是 `structs`。 您使用 [class](../../../csharp/language-reference/keywords/class.md) 關鍵字定義的型別為參考型別。 參考型別和實值型別有不同的編譯時期規則和不同的執行階段行為。  
   
- 下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。  
+ 下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。
+
+ 下圖顯示 CTS 中的實值型別和參考型別： 
   
- ![實值型別和參考型別](../../../csharp/programming-guide/types/media/valuetypescts.png "ValueTypesCTS")  
-CTS 中的實值型別和參考型別  
+  
+ ![顯示 CTS 實值型別和參考型別的螢幕擷取畫面。](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
 >  您可以看到最常使用的型別全都整理在 <xref:System> 命名空間中。 不過，其中包含型別的命名空間和實值型別或參考型別毫無關聯。  

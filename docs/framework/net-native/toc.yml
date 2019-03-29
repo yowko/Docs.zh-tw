@@ -1,0 +1,87 @@
+items:
+- name: 使用 .NET Native 編譯應用程式
+  href: index.md
+  items:
+  - name: .NET 原生和編譯
+    href: net-native-and-compilation.md
+  - name: 快速入門
+    href: getting-started-with-net-native.md
+    items:
+    - name: 範例：針對動態程式設計進行疑難排解
+      href: example-troubleshooting-dynamic-programming.md
+    - name: 範例：處理繫結資料時所發生的例外狀況
+      href: example-handling-exceptions-when-binding-data.md
+    - name: .NET 原生 App 中的執行階段例外狀況
+      href: runtime-exceptions-in-net-native-apps.md
+  - name: 評估使用 .NET Native 的啟動改善
+    href: measuring-startup-improvement-with-net-native.md
+  - name: 反映和 .NET Native
+    href: reflection-and-net-native.md
+    items:
+    - name: 依賴反映的 API
+      href: apis-that-rely-on-reflection.md
+    - name: 反映 API 參考
+      href: net-native-reflection-api-reference.md
+      items:
+      - name: MissingInteropDataException 類別
+        href: missinginteropdataexception-class-net-native.md
+      - name: MissingMetadataException 類別
+        href: missingmetadataexception-class-net-native.md
+      - name: MissingRuntimeArtifactException 類別
+        href: missingruntimeartifactexception-class-net-native.md
+    - name: 執行階段指示詞 (rd.xml) 組態檔參考
+      href: runtime-directives-rd-xml-configuration-file-reference.md
+      items:
+      - name: 執行階段指示詞項目
+        href: runtime-directive-elements.md
+        items:
+        - name: <Application> 項目
+          href: application-element-net-native.md
+        - name: <Assembly> 項目
+          href: assembly-element-net-native.md
+        - name: <AttributeImplies> 項目
+          href: attributeimplies-element-net-native.md
+        - name: <Directives> 項目
+          href: directives-element-net-native.md
+        - name: <Event> 項目
+          href: event-element-net-native.md
+        - name: <Field> 項目
+          href: field-element-net-native.md
+        - name: <GenericParameter> 項目
+          href: genericparameter-element-net-native.md
+        - name: <ImpliesType> 項目
+          href: impliestype-element-net-native.md
+        - name: <Library> 項目
+          href: library-element-net-native.md
+        - name: <Method> 項目
+          href: method-element-net-native.md
+        - name: <MethodInstantiation> 項目
+          href: methodinstantiation-element-net-native.md
+        - name: <Namespace> 項目
+          href: namespace-element-net-native.md
+        - name: <Parameter> 項目
+          href: parameter-element-net-native.md
+        - name: <Property> 項目
+          href: property-element-net-native.md
+        - name: <Subtypes> 項目
+          href: subtypes-element-net-native.md
+        - name: <Type> 項目
+          href: type-element-net-native.md
+        - name: <TypeInstantiation> 項目
+          href: typeinstantiation-element-net-native.md
+        - name: <TypeParameter> 項目
+          href: typeparameter-element-net-native.md
+      - name: 執行階段指示詞原則設定
+        href: runtime-directive-policy-settings.md
+  - name: 序列化和中繼資料
+    href: serialization-and-metadata.md
+  - name: 將您的 Windows 市集應用程式移轉至 .NET Native
+    href: migrating-your-windows-store-app-to-net-native.md
+  - name: .NET Native 一般疑難排解
+    href: net-native-general-troubleshooting.md
+ms.openlocfilehash: 85d8306c93d50cc595fcd3bcbf9ee404a84e7ab2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468290"

@@ -1,0 +1,102 @@
+items:
+- name: XAML 服務
+  href: index.md
+  items:
+  - name: XAML 命名空間 (x:)語言功能
+    href: xaml-namespace-x-language-features.md
+    items:
+    - name: XAML 2009 語言功能
+      href: xaml-2009-language-features.md
+      items:
+      - name: 通用 XAML 語言基本類型的內建類型
+        href: built-in-types-for-common-xaml-language-primitives.md
+      - name: x:Arguments 指示詞
+        href: x-arguments-directive.md
+      - name: x:FactoryMethod 指示詞
+        href: x-factorymethod-directive.md
+      - name: x:Reference 標記延伸
+        href: x-reference-markup-extension.md
+    - name: x:Array 標記延伸
+      href: x-array-markup-extension.md
+    - name: x:Class 指示詞
+      href: x-class-directive.md
+    - name: x:ClassModifier 指示詞
+      href: x-classmodifier-directive.md
+    - name: x:Code 內建 XAML 類型
+      href: x-code-intrinsic-xaml-type.md
+    - name: x:FieldModifier 指示詞
+      href: x-fieldmodifier-directive.md
+    - name: x:Key 指示詞
+      href: x-key-directive.md
+    - name: x:Member 指示詞
+      href: x-member-directive.md
+    - name: x:Members 指示詞
+      href: x-members-directive.md
+    - name: x:Name 指示詞
+      href: x-name-directive.md
+    - name: x:Null 標記延伸
+      href: x-null-markup-extension.md
+    - name: x:Property 指示詞
+      href: x-property-directive.md
+    - name: x:Shared 屬性
+      href: x-shared-attribute.md
+    - name: x:Static 標記延伸
+      href: x-static-markup-extension.md
+    - name: x:Subclass 指示詞
+      href: x-subclass-directive.md
+    - name: x:Type 標記延伸
+      href: x-type-markup-extension.md
+    - name: x:TypeArguments 指示詞
+      href: x-typearguments-directive.md
+    - name: x:Uid 指示詞
+      href: x-uid-directive.md
+    - name: x:XData 內建 XAML 類型
+      href: x-xdata-intrinsic-xaml-type.md
+    - name: XamlName 文法
+      href: xamlname-grammar.md
+    - name: '{} 逸出序列/標記延伸'
+      href: escape-sequence-markup-extension.md
+    - name: XAML 中的 xml:lang 處理
+      href: xml-lang-handling-in-xaml.md
+    - name: XAML 中的 xml:space 處理
+      href: xml-space-handling-in-xaml.md
+  - name: 從 WPF 移轉至 System.Xaml 的類型
+    href: types-migrated-from-wpf-to-system-xaml.md
+  - name: 認識 XAML 節點資料流結構和概念
+    href: understanding-xaml-node-stream-structures-and-concepts.md
+  - name: XAMLServices 類別和基本 XAML 的讀取或寫入
+    href: xamlservices-class-and-basic-xaml-reading-or-writing.md
+  - name: XAML 的類型轉換子和標記延伸
+    href: type-converters-and-markup-extensions-for-xaml.md
+    items:
+    - name: XAML 標記延伸概觀
+      href: markup-extensions-for-xaml-overview.md
+    - name: XAML 類型轉換子概觀
+      href: type-converters-for-xaml-overview.md
+    - name: 適用於類型轉換子和標記延伸的服務內容
+      href: service-contexts-available-to-type-converters-and-markup-extensions.md
+  - name: XAML 中的泛型
+    href: generics-in-xaml.md
+  - name: 定義可搭配 .NET Framework XAML 服務使用的自訂類型
+    href: defining-custom-types-for-use-with-net-framework-xaml-services.md
+    items:
+    - name: 自訂類型和程式庫的 XAML 相關 CLR 屬性
+      href: xaml-related-clr-attributes-for-custom-types-and-libraries.md
+    - name: XAML 的集合和集合類型
+      href: collections-and-collection-types-for-xaml.md
+  - name: XAML 命名空間
+    href: xaml-namespaces-for-net-framework-xaml-services.md
+  - name: 預設 XAML 結構描述內容和 WPF XAML 結構描述內容
+    href: default-xaml-schema-context-and-wpf-xaml-schema-context.md
+  - name: XAML 安全性考量
+    href: xaml-security-considerations.md
+  - name: XAML 中的空白字元處理
+    href: whitespace-processing-in-xaml.md
+  - name: XML 字元實體和 XAML
+    href: xml-character-entities-and-xaml.md
+ms.openlocfilehash: a2e6b523cc59b668a00b2090d6fe4369b558cefc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468222"

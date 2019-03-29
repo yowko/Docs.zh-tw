@@ -1,0 +1,16 @@
+items:
+- name: 序列化 (C#)
+  href: index.md
+  items:
+  - name: 作法：將物件資料寫入 XML 檔案
+    href: how-to-write-object-data-to-an-xml-file.md
+  - name: 作法：從 XML 檔案讀取物件資料
+    href: how-to-read-object-data-from-an-xml-file.md
+  - name: 逐步解說：在 Visual Studio 中保存物件
+    href: walkthrough-persisting-an-object-in-visual-studio.md
+ms.openlocfilehash: ccf7c795b437ff2c4046b6005ec7b05528aa884f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468326"

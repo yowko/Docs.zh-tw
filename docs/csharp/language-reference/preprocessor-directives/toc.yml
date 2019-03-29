@@ -1,0 +1,38 @@
+items:
+- name: C# 前置處理器指示詞
+  href: index.md
+  items:
+  - name: '#if'
+    href: preprocessor-if.md
+  - name: '#else'
+    href: preprocessor-else.md
+  - name: '#elif'
+    href: preprocessor-elif.md
+  - name: '#endif'
+    href: preprocessor-endif.md
+  - name: '#define'
+    href: preprocessor-define.md
+  - name: '#undef'
+    href: preprocessor-undef.md
+  - name: '#warning'
+    href: preprocessor-warning.md
+  - name: '#個錯誤'
+    href: preprocessor-error.md
+  - name: '#line'
+    href: preprocessor-line.md
+  - name: '#區域'
+    href: preprocessor-region.md
+  - name: '#endregion'
+    href: preprocessor-endregion.md
+  - name: '#pragma'
+    href: preprocessor-pragma.md
+  - name: '#pragma warning'
+    href: preprocessor-pragma-warning.md
+  - name: '#pragma checksum'
+    href: preprocessor-pragma-checksum.md
+ms.openlocfilehash: 7f5b2be869494beee89b3f697aaebe7186ce0aea
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468407"

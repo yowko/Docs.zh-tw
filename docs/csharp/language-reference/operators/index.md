@@ -131,9 +131,9 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 這些運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x == y](equality-comparison-operator.md) – 相等。 根據預設，對於 `string` 以外的參考類型，這會傳回參考相等 (識別測試)。 不過，類型可以多載 `==`，因此如果您的目的是要測試識別，最好使用 `object` 上的 `ReferenceEquals` 方法。
+[x == y](equality-operators.md#equality-operator-) – 相等。 根據預設，對於 `string` 以外的參考類型，這會傳回參考相等 (識別測試)。 不過，類型可以多載 `==`，因此如果您的目的是要測試識別，最好使用 `object` 上的 `ReferenceEquals` 方法。
 
-[x != y](not-equal-operator.md) – 不等於。 請參閱 `==` 的註解。 如果類型多載 `==`，則它必須多載 `!=`。
+[x != y](equality-operators.md#inequality-operator-) – 不等於。 請參閱 `==` 的註解。 如果類型多載 `==`，則它必須多載 `!=`。
 
 ## <a name="logical-and-operator"></a>邏輯 AND 運算子
 

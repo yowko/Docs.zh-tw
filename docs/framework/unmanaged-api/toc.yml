@@ -1,0 +1,38 @@
+items:
+- name: Unmanaged API 參考
+  href: index.md
+  items:
+  - name: 常見資料類型
+    href: common-data-types-unmanaged-api-reference.md
+  - name: ALink API
+    href: alink/
+  - name: Authenticode
+    href: authenticode/
+  - name: 常數
+    href: constants-unmanaged-api-reference.md
+  - name: 偵錯
+    href: debugging/
+  - name: 診斷符號存放區
+    href: diagnostics/
+  - name: 融合
+    href: fusion/
+  - name: 裝載
+    href: hosting/
+  - name: 中繼資料
+    href: metadata/
+  - name: 程式碼剖析
+    href: profiling/
+  - name: 強式命名
+    href: strong-naming/
+  - name: WMI 和效能計數器
+    href: wmi/
+  - name: Tlbexp Helper 函式
+    href: tlbexp/
+  - name: GUID_ManagedName 屬性
+    href: guid-managedname-attribute.md
+ms.openlocfilehash: 48454d1cf9285a229de8d3b852d33c985c3b53bc
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468586"

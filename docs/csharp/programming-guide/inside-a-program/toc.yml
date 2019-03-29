@@ -1,0 +1,18 @@
+items:
+- name: C# 程式內部
+  href: index.md
+  items:
+  - name: Hello World -- 您的第一個程式
+    href: hello-world-your-first-program.md
+  - name: C# 程式的一般結構
+    href: general-structure-of-a-csharp-program.md
+  - name: 識別碼名稱
+    href: identifier-names.md
+  - name: C# 編碼慣例
+    href: coding-conventions.md
+ms.openlocfilehash: 1772c8e85b53055cddffa4ffc2cac15f3cd32c77
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468374"

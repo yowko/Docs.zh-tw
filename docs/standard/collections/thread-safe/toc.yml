@@ -1,0 +1,26 @@
+items:
+- name: 安全執行緒集合
+  href: index.md
+  items:
+  - name: BlockingCollection 概觀
+    href: blockingcollection-overview.md
+  - name: 使用安全執行緒集合的時機
+    href: when-to-use-a-thread-safe-collection.md
+  - name: 作法：從 BlockingCollection 個別新增和擷取項目
+    href: how-to-add-and-take-items.md
+  - name: 作法：使用 ForEach 來移除 BlockingCollection 中的項目
+    href: how-to-use-foreach-to-remove.md
+  - name: 作法：在 ConcurrentDictionary 中新增和移除項目
+    href: how-to-add-and-remove-items.md
+  - name: 作法：將界限和封鎖功能新增至集合
+    href: how-to-add-bounding-and-blocking.md
+  - name: 作法：在管線中使用封鎖集合的陣列
+    href: how-to-use-arrays-of-blockingcollections.md
+  - name: 作法：使用 ConcurrentBag 建立物件集區
+    href: how-to-create-an-object-pool.md
+ms.openlocfilehash: 6b17867548e1089eaa58d2c8a262fe4c6438948f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468260"

@@ -38,7 +38,7 @@ ms.assetid: 149f5ca5-5b34-4746-9542-1ae43b2d0256
 若要使用組件，您必須加入對它的參考。 接著，您可以針對 C# 使用 [using 指示詞](../../csharp/language-reference/keywords/using-directive.md)，或針對 Visual Basic 使用 [Imports 陳述式](../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)，來選擇您欲使用項目的命名空間。 在參考並匯入組件後，您的應用程式即可使用其所有可存取的類型、屬性、方法及命名空間的其他成員，他們的程式碼就如同您來源檔案的一部分。
 
 > [!NOTE]
-> 系統會自動參考 .NET 類別庫中的大多數組件。 然而在某些情況下，有些系統組件不會受到自動參考。 在 .NET Core 中，您可以藉由使用 Visual Studio 中的 NuGet 套件管理員，或將組件的 [<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 元素新增至 *.csproj 或 *.vbproj 專案中，來將參考新增至包含該組件的 NuGet 套件。 在 .NET Framework 中，您可以藉由使用 Visual Studio 中的 [新增參考] 對話方塊，或使用 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 或 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 編譯器的 `-reference` 命令列選項，來將參考新增至組件。
+> 系統會自動參考 .NET 類別庫中的大多數組件。 然而在某些情況下，有些系統組件不會受到自動參考。 在 .NET Core 中，您可以藉由使用 Visual Studio 中的 NuGet 套件管理員，或將組件的 [\<PackageReference>](../../core/tools/dependencies.md#the-new-packagereference-element) 項目新增至 *.csproj 或 *.vbproj 專案，來將參考新增至包含該組件的 NuGet 套件。 在 .NET Framework 中，您可以藉由使用 Visual Studio 中的 [新增參考] 對話方塊，或使用 [C#](../../csharp/language-reference/compiler-options/reference-compiler-option.md) 或 [Visual Basic](../../visual-basic/reference/command-line-compiler/reference.md) 編譯器的 `-reference` 命令列選項，來將參考新增至組件。
 
 在 C# 中，您也可以在單一應用程式中使用同一組件的兩種版本。 如需詳細資訊，請參閱[外部別名](../../csharp/language-reference/keywords/extern-alias.md)。
 
