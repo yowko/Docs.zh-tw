@@ -2,12 +2,12 @@
 title: 選項
 description: 了解如何使用F#選項時的實際值可能不存在的具名的值或變數的類型。
 ms.date: 05/16/2016
-ms.openlocfilehash: ebd1c1c39468594de83b3c2af1da48c277bfcbe1
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 6d32693bccc74c2cab642e4f626c9463092e8a39
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613501"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634098"
 ---
 # <a name="options"></a>選項
 
@@ -40,6 +40,8 @@ ms.locfileid: "53613501"
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet1402.fs)]
 
 `openFile`在上述範例中的函式具有類型`string -> File option`因為它會傳回`File`物件如果已順利開啟檔案和`None`發生的例外狀況。 視情況而定，它可能不是適當的設計選擇來攔截例外狀況，而不是允許傳播。
+
+此外，就仍然可以傳遞`null`或為 null 的值`Some`案例的選項。 這通常是為了避免，而且通常是在常式F#進行程式設計，但可能會由於參考型別在.NET 中的本質。
 
 ## <a name="option-properties-and-methods"></a>選項屬性和方法
 

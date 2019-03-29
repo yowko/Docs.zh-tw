@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: ad86577aa4a66d9296c3c1844c9f8fa8c2b89d24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364823"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634553"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -61,7 +61,7 @@ ms.locfileid: "57364823"
   
  不管您的繫結元素是什麼，也不論資料來源的本質，每個繫結一定會遵循下圖所說明的模型：  
   
- ![基本資料繫結圖](./media/databindingmostbasic.png "DataBindingMostBasic")  
+ ![此圖顯示基本資料繫結模型。](./media/data-binding-overview/basic-data-binding-diagram.png)  
   
  如上圖所說明，資料繫結基本上是繫結目標和繫結來源間的橋樑。 該圖示範下列基本 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結概念：  
   
@@ -101,7 +101,7 @@ ms.locfileid: "57364823"
   
  然而，當您編輯文字時，或者是在完成文字編輯且將滑鼠指標帶離 TextBox 後，來源值是否有更新？ <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>繫結的屬性會決定觸發來源更新。 下圖中右箭頭的點說明所扮演的角色<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性：  
   
- ![UpdateSourceTrigger 圖表](./media/databindingupdatesourcetrigger.png "DataBindingUpdateSourceTrigger")  
+ ![此圖顯示 UpdateSourceTrigger 屬性的角色。](./media/data-binding-overview/data-binding-updatesource-trigger.png)  
   
  如果<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值是<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，然後值所指向的向右鍵<xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>取得盡在目標屬性變更更新繫結。 不過，如果<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值是<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>，則該值時，才取得更新為新值的目標屬性失去焦點。  
   
@@ -132,7 +132,7 @@ ms.locfileid: "57364823"
   
  如果將這個範例套用到我們的基本圖表，結果會類似下圖。 這是<xref:System.Windows.Data.BindingMode.OneWay>繫結，因為 Background 屬性支援<xref:System.Windows.Data.BindingMode.OneWay>預設繫結。  
   
- ![資料繫結圖表](./media/databindingbuttonbackgroundexample.png "DataBindingButtonBackgroundExample")  
+ ![此圖顯示資料繫結 Background 屬性。](./media/data-binding-overview/data-binding-button-background-example.png)  
   
  您可能納悶，為什麼看起來雖然*ColorName*屬性是字串類型時<xref:System.Windows.Controls.Control.Background%2A>屬性的類型是<xref:System.Windows.Media.Brush>。 這是因為預設型別轉換的作用，在[資料轉換](#data_conversion)一節中會討論到。  
   
@@ -185,7 +185,7 @@ ms.locfileid: "57364823"
   
  若要將這項資訊加入到[建立繫結](#creating_a_binding)一節的圖中，則圖表看起來會像這樣：  
   
- ![資料繫結圖表](./media/databindingbuttondefaultconversion.png "DataBindingButtonDefaultConversion")  
+ ![此圖顯示的資料繫結的預設屬性。](./media/data-binding-overview/data-binding-button-default-conversion.png)  
   
  然而，如果而不需要將繫結來源物件的字串類型的屬性*色彩*型別的屬性<xref:System.Windows.Media.Color>嗎？ 在此情況下，為了讓繫結，搭配您必須先將*色彩*成屬性值，<xref:System.Windows.Controls.Control.Background%2A>屬性可以接受。 您必須建立自訂轉換子實作<xref:System.Windows.Data.IValueConverter>介面，如下列範例所示：  
   
@@ -196,7 +196,7 @@ ms.locfileid: "57364823"
   
  現在是使用自訂轉換器來代替預設轉換，圖表如下圖所示：  
   
- ![資料繫結圖表](./media/databindingconvertercolorexample.png "DataBindingConverterColorExample")  
+ ![此圖顯示資料繫結的自訂轉換器。](./media/data-binding-overview/data-binding-converter-color-example.png)  
   
  再重複聲明一次，預設轉換也可以使用，因為要繫結的型別中存在型別轉換器。 這個行為會取決於目標中提供的型別轉換器。 如果有疑問，請建立自己的轉換器。  
   
@@ -217,7 +217,7 @@ ms.locfileid: "57364823"
   
  所幸，我們的基本圖表仍然適用。 如果您要繫結<xref:System.Windows.Controls.ItemsControl>至集合中，圖表看起來像這樣：  
   
- ![資料繫結 ItemsControl 圖表](./media/databindingitemscontrol.png "DataBindingItemsControl")  
+ ![此圖顯示資料繫結 ItemsControl 物件。](./media/data-binding-overview/data-binding-itemscontrol.png)  
   
  如圖表所示，要繫結<xref:System.Windows.Controls.ItemsControl>給集合的物件，<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性是要使用的屬性。 您可以想像<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性的內容當做<xref:System.Windows.Controls.ItemsControl>。 請注意，繫結<xref:System.Windows.Data.BindingMode.OneWay>因為<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性支援<xref:System.Windows.Data.BindingMode.OneWay>預設繫結。  
   
@@ -340,7 +340,7 @@ ms.locfileid: "57364823"
 ## <a name="data-templating"></a>資料範本化  
  沒有使用資料範本的話，[資料繫結是什麼](#what_is_data_binding)一節中的應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 看起來會類似下圖：  
   
- ![不含資料範本的資料繫結示範](./media/databindingdemotemplates.png "DataBindingDemoTemplates")  
+ ![不含資料範本的資料繫結示範](./media/data-binding-overview/data-binding-demo-templates.png)  
   
  上一節中的範例所示同時<xref:System.Windows.Controls.ListBox>控制項和<xref:System.Windows.Controls.ContentControl>繫結至整個集合物件 （或更具體來說，集合物件的檢視） 的*AuctionItem*s。 如何顯示資料收集的特定指示沒有<xref:System.Windows.Controls.ListBox>顯示基礎集合中每個物件的字串表示，<xref:System.Windows.Controls.ContentControl>顯示繫結至物件的字串表示。  
   

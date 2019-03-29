@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: e0a52dcd3b403b3b5795dc0d025ac93176f009c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359129"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634449"
 ---
 # <a name="dialog-boxes-overview"></a>對話方塊概觀
 獨立應用程式通常具有主視窗，其中顯示的主要資料的應用程式運作，並公開的功能來處理該資料透過[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]功能表列、 工具列和狀態列等機制。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
@@ -40,7 +40,7 @@ ms.locfileid: "57359129"
 ## <a name="message-boxes"></a>訊息方塊  
  A*訊息方塊*是可用來顯示文字資訊，並允許使用者透過按鈕做出決定的對話方塊。 下圖所示的訊息方塊顯示文字資訊、提出問題，並提供使用者三個按鈕來回答問題。  
   
- ![文書處理器對話方塊](./media/dialogboxesoverviewfigure1.png "DialogBoxesOverviewFigure1")  
+ ![文書處理器對話方塊，詢問您是否要將變更儲存至文件的應用程式之前關閉。](./media/dialog-boxes-overview/word-processor-dialog.png)  
   
  若要建立訊息方塊，您使用<xref:System.Windows.MessageBox>類別。 <xref:System.Windows.MessageBox> 可讓您設定訊息方塊文字、 標題、 圖示和按鈕，使用如下所示的程式碼。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "57359129"
 ### <a name="open-file-dialog"></a>開啟檔案對話方塊  
  如下圖所示，檔案開啟功能使用 [開啟檔案] 對話方塊，來擷取要開啟之檔案的名稱。  
   
- ![開啟對話方塊](./media/dialogboxesoverviewfigure2.png "DialogBoxesOverviewFigure2")  
+ ![開啟的對話方塊中，顯示要擷取檔案的位置。](./media/dialog-boxes-overview/open-file-dialog-box.png)  
   
  常見的 [開啟檔案] 對話方塊中會實作成<xref:Microsoft.Win32.OpenFileDialog>類別，並位於<xref:Microsoft.Win32>命名空間。 下列程式碼示範如何建立、設定及顯示一個對話方塊，以及如何處理結果。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "57359129"
 ### <a name="save-file-dialog-box"></a>儲存檔案對話方塊  
  如下圖所示，檔案儲存功能使用 [儲存檔案] 對話方塊，來擷取要儲存之檔案的名稱。  
   
- ![另存新檔對話方塊](./media/dialogboxesoverviewfigure3.png "DialogBoxesOverviewFigure3")  
+ ![另存新檔 對話方塊顯示要儲存檔案的位置。](./media/dialog-boxes-overview/save-file-dialog-box.png)  
   
  儲存檔案 對話方塊中的一般會實作成<xref:Microsoft.Win32.SaveFileDialog>類別，並位於<xref:Microsoft.Win32>命名空間。 下列程式碼示範如何建立、設定及顯示一個對話方塊，以及如何處理結果。  
   
@@ -102,7 +102,7 @@ ms.locfileid: "57359129"
 ### <a name="print-dialog-box"></a>列印對話方塊  
  如下圖所示，列印功能使用 [列印] 對話方塊，來選擇及設定使用者想要列印資料的目標印表機。  
   
- ![列印對話方塊](./media/dialogboxesoverviewfigure4.png "DialogBoxesOverviewFigure4")  
+ ![如果螢幕擷取畫面顯示 [列印] 對話方塊。](./media/dialog-boxes-overview/print-data-dialog-box.png)  
   
  通用列印對話方塊會實作成<xref:System.Windows.Controls.PrintDialog>類別，並位於<xref:System.Windows.Controls>命名空間。 下列程式碼示範如何建立、設定及顯示一個對話方塊。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "57359129"
 ### <a name="creating-a-modal-custom-dialog-box"></a>建立自訂強制回應對話方塊  
  本主題說明如何使用<xref:System.Windows.Window>來建立一般強制回應對話方塊方塊實作中，使用`Margins`對話方塊中，做為範例 (請參閱[對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984))。 `Margins`下圖顯示對話方塊。  
   
- ![邊界對話方塊](./media/dialogboxesoverviewfigure5.png "DialogBoxesOverviewFigure5")  
+ ![欄位來定義左邊的界、 上方邊界、 右邊界及下邊界的邊界 對話方塊。](./media/dialog-boxes-overview/margin-size-dialog-box.png)  
   
 #### <a name="configuring-a-modal-dialog-box"></a>設定強制回應對話方塊  
  一般對話方塊的使用者介面包括：  
@@ -208,7 +208,7 @@ ms.locfileid: "57359129"
   
  驗證規則相關聯，一旦[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]會自動將其套用的繫結控制項中輸入資料時。 當控制項包含無效的資料，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]會顯示在無效的控制項周圍的紅色框線，如下圖所示。  
   
- ![無效的左邊界](./media/dialogboxesoverviewfigure7.png "DialogBoxesOverviewFigure7")  
+ ![無效的左邊的界值周圍的紅色框線的邊界 對話方塊。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
  在使用者輸入有效的資料之前，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不會將使用者侷限在無效的控制項。 這是很好的對話方塊行為；使用者應該能夠自由地巡覽對話方塊中的控制項，而不論資料是否有效。 不過，這表示使用者可以輸入無效的資料，然後按**確定** 按鈕。 基於這個理由，您的程式碼也需要驗證對話方塊中的所有控制項時 **[確定]** 藉由處理按下按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
@@ -277,7 +277,7 @@ ms.locfileid: "57359129"
 ### <a name="creating-a-modeless-custom-dialog-box"></a>建立自訂非強制回應對話方塊  
  非強制回應對話方塊 (例如下圖所示的 [尋找] 對話方塊) 與強制回應對話方塊具有相同的基本外觀。  
   
- ![尋找對話方塊](./media/dialogboxesoverviewfigure6.PNG "DialogBoxesOverviewFigure6")  
+ ![如果螢幕擷取畫面顯示 [尋找] 對話方塊。](./media/dialog-boxes-overview/find-modeless-dialog-box.png)  
   
  不過，其行為稍有不同，如下列各節中所述。  
   

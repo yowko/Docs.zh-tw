@@ -2,12 +2,12 @@
 title: 明確欄位：Val 關鍵字
 description: 深入了解F#'val' 關鍵字，用來宣告類別或結構類型中儲存的值，而不會初始化類型的位置。
 ms.date: 05/16/2016
-ms.openlocfilehash: 492541f6eeba94d2177e92de935fa524b9def567
-ms.sourcegitcommit: 0888d7b24f475c346a3f444de8d83ec1ca7cd234
+ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/22/2018
-ms.locfileid: "53773623"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634007"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明確欄位：Val 關鍵字
 
@@ -40,7 +40,7 @@ val [ mutable ] [ access-modifier ] field-name : type-name
 對於可變動欄位，.NET 編譯表示法是 .NET 欄位。
 
 >[!WARNING]
-`Note` .NET Framework 命名空間`System.ComponentModel`包含具有相同名稱的屬性。 如需此屬性的詳細資訊，請參閱 `System.ComponentModel.DefaultValueAttribute`。
+>.NET Framework 命名空間`System.ComponentModel`包含具有相同名稱的屬性。 如需此屬性的詳細資訊，請參閱 `System.ComponentModel.DefaultValueAttribute`。
 
 下列程式碼示範在具有主要建構函式的類別中使用明確欄位，也示範 `let` 繫結，方便對照。 請注意，`let` 繫結的欄位 `myInt1` 是 private。 從成員方法參考 `let` 繫結欄位 `myInt1` 時，不需要自我識別項 `this`。 但是，當您參考明確欄位 `myInt2` 和 `myString` 時，需要自我識別項。
 

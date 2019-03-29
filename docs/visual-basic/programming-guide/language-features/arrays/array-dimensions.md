@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rectangular arrays
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
-ms.openlocfilehash: 5ba92e113faf9d68bad97968937cc736132b2065
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47b90a6c513a5808dc0669d2d861de5e16406a34
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708528"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634163"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Array Dimensions in Visual Basic
 A*維度*是在其中您可以變更陣列的項目規格的方向。 保留每一天的月份的銷售總額的陣列有一個維度 （月份天數）。 保留每一天的月份部門銷售總額的陣列具有兩個維度 （的部門編號及月份天數）。 陣列的維度數目會呼叫其*陣序規範*。  
@@ -27,14 +27,11 @@ A*維度*是在其中您可以變更陣列的項目規格的方向。 保留每�
   
  下圖顯示概念性結構的陣列順位不同。 在圖例中的每個項目會顯示存取它的索引值。 例如，您可以存取的二維陣列中的第二個資料列的第一個項目指定的索引`(1, 0)`。  
   
- ![圖形的圖表，其中一個&#45;維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimone.gif "ArrayExDimOne")  
-一維陣列  
+ ![此圖顯示的一維陣列。](./media/array-dimensions/one-dimensional-array.gif)  
   
- ![兩個圖形的圖表&#45;維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimtwo.gif "ArrayExDimTwo")  
-二維陣列  
+ ![此圖顯示的二維陣列。](./media/array-dimensions/two-dimensional-array.gif)  
   
- ![圖形的圖表，包含三個&#45;維陣列](../../../../visual-basic/programming-guide/language-features/arrays/media/arrayexdimthree.gif "ArrayExDimThree")  
-三維陣列  
+ ![此圖顯示一個三維陣列。](./media/array-dimensions/three-dimensional-array.gif)  
   
 ### <a name="one-dimension"></a>一維  
  許多陣列有只有一個維度，例如每個年齡的人的數目。 將項目指定唯一的需求是該元素保留計數的年齡。 因此，這類陣列會使用一個索引。 下列範例宣告的變數來保存*的一維陣列*的時代中，計算歲到 120 之間的 0。  

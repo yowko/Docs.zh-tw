@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 9c9d77c9771fd8759530267bd38cb7c0bb59598c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357938"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634527"
 ---
 # <a name="adorners-overview"></a>裝飾項概觀
 裝飾項是一種特殊型別的<xref:System.Windows.FrameworkElement>，用來提供視覺提示給使用者。 除了其他用法，裝飾項還可用來將功能控點加入項目，或提供控制項的狀態資訊。  
@@ -55,7 +55,7 @@ ms.locfileid: "57357938"
   
  下圖顯示套用至的 SimpleCircleAdorner <xref:System.Windows.Controls.TextBox>。  
   
- ![裝飾項範例：裝飾的文字方塊](./media/adornedtextbox.png "AdornedTextBox")  
+ ![如果螢幕擷取畫面顯示裝飾的文字方塊。](./media/adorners-overview/simplecircleadorner-textbox.png)  
   
 <a name="rendering_behavior_for_Adorners"></a>   
 ## <a name="rendering-behavior-for-adorners"></a>裝飾項的轉譯行為  

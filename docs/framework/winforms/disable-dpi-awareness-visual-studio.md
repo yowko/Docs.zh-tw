@@ -1,17 +1,17 @@
 ---
 title: 停用 Visual Studio 中的 DPI 感知
 description: 討論在 HDPI 監視器上的 Windows Form 設計工具，以及如何執行 Visual Studio 做為 DPI 感知的處理序的限制。
-ms.date: 12/17/2018
-ms.prod: visual-studio-dev15
+ms.date: 03/19/2019
+ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 92096663032b85058dc8c918d1f90153820f6f71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710533"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633864"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>停用 Visual Studio 中的 DPI 感知
 
@@ -23,11 +23,14 @@ Visual Studio 是為 dots per inch (DPI) 感知應用程式，這表示顯示標
 
 ![HDPI 監視器上的 Windows Form 設計工具](./media/disable-dpi-awareness-visual-studio/win-forms-designer-hdpi.png)
 
-在 Visual Studio 2017 版本 15.8 和更新版本，當您開啟中的表單**Windows Form 設計工具**在 HDPI 監視器中，Visual Studio 會顯示黃色列的參考設計工具的頂端：
+當您開啟中的表單**Windows Form 設計工具**在 HDPI 監視器上的 Visual Studio 中 Visual Studio 會顯示黃色列的參考設計工具的頂端：
 
 ![在以 DPI 感知的模式重新啟動 Visual Studio 中的資訊列](./media/disable-dpi-awareness-visual-studio/scaling-gold-bar.png)
 
 訊息讀取**主顯示器上的縮放比例設為 200%(192 dpi)。設計師視窗中，這可能造成轉譯問題。**
+
+> [!NOTE]
+> 此資訊列是在 Visual Studio 2017 版本 15.8 引進。
 
 如果您不使用設計工具中，而且不需要調整表單的配置，您可以略過的資訊列，並繼續運作，在程式碼編輯器，或在其他類型的設計工具。 (您也可以[停用通知](#disable-notifications)這樣的資訊列不會持續顯示。)只有**Windows Form 設計工具**會受到影響。 如果您需要在中運作**Windows Form 設計工具**下, 一節可協助您[解決此問題](#to-resolve-the-problem)。
 
@@ -51,10 +54,13 @@ Visual Studio 執行時做為 DPI 感知的處理序，設計工具的版面配�
 
 您可以藉由修改登錄，以將 Visual Studio 標記為 DPI 感知。 開啟**登錄編輯程式** ，並新增一個項目**您可以 NT\CurrentVersion\AppCompatFlags\Layers**子機碼：
 
-**項目**:C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+**項目**:根據您使用 Visual Studio 2017 或 2019年，使用下列值之一：
 
-   > [!NOTE]
-   > 如果您使用 Visual Studio 2017 Professional 或 Enterprise edition，將**社群**使用**Professional**或是**Enterprise**項目中。 也取代為所需的磁碟機代號。
+- C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\Common7\IDE\devenv.exe
+- C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\devenv.exe
+
+> [!NOTE]
+> 如果您使用 Visual Studio Professional 或 Enterprise 版本，取代**社群**與**Professional**或是**Enterprise**項目中。 也取代為所需的磁碟機代號。
 
 **型別**:REG_SZ
 
