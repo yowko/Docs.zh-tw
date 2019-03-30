@@ -2,41 +2,41 @@
 title: 模型定義函式
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
-ms.openlocfilehash: 371af3ae090e37cfd425a9e9d5946bb0751dc527
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67821c68ee79b42bc54e22f1e15673d2d9243a68
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538878"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653856"
 ---
-# <a name="model-defined-function"></a><span data-ttu-id="e5631-102">模型定義函式</span><span class="sxs-lookup"><span data-stu-id="e5631-102">model-defined function</span></span>
-<span data-ttu-id="e5631-103">A*模型定義函式*是概念模型中所定義的函式。</span><span class="sxs-lookup"><span data-stu-id="e5631-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="e5631-104">模型定義函式的主體以表示[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)，這可讓您表示獨立函式規則，或在資料來源所支援的語言。</span><span class="sxs-lookup"><span data-stu-id="e5631-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  
+# <a name="model-defined-function"></a><span data-ttu-id="42df7-102">模型定義函式</span><span class="sxs-lookup"><span data-stu-id="42df7-102">model-defined function</span></span>
+<span data-ttu-id="42df7-103">A*模型定義函式*是概念模型中所定義的函式。</span><span class="sxs-lookup"><span data-stu-id="42df7-103">A *model-defined function* is a function that is defined in a conceptual model.</span></span> <span data-ttu-id="42df7-104">模型定義函式的主體以表示[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)，這可讓您表示獨立函式規則，或在資料來源所支援的語言。</span><span class="sxs-lookup"><span data-stu-id="42df7-104">The body of a model-defined function is expressed in [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md), which allows for the function to be expressed independently of rules or languages supported in the data source.</span></span>  
   
- <span data-ttu-id="e5631-105">模型定義函式的定義包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="e5631-105">A definition for a model-defined function contains the following information:</span></span>  
+ <span data-ttu-id="42df7-105">模型定義函式的定義包含下列資訊：</span><span class="sxs-lookup"><span data-stu-id="42df7-105">A definition for a model-defined function contains the following information:</span></span>  
   
--   <span data-ttu-id="e5631-106">函式名稱。</span><span class="sxs-lookup"><span data-stu-id="e5631-106">A function name.</span></span> <span data-ttu-id="e5631-107">(必要項)</span><span class="sxs-lookup"><span data-stu-id="e5631-107">(Required)</span></span>  
+-   <span data-ttu-id="42df7-106">函式名稱。</span><span class="sxs-lookup"><span data-stu-id="42df7-106">A function name.</span></span> <span data-ttu-id="42df7-107">(必要項)</span><span class="sxs-lookup"><span data-stu-id="42df7-107">(Required)</span></span>  
   
--   <span data-ttu-id="e5631-108">傳回值的型別。</span><span class="sxs-lookup"><span data-stu-id="e5631-108">The type of the return value.</span></span> <span data-ttu-id="e5631-109">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="e5631-109">(Optional)</span></span>  
+-   <span data-ttu-id="42df7-108">傳回值的型別。</span><span class="sxs-lookup"><span data-stu-id="42df7-108">The type of the return value.</span></span> <span data-ttu-id="42df7-109">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="42df7-109">(Optional)</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="e5631-110">若未指定任何傳回型別，則傳回值為 void。</span><span class="sxs-lookup"><span data-stu-id="e5631-110">If no return type is specified, the return value is void.</span></span>  
+    >  <span data-ttu-id="42df7-110">若未指定任何傳回型別，則傳回值為 void。</span><span class="sxs-lookup"><span data-stu-id="42df7-110">If no return type is specified, the return value is void.</span></span>  
   
--   <span data-ttu-id="e5631-111">參數資訊。</span><span class="sxs-lookup"><span data-stu-id="e5631-111">Parameter information.</span></span> <span data-ttu-id="e5631-112">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="e5631-112">(Optional)</span></span>  
+-   <span data-ttu-id="42df7-111">參數資訊。</span><span class="sxs-lookup"><span data-stu-id="42df7-111">Parameter information.</span></span> <span data-ttu-id="42df7-112">(選擇項)</span><span class="sxs-lookup"><span data-stu-id="42df7-112">(Optional)</span></span>  
   
--   <span data-ttu-id="e5631-113">[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)定義函式主體的運算式。</span><span class="sxs-lookup"><span data-stu-id="e5631-113">An [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expression that defines the body of the function.</span></span>  
+-   <span data-ttu-id="42df7-113">[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)定義函式主體的運算式。</span><span class="sxs-lookup"><span data-stu-id="42df7-113">An [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md) expression that defines the body of the function.</span></span>  
   
- <span data-ttu-id="e5631-114">請注意，模型定義函式不支援輸出參數。</span><span class="sxs-lookup"><span data-stu-id="e5631-114">Note that model-defined functions do not support output parameters.</span></span> <span data-ttu-id="e5631-115">有此限制後才能夠撰寫模型定義函式。</span><span class="sxs-lookup"><span data-stu-id="e5631-115">This restriction is in place so that model-defined functions can be composed.</span></span>  
+ <span data-ttu-id="42df7-114">請注意，模型定義函式不支援輸出參數。</span><span class="sxs-lookup"><span data-stu-id="42df7-114">Note that model-defined functions do not support output parameters.</span></span> <span data-ttu-id="42df7-115">有此限制後才能夠撰寫模型定義函式。</span><span class="sxs-lookup"><span data-stu-id="42df7-115">This restriction is in place so that model-defined functions can be composed.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="e5631-116">範例</span><span class="sxs-lookup"><span data-stu-id="e5631-116">Example</span></span>  
- <span data-ttu-id="e5631-117">下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。</span><span class="sxs-lookup"><span data-stu-id="e5631-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
+## <a name="example"></a><span data-ttu-id="42df7-116">範例</span><span class="sxs-lookup"><span data-stu-id="42df7-116">Example</span></span>  
+ <span data-ttu-id="42df7-117">下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。</span><span class="sxs-lookup"><span data-stu-id="42df7-117">The diagram below shows a conceptual model with three entity types: `Book`, `Publisher`, and `Author`.</span></span>  
   
- <span data-ttu-id="e5631-118">![模型具有發行日期](../../../../docs/framework/data/adonet/media/modelwithpublisheddate.gif "ModelWithPublishedDate")</span><span class="sxs-lookup"><span data-stu-id="e5631-118">![Model With Published Date](../../../../docs/framework/data/adonet/media/modelwithpublisheddate.gif "ModelWithPublishedDate")</span></span>  
+ ![如果螢幕擷取畫面顯示具有發行日期的模型。](./media/model-defined-function/model-published-date-three-entity-types.gif)  
   
- <span data-ttu-id="e5631-119">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="e5631-119">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="e5631-120">下列 CSDL 定義概念模型中的函式，會傳回上圖中 `Book` 執行個體發行年度以來的年份。</span><span class="sxs-lookup"><span data-stu-id="e5631-120">The following CSDL defines a function in the conceptual model that returns the numbers of years since an instance of a `Book` (in the diagram above) was published.</span></span>  
+ <span data-ttu-id="42df7-119">[ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。</span><span class="sxs-lookup"><span data-stu-id="42df7-119">The [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md) uses a domain-specific language (DSL) called conceptual schema definition language ([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) to define conceptual models.</span></span> <span data-ttu-id="42df7-120">下列 CSDL 定義概念模型中的函式，會傳回上圖中 `Book` 執行個體發行年度以來的年份。</span><span class="sxs-lookup"><span data-stu-id="42df7-120">The following CSDL defines a function in the conceptual model that returns the numbers of years since an instance of a `Book` (in the diagram above) was published.</span></span>  
   
  [!code-xml[EDM_Example_Model#ModelDefinedFunction](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#modeldefinedfunction)]  
   
-## <a name="see-also"></a><span data-ttu-id="e5631-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5631-121">See also</span></span>
-- [<span data-ttu-id="e5631-122">實體資料模型索引鍵概念</span><span class="sxs-lookup"><span data-stu-id="e5631-122">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [<span data-ttu-id="e5631-123">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="e5631-123">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
-- [<span data-ttu-id="e5631-124">實體資料模型：基本資料型別</span><span class="sxs-lookup"><span data-stu-id="e5631-124">Entity Data Model: Primitive Data Types</span></span>](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
+## <a name="see-also"></a><span data-ttu-id="42df7-121">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42df7-121">See also</span></span>
+- [<span data-ttu-id="42df7-122">實體資料模型索引鍵概念</span><span class="sxs-lookup"><span data-stu-id="42df7-122">Entity Data Model Key Concepts</span></span>](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
+- [<span data-ttu-id="42df7-123">實體資料模型</span><span class="sxs-lookup"><span data-stu-id="42df7-123">Entity Data Model</span></span>](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [<span data-ttu-id="42df7-124">實體資料模型：基本資料型別</span><span class="sxs-lookup"><span data-stu-id="42df7-124">Entity Data Model: Primitive Data Types</span></span>](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)
