@@ -2,7 +2,7 @@
 title: Roslyn 分析器 - .NET
 description: 了解可找出問題並針對問題提供建議的 Roslyn 分析器相關資訊。
 author: billwagner
-ms.author: billwagner
+ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
 ---
