@@ -10,12 +10,12 @@ helpviewer_keywords:
 - images [Windows Forms], using without automatic scaling
 - performance [Windows Forms], improving image
 ms.assetid: 5fe2c95d-8653-4d55-bf0d-e5afa28f223b
-ms.openlocfilehash: b8238a4f0ce482d63ab33833c4bceaaa2814253d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8580bd2212a025edddada9e47b0dc2b6195b53c7
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705333"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653791"
 ---
 # <a name="how-to-improve-performance-by-avoiding-automatic-scaling"></a>HOW TO：避免自動縮放來改善效能
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 可能會自動調整映像方式而定，反而會降低效能。 或者，您可以控制傳遞到目的地矩形的維度影像的縮放<xref:System.Drawing.Graphics.DrawImage%2A>方法。  
@@ -30,15 +30,15 @@ ms.locfileid: "57705333"
  即使您的螢幕解析度 96 dpi 為單位，從不同[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]可能會調整映像，好像螢幕解析度 96 dpi 為單位。 這是因為[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]<xref:System.Drawing.Graphics>物件相關聯的裝置內容，以及當[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]螢幕解析度時，結果的裝置內容通常是 96，不論實際螢幕解析度的查詢。 您可以藉由指定目的地矩形的自動調整來避免<xref:System.Drawing.Graphics.DrawImage%2A>方法。  
   
 ## <a name="example"></a>範例  
- 下列範例會繪製兩次相同的映像。 在第一個案例中，未指定目的地矩形的高度與寬度，並將映像會自動調整。 在第二個案例中，會依照相同成為原始影像的高度與寬度會指定寬度和目的地矩形的高度 （單位為像素為單位）。 下圖顯示兩次呈現的影像。  
+ 下列範例會繪製兩次相同的映像。 在第一個案例中，未指定目的地矩形的高度與寬度，並將映像會自動調整。 在第二個案例中，會依照相同成為原始影像的高度與寬度會指定寬度和目的地矩形的高度 （單位為像素為單位）。 下圖顯示兩次呈現的影像：  
   
- ![調整紋理](./media/csscaledtexture1.png "csscaledtexture1")  
+ ![如果螢幕擷取畫面顯示調整的紋理的影像。](./media/how-to-improve-performance-by-avoiding-automatic-scaling/two-scaled-texture-images.png)  
   
  [!code-csharp[System.Drawing.WorkingWithImages#32](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/CS/Class1.cs#32)]
  [!code-vb[System.Drawing.WorkingWithImages#32](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#32)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。 Texture.jpg 取代映像名稱和您系統為有效的路徑。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 Texture.jpg 取代映像名稱和您系統為有效的路徑。  
   
 ## <a name="see-also"></a>另請參閱
 - [影像、點陣圖和中繼檔](images-bitmaps-and-metafiles.md)

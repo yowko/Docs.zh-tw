@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 6e0c5a426f05590523c178f4b56d07ee98b39d7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bede247ca9e1c2c20ffc8fef9fd4fab89aa78453
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719382"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654766"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控制項架構
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>類別提供具彈性且可擴充的系統顯示工具列、 狀態和功能表項目。 這些類別包含在<xref:System.Windows.Forms>命名空間和其所有通常以"ToolStrip"前置詞命名 (例如<xref:System.Windows.Forms.ToolStripOverflow>) 或 「 帶狀 」 的後置詞 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -19,8 +19,7 @@ ms.locfileid: "57719382"
   
  <xref:System.Windows.Forms.ToolStrip> 是抽象的基底類別，如<xref:System.Windows.Forms.MenuStrip>， <xref:System.Windows.Forms.StatusStrip>，和<xref:System.Windows.Forms.ContextMenuStrip>。 下列物件模型顯示<xref:System.Windows.Forms.ToolStrip>繼承階層架構。  
   
- ![ToolStrip 物件模型](./media/toolstripobjectmodel.gif "ToolStripObjectModel")  
-ToolStrip 物件模型  
+ ![ToolStrip 物件模型的圖表。](./media/toolstrip-control-architecture/toolstrip-object-model.gif)  
   
  您可以存取中的所有項目<xref:System.Windows.Forms.ToolStrip>透過<xref:System.Windows.Forms.ToolStrip.Items%2A>集合。 您可以存取中的所有項目<xref:System.Windows.Forms.ToolStripDropDownItem>透過<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItems%2A>集合。 從衍生類別中<xref:System.Windows.Forms.ToolStrip>，您也可以使用<xref:System.Windows.Forms.ToolStrip.DisplayedItems%2A>屬性來存取目前顯示這些項目。 這些是目前不是溢位功能表中的項目。  
   
@@ -198,7 +197,7 @@ ToolStrip 物件模型
 ##### <a name="stack-layouts"></a>堆疊配置  
  堆疊是彼此旁邊的兩端的項目排列<xref:System.Windows.Forms.ToolStrip>。 下列清單說明堆疊版面配置。  
   
--   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 是預設值。 此設定會導致<xref:System.Windows.Forms.ToolStrip>改變它自動在按照所使用的版面配置<xref:System.Windows.Forms.ToolStrip.Orientation%2A>屬性來處理拖曳和停駐的案例。  
+-   <xref:System.Windows.Forms.ToolStripLayoutStyle.StackWithOverflow> 預設值。 此設定會導致<xref:System.Windows.Forms.ToolStrip>改變它自動在按照所使用的版面配置<xref:System.Windows.Forms.ToolStrip.Orientation%2A>屬性來處理拖曳和停駐的案例。  
   
 -   <xref:System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow> 呈現<xref:System.Windows.Forms.ToolStrip>旁邊彼此垂直項目。  
   
@@ -251,8 +250,7 @@ ToolStrip 物件模型
   
  <xref:System.Windows.Forms.ToolStripItem> 是抽象的基底類別的所有項目移入<xref:System.Windows.Forms.ToolStrip>。 下列物件模型顯示<xref:System.Windows.Forms.ToolStripItem>繼承階層架構。  
   
- ![ToolStripItem 物件模型](./media/toolstripitemobjectmodel.gif "ToolStripItemObjectModel")  
-ToolStripItem 物件模型  
+ ![ToolStripItem 物件模型的圖表。](./media/toolstrip-control-architecture/toolstripitem-object-model.gif)  
   
  <xref:System.Windows.Forms.ToolStripItem> 類別是直接繼承自<xref:System.Windows.Forms.ToolStripItem>，或它們間接繼承自<xref:System.Windows.Forms.ToolStripItem>透過<xref:System.Windows.Forms.ToolStripControlHost>或<xref:System.Windows.Forms.ToolStripDropDownItem>。  
   

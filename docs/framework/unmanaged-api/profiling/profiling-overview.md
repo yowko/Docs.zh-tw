@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 864c2344-71dc-46f9-96b2-ed59fb6427a8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dd0fef0e8a2c4b94cd5dd7beb140e669c52a07a8
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 598722c44d8d20adab9ce7d624edb820f67c0fa4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43862312"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654090"
 ---
 # <a name="profiling-overview"></a>分析概觀
 <a name="top"></a> 分析工具是監視另一個應用程式執行的工具。 Common Language Runtime (CLR) 分析工具是動態連結程式庫 (DLL) 由數個函式所組成，可使用分析 API，從 CLR 接收訊息，以及傳送訊息至 CLR。 CLR 會在執行階段載入分析工具 DLL。  
@@ -78,13 +78,12 @@ ms.locfileid: "43862312"
   
  下圖顯示分析工具 DLL 如何與正在分析的應用程式和 CLR 互動。  
   
- ![分析架構](../../../../docs/framework/unmanaged-api/profiling/media/profilingarch.png "ProfilingArch")  
-分析架構  
+ ![如果螢幕擷取畫面顯示的程式碼剖析的架構。](./media/profiling-overview/profiling-architecture.png)  
   
 ### <a name="the-notification-interfaces"></a>通知介面  
  [ICorProfilerCallback](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)並[ICorProfilerCallback2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)可視為告知介面。 這些介面包含方法的這類[ClassLoadStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadstarted-method.md)， [ClassLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-classloadfinished-method.md)，並[JITCompilationStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)。 每當 CLR 載入或卸載類別、編譯函式等等，都會在分析工具的 `ICorProfilerCallback` 或 `ICorProfilerCallback2` 介面上呼叫對應的方法。  
   
- 例如，分析工具無法測量透過兩個通知函式的程式碼效能： [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)並[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)。 它會即時戳記每個通知、彙總結果，並輸出一個清單，指出在應用程式執行期間，哪些函式耗用最多 CPU 或時鐘時間。  
+ 例如，分析工具無法測量透過兩個通知函式的程式碼效能：[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)並[FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)。 它會即時戳記每個通知、彙總結果，並輸出一個清單，指出在應用程式執行期間，哪些函式耗用最多 CPU 或時鐘時間。  
   
 ### <a name="the-information-retrieval-interfaces"></a>資訊擷取介面  
  其他主要介面參與程式碼剖析[ICorProfilerInfo](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)並[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)。 分析工具會視需要呼叫這些介面，以取得更多資訊來協助進行分析。 例如，每當 CLR 呼叫[FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)函式，它提供函式識別項。 分析工具可以取得該函式的詳細資訊，藉由呼叫[ICorProfilerInfo2::GetFunctionInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctioninfo2-method.md)方法來探索函式的父類別、 名稱和等等。  

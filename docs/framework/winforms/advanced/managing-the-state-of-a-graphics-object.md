@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing state
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
-ms.openlocfilehash: fc961b59dabc2f7f123b792e7e45a4ff3b535fc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0166d2ee5a16916fdc2ece95eaf130ebd2598d5
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717618"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653778"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>管理圖形物件的狀態
 <xref:System.Drawing.Graphics>類別的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。 若要繪製的任何項目，取得<xref:System.Drawing.Graphics>物件、 設定其屬性，並呼叫其方法<xref:System.Drawing.Graphics.DrawLine%2A>， <xref:System.Drawing.Graphics.DrawImage%2A>， <xref:System.Drawing.Graphics.DrawString%2A>，等等)。  
@@ -95,7 +95,7 @@ graphics.DrawEllipse(pen, 0, 0, 100, 50);
   
  下圖顯示兩個橢圓形。 請注意，30 度旋轉的座標系統 （用戶端區域的左上角） 原點，不需橢圓形的中心。 也請注意畫筆寬度為 1，表示第二個橢圓形的 1 個像素的第一個橢圓形和 1 公釐。  
   
- ![橢圓形](./media/csgraphicsascon1.png "csgraphicsascon1")  
+ ![顯示兩個橢圓形圖例： 旋轉] 和 [畫筆的寬度。](./media/managing-the-state-of-a-graphics-object/set-rotation-pen-width-drawellipse-method.png)  
   
 ### <a name="clipping-region"></a>裁剪區域  
  A<xref:System.Drawing.Graphics>物件會維護適用於所有的項目所繪製的裁剪區域<xref:System.Drawing.Graphics>物件。 您可以藉由呼叫設定的裁剪區域<xref:System.Drawing.Graphics.SetClip%2A>方法。  
@@ -146,9 +146,9 @@ graphics.DrawLine(pen, 0, 30, 150, 160);
 graphics.DrawLine(pen, 40, 20, 190, 150);  
 ```  
   
- 下圖顯示裁剪的線條。  
+ 下圖顯示裁剪的線條：  
   
- ![有限的裁剪區域](./media/graphicsascon2.png "graphicsascon2")  
+ ![此圖顯示有限的裁剪區域。](./media/managing-the-state-of-a-graphics-object/set-clipping-region-setclip-method.png)  
   
 ## <a name="see-also"></a>另請參閱
 - [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

@@ -4,14 +4,14 @@ description: 了解實際動手的方法與無伺服器行動後端和 ETL 管�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: 4299768b701336e427b22b295bc459424bfc5927
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 177fb1d7f79a0067ab185e520778b593d4b8eaf6
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153783"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653895"
 ---
-# <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器的商務案例和使用案例
+# <a name="serverless-business-scenarios-and-use-cases"></a>無伺服器商務情節和使用案例
 
 有許多使用案例和無伺服器應用程式的案例。 此章節包含範例將示範不同的案例。 案例包括相關文件和公用原始程式碼儲存機制的連結。 這一章中的範例可讓您將開始自行建置和實作無伺服器解決方案。
 
@@ -61,7 +61,7 @@ Proxy 提供單一的 API 端點更新為移動的執行無伺服器函式，將
 
 擷取、 轉換和載入 (ETL) 是整合不同系統的一般商務函式。 傳統方法通常會涉及設定專用的 FTP 伺服器，然後部署來剖析檔案，並將它們轉譯針對商業用途使用的排程的工作。 無伺服器架構可讓工作更容易因為上傳檔案時，可以引發觸發程序。 Azure Functions 釣具工作，例如 ETL 透過其理想撰寫的程式碼片段將焦點放在特定的問題。
 
-![ETL 架構](./media/csvimport.png)
+![如果螢幕擷取畫面顯示 csv 剖析程序。](./media/serverless-business-scenarios/csv-parse-database-import.png)
 
 原始程式碼和實際操作實驗室，請參閱[CSV 匯入實驗室](https://github.com/JeremyLikness/azure-fn-file-process-hol)。
 

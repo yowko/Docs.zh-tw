@@ -2,12 +2,12 @@
 title: 查詢運算式
 description: 深入了解中的 LINQ 查詢運算式支援F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8fd3e2d4cfbbe890fe3b04b2676eb1d5bbc087a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 1a6450bdcec4240fac58f6c27af2298dfd7f45a2
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463224"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654818"
 ---
 # <a name="query-expressions"></a>查詢運算式
 
@@ -60,7 +60,7 @@ query1
 
 此表格假設資料庫，以下列形式：
 
-![範例資料庫圖表](../media/StudentCourseDB.png)
+![此圖顯示範例資料庫。](./media/query-expressions/student-course-database.png)
 
 請依照下列資料表中的程式碼也會假設下列資料庫連接程式碼。 專案應該將參考加入至 System.Data、 System.Data.Linq 和 FSharp.Data.TypeProviders 組件。 建立此資料庫的程式碼就會包含在本主題結尾處。
 

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: be9f1916722b493490541046906a38b9fac63a4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 84f7e0f1174a048d650741075344de3158c2994e
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371979"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654311"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式使用不受限制的權限執行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)，不論部署使用 Windows Installer (.msi)、 XCopy 或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱 < [WPF 增益集概觀](./app-development/wpf-add-ins-overview.md)。  
@@ -49,7 +49,7 @@ ms.locfileid: "57371979"
   
  「應用程式巡覽」是瀏覽器所裝載之應用程式的內容項目間的巡覽。 「瀏覽器巡覽」是變更瀏覽器本身的內容和位置 URL 的巡覽。 應用程式巡覽 (通常是 XAML) 與瀏覽器巡覽 (通常是 HTML) 之間的關聯性是由下列圖所示：
   
- ![巡覽圖表](./media/safetoplevelnavigationfigure.png "SafeTopLevelNavigationFigure")  
+ ![應用程式瀏覽和瀏覽器巡覽關聯性。](./media/security-wpf/application-browser-navigation-relationship.png)  
   
  會被視為安全的內容類型[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]瀏覽至主要取決於是否使用應用程式巡覽還是瀏覽器瀏覽。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "57371979"
   
      **安全性設定** 對話方塊隨即出現，而且您可以設定所選區域的安全性設定。  
   
-     ![安全性設定對話方塊](./media/wpfsecurityfigure1.PNG "WPFSecurityFigure1")  
+     ![如果螢幕擷取畫面顯示 [安全性設定] 對話方塊。](./media/security-wpf/windows-presentation-foundation-security-settings.png)  
   
 > [!NOTE]
 >  您也可以從 Internet Explorer 到達 [網際網路選項] 對話方塊。 按一下 **工具**，然後按一下**網際網路選項**。  

@@ -2,12 +2,12 @@
 title: 動態更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: a1d5337bf69cb87d790ce4074cde4c18c989a4d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724466"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653882"
 ---
 # <a name="dynamic-update"></a>動態更新
 
@@ -32,7 +32,7 @@ ms.locfileid: "57724466"
 
 ### <a name="Prepare"></a> 準備動態更新工作流程定義
 
-動態更新程序中的第一步，是準備更新所需的工作流程定義。 呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法並傳入要修改的工作流程定義，即可準備完成。 這個方法會先驗證再一一查核工作流程樹狀結構，找出所有需要標記的物件 (例如公用活動和變數)，之後可將這些物件與修改過的工作流程定義進行比較。 完成此步驟後，會複製工作流程樹狀結構，並將其附加到原始的工作流程定義。 建立更新對應時，會比較更新版工作流程定義與原始工作流程定義，並根據差異產生更新對應。
+動態更新程序中的第一步，是準備更新所需的工作流程定義。 呼叫 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 方法並傳入要修改的工作流程定義，即可準備完成。 這個方法會先驗證再一一查核工作流程樹狀，找出所有需要標記的物件 (例如公用活動和變數)，之後可將這些物件與修改過的工作流程定義進行比較。 完成此步驟後，會複製工作流程樹狀，並將其附加到原始的工作流程定義。 建立更新對應時，會比較更新版工作流程定義與原始工作流程定義，並根據差異產生更新對應。
 
 為準備 XAML 工作流程以進行動態更新，會將其載入到 <xref:System.Activities.ActivityBuilder> 中，然後將 <xref:System.Activities.ActivityBuilder> 傳遞到 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 中。
 
@@ -101,7 +101,7 @@ using (FileStream fs = System.IO.File.Open(@"C:\WorkflowDefinitions\MortgageWork
 }
 ```
 
-當 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 傳回時，會移除加入到 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 呼叫中的工作流程定義複本和其他動態更新資訊，然後可以儲存修改過的工作流程定義，之後用於繼續更新過的工作流程執行個體。 在下列範例中，修改過的工作流程定義會儲存至 `MortgageWorkflow_v2.xaml`。
+當 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.CreateUpdateMap%2A?displayProperty=nameWithType> 傳回時，會移除加入到 <xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> 呼叫中的工作流程定義複本和其他動態更新資訊，然後可以儲存修改過的工作流程定義，之後用於繼續更新過的工作流程執行個體。 在下列範例中，修改過的工作流程定義會儲存至 `MortgageWorkflow_v1.1.xaml`。
 
 ```csharp
 // Save the modified workflow definition.

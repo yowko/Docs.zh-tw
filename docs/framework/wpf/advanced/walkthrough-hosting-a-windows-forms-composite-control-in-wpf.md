@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: 4263b81b0917b544f37c55299b1e394e5fbaa6ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 50d85b74b523c8985bd0d3d407097a4f42cfeb60
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359714"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654220"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地重複使用至少其中某些程式碼中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式而不從頭重寫程式。 最常見的案例是當您有現有的 Windows Form 控制項。 在某些情況下，您甚至可能無法存取這些控制項的原始程式碼。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的程序這類控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 例如，您可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]適用於大部分的程式設計時裝載您特殊<xref:System.Windows.Forms.DataGridView>控制項。  
@@ -36,9 +36,10 @@ ms.locfileid: "57359714"
   
 ## <a name="implementing-the-windows-forms-composite-control"></a>實作 Windows Forms 複合控制項  
  此範例中使用 Windows Forms 複合控制項是簡單的資料輸入表單。 此表單採用使用者名稱和地址，然後使用自訂事件將該資訊傳回給主應用程式。 下圖顯示轉譯的控制項。  
-  
- ![簡單的 Windows Form 控制項](./media/wfcontrol.gif "WFControl")  
-Windows Forms 複合控制項  
+
+ 下圖顯示 Windows Forms 複合控制項：  
+
+ ![如果螢幕擷取畫面顯示簡單的 Windows Forms 控制項。](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-forms-control.gif)  
   
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
@@ -128,7 +129,9 @@ Windows Forms 複合控制項
 ## <a name="implementing-the-wpf-host-application"></a>實作 WPF 主應用程式
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]裝載應用程式會使用<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項來裝載`MyControl1`。 應用程式會處理`OnButtonClick`事件，以接收來自控制項的資料。 它也會有的選項按鈕，可讓您變更某些控制項的屬性，從集合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 下圖顯示已完成的應用程式。
 
- ![內嵌於 WPF 頁面中的控制項](./media/avalonhost.gif "AvalonHost")完整的應用程式，顯示控制項內嵌在 WPF 應用程式
+下圖顯示完整的應用程式，包括控制項內嵌在 WPF 應用程式：
+
+ ![螢幕擷取畫面顯示控制項內嵌於 WPF 頁面。](./media/walkthrough-hosting-a-windows-forms-composite-control-in-wpf/windows-presentation-foundation-page-control.gif)
 
 ### <a name="creating-the-project"></a>建立專案
  啟動專案：

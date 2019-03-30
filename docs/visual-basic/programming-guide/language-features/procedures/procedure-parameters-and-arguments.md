@@ -18,12 +18,12 @@ helpviewer_keywords:
 - argument lists [Visual Basic]
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
-ms.openlocfilehash: f7291d809c754249c155eb9382f3fcd8a63c20c7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4b62e4b752074bb8d1a660e51ab230a87ff21db4
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972535"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654233"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>程序參數和引數 (Visual Basic)
 在大部分情況下，程序會需要一些資訊在其中呼叫的情況。 執行重複或共用工作的程序會針對每個呼叫中使用不同的資訊。 這項資訊是由變數、 常數和您傳遞至程序時呼叫它的運算式所組成。  
@@ -36,8 +36,7 @@ ms.locfileid: "56972535"
   
  下圖顯示程式碼呼叫程序`safeSquareRoot`從兩個不同的地方。 第一次呼叫會將變數的值傳遞`x`(4.0) 參數`number`，並在傳回的值`root`(2.0) 指派給變數`y`。 第二次呼叫會將傳遞常值數值 9.0 `number`，並將傳回的值 (3.0) 指派給變數`z`。  
   
- ![將引數傳遞至參數示意圖](./media/parametersargue.gif "ParametersArgue")  
-傳遞至參數的引數  
+ ![此圖顯示傳遞至參數的引數](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
  如需詳細資訊，請參閱 <<c0> [ 參數之間的差異和引數](./differences-between-parameters-and-arguments.md)。  
   

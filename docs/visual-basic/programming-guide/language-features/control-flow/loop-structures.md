@@ -10,20 +10,19 @@ helpviewer_keywords:
 - Do statement [Visual Basic], Do loops
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
-ms.openlocfilehash: b72eef632b4564abc69e6ebef43b940eb0950e9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c09c0bdee0e8740abb7cc085f0796048a5db150c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523385"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654363"
 ---
 # <a name="loop-structures-visual-basic"></a>迴圈結構 (Visual Basic)
 Visual Basic 迴圈結構可讓您重複執行一或多行程式碼。 您可以重複迴圈結構中的陳述式，直到條件為`True`，直到條件為`False`，集合中指定的次數，或是每個項目都執行過一次。  
   
- 下圖顯示迴圈結構，其會執行一組陳述式，直到條件變成 true。  
+ 下圖顯示迴圈結構，其會執行一組陳述式，直到條件變成 true:  
   
- ![重複執行相同動作的流程圖表...Until 迴圈](../../../../visual-basic/programming-guide/language-features/control-flow/media/dountilloop.gif "DoUntilLoop")  
-執行一組陳述式，直到條件變成 true  
+ ![顯示執行的流程圖...Until 迴圈。](./media/loop-structures/do-until-loop-true-condition.gif)  
   
 ## <a name="while-loops"></a>While 迴圈  
  `While`...`End While`建構執行的一組陳述式，只要在指定的條件`While`陳述式是`True`。 如需詳細資訊，請參閱[時...結束 While 陳述式](../../../../visual-basic/language-reference/statements/while-end-while-statement.md)。  

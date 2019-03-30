@@ -3,12 +3,12 @@ title: <wsFederation>
 ms.date: 03/30/2017
 ms.assetid: c537f770-68bd-4f82-96ad-6424ad91369f
 author: BrucePerlerMS
-ms.openlocfilehash: 801970ec05fc88587a5b45b5bb3a855d1a81afb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de79ad6447fe67afc596783eff3fa3e6a02b600c
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356087"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654584"
 ---
 # <a name="wsfederation"></a>\<wsFederation>
 提供組態<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM)。  
@@ -52,7 +52,7 @@ ms.locfileid: "57356087"
 |---------------|-----------------|  
 |authenticationType|URI，指定驗證類型。 設定 WS-同盟登入要求 wauth 參數。 選擇性。 預設為空字串，其指定的 wauth 參數不包含在要求中。|  
 |有效期限|想要最長使用期限的驗證要求，以分鐘為單位。 設定 WS-同盟登入要求 wfresh 參數。 選擇性。 預設值是零。 選擇性。 **警告：** 下一版的.NET Framework 4.5`freshness`屬性都屬於類型`xs:string`和其預設值為`null`。|  
-|homeRealm|要用於驗證身分識別提供者 (IP) 的主領域。 設定 WS-同盟登入要求 whr 參數。 選擇性。 預設為空字串，其指定的 whr 參數不包含在要求中。|  
+|homeRealm|身分識別提供者 (IdP) 要用於驗證的主領域。 設定 WS-同盟登入要求 whr 參數。 選擇性。 預設為空字串，其指定的 whr 參數不包含在要求中。|  
 |issuer|預期的權杖簽發者 URI。 設定基底 URL 的 WS-同盟登入要求和所需的登出要求。|  
 |persistentCookiesOnPassiveRedirects|指定是否驗證上發出永續性 cookie。 選擇性。 預設值為"false"，cookies 未發出。|  
 |passiveRedirectEnabled|指定是否啟用 WSFAM 會自動將未經授權的要求重新導向至 STS。 選擇性。 預設值為"true"，未經授權的要求會自動重新導向。|  
@@ -68,7 +68,7 @@ ms.locfileid: "57356087"
 |signOutReply|在被動登出透過 WS-同盟通訊協定中指定的用戶端應該重新導向安全性權杖服務 (STS) 的 URL。 設定 WS-同盟登出要求 wreply 參數。 選擇性。 預設為空字串，指定應該在要求中包含任何額外的參數。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
