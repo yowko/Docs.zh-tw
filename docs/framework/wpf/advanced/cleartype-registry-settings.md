@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: 471a94333260d30bc9c650f13e3a7489d9d5db7e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369717"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675896"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的登錄設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
@@ -57,7 +57,7 @@ ms.locfileid: "57369717"
   
  每個顯示裝置名稱的使用者，`ClearTypeLevel`定義 DWORD 值。 下列螢幕擷取畫面顯示的 登錄編輯程式設定[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]層級。  
   
- ![登錄編輯程式中的 ClearType 設定](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![在登錄編輯器中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式呈現的文字中包含或不含下列任一種模式的其中一個[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]。 文字時將不會呈現[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，它指以灰階轉譯。  
@@ -75,7 +75,7 @@ ms.locfileid: "57369717"
   
  每個顯示裝置名稱的使用者，`GammaLevel`定義 DWORD 值。 以下的螢幕擷取畫面顯示 Gamma 層級的登錄編輯程式設定。  
   
- ![登錄編輯程式中的 ClearType 設定](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType gamma 層級設定在 登錄編輯器](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="pixel_structure"></a>   
 ## <a name="pixel-structure"></a>像素結構  
@@ -99,7 +99,7 @@ ms.locfileid: "57369717"
   
  每個顯示裝置名稱的使用者，`PixelStructure`定義 DWORD 值。 以下的螢幕擷取畫面顯示像素結構的登錄編輯程式設定。  
   
- ![登錄編輯程式中的 ClearType 設定](./media/cleartyperegistry02.png "ClearTypeRegistry02")  
+ ![ClearType gamma 層級設定在 登錄編輯器](./media/cleartype-registry-settings/cleartype-gamma-level-settings-registry-editor.png)  
   
 <a name="text_contrast_level"></a>   
 ## <a name="text-contrast-level"></a>文字對比層級  
@@ -112,7 +112,7 @@ ms.locfileid: "57369717"
   
  每個顯示裝置名稱的使用者，`TextContrastLevel`定義 DWORD 值。 下列螢幕擷取畫面顯示文字對比層級的登錄編輯程式設定。  
   
- ![登錄編輯程式中的 ClearType 設定](./media/cleartyperegistry01.png "ClearTypeRegistry01")  
+ ![在登錄編輯器中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>另請參閱
 - [ClearType 概觀](cleartype-overview.md)

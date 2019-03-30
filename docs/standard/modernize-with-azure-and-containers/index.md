@@ -7,7 +7,7 @@ ms.date: 04/28/2018
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 （第 2 版）
 
-![封面影像](./media/cover.png)
+![現代化的.NET 應用程式指南的封面影像。](./media/index/web-application-guide-cover-image.png)
 
 發行者  
 Microsoft Corporation  

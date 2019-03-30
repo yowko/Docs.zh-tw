@@ -56,7 +56,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 - 項目包含的值代表該年級的學生數目。
 
-![顯示學生人數的陣列的圖片](../../language-features/arrays/media/arrayexampleschool.gif "ArrayExampleSchool") "students"陣列的項目
+![此圖顯示學生人數的陣列](./media/index/students-array-elements.gif)
 
 下列範例包含建立及使用陣列的 Visual Basic 程式碼：
 

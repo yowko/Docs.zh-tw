@@ -2,12 +2,12 @@
 title: 屬性
 description: 深入了解F#屬性，也就是成員代表與物件相關聯的值。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8e74e0bc0850b5f07c4697f624d5393813bec6e0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: bf605ee1135bd3b3561bde9a8ae66353497931b0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614502"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675688"
 ---
 # <a name="properties"></a>屬性
 
@@ -103,7 +103,7 @@ class1.ExplicitProperty = 1131210765
 上述程式碼的輸出會顯示值的 AutoProperty 是不變時重複呼叫而 ExplicitProperty 變更每次呼叫時。 這示範自動實作屬性的運算式不會評估每次都是明確的屬性的 getter 方法。
 
 >[!WARNING]
-有一些程式庫，例如 Entity Framework (`System.Data.Entity`)，也不使用初始化自動實作屬性的基底類別建構函式中執行的自訂作業。 在這些情況下，請嘗試使用明確的屬性。
+>有一些程式庫，例如 Entity Framework (`System.Data.Entity`)，也不使用初始化自動實作屬性的基底類別建構函式中執行的自訂作業。 在這些情況下，請嘗試使用明確的屬性。
 
 屬性可以是類別、 結構、 差別聯的集、 記錄、 介面和型別延伸模組的成員，也可以在物件運算式中定義。
 
