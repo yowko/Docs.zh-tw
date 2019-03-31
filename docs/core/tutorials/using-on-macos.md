@@ -1,34 +1,34 @@
 ---
 title: 開始在 macOS 上使用 .NET Core
-description: 此文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
+description: 本文件提供使用 Visual Studio Code 建立 .NET Core 方案的步驟及工作流程。
 author: bleroy
 ms.date: 03/23/2017
 ms.custom: seodec18
-ms.openlocfilehash: 8deaab67f7a824f6eb079f49b7fd75e0c02f1025
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: e5ac6fa04a2a5001146936de56acafeec7dd895d
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788449"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409493"
 ---
 # <a name="get-started-with-net-core-on-macos"></a>開始在 macOS 上使用 .NET Core
 
-此文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
+本文件提供建立適用於 macOS 之 .NET Core 方案的步驟及工作流程。 了解如何建立專案、建立單元測試、使用偵錯工具，以及透過 [NuGet](https://www.nuget.org/) 納入協力廠商程式庫。
 
 > [!NOTE]
 > 這篇文章會在 macOS 上使用 [Visual Studio Code](https://code.visualstudio.com)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-安裝 [.NET Core SDK](https://www.microsoft.com/net/core)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
+安裝 [.NET Core SDK (英文)](https://www.microsoft.com/net/core)。 .NET Core SDK 包含 .NET Core 架構和執行階段的最新版本。
 
-安裝 [Visual Studio Code](https://code.visualstudio.com)。 在此文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
+安裝 [Visual Studio Code (英文)](https://code.visualstudio.com)。 在這篇文章的過程中，您也將安裝能改善 .NET Core 開發體驗的 Visual Studio Code 延伸模組。
 
-請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 輸入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
+請開啟 Visual Studio Code，並按下 <kbd>F1</kbd> 來開啟 Visual Studio Code 調色盤，以安裝 Visual Studio Code C# 延伸模組。 鍵入 **ext install** 來查看延伸模組的清單。 選取 C# 延伸模組。 重新啟動 Visual Studio Code 以啟動延伸模組。 如需詳細資訊，請參閱 [Visual Studio Code C# 延伸模組文件](https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger.md)。
 
 ## <a name="get-started"></a>開始使用
 
-在此教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/samples 存放庫[檢視或下載來源](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+在本教學課程中，您會建立三個專案︰程式庫專案、該程式庫專案的測試，以及利用程式庫的主控台應用程式。 您可以在 GitHub 的 dotnet/samples 存放庫[檢視或下載來源](https://github.com/dotnet/samples/tree/master/core/getting-started/golden)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 啟動 Visual Studio Code。 按下 <kbd>Ctrl</kbd>+<kbd>\`</kbd> (倒引號字元)，或從功能表中選取 [檢視] > [整合式終端機]，以使用 Visual Studio Code 開啟內嵌終端機。 如果您想要在 Visual Studio Code 外部工作，則仍然可以使用總管 [在命令提示字元中開啟] 命令 (Mac 或 Linux 上的 [在終端機中開啟]) 來開啟外部殼層。
 
@@ -151,7 +151,7 @@ namespace TestApp
 }
 ```
 
-請注意，當您第一次建立單元測試時，確認值 42 不等於 19+23 (或 42) (`Assert.NotEqual`)，而此建立作業會失敗。 建置單元測試的重要步驟是建立測試，以確認其邏輯在第一次時失敗一次。
+請注意，當您第一次建立單元測試時，確認值 42 不等於 19+23 (或 42) (`Assert.NotEqual`)，而這項建立作業會失敗。 建置單元測試的重要步驟是建立測試，以確認其邏輯在第一次時失敗一次。
 
 從 *golden* 資料夾中，執行下列命令：
 
@@ -215,7 +215,7 @@ dotnet run -p app/app.csproj
 
 開啟偵錯工具索引標籤，方法是選取 Visual Studio Code 工具列中的偵錯圖示、選取功能表列中的 [檢視] > [偵錯]，或使用鍵盤快速鍵 <kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>D</kbd>：
 
-![Visual Studio Code 偵錯工具](./media/using-on-macos/vscodedebugger.png)
+![Visual Studio Code 偵錯工具](./media/using-on-macos/visual-studio-code-debugger.png)
 
 按下 [播放] 按鈕，在偵錯工具中啟動應用程式。 應用程式會開始執行，並執行至中斷點，然後停止。 逐步執行 `Get` 方法，並確定您已傳入正確的引數。 確認答案是 42。
 

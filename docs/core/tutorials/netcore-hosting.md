@@ -4,12 +4,12 @@ description: 了解如何從原生程式碼裝載 .NET Core 執行階段，以�
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 78eb4bb1f0dfb1b2469b69f2b90b9bacc66754aa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980369"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654051"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>撰寫自訂 .NET Core 主機以從原生程式碼控制 .NET 執行階段
 
@@ -17,7 +17,7 @@ ms.locfileid: "56980369"
 
 裝載 .NET Core 執行階段是進階案例，在大多數情況下，由於 .NET Core 建置程序會提供預設主機來執行 .NET Core 應用程式，因此 .NET Core 開發人員不需要擔心裝載相關事宜。 不過在某些特殊情況下，明確裝載 .NET Core 執行階段可能會很有用，像是用來叫用原生處理序中的 Managed 程式碼，或是用來增加對執行階段運作方式的更多控制。
 
-此文章概述從機器碼啟動 .NET Core 執行階段及在其中執行受控碼的必要步驟。
+本文概述從機器碼啟動 .NET Core 執行階段及在其中執行受控碼的必要步驟。
 
 ## <a name="prerequisites"></a>必要條件
 
@@ -26,7 +26,7 @@ ms.locfileid: "56980369"
 您也需要一個簡單的 .NET Core 應用程式來測試主機，因此您必須安裝 [.NET Core SDK](https://www.microsoft.com/net/core) 並[建置一個小型的.NET Core 測試應用程式](../../core/tutorials/with-visual-studio.md) (例如 'Hello World' 應用程式)。 由新的 .NET Core 主控台專案範本建立的 'Hello World' 應用程式就已足夠。
 
 ## <a name="hosting-apis"></a>裝載 API
-有兩個不同的 API 可用來裝載 .NET Core。 此文件 (及其相關聯的[範例](https://github.com/dotnet/samples/tree/master/core/hosting)) 涵蓋這兩個選項。
+有兩個不同的 API 可用來裝載 .NET Core。 本文件 (及其相關聯的[範例](https://github.com/dotnet/samples/tree/master/core/hosting)) 涵蓋這兩個選項。
 
 * 裝載 .NET Core 執行階段的慣用方法是使用 [CoreClrHost.h](https://github.com/dotnet/coreclr/blob/master/src/coreclr/hosts/inc/coreclrhost.h) API。 此 API 會公開函式，以便輕鬆地啟動和停止執行階段，以及叫用受控碼 (無論是透過啟動受控 exe 或藉由呼叫靜態受控方法)。
 * .NET Core 也可以使用 [mscoree.h](https://github.com/dotnet/coreclr/blob/master/src/pal/prebuilt/inc/mscoree.h) 中的 `ICLRRuntimeHost4` 介面進行裝載。 此 API 的運行時間長於 CoreClrHost.h，因此您可能會看到舊版主機使用它。 它仍可運作，且比起 CoreClrHost 更能控制裝載處理序。 不過，在大部分情況下，CoreClrHost.h 目前仍然是慣用方法，因為其 API 更為簡單。
@@ -38,7 +38,7 @@ dotnet/samples GitHub 存放庫中提供下列示範教學課程所述步驟的[
 
 ## <a name="create-a-host-using-coreclrhosth"></a>使用 CoreClrHost.h 建立主機
 
-下列步驟詳細說明如何使用 CoreClrHost.h API，在原生應用程式中啟動 .NET Core 執行階段，並呼叫受控靜態方法。 此文件中的程式碼片段會使用一些 Windows 專用的 API，但[完整的範例主機](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)會顯示 Windows 和 Linux 兩者的程式碼路徑。
+下列步驟詳細說明如何使用 CoreClrHost.h API，在原生應用程式中啟動 .NET Core 執行階段，並呼叫受控靜態方法。 本文件中的程式碼片段會使用一些 Windows 專用的 API，但[完整的範例主機](https://github.com/dotnet/samples/tree/master/core/hosting/HostWithCoreClrHost)會顯示 Windows 和 Linux 兩者的程式碼路徑。
 
 ### <a name="step-1---find-and-load-coreclr"></a>步驟 1 - 找到並載入 CoreCLR
 
@@ -208,4 +208,4 @@ hr = runtimeHost->CreateDelegate(
 
 如果一開始未正常運作，請再確認一次主機預期的位置中有 *coreclr.dll*、所有必要的 Framework 程式庫都在 TPA 清單中，而且 CoreCLR 的位元 (32 或 64 位元) 符合主機的建立方式。
 
-裝載 .NET Core 執行階段是進階案例，許多開發人員並不需要，但對於需要從原生處理序啟動 Managed 程式碼的人員，或需要更能掌控 .NET Core 執行階段行為的人員而言，這項作業可能很實用。 由於 .NET Core 能夠與本身並存執行，因此您甚至可以建立主機，以初始化並啟動多個版本的 .NET Core 執行階段，並在相同處理序的這些執行階段上執行應用程式。
+裝載 .NET Core 執行階段是進階案例，許多開發人員並不需要，但對於需要從原生處理序啟動 Managed 程式碼的人員，或需要更能掌控 .NET Core 執行階段行為的人員而言，這項作業可能很實用。
