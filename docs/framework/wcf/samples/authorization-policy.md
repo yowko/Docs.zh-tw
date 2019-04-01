@@ -282,8 +282,7 @@ serviceHost.Credentials.UserNameAuthentication.CustomUserNamePasswordValidator =
 </behavior>
 ```
 
-Windows Communication Foundation (WCF) 提供豐富的宣告式模型來執行存取檢查。 
-  <xref:System.ServiceModel.ServiceAuthorizationManager> 物件會被用來執行存取檢查並判斷與用戶端相關的宣告是否能夠滿足存取服務方法所需的必要需求。
+Windows Communication Foundation (WCF) 提供豐富的宣告式模型來執行存取檢查。 <xref:System.ServiceModel.ServiceAuthorizationManager> 物件會被用來執行存取檢查並判斷與用戶端相關的宣告是否能夠滿足存取服務方法所需的必要需求。
 
 針對示範目的，此範例會示範如何實作<xref:System.ServiceModel.ServiceAuthorizationManager>可實<xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A>宣告的型別為基礎的方法，以允許使用者的存取方法`http://example.com/claims/allowedoperation`其值會是此作業之動作 URI允許呼叫。
 
