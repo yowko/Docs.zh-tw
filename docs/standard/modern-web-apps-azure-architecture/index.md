@@ -8,7 +8,7 @@ ms.date: 01/30/2019
 
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a>使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式
 
-![封面影像](./media/cover.png)
+![《Architect Modern Web Applications》(設計現代化 Web 應用程式架構) 指南的封面影像。](./media/index/web-application-guide-cover-image.png)
 
 發行者
 

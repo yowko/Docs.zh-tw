@@ -1,19 +1,14 @@
 ---
 title: 無伺服器應用程式：架構、模式和 Azure 實作
-description: 無伺服器架構指南。 了解實作企業應用程式的無伺服器架構 (與基礎結構即服務 [IaaS] 或平台即服務 [PaaS] 相對) 的時機、原因和方式。
+description: '無伺服器架構指南。 了解實作企業應用程式的無伺服器架構 (與基礎結構即服務 [IaaS] 或平台即服務 [PaaS] 相對) 的時機、原因和方式。'
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
-ms.openlocfilehash: a19784f42c63914e9cf8f42ee6408ec9aa46e4f3
-ms.sourcegitcommit: 82a3f7882bc03ed733af91fc2a0b113195bf5dc7
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52745312"
 ---
+
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a>無伺服器應用程式：架構、模式和 Azure 實作
 
-![](./media/Cover.jpg)
+![顯示無伺服器應用程式電子書封面的螢幕擷取畫面。](./media/index/serverless-apps-cover.jpg)
 
 > 下載：<https://aka.ms/serverless-ebook>
 
@@ -43,7 +38,7 @@ Mac 與 macOS 是 Apple Inc. 的商標。
 
 作者: 
 
-> **[Jeremy Likness](https://twitter.com/jeremylikness)**，Microsoft Corp. APEX 資深雲端開發大使
+> **[Jeremy Likness](https://twitter.com/jeremylikness)**，Microsoft Corp. APEX 資深雲端開發大使。
 
 參與者：
 
