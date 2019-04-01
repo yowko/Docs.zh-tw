@@ -4,12 +4,12 @@ description: 了解微服務產業中分散式資料管理的挑戰和解決方�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c3da158bf7a7ee2d4b979349299bba7487c9b1a2
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: f92410f2742ec1cbcb08d13614700eab348aa646
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54145987"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463367"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散式資料管理的挑戰和解決方案
 
@@ -86,28 +86,28 @@ ms.locfileid: "54145987"
 ## <a name="additional-resources"></a>其他資源
 
 - **CAP 定理** \
-  [*https://en.wikipedia.org/wiki/CAP_theorem*](https://en.wikipedia.org/wiki/CAP_theorem)
+  [https://en.wikipedia.org/wiki/CAP_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
 
 - **最終一致性** \
-  [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **資料一致性入門** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10))
 
 - **Martin Fowler：CQRS (命令與查詢責任隔離)** \
-  [*https://martinfowler.com/bliki/CQRS.html*](https://martinfowler.com/bliki/CQRS.html)
+  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
 
 - **具體化檢視** \
-  [*https://docs.microsoft.com/azure/architecture/patterns/materialized-view*](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+  [https://docs.microsoft.com/azure/architecture/patterns/materialized-view](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
 
 - **Charles Row。ACID vs.BASE：資料庫交易處理的轉換 pH** \
-  [*https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/*](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  [https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
 
 - **補償交易** \
-  [*https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction*](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+  [https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
 
 - **Udi Dahan.Service Oriented Composition (服務導向組合)** \
-  [*http://udidahan.com/2014/07/30/service-oriented-composition-with-video/*](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
 
 >[!div class="step-by-step"]
 >[上一頁](logical-versus-physical-architecture.md)

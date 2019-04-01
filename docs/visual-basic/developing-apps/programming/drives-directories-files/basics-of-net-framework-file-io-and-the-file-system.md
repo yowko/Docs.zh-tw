@@ -9,12 +9,12 @@ helpviewer_keywords:
 - streams
 - streams, definition
 ms.assetid: 49d837c0-cf28-416f-8606-4d83d7b479ef
-ms.openlocfilehash: 365c3b8f0aa107f7106e0c83d1fa60de6f4903f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f0d5c4e48d8a44c2e39942cbe76acbb5ef44ea7d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674558"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462769"
 ---
 # <a name="basics-of-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework 檔案 I/O 和檔案系統基本概念 (Visual Basic)
 
@@ -29,7 +29,7 @@ ms.locfileid: "57674558"
 
 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 使用資料流來支援讀取和寫入檔案。 您可以將資料流視為一組包含開始和結束的一維連續資料，而資料指標表示目前在資料流中的位置。
 
-![游標顯示目前在 FileStream 中的位置。](../../../../visual-basic/developing-apps/programming/drives-directories-files/media/filestream.gif "FileStream")
+![游標顯示目前在 FileStream 中的位置。](./media/basics-of-net-framework-file-io-and-the-file-system/filestream-cursor-position.gif)
 
 ## <a name="stream-operations"></a>資料流作業
 

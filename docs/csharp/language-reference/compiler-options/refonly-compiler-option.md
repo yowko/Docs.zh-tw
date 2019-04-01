@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /refonly compiler option [C#]
 - -refonly compiler option [C#]
 - refonly compiler option [C#]
-ms.openlocfilehash: 06b246d6e5831563389efa402ccb6a942430efa4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 24f5cba5650777f4844923844708d287798c445c
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589723"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409259"
 ---
 # <a name="-refonly-c-compiler-options"></a>-refonly (C# 編譯器選項)
 
@@ -33,7 +33,7 @@ ms.locfileid: "54589723"
 參考組件會進一步移除來自僅中繼資料組件的中繼資料 (私用成員)：
 
 - 參考組件只有在 API 介面中所需項目的參考。 實際的組件可能有與特定實作相關的其他參考。 例如，`class C { private void M() { dynamic d = 1; ... } }` 的參考組件不參考 `dynamic` 所需的任何類型。
-- 如果移除它們不會明顯影響編譯的話，則會移除私用函式的成員 (方法、屬性和事件)。 如果沒有任何 `InternalsVisibleTo` 屬性，請對內部函式成員執行相同的作業。
+- 如果移除它們不會明顯影響編譯的話，則會移除私用函式的成員 (方法、屬性和事件)。 如果沒有任何 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性，請對內部函式成員執行相同的作業。
 - 但所有類型 (包括私用或巢狀類型) 都會保留在參考組件中。 所有屬性都保留 (即使是內部屬性)。
 - 所有虛擬方法都保留。 保留明確的介面實作。 保留明確實作的屬性和事件，因為它們的存取子都是虛擬的 (因此保留)。
 - 所有結構欄位都保留。 (這是 post-C#-7.1 細分的候選項目)

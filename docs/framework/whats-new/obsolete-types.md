@@ -8,15 +8,15 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d2800e4608d6055f4815f835a1375f9fffee9fc
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58049734"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412340"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
-<a name="introduction"></a> 此文章中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](obsolete-members.md)。
+<a name="introduction"></a> 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](obsolete-members.md)。
 
 -   [系統組件中的過時類型](#obsolete_types_in_system_assemblies)
 
@@ -205,7 +205,7 @@ ms.locfileid: "58049734"
 |----------|-------------|
 |<xref:System.ComponentModel.IComNativeDescriptorHandler?displayProperty=nameWithType>|這個介面已被取代。 請改為加入 <xref:System.ComponentModel.TypeDescriptionProvider?displayProperty=nameWithType> 來處理 <xref:System.ComponentModel.TypeDescriptor.ComObjectType%2A?displayProperty=nameWithType> 型別。|
 |<xref:System.ComponentModel.RecommendedAsConfigurableAttribute?displayProperty=nameWithType>|請改用 <xref:System.ComponentModel.SettingsBindableAttribute?displayProperty=nameWithType> 來處理新的設定模型。|
-|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|這個屬性已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>。 例如，若要指定 CodeDom 的根設計工具，請使用 `DesignerSerializerAttribute\(...,typeof\(TypeCodeDomSerializer\)\)`。|
+|<xref:System.ComponentModel.Design.Serialization.RootDesignerSerializerAttribute?displayProperty=nameWithType>|這個屬性已被取代。 請改用 <xref:System.ComponentModel.Design.Serialization.DesignerSerializerAttribute?displayProperty=nameWithType>。|
 |<xref:System.Diagnostics.DiagnosticsConfigurationHandler?displayProperty=nameWithType>|這個類別已被取代。|
 |<xref:System.Diagnostics.PerformanceCounterManager?displayProperty=nameWithType>|這個類別已被取代。 請改為透過 <xref:System.Diagnostics.PerformanceCounter?displayProperty=nameWithType> 類別使用效能計數器。|
 |<xref:System.Net.GlobalProxySelection?displayProperty=nameWithType>|這個類別已被取代。 請改用 <xref:System.Net.WebRequest.DefaultWebProxy%2A?displayProperty=nameWithType> 來存取和設定全域預設 Proxy。 請使用 'null' 而非 <xref:System.Net.GlobalProxySelection.GetEmptyWebProxy%2A?displayProperty=nameWithType>。|

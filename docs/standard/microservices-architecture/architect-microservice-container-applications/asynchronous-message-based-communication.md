@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 非同步訊�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: c5010b521dc80a61718de1c797ae451bb1f5ad93
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4285c37c90b01424de70a2ac4dd75d5d9c63dac0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674662"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465551"
 ---
 # <a name="asynchronous-message-based-communication"></a>非同步訊息通訊
 
@@ -21,7 +21,7 @@ ms.locfileid: "57674662"
 
 在微服務社群中，這種通訊的慣用基礎結構是輕量級訊息代理程式，它不同於 SOA 中使用的大型訊息代理程式和協調器。 在輕量級訊息代理程式中，基礎結構通常「無聲」，僅當作訊息代理程式，並具有例如 RabbitMQ 的簡單實作，或是例如 Azure 服務匯流排的雲端可擴充服務匯流排。 在此案例中，大部分的「智慧型」思考仍存在於產生和取用訊息的端點，也就是微服務中。
 
-另一個您應該盡可能嘗試遵循的規則，是在內部服務之間只使用非同步傳訊，而只有在從用戶端應用程式到前端服務 (API 閘道加上第一層的微服務) 使用同步通訊 (例如 HTTP)。
+另一項您應該盡可能嘗試遵循的規則，是在內部服務之間只使用非同步傳訊，而只有在從用戶端應用程式到前端服務 (API 閘道加上第一層的微服務) 使用同步通訊 (例如 HTTP)。
 
 有兩種類型的非同步傳訊通訊：單一接收者訊息式通訊及多個接收者訊息式通訊。 下面各節會提供其詳細資料。
 
@@ -71,7 +71,7 @@ ms.locfileid: "57674662"
 
 ## <a name="resiliently-publishing-to-the-event-bus"></a>彈性地發行到事件匯流排
 
-跨多個微服務實作事件驅動架構時，有一個挑戰是如何以不可分割方式更新原始微服務的狀態，同時以某種方式，根據交易彈性地將其相關整合事件發行到事件匯流排。 以下幾種方式可以達成此目的，雖然可能也有其他的方法。
+跨多個微服務實作事件驅動架構時，有一項挑戰是如何以不可分割方式更新原始微服務的狀態，同時以某種方式，根據交易彈性地將其相關整合事件發行到事件匯流排。 以下幾種方式可以達成此目的，雖然可能也有其他的方法。
 
 - 使用像昃 MSMQ 的交易式 (DTC 型) 佇列。 (不過，這是傳統方法。)
 
@@ -81,30 +81,30 @@ ms.locfileid: "57674662"
 
 - 使用[寄件匣模式](http://gistlabs.com/2014/05/the-outbox/)：交易式資料庫資料表作為訊息佇列，而訊息佇列將是事件建立者元件的基礎，會建立事件加以發行。
 
-使用非同步通訊時要考慮的其他主題還有訊息等冪及訊息重複資料刪除。 這些主題將在此指南稍後的[實作微服務之間的事件通訊 (整合事件)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)小節討論。
+使用非同步通訊時要考慮的其他主題還有訊息等冪及訊息重複資料刪除。 這些主題將在本指南稍後的[實作微服務之間的事件通訊 (整合事件)](../multi-container-microservice-net-applications/integration-event-based-microservice-communications.md)小節討論。
 
 ## <a name="additional-resources"></a>其他資源
 
 - **事件驅動傳訊** \
-  [*http://soapatterns.org/design_patterns/event_driven_messaging*](http://soapatterns.org/design_patterns/event_driven_messaging)
+  [http://soapatterns.org/design_patterns/event_driven_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
 
 - **發佈/訂閱頻道** \
-  [*https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html*](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+  [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
 
 - **Udi Dahan.已釐清的 CQRS** \
-  [*http://udidahan.com/2009/12/09/clarified-cqrs/*](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
 
 - **命令與查詢責任隔離 (CQRS)** \
-  [*https://docs.microsoft.com/azure/architecture/patterns/cqrs*](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+  [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
 
 - **在繫結的內容之間通訊** \
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
 
 - **最終一致性** \
-  [*https://en.wikipedia.org/wiki/Eventual_consistency*](https://en.wikipedia.org/wiki/Eventual_consistency)
+  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
 
 - **Jimmy Bogard：重構以提高彈性：評估結合程度** \
-  [*https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/*](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+  [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
 
 > [!div class="step-by-step"]
 > [上一頁](communication-in-microservice-architecture.md)

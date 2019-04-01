@@ -4,12 +4,12 @@ description: 了解如何實作具復原功能的 Entity Framework Core SQL 連�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 28428654ea3176aea960e2711c83499a16d2dd4b
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 022fa482cf7b629be00a979550b02a2616830d09
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362674"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58462574"
 ---
 # <a name="implement-resilient-entity-framework-core-sql-connections"></a>實作具復原功能的 Entity Framework Core SQL 連接
 
@@ -43,7 +43,7 @@ public class Startup
 
 ## <a name="execution-strategies-and-explicit-transactions-using-begintransaction-and-multiple-dbcontexts"></a>使用 BeginTransaction 和多個 DbContext 的執行策略和明確異動
 
-在 EF Core 連接中啟用重試時，您使用 EF Core 執行的每個作業都會變成其本身可重試的作業。 如果發生暫時性失敗，`SaveChanges` 的每個查詢和每個呼叫都會當做一個單位來重試。
+在 EF Core 連接中啟用重試時，您使用 EF Core 執行的每項作業都會變成其本身可重試的作業。 如果發生暫時性失敗，`SaveChanges` 的每個查詢和每個呼叫都會當做一個單位來重試。
 
 不過，如果您的程式碼使用 `BeginTransaction` 起始異動，您將定義需視為一個單位的專屬作業群組。 如果發生失敗，必須復原異動內的所有項目。
 
@@ -149,10 +149,10 @@ public class ResilientTransaction
 ## <a name="additional-resources"></a>其他資源
 
 - **在 ASP.NET MVC 應用程式中使用 EF 來恢復連線和攔截命令** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application*](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
+  [https://docs.microsoft.com/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/connection-resiliency-and-command-interception-with-the-entity-framework-in-an-asp-net-mvc-application)
 
 - **Cesar de la Torre：使用具有恢復功能的 Entity Framework Core SQL 連線和異動** \
-  [*https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/*](https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/)
+  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/03/26/using-resilient-entity-framework-core-sql-connections-and-transactions-retries-with-exponential-backoff/)
 
 >[!div class="step-by-step"]
 >[上一頁](implement-retries-exponential-backoff.md)

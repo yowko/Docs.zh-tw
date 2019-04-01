@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 9b7ef12591e0a231b633f461547ec0eeaec1a530
-ms.sourcegitcommit: 77854e8704b9689b73103d691db34d71c2bf1dad
+ms.openlocfilehash: e78772df1cf7e5f8999305a1b726a7085f94601b
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58308096"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410065"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>教學課程：使用 ML.NET 建立電影推薦
 
@@ -106,7 +106,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 | 功能      | 標籤         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 | `timestamp`     |               |
 
 由您決定使用哪些 `Features` 來預測 `Label`。 您也可以使用類似[功能排列重要性](../how-to-guides/determine-global-feature-importance-in-model.md)的功能，來協助您選取最合適的 `Features`。
@@ -116,7 +116,7 @@ ML.NET 程序的第一個步驟是準備並載入模型定型和測試資料。
 | 功能      | 標籤         |
 | ------------- |:-------------:|
 | `userId`        |    `rating`     |
-| `movieId `      |               |
+| `movieId`      |               |
 
 接下來，您必須定義輸入類別的資料結構。
 

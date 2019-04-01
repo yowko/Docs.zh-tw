@@ -4,12 +4,12 @@ description: 了解適當處理部分失敗的幾個策略。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 2da0dfee97ac9c7c33ab4edeb670e0f813e6c463
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dd485eae7163ecf5e5622b960448385e33ae718a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981318"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464264"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>處理部分失敗的策略
 
@@ -30,19 +30,19 @@ ms.locfileid: "56981318"
 ## <a name="additional-resources"></a>其他資源
 
 - **復原模式**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/category/resiliency*](/azure/architecture/patterns/category/resiliency)
+  [https://docs.microsoft.com/azure/architecture/patterns/category/resiliency](/azure/architecture/patterns/category/resiliency)
 
 - **新增復原和最佳化效能**\
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead。** GitHub 存放庫。 Polly 原則的實作。\
-  [*https://github.com/App-vNext/Polly/wiki/Bulkhead*](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+  [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
 
 - **為 Azure 設計具有復原功能的應用程式**\
-  [*https://docs.microsoft.com/azure/architecture/resiliency/*](/azure/architecture/resiliency/)
+  [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)
 
 - **暫時性錯誤處理**\
-  [*https://docs.microsoft.com/azure/architecture/best-practices/transient-faults*](/azure/architecture/best-practices/transient-faults)
+  [https://docs.microsoft.com/azure/architecture/best-practices/transient-faults](/azure/architecture/best-practices/transient-faults)
 
 >[!div class="step-by-step"]
 >[上一頁](handle-partial-failure.md)

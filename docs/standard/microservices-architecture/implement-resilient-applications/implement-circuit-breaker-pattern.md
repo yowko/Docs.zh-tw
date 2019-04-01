@@ -4,12 +4,12 @@ description: 了解如何實作斷路器模式作為 Http 重試的互補系統�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: ca35214332b5ae0851a35d34aa329775206c2b66
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 25a8b52749c3a8448a80155b233edb938e9bdd64
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362796"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464186"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>實作斷路器模式
 
@@ -98,7 +98,7 @@ static IAsyncPolicy<HttpResponseMessage> GetCircuitBreakerPolicy()
 
 ![失敗中介軟體模擬狀態檢查結果的瀏覽器檢視](./media/image4.png)
 
-**圖 8-5**。 檢查「失敗」的 ASP.NET 中介軟體狀態 (在本此案例中已停用)
+**圖 8-5**。 檢查「失敗」的 ASP.NET 中介軟體狀態 (在本例中已停用)
 
 此時，只要您呼叫/叫用它，購物籃微服務就會以狀態碼 500 回應。
 
@@ -134,7 +134,7 @@ public class CartController : Controller
 }
 ```
 
-以下摘要說明。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在此案例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 8-6 所示。
+以下摘要說明。 重試原則嘗試提出 HTTP 要求幾次，並收到 HTTP 錯誤。 當重試次數達到針對斷路器原則設定的最大數目時 (在本例中為 5)，應用程式會擲回 BrokenCircuitException。 結果是易懂訊息，如圖 8-6 所示。
 
 ![MVC Web 應用程式顯示由斷路器原則所觸發「購物籃服務無法操作」訊息的瀏覽器檢視](./media/image5.png)
 
@@ -147,7 +147,7 @@ public class CartController : Controller
 ## <a name="additional-resources"></a>其他資源
 
 - **斷路器模式**\
-  [*https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker*](/azure/architecture/patterns/circuit-breaker)
+  [https://docs.microsoft.com/azure/architecture/patterns/circuit-breaker](/azure/architecture/patterns/circuit-breaker)
 
 >[!div class="step-by-step"]
 >[上一頁](implement-http-call-retries-exponential-backoff-polly.md)

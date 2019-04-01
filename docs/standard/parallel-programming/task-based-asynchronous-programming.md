@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d2a525a8aff6f6b05777de736d97c72c38a2fa62
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268024"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409922"
 ---
 # <a name="task-based-asynchronous-programming"></a>工作型非同步程式設計
 
@@ -44,7 +44,7 @@ ms.locfileid: "55268024"
 > [!NOTE]
 > <xref:System.Threading.Tasks.Task> 在幕後建立的 <xref:System.Threading.Tasks.Parallel.Invoke%2A> 執行個體數目，不一定會等於所提供的委派數目。 TPL 可採用各種不同的最佳化方式，尤其是有大量委派時。
 
-如需詳細資訊，請參閱[＜How to：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
+如需詳細資訊，請參閱[如何：使用 Parallel.Invoke 執行平行作業](../../../docs/standard/parallel-programming/how-to-use-parallel-invoke-to-execute-parallel-operations.md)。
 
 若要進一步控制工作執行，或是從工作傳回值，您必須更明確地使用 <xref:System.Threading.Tasks.Task> 物件。
 
@@ -72,7 +72,7 @@ ms.locfileid: "55268024"
 [!code-csharp[TPL_TaskIntro#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_taskintro/cs/result1.cs#4)]
 [!code-vb[TPL_TaskIntro#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_taskintro/vb/result1.vb#4)]
 
-如需詳細資訊，請參閱[＜How to：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。
+如需詳細資訊，請參閱[如何：傳回工作的值](../../../docs/standard/parallel-programming/how-to-return-a-value-from-a-task.md)。
 
 當您使用 Lambda 運算式建立委派時，可以存取原始程式碼中該時間點可見的所有變數。 不過，在某些情況下 (特別是在迴圈內)，Lambda 擷取的變數不是預期的變數。 它只會擷取最後的值，而不是在每次反覆運算後變動的值。 下面範例會說明此問題。 它會將迴圈計數器傳遞給 Lambda 運算式，這個運算式會具現化 `CustomData` 物件並使用迴圈計數器做為物件的識別項。 如範例輸出所示，每個 `CustomData` 物件都具有相同的識別項。
 
@@ -97,7 +97,7 @@ ms.locfileid: "55268024"
 
 大多數建立工作的 API 都會提供用來接受 <xref:System.Threading.Tasks.TaskCreationOptions> 參數的多載。 您可以指定其中一個選項，指示工作排程器要如何在執行緒集區上排定工作。 下表列出各種工作建立選項。
 
-|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|描述|
+|<xref:System.Threading.Tasks.TaskCreationOptions> 參數值|說明|
 |-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------|
 |<xref:System.Threading.Tasks.TaskCreationOptions.None>|未指定選項時的預設值。 排程器會使用其預設的啟發式來排定工作。|
 |<xref:System.Threading.Tasks.TaskCreationOptions.PreferFairness>|指定排定工作時，應該讓較早建立的工作較早執行，並讓較晚建立的工作較晚執行。|
@@ -236,7 +236,7 @@ ms.locfileid: "55268024"
 
 ## <a name="canceling-tasks"></a>取消工作
 
-`Task` 類別支援合作式取消，且與 .NET Framework 4 中引進的 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 和 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 類別完全整合。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別中的許多建構函式都接受 <xref:System.Threading.CancellationToken> 物件做為輸入參數。 許多 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 和 <xref:System.Threading.Tasks.Task.Run%2A> 多載也包含 <xref:System.Threading.CancellationToken> 參數。
+<xref:System.Threading.Tasks.Task> 類別支援合作式取消，且與 .NET Framework 4 中引進的 <xref:System.Threading.CancellationTokenSource?displayProperty=nameWithType> 和 <xref:System.Threading.CancellationToken?displayProperty=nameWithType> 類別完全整合。 <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 類別中的許多建構函式都接受 <xref:System.Threading.CancellationToken> 物件做為輸入參數。 許多 <xref:System.Threading.Tasks.TaskFactory.StartNew%2A> 和 <xref:System.Threading.Tasks.Task.Run%2A> 多載也包含 <xref:System.Threading.CancellationToken> 參數。
 
 您可以先建立語彙基元，之後再使用 <xref:System.Threading.CancellationTokenSource> 類別來發出取消要求。 請將語彙基元當做引數傳遞給 <xref:System.Threading.Tasks.Task>，並同時在您的使用者委派 (負責完成回應取消要求的動作) 中參考同一個語彙基元。
 
@@ -274,7 +274,7 @@ TPL 提供數個新的公用類型，這些類型在平行處理和序列處理�
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-|-|
 |[使用接續工作鏈結工作](../../../docs/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks.md)|說明接續的運作方式。|
 |[附加與中斷連結的子工作](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)|說明附加的與中斷連結的子工作之間的差異。|

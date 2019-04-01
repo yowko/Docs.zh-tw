@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 702d38cf6f3e28d20fbd5d7826cf7f1f56f235a7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b92660a69194ff2d52cd78427f73510de514ea48
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758634"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545815"
 ---
 # <a name="if-c-reference"></a>#if (C# 參考)
 
@@ -24,7 +24,7 @@ ms.locfileid: "55758634"
 #endif
 ```
 
-您只能使用運算子 [==](../operators/equality-comparison-operator.md) (相等) 和 [!=](../operators/not-equal-operator.md) (不等) 來測試 [true](../keywords/true.md) 或 [false](../keywords/false.md)。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/conditional-and-operator.md) (且)、[&#124;&#124;](../operators/conditional-or-operator.md) (或) 及 [!](../operators/logical-negation-operator.md) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
+您只能使用運算子 [==](../operators/equality-operators.md#equality-operator-) (相等) 和 [!=](../operators/equality-operators.md#inequality-operator-) (不等) 來測試 [true](../keywords/true.md) 或 [false](../keywords/false.md)。 True 表示已定義符號。 `#if DEBUG` 陳述式的意義與 `#if (DEBUG == true)` 一樣。 您可以使用運算子 [&&](../operators/conditional-and-operator.md) (且)、[&#124;&#124;](../operators/conditional-or-operator.md) (或) 及 [!](../operators/logical-negation-operator.md) (非)，來評估是否已定義多個符號。 您也可以使用括弧來將符號和運算子分組。
 
 ## <a name="remarks"></a>備註
 

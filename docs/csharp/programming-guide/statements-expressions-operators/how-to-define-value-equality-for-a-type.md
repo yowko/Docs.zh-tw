@@ -9,12 +9,12 @@ helpviewer_keywords:
 - value equality [C#]
 - equivalence [C#]
 ms.assetid: 4084581e-b931-498b-9534-cf7ef5b68690
-ms.openlocfilehash: fef242d491fca667d66e24a8cd6715e6f6d08483
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 6ee44cb58033e0e235222fb3f74302f84092dbcb
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203106"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545438"
 ---
 # <a name="how-to-define-value-equality-for-a-type-c-programming-guide"></a>作法：定義類型的實值相等 (C# 程式設計指南)
 當您定義類別或結構時，需判斷是否有必要為類型建立實值相等 (或等價) 的自訂定義。 通常，當該類型的物件必須新增至某種集合，或物件的主要目的是為了儲存一組欄位或屬性時，就會實作實值相等。 您可以根據對該類型中所有欄位和屬性的比較來定義實值相等，也可以根據子集來進行定義。 不論使用哪種方法，在類別和結構中，您的實作都必須遵循下列五項等價保證：  
@@ -37,7 +37,7 @@ ms.locfileid: "57203106"
   
 2.  透過提供類型專屬的 `Equals` 方法實作 <xref:System.IEquatable%601?displayProperty=nameWithType> 介面。 實際的等價比較是在這裡執行。 例如，您可能決定只比較類型中的一個或兩個欄位，以定義相等。 不會從 `Equals` 擲回例外狀況。 僅適用於類別：此方法只會檢查在類別中宣告的欄位。 它應該呼叫 `base.Equals` 以檢查基底類別中的欄位 (如果類型直接繼承自 <xref:System.Object>，請不要這樣做，因為 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> 的 <xref:System.Object> 實作會執行參考相等檢查。)  
   
-3.  選擇性但建議使用：將 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子多載。  
+3.  選擇性但建議使用：將 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) 運算子多載。  
   
 4.  覆寫 <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>，以便有實值相等的兩個物件產生相同的雜湊碼。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "57203106"
   
  若為結構，預設實作 <xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType> (這是 <xref:System.ValueType?displayProperty=nameWithType> 中的覆寫版本) 會使用反映執行實值相等檢查，比較類型中的每個欄位值。 當實作器覆寫結構中的虛擬 `Equals` 方法時，其目的是為了提供更有效率的方法來執行實值相等檢查，以及選擇性地根據結構的一部分欄位或屬性進行比較。  
   
- 除非結構明確多載 [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) 和 [!=](../../../csharp/language-reference/operators/not-equal-operator.md) 運算子，否則這些運算子無法用於結構。  
+ 除非結構明確多載 [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) 和 [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) 運算子，否則這些運算子無法用於結構。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 84ff3390912f808e6b5733049d9f0b3889576776
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 5c16b38d7720fb739aa0711d4511afacd7b92c7a
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677431"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465304"
 ---
 # <a name="creating-a-simple-data-driven-crud-microservice"></a>建立簡單資料驅動 CRUD 微服務
 
@@ -172,7 +172,7 @@ _context.SaveChanges();
 
 在上述 `CatalogController` 類別的範例中，我們透過 `CatalogController()` 建構函式插入了 `CatalogContext` 類型的物件及其他物件。
 
-要在 Web API 專案中設定的一個重要組態，是將 DbContext 類別註冊至服務的 IoC 容器內。 您通常會藉由在 `Startup` 類別中的 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 來執行此動作，如下列範例所示：
+要在 Web API 專案中設定的一項重要組態，是將 DbContext 類別註冊至服務的 IoC 容器內。 您通常會藉由在 `Startup` 類別中的 `ConfigureServices()` 方法內呼叫 `services.AddDbContext<DbContext>()` 來執行此動作，如下列範例所示：
 
 ```csharp
 public void ConfigureServices(IServiceCollection services)
@@ -213,10 +213,10 @@ public void ConfigureServices(IServiceCollection services)
 ### <a name="additional-resources"></a>其他資源
 
 - **查詢資料** \
-  [*https://docs.microsoft.com/ef/core/querying/index*](https://docs.microsoft.com/ef/core/querying/index)
+  [https://docs.microsoft.com/ef/core/querying/index](https://docs.microsoft.com/ef/core/querying/index)
 
 - **儲存資料** \
-  [*https://docs.microsoft.com/ef/core/saving/index*](https://docs.microsoft.com/ef/core/saving/index)
+  [https://docs.microsoft.com/ef/core/saving/index](https://docs.microsoft.com/ef/core/saving/index)
 
 ## <a name="the-db-connection-string-and-environment-variables-used-by-docker-containers"></a>Docker 容器所使用的 DB 連接字串及環境變數
 
@@ -297,13 +297,13 @@ public class CatalogController : ControllerBase
 ### <a name="additional-resources"></a>其他資源
 
 - **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更加容易** \
-  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 - **進行 RESTful web API 的版本設定** \
-  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 - **Roy Fielding。版本設定、超媒體及 REST** \
-  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 ## <a name="generating-swagger-description-metadata-from-your-aspnet-core-web-api"></a>從您的 ASP.NET Core Web API 產生 Swagger 描述中繼資料
 
@@ -423,13 +423,13 @@ public class Startup
 ### <a name="additional-resources"></a>其他資源
 
 - **使用 Swagger 的 ASP.NET Web API 說明頁面** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger*](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
+  [https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger](https://docs.microsoft.com/aspnet/core/tutorials/web-api-help-pages-using-swagger)
 
 - **開始使用 Swashbuckle 及 ASP.NET Core** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-swashbuckle?tabs=visual-studio)
 
 - **開始使用 NSwag 及 ASP.NET Core** \
-  [*https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio*](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
+  [https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio](https://docs.microsoft.com/aspnet/core/tutorials/getting-started-with-nswag?tabs=visual-studio)
 
 > [!div class="step-by-step"]
 > [上一頁](microservice-application-design.md)

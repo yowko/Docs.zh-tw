@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: a0174ca42cb65c7c8f0c8ba2dc9adfd5c43c22b8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981578"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545464"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 
@@ -45,8 +45,8 @@ ms.locfileid: "56981578"
 |x[.](../../../csharp/language-reference/operators/member-access-operator.md)y<br /><br /> x?.y|成員存取<br /><br /> 條件式成員存取|  
 |f[(x)](../../../csharp/language-reference/operators/invocation-operator.md)|方法和委派叫用|  
 |a[&#91;x&#93;](../../../csharp/language-reference/operators/index-operator.md)<br /><br /> a?[x]|陣列和索引子存取<br /><br /> 條件式陣列和索引子存取|  
-|x[++](../../../csharp/language-reference/operators/increment-operator.md)|後置遞增|  
-|x[--](../../../csharp/language-reference/operators/decrement-operator.md)|後置遞減|  
+|x[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)|後置遞增|  
+|x[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)|後置遞減|  
 |[new](../../../csharp/language-reference/keywords/new-operator.md) T(...)|建立物件和委派|  
 |`new` T(...){...}|使用初始設定式建立物件。 請參閱[物件和集合初始設定式](../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)。|  
 |`new` {...}|匿名物件初始設定式。 請參閱[匿名型別](../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)。|  
@@ -65,17 +65,17 @@ ms.locfileid: "56981578"
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定|  
 |[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|邏輯否定|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|位元否定|  
-|[++](../../../csharp/language-reference/operators/increment-operator.md)x|前置遞增|  
-|[--](../../../csharp/language-reference/operators/decrement-operator.md)x|前置遞減|  
+|[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|前置遞增|  
+|[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|前置遞減|  
 |[(T)](../../../csharp/language-reference/operators/invocation-operator.md)x|x 明確轉換成類型 T|  
   
  **乘法類運算子**  
   
 |運算式|說明|  
 |----------------|-----------------|  
-|[*](../../../csharp/language-reference/operators/multiplication-operator.md)|乘法|  
-|[/](../../../csharp/language-reference/operators/division-operator.md)|除號|  
-|[%](../../../csharp/language-reference/operators/modulus-operator.md)|餘數|  
+|[*](../../../csharp/language-reference/operators/arithmetic-operators.md#multiplication-operator-)|乘法|  
+|[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|除號|  
+|[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|餘數|  
   
  **加法類運算子**  
   
@@ -106,8 +106,8 @@ ms.locfileid: "56981578"
   
 |運算式|說明|  
 |----------------|-----------------|  
-|x [==](../../../csharp/language-reference/operators/equality-comparison-operator.md) y|等於|  
-|x [!=](../../../csharp/language-reference/operators/not-equal-operator.md) y|不相等|  
+|x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等於|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不相等|  
   
  **邏輯、條件和 Null 運算子**  
   
@@ -126,7 +126,7 @@ ms.locfileid: "56981578"
 |運算式|說明|  
 |----------------|-----------------|  
 |[=](../../../csharp/language-reference/operators/assignment-operator.md)|指派|  
-|x op= y|複合指派。 支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/multiplication-assignment-operator.md)、[/=](../../../csharp/language-reference/operators/division-assignment-operator.md)、[%=](../../../csharp/language-reference/operators/modulus-assignment-operator.md)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
+|x op= y|複合指派。 支援這些運算子：[+=](../../../csharp/language-reference/operators/addition-assignment-operator.md)、[-=](../../../csharp/language-reference/operators/subtraction-assignment-operator.md)、[*=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[/=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[%=](../../../csharp/language-reference/operators/arithmetic-operators.md#compound-assignment)、[&=](../../../csharp/language-reference/operators/and-assignment-operator.md)、[&#124;=](../../../csharp/language-reference/operators/or-assignment-operator.md)、[^=](../../../csharp/language-reference/operators/xor-assignment-operator.md)、[<\<=](../../../csharp/language-reference/operators/left-shift-assignment-operator.md)、[>>=](../../../csharp/language-reference/operators/right-shift-assignment-operator.md)|  
 |(T x) [=>](../../../csharp/language-reference/operators/lambda-operator.md) y|匿名函式 (Lambda 運算式)|  
   
 ## <a name="associativity"></a>順序關聯性

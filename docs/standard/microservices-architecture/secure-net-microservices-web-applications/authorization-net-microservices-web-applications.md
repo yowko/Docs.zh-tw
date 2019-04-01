@@ -4,12 +4,12 @@ description: .NET 微服務和 Web 應用程式中的安全性 - 取得 ASP.NET 
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: 0c8f827d8e4d80a0bcd69af5ab39ea2b6269f2b6
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 36cd8eaf7ffe78a29762398044dc1803adc1b200
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362453"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466357"
 ---
 # <a name="about-authorization-in-net-microservices-and-web-applications"></a>關於 .NET 微服務和 Web 應用程式中的授權
 
@@ -54,7 +54,7 @@ public class ControlPanelController : Controller
 }
 ```
 
-在此範例中，只有系統管理員或 PowerUser 角色的使用者可以存取 ControlPanel 控制器中的 API (例如執行 SetTime 動作)。 關機 API 進一步限制僅限系統管理員角色存取。
+在本例中，只有系統管理員或 PowerUser 角色的使用者可以存取 ControlPanel 控制器中的 API (例如執行 SetTime 動作)。 關機 API 進一步限制僅限系統管理員角色存取。
 
 為要求使用者具備多種角色，您要使用多個 Authorize 屬性，如下例所示：
 
@@ -67,11 +67,11 @@ public ActionResult API1 ()
 }
 ```
 
-在此範例中，若要呼叫 API1，使用者必須：
+在本例中，若要呼叫 API1，使用者必須：
 
 - 為系統管理員或 PowerUser 角色，且
 
-- 為 RemoteEmployee 角色，並
+- 為 RemoteEmployee 角色，「並」
 
 - 滿足 CustomPolicy 授權的自訂處理常式。
 
@@ -95,7 +95,7 @@ services.AddAuthorization(options =>
 
 如範例所示，原則可與不同類型的需求建立關聯性。 註冊原則之後，即可套用到動作或控制器，只要將原則的名稱傳遞為 Authorize 屬性的 Policy 引數 (例如，`[Authorize(Policy="EmployeesOnly")]`)。原則可有多個需求，不是只有一個 (如這些範例所示)。
 
-在前面的範例中，第一個 AddPolicy 呼叫只是根據角色授權的替代方式。 若 `[Authorize(Policy="AdministratorsOnly")]` 已套用至 API，只有系統管理員角色的使用者才能夠存取它。
+在前例中，第一個 AddPolicy 呼叫只是根據角色授權的替代方式。 若 `[Authorize(Policy="AdministratorsOnly")]` 已套用至 API，只有系統管理員角色的使用者才能夠存取它。
 
 第二個 <xref:Microsoft.AspNetCore.Authorization.AuthorizationOptions.AddPolicy%2A> 呼叫示範的簡單方法，要求應該向使用者顯示特定的宣告。 <xref:Microsoft.AspNetCore.Authorization.AuthorizationPolicyBuilder.RequireClaim%2A> 方法也會選擇性使用宣告的預期值。 如已指定值，只有當使用者同時具有正確的類型宣告以及其中一個指定的值時，才會滿足此需求。 如果您使用 JWT 持有人驗證中介軟體，則所有的 JWT 屬性都可作為使用者宣告。
 
@@ -114,16 +114,16 @@ services.AddAuthorization(options =>
 ## <a name="additional-resources"></a>其他資源
 
 - **ASP.NET Core 驗證** \
-  [*https://docs.microsoft.com/aspnet/core/security/authentication/identity*](/aspnet/core/security/authentication/identity)
+  [https://docs.microsoft.com/aspnet/core/security/authentication/identity](/aspnet/core/security/authentication/identity)
 
 - **ASP.NET Core 授權** \
-  [*https://docs.microsoft.com/aspnet/core/security/authorization/introduction*](/aspnet/core/security/authorization/introduction)
+  [https://docs.microsoft.com/aspnet/core/security/authorization/introduction](/aspnet/core/security/authorization/introduction)
 
 - **以角色為基礎的授權** \
-  [*https://docs.microsoft.com/aspnet/core/security/authorization/roles*](/aspnet/core/security/authorization/roles)
+  [https://docs.microsoft.com/aspnet/core/security/authorization/roles](/aspnet/core/security/authorization/roles)
 
 - **自訂以原則為基礎的授權** \
-  [*https://docs.microsoft.com/aspnet/core/security/authorization/policies*](/aspnet/core/security/authorization/policies)
+  [https://docs.microsoft.com/aspnet/core/security/authorization/policies](/aspnet/core/security/authorization/policies)
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)

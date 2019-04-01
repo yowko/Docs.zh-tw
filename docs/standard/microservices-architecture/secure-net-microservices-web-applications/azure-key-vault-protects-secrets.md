@@ -4,12 +4,12 @@ description: .NET 微服務和 Web 應用程式中的安全性 - Azure Key Vault
 author: mjrousos
 ms.author: wiwagn
 ms.date: 10/19/2018
-ms.openlocfilehash: fd2bff04e06bf0561ee0c95d87978f834f192172
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 99049dca3d127f82ba5312c94d5246940bb71ba8
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664038"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466123"
 ---
 # <a name="use-azure-key-vault-to-protect-secrets-at-production-time"></a>使用 Azure Key Vault 在生產階段保護祕密
 
@@ -38,19 +38,19 @@ ms.locfileid: "56664038"
 ## <a name="additional-resources"></a>其他資源
 
 - **使用 Azure Key Vault 保護應用程式祕密** \
-  [*https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault*](/azure/guidance/guidance-multitenant-identity-keyvault)
+  [https://docs.microsoft.com/azure/guidance/guidance-multitenant-identity-keyvault](/azure/guidance/guidance-multitenant-identity-keyvault)
 
 - **在開發期間安全儲存應用程式祕密** \
-  [*https://docs.microsoft.com/aspnet/core/security/app-secrets*](/aspnet/core/security/app-secrets)
+  [https://docs.microsoft.com/aspnet/core/security/app-secrets](/aspnet/core/security/app-secrets)
 
 - **設定資料保護** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview*](/aspnet/core/security/data-protection/configuration/overview)
+  [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/overview](/aspnet/core/security/data-protection/configuration/overview)
 
 - **ASP.NET Core 中的資料保護金鑰管理和存留期** \
-  [*https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings*](/aspnet/core/security/data-protection/configuration/default-settings)
+  [https://docs.microsoft.com/aspnet/core/security/data-protection/configuration/default-settings](/aspnet/core/security/data-protection/configuration/default-settings)
 
 - **Microsoft.Extensions.Configuration.KeyPerFile** GitHub 存放庫。 \
-  [*https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile*](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
+  [https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile](https://github.com/aspnet/Configuration/tree/master/src/Config.KeyPerFile)
 
 >[!div class="step-by-step"]
 >[上一頁](developer-app-secrets-storage.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b7c7704c4f417ef16d3a79fa6d955265e42cf14
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 9c4ad3ca5694457637a82a36c8db4534df43a9d7
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262444"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504427"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>作法：判斷安裝的 .NET Framework 版本
 
@@ -44,14 +44,14 @@ ms.locfileid: "58262444"
      - [使用登錄編輯程式尋找 .NET Framework 版本](#net_b)  
      - [使用程式碼查詢登錄以取得 .NET Framework 版本](#net_d)  
      - [使用 PowerShell 查詢登錄以取得 .NET Framework 版本](#ps_a)
- - 尋找舊版的 .NET Framework (1&#8211;4)：
+- 尋找舊版的 .NET Framework (1&#8211;4)：
      - [使用登錄編輯程式尋找 .NET Framework 版本](#net_a)
      - [使用程式碼查詢登錄以取得 .NET Framework 版本](#net_c)   
 
 使用工具或程式碼取得安裝在電腦上的 CLR 版本清單：  
   
- - [使用 Clrver 工具](#clr_a)  
- - [使用程式碼查詢 Environment 類別](#clr_b)  
+- [使用 Clrver 工具](#clr_a)  
+- [使用程式碼查詢 Environment 類別](#clr_b)  
 
 如需偵測每一版 .NET Framework 已安裝更新的資訊，請參閱[如何：判斷已安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。 
   
@@ -133,7 +133,7 @@ ms.locfileid: "58262444"
 
 ```PowerShell
 # PowerShell 4
-(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -gt 394802
+(Get-ItemProperty "HKLM:SOFTWARE\Microsoft\NET Framework Setup\NDP\v4\Full").Release -ge 394802
 ```
 
 若要檢查不同的所需 .NET Framework 最低版本，請以 [.NET Framework 版本表](#version_table)的 **Release** 值取代這些範例中的 *394802*。

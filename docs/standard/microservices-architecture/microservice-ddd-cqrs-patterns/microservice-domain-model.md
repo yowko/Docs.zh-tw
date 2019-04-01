@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解設�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: b3dbce5185415374b2c0f6de134e03b44fe48420
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676365"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465889"
 ---
 # <a name="design-a-microservice-domain-model"></a>設計微服務領域模型
 
@@ -58,13 +58,13 @@ Anemic 領域模型只是程序樣式設計。 Anemic 實體物件不是真正�
 #### <a name="additional-resources"></a>其他資源
 
 - **DevIQ。Domain Entity** \ (網域實體)
-  [*https://deviq.com/entity/*](https://deviq.com/entity/)
+  [https://deviq.com/entity/](https://deviq.com/entity/)
 
 - **Martin Fowler：The Domain Model** \ (網域模型)
-  [*https://martinfowler.com/eaaCatalog/domainModel.html*](https://martinfowler.com/eaaCatalog/domainModel.html)
+  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
 
 - **Martin Fowler：The Anemic Domain Model** \ (Anemic 領域模型)
-  [*https://martinfowler.com/bliki/AnemicDomainModel.html*](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
 
 ### <a name="the-value-object-pattern"></a>值物件模式
 
@@ -83,16 +83,16 @@ EF Core 2.0 包含[擁有的實體](https://devblogs.microsoft.com/dotnet/announ
 #### <a name="additional-resources"></a>其他資源
 
 - **Martin Fowler：值物件模式** \
-  [*https://martinfowler.com/bliki/ValueObject.html*](https://martinfowler.com/bliki/ValueObject.html)
+  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
 
 - **值物件** \
-  [*https://deviq.com/value-object/*](https://deviq.com/value-object/)
+  [https://deviq.com/value-object/](https://deviq.com/value-object/)
 
 - **測試驅動開發中的值物件** \
-  [*https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects*](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
+  [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans：網域驅動設計：解決軟體核心的複雜度。** (書籍；包含值物件的探討) \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="the-aggregate-pattern"></a>彙總模式
 
@@ -145,13 +145,13 @@ public class Order : Entity, IAggregateRoot
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak：DDD Tactical Design Patterns** \ (DDD 戰術設計模式)
-  [*https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part*](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
 
 - **Chris Richardson：Developing Transactional Microservices Using Aggregates** \ (使用彙總開發交易微服務)
-  [*https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson*](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
 
 - **DevIQ。The Aggregate pattern** \ (彙總模式)
-  [*https://deviq.com/aggregate-pattern/*](https://deviq.com/aggregate-pattern/)
+  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
 
 >[!div class="step-by-step"]
 >[上一頁](ddd-oriented-microservice.md)

@@ -10,29 +10,20 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae339b18032becffcaece1924a22b958ed86d364
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c2b5646a1a556c57814602790d5f17104d2148e5
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219681"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410741"
 ---
 # <a name="default-marshaling-for-arrays"></a>陣列的預設封送處理
 在包含整個 Managed 程式碼的應用程式中，Common Language Runtime 會將陣列類型傳遞為 In/Out 參數。 相較之下，Interop 封送處理器預設會將陣列傳遞為 In 參數。  
   
  使用[關聯最佳化](copying-and-pinning.md)，與相同 Apartment 中的物件互動時，Blittable 陣列可以操作為 In/Out 參數。 不過，如果您稍後將程式碼匯出至用來產生跨電腦 Proxy 的型別程式庫，並且使用該程式庫跨 Apartment 封送處理呼叫，則呼叫可以回復為實際 In 參數行為。  
   
- 陣列本質上相當複雜，而且 Managed 與 Unmanaged 陣列之間的區別保證資訊比其他非 Blittable 類型還要多。 本主題提供下列封送處理陣列資訊：  
+ 陣列本質上相當複雜，而且 Managed 與 Unmanaged 陣列之間的區別保證資訊比其他非 Blittable 類型還要多。  
   
--   [Managed 陣列](#cpcondefaultmarshalingforarraysanchor1)  
-  
--   [Unmanaged 陣列](#cpcondefaultmarshalingforarraysanchor2)  
-  
--   [將陣列參數傳遞給 .NET 程式碼](#cpcondefaultmarshalingforarraysanchor3)  
-  
--   [將陣列傳遞給 COM](#cpcondefaultmarshalingforarraysanchor4)  
-  
-<a name="cpcondefaultmarshalingforarraysanchor1"></a>   
 ## <a name="managed-arrays"></a>Managed 陣列  
  Managed 陣列類別可能會不同；不過，<xref:System.Array?displayProperty=nameWithType> 類別是所有陣列類型的基底類別。 **System.Array** 類別的屬性可以判斷陣列的順位、長度以及下限和上限，以及用來存取、排序、搜尋、複製和建立陣列的方法。  
   
@@ -46,11 +37,9 @@ ms.locfileid: "56219681"
 |**ELEMENT_TYPE_CLASS**|不明|不明|不明|**System.Array**|  
 |**ELEMENT_TYPE_SZARRAY**|依類型指定。|1|0|*type* **[** *n* **]**|  
   
-<a name="cpcondefaultmarshalingforarraysanchor2"></a>   
 ## <a name="unmanaged-arrays"></a>Unmanaged 陣列  
  Unmanaged 陣列是具有固定或變動長度的 COM 樣式安全陣列或 C 樣式陣列。 安全陣列是自我描述陣列，具有關聯陣列資料的類型、順位和界限。 C 樣式陣列是固定下限為 0 的一維類型陣列。 封送處理服務具有這兩種類型之陣列的有限支援。  
   
-<a name="cpcondefaultmarshalingforarraysanchor3"></a>   
 ## <a name="passing-array-parameters-to-net-code"></a>將陣列參數傳遞給 .NET 程式碼  
  從 Unmanaged 程式碼，可以將 C 樣式陣列和安全陣列以安全陣列或 C 樣式陣列形式傳遞給 .NET 程式碼。 下表顯示 Unmanaged 類型值和匯入的類型。  
   
@@ -190,7 +179,6 @@ void New3(ref String ar);
   
  Interop 封送處理器使用 **CoTaskMemAlloc** 和 **CoTaskMemFree** 方法來配置和擷取記憶體。 Unmanaged 程式碼所執行的記憶體配置也必須使用這些方法。  
   
-<a name="cpcondefaultmarshalingforarraysanchor4"></a>   
 ## <a name="passing-arrays-to-com"></a>將陣列傳遞給 COM  
  所有 Managed 陣列類型都可以從 Managed 程式碼傳遞至 Unmanaged 程式碼。 根據 Managed 類型和其套用的屬性，陣列可以存取為安全陣列或 C 樣式陣列，如下表所示。  
   

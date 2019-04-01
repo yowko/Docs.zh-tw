@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: b8f19fc55437d3a3b89c8a131c47813751b4d8bc
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147833"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633617"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>使用列舉類別，而非列舉類型
 
@@ -29,9 +29,6 @@ public abstract class Enumeration : IComparable
     public string Name { get; private set; }
 
     public int Id { get; private set; }
-
-    protected Enumeration()
-    { }
 
     protected Enumeration(int id, string name) 
     {
@@ -74,30 +71,13 @@ public abstract class Enumeration : IComparable
 ```csharp
 public abstract class CardType : Enumeration
 {
-    public static CardType Amex = new AmexCardType();
-    public static CardType Visa = new VisaCardType();
-    public static CardType MasterCard = new MasterCardType();
+    public static CardType Amex = new CardType(1, "Amex");
+    public static CardType Visa = new CardType(2, "Visa");
+    public static CardType MasterCard = new CardType(3, "MasterCard");
 
-    protected CardType(int id, string name)
+    public CardType(int id, string name)
         : base(id, name)
-    { }
-
-    private class AmexCardType : CardType
     {
-        public AmexCardType(): base(1, "Amex")
-        { }
-    }
-    
-    private class VisaCardType : CardType
-    {
-        public VisaCardType(): base(2, "Visa")
-        { }
-    }
-    
-    private class MasterCardType : CardType
-    {
-        public MasterCardType(): base(3, "MasterCard")
-        { }
     }
 }
 ```
@@ -105,25 +85,25 @@ public abstract class CardType : Enumeration
 ## <a name="additional-resources"></a>其他資源
 
 - **Enum’s are evil—update (列舉很邪惡—更新)** \
-  [*https://www.planetgeek.ch/2009/07/01/enums-are-evil/*](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+  [https://www.planetgeek.ch/2009/07/01/enums-are-evil/](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
 
 - **Daniel Hardman：How Enums Spread Disease — And How To Cure It (列舉傳播疾病的方式 — 以及如何治癒它)** \
-  [*https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/*](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+  [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
 
 - **Jimmy Bogard：Enumeration classes (列舉類別)** \
-  [*https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/*](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+  [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
 
 - **Steve Smith.Enum Alternatives in C# (C# 中的列舉替代項目)** \
-  [*https://ardalis.com/enum-alternatives-in-c*](https://ardalis.com/enum-alternatives-in-c)
+  [https://ardalis.com/enum-alternatives-in-c](https://ardalis.com/enum-alternatives-in-c)
 
 - **Enumeration.cs：** eShopOnContainers 中的基底列舉類別 \
-  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
 
 - **CardType.cs**： eShopOnContainers 中的範例列舉類別 \
-  [*https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs*](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
     
 - **SmartEnum**： Ardalis - 可協助在 .NET 中產生強型別且更聰明的列舉。 \
-  [*https://www.nuget.org/packages/Ardalis.SmartEnum/*](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+  [https://www.nuget.org/packages/Ardalis.SmartEnum/](https://www.nuget.org/packages/Ardalis.SmartEnum/)
 
 >[!div class="step-by-step"]
 >[上一頁](implement-value-objects.md)

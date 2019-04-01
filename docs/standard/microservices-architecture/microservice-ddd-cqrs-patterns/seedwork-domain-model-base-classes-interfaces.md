@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 使用 seed
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 3804ac13580a967bc95617acbce86a3a0c8e7292
-ms.sourcegitcommit: deb9225a55485a5a6e6c7914deb30ccfceb69d3f
+ms.openlocfilehash: 38de5d686c17810f406a57d58554046ba2d888d9
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/05/2019
-ms.locfileid: "54058538"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545724"
 ---
 # <a name="seedwork-reusable-base-classes-and-interfaces-for-your-domain-model"></a>Seedwork (網域模型的可重複使用基底類別和介面)
 
@@ -25,7 +25,7 @@ ms.locfileid: "54058538"
 
 ## <a name="the-custom-entity-base-class"></a>自訂 Entity 基底類別
 
-下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](~/docs/csharp/language-reference/operators/equality-comparison-operator.md)、每的實體的領域事件清單等。
+下列程式碼是 Entity 基底類別的範例，您可以在其中放置可由任何領域實體透過相同方式使用的程式碼，例如實體識別碼、[等號比較運算子](~/docs/csharp/language-reference/operators/equality-operators.md)、每的實體的領域事件清單等。
 
 ```csharp
 // COMPATIBLE WITH ENTITY FRAMEWORK CORE (1.1 and later)
@@ -140,7 +140,7 @@ public interface IRepository<T> where T : IAggregateRoot
 ## <a name="additional-resources"></a>其他資源
 
 - **Martin Fowler：分離的介面。** \
-  [*https://www.martinfowler.com/eaaCatalog/separatedInterface.html*](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
+  [https://www.martinfowler.com/eaaCatalog/separatedInterface.html](https://www.martinfowler.com/eaaCatalog/separatedInterface.html)
 
 >[!div class="step-by-step"]
 >[上一頁](net-core-microservice-domain-model.md)

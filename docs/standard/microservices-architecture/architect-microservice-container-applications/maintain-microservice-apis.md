@@ -4,12 +4,12 @@ description: 因為需求會變更，所以要建立考慮演進和版本控制�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 5d3e031217159a695b67f67859b8cf412a4419c2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 6580418ea04d64650cefe2f4c91f03e3f40a058f
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152535"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58466045"
 ---
 # <a name="creating-evolving-and-versioning-microservice-apis-and-contracts"></a>建立、發展以及版本控制微服務 API 與協定
 
@@ -28,13 +28,13 @@ API 定義的性質取決於您所用的通訊協定。 例如，若您使用傳
 ## <a name="additional-resources"></a>其他資源
 
 - **Scott Hanselman。ASP.NET Core RESTful Web API 版本設定變得更加容易** \
-  [*https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx*](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
+  [https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx](https://www.hanselman.com/blog/ASPNETCoreRESTfulWebAPIVersioningMadeEasy.aspx)
 
 - **進行 RESTful web API 的版本設定** \
-  [*https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api*](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
+  [https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api](https://docs.microsoft.com/azure/architecture/best-practices/api-design#versioning-a-restful-web-api)
 
 - **Roy Fielding。版本設定、超媒體及 REST** \
-  [*https://www.infoq.com/articles/roy-fielding-on-versioning*](https://www.infoq.com/articles/roy-fielding-on-versioning)
+  [https://www.infoq.com/articles/roy-fielding-on-versioning](https://www.infoq.com/articles/roy-fielding-on-versioning)
 
 >[!div class="step-by-step"]
 >[上一頁](asynchronous-message-based-communication.md)

@@ -4,12 +4,12 @@ description: 了解如何使用 Ocelot 實作 API 閘道，並了解如何在以
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 404f19f55b3be1e4be161543556bb2619f164b9b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b7ef0e7a172337f32f625bd65261b6577decd223
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846099"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464537"
 ---
 # <a name="implement-api-gateways-with-ocelot"></a>使用 Ocelot 實作 API 閘道
 
@@ -564,19 +564,19 @@ services.AddAuthentication(options =>
 使用 Ocelot API 閘道時，還有其他重要的功能可供探索及使用，下列連結將進行說明。
 
 - **在整合 Ocelot 與 Consul 或 Eureka 的用戶端進行服務探索** \
-  [*https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html*](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
+  [https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html](https://ocelot.readthedocs.io/en/latest/features/servicediscovery.html)
 
 - **API 閘道層的快取** \
-  [*https://ocelot.readthedocs.io/en/latest/features/caching.html*](https://ocelot.readthedocs.io/en/latest/features/caching.html)
+  [https://ocelot.readthedocs.io/en/latest/features/caching.html](https://ocelot.readthedocs.io/en/latest/features/caching.html)
 
 - **API 閘道層的記錄** \
-  [*https://ocelot.readthedocs.io/en/latest/features/logging.html*](https://ocelot.readthedocs.io/en/latest/features/logging.html)
+  [https://ocelot.readthedocs.io/en/latest/features/logging.html](https://ocelot.readthedocs.io/en/latest/features/logging.html)
 
 - **API 閘道層的服務品質 (重試和斷路器)** \
-  [*https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html*](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
+  [https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html](https://ocelot.readthedocs.io/en/latest/features/qualityofservice.html)
 
 - **速率限制** \
-  [*https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html*](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
+  [https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html](https://ocelot.readthedocs.io/en/latest/features/ratelimiting.html )
 
 > [!div class="step-by-step"]
 > [上一頁](background-tasks-with-ihostedservice.md)

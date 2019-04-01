@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e56c485b-6b67-4345-8e66-fd21835a6092
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8d02d1b170362a5175fb24d68b00e4648819541e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ce15e0535bbd6bc67054c651a518f11cf9dd2ae1
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092653"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410351"
 ---
 # <a name="com-wrappers"></a>COM 包裝函式
 COM 與 .NET Framework 物件模型在數個重要方面不同：  
@@ -29,8 +29,7 @@ COM 與 .NET Framework 物件模型在數個重要方面不同：
   
  為了克服這些差異，執行階段提供包裝函式類別，讓 Managed 和 Unmanaged 用戶端認為它們在其各自環境內呼叫物件。 只要 Managed 用戶端對 COM 物件呼叫方法，執行階段就會建立[執行階段可呼叫包裝函式](runtime-callable-wrapper.md) (RCW)。 此外，RCW 會擷取 Managed 與 Unmanaged 參考機制之間的差異。 執行階段也會建立 [COM 可呼叫包裝函式](com-callable-wrapper.md) (CCW) 來反轉程序，讓 COM 用戶端在 .NET 物件上順暢地呼叫方法。 如下圖所示，呼叫端程式碼的角度可決定執行階段所建立的包裝函式類別。  
   
- ![COM 包裝函式概觀](media/bidirectional.gif "bidirectional")  
-COM 包裝函式概觀  
+ ![COM 包裝函式概觀](./media/com-wrappers/bidirectional-com-overview.gif)  
   
  在大部分情況下，執行階段所產生的標準 RCW 或 CCW 提供呼叫的足夠封送處理，而這些呼叫跨越 COM 與 .NET Framework 之間的界限。 使用自訂屬性，您可以選擇性地調整執行階段呈現 Managed 和 Unmanaged 程式碼的方式。  
   
