@@ -24,7 +24,7 @@ ms.locfileid: "57845705"
 
 ## <a name="attributes"></a>屬性
 
-無
+None
 
 ## <a name="parent-element"></a>父項目
 
