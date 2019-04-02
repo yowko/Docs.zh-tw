@@ -2,19 +2,13 @@
 title: 記錄來自應用程式的資訊 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Log object
-- My.Log object
-- applications [Visual Basic], logging information from
-- logging
-- My.Application.Log object
-- examples [Visual Basic], logging application information
+  - Log object
+  - My.Log object
+  - 'applications [Visual Basic], logging information from'
+  - logging
+  - My.Application.Log object
+  - 'examples [Visual Basic], logging application information'
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
-ms.openlocfilehash: d7cdf5a309da1f32b337bea4d609fe34487a5457
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54746803"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>記錄來自應用程式的資訊 (Visual Basic)
 本節包含的主題說明如何使用 `My.Application.Log` 或 `My.Log` 物件記錄來自應用程式的資訊，以及如何擴充應用程式的記錄功能。  
@@ -38,6 +32,7 @@ ms.locfileid: "54746803"
 |篩選 `My.Application.Log` 記錄檔的輸出。|[逐步解說：篩選 My.Application.Log 輸出](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-filtering-my-application-log-output.md)|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
 - [疑難排解：記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/troubleshooting-log-listeners.md)
