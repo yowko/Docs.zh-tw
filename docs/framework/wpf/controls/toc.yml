@@ -1,0 +1,510 @@
+items:
+- name: 控制項
+  href: index.md
+  items:
+  - name: 按分類區隔控制項
+    href: controls-by-category.md
+  - name: WPF 內容模型
+    href: wpf-content-model.md
+  - name: 控制項程式庫
+    href: control-library.md
+    items:
+    - name: Border
+      href: border.md
+      items:
+      - name: 建立 BorderThickness 值的動畫
+        href: how-to-animate-a-borderthickness-value.md
+    - name: BulletDecorator
+      href: bulletdecorator.md
+    - name: 按鈕
+      href: button.md
+      items:
+      - name: 建立具有影像的按鈕
+        href: how-to-create-a-button-that-has-an-image.md
+    - name: 行事曆
+      href: calendar.md
+    - name: Canvas
+      href: canvas.md
+      items:
+      - name: HOW TO 主題
+        href: canvas-how-to-topics.md
+        items:
+        - name: 在畫布內容周圍加上框線
+          href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
+        - name: 取得或設定畫布置放屬性
+          href: how-to-get-or-set-canvas-positioning-properties.md
+        - name: 建立和使用畫布
+          href: how-to-create-and-use-a-canvas.md
+        - name: 使用畫布的附加屬性置放子元素
+          href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
+        - name: 使用指標調整畫布大小
+          href: how-to-resize-a-canvas-by-using-a-thumb.md
+    - name: 核取方塊
+      href: checkbox.md
+    - name: ComboBox
+      href: combobox.md
+    - name: ContextMenu
+      href: contextmenu.md
+      items:
+      - name: ContextMenu 概觀
+        href: contextmenu-overview.md
+    - name: DataGrid
+      href: datagrid.md
+      items:
+      - name: DataGrid 控制項中的預設鍵盤和滑鼠行為
+        href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
+      - name: 作法：將資料列詳細資料新增至 DataGrid 控制項
+        href: how-to-add-row-details-to-a-datagrid-control.md
+      - name: 作法：在 DataGrid 控制項中分組、排序和篩選資料
+        href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
+      - name: 作法：使用 DataGrid 控制項實作驗證
+        href: how-to-implement-validation-with-the-datagrid-control.md
+      - name: 逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
+        href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
+      - name: DataGrid 控制項中的調整大小選項
+        href: sizing-options-in-the-datagrid-control.md
+    - name: DatePicker
+      href: datepicker.md
+    - name: DockPanel
+      href: dockpanel.md
+      items:
+      - name: HOW TO 主題
+        href: dockpanel-how-to-topics.md
+        items:
+        - name: 取得或設定 Dock 值
+          href: how-to-get-or-set-a-dock-value.md
+        - name: 建立 DockPanel
+          href: how-to-create-a-dockpanel.md
+        - name: 使用 DockPanel 元素分割空間
+          href: how-to-partition-space-by-using-the-dockpanel-element.md
+    - name: DocumentViewer
+      href: documentviewer.md
+    - name: 展開工具
+      href: expander.md
+      items:
+      - name: Expander 概觀
+        href: expander-overview.md
+      - name: HOW TO 主題
+        href: expander-how-to-topics.md
+        items:
+        - name: 使用 ScrollViewer 建立 Expander
+          href: how-to-create-an-expander-with-a-scrollviewer.md
+    - name: FlowDocumentPageViewer
+      href: flowdocumentpageviewer.md
+    - name: FlowDocumentReader
+      href: flowdocumentreader.md
+    - name: FlowDocumentScrollViewer
+      href: flowdocumentscrollviewer.md
+    - name: Frame
+      href: frame.md
+    - name: Grid
+      href: grid.md
+      items:
+      - name: HOW TO 主題
+        href: grid-how-to-topics.md
+        items:
+        - name: 使用 Grid 建置標準 UI 對話方塊
+          href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
+        - name: 建立複雜的 Grid
+          href: how-to-create-a-complex-grid.md
+        - name: 建立 Grid 元素
+          href: how-to-create-a-grid-element.md
+        - name: 建立和使用 GridLengthConverter 物件
+          href: how-to-create-and-use-a-gridlengthconverter-object.md
+        - name: 使用 ColumnDefinitionsCollections 和 RowDefinitionsCollections 管理資料行和資料列
+          href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
+        - name: 置放 Grid 的子元素
+          href: how-to-position-the-child-elements-of-a-grid.md
+        - name: 在 Grid 之間共用調整大小屬性
+          href: how-to-share-sizing-properties-between-grids.md
+    - name: GridSplitter
+      href: gridsplitter.md
+      items:
+      - name: HOW TO 主題
+        href: gridsplitter-how-to-topics.md
+        items:
+        - name: 使用 GridSplitter 調整資料列的大小
+          href: how-to-resize-rows-with-a-gridsplitter.md
+        - name: 使用 GridSplitter 調整資料行的大小
+          href: how-to-resize-columns-with-a-gridsplitter.md
+        - name: 確保 GridSplitter 是可見的
+          href: how-to-make-sure-that-a-gridsplitter-is-visible.md
+    - name: GroupBox
+      href: groupbox.md
+      items:
+      - name: 定義 GroupBox 範本
+        href: how-to-define-a-groupbox-template.md
+    - name: Image
+      href: image.md
+      items:
+      - name: HOW TO 主題
+        href: image-how-to-topics.md
+        items:
+        - name: 使用 Image 元素
+          href: how-to-use-the-image-element.md
+        - name: 將影像轉換為灰階
+          href: how-to-convert-an-image-to-greyscale.md
+        - name: 裁剪影像
+          href: how-to-crop-an-image.md
+        - name: 旋轉影像
+          href: how-to-rotate-an-image.md
+    - name: 標籤
+      href: label.md
+      items:
+      - name: 建立有便捷鍵和自動換行的控制項
+        href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
+    - name: ListBox
+      href: listbox.md
+      items:
+      - name: HOW TO 主題
+        href: listbox-how-to-topics.md
+        items:
+        - name: 將 ListBox 繫結至資料
+          href: how-to-bind-a-listbox-to-data.md
+        - name: 取得 ListBoxItem
+          href: how-to-get-a-listboxitem.md
+        - name: 改善 ListBox 的捲動效能
+          href: how-to-improve-the-scrolling-performance-of-a-listbox.md
+    - name: ListView
+      href: listview.md
+      items:
+      - name: 概觀
+        href: listview-overviews.md
+        items:
+        - name: ListView 概觀
+          href: listview-overview.md
+        - name: GridView 概觀
+          href: gridview-overview.md
+        - name: GridView 資料行行首樣式和範本概觀
+          href: gridview-column-header-styles-and-templates-overview.md
+      - name: HOW TO 主題
+        href: listview-how-to-topics.md
+        items:
+        - name: 在按一下標頭時排序 GridView 資料行
+          href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
+        - name: 建立 ListView 的自訂檢視模式
+          href: how-to-create-a-custom-view-mode-for-a-listview.md
+        - name: 使用範本為使用 GridView 的 ListView 設定樣式
+          href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
+        - name: 為拖曳的 GridView 資料行標題建立樣式
+          href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
+        - name: 使用 GridView 顯示 ListView 內容
+          href: how-to-display-listview-contents-by-using-a-gridview.md
+        - name: 使用觸發程序為 ListView 中的選取項目設定樣式
+          href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
+        - name: 使用 CheckBox 建立 ListViewItems
+          href: how-to-create-listviewitems-with-a-checkbox.md
+        - name: 使用 GridViewRowPresenter 顯示資料
+          href: how-to-display-data-by-using-gridviewrowpresenter.md
+        - name: 實作 GridView 之 ListView 中的群組項目
+          href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
+        - name: 在實作 GridView 的 ListView 中設定資料列的樣式
+          href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
+        - name: 變更 ListView 中資料行的水平對齊
+          href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
+        - name: 處理 ListView 中每個項目的 MouseDoubleClick 事件
+          href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
+    - name: 功能表
+      href: menu.md
+      items:
+      - name: 功能表概觀
+        href: menu-overview.md
+    - name: 面板
+      href: panel.md
+      items:
+      - name: 面板概觀
+        href: panels-overview.md
+      - name: HOW TO 主題
+        href: panel-how-to-topics.md
+        items:
+        - name: 建立自訂 Panel 元素
+          href: how-to-create-a-custom-panel-element.md
+        - name: 覆寫 Panel 的 OnRender 方法
+          href: how-to-override-the-panel-onrender-method.md
+        - name: 設定元素的高度屬性
+          href: how-to-set-the-height-properties-of-an-element.md
+        - name: 設定元素的寬度屬性
+          href: how-to-set-the-width-properties-of-an-element.md
+    - name: PasswordBox
+      href: passwordbox.md
+    - name: 快顯
+      href: popup.md
+      items:
+      - name: 快顯功能表概觀
+        href: popup-overview.md
+      - name: 快顯功能表放置行為
+        href: popup-placement-behavior.md
+      - name: HOW TO 主題
+        href: popup-how-to-topics.md
+        items:
+        - name: 建立 Popup 的動畫
+          href: how-to-animate-a-popup.md
+        - name: 指定自訂 Popup 位置
+          href: how-to-specify-a-custom-popup-position.md
+    - name: 進度列
+      href: progressbar.md
+    - name: PrintDialog
+      href: printdialog.md
+    - name: RadioButton
+      href: radiobutton.md
+    - name: RepeatButton
+      href: repeatbutton.md
+    - name: RichTextBox
+      href: richtextbox.md
+      items:
+      - name: RichTextBox 概觀
+        href: richtextbox-overview.md
+      - name: HOW TO 主題
+        href: richtextbox-how-to-topics.md
+        items:
+        - name: 擷取 RichTextBox 的文字內容
+          href: how-to-extract-the-text-content-from-a-richtextbox.md
+        - name: 以程式設計方式變更 RichTextBox 中的選項
+          href: change-selection-in-a-richtextbox-programmatically.md
+        - name: 儲存、載入和列印 RichTextBox 內容
+          href: how-to-save-load-and-print-richtextbox-content.md
+        - name: 在 RichTextBox 中置放自訂操作功能表
+          href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
+    - name: ScrollBar
+      href: scrollbar.md
+      items:
+      - name: 自訂 ScrollBar 上的 Thumb 大小
+        href: how-to-customize-the-thumb-size-on-a-scrollbar.md
+    - name: ScrollViewer
+      href: scrollviewer.md
+      items:
+      - name: ScrollViewer 概觀
+        href: scrollviewer-overview.md
+      - name: HOW TO 主題
+        href: scrollviewer-how-to-topics.md
+        items:
+        - name: 處理 ScrollChanged 事件
+          href: how-to-handle-the-scrollchanged-event.md
+        - name: 使用 IScrollInfo 介面捲動內容
+          href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
+        - name: 使用 ScrollViewer 的內容捲動方法
+          href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
+    - name: Separator
+      href: separator.md
+    - name: 滑桿
+      href: slider.md
+      items:
+      - name: 自訂滑桿上的刻度
+        href: how-to-customize-the-ticks-on-a-slider.md
+    - name: StackPanel
+      href: stackpanel.md
+      items:
+      - name: HOW TO 主題
+        href: stackpanel-how-to-topics.md
+        items:
+        - name: 在 StackPanel 和 DockPanel 之間選擇
+          href: how-to-choose-between-stackpanel-and-dockpanel.md
+        - name: 建立 StackPanel
+          href: how-to-create-a-stackpanel.md
+        - name: 水平或垂直對齊 StackPanel 中的內容
+          href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
+    - name: StatusBar
+      href: statusbar.md
+    - name: TabControl
+      href: tabcontrol.md
+    - name: TextBlock
+      href: textblock.md
+      items:
+      - name: TextBlock 概觀
+        href: textblock-overview.md
+    - name: TextBox
+      href: textbox.md
+      items:
+      - name: TextBox 概觀
+        href: textbox-overview.md
+      - name: HOW TO 主題
+        href: textbox-how-to-topics.md
+        items:
+        - name: 建立多行 TextBox 控制項
+          href: how-to-create-a-multiline-textbox-control.md
+        - name: 偵測 TextBox 中的文字何時變更
+          href: how-to-detect-when-text-in-a-textbox-has-changed.md
+        - name: 在 TextBox 控制項中啟用定位字元
+          href: how-to-enable-tab-characters-in-a-textbox-control.md
+        - name: 從 TextBox 取得文字行集合
+          href: how-to-get-a-collection-of-lines-from-a-textbox.md
+        - name: 將 TextBox 控制項設為唯讀
+          href: how-to-make-a-textbox-control-read-only.md
+        - name: 將游標置放在 TextBox 控制項中文字的開頭或結尾
+          href: position-the-cursor-at-the-beginning-or-end-of-text.md
+        - name: 擷取文字選取項目
+          href: how-to-retrieve-a-text-selection.md
+        - name: 在 TextBox 控制項中設定焦點
+          href: how-to-set-focus-in-a-textbox-control.md
+        - name: 設定 TextBox 控制項的文字內容
+          href: how-to-set-the-text-content-of-a-textbox-control.md
+        - name: 在文字編輯控制項中啟用拼字檢查
+          href: how-to-enable-spell-checking-in-a-text-editing-control.md
+        - name: 在 TextBox 使用自訂操作功能表
+          href: how-to-use-a-custom-context-menu-with-a-textbox.md
+        - name: 使用操作功能表的拼字檢查
+          href: how-to-use-spell-checking-with-a-context-menu.md
+        - name: 將浮水印新增至 TextBox
+          href: how-to-add-a-watermark-to-a-textbox.md
+    - name: ToolBar
+      href: toolbar.md
+      items:
+      - name: ToolBar 概觀
+        href: toolbar-overview.md
+      - name: ToolBar 上的樣式控制項
+        href: how-to-style-controls-on-a-toolbar.md
+    - name: ToolTip
+      href: tooltip.md
+      items:
+      - name: ToolTip 概觀
+        href: tooltip-overview.md
+      - name: HOW TO 主題
+        href: tooltip-how-to-topics.md
+        items:
+        - name: 置放工具提示
+          href: how-to-position-a-tooltip.md
+        - name: 使用 BetweenShowDelay 屬性
+          href: how-to-use-the-betweenshowdelay-property.md
+    - name: TreeView
+      href: treeview.md
+      items:
+      - name: TreeView 概觀
+        href: treeview-overview.md
+      - name: HOW TO 主題
+        href: treeview-how-to-topics.md
+        items:
+        - name: 建立簡單或複雜的 TreeView
+          href: how-to-create-simple-or-complex-treeviews.md
+        - name: 使用 SelectedValue、SelectedValuePath 和 SelectedItem
+          href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
+        - name: 將 TreeView 繫結至未知深度的資料
+          href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
+        - name: 改善 TreeView 的效能
+          href: how-to-improve-the-performance-of-a-treeview.md
+        - name: 在 TreeView 中尋找 TreeViewItem
+          href: how-to-find-a-treeviewitem-in-a-treeview.md
+    - name: WrapPanel
+      href: wrappanel.md
+    - name: Viewbox
+      href: viewbox.md
+      items:
+      - name: 將 Stretch 屬性套用至 Viewbox 的內容
+        href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
+  - name: 樣式和範本
+    href: styles-and-templates.md
+    items:
+    - name: 樣式設定和範本化
+      href: styling-and-templating.md
+    - name: 透過建立 ControlTemplate 自訂現有控制項的外觀
+      href: customizing-the-appearance-of-an-existing-control.md
+    - name: 作法：尋找 ControlTemplate 產生的元素
+      href: how-to-find-controltemplate-generated-elements.md
+  - name: 控制項自訂
+    href: control-customization.md
+    items:
+    - name: 控制項撰寫概觀
+      href: control-authoring-overview.md
+    - name: 建立外觀可自訂的控制項
+      href: creating-a-control-that-has-a-customizable-appearance.md
+    - name: 設計可設定樣式控制項的方針
+      href: guidelines-for-designing-stylable-controls.md
+    - name: 裝飾項
+      href: adorners.md
+      items:
+      - name: 裝飾項概觀
+        href: adorners-overview.md
+      - name: HOW TO 主題
+        href: adorners-how-to-topics.md
+        items:
+        - name: 實作 Adorner
+          href: how-to-implement-an-adorner.md
+        - name: 將 Adorner 繫結至元素
+          href: how-to-bind-an-adorner-to-an-element.md
+        - name: 裝飾 Panel 的子系
+          href: how-to-adorn-the-children-of-a-panel.md
+        - name: 從元素移除 Adorner
+          href: how-to-remove-an-adorner-from-an-element.md
+        - name: 從元素移除所有 Adorner
+          href: how-to-remove-all-adorners-from-an-element.md
+    - name: 控制項的樣式和範本
+      href: control-styles-and-templates.md
+      items:
+      - name: Button 樣式和範本
+        href: button-styles-and-templates.md
+      - name: Calendar 樣式和範本
+        href: calendar-styles-and-templates.md
+      - name: CheckBox 樣式和範本
+        href: checkbox-styles-and-templates.md
+      - name: ComboBox 樣式和範本
+        href: combobox-styles-and-templates.md
+      - name: ContextMenu 樣式和範本
+        href: contextmenu-styles-and-templates.md
+      - name: DataGrid 樣式和範本
+        href: datagrid-styles-and-templates.md
+      - name: DatePicker 樣式和範本
+        href: datepicker-styles-and-templates.md
+      - name: DocumentViewer 樣式和範本
+        href: documentviewer-styles-and-templates.md
+      - name: Expander 樣式和範本
+        href: expander-styles-and-templates.md
+      - name: Frame 樣式和範本
+        href: frame-styles-and-templates.md
+      - name: GroupBox 樣式和範本
+        href: groupbox-styles-and-templates.md
+      - name: Label 樣式和範本
+        href: label-styles-and-templates.md
+      - name: ListBox 樣式和範本
+        href: listbox-styles-and-templates.md
+      - name: ListView 樣式和範本
+        href: listview-styles-and-templates.md
+      - name: Menu 樣式和範本
+        href: menu-styles-and-templates.md
+      - name: NavigationWindow 樣式和範本
+        href: navigationwindow-styles-and-templates.md
+      - name: PasswordBox 樣式和範本
+        href: passwordbox-styles-and-templates.md
+      - name: ProgressBar 樣式和範本
+        href: progressbar-styles-and-templates.md
+      - name: RadioButton 樣式和範本
+        href: radiobutton-styles-and-templates.md
+      - name: RepeatButton 樣式和範本
+        href: repeatbutton-styles-and-templates.md
+      - name: ScrollBar 樣式和範本
+        href: scrollbar-styles-and-templates.md
+      - name: ScrollViewer 樣式和範本
+        href: scrollviewer-styles-and-templates.md
+      - name: Slider 樣式和範本
+        href: slider-styles-and-templates.md
+      - name: StatusBar 樣式和範本
+        href: statusbar-styles-and-templates.md
+      - name: TabControl 樣式和範本
+        href: tabcontrol-styles-and-templates.md
+      - name: TextBox 樣式和範本
+        href: textbox-styles-and-templates.md
+      - name: Thumb 樣式和範本
+        href: thumb-styles-and-templates.md
+      - name: ToggleButton 樣式和範本
+        href: togglebutton-styles-and-templates.md
+      - name: ToolBar 樣式和範本
+        href: toolbar-styles-and-templates.md
+      - name: ToolTip 樣式和範本
+        href: tooltip-styles-and-templates.md
+      - name: TreeView 樣式和範本
+        href: treeview-styles-and-templates.md
+      - name: Window 樣式和範本
+        href: window-styles-and-templates.md
+    - name: WPF 自訂控制項的 UI 自動化
+      href: ui-automation-of-a-wpf-custom-control.md
+    - name: 逐步解說：建立自訂動畫按鈕
+      href: walkthroughs-create-a-custom-animated-button.md
+      items:
+      - name: 使用 Microsoft Expression Blend 建立按鈕
+        href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
+      - name: 使用 XAML 建立按鈕
+        href: walkthrough-create-a-button-by-using-xaml.md
+ms.openlocfilehash: e1f4c9978b5a1d640c721cb7b6584b556c622264
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468347"
