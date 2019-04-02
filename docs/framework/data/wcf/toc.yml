@@ -1,0 +1,171 @@
+items:
+- name: WCF Data Services 4.5
+  href: index.md
+  items:
+  - name: 總覽
+    href: wcf-data-services-overview.md
+  - name: 快速入門
+    href: getting-started-with-wcf-data-services.md
+    items:
+    - name: 將資料公開為服務
+      href: exposing-your-data-as-a-service-wcf-data-services.md
+    - name: 存取資料服務資源
+      href: accessing-data-service-resources-wcf-data-services.md
+    - name: 在用戶端應用程式中使用資料服務
+      href: using-a-data-service-in-a-client-application-wcf-data-services.md
+    - name: 快速入門
+      href: quickstart-wcf-data-services.md
+      items:
+      - name: 建立資料服務
+        href: creating-the-data-service.md
+      - name: 從網頁瀏覽器存取服務
+        href: accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md
+      - name: 建立 .NET Framework 用戶端應用程式
+        href: creating-the-dotnet-client-application-wcf-data-services-quickstart.md
+    - name: 應用程式情節
+      href: application-scenarios-wcf-data-services.md
+    - name: 資源
+      href: wcf-data-services-resources.md
+  - name: 定義 WCF 資料服務
+    href: defining-wcf-data-services.md
+    items:
+    - name: 設定資料服務
+      href: configuring-the-data-service-wcf-data-services.md
+      items:
+      - name: 作法：開發在 IIS 上執行的 WCF 資料服務
+        href: how-to-develop-a-wcf-data-service-running-on-iis.md
+      - name: 作法：啟用資料服務的存取
+        href: how-to-enable-access-to-the-data-service-wcf-data-services.md
+      - name: 作法：為資料服務結果啟用分頁功能
+        href: how-to-enable-paging-of-data-service-results-wcf-data-services.md
+    - name: 資料服務提供者
+      href: data-services-providers-wcf-data-services.md
+      items:
+      - name: Entity Framework 提供者
+        href: entity-framework-provider-wcf-data-services.md
+        items:
+        - name: 作法：使用 ADO.NET Entity Framework 資料來源建立資料服務
+          href: create-a-data-service-using-an-adonet-ef-data-wcf.md
+      - name: 反映提供者
+        href: reflection-provider-wcf-data-services.md
+        items:
+        - name: 作法：使用反映提供者建立資料服務
+          href: create-a-data-service-using-rp-wcf-data-services.md
+        - name: 作法：使用 LINQ to SQL 資料來源建立資料服務
+          href: create-a-data-service-using-linq-to-sql-wcf.md
+      - name: 自訂資料服務提供者
+        href: custom-data-service-providers-wcf-data-services.md
+      - name: 串流提供者
+        href: streaming-provider-wcf-data-services.md
+    - name: 服務作業
+      href: service-operations-wcf-data-services.md
+      items:
+      - name: 作法：定義服務作業
+        href: how-to-define-a-service-operation-wcf-data-services.md
+    - name: 摘要自訂
+      href: feed-customization-wcf-data-services.md
+      items:
+      - name: 作法：使用 Entity Framework 提供者自訂摘要
+        href: how-to-customize-feeds-with-ef-provider-wcf-data-services.md
+      - name: 作法：使用反映提供者自訂摘要
+        href: how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md
+    - name: 攔截器
+      href: interceptors-wcf-data-services.md
+      items:
+      - name: 作法：攔截資料服務訊息
+        href: how-to-intercept-data-service-messages-wcf-data-services.md
+    - name: 開發和部署 WCF Data Services
+      href: developing-and-deploying-wcf-data-services.md
+    - name: 保護 WCF Data Services 的安全
+      href: securing-wcf-data-services.md
+    - name: 裝載資料服務
+      href: hosting-the-data-service-wcf-data-services.md
+    - name: 資料服務版本設定
+      href: data-service-versioning-wcf-data-services.md
+    - name: WCF Data Services 通訊協定實作詳細資訊
+      href: wcf-data-services-protocol-implementation-details.md
+    - name: 使用動作實作伺服器端行為
+      href: using-actions-to-implement-server-side-behavior.md
+  - name: WCF 資料服務用戶端程式庫
+    href: wcf-data-services-client-library.md
+    items:
+    - name: 產生資料服務用戶端程式庫
+      href: generating-the-data-service-client-library-wcf-data-services.md
+      items:
+      - name: WCF 資料服務用戶端公用程式 (DataSvcUtil.exe)
+        href: wcf-data-service-client-utility-datasvcutil-exe.md
+      - name: 作法：新增資料服務參考
+        href: how-to-add-a-data-service-reference-wcf-data-services.md
+      - name: 作法：手動產生用戶端資料服務類別
+        href: how-to-manually-generate-client-data-service-classes-wcf-data-services.md
+    - name: 查詢資料服務
+      href: querying-the-data-service-wcf-data-services.md
+      items:
+      - name: 查詢投影
+        href: query-projections-wcf-data-services.md
+        items:
+        - name: 作法：投影查詢結果
+          href: how-to-project-query-results-wcf-data-services.md
+      - name: LINQ 考量
+        href: linq-considerations-wcf-data-services.md
+      - name: 物件具體化
+        href: object-materialization-wcf-data-services.md
+      - name: 作法：執行資料服務查詢
+        href: how-to-execute-data-service-queries-wcf-data-services.md
+      - name: 作法：將查詢選項新增至資料服務查詢
+        href: how-to-add-query-options-to-a-data-service-query-wcf-data-services.md
+      - name: 作法：判斷查詢傳回的實體數目
+        href: number-of-entities-returned-by-a-query-wcf.md
+      - name: 作法：指定資料服務要求的用戶端認證
+        href: specify-client-creds-for-a-data-service-request-wcf.md
+      - name: 作法：設定用戶端要求中的標頭
+        href: how-to-set-headers-in-the-client-request-wcf-data-services.md
+    - name: 載入延後內容
+      href: loading-deferred-content-wcf-data-services.md
+      items:
+      - name: 作法：載入相關實體
+        href: how-to-load-related-entities-wcf-data-services.md
+      - name: 作法：載入分頁的結果
+        href: how-to-load-paged-results-wcf-data-services.md
+    - name: 更新資料服務
+      href: updating-the-data-service-wcf-data-services.md
+      items:
+      - name: 作法：新增、修改和刪除實體
+        href: how-to-add-modify-and-delete-entities-wcf-data-services.md
+      - name: 作法：定義實體關聯性
+        href: how-to-define-entity-relationships-wcf-data-services.md
+      - name: 作法：將現有實體附加至 DataServiceContext
+        href: attach-an-existing-entity-to-dc-wcf-data.md
+    - name: 非同步作業
+      href: asynchronous-operations-wcf-data-services.md
+      items:
+      - name: 作法：執行非同步資料服務查詢
+        href: how-to-execute-asynchronous-data-service-queries-wcf-data-services.md
+      - name: 作法：建立非同步 Windows Presentation Framework 應用程式
+        href: create-an-asynchronous-wpf-application-wcf-data-services.md
+    - name: 批次處理作業
+      href: batching-operations-wcf-data-services.md
+      items:
+      - name: 作法：批次執行查詢
+        href: how-to-execute-queries-in-a-batch-wcf-data-services.md
+    - name: 將資料繫結至控制項
+      href: binding-data-to-controls-wcf-data-services.md
+      items:
+      - name: 作法：將資料繫結至 Windows Presentation Foundation 項目
+        href: bind-data-to-wpf-elements-wcf-data-services.md
+      - name: 作法：使用專案資料來源繫結資料
+        href: how-to-bind-data-using-a-project-data-source-wcf-data-services.md
+      - name: 作法：自訂資料繫結行為
+        href: how-to-customize-data-binding-behaviors-wcf-data-services.md
+    - name: 呼叫服務作業
+      href: calling-service-operations-wcf-data-services.md
+    - name: 管理資料服務內容
+      href: managing-the-data-service-context-wcf-data-services.md
+    - name: 使用二進位資料
+      href: working-with-binary-data-wcf-data-services.md
+ms.openlocfilehash: e38823c7d5b9d6b9ed5f126bab7b1677f9290904
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468514"

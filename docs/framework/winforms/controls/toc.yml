@@ -1,0 +1,1233 @@
+items:
+- name: Windows Form 控制項
+  href: index.md
+  items:
+  - name: 排列 Windows Form 上的控制項
+    href: arranging-controls-on-windows-forms.md
+    items:
+    - name: 作法：對齊 Windows Forms 上的多個控制項
+      href: how-to-align-multiple-controls-on-windows-forms.md
+    - name: 作法：錨定 Windows Forms 上的控制項
+      href: how-to-anchor-controls-on-windows-forms.md
+    - name: 作法：在 Windows Forms 之間複製控制項
+      href: how-to-copy-controls-between-windows-forms.md
+    - name: 作法：固定 Windows Forms 上的控制項
+      href: how-to-dock-controls-on-windows-forms.md
+    - name: 作法：將 Windows Forms 上的物件分層
+      href: how-to-layer-objects-on-windows-forms.md
+    - name: 作法：鎖定 Windows Forms 的控制項
+      href: how-to-lock-controls-to-windows-forms.md
+    - name: 作法：定位 Windows Forms 的控制項
+      href: how-to-position-controls-on-windows-forms.md
+    - name: 作法：調整 Windows Forms 的控制項大小
+      href: how-to-resize-controls-on-windows-forms.md
+    - name: 作法：設定所有 Windows Forms 的格線選項
+      href: how-to-set-grid-options-for-all-windows-forms.md
+    - name: 作法：設定 Windows Forms 的定位順序
+      href: how-to-set-the-tab-order-on-windows-forms.md
+    - name: 逐步解說：使用對齊線排列 Windows Forms 的控制項
+      href: walkthrough-arranging-controls-on-windows-forms-using-snaplines.md
+    - name: 作法：使用 Windows Forms 中的對齊線和格線排列控制項
+      href: how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms.md
+    - name: 作法：將現有控制項重新指派至不同的父代
+      href: how-to-reassign-existing-controls-to-a-different-parent.md
+    - name: 逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項
+      href: windows-forms-controls-padding-autosize.md
+  - name: 將控制項加入 Windows Form
+    href: putting-controls-on-windows-forms.md
+    items:
+    - name: 作法：將控制項新增至 Windows Forms
+      href: how-to-add-controls-to-windows-forms.md
+    - name: 作法：將沒有使用者介面的控制項新增至 Windows Forms
+      href: how-to-add-controls-without-a-user-interface-to-windows-forms.md
+    - name: 作法：在執行階段於控制項集合中新增或移除
+      href: how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time.md
+    - name: 逐步解說：自動將自訂元件填入工具箱
+      href: walkthrough-automatically-populating-the-toolbox-with-custom-components.md
+    - name: 作法：將 ActiveX 控制項新增至 Windows Forms
+      href: how-to-add-activex-controls-to-windows-forms.md
+    - name: 在 Windows Form 上裝載 ActiveX 控制項的考慮因素
+      href: considerations-when-hosting-an-activex-control-on-a-windows-form.md
+  - name: 標記個別 Windows Form 控制項並提供其捷徑
+    href: labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md
+    items:
+    - name: 作法：建立 Windows Forms 控制項的便捷鍵
+      href: how-to-create-access-keys-for-windows-forms-controls.md
+    - name: 作法：使用設計工具建立 Windows Forms 控制項的便捷鍵
+      href: how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md
+    - name: 作法：設定 Windows Forms 控制項所顯示的文字
+      href: how-to-set-the-text-displayed-by-a-windows-forms-control.md
+    - name: 作法：使用設計工具設定 Windows Forms 控制項所顯示的文字
+      href: how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md
+    - name: 作法：設定 Windows Forms 控制項所顯示的影像
+      href: how-to-set-the-image-displayed-by-a-windows-forms-control.md
+    - name: 作法：使用設計工具設定 Windows Forms 控制項所顯示的影像
+      href: how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md
+    - name: 為 Windows Form 上的控制項提供可及性資訊
+      href: providing-accessibility-information-for-controls-on-a-windows-form.md
+  - name: 在 Windows Form 上使用的控制項
+    href: controls-to-use-on-windows-forms.md
+    items:
+    - name: 依功能區分 Windows Form 控制項
+      href: windows-forms-controls-by-function.md
+    - name: 使用內建主控描繪支援的控制項
+      href: controls-with-built-in-owner-drawing-support.md
+    - name: BackgroundWorker 元件
+      href: backgroundworker-component.md
+      items:
+      - name: BackgroundWorker 元件概觀
+        href: backgroundworker-component-overview.md
+      - name: 作法：在背景執行作業
+        href: how-to-run-an-operation-in-the-background.md
+      - name: 作法：在背景下載檔案
+        href: how-to-download-a-file-in-the-background.md
+      - name: 作法：實作使用背景作業的表單
+        href: how-to-implement-a-form-that-uses-a-background-operation.md
+      - name: 逐步解說：在背景執行作業
+        href: walkthrough-running-an-operation-in-the-background.md
+      - name: 逐步解說：實作使用背景作業的表單
+        href: walkthrough-implementing-a-form-that-uses-a-background-operation.md
+    - name: BindingNavigator 控制項
+      href: bindingnavigator-control-windows-forms.md
+      items:
+      - name: BindingNavigator 控制項概觀
+        href: bindingnavigator-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms BindingNavigator 控制項巡覽資料
+        href: how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md
+      - name: 作法：使用 Windows Forms BindingNavigator 控制項在資料集中移動
+        href: move-through-a-dataset-with-wf-bindingnavigator-control.md
+      - name: 作法：將 [載入]、[儲存] 和 [取消] 按鈕新增至 Windows Forms BindingNavigator 控制項
+        href: load-save-and-cancel-bindingnavigator.md
+    - name: BindingSource 元件
+      href: bindingsource-component.md
+      items:
+      - name: BindingSource 元件概觀
+        href: bindingsource-component-overview.md
+      - name: BindingSource 元件架構
+        href: bindingsource-component-architecture.md
+      - name: 作法：將 Windows Forms 控制項繫結至 Factory 物件
+        href: how-to-bind-a-windows-forms-control-to-a-factory-object.md
+      - name: 作法：將 Windows Forms 控制項繫結至類型
+        href: how-to-bind-a-windows-forms-control-to-a-type.md
+      - name: 作法：使用設計工具將 Windows Forms 控制項繫結至類型
+        href: how-to-bind-a-windows-forms-control-to-a-type-using-the-designer.md
+      - name: 作法：使用 Windows Forms BindingSource 繫結至 Web 服務
+        href: how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource.md
+      - name: 作法：將 Windows Forms 控制項繫結至 DBNull 資料庫值
+        href: how-to-bind-windows-forms-controls-to-dbnull-database-values.md
+      - name: 作法：使用設計工具繫結 Windows Forms 控制項和 BindingSource 元件
+        href: bind-wf-controls-with-the-bindingsource.md
+      - name: 作法：使用 Windows Forms BindingSource 元件建立查閱資料表
+        href: how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component.md
+      - name: 作法：使用 Windows Forms BindingSource 自訂新增項目
+        href: how-to-customize-item-addition-with-the-windows-forms-bindingsource.md
+      - name: 作法：處理資料繫結發生的錯誤和例外狀況
+        href: how-to-handle-errors-and-exceptions-that-occur-with-databinding.md
+      - name: 作法：使用 BindingSource 和 INotifyPropertyChanged 介面引發變更通知
+        href: raise-change-notifications--bindingsource.md
+      - name: 作法：使用 BindingSource ResetItem 方法引發變更通知
+        href: how-to-raise-change-notifications-using-the-bindingsource-resetitem-method.md
+      - name: 作法：使用 BindingSource 反映 Windows Forms 控制項中的資料來源更新
+        href: reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md
+      - name: 作法：使用 BindingSource 元件跨表單共用繫結資料
+        href: how-to-share-bound-data-across-forms-using-the-bindingsource-component.md
+      - name: 作法：使用 Windows Forms BindingSource 元件排序和篩選 ADO.NET 資料
+        href: sort-and-filter-ado-net-data-with-wf-bindingsource-component.md
+    - name: Button 控制項
+      href: button-control-windows-forms.md
+      items:
+      - name: Button 控制項概觀
+        href: button-control-overview-windows-forms.md
+      - name: 作法：將 Windows Forms 的按鈕指定為接受按鈕
+        href: how-to-designate-a-windows-forms-button-as-the-accept-button.md
+      - name: 作法：使用設計工具將 Windows Forms 的按鈕指定為接受按鈕
+        href: designate-a-wf-button-as-the-accept-button-using-the-designer.md
+      - name: 作法：將 Windows Forms 的按鈕指定為取消按鈕
+        href: how-to-designate-a-windows-forms-button-as-the-cancel-button.md
+      - name: 作法：使用設計工具將 Windows Forms 的按鈕指定為取消按鈕
+        href: designate-a-wf-button-as-the-cancel-button-using-the-designer.md
+      - name: 作法：回應 Windows Forms 按鈕的按一下動作
+        href: how-to-respond-to-windows-forms-button-clicks.md
+      - name: 選取 Windows Form Button 控制項的方法
+        href: ways-to-select-a-windows-forms-button-control.md
+    - name: CheckBox 控制項
+      href: checkbox-control-windows-forms.md
+      items:
+      - name: CheckBox 控制項概觀
+        href: checkbox-control-overview-windows-forms.md
+      - name: 作法：回應 Windows Forms 核取方塊的按一下動作
+        href: how-to-respond-to-windows-forms-checkbox-clicks.md
+      - name: 作法：使用 Windows Forms CheckBox 控制項設定選項
+        href: how-to-set-options-with-windows-forms-checkbox-controls.md
+    - name: CheckedListBox 控制項
+      href: checkedlistbox-control-windows-forms.md
+      items:
+      - name: CheckedListBox 控制項概觀
+        href: checkedlistbox-control-overview-windows-forms.md
+      - name: 作法：判斷 Windows Forms CheckedListBox 控制項中的已核取項目
+        href: how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md
+    - name: ColorDialog 元件
+      href: colordialog-component-windows-forms.md
+      items:
+      - name: ColorDialog 元件概觀
+        href: colordialog-component-overview-windows-forms.md
+      - name: 作法：變更 Windows Forms ColorDialog 元件的外觀
+        href: how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md
+      - name: 作法：使用 ColorDialog 元件顯示調色盤
+        href: how-to-show-a-color-palette-with-the-colordialog-component.md
+    - name: ComboBox 控制項
+      href: combobox-control-windows-forms.md
+      items:
+      - name: ComboBox 控制項概觀
+        href: combobox-control-overview-windows-forms.md
+      - name: 作法：在 ComboBox 控制項中建立各種大小的文字
+        href: how-to-create-variable-sized-text-in-a-combobox-control.md
+    - name: ContextMenu 元件
+      href: contextmenu-component-windows-forms.md
+      items:
+      - name: ContextMenu 元件概觀
+        href: contextmenu-component-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms ContextMenu 元件新增和移除功能表項目
+        href: add-and-remove-menu-items-with-wf-contextmenu-component.md
+    - name: ContextMenuStrip 控制項
+      href: contextmenustrip-control.md
+      items:
+      - name: ContextMenuStrip 控制項概觀
+        href: contextmenustrip-control-overview.md
+      - name: 作法：建立 ContextMenuStrip 與控制項的關聯
+        href: how-to-associate-a-contextmenustrip-with-a-control.md
+      - name: 作法：將功能表項目新增至 ContextMenuStrip
+        href: how-to-add-menu-items-to-a-contextmenustrip.md
+      - name: 作法：設定 ContextMenuStrip 核取邊界和影像邊界
+        href: how-to-configure-contextmenustrip-check-margins-and-image-margins.md
+      - name: 作法：啟用 ContextMenuStrip 控制項的核取邊界和影像邊界
+        href: how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md
+      - name: 作法：處理 ContextMenuStrip 開啟事件
+        href: how-to-handle-the-contextmenustrip-opening-event.md
+    - name: DataGrid 控制項
+      href: datagrid-control-windows-forms.md
+      items:
+      - name: DataGrid 控制項概觀
+        href: datagrid-control-overview-windows-forms.md
+      - name: 作法：將資料表和資料行新增至 Windows Forms DataGrid 控制項
+        href: how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md
+      - name: 作法：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
+        href: add-tables-and-columns-to-wf-datagrid-control-using-the-designer.md
+      - name: 作法：將 Windows Forms DataGrid 控制項繫結至資料來源
+        href: how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md
+      - name: 作法：使用設計工具將 Windows Forms DataGrid 控制項繫結至資料來源
+        href: bind-wf-datagrid-control-to-a-data-source-using-the-designer.md
+      - name: 作法：在執行階段變更 Windows Forms DataGrid 控制項顯示的資料
+        href: change-displayed-data-at-run-time-wf-datagrid-control.md
+      - name: 作法：使用 Windows Forms DataGrid 控制項建立主從式清單
+        href: how-to-create-master-detail-lists-with-the-windows-forms-datagrid-control.md
+      - name: 作法：使用設計工具以 Windows Forms DataGrid 控制項建立主從式清單
+        href: create-master-details-lists-with-wf-datagrid-control-using-the-designer.md
+      - name: 作法：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行
+        href: how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md
+      - name: 作法：格式化 Windows Forms DataGrid 控制項
+        href: how-to-format-the-windows-forms-datagrid-control.md
+      - name: 作法：使用設計工具格式化 Windows Forms DataGrid 控制項
+        href: how-to-format-the-windows-forms-datagrid-control-using-the-designer.md
+      - name: 作法：回應 Windows Forms DataGrid 控制項的按一下動作
+        href: how-to-respond-to-clicks-in-the-windows-forms-datagrid-control.md
+      - name: 作法：使用 Windows Forms DataGrid 控制項驗證輸入
+        href: how-to-validate-input-with-the-windows-forms-datagrid-control.md
+      - name: Windows Form DataGrid 控制項的鍵盤快速鍵
+        href: keyboard-shortcuts-for-the-windows-forms-datagrid-control.md
+    - name: DataGridView 控制項
+      href: datagridview-control-windows-forms.md
+      items:
+      - name: 使用設計工具搭配 Windows Form DataGridView 控制項
+        href: using-the-designer-with-the-windows-forms-datagridview-control.md
+        items:
+        - name: 作法：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行
+          href: add-and-remove-columns-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
+          href: bind-data-to-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具變更 Windows Forms DataGridView 控制項的資料行順序
+          href: change-the-order-of-columns-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具變更 Windows Forms DataGridView 資料行的類型
+          href: change-the-type-of-a-wf-datagridview-column-using-the-designer.md
+        - name: 作法：使用設計工具重新調整 Windows Forms DataGridView 控制項的資料行順序
+          href: enable-column-reordering-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行
+          href: freeze-columns-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具隱藏 Windows Forms DataGridView 控制項的資料行
+          href: hide-columns-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具將 Windows Forms DataGridView 控制項的資料行設為唯讀
+          href: make-columns-read-only-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具防止在 Windows Forms DataGridView 控制項中新增和刪除資料列
+          href: prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
+          href: set-alternating-row-styles-for-the-datagrid-using-the-designer.md
+        - name: 作法：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
+          href: default-cell-styles-datagridview.md
+      - name: DataGridView 控制項概觀
+        href: datagridview-control-overview-windows-forms.md
+        items:
+        - name: DataGridView 控制項技術摘要
+          href: datagridview-control-technology-summary-windows-forms.md
+        - name: DataGridView 控制項架構
+          href: datagridview-control-architecture-windows-forms.md
+        - name: DataGridView 控制項案例
+          href: datagridview-control-scenarios-windows-forms.md
+        - name: DataGridView 控制項程式碼目錄
+          href: datagridview-control-code-directory-windows-forms.md
+      - name: Windows Form DataGridView 控制項的預設功能
+        href: default-functionality-in-the-windows-forms-datagridview-control.md
+      - name: Windows Form DataGridView 控制項中的資料行類型
+        href: column-types-in-the-windows-forms-datagridview-control.md
+      - name: Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能
+        href: basic-column-row-and-cell-features-wf-datagridview-control.md
+        items:
+        - name: 作法：隱藏 Windows Forms DataGridView 控制項的資料行
+          href: how-to-hide-columns-in-the-windows-forms-datagridview-control.md
+        - name: 作法：隱藏 Windows Forms DataGridView 控制項的資料行標頭
+          href: how-to-hide-column-headers-in-the-windows-forms-datagridview-control.md
+        - name: 作法：重新調整 Windows Forms DataGridView 控制項的資料行順序
+          href: how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md
+        - name: 作法：凍結 Windows Forms DataGridView 控制項的資料行
+          href: how-to-freeze-columns-in-the-windows-forms-datagridview-control.md
+        - name: 作法：將 Windows Forms DataGridView 控制項的資料行設成唯讀
+          href: how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md
+        - name: 作法：防止在 Windows Forms DataGridView 控制項中新增和刪除資料列
+          href: prevent-row-addition-and-deletion-datagridview.md
+        - name: 作法：在 Windows Forms DataGridView 控制項中取得和設定目前的儲存格
+          href: get-and-set-the-current-cell-wf-datagridview-control.md
+        - name: 作法：在 Windows Forms DataGridView 控制項的儲存格中顯示影像
+          href: how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md
+      - name: Windows Form DataGridView 控制項中的基本格式化和樣式設定
+        href: basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md
+        items:
+        - name: 作法：變更 Windows Forms DataGridView 控制項的框線和格線樣式
+          href: change-the-border-and-gridline-styles-in-the-datagrid.md
+        - name: Windows Form DataGridView 控制項中的儲存格樣式
+          href: cell-styles-in-the-windows-forms-datagridview-control.md
+        - name: 作法：設定 Windows Forms DataGridView 控制項的預設儲存格樣式
+          href: how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md
+        - name: 作法：格式化 Windows Forms DataGridView 控制項中的資料
+          href: how-to-format-data-in-the-windows-forms-datagridview-control.md
+        - name: 作法：設定 Windows Forms DataGridView 控制項的字型和色彩樣式
+          href: how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md
+        - name: 作法：設定 Windows Forms DataGridView 控制項的替代資料列樣式
+          href: how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md
+        - name: 作法：在 Windows Forms DataGridView 控制項中使用資料列範本自訂資料列
+          href: use-the-row-template-to-customize-rows-in-the-datagrid.md
+      - name: 在 Windows Form DataGridView 控制項中顯示資料
+        href: displaying-data-in-the-windows-forms-datagridview-control.md
+        items:
+        - name: Windows Form DataGridView 控制項的資料顯示模式
+          href: data-display-modes-in-the-windows-forms-datagridview-control.md
+        - name: Windows Form DataGridView 控制項中的資料格式
+          href: data-formatting-in-the-windows-forms-datagridview-control.md
+        - name: 逐步解說：建立未繫結的 Windows Forms DataGridView 控制項
+          href: walkthrough-creating-an-unbound-windows-forms-datagridview-control.md
+          items:
+          - name: 作法：建立未繫結的 Windows Forms DataGridView 控制項
+            href: how-to-create-an-unbound-windows-forms-datagridview-control.md
+        - name: 作法：將資料繫結至 Windows Forms DataGridView 控制項
+          href: how-to-bind-data-to-the-windows-forms-datagridview-control.md
+        - name: 作法：在資料繫結 Windows Forms DataGridView 控制項中自動產生資料行
+          href: autogenerate-columns-in-a-data-bound-wf-datagridview-control.md
+        - name: 作法：移除 Windows Forms DataGridView 控制項中自動產生的資料行
+          href: remove-autogenerated-columns-from-a-wf-datagridview-control.md
+        - name: 作法：變更 Windows Forms DataGridView 控制項資料行的順序
+          href: how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md
+        - name: 作法：將未繫結資料行新增至已繫結資料的 Windows Forms DataGridView 控制項
+          href: unbound-column-to-a-data-bound-datagridview.md
+        - name: 作法：將物件繫結至 Windows Forms DataGridView 控制項
+          href: how-to-bind-objects-to-windows-forms-datagridview-controls.md
+        - name: 作法：存取繫結至 Windows Forms DataGridView 資料列的物件
+          href: how-to-access-objects-bound-to-windows-forms-datagridview-rows.md
+        - name: 作法：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
+          href: access-objects-in-a-wf-datagridviewcomboboxcell-drop-down-list.md
+        - name: 逐步解說：使用兩個 Windows Forms DataGridView 控制項建立主從式表單
+          href: creating-a-master-detail-form-using-two-datagridviews.md
+          items:
+          - name: 作法：使用兩個 Windows Forms DataGridView 控制項建立主從式表單
+            href: create-a-master-detail-form-using-two-datagridviews.md
+        - name: 作法：自訂 Windows Forms DataGridView 控制項中的資料格式
+          href: how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md
+      - name: 調整 Windows Form DataGridView 控制項中資料行和資料列的大小
+        href: resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md
+        items:
+        - name: Windows Form DataGridView 控制項中的調整大小選項
+          href: sizing-options-in-the-windows-forms-datagridview-control.md
+        - name: 在 Windows Form DataGridView 控制項中的資料行填入模式
+          href: column-fill-mode-in-the-windows-forms-datagridview-control.md
+        - name: 作法：設定 Windows Forms DataGridView 控制項的調整大小模式
+          href: how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md
+        - name: 作法：以程式設計方式調整儲存格大小使符合 Windows Forms DataGridView 控制項的內容
+          href: programmatically-resize-cells-to-fit-content-in-the-datagrid.md
+        - name: 作法：在 Windows Forms DataGridView 控制項的內容變更時自動調整儲存格大小
+          href: automatically-resize-cells-when-content-changes-in-the-datagrid.md
+      - name: 在 Windows Forms DataGridView 控制項中排序資料
+        href: sorting-data-in-the-windows-forms-datagridview-control.md
+        items:
+        - name: Windows Form DataGridView 控制項中的資料行排序模式
+          href: column-sort-modes-in-the-windows-forms-datagridview-control.md
+        - name: 作法：設定 Windows Forms DataGridView 控制項的資料行排序模式
+          href: set-the-sort-modes-for-columns-wf-datagridview-control.md
+        - name: 作法：自訂 Windows Forms DataGridView 控制項中的排序
+          href: how-to-customize-sorting-in-the-windows-forms-datagridview-control.md
+      - name: Windows Form DataGridView 控制項中的資料輸入
+        href: data-entry-in-the-windows-forms-datagridview-control.md
+        items:
+        - name: 作法：指定 Windows Forms DataGridView 控制項的編輯模式
+          href: how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md
+        - name: 作法：指定 Windows Form DataGridView 控制項的新資料列預設值
+          href: specify-default-values-for-new-rows-in-the-datagrid.md
+        - name: 使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
+          href: using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md
+        - name: 逐步解說：驗證 Windows Forms DataGridView 控制項的資料
+          href: walkthrough-validating-data-in-the-windows-forms-datagridview-control.md
+          items:
+          - name: 作法：驗證 Windows Forms DataGridView 控制項的資料
+            href: how-to-validate-data-in-the-windows-forms-datagridview-control.md
+        - name: 逐步解說：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤
+          href: handling-errors-that-occur-during-data-entry-in-the-datagrid.md
+          items:
+          - name: 作法：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤
+            href: handle-errors-that-occur-during-data-entry-in-the-datagrid.md
+      - name: 選取範圍和剪貼簿與 Windows Form DataGridView 控制項搭配使用
+        href: selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md
+        items:
+        - name: Windows Form DataGridView 控制項中的選取模式
+          href: selection-modes-in-the-windows-forms-datagridview-control.md
+        - name: 作法：設定 Windows Forms DataGridView 控制項的選取模式
+          href: how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md
+        - name: 作法：取得 Windows Forms DataGridView 控制項中已選取的儲存格、資料列和資料行
+          href: selected-cells-rows-and-columns-datagridview.md
+        - name: 作法：讓使用者將 Windows Forms DataGridView 控制項的多個儲存格複製到剪貼簿
+          href: enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md
+      - name: 在 Windows Form DataGridView 控制項中利用儲存格、資料列和資料行進行程式設計
+        href: programming-with-cells-rows-and-columns-in-the-datagrid.md
+        items:
+        - name: 作法：將工具提示新增至 Windows Forms DataGridView 控制項的個別儲存格
+          href: add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md
+        - name: 作法：根據 Windows Forms DataGridView 控制項儲存格的變更執行自訂動作
+          href: perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md
+        - name: 作法：管理 Windows Forms DataGridView 控制項中的寬線
+          href: how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md
+        - name: 作法：管理 Windows Forms DataGridView 控制項中的資料列
+          href: how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md
+        - name: 作法：管理 Windows Forms DataGridView 控制項中的資料行
+          href: how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md
+        - name: 作法：使用 Windows Forms DataGridView 控制項中的影像資料行
+          href: how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md
+      - name: 自訂 Windows Form DataGridView 控制項
+        href: customizing-the-windows-forms-datagridview-control.md
+        items:
+        - name: 作法：自訂 Windows Forms DataGridView 控制項的儲存格外觀
+          href: customize-the-appearance-of-cells-in-the-datagrid.md
+        - name: 作法：自訂 Windows Forms DataGridView 控制項的資料列外觀
+          href: customize-the-appearance-of-rows-in-the-datagrid.md
+        - name: 作法：擴充 Windows Forms DataGridView 控制項之儲存格和資料行的行為和外觀，以自訂儲存格和資料行
+          href: customize-cells-and-columns-in-the-datagrid-by-extending-behavior.md
+        - name: 作法：停用 Windows Forms DataGridView 控制項按鈕資料行的按鈕
+          href: disable-buttons-in-a-button-column-in-the-datagrid.md
+        - name: 作法：Windows Forms DataGridView 儲存格的主控制項
+          href: how-to-host-controls-in-windows-forms-datagridview-cells.md
+      - name: Windows Form DataGridView 控制項中的效能微調
+        href: performance-tuning-in-the-windows-forms-datagridview-control.md
+        items:
+        - name: 縮放 Windows Form DataGridView 控制項的最佳作法
+          href: best-practices-for-scaling-the-windows-forms-datagridview-control.md
+        - name: Windows Form DataGridView 控制項中的虛擬模式
+          href: virtual-mode-in-the-windows-forms-datagridview-control.md
+        - name: 逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式
+          href: implementing-virtual-mode-wf-datagridview-control.md
+          items:
+          - name: 作法：在 Windows Forms DataGridView 控制項中實作虛擬模式
+            href: how-to-implement-virtual-mode-in-the-windows-forms-datagridview-control.md
+        - name: 在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
+          href: implementing-virtual-mode-jit-data-loading-in-the-datagrid.md
+          items:
+          - name: 作法：在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
+            href: virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md
+      - name: Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠控制
+        href: default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md
+      - name: Windows Form DataGridView 和 DataGrid 控制項之間的差異
+        href: differences-between-the-windows-forms-datagridview-and-datagrid-controls.md
+    - name: DateTimePicker 控制項
+      href: datetimepicker-control-windows-forms.md
+      items:
+      - name: DateTimePicker 控制項概觀
+        href: datetimepicker-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms DateTimePicker 控制項顯示自訂格式的日期
+        href: display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md
+      - name: 作法：使用 Windows Forms DateTimePicker 控制項設定和傳回日期
+        href: how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md
+      - name: 作法：使用 DateTimePicker 控制項顯示時間
+        href: how-to-display-time-with-the-datetimepicker-control.md
+    - name: 對話方塊控制項和元件
+      href: dialog-box-controls-and-components-windows-forms.md
+    - name: DomainUpDown 控制項
+      href: domainupdown-control-windows-forms.md
+      items:
+      - name: DomainUpDown 控制項概觀
+        href: domainupdown-control-overview-windows-forms.md
+      - name: 作法：以程式設計的方式將項目新增至 Windows Forms DomainUpDown 控制項
+        href: how-to-add-items-to-windows-forms-domainupdown-controls-programmatically.md
+      - name: 作法：從 Windows Forms DomainUpDown 控制項中移除項目
+        href: how-to-remove-items-from-windows-forms-domainupdown-controls.md
+    - name: ErrorProvider 元件
+      href: errorprovider-component-windows-forms.md
+      items:
+      - name: ErrorProvider 元件概觀
+        href: errorprovider-component-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
+        href: display-error-icons-for-form-validation-with-wf-errorprovider.md
+      - name: 作法：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
+        href: view-errors-within-a-dataset-with-wf-errorprovider-component.md
+    - name: FileDialog 類別
+      href: filedialog-class.md
+      items:
+      - name: 如何：選擇不自動升級檔案對話方塊
+        href: how-to-opt-out-of-file-dialog-box-automatic-upgrade.md
+      - name: 如何：將自訂位置新增至檔案對話方塊
+        href: how-to-add-a-custom-place-to-a-file-dialog-box.md
+      - name: 檔案對話方塊自訂位置的已知資料夾 GUID
+        href: known-folder-guids-for-file-dialog-custom-places.md
+    - name: FlowLayoutPanel 控制項
+      href: flowlayoutpanel-control-windows-forms.md
+      items:
+      - name: FlowLayoutPanel 控制項概觀
+        href: flowlayoutpanel-control-overview.md
+      - name: 作法：錨定和停駐 FlowLayoutPanel 控制項中的子控制項
+        href: how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md
+      - name: 逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
+        href: walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md
+    - name: FolderBrowserDialog 元件
+      href: folderbrowserdialog-component-windows-forms.md
+      items:
+      - name: FolderBrowserDialog 元件概觀 (Windows Form)
+        href: folderbrowserdialog-component-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms FolderBrowserDialog 元件選擇資料夾
+        href: how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md
+    - name: FontDialog 元件
+      href: fontdialog-component-windows-forms.md
+      items:
+      - name: FontDialog 元件概觀
+        href: fontdialog-component-overview-windows-forms.md
+      - name: 作法：使用 FontDialog 元件顯示字型清單
+        href: how-to-show-a-font-list-with-the-fontdialog-component.md
+    - name: GroupBox 控制項
+      href: groupbox-control-windows-forms.md
+      items:
+      - name: GroupBox 控制項概觀
+        href: groupbox-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms GroupBox 控制項分組控制項
+        href: how-to-group-controls-with-the-windows-forms-groupbox-control.md
+    - name: HelpProvider 元件
+      href: helpprovider-component-windows-forms.md
+      items:
+      - name: HelpProvider 元件概觀
+        href: helpprovider-component-overview-windows-forms.md
+    - name: HScrollBar 和 VScrollBar 控制項
+      href: hscrollbar-and-vscrollbar-controls-windows-forms.md
+      items:
+      - name: HScrollBar 和 VScrollBar 控制項概觀
+        href: hscrollbar-and-vscrollbar-controls-overview-windows-forms.md
+    - name: ImageList 元件
+      href: imagelist-component-windows-forms.md
+      items:
+      - name: ImageList 元件概觀
+        href: imagelist-component-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms ImageList 元件新增或移除影像
+        href: how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md
+      - name: 作法：使用設計工具新增或移除 ImageList 影像
+        href: how-to-add-or-remove-imagelist-images-with-the-designer.md
+    - name: Label 控制項
+      href: label-control-windows-forms.md
+      items:
+      - name: Label 控制項概觀
+        href: label-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms Label 控制項建立便捷鍵
+        href: how-to-create-access-keys-with-windows-forms-label-controls.md
+      - name: 作法：調整 Windows Forms Label 控制項的大小使符合其內容
+        href: how-to-size-a-windows-forms-label-control-to-fit-its-contents.md
+    - name: LinkLabel 控制項
+      href: linklabel-control-windows-forms.md
+      items:
+      - name: LinkLabel 控制項概觀
+        href: linklabel-control-overview-windows-forms.md
+      - name: 作法：變更 Windows Forms LinkLabel 控制項的外觀
+        href: how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md
+      - name: 作法：使用 Windows Forms LinkLabel 控制項連結至物件或網頁
+        href: link-to-an-object-or-web-page-with-wf-linklabel-control.md
+      - name: 作法：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)
+        href: display-a-web-page-from-a-wf-linklabel-control-visual-basic.md
+    - name: ListBox 控制項
+      href: listbox-control-windows-forms.md
+      items:
+      - name: ListBox 控制項概觀
+        href: listbox-control-overview-windows-forms.md
+    - name: ListView 控制項
+      href: listview-control-windows-forms.md
+      items:
+      - name: ListView 控制項概觀
+        href: listview-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms ListView 控制項新增和移除項目
+        href: how-to-add-and-remove-items-with-the-windows-forms-listview-control.md
+      - name: 作法：使用設計工具以 Windows Forms ListView 控制項新增和移除項目
+        href: add-and-remove-items-with-wf-listview-control-using-the-designer.md
+      - name: 作法：將資料行新增至 Windows Form ListView 控制項
+        href: how-to-add-columns-to-the-windows-forms-listview-control.md
+      - name: 作法：使用設計工具將資料行新增至 Windows Forms ListView 控制項
+        href: how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md
+      - name: 作法：將搜尋功能新增至 ListView 控制項
+        href: how-to-add-search-capabilities-to-a-listview-control.md
+      - name: 作法：顯示 Windows Forms ListView 控制項的圖示
+        href: how-to-display-icons-for-the-windows-forms-listview-control.md
+      - name: 作法：使用 Windows Forms ListView 控制項顯示資料行的子項目
+        href: how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md
+      - name: 作法：在 Windows Forms ListView 控制項中啟用並排顯示
+        href: how-to-enable-tile-view-in-a-windows-forms-listview-control.md
+      - name: 作法：使用設計工具在 Windows Forms ListView 控制項中啟用並排顯示
+        href: enable-tile-view-in-a-wf-listview-control-using-the-designer.md
+      - name: 作法：在 Windows Forms ListView 控制項中分組項目
+        href: how-to-group-items-in-a-windows-forms-listview-control.md
+      - name: 作法：使用設計工具在 Windows Forms ListView 控制項中分組項目
+        href: how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md
+      - name: 作法：在 Windows Forms ListView 控制項中顯示插入標記
+        href: how-to-display-an-insertion-mark-in-a-windows-forms-listview-control.md
+      - name: 作法：選取 Windows Forms ListView 控制項的項目
+        href: how-to-select-an-item-in-the-windows-forms-listview-control.md
+      - name: 逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
+        href: creating-an-explorer-style-interface-with-the-listview-and-treeview.md
+    - name: MainMenu 元件
+      href: mainmenu-component-windows-forms.md
+      items:
+      - name: MainMenu 元件概觀
+        href: mainmenu-component-overview-windows-forms.md
+    - name: MaskedTextBox 控制項
+      href: maskedtextbox-control-windows-forms.md
+      items:
+      - name: 逐步解說：使用 MaskedTextBox 控制項
+        href: walkthrough-working-with-the-maskedtextbox-control.md
+      - name: 作法：將資料繫結至 MaskedTextBox 控制項
+        href: how-to-bind-data-to-the-maskedtextbox-control.md
+      - name: 作法：設定輸入遮罩
+        href: how-to-set-the-input-mask.md
+    - name: MenuStrip 控制項
+      href: menustrip-control-windows-forms.md
+      items:
+      - name: MenuStrip 控制項概觀
+        href: menustrip-control-overview-windows-forms.md
+      - name: 作法：將增強功能新增至 ToolStripMenuItems
+        href: how-to-add-enhancements-to-toolstripmenuitems.md
+      - name: 作法：將 MenuStrip 附加至 MDI 父視窗
+        href: how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms.md
+      - name: 作法：複製 ToolStripMenuItems
+        href: how-to-copy-toolstripmenuitems.md
+      - name: 作法：建立具有 MenuStrip 的 MDI 視窗清單
+        href: how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md
+      - name: 作法：停用 ToolStripMenuItems
+        href: how-to-disable-toolstripmenuitems.md
+      - name: 作法：使用設計工具停用 ToolStripMenuItems
+        href: how-to-disable-toolstripmenuitems-using-the-designer.md
+      - name: 作法：顯示 MenuStrip 的選項按鈕
+        href: how-to-display-option-buttons-in-a-menustrip-windows-forms.md
+      - name: 作法：隱藏 ToolStripMenuItems
+        href: how-to-hide-toolstripmenuitems.md
+      - name: 作法：使用設計工具隱藏 ToolStripMenuItems
+        href: how-to-hide-toolstripmenuitems-using-the-designer.md
+      - name: 作法：將 MenuStrip 插入至 MDI 下拉式功能表中
+        href: how-to-insert-a-menustrip-into-an-mdi-drop-down-menu-windows-forms.md
+      - name: 作法：從 MDI 下拉式功能表中移除 ToolStripMenuItem
+        href: how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms.md
+      - name: 作法：移動 ToolStripMenuItems
+        href: how-to-move-toolstripmenuitems.md
+      - name: 作法：設定 MenuStrip 核取邊界和影像邊界
+        href: how-to-configure-menustrip-check-margins-and-image-margins.md
+      - name: 作法：向表單提供標準的功能表項目
+        href: how-to-provide-standard-menu-items-to-a-form.md
+      - name: 作法：設定 MDI 應用程式的自動功能表合併功能
+        href: how-to-set-up-automatic-menu-merging-for-mdi-applications.md
+      - name: 合併 Windows Form MenuStrip 控制項中的功能表項目
+        href: merging-menu-items-in-the-windows-forms-menustrip-control.md
+      - name: 逐步解說：向表單提供標準的功能表項目
+        href: walkthrough-providing-standard-menu-items-to-a-form.md
+    - name: MonthCalendar 控制項
+      href: monthcalendar-control-windows-forms.md
+      items:
+      - name: MonthCalendar 控制項概觀
+        href: monthcalendar-control-overview-windows-forms.md
+      - name: 作法：變更 Windows Forms MonthCalendar 控制項的外觀
+        href: how-to-change-monthcalendar-control-appearance.md
+      - name: 作法：在 Windows Forms MonthCalendar 控制項中顯示多個月份
+        href: display-more-than-one-month-wf-monthcalendar-control.md
+      - name: 作法：使用 Windows Forms MonthCalendar 控制項以粗體顯示特定日期
+        href: display-specific-days-in-bold-with-wf-monthcalendar-control.md
+      - name: 作法：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍
+        href: how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md
+    - name: NotifyIcon 元件
+      href: notifyicon-component-windows-forms.md
+      items:
+      - name: NotifyIcon 元件概觀
+        href: notifyicon-component-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列
+        href: app-icons-to-the-taskbar-with-wf-notifyicon.md
+      - name: 作法：建立捷徑功能表與 Windows Forms NotifyIcon 元件的關聯
+        href: how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component.md
+    - name: NumericUpDown 控制項
+      href: numericupdown-control-windows-forms.md
+      items:
+      - name: NumericUpDown 控制項概觀
+        href: numericupdown-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms NumericUpDown 控制項設定和傳回數值
+        href: set-and-return-numeric-values-with-wf-numericupdown-control.md
+      - name: 作法：設定 Windows Forms NumericUpDown 控制項的格式
+        href: how-to-set-the-format-for-the-windows-forms-numericupdown-control.md
+    - name: OpenFileDialog 元件
+      href: openfiledialog-component-windows-forms.md
+      items:
+      - name: OpenFileDialog 元件概觀
+        href: openfiledialog-component-overview-windows-forms.md
+      - name: 作法：使用 OpenFileDialog 元件開啟檔案
+        href: how-to-open-files-using-the-openfiledialog-component.md
+    - name: PageSetupDialog 元件
+      href: pagesetupdialog-component-windows-forms.md
+      items:
+      - name: PageSetupDialog 元件概觀
+        href: pagesetupdialog-component-overview-windows-forms.md
+      - name: 作法：使用 PageSetupDialog 元件決定頁面屬性
+        href: how-to-determine-page-properties-using-the-pagesetupdialog-component.md
+    - name: Panel 控制項
+      href: panel-control-windows-forms.md
+      items:
+      - name: Panel 控制項概觀
+        href: panel-control-overview-windows-forms.md
+      - name: 作法：使用設計工具以 Windows Forms Panel 控制項分組控制項
+        href: group-controls-with-wf-panel-control-using-the-designer.md
+      - name: 作法：設定面板背景
+        href: how-to-set-the-background-of-a-windows-forms-panel.md
+      - name: 作法：使用設計工具設定 Windows Forms 面板的背景
+        href: how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md
+    - name: PictureBox 控制項
+      href: picturebox-control-windows-forms.md
+      items:
+      - name: PictureBox 控制項概觀
+        href: picturebox-control-overview-windows-forms.md
+      - name: 作法：使用設計工具載入圖片
+        href: how-to-load-a-picture-using-the-designer-windows-forms.md
+      - name: 作法：在執行階段修改圖片的大小或位置
+        href: how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md
+      - name: 作法：在執行階段設定圖片
+        href: how-to-set-pictures-at-run-time-windows-forms.md
+    - name: PrintDialog 元件
+      href: printdialog-component-windows-forms.md
+      items:
+      - name: PrintDialog 元件概觀
+        href: printdialog-component-overview-windows-forms.md
+      - name: 作法：顯示 PrintDialog 元件
+        href: how-to-display-the-printdialog-component.md
+    - name: PrintDocument 元件
+      href: printdocument-component-windows-forms.md
+      items:
+      - name: PrintDocument 元件概觀
+        href: printdocument-component-overview-windows-forms.md
+    - name: PrintPreviewControl 控制項
+      href: printpreviewcontrol-control-windows-forms.md
+      items:
+      - name: PrintPreviewControl 控制項概觀
+        href: printpreviewcontrol-control-overview-windows-forms.md
+    - name: PrintPreviewDialog 控制項
+      href: printpreviewdialog-control-windows-forms.md
+      items:
+      - name: PrintPreviewDialog 控制項概觀
+        href: printpreviewdialog-control-overview-windows-forms.md
+      - name: 作法：在 Windows Forms 應用程式中顯示預覽列印
+        href: how-to-display-print-preview-in-windows-forms-applications.md
+    - name: ProgressBar 控制項
+      href: progressbar-control-windows-forms.md
+      items:
+      - name: ProgressBar 控制項概觀
+        href: progressbar-control-overview-windows-forms.md
+      - name: 作法：設定 Windows Forms ProgressBar 控制項顯示的值
+        href: how-to-set-the-value-displayed-by-the-windows-forms-progressbar-control.md
+    - name: RadioButton 控制項
+      href: radiobutton-control-windows-forms.md
+      items:
+      - name: RadioButton 控制項概觀
+        href: radiobutton-control-overview-windows-forms.md
+      - name: 作法：將 Windows Forms RadioButton 控制項分組成函式集
+        href: how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md
+    - name: RichTextBox 控制項
+      href: richtextbox-control-windows-forms.md
+      items:
+      - name: RichTextBox 控制項概觀
+        href: richtextbox-control-overview-windows-forms.md
+      - name: 作法：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
+        href: determine-when-formatting-attributes-change-wf-richtextbox-control.md
+      - name: 作法：在 Windows Forms RichTextBox 控制項中顯示捲軸
+        href: how-to-display-scroll-bars-in-the-windows-forms-richtextbox-control.md
+      - name: 作法：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結
+        href: how-to-display-web-style-links-with-the-windows-forms-richtextbox-control.md
+      - name: 作法：啟用 Windows Forms RichTextBox 控制項的拖放作業
+        href: enable-drag-and-drop-operations-with-wf-richtextbox-control.md
+      - name: 作法：將檔案載入 Windows Forms RichTextBox 控制項
+        href: how-to-load-files-into-the-windows-forms-richtextbox-control.md
+      - name: 作法：使用 Windows Forms RichTextBox 控制項儲存檔案
+        href: how-to-save-files-with-the-windows-forms-richtextbox-control.md
+      - name: 作法：設定 Windows Forms RichTextBox 控制項的字型屬性
+        href: how-to-set-font-attributes-for-the-windows-forms-richtextbox-control.md
+      - name: 作法：使用 Windows Forms RichTextBox 控制項設定縮排、首行縮排和分項段落
+        href: set-indents-hanging-indents-bulleted-paragraphs-with-wf-richtextbox.md
+    - name: SaveFileDialog 元件
+      href: savefiledialog-component-windows-forms.md
+      items:
+      - name: SaveFileDialog 元件概觀
+        href: savefiledialog-component-overview-windows-forms.md
+      - name: 作法：使用 SaveFileDialog 元件儲存檔案
+        href: how-to-save-files-using-the-savefiledialog-component.md
+    - name: SoundPlayer 類別
+      href: soundplayer-class.md
+      items:
+      - name: SoundPlayer 類別概觀
+        href: soundplayer-class-overview.md
+      - name: 作法：播放 Windows Forms 的音效
+        href: how-to-play-a-sound-from-a-windows-form.md
+      - name: 作法：播放 Windows Forms 的嗶聲
+        href: how-to-play-a-beep-from-a-windows-form.md
+      - name: 作法：播放內嵌在 Windows Forms 資源中的音效
+        href: how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form.md
+      - name: 作法：播放 Windows Forms 的系統音效
+        href: how-to-play-a-system-sound-from-a-windows-form.md
+      - name: 作法：在 Windows Forms 中以非同步方式載入音效
+        href: how-to-load-a-sound-asynchronously-within-a-windows-form.md
+      - name: 作法：循環播放 Windows Forms 的音效
+        href: how-to-loop-a-sound-playing-on-a-windows-form.md
+    - name: SplitContainer 控制項
+      href: splitcontainer-control-windows-forms.md
+      items:
+      - name: SplitContainer 控制項概觀
+        href: splitcontainer-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms 建立多窗格使用者介面
+        href: how-to-create-a-multipane-user-interface-with-windows-forms.md
+      - name: 作法：使用設計工具以 Windows Forms 建立多窗格使用者介面
+        href: create-a-multipane-user-interface-with-wf-using-the-designer.md
+      - name: 作法：在 Windows Forms 中建立 Windows 檔案總管樣式的介面
+        href: how-to-create-a-windows-explorer-style-interface-on-a-windows-form.md
+      - name: 作法：定義分割視窗的調整大小和位置行為
+        href: how-to-define-resize-and-positioning-behavior-in-a-split-window.md
+      - name: 作法：水平分割視窗
+        href: how-to-split-a-window-horizontally.md
+      - name: 作法：使用設計工具水平分割視窗
+        href: how-to-split-a-window-horizontally-using-the-designer.md
+    - name: Splitter 控制項
+      href: splitter-control-windows-forms.md
+      items:
+      - name: Splitter 控制項概觀
+        href: splitter-control-overview-windows-forms.md
+    - name: StatusBar 控制項
+      href: statusbar-control-windows-forms.md
+      items:
+      - name: StatusBar 控制項概觀
+        href: statusbar-control-overview-windows-forms.md
+      - name: 作法：將面板新增至 StatusBar 控制項
+        href: how-to-add-panels-to-a-statusbar-control.md
+      - name: 作法：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板
+        href: determine-which-panel-wf-statusbar-control-was-clicked.md
+      - name: 作法：設定狀態列面板的大小
+        href: how-to-set-the-size-of-status-bar-panels.md
+      - name: 逐步解說：在執行階段更新狀態列資訊
+        href: walkthrough-updating-status-bar-information-at-run-time.md
+    - name: StatusStrip 控制項
+      href: statusstrip-control.md
+      items:
+      - name: StatusStrip 控制項概觀
+        href: statusstrip-control-overview.md
+      - name: 作法：在 StatusStrip 中以互動方式使用 Spring 屬性
+        href: how-to-use-the-spring-property-interactively-in-a-statusstrip.md
+    - name: TabControl 控制項
+      href: tabcontrol-control-windows-forms.md
+      items:
+      - name: TabControl 控制項概觀
+        href: tabcontrol-control-overview-windows-forms.md
+      - name: 作法：將控制項新增至索引標籤頁
+        href: how-to-add-a-control-to-a-tab-page.md
+      - name: 作法：使用設計工具將控制項新增至索引標籤頁
+        href: how-to-add-a-control-to-a-tab-page-using-the-designer.md
+      - name: 作法：使用 Windows Forms TabControl 新增和移除索引標籤
+        href: how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md
+      - name: 作法：使用設計工具以 Windows Forms TabControl 新增和移除索引標籤
+        href: add-and-remove-tabs-with-wf-tabcontrol-using-the-designer.md
+      - name: 作法：變更 Windows Forms TabControl 的外觀
+        href: how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md
+      - name: 作法：停用索引標籤頁
+        href: how-to-disable-tab-pages.md
+      - name: 作法：使用 TabControl 顯示側邊對齊的定位點
+        href: how-to-display-side-aligned-tabs-with-tabcontrol.md
+    - name: TableLayoutPanel 控制項
+      href: tablelayoutpanel-control-windows-forms.md
+      items:
+      - name: TableLayoutPanel 控制項概觀
+        href: tablelayoutpanel-control-overview.md
+      - name: AutoSize 在 TableLayoutPanel 控制項中的行為
+        href: autosize-behavior-in-the-tablelayoutpanel-control.md
+      - name: TableLayoutPanel 控制項的最佳作法
+        href: best-practices-for-the-tablelayoutpanel-control.md
+      - name: 作法：在 TableLayoutPanel 控制項中對齊和縮放控制項
+        href: how-to-align-and-stretch-a-control-in-a-tablelayoutpanel-control.md
+      - name: 作法：錨定和停駐 TableLayoutPanel 控制項中的子控制項
+        href: how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md
+      - name: 作法：建立適用於資料輸入且可調整大小的 Windows Forms
+        href: how-to-create-a-resizable-windows-form-for-data-entry.md
+      - name: 作法：設計可適當回應當地語系化的 Windows Forms 配置
+        href: how-to-design-a-windows-forms-layout-that-responds-well-to-localization.md
+      - name: 作法：編輯 TableLayoutPanel 控制項中的資料行和資料列
+        href: how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control.md
+      - name: 作法：擴展 TableLayoutPanel 控制項中的資料列和資料行
+        href: how-to-span-rows-and-columns-in-a-tablelayoutpanel-control.md
+      - name: 逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項
+        href: walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md
+    - name: TextBox 控制項
+      href: textbox-control-windows-forms.md
+      items:
+      - name: TextBox 控制項概觀
+        href: textbox-control-overview-windows-forms.md
+      - name: 作法：控制 Windows Forms TextBox 控制項的插入點
+        href: how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md
+      - name: 作法：使用 Windows Forms TextBox 控制項建立密碼文字方塊
+        href: how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md
+      - name: 作法：建立唯讀文字方塊
+        href: how-to-create-a-read-only-text-box-windows-forms.md
+      - name: 作法：將引號放入字串中
+        href: how-to-put-quotation-marks-in-a-string-windows-forms.md
+      - name: 作法：選取 Windows Forms TextBox 控制項的文字
+        href: how-to-select-text-in-the-windows-forms-textbox-control.md
+      - name: 作法：檢視 Windows Forms TextBox 控制項中的多行
+        href: how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md
+    - name: Timer 元件
+      href: timer-component-windows-forms.md
+      items:
+      - name: Timer 元件概觀
+        href: timer-component-overview-windows-forms.md
+      - name: Windows Form Timer 元件的 Interval 屬性限制
+        href: limitations-of-the-timer-component-interval-property.md
+      - name: 作法：使用 Windows Forms Timer 元件依設定的間隔執行程序
+        href: run-procedures-at-set-intervals-with-wf-timer-component.md
+    - name: ToolBar 控制項
+      href: toolbar-control-windows-forms.md
+      items:
+      - name: ToolBar 控制項概觀
+        href: toolbar-control-overview-windows-forms.md
+      - name: 作法：將按鈕新增至 ToolBar 控制項
+        href: how-to-add-buttons-to-a-toolbar-control.md
+      - name: 作法：使用設計工具將按鈕新增至 ToolBar 控制項
+        href: how-to-add-buttons-to-a-toolbar-control-using-the-designer.md
+      - name: 作法：定義工具列按鈕的圖示
+        href: how-to-define-an-icon-for-a-toolbar-button.md
+      - name: 作法：使用設計工具定義工具列按鈕的圖示
+        href: how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md
+      - name: 作法：觸發工具列按鈕的功能表事件
+        href: how-to-trigger-menu-events-for-toolbar-buttons.md
+    - name: ToolStrip 控制項
+      href: toolstrip-control-windows-forms.md
+      items:
+      - name: ToolStrip 控制項概觀
+        href: toolstrip-control-overview-windows-forms.md
+      - name: ToolStrip 技術摘要
+        href: toolstrip-technology-summary.md
+      - name: ToolStrip 控制項架構
+        href: toolstrip-control-architecture.md
+      - name: 作法：以動態方式新增 ToolStrip 項目
+        href: how-to-add-toolstrip-items-dynamically.md
+      - name: 作法：使用設計工具建立具有標準項目的基本 ToolStrip
+        href: create-a-basic-wf-toolstrip-with-standard-items-using-the-designer.md
+      - name: 作法：建立專業樣式的 ToolStrip 控制項
+        href: how-to-create-a-professionally-styled-toolstrip-control.md
+      - name: 作法：建立具有功能表合併和 ToolStrip 控制項的 MDI 表單
+        href: how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
+      - name: 作法：建立具有 ToolStripPanel 控制項的 MDI 表單
+        href: how-to-create-an-mdi-form-with-toolstrippanel-controls.md
+      - name: 作法：變更 Windows Forms 中 ToolStrip 文字和影像的外觀
+        href: how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms.md
+      - name: 作法：變更 Windows Forms 中 ToolStrip 項目的間距和對齊方式
+        href: how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms.md
+      - name: 作法：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器
+        href: create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md
+      - name: 作法：在 ToolStrip 控制項中建立切換按鈕
+        href: how-to-create-toggle-buttons-in-toolstrip-controls.md
+      - name: 作法：自訂繪製 ToolStrip 控制項
+        href: how-to-custom-draw-a-toolstrip-control.md
+      - name: 作法：自訂 ToolStrip 應用程式的色彩
+        href: how-to-customize-colors-in-toolstrip-applications.md
+      - name: 作法：定義停駐之 ToolStrip 控制項的疊置順序
+        href: how-to-define-z-ordering-of-docked-toolstrip-controls.md
+      - name: 作法：偵測滑鼠指標何時移至 ToolStripItem
+        href: how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem.md
+      - name: 作法：啟用 ToolStrip 控制項的自動完成
+        href: how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms.md
+      - name: 作法：在執行階段重新排列 ToolStrip 項目的順序
+        href: how-to-enable-reordering-of-toolstrip-items-at-run-time-in-windows-forms.md
+      - name: 作法：讓 TAB 鍵移至 ToolStrip 控制項之外
+        href: how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control.md
+      - name: 作法：實作自訂的 ToolStripRenderer
+        href: how-to-implement-a-custom-toolstriprenderer.md
+      - name: 作法：管理 ToolStrip 溢位
+        href: how-to-manage-toolstrip-overflow-in-windows-forms.md
+      - name: 作法：將 ToolStrip 移出 ToolStripContainer 並移至表單上
+        href: how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form.md
+      - name: 作法：將 ToolStripItem 放在 ToolStrip 上
+        href: how-to-position-a-toolstripitem-on-a-toolstrip.md
+      - name: 作法：在執行階段設定 ToolStrip 轉譯器
+        href: how-to-set-the-toolstrip-renderer-at-run-time.md
+      - name: 作法：設定應用程式的 ToolStrip 轉譯器
+        href: how-to-set-the-toolstrip-renderer-for-an-application.md
+      - name: 作法：自動縮放 ToolStripTextBox 以填滿 ToolStrip 的剩餘寬度
+        href: stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-wf.md
+      - name: 作法：在 ToolStrip 控制項使用工具提示
+        href: how-to-use-tooltips-in-toolstrip-controls.md
+      - name: 作法：使用 ToolStripControlHost 包裝 Windows Forms 控制項
+        href: how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost.md
+      - name: 逐步解說：建立專業樣式的 ToolStrip 控制項
+        href: walkthrough-creating-a-professionally-styled-toolstrip-control.md
+      - name: 逐步解說：建立具有功能表合併和 ToolStrip 控制項的 MDI 表單
+        href: walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md
+    - name: ToolStripContainer 控制項
+      href: toolstripcontainer-control.md
+      items:
+      - name: ToolStripContainer 控制項概觀
+        href: toolstripcontainer-control-overview.md
+      - name: 作法：將 ToolStripContainer 新增至表單
+        href: how-to-add-a-toolstripcontainer-to-a-form.md
+      - name: 作法：將控制項新增至 ToolStripContentPanel
+        href: how-to-add-a-control-to-a-toolstripcontentpanel.md
+    - name: ToolStripPanel 控制項
+      href: toolstrippanel-control.md
+      items:
+      - name: ToolStripPanel 控制項概觀
+        href: toolstrippanel-control-overview.md
+      - name: 作法：聯結 ToolStripPanels
+        href: how-to-join-toolstrippanels.md
+      - name: 作法：針對 MDI 使用 ToolStripPanels
+        href: how-to-use-toolstrippanels-for-mdi.md
+    - name: ToolStripProgressBar 控制項
+      href: toolstripprogressbar-control.md
+      items:
+      - name: ToolStripProgressBar 控制項概觀
+        href: toolstripprogressbar-control-overview.md
+    - name: ToolStripStatusLabel 控制項
+      href: toolstripstatuslabel-control.md
+      items:
+      - name: ToolStripStatusLabel 控制項概觀
+        href: toolstripstatuslabel-control-overview.md
+    - name: ToolTip 元件
+      href: tooltip-component-windows-forms.md
+      items:
+      - name: ToolTip 元件概觀
+        href: tooltip-component-overview-windows-forms.md
+      - name: 作法：在設計階段設定 Windows Forms 的控制項工具提示
+        href: how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md
+      - name: 作法：變更 Windows Forms ToolTip 元件的延遲時間
+        href: how-to-change-the-delay-of-the-windows-forms-tooltip-component.md
+    - name: TrackBar 控制項
+      href: trackbar-control-windows-forms.md
+      items:
+      - name: TrackBar 控制項概觀
+        href: trackbar-control-overview-windows-forms.md
+    - name: TreeView 控制項
+      href: treeview-control-windows-forms.md
+      items:
+      - name: TreeView 控制項概觀
+        href: treeview-control-overview-windows-forms.md
+      - name: 作法：使用 Windows Forms TreeView 控制項新增和移除節點
+        href: how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md
+      - name: 作法：使用設計工具以 Windows Forms TreeView 控制項新增和移除節點
+        href: add-and-remove-nodes-with-wf-treeview-control-using-the-designer.md
+      - name: 作法：將捷徑功能表附加至 TreeView 節點
+        href: how-to-attach-a-shortcut-menu-to-a-treeview-node.md
+      - name: 作法：使用設計工具將捷徑功能表附加至 TreeNode
+        href: how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer.md
+      - name: 作法：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
+        href: add-custom-information-to-a-treeview-or-listview-control-wf.md
+      - name: 作法：判斷按下了哪個 TreeView 節點
+        href: how-to-determine-which-treeview-node-was-clicked-windows-forms.md
+      - name: 作法：逐一查看 Windows Forms TreeView 控制項的所有節點
+        href: how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md
+      - name: 作法：設定 Windows Forms TreeView 控制項的圖示
+        href: how-to-set-icons-for-the-windows-forms-treeview-control.md
+    - name: WebBrowser 控制項
+      href: webbrowser-control-windows-forms.md
+      items:
+      - name: WebBrowser 控制項概觀
+        href: webbrowser-control-overview.md
+      - name: WebBrowser 安全性
+        href: webbrowser-security.md
+      - name: 作法：使用 WebBrowser 控制項巡覽至 URL
+        href: how-to-navigate-to-a-url-with-the-webbrowser-control.md
+      - name: 作法：使用 WebBrowser 控制項列印
+        href: how-to-print-with-a-webbrowser-control.md
+      - name: 作法：將網頁瀏覽器功能新增至 Windows Forms 應用程式
+        href: how-to-add-web-browser-capabilities-to-a-windows-forms-application.md
+      - name: 作法：在 Windows Forms 應用程式中建立 HTML 文件檢視器
+        href: how-to-create-an-html-document-viewer-in-a-windows-forms-application.md
+      - name: 作法：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊
+        href: implement-two-way-com-between-dhtml-and-client.md
+      - name: 使用 Managed HTML 文件物件模型
+        href: using-the-managed-html-document-object-model.md
+        items:
+        - name: 作法：存取受控 HTML 文件物件模型
+          href: how-to-access-the-managed-html-document-object-model.md
+        - name: 作法：存取受控 HTML 文件物件模型中的 HTML 原始檔
+          href: how-to-access-the-html-source-in-the-managed-html-document-object-model.md
+        - name: 作法：變更受控 HTML 文件物件模型的項目樣式
+          href: how-to-change-styles-on-an-element-in-the-managed-html-document-object-model.md
+        - name: 存取 Managed HTML 文件物件模型中的框架
+          href: accessing-frames-in-the-managed-html-document-object-model.md
+        - name: 存取 Managed HTML 文件物件模型上未公開的成員
+          href: accessing-unexposed-members-on-the-managed-html-document-object-model.md
+    - name: 用來列出選項的 Windows Form 控制項
+      href: windows-forms-controls-used-to-list-options.md
+      items:
+      - name: 何時使用 Windows Form ComboBox 取代 ListBox
+        href: when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md
+      - name: 作法：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目
+        href: access-specific-items-in-a-wf-combobox-listbox-or-checkedlistbox.md
+      - name: 作法：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中新增和移除項目
+        href: add-and-remove-items-from-a-wf-combobox.md
+      - name: 作法：為 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表
+        href: create-a-lookup-table-for-a-wf-combobox-listbox.md
+      - name: 作法：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
+        href: how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md
+      - name: 作法：排序 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項內容
+        href: sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md
+  - name: 使用 .NET Framework 開發自訂的 Windows Form 控制項
+    href: developing-custom-windows-forms-controls.md
+    items:
+    - name: 在 Windows Form 中使用控制項的概觀
+      href: overview-of-using-controls-in-windows-forms.md
+    - name: 各種自訂控制項
+      href: varieties-of-custom-controls.md
+      items:
+      - name: 控制項類型建議
+        href: control-type-recommendations.md
+    - name: Windows Form 控制項開發的基本概念
+      href: windows-forms-control-development-basics.md
+      items:
+      - name: 作法：開發簡單的 Windows Forms 控制項
+        href: how-to-develop-a-simple-windows-forms-control.md
+      - name: 作法：建立顯示進度的 Windows Forms 控制項
+        href: how-to-create-a-windows-forms-control-that-shows-progress.md
+      - name: 開發複合 Windows Form 控制項
+        href: developing-a-composite-windows-forms-control.md
+    - name: Windows Form 控制項中的屬性
+      href: properties-in-windows-forms-controls.md
+      items:
+      - name: 定義屬性
+        href: defining-a-property-in-windows-forms-controls.md
+      - name: 使用 ShouldSerialize 和 Reset 方法定義預設值
+        href: defining-default-values-with-the-shouldserialize-and-reset-methods.md
+      - name: 屬性變更事件
+        href: property-changed-events.md
+      - name: 作法：公開組成控制項的屬性
+        href: how-to-expose-properties-of-constituent-controls.md
+      - name: 自訂控制項中的方法實作
+        href: method-implementation-in-custom-controls.md
+    - name: Windows Form 控制項中的事件
+      href: events-in-windows-forms-controls.md
+      items:
+      - name: 覆寫 OnPaint 方法
+        href: overriding-the-onpaint-method.md
+      - name: 處理使用者輸入
+        href: handling-user-input.md
+      - name: 定義事件
+        href: defining-an-event-in-windows-forms-controls.md
+    - name: Windows Form 控制項中的屬性
+      href: attributes-in-windows-forms-controls.md
+      items:
+      - name: 作法：在 Windows Forms 控制項中套用屬性
+        href: how-to-apply-attributes-in-windows-forms-controls.md
+    - name: 自訂控制項繪製和轉譯
+      href: custom-control-painting-and-rendering.md
+      items:
+      - name: 呈現 Windows Form 控制項
+        href: rendering-a-windows-forms-control.md
+      - name: 使用者自訂描繪控制項
+        href: user-drawn-controls.md
+      - name: 組成控制項
+        href: constituent-controls.md
+      - name: 作法：在執行階段隱藏控制項
+        href: how-to-make-your-control-invisible-at-run-time.md
+      - name: 作法：為控制項提供透明背景
+        href: how-to-give-your-control-a-transparent-background.md
+      - name: 使用視覺化樣式呈現控制項
+        href: rendering-controls-with-visual-styles.md
+        items:
+        - name: 作法：使用控制項呈現類別
+          href: how-to-use-a-control-rendering-class.md
+        - name: 作法：呈現視覺化樣式項目
+          href: how-to-render-a-visual-style-element.md
+    - name: Windows Form 控制項中的配置
+      href: layout-in-windows-forms-controls.md
+      items:
+      - name: AutoSize 屬性概觀
+        href: autosize-property-overview.md
+      - name: 作法：將控制項對齊表單邊緣
+        href: how-to-align-a-control-to-the-edges-of-forms.md
+      - name: Windows Form 控制項的邊界和邊框距離
+        href: margin-and-padding-in-windows-forms-controls.md
+      - name: 作法：使用邊框間距在 Windows Forms 控制項周圍建立框線
+        href: how-to-create-a-border-around-a-windows-forms-control-using-padding.md
+      - name: 作法：實作自訂配置引擎
+        href: how-to-implement-a-custom-layout-engine.md
+    - name: 在 Windows Form 控制項中的多執行緒
+      href: multithreading-in-windows-forms-controls.md
+      items:
+      - name: 作法：對 Windows Forms 控制項進行安全執行緒呼叫
+        href: how-to-make-thread-safe-calls-to-windows-forms-controls.md
+      - name: 作法：使用背景執行緒搜尋檔案
+        href: how-to-use-a-background-thread-to-search-for-files.md
+  - name: 依函式列出 .NET Framework 中的 Windows Forms 控制項
+    href: windows-forms-controls-by-function.md
+  - name: 在設計階段開發 Windows Form 控制項
+    href: developing-windows-forms-controls-at-design-time.md
+    items:
+    - name: 逐步解說：使用 Visual Basic 撰寫複合控制項
+      href: walkthrough-authoring-a-composite-control-with-visual-basic.md
+    - name: 逐步解說：使用 Visual C# 撰寫複合控制項
+      href: walkthrough-authoring-a-composite-control-with-visual-csharp.md
+    - name: 逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項
+      href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md
+    - name: 逐步解說：使用 Visual C# 繼承 Windows Forms 控制項
+      href: walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md
+    - name: 逐步解說：使用 Windows Forms 控制項的智慧標籤執行一般工作
+      href: performing-common-tasks-using-smart-tags-on-wf-controls.md
+    - name: 逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
+      href: serializing-collections-designerserializationvisibilityattribute.md
+    - name: 逐步解說：在設計階段偵錯自訂 Windows Forms 控制項
+      href: walkthrough-debugging-custom-windows-forms-controls-at-design-time.md
+    - name: 逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項
+      href: creating-a-wf-control-design-time-features.md
+    - name: 作法：撰寫 Windows Forms 的控制項
+      href: how-to-author-controls-for-windows-forms.md
+    - name: 作法：撰寫複合控制項
+      href: how-to-author-composite-controls.md
+    - name: 作法：繼承 UserControl 類別
+      href: how-to-inherit-from-the-usercontrol-class.md
+    - name: 作法：繼承現有的 Windows Forms 控制項
+      href: how-to-inherit-from-existing-windows-forms-controls.md
+    - name: 作法：繼承控制項類別
+      href: how-to-inherit-from-the-control-class.md
+    - name: 作法：在設計階段將控制項對齊表單邊緣
+      href: how-to-align-a-control-to-the-edges-of-forms-at-design-time.md
+    - name: 作法：在 [選擇工具箱項目] 對話方塊中顯示控制項
+      href: how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md
+    - name: 作法：提供控制項的工具箱點陣圖
+      href: how-to-provide-a-toolbox-bitmap-for-a-control.md
+    - name: 作法：測試 UserControl 的執行階段行為
+      href: how-to-test-the-run-time-behavior-of-a-usercontrol.md
+    - name: Windows Form 設計工具的設計階段錯誤
+      href: design-time-errors-in-the-windows-forms-designer.md
+    - name: 控制項和元件撰寫疑難排解
+      href: troubleshooting-control-and-component-authoring.md
+ms.openlocfilehash: b61b1fa3f7e772db4bd29f1ce34e1df76b325831
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58468252"
