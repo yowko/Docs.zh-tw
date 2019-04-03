@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID70
 ms.assetid: 71f46756-f522-4814-aab4-492bf9924245
-ms.openlocfilehash: 43ec20382a2043868fb54e2f472cb316ebfbd623
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d904ee48ee187d073647b6e09af57264c8c318f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717827"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813947"
 ---
 # <a name="permission-denied-visual-basic"></a>使用權限遭拒 (Visual Basic)
 已嘗試寫入防寫保護的磁碟，或存取鎖定的檔案。  
@@ -23,4 +23,5 @@ ms.locfileid: "54717827"
 3.  若要存取登錄，請檢查您的使用者權限包含這種類型的登錄存取權。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

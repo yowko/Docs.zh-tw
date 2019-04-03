@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], creating XML
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
-ms.openlocfilehash: a9131e62ad0a4f55a88c15a8e0efa9189026eca3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615477"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813037"
 ---
 # <a name="creating-xml-in-visual-basic"></a>在 Visual Basic 中建立 XML
 Visual Basic 可讓您使用*XML 常值*直接在您的程式碼中。 XML 常值語法表示[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件，而且這是類似於 XML 1.0 語法。 這可讓您更輕鬆地以程式設計方式建立 XML 項目、 文件和片段，因為您的程式碼有相同的結構，為最後的 XML。  
@@ -29,4 +29,5 @@ Visual Basic 可讓您使用*XML 常值*直接在您的程式碼中。 XML 常�
 |[宣告的 XML 項目和屬性的名稱](../../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)|描述 XML 元素和屬性命名指導方針。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
