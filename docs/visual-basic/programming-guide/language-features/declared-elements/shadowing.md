@@ -18,12 +18,12 @@ helpviewer_keywords:
 - objects [Visual Basic], names
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
-ms.openlocfilehash: 15c7112f7e318542859162655c78e19558178e5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411001"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839388"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic 中的遮蔽功能
 當兩個程式設計項目共用相同的名稱時，可以隱藏其中一個，或是*陰影*，另一個。 在這種情況下，遮蔽的項目不是可供參考。相反地，當您的程式碼使用的項目名稱時，Visual Basic 編譯器解析遮蔽的項目。  
@@ -138,6 +138,7 @@ End Class
  在上述範例中，變數`basObj`宣告的基底類別。 指派`dervCls`給它的物件會構成擴展轉換，因此有效。 不過，基底類別無法存取變數的遮蔽版本`z`在衍生類別中，因此編譯器會解析`basObj.z`原始基底類別值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
 - [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

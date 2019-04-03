@@ -11,12 +11,12 @@ helpviewer_keywords:
 - procedure parameters
 - parameters [Visual Basic], definition
 ms.assetid: c237c056-74f4-4749-9f2c-15864f139a31
-ms.openlocfilehash: ec7c92975bc056fd740033b602b15cd1611c44d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a69b956c7cffcc2a26916d6fc92f23dd4e2322d7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694031"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838972"
 ---
 # <a name="differences-between-parameters-and-arguments-visual-basic"></a>參數和引數之間的差異 (Visual Basic)
 在大部分情況下，程序必須有一些情況在其中呼叫的相關資訊。 執行重複或共用工作的程序會針對每個呼叫中使用不同的資訊。 這項資訊是由變數、 常數和您傳遞至程序時呼叫它的運算式所組成。  
@@ -38,6 +38,7 @@ ms.locfileid: "54694031"
  相較於參數定義引數不會有名稱。 每個引數是運算式，其中可以包含零或多個變數、 常數和常值。 評估的運算式的資料類型通常應該符合定義之對應參數的資料類型，並在任何情況下，都必須是將它轉換成參數類型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)

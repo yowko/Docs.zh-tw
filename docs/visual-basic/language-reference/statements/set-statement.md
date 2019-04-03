@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: c6bb924a3c41e1c586f66c9473a94d1971ee262f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973765"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839076"
 ---
 # <a name="set-statement-visual-basic"></a>Set 陳述式 (Visual Basic)
 宣告`Set`用來將值指派給屬性的屬性程序。  
@@ -88,6 +88,7 @@ End Set
  [!code-vb[VbVbalrStatements#55](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#55)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Get 陳述式](../../../visual-basic/language-reference/statements/get-statement.md)
 - [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)
 - [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)

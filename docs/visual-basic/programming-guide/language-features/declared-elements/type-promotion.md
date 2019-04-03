@@ -10,12 +10,12 @@ helpviewer_keywords:
 - type promotion
 - declared elements [Visual Basic], visibility
 ms.assetid: 035eeb15-e4c5-4288-ab3c-6bd5d22f7051
-ms.openlocfilehash: b00fdd563a6599b3acfaaafa229fdef9400e57b6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f7ac6bfb944da8bd50e035ba97b2b513176dc661
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969189"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838868"
 ---
 # <a name="type-promotion-visual-basic"></a>類型提升 (Visual Basic)
 當您宣告的模組中的程式設計項目時，Visual Basic 升級其範圍包含模組的命名空間。 這就所謂*類型提升*。  
@@ -59,6 +59,7 @@ ms.locfileid: "56969189"
 -   **完整的限定性條件。** 當您使用的模組和相同的命名空間中的其他項目時，最安全的方法就是一律使用完整限定性條件，針對所有的程式設計項目。 如果型別提升將無效的模組成員，而且您未完整限定該成員，您可能不小心存取不同的程式設計項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Module 陳述式](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [Namespace 陳述式](../../../../visual-basic/language-reference/statements/namespace-statement.md)
 - [Partial](../../../../visual-basic/language-reference/modifiers/partial.md)

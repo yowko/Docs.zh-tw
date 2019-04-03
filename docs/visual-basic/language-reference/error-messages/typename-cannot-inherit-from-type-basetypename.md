@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: 226c85f887ecc706a5cb554c2163742f10896141
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269818"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838946"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<類型名稱 >' 無法繼承自\<類型 >'\<基 >' 因為它會展開基底存取\<類型 > 外部組件
 類別或介面繼承自基底類別或介面，但具有較不嚴格的存取層級。  
@@ -30,6 +30,7 @@ ms.locfileid: "55269818"
 -   如果您需要較不嚴格的存取層級時，移除`Inherits`陳述式。 您無法繼承自更具限制性的基底類別或介面。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Interface 陳述式](../../../visual-basic/language-reference/statements/interface-statement.md)
 - [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
