@@ -4,25 +4,25 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974246"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836855"
 ---
-# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="e7d01-102">HOW TO：建立 XML 常值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e7d01-102">How to: Create XML Literals (Visual Basic)</span></span>
-<span data-ttu-id="e7d01-103">您可以直接在程式碼中建立 XML 文件、 片段中或項目，藉由使用 XML 常值。</span><span class="sxs-lookup"><span data-stu-id="e7d01-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="e7d01-104">本主題中的範例將示範如何建立 XML 項目具有三個子項目，以及如何建立 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="e7d01-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
+# <a name="how-to-create-xml-literals-visual-basic"></a><span data-ttu-id="80a2b-102">HOW TO：建立 XML 常值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="80a2b-102">How to: Create XML Literals (Visual Basic)</span></span>
+<span data-ttu-id="80a2b-103">您可以直接在程式碼中建立 XML 文件、 片段中或項目，藉由使用 XML 常值。</span><span class="sxs-lookup"><span data-stu-id="80a2b-103">You can create an XML document, fragment, or element directly in code by using an XML literal.</span></span> <span data-ttu-id="80a2b-104">本主題中的範例將示範如何建立 XML 項目具有三個子項目，以及如何建立 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="80a2b-104">The examples in this topic demonstrate how to create an XML element that has three child elements, and how to create an XML document.</span></span>  
   
- <span data-ttu-id="e7d01-105">您也可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 來建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。</span><span class="sxs-lookup"><span data-stu-id="e7d01-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="e7d01-106">如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="e7d01-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
+ <span data-ttu-id="80a2b-105">您也可以使用[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]Api 來建立[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]物件。</span><span class="sxs-lookup"><span data-stu-id="80a2b-105">You can also use the [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] APIs to create [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] objects.</span></span> <span data-ttu-id="80a2b-106">如需詳細資訊，請參閱<xref:System.Xml.Linq.XElement>。</span><span class="sxs-lookup"><span data-stu-id="80a2b-106">For more information, see <xref:System.Xml.Linq.XElement>.</span></span>  
   
-### <a name="to-create-an-xml-element"></a><span data-ttu-id="e7d01-107">若要建立的 XML 項目</span><span class="sxs-lookup"><span data-stu-id="e7d01-107">To create an XML element</span></span>  
+### <a name="to-create-an-xml-element"></a><span data-ttu-id="80a2b-107">若要建立的 XML 項目</span><span class="sxs-lookup"><span data-stu-id="80a2b-107">To create an XML element</span></span>  
   
--   <span data-ttu-id="e7d01-108">使用 XML 常值語法，與實際的 XML 語法相同，以建立內嵌的 XML。</span><span class="sxs-lookup"><span data-stu-id="e7d01-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
+-   <span data-ttu-id="80a2b-108">使用 XML 常值語法，與實際的 XML 語法相同，以建立內嵌的 XML。</span><span class="sxs-lookup"><span data-stu-id="80a2b-108">Create the XML inline by using the XML literal syntax, which is the same as the actual XML syntax.</span></span>  
   
      [!code-vb[VbXMLSamples#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples2.vb#5)]  
   
-     <span data-ttu-id="e7d01-109">執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="e7d01-109">Run the code.</span></span> <span data-ttu-id="e7d01-110">此程式碼的輸出為：</span><span class="sxs-lookup"><span data-stu-id="e7d01-110">The output of this code is:</span></span>  
+     <span data-ttu-id="80a2b-109">執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="80a2b-109">Run the code.</span></span> <span data-ttu-id="80a2b-110">此程式碼的輸出為：</span><span class="sxs-lookup"><span data-stu-id="80a2b-110">The output of this code is:</span></span>  
   
      `<contact>`  
   
@@ -34,13 +34,13 @@ ms.locfileid: "56974246"
   
      `</contact>`  
   
-### <a name="to-create-an-xml-document"></a><span data-ttu-id="e7d01-111">若要建立 XML 文件</span><span class="sxs-lookup"><span data-stu-id="e7d01-111">To create an XML document</span></span>  
+### <a name="to-create-an-xml-document"></a><span data-ttu-id="80a2b-111">若要建立 XML 文件</span><span class="sxs-lookup"><span data-stu-id="80a2b-111">To create an XML document</span></span>  
   
--   <span data-ttu-id="e7d01-112">建立內嵌的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="e7d01-112">Create the XML document inline.</span></span> <span data-ttu-id="e7d01-113">下列程式碼會建立 XML 文件常值語法，XML 宣告、 處理指示、 註解，和此項目包含另一個項目。</span><span class="sxs-lookup"><span data-stu-id="e7d01-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
+-   <span data-ttu-id="80a2b-112">建立內嵌的 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="80a2b-112">Create the XML document inline.</span></span> <span data-ttu-id="80a2b-113">下列程式碼會建立 XML 文件常值語法，XML 宣告、 處理指示、 註解，和此項目包含另一個項目。</span><span class="sxs-lookup"><span data-stu-id="80a2b-113">The following code creates an XML document that has literal syntax, an XML declaration, a processing instruction, a comment, and an element that contains another element.</span></span>  
   
      [!code-vb[VbXMLSamples#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#30)]  
   
-     <span data-ttu-id="e7d01-114">執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="e7d01-114">Run the code.</span></span> <span data-ttu-id="e7d01-115">此程式碼的輸出為：</span><span class="sxs-lookup"><span data-stu-id="e7d01-115">The output of this code is:</span></span>  
+     <span data-ttu-id="80a2b-114">執行程式碼。</span><span class="sxs-lookup"><span data-stu-id="80a2b-114">Run the code.</span></span> <span data-ttu-id="80a2b-115">此程式碼的輸出為：</span><span class="sxs-lookup"><span data-stu-id="80a2b-115">The output of this code is:</span></span>  
   
      `<?xml-stylesheet type="text/xsl" href="show_book.xsl"?>`  
   
@@ -52,8 +52,9 @@ ms.locfileid: "56974246"
   
      `</books>`  
   
-## <a name="see-also"></a><span data-ttu-id="e7d01-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e7d01-116">See also</span></span>
-- [<span data-ttu-id="e7d01-117">XML</span><span class="sxs-lookup"><span data-stu-id="e7d01-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [<span data-ttu-id="e7d01-118">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="e7d01-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
-- [<span data-ttu-id="e7d01-119">XML 項目常值</span><span class="sxs-lookup"><span data-stu-id="e7d01-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
-- [<span data-ttu-id="e7d01-120">XML 文件常值</span><span class="sxs-lookup"><span data-stu-id="e7d01-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+## <a name="see-also"></a><span data-ttu-id="80a2b-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="80a2b-116">See also</span></span>
+
+- [<span data-ttu-id="80a2b-117">XML</span><span class="sxs-lookup"><span data-stu-id="80a2b-117">XML</span></span>](../../../../visual-basic/programming-guide/language-features/xml/index.md)
+- [<span data-ttu-id="80a2b-118">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="80a2b-118">Creating XML in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="80a2b-119">XML 項目常值</span><span class="sxs-lookup"><span data-stu-id="80a2b-119">XML Element Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)
+- [<span data-ttu-id="80a2b-120">XML 文件常值</span><span class="sxs-lookup"><span data-stu-id="80a2b-120">XML Document Literal</span></span>](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)

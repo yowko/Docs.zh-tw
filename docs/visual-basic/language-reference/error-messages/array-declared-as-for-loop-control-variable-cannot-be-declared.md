@@ -7,17 +7,17 @@ f1_keywords:
 helpviewer_keywords:
 - BC32039
 ms.assetid: 1d8b6560-c9eb-4b71-a038-24c6f5a5ce46
-ms.openlocfilehash: d8fe794adcc1c2d28437bac7e732f99a6b6c07c0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bee3bcd3701945f5cf77f6761defc8be77acf49f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518614"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843574"
 ---
-# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="ec737-102">宣告為 for 迴圈控制變數的陣列不能宣告它的初始大小</span><span class="sxs-lookup"><span data-stu-id="ec737-102">Array declared as for loop control variable cannot be declared with an initial size</span></span>
-<span data-ttu-id="ec737-103">A`For Each`迴圈會使用陣列做為其*項目*反覆運算變數但初始化該陣列。</span><span class="sxs-lookup"><span data-stu-id="ec737-103">A `For Each` loop uses an array as its *element* iteration variable but initializes that array.</span></span>  
+# <a name="array-declared-as-for-loop-control-variable-cannot-be-declared-with-an-initial-size"></a><span data-ttu-id="7d98f-102">宣告為 for 迴圈控制變數的陣列不能宣告它的初始大小</span><span class="sxs-lookup"><span data-stu-id="7d98f-102">Array declared as for loop control variable cannot be declared with an initial size</span></span>
+<span data-ttu-id="7d98f-103">A`For Each`迴圈會使用陣列做為其*項目*反覆運算變數但初始化該陣列。</span><span class="sxs-lookup"><span data-stu-id="7d98f-103">A `For Each` loop uses an array as its *element* iteration variable but initializes that array.</span></span>  
   
- <span data-ttu-id="ec737-104">下列陳述式會顯示可以產生此錯誤的方式。</span><span class="sxs-lookup"><span data-stu-id="ec737-104">The following statements show how this error can be generated.</span></span>  
+ <span data-ttu-id="7d98f-104">下列陳述式會顯示可以產生此錯誤的方式。</span><span class="sxs-lookup"><span data-stu-id="7d98f-104">The following statements show how this error can be generated.</span></span>  
   
 ```  
 Dim arrayList As New List(Of Integer())  
@@ -25,15 +25,16 @@ For Each listElement() As Integer In arrayList
 For Each listElement(1) As Integer In arrayList  
 ```  
   
- <span data-ttu-id="ec737-105">第一個`For Each`陳述式是正確的方式來存取元素的`arrayList`。</span><span class="sxs-lookup"><span data-stu-id="ec737-105">The first `For Each` statement is the correct way to access elements of `arrayList`.</span></span> <span data-ttu-id="ec737-106">第二個`For Each`陳述式會產生這個錯誤。</span><span class="sxs-lookup"><span data-stu-id="ec737-106">The second `For Each` statement generates this error.</span></span>  
+ <span data-ttu-id="7d98f-105">第一個`For Each`陳述式是正確的方式來存取元素的`arrayList`。</span><span class="sxs-lookup"><span data-stu-id="7d98f-105">The first `For Each` statement is the correct way to access elements of `arrayList`.</span></span> <span data-ttu-id="7d98f-106">第二個`For Each`陳述式會產生這個錯誤。</span><span class="sxs-lookup"><span data-stu-id="7d98f-106">The second `For Each` statement generates this error.</span></span>  
   
- <span data-ttu-id="ec737-107">**錯誤 ID:** BC32039</span><span class="sxs-lookup"><span data-stu-id="ec737-107">**Error ID:** BC32039</span></span>  
+ <span data-ttu-id="7d98f-107">**錯誤 ID:** BC32039</span><span class="sxs-lookup"><span data-stu-id="7d98f-107">**Error ID:** BC32039</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="ec737-108">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="ec737-108">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="7d98f-108">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="7d98f-108">To correct this error</span></span>  
   
--   <span data-ttu-id="ec737-109">從宣告中移除初始化*項目*反覆運算變數。</span><span class="sxs-lookup"><span data-stu-id="ec737-109">Remove the initialization from the declaration of the *element* iteration variable.</span></span>  
+-   <span data-ttu-id="7d98f-109">從宣告中移除初始化*項目*反覆運算變數。</span><span class="sxs-lookup"><span data-stu-id="7d98f-109">Remove the initialization from the declaration of the *element* iteration variable.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ec737-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ec737-110">See also</span></span>
-- [<span data-ttu-id="ec737-111">For...Next 陳述式</span><span class="sxs-lookup"><span data-stu-id="ec737-111">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
-- [<span data-ttu-id="ec737-112">陣列</span><span class="sxs-lookup"><span data-stu-id="ec737-112">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [<span data-ttu-id="ec737-113">集合</span><span class="sxs-lookup"><span data-stu-id="ec737-113">Collections</span></span>](../../../standard/collections/index.md)
+## <a name="see-also"></a><span data-ttu-id="7d98f-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7d98f-110">See also</span></span>
+
+- [<span data-ttu-id="7d98f-111">For...Next 陳述式</span><span class="sxs-lookup"><span data-stu-id="7d98f-111">For...Next Statement</span></span>](../../../visual-basic/language-reference/statements/for-next-statement.md)
+- [<span data-ttu-id="7d98f-112">陣列</span><span class="sxs-lookup"><span data-stu-id="7d98f-112">Arrays</span></span>](../../../visual-basic/programming-guide/language-features/arrays/index.md)
+- [<span data-ttu-id="7d98f-113">集合</span><span class="sxs-lookup"><span data-stu-id="7d98f-113">Collections</span></span>](../../../standard/collections/index.md)
