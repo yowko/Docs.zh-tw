@@ -7,12 +7,12 @@ helpviewer_keywords:
 - descendent axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: aabfa258-4112-4e7e-bab9-403f96072ef7
-ms.openlocfilehash: 1edbbc052bbf319d91f1f944451312e7d67594ca
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bfbf849bd296f639f03580346e4a9c52ce000abd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973856"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832212"
 ---
 # <a name="how-to-access-xml-descendant-elements-visual-basic"></a>HOW TO：存取 XML 子代項目 (Visual Basic)
 此範例示範如何使用 descendant 軸屬性來存取所有的 XML 項目中具有指定的名稱，以及包含在 XML 項目。 特別是，它會使用`Value`屬性的第一個項目值取得集合中`name`子代 axis 屬性會傳回。 `name`子代 axis 屬性會取得名為的所有項目`name`包含在`contacts`物件。 此範例也會使用`phone`子代 axis 屬性來存取名為的所有下階`phone`包含在`contacts`物件。  
@@ -23,10 +23,10 @@ ms.locfileid: "56973856"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  
   
--   
-  <xref:System.Xml.Linq> 命名空間的參考。  
+-   <xref:System.Xml.Linq> 命名空間的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A?displayProperty=nameWithType>
 - [XML 子系軸屬性](../../../../visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md)
 - [XML Value 屬性](../../../../visual-basic/language-reference/xml-axis/xml-value-property.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: ab9dd9e3f9abdd8379a59ed458c47d5ec8b4f2ad
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978965"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837087"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>HOW TO：呼叫運算子程序 (Visual Basic)
 您可以在運算式中使用運算子符號，以呼叫運算子程序。 轉換運算子，在您呼叫[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)將值從一種資料類型轉換到另一個。  
@@ -54,6 +54,7 @@ ms.locfileid: "56978965"
  請務必在類別或您使用的結構會定義您想要使用的運算子。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [運算子程序](./operator-procedures.md)
 - [如何：定義運算子](./how-to-define-an-operator.md)
 - [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)

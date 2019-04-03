@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID14
 ms.assetid: 16681c75-a400-422d-9351-c691d3c7614e
-ms.openlocfilehash: 371159684d34b1e13751d4a3109fb7efa5c1a255
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 303f7926279c320059a3eb7c7b023af63c5001bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521643"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821279"
 ---
 # <a name="out-of-string-space-visual-basic"></a>超出字串空間 (Visual Basic)
 使用 Visual Basic 中，您可以使用非常大的字串。 不過，其他程式和與字串搭配您的工作方式的需求，仍有可能導致此錯誤。  
@@ -21,5 +21,6 @@ ms.locfileid: "54521643"
 2.  從建立更多空間的記憶體中移除任何不必要的應用程式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)
 - [字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - As keyword [Visual Basic], statement syntax
 - As keyword [Visual Basic]
 ms.assetid: b4281ec8-2be5-49f7-aae8-ae0a96265b0d
-ms.openlocfilehash: 893df117ce6ead444ef1da262782cc271102f4d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b0ebbb6a86cc2c71882427afd33e7d9e0fe7a04
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672262"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826531"
 ---
 # <a name="as-clause-visual-basic"></a>As 子句 (Visual Basic)
 導入了`As`子句中，用來識別宣告陳述式或泛型類型參數的條件約束清單中的資料類型。  
@@ -60,6 +60,7 @@ ms.locfileid: "54672262"
  [再試...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [如何：建立新的變數](../../../visual-basic/programming-guide/language-features/variables/how-to-create-a-new-variable.md)
 - [資料類型](../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [變數宣告](../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

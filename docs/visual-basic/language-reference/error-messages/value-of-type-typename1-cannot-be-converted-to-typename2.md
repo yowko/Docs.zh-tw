@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: cd2f6e4b51bc327826301d3c7b39c97a4bed3793
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261239"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829016"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'
 類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 型別不相符可能是因為混用了檔案參考和組件的專案參考的 '\<組件名稱 >'。 請嘗試更換的檔案參考 '\<檔案路徑 >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
@@ -60,6 +60,6 @@ ms.locfileid: "55261239"
 -   變更的專案參考的檔案參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
-

@@ -2,12 +2,12 @@
 title: LINQ to XML (Visual Basic) 的 XPath 使用者適用的
 ms.date: 07/20/2015
 ms.assetid: 0e64911c-a7cc-4c20-b927-ca99078b5656
-ms.openlocfilehash: 598acfa41d9644a07a553a2f6e8948bbf2fe3b77
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 13c23eec1261700b15bea7f92f6c50e9231e900a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824243"
 ---
 # <a name="linq-to-xml-for-xpath-users-visual-basic"></a>LINQ to XML (Visual Basic) 的 XPath 使用者適用的
 
@@ -15,7 +15,7 @@ ms.locfileid: "55066252"
   
  所有範例都使用 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 中，<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> 的擴充方法所提供的 XPath 功能。 這些範例會同時執行 XPath 運算式與 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 運算式。 接著，每個範例都會比較兩個查詢的結果，以驗證 XPath 運算式在功能上等同於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢。 由於兩種類型的查詢都會從相同的 XML 樹狀結構傳回節點，因此會使用參考識別進行查詢結果比較。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -38,6 +38,7 @@ ms.locfileid: "55066252"
 |[如何：尋找正前面的同層級 (XPATH-LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md)|比較如何使用 XPath 和 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 尋找節點正前面的同層級。<br /><br /> 相關聯的 XPath 運算式為：`"preceding-sibling::*[1]"`|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xml.XPath?displayProperty=nameWithType>
 - [查詢 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
 - [使用 XPath 資料模型處理 XML 資料](../../../../standard/data/xml/process-xml-data-using-the-xpath-data-model.md)

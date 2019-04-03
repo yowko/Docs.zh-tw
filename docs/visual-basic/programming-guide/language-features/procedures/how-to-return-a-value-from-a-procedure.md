@@ -6,12 +6,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 45f175de647887a406f8ae87dae492a5fe58cca9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 293234346053034b544866b6a2eff84974d8a02b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976729"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824555"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>HOW TO：傳回值，從程序 (Visual Basic)
 A`Function`程序傳回值給呼叫程式碼藉由執行`Return`陳述式或遇到`Exit Function`或`End Function`陳述式。  
@@ -45,6 +45,7 @@ A`Function`程序傳回值給呼叫程式碼藉由執行`Return`陳述式或遇�
      如需詳細資訊和範例，請參閱 「 傳回的值 」 中[Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
 - [屬性程序](./property-procedures.md)

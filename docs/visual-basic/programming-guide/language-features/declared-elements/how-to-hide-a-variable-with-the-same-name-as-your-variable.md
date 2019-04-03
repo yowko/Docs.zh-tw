@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], referencing
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
-ms.openlocfilehash: a770167bca0dc3538c828bfcc8a8de4ef86e80c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8a7eda2a636d7f89131d140c82ad4f3c4743211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602412"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826674"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>HOW TO：隱藏與您的變數 (Visual Basic) 同名的變數
 您可以隱藏變數*遮蔽*它，也就是藉由重新定義它，以相同名稱的變數。 您可以遮蔽您想要隱藏有兩種的變數：  
@@ -104,6 +104,7 @@ ms.locfileid: "54602412"
  遮蔽導入了一個以上的版本，具有相同名稱的變數。 當程式碼陳述式參考的變數名稱時，編譯器會解析參考的版本取決於因素，例如程式碼陳述式的位置和限定的字串存在。 這樣可以增加參考到非預期的版本的受遮蔽變數的風險。 您可以降低風險，來完整限定遮蔽變數的所有參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [遮蔽和覆寫的差異](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

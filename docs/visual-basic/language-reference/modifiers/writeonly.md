@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: b6c8a05a4575c5d1ec01aa1b2badf2129c54bc2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522774"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829018"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 指定可寫入屬性，但無法讀取。  
@@ -49,6 +49,7 @@ ms.locfileid: "54522774"
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

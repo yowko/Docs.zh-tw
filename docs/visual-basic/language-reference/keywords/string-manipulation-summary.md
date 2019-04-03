@@ -6,12 +6,12 @@ helpviewer_keywords:
 - manipulating strings [Visual Basic]
 - strings [Visual Basic], manipulating
 ms.assetid: 5d3197eb-fe66-417e-9e2a-20450660c9c6
-ms.openlocfilehash: 120a0a8d55107e8bd1fb4318da190be0a3647aac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: db57633e2de0c4ae898c242ea754c5f5c2fcd211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543967"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841130"
 ---
 # <a name="string-manipulation-summary-visual-basic"></a>字串操作摘要 (Visual Basic)
 Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  
@@ -33,5 +33,6 @@ Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並�
 |傳回指定的數目的子字串。|<xref:Microsoft.VisualBasic.Strings.Split%2A>、 <xref:Microsoft.VisualBasic.Strings.Join%2A>|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

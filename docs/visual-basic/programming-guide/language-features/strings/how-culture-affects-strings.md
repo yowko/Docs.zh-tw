@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: b9e9b4e199e4504e21b365706ea60d63c9d5fb87
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980941"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834617"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>在 Visual Basic 中文化特性如何影響字串
 此說明頁面討論 Visual Basic 來執行字串轉換及比較所使用的文化特性資訊。  
@@ -79,6 +79,7 @@ ms.locfileid: "56980941"
  如果您的應用程式進行比較或大小寫變更作業的結果為基礎的安全性決策，則作業應該使用<xref:System.String.Compare%2A?displayProperty=nameWithType>方法，然後傳遞`Ordinal`或是`OrdinalIgnoreCase`如`comparisonType`引數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Globalization.CultureInfo>
 - [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [類型轉換函式](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)

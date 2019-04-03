@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 26a987543cdd80e7e3075dd4d0a04de69b51e465
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964914"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843405"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>HOW TO：宣告常數 (Visual Basic)
 您使用`Const`陳述式來宣告常數，並將其值設定。 藉由宣告為常數，您可以指派有意義的名稱的值。 一旦宣告為常數，它無法修改或指派新值。  
@@ -66,6 +66,7 @@ ms.locfileid: "56964914"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [常數和常值資料類型](constant-and-literal-data-types.md)
 - [常數的概觀](constants-overview.md)

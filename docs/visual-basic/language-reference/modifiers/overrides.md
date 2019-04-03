@@ -13,12 +13,12 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 - properties [Visual Basic], overriding
 ms.assetid: 9f5e6144-ce10-465e-842b-1a8f8760af90
-ms.openlocfilehash: dbcd0625cdbcd06affc495ca29972c6c183c10f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9eb19bf5e89b12a32cae28b2c087570acc10f3ad
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582076"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826583"
 ---
 # <a name="overrides-visual-basic"></a>Overrides (Visual Basic)
 指定屬性或程序會覆寫繼承自基底類別的同名屬性或程序。  
@@ -37,9 +37,9 @@ ms.locfileid: "54582076"
   
     -   存取層級  
   
-    -   傳回型別 (如果有的話)  
+    -   傳回類型 (如果有的話)  
   
--   **泛型簽章。** 在泛型程序中，簽章包含型別參數的個數。 因此，覆寫宣告在這方面也必須符合基底類別版本。  
+-   **泛型簽章。** 在泛型程序中，簽章包含類型參數的個數。 因此，覆寫宣告在這方面也必須符合基底類別版本。  
   
 -   **其他符合。** 除了符合簽章的基底類別版本，此宣告在下列方面也必須符合它：  
   
@@ -47,7 +47,7 @@ ms.locfileid: "54582076"
   
     -   傳遞機制，每個參數 ([ByVal](../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../visual-basic/language-reference/modifiers/byref.md))  
   
-    -   泛型程序的每個型別參數的條件約束清單  
+    -   泛型程序的每個類型參數的條件約束清單  
   
 -   **遮蔽和覆寫。** 遮蔽和覆寫都會重新定義繼承的項目，但這兩種方法之間有顯著的差異。 如需詳細資訊，請參閱 < [Visual Basic 中的遮蔽功能](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)。  
   
@@ -62,6 +62,7 @@ ms.locfileid: "54582076"
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [MustOverride](../../../visual-basic/language-reference/modifiers/mustoverride.md)
 - [NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)
 - [Overridable](../../../visual-basic/language-reference/modifiers/overridable.md)

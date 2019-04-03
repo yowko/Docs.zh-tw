@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], access levels
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
-ms.openlocfilehash: d2b1a80863fe29901554b4912acbbfbdfdab4122
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aa0c71621b72d01067db0749a0678b706d13fbfa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972578"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832121"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>HOW TO：宣告混合的存取層級 (Visual Basic) 的屬性
 如果您想`Get`並`Set`有不同的存取層級屬性的程序，您可以使用中的更寬鬆的層級`Property`陳述式並在更嚴格的層級`Get`或`Set`陳述式。 當您想要能夠取得屬性的值，程式碼的特定組件和其他部分的程式碼能夠將值變更時，您可以使用在屬性上的混合的存取層級。  
@@ -35,6 +35,7 @@ ms.locfileid: "56972578"
      在上述範例中，`Get`程序中的相同`Protected`屬性本身的存取權時`Set`程序中的`Private`存取。 類別衍生自`employee`可以讀取`salary`值，但僅限`employee`類別也可以設定它。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

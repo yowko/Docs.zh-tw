@@ -2,12 +2,12 @@
 title: 通用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
-ms.openlocfilehash: 9c9e8ba886697b9306a89caed4944fd2752db835
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375398"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834529"
 ---
 # <a name="common-attributes-visual-basic"></a>通用屬性 (Visual Basic)
 本主題說明在 Visual Basic 程式中最常用的屬性。  
@@ -255,6 +255,7 @@ End Structure
  使用`VBFixedArrayAttribute`宣告為固定大小的陣列。 例如 Visual Basic 字串陣列是預設的可變長度。 這個屬性會序列化，或將資料寫入至檔案時很有用。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)

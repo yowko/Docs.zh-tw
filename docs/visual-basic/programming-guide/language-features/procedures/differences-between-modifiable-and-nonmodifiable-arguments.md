@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
-ms.openlocfilehash: 06f3009d984f7a303a0ee6e8d529a3ff60900fbc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498673"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826661"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>可修改引數和不可修改引數之間的差異 (Visual Basic)
 當您呼叫程序時，您通常會傳遞一或多個引數給它。 每個引數會對應至基礎的程式設計項目。 基礎元素及引數本身可以是可修改或不可修改。  
@@ -38,6 +38,7 @@ ms.locfileid: "54498673"
  呼叫的程序可能會修改為不可修改引數，其本機複本，但該修改並不會影響呼叫端程式碼對應的項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)

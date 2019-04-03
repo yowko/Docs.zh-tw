@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID424
 ms.assetid: afdc660b-81a5-4c92-ac7e-9c3a3105fc16
-ms.openlocfilehash: 9a617c9f2982fe251ff95426938b9800b201df53
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5afbfd19e298b14ac53c134f989e2ee22769910f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718282"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837443"
 ---
 # <a name="object-required-visual-basic"></a>必須提供物件 (Visual Basic)
 屬性和方法的參考，通常需要指定明確的物件識別碼。 這是這種情況。  
@@ -25,4 +25,5 @@ ms.locfileid: "54718282"
 4.  檢查物件的文件，並確定是有效的動作。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [錯誤類型](../../../visual-basic/programming-guide/language-features/error-types.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Info object
 ms.assetid: 2eb2aa5f-303d-426c-918d-989c8b7b08d0
-ms.openlocfilehash: 4d187d171aa90ae1067078f7540a18f39c3508a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ef633b8e9fcbfb815c8cd8296fecac3e7c4b041
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54685649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834580"
 ---
 # <a name="mycomputerinfo-object"></a>My.Computer.Info 物件
 提供屬性，以取得電腦的記憶體、已載入組件、名稱和作業系統的相關資訊。  
@@ -25,4 +25,5 @@ ms.locfileid: "54685649"
  **組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Computer 物件](../../../visual-basic/language-reference/objects/my-computer-object.md)

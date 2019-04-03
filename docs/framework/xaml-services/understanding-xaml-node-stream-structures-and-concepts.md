@@ -6,12 +6,12 @@ helpviewer_keywords:
 - nodes [XAML Services], XAML node stream
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
-ms.openlocfilehash: e75d7f9454018b4a5f31eb36f1790d3a7b49af78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58034755"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824425"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>認識 XAML 節點資料流結構和概念
 
@@ -70,7 +70,7 @@ while (xxr.Read()) {
 }
 ```
 
-這個載入路徑 XAML 節點迴圈的基本範例以透通方式連接 XAML 讀取器和 XAML 寫入器，所執行的動作和您使用 <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType> 來進行時並無不同。 但是這個基本結構到時會展開，以套用至您的讀取或寫入情節。 部分可能的情節如下：
+這個載入路徑 XAML 節點迴圈的基本範例以透通方式連接 XAML 讀取器和 XAML 寫入器，所執行的動作和您使用 <xref:System.Xaml.XamlServices.Parse%2A?displayProperty=nameWithType>來進行時並無不同。 但是這個基本結構到時會展開，以套用至您的讀取或寫入情節。 部分可能的情節如下：
 
 - 在 <xref:System.Xaml.XamlXmlReader.NodeType%2A>上切換。 依據所讀取的節點類型，執行不同的動作。
 
@@ -188,7 +188,7 @@ public class GameBoard {
 
 `EndObject` 符合 `GameBoard`
 
-請注意，這個節點資料流中沒有類型轉換器執行個體。 但是您可以在 `BoardSize` 的 <xref:System.Xaml.XamlMember> 上呼叫 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType>，以取得類型轉換器資訊。 如果您有有效的 XAML 結構描述內容，您也可以從 <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>取得執行個體，以叫用轉換器方法。
+請注意，這個節點資料流中沒有類型轉換器執行個體。 但是您可以在 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> 的 <xref:System.Xaml.XamlMember> 上呼叫 `BoardSize`，以取得類型轉換器資訊。 如果您有有效的 XAML 結構描述內容，您也可以從 <xref:System.Xaml.Schema.XamlValueConverter%601.ConverterInstance%2A>取得執行個體，以叫用轉換器方法。
 
 ### <a name="markup-extensions-in-the-xaml-node-stream"></a>XAML 節點資料流中的標記延伸
 
@@ -216,9 +216,9 @@ public class GameBoard {
 
 - **標記延伸的位置參數：** 此成員節點的名稱是`_PositionalParameters`，且其定義在 XAML 語言 XAML 命名空間。 它一律包含物件的泛型清單，每個物件都是位置參數，以 `,` 分隔符號字元預先分隔，和輸入 XAML 中所提供的一樣。 您可以從 <xref:System.Xaml.XamlLanguage.PositionalParameters%2A>取得位置參數指示詞的靜態實體。
 
-- **未知的內容：** 此成員節點的名稱是`_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent` 的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。
+- **未知的內容：** 此成員節點的名稱是`_UnknownContent`。 嚴格來說，它是 <xref:System.Xaml.XamlDirective>，且其定義在 XAML 語言 XAML 命名空間中。 如果 XAML 物件項目包含來源 XAML 中的內容，但是在目前可用的 XAML 結構描述內容之下，無法判斷任何內容屬性，則會將這個指示詞當作 Sentinel 使用。 若要在 XAML 節點資料流中偵測此情況，您可以檢查是否有名為 `_UnknownContent`的成員。 如果在載入路徑 XAML 節點資料流中，沒有採取任何其他動作，當它遇到任何物件上的 <xref:System.Xaml.XamlObjectWriter> 成員，預設 `WriteEndObject` 就會在所嘗試的 `_UnknownContent` 上擲回。 預設 <xref:System.Xaml.XamlXmlWriter> 不會擲回，並且會將成員視為隱含。 您可以從 `_UnknownContent` 取得 <xref:System.Xaml.XamlLanguage.UnknownContent%2A>的靜態實體。
 
-- **集合的集合屬性：** 雖然用於 XAML 之集合類別的支援 CLR 類型，通常會有專用具名屬性可保存集合項目，但是在支援類型解析之前，XAML 類型系統並不知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。
+- **集合的集合屬性：** 雖然通常用於 XAML 之集合類別的支援 CLR 類型會有專用具名屬性可保存集合項目，支援類型解析之前，XAML 類型系統並不會知道該屬性。 相反地，XAML 節點資料流會導入 `Items` 預留位置，做為集合 XAML 類型的成員。 在 .NET Framework XAML 服務實作中，這個指示詞/成員在節點資料流中的名稱為 `_Items`。 這個指示詞的常數可以從 <xref:System.Xaml.XamlLanguage.Items%2A>取得。
 
     請注意，XAML 節點資料流可能包含 Items 屬性，而不是 剖析項目以支援類型解析和 XAML 結構描述內容。 例如，套用至物件的
 

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 573a6db5-b14d-4e42-b356-8cc7e2d77745
-ms.openlocfilehash: c79b607f9ce5c779539b7700feafb7d4e3d67d24
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 836ec4390e7675effe57c75c79768272d66925a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974246"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836855"
 ---
 # <a name="how-to-create-xml-literals-visual-basic"></a>HOW TO：建立 XML 常值 (Visual Basic)
 您可以直接在程式碼中建立 XML 文件、 片段中或項目，藉由使用 XML 常值。 本主題中的範例將示範如何建立 XML 項目具有三個子項目，以及如何建立 XML 文件。  
@@ -53,6 +53,7 @@ ms.locfileid: "56974246"
      `</books>`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [在 Visual Basic 中建立 XML](../../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
 - [XML 項目常值](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)

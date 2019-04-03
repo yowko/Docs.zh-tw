@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 29a40102a9d2f1aa1eac12510005b997de796880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719349"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841157"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>HOW TO：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  
@@ -41,7 +41,7 @@ ms.locfileid: "57719349"
   
 6.  選取元件  
   
-     在 [方案總管] 中，此元件已新增至您的專案。 如果它具有 UI，則屬於受繼承表單一部分的控制項會以圖像 (![VisualBasicInheritanceSymbol 螢幕擷取畫面](./media/vbinheritanceglyph.gif "vbInheritanceGlyph")) 標記。當您選取它的時候，則會有框線，表示在 Superclass 表單上此控制項的安全性層級。 對應至不同的安全性層級的行為會在下表中列出。  
+     在 [方案總管] 中，此元件已新增至您的專案。 如果它具有 UI，繼承表單一部分的控制項將會標示以圖像 (![螢幕擷取畫面的 Visual Basic 繼承符號](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif))，並選取時，有框線，表示控制項具有的安全性層級superclass 表單。 對應至不同的安全性層級的行為會在下表中列出。  
   
     |控制項的安全性層級|設計工具和程式碼編輯器與繼承表單之可用的互動|  
     |-------------------------------|--------------------------------------------------------------------------------|  

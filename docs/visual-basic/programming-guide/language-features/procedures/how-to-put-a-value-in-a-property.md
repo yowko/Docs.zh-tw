@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: 34348d57db0875d9c2c6192ac754b4f83f515ac4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965459"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824299"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>HOW TO：將值放在屬性 (Visual Basic)
 您將屬性名稱放在指派陳述式左邊值儲存在屬性中。  
@@ -35,6 +35,7 @@ ms.locfileid: "56965459"
 4.  指派陳述式右側所產生的值會儲存在屬性中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

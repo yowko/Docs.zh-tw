@@ -10,12 +10,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - naming conventions [Visual Basic], classes
 ms.assetid: 164949a4-2a7c-4736-9d82-9c3078e2e56c
-ms.openlocfilehash: ebb9d21e32993f2eb035993d32dc3de7d97b49f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46f59403feced4baafef4662065cb7daedbeaa7b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54672132"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837074"
 ---
 # <a name="visual-basic-naming-conventions"></a>Visual Basic 命名慣例
 當您在 Visual Basic 應用程式中命名的項目時，該名稱的第一個字元必須是英數字元或底線。 不過請注意，以底線開頭的名稱不符合規範[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。  
@@ -41,6 +41,7 @@ ms.locfileid: "54672132"
 -   請避免使用內部範圍中與外部範圍中的名稱相同的名稱。 如果存取錯誤的變數時，可能會造成錯誤。 如果變數與相同名稱的關鍵字之間發生衝突，您必須識別前加上適當的型別程式庫的關鍵字。 例如，如果您有一個名為變數`Date`，您可以使用內建函式`Date`只是藉由呼叫的函式<xref:System.DateTime.Date%2A?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程式碼中以關鍵字做為項目名稱](../../../visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md)
 - [Me、My、MyBase 和 MyClass](../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)
 - [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

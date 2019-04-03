@@ -2,9 +2,15 @@
 title: 查詢 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'queries [Visual Basic]'
-  - 'LINQ, queries'
+- queries [Visual Basic]
+- LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
+ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836892"
 ---
 # <a name="queries-visual-basic"></a>查詢 (Visual Basic)
 Visual Basic 可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]程式碼中的運算式。  
@@ -53,5 +59,6 @@ Visual Basic 可讓您建立[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.m
  描述`Where`子句，指定查詢的篩選條件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ](../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

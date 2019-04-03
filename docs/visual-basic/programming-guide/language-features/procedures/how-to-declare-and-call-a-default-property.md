@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: c7510147e2abdcfbb71cf79412a9125724776685
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977548"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829326"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>HOW TO：宣告，並在 Visual Basic 中呼叫預設屬性
 A*屬性預設*是類別或結構的屬性，不需要指定它可以存取您的程式碼。 在呼叫程式碼命名類別或結構，但不是屬性，與內容允許存取屬性時，Visual Basic 會解析成該類別或結構的預設屬性存取若有的話。  
@@ -82,6 +82,7 @@ A*屬性預設*是類別或結構的屬性，不需要指定它可以存取您�
  由於這些缺點，您應該考慮不要定義預設屬性。 程式碼的可讀性，您應該也要考慮一律明確地參考的所有屬性，甚至是預設屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
