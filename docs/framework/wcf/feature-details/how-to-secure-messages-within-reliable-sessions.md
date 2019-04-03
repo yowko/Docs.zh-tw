@@ -25,9 +25,9 @@ ms.locfileid: "56333049"
 
 如需此組態程序為基礎的範例的原始檔複本，請參閱 < [WS 可靠工作階段](../../../../docs/framework/wcf/samples/ws-reliable-session.md)。
 
-第二項工作的重要項目藉由設定來完成`mode`的屬性**\<安全性 >** 中所包含的項目**\<繫結 >** 用戶端和服務的項目`Message`。
+第二項工作的重要項目藉由設定來完成 `mode` 的屬性 **\<安全性>** 中所包含的項目 **\<繫結>** 用戶端和服務的項目 `Message`。
 
-第三個工作的重要項目藉由設定來完成`clientCredentialType`的屬性**\<訊息 >** 中所包含的項目**\<安全性 >** 用戶端和服務的項目`Certificate`。
+第三個工作的重要項目藉由設定來完成 `clientCredentialType` 的屬性 **\<訊息>** 中所包含的項目 **\<安全性>** 用戶端和服務的項目 `Certificate`。
 
 > [!NOTE]
 > 當使用訊息安全性可靠工作階段，可靠的傳訊嘗試驗證的未驗證的用戶端，而不是擲回的例外狀況，在第一次失敗時，發生逾時之前。
@@ -44,11 +44,11 @@ ms.locfileid: "56333049"
 
 1. 加入至適當的繫結項目[ **\<繫結 >** ](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)組態檔的項目。 下列範例會將[  **\<wsHttpBinding >** ](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目。
 
-1. 新增**\<繫結 >** 項目並將其`name`屬性設為適當的值。 此範例會使用名稱`MessageSecurity`。
+1. 新增 **\<繫結>** 項目並將其 `name` 屬性設為適當的值。 此範例會使用名稱`MessageSecurity`。
 
-1. 新增**\<安全性 >** 項目並將`mode`屬性設定為`Message`。
+1. 新增 **\<安全性>** 項目並將 `mode` 屬性設定為 `Message`。
 
-1. 內**\<安全性 >** 項目，新增**\<訊息 >** 項目並將`clientCredentialType`屬性設定為`Certificate`。
+1. 內 **\<安全性>** 項目，新增 **\<訊息>** 項目並將 `clientCredentialType` 屬性設定為 `Certificate`。
 
 ```xml
 <wsHttpBinding>

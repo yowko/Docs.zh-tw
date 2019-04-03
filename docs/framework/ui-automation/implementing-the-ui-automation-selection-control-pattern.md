@@ -34,7 +34,7 @@ ms.locfileid: "57673310"
  ![反白顯示黃色的色彩選擇器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
   
--   功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 若使用的功能表項目同時包含圖形和文字 (例如 **[檢視]****功能表中的 [預覽窗格]**[!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]項目)，而有必要傳達狀態，則應實作 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
+-   功能表不支援 <xref:System.Windows.Automation.SelectionPattern>。 若使用的功能表項目同時包含圖形和文字 (例如 **[檢視]** **功能表中的 [預覽窗格]**  [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)] 項目)，而有必要傳達狀態，則應實作 <xref:System.Windows.Automation.Provider.IToggleProvider>。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider 的必要成員  

@@ -53,7 +53,7 @@ Tuple 是比 `class` 和 `struct` 類型更為簡單且更具彈性的資料容�
 
 這些同義字是由編譯器和語言所處理，讓您可以有效率地使用具名 Tuple。 IDE 和編輯器可以使用 Roslyn API 來讀取這些語意名稱。 您可以在相同組件的任何地方，依據這些語意名稱來參考具名 Tuple 的元素。 產生所編譯的輸出時，編譯器會將您定義的名稱取代為 `Item*` 對等項目。 編譯過的 Microsoft Intermediate Language (MSIL) 不會包括您為這些元素指定的名稱。
 
-從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為**[元組投影初始設定式](#tuple-projection-initializers)**。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
+從 C# 7.1 開始，元組的欄位名稱可從用來將元組初始化的變數提供。 即為 **[元組投影初始設定式](#tuple-projection-initializers)**。 下列程式碼會建立名為 `accumulation` 的元組，並有元素 `count` (整數) 與 `sum` (雙精度浮點數)。
 
 [!code-csharp[ProjectedTuple](../../samples/snippets/csharp/tuples/tuples/program.cs#ProjectedTupleNames "Named tuple")]
 

@@ -3,15 +3,21 @@ title: 檔案與資料流 I/O - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - IO namespace
-  - 'files, I/O'
-  - System.IO namespace
-  - 'I/O [.NET Framework]'
-  - 'streams, I/O'
-  - 'data streams, I/O'
+- IO namespace
+- files, I/O
+- System.IO namespace
+- I/O [.NET Framework]
+- streams, I/O
+- data streams, I/O
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56836327"
 ---
 # <a name="file-and-stream-io"></a>檔案和資料流 I/O
 
@@ -45,8 +51,7 @@ ms.author: mairaw
 
 ## <a name="streams"></a>資料流
 
-抽象基底類別 <xref:System.IO.Stream> 支援讀取和寫入位元組。 代表繼承自 <xref:System.IO.Stream> 類別之資料流的所有類別。 
-  <xref:System.IO.Stream> 類別和它的衍生類別提供了資料來源和儲存機制的一般觀點，並且將程式設計人員與作業系統和基礎裝置的特有詳細資料加以隔離。
+抽象基底類別 <xref:System.IO.Stream> 支援讀取和寫入位元組。 代表繼承自 <xref:System.IO.Stream> 類別之資料流的所有類別。 <xref:System.IO.Stream> 類別和它的衍生類別提供了資料來源和儲存機制的一般觀點，並且將程式設計人員與作業系統和基礎裝置的特有詳細資料加以隔離。
 
 資料流包含三項基本作業：
 
@@ -78,8 +83,7 @@ ms.author: mairaw
 
 ## <a name="readers-and-writers"></a>讀取器及寫入器
 
-
-  <xref:System.IO?displayProperty=nameWithType> 命名空間提供從資料流讀取編碼字元以及將編碼字元寫入資料流的類型。 通常資料流是針對位元組輸入和輸出所設計。 讀取器和寫入器類型會處理編碼字元與位元組之間的轉換，讓資料流能夠完成作業。 每個讀取器和寫入器類別都會與資料流相關聯，可透過類別的 `BaseStream` 屬性擷取。
+<xref:System.IO?displayProperty=nameWithType> 命名空間提供從資料流讀取編碼字元以及將編碼字元寫入資料流的類型。 通常資料流是針對位元組輸入和輸出所設計。 讀取器和寫入器類型會處理編碼字元與位元組之間的轉換，讓資料流能夠完成作業。 每個讀取器和寫入器類別都會與資料流相關聯，可透過類別的 `BaseStream` 屬性擷取。
 
 以下是常用的讀取器和寫入器類別：
 
@@ -103,8 +107,7 @@ ms.author: mairaw
 
 ## <a name="compression"></a>壓縮
 
-壓縮是指縮減檔案大小以便儲存的程序。 解壓縮則是指擷取壓縮檔的內容使其成為可使用格式的程序。 
-  <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間包含壓縮及解壓縮檔案和資料流的類型。
+壓縮是指縮減檔案大小以便儲存的程序。 解壓縮則是指擷取壓縮檔的內容使其成為可使用格式的程序。 <xref:System.IO.Compression?displayProperty=nameWithType> 命名空間包含壓縮及解壓縮檔案和資料流的類型。
 
 以下是壓縮和解壓縮檔案和資料流時經常使用的類別：
 
@@ -144,8 +147,7 @@ ms.author: mairaw
 
 以下是在 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式中使用 I/O 作業時要注意的一些重要差異：
 
-- 
-  <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 您應該改為使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
+- <xref:System.IO.File> 中未包含與檔案作業特別相關的類型，例如 <xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> 和 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]。 您應該改為使用 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 之 <xref:Windows.Storage?displayProperty=nameWithType> 命名空間中的型別，例如 <xref:Windows.Storage.StorageFile> 與 <xref:Windows.Storage.StorageFolder>。
 
 - 無法使用隔離儲存區，請改用[應用程式資料](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))。
 
