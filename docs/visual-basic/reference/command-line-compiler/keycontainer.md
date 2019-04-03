@@ -6,51 +6,52 @@ helpviewer_keywords:
 - keycontainer compiler option [Visual Basic]
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
-ms.openlocfilehash: 18aa82610d337354647a74d2f4ebe768925e2de0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 51cfe4a52af2fbcd51a4f9e2dc738e83fe0852c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746347"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839591"
 ---
-# <a name="-keycontainer"></a><span data-ttu-id="f7703-102">-keycontainer</span><span class="sxs-lookup"><span data-stu-id="f7703-102">-keycontainer</span></span>
-<span data-ttu-id="f7703-103">指定金鑰組的金鑰容器名稱，為組件提供強式名稱。</span><span class="sxs-lookup"><span data-stu-id="f7703-103">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>  
+# <a name="-keycontainer"></a><span data-ttu-id="189d3-102">-keycontainer</span><span class="sxs-lookup"><span data-stu-id="189d3-102">-keycontainer</span></span>
+<span data-ttu-id="189d3-103">指定金鑰組的金鑰容器名稱，為組件提供強式名稱。</span><span class="sxs-lookup"><span data-stu-id="189d3-103">Specifies a key container name for a key pair to give an assembly a strong name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f7703-104">語法</span><span class="sxs-lookup"><span data-stu-id="f7703-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="189d3-104">語法</span><span class="sxs-lookup"><span data-stu-id="189d3-104">Syntax</span></span>  
   
 ```  
 -keycontainer:container  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="f7703-105">引數</span><span class="sxs-lookup"><span data-stu-id="f7703-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="189d3-105">引數</span><span class="sxs-lookup"><span data-stu-id="189d3-105">Arguments</span></span>  
   
-|<span data-ttu-id="f7703-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="f7703-106">Term</span></span>|<span data-ttu-id="f7703-107">定義</span><span class="sxs-lookup"><span data-stu-id="f7703-107">Definition</span></span>|  
+|<span data-ttu-id="189d3-106">詞彙</span><span class="sxs-lookup"><span data-stu-id="189d3-106">Term</span></span>|<span data-ttu-id="189d3-107">定義</span><span class="sxs-lookup"><span data-stu-id="189d3-107">Definition</span></span>|  
 |---|---|  
-|`container`|<span data-ttu-id="f7703-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="f7703-108">Required.</span></span> <span data-ttu-id="f7703-109">包含索引鍵的容器檔案。</span><span class="sxs-lookup"><span data-stu-id="f7703-109">Container file that contains the key.</span></span> <span data-ttu-id="f7703-110">將檔案名稱括在引號 ("") 如果名稱包含空格。</span><span class="sxs-lookup"><span data-stu-id="f7703-110">Enclose the file name in quotation marks ("") if the name contains a space.</span></span>|  
+|`container`|<span data-ttu-id="189d3-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="189d3-108">Required.</span></span> <span data-ttu-id="189d3-109">包含索引鍵的容器檔案。</span><span class="sxs-lookup"><span data-stu-id="189d3-109">Container file that contains the key.</span></span> <span data-ttu-id="189d3-110">將檔案名稱括在引號 ("") 如果名稱包含空格。</span><span class="sxs-lookup"><span data-stu-id="189d3-110">Enclose the file name in quotation marks ("") if the name contains a space.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="f7703-111">備註</span><span class="sxs-lookup"><span data-stu-id="f7703-111">Remarks</span></span>  
- <span data-ttu-id="f7703-112">藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。</span><span class="sxs-lookup"><span data-stu-id="f7703-112">The compiler creates the sharable component by inserting a public key into the assembly manifest and by signing the final assembly with the private key.</span></span> <span data-ttu-id="f7703-113">若要產生金鑰檔，請在命令列中輸入 `sn -k file`。</span><span class="sxs-lookup"><span data-stu-id="f7703-113">To generate a key file, type `sn -k file` at the command line.</span></span> <span data-ttu-id="f7703-114">`-i`選項會安裝至容器的金鑰組。</span><span class="sxs-lookup"><span data-stu-id="f7703-114">The `-i` option installs the key pair into a container.</span></span> <span data-ttu-id="f7703-115">如需詳細資訊，請參閱 < [Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。</span><span class="sxs-lookup"><span data-stu-id="f7703-115">For more information, see [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).</span></span>  
+## <a name="remarks"></a><span data-ttu-id="189d3-111">備註</span><span class="sxs-lookup"><span data-stu-id="189d3-111">Remarks</span></span>  
+ <span data-ttu-id="189d3-112">藉由將公開金鑰插入組件資訊清單，並使用私密金鑰簽署最終組件，編譯器會建立可共用的元件。</span><span class="sxs-lookup"><span data-stu-id="189d3-112">The compiler creates the sharable component by inserting a public key into the assembly manifest and by signing the final assembly with the private key.</span></span> <span data-ttu-id="189d3-113">若要產生金鑰檔，請在命令列中輸入 `sn -k file`。</span><span class="sxs-lookup"><span data-stu-id="189d3-113">To generate a key file, type `sn -k file` at the command line.</span></span> <span data-ttu-id="189d3-114">`-i`選項會安裝至容器的金鑰組。</span><span class="sxs-lookup"><span data-stu-id="189d3-114">The `-i` option installs the key pair into a container.</span></span> <span data-ttu-id="189d3-115">如需詳細資訊，請參閱 < [Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))。</span><span class="sxs-lookup"><span data-stu-id="189d3-115">For more information, see [Sn.exe (Strong Name Tool)](../../../framework/tools/sn-exe-strong-name-tool.md)).</span></span>  
   
- <span data-ttu-id="f7703-116">如果您使用編譯`-target:module`，金鑰檔的名稱會保留在模組中並併入編譯的組件時所建立的組件[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。</span><span class="sxs-lookup"><span data-stu-id="f7703-116">If you compile with `-target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span></span>  
+ <span data-ttu-id="189d3-116">如果您使用編譯`-target:module`，金鑰檔的名稱會保留在模組中並併入編譯的組件時所建立的組件[-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md)。</span><span class="sxs-lookup"><span data-stu-id="189d3-116">If you compile with `-target:module`, the name of the key file is held in the module and incorporated into the assembly that is created when you compile an assembly with [-addmodule](../../../visual-basic/reference/command-line-compiler/addmodule.md).</span></span>  
   
- <span data-ttu-id="f7703-117">您也可以在任何 Microsoft 中繼語言 (MSIL) 模組的原始程式碼中，將這個選項指定為自訂屬性 (<xref:System.Reflection.AssemblyKeyNameAttribute>)。</span><span class="sxs-lookup"><span data-stu-id="f7703-117">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyNameAttribute>) in the source code for any Microsoft intermediate language (MSIL) module.</span></span>  
+ <span data-ttu-id="189d3-117">您也可以在任何 Microsoft 中繼語言 (MSIL) 模組的原始程式碼中，將這個選項指定為自訂屬性 (<xref:System.Reflection.AssemblyKeyNameAttribute>)。</span><span class="sxs-lookup"><span data-stu-id="189d3-117">You can also specify this option as a custom attribute (<xref:System.Reflection.AssemblyKeyNameAttribute>) in the source code for any Microsoft intermediate language (MSIL) module.</span></span>  
   
- <span data-ttu-id="f7703-118">您也可以使用 [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) 將加密資訊傳遞給編譯器。</span><span class="sxs-lookup"><span data-stu-id="f7703-118">You can also pass your encryption information to the compiler with [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).</span></span> <span data-ttu-id="f7703-119">如需部分簽署的組件，請使用 [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)。</span><span class="sxs-lookup"><span data-stu-id="f7703-119">Use [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) if you want a partially signed assembly.</span></span>  
+ <span data-ttu-id="189d3-118">您也可以使用 [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md) 將加密資訊傳遞給編譯器。</span><span class="sxs-lookup"><span data-stu-id="189d3-118">You can also pass your encryption information to the compiler with [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md).</span></span> <span data-ttu-id="189d3-119">如需部分簽署的組件，請使用 [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md)。</span><span class="sxs-lookup"><span data-stu-id="189d3-119">Use [-delaysign](../../../visual-basic/reference/command-line-compiler/delaysign.md) if you want a partially signed assembly.</span></span>  
   
- <span data-ttu-id="f7703-120">請參閱[建立和使用強式名稱組件](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。</span><span class="sxs-lookup"><span data-stu-id="f7703-120">See [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) for more information on signing an assembly.</span></span>  
+ <span data-ttu-id="189d3-120">請參閱[建立和使用強式名稱組件](../../../framework/app-domains/create-and-use-strong-named-assemblies.md)如需有關簽署組件。</span><span class="sxs-lookup"><span data-stu-id="189d3-120">See [Creating and Using Strong-Named Assemblies](../../../framework/app-domains/create-and-use-strong-named-assemblies.md) for more information on signing an assembly.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="f7703-121">`-keycontainer`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。</span><span class="sxs-lookup"><span data-stu-id="f7703-121">The `-keycontainer` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
+>  <span data-ttu-id="189d3-121">`-keycontainer`選項不是從 Visual Studio 開發環境中使用; 只有在從命令列編譯時均可使用。</span><span class="sxs-lookup"><span data-stu-id="189d3-121">The `-keycontainer` option is not available from within the Visual Studio development environment; it is available only when compiling from the command line.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f7703-122">範例</span><span class="sxs-lookup"><span data-stu-id="f7703-122">Example</span></span>  
- <span data-ttu-id="f7703-123">下列程式碼會編譯原始程式檔`Input.vb`和指定的金鑰容器。</span><span class="sxs-lookup"><span data-stu-id="f7703-123">The following code compiles source file `Input.vb` and specifies a key container.</span></span>  
+## <a name="example"></a><span data-ttu-id="189d3-122">範例</span><span class="sxs-lookup"><span data-stu-id="189d3-122">Example</span></span>  
+ <span data-ttu-id="189d3-123">下列程式碼會編譯原始程式檔`Input.vb`和指定的金鑰容器。</span><span class="sxs-lookup"><span data-stu-id="189d3-123">The following code compiles source file `Input.vb` and specifies a key container.</span></span>  
   
 ```  
 vbc -keycontainer:key1 input.vb  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="f7703-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f7703-124">See also</span></span>
-- [<span data-ttu-id="f7703-125">在.NET 中的組件</span><span class="sxs-lookup"><span data-stu-id="f7703-125">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
-- [<span data-ttu-id="f7703-126">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="f7703-126">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
-- [<span data-ttu-id="f7703-127">-keyfile</span><span class="sxs-lookup"><span data-stu-id="f7703-127">-keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)
-- [<span data-ttu-id="f7703-128">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="f7703-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
+## <a name="see-also"></a><span data-ttu-id="189d3-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="189d3-124">See also</span></span>
+
+- [<span data-ttu-id="189d3-125">.NET 中的組件</span><span class="sxs-lookup"><span data-stu-id="189d3-125">Assemblies in .NET</span></span>](../../../standard/assembly/index.md)
+- [<span data-ttu-id="189d3-126">Visual Basic 命令列編譯器</span><span class="sxs-lookup"><span data-stu-id="189d3-126">Visual Basic Command-Line Compiler</span></span>](../../../visual-basic/reference/command-line-compiler/index.md)
+- [<span data-ttu-id="189d3-127">-keyfile</span><span class="sxs-lookup"><span data-stu-id="189d3-127">-keyfile</span></span>](../../../visual-basic/reference/command-line-compiler/keyfile.md)
+- [<span data-ttu-id="189d3-128">編譯命令列範例</span><span class="sxs-lookup"><span data-stu-id="189d3-128">Sample Compilation Command Lines</span></span>](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
