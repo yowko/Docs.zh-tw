@@ -2,20 +2,20 @@
 title: HOW TO：排序多個索引鍵 (Visual Basic) 的項目
 ms.date: 07/20/2015
 ms.assetid: 0c4c1462-3047-4766-b9e2-7e0e9cc7f421
-ms.openlocfilehash: ff5d3260efc5ba3630cb785bd265061c9a8e05da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d423505a5b47189b9de556675d4b71f428a6bdc6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54506468"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828611"
 ---
-# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="95985-102">HOW TO：排序多個索引鍵 (Visual Basic) 的項目</span><span class="sxs-lookup"><span data-stu-id="95985-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
-<span data-ttu-id="95985-103">這個主題顯示如何在多個索引鍵上排序。</span><span class="sxs-lookup"><span data-stu-id="95985-103">This topic shows how to sort on multiple keys.</span></span>  
+# <a name="how-to-sort-elements-on-multiple-keys-visual-basic"></a><span data-ttu-id="a37e2-102">HOW TO：排序多個索引鍵 (Visual Basic) 的項目</span><span class="sxs-lookup"><span data-stu-id="a37e2-102">How to: Sort Elements on Multiple Keys (Visual Basic)</span></span>
+<span data-ttu-id="a37e2-103">這個主題顯示如何在多個索引鍵上排序。</span><span class="sxs-lookup"><span data-stu-id="a37e2-103">This topic shows how to sort on multiple keys.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="95985-104">範例</span><span class="sxs-lookup"><span data-stu-id="95985-104">Example</span></span>  
- <span data-ttu-id="95985-105">在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。</span><span class="sxs-lookup"><span data-stu-id="95985-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
+## <a name="example"></a><span data-ttu-id="a37e2-104">範例</span><span class="sxs-lookup"><span data-stu-id="a37e2-104">Example</span></span>  
+ <span data-ttu-id="a37e2-105">在這個範例中，會先按照送貨的郵遞區號，然後按照訂單日期排序結果。</span><span class="sxs-lookup"><span data-stu-id="a37e2-105">In this example, the results are ordered first by the shipping postal code, then by the order date.</span></span>  
   
- <span data-ttu-id="95985-106">此範例使用下列 XML 文件：[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="95985-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="a37e2-106">此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="a37e2-106">This example uses the following XML document: [Sample XML File: Customers and Orders (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -34,7 +34,7 @@ For Each r In result
 Next  
 ```  
   
- <span data-ttu-id="95985-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="95985-107">This code produces the following output:</span></span>  
+ <span data-ttu-id="a37e2-107">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="a37e2-107">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -61,10 +61,10 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="example"></a><span data-ttu-id="95985-108">範例</span><span class="sxs-lookup"><span data-stu-id="95985-108">Example</span></span>  
- <span data-ttu-id="95985-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="95985-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="95985-110">如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="95985-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
+## <a name="example"></a><span data-ttu-id="a37e2-108">範例</span><span class="sxs-lookup"><span data-stu-id="a37e2-108">Example</span></span>  
+ <span data-ttu-id="a37e2-109">下列範例顯示命名空間中之 XML 的相同查詢。</span><span class="sxs-lookup"><span data-stu-id="a37e2-109">The following example shows the same query for XML that is in a namespace.</span></span> <span data-ttu-id="a37e2-110">如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。</span><span class="sxs-lookup"><span data-stu-id="a37e2-110">For more information, see [Working with XML Namespaces (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md).</span></span>  
   
- <span data-ttu-id="95985-111">此範例使用下列 XML 文件：[範例 XML 檔：客戶和命名空間中的訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="95985-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
+ <span data-ttu-id="a37e2-111">此範例使用下列 XML 文件：[XML 範例檔：命名空間中的客戶和訂單](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md)。</span><span class="sxs-lookup"><span data-stu-id="a37e2-111">This example uses the following XML document: [Sample XML File: Customers and Orders in a Namespace](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-in-a-namespace.md).</span></span>  
   
 ```vb  
 Imports <xmlns='http://www.adventure-works.com'>  
@@ -89,7 +89,7 @@ Module Module1
 End Module  
 ```  
   
- <span data-ttu-id="95985-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="95985-112">This code produces the following output:</span></span>  
+ <span data-ttu-id="a37e2-112">此程式碼會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="a37e2-112">This code produces the following output:</span></span>  
   
 ```  
 CustomerID:LETSS EmployeeID:1 ShipPostalCode:94117 OrderDate:6/25/1997  
@@ -116,5 +116,6 @@ CustomerID:LAZYK EmployeeID:1 ShipPostalCode:99362 OrderDate:3/21/1997
 CustomerID:LAZYK EmployeeID:8 ShipPostalCode:99362 OrderDate:5/22/1997  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="95985-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="95985-113">See also</span></span>
-- [<span data-ttu-id="95985-114">基本查詢 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="95985-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)
+## <a name="see-also"></a><span data-ttu-id="a37e2-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a37e2-113">See also</span></span>
+
+- [<span data-ttu-id="a37e2-114">基本查詢 (LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="a37e2-114">Basic Queries (LINQ to XML) (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

@@ -17,17 +17,17 @@ helpviewer_keywords:
 - operators [Visual Basic], negation
 - minus operator [Visual Basic]
 ms.assetid: bff2c368-662d-4c92-ac87-1d9bdfd3426a
-ms.openlocfilehash: 0c10fc3998469e19d5be744ea8fb4faed25f1a2a
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 1a5c47a2f1bc8a8b9e1b0263b90006a0e58e17bb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201218"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830665"
 ---
-# <a name="--operator-visual-basic"></a><span data-ttu-id="9372d-102">- 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9372d-102">- Operator (Visual Basic)</span></span>
-<span data-ttu-id="9372d-103">傳回兩個數值運算式或負數值運算式的值之間的差異。</span><span class="sxs-lookup"><span data-stu-id="9372d-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
+# <a name="--operator-visual-basic"></a><span data-ttu-id="3c1da-102">- 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c1da-102">- Operator (Visual Basic)</span></span>
+<span data-ttu-id="3c1da-103">傳回兩個數值運算式或負數值運算式的值之間的差異。</span><span class="sxs-lookup"><span data-stu-id="3c1da-103">Returns the difference between two numeric expressions or the negative value of a numeric expression.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9372d-104">語法</span><span class="sxs-lookup"><span data-stu-id="9372d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="3c1da-104">語法</span><span class="sxs-lookup"><span data-stu-id="3c1da-104">Syntax</span></span>  
   
 ```  
       expression1 – expression2  
@@ -35,41 +35,42 @@ ms.locfileid: "57201218"
 – expression1  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="9372d-105">組件</span><span class="sxs-lookup"><span data-stu-id="9372d-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="3c1da-105">組件</span><span class="sxs-lookup"><span data-stu-id="3c1da-105">Parts</span></span>  
  `expression1`  
- <span data-ttu-id="9372d-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="9372d-106">Required.</span></span> <span data-ttu-id="9372d-107">任何數值運算式。</span><span class="sxs-lookup"><span data-stu-id="9372d-107">Any numeric expression.</span></span>  
+ <span data-ttu-id="3c1da-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="3c1da-106">Required.</span></span> <span data-ttu-id="3c1da-107">任何數值運算式。</span><span class="sxs-lookup"><span data-stu-id="3c1da-107">Any numeric expression.</span></span>  
   
  `expression2`  
- <span data-ttu-id="9372d-108">除非`–`運算子會計算為負數值。</span><span class="sxs-lookup"><span data-stu-id="9372d-108">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="9372d-109">任何數值運算式。</span><span class="sxs-lookup"><span data-stu-id="9372d-109">Any numeric expression.</span></span>  
+ <span data-ttu-id="3c1da-108">除非`–`運算子會計算為負數值。</span><span class="sxs-lookup"><span data-stu-id="3c1da-108">Required unless the `–` operator is calculating a negative value.</span></span> <span data-ttu-id="3c1da-109">任何數值運算式。</span><span class="sxs-lookup"><span data-stu-id="3c1da-109">Any numeric expression.</span></span>  
   
-## <a name="result"></a><span data-ttu-id="9372d-110">結果</span><span class="sxs-lookup"><span data-stu-id="9372d-110">Result</span></span>  
- <span data-ttu-id="9372d-111">結果是之間的差異`expression1`並`expression2`，或已變換正負號的值`expression1`。</span><span class="sxs-lookup"><span data-stu-id="9372d-111">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
+## <a name="result"></a><span data-ttu-id="3c1da-110">結果</span><span class="sxs-lookup"><span data-stu-id="3c1da-110">Result</span></span>  
+ <span data-ttu-id="3c1da-111">結果是之間的差異`expression1`並`expression2`，或已變換正負號的值`expression1`。</span><span class="sxs-lookup"><span data-stu-id="3c1da-111">The result is the difference between `expression1` and `expression2`, or the negated value of `expression1`.</span></span>  
   
- <span data-ttu-id="9372d-112">將結果資料類型是數值類型適合的資料型別`expression1`和`expression2`。</span><span class="sxs-lookup"><span data-stu-id="9372d-112">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="9372d-113">請參閱中的 「 整數算術 」 表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。</span><span class="sxs-lookup"><span data-stu-id="9372d-113">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
+ <span data-ttu-id="3c1da-112">將結果資料類型是數值類型適合的資料型別`expression1`和`expression2`。</span><span class="sxs-lookup"><span data-stu-id="3c1da-112">The result data type is a numeric type appropriate for the data types of `expression1` and `expression2`.</span></span> <span data-ttu-id="3c1da-113">請參閱中的 「 整數算術 」 表格[資料類型的運算子結果](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)。</span><span class="sxs-lookup"><span data-stu-id="3c1da-113">See the "Integer Arithmetic" tables in [Data Types of Operator Results](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md).</span></span>  
   
-## <a name="supported-types"></a><span data-ttu-id="9372d-114">支援的型別</span><span class="sxs-lookup"><span data-stu-id="9372d-114">Supported Types</span></span>  
- <span data-ttu-id="9372d-115">所有數值類型。</span><span class="sxs-lookup"><span data-stu-id="9372d-115">All numeric types.</span></span> <span data-ttu-id="9372d-116">這包括的不帶正負號和浮點類型和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="9372d-116">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
+## <a name="supported-types"></a><span data-ttu-id="3c1da-114">支援的型別</span><span class="sxs-lookup"><span data-stu-id="3c1da-114">Supported Types</span></span>  
+ <span data-ttu-id="3c1da-115">所有數值類型。</span><span class="sxs-lookup"><span data-stu-id="3c1da-115">All numeric types.</span></span> <span data-ttu-id="3c1da-116">這包括的不帶正負號和浮點類型和`Decimal`。</span><span class="sxs-lookup"><span data-stu-id="3c1da-116">This includes the unsigned and floating-point types and `Decimal`.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="9372d-117">備註</span><span class="sxs-lookup"><span data-stu-id="9372d-117">Remarks</span></span>  
- <span data-ttu-id="9372d-118">在先前所示的語法中顯示的第一個使用方式`–`操作員*二進位*算術減法運算子的兩個數值運算式之間的差異。</span><span class="sxs-lookup"><span data-stu-id="9372d-118">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="3c1da-117">備註</span><span class="sxs-lookup"><span data-stu-id="3c1da-117">Remarks</span></span>  
+ <span data-ttu-id="3c1da-118">在先前所示的語法中顯示的第一個使用方式`–`操作員*二進位*算術減法運算子的兩個數值運算式之間的差異。</span><span class="sxs-lookup"><span data-stu-id="3c1da-118">In the first usage shown in the syntax shown previously, the `–` operator is the *binary* arithmetic subtraction operator for the difference between two numeric expressions.</span></span>  
   
- <span data-ttu-id="9372d-119">在先前所示的語法中顯示的第二個使用方式`–`操作員*一元*負運算子的運算式的負值。</span><span class="sxs-lookup"><span data-stu-id="9372d-119">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="9372d-120">在這種情況下，否定包含反轉的正負號`expression1`讓，則結果為正數如果`expression1`為負數。</span><span class="sxs-lookup"><span data-stu-id="9372d-120">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
+ <span data-ttu-id="3c1da-119">在先前所示的語法中顯示的第二個使用方式`–`操作員*一元*負運算子的運算式的負值。</span><span class="sxs-lookup"><span data-stu-id="3c1da-119">In the second usage shown in the syntax shown previously, the `–` operator is the *unary* negation operator for the negative value of an expression.</span></span> <span data-ttu-id="3c1da-120">在這種情況下，否定包含反轉的正負號`expression1`讓，則結果為正數如果`expression1`為負數。</span><span class="sxs-lookup"><span data-stu-id="3c1da-120">In this sense, the negation consists of reversing the sign of `expression1` so that the result is positive if `expression1` is negative.</span></span>  
   
- <span data-ttu-id="9372d-121">如果任一個運算式評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，則`–`運算子會將它視為零。</span><span class="sxs-lookup"><span data-stu-id="9372d-121">If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.</span></span>  
+ <span data-ttu-id="3c1da-121">如果任一個運算式評估為[Nothing](../../../visual-basic/language-reference/nothing.md)，則`–`運算子會將它視為零。</span><span class="sxs-lookup"><span data-stu-id="3c1da-121">If either expression evaluates to [Nothing](../../../visual-basic/language-reference/nothing.md), the `–` operator treats it as zero.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="9372d-122">`–`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。</span><span class="sxs-lookup"><span data-stu-id="9372d-122">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="9372d-123">如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其已重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="9372d-123">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="9372d-124">如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="9372d-124">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
+>  <span data-ttu-id="3c1da-122">`–`運算子只能*多載*，這表示，類別或結構可以重新定義其行為時運算元具有該類別或結構的型別。</span><span class="sxs-lookup"><span data-stu-id="3c1da-122">The `–` operator can be *overloaded*, which means that a class or structure can redefine its behavior when an operand has the type of that class or structure.</span></span> <span data-ttu-id="3c1da-123">如果您的程式碼會使用此運算子，這類類別或結構上，請確定您了解其已重新定義的行為。</span><span class="sxs-lookup"><span data-stu-id="3c1da-123">If your code uses this operator on such a class or structure, make sure that you understand its redefined behavior.</span></span> <span data-ttu-id="3c1da-124">如需詳細資訊，請參閱 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)。</span><span class="sxs-lookup"><span data-stu-id="3c1da-124">For more information, see [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="9372d-125">範例</span><span class="sxs-lookup"><span data-stu-id="9372d-125">Example</span></span>  
- <span data-ttu-id="9372d-126">下列範例會使用`–`運算子來計算並傳回兩個數字，之間的差異，然後要變換正負號數字。</span><span class="sxs-lookup"><span data-stu-id="9372d-126">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
+## <a name="example"></a><span data-ttu-id="3c1da-125">範例</span><span class="sxs-lookup"><span data-stu-id="3c1da-125">Example</span></span>  
+ <span data-ttu-id="3c1da-126">下列範例會使用`–`運算子來計算並傳回兩個數字，之間的差異，然後要變換正負號數字。</span><span class="sxs-lookup"><span data-stu-id="3c1da-126">The following example uses the `–` operator to calculate and return the difference between two numbers, and then to negate a number.</span></span>  
   
  [!code-vb[VbVbalrOperators#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#10)]  
   
- <span data-ttu-id="9372d-127">遵循這些陳述式中，執行`binaryResult`包含 124.45 和`unaryResult`包含 –334.90。</span><span class="sxs-lookup"><span data-stu-id="9372d-127">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
+ <span data-ttu-id="3c1da-127">遵循這些陳述式中，執行`binaryResult`包含 124.45 和`unaryResult`包含 –334.90。</span><span class="sxs-lookup"><span data-stu-id="3c1da-127">Following the execution of these statements, `binaryResult` contains 124.45 and `unaryResult` contains –334.90.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="9372d-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9372d-128">See also</span></span>
-- [<span data-ttu-id="9372d-129">-= 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="9372d-129">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
-- [<span data-ttu-id="9372d-130">算術運算子</span><span class="sxs-lookup"><span data-stu-id="9372d-130">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
-- [<span data-ttu-id="9372d-131">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="9372d-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
-- [<span data-ttu-id="9372d-132">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="9372d-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
-- [<span data-ttu-id="9372d-133">在 Visual Basic 中的算術運算子</span><span class="sxs-lookup"><span data-stu-id="9372d-133">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
+## <a name="see-also"></a><span data-ttu-id="3c1da-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3c1da-128">See also</span></span>
+
+- [<span data-ttu-id="3c1da-129">-= 運算子 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3c1da-129">-= Operator (Visual Basic)</span></span>](../../../visual-basic/language-reference/operators/subtraction-assignment-operator.md)
+- [<span data-ttu-id="3c1da-130">算術運算子</span><span class="sxs-lookup"><span data-stu-id="3c1da-130">Arithmetic Operators</span></span>](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
+- [<span data-ttu-id="3c1da-131">Visual Basic 中的運算子優先順序</span><span class="sxs-lookup"><span data-stu-id="3c1da-131">Operator Precedence in Visual Basic</span></span>](../../../visual-basic/language-reference/operators/operator-precedence.md)
+- [<span data-ttu-id="3c1da-132">運算子 (依功能排列)</span><span class="sxs-lookup"><span data-stu-id="3c1da-132">Operators Listed by Functionality</span></span>](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)
+- [<span data-ttu-id="3c1da-133">在 Visual Basic 中的算術運算子</span><span class="sxs-lookup"><span data-stu-id="3c1da-133">Arithmetic Operators in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

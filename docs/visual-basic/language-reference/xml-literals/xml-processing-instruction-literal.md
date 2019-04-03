@@ -8,60 +8,61 @@ helpviewer_keywords:
 - XML processing instruction literal [Visual Basic]
 - processing instruction literal [Visual Basic]
 ms.assetid: cef4f7f8-0011-4f64-8602-795077ad4f15
-ms.openlocfilehash: 1906c9101f9a53bde13698d0ed17b7b8d0988c1d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3fbb16a4d47801b671d37566573215d3a57afff1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981370"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820148"
 ---
-# <a name="xml-processing-instruction-literal-visual-basic"></a><span data-ttu-id="46c4c-102">XML 處理指示常值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="46c4c-102">XML Processing Instruction Literal (Visual Basic)</span></span>
-<span data-ttu-id="46c4c-103">常值代表<xref:System.Xml.Linq.XProcessingInstruction>物件。</span><span class="sxs-lookup"><span data-stu-id="46c4c-103">A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
+# <a name="xml-processing-instruction-literal-visual-basic"></a><span data-ttu-id="fe78c-102">XML 處理指示常值 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="fe78c-102">XML Processing Instruction Literal (Visual Basic)</span></span>
+<span data-ttu-id="fe78c-103">常值代表<xref:System.Xml.Linq.XProcessingInstruction>物件。</span><span class="sxs-lookup"><span data-stu-id="fe78c-103">A literal representing an <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="46c4c-104">語法</span><span class="sxs-lookup"><span data-stu-id="46c4c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fe78c-104">語法</span><span class="sxs-lookup"><span data-stu-id="fe78c-104">Syntax</span></span>  
   
 ```xml  
 <?piName [ = piData ] ?>  
 ```  
   
-## <a name="parts"></a><span data-ttu-id="46c4c-105">組件</span><span class="sxs-lookup"><span data-stu-id="46c4c-105">Parts</span></span>  
+## <a name="parts"></a><span data-ttu-id="fe78c-105">組件</span><span class="sxs-lookup"><span data-stu-id="fe78c-105">Parts</span></span>  
  `<?`  
- <span data-ttu-id="46c4c-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="46c4c-106">Required.</span></span> <span data-ttu-id="46c4c-107">代表 XML 處理指示常值的開頭。</span><span class="sxs-lookup"><span data-stu-id="46c4c-107">Denotes the start of the XML processing instruction literal.</span></span>  
+ <span data-ttu-id="fe78c-106">必要項。</span><span class="sxs-lookup"><span data-stu-id="fe78c-106">Required.</span></span> <span data-ttu-id="fe78c-107">代表 XML 處理指示常值的開頭。</span><span class="sxs-lookup"><span data-stu-id="fe78c-107">Denotes the start of the XML processing instruction literal.</span></span>  
   
  `piName`  
- <span data-ttu-id="46c4c-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="46c4c-108">Required.</span></span> <span data-ttu-id="46c4c-109">名稱指出哪個應用程式的處理指示目標。</span><span class="sxs-lookup"><span data-stu-id="46c4c-109">Name indicating which application the processing instruction targets.</span></span> <span data-ttu-id="46c4c-110">無法以"xml"或"XML"開頭。</span><span class="sxs-lookup"><span data-stu-id="46c4c-110">Cannot begin with "xml" or "XML".</span></span>  
+ <span data-ttu-id="fe78c-108">必要項。</span><span class="sxs-lookup"><span data-stu-id="fe78c-108">Required.</span></span> <span data-ttu-id="fe78c-109">名稱指出哪個應用程式的處理指示目標。</span><span class="sxs-lookup"><span data-stu-id="fe78c-109">Name indicating which application the processing instruction targets.</span></span> <span data-ttu-id="fe78c-110">無法以"xml"或"XML"開頭。</span><span class="sxs-lookup"><span data-stu-id="fe78c-110">Cannot begin with "xml" or "XML".</span></span>  
   
  `piData`  
- <span data-ttu-id="46c4c-111">選擇性。</span><span class="sxs-lookup"><span data-stu-id="46c4c-111">Optional.</span></span> <span data-ttu-id="46c4c-112">字串，表示應用程式設為目標的`piName`應該處理 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="46c4c-112">String indicating how the application targeted by `piName` should process the XML document.</span></span>  
+ <span data-ttu-id="fe78c-111">選擇性。</span><span class="sxs-lookup"><span data-stu-id="fe78c-111">Optional.</span></span> <span data-ttu-id="fe78c-112">字串，表示應用程式設為目標的`piName`應該處理 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="fe78c-112">String indicating how the application targeted by `piName` should process the XML document.</span></span>  
   
  `?>`  
- <span data-ttu-id="46c4c-113">必要項。</span><span class="sxs-lookup"><span data-stu-id="46c4c-113">Required.</span></span> <span data-ttu-id="46c4c-114">代表處理指示的結尾。</span><span class="sxs-lookup"><span data-stu-id="46c4c-114">Denotes the end of the processing instruction.</span></span>  
+ <span data-ttu-id="fe78c-113">必要項。</span><span class="sxs-lookup"><span data-stu-id="fe78c-113">Required.</span></span> <span data-ttu-id="fe78c-114">代表處理指示的結尾。</span><span class="sxs-lookup"><span data-stu-id="fe78c-114">Denotes the end of the processing instruction.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="46c4c-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="46c4c-115">Return Value</span></span>  
- <span data-ttu-id="46c4c-116"><xref:System.Xml.Linq.XProcessingInstruction> 物件。</span><span class="sxs-lookup"><span data-stu-id="46c4c-116">An <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="fe78c-115">傳回值</span><span class="sxs-lookup"><span data-stu-id="fe78c-115">Return Value</span></span>  
+ <span data-ttu-id="fe78c-116"><xref:System.Xml.Linq.XProcessingInstruction> 物件。</span><span class="sxs-lookup"><span data-stu-id="fe78c-116">An <xref:System.Xml.Linq.XProcessingInstruction> object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="46c4c-117">備註</span><span class="sxs-lookup"><span data-stu-id="46c4c-117">Remarks</span></span>  
- <span data-ttu-id="46c4c-118">XML 處理指示常值會指出應用程式應該如何處理 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="46c4c-118">XML processing instruction literals indicate how applications should process an XML document.</span></span> <span data-ttu-id="46c4c-119">當應用程式載入 XML 文件時，應用程式可以檢查以判斷如何處理文件的 XML 處理指示。</span><span class="sxs-lookup"><span data-stu-id="46c4c-119">When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document.</span></span> <span data-ttu-id="46c4c-120">應用程式會將解譯的意義`piName`和`piData`。</span><span class="sxs-lookup"><span data-stu-id="46c4c-120">The application interprets the meaning of `piName` and `piData`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fe78c-117">備註</span><span class="sxs-lookup"><span data-stu-id="fe78c-117">Remarks</span></span>  
+ <span data-ttu-id="fe78c-118">XML 處理指示常值會指出應用程式應該如何處理 XML 文件。</span><span class="sxs-lookup"><span data-stu-id="fe78c-118">XML processing instruction literals indicate how applications should process an XML document.</span></span> <span data-ttu-id="fe78c-119">當應用程式載入 XML 文件時，應用程式可以檢查以判斷如何處理文件的 XML 處理指示。</span><span class="sxs-lookup"><span data-stu-id="fe78c-119">When an application loads an XML document, the application can check the XML processing instructions to determine how to process the document.</span></span> <span data-ttu-id="fe78c-120">應用程式會將解譯的意義`piName`和`piData`。</span><span class="sxs-lookup"><span data-stu-id="fe78c-120">The application interprets the meaning of `piName` and `piData`.</span></span>  
   
- <span data-ttu-id="46c4c-121">XML 文件常值會使用類似的 XML 處理指示的語法。</span><span class="sxs-lookup"><span data-stu-id="46c4c-121">The XML document literal uses syntax that is similar to that of the XML processing instruction.</span></span> <span data-ttu-id="46c4c-122">如需詳細資訊，請參閱 < [XML 文件常值](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)。</span><span class="sxs-lookup"><span data-stu-id="46c4c-122">For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span></span>  
-  
-> [!NOTE]
->  <span data-ttu-id="46c4c-123">`piName`與字串"xml"或"XML"，無法開始項目，因為 XML 1.0 規格會保留這些識別項。</span><span class="sxs-lookup"><span data-stu-id="46c4c-123">The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.</span></span>  
-  
- <span data-ttu-id="46c4c-124">您可以指派給變數的 XML 處理指示常值，或將它包含在 XML 文件常值。</span><span class="sxs-lookup"><span data-stu-id="46c4c-124">You can assign an XML processing instruction literal to a variable or include it in an XML document literal.</span></span>  
+ <span data-ttu-id="fe78c-121">XML 文件常值會使用類似的 XML 處理指示的語法。</span><span class="sxs-lookup"><span data-stu-id="fe78c-121">The XML document literal uses syntax that is similar to that of the XML processing instruction.</span></span> <span data-ttu-id="fe78c-122">如需詳細資訊，請參閱 < [XML 文件常值](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)。</span><span class="sxs-lookup"><span data-stu-id="fe78c-122">For more information, see [XML Document Literal](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="46c4c-125">XML 常值可以跨越多行，而不需要行接續字元。</span><span class="sxs-lookup"><span data-stu-id="46c4c-125">An XML literal can span multiple lines without needing line continuation characters.</span></span> <span data-ttu-id="46c4c-126">這可讓您從 XML 文件複製內容，並將它貼到 Visual Basic 程式直接。</span><span class="sxs-lookup"><span data-stu-id="46c4c-126">This enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+>  <span data-ttu-id="fe78c-123">`piName`與字串"xml"或"XML"，無法開始項目，因為 XML 1.0 規格會保留這些識別項。</span><span class="sxs-lookup"><span data-stu-id="fe78c-123">The `piName` element cannot begin with the strings "xml" or "XML", because the XML 1.0 specification reserves those identifiers.</span></span>  
   
- <span data-ttu-id="46c4c-127">Visual Basic 編譯器會將 XML 處理指示常值轉換成呼叫<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>建構函式。</span><span class="sxs-lookup"><span data-stu-id="46c4c-127">The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.</span></span>  
+ <span data-ttu-id="fe78c-124">您可以指派給變數的 XML 處理指示常值，或將它包含在 XML 文件常值。</span><span class="sxs-lookup"><span data-stu-id="fe78c-124">You can assign an XML processing instruction literal to a variable or include it in an XML document literal.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="46c4c-128">範例</span><span class="sxs-lookup"><span data-stu-id="46c4c-128">Example</span></span>  
- <span data-ttu-id="46c4c-129">下列範例會建立用來識別 XML 文件樣式表處理指示。</span><span class="sxs-lookup"><span data-stu-id="46c4c-129">The following example creates a processing instruction identifying a style-sheet for an XML document.</span></span>  
+> [!NOTE]
+>  <span data-ttu-id="fe78c-125">XML 常值可以跨越多行，而不需要行接續字元。</span><span class="sxs-lookup"><span data-stu-id="fe78c-125">An XML literal can span multiple lines without needing line continuation characters.</span></span> <span data-ttu-id="fe78c-126">這可讓您從 XML 文件複製內容，並將它貼到 Visual Basic 程式直接。</span><span class="sxs-lookup"><span data-stu-id="fe78c-126">This enables you to copy content from an XML document and paste it directly into a Visual Basic program.</span></span>  
+  
+ <span data-ttu-id="fe78c-127">Visual Basic 編譯器會將 XML 處理指示常值轉換成呼叫<xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A>建構函式。</span><span class="sxs-lookup"><span data-stu-id="fe78c-127">The Visual Basic compiler converts the XML processing instruction literal to a call to the <xref:System.Xml.Linq.XProcessingInstruction.%23ctor%2A> constructor.</span></span>  
+  
+## <a name="example"></a><span data-ttu-id="fe78c-128">範例</span><span class="sxs-lookup"><span data-stu-id="fe78c-128">Example</span></span>  
+ <span data-ttu-id="fe78c-129">下列範例會建立用來識別 XML 文件樣式表處理指示。</span><span class="sxs-lookup"><span data-stu-id="fe78c-129">The following example creates a processing instruction identifying a style-sheet for an XML document.</span></span>  
   
  [!code-vb[VbXMLSamples#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#28)]  
   
-## <a name="see-also"></a><span data-ttu-id="46c4c-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="46c4c-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="fe78c-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fe78c-130">See also</span></span>
+
 - <xref:System.Xml.Linq.XProcessingInstruction>
-- [<span data-ttu-id="46c4c-131">XML 文件常值</span><span class="sxs-lookup"><span data-stu-id="46c4c-131">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
-- [<span data-ttu-id="46c4c-132">XML 常值</span><span class="sxs-lookup"><span data-stu-id="46c4c-132">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
-- [<span data-ttu-id="46c4c-133">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="46c4c-133">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
+- [<span data-ttu-id="fe78c-131">XML 文件常值</span><span class="sxs-lookup"><span data-stu-id="fe78c-131">XML Document Literal</span></span>](../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)
+- [<span data-ttu-id="fe78c-132">XML 常值</span><span class="sxs-lookup"><span data-stu-id="fe78c-132">XML Literals</span></span>](../../../visual-basic/language-reference/xml-literals/index.md)
+- [<span data-ttu-id="fe78c-133">在 Visual Basic 中建立 XML</span><span class="sxs-lookup"><span data-stu-id="fe78c-133">Creating XML in Visual Basic</span></span>](../../../visual-basic/programming-guide/language-features/xml/creating-xml.md)
