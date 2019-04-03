@@ -5,18 +5,20 @@ helpviewer_keywords:
 - My namespace [Visual Basic], customizing
 - My namespace
 ms.assetid: 4e8279c2-ed5b-4681-8903-8a6671874000
-ms.openlocfilehash: 74be338cd6f704174d89032fb7f9e859215c2bc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c0b47521c6a62071466ae4193cd8553bdfb3dcde
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843535"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890367"
 ---
 # <a name="customizing-which-objects-are-available-in-my-visual-basic"></a>自訂 My 中可用的物件 (Visual Basic)
+
 本主題說明您如何控制哪些`My`物件會藉由設定您的專案啟用`_MYTYPE`條件式編譯常數。 Visual Studio 整合式開發環境 (IDE) 會保留`_MYTYPE`專案與專案類型的同步處理的條件式編譯常數。  
   
-## <a name="predefined-mytype-values"></a>預先定義的 _MYTYPE 值  
- 您必須使用`/define`編譯器選項來設定`_MYTYPE`條件式編譯常數。 指定您自己的值時`_MYTYPE`常數，您必須括住的字串值反斜線/引號 (\\") 序列。 例如，您可以使用：  
+## <a name="predefined-mytype-values"></a>預先定義的\_MYTYPE 的值  
+
+您必須使用`/define`編譯器選項來設定`_MYTYPE`條件式編譯常數。 指定您自己的值時`_MYTYPE`常數，您必須括住的字串值反斜線/引號 (\\") 序列。 例如，您可以使用：  
   
 ```  
 /define:_MYTYPE=\"WindowsForms\"  
@@ -24,7 +26,7 @@ ms.locfileid: "58843535"
   
  下表顯示哪些`_MYTYPE`條件式編譯常數設定為幾個專案類型。  
   
-|專案類型|_MYTYPE 值|  
+|專案類型|\_MYTYPE 的值|  
 |------------------|--------------------|  
 |類別庫|"Windows"|  
 |主控台應用程式|「 主控台 」|  
@@ -37,12 +39,13 @@ ms.locfileid: "58843535"
 |Empty|「 空白 」|  
   
 > [!NOTE]
->  所有的條件式編譯的字串比較會區分大小寫，不論`Option Compare`陳述式設定。  
+> 所有的條件式編譯的字串比較會區分大小寫，不論`Option Compare`陳述式設定。  
   
-## <a name="dependent-my-compilation-constants"></a>相依 _MY 編譯常數  
- `_MYTYPE`條件式編譯常數，控制的其他幾個值`_MY`編譯常數：  
+## <a name="dependent-my-compilation-constants"></a>相依\_我編譯常數  
+
+`_MYTYPE`條件式編譯常數，控制的其他幾個值`_MY`編譯常數：  
   
-|_MYTYPE|_MYAPPLICATIONTYPE|_MYCOMPUTERTYPE|_MYFORMS|_MYUSERTYPE|_MYWEBSERVICES|  
+|\_MYTYPE|\_MYAPPLICATIONTYPE|\_MYCOMPUTERTYPE|\_PHOTOS.CONTOSO.COM|\_MYUSERTYPE|\_MYWEBSERVICES|  
 |--------------|-------------------------|----------------------|---------------|------------------|---------------------|  
 |「 主控台 」|「 主控台 」|"Windows"|未定義|"Windows"|true|  
 |「 自訂 」|未定義|未定義|未定義|未定義|未定義|  
@@ -56,7 +59,7 @@ ms.locfileid: "58843535"
  根據預設，未定義的條件式編譯常數會解析成`FALSE`。 編譯您的專案覆寫預設行為時，您可以指定為未定義的常數的值。  
   
 > [!NOTE]
->  當`_MYTYPE`設定為"Custom"，此專案包含`My`命名空間，但它不包含的物件。 不過，設定`_MYTYPE`到 「 空白 」 可防止編譯器加入`My`命名空間和其物件。  
+> 當`_MYTYPE`設定為"Custom"，此專案包含`My`命名空間，但它不包含的物件。 不過，設定`_MYTYPE`到 「 空白 」 可防止編譯器加入`My`命名空間和其物件。  
   
  下表描述的預先定義的值影響`_MY`編譯的常數。  
   

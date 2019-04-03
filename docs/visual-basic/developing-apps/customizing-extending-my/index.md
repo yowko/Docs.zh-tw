@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 06ca80b9-1192-4eb5-8537-8ef5edfb9be0
-ms.openlocfilehash: 89a9a988bab62cb77e3e5a5075fa01bdbb11f4c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d7fca92f541ffeca7a6e8267260d3b665271e90a
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820941"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890393"
 ---
 # <a name="customizing-projects-and-extending-my-with-visual-basic"></a>使用 Visual Basic 自訂專案和擴充 My 物件
 您可以自訂專案範本，以提供額外`My`物件。 這可輕鬆尋找並使用您物件的其他開發人員。  
@@ -27,7 +27,7 @@ ms.locfileid: "58820941"
  描述如何藉由覆寫的成員指定自己的延伸模組，應用程式模型<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別。  
   
  [自訂 My 中可用的物件](../../../visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md)  
- 描述如何控制有哪些`My`物件會啟用設定您的專案 _MYTYPE 條件式編譯常數。  
+ 描述如何控制哪個`My`物件會藉由設定您的專案啟用\_MYTYPE 條件式編譯常數。  
   
 ## <a name="related-sections"></a>相關章節  
  [使用 My 進行開發](../../../visual-basic/developing-apps/development-with-my/index.md)  
