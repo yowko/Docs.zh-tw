@@ -11,12 +11,12 @@ helpviewer_keywords:
 - methods [Visual Basic], partial methods
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
-ms.openlocfilehash: 4b35985aa67cea7b58ddf05611cf4e0813a2d442
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977457"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837464"
 ---
 # <a name="partial-methods-visual-basic"></a>部分方法 (Visual Basic)
 部分方法可讓開發人員程式碼中插入自訂邏輯。 一般而言，程式碼會是類別的一部分的設計工具所產生。 部分方法中所建立的程式碼產生器中，部分類別定義，它們通常用來提供的項目已變更的通知。 它們可讓開發人員指定自訂的行為變更的回應。  
@@ -71,6 +71,7 @@ End Sub
  `Quantity was changed to 100`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [Sub 程序](./sub-procedures.md)
 - [選擇性參數](./optional-parameters.md)

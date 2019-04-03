@@ -1,5 +1,5 @@
 ---
-title: <message> 這項錯誤也可能是因為混用了檔案參考和組件 '<assemblyname>' 的專案參考
+title: <message> 此錯誤也可能是因為混用了檔案參考和組件的專案參考 '<assemblyname>'
 ms.date: 07/20/2015
 f1_keywords:
 - bc30971
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
-ms.openlocfilehash: f28327b4df5b15f368f736e7402179227035a06e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f2e7040de5ea74f3793129d23d4ae8c80b71f25
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272548"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841546"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >'
 \<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >。 在此情況下，請嘗試更換的檔案參考 '\<assemblyfilename >' 在專案'\<projectname1 >' 的專案參考 '\<專案名稱 2> >'。  
@@ -30,6 +30,7 @@ ms.locfileid: "55272548"
 2.  在專案屬性中，加入包含組件之專案的參考，此組件定義所使用的類型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
 - [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

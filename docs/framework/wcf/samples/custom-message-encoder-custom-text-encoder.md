@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：自訂文字編碼器
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: c5b45ed10475bdfd88998db0ead9afff1f0a0f2d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54cba7eb5ff743d4fddc37a824e05a376880d6d9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832316"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自訂訊息編碼器：自訂文字編碼器
 此範例示範如何實作自訂文字訊息編碼器使用 Windows Communication Foundation (WCF)。  
@@ -237,4 +237,3 @@ Microsoft.ServiceModel.Samples.CustomTextMessageEncodingBindingSection,
 </extensions>  
 ```  
   
-## <a name="see-also"></a>另請參閱

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c9716193c3429d5dd3aff1734415105713d2538
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221286"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409441"
 ---
 # <a name="default-marshaling-behavior"></a>預設的封送處理行為
 Interop 封送處理會依據規則作業，這些規則指定與方法參數關聯的資料在 Managed 和 Unmanaged 記憶體之間傳遞時的運作方式。 這些內建規則會將這類封送處理活動當做資料類型轉換來控制；控制被呼叫者是否可以變更收到的資料，並將這些變更傳回給呼叫端；以及控制在哪些情況下，封送處理器會提供效能最佳化。  
@@ -33,7 +33,7 @@ Interop 封送處理會依據規則作業，這些規則指定與方法參數關
   
 ### <a name="unmanaged-signature"></a>Unmanaged 簽章  
   
-```  
+```cpp  
 BSTR MethodOne (BSTR b) {  
      return b;  
 }  
@@ -77,8 +77,7 @@ BSTR MethodOne (BSTR b) {
   
 -   若為 COM Interop，委派預設會封送處理為 **_Delegate** 類型的 COM 介面。 **_Delegate** 介面是在 Mscorlib.tlb 型別程式庫中定義，並且包含 <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> 方法，可讓您呼叫委派所參考的方法。  
   
- 下表顯示 Managed 委派資料類型的封送處理選項。 
-  <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理委派。  
+ 下表顯示 Managed 委派資料類型的封送處理選項。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理委派。  
   
 |列舉類型|Unmanaged 格式的描述|  
 |----------------------|-------------------------------------|  
@@ -102,7 +101,7 @@ void m5([MarshalAs(UnmanagedType.FunctionPtr)] ref Delegate d);
   
 ### <a name="type-library-representation"></a>類型程式庫表示  
   
-```  
+```cpp  
 importlib("mscorlib.tlb");  
 interface DelegateTest : IDispatch {  
 [id(…)] HRESULT m1([in] _Delegate* d);  
@@ -165,13 +164,13 @@ internal class DelegateTest {
 ## <a name="default-marshaling-for-value-types"></a>實值類型的預設封送處理  
  大部分的實值型別 (例如整數和浮點數) 都是 [Blittable](blittable-and-non-blittable-types.md)，而且不需要封送處理。 其他[非 Blittable](blittable-and-non-blittable-types.md) 類型在 Managed 和 Unmanaged 記憶體中有不同的表示，而且需要封送處理。 但其他類型需要跨互通界限進行明確格式化。  
   
- 本主題提供以下有關格式化實值類型的資訊：  
+ 本節提供下列格式化實值型別的相關資訊：  
   
--   [在平台叫用中使用的實值型別](#cpcondefaultmarshalingforvaluetypesanchor2)  
+-   [在平台叫用中使用的實值型別](#value-types-used-in-platform-invoke)  
   
--   [在 COM Interop 中使用的實值型別](#cpcondefaultmarshalingforvaluetypesanchor3)  
+-   [在 COM Interop 中使用的實值型別](#value-types-used-in-com-interop)  
   
- 本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值型別](#cpcondefaultmarshalingforvaluetypesanchor1)。  
+ 本主題除了描述格式化類型之外，還指出具有獨特封送處理行為的[系統實值型別](#system-value-types)。  
   
  格式化類型是複雜類型，其中包含在記憶體中明確控制其成員配置的資訊。 這項成員配置資訊會透過 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來提供。 配置可以是下列其中一個 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值：  
   
@@ -187,7 +186,6 @@ internal class DelegateTest {
   
      表示根據每個欄位提供的 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 來配置成員。  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor2"></a>   
 ### <a name="value-types-used-in-platform-invoke"></a>在平台叫用中使用的實值類型  
  在下列範例中，`Point` 和 `Rect` 類型使用 **StructLayoutAttribute** 提供成員配置資訊。  
   
@@ -222,42 +220,40 @@ public struct Rect {
 }  
 ```  
   
- 當封送處理至 Unmanaged 程式碼時，這些格式化類型會封送處理為 C 樣式結構。 如此可讓您輕鬆地呼叫具有結構引數的 Unmanaged 應用程式開發介面。 例如，`POINT` 和 `RECT` 結構可以傳遞至 Microsoft Win32 API **PtInRect** 函式，如下所示：  
+ 當封送處理至 Unmanaged 程式碼時，這些格式化類型會封送處理為 C 樣式結構。 如此可讓您輕鬆地呼叫具有結構引數的 Unmanaged 應用程式開發介面。 例如，`POINT` 和 `RECT` 結構可以傳遞至 Microsoft Windows API **PtInRect** 函式，如下所示：  
   
-```  
+```cpp  
 BOOL PtInRect(const RECT *lprc, POINT pt);  
 ```  
   
  您可以使用以下的平台叫用定義來傳遞結構：  
   
-```vb  
-Class Win32API      
-   Declare Auto Function PtInRect Lib "User32.dll" _  
-    (ByRef r As Rect, p As Point) As Boolean  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+        ByRef r As Rect, p As Point) As Boolean
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("User32.dll")]  
-   public static extern Bool PtInRect(ref Rect r, Point p);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("User32.dll")]
+   internal static extern bool PtInRect(ref Rect r, Point p);
+}
+```
   
- 
-  `Rect` 實值類型必須以傳址方式傳遞，因為 Unmanaged 應用程式開發介面必須將 `RECT` 的指標傳遞至函式。 
-  `Point` 實值類型必須以傳值方式傳遞，因為 Unmanaged 應用程式開發介面必須在堆疊上傳遞 `POINT`。 這種微妙的差異是非常重要的。 參考會當做指標傳遞至 Unmanaged 程式碼， 而值會在堆疊上傳遞至 Unmanaged 程式碼。  
+ `Rect` 實值類型必須以傳址方式傳遞，因為 Unmanaged 應用程式開發介面必須將 `RECT` 的指標傳遞至函式。 `Point` 實值類型必須以傳值方式傳遞，因為 Unmanaged 應用程式開發介面必須在堆疊上傳遞 `POINT`。 這種微妙的差異是非常重要的。 參考會當做指標傳遞至 Unmanaged 程式碼， 而值會在堆疊上傳遞至 Unmanaged 程式碼。  
   
 > [!NOTE]
 >  當格式化類型封送處理為結構時，只能存取類型內的欄位。 如果類型具有方法、屬性或事件，您無法從 Unmanaged 程式碼存取這些項目。  
   
- 只要類別有固定成員配置，也可以當做 C 樣式結構封送處理至 Unmanaged 程式碼。 
-  <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性也會提供類別的成員配置資訊。 具有固定配置的實值類型和具有固定配置的類別之間的主要差異在於，將其封送處理至 Unmanaged 程式碼的方式不同。 實值類型是以傳值方式 (在堆疊上) 傳遞，因此呼叫端不會看到被呼叫端對類型的成員所做的任何變更。 參考類型是以傳址方式 (在堆疊上傳遞類型的參考) 傳遞，因此呼叫端會看到被呼叫端對類型的 Blittable 類型成員所做的所有變更。  
+ 只要類別有固定成員配置，也可以當做 C 樣式結構封送處理至 Unmanaged 程式碼。 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性也會提供類別的成員配置資訊。 具有固定配置的實值類型和具有固定配置的類別之間的主要差異在於，將其封送處理至 Unmanaged 程式碼的方式不同。 實值類型是以傳值方式 (在堆疊上) 傳遞，因此呼叫端不會看到被呼叫端對類型的成員所做的任何變更。 參考類型是以傳址方式 (在堆疊上傳遞類型的參考) 傳遞，因此呼叫端會看到被呼叫端對類型的 Blittable 類型成員所做的所有變更。  
   
 > [!NOTE]
 >  如果參考類型具有非 Blittable 類型的成員，則需要轉換兩次：第一次是在將引數傳遞至 Unmanaged 端時，第二次是從呼叫傳回時。 由於這會增加額外負荷，因此如果呼叫端想要看到被呼叫端所做的變更，就必須將 In/Out 參數明確套用至引數。  
   
- 在下列範例中，`SystemTime` 類別具有循序成員配置，可以傳遞至 Win32 API **GetSystemTime** 函式。  
+ 在下列範例中，`SystemTime` 類別具有循序成員配置，可以傳遞至 Windows API **GetSystemTime** 函式。  
   
 ```vb  
 <StructLayout(LayoutKind.Sequential)> Public Class SystemTime  
@@ -288,25 +284,26 @@ End Class
   
  **GetSystemTime** 函式的定義如下：  
   
-```  
+```cpp  
 void GetSystemTime(SYSTEMTIME* SystemTime);  
 ```  
   
  **GetSystemTime** 的對等平台叫用定義如下：  
   
-```vb  
-Public Class Win32  
-   Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (ByVal sysTime _  
-   As SystemTime)  
-End Class  
-```  
+```vb
+Friend Class WindowsAPI
+    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+        ByVal sysTime As SystemTime)
+End Class
+```
   
-```csharp  
-class Win32API {  
-   [DllImport("Kernel32.dll", CharSet=CharSet.Auto)]  
-   public static extern void GetSystemTime(SystemTime st);  
-}  
-```  
+```csharp
+internal static class WindowsAPI
+{
+   [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
+   internal static extern void GetSystemTime(SystemTime st);
+}
+```
   
  請注意，`SystemTime` 引數未當做參考引數輸入，因為 `SystemTime` 是類別，不是實值類型。 不同於實值類型，類別永遠會以傳址方式傳遞。  
   
@@ -333,14 +330,12 @@ public class Point {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor3"></a>   
 ### <a name="value-types-used-in-com-interop"></a>在 COM Interop 中使用的實值類型  
- 格式化類型也可以傳遞至 COM Interop 方法呼叫。 事實上，當匯出至類型程式庫時，實值類型會自動轉換成結構。 如下列範例所示，`Point` 實值類型會變成名為 `Point` 的類型定義 (typedef)。 
-  `Point` typedef 會取代在類型程式庫中的所有 `Point` 實值類型的參考。  
+ 格式化類型也可以傳遞至 COM Interop 方法呼叫。 事實上，當匯出至類型程式庫時，實值類型會自動轉換成結構。 如下列範例所示，`Point` 實值類型會變成名為 `Point` 的類型定義 (typedef)。 `Point` typedef 會取代在類型程式庫中的所有 `Point` 實值類型的參考。  
   
  **型別程式庫呈現**  
   
-```  
+```cpp  
 typedef struct tagPoint {  
    int x;  
    int y;  
@@ -358,10 +353,8 @@ interface _Graphics {
 > [!NOTE]
 >  由於匯出的型別程式庫無法表示明確的配置，因此不可在 COM Interop 中使用將 <xref:System.Runtime.InteropServices.LayoutKind> 列舉值設定為 [明確] 的結構。  
   
-<a name="cpcondefaultmarshalingforvaluetypesanchor1"></a>   
 ### <a name="system-value-types"></a>系統實值類型  
- 
-  <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=nameWithType> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  
+ <xref:System> 命名空間具有數個實值類型，代表執行階段基本類型的 Boxed 格式。 例如，實值型別 <xref:System.Int32?displayProperty=nameWithType> 結構代表 **ELEMENT_TYPE_I4** 的 Boxed 格式。 如同其他格式化類型，封送處理這些類型的方式與這些類型 Box 處理基本類型的方式相同，而不是將其封送處理為結構。 因此會將 **System.Int32** 封送處理為 **ELEMENT_TYPE_I4**，而不是封送處理為包含 **long** 類型之單一成員的結構。 下表包含 **System** 命名空間中的實值型別清單，這些類型是基本類型的 Boxed 表示。  
   
 |系統實值類型|項目類型|  
 |-----------------------|------------------|  
@@ -394,7 +387,7 @@ interface _Graphics {
   
 #### <a name="type-library-representation"></a>類型程式庫表示  
   
-```  
+```cpp  
 typedef double DATE;  
 typedef DWORD OLE_COLOR;  
   
@@ -436,7 +429,7 @@ public interface IValueTypes {
   
 #### <a name="type-library-representation"></a>類型程式庫表示  
   
-```  
+```cpp  
 […]  
 interface IValueTypes : IDispatch {  
    HRESULT M1([in] DATE d);  

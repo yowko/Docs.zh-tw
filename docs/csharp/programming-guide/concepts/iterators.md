@@ -2,12 +2,12 @@
 title: 在 C# 中逐一查看集合
 ms.date: 08/14/2018
 ms.assetid: c93f6dd4-e72a-4a06-be1c-a98b3255b734
-ms.openlocfilehash: 386f4145c38e3a573ec04d2a0b8e260bcdc63491
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b0e1d509cf80e13d2cee3cf0ddf2021d6c84c5b
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720794"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464316"
 ---
 # <a name="iterators-c"></a>迭代器 (C#)
 
@@ -324,7 +324,7 @@ public class Stack<T> : IEnumerable<T>
 
 出現的迭代器可以是方法或 `get` 存取子。 迭代器不能出現在事件、執行個體建構函式、靜態建構函式或靜態完成項中。
 
-從 `yield return` 陳述式中的運算式類型到迭代器傳回的 IEnumerable<T> 型別引數，必須有隱含轉換。
+從 `yield return` 陳述式中的運算式類型到迭代器傳回的 IEnumerable\<T> 型別引數，必須有隱含轉換。
 
 在 C# 中，迭代器方法不可有任何 `in`、`ref` 或 `out` 參數。
 

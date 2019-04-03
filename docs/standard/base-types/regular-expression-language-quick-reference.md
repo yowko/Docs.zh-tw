@@ -16,35 +16,23 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f44bf779060a2f9ff2de96ccad5f397a9cdd33c7
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836301"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410520"
 ---
 # <a name="regular-expression-language---quick-reference"></a>規則運算式語言 - 快速參考
-<a name="top"></a>規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
+ 規則運算式是規則運算式引擎嘗試在輸入文字中比對的模式。 模式是由一個或多個字元常值、運算子或建構所組成。  如需簡介，請參閱 [.NET 規則運算式](../../../docs/standard/base-types/regular-expressions.md)。  
   
- 本快速參考的每一節列出您可以用於定義規則運算式的特定某類字元、運算子和建構：  
-  
- [逸出字元](#character_escapes)  
- [字元類別](#character_classes)  
- [錨點](#anchors)  
- [分組建構](#grouping_constructs)  
- [數量詞](#quantifiers)  
- [反向參考建構](#backreference_constructs)  
- [替代建構](#alternation_constructs)  
- [替代](#substitutions)  
- [規則運算式選項](#options)  
- [其他建構](#miscellaneous_constructs)  
+ 本快速參考中的每一節都列出您可以用於定義規則運算式的特定某類字元、運算子和建構。  
   
  我們也有用兩種格式提供此資訊，可讓您下載及列印，以方便參考。  
   
  [以 Word (.docx) 格式下載](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.docx)  
  [下載 PDF (.pdf) 格式](https://download.microsoft.com/download/D/2/4/D240EBF6-A9BA-4E4F-A63F-AEB6DA0B921C/Regular%20expressions%20quick%20reference.pdf)  
   
-<a name="character_escapes"></a>   
 ## <a name="character-escapes"></a>逸出字元  
  規則運算式中的反斜線字元 (\\) 表示接在後面的字元是特殊字元 (如下表所示)，或應該解譯為常值。 如需詳細資訊，請參閱[逸出字元](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)。  
   
@@ -66,7 +54,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="character_classes"></a>   
 ## <a name="character-classes"></a>字元類別  
  字元類別會比對一組字元中的任何一個字元。 字元類別包含下表列出的語言項目。 如需詳細資訊，請參閱[字元類別](../../../docs/standard/base-types/character-classes-in-regular-expressions.md)。  
   
@@ -103,7 +90,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="grouping_constructs"></a>   
 ## <a name="grouping-constructs"></a>分組建構  
  分組建構會描寫規則運算式的子運算式，而且通常會擷取輸入字串的子字串。 分組建構包含下表列出的語言元素。 如需詳細資訊，請參閱[分組建構](grouping-constructs-in-regular-expressions.md)。  
   
@@ -122,7 +108,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="quantifiers"></a>   
 ## <a name="quantifiers"></a>數量詞  
  數量詞指定上一個項目 (可能是字元、群組或字元類別) 必須在輸入字串中出現多少次，才算符合。 數量詞包含下表列出的語言項目。 如需詳細資訊，請參閱[數量詞](quantifiers-in-regular-expressions.md)。  
   
@@ -143,7 +128,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="backreference_constructs"></a>   
 ## <a name="backreference-constructs"></a>反向參考建構  
  反向參考可於後來在相同規則運算式中再識別先前符合的子運算式。 下表列出 .NET 中規則運算式所支援的反向參考建構。 如需詳細資訊，請參閱[反向參考建構](backreference-constructs-in-regular-expressions.md)。  
   
@@ -154,7 +138,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="alternation_constructs"></a>   
 ## <a name="alternation-constructs"></a>替代建構  
  替代建構會修改規則運算式來啟用二選一比對。 這些建構包含下表列出的語言元素。 如需詳細資訊，請參閱[替代建構](alternation-constructs-in-regular-expressions.md)。  
   
@@ -166,7 +149,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="substitutions"></a>   
 ## <a name="substitutions"></a>替代  
  替代是取代模式中支援的規則運算式語言元素。 如需詳細資訊，請參閱[替代](substitutions-in-regular-expressions.md)。 下表列出的 metacharacter 是原子零寬度判斷提示。  
   
@@ -183,7 +165,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="options"></a>   
 ## <a name="regular-expression-options"></a>規則運算式選項  
  您可以指定選項，以控制規則運算式引擎如何解譯規則運算式模式。 這些選項中有許多可以指定為內嵌 (在規則運算式模式中) 或是一個或多個 <xref:System.Text.RegularExpressions.RegexOptions> 常數。 這個快速參考只列出內嵌選項。 如需內嵌和 <xref:System.Text.RegularExpressions.RegexOptions> 選項的詳細資訊，請參閱 [規則運算式選項](regular-expression-options.md)。  
   
@@ -205,7 +186,6 @@ ms.locfileid: "56836301"
   
  [回到頁首](#top)  
   
-<a name="miscellaneous_constructs"></a>   
 ## <a name="miscellaneous-constructs"></a>其他建構  
  其他建構會修改規則運算式模式或提供其相關資訊。 下表列出 .NET 所支援的其他建構。 如需詳細資訊，請參閱[其他建構](miscellaneous-constructs-in-regular-expressions.md)。  
   

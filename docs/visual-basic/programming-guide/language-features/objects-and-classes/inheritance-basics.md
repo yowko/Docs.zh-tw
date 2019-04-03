@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 3d772fb81eb13b9454f44ff8ae4256bdb4144caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970294"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826570"
 ---
 # <a name="inheritance-basics-visual-basic"></a>繼承基本概念 (Visual Basic)
 `Inherits`陳述式用來宣告新的類別，叫做*衍生類別*根據現有的類別，稱為*基底類別*。 在衍生的類別繼承，且可以擴充，屬性、 方法、 事件、 欄位和基底類別中定義的常數。 下節描述一些繼承規則，以及修飾詞，可用來變更方法的類別繼承，或會繼承：  
@@ -143,5 +143,6 @@ End Class
  即使`derivedClass`會覆寫`testMethod`，則`MyClass`中的關鍵字`useMyClass`nullifies 的覆寫，且編譯器會解析效果的基底類別版本呼叫`testMethod`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Inherits 陳述式](../../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

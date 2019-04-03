@@ -4,16 +4,16 @@ description: 了解在 .NET 中與原生元件建立介面的最佳做法。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 90a707830049b5edf574b83e7ca03ec30527b001
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: 5b65f80d3a81fab0d74ce26aec3b454c716a5d51
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "56411400"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412054"
 ---
 # <a name="native-interoperability-best-practices"></a>原生互通性最佳做法
 
-.NET 提供您各種自訂原生互通性程式碼的方式。 本文包含 Microsoft 的 .NET 小組在原生互通性上遵循的指導方針。
+.NET 提供您各種自訂原生互通性程式碼的方式。 此文章包含 Microsoft 的 .NET 小組在原生互通性上遵循的指導方針。
 
 ## <a name="general-guidance"></a>一般指引
 
@@ -29,7 +29,7 @@ ms.locfileid: "56411400"
 
 ## <a name="dllimport-attribute-settings"></a>DllImport 屬性設定
 
-| 設定 | 預設 | 建議 | Details |
+| 設定 | 預設 | 建議 | 詳細資料 |
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  保留預設值  | 當此項目明確設為 False 時，失敗的 HRESULT 傳回值會轉換成例外狀況 (結果為定義中的傳回值會變成 Null)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | 取決於 API  | 如果 API 使用 GetLastError 並使用 Marshal.GetLastWin32Error 來取得值，請將此項目設為 True。 如果 API 設定的條件指出有錯誤，請先取得該錯誤再進行其他呼叫，以避免不小心複寫它。|
@@ -160,7 +160,7 @@ handle.Free();
 
 ## <a name="common-windows-data-types"></a>常見的 Windows 資料類型
 
-以下是常用於 Win32 API 中的資料類型，以及在呼叫至 Win32 程式碼內時要使用的 C# 類型。
+以下是常用於 Windows API 中的資料類型清單，以及在呼叫至 Windows 程式碼內時要使用的 C# 類型。
 
 下列類型在 32 位元和 64 位元 Windows 上的大小相同 (除了其名稱)。
 

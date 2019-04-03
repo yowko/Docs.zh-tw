@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scope [Visual Basic], Visual Basic
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
-ms.openlocfilehash: 38dd9d6d40780c25f06a35cf1ffbe4743b7da4a4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537230"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823541"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic 中的範圍
 *領域*的宣告的項目是 所有程式碼都可以參考它，而不需要限定其名稱，或使其能透過一組[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。 元素可能具有其中一個下列層級的範圍：  
@@ -135,6 +135,7 @@ Public strMsg As String
  一般情況下，宣告時的任何變數或常數，是良好的程式設計做法範圍愈小愈好 （區塊範圍內最小的）。 這有助於節省記憶體，並將程式碼誤用錯誤變數的機會降到最低。 同樣地，您應該將變數宣告[靜態](../../../../visual-basic/language-reference/modifiers/static.md)只會在必要時要保留其程序呼叫的間隔值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [如何：控制變數的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)
 - [在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)

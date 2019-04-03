@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 49efaa6470b6fea062be0663d8b1c48b9284bd99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671989"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842079"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>My 如何相依於專案類型 (Visual Basic)
 `My` 只有在特定專案類型所需的物件公開 （expose)。 比方說，`My.Forms`物件是在 Windows Forms 應用程式中可用的但無法使用主控台應用程式中。 本主題描述其中`My`物件都在不同的專案類型。  
@@ -56,6 +56,7 @@ ms.locfileid: "54671989"
  <sup>7</sup>的 web 版本`My.User`。 這個物件是應用程式的目前 HTTP 要求的使用者身分識別與相關聯。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.Logging.Log>

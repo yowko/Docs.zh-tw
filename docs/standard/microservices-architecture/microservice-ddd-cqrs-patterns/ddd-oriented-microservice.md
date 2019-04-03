@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解 DDD 
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 65a1a58d0c70c7e788aea420006c1ad617628f93
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: e41f84a79dc075de05a9e30ccbf3de38175900a2
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53145604"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464901"
 ---
 # <a name="design-a-ddd-oriented-microservice"></a>設計 DDD 導向微服務
 
@@ -53,7 +53,7 @@ ms.locfileid: "53145604"
 
 Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://domainlanguage.com/ddd/) 提到了下列關於領域模型層及應用程式層的內容。
 
-**領域模型層**負責呈現商務概念、商務情況的資訊，以及商務規則。 反映商務情況的狀態會受控並用於此處，即使儲存它的技術細節已委派給基礎結構。 此層是商務軟體的核心。
+**領域模型層**：負責呈現商務概念、商務情況的資訊，以及商務規則。 反映商務情況的狀態會受控並用於此處，即使儲存它的技術細節已委派給基礎結構。 此層是商務軟體的核心。
 
 領域模型層是表達商務的地方。 當您在 .NET 中實作微服務領域模型層時，該層會編碼為帶有擷取資料與行為 (帶有邏輯的方法) 之領域實體的類別庫。
 
@@ -96,13 +96,13 @@ Eric Evans 的優良書籍 [Domain Driven Design (領域驅動設計)](https://d
 #### <a name="additional-resources"></a>其他資源
 
 - **DevIQ。Persistence Ignorance principle** \ (持續性無知準則)
-  [*https://deviq.com/persistence-ignorance/*](https://deviq.com/persistence-ignorance/)
+  [https://deviq.com/persistence-ignorance/](https://deviq.com/persistence-ignorance/)
 
 - **Oren Eini。Infrastructure Ignorance** \ (基礎結構無知)
-  [*https://ayende.com/blog/3137/infrastructure-ignorance*](https://ayende.com/blog/3137/infrastructure-ignorance)
+  [https://ayende.com/blog/3137/infrastructure-ignorance](https://ayende.com/blog/3137/infrastructure-ignorance)
 
 - **Angel Lopez。Layered Architecture In Domain-Driven Design** \ (領域導向設計中的分層架構)
-  [*https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/*](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
+  [https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/](https://ajlopez.wordpress.com/2008/09/12/layered-architecture-in-domain-driven-design/)
 
 >[!div class="step-by-step"]
 >[上一頁](cqrs-microservice-reads.md)

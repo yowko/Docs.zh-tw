@@ -2,9 +2,15 @@
 title: Visual Basic 中的變數
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'variables [Visual Basic]'
-  - 'values [Visual Basic], storing'
+- variables [Visual Basic]
+- values [Visual Basic], storing
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
+ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840376"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic 中的變數
 您通常需要儲存的值，當您執行使用 Visual Basic 的計算。 例如，您可能想要計算和比較數個值，並根據比較結果，對它們執行不同的作業。 如果您想要比較值，則必須保留值。  
@@ -28,6 +34,7 @@ ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
  與變數類似，「屬性」代表您可存取的值。 不過，它比變數更為複雜。 屬性會使用程式碼區塊來控制如何設定和擷取其值。 如需詳細資訊，請參閱 [Visual Basic 中屬性和變數的差異](../../../../visual-basic/programming-guide/language-features/procedures/differences-between-properties-and-variables.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [變數的疑難排解](../../../../visual-basic/programming-guide/language-features/variables/troubleshooting-variables.md)

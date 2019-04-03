@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
-ms.openlocfilehash: e879819d945f3e7256edd34e87b9cae4a04c0829
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512732"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834136"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
 指定宣告的程式設計項目會重新宣告並隱藏同名的項目或一組多載的項目，基底類別中。  
@@ -69,6 +69,7 @@ ms.locfileid: "54512732"
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)
 - [Static](../../../visual-basic/language-reference/modifiers/static.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)

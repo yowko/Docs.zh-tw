@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 7bd78772b35e3f336f49c1d39b5f56a3a2076c30
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970281"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842040"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>HOW TO：強制以傳值 (Visual Basic) 的引數
 程序宣告判斷傳遞機制。 如果參數宣告[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)，Visual Basic 需要以傳址方式傳遞相對應的引數。 這可讓程序來變更基礎呼叫程式碼中的引數的程式設計項目值。 如果您想要保護對這類變更的基礎項目，您可以覆寫`ByRef`程序中的傳遞機制來呼叫以括弧括住的引數名稱。 這些括號是以呼叫括住的引數清單的括號。  
@@ -53,6 +53,7 @@ ms.locfileid: "56970281"
  允許的程序來變更基礎呼叫程式碼中的引數的值中一律會有潛在的風險。 請確定您預期此值變更，並準備好使用之前，先將這些資料檢查有效性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)

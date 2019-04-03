@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Default keyword [Visual Basic]
 - default properties
 ms.assetid: 45fce9b9-d212-4b2d-ab86-6e359b8b57af
-ms.openlocfilehash: b63fa66c9cda1e439e3917ca62377f68028fc049
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f78ffe42a9d618d44da2a50c0de831396576430c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497837"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836723"
 ---
 # <a name="default-visual-basic"></a>Default (Visual Basic)
 將屬性識別為其類別、 結構或介面的預設屬性。  
@@ -36,5 +36,6 @@ ms.locfileid: "54497837"
  [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [如何：宣告，並在 Visual Basic 中呼叫預設屬性](../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

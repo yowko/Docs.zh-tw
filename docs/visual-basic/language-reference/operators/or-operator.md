@@ -15,12 +15,12 @@ helpviewer_keywords:
 - logical disjunction
 - disjunction operator [Visual Basic]
 ms.assetid: 41ed6905-bf3d-468a-9e3b-03c10d461891
-ms.openlocfilehash: cbfc94ad70695e9a785375f2460f9f9d8f3a20c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0277b6f24e62ed5f0cad3dae225c86fffc4c09b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977535"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835293"
 ---
 # <a name="or-operator-visual-basic"></a>Or 運算子 (Visual Basic)
 對兩個執行邏輯分離`Boolean`運算式或兩個數值運算式的位元分離。  
@@ -89,6 +89,7 @@ result = expression1 Or expression2
  上述範例中會分別產生 10、 14 及 14 的結果。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

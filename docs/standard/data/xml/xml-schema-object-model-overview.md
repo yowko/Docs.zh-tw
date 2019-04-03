@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 896a1e12-5655-42c6-8cdd-89c12862b34b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c63a21ed871bf967674d09230f897b7ab98dfa4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cdd43f7079563be6b1377f743a84625429ba4f16
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554942"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411690"
 ---
 # <a name="xml-schema-object-model-overview"></a>XML 結構描述物件模型概觀
 Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的 API，可讓您以程式設計的方式建立、編輯及驗證結構描述。 SOM 在 XML 結構描述文件上的運作方式，與文件物件模型 (DOM) 在 XML 文件上的運作方式相似。 XML 結構描述文件是有效的 XML 檔案，當它載入 SOM 後，便可傳達符合該結構描述之其他 XML 文件結構及有效性的意義。  
@@ -34,7 +34,7 @@ Microsoft .NET Framework 中的結構描述物件模型 (SOM) 是一個豐富的
 ## <a name="the-schema-object-model"></a>結構描述物件模型  
  SOM 是由 <xref:System.Xml.Schema?displayProperty=nameWithType> 命名空間中的大量類別集 (其對應於 XML 結構描述中的項目) 所組成的。 例如，`<xsd:schema>...</xsd:schema>` 項目對應至 <xref:System.Xml.Schema.XmlSchema?displayProperty=nameWithType> 類別，並可使用 `<xsd:schema/>` 類別來表示 <xref:System.Xml.Schema.XmlSchema> 項目可包含的所有資訊。 同樣地，`<xsd:element>...</xsd:element>` 及 `<xsd:attribute>...</xsd:attribute>` 項目分別對應至 <xref:System.Xml.Schema.XmlSchemaElement?displayProperty=nameWithType> 及 <xref:System.Xml.Schema.XmlSchemaAttribute?displayProperty=nameWithType> 類別。 這種對應關係會在 XML 結構描述的所有項目持續下去，以在 <xref:System.Xml.Schema> 命名空間中建立 XML 結構描述物件模型，如下圖所示。  
   
- ![System.Xml.Schema 物件模型](../../../../docs/standard/data/xml/media/xmlschemaobjmodeloverview.gif "XMLSchemaObjModelOverview")  
+ ![System.Xml.Schema 物件模型](./media/xml-schema-object-model-overview/xml-schema-object-model.gif)  
   
  如需 <xref:System.Xml.Schema> 命名空間中每個類別的詳細資訊，請參閱 .NET Framework 類別庫中的 <xref:System.Xml.Schema> 命名空間參考文件。  
   

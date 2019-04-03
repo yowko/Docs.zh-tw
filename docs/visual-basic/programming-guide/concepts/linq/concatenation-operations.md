@@ -2,12 +2,12 @@
 title: 串連作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 4021e019-a8f7-477b-879e-07dd7f44feb9
-ms.openlocfilehash: 06f46e55545f669214f4a14775252df1a86b2008
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90e848b21c79278f81507831025045224c4cf634
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54501265"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834110"
 ---
 # <a name="concatenation-operations-visual-basic"></a>串連作業 (Visual Basic)
 串連指的是將某個序列附加到另一個序列的作業。  
@@ -25,6 +25,7 @@ ms.locfileid: "54501265"
 |Concat|將兩個序列串連成一個序列。|不適用。|<xref:System.Linq.Enumerable.Concat%2A?displayProperty=nameWithType><br /><br /> <xref:System.Linq.Queryable.Concat%2A?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [如何：合併和比較字串集合 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md)

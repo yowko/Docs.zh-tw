@@ -26,12 +26,12 @@ helpviewer_keywords:
 - declaration statements [Visual Basic]
 - scalar variables [Visual Basic]
 ms.assetid: ad1c5e07-dcd7-4ae1-a79e-ad3f2dcc2083
-ms.openlocfilehash: 6ee30e885a08d3e8302d7b6083c1c65e525006c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8f5f3172eaa6b43d9b07aefa0036708b26087777
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973427"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824113"
 ---
 # <a name="redim-statement-visual-basic"></a>ReDim 陳述式 (Visual Basic)
 重新配置陣列變數的儲存空間。  
@@ -53,8 +53,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
 ## <a name="remarks"></a>備註  
  您可以使用 `ReDim` 陳述式變更已宣告陣列的一或多個維度的大小。 如果您有大型的陣列，而且不再需要其中某些項目，`ReDim` 可以減少陣列大小，釋出記憶體。 另一方面，如果陣列需要更多項目，`ReDim` 可以加入項目。  
   
- 
-  `ReDim` 陳述式僅供陣列使用。 對純量 (僅含單一值的變數)、集合或結構無效。 請注意，如果您宣告變數為類型 `Array`，則 `ReDim` 陳述式就沒有足夠的類型資訊建立新的陣列。  
+ `ReDim` 陳述式僅供陣列使用。 對純量 (僅含單一值的變數)、集合或結構無效。 請注意，如果您宣告變數為類型 `Array`，則 `ReDim` 陳述式就沒有足夠的類型資訊建立新的陣列。  
   
  `ReDim` 只能在程序層級使用。 因此，變數的宣告內容必須是程序，不能是原始程式檔、命名空間、介面、類別、結構、模組或區塊。 如需詳細資訊，請參閱[宣告內容和預設存取層級](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)。  
   
@@ -64,8 +63,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
 -   **陣列界限。** `boundlist` 中的每個項目都可以指定該維度的上下限。 下限一律為 0 (零)。 上限是該維度可能的最高索引值，不是維度長度 (上限加 1)。 每個維度的索引從 0 到上限值不等。  
   
-     
-  `boundlist` 中的維度數目必須符合陣列的原始維度 (陣序) 數目。  
+     `boundlist` 中的維度數目必須符合陣列的原始維度 (陣序) 數目。  
   
 -   **資料類型。** `ReDim` 陳述式不能變更其項目陣列變數的資料類型。  
   
@@ -92,8 +90,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
   
  [!code-vb[VbVbalrStatements#52](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#52)]  
   
- 
-  `Dim` 陳述式會建立三維的新陣列。 每個維度都宣告界限為 10，所以每個維度的陣列索引範圍是 0 到 10。 在下列的討論中，三維稱為圖層、列和欄。  
+ `Dim` 陳述式會建立三維的新陣列。 每個維度都宣告界限為 10，所以每個維度的陣列索引範圍是 0 到 10。 在下列的討論中，三維稱為圖層、列和欄。  
   
  第一個 `ReDim` 建立的新陣列，取代了變數 `intArray` 中現有的陣列。 `ReDim` 將現有陣列的所有項目全都複製到新的陣列。 它也在每個圖層每一列的結尾加入 10 多個欄，並初始化這些新欄中的項目為 0 (`Integer` 的預設值，這是陣列的項目類型)。  
   
@@ -104,6 +101,7 @@ ReDim [ Preserve ] name(boundlist) [ ,  name(boundlist) [, ... ] ]
  如需其他範例，請參閱 <<c0> [ 陣列](../../../visual-basic/programming-guide/language-features/arrays/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IndexOutOfRangeException>
 - [Const 陳述式](../../../visual-basic/language-reference/statements/const-statement.md)
 - [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)

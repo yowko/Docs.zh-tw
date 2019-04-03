@@ -13,12 +13,12 @@ helpviewer_keywords:
 - parentheses [Visual Basic], complex expressions
 - numeric expressions
 ms.assetid: bd22340e-b5be-458b-8772-3916c02309a4
-ms.openlocfilehash: daaf75256b3449209b4e3c030cc6b54692c6a172
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f5dd6c56b3e4576b9d798e0e5e10b2996f558dc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620420"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841237"
 ---
 # <a name="efficient-combination-of-operators-visual-basic"></a>有效的運算子組合 (Visual Basic)
 複雜運算式可以包含許多不同的運算子。 下列範例將說明這點。  
@@ -46,6 +46,7 @@ ms.locfileid: "54620420"
  在上述範例中，`z + 2`會先評估，然後放在括號運算式。 在此範例中，因為其他運算式括在括號中乘冪，通常具有較高的優先順序高於加法或乘法，是上一次評估。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)
 - [在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [在 Visual Basic 中的邏輯和位元運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)

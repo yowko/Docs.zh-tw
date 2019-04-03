@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 78c1d529053a10fc208ee5499b759623c227cb25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681804"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841611"
 ---
 # <a name="structures-and-classes-visual-basic"></a>結構和類別 (Visual Basic)
 Visual Basic 統一的語法結構和類別，因為這兩個實體支援的大部分相同的功能。 不過，還有結構和類別的重要差異。  
@@ -87,6 +87,7 @@ Visual Basic 統一的語法結構和類別，因為這兩個實體支援的大�
 -   **相等。** 與項目依項目測試必須執行兩個結構的等號比較測試。 可以比較兩個物件變數，使用<xref:System.Object.Equals%2A>方法。 <xref:System.Object.Equals%2A> 指出兩個變數是否指向相同的執行個體。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

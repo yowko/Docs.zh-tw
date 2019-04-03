@@ -11,12 +11,12 @@ helpviewer_keywords:
 - New constraint
 - New keyword [Visual Basic]
 ms.assetid: d7d566d7-fe0e-4336-91f7-641a542de4d0
-ms.openlocfilehash: dda23ef3ff49bd32474f39f5ae1807e57bdc2a62
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 630b0c48def77449f426b287a26f95af7cfb930e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980460"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837690"
 ---
 # <a name="new-operator-visual-basic"></a>New 運算子 (Visual Basic)
 導入了`New`子句，以建立新的物件執行個體，指定型別參數的建構函式條件約束，或識別`Sub`類別建構函式與程序。  
@@ -39,8 +39,7 @@ ms.locfileid: "56980460"
   
  若要建立類別的建構函式程序，將名稱設定`Sub`程序`New`關鍵字。 如需詳細資訊，請參閱[物件存留期：如何建立和終結物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)。  
   
- 
-  `New` 關鍵字可用於以下內容：  
+ `New` 關鍵字可用於以下內容：  
   
  [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)  
   
@@ -49,6 +48,7 @@ ms.locfileid: "56980460"
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.OutOfMemoryException>
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [類型清單](../../../visual-basic/language-reference/statements/type-list.md)

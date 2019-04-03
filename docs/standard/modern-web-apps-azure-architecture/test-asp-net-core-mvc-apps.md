@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: e3edec65fd10b0a7c05d1865703f2e0a591d8b03
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: e93c33ae29268c3968ccb59739e899966ae4339d
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827548"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463705"
 ---
 # <a name="test-aspnet-core-mvc-apps"></a>測試 ASP.NET Core MVC 應用程式
 
@@ -20,7 +20,7 @@ ms.locfileid: "55827548"
 
 ## <a name="kinds-of-automated-tests"></a>自動化測試的種類
 
-軟體應用程式自動化測試有許多種類的。 最簡單且最低層級的測試為單元測試。 在稍高層級有整合測試與功能測試。 其他種類的測試如 UI 測試、負載測試、壓力測試和煙霧測試，則不在本文件討論範圍內。
+軟體應用程式自動化測試有許多種類的。 最簡單且最低層級的測試為單元測試。 在稍高層級有整合測試與功能測試。 其他種類的測試如 UI 測試、負載測試、壓力測試和煙霧測試，則不在此文件討論範圍內。
 
 ### <a name="unit-tests"></a>單元測試
 
@@ -66,7 +66,7 @@ public class LocalFileImageService : IImageService
 
 > 「很多時候，系統的開發就像是建造房屋。 雖然這個比喻不太正確，但我們可以將其延伸以便理解單元測試和功能測試之間的差異。 單元測試類似於造訪房屋建築工地的建築檢查員。 檢查員會專注於房屋的各種內部系統：地基、結構、電力、配管系統等等。 其會確保 (測試) 房屋的各部分都能正確且安全地運作，也就是符合建築規範。 在此案例中，功能測試類似於屋主造訪同一個建築工地。 屋主會假設內部系統能運作正常，因為建築檢查員正在執行工作。 屋主會著重於住在這個房子裡會是什麼樣子。 他會關心房子的外觀：房間大小是否舒適、房子是否符合家庭的需要、窗戶是否位於能迎接早晨陽光的位置。 這即為屋主對房屋進行功能測試。 他以使用者的角度來觀看。 而建築檢查員是對房屋進行單元測試。 其以建築者的角度來觀看。」
 
-來源:[Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (單元測試與功能測試)
+來源：[Unit Testing versus Functional Tests](https://www.softwaretestingtricks.com/2007/01/unit-testing-versus-functional-tests.html) (單元測試與功能測試)
 
 我喜歡說：「身為開發人員，我們有兩種失敗方式：以錯誤的方式建置東西，或建置錯誤的東西。」 單元測試確保您以正確的方式建置東西，而功能測試確保您建置正確的東西。
 
@@ -197,7 +197,7 @@ public class BasicWebTests : IClassFixture<WebApplicationFactory<Startup>>
 }
 ```
 
-通常在每次測試執行之前，您會想要對網站執行一些額外的設定，例如，設定應用程式使用記憶體內資料存放區，然後將測試資料植入應用程式。 若要這樣做，您應該建立自己的 WebApplicationFactory<TEntry> 子類別並覆寫其 ConfigureWebHost 方法。 下列範例取自 eShopOnWeb FunctionalTests 專案，並做為主要 Web 應用程式測試的一部分。
+通常在每次測試執行之前，您會想要對網站執行一些額外的設定，例如，設定應用程式使用記憶體內資料存放區，然後將測試資料植入應用程式。 若要這樣做，您應該建立自己的 WebApplicationFactory\<TEntry> 子類別並覆寫其 ConfigureWebHost 方法。 下列範例取自 eShopOnWeb FunctionalTests 專案，並做為主要 Web 應用程式測試的一部分。
 
 ```cs
 using Microsoft.AspNetCore.Hosting;

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Const statement [Visual Basic]
 ms.assetid: 495b318d-b7c5-4198-94f8-0790a541b07a
-ms.openlocfilehash: eb99213287cda5ce7f9c3afe2998efb02ec68a03
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 089c2dca99373f379e1eff319cf8c41242e5f135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979069"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835306"
 ---
 # <a name="const-statement-visual-basic"></a>Const 陳述式 (Visual Basic)
 宣告並定義一或多個常數。  
@@ -100,6 +100,7 @@ Const constantlist
  上述範例會使用<xref:System.Type.ToString%2A>方法<xref:System.Type>所傳回的物件[GetType 運算子](../../../visual-basic/language-reference/operators/gettype-operator.md)，因為<xref:System.Type>無法轉換成`String`使用`CStr`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Strings.Asc%2A>
 - <xref:Microsoft.VisualBasic.Strings.AscW%2A>
 - [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)

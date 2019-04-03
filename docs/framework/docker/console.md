@@ -4,18 +4,18 @@ description: 了解如何擷取現有的 .NET Framework 主控台應用程式並
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 31da5c4fc8f057709b2abcab49657c2c0992d3e5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126080"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58633838"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 
 主控台應用程式的用途有許多種；從簡單的狀態查詢，到長時間執行的文件影像處理工作。 在任何情況下，您都可以啟動並調整這些應用程式的規模，但具有硬體取得、啟動時間或執行多個執行個體的限制。
 
-藉由移動您的主控台應用程式以使用 Docker 和 Windows Server 容器，您就可以從初始狀態啟動這些應用程式，讓這些應用程式執行作業再完全關閉。 此主題說明將主控台應用程式移至 Windows 容器，再使用 PowerShell 指令碼加以啟動所需的步驟。
+藉由移動您的主控台應用程式以使用 Docker 和 Windows Server 容器，您就可以從初始狀態啟動這些應用程式，讓這些應用程式執行作業再完全關閉。 本主題說明將主控台應用程式移至 Windows 容器，再使用 PowerShell 指令碼加以啟動所需的步驟。
 
 此範例主控台應用程式是接受引數的簡單範例 (在本例中為一個問題)，並傳回隨機答案。 這可能會擷取 `customer_id` 並處理其稅金，或建立 `image_url` 引數的縮圖。
 
@@ -42,7 +42,7 @@ Docker 映像的一個重要特性是這些映像會從基礎映像組成。 每
 1. [建立映像的 Dockerfile](#creating-the-dockerfile)
 1. [建置及執行 Docker 容器的程序](#creating-the-image)
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-us/software-download/windows10/)或 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) 的支援。
 
 > [!NOTE]
@@ -55,7 +55,9 @@ Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-u
 ## <a name="building-the-application"></a>建置應用程式
 主控台應用程式通常是透過安裝程式、FTP 或檔案共用部署來散發。 部署至容器時，這些資產必須加以編譯並暫存到建立 Docker 映像時可使用的位置。
 
-在 *build.ps1* 中，指令碼會使用 [MSBuild](/visualstudio/msbuild/msbuild) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
+以下是範例應用程式：[ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
+
+在 *build.ps1*<sup>[[source]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> 中，指令碼會使用 [MSBuild](/visualstudio/msbuild/msbuild) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
 
 在 `Invoke-MSBuild` 的呼叫中，`OutputPath` 會設定為 **publish**，而 `Configuration` 會設定為 [發行]。 
 

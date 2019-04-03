@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31026
 ms.assetid: 5dd09785-bc10-4ae7-ba24-b795057aca31
-ms.openlocfilehash: 94c01709cda4279928815a3271749d71e247dff7
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 0d0f9b0f3ddcd2f4c97435b7d77d6deadcba2211
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759050"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828975"
 ---
 # <a name="unable-to-create-strong-named-assembly-from-key-file-filename-error"></a>無法從金鑰檔建立強式名稱組件 '\<檔案名稱 >':\<錯誤 >
 無法從指定的金鑰檔建立的強式名稱組件。  
@@ -24,4 +24,5 @@ ms.locfileid: "55759050"
 1.  請確認已指定正確的金鑰檔，而且不會鎖定由其他應用程式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Sn.exe （強式名稱工具）](../../../framework/tools/sn-exe-strong-name-tool.md))

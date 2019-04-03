@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declaring classes [Visual Basic]
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
-ms.openlocfilehash: 96b1677e301d3e83df400472bfa06e921f991bd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837646"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>物件變數宣告 (Visual Basic)
 您可以使用一般的宣告陳述式來宣告物件變數。 資料類型，針對您指定下列其中一個`Object`(也就是[Object 資料型別](../../../../visual-basic/language-reference/data-types/object-data-type.md)) 或更特定的類別來源物件的建立。  
@@ -126,6 +126,7 @@ Dim anyForm As System.Windows.Forms.Form
  基底類別的所有成員都都可以使用衍生的類別，但在衍生類別的其他成員都則無法使用的基底類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數指派](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

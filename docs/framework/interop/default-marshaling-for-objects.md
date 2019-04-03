@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c226960373783c45594e4a41dfaff353bf0b9db4
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219603"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409272"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 類型為 <xref:System.Object?displayProperty=nameWithType> 的參數和欄位可以向 Unmanaged 程式碼公開為下列類型之一：  
@@ -26,19 +26,6 @@ ms.locfileid: "56219603"
   
  只有 COM Interop 支援封送處理物件類型。 預設行為是封送處理 COM Variant 的物件。 這些規則只適用於**物件**類型，不適用於衍生自**物件**類別的強型別物件。  
   
- 本主題提供下列有關封送處理物件類型的額外資訊：  
-  
--   [封送處理選項](#cpcondefaultmarshalingforobjectsanchor7)  
-  
--   [將物件封送處理成介面](#cpcondefaultmarshalingforobjectsanchor2)  
-  
--   [將物件封送處理成 Variant](#cpcondefaultmarshalingforobjectsanchor3)  
-  
--   [將 Variant 封送處理成物件](#cpcondefaultmarshalingforobjectsanchor4)  
-  
--   [封送處理的 ByRef Variant](#cpcondefaultmarshalingforobjectsanchor6)  
-  
-<a name="cpcondefaultmarshalingforobjectsanchor7"></a>   
 ## <a name="marshaling-options"></a>封送處理選項  
  下表顯示**物件**資料類型的封送處理選項。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性提供幾種 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉值來封送處理物件。  
   
@@ -127,11 +114,9 @@ struct ObjectHolder {
 }  
 ```  
   
-<a name="cpcondefaultmarshalingforobjectsanchor2"></a>   
 ## <a name="marshaling-object-to-interface"></a>將物件封送處理成介面  
  向 COM 將物件公開為介面時，該介面是 Managed 類型 <xref:System.Object> 的類別介面 (**_Object** 介面)。 在產生的型別程式庫中，這個介面類型為 **IDispatch** (<xref:System.Runtime.InteropServices.UnmanagedType>) 或 **IUnknown** (**UnmanagedType.IUnknown**)。 COM 用戶端可以動態方式叫用 Managed 類別的成員，或其衍生類別透過 **_Object** 介面所實作的任何成員。 用戶端也可以呼叫 **QueryInterface** 取得 Managed 類型明確實作的任何其他介面。  
   
-<a name="cpcondefaultmarshalingforobjectsanchor3"></a>   
 ## <a name="marshaling-object-to-variant"></a>將物件封送處理成 Variant  
  當物件封送處理成 Variant 時，會根據下列規則在執行階段決定內部的 Variant 類型：  
   
@@ -255,7 +240,6 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；其中 **To** *Type* 是轉換常式，對應到從 **IConvertible.GetTypeCode** 傳回的類型。 例如，從 **IConvertible.GetTypeCode** 傳回 **TypeCode.Double** 的物件，會封送處理成 **VT_R8** 類型的 COM Variant。 您可以透過轉換為 **IConvertible** 介面及呼叫 <xref:System.IConvertible.ToDouble%2A> 方法，取得 Variant 的值 (儲存在 COM Variant 的 **dblVal** 欄位)。  
   
-<a name="cpcondefaultmarshalingforobjectsanchor4"></a>   
 ## <a name="marshaling-variant-to-object"></a>將 Variant 封送處理成物件  
  將 Variant 封送處理成物件時，已封送處理的 Variant 類型 (有時是值)，可以判斷所產生的物件類型。 下表可以識別當 Variant 從 COM 傳遞至 .NET ＦFramework 時，封送處理器建立的每個 Variant 類型和對應的物件類型。  
   
@@ -289,18 +273,17 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
   
  從 COM 傳遞至 Managed 程式碼再回到 COM 的 Variant 類型，在呼叫期間可能不會保留相同的 Variant 類型。 當 **VT_DISPATCH** 類型的 Variant 從 COM 傳遞至 .NET Framework 時，請考慮會發生什麼情況。 在封送處理期間，Variant 會轉換成 <xref:System.Object?displayProperty=nameWithType>。 如果接著將**物件**傳送回 COM，它會封送處理回 **VT_UNKNOWN** 類型的 Variant。 當物件從 Managed 程式碼封送處理到 COM 時產生的 Variant，不保證和最初用來產生物件的 Variant 是同一類型。  
   
-<a name="cpcondefaultmarshalingforobjectsanchor6"></a>   
 ## <a name="marshaling-byref-variants"></a>封送處理 ByRef Variant  
- 雖然 Variant 本身可以傳值方式或傳址方式傳遞，**VT_BYREF** 旗標也可搭配任何 Variant 類型使用來表示 Variant 的內容正在以傳址方式傳遞，不是以傳值方式傳遞。 以傳址方式封送處理的 Variant 和封送處理設有 **VT_BYREF** 旗標的 Variant 之間的差異，會造成混淆。 下圖將釐清這些差異。  
+ 雖然 Variant 本身可以傳值方式或傳址方式傳遞，**VT_BYREF** 旗標也可搭配任何 Variant 類型使用來表示 Variant 的內容正在以傳址方式傳遞，不是以傳值方式傳遞。 以傳址方式封送處理的 Variant 和封送處理設有 **VT_BYREF** 旗標的 Variant 之間的差異，會造成混淆。 下圖將釐清這些差異：  
   
- ![在堆疊上傳遞的 Variant](./media/interopvariant.gif "InteropVariant")  
+ ![顯示堆疊上傳遞的變數的圖表。](./media/default-marshaling-for-objects/interop-variant-passed-value-reference.gif)  
 以傳值方式傳遞和以傳址方式傳遞的 Variant  
   
  **依值封送處理物件和 Variant 的預設行為**  
   
--   當從 Managed 程式碼將物件傳送至 COM 時，會使用[將物件封送處理成 Variant](#cpcondefaultmarshalingforobjectsanchor3) 中定義的規則，將物件的內容複製到封送處理器所建立的新 Variant 中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
+-   當從 Managed 程式碼將物件傳送至 COM 時，會使用[將物件封送處理成 Variant](#marshaling-object-to-variant) 中定義的規則，將物件的內容複製到封送處理器所建立的新 Variant 中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
   
--   當從 COM 將 Variant 傳送至 Managed 程式碼時，會使用[將 Variant 封送處理成物件](#cpcondefaultmarshalingforobjectsanchor4)中定義的規則，將 Variant 的內容複製到新建立的物件中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
+-   當從 COM 將 Variant 傳送至 Managed 程式碼時，會使用[將 Variant 封送處理成物件](#marshaling-variant-to-object)中定義的規則，將 Variant 的內容複製到新建立的物件中。 對 Unmanaged 端的 Variant 所做的變更，在從呼叫傳回時，不會傳播回原始物件。  
   
  **依參考封送處理物件和 Variant 的預設行為**  
   

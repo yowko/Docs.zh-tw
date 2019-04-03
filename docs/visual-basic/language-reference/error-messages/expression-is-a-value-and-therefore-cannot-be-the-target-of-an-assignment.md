@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: b2c33cb9ba0479df5e69b6979a789253f9fae565
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597329"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826128"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>運算式是一個數值，不可以是指派的目標
 陳述式會嘗試將值指派給運算式。 您只能指派給可寫入的變數、 屬性或陣列元素的值，在執行階段。 下列範例說明如何可能會發生此錯誤。  
@@ -58,6 +58,7 @@ exitButton.Location = exitLocation
 -   您可以使用變數來存取屬性，以將它指派值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)
 - [程序的疑難排解](../../../visual-basic/programming-guide/language-features/procedures/troubleshooting-procedures.md)

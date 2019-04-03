@@ -2,13 +2,19 @@
 title: XML 常值 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'declaring XML literals [Visual Basic]'
-  - 'Visual Basic, XML literals'
-  - 'Visual Basic code, XML'
-  - 'XML literals [Visual Basic]'
-  - 'XML literals [Visual Basic], reference'
-  - 'literals [Visual Basic], XML'
+- declaring XML literals [Visual Basic]
+- Visual Basic, XML literals
+- Visual Basic code, XML
+- XML literals [Visual Basic]
+- XML literals [Visual Basic], reference
+- literals [Visual Basic], XML
 ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
+ms.openlocfilehash: 98f81bfb4a49bbac2a1e07533e1584d7c2b23302
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842014"
 ---
 # <a name="xml-literals-visual-basic"></a>XML 常值 (Visual Basic)
 在本節中的主題記錄 Visual Basic 中的 XML 常值的語法。 XML 常值語法可讓您直接在您的程式碼中加入 XML。  
@@ -24,4 +30,5 @@ ms.assetid: 16b28c40-8768-423f-bd9c-22ff10de2b54
 |[XML 處理指示常值](../../../visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md)|描述代表 <xref:System.Xml.Linq.XProcessingInstruction> 物件之常值的語法。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)

@@ -1,15 +1,15 @@
 ---
-title: XML 範例檔：客戶和訂單中 Namespace1
+title: 範例 XML 檔：客戶和訂單中 Namespace1
 ms.date: 07/20/2015
 ms.assetid: 9fe81dbb-e51f-4e80-a49b-e34ac0b1f980
-ms.openlocfilehash: 8ca28be2a65fc249953ebca308fe8133d3bce0c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca12478ab81d114759c07b5d44749aee5a620bbb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558601"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829508"
 ---
-# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>XML 範例檔：命名空間中的客戶和訂單
+# <a name="sample-xml-file-customers-and-orders-in-a-namespace"></a>範例 XML 檔：命名空間中的客戶和訂單
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含客戶和訂單。 XML 位於命名空間中。  
   
 ## <a name="customersordersinnamespacexml"></a>CustomersOrdersInNamespace.xml  
@@ -431,4 +431,5 @@ ms.locfileid: "54558601"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

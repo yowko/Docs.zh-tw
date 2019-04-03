@@ -2,12 +2,12 @@
 title: 教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
-ms.openlocfilehash: e36e76f03476bf0504590dfcae1c7dd8fa203312
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556268"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834955"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容
 本教學課程顯示如何應用功能性轉換方法與 LINQ to XML 來管理 XML 文件。 Visual Basic 範例查詢，並管理 Microsoft Word 所儲存之 Office Open XML WordprocessingML 文件中的資訊。  
@@ -30,5 +30,6 @@ ms.locfileid: "54556268"
 |[詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)|提供 Office Open XML WordprocessingML 文件的一些詳細資料。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [純功能性轉換 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)
 - [純函數式轉換 (Visual Basic) 簡介](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)

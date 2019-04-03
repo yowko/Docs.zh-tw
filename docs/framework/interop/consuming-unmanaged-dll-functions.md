@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c13f5aef9f08929dcd17f53777ba9e23b00b838
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728381"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463081"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
-平台叫用服務，可讓 Managed 程式碼呼叫 Unmanaged 函式在動態連結程式庫 (DLL) 中實作，例如 Win32 API 中。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
+平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
   
  本節將介紹與取用非受控 DLL 函式相關聯的工作，並提供關於平台叫用的詳細資訊。 除了下列工作之外，還有一般考量以及提供其他資訊和範例的連結。  
   
@@ -54,8 +54,7 @@ ms.locfileid: "54728381"
 ## <a name="a-closer-look-at-platform-invoke"></a>進一步了解平台叫用  
  平台叫用依賴中繼資料來找出被匯出的函式，並在執行階段封送處理其引數。 下圖顯示這個程序。  
   
- ![平台叫用](../../../docs/framework/interop/media/pinvoke.gif "pinvoke")  
-平台叫用呼叫 Unmanaged DLL 函式  
+ ![顯示平台叫用呼叫的圖表。](./media/consuming-unmanaged-dll-functions/platform-invoke-call.gif)  
   
  當平台叫用呼叫 Unmanaged 函式時，它會依序執行下列動作：  
   

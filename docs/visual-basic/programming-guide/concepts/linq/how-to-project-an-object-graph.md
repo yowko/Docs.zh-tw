@@ -2,18 +2,18 @@
 title: HOW TO：投影物件圖形 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9451eb47-6a31-49d7-84df-73368c618422
-ms.openlocfilehash: 32629718b26036530bc9c856f5dff6ed1d7ae0c3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6403bb0aa63120b6ec82e4e94d483769f2cfe1aa
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730824"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834537"
 ---
 # <a name="how-to-project-an-object-graph-visual-basic"></a>HOW TO：投影物件圖形 (Visual Basic)
 本主題說明如何從 XML 規劃或填入物件圖形。  
   
 ## <a name="example"></a>範例  
- 下列程式碼會填入之物件圖形`Address`， `PurchaseOrder`，並`PurchaseOrderItem`類別[範例 XML 檔：典型的採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件。  
+ 下列程式碼會填入具有 `Address`、`PurchaseOrder` 和 `PurchaseOrderItem` 類別的物件圖形，這些類別來自[XML 範例檔：典型訂購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md) XML 文件。  
   
 ```vb  
 Class Address  
@@ -338,6 +338,7 @@ ShipDate: 5/21/1999
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Linq.Enumerable.Select%2A>
 - <xref:System.Linq.Enumerable.ToList%2A>
 - [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - strings [Visual Basic], manipulating [Visual Basic]
 - string manipulation
 ms.assetid: 905055cd-7f50-48fb-9eed-b0995af1dc1f
-ms.openlocfilehash: a75984d0eb64ef8c18def3ae59d5e1f4b6d20ce2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 44eb101ebdfeb316958a659107190ef1fc84df44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980333"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821149"
 ---
 # <a name="types-of-string-manipulation-methods-in-visual-basic"></a>Visual Basic 中字串管理方法的類型
 有數個不同的方式，來分析及管理您的字串。 某些方法屬於 Visual Basic 語言的有些則是內在`String`類別。  
@@ -44,4 +44,5 @@ ms.locfileid: "56980333"
  如需詳細資訊，請參閱文件<xref:System.String>類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)

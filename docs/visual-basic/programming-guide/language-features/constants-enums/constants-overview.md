@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - constants [Visual Basic]
 ms.assetid: 29016fe8-78b3-4dc8-90b8-1cfec2fa8ac9
-ms.openlocfilehash: 34f3dee4edba58375c5c84b579e39a8a29ebc1bb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2939110de77718baf32e2a0d8f1aa52dba997cf3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737685"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841274"
 ---
 # <a name="constants-overview-visual-basic"></a>常數的概觀 (Visual Basic)
 常數是有意義的名稱來取代數字或字串，不會變更。 常數用來儲存值，如同名稱所暗示，維持不變執行作業的應用程式。 您可以大幅改善您的程式碼的可讀性，並輕鬆地維護藉由使用常數。 在包含的值會重複出現的程式碼中使用它們，或相依於某些很難記住，或沒有任何明顯的意義的數字。  
@@ -45,5 +45,6 @@ ms.locfileid: "54737685"
 |[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|描述`Option Strict`陳述式和它的用法。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [如何：初始化陣列變數在 Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

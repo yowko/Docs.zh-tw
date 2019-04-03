@@ -2,12 +2,12 @@
 title: 投影作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
-ms.openlocfilehash: f7f1ba7b595d5ea63468aaa2d4fdda62cb9d0693
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408947"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820980"
 ---
 # <a name="projection-operations-visual-basic"></a>投影作業 (Visual Basic)
 投影是指將物件轉換成新形式的作業，而這個形式通常僅包含後續即將使用的屬性。 透過使用投影，您可以建構根據每個物件所建立的新型別。 您可以投影屬性並對其執行數學函式。 您也可以投影原始物件，而不進行任何變更。  
@@ -85,11 +85,11 @@ MsgBox(sb.ToString())
   
  下圖描述 `Select()` 如何傳回其中的項目數與來源集合相同的集合。  
   
- ![圖形： 顯示選取的動作&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
+ ![顯示 Select&#40;&#41; 之動作的圖形](./media/projection-operations/select-action-graphic.png)  
   
  下圖描述 `SelectMany()` 如何將中繼陣列序列串連成一個最終結果值，其中包含每個中繼陣列中的所有值。  
   
- ![顯示 SelectMany 的動作圖形&#40;&#41;。](./media/projection-operations/select-many-action-graphic.png )  
+ ![顯示 SelectMany&#40;&#41; 之動作的圖形。](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>程式碼範例  
  下列範例會比較 `Select()` 和 `SelectMany()` 的行為。 程式碼會從來源集合的每個花名清單中擷取前兩個項目，以建立「花束」(Bouquet)。 在此範例中，轉換函式 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> 所使用的「單一值」本身就是值集合。 這需要額外的 `For Each` 迴圈，以列舉每個子序列中的每個字串。  
@@ -171,6 +171,7 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Linq>
 - [標準查詢運算子概觀 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
 - [Select 子句](../../../../visual-basic/language-reference/queries/select-clause.md)

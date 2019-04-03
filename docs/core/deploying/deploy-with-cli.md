@@ -8,16 +8,16 @@ dev_langs:
 - csharp
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 22494a87b4f6aaa6bd1a57873493f64df3b1ecb8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: efb42d773669b949aeafa52fdcc445f18b469a5e
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359727"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58410260"
 ---
 # <a name="publish-net-core-apps-with-the-cli"></a>使用 CLI 發佈 .NET Core 應用程式
 
-此文章示範如何從命令列發佈 .NET Core 應用程式。 .NET Core 提供三種發佈應用程式的方式。 Framework 相依部署會產生跨平台的 .dll 檔案，以使用本機安裝的 .NET Core 執行階段。 Framework 相依可執行檔會產生平台特定的可執行檔，來使用本機安裝的 .NET Core 執行階段。 獨立式可執行檔則會產生平台特定的可執行檔，並包含 .NET Core 執行階段的本機複本。
+本文示範如何從命令列發佈 .NET Core 應用程式。 .NET Core 提供三種發佈應用程式的方式。 Framework 相依部署會產生跨平台的 .dll 檔案，以使用本機安裝的 .NET Core 執行階段。 Framework 相依可執行檔會產生平台特定的可執行檔，來使用本機安裝的 .NET Core 執行階段。 獨立式可執行檔則會產生平台特定的可執行檔，並包含 .NET Core 執行階段的本機複本。
 
 如需這些發佈模式的概觀，請參閱 [.NET Core 應用程式部署](index.md)。
 
@@ -50,7 +50,7 @@ ms.locfileid: "57359727"
 
 ### <a name="native-dependencies"></a>原生相依性
 
-如果您的應用程式具有原生相依性，它可能無法在不同的作業系統上執行。 例如，如果您的應用程式使用原生 Win32 API，它就不會在 macOS 或 Linux 上執行。 您必須提供平台特定程式碼，並為每個平台編譯可執行檔。
+如果您的應用程式具有原生相依性，它可能無法在不同的作業系統上執行。 例如，如果您的應用程式使用原生 Windows API，它就不會在 macOS 或 Linux 上執行。 您必須提供平台特定程式碼，並為每個平台編譯可執行檔。
 
 另外，請考慮如果您參考的程式庫具有原生相依性，您的應用程式可能無法在每個平台上執行。 不過，您參考的 NuGet 套件可能包含了平台特定版本，以便為您處理必要的原生相依性。
 

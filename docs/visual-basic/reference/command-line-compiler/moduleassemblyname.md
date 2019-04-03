@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /moduleassemblyname compiler option [Visual Basic]
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
-ms.openlocfilehash: a16dd616c8a38dea4bd1779e4feea779b3a18e2d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375294"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832398"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 指定將包含此模組的組件名稱。  
@@ -43,6 +43,7 @@ ms.locfileid: "57375294"
 >  `-moduleassemblyname`選項不是從 Visual Studio 開發環境中使用; 它是使用只有當您編譯的命令提示字元。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [如何：建置多檔案組件](../../../framework/app-domains/how-to-build-a-multifile-assembly.md)
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)

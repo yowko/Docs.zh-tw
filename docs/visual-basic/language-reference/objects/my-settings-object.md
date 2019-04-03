@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: 5d6d56e4a1eddcb687fe042568509ba489aa8bb3
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973466"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840363"
 ---
 # <a name="mysettings-object"></a>My.Settings 物件
 提供屬性和方法，以存取應用程式的設定。  
@@ -60,6 +60,7 @@ ms.locfileid: "56973466"
  為了確保此範例正常運作，您的應用程式必須具有 `String` 類型的 `Nickname` 設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - [如何：在 Visual Basic 中讀取應用程式設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [如何：在 Visual Basic 中變更使用者設定](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

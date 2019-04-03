@@ -2,12 +2,12 @@
 title: 在 Visual Basic2 XML 常值簡介
 ms.date: 07/20/2015
 ms.assetid: 94fc0e03-978e-4c08-ab6c-0dc3c1e64f10
-ms.openlocfilehash: b6c4773236c3af83603033c74e2e12e9f47a86b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ba1e018d4ad9501532745a88090f0f756b5c17
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624024"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841270"
 ---
 # <a name="introduction-to-xml-literals-in-visual-basic"></a>Visual Basic 中的 XML 常值簡介
 本節提供在 Visual Basic 中建立 XML 樹狀結構的相關資訊。  
@@ -64,13 +64,13 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="using-embedded-expressions"></a>使用內嵌的運算式  
- XML 常值的其中一個重要功能是，這些 XML 常值允許內嵌的運算式。 內嵌的運算式可讓您評估運算式，並將運算式的結果插入到 XML 樹狀結構中。 如果運算式評估 <xref:System.Xml.Linq.XElement> 的型別，會將項目插入到樹狀結構中。 如果運算式評估 <xref:System.Xml.Linq.XAttribute> 的型別，會將屬性插入到樹狀結構中。 您可以將項目和屬性僅插入到有效的樹狀結構中。  
+ XML 常值的其中一個重要功能是，這些 XML 常值允許內嵌的運算式。 內嵌的運算式可讓您評估運算式，並將運算式的結果插入到 XML 樹狀中。 如果運算式評估 <xref:System.Xml.Linq.XElement> 的型別，會將項目插入到樹狀中。 如果運算式評估 <xref:System.Xml.Linq.XAttribute> 的型別，會將屬性插入到樹狀結構中。 您可以將項目和屬性僅插入到有效的樹狀結構中。  
   
  請注意，只有單一運算式可以插入到內嵌的運算式中，這點很重要。 您無法內嵌多個陳述式。 如果運算式的延伸超過單一行，您必須使用行接續字元。  
   
- 如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀結構，而且如果現有的節點已經成為父代，這些節點就會遭到複製。 新複製的節點會附加到新的 XML 樹狀結構中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀結構。 本主題中的最後一個範例會示範這個情況。  
+ 如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀結構，而且如果現有的節點已經成為父代，這些節點就會遭到複製。 新複製的節點會附加到新的 XML 樹狀結構中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀。 本主題中的最後一個範例會示範這個情況。  
   
- 下列範例使用內嵌的運算式，將項目插入到樹狀結構中：  
+ 下列範例使用內嵌的運算式，將項目插入到樹狀中：  
   
 ```vb  
 xmlTree1 As XElement = _  
@@ -158,7 +158,7 @@ Console.WriteLine(n)
 ```  
   
 ### <a name="cloning-vs-attaching"></a>複製與附加之比較  
- 如先前所述，如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀結構，而且如果現有的節點已經成為父代，這些節點就會遭到複製，而新複製的節點會附加到新的 XML 樹狀結構中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀結構。  
+ 如先前所述，如果您使用內嵌的運算式，將現有的節點 (包括項目) 和屬性加入到新的 XML 樹狀，而且如果現有的節點已經成為父代，這些節點就會遭到複製，而新複製的節點會附加到新的 XML 樹狀中。 如果現有的節點沒有成為父代，這些節點只會附加到新的 XML 樹狀結構。  
   
 ```vb  
 ' Create a tree with a child element.  
@@ -196,4 +196,5 @@ Child2 was attached
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Private access modifier
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
-ms.openlocfilehash: 1278119ca82678267aa782f2518ab26b50966730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203622"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843089"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic 中的存取層級
 *存取層級*的宣告的項目能夠存取它的範圍，也就是哪些程式碼具有讀取或寫入其中的權限。 這決定不只您宣告的方式的項目本身，還包括的項目容器的存取層級。 無法存取包含的項目中的程式碼無法存取任何其包含的項目，即使是宣告為`Public`。 例如，`Public`變數中`Private`可以從存取結構，包含結構的類別內，而不是從該類別以外。  
@@ -115,6 +115,7 @@ Private Protected internalValue As Integer
 |`Private Protected`|在宣告私用的受保護項目，此類別中的程式碼或在 bas 類別相同的組件中找到的衍生類別中的程式碼。|介面<br /><br /> 類別<br /><br /> 結構<br /><br /> 程序<br /><br /> 屬性<br /><br /> 成員變數<br /><br /> 常數<br /><br /> 列舉<br /><br /> 事件<br /><br /> 外部宣告<br /><br /> 委派|類別|
   
 ## <a name="see-also"></a>另請參閱
+
 - [Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)
 - [Static](../../../../visual-basic/language-reference/modifiers/static.md)
 - [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

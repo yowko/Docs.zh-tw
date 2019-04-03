@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 28116714-da77-45f7-826d-fa035d121948
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27bbc1b382d962379a50fba4557e3f2a408d9bc4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2be1aad4d222917364a57abc93b414af40b1e9ae
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649163"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675649"
 ---
 # <a name="assembly-contents"></a>組件內容
 一般而言，靜態組件可包含四個項目：  
@@ -31,15 +31,13 @@ ms.locfileid: "54649163"
   
  有幾種方式可以將這些項目群組在組件中。 您可以將所有項目群組在一個如下所示的實際檔案中。  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover1.gif "assemblyover1")  
-單一檔案組件  
+ ![顯示稱為 MyAssembly.dll 之單一檔案組件的圖表。](./media/assembly-contents/single-file-assembly.gif)  
   
  或者，可以將組件的項目包含在幾個檔案中。 這些檔案可以是應用程式所需要的已編譯程式碼模組 (.netmodule)、資源 (例如 .bmp 或 .jpg 檔案) 或是其他檔案。 如果您希望結合以不同語言所撰寫之模組，並且藉由將不常使用的型別放在需要時才會下載的模組中，以最佳化應用程式的下載，那麼請建立多檔案 (Multifile) 組件。  
   
  在下圖中，假想應用程式的開發人員選擇將某些公用程式的程式碼分隔在不同的模組中，並且將大型的資源檔 (在這裡為 .bmp 影像) 存放在原始檔案中。 .NET Framework 是在要參考某個檔案的時候才下載它；將不常參考的程式碼保存在應用程式以外的單獨檔案中，可以最佳化程式碼的下載。  
   
- ![MyAssembly.dll](../../../docs/framework/app-domains/media/assemblyover2.gif "assemblyover2")  
-多檔案組件  
+ ![顯示多檔案組件的圖表。](./media/assembly-contents/multifile-assembly-diagram.gif) 
   
 > [!NOTE]
 >  構成多檔案組件的檔案沒有與檔案系統實際連結。 而是透過組件資訊清單連結，而且 Common Language Runtime 會將它們當做一個單位來管理。  

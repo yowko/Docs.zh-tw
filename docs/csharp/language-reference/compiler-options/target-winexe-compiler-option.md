@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -target compiler options [C#], /target:winexe
 - target compiler options [C#], /target:winexe
 ms.assetid: b5a0619c-8caa-46a5-a743-1cf68408ad7a
-ms.openlocfilehash: affb06c62baa7f53e46e1d66b522e9ce9e74d976
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d5e5c62dc1a5fe6901ee232084a704d7d936b76
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666055"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411959"
 ---
 # <a name="-targetwinexe-c-compiler-options"></a>-target:winexe (C# 編譯器選項)
 **-target:winexe** 選項可讓編譯器建立可執行檔 (EXE)，其為一個 Windows 程式。  
@@ -25,7 +25,7 @@ ms.locfileid: "54666055"
 ```  
   
 ## <a name="remarks"></a>備註  
- 將會建立副檔名為 .exe 的可執行檔。 Windows 程式是從 .NET Framework 程式庫或使用 Win32 API 提供使用者介面的程式。  
+ 將會建立副檔名為 .exe 的可執行檔。 Windows 程式是從 .NET Framework 程式庫或使用 Windows API 提供使用者介面的程式。  
   
  使用 [-target:exe](../../../csharp/language-reference/compiler-options/target-exe-compiler-option.md) 建立主控台應用程式。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multiplication operator [Visual Basic], syntax
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
-ms.openlocfilehash: a13461d7424415ef553dc9ba00de1bf775fda112
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 09b95585325b05c0b7925c4c1c9e123f45791e10
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965315"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828949"
 ---
 # <a name="-operator-visual-basic"></a>* 運算子 (Visual Basic)
 將兩個數字相乘。  
@@ -60,6 +60,7 @@ number1 * number2
  [!code-vb[VbVbalrOperators#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [*= 運算子](../../../visual-basic/language-reference/operators/multiplication-assignment-operator.md)
 - [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)

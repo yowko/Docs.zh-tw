@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 07/05/2018
 ms.assetid: aeb68c74-0ea0-406f-9fbe-2ce02d47ef31
-ms.openlocfilehash: 942950570253b73cfb9896117bd22189e56389ea
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 644e0bb281525fad12e263b31263bb9caba149f0
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836639"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463809"
 ---
 # <a name="inheritance-in-c-and-net"></a>C# 和 .NET 中的繼承
 
@@ -18,7 +18,7 @@ ms.locfileid: "56836639"
 
 ## <a name="prerequisites"></a>必要條件
 
-本教學課程假設您已安裝 .NET Core。 如需安裝指示，請參閱[.NET Core 安裝指南 (英文)](https://www.microsoft.com/net/core)。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
+本教學課程假設您已安裝 .NET Core。 如需安裝指示，請參閱 [.NET Core 安裝指南](https://www.microsoft.com/net/core) \(英文\)。 您也需要程式碼編輯器。 本教學課程使用 [Visual Studio Code (英文)](https://code.visualstudio.com)，不過您可以使用自選的任何程式碼編輯器。
 
 ## <a name="running-the-examples"></a>執行範例
 
@@ -61,7 +61,7 @@ C# 和 .NET 只支援「單一繼承」。 也就是說，類別只能繼承自�
 
 [!code-csharp[Inheritance](../../../samples/snippets/csharp/tutorials/inheritance/basics.cs#1)]
 
-衍生類別也可以提供替代實作來「覆寫」繼承的成員 。 基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。 根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。 如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「<member>無法覆寫繼承的成員<member>，因為其未標記為 virtual、abstract 或 override」。
+衍生類別也可以提供替代實作來「覆寫」繼承的成員 。 基底類別中的成員必須標示有 [virtual](../language-reference/keywords/virtual.md) 關鍵字，才能覆寫成員。 根據預設，基底類別成員未標記為 `virtual`，因此無法覆寫。 如下列範例所示，嘗試覆寫非虛擬成員會產生編譯器錯誤 CS0506：「\<member> 無法覆寫繼承的成員 \<member>，因為其未標記為 virtual、abstract 或 override」。
 
 ```csharp
 public class A
@@ -176,7 +176,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
   在此情況下，`Publication` 類別會提供方法實作。 [設計抽象基底類別和其衍生類別](#abstract)一節中所包含的範例，會使用抽象基底類別來定義衍生類別必須覆寫的方法。 衍生類別可隨意提供適用於衍生型別的任何實作。
 
-  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一個優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 類型共用，您就應該將成員加入其中。 如果您無法有效率地提供基底類別實作，您就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
+  能夠重複使用程式碼 (也就是，多個衍生類別共用基底類別方法的宣告和實作，而不需要加以覆寫) 是非抽象基底類別的一項優點。 因此，如果 `Publication` 的程式碼可能會和一些或大部分特殊 `Publication` 類型共用，您就應該將成員加入其中。 如果您無法有效率地提供基底類別實作，您就不得不在衍生類別中大量提供相同的成員實作，而不是在基底類別中提供單一實作。 在多個位置中有重複的程式碼需要維護，是造成錯誤的潛在來源。
 
   為了能盡可能重複使用程式碼和建立邏輯與直覺式繼承階層，您希望只將所有或大部分發行物通用的資料與功能納入 `Publication` 類別中。 衍生類別接著實作其所代表特定發行物類型的唯一成員。
 
@@ -194,7 +194,7 @@ public struct ValueStructure : ValueType // Generates CS0527.
 
  `Publication` 類別沒有任何 `abstract` 方法，但類別本身為 `abstract`。
 
-- 衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。 根據預設，任何類別可以做為基底類別。 您可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字，指出類別不可以作為任何其他類別的基底類別。 嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 <typeName>」。
+- 衍生類別是否代表繼承階層中的最後一個類別，且本身無法用來做為額外衍生類別的基底類別。 根據預設，任何類別可以做為基底類別。 您可以套用 [sealed](../language-reference/keywords/sealed.md) 關鍵字，指出類別不可以作為任何其他類別的基底類別。 嘗試衍生自密封類別會產生編譯器錯誤 CS0509：「無法衍生自密封型別 \<typeName>」。
 
   針對您的範例，您會將衍生類別標示為 `sealed`。
 

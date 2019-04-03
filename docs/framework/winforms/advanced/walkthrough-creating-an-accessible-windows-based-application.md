@@ -1,19 +1,19 @@
 ---
-title: 逐步解說：建立可存取的 Windows 架構應用程式
+title: 逐步解說：建立 Windows 架構的協助工具應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - accessibility [Windows Forms], Windows applications
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: b27203f46c1d89577825e40541d9789d3b9e17de
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708271"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823463"
 ---
-# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立可存取的 Windows 架構應用程式
+# <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  
   
  本逐步解說將提出「Windows 憑證」標誌的五項協助工具需求。 根據這些需求，協助工具應用程式將會：  
@@ -55,9 +55,9 @@ ms.locfileid: "57708271"
   
 -   確定任何描述 TextBox 控制項的 Label 控制項都是依定位順序，緊接著位於 TextBox 控制項之前。  
   
--   使用 "&" 字元，將便捷鍵加入使用者可能想要巡覽之任何控制項的 <xref:System.Windows.Forms.Control.Text%2A> 屬性。  
+-   將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至任何控制項的屬性。  
   
--   使用 "&" 字元，將便捷鍵加入使用者可能想要巡覽的控制項前面之標籤的 <xref:System.Windows.Forms.Control.Text%2A> 屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。  
+-   將便捷鍵，使用"&"字元中，新增<xref:System.Windows.Forms.Control.Text%2A>使用者可能想要瀏覽至的控制項前面之標籤的屬性。 將標籤的 <xref:System.Windows.Forms.Label.UseMnemonic%2A> 屬性設定為 `true`如此一來，當使用者按下便捷鍵時，焦點便會設定為定位順序的下一個控制項。  
   
 -   將便捷鍵加入所有功能表項目。  
   
@@ -65,53 +65,53 @@ ms.locfileid: "57708271"
   
 -   如下所述將控制項加入表單並設定屬性。 如需如何在表單上排列控制項的模型，請參閱表格下方的圖片。  
   
-    |物件|屬性|值|  
+    |Object|屬性|值|  
     |------------|--------------|-----------|  
     |Form1|AccessibleDescription|訂購表單|  
     ||AccessibleName|訂購表單|  
     ||字型大小|10|  
-    ||Text|比薩訂購表單|  
+    ||文字|比薩訂購表單|  
     |PictureBox|名稱|標誌|  
     ||AccessibleDescription|一片披薩|  
     ||AccessibleName|公司標誌|  
     ||Image|任何圖示或點陣圖|  
-    |標籤|名稱|companyLabel|  
-    ||Text|好吃披薩|  
+    |ThisAddIn|名稱|companyLabel|  
+    ||文字|好吃披薩|  
     ||TabIndex|1|  
     ||AccessibleDescription|公司名稱|  
     ||AccessibleName|公司名稱|  
     ||Backcolor|藍色|  
     ||Forecolor|黃色|  
     ||Font size|18|  
-    |標籤|名稱|customerLabel|  
-    ||Text|名稱(&N)|  
+    |ThisAddIn|名稱|customerLabel|  
+    ||文字|名稱(&N)|  
     ||TabIndex|2|  
     ||AccessibleDescription|顧客名稱標籤|  
     ||AccessibleName|顧客名稱標籤|  
     ||UseMnemonic|True|  
     |TextBox|名稱|customerName|  
-    ||Text|(無)|  
+    ||文字|(無)|  
     ||TabIndex|3|  
     ||AccessibleDescription|顧客名稱|  
     ||AccessibleName|顧客名稱|  
     |GroupBox|名稱|sizeOptions|  
     ||AccessibleDescription|披薩尺寸選擇|  
     ||AccessibleName|披薩尺寸選擇|  
-    ||Text|披薩尺寸|  
+    ||文字|披薩尺寸|  
     ||TabIndex|4|  
     |RadioButton|名稱|smallPizza|  
-    ||Text|小披薩美金 $6.00 元(&S)|  
+    ||文字|小披薩美金 $6.00 元(&S)|  
     ||已核取|True|  
     ||TabIndex|0|  
     ||AccessibleDescription|小披薩|  
     ||AccessibleName|小披薩|  
     |RadioButton|名稱|largePizza|  
-    ||Text|大批薩美金 $10.00 元(&L)|  
+    ||文字|大批薩美金 $10.00 元(&L)|  
     ||TabIndex|1|  
     ||AccessibleDescription|大批薩|  
     ||AccessibleName|大批薩|  
-    |標籤|名稱|toppingsLabel|  
-    ||Text|配料 (每份美金 $0.75 元)(&T)|  
+    |ThisAddIn|名稱|toppingsLabel|  
+    ||文字|配料 (每份美金 $0.75 元)(&T)|  
     ||TabIndex|5|  
     ||AccessibleDescription|配料標籤|  
     ||AccessibleName|配料標籤|  
@@ -122,23 +122,25 @@ ms.locfileid: "57708271"
     ||AccessibleName|可供選擇的配料|  
     ||項目|辣肉腸、臘腸、蘑菇|  
     |按鈕|名稱|順序|  
-    ||Text|順序(&O)|  
+    ||文字|順序(&O)|  
     ||TabIndex|7|  
     ||AccessibleDescription|合計訂單|  
     ||AccessibleName|訂單總計|  
     |按鈕|名稱|cancel|  
-    ||Text|取消(&C)|  
+    ||文字|取消(&C)|  
     ||TabIndex|8|  
     ||AccessibleDescription|取消訂單|  
     ||AccessibleName|取消訂單|  
     |MainMenu|名稱|theMainMenu|  
     |MenuItem|名稱|fileCommands|  
-    ||Text|檔案(&F)|  
+    ||文字|檔案(&F)|  
     |MenuItem|名稱|exitApp|  
-    ||Text|結束(&X)|  
-  
-     ![比薩訂購表單](./media/vbpizzaorderform.gif "vbPizzaOrderForm")  
-您的表單看起來會如下所示：  
+    ||文字|結束(&X)|
+    
+      您的表單看起來如下圖所示：
+    
+      ![名稱文字方塊中，與大小配料選取比薩訂購表單。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+
   
 ## <a name="supporting-high-contrast-mode"></a>支援高對比模式  
  高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性可用來判斷是否已設定高對比模式。  

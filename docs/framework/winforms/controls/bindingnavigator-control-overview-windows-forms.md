@@ -9,24 +9,25 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 - data navigation
 ms.assetid: 4423eede-f8d1-4d02-822f-5bf8432680d0
-ms.openlocfilehash: 489c60aff7b431617477a381161e1c8f587947e5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b6413c8481a021afa34b7de228df14c109a50889
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703305"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834227"
 ---
 # <a name="bindingnavigator-control-overview-windows-forms"></a>BindingNavigator 控制項概觀 (Windows Form)
 您可以使用 <xref:System.Windows.Forms.BindingNavigator> 控制項來建立標準化的方法，讓使用者用來搜尋和變更 Windows Form 上的資料。 您經常使用 <xref:System.Windows.Forms.BindingNavigator> 搭配 <xref:System.Windows.Forms.BindingSource> 元件，讓使用者能夠瀏覽表單上的資料記錄，以及與記錄互動。  
   
 ## <a name="how-the-bindingnavigator-works"></a>BindingNavigator 的運作方式  
- <xref:System.Windows.Forms.BindingNavigator> 控制項是由 <xref:System.Windows.Forms.ToolStrip> 與一系列 <xref:System.Windows.Forms.ToolStripItem> 物件所組成，可用來進行大多數常見的資料相關動作：加入資料、刪除資料，以及巡覽資料。 根據預設，<xref:System.Windows.Forms.BindingNavigator> 控制項會包含這些標準按鈕。 下列螢幕擷取畫面顯示表單上的 <xref:System.Windows.Forms.BindingNavigator> 控制項。  
+
+ <xref:System.Windows.Forms.BindingNavigator> 控制項是由 <xref:System.Windows.Forms.ToolStrip> 與一系列 <xref:System.Windows.Forms.ToolStripItem> 物件所組成，可用來進行大多數常見的資料相關動作：加入資料、刪除資料，以及巡覽資料。 根據預設，<xref:System.Windows.Forms.BindingNavigator> 控制項會包含這些標準按鈕。 下列螢幕擷取畫面顯示<xref:System.Windows.Forms.BindingNavigator>表單上的控制項：
   
- ![BindingNavigator Control](./media/cpdatacontainerctrl.gif "cpDataContainerCtrl")  
+ ![顯示 BindingNavigator 控制項的螢幕擷取畫面。](./media/bindingnavigator-control-overview-windows-forms/bindingnavigator-control-form.gif)  
   
  下表列出控制項，並描述其功能。  
   
-|控制項|函式|  
+|控制項|功能|  
 |-------------|--------------|  
 |<xref:System.Windows.Forms.BindingNavigator.AddNewItem%2A> 按鈕|將新資料列插入基礎資料來源中。|  
 |<xref:System.Windows.Forms.BindingNavigator.DeleteItem%2A> 按鈕|從基礎資料來源中刪除目前的資料列。|  

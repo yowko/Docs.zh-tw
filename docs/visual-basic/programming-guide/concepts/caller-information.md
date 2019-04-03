@@ -2,12 +2,12 @@
 title: 呼叫端資訊 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
-ms.openlocfilehash: b3d7c999137b1e62de573470b8327bf070f2b1a9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375541"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826050"
 ---
 # <a name="caller-information-visual-basic"></a>呼叫端資訊 (Visual Basic)
 使用 Caller Info 屬性，您就可以取得有關方法之呼叫端的資訊。 您可以取得原始程式碼的檔案路徑、原始程式碼中的行號，以及呼叫端的成員名稱。 這項資訊有助於追蹤、偵錯及建立診斷工具。  
@@ -75,6 +75,7 @@ End Sub
 |無包含的成員 (例如，組件層級或套用至類型的屬性)。|選擇性參數的預設值。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [屬性 (Visual Basic)](../../../visual-basic/language-reference/attributes.md)
 - [通用屬性 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/common-attributes.md)
 - [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)

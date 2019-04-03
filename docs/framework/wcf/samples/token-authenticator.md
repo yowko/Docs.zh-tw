@@ -2,12 +2,12 @@
 title: 權杖驗證器
 ms.date: 03/30/2017
 ms.assetid: 84382f2c-f6b1-4c32-82fa-aebc8f6064db
-ms.openlocfilehash: f6cbef617145e40cfc1e43012af2eb65afbbe05c
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 1e0ab9a7c1cd1b5d92556973928a014957f51918
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304998"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824202"
 ---
 # <a name="token-authenticator"></a>權杖驗證器
 這個範例示範如何實作自訂權杖驗證器。 Windows Communication Foundation (WCF) 中的權杖驗證器用來驗證語彙基元，用訊息，確認它是前後一致，而且驗證身分識別相關聯的語彙基元。
@@ -30,8 +30,7 @@ ms.locfileid: "56304998"
 
  這個範例也示範如何呼叫者身分識別是可以由存取 WCF 自訂權杖驗證程序之後。
 
- 服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結已設定成標準 `wsHttpBinding`，以及將安全性模式設為訊息 (`wsHttpBinding` 的預設模式)。 這個範例會將標準 `wsHttpBinding` 設定為使用用戶端使用者名稱驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 
-  `securityCredentials` 行為允許您指定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如下列安裝指示中所述。
+ 服務會公開 (Expose) 單一的端點來與已使用組態檔 App.config 定義之服務進行通訊。 端點是由位址、繫結及合約所組成。 繫結已設定成標準 `wsHttpBinding`，以及將安全性模式設為訊息 (`wsHttpBinding` 的預設模式)。 這個範例會將標準 `wsHttpBinding` 設定為使用用戶端使用者名稱驗證。 服務也會使用 `serviceCredentials` 行為來設定服務憑證。 `securityCredentials` 行為允許您指定服務憑證。 服務憑證是由用戶端用來驗證服務並提供訊息保護。 下列組態會參考在安裝範例期間所安裝的 localhost 憑證，如下列安裝指示中所述。
 
 ```xml
 <system.serviceModel>
@@ -280,8 +279,7 @@ static void Main()
     serviceHost.Description.Behaviors.Add(serviceCredential);
     ```
 
- 若要顯示呼叫者的資訊，您可以使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>，如下列程式碼所示。 
-  <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 包含有關目前呼叫者的宣告資訊。
+ 若要顯示呼叫者的資訊，您可以使用 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A>，如下列程式碼所示。 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> 包含有關目前呼叫者的宣告資訊。
 
 ```
 static void DisplayIdentityInformation()
@@ -369,4 +367,3 @@ static void DisplayIdentityInformation()
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
-## <a name="see-also"></a>另請參閱

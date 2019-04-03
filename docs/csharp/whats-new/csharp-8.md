@@ -1,13 +1,13 @@
 ---
 title: C# 8.0 的新功能 - C# 指南
-description: 大致了解 C# 8.0 中可用的新功能。 本文為適用於預覽 2 的最新資訊。
+description: 大致了解 C# 8.0 中可用的新功能。 此文章為適用於預覽 2 的最新資訊。
 ms.date: 02/12/2019
-ms.openlocfilehash: d95ec3dc050f5633b4b069caa5bd2811f6b61300
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
+ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262591"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58545555"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 的新功能
 
@@ -29,9 +29,9 @@ ms.locfileid: "58262591"
 - [索引和範圍](#indices-and-ranges)
 
 > [!NOTE]
-> 本文內容為 C# 8.0 預覽 2 的最新更新。
+> 此文章內容為 C# 8.0 預覽 2 的最新更新。
 
-本文的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
+此文章的其餘部分會簡短說明這些功能。 提供教學課程及概觀的連結，其中包含深入詳盡的文章。
 
 ## <a name="more-patterns-in-more-places"></a>在更多位置使用更多的模式
 
@@ -75,7 +75,7 @@ public static RGBColor FromRainbow(Rainbow colorBand) =>
     };
 ```
 
-幾項語法改進如下：
+幾個語法改進如下：
 
 - 變數挪到了 `switch` 關鍵字前。 不同的順序讓您可輕鬆區分出 switch 運算式及 switch 陳述式。
 - `case` 及 `:` 元素取代為 `=>`。 這更加精簡而且符合直覺。
@@ -164,22 +164,37 @@ public class Point
 }
 ```
 
-下列方法會使用**位置模式**擷取 `x` 及 `y` 的值。 接著，其使用 `when` 子句判斷點的象限：
+此外，請考慮下列代表象限各種不同位置的列舉：
 
 ```csharp
-static string Quadrant(Point p) => p switch
+public enum Quadrant
 {
-    (0, 0) => "origin",
-    (var x, var y) when x > 0 && y > 0 => "Quadrant 1",
-    (var x, var y) when x < 0 && y > 0 => "Quadrant 2",
-    (var x, var y) when x < 0 && y < 0 => "Quadrant 3",
-    (var x, var y) when x > 0 && y < 0 => "Quadrant 4",
-    (var x, var y) => "on a border",
-    _ => "unknown"
+    Unknown,
+    Origin,
+    One,
+    Two,
+    Three,
+    Four,
+    OnBorder
+}
+```
+
+下列方法會使用**位置模式**擷取 `x` 及 `y` 的值。 接著，它使用 `when` 子句判斷點的 `Quadrant`：
+
+```csharp
+static Quadrant GetQuadrant(Point point) => point switch
+{
+    (0, 0) => Quadrant.Origin,
+    var (x, y) when x > 0 && y > 0 => Quadrant.One,
+    var (x, y) when x < 0 && y > 0 => Quadrant.Two,
+    var (x, y) when x < 0 && y < 0 => Quadrant.Three,
+    var (x, y) when x > 0 && y < 0 => Quadrant.Four,
+    var (_, _) => Quadrant.OnBorder,
+    _ => Quadrant.Unknown
 };
 ```
 
-當 `x` 或 `y` (非兩者) 為 0 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 若您未在 switch 運算式中涵蓋所有可能的案例，則編譯器會對您產生警告。
+當 `x` 或 `y` 為 0 (非兩者) 時，上述 switch 中的捨棄模式就會符合。 switch 運算式必須產生值或者擲回例外狀況。 若沒有任何案例符合，則 switch 運算式會擲回例外狀況。 若您未在 switch 運算式中涵蓋所有可能的案例，則編譯器會對您產生警告。
 
 您可以在此[模式比對進階教學課程](../tutorials/pattern-matching.md)中探索模式比對技巧。
 
@@ -229,7 +244,7 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 
 ## <a name="static-local-functions"></a>靜態區域函式
 
-您現可將 `static` 修飾詞新增至區域函式，以確保區域函式不會從括住的範圍擷取 (參考) 任何變數。 這樣會產生 `CS8421`「靜態區域函式不可包含對 <variable> 的參考。」。 
+您現可將 `static` 修飾詞新增至區域函式，以確保區域函式不會從括住的範圍擷取 (參考) 任何變數。 這樣會產生 `CS8421`「靜態區域函式不可包含對 \<變數> 的參考」。 
 
 請考慮下列程式碼： 區域函式 `LocalFunction` 會存取在所括住範圍 (方法 `M`) 中宣告的變數 `y`。 因此，無法使用 `static` 修飾詞宣告 `LocalFunction`：
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data types [Visual Basic], object variable
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
-ms.openlocfilehash: ce38089e91b25cf50e738d956881f3a44bfa3306
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588716"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840389"
 ---
 # <a name="object-variable-values-visual-basic"></a>物件變數值 (Visual Basic)
 變數[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)可以參考任何類型的資料。 值，您將儲存在`Object`變數保留在其他地方在記憶體中，而本身的變數存放資料的指標。  
@@ -67,6 +67,7 @@ If TypeOf frm Is Object Then Debug.WriteLine("frm is Object")
  您可以宣告並使用陣列`Object`變數。 當您需要處理各種資料類型和物件類別時，這非常有用。 陣列中的所有項目必須具有相同的宣告的資料類型。 宣告為此資料型別`Object`可讓您儲存物件和類別以及陣列中其他資料類型的執行個體。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [物件變數指派](../../../../visual-basic/programming-guide/language-features/variables/object-variable-assignment.md)

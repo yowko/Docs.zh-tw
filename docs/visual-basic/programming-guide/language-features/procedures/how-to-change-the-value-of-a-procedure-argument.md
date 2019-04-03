@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: ea91e88f6833b9a3abbb349688c277be10312a6c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974909"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837481"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>HOW TO：變更值的程序引數 (Visual Basic)
 當您呼叫程序時，您提供每個引數會對應至其中一個程序中所定義的參數。 在某些情況下，程序程式碼可以變更基礎呼叫程式碼中的引數的值。 在其他情況下，此程序可以變更其本機複本的引數。  
@@ -78,6 +78,7 @@ ms.locfileid: "56974909"
  允許的程序來變更基礎呼叫程式碼中的引數的值中一律會有潛在的風險。 請確定您預期此值變更，並準備好使用之前，先將這些資料檢查有效性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)

@@ -2,12 +2,12 @@
 title: 設定作業 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7c589367-ef8f-4161-9050-642c47e6bf63
-ms.openlocfilehash: 169f7608409fcc0205a1f8edc69ee7a0b7785a51
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9e507bbaa39bf040a8ce1564630fb5fbb8c0dbe4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675507"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58408908"
 ---
 # <a name="set-operations-c"></a>設定作業 (C#)
 LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是根據相同或不同集合 (集) 內是否有對等項目而定。  
@@ -28,7 +28,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ### <a name="distinct"></a>Distinct  
  下圖說明一連串字元的 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> 方法行為。 所傳回的序列包含輸入序列中的唯一項目。  
   
- ![顯示 Distinct&#40;&#41; 行為的圖形。](../../../../csharp/programming-guide/concepts/linq/media/distinct.png "Distinct")  
+ ![顯示 Distinct&#40;&#41; 之行為的圖形。](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>例外  
  下圖說明 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行為。 所傳回的序列只包含第一個輸入序列中不在第二個輸入序列中的項目。  
@@ -38,13 +38,12 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ### <a name="intersect"></a>交集  
  下圖說明 <xref:System.Linq.Enumerable.Intersect%2A?displayProperty=nameWithType> 的行為。 所傳回的序列包含兩個輸入序列共有的項目。  
   
- ![顯示兩種序列交集的圖形。](../../../../csharp/programming-guide/concepts/linq/media/intersect.png "Intersect")  
-  
+ ![顯示兩種序列交集的圖形。](./media/set-operations/intersection-two-sequences.png)  
+ 
 ### <a name="union"></a>聯集  
  下圖說明兩個字元序列的聯合作業。 所傳回的序列包含兩個輸入序列中的唯一項目。  
   
- ![顯示兩個序列聯集的圖形。](../../../../csharp/programming-guide/concepts/linq/media/union.png "Union")  
-  
+ ![顯示兩個序列聯集的圖形。](./media/set-operations/union-operation-two-sequences.png)  
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Linq>

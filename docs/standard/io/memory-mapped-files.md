@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6b4c1b075d54189d195ea38d421463ea6b9e6161
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835352"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654350"
 ---
 # <a name="memory-mapped-files"></a>記憶體對應檔案
 記憶體對應檔案包含檔案在虛擬記憶體中的內容。 檔案和記憶體空間之間的這個對應可讓應用程式 (包括多個處理序) 透過直接讀取和寫入記憶體來修改檔案。 從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，您可以利用與原生 Windows 功能存取記憶體對應檔案相同的方法，使用 受控碼來存取記憶體對應檔案，如[管理記憶體對應檔案](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10)) \(英文\) 所述。  
@@ -42,10 +42,11 @@ ms.locfileid: "56835352"
   
  記憶體對應檔案是透過作業系統的記憶體管理員存取的，因此檔案會被自動分割成多頁並視需要進行存取。 您不必自行處理記憶體管理。  
   
- 下圖顯示多個處理序如何同時對相同的記憶體對應檔案擁有多個重疊的檢視。  
+ 下圖顯示多個處理序如何同時對相同的記憶體對應檔案擁有多個重疊的檢視。
+
+ 下圖顯示對記憶體對應檔案的多個重疊檢視：  
   
- ![將檢視顯示為記憶體對應檔案。](../../../docs/standard/io/media/memmappersisted.png "MemMapPersisted")  
-對記憶體對應檔案的多個重疊檢視  
+ ![將檢視顯示為記憶體對應檔案的螢幕擷取畫面。](./media/memory-mapped-files/memory-map-persist-file.png)  
   
 ## <a name="programming-with-memory-mapped-files"></a>使用記憶體對應檔案進行程式設計  
  下表提供使用記憶體對應檔案物件及其成員的指南。  

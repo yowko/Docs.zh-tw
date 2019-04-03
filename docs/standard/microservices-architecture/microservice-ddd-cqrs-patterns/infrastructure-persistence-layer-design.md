@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 探索基�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 983e38cc9979ef14e8227e738e9da15b014e050d
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: c173d0049558ec0a752bc2aead9de9692ea28cf9
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147732"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463055"
 ---
 # <a name="design-the-infrastructure-persistence-layer"></a>設計基礎結構持續性層
 
@@ -35,7 +35,7 @@ ms.locfileid: "53147732"
 
 在這裡要特別再次強調的是，您應該只會針對每個彙總根定義一個存放庫，如圖 7-17 所示。 若要達到在彙總內所有物件之間維持交易一致性的彙總根目標，請絕對不要針對資料庫中的每個資料表建立儲存機制。
 
-![領域層和基礎結構層之間的關聯性：購買者彙總相依於 IBuyerRepository，而訂單彙總相依於 IOrderRepository 介面，這些介面會在基礎結構層中由對應的存放庫實作，這些存放庫不僅相依於 UnitOfWork，也在該處實作，用來存取資料層中的資料表。](./media/image18.png)
+![網域層和基礎結構層之間的關聯性：購買者彙總相依於 IBuyerRepository，而訂單彙總相依於 IOrderRepository 介面，這些介面會在基礎結構層中由對應的存放庫實作，這些存放庫不僅相依於 UnitOfWork，也在該處實作，用來存取資料層中的資料表。](./media/image18.png)
 
 **圖 7-17**。 儲存機制、彙總和資料庫資料表之間的關聯性
 
@@ -111,24 +111,24 @@ public interface IRepository<T> where T : IAggregateRoot
 ### <a name="repository-pattern"></a>存放庫模式
 
 - **The Repository pattern** \ (存放庫模式)
-  [*https://deviq.com/repository-pattern/*](https://deviq.com/repository-pattern/)
+  [https://deviq.com/repository-pattern/](https://deviq.com/repository-pattern/)
 
 - **Edward Hieatt 和 Rob Mee：Repository pattern.** (存放庫模式)。 \
-  [*https://martinfowler.com/eaaCatalog/repository.html*](https://martinfowler.com/eaaCatalog/repository.html)
+  [https://martinfowler.com/eaaCatalog/repository.html](https://martinfowler.com/eaaCatalog/repository.html)
 
 - **The Repository pattern** \ (存放庫模式)
-  [*https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)*](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
+  [https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/ff649690(v=pandp.10))
 
-- **Eric Evans：Domain-Driven Design: Tackling Complexity in the Heart of Software.** (書籍，包括存放庫模式的討論) \
-  [*https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/*](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+- **Eric Evans：網域驅動設計：解決軟體核心的複雜度。** (書籍，包括存放庫模式的討論) \
+  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
 
 ### <a name="unit-of-work-pattern"></a>工作單位模式
 
 - **Martin Fowler：Unit of Work pattern (工作單位模式)。** \
-  [*https://martinfowler.com/eaaCatalog/unitOfWork.html*](https://martinfowler.com/eaaCatalog/unitOfWork.html)
+  [https://martinfowler.com/eaaCatalog/unitOfWork.html](https://martinfowler.com/eaaCatalog/unitOfWork.html)
 
 - **在 ASP.NET MVC 應用程式中實作存放庫與工作單位模式** \
-  [*https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application*](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
+  [https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application](https://docs.microsoft.com/aspnet/mvc/overview/older-versions/getting-started-with-ef-5-using-mvc-4/implementing-the-repository-and-unit-of-work-patterns-in-an-asp-net-mvc-application)
 
 >[!div class="step-by-step"]
 >[上一頁](domain-events-design-implementation.md)

@@ -6,26 +6,25 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea7a26a5b8ce0f30893e9ca66873ad61f82ff8df
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 03600a7c7fbff30acab46f875fb8cd2516207457
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654597"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework 並存執行
 並存執行是在同一台電腦上執行多個版本之應用程式或元件的能力。 在同一台電腦上，您可以同時擁有通用語言執行平台的多個版本，以及使用某一版執行階段的應用程式和元件的多個版本。  
   
  下圖顯示在同一台電腦上有幾個應用程式使用執行階段的兩個不同版本。 應用程式 A、B 和 C 使用 Runtime 1.0 版，而應用程式 D 則使用 Runtime 1.1 版。  
   
- ![並存執行](../../../docs/framework/deployment/media/simplesbs.gif "simplesbs")  
-兩個版本執行階段的並存執行  
+ ![不同執行階段版本的並存執行，](./media/side-by-side-execution/side-by-side-runtime-execution.gif)  
   
  .NET Framework 包含通用語言執行平台以及內含 API 類型的組件集合。 Runtime 和 .NET Framework 組件的版本為個別指定。 例如，4.0 版的執行階段實際上是 4.0.319 版，而 1.0 版的 .NET Framework 組件則是 1.0.3300.0 版。  
   
  下圖顯示在同一台電腦上有幾個應用程式使用元件的兩個不同版本。 應用程式 A 和 B 使用 1.0 版的元件，而應用程式 C 則使用相同元件的 2.0 版。  
   
- ![並存執行](../../../docs/framework/deployment/media/compsbs.gif "compsbs")  
-兩個版本元件的並存執行  
+ ![顯示元件並存執行的圖表。](./media/side-by-side-execution/side-by-side-component-execution.gif)  
   
  並存執行提供更多控制權，供您控制應用程式所繫結之元件版本，以及應用程式所使用的執行階段版本。  
   
@@ -112,7 +111,7 @@ publicKeyToken=...,
   
 ## <a name="related-topics"></a>相關主題  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[如何：啟用和停用自動繫結重新導向](../../../docs/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection.md)|說明如何將應用程式繫結至組件的特定版本。|  
 |[設定組件繫結重新導向](../../../docs/framework/deployment/configuring-assembly-binding-redirection.md)|說明如何將組件繫結參考重新導向至 .NET Framework 組件的特定版本。|  

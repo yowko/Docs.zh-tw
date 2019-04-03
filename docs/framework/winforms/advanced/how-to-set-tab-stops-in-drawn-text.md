@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在繪製文字中設定定位停駐點
+title: HOW TO：在繪製的文字中設定定位停駐點
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 2b3d019db1fd3e9eeb9def1c18b54d293e5faca9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722421"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832303"
 ---
-# <a name="how-to-set-tab-stops-in-drawn-text"></a>HOW TO：在繪製文字中設定定位停駐點
+# <a name="how-to-set-tab-stops-in-drawn-text"></a>HOW TO：在繪製的文字中設定定位停駐點
 您可以藉由呼叫設定定位停駐點的文字<xref:System.Drawing.StringFormat.SetTabStops%2A>方法<xref:System.Drawing.StringFormat>物件，然後再傳遞<xref:System.Drawing.StringFormat>物件<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>類別。  
   
 > [!NOTE]
@@ -24,9 +24,9 @@ ms.locfileid: "57722421"
 ## <a name="example"></a>範例  
  下列範例會設定在 150、 250 和 350 的定位停駐點。 然後，程式碼會顯示索引標籤的名稱和測驗分數的清單。  
   
- 下圖顯示索引標籤式的文字。  
+ 下圖顯示索引標籤式的文字：  
   
- ![字型文字](./media/fontstext4.png "fontstext4")  
+ ![如果螢幕擷取畫面會顯示索引標籤式的名字和分數的清單。](./media/how-to-set-tab-stops-in-drawn-text/tab-list-names-test-scores.png)  
   
  下列程式碼會傳遞兩個引數<xref:System.Drawing.StringFormat.SetTabStops%2A>方法。 第二個引數是陣列，其中包含索引標籤的位移。 第一個引數傳遞至<xref:System.Drawing.StringFormat.SetTabStops%2A>為 0，表示陣列中的第一個位移，從位置 0，週框矩形的左邊緣算起。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "57722421"
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
   
--   上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
+-   上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
 - [使用字型和文字](using-fonts-and-text.md)

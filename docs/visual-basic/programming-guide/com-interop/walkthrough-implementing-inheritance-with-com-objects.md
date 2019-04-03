@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: d3814dddb0e39bf986e8d6ee88b3c7b4ec759748
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980447"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826167"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件 (Visual Basic) 的繼承
 您可以衍生從 Visual Basic 類別`Public`中 COM 物件，即使在舊版的 Visual Basic 中建立的類別。 屬性和方法，從 COM 物件繼承的類別可以覆寫或多載，就如同屬性和任何其他基底類別的方法可以覆寫或多載。 當您有現有的類別程式庫，您不希望重新編譯時，適合使用 COM 物件的繼承。  
@@ -130,6 +130,7 @@ ms.locfileid: "56980447"
 -   使用屬性`ByRef`無法覆寫參數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)

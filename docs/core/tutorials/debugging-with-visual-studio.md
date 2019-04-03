@@ -3,12 +3,12 @@ title: 使用 Visual Studio 2017 針對您的 Hello World .NET Core 應用程式
 description: 了解如何使用 Visual Studio 2017 對以 C# 或 Visual Basic 撰寫的 Hello World 應用程式進行偵錯。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: b08744e784ffdde6682a6271888ae55d3fbd242b
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170661"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463419"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>使用 Visual Studio 2017 針對您的 C# 或 Visual Basic .NET Core Hello World 應用程式進行偵錯
 
@@ -39,7 +39,7 @@ ms.locfileid: "53170661"
 
 1. 程式會在到達中斷點且在 `Console.WriteLine` 方法執行之前，停止執行。 [自動變數] 視窗會顯示目前行附近所使用變數的值。 [區域變數] 視窗 (按一下 [區域變數] 索引標籤即可檢視) 會顯示目前正在執行的方法中所定義變數的值。
 
-   ![Visual Studio Application Insights](./media/debugging-with-visual-studio/break.png)
+   ![Visual Studio 中的中斷點的螢幕擷取畫面。](./media/debugging-with-visual-studio/breakpoint-console-window.png)
 
 1. 您可以變更變數的值，以了解它會如何影響我們的程式。 如果看不到 [即時運算視窗]，請選擇 [偵錯]  >  [視窗]  >  [即時運算] 功能表項目。 [即時運算視窗] 可讓您與正在進行偵錯的應用程式互動。
 

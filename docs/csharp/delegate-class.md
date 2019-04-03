@@ -3,18 +3,18 @@ title: System.Delegate 和 `delegate` 關鍵字
 description: 了解 .NET Framework 中支援委派的類別，以及這些類別與 'delegate' 關鍵字的對應關係。
 ms.date: 06/20/2016
 ms.assetid: f3742fda-13c2-4283-8966-9e21c2674393
-ms.openlocfilehash: 88179af0ac072464d8e9903f685ff578ca591bf0
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 4cf2b113fc9e2c6621f648af7ecb272a42b1f056
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126171"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58465772"
 ---
 # <a name="systemdelegate-and-the-delegate-keyword"></a>System.Delegate 和 `delegate` 關鍵字
 
 [上一步](delegates-overview.md)
 
-此文章將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
+本文將介紹 .NET Framework 中支援委派的類別，以及這些類別與 `delegate` 關鍵字的對應關係。
 
 ## <a name="defining-delegate-types"></a>定義委派型別
 
@@ -92,7 +92,7 @@ phrases.Sort(CompareLength);
 
 請注意，使用的方法名稱不含括弧。 將方法作為引數使用時，系統會指示編譯器將方法參考轉換成可作為委派引動過程的目標，並將該方法附加為叫用目標。
 
-您可能也已宣告 'Comparison<string>` 型別的變數並進行指派，以便明確宣告：
+您可能也已宣告 `Comparison<string>` 型別的變數並進行指派，以便明確宣告：
 
 ```csharp
 Comparison<string> comparer = CompareLength;

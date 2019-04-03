@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
-ms.openlocfilehash: d6fa76b2aba45e3455cef6ceafc0f737ef56225d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fbb8ce974a618349bd4b5e7a2a25a165d91787a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271547"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832251"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>'#ElseIf' 之前必須搭配相對應的 '#If' 或 '#ElseIf'
 `#ElseIf` 是條件式編譯指示詞。 `#ElseIf`子句之前必須搭配相對應`#If`或`#ElseIf`子句。  
@@ -28,4 +28,5 @@ ms.locfileid: "55271547"
 3.  如果一切狀況良好，請將 `#If` 指示詞加入條件式編譯區塊的開頭。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [#If...Then...#Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

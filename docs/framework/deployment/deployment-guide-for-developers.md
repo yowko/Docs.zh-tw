@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d41d1ee2ab5e423ca6a1b28a0e10bac4bc58ad79
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094005"
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675909"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 開發人員部署手冊
 開發人員若要讓自己的應用程式一起安裝從 .NET Framework 4.5 至 [!INCLUDE[net_current](../../../includes/net-current-version.md)] 的任何 .NET Framework 版本，可參考本主題提供的資訊。
@@ -302,12 +302,12 @@ Type: DWORD
 > [!IMPORTANT]
 > 語言套件並不包含執行應用程式所需的 .NET Framework 元件，因此在安裝語言套件之前，必須先使用 Web 或離線安裝程式安裝 .NET Framework。
 
- 從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 開始，套件名稱會採用 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe 的格式，其中 `version` 是 .NET Framework 的版本號碼、`number` 是 Microsoft 知識庫文章編號，而 `culture` 則指定[國家/地區](#supported-languages)。 `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`就是其中一個套件的範例。 封裝名稱列在本文章稍早的 [Redistributable Packages](#redistributable-packages) 一節。
+ 從 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 開始，套件名稱會採用 NDP<`version`>-KB<`number`>-x86-x64-AllOS-<`culture`>.exe 的格式，其中 `version` 是 .NET Framework 的版本號碼、`number` 是 Microsoft 知識庫文章編號，而 `culture` 則指定[國家/地區](#supported-languages)。 `NDP452-KB2901907-x86-x64-AllOS-JPN.exe`就是其中一個套件的範例。 封裝名稱列在此文章稍早的 [Redistributable Packages](#redistributable-packages) 一節。
 
  若要隨 .NET Framework 離線安裝程式安裝語言套件，您必須將它鏈結至您的應用程式安裝。 例如，若要同時部署 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 離線安裝程式與日文語言套件，請使用下列命令：
 
 ```
-NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductName>
+NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductName>
 ```
 
  如果您使用 Web 安裝程式，則不需要鏈結語言套件，安裝程式將會安裝符合使用者 MUI 設定的語言套件。 如果您要安裝不同的語言，可以使用 `/LCID` 選項指定語言套件。
@@ -355,7 +355,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe/q /norestart /ChainingPackage <ProductNam
 ### <a name="command-line-options"></a>命令列選項
  下表列出您將 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 可轉散發套件鏈結至您的應用程式安裝時，可以包含的選項。
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
 |**/CEIPConsent**|覆寫預設的行為並傳送匿名意見給 Microsoft 以協助改善未來的部署經驗。 只有當安裝程式提示同意，同時使用者授與權限傳送匿名意見給 Microsoft 時，才能使用此選項。|
 |**/chainingpackage** `packageName`|指定執行鏈結之可執行檔的名稱。 此資訊會以匿名意見的形式傳送給 Microsoft 以協助改善未來的部署經驗。<br /><br /> 如果封裝名稱包含空格，請使用雙引號做為分隔符號，例如： **/chainingpackage "Lucerne Publishing"**。 如需鏈結套件的範例，請參閱 MSDN Library 中的 [從安裝套件取得進度資訊](https://go.microsoft.com/fwlink/?LinkId=181926) 。|

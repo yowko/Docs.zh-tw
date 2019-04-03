@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 - procedure overloading [Visual Basic], multiple versions
 ms.assetid: 71ccdd66-1b00-4b66-bee4-6926c0d696f4
-ms.openlocfilehash: baaaca13755b9fdc11308ff3e4df39835dbe466e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c31c9ad05af04aec5dc41790aea530c62611f500
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980772"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58841161"
 ---
 # <a name="how-to-define-multiple-versions-of-a-procedure-visual-basic"></a>HOW TO：定義多個版本的程序 (Visual Basic)
 您可以在多個版本中所定義的程序*多載*它針對每個版本使用相同名稱但不同的參數清單。 多載的用途是定義程序的數個密切相關的版本，而不需要依名稱加以區隔。  
@@ -43,6 +43,7 @@ ms.locfileid: "56980772"
  請確定每個多載的版本具有相同的程序名稱，但有不同的參數清單。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [程序的疑難排解](./troubleshooting-procedures.md)

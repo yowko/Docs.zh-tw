@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: f2617d270caf5ed4ade68934486fee6afb6c413f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572717"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835280"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>HOW TO：指派一個陣列至另一個陣列 (Visual Basic)
 因為陣列是物件，您可以像其他物件類型的指派陳述式中使用它們。 陣列變數會保留構成的陣列項目和的順位和長度的資訊，將資料指標，並指派複製只有此指標。  
@@ -43,6 +43,7 @@ ms.locfileid: "54572717"
  編譯器會報告錯誤，如果違反上述規則，例如如果資料類型不相容或陣序規範不相等。 您可以新增錯誤處理您的程式碼，請確定陣列相容，然後再嘗試指派。 您也可以使用[TryCast 運算子](../../../../visual-basic/language-reference/operators/trycast-operator.md)關鍵字，如果您想要避免擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)

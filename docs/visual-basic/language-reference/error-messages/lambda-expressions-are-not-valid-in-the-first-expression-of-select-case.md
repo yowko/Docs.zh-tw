@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36635
 ms.assetid: 74609979-9c03-4864-bbce-f588aa2e0917
-ms.openlocfilehash: d56515093020a4c987d132491957ce6db9e21683
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e51ba4ad0910d0db2b927f84303e5c55515f4b84
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287790"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843445"
 ---
 # <a name="lambda-expressions-are-not-valid-in-the-first-expression-of-a-select-case-statement"></a>Lambda 運算式在 'Select Case' 陳述式的第一個運算式中無效
 您無法使用 lambda 運算式中的測試運算式`Select Case`陳述式。 Lambda 運算式定義傳回函式和測試運算式`Select Case`陳述式必須是基本資料類型。  
@@ -41,6 +41,7 @@ End Select
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [If...Then...Else 陳述式](../../../visual-basic/language-reference/statements/if-then-else-statement.md)
 - [Select...Case 陳述式](../../../visual-basic/language-reference/statements/select-case-statement.md)

@@ -2,12 +2,12 @@
 title: HOW TO：攔截剖析錯誤 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 22e9068e-ea58-447b-816e-cd1852c11787
-ms.openlocfilehash: f438a247866fdea8935be2b881a77f97c152b98f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a5d01d4853a9fd0cc7f0a0e5071b394ab3f218b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667081"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829371"
 ---
 # <a name="how-to-catch-parsing-errors-visual-basic"></a>HOW TO：攔截剖析錯誤 (Visual Basic)
 這個主題顯示如何偵測格式錯誤或無效的 XML。  
@@ -42,4 +42,5 @@ The 'Contacts' start tag on line 1 does not match the end tag of 'Contcts'. Line
  如需可以預期 <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>、<xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType> 及 <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType> 方法擲回之例外狀況的詳細資訊，請參閱 <xref:System.Xml.XmlReader> 文件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [剖析 XML (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)

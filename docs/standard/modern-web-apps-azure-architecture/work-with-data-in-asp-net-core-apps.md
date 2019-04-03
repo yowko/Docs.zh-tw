@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 914a10724c416f453d93f6efc16f9ad192798264
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 23c0995c512a07c41b3e2dbe8bc7528723379efa
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827171"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463731"
 ---
 # <a name="working-with-data-in-aspnet-core-apps"></a>使用 ASP.NET Core 應用程式中的資料
 
@@ -51,11 +51,11 @@ public class CatalogContext : DbContext
 }
 ```
 
-您的 DbContext 必須具備可接受 DbContextOptions 的建構函式，並將此引數傳遞給基底 DbContext 建構函式。 請注意，如果您的應用程式中只有一個 DbContext，即可傳遞 DbContextOptions 的執行個體，但如果不只一個，您就必須使用泛型 DbContextOptions<T> 類型，並將其作為泛型參數傳遞至 DbContext 類型中。
+您的 DbContext 必須具備可接受 DbContextOptions 的建構函式，並將此引數傳遞給基底 DbContext 建構函式。 請注意，如果您的應用程式中只有一個 DbContext，即可傳遞 DbContextOptions 的執行個體，但如果不只一個，您就必須使用泛型 DbContextOptions\<T> 類型，並將其作為泛型參數傳遞至 DbContext 類型中。
 
 ### <a name="configuring-ef-core"></a>設定 EF Core
 
-一般來說，您需要在 ASP.NET Core 應用程式的 ConfigureServices 方法中設定 EF Core。 EF Core 使用的 DbContextOptionsBuilder 可支援幾項實用的擴充方法，以簡化其組態。 若要將 CatalogContext 設定為搭配使用 SQL Server 資料庫與 [組態] 中定義的連接字串，您可以將下列程式碼新增至 ConfigureServices：
+一般來說，您需要在 ASP.NET Core 應用程式的 ConfigureServices 方法中設定 EF Core。 EF Core 使用的 DbContextOptionsBuilder 可支援幾個實用的擴充方法，以簡化其組態。 若要將 CatalogContext 設定為搭配使用 SQL Server 資料庫與 [組態] 中定義的連接字串，您可以將下列程式碼新增至 ConfigureServices：
 
 ```csharp
 services.AddDbContext<CatalogContext>(options => options.UseSqlServer (Configuration.GetConnectionString("DefaultConnection")));
@@ -89,7 +89,7 @@ var brandItems = await _context.CatalogBrands
     .ToListAsync();
 ```
 
-請務必在上述範例中新增 ToListAsync 呼叫，以立即執行查詢。 否則，陳述式會指派 IQueryable<SelectListItem> 給 brandItem，直到系統列舉它時才執行。 從方法傳回 IQueryable 結果時，也有其優缺點。 它可讓您進一步修改 EF Core 建構的查詢，但如果您將作業新增至 EF Core 不能轉譯的查詢時，也可能會出現只在執行階段發生的錯誤。 一般來說，比較安全的做法是將任何篩選條件傳遞給執行資料存取的方法，並傳回記憶體內部的集合 (例如，List<T>) 作為結果。
+請務必在上述範例中新增 ToListAsync 呼叫，以立即執行查詢。 否則，陳述式會指派 IQueryable\<SelectListItem> 給 brandItem，直到系統列舉它時才執行。 從方法傳回 IQueryable 結果時，也有其優缺點。 它可讓您進一步修改 EF Core 建構的查詢，但如果您將作業新增至 EF Core 不能轉譯的查詢時，也可能會出現只在執行階段發生的錯誤。 一般來說，比較安全的做法是將任何篩選條件傳遞給執行資料存取的方法，並傳回記憶體內部的集合 (例如，List\<T>) 作為結果。
 
 EF Core 會追蹤其從持續性儲存區擷取的實體變更。 若要儲存追蹤實體的變更，您只需要在 DbContext 上呼叫 SaveChanges 方法，並確定它是用來擷取實體的相同 DbContext 執行個體。 新增和移除實體是直接在適當的 DbSet 屬性上完成，並再次地使用 SaveChanges 呼叫來執行資料庫命令。 下列範例示範如何新增、更新和移除持續性儲存區的實體。
 

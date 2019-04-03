@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /define compiler option [Visual Basic]
 - define compiler option [Visual Basic]
 ms.assetid: f735c57d-1cf9-4f2f-a26f-0de630fd4077
-ms.openlocfilehash: c21223cc353b7a4614511aa97340c6bc5d61e70e
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d0a483e7a3c9e9863db39e89d655cf172c1e8c81
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200649"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834305"
 ---
 # <a name="-define-visual-basic"></a>-定義 (Visual Basic)
 定義條件式編譯器常數。  
@@ -32,7 +32,7 @@ ms.locfileid: "57200649"
 |詞彙|定義|  
 |---|---|  
 |`symbol`|必要項。 要定義的符號。|  
-|`value`|選擇項。 要指派 `symbol` 的值。 如果`value`是一個字串，它必須以反斜線/引號的順序括住 (\\」) 而不是引號。 如果未指定值，則會認為是 True。|  
+|`value`|選擇性。 要指派 `symbol` 的值。 如果`value`是一個字串，它必須以反斜線/引號的順序括住 (\\」) 而不是引號。 如果未指定值，則會認為是 True。|  
   
 ## <a name="remarks"></a>備註  
  `-define`選項的效果類似於使用`#Const`原始程式檔，除了定義的常數的前置處理器指示詞`-define`公開並套用至專案中的所有檔案。  
@@ -53,6 +53,7 @@ ms.locfileid: "57200649"
  [!code-vb[VbVbalrCompiler#45](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrCompiler/VB/Class1.vb#45)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [#If...Then...#Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)
 - [#Const 指示詞](../../../visual-basic/language-reference/directives/const-directive.md)

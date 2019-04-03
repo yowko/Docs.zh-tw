@@ -8,12 +8,12 @@ helpviewer_keywords:
 - VBC40059
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
-ms.openlocfilehash: 058aa4891d05147756290affd60ea5fb260c33ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262948"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837542"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>已建立內嵌 interop 組件參考 '\<assembly1 >' 因為該組件的間接參考來自組件'\<assembly2 >'
 已建立內嵌 Interop 組件 '\<assembly1>' 的參考，因為該組件的間接參考來自組件 '\<assembly2>'。 請考慮變更其中任何一個組件上的 [內嵌 Interop 類型] 屬性。  
@@ -32,5 +32,6 @@ ms.locfileid: "55262948"
 -   若要移除警告，您可以將 assembly1 的 `Embed Interop Types` 屬性設定為 `False`。 在此情況下，主要 interop 組件 (PIA) 所提供的 interop 類型資訊。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [/link (Visual Basic)](../../../visual-basic/reference/command-line-compiler/link.md)
 - [與 Unmanaged 程式碼互通](../../../framework/interop/index.md)

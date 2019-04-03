@@ -10,12 +10,12 @@ helpviewer_keywords:
 - RaiseEvent statement [Visual Basic]
 - event handlers, connecting events to
 ms.assetid: f82e380a-1e6b-4047-bea8-c853f4d2c742
-ms.openlocfilehash: ffe08dc8aeef9498d2e9f4c973c5ccbc31fec0b9
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5d8fd6adf33c992341324e07bcd2ad12986bbdf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973297"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821006"
 ---
 # <a name="raiseevent-statement"></a>RaiseEvent 陳述式
 觸發程序在類別、 表單或文件中的模組層級宣告的事件。  
@@ -57,8 +57,7 @@ RaiseEvent eventname[( argumentlist )]
   
  此範例也會使用表單 (`Form1`) 與按鈕 (`Button1`) 和文字方塊 (`TextBox1`)。 當您按一下按鈕時時，第一個文字方塊會顯示從 10 秒到 0 秒的倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
- 
-  `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
+ `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
   
  若要使用此範例中，開啟新的 Windows 應用程式專案中，加入名為按鈕`Button1`和名為文字方塊`TextBox1`主要表單名為`Form1`。 然後以滑鼠右鍵按一下表單，並按一下**檢視程式碼**程式碼編輯器開啟。  
   
@@ -77,6 +76,7 @@ RaiseEvent eventname[( argumentlist )]
 >  `My.Application.DoEvents`方法不會處理事件中完全相同的方式像表單一樣。 若要允許表單以直接處理事件，您可以使用多執行緒處理。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [事件](../../../visual-basic/programming-guide/language-features/events/index.md)
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 - [AddHandler 陳述式](../../../visual-basic/language-reference/statements/addhandler-statement.md)

@@ -2,18 +2,18 @@
 title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 12/12/2018
-ms.openlocfilehash: d7e3392412ad6f01cd150e31cec43aa99c42b437
-ms.sourcegitcommit: d09c77414e9e4fc72c79b04deee7a756a120674e
+ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54084676"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654571"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
 C# 6.0 版包含許多功能，能提升開發人員的產能。 這些功能的整體影響是您可撰寫更簡潔且更具可讀性的程式碼，。 語法包含許多常見做法的較少繁瑣細節。 繁瑣細節較少時比較容易看出設計目的。 徹底了解這些功能，可讓您提升生產力，並撰寫更容易閱讀的程式碼。 您可以更專注於您的功能，而不是語言的建構。
 
-本文的其餘部分將概述每項功能，並提供連結以探索每項功能。 您也可以在＜教學課程＞一節的 [C# 6 互動式教學課程](../tutorials/exploration/csharp-6.yml)中探索這些功能。
+此文章的其餘部分將概述每項功能，並提供連結以探索每項功能。 您也可以在＜教學課程＞一節的 [C# 6 互動式探索](../tutorials/exploration/csharp-6.yml)中探索這些功能。
 
 ## <a name="read-only-auto-properties"></a>唯讀 Auto 屬性
 

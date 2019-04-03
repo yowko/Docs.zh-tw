@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, about C# language
 - Visual C#, about
 ms.assetid: 0a2dff4e-cd84-42ff-8141-e89889b24081
-ms.openlocfilehash: ff0845f7d15a7b65cee755110d26a1e56a9b94af
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 28fde47721e6354612ffec557da25c6d3bb775e4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153939"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409220"
 ---
 # <a name="introduction-to-the-c-language-and-the-net-framework"></a>C# 語言和 .NET Framework 簡介
 
@@ -58,7 +58,7 @@ C# 是型別安全的優質物件導向語言，可讓開發人員建置各種�
   
  C# 程式執行時，組件會載入至 CLR，根據資訊清單中的資訊執行各種不同動作。 然後，如果符合安全性需求，CLR 就會執行 Just-In-Time (JIT) 編譯以將 IL 程式碼轉換成原生機器指令。 CLR 也提供有關自動記憶體回收、例外狀況處理和資源管理的其他服務。 由 CLR 執行的程式碼有時稱為「Managed 程式碼 」，相對於會以特定系統為目標編譯成原生機器語言的「Unmanaged 程式碼 」。 下圖說明 C# 原始程式碼檔、.NET Framework 類別庫、組件及 CLR 的編譯時期和執行階段關聯性。  
   
- ![從 C&#35; 原始程式碼到機器執行](../../csharp/getting-started/media/netarchitecture.png "NETarchitecture")  
+ ![從 C&#35; 原始程式碼到電腦執行](./media/introduction-to-the-csharp-language-and-the-net-framework/net-architecture-relationships.png)  
   
  語言互通性是 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 的一項重要功能。 由於 C# 編譯器所產生的 IL 程式碼符合通用型別規格 (CTS)，所以從 C# 產生的 IL 程式碼可以和從 Visual Basic、Visual C++ 的 .NET 版本所產生的程式碼互動，或和 20 種以上的任何其他 CTS 相容語言互動。 單一組件可包含以不同的 .NET 語言撰寫的多個模組，而且型別可以彼此參考，如同它們都以相同的語言撰寫一般。  
   

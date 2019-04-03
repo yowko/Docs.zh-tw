@@ -2,12 +2,12 @@
 title: 進階的 LINQ to XML 程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
-ms.openlocfilehash: 1aae385db8f989aa142f588bb459486b805074e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668375"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835319"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>進階的 LINQ to XML 程式設計 (Visual Basic)
 本節提供的資訊將僅適用於某些 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 案例中的進階開發人員。  
@@ -29,4 +29,5 @@ ms.locfileid: "54668375"
 |[WPF 資料繫結與 LINQ to XML](/visualstudio/designers/wpf-data-binding-with-linq-to-xml)|描述如何使用 LINQ to XML 做為 Windows Presentation Foundation 應用程式中資料繫結的資料來源。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程式設計手冊 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
-ms.openlocfilehash: 1fa66a3c50b5c1eadd4c63b92c57ab60e1a11076
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77cfeb57bc313ded2d2c4d5a0c59041c5c19f515
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595990"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826076"
 ---
 # <a name="initializer-expected"></a>必須是初始設定式
 您嘗試使用物件初始設定式中的初始設定清單是空的如下列範例所示，宣告類別的執行個體。  
@@ -32,5 +32,6 @@ ms.locfileid: "54595990"
 1.  初始化至少一個欄位或屬性初始設定式，或不使用物件初始設定式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [如何：使用物件初始設定式宣告物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

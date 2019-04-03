@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Office 程式設計中使用具名引數和選用引數 - C# 程式設計指南
+title: 作法：在 Office 程式設計中使用具名引數和選用引數 - C# 程式設計指南
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - optional arguments [C#], Office programming
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
-ms.openlocfilehash: af5f2d13365a93e758962daea2b08ea3ae089aeb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966797"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58412197"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>作法：在 Office 程式設計中使用具名引數和選用引數 (C# 程式設計指南)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。  
@@ -37,7 +37,7 @@ ms.locfileid: "56966797"
   
 6.  在 [名稱] 欄位中鍵入專案的名稱。  
   
-7.  按一下 [確定 **Deploying Office Solutions**]。  
+7.  按一下 [確定]。  
   
      新的專案隨即會出現在**方案總管**中。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "56966797"
   
 2.  在 [.NET] 頁面上，選取 [元件名稱] 清單中的 [Microsoft.Office.Interop.Word]。  
   
-3.  按一下 [確定 **Deploying Office Solutions**]。  
+3.  按一下 [確定]。  
   
 ### <a name="to-add-necessary-using-directives"></a>加入必要的 using 指示詞  
   
@@ -79,8 +79,7 @@ ms.locfileid: "56966797"
   
 1.  使用 `ConvertToTable` 方法將文字放在表格中。 此方法有十六個選擇性參數。 IntelliSense 會以方括號括住選擇性參數，如下圖所示。  
   
-     ![ConvertToTable 方法的參數清單。](../../../csharp/programming-guide/classes-and-structs/media/convert_tableparameters.png "Convert_TableParameters")  
-ConvertToTable 參數  
+     ![ConvertToTable 方法的參數清單](./media/how-to-use-named-and-optional-arguments-in-office-programming/convert-table-parameters.png)  
   
      具名和選擇性引數可讓您只針對要變更的參數指定值。 將下列程式碼新增至 `DisplayInWord` 方法的結尾，以建立簡單的表格。 此引數會指定以 `range` 內文字字串中的逗號來分隔表格的儲存格。  
   

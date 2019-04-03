@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TypeOf operator [Visual Basic]
 - compatible data types [Visual Basic]
 ms.assetid: 33f65296-659a-4b9a-9a29-c2a91cff68b2
-ms.openlocfilehash: 27fdef4012d4724d45b4e990ce449bdfe09feaa6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7162fcc24595bbb16d268d5d9e1ea4d82f6e67fb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965055"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829859"
 ---
 # <a name="typeof-operator-visual-basic"></a>TypeOf 運算子 (Visual Basic)
 比較物件參考變數與資料類型。  
@@ -43,11 +43,9 @@ result = TypeOf objectexpression IsNot typename
  必要項。 任何資料類型名稱。  
   
 ## <a name="remarks"></a>備註  
- 
-  `TypeOf` 運算子會判定 `objectexpression` 的執行階段類型是否相容 `typename`。 相容性取決 `typename` 的類型分類。 下表顯示如何判斷相容性。  
+ `TypeOf` 運算子會判定 `objectexpression` 的執行階段類型是否相容 `typename`。 相容性取決 `typename` 的類型分類。 下表顯示如何判斷相容性。  
   
-|
-  `typename` 的類型分類|相容性準則|  
+|`typename` 的類型分類|相容性準則|  
 |---------------------------------|-----------------------------|  
 |類別|`objectexpression` 屬於類型 `typename` 或繼承自 `typename`|  
 |結構|`objectexpression` 屬於類型 `typename`|  
@@ -65,6 +63,7 @@ result = TypeOf objectexpression IsNot typename
  變數 `refInteger` 具有執行階段類型 `Integer`。 它相容 `Integer`，但不相容 `Double`。 變數 `refForm` 具有執行階段類型 <xref:System.Windows.Forms.Form>。 它相容 <xref:System.Windows.Forms.Form> (因為那是其類型)、相容 <xref:System.Windows.Forms.Control> (因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.Windows.Forms.Control>)，且具有 <xref:System.ComponentModel.IComponent> (因為 <xref:System.Windows.Forms.Form> 繼承自 <xref:System.ComponentModel.Component>，它會實作 <xref:System.ComponentModel.IComponent>)。 不過，`refForm` 不相容 <xref:System.Windows.Forms.Label>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Is 運算子](../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
 - [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

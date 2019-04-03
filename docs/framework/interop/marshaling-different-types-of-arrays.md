@@ -10,26 +10,26 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 147c22758c68bd3b48ab1c5cf8e26ed0afdbce09
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219460"
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58654610"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>封送處理不同類型的陣列
 陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。 雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。 此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。 如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。  
   
  下表列出陣列的封送處理選項，並說明其用法。  
   
-|陣列|描述|  
+|陣列|說明|  
 |-----------|-----------------|  
 |傳值方式的整數。|將整數的陣列做為 In 參數傳遞。|  
 |傳址方式的整數。|將整數的陣列做為 In/Out 參數傳遞。|  
 |傳值方式的整數 (二維)。|將整數的矩陣做為 In 參數傳遞。|  
 |傳值方式的字串。|將字串的陣列做為 In 參數傳遞。|  
 |整數的結構。|將包含整數的結構陣列做為 In/Out 參數傳遞。|  
-|字串的結構。|將僅包含整數的結構陣列做為 In/Out 參數傳遞。 可變更陣列的成員。|  
+|字串的結構。|將僅包含字串的結構陣列當作 In/Out 參數傳遞。 可變更陣列的成員。|  
   
 ## <a name="example"></a>範例  
  本範例示範如何傳遞下列類型的陣列：  

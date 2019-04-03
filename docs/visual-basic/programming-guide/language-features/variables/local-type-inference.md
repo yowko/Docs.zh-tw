@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inference [Visual Basic]
 - type inference [Visual Basic]
 ms.assetid: b8307f18-2e56-4ab3-a45a-826873f400f6
-ms.openlocfilehash: 62f46f8f9691dd260e4a4c40c0ffccbce4c5beb7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6214938262b987a1bae4a9ca1d5c945f8b7fe6e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973401"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826817"
 ---
 # <a name="local-type-inference-visual-basic"></a>區域類型推斷 (Visual Basic)
 Visual Basic 編譯器會使用*型別推斷*來判斷資料類型的未宣告的區域變數`As`子句。 編譯器會推斷變數的初始化運算式的類型的類型。 這可讓您宣告變數而不用明確陳述的型別，如下列範例所示。 宣告，因為兩者`num1`和`num2`強型別為整數。  
@@ -72,6 +72,7 @@ Visual Basic 編譯器會使用*型別推斷*來判斷資料類型的未宣告�
  如需詳細資訊，請參閱 < [Option Infer 陳述式](../../../../visual-basic/language-reference/statements/option-infer-statement.md)並[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [早期和晚期繫結](../../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)
 - [For Each...Next 陳述式](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)

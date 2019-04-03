@@ -10,12 +10,12 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: 435ba13b6d0b2a7d272c7f2bbea7ec410dd3d5e7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678820"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832277"
 ---
 # <a name="overload-resolution-visual-basic"></a>多載解析 (Visual Basic)
 當 Visual Basic 編譯器遇到定義在數個多載版本的程序的呼叫時，編譯器必須決定要呼叫的多載。 它會執行下列步驟：  
@@ -59,6 +59,7 @@ ms.locfileid: "57678820"
 |（包括空的陣列） 任何長度的陣列|`ParamArray`|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
 - [程序多載化](./procedure-overloading.md)

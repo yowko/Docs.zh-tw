@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [Visual Basic], calling recursively
 - recursion
 ms.assetid: ba1d3962-b4c3-48d3-875e-96fdb4198327
-ms.openlocfilehash: 97cceb833da0ef6f9ee4e3dab5abb1f2ba73a94e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de9a2af9fc3cd78879b6525245727a6f52d51c63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969319"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832381"
 ---
 # <a name="recursive-procedures-visual-basic"></a>遞迴程序 (Visual Basic)
 A*遞迴*程序會呼叫其本身。 一般情況下，這不是撰寫 Visual Basic 程式碼的最有效方式。  
@@ -38,6 +38,7 @@ A*遞迴*程序會呼叫其本身。 一般情況下，這不是撰寫 Visual Ba
  **測試**。 如果您撰寫遞迴程序，您應該測試它非常小心地以確定它一律符合某些限制狀況。 您也應該確定您無法執行太多遞迴呼叫，因為記憶體不足。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.StackOverflowException>
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)

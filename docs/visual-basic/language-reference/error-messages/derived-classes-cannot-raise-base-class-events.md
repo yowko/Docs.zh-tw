@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
-ms.openlocfilehash: 3cb61a40e4522695b876d85f67dac1a109d3c3e0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e9acf4b3e71295655c15ae9b1c80852c9aca8df
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595860"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835137"
 ---
 # <a name="derived-classes-cannot-raise-base-class-events"></a>衍生的類別無法引發基底類別事件
 只能從其宣告的宣告空間，就可以引發事件。 因此，類別無法引發任何其他類別，即使其中從中衍生的事件。  
@@ -24,5 +24,6 @@ ms.locfileid: "54595860"
 -   移動`Event`陳述式或`RaiseEvent`陳述式，使它們位於相同的類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 - [RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

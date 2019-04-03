@@ -1,16 +1,16 @@
 ---
-title: HOW TO：比較字串 - C# 指南
+title: 作法：比較字串 - C# 指南
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
-ms.openlocfilehash: 479e6d9250c546943da3ddd837f2f03a5c4e7b1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563986"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58634228"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串
 
@@ -55,7 +55,7 @@ ms.locfileid: "54563986"
 ## <a name="linguistic-comparisons"></a>語言比較
 
 字串也可以使用目前文化特性的語言規則來排序。
-這有時候稱為「字組排序次序」。 當您執行語言比較時，部分非英數字元的 Unicode 字元可能會被指派特殊的權重。 例如，連字號 "-" 可能會被指派很小的權重，以便 "co-op" 和 "coop" 在排序次序中會出現在彼此旁邊。 此外，某些 Unicode 字元可能會相等於 <xref:System.Char> 執行個體的順序。 下列範例使用該片語 "They dance in the street"。 以下使用德文「他們在街道上跳舞」為例，並在其中一個字串使用 "ss" (U+0073 U+0073)，而另一個則使用 'ß' (U+00DF)。 在語言方面 (在 Windows 中)，"ss" 等於 "en-US" 和 "de-DE" 文化特性中的德文 Essetz: 'β' 字元。
+這有時候稱為「字組排序次序」。 當您執行語言比較時，部分非英數字元的 Unicode 字元可能會被指派特殊的權重。 例如，連字號 "-" 可能會被指派很小的權重，以便 "co-op" 和 "coop" 在排序次序中會出現在彼此旁邊。 此外，某些 Unicode 字元可能會相等於 <xref:System.Char> 執行個體的順序。 下列範例使用該片語 "They dance in the street"。 以下使用德文「他們在街道上跳舞」為例，並在其中一個字串使用 "ss" (U+0073 U+0073)，而另一個則使用 'ß' (U+00DF)。 在語言方面 (在 Windows 中)，"ss" 等於 "en-US" 和 "de-DE" 文化特性中的德文 Esszet: 'ß' 字元。
 
 [!code-csharp-interactive[Comparing strings using linguistic rules](../../../samples/snippets/csharp/how-to/strings/CompareStrings.cs#3)]
 
