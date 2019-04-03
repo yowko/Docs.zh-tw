@@ -5,30 +5,31 @@ helpviewer_keywords:
 - strings [Visual Basic], accessing characters
 - characters [Visual Basic], accessing in strings
 ms.assetid: 02c5206c-ffab-494d-b648-3b2ea358dc34
-ms.openlocfilehash: f2831333008844c959c3625698fce6c485450683
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 840a769b0bb322ef7b878a312437c5ec200ab074
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967551"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834487"
 ---
-# <a name="how-to-access-characters-in-strings-in-visual-basic"></a><span data-ttu-id="24f1b-102">HOW TO：在 Visual Basic 中的字串中的存取字元</span><span class="sxs-lookup"><span data-stu-id="24f1b-102">How to: Access Characters in Strings in Visual Basic</span></span>
-<span data-ttu-id="24f1b-103">此範例示範如何使用<xref:System.String.Chars%2A>屬性來存取字串中指定的位置處的字元。</span><span class="sxs-lookup"><span data-stu-id="24f1b-103">This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.</span></span>  
+# <a name="how-to-access-characters-in-strings-in-visual-basic"></a><span data-ttu-id="e8ed0-102">HOW TO：在 Visual Basic 中的字串中的存取字元</span><span class="sxs-lookup"><span data-stu-id="e8ed0-102">How to: Access Characters in Strings in Visual Basic</span></span>
+<span data-ttu-id="e8ed0-103">此範例示範如何使用<xref:System.String.Chars%2A>屬性來存取字串中指定的位置處的字元。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-103">This example demonstrates how to use the <xref:System.String.Chars%2A> property to access the character at the specified location in a string.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="24f1b-104">範例</span><span class="sxs-lookup"><span data-stu-id="24f1b-104">Example</span></span>  
- <span data-ttu-id="24f1b-105">有時候最好擁有您的字串與這些字元在字串中的位置中的字元資料。</span><span class="sxs-lookup"><span data-stu-id="24f1b-105">Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string.</span></span> <span data-ttu-id="24f1b-106">您可以將字串視為字元陣列 (`Char`執行個體)，您可以藉由參考到該字元的索引來擷取特定字元<xref:System.String.Chars%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="24f1b-106">You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.</span></span>  
+## <a name="example"></a><span data-ttu-id="e8ed0-104">範例</span><span class="sxs-lookup"><span data-stu-id="e8ed0-104">Example</span></span>  
+ <span data-ttu-id="e8ed0-105">有時候最好擁有您的字串與這些字元在字串中的位置中的字元資料。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-105">Sometimes it is useful to have data about the characters in your string and the positions of those characters within your string.</span></span> <span data-ttu-id="e8ed0-106">您可以將字串視為字元陣列 (`Char`執行個體)，您可以藉由參考到該字元的索引來擷取特定字元<xref:System.String.Chars%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-106">You can think of a string as an array of characters (`Char` instances); you can retrieve a particular character by referencing the index of that character through the <xref:System.String.Chars%2A> property.</span></span>  
   
  [!code-vb[VbVbalrStrings#49](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#49)]  
   
- <span data-ttu-id="24f1b-107">`index`參數<xref:System.String.Chars%2A>屬性是以零為起始。</span><span class="sxs-lookup"><span data-stu-id="24f1b-107">The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.</span></span>  
+ <span data-ttu-id="e8ed0-107">`index`參數<xref:System.String.Chars%2A>屬性是以零為起始。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-107">The `index` parameter of the <xref:System.String.Chars%2A> property is zero-based.</span></span>  
   
-## <a name="robust-programming"></a><span data-ttu-id="24f1b-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="24f1b-108">Robust Programming</span></span>  
- <span data-ttu-id="24f1b-109"><xref:System.String.Chars%2A>屬性會傳回指定位置處的字元。</span><span class="sxs-lookup"><span data-stu-id="24f1b-109">The <xref:System.String.Chars%2A> property returns the character at the specified position.</span></span> <span data-ttu-id="24f1b-110">不過，某些 Unicode 字元可以表示多個字元。</span><span class="sxs-lookup"><span data-stu-id="24f1b-110">However, some Unicode characters can be represented by more than one character.</span></span> <span data-ttu-id="24f1b-111">如需有關如何使用 Unicode 字元的詳細資訊，請參閱[How to:將字串轉換為字元陣列](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)。</span><span class="sxs-lookup"><span data-stu-id="24f1b-111">For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).</span></span>  
+## <a name="robust-programming"></a><span data-ttu-id="e8ed0-108">穩固程式設計</span><span class="sxs-lookup"><span data-stu-id="e8ed0-108">Robust Programming</span></span>  
+ <span data-ttu-id="e8ed0-109"><xref:System.String.Chars%2A>屬性會傳回指定位置處的字元。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-109">The <xref:System.String.Chars%2A> property returns the character at the specified position.</span></span> <span data-ttu-id="e8ed0-110">不過，某些 Unicode 字元可以表示多個字元。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-110">However, some Unicode characters can be represented by more than one character.</span></span> <span data-ttu-id="e8ed0-111">如需有關如何使用 Unicode 字元的詳細資訊，請參閱[How to:將字串轉換為字元陣列](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)。</span><span class="sxs-lookup"><span data-stu-id="e8ed0-111">For more information on how to work with Unicode characters, see [How to: Convert a String to an Array of Characters](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md).</span></span>  
   
- <span data-ttu-id="24f1b-112"><xref:System.String.Chars%2A>屬性會擲回<xref:System.IndexOutOfRangeException>例外狀況如果`index`參數是否大於或等於字串的長度，或如果它小於零</span><span class="sxs-lookup"><span data-stu-id="24f1b-112">The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero</span></span>  
+ <span data-ttu-id="e8ed0-112"><xref:System.String.Chars%2A>屬性會擲回<xref:System.IndexOutOfRangeException>例外狀況如果`index`參數是否大於或等於字串的長度，或如果它小於零</span><span class="sxs-lookup"><span data-stu-id="e8ed0-112">The <xref:System.String.Chars%2A> property throws an <xref:System.IndexOutOfRangeException> exception if the `index` parameter is greater than or equal to the length of the string, or if it is less than zero</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24f1b-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24f1b-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8ed0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e8ed0-113">See also</span></span>
+
 - <xref:System.String.Chars%2A>
-- [<span data-ttu-id="24f1b-114">如何：將字串轉換為字元陣列</span><span class="sxs-lookup"><span data-stu-id="24f1b-114">How to: Convert a String to an Array of Characters</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
-- [<span data-ttu-id="24f1b-115">在 Visual Basic 中的字串和其他資料類型之間進行轉換</span><span class="sxs-lookup"><span data-stu-id="24f1b-115">Converting Between Strings and Other Data Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
-- [<span data-ttu-id="24f1b-116">字串</span><span class="sxs-lookup"><span data-stu-id="24f1b-116">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
+- [<span data-ttu-id="e8ed0-114">如何：將字串轉換為字元陣列</span><span class="sxs-lookup"><span data-stu-id="e8ed0-114">How to: Convert a String to an Array of Characters</span></span>](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-a-string-to-an-array-of-characters.md)
+- [<span data-ttu-id="e8ed0-115">在 Visual Basic 中的字串和其他資料類型之間進行轉換</span><span class="sxs-lookup"><span data-stu-id="e8ed0-115">Converting Between Strings and Other Data Types in Visual Basic</span></span>](../../../../visual-basic/programming-guide/language-features/strings/converting-between-strings-and-other-data-types.md)
+- [<span data-ttu-id="e8ed0-116">字串</span><span class="sxs-lookup"><span data-stu-id="e8ed0-116">Strings</span></span>](../../../../visual-basic/programming-guide/language-features/strings/index.md)
