@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: eb547c89dc5d4af9330a6881d64f433de9bdad94
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54669077"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821929"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態系統的工具。 這將允許您的自訂通道使用者使用 .config 檔案設定通道，就像平常使用 `NetTcpBinding` 來設定系統提供的繫結 (例如 `TcpTransportBindingElement`) 或自訂繫結一般。  
@@ -42,7 +42,7 @@ ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態�
   
      命令會產生 `BindingElement` 所需的三個 .cs 檔案 (如果指定 /be: 選項)、標準 `Binding` 所需的五個 .cs 檔案 (如果指定 /sb: 選項) 以及 .xml 檔案。  
   
-    1.  如果使用 /be 選項，則其中一個 .cs 檔案會為您的繫結項目實作 `BindingElementExtensionSection`。 這個程式碼會公開 `BindingElement` 給組態系統，讓其他自訂繫結可以使用您的繫結項目。 其他檔案含有表示預設值和常數的類別。 檔案中會有 `//TODO` 註解，用意在提醒您更新預設值。  
+    1.  如果使用 /be 選項，則其中一個 .cs 檔案會為您的繫結項目實作 `BindingElementExtensionSection`。 這個程式碼會公開 `BindingElement` 給組態系統，讓其他自訂繫結程序可以使用您的繫結程序項目。 其他檔案含有表示預設值和常數的類別。 檔案中會有 `//TODO` 註解，用意在提醒您更新預設值。  
   
     2.  如果您指定 /sb 選項，其中兩個 .cs 檔案將會分別實作 `StandardBindingElement` 和 `StandardBindingCollectionElement`，藉以向組態系統公開您的標準繫結。 其他檔案含有表示預設值和常數的類別。 檔案中會有 `//TODO` 註解，用意在提醒您更新預設值。  
   
@@ -50,4 +50,3 @@ ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態�
   
      SampleConfig.xml 檔案中含有組態程式碼，您必須將它新增至註冊處理常式 (在前面步驟 1 或 2 中定義) 的組態檔中。  
   
-## <a name="see-also"></a>另請參閱

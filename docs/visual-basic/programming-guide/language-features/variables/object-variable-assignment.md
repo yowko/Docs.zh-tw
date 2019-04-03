@@ -13,12 +13,12 @@ helpviewer_keywords:
 - assignment statements [Visual Basic], object variable assignment
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
-ms.openlocfilehash: a2c476280009a617573fb7989b2184cd9baa6a8a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660680"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840272"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>物件變數指派 (Visual Basic)
 您可以使用一般的指派陳述式來將物件指派給物件變數。 您可以指派物件運算式或[Nothing](../../../../visual-basic/language-reference/nothing.md)關鍵字，如下列範例說明。  
@@ -76,6 +76,7 @@ addStandardText(Me)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)

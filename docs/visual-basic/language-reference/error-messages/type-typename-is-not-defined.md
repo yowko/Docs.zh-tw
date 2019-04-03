@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30002
 ms.assetid: b0faf204-57fd-44de-8c05-9db027eea663
-ms.openlocfilehash: 80a3d31a8a46ce616be2dd2ab27faf0af04876f2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c2675d61307d92da1710368668f43af3559060a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275066"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825035"
 ---
 # <a name="type-typename-is-not-defined"></a>類型 '\<類型名稱 >' 未定義
 陳述式已參考了尚未定義的類型。 您可以定義在宣告陳述式類型這類`Enum`， `Structure`， `Class`，或`Interface`。  
@@ -32,6 +32,7 @@ ms.locfileid: "55275066"
 -   請確定類型位於組件的目標.NET Framework 設定檔的一部分。 如需詳細資訊，請參閱[針對 .NET Framework 目標錯誤進行疑難排解](/visualstudio/msbuild/troubleshooting-dotnet-framework-targeting-errors)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
 - [Enum 陳述式](../../../visual-basic/language-reference/statements/enum-statement.md)
 - [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)

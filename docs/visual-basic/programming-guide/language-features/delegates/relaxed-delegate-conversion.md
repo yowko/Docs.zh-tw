@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delegates [Visual Basic], relaxed conversion
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
-ms.openlocfilehash: 96941754f17326893437cdcf83c588880e010cc0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979501"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842716"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>寬鬆委派轉換 (Visual Basic)
 寬鬆的委派轉換，可讓您將 sub 和函式指派給委派或處理常式，即使它們的簽章並不相同。 因此，委派繫結會變成一致與繫結中允許的方法引動過程。  
@@ -83,6 +83,7 @@ End Sub
  [!code-vb[VbVbalrRelaxedDelegates#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#11)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)
 - [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)

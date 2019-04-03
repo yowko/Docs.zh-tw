@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
-ms.openlocfilehash: 9782bb49a3327c6a8bd9938eca7cb3e899818784
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281056"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824828"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>函式 '\<程序名稱 >' 並未傳回有關所有程式碼路徑的值
 函式 '\<程序名稱 >' 並未傳回有關所有程式碼路徑的值。 您是否遺漏了 'Return' 陳述式？  
@@ -40,6 +40,7 @@ ms.locfileid: "55281056"
      很容易就能保證每一次從程序傳回將傳回值，如果您總是使用`Return`陳述式。 如果您這麼做，最後一個陳述式前面`End Function`應該是`Return`陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)
 - [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)

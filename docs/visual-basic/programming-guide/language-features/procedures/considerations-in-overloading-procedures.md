@@ -25,12 +25,12 @@ helpviewer_keywords:
 - restrictions [Visual Basic], overloading procedures
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
-ms.openlocfilehash: 8dfee8a8678fb00fcded4b7da57c3b200ef64d69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979527"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815585"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>多載化程序的考慮因素 (Visual Basic)
 當您多載程序時，您必須使用不同*簽章*針對每個多載版本。 這通常表示每個版本必須指定不同的參數清單。 如需詳細資訊，請參閱 「 不同的簽章 」 中[程序多載](./procedure-overloading.md)。  
@@ -122,6 +122,7 @@ ms.locfileid: "56979527"
 -   編譯器無法通知發生錯誤，如果呼叫程式碼會將此程序不支援的資料類型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [程序的疑難排解](./troubleshooting-procedures.md)

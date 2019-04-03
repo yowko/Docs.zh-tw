@@ -6,12 +6,12 @@ helpviewer_keywords:
 - imports compiler option [Visual Basic]
 - -imports compiler option [Visual Basic]
 ms.assetid: 9a93fb53-c080-497b-bf9b-441022dbbc39
-ms.openlocfilehash: ce59cbc834d84d19ec7f8d6d3d32b545c537173c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075eeccc7d80943d2757a97b9a355bbea3ef9d4e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364667"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833603"
 ---
 # <a name="-imports-visual-basic"></a>-匯入 (Visual Basic)
 從指定的組件，匯入命名空間。  
@@ -49,6 +49,7 @@ End Module
 ```
 
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30828
 ms.assetid: 7e5cf519-8b64-4ac5-8116-705fe26c846d
-ms.openlocfilehash: b3fb3f208f3396f454388ec0c10406815fa957d8
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6c792e02bb655dc8a9544c4b5b46a64210556f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974792"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839921"
 ---
 # <a name="as-any-is-not-supported-in-declare-statements"></a>'Declare' 陳述式中不支援 'As Any'
 `Any`資料類型用於`Declare`允許無法包含任何資料類型的引數使用的 Visual Basic 6.0 和更早版本中的陳述式。 Visual Basic 支援多載，不過，並因此會`Any`資料型別已經過時。  
@@ -30,6 +30,7 @@ ms.locfileid: "56974792"
      [!code-vb[VbVbalrStatements#96](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class5.vb#96)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [逐步解說：呼叫 Windows API](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)
 - [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)

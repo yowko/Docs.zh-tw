@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic, code hiding
 - Visual Basic code, collapsing and hiding
 ms.assetid: b770e8f5-e07d-491a-ab4b-a977980f9ba2
-ms.openlocfilehash: bbce0e4a2427843ed9d9d51b25684db8c54ba69a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: bf2a7188456097ac227039e4d902a14eb182664c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980122"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822260"
 ---
 # <a name="how-to-collapse-and-hide-sections-of-code-visual-basic"></a>HOW TO：摺疊和隱藏部分程式碼 (Visual Basic)
 `#Region`指示詞可讓您摺疊並隱藏 Visual Basic 檔案中的程式碼區段。 `#Region`指示詞可讓您使用 Visual Studio 程式碼編輯器時，指定程式碼，您可以展開或摺疊的區塊。 更容易管理而且更方便閱讀，選擇性地隱藏程式碼的功能可讓您的檔案。 如需詳細資訊，請參閱[大綱](/visualstudio/ide/outlining)。  
@@ -30,6 +30,7 @@ ms.locfileid: "56980122"
     >  隱藏程式碼不會防止它正在進行編譯，並不會影響`#If...#End If`陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [條件式編譯](../../../visual-basic/programming-guide/program-structure/conditional-compilation.md)
 - [#Region 指示詞](../../../visual-basic/language-reference/directives/region-directive.md)
 - [#If...Then...#Else 指示詞](../../../visual-basic/language-reference/directives/if-then-else-directives.md)

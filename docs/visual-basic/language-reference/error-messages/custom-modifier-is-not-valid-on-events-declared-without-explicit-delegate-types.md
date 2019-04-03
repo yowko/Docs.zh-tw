@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c50cee530cab0d5d164d930678651f302ddc7f09
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980759"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827220"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' 修飾詞在沒有以明確委派類型宣告的事件中無效
 不同於非自訂事件`Custom Event`宣告需要`As`事件名稱，明確地指定事件的委派型別後面的子句。  
@@ -41,6 +41,7 @@ ms.locfileid: "56980759"
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)
 - [Delegate 陳述式](../../../visual-basic/language-reference/statements/delegate-statement.md)
 - [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

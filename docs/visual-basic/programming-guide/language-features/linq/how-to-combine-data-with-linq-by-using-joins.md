@@ -9,12 +9,12 @@ helpviewer_keywords:
 - joining [LINQ in Visual Basic]
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
-ms.openlocfilehash: 66255a9bfa2a4f9acb33073bae755efbab61042e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dde627edfeb1d4473c9d2e01b9ff83c580a0f122
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977969"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822683"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>HOW TO：以 LINQ 合併資料使用聯結 (Visual Basic)
 Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合之間的一般值為基礎的集合的內容。 這些值稱為*金鑰*值。 開發人員熟悉關聯式資料庫概念會辨識`Join`INNER JOIN 子句和`Group Join`做為有效，LEFT OUTER JOIN 子句。  
@@ -80,6 +80,7 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
 2.  按 F5 執行範例。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [Join 子句](../../../../visual-basic/language-reference/queries/join-clause.md)

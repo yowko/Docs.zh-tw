@@ -2,12 +2,12 @@
 title: 函數式建構 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: feac4273-39ab-43ae-bab7-4059c807a785
-ms.openlocfilehash: 03a5d7468944cfa6d6ad01dfe0e174b1e3d6ac79
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f677c0d0e204b5d12718701ab70b8a3c1bd3530c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717385"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816547"
 ---
 # <a name="functional-construction-linq-to-xml-visual-basic"></a>函數式建構 (LINQ to XML) (Visual Basic)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 提供一種強大的方式來建立 XML 元素，稱為「函數式建構」。 功能結構是在單一陳述式中建立 XML 樹狀結構的能力。  
@@ -57,4 +57,5 @@ Console.WriteLine(xmlTree)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

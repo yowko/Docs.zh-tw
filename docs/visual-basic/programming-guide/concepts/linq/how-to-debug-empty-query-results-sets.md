@@ -2,12 +2,12 @@
 title: HOW TO：偵錯空的查詢結果集 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b242c90a-d2b8-4309-8a1e-e4e70736c727
-ms.openlocfilehash: 72233981e6e9a309c3f328041736f3fce71746cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80e505be03a26f80bbba9d3673732505b27e9598
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715448"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822779"
 ---
 # <a name="how-to-debug-empty-query-results-sets-visual-basic"></a>HOW TO：偵錯空的查詢結果集 (Visual Basic)
 查詢 XML 時所遇到的其中一個最常見的問題是，如果 XML 樹狀結構有預設的命名空間，即使 XML 不在命名空間中，開發人員有時候還是會撰寫查詢。  
@@ -90,4 +90,5 @@ End of result set
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

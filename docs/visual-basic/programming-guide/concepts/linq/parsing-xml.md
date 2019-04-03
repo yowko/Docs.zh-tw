@@ -2,17 +2,17 @@
 title: 剖析 XML (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
-ms.openlocfilehash: 4f6cb9ad943214f04ecd997656f198ab4b095524
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec9df29c239d2780b4fc13bb101a22c54eb43da5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548842"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832748"
 ---
 # <a name="parsing-xml-visual-basic"></a>剖析 XML (Visual Basic)
 本節中的主題描述如何剖析 XML 文件。  
   
-## <a name="in-this-section"></a>本章節內容  
+## <a name="in-this-section"></a>本節內容  
   
 |主題|描述|  
 |-----------|-----------------|  
@@ -24,4 +24,5 @@ ms.locfileid: "54548842"
 |[如何：Stream XML 片段，從 XmlReader (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-stream-xml-fragments-from-an-xmlreader.md)|顯示如何使用 <xref:System.Xml.XmlReader> 串流 XML 片段。<br /><br /> 當您必須處理非常大的 XML 檔案時，可能無法將整個 XML 樹狀結構載入記憶體中。 但是，您可以串流 XML 片段。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)

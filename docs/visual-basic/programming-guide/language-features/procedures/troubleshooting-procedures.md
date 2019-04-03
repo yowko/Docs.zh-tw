@@ -8,12 +8,12 @@ helpviewer_keywords:
 - troubleshooting procedures
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
-ms.openlocfilehash: e29e4a3b216657b398407701530ad9bfe975dbf6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830132"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>疑難排解程序 (Visual Basic)
 此頁面會列出處理程序時所發生的一些常見問題。  
@@ -124,6 +124,7 @@ ms.locfileid: "56971997"
  如果程序的兩個多載具有相同簽章，不同之處在於最後一個參數宣告[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)其中一並[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)在另一個，編譯器會解析該程序的呼叫根據最接近的相符項目。 如需詳細資訊，請參閱 [Overload Resolution](./overload-resolution.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)

@@ -2,12 +2,12 @@
 title: HOW TO：尋找具有特定子項目 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b0d0a463-6a85-46c3-8453-ad25b0ecf93c
-ms.openlocfilehash: c9239ed5ff417b66cebeb3015014f1498278b602
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1b226f009776f397f73ab9ee7826484eb8869f28
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659078"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827051"
 ---
 # <a name="how-to-find-an-element-with-a-specific-child-element-visual-basic"></a>HOW TO：尋找具有特定子項目 (Visual Basic)
 本主題顯示如何利用特定的值尋找具有子項目的特定項目。  
@@ -15,7 +15,7 @@ ms.locfileid: "54659078"
 ## <a name="example"></a>範例  
  此範例會利用 "Examp2.EXE" 這個值，尋找具有 `Test` 子項目的 `CommandLine` 項目。  
   
- 此範例使用下列 XML 文件：[範例 XML 檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：測試組態 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-linq-to-xml.md)。  
   
 ```vb  
 Dim root As XElement = XElement.Load("TestConfig.xml")  
@@ -40,7 +40,7 @@ Next
 ## <a name="example"></a>範例  
  下列範例顯示命名空間中之 XML 的相同查詢。 如需詳細資訊，請參閱 <<c0> [ 處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)。  
   
- 此範例使用下列 XML 文件：[範例 XML 檔：命名空間中的測試組態](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：測試命名空間中的組態](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-test-configuration-in-a-namespace.md)。  
   
 ```vb  
 Imports <xmlns='http://www.adatum.com'>  
@@ -67,6 +67,7 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xml.Linq.XElement.Attribute%2A>
 - <xref:System.Xml.Linq.XContainer.Elements%2A>
 - [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

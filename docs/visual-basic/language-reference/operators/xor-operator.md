@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Xor keyword [Visual Basic]
 - bitwise comparison [Visual Basic]
 ms.assetid: 036000a9-3934-4e7f-a9d0-a816de3d84a6
-ms.openlocfilehash: bc3df1fdee5405445b4534a6982383c49b369b01
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0cba3a995fb1ab774c8a5308e58f0b6905fc23f3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980434"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827064"
 ---
 # <a name="xor-operator-visual-basic"></a>Xor 運算子 (Visual Basic)
 對兩個執行邏輯排除`Boolean`運算式或兩個數值運算式的位元互斥。  
@@ -90,6 +90,7 @@ result = expression1 Xor expression2
  前一個範例會分別產生的 2、 第 12 和 14 的結果。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [邏輯/位元運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [Visual Basic 中的運算子優先順序](../../../visual-basic/language-reference/operators/operator-precedence.md)
 - [運算子 (依功能排列)](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

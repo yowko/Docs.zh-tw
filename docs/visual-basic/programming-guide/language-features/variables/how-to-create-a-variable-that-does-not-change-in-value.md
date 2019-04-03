@@ -5,12 +5,12 @@ helpviewer_keywords:
 - variables [Visual Basic], read-only
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
-ms.openlocfilehash: 626b46123e3047b391cd67d3e85c25c5432b2a69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57792db826caa996e163bc0a51b01a6bbd6a4858
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640195"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823320"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>HOW TO：建立不會變更變數值 (Visual Basic)
 可能會互相矛盾，所以不會變更其值的變數概念。 但是常數不可行時，有很多情況下，而且最好有固定值的變數。 在這種情況中，您可以定義的成員變數[ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)關鍵字。  
@@ -44,5 +44,6 @@ ms.locfileid: "54640195"
      如果您在編譯時期不知道值，或無法計算它在編譯時期，在單一陳述式中，您仍然可以指派其建構函式在執行階段。 若要這樣做，您必須宣告`ReadOnly`類別或結構的層級變數。 在該類別或結構的建構函式，計算變數的固定的值，並從建構函式傳回之前將它指派給變數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WriteOnly](../../../../visual-basic/language-reference/modifiers/writeonly.md)
 - [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)

@@ -1,5 +1,5 @@
 ---
-title: -最佳化
+title: -optimize
 ms.date: 07/20/2015
 helpviewer_keywords:
 - optimize compiler option [Visual Basic]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - optimization [Visual Basic], enabling
 - -optimize compiler option [Visual Basic]
 ms.assetid: fcba4a97-3622-4b87-a891-0f77deab4998
-ms.openlocfilehash: ddb12eb473ce53e60835acb8f1076655f78fafd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eb84e0a7038e7ff8cb399ac7222b6ac1661b5bc1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574374"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842157"
 ---
-# <a name="-optimize"></a>-最佳化
+# <a name="-optimize"></a>-optimize
 啟用或停用編譯器最佳化。  
   
 ## <a name="syntax"></a>語法  
@@ -48,6 +48,7 @@ vbc t2.vb -optimize
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-偵錯 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/debug.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - literals [Visual Basic], Date
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
-ms.openlocfilehash: 528e63e6b7d978b3bbdfcb78e4260b4590db6d7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520018"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821354"
 ---
 # <a name="date-data-type-visual-basic"></a>Date 資料類型 (Visual Basic)
 具有 IEEE 64 位元 (8 位元組) 值，以代表從 0001 年 1 月 1 日到 9999 年 12 月 31 日的日期，以及從上午 (午夜) 12:00:00 到下午 11:59:59.9999999 的時間。 每個增量代表西曆日曆 1 年 1 月 1 日開始之後經過 100 奈秒的時間。 最大值代表 10000 年 1 月 1 開始之前的 100 奈秒。  
@@ -75,6 +75,7 @@ Dim someDateAndTime As Date = #8/13/2002 12:14 PM#
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.DateTime?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)
 - [標準日期和時間格式字串](../../../standard/base-types/standard-date-and-time-format-strings.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - variables [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: 156872f8-aabc-4454-8e2d-f2253c3c13c9
-ms.openlocfilehash: f9cc6d0165b0eda8358d250c37910b1362473ab1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a6e542e297a17f44d929235530ae6058cf13a36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640598"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816326"
 ---
 # <a name="structure-variables-visual-basic"></a>結構變數 (Visual Basic)
 當您建立結構之後時，您可以為該型別來宣告程序層級和模組層級變數。 例如，您可以建立結構的電腦系統的相關記錄資訊。 下列範例為其示範。  
@@ -53,6 +53,7 @@ yourSystem = mySystem
  如果結構項目是參考類型，如`String`， `Object`，或複製的資料指標的陣列。 在上述範例中，如果`systemInfo`已包含物件變數，則會將上述範例中會複製從指標`mySystem`到`yourSystem`，並透過一個結構物件的資料變更會是作用中時存取透過其他的結構。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

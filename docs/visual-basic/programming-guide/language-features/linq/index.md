@@ -2,8 +2,14 @@
 title: Visual Basic 中的 LINQ
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'what''s new [Visual Basic]'
+- what's new [Visual Basic]
 ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
+ms.openlocfilehash: 286e6266ef8f11a7a09a9e9fe898276a6734a96d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824854"
 ---
 # <a name="linq-in-visual-basic"></a>Visual Basic 中的 LINQ
 本節包含概觀、範例與背景資訊，可協助您了解與使用 Visual Basic 和 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]。  
@@ -40,6 +46,7 @@ ms.assetid: ddba5545-ff6e-46c3-8967-5c4280db5aca
  提供以特定型別而非匿名型別傳回 LINQ 查詢結果的範例。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ (Language-Integrated Query)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [Visual Basic 中的 LINQ to XML 概觀](../../../../visual-basic/programming-guide/language-features/xml/overview-of-linq-to-xml.md)
 - [LINQ to DataSet 概觀](../../../../framework/data/adonet/linq-to-dataset-overview.md)

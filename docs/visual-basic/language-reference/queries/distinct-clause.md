@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Distinct statement [Visual Basic]
 - queries [Visual Basic], Distinct
 ms.assetid: 86f42614-0d8f-4ffc-b888-ce8a37a8d36a
-ms.openlocfilehash: 00a2e52bd6669869bb2e25bc2857f1598da5763f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: fbca9fa8aa227d8d5b6488bef179f4bda08bb38c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971230"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830054"
 ---
 # <a name="distinct-clause-visual-basic"></a>Distinct 子句 (Visual Basic)
 限制目前的範圍變數，以消除重複的值，在後續的查詢子句中的值。  
@@ -33,6 +33,7 @@ Distinct
  [!code-vb[VbSimpleQuerySamples#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbSimpleQuerySamples/VB/QuerySamples1.vb#20)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 中的 LINQ 簡介](../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)
 - [查詢](../../../visual-basic/language-reference/queries/index.md)
 - [From 子句](../../../visual-basic/language-reference/queries/from-clause.md)

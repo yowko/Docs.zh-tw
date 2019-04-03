@@ -8,12 +8,12 @@ helpviewer_keywords:
 - overload resolution [Visual Basic], with late-bound argument
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
-ms.openlocfilehash: 7215be3f454f4a799124620fb5db520282988035
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272628"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814051"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>晚期繫結多載解析無法套用至 '\<程序名稱 >' 因為進行存取的執行個體為介面類型
 編譯器嘗試解析其參考的多載的屬性或程序，但參考會失敗，因為引數的型別是`Object`和參考的物件具有介面的資料類型。 `Object`引數會強制編譯器解析為晚期繫結參考。  
@@ -65,6 +65,7 @@ refer.s1(CType(o1, Double))
  每個上述幾行程式碼明確轉換`Object`變數`o1`其中一個多載所定義的參數類型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序多載化](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [多載解析](../../../visual-basic/programming-guide/language-features/procedures/overload-resolution.md)
 - [CType 函式](../../../visual-basic/language-reference/functions/ctype-function.md)

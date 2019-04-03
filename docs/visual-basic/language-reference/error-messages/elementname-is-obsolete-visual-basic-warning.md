@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
-ms.openlocfilehash: c6d927ef6681838d8a77a0c6018eb6bbe30913e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836359"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<項目名稱 >' 已經過時 （Visual Basic 警告）
 陳述式嘗試存取已使用 <xref:System.ObsoleteAttribute> 屬性和指示詞標記以視為警告的程式設計項目。  
@@ -28,4 +28,5 @@ ms.locfileid: "55255857"
 -   確定原始程式碼參考正確拼寫項目名稱。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)

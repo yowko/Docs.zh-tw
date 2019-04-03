@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
-ms.openlocfilehash: a7079ff3b56b94cb969a77707dbd79b1d7dd4bb1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270585"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836346"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>預設屬性存取模稜兩可繼承的介面成員\<defaultpropertyname >' 的介面 '\<介面名稱 1>.< >' 和'\<defaultpropertyname >' 的介面 '\<介面名稱 2&gt >'
 介面繼承自兩個介面，其中每個宣告預設屬性具有相同名稱。 編譯器無法解析此預設屬性，但是不限定存取。 下列範例將說明這點。  
@@ -64,4 +64,5 @@ End Class
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

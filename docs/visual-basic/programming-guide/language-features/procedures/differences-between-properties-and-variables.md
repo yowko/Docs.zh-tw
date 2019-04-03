@@ -14,12 +14,12 @@ helpviewer_keywords:
 - variables [Visual Basic], and properties
 - properties [Visual Basic], and variables
 ms.assetid: 7a03a8be-5381-431f-bd7c-16e887e4e07b
-ms.openlocfilehash: f2388f091278d398b5e8f3b82f147ab69937f2aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: de4800e23519c2cc1c8b2b219287b9fa018b9bbf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689519"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842898"
 ---
 # <a name="differences-between-properties-and-variables-in-visual-basic"></a>Visual Basic 中屬性和變數的差別
 變數和屬性都代表您可以存取的值。 不過，有儲存體和實作差異。  
@@ -38,13 +38,14 @@ ms.locfileid: "54689519"
 |宣告|單一宣告陳述式|系列的程式碼區塊中的陳述式|  
 |實作|單一儲存體位置|可執行程式碼 （屬性程序）|  
 |存放裝置|直接相關聯的變數值|通常會有提供之外的屬性包含類別或模組的內部儲存體<br /><br /> 屬性的值可能會或可能不會存在做為預存的項目<sup>1</sup>|  
-|可執行程式碼|無|必須至少一個程序|  
+|可執行程式碼|None|必須至少一個程序|  
 |讀取和寫入權限|讀寫或唯讀|讀取/寫入、 唯讀或唯寫|  
 |自訂動作 （除了接受或傳回值）|不可能|可以執行設定或擷取屬性值的一部分|  
   
  <sup>1</sup>不同變數中，於屬性的值可能不直接對應到儲存體的單一項目。 儲存體可能會分割成片段，方便或安全性，或值可能會以加密形式儲存。 在這些情況下`Get`程序會組合在一起，或解密儲存的值，而`Set`程序會加密新的值，或將它分割為組成的儲存體。 屬性值在此情況下可能是暫時的例如一天時間，`Get`程序會計算會即時每次存取屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)

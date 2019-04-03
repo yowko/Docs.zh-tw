@@ -18,12 +18,12 @@ helpviewer_keywords:
 - String literals [Visual Basic]
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
-ms.openlocfilehash: d841eaab8b09c9a2c126c40a1f846876f3e88601
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54598811"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842287"
 ---
 # <a name="string-data-type-visual-basic"></a>String 資料類型 (Visual Basic)
 會保留該範圍的不帶正負號的 16 位元 （2 個位元組） 字碼指標順序中從 0 到 65535 的值。 每個*字碼指標*，或字元碼表示單一 Unicode 字元。 字串可以包含從 0 至大約兩個 10 億個 (2 ^31) 的 Unicode 字元。  
@@ -79,6 +79,7 @@ S = Microsoft.VisualBasic.Left(S, 4)
 -   **Framework 型別。** .NET Framework 中對應的型別是<xref:System.String?displayProperty=nameWithType>類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.String?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)
 - [Char 資料類型](../../../visual-basic/language-reference/data-types/char-data-type.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 582988c9eed19fe49bc86e75e7a9d80bbf2a6d59
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654521"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839817"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>物件存留期：物件如何建立和終結 (Visual Basic)
 您可以使用 `New` 關鍵字來建立類別的執行個體，即物件。 在使用新物件之前，經常必須在新物件上執行初始設定工作。 常見的初始設定工作包括開啟檔案、連線到資料庫，以及讀取登錄機碼的值。 Visual Basic 控制項的使用程序呼叫的新物件初始化*建構函式*（允許控制初始化的特殊方法）。  
@@ -147,6 +147,7 @@ End Sub
  記憶體回收系統之間的另一個差異牽涉到使用 `Nothing`。 若要利用 Visual Basic 6.0 及舊版中的參考計數，程式設計師有時候會將 `Nothing` 指派給物件變數，以釋放那些變數所保留的參考。 如果變數保留物件的最後參考，就會立即釋放物件資源。 在新版 Visual Basic 中，雖然可能在一些情況下，此程序仍相當重要，但是執行它永遠不會造成參考的物件立即釋放其資源。 若要立即釋放資源，請使用物件的 <xref:System.IDisposable.Dispose%2A> 方法 (若有的話)。 唯一應該將變數設定為 `Nothing` 的時間，是在它的存留期相對於記憶體回收行程偵測失去關聯之物件所需的時間較長時。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IDisposable.Dispose%2A>
 - [初始化及終止元件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ws9dc6t6(v=vs.120))
 - [New 運算子](../../../../visual-basic/language-reference/operators/new-operator.md)

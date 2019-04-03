@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e494e4e6fcbf91a7ab90b6922bc7bb4ace236b8f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498631"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821474"
 ---
 # <a name="-win32icon"></a>-win32icon
 將.ico 檔插入輸出檔。 這個.ico 檔表示中的輸出檔**檔案總管**。  
@@ -45,5 +45,6 @@ vbc -win32icon:rf.ico in.vb
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

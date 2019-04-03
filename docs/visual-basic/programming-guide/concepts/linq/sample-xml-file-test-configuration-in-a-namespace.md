@@ -1,15 +1,15 @@
 ---
-title: XML 範例檔：3 中的測試組態
+title: 範例 XML 檔：3 中的測試組態
 ms.date: 07/20/2015
 ms.assetid: aff02614-30ee-45e1-bc0f-d64b193d20b8
-ms.openlocfilehash: 642bc270bc502a4119b31decb0e432ec6951e610
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aef70e1ff7a7d61a1730588cc9e2ad26e6b67007
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609651"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821310"
 ---
-# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>XML 範例檔：測試命名空間中的組態
+# <a name="sample-xml-file-test-configuration-in-a-namespace"></a>範例 XML 檔：測試命名空間中的組態
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這是測試組態檔案。 XML 位於命名空間中。  
   
 ## <a name="testconfiginnamespacexml"></a>TestConfigInNamespace.xml  
@@ -57,4 +57,5 @@ ms.locfileid: "54609651"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

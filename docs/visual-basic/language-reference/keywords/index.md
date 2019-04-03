@@ -2,14 +2,20 @@
 title: 關鍵字 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'reserved keywords, Visual Basic'
-  - 'keywords [Visual Basic]'
-  - 'Members [Visual Basic], Visual Basic run-time'
-  - 'Visual Basic code, keywords'
-  - 'Visual Basic, language reference'
-  - 'reserved words, Visual Basic keywords'
-  - 'Visual Basic, keywords'
+- reserved keywords, Visual Basic
+- keywords [Visual Basic]
+- Members [Visual Basic], Visual Basic run-time
+- Visual Basic code, keywords
+- Visual Basic, language reference
+- reserved words, Visual Basic keywords
+- Visual Basic, keywords
 ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
+ms.openlocfilehash: e00cb8579ba2692acdfbf3fd349e08bb8647e2d0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814945"
 ---
 # <a name="keywords-visual-basic"></a>關鍵字 (Visual Basic)
 下表列出所有的 Visual Basic 語言關鍵字。  
@@ -112,4 +118,5 @@ ms.assetid: b5a65ef0-c408-4836-afb6-e6828c0771ca
 |[字串操作摘要](../../../visual-basic/language-reference/keywords/string-manipulation-summary.md)|列出用來操作字串的函式。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

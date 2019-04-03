@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
-ms.openlocfilehash: 6cf45b12bebc254a0d96516ab262d7aae3d70746
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b052b44043deba85c8b142a2bf1a684c1159809
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54691251"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842508"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>HOW TO：隱藏繼承的變數 (Visual Basic)
 在衍生的類別會繼承其基底類別的所有定義。 如果您想要定義為基底類別的項目使用相同名稱的變數，您可以將它隱藏，或*陰影*，當您在衍生類別中定義您的變數時，該基底類別項目。 如果您這麼做時，衍生類別中的程式碼會存取您的變數，除非它明確會略過的遮蔽的機制。  
@@ -56,6 +56,7 @@ ms.locfileid: "54691251"
  遮蔽導入了一個以上的版本，具有相同名稱的變數。 當程式碼陳述式參考的變數名稱時，編譯器會解析參考的版本取決於因素，例如程式碼陳述式的位置和限定的字串存在。 這樣可以增加參考到非預期的版本的受遮蔽變數的風險。 您可以降低風險，來完整限定遮蔽變數的所有參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [遮蔽和覆寫的差異](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)

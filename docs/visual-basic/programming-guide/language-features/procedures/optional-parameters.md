@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], optional
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
-ms.openlocfilehash: d128e4647930044e24eb544ec92213b481417cb0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965757"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824672"
 ---
 # <a name="optional-parameters-visual-basic"></a>選擇性參數 (Visual Basic)
 您可以將程序參數指定為選擇項，當該程序被呼叫時就不必提供引數。 *選擇性參數*由`Optional`程序定義中的關鍵字。 可套用下列規則：  
@@ -60,6 +60,7 @@ Sub name(argument 1, , , argument 4)
  另一個用選擇性參數定義程序的方式是使用多載化 (Overloading)。 如果您有一個選擇性參數，您可以定義程序的兩個多載版本，其中一個接受該參數，而另一個則不接受。 隨著選擇性參數數目的增加，這個方法會變得比較複雜。 但是，它的優點是可以完全確定呼叫程式是否提供每一個選擇性引數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)

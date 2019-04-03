@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: e394459e7d25d38e27e78f10dd547cb9ebd6230d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261343"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833525"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>類型的值 '\<typename1 >' 無法轉換成'\<2&gt >' （多重檔案參考）
 類型的值 '\<typename1 >' 無法轉換成'\<2&gt >'。 類型不相符可能是因為混用的檔案參考 '\<filepath1 >' 在專案'\<projectname1 >' 的檔案參考 '\<filepath2 >' 在專案'\<專案名稱 2> >'。 如果兩個組件相同，請嘗試更換這些參考，讓兩個參考都來自相同的位置。  
@@ -32,6 +32,6 @@ ms.locfileid: "55261343"
 -   如果參考的組件沒有相同的組件識別，然後變更您的程式碼，使它不會嘗試在其他類型的其中一個類型轉換。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
-

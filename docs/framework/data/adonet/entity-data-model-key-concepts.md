@@ -2,12 +2,12 @@
 title: 實體資料模型索引鍵概念
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: 0a79143f8927a8368eaba1224c27f453ca81bdf7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574322"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825660"
 ---
 # <a name="entity-data-model-key-concepts"></a>實體資料模型索引鍵概念
 Entity Data Model (EDM) 來描述資料結構會使用三個主要概念：*實體類型*，*關聯型別*，並*屬性*。 描述任何 EDM 實作中的資料結構時，這些是最重要的概念。  
@@ -32,7 +32,7 @@ Entity Data Model (EDM) 來描述資料結構會使用三個主要概念：*實�
 ## <a name="representations-of-a-conceptual-model"></a>概念模型的表現方式  
  A*概念模型*是以實體和關聯性的某些資料結構的特定表示法。 表示概念模型的方法之一就是使用圖表。 下圖代表包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 及兩種關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型；  
   
- ![具有導覽屬性的模型](../../../../docs/framework/data/adonet/media/modelwithnavprops.gif "ModelWithNavProps")  
+ ![顯示具有三種實體類型的概念模型的圖表。](./media/entity-data-model-key-concepts/conceptual-model-entity-types-associations.gif)  
   
  不過，若要使用這種表示方法傳達某些與模型相關的詳細資料，則會有些缺點。 例如，圖表中不會顯示屬性和實體集資訊。 以特定領域語言 (DSL) 傳達的概念模型豐富度會更清楚。 [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)會使用稱為 XML 型 DSL*概念結構定義語言*([CSDL](../../../../docs/framework/data/adonet/ef/language-reference/csdl-specification.md)) 來定義概念模型。 以下是上圖所示之概念模型的 CSDL 定義：  
   

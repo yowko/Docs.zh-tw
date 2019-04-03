@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, defaults
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
-ms.openlocfilehash: 7d58154858cd5f2aef21cc6ceeb93d1ee2f2d1a6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18ef0758dad9abc0c30651806957c9bb2c852abc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54619580"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843054"
 ---
 # <a name="default-service-behavior"></a>預設服務行為
 這個範例會示範如何設定服務行為設定。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會使用 <xref:System.ServiceModel.ServiceBehaviorAttribute> 和 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性明確地定義服務行為與作業行為。 您可以在組態檔中設定行為，也可以在程式碼中以命令方式設定 (如這個範例所示)。  
@@ -54,7 +54,7 @@ public class CalculatorService : ICalculator
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A>|指定執行個體內容模式。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.UseSynchronizationContext%2A>|判定是否要使用所提供的同步化內容，如果有設定的話。 當您想要控制是否要在 Windows Forms 應用程式中使用 `WindowsFormsSynchronizationContext` 時，便可使用這項功能。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A>|判定一般未處理的執行例外狀況是否要轉換為 `Fault<string>`，並且當作錯誤訊息傳送。|  
-|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|指定異動的隔離等級。|  
+|<xref:System.ServiceModel.ServiceBehaviorAttribute.TransactionIsolationLevel%2A>|指定交易的隔離等級。|  
 |<xref:System.ServiceModel.ServiceBehaviorAttribute.ValidateMustUnderstand%2A>|判斷未預期的訊息標頭是否會造成錯誤狀況。|  
   
  作業行為是以 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性所指定。 下表會介紹其中一些行為。  
@@ -94,4 +94,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Default`  
   
-## <a name="see-also"></a>另請參閱

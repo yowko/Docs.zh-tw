@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: 826f8fffedb8c983423fbef0fbf1f4014d93be91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54535017"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825093"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>何時使用列舉 (Visual Basic)
 列舉型別能夠讓您輕鬆使用相關常數組。 列舉，或`Enum`，是一組值的符號名稱。 列舉型別會被視為資料類型，您可以使用它們來建立變數和屬性集之常數的使用。  
@@ -36,6 +36,7 @@ ms.locfileid: "54535017"
  Visual Basic 中提供數個預先定義的列舉型別，例如`FirstDayOfWeek`和`MsgBoxResult`，以協助您的程式碼。 如需相關清單請參閱 <<c0> [ 常數和列舉型別](../../../../visual-basic/language-reference/constants-and-enumerations.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)

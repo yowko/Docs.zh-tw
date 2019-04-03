@@ -2,12 +2,12 @@
 title: 外部 Ruleset 工具組
 ms.date: 03/30/2017
 ms.assetid: a306d283-a031-475e-aa01-9ae86e7adcb0
-ms.openlocfilehash: 510b70f7ebeda784dce4731bb4a08896ac2e8361
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c453c6137beeae8eee0e356734a1f9cdf8d8568b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710039"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840233"
 ---
 # <a name="external-ruleset-toolkit"></a>外部 Ruleset 工具組
 
@@ -28,11 +28,9 @@ Visual Studio 會提供 RuleSet 編輯器做為一部分的 Windows Workflow Fou
 
 - `ExternalPolicy` 活動，它會向 RuleSet 服務要求 RuleSet，並針對工作流程執行 RuleSet。
 
-這些元件的互動方式如圖 1 所示。 後面各節將說明各個元件。
+在下圖顯示元件的互動。 後面各節將說明各個元件。
 
-![外部 RuleSet 範例概觀](./media/rulesettoolkitsampleoverview.gif "RuleSetToolkitSampleOverview")
-
-圖 1：範例概觀
+![此圖表顯示外部 RuleSet 工具組範例概觀。](./media/external-ruleset-toolkit/ruleset-toolkit-overview.gif)
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。
@@ -45,19 +43,15 @@ Visual Studio 會提供 RuleSet 編輯器做為一部分的 Windows Workflow Fou
 
 ## <a name="ruleset-tool"></a>RuleSet 工具
 
-RuleSet 工具的螢幕擷取畫面如圖 2 所示。 從**規則存放區** 功能表中，您可以從資料庫載入可用的 Ruleset，並將修改過的 ruleset 存回存放區。 應用程式組態檔會提供 RuleSet 資料庫的資料庫連線字串。 當您啟動此工具時，它會從設定的資料庫自動載入 RuleSet。
+下圖是 RuleSet 工具的螢幕擷取畫面。 從**規則存放區** 功能表中，您可以從資料庫載入可用的 Ruleset，並將修改過的 ruleset 存回存放區。 應用程式組態檔會提供 RuleSet 資料庫的資料庫連線字串。 當您啟動此工具時，它會從設定的資料庫自動載入 RuleSet。
 
-![外部 RuleSet 工具組範例輸出](./media/rulesetbrowser.gif "RuleSetBrowser")
-
-圖 2：RuleSet 瀏覽器
+![顯示規則集瀏覽器的螢幕擷取畫面。](./media/external-ruleset-toolkit/ruleset-browser-dialog.gif)
 
 RuleSet 工具會將主要和次要版本號碼套用至 RuleSet，讓您可以同時維護及儲存多個版本 (除了版本控制功能，此工具不提供鎖定或其他組態管理功能)。 使用這個工具，您便可以建立新的 RuleSet 版本或刪除現有的版本。 當您按一下 **新增**，工具會建立新的 RuleSet 名稱，並套用 1.0 版。 當您複製某個版本時，此工具會建立所選取 RuleSet 版本的複本 (包括其內含的規則)，並指派全新的唯一版本號碼。 這些版本號碼是以現有 RuleSet 的版本號碼為基礎。 您可以使用表單中相關欄位來變更該 RuleSet 的名稱和版本號碼。
 
-當您按一下 **編輯規則**，會啟動 RuleSet 編輯器，如 圖 3 所示。
+當您按一下 **編輯規則**，啟動 RuleSet 編輯器中，如下圖所示：
 
-![外部 RuleSet 工具組範例輸出](./media/ruleseteditor.gif "RuleSetEditor")
-
-圖 3：規則集編輯器
+![顯示規則集編輯器的螢幕擷取畫面。](./media/external-ruleset-toolkit/ruleset-editor-dialog.gif)
 
 這是重新裝載屬於 Windows Workflow Foundation Visual Studio 增益集的 [編輯器] 對話方塊。 它會提供相同的功能，包括 Intellisense 支援。 規則是針對與工具; 中的規則集相關聯的目標類型 （例如工作流程） 撰寫當您按一下 [**瀏覽**主要工具對話方塊中，在**工作流程/類型選取器**] 對話方塊隨即出現，如 [圖 4] 所示。
 
@@ -69,21 +63,17 @@ RuleSet 工具會將主要和次要版本號碼套用至 RuleSet，讓您可以�
 
 組件檔案路徑和類型`name are stored with the`資料庫中的規則集，以便從資料庫擷取該 RuleSet 工具會嘗試自動載入該目標類型。
 
-當您按一下 [ **[確定]** 中**工作流程/類型選取器**] 對話方塊中，它會驗證所選取的類型，根據 RuleSet，以確保該目標類型具有規則所參考的所有成員。 錯誤會顯示**驗證錯誤**對話方塊 （請參閱 [圖 5]）。 您可以選擇繼續進行變更，儘管發生錯誤，或按一下**取消**。 從**工具** 功能表中的主要工具對話方塊，您可以按一下**Validate**重新驗證 RuleSet 版本，針對目標活動。
+當您按一下 [ **[確定]** 中**工作流程/類型選取器**] 對話方塊中，它會驗證所選取的類型，根據 RuleSet，以確保該目標類型具有規則所參考的所有成員。 錯誤會顯示**驗證錯誤**對話方塊。 您可以選擇繼續進行變更，儘管發生錯誤，或按一下**取消**。 從**工具** 功能表中的主要工具對話方塊，您可以按一下**Validate**重新驗證 RuleSet 版本，針對目標活動。
 
-![從外部 RuleSet 範例驗證錯誤](./media/validationerrorsruleset.png "ValidationErrorsRuleSet")
-
-圖 5：驗證錯誤
+![顯示驗證錯誤 對話方塊的螢幕擷取畫面。](./media/external-ruleset-toolkit/validation-errors-dialog.png)
 
 從**資料**功能表在工具中，您可以匯入及匯出 Ruleset。 當您按一下 **匯入**，檔案選擇器對話方塊隨即出現，您可以從中選取.rules 檔案。 這可能會或可能不是最初在 Visual Studio 中建立檔案。 此 .rules 檔案應該會包含已序列化的 `RuleDefinitions` 執行個體，該執行個體會包含條件的集合和 RuleSet 的集合。 此工具不會使用該條件集合，但它會使用`RuleDefinitions`.rules 格式來允許 Visual Studio 環境的互動。
 
-選取.rules 檔案之後， **RuleSet 選取器**對話方塊隨即出現 （請參閱 圖 6）。 您可以使用此對話方塊，選擇要匯入之檔案中的 RuleSet (預設值是指定所有 RuleSet)。 在此 .rules 檔案中的 RuleSet 並沒有版本號碼，因為它們在 WF 專案中的版本控制和組件中的版本是相同的。 在匯入過程中，此工具會自動指派下一個可用的主要版本號碼 （其中您可以在匯入後變更）;您可以看到在指派的版本號碼**RuleSet 選取器**清單。
+選取.rules 檔案之後， **RuleSet 選取器**對話方塊隨即出現。 您可以使用此對話方塊，選擇要匯入之檔案中的 RuleSet (預設值是指定所有 RuleSet)。 在此 .rules 檔案中的 RuleSet 並沒有版本號碼，因為它們在 WF 專案中的版本控制和組件中的版本是相同的。 在匯入過程中，此工具會自動指派下一個可用的主要版本號碼 （其中您可以在匯入後變更）;您可以看到在指派的版本號碼**RuleSet 選取器**清單。
 
-此工具會針對其匯入的各個 RuleSet，根據 RuleSet 中所使用的成員，嘗試從 .rules 檔案 (如果存在) 位置下的 bin\Debug 資料夾找出相關聯的類型。 如果此工具找到多個相符的類型，它就會嘗試根據 .rules 檔案名稱和類型名稱之間的配對來選擇類型 (例如，`Workflow1` 類型會對應至 Workflow1.rules)。 如果存在多個相符類型，便會提示您要選取類型。 如果這個自動識別機制無法找出相符的組件或型別，則匯入之後，您可以按一下**瀏覽**上主要工具對話方塊來瀏覽至相關聯的類型。
+此工具會針對其匯入的各個 RuleSet，根據 RuleSet 中所使用的成員，嘗試從 .rules 檔案 (如果存在) 位置下的 bin\Debug 資料夾找出相關聯的類型。 如果此工具找到多個相符的類型，它就會嘗試根據 .rules 檔案名稱和類型名稱之間的配對來選擇類型 (例如，`Workflow1` 類型會對應至 Workflow1.rules)。 如果存在多個相符類型，便會提示您要選取類型。 如果這個自動識別機制無法找出相符的組件或型別，則匯入之後，您可以按一下**瀏覽**上主要工具對話方塊來瀏覽至相關聯的類型。 下圖顯示 RuleSet 選取器：
 
-![Ruleset 選取器](./media/rulesetselector.gif "RuleSetSelector")
-
-圖 6：RuleSet 選取器
+![顯示 [RuleSet 選取器] 對話方塊的螢幕擷取畫面。](./media/external-ruleset-toolkit/ruleset-selector-dialog.gif)
 
 當您按一下 [**資料匯出**主要工具] 功能表中，從**RuleSet 選取器**對話方塊會再次出現，從中您可以判斷資料庫應匯出的 Ruleset。 當您按一下  **確定**，則**儲存檔案**對話方塊隨即出現，您可以在其中指定結果.rules 檔案的位置與名稱。 由於 .rules 檔案不包含版本資訊，因此您只能選取一個具有指定 RuleSet 名稱的 RuleSet 版本。
 

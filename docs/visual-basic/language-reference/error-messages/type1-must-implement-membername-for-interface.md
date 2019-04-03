@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>' 必須針對介面 '<membername>' 實作 '<interfacename>'
+title: <type1>'<typename>'必須實作'<membername>'的介面'<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30154
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30154
 ms.assetid: 259afdfa-3608-4760-adcb-88ec0da5020d
-ms.openlocfilehash: de7dd9026e08495941a89be0db11ad4c68d2a748
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 485680a2984a29037b2836fcba13cf1aa1e2e699
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55264228"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822748"
 ---
 # <a name="type1typename-must-implement-membername-for-interface-interfacename"></a>\<type1 >'\<類型名稱 >' 必須實作 '\<成員名稱 >' 的介面'\<介面名稱 >'
 '\<類型名稱 >' 必須實作'\<成員名稱 >' 的介面 '\<介面名稱 >'。 實作屬性必須比對 'ReadOnly '/' WriteOnly' 規範。  
@@ -36,5 +36,6 @@ ms.locfileid: "55264228"
 4.  當實作的屬性，宣告`Get`和`Set`程序，適當地。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [介面](../../../visual-basic/programming-guide/language-features/interfaces/index.md)

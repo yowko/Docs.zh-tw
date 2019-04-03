@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 2102ec07a26c02c7181e3422e48939c40b86a8de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599201"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825764"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>建置第一個宣告感知 WCF 服務
 ## <a name="applies-to"></a>適用於  
@@ -20,7 +20,7 @@ ms.locfileid: "54599201"
 ## <a name="overview"></a>總覽  
  本主題概述使用 WIF 建置宣告感知 WCF 服務的案例。 在一個宣告感知 Web 服務案例中，通常會有三個參與者：Web 服務本身、使用者和 Security Token Service (STS)。 下列圖將說明這個案例：  
   
- ![WIF 基本宣告感知 WCF 服務](../../../docs/framework/security/media/wifbasicclaimsawarewcfservice.gif "WIFBasicClaimsAwareWCFService")  
+ ![此圖表顯示 WIF 基本宣告感知 WCF 服務元件。](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
 1.  WCF 服務用戶端 (有時稱為代理程式) 會使用 WIF 傳送認證至 STS，在驗證成功之後，STS 隨即發行權杖給代理程式。  
   

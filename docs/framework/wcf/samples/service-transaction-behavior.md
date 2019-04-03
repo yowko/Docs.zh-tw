@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: df677e29534e2f451afa27b9b81159b4826c98ca
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: dafc75c9db0dfe9b51c7425a269c166182bbcc87
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066134"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843028"
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
-這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，實作計算機服務，但經過擴充，來維護資料庫資料表和具狀態執行總數計算機作業中所執行作業的伺服器記錄檔。 對伺服器記錄資料表的持續性寫入會依用戶端協調的交易結果而定，如果用戶端交易沒有完成，Web 服務交易就會確保資料庫的更新並未經過認可。  
+這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，實作計算機服務，但經過擴充，來維護資料庫資料表和具狀態執行總數計算機作業中所執行作業的伺服器記錄檔。 對伺服器記錄資料表的持續性寫入會依用戶端協調的異動結果而定，如果用戶端異動沒有完成，Web 服務異動就會確保資料庫的更新並未經過認可。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
@@ -49,7 +49,7 @@ public interface ICalculator
 </bindings>  
 ```  
   
- 初始化服務和交易的連線之後，用戶端會存取該交易範圍內的數個服務作業，然後完成交易並關閉連線：  
+ 初始化服務和異動的連線之後，用戶端會存取該異動範圍內的數個服務作業，然後完成異動並關閉連線：  
   
 ```csharp
 // Create a client  
@@ -94,7 +94,7 @@ client.Close();
   
 -   在 `ServiceBehaviorAttribute` 上：  
   
-    -   `TransactionTimeout` 屬性會指定交易必須完成的期間。 在這個範例中，此屬性設定為 30 秒。  
+    -   `TransactionTimeout` 屬性會指定異動必須完成的期間。 在這個範例中，此屬性設定為 30 秒。  
   
     -   `TransactionIsolationLevel` 屬性會指定服務支援的隔離等級。 這是比對用戶端隔離等級的必要項。  
   
@@ -104,13 +104,13 @@ client.Close();
   
 -   在 `ServiceContractAttribute` 上：  
   
-    -   `SessionMode` 屬性會指定服務是否要將適當的要求與邏輯工作階段相互關聯。 由於這個服務包含 OperationBehaviorAttribute TransactionAutoComplete 屬性設定為 `false` 的作業 (Multiply 和 Divide)，因此必須指定 `SessionMode.Required`。 例如，Multiply 作業不會完成它的交易，而會透過使用 `SetTransactionComplete` 方法，依賴稍後的 Divide 呼叫來完成，因此服務必須能夠判斷這些作業正在相同的工作階段內進行。  
+    -   `SessionMode` 屬性會指定服務是否要將適當的要求與邏輯工作階段相互關聯。 由於這個服務包含 OperationBehaviorAttribute TransactionAutoComplete 屬性設定為 `false` 的作業 (Multiply 和 Divide)，因此必須指定 `SessionMode.Required`。 例如，Multiply 作業不會完成它的異動，而會透過使用 `SetTransactionComplete` 方法，依賴稍後的 Divide 呼叫來完成，因此服務必須能夠判斷這些作業正在相同的工作階段內進行。  
   
 -   在 `OperationBehaviorAttribute` 上：  
   
-    -   `TransactionScopeRequired` 屬性會指定是否應該在交易範圍內執行作業的動作。 在這個範例的所有作業中，這都設定為 `true`，而且因為用戶端會將它的異動流動至所有作業，所以，此動作會在該用戶端異動的範圍內進行。  
+    -   `TransactionScopeRequired` 屬性會指定是否應該在交易範圍內執行作業的動作。 在這個範例的所有作業中，這都設定為 `true`，而且因為用戶端會將它的交易流動至所有作業，所以，此動作會在該用戶端交易的範圍內進行。  
   
-    -   `TransactionAutoComplete` 屬性會指定是否自動完成方法執行所在的交易 (如果沒有發生未處理的例外狀況)。 如先前所述，Add 和 Subtract 作業的這個屬性設定為 `true`，但 Multiply 和 Divide 作業則是設定為 `false`。 Add 和 Subtract 作業會自動完成它們的動作，Divide 則會透過明確呼叫 `SetTransactionComplete` 方法來完成動作，Multiply 不會完成動作，而是需要稍後呼叫 (例如呼叫 Divide) 來完成動作。  
+    -   `TransactionAutoComplete` 屬性會指定是否自動完成方法執行所在的異動 (如果沒有發生未處理的例外狀況)。 如先前所述，Add 和 Subtract 作業的這個屬性設定為 `true`，但 Multiply 和 Divide 作業則是設定為 `false`。 Add 和 Subtract 作業會自動完成它們的動作，Divide 則會透過明確呼叫 `SetTransactionComplete` 方法來完成動作，Multiply 不會完成動作，而是需要稍後呼叫 (例如呼叫 Divide) 來完成動作。  
   
  屬性化服務實作如下所示：  
   
@@ -191,13 +191,13 @@ Creating new service instance...
   Writing row 4 to database: Dividing 495 by 15  
 ```  
   
- 請注意，除了持續計算執行總數以外，服務還會報告執行個體的建立動作 (這個範例建立一個執行個體)，並將作業要求記錄至資料庫。 由於所有要求都會流動用戶端的異動，若發生任何失敗而無法完成該異動，就會導致回復所有資料庫作業。 下列方式可以示範此情形：  
+ 請注意，除了持續計算執行總數以外，服務還會報告執行個體的建立動作 (這個範例建立一個執行個體)，並將作業要求記錄至資料庫。 由於所有要求都會流動用戶端的交易，若發生任何失敗而無法完成該交易，就會導致回復所有資料庫作業。 下列方式可以示範此情形：  
   
 -   註解 `tx.Complete`() 的用戶端呼叫並重新執行 - 這會使用戶端離開異動範圍，而不會完成它的異動。  
   
--   註解 Divide 服務作業的呼叫 - 這會導致 Multiply 作業初始化的動作無法完成，最後用戶端的異動也因此而無法完成。  
+-   註解 Divide 服務作業的呼叫 - 這會導致 Multiply 作業初始化的動作無法完成，最後用戶端的交易也因此而無法完成。  
   
--   在用戶端交易範圍的任何地方擲回未處理的例外狀況 - 這同樣會令用戶端無法完成它的交易。  
+-   在用戶端異動範圍的任何地方擲回未處理的例外狀況 - 這同樣會令用戶端無法完成它的異動。  
   
  在上述情況中，最後的結果都是不會認可該範圍內執行的作業，而且不會增加保存至資料庫的資料列計數。  
   
@@ -216,7 +216,7 @@ Creating new service instance...
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援跨電腦執行範例  
   
-1.  在服務電腦上，設定 MSDTC 以允許傳入網路異動。  
+1.  在服務電腦上，設定 MSDTC 以允許傳入網路交易。  
   
     1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  按一下 [ **[確定]** 以關閉**新增程式**] 對話方塊中，然後按一下 [**確定**] 以關閉 [Windows 防火牆] 小程式。  
   
-3.  在用戶端電腦上，設定 MSDTC 以允許傳出網路異動：  
+3.  在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
   
     1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
@@ -265,4 +265,3 @@ Creating new service instance...
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Transactions`  
   
-## <a name="see-also"></a>另請參閱

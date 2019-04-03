@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
-ms.openlocfilehash: a8a85f4f089de9be6f2ecadac05256b30d3014b0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267452"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813934"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>結構 '\<結構名稱 >' 必須包含至少一個執行個體成員變數或至少一個執行個體事件宣告未標記為 'Custom'
 結構的定義不包含任何非共用的變數或非共用的非自訂事件。  
@@ -26,6 +26,7 @@ ms.locfileid: "55267452"
 -   定義至少一個變數或不是`Shared`。 如果您定義只有一個事件時，它必須是非自訂，以及非共用。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)
 - [如何：宣告結構](../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)

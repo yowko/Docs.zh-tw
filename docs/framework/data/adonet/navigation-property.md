@@ -2,12 +2,12 @@
 title: 導覽屬性-ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
-ms.openlocfilehash: 6729b22dbc012d5ccfabd64cd83b710833fe1b9d
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857940"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836593"
 ---
 # <a name="navigation-property"></a>導覽屬性
 
@@ -29,7 +29,7 @@ A*導覽屬性*上為選擇性屬性[實體型別](entity-type.md)，可讓不�
 
 下圖顯示包含三種實體類型 (`Book`、`Publisher` 和 `Author`) 的概念模型。 導覽屬性、`Publisher` 和 `Authors` 均在 Book 實體類型上定義。 導覽屬性 `Books` 在 Publisher 實體類型和 `Author` 實體類型上定義。
 
-![具有導覽屬性的模型](/media/modelwithnavprops.gif "ModelWithNavProps")
+ ![顯示具有三種實體類型的概念模型的圖表。](./media/navigation-property/conceptual-model-entity-types-associations.gif)  
 
 [ADO.NET Entity Framework](./ef/index.md)會使用稱為概念結構定義語言的特定領域語言 (DSL) ([CSDL](./ef/language-reference/csdl-specification.md)) 來定義概念模型。 下列 CSDL 定義上圖所顯示的 `Book` 實體類型：
 

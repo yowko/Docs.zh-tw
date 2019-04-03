@@ -15,12 +15,12 @@ helpviewer_keywords:
 - With block
 - End keyword [Visual Basic], With...End With statements
 ms.assetid: 340d5fbb-4f43-48ec-a024-80843c137817
-ms.openlocfilehash: b9d2ce983398f34747f09d4ffd2cc8fa9e6b2b53
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: de2edc6b16689673c3be6703ff1a201febe73526
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968253"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825350"
 ---
 # <a name="withend-with-statement-visual-basic"></a>With...End With 陳述式 (Visual Basic)
 執行一系列重複參考單一物件或結構的陳述式，使陳述式在存取物件或結構的成員時，可以使用簡化的語法。  使用結構時，您可以只讀取成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  
@@ -52,8 +52,7 @@ End With
   
 -   您可以讓程式碼更容易讀取，方法是排除重複的限定運算式。  
   
- 
-  `objectExpression` 的資料類型可以是任何類別或結構類型，甚至是如 `Integer` 這類的 Visual Basic 基礎類型。  如果 `objectExpression` 會產生除了物件以外的任何項目，您可以只讀取其成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  如果您叫用傳回結構的方法，並且立即存取和指派值給函式結果的成員 (例如 `GetAPoint().x = 1`)，便會收到這種相同錯誤。  這兩種情況下的問題是結構只存在於呼叫堆疊中，且在這些情況下沒有方法可以將修改過的結構成員寫入程式中其他程式碼可以觀察到變更的位置。  
+ `objectExpression` 的資料類型可以是任何類別或結構類型，甚至是如 `Integer` 這類的 Visual Basic 基礎類型。  如果 `objectExpression` 會產生除了物件以外的任何項目，您可以只讀取其成員的值或叫用方法，如果嘗試指派值給 `With...End With` 陳述式中使用的結構成員，將會收到錯誤。  如果您叫用傳回結構的方法，並且立即存取和指派值給函式結果的成員 (例如 `GetAPoint().x = 1`)，便會收到這種相同錯誤。  這兩種情況下的問題是結構只存在於呼叫堆疊中，且在這些情況下沒有方法可以將修改過的結構成員寫入程式中其他程式碼可以觀察到變更的位置。  
   
  在進入區塊時，會評估 `objectExpression` 一次。 您無法從 `objectExpression` 區塊重新指派 `With`。  
   
@@ -81,6 +80,7 @@ End With
  [!code-vb[VbVbalrWithStatement#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrwithstatement/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Collections.Generic.List%601>
 - [巢狀控制結構](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)
 - [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

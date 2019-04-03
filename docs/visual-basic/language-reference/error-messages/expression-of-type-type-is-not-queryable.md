@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 06b2a7f5c6bd838d09fd39f31778462c364fb8bd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842326"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>型別的運算式\<類型 > 不是可查詢
 型別的運算式\<類型 > 不是可供查詢。 請確定您未遺漏組件參考和/或命名空間匯入 LINQ 提供者。  
@@ -34,6 +34,7 @@ ms.locfileid: "55261252"
 2.  請確定您已識別為您的查詢的來源是可查詢類型的類型。 也就是型別可實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Linq>
 - <xref:System.Data.Linq>
 - <xref:System.Xml.Linq>

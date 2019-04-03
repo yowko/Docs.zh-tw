@@ -2,12 +2,12 @@
 title: HOW TO：使用群組 (Visual Basic) 建立階層
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
-ms.openlocfilehash: d7c77d0e6b67f21d9d6e0ca270874641011e5924
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520993"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822891"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>HOW TO：使用群組 (Visual Basic) 建立階層
 此範例顯示如何群組資料，然後根據該群組產生 XML。  
@@ -15,7 +15,7 @@ ms.locfileid: "54520993"
 ## <a name="example"></a>範例  
  此範例會先按照類別群組資料，然後產生 XML 階層會反映群組的新 XML 檔案。  
   
- 此範例使用下列 XML 文件：[範例 XML 檔：數值資料 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：數值資料 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-numerical-data-linq-to-xml.md)。  
   
 ```vb  
 Dim doc As XElement = XElement.Load("Data.xml")  
@@ -80,4 +80,5 @@ Console.WriteLine(newData)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [進階查詢技術 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

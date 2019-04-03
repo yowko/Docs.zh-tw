@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Key [Visual Basic]
 - Key keyword [Visual Basic]
 ms.assetid: 7697a928-7d14-4430-a72a-c9e96e8d6c11
-ms.openlocfilehash: 0f4778b69963c7b0df14308b3cb6312555647b92
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e13a773f0b585a5c8803a77c7aaad441d90dfe75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967772"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842300"
 ---
 # <a name="key-visual-basic"></a>Key (Visual Basic)
 `Key`關鍵字可讓您指定之屬性的匿名型別行為。 只有屬性指定為索引鍵屬性中的匿名型別執行個體或計算的雜湊程式碼的值之間的等號比較測試。 無法變更索引鍵屬性的值。  
@@ -54,6 +54,7 @@ ms.locfileid: "56967772"
  [!code-vb[VbVbalrAnonymousTypes#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#28)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [匿名類型定義](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)
 - [如何：推斷屬性名稱和匿名類型宣告中的類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)
 - [匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

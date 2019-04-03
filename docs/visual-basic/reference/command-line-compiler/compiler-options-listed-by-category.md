@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: e7e81715b396580208fd7bbbb797a7c93301503d
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738899"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827363"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出 Visual Basic 編譯器選項
 Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 (IDE) 內編譯程式的替代方案。 以下是 Visual Basic 命令列編譯器選項，依功能分類排序的清單。  
@@ -127,5 +127,6 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |`-checksumalgorithm:<alg>`|指定用於計算儲存在 PDB 的來源檔案總和檢查碼的演算法。  支援的值為：SHA1 (預設) 或 SHA256。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [依字母順序列出 Visual Basic 編譯器選項](../../../visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md)
 - [管理專案及解決方案屬性](/visualstudio/ide/managing-project-and-solution-properties?view=vs-2017)

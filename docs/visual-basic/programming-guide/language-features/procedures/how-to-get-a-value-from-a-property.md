@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: 3954423e-6ab7-4a4c-b55c-a8d27be47891
-ms.openlocfilehash: de5719527216411c7bd156f2cc0d369442eaee20
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7dbc9d926ae937dd032c0c054bde440037ab9f0d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964769"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842911"
 ---
 # <a name="how-to-get-a-value-from-a-property-visual-basic"></a>HOW TO：取得值，屬性 (Visual Basic)
 您可以在運算式中包含屬性名稱，以擷取屬性的值。  
@@ -39,6 +39,7 @@ ms.locfileid: "56964769"
  如同變數運算式在參與的屬性的值或常數會或儲存在變數或指派陳述式左邊的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

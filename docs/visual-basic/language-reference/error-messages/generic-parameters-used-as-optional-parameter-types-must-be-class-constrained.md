@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
-ms.openlocfilehash: 7a1411daf446cbf06cd57b4e002c2c3cd77166af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507157"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813895"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>用來做為選擇性參數類型的泛型參數必須受到類別條件約束
 程序會宣告使用不受限制是參考類型的型別參數的選擇性參數。  
@@ -28,6 +28,7 @@ ms.locfileid: "54507157"
 -   限制類型參數接受僅參考型別，或請勿使用它在選擇性參數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
 - [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)

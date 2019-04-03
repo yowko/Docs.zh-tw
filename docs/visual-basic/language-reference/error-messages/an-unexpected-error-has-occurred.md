@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_CantGetMemoryMappedFile
 ms.assetid: 0d9f2a30-ff72-4355-8060-744f22339359
-ms.openlocfilehash: e2d7f5d570e187393b76f4af6301a81dbb350f2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82b513b89d661e49853e55f26df13eb354945038
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518523"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828587"
 ---
 # <a name="an-unexpected-error-has-occurred-because-an-operating-system-resource-required-for-single-instance-startup-cannot-be-acquired"></a>發生未預期的錯誤，因為無法取得單一執行個體啟動所需要的作業系統資源
 應用程式無法取得必要的作業系統資源。 此問題的部分可能原因包括：  
@@ -31,6 +31,7 @@ ms.locfileid: "54518523"
 4.  記下錯誤發生時的情況，並致電 Microsoft 產品支援服務  
   
 ## <a name="see-also"></a>另請參閱
+
 - [專案設計工具、應用程式頁面 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)
 - [偵錯工具基礎](/visualstudio/debugger/debugger-basics)
 - [告訴我們](/visualstudio/ide/talk-to-us)

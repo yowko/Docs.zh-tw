@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
-ms.openlocfilehash: 74b625cc3a60e591417530c6a6229c01666038e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271248"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824620"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>名稱\<成員名稱 > 不符合 CLS 標準
 組件標示為`<CLSCompliant(True)>`但公開的成員名稱開頭為底線 (`_`)。  
@@ -34,6 +34,6 @@ ms.locfileid: "55271248"
 -   如果您需要的成員名稱維持不變，移除<xref:System.CLSCompliantAttribute>從其定義或將其標記為`<CLSCompliant(False)>`。 您仍然可以將標記為組件`<CLSCompliant(True)>`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [宣告項目名稱](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
-

@@ -2,12 +2,12 @@
 title: 進階查詢技術 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
-ms.openlocfilehash: 140c8dcf5098a474dc2be48d9debc16e92886bb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610028"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833686"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>進階查詢技術 (LINQ to XML) (Visual Basic)
 本節提供更進階的 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 查詢技術範例。  
@@ -26,4 +26,5 @@ ms.locfileid: "54610028"
 |[如何：填入 XML 樹狀結構從檔案系統 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-populate-an-xml-tree-from-the-file-system.md)|呈現從檔案系統建立 XML 樹狀結構的程式碼。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)
