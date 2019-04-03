@@ -49,7 +49,7 @@ ms.locfileid: "57720770"
      您可以也將控制項以動態方式加入表單在執行階段。 在下列程式碼範例中，<xref:System.Windows.Forms.TextBox>控制項將會加入至表單時<xref:System.Windows.Forms.Button>按一下控制項時。  
   
     > [!NOTE]
-    >  下列程序需要有的表單** 按鈕**控制項， `Button1`、 已放在其上。  
+    >  下列程序需要有的表單 **按鈕** 控制項， `Button1` 、 已放在其上。  
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>若要以程式設計方式將控制項加入表單  
   

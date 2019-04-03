@@ -92,9 +92,9 @@ ms.locfileid: "57709012"
 
 17. 拖曳**ReadInt**活動，從**NumberGuessWorkflowActivities**一節**工具箱**並將它放**順序**活動中，讓它遵循**WriteLine**活動。
 
-18. 繫結**BookmarkName**引數**ReadInt**活動**BookmarkName**引數**提示**輸入活動`BookmarkName`成**輸入 VB 運算式**右邊的方塊**BookmarkName**中的引數**屬性 視窗**，然後按  ** 索引標籤**鍵關閉 IntelliSense 清單成員視窗並儲存屬性的兩倍。
+18. 繫結 **BookmarkName** 引數 **ReadInt** 活動 **BookmarkName** 引數 **提示** 輸入活動 `BookmarkName` 成 **輸入 VB 運算式** 右邊的方塊 **BookmarkName** 中的引數 **屬性 視窗**，然後按 **索引標籤** 鍵關閉 IntelliSense 清單成員視窗並儲存屬性的兩倍。
 
-19. 繫結**結果**引數**ReadInt**活動**結果**引數**提示**活動輸入`Result`到**輸入 VB 運算式**右邊的方塊**結果**中的引數**屬性 視窗**，然後按下** 索引標籤**鍵兩次。
+19. 繫結 **結果** 引數 **ReadInt** 活動 **結果** 引數 **提示** 活動輸入 `Result` 到 **輸入 VB 運算式** 右邊的方塊 **結果** 中的引數 **屬性 視窗** ，然後按下 **索引標籤** 鍵兩次。
 
 20. 按下**Ctrl**+**Shift**+**B**建置方案。
 

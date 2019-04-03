@@ -4,7 +4,7 @@ ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 ms.openlocfilehash: 306bc56820cdbcba17cce9fc50d426260eb0e0d4
 ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 03/05/2019
 ms.locfileid: "57360663"
@@ -42,8 +42,7 @@ ms.locfileid: "57360663"
 |屬性|描述|
 |---------------|-----------------|
 |algorithmSuite|設定訊息加密和金鑰包裝演算法，用來針對 MSMQ 傳輸上傳送的訊息實現訊息安全性。<br /><br /> 預設值是 `Aes256`。 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。|
-|clientCredentialType|指定在為 MSMQ 傳輸上傳送的訊息執行用戶端驗證時，要使用的認證類型。 有效值包括以下的值：<br /><br /> -None:這會允許服務與匿名用戶端互動。 服務和用戶端都不需要認證。<br />-Windows:這可讓 SOAP 交換加入 Windows 認證的已驗證的內容。 如此一定會執行 Kerberos 驗證。<br />-使用者名稱：這可讓服務要求使用 UserName 認證來驗證用戶端。 認證在此情況下必須使用來指定`clientCredentials`行為**注意：** Windows Communication Foundation (WCF) 不支援傳送密碼摘要或衍生金鑰使用的密碼，並使用訊息安全性這類金鑰。 因此，WCF 會強制使用 UserName 認證時，保護交換。 這個模式需要使用 `clientCredential` 行為和 `serviceCertificate` 在用戶端上指定服務憑證。 <br /><br /> 憑證：這可讓服務要求使用憑證來驗證用戶端。 此案例中的用戶端認證必須使用 `clientCredentials` 行為來指定。 此案例中的服務認證需要藉由指定 `clientCredentials`，以使用 `serviceCertificate` 行為來指定。<br />-CardSpace:這可讓服務要求用戶端使用 CardSpace 來驗證。 
-  `serviceCertificate` 行為中必須提供 `clientCredential`。<br /><br /> 預設值是 `Windows`。 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|
+|clientCredentialType|指定在為 MSMQ 傳輸上傳送的訊息執行用戶端驗證時，要使用的認證類型。 有效值包括以下的值：<br /><br /> -None:這會允許服務與匿名用戶端互動。 服務和用戶端都不需要認證。<br />-Windows:這可讓 SOAP 交換加入 Windows 認證的已驗證的內容。 如此一定會執行 Kerberos 驗證。<br />-使用者名稱：這可讓服務要求使用 UserName 認證來驗證用戶端。 認證在此情況下必須使用來指定`clientCredentials`行為**注意：** Windows Communication Foundation (WCF) 不支援傳送密碼摘要或衍生金鑰使用的密碼，並使用訊息安全性這類金鑰。 因此，WCF 會強制使用 UserName 認證時，保護交換。 這個模式需要使用 `clientCredential` 行為和 `serviceCertificate` 在用戶端上指定服務憑證。 <br /><br /> 憑證：這可讓服務要求使用憑證來驗證用戶端。 此案例中的用戶端認證必須使用 `clientCredentials` 行為來指定。 此案例中的服務認證需要藉由指定 `clientCredentials`，以使用 `serviceCertificate` 行為來指定。<br />-CardSpace:這可讓服務要求用戶端使用 CardSpace 來驗證。 `serviceCertificate` 行為中必須提供 `clientCredential`。<br /><br /> 預設值是 `Windows`。 此屬性的型別為 <xref:System.ServiceModel.MessageCredentialType>。|
 
 ### <a name="child-elements"></a>子元素
 
