@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Protected Friend keyword combination
 - Friend keyword [Visual Basic], and Protected
 ms.assetid: b664605e-1c79-4728-b996-aa59c50846bc
-ms.openlocfilehash: 1e6dbaa9201d5c9cd902412797b2427ec488d014
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 18681935d0380f9be3970fdb5d17ffb089152f59
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371407"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819147"
 ---
 # <a name="friend-visual-basic"></a>Friend (Visual Basic)
 指定一或多個宣告的程式設計元素，只能從包含其宣告的組件內加以存取。  
@@ -72,6 +72,7 @@ ms.locfileid: "57371407"
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)

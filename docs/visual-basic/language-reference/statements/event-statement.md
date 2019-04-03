@@ -18,12 +18,12 @@ helpviewer_keywords:
 - ByRef keyword [Visual Basic], Event statements
 - declaring user-defined events
 ms.assetid: 306ff8ed-74dd-4b6a-bd2f-e91b17474042
-ms.openlocfilehash: 13b1d18592379d7a08e68e84ffba62f1cc977caa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2f600f3ed37f38ddd7d86300231e0c447f458aa6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966069"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831887"
 ---
 # <a name="event-statement"></a>Event 陳述式
 宣告使用者定義的事件。  
@@ -100,8 +100,7 @@ End Event
   
  此範例也會使用表單 (`Form1`) 與按鈕 (`Button1`) 和文字方塊 (`TextBox1`)。 當您按一下按鈕時時，第一個文字方塊會顯示從 10 秒到 0 秒的倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
- 
-  `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
+ `Form1` 的程式碼會指定表單的初始和終止狀態。 它也包含引發事件時執行的程式碼。  
   
  若要使用此範例，請建立新的 Windows Form 專案。 然後新增一個名為 `Button1` 的按鈕，和名為 `TextBox1` 的文字方塊到名為 `Form1` 的主表單中。 然後以滑鼠右鍵按一下表單，並按一下**檢視程式碼**程式碼編輯器開啟。  
   
@@ -116,10 +115,10 @@ End Event
  按 F5 以執行上述範例中，並按一下 [] 按鈕**啟動**。 第一個文字方塊會開始倒數計時。 在經過完整時間 (10 秒) 之後，第一個文字方塊會顯示 [完成]。  
   
 > [!NOTE]
->  
-  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../standard/threading/index.md)。  
+>  `My.Application.DoEvents` 方法不會以與表單相同的方式處理事件。 若要啟用表單以直接處理事件，您可以使用多執行緒。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../standard/threading/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [RaiseEvent 陳述式](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
 - [Implements 陳述式](../../../visual-basic/language-reference/statements/implements-statement.md)
 - [事件](../../../visual-basic/programming-guide/language-features/events/index.md)

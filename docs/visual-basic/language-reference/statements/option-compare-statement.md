@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: c90e07afb1515b50ad6e2fd2a1bbe42f6da5fa95
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968136"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834071"
 ---
 # <a name="option-compare-statement"></a>Option Compare 陳述式
 宣告比較字串資料時要使用的預設比較方法。  
@@ -38,8 +38,8 @@ Option Compare { Binary | Text }
   
 |詞彙|定義|  
 |---|---|  
-|`Binary`|選擇項。 字串比較為基礎的排序次序中的結果衍生自內部的二進位表示的字元。<br /><br /> 這種類型是比較的很有用，特別是比較的當字串可以包含的字元不比較的解譯為文字。 在此情況下，您不想偏差的比較，以依字母順序排列的對等，例如不區分大小寫。|  
-|`Text`|選擇項。 在您的系統地區設定所決定的不區分大小寫文字排序順序為基礎的字串比較的結果。<br /><br /> 如果您的字串包含所有文字字元，而且您想要考慮到例如不區分大小寫和密切相關的字母的帳戶是英文字母的對等進行比較，這種比較很有用。 比方說，您可能要考慮`A`和`a`相等，並`Ä`並`ä`排在前面`B`和`b`。|  
+|`Binary`|選擇性。 字串比較為基礎的排序次序中的結果衍生自內部的二進位表示的字元。<br /><br /> 這種類型是比較的很有用，特別是比較的當字串可以包含的字元不比較的解譯為文字。 在此情況下，您不想偏差的比較，以依字母順序排列的對等，例如不區分大小寫。|  
+|`Text`|選擇性。 在您的系統地區設定所決定的不區分大小寫文字排序順序為基礎的字串比較的結果。<br /><br /> 如果您的字串包含所有文字字元，而且您想要考慮到例如不區分大小寫和密切相關的字母的帳戶是英文字母的對等進行比較，這種比較很有用。 比方說，您可能要考慮`A`和`a`相等，並`Ä`並`ä`排在前面`B`和`b`。|  
   
 ## <a name="remarks"></a>備註  
  如果使用，`Option Compare`陳述式必須出現在任何其他來源的程式碼陳述式之前的檔案。  
@@ -88,6 +88,7 @@ Option Compare { Binary | Text }
  [!code-vb[VbVbalrStatements#46](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#46)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Strings.InStr%2A>
 - <xref:Microsoft.VisualBasic.Strings.InStrRev%2A>
 - <xref:Microsoft.VisualBasic.Strings.Replace%2A>

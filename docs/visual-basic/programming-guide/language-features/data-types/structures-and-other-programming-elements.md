@@ -8,12 +8,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], structure elements
 - nested structures [Visual Basic]
 ms.assetid: 0f849313-ccd2-4c9a-acb9-69de6751c088
-ms.openlocfilehash: ed406254435602dcd98bc97716cc88710a470ed1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a943bbdec617ba6c95685df3a4fcdb36b52def22
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819096"
 ---
 # <a name="structures-and-other-programming-elements-visual-basic"></a>結構和其他程式設計項目 (Visual Basic)
 您可以使用結構搭配使用陣列、 物件和程序，以及彼此。 因為這些項目使用個別的互動會使用相同的語法。  
@@ -123,6 +123,7 @@ allSystems(1).diskDrives(0).type = "Floppy"
  結構可以包含其他結構到任意深度。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

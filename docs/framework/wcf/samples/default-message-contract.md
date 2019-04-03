@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Message Contract
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
-ms.openlocfilehash: b1c4db312c04c4248f16a2ff7ee8b54222e66cbe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c65004189c43e4838c9131f61aaa09a41191b702
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620275"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817288"
 ---
 # <a name="default-message-contract"></a>預設訊息合約
 預設訊息合約範例會示範一個服務，在這個服務中可以對服務作業來回傳遞自訂的使用者定義訊息。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)會實作計算機介面做為具類型的服務。 而不是加法、 減法、 乘法和除法中使用的個別服務作業[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，此範例會傳遞包含運算元和運算子，並傳回的自訂訊息算術計算的結果。  
@@ -185,4 +185,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Default`  
   
-## <a name="see-also"></a>另請參閱

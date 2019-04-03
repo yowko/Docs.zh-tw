@@ -1,8 +1,14 @@
 ---
-title: '.NET Core 命令列介面 (Command-Line Interface, CLI) 工具'
+title: .NET Core 命令列介面 (Command-Line Interface, CLI) 工具
 description: .NET Core 命令列介面 (CLI) 工具與功能概觀。
 ms.date: 08/14/2017
 ms.custom: seodec18
+ms.openlocfilehash: e174867ce06e573fc85579183df0196d8276fb37
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826310"
 ---
 # <a name="net-core-command-line-interface-cli-tools"></a>.NET Core 命令列介面 (CLI) 工具
 
@@ -116,11 +122,17 @@ dotnet /build_output/my_app.dll
 
 ### <a name="driver"></a>驅動器
 
-驅動器的名稱是 [dotnet](dotnet.md)，且有兩個責任：執行[相依於架構的應用程式](../deploying/index.md)或執行命令。 唯獨啟動應用程式時會不搭配命令使用 `dotnet`。
+驅動器的名稱是 [dotnet](dotnet.md)，且有兩個責任：執行[相依於架構的應用程式](../deploying/index.md)或執行命令。 
 
-若要執行相依於架構的應用程式，請在驅動器之後指定應用程式，例如 `dotnet /path/to/my_app.dll`。 從應用程式的 DLL 所在的資料夾執行該命令時，只要執行 `dotnet my_app.dll` 即可。
+若要執行相依於架構的應用程式，請在驅動器之後指定應用程式，例如 `dotnet /path/to/my_app.dll`。 從應用程式的 DLL 所在的資料夾執行該命令時，只要執行 `dotnet my_app.dll` 即可。 若要使用特定版本的 .NET Core 執行階段，請使用 `--fx-version <VERSION>` 選項 (請參閱 [dotnet 命令](dotnet.md) 參考)。
 
-當您提供命令給驅動器時，`dotnet.exe` 會啟動 CLI 命令執行程序。 首先，驅動器會決定要使用的 SDK 版本。 如果命令選項中未指定版本，則驅動器會使用可用的最新版本。 若要指定已安裝之最新版本以外的版本，請使用 `--fx-version <VERSION>` 選項 (請參閱 [dotnet 命令](dotnet.md)參考)。 決定 SDK 版本之後，驅動器會執行命令。
+當您提供命令給驅動器時，`dotnet.exe` 會啟動 CLI 命令執行程序。 例如：
+
+```bash
+> dotnet build
+```
+
+首先，驅動器會決定要使用的 SDK 版本。 若沒有 ['global.json'](global-json.md)，將會使用最新可用版本的 SDK。 這可能是預覽版或穩定的版本，視兩者中何者版本最新。  確定 SDK 版本之後，就會開始執行命令。
 
 ### <a name="command-verb"></a>命令 (「動詞」)
 

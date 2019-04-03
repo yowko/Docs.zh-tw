@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: cdc610bf70480981442d6de08975dc1cafddd8d0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271599"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817132"
 ---
 # <a name="class-classname-cannot-be-found"></a>類別\<類別名稱 >' 找不到
 類別\<類別名稱 >' 找不到。 此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。  
@@ -32,4 +32,5 @@ ms.locfileid: "55271599"
 4.  如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [告訴我們](/visualstudio/ide/talk-to-us)

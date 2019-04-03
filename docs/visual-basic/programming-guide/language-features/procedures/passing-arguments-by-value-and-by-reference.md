@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], passing by value or by reference
 - argument passing [Visual Basic], by value or by reference
 ms.assetid: fd8a9de6-7178-44d5-a9bf-458d4ad907c2
-ms.openlocfilehash: c2c778afea90a90b2b5f83300c2d174db39f3c15
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c23ca51322f57dc13a85c3ea94e0d335dc50ca13
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978471"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830353"
 ---
 # <a name="passing-arguments-by-value-and-by-reference-visual-basic"></a>以傳值和傳址方式傳遞引數 (Visual Basic)
 在 Visual Basic 中，您可以將引數傳遞至程序*值所*或是*傳址*。 這就所謂*傳遞機制*，它決定程序是否可以修改基礎呼叫程式碼中的引數的程式設計項目。 程序宣告會決定每個參數的傳遞機制，藉由指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)關鍵字。  
@@ -69,6 +69,7 @@ ms.locfileid: "56978471"
  [!code-vb[VbVbcnProcedures#74](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class2.vb#74)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)

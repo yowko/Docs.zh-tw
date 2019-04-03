@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeName function
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
-ms.openlocfilehash: becbbef008e8a474db198748d45f260fcb90c758
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 625ddb8fc153708a80e8cf475f48d595efbe4df2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966767"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842625"
 ---
 # <a name="determining-object-type-visual-basic"></a>決定物件類型 (Visual Basic)
 泛型的物件變數 (也就是變數宣告為`Object`) 可以保留任何類別的物件。 使用型別的變數時`Object`，您可能需要採取不同的物件類別為基礎的動作; 例如，某些物件可能不支援的特定屬性或方法。 Visual Basic 提供兩種決定物件變數中儲存的物件類型：`TypeName`函式和`TypeOf...Is`運算子。  
@@ -45,6 +45,7 @@ ms.locfileid: "56966767"
      [!code-vb[VbVbalrOOP#95](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOOP/VB/OOP.vb#95)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Information.TypeName%2A>
 - [使用字串名稱呼叫屬性或方法](../../../../visual-basic/programming-guide/language-features/early-late-binding/calling-a-property-or-method-using-a-string-name.md)
 - [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)

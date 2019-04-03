@@ -17,12 +17,12 @@ helpviewer_keywords:
 - procedure overloading
 - procedures [Visual Basic], parameter lists
 ms.assetid: fbc7fb18-e3b2-48b6-b554-64c00ed09d2a
-ms.openlocfilehash: 4d90b81049197fbbf4a767b17399d3e9c80be0f7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6e8d1fa72c60c4fa3d2237ad24c2d1b4891a7bf2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975468"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828234"
 ---
 # <a name="procedure-overloading-visual-basic"></a>程序多載化 (Visual Basic)
 *多載*程序可讓您表示定義在多個版本中，使用相同名稱但不同的參數清單。 多載的用途是定義程序的數個密切相關的版本，而不需要依名稱加以區隔。 您可以不同的參數清單。  
@@ -85,6 +85,7 @@ ms.locfileid: "56975468"
  [!code-vb[VbVbcnProcedures#57](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#57)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [如何：定義多個版本的程序](./how-to-define-multiple-versions-of-a-procedure.md)
 - [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Object data type [Visual Basic], data types
 - data types [Visual Basic], choosing
 ms.assetid: 64c71a12-9057-4dbf-baca-7379c4aada69
-ms.openlocfilehash: 7e32bf158b91c23c32028eb6877bd0089a9019b2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4808d87322d5b21b70ec38e2eb31b2b204938745
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655045"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821761"
 ---
 # <a name="miscellaneous-data-types-visual-basic"></a>其他資料類型 (Visual Basic)
 Visual Basic 提供幾種資料類型不是目標數字或字元。 相反地，它們會處理特殊資料這類是/否值，日期/時間值和物件位址。  
@@ -31,6 +31,7 @@ Visual Basic 提供幾種資料類型不是目標數字或字元。 相反地，
  利用`Object`資料型別時，您可以使用它來儲存任何資料類型的資料。 缺點是會產生額外的作業需要更多的執行時間，讓您的應用程式執行速度變慢。 如果您使用`Object`實值型別變數，您需要支付*boxing*並*unboxing*。 如果您使用參考型別，會產生*晚期繫結*。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [數值資料類型](../../../../visual-basic/programming-guide/language-features/data-types/numeric-data-types.md)

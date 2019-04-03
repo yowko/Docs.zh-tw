@@ -6,12 +6,12 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: 149af116f2b848082367b33d826bace8345cee05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54571174"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816404"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>HOW TO：決定物件變數參考 (Visual Basic) 的類型
 物件變數包含儲存在其他地方的資料指標。 在執行階段，可以變更該資料型別。 在任何時刻，您可以使用<xref:System.Type.GetTypeCode%2A>方法，以判斷目前的執行階段類型，或有[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)來找出是否有目前的執行階段類型是與指定的型別相容。  
@@ -53,6 +53,7 @@ ms.locfileid: "54571174"
  請注意，變數或運算式，不能指定的型別。 它必須是類型的已定義，例如類別、 結構或介面的名稱。 這包括內建類型，例如`Integer`和`String`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.GetTypeCode%2A>

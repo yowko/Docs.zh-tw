@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 9b23ebca955d961771b194df2c7316cb1b7f4a50
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0d87adee65f491f8c968e4ba93cf4b9df03aff85
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254089"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842651"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>成員的型別 '\<成員名稱 >' 不符合 CLS 標準
 指定不是這個成員的資料類型的一部分[Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) （cls） 標準。 這是不在您的元件中發生錯誤，因為[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]和 Visual Basic 支援這種資料類型。 不過，另一個以完全符合 CLS 標準的程式碼撰寫的元件可能不支援這種資料類型。 這類元件可能無法順利與您的元件互動。  
@@ -42,5 +42,5 @@ ms.locfileid: "55254089"
 -   如果您要與 Automation 或 COM 物件進行互動，請記住，某些型別的資料寬度會與在 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 中的資料寬度不同。 例如，`uint` 在其他環境中通常是 16 位元。 如果您將 16 位元引數傳遞給這類元件，將它宣告為`UShort`而不是`UInteger`中受管理的 Visual Basic 程式碼。  
   
 ## <a name="see-also"></a>另請參閱
-- [反映](../../../framework/reflection-and-codedom/reflection.md)
 
+- [反映](../../../framework/reflection-and-codedom/reflection.md)

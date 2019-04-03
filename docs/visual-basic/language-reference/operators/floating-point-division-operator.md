@@ -16,12 +16,12 @@ helpviewer_keywords:
 - / operator [Visual Basic]
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
-ms.openlocfilehash: 7d9b02a9c997ffcfdd61e277a6ed3779d8821831
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202453"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825062"
 ---
 # <a name="-operator-visual-basic"></a>/ 運算子 (Visual Basic)
 兩數相除並傳回浮點結果。  
@@ -81,6 +81,7 @@ expression1 / expression2
  在上述範例中的運算式會傳回 2.5 和 3.333333 的值。 請注意，結果一律是浮點數 (`Double`)，即使兩個運算元都是整數常數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [/ = 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)
 - [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)
 - [運算子結果的資料類型](../../../visual-basic/language-reference/operators/data-types-of-operator-results.md)

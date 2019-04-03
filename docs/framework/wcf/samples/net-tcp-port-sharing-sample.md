@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing 範例
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: 6180e615d6ae363a4e6fe4bfca3fe0e60f403f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ff63de62ad11ab89721cbf87f1edaca8c54a027
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735486"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830171"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 範例
 TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。 如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。 其他應用程式將無法同時接聽該連接埠。  
@@ -25,7 +25,7 @@ TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分�
   
  NetTcp Port Sharing 是一種 Windows Communication Foundation (WCF) 功能，同樣可讓多個網路應用程式共用單一連接埠。 NetTcp Port Sharing Service 會透過 net.tcp 通訊協定來接受連線，並依據該連線的目的地位址來轉送訊息。  
   
- NetTcp Port Sharing Service 預設並未啟用。 在執行此範例之前，您必須手動啟用服務。 如需詳細資訊，請參閱[＜How to：啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果服務已停用，則當啟動伺服器應用程式時，會擲回例外狀況。  
+ NetTcp Port Sharing Service 預設並未啟用。 在執行此範例之前，您必須手動啟用服務。 如需詳細資訊，請參閱[如何：啟用 Net.TCP Port Sharing Service](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)。 如果服務已停用，則當啟動伺服器應用程式時，會擲回例外狀況。  
   
 ```  
 Unhandled Exception: System.ServiceModel.CommunicationException: The TransportManager failed to listen on the supplied URI using the NetTcpPortSharing service: failed to start the service because it is disabled. An administrator can enable it by running 'sc.exe config NetTcpPortSharing start= demand'.. ---> System.InvalidOperationException: Cannot start service NetTcpPortSharing on computer '.'. ---> System.ComponentModel.Win32Exception: The service cannot be started, either because it is disabled or because it has no enabled devices associated with it  
@@ -139,4 +139,3 @@ Press <ENTER> to terminate client.
   
 5.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。  
   
-## <a name="see-also"></a>另請參閱

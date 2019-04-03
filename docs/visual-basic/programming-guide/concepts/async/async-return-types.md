@@ -2,12 +2,12 @@
 title: 非同步方法的傳回類型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 87ddab62543fae5442a15fc5f200ef914ab8d859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352577"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838348"
 ---
 # <a name="async-return-types-visual-basic"></a>非同步方法的傳回類型 (Visual Basic)
 非同步方法有三種可能的傳回類型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需有關非同步方法的詳細資訊，請參閱[使用 Async 和 Await (Visual Basic) 的非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -293,6 +293,7 @@ End Sub
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [非同步程式中的控制流程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)

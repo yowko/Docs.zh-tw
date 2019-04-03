@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - DirectCast keyword [Visual Basic]
 ms.assetid: 63e5a1d0-4d9e-4732-bf8f-e90c0c8784b8
-ms.openlocfilehash: 03e632bad538f65d010dfaa12f7eb5da15c11091
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 628ce4f06b91d0f514f71dea3aad8ea0fee6dccf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979823"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821500"
 ---
 # <a name="directcast-operator-visual-basic"></a>DirectCast 運算子 (Visual Basic)
 採用根據繼承或實作的型別轉換作業。  
@@ -42,6 +42,7 @@ ms.locfileid: "56979823"
  在上述範例中，執行階段類型`q`是`Double`。 `CType` 成功，因為`Double`可轉換成`Integer`。 不過，第一個`DirectCast`在執行階段失敗，因為執行階段類型的`Double`沒有與繼承關係`Integer`，即使有轉換。 第二個`DirectCast`成功，因為它將從類型轉換<xref:System.Windows.Forms.Form>鍵入<xref:System.Windows.Forms.Control>，從中<xref:System.Windows.Forms.Form>繼承。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Convert.ChangeType%2A?displayProperty=nameWithType>
 - [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

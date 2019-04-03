@@ -6,12 +6,12 @@ helpviewer_keywords:
 - enumerations [Visual Basic], iterating
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
-ms.openlocfilehash: dd7a540839fd833d3a316506e433c576edae5384
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979082"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833356"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>HOW TO：逐一查看 Visual Basic 中列舉
 列舉提供使用相關常數組和建立常數值與名稱之關聯的便利方法。 若要逐一查看列舉型別，您可以將它移到陣列使用<xref:System.Enum.GetValues%2A>方法。 您也可以逐一列舉使用`For...Each`陳述式中，使用<xref:System.Enum.GetNames%2A>或<xref:System.Enum.GetValues%2A>方法來擷取字串或數值的值。  
@@ -23,6 +23,7 @@ ms.locfileid: "56979082"
      [!code-vb[VbEnumsTask#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#7)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [列舉的概觀](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-overview.md)
 - [如何：宣告列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-enumerations.md)
 - [何時使用列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)

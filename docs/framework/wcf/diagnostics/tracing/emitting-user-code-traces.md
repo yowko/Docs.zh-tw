@@ -2,12 +2,12 @@
 title: 發出使用者程式碼追蹤
 ms.date: 03/30/2017
 ms.assetid: fa54186a-8ffa-4332-b0e7-63867126fd49
-ms.openlocfilehash: 5ecc0c2110362f715275729b5e4c4c7e1ec03496
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: eadfe1a77f815f904fb54b8bab51440f3d9f5532
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492660"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831770"
 ---
 # <a name="emitting-user-code-traces"></a>發出使用者程式碼追蹤
 除了啟用追蹤來收集檢測資料產生 Windows Communication Foundation (WCF) 組態中的，您也可以發出使用者程式碼中以程式設計方式追蹤。 如此一來，您就可以主動建立供日後深入診斷之用的檢測資料。 本主題將討論如何完成這項工作。  
@@ -126,15 +126,17 @@ ts.TraceEvent(TraceEventType.Warning, 0, "Throwing exception " + "exceptionMessa
  ![追蹤檢視器：發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/242c9358-475a-4baf-83f3-4227aa942fcd.gif "242c9358-475a-4baf-83f3-4227aa942fcd")  
 依據建立時間 (左面板) 以及依據巢狀活動 (右上方面板) 列示的活動清單  
   
- 如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下圖中，服務會擲回例外狀況，指出 「 服務拒絕處理此要求在使用者程式碼 」。 用戶端也會擲回的例外狀況，指出 「 伺服器無法處理要求，因為發生內部錯誤 」。  
+ 如果服務程式碼擲回連帶導致用戶端擲回的例外狀況 (例如，用戶端未獲得其要求的回應時)，服務和用戶端的警告或錯誤訊息都會因為直接的相互關聯而在同一個活動中產生。 在下圖中，服務會擲回例外狀況，指出 「 服務拒絕處理此要求在使用者程式碼 」。 用戶端也會擲回的例外狀況，指出 「 伺服器無法處理要求，因為發生內部錯誤 」。
+ 
+ 下圖顯示是否要求活動識別碼已傳播跨端點指定的要求錯誤將會出現相同的活動：       
   
- ![使用追蹤檢視器來發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace2.gif "e2eTrace2")  
-如果指定的要求活動識別碼已傳播，則該要求的跨端點錯誤會出現在同一個活動中。  
+ ![如果螢幕擷取畫面顯示給定要求的端點之間的錯誤。](./media/emitting-user-code-traces/trace-viewer-endpoint-errors.gif)  
   
- 按兩下左面板上的「乘法」活動時，會顯示下圖，其中包含每個相關處理序的「乘法」活動追蹤。 我們可以看到警告先發生在服務 (擲回例外狀況)，接著會因為無法處理要求而在用戶端產生警告和錯誤。 因此，我們可以看出端點間發生錯誤的因果關係，從而得知錯誤的根本原因。  
+ 按兩下左面板上的「乘法」活動時，會顯示下圖，其中包含每個相關處理序的「乘法」活動追蹤。 我們可以看到警告先發生在服務 (擲回例外狀況)，接著會因為無法處理要求而在用戶端產生警告和錯誤。 因此，我們可以看出端點間發生錯誤的因果關係，從而得知錯誤的根本原因。 
+
+ 下圖顯示錯誤相互關聯的圖形檢視：    
   
- ![使用追蹤檢視器來發出使用者&#45;程式碼追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/media/e2etrace3.gif "e2eTrace3")  
-錯誤相互關聯的圖形檢視  
+ ![如果螢幕擷取畫面會顯示錯誤相互關聯的圖形檢視。](./media/emitting-user-code-traces/trace-viewer-error-correlation.gif)  
   
  為了取得前述的追蹤，我們將使用者追蹤來源設定為 `ActivityTracing`，而將 `propagateActivity=true` 追蹤來源設定為 `System.ServiceModel`。 我們並未將 `ActivityTracing` 設定給 `System.ServiceModel` 追蹤來源，來讓使用者程式碼使用使用者程式碼活動傳播  （當 ServiceModel 活動追蹤開啟時，用戶端中所定義的活動識別碼不會傳播到服務使用者程式碼;傳輸，不過，相互關聯的用戶端和服務使用者程式碼活動的中繼的 WCF 活動。）  
   

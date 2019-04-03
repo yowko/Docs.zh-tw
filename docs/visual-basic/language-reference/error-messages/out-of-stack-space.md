@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID28
 ms.assetid: bfcd792b-ac29-4158-81fc-ea0c13f4ffa2
-ms.openlocfilehash: 2f91763888069b6dca90da03995dc1b6812fd426
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 25905e65e74b11d167d3ce2ad258599fb958eb88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655487"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814597"
 ---
 # <a name="out-of-stack-space-visual-basic"></a>堆疊空間不足 (Visual Basic)
 堆疊是執行程式的需求使用動態記憶體成長和縮減工作區域。 已超過其限制。  
@@ -29,4 +29,5 @@ ms.locfileid: "54655487"
 6.  請確定您不會觸發已將事件程序呼叫堆疊的事件 」 事件 cascade"。 事件串聯類似於未結束的遞迴程序呼叫，但它是較不明顯，因為 Visual Basic，而不是明確呼叫程式碼中的進行呼叫。 使用`Calls`對話方塊來檢視哪些程序會在堆疊上作用。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [記憶體視窗](/visualstudio/debugger/memory-windows)

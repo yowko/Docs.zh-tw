@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
-ms.openlocfilehash: 50054b9e32f4d49a34c1bb1a5c79129662019aee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965893"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818601"
 ---
 # <a name="value-comparisons-visual-basic"></a>數值比較 (Visual Basic)
 比較運算子可用來建構比較數值變數的值的運算式。 這些運算式會傳回`Boolean`值根據比較為 true 或 false。 這類運算式的範例如下所示。  
@@ -45,6 +45,7 @@ ms.locfileid: "56965893"
  [!code-vb[VbVbalrOperators#86](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#86)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [布林運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [運算子和運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

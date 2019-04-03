@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32053
 ms.assetid: 281564b7-99f7-451f-b10d-f985e831bb25
-ms.openlocfilehash: c5d427495e8eedae9dc0163c97401338fb6d0bbd
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fa8607bf72dfb344048ec82514182dcb6810274d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276610"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817150"
 ---
 # <a name="copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument-narrows-from-type-typename1-to-type-typename2"></a>'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數會從類型'\<typename1 >' 為類型 '\<2&gt >'
 可擴展為對應參數類型的引數呼叫的程序，並將參數轉換成引數會縮小。  
@@ -34,6 +34,7 @@ ms.locfileid: "55276610"
 -   如果您需要將值傳回呼叫的引數，定義反向轉換運算子，作為[Widening](../../../visual-basic/language-reference/modifiers/widening.md)、 的話。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [程序參數和引數](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [以傳值和傳址方式傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

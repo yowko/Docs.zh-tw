@@ -21,12 +21,12 @@ helpviewer_keywords:
 - OrElse operator [Visual Basic]
 - logical operators [Visual Basic], unary
 ms.assetid: ca474e13-567d-4b1d-a18b-301433705e57
-ms.openlocfilehash: 94d43b7bea48d85e612b5c995e20e286f14b024a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ac47b6d7fa4861d18646a23f442caccc4062852f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819303"
 ---
 # <a name="logical-and-bitwise-operators-in-visual-basic"></a>Visual Basic 中的邏輯運算子和位元運算子
 邏輯運算子會比較`Boolean`運算式，並傳回`Boolean`結果。 `And`， `Or`， `AndAlso`， `OrElse`，並`Xor`運算子*二進位*因為它們會使用兩個運算元，而`Not`運算子是*一元*因為這會在單一運算元。 其中有些運算子也可以執行位元整數值上的邏輯作業。  
@@ -96,6 +96,7 @@ ms.locfileid: "56976495"
 >  只有整數類資料型別，就可以執行位元運算。 浮點數值必須轉換成整數類資料類型，才能繼續位元運算。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [邏輯/位元運算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/logical-bitwise-operators.md)
 - [布林運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/boolean-expressions.md)
 - [在 Visual Basic 中的算術運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

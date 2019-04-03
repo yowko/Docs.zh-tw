@@ -2,12 +2,12 @@
 title: HOW TO：查詢字串 (LINQ) (Visual Basic) 中的字元
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
-ms.openlocfilehash: 3a4f3bbca313747e0b16170719b9028e5dc9174f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819485"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>HOW TO：查詢字串 (LINQ) (Visual Basic) 中的字元
 因為 <xref:System.String> 類別會實作泛型 <xref:System.Collections.Generic.IEnumerable%601> 介面，所以可以用字元序列的形式查詢任何字串。 不過，這不是常見的 LINQ 用法。 對於複雜的模式比對作業，使用 <xref:System.Text.RegularExpressions.Regex> 類別。  
@@ -58,5 +58,6 @@ End Class
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [如何：合併 LINQ 查詢與規則運算式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-combine-linq-queries-with-regular-expressions.md)

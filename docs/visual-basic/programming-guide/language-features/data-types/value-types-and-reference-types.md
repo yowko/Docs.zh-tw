@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 2f09a2842edfa9471267f294c9b64229ae824098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e0831a045da5eb5798d10aeb977981ecae20040
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819526"
 ---
 # <a name="value-types-and-reference-types"></a>Value Types and Reference Types
 在 Visual Basic 中的資料類型是根據其分類所實作的。 Visual Basic 資料類型可以根據自己的資料或資料指標，特定類型的變數是否儲存分類。 它會儲存它自己的資料是否*實值型別*; 如果它是的記憶體中其他位置的資料會保留指標*參考型別*。  
@@ -73,6 +73,7 @@ Dim totals() As Single = New Single(8) {}
  您可以找出是否`Object`變數做為參考型別或實值型別傳遞至<xref:Microsoft.VisualBasic.Information.IsReference%2A>方法中的<xref:Microsoft.VisualBasic.Information>類別的<xref:Microsoft.VisualBasic?displayProperty=nameWithType>命名空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 會傳回`True`如果內容`Object`變數代表參考型別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [可為 Null 的值類型](../../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)
 - [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)

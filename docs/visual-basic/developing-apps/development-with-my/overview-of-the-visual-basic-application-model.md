@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 258e3862da79e78510991df26cc286c7231ad097
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464095"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819758"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic 應用程式模型概觀
 Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用程式的行為： 在 Visual Basic 應用程式模型。 此模型包含事件處理應用程式的啟動和關機，以及攔截未處理的例外狀況的事件。 它也會提供單一執行個體的應用程式的開發的支援。 應用程式模型，所以需要更多控制的開發人員可以自訂其可覆寫的方法。  
@@ -55,6 +55,7 @@ Visual Basic 提供定義完善的模型，可用於控制 Windows Forms 應用�
  根據預設，Visual Basic 應用程式模型可供 Windows Form 專案。 如果您設定應用程式使用不同的啟動物件，或自訂的應用程式程式碼的開頭`Sub Main`，然後該物件或類別可能需要提供的實作<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別使用的應用程式模型。 如需變更啟始物件的詳細資訊，請參閱 < [Application Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>
 - <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>

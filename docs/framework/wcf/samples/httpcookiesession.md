@@ -2,12 +2,12 @@
 title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
-ms.openlocfilehash: 9e15aefd4a66eac98b679e60c628f90149fe908a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab6efa726b9a7eaf8106ff8752cdc4ecdfb0112f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520850"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816716"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 這個範例會示範如何建置自訂通訊協定通道，以便在工作階段管理使用 HTTP Cookie。 這個通道可以啟用 Windows Communication Foundation (WCF) 服務和 ASMX 用戶端之間或 WCF 用戶端和 ASMX 服務之間的通訊。  
@@ -170,4 +170,3 @@ Press <ENTER> to terminate client.
   
 4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-## <a name="see-also"></a>另請參閱

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Operator statement [Visual Basic]
 - CType function [Visual Basic], Operator statement
 ms.assetid: b12ec4af-1ad7-4a17-865b-c5ee96320ae5
-ms.openlocfilehash: 44b0a2513f504c8fecec74868130463581b597af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 184970d33aae4af135153f9d6f6755770bdf84f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981695"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818588"
 ---
 # <a name="operator-statement"></a>Operator Statement
 宣告運算子符號、 運算元與類別或結構定義的運算子程序的程式碼。  
@@ -139,7 +139,7 @@ End Operator
   
  傳回的型別沒有對應至其中一個運算元的類型。 比方說，這類的比較運算子`=`或是`<>`可能會傳回`Boolean`即使兩個運算元是`Boolean`。  
   
-## <a name="logical-and-bitwise-operators"></a>邏輯和位元運算子  
+## <a name="logical-and-bitwise-operators"></a>邏輯運算子和位元運算子  
  `And`， `Or`， `Not`，和`Xor`運算子可以執行在 Visual Basic 中的邏輯或位元運算。 不過，如果您定義這些運算子的其中一個類別或結構上，您可以定義只有其位元的作業。  
   
  您不能定義`AndAlso`直接與運算子`Operator`陳述式。 不過，您可以使用`AndAlso`如果您已符合下列條件：  
@@ -171,6 +171,7 @@ End Operator
  [!code-vb[VbVbalrStatements#44](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#44)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
 - [IsTrue 運算子](../../../visual-basic/language-reference/operators/istrue-operator.md)
 - [Widening](../../../visual-basic/language-reference/modifiers/widening.md)

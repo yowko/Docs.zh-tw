@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: ea6f230715520cb35809d57db76b300da326ec9a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283461"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822257"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>巢狀函式沒有與委派相容的簽章 '\<委派名稱 >'
 Lambda 運算式已指派給具有不相容的簽章的委派。 例如，下列程式碼中，委派`Del`有兩個整數參數。  
@@ -36,5 +36,6 @@ Delegate Function Del(ByVal p As Integer, ByVal q As Integer) As Integer
 -   調整委派定義或指派的 lambda 運算式，使簽章相容。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Lambda 運算式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)

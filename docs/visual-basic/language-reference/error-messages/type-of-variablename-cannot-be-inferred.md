@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
-ms.openlocfilehash: 1f1df0c7391c027994caabadc4b857bec55f5938
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367176"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815870"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>類型 '\<變數名稱 >' 無法推斷，因為迴圈繫結和 step 變數不會擴展為相同的型別
 您已撰寫`For...Next`下列條件成立，因為編譯器無法推斷迴圈控制變數的資料類型的迴圈：  
@@ -63,6 +63,7 @@ Dim n = 20
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [For...Next 陳述式](../../../visual-basic/language-reference/statements/for-next-statement.md)
 - [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)

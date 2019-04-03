@@ -2,12 +2,12 @@
 title: HOW TO：命名空間 (Visual Basic) 中的 XML 撰寫查詢
 ms.date: 07/20/2015
 ms.assetid: 7d4131b5-3288-414f-b77c-b2edc2a1f465
-ms.openlocfilehash: 00dfc4e14c38357deb3efc4a32fd00a97f6010b8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4efa1de254a0264752514c5ae6e601a66fa56f95
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609924"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833434"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-visual-basic"></a>HOW TO：命名空間 (Visual Basic) 中的 XML 撰寫查詢
 若要撰寫命名空間 (Namespace) 中的 XML 查詢，您必須使用具有正確命名空間的 <xref:System.Xml.Linq.XName> 物件。  
@@ -52,9 +52,9 @@ End Module
 ```  
   
 ## <a name="example"></a>範例  
- 不過，在 Visual Basic 中，針對使用具有前置詞之命名空間的 XML 樹狀撰寫查詢與查詢預設命名空間中的 XML 樹狀相當不同。 一般而言，您會使用 `Imports` 陳述式來匯入具有前置詞的命名空間。 然後，當您建構 XML 樹狀結構時，就會將此前置詞用於項目和屬性名稱中。 此外，在使用 XML 屬性來查詢 XML 樹狀結構時，您也會使用此前置詞。  
+ 不過，在 Visual Basic 中，針對使用具有前置詞之命名空間的 XML 樹狀結構撰寫查詢與查詢預設命名空間中的 XML 樹狀結構相當不同。 一般而言，您會使用 `Imports` 陳述式來匯入具有前置詞的命名空間。 然後，當您建構 XML 樹狀時，就會將此前置詞用於項目和屬性名稱中。 此外，在使用 XML 屬性來查詢 XML 樹狀時，您也會使用此前置詞。  
   
- 下列範例會建立位於命名空間中，具有前置詞的 XML 樹狀結構。 接著，它會擷取項目的集合。  
+ 下列範例會建立位於命名空間中，具有前置詞的 XML 樹狀。 接著，它會擷取項目的集合。  
   
 ```vb  
 Imports <xmlns:aw="http://www.adventure-works.com">  
@@ -89,4 +89,5 @@ End Module
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [處理 XML 命名空間 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)

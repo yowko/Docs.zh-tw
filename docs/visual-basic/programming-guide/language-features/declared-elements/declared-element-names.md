@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5311bba92043d3fded34a5d9337b6af13e213d4a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573383"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814064"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣告項目名稱 (Visual Basic)
 每個宣告的項目有一個名稱，也稱為*識別碼*，這是程式碼會使用來參考它。  
@@ -90,6 +90,7 @@ ms.locfileid: "54573383"
  比較名稱與地區設定無關。 如果兩個名稱符合在一個地區設定中，保證在所有地區設定中比對。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [宣告項目](../../../../visual-basic/programming-guide/language-features/declared-elements/index.md)
 - [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

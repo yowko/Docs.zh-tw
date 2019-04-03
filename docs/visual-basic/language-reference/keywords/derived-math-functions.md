@@ -21,12 +21,12 @@ helpviewer_keywords:
 - degrees
 - arccosine function
 ms.assetid: 63e449d8-9444-44fb-8db1-6d9cf346e2aa
-ms.openlocfilehash: 1273871faf65afdd1a894c03f13a2c93507c1b13
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d0606c52d1d50fcc2fd8eea3ad2851c95b18a69
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505857"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836580"
 ---
 # <a name="derived-math-functions-visual-basic"></a>衍生的數學函式 (Visual Basic)
 下表顯示可以衍生自的內建數學函式的非內建的數學函式<xref:System.Math?displayProperty=nameWithType>物件。 您可以存取內建數學函式，藉由新增`Imports System.Math`至您的檔案或專案。  
@@ -55,4 +55,5 @@ ms.locfileid: "54505857"
 |數值的反雙曲餘切值 (Acoth(x))|記錄 ((x + 1) / (x – 1)) / 2|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [數學函式](../../../visual-basic/language-reference/functions/math-functions.md)

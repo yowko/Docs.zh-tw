@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Widening keyword [Visual Basic]
 - data type conversion [Visual Basic]
 ms.assetid: 646ae263-94d3-40a2-b0cc-64f619292f56
-ms.openlocfilehash: 3b9d1ec15c6c2000fb0842abe25848f853cdf986
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d43d4f5f931881d5c8b663c719fe7f92559799
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703702"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825309"
 ---
 # <a name="widening-visual-basic"></a>Widening (Visual Basic)
 表示轉換運算子 (`CType`) 將類別或結構轉換成的型別，可以保留原始的類別或結構的所有可能的值。  
@@ -34,6 +34,7 @@ ms.locfileid: "54703702"
  定義擴展和縮小轉換運算子，例如看到[How to:定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Narrowing](../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

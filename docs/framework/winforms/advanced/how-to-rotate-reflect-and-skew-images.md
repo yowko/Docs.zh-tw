@@ -1,5 +1,5 @@
 ---
-title: HOW TO：旋轉、 反射和傾斜影像
+title: HOW TO：旋轉、反射和傾斜影像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 3e539f41667edb505269fe420396c79b68f34e8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dda03c9c1e1390ca6a5250471f047d3747e989e2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839908"
 ---
-# <a name="how-to-rotate-reflect-and-skew-images"></a>HOW TO：旋轉、 反射和傾斜影像
+# <a name="how-to-rotate-reflect-and-skew-images"></a>HOW TO：旋轉、反射和傾斜影像
 您可以旋轉、 反射和傾斜影像藉由指定之左上角、 右上方和左下角邊角原始映像的目的點。 這三個目的點決定仿射轉換，原始的矩形映像會對應至平行四邊形。  
   
 ## <a name="example"></a>範例  
@@ -30,15 +30,15 @@ ms.locfileid: "57711495"
   
  下圖顯示原始的映像和對應的平行四邊形的映像。 原始的映像具有已扭曲、 反映、 旋轉和轉譯。 原始的映像的上邊緣的 x 軸會對應到執行的那一行 （200，20） 和 （110，100）。 原始的映像的左邊緣沿著 y 軸會對應到執行的那一行 （200，20） 和 250 (30）。  
   
- ![等量分散](./media/stripes1.gif "Stripes1")  
+ ![原始的映像和映像對應的平行四邊形。](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-illustration.gif)  
   
- 下圖類似的轉換套用至相片的映像。  
+ 下圖顯示類似的轉換套用至相片的映像：  
   
- ![轉換的 Climber](./media/transformedclimber.png "TransformedClimber")  
+ ![就和對應的平行四邊形的圖片的圖片。](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-photo.png)  
   
- 下圖類似的轉換套用至中繼檔。  
+ 下圖顯示類似的轉換套用至中繼檔：  
   
- ![轉換中繼檔](./media/transformedmetafile.png "TransformedMetafile")  
+ ![說明圖形和文字，以及對應之平行四邊形。](./media/how-to-rotate-reflect-and-skew-images/reflected-skewed-rotated-metafile.png)  
   
  下列範例會產生的第一個圖例中顯示的映像。  
   

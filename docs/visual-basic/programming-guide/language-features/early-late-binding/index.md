@@ -2,17 +2,23 @@
 title: 早期和晚期繫結 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'early binding [Visual Basic]'
-  - 'objects [Visual Basic], late-bound'
-  - 'objects [Visual Basic], early-bound'
-  - 'objects [Visual Basic], late bound'
-  - 'early binding [Visual Basic], Visual Basic compiler'
-  - 'binding [Visual Basic], late and early'
-  - 'objects [Visual Basic], early bound'
-  - 'Visual Basic compiler, early and late binding'
-  - 'late binding [Visual Basic]'
-  - 'late binding [Visual Basic], Visual Basic compiler'
+- early binding [Visual Basic]
+- objects [Visual Basic], late-bound
+- objects [Visual Basic], early-bound
+- objects [Visual Basic], late bound
+- early binding [Visual Basic], Visual Basic compiler
+- binding [Visual Basic], late and early
+- objects [Visual Basic], early bound
+- Visual Basic compiler, early and late binding
+- late binding [Visual Basic]
+- late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
+ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824789"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>早期和晚期繫結 (Visual Basic)
 Visual Basic 編譯器會執行這個程序稱為`binding`當物件指派給物件變數。 將物件指派給宣告為特定物件型別的變數時，該物件即為「早期繫結」。 早期繫結物件讓編譯器能夠配置記憶體，並在應用程式執行之前執行其他最佳化。 例如，下列程式碼片段會將變數宣告為 <xref:System.IO.FileStream> 類型：  
@@ -32,6 +38,7 @@ Visual Basic 編譯器會執行這個程序稱為`binding`當物件指派給物�
 >  晚期繫結只能用來存取宣告為 `Public` 的型別成員。 存取宣告為 `Friend` 或 `Protected Friend` 的成員會導致執行階段錯誤。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Interaction.CreateObject%2A>
 - [物件存留期：如何建立和終結物件](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-lifetime-how-objects-are-created-and-destroyed.md)
 - [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)

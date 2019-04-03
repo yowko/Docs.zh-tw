@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
-ms.openlocfilehash: f875206b15ee048311e43624e197e78413de522e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279613"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831755"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>隱含的轉換，從 '\<typename1 >' 到'\<2&gt >' 的 'ByRef' 參數的值複製 '\<參數名稱 >' 回相符引數。
 與呼叫的程序[ByRef](../../../visual-basic/language-reference/modifiers/byref.md)比其對應參數的不同類型的引數。  
@@ -32,6 +32,7 @@ ms.locfileid: "55279613"
 -   如果您需要呼叫引數類型與參數類型不同的程序，但不需要將值傳回給呼叫中引數，請將此參數定義為 [ByVal](../../../visual-basic/language-reference/modifiers/byval.md) ，而非 `ByRef`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [程序參數和引數](../../../visual-basic/programming-guide/language-features/procedures/procedure-parameters-and-arguments.md)
 - [以傳值和傳址方式傳遞引數](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

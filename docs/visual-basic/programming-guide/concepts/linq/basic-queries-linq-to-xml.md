@@ -2,12 +2,12 @@
 title: 基本查詢 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: aec6ef60-f6f4-4548-b3db-cf6c94bb0008
-ms.openlocfilehash: c0f1d34360b0336109cb2ba9471274e061deffca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f4a0508fddd5140ff2cc8f82f9c613a66b2d7ca
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650807"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821389"
 ---
 # <a name="basic-queries-linq-to-xml-visual-basic"></a>基本查詢 (LINQ to XML) (Visual Basic)
 本節提供 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 基本查詢的範例。  
@@ -31,4 +31,5 @@ ms.locfileid: "54650807"
 |[如何：偵錯空的查詢結果集 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-debug-empty-query-results-sets.md)|針對預設命名空間中的 XML 偵錯查詢時，顯示適當的修正。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢 XML 樹狀結構 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/querying-xml-trees.md)

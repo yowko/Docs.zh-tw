@@ -14,12 +14,12 @@ helpviewer_keywords:
 - operators [Visual Basic], Boolean
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
-ms.openlocfilehash: 065df7d6217dd6f817dee1d11dd0fd4a68b6323c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965536"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825530"
 ---
 # <a name="boolean-expressions-visual-basic"></a>布林運算式 (Visual Basic)
 A*布林運算式*是評估為值的運算式[布林資料型別](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`或`False`。 `Boolean` 運算式可以有數種形式。 最簡單的是直接比較的值`Boolean`變數設為`Boolean`常值，如下列範例所示。  
@@ -67,6 +67,7 @@ A*布林運算式*是評估為值的運算式[布林資料型別](../../../../vi
  您可以使用括號來控制的布林運算式的評估順序。 括號括住的運算式會評估第一次。 多個巢狀層級，優先順序會授與給巢狀最深處的運算式。 括號內評估會繼續根據運算子優先順序的規則。 如需詳細資訊，請參閱 < [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的邏輯和位元運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/logical-and-bitwise-operators.md)
 - [數值比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [陳述式](../../../../visual-basic/programming-guide/language-features/statements.md)

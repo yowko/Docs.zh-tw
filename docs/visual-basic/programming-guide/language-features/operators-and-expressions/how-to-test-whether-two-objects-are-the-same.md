@@ -9,12 +9,12 @@ helpviewer_keywords:
 - objects [Visual Basic], variables referring to same
 - Visual Basic code, operators
 ms.assetid: f760e828-8704-4256-bc2d-c22a4c93b524
-ms.openlocfilehash: d13671f284863fa7bf56964c2b9b963c25e8ea52
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dbb268175d197e7b931af45a98f3a273c593e5a3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977444"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819105"
 ---
 # <a name="how-to-test-whether-two-objects-are-the-same-visual-basic"></a>HOW TO：測試兩個物件是否相同 (Visual Basic)
 如果您有兩個參考物件的變數，您可以使用`Is`或`IsNot`運算子，或兩者，以判斷它們是否參考相同的執行個體。  
@@ -30,4 +30,5 @@ ms.locfileid: "56977444"
  您是否使用`Is`或`IsNot`是您的個人比較方便。 一個可能比其他指定的運算式中讀取的工作變得更容易。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

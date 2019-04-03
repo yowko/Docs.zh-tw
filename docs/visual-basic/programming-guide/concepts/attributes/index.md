@@ -2,12 +2,12 @@
 title: 屬性概觀 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 1449f69b-c063-41de-8d89-f0bbdcf96ac6
-ms.openlocfilehash: 282788f9aa5a1ac8c4ede95f04b45c26b9f56588
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bb012b49c76963306d723d7732b4c7054bf13ebb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559293"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827688"
 ---
 # <a name="attributes-overview-visual-basic"></a>屬性概觀 (Visual Basic)
 屬性提供一種功能強大的方法，可將中繼資料或宣告資訊關聯至程式碼 (組建、型別、方法、屬性等)。 將屬性關聯至程式實體之後，就能在執行階段使用稱為「反映」的技術來查詢該屬性。 如需詳細資訊，請參閱[反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)。  
@@ -143,6 +143,7 @@ Module: CLSCompliant(True)>
 -   [呼叫端資訊 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/caller-information.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)
 - [反映 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/reflection.md)
 - [屬性](../../../../standard/attributes/index.md)

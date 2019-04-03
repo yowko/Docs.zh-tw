@@ -2,12 +2,12 @@
 title: 建立 XML 樹狀結構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
-ms.openlocfilehash: fa7afe913c0faffca23b457ce58755f1db55400c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630940"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819186"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>建立 XML 樹狀結構 (Visual Basic)
 其中一個最常見的 XML 工做為建構 XML 樹狀結構。 本節描述數種建立這些樹狀結構的方式。  
@@ -25,4 +25,5 @@ ms.locfileid: "54630940"
 |[XElement 和 XDocument 物件的有效內容](../../../../visual-basic/programming-guide/concepts/linq/valid-content-of-xelement-and-xdocument-objects.md)|說明可以傳遞給用於將內容加入至項目和文件之建構函式和方法的有效引數。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程式設計手冊 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/programming-guide-linq-to-xml.md)

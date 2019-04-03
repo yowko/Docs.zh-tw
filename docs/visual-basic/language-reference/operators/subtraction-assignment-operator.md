@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator -=
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
-ms.openlocfilehash: c3495c4e45fe5e1d497578ee3ee6afe874e90eed
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: be1ff4f10f6b30d8448d2441ee3ad2c1e2f80e2d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203041"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815897"
 ---
 # <a name="--operator-visual-basic"></a>-= 運算子 (Visual Basic)
 減去運算式的值的變數或屬性的值，然後將結果指派給變數或屬性。  
@@ -47,6 +47,7 @@ variableorproperty -= expression
  [!code-vb[VbVbalrOperators#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [-運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/subtraction-operator.md)
 - [指派運算子](../../../visual-basic/language-reference/operators/assignment-operators.md)
 - [算術運算子](../../../visual-basic/language-reference/operators/arithmetic-operators.md)

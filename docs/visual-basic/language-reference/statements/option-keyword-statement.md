@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Option keyword [Visual Basic]
 ms.assetid: 6b2f41c4-2403-43b6-8a14-94a3775e5b47
-ms.openlocfilehash: 29b2602664387ee233574686440691d2f4da830b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 96ab02bf61f6b326c3f09615bf19f9e2ecae7e86
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279158"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819558"
 ---
 # <a name="option-keyword-statement"></a>選項\<關鍵字 > 陳述式
 引進指定套用至整個原始程式檔的編譯器選項的陳述式。  
@@ -30,4 +30,5 @@ ms.locfileid: "55279158"
  [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

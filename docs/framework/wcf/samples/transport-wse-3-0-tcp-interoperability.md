@@ -1,15 +1,15 @@
 ---
-title: 傳輸:WSE 3.0 TCP 互通性
+title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 870a0de493a4e60404d11115de58735e5fbb968f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 342c9c39eaa755363615dd83933cf00480e01c91
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653004"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842352"
 ---
-# <a name="transport-wse-30-tcp-interoperability"></a>傳輸:WSE 3.0 TCP 互通性
+# <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建置此自訂 WCF 傳輸：  
   
 1.  從 TCP 通訊端 (Socket) 開始，建立會使用 DIME 框架來描述訊息界限之 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的用戶端和伺服器實作。  
@@ -157,7 +157,7 @@ Received Body: to me.
 Press enter.  
 ```  
   
- 伺服器:  
+ 伺服器：  
   
 ```  
 Listening for messages at soap://stockservice.contoso.com/wse/samples/2003/06/TcpSyncStockService  
@@ -195,4 +195,3 @@ Symbols:
   
     8.  會在新主控台中啟動 TCP 傳輸測試用戶端。 用戶端要求積存會從服務進行引用，並在其主控台視窗中顯示結果。  
   
-## <a name="see-also"></a>另請參閱

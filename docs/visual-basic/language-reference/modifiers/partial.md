@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Partial keyword [Visual Basic]
 - type promotion
 ms.assetid: 7adaef80-f435-46e1-970a-269fff63b448
-ms.openlocfilehash: e1464421866ee22f27f9cf0a3611bc09a631c004
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0f74935d58d47e65b5eb614abc86a3fc9c8e6c42
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975832"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838361"
 ---
 # <a name="partial-visual-basic"></a>Partial (Visual Basic)
 表示類別宣告為類型的部分定義。  
@@ -80,8 +80,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
   
      只有在完整路徑相同時，編譯器才會合併部分定義。  
   
- 
-  `Partial` 關鍵字可用於以下內容：  
+ `Partial` 關鍵字可用於以下內容：  
   
  [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)  
   
@@ -95,6 +94,7 @@ Partial { Class | Structure | Interface | Module } name [ (Of typelist) ]
  上述範例中的兩個部分定義可位於相同的原始程式檔或在兩個不同的原始程式檔中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Class 陳述式](../../../visual-basic/language-reference/statements/class-statement.md)
 - [Structure 陳述式](../../../visual-basic/language-reference/statements/structure-statement.md)
 - [型別提升](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)

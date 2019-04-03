@@ -2,12 +2,12 @@
 title: 使用純虛擬函式 (Visual Basic) 進行重構
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
-ms.openlocfilehash: 3adaede7bce206d6018f1eb624d9ce04f53c04b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728277"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833618"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>使用純虛擬函式 (Visual Basic) 進行重構
 下列範例會重構上述範例中，[重構使用擴充方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)，才能使用純虛擬函式，在此範例中，程式碼，以尋找段落的文字移到純靜態方法`ParagraphText`.  
@@ -173,6 +173,7 @@ StyleName:Code >Hello World<
 -   [結構投影 XML 不同圖案 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [教學課程：管理 WordprocessingML 文件 (Visual Basic) 中的內容](../../../../visual-basic/programming-guide/concepts/linq/tutorial-manipulating-content-in-a-wordprocessingml-document.md)
 - [重構使用擴充方法 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)
 - [重構為純虛擬函式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/refactoring-into-pure-functions.md)

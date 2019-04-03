@@ -19,12 +19,12 @@ helpviewer_keywords:
 - zeros, trailing
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
-ms.openlocfilehash: 456383dd2f38e96a8ff18472ff44c65ba7b4a341
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626477"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824659"
 ---
 # <a name="double-data-type-visual-basic"></a>Double 資料類型 (Visual Basic)
 保存帶正負號的 IEEE 64 位元 （8 個位元組） 雙精確度浮點數，範圍從-1.79769313486231570 e + 308 到-4.94065645841246544-324 負值進出 4.94065645841246544-324 1.79769313486231570 e + 308 到正的數值。 雙精度數字儲存的是實數的近似值。  
@@ -56,6 +56,7 @@ ms.locfileid: "54626477"
 -   **Framework 型別。** 在 .NET Framework 中對應的類型為 <xref:System.Double?displayProperty=nameWithType> 結構。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Double?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)
 - [Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)

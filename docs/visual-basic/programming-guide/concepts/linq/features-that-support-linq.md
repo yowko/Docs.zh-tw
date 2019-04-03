@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic, LINQ features
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
-ms.openlocfilehash: e76fcb891e0b258d261208f7cb9173c49899ba11
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974259"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814493"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>支援 LINQ 的 Visual Basic 功能
 名稱[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]指的是支援的查詢語法，並直接在語言中的其他語言建構的 Visual Basic 中的技術。 使用[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，您不必學習新語言來查詢外部資料來源。 您可以使用 Visual Basic，就可查詢對關聯式資料庫、 XML 存放區或物件中的資料。 這項整合到語言的查詢功能可讓您編譯時間檢查有語法錯誤和型別安全。 這項整合也可確保您已經知道大部分的您必須知道要在 Visual Basic 中撰寫內容豐富且各種查詢。  
@@ -94,6 +94,7 @@ ms.locfileid: "56974259"
  如需詳細資訊，請參閱 [Lambda 運算式](../../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Language-Integrated Query (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [使用 Visual Basic 撰寫 LINQ 入門](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

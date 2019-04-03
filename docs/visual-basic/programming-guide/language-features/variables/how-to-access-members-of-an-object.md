@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 5e91f1b99a17f4bbdc65a77ab26050ee57e96ac4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724839"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819643"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>HOW TO：存取成員的物件 (Visual Basic)
 當您參考之物件的物件變數時，您通常會想要使用該物件，例如方法、 屬性、 欄位和事件的成員。 例如，一旦您建立新<xref:System.Windows.Forms.Form>物件，您可能想要設定其<xref:System.Windows.Forms.Control.Text%2A>屬性或呼叫其<xref:System.Windows.Forms.Control.Focus%2A>方法。  
@@ -71,6 +71,7 @@ ms.locfileid: "54724839"
      若要能夠存取您指派給物件變數的任何物件的成員，您必須設定`Option Strict Off`。 當您這樣做時，編譯器無法保證指定的成員由您指派給變數的物件。 如果物件不會公開的成員，您嘗試存取，<xref:System.MemberAccessException>發生例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Object>
 - <xref:System.Windows.Forms.Form>
 - <xref:System.MemberAccessException>

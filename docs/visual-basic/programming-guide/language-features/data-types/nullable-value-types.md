@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: 522526392dd12ede729fe8b96677029c05af57c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 437107bb522e1635dffa4a2de88c5d10d6707592
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665691"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825130"
 ---
 # <a name="nullable-value-types-visual-basic"></a>可為 Null 的實值類型 (Visual Basic)
 有時候您使用實值型別，在某些情況下沒有已定義的值。 比方說，在資料庫中的欄位可能要區分具有指派的值有意義，而不需指派的值。 實值型別可以擴充為一般值或 null 值。 呼叫這類延伸模組*可為 null 的型別*。  
@@ -98,6 +98,7 @@ ms.locfileid: "54665691"
  資料庫可以是其中一個最重要的位置，使用可為 null 的類型。 並非所有的資料庫物件目前支援可為 null 的型別，但設計工具所產生的資料表配接器。 請參閱中的 < TableAdapter 支援可為 Null 的型別 > [TableAdapter 概觀](/visualstudio/data-tools/tableadapter-overview)。
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.InvalidOperationException>
 - <xref:System.Nullable%601.HasValue%2A>
 - [使用可為 Null 的型別](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)

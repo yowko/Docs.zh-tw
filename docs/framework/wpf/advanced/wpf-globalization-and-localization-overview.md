@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: 279fe008c8624ff2209f5e08c3c9f9713ad201cd
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c97ae4f277395a75fb7522ffb74061001c10e07d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412028"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819576"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF 全球化和當地語系化概觀
 
@@ -94,9 +94,9 @@ ms.locfileid: "58412028"
   
  下圖顯示根據 BAML 形式之 XAML 的一般當地語系化工作流程。 本圖假設開發人員以英文撰寫的應用程式。 開發人員會建立和全球化 WPF 應用程式。 在專案檔中，開發人員設定`<UICulture>en-US</UICulture>`以便建置時，產生語言中性主要組件的附屬。 包含所有可當地語系化資源的.resources.dll。 或者，有人保持主要組件中的來源語言，因為 WPF 當地語系化 API 支援從主要組件進行擷取。 建置程序之後，XAML 會編譯到 BAML。 與文化特性無關的 MyDialog.exe.resources.dll 會傳送給英語系的客戶。  
   
- ![當地語系化工作流程](./media/localizationworkflow.png "LocalizationWorkflow")  
+ ![此圖表顯示當地語系化工作流程。](./media/wpf-globalization-and-localization-overview/localization-workflow.png)  
   
- ![未當地語系化工作流程](./media/localizationworkflow2.png "LocalizationWorkflow2")  
+ ![此圖表顯示未當地語系化工作流程。](./media/wpf-globalization-and-localization-overview/unlocalized-workflow.png)  
   
 ## <a name="examples-of-wpf-localization"></a>WPF 當地語系化範例
 
@@ -108,11 +108,11 @@ ms.locfileid: "58412028"
   
  **英文：**  
   
- ![執行對話方塊](./media/rundialogenglish.PNG "RunDialogEnglish")  
+ ![顯示英文執行 對話方塊的螢幕擷取畫面。](./media/wpf-globalization-and-localization-overview/run-dialog-box-english.png)  
   
  **德文：**  
   
- ![德文的執行對話方塊](./media/rundialoggerman.PNG "RunDialogGerman")  
+ ![顯示德文的執行對話方塊的螢幕擷取畫面。](./media/wpf-globalization-and-localization-overview/run-dialog-box-german.png)  
   
  **設計全域執行對話方塊**  
   
@@ -226,13 +226,13 @@ ms.locfileid: "58412028"
   
  **英文：**  
   
- ![英文頁面](./media/englishhomepage.jpg "EnglishHomepage")  
+ ![顯示英文的 [首頁] 頁面的螢幕擷取畫面。](./media/wpf-globalization-and-localization-overview/english-home-page-sample.jpg)  
   
  **阿拉伯文：**  
   
- ![阿拉伯文頁面](./media/arabichomepage.jpg "ArabicHomepage")  
+ ![顯示阿拉伯文首頁的螢幕擷取畫面。](./media/wpf-globalization-and-localization-overview/arabic-home-page-sample.jpg)  
   
-### <a name="designing-a-global-microsoft-homepage"></a>設計全域 Microsoft 首頁  
+### <a name="designing-a-global-microsoft-home-page"></a>設計全域 Microsoft 首頁  
  這個模擬的 Microsoft Saudi Arabia 網站說明針對 RightToLeft 語言所提供的全球化功能。 希伯來文和阿拉伯文等語言因此具有由右至左讀取順序的版面配置[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]必須往往配置相當不同它可以在由左到右的語言，例如英文版。 從由左至右語言當地語系化為由右至左語言 (反之亦然) 可能相當困難。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 設計成讓這類當地語系化更為簡單。  
   
  **FlowDirection**  
@@ -247,11 +247,11 @@ ms.locfileid: "58412028"
   
  **FlowDirection="LeftToRight"**  
   
- ![方向由左至右](./media/lefttoright.PNG "LeftToRight")  
+ ![顯示從左到右的漸層停駐流程的螢幕擷取畫面。](./media/wpf-globalization-and-localization-overview/gradient-flow-left-right.png)  
   
  **FlowDirection="RightToLeft"**  
   
- ![方向由右至左](./media/righttoleft.PNG "RightToLeft")  
+ ![顯示由右至左的漸層停駐流程的螢幕擷取畫面。](./media/wpf-globalization-and-localization-overview/gradient-flow-right-left.png)  
   
  **避免面板和控制項使用固定維度**  
   

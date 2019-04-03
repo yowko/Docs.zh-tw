@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [Visual Basic], Visual Basic
 - strings [Visual Basic], regular expressions
 ms.assetid: 5674418d-f00d-4f72-9f98-d15897793350
-ms.openlocfilehash: 7262fded93b02c011484919f0504bb7225d8d2af
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9d2d3c82f5512bc1e37e3b05086fbd364ee12298
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965981"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820881"
 ---
 # <a name="string-basics-in-visual-basic"></a>Visual Basic 中的字串基礎
 `String` 資料類型代表一系列字元 (每個依序代表 `Char` 資料類型的一個執行個體)。 本主題介紹 Visual Basic 中的字串的基本概念。  
@@ -72,6 +72,7 @@ World]]></xml>.Value
  不同於其他內建資料類型，`String` 是參考類型。 將參考類型的變數做為引數傳遞給函式或副程式時，會傳遞儲存資料的記憶體位址的參考，而不是字串的實際值。 因此在前一個範例中，變數的名稱維持不變，但是它指向 `String` 類別的全新和不同的執行個體，其中包含新值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 中的字串簡介](../../../../visual-basic/programming-guide/language-features/strings/introduction-to-strings.md)
 - [String 資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)
 - [Char 資料類型](../../../../visual-basic/language-reference/data-types/char-data-type.md)

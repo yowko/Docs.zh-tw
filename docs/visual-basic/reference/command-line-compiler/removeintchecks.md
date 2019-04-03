@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /removeintchecks compiler option [Visual Basic]
 - -removeintchecks compiler option [Visual Basic]
 ms.assetid: c1835bd5-1e38-4fba-bd2f-6984774765d4
-ms.openlocfilehash: 4c1be34cf76cfb12ea1e3b3246e9e0bc26199c24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c086a031d5cef4563a6769e7683dcb1110b8fe49
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54687956"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822722"
 ---
 # <a name="-removeintchecks"></a>-removeintchecks
 會檢查開啟或關閉的整數運算溢位錯誤。  
@@ -43,5 +43,6 @@ vbc -removeintchecks+ test.vb
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

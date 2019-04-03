@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XML child axis property [Visual Basic]
 - XML [Visual Basic], accessing
 ms.assetid: 89a59d00-985e-4f5c-b59f-29b47bad11cb
-ms.openlocfilehash: f8c0ab8f52e5819f799d21f7e23eb83684144605
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 8f8283e7ed09e657a20addab0b203b3d99420d3a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56964446"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838804"
 ---
 # <a name="xml-child-axis-property-visual-basic"></a>XML 子代軸屬性 (Visual Basic)
 提供下列任一項目之子系的存取：<xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件的集合，或是 <xref:System.Xml.Linq.XDocument> 物件的集合。  
@@ -30,8 +30,7 @@ object.<child>
   
 |詞彙|定義|  
 |---|---|  
-|`object`|必要項。 
-  <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
+|`object`|必要項。 <xref:System.Xml.Linq.XElement> 物件、<xref:System.Xml.Linq.XDocument> 物件、<xref:System.Xml.Linq.XElement> 物件集合或 <xref:System.Xml.Linq.XDocument> 物件集合。|  
 |.<|必要項。 代表子軸屬性的開頭。|  
 |`child`|必要項。 若要存取，在表單的子節點的名稱 [`prefix:]name`。<br /><br /> -   `Prefix` -選擇性。 子節點的 XML 命名空間前置詞。 必須是以 `Imports` 陳述式定義的全域 XML 命名空間。<br />-   `Name` 必要。 本機子節點名稱。 請參閱[宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)。|  
 |>|必要項。 代表子軸屬性的結尾。|  
@@ -75,6 +74,7 @@ object.<child>
  `Patrick Hines`  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xml.Linq.XElement>
 - [XML 軸屬性](../../../visual-basic/language-reference/xml-axis/index.md)
 - [XML 常值](../../../visual-basic/language-reference/xml-literals/index.md)

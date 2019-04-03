@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Assembly keyword [Visual Basic]
 - attribute blocks, Assembly keyword
 ms.assetid: 925e7471-3bdf-4b51-bb93-cbcfc6efc52f
-ms.openlocfilehash: e6cb7e7a2520d6bb586dab4ed0af75abb04fabd2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 819fa9cf1bd25e9426fb1e75925a269fcf7a71cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726464"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819251"
 ---
 # <a name="assembly-visual-basic"></a>Assembly (Visual Basic)
 指定在原始程式檔開頭的屬性會套用至整個組件。  
@@ -28,6 +28,6 @@ ms.locfileid: "54726464"
  您也可以套用屬性至組件在 AssemblyInfo.vb 檔案中，在此情況下您沒有使用您的主要原始程式碼檔案中的屬性區塊。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Module \<鍵字>](../../../visual-basic/language-reference/modifiers/module-keyword.md)
 - [屬性概觀](../../../visual-basic/programming-guide/concepts/attributes/index.md)
-

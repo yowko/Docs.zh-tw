@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TypeOf...Is expression
 - Is operator [Visual Basic]
 ms.assetid: 8045a6c8-2a83-45b6-ad47-d09a704c656d
-ms.openlocfilehash: c4b23bb2d81d1f5272a5813123681da7406c3368
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: a59ff4c956724c614342f0ee4c0622a67f1c25e7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980332"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817067"
 ---
 # <a name="is-operator-visual-basic"></a>Is 運算子 (Visual Basic)
 比較兩個物件參考變數。  
@@ -51,6 +51,7 @@ result = object1 Is object2
  如上述範例所示，您可以使用`Is`運算子來測試兩者早期繫結和晚期繫結物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TypeOf 運算子](../../../visual-basic/language-reference/operators/typeof-operator.md)
 - [IsNot 運算子](../../../visual-basic/language-reference/operators/isnot-operator.md)
 - [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

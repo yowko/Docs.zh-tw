@@ -6,17 +6,17 @@ helpviewer_keywords:
 - enumerations [Visual Basic], declaring
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
-ms.openlocfilehash: 2654860269bc57cf6aed814760414c6ccb6383da
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1e6ec63688899533b64a6fc5215f77019b64b49c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968760"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830158"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>HOW TO：宣告列舉 (Visual Basic)
 您建立的列舉`Enum`「 宣告 」 區段中的類別或模組的陳述式。 您無法宣告列舉型別方法內。 若要指定適當的存取等級，請使用`Private`， `Protected`， `Friend`，或`Public`。  
   
- `Enum`型別具有名稱、 基礎類型和一組欄位，每個均代表一個常數。 名稱必須是有效的 Visual Basic.NET 限定詞。 基礎類型必須是整數型別 —`Byte`， `Short`，`Long`或`Integer`。 `Integer` 是預設值。 列舉型別一律強型別，並不能互換使用整數數字類型。  
+ `Enum`型別具有名稱、 基礎類型和一組欄位，每個均代表一個常數。 名稱必須是有效的 Visual Basic.NET 限定詞。 基礎類型必須是整數型別 —`Byte`， `Short`，`Long`或`Integer`。 `Integer` 預設值。 列舉型別一律強型別，並不能互換使用整數數字類型。  
   
  列舉型別不能有浮點值。 如果列舉型別指派的浮點值`Option Strict On`，造成編譯器錯誤。 如果`Option Strict`已`Off`，值會自動轉換為`Enum`型別。  
   
@@ -43,6 +43,7 @@ ms.locfileid: "56968760"
      [!code-vb[VbEnumsTask#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [列舉和名稱限定性條件](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
 - [如何：參考列舉成員](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [如何：逐一查看 Visual Basic 中列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)

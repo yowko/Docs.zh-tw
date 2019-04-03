@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: c7243108d0b7c06f48a21f343321322bb2cc2946
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560278"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833811"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合資料類型 (Visual Basic)
 除了提供基本資料型別 Visual Basic，您也可以組合來建立不同類型的項目*複合資料型別*結構、 陣列等類別。 從基本型別，以及從其他複合類型，您可以建置複合資料類型。 比方說，您可以定義陣列的結構項目或結構的陣列成員。  
@@ -62,6 +62,7 @@ Dim arrayE( , ) As Short = New Short(4, 10) {}
  如需有關類別的詳細資訊，請參閱[物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

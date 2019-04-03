@@ -2,12 +2,12 @@
 title: Contract-First 工具
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
-ms.openlocfilehash: ef19843d6c8a9de0b926dd8512f5a58a5966e1bf
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846177"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819615"
 ---
 # <a name="contract-first-tool"></a>Contract-First 工具
 服務合約通常必須從現有的服務來建立。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中，可以使用合約優先 (Contract-First) 工具自動從現有的服務建立資料合約類別。 若要使用合約優先工具，必須將 XML 結構描述定義 (XSD) 檔案下載至本機，這個工具無法透過 HTTP 匯入遠端資料合約。
@@ -61,11 +61,11 @@ ms.locfileid: "57846177"
 ## <a name="configuring-contract-first-options"></a>設定合約優先選項
  合約優先選項可以設定的內容功能表中的 WCF 專案。 若要啟用合約優先開發，請選取**將 XSD 啟用為型別定義語言**專案的 [屬性] 視窗的 [WCF] 頁面中核取方塊。
 
- ![WCF 專案選項顯示合約&#45;第一個](../../../docs/framework/wcf/media/contractfirstoptions.png "ContractFirstOptions")
+ ![啟用合約優先開發 WCF 選項的螢幕擷取畫面。](./media/contract-first-tool/contract-first-options.png)
 
  若要設定進階屬性，請按一下 [進階] 按鈕。
 
- ![進階合約&#45;的第一個屬性](../../../docs/framework/wcf/media/contractfirstadvanced.png "ContractFirstAdvanced")
+ ![進階的合約程式碼產生設定對話方塊。](./media/contract-first-tool/advanced-contract-settings.png)
 
  您可以設定下列適用於從合約產生程式碼的進階設定。 這些設定只能針對專案中的所有檔案進行，目前尚無法對個別檔案進行設定。
 
@@ -118,9 +118,9 @@ ms.locfileid: "57846177"
 using MyProjectNamespace.ContractTypes;
 ```
 
- 服務合約中定義的型別接著就可以在專案中解析，如下所示。
+ 如下所示，如此便可解析在專案中，服務合約中定義的類型：
 
- ![使用型別衍生自服務合約](../../../docs/framework/wcf/media/contractfirsttypes.png "ContractFirstTypes")
+ ![顯示在 IntelliSense 中，輸入前幾個字母之後 SearchRequest 類別。](./media/contract-first-tool/service-contract-types.png)
 
  工具所產生的型別會建立在 GeneratedXSDTypes.cs 檔案中。 在 建立檔案\<專案目錄 > j\<組建組態 > /XSDGeneratedCode/ 目錄預設。 本主題開頭的範例結構描述轉換如下：
 

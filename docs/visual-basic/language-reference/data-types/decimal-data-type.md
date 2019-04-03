@@ -20,12 +20,12 @@ helpviewer_keywords:
 - '@ identifier type character'
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
-ms.openlocfilehash: 7a04f0a9862927f8588a895c7f0f099509aa4d8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512888"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834097"
 ---
 # <a name="decimal-data-type-visual-basic"></a>Decimal 資料類型 (Visual Basic)
 保存帶正負號的 128 位元 （16 個位元組） 值，表示調整變數的 10 乘冪的 96 位元 （12 個位元組） 整數數字。 縮放比例指定小數點; 右邊的數字的數目其範圍從 0 到 28。 數位數為 0 （沒有小數位數），最大的可能值是 + /-79228162514264337593543950335 (+ /-7.9228162514264337593543950335E + 28)。 28 的小數位數，最大值是 + /--7.9228162514264337593543950335，與最小的非零值是 + /-0.0000000000000000000000000001 （+ /-1E-28)。  
@@ -79,6 +79,7 @@ Dim bigDec3 As Decimal = 9223372036854775808D  ' No overflow.
  針對`bigDec3`，常值類型字元`D`解決問題，強制編譯器將解譯為常值`Decimal`而不是做為`Long`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Decimal?displayProperty=nameWithType>
 - <xref:System.Decimal.%23ctor%2A?displayProperty=nameWithType>
 - <xref:System.Math.Round%2A?displayProperty=nameWithType>

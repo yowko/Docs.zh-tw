@@ -2,12 +2,12 @@
 title: HOW TO：合併 LINQ 查詢與規則運算式 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3da1bd10-b0d8-4d5b-a637-966891c13592
-ms.openlocfilehash: 35d82b562211a9dd7fa035fe878bcdee769b8a85
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da693b682e9b44970f167c030f6803f8dc6d2d36
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652471"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820369"
 ---
 # <a name="how-to-combine-linq-queries-with-regular-expressions-visual-basic"></a>HOW TO：合併 LINQ 查詢與規則運算式 (Visual Basic)
 此範例會示範如何使用 <xref:System.Text.RegularExpressions.Regex> 類別來建立規則運算式，以在文字字串中進行更複雜的比對。 LINQ 查詢讓您輕鬆地準確篩選出您想要用規則運算式搜尋的檔案，並調整結果。  
@@ -85,5 +85,6 @@ End Class
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - object creation [Visual Basic], COM objects
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
-ms.openlocfilehash: 6b079db3ccc07494bdfdf7dba49c27fe14dca4e5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5fc0105cffb5606f9382aca7b55d6544d04f9fe7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973934"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838153"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>逐步解說：使用 Visual Basic 建立 COM 物件
 建立新的應用程式或元件時，最好是建立.NET Framework 組件。 不過，Visual Basic 也容易公開給 COM 的.NET Framework 元件 這可讓您針對需要 COM 元件的舊版應用程式套件中提供新元件。 本逐步解說示範如何使用 Visual Basic 來公開 （expose）[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]為 COM 物件，使用和不使用 COM 類別範本的物件。  
@@ -91,6 +91,7 @@ ms.locfileid: "56973934"
     >  其他 Visual Basic 應用程式無法使用您產生與 Visual Basic 的 COM 物件，因為它們不是，則為 true 的 COM 物件。 嘗試將參考加入至這類 COM 物件會引發錯誤。 如需詳細資訊，請參閱 < [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.ComClassAttribute>
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)

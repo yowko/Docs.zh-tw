@@ -2,12 +2,12 @@
 title: HOW TO：建立和使用組件使用命令列 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
-ms.openlocfilehash: cbfccfc80c683dfd49739e680587ca40e6ca24f3
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746386"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819394"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>HOW TO：建立和使用組件使用命令列 (Visual Basic)
 組件又稱為動態連結程式庫 (DLL)，會在執行階段連結到您的程式。 為了示範如何建立和使用 DLL，請考慮下列案例：  
@@ -118,6 +118,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
  如需有關從命令列建置的詳細資訊，請參閱並[從命令列建置](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程式設計概念](../../../../visual-basic/programming-guide/concepts/index.md)
-- [在.NET 中的組件](../../../../standard/assembly/index.md)
+- [.NET 中的組件](../../../../standard/assembly/index.md)
 - [建立類別以包裝 DLL 函式](../../../../framework/interop/creating-a-class-to-hold-dll-functions.md)

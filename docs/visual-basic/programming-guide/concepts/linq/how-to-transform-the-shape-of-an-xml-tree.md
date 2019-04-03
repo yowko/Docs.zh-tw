@@ -2,12 +2,12 @@
 title: HOW TO：「 轉換 」 圖形的 XML 樹狀結構 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84b60854-48b2-452c-87f2-77d53e1d653a
-ms.openlocfilehash: c3fb1cd0995597be6c5108832750b6695d196b58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 067bf56b8dff994080ba78147d992b97a56867cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624147"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833655"
 ---
 # <a name="how-to-transform-the-shape-of-an-xml-tree-visual-basic"></a>HOW TO：「 轉換 」 圖形的 XML 樹狀結構 (Visual Basic)
 XML 文件的「組織結構」會參考其項目名稱、屬性名稱，及其階層的特性。  
@@ -23,7 +23,7 @@ XML 文件的「組織結構」會參考其項目名稱、屬性名稱，及其�
   
  此範例中的 XML 來源文件包含的 `Customers` 項目在包含所有客戶的 `Root` 項目之下。 同時，它所包含的 `Orders` 項目在包含所有訂單的 `Root` 項目之下。 此範例會建立新的 XML 樹狀結構，其中每個客戶的訂單會包含在 `Orders` 項目的 `Customer` 項目中。 原始文件在 `CustomerID` 項目中也包含 `Order` 項目；這個項目將會從改變組織結構的文件中移除。  
   
- 此範例使用下列 XML 文件：[範例 XML 檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：客戶和訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-customers-and-orders-linq-to-xml.md)。  
   
 ```vb  
 Dim co As XElement = XElement.Load("CustomersOrders.xml")  
@@ -94,7 +94,7 @@ Console.WriteLine(newCustOrd)
   
  此程式馬會呼叫可傳回 `ConvertAddress` 物件之清單的 <xref:System.Xml.Linq.XElement>。 此方法的引數是一個查詢，可判斷 `Address` 屬性值為 `Type` 的 `"Shipping"` 複雜項目。  
   
- 此範例使用下列 XML 文件：[範例 XML 檔：典型的採購訂單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
+ 此範例使用下列 XML 文件：[XML 範例檔：典型訂購單 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)。  
   
 ```vb  
 Function ConvertAddress(ByVal add As XElement) As IEnumerable(Of XElement)  
@@ -143,4 +143,5 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [投影和轉換 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/projections-and-transformations-linq-to-xml.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
-ms.openlocfilehash: 4afcd57a9133515cecc72da856f67e4e3d5ff717
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3e3f1168a983b2fa608cbadffba0531afef7c92b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970957"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816842"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>HOW TO：建立屬性 (Visual Basic)
 您將屬性定義之間`Property`陳述式和`End Property`陳述式。 您在此定義中定義`Get`程序，`Set`程序，或兩者。 所有屬性的程式碼位於內這些程序。  
@@ -61,6 +61,7 @@ ms.locfileid: "56970957"
  [!code-vb[VbVbcnProcedures#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#9)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)

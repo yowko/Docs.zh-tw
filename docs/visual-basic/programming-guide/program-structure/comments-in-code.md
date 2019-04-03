@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: 71f21a7c2ea1bcc24547a5a045c22c7156397103
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201673"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814636"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
 當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知 Visual Basic 編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
@@ -60,6 +60,7 @@ ms.locfileid: "57201673"
 >  您也可以藉由在文字前方置入 `REM` 關鍵字，將註解加入至您的程式碼中。 不過，`'`符號和**註解**/**取消註解**按鈕比較容易使用，而且需要較少的空間和記憶體。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [基本技術-使用 XML 註解記錄程式碼](https://msdn.microsoft.com/magazine/dd722812.aspx)
 - [如何：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: b55252e774e744b7318f480b264aa3f7fae9abfc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969636"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820785"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 指定呼叫程序時，可以省略程序引數。  
@@ -23,8 +23,7 @@ ms.locfileid: "56969636"
   
  如果參數清單包含選擇性參數，便會跟隨它的每個參數也必須是選擇性。  
   
- 
-  `Optional` 修飾詞可用於以下內容：  
+ `Optional` 修飾詞可用於以下內容：  
   
 -   [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
@@ -68,6 +67,7 @@ End Function
  [!code-vb[VbVbalrKeywords#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrKeywords/VB/class8.vb#21)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [參數清單](../../../visual-basic/language-reference/statements/parameter-list.md)
 - [選擇性參數](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)

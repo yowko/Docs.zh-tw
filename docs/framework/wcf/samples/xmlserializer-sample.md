@@ -2,12 +2,12 @@
 title: XMLSerializer 範例
 ms.date: 03/30/2017
 ms.assetid: 7d134453-9a35-4202-ba77-9ca3a65babc3
-ms.openlocfilehash: d85080ce9aec47b2ffb0d4dc255001901f722ae4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12d11bc0da231f78909b79376cb51e7ab12fe2cd
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572756"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817000"
 ---
 # <a name="xmlserializer-sample"></a>XMLSerializer 範例
 這個範例會示範如何序列化和還原序列化與 <xref:System.Xml.Serialization.XmlSerializer> 相容的型別。 預設的 Windows Communication Foundation (WCF) 格式器是<xref:System.Runtime.Serialization.DataContractSerializer>類別。 當無法使用 <xref:System.Xml.Serialization.XmlSerializer> 類別時，<xref:System.Runtime.Serialization.DataContractSerializer> 類別可以用來序列化與還原序列化型別。 這時通常需要精確控制 XML，例如，當資料片段必須是 XML 屬性而且不是 XML 項目的情況下。 此外，<xref:System.Xml.Serialization.XmlSerializer>通常會自動選取時建立的非 WCF 服務用戶端。  
@@ -134,4 +134,3 @@ Press <ENTER> to terminate client.
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\XmlSerializer`  
   
-## <a name="see-also"></a>另請參閱

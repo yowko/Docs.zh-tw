@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - anonymous types [Visual Basic], type definition
 ms.assetid: 7a8a0ddc-55ba-4d67-869e-87a84d938bac
-ms.openlocfilehash: e74b4c7298a80f724031cc4ac1feb49ebae8f7cb
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 832d56f5c51aea87185f36ec306c3fec036a40e0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975611"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825543"
 ---
 # <a name="anonymous-type-definition-visual-basic"></a>匿名類型定義 (Visual Basic)
 為了回應執行個體的匿名型別宣告，編譯器會建立新的類別定義，其中包含指定的屬性類型。  
@@ -82,5 +82,6 @@ End Class
 >  匿名類型宣告在它們出現在相同的組件、 其屬性具有相同名稱和相同推斷的型別、 屬性的宣告以相同的順序，和相同的屬性會標示為索引鍵屬性時，才可以建立相同匿名型別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [如何：推斷屬性名稱和匿名類型宣告中的類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)

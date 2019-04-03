@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Visual Basic], string conversion
 - arrays [Visual Basic], byte arrays
 ms.assetid: f477d35c-a3fc-4a30-b1d4-cd0d353aae1d
-ms.openlocfilehash: a96664f308a711d440f063627665283c5b7fc264
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2fa0b86459e6191d3bd5f884d92b071218b4063a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967499"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58823268"
 ---
 # <a name="how-to-convert-strings-into-an-array-of-bytes-in-visual-basic"></a>HOW TO：將字串轉換成 Visual Basic 中的位元組陣列
 本主題說明如何將字串轉換成位元組陣列。  
@@ -40,6 +40,7 @@ ms.locfileid: "56967499"
 -   <xref:System.Text.Encoding.UTF8%2A?displayProperty=nameWithType>：取得 UTF-8 格式的編碼方式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Text.Encoding?displayProperty=nameWithType>
 - <xref:System.Text.Encoding.GetBytes%2A>
 - [如何：將位元組陣列轉換成 Visual Basic 中的字串](../../../../visual-basic/programming-guide/language-features/strings/how-to-convert-an-array-of-bytes-into-a-string.md)

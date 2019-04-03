@@ -2,12 +2,12 @@
 title: 雙向通訊
 ms.date: 03/30/2017
 ms.assetid: fb64192d-b3ea-4e02-9fb3-46a508d26c60
-ms.openlocfilehash: 2160a1c190a23c9fbc3ec835d32121008c63e2a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3aa01140ef62bd3658696e889038e099ed76da20
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522007"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815427"
 ---
 # <a name="two-way-communication"></a>雙向通訊
 這個範例會示範如何透過 MSMQ 來執行交易雙向佇列通訊。 這個範例會使用 `netMsmqBinding` 繫結。 在此範例中，服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -103,7 +103,7 @@ public static void Main()
 }  
 ```
 
- 用戶端會建立異動。 與佇列的通訊會發生在交易範圍內，這點會導致其被視為不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。  
+ 用戶端會建立交易。 與佇列的通訊會發生在異動範圍內，這點會導致其被視為不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。  
 
 ```csharp
 // Create a ServiceHost for the OrderStatus service type.  
@@ -331,4 +331,3 @@ Status of order 124a1f69-3699-4b16-9bcc-43147a8756fc:Pending
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Net\MSMQ\Two-Way`  
   
-## <a name="see-also"></a>另請參閱

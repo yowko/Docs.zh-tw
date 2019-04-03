@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data types [Visual Basic], ranges
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
-ms.openlocfilehash: 90e3c8b61bd920ab06090f3f889d6cc61c354294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650479"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814961"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>運算子結果的資料類型 (Visual Basic)
 Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業。 在某些情況下，這可能是較大的範圍以外的任一個運算元的資料類型。  
@@ -176,6 +176,7 @@ Visual Basic 決定結果資料類型的運算元資料類型為基礎的作業�
  `Like`定義運算子只用於模式比對的`String`運算元。 Visual Basic 會嘗試將視每個運算元`String`作業之前。 結果資料類型一定是`Boolean`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)
 - [運算子和運算式](../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [在 Visual Basic 中的算術運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/arithmetic-operators.md)

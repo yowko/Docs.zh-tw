@@ -2,17 +2,17 @@
 title: LINQ 和字串 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 75ddb201-d97a-4f98-8cdf-4ad51714529a
-ms.openlocfilehash: 0ffff11243b96d46cfd9424502ec43ed2319136d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7e0ebe64494182191dafa033ecbc38bad17180be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569988"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818952"
 ---
 # <a name="linq-and-strings-visual-basic"></a>LINQ 和字串 (Visual Basic)
 您可以使用 LINQ 查詢及轉換字串與字串集合。 針對文字檔案中的半結構化資料，這種做法特別有用。 LINQ 查詢可以結合傳統字串函式和規則運算式。 例如，您可以使用 <xref:System.String.Split%2A> 或 <xref:System.Text.RegularExpressions.Regex.Split%2A> 方法，來建立您接著可以使用 LINQ 查詢或修改的字串陣列。 您可以在 LINQ 查詢的 `where` 子句中使用 <xref:System.Text.RegularExpressions.Regex.IsMatch%2A> 方法。 您可以使用 LINQ 查詢或修改規則運算式所傳回的 <xref:System.Text.RegularExpressions.MatchCollection> 結果。  
   
- 您也可以使用本節所述的技巧，將半結構化的文字資料轉換成 XML。 如需詳細資訊，請參閱[＜How to：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)。  
+ 您也可以使用本節所述的技巧，將半結構化的文字資料轉換成 XML。 如需詳細資訊，請參閱[如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)。  
   
  本節中的範例分為兩類：  
   
@@ -60,5 +60,6 @@ ms.locfileid: "54569988"
  示範如何針對 .csv 檔案中的文字資料執行數學計算。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Language-Integrated Query (LINQ) (Visual Basic)](index.md)
 - [如何：從 CSV 檔案產生 XML](how-to-generate-xml-from-csv-files.md)

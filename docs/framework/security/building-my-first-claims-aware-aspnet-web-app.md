@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 ASP.NET Web 應用程式
 ms.date: 03/30/2017
 ms.assetid: 3ee8ee7f-caba-4267-9343-e313fae2876d
 author: BrucePerlerMS
-ms.openlocfilehash: 67489b2bb93719d8182159fbc91703399d5e8bc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd5b36ffe26632240955307eb522cecdf4f1e73
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588960"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838127"
 ---
 # <a name="building-my-first-claims-aware-aspnet-web-application"></a>建置第一個宣告感知 ASP.NET Web 應用程式
 ## <a name="applies-to"></a>適用於  
@@ -17,13 +17,13 @@ ms.locfileid: "54588960"
   
 -   ASP.NET  
   
- 本主題概述使用 WIF 建置宣告感知 ASP.NET Web 應用程式的案例。 在一個宣告感知應用程式案例中，通常會有三個參與者：應用程式本身、終端使用者和 Security Token Service (STS)。 下列圖將說明這個案例：  
+ 本主題概述使用 WIF 建置宣告感知 ASP.NET Web 應用程式的案例。 在一個宣告感知應用程式案例中，通常會有三個參與者：應用程式本身、使用者和 Security Token Service (STS)。 下列圖將說明這個案例：  
   
- ![WIF 基本 Web 應用程式](../../../docs/framework/security/media/wifbasicwebapp.gif "WIFBasicWebApp")  
+ ![此圖表顯示 WIF 基本 Web 應用程式元件。](./media/building-my-first-claims-aware-aspnet-web-app/windows-identity-foundation-basic-web-application.gif)  
   
 1.  宣告感知應用程式使用 WIF 識別未驗證的要求，並將它們重新導向至 STS。  
   
-2.  使用者提供認證給 STS，一旦驗證成功，STS 就會發行權杖給使用者。  
+2.  終端使用者提供認證給 STS，一旦驗證成功，STS 就會發行權杖給使用者。  
   
 3.  使用者從 STS 重新導向至宣告感知應用程式，並且要求中已包含 STS 發行的權杖。  
   

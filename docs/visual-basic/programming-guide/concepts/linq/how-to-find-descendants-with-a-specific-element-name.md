@@ -2,12 +2,12 @@
 title: HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
 ms.date: 07/20/2015
 ms.assetid: 78915518-0d25-4051-ab55-929779989510
-ms.openlocfilehash: 4311eb0a4062c01b2c8e1c19355c5284298e39dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7dadec961420988a7f4cc1d6be72d7cdba5c047
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557155"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816822"
 ---
 # <a name="how-to-find-descendants-with-a-specific-element-name-visual-basic"></a>HOW TO：尋找具有特定的項目名稱 (Visual Basic) 的子系
 有時候您會想要尋找具有特定名稱的所有子代。 您可以撰寫程式碼來逐一查看所有子代，但是使用 <xref:System.Xml.Linq.XContainer.Descendants%2A> 座標軸比較容易。  
@@ -101,5 +101,6 @@ Some text that is broken up into multiple segments.
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xml.Linq.XContainer.Descendants%2A>
 - [基本查詢 (LINQ to XML) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-queries-linq-to-xml.md)

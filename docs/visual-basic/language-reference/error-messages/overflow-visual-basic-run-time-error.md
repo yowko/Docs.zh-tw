@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
-ms.openlocfilehash: c45559042231b72ef1ba892cabbead03797df8e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47e9106b7355db6ae02ee263dbea82d41a69ed5e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642502"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816976"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>溢位 (Visual Basic 執行階段錯誤)
 當您嘗試超過限制的指派目標的指派時，就會造成溢位。  
@@ -23,6 +23,7 @@ ms.locfileid: "54642502"
 3.  請確定會強制轉型成整數的計算中使用的數字，並沒有比整數較大的結果。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Int32.MaxValue?displayProperty=nameWithType>
 - <xref:System.Double.MaxValue?displayProperty=nameWithType>
 - [資料類型](../../../visual-basic/language-reference/data-types/index.md)

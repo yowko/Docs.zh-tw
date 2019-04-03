@@ -20,12 +20,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], implicit
 - implicit data type conversions [Visual Basic]
 ms.assetid: 77de1659-af8a-492c-967e-e7ef60ccce66
-ms.openlocfilehash: 8e0ab9e3818ff4210dc6e349104ea0dcc4c8bfa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82ff710629089cd14c7e982b4afa4301d0790811
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596003"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833993"
 ---
 # <a name="implicit-and-explicit-conversions-visual-basic"></a>隱含和明確轉換 (Visual Basic)
 *隱含轉換*不需要任何特殊的語法，在原始程式碼中。 在下列範例中，Visual Basic 會隱含地將值轉換`k`為單精確度浮點數值之前將它指派給`q`。  
@@ -130,6 +130,7 @@ End If
  執行明確的轉換，也就是*轉型*運算式，以指定的資料型別或物件類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
 - [字串與其他類型之間的轉換](../../../../visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md)
 - [如何：將物件轉換成 Visual Basic 中的另一個類型](../../../../visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md)

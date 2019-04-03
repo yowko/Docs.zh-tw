@@ -5,12 +5,12 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: d60d668c97019418b30b89147e86f7beea1c31f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640668"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827922"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>遮蔽和覆寫的差異 (Visual Basic)
 當您定義繼承自基底類別的類別時，您有時會想要重新定義一或多個基底類別中的項目衍生的類別。 遮蔽和覆寫都可針對此目的。  
@@ -52,6 +52,7 @@ ms.locfileid: "54640668"
 -   您想要能夠變更的項目類型，或呼叫順序。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對已宣告項目的參考](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Visual Basic 中的遮蔽功能](../../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)
 - [如何：隱藏與您的變數名稱相同的變數](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-hide-a-variable-with-the-same-name-as-your-variable.md)

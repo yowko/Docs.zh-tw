@@ -5,12 +5,12 @@ helpviewer_keywords:
 - statements [Visual Basic], control flow
 - control structures [Visual Basic]
 ms.assetid: 24b811f7-98ba-40ec-8dd3-4d528cfa4574
-ms.openlocfilehash: a383d0c95de5286cce722c05bd8888d5acffb173
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c42070ce2ea866e59e1b2e190f7c05e1ee7cc922
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589996"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819316"
 ---
 # <a name="other-control-structures-visual-basic"></a>其他控制結構 (Visual Basic)
 Visual Basic 提供可協助您控制結構處置資源，或減少您必須重複的物件參考的次數。  
@@ -22,6 +22,7 @@ Visual Basic 提供可協助您控制結構處置資源，或減少您必須重�
  `With...End With`建構可讓您一次指定的物件參考，然後再執行一系列存取其成員的陳述式。 這可以簡化程式碼，並改善效能，因為 Visual Basic 不需要重新建立每個陳述式來存取它的參考。 如需詳細資訊，請參閱[與...With...end With 陳述式](../../../../visual-basic/language-reference/statements/with-end-with-statement.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [控制流程](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [決策結構](../../../../visual-basic/programming-guide/language-features/control-flow/decision-structures.md)
 - [迴圈結構](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)

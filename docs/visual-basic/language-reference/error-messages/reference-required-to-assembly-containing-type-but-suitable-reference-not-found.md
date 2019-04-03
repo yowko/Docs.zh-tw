@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
-ms.openlocfilehash: 2c74ed916e43bee6857df819c19ab03bef80b3c4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3cfdf8150c8ccd9e1b4f047cd1ce8ee4ad6bbc1a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285190"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813401"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>需要組件參考 '\<組件識別 >' 包含類型'\<類型名稱 >'，但找不到適合的參考，因為專案之間的模稜兩可\<projectname1 >' 和 '\<專案名稱 2> >'
 運算式使用專案外部定義的類型 (例如類別、結構、介面、列舉或委派)。 不過，專案參考超過一個定義其類型的組件。  
@@ -30,6 +30,7 @@ ms.locfileid: "55285190"
 2.  在專案屬性中，加入包含組件之檔案的參考，而這個組件定義所使用的類型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
 - [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 

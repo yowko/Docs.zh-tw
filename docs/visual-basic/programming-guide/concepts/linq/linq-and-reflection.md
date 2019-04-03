@@ -2,12 +2,12 @@
 title: LINQ 和反映 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2548a731-0cd8-48de-8d48-664d1b7d7526
-ms.openlocfilehash: f752eac7ee22a6cb75324e02ecfc2263513ceeb7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed4627fc10c1b6b56194520461146315f98f15f8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586601"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813679"
 ---
 # <a name="linq-and-reflection-visual-basic"></a>LINQ 和反映 (Visual Basic)
 .NET Framework 類別庫的反映 API 可以用來檢查 .NET 組件中的中繼資料，以及建立該組件中之類型、類型成員、參數等項目的集合。 因為這些集合支援泛型 `IEnumerable` 介面，所以可以使用 LINQ 進行查詢。  
@@ -18,4 +18,5 @@ ms.locfileid: "54586601"
  示範如何搭配使用 LINQ 和反映。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Objects (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)

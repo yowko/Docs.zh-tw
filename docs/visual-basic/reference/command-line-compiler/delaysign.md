@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: 1a784dc57331ed4cbaeb8524dbb3b6ea9a06eca1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605587"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58830366"
 ---
 # <a name="-delaysign"></a>-delaysign
 指定將要完整簽署還是部分簽署組件。  
@@ -44,6 +44,7 @@ ms.locfileid: "54605587"
 3.  在設定的值**僅延遲簽署** 方塊中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)
 - [-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)

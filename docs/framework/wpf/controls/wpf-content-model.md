@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: bd9dc7a441987b2089f0f21c81311a628ae3cdfa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373084"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816911"
 ---
 # <a name="wpf-content-model"></a>WPF 內容模型
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是展示平台，提供許多以顯示不同類型內容為主要目的的控制項和類控制項類型。 為了判斷要使用哪一種控制項或從哪一種控制項衍生，您應該了解特定控制項顯示哪些物件的效果最佳。  
@@ -38,9 +38,9 @@ ms.locfileid: "57373084"
 |<xref:System.Windows.Controls.ItemsControl>|任意物件的集合。|  
 |<xref:System.Windows.Controls.HeaderedItemsControl>|標頭和項目集合，這些全部都是任意物件。|  
   
- 繼承自這些類別的控制項可以包含相同類型的內容，並且以相同方式處理內容。 下圖顯示每個內容模型中一個內含影像和某些文字的控制項。  
+ 繼承自這些類別的控制項可以包含相同類型的內容，並且以相同方式處理內容。 下圖顯示一個控制項，從每個內容的模型，包含影像和某些文字：  
   
- ![Button、GroupBox、ListBox、TreeViewItem](./media/controlcontentmodelimagetextinto.PNG "ControlContentModelImageTextInto")  
+ ![如果螢幕擷取畫面顯示四個不同的控制項，從每個內容的模型。](./media/wpf-content-model/control-content-model-image-text.png)  
   
 ### <a name="controls-that-contain-a-single-arbitrary-object"></a>包含單一任意物件的控制項  
  <xref:System.Windows.Controls.ContentControl>類別包含單一任意內容。 其內容的屬性是<xref:System.Windows.Controls.ContentControl.Content%2A>。 下列控制項繼承自<xref:System.Windows.Controls.ContentControl>並且使用其內容模型：  
@@ -85,10 +85,9 @@ ms.locfileid: "57373084"
   
 -   <xref:System.Windows.Window>  
   
- 下圖顯示四個按鈕，其<xref:System.Windows.Controls.ContentControl.Content%2A>設定為字串，<xref:System.DateTime>物件， <xref:System.Windows.Shapes.Rectangle>，和<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和<xref:System.Windows.Controls.TextBlock>。  
+ 下圖顯示四個按鈕，其<xref:System.Windows.Controls.ContentControl.Content%2A>設定為字串，<xref:System.DateTime>物件， <xref:System.Windows.Shapes.Rectangle>，和<xref:System.Windows.Controls.Panel>，其中包含<xref:System.Windows.Shapes.Ellipse>和<xref:System.Windows.Controls.TextBlock>:  
   
- ![四個按鈕](./media/controlcontentmodelbuttons.PNG "ControlContentModelButtons")  
-四個擁有不同內容類型的按鈕  
+ ![如果螢幕擷取畫面顯示使用不同的內容類型的四個按鈕。](./media/wpf-content-model/control-content-model-buttons.png)  
   
  如需如何設定的範例<xref:System.Windows.Controls.ContentControl.Content%2A>屬性，請參閱<xref:System.Windows.Controls.ContentControl>。  
   
@@ -105,8 +104,7 @@ ms.locfileid: "57373084"
   
  下圖顯示兩個<xref:System.Windows.Controls.TabItem>物件。 第一個<xref:System.Windows.Controls.TabItem>已經<xref:System.Windows.UIElement>物件當做<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>而<xref:System.Windows.Controls.ContentControl.Content%2A>。 <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>設定為<xref:System.Windows.Controls.StackPanel>，其中包含<xref:System.Windows.Shapes.Ellipse>和<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Controls.ContentControl.Content%2A>設定為<xref:System.Windows.Controls.StackPanel>，其中包含<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Controls.Label>。 第二個<xref:System.Windows.Controls.TabItem>中包含字串<xref:System.Windows.Controls.HeaderedContentControl.Header%2A>並<xref:System.Windows.Controls.TextBlock>在<xref:System.Windows.Controls.ContentControl.Content%2A>。  
   
- ![TabControl](./media/controlcontentmodelteabitem.PNG "ControlContentModelTeabItem")  
-在 Header 屬性中使用不同類型的 TabControl  
+ ![標頭屬性中使用不同類型的 TabControl。](./media/wpf-content-model/control-content-model-tab.png)  
   
  如需如何建立的範例<xref:System.Windows.Controls.TabItem>物件，請參閱<xref:System.Windows.Controls.HeaderedContentControl>。  
   
@@ -147,8 +145,7 @@ ms.locfileid: "57373084"
   
 -   A <xref:System.Windows.Controls.Panel> ，其中包含<xref:System.Windows.Shapes.Ellipse>和<xref:System.Windows.Controls.TextBlock>。  
   
- ![具有四種內容的 ListBox](./media/controlcontentmodellistbox2.PNG "ControlContentModelListBox2")  
-包含多種物件類型的 ListBox  
+ ![如果螢幕擷取畫面顯示具有四種內容的 ListBox。](./media/wpf-content-model/control-content-model-listbox.png)  
   
 ### <a name="controls-that-contain-a-header-and-a-collection-of-arbitrary-objects"></a>包含標頭和任意物件集合的控制項  
  <xref:System.Windows.Controls.HeaderedItemsControl>類別繼承自<xref:System.Windows.Controls.ItemsControl>，而且可以包含多個項目，例如字串、 物件或其他項目和標頭。 它會繼承<xref:System.Windows.Controls.ItemsControl>內容屬性， <xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>，並<xref:System.Windows.Controls.ItemsControl.Items%2A>，也會定義<xref:System.Windows.Controls.HeaderedItemsControl.Header%2A>可以是任意物件的屬性。  

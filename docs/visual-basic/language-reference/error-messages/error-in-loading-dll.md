@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID48
 ms.assetid: 4226cd1f-028c-477d-88a5-cb57f7e0cdc8
-ms.openlocfilehash: 76a0a443fd9f8a6dec5ead24bc75c97d89d6c36b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c3f88a5a3c37c89d23055aa413957b2add38ed67
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518458"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816898"
 ---
 # <a name="error-in-loading-dll-visual-basic"></a>載入 DLL 時發生錯誤 (Visual Basic)
 動態連結程式庫 (DLL) 是程式庫中指定`Lib`子句`Declare`陳述式。 此錯誤的可能原因包括：  
@@ -33,4 +33,5 @@ ms.locfileid: "54518458"
 -   如果 DLL 或參考的 DLL 不是路徑所指定的目錄中，請將 DLL 移至參考的目錄。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)

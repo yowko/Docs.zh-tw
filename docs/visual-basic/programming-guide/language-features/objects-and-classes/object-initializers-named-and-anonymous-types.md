@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: d4f82cab8bcdeb3e0553649f8a569ae24bafc707
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974350"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821349"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>物件初始設定式：具名和匿名類型 (Visual Basic)
 物件初始設定式可讓您使用單一運算式中指定的複雜物件的屬性。 它們可用來建立執行個體的具名型別和匿名型別。  
@@ -128,6 +128,7 @@ ms.locfileid: "56974350"
      如需匿名型別中定義屬性選項的詳細資訊，請參閱[How to:推斷屬性名稱和匿名類型宣告中的型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-infer-property-names-and-types-in-anonymous-type-declarations.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)
 - [Visual Basic 中的 LINQ 簡介](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

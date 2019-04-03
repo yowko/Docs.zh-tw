@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: e9e6165414db00e7d7182e204d86d23debfbf4f6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967733"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818471"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>HOW TO：傳遞至另一個程序，在 Visual Basic 中的程序
 此範例示範如何使用委派傳遞至其他程序的程序。  
@@ -46,6 +46,7 @@ ms.locfileid: "56967733"
      當`Test`是呼叫，它顯示的第一次的結果`AddNumbers`處理`5`和`3`，這是 8。 結果`SubtractNumbers`作`9`和`3`隨即顯示，這是 6。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf 運算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)

@@ -2,12 +2,12 @@
 title: 探索範圍範例
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 0d874116b90f423fbb78803a3641ef55fc848952
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba49021022c33c1490f3dbaafc5bba1352ecf55c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508765"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814285"
 ---
 # <a name="discovery-with-scopes-sample"></a>探索範圍範例
 此範例示範如何使用範圍分類可探索的端點，以及如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 執行端點的非同步搜尋。 在服務上，此範例會示範如何透過加入端點探索行為並使用該行為將範圍加入至端點，以及控制端點的可搜尋性來自訂每個端點的探索。 在用戶端上，此範例會檢查用戶端如何建立 <xref:System.ServiceModel.Discovery.DiscoveryClient> 並微調搜尋參數，以便透過將範圍加入至 <xref:System.ServiceModel.Discovery.FindCriteria> 來納入範圍。 此範例也會示範用戶端如何透過加入終止準則來限制回應。  
@@ -37,4 +37,3 @@ ms.locfileid: "54508765"
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Discovery\DiscoveryWithScopes`  
   
-## <a name="see-also"></a>另請參閱

@@ -2,12 +2,12 @@
 title: 啟動多項非同步工作並處理完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: ae391bfe0c8e16a8cb967ed6df7c548109a7bc09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8af97658465aa8f82fe3cd01013282c767eb4ba8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559312"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816924"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>啟動多項非同步工作並處理完成 (Visual Basic)
 使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
@@ -18,7 +18,7 @@ ms.locfileid: "54559312"
 >  若要執行範例，您必須在電腦上安裝 Visual Studio 2012 或更新版本以及 .NET Framework 4.5 或更新版本。  
   
 ## <a name="downloading-the-example"></a>下載範例  
- 您可以下載完整 Windows Presentation Foundation (WPF) 專案從[非同步範例：精確微調應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)然後遵循這些步驟。  
+ 您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
 1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
@@ -87,7 +87,7 @@ Dim downloadTasksQuery As IEnumerable(Of Task(Of Integer)) =
   
  請注意，您必須新增 <xref:System.Net.Http> 的參考。  
   
- 您可以下載從專案[非同步範例：順利微調您的應用程式](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)。  
+ 您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載專案。  
   
 ```vb  
 ' Add an Imports directive and a reference for System.Net.Http.  
@@ -206,6 +206,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [微調非同步應用程式 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

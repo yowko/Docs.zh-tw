@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: 1d85f49ce0aed44dea12c9ba16135425e6e2e431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565744"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819979"
 ---
 # <a name="bad-file-mode"></a>不正確的檔案模式
 用於管理檔案內容的陳述式必須是適用於開啟檔案的模式。 可能的原因包括：  
@@ -35,5 +35,6 @@ ms.locfileid: "54565744"
 -   使用 `My.Computer.FileSystem` 物件中可用的功能。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileSystem>
 - [疑難排解：讀取和寫入文字檔](../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

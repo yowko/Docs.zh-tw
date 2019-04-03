@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dates [Visual Basic]
 - String data type [Visual Basic], converting
 ms.assetid: 3aa744e7-1419-45d5-85e3-e5abc2953673
-ms.openlocfilehash: 22fa31d862259c6dc8607ee44561bc8c18662d88
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3653194c7e48533e664ac7513ca7f4f48d1c69f7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642814"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819511"
 ---
 # <a name="return-values-for-the-cstr-function-visual-basic"></a>CStr 函式的傳回值 (Visual Basic)
 下表描述的傳回值`CStr`不同的資料類型的`expression`。  
@@ -34,6 +34,7 @@ ms.locfileid: "54642814"
 >  `CStr`函式會執行其目前的文化特性設定，應用程式為基礎的轉換。 若要取得特定文化特性的數字的字串表示，使用數字的`ToString(IFormatProvider)`方法。 例如，使用<xref:System.Double.ToString%2A?displayProperty=nameWithType>轉換類型的值時`Double`至`String`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>
 - [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
 - [Boolean 資料類型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Shadows keyword [Visual Basic]
 - signature, hiding by
 ms.assetid: 0c6820b8-25b2-4664-bc59-5ca93c99c042
-ms.openlocfilehash: b20dbf20c580d08553ae22f6a62ee33a7354db74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d68846938aba809a7a3a6f7d27f185bb90a39cb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624910"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819329"
 ---
 # <a name="overloads-visual-basic"></a>Overloads (Visual Basic)
 指定屬性或程序會重新宣告一或多個同名的現有屬性或程序。  
@@ -39,7 +39,7 @@ ms.locfileid: "54624910"
   
     -   類型參數的數目 (適用於泛型程序)  
   
-    -   傳回類型 (僅適用於轉換運算子程序)  
+    -   傳回型別 (僅適用於轉換運算子程序)  
   
      所有多載必須有相同的名稱，但每個多載的名稱在一或多個上述方面中必須和其他多載不同。 這可讓編譯器在程式碼呼叫屬性或程序時可識別要使用的版本。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "54624910"
   
     -   傳回值的資料類型 (除了轉換運算子之外)  
   
-    -   參數或類型參數的名稱  
+    -   參數或型別參數的名稱  
   
     -   類型參數上的條件約束 (適用於泛型程序)  
   
@@ -74,6 +74,7 @@ ms.locfileid: "54624910"
  [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Shadows](../../../visual-basic/language-reference/modifiers/shadows.md)
 - [程序多載化](../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)

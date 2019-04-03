@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 64ac6da99bf304639dfc0de5e24d6d6bdd3e9795
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746519"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828117"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
 從標準建置組塊，已建立 Visual Basic 程式。 A*解決方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含所有的程式碼。  
@@ -93,6 +93,7 @@ ms.locfileid: "56746519"
  此程序的最常見的各種不同的是`Sub Main()`。 如需詳細資訊，請參閱 <<c0> [ 在 Visual Basic 中的 Main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic 的限制](../../../visual-basic/programming-guide/program-structure/limitations.md)

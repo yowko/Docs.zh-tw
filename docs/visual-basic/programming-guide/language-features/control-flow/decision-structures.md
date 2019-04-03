@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4aabb1eef717b06222696980d4cbce7a781fb567
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735243"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825374"
 ---
 # <a name="decision-structures-visual-basic"></a>決策結構 (Visual Basic)
 Visual Basic 可讓您測試條件，並執行不同的作業，視該測試的結果而定。 您可以測試條件為 true 或 false，針對各種不同值的運算式，或當您執行一系列的陳述式時，產生的各種例外狀況。  
@@ -47,6 +47,7 @@ Visual Basic 可讓您測試條件，並執行不同的作業，視該測試的�
 >  許多控制項結構，當您按一下關鍵字的所有關鍵字在結構中反白顯示。 比方說，當您按一下 `If`中`If...Then...Else`建構、 所有執行個體`If`， `Then`， `ElseIf`， `Else`，和`End If`建構中會反白顯示。 若要移到下一個或上一個反白顯示關鍵字，請按 CTRL + SHIFT + 向下鍵或 CTRL + SHIFT + 向上鍵。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [控制流程](../../../../visual-basic/programming-guide/language-features/control-flow/index.md)
 - [迴圈結構](../../../../visual-basic/programming-guide/language-features/control-flow/loop-structures.md)
 - [其他控制結構](../../../../visual-basic/programming-guide/language-features/control-flow/other-control-structures.md)

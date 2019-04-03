@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: a396bede9e0004c9f0681e3399af95f31592a0b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361404"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828468"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -128,9 +128,9 @@ ms.locfileid: "57361404"
   
  [!code-xaml[SpanSnippets#_BlockUIXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/SpanSnippets/CSharp/Window1.xaml#_blockuixaml)]  
   
- 下圖顯示此範例的轉譯方式。  
+ 下圖顯示此範例的轉譯方式：  
   
- ![螢幕擷取畫面：內嵌於非固定格式內容 UIElement](./media/blockuicontainer.png "BlockUIContainer")  
+ ![螢幕擷取畫面顯示將 uielement 設內嵌於非固定格式內容。](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
  **清單**  
   

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
-ms.openlocfilehash: 9445ede38334078f2bef649c490ab1011b5b3474
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c79989f3bbae1bdb52e3eb0839503b330c6b8fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54720072"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58840298"
 ---
 # <a name="mycomputernetwork-object"></a>My.Computer.Network 物件
 提供屬性、 事件和的電腦所連接之網路互動的方法。  
@@ -27,4 +27,5 @@ ms.locfileid: "54720072"
  **組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Computer 物件](../../../visual-basic/language-reference/objects/my-computer-object.md)

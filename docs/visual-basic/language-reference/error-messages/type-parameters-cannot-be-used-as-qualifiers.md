@@ -1,5 +1,5 @@
 ---
-title: 型別參數不能當做限定詞使用
+title: 類型參數不能當做限定詞使用
 ms.date: 07/20/2015
 f1_keywords:
 - vbc32098
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 8ee0fd5822c22da090aa0abee679e2f68e0fc1d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54659695"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819797"
 ---
-# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>型別參數不能當做限定詞使用
+# <a name="type-parameters-cannot-be-used-as-qualifiers"></a>類型參數不能當做限定詞使用
 限定性條件字串，包含型別參數被限定的程式設計項目。  
   
  型別參數表示要建構的泛型型別時提供的類型的需求。 它不代表特定的定義的類型。 限定性條件字串必須包含在編譯時期所定義的項目。  
@@ -39,6 +39,7 @@ End Function
 2.  如果您需要找出所限定的程式設計項目時，用以建構的類型，您必須使用其他程式邏輯。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 - [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [類型清單](../../../visual-basic/language-reference/statements/type-list.md)

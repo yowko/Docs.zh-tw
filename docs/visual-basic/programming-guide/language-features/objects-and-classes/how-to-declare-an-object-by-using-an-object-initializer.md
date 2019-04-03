@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: e0673c9faceb3bd9fc71123a2ae22abbc7061c04
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 314706207800b2e86aa0032a52d8c50fbb726887
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970203"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825129"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>HOW TO：宣告物件使用物件初始設定式 (Visual Basic)
 物件初始設定式可讓您宣告並具現化類別，以單一陳述式的執行個體。 此外，您可以在此同時，初始化執行個體的一或多個成員，而不叫用的參數化建構函式。  
@@ -60,6 +60,7 @@ ms.locfileid: "56970203"
      如需詳細資訊，請參閱 <<c0> [ 區域型別推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [如何：建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
 - [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)

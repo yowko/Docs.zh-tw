@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: 947507cb813437facc2b2343ff6f1a5d50f4dd98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971633"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58818458"
 ---
 # <a name="function-statement-visual-basic"></a>Function 陳述式 (Visual Basic)
 宣告名稱、 參數和定義的程式碼`Function`程序。  
@@ -255,6 +255,7 @@ End Function
  [!code-vb[csAsyncMethod#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csasyncmethod/vb/mainwindow.xaml.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Sub 陳述式](sub-statement.md)
 - [函式程序](../../../visual-basic/programming-guide/language-features/procedures/function-procedures.md)
 - [參數清單](parameter-list.md)

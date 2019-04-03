@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 91f754366441cb984edf23f2c2dca4fa5c542a8e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279522"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814454"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>無法載入類別資訊\<類別名稱 >'
 參考了未提供的類別。  
@@ -26,4 +26,5 @@ ms.locfileid: "55279522"
 2.  嘗試存取模組中所宣告的其中一個成員。 在某些情況下，偵錯環境找不到成員，因為尚未載入宣告它們的模組。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Studio 偵錯](/visualstudio/debugger/debugging-in-visual-studio)

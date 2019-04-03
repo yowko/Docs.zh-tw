@@ -2,12 +2,18 @@
 title: Visual Basic 中的程序
 ms.date: 04/28/2017
 helpviewer_keywords:
-  - 'procedures [Visual Basic], structured code'
-  - 'Visual Basic code, procedures'
-  - 'procedures [Visual Basic], types of'
-  - 'structured code [Visual Basic], procedures'
-  - procedures
+- procedures [Visual Basic], structured code
+- Visual Basic code, procedures
+- procedures [Visual Basic], types of
+- structured code [Visual Basic], procedures
+- procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
+ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814922"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic 中的程序
 A*程序*是 Visual Basic 陳述式加上一個宣告陳述式的區塊 (`Function`， `Sub`， `Operator`， `Get`， `Set`) 和比對`End`宣告。 在 Visual Basic 中的所有可執行陳述式必須位在某個程序。  
@@ -56,6 +62,7 @@ A*程序*是 Visual Basic 陳述式加上一個宣告陳述式的區塊 (`Functi
 -   開發用於一個平台的程序之後，您可以在其他程式中使用這些程序，通常只需要微幅修改或完全不需要修改。 這可協助您避免程式碼重複。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [如何：建立程序](./how-to-create-a-procedure.md)
 - [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)

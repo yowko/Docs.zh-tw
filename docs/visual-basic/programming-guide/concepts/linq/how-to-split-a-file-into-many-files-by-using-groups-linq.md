@@ -2,12 +2,12 @@
 title: HOW TO：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 806a1f6c5674e670402d3d612f169582df5e0155
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aa96fb4042d9469fb6ffc5b0dc14a01e492f39a2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54616975"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828546"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>HOW TO：使用群組 (LINQ) (Visual Basic)，將檔案分割成許多檔案
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
@@ -29,7 +29,7 @@ ms.locfileid: "54616975"
     Garcia, Debra  
     ```  
   
-2.  將下列名稱複製到名為 names2.txt 的文字檔，並將它儲存在您的專案資料夾中：請注意兩個檔案有部分名稱相同。  
+2.  將下列名稱複製到名為 names2.txt 的文字檔，並將它儲存至專案資料夾：請注意兩個檔案有部分名稱相同。  
   
     ```  
     Liu, Jinghao  
@@ -119,5 +119,6 @@ End Class
  建立以 .NET Framework 3.5 版或更新版本為目標的專案，其中包含對 System.Core.dll 的參考，以及 System.Linq 命名空間的 `Imports` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
 - [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

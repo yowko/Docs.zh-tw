@@ -36,20 +36,19 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: d990d0167152c2a97315c0540361ba8b537f1946
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978497"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831420"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  
   
  類似的項目是頭部可拆卸的螺絲起子組。 您可以檢查需要轉動的螺絲，並選取該螺絲的正確螺絲起子頭 (一字、十字、星形)。 將正確的螺絲起子頭插入螺絲起子握把之後，即可執行與螺絲起子完全相同的功能，即轉動螺絲。  
   
- ![圖表的泛用的工具組螺絲起子](../../../../visual-basic/programming-guide/language-features/data-types/media/genericscrewdriver.gif "GenericScrewDriver")  
-一組泛用螺絲起子工具組  
+ ![設定使用不同的讀寫頭螺絲起子的圖表。](./media/generic-types/generic-screwdriver-set.gif)  
   
  當您定義泛型類型時，即使用一個或多個資料類型對其進行參數化。 這可讓您使用程式碼來調整資料類型，使其符合需求。 您的程式碼可以宣告泛型項目的數個不同程式設計項目，而且各代表一組不同的資料類型。 但是，宣告的項目不論使用何種資料類型，都會執行相同的邏輯。  
   

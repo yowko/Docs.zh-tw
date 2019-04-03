@@ -13,12 +13,12 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
-ms.openlocfilehash: dbd97b23bd67b3c98fb89037205ac12f120ca490
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692109"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815065"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>與 Visual Basic 運算子一起執行的一般工作
 運算子會執行許多常見的工作涉及一或多個呼叫的運算式*運算元*。  
@@ -79,5 +79,6 @@ ms.locfileid: "54692109"
 |整數值上執行位元邏輯否定|[Not 運算子](../../../../visual-basic/language-reference/operators/not-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [運算子和運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [運算子 (依功能排列)](../../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)

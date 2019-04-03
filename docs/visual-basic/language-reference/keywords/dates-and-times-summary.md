@@ -10,12 +10,12 @@ helpviewer_keywords:
 - time, Visual Basic keywords and run-time library members
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
-ms.openlocfilehash: 9cf3d26427e483a1e1e5c1bc5316a829325a841f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44bd867412c30eae9a3092446cfd9674ba5e34a4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731903"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819043"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>日期和時間摘要 (Visual Basic)
 Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並使用。  
@@ -30,5 +30,6 @@ Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並�
 |程序的時間。|<xref:Microsoft.VisualBasic.DateAndTime.Timer%2A>|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [關鍵字](../../../visual-basic/language-reference/keywords/index.md)
 - [Visual Basic 執行階段程式庫成員](../../../visual-basic/language-reference/runtime-library-members.md)

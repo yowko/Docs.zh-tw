@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [Visual Basic], validating
 - validation [Visual Basic], strings
 ms.assetid: 9a1acf9b-7e2c-40cb-bba4-656ee2bc2ed0
-ms.openlocfilehash: 5b878371a5cfae46edab6134e9468db2596ed78b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab7b41e03e561a619349176c6bf7e021e1399730
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640949"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819212"
 ---
 # <a name="validating-strings-in-visual-basic"></a>在 Visual Basic 中驗證字串
 本節討論如何驗證在 Visual Basic 中的字串。  
@@ -31,5 +31,6 @@ ms.locfileid: "54640949"
  如何判斷字串是否具有強式密碼的特性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [字串](../../../../visual-basic/programming-guide/language-features/strings/index.md)
 - [MaskedTextBox 控制項](../../../../framework/winforms/controls/maskedtextbox-control-windows-forms.md)

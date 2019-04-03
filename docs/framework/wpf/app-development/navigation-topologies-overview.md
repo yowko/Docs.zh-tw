@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 16ce791c300c431b7349293d00648c881f97c372
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356776"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819589"
 ---
 # <a name="navigation-topologies-overview"></a>巡覽拓撲概觀
 <a name="introduction"></a> 本概觀介紹中的巡覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 並接著說明三種常見的巡覽拓撲及其範例。  
@@ -46,7 +46,7 @@ ms.locfileid: "57356776"
   
  本主題涵蓋三種常見的巡覽拓撲︰*固定線性*，*修正階層式*，並*動態產生*。 每個巡覽拓撲都會示範的範例，具有[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]類似下圖所示：  
   
- ![具有資料項目的工作頁面](./media/navigationtopologyfigure6.png "NavigationTopologyFigure6")  
+ ![工作資料的項目與導覽按鈕的頁面。](./media/navigation-topologies-overview/navigation-topology-data-items.png)  
   
 <a name="Structured_Navigation_Topologies"></a>   
 ## <a name="structured-navigation-topologies"></a>結構化巡覽拓撲  
@@ -60,9 +60,9 @@ ms.locfileid: "57356776"
   
 <a name="Navigation_over_a_Fixed_Linear_Topology"></a>   
 ## <a name="navigation-over-a-fixed-linear-topology"></a>透過固定線性拓撲進行巡覽  
- 固定線性拓撲類似於含有一個或多個精靈頁面，並以固定順序巡覽的精靈結構。 下圖顯示具有固定線性拓撲的精靈的高階結構與流程。  
+ 固定線性拓撲類似於含有一個或多個精靈頁面，並以固定順序巡覽的精靈結構。 下圖顯示的高階結構與流程具有固定線性拓撲的精靈：  
   
- ![巡覽拓撲圖表](./media/navigationtopologyfigure1.png "NavigationTopologyFigure1")  
+ ![顯示固定線性拓撲的圖表。](./media/navigation-topologies-overview/navigation-topology-fixed-linear.png)  
   
  透過固定線性拓撲進行巡覽的一般行為包括以下：  
   
@@ -84,13 +84,13 @@ ms.locfileid: "57356776"
   
 <a name="Dynamic_Navigation_over_a_Fixed_Hierarchical_Topology"></a>   
 ## <a name="dynamic-navigation-over-a-fixed-hierarchical-topology"></a>透過固定的階層式拓撲進行動態巡覽  
- 在某些應用程式中，頁面可以巡覽至兩個以上的其他頁面，如下圖所示。  
+ 在某些應用程式中，頁面會允許巡覽至兩個以上其他頁面，如下圖所示： 
   
- ![可巡覽至多個頁面的頁面](./media/navigationtopologyfigure2.png "NavigationTopologyFigure2")  
+ ![此圖顯示的頁面，可以瀏覽至多個頁面。](./media/navigation-topologies-overview/navigation-topology-multiple-pages.png)  
   
- 這個結構稱為固定的階層式拓撲，而周遊階層的順序通常是在執行階段由應用程式或使用者決定。 階層中每個可巡覽至兩個以上其他頁面的頁面，皆會在執行階段收集必要資料以判斷可巡覽至哪些頁面。 下圖擇一說明上圖可能的巡覽順序。  
+ 這個結構稱為固定的階層式拓撲，而周遊階層的順序通常是在執行階段由應用程式或使用者決定。 階層中每個可巡覽至兩個以上其他頁面的頁面，皆會在執行階段收集必要資料以判斷可巡覽至哪些頁面。 下圖說明根據上圖中的數個可能的巡覽順序的其中一個：  
   
- ![巡覽拓撲圖表](./media/navigationtopologyfigure3.png "NavigationTopologyFigure3")  
+ ![此圖顯示可能的巡覽順序。](./media/navigation-topologies-overview/navigation-topology-fixed-hierarchical.png)  
   
  雖然固定階層式結構中的頁面巡覽順序是在執行階段決定，但使用者體驗仍和固定線性拓撲的使用者體驗相同：  
   
@@ -114,13 +114,13 @@ ms.locfileid: "57356776"
   
 <a name="Navigation_over_a_Dynamically_Generated_Topology"></a>   
 ## <a name="navigation-over-a-dynamically-generated-topology"></a>透過動態產生的拓撲進行巡覽  
- 在某些應用程式中，兩個以上頁面的巡覽順序只能在執行階段由使用者、應用程式或外部資料決定。 下圖說明尚未決定巡覽順序的一組頁面。  
+ 在某些應用程式中，兩個以上頁面的巡覽順序只能在執行階段由使用者、應用程式或外部資料決定。 下圖說明一組具有尚未決定的巡覽順序的頁面：  
   
- ![巡覽拓撲圖表](./media/navigationtopologyfigure4.png "NavigationTopologyFigure4")  
+ ![一組具有尚未決定的巡覽順序的頁面。](./media/navigation-topologies-overview/navigation-topology-dynamically-generated.png)  
   
- 下圖說明已在執行階段由使用者選擇的巡覽順序。  
+ 下圖說明在執行階段由使用者所選擇的巡覽順序：  
   
- ![巡覽圖表](./media/navigationtopologyfigure5.png "NavigationTopologyFigure5")  
+ ![此圖顯示在執行階段的所選的巡覽順序。](./media/navigation-topologies-overview/navigation-topology-sequence-chosen-run-time.png)  
   
  巡覽順序也稱為動態產生的拓撲。 對使用者來說，即使使用另一種巡覽拓撲，其使用者體驗和上一個拓撲是一樣的：  
   

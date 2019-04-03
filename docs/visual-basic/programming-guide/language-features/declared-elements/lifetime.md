@@ -10,12 +10,12 @@ helpviewer_keywords:
 - lifetime [Visual Basic], Visual Basic
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
-ms.openlocfilehash: 15fb6895836de95d37081c44973f455622da178e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976040"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824919"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic 中的存留期
 *存留期*的宣告的項目是一段時間期間它是可供使用。 變數是其唯一項目具有存留期。 基於此目的，編譯器會將程序參數並函式以傳回特殊的變數。 變數的存留期表示的時間期間中，它可保存的值。 其值可以變更存留期內，但它一律會保留一些值。  
@@ -72,6 +72,7 @@ ms.locfileid: "56976040"
  在上述範例中，您可以產生相同的存留期宣告`applesSold`在模組層級。 如果這種方式變更變數的範圍，不過，程序會不會再有獨佔存取權。 因為其他程序無法存取`applesSold`並變更其值、 加總可能不可靠和程式碼可能是更難維護。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)
 - [Nothing](../../../../visual-basic/language-reference/nothing.md)
 - [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)

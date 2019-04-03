@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 2bd88b2df91c38d658e46157a9a83ce44ab9f25c
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981266"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820767"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic 的算術運算子
 算術運算子用來執行許多熟悉的算術作業牽涉到數字常值、 變數、 其他運算式、 函式和屬性呼叫和常數所代表的值計算。 搭配算術運算子也分類為位元移位運算子，運算元的個別位元層級處理，並向左或向右移位其位元模式。  
@@ -95,6 +95,7 @@ ms.locfileid: "56981266"
  如果您將設定`Option Strict Off`，不過，Visual Basic 允許隱含的縮小轉換，以進行應用程式，雖然它們可能會導致非預期的資料或精確度遺失。 基於這個理由，我們建議您改用`Option Strict On`撰寫實際執行程式碼時。 如需詳細資訊，請參閱 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [算術運算子](../../../../visual-basic/language-reference/operators/arithmetic-operators.md)
 - [位元移位運算子](../../../../visual-basic/language-reference/operators/bit-shift-operators.md)
 - [在 Visual Basic 中的比較運算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)

@@ -2,12 +2,18 @@
 title: 建議可用於文件註解的 XML 標記 (Visual Basic)
 ms.date: 07/20/2015
 f1_keywords:
-  - vb.XmlDocComment
+- vb.XmlDocComment
 helpviewer_keywords:
-  - 'tags, XML'
-  - 'XML comments, recommended tags [Visual Basic]'
-  - 'comments, recommended XML tags'
+- tags, XML
+- XML comments, recommended tags [Visual Basic]
+- comments, recommended XML tags
 ms.assetid: 294e0736-ff1e-498e-af83-6db71ed41a72
+ms.openlocfilehash: e59ee25b22c51e47dc83233af33099e6c55de87b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814936"
 ---
 # <a name="recommended-xml-tags-for-documentation-comments-visual-basic"></a>建議可用於文件註解的 XML 標記 (Visual Basic)
 Visual Basic 編譯器可以處理 XML 檔案的程式碼中的文件註解。 您可以使用其他工具來處理文件的 XML 檔案。  
@@ -34,6 +40,7 @@ Visual Basic 編譯器可以處理 XML 檔案的程式碼中的文件註解。 �
 >  如果您想要括弧出現在文件註解文字中，使用`&lt;`和`&gt;`。 例如，字串`"&lt;text in angle brackets&gt;"`會顯示為`<text in angle brackets>`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 XML 加入程式碼註解](../../../visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
 - [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)
 - [如何：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)

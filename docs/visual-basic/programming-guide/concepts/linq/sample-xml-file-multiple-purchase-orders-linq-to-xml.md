@@ -1,15 +1,15 @@
 ---
-title: XML 範例檔：多個採購訂單 (LINQ to XML)
+title: 範例 XML 檔：多份採購訂單 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
-ms.openlocfilehash: 676592b0bd77a10fa8bb5fa01bf3b3a06af1ca46
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a3edba9d071b04e67d5350c9833fc515a08f218
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623478"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835670"
 ---
-# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>XML 範例檔：多個採購訂單 (LINQ to XML)
+# <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>範例 XML 檔：多份採購訂單 (LINQ to XML)
 下列 XML 檔案用於 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 文件的各種範例中。 這個檔案包含數個採購訂單。  
   
 ## <a name="purchaseordersxml"></a>PurchaseOrders.xml  
@@ -110,4 +110,5 @@ ms.locfileid: "54623478"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [範例 XML 文件 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

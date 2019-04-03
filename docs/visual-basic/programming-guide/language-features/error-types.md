@@ -10,12 +10,12 @@ helpviewer_keywords:
 - run-time errors [Visual Basic], types of errors
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
-ms.openlocfilehash: dc7cba394f623ae94a0d9ca8285fc12af8f0dacf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600332"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831562"
 ---
 # <a name="error-types-visual-basic"></a>錯誤類型 (Visual Basic)
 在 Visual Basic 中的錯誤 (也稱為*例外狀況*) 分為三類： 語法錯誤、 執行階段錯誤，以及邏輯錯誤。  
@@ -33,5 +33,6 @@ ms.locfileid: "54600332"
  *邏輯錯誤*是指應用程式在使用時出現。 也就是回應使用者動作的大部分通常不必要或非預期結果。 例如，輸入錯誤的索引鍵或其他外部的影響可能會導致您的應用程式停止運作中預期的參數，或完全。 邏輯錯誤通常是最困難的型別，若要修正，因為它不一定清楚其來源。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Try...Catch...Finally 陳述式](../../../visual-basic/language-reference/statements/try-catch-finally-statement.md)
 - [偵錯工具基礎](/visualstudio/debugger/debugger-basics)

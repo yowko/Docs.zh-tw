@@ -5,12 +5,12 @@ helpviewer_keywords:
 - troubleshooting [Visual Basic], variables
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
-ms.openlocfilehash: b03dcba7675793070c54bdadaf6ec418f8896b7d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965705"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831120"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>在 Visual Basic 中為變數進行疑難排解
 此頁面會列出一些常見的問題，使用 Visual Basic 中的變數時，可能會發生。  
@@ -48,6 +48,7 @@ ms.locfileid: "56965705"
  避免使用具有相同名稱但不同範圍的變數。 如果您想要使用其他組件或專案，請盡可能避免使用這些外部元件所定義的任何名稱。 如果您有多個同名的變數時，請務必限定它的每個參考。 如需詳細資訊，請參閱 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)

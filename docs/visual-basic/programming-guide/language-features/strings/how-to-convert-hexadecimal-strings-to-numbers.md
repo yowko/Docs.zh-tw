@@ -8,12 +8,12 @@ helpviewer_keywords:
 - decimals [Visual Basic], hexadecimals
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
-ms.openlocfilehash: c8ef615b6874642fa9ad1b22fe9d7f7745d4ffde
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 350cfb59a01a4526a2b679fabfa2d49aeab23c19
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200997"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813085"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>HOW TO：十六進位字串轉換為數字 (Visual Basic)
 此範例會將十六進位字串轉換成整數使用<xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>方法。  
@@ -34,5 +34,6 @@ ms.locfileid: "57200997"
    前置詞或數字分隔符號是否存在，呼叫<xref:System.Convert.ToInt32(System.String,System.Int32)>方法會擲回<xref:System.FormatException>。
 
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Conversion.Hex%2A>
 - <xref:System.Convert.ToInt32%2A?displayProperty=nameWithType>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My feature
 - My reference
 ms.assetid: 6f803bd7-21ff-4569-b1fe-b00a6678b1e3
-ms.openlocfilehash: 637eecf9526c64c47ef3559cd5b65f16dd886a6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: accf2464f7d8ead8bcd73c9704bea4fd5d2e410b
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618931"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58824750"
 ---
 # <a name="my-reference-visual-basic"></a>My 參考 (Visual Basic)
 `My`功能可讓程式設計更快且更輕鬆，讓您的直覺式存取常用的方法、 屬性和事件。 下表列出在所包含的物件`My`，以及與每個可執行的動作。  
@@ -29,5 +29,6 @@ ms.locfileid: "54618931"
 |存取目前專案所參考的 XML Web 服務。|[My.WebServices 物件](../../../visual-basic/language-reference/objects/my-webservices-object.md)|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 應用程式模型概觀](../../../visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md)
 - [使用 My 進行開發](../../../visual-basic/developing-apps/development-with-my/index.md)

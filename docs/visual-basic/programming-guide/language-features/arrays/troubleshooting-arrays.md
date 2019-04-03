@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 81817af230298528a766aa6494899538c35da7bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707618"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833369"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>疑難排解陣列 (Visual Basic)
 此頁面會列出使用陣列時所發生的一些常見問題。  
@@ -58,5 +58,6 @@ ms.locfileid: "54707618"
  在決定多維度陣列的界限，負責指定維度的方式。 `dimension`的參數<xref:System.Array.GetLowerBound%2A>並<xref:System.Array.GetUpperBound%2A>方法是以 0 為基礎，同時`Rank`參數的 Visual Basic<xref:Microsoft.VisualBasic.Information.LBound%2A>和<xref:Microsoft.VisualBasic.Information.UBound%2A>函式是以 1 為基礎。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
 - [如何：初始化陣列變數在 Visual Basic](../../../../visual-basic/programming-guide/language-features/arrays/how-to-initialize-an-array-variable.md)

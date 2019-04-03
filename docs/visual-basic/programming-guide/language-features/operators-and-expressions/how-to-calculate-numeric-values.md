@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 - numeric expressions
 ms.assetid: ba6bf43d-bd96-49b8-b1de-4a7797551372
-ms.openlocfilehash: 036985a7b60afedc1e8ef0854c619ea8515e5ffe
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 33184d9be275f5e777ffd79c6dd4e3182d865de7
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974298"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825746"
 ---
 # <a name="how-to-calculate-numeric-values-visual-basic"></a>HOW TO：計算數值 (Visual Basic)
 您可以計算數字的值，透過使用數值運算式。 A*數值運算式*運算式包含常值、 常數和變數表示數字的值，並處理那些值的運算子。  
@@ -63,6 +63,7 @@ ms.locfileid: "56974298"
      如需詳細資訊，請參閱 < [Visual Basic 中的運算子優先順序](../../../../visual-basic/language-reference/operators/operator-precedence.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [運算子和運算式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [數值比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)
 - [陳述式](../../../../visual-basic/language-reference/statements/index.md)

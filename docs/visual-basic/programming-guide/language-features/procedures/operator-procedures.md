@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: fe08c855e4dd0adca68d48c3b32cb399033a9d46
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974922"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815566"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 運算子程序是一系列的 Visual Basic 陳述式可定義標準運算式的行為 (例如`*`， `<>`，或`And`) 上類別或您已定義的結構。 這也稱為*多載的運算子*。  
@@ -81,6 +81,7 @@ ms.locfileid: "56974922"
   
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
-ms.openlocfilehash: 7a0b513e5045db609550133e20c20ef65f17844c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54551913"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828078"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>在 Visual Basic 中建立和使用元件
 「元件」是實作 <xref:System.ComponentModel.IComponent?displayProperty=nameWithType> 介面的類別，或直接或間接衍生自可實作 <xref:System.ComponentModel.IComponent> 類別的類別。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] 元件是能重複使用的物件，可以與其他物件互動，並且提供對於外部資源的控制與設計階段支援。  
@@ -63,5 +63,5 @@ ms.locfileid: "54551913"
  說明如何修正常見問題。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：在 Windows Forms 中存取設計階段支援](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)
 
+- [如何：在 Windows Forms 中存取設計階段支援](../../framework/winforms/controls/developing-windows-forms-controls-at-design-time.md)

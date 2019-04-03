@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 733013c8eca75bad0dc0bdf1d76f1468b1d903a8
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 0550e4ad700494c8773a5d9b5b282dfa116adfed
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759388"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813362"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 建立 DLL 時，請指定預設的基底地址。  
@@ -42,9 +42,10 @@ ms.locfileid: "55759388"
   
 |若要在 Visual Studio IDE 中設定-baseaddress|  
 |---|  
-|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**DLL 基底位址：**  方塊中。 **注意：**    **DLL 基底位址：** 方塊是唯讀除非目標是 DLL。|  
+|1.在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。 <br />2.按一下 [編譯] 索引標籤。<br />3.按一下 [ **進階**]。<br />4.修改中的值**DLL 基底位址：**  方塊中。 **注意：**     **DLL 基底位址：** 方塊是唯讀除非目標是 DLL。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)

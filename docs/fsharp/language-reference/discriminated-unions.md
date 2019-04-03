@@ -2,12 +2,12 @@
 title: 已區分的聯集
 description: 了解如何使用F#差別聯集。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bb6dc06fb727f85eb5500719b175fc29090450b
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611863"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821422"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
 
@@ -156,7 +156,7 @@ Area of rectangle that has height 5.000000 and width 10.000000 is 50.000000
 
 在先前的程式碼`resultSumTree`具有值為 10。 下圖顯示的樹狀結構`myTree`。
 
-![Mytree 的樹狀結構](../media/TreeStructureDiagram.png)
+![此圖顯示 mytree 的樹狀結構。](../media/discriminated-unions/tree-structure-mytree.png)
 
 在樹狀目錄中的節點是異質也運作差別聯的集。 下列程式碼類型`Expression`代表抽象語法樹狀目錄中的運算式中簡單的程式設計語言支援新增和相乘的數字和變數。 部分聯集案例不是遞迴和代表數字 (`Number`) 或變數 (`Variable`)。 其他情況下是遞迴的而且代表運算 (`Add`和`Multiply`)，其中運算元也是運算式。 `Evaluate`函式會使用比對運算式來遞迴處理語法樹狀結構。
 

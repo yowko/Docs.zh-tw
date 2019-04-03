@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: c6cd9c61c332fc98e99334143b50e395f4eabf47
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f22888075184e0359daec1056af09132eaf772a5
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671495"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825153"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>HOW TO：變數 (Visual Basic) 中保留多個值
 變數會保留多個值，如果您將它的宣告*複合資料型別*。  
@@ -42,6 +42,7 @@ ms.locfileid: "54671495"
 5.  請依照下列`As`關鍵字搭配適當的複合資料類型的名稱。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
 - [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Shared
 - BC30369
 ms.assetid: 39d9466b-c1f3-4406-91a5-3d6c52d23a3d
-ms.openlocfilehash: da3aa17c55a4ccc95e5f4c98d0f12712ef77d5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc54bbf8053c07cc3b48a762b6f1c60344de9921
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729219"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58822566"
 ---
 # <a name="cannot-refer-to-an-instance-member-of-a-class-from-within-a-shared-method-or-shared-member-initializer-without-an-explicit-instance-of-the-class"></a>沒有類別的明確執行個體，因此無法從共用方法或共用成員初始設定式中參考至類別的執行個體成員
 您嘗試參考非共用的成員共用的程序內的類別。 下列範例會示範這種情況。  
@@ -44,4 +44,5 @@ End Class
 3.  如果您想要有自己的個別複本成員的每個執行個體時，請勿指定`Shared`成員宣告。 移除`Shared`從程序宣告的關鍵字。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Shared](../../../visual-basic/language-reference/modifiers/shared.md)

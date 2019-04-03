@@ -2,12 +2,12 @@
 title: 使用反映 (Visual Basic) 存取屬性
 ms.date: 07/20/2015
 ms.assetid: c56e41da-5433-464f-a7bf-2a722e78bc9f
-ms.openlocfilehash: caf48372f165f3689503d47472a5fa28d2299193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e5cbce8529cc7554a8edacb2d83dabb73a495eec
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625096"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827641"
 ---
 # <a name="accessing-attributes-by-using-reflection-visual-basic"></a>使用反映 (Visual Basic) 存取屬性
 您可以定義自訂屬性並將它們放在原始程式碼的事實，對於擷取並處理該項資訊並沒有什麼幫助。 使用反射，即可擷取已使用自訂屬性所定義的資訊。 重要方法是 `GetCustomAttributes`，這會傳回為來源程式碼屬性的執行階段對等項目的物件陣列。 這個方法有數個多載的版本。 如需詳細資訊，請參閱<xref:System.Attribute>。  
@@ -100,6 +100,7 @@ End Class
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection>
 - <xref:System.Attribute>
 - [Visual Basic 程式設計手冊](../../../../visual-basic/programming-guide/index.md)

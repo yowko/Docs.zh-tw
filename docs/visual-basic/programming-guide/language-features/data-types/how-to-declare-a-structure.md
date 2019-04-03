@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: cee2768d0e7475d2df123491e2b506bf5c08785f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066112"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825088"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>HOW TO：宣告結構 (Visual Basic)
 開始使用在 structure 宣告[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)，然後您使用`End Structure`陳述式。 這兩個陳述式之間必須宣告至少一個*項目*。 項目可以是任何資料類型，但至少一個必須為非共用的變數或非共用、 非自訂的事件。  
@@ -53,9 +53,10 @@ ms.locfileid: "55066112"
   
      `salary`在上述範例中的欄位是`Private`，這表示它是外部結構，甚至是從包含的類別無法存取。 不過，`giveRaise`程序是`Public`，因此它可以從外部呼叫結構。 同樣地，您可以提高`salaryReviewTime`結構之外的事件。  
   
-     變數，除了`Sub`程序和事件，您也可以定義常數，`Function`程序和在結構中的屬性。 您可以指定最多一個屬性為*屬性預設*，前提是需要至少一個引數。 您可以處理的事件[Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`程序。 如需詳細資訊，請參閱[＜How to：宣告，並在 Visual Basic 中呼叫預設屬性](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)。  
+     變數，除了`Sub`程序和事件，您也可以定義常數，`Function`程序和在結構中的屬性。 您可以指定最多一個屬性為*屬性預設*，前提是需要至少一個引數。 您可以處理的事件[Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`程序。 如需詳細資訊，請參閱[如何：宣告，並在 Visual Basic 中呼叫預設屬性](../../../../visual-basic/programming-guide/language-features/procedures/how-to-declare-and-call-a-default-property.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [基礎資料類型](../../../../visual-basic/programming-guide/language-features/data-types/elementary-data-types.md)
 - [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)

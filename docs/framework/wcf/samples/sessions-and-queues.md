@@ -2,12 +2,12 @@
 title: 工作階段和佇列
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 386221949e35a7e70fff7b62bb081b525bc9a358
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4aa8aea2e829f89714ad9fa946121d4ebab21c4c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642252"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814519"
 ---
 # <a name="sessions-and-queues"></a>工作階段和佇列
 這個範例示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -26,7 +26,7 @@ ms.locfileid: "54642252"
   
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。  
   
- 有時，用戶端會傳送一組在群組中彼此有關聯的訊息。 當訊息必須一併處理或依照指定的順序處理時，可以使用佇列將它們集合成為群組，以便單一接收應用程式進行處理。 如果伺服器群組上有數個接收應用程式，而且必須確保同一群組的訊息是由相同接收應用程式所處理時，這種做法尤其重要。 佇列工作階段提供的機制是用來傳送和接收一組必須全部一次處理完成的相關訊息。 但是佇列工作階段中必須有異動，您才會看到這種模式。  
+ 有時，用戶端會傳送一組在群組中彼此有關聯的訊息。 當訊息必須一併處理或依照指定的順序處理時，可以使用佇列將它們集合成為群組，以便單一接收應用程式進行處理。 如果伺服器群組上有數個接收應用程式，而且必須確保同一群組的訊息是由相同接收應用程式所處理時，這種做法尤其重要。 佇列工作階段提供的機制是用來傳送和接收一組必須全部一次處理完成的相關訊息。 但是佇列工作階段中必須有交易，您才會看到這種模式。  
   
  在範例中，用戶端會傳送一些訊息給服務做為單一異動範圍內工作階段的一部分。  
   
@@ -47,7 +47,7 @@ public interface IOrderTaker
 }  
 ```
 
- 服務會定義服務作業，但定義的方式只是讓第一項作業登記在異動中，而不自動完成異動。 後續的作業也會登記在相同的異動中，但是不自動完成。 只有工作階段中的最後一項作業，才會自動完成交易。 因此，服務合約中的數個作業引動過程都會使用同一個異動。 如果有任何作業擲回例外狀況，交易就會復原，並將工作階段重新放回佇列中。 要等到最後一項作業完成，交易才會獲得認可。 服務會使用 `PerSession` 做為 <xref:System.ServiceModel.InstanceContextMode>，以便在同一個服務執行個體上接收工作階段中的所有訊息。  
+ 服務會定義服務作業，但定義的方式只是讓第一項作業登記在異動中，而不自動完成異動。 後續的作業也會登記在相同的交易中，但是不自動完成。 只有工作階段中的最後一項作業，才會自動完成交易。 因此，服務合約中的數個作業引動過程都會使用同一個異動。 如果有任何作業擲回例外狀況，異動就會復原，並將工作階段重新放回佇列中。 要等到最後一項作業完成，異動才會獲得認可。 服務會使用 `PerSession` 做為 <xref:System.ServiceModel.InstanceContextMode>，以便在同一個服務執行個體上接收工作階段中的所有訊息。  
 
 ```csharp
 [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
@@ -138,7 +138,7 @@ public static void Main()
 <system.serviceModel>  
 ```  
   
- 用戶端會建立一個異動範圍。 工作階段中的所有訊息都會傳送到該交易範圍內的佇列，形成不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。 藉由呼叫 <xref:System.Transactions.TransactionScope.Complete%2A> 來認可交易。  
+ 用戶端會建立一個交易範圍。 工作階段中的所有訊息都會傳送到該異動範圍內的佇列，形成不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。 藉由呼叫 <xref:System.Transactions.TransactionScope.Complete%2A> 來認可交易。  
 
 ```csharp
 //Create a transaction scope.  
@@ -170,7 +170,7 @@ using (TransactionScope scope = new TransactionScope(TransactionScopeOption.Requ
 ```
 
 > [!NOTE]
->  您對工作階段中的所有訊息只能使用單一異動，而且必須在認可異動之前傳送工作階段中的所有訊息。 關閉用戶端就會關閉工作階段。 因此，必須在交易完成之前先關閉用戶端，才能將工作階段中的所有訊息傳送至佇列。  
+>  您對工作階段中的所有訊息只能使用單一交易，而且必須在認可交易之前傳送工作階段中的所有訊息。 關閉用戶端就會關閉工作階段。 因此，必須在異動完成之前先關閉用戶端，才能將工作階段中的所有訊息傳送至佇列。  
   
  當您執行範例時，用戶端與服務活動都會顯示在服務與用戶端主控台視窗中。 您可以查看來自用戶端的服務接收訊息。 在每個主控台視窗中按下 ENTER 鍵，即可關閉服務與用戶端。 請注意，因為佇列正在使用中，所以用戶端與服務不需要同時啟動與執行。 您可以執行用戶端，關閉用戶端，然後再啟動服務，服務還是會收到訊息。  
   
@@ -269,4 +269,3 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
     > [!NOTE]
     >  將安全性模式設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。  
   
-## <a name="see-also"></a>另請參閱

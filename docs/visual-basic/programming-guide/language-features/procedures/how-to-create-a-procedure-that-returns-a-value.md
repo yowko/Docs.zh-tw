@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
-ms.openlocfilehash: ce0010762374baf5b19ab2e64f50e12fefda2dee
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88e30caed97938501302c05830df6546a6822a48
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966960"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831250"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>HOW TO：建立程序傳回值 (Visual Basic)
 您使用`Function`程序來將值傳回給呼叫程式碼。  
@@ -37,6 +37,7 @@ ms.locfileid: "56966960"
      [!code-vb[VbVbcnProcedures#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程序](./index.md)
 - [Sub 程序](./sub-procedures.md)
 - [屬性程序](./property-procedures.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: e519fcaf90c6f18e75d5c409cbe7067d5db36429
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975936"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813908"
 ---
 # <a name="user-defined-constants-visual-basic"></a>使用者定義常數 (Visual Basic)
 常數是有意義的名稱來取代數字或字串，不會變更。 如同它的名稱所示，常數用來儲存應用程式執行過程中維持不變的值。 您可以使用常數所定義的控制項或元件使用，或建立您自己。 您可以建立自己的常數會被稱為*使用者定義*。  
@@ -56,6 +56,7 @@ ms.locfileid: "56975936"
  如果發生循環，Visual Basic 會產生編譯器錯誤。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)
 - [常數和常值資料類型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)
 - [常數和列舉](../../../../visual-basic/programming-guide/language-features/constants-enums/index.md)

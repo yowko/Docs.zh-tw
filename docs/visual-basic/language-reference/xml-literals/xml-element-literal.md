@@ -8,12 +8,12 @@ helpviewer_keywords:
 - element literal [Visual Basic]
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
-ms.openlocfilehash: 71e6cf3e6169434ea0a28f8691cf82f6c8e8a030
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979916"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58842248"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 項目常值 (Visual Basic)
 
@@ -160,6 +160,7 @@ ms.locfileid: "56979916"
  請注意，編譯器，轉換成 XML 命名空間的前置詞定義的全域 XML 命名空間前置詞。 \<Ns:middle > 項目會重新定義的 XML 命名空間前置詞\<ns:inner1 > 項目。 不過， \<ns:inner2 > 項目會使用所定義的命名空間`Imports`陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xml.Linq.XElement>
 - [宣告的 XML 項目和屬性的名稱](../../../visual-basic/programming-guide/language-features/xml/names-of-declared-xml-elements-and-attributes.md)
 - [XML 註解常值](../../../visual-basic/language-reference/xml-literals/xml-comment-literal.md)
