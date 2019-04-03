@@ -7,40 +7,41 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: c50cee530cab0d5d164d930678651f302ddc7f09
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980759"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58827220"
 ---
-# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="e36b4-102">'Custom' 修飾詞在沒有以明確委派類型宣告的事件中無效</span><span class="sxs-lookup"><span data-stu-id="e36b4-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
-<span data-ttu-id="e36b4-103">不同於非自訂事件`Custom Event`宣告需要`As`事件名稱，明確地指定事件的委派型別後面的子句。</span><span class="sxs-lookup"><span data-stu-id="e36b4-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
+# <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a><span data-ttu-id="e0662-102">'Custom' 修飾詞在沒有以明確委派類型宣告的事件中無效</span><span class="sxs-lookup"><span data-stu-id="e0662-102">'Custom' modifier is not valid on events declared without explicit delegate types</span></span>
+<span data-ttu-id="e0662-103">不同於非自訂事件`Custom Event`宣告需要`As`事件名稱，明確地指定事件的委派型別後面的子句。</span><span class="sxs-lookup"><span data-stu-id="e0662-103">Unlike a non-custom event, a `Custom Event` declaration requires an `As` clause following the event name that explicitly specifies the delegate type for the event.</span></span>  
   
- <span data-ttu-id="e36b4-104">非自訂事件可以是定義使用`As`子句和明確委派類型，或立即使用參數清單後面的事件名稱。</span><span class="sxs-lookup"><span data-stu-id="e36b4-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
+ <span data-ttu-id="e0662-104">非自訂事件可以是定義使用`As`子句和明確委派類型，或立即使用參數清單後面的事件名稱。</span><span class="sxs-lookup"><span data-stu-id="e0662-104">Non-custom events can be defined either with an `As` clause and an explicit delegate type, or with a parameter list immediately following the event name.</span></span>  
   
- <span data-ttu-id="e36b4-105">**錯誤 ID:** BC31122</span><span class="sxs-lookup"><span data-stu-id="e36b4-105">**Error ID:** BC31122</span></span>  
+ <span data-ttu-id="e0662-105">**錯誤 ID:** BC31122</span><span class="sxs-lookup"><span data-stu-id="e0662-105">**Error ID:** BC31122</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="e36b4-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="e36b4-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e0662-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="e0662-106">To correct this error</span></span>  
   
-1.  <span data-ttu-id="e36b4-107">定義自訂事件的委派具有相同的參數清單。</span><span class="sxs-lookup"><span data-stu-id="e36b4-107">Define a delegate with the same parameter list as the custom event.</span></span>  
+1.  <span data-ttu-id="e0662-107">定義自訂事件的委派具有相同的參數清單。</span><span class="sxs-lookup"><span data-stu-id="e0662-107">Define a delegate with the same parameter list as the custom event.</span></span>  
   
-     <span data-ttu-id="e36b4-108">例如，如果`Custom Event`已定義`Custom Event Test(ByVal sender As Object, ByVal i As Integer)`，則對應的委派會是如下所示。</span><span class="sxs-lookup"><span data-stu-id="e36b4-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
+     <span data-ttu-id="e0662-108">例如，如果`Custom Event`已定義`Custom Event Test(ByVal sender As Object, ByVal i As Integer)`，則對應的委派會是如下所示。</span><span class="sxs-lookup"><span data-stu-id="e0662-108">For example, if the `Custom Event` was defined by `Custom Event Test(ByVal sender As Object, ByVal i As Integer)`, then the corresponding delegate would be the following.</span></span>  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  <span data-ttu-id="e36b4-109">將自訂事件的參數清單`As`子句指定的委派型別。</span><span class="sxs-lookup"><span data-stu-id="e36b4-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
+2.  <span data-ttu-id="e0662-109">將自訂事件的參數清單`As`子句指定的委派型別。</span><span class="sxs-lookup"><span data-stu-id="e0662-109">Replace the parameter list of the custom event with an `As` clause specifying the delegate type.</span></span>  
   
-     <span data-ttu-id="e36b4-110">此範例中，再繼續`Custom Event`宣告重新撰寫，如下所示。</span><span class="sxs-lookup"><span data-stu-id="e36b4-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
+     <span data-ttu-id="e0662-110">此範例中，再繼續`Custom Event`宣告重新撰寫，如下所示。</span><span class="sxs-lookup"><span data-stu-id="e0662-110">Continuing with the example, `Custom Event` declaration would be rewritten as follows.</span></span>  
   
      [!code-vb[VbVbalrEventError#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#19)]  
   
-## <a name="example"></a><span data-ttu-id="e36b4-111">範例</span><span class="sxs-lookup"><span data-stu-id="e36b4-111">Example</span></span>  
- <span data-ttu-id="e36b4-112">這個範例會宣告`Custom Event`，並指定必要`As`子句與委派型別。</span><span class="sxs-lookup"><span data-stu-id="e36b4-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
+## <a name="example"></a><span data-ttu-id="e0662-111">範例</span><span class="sxs-lookup"><span data-stu-id="e0662-111">Example</span></span>  
+ <span data-ttu-id="e0662-112">這個範例會宣告`Custom Event`，並指定必要`As`子句與委派型別。</span><span class="sxs-lookup"><span data-stu-id="e0662-112">This example declares a `Custom Event` and specifies the required `As` clause with a delegate type.</span></span>  
   
  [!code-vb[VbVbalrEventError#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#2)]  
   
-## <a name="see-also"></a><span data-ttu-id="e36b4-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e36b4-113">See also</span></span>
-- [<span data-ttu-id="e36b4-114">Event 陳述式</span><span class="sxs-lookup"><span data-stu-id="e36b4-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="e36b4-115">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="e36b4-115">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [<span data-ttu-id="e36b4-116">事件</span><span class="sxs-lookup"><span data-stu-id="e36b4-116">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)
+## <a name="see-also"></a><span data-ttu-id="e0662-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0662-113">See also</span></span>
+
+- [<span data-ttu-id="e0662-114">Event 陳述式</span><span class="sxs-lookup"><span data-stu-id="e0662-114">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="e0662-115">Delegate 陳述式</span><span class="sxs-lookup"><span data-stu-id="e0662-115">Delegate Statement</span></span>](../../../visual-basic/language-reference/statements/delegate-statement.md)
+- [<span data-ttu-id="e0662-116">事件</span><span class="sxs-lookup"><span data-stu-id="e0662-116">Events</span></span>](../../../visual-basic/programming-guide/language-features/events/index.md)

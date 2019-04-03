@@ -2,21 +2,22 @@
 title: 無法刪除某些子機碼
 ms.date: 07/20/2015
 ms.assetid: 14562137-af43-4972-84c1-a380a90f7d6c
-ms.openlocfilehash: 9ed721f83b648315cc535aaa8f82c9d821d02ff4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1dd54f9905585c7c16b9a23fa58de04631e7a63
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640143"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58816586"
 ---
-# <a name="some-subkeys-cannot-be-deleted"></a><span data-ttu-id="d1123-102">無法刪除某些子機碼</span><span class="sxs-lookup"><span data-stu-id="d1123-102">Some subkeys cannot be deleted</span></span>
-<span data-ttu-id="d1123-103">嘗試刪除登錄機碼，但是作業失敗，因為無法刪除某些子機碼。</span><span class="sxs-lookup"><span data-stu-id="d1123-103">An attempt has been made to delete a registry key, but the operation failed because some subkeys cannot be deleted.</span></span> <span data-ttu-id="d1123-104">這通常是因為缺乏權限。</span><span class="sxs-lookup"><span data-stu-id="d1123-104">Usually this is due to a lack of permissions.</span></span>  
+# <a name="some-subkeys-cannot-be-deleted"></a><span data-ttu-id="c6da8-102">無法刪除某些子機碼</span><span class="sxs-lookup"><span data-stu-id="c6da8-102">Some subkeys cannot be deleted</span></span>
+<span data-ttu-id="c6da8-103">嘗試刪除登錄機碼，但是作業失敗，因為無法刪除某些子機碼。</span><span class="sxs-lookup"><span data-stu-id="c6da8-103">An attempt has been made to delete a registry key, but the operation failed because some subkeys cannot be deleted.</span></span> <span data-ttu-id="c6da8-104">這通常是因為缺乏權限。</span><span class="sxs-lookup"><span data-stu-id="c6da8-104">Usually this is due to a lack of permissions.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="d1123-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="d1123-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="c6da8-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="c6da8-105">To correct this error</span></span>  
   
--   <span data-ttu-id="d1123-106">請確定您有足夠的權限，無法刪除指定的子機碼。</span><span class="sxs-lookup"><span data-stu-id="d1123-106">Make sure you have sufficient permissions to delete the specified subkeys.</span></span>  
+-   <span data-ttu-id="c6da8-106">請確定您有足夠的權限，無法刪除指定的子機碼。</span><span class="sxs-lookup"><span data-stu-id="c6da8-106">Make sure you have sufficient permissions to delete the specified subkeys.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1123-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d1123-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c6da8-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c6da8-107">See also</span></span>
+
 - <xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>
 - <xref:Microsoft.Win32.RegistryKey.DeleteSubKey%2A>

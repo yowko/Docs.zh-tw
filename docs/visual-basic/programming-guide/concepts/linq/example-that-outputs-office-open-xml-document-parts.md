@@ -2,20 +2,20 @@
 title: 輸出 Office Open XML 文件組件 (Visual Basic) 的範例
 ms.date: 07/20/2015
 ms.assetid: a951925b-c985-48ed-b215-2a68b58f1ae5
-ms.openlocfilehash: 0ad7dc9d6f68ecde88888b0f0250632f3f946f92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98ef8390c75b7efbf57040e9723c117a6ae18a66
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670247"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58838634"
 ---
-# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="66367-102">輸出 Office Open XML 文件組件 (Visual Basic) 的範例</span><span class="sxs-lookup"><span data-stu-id="66367-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
-<span data-ttu-id="66367-103">本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。</span><span class="sxs-lookup"><span data-stu-id="66367-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
+# <a name="example-that-outputs-office-open-xml-document-parts-visual-basic"></a><span data-ttu-id="8e94d-102">輸出 Office Open XML 文件組件 (Visual Basic) 的範例</span><span class="sxs-lookup"><span data-stu-id="8e94d-102">Example that Outputs Office Open XML Document Parts (Visual Basic)</span></span>
+<span data-ttu-id="8e94d-103">本主題顯示如何開啟 Office Open XML 文件並存取其中的一部分。</span><span class="sxs-lookup"><span data-stu-id="8e94d-103">This topic shows how to open an Office Open XML document and access parts within it.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="66367-104">範例</span><span class="sxs-lookup"><span data-stu-id="66367-104">Example</span></span>  
- <span data-ttu-id="66367-105">下列範例會開啟 Office Open XML 文件，並列印主控台的文件部分與樣式部分。</span><span class="sxs-lookup"><span data-stu-id="66367-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
+## <a name="example"></a><span data-ttu-id="8e94d-104">範例</span><span class="sxs-lookup"><span data-stu-id="8e94d-104">Example</span></span>  
+ <span data-ttu-id="8e94d-105">下列範例會開啟 Office Open XML 文件，並列印主控台的文件部分與樣式部分。</span><span class="sxs-lookup"><span data-stu-id="8e94d-105">The following example opens an Office Open XML document, and prints the document part and the style part to the console.</span></span>  
   
- <span data-ttu-id="66367-106">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="66367-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="66367-107">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="66367-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
+ <span data-ttu-id="8e94d-106">這個範例會使用 WindowsBase 組件的類別。</span><span class="sxs-lookup"><span data-stu-id="8e94d-106">This example uses classes from the WindowsBase assembly.</span></span> <span data-ttu-id="8e94d-107">它會使用 <xref:System.IO.Packaging?displayProperty=nameWithType> 命名空間中的型別。</span><span class="sxs-lookup"><span data-stu-id="8e94d-107">It uses types in the <xref:System.IO.Packaging?displayProperty=nameWithType> namespace.</span></span>  
   
 ```vb  
 Const fileName As String = "SampleDoc.docx"  
@@ -64,5 +64,6 @@ Using wdPackage As Package = Package.Open(fileName, FileMode.Open, FileAccess.Re
 End Using  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="66367-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="66367-108">See also</span></span>
-- [<span data-ttu-id="66367-109">詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="66367-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+## <a name="see-also"></a><span data-ttu-id="8e94d-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8e94d-108">See also</span></span>
+
+- [<span data-ttu-id="8e94d-109">詳細資料的 Office Open XML WordprocessingML 文件 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8e94d-109">Details of Office Open XML WordprocessingML Documents (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
