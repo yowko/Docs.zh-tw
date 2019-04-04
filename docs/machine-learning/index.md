@@ -3,12 +3,12 @@ title: ML.NET 內容指南
 description: 了解如何建置量身打造的 AI 解決方案，並使用 ML.NET 將其整合到您的 .NET 應用程式中。
 ms.date: 01/18/2019
 ms.custom: seodec18
-ms.openlocfilehash: 37496adb20cfe38e731c9c8364b6f9cff319f6c4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826257"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920762"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 內容指南
 
@@ -27,25 +27,25 @@ ms.locfileid: "55826257"
 
 ## <a name="tutorials"></a>教學課程
 
-[使用二進位分類模型分析人氣](tutorials/sentiment-analysis.md)說明如何建置應用程式以判斷人氣是正面或負面。
+[使用二進位分類模型分析人氣](./tutorials/sentiment-analysis.md)說明如何建置應用程式以判斷人氣是正面或負面。
 
-[使用多元分類模型對 GitHub 問題進行分類](tutorials/github-issue-classification.md)可讓您了解如何建置能判斷 GitHub 問題之 Area 標籤的應用程式。
+[使用多元分類模型對 GitHub 問題進行分類](./tutorials/github-issue-classification.md)可讓您了解如何建置能判斷 GitHub 問題之 Area 標籤的應用程式。
 
-[使用迴歸模型預測價格](tutorials/taxi-fare.md)說明如何建置預測用應用程式以使用來自歷史資料的許多因素來判斷答案。
+[使用迴歸模型預測價格](./tutorials/taxi-fare.md)說明如何建置預測用應用程式以使用來自歷史資料的許多因素來判斷答案。
 
-[使用特性來將鳶尾花分類](tutorials/iris-clustering.md)說明如何使用叢集模型來分析鳶尾花資料集。 
+[使用特性來將鳶尾花分類](./tutorials/iris-clustering.md)說明如何使用叢集模型來分析鳶尾花資料集。 
 
 ## <a name="how-to-guide"></a>操作說明指南
 
-[使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式](how-to-guides/matchup-app-infer-net.md)說明如何建置簡化版的遊戲配對應用程式，就像您在 Xbox 遊戲中看到的一樣。
+[使用 Infer.NET 與概率程式設計建立遊戲配對清單應用程式](./how-to-guides/matchup-app-infer-net.md)說明如何建置簡化版的遊戲配對應用程式，就像您在 Xbox 遊戲中看到的一樣。
 
 ## <a name="resources"></a>資源
 
-[機器學習詞彙](resources/glossary.md)定義關鍵詞彙。
+[機器學習詞彙](./resources/glossary.md)定義關鍵詞彙。
 
-[機器學習工作](resources/tasks.md)描述工作，例如分類與異常偵測。 
+[機器學習工作](./resources/tasks.md)描述工作，例如分類與異常偵測。 
 
-[資料轉換](resources/transforms.md)描述 ML.NET 中的資料準備功能。
+[資料轉換](./resources/transforms.md)描述 ML.NET 中的資料準備功能。
 
 
 ## <a name="api-reference"></a>應用程式開發介面參考
