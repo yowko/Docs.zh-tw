@@ -13,8 +13,7 @@ ms.locfileid: "57365031"
 
 連接字串 (Connection String) 包含可當做參數從資料提供者 (Data Provider) 傳遞至資料來源的初始化資訊。 此語法會因資料提供者而不同，而且連接字串會在嘗試開啟連接期間進行剖析。 Entity Framework 所使用的連接字串包含用來連接至支援 Entity Framework 之基礎 ADO.NET 資料提供者的資訊。 它們也包含必要之模型和對應檔的相關資訊。
 
-EntityClient 提供者會在存取模型和對應中繼資料，以及連接至資料來源時使用連接字串。 您可以透過 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性來存取或設定連接字串。 
-  <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class) 可用來以程式設計方式建構或存取連接字串中的參數。 如需詳細資訊，請參閱[如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。
+EntityClient 提供者會在存取模型和對應中繼資料，以及連接至資料來源時使用連接字串。 您可以透過 <xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> 的 <xref:System.Data.EntityClient.EntityConnection> 屬性來存取或設定連接字串。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class) 可用來以程式設計方式建構或存取連接字串中的參數。 如需詳細資訊，請參閱[如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。
 
 [Entity Data Model 工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))產生連接字串儲存在應用程式的組態檔中。 <xref:System.Data.Objects.ObjectContext> 會在建立物件查詢時自動擷取這個連接資訊。 您可以從 <xref:System.Data.EntityClient.EntityConnection> 屬性中存取 <xref:System.Data.Objects.ObjectContext> 執行個體 (Instance) 所使用的 <xref:System.Data.Objects.ObjectContext.Connection%2A>。 如需詳細資訊，請參閱 <<c0> [ 管理連接和交易](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))。
 
@@ -95,13 +94,11 @@ Metadata=.\
 
 ## <a name="support-for-the-124datadirectory124-substitution-string-and-the-web-application-root-operator-"></a>支援&#124;DataDirectory&#124;替代字串和 Web 應用程式根目錄運算子 （~）
 
-`DataDirectory` 和 ~ 運算子會用於<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>的一部分`Metadata`和`Provider Connection String`關鍵字。 
-  <xref:System.Data.EntityClient.EntityConnection> 會分別將 `DataDirectory` 和 ~ 運算子轉送至 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存放區提供者。
+`DataDirectory` 和 ~ 運算子會用於<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A>的一部分`Metadata`和`Provider Connection String`關鍵字。 <xref:System.Data.EntityClient.EntityConnection> 會分別將 `DataDirectory` 和 ~ 運算子轉送至 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 和存放區提供者。
 
 |詞彙|描述|
 |----------|-----------------|
-|`&#124;DataDirectory&#124;`|解析成對應和中繼資料檔案的相對路徑。 這是透過 `AppDomain.SetData("DataDirectory", objValue)` 方法所設定的值。 `DataDirectory`替代字串必須以垂直線字元括住，而且不能有任何空白字元，其名稱與垂直線字元之間。 
-  `DataDirectory` 名稱不區分大小寫。<br /><br /> 如果要傳遞的中繼資料路徑清單的成員身分，有一個名為"DataDirectory"的實體目錄，加入名稱的任一個或兩個邊泛空白字元。 例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 應用程式會解析&#124;DataDirectory&#124;以 「\<應用程式根目錄 > / app_data"資料夾。|
+|`&#124;DataDirectory&#124;`|解析成對應和中繼資料檔案的相對路徑。 這是透過 `AppDomain.SetData("DataDirectory", objValue)` 方法所設定的值。 `DataDirectory`替代字串必須以垂直線字元括住，而且不能有任何空白字元，其名稱與垂直線字元之間。 `DataDirectory` 名稱不區分大小寫。<br /><br /> 如果要傳遞的中繼資料路徑清單的成員身分，有一個名為"DataDirectory"的實體目錄，加入名稱的任一個或兩個邊泛空白字元。 例如：`Metadata="DataDirectory1 &#124; DataDirectory &#124; DataDirectory2"`。 ASP.NET 應用程式會解析&#124;DataDirectory&#124;以 「\<應用程式根目錄 > / app_data"資料夾。|
 |~|解析成 Web 應用程式根目錄。 位於前置位置的 ~ 字元一律會解譯成 Web 應用程式根目錄運算子 (~)，不過它可能會代表有效的本機子目錄。 若要參考這類本機子目錄，使用者應該明確傳遞 `./~`。|
 
 您應該只在路徑的開頭指定 `DataDirectory` 和 ~ 運算子，因為它們無法在任何其他位置進行解析。 Entity Framework 將嘗試解析 `~/data`，但是它會將 `/data/~` 視為實體路徑。
