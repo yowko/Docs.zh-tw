@@ -2,13 +2,18 @@
 title: Visual Basic 中的陣列
 ms.date: 12/06/2017
 f1_keywords:
-  - vb.Array
+- vb.Array
 helpviewer_keywords:
-  - 'arrays [Visual Basic]'
-  - 'Visual Basic, arrays'
+- arrays [Visual Basic]
+- Visual Basic, arrays
 ms.assetid: dbf29737-b589-4443-bee6-a27588d9c67e
+ms.openlocfilehash: 6b131d073e10f99feaf770fe5fd3c393551fa5a3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675961"
 ---
-
 # <a name="arrays-in-visual-basic"></a>Visual Basic 中的陣列
 
 陣列是一組值，都稱為*項目*，以邏輯方式彼此相關。 例如，陣列可能包含中含有文法學校中; 每一年級學生數目陣列的每個項目是單一的年級的學生數目。 同樣地，陣列可能包含學生的成績類別;陣列的每個項目是一個單一的等級。

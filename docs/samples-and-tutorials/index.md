@@ -1,11 +1,16 @@
 ---
 title: .NET 範例與教學課程
-description: '針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。'
+description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558946"
 ---
-
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
 .NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。 本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。 您可以在 [F# 基礎網站 (英文)](https://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。 如果您想要使用線上程式碼編輯器來探索 C#，可先從[這個互動式教學課程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)開始，再繼續進行 [C# 互動式教學課程](../csharp/tutorials/intro-to-csharp/index.md)。 如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。

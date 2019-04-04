@@ -1,28 +1,28 @@
 ---
-title: 使用行事曆
-ms.date: 02/23/2019
+title: 使用日曆
+ms.date: 04/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
 - vb
 helpviewer_keywords:
-- globalization [.NET Framework], calendars
+- globalization [.NET], calendars
 - calendars, global applications
 - global applications, calendars
 - world-ready applications, calendars
-- international applications [.NET Framework], calendars
+- international applications [.NET], calendars
 - culture, calendars
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bc41f6881c8a876e77ac385c715a5517b95842c
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845982"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921347"
 ---
-# <a name="working-with-calendars"></a>使用行事曆
+# <a name="working-with-calendars"></a>使用日曆
 
 雖然日期和時間值代表一個時間點，但是其字串表示區分文化特性，而且同時取決於用於顯示特定文化特性之日期和時間值的慣例，以及該文化特性所使用的曆法。 本主題探討在.NET 中的行事曆的支援，並討論使用的曆法類別，使用日期值時。
 
@@ -30,34 +30,33 @@ ms.locfileid: "57845982"
 
 在.NET 中的所有行事曆衍生自<xref:System.Globalization.Calendar?displayProperty=nameWithType>類別，可提供了基準曆法實作。 其中一個衍生自 <xref:System.Globalization.Calendar> 類別的類別是 <xref:System.Globalization.EastAsianLunisolarCalendar> 類別，其為所有陰陽曆的基底類別。 .NET 還包括下列曆法實作：
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>，表示中文陰陽曆。
+* <xref:System.Globalization.ChineseLunisolarCalendar>表示中文陰陽曆。
 
-* <xref:System.Globalization.GregorianCalendar>，表示西曆。 這個曆法會進一步細分成子類型 (例如阿拉伯和中東法文)，這些子類別是由 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列舉類型所定義。 
-  <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 屬性會指定西曆的子類型。
+* <xref:System.Globalization.GregorianCalendar>表示西曆。 這個曆法會進一步細分成子類型 (例如阿拉伯和中東法文)，這些子類別是由 <xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列舉類型所定義。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> 屬性會指定西曆的子類型。
 
-* <xref:System.Globalization.HebrewCalendar>，表示希伯來曆法。
+* <xref:System.Globalization.HebrewCalendar>表示希伯來曆法。
 
-* <xref:System.Globalization.HijriCalendar>，表示回曆。
+* <xref:System.Globalization.HijriCalendar>表示回曆。
 
-* <xref:System.Globalization.JapaneseCalendar>，表示日本曆法。
+* <xref:System.Globalization.JapaneseCalendar>表示日本曆法。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>，表示日文陰陽曆。
+* <xref:System.Globalization.JapaneseLunisolarCalendar>表示日文陰陽曆。
 
-* <xref:System.Globalization.JulianCalendar>，表示凱撒曆法。
+* <xref:System.Globalization.JulianCalendar>表示凱撒曆法。
 
-* <xref:System.Globalization.KoreanCalendar>，表示韓國曆法。
+* <xref:System.Globalization.KoreanCalendar>表示韓國曆法。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>，表示韓文陰陽曆。
+* <xref:System.Globalization.KoreanLunisolarCalendar>表示韓文陰陽曆。
 
-* <xref:System.Globalization.PersianCalendar>，表示波斯曆。
+* <xref:System.Globalization.PersianCalendar>代表的波斯曆。
 
-* <xref:System.Globalization.TaiwanCalendar>，表示台灣曆法。
+* <xref:System.Globalization.TaiwanCalendar>表示台灣曆法。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>，表示台灣使用的陰陽曆。
+* <xref:System.Globalization.TaiwanLunisolarCalendar>表示台灣使用的陰陽曆。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>，表示泰國佛教曆法。
+* <xref:System.Globalization.ThaiBuddhistCalendar>表示泰國佛教曆法。
 
-* <xref:System.Globalization.UmAlQuraCalendar>，表示 Um Al Qura 曆法。
+* <xref:System.Globalization.UmAlQuraCalendar>表示 Um Al Qura 曆法。
 
 曆法的使用方式有兩種：
 
@@ -69,8 +68,7 @@ ms.locfileid: "57845982"
 
 ## <a name="calendars-and-cultures"></a>曆法與文化特性
 
-每一種文化特性都有預設曆法，該曆法是由 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 屬性所定義。 
-  <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.Calendar> 物件的陣列，該陣列會指定特定文化特性支援的所有曆法，包括該文化特性的預設曆法。
+每一種文化特性都有預設曆法，該曆法是由 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 屬性所定義。 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 屬性會傳回 <xref:System.Globalization.Calendar> 物件的陣列，該陣列會指定特定文化特性支援的所有曆法，包括該文化特性的預設曆法。
 
 下列範例說明 <xref:System.Globalization.CultureInfo.Calendar%2A?displayProperty=nameWithType> 和 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 屬性。 範例中會為泰文 (泰國) 和日文 (日本) 文化特性建立 `CultureInfo` 物件，並且顯示其預設和選擇性曆法。 請注意，在這兩種情況下，文化特性的預設曆法也會包含在 <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 集合中。
 
@@ -91,8 +89,7 @@ ms.locfileid: "57845982"
 > [!IMPORTANT]
 > 務必記得，日期值及其字串表示之間有一項差異。 前者是以西曆為主，後者是以特定文化特性的現行曆法為主。
 
-下列範例會說明 <xref:System.DateTime> 屬性及其對應的 <xref:System.Globalization.Calendar> 方法之間的這項差異。 在此範例中，目前文化特性為阿拉伯文 (埃及)，而現行曆法為 Um Al Qura。 
-  <xref:System.DateTime> 值會設定為 2011 年第七個月的第 15 天。 很清楚這個日期是解譯為西曆日期，因為這些相同值是 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法在使用不因文化特性而異的慣例時所傳回。 使用目前文化特性格式化之日期的字串表示為 14/08/32，其為 Um Al Qura 曆法的同等日期。 其次，`DateTime` 和 `Calendar` 的成員會用來傳回 <xref:System.DateTime> 值的日、月和年。 在各案例中，<xref:System.DateTime> 成員傳回的值會反映西曆的值，而 <xref:System.Globalization.UmAlQuraCalendar> 成員傳回的值則會反映 Uum al-Qura 曆法的值。
+下列範例會說明 <xref:System.DateTime> 屬性及其對應的 <xref:System.Globalization.Calendar> 方法之間的這項差異。 在此範例中，目前文化特性為阿拉伯文 (埃及)，而現行曆法為 Um Al Qura。 <xref:System.DateTime> 值會設定為 2011 年第七個月的第 15 天。 很清楚這個日期是解譯為西曆日期，因為這些相同值是 <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 方法在使用不因文化特性而異的慣例時所傳回。 使用目前文化特性格式化之日期的字串表示為 14/08/32，其為 Um Al Qura 曆法的同等日期。 其次，`DateTime` 和 `Calendar` 的成員會用來傳回 <xref:System.DateTime> 值的日、月和年。 在各案例中，<xref:System.DateTime> 成員傳回的值會反映西曆的值，而 <xref:System.Globalization.UmAlQuraCalendar> 成員傳回的值則會反映 Uum al-Qura 曆法的值。
 
 [!code-csharp[Conceptual.Calendars#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/datesandcalendars2.cs#3)]
 [!code-vb[Conceptual.Calendars#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/datesandcalendars2.vb#3)]
@@ -131,8 +128,7 @@ ms.locfileid: "57845982"
 
 曆法所支援的最早日期是由該曆法的 <xref:System.Globalization.Calendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 屬性所表示。 如果是 <xref:System.Globalization.GregorianCalendar> 類別，該日期是公元 0001 年 1 月 1 日。 大部分的.NET 中的其他行事曆支援較晚的日期。 嘗試處理早於曆法所支援最早日期的日期和時間值，會擲回 <xref:System.ArgumentOutOfRangeException> 例外狀況。
 
-不過，有一個重要的例外狀況。 
-  <xref:System.DateTime> 物件和 <xref:System.DateTimeOffset> 物件的預設值 (未初始化的值) 相當於 <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 值。 如果您嘗試在行事曆不支援公元 0001 年 1 月 1 日這個日期格式化 您未提供格式規範，則格式化方法使用"s"（可排序日期/時間模式） 格式規範，而不是"G"（一般日期/時間模式） 格式規範。 結果，格式化作業並不會擲回 <xref:System.ArgumentOutOfRangeException> 例外狀況， 而是傳回不支援的日期。 下列範例將說明這種情況，當目前文化特性設為日文 (日本) 並採用日本曆法，以及設為阿拉伯文 (埃及) 並採用 Um Al Qura 曆法時，會顯示 <xref:System.DateTime.MinValue?displayProperty=nameWithType> 值。 另外也會將目前文化特性設為英文 (美國)，並且對每一個 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> 物件呼叫 <xref:System.Globalization.CultureInfo> 方法。 在每個案例中，日期是使用可排序日期/時間模式顯示。
+不過，有一個重要的例外狀況。 <xref:System.DateTime> 物件和 <xref:System.DateTimeOffset> 物件的預設值 (未初始化的值) 相當於 <xref:System.Globalization.GregorianCalendar.MinSupportedDateTime%2A?displayProperty=nameWithType> 值。 如果您嘗試在行事曆不支援公元 0001 年 1 月 1 日這個日期格式化 您未提供格式規範，則格式化方法使用"s"（可排序日期/時間模式） 格式規範，而不是"G"（一般日期/時間模式） 格式規範。 結果，格式化作業並不會擲回 <xref:System.ArgumentOutOfRangeException> 例外狀況， 而是傳回不支援的日期。 下列範例將說明這種情況，當目前文化特性設為日文 (日本) 並採用日本曆法，以及設為阿拉伯文 (埃及) 並採用 Um Al Qura 曆法時，會顯示 <xref:System.DateTime.MinValue?displayProperty=nameWithType> 值。 另外也會將目前文化特性設為英文 (美國)，並且對每一個 <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> 物件呼叫 <xref:System.Globalization.CultureInfo> 方法。 在每個案例中，日期是使用可排序日期/時間模式顯示。
 
 [!code-csharp[Conceptual.Calendars#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/minsupporteddatetime1.cs#11)]
 [!code-vb[Conceptual.Calendars#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/minsupporteddatetime1.vb#11)]
@@ -142,13 +138,16 @@ ms.locfileid: "57845982"
 曆法通常會將日期細分成紀元。 不過，<xref:System.Globalization.Calendar>在.NET 中的類別不支援定義行事曆，以及大部份的每一個紀元<xref:System.Globalization.Calendar>類別可支援單一紀元。 只有 <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 類別支援多個紀元。
 
 > [!IMPORTANT]
->  <xref:System.Globalization.JapaneseCalendar> 和 <xref:System.Globalization.JapaneseLunisolarCalendar> 中的新紀元從 2019 年 5 月 1 日開始。 這項改變對所有使用這些日曆的應用程式都有影響。 若要取得詳細資訊及判斷您的應用程式是否受影響，請參閱 [Handling a new era in the Japanese calendar in .NET](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/) (處理 .NET 中日本日曆的新紀元)。 請參閱[準備您的應用程式，以日文的紀元變更](/windows/uwp/design/globalizing/japanese-era-change)上測試以確保紀元變更其準備就緒可以安裝在 Windows 應用程式的資訊。
+>  Reiwa 紀元、 新時代的來臨<xref:System.Globalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>，開始於 2019 5 月 1 日。 這項改變對所有使用這些日曆的應用程式都有影響。 請參閱下列文章，如需詳細資訊：
+> - [處理在.NET 中日本曆法中的新時代](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)，此文件新增至.NET 能夠支援的功能與多個紀元行事曆，並討論處理多個紀元的行事曆時所要使用的最佳作法。
+> - [準備您的應用程式，以日文的紀元變更](/windows/uwp/design/globalizing/japanese-era-change)，它提供的測試以確保紀元變更其準備就緒可以安裝在 Windows 應用程式的資訊。
+> - [新的日文時代的摘要更新適用於.NET Framework](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)，其中會列出新日本曆法的紀元，相關的個別 Windows 版本的.NET Framework 更新資訊的多個紀元支援的新.NET Framework 功能，並包含要在測試應用程式中尋找的項目。
 
-大部分的行事曆中的紀元表示提供很長的時間週期。 在西曆，比方說，在目前紀元涵蓋超過兩個 millenia。 針對<xref:System.Globalization.JapaneseCalendar>而<xref:System.Globalization.JapaneseLunisolarCalendar>、 兩個行事曆支援多個紀元，這不是。 紀元會對應至皇帝支配的期間。 支援多個紀元，特別是當目前紀元的上限為未知，帶來的特殊挑戰。 
+大部分的行事曆中的紀元表示提供很長的時間週期。 在西曆，比方說，在目前紀元涵蓋千年來兩個以上。 針對<xref:System.Globalization.JapaneseCalendar>而<xref:System.Globalization.JapaneseLunisolarCalendar>、 兩個行事曆支援多個紀元，這不是。 紀元會對應至皇帝支配的期間。 支援多個紀元，特別是當目前紀元的上限為未知，帶來的特殊挑戰。 
 
 ### <a name="eras-and-era-names"></a>紀元和紀元名稱
 
-在.NET 中，代表特定曆法實作支援的紀元的整數會以反向順序在儲存<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>陣列。 目前紀元的索引位置為零，而針對支援多個紀元的 <xref:System.Globalization.Calendar> 類別，後續每個索引都會反映前一個紀元。 靜態 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 屬性會定義 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 陣列中目前紀元的索引，它是一個常數，且其值永遠為零。 個別 <xref:System.Globalization.Calendar> 類別也會包含傳回目前紀元值的靜態欄位。 下表中列出這些欄位。
+在.NET 中，代表特定曆法實作支援的紀元的整數會以反向順序在儲存<xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType>陣列。 目前的紀元 （也就是使用最新的時間範圍的紀元） 位於索引位置為零，且需要<xref:System.Globalization.Calendar>類別，可支援多個紀元，後續每個索引會反映前一個紀元。 靜態 <xref:System.Globalization.Calendar.CurrentEra?displayProperty=nameWithType> 屬性會定義 <xref:System.Globalization.Calendar.Eras%2A?displayProperty=nameWithType> 陣列中目前紀元的索引，它是一個常數，且其值永遠為零。 個別 <xref:System.Globalization.Calendar> 類別也會包含傳回目前紀元值的靜態欄位。 下表中列出這些欄位。
 
 | 曆法類別                                        | 目前紀元欄位                                                 |
 | ----------------------------------------------------- | ----------------------------------------------------------------- |
@@ -166,8 +165,8 @@ ms.locfileid: "57845982"
 
 對應特定紀元數的名稱可藉由將紀元數傳遞至 <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> 方法的方式擷取。 下列範例會呼叫這些方法來擷取 <xref:System.Globalization.GregorianCalendar> 類別中紀元支援的相關資訊。
 
-[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs#7)]
-[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb#7)]
+[!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
+[!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
 
 此外，"g" 自訂日期和時間格式字串包括曆法的紀元名稱，該名稱為日期和時間的字串表示。 如需詳細資訊，請參閱 <<c0> [ 自訂日期和時間格式字串](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)。
 
@@ -209,7 +208,7 @@ ms.locfileid: "57845982"
 
 ### <a name="calendars-eras-and-date-ranges-relaxed-range-checks"></a>行事曆、 紀元和日期範圍：寬鬆的範圍檢查
 
-很像個別的行事曆具有支援的日期範圍中的紀元<xref:System.Globalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>類別也具有支援的範圍。 之前，.NET 會使用 range 會檢查以確認特定紀元的日期範圍內的那個時代的嚴格紀元。 範圍外的日期會擲回.NET Framework 可讓您使用預設比較不嚴謹範圍檢查。 也就是說，如果日期是在指定紀元的範圍之外，方法會擲回<xref:System.ArgumentOutOfRangeException>。 導入的.NET framework 的所有版本都放寬紀元的更新範圍檢查;嘗試產生 「 溢位 」 在指定紀元的範圍之外的特定紀元的日期到下列的時代和任何例外狀況會擲回。
+很像個別的行事曆具有支援的日期範圍中的紀元<xref:System.Globalization.JapaneseCalendar>和<xref:System.Globalization.JapaneseLunisolarCalendar>類別也具有支援的範圍。 之前，.NET 會使用 range 會檢查以確認特定紀元的日期範圍內的那個時代的嚴格紀元。 也就是說，如果日期是在指定紀元的範圍之外，方法會擲回<xref:System.ArgumentOutOfRangeException>。 目前，.NET 會使用預設比較不嚴謹範圍檢查。 所有版本的.NET 導都入寬鬆的時代的更新範圍檢查;嘗試具現化指定紀元的範圍之外的特定紀元的日期 」 讓溢位 」 到下列的時代，而且會擲回任何例外狀況。
 
 下列範例會嘗試具現化 Showa 時代，開始在 1926 年 12 月 25，並已於 1989 年 1 月 7，65th 年中的日期。 在此日期對應於 1990 年 1 月 9 日，這是 Showa 紀元中的範圍之外<xref:System.Globalization.JapaneseCalendar>。 範例輸出所示，此範例所顯示的日期是 1990 年 1 月 9 日到第二個紀元的年份中平成。
 
@@ -363,5 +362,6 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
+- [HOW TO：在非西曆中顯示日期](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
 - [範例：行事曆週範圍公用程式](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [曆法類別](xref:System.Globalization.Calendar)

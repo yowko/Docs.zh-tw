@@ -2,6 +2,12 @@
 title: 序列化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 67379a76-5465-4af8-a781-0b0b25a62d9a
+ms.openlocfilehash: 947b38e8166ba05d871aafbaba5766aa9dab21f4
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58409701"
 ---
 # <a name="serialization-visual-basic"></a>序列化 (Visual Basic)
 序列化程序會將物件轉換成位元組資料流，以將物件儲存或傳輸到記憶體、資料庫或檔案。 其主要目的是儲存物件的狀態，這樣就能在需要時重新建立該物件。 反向的程序則稱為還原序列化。  

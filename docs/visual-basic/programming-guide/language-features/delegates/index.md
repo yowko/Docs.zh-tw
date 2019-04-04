@@ -2,11 +2,16 @@
 title: 委派 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674025"
 ---
-
 # <a name="delegates-visual-basic"></a>委派 (Visual Basic)
 
 委派是參考方法的物件。 它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。 但不同於函式指標，Visual Basic 委派是參考類型，根據類別<xref:System.Delegate?displayProperty=nameWithType>。 委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。

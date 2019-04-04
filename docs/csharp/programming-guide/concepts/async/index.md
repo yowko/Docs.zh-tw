@@ -1,7 +1,13 @@
 ---
-title: 'C# 中的非同步程式設計'
-description: '使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀'
+title: C# 中的非同步程式設計
+description: 使用 async、await、Task 和 Task<T> 進行非同步程式設計的 C# 語言支援概觀
 ms.date: 03/18/2019
+ms.openlocfilehash: dc85fd4fb30278dc39c75c88d5fd23c1f1633366
+ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58504362"
 ---
 # <a name="the-task-asynchronous-programming-model-in-c"></a>C\# 中的非同步工作程式設計模型
 

@@ -1,11 +1,17 @@
 ---
-title: '命名空間 - C# 程式設計手冊'
+title: 命名空間 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 08/21/2018
 helpviewer_keywords:
-  - 'C# language, namespaces'
-  - 'namespaces [C#]'
+- C# language, namespaces
+- namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
+ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56971269"
 ---
 # <a name="namespaces-c-programming-guide"></a>命名空間 (C# 程式設計手冊)
 

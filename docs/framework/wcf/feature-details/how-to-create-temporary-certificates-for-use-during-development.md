@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在開發期間，用於建立暫時憑證
+title: HOW TO：建立開發時要使用的暫時憑證
 ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: 609b142c5dd1cac92acf0f1c0a62d17a9b5c957e
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55738626"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921321"
 ---
-# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：在開發期間，用於建立暫時憑證
+# <a name="how-to-create-temporary-certificates-for-use-during-development"></a>HOW TO：建立開發時要使用的暫時憑證
 
 開發安全的服務或使用 Windows Communication Foundation (WCF) 用戶端時，通常必須提供要用做為認證的 X.509 憑證。 憑證通常是憑證鏈結的一部分，在電腦的 [受信任的根憑證授權單位] 存放區中有根授權。 具有憑證鏈結可讓您設定一組憑證的範圍，其中根授權通常來自您的組織或企業單位。 如果要在開發期間進行模擬，您可以建立兩種憑證以滿足安全性需求。 第一種是放在 [受信任的根憑證授權單位] 存放區中的自我簽署憑證，而第二種憑證是從第一種建立的，並放在個人存放區或本機位置，或目前使用者位置的個人存放區。 本主題逐步解說的步驟來建立這兩個憑證，使用 Powershell [New-selfsignedcertificate)](/powershell/module/pkiclient/new-selfsignedcertificate) cmdlet。
 
@@ -62,7 +62,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-install-a-self-signed-certificate-in-the-trusted-root-certification-authorities"></a>在受信任的根憑證授權單位中安裝自我簽署憑證
 
-1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[＜How to：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
+1. 請開啟憑證嵌入式管理單元。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)。
 
 2. 開啟資料夾以儲存憑證，可以是 [ **本機電腦** ] 或 [ **目前使用者**]。
 
@@ -78,7 +78,7 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 
 ### <a name="to-specify-a-certificate-as-the-client-credential-type"></a>若要將憑證指定為用戶端認證類型
 
-- 在服務的組態檔中，使用下列 XML 將安全性模式設定為訊息，而且將用戶端認證類型設定為憑證。
+1. 在服務的組態檔中，使用下列 XML 將安全性模式設定為訊息，而且將用戶端認證類型設定為憑證。
 
     ```xml
     <bindings>
@@ -92,19 +92,19 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
     </bindings>
     ```
 
-在用戶端的組態檔，請使用下列 XML 來指定憑證位於使用者的存放區，並且可搜尋在 SubjectName 欄位中的值"CohoWinery"。
+2. 在用戶端的組態檔，請使用下列 XML 來指定憑證位於使用者的存放區，並且可搜尋在 SubjectName 欄位中的值"CohoWinery"。
 
-```xml
-<behaviors>
-  <endpointBehaviors>
-    <behavior name="CertForClient">
-      <clientCredentials>
-        <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
-       </clientCredentials>
-     </behavior>
-   </endpointBehaviors>
-</behaviors>
-```
+    ```xml
+    <behaviors>
+      <endpointBehaviors>
+        <behavior name="CertForClient">
+          <clientCredentials>
+            <clientCertificate findValue="CohoWinery" x509FindType="FindBySubjectName" />
+          </clientCredentials>
+        </behavior>
+      </endpointBehaviors>
+    </behaviors>
+    ```
 
 如需在 WCF 中使用憑證的詳細資訊，請參閱 [Working with Certificates](working-with-certificates.md)。
 
@@ -115,5 +115,5 @@ PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ## <a name="see-also"></a>另請參閱
 
 - [使用憑證](working-with-certificates.md)
-- [如何：使用 MMC 嵌入式管理單元檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
-- [保護服務和用戶端的安全](securing-services-and-clients.md)
+- [HOW TO：使用 MMC 嵌入式管理單元來檢視憑證](how-to-view-certificates-with-the-mmc-snap-in.md)
+- [確保服務與用戶端的安全](securing-services-and-clients.md)

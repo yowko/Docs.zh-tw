@@ -4,8 +4,13 @@ description: 摘要說明適用於 WMI 與效能計數器的 .NET Framework 非�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 11/06/2017
+ms.openlocfilehash: bbf22496098f848cc7c55652198d792c6f631c15
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377452"
 ---
-
 # <a name="windows-management-instrumentation-wmi-and-performance-counters-unmanaged-api-reference"></a>Windows Management Instrumentation (WMI) 與效能計數器 (非受控 API 參考)
 
 .NET Framework WMI 與效能計數器非受控 API 是由一組封裝對[原生 Windows Management Instrumentation API](/windows/desktop/WmiSdk/com-api-for-wmi) 之呼叫的函式所組成。 它可讓您開發可用來管理及監視遠端電腦系統的工具與程式庫。

@@ -2,9 +2,15 @@
 title: 使用 Visual Basic 開發應用程式
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'Visual Basic, developing applications'
-  - 'applications [Visual Basic]'
+- Visual Basic, developing applications
+- applications [Visual Basic]
 ms.assetid: 1e1c0c81-6d95-4167-a98b-44b1efb6d25f
+ms.openlocfilehash: a8f3b530c6205572ccf6944af1620cb54486b306
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57354475"
 ---
 # <a name="developing-applications-with-visual-basic"></a>使用 Visual Basic 開發應用程式
 本章節內容涵蓋 Visual Basic 語言的概念文件。  

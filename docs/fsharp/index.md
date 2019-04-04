@@ -1,8 +1,14 @@
 ---
-title: 'F# 指南'
-description: '本指南提供的各種學習教材概觀F#，執行於.NET 功能性程式設計語言。'
+title: F# 指南
+description: 本指南提供的各種學習教材概觀F#，執行於.NET 功能性程式設計語言。
 author: cartermp
 ms.date: 08/03/2018
+ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56977002"
 ---
 # <a name="f-guide"></a>F# 指南
 

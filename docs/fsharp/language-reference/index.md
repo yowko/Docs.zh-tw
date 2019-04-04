@@ -1,7 +1,13 @@
 ---
-title: 'F# 語言參考'
-description: '尋找F#此參考以語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題的語言功能資訊。'
+title: F# 語言參考
+description: 尋找F#此參考以語言的語彙基元、 概念、 類型、 運算式和編譯器支援建構主題的語言功能資訊。
 ms.date: 05/16/2016
+ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57846632"
 ---
 # <a name="f-language-reference"></a>F# 語言參考
 

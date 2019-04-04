@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723110"
 ---
 # <a name="windows-forms"></a>Windows Forms
 由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。 表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。 為此，Visual Studio 為您提供的整合式的開發環境 (IDE)，以協助撰寫程式碼，以及豐富的控制項集合以寫入[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。 您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。  

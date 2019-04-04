@@ -3,8 +3,13 @@ title: .NET 機器學習操作指南 - ML.NET
 description: 了解如何執行特定工作協助建立自訂 AI 解決方案，以及將 Machine Learning 整合到您的.NET 應用程式。
 ms.custom: seodec18
 ms.date: 03/01/2019
+ms.openlocfilehash: 9e5bd146d636b46dcf3835c670207b647e7743c6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57673046"
 ---
-
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET 機器學習操作指南 - ML.NET
 
 您可以在《ML.NET 指南》的＜操作說明＞一節中尋找常見問題的正確解答。 在某些情況下，文章可能會同時列在多個小節中，以利使用者搜尋。

@@ -1,9 +1,14 @@
 ---
-title: '操作說明文章 (C# 指南)'
+title: 操作說明文章 (C# 指南)
 description: 集結了快速提示與簡要的程式碼範例
 ms.date: 12/20/2017
+ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57202336"
 ---
-
 # <a name="how-to-c"></a>操作說明 (C#)
 
 在 C# 指南的＜操作說明＞一節中，您可以找到常見問題的快速解答。 在某些形況下，文章可能會列在多個章節內。 這是因為我們希望使用者能從多個搜尋管道輕鬆找到這些文章。 

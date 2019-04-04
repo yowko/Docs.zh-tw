@@ -1,13 +1,19 @@
 ---
-title: '互通性 - C# 程式設計手冊'
+title: 互通性 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - COM interop
-  - interoperability
-  - 'platform invoke, accessing APIs with C#'
-  - 'C# language, interoperability'
+- COM interop
+- interoperability
+- platform invoke, accessing APIs with C#
+- C# language, interoperability
 ms.assetid: 238bb95a-e962-4026-bbd5-197055bdb8ee
+ms.openlocfilehash: 50f2a72bf4981a49d5597a9bc8922db81197d810
+ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58411339"
 ---
 # <a name="interoperability-c-programming-guide"></a>互通性 (C# 程式設計手冊)
 互通性可讓您保留並充分利用目前在 Unmanaged 程式碼上的投資。 在 Common Language Runtime (CLR) 控制下執行的程式碼稱為「Managed 程式碼」，而在 CLR 外部執行的程式碼稱為「Unmanaged 程式碼」。 COM、COM+、C++ 元件、ActiveX 元件及 Microsoft Windows API 都是 Unmanaged 程式碼的範例。  
