@@ -42,7 +42,7 @@ None
 
 ## <a name="remarks"></a>備註
 
- **\<SectionName >** 項目是所定義的自訂項目**\<區段 >** 標記中 **\<configSections >** 項目。
+ **\<SectionName>** 項目是所定義的自訂項目 **\<區段>** 標記中 **\<configSections>** 項目。
 
 下表顯示每個組態區段處理常式會傳回物件 ConfigurationSettings.GetConfig 方法的型別：
 
