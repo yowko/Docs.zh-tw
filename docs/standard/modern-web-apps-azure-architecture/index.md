@@ -4,8 +4,13 @@ description: 本指南會提供使用 ASP.NET Core 和 Azure 建置整合型 Web
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
+ms.openlocfilehash: 27212045d9870c9f2fc15509d76f3e9b07d8657f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675831"
 ---
-
 # <a name="architect-modern-web-applications-with-aspnet-core-and-azure"></a><span data-ttu-id="3ca7c-103">使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式</span><span class="sxs-lookup"><span data-stu-id="3ca7c-103">Architect Modern Web Applications with ASP.NET Core and Azure</span></span>
 
 ![《Architect Modern Web Applications》(設計現代化 Web 應用程式架構) 指南的封面影像。](./media/index/web-application-guide-cover-image.png)

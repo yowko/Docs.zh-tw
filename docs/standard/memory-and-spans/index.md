@@ -3,14 +3,19 @@ title: 記憶體與延伸
 ms.date: 10/03/2018
 ms.technology: dotnet-standard
 helpviewer_keywords:
-  - Memory<T>
-  - Span<T>
-  - buffers"
-  - pipeline processing
+- Memory<T>
+- Span<T>
+- buffers"
+- pipeline processing
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57680136"
 ---
-
 # <a name="memory--and-span-related-types"></a><span data-ttu-id="91d8a-102">記憶體與延伸相關類型</span><span class="sxs-lookup"><span data-stu-id="91d8a-102">Memory- and span-related types</span></span>
 
 <span data-ttu-id="91d8a-103">從 .NET Core 2.1 開始，.NET 就包括一些相關類型，這些類型代表連續的強型別任意記憶體區域。</span><span class="sxs-lookup"><span data-stu-id="91d8a-103">Starting with .NET Core 2.1, .NET includes a number of interrelated types that represent a contiguous, strongly-typed region of arbitrary memory.</span></span> <span data-ttu-id="91d8a-104">它們包括：</span><span class="sxs-lookup"><span data-stu-id="91d8a-104">These include:</span></span>

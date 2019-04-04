@@ -1,11 +1,16 @@
 ---
 title: 無伺服器應用程式：架構、模式和 Azure 實作
-description: '無伺服器架構指南。 了解實作企業應用程式的無伺服器架構 (與基礎結構即服務 [IaaS] 或平台即服務 [PaaS] 相對) 的時機、原因和方式。'
+description: 無伺服器架構指南。 了解實作企業應用程式的無伺服器架構 (與基礎結構即服務 [IaaS] 或平台即服務 [PaaS] 相對) 的時機、原因和方式。
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 6/26/2018
+ms.openlocfilehash: a44af1fc76b54ec9be0d8e3b3ba2e54f3e3b220b
+ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58653934"
 ---
-
 # <a name="serverless-apps-architecture-patterns-and-azure-implementation"></a><span data-ttu-id="c9e76-104">無伺服器應用程式：架構、模式和 Azure 實作</span><span class="sxs-lookup"><span data-stu-id="c9e76-104">Serverless apps: Architecture, patterns, and Azure implementation</span></span>
 
 ![顯示無伺服器應用程式電子書封面的螢幕擷取畫面。](./media/index/serverless-apps-cover.jpg)

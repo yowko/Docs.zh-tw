@@ -1,11 +1,17 @@
 ---
-title: '委派 - C# 程式設計手冊'
+title: 委派 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, delegates'
-  - 'delegates [C#]'
+- C# language, delegates
+- delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
+ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203505"
 ---
 # <a name="delegates-c-programming-guide"></a><span data-ttu-id="e044d-102">委派 (C# 程式設計手冊)</span><span class="sxs-lookup"><span data-stu-id="e044d-102">Delegates (C# Programming Guide)</span></span>
 <span data-ttu-id="e044d-103">[委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。</span><span class="sxs-lookup"><span data-stu-id="e044d-103">A [delegate](../../../csharp/language-reference/keywords/delegate.md) is a type that represents references to methods with a particular parameter list and return type.</span></span> <span data-ttu-id="e044d-104">當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。</span><span class="sxs-lookup"><span data-stu-id="e044d-104">When you instantiate a delegate, you can associate its instance with any method with a compatible signature and return type.</span></span> <span data-ttu-id="e044d-105">您可以透過委派執行個體叫用 (或呼叫) 方法。</span><span class="sxs-lookup"><span data-stu-id="e044d-105">You can invoke (or call) the method through the delegate instance.</span></span>  

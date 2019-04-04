@@ -2,9 +2,15 @@
 title: 應用程式開發
 ms.date: 01/26/2018
 helpviewer_keywords:
-  - 'WPF [WPF], about application development'
-  - 'application development [WPF], about'
+- WPF [WPF], about application development
+- application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
+ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57365122"
 ---
 # <a name="application-development"></a><span data-ttu-id="0a398-102">應用程式開發</span><span class="sxs-lookup"><span data-stu-id="0a398-102">Application Development</span></span>
 <a name="introduction"></a> <span data-ttu-id="0a398-103">Windows Presentation Foundation (WPF) 是一種展示架構，可用來開發下列類型的應用程式：</span><span class="sxs-lookup"><span data-stu-id="0a398-103">Windows Presentation Foundation (WPF) is a presentation framework that can be used to develop the following types of applications:</span></span>  

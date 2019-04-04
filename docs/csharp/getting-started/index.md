@@ -1,12 +1,18 @@
 ---
-title: '開始使用 - C# 指南'
-description: '搜尋片長短、內容簡單扼要的教學課程，介紹 C# 概念及如何撰寫.NET Core 應用程式，協助您快速進入狀況。'
+title: 開始使用 - C# 指南
+description: 搜尋片長短、內容簡單扼要的教學課程，介紹 C# 概念及如何撰寫.NET Core 應用程式，協助您快速進入狀況。
 helpviewer_keywords:
-  - 'Visual C#, getting started'
-  - 'getting started, Visual C#'
+- Visual C#, getting started
+- getting started, Visual C#
 author: rpetrusha
 ms.author: ronpet
 ms.date: 08/23/2017
+ms.openlocfilehash: 9894d96c74741477b871d6073d78ea95413b8299
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/30/2019
+ms.locfileid: "58675662"
 ---
 # <a name="get-started-with-c"></a><span data-ttu-id="4dff7-103">開始使用 C\#</span><span class="sxs-lookup"><span data-stu-id="4dff7-103">Get started with C\#</span></span>
 

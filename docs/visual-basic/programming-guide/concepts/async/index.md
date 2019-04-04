@@ -2,6 +2,12 @@
 title: 使用 Async 和 Await 進行非同步程式設計 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
+ms.openlocfilehash: 0a00327d5c9c0a017deeb8ab46ae1eef680228ce
+ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/16/2019
+ms.locfileid: "58125521"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a><span data-ttu-id="3dc6e-102">使用 Async 和 Await 進行非同步程式設計 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3dc6e-102">Asynchronous Programming with Async and Await (Visual Basic)</span></span>
 <span data-ttu-id="3dc6e-103">您可以使用非同步程式設計，避免發生效能瓶頸並增強應用程式的整體回應性。</span><span class="sxs-lookup"><span data-stu-id="3dc6e-103">You can avoid performance bottlenecks and enhance the overall responsiveness of your application by using asynchronous programming.</span></span> <span data-ttu-id="3dc6e-104">不過，撰寫非同步應用程式的傳統技術可能很複雜，因而難以撰寫、偵錯和維護。</span><span class="sxs-lookup"><span data-stu-id="3dc6e-104">However, traditional techniques for writing asynchronous applications can be complicated, making them difficult to write, debug, and maintain.</span></span>  

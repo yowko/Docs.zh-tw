@@ -1,10 +1,15 @@
 ---
-title: 'C# 的教學課程 - C# 指南'
-description: '第一次接觸 C#？ 了解該語言的基本概念。'
+title: C# 的教學課程 - C# 指南
+description: 第一次接觸 C#？ 了解該語言的基本概念。
 ms.date: 08/10/2016
 ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
+ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57843425"
 ---
-
 # <a name="a-tour-of-the-c-language"></a><span data-ttu-id="50909-104">C# 語言教學課程</span><span class="sxs-lookup"><span data-stu-id="50909-104">A Tour of the C# Language</span></span>
 
 <span data-ttu-id="50909-105">C# (發音為 "See Sharp") 是簡單、物件導向、型別安全的現代化程式設計語言。</span><span class="sxs-lookup"><span data-stu-id="50909-105">C# (pronounced "See Sharp") is a simple, modern, object-oriented, and type-safe programming language.</span></span> <span data-ttu-id="50909-106">C# 源自於是 C 系列語言，使用 C、C++、Java 和 JavaScript 的程式設計人員會立即感到熟悉。</span><span class="sxs-lookup"><span data-stu-id="50909-106">C# has its roots in the C family of languages and will be immediately familiar to C, C++, Java, and JavaScript programmers.</span></span>

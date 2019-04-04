@@ -2,17 +2,23 @@
 title: .NET 應用程式中的資源
 ms.date: 07/25/2018
 helpviewer_keywords:
-  - 'deploying applications [.NET Framework], resources'
-  - 'deploying applications [.NET Core], resources'
-  - application resources
-  - resource files
-  - satellite assemblies
-  - localization
-  - packaging application resources
-  - localizing resources
+- deploying applications [.NET Framework], resources
+- deploying applications [.NET Core], resources
+- application resources
+- resource files
+- satellite assemblies
+- localization
+- packaging application resources
+- localizing resources
 ms.assetid: 8ad495d4-2941-40cf-bf64-e82e85825890
 author: rpetrusha
 ms.author: ronpet
+ms.openlocfilehash: 889158aebb70de20b4e64044b5fa61dc3494ed73
+ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57203359"
 ---
 # <a name="resources-in-net-apps"></a><span data-ttu-id="8b223-102">.NET 應用程式中的資源</span><span class="sxs-lookup"><span data-stu-id="8b223-102">Resources in .NET Apps</span></span>
 <span data-ttu-id="8b223-103">幾乎每個實際執行品質應用程式都必須使用資源。</span><span class="sxs-lookup"><span data-stu-id="8b223-103">Nearly every production-quality app has to use resources.</span></span> <span data-ttu-id="8b223-104">資源是任何使用應用程式以邏輯方式部署的非執行檔資料。</span><span class="sxs-lookup"><span data-stu-id="8b223-104">A resource is any nonexecutable data that is logically deployed with an app.</span></span> <span data-ttu-id="8b223-105">資源可能在應用程式中顯示作錯誤訊息，或做為使用者介面的一部分。</span><span class="sxs-lookup"><span data-stu-id="8b223-105">A resource might be displayed in an app as error messages or as part of the user interface.</span></span> <span data-ttu-id="8b223-106">資源可以含有一些表單中的資料，包括字串、影像和永續性物件。</span><span class="sxs-lookup"><span data-stu-id="8b223-106">Resources can contain data in a number of forms, including strings, images, and persisted objects.</span></span> <span data-ttu-id="8b223-107">(若要將保留物件寫入資源檔，物件必須是可序列化的)。將資料儲存在資源檔中，可讓您不需要重新編譯整個應用程式即可變更資料。</span><span class="sxs-lookup"><span data-stu-id="8b223-107">(To write persisted objects to a resource file, the objects must be serializable.) Storing your data in a resource file enables you to change the data without recompiling your entire app.</span></span> <span data-ttu-id="8b223-108">也可讓您將資料儲存在單一位置，不需要依賴儲存在多個位置的硬式編碼資料。</span><span class="sxs-lookup"><span data-stu-id="8b223-108">It also enables you to store data in a single location, and eliminates the need to rely on hard-coded data that is stored in multiple locations.</span></span>  

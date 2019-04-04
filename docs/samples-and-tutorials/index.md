@@ -1,11 +1,16 @@
 ---
 title: .NET 範例與教學課程
-description: '針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。'
+description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課程資訊，可協助您了解 .NET。
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
+ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
+ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "57558946"
 ---
-
 # <a name="net-samples-and-tutorials"></a><span data-ttu-id="4fb1d-103">.NET 範例與教學課程</span><span class="sxs-lookup"><span data-stu-id="4fb1d-103">.NET samples and tutorials</span></span>
 
 <span data-ttu-id="4fb1d-104">.NET 文件包含一系列可為您提供 .NET 指導的範例和教學課程。</span><span class="sxs-lookup"><span data-stu-id="4fb1d-104">The .NET documentation contains a set of samples and tutorials that teach you about .NET.</span></span> <span data-ttu-id="4fb1d-105">本主題說明如何尋找、檢視並下載 .NET Core、ASP.NET Core 及 C# 範例和教學課程。</span><span class="sxs-lookup"><span data-stu-id="4fb1d-105">This topic describes how to find, view, and download .NET Core, ASP.NET Core, and C# samples and tutorials.</span></span> <span data-ttu-id="4fb1d-106">您可以在 [F# 基礎網站 (英文)](https://fsharp.org/learn.html) 上找到學習 F# 程式設計語言的資源。</span><span class="sxs-lookup"><span data-stu-id="4fb1d-106">Find resources to learn the F# programming language on the [F# Foundation's site](https://fsharp.org/learn.html).</span></span> <span data-ttu-id="4fb1d-107">如果您想要使用線上程式碼編輯器來探索 C#，可先從[這個互動式教學課程](https://www.microsoft.com/net/learn/in-browser-tutorial/1)開始，再繼續進行 [C# 互動式教學課程](../csharp/tutorials/intro-to-csharp/index.md)。</span><span class="sxs-lookup"><span data-stu-id="4fb1d-107">If you're interested in exploring C# using an online code editor, start with [this interactive tutorial](https://www.microsoft.com/net/learn/in-browser-tutorial/1) and continue with [C# interactive tutorial](../csharp/tutorials/intro-to-csharp/index.md).</span></span> <span data-ttu-id="4fb1d-108">如需如何檢視和下載範例程式碼的指示，請參閱[檢視和下載範例](#viewing-and-downloading-samples)一節。</span><span class="sxs-lookup"><span data-stu-id="4fb1d-108">For instructions on how to view and download sample code, see the [Viewing and downloading samples](#viewing-and-downloading-samples) section.</span></span>

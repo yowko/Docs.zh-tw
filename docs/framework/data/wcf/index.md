@@ -2,11 +2,16 @@
 title: WCF Data Services 4.5
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Astoria
-  - 'WCF Data Services, getting started'
+- Astoria
+- WCF Data Services, getting started
 ms.assetid: 73d2bec3-7c92-4110-b905-11bb0462357a
+ms.openlocfilehash: 6910bfbc94f69292bb8c2a52bf3ebef8fcfb3a8a
+ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/06/2019
+ms.locfileid: "57500235"
 ---
-
 # <a name="wcf-data-services-45"></a><span data-ttu-id="d8a69-102">WCF Data Services 4.5</span><span class="sxs-lookup"><span data-stu-id="d8a69-102">WCF Data Services 4.5</span></span>
 
 <span data-ttu-id="d8a69-103">WCF Data Services （先前稱為"ADO.NET Data Services"） 是可讓您建立使用服務的.NET framework 的元件[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]來公開及取用資料透過 Web 或內部網路使用的語意[具像狀態傳輸 (REST)](https://go.microsoft.com/fwlink/?LinkId=113919)。</span><span class="sxs-lookup"><span data-stu-id="d8a69-103">WCF Data Services (formerly known as "ADO.NET Data Services") is a component of the .NET Framework that enables you to create services that use the [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] to expose and consume data over the Web or intranet by using the semantics of [representational state transfer (REST)](https://go.microsoft.com/fwlink/?LinkId=113919).</span></span> <span data-ttu-id="d8a69-104">OData 會將資料公開為可由 URI 定址的資源。</span><span class="sxs-lookup"><span data-stu-id="d8a69-104">OData exposes data as resources that are addressable by URIs.</span></span> <span data-ttu-id="d8a69-105">資料是使用 GET、PUT、POST 和 DELETE 的標準 HTTP 動作來存取及變更。</span><span class="sxs-lookup"><span data-stu-id="d8a69-105">Data is accessed and changed by using standard HTTP verbs of GET, PUT, POST, and DELETE.</span></span> <span data-ttu-id="d8a69-106">OData 會使用的實體-關聯性慣例[Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)將資源公開為依關聯性相關的實體集。</span><span class="sxs-lookup"><span data-stu-id="d8a69-106">OData uses the entity-relationship conventions of the [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md) to expose resources as sets of entities that are related by associations.</span></span>

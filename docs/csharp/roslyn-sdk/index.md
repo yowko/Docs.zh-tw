@@ -3,8 +3,13 @@ title: .NET Compiler Platform SDK (Roslyn API)
 description: 了解如何使用.NET 編譯器平台 SDK (亦稱為 Roslyn API) 來了解 .NET 程式碼、找出錯誤，並修正那些錯誤。
 ms.date: 10/10/2017
 ms.custom: mvc
+ms.openlocfilehash: ea733d4c5c54c18e510a028f3a724f89490db9dd
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185840"
 ---
-
 # <a name="the-net-compiler-platform-sdk"></a><span data-ttu-id="dd50d-103">.NET 編譯器平台 SDK</span><span class="sxs-lookup"><span data-stu-id="dd50d-103">The .NET Compiler Platform SDK</span></span>
 
 <span data-ttu-id="dd50d-104">當編譯器驗證應用程式程式碼的語法和語意時，會同時建置該程式碼的詳細模型。</span><span class="sxs-lookup"><span data-stu-id="dd50d-104">Compilers build a detailed model of application code as they validate the syntax and semantics of that code.</span></span> <span data-ttu-id="dd50d-105">其使用此模型從原始程式碼建置可執行檔輸出。</span><span class="sxs-lookup"><span data-stu-id="dd50d-105">They use this model to build the executable output from the source code.</span></span> <span data-ttu-id="dd50d-106">.NET 編譯器平台 SDK 提供對此模型的存取權。</span><span class="sxs-lookup"><span data-stu-id="dd50d-106">The .NET Compiler Platform SDK provides access to this model.</span></span> <span data-ttu-id="dd50d-107">目前，我們越來越依賴整合式開發環境 (IDE) 功能來提高我們的生產力，例如 IntelliSense、重構、智慧型重新命名、「尋找所有參考」和「移至定義」。</span><span class="sxs-lookup"><span data-stu-id="dd50d-107">Increasingly, we rely on integrated development environment (IDE) features such as IntelliSense, refactoring, intelligent rename, "Find all references," and "Go to definition" to increase our productivity.</span></span> <span data-ttu-id="dd50d-108">我們依賴程式碼分析工具來改善程式碼品質，並依賴程式碼產生器來協助建構應用程式。</span><span class="sxs-lookup"><span data-stu-id="dd50d-108">We rely on code analysis tools to improve our code quality, and code generators to aid in application construction.</span></span> <span data-ttu-id="dd50d-109">隨著這些工具變得越來越聰明，當它們處理應用程式程式碼時，需要存取越來越多只有編譯器會建立的模型。</span><span class="sxs-lookup"><span data-stu-id="dd50d-109">As these tools get smarter, they need access to more and more of the model that only compilers create as they process application code.</span></span> <span data-ttu-id="dd50d-110">這就是 Roslyn API 的核心任務：開啟黑箱並允許工具和使用者共用編譯器所擁有關於程式碼的豐富資訊。</span><span class="sxs-lookup"><span data-stu-id="dd50d-110">This is the core mission of the Roslyn APIs: opening up the black boxes and allowing tools and end users to share in the wealth of information compilers have about our code.</span></span>

@@ -1,13 +1,19 @@
 ---
-title: 'C# 參考'
+title: C# 參考
 ms.date: 02/14/2017
 helpviewer_keywords:
-  - 'Visual C#, language reference'
-  - 'language reference [C#]'
-  - 'Programmer''s Reference for C#'
-  - 'C# language, reference'
-  - 'reference, C# language'
+- Visual C#, language reference
+- language reference [C#]
+- Programmer's Reference for C#
+- C# language, reference
+- reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
+ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
+ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57845414"
 ---
 # <a name="c-reference"></a><span data-ttu-id="6acf3-102">C# 參考</span><span class="sxs-lookup"><span data-stu-id="6acf3-102">C# Reference</span></span>
 <span data-ttu-id="6acf3-103">本節提供有關 C# 關鍵字、運算子、特殊字元、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的參考資料。</span><span class="sxs-lookup"><span data-stu-id="6acf3-103">This section provides reference material about C# keywords, operators, special characters, preprocessor directives, compiler options, and compiler errors and warnings.</span></span>  

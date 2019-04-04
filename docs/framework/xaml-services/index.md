@@ -2,10 +2,16 @@
 title: XAML 服務
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'XAML [XAML Services], System.Xaml concepts'
-  - 'XAML Services in WPF [XAML Services]'
-  - 'System.Xaml [XAML Services], conceptual documentation'
+- XAML [XAML Services], System.Xaml concepts
+- XAML Services in WPF [XAML Services]
+- System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
+ms.openlocfilehash: 37fdd96c0666bc6ecda0f46daa5ca6271a8666ab
+ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "58048152"
 ---
 # <a name="xaml-services"></a><span data-ttu-id="f3e42-102">XAML 服務</span><span class="sxs-lookup"><span data-stu-id="f3e42-102">XAML Services</span></span>
 <span data-ttu-id="f3e42-103">本主題說明的技術集合，稱為.NET Framework XAML 服務的功能。</span><span class="sxs-lookup"><span data-stu-id="f3e42-103">This topic describes the capabilities of a technology set known as .NET Framework XAML Services.</span></span> <span data-ttu-id="f3e42-104">大部分的服務和描述 Api 位於 System.Xaml，這是組件所引進的組件[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]的.NET core 組件集。</span><span class="sxs-lookup"><span data-stu-id="f3e42-104">The majority of the services and APIs described are located in the assembly System.Xaml, which is an assembly introduced with the [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] set of .NET core assemblies.</span></span> <span data-ttu-id="f3e42-105">服務包括讀取器和寫入，結構描述類別和結構描述支援的處理站，設定其屬性的類別、 XAML 語言內建支援和其他 XAML 語言功能。</span><span class="sxs-lookup"><span data-stu-id="f3e42-105">Services include readers and writers, schema classes and schema support, factories, attributing of classes, XAML language intrinsic support, and other XAML language features.</span></span>  

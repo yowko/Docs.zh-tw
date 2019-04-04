@@ -2,9 +2,15 @@
 title: 參考 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - language reference
-  - 'Visual Basic code, language reference'
+- language reference
+- Visual Basic code, language reference
 ms.assetid: df6e7c50-5f3e-4381-98ed-ba5c3e9fe228
+ms.openlocfilehash: af8d2c99015304507b2b3361a8a851d125c14a81
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57377148"
 ---
 # <a name="reference-visual-basic"></a><span data-ttu-id="96243-102">參考 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="96243-102">Reference (Visual Basic)</span></span>
 <span data-ttu-id="96243-103">本節提供有關各個層面的參考資訊，Visual Basic 程式設計的連結。</span><span class="sxs-lookup"><span data-stu-id="96243-103">This section provides links to reference information about various aspects of Visual Basic programming.</span></span>  

@@ -2,9 +2,15 @@
 title: Windows Form 應用程式基本概念 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Windows applications
-  - 'Windows Forms, Visual Basic'
+- Windows applications
+- Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
+ms.openlocfilehash: 99aa61d921217ab5638172a54697054e8421fd5c
+ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "56972673"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a><span data-ttu-id="3196c-102">Windows Form 應用程式基本概念 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="3196c-102">Windows Forms Application Basics (Visual Basic)</span></span>
 <span data-ttu-id="3196c-103">Visual Basic 中很重要的一部分是建立本機使用者的電腦執行的 Windows Forms 應用程式的能力。</span><span class="sxs-lookup"><span data-stu-id="3196c-103">An important part of Visual Basic is the ability to create Windows Forms applications that run locally on users' computers.</span></span> <span data-ttu-id="3196c-104">您可以使用 Visual Studio 來建立使用 Windows Form 的應用程式和使用者介面。</span><span class="sxs-lookup"><span data-stu-id="3196c-104">You can use Visual Studio to create the application and user interface using Windows Forms.</span></span> <span data-ttu-id="3196c-105">在 Windows Forms 應用程式的基礎類別<xref:System.Windows.Forms>命名空間。</span><span class="sxs-lookup"><span data-stu-id="3196c-105">A Windows Forms application is built on classes from the <xref:System.Windows.Forms> namespace.</span></span>  

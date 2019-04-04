@@ -4,6 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | 了解如何�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
+ms.openlocfilehash: 8f2297121429acad4222f72ac4fea54e8469b215
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58464667"
 ---
 # <a name="tackle-business-complexity-in-a-microservice-with-ddd-and-cqrs-patterns"></a><span data-ttu-id="a9c49-103">使用 DDD 與 CQRS 模式解決微服務中的商務複雜度</span><span class="sxs-lookup"><span data-stu-id="a9c49-103">Tackle Business Complexity in a Microservice with DDD and CQRS Patterns</span></span>
 

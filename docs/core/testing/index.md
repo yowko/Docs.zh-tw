@@ -5,8 +5,13 @@ author: ardalis
 ms.author: wiwagn
 ms.date: 08/30/2017
 ms.custom: seodec18
+ms.openlocfilehash: 73667843452bbcab52a8cd4aa7906beecc095677
+ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58185502"
 ---
-
 # <a name="unit-testing-in-net-core-and-net-standard"></a><span data-ttu-id="85aac-103">.NET Core 與 .NET Standard 中的單元測試</span><span class="sxs-lookup"><span data-stu-id="85aac-103">Unit testing in .NET Core and .NET Standard</span></span>
 
 <span data-ttu-id="85aac-104">.NET Core 使單元測試的建立便得更加輕鬆。</span><span class="sxs-lookup"><span data-stu-id="85aac-104">.NET Core makes it easy to create unit tests.</span></span> <span data-ttu-id="85aac-105">本文會介紹單元測試，並示範它們和其他種類測試之間的差異。</span><span class="sxs-lookup"><span data-stu-id="85aac-105">This article introduces unit tests and illustrates how they differ from other kinds of tests.</span></span> <span data-ttu-id="85aac-106">接近頁面底部的連結資源，會向您示範如何將測試專案新增到解決方案。</span><span class="sxs-lookup"><span data-stu-id="85aac-106">The linked resources near the bottom of the page show you how to add a test project to your solution.</span></span> <span data-ttu-id="85aac-107">在您設定好測試專案後，就能使用命令列或 Visual Studio 來執行單元測試。</span><span class="sxs-lookup"><span data-stu-id="85aac-107">After you set up your test project, you will be able to run your unit tests using the command line or Visual Studio.</span></span>

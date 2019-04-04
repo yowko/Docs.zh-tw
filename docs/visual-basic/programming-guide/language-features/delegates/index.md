@@ -2,11 +2,16 @@
 title: 委派 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'delegates [Visual Basic]'
-  - 'Visual Basic code, delegates'
+- delegates [Visual Basic]
+- Visual Basic code, delegates
 ms.assetid: 410b60dc-5e60-4ec0-bfae-426755a2ee28
+ms.openlocfilehash: b3f333f1714a66a8ff462000385af92cf343a19e
+ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/08/2019
+ms.locfileid: "57674025"
 ---
-
 # <a name="delegates-visual-basic"></a><span data-ttu-id="c5101-102">委派 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="c5101-102">Delegates (Visual Basic)</span></span>
 
 <span data-ttu-id="c5101-103">委派是參考方法的物件。</span><span class="sxs-lookup"><span data-stu-id="c5101-103">Delegates are objects that refer to methods.</span></span> <span data-ttu-id="c5101-104">它們有時稱為「型別安全的函式指標」，因為它們類似於其他程式設計語言中使用的函式指標。</span><span class="sxs-lookup"><span data-stu-id="c5101-104">They are sometimes described as *type-safe function pointers* because they are similar to function pointers used in other programming languages.</span></span> <span data-ttu-id="c5101-105">但不同於函式指標，Visual Basic 委派是參考類型，根據類別<xref:System.Delegate?displayProperty=nameWithType>。</span><span class="sxs-lookup"><span data-stu-id="c5101-105">But unlike function pointers, Visual Basic delegates are a reference type based on the class <xref:System.Delegate?displayProperty=nameWithType>.</span></span> <span data-ttu-id="c5101-106">委派可以同時參考共用的方法 (不需類別的特定執行個體就能呼叫的方法) 和執行個體方法。</span><span class="sxs-lookup"><span data-stu-id="c5101-106">Delegates can reference both shared methods — methods that can be called without a specific instance of a class — and instance methods.</span></span>

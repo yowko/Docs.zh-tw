@@ -2,10 +2,16 @@
 title: Windows Forms
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Windows Forms
-  - user interface
-  - 'user interface [Windows Forms], forms'
+- Windows Forms
+- user interface
+- user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
+ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
+ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/09/2019
+ms.locfileid: "57723110"
 ---
 # <a name="windows-forms"></a><span data-ttu-id="2b54b-102">Windows Forms</span><span class="sxs-lookup"><span data-stu-id="2b54b-102">Windows Forms</span></span>
 <span data-ttu-id="2b54b-103">由於表單是應用程式的基礎單位，因此在表單的功能和設計方面需要多加考量。</span><span class="sxs-lookup"><span data-stu-id="2b54b-103">As forms are the base unit of your application, it is essential that you give some thought to their function and design.</span></span> <span data-ttu-id="2b54b-104">表單基本上就像是一個空白面板，身為開發人員的您可使用控制項建立使用者介面，並使用程式碼管理資料，來增強表單。</span><span class="sxs-lookup"><span data-stu-id="2b54b-104">A form is ultimately a blank slate that you, as a developer, enhance with controls to create a user interface and with code to manipulate data.</span></span> <span data-ttu-id="2b54b-105">為此，Visual Studio 為您提供的整合式的開發環境 (IDE)，以協助撰寫程式碼，以及豐富的控制項集合以寫入[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="2b54b-105">To that end, Visual Studio provides you with an integrated development environment (IDE) to aid in writing code, as well as a rich control set written with the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].</span></span> <span data-ttu-id="2b54b-106">您可以利用程式碼來補充這些控制項的功能，進而輕鬆快速地開發所需的方案。</span><span class="sxs-lookup"><span data-stu-id="2b54b-106">By complementing the functionality of these controls with your code, you can easily and quickly develop the solutions you need.</span></span>  

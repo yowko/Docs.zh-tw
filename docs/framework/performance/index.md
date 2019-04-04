@@ -2,11 +2,17 @@
 title: .NET Framework 效能
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance [.NET Framework]'
-  - 'reliability [.NET Framework]'
+- performance [.NET Framework]
+- reliability [.NET Framework]
 ms.assetid: c1676cca-3f1a-41ec-b469-9029566074fc
 author: mairaw
 ms.author: mairaw
+ms.openlocfilehash: a575f6c067d22ddf35a238c36f66fe8e91f6be0c
+ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57361274"
 ---
 # <a name="net-framework-performance"></a><span data-ttu-id="cafbe-102">.NET Framework 效能</span><span class="sxs-lookup"><span data-stu-id="cafbe-102">.NET Framework Performance</span></span>
 <span data-ttu-id="cafbe-103">如果您想建立高效能的應用程式，您應該以設計應用程式之其他任何功能的相同方式，來設計及規劃效能。</span><span class="sxs-lookup"><span data-stu-id="cafbe-103">If you want to create apps with great performance, you should design and plan for performance just as you would design any other feature of your app.</span></span> <span data-ttu-id="cafbe-104">您可以使用 Microsoft 提供的工具來測量應用程式的效能，並在必要時改進記憶體使用量、程式碼輸送量和回應性。</span><span class="sxs-lookup"><span data-stu-id="cafbe-104">You can use the tools provided by Microsoft to measure your app's performance, and, if needed, make improvements to memory use, code throughput, and responsiveness.</span></span> <span data-ttu-id="cafbe-105">本主題列出 Microsoft 提供的效能分析工具，並提供涵蓋應用程式開發之特定區域效能的其他主題連結。</span><span class="sxs-lookup"><span data-stu-id="cafbe-105">This topic lists the performance analysis tools that Microsoft provides, and provides links to other topics that cover performance for specific areas of app development.</span></span>  

@@ -4,8 +4,13 @@ description: Microsoft 平台和工具的容器化 Docker 應用程式生命週�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
+ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 02/26/2019
+ms.locfileid: "56834936"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a><span data-ttu-id="37c10-103">執行、管理和監視 Docker 生產環境</span><span class="sxs-lookup"><span data-stu-id="37c10-103">Run, manage, and monitor Docker production environments</span></span>
 
 <span data-ttu-id="37c10-104">願景：企業應用程式需要具備高可用性和高延展性執行IT 部門需要能夠管理和監視環境和應用程式本身。</span><span class="sxs-lookup"><span data-stu-id="37c10-104">Vision: Enterprise applications need to run with high availability and high scalability; IT operations need to be able to manage and monitor the environments and the applications themselves.</span></span>

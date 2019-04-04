@@ -5,8 +5,13 @@ author: billwagner
 ms.author: wiwagn
 ms.date: 01/24/2018
 ms.technology: dotnet-standard
+ms.openlocfilehash: 436cfb3904f0891f8c18bb5890563a13d65e2d1c
+ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/29/2019
+ms.locfileid: "58634241"
 ---
-
 # <a name="the-roslyn-based-analyzers"></a><span data-ttu-id="72a75-103">Roslyn 分析器</span><span class="sxs-lookup"><span data-stu-id="72a75-103">The Roslyn based Analyzers</span></span>
 
 <span data-ttu-id="72a75-104">Roslyn 分析器會使用 .NET Compiler SDK (Roslyn API) 來分析您專案的原始程式碼，以找出問題並建議修正。</span><span class="sxs-lookup"><span data-stu-id="72a75-104">Roslyn-based analyzers use the .NET Compiler SDK (Roslyn APIs) to analyze your project's source code to find issues and suggest corrections.</span></span> <span data-ttu-id="72a75-105">不同的分析器會尋找不同類別的問題，範圍從可能導致錯誤 (bug) 的作法，以及安全性考量與 API 相容性等等。</span><span class="sxs-lookup"><span data-stu-id="72a75-105">Different analyzers look for different classes of issues, ranging from practices that are likely to cause bugs to security concerns to API compatibility.</span></span>

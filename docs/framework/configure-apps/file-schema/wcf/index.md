@@ -2,6 +2,12 @@
 title: WCF 組態結構描述
 ms.date: 03/30/2017
 ms.assetid: c282aeb5-91f0-4522-8e2f-704c1ef3651f
+ms.openlocfilehash: baea1e49bce10054530afa5b6f282023d5ceb981
+ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58463328"
 ---
 # <a name="wcf-configuration-schema"></a><span data-ttu-id="2e1e5-102">WCF 組態結構描述</span><span class="sxs-lookup"><span data-stu-id="2e1e5-102">WCF Configuration Schema</span></span>
 <span data-ttu-id="2e1e5-103">Windows Communication Foundation (WCF) 組態項目可讓您設定 WCF 服務和用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="2e1e5-103">Windows Communication Foundation (WCF) configuration elements enable you to configure WCF service and client applications.</span></span> <span data-ttu-id="2e1e5-104">您可使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) 來建立並修改用戶端與服務的組態檔。</span><span class="sxs-lookup"><span data-stu-id="2e1e5-104">You can use the [Configuration Editor Tool (SvcConfigEditor.exe)](../../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md) to create and modify configuration files for clients and services.</span></span> <span data-ttu-id="2e1e5-105">由於組態檔採用 XML 格式，因此，如果要使用文字編輯器手動編輯這些檔案，則必須熟悉 XML。</span><span class="sxs-lookup"><span data-stu-id="2e1e5-105">Since the configuration files are formatted as XML, you must be familiar with XML if you want to manually edit them using a text editor.</span></span> <span data-ttu-id="2e1e5-106">否則，您可能會碰到 XML 項目標記或屬性找不到等問題，</span><span class="sxs-lookup"><span data-stu-id="2e1e5-106">Otherwise, you may run into issues such as an unfound XML element tag or attribute.</span></span> <span data-ttu-id="2e1e5-107">因為 XML 項目標記與屬性有區分大小寫。</span><span class="sxs-lookup"><span data-stu-id="2e1e5-107">This is because XML element tags and attributes are case-sensitive.</span></span>  
