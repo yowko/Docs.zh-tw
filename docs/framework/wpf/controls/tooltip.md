@@ -8,12 +8,12 @@ helpviewer_keywords:
 - controls [WPF], ToolTip
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
-ms.openlocfilehash: 8f471b26daa89bc513b36eaed5336aa6262cb26d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367566"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054984"
 ---
 # <a name="tooltip"></a>ToolTip
 工具提示是一個小型的快顯視窗出現時的使用者將滑鼠指標停留的項目，可能會透過<xref:System.Windows.Controls.Button>。  
@@ -25,8 +25,8 @@ ms.locfileid: "57367566"
  ![工具提示的螢幕擷取畫面](./media/ss-ctl-tooltip.png "SS_CTL_tooltip")  
   
 ## <a name="in-this-section"></a>本節內容  
- [工具提示概觀](tooltip-overview.md)  
-  [HOW-TO 主題](tooltip-how-to-topics.md)  
+ [ToolTip 概觀](tooltip-overview.md)  
+  [HOW TO 主題](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.ToolTip>  
@@ -35,4 +35,4 @@ ms.locfileid: "57367566"
   
 ## <a name="related-sections"></a>相關章節  
  [快顯功能表概觀](popup-overview.md)  
-  [HOW-TO 主題](popup-how-to-topics.md)
+  [HOW TO 主題](popup-how-to-topics.md)

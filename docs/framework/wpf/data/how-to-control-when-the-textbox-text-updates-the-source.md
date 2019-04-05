@@ -1,5 +1,5 @@
 ---
-title: HOW TO：TextBox 文字更新來源時控制
+title: HOW TO：控制 TextBox 文字更新來源的時機
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,18 +9,18 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 702f06a37aa98e3a84858a590655e8a4311cfa48
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362132"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055127"
 ---
-# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>HOW TO：TextBox 文字更新來源時控制
+# <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>HOW TO：控制 TextBox 文字更新來源的時機
 本主題描述如何使用<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性，即可控制繫結來源更新的時機。 本主題使用<xref:System.Windows.Controls.TextBox>控制項做為範例。  
   
 ## <a name="example"></a>範例  
- <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> 屬性的預設值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>的值<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。 這表示應用程式是否有<xref:System.Windows.Controls.TextBox>與資料繫結<xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> 屬性，您輸入的文字<xref:System.Windows.Controls.TextBox>不會更新來源，直到<xref:System.Windows.Controls.TextBox>失去焦點 (例如，當您按一下 離開<xref:System.Windows.Controls.TextBox>)。  
+ <xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> 屬性的預設值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>的值<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>。 這表示應用程式是否有<xref:System.Windows.Controls.TextBox>與資料繫結<xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> 屬性，您輸入的文字<xref:System.Windows.Controls.TextBox>不會更新來源，直到<xref:System.Windows.Controls.TextBox>失去焦點 (例如，當您按一下 離開<xref:System.Windows.Controls.TextBox>)。  
   
  如果您想要更新您輸入的來源，設定<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>繫結至的<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。 在下列範例中，反白顯示的幾行程式碼顯示`Text`兩者的屬性<xref:System.Windows.Controls.TextBox>而<xref:System.Windows.Controls.TextBlock>繫結至相同的來源屬性。 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>的屬性<xref:System.Windows.Controls.TextBox>繫結設定為<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>。  
   
@@ -46,4 +46,4 @@ ms.locfileid: "57362132"
 >  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性處理來源更新，因此僅與相關<xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結。 針對<xref:System.Windows.Data.BindingMode.TwoWay>和<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結得以生效，來源物件必須提供屬性變更通知。 如需詳細資訊，請參考本主題中引用的範例。 此外，您還可以參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

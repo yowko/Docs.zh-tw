@@ -15,15 +15,15 @@ helpviewer_keywords:
 - styles [WPF], triggers
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
-ms.openlocfilehash: 580eb2c7efd00382f7fff24984f0ce6f6d8fa027
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bc77d6e32588f48d3a4e0dd841b98b8bc65ea4f5
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370718"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055322"
 ---
 # <a name="styling-and-templating"></a>樣式設定和範本化
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 樣式設定和範本化係指一套功能 (樣式、範本、觸發程序及分鏡腳本)，可讓開發人員和設計人員創造引人注目的效果，並為其產品建立一致的外觀。 雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 便有提供該模型。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 設定樣式和範本是指一套可讓開發人員和設計人員創造引人注目的效果，並建立一致的外觀，其產品的功能 （樣式、 範本、 觸發程序和分鏡腳本）。 雖然開發人員和 (或) 設計人員可以依個別應用程式廣泛地自訂外觀，但強大的樣式設定和範本化模型仍有其必要性，這可允許在應用程式內或應用程式之間維護及共用外觀。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供該模型。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式設定模型的另一項功能是將呈現與邏輯區分開來。 這意謂著設計人員可以在開發人員使用 C# 或 Visual Basic 來處理程式設計邏輯的同時，僅使用 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 來處理應用程式的外觀。  
   
@@ -198,5 +198,5 @@ ms.locfileid: "57370718"
   
 ## <a name="see-also"></a>另請參閱
 - [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)
-- [如何：尋找 ControlTemplate 產生的項目](how-to-find-controltemplate-generated-elements.md)
-- [尋找 DataTemplate 產生的元素](../data/how-to-find-datatemplate-generated-elements.md)
+- [HOW TO：尋找 ControlTemplate 產生的元素](how-to-find-controltemplate-generated-elements.md)
+- [尋找 DataTemplate 產生的項目](../data/how-to-find-datatemplate-generated-elements.md)

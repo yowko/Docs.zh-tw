@@ -11,14 +11,14 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: b7ad8afbad212d5c79c9391bd9f6d1da7ff8fb28
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358181"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055244"
 ---
-# <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我第一個 WPF 桌面應用程式
+# <a name="walkthrough-my-first-wpf-desktop-application"></a>逐步解說：我的第一個 WPF 傳統型應用程式
 
 這篇文章會示範如何開發簡單的 Windows Presentation Foundation (WPF) 應用程式，其中包含大部分的 WPF 應用程式通用的項目：Extensible Application Markup Language (XAML) 標記、 程式碼後置、 應用程式定義、 控制項、 版面配置、 資料繫結和樣式。
 
@@ -375,17 +375,17 @@ ms.locfileid: "57358181"
 
     這個 XAML 會加入下列樣式：
 
-    - `headerTextStyle`：若要格式化頁面標題<xref:System.Windows.Controls.Label>。
+    - `headerTextStyle`:若要格式化頁面標題<xref:System.Windows.Controls.Label>。
 
-    - `labelStyle`：若要格式化<xref:System.Windows.Controls.Label>控制項。
+    - `labelStyle`:若要格式化<xref:System.Windows.Controls.Label>控制項。
 
-    - `columnHeaderStyle`：若要格式化<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
+    - `columnHeaderStyle`:若要格式化<xref:System.Windows.Controls.Primitives.DataGridColumnHeader>。
 
-    - `listHeaderStyle`：若要格式化清單標頭<xref:System.Windows.Controls.Border>控制項。
+    - `listHeaderStyle`:若要格式化清單標頭<xref:System.Windows.Controls.Border>控制項。
 
-    - `listHeaderTextStyle`：若要格式化清單標頭<xref:System.Windows.Controls.Label>。
+    - `listHeaderTextStyle`:若要格式化清單標頭<xref:System.Windows.Controls.Label>。
 
-    - `buttonStyle`：若要格式化<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
+    - `buttonStyle`:若要格式化<xref:System.Windows.Controls.Button>上`ExpenseItHome.xaml`。
 
     請注意，樣式是資源和子系<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>屬性項目。 在這裡，樣式會套用至應用程式中的所有元素。 如需在.NET Framework 應用程式中使用資源的範例，請參閱[使用應用程式資源](../advanced/how-to-use-application-resources.md)。
 
@@ -495,7 +495,7 @@ ms.locfileid: "57358181"
 - [WPF 架構](../advanced/wpf-architecture.md)
 - [XAML 概觀 (WPF)](../advanced/xaml-overview-wpf.md)
 - [相依性屬性概觀](../advanced/dependency-properties-overview.md)
-- [版面配置](../advanced/layout.md)
+- [配置](../advanced/layout.md)
 
 如需建立應用程式的詳細資訊，請參閱下列主題：
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b683784489cd68b66b4f9660f0df5e63b676a91c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921347"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055309"
 ---
 # <a name="working-with-calendars"></a>使用日曆
 
@@ -163,7 +163,7 @@ ms.locfileid: "58921347"
 | <xref:System.Globalization.ThaiBuddhistCalendar>      | <xref:System.Globalization.ThaiBuddhistCalendar.ThaiBuddhistEra>  |
 | <xref:System.Globalization.UmAlQuraCalendar>          | <xref:System.Globalization.UmAlQuraCalendar.UmAlQuraEra>          |
 
-對應特定紀元數的名稱可藉由將紀元數傳遞至 <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> 方法的方式擷取。 下列範例會呼叫這些方法來擷取 <xref:System.Globalization.GregorianCalendar> 類別中紀元支援的相關資訊。
+對應特定紀元數的名稱可藉由將紀元數傳遞至 <xref:System.Globalization.DateTimeFormatInfo.GetEraName%2A?displayProperty=nameWithType> 或 <xref:System.Globalization.DateTimeFormatInfo.GetAbbreviatedEraName%2A?displayProperty=nameWithType> 方法的方式擷取。 下列範例會呼叫這些方法來擷取 <xref:System.Globalization.GregorianCalendar> 類別中紀元支援的相關資訊。 它會顯示對應至目前的紀元，第二年的 1 年 1 月的西曆日期，以及對應至每個支援日本曆法的紀元的第二年的 1 年 1 月的西曆日期。
 
 [!code-csharp[Conceptual.Calendars#7](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/instantiatewithera1.cs)]
 [!code-vb[Conceptual.Calendars#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/instantiatewithera1.vb)]
@@ -172,7 +172,7 @@ ms.locfileid: "58921347"
 
 ### <a name="instantiating-a-date-with-an-era"></a>具現化包含紀元的日期
 
-為兩個<xref:System.Globalization.Calendar>類別，可支援多個紀元，日期，包含特定年、 月和日的月底值可以模稜兩可。 比方說，所支援的所有紀元<xref:System.Globalization.JapaneseCalendar>具有其數字為 1 的年份。 一般而言，如果未指定紀元，日期和時間及曆法方法都會假設這些值屬於目前紀元。 這是的則為 true<xref:System.DateTime.%23ctor%2A>並<xref:System.DateTimeOffset.%23ctor%2A>包含型別參數的建構函式<xref:System.Globalization.Calendar>，並將[JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))和[JapaneseLunisolarCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))方法。 下列範例會具現化，表示未指定紀元的第二年的 1 年 1 月的日期。 範例所示的輸出，日期會解譯為平成時代，而在此範例中執行的時間為目前紀元的第二年。 時代，平成，之前一年中所傳回的字串<xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType>方法與等同西曆中的 1990 年 1 月 1 日。 （平成紀元的範圍是從 1989年 2019 西曆中）。
+為兩個<xref:System.Globalization.Calendar>類別，可支援多個紀元，日期，包含特定年、 月和日的月底值可以模稜兩可。 比方說，所支援的所有紀元<xref:System.Globalization.JapaneseCalendar>具有其數字為 1 的年份。 一般而言，如果未指定紀元，日期和時間及曆法方法都會假設這些值屬於目前紀元。 這是的則為 true<xref:System.DateTime.%23ctor%2A>並<xref:System.DateTimeOffset.%23ctor%2A>包含型別參數的建構函式<xref:System.Globalization.Calendar>，並將[JapaneseCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))和[JapaneseLunisolarCalendar.ToDateTime](xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32))方法。 下列範例會具現化，表示未指定紀元的第二年的 1 年 1 月的日期。 如果您執行範例，為目前紀元 Reiwa 紀元時，日期會解譯為 Reiwa 紀元的第二年中。 時代，令和，之前一年中所傳回的字串<xref:System.DateTime.ToString(System.String,System.IFormatProvider)?displayProperty=nameWithType>方法和對應至 2020 年 1 月 1 日，西曆中。 （Reiwa 紀元開始的西曆 2019 年）。
 
 [!code-csharp[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/cs/program.cs)]
 [!code-vb[A date in the current era](~/samples/snippets/standard/datetime/calendars/current-era/vb/program.vb)]

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: cc97fda98badfc27e8b92a0dde6d5e419575ac6c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87ae55c454a72797569de4cd944984ba18c3b2ca
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379558"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055062"
 ---
 # <a name="graphics-and-multimedia"></a>圖形和多媒體
 <a name="introduction"></a>
@@ -53,7 +53,7 @@ ms.locfileid: "57379558"
  WPF 可支援高品質的 2D 圖形。 這些功能包括筆刷、幾何、影像、圖形及轉換。 如需詳細資訊，請參閱[圖形](graphics.md)。 轉譯圖形化的項目根據<xref:System.Windows.Media.Visual>類別。 螢幕上視覺物件的結構是由視覺化樹狀結構描繪。 如需詳細資訊，請參閱 [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)。  
   
 ### <a name="2-d-shapes"></a>2D 圖案  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供以向量繪製的常用 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形圖庫，例如下圖所示的矩形和橢圓形。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供程式庫的常用向量繪製[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]圖形，例如矩形和橢圓形，如下圖所示。  
   
  ![橢圓形和矩形](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
   
@@ -101,7 +101,7 @@ End Class
  如需詳細資訊，請參閱[幾何概觀](geometry-overview.md)。 如需簡介範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ### <a name="2-d-effects"></a>2D 效果  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 類別的程式庫可讓您建立各種不同的效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 轉譯功能可讓您繪製具有漸層的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素、點陣圖、繪圖和影片，以及使用旋轉、縮放和傾斜來操作。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的程式庫[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]類別，可用來建立各種不同的效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 轉譯功能可讓您繪製具有漸層的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素、點陣圖、繪圖和影片，以及使用旋轉、縮放和傾斜來操作。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。  
   
  ![不同筆刷的圖例](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
   
@@ -109,7 +109,7 @@ End Class
   
 <a name="rendering"></a>   
 ## <a name="3-d-rendering"></a>3D 轉譯  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一組 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 轉譯功能，和 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 中的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形支援整合，讓您建立更有趣的版面配置、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 及資料視覺效果。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您將 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 影像轉譯到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形的表面上，如下圖所示範。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一組[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]整合的轉譯能力[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]支援中的圖形[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]為了讓您建立更有趣的版面配置， [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，和資料視覺效果。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您將 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 影像轉譯到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形的表面上，如下圖所示範。  
   
  ![Visual3D 範例螢幕擷取畫面](./media/wpfintrofigure13.png "WPFIntroFigure13")  
   
@@ -130,7 +130,7 @@ End Class
 ### <a name="images"></a>影像  
  包括圖示、背景，甚至動畫組件的影像，是大部分應用程式的核心組件。 因為您經常需要使用影像，所以 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 公開能以各種不同方式處理的功能。 下圖顯示眾多方式的其中之一。  
   
- ![設定樣式範例螢幕擷取畫面](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
+ ![樣式設定範例螢幕擷取畫面](../controls/./media/stylingintro-eventtriggers.png "StylingIntro_EventTriggers")  
   
  如需詳細資訊，請參閱 [影像處理概觀](imaging-overview.md)。  
   
@@ -153,6 +153,6 @@ End Class
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)
-- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)
+- [動畫和計時 HOW TO 主題](animation-and-timing-how-to-topics.md)
 - [立體圖形概觀](3-d-graphics-overview.md)
 - [多媒體概觀](multimedia-overview.md)

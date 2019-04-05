@@ -2,12 +2,12 @@
 title: Byref
 description: 了解 byref 和中的類似 byref 類型F#，用來進行低層級的程式設計。
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976547"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055361"
 ---
 # <a name="byrefs"></a>Byref
 
@@ -56,9 +56,10 @@ open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
 若要寫入使用指標`outref<'T>`或是`byref<'T>`，您也必須進行抓取的指標值`mutable`。
@@ -84,7 +85,7 @@ f &dt
 請考慮下列程式碼：
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
 語意上來說，這表示下列事項：
@@ -120,10 +121,10 @@ C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示F#會�
 
 |F#建構|發出的建構|
 |------------|-----------------|
-|`inref<'T>` 引數|`[In]` 引數上的屬性|
-|`inref<'T>` 傳回|`modreq` 值的屬性|
+|`inref<'T>` Argument - 引數|`[In]` 引數上的屬性|
+|`inref<'T>` return|`modreq` 值的屬性|
 |`inref<'T>` 抽象位置或實作中|`modreq` 在 引數或傳回|
-|`outref<'T>` 引數|`[Out]` 引數上的屬性|
+|`outref<'T>` Argument - 引數|`[Out]` 引數上的屬性|
 
 ### <a name="type-inference-and-overloading-rules"></a>型別推斷 」 和 「 多載規則
 
@@ -178,7 +179,7 @@ type S(count1: Span<int>, count2: Span<int>) =
 
 ## <a name="byref-returns"></a>Byref 傳回
 
-Byref 傳回從F#函式或成員可以產生及取用。 使用時`byref`-傳回方法，這個值是隱含已取值。 例如: 
+Byref 傳回從F#函式或成員可以產生及取用。 使用時`byref`-傳回方法，這個值是隱含已取值。 例如：
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =
