@@ -19,7 +19,7 @@ ms.locfileid: "58920645"
 
 **Dockerfile**：文字檔案，其中包含有關如何建置 Docker 映像的指示。 就像批次指令碼，第一行指出開頭，，然後遵循指示來安裝必要的程式，複製檔案，在基礎映像，您需要等等，直到您取得的工作環境。
 
-**組建**：建立容器映像的動作，該映像會以其 Dockerfile 及建立映像之資料夾中其他檔案所提供的資訊和內容為依據。 您可以建置 Docker 映像**`docker build`** 命令。
+**組建**：建立容器映像的動作，該映像會以其 Dockerfile 及建立映像之資料夾中其他檔案所提供的資訊和內容為依據。 您可以建置 Docker 映像 **`docker build`** 命令。
 
 **容器**：Docker 映像的執行個體。 容器代表單一應用程式、處理序或服務的執行。 其中包含 Docker 映像的內容、執行環境和一組標準的指示。 擴充服務時，您會從同一個映像建立容器的多個執行個體。 或者，一個批次工作可以從同一個映像建立多個容器，並將不同的參數傳遞至每個執行個體。
 
@@ -33,7 +33,7 @@ ms.locfileid: "58920645"
 
 **登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映像**：針對多重架構，是一項功能，可簡化選取適當的映像，根據 Docker 正在執行，例如，當 Dockerfile 要求的基底映像的平台**`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** 從登錄它實際上會取得**`2.1-nanoserver-1709`**， **`2.1-nanoserver-1803`**， **`2.1-nanoserver-1809`** 或**`2.1-stretch`**，根據作業系統和執行 Docker 的版本。
+**多架構映像**：針對多重架構，是一項功能，可簡化選取適當的映像，根據 Docker 正在執行，例如，當 Dockerfile 要求的基底映像的平台 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** 從登錄它實際上會取得 **`2.1-nanoserver-1709`**， **`2.1-nanoserver-1803`**， **`2.1-nanoserver-1809`** 或 **`2.1-stretch`**，根據作業系統和執行 Docker 的版本。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 
