@@ -2,21 +2,21 @@
 title: Byref
 description: 了解 byref 和中的類似 byref 類型F#，用來進行低層級的程式設計。
 ms.date: 09/02/2018
-ms.openlocfilehash: d8d8b2f0c9965a06e823e9be4e8d1b34201cc471
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c0bad26672fbb9eb315eee1c3e275183ddeb9297
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976547"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055361"
 ---
-# <a name="byrefs"></a><span data-ttu-id="9dd3d-103">Byref</span><span class="sxs-lookup"><span data-stu-id="9dd3d-103">Byrefs</span></span>
+# <a name="byrefs"></a><span data-ttu-id="3f08b-103">Byref</span><span class="sxs-lookup"><span data-stu-id="3f08b-103">Byrefs</span></span>
 
-<span data-ttu-id="9dd3d-104">F#已處理的低階程式設計空間中的兩個主要功能領域：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-104">F# has two major feature areas that deal in the space of low-level programming:</span></span>
+<span data-ttu-id="3f08b-104">F#已處理的低階程式設計空間中的兩個主要功能領域：</span><span class="sxs-lookup"><span data-stu-id="3f08b-104">F# has two major feature areas that deal in the space of low-level programming:</span></span>
 
-* <span data-ttu-id="9dd3d-105">`byref` / `inref` / `outref`類型，也就是 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-105">The `byref`/`inref`/`outref` types, which are a managed pointers.</span></span> <span data-ttu-id="9dd3d-106">它們有使用量限制，因此無法編譯程式時，會在執行階段無效。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-106">They have restrictions on usage so that you cannot compile a program that is invalid at runtime.</span></span>
-* <span data-ttu-id="9dd3d-107">A `byref`-與結構，也就是一樣[結構](structures.md)有類似的語意和相同的編譯時間限制`byref<'T>`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-107">A `byref`-like struct, which is a [structure](structures.md) that has similar semantics and the same compile-time restrictions as `byref<'T>`.</span></span> <span data-ttu-id="9dd3d-108">其中一個範例是<xref:System.Span%601>。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-108">One example is <xref:System.Span%601>.</span></span>
+* <span data-ttu-id="3f08b-105">`byref` / `inref` / `outref`類型，也就是 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-105">The `byref`/`inref`/`outref` types, which are a managed pointers.</span></span> <span data-ttu-id="3f08b-106">它們有使用量限制，因此無法編譯程式時，會在執行階段無效。</span><span class="sxs-lookup"><span data-stu-id="3f08b-106">They have restrictions on usage so that you cannot compile a program that is invalid at runtime.</span></span>
+* <span data-ttu-id="3f08b-107">A `byref`-與結構，也就是一樣[結構](structures.md)有類似的語意和相同的編譯時間限制`byref<'T>`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-107">A `byref`-like struct, which is a [structure](structures.md) that has similar semantics and the same compile-time restrictions as `byref<'T>`.</span></span> <span data-ttu-id="3f08b-108">其中一個範例是<xref:System.Span%601>。</span><span class="sxs-lookup"><span data-stu-id="3f08b-108">One example is <xref:System.Span%601>.</span></span>
 
-## <a name="syntax"></a><span data-ttu-id="9dd3d-109">語法</span><span class="sxs-lookup"><span data-stu-id="9dd3d-109">Syntax</span></span>
+## <a name="syntax"></a><span data-ttu-id="3f08b-109">語法</span><span class="sxs-lookup"><span data-stu-id="3f08b-109">Syntax</span></span>
 
 ```fsharp
 // Byref types as parameters
@@ -37,31 +37,32 @@ type S(count1: int, count2: int) =
     member x.Count2 = count2
 ```
 
-## <a name="byref-inref-and-outref"></a><span data-ttu-id="9dd3d-110">Byref、 inref 和 outref</span><span class="sxs-lookup"><span data-stu-id="9dd3d-110">Byref, inref, and outref</span></span>
+## <a name="byref-inref-and-outref"></a><span data-ttu-id="3f08b-110">Byref、 inref 和 outref</span><span class="sxs-lookup"><span data-stu-id="3f08b-110">Byref, inref, and outref</span></span>
 
-<span data-ttu-id="9dd3d-111">有三種形式的`byref`:</span><span class="sxs-lookup"><span data-stu-id="9dd3d-111">There are three forms of `byref`:</span></span>
+<span data-ttu-id="3f08b-111">有三種形式的`byref`:</span><span class="sxs-lookup"><span data-stu-id="3f08b-111">There are three forms of `byref`:</span></span>
 
-* <span data-ttu-id="9dd3d-112">`inref<'T>`用於讀取的基礎值的 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-112">`inref<'T>`, a managed pointer for reading the underlying value.</span></span>
-* <span data-ttu-id="9dd3d-113">`outref<'T>`用於將寫入基礎值的 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-113">`outref<'T>`, a managed pointer for writing to the underlying value.</span></span>
-* <span data-ttu-id="9dd3d-114">`byref<'T>`用於讀取和寫入基礎值的 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-114">`byref<'T>`, a managed pointer for reading and writing the underlying value.</span></span>
+* `inref<'T>`<span data-ttu-id="3f08b-112">用於讀取的基礎值的 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-112">, a managed pointer for reading the underlying value.</span></span>
+* `outref<'T>`<span data-ttu-id="3f08b-113">用於將寫入基礎值的 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-113">, a managed pointer for writing to the underlying value.</span></span>
+* `byref<'T>`<span data-ttu-id="3f08b-114">用於讀取和寫入基礎值的 managed 的指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-114">, a managed pointer for reading and writing the underlying value.</span></span>
 
-<span data-ttu-id="9dd3d-115">A`byref<'T>`可以在其中傳遞`inref<'T>`預期。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-115">A `byref<'T>` can be passed where an `inref<'T>` is expected.</span></span> <span data-ttu-id="9dd3d-116">同樣地，`byref<'T>`可以在其中傳遞`outref<'T>`預期。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-116">Similarly, a `byref<'T>` can be passed where an `outref<'T>` is expected.</span></span>
+<span data-ttu-id="3f08b-115">A`byref<'T>`可以在其中傳遞`inref<'T>`預期。</span><span class="sxs-lookup"><span data-stu-id="3f08b-115">A `byref<'T>` can be passed where an `inref<'T>` is expected.</span></span> <span data-ttu-id="3f08b-116">同樣地，`byref<'T>`可以在其中傳遞`outref<'T>`預期。</span><span class="sxs-lookup"><span data-stu-id="3f08b-116">Similarly, a `byref<'T>` can be passed where an `outref<'T>` is expected.</span></span>
 
-## <a name="using-byrefs"></a><span data-ttu-id="9dd3d-117">使用 byref</span><span class="sxs-lookup"><span data-stu-id="9dd3d-117">Using byrefs</span></span>
+## <a name="using-byrefs"></a><span data-ttu-id="3f08b-117">使用 byref</span><span class="sxs-lookup"><span data-stu-id="3f08b-117">Using byrefs</span></span>
 
-<span data-ttu-id="9dd3d-118">若要使用`inref<'T>`，您需要取得的指標值`&`:</span><span class="sxs-lookup"><span data-stu-id="9dd3d-118">To use a `inref<'T>`, you need to get a pointer value with `&`:</span></span>
+<span data-ttu-id="3f08b-118">若要使用`inref<'T>`，您需要取得的指標值`&`:</span><span class="sxs-lookup"><span data-stu-id="3f08b-118">To use a `inref<'T>`, you need to get a pointer value with `&`:</span></span>
 
 ```fsharp
 open System
 
 let f (dt: inref<DateTime>) =
     printfn "Now: %s" (dt.ToString())
-
-let dt = DateTime.Now
-f &dt // Pass a pointer to 'dt'
+    
+let usage =
+    let dt = DateTime.Now
+    f &dt // Pass a pointer to 'dt'
 ```
 
-<span data-ttu-id="9dd3d-119">若要寫入使用指標`outref<'T>`或是`byref<'T>`，您也必須進行抓取的指標值`mutable`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-119">To write to the pointer by using an `outref<'T>` or `byref<'T>`, you must also make the value you grab a pointer to `mutable`.</span></span>
+<span data-ttu-id="3f08b-119">若要寫入使用指標`outref<'T>`或是`byref<'T>`，您也必須進行抓取的指標值`mutable`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-119">To write to the pointer by using an `outref<'T>` or `byref<'T>`, you must also make the value you grab a pointer to `mutable`.</span></span>
 
 ```fsharp
 open System
@@ -77,63 +78,63 @@ let mutable dt = DateTime.Now
 f &dt
 ```
 
-<span data-ttu-id="9dd3d-120">如果您只撰寫的指標，而不是讀取它，請考慮使用`outref<'T>`而不是`byref<'T>`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-120">If you are only writing the pointer instead of reading it, consider using `outref<'T>` instead of `byref<'T>`.</span></span>
+<span data-ttu-id="3f08b-120">如果您只撰寫的指標，而不是讀取它，請考慮使用`outref<'T>`而不是`byref<'T>`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-120">If you are only writing the pointer instead of reading it, consider using `outref<'T>` instead of `byref<'T>`.</span></span>
 
-### <a name="inref-semantics"></a><span data-ttu-id="9dd3d-121">Inref 語意</span><span class="sxs-lookup"><span data-stu-id="9dd3d-121">Inref semantics</span></span>
+### <a name="inref-semantics"></a><span data-ttu-id="3f08b-121">Inref 語意</span><span class="sxs-lookup"><span data-stu-id="3f08b-121">Inref semantics</span></span>
 
-<span data-ttu-id="9dd3d-122">請考慮下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-122">Consider the following code:</span></span>
+<span data-ttu-id="3f08b-122">請考慮下列程式碼：</span><span class="sxs-lookup"><span data-stu-id="3f08b-122">Consider the following code:</span></span>
 
 ```fsharp
-let f (x: inref<SomeStruct>) = s.SomeField
+let f (x: inref<SomeStruct>) = x.SomeField
 ```
 
-<span data-ttu-id="9dd3d-123">語意上來說，這表示下列事項：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-123">Semantically, this means the following:</span></span>
+<span data-ttu-id="3f08b-123">語意上來說，這表示下列事項：</span><span class="sxs-lookup"><span data-stu-id="3f08b-123">Semantically, this means the following:</span></span>
 
-* <span data-ttu-id="9dd3d-124">持有人`x`指標可能只使用它來讀取值。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-124">The holder of the `x` pointer may only use it to read the value.</span></span>
-* <span data-ttu-id="9dd3d-125">若要取得的任何指標`struct`欄位內變成巢狀`SomeStruct`會提供型別`inref<_>`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-125">Any pointer acquired to `struct` fields nested within `SomeStruct` are given type `inref<_>`.</span></span>
+* <span data-ttu-id="3f08b-124">持有人`x`指標可能只使用它來讀取值。</span><span class="sxs-lookup"><span data-stu-id="3f08b-124">The holder of the `x` pointer may only use it to read the value.</span></span>
+* <span data-ttu-id="3f08b-125">若要取得的任何指標`struct`欄位內變成巢狀`SomeStruct`會提供型別`inref<_>`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-125">Any pointer acquired to `struct` fields nested within `SomeStruct` are given type `inref<_>`.</span></span>
 
-<span data-ttu-id="9dd3d-126">下列條件也成立：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-126">The following is also true:</span></span>
+<span data-ttu-id="3f08b-126">下列條件也成立：</span><span class="sxs-lookup"><span data-stu-id="3f08b-126">The following is also true:</span></span>
 
-* <span data-ttu-id="9dd3d-127">沒有任何隱含的其他執行緒或別名並沒有寫入權限`x`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-127">There is no implication that other threads or aliases do not have write access to `x`.</span></span>
-* <span data-ttu-id="9dd3d-128">沒有任何隱含的`SomeStruct`不可變之故`x`正在`inref`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-128">There is no implication that `SomeStruct` is immutable by virtue of `x` being an `inref`.</span></span>
+* <span data-ttu-id="3f08b-127">沒有任何隱含的其他執行緒或別名並沒有寫入權限`x`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-127">There is no implication that other threads or aliases do not have write access to `x`.</span></span>
+* <span data-ttu-id="3f08b-128">沒有任何隱含的`SomeStruct`不可變之故`x`正在`inref`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-128">There is no implication that `SomeStruct` is immutable by virtue of `x` being an `inref`.</span></span>
 
-<span data-ttu-id="9dd3d-129">不過，對於F#實值型別所**會**不可變的`this`指標就會推斷`inref`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-129">However, for F# value types that **are** immutable, the `this` pointer is inferred to be an `inref`.</span></span>
+<span data-ttu-id="3f08b-129">不過，對於F#實值型別所**會**不可變的`this`指標就會推斷`inref`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-129">However, for F# value types that **are** immutable, the `this` pointer is inferred to be an `inref`.</span></span>
 
-<span data-ttu-id="9dd3d-130">所有這些規則同時表示的持有人`inref`指標可能不會修改所指向的記憶體的即時內容。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-130">All of these rules together mean that the holder of an `inref` pointer may not modify the immediate contents of the memory being pointed to.</span></span>
+<span data-ttu-id="3f08b-130">所有這些規則同時表示的持有人`inref`指標可能不會修改所指向的記憶體的即時內容。</span><span class="sxs-lookup"><span data-stu-id="3f08b-130">All of these rules together mean that the holder of an `inref` pointer may not modify the immediate contents of the memory being pointed to.</span></span>
 
-### <a name="outref-semantics"></a><span data-ttu-id="9dd3d-131">Outref 語意</span><span class="sxs-lookup"><span data-stu-id="9dd3d-131">Outref semantics</span></span>
+### <a name="outref-semantics"></a><span data-ttu-id="3f08b-131">Outref 語意</span><span class="sxs-lookup"><span data-stu-id="3f08b-131">Outref semantics</span></span>
 
-<span data-ttu-id="9dd3d-132">目的`outref<'T>`是指出只應該從讀取指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-132">The purpose of `outref<'T>` is to indicate that the pointer should only be read from.</span></span> <span data-ttu-id="9dd3d-133">意外`outref<'T>`讀取基礎的允許值，儘管其名稱。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-133">Unexpectedly, `outref<'T>` permits reading the underlying value despite its name.</span></span> <span data-ttu-id="9dd3d-134">這是基於相容性。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-134">This is for compatibility purposes.</span></span> <span data-ttu-id="9dd3d-135">語意上來說，`outref<'T>`沒什麼兩樣`byref<'T>`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-135">Semantically, `outref<'T>` is no different than `byref<'T>`.</span></span>
+<span data-ttu-id="3f08b-132">目的`outref<'T>`是指出只應該從讀取指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-132">The purpose of `outref<'T>` is to indicate that the pointer should only be read from.</span></span> <span data-ttu-id="3f08b-133">意外`outref<'T>`讀取基礎的允許值，儘管其名稱。</span><span class="sxs-lookup"><span data-stu-id="3f08b-133">Unexpectedly, `outref<'T>` permits reading the underlying value despite its name.</span></span> <span data-ttu-id="3f08b-134">這是基於相容性。</span><span class="sxs-lookup"><span data-stu-id="3f08b-134">This is for compatibility purposes.</span></span> <span data-ttu-id="3f08b-135">語意上來說，`outref<'T>`沒什麼兩樣`byref<'T>`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-135">Semantically, `outref<'T>` is no different than `byref<'T>`.</span></span>
 
-### <a name="interop-with-c"></a><span data-ttu-id="9dd3d-136">使用 c# 的 interop\#</span><span class="sxs-lookup"><span data-stu-id="9dd3d-136">Interop with C\#</span></span>
+### <a name="interop-with-c"></a><span data-ttu-id="3f08b-136">使用 c# 的 interop\#</span><span class="sxs-lookup"><span data-stu-id="3f08b-136">Interop with C\#</span></span>
 
-<span data-ttu-id="9dd3d-137">C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-137">C# supports the `in ref` and `out ref` keywords, in addition to `ref` returns.</span></span> <span data-ttu-id="9dd3d-138">下表顯示F#會解譯項目C#發出：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-138">The following table shows how F# interprets what C# emits:</span></span>
+<span data-ttu-id="3f08b-137">C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。</span><span class="sxs-lookup"><span data-stu-id="3f08b-137">C# supports the `in ref` and `out ref` keywords, in addition to `ref` returns.</span></span> <span data-ttu-id="3f08b-138">下表顯示F#會解譯項目C#發出：</span><span class="sxs-lookup"><span data-stu-id="3f08b-138">The following table shows how F# interprets what C# emits:</span></span>
 
-|<span data-ttu-id="9dd3d-139">C# 建構</span><span class="sxs-lookup"><span data-stu-id="9dd3d-139">C# construct</span></span>|<span data-ttu-id="9dd3d-140">F#推斷</span><span class="sxs-lookup"><span data-stu-id="9dd3d-140">F# infers</span></span>|
+|<span data-ttu-id="3f08b-139">C# 建構</span><span class="sxs-lookup"><span data-stu-id="3f08b-139">C# construct</span></span>|<span data-ttu-id="3f08b-140">F#推斷</span><span class="sxs-lookup"><span data-stu-id="3f08b-140">F# infers</span></span>|
 |------------|---------|
-|<span data-ttu-id="9dd3d-141">`ref` 傳回值</span><span class="sxs-lookup"><span data-stu-id="9dd3d-141">`ref` return value</span></span>|`outref<'T>`|
-|<span data-ttu-id="9dd3d-142">`ref readonly` 傳回值</span><span class="sxs-lookup"><span data-stu-id="9dd3d-142">`ref readonly` return value</span></span>|`inref<'T>`|
-|<span data-ttu-id="9dd3d-143">`in ref` 參數</span><span class="sxs-lookup"><span data-stu-id="9dd3d-143">`in ref` parameter</span></span>|`inref<'T>`|
-|<span data-ttu-id="9dd3d-144">`out ref` 參數</span><span class="sxs-lookup"><span data-stu-id="9dd3d-144">`out ref` parameter</span></span>|`outref<'T>`|
+|`ref` <span data-ttu-id="3f08b-141">傳回值</span><span class="sxs-lookup"><span data-stu-id="3f08b-141">return value</span></span>|`outref<'T>`|
+|`ref readonly` <span data-ttu-id="3f08b-142">傳回值</span><span class="sxs-lookup"><span data-stu-id="3f08b-142">return value</span></span>|`inref<'T>`|
+|`in ref` <span data-ttu-id="3f08b-143">參數</span><span class="sxs-lookup"><span data-stu-id="3f08b-143">parameter</span></span>|`inref<'T>`|
+|`out ref` <span data-ttu-id="3f08b-144">參數</span><span class="sxs-lookup"><span data-stu-id="3f08b-144">parameter</span></span>|`outref<'T>`|
 
-<span data-ttu-id="9dd3d-145">下表顯示F#會發出：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-145">The following table shows what F# emits:</span></span>
+<span data-ttu-id="3f08b-145">下表顯示F#會發出：</span><span class="sxs-lookup"><span data-stu-id="3f08b-145">The following table shows what F# emits:</span></span>
 
-|<span data-ttu-id="9dd3d-146">F#建構</span><span class="sxs-lookup"><span data-stu-id="9dd3d-146">F# construct</span></span>|<span data-ttu-id="9dd3d-147">發出的建構</span><span class="sxs-lookup"><span data-stu-id="9dd3d-147">Emitted construct</span></span>|
+|<span data-ttu-id="3f08b-146">F#建構</span><span class="sxs-lookup"><span data-stu-id="3f08b-146">F# construct</span></span>|<span data-ttu-id="3f08b-147">發出的建構</span><span class="sxs-lookup"><span data-stu-id="3f08b-147">Emitted construct</span></span>|
 |------------|-----------------|
-|<span data-ttu-id="9dd3d-148">`inref<'T>` 引數</span><span class="sxs-lookup"><span data-stu-id="9dd3d-148">`inref<'T>` argument</span></span>|<span data-ttu-id="9dd3d-149">`[In]` 引數上的屬性</span><span class="sxs-lookup"><span data-stu-id="9dd3d-149">`[In]` attribute on argument</span></span>|
-|<span data-ttu-id="9dd3d-150">`inref<'T>` 傳回</span><span class="sxs-lookup"><span data-stu-id="9dd3d-150">`inref<'T>` return</span></span>|<span data-ttu-id="9dd3d-151">`modreq` 值的屬性</span><span class="sxs-lookup"><span data-stu-id="9dd3d-151">`modreq` attribute on value</span></span>|
-|<span data-ttu-id="9dd3d-152">`inref<'T>` 抽象位置或實作中</span><span class="sxs-lookup"><span data-stu-id="9dd3d-152">`inref<'T>` in abstract slot or implementation</span></span>|<span data-ttu-id="9dd3d-153">`modreq` 在 引數或傳回</span><span class="sxs-lookup"><span data-stu-id="9dd3d-153">`modreq` on argument or return</span></span>|
-|<span data-ttu-id="9dd3d-154">`outref<'T>` 引數</span><span class="sxs-lookup"><span data-stu-id="9dd3d-154">`outref<'T>` argument</span></span>|<span data-ttu-id="9dd3d-155">`[Out]` 引數上的屬性</span><span class="sxs-lookup"><span data-stu-id="9dd3d-155">`[Out]` attribute on argument</span></span>|
+|`inref<'T>` <span data-ttu-id="3f08b-148">Argument - 引數</span><span class="sxs-lookup"><span data-stu-id="3f08b-148">argument</span></span>|`[In]` <span data-ttu-id="3f08b-149">引數上的屬性</span><span class="sxs-lookup"><span data-stu-id="3f08b-149">attribute on argument</span></span>|
+|`inref<'T>` <span data-ttu-id="3f08b-150">return</span><span class="sxs-lookup"><span data-stu-id="3f08b-150">return</span></span>|`modreq` <span data-ttu-id="3f08b-151">值的屬性</span><span class="sxs-lookup"><span data-stu-id="3f08b-151">attribute on value</span></span>|
+|`inref<'T>` <span data-ttu-id="3f08b-152">抽象位置或實作中</span><span class="sxs-lookup"><span data-stu-id="3f08b-152">in abstract slot or implementation</span></span>|`modreq` <span data-ttu-id="3f08b-153">在 引數或傳回</span><span class="sxs-lookup"><span data-stu-id="3f08b-153">on argument or return</span></span>|
+|`outref<'T>` <span data-ttu-id="3f08b-154">Argument - 引數</span><span class="sxs-lookup"><span data-stu-id="3f08b-154">argument</span></span>|`[Out]` <span data-ttu-id="3f08b-155">引數上的屬性</span><span class="sxs-lookup"><span data-stu-id="3f08b-155">attribute on argument</span></span>|
 
-### <a name="type-inference-and-overloading-rules"></a><span data-ttu-id="9dd3d-156">型別推斷 」 和 「 多載規則</span><span class="sxs-lookup"><span data-stu-id="9dd3d-156">Type inference and overloading rules</span></span>
+### <a name="type-inference-and-overloading-rules"></a><span data-ttu-id="3f08b-156">型別推斷 」 和 「 多載規則</span><span class="sxs-lookup"><span data-stu-id="3f08b-156">Type inference and overloading rules</span></span>
 
-<span data-ttu-id="9dd3d-157">`inref<'T>`推斷類型是F#編譯器在下列情況：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-157">An `inref<'T>` type is inferred by the F# compiler in the following cases:</span></span>
+<span data-ttu-id="3f08b-157">`inref<'T>`推斷類型是F#編譯器在下列情況：</span><span class="sxs-lookup"><span data-stu-id="3f08b-157">An `inref<'T>` type is inferred by the F# compiler in the following cases:</span></span>
 
-1. <span data-ttu-id="9dd3d-158">.NET 參數或傳回型別具有`IsReadOnly`屬性。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-158">A .NET parameter or return type that has an `IsReadOnly` attribute.</span></span>
-2. <span data-ttu-id="9dd3d-159">`this`上沒有任何可變動的欄位的結構類型的指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-159">The `this` pointer on a struct type that has no mutable fields.</span></span>
-3. <span data-ttu-id="9dd3d-160">記憶體位置的位址衍生自另一個`inref<_>`指標。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-160">The address of a memory location derived from another `inref<_>` pointer.</span></span>
+1. <span data-ttu-id="3f08b-158">.NET 參數或傳回型別具有`IsReadOnly`屬性。</span><span class="sxs-lookup"><span data-stu-id="3f08b-158">A .NET parameter or return type that has an `IsReadOnly` attribute.</span></span>
+2. <span data-ttu-id="3f08b-159">`this`上沒有任何可變動的欄位的結構類型的指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-159">The `this` pointer on a struct type that has no mutable fields.</span></span>
+3. <span data-ttu-id="3f08b-160">記憶體位置的位址衍生自另一個`inref<_>`指標。</span><span class="sxs-lookup"><span data-stu-id="3f08b-160">The address of a memory location derived from another `inref<_>` pointer.</span></span>
 
-<span data-ttu-id="9dd3d-161">當隱含位址`inref`抱，類型的引數的多載`SomeType`應優先於類型的引數的多載`inref<SomeType>`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-161">When an implicit address of an `inref` is being taken, an overload with an argument of type `SomeType` is preferred to an overload with an argument of type `inref<SomeType>`.</span></span> <span data-ttu-id="9dd3d-162">例如: </span><span class="sxs-lookup"><span data-stu-id="9dd3d-162">For example:</span></span>
+<span data-ttu-id="3f08b-161">當隱含位址`inref`抱，類型的引數的多載`SomeType`應優先於類型的引數的多載`inref<SomeType>`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-161">When an implicit address of an `inref` is being taken, an overload with an argument of type `SomeType` is preferred to an overload with an argument of type `inref<SomeType>`.</span></span> <span data-ttu-id="3f08b-162">例如: </span><span class="sxs-lookup"><span data-stu-id="3f08b-162">For example:</span></span>
 
 ```fsharp
 type C() =
@@ -147,11 +148,11 @@ let v =  C.M(res)
 let v2 =  C.M2(res, 4)
 ```
 
-<span data-ttu-id="9dd3d-163">在這兩種情況下，多載採用`System.DateTime`而不是採用的多載解析`inref<System.DateTime>`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-163">In both cases, the overloads taking `System.DateTime` are resolved rather than the overloads taking `inref<System.DateTime>`.</span></span>
+<span data-ttu-id="3f08b-163">在這兩種情況下，多載採用`System.DateTime`而不是採用的多載解析`inref<System.DateTime>`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-163">In both cases, the overloads taking `System.DateTime` are resolved rather than the overloads taking `inref<System.DateTime>`.</span></span>
 
-## <a name="byref-like-structs"></a><span data-ttu-id="9dd3d-164">類似 Byref 結構</span><span class="sxs-lookup"><span data-stu-id="9dd3d-164">Byref-like structs</span></span>
+## <a name="byref-like-structs"></a><span data-ttu-id="3f08b-164">類似 Byref 結構</span><span class="sxs-lookup"><span data-stu-id="3f08b-164">Byref-like structs</span></span>
 
-<span data-ttu-id="9dd3d-165">除了`byref` / `inref` / `outref`事，您可以定義您自己的結構，可以遵循`byref`-例如語意。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-165">In addition to the `byref`/`inref`/`outref` trio, you can define your own structs that can adhere to `byref`-like semantics.</span></span> <span data-ttu-id="9dd3d-166">做法是使用<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>屬性：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-166">This is done with the <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> attribute:</span></span>
+<span data-ttu-id="3f08b-165">除了`byref` / `inref` / `outref`事，您可以定義您自己的結構，可以遵循`byref`-例如語意。</span><span class="sxs-lookup"><span data-stu-id="3f08b-165">In addition to the `byref`/`inref`/`outref` trio, you can define your own structs that can adhere to `byref`-like semantics.</span></span> <span data-ttu-id="3f08b-166">做法是使用<xref:System.Runtime.CompilerServices.IsByRefLikeAttribute>屬性：</span><span class="sxs-lookup"><span data-stu-id="3f08b-166">This is done with the <xref:System.Runtime.CompilerServices.IsByRefLikeAttribute> attribute:</span></span>
 
 ```fsharp
 open System
@@ -163,22 +164,22 @@ type S(count1: Span<int>, count2: Span<int>) =
     member x.Count2 = count2
 ```
 
-<span data-ttu-id="9dd3d-167">`IsByRefLike` 並不表示`Struct`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-167">`IsByRefLike` does not imply `Struct`.</span></span> <span data-ttu-id="9dd3d-168">兩者都必須要有型別。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-168">Both must be present on the type.</span></span>
+`IsByRefLike` <span data-ttu-id="3f08b-167">並不表示`Struct`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-167">does not imply `Struct`.</span></span> <span data-ttu-id="3f08b-168">兩者都必須要有型別。</span><span class="sxs-lookup"><span data-stu-id="3f08b-168">Both must be present on the type.</span></span>
 
-<span data-ttu-id="9dd3d-169">「`byref`-例如"中的結構F#堆疊繫結實值型別。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-169">A "`byref`-like" struct in F# is a stack-bound value type.</span></span> <span data-ttu-id="9dd3d-170">永遠不會在 managed 堆積上配置。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-170">It is never allocated on the managed heap.</span></span> <span data-ttu-id="9dd3d-171">A `byref`-就像結構適用於高效能的程式設計，因為它會強制執行設定的強式存留期和非擷取相關的檢查。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-171">A `byref`-like struct is useful for high-performance programming, as it is enforced with set of strong checks about lifetime and non-capture.</span></span> <span data-ttu-id="9dd3d-172">規則包括：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-172">The rules are:</span></span>
+<span data-ttu-id="3f08b-169">「`byref`-例如"中的結構F#堆疊繫結實值型別。</span><span class="sxs-lookup"><span data-stu-id="3f08b-169">A "`byref`-like" struct in F# is a stack-bound value type.</span></span> <span data-ttu-id="3f08b-170">永遠不會在 managed 堆積上配置。</span><span class="sxs-lookup"><span data-stu-id="3f08b-170">It is never allocated on the managed heap.</span></span> <span data-ttu-id="3f08b-171">A `byref`-就像結構適用於高效能的程式設計，因為它會強制執行設定的強式存留期和非擷取相關的檢查。</span><span class="sxs-lookup"><span data-stu-id="3f08b-171">A `byref`-like struct is useful for high-performance programming, as it is enforced with set of strong checks about lifetime and non-capture.</span></span> <span data-ttu-id="3f08b-172">規則包括：</span><span class="sxs-lookup"><span data-stu-id="3f08b-172">The rules are:</span></span>
 
-* <span data-ttu-id="9dd3d-173">它們可用來當做函式參數、 方法參數、 區域變數、 方法會傳回。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-173">They can be used as function parameters, method parameters, local variables, method returns.</span></span>
-* <span data-ttu-id="9dd3d-174">它們不能是靜態或執行個體的類別或一般結構的成員。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-174">They cannot be static or instance members of a class or normal struct.</span></span>
-* <span data-ttu-id="9dd3d-175">它們無法擷取任何關閉的建構 (`async`方法或 lambda 運算式)。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-175">They cannot be captured by any closure construct (`async` methods or lambda expressions).</span></span>
-* <span data-ttu-id="9dd3d-176">它們不能當做泛型參數。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-176">They cannot be used as a generic parameter.</span></span>
+* <span data-ttu-id="3f08b-173">它們可用來當做函式參數、 方法參數、 區域變數、 方法會傳回。</span><span class="sxs-lookup"><span data-stu-id="3f08b-173">They can be used as function parameters, method parameters, local variables, method returns.</span></span>
+* <span data-ttu-id="3f08b-174">它們不能是靜態或執行個體的類別或一般結構的成員。</span><span class="sxs-lookup"><span data-stu-id="3f08b-174">They cannot be static or instance members of a class or normal struct.</span></span>
+* <span data-ttu-id="3f08b-175">它們無法擷取任何關閉的建構 (`async`方法或 lambda 運算式)。</span><span class="sxs-lookup"><span data-stu-id="3f08b-175">They cannot be captured by any closure construct (`async` methods or lambda expressions).</span></span>
+* <span data-ttu-id="3f08b-176">它們不能當做泛型參數。</span><span class="sxs-lookup"><span data-stu-id="3f08b-176">They cannot be used as a generic parameter.</span></span>
 
-<span data-ttu-id="9dd3d-177">最後一點很重要的F#管線樣式程式設計中，作為`|>`會將其輸入的類型的參數化的泛型函式。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-177">This last point is crucial for F# pipeline-style programming, as `|>` is a generic function that parameterizes its input types.</span></span> <span data-ttu-id="9dd3d-178">這項限制可能會放寬為`|>`未來，因為它是以內嵌方式，其主體中毫無任何非內嵌的泛型函式的呼叫。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-178">This restriction may be relaxed for `|>` in the future, as it is inline and does not make any calls to non-inlined generic functions in its body.</span></span>
+<span data-ttu-id="3f08b-177">最後一點很重要的F#管線樣式程式設計中，作為`|>`會將其輸入的類型的參數化的泛型函式。</span><span class="sxs-lookup"><span data-stu-id="3f08b-177">This last point is crucial for F# pipeline-style programming, as `|>` is a generic function that parameterizes its input types.</span></span> <span data-ttu-id="3f08b-178">這項限制可能會放寬為`|>`未來，因為它是以內嵌方式，其主體中毫無任何非內嵌的泛型函式的呼叫。</span><span class="sxs-lookup"><span data-stu-id="3f08b-178">This restriction may be relaxed for `|>` in the future, as it is inline and does not make any calls to non-inlined generic functions in its body.</span></span>
 
-<span data-ttu-id="9dd3d-179">雖然很希望這些規則會限制使用方式，如此一來滿足承諾的高效能運算以安全的方式。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-179">Although these rules very strongly restrict usage, they do so to fulfill the promise of high-performance computing in a safe manner.</span></span>
+<span data-ttu-id="3f08b-179">雖然很希望這些規則會限制使用方式，如此一來滿足承諾的高效能運算以安全的方式。</span><span class="sxs-lookup"><span data-stu-id="3f08b-179">Although these rules very strongly restrict usage, they do so to fulfill the promise of high-performance computing in a safe manner.</span></span>
 
-## <a name="byref-returns"></a><span data-ttu-id="9dd3d-180">Byref 傳回</span><span class="sxs-lookup"><span data-stu-id="9dd3d-180">Byref returns</span></span>
+## <a name="byref-returns"></a><span data-ttu-id="3f08b-180">Byref 傳回</span><span class="sxs-lookup"><span data-stu-id="3f08b-180">Byref returns</span></span>
 
-<span data-ttu-id="9dd3d-181">Byref 傳回從F#函式或成員可以產生及取用。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-181">Byref returns from F# functions or members can be produced and consumed.</span></span> <span data-ttu-id="9dd3d-182">使用時`byref`-傳回方法，這個值是隱含已取值。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-182">When consuming a `byref`-returning method, the value is implicitly dereferenced.</span></span> <span data-ttu-id="9dd3d-183">例如: </span><span class="sxs-lookup"><span data-stu-id="9dd3d-183">For example:</span></span>
+<span data-ttu-id="3f08b-181">Byref 傳回從F#函式或成員可以產生及取用。</span><span class="sxs-lookup"><span data-stu-id="3f08b-181">Byref returns from F# functions or members can be produced and consumed.</span></span> <span data-ttu-id="3f08b-182">使用時`byref`-傳回方法，這個值是隱含已取值。</span><span class="sxs-lookup"><span data-stu-id="3f08b-182">When consuming a `byref`-returning method, the value is implicitly dereferenced.</span></span> <span data-ttu-id="3f08b-183">例如：</span><span class="sxs-lookup"><span data-stu-id="3f08b-183">For example:</span></span>
 
 ```fsharp
 let safeSum(bytes: Span<byte>) =
@@ -191,9 +192,9 @@ let sum = safeSum(mySpanOfBytes)
 printfn "%d" sum // 'sum' is of type 'int'
 ```
 
-<span data-ttu-id="9dd3d-184">若要避免隱含取值，例如傳遞多個鏈結的呼叫，透過參考使用`&x`(其中`x`是值)。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-184">To avoid the implicit dereference, such as passing a reference through multiple chained calls, use `&x` (where `x` is the value).</span></span>
+<span data-ttu-id="3f08b-184">若要避免隱含取值，例如傳遞多個鏈結的呼叫，透過參考使用`&x`(其中`x`是值)。</span><span class="sxs-lookup"><span data-stu-id="3f08b-184">To avoid the implicit dereference, such as passing a reference through multiple chained calls, use `&x` (where `x` is the value).</span></span>
 
-<span data-ttu-id="9dd3d-185">您可以也可以直接指派給傳回`byref`。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-185">You can also directly assign to a return `byref`.</span></span> <span data-ttu-id="9dd3d-186">請考慮下列 （高命令式） 的程式：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-186">Consider the following (highly imperative) program:</span></span>
+<span data-ttu-id="3f08b-185">您可以也可以直接指派給傳回`byref`。</span><span class="sxs-lookup"><span data-stu-id="3f08b-185">You can also directly assign to a return `byref`.</span></span> <span data-ttu-id="3f08b-186">請考慮下列 （高命令式） 的程式：</span><span class="sxs-lookup"><span data-stu-id="3f08b-186">Consider the following (highly imperative) program:</span></span>
 
 ```fsharp
 type C() =
@@ -222,16 +223,16 @@ let main argv =
     0 // return an integer exit code
 ```
 
-<span data-ttu-id="9dd3d-187">此為輸出：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-187">This is the output:</span></span>
+<span data-ttu-id="3f08b-187">此為輸出：</span><span class="sxs-lookup"><span data-stu-id="3f08b-187">This is the output:</span></span>
 
 ```console
 Original sequence: 1 3 7 15 31 63 127 255 511 1023
 New sequence:      1 3 7 30 31 63 127 255 511 1023
 ```
 
-## <a name="scoping-for-byrefs"></a><span data-ttu-id="9dd3d-188">範圍，將 byref</span><span class="sxs-lookup"><span data-stu-id="9dd3d-188">Scoping for byrefs</span></span>
+## <a name="scoping-for-byrefs"></a><span data-ttu-id="3f08b-188">範圍，將 byref</span><span class="sxs-lookup"><span data-stu-id="3f08b-188">Scoping for byrefs</span></span>
 
-<span data-ttu-id="9dd3d-189">A `let`-繫結的值不能有超過的範圍定義其參考。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-189">A `let`-bound value cannot have its reference exceed the scope in which it was defined.</span></span> <span data-ttu-id="9dd3d-190">例如，下列是不允許：</span><span class="sxs-lookup"><span data-stu-id="9dd3d-190">For example, the following is disallowed:</span></span>
+<span data-ttu-id="3f08b-189">A `let`-繫結的值不能有超過的範圍定義其參考。</span><span class="sxs-lookup"><span data-stu-id="3f08b-189">A `let`-bound value cannot have its reference exceed the scope in which it was defined.</span></span> <span data-ttu-id="3f08b-190">例如，下列是不允許：</span><span class="sxs-lookup"><span data-stu-id="3f08b-190">For example, the following is disallowed:</span></span>
 
 ```fsharp
 let test2 () =
@@ -245,4 +246,4 @@ let test () =
     ()
 ```
 
-<span data-ttu-id="9dd3d-191">這會讓您取得取決於不同的結果，如果您使用 開啟或關閉的最佳化。</span><span class="sxs-lookup"><span data-stu-id="9dd3d-191">This prevents you from getting different results depending on if you compile with optimizations on or off.</span></span>
+<span data-ttu-id="3f08b-191">這會讓您取得取決於不同的結果，如果您使用 開啟或關閉的最佳化。</span><span class="sxs-lookup"><span data-stu-id="3f08b-191">This prevents you from getting different results depending on if you compile with optimizations on or off.</span></span>
