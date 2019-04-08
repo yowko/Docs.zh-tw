@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3657ef40fce3d9d29e0cf6c27e8eb527be0f150e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7d7fe8f36c7a5dbe6e715402fd7253092b64e68e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078963"
 ---
-# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="cbc88-102">ISymUnmanagedWriter::SetScopeRange 方法</span><span class="sxs-lookup"><span data-stu-id="cbc88-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
-<span data-ttu-id="cbc88-103">定義指定語彙範圍的位移範圍。</span><span class="sxs-lookup"><span data-stu-id="cbc88-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="cbc88-104">範圍會成為新的目前範圍，並推送至堆疊的範圍。</span><span class="sxs-lookup"><span data-stu-id="cbc88-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="cbc88-105">範圍必須形成階層。</span><span class="sxs-lookup"><span data-stu-id="cbc88-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="cbc88-106">同層級項目不允許重疊。</span><span class="sxs-lookup"><span data-stu-id="cbc88-106">Siblings are not allowed to overlap.</span></span>  
+# <a name="isymunmanagedwritersetscoperange-method"></a><span data-ttu-id="d6f44-102">ISymUnmanagedWriter::SetScopeRange 方法</span><span class="sxs-lookup"><span data-stu-id="d6f44-102">ISymUnmanagedWriter::SetScopeRange Method</span></span>
+<span data-ttu-id="d6f44-103">定義指定語彙範圍的位移範圍。</span><span class="sxs-lookup"><span data-stu-id="d6f44-103">Defines the offset range for the specified lexical scope.</span></span> <span data-ttu-id="d6f44-104">範圍會成為新的目前範圍，並推送至堆疊的範圍。</span><span class="sxs-lookup"><span data-stu-id="d6f44-104">The scope becomes the new current scope and is pushed onto a stack of scopes.</span></span> <span data-ttu-id="d6f44-105">範圍必須形成階層。</span><span class="sxs-lookup"><span data-stu-id="d6f44-105">Scopes must form a hierarchy.</span></span> <span data-ttu-id="d6f44-106">同層級項目不允許重疊。</span><span class="sxs-lookup"><span data-stu-id="d6f44-106">Siblings are not allowed to overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cbc88-107">語法</span><span class="sxs-lookup"><span data-stu-id="cbc88-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d6f44-107">語法</span><span class="sxs-lookup"><span data-stu-id="d6f44-107">Syntax</span></span>  
   
 ```  
 HRESULT OpenScope(  
@@ -36,24 +36,25 @@ HRESULT OpenScope(
     [in] ULONG32  endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="cbc88-108">參數</span><span class="sxs-lookup"><span data-stu-id="cbc88-108">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d6f44-108">參數</span><span class="sxs-lookup"><span data-stu-id="d6f44-108">Parameters</span></span>  
  `scopeId`  
- <span data-ttu-id="cbc88-109">[in]範圍的範圍識別項。</span><span class="sxs-lookup"><span data-stu-id="cbc88-109">[in] The scope identifier for the scope.</span></span>  
+ <span data-ttu-id="d6f44-109">[in]範圍的範圍識別項。</span><span class="sxs-lookup"><span data-stu-id="d6f44-109">[in] The scope identifier for the scope.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="cbc88-110">[in]位移，以位元組為單位，從一開始語彙範圍中的第一個指令的方法。</span><span class="sxs-lookup"><span data-stu-id="cbc88-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="d6f44-110">[in]位移，以位元組為單位，從一開始語彙範圍中的第一個指令的方法。</span><span class="sxs-lookup"><span data-stu-id="d6f44-110">[in] The offset, in bytes, of the first instruction in the lexical scope from the beginning of the method.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="cbc88-111">[in]位移，以位元組為單位，從一開始語彙範圍中的最後一個指令的方法。</span><span class="sxs-lookup"><span data-stu-id="cbc88-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
+ <span data-ttu-id="d6f44-111">[in]位移，以位元組為單位，從一開始語彙範圍中的最後一個指令的方法。</span><span class="sxs-lookup"><span data-stu-id="d6f44-111">[in] The offset, in bytes, of the last instruction in the lexical scope from the beginning of the method.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="cbc88-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="cbc88-112">Return Value</span></span>  
- <span data-ttu-id="cbc88-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="cbc88-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d6f44-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="d6f44-112">Return Value</span></span>  
+ <span data-ttu-id="d6f44-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d6f44-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="cbc88-114">備註</span><span class="sxs-lookup"><span data-stu-id="cbc88-114">Remarks</span></span>  
- <span data-ttu-id="cbc88-115">[Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)傳回的不透明範圍識別項可以搭配使用`ISymUnmanagedWriter::SetScopeRange`定義範圍的開始和結束時間較晚的位移。</span><span class="sxs-lookup"><span data-stu-id="cbc88-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="cbc88-116">在此情況下，位移傳遞給`ISymUnmanagedWriter::OpenScope`並[isymunmanagedwriter:: Closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)都會被忽略。</span><span class="sxs-lookup"><span data-stu-id="cbc88-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="cbc88-117">範圍識別項的有效期僅在目前的方法。</span><span class="sxs-lookup"><span data-stu-id="cbc88-117">Scope identifiers are only valid in the current method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d6f44-114">備註</span><span class="sxs-lookup"><span data-stu-id="d6f44-114">Remarks</span></span>  
+ <span data-ttu-id="d6f44-115">[Isymunmanagedwriter:: Openscope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md)傳回的不透明範圍識別項可以搭配使用`ISymUnmanagedWriter::SetScopeRange`定義範圍的開始和結束時間較晚的位移。</span><span class="sxs-lookup"><span data-stu-id="d6f44-115">[ISymUnmanagedWriter::OpenScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openscope-method.md) returns an opaque scope identifier that can be used with `ISymUnmanagedWriter::SetScopeRange` to define a scope's starting and ending offset at a later time.</span></span> <span data-ttu-id="d6f44-116">在此情況下，位移傳遞給`ISymUnmanagedWriter::OpenScope`並[isymunmanagedwriter:: Closescope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md)都會被忽略。</span><span class="sxs-lookup"><span data-stu-id="d6f44-116">In this case, the offsets passed to `ISymUnmanagedWriter::OpenScope` and [ISymUnmanagedWriter::CloseScope](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-closescope-method.md) are ignored.</span></span> <span data-ttu-id="d6f44-117">範圍識別項的有效期僅在目前的方法。</span><span class="sxs-lookup"><span data-stu-id="d6f44-117">Scope identifiers are only valid in the current method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="cbc88-118">需求</span><span class="sxs-lookup"><span data-stu-id="cbc88-118">Requirements</span></span>  
- <span data-ttu-id="cbc88-119">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cbc88-119">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d6f44-118">需求</span><span class="sxs-lookup"><span data-stu-id="d6f44-118">Requirements</span></span>  
+ <span data-ttu-id="d6f44-119">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d6f44-119">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cbc88-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cbc88-120">See also</span></span>
-- [<span data-ttu-id="cbc88-121">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="cbc88-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d6f44-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6f44-120">See also</span></span>
+
+- [<span data-ttu-id="d6f44-121">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="d6f44-121">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

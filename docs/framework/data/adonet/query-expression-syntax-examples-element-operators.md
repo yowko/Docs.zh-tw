@@ -5,45 +5,46 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ca392dda-16e3-45c7-8d87-12d8d4ee0578
-ms.openlocfilehash: 195c698404f4411c01561ae12b31762de5ce1101
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 663356ec3dc39aa3eb7e858f028fc9a8f7d27db6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132729"
 ---
-# <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a><span data-ttu-id="b1ee0-102">查詢運算式語法範例：項目運算子 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="b1ee0-102">Query Expression Syntax Examples: Element Operators (LINQ to DataSet)</span></span>
-<span data-ttu-id="b1ee0-103">此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.First%2A> 和 <xref:System.Linq.Enumerable.ElementAt%2A> 方法並搭配查詢運算式語法來取得 <xref:System.Data.DataRow> 中的 <xref:System.Data.DataSet> 項目。</span><span class="sxs-lookup"><span data-stu-id="b1ee0-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> and <xref:System.Linq.Enumerable.ElementAt%2A> methods to get <xref:System.Data.DataRow> elements from a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
+# <a name="query-expression-syntax-examples-element-operators-linq-to-dataset"></a><span data-ttu-id="e5a2f-102">查詢運算式語法範例：項目運算子 (LINQ to DataSet)</span><span class="sxs-lookup"><span data-stu-id="e5a2f-102">Query Expression Syntax Examples: Element Operators (LINQ to DataSet)</span></span>
+<span data-ttu-id="e5a2f-103">此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.First%2A> 和 <xref:System.Linq.Enumerable.ElementAt%2A> 方法並搭配查詢運算式語法來取得 <xref:System.Data.DataRow> 中的 <xref:System.Data.DataSet> 項目。</span><span class="sxs-lookup"><span data-stu-id="e5a2f-103">The examples in this topic demonstrate how to use the <xref:System.Linq.Enumerable.First%2A> and <xref:System.Linq.Enumerable.ElementAt%2A> methods to get <xref:System.Data.DataRow> elements from a <xref:System.Data.DataSet> using the query expression syntax.</span></span>  
   
- <span data-ttu-id="b1ee0-104">`FillDataSet`這些範例中使用的方法指定於[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="b1ee0-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
+ <span data-ttu-id="e5a2f-104">`FillDataSet`這些範例中使用的方法指定於[載入資料至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)。</span><span class="sxs-lookup"><span data-stu-id="e5a2f-104">The `FillDataSet` method used in these examples is specified in [Loading Data Into a DataSet](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md).</span></span>  
   
- <span data-ttu-id="b1ee0-105">此主題中的範例將使用 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表。</span><span class="sxs-lookup"><span data-stu-id="b1ee0-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
+ <span data-ttu-id="e5a2f-105">此主題中的範例將使用 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表。</span><span class="sxs-lookup"><span data-stu-id="e5a2f-105">The examples in this topic use the Contact, Address, Product, SalesOrderHeader, and SalesOrderDetail tables in the AdventureWorks sample database.</span></span>  
   
- <span data-ttu-id="b1ee0-106">本主題中的範例使用下列`using` / `Imports`陳述式：</span><span class="sxs-lookup"><span data-stu-id="b1ee0-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
+ <span data-ttu-id="e5a2f-106">本主題中的範例使用下列`using` / `Imports`陳述式：</span><span class="sxs-lookup"><span data-stu-id="e5a2f-106">The examples in this topic use the following `using`/`Imports` statements:</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- <span data-ttu-id="b1ee0-107">如需詳細資訊，請參閱[＜How to：在 Visual Studio 中建立 LINQ to DataSet 專案](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="b1ee0-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
+ <span data-ttu-id="e5a2f-107">如需詳細資訊，請參閱[如何：在 Visual Studio 中建立 LINQ to DataSet 專案](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。</span><span class="sxs-lookup"><span data-stu-id="e5a2f-107">For more information, see [How to: Create a LINQ to DataSet Project In Visual Studio](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md).</span></span>  
   
-## <a name="elementat"></a><span data-ttu-id="b1ee0-108">ElementAt</span><span class="sxs-lookup"><span data-stu-id="b1ee0-108">ElementAt</span></span>  
+## <a name="elementat"></a><span data-ttu-id="e5a2f-108">ElementAt</span><span class="sxs-lookup"><span data-stu-id="e5a2f-108">ElementAt</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b1ee0-109">範例</span><span class="sxs-lookup"><span data-stu-id="b1ee0-109">Example</span></span>  
- <span data-ttu-id="b1ee0-110">這則範例會使用 <xref:System.Linq.Enumerable.ElementAt%2A> 方法來擷取 `PostalCode` == "M4B 1V7" 的第五筆地址。</span><span class="sxs-lookup"><span data-stu-id="b1ee0-110">This example uses the <xref:System.Linq.Enumerable.ElementAt%2A> method to retrieve the fifth address where `PostalCode` == "M4B 1V7".</span></span>  
+### <a name="example"></a><span data-ttu-id="e5a2f-109">範例</span><span class="sxs-lookup"><span data-stu-id="e5a2f-109">Example</span></span>  
+ <span data-ttu-id="e5a2f-110">這則範例會使用 <xref:System.Linq.Enumerable.ElementAt%2A> 方法來擷取 `PostalCode` == "M4B 1V7" 的第五筆地址。</span><span class="sxs-lookup"><span data-stu-id="e5a2f-110">This example uses the <xref:System.Linq.Enumerable.ElementAt%2A> method to retrieve the fifth address where `PostalCode` == "M4B 1V7".</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#elementat)]
  [!code-vb[DP LINQ to DataSet Examples#ElementAt](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#elementat)]  
   
-## <a name="first"></a><span data-ttu-id="b1ee0-111">First</span><span class="sxs-lookup"><span data-stu-id="b1ee0-111">First</span></span>  
+## <a name="first"></a><span data-ttu-id="e5a2f-111">First</span><span class="sxs-lookup"><span data-stu-id="e5a2f-111">First</span></span>  
   
-### <a name="example"></a><span data-ttu-id="b1ee0-112">範例</span><span class="sxs-lookup"><span data-stu-id="b1ee0-112">Example</span></span>  
- <span data-ttu-id="b1ee0-113">這則範例會使用 <xref:System.Linq.Enumerable.First%2A> 方法來傳回名字為 'Brooke' 的第一位連絡人。</span><span class="sxs-lookup"><span data-stu-id="b1ee0-113">This example uses the <xref:System.Linq.Enumerable.First%2A> method to return the first contact whose first name is 'Brooke'.</span></span>  
+### <a name="example"></a><span data-ttu-id="e5a2f-112">範例</span><span class="sxs-lookup"><span data-stu-id="e5a2f-112">Example</span></span>  
+ <span data-ttu-id="e5a2f-113">這則範例會使用 <xref:System.Linq.Enumerable.First%2A> 方法來傳回名字為 'Brooke' 的第一位連絡人。</span><span class="sxs-lookup"><span data-stu-id="e5a2f-113">This example uses the <xref:System.Linq.Enumerable.First%2A> method to return the first contact whose first name is 'Brooke'.</span></span>  
   
  [!code-csharp[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#firstsimple)]
  [!code-vb[DP LINQ to DataSet Examples#FirstSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#firstsimple)]  
   
-## <a name="see-also"></a><span data-ttu-id="b1ee0-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b1ee0-114">See also</span></span>
-- [<span data-ttu-id="b1ee0-115">將資料載入至資料集</span><span class="sxs-lookup"><span data-stu-id="b1ee0-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
-- [<span data-ttu-id="b1ee0-116">LINQ to DataSet 範例</span><span class="sxs-lookup"><span data-stu-id="b1ee0-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
-- [<span data-ttu-id="b1ee0-117">標準查詢運算子概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="b1ee0-117">Standard Query Operators Overview (C#)</span></span>](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
-- [<span data-ttu-id="b1ee0-118">標準查詢運算子概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="b1ee0-118">Standard Query Operators Overview (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)
+## <a name="see-also"></a><span data-ttu-id="e5a2f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e5a2f-114">See also</span></span>
+
+- [<span data-ttu-id="e5a2f-115">將資料載入至資料集</span><span class="sxs-lookup"><span data-stu-id="e5a2f-115">Loading Data Into a DataSet</span></span>](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
+- [<span data-ttu-id="e5a2f-116">LINQ to DataSet 範例</span><span class="sxs-lookup"><span data-stu-id="e5a2f-116">LINQ to DataSet Examples</span></span>](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
+- [<span data-ttu-id="e5a2f-117">標準查詢運算子概觀 (C#)</span><span class="sxs-lookup"><span data-stu-id="e5a2f-117">Standard Query Operators Overview (C#)</span></span>](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)
+- [<span data-ttu-id="e5a2f-118">標準查詢運算子概觀 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e5a2f-118">Standard Query Operators Overview (Visual Basic)</span></span>](../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)

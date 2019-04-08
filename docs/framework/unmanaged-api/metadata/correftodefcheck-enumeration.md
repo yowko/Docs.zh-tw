@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a54b20ecf34ecf1824420fcbb3d45fba64017b76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82abeb0ce3db075d794787bb1fcd5bc18321bef2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54657190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093887"
 ---
-# <a name="correftodefcheck-enumeration"></a><span data-ttu-id="8ee9e-102">CorRefToDefCheck 列舉</span><span class="sxs-lookup"><span data-stu-id="8ee9e-102">CorRefToDefCheck Enumeration</span></span>
-<span data-ttu-id="8ee9e-103">指定旗標，以控制哪些參考的項目已轉換成其定義，以便最佳化程式碼。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  
+# <a name="correftodefcheck-enumeration"></a><span data-ttu-id="5705e-102">CorRefToDefCheck 列舉</span><span class="sxs-lookup"><span data-stu-id="5705e-102">CorRefToDefCheck Enumeration</span></span>
+<span data-ttu-id="5705e-103">指定旗標，以控制哪些參考的項目已轉換成其定義，以便最佳化程式碼。</span><span class="sxs-lookup"><span data-stu-id="5705e-103">Specifies flags to control which referenced items are converted to their definitions in order to optimize the code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8ee9e-104">語法</span><span class="sxs-lookup"><span data-stu-id="8ee9e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5705e-104">語法</span><span class="sxs-lookup"><span data-stu-id="5705e-104">Syntax</span></span>  
   
 ```  
 typedef enum CorRefToDefCheck {  
@@ -38,22 +38,23 @@ typedef enum CorRefToDefCheck {
 } CorRefToDefCheck;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="8ee9e-105">成員</span><span class="sxs-lookup"><span data-stu-id="8ee9e-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5705e-105">成員</span><span class="sxs-lookup"><span data-stu-id="5705e-105">Members</span></span>  
   
-|<span data-ttu-id="8ee9e-106">成員</span><span class="sxs-lookup"><span data-stu-id="8ee9e-106">Member</span></span>|<span data-ttu-id="8ee9e-107">描述</span><span class="sxs-lookup"><span data-stu-id="8ee9e-107">Description</span></span>|  
+|<span data-ttu-id="5705e-106">成員</span><span class="sxs-lookup"><span data-stu-id="5705e-106">Member</span></span>|<span data-ttu-id="5705e-107">描述</span><span class="sxs-lookup"><span data-stu-id="5705e-107">Description</span></span>|  
 |------------|-----------------|  
-|`MDRefToDefDefault`|<span data-ttu-id="8ee9e-108">指定型別參考和成員的參考，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-108">Specifies that type references and member references should be converted to definitions.</span></span> <span data-ttu-id="8ee9e-109">這是預設值 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span></span>|  
-|`MDRefToDefAll`|<span data-ttu-id="8ee9e-110">指定參考的所有項目，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-110">Specifies that all referenced items should be converted to definitions.</span></span>|  
-|`MDRefToDefNone`|<span data-ttu-id="8ee9e-111">指定沒有參考的項目，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-111">Specifies that no referenced items should be converted to definitions.</span></span>|  
-|`MDTypeRefToDef`|<span data-ttu-id="8ee9e-112">指定只有型別參考，必須轉換型別定義。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-112">Specifies that only type references should be converted to type definitions.</span></span>|  
-|`MDMemberRefToDef`|<span data-ttu-id="8ee9e-113">指定只有成員參考，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-113">Specifies that only member references should be converted to definitions.</span></span> <span data-ttu-id="8ee9e-114">也就是成員參考應該轉換成方法定義或欄位定義中。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-114">That is, member references should be converted to either method definitions or field definitions.</span></span>|  
+|`MDRefToDefDefault`|<span data-ttu-id="5705e-108">指定型別參考和成員的參考，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="5705e-108">Specifies that type references and member references should be converted to definitions.</span></span> <span data-ttu-id="5705e-109">這是預設值 (`MDTypeRefToDef` &#124; `MDMemberRefToDef`)。</span><span class="sxs-lookup"><span data-stu-id="5705e-109">This is the default value (`MDTypeRefToDef` &#124; `MDMemberRefToDef`).</span></span>|  
+|`MDRefToDefAll`|<span data-ttu-id="5705e-110">指定參考的所有項目，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="5705e-110">Specifies that all referenced items should be converted to definitions.</span></span>|  
+|`MDRefToDefNone`|<span data-ttu-id="5705e-111">指定沒有參考的項目，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="5705e-111">Specifies that no referenced items should be converted to definitions.</span></span>|  
+|`MDTypeRefToDef`|<span data-ttu-id="5705e-112">指定只有型別參考，必須轉換型別定義。</span><span class="sxs-lookup"><span data-stu-id="5705e-112">Specifies that only type references should be converted to type definitions.</span></span>|  
+|`MDMemberRefToDef`|<span data-ttu-id="5705e-113">指定只有成員參考，必須定義轉換。</span><span class="sxs-lookup"><span data-stu-id="5705e-113">Specifies that only member references should be converted to definitions.</span></span> <span data-ttu-id="5705e-114">也就是成員參考應該轉換成方法定義或欄位定義中。</span><span class="sxs-lookup"><span data-stu-id="5705e-114">That is, member references should be converted to either method definitions or field definitions.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8ee9e-115">需求</span><span class="sxs-lookup"><span data-stu-id="8ee9e-115">Requirements</span></span>  
- <span data-ttu-id="8ee9e-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8ee9e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5705e-115">需求</span><span class="sxs-lookup"><span data-stu-id="5705e-115">Requirements</span></span>  
+ <span data-ttu-id="5705e-116">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5705e-116">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8ee9e-117">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8ee9e-117">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="5705e-117">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="5705e-117">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="8ee9e-118">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8ee9e-118">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="5705e-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5705e-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8ee9e-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8ee9e-119">See also</span></span>
-- [<span data-ttu-id="8ee9e-120">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="8ee9e-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="5705e-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5705e-119">See also</span></span>
+
+- [<span data-ttu-id="5705e-120">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="5705e-120">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

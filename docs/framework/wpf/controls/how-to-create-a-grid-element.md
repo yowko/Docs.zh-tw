@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 Grid 項目
+title: HOW TO：建立 Grid 元素
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,24 +7,25 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], creating [WPF], grid instance
 ms.assetid: b2f07626-9df8-43b8-8d36-492f3cb42837
-ms.openlocfilehash: 5aa0e5b617d952fd5df1f80ae0ff146a6899aa32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebb9369da73bd595338e5b6ef42bda639bde6ed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379506"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134533"
 ---
-# <a name="how-to-create-a-grid-element"></a><span data-ttu-id="d2568-102">HOW TO：建立 Grid 項目</span><span class="sxs-lookup"><span data-stu-id="d2568-102">How to: Create a Grid Element</span></span>
-## <a name="example"></a><span data-ttu-id="d2568-103">範例</span><span class="sxs-lookup"><span data-stu-id="d2568-103">Example</span></span>  
- <span data-ttu-id="d2568-104">下列範例示範如何建立和使用的執行個體<xref:System.Windows.Controls.Grid>使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]或程式碼。</span><span class="sxs-lookup"><span data-stu-id="d2568-104">The following example shows how to create and use an instance of <xref:System.Windows.Controls.Grid> by using either [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="d2568-105">這個範例會使用三個<xref:System.Windows.Controls.ColumnDefinition>物件和三個<xref:System.Windows.Controls.RowDefinition>物件來建立一個方格，其中擁有九個資料格，例如工作表。</span><span class="sxs-lookup"><span data-stu-id="d2568-105">This example uses three <xref:System.Windows.Controls.ColumnDefinition> objects and three <xref:System.Windows.Controls.RowDefinition> objects to create a grid that has nine cells, such as in a worksheet.</span></span> <span data-ttu-id="d2568-106">每個資料格都包含<xref:System.Windows.Controls.TextBlock>項目，表示資料及上方資料列包含<xref:System.Windows.Controls.TextBlock>使用<xref:System.Windows.Controls.Grid.ColumnSpan%2A>套用的屬性。</span><span class="sxs-lookup"><span data-stu-id="d2568-106">Each cell contains a <xref:System.Windows.Controls.TextBlock> element that represents data, and the top row contains a <xref:System.Windows.Controls.TextBlock> with the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> property applied.</span></span> <span data-ttu-id="d2568-107">若要顯示的界限，每個資料格，<xref:System.Windows.Controls.Grid.ShowGridLines%2A>屬性處於啟用狀態。</span><span class="sxs-lookup"><span data-stu-id="d2568-107">To show the boundaries of each cell, the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property is enabled.</span></span>  
+# <a name="how-to-create-a-grid-element"></a><span data-ttu-id="ae1df-102">HOW TO：建立 Grid 元素</span><span class="sxs-lookup"><span data-stu-id="ae1df-102">How to: Create a Grid Element</span></span>
+## <a name="example"></a><span data-ttu-id="ae1df-103">範例</span><span class="sxs-lookup"><span data-stu-id="ae1df-103">Example</span></span>  
+ <span data-ttu-id="ae1df-104">下列範例示範如何建立和使用的執行個體<xref:System.Windows.Controls.Grid>使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]或程式碼。</span><span class="sxs-lookup"><span data-stu-id="ae1df-104">The following example shows how to create and use an instance of <xref:System.Windows.Controls.Grid> by using either [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] or code.</span></span> <span data-ttu-id="ae1df-105">這個範例會使用三個<xref:System.Windows.Controls.ColumnDefinition>物件和三個<xref:System.Windows.Controls.RowDefinition>物件來建立一個方格，其中擁有九個資料格，例如工作表。</span><span class="sxs-lookup"><span data-stu-id="ae1df-105">This example uses three <xref:System.Windows.Controls.ColumnDefinition> objects and three <xref:System.Windows.Controls.RowDefinition> objects to create a grid that has nine cells, such as in a worksheet.</span></span> <span data-ttu-id="ae1df-106">每個資料格都包含<xref:System.Windows.Controls.TextBlock>項目，表示資料及上方資料列包含<xref:System.Windows.Controls.TextBlock>使用<xref:System.Windows.Controls.Grid.ColumnSpan%2A>套用的屬性。</span><span class="sxs-lookup"><span data-stu-id="ae1df-106">Each cell contains a <xref:System.Windows.Controls.TextBlock> element that represents data, and the top row contains a <xref:System.Windows.Controls.TextBlock> with the <xref:System.Windows.Controls.Grid.ColumnSpan%2A> property applied.</span></span> <span data-ttu-id="ae1df-107">若要顯示的界限，每個資料格，<xref:System.Windows.Controls.Grid.ShowGridLines%2A>屬性處於啟用狀態。</span><span class="sxs-lookup"><span data-stu-id="ae1df-107">To show the boundaries of each cell, the <xref:System.Windows.Controls.Grid.ShowGridLines%2A> property is enabled.</span></span>  
   
  [!code-csharp[Grid#3](~/samples/snippets/csharp/VS_Snippets_Wpf/Grid/CSharp/Grid_Code.cs#3)]
  [!code-vb[Grid#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Grid/VisualBasic/grid_vb.vb#3)]
  [!code-xaml[Grid#3](~/samples/snippets/xaml/VS_Snippets_Wpf/Grid/XAML/default.xaml#3)]  
   
-  <span data-ttu-id="d2568-108">兩種方法會產生看起來相同，類似下面這個使用者介面。</span><span class="sxs-lookup"><span data-stu-id="d2568-108">Either approach will generate a user interface that looks much the same, like the one below.</span></span>
+  <span data-ttu-id="ae1df-108">兩種方法會產生看起來相同，類似下面這個使用者介面。</span><span class="sxs-lookup"><span data-stu-id="ae1df-108">Either approach will generate a user interface that looks much the same, like the one below.</span></span>
 
   ![螢幕擷取畫面說明包含分成三個資料行的方格的 WPF 使用者介面。](././media/how-to-create-a-grid-element/how-to-create-a-grid-element.png)
-## <a name="see-also"></a><span data-ttu-id="d2568-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d2568-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae1df-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae1df-112">See also</span></span>
+
 - <xref:System.Windows.Controls.Grid>
-- [<span data-ttu-id="d2568-113">面板概觀</span><span class="sxs-lookup"><span data-stu-id="d2568-113">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="ae1df-113">面板概觀</span><span class="sxs-lookup"><span data-stu-id="ae1df-113">Panels Overview</span></span>](panels-overview.md)

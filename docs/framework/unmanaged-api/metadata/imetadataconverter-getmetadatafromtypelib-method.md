@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c1c6c3b9dda990d6eb7d33239fedf35e2236f998
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cdc1b0de9795a000ee680df880c73acc4f711db2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145323"
 ---
-# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="fcf1a-102">IMetaDataConverter::GetMetaDataFromTypeLib 方法</span><span class="sxs-lookup"><span data-stu-id="fcf1a-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
-<span data-ttu-id="fcf1a-103">取得的介面指標[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)執行個體，表示指定所代表的類型程式庫的中繼資料簽章`ITypeLib`執行個體。</span><span class="sxs-lookup"><span data-stu-id="fcf1a-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
+# <a name="imetadataconvertergetmetadatafromtypelib-method"></a><span data-ttu-id="fb9a9-102">IMetaDataConverter::GetMetaDataFromTypeLib 方法</span><span class="sxs-lookup"><span data-stu-id="fb9a9-102">IMetaDataConverter::GetMetaDataFromTypeLib Method</span></span>
+<span data-ttu-id="fb9a9-103">取得的介面指標[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)執行個體，表示指定所代表的類型程式庫的中繼資料簽章`ITypeLib`執行個體。</span><span class="sxs-lookup"><span data-stu-id="fb9a9-103">Gets an interface pointer to an [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md) instance that represents the metadata signature of the type library represented by the specified `ITypeLib` instance.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fcf1a-104">語法</span><span class="sxs-lookup"><span data-stu-id="fcf1a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fb9a9-104">語法</span><span class="sxs-lookup"><span data-stu-id="fb9a9-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMetaDataFromTypeLib (  
@@ -36,22 +36,23 @@ HRESULT GetMetaDataFromTypeLib (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="fcf1a-105">參數</span><span class="sxs-lookup"><span data-stu-id="fcf1a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="fb9a9-105">參數</span><span class="sxs-lookup"><span data-stu-id="fb9a9-105">Parameters</span></span>  
  `pITL`  
- <span data-ttu-id="fcf1a-106">[in]指標`ITypeLib`物件，表示型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="fcf1a-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
+ <span data-ttu-id="fb9a9-106">[in]指標`ITypeLib`物件，表示型別程式庫。</span><span class="sxs-lookup"><span data-stu-id="fb9a9-106">[in] Pointer to an `ITypeLib` object that represents the type library.</span></span>  
   
  `ppMDI`  
- <span data-ttu-id="fcf1a-107">[out]接收的地址的位置指標`IMetaDataImport`表示中繼資料簽章的執行個體。</span><span class="sxs-lookup"><span data-stu-id="fcf1a-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
+ <span data-ttu-id="fb9a9-107">[out]接收的地址的位置指標`IMetaDataImport`表示中繼資料簽章的執行個體。</span><span class="sxs-lookup"><span data-stu-id="fb9a9-107">[out] Pointer to a location that receives the address of the `IMetaDataImport` instance that represents the metadata signature.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fcf1a-108">需求</span><span class="sxs-lookup"><span data-stu-id="fcf1a-108">Requirements</span></span>  
- <span data-ttu-id="fcf1a-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fcf1a-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fb9a9-108">需求</span><span class="sxs-lookup"><span data-stu-id="fb9a9-108">Requirements</span></span>  
+ <span data-ttu-id="fb9a9-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fb9a9-109">**Platform:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fcf1a-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fcf1a-110">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="fb9a9-110">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="fb9a9-110">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="fcf1a-111">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fcf1a-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fb9a9-111">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fb9a9-111">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="fcf1a-112">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="fcf1a-112">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="fb9a9-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="fb9a9-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="fcf1a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fcf1a-113">See also</span></span>
-- [<span data-ttu-id="fcf1a-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="fcf1a-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
-- [<span data-ttu-id="fcf1a-115">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="fcf1a-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fb9a9-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb9a9-113">See also</span></span>
+
+- [<span data-ttu-id="fb9a9-114">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="fb9a9-114">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+- [<span data-ttu-id="fb9a9-115">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="fb9a9-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

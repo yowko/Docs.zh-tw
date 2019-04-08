@@ -2,18 +2,18 @@
 title: 搭配 WCF 使用多個驗證配置
 ms.date: 03/30/2017
 ms.assetid: f32a56a0-e2b2-46bf-a302-29e1275917f9
-ms.openlocfilehash: 9f2c9944b424ba527fb20562706d5ad7fc3f8359
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: b0f5da9a4c6fdfede9a86434f49f9e9821778176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102306"
 ---
-# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="8325d-102">搭配 WCF 使用多個驗證配置</span><span class="sxs-lookup"><span data-stu-id="8325d-102">Using Multiple Authentication Schemes with WCF</span></span>
-<span data-ttu-id="8325d-103">WCF 現在允許您在單一端點上指定多個驗證配置。</span><span class="sxs-lookup"><span data-stu-id="8325d-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="8325d-104">此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。</span><span class="sxs-lookup"><span data-stu-id="8325d-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="8325d-105">自我裝載服務可以指定可使用的驗證配置。</span><span class="sxs-lookup"><span data-stu-id="8325d-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="8325d-106">如需在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](https://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="8325d-106">For more information about setting authentication settings in IIS, see [IIS Authentication](https://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
+# <a name="using-multiple-authentication-schemes-with-wcf"></a><span data-ttu-id="792b7-102">搭配 WCF 使用多個驗證配置</span><span class="sxs-lookup"><span data-stu-id="792b7-102">Using Multiple Authentication Schemes with WCF</span></span>
+<span data-ttu-id="792b7-103">WCF 現在允許您在單一端點上指定多個驗證配置。</span><span class="sxs-lookup"><span data-stu-id="792b7-103">WCF now allows you to specify multiple authentication schemes on a single endpoint.</span></span> <span data-ttu-id="792b7-104">此外，Web 裝載服務可以直接從 IIS 繼承驗證設定。</span><span class="sxs-lookup"><span data-stu-id="792b7-104">Furthermore web hosted services can inherit their authentication settings directly from IIS.</span></span> <span data-ttu-id="792b7-105">自我裝載服務可以指定可使用的驗證配置。</span><span class="sxs-lookup"><span data-stu-id="792b7-105">Self-hosted services can specify what authentication schemes can be used.</span></span> <span data-ttu-id="792b7-106">如需在 IIS 中設定驗證設定的詳細資訊，請參閱[IIS 驗證](https://go.microsoft.com/fwlink/?LinkId=232458)</span><span class="sxs-lookup"><span data-stu-id="792b7-106">For more information about setting authentication settings in IIS, see [IIS Authentication](https://go.microsoft.com/fwlink/?LinkId=232458)</span></span>  
   
-## <a name="iis-hosted-services"></a><span data-ttu-id="8325d-107">IIS 裝載的服務</span><span class="sxs-lookup"><span data-stu-id="8325d-107">IIS-Hosted Services</span></span>  
- <span data-ttu-id="8325d-108">對於 IIS 裝載的服務，設定您希望在 IIS 中使用的驗證配置。</span><span class="sxs-lookup"><span data-stu-id="8325d-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="8325d-109">然後在您服務的 web.config 檔案中，將繫結組態 clientCredential 類型指定為"InheritedFromHost"下列 XML 程式碼片段所示：</span><span class="sxs-lookup"><span data-stu-id="8325d-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
+## <a name="iis-hosted-services"></a><span data-ttu-id="792b7-107">IIS 裝載的服務</span><span class="sxs-lookup"><span data-stu-id="792b7-107">IIS-Hosted Services</span></span>  
+ <span data-ttu-id="792b7-108">對於 IIS 裝載的服務，設定您希望在 IIS 中使用的驗證配置。</span><span class="sxs-lookup"><span data-stu-id="792b7-108">For IIS-hosted services, set the authentication schemes you wish to use in IIS.</span></span> <span data-ttu-id="792b7-109">然後在您服務的 web.config 檔案中，將繫結組態 clientCredential 類型指定為"InheritedFromHost"下列 XML 程式碼片段所示：</span><span class="sxs-lookup"><span data-stu-id="792b7-109">Then in your service’s web.config file, in your binding configuration specify clientCredential type as "InheritedFromHost" as shown in the following XML snippet:</span></span>  
   
 ```xml  
 <bindings>  
@@ -27,7 +27,7 @@ ms.locfileid: "58465486"
     </bindings>  
 ```  
   
- <span data-ttu-id="8325d-110">您可以指定您只想要使用 ServiceAuthenticationBehavior 服務搭配使用的驗證配置的子集或\<serviceAuthenticationManager > 項目。</span><span class="sxs-lookup"><span data-stu-id="8325d-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="8325d-111">在程式碼中進行這項設定時，請使用 ServiceAuthenticationBehavior，如下列程式碼片段所示。</span><span class="sxs-lookup"><span data-stu-id="8325d-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
+ <span data-ttu-id="792b7-110">您可以指定您只想要使用 ServiceAuthenticationBehavior 服務搭配使用的驗證配置的子集或\<serviceAuthenticationManager > 項目。</span><span class="sxs-lookup"><span data-stu-id="792b7-110">You can specify that you only want a subset of authentication schemes to be used with your service using the ServiceAuthenticationBehavior or the \<serviceAuthenticationManager> element.</span></span> <span data-ttu-id="792b7-111">在程式碼中進行這項設定時，請使用 ServiceAuthenticationBehavior，如下列程式碼片段所示。</span><span class="sxs-lookup"><span data-stu-id="792b7-111">When configuring this in code use the ServiceAuthenticationBehavior as shown in the following code snippet.</span></span>  
   
 ```csharp  
 // ...  
@@ -47,7 +47,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="8325d-112">當設定此組態檔中，使用\<serviceAuthenticationManager > 項目，如下列 XML 程式碼片段所示。</span><span class="sxs-lookup"><span data-stu-id="8325d-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="792b7-112">當設定此組態檔中，使用\<serviceAuthenticationManager > 項目，如下列 XML 程式碼片段所示。</span><span class="sxs-lookup"><span data-stu-id="792b7-112">When configuring this in a config file, use the \<serviceAuthenticationManager> element as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <behaviors>  
@@ -60,10 +60,10 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="8325d-113">這將確保只會根據在 IIS 中選取的部分，考慮將這裡列出的驗證配置子集套用在服務端點。</span><span class="sxs-lookup"><span data-stu-id="8325d-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="8325d-114">這表示開發人員可以在 serviceAuthenticationManager 清單中省略該項基本驗證，將其從清單中排除，即使已在 IIS 中啟用亦同，這項驗證將不會套用在服務端點上。</span><span class="sxs-lookup"><span data-stu-id="8325d-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
+ <span data-ttu-id="792b7-113">這將確保只會根據在 IIS 中選取的部分，考慮將這裡列出的驗證配置子集套用在服務端點。</span><span class="sxs-lookup"><span data-stu-id="792b7-113">This will ensure that only a subset of the authentication schemes listed here will be considered for applying on the service endpoint, depending on what is selected in the IIS.</span></span> <span data-ttu-id="792b7-114">這表示開發人員可以在 serviceAuthenticationManager 清單中省略該項基本驗證，將其從清單中排除，即使已在 IIS 中啟用亦同，這項驗證將不會套用在服務端點上。</span><span class="sxs-lookup"><span data-stu-id="792b7-114">This means that a developer can exclude say Basic auth from the list by omitting it from the serviceAuthenticationManager listing and even if it is enabled in IIS, it will not be applied on the service endpoint</span></span>  
   
-## <a name="self-hosted-services"></a><span data-ttu-id="8325d-115">自我裝載的服務</span><span class="sxs-lookup"><span data-stu-id="8325d-115">Self-Hosted Services</span></span>  
- <span data-ttu-id="8325d-116">自我裝載服務的設定方式有點不同，因為沒有可繼承其設定的 IIS。</span><span class="sxs-lookup"><span data-stu-id="8325d-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="8325d-117">您在這裡使用\<serviceAuthenticationManager > 項目或 ServiceAuthenticationBehavior 來指定可供繼承的驗證設定。</span><span class="sxs-lookup"><span data-stu-id="8325d-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="8325d-118">在程式碼中，看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="8325d-118">In code it looks like this:</span></span>  
+## <a name="self-hosted-services"></a><span data-ttu-id="792b7-115">自我裝載的服務</span><span class="sxs-lookup"><span data-stu-id="792b7-115">Self-Hosted Services</span></span>  
+ <span data-ttu-id="792b7-116">自我裝載服務的設定方式有點不同，因為沒有可繼承其設定的 IIS。</span><span class="sxs-lookup"><span data-stu-id="792b7-116">Self-hosted services are configured a bit differently since there is no IIS to inherit settings from.</span></span> <span data-ttu-id="792b7-117">您在這裡使用\<serviceAuthenticationManager > 項目或 ServiceAuthenticationBehavior 來指定可供繼承的驗證設定。</span><span class="sxs-lookup"><span data-stu-id="792b7-117">Here you use the \<serviceAuthenticationManager> element or ServiceAuthenticationBehavior to specify the authentication settings that will be inherited.</span></span> <span data-ttu-id="792b7-118">在程式碼中，看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="792b7-118">In code it looks like this:</span></span>  
   
 ```csharp  
 // ...  
@@ -83,7 +83,7 @@ else
 // ...  
 ```  
   
- <span data-ttu-id="8325d-119">在組態中，看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="8325d-119">In config, it looks like this:</span></span>  
+ <span data-ttu-id="792b7-119">在組態中，看起來像這樣：</span><span class="sxs-lookup"><span data-stu-id="792b7-119">In config, it looks like this:</span></span>  
   
 ```xml  
 <behaviors>  
@@ -96,7 +96,7 @@ else
     </behaviors>  
 ```  
   
- <span data-ttu-id="8325d-120">然後您可以在繫結設定中指定 InheritFromHost，如下列 XML 片段所示。</span><span class="sxs-lookup"><span data-stu-id="8325d-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
+ <span data-ttu-id="792b7-120">然後您可以在繫結設定中指定 InheritFromHost，如下列 XML 片段所示。</span><span class="sxs-lookup"><span data-stu-id="792b7-120">And then you can specify InheritFromHost in your binding settings as shown in the following XML snippet.</span></span>  
   
 ```xml  
 <bindings>  
@@ -110,7 +110,7 @@ else
     </bindings>  
 ```  
   
- <span data-ttu-id="8325d-121">或者，您可在 HTTP 傳輸繫結元素上設定驗證配置，以指定自訂繫結中的驗證配置，如下列組態片段所示。</span><span class="sxs-lookup"><span data-stu-id="8325d-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
+ <span data-ttu-id="792b7-121">或者，您可在 HTTP 傳輸繫結元素上設定驗證配置，以指定自訂繫結中的驗證配置，如下列組態片段所示。</span><span class="sxs-lookup"><span data-stu-id="792b7-121">Alternatively, you can specify the authentication schemes in a custom binding, by setting the authentication schemes on the HTTP transport binding element, as shown in the following config snippet.</span></span>  
   
 ```xml  
 <binding name="multipleBinding">  
@@ -119,10 +119,11 @@ else
     </binding>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8325d-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8325d-122">See also</span></span>
-- [<span data-ttu-id="8325d-123">繫結和安全性</span><span class="sxs-lookup"><span data-stu-id="8325d-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [<span data-ttu-id="8325d-124">端點：位址、 繫結和合約</span><span class="sxs-lookup"><span data-stu-id="8325d-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [<span data-ttu-id="8325d-125">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="8325d-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [<span data-ttu-id="8325d-126">自訂繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="8325d-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
-- [<span data-ttu-id="8325d-127">繫結</span><span class="sxs-lookup"><span data-stu-id="8325d-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)
-- [<span data-ttu-id="8325d-128">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="8325d-128">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)
+## <a name="see-also"></a><span data-ttu-id="792b7-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="792b7-122">See also</span></span>
+
+- [<span data-ttu-id="792b7-123">繫結和安全性</span><span class="sxs-lookup"><span data-stu-id="792b7-123">Bindings and Security</span></span>](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
+- [<span data-ttu-id="792b7-124">端點：位址、繫結和合約</span><span class="sxs-lookup"><span data-stu-id="792b7-124">Endpoints: Addresses, Bindings, and Contracts</span></span>](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [<span data-ttu-id="792b7-125">設定系統提供的繫結</span><span class="sxs-lookup"><span data-stu-id="792b7-125">Configuring System-Provided Bindings</span></span>](../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
+- [<span data-ttu-id="792b7-126">自訂繫結的安全性功能</span><span class="sxs-lookup"><span data-stu-id="792b7-126">Security Capabilities with Custom Bindings</span></span>](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
+- [<span data-ttu-id="792b7-127">繫結</span><span class="sxs-lookup"><span data-stu-id="792b7-127">Bindings</span></span>](../../../../docs/framework/wcf/feature-details/bindings.md)
+- [<span data-ttu-id="792b7-128">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="792b7-128">Custom Bindings</span></span>](../../../../docs/framework/wcf/extending/custom-bindings.md)

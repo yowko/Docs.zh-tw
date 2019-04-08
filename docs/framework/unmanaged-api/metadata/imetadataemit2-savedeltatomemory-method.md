@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8cc9544279c6be3efe278c3effda00bc2d387ec
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fa95a737747e9153eb844cddd8e0684585b9108b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57495360"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081128"
 ---
-# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="e1da7-102">IMetaDataEmit2::SaveDeltaToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="e1da7-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
-<span data-ttu-id="e1da7-103">將目前的編輯和繼續工作階段的變更儲存至記憶體。</span><span class="sxs-lookup"><span data-stu-id="e1da7-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
+# <a name="imetadataemit2savedeltatomemory-method"></a><span data-ttu-id="9ced2-102">IMetaDataEmit2::SaveDeltaToMemory 方法</span><span class="sxs-lookup"><span data-stu-id="9ced2-102">IMetaDataEmit2::SaveDeltaToMemory Method</span></span>
+<span data-ttu-id="9ced2-103">將目前的編輯和繼續工作階段的變更儲存至記憶體。</span><span class="sxs-lookup"><span data-stu-id="9ced2-103">Saves changes from the current edit-and-continue session to memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e1da7-104">語法</span><span class="sxs-lookup"><span data-stu-id="e1da7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="9ced2-104">語法</span><span class="sxs-lookup"><span data-stu-id="9ced2-104">Syntax</span></span>  
   
 ```  
 HRESULT SaveDeltaToMemory (  
@@ -36,22 +36,23 @@ HRESULT SaveDeltaToMemory (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="e1da7-105">參數</span><span class="sxs-lookup"><span data-stu-id="e1da7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="9ced2-105">參數</span><span class="sxs-lookup"><span data-stu-id="9ced2-105">Parameters</span></span>  
  `pbData`  
- <span data-ttu-id="e1da7-106">[out]要開始寫入的中繼資料差異位址。</span><span class="sxs-lookup"><span data-stu-id="e1da7-106">[out] The address at which to begin writing the metadata delta.</span></span>  
+ <span data-ttu-id="9ced2-106">[out]要開始寫入的中繼資料差異位址。</span><span class="sxs-lookup"><span data-stu-id="9ced2-106">[out] The address at which to begin writing the metadata delta.</span></span>  
   
  `cbData`  
- <span data-ttu-id="e1da7-107">[in]之變更的大小。</span><span class="sxs-lookup"><span data-stu-id="e1da7-107">[in] The size of the changes.</span></span> <span data-ttu-id="e1da7-108">使用[IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)決定的大小。</span><span class="sxs-lookup"><span data-stu-id="e1da7-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
+ <span data-ttu-id="9ced2-107">[in]之變更的大小。</span><span class="sxs-lookup"><span data-stu-id="9ced2-107">[in] The size of the changes.</span></span> <span data-ttu-id="9ced2-108">使用[IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md)決定的大小。</span><span class="sxs-lookup"><span data-stu-id="9ced2-108">Use [IMetaDataEmit2::GetDeltaSaveSize](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-getdeltasavesize-method.md) to determine the size.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e1da7-109">需求</span><span class="sxs-lookup"><span data-stu-id="e1da7-109">Requirements</span></span>  
- <span data-ttu-id="e1da7-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e1da7-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="9ced2-109">需求</span><span class="sxs-lookup"><span data-stu-id="9ced2-109">Requirements</span></span>  
+ <span data-ttu-id="9ced2-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9ced2-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e1da7-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="e1da7-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="9ced2-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="9ced2-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="e1da7-112">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="e1da7-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="9ced2-112">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9ced2-112">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="e1da7-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e1da7-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="9ced2-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="9ced2-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e1da7-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e1da7-114">See also</span></span>
-- [<span data-ttu-id="e1da7-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="e1da7-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
-- [<span data-ttu-id="e1da7-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="e1da7-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="9ced2-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9ced2-114">See also</span></span>
+
+- [<span data-ttu-id="9ced2-115">IMetaDataEmit2 介面</span><span class="sxs-lookup"><span data-stu-id="9ced2-115">IMetaDataEmit2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)
+- [<span data-ttu-id="9ced2-116">IMetaDataEmit 介面</span><span class="sxs-lookup"><span data-stu-id="9ced2-116">IMetaDataEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)

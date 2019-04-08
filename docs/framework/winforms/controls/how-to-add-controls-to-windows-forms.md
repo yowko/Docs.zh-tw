@@ -9,51 +9,51 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 31820775d4f7fb981599e806aa5e27655039e6ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720770"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106479"
 ---
-# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="af2d3-102">HOW TO：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="af2d3-102">How to: Add Controls to Windows Forms</span></span>
-<span data-ttu-id="af2d3-103">大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="af2d3-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="af2d3-104">A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。</span><span class="sxs-lookup"><span data-stu-id="af2d3-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="af2d3-105">如需控制項的詳細資訊，請參閱[Windows Forms 控制項](index.md)。</span><span class="sxs-lookup"><span data-stu-id="af2d3-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>  
+# <a name="how-to-add-controls-to-windows-forms"></a><span data-ttu-id="3f3d8-102">HOW TO：將控制項新增至 Windows Forms</span><span class="sxs-lookup"><span data-stu-id="3f3d8-102">How to: Add Controls to Windows Forms</span></span>
+<span data-ttu-id="3f3d8-103">大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-103">Most forms are designed by adding controls to the surface of the form to define a user interface (UI).</span></span> <span data-ttu-id="3f3d8-104">A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-104">A *control* is a component on a form used to display information or accept user input.</span></span> <span data-ttu-id="3f3d8-105">如需控制項的詳細資訊，請參閱[Windows Forms 控制項](index.md)。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-105">For more information about controls, see [Windows Forms Controls](index.md).</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="af2d3-106">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="af2d3-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="af2d3-107">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="af2d3-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="af2d3-108">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="af2d3-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="3f3d8-106">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-106">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3f3d8-107">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-107">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3f3d8-108">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-108">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-### <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="af2d3-109">若要繪製在表單上控制項</span><span class="sxs-lookup"><span data-stu-id="af2d3-109">To draw a control on a form</span></span>  
+### <a name="to-draw-a-control-on-a-form"></a><span data-ttu-id="3f3d8-109">若要繪製在表單上控制項</span><span class="sxs-lookup"><span data-stu-id="3f3d8-109">To draw a control on a form</span></span>  
   
-1.  <span data-ttu-id="af2d3-110">開啟表單。</span><span class="sxs-lookup"><span data-stu-id="af2d3-110">Open the form.</span></span> <span data-ttu-id="af2d3-111">如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="af2d3-111">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
+1.  <span data-ttu-id="3f3d8-110">開啟表單。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-110">Open the form.</span></span> <span data-ttu-id="3f3d8-111">如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-111">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
   
-2.  <span data-ttu-id="af2d3-112">在 **工具箱**，按一下您想要新增至表單的控制項。</span><span class="sxs-lookup"><span data-stu-id="af2d3-112">In the **Toolbox**, click the control you want to add to your form.</span></span>  
+2.  <span data-ttu-id="3f3d8-112">在 **工具箱**，按一下您想要新增至表單的控制項。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-112">In the **Toolbox**, click the control you want to add to your form.</span></span>  
   
-3.  <span data-ttu-id="af2d3-113">在表單中，按一下您想要找出，控制項的左上角並拖曳至要放置控制項的右下角的位置。</span><span class="sxs-lookup"><span data-stu-id="af2d3-113">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>  
+3.  <span data-ttu-id="3f3d8-113">在表單中，按一下您想要找出，控制項的左上角並拖曳至要放置控制項的右下角的位置。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-113">On the form, click where you want the upper-left corner of the control to be located, and drag to where you want the lower-right corner of the control to be located.</span></span>  
   
-     <span data-ttu-id="af2d3-114">控制項會加入至表單的指定的位置和大小。</span><span class="sxs-lookup"><span data-stu-id="af2d3-114">The control is added to the form with the specified location and size.</span></span>  
-  
-    > [!NOTE]
-    >  <span data-ttu-id="af2d3-115">每個控制項已定義的預設大小。</span><span class="sxs-lookup"><span data-stu-id="af2d3-115">Each control has a default size defined.</span></span> <span data-ttu-id="af2d3-116">您可以將控制項加入您的表單控制項的預設大小從拖曳**工具箱**至表單。</span><span class="sxs-lookup"><span data-stu-id="af2d3-116">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>  
-  
-### <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="af2d3-117">若要將控制項拖曳至表單</span><span class="sxs-lookup"><span data-stu-id="af2d3-117">To drag a control to a form</span></span>  
-  
-1.  <span data-ttu-id="af2d3-118">開啟表單。</span><span class="sxs-lookup"><span data-stu-id="af2d3-118">Open the form.</span></span> <span data-ttu-id="af2d3-119">如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="af2d3-119">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
-  
-2.  <span data-ttu-id="af2d3-120">在 **工具箱**，按一下您想要並將它拖曳至表單的控制項。</span><span class="sxs-lookup"><span data-stu-id="af2d3-120">In the **Toolbox**, click the control you want and drag it to your form.</span></span>  
-  
-     <span data-ttu-id="af2d3-121">控制項會加入至指定的位置，以預設大小的表單。</span><span class="sxs-lookup"><span data-stu-id="af2d3-121">The control is added to the form at the specified location in its default size.</span></span>  
+     <span data-ttu-id="3f3d8-114">控制項會加入至表單的指定的位置和大小。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-114">The control is added to the form with the specified location and size.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="af2d3-122">您可以按兩下中的控制項**工具箱**將它新增至其預設大小 中表單的左上角。</span><span class="sxs-lookup"><span data-stu-id="af2d3-122">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>  
+    >  <span data-ttu-id="3f3d8-115">每個控制項已定義的預設大小。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-115">Each control has a default size defined.</span></span> <span data-ttu-id="3f3d8-116">您可以將控制項加入您的表單控制項的預設大小從拖曳**工具箱**至表單。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-116">You can add a control to your form in the control's default size by dragging it from the **Toolbox** to the form.</span></span>  
   
-     <span data-ttu-id="af2d3-123">您可以也將控制項以動態方式加入表單在執行階段。</span><span class="sxs-lookup"><span data-stu-id="af2d3-123">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="af2d3-124">在下列程式碼範例中，<xref:System.Windows.Forms.TextBox>控制項將會加入至表單時<xref:System.Windows.Forms.Button>按一下控制項時。</span><span class="sxs-lookup"><span data-stu-id="af2d3-124">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>  
+### <a name="to-drag-a-control-to-a-form"></a><span data-ttu-id="3f3d8-117">若要將控制項拖曳至表單</span><span class="sxs-lookup"><span data-stu-id="3f3d8-117">To drag a control to a form</span></span>  
+  
+1.  <span data-ttu-id="3f3d8-118">開啟表單。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-118">Open the form.</span></span> <span data-ttu-id="3f3d8-119">如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-119">For more information, see [How to: Display Windows Forms in the Designer](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100)).</span></span>  
+  
+2.  <span data-ttu-id="3f3d8-120">在 **工具箱**，按一下您想要並將它拖曳至表單的控制項。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-120">In the **Toolbox**, click the control you want and drag it to your form.</span></span>  
+  
+     <span data-ttu-id="3f3d8-121">控制項會加入至指定的位置，以預設大小的表單。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-121">The control is added to the form at the specified location in its default size.</span></span>  
   
     > [!NOTE]
-    >  <span data-ttu-id="af2d3-125">下列程序需要有的表單 **按鈕** 控制項， `Button1` 、 已放在其上。</span><span class="sxs-lookup"><span data-stu-id="af2d3-125">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>  
+    >  <span data-ttu-id="3f3d8-122">您可以按兩下中的控制項**工具箱**將它新增至其預設大小 中表單的左上角。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-122">You can double-click a control in the **Toolbox** to add it to the upper-left corner of the form in its default size.</span></span>  
   
-### <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="af2d3-126">若要以程式設計方式將控制項加入表單</span><span class="sxs-lookup"><span data-stu-id="af2d3-126">To add a control to a form programmatically</span></span>  
+     <span data-ttu-id="3f3d8-123">您可以也將控制項以動態方式加入表單在執行階段。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-123">You can also add controls dynamically to a form at run time.</span></span> <span data-ttu-id="3f3d8-124">在下列程式碼範例中，<xref:System.Windows.Forms.TextBox>控制項將會加入至表單時<xref:System.Windows.Forms.Button>按一下控制項時。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-124">In the following code example, a <xref:System.Windows.Forms.TextBox> control will be added to the form when a <xref:System.Windows.Forms.Button> control is clicked.</span></span>  
   
-1.  <span data-ttu-id="af2d3-127">在方法中處理按鈕的`Click`事件，在您的表單類別中，插入程式碼如下所示將參考加入至您的控制項變數，將控制項的`Location`，並加入控制項。</span><span class="sxs-lookup"><span data-stu-id="af2d3-127">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>  
+    > [!NOTE]
+    >  <span data-ttu-id="3f3d8-125">下列程序需要有的表單 **按鈕** 控制項， `Button1` 、 已放在其上。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-125">The following procedure requires the existence of a form with a **Button** control, `Button1`, already placed on it.</span></span>  
+  
+### <a name="to-add-a-control-to-a-form-programmatically"></a><span data-ttu-id="3f3d8-126">若要以程式設計方式將控制項加入表單</span><span class="sxs-lookup"><span data-stu-id="3f3d8-126">To add a control to a form programmatically</span></span>  
+  
+1.  <span data-ttu-id="3f3d8-127">在方法中處理按鈕的`Click`事件，在您的表單類別中，插入程式碼如下所示將參考加入至您的控制項變數，將控制項的`Location`，並加入控制項。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-127">In the method that handles the button's `Click` event within your form's class, insert code similar to the following to add a reference to your control variable, set the control's `Location`, and add the control.</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -84,14 +84,15 @@ ms.locfileid: "57720770"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="af2d3-128">您也可以加入程式碼以初始化控制項的其他屬性。</span><span class="sxs-lookup"><span data-stu-id="af2d3-128">You can also add code to initialize other properties of the control.</span></span>  
+    >  <span data-ttu-id="3f3d8-128">您也可以加入程式碼以初始化控制項的其他屬性。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-128">You can also add code to initialize other properties of the control.</span></span>  
   
     > [!IMPORTANT]
-    >  <span data-ttu-id="af2d3-129">您可能會公開本機電腦透過網路的安全性風險，藉由參考惡意`UserControl`。</span><span class="sxs-lookup"><span data-stu-id="af2d3-129">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="af2d3-130">這只會在惡意人士建立破壞性的自訂控制項，且您不小心將它新增至您的專案的情況下需要考量。</span><span class="sxs-lookup"><span data-stu-id="af2d3-130">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
+    >  <span data-ttu-id="3f3d8-129">您可能會公開本機電腦透過網路的安全性風險，藉由參考惡意`UserControl`。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-129">You might expose your local computer to a security risk through the network by referencing a malicious `UserControl`.</span></span> <span data-ttu-id="3f3d8-130">這只會在惡意人士建立破壞性的自訂控制項，且您不小心將它新增至您的專案的情況下需要考量。</span><span class="sxs-lookup"><span data-stu-id="3f3d8-130">This would only be a concern in the case of a malicious person creating a damaging custom control, followed by you mistakenly adding it to your project.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="af2d3-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af2d3-131">See also</span></span>
-- [<span data-ttu-id="af2d3-132">Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="af2d3-132">Windows Forms Controls</span></span>](index.md)
-- [<span data-ttu-id="af2d3-133">排列 Windows Forms 上的控制項</span><span class="sxs-lookup"><span data-stu-id="af2d3-133">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
-- [<span data-ttu-id="af2d3-134">如何：調整 Windows Forms 上的控制項的大小</span><span class="sxs-lookup"><span data-stu-id="af2d3-134">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
-- [<span data-ttu-id="af2d3-135">如何：設定所顯示之文字的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="af2d3-135">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [<span data-ttu-id="af2d3-136">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="af2d3-136">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
+## <a name="see-also"></a><span data-ttu-id="3f3d8-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3f3d8-131">See also</span></span>
+
+- [<span data-ttu-id="3f3d8-132">Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="3f3d8-132">Windows Forms Controls</span></span>](index.md)
+- [<span data-ttu-id="3f3d8-133">排列 Windows Form 上的控制項</span><span class="sxs-lookup"><span data-stu-id="3f3d8-133">Arranging Controls on Windows Forms</span></span>](arranging-controls-on-windows-forms.md)
+- [<span data-ttu-id="3f3d8-134">HOW TO：調整 Windows Forms 的控制項大小</span><span class="sxs-lookup"><span data-stu-id="3f3d8-134">How to: Resize Controls on Windows Forms</span></span>](how-to-resize-controls-on-windows-forms.md)
+- [<span data-ttu-id="3f3d8-135">HOW TO：設定 Windows Forms 控制項所顯示的文字</span><span class="sxs-lookup"><span data-stu-id="3f3d8-135">How to: Set the Text Displayed by a Windows Forms Control</span></span>](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [<span data-ttu-id="3f3d8-136">在 Windows Form 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="3f3d8-136">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)
