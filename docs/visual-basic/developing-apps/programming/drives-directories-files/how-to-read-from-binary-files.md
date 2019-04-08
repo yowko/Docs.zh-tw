@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: e9b30d119a404396e2bf37aa445a420f7823c57b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 88c9952818f6cb94db7b2da7ad44aa0da0eb43d2
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980382"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825049"
 ---
-# <a name="how-to-read-from-binary-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中從二進位檔案讀取
+# <a name="how-to-read-from-binary-files-in-visual-basic"></a>作法：在 Visual Basic 中從二進位檔案讀取
 `My.Computer.FileSystem` 物件提供用來讀取二進位檔案的 `ReadAllBytes` 方法。  
   
 ### <a name="to-read-from-a-binary-file"></a>讀取二進位檔案  
@@ -51,6 +51,7 @@ ms.locfileid: "56980382"
  在應用程式中使用這些資料之前，請先驗證所有輸入值。 檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllBytes%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

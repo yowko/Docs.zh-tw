@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: d00f86c492a7d32344b1067a48c8e53aa2a43426
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761250"
+---
 ### <a name="reflection-objects-can-no-longer-be-passed-from-managed-code-to-out-of-process-dcom-clients"></a>無法再將反映物件從受控程式碼傳遞至跨處理序的 DCOM 用戶端
 
 |   |   |

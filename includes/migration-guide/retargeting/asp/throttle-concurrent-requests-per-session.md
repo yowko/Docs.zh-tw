@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: db8eb017bdf166b0f1a241f5a8f7db9b9430898a
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760209"
+---
 ### <a name="throttle-concurrent-requests-per-session"></a>每一個工作階段的節流閥並行要求數目
 
 |   |   |

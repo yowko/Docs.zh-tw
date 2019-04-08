@@ -8,14 +8,14 @@ helpviewer_keywords:
 - examples [Visual Basic], reading text files
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
-ms.openlocfilehash: 45c96973f8092f8ac1f1588f70e1f4b9e1049af7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 813928fbcf67f269d99d418ab16e202bd19f25fc
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979043"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58836879"
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中從文字檔讀取
+# <a name="how-to-read-from-text-files-in-visual-basic"></a>作法：在 Visual Basic 中從文字檔讀取
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 物件的 `My.Computer.FileSystem` 方法允許您從文字檔讀取。 如果檔案的內容是使用 ASCII 或 UTF-8 之類的編碼方式，則可以指定檔案編碼方式。  
   
  如果您是從含擴充字元的檔案讀取，您將需要指定檔案的編碼方式。  
@@ -59,6 +59,7 @@ ms.locfileid: "56979043"
  在應用程式中使用這些資料之前，請先驗證所有輸入值。 檔案內容可能與預期不同，並從檔案讀取資料的方法會失敗。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.ReadAllText%2A>
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)

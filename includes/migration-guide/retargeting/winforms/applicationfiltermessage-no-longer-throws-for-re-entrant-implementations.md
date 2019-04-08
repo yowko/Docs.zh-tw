@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 8e37007318a55188d44607fd5e4c4f3950c105df
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761018"
+---
 ### <a name="applicationfiltermessage-no-longer-throws-for-re-entrant-implementations-of-imessagefilterprefiltermessage"></a>針對 IMessageFilter.PreFilterMessage 的可重新進入實作，Application.FilterMessage 不會再擲回例外狀況
 
 |   |   |

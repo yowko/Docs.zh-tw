@@ -45,7 +45,7 @@ ms.locfileid: "55674460"
 |---------------|-----------------|
 |`compilerOptions`|選擇性屬性。<br /><br /> 指定編譯的其他編譯器特定引數。 值`compilerOptions`屬性通常詳列於編譯器的編譯器選項主題。|
 |`extension`|必要屬性。<br /><br /> 提供以分號分隔的原始程式檔使用的語言提供者的檔案名稱副檔名清單。 例如，".cs"。|
-|`language`|必要屬性。<br /><br /> 提供語言提供者所支援的語言名稱以分號分隔的清單。 例如，"c#; cs; csharp"。|
+|`language`|必要屬性。<br /><br /> 提供語言提供者所支援的語言名稱以分號分隔的清單。 例如，"C#; cs; csharp"。|
 |`type`|必要屬性。<br /><br /> 指定的語言提供者，包括包含的提供者實作的組件名稱的型別名稱。 型別名稱必須符合中定義的需求[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|
 |`warningLevel`|選擇性屬性。<br /><br /> 指定預設編譯器警告層級;判斷的語言提供者會將編譯警告視為錯誤的層級。|
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9c2a8eca3f4498906cf703ff3b8ffb7336ff7a1b
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761000"
+---
 ### <a name="icontobitmap-successfully-converts-icons-with-png-frames-into-bitmap-objects"></a>Icon.ToBitmap 成功將具有 PNG 畫面格的圖示轉換成點陣圖物件
 
 |   |   |

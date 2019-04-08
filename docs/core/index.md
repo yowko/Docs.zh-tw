@@ -4,12 +4,12 @@ description: .NET Core 是 .NET 的模組化、高效能實作，可用於建立
 author: richlander
 ms.date: 08/01/2018
 ms.custom: updateeachrelease
-ms.openlocfilehash: 62019c5414857ed5eee99a6a60f5b0b183fe25e8
-ms.sourcegitcommit: 3b9b7ae6771712337d40374d2fef6b25b0d53df6
+ms.openlocfilehash: 79a0c09074159160dd01b0c7970612f7058cc3fc
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54030278"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920619"
 ---
 # <a name="net-core-guide"></a>.NET Core 指南
 
@@ -21,7 +21,7 @@ ms.locfileid: "54030278"
 
 ## <a name="download-net-core-22"></a>下載 .NET Core 2.2
 
-下載 [.NET Core  2.2 SDK](https://www.microsoft.com/net/download) 以在您的 Windows、macOS 或 Linux 電腦上嘗試 .NET Core。 若偏好使用 Docker 容器，請瀏覽 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/)。
+下載 [.NET Core  2.2 SDK](https://www.microsoft.com/net/download) 以在您的 Windows、macOS 或 Linux 電腦上嘗試 .NET Core。 若您想要使用 Docker 容器，請瀏覽 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/)。
 
 若您要尋找另一個 .NET Core 版本，所有 .NET Core 版本都可以在 [.NET Core 下載 ](https://www.microsoft.com/net/download/archives)找到。
 

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: eb3cfdfd39444536f423b65166a3413db67a0e01
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761261"
+---
 ### <a name="item-scrolling-a-flat-list-with-items-of-different-pixel-height"></a>在具有不同像素高度之項目的簡單列表中進行項目捲動
 
 |   |   |

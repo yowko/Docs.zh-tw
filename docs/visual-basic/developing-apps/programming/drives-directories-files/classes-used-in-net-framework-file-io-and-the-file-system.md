@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - file I/O classes
 ms.assetid: 4a5ca924-eea8-4a95-a5f0-6ac10de276a3
-ms.openlocfilehash: 9e84ac90054e4ac3d32bb436fc0756248e84fcd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fdbeb2b77e88f144bc541d01ee2e904f8a84678
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705319"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832524"
 ---
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>用於 .NET Framework 檔案 I/O 和檔案系統的類別 (Visual Basic)
 下列各表列出 .NET Framework 檔案 I/O 的常用類別、分類為檔案 I/O 類別的檔案、用於建立資料流的類別，以及用來讀取和寫入至資料流的類別。  
@@ -57,6 +57,7 @@ ms.locfileid: "54705319"
 |<xref:System.IO.StringWriter?displayProperty=nameWithType>|將字元寫入至 `String`。 輸出可以是任何編碼的資料流或 `String`。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [撰寫資料流](../../../../standard/io/composing-streams.md)
 - [檔案和資料流 I/O](../../../../standard/io/index.md)
 - [Asynchronous File I/O](../../../../standard/io/asynchronous-file-i-o.md)

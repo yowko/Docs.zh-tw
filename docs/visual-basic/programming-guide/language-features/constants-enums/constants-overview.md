@@ -40,7 +40,7 @@ ms.locfileid: "58841274"
   
 |定義|詞彙|  
 |---|---|  
-|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|列出預先定義的 Visual basic 的常數。|  
+|[常數和列舉](../../../../visual-basic/language-reference/constants-and-enumerations.md)|列出預先定義的 Visual Basic 的常數。|  
 |[Const 陳述式](../../../../visual-basic/language-reference/statements/const-statement.md)|描述`Const`陳述式和它的用法。|  
 |[Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)|描述`Option Strict`陳述式和它的用法。|  
   

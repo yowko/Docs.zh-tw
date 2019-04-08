@@ -25,7 +25,7 @@ Visual Basic 提供`Join`和`Group Join`查詢子句可讓您結合多個集合�
   
 #### <a name="to-create-a-project-that-contains-sample-data-and-types"></a>若要建立包含範例資料和類型的專案  
   
-1.  若要執行本主題中的範例，請開啟 Visual Studio，並加入新的 Visual Basic 主控台應用程式專案。 按兩下建立 Visual basic 的 Module1.vb 檔案。  
+1.  若要執行本主題中的範例，請開啟 Visual Studio，並加入新的 Visual Basic 主控台應用程式專案。 按兩下建立 Visual Basic 的 Module1.vb 檔案。  
   
 2.  在本主題使用範例`Person`和`Pet`類型和下列程式碼範例中的資料。 此程式碼複製到預設`Module1`Visual Basic 所建立的模組。  
   

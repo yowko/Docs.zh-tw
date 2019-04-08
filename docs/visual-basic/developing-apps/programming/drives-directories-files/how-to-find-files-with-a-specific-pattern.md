@@ -6,14 +6,14 @@ helpviewer_keywords:
 - pattern matching
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
-ms.openlocfilehash: 879f7a2335e3c4c31b0a7ddd3d303486d8b95a22
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e4d40c4ad3a694b3f7e830604edf94d90cb4c395
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970463"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825322"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>HOW TO：在 Visual Basic 中尋找具有特定模式的檔案
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>作法：在 Visual Basic 中尋找具有特定模式的檔案
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。 如果您想要在搜尋中包含子目錄，請將 `searchType` 參數設定為 `SearchOption.SearchAllSubDirectories`。  
   
  如果找不到符合指定模式的檔案，會傳回空的集合。  
@@ -47,6 +47,7 @@ ms.locfileid: "56970463"
 -   使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [疑難排解：讀取和寫入文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)

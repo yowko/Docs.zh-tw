@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 130c26b7d135db232eb40a2c466aa3bdb2481ace
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761316"
+---
 ### <a name="persian-calendar-now-uses-the-hijri-solar-algorithm"></a>波斯曆現在會使用回教陽曆演算法
 
 |   |   |

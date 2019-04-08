@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: f7f8cec632965a75ac262fd6f1853a954d02ebec
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760219"
+---
 ### <a name="accessibility-improvements-in-windows-workflow-foundation-wf-workflow-designer"></a>Windows Workflow Foundation (WF) 工作流程設計工具中的協助工具改善
 
 |   |   |

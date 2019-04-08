@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a3f54bec98f220af48e932e6485d06732a4c6ddd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761254"
+---
 ### <a name="calling-attributegetcustomattributes-on-an-indexer-property-no-longer-throws-ambiguousmatchexception-if-the-ambiguity-can-be-resolved-by-indexs-type"></a>如果索引類型可解決語意模糊，在索引子屬性上呼叫 Attribute.GetCustomAttributes 不會再擲回 AmbiguousMatchException
 
 |   |   |

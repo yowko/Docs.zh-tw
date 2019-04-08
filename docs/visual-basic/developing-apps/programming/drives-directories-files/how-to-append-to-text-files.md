@@ -1,17 +1,17 @@
 ---
-title: HOW TO：在 Visual Basic 中附加至文字檔
+title: 作法：在 Visual Basic 中附加至文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
 - I/O [Visual Basic], My.Computer.FileSystem.WriteAllText method
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
-ms.openlocfilehash: d7518493cca62018ccda9659e977333184888ea7
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83f34e9cb669e8d2e841b13875b5237626164dd9
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968682"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819836"
 ---
 # <a name="how-to-append-to-text-files-in-visual-basic"></a>作法：在 Visual Basic 中附加至文字檔
 您可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法來附加至文字檔，方法是指定將 `append` 參數設定為 `True`。  
@@ -42,6 +42,7 @@ ms.locfileid: "56968682"
 -   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

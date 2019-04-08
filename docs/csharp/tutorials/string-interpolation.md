@@ -3,16 +3,16 @@ title: C# 中的字串插補
 description: 了解如何使用字串插補，在 C# 的結果字串中包含已格式化的運算式結果。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a637937de2f3cff7f5425f47c223a56efa8d0c2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976053"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920710"
 ---
 # <a name="string-interpolation-in-c"></a>C\# 中的字串插補
 
-本教學課程會示範如何使用[字串插補](../language-reference/tokens/interpolated.md)進行格式化，並將運算式結果包含在結果字串中。 這些範例假設您熟悉 C# 基本概念和 .NET 類型格式設定。 如果您不熟悉字串插補或 .NET 類型格式設定，請先參閱[互動式字串插補教學課程](../tutorials/intro-to-csharp/interpolated-strings.yml)。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)主題。
+本教學課程會示範如何使用[字串插補](../language-reference/tokens/interpolated.md)進行格式化，並將運算式結果包含在結果字串中。 這些範例假設您熟悉 C# 基本概念和 .NET 類型格式設定。 如果您不熟悉字串插補或 .NET 類型格式設定，請先參閱[互動式字串插補教學課程](exploration/interpolated-strings.yml)。 如需在 .NET 中格式化類型的詳細資訊，請參閱[在 .NET 中格式化類型](../../standard/base-types/formatting-types.md)主題。
 
 [!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
 

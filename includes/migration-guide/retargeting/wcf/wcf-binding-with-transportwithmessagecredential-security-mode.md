@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ce7e2db3f74ec24f47b1c224335451c997c4c349
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760971"
+---
 ### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>使用 TransportWithMessageCredential 安全性模式的 WCF 繫結
 
 |   |   |

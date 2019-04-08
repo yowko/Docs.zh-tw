@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 649e4456ef6a11903ab1b390baf56583f31f5562
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760796"
+---
 ### <a name="wpf-textboxpasswordbox-text-selection-does-not-follow-system-colors"></a>WPF 文字方塊/PasswordBox 文字選取範圍不遵循系統色彩
 
 |   |   |

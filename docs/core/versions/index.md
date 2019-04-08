@@ -4,8 +4,13 @@ description: 此文章說明 .NET Core SDK 與 Runtime 如何進行版本設定 
 author: bleroy
 ms.date: 07/26/2018
 ms.custom: seodec18
+ms.openlocfilehash: e060eac3a63ff869a2fe51fae0166b75329fcb49
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921282"
 ---
-
 # <a name="overview-of-how-net-core-is-versioned"></a>.NET Core 版本設定概觀
 
 .NET Core 參考 .NET Core Runtime 與 .NET Core SDK，它包含開發應用程式所需的工具。 .NET Core SDK 是設計來搭配任何舊版 .NET Core Runtime 使用的。 此文章說明執行階段與 SDK 版本策略。 您可以在介紹 [.NET Standard](../../standard/net-standard.md#net-implementation-support) 的文章中找到 .NET Standard 版本號碼的解釋。
@@ -87,7 +92,7 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 .NET Standard 是由 .NET 參考組件所組成。 每個平台都有多個特定實作。 參考組件包含 .NET API 的定義，這是給定 .NET Standard 版本的一部分。 每個實作都履行特定平台上的 .NET Standard 合約。 您可以在《.NET 指南》中的[.NET Standard](../../standard/net-standard.md) 一文深入了解 .NET Standard。
 
-.NET Standard 參考組件使用a `MAJOR.MINOR` 版本控制配置。 `PATCH` 對 .NET Standard 而言不實用，因為它只公開 API 規格 (無實作)，而且根據定義，對 API 所做的任何變更都會代表未來集合中的變更，亦即新的 `MINOR` 版本。
+.NET Standard 參考組件使用a `MAJOR.MINOR` 版本控制配置。 `PATCH` 層級對 .NET Standard 而言不實用，因為其只公開 API 規格 (無實作)，而且根據定義，對 API 進行的任何變更都會代表未來集合中的變更，亦即新的 `MINOR` 版本。
 
 可能可以更新每個平台上的實作，通常是做為平台發行版本的一部分，因此對在該平台上使用 .NET Standard 的開發人員而言並非顯而易見。
 
@@ -101,8 +106,8 @@ MAJOR.MINOR.PATCH[-PRERELEASE-BUILDNUMBER]
 
 ## <a name="see-also"></a>另請參閱
 
-- [目標架構](../../standard/frameworks.md)
+- [目標 Framework](../../standard/frameworks.md)
 - [.NET Core 發佈封裝](../build/distribution-packaging.md)
-- [.NET Core 支援週期資料表](https://www.microsoft.com/net/core/support)
-- [.NET Core 2+ Version Binding](https://github.com/dotnet/designs/issues/3) (.NET Core 2+ 版本繫結)
-- [.NET Core 的 Docker 映像](https://hub.docker.com/r/microsoft/dotnet/) \(英文\)
+- [.NET Core 支援週期資料頁](https://www.microsoft.com/net/core/support)
+- [.NET Core 2+ Version Binding (.NET Core 2+ 版本繫結)](https://github.com/dotnet/designs/issues/3)
+- [.NET Core 的 Docker 映像](https://hub.docker.com/_/microsoft-dotnet-core/)

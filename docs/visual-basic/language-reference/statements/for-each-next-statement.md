@@ -142,7 +142,7 @@ Next [ element ]
   
  **修改集合。** 所傳回的列舉值物件<xref:System.Collections.IEnumerable.GetEnumerator%2A>通常不會讓您新增、 刪除、 取代或重新排列任何項目來變更集合。 如果您已起始之後，變更集合`For Each`...`Next`迴圈 」 列舉值物件就會變成無效，和下一步 嘗試存取的項目，會造成<xref:System.InvalidOperationException>例外狀況。  
   
- 不過，修改這個封鎖不取決於 Visual basic，而是只要實作<xref:System.Collections.IEnumerable>介面。 它是可以實作`IEnumerable`反覆項目期間，修改允許的方式。 如果您正在考慮進行這類動態修改，請確定您了解特性`IEnumerable`對您使用的集合物件的實作。  
+ 不過，修改這個封鎖不取決於 Visual Basic，而是只要實作<xref:System.Collections.IEnumerable>介面。 它是可以實作`IEnumerable`反覆項目期間，修改允許的方式。 如果您正在考慮進行這類動態修改，請確定您了解特性`IEnumerable`對您使用的集合物件的實作。  
   
  **修改集合的項目。** <xref:System.Collections.IEnumerator.Current%2A>列舉值物件的屬性是[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)，並傳回每個集合項目的本機副本。 這表示您無法修改項目本身中`For Each`...`Next`迴圈。 您進行任何修改會影響本機複本從`Current`而不反映回基礎的集合。 不過，如果項目是參考型別，您可以修改它所指向的執行個體的成員。 下列範例會修改`BackColor`的每個成員`thisControl`項目。 不過，您不能修改`thisControl`本身。  
   

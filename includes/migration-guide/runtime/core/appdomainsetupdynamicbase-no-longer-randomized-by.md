@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: ab7731d34aad5b6b6481f13ba11b778393e2cac2
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761304"
+---
 ### <a name="appdomainsetupdynamicbase-is-no-longer-randomized-by-userandomizedstringhashalgorithm"></a>AppDomainSetup.DynamicBase 不再由 UseRandomizedStringHashAlgorithm 隨機化
 
 |   |   |

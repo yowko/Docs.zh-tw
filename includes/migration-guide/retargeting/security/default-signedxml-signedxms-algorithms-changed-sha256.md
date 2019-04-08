@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 12ba683655319e42368f9f2a6cf7bf70e1dbd77d
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760208"
+---
 ### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>預設 SignedXML 和 SignedXMS 演算法變更為 SHA256
 
 |   |   |

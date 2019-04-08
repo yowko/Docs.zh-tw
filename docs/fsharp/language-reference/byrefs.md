@@ -106,7 +106,7 @@ let f (x: inref<SomeStruct>) = x.SomeField
 
 目的`outref<'T>`是指出只應該從讀取指標。 意外`outref<'T>`讀取基礎的允許值，儘管其名稱。 這是基於相容性。 語意上來說，`outref<'T>`沒什麼兩樣`byref<'T>`。
 
-### <a name="interop-with-c"></a>使用 c# 的 interop\#
+### <a name="interop-with-c"></a>使用 C# 的 interop\#
 
 C# 支援`in ref`並`out ref`關鍵字，除了`ref`傳回。 下表顯示F#會解譯項目C#發出：
 

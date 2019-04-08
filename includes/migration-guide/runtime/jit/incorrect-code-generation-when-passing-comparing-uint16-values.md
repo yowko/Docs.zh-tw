@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b23909c53b451b4b18bf0ccdf59f51e7c8e3114f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761444"
+---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>傳遞和比較 UInt16 值時，產生不正確的程式碼
 
 |   |   |

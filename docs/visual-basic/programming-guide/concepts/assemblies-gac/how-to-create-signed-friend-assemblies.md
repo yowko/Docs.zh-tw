@@ -75,7 +75,7 @@ ms.locfileid: "58836736"
     vbc -keyfile:FriendAssemblies.snk -r:friend_signed_A.dll friend_signed_B.vb  
     ```  
   
-     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`-out`編譯器選項。 如需詳細資訊，請參閱 < [-(Visual basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
+     編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您可以使用，以明確地設定組件`-out`編譯器選項。 如需詳細資訊，請參閱 < [-(Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)。  
   
 7.  執行 friend_signed_B.exe 檔案。  
   

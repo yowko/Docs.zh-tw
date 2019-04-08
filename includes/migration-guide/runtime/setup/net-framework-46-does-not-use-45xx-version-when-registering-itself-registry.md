@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 08c16f261338148619de2e484c73046b9d9a6bfe
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761310"
+---
 ### <a name="the-net-framework-46-does-not-use-a-45xx-version-when-registering-itself-in-the-registry"></a>.NET Framework 4.6 在登錄中註冊本身時不使用 4.5.x.x 版本
 
 |   |   |

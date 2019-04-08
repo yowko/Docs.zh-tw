@@ -64,7 +64,7 @@ ms.locfileid: "58837308"
   
  在上述範例中，沒有額外的逗號是為了保留位置省略`age`引數，因為`birth`依名稱傳遞。  
   
-在 Visual basic 15.5 之前的版本，當您在混合位置和名稱、 位置引數所提供引數必須放在第一次。 一旦您依名稱提供引數，任何剩餘的引數必須全部是依名稱傳遞。  例如，下列呼叫來`Display`方法會顯示編譯器錯誤[BC30241:具名引數必須是](../../../misc/bc30241.md)。
+在 Visual Basic 15.5 之前的版本，當您在混合位置和名稱、 位置引數所提供引數必須放在第一次。 一旦您依名稱提供引數，任何剩餘的引數必須全部是依名稱傳遞。  例如，下列呼叫來`Display`方法會顯示編譯器錯誤[BC30241:具名引數必須是](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 

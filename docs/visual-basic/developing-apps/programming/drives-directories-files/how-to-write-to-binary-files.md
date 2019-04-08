@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: 9e83029b7b5fd635ff08e608760b6c64c7945da0
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: e8aa1c96766fc1b63326415c879e9821dc1de7f6
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965926"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58833681"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>作法：在 Visual Basic 中寫入二進位檔案
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> 方法會將資料寫入二進位檔案。 如果 `append` 參數為 `True`，它會將資料附加至檔案；若否，則會覆寫檔案中的資料。  
@@ -42,5 +42,6 @@ ms.locfileid: "56965926"
 -   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A>
 - [如何：將文字寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-write-text-to-files.md)

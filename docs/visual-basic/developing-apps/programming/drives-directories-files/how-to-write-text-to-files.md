@@ -7,14 +7,14 @@ helpviewer_keywords:
 - writing to files [Visual Basic]
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
-ms.openlocfilehash: 7862e9b471808c2d01771acacefef15bdb31dda5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f4d6c3ef5ba6d8aa286e1ae2bd8a944aacdad096
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975065"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828221"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中將文字寫入檔案
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>作法：在 Visual Basic 中將文字寫入檔案
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可用來將文字寫入檔案。 如果指定的檔案不存在，則會建立該檔案。  
   
 ## <a name="procedure"></a>程序  
@@ -55,6 +55,7 @@ ms.locfileid: "56975065"
  如果要在部分信任內容中執行，則程式碼可能會因權限不足而擲回例外狀況。 如需詳細資訊，請參閱[程式碼存取安全性基本概念](../../../../framework/misc/code-access-security-basics.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - [如何：從文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-text-files.md)

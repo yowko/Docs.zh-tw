@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Unicode, file encoding
 - file encoding
 ms.assetid: ea2c5f5f-bbb1-4150-9928-b9951fa6bc57
-ms.openlocfilehash: f7ccd47b8778aa3a374ee102b39038e8df475e9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c22e8046a8b88890f25bc6b671825eb6d68ec6b8
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731916"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58813999"
 ---
 # <a name="file-encodings-visual-basic"></a>檔案編碼方式 (Visual Basic)
 檔案編碼方式，也稱為字元編碼方式，指定在處理文字時如何代表字元。 就可以或無法處理的語言字元部分而言，可能會偏好使用某種編碼，但是通常偏好使用 Unicode。  
@@ -36,5 +36,6 @@ ms.locfileid: "54731916"
 |<xref:System.Text.UTF8Encoding>|代表 Unicode 字元的 UTF-8 編碼方式。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [從檔案讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/reading-from-files.md)
 - [寫入檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/writing-to-files.md)

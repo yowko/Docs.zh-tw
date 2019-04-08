@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9500907c6a1ba5b27008dcad4c9b47aef9092106
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760611"
+---
 ### <a name="ribbongroup-background-is-set-to-transparent-in-localized-builds"></a>RibbonGroup 背景在當地語系化組建中設定為透明
 
 |   |   |

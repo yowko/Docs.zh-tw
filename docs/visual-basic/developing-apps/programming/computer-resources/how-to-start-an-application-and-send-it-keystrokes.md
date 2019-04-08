@@ -7,14 +7,14 @@ helpviewer_keywords:
 - processes, starting and sending keystrokes
 - SendKeys.SendWait examples
 ms.assetid: f1303184-fce4-44fb-88b4-aac5f42d5d77
-ms.openlocfilehash: f130429e5b0964dc8680441fb83cb06d45904a69
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 9519fd85177d5d2adf97b54652c19330954edadf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966199"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815962"
 ---
-# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>HOW TO：啟動應用程式並將按鍵輸入傳送至該應用程式 (Visual Basic)
+# <a name="how-to-start-an-application-and-send-it-keystrokes-visual-basic"></a>作法：啟動應用程式並將按鍵輸入傳送至該應用程式 (Visual Basic)
 這個範例會使用 `Shell` 函式來啟動小算盤應用程式，然後使用 `My.Computer.Keyboard.SendKeys` 方法來傳送按鍵輸入，以將兩個數字相乘。  
   
 ## <a name="example"></a>範例  
@@ -27,6 +27,7 @@ ms.locfileid: "56966199"
  呼叫 `Shell` 函式需要完全信任 (<xref:System.Security.SecurityException> 類別)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Devices.Keyboard.SendKeys%2A>
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:Microsoft.VisualBasic.Interaction.AppActivate%2A>

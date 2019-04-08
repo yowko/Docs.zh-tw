@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: b7f31060fd845f7618479fd064350b3cb5532fd3
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58761006"
+---
 ### <a name="xmlwriter-throws-on-invalid-surrogate-pairs"></a>無效的代理字組會擲回 XmlWriter
 
 |   |   |

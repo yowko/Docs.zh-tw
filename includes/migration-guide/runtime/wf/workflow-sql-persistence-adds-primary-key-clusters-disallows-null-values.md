@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9e98d3bca645cf82bf4fe99160dd096b0e274ef7
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760405"
+---
 ### <a name="workflow-sql-persistence-adds-primary-key-clusters-and-disallows-null-values-in-some-columns"></a>工作流程 SQL 持續性會新增叢集主索引鍵，且在某些資料行中不允許有 Null 值
 
 |   |   |

@@ -105,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會指示編譯器輸出 DLL，而不是 EXE 檔案。 [-(Visual basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項，後面接著檔案名稱用來指定 DLL 檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
+ [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會指示編譯器輸出 DLL，而不是 EXE 檔案。 [-(Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項，後面接著檔案名稱用來指定 DLL 檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
   
  若要建立可執行檔 `TestCode.exe`，請使用下列命令列：  
   

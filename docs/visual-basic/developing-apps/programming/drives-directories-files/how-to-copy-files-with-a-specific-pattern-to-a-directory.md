@@ -7,14 +7,14 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 19d607b1a132cd84aa2763b8e7b4c642f868abcd
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 184742ef03343eaff644c0f3f803e2acec8854eb
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968773"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58837100"
 ---
-# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將具有特定模式的檔案複製到目錄
+# <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>作法：在 Visual Basic 中將具有特定模式的檔案複製到目錄
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。  
   
  如果找不到相符的檔案，則會傳回空集合。  
@@ -58,6 +58,7 @@ ms.locfileid: "56968773"
 -   使用者缺乏必要的使用權限來檢視路徑 (<xref:System.Security.SecurityException>)。 使用者缺乏必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
 - [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
