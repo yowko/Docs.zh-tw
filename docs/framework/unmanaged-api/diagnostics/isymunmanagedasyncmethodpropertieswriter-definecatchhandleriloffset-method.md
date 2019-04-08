@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3d000e61736f3250c677014cce50a2b7dcdecf1b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 923c85a9dff11753a338fcfd3673d3590fca607a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196745"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset 方法
 設定的 IL 偏移編譯器所產生的 catch 處理常式包裝非同步方法。  
@@ -35,4 +35,5 @@ HRESULT DefineCatchHandlerILOffset(    [in] ULONG32 catchHandlerOffset);
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedAsyncMethodPropertiesWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)

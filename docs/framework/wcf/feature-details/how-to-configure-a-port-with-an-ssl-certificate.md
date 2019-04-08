@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, security mode
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
-ms.openlocfilehash: 3aa32e54643ffb8e2e4e40f730ab3f5c084b8cd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 533c329bed7b1cb9b07805032c839d3f5ff10634
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521709"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139811"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>HOW TO：使用 SSL 憑證設定連接埠
 建立自我裝載的 Windows Communication Foundation (WCF) 服務使用時<xref:System.ServiceModel.WSHttpBinding>類別使用傳輸安全性的中，您也必須使用 X.509 憑證設定連接埠。 如果您沒有建立自我裝載的服務，可以將您的服務裝載在 Internet Information Services (IIS) 上。 如需詳細資訊，請參閱 < [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)。  
@@ -55,9 +55,9 @@ ms.locfileid: "54521709"
   
 ### <a name="to-get-a-certificates-thumbprint"></a>若要取得憑證的指紋  
   
-1.  使用憑證 MMC 嵌入式管理單元，尋找目的為用戶端驗證的 X.509 憑證。 如需詳細資訊，請參閱[＜How to：使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+1.  使用憑證 MMC 嵌入式管理單元，尋找目的為用戶端驗證的 X.509 憑證。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
-2.  存取憑證的指紋。 如需詳細資訊，請參閱[＜How to：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
+2.  存取憑證的指紋。 如需詳細資訊，請參閱[如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)。  
   
 3.  將憑證的指紋複製到文字編輯器中，例如「記事本」。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "54521709"
   
 ### <a name="to-delete-an-ssl-certificate-from-a-port-number"></a>從連接埠號碼刪除 SSL 憑證  
   
-1.  使用 HttpCfg.exe 或 Netsh.exe 工具來查看電腦上所有繫結的連接埠和指紋。 若要將資訊列印至磁碟，請使用重新導向字元 ">"，如下列範例所示。  
+1.  使用 HttpCfg.exe 或 Netsh.exe 工具來查看電腦上所有繫結的連接埠和指紋。 若要列印至磁碟的資訊，請使用 重新導向字元">"，如下列範例所示。  
   
     ```  
     httpcfg query ssl>myMachinePorts.txt  
@@ -130,4 +130,5 @@ ms.locfileid: "54521709"
  [!code-vb[c_WsHttpService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wshttpservice/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [HTTP 傳輸安全性](../../../../docs/framework/wcf/feature-details/http-transport-security.md)

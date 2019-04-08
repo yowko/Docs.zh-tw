@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: a236289939b9355e961ce1bfc9a7e0ff5349a95a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197837"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的調整大小選項
 <xref:System.Windows.Forms.DataGridView> 資料列、 資料行和標頭可以變更大小，因為許多不同的項目。 下表顯示這些項目。  
@@ -128,6 +128,7 @@ ms.locfileid: "57717904"
  調整大小屬性和方法所使用的列舉型別有類似的值，以內容為基礎的調整大小。 使用這些值，您可以限制哪些儲存格用來計算的慣用的大小。 針對所有的調整大小列舉型別，是指顯示的資料格的名稱的值會限制其顯示的資料列中資料格計算。 不包括資料列是以避免對效能帶來負面影響，當您正在使用的資料列數量龐大時很有用。 您也可以限制資料格的值，在標頭或非行首儲存格的計算。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A?displayProperty=nameWithType>
@@ -154,6 +155,6 @@ ms.locfileid: "57717904"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料行填入模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)
-- [如何：設定 Windows Forms DataGridView 控制項的縮放模式](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)
+- [調整 Windows Form DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [在 Windows Form DataGridView 控制項中的資料行填入模式](column-fill-mode-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：設定 Windows Forms DataGridView 控制項的調整大小模式](how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control.md)

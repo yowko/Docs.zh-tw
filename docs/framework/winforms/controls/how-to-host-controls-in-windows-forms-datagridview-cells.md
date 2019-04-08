@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms DataGridView 儲存格中的主控制項
+title: HOW TO：Windows Forms DataGridView 儲存格的主控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], hosting controls in cells
 - cells [Windows Forms], hosting controls
 ms.assetid: e79a9d4e-64ec-41f5-93ec-f5492633cbb2
-ms.openlocfilehash: 2887812e1f357283ee1a820251e4b67bbd85056c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 008b6da56c3428d0edcc44778b4d3bef1a52c443
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194197"
 ---
-# <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>HOW TO：在 Windows Forms DataGridView 儲存格中的主控制項
+# <a name="how-to-host-controls-in-windows-forms-datagridview-cells"></a>HOW TO：Windows Forms DataGridView 儲存格的主控制項
 <xref:System.Windows.Forms.DataGridView> 控制項提供許多資料行類型，讓使用者以各種不同的方式輸入和編輯值。 如果這些資料行類型不符合您輸入資料的需求，則您仍可用裝載您所選擇的控制項之儲存格來建立自己的資料行類型。 若要這樣做，您必須定義衍生自 <xref:System.Windows.Forms.DataGridViewColumn> 和 <xref:System.Windows.Forms.DataGridViewCell> 的類別。 您也必須定義衍生自 <xref:System.Windows.Forms.Control> 的類別，並實作 <xref:System.Windows.Forms.IDataGridViewEditingControl> 介面。  
   
  下列程式碼範例示範如何建立行事曆資料行。 這個資料行的儲存格會在一般文字方塊中的儲存格顯示日期，但是當使用者編輯儲存格時，<xref:System.Windows.Forms.DateTimePicker> 控制項就會出現。 若要避免再次實作文字方塊顯示功能，則 `CalendarCell` 類別要衍生自 <xref:System.Windows.Forms.DataGridViewTextBoxCell> 類別，而不是直接繼承 <xref:System.Windows.Forms.DataGridViewCell> 類別。  
@@ -36,12 +36,13 @@ ms.locfileid: "57703431"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
 - <xref:System.Windows.Forms.DataGridViewCell>
 - <xref:System.Windows.Forms.DataGridViewTextBoxCell>
 - <xref:System.Windows.Forms.IDataGridViewEditingControl>
 - <xref:System.Windows.Forms.DateTimePicker>
-- [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)
+- [自訂 Windows Form DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)
 - [DataGridView 控制項架構](datagridview-control-architecture-windows-forms.md)
-- [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)

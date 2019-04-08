@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: befa74f02ccb0dde4448f36c0698feebaf6201ce
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195282"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 會設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 時使用同盟驗證透過 WS-同盟通訊協定。 會設定<xref:System.Security.Claims.ClaimsAuthorizationManager>使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供的宣告型存取控制。  
@@ -92,6 +92,7 @@ ms.locfileid: "55286399"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfiguration%2A?displayProperty=nameWithType>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application configuration [.NET Framework]
 - assemblies [.NET Framework], specifying location
 ms.assetid: 1cb92bd7-6bab-44cf-8fd3-36303ce84fea
-ms.openlocfilehash: 328fe08872a2b57d0bdf87ea9be9224795ca9ad9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: f7d09e315f2ccc7ecdcf22719ca6dce1ee1411b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186286"
 ---
 # <a name="specifying-an-assemblys-location"></a>指定組件的位置
 有兩種方式可指定組件的位置：  
@@ -66,6 +66,7 @@ ms.locfileid: "55825403"
  **Bin**屬性包含執行階段應該搜尋組件的目錄。 如果應用程式位於 C:\Program Files\MyApp，執行階段會尋找組件不會在 C:\Program Files\MyApp\Bin、 C:\Program Files\MyApp\Bin2\Subbin 和 C:\Program Files\MyApp\Bin3 中指定的程式碼基底。 中指定的目錄**Bin**必須是應用程式基底目錄的子目錄。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Common Language Runtime 中的組件](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)
 - [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

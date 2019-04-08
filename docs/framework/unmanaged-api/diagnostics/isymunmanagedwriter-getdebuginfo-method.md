@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ce74b043db67fa1086724dd76001935f9c1c0498
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 41d96c6d2024dbc3cab669f2dba2f99faef89f4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074244"
 ---
 # <a name="isymunmanagedwritergetdebuginfo-method"></a>ISymUnmanagedWriter::GetDebugInfo 方法
 傳回的資訊讓編譯器在可攜式執行檔 (PE) 檔案標頭寫入偵錯目錄項目所需。 符號寫入器填寫所有欄位，除了`TimeDateStamp`和`PointerToRawData`。 （編譯器會負責適當地設定這兩個欄位）。  
@@ -60,4 +60,5 @@ HRESULT GetDebugInfo(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
