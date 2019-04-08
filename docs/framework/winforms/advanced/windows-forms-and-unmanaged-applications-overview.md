@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], about ActiveX controls
 - Windows Forms, interop
 ms.assetid: 0a26d99d-8135-4895-8760-c9a2b5f67f14
-ms.openlocfilehash: cb7df844458be083adefa16421a7088bd1e74893
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 63631378911a9ba95713e68fb19d8d08176c7562
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195640"
 ---
 # <a name="windows-forms-and-unmanaged-applications-overview"></a>Windows Form 和 Unmanaged 應用程式概觀
 伴隨著某些注意事項，Windows Form 應用程式和控制項能與 Unmanaged 應用程式交互操作。 下列各節描述 Windows Form 應用程式和控制項支援及不支援的案例和組態。  
@@ -47,7 +47,7 @@ ms.locfileid: "57717930"
  應用程式的訊息迴圈是一種內部程式迴圈，它從執行緒訊息佇列擷取訊息並轉譯，然後傳送到應用程式以進行處理。 Windows Form 訊息迴圈不具有和舊版應用程式 (例如 Visual Basic 6.0 應用程式和 MFC 應用程式) 提供的訊息迴圈相同的架構。 張貼至訊息迴圈的視窗訊息可能以和 Windows Form 所預期的不同方式處理。 因此，可能會發生未預期的行為。 某些按鍵組合可能無法運作，或是某些滑鼠活動可能無法運作，或者可能不會如預期般引發某些事件。  
   
 ## <a name="resolving-interoperability-issues"></a>解決互通性問題  
- 藉由顯示使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法建立之 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上的表單，您可解決這些問題。  
+ 藉由顯示使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法建立之 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 訊息迴圈上的表單，您可解決這些問題。  
   
  若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行。 若要執行此工作，請使用下列的其中一個方法：  
   
@@ -56,13 +56,14 @@ ms.locfileid: "57717930"
 -   在新的執行緒上顯示每個 Windows Form。 如需詳細資訊，請參閱[如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)
+
+- [Windows Form 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
 - [COM 互通性範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/cxcz83xf(v=vs.90))
-- [Aximp.exe (Windows Forms ActiveX 控制項匯入工具)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
+- [Aximp.exe (Windows Form ActiveX 控制項匯入工具)](../../tools/aximp-exe-windows-forms-activex-control-importer.md)
 - [將 .NET Framework 元件公開給 COM](../../interop/exposing-dotnet-components-to-com.md)
 - [封裝 COM 的組件](../../interop/packaging-an-assembly-for-com.md)
 - [向 COM 註冊組件](../../interop/registering-assemblies-with-com.md)
-- [如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)
-- [如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)
+- [HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)

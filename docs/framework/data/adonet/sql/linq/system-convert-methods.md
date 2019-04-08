@@ -2,15 +2,15 @@
 title: System.Convert 方法
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
-ms.openlocfilehash: c3b8c7105578c57547b79bc95b633bcc6449a0ae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d98d159c24e1a47723aeb07a9654fe22b1d9464
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198214"
 ---
 # <a name="systemconvert-methods"></a>System.Convert 方法
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列 <xref:System.Convert> 方法。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列<xref:System.Convert>方法。  
   
 -   具有 <xref:System.IFormatProvider> 參數的版本。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54591707"
   
     -   `public static <Type2> To<Type2>(<Type1> value);` 其中  
   
-         `Type1` 和 `Type2` 各自為 `sbyte`、`uint`、`ulong` 或 `ushort`。  
+         `Type1` 並`Type2`各自`sbyte`， `uint`， `ulong`，或`ushort`。  
   
     -   C#:   
   
@@ -49,4 +49,5 @@ ms.locfileid: "54591707"
     -   <xref:System.Convert.ChangeType%2A>  
   
 ## <a name="see-also"></a>另請參閱
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
+- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

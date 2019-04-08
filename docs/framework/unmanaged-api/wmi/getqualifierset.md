@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0b35a901586a4e0951b9915330f974dc48e931c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 75bf52fbf9552dc464d9c646f0a2b1bc01cf89c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632175"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193092"
 ---
 # <a name="getqualifierset-function"></a>GetQualifierSet 函式
 擷取類別執行個體或類別定義的限定詞集合。
@@ -47,7 +47,7 @@ HRESULT GetQualifierSet (
 [in]指標[IWbemClassObject](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemclassobject)執行個體。
 
 `ppQualSet`  
-[out]接收的介面指標，可讓您存取類別物件的限定詞。 `ppQualSet` 不可以是 `null`。 如果發生錯誤，不會傳回新的物件，而且指標將處於未修改。 
+[out]接收的介面指標，可讓您存取類別物件的限定詞。 `ppQualSet` 不能是`null`。 如果發生錯誤，不會傳回新的物件，而且指標將處於未修改。 
 
 ## <a name="return-value"></a>傳回值
 
@@ -72,7 +72,8 @@ HRESULT GetQualifierSet (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

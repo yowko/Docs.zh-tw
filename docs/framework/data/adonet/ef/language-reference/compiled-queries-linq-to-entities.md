@@ -1,18 +1,18 @@
 ---
-title: 已編譯的查詢 (LINQ to Entities)
+title: 已編譯查詢 (LINQ to Entities)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8025ba1d-29c7-4407-841b-d5a3bed40b7a
-ms.openlocfilehash: d261418136cfc799e7891da02b2bd8174cf8340a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ba6bfd0f83270bc6b9e980fe92f6630c90ad49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193066"
 ---
-# <a name="compiled-queries--linq-to-entities"></a>已編譯的查詢 (LINQ to Entities)
+# <a name="compiled-queries--linq-to-entities"></a>已編譯查詢 (LINQ to Entities)
 當您的應用程式執行了 Entity Framework 中結構類似的查詢多次時，您可經常增加效能，其方式是編譯查詢一次，然後使用不同的參數執行查詢多次。 例如，應用程式可能必須擷取特定城市中的所有客戶；此城市是使用者在執行階段於表單中所指定。 LINQ to Entities 支援針對這個用途所編譯的查詢。  
   
  從 .NET Framework 4.5 開始會自動快取 LINQ 查詢。 不過，之後執行時您仍可以使用已編譯的 LINQ 查詢減少這種成本，且已編譯查詢可能比自動快取的 LINQ 查詢更有效率。 請注意，不會自動快取將 `Enumerable.Contains` 運算子套用至記憶體中集合的 LINQ to Entities 查詢。 此外也不允許在已編譯的 LINQ 查詢中參數化記憶體中的集合。  
@@ -69,6 +69,7 @@ ms.locfileid: "54582070"
  [!code-vb[DP L2E Conceptual Examples#MyParamsStruct](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#myparamsstruct)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [Entity Framework 合併選項和編譯的查詢](https://go.microsoft.com/fwlink/?LinkId=199591)

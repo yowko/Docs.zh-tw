@@ -8,18 +8,16 @@ helpviewer_keywords:
 - 3-D transformations
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
-ms.openlocfilehash: 578c8061271e08e4eac1ec5f11c84e63a3fa37bd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190624"
 ---
 # <a name="3-d-transformations-overview"></a>立體轉換概觀
 本主題說明如何對 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 圖形系統中的 3D 模型套用轉換。 轉換可讓開發人員重新置放模型、調整模型大小，以及調整模型方向，而不需要變更定義模型的基底值。  
-  
 
-  
 ## <a name="3-d-coordinate-space"></a>3D 座標空間  
  3d 圖形中的內容[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]封裝在一個項目， <xref:System.Windows.Controls.Viewport3D>，可參與二維元素結構。 圖形系統會將 Viewport3D 視為二維的視覺元素，就像 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中許多其他元素一樣。 Viewport3D 運作的方式就像視窗 (檢視區) 一樣，但是是在三維的場景。 更精確來說，是一種 3D 場景投射到的表面。  雖然您可以在相同的場景圖形中使用 Viewport3D 搭配其他 2D 繪圖物件，但是您不能在 Viewport3D 內貫穿 2D 和 3D 物件。 在以下討論中所描述的座標空間都包含在 Viewport3D 元素中。  
   
@@ -106,6 +104,7 @@ ScaleVector 範例
  因為觀景窗也是模型，所以同樣可以轉換觀景窗屬性。  雖然您可以轉換觀景窗位置或平面距離來變更場景的外觀 (實際上是轉換整個場景投影)，但請注意，以這種方式達成的許多效果就觀者的「視覺感受」來說，會比對場景中的模型位置套用轉換來得少。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [立體圖形概觀](3-d-graphics-overview.md)
 - [轉換概觀](transforms-overview.md)
-- [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2d 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)
