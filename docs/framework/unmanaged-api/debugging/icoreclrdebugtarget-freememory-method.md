@@ -19,35 +19,36 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a3448512cb486419e524df012fcd1b8fcf639f1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ec156ca7590a2ec637cb59e022fc2dd1a71226e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198500"
 ---
-# <a name="icoreclrdebugtargetfreememory-method"></a><span data-ttu-id="d1a26-102">ICoreClrDebugTarget::FreeMemory 方法</span><span class="sxs-lookup"><span data-stu-id="d1a26-102">ICoreClrDebugTarget::FreeMemory Method</span></span>
-<span data-ttu-id="d1a26-103">釋放所配置的記憶體[icoreclrdebugtarget:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)並[icoreclrdebugtarget:: Enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d1a26-103">Frees the memory allocated by the [ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) and [ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) methods.</span></span>  
+# <a name="icoreclrdebugtargetfreememory-method"></a><span data-ttu-id="33c05-102">ICoreClrDebugTarget::FreeMemory 方法</span><span class="sxs-lookup"><span data-stu-id="33c05-102">ICoreClrDebugTarget::FreeMemory Method</span></span>
+<span data-ttu-id="33c05-103">釋放所配置的記憶體[icoreclrdebugtarget:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)並[icoreclrdebugtarget:: Enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="33c05-103">Frees the memory allocated by the [ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) and [ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) methods.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d1a26-104">語法</span><span class="sxs-lookup"><span data-stu-id="d1a26-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="33c05-104">語法</span><span class="sxs-lookup"><span data-stu-id="33c05-104">Syntax</span></span>  
   
 ```  
 void FreeMemory (  
      [in] void*pMemory);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d1a26-105">參數</span><span class="sxs-lookup"><span data-stu-id="d1a26-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="33c05-105">參數</span><span class="sxs-lookup"><span data-stu-id="33c05-105">Parameters</span></span>  
  `pMemory`  
- <span data-ttu-id="d1a26-106">[in]傳回由陣列的指標[icoreclrdebugtarget:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)或[icoreclrdebugtarget:: Enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="d1a26-106">[in] A pointer to the array that is returned by either the [ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) or the [ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) method.</span></span>  
+ <span data-ttu-id="33c05-106">[in]傳回由陣列的指標[icoreclrdebugtarget:: Enumprocesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md)或[icoreclrdebugtarget:: Enumruntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="33c05-106">[in] A pointer to the array that is returned by either the [ICoreClrDebugTarget::EnumProcesses](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumprocesses-method.md) or the [ICoreClrDebugTarget::EnumRuntimes](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-enumruntimes-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d1a26-107">需求</span><span class="sxs-lookup"><span data-stu-id="d1a26-107">Requirements</span></span>  
- <span data-ttu-id="d1a26-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d1a26-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="33c05-107">需求</span><span class="sxs-lookup"><span data-stu-id="33c05-107">Requirements</span></span>  
+ <span data-ttu-id="33c05-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="33c05-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d1a26-109">**標頭：** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="d1a26-109">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
+ <span data-ttu-id="33c05-109">**標頭：** CoreClrRemoteDebuggingInterfaces.h</span><span class="sxs-lookup"><span data-stu-id="33c05-109">**Header:** CoreClrRemoteDebuggingInterfaces.h</span></span>  
   
- <span data-ttu-id="d1a26-110">**程式庫：** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="d1a26-110">**Library:** mscordbi_macx86.dll</span></span>  
+ <span data-ttu-id="33c05-110">**程式庫：** mscordbi_macx86.dll</span><span class="sxs-lookup"><span data-stu-id="33c05-110">**Library:** mscordbi_macx86.dll</span></span>  
   
- <span data-ttu-id="d1a26-111">**.NET framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="d1a26-111">**.NET Framework Versions:** 3.5 SP1</span></span>  
+ <span data-ttu-id="33c05-111">**.NET framework 版本：** 3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="33c05-111">**.NET Framework Versions:** 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d1a26-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d1a26-112">See also</span></span>
-- [<span data-ttu-id="d1a26-113">ICoreClrDebugTarget 介面</span><span class="sxs-lookup"><span data-stu-id="d1a26-113">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="33c05-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="33c05-112">See also</span></span>
+
+- [<span data-ttu-id="33c05-113">ICoreClrDebugTarget 介面</span><span class="sxs-lookup"><span data-stu-id="33c05-113">ICoreClrDebugTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

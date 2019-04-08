@@ -16,29 +16,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49949989a48be13bcb70b27e47407d907b284670
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 38de9fa878db18222d2666ba86420ca856e4b121
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199111"
 ---
-# <a name="isymunmanagedbinder2-interface"></a><span data-ttu-id="cc524-102">ISymUnmanagedBinder2 介面</span><span class="sxs-lookup"><span data-stu-id="cc524-102">ISymUnmanagedBinder2 Interface</span></span>
-<span data-ttu-id="cc524-103">表示 unmanaged 程式碼的符號繫結器，並延伸[ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="cc524-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span></span>  
+# <a name="isymunmanagedbinder2-interface"></a><span data-ttu-id="182c6-102">ISymUnmanagedBinder2 介面</span><span class="sxs-lookup"><span data-stu-id="182c6-102">ISymUnmanagedBinder2 Interface</span></span>
+<span data-ttu-id="182c6-103">表示 unmanaged 程式碼的符號繫結器，並延伸[ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="182c6-103">Represents a symbol binder for unmanaged code, and extends the [ISymUnmanagedBinder](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md) interface.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="cc524-104">它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。</span><span class="sxs-lookup"><span data-stu-id="cc524-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
+>  <span data-ttu-id="182c6-104">它是從受信任的來源開啟程式資料庫 (PDB) 檔的安全性風險。</span><span class="sxs-lookup"><span data-stu-id="182c6-104">It is a security risk to open a program database (PDB) file from an untrusted source.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="cc524-105">方法</span><span class="sxs-lookup"><span data-stu-id="cc524-105">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="182c6-105">方法</span><span class="sxs-lookup"><span data-stu-id="182c6-105">Methods</span></span>  
   
-|<span data-ttu-id="cc524-106">方法</span><span class="sxs-lookup"><span data-stu-id="cc524-106">Method</span></span>|<span data-ttu-id="cc524-107">描述</span><span class="sxs-lookup"><span data-stu-id="cc524-107">Description</span></span>|  
+|<span data-ttu-id="182c6-106">方法</span><span class="sxs-lookup"><span data-stu-id="182c6-106">Method</span></span>|<span data-ttu-id="182c6-107">描述</span><span class="sxs-lookup"><span data-stu-id="182c6-107">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="cc524-108">GetReaderForFile2 方法</span><span class="sxs-lookup"><span data-stu-id="cc524-108">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|<span data-ttu-id="cc524-109">提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的介面。</span><span class="sxs-lookup"><span data-stu-id="cc524-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span> <span data-ttu-id="cc524-110">提供更廣泛搜尋條件來得[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="cc524-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>|  
+|[<span data-ttu-id="182c6-108">GetReaderForFile2 方法</span><span class="sxs-lookup"><span data-stu-id="182c6-108">GetReaderForFile2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder2-getreaderforfile2-method.md)|<span data-ttu-id="182c6-109">提供中繼資料介面和檔案名稱，傳回的正確[ISymUnmanagedReader](isymunmanagedreader-interface.md)會讀取偵錯符號的模組相關聯的介面。</span><span class="sxs-lookup"><span data-stu-id="182c6-109">Given a metadata interface and a file name, returns the correct [ISymUnmanagedReader](isymunmanagedreader-interface.md) interface that will read the debugging symbols associated with the module.</span></span> <span data-ttu-id="182c6-110">提供更廣泛搜尋條件來得[isymunmanagedbinder:: Getreaderforfile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="182c6-110">Provides a more extensive search than the [ISymUnmanagedBinder::GetReaderForFile](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-getreaderforfile-method.md) method.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="cc524-111">需求</span><span class="sxs-lookup"><span data-stu-id="cc524-111">Requirements</span></span>  
- <span data-ttu-id="cc524-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="cc524-112">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="182c6-111">需求</span><span class="sxs-lookup"><span data-stu-id="182c6-111">Requirements</span></span>  
+ <span data-ttu-id="182c6-112">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="182c6-112">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="cc524-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc524-113">See also</span></span>
-- [<span data-ttu-id="cc524-114">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="cc524-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
-- [<span data-ttu-id="cc524-115">ISymUnmanagedBinder 介面</span><span class="sxs-lookup"><span data-stu-id="cc524-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
-- [<span data-ttu-id="cc524-116">ISymUnmanagedBinder3 介面</span><span class="sxs-lookup"><span data-stu-id="cc524-116">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
+## <a name="see-also"></a><span data-ttu-id="182c6-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="182c6-113">See also</span></span>
+
+- [<span data-ttu-id="182c6-114">診斷符號存放區介面</span><span class="sxs-lookup"><span data-stu-id="182c6-114">Diagnostics Symbol Store Interfaces</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
+- [<span data-ttu-id="182c6-115">ISymUnmanagedBinder 介面</span><span class="sxs-lookup"><span data-stu-id="182c6-115">ISymUnmanagedBinder Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder-interface.md)
+- [<span data-ttu-id="182c6-116">ISymUnmanagedBinder3 介面</span><span class="sxs-lookup"><span data-stu-id="182c6-116">ISymUnmanagedBinder3 Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedbinder3-interface.md)
