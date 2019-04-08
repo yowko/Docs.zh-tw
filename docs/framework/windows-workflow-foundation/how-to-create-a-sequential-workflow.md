@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
-ms.openlocfilehash: 3991c16e00f1cbb4f8c1f2c8391f89ea51c1e6f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: de6608d0b3fc0ba4113b8fa7c65881983aabf0c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189296"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>HOW TO：建立循序工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.Sequence>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -158,10 +158,11 @@ ms.locfileid: "58463796"
      如需有關如何執行工作流程，指示，請參閱下一個主題中， [How to:執行工作流程](how-to-run-a-workflow.md)。 如果您已經完成[How to:執行工作流程](how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟中的循序工作流程執行，請直接跳到[以建置並執行應用程式](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[How to:執行工作流程](how-to-run-a-workflow.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
 - [Windows Workflow Foundation 程式設計](programming.md)
 - [設計工作流程](designing-workflows.md)
 - [快速入門教學課程](getting-started-tutorial.md)
-- [如何：建立活動](how-to-create-an-activity.md)
-- [如何：執行工作流程](how-to-run-a-workflow.md)
+- [HOW TO：建立活動](how-to-create-an-activity.md)
+- [HOW TO：執行工作流程](how-to-run-a-workflow.md)

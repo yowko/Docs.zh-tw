@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
-ms.openlocfilehash: d540715c0b4c69b2981cc65f55b0fa950c5a4eaf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a6b63e5e48e64491e5f33e7aec4abf92ccf48708
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721238"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166396"
 ---
 # <a name="how-to-create-application-settings"></a>HOW TO：建立應用程式設定
 您可以使用 Managed 程式碼來建立新的應用程式設定，並將設定繫結至表單或表單控制項的屬性，以便在執行階段自動載入及儲存這些設定。  
@@ -47,7 +47,8 @@ ms.locfileid: "57721238"
  預設的設定提供者 <xref:System.Configuration.LocalFileSettingsProvider> 將資訊以純文字格式保存於組態檔。 這會將安全性限定為目前使用者之作業系統所提供的檔案存取安全性。 因此，您必須小心使用儲存在組態檔中的資訊。 例如，應用程式設定的常見用途之一，是儲存指向應用程式資料存放區的連接字串。 不過，基於安全性考量，這類字串不應包含密碼。 如需連接字串的詳細資訊，請參閱 <xref:System.Configuration.SpecialSetting>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [應用程式設定概觀](application-settings-overview.md)
-- [如何：驗證應用程式設定](how-to-validate-application-settings.md)
+- [HOW TO：驗證應用程式設定](how-to-validate-application-settings.md)

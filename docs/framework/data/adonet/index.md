@@ -2,12 +2,12 @@
 title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
-ms.openlocfilehash: 86d4d4628313ff248618f37637b0a25e80820b06
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191909"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取服務一組類別 (Class)。 ADO.NET 提供一組豐富的元件，用於建立分散式資料共用應用程式。 其為 .NET Framework 的一個完整的部分，提供關聯式、XML 及應用程式資料的存取。 ADO.NET 支援各種開發需要，包括建立應用程式、工具、語言或網際網路瀏覽器使用的前端資料庫用戶端及中介層商務物件。  
@@ -34,7 +34,7 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)  
  提供 LINQ to DataSet 的相關資訊，包括程式設計範例。  
   
- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  說明如何連接至資料來源以及如何使用 `Commands`、`DataReaders` 和 `DataAdapters` 來擷取及修改資料。  
   
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
@@ -56,9 +56,10 @@ ADO.NET 是針對 .NET Framework 程式設計人員公開 (Expose) 資料存取�
  [.NET Framework 開發指南](../../development-guide.md)  
  提供 .NET Framework 中標準開發工作之相關資訊的連結。  
   
- [範例與教學課程](../../../samples-and-tutorials/index.md)  
+ [範例和教學課程](../../../samples-and-tutorials/index.md)  
  提供.NET 範例和教學課程的清單。
   
 ## <a name="see-also"></a>另請參閱
-- [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [在 Visual Studio 中存取資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

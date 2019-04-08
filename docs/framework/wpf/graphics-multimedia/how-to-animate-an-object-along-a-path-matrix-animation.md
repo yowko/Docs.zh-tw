@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (matrix animation)
 - matrix animation [WPF]
 ms.assetid: 7000e697-1414-468c-b915-cf66062fc49e
-ms.openlocfilehash: c0c4f1fad5ab6b8d30e6809aa866b4629d08af23
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ab15126680b7d8c6936246a7dae2f67c7541233b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190921"
 ---
 # <a name="how-to-animate-an-object-along-a-path-matrix-animation"></a>HOW TO：沿著路徑建立物件的動畫 (矩陣動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>類別以動畫顯示物件沿著路徑所定義<xref:System.Windows.Media.PathGeometry>。  
@@ -35,6 +35,7 @@ ms.locfileid: "57363731"
  如需完整的範例，請參閱[路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)。 如需幾何路徑的詳細資訊，請參閱 <<c0> [ 幾何概觀](geometry-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [動畫概觀](animation-overview.md)
 - [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)
-- [路徑動畫操作說明主題](path-animation-how-to-topics.md)
+- [路徑動畫 HOW TO 主題](path-animation-how-to-topics.md)

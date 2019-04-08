@@ -4,12 +4,12 @@ ms.date: 02/25/2019
 helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
-ms.openlocfilehash: 6ec86ffca9ae84a9c3276a3dd6de676919dcd2e0
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200282"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167501"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>HOW TO：使用 MMC 嵌入式管理單元檢視憑證
 當您建立安全的用戶端或服務時，您可以使用[憑證](working-with-certificates.md)身分的認證。 例如，常見的認證類型是 X.509 憑證，您建立與<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>方法。 
@@ -22,7 +22,6 @@ ms.locfileid: "57200282"
 
 - 服務帳戶：存放區是在裝置上的特定服務的本機。
 
-  
 ## <a name="view-certificates-in-the-mmc-snap-in"></a>在 MMC 嵌入式管理單元檢視憑證 
 
 下列程序示範如何檢查在您的本機裝置，以尋找適當的憑證存放區： 
@@ -57,7 +56,6 @@ ms.locfileid: "57200282"
 8. 若要檢視您的憑證 MMC 嵌入式管理單元中，選取**主控台根目錄**的左窗格中，然後展開**Certificates (Local Computer)**。
 
     每種類型的憑證的目錄清單隨即出現。 從每個憑證目錄中，您可以檢視、 匯出、 匯入，並刪除其憑證。
-  
 
 ## <a name="view-certificates-with-the-certificate-manager-tool"></a>使用憑證管理員工具檢視憑證
 
@@ -79,8 +77,8 @@ ms.locfileid: "57200282"
   
 2. 若要檢視您的憑證，在**憑證-目前使用者**在左窗格中，依序展開您想要檢視的憑證類型的目錄。
 
-  
 ## <a name="see-also"></a>另請參閱
+
 - [使用憑證](working-with-certificates.md)
-- [如何：建立開發時要使用的暫時憑證](how-to-create-temporary-certificates-for-use-during-development.md)
-- [如何：擷取憑證的指紋](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [HOW TO：建立開發時要使用的暫時憑證](how-to-create-temporary-certificates-for-use-during-development.md)
+- [HOW TO：擷取憑證的指紋](how-to-retrieve-the-thumbprint-of-a-certificate.md)

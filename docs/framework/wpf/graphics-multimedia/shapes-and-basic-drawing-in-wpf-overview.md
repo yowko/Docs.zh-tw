@@ -12,28 +12,27 @@ helpviewer_keywords:
 - vectors [WPF], drawing
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
-ms.openlocfilehash: 9852c811b00ee7f8d86b7c1daaaa28f28fa5a89f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189127"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF 中圖案和基本繪圖概觀
 本主題概要說明如何使用繪圖<xref:System.Windows.Shapes.Shape>物件。 A<xref:System.Windows.Shapes.Shape>是一種<xref:System.Windows.UIElement>，可讓您將圖形描繪至螢幕。 因為它們是 UI 元素<xref:System.Windows.Shapes.Shape>物件都可以使用內部<xref:System.Windows.Controls.Panel>元素以及大部分的控制項。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供了數層的圖形和轉譯服務存取權。 位於最上層<xref:System.Windows.Shapes.Shape>物件都很容易使用，並提供許多實用的功能，例如版面配置和參與[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]事件系統。  
-  
-  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供數個層級的圖形和轉譯服務存取權。 位於最上層<xref:System.Windows.Shapes.Shape>物件都很容易使用，並提供許多實用的功能，例如版面配置和參與[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]事件系統。  
+
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>Shape 物件  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個已準備好使用<xref:System.Windows.Shapes.Shape>物件。  所有的 shape 物件繼承自<xref:System.Windows.Shapes.Shape>類別。 可用的 shape 物件包含<xref:System.Windows.Shapes.Ellipse>， <xref:System.Windows.Shapes.Line>， <xref:System.Windows.Shapes.Path>， <xref:System.Windows.Shapes.Polygon>， <xref:System.Windows.Shapes.Polyline>，和<xref:System.Windows.Shapes.Rectangle>。 <xref:System.Windows.Shapes.Shape> 物件共用下列通用屬性。  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>：說明如何繪製圖形外框。  
+-   <xref:System.Windows.Shapes.Shape.Stroke%2A>:說明如何繪製圖形外框。  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>：描述圖形的外框的粗細。  
+-   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>:描述圖形的外框的粗細。  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>：描述如何繪製形狀的內部。  
+-   <xref:System.Windows.Shapes.Shape.Fill%2A>:描述如何繪製形狀的內部。  
   
 -   用來指定座標和頂點的資料屬性，以裝置獨立像素為單位。  
   
@@ -155,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  Stretch 屬性可接受下列其中一個值：  
   
--   <xref:System.Windows.Media.Stretch.None>：<xref:System.Windows.Shapes.Shape>物件的內容不會自動縮放。  
+-   <xref:System.Windows.Media.Stretch.None>:<xref:System.Windows.Shapes.Shape>物件的內容不會自動縮放。  
   
--   <xref:System.Windows.Media.Stretch.Fill>：<xref:System.Windows.Shapes.Shape>物件的內容會縮放以填滿其版面配置空間。  不會維持外觀比例。  
+-   <xref:System.Windows.Media.Stretch.Fill>:<xref:System.Windows.Shapes.Shape>物件的內容會縮放以填滿其版面配置空間。  不會維持外觀比例。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>：<xref:System.Windows.Shapes.Shape>物件的內容會縮放，盡量以填滿其版面配置空間，同時維持原始外觀比例。  
+-   <xref:System.Windows.Media.Stretch.Uniform>:<xref:System.Windows.Shapes.Shape>物件的內容會縮放，盡量以填滿其版面配置空間，同時維持原始外觀比例。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>：<xref:System.Windows.Shapes.Shape>物件的內容會縮放以完全填滿其版面配置空間，同時維持原始外觀比例。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>:<xref:System.Windows.Shapes.Shape>物件的內容會縮放以完全填滿其版面配置空間，同時維持原始外觀比例。  
   
  請注意，當<xref:System.Windows.Shapes.Shape>物件的內容會縮放，<xref:System.Windows.Shapes.Shape>縮放之後繪製物件的外框。  
   
@@ -215,6 +214,7 @@ myPolygon.StrokeThickness = 2;
  在上一個範例中，已將單一轉換套用至每個圖形物件。 若要將多個轉換套用至圖形 （或任何其他 UI 項目），使用<xref:System.Windows.Media.TransformGroup>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)
 - [幾何概觀](geometry-overview.md)

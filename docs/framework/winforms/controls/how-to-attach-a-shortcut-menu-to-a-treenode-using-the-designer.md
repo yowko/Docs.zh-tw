@@ -1,18 +1,18 @@
 ---
-title: HOW TO：將捷徑功能表附加至 TreeNode 使用設計工具
+title: HOW TO：使用設計工具將捷徑功能表附加至 TreeNode
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shortcut menus [Windows Forms], attaching to TreeNodes
 - TreeNode [Windows Forms], attaching a shortcut menu using Designer
 ms.assetid: 8e45e184-1313-4f8f-90ff-2cd5789b2268
-ms.openlocfilehash: aa161af65b7e8e1f3636398cd02139b5623eb154
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1cc90ed9a103c41dbf85e39a43d307b1c0422603
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191430"
 ---
-# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>HOW TO：將捷徑功能表附加至 TreeNode 使用設計工具
+# <a name="how-to-attach-a-shortcut-menu-to-a-treenode-using-the-designer"></a>HOW TO：使用設計工具將捷徑功能表附加至 TreeNode
 Windows Form<xref:System.Windows.Forms.TreeView>控制項顯示的節點，類似於檔案和資料夾顯示在 Windows 作業系統中 Windows 檔案總管功能左窗格中的階層。 藉由設定<xref:System.Windows.Forms.Control.ContextMenuStrip%2A>屬性，您可以向使用者提供即時線上作業，當他們以滑鼠右鍵按一下<xref:System.Windows.Forms.TreeView>控制項。 產生關聯<xref:System.Windows.Forms.ContextMenuStrip>元件的個別<xref:System.Windows.Forms.TreeNode>項目，您可以加入自訂的層級的快顯功能表功能，以您<xref:System.Windows.Forms.TreeView>控制項。  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項顯示的節點，類�
      此外，您會想要撰寫程式碼來處理<xref:System.Windows.Forms.ToolStripItem.Click>事件的這些功能表項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TreeView 控制項](treeview-control-windows-forms.md)
 - [TreeView 控制項概觀](treeview-control-overview-windows-forms.md)
 - [ContextMenuStrip 控制項](contextmenustrip-control.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在格線之間共用調整大小屬性
+title: HOW TO：在 Grid 之間共用調整大小屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sizing data in Grid controls [WPF]
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
-ms.openlocfilehash: bd0f812ce9a15628bd0bddf3a88e898311f0a9d3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190336"
 ---
-# <a name="how-to-share-sizing-properties-between-grids"></a>HOW TO：在格線之間共用調整大小屬性
+# <a name="how-to-share-sizing-properties-between-grids"></a>HOW TO：在 Grid 之間共用調整大小屬性
 本範例顯示如何共用調整大小資料行資料和資料列之間<xref:System.Windows.Controls.Grid>為了保留以一致的調整大小的項目。  
   
 ## <a name="example"></a>範例  
@@ -36,6 +36,7 @@ ms.locfileid: "57373123"
  [!code-vb[gridIssharedsizescopeProp#3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gridIssharedsizescopeProp/VisualBasic/Window1.xaml.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.Controls.Grid.IsSharedSizeScope%2A>
 - [面板概觀](panels-overview.md)

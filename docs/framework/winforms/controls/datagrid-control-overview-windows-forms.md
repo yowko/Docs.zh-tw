@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 33f6e5f7929c5a4231c0779964db177f45af6743
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 7fdc14257d140c92cb2450fc21b44c1f95c75ba8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055205"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189309"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid 控制項概觀 (Windows Form)
 > [!NOTE]
@@ -140,6 +140,7 @@ ms.locfileid: "59055205"
  除了 <xref:System.Windows.Forms.Control.MouseDown>、<xref:System.Windows.Forms.Control.Enter> 和 <xref:System.Windows.Forms.DataGrid.Scroll> 之類的一般控制項事件，<xref:System.Windows.Forms.DataGrid> 控制項還可支援在格線內編輯和巡覽的相關聯事件。 <xref:System.Windows.Forms.DataGrid.CurrentCell%2A> 屬性會決定選取哪一個儲存格。 當使用者巡覽至新的儲存格時，會引發 <xref:System.Windows.Forms.DataGrid.CurrentCellChanged> 事件。 當使用者透過父/子關聯性，巡覽至新的資料表時，會引發 <xref:System.Windows.Forms.DataGrid.Navigate> 事件。 如果使用者在檢視子資料表時按一下上一頁按鈕，會引發 <xref:System.Windows.Forms.DataGrid.BackButtonClick> 事件，按一下顯示/隱藏父資料列圖示時，會引發 <xref:System.Windows.Forms.DataGrid.ShowParentDetailsButtonClick> 事件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
 - [HOW TO：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)

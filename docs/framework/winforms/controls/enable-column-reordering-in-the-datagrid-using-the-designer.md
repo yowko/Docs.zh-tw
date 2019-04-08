@@ -1,5 +1,5 @@
 ---
-title: HOW TO：啟用 Windows Form DataGridView 控制項中使用設計工具中的資料行重新調整順序
+title: HOW TO：使用設計工具重新調整 Windows Forms DataGridView 控制項的資料行順序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], column order
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - columns [Windows Forms], reordering
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
-ms.openlocfilehash: a08c15e4fea76d8f6e97db6d463c4141b7d13b4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718827"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194964"
 ---
-# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：啟用 Windows Form DataGridView 控制項中使用設計工具中的資料行重新調整順序
+# <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具重新調整 Windows Forms DataGridView 控制項的資料行順序
 檢視顯示 Windows Form 中的資料時<xref:System.Windows.Forms.DataGridView>控制項，使用者有時候想要比較特定的資料行的值。 這可以是不太方便，如果資料行放在相隔在控制項中，特別是如果使用者必須來回水平捲動才能看到他們感興趣的所有資料行。 您可以藉由讓使用者能夠重新排序資料行中比較您更輕鬆的資料行值的工作。 當您啟用資料行重新調整順序時，使用者可以拖曳資料行標頭，使用滑鼠到新的位置移動資料行。  
   
  下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGridView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。  
@@ -27,8 +27,9 @@ ms.locfileid: "57718827"
 -   按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再選取**啟用資料行重新調整順序**.  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToOrderColumns%2A?displayProperty=nameWithType>
-- [如何：凍結 Windows Form DataGridView 控制項中使用設計工具中的資料行](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [HOW TO：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

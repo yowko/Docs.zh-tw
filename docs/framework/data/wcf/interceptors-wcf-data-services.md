@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 14212c9993d936138df70160e4e49152cd5ff958
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626754"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192851"
 ---
 # <a name="interceptors-wcf-data-services"></a>攔截器 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 讓應用程式攔截要求訊息，因此您可以將自訂邏輯加入至作業。 您可以使用這個自訂邏輯來驗證傳入訊息中的資料。 您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。  
@@ -23,7 +23,7 @@ ms.locfileid: "54626754"
  [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
  [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
- 如需詳細資訊，請參閱[＜How to：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
  變更處理非查詢作業時呼叫的攔截器，必須傳回 `void` (在 Visual Basic 為 `Nothing`)。 變更攔截器方法必須接受下列兩個參數：  
   
@@ -36,7 +36,7 @@ ms.locfileid: "54626754"
  [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
  [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  
   
- 如需詳細資訊，請參閱[＜How to：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
  攔截支援的屬性如下。  
   
@@ -46,7 +46,8 @@ ms.locfileid: "54626754"
  **[ChangeInterceptor(** *EntitySetName* **)]**  
  當目標實體集資源收到 HTTP GET 要求以外的 HTTP 要求時，會呼叫套用 <xref:System.Data.Services.ChangeInterceptorAttribute> 屬性的方法。 這些方法必須永遠傳回 `void` (在 Visual Basic 中為 `Nothing`)。  
   
- 如需詳細資訊，請參閱[＜How to：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：攔截資料服務訊息](../../../../docs/framework/data/wcf/how-to-intercept-data-service-messages-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [服務作業](../../../../docs/framework/data/wcf/service-operations-wcf-data-services.md)

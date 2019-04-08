@@ -2,12 +2,12 @@
 title: AsymmetricSecurityBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7bd3b6be-8f77-4927-93ae-6fa371893cca
-ms.openlocfilehash: e968f5f2d7ffdb193b30762d32a47be3778b98dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f86fc1b410753b5ec100f0a7d43de9badd1401b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621353"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196043"
 ---
 # <a name="asymmetricsecuritybindingelement"></a>AsymmetricSecurityBindingElement
 AsymmetricSecurityBindingElement  
@@ -49,4 +49,5 @@ class AsymmetricSecurityBindingElement : SecurityBindingElement
 |命名空間|於 root\ServiceModel 中定義|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>

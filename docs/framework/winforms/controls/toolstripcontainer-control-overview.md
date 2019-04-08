@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], built-in rafting
 - ToolStripContainer control [Windows Forms], about ToolStripContainer control
 ms.assetid: c7d63bff-64e2-4a63-bd89-d31bc96dacb8
-ms.openlocfilehash: 1f8d8bf8edd7968ed2d2a5c4ddd654dccf318f71
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c279316c2a372a1498707b27ec8658813306304b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191259"
 ---
 # <a name="toolstripcontainer-control-overview"></a>ToolStripContainer 控制項概觀
 A<xref:System.Windows.Forms.ToolStripContainer>有個面板其左、 右、 上框線和下側邊的定位和浮動定位<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，和<xref:System.Windows.Forms.StatusStrip>控制項。 如果您將多個 <xref:System.Windows.Forms.ToolStrip> 控制項放在左邊或右邊 <xref:System.Windows.Forms.ToolStripContainer>，它們會垂直堆疊。 如果您將它們放在頂端或底端 <xref:System.Windows.Forms.ToolStripContainer>，它們會水平堆疊。 您可以使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel>來定位在表單上的傳統控制項。  
@@ -33,5 +33,6 @@ A<xref:System.Windows.Forms.ToolStripContainer>有個面板其左、 右、 上�
 |<xref:System.Windows.Forms.ToolStripContainer.TopToolStripPanelVisible%2A>|取得或設定值，指出是否的上方面板<xref:System.Windows.Forms.ToolStripContainer>為可見。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStripContainer>
 - <xref:System.Windows.Forms.ToolStripContentPanel>

@@ -2,12 +2,12 @@
 title: 物件狀態和變更追蹤
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
-ms.openlocfilehash: 89e9f44a6cd3579a5ef9cc2078609ca26e0d2ae5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191151"
 ---
 # <a name="object-states-and-change-tracking"></a>物件狀態和變更追蹤
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件一律會處於某種*狀態*。 例如，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 建立新物件時，該物件會是 `Unchanged` 狀態。 您自己建立的新物件不知道<xref:System.Data.Linq.DataContext>且位於`Untracked`狀態。 順利執行 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 之後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 得知的所有物件都會是 `Unchanged` 狀態  (唯一的例外是已順利從資料庫中刪除的物件，這些物件是 `Deleted` 狀態，而且無法在該 <xref:System.Data.Linq.DataContext> 執行個體中使用)。  
@@ -15,7 +15,7 @@ ms.locfileid: "54683306"
 ## <a name="object-states"></a>物件狀態  
  下表列出 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件的可能狀態。  
   
-|狀態|描述|  
+|狀況|描述|  
 |-----------|-----------------|  
 |`Untracked`|[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 無法追蹤的物件。 範例包含下列：<br /><br /> -未透過目前查詢物件<xref:System.Data.Linq.DataContext>（例如新建立的物件）。<br />-建立透過還原序列化的物件<br />-透過不同的查詢物件<xref:System.Data.Linq.DataContext>。|  
 |`Unchanged`|使用 <xref:System.Data.Linq.DataContext> 擷取而且已知自建立後尚未修改的物件。|  
@@ -63,5 +63,6 @@ ms.locfileid: "54683306"
  如果要同時更新必要的參考和對應的外部索引鍵，就必須確定兩者一致。 如果在您呼叫 <xref:System.InvalidOperationException> 時這兩者並未同步，則會擲回 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 例外狀況。 雖然只要變更外部索引鍵值就能更新基礎資料列，但您仍應該變更參考，以維護物件圖形中的連接並保持雙向關聯性的一致性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [插入、更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/insert-update-and-delete-operations.md)

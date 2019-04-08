@@ -1,5 +1,5 @@
 ---
-title: HOW TO：取得或設定 Canvas 定位屬性
+title: HOW TO：取得或設定畫布置放屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Canvas control [WPF], setting positioning properties
 ms.assetid: 1636b950-2b5a-4507-8a10-c5034cc58b1c
-ms.openlocfilehash: 9b280bf86f12b406582cb2f534edb85618515d76
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 06508e1198736ccb1cbda41641dff4bc634ef82b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356321"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194405"
 ---
-# <a name="how-to-get-or-set-canvas-positioning-properties"></a>HOW TO：取得或設定 Canvas 定位屬性
+# <a name="how-to-get-or-set-canvas-positioning-properties"></a>HOW TO：取得或設定畫布置放屬性
 此範例示範如何使用的定位方法<xref:System.Windows.Controls.Canvas>放置子內容項目。 這個範例會使用中的內容<xref:System.Windows.Controls.ListBoxItem>來代表定位值，並將值轉換成的執行個體<xref:System.Double>，這是必要的引數的位置。 值是再轉換回字串，而且顯示為中的文字<xref:System.Windows.Controls.TextBlock>使用的項目<xref:System.Windows.Controls.Canvas.GetLeft%2A>方法。  
   
 ## <a name="example"></a>範例  
@@ -30,6 +30,7 @@ ms.locfileid: "57356321"
  [!code-vb[CanvasPositioningProperties#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CanvasPositioningProperties/VisualBasic/Window1.xaml.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Canvas>
 - <xref:System.Windows.Controls.ListBoxItem>
 - <xref:System.Windows.LengthConverter>

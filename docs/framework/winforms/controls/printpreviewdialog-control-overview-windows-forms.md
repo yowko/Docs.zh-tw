@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aad8673051b22db1df6d525094394dd2a43285ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 32fbdd222e34f642d29255e6c594076b6d2a91e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711274"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188834"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog 控制項概觀 (Windows Form)
 Windows Forms<xref:System.Windows.Forms.PrintPreviewDialog>控制項是預先設定的對話方塊，用來顯示如何[PrintDocument](printdocument-component-windows-forms.md)列印時，會出現。 您可以使用它在您以 Windows 為基礎的應用程式，做為簡單的解決方案，而不是設定您自己的對話方塊。 這個控制項包含列印、放大、顯示一或多頁及關閉對話方塊等按鈕。  
@@ -52,6 +52,7 @@ Windows Forms<xref:System.Windows.Forms.PrintPreviewDialog>控制項是預先設
 如果您使用<xref:System.Drawing.Printing.PrintDocument.QueryPageSettings>若要修改的印表機設定 的效能事件<xref:System.Windows.Forms.PrintPreviewDialog>即使最佳化組態參數設定不會改善控制項。  
 
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.PrintPreviewDialog>
 - [PrintPreviewControl 控制項概觀](printpreviewcontrol-control-overview-windows-forms.md)
 - [PrintPreviewDialog 控制項](printpreviewdialog-control-windows-forms.md)

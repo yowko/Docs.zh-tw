@@ -1,5 +1,5 @@
 ---
-title: HOW TO：驗證和合併 PrintTickets
+title: HOW TO：驗證和合併 PrintTicket
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - validation of PrintTickets [WPF]
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
-ms.openlocfilehash: 2be08f5d3c2cd82e50569a105e3fa15f12ad352c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 750234a7073b3931b4f3ce5674f3989fe119c50c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199943"
 ---
-# <a name="how-to-validate-and-merge-printtickets"></a>HOW TO：驗證和合併 PrintTickets
+# <a name="how-to-validate-and-merge-printtickets"></a>HOW TO：驗證和合併 PrintTicket
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [列印結構描述](https://go.microsoft.com/fwlink/?LinkId=186397)包括有彈性且可延伸<xref:System.Printing.PrintCapabilities>和<xref:System.Printing.PrintTicket>項目。 前者的逐項列出列印裝置的功能，後者則指定裝置應該如何使用這些功能對於特定的一連串的文件、 個別的文件或個別的頁面。  
   
  一般的應用程式可支援列印的工作順序會如下所示。  
@@ -57,6 +57,7 @@ ms.locfileid: "57355164"
  [!code-vb[PrintTicketManagment#UIForMergeAndValidatePTUtility](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrintTicketManagment/visualbasic/printticket.vb#uiformergeandvalidateptutility)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintTicket>
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>

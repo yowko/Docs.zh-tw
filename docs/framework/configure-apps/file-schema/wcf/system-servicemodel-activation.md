@@ -2,12 +2,12 @@
 title: <system.serviceModel.activation>
 ms.date: 03/30/2017
 ms.assetid: c0cae85f-56cb-4030-8807-6f96edff8d2d
-ms.openlocfilehash: ddb9c03c2d4ec17198719544fba9da989a6b0eb4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b29f7173b4d75ec9adff37449d3d56266f01a03c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271144"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196186"
 ---
 # <a name="systemservicemodelactivation"></a>\<system.serviceModel.activation>
 這個組態區段表示 SMSvcHost.exe 工具的組態設定。 組態項目可於 SMSvcHost.exe.config 檔案中設定。 具體來說，它包含了所有必須設定的整個電腦設定。  
@@ -61,4 +61,5 @@ ms.locfileid: "55271144"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activation.Configuration>

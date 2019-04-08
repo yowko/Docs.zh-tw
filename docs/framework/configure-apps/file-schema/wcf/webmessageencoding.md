@@ -2,12 +2,12 @@
 title: <webMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: 892ca485-e21a-4a44-8e40-633161ef6796
-ms.openlocfilehash: e13f23d6894083c8b507bdb73bea897c4845300f
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7221f19dd131dbd60ef1a61625633d54dfdbe85a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191740"
 ---
 # <a name="webmessageencoding"></a>\<webMessageEncoding>
 啟用在用於 Windows Communication Foundation (WCF) 繫結時，要讀取與寫入的純文字 XML、JavaScript Object Notation (JSON) 訊息編碼和「未經處理」二進位內容。  
@@ -58,7 +58,7 @@ ms.locfileid: "55759636"
   
  此繫結項目可藉由 `writeEncoding` 屬性，透過寫入字元編碼的方式進行設定。 提供的 <xref:System.Text.Encoding> 值會指定 JSON 和 Textual XML 案例在寫入時的行為。 在讀取時，任何有效的訊息編碼和文字編碼都是可解讀的。  
   
- `maxReadPoolSize` 和 `maxWritePoolSize` 也可以用來設定要分別配置之讀取器和寫入器的最大數目。 根據預設，將配置 64 個讀取器和 16 個寫入器。  
+ `maxReadPoolSize` 和`maxWritePoolSize`也可用來設定讀取器和寫入分別配置的最大數目。 根據預設，將配置 64 個讀取器和 16 個寫入器。  
   
  預設複雜度條件約束也會設定使用[ \<readerQuotas >](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))項目，以防止阻絕服務 (DOS) 類別攻擊試圖使用訊息複雜性困住端點處理資源。  
   
@@ -72,6 +72,7 @@ ms.locfileid: "55759636"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.WebMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>

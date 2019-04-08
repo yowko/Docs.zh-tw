@@ -2,12 +2,12 @@
 title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
-ms.openlocfilehash: 87d69f58fc0c45eacb4ee63997129347f7f2a857
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827405"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195744"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 判斷運算式的型別是否不屬於所指定的型別或它的其中一個子型別。  
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  要對它測試 `expression` 的型別。 此型別必須以命名空間限定。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `true` 為 T 型別，且 T 為基底類型或 `expression` 的衍生型別，則為 `type`；如果 `expression` 在執行階段為 null 則為 null ；否則為 `false`。  
+ `true` 如果`expression`是型別 T，而 T 是基底類型或衍生的型別`type`; 如果`expression`在執行階段為 null; 否則即為`false`。  
   
 ## <a name="remarks"></a>備註  
  運算式`expression IS NOT OF (type)`並`expression IS NOT OF (ONLY type)`語法上等同於`NOT (expression IS OF (type))`和`NOT (expression IS OF (ONLY type))`分別。  
@@ -57,4 +57,5 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  [!code-csharp[DP EntityServices Concepts 2#TREAT_ISOF](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#treat_isof)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

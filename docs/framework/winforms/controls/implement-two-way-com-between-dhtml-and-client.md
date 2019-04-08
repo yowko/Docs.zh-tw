@@ -14,17 +14,17 @@ helpviewer_keywords:
 - WebBrowser control [Windows Forms], communication between DHTML and client application
 - DHTML [Windows Forms], embedding in Windows Forms
 ms.assetid: 55353a32-b09e-4479-a521-ff3a5ff9a708
-ms.openlocfilehash: 52928b11ce3577a1fb6d218b4a74b986f5fe8d1e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4823bf482e785b1e9d03ca57010a832cb0e26dd9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710260"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199787"
 ---
 # <a name="how-to-implement-two-way-communication-between-dhtml-code-and-client-application-code"></a>HOW TO：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊
 您可以使用 <xref:System.Windows.Forms.WebBrowser> 控制項，將現有的動態 HTML (DHTML) Web 應用程式程式碼加入至 Windows Form 用戶端應用程式。 這適用於投資了大量的開發時間在建立 DHTML 控制項，而且您想要利用 Windows Form 的豐富使用者介面功能而又不需要重新撰寫現有程式碼的情況。  
   
-  <xref:System.Windows.Forms.WebBrowser> 控制項可讓您實作用戶端應用程式程式碼與網頁指令碼程式碼之間的雙向通訊，這是透過 <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 和 <xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性。 此外，您可以設定 <xref:System.Windows.Forms.WebBrowser> 控制，好讓您的 Web 控制項與應用程式表單上其他控制項順暢地混合，隱藏其 DHTML 實作。 若要順暢地混合控制項，請格式化所顯示的頁面，以便其背景色彩和視覺化樣式符合表單的其餘部分，並使用 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A><xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> 和 <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> 屬性停用標準瀏覽器功能。  
+ <xref:System.Windows.Forms.WebBrowser> 控制項可讓您實作用戶端應用程式程式碼與網頁指令碼程式碼之間的雙向通訊，這是透過 <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 和 <xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性。 此外，您可以設定 <xref:System.Windows.Forms.WebBrowser> 控制，好讓您的 Web 控制項與應用程式表單上其他控制項順暢地混合，隱藏其 DHTML 實作。 若要順暢地混合控制項，請格式化所顯示的頁面，以便其背景色彩和視覺化樣式符合表單的其餘部分，並使用 <xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A><xref:System.Windows.Forms.WebBrowser.IsWebBrowserContextMenuEnabled%2A> 和 <xref:System.Windows.Forms.WebBrowser.WebBrowserShortcutsEnabled%2A> 屬性停用標準瀏覽器功能。  
   
 ### <a name="to-embed-dhtml-in-your-windows-forms-application"></a>在 Windows Form 應用程式中內嵌 DHTML  
   
@@ -108,6 +108,7 @@ ms.locfileid: "57710260"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Document%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A?displayProperty=nameWithType>

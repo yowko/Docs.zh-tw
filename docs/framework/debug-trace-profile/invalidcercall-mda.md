@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c4577410-602e-44e5-9dab-fea7c55bcdfe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c3cccb94268264217a1e6a1b5def71c6c433b820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a68aac2a92a0569e288da858e4a4e4695fd5eaa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193911"
 ---
 # <a name="invalidcercall-mda"></a>invalidCERCall MDA
 當方法的限制執行區域 (CER) 圖形內的呼叫沒有可靠性合約或過度弱式合約時，就會啟動 `invalidCERCall` Managed 偵錯助理 (MDA)。 弱式合約是宣告最差狀態損毀範圍超過執行個體傳遞至呼叫的範圍，也就是 <xref:System.AppDomain> 或處理序狀態可能會損毀，或在 CER 內呼叫時，其結果不一定是決定性可計算結果。  
@@ -39,7 +39,7 @@ ms.locfileid: "54614779"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  從 CER 呼叫弱式合約的效果，可能會讓 CER 無法完成其作業。 這可能會導致 <xref:System.AppDomain> 處理序狀態損毀。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  下列是來自此 MDA 的輸出範例。  
   
  `Method 'MethodWithCer', while executing within a constrained execution region, makes a call at IL offset 0x000C to 'MethodWithWeakContract', which does not have a sufficiently strong reliability contract and might cause non-deterministic results.`  
@@ -55,6 +55,7 @@ ms.locfileid: "54614779"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

@@ -2,12 +2,12 @@
 title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
-ms.openlocfilehash: 5aa5d75e12852fe6a0e4e9a2eb4ae57d25d1022c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165889"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 代表 <xref:System.Runtime.Serialization> 命名空間區段的根項目，而且包含用來設定 <xref:System.Runtime.Serialization.DataContractSerializer> 選項的項目。  
@@ -49,9 +49,10 @@ ms.locfileid: "55272674"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|組態的最上層項目。|  
+|[\<組態 > 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|組態的最上層項目。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization>
 - [使用資料合約](../../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

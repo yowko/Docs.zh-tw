@@ -13,15 +13,15 @@ helpviewer_keywords:
 - identifying changed property events [WPF]
 - property triggers [WPF], definition of
 ms.assetid: 0a7989df-9674-4cc1-bc50-5d8ef5d9c055
-ms.openlocfilehash: 2997696a6617bb9c17bb98bba0b352cb27c07896
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6f625f76e230b7d6bf0488bfa75c227de31a5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166201"
 ---
 # <a name="property-change-events"></a>屬性變更事件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 會定義數個要引發來回應屬性值變更的事件。 屬性通常是相依性屬性。 事件本身有時是路由事件，有時是標準的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定義會因案例而異，因為某些屬性變更較適合透過元素樹狀結構進行路由傳送，而其他屬性變更通常只會與變更屬性的物件有關。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 定義數個事件，會引發以回應中的屬性值的變更。 屬性通常是相依性屬性。 事件本身有時是路由事件，有時是標準的 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 事件。 事件的定義會因案例而異，因為某些屬性變更較適合透過元素樹狀結構進行路由傳送，而其他屬性變更通常只會與變更屬性的物件有關。  
   
 ## <a name="identifying-a-property-change-event"></a>識別屬性變更事件  
  並非所有報告屬性變更的事件都會明確識別為屬性已變更的事件，不論是透過簽章模式或命名模式。 一般而言，[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 文件中的事件描述會指出事件是否直接繫結至屬性值變更，並提供屬性與事件之間的交互參考。  
@@ -62,5 +62,6 @@ ms.locfileid: "57351992"
  若要深入了解屬性觸發程序，請參閱[設定樣式和範本](../controls/styling-and-templating.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由事件概觀](routed-events-overview.md)
 - [相依性屬性概觀](dependency-properties-overview.md)

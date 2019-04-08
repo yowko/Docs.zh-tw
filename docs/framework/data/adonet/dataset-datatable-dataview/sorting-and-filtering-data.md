@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
-ms.openlocfilehash: 8733a9552787f7286ae76c77091b9833804478d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166240"
 ---
 # <a name="sorting-and-filtering-data"></a>排序及篩選資料
 <xref:System.Data.DataView> 提供數種可在 <xref:System.Data.DataTable> 中排序和篩選資料的方法：  
@@ -30,13 +30,13 @@ ms.locfileid: "54661213"
     |DataViewRowState 選項|描述|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**目前**所有的資料列版本**Unchanged**， **Added**，以及**Modified**資料列。 這是預設值。|  
-    |**加入**|**目前**所有的資料列版本**Added**資料列。|  
-    |**刪除**|**原始**所有的資料列版本**Deleted**資料列。|  
+    |**Added**|**目前**所有的資料列版本**Added**資料列。|  
+    |**Deleted**|**原始**所有的資料列版本**Deleted**資料列。|  
     |**ModifiedCurrent**|**目前**所有的資料列版本**Modified**資料列。|  
     |**ModifiedOriginal**|**原始**所有的資料列版本**Modified**資料列。|  
-    |**無**|無資料列。|  
+    |**None**|無資料列。|  
     |**OriginalRows**|**原始**的所有資料列版本**Unchanged**， **Modified**，以及**刪除**資料列。|  
-    |**未變更**|**目前**所有的資料列版本**Unchanged**資料列。|  
+    |**Unchanged**|**目前**所有的資料列版本**Unchanged**資料列。|  
   
  如需有關資料列狀態和資料列版本的詳細資訊，請參閱 <<c0> [ 資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
@@ -57,9 +57,10 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataColumn.Expression%2A?displayProperty=nameWithType>
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

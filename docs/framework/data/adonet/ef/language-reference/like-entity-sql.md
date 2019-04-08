@@ -2,12 +2,12 @@
 title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
-ms.openlocfilehash: 406e660efcc351df3fd2720a5d13d8398d1a8216
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f210c83a8220f11a5e0a461c8b72466f00a4e37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197707"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 判斷特定字元 `String` 是否符合指定的模式。  
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  指定要否定 LIKE 的結果。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `true` 符合此模式則為 `string`；否則為 `false`。  
+ `true` 如果`string`符合模式，否則`false`。  
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用 LIKE 運算子的運算式會評估大致與使用等號比較做為篩選準則的運算式相同的方式。 不過，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用 LIKE 運算子的運算式可以包含常值和萬用字元。  
@@ -57,7 +57,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
 >  如果您要針對特定的提供者，可以使用提供者專用的運算式。 不過其他提供者可能會以不同方式處理這類建構。 SqlServer 支援 [first-last] 和 [^first-last] 模式，前者會在最前與最後範圍之間恰好符合一個字元 (只能有一個字元相符)，後者則是在最前與最後範圍之外恰好符合一個字元。  
   
 ### <a name="escape"></a>逸出字元  
- 使用 ESCAPE 子句可以搜尋包含一或多個先前章節表格中所述特殊萬用字元的字元字串。 舉例來講，假設有幾份文件的標題包含常值 "100%"，而您想要搜尋所有這些文件。 由於百分比 （%） 字元是萬用字元，您必須使用逸出它[!INCLUDE[esql](../../../../../../includes/esql-md.md)]逸出子句，以順利執行搜尋。 以下就是這項篩選的範例。  
+ 使用 ESCAPE 子句可以搜尋包含一或多個先前章節表格中所述特殊萬用字元的字元字串。 舉例來講，假設有幾份文件的標題包含常值 "100%"，而您想要搜尋所有這些文件。 由於百分比 （%）字元是萬用字元，您必須使用逸出它[!INCLUDE[esql](../../../../../../includes/esql-md.md)]逸出子句，以順利執行搜尋。 以下就是這項篩選的範例。  
   
 ```  
 "title like '%100!%%' escape '!'"  
@@ -75,4 +75,5 @@ match [NOT] LIKE pattern [ESCAPE escape]
  [!code-csharp[DP EntityServices Concepts 2#LIKE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#like)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -1,17 +1,17 @@
 ---
-title: HOW TO：使用 COM + 服務模型組態工具
+title: HOW TO：使用 COM+ 服務模型組態工具
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
-ms.openlocfilehash: 528e46a47daa6df865308592eb41658369a74b6e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0dc126cf6528504cacd18ae29c31541833ddb5f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196888"
 ---
-# <a name="how-to-use-the-com-service-model-configuration-tool"></a>HOW TO：使用 COM + 服務模型組態工具
+# <a name="how-to-use-the-com-service-model-configuration-tool"></a>HOW TO：使用 COM+ 服務模型組態工具
 一旦您選取了適當的裝載模式，請使用 COM+ 服務模型組態命令列工具 (ComSvcConfig.exe) 來設定將公開為 Web 服務的應用程式介面。  
   
 > [!NOTE]
@@ -110,4 +110,5 @@ ms.locfileid: "54736243"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)

@@ -2,12 +2,12 @@
 title: Windows Forms 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: a2a30b37-d6e2-4552-820e-e60b2bbe8829
-ms.openlocfilehash: d41310108bfffedc38297f2c981e90007b59fb9a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3f4134544076bc7e8d21da67172551f6f64c16c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167085"
 ---
 # <a name="data-binding-in-a-windows-forms-client"></a>Windows Forms 用戶端中的資料繫結
 此範例示範如何繫結至 Windows Forms 應用程式中的 Windows Communication Foundation (WCF) 服務所傳回的資料。  
@@ -37,4 +37,3 @@ ms.locfileid: "58832147"
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WindowsForms`  
-  

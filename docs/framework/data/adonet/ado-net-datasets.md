@@ -2,12 +2,12 @@
 title: ADO.NET 資料集
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: f9821f07aae8a761a3890e93347f9cf727f8bdd0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569423"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190934"
 ---
 # <a name="adonet-datasets"></a>ADO.NET 資料集
 <xref:System.Data.DataSet> 物件對於支援 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 的中斷連接、分散式的資料案例非常重要。 **資料集**是提供與資料來源無關的一致性關聯式程式設計模型的資料常駐記憶體表示法。 它可與多個不同的資料來源一起使用、與 XML 資料一起使用，或管理應用程式的本機資料。 **資料集**表示一組完整的資料，包括相關的資料表、 條件約束及資料表間的關聯性。 如下圖所示**資料集**物件模型。  
@@ -41,12 +41,13 @@ DataSet 物件模型
  **資料集**， **DataTable**，並**DataColumn**都**ExtendedProperties**屬性。 **ExtendedProperties**已**PropertyCollection**您可以在其中放置自訂資訊，例如 SELECT 陳述式，用來產生結果集或產生資料時的時間。 **ExtendedProperties**集合永續存在的結構描述資訊**DataSet**。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 可為儲存在 DataSet 的中斷連接資料提供 Language-integrated Query (LINQ) 功能。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用標準[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]語法，並使用 Visual Studio IDE 時提供編譯時間語法檢查、 靜態型別和 IntelliSense 支援。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供 language integrated query 功能的中斷連接的資料儲存在資料集中。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 使用標準[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]語法，並使用 Visual Studio IDE 時提供編譯時間語法檢查、 靜態型別和 IntelliSense 支援。  
   
  如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: e9d000ca2da9dd9b4c8a677e85bc9cca5b1b1b1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199319"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互通
 您可以在 Windows Presentation Foundation (WPF) 應用程式中包含 Direct3D9 內容。 本主題描述如何建立 Direct3D9 內容，以便有效率地交互操作使用 WPF。  
@@ -148,7 +148,8 @@ ms.locfileid: "57372681"
 >  如果在軟體中，完全呈現 WPF<xref:System.Windows.Interop.D3DImage>不會顯示因為 WPF 沒有前景緩衝區。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [逐步解說：在 WPF 中裝載 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [逐步解說：建立 Direct3D9 內容以裝載在 WPF 中](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [逐步解說：將 Direct3D9 內容裝載在 WPF 中](walkthrough-hosting-direct3d9-content-in-wpf.md)

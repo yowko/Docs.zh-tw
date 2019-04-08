@@ -1,18 +1,18 @@
 ---
-title: 如何：在設計階段建立新的設定
+title: 如何：在設計階段建立新設定
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], design time
 - application settings [Windows Forms], creating
 ms.assetid: c5d60a66-6507-462f-a81f-e3bc0a804e16
-ms.openlocfilehash: 54f64de8cdd47b7fd451d266cca3b7577e9e1d78
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03a96298af68579bb2e67299688928dee0f517de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198578"
 ---
-# <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在設計階段建立新的設定
+# <a name="how-to-create-a-new-setting-at-design-time"></a>如何：在設計階段建立新設定
 您可以使用設定設計工具，在設計階段建立新的設定。 設定設計工具是可讓您建立新的設定，並指定這些設定的屬性方格樣式介面。 您必須指定名稱、 值、 類型和您的新設定的範圍。 一旦建立一項設定時，就可在程式碼中存取。  
   
 ### <a name="to-create-a-new-setting-at-design-time-in-c"></a>若要在 C 中的設計階段建立新的設定\#
@@ -32,6 +32,7 @@ ms.locfileid: "57702772"
 3.  在 設定設計工具中，設定名稱、 值、 類型和您的設定範圍。 每個資料列都代表單一設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用應用程式設定和使用者設定](using-application-settings-and-user-settings.md)
 - [應用程式設定概觀](application-settings-overview.md)
-- [如何：在設計階段的現有設定的值變更](how-to-change-the-value-of-an-existing-setting-at-design-time.md)
+- [如何：在設計階段變更現有設定的值](how-to-change-the-value-of-an-existing-setting-at-design-time.md)

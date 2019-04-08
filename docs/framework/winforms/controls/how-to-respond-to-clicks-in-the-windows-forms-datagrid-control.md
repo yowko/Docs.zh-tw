@@ -1,5 +1,5 @@
 ---
-title: HOW TO：回應 Windows Forms DataGrid 控制項中的按一下動作
+title: HOW TO：回應 Windows Forms DataGrid 控制項的按一下動作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,17 +12,16 @@ helpviewer_keywords:
 - examples [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], click events
 ms.assetid: a0aa204b-8351-4d82-9933-ee21a5c9e409
-ms.openlocfilehash: 7310557bad7e845c4b193debdefba68db2e1d116
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 55ca52390cd6c5d5af4a764ea4438d8ce935dfbb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191896"
 ---
-# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>HOW TO：回應 Windows Forms DataGrid 控制項中的按一下動作
+# <a name="how-to-respond-to-clicks-in-the-windows-forms-datagrid-control"></a>HOW TO：回應 Windows Forms DataGrid 控制項的按一下動作
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  在 Windows Form 後<xref:System.Windows.Forms.DataGrid>已連線到資料庫，您可以監視的資料格使用者按下了。  
   
@@ -142,5 +141,6 @@ ms.locfileid: "57708195"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [如何：在 Windows Forms DataGrid 控制項中的執行階段變更顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)
+- [HOW TO：在執行階段變更 Windows Forms DataGrid 控制項顯示的資料](change-displayed-data-at-run-time-wf-datagrid-control.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 21f1f948e0bcd088cbe14316760708e10285124b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649306"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195874"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>資料合約中的列舉型別
 列舉可以在資料合約模型中表示。 本主題將逐步介紹幾個範例，說明程式設計模型。  
@@ -97,6 +97,7 @@ ms.locfileid: "54649306"
  [!code-vb[c_DataContractEnumerations#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractenumerations/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [指定服務合約中的資料傳輸](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

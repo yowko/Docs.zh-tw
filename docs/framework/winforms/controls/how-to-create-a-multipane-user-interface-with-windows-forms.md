@@ -1,5 +1,5 @@
 ---
-title: HOW TO：利用 Windows Form 建立多窗格使用者介面
+title: HOW TO：使用 Windows Forms 建立多窗格使用者介面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: 4db424b27af09dcb7def0051fba070fe9ccf0491
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721966"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192689"
 ---
-# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>HOW TO：利用 Windows Form 建立多窗格使用者介面
+# <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>HOW TO：使用 Windows Forms 建立多窗格使用者介面
 在下列程序中，您將建立類似於使用 Microsoft Outlook 中所使用的多窗格使用者介面**資料夾** 清單中，**訊息**窗格中，和**預覽**  窗格。 這種排列方式是主要透過停駐控制項的表單來達成的。  
   
  當您將控制項停駐時，您決定父容器的邊緣控制項固定至。 因此，如果您設定<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Right>，右邊緣的控制項所停駐到其父控制項的右邊緣。 此外，停駐控制項的邊緣會調整大小以符合其容器控制項。 如需有關如何<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性雖然有效，請參閱[How to:停駐在 Windows Forms 上的控制項](how-to-dock-controls-on-windows-forms.md)。  
@@ -177,6 +177,7 @@ ms.locfileid: "57721966"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控制項](splitcontainer-control-windows-forms.md)
-- [如何：使用設計工具的 Windows form 建立多窗格使用者介面](create-a-multipane-user-interface-with-wf-using-the-designer.md)
+- [HOW TO：使用設計工具以 Windows Forms 建立多窗格使用者介面](create-a-multipane-user-interface-with-wf-using-the-designer.md)

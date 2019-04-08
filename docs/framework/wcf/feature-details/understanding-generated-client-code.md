@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
-ms.openlocfilehash: 929b0ee8b0904d43f44857e8051ff52fc04a4f82
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54734444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189153"
 ---
 # <a name="understanding-generated-client-code"></a>了解產生的用戶端程式碼
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 會產生用戶端程式碼和用戶端應用程式組態檔，用於建置用戶端應用程式。 本主題將提供產生之程式碼範例的導覽，用於標準服務合約情節。 如需有關如何建置使用產生的程式碼的用戶端應用程式的詳細資訊，請參閱 < [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)。  
@@ -39,7 +39,7 @@ ms.locfileid: "54734444"
   
  [!code-csharp[C_GeneratedCodeFiles#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#12)]  
   
- 您可以使用產生的服務合約介面，連同<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>類別來建立用來叫用服務作業的 WCF 通道物件。 如需詳細資訊，請參閱[＜How to：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
+ 您可以使用產生的服務合約介面，連同<xref:System.ServiceModel.ChannelFactory?displayProperty=nameWithType>類別來建立用來叫用服務作業的 WCF 通道物件。 如需詳細資訊，請參閱[如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)。  
   
 ### <a name="finding-wcf-client-classes"></a>尋找 WCF 用戶端類別  
  若要找出實作您想要使用的服務合約的 WCF 用戶端類別，搜尋的延伸模組<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>、 型別參數是服務合約介面，您先前位於和延伸該介面。 下列程式碼範例會顯示型別 <xref:System.ServiceModel.ClientBase%601> 的 `ISampleService`類別。  
@@ -81,4 +81,5 @@ ms.locfileid: "54734444"
  [!code-csharp[C_GeneratedCodeFiles#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_generatedcodefiles/cs/proxycode.cs#13)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 用戶端概觀](../../../../docs/framework/wcf/wcf-client-overview.md)

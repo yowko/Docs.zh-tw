@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 Windows Form ToolTip 元件的延遲時間
+title: HOW TO：變更 Windows Forms ToolTip 元件的延遲時間
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-ms.openlocfilehash: 5f3be7467aad8b14aa67dc57b8c23e585a62fa25
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5b903f48035ac27cdd79f0ea38a7a68d558b3c1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198656"
 ---
-# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>HOW TO：變更 Windows Form ToolTip 元件的延遲時間
+# <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>HOW TO：變更 Windows Forms ToolTip 元件的延遲時間
 有多個您可以設定 Windows Form 的延遲值<xref:System.Windows.Forms.ToolTip>元件。 所有這些屬性的測量單位為毫秒。 <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>屬性會決定使用者必須指向相關聯的控制項才會出現工具提示字串的時間長度。 <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>屬性會設定後續的工具提示字串，以顯示當滑鼠移動到另一個工具提示相關聯的控制項中所花費的毫秒數。 <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>屬性會決定的工具提示字串會顯示的時間長度。 您可以個別或藉由設定的值來設定這些值<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>屬性; 屬性會根據設定的值指派給其他延遲<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>屬性。 例如，當<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>設為值 N，<xref:System.Windows.Forms.ToolTip.InitialDelay%2A>設定為 N，<xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>設定的值為<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>除以五個 （或 N/5），並<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>值是五倍的值，這個值會設<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>屬性 （或 5N）。  
   
 ### <a name="to-set-the-delay"></a>若要設定的延遲  
@@ -43,6 +43,7 @@ ms.locfileid: "57704467"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)
-- [如何：在設計階段設定 Windows Form 上控制項的工具提示](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [HOW TO：在設計階段設定 Windows Forms 的控制項工具提示](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [ToolTip 元件](tooltip-component-windows-forms.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XML Reader
 ms.assetid: 60e5848d-7d9c-4ea5-bed9-22758c9ac16c
-ms.openlocfilehash: fc25f2fccdc7becb8989c3cabe8b7b82d865fa13
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 261bc371ce9a6da09ef49f0ddd1274be5757c7bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194665"
 ---
 # <a name="xmlreader-sample"></a>XmlReader 範例
 XmlReader 範例會示範使用 <xref:System.Xml.XmlReader> 處理訊息本文。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，以實作計算機服務。 範例中所新增的另一項服務作業 `Sum`，會接受內含要一起加總之值陣列的訊息。 服務會使用 <xref:System.Xml.XmlReader> 讀取訊息。  
@@ -108,4 +108,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\XmlReader`  
-  

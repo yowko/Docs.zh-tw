@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: cd3a9cd8cf7862bfa3128b81f5ecf6d380e20c32
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191462"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
@@ -25,7 +25,7 @@ ms.locfileid: "54554682"
   
 -   False  
   
--   未知  
+-   不明  
   
  因為 Null 會視為 Unknown，所以比較兩個 Null 值時，並不會視為相等的。 在使用算術運算子的運算式中，如果有任何運算元為 Null，其結果也會是 Null。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "54554682"
  ![Truth Table](../../../../../docs/framework/data/adonet/sql/media/truthtable-bpuedev11.gif "TruthTable_bpuedev11")  
   
 ### <a name="understanding-the-ansinulls-option"></a>瞭解 ANSI_NULLS 選項  
- <xref:System.Data.SqlTypes> 提供的語意與在 SQL Server 中設定 ANSI_NULLS 選項時的語意相同。 所有算術運算子 (+、-，*，/、 %)，位元運算子 (~、 &、 &#124;)，以及大部分函數都會傳回 null，如果任何運算元或引數是 null，但屬性除外`IsNull`。  
+ <xref:System.Data.SqlTypes> 在 SQL Server 上設定 ANSI_NULLS 選項時，請提供相同的語意。 所有算術運算子 (+、-，*，/、 %)，位元運算子 (~、 &、 &#124;)，以及大部分函數都會傳回 null，如果任何運算元或引數是 null，但屬性除外`IsNull`。  
   
  ANSI SQL-92 標準不支援*columnName* = null，則 WHERE 子句中。 在 SQL Server 中，ANSI_NULLS 選項可控制資料庫中的預設 Null 屬性及針對 Null 值的比較評估。 如果啟用 ANSI_NULLS (預設值)，則當測試 Null 值時，必須在運算式中使用 IS NULL 運算子。 例如，當啟用 ANSI_NULLS 時，下列比較永遠會產生 Unknown：  
   
@@ -83,7 +83,7 @@ WHERE TerritoryID IN (1, 2, 3)
 >  目前在 `Nullable<T>` 中不支援 <xref:System.Nullable> 或 `DataSet` 結構。  
   
 ### <a name="multiple-column-row-assignment"></a>多個資料行 (資料列) 指派  
- `DataTable.Add`、`DataTable.LoadDataRow` 或其他可接受對應至資料列之 <xref:System.Data.DataRow.ItemArray%2A> 的 API，會將 'null' 對應至 DataColumn 的預設值。 如果陣列中的物件包含 `DbNull.Value` 或其強型別的對應項，則會套用上述相同規則。  
+ `DataTable.Add``DataTable.LoadDataRow`，或接受的其他 Api <xref:System.Data.DataRow.ItemArray%2A> ，取得對應至一個資料列，其對應至 DataColumn 的預設值的 ' null'。 如果陣列中的物件包含 `DbNull.Value` 或其強型別的對應項，則會套用上述相同規則。  
   
  此外，下列規則可套用至 `DataRow.["columnName"]` Null 指派的執行個體：  
   
@@ -142,5 +142,6 @@ String.Equals instance method:
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

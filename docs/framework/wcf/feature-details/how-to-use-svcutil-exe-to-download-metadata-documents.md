@@ -2,12 +2,12 @@
 title: HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: dc3a1d402a9f6ffb69c1f692800698609f9fa84b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194457"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 您可以使用 Svcutil.exe 從正在執行的服務下載中繼資料，並將該中繼資料儲存至本機檔案。 對於 HTTP 和 HTTPS URL 配置，Svcutil.exe 會嘗試使用 Ws-metadataexchange 擷取中繼資料並[XML Web Service 探索](https://go.microsoft.com/fwlink/?LinkId=94950)。 對於所有其他的 URL 配置，Svcutil.exe 只會使用 WS-MetadataExchange。  
@@ -47,4 +47,5 @@ svcutil /t:metadata http://service/metadataEndpoint
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器
+title: HOW TO：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: 379cb8862ce5dda5cfffc625cc72906cf6a2c305
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d8a85edf8c001b19191fdfd74d1f9ebdf87024ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195484"
 ---
-# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>HOW TO：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器
+# <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>HOW TO：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器
 <xref:System.Windows.Forms.ToolStrip> 控制項讓您輕鬆支援佈景主題和樣式。 您可以達到完全自訂的外觀和行為 （外觀及操作） 設定<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>屬性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。  
   
  您可以將轉譯器指派給每個個別<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>， <xref:System.Windows.Forms.ContextMenuStrip>，或<xref:System.Windows.Forms.StatusStrip>控制項，或者您可以使用<xref:System.Windows.Forms.ToolStripManager.Renderer%2A>屬性，以便藉由設定影響所有物件<xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType>屬性設<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode?displayProperty=nameWithType>。  
@@ -82,6 +82,7 @@ ms.locfileid: "57721004"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStripManager.Renderer%2A>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - <xref:System.Windows.Forms.ToolStrip.RenderMode%2A>

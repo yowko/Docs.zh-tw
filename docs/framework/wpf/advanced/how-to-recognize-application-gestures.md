@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application gestures [WPF], recognizing
 - gestures [WPF], recognizing
 ms.assetid: d58b740f-5192-4a3e-af59-7aa162e6ca15
-ms.openlocfilehash: 99deaa528a089f2d16268747f2e946873f3420a0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 647e7c9c1d785cebfdc362dc48511d865f3945dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191506"
 ---
 # <a name="how-to-recognize-application-gestures"></a>如何：辨認應用程式筆勢
 下列範例示範如何清除的筆墨，當使用者提出<xref:System.Windows.Ink.ApplicationGesture.ScratchOut>軌跡上<xref:System.Windows.Controls.InkCanvas>。 這個範例假設<xref:System.Windows.Controls.InkCanvas>，稱為`inkCanvas1`，在 XAML 檔案中宣告。  
@@ -23,6 +23,7 @@ ms.locfileid: "57370510"
  [!code-vb[HowToRecognizeGestures#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HowToRecognizeGestures/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Ink.ApplicationGesture>
 - <xref:System.Windows.Controls.InkCanvas>
 - <xref:System.Windows.Controls.InkCanvas.Gesture>

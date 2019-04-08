@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: a481fe1e3c3aedd74f0e1546259b4eeeb9bed118
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195185"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態系統的工具。 這將允許您的自訂通道使用者使用 .config 檔案設定通道，就像平常使用 `NetTcpBinding` 來設定系統提供的繫結 (例如 `TcpTransportBindingElement`) 或自訂繫結一般。  
@@ -49,4 +49,3 @@ ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態�
          如果指定 /sb： 選項 Codetoaddto<\<*YourStdBinding*>.cs 中會有程式碼，您必須手動新增至實作標準繫結的類別。  
   
      SampleConfig.xml 檔案中含有組態程式碼，您必須將它新增至註冊處理常式 (在前面步驟 1 或 2 中定義) 的組態檔中。  
-  

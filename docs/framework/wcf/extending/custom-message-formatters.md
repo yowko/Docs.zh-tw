@@ -2,12 +2,12 @@
 title: 自訂訊息格式器
 ms.date: 03/30/2017
 ms.assetid: c07435f3-5214-4791-8961-2c2b61306d71
-ms.openlocfilehash: e1633bdd3959ba812251ef1b78bcd0e83b2060c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af1596c65fc87a68bc3dc2ab5ab2d82133e0fed4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196238"
 ---
 # <a name="custom-message-formatters"></a>自訂訊息格式器
 訊息中的內容常使用 XML 格式，這對於應用程式通常並不方便。 應用程式會操作物件，取得及設定其屬性。 Windows Communication Foundation (WCF) 會使用*資料合約*轉換<xref:System.ServiceModel.Channels.Message>成容易處理的應用程式物件的物件。 這些處理程序稱為序列化和還原序列化。 請注意，這些相同的詞彙用於描述由傳輸層在往來訊息 Wire 格式之間進行的序列化和還原序列化，是不相關的處理程序。  
@@ -33,6 +33,7 @@ ms.locfileid: "54612761"
  如果要將自訂格式器插入服務應用程式中，請使用作業行為將 <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> 物件指派給 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> 屬性。 行為的相關資訊，請參閱[設定和擴充執行階段行為](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>
 - <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter>
 - [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

@@ -1,18 +1,18 @@
 ---
-title: 逐步解說：建立自訂用戶端和服務認證
+title: 逐步解說：建立自訂用戶端與服務認證
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 5688fbbe2c40e7cd30517fb53fe21ae3d0630f22
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 4a69cf01519ea21f61e0c142039e4d2fe9a3c0e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191688"
 ---
-# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端和服務認證
+# <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端與服務認證
 此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。  
   
 ## <a name="credentials-extensibility-classes"></a>認證擴充性類別  
@@ -40,9 +40,9 @@ ms.locfileid: "56261528"
 ## <a name="first-in-a-series"></a>第一步  
  建立自訂認證類別是只有第一個步驟，因為自訂認證的原因是要變更關於認證佈建、 安全性權杖序列化或驗證的 WCF 行為。 本章節中的其他主題描述如何建立自訂序列化程式和驗證器。 就這一點而言，建立自訂認證類別是所有步驟的第一個主題。 只有在建立自訂認證後才能完成後續動作 (建立自訂序列化程式和驗證器)。 建構在此主題上的其他主題包含：  
   
--   [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
+-   [HOW TO：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)  
   
--   [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
+-   [HOW TO：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)  
   
 -   [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
@@ -179,12 +179,13 @@ ms.locfileid: "56261528"
  使用上列程序「`To create a configuration handler for custom client credentials`」和「`To register and use a custom client credentials configuration handler in the application configuration`」中描述的步驟加入對組態的支援。唯一的差別是使用 <xref:System.ServiceModel.Configuration.ServiceCredentialsElement> 類別而不是 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 類別，當做組態處理常式的基底類別。 然後可以在使用系統提供 `<serviceCredentials>` 項目的地方使用自訂服務認證項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.Security.SecurityCredentialsManager>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement>
-- [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
-- [如何：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
-- [如何：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)
+- [HOW TO：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [HOW TO：建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)
+- [HOW TO：建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)

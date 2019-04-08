@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: ca67a01d8f1bc76773a7794169e93d026fe222d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717957"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191323"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities 中的已知問題和考量
 本節提供有關 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢已知問題的資訊。  
   
--   [無法快取的 LINQ 查詢](#LINQQueriesThatAreNotCached)  
+-   [不能快取的 LINQ 查詢](#LINQQueriesThatAreNotCached)  
   
 -   [排序資訊遺失](#OrderingInfoLost)  
   
@@ -25,7 +25,7 @@ ms.locfileid: "54717957"
   
 -   [不支援參考非純量變數](#RefNonScalarClosures)  
   
--   [使用 SQL Server 2000 的巢狀的查詢可能會失敗](#NestedQueriesSQL2000)  
+-   [使用 SQL Server 2000 的巢狀查詢可能失敗](#NestedQueriesSQL2000)  
   
 -   [投影至匿名型別](#ProjectToAnonymousType)  
   
@@ -80,4 +80,5 @@ ms.locfileid: "54717957"
  [!code-vb[DP L2E Conceptual Examples#ProjToAnonType2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#projtoanontype2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)

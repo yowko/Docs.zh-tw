@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f988f95c28e6d2248882fb033b8d8c4d3c629229
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8f0a9b9c149c86b4d9121275aa858dfdc0cdbac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195159"
 ---
 # <a name="assemblymetadata-structure"></a>ASSEMBLYMETADATA 結構
 包含參考的組件，包括其版本和層級支援地區設定、 處理器和作業系統的相關資訊。  
@@ -63,11 +63,12 @@ typedef struct {
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料結構](../../../../docs/framework/unmanaged-api/metadata/metadata-structures.md)
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
 - [OSINFO 結構](../../../../docs/framework/unmanaged-api/metadata/osinfo-structure.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29c999d1561cd4ee035bec379e0f78e762f6946a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: dfc94c2de1a14842cc017e5c4ef6023154c20f2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194028"
 ---
 # <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a>IDebuggerThreadControl::StartBlockingForDebugger 方法
 主應用程式的偵錯服務即將開始封鎖所有執行緒。  
@@ -37,7 +37,7 @@ HRESULT StartBlockingForDebugger (
   
 ## <a name="parameters"></a>參數  
  `dwUnused`  
- [in]保留供日後使用。  
+ [in]Reserved for future use.  
   
 ## <a name="remarks"></a>備註  
  `StartBlockingForDebugger`無法在執行階段的執行緒上呼叫方法。  
@@ -47,9 +47,10 @@ HRESULT StartBlockingForDebugger (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IDebuggerThreadControl 介面](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

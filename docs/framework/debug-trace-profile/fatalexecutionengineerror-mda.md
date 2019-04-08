@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e5c12cc6d09e2f1c5b0c58ac4ad3462dca3463c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87094532a52d8f6309998486375ef4eb33b07f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189387"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 在 Common Language Runtime (CLR) 中偵測到嚴重錯誤時，就會啟動 `fatalExecutionEngineError` Managed 偵錯助理 (MDA)。 處理程序會終止。  
@@ -60,7 +60,7 @@ ms.locfileid: "54700971"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對執行階段行為沒有影響。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  造成嚴重錯誤的 CLR 函式位址、發生錯誤的執行緒識別碼，以及錯誤碼。  
   
 ## <a name="configuration"></a>組態  
@@ -74,6 +74,7 @@ ms.locfileid: "54700971"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareMethod%2A>
 - <xref:System.Runtime.ConstrainedExecution.Cer>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

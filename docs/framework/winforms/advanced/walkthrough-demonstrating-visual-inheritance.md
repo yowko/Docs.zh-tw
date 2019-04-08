@@ -11,12 +11,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], visual inheritance
 - Windows Forms, inheritance
 ms.assetid: 01966086-3142-450e-8210-3fd4cb33f591
-ms.openlocfilehash: fa6da3248f315ad1916e6a7fdc6b0b24ca9e98a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 932df915ab55d8141e64836961dd636d3d5da241
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174599"
 ---
 # <a name="walkthrough-demonstrating-visual-inheritance"></a>逐步解說：示範視覺化繼承
 視覺化繼承可讓您查看基底表單上的控制項，並加入新的控制項。 在本逐步解說中，您將建立基底表單，並編譯為類別庫。 您將匯入此類別庫至另一個專案，並建立繼承自基底表單的新表單。 在這個逐步解說期間，您將了解如何：  
@@ -164,6 +164,7 @@ ms.locfileid: "58816313"
  使用者控制項的繼承以非常類似的方式運作。 開啟一個新的類別庫專案，並加入使用者控制項。 將構成控制項放在上面，然後編譯專案。 開啟另一個新的類別庫專案，並加入已編譯類別程式庫的參考。 此外，請嘗試加入繼承的控制項 (透過**加入新項目** 對話方塊中) 至專案並使用**繼承選取器**。 將使用者控制項，並將變更`Inherits`(`:` Visual C#) 陳述式。 如需詳細資訊，請參閱[如何：繼承 Windows Forms](how-to-inherit-windows-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：繼承 Windows Forms](how-to-inherit-windows-forms.md)
-- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)
+
+- [HOW TO：繼承 Windows Forms](how-to-inherit-windows-forms.md)
+- [Windows Form 視覺繼承](windows-forms-visual-inheritance.md)
 - [Windows Forms](../index.md)
