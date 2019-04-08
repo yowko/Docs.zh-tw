@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: 39fd5e7bb6e12178df0f75c6dadb575dac82c228
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085775"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework 應用程式中的快取
 快取可讓您將資料儲存在記憶體中，以進行快速存取。 重新存取資料時，應用程式可以從快取中取得資料，而不是從原始來源進行擷取。 這可以改善效能和延展性。 此外，暫時無法使用資料來源時，快取可讓資料可用。  
@@ -76,7 +76,8 @@ ms.locfileid: "57674844"
  如需詳細資訊，請參閱 Scott Guthrie 部落格上的 [Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772)(ASP.NET 4 (VS 2010 和 .NET 4.0 系列) 中的可擴充輸出快取) 一文。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Caching.ObjectCache>
 - <xref:System.Runtime.Caching.MemoryCache>
-- [逐步解說：快取中的 WPF 應用程式的應用程式資料](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [逐步解說：在 WPF 應用程式中快取應用程式資料](../../../docs/framework/wpf/advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
 - [逐步解說：在 ASP.NET 中快取的應用程式資料](https://docs.microsoft.com/previous-versions/ff477235(v=vs.100))

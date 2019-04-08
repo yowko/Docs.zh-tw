@@ -8,12 +8,12 @@ helpviewer_keywords:
 - vector graphics
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
-ms.openlocfilehash: f7aa4de8a0d646c441d0921fb2561ef5a9480f4e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083591"
 ---
 # <a name="three-categories-of-graphics-services"></a>圖形服務的三個分類
 在 Windows Form 中的圖形供應項目可分為下列三個廣泛的類別：  
@@ -40,6 +40,7 @@ ms.locfileid: "57711214"
  此外，Windows Forms 會提供選項來繪製的文字[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]中的功能及其<xref:System.Windows.Forms.TextRenderer>類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [圖形概觀](graphics-overview-windows-forms.md)
 - [關於 GDI+ Managed 程式碼](about-gdi-managed-code.md)
 - [使用 Managed 圖形類別](using-managed-graphics-classes.md)

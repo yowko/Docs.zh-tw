@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
-ms.openlocfilehash: 0e1984241c07a69e2b350a61dc5873716c6fa5df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7543d14ba39d854b5a2c3f4d0d19b9a457ea89b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375684"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147143"
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>HOW TO：確保 GridSplitter 是可見的
 此範例示範如何確定<xref:System.Windows.Controls.GridSplitter>中的其他控制項並未隱藏控制項<xref:System.Windows.Controls.Grid>。  
@@ -32,5 +32,6 @@ ms.locfileid: "57375684"
  [!code-xaml[GridSplitterSnips#GridSplitterMargin](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.GridSplitter>
-- [HOW-TO 主題](gridsplitter-how-to-topics.md)
+- [HOW TO 主題](gridsplitter-how-to-topics.md)

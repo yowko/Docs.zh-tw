@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf0aa035b78b582ede76f288443734c25e92a02c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084566"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 函式
 載入的 DLL 隨附於.NET Framework 可轉散發套件中指定的版本。  
@@ -72,7 +72,8 @@ HRESULT LoadLibraryShim (
   
  **標頭：** MSCorEE.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

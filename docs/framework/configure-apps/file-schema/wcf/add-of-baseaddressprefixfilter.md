@@ -2,12 +2,12 @@
 title: <add> 的 <baseAddressPrefixFilter>
 ms.date: 03/30/2017
 ms.assetid: b226bede-8459-4de9-b2ac-3d39604ce2bc
-ms.openlocfilehash: 9179abfb26229a845d9618afe30b088252c9c2db
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a58a29e44fff3d653d04da271e3b240f2969611f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267651"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143893"
 ---
 # <a name="add-of-baseaddressprefixfilter"></a>\<add> of \<baseAddressPrefixFilter>
 表示指定通過篩選條件，提供一個機制，Windows Communication Foundation (WCF) 應用程式裝載在 IIS 時挑選適當的 Internet Information Services (IIS) 繫結的組態項目。  
@@ -77,9 +77,10 @@ http://test2.fabrikam.com/Service.svc
  根據預設，如果沒有指定前置詞，則所有位址都會通過。 如果指定前置詞，則只會允許要通過之配置的相符基底位址。  
   
 > [!NOTE]
->  篩選條件不支援任何萬用字元。 此外，IIS 提供的 baseAddress 中，可能會有位址繫結至不在 `baseAddressPrefixFilters` 清單中的配置， 而且這些位址尚未經過篩選。  
+>  篩選條件不支援任何萬用字元。 此外，IIS 提供的 baseAddress 中，可能會有位址繫結程序至不在 `baseAddressPrefixFilters` 清單中的配置， 而且這些位址尚未經過篩選。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.BaseAddressPrefixFilterElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

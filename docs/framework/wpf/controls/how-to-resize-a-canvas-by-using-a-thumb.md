@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用縮圖調整畫布大小
+title: HOW TO：使用指標調整畫布大小
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - Thumb control [WPF]
 - Canvas control [WPF]
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
-ms.openlocfilehash: 80b873e81acc243ff61257bc305c4f782b5bf867
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146350"
 ---
-# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>HOW TO：使用縮圖調整畫布大小
+# <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>HOW TO：使用指標調整畫布大小
 此範例示範如何使用<xref:System.Windows.Controls.Primitives.Thumb>控制項調整大小<xref:System.Windows.Controls.Canvas>控制項。  
   
 ## <a name="example"></a>範例  
@@ -47,6 +47,7 @@ ms.locfileid: "57351824"
  如需完整的範例，請參閱[捲動方塊拖放功能範例](https://go.microsoft.com/fwlink/?LinkID=160042)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Primitives.Thumb>
 - <xref:System.Windows.Controls.Primitives.Thumb.DragStarted>
 - <xref:System.Windows.Controls.Primitives.Thumb.DragDelta>

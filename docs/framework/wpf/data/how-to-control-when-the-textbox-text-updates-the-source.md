@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 28c1e0e23247cfaf48343bf10bb79c4862623fb6
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143269"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>HOW TO：控制 TextBox 文字更新來源的時機
 本主題描述如何使用<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性，即可控制繫結來源更新的時機。 本主題使用<xref:System.Windows.Controls.TextBox>控制項做為範例。  
@@ -46,4 +46,5 @@ ms.locfileid: "59055127"
 >  <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性處理來源更新，因此僅與相關<xref:System.Windows.Data.BindingMode.TwoWay>或<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結。 針對<xref:System.Windows.Data.BindingMode.TwoWay>和<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結得以生效，來源物件必須提供屬性變更通知。 如需詳細資訊，請參考本主題中引用的範例。 此外，您還可以參閱[實作屬性變更通知](how-to-implement-property-change-notification.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [HOW TO 主題](data-binding-how-to-topics.md)
