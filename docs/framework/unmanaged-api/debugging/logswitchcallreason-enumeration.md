@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bba39446d9ca5164d98337e93e83725cfa503903
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7eadb595eb62b4f1a9dcc888225cbb7454119c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198487"
 ---
-# <a name="logswitchcallreason-enumeration"></a><span data-ttu-id="50afa-102">LogSwitchCallReason 列舉</span><span class="sxs-lookup"><span data-stu-id="50afa-102">LogSwitchCallReason Enumeration</span></span>
-<span data-ttu-id="50afa-103">指出在切換偵錯/追蹤時所執行的作業。</span><span class="sxs-lookup"><span data-stu-id="50afa-103">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
+# <a name="logswitchcallreason-enumeration"></a><span data-ttu-id="6457c-102">LogSwitchCallReason 列舉</span><span class="sxs-lookup"><span data-stu-id="6457c-102">LogSwitchCallReason Enumeration</span></span>
+<span data-ttu-id="6457c-103">指出在切換偵錯/追蹤時所執行的作業。</span><span class="sxs-lookup"><span data-stu-id="6457c-103">Indicates the operation that was performed on a debugging/tracing switch.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="50afa-104">語法</span><span class="sxs-lookup"><span data-stu-id="50afa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6457c-104">語法</span><span class="sxs-lookup"><span data-stu-id="6457c-104">Syntax</span></span>  
   
 ```  
 typedef enum LogSwitchCallReason {  
@@ -36,22 +36,23 @@ typedef enum LogSwitchCallReason {
 } LogSwitchCallReason;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="50afa-105">成員</span><span class="sxs-lookup"><span data-stu-id="50afa-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6457c-105">成員</span><span class="sxs-lookup"><span data-stu-id="6457c-105">Members</span></span>  
   
-|<span data-ttu-id="50afa-106">成員</span><span class="sxs-lookup"><span data-stu-id="50afa-106">Member</span></span>|<span data-ttu-id="50afa-107">描述</span><span class="sxs-lookup"><span data-stu-id="50afa-107">Description</span></span>|  
+|<span data-ttu-id="6457c-106">成員</span><span class="sxs-lookup"><span data-stu-id="6457c-106">Member</span></span>|<span data-ttu-id="6457c-107">描述</span><span class="sxs-lookup"><span data-stu-id="6457c-107">Description</span></span>|  
 |------------|-----------------|  
-|`SWITCH_CREATE`|<span data-ttu-id="50afa-108">建立偵錯/追蹤參數。</span><span class="sxs-lookup"><span data-stu-id="50afa-108">A debugging/tracing switch was created.</span></span>|  
-|`SWITCH_MODIFY`|<span data-ttu-id="50afa-109">偵錯/追蹤交換器已修改。</span><span class="sxs-lookup"><span data-stu-id="50afa-109">A debugging/tracing switch was modified.</span></span>|  
-|`SWITCH_DELETE`|<span data-ttu-id="50afa-110">偵錯/追蹤參數已被刪除。</span><span class="sxs-lookup"><span data-stu-id="50afa-110">A debugging/tracing switch was deleted.</span></span>|  
+|`SWITCH_CREATE`|<span data-ttu-id="6457c-108">建立偵錯/追蹤參數。</span><span class="sxs-lookup"><span data-stu-id="6457c-108">A debugging/tracing switch was created.</span></span>|  
+|`SWITCH_MODIFY`|<span data-ttu-id="6457c-109">偵錯/追蹤交換器已修改。</span><span class="sxs-lookup"><span data-stu-id="6457c-109">A debugging/tracing switch was modified.</span></span>|  
+|`SWITCH_DELETE`|<span data-ttu-id="6457c-110">偵錯/追蹤參數已被刪除。</span><span class="sxs-lookup"><span data-stu-id="6457c-110">A debugging/tracing switch was deleted.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="50afa-111">需求</span><span class="sxs-lookup"><span data-stu-id="50afa-111">Requirements</span></span>  
- <span data-ttu-id="50afa-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="50afa-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6457c-111">需求</span><span class="sxs-lookup"><span data-stu-id="6457c-111">Requirements</span></span>  
+ <span data-ttu-id="6457c-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6457c-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="50afa-113">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="50afa-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6457c-113">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6457c-113">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="50afa-114">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="50afa-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6457c-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6457c-114">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="50afa-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="50afa-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="6457c-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="6457c-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="50afa-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="50afa-116">See also</span></span>
-- [<span data-ttu-id="50afa-117">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="50afa-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="6457c-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6457c-116">See also</span></span>
+
+- [<span data-ttu-id="6457c-117">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="6457c-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b7197f905c974bafc5b3892e498083f6abc18c12
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b80bb7b62d3a4ffee61cc6756b7d7d02f2b074bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196199"
 ---
-# <a name="imetadataimportenumcustomattributes-method"></a><span data-ttu-id="365e8-102">IMetaDataImport::EnumCustomAttributes 方法</span><span class="sxs-lookup"><span data-stu-id="365e8-102">IMetaDataImport::EnumCustomAttributes Method</span></span>
-<span data-ttu-id="365e8-103">列舉指定的型別或成員相關聯的自訂屬性定義語彙基元。</span><span class="sxs-lookup"><span data-stu-id="365e8-103">Enumerates custom attribute-definition tokens associated with the specified type or member.</span></span>  
+# <a name="imetadataimportenumcustomattributes-method"></a><span data-ttu-id="71164-102">IMetaDataImport::EnumCustomAttributes 方法</span><span class="sxs-lookup"><span data-stu-id="71164-102">IMetaDataImport::EnumCustomAttributes Method</span></span>
+<span data-ttu-id="71164-103">列舉指定的型別或成員相關聯的自訂屬性定義語彙基元。</span><span class="sxs-lookup"><span data-stu-id="71164-103">Enumerates custom attribute-definition tokens associated with the specified type or member.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="365e8-104">語法</span><span class="sxs-lookup"><span data-stu-id="365e8-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="71164-104">語法</span><span class="sxs-lookup"><span data-stu-id="71164-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumCustomAttributes (   
@@ -40,41 +40,42 @@ HRESULT EnumCustomAttributes (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="365e8-105">參數</span><span class="sxs-lookup"><span data-stu-id="365e8-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="71164-105">參數</span><span class="sxs-lookup"><span data-stu-id="71164-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="365e8-106">[in、 out]要傳回的列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="365e8-106">[in, out] A pointer to the returned enumerator.</span></span>  
+ <span data-ttu-id="71164-106">[in、 out]要傳回的列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="71164-106">[in, out] A pointer to the returned enumerator.</span></span>  
   
  `tk`  
- <span data-ttu-id="365e8-107">[in]語彙基元範圍的列舉型別或為零的所有自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="365e8-107">[in] A token for the scope of the enumeration, or zero for all custom attributes.</span></span>  
+ <span data-ttu-id="71164-107">[in]語彙基元範圍的列舉型別或為零的所有自訂屬性。</span><span class="sxs-lookup"><span data-stu-id="71164-107">[in] A token for the scope of the enumeration, or zero for all custom attributes.</span></span>  
   
  `tkType`  
- <span data-ttu-id="365e8-108">[in]要列舉的屬性之型別的建構函式的語彙基元或`null`所有類型。</span><span class="sxs-lookup"><span data-stu-id="365e8-108">[in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.</span></span>  
+ <span data-ttu-id="71164-108">[in]要列舉的屬性之型別的建構函式的語彙基元或`null`所有類型。</span><span class="sxs-lookup"><span data-stu-id="71164-108">[in] A token for the constructor of the type of the attributes to be enumerated, or `null` for all types.</span></span>  
   
  `rCustomAttributes`  
- <span data-ttu-id="365e8-109">[out]自訂屬性的語彙基元的陣列。</span><span class="sxs-lookup"><span data-stu-id="365e8-109">[out] An array of custom attribute tokens.</span></span>  
+ <span data-ttu-id="71164-109">[out]自訂屬性的語彙基元的陣列。</span><span class="sxs-lookup"><span data-stu-id="71164-109">[out] An array of custom attribute tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="365e8-110">[in] `rCustomAttributes` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="365e8-110">[in] The maximum size of the `rCustomAttributes` array.</span></span>  
+ <span data-ttu-id="71164-110">[in] `rCustomAttributes` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="71164-110">[in] The maximum size of the `rCustomAttributes` array.</span></span>  
   
  `pcCustomAttributes`  
- <span data-ttu-id="365e8-111">[out，optional]傳回的權杖值的實際數目`rCustomAttributes`。</span><span class="sxs-lookup"><span data-stu-id="365e8-111">[out, optional] The actual number of token values returned in `rCustomAttributes`.</span></span>  
+ <span data-ttu-id="71164-111">[out，optional]傳回的權杖值的實際數目`rCustomAttributes`。</span><span class="sxs-lookup"><span data-stu-id="71164-111">[out, optional] The actual number of token values returned in `rCustomAttributes`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="365e8-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="365e8-112">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="71164-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="71164-112">Return Value</span></span>  
   
-|<span data-ttu-id="365e8-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="365e8-113">HRESULT</span></span>|<span data-ttu-id="365e8-114">描述</span><span class="sxs-lookup"><span data-stu-id="365e8-114">Description</span></span>|  
+|<span data-ttu-id="71164-113">HRESULT</span><span class="sxs-lookup"><span data-stu-id="71164-113">HRESULT</span></span>|<span data-ttu-id="71164-114">描述</span><span class="sxs-lookup"><span data-stu-id="71164-114">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="365e8-115">`EnumCustomAttributes` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="365e8-115">`EnumCustomAttributes` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="365e8-116">沒有自訂屬性來列舉。</span><span class="sxs-lookup"><span data-stu-id="365e8-116">There are no custom attributes to enumerate.</span></span> <span data-ttu-id="365e8-117">在此情況下，`pcCustomAttributes`為零。</span><span class="sxs-lookup"><span data-stu-id="365e8-117">In that case, `pcCustomAttributes` is zero.</span></span>|  
+|`S_OK`|`EnumCustomAttributes` <span data-ttu-id="71164-115">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="71164-115">returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="71164-116">沒有自訂屬性來列舉。</span><span class="sxs-lookup"><span data-stu-id="71164-116">There are no custom attributes to enumerate.</span></span> <span data-ttu-id="71164-117">在此情況下，`pcCustomAttributes`為零。</span><span class="sxs-lookup"><span data-stu-id="71164-117">In that case, `pcCustomAttributes` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="365e8-118">需求</span><span class="sxs-lookup"><span data-stu-id="365e8-118">Requirements</span></span>  
- <span data-ttu-id="365e8-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="365e8-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="71164-118">需求</span><span class="sxs-lookup"><span data-stu-id="71164-118">Requirements</span></span>  
+ <span data-ttu-id="71164-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="71164-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="365e8-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="365e8-120">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="71164-120">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="71164-120">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="365e8-121">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="365e8-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="71164-121">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="71164-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="365e8-122">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="365e8-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="71164-122">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="71164-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="365e8-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="365e8-123">See also</span></span>
-- [<span data-ttu-id="365e8-124">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="365e8-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="365e8-125">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="365e8-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="71164-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="71164-123">See also</span></span>
+
+- [<span data-ttu-id="71164-124">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="71164-124">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="71164-125">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="71164-125">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

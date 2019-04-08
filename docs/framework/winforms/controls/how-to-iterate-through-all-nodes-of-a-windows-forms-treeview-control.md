@@ -10,25 +10,25 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: 306c1f684f1f4c2deb057f7d81c93856ee6189e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715390"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199709"
 ---
-# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="59ce9-102">HOW TO：逐一查看 Windows Forms TreeView 控制項的所有節點</span><span class="sxs-lookup"><span data-stu-id="59ce9-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
-<span data-ttu-id="59ce9-103">可能會很有用來檢查 Windows Forms 中的每個節點<xref:System.Windows.Forms.TreeView>才能執行一些計算節點值上的控制項。</span><span class="sxs-lookup"><span data-stu-id="59ce9-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="59ce9-104">使用遞迴程序 (採用 C# 和 C++ 的遞迴方法) 來逐一查看每個樹狀集合中的每個節點，即可完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="59ce9-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
+# <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a><span data-ttu-id="fb2d0-102">HOW TO：逐一查看 Windows Forms TreeView 控制項的所有節點</span><span class="sxs-lookup"><span data-stu-id="fb2d0-102">How to: Iterate Through All Nodes of a Windows Forms TreeView Control</span></span>
+<span data-ttu-id="fb2d0-103">可能會很有用來檢查 Windows Forms 中的每個節點<xref:System.Windows.Forms.TreeView>才能執行一些計算節點值上的控制項。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-103">It is sometimes useful to examine every node in a Windows Forms <xref:System.Windows.Forms.TreeView> control in order to perform some calculation on the node values.</span></span> <span data-ttu-id="fb2d0-104">使用遞迴程序 (採用 C# 和 C++ 的遞迴方法) 來逐一查看每個樹狀集合中的每個節點，即可完成這項作業。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-104">This operation can be done using a recursive procedure (recursive method in C# and C++) that iterates through each node in each collection of the tree.</span></span>  
   
- <span data-ttu-id="59ce9-105">每個<xref:System.Windows.Forms.TreeNode>樹狀檢視中的物件具有可供您瀏覽樹狀檢視中的屬性： <xref:System.Windows.Forms.TreeNode.FirstNode%2A>， <xref:System.Windows.Forms.TreeNode.LastNode%2A>， <xref:System.Windows.Forms.TreeNode.NextNode%2A>， <xref:System.Windows.Forms.TreeNode.PrevNode%2A>，和<xref:System.Windows.Forms.TreeNode.Parent%2A>。</span><span class="sxs-lookup"><span data-stu-id="59ce9-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="59ce9-106">值<xref:System.Windows.Forms.TreeNode.Parent%2A>屬性是目前節點的父節點。</span><span class="sxs-lookup"><span data-stu-id="59ce9-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="59ce9-107">子節點的目前節點中，如果有的話，會列在其<xref:System.Windows.Forms.TreeNode.Nodes%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="59ce9-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="59ce9-108"><xref:System.Windows.Forms.TreeView>控制項本身具有<xref:System.Windows.Forms.TreeView.TopNode%2A>屬性，這是整個樹狀結構檢視的根節點。</span><span class="sxs-lookup"><span data-stu-id="59ce9-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
+ <span data-ttu-id="fb2d0-105">每個<xref:System.Windows.Forms.TreeNode>樹狀檢視中的物件具有可供您瀏覽樹狀檢視中的屬性： <xref:System.Windows.Forms.TreeNode.FirstNode%2A>， <xref:System.Windows.Forms.TreeNode.LastNode%2A>， <xref:System.Windows.Forms.TreeNode.NextNode%2A>， <xref:System.Windows.Forms.TreeNode.PrevNode%2A>，和<xref:System.Windows.Forms.TreeNode.Parent%2A>。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-105">Each <xref:System.Windows.Forms.TreeNode> object in a tree view has properties that you can use to navigate the tree view: <xref:System.Windows.Forms.TreeNode.FirstNode%2A>, <xref:System.Windows.Forms.TreeNode.LastNode%2A>, <xref:System.Windows.Forms.TreeNode.NextNode%2A>, <xref:System.Windows.Forms.TreeNode.PrevNode%2A>, and <xref:System.Windows.Forms.TreeNode.Parent%2A>.</span></span> <span data-ttu-id="fb2d0-106">值<xref:System.Windows.Forms.TreeNode.Parent%2A>屬性是目前節點的父節點。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-106">The value of the <xref:System.Windows.Forms.TreeNode.Parent%2A> property is the parent node of the current node.</span></span> <span data-ttu-id="fb2d0-107">子節點的目前節點中，如果有的話，會列在其<xref:System.Windows.Forms.TreeNode.Nodes%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-107">The child nodes of the current node, if there are any, are listed in its <xref:System.Windows.Forms.TreeNode.Nodes%2A> property.</span></span> <span data-ttu-id="fb2d0-108"><xref:System.Windows.Forms.TreeView>控制項本身具有<xref:System.Windows.Forms.TreeView.TopNode%2A>屬性，這是整個樹狀結構檢視的根節點。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-108">The <xref:System.Windows.Forms.TreeView> control itself has the <xref:System.Windows.Forms.TreeView.TopNode%2A> property, which is the root node of the entire tree view.</span></span>  
   
-### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="59ce9-109">逐一查看 TreeView 控制項的所有節點</span><span class="sxs-lookup"><span data-stu-id="59ce9-109">To iterate through all nodes of the TreeView control</span></span>  
+### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a><span data-ttu-id="fb2d0-109">逐一查看 TreeView 控制項的所有節點</span><span class="sxs-lookup"><span data-stu-id="fb2d0-109">To iterate through all nodes of the TreeView control</span></span>  
   
-1.  <span data-ttu-id="59ce9-110">建立用以測試每個節點的遞迴程序 (採用 C# 和 C++ 的遞迴方法)。</span><span class="sxs-lookup"><span data-stu-id="59ce9-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
+1.  <span data-ttu-id="fb2d0-110">建立用以測試每個節點的遞迴程序 (採用 C# 和 C++ 的遞迴方法)。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-110">Create a recursive procedure (recursive method in C# and C++) that tests each node.</span></span>  
   
-2.  <span data-ttu-id="59ce9-111">呼叫此程序。</span><span class="sxs-lookup"><span data-stu-id="59ce9-111">Call the procedure.</span></span>  
+2.  <span data-ttu-id="fb2d0-111">呼叫此程序。</span><span class="sxs-lookup"><span data-stu-id="fb2d0-111">Call the procedure.</span></span>  
   
-     <span data-ttu-id="59ce9-112">下列範例示範如何列印每個<xref:System.Windows.Forms.TreeNode>物件的<xref:System.Windows.Forms.TreeNode.Text%2A>屬性：</span><span class="sxs-lookup"><span data-stu-id="59ce9-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
+     <span data-ttu-id="fb2d0-112">下列範例示範如何列印每個<xref:System.Windows.Forms.TreeNode>物件的<xref:System.Windows.Forms.TreeNode.Text%2A>屬性：</span><span class="sxs-lookup"><span data-stu-id="fb2d0-112">The following example shows how to print each <xref:System.Windows.Forms.TreeNode> object's <xref:System.Windows.Forms.TreeNode.Text%2A> property:</span></span>  
   
     ```vb  
     Private Sub PrintRecursive(ByVal n As TreeNode)  
@@ -123,6 +123,7 @@ ms.locfileid: "57715390"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="59ce9-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="59ce9-113">See also</span></span>
-- [<span data-ttu-id="59ce9-114">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="59ce9-114">TreeView Control</span></span>](treeview-control-windows-forms.md)
-- [<span data-ttu-id="59ce9-115">遞迴程序</span><span class="sxs-lookup"><span data-stu-id="59ce9-115">Recursive Procedures</span></span>](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
+## <a name="see-also"></a><span data-ttu-id="fb2d0-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fb2d0-113">See also</span></span>
+
+- [<span data-ttu-id="fb2d0-114">TreeView 控制項</span><span class="sxs-lookup"><span data-stu-id="fb2d0-114">TreeView Control</span></span>](treeview-control-windows-forms.md)
+- [<span data-ttu-id="fb2d0-115">遞迴程序</span><span class="sxs-lookup"><span data-stu-id="fb2d0-115">Recursive Procedures</span></span>](~/docs/visual-basic/programming-guide/language-features/procedures/recursive-procedures.md)
