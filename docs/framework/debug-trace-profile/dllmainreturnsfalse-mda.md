@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: e2abdd04-f571-4b97-8c16-2221b8588429
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c513ba06ac79eb3da229605120c4f59ab8d32665
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd987cea78d082eee26032d5f98a54dc0cd3e1d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072619"
 ---
 # <a name="dllmainreturnsfalse-mda"></a>dllMainReturnsFalse MDA
 如果以理由 DLL_PROCESS_ATTACH 呼叫的使用者組件 Managed `DllMain` 函式，傳回 FALSE，就會啟動 `dllMainReturnsFalse` Managed 偵錯助理 (MDA)。  
@@ -31,7 +31,7 @@ ms.locfileid: "54554539"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。 它只報告 `DllMain` 傳回值的相關資料。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  訊息，指出因為 DLL_PROCESS_ATTACH 而呼叫的 `DllMain` 函式傳回 FALSE。 請注意，只有在 Managed 程式碼中實作 `DllMain` 時，才會啟用這個 MDA。  
   
 ## <a name="configuration"></a>組態  
@@ -45,4 +45,5 @@ ms.locfileid: "54554539"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

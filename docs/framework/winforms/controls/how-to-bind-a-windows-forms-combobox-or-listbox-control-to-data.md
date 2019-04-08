@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料
+title: HOW TO：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: dfd7f081-8bea-4a41-86a3-86a1934828ef
-ms.openlocfilehash: c8eb224cbb8ec7ab271edaed8bb25f9cc7fb8ddc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 949b63f435289d486f445bad01d0bc6cc33e6f08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197187"
 ---
-# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>HOW TO：將 Windows Form ComboBox 或 ListBox 控制項繫結至資料
+# <a name="how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data"></a>HOW TO：將 Windows Forms ComboBox 或 ListBox 控制項繫結至資料
 您可以繫結<xref:System.Windows.Forms.ComboBox>和<xref:System.Windows.Forms.ListBox>資料，以執行工作，例如瀏覽資料庫中的資料，以在輸入新的資料，或編輯現有的資料。  
   
 ### <a name="to-bind-a-combobox-or-listbox-control"></a>將 ComboBox 或 ListBox 控制項繫結  
@@ -54,8 +54,9 @@ ms.locfileid: "57709922"
     >  如果您繫結至資料來源未實作<xref:System.ComponentModel.IBindingList>介面，例如<xref:System.Collections.ArrayList>，更新資料來源時，將不會更新繫結的控制項的資料。 例如，如果您有下拉式方塊繫結至<xref:System.Collections.ArrayList>而且資料會加入至<xref:System.Collections.ArrayList>，這些新的項目不會出現在下拉式方塊。 不過，您可以在其中強制下拉式方塊，藉由呼叫更新<xref:System.Windows.Forms.BindingManagerBase.SuspendBinding%2A>並<xref:System.Windows.Forms.BindingManagerBase.ResumeBinding%2A>執行個體上的方法<xref:System.Windows.Forms.BindingContext>控制項所繫結類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
-- [資料繫結和 Windows Forms](../data-binding-and-windows-forms.md)
-- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [Windows Form 資料繫結](../windows-forms-data-binding.md)
+- [資料繫結和 Windows Form](../data-binding-and-windows-forms.md)
+- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)

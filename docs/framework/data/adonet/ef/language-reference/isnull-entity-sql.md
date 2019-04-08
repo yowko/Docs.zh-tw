@@ -2,12 +2,12 @@
 title: ISNULL (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: dc7a0173-3664-4c90-a57b-5cbb0a8ed7ee
-ms.openlocfilehash: 1b728e170968e2fbeb67eef3f8f940c64816ff0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 894d3ab91623aa4246bf7735fb1b7d04e066825a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072632"
 ---
 # <a name="isnull-entity-sql"></a>ISNULL (Entity SQL)
 判斷查詢運算式是否為 null。  
@@ -26,7 +26,7 @@ expression IS [ NOT ] NULL
  否定 IS NULL 的 EDM.Boolean 結果。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `true` 傳回 null 則為 `expression`；否則為 `false`。  
+ `true` 如果`expression`會傳回 null; 否則即為`false`。  
   
 ## <a name="remarks"></a>備註  
  使用 `IS NULL` 判斷外部連結的項目是否為 null：  
@@ -66,4 +66,5 @@ select c from LOB.Customer as c where c.DOB is not null
  [!code-csharp[DP EntityServices Concepts 2#ISNULL](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#isnull)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

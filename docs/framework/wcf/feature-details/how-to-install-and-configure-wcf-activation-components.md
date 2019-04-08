@@ -1,17 +1,17 @@
 ---
-title: HOW TO：安裝及設定 WCF 啟用元件
+title: HOW TO：安裝和設定 WCF 啟用元件
 ms.date: 03/30/2017
 helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
-ms.openlocfilehash: 0bc624bcacf5ab85a5ae0e833ea6b7a979946a27
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bcd725963986d8a70584409e1ef15c42f04f0033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199215"
 ---
-# <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝及設定 WCF 啟用元件
+# <a name="how-to-install-and-configure-wcf-activation-components"></a>HOW TO：安裝和設定 WCF 啟用元件
 本主題說明設定 Windows Process Activation Service (亦稱為 WAS) 所需的步驟上[!INCLUDE[wv](../../../../includes/wv-md.md)]來裝載 Windows Communication Foundation (WCF) 服務不會透過 HTTP 通訊的網路通訊協定。 下列各節將概述此組態的各項步驟：  
   
 -   安裝 （或確認安裝） WCF 啟用元件。  
@@ -101,6 +101,7 @@ ms.locfileid: "54726893"
     >  這個命令是單行文字。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TCP 啟用](../../../../docs/framework/wcf/samples/tcp-activation.md)
 - [MSMQ 啟用](../../../../docs/framework/wcf/samples/msmq-activation.md)
 - [NamedPipe 啟用](../../../../docs/framework/wcf/samples/namedpipe-activation.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
-ms.openlocfilehash: d22d0ada44ca4374da0b8feccf0a37ff1016dc80
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196316"
 ---
 # <a name="implementing-service-contracts"></a>實作服務合約
 服務是一種類別，會在一或多個端點公開可供用戶端使用的功能。 若要建立服務時，撰寫實作 Windows Communication Foundation (WCF) 合約的類別。 您可以使用下列其中一種作法： 您可以將合約另外定義為介面，然後建立實作該介面的類別。 或者，您可以將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性置於類別本身，而將 <xref:System.ServiceModel.OperationContractAttribute> 屬性置於可供服務之用戶端使用的方法上，以直接建立類別和合約。  
@@ -58,7 +58,8 @@ class MathService
  在實作服務合約之後，必須為服務建立一或多個端點。 如需詳細資訊，請參閱 <<c0> [ 端點建立概觀](../../../docs/framework/wcf/endpoint-creation-overview.md)。 如需如何執行服務的詳細資訊，請參閱[裝載的服務](../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設計與實作服務](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [如何：使用合約類別，建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [如何：建立服務合約介面](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [HOW TO：使用合約類別來建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [HOW TO：使用合約介面來建立服務](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

@@ -2,12 +2,12 @@
 title: FailedToTraceEventWithException
 ms.date: 03/30/2017
 ms.assetid: b605b2b8-acd6-4762-8269-b025758a2404
-ms.openlocfilehash: ee3785fce40e18faaeb029de9da88d082e4f51d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68d1eada4ba8741274bcea8a5cb74a9942d0114c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525712"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200151"
 ---
 # <a name="failedtotraceeventwithexception"></a>FailedToTraceEventWithException
 識別碼:105  
@@ -22,5 +22,6 @@ ms.locfileid: "54525712"
  此事件會列出原始事件字串、例外狀況、處理序名稱和處理序識別碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [事件記錄](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

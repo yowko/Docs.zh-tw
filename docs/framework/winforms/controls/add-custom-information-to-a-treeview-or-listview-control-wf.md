@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)
+title: HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 40ac3fb3a148c351cf5acca235569e2a1a439a3e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188932"
 ---
-# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)
+# <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
 您可以在 Windows Forms 中建立衍生的節點<xref:System.Windows.Forms.TreeView>控制項或中的衍生項目<xref:System.Windows.Forms.ListView>控制項。 衍生可讓您新增您所需的任何欄位，以及新增自訂方法和建構函式來處理它們。 這項功能的其中一個用途是將 Customer 物件附加至每個樹狀節點或清單項目。 這裡的範例是針對<xref:System.Windows.Forms.TreeView>控制項，但是相同的方法可用於<xref:System.Windows.Forms.ListView>控制項。  
   
 ### <a name="to-derive-a-tree-node"></a>衍生樹狀節點  
@@ -131,5 +131,6 @@ ms.locfileid: "57709658"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TreeView 控制項](treeview-control-windows-forms.md)
 - [ListView 控制項](listview-control-windows-forms.md)

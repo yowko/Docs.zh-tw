@@ -2,12 +2,12 @@
 title: 自訂編碼器
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
-ms.openlocfilehash: 7b68725346a2de23d405ed21ead93e3a6a8374e6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190570"
 ---
 # <a name="custom-encoders"></a>自訂編碼器
 本主題討論如何建立自訂編碼器。  
@@ -30,16 +30,15 @@ ms.locfileid: "58411365"
   
  WCF 會提供下列類型的繫結項目衍生自<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>可以提供文字、 二進位和訊息傳輸最佳化機制 (MTOM) 編碼的類別：  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>：最互通性最佳、 但效率最差的 XML 訊息編碼器。 Web 服務或 Web 服務用戶端通常可以瞭解文字 XML。 不過，將大型二進位資料區塊當做文字來傳輸是沒有效率的。  
+-   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>:最互通性最佳、 但效率最差的 XML 訊息編碼器。 Web 服務或 Web 服務用戶端通常可以瞭解文字 XML。 不過，將大型二進位資料區塊當做文字來傳輸是沒有效率的。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>：表示指定的字元編碼繫結項目和版本設定用於二進位 XML 訊息的訊息。 這是最有效率的編碼方式的選項，但至少互通的因為它只支援由 WCF 端點。  
+-   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>:表示指定的字元編碼繫結項目和版本設定用於二進位 XML 訊息的訊息。 這是最有效率的編碼方式的選項，但至少互通的因為它只支援由 WCF 端點。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>：表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
+-   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>:表示繫結項目，指定的字元編碼和訊息版本處理，用於使用訊息傳輸最佳化機制 (MTOM) 編碼的訊息。 MTOM 是在 WCF 訊息中傳輸二進位資料的有效技術。 MTOM 編碼器會嘗試在效率和互通性之間保持平衡。 MTOM 編碼方式會以文字格式傳輸大部分的 XML，但是在傳輸大型區塊的二進位資料時，會依照原狀來傳送 (不轉換成文字)，好讓這些資料最佳化。  
   
  繫結項目會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory>。 處理站會建立二進位、MTOM 或文字的 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 執行個體。 一般而言，只會有一個執行個體。 不過，如果是使用工作階段，就可以提供不同的編碼器給每個工作階段。 二進位編碼器會利用這種方式來協調動態字典 (請參閱＜XML 基礎結構＞)。  
   
- 
-  <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 和 <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 方法是編碼器的核心。 這些方法會提供從資料流或 <xref:System.Byte> 陣列讀取訊息的功能。 當傳輸在緩衝模式中運作時，會使用位元組陣列。 訊息一定會寫入資料流。 如果傳輸必須緩衝訊息，就會提供執行緩衝處理的資料流。  
+ <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 和 <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 方法是編碼器的核心。 這些方法會提供從資料流或 <xref:System.Byte> 陣列讀取訊息的功能。 當傳輸在緩衝模式中運作時，會使用位元組陣列。 訊息一定會寫入資料流。 如果傳輸必須緩衝訊息，就會提供執行緩衝處理的資料流。  
   
  其他成員則會使用支援內容、媒體類型和 <xref:System.ServiceModel.Channels.MessageEncoder.MessageVersion%2A>。 傳輸會呼叫這些編碼器方法來測試是否可以藉此解碼傳入的訊息，或者判斷傳出的訊息是否對此編碼器為有效。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "58411365"
 ### <a name="pooling"></a>Pooling  
  每個編碼器實作都會盡可能嘗試集中共用。 減少配置是改善 Managed 程式碼效能的主要方法。 為了達成這種共用，這些實作會使用 `SynchronizedPool` 類別。 C# 檔案包含這個類別使用的其他最佳化方法的描述。  
   
- 為了避免替每一個訊息配置新的 <xref:System.Xml.XmlDictionaryReader> 和 <xref:System.Xml.XmlDictionaryWriter> 執行個體，編碼器會共用並重新初始化這些執行個體。 對於讀取器，會在呼叫 `OnClose` 時由 `Close()` 回呼取回讀取器。 編碼器也會回收建構訊息時使用的某些訊息狀態物件。 您可以在三個衍生自 `MaxReadPoolSize` 的每一個類別上，透過其 `MaxWritePoolSize` 和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 屬性來設定這些集區的大小。  
+ <xref:System.Xml.XmlDictionaryReader> 和<xref:System.Xml.XmlDictionaryWriter>會共用並重新初始化，以避免配置新的每個訊息執行個體。 對於讀取器，會在呼叫 `OnClose` 時由 `Close()` 回呼取回讀取器。 編碼器也會回收建構訊息時使用的某些訊息狀態物件。 您可以在三個衍生自 `MaxReadPoolSize` 的每一個類別上，透過其 `MaxWritePoolSize` 和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 屬性來設定這些集區的大小。  
   
 ### <a name="binary-encoding"></a>二進位編碼方式  
  當二進位編碼使用工作階段時，必須將動態字典字串傳達至訊息的接收者。 做法是在訊息前面加上動態字典字串。 接收者會剝取這些字串，然後將它們加入至工作階段，再處理訊息。 為了正確傳遞字典字串，傳輸需要獲得緩衝。  
@@ -61,8 +60,7 @@ ms.locfileid: "58411365"
  除了處理動態字典索引鍵之外，還會以獨特的方式來接收緩衝的工作階段訊息。 二進位編碼器並非在文件上建立讀取器，然後加以處理，而是使用內部的 `MessagePatterns` 類別來拆解二進位資料流。 其概念是，大部分的訊息有一組特定的顯示在以特定順序時由 WCF 所產生的標頭。 模式系統會根據其需求分解訊息。 如果分解成功，這個系統就會將 <xref:System.ServiceModel.Channels.MessageHeaders> 物件初始化，而不剖析 XML。 如果失敗，則退而求其次，使用標準的方法。  
   
 ### <a name="mtom-encoding"></a>MTOM 編碼方式  
- 
-  <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 類別具有另一個名為 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> 的組態屬性。 這個屬性可以設定允許繫結項目在讀取訊息過程中緩衝資料數量的上限。 可能需要將 XML 資訊集 (Infoset) 或其他 MIME 部分加以緩衝，才能將所有 MIME 部分重組成單一訊息。  
+ <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> 類別具有另一個名為 <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement.MaxBufferSize%2A> 的組態屬性。 這個屬性可以設定允許繫結項目在讀取訊息過程中緩衝資料數量的上限。 可能需要將 XML 資訊集 (Infoset) 或其他 MIME 部分加以緩衝，才能將所有 MIME 部分重組成單一訊息。  
   
  為能搭配 HTTP 而正常運作，內部 MTOM 訊息編碼器類別提供了一些適用於 `GetContentType` (同樣是內部的) 和 `WriteMessage` (公用的且可覆寫) 的內部 API。 編碼器必須進行更多的通訊，才能確保 HTTP 標頭中的值與 MIME 標頭中的值一致。  
   
@@ -81,9 +79,9 @@ ms.locfileid: "58411365"
   
 -   在這個類別中，您必須加以覆寫的主要方法如下：  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>，這個方法會接受 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> 物件，並將它寫入至 <xref:System.IO.Stream> 物件。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 這個方法會接受<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>物件，並將它寫入至<xref:System.IO.Stream>物件。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>，這個方法會接受 <xref:System.IO.Stream> 物件和最大標頭大小，然後傳回 <xref:System.ServiceModel.Channels.Message> 物件。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 這個方法會接受<xref:System.IO.Stream>物件和標頭大小上限，然後傳回<xref:System.ServiceModel.Channels.Message>物件。  
   
  在處理標準傳輸通訊協定與自訂編碼之間轉換的這些方法中，它就是您要撰寫的程式碼。  
   
@@ -94,6 +92,7 @@ ms.locfileid: "58411365"
  有兩個範例提供使用 WCF，說明此程序範例程式碼：[自訂訊息編碼器：自訂文字編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-custom-text-encoder.md)和[自訂訊息編碼器：壓縮編碼器](../../../../docs/framework/wcf/samples/custom-message-encoder-compression-encoder.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.MessageEncoderFactory>
 - <xref:System.ServiceModel.Channels.MessageEncoder>

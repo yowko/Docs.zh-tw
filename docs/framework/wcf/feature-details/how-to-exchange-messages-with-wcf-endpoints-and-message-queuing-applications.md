@@ -1,18 +1,18 @@
 ---
-title: HOW TO：Exchange 與 WCF 端點的訊息和訊息佇列應用程式
+title: HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 62210fd8-a372-4d55-ab9b-c99827d1885e
-ms.openlocfilehash: f0bfb966026d7588de63bef38eb289bb33a7a688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7fdcebe7ab9ee82a7283add9e0200af2ea5c94bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620158"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198968"
 ---
-# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>HOW TO：Exchange 與 WCF 端點的訊息和訊息佇列應用程式
+# <a name="how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications"></a>HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息
 您可以整合現有的 Message Queuing (MSMQ) 應用程式與 Windows Communication Foundation (WCF) 應用程式，使用 MSMQ 整合繫結，將 MSMQ 訊息，與 WCF 訊息。 這可讓您呼叫 MSMQ 接收者應用程式，從 WCF 用戶端，以及從 MSMQ 傳送者應用程式呼叫 WCF 服務。  
   
  在本節中，我們會說明如何使用<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>（1） 的 WCF 用戶端與使用 System.Messaging 和 （2) MSMQ 應用程式用戶端和 WCF 服務撰寫的 MSMQ 應用程式服務之間的佇列通訊。  
@@ -34,13 +34,9 @@ ms.locfileid: "54620158"
      [!code-vb[S_MsmqToWcf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmqtowcf/vb/service.vb#2)]  
   
 3.  建立會指定 <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> 的組態檔。  
-  
-  
-  
+
 4.  產生可使用設定繫結的 <xref:System.ServiceModel.ServiceHost> 物件。  
-  
-  
-  
+
 ### <a name="to-create-a-wcf-client-that-sends-messages-to-a-msmq-receiver-application"></a>若要建立可將訊息傳送至 MSMQ 接收者應用程式的 WCF 用戶端  
   
 1.  定義這個介面會定義服務合約的 WCF 用戶端傳送佇列訊息至 MSMQ 接收者，如下列範例程式碼所示。  
@@ -63,8 +59,9 @@ ms.locfileid: "54620158"
      [!code-csharp[S_WcfToMsmq#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_wcftomsmq/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)
-- [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [HOW TO：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
 - [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)
 - [訊息佇列至 Windows Communication Foundation](../../../../docs/framework/wcf/samples/message-queuing-to-wcf.md)

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性
+title: 逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項
 ms.date: 03/30/2017
 f1_keywords:
 - Margin.Bottom
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: ca5f968364cd768b708616a867baee49775ca611
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167865"
 ---
-# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性
+# <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 **Windows Form 設計工具**提供您許多版面配置工具，來完成這項作業。 三個最重要的是<xref:System.Windows.Forms.Control.Margin%2A>， <xref:System.Windows.Forms.Control.Padding%2A>，和<xref:System.Windows.Forms.Control.AutoSize%2A>都存在於所有 Windows Form 控制項的屬性。  
   
  <xref:System.Windows.Forms.Control.Margin%2A> 屬性可定義控制項周圍的空間，使其他控制項與該控制項的邊框保持指定的距離。  
@@ -185,11 +185,12 @@ ms.locfileid: "57708427"
 -   實驗中的子控制項的停駐<xref:System.Windows.Forms.Panel>控制項。 <xref:System.Windows.Forms.Control.Padding%2A>值的較通用實現<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>屬性，而且可以滿足您自己，是藉由將子控制項置於<xref:System.Windows.Forms.Panel>控制項，並設定子控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性<xref:System.Windows.Forms.DockStyle.Fill>. 設定<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性，以不同的值和附註的效果。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

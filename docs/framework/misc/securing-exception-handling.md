@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c406edcef393d3c2b9e4cf6dbeee9d572c0951f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173667"
 ---
 # <a name="securing-exception-handling"></a>設定例外狀況處理的安全性
 在 Visual c + + 和 Visual Basic 中，進一步篩選條件運算式堆疊會執行任何之前**最後**陳述式。 **攔截**相關聯的區塊之後執行的該篩選條件**最後**陳述式。 如需詳細資訊，請參閱 <<c0> [ 使用使用者篩選例外狀況](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)。 本節將探討此順序的安全性含意。 請考慮下列虛擬程式碼範例說明中的篩選陳述式的順序並**最後**執行的陳述式。  
@@ -161,4 +161,5 @@ YourObject.YourMethod()
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

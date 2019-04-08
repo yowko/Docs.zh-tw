@@ -1,5 +1,5 @@
 ---
-title: HOW TO：列印 Windows Form 中的圖形
+title: HOW TO：列印 Windows Forms 中的圖形
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: cb8c9f291103915c82fb31af5c6668fbd0648f66
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167202"
 ---
-# <a name="how-to-print-graphics-in-windows-forms"></a>HOW TO：列印 Windows Form 中的圖形
+# <a name="how-to-print-graphics-in-windows-forms"></a>HOW TO：列印 Windows Forms 中的圖形
 通常，您要列印您以 Windows 為基礎的應用程式中的圖形。 <xref:System.Drawing.Graphics>類別會提供物件繪製到螢幕或印表機等裝置的方法。  
   
 ### <a name="to-print-graphics"></a>若要列印的圖形  
@@ -67,6 +67,7 @@ ms.locfileid: "57721302"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Windows Forms 列印支援](windows-forms-print-support.md)
+- [Windows Form 列印支援](windows-forms-print-support.md)

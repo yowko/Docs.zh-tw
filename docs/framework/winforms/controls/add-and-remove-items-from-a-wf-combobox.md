@@ -1,5 +1,5 @@
 ---
-title: HOW TO：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項
+title: HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中新增和移除項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], removing items
 - CheckedListBox control [Windows Forms], adding and removing items
 ms.assetid: 7224c8d2-4118-443e-ae1e-d7c17d1e69ee
-ms.openlocfilehash: 1430975a48fb0755c6b08d6d5c183d8f29434f55
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 13f1e18753ad5b49a9cc530cf340579087908b4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710442"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188880"
 ---
-# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項
+# <a name="how-to-add-and-remove-items-from-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中新增和移除項目
 可以加入至 Windows Form 下拉式方塊，清單方塊中，或檢查清單方塊中有數種情況下，因為這些控制項可以繫結至各種資料來源的項目。 不過，本主題會示範最簡單的方法，並不需要任何資料繫結。 顯示的項目通常是字串;不過，您可以使用任何物件。 控制項中顯示的文字是物件的傳回值`ToString`方法。  
   
 ### <a name="to-add-items"></a>若要新增項目  
@@ -137,9 +137,10 @@ ms.locfileid: "57710442"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [何時使用 Windows Forms ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
-- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [HOW TO：排序 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [何時使用 Windows Form ComboBox 取代 ListBox](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
+- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)

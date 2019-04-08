@@ -1,5 +1,5 @@
 ---
-title: HOW TO：偵測是否已安裝.NET Framework 3.5
+title: HOW TO：偵測有無安裝 .NET Framework 3.5
 ms.date: 03/30/2017
 helpviewer_keywords:
 - verifying whether.NET Framework 3.5 is installed [WPF]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 2f3e3077f78aed90f4e213d61267131019664fdb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074634"
 ---
-# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>HOW TO：偵測是否已安裝.NET Framework 3.5
+# <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>HOW TO：偵測有無安裝 .NET Framework 3.5
 系統管理員可以部署為目標的系統上的 Windows Presentation Foundation (WPF) 應用程式之前[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]，它們必須先確認[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]執行階段會出現。 本主題提供撰寫的指令碼在 HTML/JavaScript 中，系統管理員可以用來判斷是否[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]存在於系統上。  
   
 > [!NOTE]
@@ -129,4 +129,5 @@ ms.locfileid: "57378761"
  `This machine's userAgent string is: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 6.0; SLCC1; .NET CLR 2.0.50727; .NET CLR 1.1.4322; InfoPath.2; .NET CLR 3.0.590; MS-RTC LM 8).`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵測有無安裝 .NET Framework 3.0](how-to-detect-whether-the-net-framework-3-0-is-installed.md)

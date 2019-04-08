@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ade4c88f4431dd6db636ea2581bdb936ac8d8e5f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c141ca9a8e1c74015883f45cb2eaa9183bb3d89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177524"
 ---
 # <a name="icordebugappdomain3-interface"></a>ICorDebugAppDomain3 介面
 提供方法來擷取資訊的受管理的表示法[!INCLUDE[wrt](../../../../includes/wrt-md.md)]目前已載入應用程式定義域中的類型。 這個介面是 ICorDebugAppDomain 和 ICorDebugAppDomain2 介面的延伸模組。  
@@ -44,11 +44,12 @@ ms.locfileid: "54538007"
 ## <a name="requirements"></a>需求  
  **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

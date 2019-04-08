@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: bbcdd544e79197c9cb35d13bd09cffde9962030d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167189"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET 和 LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 屬於[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]系列的技術。 它是以 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 提供者模型所提供的服務為基礎。 因此您可以混合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]與現有的程式碼[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]應用程式並移轉目前[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]解決方案[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。 下圖提供關聯性 (Relationship) 的高層級檢視。  
@@ -29,14 +29,14 @@ ms.locfileid: "54553668"
  [!code-vb[DLinqAdoNet#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#1)]  
   
 ## <a name="transactions"></a>異動  
- 當您的應用程式已經啟始交易而且您希望您的 <xref:System.Data.Linq.DataContext> 參與其中時，您可以提供您的 <xref:System.Data.Linq.DataContext> 與自己的資料庫交易。  
+ 當您的應用程式已經啟始異動而且您希望您的 <xref:System.Data.Linq.DataContext> 參與其中時，您可以提供您的 <xref:System.Data.Linq.DataContext> 與自己的資料庫異動。  
   
  與 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 進行交易的慣用方法，就是使用 <xref:System.Transactions.TransactionScope> 物件。 使用這個方法，您可以進行適用於所有資料庫和其他常駐記憶體資源管理員的分散式異動。 交易範圍需要少數資源即可開始。 當交易範圍內有多個連線時，才會自行升級至分散式交易。  
   
  [!code-csharp[DLinqAdoNet#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqAdoNet/cs/Program.cs#2)]
  [!code-vb[DLinqAdoNet#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#2)]  
   
- 您無法將此方法用於所有資料庫。 例如，SqlClient 連接對 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 伺服器運作時並無法升級系統交易。 反而，每當它看見正在使用的交易範圍時，就會自動參與完整的分散式交易。  
+ 您無法將此方法用於所有資料庫。 例如，SqlClient 連接對 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 伺服器運作時並無法升級系統交易。 反而，每當它看見正在使用的異動範圍時，就會自動參與完整的分散式異動。  
   
 ## <a name="direct-sql-commands"></a>直接 SQL 命令  
  您偶而會碰到 <xref:System.Data.Linq.DataContext> 查詢或提交變更的能力不足以因應您想執行之特殊工作的情況。 在這些情況下，您可以使用 <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 方法將 SQL 命令發出至資料庫，並將查詢結果轉換為物件。  
@@ -55,8 +55,9 @@ ms.locfileid: "54553668"
  [!code-vb[DlinqAdoNet#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqAdoNet/vb/Module1.vb#4)]  
   
 > [!NOTE]
->  查詢文字中的參數會使用與 `Console.WriteLine()` 和 `String.Format()` 所用的相同大括號標記法加以表示。 `String.Format()` 會採用您提供的查詢字串，並且以產生的參數名稱 (例如 `@p0`、`@p1` ...、`@p(n)`) 替代大括號內的參數。  
+>  查詢文字中的參數會使用與 `Console.WriteLine()` 和 `String.Format()` 所用的相同大括號標記法加以表示。 `String.Format()` 查詢字串提供，並取代大括號內參數產生的參數的名稱，例如`@p0`， `@p1` ...， `@p(n)`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [如何：重複使用 ADO.NET 命令和 DataContext 之間的連線](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)
+- [HOW TO：重複使用 ADO.NET 命令和 DataContext 之間的連接](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)

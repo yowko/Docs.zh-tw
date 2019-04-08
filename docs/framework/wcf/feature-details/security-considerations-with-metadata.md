@@ -2,12 +2,12 @@
 title: 中繼資料的安全性考量
 ms.date: 03/30/2017
 ms.assetid: e78ef8ab-4f63-4656-ab93-b1deab2666d5
-ms.openlocfilehash: 2e1ad9f3c7d2a77ec6237bf1fc12c0d1a67181ad
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0dc060475f868923e8c7e4c87ef43ef5912c7ac5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172961"
 ---
 # <a name="security-considerations-with-metadata"></a>中繼資料的安全性考量
 當 Windows Communication Foundation (WCF) 中使用的中繼資料功能，請考慮發行、 擷取和使用服務中繼資料的安全性含意。  
@@ -26,8 +26,7 @@ ms.locfileid: "58411909"
  如果以不安全的方法擷取服務中繼資料，就可能遭到竄改或詐騙。 被竄改的中繼資料會將您的用戶端重新導向至惡意服務，其中並包含有害的安全性設定或惡意 XML 結構。 中繼資料文件可能很大，並經常會儲存至檔案系統。 若要防止竄改和詐騙，請在具有安全繫結的情況下使用安全繫結來要求服務中繼資料。  
   
 ## <a name="using-safe-techniques-for-processing-metadata"></a>使用安全技術來處理中繼資料  
- 將會使用標準化通訊協定 (例如 WS-MetadataExchange (MEX))，透過網路經常從服務擷取服務中繼資料。 許多中繼資料格式包括可指向其他中繼資料的參考機制。 
-  <xref:System.ServiceModel.Description.MetadataExchangeClient> 型別會自動為您處理 Web 服務描述語言 (WSDL) 文件、XML 結構描述和 MEX 文件中的參考。 從擷取的中繼資料所建立的 <xref:System.ServiceModel.Description.MetadataSet> 物件大小，則會直接與使用之 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 執行個體的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值成比例，也與該 `MaxReceivedMessageSize` 執行個體已使用的繫結 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值成比例。 根據案例的要求，將這些配額設定為適當的值。  
+ 將會使用標準化通訊協定 (例如 WS-MetadataExchange (MEX))，透過網路經常從服務擷取服務中繼資料。 許多中繼資料格式包括可指向其他中繼資料的參考機制。 <xref:System.ServiceModel.Description.MetadataExchangeClient> 型別會自動為您處理 Web 服務描述語言 (WSDL) 文件、XML 結構描述和 MEX 文件中的參考。 從擷取的中繼資料所建立的 <xref:System.ServiceModel.Description.MetadataSet> 物件大小，則會直接與使用之 <xref:System.ServiceModel.Description.MetadataExchangeClient.MaximumResolvedReferences%2A> 執行個體的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值成比例，也與該 `MaxReceivedMessageSize` 執行個體已使用的繫結 <xref:System.ServiceModel.Description.MetadataExchangeClient> 值成比例。 根據案例的要求，將這些配額設定為適當的值。  
   
  在 WCF 中，服務中繼資料會當做 XML 處理。 而在處理 XML 文件時，應用程式應該自我保護不會受到惡意 XML 結構的攻擊。 使用<xref:System.Xml.XmlDictionaryReader>與適當的配額時處理 XML，並且也設定了<xref:System.Xml.XmlTextReader.DtdProcessing%2A>屬性設<xref:System.Xml.DtdProcessing.Prohibit>。  
   
@@ -40,5 +39,6 @@ ms.locfileid: "58411909"
  服務的應用程式組態檔可能會控制發行中繼資料的方法以及是否發行中繼資料。 強烈建議您透過適當的存取控制清單 (ACL) 來保護應用程式組態檔，以確保攻擊者無法修改這類設定。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：確保中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
+
+- [HOW TO：保護中繼資料端點的安全](../../../../docs/framework/wcf/feature-details/how-to-secure-metadata-endpoints.md)
 - [安全性](../../../../docs/framework/wcf/feature-details/security.md)

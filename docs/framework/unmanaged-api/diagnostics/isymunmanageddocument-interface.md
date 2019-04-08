@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b14333235882efb6da1ce011c109c67a1d149bf3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33213aced635549dd439cf679d89367a71baa7c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168801"
 ---
 # <a name="isymunmanageddocument-interface"></a>ISymUnmanagedDocument 介面
 代表符號存放區所參考的文件。 文件是由統一資源定位器 (URL) 和 GUID 的文件類型定義。 您可以找出文件，不論它使用 URL 的儲存方式和文件類型的 GUID。 您可以在符號存放區中儲存的文件來源，並透過這個介面擷取它。  
@@ -42,4 +42,5 @@ ms.locfileid: "54584515"
 |[HasEmbeddedSource 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-hasembeddedsource-method.md)|會傳回`true`文件具有來源內嵌在偵錯的符號; 否則會傳回`false`。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

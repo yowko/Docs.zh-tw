@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Form DateTimePicker 控制項的自訂格式來顯示日期
+title: HOW TO：使用 Windows Forms DateTimePicker 控制項顯示自訂格式的日期
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - dates [Windows Forms], displaying in DateTimePicker control
 ms.assetid: 39767691-2d2b-46b6-a663-b7901e581a6e
-ms.openlocfilehash: c201455acaa9bde521afd623424d0cfc403b1bff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0c454580c6f3aa1fadb6e98d2ee715da948364b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705867"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192988"
 ---
-# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>HOW TO：使用 Windows Form DateTimePicker 控制項的自訂格式來顯示日期
+# <a name="how-to-display-a-date-in-a-custom-format-with-the-windows-forms-datetimepicker-control"></a>HOW TO：使用 Windows Forms DateTimePicker 控制項顯示自訂格式的日期
 Windows Form<xref:System.Windows.Forms.DateTimePicker>控制項可讓您彈性地格式化日期和時間在控制項中的顯示。 <xref:System.Windows.Forms.DateTimePicker.Format%2A>屬性可讓您從預先定義的格式，在列出選取<xref:System.Windows.Forms.DateTimePickerFormat>。 其中一個項目是否適合您的目的，您可以建立您自己使用中所列的格式字元的格式樣式<xref:System.Windows.Forms.DateTimePicker.CustomFormat%2A>。  
   
 ### <a name="to-display-a-custom-format"></a>若要顯示的自訂格式  
@@ -64,5 +64,6 @@ Windows Form<xref:System.Windows.Forms.DateTimePicker>控制項可讓您彈性�
      根據文化特性設定，可能會變更任何沒有單引號括住的字元。 例如，上述的格式字串會顯示目前的日期格式 」 目前是：05:30:31 星期五年 3 月 02、 2012 「 英文 （美國） 文化特性中。 請注意第一個冒號會括在單引號括住，因為它不是會分隔字元，因為它是"ss"。 在另一個文化特性的格式可能會顯示為 「 目前是：05.30.31 星期五年 3 月 02、 2012"。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DateTimePicker 控制項](datetimepicker-control-windows-forms.md)
-- [如何：使用 Windows Form DateTimePicker 控制項設定和傳回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)
+- [HOW TO：使用 Windows Forms DateTimePicker 控制項設定和傳回日期](how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control.md)

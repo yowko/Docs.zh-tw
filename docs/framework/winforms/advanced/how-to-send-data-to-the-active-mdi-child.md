@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將資料傳送至作用中的 MDI 子系
+title: HOW TO：傳送資料至作用中的 MDI 子系
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: a89956595ff98e8cda717c90a3f96c95abc8118a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203323"
 ---
-# <a name="how-to-send-data-to-the-active-mdi-child"></a>HOW TO：將資料傳送至作用中的 MDI 子系
+# <a name="how-to-send-data-to-the-active-mdi-child"></a>HOW TO：傳送資料至作用中的 MDI 子系
 內容中，通常[多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)，您必須將資料傳送至作用中的子視窗，例如當使用者將資料從剪貼簿貼到 MDI 應用程式。  
   
 > [!NOTE]
@@ -92,8 +92,9 @@ ms.locfileid: "57707397"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
-- [如何：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
-- [如何：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
-- [如何：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
-- [如何：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
+- [HOW TO：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
+- [HOW TO：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
+- [HOW TO：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
+- [HOW TO：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
