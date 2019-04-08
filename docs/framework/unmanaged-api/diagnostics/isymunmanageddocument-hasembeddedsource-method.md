@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 620d303bcd33a4d04155850ec2c1b6293bf788d1
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1d6c79be95ff80c8de9b07cb33be46a5f5db22b1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094264"
 ---
 # <a name="isymunmanageddocumenthasembeddedsource-method"></a>ISymUnmanagedDocument::HasEmbeddedSource 方法
 會傳回`true`文件具有來源內嵌在偵錯的符號; 否則會傳回`false`。  
@@ -42,4 +42,5 @@ HRESULT HasEmbeddedSource(
  如果方法成功為 S_OK。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

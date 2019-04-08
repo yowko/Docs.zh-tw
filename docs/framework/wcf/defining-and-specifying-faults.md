@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: e2217cdac8edcab2f4b9e28484fb0758a149b72c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079327"
 ---
 # <a name="defining-and-specifying-faults"></a>定義並指定錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 如需有關服務或雙工用戶端，可以傳送這些錯誤，且用戶端或服務的應用程式如何處理這些錯誤的詳細資訊，請參閱 < [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需 Windows Communication Foundation (WCF) 應用程式中的錯誤處理的概觀，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -88,12 +88,13 @@ End Class
  當存取產生錯誤的非服務時，會有特定限制。 WCF 支援只詳細類型錯誤的結構描述所描述以及與資料合約相容。 例如，如先前所述，WCF 不支援在其詳細資料類型時，請使用 XML 屬性的錯誤或錯誤的詳細資料區段中的多個最上層元素。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
-- [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [傳送及接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [如何：在服務合約中宣告錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [傳送和接收錯誤](../../../docs/framework/wcf/sending-and-receiving-faults.md)
+- [HOW TO：在服務合約中宣告錯誤](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)
-- [如何：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [HOW TO：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [指定服務合約中的資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

@@ -2,12 +2,12 @@
 title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: a61b7fce891ea1ab68f48f836ffaae2b96c8e25d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088596"
 ---
 # <a name="udp-activation"></a>UDP 啟用
 此樣本根據[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
@@ -161,4 +161,3 @@ ms.locfileid: "58836320"
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transport\UdpActivation`  
-  

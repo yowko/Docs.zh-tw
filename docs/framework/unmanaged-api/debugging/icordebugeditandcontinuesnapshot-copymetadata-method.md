@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1133d44218406948ab0fd6e0b82ae404d0931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5dafaef05305a8f4ab4a196690d98486be96d51e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576833"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082135"
 ---
 # <a name="icordebugeditandcontinuesnapshotcopymetadata-method"></a>ICorDebugEditAndContinueSnapshot::CopyMetaData 方法
-`CopyMetaData` 已經過時。 請勿呼叫這個方法。  
+`CopyMetaData` 已過時。 請勿呼叫這個方法。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

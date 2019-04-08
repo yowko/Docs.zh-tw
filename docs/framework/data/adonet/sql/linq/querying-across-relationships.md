@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 297878d0-685b-4c01-b2e0-9d731b7322bc
-ms.openlocfilehash: 783ecb35408f63c7f3e7299e503c3f0fda3f36ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e1cf9efcf47fc70421c64541aead5fb36d8c9d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083142"
 ---
 # <a name="querying-across-relationships"></a>跨關聯性查詢
 對類別定義中其他物件或其他物件集合的參考，會直接對應到資料庫中的外部索引鍵關聯性。 您可以在使用點標記法進行查詢時使用這些關聯性，進而存取關聯性屬性以及從某個物件巡覽到另一個物件。 這些存取作業會轉譯成對等 SQL 中更複雜的聯結或相關聯的子查詢 (Subquery)。  
@@ -53,4 +53,5 @@ WHERE  (t0.City = @p0)
  [!code-vb[DLinqQueryConcepts#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryConcepts/vb/Module1.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

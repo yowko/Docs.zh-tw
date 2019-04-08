@@ -13,15 +13,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c5025f4bb6433d193ecf7dec1d8375104147e9e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fda98c20b42355b9f52595929bbf5b980b5b857
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077234"
 ---
 # <a name="icorprofilercallback6-interface"></a>ICorProfilerCallback6 介面
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  子類別[ICorProfilerCallback5](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-interface.md)提供一種回呼方法，common language runtime 用來通知分析工具在載入組件。  
   
@@ -38,7 +38,8 @@ ms.locfileid: "54562566"
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

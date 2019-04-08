@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取 Windows Form DataGridViewComboBoxCell 下拉式清單中的物件
+title: HOW TO：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 8a4731e081b31f74b4f17c2796b56cdf6b95e3e2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080783"
 ---
-# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>HOW TO：存取 Windows Form DataGridViewComboBoxCell 下拉式清單中的物件
+# <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>HOW TO：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
 像是<xref:System.Windows.Forms.ComboBox>控制<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>類型可讓您加入他們的下拉式清單中的任意物件。 利用此功能，您可以表示複雜的狀態，下拉式清單中，而不必將對應的物件儲存在個別的集合中。  
   
  不同於<xref:System.Windows.Forms.ComboBox>控制<xref:System.Windows.Forms.DataGridView>型別沒有<xref:System.Windows.Forms.ComboBox.SelectedItem%2A>來擷取目前所選的物件的屬性。 相反地，您必須設定<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A?displayProperty=nameWithType>或<xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>屬性設為您的商務物件的屬性名稱。 當使用者進行選擇時，商務物件的所指定的屬性設定的儲存格<xref:System.Windows.Forms.DataGridViewCell.Value%2A>屬性。  
@@ -69,6 +69,7 @@ ms.locfileid: "57705723"
 -   System 和 System.Windows.Forms 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A?displayProperty=nameWithType>
@@ -80,4 +81,4 @@ ms.locfileid: "57705723"
 - <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ComboBox>
-- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)

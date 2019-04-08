@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
-ms.openlocfilehash: bd031b0f7464da2f1e251abfa1fe314ee2fa763d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087621"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立連接的應用程式的 managed 程式碼開發人員。 不過，如果您已長期開發以 COM 為基礎的 unmanaged 程式碼，並不會想要移轉，您可以仍然 WCF Web 服務直接整合您現有的程式碼使用 WCF 服務 moniker。 服務 Moniker 可以從多種 COM 架構開發環境中使用，例如 Office VBA、Visual Basic 6.0 或 Visual C++ 6.0。  
@@ -66,4 +66,5 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立連接�
 >  `</configuration>`  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：註冊並設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [HOW TO：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

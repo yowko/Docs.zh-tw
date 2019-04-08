@@ -2,15 +2,15 @@
 title: 移轉指引
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
-ms.openlocfilehash: 405ed0dcbd730f08b84ad0b40008c4d77b02e26f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719672"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083162"
 ---
 # <a name="migration-guidance"></a>移轉指引
-在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 即將發行的第二個主要版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 是在 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 中發佈 (其中包含 System.Workflow.* 命名空間中的型別；現在則是指 WF3)，並在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中增強。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但它有與新的工作流程技術 (System.Activities。 中的型別\*命名空間; 以 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  
+在  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，Microsoft 即將發行的第二個主要版本的 Windows Workflow Foundation (WF)。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] 在已發行[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]（這包含 system.workflow.* 命名空間中的類型; 現在是指 WF3） 並加強於[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]。 WF3 也是屬於[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]，但它有與新的工作流程技術 (System.Activities。 中的型別\*命名空間; 以 WF4)。 在考量何時採用 WF4 時，重要的是要先了解到：您必須控制時機。  
   
 -   WF3 是 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] 中受到完整支援的一部分。  
   
@@ -56,4 +56,5 @@ ms.locfileid: "57719672"
  提供範例導向的逐步指示，示範如何針對全新活動的一般狀況，將實作 WF3 中建立之 Windows Communication Foundation (WCF) Web 服務 (通常稱為工作流程服務) 的工作流程，重新設計成使用 WF4。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Activities.Statements.Interop>

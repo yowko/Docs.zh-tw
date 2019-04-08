@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用腳本控制 MediaElement
+title: HOW TO：使用分鏡腳本控制 MediaElement
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - media [WPF], controlling playback with Storyboards
 - playback of media [WPF], controlling with Storyboards
 ms.assetid: 6128ca77-b826-4e36-b968-6f237157c543
-ms.openlocfilehash: 51d567101ee49095e27e9d440016a81cd49fa876
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ae785e11b1da0f2c408b24021ad46ab071419378
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100310"
 ---
-# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>HOW TO：使用腳本控制 MediaElement
+# <a name="how-to-control-a-mediaelement-by-using-a-storyboard"></a>HOW TO：使用分鏡腳本控制 MediaElement
 此範例示範如何控制<xref:System.Windows.Controls.MediaElement>利用<xref:System.Windows.Media.MediaTimeline>在<xref:System.Windows.Media.Animation.Storyboard>。  
   
 ## <a name="example"></a>範例  
@@ -36,6 +36,7 @@ ms.locfileid: "57369106"
  [!code-vb[MediaGallery_snip#CodeBehindMediaTimelineExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaTimelineExample.xaml.vb#codebehindmediatimelineexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.MediaElement>
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
@@ -43,5 +44,5 @@ ms.locfileid: "57369106"
 - [分鏡腳本概觀](storyboards-overview.md)
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
 - [動畫概觀](animation-overview.md)
-- [HOW-TO 主題](audio-and-video-how-to-topics.md)
+- [HOW TO 主題](audio-and-video-how-to-topics.md)
 - [圖形和多媒體](index.md)

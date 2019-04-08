@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料
+title: HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
-ms.openlocfilehash: 6af43b076f7c508fd17cac367caeed30065b0c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb1cb03a078eeb273c69cc3c49b3ef2173c0a49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084905"
 ---
-# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來匯出編譯的服務程式碼的中繼資料
+# <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>HOW TO：使用 Svcutil.exe 來匯出已編譯服務程式碼的中繼資料
 Svcutil.exe 可匯出服務中繼資料、合約以及編譯組件資料類型，如下：  
   
 -   若要使用 Svcutil.exe 針對組件集合匯出所有編譯服務合約的中繼資料，請指定組件為輸入參數。 這是預設行為。  
@@ -163,5 +163,6 @@ public class MyService : IPersonFinder
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [匯出和匯入中繼資料](../../../../docs/framework/wcf/feature-details/exporting-and-importing-metadata.md)

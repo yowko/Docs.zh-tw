@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93a85f2fd0f2095ce22bd69a3251d7950fcdb529
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9af0773c2ef066c103f823e4d28c0fd6e9eadc24
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57464590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086555"
 ---
 # <a name="iassemblynamegetproperty-method"></a>IAssemblyName::GetProperty 方法
 取得指定的屬性識別碼所參考之屬性的指標。  
@@ -52,7 +52,8 @@ HRESULT GetProperty (
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

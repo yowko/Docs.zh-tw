@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e3b49654252ad18e9ad4d9e5128b78bd23baee6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4eb64fc0badf94c93182e7bd6875337c411bcdef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098503"
 ---
 # <a name="iassemblyenum-interface"></a>IAssemblyEnum 介面
 表示陣列的列舉程式`IAssemblyName`物件。  
@@ -39,8 +39,9 @@ ms.locfileid: "54602854"
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IAssemblyName 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyname-interface.md)

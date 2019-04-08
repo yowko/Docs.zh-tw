@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 15b8526e-4f5d-475c-a1e3-d8b2d145c879
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88a9fa2f720db403c45d4254b17dfaf4689cd0f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6ed8c6e61c558a4bc9e3f92d559615ac93ecff8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144231"
 ---
 # <a name="isymunmanagedwriter5-interface"></a>ISymUnmanagedWriter5 介面
 ISymUnmanagedWriter5 介面。  
@@ -33,5 +33,6 @@ ISymUnmanagedWriter5 介面。
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)
 - [ISymUnmanagedWriter4 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter4-interface.md)

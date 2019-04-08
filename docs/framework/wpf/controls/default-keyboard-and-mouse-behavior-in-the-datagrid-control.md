@@ -7,12 +7,12 @@ helpviewer_keywords:
 - keyboard behavior [WPF], DataGrid
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
-ms.openlocfilehash: f122eb97719182b4cad5fb0e757cd3647e575094
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083318"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid 控制項中的預設鍵盤和滑鼠行為
 本主題描述使用者可以互動<xref:System.Windows.Controls.DataGrid>使用鍵盤和滑鼠的控制項。  
@@ -97,5 +97,6 @@ ms.locfileid: "54741609"
  CTRL + shift 鍵可組合為選取非相鄰的範圍內的相鄰的資料列。 若要這樣做，選取第一個範圍，使用 SHIFT + 按一下稍早所述。 在選取的資料列的第一個範圍之後，請使用 CTRL + 按一下以在下一個範圍中，選取第一個資料列，然後按一下下一個範圍中的最後一個資料列在按下 CTRL + SHIFT 同時。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.DataGrid>
 - <xref:System.Windows.Controls.DataGrid.SelectionMode%2A>

@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: a84dd9a3-d6cf-4824-989a-ecbbf443eeb4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c276df65497a0d8cafea80959b8193790c19ebba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4e5b4cb4a04a79a748f4ea2292bac67a88a6e9f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131283"
 ---
 # <a name="invalidmemberdeclaration-mda"></a>invalidMemberDeclaration MDA
 會啟動 `invalidMemberDeclaration` Managed 偵錯助理 (MDA) 來報告錯誤，這些錯誤發生在決定如何封送處理成員參數為由 COM 所呼叫時。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  失敗的 HRESULT 會傳回給 COM，而不呼叫 Managed 方法。  
   
 ## <a name="cause"></a>原因  
@@ -32,7 +32,7 @@ ms.locfileid: "54667345"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  告知性訊息，包含成員名稱、類型名稱和錯誤訊息。  
   
 ## <a name="configuration"></a>組態  
@@ -46,6 +46,7 @@ ms.locfileid: "54667345"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

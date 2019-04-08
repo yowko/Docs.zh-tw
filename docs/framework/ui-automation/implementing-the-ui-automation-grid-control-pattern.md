@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grid control pattern
 - UI Automation, grid control pattern
 ms.assetid: 234d11a0-7ce7-4309-8989-2f4720e02f78
-ms.openlocfilehash: 12588e6aa108813b2d857f6818bd27a275d12597
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 63885e0467f79f140678ffcaa6737f40a8fa7f6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676807"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100570"
 ---
 # <a name="implementing-the-ui-automation-grid-control-pattern"></a>實作 UI 自動化 Grid 控制項模式
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57676807"
   
 -   根據提供者實作而定，隱藏資料列和資料行可能會載入到 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構，因此會反映在 <xref:System.Windows.Automation.GridPattern.GridPatternInformation.RowCount%2A> 和 <xref:System.Windows.Automation.GridPattern.GridPatternInformation.ColumnCount%2A> 屬性。 如果隱藏資料列和資料行未載入，則應不會列入計數。  
   
--   <xref:System.Windows.Automation.Provider.IGridProvider> 不會啟用方格的使用中操作，而必須實作 <xref:System.Windows.Automation.Provider.ITransformProvider> 才能啟用此功能。  
+-   <xref:System.Windows.Automation.Provider.IGridProvider> 不會啟用方格; 的作用中操作<xref:System.Windows.Automation.Provider.ITransformProvider>必須實作，以啟用這項功能。  
   
 -   使用 <xref:System.Windows.Automation.StructureChangedEventHandler> 接聽方格的結構或配置變更，例如新增、移除或合併儲存格。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "57676807"
   
 |必要成員|類型|注意|  
 |----------------------|----------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.RowCount%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.ColumnCount%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -64,9 +64,10 @@ ms.locfileid: "57676807"
 |<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IGridProvider.GetItem%2A><br /><br /> -如果要求的資料列或資料行座標小於零。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 GridItem 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-griditem-control-pattern.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

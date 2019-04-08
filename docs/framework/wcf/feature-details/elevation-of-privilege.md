@@ -5,12 +5,12 @@ helpviewer_keywords:
 - elevation of privilege [WCF]
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
-ms.openlocfilehash: cf67f3c68acc4cd8838be56d7c814f9e287ce62c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099985"
 ---
 # <a name="elevation-of-privilege"></a>權限提高
 *提高權限*肇因於賦予攻擊者授權高於原先賦予的權限。 例如，具有「唯讀」權限的攻擊者以不明方式將權限提高為「讀取和寫入」。  
@@ -18,7 +18,7 @@ ms.locfileid: "54658038"
 ## <a name="trusted-sts-should-sign-saml-token-claims"></a>受信任的 STS 應該簽署 SAML 權杖宣告  
  安全性判斷提示標記語言 (SAML) 權杖是一種泛型 XML 權杖，同時也是預設的發行權杖類型。 在典型的交換中，結尾 Web 服務所信任的安全性權杖服務 (STS) 可以建構 SAML 權杖。 SAML 權杖會在陳述式中包含宣告。 攻擊者可從有效權杖中複製宣告、建立新的 SAML 權杖，然後使用不同的簽發者進行簽署。 其目的就是判斷伺服器是否正在驗證簽發者，如果不是的話，會運用弱點來建構 SAML 權杖，針對受信任 STS 原先要賦予的權限賦予更多的權限。  
   
- <xref:System.IdentityModel.Tokens.SamlAssertion> 類別會驗證 SAML 權杖中包含的數位簽章，而預設的 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 則要求當 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 類別的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 設為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 時，必須使用有效的 X.509 憑證來簽署 SAML 權杖。 單是 `ChainTrust` 模式還不足以判斷 SAML 權杖的簽發者是否受信任。 需要更細微信任模型的服務可以使用授權與強制執行原則來檢查由已發行權杖驗證所產生的宣告集之簽發者，或是使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 驗證設定來限制允許的簽署憑證集。 如需詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)並[聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
+ <xref:System.IdentityModel.Tokens.SamlAssertion> 類別會驗證 SAML 權杖中包含的數位簽章，而預設的 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 則要求當 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 類別的 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 設為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.ChainTrust> 時，必須使用有效的 X.509 憑證來簽署 SAML 權杖。 `ChainTrust` 單獨的模式是不足以判斷 SAML 權杖的簽發者是否受到信任。 需要更細微信任模型的服務可以使用授權與強制執行原則來檢查由已發行權杖驗證所產生的宣告集之簽發者，或是使用 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 上的 X.509 驗證設定來限制允許的簽署憑證集。 如需詳細資訊，請參閱 <<c0> [ 管理宣告與授權身分識別模型](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)並[聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
   
 ## <a name="switching-identity-without-a-security-context"></a>切換不含安全性內容的身分識別  
  下列僅適用於 [!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]。  
@@ -83,9 +83,10 @@ ms.locfileid: "54658038"
  若要緩解這個情況，請以另一種方式來參照 X.509 憑證，例如使用 <xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

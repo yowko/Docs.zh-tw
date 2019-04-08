@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
-ms.openlocfilehash: a2349fa82b790182fa5d160bd29091c7524e2cea
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101287"
 ---
 # <a name="auditing-security-events"></a>稽核安全性事件
 建立使用 Windows Communication Foundation (WCF) 的應用程式可以使用稽核功能記錄安全性事件 （成功、 失敗或兩者）。 事件會寫入至 Windows 系統事件記錄檔，並且可以使用 [事件檢視器] 加以檢查。  
@@ -32,7 +32,7 @@ ms.locfileid: "54622594"
   
  若要寫入安全性記錄檔，您必須具備 `SeAuditPrivilege`。 根據預設，只有本機系統帳戶和網路服務帳戶具有此權限。 若要管理安全性記錄函式 `read` 和 `delete`，您必須具備 `SeSecurityPrivilege`。 根據預設，只有系統管理員具有此權限。  
   
- 相反地，通過驗證的使用者可以讀取及寫入應用程式記錄檔。 根據預設，[!INCLUDE[wxp](../../../../includes/wxp-md.md)] 會將稽核事件寫入應用程式記錄檔。 記錄檔也可以包含個人資訊，所有通過驗證的使用者都可以檢視這些資訊。  
+ 相反地，通過驗證的使用者可以讀取及寫入應用程式記錄檔。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 將稽核的應用程式記錄檔事件寫入預設。 記錄檔也可以包含個人資訊，所有通過驗證的使用者都可以檢視這些資訊。  
   
 ## <a name="suppressing-audit-failures"></a>隱藏稽核失敗  
  稽核期間可以使用的另一個選項為是否要隱藏任何稽核失敗。 根據預設，稽核失敗不會影響到應用程式。 不過，如果需要的話，您可以將選項設定為 `false`，如此便會擲回例外狀況。  
@@ -87,7 +87,7 @@ ms.locfileid: "54622594"
   
 |系統|應用程式記錄檔|安全性記錄檔|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] (含) 以後版本|支援|不支援|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 或更新版本|支援|不支援|  
 |[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] 和 [!INCLUDE[wv](../../../../includes/wv-md.md)]|支援|執行緒內容必須擁有 `SeAuditPrivilege`|  
   
 #### <a name="other-factors"></a>其他因素  
@@ -99,11 +99,12 @@ ms.locfileid: "54622594"
 |預設的使用者經驗|所有通過驗證的使用者都可以寫入應用程式記錄檔，因此不需要為應用程式處理序額外執行設定權限的步驟。|應用程式處理序 (內容) 必須具有 `SeAuditPrivilege`。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [如何：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [HOW TO：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
 - [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

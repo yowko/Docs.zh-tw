@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d329b811e0c1377cb2d7555b3e7e30b52071eca8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfa11083fad7a3ccc6a208f5f0e4b68e9e1bc18c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098178"
 ---
 # <a name="setting-up-a-profiling-environment"></a>設定程式碼剖析環境
 > [!NOTE]
@@ -96,4 +96,5 @@ pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)
  這項技術也會使每個 CLR 程序進行程式碼剖析。 分析工具應將邏輯加入其[icorprofilercallback:: Initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)回呼以偵測目前處理序是否為感興趣。 如果不是，程式碼剖析工具可以使回呼失敗，而不需執行初始化。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [分析概觀](../../../../docs/framework/unmanaged-api/profiling/profiling-overview.md)

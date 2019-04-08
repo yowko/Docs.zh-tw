@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView controls [WPF], horizontal alignment [WPF]
 ms.assetid: b9573e44-9dad-4d14-939c-7859ca372758
-ms.openlocfilehash: 616eae9d72517124b6757260e68e8745d12632ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 528a711c1cf7992bb32c0aa4d6e81d71744c9f80
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355138"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102657"
 ---
 # <a name="how-to-change-the-horizontal-alignment-of-a-column-in-a-listview"></a>HOW TO：變更 ListView 中資料行的水平對齊
 根據預設，每個資料行的內容<xref:System.Windows.Controls.ListViewItem>靠左對齊。 您可以藉由提供變更的每個資料行對齊<xref:System.Windows.DataTemplate>並設定<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>內的項目上的屬性<xref:System.Windows.DataTemplate>。 本主題說明如何<xref:System.Windows.Controls.ListView>其內容的預設值，以及如何變更一個資料行中的對齊方式對齊<xref:System.Windows.Controls.ListView>。  
@@ -28,6 +28,7 @@ ms.locfileid: "57355138"
 [!code-xaml[ListViewHowTos#4](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewHowTos/CSharp/Window1.xaml#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](../data/data-binding-overview.md)
 - [資料範本化概觀](../data/data-templating-overview.md)
 - [使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)

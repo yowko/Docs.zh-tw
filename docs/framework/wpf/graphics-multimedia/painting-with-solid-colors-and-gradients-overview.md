@@ -9,18 +9,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with gradients
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
-ms.openlocfilehash: 18a08c9bec8436399cd3acbf27198e0912e32d09
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148300"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>使用純色和漸層繪製的概觀
 本主題描述如何使用<xref:System.Windows.Media.SolidColorBrush>， <xref:System.Windows.Media.LinearGradientBrush>，和<xref:System.Windows.Media.RadialGradientBrush>物件以純色、 線形漸層及放射狀漸層。  
-  
 
-  
 <a name="solidcolor"></a>   
 ## <a name="painting-an-area-with-a-solid-color"></a>使用純色繪製區域  
  其中一個最常見的作業，在任何平台是使用完整繪製區域<xref:System.Windows.Media.Color>。 若要完成這項工作，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供<xref:System.Windows.Media.SolidColorBrush>類別。 下列各節說明不同的方式來使用<xref:System.Windows.Media.SolidColorBrush>。  
@@ -169,6 +167,7 @@ ms.locfileid: "57362379"
  <xref:System.Windows.Media.ImageBrush><xref:System.Windows.Media.DrawingBrush>，和<xref:System.Windows.Media.VisualBrush>類別可讓您使用影像、 繪圖或視覺效果繪製區域。 如需使用影像、繪圖及圖樣繪製的相關資訊，請參閱[使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Brush>
 - <xref:System.Windows.Media.SolidColorBrush>
 - <xref:System.Windows.Media.LinearGradientBrush>

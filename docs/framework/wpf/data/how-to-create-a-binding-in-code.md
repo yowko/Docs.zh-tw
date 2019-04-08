@@ -8,12 +8,12 @@ helpviewer_keywords:
 - binding data [WPF], creating
 - data binding [WPF], creating
 ms.assetid: 1a606db9-cf5f-42ed-a1c5-9e4722ec77a0
-ms.openlocfilehash: 666dbb4e2de0e8a7a83d6e0dfda50822cfdfd860
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 57ec845c5c9a5bddb801428b9ecde035a97cf447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089259"
 ---
 # <a name="how-to-create-a-binding-in-code"></a>HOW TO：使用程式碼建立繫結
 此範例示範如何建立並設定<xref:System.Windows.Data.Binding>在程式碼中。  
@@ -39,5 +39,6 @@ ms.locfileid: "57371182"
  [!code-vb[CodeOnlyBinding#BOSetBinding](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CodeOnlyBinding/VisualBasic/App.vb#bosetbinding)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

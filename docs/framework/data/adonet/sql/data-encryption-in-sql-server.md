@@ -2,12 +2,12 @@
 title: 在 SQL Server 中加密資料
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
-ms.openlocfilehash: 4b421d2cb5a44ee164a73ea1367a79d81fb37c31
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102163"
 ---
 # <a name="data-encryption-in-sql-server"></a>在 SQL Server 中加密資料
 SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密資料的功能， 而且可在內部的憑證存放區內管理上述所有項目。 此存放區會使用加密階層，藉由階層中的上層層級來確保下層層級的憑證及金鑰。 SQL Server 的此功能區也稱為「秘密儲存區」(Secret Storage)。  
@@ -30,10 +30,11 @@ SQL Server 提供使用憑證、非對稱金鑰或對稱金鑰來加密及解密
 |[加密階層](/sql/relational-databases/security/encryption/encryption-hierarchy)|提供 SQL Server 中的加密概觀。 本主題提供的其他文章連結。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server 中的擁有權和使用者結構描述分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
 - [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

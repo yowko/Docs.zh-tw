@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b7b64874-c3c8-4bdb-862c-89a168d07827
-ms.openlocfilehash: 181564de997e9a799aafa660a16b32a6ceb91d4a
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: eaf98dc21499817446efca2f10edf7faea15761c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141652"
 ---
 # <a name="method-based-query-syntax-examples-partitioning"></a>以方法為基礎的查詢語法範例：資料分割
 本主題中的範例將示範如何使用<xref:System.Linq.Enumerable.Skip%2A>，並<xref:System.Linq.Enumerable.Take%2A>方法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)透過查詢運算式語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
@@ -49,4 +49,5 @@ ms.locfileid: "55827146"
  [!code-vb[DP L2E Examples#TakeNested](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#takenested)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

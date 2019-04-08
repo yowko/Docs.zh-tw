@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: 6329f25b8ead128c32ae0c7aca1f0bceaac8474c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9cf5d1c2e08f18c08273d6c7b34446a3827743b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079354"
 ---
 # <a name="walkthrough-styling-wpf-content"></a>逐步解說：設定 WPF 內容的樣式
 本逐步解說示範如何將樣式套用至 Windows Form 上裝載的 Windows Presentation Foundation (WPF) 控制項。
@@ -68,14 +68,13 @@ ms.locfileid: "57712392"
   
 2.  在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`表單上。  
   
-     
-  `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
+     `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
 3.  中的智慧標籤面板`elementHost1`，按一下**編輯裝載內容**從下拉式清單。  
   
-     `UserControl1` 會在 [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] 中開啟。  
+     `UserControl1` 在中開啟[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
-4.  在 [XAML] 檢視中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。  
+4.  在 [XAML] 檢閱中，插入下列 XAML 到 `<UserControl>` 開頭標記後面。  
   
      此 XAML 會建立具有對比漸層框線的漸層。 按一下控制項時，漸層會變更，產生已按下的按鈕外觀。 如需詳細資訊，請參閱 [設定樣式和範本](../../wpf/controls/styling-and-templating.md)。  
   
@@ -151,6 +150,7 @@ ms.locfileid: "57712392"
 5.  按一下 [確定] 和 [取消] 按鈕，然後檢視其差異。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)

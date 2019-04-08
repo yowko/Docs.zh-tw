@@ -9,12 +9,12 @@ helpviewer_keywords:
 - key frames [WPF], animating camera position
 - camera direction [WPF], animating with key frames
 ms.assetid: 5753024e-0057-454d-947f-43ea686879c7
-ms.openlocfilehash: 5df3a201eaae4ddcf2e5d5aac3de6e0d5013947c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3be3fc8d82d9c3061891bd67605548c49230ef87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143230"
 ---
 # <a name="how-to-animate-camera-position-and-direction-using-key-frames"></a>HOW TO：使用主要畫面格建立鏡頭位置和方向的動畫
 在下列範例中，<xref:System.Windows.Media.Animation.Point3DAnimationUsingKeyFrames>用來以動畫顯示的位置<xref:System.Windows.Media.Media3D.PerspectiveCamera>3D 場景中。 颾魤 ㄛ<xref:System.Windows.Media.Animation.Vector3DAnimationUsingKeyFrames>用來以動畫顯示 3D 場景中指向觀景窗的方向。 這兩個動畫使用數個主要畫面格建立一系列的動畫效果：  
@@ -29,5 +29,6 @@ ms.locfileid: "57353396"
  [!code-xaml[Animation3DGallery_snip#PointVector3DAnimationUsingKeyFramesExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/Animation3DGallery_snip/CS/PointVector3DAnimationUsingKeyFramesExample.xaml#pointvector3danimationusingkeyframesexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在立體場景中建立鏡頭位置和方向的動畫](how-to-animate-camera-position-and-direction-in-a-3d-scene.md)
 - [立體圖形概觀](3-d-graphics-overview.md)

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7240c3f3-7df8-4b03-bbf1-17cdce142d45
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 18189ace97238bede9ed18d1dcbae2490956fad8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7de0a869925816da6df8f17e14ab92964aec8d11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094212"
 ---
 # <a name="reentrancy-mda"></a>重新進入 MDA
 如果未透過循序轉換執行先前從 Managed 程式碼到機器碼的切換時嘗試從機器碼轉換成 Managed 程式碼，啟用 `reentrancy` Managed 偵錯助理 (MDA)。  
@@ -45,7 +45,7 @@ ms.locfileid: "54498592"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  MDA 報告正在嘗試不合法的重新進入。  檢查執行緒的堆疊，以判斷發生此問題的原因和其更正方式。 以下是範例輸出。  
   
 ```  
@@ -105,4 +105,5 @@ public class Reenter
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

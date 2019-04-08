@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: c2a052b9-423c-4ff7-91dc-d8c7c79345f6
-ms.openlocfilehash: 44c985cef035e33e88ba246584efcb30fe0e9b97
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 641db19cc6493a20c9f9a34622f466e3623c32ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088648"
 ---
 # <a name="implementing-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
 若要實作虛擬模式中的其中一個原因<xref:System.Windows.Forms.DataGridView>控制項是只有在需要時擷取資料。 這就叫做 *-just-in-time 資料載入*。  
@@ -71,10 +71,11 @@ ms.locfileid: "57705554"
  若要改善您的應用程式的捲動效能，您可以增加本機儲存的資料的量。 若要改善啟動時間，不過，您必須避免一開始載入太多資料。 您可能想要修改`Cache`類別，以增加它可以儲存的資料頁數。 使用多個資料頁，可以改善捲動的效率，但您必須決定根據可用的頻寬和伺服器延遲而定，資料頁中的資料列的理想數目。 使用較小的頁面中，伺服器將會更頻繁地存取，但需要較少的時間才能傳回要求的資料。 如果延遲是多個比頻寬的問題，您可能想要使用較大的資料頁。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [縮放 Windows Forms DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)
-- [如何：Windows Form DataGridView 控制項中實作虛擬模式，以在 Just-in-time 資料載入](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)
+- [Windows Form DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)
+- [HOW TO：在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)

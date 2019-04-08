@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: 7ddad36c05d9972b9fc613403b68b7c793b6701d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101812"
 ---
 # <a name="serialization-and-deserialization"></a>序列化和還原序列化
 Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:System.Runtime.Serialization.DataContractSerializer>。 <xref:System.Runtime.Serialization.DataContractSerializer> 會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件與 XML 之間轉譯 (雙向)。 本主題會說明序列化程式的運作方式。  
@@ -261,8 +261,9 @@ Windows Communication Foundation (WCF) 包含新的序列化引擎， <xref:Syst
  同時請注意， `NetDataContractSerializer` 不會在物件圖形中為每個節點輸出完整的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型別和組件名稱。 它只會針對不夠清楚的部分來輸出資訊。 亦即，它會在根物件層級以及任何多型案例中輸出。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.NetDataContractSerializer>
 - <xref:System.Runtime.Serialization.XmlObjectSerializer>
 - [二進位序列化](../../../../docs/standard/serialization/binary-serialization.md)
-- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

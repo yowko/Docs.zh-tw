@@ -5,12 +5,12 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 33be9d4d4e5a1aca933bb84e948b2200cd96b152
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106778"
 ---
 # <a name="structure-of-the-graphics-interface"></a>圖形介面的結構
 Managed 的類別介面，以[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]包含大約 60 個類別、 50 列舉和 8 的結構。 <xref:System.Drawing.Graphics>類別的核心是[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]功能; 它是實際繪製線條、 曲線、 圖形、 影像和文字的類別。  
@@ -23,6 +23,7 @@ Managed 的類別介面，以[!INCLUDE[ndptecgdiplus](../../../../includes/ndpte
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 定義數個列舉型別是集合的相關常數。 例如，<xref:System.Drawing.Drawing2D.LineJoin>列舉型別包含的項目<xref:System.Drawing.Drawing2D.LineJoin.Bevel>， <xref:System.Drawing.Drawing2D.LineJoin.Miter>，和<xref:System.Drawing.Drawing2D.LineJoin.Round>，其中指定可以用來聯結兩個線條的樣式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [圖形概觀](graphics-overview-windows-forms.md)
 - [關於 GDI+ Managed 程式碼](about-gdi-managed-code.md)
 - [使用 Managed 圖形類別](using-managed-graphics-classes.md)

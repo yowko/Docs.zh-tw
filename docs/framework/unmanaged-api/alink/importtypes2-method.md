@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e2958fe31ff0065cfb028eaddf8bbb02f3618f9d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f14822a58f3982d6f9fee1328c10b960657c056f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098464"
 ---
 # <a name="importtypes2-method"></a>ImportTypes2 方法
 會起始匯入的類型。 呼叫這個方法，以開始匯入類型，從透過匯入每個領域[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
@@ -65,6 +65,7 @@ HRESULT ImportTypes2(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

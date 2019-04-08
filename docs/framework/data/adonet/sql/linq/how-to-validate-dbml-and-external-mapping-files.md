@@ -1,15 +1,15 @@
 ---
-title: HOW TO：驗證 DBML 和外部對應檔案
+title: HOW TO：驗證 DBML 和外部對應檔
 ms.date: 03/30/2017
 ms.assetid: d9ea37f5-0a9e-4401-8fc3-1e6fd44c49f9
-ms.openlocfilehash: 42cba5b9b686f5f94d4ebf8f889461e1bab009b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b01bcf98bba185b7a4b1802f470a585371980177
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692726"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078729"
 ---
-# <a name="how-to-validate-dbml-and-external-mapping-files"></a>HOW TO：驗證 DBML 和外部對應檔案
+# <a name="how-to-validate-dbml-and-external-mapping-files"></a>HOW TO：驗證 DBML 和外部對應檔
 如果修改外部對應檔案和 .dbml 檔案，則必須根據它們各自的結構描述定義進行驗證。 本主題提供的步驟來實作驗證程序的 Visual Studio 使用者。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -71,4 +71,5 @@ ms.locfileid: "54692726"
 7.  在 **檔案名**方塊中，建立副檔名為.xsd 的檔案名稱。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], types
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
-ms.openlocfilehash: b488997558d81c05307411d8b7fbf5b59100f9ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098451"
 ---
 # <a name="control-type-recommendations"></a>控制項類型建議
 .NET Framework 可讓您有能力開發及實作新的控制項。 除了熟悉的使用者控制項，現在您會發現您也可以撰寫自訂控制項來執行它們自己的繪製，而且甚至能夠透過繼承，擴充現有控制項的功能。 決定要建立的控制項類型可能會令人困擾。 本章節強調您可以繼承的各類型控制項之間的差異，並提供關於為您的專案選擇類型的注意事項。  
@@ -45,40 +45,41 @@ ms.locfileid: "57717697"
   
 -   您需要實作無法透過標準控制項使用的自訂功能。  
   
--   [如何：顯示中的控制項選擇工具箱項目對話方塊](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [逐步解說：序列化標準類型使用 DesignerSerializationVisibilityAttribute 集合](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [逐步解說：繼承自具有視覺效果的 Windows Forms 控制項C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [逐步解說：使用 Visual C# 繼承來自 Windows Form 的控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [如何：為控制項提供工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+-   [HOW TO：提供控制項的工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)  
+-   [HOW TO：繼承現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)  
   
--   [逐步解說：在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
+-   [逐步解說：在設計階段偵錯自訂 Windows Forms 控制項](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [如何：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)  
+-   [HOW TO：繼承控制項類別](how-to-inherit-from-the-control-class.md)  
   
--   [如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [HOW TO：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [如何：將控制項和表單邊緣對齊在設計階段](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [HOW TO：在設計階段將控制項對齊表單邊緣](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)  
+-   [HOW TO：繼承 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [如何：撰寫 Windows forms 的控制項](how-to-author-controls-for-windows-forms.md)  
+-   [HOW TO：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)  
   
--   [如何：撰寫複合控制項](how-to-author-composite-controls.md)  
+-   [HOW TO：撰寫複合控制項](how-to-author-composite-controls.md)  
   
--   [逐步解說：撰寫使用 Visual Basic 複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
+-   [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [逐步解說：撰寫複合控制項具有視覺效果C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [逐步解說：使用 Visual C# 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
--   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](creating-a-wf-control-design-time-features.md)  
+-   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)  
   
--   [如何：建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
+-   [HOW TO：建立採用設計階段功能的 Windows Form 控制項](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：開發簡單的 Windows Forms 控制項](how-to-develop-a-simple-windows-forms-control.md)
+
+- [HOW TO：開發簡單的 Windows Forms 控制項](how-to-develop-a-simple-windows-forms-control.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

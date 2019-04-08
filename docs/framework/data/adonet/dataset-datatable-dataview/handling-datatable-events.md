@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: ef9fcd31253283248dfe773ac4dde4fcbb358a2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660979"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098919"
 ---
 # <a name="handling-datatable-events"></a>處理 DataTable 的事件
 <xref:System.Data.DataTable> 物件提供一系列可由應用程式處理的事件。 下表說明 `DataTable` 事件。  
   
-|事件|描述|  
+|Event - 事件|描述|  
 |-----------|-----------------|  
 |<xref:System.Data.DataTable.Initialized>|發生在呼叫 <xref:System.Data.DataTable.EndInit%2A> 的 `DataTable` 方法之後。 這個事件主要是為了支援設計階段案例而提供。|  
 |<xref:System.Data.DataTable.ColumnChanged>|發生在成功變更 <xref:System.Data.DataColumn> 中的值之後。|  
@@ -80,7 +80,8 @@ ms.locfileid: "54660979"
  [!code-vb[DataWorks DataTable.Events#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.Events/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [處理 DataAdapter 事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
+- [處理 DataAdapter 的事件](../../../../../docs/framework/data/adonet/handling-dataadapter-events.md)
 - [處理 DataSet 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

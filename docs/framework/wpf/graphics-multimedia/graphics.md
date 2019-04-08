@@ -7,12 +7,12 @@ helpviewer_keywords:
 - visual effects [WPF]
 - graphics [WPF], effects
 ms.assetid: 3bfc652e-91b7-4697-a4f4-83ff0e98327e
-ms.openlocfilehash: 20051b176be4372643855441ee5f6c3b62a27780
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c59d19c925d99ac8f5dd07da84295ee002c956de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102345"
 ---
 # <a name="graphics"></a>圖形
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 供應項目整合，支援多媒體、 向量圖形、 動畫和內容的組合，方便開發人員建置有趣的使用者介面和內容。  
@@ -26,9 +26,10 @@ ms.locfileid: "57361157"
  [圖形](shapes.md)  
  [轉換](transformations.md)  
  [圖形轉譯登錄設定](graphics-rendering-registry-settings.md)  
- [HOW-TO 主題](graphics-how-to-topics.md)  
+ [HOW TO 主題](graphics-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

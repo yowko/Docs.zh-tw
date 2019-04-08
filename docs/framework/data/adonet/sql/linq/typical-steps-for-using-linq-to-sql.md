@@ -2,12 +2,12 @@
 title: LINQ to SQL 的典型使用步驟
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
-ms.openlocfilehash: 32e81d08010f67b8eac19777a40826b18c440f83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132843"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>LINQ to SQL 的典型使用步驟
 若要實作 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式，請遵循本主題稍後所說明的步驟。 請注意，許多步驟都是選擇性的步驟。 您可以放心使用預設狀態下的物件模型。  
@@ -20,7 +20,7 @@ ms.locfileid: "54548007"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.選取用以建立模型的工具。  
  用於建立模型的工具有三種。  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   必須提供 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
   
      這個設計工具提供了豐富的使用者介面，可用於從現有資料庫建立物件模型。 此工具是 Visual Studio IDE 的一部分，並最適合用於小型或中型資料庫。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "54548007"
   
 -   程式碼編輯器  
   
-     您可以使用 Visual Studio 程式碼編輯器或其他編輯器撰寫自己的程式碼。 當您具有現有的資料庫而且可使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具時，則不建議這種方法，因為很容易發生錯誤。 但是，程式碼編輯器很適合用於調整您已經使用其他工具所產生的程式碼。 如需詳細資訊，請參閱[＜How to：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
+     您可以使用 Visual Studio 程式碼編輯器或其他編輯器撰寫自己的程式碼。 當您具有現有的資料庫而且可使用 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]或 SQLMetal 工具時，則不建議這種方法，因為很容易發生錯誤。 但是，程式碼編輯器很適合用於調整您已經使用其他工具所產生的程式碼。 如需詳細資訊，請參閱[如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)。  
   
 ### <a name="2-select-the-kind-of-code-you-want-to-generate"></a>2.選取您要產生的程式碼種類。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54548007"
  此步驟是具選擇性的。 如需詳細資訊，請參閱 <<c0> [ 自訂插入、 更新和刪除作業](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)。  
   
 ### <a name="3-set-appropriate-options-to-detect-and-report-concurrency-conflicts"></a>3.設定適當選項，以偵測和報告並行衝突。  
- 您可以讓模型保有處理並行衝突時所用的預設值，也可加以變更以符合您的目的。 如需詳細資訊，請參閱[＜How to：指定的成員會用於測試並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)和[How to:指定時的並行存取例外狀況的擲回](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。  
+ 您可以讓模型保有處理並行衝突時所用的預設值，也可加以變更以符合您的目的。 如需詳細資訊，請參閱[如何：指定的成員會用於測試並行衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-which-members-are-tested-for-concurrency-conflicts.md)和[How to:指定時的並行存取例外狀況的擲回](../../../../../../docs/framework/data/adonet/sql/linq/how-to-specify-when-concurrency-exceptions-are-thrown.md)。  
   
 ### <a name="4-establish-an-inheritance-hierarchy"></a>4.建立繼承階層架構。  
  此步驟是具選擇性的。 如需詳細資訊，請參閱 <<c0> [ 繼承支援](../../../../../../docs/framework/data/adonet/sql/linq/inheritance-support.md)。  
@@ -82,6 +82,7 @@ ms.locfileid: "54548007"
  如需詳細資訊，請參閱 <<c0> [ 偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [快速入門](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [建立物件模型](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

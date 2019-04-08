@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49290a37ca7ea101e3c8b458a5daa4995cb3beee
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079912"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 結構
 對應[!INCLUDE[wrt](../../../../includes/wrt-md.md)]及其對應的 ICorDebugType 物件的 GUID。  
@@ -47,12 +47,13 @@ typedef struct CorDebugGuidToTypeMapping {
 ## <a name="requirements"></a>需求  
  **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

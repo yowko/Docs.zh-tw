@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Form 控制項中套用屬性
+title: HOW TO：在 Windows Forms 控制項中套用屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - attributes [Windows Forms], applying
 - Windows Forms controls, applying attributes
 ms.assetid: af0a3f7f-155b-4ba1-83c4-9cf721331a06
-ms.openlocfilehash: fd41999b1cd1cde940d182f3acc505bbb92a3aa4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e86277c06e515b28bada3331cf4fd63e536319a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079587"
 ---
-# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>HOW TO：在 Windows Form 控制項中套用屬性
+# <a name="how-to-apply-attributes-in-windows-forms-controls"></a>HOW TO：在 Windows Forms 控制項中套用屬性
 若要開發元件和控制項的設計環境中正確互動，並在執行階段會正確執行，您需要正確地將屬性套用至類別和成員。  
   
 ## <a name="example"></a>範例  
@@ -78,8 +78,9 @@ ms.locfileid: "57718541"
 -   裝載表單`AttributesDemoControl`需要參考`AttributesDemoControl`若要建置的組件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IComparable>
 - <xref:System.Windows.Forms.DataGridView>
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
-- [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)
-- [如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
+- [Windows Form 控制項中的屬性](attributes-in-windows-forms-controls.md)
+- [HOW TO：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))

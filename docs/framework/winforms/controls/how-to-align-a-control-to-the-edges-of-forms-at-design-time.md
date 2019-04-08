@@ -1,18 +1,18 @@
 ---
-title: HOW TO：將控制項和表單邊緣對齊在設計階段
+title: HOW TO：在設計階段將控制項對齊表單邊緣
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: b81cb839664499d69710d81b7b0c8a479966d569
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724943"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140890"
 ---
-# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>HOW TO：將控制項和表單邊緣對齊在設計階段
+# <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>HOW TO：在設計階段將控制項對齊表單邊緣
 您可以讓控制項對齊表單邊緣藉由設定<xref:System.Windows.Forms.Control.Dock%2A>。 這個屬性會指定您的控制項在表單中的位置。 可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：  
   
 |設定|對控制項的影響|  
@@ -42,13 +42,14 @@ ms.locfileid: "57724943"
 4.  您的控制項現在會設定所指定的方式停駐。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
-- [如何：將控制項和表單邊緣對齊](how-to-align-a-control-to-the-edges-of-forms.md)
-- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [如何：在 Windows Forms 上控制項的錨定](how-to-anchor-controls-on-windows-forms.md)
-- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
+- [HOW TO：將控制項對齊表單邊緣](how-to-align-a-control-to-the-edges-of-forms.md)
+- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [HOW TO：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)

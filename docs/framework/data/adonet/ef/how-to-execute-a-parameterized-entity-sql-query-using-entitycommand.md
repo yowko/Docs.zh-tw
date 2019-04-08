@@ -1,23 +1,23 @@
 ---
-title: HOW TO：使用 EntityCommand Entity SQL 查詢
+title: HOW TO：使用 EntityCommand 執行參數化 Entity SQL 查詢
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
-ms.openlocfilehash: e605166fa11fbf6424657e1fefa0a5087a11049c
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 252d04ce96e222526bfd3d3e0b798f1c5edd2c8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825650"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079704"
 ---
-# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>HOW TO：使用 EntityCommand Entity SQL 查詢
+# <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>HOW TO：使用 EntityCommand 執行參數化 Entity SQL 查詢
 本主題說明如何在執行[!INCLUDE[esql](../../../../../includes/esql-md.md)]藉由使用具有參數的查詢<xref:System.Data.EntityClient.EntityCommand>物件。  
   
 ### <a name="to-run-the-code-in-this-example"></a>執行此範例中的程式碼  
   
-1.  新增[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)至您的專案，並設定您的專案使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 如需詳細資訊，請參閱[＜How to：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
+1.  新增[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)至您的專案，並設定您的專案使用[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]。 如需詳細資訊，請參閱[如何：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 2.  在應用程式的字碼頁中加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：  
   
@@ -31,5 +31,6 @@ ms.locfileid: "55825650"
  [!code-vb[DP EntityServices Concepts#ParameterizedQueryWithEntityCommand](../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp entityservices concepts/vb/source.vb#parameterizedquerywithentitycommand)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：執行參數化的查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
+
+- [HOW TO：執行參數化的查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738521(v=vs.100))
 - [Entity SQL 語言](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 24e335b0-984e-4825-8721-0a91b533b7c3
-ms.openlocfilehash: 699211e8e573f03935b5406f1759e6c3834718f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f66b996a0e688205d61f5fca476c0335616ee38
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713152"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143568"
 ---
 # <a name="compute-the-sum-of-values-in-a-numeric-sequence"></a>如何：計算數值序列中各值的總和
 使用 <xref:System.Linq.Enumerable.Sum%2A> 運算子，可以計算序列中的數值總和。  
@@ -40,5 +40,6 @@ ms.locfileid: "54713152"
  [!code-vb[DLinqQueryExamples#13](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#13)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [彙總查詢](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
 - [下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

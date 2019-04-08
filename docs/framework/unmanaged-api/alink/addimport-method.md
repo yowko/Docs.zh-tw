@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 261d80caa43ec478d3a3a33acdebcc1bfcfde8cf
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bbe8a43f44d59249abc713c95fce31f1fb9a5993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500703"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148664"
 ---
 # <a name="addimport-method"></a>AddImport 方法
 將組件匯入。  
@@ -58,6 +58,7 @@ HRESULT AddImport(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -2,12 +2,12 @@
 title: DataSet、DataTable 和 DataView
 ms.date: 03/30/2017
 ms.assetid: 6d4c4b69-8919-4224-8a65-6cca1c61b48f
-ms.openlocfilehash: 098dc3ec198edc84b67ae3ed9d2610b2386a3205
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 9c57f75dd94f3fbda74c13a5d5773825051fe416
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825910"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105725"
 ---
 # <a name="datasets-datatables-and-dataviews"></a>DataSet、DataTable 和 DataView
 ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論內含資料來源為何，都可提供一致的關聯式程式設計模型。 <xref:System.Data.DataSet> 表示一組完整的資料，包括內含、排序和約束資料的資料表，以及資料表間的關聯性。  
@@ -23,31 +23,31 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  也可以使用 XML Web Service 傳輸強型別的 <xref:System.Data.DataSet>。 <xref:System.Data.DataSet> 的設計非常適合使用 XML Web Service 來傳輸資料。 如需 XML Web Service 的概觀，請參閱 [XML Web Service 概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w9fdtx28(v=vs.100))。 如需使用來自 XML Web Service 之 <xref:System.Data.DataSet> 的範例，請參閱[從 XML Web Service 使用 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
- [建立 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
+ [建立資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataset.md)  
  說明建立 <xref:System.Data.DataSet> 執行個體的語法。  
   
- [將 DataTable 新增至 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-a-datatable-to-a-dataset.md)  
+ [將 DataTable 加入至資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-a-datatable-to-a-dataset.md)  
  說明如何建立資料表和資料行，並將它們加入 <xref:System.Data.DataSet>。  
   
- [新增 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
+ [加入 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-datarelations.md)  
  說明如何在 <xref:System.Data.DataSet> 的資料表之間建立關聯性。  
   
- [巡覽 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md)  
+ [導覽 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/navigating-datarelations.md)  
  說明如何使用 <xref:System.Data.DataSet> 之資料表間的關聯性，傳回父子關係的子資料列或父資料列。  
   
- [合併 DataSet 內容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
+ [合併資料集內容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)  
  說明如何將一個 <xref:System.Data.DataSet>、<xref:System.Data.DataTable> 或 <xref:System.Data.DataRow> 陣列的內容合併到另一個 <xref:System.Data.DataSet>。  
   
- [複製 DataSet 內容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/copying-dataset-contents.md)  
+ [複製資料集內容](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/copying-dataset-contents.md)  
  說明如何建立 <xref:System.Data.DataSet> 的複本，而此複本包含結構描述和指定的資料。  
   
  [處理 DataSet 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataset-events.md)  
  說明 <xref:System.Data.DataSet> 的事件和使用方式。  
   
- [具類型的 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
+ [具類型資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/typed-datasets.md)  
  說明何謂具型別的 <xref:System.Data.DataSet> 以及它們的建立和使用方式。  
   
- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  說明如何建立 <xref:System.Data.DataTable>、定義結構描述，以及管理資料。  
   
  [DataTableReader](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)  
@@ -56,10 +56,10 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)  
  說明如何建立並使用 `DataViews`，以及使用 <xref:System.Data.DataView> 事件。  
   
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  說明 <xref:System.Data.DataSet> 如何將 XML 當成資料來源進行互動，包括將 <xref:System.Data.DataSet> 的內容載入和保存為 XML 資料。  
   
- [從 XML Web Service 使用 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)  
+ [從 XML Web Service 使用資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/consuming-a-dataset-from-an-xml-web-service.md)  
  說明如何建立可透過 <xref:System.Data.DataSet> 傳輸資料的 XML Web Service。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -69,15 +69,16 @@ ADO.NET <xref:System.Data.DataSet> 是以常駐記憶體表示的資料，不論
  [ADO.NET 概觀](../../../../../docs/framework/data/adonet/ado-net-overview.md)  
  提供 ADO.NET 的設計和元件的簡介。  
   
- [從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
+ [從 DataAdapter 填入資料集](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)  
  描述如何自資料來源載入具有資料的 **DataSet**。  
   
  [使用 DataAdapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)  
  描述如何將 **DataSet** 中的資料變更解析回資料來源。  
   
- [將現有條件約束新增至 DataSet](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
+ [將現有條件約束加入至資料集](../../../../../docs/framework/data/adonet/adding-existing-constraints-to-a-dataset.md)  
  描述如何將來自資料來源的主索引鍵資訊填入 **DataSet**。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET](../../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d6aa8474-7bde-48f7-949d-20dc38a1625b
-ms.openlocfilehash: adf2378cead054efcef10a73bfd00ef541940949
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ec4ad84a39afe21ef77507732e5e0e417d45f3e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104282"
 ---
 # <a name="adding-data-to-a-datatable"></a>將資料加入至 DataTable
 建立 <xref:System.Data.DataTable> 並使用資料行和條件約束定義其結構之後，即可將新資料列加入資料表。 若要加入新資料列，請將新變數宣告為 <xref:System.Data.DataRow> 型別。 新**DataRow**當您呼叫時，會傳回物件<xref:System.Data.DataTable.NewRow%2A>方法。 **DataTable**然後建立**DataRow**物件基礎的資料表，結構所定義<xref:System.Data.DataColumnCollection>。  
@@ -86,9 +86,10 @@ for (int i = 0; i <= 9; i++)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataColumnCollection>
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataRowCollection>
 - <xref:System.Data.DataTable>
 - [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

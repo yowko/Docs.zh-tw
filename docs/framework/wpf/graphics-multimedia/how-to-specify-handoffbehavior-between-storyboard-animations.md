@@ -1,18 +1,18 @@
 ---
-title: HOW TO：指定腳本動畫之間的傳遞行為
+title: HOW TO：指定分鏡腳本動畫之間的 HandoffBehavior
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Storyboards [WPF], handoff behavior between animations
 - animation [WPF], handoff behavior between
 ms.assetid: 97bd6842-929b-49d9-813e-46553ae46472
-ms.openlocfilehash: a919fe2a87cb11ca2197465b288eac7a17976cc3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d7129d6a48bdf31dc4953bb450267ad3b38fdd17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379064"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083877"
 ---
-# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>HOW TO：指定腳本動畫之間的傳遞行為
+# <a name="how-to-specify-handoffbehavior-between-storyboard-animations"></a>HOW TO：指定分鏡腳本動畫之間的 HandoffBehavior
 此範例示範如何指定分鏡腳本動畫之間的遞移式行為。 <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>屬性<xref:System.Windows.Media.Animation.BeginStoryboard>指定新動畫已套用至屬性的任何現有的互動。  
   
 ## <a name="example"></a>範例  
@@ -21,7 +21,8 @@ ms.locfileid: "57379064"
  [!code-xaml[timingbehaviors_snip#HandoffBehaviorWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/timingbehaviors_snip/CSharp/HandoffBehaviorExample.xaml#handoffbehaviorwholepage)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.BeginStoryboard>
 - <xref:System.Windows.Media.Animation.BeginStoryboard.HandoffBehavior%2A>
 - [動畫概觀](animation-overview.md)
-- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)
+- [動畫和計時 HOW TO 主題](animation-and-timing-how-to-topics.md)

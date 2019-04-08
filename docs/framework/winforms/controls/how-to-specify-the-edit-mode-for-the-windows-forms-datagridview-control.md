@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Form DataGridView 控制項中指定的編輯模式
+title: HOW TO：指定 Windows Forms DataGridView 控制項的編輯模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 00c5bb85eb1b238371e58a631d90b69a41c49140
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080393"
 ---
-# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>HOW TO：Windows Form DataGridView 控制項中指定的編輯模式
+# <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>HOW TO：指定 Windows Forms DataGridView 控制項的編輯模式
 根據預設，使用者可以編輯的目前內容<xref:System.Windows.Forms.DataGridView>文字 方塊中儲存格，在其中輸入，或按下 f2 鍵。 在編輯模式中，如果符合所有下列條件，這會使儲存格：  
   
 -   基礎資料來源支援編輯。  
@@ -42,10 +42,10 @@ ms.locfileid: "57725297"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   
-  <xref:System> 和 <xref:System.Windows.Forms> 組件的參考。  
+-   <xref:System> 和 <xref:System.Windows.Forms> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)

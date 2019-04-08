@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: a66edd0297b723b81c31675c9b0e6b6def9ed10a
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104295"
 ---
 # <a name="using-nested-graphics-containers"></a>使用巢狀圖形容器
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供容器，您可以使用暫時取代或擴充中狀態的一部分<xref:System.Drawing.Graphics>物件。 您可以建立一個容器藉由呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>方法的<xref:System.Drawing.Graphics>物件。 您可以呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>重複，以形成巢狀的容器。 每次呼叫<xref:System.Drawing.Graphics.BeginContainer%2A>必須藉由呼叫配對<xref:System.Drawing.Graphics.EndContainer%2A>。  
@@ -57,5 +57,6 @@ ms.locfileid: "58125859"
  ![顯示圖例，取自巢狀容器的字串。](./media/using-nested-graphics-containers/nested-containers-three-strings.png)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics>
 - [管理圖形物件的狀態](managing-the-state-of-a-graphics-object.md)

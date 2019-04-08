@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: be838caf-fcb0-4b68-827f-58b2c04b747f
-ms.openlocfilehash: fcec2fd81bfb9a662fc98c811ab69ffde5949916
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2237ba71487afc132f9164243a664b277397ccfa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724459"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098633"
 ---
 # <a name="bindingsource-component-overview"></a>BindingSource 元件概觀
 <xref:System.Windows.Forms.BindingSource> 元件的設計目的，是為了簡化將控制項繫結至基礎資料來源的程序。 <xref:System.Windows.Forms.BindingSource> 元件可同時做為管線和其他控制項繫結程序的目標資料來源。 它可以在透過命令傳遞至基礎資料清單時，提供表單資料連接的抽象層。 此外，您也可以直接加入資料，將元件本身當做資料來源使用。  
@@ -58,10 +58,11 @@ ms.locfileid: "57724459"
 |<xref:System.Windows.Forms.BindingSource.Filter%2A> 屬性|如果資料來源是 <xref:System.ComponentModel.IBindingListView>，可取得或設定用來篩選所檢視之資料列的運算式。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource 元件架構](bindingsource-component-architecture.md)
 - [BindingSource 元件](bindingsource-component.md)
 - [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)
-- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [Windows Form 資料繫結](../windows-forms-data-binding.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

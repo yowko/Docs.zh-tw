@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptoClass element
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
-ms.openlocfilehash: 161c9212600a417a97fa5a4e0edeac02db0f17a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103814"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > 項目
 包含密碼編譯類別，其具有 [\<nameEntry>](../../../../../docs/framework/configure-apps/file-schema/cryptography/nameentry-element.md) 項目中易記名稱的對應。  
@@ -76,7 +76,8 @@ ms.locfileid: "55287530"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

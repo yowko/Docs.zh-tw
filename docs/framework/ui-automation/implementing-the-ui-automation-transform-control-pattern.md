@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Transform control pattern
 - UI Automation, Transform control pattern
 ms.assetid: 5f49d843-5845-4800-9d9c-56ce0d146844
-ms.openlocfilehash: 1b26662b710b089349b921c7d6517cd86fe6d933
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d038991da4048e3279ae974cbf4d3e53691349af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088547"
 ---
 # <a name="implementing-the-ui-automation-transform-control-pattern"></a>實作 UI 自動化 Transform 控制項模式
 > [!NOTE]
@@ -39,12 +39,12 @@ ms.locfileid: "57673097"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanMove%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanResize%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.CanRotate%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Move%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Resize%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -59,8 +59,9 @@ ms.locfileid: "57673097"
 |<xref:System.InvalidOperationException>|<xref:System.Windows.Automation.Provider.ITransformProvider.Rotate%2A><br /><br /> -如果<xref:System.Windows.Automation.TransformPatternIdentifiers.CanRotateProperty>為 false。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

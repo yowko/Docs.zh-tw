@@ -7,12 +7,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing with double buffering
 - examples [Windows Forms], double-buffered graphics
 ms.assetid: 4f6fef99-0972-436e-9d73-0167e4033f71
-ms.openlocfilehash: 71463d7db6ae18a3dd21d6a467f3963d836fc086
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 20ec03e6b84110f7ea00c134dc18b23f233c5f58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103437"
 ---
 # <a name="double-buffered-graphics"></a>雙重緩衝的圖形
 閃爍是編寫圖形程式碼時常見的問題。 需要多個複雜繪製作業的圖形作業可能會導致轉譯的影像出現閃爍，或具有無法接受的外觀。 為了解決這些問題，.NET Framework 提供雙重緩衝的存取。  
@@ -33,10 +33,11 @@ ms.locfileid: "57707699"
  如需有關使用<xref:System.Drawing.BufferedGraphics>類別，請參閱[手動轉譯已緩衝的圖形](how-to-manually-render-buffered-graphics.md)。 如需轉譯圖形的詳細資訊，請參閱 [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.BufferedGraphics>
 - <xref:System.Drawing.BufferedGraphicsContext>
 - <xref:System.Drawing.BufferedGraphicsManager>
-- [如何：手動轉譯已緩衝的圖形](how-to-manually-render-buffered-graphics.md)
-- [如何：減少使用表單和控制項的雙重緩衝的圖形重繪閃動](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
-- [如何：手動管理已緩衝的圖形](how-to-manually-manage-buffered-graphics.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [HOW TO：手動呈現已緩衝的圖形](how-to-manually-render-buffered-graphics.md)
+- [HOW TO：使用表單和控制項的雙重緩衝以減少圖形閃爍](how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md)
+- [HOW TO：手動管理已緩衝的圖形](how-to-manually-manage-buffered-graphics.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

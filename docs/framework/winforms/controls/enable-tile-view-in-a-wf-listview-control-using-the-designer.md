@@ -1,19 +1,19 @@
 ---
-title: HOW TO：啟用並排顯示檢視中使用設計工具將 Windows Forms ListView 控制項
+title: HOW TO：使用設計工具在 Windows Forms ListView 控制項中啟用並排顯示
 ms.date: 03/30/2017
 helpviewer_keywords:
 - tile view feature
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 2b075cdb4ec9910e81c7baa7c714c5c155a8586d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7f7e3f0fadeccafc867c49d76f6f6cf11300fddc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102475"
 ---
-# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：啟用並排顯示檢視中使用設計工具將 Windows Forms ListView 控制項
+# <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具在 Windows Forms ListView 控制項中啟用並排顯示
 並排顯示檢視功能<xref:System.Windows.Forms.ListView>控制項可讓您提供圖形和文字資訊之間的視覺化平衡。 並排顯示檢視中針對項目顯示的文字資訊與詳細資料檢視所定義的資料行資訊相同。 並排顯示檢視函式搭配的群組 」 或 「 插入標記功能<xref:System.Windows.Forms.ListView>控制項。  
   
  並排顯示檢視會使用 32x32 圖示和數行文字，如下圖所示。  
@@ -36,5 +36,6 @@ ms.locfileid: "57720091"
 2.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.ListView.View%2A>屬性，然後選擇**圖格**。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ListView.TileSize%2A>
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)

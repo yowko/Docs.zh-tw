@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用純色繪製區域
+title: HOW TO：使用單色繪製區域
 ms.date: 03/30/2017
 helpviewer_keywords:
 - solid colors [WPF], painting with
 - brushes [WPF], painting with solid colors
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
-ms.openlocfilehash: ae6be062313e9340edefd86c15b7a044996fe280
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373106"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086841"
 ---
-# <a name="how-to-paint-an-area-with-a-solid-color"></a>HOW TO：使用純色繪製區域
+# <a name="how-to-paint-an-area-with-a-solid-color"></a>HOW TO：使用單色繪製區域
 若要繪製區域使用純色繪製區域，您可以使用預先定義的系統筆刷，例如<xref:System.Windows.Media.Brushes.Red%2A>或<xref:System.Windows.Media.Brushes.Blue%2A>，或者您可以建立新<xref:System.Windows.Media.SolidColorBrush>，並說明其<xref:System.Windows.Media.SolidColorBrush.Color%2A>使用 alpha、 紅色、 綠色和藍色值。 在 XAML 中，您也可以使用十六進位標記法來以純色繪製區域。  
   
  下列範例所使用的是每一種方法來繪製<xref:System.Windows.Shapes.Rectangle>藍色。  
@@ -50,4 +50,5 @@ ms.locfileid: "57373106"
  此程式碼範例是針對提供之較大範例的一部分<xref:System.Windows.Media.SolidColorBrush>類別。 如需完整的範例，請參閱 [Brush 範例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Brushes>

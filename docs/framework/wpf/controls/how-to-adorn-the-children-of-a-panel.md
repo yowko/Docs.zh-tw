@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: 9f840180edf55c3e10e6859dfc2b9f4b6495b878
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e96e1772794a1594d97e1a0109d944d23515468d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100882"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>HOW TO：裝飾 Panel 的子系
 此範例示範如何以程式設計方式將裝飾項繫結至指定的子系<xref:System.Windows.Controls.Panel>。  
@@ -34,4 +34,5 @@ ms.locfileid: "57358186"
 >  使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 將裝飾項繫結至另一個目前不支援的項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝飾項概觀](adorners-overview.md)

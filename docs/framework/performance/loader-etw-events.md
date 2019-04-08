@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3878821840adc272829f57fbac090e958619f3fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141527"
 ---
 # <a name="loader-etw-events"></a>載入器 ETW 事件
 <a name="top"></a> 這些事件收集載入及卸載應用程式定義域、組件和模組的相關資訊。  
@@ -43,9 +43,9 @@ ms.locfileid: "54579000"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (針對所有應用程式定義域記錄)|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
+|`AppDomainLoad_V1` （針對所有的應用程式定義域記錄）|156|每當在處理序的存留期間建立應用程式定義域時引發。|  
 |`AppDomainUnLoad_V1`|157|每當在處理序的存留期間終結應用程式定義域時引發。|  
 |`AppDomainDCStart_V1`|157|在開始取消期間列舉應用程式定義域。|  
 |`AppDomainDCEnd_V1`|158|在結束取消期間列舉應用程式定義域。|  
@@ -74,7 +74,7 @@ ms.locfileid: "54579000"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`AssemblyLoad_V1`|154|載入組件時引發。|  
 |`AssemblyUnload_V1`|155|卸載組件時引發。|  
@@ -107,7 +107,7 @@ ms.locfileid: "54579000"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleLoad_V2`|152|在處理序的存留期間載入模組時引發。|  
 |`ModuleUnload_V2`|153|在處理序的存留期間卸載模組時引發。|  
@@ -154,7 +154,7 @@ ms.locfileid: "54579000"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`DomainModuleLoad_V1`|151|針對應用程式定義域載入模組時引發。|  
 |`DomainModuleDCStart_V1`|151|在開始取消期間列舉針對應用程式定義域所載入的模組，並且針對所有應用程式定義域記錄。|  
@@ -187,7 +187,7 @@ ms.locfileid: "54579000"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ModuleRange`|158|如果已載入的原生映像產生器 (NGen) 已使用 IBC 最佳化，就會出現這個事件，其中包含有關 NGen 映像作用範圍的資訊。|  
 |`ModuleRangeDCStart`|160|在開始取消期間引發的 `ModuleRange` 事件。|  
@@ -213,4 +213,5 @@ ms.locfileid: "54579000"
  模組範圍事件會在任何 ETW 層級大於或等於 4 且分類為告知性事件時引發。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

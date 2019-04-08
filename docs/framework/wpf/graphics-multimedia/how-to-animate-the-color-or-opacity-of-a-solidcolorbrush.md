@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], opacity of SolidColorBrush
 - SolidColorBrush [WPF], animating opacity of
 ms.assetid: d9154354-843f-4713-bad1-35bb0ba6eaeb
-ms.openlocfilehash: 541835a7827467aeceb1ed72e54b69e62dc4f916
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e440cf49b8b16051361650f9659dc6006c2e7b56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072155"
 ---
 # <a name="how-to-animate-the-color-or-opacity-of-a-solidcolorbrush"></a>HOW TO：建立 SolidColorBrush 色彩或不透明效果的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.SolidColorBrush.Color%2A>並<xref:System.Windows.Media.Brush.Opacity%2A>的<xref:System.Windows.Media.SolidColorBrush>。  
@@ -35,6 +35,7 @@ ms.locfileid: "57354436"
  為了和其他動畫範例保持一致，此範例中的程式碼版本使用<xref:System.Windows.Media.Animation.Storyboard>來套用其動畫的物件。 不過，套用單一動畫的程式碼中，時，使用的工作變得更容易<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法，而不是使用<xref:System.Windows.Media.Animation.Storyboard>。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](how-to-animate-a-property-without-using-a-storyboard.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [動畫概觀](animation-overview.md)
 - [分鏡腳本概觀](storyboards-overview.md)
 - [筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)

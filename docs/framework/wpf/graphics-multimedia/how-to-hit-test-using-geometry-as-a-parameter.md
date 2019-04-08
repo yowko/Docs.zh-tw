@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用幾何當做參數進行點擊測試
+title: HOW TO：使用幾何作為參數進行點擊測試
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
-ms.openlocfilehash: 3d6f4190a5b5c8410a6be01d2645df9c123f9ac4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100960"
 ---
-# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>HOW TO：使用幾何當做參數進行點擊測試
+# <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>HOW TO：使用幾何作為參數進行點擊測試
 此範例示範如何在視覺物件使用執行點擊的測試<xref:System.Windows.Media.Geometry>做為點擊測試參數。  
   
 ## <a name="example"></a>範例  
@@ -38,5 +38,6 @@ ms.locfileid: "58410611"
 >  <xref:System.Windows.Media.HitTestResult>交集詳細資料時，應該不會呼叫回呼<xref:System.Windows.Media.IntersectionDetail.Empty>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [視覺分層中的點擊測試](hit-testing-in-the-visual-layer.md)
-- [對 Visual 中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)
+- [對視覺物件中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)

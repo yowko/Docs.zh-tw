@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 14e95627-dd79-4b82-ac85-e682aa3a31d8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b1ee9c3c19c0a3e86b6761f95ccab0292b5e15c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ac83a0b27a965721dabe1bdf2e05afbdc9b9c961
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083656"
 ---
 # <a name="dependentassembly-element"></a>\<dependentAssembly > 項目
 封裝每一個組件的繫結原則和組件位置。 使用其中一個`dependentAssembly`每個組件的項目。  
@@ -81,6 +81,7 @@ ms.locfileid: "55273945"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

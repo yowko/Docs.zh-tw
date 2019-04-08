@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], architecture
 - architecture [WCF]
 ms.assetid: a3bcb0a1-56ea-4ba6-9736-d260d90dade5
-ms.openlocfilehash: f152ac48c2897259d07222fafd33d17d5287a870
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0e4f9af0ff84a8d560b332d227b1ba9ae18bd4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099699"
 ---
 # <a name="windows-communication-foundation-architecture"></a>Windows Communication Foundation 架構
 下圖說明主要的層級的 Windows Communication Foundation (WCF) 架構。  
@@ -38,7 +38,7 @@ ms.locfileid: "54745375"
   
  通訊協定通道會實作訊息處理通訊協定，而此通常是藉由讀取或寫入訊息的額外標頭來完成。 這類通訊協定的範例包括 WS-Security 和 WS-Reliability。  
   
- 訊息層說明資料的可能格式與交換模式。 WS-Security 是 WS-Security 規格的實作 (Implementation)，此規格會啟用訊息層的安全性。 WS-Reliable 訊息通道可保證訊息的傳遞。 編碼器會提供可以用來滿足訊息需要的各種編碼方式。 HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 (Hypertext Transfer Protocol，HTTP)。 同樣地，TCP 通道會指定 TCP 通訊協定。 異動流程通道會管理異動的訊息模式。 具名管道通道會啟用處理序間通訊。 MSMQ 通道會啟用與 MSMQ 應用程式的互通。  
+ 訊息層說明資料的可能格式與交換模式。 WS-Security 是 WS-Security 規格的實作 (Implementation)，此規格會啟用訊息層的安全性。 WS-Reliable 訊息通道可保證訊息的傳遞。 編碼器會提供可以用來滿足訊息需要的各種編碼方式。 HTTP 通道會指定對訊息傳遞使用超文字傳輸協定 (Hypertext Transfer Protocol，HTTP)。 同樣地，TCP 通道會指定 TCP 通訊協定。 交易流程通道會管理交易的訊息模式。 具名管道通道會啟用處理序間通訊。 MSMQ 通道會啟用與 MSMQ 應用程式的互通。  
   
 ### <a name="hosting-and-activation"></a>裝載和啟動  
  服務的最終形式就是程式。 就像其他的程式，服務必須在可執行檔中執行。 這就所謂*自我裝載*服務。  
@@ -46,5 +46,6 @@ ms.locfileid: "54745375"
  服務也可以*裝載*，或在外部代理程式，例如 IIS 或 Windows Activation Service (WAS) 所管理的可執行檔中執行。 是已啟用 WCF 應用程式部署上執行的電腦時自動啟動。 服務也可以透過手動方式來當做可執行檔 (.exe 檔) 執行。 服務也可以自動當做 Windows 服務執行。 COM + 元件也可以裝載為 WCF 服務。  
   
 ## <a name="see-also"></a>另請參閱
-- [什麼是 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
-- [Windows Communication Foundation 的基本概念](../../../docs/framework/wcf/fundamental-concepts.md)
+
+- [何謂 Windows Communication Foundation](../../../docs/framework/wcf/whats-wcf.md)
+- [Windows Communication Foundation 的主要概念](../../../docs/framework/wcf/fundamental-concepts.md)

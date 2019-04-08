@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - authentication [WCF], specifying the identity of a service
 ms.assetid: a4c8f52c-5b30-45c4-a545-63244aba82be
-ms.openlocfilehash: 5d168cbecf4f6a0c075a66ff1dd4b50b154d985c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: f33144c320b3648f9e201505a34ed8f1ecd5965b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145622"
 ---
 # <a name="service-identity-and-authentication"></a>服務身分識別和驗證
 服務的*端點身分識別*是從服務 Web 服務描述語言 (WSDL) 產生的值。 這個值會傳播至任何用戶端上，用來驗證服務。 在用戶端初始化對某個端點的通訊，且服務也向用戶端進行自我驗證之後，用戶端就會比較端點身分識別值與端點驗證處理序傳回的實際值。 如果兩者相符，則可確定用戶端已聯繫所需的服務端點。 這可當作防範*網路釣魚*藉由防止用戶端重新導向至惡意服務所裝載的端點。  
@@ -54,13 +54,9 @@ ms.locfileid: "57212517"
   
 ## <a name="using-the-identity-element-in-configuration"></a>使用\<身分識別 > 組態中的項目  
  如果您在先前對 `Certificate,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證做為身分識別值，如下列程式碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
-  
-  
-  
+
  您可以變更預設服務身分識別的值，或變更身分識別類型使用`<identity>`組態中或在程式碼中設定身分識別的項目。 下列組態程式碼會以 `contoso.com` 這個值來設定網域名稱系統 (DNS) 身分識別。  
-  
-  
-  
+
 ## <a name="setting-identity-programmatically"></a>以程式設計方式設定身分識別  
  您的服務並沒有明確指定身分識別，因為 WCF 會自動決定。 不過，WCF 可讓您指定的身分識別的端點，如有必要。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
   
@@ -69,16 +65,12 @@ ms.locfileid: "57212517"
   
 ## <a name="specifying-identity-at-the-client"></a>指定用戶端的身分識別  
  在設計階段，用戶端開發人員通常會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)來產生用戶端組態。 產生的組態檔 (供用戶端使用) 會包含伺服器的身分識別。 例如，下列由服務產生的程式碼會指定 DNS 身分識別，如先前範例所示。 請注意，用戶端的端點身分識別值符合服務的身分識別值。 此時，如果用戶端接收服務的 Windows (Kerberos) 認證，值應該會是 `contoso.com`。  
-  
-  
-  
+
  如果，服務 (而不是 Windows) 將憑證指定為用戶端認證類型，則憑證的 DNS 屬性應該會是 `contoso.com` (或者，如果 DNS 屬性為 `null`，則憑證的主體名稱必須是 `contoso.com`)。  
   
 #### <a name="using-a-specific-value-for-identity"></a>使用特定的身分識別值  
  下列用戶端組態檔說明服務的身分識別值如何成為所需的特定值。 在下列範例中，用戶端可與兩個端點進行通訊。 第一個端點是使用憑證指紋進行識別，而第二個則是使用憑證 RSA 金鑰。 也就是說，這個憑證只包含公用金鑰/私用金鑰組，不是由受信任的授權單位發行。  
-  
-  
-  
+
 ## <a name="identity-checking-at-run-time"></a>執行階段的身分識別檢查  
  在設計階段，用戶端開發人員會透過伺服器的中繼資料來決定其身分識別。 在執行階段，系統會先執行身分識別檢查，然後再呼叫服務的任何端點。  
   
@@ -113,11 +105,12 @@ ms.locfileid: "57212517"
  如需有關如何堆疊繫結項目正確地自訂繫結，請參閱[Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。 如需有關建立自訂繫結與<xref:System.ServiceModel.Channels.SecurityBindingElement>，請參閱[How to:為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
-- [如何：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [HOW TO：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [建立使用者定義繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)
-- [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [HOW TO：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)

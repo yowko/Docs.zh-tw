@@ -9,19 +9,19 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 - DateTimePicker control [Windows Forms], displaying time
 ms.assetid: 0c1c8b40-1b50-4301-a90c-39516775ccb1
-ms.openlocfilehash: a88b93dfe5296873fa3503fbeb020118f2606859
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5163ca3eb04732152960c86c9a7428d87c6280f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083033"
 ---
 # <a name="how-to-display-time-with-the-datetimepicker-control"></a>HOW TO：使用 DateTimePicker 控制項顯示時間
 如果您希望應用程式可讓使用者選取日期和時間，並在指定的格式中顯示該日期和時間，請使用 <xref:System.Windows.Forms.DateTimePicker> 控制項。 下列程序示範如何使用 <xref:System.Windows.Forms.DateTimePicker> 控制項來顯示時間。  
   
 ### <a name="to-display-the-time-with-the-datetimepicker-control"></a>使用 DateTimePicker 控制項顯示時間  
   
-1.  將 <xref:System.Windows.Forms.DateTimePicker.Format%2A> 屬性設定為 <xref:System.Windows.Forms.DateTimePickerFormat.Time>  
+1.  設定<xref:System.Windows.Forms.DateTimePicker.Format%2A>屬性 <xref:System.Windows.Forms.DateTimePickerFormat.Time>  
   
      [!code-csharp[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.DateTimePickerTimeOnly#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DateTimePickerTimeOnly/VB/Form1.vb#2)]  
@@ -45,4 +45,5 @@ ms.locfileid: "57716448"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DateTimePicker 控制項](datetimepicker-control-windows-forms.md)

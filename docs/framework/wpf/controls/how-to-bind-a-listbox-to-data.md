@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], ListBox control
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
-ms.openlocfilehash: 2cbcb0fb859605c33e2d92559b4a47aa1725472c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4dea53a524247d18628b3e7e7b2c06906dced53d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106429"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>HOW TO：將 ListBox 繫結至資料
 應用程式開發人員可以建立<xref:System.Windows.Controls.ListBox>不使用指定的每個內容控制項<xref:System.Windows.Controls.ListBoxItem>分開。 您可以使用資料繫結至資料繫結至個別的項目。  
@@ -23,6 +23,7 @@ ms.locfileid: "57372877"
 [!code-xaml[ListBoxEvent#3](~/samples/snippets/csharp/VS_Snippets_Wpf/ListBoxEvent/CSharp/Pane1.xaml#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.ListBox>
 - <xref:System.Windows.Controls.ListBoxItem>
 - [控制項](../advanced/optimizing-performance-controls.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - typography [WPF], animations
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
-ms.openlocfilehash: 4cc7932b43f8a3c35d750f9a9020e16257867f76
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108208"
 ---
 # <a name="how-to-apply-animations-to-text"></a>HOW TO：對文字套用動畫
 動畫可以變更應用程式中文字的顯示和外觀。 下列範例會使用不同類型的動畫來影響中的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  
@@ -37,4 +37,5 @@ ms.locfileid: "58463120"
  [!code-xaml[TextAnimationSample#TextAnimationSample4](~/samples/snippets/csharp/VS_Snippets_Wpf/TextAnimationSample/CS/Window1.xaml#textanimationsample4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [動畫概觀](../graphics-multimedia/animation-overview.md)

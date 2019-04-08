@@ -8,18 +8,16 @@ helpviewer_keywords:
 - hit testing functionality [WPF]
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
-ms.openlocfilehash: c8846c673e36fe64dd13c7acb600b93dedac5f3e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082174"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
 本主題提供視覺分層所提供點擊測試功能的概觀。 點擊測試支援可讓您判斷幾何或點的值是否落在呈現的內容<xref:System.Windows.Media.Visual>，可讓您實作使用者介面行為，例如選取矩形來選取多個物件。  
-  
- 
-  
+
 <a name="hit_testing_scenarios"></a>   
 ## <a name="hit-testing-scenarios"></a>點擊測試案例  
  <xref:System.Windows.UIElement>類別提供<xref:System.Windows.UIElement.InputHitTest%2A>方法，可讓您進行點擊測試使用指定的座標值的項目。 在許多情況下，<xref:System.Windows.UIElement.InputHitTest%2A>方法提供實作點擊測試的項目所需的功能。 不過，有幾個案例，您可能需要在視覺分層實作點擊測試。  
@@ -139,6 +137,7 @@ ms.locfileid: "57355073"
  [!code-vb[HitTestingOverview#108](~/samples/snippets/visualbasic/VS_Snippets_Wpf/HitTestingOverview/visualbasic/window1.xaml.vb#108)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.VisualTreeHelper.HitTest%2A>
 - <xref:System.Windows.Media.HitTestResult>
 - <xref:System.Windows.Media.HitTestResultCallback>
@@ -146,5 +145,5 @@ ms.locfileid: "57355073"
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [使用 DrawingVisuals 範例進行點擊測試](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [點擊測試使用 Win32 交互操作範例](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [對 Visual 中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)
-- [使用 Win32 裝載容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)
+- [對視覺物件中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)
+- [使用 Win32 主機容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)

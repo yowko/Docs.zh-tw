@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], property changes (using code)
 - properties [Windows Forms], changes
 ms.assetid: 268039ec-5aaa-4d76-b902-acccb036c850
-ms.openlocfilehash: 0ff5b3874d9de169f4a9f1040d601173af352c06
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cabfd9e799288a332a0b2f96140f5f1cc328508b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105764"
 ---
 # <a name="property-changed-events"></a>屬性變更事件
 如果您想傳送通知時屬性，名為控制項*PropertyName*的變更，定義名為事件*PropertyName* `Changed`和名為`On` *PropertyName* `Changed`引發事件。 在 Windows Form 中的命名慣例是將文字附加*Changed*屬性的名稱。 屬性變更事件的相關聯的事件委派類型是<xref:System.EventHandler>，且事件的資料類型為<xref:System.EventArgs>。 基底類別<xref:System.Windows.Forms.Control>定義許多屬性變更事件，例如<xref:System.Windows.Forms.Control.BackColorChanged>， <xref:System.Windows.Forms.Control.BackgroundImageChanged>， <xref:System.Windows.Forms.Control.FontChanged>， <xref:System.Windows.Forms.Control.LocationChanged>，和其他人。 如需事件的背景資訊，請參閱 <<c0> [ 事件](../../../standard/events/index.md)並[Windows Forms 控制項中的事件](events-in-windows-forms-controls.md)。  
@@ -26,6 +26,7 @@ ms.locfileid: "57703227"
  [!code-vb[System.Windows.Forms.FlashTrackBar#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FlashTrackBar/VB/FlashTrackBar.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [事件](../../../standard/events/index.md)
-- [Windows Forms 控制項中的事件](events-in-windows-forms-controls.md)
-- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [Windows Form 控制項中的事件](events-in-windows-forms-controls.md)
+- [Windows Form 控制項中的屬性](properties-in-windows-forms-controls.md)

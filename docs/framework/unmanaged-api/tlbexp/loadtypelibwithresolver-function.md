@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a7187076eb338d5a57388d19f62e79af041ee774
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155651"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
 載入類型程式庫，並使用所提供[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)來解析任何的內部參考的型別程式庫。  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in]A [REGKIND 列舉](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)控制型別程式庫的註冊方式的旗標。 其可能的值為：  
   
--   `REGKIND_DEFAULT`：使用預設註冊行為。  
+-   `REGKIND_DEFAULT`:使用預設註冊行為。  
   
--   `REGKIND_REGISTER`：註冊此型別程式庫。  
+-   `REGKIND_REGISTER`:註冊此型別程式庫。  
   
--   `REGKIND_NONE`：請勿註冊此型別程式庫。  
+-   `REGKIND_NONE`:請勿註冊此型別程式庫。  
   
  `pTlbResolver`  
  [in]實作的指標[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。  
@@ -89,10 +89,11 @@ HRESULT LoadTypeLibWithResolver(
   
  **標頭：** TlbRef.h  
   
- **程式庫：** TlbRef.lib  
+ **LIBRARY:** TlbRef.lib  
   
  **.NET framework 版本：** 3.5, 3.0, 2.0  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Tlbexp Helper 函式](../../../../docs/framework/unmanaged-api/tlbexp/index.md)
 - [LoadTypeLibEx 函式](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/nf-oleauto-loadtypelibex)

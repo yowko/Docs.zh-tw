@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f776f20f163df91d65509e5dbab31fe9c29a965
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492097"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103346"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception 方法
 已開始搜尋例外狀況處理常式會告知偵錯工具。  
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  特定畫面格和位移取決於`dwEventType`參數，如下所示：  
   
-|`dwEventType` 的值|`pFrame` 的值|`nOffset` 的值|  
+|值 `dwEventType`|值 `pFrame`|值 `nOffset`|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|擲回例外狀況框架。|指令指標框架中。|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|擲回的例外狀況的點最接近的使用者程式碼框架。|指令指標框架中。|  
@@ -76,12 +76,13 @@ HRESULT Exception (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugManagedCallback2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)
 - [ICorDebugManagedCallback 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-interface.md)
