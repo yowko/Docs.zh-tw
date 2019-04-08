@@ -10,83 +10,83 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56ca8e6c077d41552f85b65ba5f6b755165ee11a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: ef5c9acab6fd8fa852b619eeeee150eb33b69507
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654610"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890432"
 ---
-# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="c28e8-102">封送處理不同類型的陣列</span><span class="sxs-lookup"><span data-stu-id="c28e8-102">Marshaling Different Types of Arrays</span></span>
-<span data-ttu-id="c28e8-103">陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。</span><span class="sxs-lookup"><span data-stu-id="c28e8-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="c28e8-104">雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。</span><span class="sxs-lookup"><span data-stu-id="c28e8-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="c28e8-105">此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。</span><span class="sxs-lookup"><span data-stu-id="c28e8-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="c28e8-106">如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。</span><span class="sxs-lookup"><span data-stu-id="c28e8-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
+# <a name="marshaling-different-types-of-arrays"></a><span data-ttu-id="1780f-102">封送處理不同類型的陣列</span><span class="sxs-lookup"><span data-stu-id="1780f-102">Marshaling Different Types of Arrays</span></span>
+<span data-ttu-id="1780f-103">陣列是 Managed 程式碼中的參考類型，它包含一或多個相同類型的項目。</span><span class="sxs-lookup"><span data-stu-id="1780f-103">An array is a reference type in managed code that contains one or more elements of the same type.</span></span> <span data-ttu-id="1780f-104">雖然陣列是參考類型，它們會做為 In 參數傳遞至 Unmanaged 函式。</span><span class="sxs-lookup"><span data-stu-id="1780f-104">Although arrays are reference types, they are passed as In parameters to unmanaged functions.</span></span> <span data-ttu-id="1780f-105">此行為與 Managed 陣列傳遞至 Managed 物件的方式 (做為 In/Out 參數) 不一致。</span><span class="sxs-lookup"><span data-stu-id="1780f-105">This behavior is inconsistent with way managed arrays are passed to managed objects, which is as In/Out parameters.</span></span> <span data-ttu-id="1780f-106">如需詳細資訊，請參閱 [複製和固定](copying-and-pinning.md)。</span><span class="sxs-lookup"><span data-stu-id="1780f-106">For additional details, see [Copying and Pinning](copying-and-pinning.md).</span></span>  
   
- <span data-ttu-id="c28e8-107">下表列出陣列的封送處理選項，並說明其用法。</span><span class="sxs-lookup"><span data-stu-id="c28e8-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
+ <span data-ttu-id="1780f-107">下表列出陣列的封送處理選項，並說明其用法。</span><span class="sxs-lookup"><span data-stu-id="1780f-107">The following table lists marshaling options for arrays and describes their usage.</span></span>  
   
-|<span data-ttu-id="c28e8-108">陣列</span><span class="sxs-lookup"><span data-stu-id="c28e8-108">Array</span></span>|<span data-ttu-id="c28e8-109">說明</span><span class="sxs-lookup"><span data-stu-id="c28e8-109">Description</span></span>|  
+|<span data-ttu-id="1780f-108">陣列</span><span class="sxs-lookup"><span data-stu-id="1780f-108">Array</span></span>|<span data-ttu-id="1780f-109">說明</span><span class="sxs-lookup"><span data-stu-id="1780f-109">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="c28e8-110">傳值方式的整數。</span><span class="sxs-lookup"><span data-stu-id="c28e8-110">Of integers by value.</span></span>|<span data-ttu-id="c28e8-111">將整數的陣列做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-111">Passes an array of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="c28e8-112">傳址方式的整數。</span><span class="sxs-lookup"><span data-stu-id="c28e8-112">Of integers by reference.</span></span>|<span data-ttu-id="c28e8-113">將整數的陣列做為 In/Out 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-113">Passes an array of integers as an In/Out parameter.</span></span>|  
-|<span data-ttu-id="c28e8-114">傳值方式的整數 (二維)。</span><span class="sxs-lookup"><span data-stu-id="c28e8-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="c28e8-115">將整數的矩陣做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-115">Passes a matrix of integers as an In parameter.</span></span>|  
-|<span data-ttu-id="c28e8-116">傳值方式的字串。</span><span class="sxs-lookup"><span data-stu-id="c28e8-116">Of strings by value.</span></span>|<span data-ttu-id="c28e8-117">將字串的陣列做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-117">Passes an array of strings as an In parameter.</span></span>|  
-|<span data-ttu-id="c28e8-118">整數的結構。</span><span class="sxs-lookup"><span data-stu-id="c28e8-118">Of structures with integers.</span></span>|<span data-ttu-id="c28e8-119">將包含整數的結構陣列做為 In/Out 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
-|<span data-ttu-id="c28e8-120">字串的結構。</span><span class="sxs-lookup"><span data-stu-id="c28e8-120">Of structures with strings.</span></span>|<span data-ttu-id="c28e8-121">將僅包含字串的結構陣列當作 In/Out 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-121">Passes an array of structures that contain only strings as an In/Out parameter.</span></span> <span data-ttu-id="c28e8-122">可變更陣列的成員。</span><span class="sxs-lookup"><span data-stu-id="c28e8-122">Members of the array can be changed.</span></span>|  
+|<span data-ttu-id="1780f-110">傳值方式的整數。</span><span class="sxs-lookup"><span data-stu-id="1780f-110">Of integers by value.</span></span>|<span data-ttu-id="1780f-111">將整數的陣列做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-111">Passes an array of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="1780f-112">傳址方式的整數。</span><span class="sxs-lookup"><span data-stu-id="1780f-112">Of integers by reference.</span></span>|<span data-ttu-id="1780f-113">將整數的陣列做為 In/Out 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-113">Passes an array of integers as an In/Out parameter.</span></span>|  
+|<span data-ttu-id="1780f-114">傳值方式的整數 (二維)。</span><span class="sxs-lookup"><span data-stu-id="1780f-114">Of integers by value (two-dimensional).</span></span>|<span data-ttu-id="1780f-115">將整數的矩陣做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-115">Passes a matrix of integers as an In parameter.</span></span>|  
+|<span data-ttu-id="1780f-116">傳值方式的字串。</span><span class="sxs-lookup"><span data-stu-id="1780f-116">Of strings by value.</span></span>|<span data-ttu-id="1780f-117">將字串的陣列做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-117">Passes an array of strings as an In parameter.</span></span>|  
+|<span data-ttu-id="1780f-118">整數的結構。</span><span class="sxs-lookup"><span data-stu-id="1780f-118">Of structures with integers.</span></span>|<span data-ttu-id="1780f-119">將包含整數的結構陣列做為 In/Out 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-119">Passes an array of structures that contain integers as an In parameter.</span></span>|  
+|<span data-ttu-id="1780f-120">字串的結構。</span><span class="sxs-lookup"><span data-stu-id="1780f-120">Of structures with strings.</span></span>|<span data-ttu-id="1780f-121">將僅包含字串的結構陣列當作 In/Out 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-121">Passes an array of structures that contain only strings as an In/Out parameter.</span></span> <span data-ttu-id="1780f-122">可變更陣列的成員。</span><span class="sxs-lookup"><span data-stu-id="1780f-122">Members of the array can be changed.</span></span>|  
   
-## <a name="example"></a><span data-ttu-id="c28e8-123">範例</span><span class="sxs-lookup"><span data-stu-id="c28e8-123">Example</span></span>  
- <span data-ttu-id="c28e8-124">本範例示範如何傳遞下列類型的陣列：</span><span class="sxs-lookup"><span data-stu-id="c28e8-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
+## <a name="example"></a><span data-ttu-id="1780f-123">範例</span><span class="sxs-lookup"><span data-stu-id="1780f-123">Example</span></span>  
+ <span data-ttu-id="1780f-124">本範例示範如何傳遞下列類型的陣列：</span><span class="sxs-lookup"><span data-stu-id="1780f-124">This sample demonstrates how to pass the following types of arrays:</span></span>  
   
--   <span data-ttu-id="c28e8-125">傳值方式的整數陣列。</span><span class="sxs-lookup"><span data-stu-id="c28e8-125">Array of integers by value.</span></span>  
+-   <span data-ttu-id="1780f-125">傳值方式的整數陣列。</span><span class="sxs-lookup"><span data-stu-id="1780f-125">Array of integers by value.</span></span>  
   
--   <span data-ttu-id="c28e8-126">傳址方式的整數陣列，可調整大小。</span><span class="sxs-lookup"><span data-stu-id="c28e8-126">Array of integers by reference, which can be resized.</span></span>  
+-   <span data-ttu-id="1780f-126">傳址方式的整數陣列，可調整大小。</span><span class="sxs-lookup"><span data-stu-id="1780f-126">Array of integers by reference, which can be resized.</span></span>  
   
--   <span data-ttu-id="c28e8-127">傳值方式的整數多維度陣列 (矩陣)。</span><span class="sxs-lookup"><span data-stu-id="c28e8-127">Multidimensional array (matrix) of integers by value.</span></span>  
+-   <span data-ttu-id="1780f-127">傳值方式的整數多維度陣列 (矩陣)。</span><span class="sxs-lookup"><span data-stu-id="1780f-127">Multidimensional array (matrix) of integers by value.</span></span>  
   
--   <span data-ttu-id="c28e8-128">傳值方式的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="c28e8-128">Array of strings by value.</span></span>  
+-   <span data-ttu-id="1780f-128">傳值方式的字串陣列。</span><span class="sxs-lookup"><span data-stu-id="1780f-128">Array of strings by value.</span></span>  
   
--   <span data-ttu-id="c28e8-129">整數的結構陣列。</span><span class="sxs-lookup"><span data-stu-id="c28e8-129">Array of structures with integers.</span></span>  
+-   <span data-ttu-id="1780f-129">整數的結構陣列。</span><span class="sxs-lookup"><span data-stu-id="1780f-129">Array of structures with integers.</span></span>  
   
--   <span data-ttu-id="c28e8-130">字串的結構陣列。</span><span class="sxs-lookup"><span data-stu-id="c28e8-130">Array of structures with strings.</span></span>  
+-   <span data-ttu-id="1780f-130">字串的結構陣列。</span><span class="sxs-lookup"><span data-stu-id="1780f-130">Array of structures with strings.</span></span>  
   
- <span data-ttu-id="c28e8-131">除非陣列是明確地以傳值方式封送處理，否則預設行為會將陣列封送處理做為 In 參數。</span><span class="sxs-lookup"><span data-stu-id="c28e8-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="c28e8-132">您可以明確套用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性來變更此行為。</span><span class="sxs-lookup"><span data-stu-id="c28e8-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
+ <span data-ttu-id="1780f-131">除非陣列是明確地以傳值方式封送處理，否則預設行為會將陣列封送處理做為 In 參數。</span><span class="sxs-lookup"><span data-stu-id="1780f-131">Unless an array is explicitly marshaled by reference, the default behavior marshals the array as an In parameter.</span></span> <span data-ttu-id="1780f-132">您可以明確套用 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性來變更此行為。</span><span class="sxs-lookup"><span data-stu-id="1780f-132">You can change this behavior by applying the <xref:System.Runtime.InteropServices.InAttribute> and <xref:System.Runtime.InteropServices.OutAttribute> attributes explicitly.</span></span>  
   
- <span data-ttu-id="c28e8-133">陣列範例會使用下列 Unmanaged 函式，和其原始函式宣告：</span><span class="sxs-lookup"><span data-stu-id="c28e8-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
+ <span data-ttu-id="1780f-133">陣列範例會使用下列 Unmanaged 函式，和其原始函式宣告：</span><span class="sxs-lookup"><span data-stu-id="1780f-133">The Arrays sample uses the following unmanaged functions, shown with their original function declaration:</span></span>  
   
--   <span data-ttu-id="c28e8-134">從 PinvokeLib.dll 匯出的**TestArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="c28e8-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="1780f-134">從 PinvokeLib.dll 匯出的**TestArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="1780f-134">**TestArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   <span data-ttu-id="c28e8-135">從 PinvokeLib.dll 匯出的**TestRefArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="c28e8-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="1780f-135">從 PinvokeLib.dll 匯出的**TestRefArrayOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="1780f-135">**TestRefArrayOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   <span data-ttu-id="c28e8-136">從 PinvokeLib.dll 匯出的**TestMatrixOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="c28e8-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="1780f-136">從 PinvokeLib.dll 匯出的**TestMatrixOfInts** 。</span><span class="sxs-lookup"><span data-stu-id="1780f-136">**TestMatrixOfInts** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   <span data-ttu-id="c28e8-137">從 PinvokeLib.dll 匯出的**TestArrayOfStrings** 。</span><span class="sxs-lookup"><span data-stu-id="c28e8-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="1780f-137">從 PinvokeLib.dll 匯出的**TestArrayOfStrings** 。</span><span class="sxs-lookup"><span data-stu-id="1780f-137">**TestArrayOfStrings** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   <span data-ttu-id="c28e8-138">從 PinvokeLib.dll 匯出的**TestArrayOfStructs** 。</span><span class="sxs-lookup"><span data-stu-id="c28e8-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="1780f-138">從 PinvokeLib.dll 匯出的**TestArrayOfStructs** 。</span><span class="sxs-lookup"><span data-stu-id="1780f-138">**TestArrayOfStructs** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   <span data-ttu-id="c28e8-139">從 PinvokeLib.dll 匯出的**TestArrayOfStructs2** 。</span><span class="sxs-lookup"><span data-stu-id="c28e8-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
+-   <span data-ttu-id="1780f-139">從 PinvokeLib.dll 匯出的**TestArrayOfStructs2** 。</span><span class="sxs-lookup"><span data-stu-id="1780f-139">**TestArrayOfStructs2** exported from PinvokeLib.dll.</span></span>  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  
     ```  
   
- <span data-ttu-id="c28e8-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是自訂的 Unmanaged 程式庫，包含先前所列出函式和 2 個結構變數的實作： **MYPOINT** 和 **MYPERSON**。</span><span class="sxs-lookup"><span data-stu-id="c28e8-140">[PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="c28e8-141">這些結構包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="c28e8-141">The structures contain the following elements:</span></span>  
+ <span data-ttu-id="1780f-140">[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的 Unmanaged 程式庫，包含先前所列出函式和 2 個結構變數的實作： **MYPOINT** 和 **MYPERSON**。</span><span class="sxs-lookup"><span data-stu-id="1780f-140">[PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) is a custom unmanaged library that contains implementations for the previously listed functions and two structure variables, **MYPOINT** and **MYPERSON**.</span></span> <span data-ttu-id="1780f-141">這些結構包含下列項目：</span><span class="sxs-lookup"><span data-stu-id="1780f-141">The structures contain the following elements:</span></span>  
   
 ```  
 typedef struct _MYPOINT  
@@ -102,18 +102,18 @@ typedef struct _MYPERSON
 } MYPERSON;  
 ```  
   
- <span data-ttu-id="c28e8-142">在此範例中， `MyPoint` 和 `MyPerson` 結構包含內嵌類型。</span><span class="sxs-lookup"><span data-stu-id="c28e8-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="c28e8-143">已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。</span><span class="sxs-lookup"><span data-stu-id="c28e8-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
+ <span data-ttu-id="1780f-142">在此範例中， `MyPoint` 和 `MyPerson` 結構包含內嵌類型。</span><span class="sxs-lookup"><span data-stu-id="1780f-142">In this sample, the `MyPoint` and `MyPerson` structures contain embedded types.</span></span> <span data-ttu-id="1780f-143">已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。</span><span class="sxs-lookup"><span data-stu-id="1780f-143">The <xref:System.Runtime.InteropServices.StructLayoutAttribute> attribute is set to ensure that the members are arranged in memory sequentially, in the order in which they appear.</span></span>  
   
- <span data-ttu-id="c28e8-144">`LibWrap` 類別包含一組 `App` 類別所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="c28e8-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="c28e8-145">如需傳遞陣列的特定詳細資訊，請參閱下面範例中的註解。</span><span class="sxs-lookup"><span data-stu-id="c28e8-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="c28e8-146">陣列是參考類型，它預設是做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="c28e8-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="c28e8-147">呼叫端若要接收結果， **InAttribute** 和 **OutAttribute** 必須明確地套用至包含陣列的引數。</span><span class="sxs-lookup"><span data-stu-id="c28e8-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
+ <span data-ttu-id="1780f-144">`LibWrap` 類別包含一組 `App` 類別所呼叫的方法。</span><span class="sxs-lookup"><span data-stu-id="1780f-144">The `LibWrap` class contains a set of methods called by the `App` class.</span></span> <span data-ttu-id="1780f-145">如需傳遞陣列的特定詳細資訊，請參閱下面範例中的註解。</span><span class="sxs-lookup"><span data-stu-id="1780f-145">For specific details about passing arrays, see the comments in the following sample.</span></span> <span data-ttu-id="1780f-146">陣列是參考類型，它預設是做為 In 參數傳遞。</span><span class="sxs-lookup"><span data-stu-id="1780f-146">An array, which is a reference type, is passed as an In parameter by default.</span></span> <span data-ttu-id="1780f-147">呼叫端若要接收結果， **InAttribute** 和 **OutAttribute** 必須明確地套用至包含陣列的引數。</span><span class="sxs-lookup"><span data-stu-id="1780f-147">For the caller to receive the results, **InAttribute** and **OutAttribute** must be applied explicitly to the argument containing the array.</span></span>  
   
-### <a name="declaring-prototypes"></a><span data-ttu-id="c28e8-148">宣告原型</span><span class="sxs-lookup"><span data-stu-id="c28e8-148">Declaring Prototypes</span></span>  
+### <a name="declaring-prototypes"></a><span data-ttu-id="1780f-148">宣告原型</span><span class="sxs-lookup"><span data-stu-id="1780f-148">Declaring Prototypes</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#31](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#31)]
  [!code-vb[Conceptual.Interop.Marshaling#31](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#31)]  
   
-### <a name="calling-functions"></a><span data-ttu-id="c28e8-149">呼叫函式</span><span class="sxs-lookup"><span data-stu-id="c28e8-149">Calling Functions</span></span>  
+### <a name="calling-functions"></a><span data-ttu-id="1780f-149">呼叫函式</span><span class="sxs-lookup"><span data-stu-id="1780f-149">Calling Functions</span></span>  
  [!code-csharp[Conceptual.Interop.Marshaling#32](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.interop.marshaling/cs/arrays.cs#32)]
  [!code-vb[Conceptual.Interop.Marshaling#32](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.interop.marshaling/vb/arrays.vb#32)]  
   
-## <a name="see-also"></a><span data-ttu-id="c28e8-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c28e8-150">See also</span></span>
-- [<span data-ttu-id="c28e8-151">平台叫用資料類型</span><span class="sxs-lookup"><span data-stu-id="c28e8-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
-- [<span data-ttu-id="c28e8-152">在 Managed 程式碼中建立原型</span><span class="sxs-lookup"><span data-stu-id="c28e8-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)
+## <a name="see-also"></a><span data-ttu-id="1780f-150">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1780f-150">See also</span></span>
+- [<span data-ttu-id="1780f-151">平台叫用資料類型</span><span class="sxs-lookup"><span data-stu-id="1780f-151">Platform invoke data types</span></span>](marshaling-data-with-platform-invoke.md#platform-invoke-data-types)
+- [<span data-ttu-id="1780f-152">在 Managed 程式碼中建立原型</span><span class="sxs-lookup"><span data-stu-id="1780f-152">Creating Prototypes in Managed Code</span></span>](creating-prototypes-in-managed-code.md)

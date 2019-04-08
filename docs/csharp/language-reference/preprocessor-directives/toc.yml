@@ -16,11 +16,11 @@ items:
     href: preprocessor-undef.md
   - name: '#warning'
     href: preprocessor-warning.md
-  - name: '#個錯誤'
+  - name: '#error'
     href: preprocessor-error.md
   - name: '#line'
     href: preprocessor-line.md
-  - name: '#區域'
+  - name: '#region'
     href: preprocessor-region.md
   - name: '#endregion'
     href: preprocessor-endregion.md

@@ -1,10 +1,18 @@
-### <a name="keytips-behavior-improved-in-wpf"></a><span data-ttu-id="3f311-101">已改進 WPF 中的按鍵提示行為</span><span class="sxs-lookup"><span data-stu-id="3f311-101">Keytips behavior improved in WPF</span></span>
+---
+ms.openlocfilehash: d7cf32eb369e2607ee540d7188cc680b9506c261
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760727"
+---
+### <a name="keytips-behavior-improved-in-wpf"></a><span data-ttu-id="91700-101">已改進 WPF 中的按鍵提示行為</span><span class="sxs-lookup"><span data-stu-id="91700-101">Keytips behavior improved in WPF</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="3f311-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="3f311-102">Details</span></span>|<span data-ttu-id="3f311-103">按鍵提示行為已經過修改，讓 Microsoft Word 與 Windows 檔案總管之間的行為趨於一致。</span><span class="sxs-lookup"><span data-stu-id="3f311-103">Keytips behavior has been modified to bring parity with behavior on Microsoft Word and Windows Explorer.</span></span> <span data-ttu-id="3f311-104">WPF 會藉由查看是否已啟用按鍵提示狀態，或是並非按下 <xref:System.Windows.Input.KeyEventArgs.SystemKey> (特別是 <xref:System.Windows.Input.Key> 或 <xref:System.Windows.Input.Key.F11>) 的情況，正確地處理按鍵提示的按鍵。</span><span class="sxs-lookup"><span data-stu-id="3f311-104">By checking whether keytip state is enabled or not in the case of a <xref:System.Windows.Input.KeyEventArgs.SystemKey> (in particular, <xref:System.Windows.Input.Key> or <xref:System.Windows.Input.Key.F11>) being pressed, WPF handles keytip keys appropriately.</span></span> <span data-ttu-id="3f311-105">現在即使滑鼠已開啟了按鍵提示，其仍會關閉功能表。</span><span class="sxs-lookup"><span data-stu-id="3f311-105">Keytips now dismiss a menu even when it is opened by mouse.</span></span>|
-|<span data-ttu-id="3f311-106">建議</span><span class="sxs-lookup"><span data-stu-id="3f311-106">Suggestion</span></span>|<span data-ttu-id="3f311-107">N/A</span><span class="sxs-lookup"><span data-stu-id="3f311-107">N/A</span></span>|
-|<span data-ttu-id="3f311-108">範圍</span><span class="sxs-lookup"><span data-stu-id="3f311-108">Scope</span></span>|<span data-ttu-id="3f311-109">Edge</span><span class="sxs-lookup"><span data-stu-id="3f311-109">Edge</span></span>|
-|<span data-ttu-id="3f311-110">版本</span><span class="sxs-lookup"><span data-stu-id="3f311-110">Version</span></span>|<span data-ttu-id="3f311-111">4.7.2</span><span class="sxs-lookup"><span data-stu-id="3f311-111">4.7.2</span></span>|
-|<span data-ttu-id="3f311-112">類型</span><span class="sxs-lookup"><span data-stu-id="3f311-112">Type</span></span>|<span data-ttu-id="3f311-113">執行階段</span><span class="sxs-lookup"><span data-stu-id="3f311-113">Runtime</span></span>|
+|<span data-ttu-id="91700-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="91700-102">Details</span></span>|<span data-ttu-id="91700-103">按鍵提示行為已經過修改，讓 Microsoft Word 與 Windows 檔案總管之間的行為趨於一致。</span><span class="sxs-lookup"><span data-stu-id="91700-103">Keytips behavior has been modified to bring parity with behavior on Microsoft Word and Windows Explorer.</span></span> <span data-ttu-id="91700-104">WPF 會藉由查看是否已啟用按鍵提示狀態，或是並非按下 <xref:System.Windows.Input.KeyEventArgs.SystemKey> (特別是 <xref:System.Windows.Input.Key> 或 <xref:System.Windows.Input.Key.F11>) 的情況，正確地處理按鍵提示的按鍵。</span><span class="sxs-lookup"><span data-stu-id="91700-104">By checking whether keytip state is enabled or not in the case of a <xref:System.Windows.Input.KeyEventArgs.SystemKey> (in particular, <xref:System.Windows.Input.Key> or <xref:System.Windows.Input.Key.F11>) being pressed, WPF handles keytip keys appropriately.</span></span> <span data-ttu-id="91700-105">現在即使滑鼠已開啟了按鍵提示，其仍會關閉功能表。</span><span class="sxs-lookup"><span data-stu-id="91700-105">Keytips now dismiss a menu even when it is opened by mouse.</span></span>|
+|<span data-ttu-id="91700-106">建議</span><span class="sxs-lookup"><span data-stu-id="91700-106">Suggestion</span></span>|<span data-ttu-id="91700-107">N/A</span><span class="sxs-lookup"><span data-stu-id="91700-107">N/A</span></span>|
+|<span data-ttu-id="91700-108">範圍</span><span class="sxs-lookup"><span data-stu-id="91700-108">Scope</span></span>|<span data-ttu-id="91700-109">Edge</span><span class="sxs-lookup"><span data-stu-id="91700-109">Edge</span></span>|
+|<span data-ttu-id="91700-110">版本</span><span class="sxs-lookup"><span data-stu-id="91700-110">Version</span></span>|<span data-ttu-id="91700-111">4.7.2</span><span class="sxs-lookup"><span data-stu-id="91700-111">4.7.2</span></span>|
+|<span data-ttu-id="91700-112">類型</span><span class="sxs-lookup"><span data-stu-id="91700-112">Type</span></span>|<span data-ttu-id="91700-113">執行階段</span><span class="sxs-lookup"><span data-stu-id="91700-113">Runtime</span></span>|
 
