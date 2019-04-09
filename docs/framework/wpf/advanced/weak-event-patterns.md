@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 039d25fb14ed2d29f21168267611d4f0d7f2d04f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367605"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139252"
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
 在應用程式，它可能會附加到事件來源的處理常式不會終結協調的方式處理常式附加至來源接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 導入了可用來解決這個問題，提供的專用的管理員類別的特定事件，並針對該事件的接聽程式上實作介面的設計模式。 這種設計模式就所謂*弱式事件模式*。  
@@ -131,6 +131,7 @@ ms.locfileid: "57367605"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.WeakEventManager>
 - <xref:System.Windows.IWeakEventListener>
 - [路由事件概觀](routed-events-overview.md)

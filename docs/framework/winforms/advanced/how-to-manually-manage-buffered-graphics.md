@@ -8,12 +8,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing by manually managing graphics
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
-ms.openlocfilehash: 013118ea15184ee4dfbbcd5dcaff054a2cf6a9ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138667"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>HOW TO：手動管理已緩衝的圖形
 您可以使用更進階雙重緩衝案例[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]類別以實作您自己的雙重緩衝邏輯。 負責配置和管理個別圖形緩衝區的類別是<xref:System.Drawing.BufferedGraphicsContext>類別。 每個應用程式有自己的預設值<xref:System.Drawing.BufferedGraphicsContext>可管理的所有預設雙重緩衝該應用程式。 您可以擷取此執行個體的參考，藉由呼叫<xref:System.Drawing.BufferedGraphicsManager.Current%2A>。  
@@ -38,6 +38,7 @@ ms.locfileid: "57702928"
      [!code-vb[System.Windows.Forms.LegacyBufferedGraphics#12](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.LegacyBufferedGraphics/VB/Class1.vb#12)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [雙重緩衝的圖形](double-buffered-graphics.md)
-- [如何：手動轉譯已緩衝的圖形](how-to-manually-render-buffered-graphics.md)
+- [HOW TO：手動呈現已緩衝的圖形](how-to-manually-render-buffered-graphics.md)
