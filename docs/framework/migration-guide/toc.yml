@@ -17,8 +17,8 @@ items:
     - name: 作法：判斷安裝的 .NET Framework 版本
       href: how-to-determine-which-versions-are-installed.md
       items:
-      - name: .NET Framework 版本金鑰及 Windows 作業系統版本
-        href: release-keys-and-os-versions.md
+      - name: .NET Framework 版本的最低 Release DWORD 值
+        href: minimum-release-dword.md
     - name: 作法：判斷安裝的 .NET Framework 更新
       href: how-to-determine-which-net-framework-updates-are-installed.md
   - name: 作法：設定應用程式以支援 .NET Framework 4 或更新版本
@@ -27,9 +27,9 @@ items:
     href: migrating-from-the-net-framework-1-1.md
   - name: .NET Framework 4 移轉問題
     href: net-framework-4-migration-issues.md
-ms.openlocfilehash: c46b7ac4680e6aa988e39055cb51c80a4bb0e8b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: ad5a32ddb015693e5c146e5e3dfea3979013e18e
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468383"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59054932"
