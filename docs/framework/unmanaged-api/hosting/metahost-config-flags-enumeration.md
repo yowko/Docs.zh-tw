@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 961db92c9ca9c713c38469a018ce8cde1fdefdc5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e322f5c7119d13c8a872bd87d00c1e55324b581
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135768"
 ---
 # <a name="metahostconfigflags-enumeration"></a>METAHOST_CONFIG_FLAGS 列舉
 描述可能的旗標傳入`pdwConfigFlags`的參數[iclrmetahostpolicy:: Getrequestedruntime](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)方法，指出是否存在，並設定`useLegacyV2RuntimeActivationPolicy`屬性中[ \<啟動 > 項目](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)組態檔。  
@@ -53,11 +53,12 @@ typedef enum {
   
  **標頭：** Metahost.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)
 - [GetRequestedRuntime 方法](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-getrequestedruntime-method.md)
-- [\<startup> 項目](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)
+- [\<啟動 > 項目](../../../../docs/framework/configure-apps/file-schema/startup/startup-element.md)

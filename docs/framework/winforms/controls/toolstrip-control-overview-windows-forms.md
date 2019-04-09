@@ -9,12 +9,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms]
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
-ms.openlocfilehash: c701ed6ff155ca507f827874a955b2361a3b2359
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719373"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144569"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯的類別提供通用的架構結合工具列、 狀態列和功能表的使用者介面項目。 <xref:System.Windows.Forms.ToolStrip> 控制項都能提供豐富的設計階段體驗，包括就地啟用和編輯、 自訂的版面配置和浮動定位，這是能夠的工具列共用水平或垂直空間。  
@@ -80,6 +80,7 @@ Windows Form<xref:System.Windows.Forms.ToolStrip>控制項以及與其相關聯�
  如需詳細資訊，請參閱 < [ToolStrip 技術摘要](toolstrip-technology-summary.md)並[ToolStrip 控制項架構](toolstrip-control-architecture.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3aeae294d92a6dc9effc7f3baa51a35e4f2b544
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5db87cd4ad965654b63a68828cd088b8d2f7d07c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113044"
 ---
 # <a name="icordebugcodeenumnext-method"></a>ICorDebugCodeEnum::Next 方法
 取得指定的數目 」 ICorDebugCode 」 執行個體從列舉型別，從目前位置開始。  
@@ -51,12 +51,10 @@ HRESULT Next (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
-
-

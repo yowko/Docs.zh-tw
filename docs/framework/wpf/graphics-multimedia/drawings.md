@@ -13,21 +13,22 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 6ab1fe6b-3eed-4432-a248-b487e7234e5b
-ms.openlocfilehash: 32efbd44579622fddba95d162261633a1af6d277
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 975fafebe255d5ff4848fde2c0b0ff08b68d4f7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206404"
 ---
 # <a name="drawings"></a>繪圖
 <xref:System.Windows.Media.Drawing> 物件用來有效率地繪製圖形、 影像或文字。 使用繪製時，會使用繪圖<xref:System.Windows.Media.DrawingBrush>或程式設計與<xref:System.Windows.Media.Visual>物件。  
   
 ## <a name="in-this-section"></a>本節內容  
  [繪圖物件概觀](drawing-objects-overview.md)  
-  [HOW-TO 主題](drawings-how-to-topics.md)  
+  [HOW TO 主題](drawings-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Drawing>
 - [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)

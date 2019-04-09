@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56d4255b06f1317c87685737e4ee4021c37a77f5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03ce77dd7407db8289abfefba13d71a9af053e10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142047"
 ---
 # <a name="cordebugiltonativemap-structure"></a>COR_DEBUG_IL_TO_NATIVE_MAP 結構
 包含用來將 Microsoft 中繼語言 (MSIL) 程式碼對應至機器碼的位移。  
@@ -49,11 +49,12 @@ typedef struct COR_DEBUG_IL_TO_NATIVE_MAP {
   
  **標頭：** CorProf.idl CorDebug.idl  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)
 - [GetILToNativeMapping 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode-getiltonativemapping-method.md)
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5cb7a3100e1f0839b50e0430c16a02879f1b8988
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a50a799c625c647aa275994bc92738b8a4267eec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553473"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135573"
 ---
 # <a name="icordebugremote-interface"></a>ICorDebugRemote 介面
 提供啟動或附加 Managed 偵錯工具至遠端目標處理序的功能。  
@@ -71,13 +71,14 @@ interface ICorDebugRemote : IUnknown
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
  **.NET framework 版本：** 4.5，4，3.5 SP1  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

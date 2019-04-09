@@ -2,12 +2,12 @@
 title: 效能考量
 ms.date: 03/30/2017
 ms.assetid: 83082d4a-7350-4b04-ab2d-1fa5ffd643f5
-ms.openlocfilehash: 9b6f58f9db4d21fb62161eae3fc3fbb18460e6ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46e5b5c392ff3a0d401bb709b21637b3d2e784ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139733"
 ---
 # <a name="performance-considerations"></a>效能考量
 建置應用程式時，效能是很重要的考量。 本章節包含與效能和安全性相關的項目。  
@@ -20,5 +20,6 @@ ms.locfileid: "54717125"
  說明為何加密數位簽章會對效能帶來負面影響，以及如何停用此功能。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性的最佳做法](../../../../docs/framework/wcf/feature-details/best-practices-for-security-in-wcf.md)
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)

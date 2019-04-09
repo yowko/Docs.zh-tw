@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：壓縮編碼器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: a7dd172920e88e5da51fbb9965409d1d5a03accf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825285"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140682"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
 此範例示範如何實作自訂編碼器，使用 Windows Communication Foundation (WCF) 平台。  
@@ -354,4 +354,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageEncoder\Compression`  
-  

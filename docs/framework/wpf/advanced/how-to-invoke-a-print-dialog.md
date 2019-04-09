@@ -1,5 +1,5 @@
 ---
-title: HOW TO：叫用列印對話方塊
+title: HOW TO：叫用 [列印] 對話方塊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - invoking print dialogs [WPF]
 - print dialogs [WPF], invoking
 ms.assetid: e3a2c84c-74fe-45a4-8501-5813f9dbfed2
-ms.openlocfilehash: 038e259810111d2d648c72a9f43afabe11a07f29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2ced508eb83e2955fdcd1ad87fb6415e2052446f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206040"
 ---
-# <a name="how-to-invoke-a-print-dialog"></a>HOW TO：叫用列印對話方塊
+# <a name="how-to-invoke-a-print-dialog"></a>HOW TO：叫用 [列印] 對話方塊
 若要讓您能夠從您的應用程式列印，可以只建立並開啟<xref:System.Windows.Controls.PrintDialog>物件。  
   
 ## <a name="example"></a>範例  
@@ -32,6 +32,7 @@ ms.locfileid: "57358427"
  嚴格來說，您可以使用<xref:System.Windows.Controls.PrintDialog.PrintDocument%2A>方法，而不需要不斷開啟對話方塊。 這點而言，此控制項可用來當做看不見的列印元件。 但基於效能考量，它會使用其中一個<xref:System.Printing.PrintQueue.AddJob%2A>方法，或任何一種<xref:System.Windows.Xps.XpsDocumentWriter.Write%2A>並<xref:System.Windows.Xps.XpsDocumentWriter.WriteAsync%2A>方法<xref:System.Windows.Xps.XpsDocumentWriter>。 如需詳細資訊，請參閱 <<c0> [ 以程式設計方式列印 XPS 檔](how-to-programmatically-print-xps-files.md)和。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.PrintDialog>
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)

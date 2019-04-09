@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Forms 控制項繫結至 DBNull 資料庫值
+title: HOW TO：將 Windows Forms 控制項繫結至 DBNull 資料庫值
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], BindingSource component
 - controls [Windows Forms], binding to DBNull values
 ms.assetid: 96494e6f-5f40-4f83-af97-bbd7192c2af8
-ms.openlocfilehash: 0c0768b922133fa0be1c8a56b4481048d1e200ba
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cc3dde0db3dad6faff548951ff06a39d23248d53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713783"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137757"
 ---
-# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>HOW TO：Windows Forms 控制項繫結至 DBNull 資料庫值
+# <a name="how-to-bind-windows-forms-controls-to-dbnull-database-values"></a>HOW TO：將 Windows Forms 控制項繫結至 DBNull 資料庫值
 當您將 Windows Form 控制項繫結至資料來源，且資料來源傳回 <xref:System.DBNull> 值時，您可以替代為適當值，而不需處理、格式化或剖析事件。 在格式化或剖析資料來源值的時候，<xref:System.Windows.Forms.Binding.NullValue%2A> 屬性會轉換 <xref:System.DBNull> 為指定的物件。  
   
 ## <a name="example"></a>範例  
@@ -35,6 +35,7 @@ ms.locfileid: "57713783"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [BindingSource 元件](bindingsource-component.md)
-- [如何：處理錯誤和資料繫結時所發生例外狀況](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
-- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [HOW TO：處理資料繫結發生的錯誤和例外狀況](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [HOW TO：將 Windows Forms 控制項繫結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)

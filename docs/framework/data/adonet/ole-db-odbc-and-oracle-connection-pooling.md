@@ -2,18 +2,18 @@
 title: OLE DB、ODBC 和 Oracle 連接共用
 ms.date: 03/30/2017
 ms.assetid: 2bd83b1e-3ea9-43c4-bade-d9cdb9bbbb04
-ms.openlocfilehash: bc07d4d33f2a568ef0fb4dd9806832222a13ca6a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c17863facd962583e0da03e810c9a8150cda0a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208887"
 ---
 # <a name="ole-db-odbc-and-oracle-connection-pooling"></a>OLE DB、ODBC 和 Oracle 連接共用
 共用連接可顯著提高應用程式的效能及延展性。 本節說明 OLE DB、ODBC 和 Oracle 的 .NET Framework 資料提供者的連接共用 (Connection Pooling)。  
   
 ## <a name="connection-pooling-for-oledb"></a>OleDb 的連接共用  
- OLE DB 的 .NET Framework 資料提供者會自動使用 OLE DB 工作階段共用來共用連接。 連接字串引數可用於啟用或停用 OLE DB 服務 (包括共用)。 例如，下列連接字串會停用 OLE DB 工作階段共用及自動交易登記。  
+ OLE DB 的 .NET Framework 資料提供者會自動使用 OLE DB 工作階段共用來共用連接。 連接字串引數可用於啟用或停用 OLE DB 服務 (包括共用)。 例如，下列連接字串會停用 OLE DB 工作階段共用及自動異動登記。  
   
 ```  
 Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=SSPI;  
@@ -39,7 +39,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ### <a name="connection-addition"></a>加入連接  
  針對每個唯一連接字串可建立連接集區。 建立集區時，會建立多個連接物件並加入集區，以滿足最小集區大小需求。 視需要將連接加入集區，不超過最大集區大小。  
   
- 當要求 <xref:System.Data.OracleClient.OracleConnection> 物件時，若有可用的連接，則會從集區取得該物件。 若要可用，連接目前必須為未使用，並具有相符的交易內容，或未與任何交易內容關聯，同時具有到伺服器的有效連結。  
+ 當要求 <xref:System.Data.OracleClient.OracleConnection> 物件時，若有可用的連接，則會從集區取得該物件。 若要可用，連接目前必須為未使用，並具有相符的異動內容，或未與任何異動內容關聯，同時具有到伺服器的有效連結。  
   
  如果已達到最大集區大小，但仍沒有可用的連接，則會將要求排入佇列。 連接共用器會在連接釋放回集區後，重新配置連接以滿足這些要求。 連接關閉或處置時，會被釋放回集區。  
   
@@ -53,7 +53,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 ### <a name="transaction-support"></a>異動支援  
  從集區中描繪連接，並根據交易內容進行指派。 要求執行緒的內容必須與指派的連接相符。 因此，每個連接集區實際細分為連線相關聯，並分為沒有交易內容*N*個子區塊，每個包含具有特定交易內容之連接。  
   
- 連接關閉時，會根據其異動內容將其釋放回集區，並置於適當的子區塊中。 因此，即使分散式交易仍處於暫止狀態，您仍可以關閉連接，而不會產生錯誤。 這可讓您稍後認可或中止分散式交易。  
+ 連接關閉時，會根據其交易內容將其釋放回集區，並置於適當的子區塊中。 因此，即使分散式交易仍處於暫止狀態，您仍可以關閉連接，而不會產生錯誤。 這可讓您稍後認可或中止分散式異動。  
   
 ### <a name="controlling-connection-pooling-with-connection-string-keywords"></a>使用連接字串關鍵字控制連接共用  
  <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A> 物件的 <xref:System.Data.OracleClient.OracleConnection> 屬性支援連接字串索引鍵/值配對，這些配對可用於調整連接共用邏輯的行為。  
@@ -69,6 +69,7 @@ Provider=SQLOLEDB;OLE DB Services=-4;Data Source=localhost;Integrated Security=S
 |`Pooling`|'true'|為 `true` 時，會從適當的集區描繪連接，或視需要在適當的集區中建立及加入連接。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

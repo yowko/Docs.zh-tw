@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c1723facca3c547c275ee44f0abefe21a177eb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac0f5d522a24394369583692f8c564254529bf13
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137342"
 ---
 # <a name="stackoverflowinfo-structure"></a>StackOverflowInfo 結構
 因為溢位而擲回的例外狀況，會儲存發生溢位和資訊的類型。  
@@ -50,9 +50,10 @@ typedef struct _StackOverflowInfo {
   
  **標頭：** MSCorEE.idl  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

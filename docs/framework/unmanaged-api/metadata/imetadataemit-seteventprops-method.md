@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1159e91004152b6c1393b87f25ff7964456adffc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: abfa8a3f58d3e9f7c80762c1faf2bc51514d71b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113811"
 ---
 # <a name="imetadataemitseteventprops-method"></a>IMetaDataEmit::SetEventProps 方法
 設定或更新指定的功能的先前呼叫所定義的事件[imetadataemit:: Defineevent](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineevent-method.md)。  
@@ -68,10 +68,11 @@ HRESULT SetEventProps (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

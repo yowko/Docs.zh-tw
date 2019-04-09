@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用設計工具的 Windows Forms DataGridView 資料行的類型變更
+title: HOW TO：使用設計工具變更 Windows Forms DataGridView 資料行的類型
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms, columns
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], changing column type
 - data [Windows Forms], displaying
 ms.assetid: 7f994d45-600d-4190-a187-35803214b40c
-ms.openlocfilehash: 99728e473223f3393cc9d09f38728cf873a95c99
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f42bfe9b407e8f81c0eaf5a654d246f7b83567c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718814"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208549"
 ---
-# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>HOW TO：使用設計工具的 Windows Forms DataGridView 資料行的類型變更
+# <a name="how-to-change-the-type-of-a-windows-forms-datagridview-column-using-the-designer"></a>HOW TO：使用設計工具變更 Windows Forms DataGridView 資料行的類型
 有時候您會想要變更已新增至 Windows Forms 資料行的類型<xref:System.Windows.Forms.DataGridView>控制項。 比方說，您可能想要修改的某些資料行時將控制項繫結至資料來源自動產生的類型。 當您顯示的資料表有包含相關資料表中的資料列的外部索引鍵資料行時，這非常有用。 在此情況下，您可能要取代的文字 方塊中資料行顯示下拉式方塊資料行顯示更有意義的值，從相關資料表中的這些外部索引鍵。  
   
  下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGridView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。  
@@ -34,7 +34,8 @@ ms.locfileid: "57718814"
     >  `ColumnType`屬性是只有設計階段屬性，指出代表資料行類型的類別。 它不是資料行類別中定義的實際屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn>
-- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

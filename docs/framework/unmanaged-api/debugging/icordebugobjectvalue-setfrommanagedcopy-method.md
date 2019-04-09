@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04eff6ba8b284a26b9b3ee55c7f323aef52f1208
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0e7684804b5f3cb71c38ee498fcc9c80003e7169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203765"
 ---
 # <a name="icordebugobjectvaluesetfrommanagedcopy-method"></a>ICorDebugObjectValue::SetFromManagedCopy 方法
-`SetFromManagedCopy` 已經過時。 請勿呼叫這個方法。  
+`SetFromManagedCopy` 已過時。 請勿呼叫這個方法。  
   
 ## <a name="syntax"></a>語法  
   
@@ -36,8 +36,6 @@ HRESULT SetFromManagedCopy (
 ```  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
 ## <a name="see-also"></a>另請參閱
-
-

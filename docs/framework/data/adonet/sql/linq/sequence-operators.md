@@ -2,12 +2,12 @@
 title: 序列運算子
 ms.date: 03/30/2017
 ms.assetid: 4d332d32-3806-4451-b7af-25af269194ae
-ms.openlocfilehash: b4a6e01eeb70015899cbbbfe8ecd748bd9936b2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62cb654922af9df65b0ec9abb67bdc33fda09339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666159"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113681"
 ---
 # <a name="sequence-operators"></a>序列運算子
 一般而言，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援具有下列一項或多項特質的序列運算子：  
@@ -43,7 +43,8 @@ ms.locfileid: "54666159"
 |<xref:System.Linq.Enumerable.SequenceEqual%2A?displayProperty=nameWithType>|  
   
 ## <a name="differences-from-net"></a>與 .NET 的差異  
- 除了 `Average` 以外，所有支援的序列運算子在 Common Language Runtime (CLR) 中都會如預期運作。 `Average` 會傳回與進行平均之型別相同型別的值，然而在 CLR 中 `Average` 則一律會傳回 <xref:System.Double> 或 <xref:System.Decimal>。 如果來源引數已明確地轉型為 double / decimal 或選取器轉型為 double / decimal，則結果產生的 SQL 也會有此種轉換，而且結果會如預期。  
+ 除了 `Average` 以外，所有支援的序列運算子在 Common Language Runtime (CLR) 中都會如預期運作。 `Average` 傳回值的平均，型別相同的型別，而在 CLR`Average`一律會傳回<xref:System.Double>或<xref:System.Decimal>。 如果來源引數已明確地轉型為 double / decimal 或選取器轉型為 double / decimal，則結果產生的 SQL 也會有此種轉換，而且結果會如預期。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
+- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

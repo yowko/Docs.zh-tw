@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Image 項目
+title: HOW TO：使用 Image 元素
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Image control [WPF]
 - rendering images [WPF]
 ms.assetid: 5b92e74b-1b56-4756-ac64-d5e9e08d9854
-ms.openlocfilehash: ec3ca16915038ebbb68df24bfd071168c346663d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 967159894e25721bdf380f851712e91d76088f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205299"
 ---
-# <a name="how-to-use-the-image-element"></a>HOW TO：使用 Image 項目
+# <a name="how-to-use-the-image-element"></a>HOW TO：使用 Image 元素
 此範例示範如何使用應用程式中包含映像<xref:System.Windows.Controls.Image>項目。  
   
 ## <a name="example"></a>範例  
@@ -42,4 +42,5 @@ ms.locfileid: "57372460"
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [影像處理概觀](../graphics-multimedia/imaging-overview.md)

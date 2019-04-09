@@ -1,5 +1,5 @@
 ---
-title: HOW TO：置放 Grid 的子項目
+title: HOW TO：置放 Grid 的子元素
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
-ms.openlocfilehash: 90115bc6192a33f4c27eaa75ebfe6a7c9d1458e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c508f45c1ea3d0925503d6fe5600498a0558d5ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369171"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202985"
 ---
-# <a name="how-to-position-the-child-elements-of-a-grid"></a>HOW TO：置放 Grid 的子項目
+# <a name="how-to-position-the-child-elements-of-a-grid"></a>HOW TO：置放 Grid 的子元素
 此範例示範如何使用 get 和 set 方法上定義之<xref:System.Windows.Controls.Grid>来放置子項目。  
   
 ## <a name="example"></a>範例  
@@ -31,5 +31,6 @@ ms.locfileid: "57369171"
  ![螢幕擷取畫面說明兩個資料行的 WPF 使用者介面，右邊有 3x3 的方格，左邊有之間的資料行和方格資料列移動的彩色的矩形的按鈕](././media/grid-methods-sample.png) 
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Grid>
 - [面板概觀](panels-overview.md)

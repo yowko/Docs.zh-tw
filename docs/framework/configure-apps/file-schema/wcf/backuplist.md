@@ -2,12 +2,12 @@
 title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
-ms.openlocfilehash: 1e2b3eacbc845ad40030f3a48be2ef93c4ddbd8c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262422"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135729"
 ---
 # <a name="backuplist"></a>\<backupList>
 代表定義備份清單會列舉一組您希望路由服務在無法找到主要端點時使用的端點組態區段。 如果清單中的第一個端點關閉，路由服務將自動容錯移轉至清單中的下一個端點。  如此可提供您快速提升應用程式可靠性的方式，而不需教導用戶端應用程式如何處理複雜的模式以及部署所有服務的位置。  
@@ -36,7 +36,7 @@ ms.locfileid: "55262422"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|字串，指定用於識別這個端點清單的名稱。|  
+|名稱|字串，指定用於識別這個端點清單的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -48,7 +48,7 @@ ms.locfileid: "55262422"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|備份端點的清單。|  
+|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|備份端點的清單。|  
   
 ## <a name="remarks"></a>備註  
  這個區段包含依順序排列的端點集合，訊息會在傳送至主要端點期間發生通訊例外狀況事件時，傳輸至這些端點。  
@@ -74,4 +74,5 @@ ms.locfileid: "55262422"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Routing.Configuration.BackupEndpointCollection?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: <workflowRuntime>
 ms.date: 03/30/2017
 ms.assetid: 304c70fa-78d1-4d0f-b89f-0ca23d734c6f
-ms.openlocfilehash: 7c99f932bf086806861b5eec3392d8a0acd7f2fc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: db5e1083c07d4e204eb19eaae9257ed44439132e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206560"
 ---
 # <a name="workflowruntime"></a>\<workflowRuntime>
 指定的執行個體設定<xref:System.Workflow.Runtime.WorkflowRuntime>用於裝載工作流程為基礎的 Windows Communication Foundation (WCF) 服務。  
@@ -43,8 +43,8 @@ ms.locfileid: "55254865"
 |屬性|描述|  
 |---------------|-----------------|  
 |cachedInstanceExpiration|選擇性 <xref:System.TimeSpan> 值，指定工作流程執行個體在遭到強制卸載或中止之前，能以閒置狀態存留在記憶體中的最長期間。 如果工作流程執行階段具有會執行 unloadOnIdle 的 `PersistenceService`，則會忽略此屬性。|  
-|enablePerformanceCounters|選擇性布林值，指定是否啟用效能計數器。 效能計數器會提供各種工作流程的相關統計資料，但是當工作流程執行階段引擎啟動和工作流程執行個體正在執行時，會對效能帶來負面影響。 預設值是 `true`。|  
-|name|字串，包含工作流程執行階段引擎的名稱。 名稱用於輸出以識別此執行階段及可能在系統執行的其他執行階段，例如在效能計數器中。<br /><br /> 預設為空字串。|  
+|enablePerformanceCounters|選擇性布林值，指定是否啟用效能計數器。 效能計數器會提供各種工作流程的相關統計資料，但是當工作流程執行階段引擎啟動和工作流程執行個體正在執行時，會對效能帶來負面影響。 預設值為 `true`。|  
+|名稱|字串，包含工作流程執行階段引擎的名稱。 名稱用於輸出以識別此執行階段及可能在系統執行的其他執行階段，例如在效能計數器中。<br /><br /> 預設為空字串。|  
 |validateOnCreate|選擇性布林值，指定當 WorkflowServiceHost 開啟時，是否會發生工作流程定義驗證。  當此屬性設定為 `true` 時，每次呼叫 `WorkflowServiceHost.Open` 都會執行一次工作流程驗證。 如果發現驗證錯誤，則會擲回 <xref:System.Workflow.ComponentModel.Compiler.WorkflowValidationFailedException> 錯誤。<br /><br /> 當此屬性設定為 `false` 時，將不會執行工作流程定義驗證。<br /><br /> 這個屬性的預設值為 `true`。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -84,6 +84,7 @@ ms.locfileid: "55254865"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.WorkflowRuntimeElement>
 - <xref:System.Workflow.Runtime.Configuration.WorkflowRuntimeServiceElement>
 - <xref:System.Workflow.Runtime.WorkflowRuntime>
