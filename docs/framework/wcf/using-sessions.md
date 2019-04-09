@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 6ef3ff671175182bdd3b1eab2b17ec0298ff15e1
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442720"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095863"
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 Windows Communication Foundation (WCF) 應用程式*工作階段*與一組訊息相互關聯至對話。 WCF 工作階段的不同中可用的工作階段物件[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式支援不同的行為，以及控制的方式。 本主題描述在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。  
@@ -32,11 +32,11 @@ ms.locfileid: "56442720"
   
  如果您熟悉<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>類別中[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式和功能提供，您可能會注意到這種種類的工作階段和 WCF 工作階段的下列差異：  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段一律由伺服器啟動。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段會一律伺服器起始。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段具有隱含未排序特性。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段是以隱含方式排序。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段提供了跨要求的一般資料儲存機制。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 工作階段要求之間，提供一般的資料儲存機制。  
   
  本主題內容：  
   
@@ -108,14 +108,14 @@ ms.locfileid: "56442720"
 > [!NOTE]
 >  雖然預設行為與本機建構函式和解構函式有相似之處，但也只是相似而已。 初始化或終止作業，或同時在相同的時間，可以是任何 WCF 服務作業。 此外，在預設案例中，您可以不按次序且不限次數地呼叫啟始作業。一旦建立工作階段並使其與執行個體產生關聯，就不能再建立其他工作階段，除非您明確地控制服務執行個體的存留期 (管理 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> 物件)。 最後，狀態會與工作階段而非服務物件相關聯。  
   
- 例如，`ICalculatorSession`在上述範例中使用的合約需要 WCF 用戶端物件第一次呼叫`Clear`此 WCF 用戶端物件的工作階段的作業之前的任何其他作業，應該終止時它會呼叫`Equals`作業。 下列程式碼範例示範強制執行這些要求的合約。 必須先呼叫`Clear` ，才能起始工作階段，而該工作階段會在呼叫 `Equals` 時結束。  
+ 例如，`ICalculatorSession`在上述範例中使用的合約需要 WCF 用戶端物件第一次呼叫`Clear`此 WCF 用戶端物件的工作階段的作業之前的任何其他作業，應該終止時它會呼叫`Equals`作業。 下列程式碼範例示範強制執行這些要求的合約。 `Clear` 必須先呼叫以初始化工作階段，且工作階段結束時`Equals`呼叫。  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  服務不會啟動用戶端的工作階段。 在 WCF 用戶端應用程式，工作階段架構通道的存留期和工作階段本身的存留期之間存在直接的關聯性。 因此，用戶端會藉由建立新的工作階段架構通道來建立新工作階段，然後適當地關閉工作階段架構通道來終止現有的工作階段。 用戶端會呼叫下列其中一項，藉此啟動服務端點的工作階段：  
   
--   通道上藉由呼叫<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 呼叫所傳回的通道上<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> 所產生 WCF 用戶端物件上[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "56442720"
   
  一般來說，用戶端會呼叫下列其中一項，藉此結束服務端點的工作階段：  
   
--   通道上藉由呼叫<xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 所傳回的 <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 呼叫所傳回的通道上<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> 在 Svcutil.exe 所產生的 WCF 用戶端物件。  
   
@@ -146,5 +146,6 @@ ms.locfileid: "56442720"
 >  此時 MaxConcurrentSessions 沒有作用，因為只有一個可用的「工作階段」。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A>

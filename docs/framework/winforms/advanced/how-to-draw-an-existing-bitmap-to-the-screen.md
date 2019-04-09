@@ -9,12 +9,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], loading in Windows Forms applications
 - images [Windows Forms], displaying on Windows Forms
 ms.assetid: 5bc558d7-b326-4050-a834-b8600da0de95
-ms.openlocfilehash: d2e06aa382bc2b01a4308f99735ca533e7a9a3ea
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 90511adf9caffe7952e270d6fe32dd85162a29d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653817"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089162"
 ---
 # <a name="how-to-draw-an-existing-bitmap-to-the-screen"></a>HOW TO：將現有點陣圖描繪至螢幕
 您可以輕鬆地繪製現有的映像，在螢幕上。 您必須先建立<xref:System.Drawing.Bitmap>物件使用點陣圖建構函式接受檔案名稱， <xref:System.Drawing.Bitmap.%23ctor%28System.String%29>。 這個建構函式會接受映像，包含數個不同的檔案格式，包括 BMP、 GIF、 JPEG、 PNG 和 TIFF。 建立之後<xref:System.Drawing.Bitmap>物件，傳遞<xref:System.Drawing.Bitmap>物件<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>物件。  
@@ -33,5 +33,6 @@ ms.locfileid: "58653817"
  上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [使用影像、點陣圖、圖示和中繼檔](working-with-images-bitmaps-icons-and-metafiles.md)

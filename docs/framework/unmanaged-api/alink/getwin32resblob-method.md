@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 295b150f6881a47b3816a93ac7a20382bc5c20c0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a4c77ade46d2401e2499a94504808efd94f79f93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152148"
 ---
 # <a name="getwin32resblob-method"></a>GetWin32ResBlob 方法
 擷取 Win32 資源的 blob。 設定組件選項之後呼叫這個方法。  
@@ -65,6 +65,7 @@ HRESULT GetWin32ResBlob(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

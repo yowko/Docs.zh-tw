@@ -9,12 +9,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 398ba4961f9f803ea12e4ddda16fee65ac99d1d8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089356"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>HOW TO：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  
@@ -103,5 +103,6 @@ ms.locfileid: "57723279"
  [!code-vb[System.Windows.Forms.FirstControl#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/SimpleForm.vb#10)]  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項中的屬性](properties-in-windows-forms-controls.md)
-- [Windows Forms 控制項中的事件](events-in-windows-forms-controls.md)
+
+- [Windows Form 控制項中的屬性](properties-in-windows-forms-controls.md)
+- [Windows Form 控制項中的事件](events-in-windows-forms-controls.md)

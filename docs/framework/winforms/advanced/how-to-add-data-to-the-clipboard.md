@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將資料加入至剪貼簿
+title: HOW TO：將資料新增至剪貼簿
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 1f04203cd5c006f778d09ddc3fef3cfa1be4666e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 896f5bd503c53041e2fed1401fd4455049e62449
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109092"
 ---
-# <a name="how-to-add-data-to-the-clipboard"></a>HOW TO：將資料加入至剪貼簿
+# <a name="how-to-add-data-to-the-clipboard"></a>HOW TO：將資料新增至剪貼簿
 <xref:System.Windows.Forms.Clipboard>類別提供方法，您可以使用與 Windows 作業系統的剪貼簿功能互動。 許多應用程式資料做為暫存的儲存機制使用剪貼簿。 例如，文書處理器使用剪貼簿剪下和貼上作業期間。 也適用於將資料傳輸到另一個應用程式從剪貼簿。  
   
  當您新增到剪貼簿的資料時，您可以指定資料格式，使其他應用程式可以辨識的資料，是否能夠使用該格式。 您也可以將資料加入多個不同的格式剪貼簿，增加的數目可能可以使用這些資料的其他應用程式中。  
@@ -61,5 +61,6 @@ ms.locfileid: "57717120"
     [!code-vb[System.Windows.Forms.Clipboard#100](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#100)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [拖放作業和剪貼簿支援](drag-and-drop-operations-and-clipboard-support.md)
-- [如何：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
+- [HOW TO：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)

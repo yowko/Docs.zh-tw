@@ -2,12 +2,12 @@
 title: 解譯 wsatConfig.exe 傳回的錯誤碼
 ms.date: 03/30/2017
 ms.assetid: ab65f22b-0d69-4c21-9aaf-74acef0ca102
-ms.openlocfilehash: 70a917446415794f8d500818bdeff5b945834598
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 47db39f2b350c2fa8c655a041ec0239e5d297644
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54510022"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151628"
 ---
 # <a name="interpreting-error-codes-returned-by-wsatconfigexe"></a>解譯 wsatConfig.exe 傳回的錯誤碼
 本主題列出 WS-AtomicTransaction 組態公用程式 (wsatConfig.exe) 產生的錯誤碼，以及建議採取的動作。  
@@ -16,7 +16,7 @@ ms.locfileid: "54510022"
   
 |錯誤碼|描述|建議採取的動作|  
 |----------------|-----------------|------------------------------------|  
-|0|作業成功|無|  
+|0|作業成功|None|  
 |1|未預期的錯誤|請連絡 Microsoft|  
 |2|嘗試與 MSDTC 聯繫以擷取其安全性設定時，發生未預期的錯誤。|確定 MSDTC 服務並未停用，並處理傳回之例外狀況中列示的所有問題。|  
 |3|執行 WsatConfig.exe 的帳戶權限不足，無法讀取網路安全性設定。|使用系統管理員使用者帳戶執行 WsatConfig.exe。|  
@@ -35,9 +35,9 @@ ms.locfileid: "54510022"
 |17|http.sys 的組態失敗。 無法從先前的連接埠將 SSL 憑證解除繫結。|使用錯誤訊息中傳回的錯誤碼來對應至適當的系統錯誤。 若有需要，請使用 httpcfg.exe 或 netsh.exe 移除錯誤的保留連接埠。|  
 |18|http.sys 的組態失敗。 無法將指定的憑證繫結至連接埠，因為已有先前的 SSL 繫結。|其他應用程式已取得特定連接埠的擁有權。 變更為不同的連接埠，或解除安裝或重新設定目前的應用程式。|  
 |19|重新啟動 MSDTC 失敗。|若有需要，請手動重新啟動 MSDTC。 如果問題持續存在，請連絡 Microsoft。|  
-|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 未安裝在遠端電腦上，或未正確安裝。|將 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 安裝在電腦上。|  
+|20|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 未安裝在遠端電腦，或未正確安裝。|將 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 安裝在電腦上。|  
 |21|遠端組態失敗，因為作業逾時。|對在遠端電腦上設定 WS-AT 的呼叫可能需要超過 90 秒的時間。|  
-|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 未安裝在遠端電腦上，或未正確安裝。|將 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 安裝在電腦上。|  
+|22|[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 未安裝在遠端電腦，或未正確安裝。|將 [!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] 安裝在電腦上。|  
 |23|遠端組態失敗，因為遠端電腦上有例外狀況。|檢查錯誤訊息有無可執行動作的項目|  
 |26|傳遞至 WsatConfig.exe 的引數無效。|檢查命令列有無錯誤。|  
 |27|`-accounts` 命令列選項無效。|更正 -`accounts` 命令列選項，以正確指定使用者帳戶。|  
@@ -68,4 +68,5 @@ ms.locfileid: "54510022"
 |56|在嘗試啟動 ETW 追蹤工作階段時發生非預期的錯誤。|請連絡 Microsoft。|  
   
 ## <a name="see-also"></a>另請參閱
-- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+
+- [WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)](../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)

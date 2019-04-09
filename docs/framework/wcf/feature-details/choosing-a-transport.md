@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
-ms.openlocfilehash: 30585263b4c7c9e1f5e593dde15b19e37d5da6a0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494440"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107844"
 ---
 # <a name="choosing-a-transport"></a>選擇傳輸
 本主題討論選擇包含 Windows Communication Foundation (WCF) 中的三種主要傳輸的準則：HTTP、 TCP 和具名的管道。 WCF 也包含訊息佇列 (也稱為 MSMQ) 傳輸，但是這份文件不討論訊息佇列。  
@@ -52,8 +52,8 @@ ms.locfileid: "54494440"
   
 |屬性|描述|偏好的傳輸|  
 |---------------|-----------------|------------------------|  
-|診斷|Diagnostics 可讓您自動偵測傳輸連接問題。 所有的傳輸都支援傳回說明連接之錯誤資訊的能力。 不過，WCF 不包含調查網路問題的診斷工具。|無|  
-|裝載|所有 WCF 端點必須都裝載應用程式內。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 及更早版本只支援使用 HTTP 傳輸的裝載應用程式。 在  [!INCLUDE[wv](../../../../includes/wv-md.md)]，支援已新增對於裝載所有 WCF 傳輸，包括 TCP 和具名管道。 如需詳細資訊，請參閱 < [Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)並[在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。|HTTP|  
+|診斷|Diagnostics 可讓您自動偵測傳輸連接問題。 所有的傳輸都支援傳回說明連接之錯誤資訊的能力。 不過，WCF 不包含調查網路問題的診斷工具。|None|  
+|裝載|所有 WCF 端點必須都裝載應用程式內。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 和更舊版本支援只使用 HTTP 傳輸的裝載應用程式。 在  [!INCLUDE[wv](../../../../includes/wv-md.md)]，支援已新增對於裝載所有 WCF 傳輸，包括 TCP 和具名管道。 如需詳細資訊，請參閱 < [Internet Information Services 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)並[在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。|HTTP|  
 |檢閱|Inspection 是在傳輸期間從訊息擷取及處理資訊的能力。 HTTP 通訊協定會分開路由及控制資訊與資料，讓它更容易建立檢查及分析訊息的工具。 容易檢查的傳輸在網路應用裝置中可能也需要較少的處理能力。 所使用的安全性層級會影響是否可以檢查訊息。|HTTP|  
 |Latency|Latency 是完成訊息交換所需要的最小時間量。 所有的網路作業多少都會有延遲時間，視所選擇的傳輸而定。 與原生訊息交換模式為要求/回覆的傳輸 (例如 HTTP) 使用雙工或單向通訊，會因訊息的強制關聯造成額外的延遲時間。 在這種情況中，請考慮使用原生訊息交換模式為雙工的傳輸，例如 TCP。|TCP、具名<br /><br /> 管道|  
 |Reach|傳輸的範圍反映出傳輸與其他系統連線時的功能。 具名管道傳輸的範圍非常小；它只能連至在相同電腦上執行的服務。 TCP 和 HTTP 傳輸都有極佳的範圍，而且可以穿透某些 NAT 和防火牆組態。 如需詳細資訊，請參閱 <<c0> [ 使用 Nat 與防火牆](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)。|HTTP、TCP|  
@@ -62,6 +62,7 @@ ms.locfileid: "54494440"
 |Tooling|Tooling 代表開發、診斷、裝載和其他活動之通訊協定的協力廠商應用程式支援。 開發搭配 HTTP 通訊協定使用的工具和軟體代表極大的投資。|HTTP|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSDualHttpBinding>

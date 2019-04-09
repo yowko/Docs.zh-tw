@@ -1,5 +1,5 @@
 ---
-title: 最佳化效能：配置與設計
+title: 最佳化效能：版面配置與設計
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - design considerations [WPF]
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
-ms.openlocfilehash: e62b439926465aa1a61abd39c7c942acf26732c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107064"
 ---
-# <a name="optimizing-performance-layout-and-design"></a>最佳化效能：配置與設計
+# <a name="optimizing-performance-layout-and-design"></a>最佳化效能：版面配置與設計
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的設計可能會因為在計算版面配置和驗證物件參考而產生不必要的額外負荷，進而影響其效能。 物件的建構，特別是在執行階段，可能會影響應用程式的效能特性。  
   
  本主題提供這些區域的效能建議。  
@@ -57,7 +57,7 @@ ms.locfileid: "57367933"
 ### <a name="build-your-tree-top-down"></a>由上而下建置您的樹狀結構  
  在邏輯樹狀結構節點新增或移除節點時，會對節點之父代及其所有子系引發屬性失效。 因此，應該一律遵循由上而下的建構模式，以避免在已驗證的節點上發生不必要的失效成本。 下表顯示之間建立由上而下和由下而上，其中樹狀結構有 150 層深一樹狀結構的執行速度差異<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Controls.DockPanel>每個層級。  
   
-|**動作**|**樹狀結構建置 (毫秒)**|**轉譯 — 包括樹狀結構建置 (毫秒)**|  
+|**動作**|**樹狀結構建置 （毫秒）**|**轉譯 — 包括樹狀結構建置 （以毫秒為單位）**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |由下而上|366|454|  
 |由上而下|11|96|  
@@ -70,13 +70,14 @@ ms.locfileid: "57367933"
  如需有關邏輯樹狀結構的詳細資訊，請參閱 [WPF 中的樹狀結構](trees-in-wpf.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)
-- [版面配置](layout.md)
+- [配置](layout.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193313"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML 中的 xml:space 處理
 `xml:space`屬性是宣告為物件項目內的顯著泛空白字元處理行為的 XML 定義的屬性。 此行為會與相關的項目內所包含的所有內容 （內部文字） 其中`xml:space`宣告，因此也會設定至子項目。  
@@ -41,5 +41,6 @@ ms.locfileid: "58037048"
  泛空白字元處理在 XAML 中的完整討論，請參閱 <<c0> [ 泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [在 XAML 中處理泛空白字元](whitespace-processing-in-xaml.md)
+
+- [XAML 中的空白字元處理](whitespace-processing-in-xaml.md)
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text change [WPF], detecting
 - detecting text change [WPF]
 ms.assetid: 1c39ee14-e37f-49fb-a0d1-a9824ca13584
-ms.openlocfilehash: 72441e53d21df47d34a0600dafdf0b4b04c11cad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1adadb0f071815930d34f40ddf244ffc8c19131b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352369"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091144"
 ---
 # <a name="how-to-detect-when-text-in-a-textbox-has-changed"></a>HOW TO：偵測 TextBox 中的文字何時變更
 此範例示範使用一種方式<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件，以執行方法，每次中的文字<xref:System.Windows.Controls.TextBox>控制項已變更。  
@@ -43,6 +43,7 @@ ms.locfileid: "57352369"
  註解  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.TextChangedEventArgs>
 - [TextBox 概觀](textbox-overview.md)
 - [RichTextBox 概觀](richtextbox-overview.md)

@@ -5,18 +5,16 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: f313c17a278a7b51379c4da9389c01eedf4a1e62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108702"
 ---
 # <a name="framework-property-metadata"></a>架構屬性中繼資料
 針對在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中視為 WPF 架構層級的物件項目屬性，報告架構屬性中繼資料選項。 WPF 架構層級指定一般會需要由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡報 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可執行檔處理的轉譯、資料繫結和屬性系統調整等功能。 這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的特定功能特性。  
-  
- 
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)。 您也應該已閱讀[相依性屬性中繼資料](dependency-property-metadata.md)。  
@@ -29,7 +27,7 @@ ms.locfileid: "57379272"
   
 -   報告影響項目之父元素的版面配置屬性 (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>， <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 根據預設，設定這些旗標的一些範例包括<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>和<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 相依性屬性預設不繼承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 可讓在視覺化樹狀結構，也就是所需的某些控制項複合案例也移動的繼承路徑。  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 相依性屬性預設不繼承值。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 可讓在視覺化樹狀結構，也就是所需的某些控制項複合案例也移動的繼承路徑。  
   
     > [!NOTE]
     >  屬性值內容中的「繼承」一詞表示相依性屬性的特定項目，它表示因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 屬性系統的 WPF 架構層級功能，子項目可以繼承父項目的實際相依性屬性值。 它和 Managed 程式碼類型及透過衍生類型的成員繼承沒有直接關係。 如需詳細資訊，請參閱[屬性值繼承](property-value-inheritance.md)。  
@@ -73,6 +71,7 @@ ms.locfileid: "57379272"
  此行為由實作<xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>，可在衍生的中繼資料類別上覆寫。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.DependencyProperty.GetMetadata%2A>
 - [相依性屬性中繼資料](dependency-property-metadata.md)
 - [相依性屬性概觀](dependency-properties-overview.md)

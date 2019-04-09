@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - endpoints [WCF], overview
 ms.assetid: f4dce0fb-6f54-47e6-8054-86d7f574b91c
-ms.openlocfilehash: 0d7baacb9525e0c268ae53b0c3617324ecd0772f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6aecad3719fff98a2e834cff6eee9cfe39a699aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106531"
 ---
 # <a name="endpoint-creation-overview"></a>端點建立概觀
 使用 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過*端點*的服務。 端點可讓用戶端存取 WCF 服務提供的功能。 本章節說明端點的結構，並且摘要說明如何透過組態與程式碼來定義端點。  
@@ -199,4 +199,5 @@ serviceHost.Open()
  如果沒有明確提供端點，在呼叫 <xref:System.ServiceModel.ServiceHostBase.AddDefaultEndpoints%2A> 之前，仍可藉由在 <xref:System.ServiceModel.ServiceHost> 上呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 來加入預設端點。 如需有關預設端點的詳細資訊，請參閱 < [Simplified Configuration](../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+
+- [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

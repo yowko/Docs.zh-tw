@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 694ea153-e4db-41ae-96ac-9ac66dcb69a9
-ms.openlocfilehash: e90a2f9c5681ffddb2a3ca0312bdd2f3f4078328
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cbe00fb792ab5f2a7586a958ddbe5bdf004656dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089548"
 ---
 # <a name="committing-a-transaction-in-single-phase-and-multi-phase"></a>在單一階段和多重階段中認可交易
 交易所使用的每項資源都會受到資源管理員 (RM) 的管理，而這些資源管理員在採取行動時必須經過交易管理員 (TM) 的協調。 [編列的資源，在交易中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)主題討論如何在交易中登記資源 （或多個資源）。 本主題討論如何在眾多登記的資源中協調要認可的交易。  
@@ -110,5 +110,6 @@ public void InDoubt (Enlistment enlistment)
  在執行階段使用單一階段交易認可通訊協定會比較有效率，因為所有的更新不需要任何個別的協調作業就可完成。 如需有關此通訊協定的詳細資訊，請參閱 <<c0> [ 使用單一階段交易認可和可提升單一階段告知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [使用單一階段認可和可提升單一階段通知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
-- [將資源登記為異動中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)
+
+- [使用單一階段交易認可和可提升單一階段告知進行最佳化](../../../../docs/framework/data/transactions/optimization-spc-and-promotable-spn.md)
+- [將資源登記成為交易中的參與者](../../../../docs/framework/data/transactions/enlisting-resources-as-participants-in-a-transaction.md)

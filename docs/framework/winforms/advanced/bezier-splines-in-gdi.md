@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splines [Windows Forms], Bezier
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
-ms.openlocfilehash: 7648f7f9da72abea4bfc87603eea290614294eff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107324"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI + 中的曲線
 貝茲曲線是由四個點指定曲線： 兩個結束點 （p1 和 p2） 和兩個控制點 （c1 和 c2）。 曲線開始 p1 和 p2 當做結尾。 曲線的控制點，透過未通過，但控制點作用類似磁鐵，曲線納入特定指示和影響曲線的彎曲的方式。 下圖顯示加上其端點和控制點貝茲曲線。  
@@ -38,9 +38,10 @@ ms.locfileid: "57707257"
  ![Paths](./media/aboutgdip02-art13.gif "Aboutgdip02_art13")  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
 - [建構和繪製曲線](constructing-and-drawing-curves.md)
-- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
-- [如何：建立畫筆](how-to-create-a-pen.md)
+- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [HOW TO：建立畫筆](how-to-create-a-pen.md)

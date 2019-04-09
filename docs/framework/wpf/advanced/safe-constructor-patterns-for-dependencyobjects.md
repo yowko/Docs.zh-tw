@@ -6,18 +6,16 @@ helpviewer_keywords:
 - dependency objects [WPF], constructor patterns
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
-ms.openlocfilehash: d963d9c8b7ddfba0c24fcb10ddf9cc45a2f4d0c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363978"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086724"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject 的安全建構函式模式
 一般而言，類別建構函式不應該呼叫回呼 (例如，虛擬方法或委派)，因為建構函式可以當成衍生類別之建構函式的基底初始化來呼叫。 進入虛擬項目，可能是在任何指定物件的未完成初始化狀態中完成的。 不過，屬性系統本身會在內部呼叫並公開回呼，以做為相依性屬性系統的一部分。 使用相依性屬性值設定為簡單作業<xref:System.Windows.DependencyObject.SetValue%2A>呼叫可能會包含回呼某處中決定。 基於這個理由，在建構函式的主體內設定相依性屬性值時應特別小心，如果您的類型是用來做為基底類別，這可能就會發生問題。 沒有實作的特定模式<xref:System.Windows.DependencyObject>可避免與相依性屬性狀態和繼承回呼中，特定的問題所記載的建構函式。  
-  
- 
-  
+
 <a name="Property_System_Virtual_Methods"></a>   
 ## <a name="property-system-virtual-methods"></a>屬性系統虛擬方法  
  下列虛擬方法或回呼可能在計算期間呼叫<xref:System.Windows.DependencyObject.SetValue%2A>呼叫，以設定相依性屬性值： <xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.PropertyChangedCallback>， <xref:System.Windows.CoerceValueCallback>， <xref:System.Windows.DependencyObject.OnPropertyChanged%2A>。 這其中每一個虛擬方法或回呼，會在展開多樣化的 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統和相依性屬性時具有特殊用途。 如需如何使用這些虛擬項目來自訂屬性值判斷的詳細資訊，請參閱[相依性屬性回呼和驗證](dependency-property-callbacks-and-validation.md)。  
@@ -115,6 +113,7 @@ public MyClass : SomeBaseClass {
  如果您要設定此屬性，沒有屬性設定方便起見，包裝函式，以及設定值，這些相同的模式適用於<xref:System.Windows.DependencyObject.SetValue%2A>。 您呼叫<xref:System.Windows.DependencyObject.SetValue%2A>該通過建構函式參數也應該呼叫類別的預設建構函式進行初始化。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [自訂相依性屬性](custom-dependency-properties.md)
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [相依性屬性的安全性](dependency-property-security.md)

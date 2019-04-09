@@ -2,12 +2,12 @@
 title: SQL Server Common Language Runtime 整合
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
-ms.openlocfilehash: 6f8e16ecec1f99a0d7df6224f542eb03506528e3
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: d87f2b89583747b80ef103f419bd9bd2e3b1e0da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092874"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089831"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server Common Language Runtime 整合
 SQL Server 2005 導入了 .NET Framework for Microsoft Windows 之 Common Language Runtime (CLR) 元件的整合。 這表示您可以使用任何 .NET Framework 語言 (包括 Microsoft Visual Basic .NET 及 Microsoft Visual C#)，撰寫預存程序 (Stored Procedure)、觸發程序 (Trigger)、使用者定義型別、使用者定義函式、使用者定義彙總及資料流資料表值函式。 <xref:Microsoft.SqlServer.Server> 命名空間包含一組新的應用程式開發介面 (API)，以便 Managed 程式碼可與 Microsoft SQL Server 環境互動。  
@@ -36,12 +36,13 @@ SQL Server 2005 導入了 .NET Framework for Microsoft Windows 之 Common Langua
  [CLR 觸發程序](../../../../../docs/framework/data/adonet/sql/clr-triggers.md)  
  說明如何實作及使用 CLR 觸發程序。 同時提供其他主題的連結。  
   
- [內容連線](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
+ [內容連接](../../../../../docs/framework/data/adonet/sql/the-context-connection.md)  
  說明內容連接。  
   
  [ADO.NET 的 SQL Server 同處理序特定行為](../../../../../docs/framework/data/adonet/sql/sql-server-in-process-specific-behavior-of-adonet.md)  
  說明 ADO.NET 的 SQL Server 同處理序特定擴充及內容連接。 同時提供其他主題的連結。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

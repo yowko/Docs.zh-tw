@@ -11,12 +11,12 @@ helpviewer_keywords:
 - trace listeners, <sharedListeners> element
 - sharedListeners element
 ms.assetid: de200534-19dd-4156-86cf-c50521802c4c
-ms.openlocfilehash: 281cc0bd2e577dedaffb7f7eaf04fe46e6ee0b59
-ms.sourcegitcommit: 344d82456f27d09a210671214a14cfd7daf1f97c
+ms.openlocfilehash: 48cb59dfc0871822bfcff5e16d4283008a411479
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58348813"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190794"
 ---
 # <a name="sharedlisteners-element"></a>\<sharedListeners > 項目
 包含任何來源或追蹤項目可參考的接聽項。  根據預設，這些接聽程式沒有收到任何追蹤，則不可能在執行階段擷取這些接聽程式。 識別為共用接聽項可以依名稱加入到來源或追蹤接聽程式。  
@@ -41,13 +41,13 @@ ms.locfileid: "58348813"
   
 ### <a name="child-elements"></a>子元素  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽項新增至 `sharedListeners` 集合。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |`Configuration`|通用語言執行平台和 .NET Framework 應用程式所使用之每個組態檔中的根項目。|  
 |`system.diagnostics`|指定 ASP.NET 組態區段的根項目。|  
@@ -89,6 +89,7 @@ ms.locfileid: "58348813"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.TraceListener>
 - [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

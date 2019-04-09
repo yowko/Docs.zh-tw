@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 364cfe521a1e141bdfcfb3cfc47170714d010a87
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707920"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108676"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段指派 Windows Forms 的 WPF 內容
 本逐步解說示範如何選取要在表單上顯示的 Windows Presentation Foundation (WPF) 控制項類型。 您可以選取包含在專案中的任何 WPF 控制項類型。
@@ -63,8 +63,7 @@ ms.locfileid: "57707920"
   
 7.  新增<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>若要控制<xref:System.Windows.Controls.UserControl>並將值<xref:System.Windows.Controls.TextBox.Text%2A>屬性設**裝載的內容 2**。  
   
- **請注意**一般情況下，您應該裝載更複雜的 WPF 內容。 
-  <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控制項在此僅供說明用途使用。  
+ **請注意**一般情況下，您應該裝載更複雜的 WPF 內容。 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控制項在此僅供說明用途使用。  
   
 1.  建置專案。  
   
@@ -77,15 +76,13 @@ ms.locfileid: "57707920"
   
 2.  在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`表單上。  
   
-     
-  `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
+     `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
 3.  中的智慧標籤面板`elementHost1`，開啟**選擇裝載內容**下拉式清單。  
   
 4.  選取  **UserControl2**從下拉式清單方塊。  
   
-     
-  `elementHost1` 控制項現在會裝載 `UserControl2` 類型的執行個體。  
+     `elementHost1` 控制項現在會裝載 `UserControl2` 類型的執行個體。  
   
 5.  在 [**屬性**] 視窗中，確認<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性設定為**UserControl2**。  
   
@@ -97,10 +94,10 @@ ms.locfileid: "57707920"
   
 8.  選取  **UserControl1**從下拉式清單。  
   
-9. 
-  `elementHost2` 控制項現在會裝載 `UserControl1` 類型的執行個體。  
+9. `elementHost2` 控制項現在會裝載 `UserControl1` 類型的執行個體。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)

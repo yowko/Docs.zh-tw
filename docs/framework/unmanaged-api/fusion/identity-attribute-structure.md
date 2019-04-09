@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e26a90b6725d53774053293c04842b761da6ab12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cb970d31fb5158adc7dbcbb7cc0175cc91c83c8c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717671"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107337"
 ---
 # <a name="identityattribute-structure"></a>IDENTITY_ATTRIBUTE 結構
 包含屬性的中繼資料資訊的相關[IDefinitionIdentity](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)執行個體。  
@@ -54,9 +54,10 @@ typedef struct _IDENTITY_ATTRIBUTE {
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)
 - [IDENTITY_ATTRIBUTE_BLOB 結構](../../../../docs/framework/unmanaged-api/fusion/identity-attribute-blob-structure.md)
 - [融合結構](../../../../docs/framework/unmanaged-api/fusion/fusion-structures.md)

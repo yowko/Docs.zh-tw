@@ -2,12 +2,12 @@
 title: WCF 服務主機 (WcfSvcHost.exe)
 ms.date: 03/30/2017
 ms.assetid: 8643a63d-a357-4c39-bd6c-cdfdf71e370e
-ms.openlocfilehash: 6a8ed677ceaf9b86b67ec2558eb4e31c23d4c57e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d9a086b3a6ae0ece3b1b45161402ce058e1fb447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505636"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193014"
 ---
 # <a name="wcf-service-host-wcfsvchostexe"></a>WCF 服務主機 (WcfSvcHost.exe)
 Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 可讓您啟動 Visual Studio 偵錯工具 (F5) 來自動裝載並測試您已實作的服務。 然後，您可以測試使用 WCF 測試用戶端 (WcfTestClient.exe) 或您自己的用戶端中，找出並修正任何潛在錯誤的服務。  
@@ -111,4 +111,5 @@ netsh http add urlacl url=http://+:8001/MyService user=<domain>\<user>
  如需有關 netsh.exe 的詳細資訊，請參閱 「[如何使用 Netsh.exe 工具和命令列參數](https://go.microsoft.com/fwlink/?LinkId=97877)"。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 測試用戶端 (WcfTestClient.exe)](../../../docs/framework/wcf/wcf-test-client-wcftestclient-exe.md)

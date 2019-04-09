@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5a2588023309867694f344041f62be53cab9c37
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a98103367f497b18f9b8fbd61a37abf9816b8356
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107935"
 ---
 # <a name="writepropertyvalue-function"></a>WritePropertyValue 函式
 將指定的位元組數目寫入到屬性控制代碼所指定的屬性中。
@@ -80,7 +80,8 @@ HRESULT WritePropertyValue (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

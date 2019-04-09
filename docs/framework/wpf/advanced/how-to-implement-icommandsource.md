@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - ICommandSource interfaces [WPF], implementing
 ms.assetid: 7452dd39-6e11-44bf-806a-31d87f3772ac
-ms.openlocfilehash: 42395d2916d58b2119cfe41ca154f258c3b0ec58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 218a17f221598ac29213bd28a0f04adb16bc933b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361456"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107363"
 ---
 # <a name="how-to-implement-icommandsource"></a>HOW TO：實作 ICommandSource
 此範例示範如何建立命令來源，藉由實作<xref:System.Windows.Input.ICommandSource>。  命令來源是知道如何叫用命令的物件。  <xref:System.Windows.Input.ICommandSource>介面會公開三個成員： <xref:System.Windows.Input.ICommandSource.Command%2A>， <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>，和<xref:System.Windows.Input.ICommandSource.CommandTarget%2A>。  <xref:System.Windows.Input.ICommandSource.Command%2A> 是將會叫用的命令。 <xref:System.Windows.Input.ICommandSource.CommandParameter%2A>是命令來源的資料傳遞至方法，這個方法會處理命令的使用者定義資料類型。 <xref:System.Windows.Input.ICommandSource.CommandTarget%2A>是在執行命令的物件。  
@@ -59,6 +59,7 @@ ms.locfileid: "57361456"
  [!code-vb[ImplementICommandSource#ImplementICommandExecute](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImplementICommandSource/visualbasic/commandslider.vb#implementicommandexecute)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Input.ICommandSource>
 - <xref:System.Windows.Input.ICommand>
 - <xref:System.Windows.Input.RoutedCommand>

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: c0e65a6286ef4756bba305d41dce6ef2a85401dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106739"
 ---
 # <a name="collection-types-in-data-contracts"></a>資料合約中的集合型別
 「 *集合* 」(Collection) 是特定型別之項目的清單。 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中，可以使用陣列或其他多種型別 (泛型清單、泛型 <xref:System.ComponentModel.BindingList%601>, <xref:System.Collections.Specialized.StringCollection>或 <xref:System.Collections.ArrayList>) 來表示這類清單。 例如，集合可能含有特定「客戶」的地址清單。 不論實際型別為何，這些集合統稱為「 *清單集合*」(List Collection)。  
@@ -271,10 +271,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |參考型別|由參考型別實作的介面|範例|型別的處理方式：|  
 |---------------------|----------------------------------------------|-------------|----------------------|  
-|非泛型或封閉式泛型 (任何參數數目)|非泛型|`MyType : IList`<br /><br /> 或<br /><br /> `MyType<T> : IList`<br /><br /> 其中 T= `int`|`Object` 的封閉式泛型 (例如， `IList<object>`)|  
-|非泛型或封閉式泛型 (任何數目之不需要符合集合型別的參數)|封閉式泛型|`MyType : IList<string>`<br /><br /> 或<br /><br /> `MyType<T> : IList<string>` 其中 T=`int`|封閉式泛型 (例如， `IList<string>`)|  
-|具有任何參數數目的封閉式泛型|使用型別之任何一個參數的開放式泛型|`MyType<T,U,V> : IList<U>`<br /><br /> 其中 T=`int`，U=`string`，V=`bool`|封閉式泛型 (例如， `IList<string>`)|  
-|具有一個參數的開放式泛型|使用型別之參數的開放式泛型|`MyType<T> : IList<T>`，T 是開放式的|開放式泛型 (例如， `IList<T>`)|  
+|非泛型或封閉式泛型 (任何參數數目)|非泛型|`MyType : IList`<br /><br /> 或<br /><br /> `MyType<T> : IList`<br /><br /> ，其中 T= `int`|`Object` 的封閉式泛型 (例如， `IList<object>`)|  
+|非泛型或封閉式泛型 (任何數目之不需要符合集合型別的參數)|封閉式泛型|`MyType : IList<string>`<br /><br /> 或<br /><br /> `MyType<T> : IList<string>` ，其中 T=`int`|封閉式泛型 (例如， `IList<string>`)|  
+|具有任何參數數目的封閉式泛型|使用型別之任何一個參數的開放式泛型|`MyType<T,U,V> : IList<U>`<br /><br /> where T=`int`, U=`string`, V=`bool`|封閉式泛型 (例如， `IList<string>`)|  
+|具有一個參數的開放式泛型|使用型別之參數的開放式泛型|`MyType<T> : IList<T>`T 是開放式|開放式泛型 (例如， `IList<T>`)|  
   
  如果型別實作一個以上的清單集合介面，則會套用下列限制：  
   
@@ -286,11 +286,11 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |參考型別|由參考型別實作的介面|範例|型別的處理方式|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
-|非泛型或封閉式泛型 (任何參數數目)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` 其中 T=`int`|封閉式泛型 `IDictionary<object,object>`|  
-|封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>，封閉式|`MyType<T> : IDictionary<string, bool>` 其中 T=`int`|封閉式泛型 (例如， `IDIctionary<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>` 其中 T=`int`，U=`float`，V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` 其中 Z=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
-|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType<T,U,V> : IDictionary<V,U>` 其中 T=`int`，U=`bool`，V=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
-|開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType<K,V> : IDictionary<K,V>`，K 與 V 都屬開放式|開放式泛型 (例如， `IDictionary<K,V>`)|  
+|非泛型或封閉式泛型 (任何參數數目)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> 或<br /><br /> `MyType<T> : IDictionary` ，其中 T=`int`|封閉式泛型 `IDictionary<object,object>`|  
+|封閉式泛型 (任何參數數目)|<xref:System.Collections.Generic.IDictionary%602>已關閉|`MyType<T> : IDictionary<string, bool>` ，其中 T=`int`|封閉式泛型 (例如， `IDIctionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，其中一個索引鍵或值屬封閉式，另一個則為開放式並使用型別的一個參數|`MyType<T,U,V> : IDictionary<string,V>` where T=`int`, U=`float`,V=`bool`<br /><br /> 或<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ，其中 Z=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
+|封閉式泛型 (任何參數數目)|泛型 <xref:System.Collections.Generic.IDictionary%602>，索引鍵與值都屬開放式，而且每一個都會使用型別的一個參數|`MyType<T,U,V> : IDictionary<V,U>` where T=`int`, U=`bool`, V=`string`|封閉式泛型 (例如， `IDictionary<string,bool>`)|  
+|開放式泛型 (兩個參數)|泛型 <xref:System.Collections.Generic.IDictionary%602>，開放式，依照型別之泛型參數的出現順序來同時使用這兩個參數|`MyType<K,V> : IDictionary<K,V>`K 與 V 都屬開放式|開放式泛型 (例如， `IDictionary<K,V>`)|  
   
  如果型別同時實作 <xref:System.Collections.IDictionary> 與泛型 <xref:System.Collections.Generic.IDictionary%602>，這時就只會考慮泛型 <xref:System.Collections.Generic.IDictionary%602> 。  
   
@@ -321,13 +321,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
 |實作的集合型別|進行序列化時呼叫的方法|進行還原序列化時呼叫的方法|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
-|泛型 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`、 `get_Values`|泛型 Add|  
-|<xref:System.Collections.IDictionary>|`get_Keys`、 `get_Values`|`Add`|  
+|泛型 <xref:System.Collections.Generic.IDictionary%602>|`get_Keys`, `get_Values`|泛型 Add|  
+|<xref:System.Collections.IDictionary>|`get_Keys`, `get_Values`|`Add`|  
 |泛型 <xref:System.Collections.Generic.IList%601>|泛型 <xref:System.Collections.Generic.IList%601> 索引子|泛型 Add|  
 |泛型 <xref:System.Collections.Generic.ICollection%601>|列舉值|泛型 Add|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> 索引子|`Add`|  
 |泛型 <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|稱為 `Add` 的非靜態方法，其會接受一個適當型別 (泛型參數型別或是它的一個基底型別) 的參數。 序列化程式必須配合這種方法，才能在進行序列化與還原序列化時將集合型別視為集合來處理。|  
-|<xref:System.Collections.IEnumerable> (以及衍生自該項的 <xref:System.Collections.ICollection>)|`GetEnumerator`|稱為 `Add` 的非靜態方法，其會接受一個型別為 `Object`的參數。 序列化程式必須配合這種方法，才能在進行序列化與還原序列化時將集合型別視為集合來處理。|  
+|<xref:System.Collections.IEnumerable> (因此<xref:System.Collections.ICollection>，從中衍生)|`GetEnumerator`|稱為 `Add` 的非靜態方法，其會接受一個型別為 `Object`的參數。 序列化程式必須配合這種方法，才能在進行序列化與還原序列化時將集合型別視為集合來處理。|  
   
  上面表格是依遞減的優先順序來列出集合介面。 這表示，如果型別同時實作 <xref:System.Collections.IList> 與泛型 <xref:System.Collections.Generic.IEnumerable%601>，該集合便會根據 <xref:System.Collections.IList> 規則完成序列化與還原序列化：  
   
@@ -396,4 +396,5 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
  當序列化程式在保留物件參考的模式下運作時，物件參考保留也會套用到集合。 具體來說，就是整個集合與集合中所包含的個別項目都會保留其物件身分識別。 若是字典，則會針對索引鍵/值組物件以及個別的索引鍵和值物件保留物件身分識別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>

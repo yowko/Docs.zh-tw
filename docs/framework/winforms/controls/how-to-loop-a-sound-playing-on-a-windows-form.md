@@ -1,5 +1,5 @@
 ---
-title: HOW TO：循環播放 Windows Form 上播放的音效
+title: HOW TO：循環播放 Windows Forms 的音效
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], looping
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
-ms.openlocfilehash: 43fcc472960cc3f2432d3872160d9ace4c617836
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719269"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188509"
 ---
-# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>HOW TO：循環播放 Windows Form 上播放的音效
+# <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>HOW TO：循環播放 Windows Forms 的音效
 下列程式碼範例會重複播放音效。 當 `stopPlayingButton_Click` 事件處理常式中的程式碼執行時，會停止目前正在播放任何聲音。 如果未播放聲音，就不會發生任何事。  
   
 ## <a name="example"></a>範例  
@@ -54,6 +54,7 @@ ms.locfileid: "57719269"
  請勿根據檔案名稱來判斷檔案內容。 例如，檔案 Form1.vb 可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [HOW TO：播放 Windows Forms 的音效](how-to-play-a-sound-from-a-windows-form.md)
 - [SoundPlayer 類別概觀](soundplayer-class-overview.md)

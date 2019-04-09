@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, mouse input
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
-ms.openlocfilehash: 7817b6a414f313cd2891fe0e124e230643b06e07
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203011"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>滑鼠輸入在 Windows Form 中的運作方式
 接收和處理滑鼠輸入是每個 Windows 應用程式中很重要的一部分。 您可以處理滑鼠事件，以在您的應用程式中執行的動作，或使用滑鼠位置資訊來執行點擊測試或其他動作。 此外，您可以變更您的應用程式中的控制項處理滑鼠輸入的方式。 本主題將描述這些詳細資料，以及如何取得和變更系統設定滑鼠的滑鼠事件。 如需使用滑鼠所提供的資料事件並在其中按一下滑鼠事件的順序引發，請參閱 < [Windows Form 中的滑鼠事件](mouse-events-in-windows-forms.md)。  
@@ -53,6 +53,7 @@ ms.locfileid: "57725320"
 |<xref:System.Windows.Forms.SystemInformation.MouseWheelScrollLines%2A>|取得轉動滑鼠滾輪時要捲動的行數。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)
-- [Windows Forms 中的滑鼠捕捉](mouse-capture-in-windows-forms.md)
-- [Windows Forms 中的滑鼠指標](mouse-pointers-in-windows-forms.md)
+- [Windows Form 中的滑鼠捕捉](mouse-capture-in-windows-forms.md)
+- [Windows Form 中的滑鼠指標](mouse-pointers-in-windows-forms.md)

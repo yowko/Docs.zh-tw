@@ -2,12 +2,12 @@
 title: <clientCertificate> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
-ms.openlocfilehash: aceb30b6354bac5c327a5f4367344e5c9608b689
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107978"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
 定義雙工通訊模式中，用來簽署與加密服務至用戶端之訊息的 X.509 憑證。  
@@ -39,7 +39,7 @@ ms.locfileid: "55286893"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|指定用戶端憑證的驗證選項。|  
+|[\<驗證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|指定用戶端憑證的驗證選項。|  
 |[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|指定要使用的憑證。|  
   
 ### <a name="parent-elements"></a>父項目  
@@ -54,11 +54,12 @@ ms.locfileid: "55286893"
  設定在這個項目中的憑證，只能在繫結是以 `MutualCertificateDuplex` 訊息安全性驗證模式所設定的情況下，才可用來加密傳送給用戶端的訊息。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [如何：建立雙工合約](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [HOW TO：建立雙面合約](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

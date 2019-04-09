@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 CompositionTarget 在單格間隔轉譯
+title: HOW TO：使用 CompositionTarget 在單格間隔進行轉譯
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - CompositionTarget objects [WPF], rendering per frame
 - rendering per frame using CompositionTarget objects [WPF]
 ms.assetid: 701246cd-66b7-4d69-ada9-17b3b433d95d
-ms.openlocfilehash: 919e39dbe96a1a72ce517d59dcb239636f5aa692
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00b416d423a4bdc8bab576add2d77fd305ea6e0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089408"
 ---
-# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>HOW TO：使用 CompositionTarget 在單格間隔轉譯
+# <a name="how-to-render-on-a-per-frame-interval-using-compositiontarget"></a>HOW TO：使用 CompositionTarget 在單格間隔進行轉譯
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫引擎提供許多建立畫面型動畫的功能。 不過，有些應用程式案例需要依據每個畫面進行更細微的控制。 <xref:System.Windows.Media.CompositionTarget>物件讓您能夠建立自訂動畫，根據每個畫面的回呼。  
   
  <xref:System.Windows.Media.CompositionTarget> 是靜態類別，它代表繪製您的應用程式在顯示介面。 <xref:System.Windows.Media.CompositionTarget.Rendering>繪製應用程式的場景每次引發事件。 轉譯畫面播放速率是每秒繪製場景的次數。  
@@ -41,5 +41,6 @@ ms.locfileid: "57353201"
  新增或移除轉譯<xref:System.EventHandler>時引發事件的委派會延遲到完成的事件之後引發。 這是的方式一致<xref:System.MulticastDelegate>-Common Language Runtime (CLR) 會處理基礎的事件。 另請注意，不保證會以特定的順序呼叫轉譯事件。 如果您有多個<xref:System.EventHandler>委派依賴特定順序，您應該登錄單一<xref:System.Windows.Media.CompositionTarget.Rendering>事件並進行多工處理中正確的委派排列自己。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.CompositionTarget>
 - [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：複製像素以降低 Windows Forms 的閃動
+title: HOW TO：複製像素以減少 Windows Forms 的閃爍
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - flicker
 - bit-block transfer
 ms.assetid: 33b76910-13a3-4521-be98-5c097341ae3b
-ms.openlocfilehash: d03a9b79dc2c0ec61bbafe2ff09b5aba7fffc57b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e3d1c2b681e98dc7c45467683924dd4022eb377e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719243"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094030"
 ---
-# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>HOW TO：複製像素以降低 Windows Forms 的閃動
+# <a name="how-to-copy-pixels-for-reducing-flicker-in-windows-forms"></a>HOW TO：複製像素以減少 Windows Forms 的閃爍
 當您以動畫顯示簡單的圖形時，使用者可以有時會遇到，閃爍或其他不想要的視覺效果。 限制此問題的一個方法是在圖形上使用 「 bitblt 」 程序。 Bitblt 是位元區塊傳輸 的色彩資料從像素原始矩形到目的地矩形的像素為單位。  
   
  使用 Windows Form bitblt 會藉由<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法的<xref:System.Drawing.Graphics>類別。 在方法的參數中，您可以指定來源和目的地 （以點為單位）、 進行複製，區域的大小和圖形物件用來繪製新的形狀。  
@@ -63,8 +63,9 @@ private void Form1_Paint(System.Object sender,
  上述程式碼執行在表單的<xref:System.Windows.Forms.Control.Paint>事件處理常式，讓圖形保存表單會重繪時。 因此，請勿呼叫圖形相關的方法<xref:System.Windows.Forms.Form.Load>事件處理常式，因為如果調整大小或遮蔽另一種形式的表單時，不重新繪製的繪製的內容。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.CopyPixelOperation>
 - <xref:System.Drawing.Graphics.FillRectangle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.OnPaint%2A?displayProperty=nameWithType>
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)

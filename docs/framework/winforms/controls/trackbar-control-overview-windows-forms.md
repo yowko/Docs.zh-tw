@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TrackBar control [Windows Forms], about TrackBar control
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
-ms.openlocfilehash: 74a8feba14b7e2186fb64729cb915e53132805d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200632"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.TrackBar> （有時也稱為 「 滑桿 」 控制項） 的控制項用來巡覽大量的資訊，或適用於以視覺方式調整數字設定。 <xref:System.Windows.Forms.TrackBar>控制項有兩個部分： 基本原則是，也就是滑桿和刻度標記。 基本原則是可調整的部分。 其位置與相對應<xref:System.Windows.Forms.TrackBar.Value%2A>屬性。 刻度標記會定期間距的視覺指標。 Trackbar 移動中指定，並可以在水平或垂直對齊的變化。 例如，您可能會使用追蹤列來控制系統游標閃爍頻率或滑鼠速度。  
@@ -24,5 +24,6 @@ Windows Form <xref:System.Windows.Forms.TrackBar> （有時也稱為 「 滑桿 
  其他兩個重要屬性是<xref:System.Windows.Forms.TrackBar.SmallChange%2A>和<xref:System.Windows.Forms.TrackBar.LargeChange%2A>。 值<xref:System.Windows.Forms.TrackBar.SmallChange%2A>屬性是捲動方塊移動以回應具有按下左或向右箭號索引鍵的位置數目。 值<xref:System.Windows.Forms.TrackBar.LargeChange%2A>屬性是捲動方塊移動以回應具有 PAGE UP 或 PAGE DOWN 按鍵，或以回應滑鼠按一下捲動方塊的任一端的追蹤列上的位置數目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.TrackBar>
 - [TrackBar 控制項](trackbar-control-windows-forms.md)

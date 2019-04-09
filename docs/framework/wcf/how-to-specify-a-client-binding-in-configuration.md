@@ -1,15 +1,15 @@
 ---
-title: HOW TO：在組態中指定的用戶端繫結
+title: HOW TO：在組態中指定用戶端繫結
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 2441b307961079c28e114b4fed69c252ff42e0d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091560"
 ---
-# <a name="how-to-specify-a-client-binding-in-configuration"></a>HOW TO：在組態中指定的用戶端繫結
+# <a name="how-to-specify-a-client-binding-in-configuration"></a>HOW TO：在組態中指定用戶端繫結
 在此範例中，建立了一個使用計算機服務的用戶端主控台應用程式，並在組態中以宣告方式指定用戶端的繫結。 用戶端會存取 `CalculatorService` (該服務會實作 `ICalculator` 介面)，而服務和用戶端都會使用 <xref:System.ServiceModel.BasicHttpBinding> 類別。  
   
  所述的程序假設計算機服務正在執行中。 如需如何建置服務的資訊，請參閱[How to:在組態中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。 它也會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) Windows Communication Foundation (WCF) 提供自動產生的用戶端元件。 此工具會產生用戶端程式碼，以及存取服務的組態。  
@@ -51,4 +51,5 @@ ms.locfileid: "54606383"
 6.  請編譯並執行用戶端。  
   
 ## <a name="see-also"></a>另請參閱
-- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+
+- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

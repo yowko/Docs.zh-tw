@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid [WPF], customizing the appearance of
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
-ms.openlocfilehash: 86721592f632d6d77dbfa6bc4eac3c2872628b0d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197148"
 ---
 # <a name="datagrid"></a>DataGrid
 <xref:System.Windows.Controls.DataGrid>控制項可讓您顯示和編輯資料從許多不同的來源，例如，從 SQL database、 LINQ 查詢或任何其他可繫結的資料來源。 如需詳細資訊，請參閱[繫結來源概觀](../data/binding-sources-overview.md)。  
@@ -49,14 +49,15 @@ ms.locfileid: "57368134"
   
 |標題|描述|  
 |-----------|-----------------|  
-|[逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|說明如何設定新的 WPF 專案中，新增 Entity Framework 項目、 設定來源，並顯示資料的<xref:System.Windows.Controls.DataGrid>。|  
-|[如何：將資料列詳細資料加入至 DataGrid 控制項](how-to-add-row-details-to-a-datagrid-control.md)|描述如何建立資料列詳細資料，如<xref:System.Windows.Controls.DataGrid>。|  
-|[如何：使用 DataGrid 控制項實作驗證](how-to-implement-validation-with-the-datagrid-control.md)|描述如何驗證中的值<xref:System.Windows.Controls.DataGrid>儲存格和資料列，並顯示驗證回應。|  
+|[逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|說明如何設定新的 WPF 專案中，新增 Entity Framework 項目、 設定來源，並顯示資料的<xref:System.Windows.Controls.DataGrid>。|  
+|[HOW TO：將資料列詳細資料新增至 DataGrid 控制項](how-to-add-row-details-to-a-datagrid-control.md)|描述如何建立資料列詳細資料，如<xref:System.Windows.Controls.DataGrid>。|  
+|[HOW TO：使用 DataGrid 控制項實作驗證](how-to-implement-validation-with-the-datagrid-control.md)|描述如何驗證中的值<xref:System.Windows.Controls.DataGrid>儲存格和資料列，並顯示驗證回應。|  
 |[DataGrid 控制項中的預設鍵盤和滑鼠行為](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|描述如何互動<xref:System.Windows.Controls.DataGrid>使用鍵盤和滑鼠的控制項。|  
-|[如何：群組、 排序和 DataGrid 控制項中的篩選資料](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何檢視中的資料<xref:System.Windows.Controls.DataGrid>以不同的方式，藉由將分組、 排序和篩選資料。|  
+|[HOW TO：在 DataGrid 控制項中分組、排序和篩選資料](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|描述如何檢視中的資料<xref:System.Windows.Controls.DataGrid>以不同的方式，藉由將分組、 排序和篩選資料。|  
 |[DataGrid 控制項中的調整大小選項](sizing-options-in-the-datagrid-control.md)|描述如何控制中的絕對和自動調整大小<xref:System.Windows.Controls.DataGrid>。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.DataGrid>
 - [樣式設定和範本化](styling-and-templating.md)
 - [資料繫結概觀](../data/data-binding-overview.md)

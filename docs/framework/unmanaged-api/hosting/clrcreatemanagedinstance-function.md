@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c1c576bd4a7bc29be2647a858a680b91e602d2c4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f82303a3d38e7a5baaf1c3edcc41518228360d34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088453"
 ---
 # <a name="clrcreatemanagedinstance-function"></a>ClrCreateManagedInstance 函式
 建立指定之 managed 型別的執行個體。  
@@ -60,10 +60,11 @@ STDAPI ClrCreateManagedInstance (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** MSCorEE.dll  
+ **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
 - [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

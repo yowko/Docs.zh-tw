@@ -1,19 +1,19 @@
 ---
-title: <iriParsing> 項目 (Uri 設定)
+title: <iriParsing> 項目 （Uri 設定）
 ms.date: 03/30/2017
 ms.assetid: 953d0b53-445e-41f9-b302-77c4030852ce
-ms.openlocfilehash: a4d4df8c214efb955f8f9d6678aaf8d56de71ebc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 710d82b70eb16e88404d4d8bbf38d2d030693103
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092496"
 ---
 # <a name="iriparsing-element-uri-settings"></a>\<Iriparsing> > 項目 （Uri 設定）
 指定是否要將國際資源識別項 (IRI) 剖析套用至 <xref:System.Uri>，以及是否應該套用 IRI 剖析規則。  
   
 ## <a name="schema-hierarchy"></a>結構描述階層架構  
- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<組態 > 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<Uri > 項目 （Uri 設定）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,16 +32,16 @@ ms.locfileid: "55256652"
   
 ### <a name="attributes"></a>屬性  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否啟用 IRI 剖析。 預設值為 `false`。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。|  
   
@@ -80,6 +80,7 @@ ms.locfileid: "55256652"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

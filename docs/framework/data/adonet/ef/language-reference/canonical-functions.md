@@ -2,12 +2,12 @@
 title: 標準函式
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
-ms.openlocfilehash: 4657fd2b68008e4194fc39982dc2ac5b34a644ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202933"
 ---
 # <a name="canonical-functions"></a>標準函式
 本節討論所有資料提供者都支援，而且可由所有查詢技術使用的標準函式。 標準函式無法由提供者擴允。  
@@ -35,7 +35,7 @@ ms.locfileid: "54513876"
  [字串標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/string-canonical-functions.md)  
  討論字串 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
- [日期和時間標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
+ [日期及時間標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/date-and-time-canonical-functions.md)  
  討論日期和時間 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 標準函式。  
   
  [位元標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/bitwise-canonical-functions.md)  
@@ -48,6 +48,7 @@ ms.locfileid: "54513876"
  討論未分類為位元運算、日期/時間、字串、數學或彙總的函式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [概念模型標準與 SQL Server 函式的對應](../../../../../../docs/framework/data/adonet/ef/conceptual-model-canonical-to-sql-server-functions-mapping.md)

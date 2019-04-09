@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tab pages [Windows Forms], hiding in forms
 - TabControl control [Windows Forms], disabling pages
 ms.assetid: adcc6618-8a34-4ee1-bbe3-47e732de6a59
-ms.openlocfilehash: a2a0f4084529b1dd2618c1cd6171ee45b8f569d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ace713a635b5d9c4b73f85cd3d378c0f1ff3dba1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59107571"
 ---
 # <a name="how-to-disable-tab-pages"></a>HOW TO：停用索引標籤頁
 在某些情況下，您會想要限制存取可以在 Windows Forms 應用程式中使用的資料。 這其中一個範例可能是當您有索引標籤控制項之索引標籤頁面中顯示的資料系統管理員可能會有您想要限制從客體或較低層級的使用者 索引標籤頁面上的資訊。  
@@ -102,7 +102,8 @@ ms.locfileid: "57704995"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TabControl 控制項概觀](tabcontrol-control-overview-windows-forms.md)
-- [如何：將控制項加入索引標籤頁](how-to-add-a-control-to-a-tab-page.md)
-- [如何：新增和移除使用 Windows Form TabControl 的索引標籤](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [如何：變更 Windows Form TabControl 的外觀](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [HOW TO：將控制項新增至索引標籤頁](how-to-add-a-control-to-a-tab-page.md)
+- [HOW TO：使用 Windows Forms TabControl 新增和移除索引標籤](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [HOW TO：變更 Windows Forms TabControl 的外觀](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)

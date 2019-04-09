@@ -2,12 +2,12 @@
 title: WCF 測試用戶端 (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
-ms.openlocfilehash: 9b693aea362d5f16604fb68f4fabbc9bed3602b8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499286"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106765"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF 測試用戶端 (WcfTestClient.exe)
 Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是一種 GUI 工具，可讓使用者輸入測試參數，請將該服務中，輸入送出，並檢視服務傳回的回應。 它提供了完善的服務測試經驗搭配 WCF 服務主機。  
@@ -152,7 +152,7 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
   
 -   雙工合約。  
   
--   交易。  
+-   異動。  
   
 -   安全性：[!INCLUDE[infocard](../../../includes/infocard-md.md)]、憑證和使用者名稱/密碼。  
   
@@ -166,4 +166,5 @@ Windows Communication Foundation (WCF) 測試用戶端 (WcfTestClient.exe) 是�
 -   以滑鼠右鍵按一下**WCF 服務主機**圖示，在通知區域中，然後按一下**結束。** 這會關閉 WCF 服務自動主機和 WCF 測試用戶端，並停止 Visual Studio 偵錯程序。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

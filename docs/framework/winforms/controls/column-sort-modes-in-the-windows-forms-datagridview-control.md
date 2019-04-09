@@ -5,17 +5,17 @@ helpviewer_keywords:
 - data grids [Windows Forms], sort modes
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
-ms.openlocfilehash: 935251c783bbe74903cee6afd5e14eed4483d69d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106662"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行排序模式
 <xref:System.Windows.Forms.DataGridView> 資料行有三種排序模式。 透過所指定的每個資料行的排序模式<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行，可以設定為下列其中一種屬性<xref:System.Windows.Forms.DataGridViewColumnSortMode>列舉值。  
   
-|`DataGridViewColumnSortMode` 值|描述|  
+|`DataGridViewColumnSortMode` value|描述|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|文字方塊資料行的預設值。 除非資料行標頭用於選項，按一下資料行標頭會自動排序<xref:System.Windows.Forms.DataGridView>依據此資料行，並顯示圖像 （glyph），表示排序順序。|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非文字方塊的資料行的預設值。 您可以排序此資料行，以程式設計的方式;不過，它並不適用於排序，因此會不保留任何空間，用於排序圖像。|  
@@ -59,6 +59,7 @@ ms.locfileid: "57717852"
 >  <xref:System.Windows.Forms.DataGridView.SortCompare>不會發生事件時<xref:System.Windows.Forms.DataGridView.DataSource%2A>屬性設定或當<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性值是`true`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.SortedColumn%2A?displayProperty=nameWithType>
@@ -66,5 +67,5 @@ ms.locfileid: "57717852"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [在 Windows Forms DataGridView 控制項中排序資料](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [如何：設定 Windows Form DataGridView 控制項中的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [如何：自訂 Windows Form DataGridView 控制項中排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：設定 Windows Forms DataGridView 控制項的資料行排序模式](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [HOW TO：自訂 Windows Forms DataGridView 控制項中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 640940cea30b489683972debdd14b592d565ef4b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207821"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 函式
 
@@ -42,7 +42,8 @@ HRESULT _AxlRSAKeyValueToPublicKeyToken (
  [out] WCHAR * (要接收十六進位編碼的公開金鑰語彙基元) 的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 若函式成功則傳回 `S_OK`。 否則會傳回錯誤碼。  
+ `S_OK` 如果函式成功。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

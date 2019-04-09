@@ -2,12 +2,12 @@
 title: WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)
 ms.date: 03/30/2017
 ms.assetid: 1c56cf98-3963-46d5-a4e1-482deae58c58
-ms.openlocfilehash: b4c2bb2d9c81b6ab3afc783d1188de7664e01566
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30e5a22e54bf977143b2ae94e678ad5106ec9ed6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191818"
 ---
 # <a name="ws-atomictransaction-configuration-utility-wsatconfigexe"></a>WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)
 WS-AtomicTransaction 組態公用程式用於設定基本的 WS-AtomicTransaction 支援設定。  
@@ -50,5 +50,6 @@ wsatConfig [Options]
 |-virtualServer:\<virtualServer>|指定 DTC 資源叢集名稱。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 WS-AtomicTransaction](../../../docs/framework/wcf/feature-details/using-ws-atomictransaction.md)
-- [設定 WS-Atomic 異動支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)
+- [設定 WS-Atomic 交易支援](../../../docs/framework/wcf/feature-details/configuring-ws-atomic-transaction-support.md)

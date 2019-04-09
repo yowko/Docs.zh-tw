@@ -2,12 +2,12 @@
 title: <custom>
 ms.date: 03/30/2017
 ms.assetid: a6f65a00-bd1a-4d4a-955a-fe009ec02ab8
-ms.openlocfilehash: 5ff066c32f7d08ec989d6cd04e16c89f0a36f6fa
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 18359e871feed17a11006d0b2998907faf25c158
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106583"
 ---
 # <a name="custom"></a>\<custom>
 指定自訂對等解析程式服務的設定。  
@@ -56,6 +56,7 @@ ms.locfileid: "55675018"
  這個項目定義自訂對等解析程式服務的基本設定，包括裝載服務之對等的端點位址以及任何特定繫結設定。 如需有關如何建立自訂解析程式的詳細資訊，請參閱 <<c0> [ 新增至 PeerChannel 應用程式的自訂解析程式](https://docs.microsoft.com/previous-versions/ms730105(v=vs.90))。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService>
 - <xref:System.ServiceModel.PeerResolvers.PeerCustomResolverSettings>
 - <xref:System.ServiceModel.Configuration.PeerResolverElement.Custom%2A>

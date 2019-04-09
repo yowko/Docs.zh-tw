@@ -2,12 +2,12 @@
 title: 關聯 End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
-ms.openlocfilehash: 7fb9b48c5ed832e83f2a1e344d17d9a9797d393b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410325"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108286"
 ---
 # <a name="association-end"></a>關聯 End
 *關聯 end*識別[實體型別](../../../../docs/framework/data/adonet/entity-type.md)某一端上[關聯](../../../../docs/framework/data/adonet/association-type.md)和關聯的該結尾處，輸入執行個體可以存在的實體數目。 關聯 End 會定義為關聯的部分。關聯必須具有兩個關聯 End。 [導覽屬性](../../../../docs/framework/data/adonet/navigation-property.md)允許針對至另一個關聯端的導覽。  
@@ -26,8 +26,7 @@ ms.locfileid: "58410325"
 -   在關聯 End 中所執行的作業相關資訊，例如刪除時的重疊顯示。 (選擇項)  
   
 ## <a name="example"></a>範例  
- 下圖顯示包含兩個關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型。 
-  `PublishedBy` 關聯的關聯 End 為 `Book` 和 `Publisher` 實體類型。 端點的多重性`Publisher`結尾是一 (1) 和端點的多重性`Book`端是許多 (\*)，表示一個發行者發行許多書籍，以及一本書籍由一個發行者發行。  
+ 下圖顯示包含兩個關聯 (`PublishedBy` 和 `WrittenBy`) 的概念模型。 `PublishedBy` 關聯的關聯 End 為 `Book` 和 `Publisher` 實體類型。 端點的多重性`Publisher`結尾是一 (1) 和端點的多重性`Book`端是許多 (\*)，表示一個發行者發行許多書籍，以及一本書籍由一個發行者發行。  
   
  ![具有三種實體類型的範例模型](./media/association-end/example-model-three-entity-types.gif)  
   
@@ -36,5 +35,6 @@ ms.locfileid: "58410325"
  [!code-xml[EDM_Example_Model#AssociationEnd](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#associationend)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

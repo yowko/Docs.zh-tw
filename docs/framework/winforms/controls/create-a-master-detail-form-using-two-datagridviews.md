@@ -9,17 +9,17 @@ helpviewer_keywords:
 - parent-child tables [Windows Forms], displaying on Windows Forms
 - master-details lists [Windows Forms], creating
 ms.assetid: 99f6e876-3f7f-4139-9063-e36587c95b02
-ms.openlocfilehash: 1a3ae14ba1dee704b3502146006bfa9f5d1ae637
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ccd9354d623cf1b452bc3890b7fd9a5248cb69c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088791"
 ---
-# <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>HOW TO：建立主版/詳細表單使用兩個 Windows Form DataGridView 控制項
+# <a name="how-to-create-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>HOW TO：使用兩個 Windows Forms DataGridView 控制項建立主從式表單
 下列程式碼範例會使用兩個 <xref:System.Windows.Forms.DataGridView> 控制項繫結至兩個 <xref:System.Windows.Forms.BindingSource> 元件來建立主從式表單。 資料來源是 <xref:System.Data.DataSet>，包含來自 Northwind SQL Server 範例資料庫的 `Customers` 和 `Orders` 資料表，以及透過 `CustomerID` 資料行和這兩者產生關聯的 <xref:System.Data.DataRelation>。  
   
- 一個 <xref:System.Windows.Forms.BindingSource> 會繫結至資料集中的父代 `Customers` 資料表。 此資料會顯示在 <xref:System.Windows.Forms.DataGridView> 主控制項。 其他 <xref:System.Windows.Forms.BindingSource> 會繫結至第一個資料連接器。 第二個 <xref:System.Windows.Forms.BindingSource> 的 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性會設為 <xref:System.Data.DataRelation> 的名稱。 這會導致相關的 <xref:System.Windows.Forms.DataGridView> 詳細資料控制項顯示 `Orders` 子資料表的資料列，對應到 <xref:System.Windows.Forms.DataGridView> 主控制項中的目前資料列。  
+ 一個 <xref:System.Windows.Forms.BindingSource> 會繫結至資料集中的父代 `Customers` 資料表。 此資料會顯示在 <xref:System.Windows.Forms.DataGridView> 主控制項。 其他 <xref:System.Windows.Forms.BindingSource> 會繫結程序至第一個資料連接器。 第二個 <xref:System.Windows.Forms.BindingSource> 的 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性會設為 <xref:System.Data.DataRelation> 的名稱。 這會導致相關的 <xref:System.Windows.Forms.DataGridView> 詳細資料控制項顯示 `Orders` 子資料表的資料列，對應到 <xref:System.Windows.Forms.DataGridView> 主控制項中的目前資料列。  
   
  如需這個程式碼範例的完整說明，請參閱[逐步解說：建立主版/詳細表單使用兩個 Windows Form DataGridView 控制項](creating-a-master-detail-form-using-two-datagridviews.md)。  
   
@@ -38,8 +38,9 @@ ms.locfileid: "57703695"
  在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。 使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。 如需詳細資訊，請參閱[保護連線資訊](../../data/adonet/protecting-connection-information.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [逐步解說：建立主版/詳細表單使用兩個 Windows Form DataGridView 控制項](creating-a-master-detail-form-using-two-datagridviews.md)
-- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [保護連線資訊](../../data/adonet/protecting-connection-information.md)
+- [逐步解說：使用兩個 Windows Forms DataGridView 控制項建立主從式表單](creating-a-master-detail-form-using-two-datagridviews.md)
+- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [保護連接資訊](../../data/adonet/protecting-connection-information.md)
