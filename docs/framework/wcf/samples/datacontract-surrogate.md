@@ -2,12 +2,12 @@
 title: DataContract Surrogate
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
-ms.openlocfilehash: 33d5db0251d22ff2fac05c475903eca7dcb3e0fb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 663f168ebbba2238be814791fd0d75e211a469ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828052"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196420"
 ---
 # <a name="datacontract-surrogate"></a>DataContract Surrogate
 這個範例示範如何使用資料合約 Surrogate 類別來自訂像是序列化 (Serialization)、還原序列化 (Deserialization)、結構描述匯出以及結構描述匯入等程序。 此範例示範如何在用戶端和伺服器的案例，其中資料會序列化並傳送 Windows Communication Foundation (WCF) 用戶端與服務之間使用代理。  
@@ -268,4 +268,3 @@ public void ExportContract(WsdlExporter exporter, WsdlContractConversionContext 
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\DataContract`  
-  

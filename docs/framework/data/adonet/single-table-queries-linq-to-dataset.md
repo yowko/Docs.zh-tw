@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 3bde9a5f718dcc7bdf31f84369546d530dca38d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637227"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187638"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>單一資料表查詢 (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 實作的資料來源上的查詢運作<xref:System.Collections.Generic.IEnumerable%601>介面或<xref:System.Linq.IQueryable%601>介面。 <xref:System.Data.DataTable>類別未實作其中一個介面，因此您必須呼叫<xref:System.Data.DataTableExtensions.AsEnumerable%2A>如果您想要使用的方法<xref:System.Data.DataTable>中的來源`From`子句[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]查詢。  
@@ -31,6 +31,7 @@ ms.locfileid: "54637227"
  請注意，`T` 方法和 <xref:System.Data.DataRowExtensions.Field%2A> 方法之泛型參數 <xref:System.Data.DataRowExtensions.SetField%2A> 中指定的資料型別必須與基礎值的型別相符，否則系統將擲回 <xref:System.InvalidCastException>。 此外，指定的資料行名稱也必須與 <xref:System.Data.DataSet> 中的資料行名稱相符，否則系統將擲回 <xref:System.ArgumentException>。 在這兩種情況中，其例外狀況 (Exception) 是在執行查詢的資料列舉執行階段中擲回。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [跨資料表查詢](../../../../docs/framework/data/adonet/cross-table-queries-linq-to-dataset.md)
 - [查詢具類型資料集](../../../../docs/framework/data/adonet/querying-typed-datasets.md)
 - [泛型 Field 和 SetField 方法](../../../../docs/framework/data/adonet/generic-field-and-setfield-methods-linq-to-dataset.md)

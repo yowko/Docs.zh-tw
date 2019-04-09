@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Form 中的非同步載入音效
+title: HOW TO：在 Windows Forms 中以非同步方式載入音效
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - sounds [Windows Forms], loading on separate threads
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
-ms.openlocfilehash: 8240e26ea0133aa091354d29f52d0692499d7765
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185753"
 ---
-# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>HOW TO：在 Windows Form 中的非同步載入音效
+# <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>HOW TO：在 Windows Forms 中以非同步方式載入音效
 下列程式碼範例會以非同步方式從 URL 載入音效，然後在新的執行緒上播放。  
   
 ## <a name="example"></a>範例  
@@ -53,7 +53,8 @@ ms.locfileid: "57718294"
  請勿根據檔案名稱來判斷檔案內容。 例如，`Form1.vb` 檔案可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [HOW TO：播放 Windows Forms 的音效](how-to-play-a-sound-from-a-windows-form.md)

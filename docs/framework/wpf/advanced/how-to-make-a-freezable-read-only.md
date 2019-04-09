@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 Freezable 唯讀
+title: HOW TO：將 Freezable 設為唯讀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
-ms.openlocfilehash: 874724584b44c17ff6c01331295cfa1a60978d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191431"
 ---
-# <a name="how-to-make-a-freezable-read-only"></a>HOW TO：建立 Freezable 唯讀
+# <a name="how-to-make-a-freezable-read-only"></a>HOW TO：將 Freezable 設為唯讀
 此範例示範如何製作<xref:System.Windows.Freezable>唯讀，藉由呼叫其<xref:System.Windows.Freezable.Freeze%2A>方法。  
   
  您不能凍結<xref:System.Windows.Freezable>物件的下列條件的任何一個是否`true`關於物件：  
@@ -36,8 +36,9 @@ ms.locfileid: "57360344"
  如需詳細資訊<xref:System.Windows.Freezable>物件，請參閱[Freezable 物件概觀](freezable-objects-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Freezable>
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Freezable 物件概觀](freezable-objects-overview.md)
-- [HOW-TO 主題](base-elements-how-to-topics.md)
+- [HOW TO 主題](base-elements-how-to-topics.md)

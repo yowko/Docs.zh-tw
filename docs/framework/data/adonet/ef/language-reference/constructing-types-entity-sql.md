@@ -2,12 +2,12 @@
 title: 建構類型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
-ms.openlocfilehash: 917c59a6602ce0313b91ba78fd59d11596f86e9f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718581"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073776"
 ---
 # <a name="constructing-types-entity-sql"></a>建構類型 (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供三種類型的建構函式： 資料列建構函式、 具名的類型建構函式和集合建構函式。  
@@ -41,7 +41,7 @@ ms.locfileid: "54718581"
  如需詳細資訊，請參閱 < [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)。  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>具名型別建構函式 (NamedType 初始設定式)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可以讓型別建構函式 (初始設定式) 建立具名複雜類型和實體類型的執行個體。 例如，下列運算式會建立 `Person` 型別的執行個體。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可讓類型建構函式 （初始設定式） 來建立具名複雜型別的執行個體和實體類型。 例如，下列運算式會建立 `Person` 型別的執行個體。  
   
  `Person("abc", 12)`  
   
@@ -64,6 +64,7 @@ ms.locfileid: "54718581"
  如需詳細資訊，請參閱 <<c0> [ 具名類型建構函式](../../../../../../docs/framework/data/adonet/ef/language-reference/named-type-constructor-entity-sql.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
-- [類型系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)
+- [型別系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)

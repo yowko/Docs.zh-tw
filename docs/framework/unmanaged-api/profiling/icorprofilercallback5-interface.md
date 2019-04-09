@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e6481d647541af40b956c38a76d281ccb84e7c7f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 114d97e02b0a6b80c46f971ed74a24dc3c397f1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072645"
 ---
 # <a name="icorprofilercallback5-interface"></a>ICorProfilerCallback5 介面
 為了識別實際物件的完整結束時搭配分析工具的資訊做補充[icorprofilercallback:: Rootreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-rootreferences-method.md)或[ICorProfilerCallback2::RootReferences2](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-rootreferences2-method.md)方法並搭配[icorprofilercallback:: Objectreferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-objectreferences-method.md)並[ConditionalWeakTableElementReferences](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback5-conditionalweaktableelementreferences-method.md)方法。  
   
- `ICorProfilerCallback5` 必須由 Managed 記憶體分析工具實作，以訂閱與相依性控制代碼相關的通知。  
+ `ICorProfilerCallback5` 必須實作的 managed 的記憶體分析工具，來訂閱通知相關相依性控制代碼。  
   
 ## <a name="remarks"></a>備註  
   
@@ -41,8 +41,9 @@ ms.locfileid: "54602542"
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerCallback2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-interface.md)

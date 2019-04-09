@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
-ms.openlocfilehash: a73efb334fddc7e0bbfbaca53f0d5026105dd22c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072385"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>HOW TO：動態建立資料庫
 在 LINQ to SQL 中，物件模型 (Object Model) 會對應至關聯式資料庫。 對應的啟用方式是使用以屬性 (Attribute) 為基礎的對應或外部對應檔案來描述關聯式資料庫的結構。 在這兩種情況中，系統會提供足夠的關聯式資料庫相關資訊，可讓您使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法來建立新的資料庫執行個體 (Instance)。  
@@ -23,7 +23,7 @@ ms.locfileid: "54597030"
   
 -   建置用戶端應用程式，這個用戶端應用程式需要本機資料庫來儲存它的離線狀態。  
   
- 根據連接字串，您也可以使用 .mdf 檔案或目錄名稱來搭配使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法與 SQL Server。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用連接字串來定義要建立的資料庫，以及要在其上建立資料庫的伺服器。  
+ 根據連接字串，您也可以使用 .mdf 檔案或目錄名稱來搭配使用 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 方法與 SQL Server。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用連接字串來定義要建立資料庫和資料庫是要建立哪一部伺服器上。  
   
 > [!NOTE]
 >  請盡可能使用 Windows 整合式安全性來連接至資料庫，如此連接字串就不需要使用密碼。  
@@ -49,8 +49,9 @@ ms.locfileid: "54597030"
  [!code-vb[DLinqSubmittingChanges#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#7)]  
   
 ## <a name="see-also"></a>另請參閱
-- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+
+- [屬性架構對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)
 - [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [變更資料和提交](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

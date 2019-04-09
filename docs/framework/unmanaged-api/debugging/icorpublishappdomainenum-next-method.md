@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e36d48c3747c2d74f4c7f47268219283b07c9a39
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c14d364320c82f061ef606a402563dacfce28139
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186234"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next 方法
 取得指定的數目的目前存在的應用程式定義域在過程中，從目前位置開始。  
@@ -53,9 +53,10 @@ HRESULT Next (
   
  **標頭：** CorPub.idl CorPub.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorPublishAppDomainEnum 介面](../../../../docs/framework/unmanaged-api/debugging/icorpublishappdomainenum-interface.md)

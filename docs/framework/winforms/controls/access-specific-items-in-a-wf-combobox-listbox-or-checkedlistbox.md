@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取特定項目中的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項
+title: HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 33dcefa39cd6a8c981d03ce5fb63fc8135613640
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077208"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：存取特定項目中的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目
 存取 Windows Form 下拉式方塊、 清單方塊中或選取的清單方塊中的特定項目是必要的工作。 它可讓您以程式設計方式決定功能的清單中，在任何給定的位置。  
   
 ### <a name="to-access-a-specific-item"></a>若要存取特定的項目  
@@ -52,7 +52,8 @@ ms.locfileid: "57714017"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)

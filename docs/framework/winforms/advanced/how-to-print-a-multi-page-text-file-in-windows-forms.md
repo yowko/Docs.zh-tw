@@ -1,5 +1,5 @@
 ---
-title: HOW TO：列印 Windows Form 中的多頁文字檔
+title: HOW TO：在 Windows Forms 中列印多頁文字檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms, printing text
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
-ms.openlocfilehash: f2f91fbaab7fb999a2243e13be9af0bbff0e41ac
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 69fe58292eda2bb283488252f571d3c3691f6392
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192170"
 ---
-# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>HOW TO：列印 Windows Form 中的多頁文字檔
+# <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>HOW TO：在 Windows Forms 中列印多頁文字檔
 Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Graphics> 類別提供將物件 (圖形或文字) 繪製到螢幕或印表機等裝置的方法。  
   
 > [!NOTE]
@@ -35,7 +35,7 @@ Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Gr
      [!code-csharp[System.Drawing.Printing.PrintExamples#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/CS/Form1.cs#1)]
      [!code-vb[System.Drawing.Printing.PrintExamples#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Printing.PrintExamples/VB/Form1.vb#1)]  
   
-3.  在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件處理常式中，使用 <xref:System.Drawing.Printing.PrintPageEventArgs> 類別的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 屬性和文件內容來計算行的長度和每頁的行數。 在繪製每一頁之後，請檢查該頁面是否為最後一頁，並且據此設定 <xref:System.Drawing.Printing.PrintPageEventArgs> 的 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 屬性。 在 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 成為 `false` 之前會持續引發 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。 此外，請確定 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件與其事件處理方法相關聯。  
+3.  在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件處理常式中，使用 <xref:System.Drawing.Printing.PrintPageEventArgs> 類別的 <xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A> 屬性和文件內容來計算行的長度和每頁的行數。 在繪製每一頁之後，請檢查該頁面是否為最後一頁，並且據此設定 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 的 <xref:System.Drawing.Printing.PrintPageEventArgs> 屬性。 在 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 成為 <xref:System.Drawing.Printing.PrintPageEventArgs.HasMorePages%2A> 之前，會持續引發 `false`事件。 此外，也請確定 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件與其事件處理方法相關聯。  
   
      在下列程式碼範例中，會使用事件處理常式以表單上所使用的相同字型來列印 "testPage.txt" 檔案的內容。  
   
@@ -61,6 +61,7 @@ Windows 應用程式列印文字的情況極為常見。 <xref:System.Drawing.Gr
 -   Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics>
 - <xref:System.Drawing.Brush>
-- [Windows Forms 列印支援](windows-forms-print-support.md)
+- [Windows Form 列印支援](windows-forms-print-support.md)

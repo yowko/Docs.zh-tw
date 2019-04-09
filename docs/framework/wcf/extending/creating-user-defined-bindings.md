@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - user-defined bindings [WCF]
 ms.assetid: c4960675-d701-4bc9-b400-36a752fdd08b
-ms.openlocfilehash: 6b3a5bbc93fa6465f70295cc6a3d7528039fb787
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54a1c8e06991729ea8556d82d31897c522f6d173
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188717"
 ---
 # <a name="creating-user-defined-bindings"></a>建立使用者定義繫結
 您有幾種方式可以建立系統不提供的繫結：  
@@ -33,9 +33,9 @@ ms.locfileid: "54548790"
   
  建立新繫結時，新增的繫結項目順序非常重要。 請務必遵守下列順序加入繫結項目：  
   
-|圖層|選項|必要項|  
+|圖層|選項|必要|  
 |-----------|-------------|--------------|  
-|交易流程|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement?displayProperty=nameWithType>|否|  
+|異動流程|<xref:System.ServiceModel.Channels.TransactionFlowBindingElement?displayProperty=nameWithType>|否|  
 |可靠性|<xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType>|否|  
 |安全性|<xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType>|否|  
 |複合雙工|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement?displayProperty=nameWithType>|否|  
@@ -45,7 +45,7 @@ ms.locfileid: "54548790"
  * 因為如果未指定的編碼方式，都需要每一個繫結的編碼方式，WCF 會新增預設編碼方式為您。 預設為 Text/XML (適用於 HTTP 和 HTTPS 傳輸) 和 Binary (適用於其他傳輸)。  
   
 ## <a name="creating-a-new-binding-element"></a>建立新的繫結項目  
- 衍生自型別除了<xref:System.ServiceModel.Channels.BindingElement>所提供的 WCF 中，您可以建立自己的繫結項目。 這樣一來，您就可以自訂繫結堆疊的建立方式和內含的元件，並使用堆疊中其他系統提供型別共同組成自己的 <xref:System.ServiceModel.Channels.BindingElement>。  
+ 衍生自型別除了<xref:System.ServiceModel.Channels.BindingElement>所提供的 WCF 中，您可以建立自己的繫結項目。 這樣一來，您就可以自訂繫結程序堆疊的建立方式和內含的元件，並使用堆疊中其他系統提供型別共同組成自己的 <xref:System.ServiceModel.Channels.BindingElement>。  
   
  例如，如果您實作了可將訊息記錄至資料庫的 `LoggingBindingElement`，則您必須將其放置到通道堆疊中的傳輸通道上層。 在此情況中，應用程式會建立由 `LoggingBindingElement` 和 `TcpTransportBindingElement` 組成的自訂繫結，如下列範例所示。  
   
@@ -90,7 +90,7 @@ public override BindingElementCollection CreateBindingElements()
 ```  
   
 ## <a name="security-restrictions-with-duplex-contracts"></a>雙工合約的安全性限制  
- 並非所有繫結項目都能彼此相容。 具體來說，安全性繫結項目一旦與雙工合約併用，會有一些限制。  
+ 並非所有繫結程序項目都能彼此相容。 具體來說，安全性繫結項目一旦與雙工合約併用，會有一些限制。  
   
 ### <a name="one-shot-security"></a>單次安全性  
  您可以實作 「 單次 」 安全性，其中所有必要的安全性認證來傳送單一訊息，藉由設定`negotiateServiceCredential`的屬性\<訊息 > 組態項目`false`。  
@@ -119,5 +119,6 @@ public override BindingElementCollection CreateBindingElements()
  您可以不建立全新的繫結類別，而改為擴充其中一個現有的系統提供繫結。 與先前的情況非常類似，這次您必須覆寫 <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> 屬性的 <xref:System.ServiceModel.Channels.Binding.Scheme%2A> 方法。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)

@@ -2,12 +2,12 @@
 title: 命令和參數
 ms.date: 03/30/2017
 ms.assetid: b623f810-d871-49a5-b0f5-078cc3c34db6
-ms.openlocfilehash: 0f90e45a9679e76a38621f6e3ae19de0e7591098
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a769e8cbd5138e78136df018abe058ac6c568951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54612762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198123"
 ---
 # <a name="commands-and-parameters"></a>命令和參數
 建立連至資料來源的連接後，您可以執行命令，並使用 <xref:System.Data.Common.DbCommand> 物件從資料來源傳回結果。 您可以使用目前使用中 .NET Framework 資料提供者的其中一個命令建構函式 (Constructor) 來建立命令。 建構函式可以接受選擇性引數，例如要在資料來源執行的 SQL 陳述式、<xref:System.Data.Common.DbConnection> 物件或 <xref:System.Data.Common.DbTransaction> 物件。 此外，您也可以將這些物件設定為命令的屬性。 您還可以使用 <xref:System.Data.Common.DbConnection.CreateCommand%2A> 物件的 `DbConnection` 方法，針對特定連接建立命令。 您可以使用 <xref:System.Data.Common.DbCommand.CommandText%2A> 屬性來設定正由命令執行的 SQL 陳述式。  
@@ -31,7 +31,8 @@ ms.locfileid: "54612762"
  說明如何使用資料提供者來執行預存程序 (Stored Procedure) 或資料定義語言 (DDL) 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

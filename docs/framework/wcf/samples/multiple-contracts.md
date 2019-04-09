@@ -2,12 +2,12 @@
 title: 多個合約
 ms.date: 03/30/2017
 ms.assetid: 2bef319b-fe9c-4d49-ac6c-dfb23eb35099
-ms.openlocfilehash: 5e52c83d69c15ca5c407240a8971248205fef832
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 320bfe2f2a290131fcbcef64992a58fa1e6e07d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818330"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073425"
 ---
 # <a name="multiple-contracts"></a>多個合約
 多個合約範例會示範如何在服務上實作一個以上的合約，以及如何設定要與每個已實作合約進行通訊的端點。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 此服務已修改成要定義兩個合約：`ICalculator` 以及 `ICalculatorSession` 合約。  
@@ -62,4 +62,3 @@ ms.locfileid: "58818330"
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\MultipleContracts`  
-  

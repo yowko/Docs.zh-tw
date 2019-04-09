@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將裝飾項繫結至項目
+title: HOW TO：將 Adorner 繫結至元素
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - UIElements [WPF], binding adorners to
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
-ms.openlocfilehash: 4943121aaf8ee6524be3fc9004eafee4fa92e527
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 54c9e6dfff2bbf7bfabde523b5d6ae5a623fe733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194717"
 ---
-# <a name="how-to-bind-an-adorner-to-an-element"></a>HOW TO：將裝飾項繫結至項目
+# <a name="how-to-bind-an-adorner-to-an-element"></a>HOW TO：將 Adorner 繫結至元素
 此範例示範如何以程式設計方式將裝飾項繫結至指定<xref:System.Windows.UIElement>。  
   
 ## <a name="example"></a>範例  
@@ -34,4 +34,5 @@ ms.locfileid: "57353916"
 >  使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 將裝飾項繫結至另一個目前不支援的項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝飾項概觀](adorners-overview.md)

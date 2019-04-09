@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 514c429fd2ec2cda4576245e2656921f0f10f275
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486949"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074881"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 函式
 取得 common language runtime (CLR) 應用程式所要求的版本和目錄資訊。  
@@ -119,11 +119,12 @@ HRESULT GetRequestedRuntimeInfo (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** MSCorEE.dll  
+ **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [GetRequestedRuntimeVersion 函式](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
 - [GetVersionFromProcess 函式](../../../../docs/framework/unmanaged-api/hosting/getversionfromprocess-function.md)
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

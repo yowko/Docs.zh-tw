@@ -1,18 +1,18 @@
 ---
-title: HOW TO：確保中繼資料端點的安全
+title: HOW TO：保護中繼資料端點的安全
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
-ms.openlocfilehash: e7ba87a0e2a0a9dd0a4cd984dd88b4850a24040e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4bf9b3601e33d90306401abe1dce73f77d09e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590678"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076571"
 ---
-# <a name="how-to-secure-metadata-endpoints"></a>HOW TO：確保中繼資料端點的安全
+# <a name="how-to-secure-metadata-endpoints"></a>HOW TO：保護中繼資料端點的安全
 服務的中繼資料可能包含有關應用程式而可能會遭到惡意使用者利用的敏感資訊。 服務的取用者也可能會要求安全機制來取得關於服務的中繼資料。 因此，有時候會需要使用安全端點來發行中繼資料。  
   
  中繼資料端點安全通常會定義 Windows Communication Foundation (WCF) 來保護應用程式端點的標準安全性機制。 (如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)。)  
@@ -93,10 +93,11 @@ ms.locfileid: "54590678"
 -   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
-- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [HOW TO：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
 - [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

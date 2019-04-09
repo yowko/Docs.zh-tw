@@ -6,18 +6,16 @@ helpviewer_keywords:
 - value inheritance [WPF]
 - properties [WPF], value inheritance
 ms.assetid: d7c338f9-f2bf-48ed-832c-7be58ac390e4
-ms.openlocfilehash: 64cafbe2f6044c83600ef227608dee24b29e3943
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 48543d2cfc11fc33dff6239cdfd7bfcd946e986a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186816"
 ---
 # <a name="property-value-inheritance"></a>屬性值繼承
 屬性值繼承是 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統的功能。 屬性值繼承可讓元素樹狀結構中的子元素，在將它設定於最接近之父元素中的任一處時，可從父元素中取得特殊屬性的值，並繼承該值。 父元素可能也會透過屬性值繼承來取得它的值，因此，系統有可能會不停地遞迴到頁面根元素。 屬性值繼承不是預設的屬性系統行為；屬性必須使用特殊的中繼資料值來建立，才能讓該屬性起始子元素上的屬性值繼承。  
-  
 
-  
 <a name="Property_Value_Inheritance_is_Containment_Inheritance"></a>   
 ## <a name="property-value-inheritance-is-containment-inheritance"></a>屬性值繼承是內含項目繼承  
  「繼承」在此處做為一個詞彙，它不完全等同於類型內容中的繼承概念，且為一般物件導向程式設計，其中衍生的類別會繼承來自其基底類別的成員定義。 該繼承的意義也適用於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]︰定義於各種基底類別中的屬性 (Property) 均會在衍生的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 類別用來做為元素時，公開為其屬性 (Attribute)，並公開為程式碼的成員。 屬性值繼承特別是關於屬性值如何根據元素樹狀結構內的父/子關聯性，從某一個元素繼承至另一個元素。 當您在 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記中定義應用程式，於其他元素內巢串元素時，幾乎可以直接看見該元素樹狀結構。 物件的樹狀結構也可以透過程式設計方式，將物件新增至其他物件的指定集合來建立，而屬性值繼承會在執行階段，於完成的樹狀結構中以相同方式來運作。  
@@ -42,6 +40,7 @@ ms.locfileid: "57359872"
  屬性繼承的運作方式是周遊元素的樹狀結構。 此樹狀結構通常會與邏輯樹狀結構平行。 不過，每當您納入 WPF 核心層級物件的標記來定義元素樹狀結構，例如<xref:System.Windows.Media.Brush>，您已建立的不連續的邏輯樹狀結構。 則為 true 的邏輯樹狀結構不會在概念上延伸透過<xref:System.Windows.Media.Brush>，因為邏輯樹狀結構是 WPF 架構層級概念。 您可以看到這反映在結果中的方法時<xref:System.Windows.LogicalTreeHelper>。 不過，屬性值繼承可以填補此鴻溝邏輯樹狀結構，而且只要可繼承的屬性註冊為附加的屬性和任何特意封鎖繼承的界限，則仍可傳遞繼承的值 (例如<xref:System.Windows.Controls.Frame>) 為止。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [相依性屬性中繼資料](dependency-property-metadata.md)
 - [附加屬性概觀](attached-properties-overview.md)
 - [相依性屬性值優先順序](dependency-property-value-precedence.md)

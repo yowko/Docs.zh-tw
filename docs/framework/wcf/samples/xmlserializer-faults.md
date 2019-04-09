@@ -2,12 +2,12 @@
 title: XmlSerializer 錯誤
 ms.date: 03/30/2017
 ms.assetid: c6b80f14-64f4-4162-ae76-71664cf42fd3
-ms.openlocfilehash: 71d273f1fe695fb8210eed7492ef987716d3b8ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 69b68603225a8d2cf2e7a97f4d6cf7edb9c3ffab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073027"
 ---
 # <a name="xmlserializer-faults"></a>XmlSerializer 錯誤
 <xref:System.Xml.Serialization.XmlSerializer> 錯誤合約範例會使用 <xref:System.Xml.Serialization.XmlSerializer> 示範如何在服務與用戶端之間傳達錯誤資訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，具有一些額外的程式碼新增至服務，以將內部例外狀況轉換為錯誤。 用戶端會嘗試執行除數為零，以便強制在服務上造成錯誤狀況。  
@@ -57,5 +57,6 @@ public interface ICalculator
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\XmlSerializerFaults`  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.XmlSerializerFormatAttribute>
 - <xref:System.ServiceModel.XmlSerializerFormatAttribute.SupportFaults%2A>

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4613407e-d0a8-4ef2-9f81-a6acb9fdc7d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: be87c91b798256f3913779bdbe36f3548066018b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 29932eb27bcd13876ea6982982e67341edb8e0de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55253934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076285"
 ---
 # <a name="publisherpolicy-element"></a>\<publisherPolicy > 項目
 指定執行階段是否套用發行者原則。  
@@ -86,6 +86,7 @@ ms.locfileid: "55253934"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

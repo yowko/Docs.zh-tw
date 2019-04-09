@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3b4e501629198c9bac627979547a5603d3e7866a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 15b42bb72975fad4c1830a961f83d9e3065d055b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187456"
 ---
 # <a name="isymunmanageddocumentgeturl-method"></a>ISymUnmanagedDocument::GetURL 方法
 傳回統一資源定位器 (URL)，這份文件。  
@@ -50,4 +50,5 @@ HRESULT GetURL(
  如果方法成功，則為 S_OK否則，出現錯誤代碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

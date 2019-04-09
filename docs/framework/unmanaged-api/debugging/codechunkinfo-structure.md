@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9d5ed028045f14012567ecfa86ff6a5c3d419a1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977912"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072658"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 結構
 
@@ -51,11 +51,12 @@ typedef struct _CodeChunkInfo {
   
  **標頭：** CorDebug.idl  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [GetCodeChunks 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugcode2-getcodechunks-method.md)
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

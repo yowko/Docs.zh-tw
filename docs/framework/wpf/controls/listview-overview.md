@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], ListView
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
-ms.openlocfilehash: 33f4cc55a52a67381c1fbf0d0a92bfad5e50b1ec
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186113"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186494"
 ---
 # <a name="listview-overview"></a>ListView 概觀
 <xref:System.Windows.Controls.ListView>控制項提供的基礎結構，以顯示不同的版面配置或檢視表中的一組資料的項目。 例如，使用者可能會想要以表格顯示資料項目，還要排序其資料行。  
-  
-  
+
 <a name="WhatisaListView"></a>   
 ## <a name="what-is-a-listview"></a>什麼是 ListView？  
  <xref:System.Windows.Controls.ListView>控制項是<xref:System.Windows.Controls.ItemsControl>衍生自<xref:System.Windows.Controls.ListBox>。 一般而言，其項目是資料集合的成員，並會表示為<xref:System.Windows.Controls.ListViewItem>物件。 A<xref:System.Windows.Controls.ListViewItem>是<xref:System.Windows.Controls.ContentControl>，而且可以包含單一子項目。 不過，該子元素可以是任何視覺元素。  
@@ -82,10 +81,11 @@ ms.locfileid: "58186113"
  自訂檢視<xref:System.Windows.Controls.GridView>衍生自<xref:System.Windows.Controls.ViewBase>抽象類別，可提供工具，可顯示資料的項目，即表示<xref:System.Windows.Controls.ListViewItem>物件。    
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.GridView>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Data.Binding>
 - [GridView 概觀](gridview-overview.md)
-- [HOW-TO 主題](listview-how-to-topics.md)
+- [HOW TO 主題](listview-how-to-topics.md)
 - [控制項](../advanced/optimizing-performance-controls.md)

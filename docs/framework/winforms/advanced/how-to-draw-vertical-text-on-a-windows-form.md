@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Form 上繪製垂直文字
+title: HOW TO：在 Windows Form 上繪製垂直文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
-ms.openlocfilehash: c605e7443a9d496901f55171228ad9a485dbff71
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724488"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072489"
 ---
-# <a name="how-to-draw-vertical-text-on-a-windows-form"></a>HOW TO：Windows Form 上繪製垂直文字
+# <a name="how-to-draw-vertical-text-on-a-windows-form"></a>HOW TO：在 Windows Form 上繪製垂直文字
 下列程式碼範例示範如何使用在 form 上繪製垂直文字<xref:System.Drawing.Graphics.DrawString%2A>方法的<xref:System.Drawing.Graphics>。  
   
 ## <a name="example"></a>範例  
@@ -38,6 +38,7 @@ ms.locfileid: "57724488"
 -   新細明體字型未安裝。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics.DrawString%2A>
 - <xref:System.Drawing.StringFormat.FormatFlags%2A>
 - <xref:System.Drawing.StringFormatFlags>

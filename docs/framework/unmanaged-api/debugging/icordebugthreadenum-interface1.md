@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b620357967d5d22148f64a3258fbb8dc52361d86
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7edf103e397c6e3e1577b5ed4bc8fc0df264b843
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137991"
 ---
 # <a name="icordebugthreadenum-interface"></a>ICorDebugThreadEnum 介面
 實作 ICorDebugEnum 方法，並列舉 ICorDebugThread 陣列。  
@@ -30,7 +30,7 @@ ms.locfileid: "56981721"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|取得指定的數目`ICorDebugThread`從列舉型別，從目前位置開始的執行個體。|  
+|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icordebugthreadenum-next-method.md)|取得指定的數目`ICorDebugThread`從列舉型別，從目前位置開始的執行個體。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -40,11 +40,12 @@ ms.locfileid: "56981721"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 759a5dd4cecbaf804d1ccf29fa504c2f5e1ad7f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9fa6e4114e9579079705700708840f2814b03b99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186871"
 ---
 # <a name="specifying-service-run-time-behavior"></a>指定服務執行階段行為
 一旦您設計好服務合約 ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)) 並實作服務合約 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md))，就可以設定服務執行階段的作業行為。 本主題討論系統提供的服務與作業行為，並說明哪裡可以找到更多資訊以建立新行為。 儘管有些行為會以屬性形式來套用，許多行為還是需要透過應用程式組態檔或以程式設計方式來套用。 如需有關如何設定服務應用程式的詳細資訊，請參閱 < [Configuring](../../../docs/framework/wcf/configuring-services.md)。  
@@ -77,49 +77,50 @@ ms.locfileid: "54566728"
 ### <a name="service-behaviors"></a>服務行為  
  下列行為可在服務上作業。  
   
--   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>. 套用至 WCF 服務，指出是否可以在執行該服務[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]相容性模式。  
+-   <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 套用至 WCF 服務，指出是否可以在執行該服務[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]相容性模式。  
   
--   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>. 控制服務如何授權用戶端宣告。  
+-   <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 控制服務如何授權用戶端宣告。  
   
--   <xref:System.ServiceModel.Description.ServiceCredentials>. 設定服務認證。 使用此類別來指定服務認證，例如 X.509 憑證。  
+-   <xref:System.ServiceModel.Description.ServiceCredentials>。 設定服務認證。 使用此類別來指定服務認證，例如 X.509 憑證。  
   
--   <xref:System.ServiceModel.Description.ServiceDebugBehavior>. 啟用偵錯和說明資訊功能的 WCF 服務。  
+-   <xref:System.ServiceModel.Description.ServiceDebugBehavior>。 啟用偵錯和說明資訊功能的 WCF 服務。  
   
--   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>. 控制服務中繼資料與相關資訊的發行。  
+-   <xref:System.ServiceModel.Description.ServiceMetadataBehavior>。 控制服務中繼資料與相關資訊的發行。  
   
--   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>. 指定安全性事件的稽核行為。  
+-   <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>。 指定安全性事件的稽核行為。  
   
--   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>. 設定可讓您調整服務效能的執行階段輸送量設定。  
+-   <xref:System.ServiceModel.Description.ServiceThrottlingBehavior>。 設定可讓您調整服務效能的執行階段輸送量設定。  
   
 ### <a name="endpoint-behaviors"></a>端點行為  
  下列行為可在端點上作業。 這類行為大多可用於用戶端應用程式中。  
   
--   <xref:System.ServiceModel.CallbackBehaviorAttribute>. 設定雙工用戶端應用程式中的回呼服務實作。  
+-   <xref:System.ServiceModel.CallbackBehaviorAttribute>。 設定雙工用戶端應用程式中的回呼服務實作。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior>. 啟用服務的偵錯 WCF 回呼物件。  
+-   <xref:System.ServiceModel.Description.CallbackDebugBehavior>。 啟用服務的偵錯 WCF 回呼物件。  
   
--   <xref:System.ServiceModel.Description.ClientCredentials>. 允許使用者設定用戶端與服務認證，以及服務認證驗證設定，以用在用戶端上。  
+-   <xref:System.ServiceModel.Description.ClientCredentials>。 允許使用者設定用戶端與服務認證，以及服務認證驗證設定，以用在用戶端上。  
   
--   <xref:System.ServiceModel.Description.ClientViaBehavior>. 用戶端用來針對應該建立的傳輸通道指定統一資源識別項 (URI)。  
+-   <xref:System.ServiceModel.Description.ClientViaBehavior>。 用戶端用來針對應該建立的傳輸通道指定統一資源識別項 (URI)。  
   
--   <xref:System.ServiceModel.Description.MustUnderstandBehavior>. 會指示 WCF 在停用`MustUnderstand`處理。  
+-   <xref:System.ServiceModel.Description.MustUnderstandBehavior>。 會指示 WCF 在停用`MustUnderstand`處理。  
   
--   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>. 指示執行階段針對通道使用同步接收處理序。  
+-   <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>。 指示執行階段針對通道使用同步接收處理序。  
   
--   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>. 針對支援交易接收的傳輸最佳化其接收作業。  
+-   <xref:System.ServiceModel.Description.TransactedBatchingBehavior>。 針對支援交易接收的傳輸最佳化其接收作業。  
   
 ### <a name="contract-behaviors"></a>合約行為  
- <xref:System.ServiceModel.DeliveryRequirementsAttribute>. 指定繫結必須提供給服務或用戶端實作的功能需求。  
+ <xref:System.ServiceModel.DeliveryRequirementsAttribute>。 指定繫結必須提供給服務或用戶端實作的功能需求。  
   
 ### <a name="operation-behaviors"></a>作業行為  
  下列作業行為指定作業的序列化與交易控制。  
   
--   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>. 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的執行階段行為。  
+-   <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>。 表示 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>的執行階段行為。  
   
--   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>. 控制 `XmlSerializer` 的執行階段行為並將其與作業相關聯。  
+-   <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior>。 控制 `XmlSerializer` 的執行階段行為並將其與作業相關聯。  
   
--   <xref:System.ServiceModel.TransactionFlowAttribute>. 指定服務作業接受異動標頭時所在的層級。  
+-   <xref:System.ServiceModel.TransactionFlowAttribute>。 指定服務作業接受異動標頭時所在的層級。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定服務](../../../docs/framework/wcf/configuring-services.md)
-- [如何：控制服務執行個體](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [HOW TO：控制服務執行個體](../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)

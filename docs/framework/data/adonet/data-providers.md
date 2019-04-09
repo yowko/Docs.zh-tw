@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 0223e21702c2a108740341c331f93b85f271cf8a
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074023"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework 資料提供者
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量型的，可在資料來源與程式碼之間建立最小層，以提升效能而不會犧牲功能。  
+[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的用途是連接資料庫、執行命令和擷取結果。 這些結果會直接處理、放入 <xref:System.Data.DataSet> 中以便視需要而公開給使用者、與多個來源的資料結合，或在各層之間進行遠端控制。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者是輕量級，建立最小層之間的資料來源和程式碼，以提升效能而不犧牲功能。  
   
  下表列出包含在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]中的資料提供者。  
   
@@ -21,7 +21,7 @@ ms.locfileid: "56664805"
 |-------------------------------------------------------------------------------|-----------------|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server|提供 Microsoft SQL Server 的資料存取。 使用 <xref:System.Data.SqlClient> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB|使用 OLE DB 公開的資料來源。 使用 <xref:System.Data.OleDb> 命名空間。|  
-|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC|使用 ODBC 公開的資料來源。 使用 <xref:System.Data.Odbc> 命名空間。|  
+|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC|使用 ODBC 公開的資料來源。 使用 <xref:System.Data.Odbc> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle|針對 Oracle 資料來源。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 支援 Oracle 用戶端軟體 8.1.7 (含) 以後版本，並使用 <xref:System.Data.OracleClient> 命名空間。|  
 |EntityClient 提供者|為實體資料模型 (EDM) 應用程式提供資料存取。 使用 <xref:System.Data.EntityClient> 命名空間。|  
 |[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server Compact 4.0。|提供的 Microsoft SQL Server Compact 4.0 資料存取。 使用 [System.Data.SqlServerCe](https://docs.microsoft.com/previous-versions/sql/compact/sql-server-compact-4.0/ec4st0e3(v=vs.100)) 命名空間。|  
@@ -29,18 +29,18 @@ ms.locfileid: "56664805"
 ## <a name="core-objects-of-net-framework-data-providers"></a>.NET Framework 資料提供者的核心物件  
  下表列出構成 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者的四個核心物件。  
   
-|物件|描述|  
+|Object|描述|  
 |------------|-----------------|  
 |`Connection`|建立連至特定資料來源的連接。 `Connection` 類別是所有 <xref:System.Data.Common.DbConnection> 物件的基底類別 (Base Class)。|  
-|`Command`|對資料來源執行命令。 公開 `Parameters`，並可在 `Transaction` 的 `Connection` 範圍中執行。 `Command` 類別是所有 <xref:System.Data.Common.DbCommand> 物件的基底類別 (Base Class)。|  
+|`Command`|對資料來源執行命令。 公開 `Parameters` ，並可在 `Transaction` 的 `Connection`範圍中執行。 `Command` 類別是所有 <xref:System.Data.Common.DbCommand> 物件的基底類別 (Base Class)。|  
 |`DataReader`|從資料來源讀取順向唯讀的資料流。 `DataReader` 類別是所有 <xref:System.Data.Common.DbDataReader> 物件的基底類別 (Base Class)。|  
 |`DataAdapter`|使用資料來源填入 `DataSet` 並解析更新。 `DataAdapter` 類別是所有 <xref:System.Data.Common.DbDataAdapter> 物件的基底類別 (Base Class)。|  
   
- 除了上表列出的核心類別外，[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者也包含下表所列出的類別。  
+ 除了上表列出的核心類別外， [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者也包含下表所列出的類別。  
   
-|物件|描述|  
+|Object|描述|  
 |------------|-----------------|  
-|`Transaction`|可讓您將命令登記在資料來源的交易中。 `Transaction` 類別是所有 <xref:System.Data.Common.DbTransaction> 物件的基底類別 (Base Class)。 ADO.NET 也支援使用 <xref:System.Transactions> 命名空間中類別的交易。|  
+|`Transaction`|可讓您將命令登記在資料來源的異動中。 `Transaction` 類別是所有 <xref:System.Data.Common.DbTransaction> 物件的基底類別 (Base Class)。 ADO.NET 也支援使用 <xref:System.Transactions> 命名空間中類別的交易。|  
 |`CommandBuilder`|Helper 物件，可自動產生 `DataAdapter` 的命令屬性，或從預存程序衍生參數資訊並填入 `Parameters` 物件的 `Command` 集合。 `CommandBuilder` 類別是所有 <xref:System.Data.Common.DbCommandBuilder> 物件的基底類別 (Base Class)。|  
 |`ConnectionStringBuilder`|Helper 物件，可讓您簡單地建立和管理 `Connection` 物件所使用的連接字串內容。 `ConnectionStringBuilder` 類別是所有 <xref:System.Data.Common.DbConnectionStringBuilder> 物件的基底類別 (Base Class)。|  
 |`Parameter`|定義命令和預存程序的輸入、輸出和傳回值參數。 `Parameter` 類別是所有 <xref:System.Data.Common.DbParameter> 物件的基底類別 (Base Class)。|  
@@ -76,7 +76,7 @@ using System.Data.SqlClient;
   
  下表顯示用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]測試過的提供者。  
   
-|驅動程式|提供者|  
+|驅動器|提供者|  
 |------------|--------------|  
 |SQLOLEDB|SQL Server 的 Microsoft OLE DB 提供者|  
 |MSDAORA|Microsoft OLE DB Provider for Oracle|  
@@ -87,9 +87,9 @@ using System.Data.SqlClient;
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 不支援 OLE DB 2.5 版的介面。 OLE DB 提供者若需要 OLE DB 2.5 介面的支援，將無法用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 正常運作。 這包括 Microsoft OLE DB provider for Exchange 和 Microsoft OLE DB provider for Internet Publishing。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 無法用於 OLE DB provider for ODBC (MSDASQL)。 若要使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 存取 ODBC 資料來源，請使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 無法用於 OLE DB provider for ODBC (MSDASQL)。 若要使用 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]存取 ODBC 資料來源，請使用 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 類別位於 <xref:System.Data.OleDb> 命名空間中。 下列程式碼範例顯示如何將 `System.Data.OleDb` 命名空間納入您的應用程式。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for OLE DB 類別位於<xref:System.Data.OleDb>命名空間。 下列程式碼範例顯示如何將 `System.Data.OleDb` 命名空間納入您的應用程式。  
   
 ```vb  
 Imports System.Data.OleDb  
@@ -110,7 +110,7 @@ using System.Data.OleDb;
 |Oracle 的 Microsoft ODBC|  
 |Microsoft Access Driver (*.mdb)|  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 類別位於 <xref:System.Data.Odbc> 命名空間中。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC 類別位於<xref:System.Data.Odbc>命名空間。  
   
  下列程式碼範例顯示如何將 `System.Data.Odbc` 命名空間納入您的應用程式。  
   
@@ -130,7 +130,7 @@ using System.Data.Odbc;
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 要求先在系統上安裝 Oracle 用戶端軟體 (8.1.7 (含) 以後版本)，以便連接到 Oracle 資料來源。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 類別位於 <xref:System.Data.OracleClient> 命名空間中，且包含在 `System.Data.OracleClient.dll` 組件 (Assembly) 中。 如果編譯的應用程式有使用資料提供者，則必須參考 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 類別位於<xref:System.Data.OracleClient>命名空間，且包含在`System.Data.OracleClient.dll`組件。 如果編譯的應用程式有使用資料提供者，則必須參考 `System.Data.dll` 和 `System.Data.OracleClient.dll` 。  
   
  下列程式碼範例顯示如何將 `System.Data.OracleClient` 命名空間納入您的應用程式。  
   
@@ -158,6 +158,7 @@ using System.Data.OracleClient;
  EntityClient 提供者是用於根據實體資料模型 (EDM) 存取資料。 與其他 .NET Framework 資料提供者不同的是，它不會直接與資料來源互動。 不過，它會使用 Entity SQL 與基礎資料提供者進行通訊。 如需詳細資訊，請參閱 < [Entity Framework 的 EntityClient 提供者](./ef/entityclient-provider-for-the-entity-framework.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

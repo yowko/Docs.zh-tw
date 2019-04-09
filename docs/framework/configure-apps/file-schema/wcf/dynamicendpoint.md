@@ -2,12 +2,12 @@
 title: <dynamicEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 929f223d-176d-4205-9505-234ddb6dbff4
-ms.openlocfilehash: 786a70e8c686497e91492938a4d0796db4f6dd91
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e1a53869faa1997d2e79c3d2869a15001ee29626
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187742"
 ---
 # <a name="dynamicendpoint"></a>\<dynamicEndpoint>
 這個組態項目定義標準端點，其中包含的資訊可讓您啟用應用程式做為用戶端程式，在執行階段時動態尋找端點位址。  
@@ -61,5 +61,6 @@ ms.locfileid: "55269792"
 |[\<standardEndpoints>](../../../../../docs/framework/configure-apps/file-schema/wcf/standardendpoints.md)|標準端點的集合，這些端點是預先定義的端點，其中包含一個或多個固定的屬性 (位址、繫結、合約)。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Discovery.DynamicEndpoint>
 - <xref:System.ServiceModel.Discovery.Configuration.DynamicEndpointElement>

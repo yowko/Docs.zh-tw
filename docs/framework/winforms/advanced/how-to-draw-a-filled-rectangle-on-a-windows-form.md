@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Form 上繪製實心的矩形
+title: HOW TO：在 Windows Form 上繪製實心矩形
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - rectangles [Windows Forms], drawing
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
-ms.openlocfilehash: 53fab93f47c16257b5ab2e336b43c6133a31d509
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716890"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072023"
 ---
-# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>HOW TO：Windows Form 上繪製實心的矩形
+# <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>HOW TO：在 Windows Form 上繪製實心矩形
 此範例會在表單上繪製實心的矩形。  
   
 ## <a name="example"></a>範例  
@@ -34,9 +34,10 @@ ms.locfileid: "57716890"
  您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Brush>和<xref:System.Drawing.Graphics>物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics.FillRectangle%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)
 - [GDI+ 中的筆刷和填滿的形狀](brushes-and-filled-shapes-in-gdi.md)

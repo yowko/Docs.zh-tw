@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c34b5012-aee9-4994-9364-1d99d12b7463
-ms.openlocfilehash: 249ed8425f175b80cb55289c2a7fe68742d8389c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c8a4c29b1faa3c05f2cf32e9a60104b43a9b1c40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655721"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074543"
 ---
 # <a name="local-method-calls"></a>區域方法呼叫
 區域方法呼叫就是在物件模型 (Object Model) 內執行的呼叫。 遠端方法呼叫則是 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 轉譯為 SQL 並傳輸給資料庫引擎進行執行的呼叫。 需要區域方法呼叫時[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]無法轉譯成 SQL 呼叫。 否則會擲回 <xref:System.InvalidOperationException>。  
@@ -27,4 +27,5 @@ ms.locfileid: "54655721"
  [!code-vb[DlinqLocalMethodCall#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqLocalMethodCall/vb/northwind.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

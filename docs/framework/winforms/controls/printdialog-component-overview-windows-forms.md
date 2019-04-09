@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Print dialog box [Windows Forms], displaying
 - PrintDialog component [Windows Forms], about PrintDialog component
 ms.assetid: 8327b8ac-1017-4b5e-a88b-fea9dd56999c
-ms.openlocfilehash: dfd6979c596f47fbc9bf68e3866f7fbc9d1dc21c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 982c52dbe9243e69bbb0452513e78798f4d1fd0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072437"
 ---
 # <a name="printdialog-component-overview-windows-forms"></a>PrintDialog 元件概觀 (Windows Form)
 Windows Forms [PrintDialog](printdialog-component-windows-forms.md)元件是預先設定的對話方塊，用來選取印表機、 選擇要列印的頁面以及決定其他列印相關設定以 Windows 為基礎的應用程式中。 使用它做為印表機和列印相關設定選擇的簡單解決方案，就不需設定您自己的對話方塊。 您可以讓使用者列印文件中的許多部分： 列印全部、 列印選取的頁面範圍或列印選取的範圍。 藉由標準 Windows 對話方塊，建立使用者可立即熟悉基本功能的應用程式。 <xref:System.Windows.Forms.PrintDialog>元件繼承自<xref:System.Windows.Forms.CommonDialog>類別。  
@@ -23,5 +23,6 @@ Windows Forms [PrintDialog](printdialog-component-windows-forms.md)元件是預�
  當加入至表單，<xref:System.Windows.Forms.PrintDialog>元件會出現在底部的 Windows Form 設計工具的紙匣。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.PrintDialog>
 - [PrintDialog 元件](printdialog-component-windows-forms.md)

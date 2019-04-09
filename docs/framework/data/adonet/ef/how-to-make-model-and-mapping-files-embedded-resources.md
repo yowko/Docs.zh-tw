@@ -1,15 +1,15 @@
 ---
-title: HOW TO：讓模型和對應檔案內嵌的資源
+title: HOW TO：讓模型和對應檔成為內嵌資源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: 7827ecce0fe7f5c21291d3ba2edd925c6a8e5960
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826521"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138582"
 ---
-# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>HOW TO：讓模型和對應檔案內嵌的資源
+# <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>HOW TO：讓模型和對應檔成為內嵌資源
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓您部署模型和對應檔做為內嵌資源的應用程式。 具有內嵌模型和對應檔的組件必須載入與實體連接相同的應用程式定義域中。 如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 根據預設，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具會內嵌模型和對應檔。 當您手動定義模型和對應檔時，請使用這個程序，確保檔案與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式已一起部署為內嵌資源。  
   
 > [!NOTE]
@@ -35,11 +35,10 @@ ms.locfileid: "55826521"
   
 ## <a name="example"></a>範例  
  下列連接字串參考內嵌的模型和對應檔[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。 此連接字串儲存在專案的 App.config 檔案中。  
-  
-  
-  
+
 ## <a name="see-also"></a>另請參閱
+
 - [建立模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)
-- [如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
-- [如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
+- [HOW TO：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)
+- [HOW TO：建置 EntityCollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)
 - [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))

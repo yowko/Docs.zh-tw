@@ -2,12 +2,12 @@
 title: 多層式架構和遠端應用程式以及 LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 854a1cdd-53cb-45f5-83ca-63962a9b3598
-ms.openlocfilehash: 32035720992a679457f11414ab282f949b450082
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 7741368896b0bf5a2508d9b727fad386cce6177d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094070"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075156"
 ---
 # <a name="n-tier-and-remote-applications-with-linq-to-sql"></a>多層式架構和遠端應用程式以及 LINQ to SQL
 您可以建立使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 N-Tier 或多層應用程式。 一般而言，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]資料內容、 實體類別和查詢建構邏輯位於中介層上為資料存取層 (DAL)。 商務邏輯以及任何非持續性資料則可完全實作在實體的部分類別和方法和資料內容，或可以實作在另外的類別中。
@@ -21,15 +21,16 @@ ms.locfileid: "56094070"
 ## <a name="additional-resources"></a>其他資源
  如需如何實作使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 N-Tier 應用程式，請參閱下列主題：
 
--   [使用 ASP.NET 的 LINQ to SQL 多層式架構](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
+-   [LINQ to SQL 多層式架構與 ASP.NET](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-aspnet.md)
 
--   [使用 Web 服務的 LINQ to SQL 多層式架構](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
+-   [LINQ to SQL 多層式架構與 Web 服務](../../../../../../docs/framework/data/adonet/sql/linq/linq-to-sql-n-tier-with-web-services.md) 
 
--   [實作多層式架構商務邏輯](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
+-   [實作多層式架構 (N-Tier) 商務邏輯](../../../../../../docs/framework/data/adonet/sql/linq/implementing-business-logic-linq-to-sql.md)
 
 -   [多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)](../../../../../../docs/framework/data/adonet/sql/linq/data-retrieval-and-cud-operations-in-n-tier-applications.md)
 
  如需有關使用 ADO.NET 資料集的多層式架構應用程式的詳細資訊，請參閱 <<c0> [ 使用多層式架構應用程式中的資料集](/visualstudio/data-tools/work-with-datasets-in-n-tier-applications)。
 
 ## <a name="see-also"></a>另請參閱
+
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

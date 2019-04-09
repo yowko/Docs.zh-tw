@@ -9,12 +9,12 @@ helpviewer_keywords:
 - gradients [Windows Forms], creating path
 - graphics paths [Windows Forms], creating gradient
 ms.assetid: 1948e834-e104-481c-b71d-d8aa9e4d106e
-ms.openlocfilehash: cbbffa7b9250c5e489a95f687ea58eaf2a08d1bf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 31a8c68f382f81da2acac363bba6c8822e535770
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126223"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186091"
 ---
 # <a name="how-to-create-a-path-gradient"></a>HOW TO：建立路徑漸層
 <xref:System.Drawing.Drawing2D.PathGradientBrush>類別可讓您自訂您逐漸變更色彩填滿圖形的方式。 例如，您可以指定路徑的中心的一種色彩和路徑的界限的另一種色彩。 您也可以指定不同的色彩，每個界限的數個點的路徑。  
@@ -111,4 +111,5 @@ ms.locfileid: "58126223"
  上述範例專為搭配 Windows Form 使用，而且它們需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用漸層筆刷填滿形狀](using-a-gradient-brush-to-fill-shapes.md)

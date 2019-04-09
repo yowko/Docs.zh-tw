@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 644e180e2f15592db2112a5cd6f5b0130c6abea8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4bf72998c798040451b814a7f0287bca65f5300
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722320"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073321"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>HOW TO：使用 GDI 繪製文字
 具有<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法中的<xref:System.Windows.Forms.TextRenderer>類別，您可以存取[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]表單或控制項上繪製文字的功能。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] 文字轉譯通常提供較佳的效能和更精確的文字比測量[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]。  
@@ -34,9 +34,10 @@ ms.locfileid: "57722320"
  如需取得詳細資訊<xref:System.Drawing.Graphics>，請參閱[How to:建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)。 如需有關建構<xref:System.Drawing.Font>，請參閱[How to:建構字型系列和字型](how-to-construct-font-families-and-fonts.md)。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述程式碼範例專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 上述程式碼範例專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.TextRenderer>
 - <xref:System.Drawing.Font>
 - <xref:System.Drawing.Color>

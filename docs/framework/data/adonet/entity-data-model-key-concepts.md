@@ -2,12 +2,12 @@
 title: 實體資料模型索引鍵概念
 ms.date: 03/30/2017
 ms.assetid: c635a16d-6674-45aa-9344-dcb7df992bab
-ms.openlocfilehash: bcfc9cbb82a23dcb4d33ca8a838a49eac7180111
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2efa54b6bd656129812cc9dd7c2ce38a4fb2a89a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825660"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074441"
 ---
 # <a name="entity-data-model-key-concepts"></a>實體資料模型索引鍵概念
 Entity Data Model (EDM) 來描述資料結構會使用三個主要概念：*實體類型*，*關聯型別*，並*屬性*。 描述任何 EDM 實作中的資料結構時，這些是最重要的概念。  
@@ -39,4 +39,5 @@ Entity Data Model (EDM) 來描述資料結構會使用三個主要概念：*實�
  [!code-xml[EDM_Example_Model#EDMExampleCSDL](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#edmexamplecsdl)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

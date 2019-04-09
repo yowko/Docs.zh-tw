@@ -9,12 +9,12 @@ helpviewer_keywords:
 - container tags, <bindingRedirect> element
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
-ms.openlocfilehash: 1db46d4eb4418682613624182cca133980206ea6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185909"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect > 項目
 將一個組件版本重新導向至另一個版本。  
@@ -47,7 +47,7 @@ newVersion="new assembly version"/>
   
 |項目|描述|  
 |-------------|-----------------|  
-|無||  
+|None||  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -85,6 +85,7 @@ newVersion="new assembly version"/>
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [重新導向組件版本](../../../../../docs/framework/configure-apps/redirect-assembly-versions.md)

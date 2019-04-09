@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [Windows Forms], cropping
 - images [Windows Forms], scaling
 ms.assetid: 053e3360-bca0-4b25-9afa-0e77a6f17b03
-ms.openlocfilehash: ff0567dca0fd86736e02a9dd827ec15df8bf2df8
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 4257431881565f9160f45795111d374cc680dedd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189881"
 ---
 # <a name="how-to-crop-and-scale-images"></a>HOW TO：裁剪和縮放影像
 <xref:System.Drawing.Graphics>類別提供了幾個<xref:System.Drawing.Graphics.DrawImage%2A>方法，其中有些有可用來裁剪和縮放比例的映像的來源和目的地矩形參數。  
@@ -36,5 +36,6 @@ ms.locfileid: "58654493"
  上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 請務必取代`Apple.gif`映像檔案名稱與您系統為有效的路徑。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [影像、點陣圖和中繼檔](images-bitmaps-and-metafiles.md)
 - [使用影像、點陣圖、圖示和中繼檔](working-with-images-bitmaps-icons-and-metafiles.md)

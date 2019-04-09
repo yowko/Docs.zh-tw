@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], performance
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
-ms.openlocfilehash: 921a67a24464ff5ac782045ae022f7766f32d579
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352395"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139421"
 ---
 # <a name="optimizing-performance-application-resources"></a>最佳化效能：應用程式資源
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您共用應用程式資源，以便您可以透過類似類型的項目支援一致的外觀或行為。 本主題提供可協助您這方面的一些建議改善您的應用程式的效能。  
@@ -43,12 +43,13 @@ ms.locfileid: "57352395"
  [!code-xaml[Performance#PerformanceSnippet8](~/samples/snippets/csharp/VS_Snippets_Wpf/Performance/CSharp/DynamicResource.xaml#performancesnippet8)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
 - [版面配置與設計](optimizing-performance-layout-and-design.md)
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)

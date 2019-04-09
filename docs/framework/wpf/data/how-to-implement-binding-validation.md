@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], validation of binding
 - binding [WPF], validation of
 ms.assetid: eb98b33d-9866-49ae-b981-bc5ff20d607a
-ms.openlocfilehash: eefdb3b1205a64221e3e9352f70e3d06dc074eff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3950df8b6f4b48a035c6ebf37d8d65c18cb82e1e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197213"
 ---
 # <a name="how-to-implement-binding-validation"></a>HOW TO：實作繫結驗證
 此範例示範如何使用<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>和樣式觸發程序提供視覺化回應以通知使用者，當您輸入了無效的值，根據自訂驗證規則。  
@@ -38,5 +38,6 @@ ms.locfileid: "57368541"
  請注意，如果您未提供自訂<xref:System.Windows.Controls.Validation.ErrorTemplate%2A>預設錯誤範本會出現驗證錯誤時，提供視覺化回饋給使用者。 如需詳細資訊，請參閱[資料繫結概觀](data-binding-overview.md)中的＜資料驗證＞。 除此之外，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供的內建驗證規則，會攔截繫結來源屬性更新期間所擲回的例外狀況。 如需詳細資訊，請參閱<xref:System.Windows.Controls.ExceptionValidationRule>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

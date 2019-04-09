@@ -2,12 +2,12 @@
 title: 資訊洩露
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: 267e0dc656e05ed6f95eef1c75e40c07108a164e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195900"
 ---
 # <a name="information-disclosure"></a>資訊洩露
 資訊洩漏讓攻擊者可以取得與系統有關的寶貴資訊。 因此，公開資訊時，請務必考慮您要公開的是哪些資訊，以及是否會遭到惡意使用者的使用。 下列列出可能的資訊洩漏攻擊，並針對各種攻擊提供減少受到攻擊的方法。  
@@ -57,9 +57,10 @@ MyChannelFactory.Credentials.Windows.ClientCredential = new System.Net.NetworkCr
  如果有指定網域，但使用端點識別功能來指定無效的服務主體名稱，則會使用 NTLM。 如需有關如何指定端點識別的詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

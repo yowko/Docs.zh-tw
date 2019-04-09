@@ -2,12 +2,12 @@
 title: 服務偵錯行為
 ms.date: 03/30/2017
 ms.assetid: 9d8fd3fb-dc39-427a-8235-336a7e7162ba
-ms.openlocfilehash: 4eac577775074abf8c5f35c73dfa3286a75c2744
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d97ff2d2290d58c0217add306718329a282abbff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192198"
 ---
 # <a name="service-debug-behavior"></a>服務偵錯行為
 這個範例會示範如何設定服務偵錯行為設定。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會在組態檔中明確地定義服務偵錯行為。 這個行為也可以透過程式碼，以命令方式定義。  
@@ -58,4 +58,3 @@ ms.locfileid: "58835764"
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\ServiceDebug`  
-  

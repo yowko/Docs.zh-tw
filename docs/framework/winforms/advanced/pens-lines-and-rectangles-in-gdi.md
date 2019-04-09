@@ -17,12 +17,12 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 91f41fb4acf5ec174bd76498a70aed3dcda076f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705736"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078222"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ 中的畫筆、線條和矩形
 若要使用繪製線條[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]您需要建立<xref:System.Drawing.Graphics>物件和<xref:System.Drawing.Pen>物件。 <xref:System.Drawing.Graphics>物件提供的方法，實際進行繪製，而<xref:System.Drawing.Pen>物件會儲存屬性，例如線條色彩、 寬度和樣式。  
@@ -68,9 +68,10 @@ ms.locfileid: "57705736"
  A<xref:System.Drawing.Rectangle>物件具有方法和屬性來操作和收集矩形的相關資訊。 例如，<xref:System.Drawing.Rectangle.Inflate%2A>和<xref:System.Drawing.Rectangle.Offset%2A>方法變更的大小和位置的矩形。 <xref:System.Drawing.Rectangle.IntersectsWith%2A>方法會告訴您該矩形是否與另一個指定的矩形，而<xref:System.Drawing.Rectangle.Contains%2A>方法會告訴您指定的點是否在矩形內部。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [如何：建立畫筆](how-to-create-a-pen.md)
-- [如何：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)
-- [如何：繪製外框的形狀](how-to-draw-an-outlined-shape.md)
+- [HOW TO：建立畫筆](how-to-create-a-pen.md)
+- [HOW TO：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)
+- [HOW TO：繪製外框形狀](how-to-draw-an-outlined-shape.md)

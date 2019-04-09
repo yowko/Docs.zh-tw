@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49139f5b1f65bc2e258362d9b47f4e0d44cc6894
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f62dadf4f21022f8f425596cf5957891ed39effe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59189179"
 ---
 # <a name="icorprofilerinfo3getthreadstaticaddress2-method"></a>ICorProfilerInfo3::GetThreadStaticAddress2 方法
 取得指定執行緒靜態欄位的位址，這位於指定之執行緒和應用程式定義域的範圍內。  
@@ -70,11 +70,12 @@ HRESULT GetThreadStaticAddress2(
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [程式碼剖析](../../../../docs/framework/unmanaged-api/profiling/index.md)

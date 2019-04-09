@@ -2,12 +2,12 @@
 title: 發行之權杖的訊息安全性
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
-ms.openlocfilehash: bc95a6761db6f025e45eacf1ecd2b7a86a804116
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3c2669a4f569d26be15fc7b338f7b01c3e94791c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54652965"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195094"
 ---
 # <a name="message-security-with-issued-tokens"></a>發行之權杖的訊息安全性
 已發行權杖的用戶端可讓聯合的安全性案例中 Windows Communication Foundation (WCF)。  
@@ -17,5 +17,6 @@ ms.locfileid: "54652965"
  如需聯合案例的詳細說明，請參閱 <<c0> [ 聯合與發行權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+
+- [聯合與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

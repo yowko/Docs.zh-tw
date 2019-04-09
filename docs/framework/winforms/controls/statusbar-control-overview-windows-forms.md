@@ -7,12 +7,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], about StatusBar control
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
-ms.openlocfilehash: 516462aa92e2cd836820ec34440f34bb4c5b577d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5fdefa7d7e7c7ef543f677be7beb61dfee54e077
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077312"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar 控制項概觀 (Windows Form)
 > [!IMPORTANT]
@@ -26,6 +26,7 @@ ms.locfileid: "57703799"
  您可以在狀態列上顯示的單一訊息，藉由設定<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性，以`false`（預設值） 和設定<xref:System.Windows.Forms.StatusBar.Text%2A>狀態列以您想要出現在狀態列中文字的屬性。 您可以將 [狀態] 列分成面板，以藉由設定顯示多個類型的資訊<xref:System.Windows.Forms.StatusBar.ShowPanels%2A>屬性，以`true`並使用<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection.Add%2A>方法<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)

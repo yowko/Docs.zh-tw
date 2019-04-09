@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4789d5cad8bbb4f7dc6f5fcedc56be3bf74703b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 213fa9fda6b154d4548b4163cc7b5890bfcfb49c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186988"
 ---
 # <a name="iclrruntimeinfo-interface"></a>ICLRRuntimeInfo 介面
 提供傳回特定 common language runtime (CLR) 的相關資訊包括版本、 目錄和負載狀態的方法。 此介面也會提供執行階段特定功能未初始化的執行階段。 它包含執行階段相對[LoadLibrary](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-loadlibrary-method.md)方法中，執行階段模組專屬[GetProcAddress](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getprocaddress-method.md)方法，並透過提供執行階段介面[GetInterface](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getinterface-method.md)方法。  
@@ -48,10 +48,11 @@ ms.locfileid: "54520187"
   
  **標頭：** MetaHost.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

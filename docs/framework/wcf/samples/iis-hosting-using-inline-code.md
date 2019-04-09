@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 776fa01d78c59d38a55de969a10096c22f34e9e5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4fa4c7ff92252733fcff65e4fc3ab3c6b3624181
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186884"
 ---
 # <a name="iis-hosting-using-inline-code"></a>使用內嵌程式碼的 IIS 裝載
 這個範例會示範如何實作由網際網路資訊服務 (IIS) 裝載的服務，此時服務程式碼內嵌在 .svc 檔中並且視需要進行編譯。 服務程式碼也可以直接實作在位於應用程式之 \App_Code 目錄的原始程式碼檔中，或是編譯成部署在 \bin 中的組件。 這個範例不會示範這些技術。  
@@ -95,4 +95,5 @@ Press <ENTER> to terminate client.
 4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 如需有關如何建立可呼叫此服務的用戶端應用程式的範例，請參閱[How to:建立用戶端](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

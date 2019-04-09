@@ -9,18 +9,16 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 9f61de9bf528690e6057ec445ea7f1b77b3be0b9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828468"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139603"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
-  
 
-  
 <a name="what_is_a_flow_document"></a>   
 ## <a name="what-is-a-flow-document"></a>什麼是非固定格式文件  
  非固定格式文件的設計是會根據視窗大小、裝置解析度及其他環境變數來「自動重排內容」。 此外，非固定格式文件具備許多內建功能，包括搜尋、將可讀性最佳化的檢視模式，以及變更字型大小與外觀的能力。 當可讀性是使用文件的主要考量時，最好使用非固定格式文件。 相反地，固定格式文件的設計是靜態展示。 當來源內容的精確度很重要時，固定格式文件很有用。 請參閱[WPF 中的文件](documents-in-wpf.md)如需有關不同類型的文件。  
@@ -156,7 +154,7 @@ ms.locfileid: "58828468"
   
  **注意：** 從開始[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]，則<xref:System.Windows.Documents.Run.Text%2A>屬性<xref:System.Windows.Documents.Run>物件是相依性屬性。 您可以繫結<xref:System.Windows.Documents.Run.Text%2A>屬性到資料來源，例如<xref:System.Windows.Controls.TextBlock>。 <xref:System.Windows.Documents.Run.Text%2A>屬性完全支援單向繫結。 <xref:System.Windows.Documents.Run.Text%2A>屬性也支援雙向繫結，除了<xref:System.Windows.Controls.RichTextBox>。 如需範例，請參閱 <xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>。  
   
- **Span**  
+ **範圍**  
   
  <xref:System.Windows.Documents.Span> 一起分組其他內嵌內容項目。 內的內容套用任何固有的轉譯<xref:System.Windows.Documents.Span>項目。 不過，項目繼承自<xref:System.Windows.Documents.Span>包括<xref:System.Windows.Documents.Hyperlink>， <xref:System.Windows.Documents.Bold>，<xref:System.Windows.Documents.Italic>和<xref:System.Windows.Documents.Underline>不要將格式套用至文字。  
   
@@ -196,7 +194,7 @@ ms.locfileid: "58828468"
   
  <xref:System.Windows.Documents.Figure> 和<xref:System.Windows.Documents.Floater>數種方式不同，並且用於不同的案例。  
   
- **圖表：**  
+ **圖：**  
   
 -   可以位於：您可以設定其水平和垂直錨點上，以將它固定相對於頁面、 內容、 資料行或段落。 您也可以使用其<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>和<xref:System.Windows.Documents.Figure.VerticalOffset%2A>屬性來指定任意位移。  
   
@@ -204,7 +202,7 @@ ms.locfileid: "58828468"
   
 -   不分頁︰如果內的內容<xref:System.Windows.Documents.Figure>未符合內部<xref:System.Windows.Documents.Figure>，它會轉譯任何符合最適大小，其餘的內容會遺失  
   
- **Floater：**  
+ **浮動：**  
   
 -   無法定位，但會轉譯任何可用的空間。 您不能設定位移或錨點<xref:System.Windows.Documents.Floater>。  
   
@@ -349,11 +347,12 @@ ms.locfileid: "58828468"
  請參閱[WPF 中的印刷樣式](typography-in-wpf.md)如需印刷樣式的詳細資訊。  
   
 ## <a name="see-also"></a>另請參閱
-- [Text](optimizing-performance-text.md)
+
+- [文字](optimizing-performance-text.md)
 - [WPF 中的印刷樣式](typography-in-wpf.md)
-- [HOW-TO 主題](flow-content-elements-how-to-topics.md)
+- [HOW TO 主題](flow-content-elements-how-to-topics.md)
 - [TextElement 內容模型概觀](textelement-content-model-overview.md)
 - [RichTextBox 概觀](../controls/richtextbox-overview.md)
 - [WPF 中的文件](documents-in-wpf.md)
 - [資料表概觀](table-overview.md)
-- [註釋概觀](annotations-overview.md)
+- [附註概觀](annotations-overview.md)

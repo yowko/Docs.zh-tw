@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: 30836f7f1cbf742c621254ef92314d20a4fffd83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185688"
 ---
 # <a name="data-member-default-values"></a>資料成員預設值
 在  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]，類型具有的概念*預設值*。 例如，任何參考型別的預設值為 `null`，整數型別則為零。 有時候資料成員設為預設值時，會需要從序列化資料中省略該成員。 因為此成員為預設值，而實際值不需要序列化，因此這樣做可促進效能。  
@@ -57,5 +57,6 @@ ms.locfileid: "54715060"
  結構描述匯入時<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>屬性會自動設為`false`每當所提到的 WCF 特定註解先前偵測到。 針對 `false` 屬性設為 `nillable` 的參考型別，此屬性也會設為 `false`，以支援常在使用 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務時發生的特定互通性案例。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>

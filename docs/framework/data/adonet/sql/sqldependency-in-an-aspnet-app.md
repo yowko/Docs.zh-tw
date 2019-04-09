@@ -5,16 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: 42eb0a417659776b2cd2fffa9d2fd62e58a4a176
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073711"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
-本節中的範例將顯示如何藉由使用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 物件，間接使用 <xref:System.Web.Caching.SqlCacheDependency>。 
-  <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:System.Data.SqlClient.SqlDependency> 來接聽通知並正確地更新快取。  
+本節中的範例將顯示如何藉由使用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 物件，間接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:System.Data.SqlClient.SqlDependency> 來接聽通知並正確地更新快取。  
   
 > [!NOTE]
 >  範例程式碼會假設您已啟用查詢通知所執行的指令碼[啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)。  
@@ -59,5 +58,6 @@ ms.locfileid: "56091977"
  現在，請使用 Transact-SQL UPDATE 命令來更新資料庫中的資料，並重新整理頁面。 此時顯示的時間表示已使用資料庫的新資料來重新整理快取。 請注意，雖然快取已更新，但是顯示在頁面上的時間要等到發生回傳事件之後才會變更。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

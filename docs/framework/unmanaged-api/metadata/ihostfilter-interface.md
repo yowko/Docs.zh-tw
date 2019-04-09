@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dc3e1d4afb0bdccc9e4806b7e9f1d82ef2c30539
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc22de2d30d0f928653206ab9e356577a84c572c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186975"
 ---
 # <a name="ihostfilter-interface"></a>IHostFilter 介面
 提供方法，以表示將會處理指定的語彙基元。  
@@ -40,9 +40,10 @@ ms.locfileid: "54635517"
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)

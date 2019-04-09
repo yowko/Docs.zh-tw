@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], transforming with color matrices
 - colors [Windows Forms], shearing
 ms.assetid: 0a424171-5b8b-45c4-afef-e9720a6c3e22
-ms.openlocfilehash: bb5f9043ea5bdd25e984d73d3640c80f599714e6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf645cf88c4905cd5cf47c2a6c7af088fa428c8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076238"
 ---
 # <a name="how-to-shear-colors"></a>HOW TO：分歧色彩
 切變增加，或另一個色彩元件等比例的量減少色彩元件。 例如，請考慮其中紅色元件會增加一倍的藍色元件值的轉換。 在這類轉換 （0.7，0.5，1），就會變成 （0.2，0.5，1） 的色彩。 新的紅色元件是 0.2 版 + (1/2)(1) = 0.7。  
@@ -38,10 +38,11 @@ ms.locfileid: "58826388"
  [!code-vb[System.Drawing.Misc3#9](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.Misc3/VB/Form1.vb#9)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。 取代`ColorBars.bmp`映像名稱和您系統上有效的路徑。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 取代`ColorBars.bmp`映像名稱和您系統上有效的路徑。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
-- [為影像重新著色](recoloring-images.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [將影像重新著色](recoloring-images.md)

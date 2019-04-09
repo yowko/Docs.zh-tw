@@ -3,12 +3,12 @@ title: <customTrackingQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4e108e89-1132-46b7-868a-c7f5c69dc89f
-ms.openlocfilehash: 4e525bc4c77649a6c6d70ddb2408b6ecce4a0f09
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 92060260075017359d8a5f0500d52e52c2217d3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076649"
 ---
 # <a name="customtrackingquery"></a>\<customTrackingQuery>
 代表查詢的集合，這個集合可用來追蹤程式碼活動中定義的事件。 追蹤參與者必須要具備查詢，才能訂閱自訂追蹤記錄。  
@@ -45,7 +45,7 @@ ms.locfileid: "55263757"
 |屬性|描述|  
 |---------------|-----------------|  
 |activityName|字串，可指定產生追蹤記錄的活動名稱。|  
-|name|字串，可指定發出自訂追蹤記錄的名稱。|  
+|名稱|字串，可指定發出自訂追蹤記錄的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -57,7 +57,8 @@ ms.locfileid: "55263757"
 |[\<customTrackingQuery>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/customtrackingquery.md)|查詢，可用來追蹤程式碼活動中定義的事件。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.CustomTrackingQueryElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.CustomTrackingQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

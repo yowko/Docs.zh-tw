@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用資料列範本自訂 Windows Form DataGridView 控制項中的資料列
+title: HOW TO：在 Windows Forms DataGridView 控制項中使用資料列範本自訂資料列
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], customizing rows
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
-ms.openlocfilehash: 3cd1e9af32cb47f5d81abfc92423ea30e2e599cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707569"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073030"
 ---
-# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>HOW TO：使用資料列範本自訂 Windows Form DataGridView 控制項中的資料列
+# <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項中使用資料列範本自訂資料列
 <xref:System.Windows.Forms.DataGridView>控制項會使用做為基礎的資料列範本，透過資料繫結中，或當您呼叫時，它將加入此控制項的所有資料列<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>方法，而不指定要使用現有的資料列。  
   
  資料列範本可讓您更有效控制的外觀和行為的資料列<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>屬性提供。 資料列範本後，您可以設定任何<xref:System.Windows.Forms.DataGridViewRow>屬性，包括<xref:System.Windows.Forms.DataGridViewRow.DefaultCellStyle%2A>。  
@@ -39,13 +39,13 @@ ms.locfileid: "57707569"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   
-  <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)

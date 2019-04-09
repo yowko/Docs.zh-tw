@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在設計階段排列 Windows Form 的 WPF 內容
+title: 逐步解說：在設計階段排列 Windows Forms 的 WPF 內容
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in a layout panel
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Windows Forms, anchoring and docking WPF content
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
-ms.openlocfilehash: 0738d1522c8ade8f026a3bf69fbff0bc2c2d6d85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a9c549a9014e328e8083704971dfd5323adcea41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193196"
 ---
-# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Form 的 WPF 內容
+# <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段排列 Windows Forms 的 WPF 內容
 本逐步解說示範如何使用 Windows Form 的配置功能 (例如錨定和對齊線)，來排列 Windows Presentation Foundation (WPF) 控制項。
 
  在這個逐步解說中，您將執行下列工作：
@@ -79,8 +79,7 @@ ms.locfileid: "57712457"
   
 5.  在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`的第一個資料格中<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-     
-  `UserControl1` 的執行個體會裝載到名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
+     `UserControl1` 的執行個體會裝載到名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
 6.  在**工具箱**，按兩下`UserControl1`建立另一個執行個體中的第二個儲存格<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
@@ -97,8 +96,7 @@ ms.locfileid: "57712457"
   
 1.  從**工具箱**，將拖曳的執行個體`UserControl1`拖曳至表單並將它放在下方的空間<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-     
-  `UserControl1` 的執行個體會裝載到名為 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
+     `UserControl1` 的執行個體會裝載到名為 `elementHost3` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
 2.  使用對齊線，將 `elementHost3` 的左邊緣與 <xref:System.Windows.Forms.TableLayoutPanel> 控制項的左邊緣對齊。  
   
@@ -131,8 +129,7 @@ ms.locfileid: "57712457"
   
 5.  在 **屬性**視窗中，設定的值<xref:System.Windows.Forms.Control.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill>。  
   
-     
-  `elementHost2` 控制項會調整大小以填滿儲存格。  
+     `elementHost2` 控制項會調整大小以填滿儲存格。  
   
 6.  選取 <xref:System.Windows.Forms.TableLayoutPanel> 控制項。  
   
@@ -151,11 +148,12 @@ ms.locfileid: "57712457"
      如需詳細資訊，請參閱[如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [如何：將控制項和表單邊緣對齊在設計階段](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [逐步解說：使用對齊線的 Windows Form 上排列控制項](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [HOW TO：在設計階段將控制項對齊表單邊緣](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [逐步解說：使用對齊線排列 Windows Forms 的控制項](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [移轉和互通性](../../wpf/advanced/migration-and-interoperability.md)
 - [使用 WPF 控制項](using-wpf-controls.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)

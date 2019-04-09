@@ -3,12 +3,12 @@ title: <tracking>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: fd9b50ed-98a1-4518-836d-e4e02c670822
-ms.openlocfilehash: fa96cb374204ffbdb4c0fcd353c70b6e27ef7481
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 31490c7425572909cc30fe4237af9309754b68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072241"
 ---
 # <a name="tracking"></a>\<tracking>
 代表定義工作流程服務之追蹤設定的組態區段。  
@@ -99,5 +99,6 @@ ms.locfileid: "55263806"
  追蹤可提供您檢查工作流程執行的能力。 工作流程追蹤基礎結構會檢測工作流程，在執行期間發出記錄以反映重要事件。 例如，工作流程執行個體開始或完成時會發出追蹤記錄。 追蹤也可以擷取與工作流程變數相關聯的商務相關資料。 例如，如果工作流程代表訂單處理系統，則訂單識別碼可與追蹤記錄一併擷取。 一般而言，啟用 WF 追蹤有助於對工作流程的執行進行診斷或業務分析。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繪製外框的形狀
+title: HOW TO：繪製外框形狀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -19,14 +19,14 @@ helpviewer_keywords:
 - drawing [Windows Forms], circular shapes
 - shapes [Windows Forms], drawing
 ms.assetid: f4f9214c-607e-407d-8cdd-6549f0278451
-ms.openlocfilehash: 598706b381d12b8e820747ca872146bdb5e300c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 019bbc19cc4b26c42f8539eccd93ec4ff87fab12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59192197"
 ---
-# <a name="how-to-draw-an-outlined-shape"></a>HOW TO：繪製外框的形狀
+# <a name="how-to-draw-an-outlined-shape"></a>HOW TO：繪製外框形狀
 此範例會在表單上繪製外框的橢圓形和矩形。  
   
 ## <a name="example"></a>範例  
@@ -41,9 +41,10 @@ ms.locfileid: "57722629"
  您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>和<xref:System.Drawing.Graphics>物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics.DrawEllipse%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Drawing.Graphics.DrawRectangle%2A>
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

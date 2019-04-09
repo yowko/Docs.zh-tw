@@ -1,5 +1,5 @@
 ---
-title: HOW TO：凍結 Windows Form DataGridView 控制項中的資料行
+title: HOW TO：凍結 Windows Forms DataGridView 控制項的資料行
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], freezing columns
 - DataGridView control [Windows Forms], columns always in view
 ms.assetid: 2ef8b1de-782e-4867-af8d-58171ab5c106
-ms.openlocfilehash: 640b6a9128758edfc22b5c9be971034c9e45fc70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a0b77a7356b09a5cc95ec165a62c45852f542b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187418"
 ---
-# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：凍結 Windows Form DataGridView 控制項中的資料行
+# <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：凍結 Windows Forms DataGridView 控制項的資料行
 當使用者檢視顯示於 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料時，有時候需要經常參考單一資料行或資料行集合。 例如，在顯示包含許多資料行的客戶資訊資料表時，如果其他資料行可在可見區域外捲動時，仍一直顯示客戶的名稱，將會非常有用。  
   
  若要達到這種行為，您可以凍結控制項中的資料行。 當您凍結資料行時，也會凍結在該資料行左邊的所有資料行 (如果是從右至左的字集，則會凍結右邊的所有資料行)。 凍結的資料行會留在原處，而其他所有資料行則可以捲動。  
@@ -40,11 +40,11 @@ ms.locfileid: "57723864"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `AddToCartButton` 的資料行。  
   
--   
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：啟用 Windows Form DataGridView 控制項中的資料行重新調整順序](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [HOW TO：重新調整 Windows Forms DataGridView 控制項的資料行順序](how-to-enable-column-reordering-in-the-windows-forms-datagridview-control.md)

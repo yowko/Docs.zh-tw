@@ -8,12 +8,12 @@ helpviewer_keywords:
 - directories [Windows Forms], enabling browsing in applications
 - folders [Windows Forms], enabling browsing in applications
 ms.assetid: 796b622c-3ba9-4356-93bb-e217fc52f2c7
-ms.openlocfilehash: d08eb456ea2d2d3b805d3df7e0e79b26ea7d415e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: aae18167b29c71ad692cc6ba447457cd079374b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074127"
 ---
 # <a name="folderbrowserdialog-component-overview-windows-forms"></a>FolderBrowserDialog 元件概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件是用來瀏覽和選取的資料夾的強制回應對話方塊。 新的資料夾也可以建立從<xref:System.Windows.Forms.FolderBrowserDialog>元件。  
@@ -26,6 +26,7 @@ Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件是用來瀏覽
  當加入至表單，<xref:System.Windows.Forms.FolderBrowserDialog>元件會出現在底部的 Windows Form 設計工具的紙匣。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.FolderBrowserDialog>
-- [如何：選擇使用 Windows Forms FolderBrowserDialog 元件的資料夾](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
+- [HOW TO：使用 Windows Forms FolderBrowserDialog 元件選擇資料夾](how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component.md)
 - [FolderBrowserDialog 元件](folderbrowserdialog-component-windows-forms.md)
