@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c82096f790befbab58a1d27978be553aae2190b5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 28d1655bdc3746dab87acef2e2aac6758883e74a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496361"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096208"
 ---
-# <a name="iclrruntimehostgetcurrentappdomainid-method"></a><span data-ttu-id="9b4eb-102">ICLRRuntimeHost::GetCurrentAppDomainId 方法</span><span class="sxs-lookup"><span data-stu-id="9b4eb-102">ICLRRuntimeHost::GetCurrentAppDomainId Method</span></span>
-<span data-ttu-id="9b4eb-103">取得的數值識別碼<xref:System.AppDomain>，目前正在執行。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-103">Gets the numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
+# <a name="iclrruntimehostgetcurrentappdomainid-method"></a><span data-ttu-id="da536-102">ICLRRuntimeHost::GetCurrentAppDomainId 方法</span><span class="sxs-lookup"><span data-stu-id="da536-102">ICLRRuntimeHost::GetCurrentAppDomainId Method</span></span>
+<span data-ttu-id="da536-103">取得的數值識別碼<xref:System.AppDomain>，目前正在執行。</span><span class="sxs-lookup"><span data-stu-id="da536-103">Gets the numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9b4eb-104">語法</span><span class="sxs-lookup"><span data-stu-id="9b4eb-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="da536-104">語法</span><span class="sxs-lookup"><span data-stu-id="da536-104">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentAppDomainId(  
@@ -35,34 +35,35 @@ HRESULT GetCurrentAppDomainId(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9b4eb-105">參數</span><span class="sxs-lookup"><span data-stu-id="9b4eb-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="da536-105">參數</span><span class="sxs-lookup"><span data-stu-id="da536-105">Parameters</span></span>  
  `pdwAppDomainId`  
- <span data-ttu-id="9b4eb-106">[out]數值識別碼<xref:System.AppDomain>，目前正在執行。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-106">[out] The numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
+ <span data-ttu-id="da536-106">[out]數值識別碼<xref:System.AppDomain>，目前正在執行。</span><span class="sxs-lookup"><span data-stu-id="da536-106">[out] The numeric identifier of the <xref:System.AppDomain> that is currently executing.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="9b4eb-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="9b4eb-107">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="da536-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="da536-107">Return Value</span></span>  
   
-|<span data-ttu-id="9b4eb-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="9b4eb-108">HRESULT</span></span>|<span data-ttu-id="9b4eb-109">描述</span><span class="sxs-lookup"><span data-stu-id="9b4eb-109">Description</span></span>|  
+|<span data-ttu-id="da536-108">HRESULT</span><span class="sxs-lookup"><span data-stu-id="da536-108">HRESULT</span></span>|<span data-ttu-id="da536-109">描述</span><span class="sxs-lookup"><span data-stu-id="da536-109">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="9b4eb-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="9b4eb-110">S_OK</span></span>|<span data-ttu-id="9b4eb-111">`GetCurrentAppDomainId` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-111">`GetCurrentAppDomainId` returned successfully.</span></span>|  
-|<span data-ttu-id="9b4eb-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="9b4eb-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="9b4eb-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="9b4eb-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="9b4eb-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="9b4eb-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-115">The call timed out.</span></span>|  
-|<span data-ttu-id="9b4eb-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="9b4eb-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="9b4eb-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-117">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="9b4eb-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="9b4eb-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="9b4eb-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="9b4eb-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="9b4eb-120">E_FAIL</span></span>|<span data-ttu-id="9b4eb-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="9b4eb-122">如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="9b4eb-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="da536-110">S_OK</span><span class="sxs-lookup"><span data-stu-id="da536-110">S_OK</span></span>|`GetCurrentAppDomainId` <span data-ttu-id="da536-111">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="da536-111">returned successfully.</span></span>|  
+|<span data-ttu-id="da536-112">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="da536-112">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="da536-113">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="da536-113">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="da536-114">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="da536-114">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="da536-115">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="da536-115">The call timed out.</span></span>|  
+|<span data-ttu-id="da536-116">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="da536-116">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="da536-117">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="da536-117">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="da536-118">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="da536-118">HOST_E_ABANDONED</span></span>|<span data-ttu-id="da536-119">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="da536-119">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="da536-120">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="da536-120">E_FAIL</span></span>|<span data-ttu-id="da536-121">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="da536-121">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="da536-122">如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="da536-122">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="da536-123">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="da536-123">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="9b4eb-124">備註</span><span class="sxs-lookup"><span data-stu-id="9b4eb-124">Remarks</span></span>  
- <span data-ttu-id="9b4eb-125">`pdwAppDomainId`參數設定的值為<xref:System.AppDomain.Id%2A>屬性<xref:System.AppDomain>中目前的執行緒執行。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-125">The `pdwAppDomainId` parameter is set to the value of the <xref:System.AppDomain.Id%2A> property of the <xref:System.AppDomain> in which the current thread is executing.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="da536-124">備註</span><span class="sxs-lookup"><span data-stu-id="da536-124">Remarks</span></span>  
+ <span data-ttu-id="da536-125">`pdwAppDomainId`參數設定的值為<xref:System.AppDomain.Id%2A>屬性<xref:System.AppDomain>中目前的執行緒執行。</span><span class="sxs-lookup"><span data-stu-id="da536-125">The `pdwAppDomainId` parameter is set to the value of the <xref:System.AppDomain.Id%2A> property of the <xref:System.AppDomain> in which the current thread is executing.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9b4eb-126">需求</span><span class="sxs-lookup"><span data-stu-id="9b4eb-126">Requirements</span></span>  
- <span data-ttu-id="9b4eb-127">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9b4eb-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="da536-126">需求</span><span class="sxs-lookup"><span data-stu-id="da536-126">Requirements</span></span>  
+ <span data-ttu-id="da536-127">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="da536-127">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9b4eb-128">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="9b4eb-128">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="da536-128">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="da536-128">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="9b4eb-129">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9b4eb-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="da536-129">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="da536-129">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9b4eb-130">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9b4eb-130">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="da536-130">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="da536-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9b4eb-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9b4eb-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="da536-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="da536-131">See also</span></span>
+
 - <xref:System.AppDomain>
 - <xref:System.AppDomainManager>
-- [<span data-ttu-id="9b4eb-132">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="9b4eb-132">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
+- [<span data-ttu-id="da536-132">ICLRRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="da536-132">ICLRRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 990910b8b30e9794550d71cf9eaf8cd53639f696
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 28e6ad309af808638400fc27255acdee381b4c6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196693"
 ---
-# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="c19af-102">IMetaDataImport::EnumPermissionSets 方法</span><span class="sxs-lookup"><span data-stu-id="c19af-102">IMetaDataImport::EnumPermissionSets Method</span></span>
-<span data-ttu-id="c19af-103">列舉指定中繼資料範圍內的物件權限。</span><span class="sxs-lookup"><span data-stu-id="c19af-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
+# <a name="imetadataimportenumpermissionsets-method"></a><span data-ttu-id="94257-102">IMetaDataImport::EnumPermissionSets 方法</span><span class="sxs-lookup"><span data-stu-id="94257-102">IMetaDataImport::EnumPermissionSets Method</span></span>
+<span data-ttu-id="94257-103">列舉指定中繼資料範圍內的物件權限。</span><span class="sxs-lookup"><span data-stu-id="94257-103">Enumerates permissions for the objects in a specified metadata scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c19af-104">語法</span><span class="sxs-lookup"><span data-stu-id="c19af-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="94257-104">語法</span><span class="sxs-lookup"><span data-stu-id="94257-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumPermissionSets  
@@ -40,41 +40,42 @@ HRESULT EnumPermissionSets
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c19af-105">參數</span><span class="sxs-lookup"><span data-stu-id="c19af-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="94257-105">參數</span><span class="sxs-lookup"><span data-stu-id="94257-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="c19af-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="c19af-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="c19af-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="c19af-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="94257-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="94257-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="94257-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="94257-107">This must be NULL for the first call of this method.</span></span>  
   
  `tk`  
- <span data-ttu-id="c19af-108">[in]範圍搜尋，則為 NULL 來搜尋最寬的範圍可能限制中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="c19af-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
+ <span data-ttu-id="94257-108">[in]範圍搜尋，則為 NULL 來搜尋最寬的範圍可能限制中繼資料語彙基元。</span><span class="sxs-lookup"><span data-stu-id="94257-108">[in] A metadata token that limits the scope of the search, or NULL to search the widest scope possible.</span></span>  
   
  `dwActions`  
- <span data-ttu-id="c19af-109">[in]加上旗標表示<xref:System.Security.Permissions.SecurityAction>值，以納入`rPermission`，或是零則表示傳回所有的動作。</span><span class="sxs-lookup"><span data-stu-id="c19af-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
+ <span data-ttu-id="94257-109">[in]加上旗標表示<xref:System.Security.Permissions.SecurityAction>值，以納入`rPermission`，或是零則表示傳回所有的動作。</span><span class="sxs-lookup"><span data-stu-id="94257-109">[in] Flags representing the <xref:System.Security.Permissions.SecurityAction> values to include in `rPermission`, or zero to return all actions.</span></span>  
   
  `rPermission`  
- <span data-ttu-id="c19af-110">[out]陣列，用來儲存權限的權杖。</span><span class="sxs-lookup"><span data-stu-id="c19af-110">[out] The array used to store the Permission tokens.</span></span>  
+ <span data-ttu-id="94257-110">[out]陣列，用來儲存權限的權杖。</span><span class="sxs-lookup"><span data-stu-id="94257-110">[out] The array used to store the Permission tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="c19af-111">[in] `rPermission` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="c19af-111">[in] The maximum size of the `rPermission` array.</span></span>  
+ <span data-ttu-id="94257-111">[in] `rPermission` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="94257-111">[in] The maximum size of the `rPermission` array.</span></span>  
   
  `pcTokens`  
- <span data-ttu-id="c19af-112">[out]權限權杖中傳回的數目`rPermission`。</span><span class="sxs-lookup"><span data-stu-id="c19af-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
+ <span data-ttu-id="94257-112">[out]權限權杖中傳回的數目`rPermission`。</span><span class="sxs-lookup"><span data-stu-id="94257-112">[out] The number of Permission tokens returned in `rPermission`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c19af-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="c19af-113">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="94257-113">傳回值</span><span class="sxs-lookup"><span data-stu-id="94257-113">Return Value</span></span>  
   
-|<span data-ttu-id="c19af-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c19af-114">HRESULT</span></span>|<span data-ttu-id="c19af-115">描述</span><span class="sxs-lookup"><span data-stu-id="c19af-115">Description</span></span>|  
+|<span data-ttu-id="94257-114">HRESULT</span><span class="sxs-lookup"><span data-stu-id="94257-114">HRESULT</span></span>|<span data-ttu-id="94257-115">描述</span><span class="sxs-lookup"><span data-stu-id="94257-115">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="c19af-116">`EnumPermissionSets` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="c19af-116">`EnumPermissionSets` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="c19af-117">沒有列舉語彙基元。</span><span class="sxs-lookup"><span data-stu-id="c19af-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="c19af-118">在此情況下，`pcTokens`為零。</span><span class="sxs-lookup"><span data-stu-id="c19af-118">In that case, `pcTokens` is zero.</span></span>|  
+|`S_OK`|`EnumPermissionSets` <span data-ttu-id="94257-116">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="94257-116">returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="94257-117">沒有列舉語彙基元。</span><span class="sxs-lookup"><span data-stu-id="94257-117">There are no tokens to enumerate.</span></span> <span data-ttu-id="94257-118">在此情況下，`pcTokens`為零。</span><span class="sxs-lookup"><span data-stu-id="94257-118">In that case, `pcTokens` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c19af-119">需求</span><span class="sxs-lookup"><span data-stu-id="c19af-119">Requirements</span></span>  
- <span data-ttu-id="c19af-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c19af-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="94257-119">需求</span><span class="sxs-lookup"><span data-stu-id="94257-119">Requirements</span></span>  
+ <span data-ttu-id="94257-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="94257-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c19af-121">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c19af-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="94257-121">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="94257-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c19af-122">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c19af-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="94257-122">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="94257-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="c19af-123">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c19af-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="94257-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="94257-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c19af-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c19af-124">See also</span></span>
-- [<span data-ttu-id="c19af-125">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="c19af-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="c19af-126">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="c19af-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="94257-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="94257-124">See also</span></span>
+
+- [<span data-ttu-id="94257-125">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="94257-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="94257-126">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="94257-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

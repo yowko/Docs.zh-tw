@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f15e4c9b2421b9d2cafdbabf5f9ca12d1b8b9493
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64d7f138094e03ca76ec78a50a6f37aa3d9ca2f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091729"
 ---
-# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="ee8d0-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition 方法</span><span class="sxs-lookup"><span data-stu-id="ee8d0-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
-<span data-ttu-id="ee8d0-103">傳回的陣列的方法，其中每一個包含文件中指定位置的中斷點。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
+# <a name="isymunmanagedreadergetmethodsfromdocumentposition-method"></a><span data-ttu-id="d62c0-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition 方法</span><span class="sxs-lookup"><span data-stu-id="d62c0-102">ISymUnmanagedReader::GetMethodsFromDocumentPosition Method</span></span>
+<span data-ttu-id="d62c0-103">傳回的陣列的方法，其中每一個包含文件中指定位置的中斷點。</span><span class="sxs-lookup"><span data-stu-id="d62c0-103">Returns an array of methods, each of which contains the breakpoint at the given position in a document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ee8d0-104">語法</span><span class="sxs-lookup"><span data-stu-id="ee8d0-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d62c0-104">語法</span><span class="sxs-lookup"><span data-stu-id="d62c0-104">Syntax</span></span>  
   
 ```  
 HRESULT GetMethodsFromDocumentPosition (  
@@ -40,30 +40,31 @@ HRESULT GetMethodsFromDocumentPosition (
         length_is (*pcMethod)] ISymUnmanagedMethod* pRetVal[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ee8d0-105">參數</span><span class="sxs-lookup"><span data-stu-id="ee8d0-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d62c0-105">參數</span><span class="sxs-lookup"><span data-stu-id="d62c0-105">Parameters</span></span>  
  `document`  
- <span data-ttu-id="ee8d0-106">[in]指定的文件。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-106">[in] The specified document.</span></span>  
+ <span data-ttu-id="d62c0-106">[in]指定的文件。</span><span class="sxs-lookup"><span data-stu-id="d62c0-106">[in] The specified document.</span></span>  
   
  `line`  
- <span data-ttu-id="ee8d0-107">[in]指定的文件行。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-107">[in] The line of the specified document.</span></span>  
+ <span data-ttu-id="d62c0-107">[in]指定的文件行。</span><span class="sxs-lookup"><span data-stu-id="d62c0-107">[in] The line of the specified document.</span></span>  
   
  `column`  
- <span data-ttu-id="ee8d0-108">[in]指定的文件的資料行。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-108">[in] The column of the specified document.</span></span>  
+ <span data-ttu-id="d62c0-108">[in]指定的文件的資料行。</span><span class="sxs-lookup"><span data-stu-id="d62c0-108">[in] The column of the specified document.</span></span>  
   
  `cMethod`  
- <span data-ttu-id="ee8d0-109">[in] `pRetVal` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-109">[in] The size of the `pRetVal` array.</span></span>  
+ <span data-ttu-id="d62c0-109">[in] `pRetVal` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="d62c0-109">[in] The size of the `pRetVal` array.</span></span>  
   
  `pcMethod`  
- <span data-ttu-id="ee8d0-110">[out]此變數會接收傳回的項目數的指標`pRetVal`陣列。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
+ <span data-ttu-id="d62c0-110">[out]此變數會接收傳回的項目數的指標`pRetVal`陣列。</span><span class="sxs-lookup"><span data-stu-id="d62c0-110">[out] A pointer to a variable that receives the number of elements returned in the `pRetVal` array.</span></span>  
   
  `pRetVal`  
- <span data-ttu-id="ee8d0-111">[out]指標的陣列，其中每一個指向[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件，表示包含中斷點的方法。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
+ <span data-ttu-id="d62c0-111">[out]指標的陣列，其中每一個指向[ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md)物件，表示包含中斷點的方法。</span><span class="sxs-lookup"><span data-stu-id="d62c0-111">[out] An array of pointers, each of which points to an [ISymUnmanagedMethod](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedmethod-interface.md) object that represents a method containing the breakpoint.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="ee8d0-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="ee8d0-112">Return Value</span></span>  
- <span data-ttu-id="ee8d0-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="ee8d0-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d62c0-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="d62c0-112">Return Value</span></span>  
+ <span data-ttu-id="d62c0-113">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="d62c0-113">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ee8d0-114">需求</span><span class="sxs-lookup"><span data-stu-id="ee8d0-114">Requirements</span></span>  
- <span data-ttu-id="ee8d0-115">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="ee8d0-115">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d62c0-114">需求</span><span class="sxs-lookup"><span data-stu-id="d62c0-114">Requirements</span></span>  
+ <span data-ttu-id="d62c0-115">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="d62c0-115">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ee8d0-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ee8d0-116">See also</span></span>
-- [<span data-ttu-id="ee8d0-117">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="ee8d0-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d62c0-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d62c0-116">See also</span></span>
+
+- [<span data-ttu-id="d62c0-117">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="d62c0-117">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

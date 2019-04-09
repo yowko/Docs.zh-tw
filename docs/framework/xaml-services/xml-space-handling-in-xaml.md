@@ -7,39 +7,40 @@ helpviewer_keywords:
 - xml:space attribute [XAML Services]
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
-ms.openlocfilehash: 20a25b36857a7116f3599e3fbbbe4b438540f782
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59193313"
 ---
-# <a name="xmlspace-handling-in-xaml"></a><span data-ttu-id="affcd-102">XAML 中的 xml:space 處理</span><span class="sxs-lookup"><span data-stu-id="affcd-102">xml:space Handling in XAML</span></span>
-<span data-ttu-id="affcd-103">`xml:space`屬性是宣告為物件項目內的顯著泛空白字元處理行為的 XML 定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="affcd-103">The `xml:space` attribute is an XML-defined attribute that declares the significant white-space processing behavior within an object element.</span></span> <span data-ttu-id="affcd-104">此行為會與相關的項目內所包含的所有內容 （內部文字） 其中`xml:space`宣告，因此也會設定至子項目。</span><span class="sxs-lookup"><span data-stu-id="affcd-104">This behavior is relevant for all content (inner text) contained within the element where `xml:space` is declared, and also scopes to child elements.</span></span>  
+# <a name="xmlspace-handling-in-xaml"></a><span data-ttu-id="beb24-102">XAML 中的 xml:space 處理</span><span class="sxs-lookup"><span data-stu-id="beb24-102">xml:space Handling in XAML</span></span>
+<span data-ttu-id="beb24-103">`xml:space`屬性是宣告為物件項目內的顯著泛空白字元處理行為的 XML 定義的屬性。</span><span class="sxs-lookup"><span data-stu-id="beb24-103">The `xml:space` attribute is an XML-defined attribute that declares the significant white-space processing behavior within an object element.</span></span> <span data-ttu-id="beb24-104">此行為會與相關的項目內所包含的所有內容 （內部文字） 其中`xml:space`宣告，因此也會設定至子項目。</span><span class="sxs-lookup"><span data-stu-id="beb24-104">This behavior is relevant for all content (inner text) contained within the element where `xml:space` is declared, and also scopes to child elements.</span></span>  
   
-## <a name="xaml-attribute-usage"></a><span data-ttu-id="affcd-105">XAML Attribute Usage</span><span class="sxs-lookup"><span data-stu-id="affcd-105">XAML Attribute Usage</span></span>  
+## <a name="xaml-attribute-usage"></a><span data-ttu-id="beb24-105">XAML Attribute Usage</span><span class="sxs-lookup"><span data-stu-id="beb24-105">XAML Attribute Usage</span></span>  
   
 ```xaml  
 <object xml:space="preserve" />  
 ```  
   
- <span data-ttu-id="affcd-106">\-或-</span><span class="sxs-lookup"><span data-stu-id="affcd-106">\- or -</span></span>  
+ <span data-ttu-id="beb24-106">\-或-</span><span class="sxs-lookup"><span data-stu-id="beb24-106">\- or -</span></span>  
   
 ```xaml  
 <object xml:space="default" />  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="affcd-107">備註</span><span class="sxs-lookup"><span data-stu-id="affcd-107">Remarks</span></span>  
- <span data-ttu-id="affcd-108">定義`xml:space`包括其兩個可能值的 XAML 中的屬性衍生自`xml:space`W3C XML 規格所定義為 「 特殊屬性 」。</span><span class="sxs-lookup"><span data-stu-id="affcd-108">The definition for the `xml:space` attribute in XAML including its two possible values is derived from `xml:space` as defined as a "special attribute" by W3C specifications for XML.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="beb24-107">備註</span><span class="sxs-lookup"><span data-stu-id="beb24-107">Remarks</span></span>  
+ <span data-ttu-id="beb24-108">定義`xml:space`包括其兩個可能值的 XAML 中的屬性衍生自`xml:space`W3C XML 規格所定義為 「 特殊屬性 」。</span><span class="sxs-lookup"><span data-stu-id="beb24-108">The definition for the `xml:space` attribute in XAML including its two possible values is derived from `xml:space` as defined as a "special attribute" by W3C specifications for XML.</span></span>  
   
- <span data-ttu-id="affcd-109">預設值`xml:space`屬性是常值`"default"`。</span><span class="sxs-lookup"><span data-stu-id="affcd-109">The default value of the `xml:space` attribute is the literal value `"default"`.</span></span> <span data-ttu-id="affcd-110">值`"default"`，或者如果`xml:space`並未顯示，行為的顯著泛空白字元剖析為預設處理，主題中所定義[泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="affcd-110">For the value `"default"`, or if `xml:space` is not indicated at all, the behavior of significant white-space parsing is the default handling, as defined in the topic [White-space processing in XAML](whitespace-processing-in-xaml.md).</span></span>  
+ <span data-ttu-id="beb24-109">預設值`xml:space`屬性是常值`"default"`。</span><span class="sxs-lookup"><span data-stu-id="beb24-109">The default value of the `xml:space` attribute is the literal value `"default"`.</span></span> <span data-ttu-id="beb24-110">值`"default"`，或者如果`xml:space`並未顯示，行為的顯著泛空白字元剖析為預設處理，主題中所定義[泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="beb24-110">For the value `"default"`, or if `xml:space` is not indicated at all, the behavior of significant white-space parsing is the default handling, as defined in the topic [White-space processing in XAML](whitespace-processing-in-xaml.md).</span></span>  
   
- <span data-ttu-id="affcd-111">若要保留物件項目內容中的空白字元，請指定`xml:space="preserve"`該物件元素上。</span><span class="sxs-lookup"><span data-stu-id="affcd-111">To preserve white space within object element content, specify `xml:space="preserve"` on that object element.</span></span>  
+ <span data-ttu-id="beb24-111">若要保留物件項目內容中的空白字元，請指定`xml:space="preserve"`該物件元素上。</span><span class="sxs-lookup"><span data-stu-id="beb24-111">To preserve white space within object element content, specify `xml:space="preserve"` on that object element.</span></span>  
   
- <span data-ttu-id="affcd-112">在大部分的詮釋，`xml:space`屬性效果和屬性的值範圍都限於子項目。</span><span class="sxs-lookup"><span data-stu-id="affcd-112">Under most interpretations, the `xml:space` attribute effects and the value of the attribute are scoped to child elements.</span></span>  
+ <span data-ttu-id="beb24-112">在大部分的詮釋，`xml:space`屬性效果和屬性的值範圍都限於子項目。</span><span class="sxs-lookup"><span data-stu-id="beb24-112">Under most interpretations, the `xml:space` attribute effects and the value of the attribute are scoped to child elements.</span></span>  
   
- <span data-ttu-id="affcd-113">泛空白字元處理在 XAML 中的完整討論，請參閱 <<c0> [ 泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="affcd-113">For a complete discussion of white-space processing in XAML, see [White-space processing in XAML](whitespace-processing-in-xaml.md).</span></span>  
+ <span data-ttu-id="beb24-113">泛空白字元處理在 XAML 中的完整討論，請參閱 <<c0> [ 泛空白字元處理中 XAML](whitespace-processing-in-xaml.md)。</span><span class="sxs-lookup"><span data-stu-id="beb24-113">For a complete discussion of white-space processing in XAML, see [White-space processing in XAML](whitespace-processing-in-xaml.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="affcd-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="affcd-114">See also</span></span>
-- [<span data-ttu-id="affcd-115">在 XAML 中處理泛空白字元</span><span class="sxs-lookup"><span data-stu-id="affcd-115">White-space processing in XAML</span></span>](whitespace-processing-in-xaml.md)
-- [<span data-ttu-id="affcd-116">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="affcd-116">XAML Overview (WPF)</span></span>](../wpf/advanced/xaml-overview-wpf.md)
+## <a name="see-also"></a><span data-ttu-id="beb24-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="beb24-114">See also</span></span>
+
+- [<span data-ttu-id="beb24-115">XAML 中的空白字元處理</span><span class="sxs-lookup"><span data-stu-id="beb24-115">White-space processing in XAML</span></span>](whitespace-processing-in-xaml.md)
+- [<span data-ttu-id="beb24-116">XAML 概觀 (WPF)</span><span class="sxs-lookup"><span data-stu-id="beb24-116">XAML Overview (WPF)</span></span>](../wpf/advanced/xaml-overview-wpf.md)

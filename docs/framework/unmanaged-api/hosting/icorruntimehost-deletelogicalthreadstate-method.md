@@ -17,30 +17,31 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ff8891f4f296a2af5aaf6fa90851ec2fa0bdd43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 906442985ac2c5e75d794eba1a91bd90861ee2c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197408"
 ---
-# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="6109e-102">ICorRuntimeHost::DeleteLogicalThreadState 方法</span><span class="sxs-lookup"><span data-stu-id="6109e-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
-<span data-ttu-id="6109e-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="6109e-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="icorruntimehostdeletelogicalthreadstate-method"></a><span data-ttu-id="08fa0-102">ICorRuntimeHost::DeleteLogicalThreadState 方法</span><span class="sxs-lookup"><span data-stu-id="08fa0-102">ICorRuntimeHost::DeleteLogicalThreadState Method</span></span>
+<span data-ttu-id="08fa0-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="08fa0-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6109e-104">語法</span><span class="sxs-lookup"><span data-stu-id="6109e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="08fa0-104">語法</span><span class="sxs-lookup"><span data-stu-id="08fa0-104">Syntax</span></span>  
   
 ```  
 HRESULT DeleteLogicalThreadState ( );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="6109e-105">需求</span><span class="sxs-lookup"><span data-stu-id="6109e-105">Requirements</span></span>  
- <span data-ttu-id="6109e-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6109e-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="08fa0-105">需求</span><span class="sxs-lookup"><span data-stu-id="08fa0-105">Requirements</span></span>  
+ <span data-ttu-id="08fa0-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="08fa0-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="6109e-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="6109e-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="08fa0-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="08fa0-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="6109e-108">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="6109e-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="08fa0-108">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="08fa0-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="6109e-109">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="6109e-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
+ <span data-ttu-id="08fa0-109">**.NET framework 版本：** 1.0, 1.1</span><span class="sxs-lookup"><span data-stu-id="08fa0-109">**.NET Framework Versions:** 1.0, 1.1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6109e-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6109e-110">See also</span></span>
-- [<span data-ttu-id="6109e-111">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="6109e-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="08fa0-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="08fa0-110">See also</span></span>
+
+- [<span data-ttu-id="08fa0-111">ICorRuntimeHost 介面</span><span class="sxs-lookup"><span data-stu-id="08fa0-111">ICorRuntimeHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)
