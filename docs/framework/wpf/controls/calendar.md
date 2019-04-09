@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Calendar
 - Calendar control [WPF]
 ms.assetid: ee844e4a-eefe-48e2-bd0d-1d82cc5e960b
-ms.openlocfilehash: d2332f5d11e60a45e4da5d62ef7beed7aa14dfa7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9a64c6cd6fc1cc53383f2617f7a7a78959e87c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124783"
 ---
 # <a name="calendar"></a>行事曆
 行事曆可讓使用者使用視覺行事曆顯示選取的日期。  
@@ -52,5 +52,6 @@ Calendar 控制項
 |空白鍵或 ENTER|<xref:System.Windows.Controls.CalendarMode.Year> 或 <xref:System.Windows.Controls.CalendarMode.Decade>|交換器<xref:System.Windows.Controls.Calendar.DisplayMode%2A>要<xref:System.Windows.Controls.CalendarMode.Month>或<xref:System.Windows.Controls.CalendarMode.Year>焦點的項目所表示。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [控制項](index.md)
 - [樣式設定和範本化](styling-and-templating.md)

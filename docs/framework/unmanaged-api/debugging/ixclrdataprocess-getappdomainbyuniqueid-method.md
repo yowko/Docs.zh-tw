@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: d4226bd73c7ae0c1faf510ed63b644116b064fb2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 257fa2cf03a62ea888b76519aa5c9f9e84038045
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375073"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126499"
 ---
 # <a name="ixclrdataprocessgetappdomainbyuniqueid-method"></a>IXCLRDataProcess::GetAppDomainByUniqueId 方法
 
@@ -50,10 +50,11 @@ HRESULT GetAppDomainByUniqueID(
 
 ## <a name="requirements"></a>需求
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無  
-**程式庫：** 無  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標頭：** None  
+**LIBRARY:** None  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯](index.md)
 - [IXCLRDataProcess 介面](ixclrdataprocess-interface.md)

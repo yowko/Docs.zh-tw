@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:Shared attribute [XAML Services]
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
-ms.openlocfilehash: 42de341d59e3e70103db765faf3160b5fe3250d3
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125732"
 ---
 # <a name="xshared-attribute"></a>x:Shared 屬性
 當設定為`false`，修改 WPF 擷取資源的行為，讓屬性化資源的要求建立新的執行個體，針對每個要求，而不是共用相同的執行個體的所有要求。  
@@ -50,6 +50,7 @@ ms.locfileid: "58039401"
 -   <xref:System.Windows.ResourceDictionary>所包含的項目進行巢狀在另一個<xref:System.Windows.ResourceDictionary>。 例如，您無法使用`x:Shared`中的項目<xref:System.Windows.ResourceDictionary>裡<xref:System.Windows.Style>已經<xref:System.Windows.ResourceDictionary>項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.ResourceDictionary>
 - [XAML 資源](../wpf/advanced/xaml-resources.md)
 - [基底項目](../wpf/advanced/base-elements.md)

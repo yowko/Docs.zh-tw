@@ -4,20 +4,20 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
-ms.openlocfilehash: 12a23970b059e338df05a2f0b58ca67ad6fae6d8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159519"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>反映提供者 (WCF 資料服務)
-除了透過 Entity Framework 從資料模型公開資料外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還可以公開在實體架構模型中未嚴格定義的資料。 反映提供者會公開類別中的資料，而這些類別會傳回實作 <xref:System.Linq.IQueryable%601> 介面的類型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反映來推斷這些類別的資料模型，而且可以針對資源將定址架構的查詢轉譯為 Language Integrated Query (LINQ) 架構的查詢 (針對已公開的 <xref:System.Linq.IQueryable%601> 類型)。  
+除了透過 Entity Framework 從資料模型公開資料外，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 還可以公開在實體架構模型中未嚴格定義的資料。 反映提供者會公開類別中的資料，而這些類別會傳回實作 <xref:System.Linq.IQueryable%601> 介面的類型。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用反映來推斷這些類別的資料模型，而且可以轉譯為 language integrated query (LINQ) 的位址為基礎的查詢，針對資源-架構的查詢，針對已公開<xref:System.Linq.IQueryable%601>型別。  
   
 > [!NOTE]
 >  您可以使用 <xref:System.Linq.Queryable.AsQueryable%2A> 方法，從實作 <xref:System.Linq.IQueryable%601> 介面的任何類別傳回 <xref:System.Collections.Generic.IEnumerable%601> 介面。 這樣可將大部分的泛型集合類型做為資料服務的資料來源使用。  
   
- 反映提供者支援型別階層。 如需詳細資訊，請參閱[＜How to：建立資料服務，使用反映提供者](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。  
+ 反映提供者支援型別階層。 如需詳細資訊，請參閱[如何：建立資料服務，使用反映提供者](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。  
   
 ## <a name="inferring-the-data-model"></a>推斷資料模型  
  當您建立資料服務時，提供者會使用反映推斷資料模型。 下列清單顯示反映提供者推斷資料模型的方式：  
@@ -89,10 +89,11 @@ ms.locfileid: "54582561"
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|提供設定資源屬性值的功能。|  
   
 ## <a name="handling-concurrency"></a>處理並行  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援開放式並行存取模型，其方式是讓您定義實體的並行語彙基元。 這個並行語彙基元包含實體的一個或多個屬性，資料服務會使用它來判斷正在要求、更新或刪除的資料中是否已經發生變更。 當取自要求中 eTag 的語彙基元值與目前實體的值不同時，資料服務就會引發例外狀況。 <xref:System.Data.Services.ETagAttribute> 會套用至實體類型，以便在反映提供者中定義並行語彙基元。 並行語彙基元不得包含索引鍵屬性或導覽屬性。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援開放式並行存取模型，可讓您定義實體的並行語彙基元。 這個並行語彙基元包含實體的一個或多個屬性，資料服務會使用它來判斷正在要求、更新或刪除的資料中是否已經發生變更。 當取自要求中 eTag 的語彙基元值與目前實體的值不同時，資料服務就會引發例外狀況。 <xref:System.Data.Services.ETagAttribute> 會套用至實體類型，以便在反映提供者中定義並行語彙基元。 並行語彙基元不得包含索引鍵屬性或導覽屬性。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>使用 LINQ to SQL 搭配反映提供者  
- 由於 Entity Framework 原本就依預設受到支援，因此在使用關聯式資料與 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 時建議使用資料提供者。 不過，您可以使用反映提供者來搭配使用 LINQ to SQL 類別與資料服務。 <xref:System.Data.Linq.Table%601>結果集上的方法所傳回的<xref:System.Data.Linq.DataContext>LINQ to SQL 物件關聯式設計工具 （O/R 設計工具） 實作所產生<xref:System.Linq.IQueryable%601>介面。 這樣可讓反映提供者存取這些方法，並使用所產生的 LINQ to SQL 類別從 SQL Server 傳回實體資料。 不過，由於 LINQ to SQL 不會實作 <xref:System.Data.Services.IUpdatable> 介面，因此您需要加入部分類別以延伸現有的 <xref:System.Data.Linq.DataContext> 部分類別，來加入 <xref:System.Data.Services.IUpdatable> 實作。 如需詳細資訊，請參閱[＜How to：建立使用 LINQ to SQL 資料來源的資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)。  
+ 由於 Entity Framework 原本就依預設受到支援，因此在使用關聯式資料與 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 時建議使用資料提供者。 不過，您可以使用反映提供者來搭配使用 LINQ to SQL 類別與資料服務。 <xref:System.Data.Linq.Table%601>結果集上的方法所傳回的<xref:System.Data.Linq.DataContext>LINQ to SQL 物件關聯式設計工具 （O/R 設計工具） 實作所產生<xref:System.Linq.IQueryable%601>介面。 這樣可讓反映提供者存取這些方法，並使用所產生的 LINQ to SQL 類別從 SQL Server 傳回實體資料。 不過，由於 LINQ to SQL 不會實作 <xref:System.Data.Services.IUpdatable> 介面，因此您需要加入部分類別以延伸現有的 <xref:System.Data.Linq.DataContext> 部分類別，來加入 <xref:System.Data.Services.IUpdatable> 實作。 如需詳細資訊，請參閱[如何：建立使用 LINQ to SQL 資料來源的資料服務](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], checkbox controls
 - check boxes [Windows Forms], about check boxes
 ms.assetid: 085a4e0b-9046-473f-b141-d0edddfb2ebb
-ms.openlocfilehash: 003e57db16c35b519d3948fc24e82a94a5c3744d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a18327d9836d1dbbcd5d5d6e73f217637736d20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121783"
 ---
 # <a name="checkbox-control-overview-windows-forms"></a>CheckBox 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.CheckBox> 控制項表示特定的條件是開啟或關閉。 它通常用來呈現是/否或 True/False 選取項目給使用者。 您可以使用群組中的核取方塊控制項來顯示使用者可以從中選取一個或多個的多重選擇。  
@@ -25,7 +25,8 @@ Windows Form <xref:System.Windows.Forms.CheckBox> 控制項表示特定的條件
  <xref:System.Windows.Forms.CheckBox>控制項有兩個重要屬性，<xref:System.Windows.Forms.CheckBox.Checked%2A>和<xref:System.Windows.Forms.CheckBox.CheckState%2A>。 <xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`或`false`。 <xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性會傳回<xref:System.Windows.Forms.CheckState.Checked>或是<xref:System.Windows.Forms.CheckState.Unchecked>; 或者，如果<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，<xref:System.Windows.Forms.CheckBox.CheckState%2A>也可能會傳回<xref:System.Windows.Forms.CheckState.Indeterminate>。 處於不定狀態，方塊會顯示呈現暗灰色的外觀，以表示無法使用此選項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.CheckBox>
-- [如何：設定使用 Windows Form 核取方塊控制項的選項](how-to-set-options-with-windows-forms-checkbox-controls.md)
-- [如何：回應 Windows Form CheckBox 按一下動作](how-to-respond-to-windows-forms-checkbox-clicks.md)
+- [HOW TO：使用 Windows Forms CheckBox 控制項設定選項](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [HOW TO：回應 Windows Forms 核取方塊的按一下動作](how-to-respond-to-windows-forms-checkbox-clicks.md)
 - [CheckBox 控制項](checkbox-control-windows-forms.md)

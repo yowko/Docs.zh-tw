@@ -2,12 +2,12 @@
 title: PII 安全性鎖定
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
-ms.openlocfilehash: 3537f50c8695838b69d1920cfd953c8b1196d830
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 38ca91ab969624ab2128e3cfad1d8151cb8d1f88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699775"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122053"
 ---
 # <a name="pii-security-lockdown"></a>PII 安全性鎖定
 這個範例示範如何控制的 Windows Communication Foundation (WCF) 服務的數個安全性相關功能：  
@@ -41,7 +41,7 @@ ms.locfileid: "54699775"
   
 #### <a name="to-encrypt-the-values-in-the-appsettings-section-in-webconfig-for-the-sample"></a>若要加密範例 Web.config 中 appSettings 區段的值  
   
-1.  使用 [開始] -> [執行] 開啟命令提示字元。 在中輸入`cmd`，按一下  **確定**。  
+1.  開啟命令提示字元中使用 開始-> 執行... 在中輸入`cmd`，按一下  **確定**。  
   
 2.  發出下列命令，巡覽至目前的 .NET Framework 目錄：`cd %WINDIR%\Microsoft.NET\Framework\v4.0.20728`。  
   
@@ -143,4 +143,5 @@ ms.locfileid: "54699775"
 1.  編輯 Machine.config 以將 `enableLoggingKnownPii` 屬性設定為 `false`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

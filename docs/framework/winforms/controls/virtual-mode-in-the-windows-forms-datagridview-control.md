@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], virtual mode
 ms.assetid: feae5d43-2848-4b1a-8ea7-77085dc415b5
-ms.openlocfilehash: 92b45f026470f312fe788ed30e4ff8d172735a98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f284835578221ad1fe859f260e37bb829cd64b2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124718"
 ---
 # <a name="virtual-mode-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的虛擬模式
 虛擬模式中，您可以管理之間的互動<xref:System.Windows.Forms.DataGridView>控制項和自訂資料快取。 若要實作虛擬模式，設定<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性設`true`並處理一或多個本主題中所述的事件。 您通常會處理至少`CellValueNeeded`事件，可讓控制項外觀的資料快取中的值。  
@@ -63,9 +63,10 @@ ms.locfileid: "57709480"
  如果您要實作虛擬模式下，若要有效率地處理大量資料，您也會想要確保您正在有效率地使用<xref:System.Windows.Forms.DataGridView>控制項本身。 如需使用有效率的儲存格樣式、 自動調整大小、 選取項目，和共用資料列，請參閱[縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
-- [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [縮放 Windows Forms DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)
-- [在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Windows Form DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)
+- [在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)

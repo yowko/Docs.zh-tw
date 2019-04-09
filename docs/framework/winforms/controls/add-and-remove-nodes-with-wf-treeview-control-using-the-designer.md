@@ -1,5 +1,5 @@
 ---
-title: HOW TO：新增和移除節點，而使用設計工具在 Windows Form TreeView 控制項
+title: HOW TO：使用設計工具以 Windows Forms TreeView 控制項新增和移除節點
 ms.date: 03/30/2017
 helpviewer_keywords:
 - examples [Windows Forms], TreeView control
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - tree nodes in TreeView control
 - TreeView control [Windows Forms], adding nodes
 ms.assetid: 35bf1750-045e-4ec5-97cb-b47b0dbdaa2c
-ms.openlocfilehash: aca660c7b3269715e6551011261f9b84ba173db6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cfac0d02ec1effdd521ca68ae4cb44b5a5a7a597
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710351"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124848"
 ---
-# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>HOW TO：新增和移除節點，而使用設計工具在 Windows Form TreeView 控制項
+# <a name="how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms TreeView 控制項新增和移除節點
 因為 Windows Form<xref:System.Windows.Forms.TreeView>控制項會顯示節點階層的方式，新增節點，您必須注意其父節點的功能時。  
   
  下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.TreeView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。  
@@ -35,9 +35,10 @@ ms.locfileid: "57710351"
 4.  若要刪除節點，選取要刪除，然後按一下 [節點**刪除**] 按鈕。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TreeView 控制項](treeview-control-windows-forms.md)
 - [TreeView 控制項概觀](treeview-control-overview-windows-forms.md)
-- [如何：設定 Windows Form TreeView 控制項的圖示](how-to-set-icons-for-the-windows-forms-treeview-control.md)
-- [如何：逐一查看 Windows Forms TreeView 控制項的所有節點](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [如何：判斷按下哪個 TreeView 節點](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [HOW TO：設定 Windows Forms TreeView 控制項的圖示](how-to-set-icons-for-the-windows-forms-treeview-control.md)
+- [HOW TO：逐一查看 Windows Forms TreeView 控制項的所有節點](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [HOW TO：判斷按下了哪個 TreeView 節點](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
