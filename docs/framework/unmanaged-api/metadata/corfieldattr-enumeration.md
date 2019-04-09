@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b07388b7f7385e93a6ca891e8ea98a2ce69763c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 432e202eb8db105e8d56d3d36cdc8001bac5320c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182373"
 ---
-# <a name="corfieldattr-enumeration"></a><span data-ttu-id="4f0fc-102">CorFieldAttr 列舉</span><span class="sxs-lookup"><span data-stu-id="4f0fc-102">CorFieldAttr Enumeration</span></span>
-<span data-ttu-id="4f0fc-103">包含值，這些值描述與欄位有關的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-103">Contains values that describe metadata about a field.</span></span>  
+# <a name="corfieldattr-enumeration"></a><span data-ttu-id="41cc5-102">CorFieldAttr 列舉</span><span class="sxs-lookup"><span data-stu-id="41cc5-102">CorFieldAttr Enumeration</span></span>
+<span data-ttu-id="41cc5-103">包含值，這些值描述與欄位有關的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="41cc5-103">Contains values that describe metadata about a field.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="4f0fc-104">語法</span><span class="sxs-lookup"><span data-stu-id="4f0fc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="41cc5-104">語法</span><span class="sxs-lookup"><span data-stu-id="41cc5-104">Syntax</span></span>  
   
 ```  
 typedef enum CorFieldAttr {  
@@ -58,36 +58,37 @@ typedef enum CorFieldAttr {
 } CorFieldAttr;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="4f0fc-105">成員</span><span class="sxs-lookup"><span data-stu-id="4f0fc-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="41cc5-105">成員</span><span class="sxs-lookup"><span data-stu-id="41cc5-105">Members</span></span>  
   
-|<span data-ttu-id="4f0fc-106">成員</span><span class="sxs-lookup"><span data-stu-id="4f0fc-106">Member</span></span>|<span data-ttu-id="4f0fc-107">描述</span><span class="sxs-lookup"><span data-stu-id="4f0fc-107">Description</span></span>|  
+|<span data-ttu-id="41cc5-106">成員</span><span class="sxs-lookup"><span data-stu-id="41cc5-106">Member</span></span>|<span data-ttu-id="41cc5-107">描述</span><span class="sxs-lookup"><span data-stu-id="41cc5-107">Description</span></span>|  
 |------------|-----------------|  
-|`fdFieldAccessMask`|<span data-ttu-id="4f0fc-108">指定的協助工具資訊。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-108">Specifies accessibility information.</span></span>|  
-|`fdPrivateScope`|<span data-ttu-id="4f0fc-109">指定無法參考的欄位。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-109">Specifies that the field cannot be referenced.</span></span>|  
-|`fdPrivate`|<span data-ttu-id="4f0fc-110">指定欄位只能由其父型別存取。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-110">Specifies that the field is accessible only by its parent type.</span></span>|  
-|`fdFamANDAssem`|<span data-ttu-id="4f0fc-111">指定的欄位是由其組件中的衍生類別存取。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
-|`fdAssembly`|<span data-ttu-id="4f0fc-112">指定欄位可存取其組件中的所有型別。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
-|`fdFamily`|<span data-ttu-id="4f0fc-113">指定欄位只能由其類型存取，而且衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
-|`fdFamORAssem`|<span data-ttu-id="4f0fc-114">指定的欄位是可由衍生的類別和其組件中的所有型別存取。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
-|`fdPublic`|<span data-ttu-id="4f0fc-115">指定欄位可存取此範圍的可見性與所有類型。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
-|`fdStatic`|<span data-ttu-id="4f0fc-116">指定的欄位是其類型的成員，而不是執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
-|`fdInitOnly`|<span data-ttu-id="4f0fc-117">指定在初始化之後，無法變更的欄位。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
-|`fdLiteral`|<span data-ttu-id="4f0fc-118">指定欄位值為編譯時間常數。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-118">Specifies that the field value is a compile-time constant.</span></span>|  
-|`fdNotSerialized`|<span data-ttu-id="4f0fc-119">指定當其類型為遠端時，則不會序列化的欄位。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
-|`fdSpecialName`|<span data-ttu-id="4f0fc-120">指定欄位是特殊的且其名稱描述方式。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-120">Specifies that the field is special, and that its name describes how.</span></span>|  
-|`fdPinvokeImpl`|<span data-ttu-id="4f0fc-121">指定欄位的實作會經由 PInvoke 被轉送。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
-|`fdReservedMask`|<span data-ttu-id="4f0fc-122">保留供內部使用的 common language runtime。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-122">Reserved for internal use by the common language runtime.</span></span>|  
-|`fdRTSpecialName`|<span data-ttu-id="4f0fc-123">指定 common language runtime 中繼資料內部 Api 應該檢查名稱編碼方式。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
-|`fdHasFieldMarshal`|<span data-ttu-id="4f0fc-124">指定欄位含有封送處理資訊。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-124">Specifies that the field contains marshaling information.</span></span>|  
-|`fdHasDefault`|<span data-ttu-id="4f0fc-125">指定欄位含有預設值。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-125">Specifies that the field has a default value.</span></span>|  
-|`fdHasFieldRVA`|<span data-ttu-id="4f0fc-126">指定欄位含有相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-126">Specifies that the field has a relative virtual address.</span></span>|  
+|`fdFieldAccessMask`|<span data-ttu-id="41cc5-108">指定的協助工具資訊。</span><span class="sxs-lookup"><span data-stu-id="41cc5-108">Specifies accessibility information.</span></span>|  
+|`fdPrivateScope`|<span data-ttu-id="41cc5-109">指定無法參考的欄位。</span><span class="sxs-lookup"><span data-stu-id="41cc5-109">Specifies that the field cannot be referenced.</span></span>|  
+|`fdPrivate`|<span data-ttu-id="41cc5-110">指定欄位只能由其父型別存取。</span><span class="sxs-lookup"><span data-stu-id="41cc5-110">Specifies that the field is accessible only by its parent type.</span></span>|  
+|`fdFamANDAssem`|<span data-ttu-id="41cc5-111">指定的欄位是由其組件中的衍生類別存取。</span><span class="sxs-lookup"><span data-stu-id="41cc5-111">Specifies that the field is accessible by derived classes in its assembly.</span></span>|  
+|`fdAssembly`|<span data-ttu-id="41cc5-112">指定欄位可存取其組件中的所有型別。</span><span class="sxs-lookup"><span data-stu-id="41cc5-112">Specifies that the field is accessible by all types in its assembly.</span></span>|  
+|`fdFamily`|<span data-ttu-id="41cc5-113">指定欄位只能由其類型存取，而且衍生的類別。</span><span class="sxs-lookup"><span data-stu-id="41cc5-113">Specifies that the field is accessible only by its type and derived classes.</span></span>|  
+|`fdFamORAssem`|<span data-ttu-id="41cc5-114">指定的欄位是可由衍生的類別和其組件中的所有型別存取。</span><span class="sxs-lookup"><span data-stu-id="41cc5-114">Specifies that the field is accessible by derived classes and by all types in its assembly.</span></span>|  
+|`fdPublic`|<span data-ttu-id="41cc5-115">指定欄位可存取此範圍的可見性與所有類型。</span><span class="sxs-lookup"><span data-stu-id="41cc5-115">Specifies that the field is accessible by all types with visibility of this scope.</span></span>|  
+|`fdStatic`|<span data-ttu-id="41cc5-116">指定的欄位是其類型的成員，而不是執行個體成員。</span><span class="sxs-lookup"><span data-stu-id="41cc5-116">Specifies that the field is a member of its type rather than an instance member.</span></span>|  
+|`fdInitOnly`|<span data-ttu-id="41cc5-117">指定在初始化之後，無法變更的欄位。</span><span class="sxs-lookup"><span data-stu-id="41cc5-117">Specifies that the field cannot be changed after it is initialized.</span></span>|  
+|`fdLiteral`|<span data-ttu-id="41cc5-118">指定欄位值為編譯時間常數。</span><span class="sxs-lookup"><span data-stu-id="41cc5-118">Specifies that the field value is a compile-time constant.</span></span>|  
+|`fdNotSerialized`|<span data-ttu-id="41cc5-119">指定當其類型為遠端時，則不會序列化的欄位。</span><span class="sxs-lookup"><span data-stu-id="41cc5-119">Specifies that the field is not serialized when its type is remoted.</span></span>|  
+|`fdSpecialName`|<span data-ttu-id="41cc5-120">指定欄位是特殊的且其名稱描述方式。</span><span class="sxs-lookup"><span data-stu-id="41cc5-120">Specifies that the field is special, and that its name describes how.</span></span>|  
+|`fdPinvokeImpl`|<span data-ttu-id="41cc5-121">指定欄位的實作會經由 PInvoke 被轉送。</span><span class="sxs-lookup"><span data-stu-id="41cc5-121">Specifies that the field implementation is forwarded through PInvoke.</span></span>|  
+|`fdReservedMask`|<span data-ttu-id="41cc5-122">保留供內部使用的 common language runtime。</span><span class="sxs-lookup"><span data-stu-id="41cc5-122">Reserved for internal use by the common language runtime.</span></span>|  
+|`fdRTSpecialName`|<span data-ttu-id="41cc5-123">指定 common language runtime 中繼資料內部 Api 應該檢查名稱編碼方式。</span><span class="sxs-lookup"><span data-stu-id="41cc5-123">Specifies that the common language runtime metadata internal APIs should check the encoding of the name.</span></span>|  
+|`fdHasFieldMarshal`|<span data-ttu-id="41cc5-124">指定欄位含有封送處理資訊。</span><span class="sxs-lookup"><span data-stu-id="41cc5-124">Specifies that the field contains marshaling information.</span></span>|  
+|`fdHasDefault`|<span data-ttu-id="41cc5-125">指定欄位含有預設值。</span><span class="sxs-lookup"><span data-stu-id="41cc5-125">Specifies that the field has a default value.</span></span>|  
+|`fdHasFieldRVA`|<span data-ttu-id="41cc5-126">指定欄位含有相對虛擬位址。</span><span class="sxs-lookup"><span data-stu-id="41cc5-126">Specifies that the field has a relative virtual address.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="4f0fc-127">需求</span><span class="sxs-lookup"><span data-stu-id="4f0fc-127">Requirements</span></span>  
- <span data-ttu-id="4f0fc-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="4f0fc-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="41cc5-127">需求</span><span class="sxs-lookup"><span data-stu-id="41cc5-127">Requirements</span></span>  
+ <span data-ttu-id="41cc5-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="41cc5-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="4f0fc-129">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="4f0fc-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="41cc5-129">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="41cc5-129">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="4f0fc-130">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="4f0fc-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="41cc5-130">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="41cc5-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="4f0fc-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4f0fc-131">See also</span></span>
-- [<span data-ttu-id="4f0fc-132">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="4f0fc-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="41cc5-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="41cc5-131">See also</span></span>
+
+- [<span data-ttu-id="41cc5-132">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="41cc5-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
