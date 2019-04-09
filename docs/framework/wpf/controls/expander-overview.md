@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], Expander
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
-ms.openlocfilehash: 29003779825b92402fa12b810c1a099731ac8af6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409454"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130399"
 ---
 # <a name="expander-overview"></a>Expander 概觀
 <xref:System.Windows.Controls.Expander>控制項提供一個可展開區域類似於視窗並且包含標頭中提供內容的方式。  
-  
-  
+
 <a name="CreatinganExpanderinXAML"></a>   
 ## <a name="creating-a-simple-expander"></a>建立簡單的展開器  
  下列範例示範如何建立簡單<xref:System.Windows.Controls.Expander>控制項。 這個範例會建立<xref:System.Windows.Controls.Expander>看起來像上圖。  
@@ -29,7 +28,7 @@ ms.locfileid: "58409454"
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>設定展開內容區域的方向  
- 您可以設定的內容區域<xref:System.Windows.Controls.Expander>展開其中一個四個方向的控制項 (<xref:System.Windows.Controls.ExpandDirection.Down>， <xref:System.Windows.Controls.ExpandDirection.Up>， <xref:System.Windows.Controls.ExpandDirection.Left>，或<xref:System.Windows.Controls.ExpandDirection.Right>) 使用<xref:System.Windows.Controls.ExpandDirection>屬性。 當內容區域摺疊時，只有<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和它的切換按鈕出現。 A<xref:System.Windows.Controls.Button>控制項顯示的方向性箭號來作為切換按鈕展開或摺疊內容區域。 展開時會<xref:System.Windows.Controls.Expander>嘗試在類似視窗的區域中顯示其所有內容。  
+ 您可以設定的內容區域<xref:System.Windows.Controls.Expander>展開其中一個四個方向的控制項 (<xref:System.Windows.Controls.ExpandDirection.Down>， <xref:System.Windows.Controls.ExpandDirection.Up>， <xref:System.Windows.Controls.ExpandDirection.Left>，或<xref:System.Windows.Controls.ExpandDirection.Right>) 使用<xref:System.Windows.Controls.ExpandDirection>屬性。 當內容區域摺疊，只<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和它的切換按鈕出現。 A<xref:System.Windows.Controls.Button>控制項顯示的方向性箭號來作為切換按鈕展開或摺疊內容區域。 展開時會<xref:System.Windows.Controls.Expander>嘗試在類似視窗的區域中顯示其所有內容。  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>控制面板中展開器的大小  
@@ -60,6 +59,7 @@ ms.locfileid: "58409454"
  您可以藉由設定對齊內容<xref:System.Windows.Controls.Control.HorizontalContentAlignment%2A>並<xref:System.Windows.Controls.Control.VerticalContentAlignment%2A>上的屬性<xref:System.Windows.Controls.Expander>控制項。 當您設定這些屬性時，對齊方式會套用到標頭，也會套用到所展開的內容。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [HOW-TO 主題](expander-how-to-topics.md)
+- [HOW TO 主題](expander-how-to-topics.md)
