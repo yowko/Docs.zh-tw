@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: edf3927fb9fdbd9855561b32aec2a425d7ee0638
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cb67a30ca5453142f906be918b891ac959cdaf2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680899"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180009"
 ---
 # <a name="hosting-in-internet-information-services"></a>在網際網路資訊服務中裝載
 裝載 Windows Communication Foundation (WCF) 服務的其中一個選項是在 Internet Information Services (IIS) 應用程式內。 這個裝載模型與 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 ASP.NET (ASMX) Web 服務所使用的模型很類似。  
@@ -19,7 +19,7 @@ ms.locfileid: "54680899"
   
 -   [!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 上的 IIS 5.1。 這個環境適合用來設計與開發 IIS 裝載的應用程式，以便稍後部署到 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 之類的伺服器作業系統中。  
   
--   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 上的 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 提供進階處理模型，具有改良的延展性、可靠性和應用程式隔離。 此環境適合用來以獨佔模式使用 HTTP 通訊的 WCF 服務的生產環境部署。  
+-   [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 在  [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 提供進階的處理模型，可提供改善的延展性、 可靠性和應用程式隔離。 此環境適合用來以獨佔模式使用 HTTP 通訊的 WCF 服務的生產環境部署。  
   
 -   [!INCLUDE[wv](../../../../includes/wv-md.md)] 和 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上的 IIS 7.0。 雖然 IIS 7.0 提供和 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 相同的進階處理模型，但是使用 Windows Process Activation Service (WAS) 來允許在 HTTP 以外的通訊協定上進行啟動和網路通訊。 此環境適合用來透過 WCF （包括 HTTP、 net.tcp、 net.pipe 和 net.msmq） 所支援的任何網路通訊協定進行通訊的 WCF 服務的開發。 如需 WAS 的詳細資訊，請參閱[在 Windows Process Activation Service 中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)。  
   
@@ -57,9 +57,10 @@ ms.locfileid: "54680899"
  WCF 服務可以裝載任一--與並存[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]或是在[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]所在的服務可以充分利用所提供的功能的相容性模式[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 應用程式平台。 如需這些功能的討論，請參閱 < [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 ServiceHostFactory 擴充裝載](../../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)
-- [部署已裝載 Internet Information Services 的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
+- [部署已裝載網際網路資訊服務的 WCF 服務](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)
 - [WCF 服務與 ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)
-- [Internet Information Services 裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+- [網際網路資訊服務裝載最佳做法](../../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
 - [設定 Internet Information Services 7.0 for Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/configuring-iis-for-wcf.md)
 - [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

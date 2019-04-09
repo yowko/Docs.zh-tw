@@ -1,15 +1,15 @@
 ---
-title: HOW TO：鎖定在企業中的端點
+title: HOW TO：鎖定企業的端點
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 5392db25c0e3ae0051a892831dd013063389d863
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181338"
 ---
-# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定在企業中的端點
+# <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定企業的端點
 大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，可用來驗證所有安裝在電腦上的 Windows Communication Foundation (WCF) 用戶端應用程式。  
   
  在此情況下，會驗證程式是用戶端驗證器，因為這個端點行為新增至用戶端[ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md) machine.config 檔案中的區段。 WCF 載入通用端點行為只針對用戶端應用程式，並載入通用服務行為，只對服務應用程式。 若要為服務應用程式安裝這個相同的驗證器，驗證器必須是服務行為。 如需詳細資訊，請參閱 < [ \<commonBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/commonbehaviors.md)一節。  
@@ -64,5 +64,6 @@ ms.locfileid: "54663063"
  您可能也要加密組態檔項目。 如需詳細資訊，請參閱「請參閱」一節。  
   
 ## <a name="see-also"></a>另請參閱
-- [使用 DPAPI 加密組態檔項目](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [使用 RSA 加密組態檔項目](https://go.microsoft.com/fwlink/?LinkId=94955)
+
+- [使用 DPAPI 的加密組態檔項目](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [使用 RSA 的加密組態檔項目](https://go.microsoft.com/fwlink/?LinkId=94955)

@@ -2,12 +2,12 @@
 title: 從 WSE 3.0 Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 7bc5fff7-a2b2-4dbc-86cc-ecf73653dcdc
-ms.openlocfilehash: 30b9d1fa3c8b2123b3a71465f9ccebf722740d0d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a691e8f63e34f60f26d1a96a975dbe062bd59c96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180605"
 ---
 # <a name="migrating-wse-30-web-services-to-wcf"></a>從 WSE 3.0 Web 服務移轉至 WCF
 WSE 3.0 Web 服務移轉至 Windows Communication Foundation (WCF) 的優點包括更佳的效能和支援其他傳輸、 其他安全案例，以及 WS-* 規格。 從 WSE 3.0 移轉到 WCF Web 服務可以感受到 200%到 400%的效能改進。 如需 WCF 所支援之傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。 如需 WCF 支援的案例，請參閱[常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)。 如需 WCF 支援的規格的清單，請參閱 < [Web 服務通訊協定互通性手冊](../../../../docs/framework/wcf/feature-details/web-services-protocols-interoperability-guide.md)。  
@@ -123,7 +123,8 @@ WSE 3.0 Web 服務移轉至 Windows Communication Foundation (WCF) 的優點包�
  WSE 3.0 自訂傳輸在 WCF 中的對等項目即為通道延伸。 如需建立通道延伸的詳細資訊，請參閱[擴充通道層](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [基本程式設計週期](../../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

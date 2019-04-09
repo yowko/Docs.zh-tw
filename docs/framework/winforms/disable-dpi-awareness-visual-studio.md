@@ -1,21 +1,24 @@
 ---
 title: 停用 Visual Studio 中的 DPI 感知
-description: 討論在 HDPI 監視器上的 Windows Form 設計工具，以及如何執行 Visual Studio 做為 DPI 感知的處理序的限制。
-ms.date: 03/19/2019
+description: 討論 Windows Form 設計工具的 HDPI 監視器上的限制，以及如何執行 Visual Studio 做為 DPI 感知的處理序。
+ms.date: 04/05/2019
 ms.prod: visual-studio-windows
 ms.technology: vs-ide-designers
 author: gewarren
 ms.author: gewarren
-ms.openlocfilehash: 73f2371c40facf8902958cce020a6f02047615ba
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.custom: seoapril2019
+ms.openlocfilehash: e52debea382033417afe0bd47f899af1666192bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181374"
 ---
 # <a name="disable-dpi-awareness-in-visual-studio"></a>停用 Visual Studio 中的 DPI 感知
 
 Visual Studio 是為 dots per inch (DPI) 感知應用程式，這表示顯示標尺自動。 如果應用程式指出不 DPI 感知，作業系統會調整為點陣圖的應用程式。 此行為也稱為 DPI 虛擬化。 應用程式仍然會認為它正在執行 100%縮放比例，或 96 dpi。
+
+這篇文章討論 Windows Form 設計工具的 HDPI 監視器上的限制，以及如何執行 Visual Studio 做為 DPI 感知的處理序。
 
 ## <a name="windows-forms-designer-on-hdpi-monitors"></a>在 HDPI 監視器上的 Windows Form 設計工具
 
@@ -32,11 +35,15 @@ Visual Studio 是為 dots per inch (DPI) 感知應用程式，這表示顯示標
 > [!NOTE]
 > 此資訊列是在 Visual Studio 2017 版本 15.8 引進。
 
-如果您不使用設計工具中，而且不需要調整表單的配置，您可以略過的資訊列，並繼續運作，在程式碼編輯器，或在其他類型的設計工具。 (您也可以[停用通知](#disable-notifications)這樣的資訊列不會持續顯示。)只有**Windows Form 設計工具**會受到影響。 如果您需要在中運作**Windows Form 設計工具**下, 一節可協助您[解決此問題](#to-resolve-the-problem)。
+如果您不使用設計工具中，而且不需要調整表單的配置，您可以略過的資訊列，並繼續運作，在程式碼編輯器，或在其他類型的設計工具。 (您也可以[停用通知](#disable-notifications)這樣的資訊列不會持續顯示。)只有**Windows Form 設計工具**會受到影響。 如果您需要在中運作**Windows Form 設計工具**下, 一節可協助您[解決此問題](#to-resolve-the-display-problem)。
 
-## <a name="to-resolve-the-problem"></a>若要解決此問題
+## <a name="to-resolve-the-display-problem"></a>若要解決顯示問題
 
-有三個選項可以解決顯示問題。
+有三個選項可以解決顯示問題：
+
+1. [重新啟動 Visual Studio 做為 DPI 感知的處理序](#restart-visual-studio-as-a-dpi-unaware-process)
+2. [新增登錄項目](#add-a-registry-entry)
+3. [設定您的顯示縮放比例為 100%的設定](#set-your-display-scaling-setting-to-100)
 
 ### <a name="restart-visual-studio-as-a-dpi-unaware-process"></a>重新啟動 Visual Studio 做為 DPI 感知的處理序
 

@@ -2,12 +2,12 @@
 title: ServiceDescription 與 WSDL 參考
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
-ms.openlocfilehash: 59a7c1aabd3de8cc5948e8dbee3ac113cec658c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182880"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription 與 WSDL 參考
 本主題說明 Windows Communication Foundation (WCF) 如何對應 Web 服務描述語言 (WSDL) 文件，與<xref:System.ServiceModel.Description.ServiceDescription>執行個體。  
@@ -50,7 +50,7 @@ ms.locfileid: "54544324"
 |----------------|------------------|  
 |`Name`|用於端點的預設名稱，而這個繫結名稱會以底線區隔附加的合約名稱。|  
 |`Namespace`|`targetNamespace` 定義的 `wsdl:binding`。<br /><br /> 在進行匯入時，如果將原則附加至 WSDL 連接埠，則匯入的繫結命名空間會對應至 `targetNamespace` 定義的 `wsdl:port` 中。|  
-|`BindingElementCollection` 是由 `CreateBindingElements`() 方法所傳回|`wsdl:binding` 定義的各種網域特定延伸項目，一般來說是原則判斷提示 (Assertion)。|  
+|`BindingElementCollection`所傳回`CreateBindingElements`（） 方法|`wsdl:binding` 定義的各種網域特定延伸項目，一般來說是原則判斷提示 (Assertion)。|  
 |`MessageVersion`|端點的 `EnvelopeVersion` 和 `AddressingVersion`。<br /><br /> 指定 `MessageVersion.None` 時，WSDL 繫結不含 SOAP 繫結，而 WSDL 連接埠則不含 WS-Addressing 內容。 這個設定通常會用於 Plain Old XML (POX) 端點。|  
   
 #### <a name="bindingelements"></a>BindingElements  
@@ -109,11 +109,11 @@ ms.locfileid: "54544324"
 |屬性|WSDL 對應|  
 |----------------|------------------|  
 |`Action`|訊息的 SOAP 或 WS-Addressing 動作。<br /><br /> 請注意，使用動作字串 "*" 的作業不會以 WSDL 表示。|  
-|`Direction`|`MessageDirection.Input` 對應至 `wsdl:input`。<br /><br /> `MessageDirection.Output` 對應至 `wsdl:output`。|  
+|`Direction`|`MessageDirection.Input` 對應至`wsdl:input`。<br /><br /> `MessageDirection.Output` 對應至`wsdl:output`。|  
 |`ProtectionLevel`|針對此訊息，附加至 `wsdl:message` 定義之安全性原則中的保護判斷提示。|  
 |`Body`|訊息的訊息本文。|  
 |`Headers`|訊息的標頭。|  
-|`ContractDescription.Name`、 `OperationContract.Name`|在匯出時，用來衍生`wsdl:message`/@name值。|  
+|`ContractDescription.Name`, `OperationContract.Name`|在匯出時，用來衍生`wsdl:message`/@name值。|  
   
 #### <a name="message-body"></a>訊息本文  
  A`MessageBodyDescription`執行個體會對應至`wsdl:message` / `wsdl:part`定義訊息的本文。 訊息本文可以為包裝或不要包裝。  
@@ -152,4 +152,5 @@ ms.locfileid: "54544324"
 |`Name, ContractDescription.Name, OperationDescription.Name,`|用來衍生`wsdl:message`/@name錯誤訊息的值。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description>
