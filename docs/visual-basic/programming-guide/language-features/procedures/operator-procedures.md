@@ -11,12 +11,12 @@ helpviewer_keywords:
 - operator overloading
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
-ms.openlocfilehash: e6e65b1a75d7a80caff3e7cbacdb9dd706e46cdf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175015"
 ---
 # <a name="operator-procedures-visual-basic"></a>運算子程序 (Visual Basic)
 運算子程序是一系列的 Visual Basic 陳述式可定義標準運算式的行為 (例如`*`， `<>`，或`And`) 上類別或您已定義的結構。 這也稱為*多載的運算子*。  
@@ -66,7 +66,7 @@ ms.locfileid: "58815566"
   
  隱含呼叫運算子程序的語法如下所示：  
   
- `Dim testStruct As`  *structurename*  
+ `Dim testStruct As`  *結構名稱*  
   
  `Dim testNewStruct As`  *structurename*  `= testStruct`  *operatorsymbol*  `10`  
   
@@ -78,17 +78,16 @@ ms.locfileid: "58815566"
  下列範例示範典型的呼叫來`+`上定義的運算子`veryLong`。  
   
  [!code-vb[VbVbcnProcedures#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#24)]  
-  
-  
+
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [Sub 程序](./sub-procedures.md)
+- [子程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [如何：定義運算子](./how-to-define-an-operator.md)
-- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
-- [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
-- [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [HOW TO：定義運算子](./how-to-define-an-operator.md)
+- [HOW TO：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [HOW TO：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
+- [HOW TO：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)

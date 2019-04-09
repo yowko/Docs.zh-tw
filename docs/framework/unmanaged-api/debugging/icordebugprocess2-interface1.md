@@ -1,5 +1,5 @@
 ---
-title: ICorDebugProcess2 介面
+title: ICorDebugProcess2 Interface
 ms.date: 03/30/2017
 api_name:
 - ICorDebugProcess2
@@ -16,14 +16,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3009ee6a2ba22771a2132032744f76ca527c422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 49b3bb51f307093ea1cc8cc45064d5c405974822
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965679"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178018"
 ---
-# <a name="icordebugprocess2-interface"></a>ICorDebugProcess2 介面
+# <a name="icordebugprocess2-interface"></a>ICorDebugProcess2 Interface
 ICorDebugProcess 介面，表示處理程序執行 managed 程式碼的邏輯擴充。  
   
 ## <a name="methods"></a>方法  
@@ -46,11 +46,12 @@ ICorDebugProcess 介面，表示處理程序執行 managed 程式碼的邏輯擴
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

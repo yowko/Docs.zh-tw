@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resource dictionaries [WPF], application-scope
 - application-scope resource dictionaries
 ms.assetid: 53857682-bd2c-4f2c-8f25-1307d0b451a2
-ms.openlocfilehash: a2453ae7fad56205ae06835d8710ca126bba17c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 589e28b3c05496e3fc17055b98240e389faed068
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369730"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125370"
 ---
 # <a name="how-to-use-an-application-scope-resource-dictionary"></a>HOW TO：使用應用程式範圍的資源字典
 此範例示範如何定義和使用應用程式範圍自訂資源字典。  
@@ -42,6 +42,7 @@ ms.locfileid: "57369730"
  有兩個使用時的考量<xref:System.Windows.Application.Resources%2A>。 首先，字典*金鑰*是一個物件，因此您必須使用完全相同物件執行個體時設定和取得屬性值。 (請注意，使用字串時，索引鍵會區分大小寫)。其次，字典*值*是一個物件，因此您必須將值轉換成所需的型別，取得屬性值時。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.ResourceDictionary>
 - <xref:System.Windows.Application.Resources%2A>
 - [XAML 資源](../advanced/xaml-resources.md)

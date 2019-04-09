@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: 3a11a96c197cd6905d8e80fac5c869a9c5c374e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a917659092890c95dfd65ede358d9c4b5a0e62cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117906"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>HOW TO：批次 (WCF Data Services) 中執行查詢
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以在單一批次執行一個以上的查詢，針對資料服務。 如需詳細資訊，請參閱 <<c0> [ 批次作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  
@@ -26,4 +26,5 @@ ms.locfileid: "54611900"
  [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -7,17 +7,16 @@ helpviewer_keywords:
 - toolbars [Windows Forms], about toolbars
 - ToolBar control [Windows Forms], about ToolBar controls
 ms.assetid: d426b203-0216-4dbe-b834-1641e50a9c29
-ms.openlocfilehash: 249c5854b83a62878ecef0350e08ba4b00523aff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7b39c8e3dca88e968b43ba5ff14794e2e77247d1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174807"
 ---
 # <a name="toolbar-control-overview-windows-forms"></a>ToolBar 控制項概觀 (Windows Form)
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
+>  <xref:System.Windows.Forms.ToolStrip> 控制項會取代 <xref:System.Windows.Forms.ToolBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ToolBar> 控制項，以提供回溯相容性及未來使用。  
   
  Windows Form <xref:System.Windows.Forms.ToolBar> 控制項在表單中，是當做顯示下拉式功能表其中一列的控制列和啟動命令的點陣圖按鈕使用。 因此，按一下工具列按鈕相當於選擇功能表命令。 您可將這些按鈕設定成與按鈕、下拉式功能表或分隔符號一樣地顯示和運作。 一般而言，工具列包含對應至應用程式功能表結構中項目的按鈕和功能表，可以快速存取應用程式中最常使用的功能和命令。  
   
@@ -32,8 +31,9 @@ ms.locfileid: "57708843"
  <xref:System.Windows.Forms.ToolBar>控制項可讓您藉由新增建立工具列<xref:System.Windows.Forms.Button>物件到<xref:System.Windows.Forms.ToolBar.Buttons%2A>集合。 您可以使用 集合編輯器將按鈕加入至<xref:System.Windows.Forms.ToolBar>控制項; 每個<xref:System.Windows.Forms.Button>物件應該要文字或影像指派，雖然您可以同時指派兩者。 相關聯 [ImageList](imagelist-component-windows-forms.md) 元件所提供的影像。 在執行階段，您可以新增或移除按鈕等，從<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection>使用<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Add%2A>和<xref:System.Windows.Forms.ToolBar.ToolBarButtonCollection.Remove%2A>方法。 若要程式設計的按鈕<xref:System.Windows.Forms.ToolBar>，將程式碼加入<xref:System.Windows.Forms.ToolBar.ButtonClick>事件<xref:System.Windows.Forms.ToolBar>，並使用<xref:System.Windows.Forms.ToolBarButtonClickEventArgs.Button%2A>屬性<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別，以判斷所按的按鈕。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolBar>
 - [ToolBar 控制項](toolbar-control-windows-forms.md)
-- [如何：將按鈕加入至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)
-- [如何：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
-- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [HOW TO：將按鈕新增至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)
+- [HOW TO：定義工具列按鈕的圖示](how-to-define-an-icon-for-a-toolbar-button.md)
+- [HOW TO：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)

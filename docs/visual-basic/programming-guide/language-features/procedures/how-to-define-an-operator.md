@@ -13,12 +13,12 @@ helpviewer_keywords:
 - return values [Visual Basic], Operator procedures
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
-ms.openlocfilehash: 3a09657ee7a79b7f590adba0e4fb0c04a8e89043
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126109"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>HOW TO：定義運算子 (Visual Basic)
 如果您已定義類別或結構，您可以定義標準運算式的行為 (例如`*`， `<>`，或`And`) 當一或兩個運算元屬於您自己的類別或結構的類型。  
@@ -35,15 +35,14 @@ ms.locfileid: "58843639"
  您可以測試結構`height`為下列程式碼。  
   
  [!code-vb[VbVbcnProcedures#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#26)]  
-  
-  
+
 ## <a name="see-also"></a>另請參閱
 
 - [運算子程序](./operator-procedures.md)
-- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
-- [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
-- [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
-- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [HOW TO：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [HOW TO：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
+- [HOW TO：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [HOW TO：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Mod 運算子](../../../../visual-basic/language-reference/operators/mod-operator.md)

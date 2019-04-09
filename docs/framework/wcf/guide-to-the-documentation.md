@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], documentation
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
-ms.openlocfilehash: b6c509bd150ec2443762134079427ebd2de8ba09
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3d7ca994b185c39ac43cb6643098de602692842
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119596"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
 提供以下是 Windows Communication Foundation (WCF) 文件的相關指引。 連結文件是建議的起點，並且根據特定興趣和專業等級分群組。  
@@ -62,7 +62,8 @@ ms.locfileid: "54552609"
  若要查看系統提供繫結中支援的通訊協定清單，請參閱[Web 服務之互通性繫結所支援的通訊協定](../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。 若要查看系統提供繫結的清單，請參閱[System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Communication Foundation 範例](../../../docs/framework/wcf/samples/index.md)
-- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
-- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [概觀說明](../../../docs/framework/wcf/conceptual-overview.md)
+- [方針及最佳作法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
 - [建置用戶端](../../../docs/framework/wcf/building-clients.md)

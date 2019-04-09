@@ -1,5 +1,5 @@
 ---
-title: <listeners> 的 <trace> 項目
+title: <listeners> 項目 <trace>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <listeners> element
 - listeners element
 ms.assetid: 1394c2c3-6304-46db-87c1-8e8b16f5ad5b
-ms.openlocfilehash: cc6ba06127703fbda5d9edf8211b4b206127cbda
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f9f12d9e61e2472b897169727bbb4fbf9833efd6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55271666"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179110"
 ---
 # <a name="listeners-element-for-trace"></a>\<接聽程式 > 項目\<追蹤 >
 指定的接聽程式會收集、 存放區，並將訊息路由。 接聽程式將追蹤輸出導向至適當的目標。  
@@ -85,5 +85,6 @@ ms.locfileid: "55271666"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.TraceListener>
 - [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

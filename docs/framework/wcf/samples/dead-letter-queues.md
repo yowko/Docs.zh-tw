@@ -2,12 +2,12 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 5877d7ae0c38b82053da87907c54c70ef11bd543
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177927"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -24,15 +24,15 @@ ms.locfileid: "58837854"
 
  在 `NetMsmqBinding` 繫結中，會使用下列屬性來表示寄不出的信件佇列：
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 屬性，用來表示用戶端所需之寄不出的信件佇列種類。 這個列舉具有下列值：
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 表示用戶端所需的寄不出信件佇列種類的屬性。 這個列舉具有下列值：
 
--   `None`：沒有寄不出信件佇列所需的用戶端。
+-   `None`:沒有寄不出信件佇列所需的用戶端。
 
--   `System`：系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
+-   `System`:系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
 
--   `Custom`：使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
+-   `Custom`:使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 表示要做為寄不出信件佇列的特定佇列的屬性。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
  在這個範例中，用戶端會從異動範圍內傳送一批訊息至服務，並隨意為這些訊息指定很低的「存留時間」值 (約 2 秒)。 用戶端還會指定要使用的自訂寄不出的信件佇列，以便將過期的訊息加入。
 
@@ -360,4 +360,3 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Net\MSMQ\DeadLetter`  
-  

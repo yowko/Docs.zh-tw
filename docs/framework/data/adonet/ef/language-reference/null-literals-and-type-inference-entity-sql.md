@@ -2,12 +2,12 @@
 title: Null 常值和類型推斷 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: edd56afb-af1b-4e7d-b210-cb8998143426
-ms.openlocfilehash: 2499579237155ff3f7291f795bd1ce9e8a84163c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 22b548f2fc889b20f76a41001438f75c25f99c00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529105"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118088"
 ---
 # <a name="null-literals-and-type-inference-entity-sql"></a>Null 常值和類型推斷 (Entity SQL)
 Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系統中的任何型別都相容。 不過，為了正確推斷 null 常值的型別[!INCLUDE[esql](../../../../../../includes/esql-md.md)]強加特定條件約束可以使用 null 常值的地方。  
@@ -41,4 +41,5 @@ Null 常值與 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型別系
  自由浮動 Null 常值不能在其他案例中使用。 例如，不能當做資料列建構函式的引數。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將 ContextMenuStrip 與控制項產生關聯
+title: HOW TO：建立 ContextMenuStrip 與控制項的關聯
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], associating with controls
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
-ms.openlocfilehash: 4b61da8dc9f36e0a80807547e2049ef512c94747
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4e39769621c46ead92076489014f6e0e9dc7863d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122365"
 ---
-# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>HOW TO：將 ContextMenuStrip 與控制項產生關聯
+# <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>HOW TO：建立 ContextMenuStrip 與控制項的關聯
 在建立您的控制項和捷徑功能表之後，請使用下列程序，在使用者以滑鼠右鍵按一下控制項時顯示指定的捷徑功能表。 這些程序將 <xref:System.Windows.Forms.ContextMenuStrip> 與 Windows Form 和 <xref:System.Windows.Forms.ToolStrip> 控制項產生關聯。  
   
 ### <a name="to-associate-a-contextmenustrip-with-a-windows-form"></a>將 ContextMenuStrip 與 Windows Form 產生關聯  
@@ -42,8 +42,9 @@ ms.locfileid: "57718329"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.Control.ContextMenuStrip%2A>
 - <xref:System.Windows.Forms.ToolStrip>
-- [如何：將功能表項目加入 ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
+- [HOW TO：將功能表項目新增至 ContextMenuStrip](how-to-add-menu-items-to-a-contextmenustrip.md)
 - [ContextMenuStrip 控制項](contextmenustrip-control.md)
