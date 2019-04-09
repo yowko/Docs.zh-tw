@@ -2,23 +2,24 @@
 title: ProtocolRecoveryBeginningFailure
 ms.date: 03/30/2017
 ms.assetid: 4b6ddabf-3861-4c40-b9a2-b153cf1e4d35
-ms.openlocfilehash: 442e4601683543aacefedc1daa7cdf8f188893ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48b3bb1771516e83bee6b6f3c4dcd56d959ebd01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54602555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095642"
 ---
-# <a name="protocolrecoverybeginningfailure"></a><span data-ttu-id="8caa7-102">ProtocolRecoveryBeginningFailure</span><span class="sxs-lookup"><span data-stu-id="8caa7-102">ProtocolRecoveryBeginningFailure</span></span>
-<span data-ttu-id="8caa7-103">識別碼:144</span><span class="sxs-lookup"><span data-stu-id="8caa7-103">Id: 144</span></span>  
+# <a name="protocolrecoverybeginningfailure"></a><span data-ttu-id="c0ec8-102">ProtocolRecoveryBeginningFailure</span><span class="sxs-lookup"><span data-stu-id="c0ec8-102">ProtocolRecoveryBeginningFailure</span></span>
+<span data-ttu-id="c0ec8-103">識別碼:144</span><span class="sxs-lookup"><span data-stu-id="c0ec8-103">Id: 144</span></span>  
   
- <span data-ttu-id="8caa7-104">嚴重性：錯誤</span><span class="sxs-lookup"><span data-stu-id="8caa7-104">Severity: Error</span></span>  
+ <span data-ttu-id="c0ec8-104">嚴重性：錯誤</span><span class="sxs-lookup"><span data-stu-id="c0ec8-104">Severity: Error</span></span>  
   
- <span data-ttu-id="8caa7-105">類別：TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="8caa7-105">Category: TransactionBridge</span></span>  
+ <span data-ttu-id="c0ec8-105">類別：TransactionBridge</span><span class="sxs-lookup"><span data-stu-id="c0ec8-105">Category: TransactionBridge</span></span>  
   
-## <a name="description"></a><span data-ttu-id="8caa7-106">描述</span><span class="sxs-lookup"><span data-stu-id="8caa7-106">Description</span></span>  
- <span data-ttu-id="8caa7-107">此事件表示 MSDTC WS-Atomic 異動通訊協定在開始進行修復時失敗。</span><span class="sxs-lookup"><span data-stu-id="8caa7-107">This event indicates that the MSDTC WS-Atomic Transaction protocol failed at the beginning of recovery.</span></span> <span data-ttu-id="8caa7-108">因此，會停用 WS-Atomic 異動功能。</span><span class="sxs-lookup"><span data-stu-id="8caa7-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="8caa7-109">此事件會列出通訊協定識別碼、通訊協定名稱、例外狀況、處理序名稱與處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="8caa7-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span>  
+## <a name="description"></a><span data-ttu-id="c0ec8-106">描述</span><span class="sxs-lookup"><span data-stu-id="c0ec8-106">Description</span></span>  
+ <span data-ttu-id="c0ec8-107">此事件表示 MSDTC WS-Atomic 交易通訊協定在開始進行修復時失敗。</span><span class="sxs-lookup"><span data-stu-id="c0ec8-107">This event indicates that the MSDTC WS-Atomic Transaction protocol failed at the beginning of recovery.</span></span> <span data-ttu-id="c0ec8-108">因此，會停用 WS-Atomic 異動功能。</span><span class="sxs-lookup"><span data-stu-id="c0ec8-108">As a result, WS-Atomic Transaction functionality is disabled.</span></span> <span data-ttu-id="c0ec8-109">此事件會列出通訊協定識別碼、通訊協定名稱、例外狀況、處理序名稱與處理序識別碼。</span><span class="sxs-lookup"><span data-stu-id="c0ec8-109">The event lists the protocol ID, protocol name, exception, process name and process ID.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8caa7-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8caa7-110">See also</span></span>
-- [<span data-ttu-id="8caa7-111">事件記錄</span><span class="sxs-lookup"><span data-stu-id="8caa7-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
-- [<span data-ttu-id="8caa7-112">事件一般參考</span><span class="sxs-lookup"><span data-stu-id="8caa7-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)
+## <a name="see-also"></a><span data-ttu-id="c0ec8-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c0ec8-110">See also</span></span>
+
+- [<span data-ttu-id="c0ec8-111">事件記錄</span><span class="sxs-lookup"><span data-stu-id="c0ec8-111">Event Logging</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
+- [<span data-ttu-id="c0ec8-112">事件一般參考</span><span class="sxs-lookup"><span data-stu-id="c0ec8-112">Events General Reference</span></span>](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

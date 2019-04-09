@@ -1,5 +1,5 @@
 ---
-title: HOW TO：新增和移除使用 Windows Form TabControl 的索引標籤
+title: HOW TO：使用 Windows Forms TabControl 新增和移除索引標籤
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,19 +12,19 @@ helpviewer_keywords:
 - tabs [Windows Forms], adding to pages
 - tab pages
 ms.assetid: 66d4dfca-41e8-44e3-9c80-fb7ac4cb1619
-ms.openlocfilehash: 4420f598f1243e6c834ecd82bb6ea7071cc95402
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 723e05803b1f7d2bc56476248987085dbe5e23f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101597"
 ---
-# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="32331-102">HOW TO：新增和移除使用 Windows Form TabControl 的索引標籤</span><span class="sxs-lookup"><span data-stu-id="32331-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
-<span data-ttu-id="32331-103">根據預設，<xref:System.Windows.Forms.TabControl>控制項包含兩個<xref:System.Windows.Forms.TabPage>控制項。</span><span class="sxs-lookup"><span data-stu-id="32331-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="32331-104">您可以存取這些索引標籤，透過<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="32331-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+# <a name="how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol"></a><span data-ttu-id="56066-102">HOW TO：使用 Windows Forms TabControl 新增和移除索引標籤</span><span class="sxs-lookup"><span data-stu-id="56066-102">How to: Add and Remove Tabs with the Windows Forms TabControl</span></span>
+<span data-ttu-id="56066-103">根據預設，<xref:System.Windows.Forms.TabControl>控制項包含兩個<xref:System.Windows.Forms.TabPage>控制項。</span><span class="sxs-lookup"><span data-stu-id="56066-103">By default, a <xref:System.Windows.Forms.TabControl> control contains two <xref:System.Windows.Forms.TabPage> controls.</span></span> <span data-ttu-id="56066-104">您可以存取這些索引標籤，透過<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="56066-104">You can access these tabs through the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="32331-105">若要以程式設計方式加入索引標籤</span><span class="sxs-lookup"><span data-stu-id="32331-105">To add a tab programmatically</span></span>  
+### <a name="to-add-a-tab-programmatically"></a><span data-ttu-id="56066-105">若要以程式設計方式加入索引標籤</span><span class="sxs-lookup"><span data-stu-id="56066-105">To add a tab programmatically</span></span>  
   
--   <span data-ttu-id="32331-106">使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="32331-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="56066-106">使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="56066-106">Use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Add%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     Dim myTabPage As New TabPage()  
@@ -45,13 +45,13 @@ ms.locfileid: "57707936"
     tabControl1->TabPages->Add(myTabPage);  
     ```  
   
-### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="32331-107">若要以程式設計方式移除工作索引標籤</span><span class="sxs-lookup"><span data-stu-id="32331-107">To remove a tab programmatically</span></span>  
+### <a name="to-remove-a-tab-programmatically"></a><span data-ttu-id="56066-107">若要以程式設計方式移除工作索引標籤</span><span class="sxs-lookup"><span data-stu-id="56066-107">To remove a tab programmatically</span></span>  
   
--   <span data-ttu-id="32331-108">若要移除選取的索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="32331-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="56066-108">若要移除選取的索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="56066-108">To remove selected tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Remove%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
-     <span data-ttu-id="32331-109">-或-</span><span class="sxs-lookup"><span data-stu-id="32331-109">-or-</span></span>  
+     <span data-ttu-id="56066-109">-或-</span><span class="sxs-lookup"><span data-stu-id="56066-109">-or-</span></span>  
   
--   <span data-ttu-id="32331-110">若要移除所有索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="32331-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
+-   <span data-ttu-id="56066-110">若要移除所有索引標籤，請使用<xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A>方法的<xref:System.Windows.Forms.TabControl.TabPages%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="56066-110">To remove all tabs, use the <xref:System.Windows.Forms.TabControl.TabPageCollection.Clear%2A> method of the <xref:System.Windows.Forms.TabControl.TabPages%2A> property.</span></span>  
   
     ```vb  
     ' Removes the selected tab:  
@@ -74,8 +74,9 @@ ms.locfileid: "57707936"
     tabControl1->TabPages->Clear();  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="32331-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="32331-111">See also</span></span>
-- [<span data-ttu-id="32331-112">TabControl 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="32331-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
-- [<span data-ttu-id="32331-113">如何：將控制項加入索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="32331-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
-- [<span data-ttu-id="32331-114">如何：停用索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="32331-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
-- [<span data-ttu-id="32331-115">如何：變更 Windows Form TabControl 的外觀</span><span class="sxs-lookup"><span data-stu-id="32331-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+## <a name="see-also"></a><span data-ttu-id="56066-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="56066-111">See also</span></span>
+
+- [<span data-ttu-id="56066-112">TabControl 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="56066-112">TabControl Control Overview</span></span>](tabcontrol-control-overview-windows-forms.md)
+- [<span data-ttu-id="56066-113">HOW TO：將控制項新增至索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="56066-113">How to: Add a Control to a Tab Page</span></span>](how-to-add-a-control-to-a-tab-page.md)
+- [<span data-ttu-id="56066-114">HOW TO：停用索引標籤頁</span><span class="sxs-lookup"><span data-stu-id="56066-114">How to: Disable Tab Pages</span></span>](how-to-disable-tab-pages.md)
+- [<span data-ttu-id="56066-115">HOW TO：變更 Windows Forms TabControl 的外觀</span><span class="sxs-lookup"><span data-stu-id="56066-115">How to: Change the Appearance of the Windows Forms TabControl</span></span>](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
