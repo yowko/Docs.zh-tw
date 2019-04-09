@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 11e45e5a834c27f825db3419b2d8675f9a9a37d5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 714827da24b3fc0a334210fd94e61f80cb2afe49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135747"
 ---
-# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="093d7-102">ICLRStrongName::GetHashFromAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="093d7-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
-<span data-ttu-id="093d7-103">使用指定的雜湊演算法取得所指定組件檔案的雜湊。</span><span class="sxs-lookup"><span data-stu-id="093d7-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
+# <a name="iclrstrongnamegethashfromassemblyfile-method"></a><span data-ttu-id="aad23-102">ICLRStrongName::GetHashFromAssemblyFile 方法</span><span class="sxs-lookup"><span data-stu-id="aad23-102">ICLRStrongName::GetHashFromAssemblyFile Method</span></span>
+<span data-ttu-id="aad23-103">使用指定的雜湊演算法取得所指定組件檔案的雜湊。</span><span class="sxs-lookup"><span data-stu-id="aad23-103">Gets a hash of the specified assembly file, using the specified hash algorithm.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="093d7-104">語法</span><span class="sxs-lookup"><span data-stu-id="093d7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aad23-104">語法</span><span class="sxs-lookup"><span data-stu-id="aad23-104">Syntax</span></span>  
   
 ```  
 HRESULT GetHashFromAssemblyFile (  
@@ -39,34 +39,35 @@ HRESULT GetHashFromAssemblyFile (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="093d7-105">參數</span><span class="sxs-lookup"><span data-stu-id="093d7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aad23-105">參數</span><span class="sxs-lookup"><span data-stu-id="aad23-105">Parameters</span></span>  
  `szFilePath`  
- <span data-ttu-id="093d7-106">[in]要雜湊檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="093d7-106">[in] The path to the file to be hashed.</span></span>  
+ <span data-ttu-id="aad23-106">[in]要雜湊檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="aad23-106">[in] The path to the file to be hashed.</span></span>  
   
  `piHashAlg`  
- <span data-ttu-id="093d7-107">[in、 out]常數，指定的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="093d7-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="093d7-108">使用預設雜湊演算法的零。</span><span class="sxs-lookup"><span data-stu-id="093d7-108">Use zero for the default hash algorithm.</span></span>  
+ <span data-ttu-id="aad23-107">[in、 out]常數，指定的雜湊演算法。</span><span class="sxs-lookup"><span data-stu-id="aad23-107">[in, out] A constant that specifies the hash algorithm.</span></span> <span data-ttu-id="aad23-108">使用預設雜湊演算法的零。</span><span class="sxs-lookup"><span data-stu-id="aad23-108">Use zero for the default hash algorithm.</span></span>  
   
  `pbHash`  
- <span data-ttu-id="093d7-109">[out]傳回的雜湊緩衝區。</span><span class="sxs-lookup"><span data-stu-id="093d7-109">[out] The returned hash buffer.</span></span>  
+ <span data-ttu-id="aad23-109">[out]傳回的雜湊緩衝區。</span><span class="sxs-lookup"><span data-stu-id="aad23-109">[out] The returned hash buffer.</span></span>  
   
  `cchHash`  
- <span data-ttu-id="093d7-110">[in]要求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="093d7-110">[in] The requested maximum size of `pbHash`.</span></span>  
+ <span data-ttu-id="aad23-110">[in]要求的最大大小的`pbHash`。</span><span class="sxs-lookup"><span data-stu-id="aad23-110">[in] The requested maximum size of `pbHash`.</span></span>  
   
  `pchHash`  
- <span data-ttu-id="093d7-111">[out]傳回大小，以位元組為單位， `pbHash`。</span><span class="sxs-lookup"><span data-stu-id="093d7-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
+ <span data-ttu-id="aad23-111">[out]傳回大小，以位元組為單位， `pbHash`。</span><span class="sxs-lookup"><span data-stu-id="aad23-111">[out] The returned size, in bytes, of `pbHash`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="093d7-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="093d7-112">Return Value</span></span>  
- <span data-ttu-id="093d7-113">`S_OK` 如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="093d7-113">`S_OK` if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
+## <a name="return-value"></a><span data-ttu-id="aad23-112">傳回值</span><span class="sxs-lookup"><span data-stu-id="aad23-112">Return Value</span></span>  
+ `S_OK` <span data-ttu-id="aad23-113">如果這個方法順利完成否則，表示失敗的 HRESULT 值 (請參閱[常見的 HRESULT 值](https://go.microsoft.com/fwlink/?LinkId=213878)清單)。</span><span class="sxs-lookup"><span data-stu-id="aad23-113">if the method completed successfully; otherwise, an HRESULT value that indicates failure (see [Common HRESULT Values](https://go.microsoft.com/fwlink/?LinkId=213878) for a list).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="093d7-114">需求</span><span class="sxs-lookup"><span data-stu-id="093d7-114">Requirements</span></span>  
- <span data-ttu-id="093d7-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="093d7-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aad23-114">需求</span><span class="sxs-lookup"><span data-stu-id="aad23-114">Requirements</span></span>  
+ <span data-ttu-id="aad23-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="aad23-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="093d7-116">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="093d7-116">**Header:** MetaHost.h</span></span>  
+ <span data-ttu-id="aad23-116">**標頭：** MetaHost.h</span><span class="sxs-lookup"><span data-stu-id="aad23-116">**Header:** MetaHost.h</span></span>  
   
- <span data-ttu-id="093d7-117">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="093d7-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="aad23-117">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="aad23-117">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="093d7-118">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="093d7-118">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="aad23-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="aad23-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="093d7-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="093d7-119">See also</span></span>
-- [<span data-ttu-id="093d7-120">GetHashFromAssemblyFileW 方法</span><span class="sxs-lookup"><span data-stu-id="093d7-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
-- [<span data-ttu-id="093d7-121">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="093d7-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aad23-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aad23-119">See also</span></span>
+
+- [<span data-ttu-id="aad23-120">GetHashFromAssemblyFileW 方法</span><span class="sxs-lookup"><span data-stu-id="aad23-120">GetHashFromAssemblyFileW Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromassemblyfilew-method.md)
+- [<span data-ttu-id="aad23-121">ICLRStrongName 介面</span><span class="sxs-lookup"><span data-stu-id="aad23-121">ICLRStrongName Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)
