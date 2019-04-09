@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a325c3e1aa9c08e00dc2cc38e3f7833fa9f99897
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 74517e034af6a1e4dfb8e4b28c2fec55a3d8de8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472573"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092834"
 ---
-# <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a><span data-ttu-id="26ae7-102">ICorProfilerInfo2::EnumModuleFrozenObjects 方法</span><span class="sxs-lookup"><span data-stu-id="26ae7-102">ICorProfilerInfo2::EnumModuleFrozenObjects Method</span></span>
-<span data-ttu-id="26ae7-103">取得可反覆項目讓您透過指定的模組中的凍結物件的列舉值。這個方法已經過時。</span><span class="sxs-lookup"><span data-stu-id="26ae7-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span></span>  
+# <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a><span data-ttu-id="316b5-102">ICorProfilerInfo2::EnumModuleFrozenObjects 方法</span><span class="sxs-lookup"><span data-stu-id="316b5-102">ICorProfilerInfo2::EnumModuleFrozenObjects Method</span></span>
+<span data-ttu-id="316b5-103">取得可反覆項目讓您透過指定的模組中的凍結物件的列舉值。這個方法已經過時。</span><span class="sxs-lookup"><span data-stu-id="316b5-103">Gets an enumerator that allows iteration over the frozen objects in the specified module.This method is obsolete.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="26ae7-104">語法</span><span class="sxs-lookup"><span data-stu-id="26ae7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="316b5-104">語法</span><span class="sxs-lookup"><span data-stu-id="316b5-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumModuleFrozenObjects(  
@@ -35,22 +35,23 @@ HRESULT EnumModuleFrozenObjects(
     [out] ICorProfilerObjectEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="26ae7-105">參數</span><span class="sxs-lookup"><span data-stu-id="26ae7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="316b5-105">參數</span><span class="sxs-lookup"><span data-stu-id="316b5-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="26ae7-106">[in]包含要列舉的凍結的物件模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="26ae7-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span></span>  
+ <span data-ttu-id="316b5-106">[in]包含要列舉的凍結的物件模組的識別碼。</span><span class="sxs-lookup"><span data-stu-id="316b5-106">[in] The ID of the module that contains the frozen objects to be enumerated.</span></span>  
   
  `ppEnum`  
- <span data-ttu-id="26ae7-107">[out]位址指標[ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)介面，其中會列舉凍結的物件。</span><span class="sxs-lookup"><span data-stu-id="26ae7-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span></span>  
+ <span data-ttu-id="316b5-107">[out]位址指標[ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)介面，其中會列舉凍結的物件。</span><span class="sxs-lookup"><span data-stu-id="316b5-107">[out] A pointer to the address of an [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md) interface, which enumerates the frozen objects.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="26ae7-108">需求</span><span class="sxs-lookup"><span data-stu-id="26ae7-108">Requirements</span></span>  
- <span data-ttu-id="26ae7-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="26ae7-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="316b5-108">需求</span><span class="sxs-lookup"><span data-stu-id="316b5-108">Requirements</span></span>  
+ <span data-ttu-id="316b5-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="316b5-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="26ae7-110">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="26ae7-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="316b5-110">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="316b5-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="26ae7-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="26ae7-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="316b5-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="316b5-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="26ae7-112">**.NET framework 版本：** 3.5、 3.0 SP1，3.0，2.0 SP1，2.0</span><span class="sxs-lookup"><span data-stu-id="26ae7-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span></span>  
+ <span data-ttu-id="316b5-112">**.NET framework 版本：** 3.5、 3.0 SP1，3.0，2.0 SP1，2.0</span><span class="sxs-lookup"><span data-stu-id="316b5-112">**.NET Framework Versions:** 3.5, 3.0 SP1, 3.0, 2.0 SP1, 2.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="26ae7-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="26ae7-113">See also</span></span>
-- [<span data-ttu-id="26ae7-114">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="26ae7-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
-- [<span data-ttu-id="26ae7-115">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="26ae7-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="316b5-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="316b5-113">See also</span></span>
+
+- [<span data-ttu-id="316b5-114">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="316b5-114">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="316b5-115">ICorProfilerInfo2 介面</span><span class="sxs-lookup"><span data-stu-id="316b5-115">ICorProfilerInfo2 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
