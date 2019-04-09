@@ -2,12 +2,12 @@
 title: 如何：服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: b02031493df1a63f62b4bdab80b56b1fb220aa92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085372"
 ---
 # <a name="how-to-service-versioning"></a>如何：服務版本控制
 本主題概要說明建立路由組態服務時所需的基本步驟，該組態可傳送訊息至相同服務的不同版本。 在此範例中，會將訊息傳送至兩個不同版本的計算器服務，`roundingCalc` (v1) 和 `regularCalc` (v2)。 兩項實作都支援相同的作業，不過較舊的服務 `roundingCalc` 會在傳回之前將所有的計算結果捨入至最接近的整數值。 用戶端應用程式必須能夠表示是否可使用較新的 `regularCalc` 服務。  
@@ -17,9 +17,9 @@ ms.locfileid: "54700594"
   
  由這兩項服務公開的作業為：  
   
--   Add  
+-   新增  
   
--   Subtract  
+-   差集  
   
 -   乘法  
   
@@ -325,4 +325,5 @@ namespace Microsoft.Samples.AdvancedFilters
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -10,18 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - collection-type properties [WPF]
 ms.assetid: 99f96a42-3ab7-4f64-a16b-2e10d654e97c
-ms.openlocfilehash: a2a664f0672f4585649cebad6e62635125db0983
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9ce0b70bfdd70b47857167ff14e62ed2bbda569d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077455"
 ---
 # <a name="collection-type-dependency-properties"></a>集合類型相依性屬性
 本主題提供如何實作屬性類型為集合類型之相依性屬性的指引和建議模式。  
-  
- 
-  
+
 <a name="implementing"></a>   
 ## <a name="implementing-a-collection-type-dependency-property"></a>實作集合類型相依性屬性  
  相依性屬性在一般情況下，您所遵循的實作模式是您定義[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]屬性包裝函式，其中該屬性做為後盾<xref:System.Windows.DependencyProperty>識別碼而不是欄位或其他建構。 當您實作集合類型屬性時，您可以遵循此相同的模式。 不過，會是集合型別屬性增添少許複雜性模式，每當集合中包含的型別本身<xref:System.Windows.DependencyObject>或<xref:System.Windows.Freezable>衍生的類別。  
@@ -57,6 +55,7 @@ ms.locfileid: "57354891"
  若要啟用相依性物件集合中的子屬性繫結，建立 集合屬性做為類型<xref:System.Windows.FreezableCollection%601>，使用任何該集合的型別條件約束<xref:System.Windows.DependencyObject>衍生的類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.FreezableCollection%601>
 - [WPF 的 XAML 和自訂類別](xaml-and-custom-classes-for-wpf.md)
 - [資料繫結概觀](../data/data-binding-overview.md)

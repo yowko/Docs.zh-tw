@@ -7,12 +7,12 @@ helpviewer_keywords:
 - templates [WPF], inline
 - inline styles [WPF]
 ms.assetid: 69a1a3f9-acb5-4e2c-9c43-2e376c055ac4
-ms.openlocfilehash: 6225e1abd2b6bb8c3598b08bb2a717340c435e77
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b566e157e2d4a9e9be21a678541bf5d5341a898c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091430"
 ---
 # <a name="inline-styles-and-templates"></a>內嵌樣式和範本
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供<xref:System.Windows.Style>物件和範本物件 (<xref:System.Windows.FrameworkTemplate>子類別) 來定義資源中的視覺外觀的項目，以便他們可以使用多次。 基於這個理由中的屬性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]會採用型別<xref:System.Windows.Style>和<xref:System.Windows.FrameworkTemplate>幾乎一律讓現有的樣式和範本的資源參考而不是定義新的內嵌。  
@@ -37,4 +37,5 @@ ms.locfileid: "57373383"
  傳回物件的標記延伸模組啟用其他語法也會讓樣式和範本。 包含兩個這類有可能的案例的延伸模組[TemplateBinding](templatebinding-markup-extension.md)和<xref:System.Windows.Data.Binding>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [樣式設定和範本化](../controls/styling-and-templating.md)

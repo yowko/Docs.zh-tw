@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 43dfb23b-5cef-46f2-8d87-78f0fba1eb8c
-ms.openlocfilehash: bde264684eb4d36ae59e9ed966c88f379231ac73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 06dcbbedf8c1533b3da52b447c121746ce705083
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083344"
 ---
 # <a name="loading-dataset-schema-information-from-xml"></a>從 XML 載入資料集結構描述資訊
 結構描述<xref:System.Data.DataSet>（其資料表、 資料行、 關聯和條件約束） 可以定義以程式設計的方式，由**填滿**或是**FillSchema**方法<xref:System.Data.Common.DataAdapter>，或從載入XML 文件。 載入**資料集**結構描述資訊從 XML 文件，您可以使用**ReadXmlSchema**或**InferXmlSchema**方法**的資料集**. **ReadXmlSchema**可讓您載入或推斷**資料集**從包含 XML 結構描述定義語言 (XSD) 結構描述或內嵌 XML 結構描述的 XML 文件的文件的結構描述資訊。 **InferXmlSchema**可讓您來推斷 XML 文件的結構描述，但略過您指定特定 XML 命名空間。  
@@ -86,9 +86,10 @@ dataSet.InferXmlSchema("input_od.xml", new string[] "urn:schemas-microsoft-com:o
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+
+- [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [從 XML 結構描述 (XSD) 衍生資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/deriving-dataset-relational-structure-from-xml-schema-xsd.md)
 - [從 XML 推斷資料集關聯式結構](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/inferring-dataset-relational-structure-from-xml.md)
 - [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

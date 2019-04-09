@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定為使用設計工具在 Windows Form DataGridView 控制項中替代資料列樣式
+title: HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ledger-like formats
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 860028fc0c2ea7fd0e985ad97f6e38b32c45e6f8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072932"
 ---
-# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：設定為使用設計工具在 Windows Form DataGridView 控制項中替代資料列樣式
+# <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
 表格式資料通常是 ledger 的格式，其中的替代資料列有不同的背景色彩呈現。 這種格式可讓使用者輕鬆地指出每個資料列中有哪些儲存格，特別是具有許多資料行的寬資料表。  
   
  利用 <xref:System.Windows.Forms.DataGridView> 控制項，您可以指定替代資料列的完整樣式資訊。 您可以使用例如前景色彩和字型、 背景色彩以外的樣式特性，來區分替代資料列。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
@@ -39,9 +39,10 @@ ms.locfileid: "57724592"
     >  資料格會顯示使用繼承自多個屬性的樣式。 如需有關樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [使用設計工具搭配 Windows Forms DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)
-- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Windows Form DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [使用設計工具搭配 Windows Form DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)
+- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

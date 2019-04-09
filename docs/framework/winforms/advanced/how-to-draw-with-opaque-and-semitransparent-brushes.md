@@ -10,12 +10,12 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], brush
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
-ms.openlocfilehash: ebb2f1008d267c4b5dcf36a7a4aae749fe73bb59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100911"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>HOW TO：使用不透明和半透明筆刷繪製
 當您填滿形狀時，您必須傳遞 <xref:System.Drawing.Brush> 物件至 <xref:System.Drawing.Graphics> 類別的其中一種填滿方法。 <xref:System.Drawing.SolidBrush.%23ctor%2A> 建構函式的參數是 <xref:System.Drawing.Color> 物件。 若要填滿不透明的圖形，請設定色彩的 Alpha 元件為 255。 若要填滿半透明的圖案，請設定 Alpha 元件為從 1 到 254 的任何值。  
@@ -24,19 +24,20 @@ ms.locfileid: "57716873"
   
 ## <a name="example"></a>範例  
  下列範例會繪製點陣圖，然後填滿重疊點陣圖的三個橢圓形。 第一個橢圓形使用的 Alpha 元件為 255，所以是不透明的。 第二個和第三個橢圓形使用的 Alpha 元件為 128，因此是半透明的；您可以看到穿透橢圓形的背景影像。 設定 <xref:System.Drawing.Graphics.CompositingQuality%2A> 屬性的呼叫會讓第三個橢圓形搭配 Gamma 修正進行混色。  
-  
- 下圖顯示下列程式碼的輸出。  
-  
- ![不透明和半透明](./media/compqualellipse.png "compqualellipse")  
-  
+
  [!code-csharp[System.Drawing.AlphaBlending#31](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlphaBlending/CS/Class1.cs#31)]
  [!code-vb[System.Drawing.AlphaBlending#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#31)]  
+
+ 下圖顯示下列程式碼的輸出： 
+  
+ ![顯示圖例，不透明和半透明的輸出。](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [Alpha 混色線條和填色](alpha-blending-lines-and-fills.md)
-- [如何：為控制項提供透明背景](../controls/how-to-give-your-control-a-transparent-background.md)
-- [如何：繪製不透明和半透明線條](how-to-draw-opaque-and-semitransparent-lines.md)
+- [HOW TO：為控制項提供透明背景](../controls/how-to-give-your-control-a-transparent-background.md)
+- [HOW TO：繪製不透明和半透明線條](how-to-draw-opaque-and-semitransparent-lines.md)

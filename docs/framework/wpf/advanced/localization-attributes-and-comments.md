@@ -5,18 +5,16 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 214d2cf369a62f5565ef4b89fd658f6bec4b2fdc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092912"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是屬性，內部[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]原始碼，開發人員提供當地語系化的規則和提示所提供。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊： 可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
 
-  
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>當地語系化註解  
  如果標記應用程式作者具有 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中特定項目的需求 (例如，文字長度、字型家族或字型大小的條件約束)，則可以透過 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 程式碼中的註解將這項資訊傳達給當地語系化人員。 將註解新增至原始程式碼的程序如下︰  
@@ -25,7 +23,7 @@ ms.locfileid: "57377096"
   
 2.  在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
   
-     `<LocalizationDirectivesToLocFile>` <值> `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
   
 3.  可以指派的值如下︰  
   
@@ -90,7 +88,7 @@ ms.locfileid: "57377096"
   
 |分類|意義|  
 |--------------|-------------|  
-|無|目標值沒有已定義的分類。|  
+|None|目標值沒有已定義的分類。|  
 |繼承|目標值會從其父代繼承其分類。|  
 |Ignore|會略過當地語系化程序中的目標值。 略過只會影響目前值。 它不會影響子節點。|  
 |NeverLocalize|無法當地語系化目前值。 項目的子系會繼承此分類。|  
@@ -100,7 +98,8 @@ ms.locfileid: "57377096"
  Localization.Comments 包含有關目標值的自由格式字串。 應用程式開發人員可以新增資訊，提供當地語系化人員如何翻譯應用程式文字的提示。 註解的格式可以是用 "()" 括住的任何字串。 使用 '\\' 來逸出字元。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF 的全球化](globalization-for-wpf.md)
-- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
-- [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)
+- [使用自動配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
+- [針對自動版面配置使用格線](how-to-use-a-grid-for-automatic-layout.md)
 - [將應用程式當地語系化](how-to-localize-an-application.md)

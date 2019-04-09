@@ -12,12 +12,12 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - drawing lines
 ms.assetid: 55c1dbeb-75d0-430c-9814-a24b8971ad8c
-ms.openlocfilehash: 68c1d9220754e40e8eef4b5ed63c1fba63b541e0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: aab04b9236175cedd154b817db5a6f6450503105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074443"
 ---
 # <a name="how-to-draw-a-line-on-a-windows-form"></a>HOW TO：在 Windows Form 上繪製線條
 此範例會在表單上繪製一條線。 一般而言，當您在表單上繪製時，您處理表單的<xref:System.Windows.Forms.Control.Paint>事件並執行使用繪圖<xref:System.Windows.Forms.PaintEventArgs.Graphics%2A>屬性<xref:System.Windows.Forms.PaintEventArgs>，在此範例中所示  
@@ -27,14 +27,15 @@ ms.locfileid: "57713731"
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  您應該一律呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如任何物件上<xref:System.Drawing.Pen>物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics.DrawLine%2A>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

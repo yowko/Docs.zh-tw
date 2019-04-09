@@ -13,12 +13,12 @@ helpviewer_keywords:
 - menu items [Windows Forms], enabling
 - menus [Windows Forms], disabling menu items
 ms.assetid: bcc1da84-50fd-41d2-8475-103b581d5654
-ms.openlocfilehash: 3c18935239a4355d5416a0a79d0fa9f5c504cc7e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a480cd29eef1a79a69f702eed7cd02c28d7ea3de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082720"
 ---
 # <a name="how-to-disable-toolstripmenuitems"></a>HOW TO：停用 ToolStripMenuItems
 您可以限制，或擴大使用者可能會進行啟用和停用功能表項目，以回應使用者活動的命令。 依預設會啟用功能表項目，當建立，但這可以透過調整<xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A>屬性。 您可以使用這個屬性在設計階段**屬性**視窗或以程式設計方式在程式碼中設定它。  
@@ -43,7 +43,8 @@ ms.locfileid: "57720208"
     >  停用功能表中的第一個或最上層功能表項目會隱藏在功能表中，包含的所有功能表項目，但不會不停用它們。 同樣地，停用功能表項目具有子功能表項目就會隱藏子功能表項目，但不會不停用它們。 如果使用者無法使用指定的功能表上的所有命令，它會視為良好的程式設計作法，同時隱藏並停用整個功能表中，這帶來全新的使用者介面。 您應該隱藏及停用功能表，並停用每個項目和子功能表項目在功能表中，因為單獨隱藏並不會防止攠摝坫透過功能表命令的存取。 設定<xref:System.Windows.Forms.ToolStripItem.Visible%2A>屬性的最上層的功能表項目`false`隱藏整個功能表。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
-- [如何：隱藏 ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
+- [HOW TO：隱藏 ToolStripMenuItems](how-to-hide-toolstripmenuitems.md)
 - [MenuStrip 控制項概觀](menustrip-control-overview-windows-forms.md)

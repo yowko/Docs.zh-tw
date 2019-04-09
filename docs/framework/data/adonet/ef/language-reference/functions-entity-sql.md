@@ -2,12 +2,12 @@
 title: 函式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
-ms.openlocfilehash: 88029f22cc22594d26a05ad66051378a75a6e753
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080601"
 ---
 # <a name="functions-entity-sql"></a>函式 (Entity SQL)
 Entity SQL 支援使用者定義函式、標準函式及提供者特有的函式。 使用者定義函式可在概念模型中指定，或是內嵌於查詢之中。 如需詳細資訊，請參閱 <<c0> [ 使用者定義函式](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)。  
@@ -24,4 +24,5 @@ Entity SQL 支援使用者定義函式、標準函式及提供者特有的函式
  [彙總函式](../../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

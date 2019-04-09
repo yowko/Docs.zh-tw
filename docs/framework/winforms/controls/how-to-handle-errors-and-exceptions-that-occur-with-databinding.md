@@ -1,5 +1,5 @@
 ---
-title: HOW TO：處理錯誤和資料繫結時所發生例外狀況
+title: HOW TO：處理資料繫結發生的錯誤和例外狀況
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - data binding [Windows Forms], error handling
 - BindingSource component [Windows Forms], handling errors and exceptions
 ms.assetid: eddc5bad-9513-47df-ab28-f02d8dff7892
-ms.openlocfilehash: 8400ce602d15c195aea43f9e5a162fddb1783830
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 709db2a98074e3322adad8b1275b3c4418c14636
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084618"
 ---
-# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>HOW TO：處理錯誤和資料繫結時所發生例外狀況
+# <a name="how-to-handle-errors-and-exceptions-that-occur-with-databinding"></a>HOW TO：處理資料繫結發生的錯誤和例外狀況
 當您將它們繫結至控制項時，有時候基礎商務物件會發生例外狀況和錯誤。 您可以攔截這些錯誤和例外狀況然後復原，或藉由為特定的 <xref:System.Windows.Forms.Binding> 、 <xref:System.Windows.Forms.BindingSource> 或 <xref:System.Windows.Forms.CurrencyManager> 元件處理 <xref:System.Windows.Forms.Binding.BindingComplete> 事件，將錯誤資訊傳遞給使用者。  
   
 ## <a name="example"></a>範例  
@@ -40,6 +40,7 @@ ms.locfileid: "57703147"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Binding.BindingComplete?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource.BindingComplete?displayProperty=nameWithType>
 - [BindingSource 元件](bindingsource-component.md)

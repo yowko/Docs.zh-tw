@@ -2,12 +2,12 @@
 title: 匯入 WCF 擴充的自訂中繼資料
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: b99d7fbab08c5edabe3a08baf89dd267c3f9fa25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090065"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>匯入 WCF 擴充的自訂中繼資料
 在 Windows Communication Foundation (WCF) 中，中繼資料匯入是從它的中繼資料產生的服務或其元件部分的抽象表示法的程序。 比方說，可以匯入 WCF<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體<xref:System.ServiceModel.Channels.Binding>執行個體或<xref:System.ServiceModel.Description.ContractDescription>服務的執行個體從 WSDL 文件。 若要匯入 WCF 服務中繼資料，請使用 實作<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象類別。 類型是衍生自<xref:System.ServiceModel.Description.MetadataImporter>類別實作支援匯入中繼資料格式，利用的 Ws-policy 匯入 WCF 中的邏輯。  
@@ -32,7 +32,7 @@ ms.locfileid: "54562098"
   
  一旦 <xref:System.ServiceModel.Description.WsdlImporter> 載入並使用自訂 WSDL 匯入工具，在匯入處理序開始之前會先呼叫 <xref:System.ServiceModel.Description.IWsdlImportExtension.BeforeImport%2A> 方法來啟用中繼資料的修改作業。 接下來，會匯入合約並呼叫 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%2A> 方法來啟用由中繼資料匯入之合約的修改作業。 最後，呼叫 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportEndpoint%2A> 方法來啟用匯入端點的修改作業。  
   
- 如需詳細資訊，請參閱[＜How to：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)。  
+ 如需詳細資訊，請參閱[如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)。  
   
 ### <a name="importing-custom-policy-assertions"></a>匯入自訂原則判斷提示  
  <xref:System.ServiceModel.Description.WsdlImporter>型別和[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)會自動處理各種不同的原則運算式附加至 WSDL 文件中的原則判斷提示型別。 這些工具會負責收集、正常化與合併附加至 WSDL 繫結與 WSDL 連接埠的原則運算式。  
@@ -49,6 +49,7 @@ ms.locfileid: "54562098"
 >  無效或不適當的中繼資料可以傳遞至匯入工具。 請確定自訂匯入工具禁得起所有格式的 XML 使用。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
-- [如何：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
-- [如何：撰寫 servicecontractgenerator 的擴充功能](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)
+
+- [HOW TO：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [HOW TO：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [HOW TO：撰寫 ServiceContractGenerator 的延伸模組](../../../../docs/framework/wcf/extending/how-to-write-an-extension-for-the-servicecontractgenerator.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: 6ea49c591b43d3f70bfd39058fd5ee256c537ec2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725008"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078494"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>線條和曲線的反鋸齒功能
 當您使用[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪製一條線，您提供的起點和結束點的行，但您沒有提供任何資訊的個別像素，該行。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 若要判斷哪一個像素為單位將會開啟到特定顯示裝置上顯示線條的顯示驅動程式軟體一起運作。  
@@ -45,6 +45,7 @@ ms.locfileid: "57725008"
  [!code-vb[LinesCurvesAndShapes#81](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#81)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Drawing2D.SmoothingMode?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [如何：使用文字反鋸齒功能](how-to-use-antialiasing-with-text.md)
+- [HOW TO：使用文字消除鋸齒功能](how-to-use-antialiasing-with-text.md)

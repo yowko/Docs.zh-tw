@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:ClassModifier attribute [XAML Services]
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
-ms.openlocfilehash: cc9e866f859192e1fa13ead24dc44a7b9d286877
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026778"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100912"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier 指示詞
 修改 XAML 編譯行為時`x:Class`也會提供。 具體來說，而不是建立在部分`class`具有`Public`存取層級 （預設值），提供`x:Class`會透過`NotPublic`存取層級。 此行為會影響產生的組件中的類別的存取層級。  
@@ -54,6 +54,7 @@ ms.locfileid: "58026778"
  存取層級中宣告`x:ClassModifier`仍受限於特定的架構和其功能的解譯。 WPF 包含載入並具現化類型的功能所在`x:ClassModifier`是`internal`，如果該類別從 WPF 資源，但透過 URI 參考的組件參考。 由於此情況下，可能還有其他像藉由將其他架構，請避免只針對`x:ClassModifier`封鎖所有可能的具現化嘗試。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [x:Class 指示詞](x-class-directive.md)
 - [WPF 中的程式碼後置和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:FieldModifier 指示詞](x-fieldmodifier-directive.md)

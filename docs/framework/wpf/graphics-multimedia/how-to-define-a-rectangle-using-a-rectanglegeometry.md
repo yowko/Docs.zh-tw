@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], rectangles
 - rectangles [WPF], creating with RectangleGeometry class
 ms.assetid: e40b8a8e-54b8-416b-a9f2-be6dca9fdf0b
-ms.openlocfilehash: bd42aca2541d67469173f63655ada18a12eb692c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 146ca7017ee38ad5c1065e59662ac441e7bfbfe2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352499"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075792"
 ---
 # <a name="how-to-define-a-rectangle-using-a-rectanglegeometry"></a>HOW TO：使用 RectangleGeometry 定義矩形
 此範例說明如何使用<xref:System.Windows.Media.RectangleGeometry>來描述矩形的類別。  
@@ -34,6 +34,7 @@ RectangleGeometry
  其他簡單幾何類別包括<xref:System.Windows.Media.LineGeometry>和<xref:System.Windows.Media.EllipseGeometry>。 這些幾何，以及更複雜的也可以建立使用<xref:System.Windows.Media.PathGeometry>或<xref:System.Windows.Media.StreamGeometry>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [幾何概觀](geometry-overview.md)
-- [建立複合圖案](how-to-create-a-composite-shape.md)
-- [使用 PathGeometry 建立圖案](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [建立複合圖形](how-to-create-a-composite-shape.md)
+- [使用 PathGeometry 建立圖形](how-to-create-a-shape-by-using-a-pathgeometry.md)

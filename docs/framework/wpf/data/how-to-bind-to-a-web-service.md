@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: b2ef0cce293913fc7bd9d59baa91bd875823cbe2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098569"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>HOW TO：繫結至 Web 服務
 此範例示範如何繫結至 Web 服務方法呼叫所傳回的物件。  
@@ -46,6 +46,7 @@ ms.locfileid: "57353929"
  如需結構的詳細資訊**getContentResponse**，請參閱[內容的服務文件](https://services.msdn.microsoft.com/ContentServices/ContentService.asmx)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](data-binding-overview.md)
 - [繫結來源概觀](binding-sources-overview.md)
 - [讓資料可於 XAML 中繫結](how-to-make-data-available-for-binding-in-xaml.md)

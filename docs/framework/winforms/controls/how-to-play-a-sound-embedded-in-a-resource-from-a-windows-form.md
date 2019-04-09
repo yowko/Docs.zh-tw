@@ -10,12 +10,12 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], from resources
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
-ms.openlocfilehash: f52cac4ca16adee232fae6fe2c1540bf5d3cb8cf
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078573"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>HOW TO：播放內嵌在 Windows Forms 資源中的音效
 您可以使用<xref:System.Media.SoundPlayer>類別，以從內嵌資源播放音效。  
@@ -34,6 +34,7 @@ ms.locfileid: "57708180"
  將「\<組件名稱>」取代為內嵌音效檔的組件名稱。 請不要包括 ".dll" 尾碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Media.SoundPlayer>
-- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)
-- [如何：循環播放 Windows Form 上播放的音效](how-to-loop-a-sound-playing-on-a-windows-form.md)
+- [HOW TO：播放 Windows Forms 的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [HOW TO：循環播放 Windows Forms 的音效](how-to-loop-a-sound-playing-on-a-windows-form.md)

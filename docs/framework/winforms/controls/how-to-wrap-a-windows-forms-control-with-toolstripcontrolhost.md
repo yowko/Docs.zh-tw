@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 ToolStripControlHost 為 Windows Form 控制項
+title: HOW TO：使用 ToolStripControlHost 包裝 Windows Forms 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - toolbars [Windows Forms], wrapping controls
 - ToolStrip control [Windows Forms], hosting controls
 ms.assetid: e2ce4990-661d-4882-a116-8a9eb575dc84
-ms.openlocfilehash: f17a0a9f8a7403abd273b9faa7b1ef78f1aff016
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a87dab15c436302a8b87d535ee8128c1917d5011
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080477"
 ---
-# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>HOW TO：使用 ToolStripControlHost 為 Windows Form 控制項
-藉由使用 <xref:System.Windows.Forms.ToolStripControlHost> 建構函式或擴充 <xref:System.Windows.Forms.ToolStripControlHost> 本身，<xref:System.Windows.Forms.ToolStripControlHost> 設計來啟用任意 Windows Form 控制項的裝載。 藉由擴充 <xref:System.Windows.Forms.ToolStripControlHost> 及實作屬性和方法 (這些會公開控制項經常使用的屬性和方法)，包裝控制項變得更容易。 您也可以公開在 <xref:System.Windows.Forms.ToolStripControlHost> 層級的控制項事件。  
+# <a name="how-to-wrap-a-windows-forms-control-with-toolstripcontrolhost"></a>HOW TO：使用 ToolStripControlHost 包裝 Windows Forms 控制項
+<xref:System.Windows.Forms.ToolStripControlHost> 設計來啟用任意 Windows Form 控制項的裝載使用<xref:System.Windows.Forms.ToolStripControlHost>建構函式或擴充<xref:System.Windows.Forms.ToolStripControlHost>本身。 藉由擴充 <xref:System.Windows.Forms.ToolStripControlHost> 及實作屬性和方法 (這些會公開控制項經常使用的屬性和方法)，包裝控制項變得更容易。 您也可以公開在 <xref:System.Windows.Forms.ToolStripControlHost> 層級的控制項事件。  
   
 ### <a name="to-host-a-control-in-a-toolstripcontrolhost-by-derivation"></a>由衍生在 ToolStripControlHost 中裝載控制項  
   
@@ -66,6 +66,7 @@ ms.locfileid: "57704891"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStripControlHost>
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)
 - [ToolStrip 控制項架構](toolstrip-control-architecture.md)

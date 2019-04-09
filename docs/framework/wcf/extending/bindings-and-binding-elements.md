@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - binding elements [WCF]
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
-ms.openlocfilehash: ca013c939e3db2136ffa1504ae0eedd7b870d773
-ms.sourcegitcommit: 296183dbe35077b5c5e5e74d5fbe7f399bc507ee
+ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 11/05/2018
-ms.locfileid: "50982824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073841"
 ---
 # <a name="bindings-and-binding-elements"></a>繫結和繫結項目
 繫結是特殊的組態項目，呼叫的集合*繫結項目*，這會評估服務執行階段，每當用戶端或服務端點正在建構。 繫結項目在繫結內的型別與順序會決定端點通道堆疊中通訊協定與傳輸通道的選擇與堆疊順序。  
@@ -23,13 +23,12 @@ ms.locfileid: "50982824"
   
 -   若要使用新的繫結項目 (例如新的傳輸、編碼或通訊協定繫結項目)，您必須建立包含該繫結項目的新繫結。 例如，如果您為 UDP 傳輸新增自訂的 `UdpTransportBindingElement`，則需要建立新繫結才能使用它。 如需執行此行為，使用<xref:System.ServiceModel.Channels.CustomBinding?displayProperty=nameWithType>類型，請參閱[自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
--   若要設定現有繫結項目，讓系統提供的繫結在公用的屬性上不公開。 例如，您必須建立新的繫結來變更簽署與加密作業的執行順序。 執行此行為的詳細資訊，請參閱[如何： 自訂之繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
+-   若要設定現有繫結項目，讓系統提供的繫結在公用的屬性上不公開。 例如，您必須建立新的繫結來變更簽署與加密作業的執行順序。 執行此行為的詳細資訊，請參閱[How to:自訂系統提供的繫結](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)。  
   
 -   若要建立僅公開特定組態選項的企業標準繫結。 例如，要為公司建立 <xref:System.ServiceModel.WSHttpBinding> 變數，其中不得停用安全性，請建立具有類似 <xref:System.ServiceModel.WSHttpBinding> 行為的新繫結，但是一律啟用安全性。 如需詳細資訊，請參閱 < [Creating User-Defined 繫結](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)。  
   
 -   若要執行中繼資料的某項自訂作業，通常 (不是一定) 會設定或使用某個自訂繫結項目。 如需有關繫結和繫結項目提供中繼資料支援的詳細資訊，請參閱[組態與中繼資料支援](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)。  
-  
-  
+
 ## <a name="channels-bindings-and-binding-elements"></a>通道、繫結與繫結項目  
  繫結與繫結項目都可用來連接應用程式的程式設計模型 (包含屬性與行為) 與通道模型 (包含處理站與接聽程式、訊息編碼器，以及傳輸和通訊協定實作)。 一般來說，實作繫結項目與繫結的目的是要啟用通道，以供應用程式層使用。  
   

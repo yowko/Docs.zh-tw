@@ -2,12 +2,12 @@
 title: 疑難排解
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 62cc7a0567b9eb82c24c329a7ae8fb3e52f0f0c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54586406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105478"
 ---
 # <a name="troubleshooting"></a>疑難排解
 下列資訊將說明一些您在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 應用程式中可能會遇到的問題，並提供建議來避免或降低這些問題的影響。  
@@ -15,7 +15,7 @@ ms.locfileid: "54586406"
  其他問題的解答[常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)。  
   
 ## <a name="unsupported-standard-query-operators"></a>不支援的標準查詢運算子  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 並非支援所有標準查詢運算子方法 (例如 <xref:System.Linq.Enumerable.ElementAt%2A>)。 因此，專案即使可以編譯，仍可能產生執行階段錯誤。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援所有標準查詢運算子方法 (例如<xref:System.Linq.Enumerable.ElementAt%2A>)。 因此，專案即使可以編譯，仍可能產生執行階段錯誤。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)。  
   
 ## <a name="memory-issues"></a>記憶體問題  
  如果查詢牽涉到記憶體中集合和[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>，可能會在記憶體中，根據在其中指定兩個集合的順序執行查詢。 如果查詢必須在記憶體中執行，則必須擷取資料庫資料表中的資料。  
@@ -26,10 +26,10 @@ ms.locfileid: "54586406"
  若要指定輸入檔案名稱，請將名稱以輸入檔案加入命令列。 不支援將檔案名稱包含在連接字串中 (使用 **/conn** 選項)。 如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。  
   
 ## <a name="class-library-projects"></a>類別庫專案  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]會在專案的 `app.config` 檔案中建立連接字串。 類別庫專案不使用 `app.config` 檔案。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用設計階段檔案中提供的連接字串。 變更 `app.config` 中的值不會變更應用程式所連接的資料庫。  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]會在專案的 `app.config` 檔案中建立連接字串。 類別庫專案不使用 `app.config` 檔案。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用提供設計階段檔案中的連接字串。 變更 `app.config` 中的值不會變更應用程式所連接的資料庫。  
   
 ## <a name="cascade-delete"></a>串聯刪除  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯 (Cascade) 刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須執行下列其中一項工作：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須執行下列其中一項工作：  
   
 -   在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "54586406"
   
  否則會擲回 <xref:System.Data.SqlClient.SqlException> 例外狀況。  
   
- 如需詳細資訊，請參閱[＜How to：從資料庫刪除資料列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
+ 如需詳細資訊，請參閱[如何：從資料庫刪除資料列](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)。  
   
 ## <a name="expression-not-queryable"></a>無法查詢運算式  
  如果您看到「運算式 [expression] 無法查詢；是否遺漏組件參考？」 錯誤，請確定下列各項：  
@@ -60,7 +60,7 @@ ms.locfileid: "54586406"
  這項需求不適用於 [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)]。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
- 當以 <xref:System.Linq.Enumerable.GroupBy%2A> 運算式做為群組依據 (例如 `boolean`) 的 `group x by (Phone==@phone)` 查詢有資料行的值為 null 時，會擲回此例外狀況。 由於運算式為 `boolean`，因此會推斷索引鍵也為 `boolean`，而非 `nullable` `boolean`。 當轉譯後的比較產生 null 時，若嘗試指派 `nullable` `boolean` 給 `boolean`，就會擲回此例外狀況。  
+ 當以 <xref:System.Linq.Enumerable.GroupBy%2A> 運算式做為群組依據 (例如 `boolean`) 的 `group x by (Phone==@phone)` 查詢有資料行的值為 null 時，會擲回此例外狀況。 因為此運算式`boolean`，金鑰就會推斷`boolean`，而非`nullable` `boolean`。 當轉譯後的比較產生 null 時，嘗試就會指派`nullable``boolean`到`boolean`，而且會擲回例外狀況。  
   
  為避免這個情況 (假設您要將 null 視為 false)，請使用類似下列的方式：  
   
@@ -70,5 +70,6 @@ ms.locfileid: "54586406"
  每次呼叫物件建構函式時，都會呼叫產生的方法 `OnCreated()`，包括 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 呼叫建構函式來複製原始值的情況。 如果您要在自己的部分類別中實作 `OnCreated()` 方法，請將此行為列入考量。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)
 - [常見問題集](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)

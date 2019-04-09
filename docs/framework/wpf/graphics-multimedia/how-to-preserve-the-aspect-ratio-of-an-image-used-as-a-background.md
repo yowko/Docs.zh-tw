@@ -1,19 +1,19 @@
 ---
-title: HOW TO：保留當做背景之影像的外觀比例
+title: HOW TO：保留作為背景之影像的外觀比例
 ms.date: 03/30/2017
 helpviewer_keywords:
 - aspect ratios of background images [WPF], preserving
 - brushes [WPF], preserving aspect ratios of background images
 - background images [WPF], preserving aspect ratios
 ms.assetid: 28c39478-13d7-4011-80a3-8b9cc3e54478
-ms.openlocfilehash: df5632aa3d3c7dbc2442cabe1f4db7a850a1bd54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ae6f1242548038bcd54b7218783e5063fa67872
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083241"
 ---
-# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>HOW TO：保留當做背景之影像的外觀比例
+# <a name="how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background"></a>HOW TO：保留作為背景之影像的外觀比例
 此範例示範如何使用<xref:System.Windows.Media.TileBrush.Stretch%2A>屬性<xref:System.Windows.Media.ImageBrush>以維持影像的外觀比例。  
   
  根據預設，當您使用<xref:System.Windows.Media.ImageBrush>繪製區域，其內容自動縮放以完全填滿輸出區域。 當輸出區域和影像的外觀比例不相同時，影像就會因為自動縮放而扭曲。  
@@ -40,5 +40,6 @@ ms.locfileid: "57353942"
  此程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.ImageBrush>類別。 如需完整的範例，請參閱[ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.TileBrush>
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)

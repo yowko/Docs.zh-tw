@@ -2,12 +2,12 @@
 title: 基本資料類型
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: b05bc69bdd6eea15806b8d928487da2c3f6503b5
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072879"
 ---
 # <a name="basic-data-types"></a>基本資料類型
 由於 LINQ to SQL 查詢會先轉譯成 Transact-SQL，然後才能在 Microsoft SQL Server 上執行。 因此，在基本資料型別方面，LINQ to SQL 所支援的許多內建功能都與 SQL Server 相同。  
@@ -23,5 +23,6 @@ ms.locfileid: "58545698"
 -   是運算子：`IS`使用繼承對應時，運算子具有支援的轉譯。 它可以用來判斷物件是否為特定實體型別，而且可以轉譯為鑑別子資料行上的檢查，而不需要直接測試鑑別子資料行。 如需有關 Visual Basic 和C#是運算子，請參閱[Is 運算子](~/docs/visual-basic/language-reference/operators/is-operator.md)並[是](~/docs/csharp/language-reference/keywords/is.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

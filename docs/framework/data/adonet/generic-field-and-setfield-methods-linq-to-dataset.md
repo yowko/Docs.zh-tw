@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1883365f-9d6c-4ccb-9187-df309f47706d
-ms.openlocfilehash: 0dfc21264353ac3aa1e20c7fa7b6b8381d47480d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c7f1fef5d1fa575cd6d3bfdb7e6cbbea79ade28
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562150"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086009"
 ---
 # <a name="generic-field-and-setfield-methods-linq-to-dataset"></a>泛型 Field 和 SetField 方法 (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供擴充方法<xref:System.Data.DataRow>類別可用於存取資料行的值：<xref:System.Data.DataRowExtensions.Field%2A>方法和<xref:System.Data.DataRowExtensions.SetField%2A>方法。 這些方法可讓開發人員更容易存取資料行值，尤其是與 Null 值相關的情況。 <xref:System.Data.DataSet> 會使用 <xref:System.DBNull.Value> 來代表 Null 值，而 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 則會使用 [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] 中引進的可為 Null 的型別 (Nullable Type) 支援。 使用預先存在的資料行存取子中<xref:System.Data.DataRow>需要轉型成適當的類型傳回的物件。 如果中的特定欄位<xref:System.Data.DataRow>可為 null，您必須明確檢查是否有 null 值傳回，因為<xref:System.DBNull.Value>並隱含地將它轉型為另一個型別會擲回<xref:System.InvalidCastException>。 在下列範例中，如果<xref:System.Data.DataRow.IsNull%2A>方法沒有用來檢查是否有 null 值，會擲回例外狀況，是否索引子傳回<xref:System.DBNull.Value>，並嘗試將它轉換成<xref:System.String>。  
@@ -30,4 +30,5 @@ ms.locfileid: "54562150"
  <xref:System.Data.DataRowExtensions.SetField%2A> 方法本身不會執行任何型別轉換。 不過，這並不表示不會進行型別轉換。 <xref:System.Data.DataRowExtensions.SetField%2A>方法會公開[!INCLUDE[ado_whidbey_long](../../../../includes/ado-whidbey-long-md.md)]行為<xref:System.Data.DataRow>類別。 無法藉由執行類型轉換<xref:System.Data.DataRow>物件和轉換的值則會儲存到<xref:System.Data.DataRow>物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataRowExtensions>

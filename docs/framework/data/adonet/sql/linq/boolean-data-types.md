@@ -2,12 +2,12 @@
 title: Boolean 資料類型
 ms.date: 03/30/2017
 ms.assetid: 57f7376b-4b11-4b35-98a9-780382053ceb
-ms.openlocfilehash: f0709b78408f348b84926a92b6b404e2be952a12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1ecd01902c1b38552561a56521f91fa1580ffade
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091209"
 ---
 # <a name="boolean-data-types"></a>Boolean 資料類型
 除了不會轉譯最少運算行為以外，在 Common Language Runtime (CLR) 中布林運算子會如預期運作。 例如，Visual Basic `AndAlso` 運算子的行為方式如同 `And` 運算子。 而 C# `&&` 運算子的行為方式則如同 `&` 運算子。  
@@ -24,4 +24,5 @@ ms.locfileid: "54584923"
 |[Not 運算子](~/docs/visual-basic/language-reference/operators/not-operator.md)|[\! 運算子](~/docs/csharp/language-reference/operators/logical-negation-operator.md)|  
   
 ## <a name="see-also"></a>另請參閱
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
+- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

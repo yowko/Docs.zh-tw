@@ -1,18 +1,18 @@
 ---
-title: HOW TO：發行服務，使用程式碼的中繼資料
+title: HOW TO：使用程式碼發行服務的中繼資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
-ms.openlocfilehash: ad09f49b933edfc4df107a02e124eaaa5ddd3d73
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5c17f5c399335a2c7cbcc6f4474982de591dd453
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608530"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097999"
 ---
-# <a name="how-to-publish-metadata-for-a-service-using-code"></a>HOW TO：發行服務，使用程式碼的中繼資料
+# <a name="how-to-publish-metadata-for-a-service-using-code"></a>HOW TO：使用程式碼發行服務的中繼資料
 這是其中兩個討論 Windows Communication Foundation (WCF) 服務發行中繼資料的使用說明主題。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用程式碼發行服務的中繼資料。  
   
 > [!CAUTION]
@@ -43,7 +43,7 @@ ms.locfileid: "54608530"
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4.  將 <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> 屬性設定為 `true.`  
+4.  設定<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>屬性 `true.`  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -87,8 +87,9 @@ ms.locfileid: "54608530"
  [!code-vb[htPublishMetadataCode#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#11)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：裝載 WCF 服務中的受管理的應用程式](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+
+- [HOW TO：在受控應用程式中裝載 WCF 服務](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自我裝載](../../../../docs/framework/wcf/samples/self-host.md)
 - [中繼資料架構概觀](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [使用中繼資料](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [如何：發行服務，使用組態檔的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [HOW TO：使用組態檔發行服務的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

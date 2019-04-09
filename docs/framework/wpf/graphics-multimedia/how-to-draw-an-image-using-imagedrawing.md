@@ -6,12 +6,12 @@ helpviewer_keywords:
 - graphics [WPF], drawing images
 - images [WPF], drawing
 ms.assetid: df28ab41-25fb-4ab3-b51d-7f695b24f55e
-ms.openlocfilehash: 9a9a7ee32104e44997e6eaada09edaac2b1d610e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9459185bf81160b45222e7d6821e0f945ada381
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355586"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100154"
 ---
 # <a name="how-to-draw-an-image-using-imagedrawing"></a>HOW TO：使用 ImageDrawing 繪製影像
 此範例示範如何使用<xref:System.Windows.Media.ImageDrawing>繪製影像。 <xref:System.Windows.Media.ImageDrawing>可讓您顯示<xref:System.Windows.Media.ImageSource>具有<xref:System.Windows.Media.DrawingBrush>， <xref:System.Windows.Media.DrawingImage>，或<xref:System.Windows.Media.Visual>。 若要繪製影像，您建立<xref:System.Windows.Media.ImageDrawing>並將其<xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType>和<xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType>屬性。 <xref:System.Windows.Media.ImageDrawing.ImageSource%2A?displayProperty=nameWithType>屬性會指定要繪製，影像和<xref:System.Windows.Media.ImageDrawing.Rect%2A?displayProperty=nameWithType>屬性指定的位置與每個影像的大小。  
@@ -28,6 +28,7 @@ ms.locfileid: "57355586"
  如需示範簡單的方式來顯示影像，而不需使用範例<xref:System.Windows.Media.ImageDrawing>，請參閱 <<c2> [ 使用 Image 元素](../controls/how-to-use-the-image-element.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Freezable.Freeze%2A>
 - <xref:System.Windows.Controls.Image>
 - [繪圖物件概觀](drawing-objects-overview.md)

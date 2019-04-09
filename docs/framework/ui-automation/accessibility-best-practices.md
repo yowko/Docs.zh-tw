@@ -5,12 +5,12 @@ helpviewer_keywords:
 - best practices for accessibility
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
-ms.openlocfilehash: e320d47562ea5018a20a82ab555ec7f2db018c40
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074231"
 ---
 # <a name="accessibility-best-practices"></a>協助工具最佳作法
 > [!NOTE]
@@ -24,7 +24,7 @@ ms.locfileid: "57676131"
   
 <a name="Enable_Programmatic_Access_to_all_UI_Elements_and_Text"></a>   
 ### <a name="enable-programmatic-access-to-all-ui-elements-and-text"></a>啟用以程式設計方式存取所有 UI 項目和文字  
- 應該以程式設計方式存取[!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 項目。 如果 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 是一種標準的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項，則在控制項中包含以程式設計方式存取的支援。 如果此控制項為自訂的控制項 (已從通用控制項子類別化或已從控制項子類別化)，則您必須檢查可能需要修改的區域之 <xref:System.Windows.Automation.Peers.AutomationPeer> 實作。  
+ [!INCLUDE[TLA#tla_ui#initcap](../../../includes/tlasharptla-uisharpinitcap-md.md)] 項目應該以程式設計方式存取。 如果 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 是一種標準的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 控制項，則在控制項中包含以程式設計方式存取的支援。 如果此控制項為自訂的控制項 (已從通用控制項子類別化或已從控制項子類別化)，則您必須檢查可能需要修改的區域之 <xref:System.Windows.Automation.Peers.AutomationPeer> 實作。  
   
  遵循此最佳做法可讓 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] 廠商來識別及管理您的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]產品項目。  
   
@@ -131,6 +131,7 @@ ms.locfileid: "57676131"
  與裝置無關的呼叫會確保鍵盤和滑鼠功能是否相等，同時提供 [!INCLUDE[TLA2#tla_at](../../../includes/tla2sharptla-at-md.md)] 關於 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]必要的相關資訊。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Automation.Peers>
 - [具有佈景主題和 UI 自動化支援範例的 NumericUpDown 自訂控制項](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771573(v=vs.90))
 - [鍵盤使用者介面設計指導方針](https://docs.microsoft.com/previous-versions/windows/desktop/dnacc/guidelines-for-keyboard-user-interface-design)

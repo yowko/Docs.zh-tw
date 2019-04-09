@@ -2,12 +2,12 @@
 title: SAML 權杖提供者
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: 43a6d96716cedc6a732c350bb43ac6d34bebf969
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 386e8f81d35d820809ee51355dfb0274be2278cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842235"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084221"
 ---
 # <a name="saml-token-provider"></a>SAML 權杖提供者
 這個範例會示範如何實作自訂的用戶端 SAML 權杖提供者。 Windows Communication Foundation (WCF) 中的權杖提供者用來提供認證給安全性基礎結構。 一般而言，權杖提供者會檢查目標並發行適當的認證，讓安全性基礎結構能夠保護訊息的安全。 WCF 隨附預設的 「 認證管理員權杖提供者。 WCF 也隨附[!INCLUDE[infocard](../../../../includes/infocard-md.md)]權杖提供者。 自訂權杖提供者適用於下列情況：
@@ -398,4 +398,3 @@ ms.locfileid: "58842235"
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
-  

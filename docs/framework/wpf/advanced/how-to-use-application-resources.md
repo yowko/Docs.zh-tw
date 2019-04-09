@@ -5,12 +5,12 @@ helpviewer_keywords:
 - application resources [WPF]
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
-ms.openlocfilehash: 8712f7c9c60d43cf3d0348b7c3f2f4cbee0b93b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378878"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088194"
 ---
 # <a name="how-to-use-application-resources"></a>HOW TO：使用應用程式資源
 這個範例示範如何使用應用程式資源。  
@@ -26,6 +26,7 @@ ms.locfileid: "57378878"
  [!code-xaml[ResourcesApplication#ConsumingPage](~/samples/snippets/csharp/VS_Snippets_Wpf/ResourcesApplication/CS/page1.xaml#consumingpage)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 資源](xaml-resources.md)
 - [應用程式管理概觀](../app-development/application-management-overview.md)
-- [HOW-TO 主題](resources-how-to-topics.md)
+- [HOW TO 主題](resources-how-to-topics.md)

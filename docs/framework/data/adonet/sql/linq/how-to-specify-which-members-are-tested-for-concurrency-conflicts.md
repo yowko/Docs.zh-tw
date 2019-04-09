@@ -1,18 +1,18 @@
 ---
-title: HOW TO：指定的成員會用於測試並行衝突
+title: HOW TO：指定用於測試並行衝突的成員
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: d2cda293-1e2f-4878-af0e-5aaf0d092120
-ms.openlocfilehash: 1007cbc0961d01574fd60ec50eb63406ec7adef9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a690e95cadad4ed089fe1bb3ba6fea541a57411f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076298"
 ---
-# <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>HOW TO：指定的成員會用於測試並行衝突
+# <a name="how-to-specify-which-members-are-tested-for-concurrency-conflicts"></a>HOW TO：指定用於測試並行衝突的成員
 套用至三個列舉的其中一個[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>屬性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>屬性來指定要包含在更新中的哪些成員會檢查是否有開放式並行存取衝突的偵測。  
   
  <xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 屬性 (在設計階段對應) 是與 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的執行階段並行存取功能搭配使用。 如需詳細資訊，請參閱[開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
@@ -47,5 +47,6 @@ ms.locfileid: "54724576"
  [!code-vb[System.Data.Linq.Mapping.UpdateCheck#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.mapping.updatecheck/vb/northwind.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+
+- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [變更資料和提交](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

@@ -7,18 +7,18 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: e9b71017-bac4-40d7-858b-326939442cb1
-ms.openlocfilehash: 6004dad448b965d51be6543478cbd059fb7f4d87
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 714303569111f30d4cc03ab0ab7cb2acec4276c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072502"
 ---
 # <a name="path-animation-how-to-topics"></a>路徑動畫 HOW TO 主題
 在本節中的主題將示範如何沿著路徑建立物件。  
   
 ## <a name="in-this-section"></a>本節內容  
- [沿著路徑建立物件的動畫 (Double 動畫)](how-to-animate-an-object-along-a-path-double-animation.md)  
+ [沿著路徑建立物件的動畫 (雙精度浮點數動畫)](how-to-animate-an-object-along-a-path-double-animation.md)  
  [沿著路徑建立物件的動畫 (點動畫)](how-to-animate-an-object-along-a-path-point-animation.md)  
  [沿著路徑建立物件的動畫 (矩陣動畫)](how-to-animate-an-object-along-a-path-matrix-animation.md)  
  [沿著路徑建立物件的動畫 (具有位移累加的矩陣動畫)](animate-an-object-along-a-path-matrix-animation-with-offset.md)  
@@ -31,6 +31,7 @@ ms.locfileid: "57373474"
  <xref:System.Windows.Media.Animation.Storyboard>  
   
 ## <a name="see-also"></a>另請參閱
+
 - [圖形和多媒體](index.md)
 - [動畫概觀](animation-overview.md)
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)

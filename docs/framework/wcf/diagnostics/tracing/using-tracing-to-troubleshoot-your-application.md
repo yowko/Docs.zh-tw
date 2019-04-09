@@ -2,12 +2,12 @@
 title: 使用追蹤來疑難排解應用程式
 ms.date: 03/30/2017
 ms.assetid: 7676b9bb-cbd1-41fd-9a93-cc615af6e2d0
-ms.openlocfilehash: 6aa4c91014987d0d671e1fb3727cceeafa5bdd6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a173596b5b4bfbc97a1d013251d654d8073a5c10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072749"
 ---
 # <a name="using-tracing-to-troubleshoot-your-application"></a>使用追蹤來疑難排解應用程式
 本節中的各個主題會說明如何使用追蹤來排解應用程式的問題。  
@@ -32,6 +32,7 @@ ms.locfileid: "54562865"
  說明如何透過使用者程式碼以程式設計方式發出追蹤，方便您主動建立檢測資料以便稍後用在診斷用途上，並與 WCF 追蹤產生關聯。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [端對端追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing.md)
