@@ -2,57 +2,58 @@
 title: <byteStreamMessageEncoding>
 ms.date: 03/30/2017
 ms.assetid: bbadd8dd-60a2-4007-b959-89373a8a7d60
-ms.openlocfilehash: c8dfd6824877d6f9e5b089a538cce35ffe51320b
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: ce9f282ea1101befe3bf99762efa61e9b47b74cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109898"
 ---
-# <a name="bytestreammessageencoding"></a><span data-ttu-id="8aa47-101">\<byteStreamMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="8aa47-101">\<byteStreamMessageEncoding></span></span>
-<span data-ttu-id="8aa47-102">將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。</span><span class="sxs-lookup"><span data-stu-id="8aa47-102">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
+# <a name="bytestreammessageencoding"></a><span data-ttu-id="51730-101">\<byteStreamMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="51730-101">\<byteStreamMessageEncoding></span></span>
+<span data-ttu-id="51730-102">將訊息編碼指定為位元組資料流，且含有指定字元編碼的選項。</span><span class="sxs-lookup"><span data-stu-id="51730-102">Specifies the message encoding as a stream of bytes, with the option to specify the character encoding.</span></span>  
   
- <span data-ttu-id="8aa47-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="8aa47-103">\<system.serviceModel></span></span>  
-<span data-ttu-id="8aa47-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="8aa47-104">\<bindings></span></span>  
-<span data-ttu-id="8aa47-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="8aa47-105">\<customBinding></span></span>  
-<span data-ttu-id="8aa47-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="8aa47-106">\<binding></span></span>  
-<span data-ttu-id="8aa47-107">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="8aa47-107">\<binaryMessageEncoding></span></span>  
+ <span data-ttu-id="51730-103">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="51730-103">\<system.serviceModel></span></span>  
+<span data-ttu-id="51730-104">\<bindings></span><span class="sxs-lookup"><span data-stu-id="51730-104">\<bindings></span></span>  
+<span data-ttu-id="51730-105">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="51730-105">\<customBinding></span></span>  
+<span data-ttu-id="51730-106">\<binding></span><span class="sxs-lookup"><span data-stu-id="51730-106">\<binding></span></span>  
+<span data-ttu-id="51730-107">\<binaryMessageEncoding></span><span class="sxs-lookup"><span data-stu-id="51730-107">\<binaryMessageEncoding></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8aa47-108">語法</span><span class="sxs-lookup"><span data-stu-id="8aa47-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51730-108">語法</span><span class="sxs-lookup"><span data-stu-id="51730-108">Syntax</span></span>  
   
 ```xml  
 <byteStreamMessageEncoding />
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="8aa47-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="8aa47-109">Attributes and Elements</span></span>  
- <span data-ttu-id="8aa47-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="8aa47-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="51730-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="51730-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="51730-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="51730-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="8aa47-111">屬性</span><span class="sxs-lookup"><span data-stu-id="8aa47-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="51730-111">屬性</span><span class="sxs-lookup"><span data-stu-id="51730-111">Attributes</span></span>  
   
-|<span data-ttu-id="8aa47-112">屬性</span><span class="sxs-lookup"><span data-stu-id="8aa47-112">Attribute</span></span>|<span data-ttu-id="8aa47-113">描述</span><span class="sxs-lookup"><span data-stu-id="8aa47-113">Description</span></span>|  
+|<span data-ttu-id="51730-112">屬性</span><span class="sxs-lookup"><span data-stu-id="51730-112">Attribute</span></span>|<span data-ttu-id="51730-113">描述</span><span class="sxs-lookup"><span data-stu-id="51730-113">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="8aa47-114">messageVersion</span><span class="sxs-lookup"><span data-stu-id="8aa47-114">messageVersion</span></span>|<span data-ttu-id="8aa47-115">指定使用這個繫結所傳送訊息的 SOAP 版本。</span><span class="sxs-lookup"><span data-stu-id="8aa47-115">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="8aa47-116">這個屬性只能設定為 <xref:System.ServiceModel.Channels.MessageVersion.None%2A> 的訊息版本值。</span><span class="sxs-lookup"><span data-stu-id="8aa47-116">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="8aa47-117">位元組資料流訊息編碼器不支援任何其他的訊息版本。</span><span class="sxs-lookup"><span data-stu-id="8aa47-117">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="8aa47-118">此屬性的型別為 <xref:System.ServiceModel.Channels.MessageVersion>。</span><span class="sxs-lookup"><span data-stu-id="8aa47-118">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
+|<span data-ttu-id="51730-114">messageVersion</span><span class="sxs-lookup"><span data-stu-id="51730-114">messageVersion</span></span>|<span data-ttu-id="51730-115">指定使用這個繫結所傳送訊息的 SOAP 版本。</span><span class="sxs-lookup"><span data-stu-id="51730-115">Specifies the SOAP version of the messages sent using the binding.</span></span> <span data-ttu-id="51730-116">這個屬性只能設定為 <xref:System.ServiceModel.Channels.MessageVersion.None%2A> 的訊息版本值。</span><span class="sxs-lookup"><span data-stu-id="51730-116">This property can only be set to the message version value of <xref:System.ServiceModel.Channels.MessageVersion.None%2A>.</span></span> <span data-ttu-id="51730-117">位元組資料流訊息編碼器不支援任何其他的訊息版本。</span><span class="sxs-lookup"><span data-stu-id="51730-117">The byte stream message encoder does not support any other message versions.</span></span><br /><br /> <span data-ttu-id="51730-118">此屬性的型別為 <xref:System.ServiceModel.Channels.MessageVersion>。</span><span class="sxs-lookup"><span data-stu-id="51730-118">This attribute is of type <xref:System.ServiceModel.Channels.MessageVersion>.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="8aa47-119">子元素</span><span class="sxs-lookup"><span data-stu-id="8aa47-119">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="51730-119">子元素</span><span class="sxs-lookup"><span data-stu-id="51730-119">Child Elements</span></span>  
   
-|<span data-ttu-id="8aa47-120">項目</span><span class="sxs-lookup"><span data-stu-id="8aa47-120">Element</span></span>|<span data-ttu-id="8aa47-121">描述</span><span class="sxs-lookup"><span data-stu-id="8aa47-121">Description</span></span>|  
+|<span data-ttu-id="51730-120">項目</span><span class="sxs-lookup"><span data-stu-id="51730-120">Element</span></span>|<span data-ttu-id="51730-121">描述</span><span class="sxs-lookup"><span data-stu-id="51730-121">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8aa47-122">[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))</span><span class="sxs-lookup"><span data-stu-id="8aa47-122">[\<readerQuotas>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))</span></span>|<span data-ttu-id="8aa47-123">定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。</span><span class="sxs-lookup"><span data-stu-id="8aa47-123">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="8aa47-124">此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。</span><span class="sxs-lookup"><span data-stu-id="8aa47-124">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
+|[<span data-ttu-id="51730-122">\<readerQuotas></span><span class="sxs-lookup"><span data-stu-id="51730-122">\<readerQuotas></span></span>](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms731325(v=vs.100))|<span data-ttu-id="51730-123">定義 SOAP 訊息複雜度的條件約束，而這些條件約束可由以此繫結所設定的端點處理。</span><span class="sxs-lookup"><span data-stu-id="51730-123">Defines the constraints on the complexity of SOAP messages that can be processed by endpoints configured with this binding.</span></span> <span data-ttu-id="51730-124">此項目的型別為 <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>。</span><span class="sxs-lookup"><span data-stu-id="51730-124">This element is of type <xref:System.ServiceModel.Configuration.XmlDictionaryReaderQuotasElement>.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="8aa47-125">父項目</span><span class="sxs-lookup"><span data-stu-id="8aa47-125">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="51730-125">父項目</span><span class="sxs-lookup"><span data-stu-id="51730-125">Parent Elements</span></span>  
   
-|<span data-ttu-id="8aa47-126">項目</span><span class="sxs-lookup"><span data-stu-id="8aa47-126">Element</span></span>|<span data-ttu-id="8aa47-127">描述</span><span class="sxs-lookup"><span data-stu-id="8aa47-127">Description</span></span>|  
+|<span data-ttu-id="51730-126">項目</span><span class="sxs-lookup"><span data-stu-id="51730-126">Element</span></span>|<span data-ttu-id="51730-127">描述</span><span class="sxs-lookup"><span data-stu-id="51730-127">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="8aa47-128">\<binding></span><span class="sxs-lookup"><span data-stu-id="8aa47-128">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="8aa47-129">定義自訂繫結的所有繫結功能。</span><span class="sxs-lookup"><span data-stu-id="8aa47-129">Defines all binding capabilities of the custom binding.</span></span>|  
+|[<span data-ttu-id="51730-128">\<binding></span><span class="sxs-lookup"><span data-stu-id="51730-128">\<binding></span></span>](../../../../../docs/framework/misc/binding.md)|<span data-ttu-id="51730-129">定義自訂繫結的所有繫結功能。</span><span class="sxs-lookup"><span data-stu-id="51730-129">Defines all binding capabilities of the custom binding.</span></span>|  
   
-## <a name="see-also"></a><span data-ttu-id="8aa47-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8aa47-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="51730-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51730-130">See also</span></span>
+
 - <xref:System.ServiceModel.Configuration.ByteStreamMessageEncodingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>
 - <xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>
-- [<span data-ttu-id="8aa47-131">訊息編碼</span><span class="sxs-lookup"><span data-stu-id="8aa47-131">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
-- [<span data-ttu-id="8aa47-132">選擇訊息編碼器</span><span class="sxs-lookup"><span data-stu-id="8aa47-132">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
-- [<span data-ttu-id="8aa47-133">繫結</span><span class="sxs-lookup"><span data-stu-id="8aa47-133">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="8aa47-134">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="8aa47-134">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="8aa47-135">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="8aa47-135">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="8aa47-136">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="8aa47-136">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="51730-131">訊息編碼</span><span class="sxs-lookup"><span data-stu-id="51730-131">Message Encoding</span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/message-encoding.md)
+- [<span data-ttu-id="51730-132">選擇訊息編碼器</span><span class="sxs-lookup"><span data-stu-id="51730-132">Choosing a Message Encoder</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-message-encoder.md)
+- [<span data-ttu-id="51730-133">繫結</span><span class="sxs-lookup"><span data-stu-id="51730-133">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="51730-134">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="51730-134">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="51730-135">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="51730-135">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="51730-136">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="51730-136">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b8c72a2dde70a93b589181b0cc1bd7824b3f52d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a38812803127857281f9766fa3ed551971ec0330
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093514"
 ---
-# <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="3419e-102">ICorDebugRemote::CreateProcessEx 方法</span><span class="sxs-lookup"><span data-stu-id="3419e-102">ICorDebugRemote::CreateProcessEx Method</span></span>
-<span data-ttu-id="3419e-103">啟動處理序在偵錯工具在遠端電腦上。</span><span class="sxs-lookup"><span data-stu-id="3419e-103">Launches a process on a remote machine under the debugger.</span></span>  
+# <a name="icordebugremotecreateprocessex-method"></a><span data-ttu-id="ce359-102">ICorDebugRemote::CreateProcessEx 方法</span><span class="sxs-lookup"><span data-stu-id="ce359-102">ICorDebugRemote::CreateProcessEx Method</span></span>
+<span data-ttu-id="ce359-103">啟動處理序在偵錯工具在遠端電腦上。</span><span class="sxs-lookup"><span data-stu-id="ce359-103">Launches a process on a remote machine under the debugger.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3419e-104">語法</span><span class="sxs-lookup"><span data-stu-id="3419e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="ce359-104">語法</span><span class="sxs-lookup"><span data-stu-id="ce359-104">Syntax</span></span>  
   
 ```  
 HRESULT CreateProcessEx (  
@@ -47,67 +47,68 @@ HRESULT CreateProcessEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="3419e-105">參數</span><span class="sxs-lookup"><span data-stu-id="3419e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="ce359-105">參數</span><span class="sxs-lookup"><span data-stu-id="ce359-105">Parameters</span></span>  
  `pRemoteTarget`  
- <span data-ttu-id="3419e-106">[in]指標[ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="3419e-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="3419e-107">用來判斷遠端電腦將在其啟動處理程序。</span><span class="sxs-lookup"><span data-stu-id="3419e-107">Used to determine the remote machine on which the process will be launched.</span></span>  
+ <span data-ttu-id="ce359-106">[in]指標[ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)。</span><span class="sxs-lookup"><span data-stu-id="ce359-106">[in] Pointer to an [ICorDebugRemoteTarget Interface](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md).</span></span> <span data-ttu-id="ce359-107">用來判斷遠端電腦將在其啟動處理程序。</span><span class="sxs-lookup"><span data-stu-id="ce359-107">Used to determine the remote machine on which the process will be launched.</span></span>  
   
  `lpApplicationName`  
- <span data-ttu-id="3419e-108">[in]以 null 終止的字串，指定要啟動的程序執行模組的指標。</span><span class="sxs-lookup"><span data-stu-id="3419e-108">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="3419e-109">呼叫處理序的安全性內容中執行模組。</span><span class="sxs-lookup"><span data-stu-id="3419e-109">The module is executed in the security context of the calling process.</span></span>  
+ <span data-ttu-id="ce359-108">[in]以 null 終止的字串，指定要啟動的程序執行模組的指標。</span><span class="sxs-lookup"><span data-stu-id="ce359-108">[in] Pointer to a null-terminated string that specifies the module to be executed by the launched process.</span></span> <span data-ttu-id="ce359-109">呼叫處理序的安全性內容中執行模組。</span><span class="sxs-lookup"><span data-stu-id="ce359-109">The module is executed in the security context of the calling process.</span></span>  
   
  `lpCommandLine`  
- <span data-ttu-id="3419e-110">[in]以 null 終止的字串，指定要啟動的程序執行的命令列的指標。</span><span class="sxs-lookup"><span data-stu-id="3419e-110">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span>  
+ <span data-ttu-id="ce359-110">[in]以 null 終止的字串，指定要啟動的程序執行的命令列的指標。</span><span class="sxs-lookup"><span data-stu-id="ce359-110">[in] Pointer to a null-terminated string that specifies the command line to be executed by the launched process.</span></span>  
   
  `lpProcessAttributes`  
- <span data-ttu-id="3419e-111">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-111">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-111">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-111">[in] Unused for remote debugging.</span></span>  
   
  `lpThreadAttributes`  
- <span data-ttu-id="3419e-112">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-112">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-112">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-112">[in] Unused for remote debugging.</span></span>  
   
  `bInheritHandles`  
- <span data-ttu-id="3419e-113">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-113">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-113">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-113">[in] Unused for remote debugging.</span></span>  
   
  `dwCreationFlags`  
- <span data-ttu-id="3419e-114">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-114">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-114">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-114">[in] Unused for remote debugging.</span></span>  
   
  `lpEnvironment`  
- <span data-ttu-id="3419e-115">[in]新的處理序的環境區塊的指標。</span><span class="sxs-lookup"><span data-stu-id="3419e-115">[in] Pointer to an environment block for the new process.</span></span>  
+ <span data-ttu-id="ce359-115">[in]新的處理序的環境區塊的指標。</span><span class="sxs-lookup"><span data-stu-id="ce359-115">[in] Pointer to an environment block for the new process.</span></span>  
   
  `lpCurrentDirectory`  
- <span data-ttu-id="3419e-116">[in]以 null 終止的字串，指定處理程序的目前目錄的完整路徑的指標。</span><span class="sxs-lookup"><span data-stu-id="3419e-116">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="3419e-117">如果此參數為 null，新處理序會為呼叫處理序有相同的目前磁碟機和目錄。</span><span class="sxs-lookup"><span data-stu-id="3419e-117">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
+ <span data-ttu-id="ce359-116">[in]以 null 終止的字串，指定處理程序的目前目錄的完整路徑的指標。</span><span class="sxs-lookup"><span data-stu-id="ce359-116">[in] Pointer to a null-terminated string that specifies the full path to the current directory for the process.</span></span> <span data-ttu-id="ce359-117">如果此參數為 null，新處理序會為呼叫處理序有相同的目前磁碟機和目錄。</span><span class="sxs-lookup"><span data-stu-id="ce359-117">If this parameter is null, the new process will have the same current drive and directory as the calling process.</span></span>  
   
  `lpStartupInfo`  
- <span data-ttu-id="3419e-118">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-118">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-118">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-118">[in] Unused for remote debugging.</span></span>  
   
  `lpProcessInformation`  
- <span data-ttu-id="3419e-119">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-119">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-119">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-119">[in] Unused for remote debugging.</span></span>  
   
  `debuggingFlags`  
- <span data-ttu-id="3419e-120">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-120">[in] Unused for remote debugging.</span></span>  
+ <span data-ttu-id="ce359-120">[in]若未使用，可進行遠端偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-120">[in] Unused for remote debugging.</span></span>  
   
  `ppProcess`  
- <span data-ttu-id="3419e-121">[out]表示處理程序的 「 ICorDebugProcess 介面 」 物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="3419e-121">[out] A pointer to the address of a"ICorDebugProcess Interface" object that represents the process.</span></span>  
+ <span data-ttu-id="ce359-121">[out]表示處理程序的 「 ICorDebugProcess 介面 」 物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="ce359-121">[out] A pointer to the address of a"ICorDebugProcess Interface" object that represents the process.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="3419e-122">傳回值</span><span class="sxs-lookup"><span data-stu-id="3419e-122">Return Value</span></span>  
- <span data-ttu-id="3419e-123">S_OK</span><span class="sxs-lookup"><span data-stu-id="3419e-123">S_OK</span></span>  
- <span data-ttu-id="3419e-124">已成功啟動遠端電腦並傳回 「 ICorDebugProcess 介面 」 上的處理序進行偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-124">Successfully launched the process on the remote machine and returned an "ICorDebugProcess Interface" for debugging.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="ce359-122">傳回值</span><span class="sxs-lookup"><span data-stu-id="ce359-122">Return Value</span></span>  
+ <span data-ttu-id="ce359-123">S_OK</span><span class="sxs-lookup"><span data-stu-id="ce359-123">S_OK</span></span>  
+ <span data-ttu-id="ce359-124">已成功啟動遠端電腦並傳回 「 ICorDebugProcess 介面 」 上的處理序進行偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-124">Successfully launched the process on the remote machine and returned an "ICorDebugProcess Interface" for debugging.</span></span>  
   
- <span data-ttu-id="3419e-125">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="3419e-125">E_FAIL (or other E_ return codes)</span></span>  
- <span data-ttu-id="3419e-126">無法啟動遠端電腦上的處理序，並傳回 「 ICorDebugProcess 介面 」 偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-126">Unable to launch the process on the remote machine and return an "ICorDebugProcess Interface" for debugging.</span></span>  
+ <span data-ttu-id="ce359-125">E_FAIL (或其他 E_ 傳回碼)</span><span class="sxs-lookup"><span data-stu-id="ce359-125">E_FAIL (or other E_ return codes)</span></span>  
+ <span data-ttu-id="ce359-126">無法啟動遠端電腦上的處理序，並傳回 「 ICorDebugProcess 介面 」 偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-126">Unable to launch the process on the remote machine and return an "ICorDebugProcess Interface" for debugging.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="3419e-127">備註</span><span class="sxs-lookup"><span data-stu-id="3419e-127">Remarks</span></span>  
- <span data-ttu-id="3419e-128">在 Silverlight 中不支援混合模式偵錯。</span><span class="sxs-lookup"><span data-stu-id="3419e-128">Mixed-mode debugging is not supported in Silverlight.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="ce359-127">備註</span><span class="sxs-lookup"><span data-stu-id="ce359-127">Remarks</span></span>  
+ <span data-ttu-id="ce359-128">在 Silverlight 中不支援混合模式偵錯。</span><span class="sxs-lookup"><span data-stu-id="ce359-128">Mixed-mode debugging is not supported in Silverlight.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3419e-129">需求</span><span class="sxs-lookup"><span data-stu-id="3419e-129">Requirements</span></span>  
- <span data-ttu-id="3419e-130">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3419e-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="ce359-129">需求</span><span class="sxs-lookup"><span data-stu-id="ce359-129">Requirements</span></span>  
+ <span data-ttu-id="ce359-130">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ce359-130">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3419e-131">**標頭：** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="3419e-131">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="ce359-131">**標頭：** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="ce359-131">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="3419e-132">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3419e-132">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="ce359-132">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="ce359-132">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="3419e-133">**.NET framework 版本：** 4.5，4，3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="3419e-133">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
+ <span data-ttu-id="ce359-133">**.NET framework 版本：** 4.5，4，3.5 SP1</span><span class="sxs-lookup"><span data-stu-id="ce359-133">**.NET Framework Versions:** 4.5, 4, 3.5 SP1</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3419e-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3419e-134">See also</span></span>
-- [<span data-ttu-id="3419e-135">ICorDebugRemote 介面</span><span class="sxs-lookup"><span data-stu-id="3419e-135">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
-- [<span data-ttu-id="3419e-136">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="3419e-136">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+## <a name="see-also"></a><span data-ttu-id="ce359-134">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce359-134">See also</span></span>
 
-- [<span data-ttu-id="3419e-137">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="3419e-137">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="ce359-135">ICorDebugRemote 介面</span><span class="sxs-lookup"><span data-stu-id="ce359-135">ICorDebugRemote Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
+- [<span data-ttu-id="ce359-136">ICorDebug 介面</span><span class="sxs-lookup"><span data-stu-id="ce359-136">ICorDebug Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
+
+- [<span data-ttu-id="ce359-137">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="ce359-137">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

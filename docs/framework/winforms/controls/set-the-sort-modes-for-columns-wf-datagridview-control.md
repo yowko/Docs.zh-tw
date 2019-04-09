@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Windows Form DataGridView 控制項中的資料行排序模式
+title: HOW TO：設定 Windows Forms DataGridView 控制項的資料行排序模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,38 +9,38 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-ms.openlocfilehash: a0ef450559a1106de635c6d3b16891c23c41b050
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096364"
 ---
-# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="62e07-102">HOW TO：設定 Windows Form DataGridView 控制項中的資料行排序模式</span><span class="sxs-lookup"><span data-stu-id="62e07-102">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="62e07-103">在 <xref:System.Windows.Forms.DataGridView>自動排序依預設，而其他資料行類型不會自動排序控制項中，文字方塊資料行使用。</span><span class="sxs-lookup"><span data-stu-id="62e07-103">In the <xref:System.Windows.Forms.DataGridView> control, text box columns use automatic sorting by default, while other column types are not sorted automatically.</span></span> <span data-ttu-id="62e07-104">有時候您會想要覆寫這些預設值。</span><span class="sxs-lookup"><span data-stu-id="62e07-104">Sometimes you will want to override these defaults.</span></span> <span data-ttu-id="62e07-105">例如，您可以顯示影像取代文字、 數字或列舉型別資料格的值。</span><span class="sxs-lookup"><span data-stu-id="62e07-105">For example, you can display images in place of text, numbers, or enumeration cell values.</span></span> <span data-ttu-id="62e07-106">雖然映像無法進行排序，就可以排序它們所代表的基礎值。</span><span class="sxs-lookup"><span data-stu-id="62e07-106">While the images cannot be sorted, the underlying values that they represent can be sorted.</span></span>  
+# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="73b20-102">HOW TO：設定 Windows Forms DataGridView 控制項的資料行排序模式</span><span class="sxs-lookup"><span data-stu-id="73b20-102">How to: Set the Sort Modes for Columns in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="73b20-103">在 <xref:System.Windows.Forms.DataGridView>自動排序依預設，而其他資料行類型不會自動排序控制項中，文字方塊資料行使用。</span><span class="sxs-lookup"><span data-stu-id="73b20-103">In the <xref:System.Windows.Forms.DataGridView> control, text box columns use automatic sorting by default, while other column types are not sorted automatically.</span></span> <span data-ttu-id="73b20-104">有時候您會想要覆寫這些預設值。</span><span class="sxs-lookup"><span data-stu-id="73b20-104">Sometimes you will want to override these defaults.</span></span> <span data-ttu-id="73b20-105">例如，您可以顯示影像取代文字、 數字或列舉型別資料格的值。</span><span class="sxs-lookup"><span data-stu-id="73b20-105">For example, you can display images in place of text, numbers, or enumeration cell values.</span></span> <span data-ttu-id="73b20-106">雖然映像無法進行排序，就可以排序它們所代表的基礎值。</span><span class="sxs-lookup"><span data-stu-id="73b20-106">While the images cannot be sorted, the underlying values that they represent can be sorted.</span></span>  
   
- <span data-ttu-id="62e07-107">在 <xref:System.Windows.Forms.DataGridView>控制項，<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行的屬性值會決定其排序行為。</span><span class="sxs-lookup"><span data-stu-id="62e07-107">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property value of a column determines its sorting behavior.</span></span>  
+ <span data-ttu-id="73b20-107">在 <xref:System.Windows.Forms.DataGridView>控制項，<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行的屬性值會決定其排序行為。</span><span class="sxs-lookup"><span data-stu-id="73b20-107">In the <xref:System.Windows.Forms.DataGridView> control, the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A> property value of a column determines its sorting behavior.</span></span>  
   
- <span data-ttu-id="62e07-108">下列程序示範`Priority`資料行從[How to:自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="62e07-108">The following procedure shows the `Priority` column from [How to: Customize Data Formatting in the Windows Forms DataGridView Control](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span> <span data-ttu-id="62e07-109">本專欄是映像的資料行，並不是預設可排序。</span><span class="sxs-lookup"><span data-stu-id="62e07-109">This column is an image column and is not sortable by default.</span></span> <span data-ttu-id="62e07-110">它會包含實際的資料格的值的字串，不過，，因此會自動排序。</span><span class="sxs-lookup"><span data-stu-id="62e07-110">It contains actual cell values that are strings, however, so it can be sorted automatically.</span></span>  
+ <span data-ttu-id="73b20-108">下列程序示範`Priority`資料行從[How to:自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)。</span><span class="sxs-lookup"><span data-stu-id="73b20-108">The following procedure shows the `Priority` column from [How to: Customize Data Formatting in the Windows Forms DataGridView Control](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md).</span></span> <span data-ttu-id="73b20-109">本專欄是映像的資料行，並不是預設可排序。</span><span class="sxs-lookup"><span data-stu-id="73b20-109">This column is an image column and is not sortable by default.</span></span> <span data-ttu-id="73b20-110">它會包含實際的資料格的值的字串，不過，，因此會自動排序。</span><span class="sxs-lookup"><span data-stu-id="73b20-110">It contains actual cell values that are strings, however, so it can be sorted automatically.</span></span>  
   
-### <a name="to-set-the-sort-mode-for-a-column"></a><span data-ttu-id="62e07-111">若要設定資料行排序模式</span><span class="sxs-lookup"><span data-stu-id="62e07-111">To set the sort mode for a column</span></span>  
+### <a name="to-set-the-sort-mode-for-a-column"></a><span data-ttu-id="73b20-111">若要設定資料行排序模式</span><span class="sxs-lookup"><span data-stu-id="73b20-111">To set the sort mode for a column</span></span>  
   
--   <span data-ttu-id="62e07-112">設定 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="62e07-112">Set the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> property.</span></span>  
+-   <span data-ttu-id="73b20-112">設定 <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> 屬性。</span><span class="sxs-lookup"><span data-stu-id="73b20-112">Set the <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType> property.</span></span>  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#066)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#066](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#066)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="62e07-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="62e07-113">Compiling the Code</span></span>  
- <span data-ttu-id="62e07-114">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="62e07-114">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="73b20-113">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="73b20-113">Compiling the Code</span></span>  
+ <span data-ttu-id="73b20-114">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="73b20-114">This example requires:</span></span>  
   
--   <span data-ttu-id="62e07-115">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `Priority` 的資料行。</span><span class="sxs-lookup"><span data-stu-id="62e07-115">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `Priority`.</span></span>  
+-   <span data-ttu-id="73b20-115">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `Priority` 的資料行。</span><span class="sxs-lookup"><span data-stu-id="73b20-115">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1` that contains a column named `Priority`.</span></span>  
   
--   <span data-ttu-id="62e07-116">
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="62e07-116">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="73b20-116"><xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="73b20-116">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="62e07-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="62e07-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="73b20-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="73b20-117">See also</span></span>
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="62e07-118">在 Windows Forms DataGridView 控制項中排序資料</span><span class="sxs-lookup"><span data-stu-id="62e07-118">Sorting Data in the Windows Forms DataGridView Control</span></span>](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="62e07-119">Windows Forms DataGridView 控制項中的資料行排序模式</span><span class="sxs-lookup"><span data-stu-id="62e07-119">Column Sort Modes in the Windows Forms DataGridView Control</span></span>](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [<span data-ttu-id="62e07-120">如何：自訂 Windows Form DataGridView 控制項中排序</span><span class="sxs-lookup"><span data-stu-id="62e07-120">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="73b20-118">在 Windows Forms DataGridView 控制項中排序資料</span><span class="sxs-lookup"><span data-stu-id="73b20-118">Sorting Data in the Windows Forms DataGridView Control</span></span>](sorting-data-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="73b20-119">Windows Form DataGridView 控制項中的資料行排序模式</span><span class="sxs-lookup"><span data-stu-id="73b20-119">Column Sort Modes in the Windows Forms DataGridView Control</span></span>](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="73b20-120">HOW TO：自訂 Windows Forms DataGridView 控制項中的排序</span><span class="sxs-lookup"><span data-stu-id="73b20-120">How to: Customize Sorting in the Windows Forms DataGridView Control</span></span>](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
