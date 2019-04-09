@@ -2,12 +2,12 @@
 title: 使用 TryCatch 錯誤處理流程圖活動
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
-ms.openlocfilehash: 3f45d4a60de3201a3100fba3af6cc15484a1fbf0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e515248594088f9888c3488d83d8079ce5d13089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119804"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>使用 TryCatch 錯誤處理流程圖活動
 這個範例示範 <xref:System.Activities.Statements.TryCatch> 活動在複雜控制流程活動中的使用方式。
@@ -23,7 +23,7 @@ ms.locfileid: "57708830"
 
  `CreateFlowchartWithFaults` 活動使用 <xref:System.Activities.Statements.FlowSwitch%601> 活動，在 `promoCode` 引數上切換，並透過下列公式計算折扣。
 
-|`promoCode` 的值|折扣 (%)|
+|值 `promoCode`|折扣 (%)|
 |--------------------------|--------------------|
 |Single|10|
 |MNK|15|
@@ -47,5 +47,6 @@ ms.locfileid: "57708830"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Built-InActivities\FlowChartWithFaultHandling`  
   
 ## <a name="see-also"></a>另請參閱
-- [流程圖工作流程](../flowchart-workflows.md)
+
+- [Flowchart 工作流程](../flowchart-workflows.md)
 - [例外狀況](../exceptions.md)

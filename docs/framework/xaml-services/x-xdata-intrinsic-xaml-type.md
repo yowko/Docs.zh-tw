@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XData in XAML [XAML Services]
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
-ms.openlocfilehash: 68468c3c10fd884cf5fb92160e3cde41dbf7d529
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125155"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 內建 XAML 類型
 可讓 XAML 生產環境內的 XML 資料島的放置。 中的 XML 項目`x:XData`應該不視為 XAML 處理器所處理預設 XAML 命名空間的一部分或任何其他的 XAML 命名空間。 `x:XData` 可以包含任意格式正確的 XML。  
@@ -50,6 +50,7 @@ ms.locfileid: "58030259"
  技術上來說，`x:XData`可用之類型的任何屬性的內容當做<xref:System.Xml.Serialization.IXmlSerializable>。 不過，<xref:System.Windows.Data.XmlDataProvider.XmlSerializer%2A?displayProperty=nameWithType>是只提供顯著的實作。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Data.XmlDataProvider>
 - [資料繫結概觀](../wpf/data/data-binding-overview.md)
-- [Binding 標記延伸](../wpf/advanced/binding-markup-extension.md)
+- [繫結標記延伸](../wpf/advanced/binding-markup-extension.md)

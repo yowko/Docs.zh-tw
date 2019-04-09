@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
-ms.openlocfilehash: 282ec36a2ad489e77db9fb5b338d3189c3001f03
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124276"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>傳回兩個序列之間的集合差異
 使用 <xref:System.Linq.Queryable.Except%2A> 運算子傳回兩個序列之間的集合差異。  
@@ -24,5 +24,6 @@ ms.locfileid: "54609027"
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中，<xref:System.Linq.Queryable.Except%2A> 作業僅妥善定義於集合上。 尚未定義多重集 (Multiset) 的語意 (Semantics)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)
 - [標準查詢運算子轉譯](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)

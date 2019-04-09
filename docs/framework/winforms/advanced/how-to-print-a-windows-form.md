@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printing a form
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
-ms.openlocfilehash: 80bf88ad048e55a381d034d2a796de6f77f8691c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121962"
 ---
 # <a name="how-to-print-a-windows-form"></a>HOW TO：列印 Windows Form
 在開發程序的一部分，您通常會想要列印一份 Windows 表單。 下列程式碼範例示範如何使用列印一份目前的表單<xref:System.Drawing.Graphics.CopyFromScreen%2A>方法。  
@@ -38,6 +38,7 @@ ms.locfileid: "57714147"
  若要執行此程式碼範例，您必須存取您使用您的電腦與印表機的權限。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Printing.PrintDocument>
-- [如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)
-- [如何：列印 Windows Form 中的圖形](how-to-print-graphics-in-windows-forms.md)
+- [HOW TO：使用 GDI+ 呈現影像](how-to-render-images-with-gdi.md)
+- [HOW TO：列印 Windows Forms 中的圖形](how-to-print-graphics-in-windows-forms.md)

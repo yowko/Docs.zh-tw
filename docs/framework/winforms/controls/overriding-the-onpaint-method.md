@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Paint event [Windows Forms], handling in Windows Forms custom control
 - OnPaint method [Windows Forms], overriding in Windows Forms custom controls
 ms.assetid: e9ca2723-0107-4540-bb21-4f5ffb4a9906
-ms.openlocfilehash: 93afd0d463ed3f52ec6425c9de19a6c147860ed9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: baf4e6cb3b2a40b1b792ae12e78cb9f878a738ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713225"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124302"
 ---
 # <a name="overriding-the-onpaint-method"></a>覆寫 OnPaint 方法
 覆寫任何事件中所定義的基本步驟[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]都相同，而且下列清單摘要說明。  
@@ -87,6 +87,7 @@ public class PaintEventArgs : EventArgs {
  控制項叫用以其<xref:System.Windows.Forms.Control.OnPaint%2A>每當程式需要變更其視覺顯示的方法。 這個方法接著會引發<xref:System.Windows.Forms.Control.Paint>事件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [事件](../../../standard/events/index.md)
-- [呈現 Windows Forms 控制項](rendering-a-windows-forms-control.md)
+- [呈現 Windows Form 控制項](rendering-a-windows-forms-control.md)
 - [定義事件](defining-an-event-in-windows-forms-controls.md)

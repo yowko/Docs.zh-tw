@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc9633f7518aee233634bb7fbfac74c24b306eac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 499ba1887846cc670dc763ec998ef335c17a9ae5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515598"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125992"
 ---
 # <a name="icatalogservicesnotautodone-method"></a>ICatalogServices::NotAutodone 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -34,4 +34,5 @@ HRESULT NotAutodone ( );
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

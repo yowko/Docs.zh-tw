@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding [WPF], to methods
 - methods [WPF], binding to
 ms.assetid: 5f55e71e-2182-42a0-88d1-700cc1427a7a
-ms.openlocfilehash: 8ccba42c3e16fdda73c087afde99e9864dc4ab0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6cdad46fd6d9ef3bc4ce1a13fedb6ff1d639d93e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123236"
 ---
 # <a name="how-to-bind-to-a-method"></a>HOW TO：繫結至方法
 下列範例示範如何將繫結至方法，使用<xref:System.Windows.Data.ObjectDataProvider>。  
@@ -32,5 +32,6 @@ ms.locfileid: "57351927"
  `InvalidationCharacterRule`是<xref:System.Windows.Controls.ValidationRule>，以檢查無效的字元。 預設錯誤樣板，也就是紅色框線四周<xref:System.Windows.Controls.TextBox>，會出現時輸入的值不是雙精度浮點數值，通知使用者。  
   
 ## <a name="see-also"></a>另請參閱
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+
+- [HOW TO 主題](data-binding-how-to-topics.md)
 - [繫結至列舉](how-to-bind-to-an-enumeration.md)

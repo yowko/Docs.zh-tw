@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - paging output [WCF Data Services]
 ms.assetid: 9a316cbd-9612-4482-a541-a10bc78b2635
-ms.openlocfilehash: be5bd41494c27724a360b785b8706b618447e7de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 77dbeba89b352fa470ab0523a830db9175a1a21a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122898"
 ---
 # <a name="how-to-enable-paging-of-data-service-results-wcf-data-services"></a>HOW TO：啟用分頁功能，為資料服務結果 (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您限制資料服務查詢所傳回的實體數目。 當服務已初始化且可針對每個實體集分別設定服務時，分頁限制會定義於所呼叫的方法中。  
@@ -29,5 +29,6 @@ ms.locfileid: "54523451"
      [!code-vb[Astoria Northwind Service#DataServiceConfigPaging](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind.svc.vb#dataserviceconfigpaging)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [載入延後內容](../../../../docs/framework/data/wcf/loading-deferred-content-wcf-data-services.md)
-- [如何：載入分頁結果](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)
+- [HOW TO：載入分頁的結果](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)

@@ -2,12 +2,12 @@
 title: <transport> 的 <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
-ms.openlocfilehash: b8f84d0ed6c6248e72e3353675c9da96a0678ae6
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153864"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<傳輸 > 的\<lt;ws2007httpbinding&gt >
 定義 HTTP 傳輸的驗證設定。  
@@ -45,7 +45,7 @@ ms.locfileid: "55273302"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|停用安全性。|  
+|None|停用安全性。|  
 |基本|使用基本驗證。|  
 |摘要|使用摘要式驗證。|  
 |Ntlm|使用 NTLM 驗證做為 Windows 網域的後援。|  
@@ -56,7 +56,7 @@ ms.locfileid: "55273302"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|停用安全性。|  
+|None|停用安全性。|  
 |基本|使用基本驗證。|  
 |摘要|使用摘要式驗證。|  
 |Ntlm|使用 NTLM 做為 Windows 網域的後援。|  
@@ -64,21 +64,22 @@ ms.locfileid: "55273302"
 |憑證|使用 X.509 憑證來驗證用戶端。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|代表的安全性功能[ \<lt;ws2007httpbinding&gt >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)項目。|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|代表的安全性功能[ \<lt;ws2007httpbinding&gt >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)項目。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.HttpTransportSecurity>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.WSHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.WSHttpTransportSecurityElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)
