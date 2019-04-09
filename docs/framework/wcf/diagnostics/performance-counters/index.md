@@ -2,8 +2,14 @@
 title: WCF 效能計數器
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'performance counters [WCF]'
+- performance counters [WCF]
 ms.assetid: f559b2bd-ed83-4988-97a1-e88f06646609
+ms.openlocfilehash: 31c5b386d707aa49cd36d536f1c8b419eb74a658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087855"
 ---
 # <a name="wcf-performance-counters"></a>WCF 效能計數器
 Windows Communication Foundation (WCF) 包含大量的效能計數器，可協助您測量應用程式的效能。  
@@ -133,4 +139,5 @@ ServiceName@ServiceBaseAddress
  如需有關如何以程式設計方式存取計數器的詳細資訊，請參閱 <<c0> [ 效能計數器程式設計架構](https://go.microsoft.com/fwlink/?LinkId=95179)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

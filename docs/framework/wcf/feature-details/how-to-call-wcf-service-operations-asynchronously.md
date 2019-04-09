@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0face17f-43ca-417b-9b33-737c0fc360df
-ms.openlocfilehash: 19b09c9ec789419f2774207b051b8ee488b6725d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a7bd1d67d9730c75e3f3f3b1eeb59f5d2d3c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204831"
 ---
 # <a name="how-to-call-wcf-service-operations-asynchronously"></a>HOW TO：以非同步方式呼叫 WCF 服務作業
 本主題涵蓋用戶端如何能夠非同步地存取服務作業。 本主題中的服務會實作 `ICalculator` 介面。 用戶端可以透過使用事件驅動的非同步呼叫模型，以非同步方式在這個介面上呼叫作業。 (如需事件架構非同步呼叫模型的詳細資訊，請參閱[使用 「 事件架構非同步模式的多執行緒程式設計](https://go.microsoft.com/fwlink/?LinkId=248184))。 如需示範如何在服務中以非同步方式實作作業的範例，請參閱[How to:實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)。 如需有關同步和非同步作業的詳細資訊，請參閱 <<c0> [ 同步和非同步作業](../../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)。  
@@ -35,7 +35,7 @@ ms.locfileid: "54625545"
          [!code-csharp[EventAsync#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#1)]
          [!code-vb[EventAsync#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#1)]  
   
-    -   作業已完成事件表單的 <`operationName` > `Completed`與事件架構非同步呼叫方法搭配使用。 例如:   
+    -   作業已完成事件表單的 <`operationName` > `Completed`與事件架構非同步呼叫方法搭配使用。 例如：  
   
          [!code-csharp[EventAsync#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/eventasync/cs/generatedclient.cs#2)]
          [!code-vb[EventAsync#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/generatedclient.vb#2)]  
@@ -64,4 +64,5 @@ ms.locfileid: "54625545"
  [!code-vb[EventAsync#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/eventasync/vb/client.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)
+
+- [HOW TO：實作非同步服務作業](../../../../docs/framework/wcf/how-to-implement-an-asynchronous-service-operation.md)

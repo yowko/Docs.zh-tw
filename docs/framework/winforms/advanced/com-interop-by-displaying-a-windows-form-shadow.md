@@ -1,5 +1,5 @@
 ---
-title: HOW TO：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
+title: HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [Windows Forms]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: 87aac8ad-3c04-43b3-9b0c-d0b00df9ee74
-ms.openlocfilehash: 56ded3118d0961f38c77d3db4fc879eb241a7520
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81220ad4c0bf00a38abfe7257d5fc61e92e8d885
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715434"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206443"
 ---
-# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>HOW TO：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop
+# <a name="how-to-support-com-interop-by-displaying-a-windows-form-with-the-showdialog-method"></a>HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示 Windows Forms 來解決元件物件模型 (COM) 互通性問題，而此訊息迴圈是使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法建立而成。  
   
  為了讓表單能夠在 COM 用戶端應用程式中正確運作，您必須在 Windows Forms 訊息迴圈上執行它。 若要執行此工作，請使用下列的其中一個方法：  
@@ -38,6 +38,7 @@ ms.locfileid: "57715434"
 -   在 <xref:System.Windows.Forms.Form.Show%2A?displayProperty=nameWithType> 元件中，將所有對 <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> 方法的呼叫取代為對 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 方法的呼叫。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [將 .NET Framework 元件公開給 COM](../../interop/exposing-dotnet-components-to-com.md)
-- [如何：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
-- [Windows Forms 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)
+- [HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)
+- [Windows Form 和 Unmanaged 應用程式](windows-forms-and-unmanaged-applications.md)

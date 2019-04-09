@@ -1,13 +1,13 @@
 ---
-title: 啟動的 <diagnostics>
+title: <diagnostics> 啟用
 ms.date: 03/30/2017
 ms.assetid: 1486e0eb-fe2a-46c3-b584-c924889477dd
-ms.openlocfilehash: ac235b9a3c125cd3fe63ccd899e2ff92d4d3f31b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 30456963a7d74a93e39bb1fddc0910daae97f039
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203804"
 ---
 # <a name="diagnostics-for-activation"></a>\<診斷 > 啟用
 設定 Windows Communication Foundation (WCF) 接聽程式的診斷功能。  
@@ -47,4 +47,5 @@ ms.locfileid: "55278444"
 |[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|包含 SMSvcHost.exe 接聽程式處理序的組態設定。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activation.Configuration.DiagnosticSection>

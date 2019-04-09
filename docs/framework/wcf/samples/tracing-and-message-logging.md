@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
-ms.openlocfilehash: 5cd0e9620250b410e60c1fd378e7525bb2917756
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ba4428bad6662928ddc1830c8998dd5f5b6b9bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186572"
 ---
 # <a name="tracing-and-message-logging"></a>追蹤和訊息記錄
 這個範例示範如何啟用追蹤和訊息記錄。 產生的追蹤和訊息記錄則會使用檢視[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -133,5 +133,6 @@ ms.locfileid: "54617001"
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\TracingAndLogging`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [追蹤](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

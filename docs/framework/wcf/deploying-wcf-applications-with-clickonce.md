@@ -2,12 +2,12 @@
 title: 使用 ClickOnce 來部署 WCF 應用程式
 ms.date: 03/30/2017
 ms.assetid: 1a11feee-2a47-4d3e-a28a-ad69d5ff93e0
-ms.openlocfilehash: 91c03ee2fa33541e917e44583c5fa20173aec34e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1820b00aa903633750f74f319f9cf8038ba2b043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086230"
 ---
 # <a name="deploying-wcf-applications-with-clickonce"></a>使用 ClickOnce 來部署 WCF 應用程式
 使用 Windows Communication Foundation (WCF) 的用戶端應用程式可能會使用 ClickOnce 技術來部署。 這項技術讓應用程式能夠利用程式碼存取安全性提供的執行階段安全性保護，條件是它們必須使用受信任憑證完成數位簽署。 用來簽署 ClickOnce 應用程式的憑證必須位於信任的發行者存放區中，而且用戶端電腦上的本機安全性原則必須設定成對具有該發行者憑證之應用程式授與完全信任的權限。  
@@ -15,5 +15,6 @@ ms.locfileid: "54680971"
  如需設定 ClickOnce 應用程式和受信任的發行者資訊，請參閱[設定 ClickOnce 受信任的發行者](https://go.microsoft.com/fwlink/?LinkId=94774)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [受信任的應用程式部署概觀](https://go.microsoft.com/fwlink/?LinkId=94775)
 - [ClickOnce 部署的 Windows Forms 應用程式](https://go.microsoft.com/fwlink/?LinkId=94776)

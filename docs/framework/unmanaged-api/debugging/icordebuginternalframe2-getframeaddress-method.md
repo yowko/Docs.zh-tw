@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3293c3b0d5fa4615c351949afdb1acf8cd560b5e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187287"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress 方法
 傳回內部框架的堆疊位址。  
@@ -44,7 +44,7 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |-------------|-----------------|  
 |S_OK|已成功地傳回內部框架的位址。|  
 |E_FAIL|不會傳回內部框架的位址。|  
-|E_INVALIDARG|`pAddress` 為 `null`。|  
+|E_INVALIDARG|`pAddress` 是`null`。|  
   
 ## <a name="remarks"></a>備註  
  中傳回的值`pAddress`可用來判斷內部相對於其他框架在堆疊上框架的位置。 即使在 IA-64 為主的電腦內部框架都位於堆疊，而沒有備份存放區相對應的指標。  
@@ -52,13 +52,14 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugInternalFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebuginternalframe2-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

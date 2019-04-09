@@ -1,17 +1,17 @@
 ---
-title: 無法將部署至 Windows 容器的時機
+title: 不要部署至 Windows 容器的時機
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |無法將部署至 Windows 容器的時機
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 940e94b45dcfb4e301b095cbe4ef5bcaf6752c4c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 75db31a8f4599e9681c2c4156d93db5416d2ca96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129892"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200736"
 ---
-# <a name="when-not-to-deploy-to-windows-containers"></a>無法將部署至 Windows 容器的時機
+# <a name="when-not-to-deploy-to-windows-containers"></a>不要部署至 Windows 容器的時機
 
 Windows 容器不支援某些 Windows 技術。 在這些情況下，您仍需要將移轉至標準 Vm，通常會有只以 Windows 和 IIS。
 
@@ -34,7 +34,6 @@ Windows 容器不支援某些 Windows 技術。 在這些情況下，您仍需�
 -   UI 應用程式 （用戶端應用程式以視覺化的使用者介面中） 不支援的案例。
 
 -   Windows 基礎結構角色 (DNS、 DHCP、 DC、 NTP、 列印、 檔案伺服器，IAM 等等) 不支援的案例。
-
 
 如需其他不支援的案例和社群的要求，請參閱 UserVoice 論壇適用於 Windows 容器： <https://windowsserver.uservoice.com/forums/304624-containers>。
 

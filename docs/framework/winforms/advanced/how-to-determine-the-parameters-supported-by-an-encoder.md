@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
-ms.openlocfilehash: f5af00833c8d8373444b475673709d902598d9d0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719698"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204571"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>HOW TO：判斷編碼器所支援的參數
 您可以調整影像的參數，例如品質和壓縮層級，但您必須知道所指定之影像編碼器所支援的參數。 <xref:System.Drawing.Image>類別提供<xref:System.Drawing.Image.GetEncoderParameterList%2A>方法，如此您就可以判斷特定編碼器支援哪些映像參數。 您可以指定編碼器使用的 GUID。 <xref:System.Drawing.Image.GetEncoderParameterList%2A>方法傳回的陣列<xref:System.Drawing.Imaging.EncoderParameter>物件。  
@@ -31,6 +31,7 @@ ms.locfileid: "57719698"
 -   A <xref:System.Windows.Forms.PaintEventArgs>，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：列出已安裝的編碼器](how-to-list-installed-encoders.md)
+
+- [HOW TO：列出已安裝的編碼器](how-to-list-installed-encoders.md)
 - [點陣圖類型](types-of-bitmaps.md)
 - [使用 Managed GDI+ 中的影像編碼器和解碼器](using-image-encoders-and-decoders-in-managed-gdi.md)
