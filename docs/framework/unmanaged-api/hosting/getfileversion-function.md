@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 214f16f970cfb2c319f3a26afc882e6102c1be71
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d25a3ccdd66ff7acb70f1f5e6c60157b53cc97c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498259"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123720"
 ---
-# <a name="getfileversion-function"></a><span data-ttu-id="d65ca-102">GetFileVersion 函式</span><span class="sxs-lookup"><span data-stu-id="d65ca-102">GetFileVersion Function</span></span>
-<span data-ttu-id="d65ca-103">取得指定的檔案，並使用指定的緩衝區 common language runtime (CLR) 版本資訊。</span><span class="sxs-lookup"><span data-stu-id="d65ca-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
+# <a name="getfileversion-function"></a><span data-ttu-id="622ee-102">GetFileVersion 函式</span><span class="sxs-lookup"><span data-stu-id="622ee-102">GetFileVersion Function</span></span>
+<span data-ttu-id="622ee-103">取得指定的檔案，並使用指定的緩衝區 common language runtime (CLR) 版本資訊。</span><span class="sxs-lookup"><span data-stu-id="622ee-103">Gets the common language runtime (CLR) version information of the specified file, using the specified buffer.</span></span>  
   
- <span data-ttu-id="d65ca-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="d65ca-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="622ee-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="622ee-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d65ca-105">語法</span><span class="sxs-lookup"><span data-stu-id="d65ca-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="622ee-105">語法</span><span class="sxs-lookup"><span data-stu-id="622ee-105">Syntax</span></span>  
   
 ```  
 HRESULT GetFileVersion (  
@@ -39,25 +39,26 @@ HRESULT GetFileVersion (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d65ca-106">參數</span><span class="sxs-lookup"><span data-stu-id="d65ca-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="622ee-106">參數</span><span class="sxs-lookup"><span data-stu-id="622ee-106">Parameters</span></span>  
  `szFilename`  
- <span data-ttu-id="d65ca-107">[in]要檢查之檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="d65ca-107">[in] The path of the file to be examined.</span></span>  
+ <span data-ttu-id="622ee-107">[in]要檢查之檔案的路徑。</span><span class="sxs-lookup"><span data-stu-id="622ee-107">[in] The path of the file to be examined.</span></span>  
   
  `szBuffer`  
- <span data-ttu-id="d65ca-108">[in、 out]傳回的版本資訊所配置的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="d65ca-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
+ <span data-ttu-id="622ee-108">[in、 out]傳回的版本資訊所配置的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="622ee-108">[in, out] The buffer allocated for the version information that is returned.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="d65ca-109">[in]大小，以寬字元為單位的`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="d65ca-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
+ <span data-ttu-id="622ee-109">[in]大小，以寬字元為單位的`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="622ee-109">[in] The size, in wide characters, of `szBuffer`.</span></span>  
   
  `dwLength`  
- <span data-ttu-id="d65ca-110">[out]大小，以位元組為單位傳回`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="d65ca-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
+ <span data-ttu-id="622ee-110">[out]大小，以位元組為單位傳回`szBuffer`。</span><span class="sxs-lookup"><span data-stu-id="622ee-110">[out] The size, in bytes, of the returned `szBuffer`.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d65ca-111">需求</span><span class="sxs-lookup"><span data-stu-id="d65ca-111">Requirements</span></span>  
- <span data-ttu-id="d65ca-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d65ca-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="622ee-111">需求</span><span class="sxs-lookup"><span data-stu-id="622ee-111">Requirements</span></span>  
+ <span data-ttu-id="622ee-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="622ee-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d65ca-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d65ca-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="622ee-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="622ee-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="d65ca-114">**.NET framework 版本：**[!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d65ca-114">**.NET Framework Versions:** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]</span></span>  
+ **<span data-ttu-id="622ee-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="622ee-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v11plus](../../../../includes/net-current-v11plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="d65ca-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d65ca-115">See also</span></span>
-- [<span data-ttu-id="d65ca-116">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="d65ca-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+## <a name="see-also"></a><span data-ttu-id="622ee-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="622ee-115">See also</span></span>
+
+- [<span data-ttu-id="622ee-116">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="622ee-116">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

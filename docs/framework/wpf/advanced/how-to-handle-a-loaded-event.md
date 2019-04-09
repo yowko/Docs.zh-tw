@@ -9,26 +9,27 @@ helpviewer_keywords:
 - events [WPF], Loaded
 - Loaded events [WPF]
 ms.assetid: 0cf8d003-8441-4df4-807a-6db09347e829
-ms.openlocfilehash: a4916d3cfd20d082a8466f61fc74e16db2f0f346
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b8cd2f5e9d848cebb712e7b4930ca39efe48ecc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353344"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122547"
 ---
-# <a name="how-to-handle-a-loaded-event"></a><span data-ttu-id="d7a51-102">HOW TO：處理 Loaded 事件</span><span class="sxs-lookup"><span data-stu-id="d7a51-102">How to: Handle a Loaded Event</span></span>
-<span data-ttu-id="d7a51-103">此範例示範如何處理<xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType>事件，並處理該事件之適當情節。</span><span class="sxs-lookup"><span data-stu-id="d7a51-103">This example shows how to handle the <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> event, and an appropriate scenario for handling that event.</span></span> <span data-ttu-id="d7a51-104">處理常式會建立<xref:System.Windows.Controls.Button>當頁面載入。</span><span class="sxs-lookup"><span data-stu-id="d7a51-104">The handler  creates a <xref:System.Windows.Controls.Button> when the page loads.</span></span>  
+# <a name="how-to-handle-a-loaded-event"></a><span data-ttu-id="d257a-102">HOW TO：處理 Loaded 事件</span><span class="sxs-lookup"><span data-stu-id="d257a-102">How to: Handle a Loaded Event</span></span>
+<span data-ttu-id="d257a-103">此範例示範如何處理<xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType>事件，並處理該事件之適當情節。</span><span class="sxs-lookup"><span data-stu-id="d257a-103">This example shows how to handle the <xref:System.Windows.FrameworkElement.Loaded?displayProperty=nameWithType> event, and an appropriate scenario for handling that event.</span></span> <span data-ttu-id="d257a-104">處理常式會建立<xref:System.Windows.Controls.Button>當頁面載入。</span><span class="sxs-lookup"><span data-stu-id="d257a-104">The handler  creates a <xref:System.Windows.Controls.Button> when the page loads.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d7a51-105">範例</span><span class="sxs-lookup"><span data-stu-id="d7a51-105">Example</span></span>  
- <span data-ttu-id="d7a51-106">下列範例會使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]以及程式碼後置檔案。</span><span class="sxs-lookup"><span data-stu-id="d7a51-106">The following example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] together with a code-behind file.</span></span>  
+## <a name="example"></a><span data-ttu-id="d257a-105">範例</span><span class="sxs-lookup"><span data-stu-id="d257a-105">Example</span></span>  
+ <span data-ttu-id="d257a-106">下列範例會使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]以及程式碼後置檔案。</span><span class="sxs-lookup"><span data-stu-id="d257a-106">The following example uses [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] together with a code-behind file.</span></span>  
   
  [!code-xaml[FELoaded#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/FELoaded/CSharp/default.xaml#xaml)]  
   
  [!code-csharp[FELoaded#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/FELoaded/CSharp/default.xaml.cs#handler)]
  [!code-vb[FELoaded#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FELoaded/VisualBasic/default.xaml.vb#handler)]  
   
-## <a name="see-also"></a><span data-ttu-id="d7a51-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7a51-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d257a-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d257a-107">See also</span></span>
+
 - <xref:System.Windows.FrameworkElement>
-- [<span data-ttu-id="d7a51-108">物件存留期事件</span><span class="sxs-lookup"><span data-stu-id="d7a51-108">Object Lifetime Events</span></span>](object-lifetime-events.md)
-- [<span data-ttu-id="d7a51-109">路由事件概觀</span><span class="sxs-lookup"><span data-stu-id="d7a51-109">Routed Events Overview</span></span>](routed-events-overview.md)
-- [<span data-ttu-id="d7a51-110">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="d7a51-110">How-to Topics</span></span>](base-elements-how-to-topics.md)
+- [<span data-ttu-id="d257a-108">物件存留期事件</span><span class="sxs-lookup"><span data-stu-id="d257a-108">Object Lifetime Events</span></span>](object-lifetime-events.md)
+- [<span data-ttu-id="d257a-109">路由事件概觀</span><span class="sxs-lookup"><span data-stu-id="d257a-109">Routed Events Overview</span></span>](routed-events-overview.md)
+- [<span data-ttu-id="d257a-110">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="d257a-110">How-to Topics</span></span>](base-elements-how-to-topics.md)
