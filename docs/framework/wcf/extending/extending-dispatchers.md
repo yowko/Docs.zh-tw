@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: c34a923d70c9079a3736732d6815df0329dfd557
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54715891"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162720"
 ---
 # <a name="extending-dispatchers"></a>擴充發送器
 發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。 發送器擴充可讓您修改這個處理。  您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。  您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。  
@@ -84,17 +84,17 @@ ms.locfileid: "54715891"
   
 4.  安全性相關的元件可以使用下列屬性：  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 會指出要將稽核事件寫入何處。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 表示稽核事件會寫入其中。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 會控制服務是否會嘗試使用由傳入訊息提供的認證來進行模擬。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> 控制服務是否會嘗試模擬使用內送訊息所提供的認證。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 會控制是否要將成功的訊息驗證事件寫入由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 指定的事件記錄檔。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> 控制是否成功的訊息驗證事件寫入事件記錄檔所指定<xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A>。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 會控制 <xref:System.Threading.Thread.CurrentPrincipal%2A> 屬性的設定方式。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> 控制項如何<xref:System.Threading.Thread.CurrentPrincipal%2A>屬性設定。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 會指定稽核授權事件的執行方式。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> 指定如何執行授權事件的稽核。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 會指定是否要隱藏在記錄處理期間發生的非嚴重例外狀況。  
+    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> 指定是否要隱藏在記錄處理期間發生的非嚴重例外狀況。  
   
  一般來說，自訂延伸物件會指派給 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 屬性，或由服務行為 (實作 <xref:System.ServiceModel.Description.IServiceBehavior> 的物件)、合約行為 (實作 <xref:System.ServiceModel.Description.IContractBehavior> 的物件) 或端點行為 (實作 <xref:System.ServiceModel.Description.IEndpointBehavior> 的物件) 插入集合中。 接著，安裝行為物件會透過程式設計的方式或實作自訂 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 物件的方式新增至適當的行為集合，讓該行為可以透過應用程式組態檔插入。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "54715891"
   
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> 屬性會各自取得該作業的值。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> 會指定交易行為。  
+-   <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> 會指定異動行為。  
   
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> 屬性會控制與 <xref:System.ServiceModel.InstanceContext> 相關之使用者定義服務物件的存留期。  
   
@@ -128,8 +128,9 @@ ms.locfileid: "54715891"
 -   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> 屬性可以讓您插入可用來檢查或修改參數和傳回值的自訂參數偵測器。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Dispatcher.DispatchRuntime>
 - <xref:System.ServiceModel.Dispatcher.DispatchOperation>
-- [如何：檢查及修改服務上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
-- [如何：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
-- [如何：鎖定在企業中的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)
+- [HOW TO：檢查及修改服務中的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-and-modify-messages-on-the-service.md)
+- [HOW TO：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [HOW TO：鎖定企業的端點](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md)

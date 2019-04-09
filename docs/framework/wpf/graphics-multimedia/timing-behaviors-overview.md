@@ -5,12 +5,12 @@ helpviewer_keywords:
 - timing behaviors [WPF]
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
-ms.openlocfilehash: f7c1aa81a5d3c283fdea06dd812f879f096c2ee2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129586"
 ---
 # <a name="timing-behaviors-overview"></a>計時行為概觀
 本主題說明動畫和其他的計時行為<xref:System.Windows.Media.Animation.Timeline>物件。  
@@ -41,8 +41,8 @@ ms.locfileid: "57355515"
 |詞彙|描述|屬性||||  
 |----------|-----------------|----------------|-|-|-|  
 |簡單持續時間|時間軸正向輪播一次所需的時間長度。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
-|重複一次|時間長度所花費的時間軸正向播放和之後，<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性為 true 時，反向播放一次。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|作用期間|時間長度所花費的時間軸完成所指定的所有重複項目及其<xref:System.Windows.Media.Animation.RepeatBehavior>屬性。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>, <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|重複一次|時間長度所花費的時間軸正向播放和之後，<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性為 true 時，反向播放一次。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
+|作用期間|時間長度所花費的時間軸完成所指定的所有重複項目及其<xref:System.Windows.Media.Animation.RepeatBehavior>屬性。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>中， <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>中， <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration 屬性  
@@ -123,8 +123,9 @@ ms.locfileid: "57355515"
 -   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -指定的百分比<xref:System.Windows.Media.Animation.Timeline.Duration%2A>時間軸所花費的減速。 如需範例，請參閱[如何：加速或減速的動畫](how-to-accelerate-or-decelerate-an-animation.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [動畫概觀](animation-overview.md)
 - [動畫和計時系統概觀](animation-and-timing-system-overview.md)
 - [計時事件概觀](timing-events-overview.md)
-- [HOW-TO 主題](animation-and-timing-how-to-topics.md)
+- [HOW TO 主題](animation-and-timing-how-to-topics.md)
 - [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)

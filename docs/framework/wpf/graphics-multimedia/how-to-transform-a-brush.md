@@ -9,12 +9,12 @@ helpviewer_keywords:
 - brushes [WPF], Transform property
 - rotating contents of brushes [WPF]
 ms.assetid: ebada2f9-f01f-4863-9ea2-c2e4e51610f1
-ms.openlocfilehash: 990c82b4844ce3ca7f5b553b180280b6b37496ca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a83f3b1c046e94faa8816e8c310f438b4711048a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373760"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162996"
 ---
 # <a name="how-to-transform-a-brush"></a>HOW TO：轉換筆刷
 此範例示範如何轉換<xref:System.Windows.Media.Brush>物件使用其兩個轉換屬性：<xref:System.Windows.Media.Brush.RelativeTransform%2A>和<xref:System.Windows.Media.Brush.Transform%2A>。  
@@ -45,6 +45,7 @@ ms.locfileid: "57373760"
  如需完整的範例，請參閱[筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)。 如需筆刷的詳細資訊，請參閱[使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [筆刷轉換概觀](brush-transformation-overview.md)
 - [使用純色和漸層繪製的概觀](painting-with-solid-colors-and-gradients-overview.md)
 - [轉換概觀](transforms-overview.md)

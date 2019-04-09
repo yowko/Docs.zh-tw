@@ -1,19 +1,19 @@
 ---
-title: <idn> 項目 (Uri 設定)
+title: <idn> 項目 （Uri 設定）
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 6abbc70e16a6c9ff8e4a7b52df7a7c3d74c7498a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129398"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱。  
   
 ## <a name="schema-hierarchy"></a>結構描述階層架構  
- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<組態 > 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
  [\<Uri > 項目 （Uri 設定）](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)  
   
@@ -32,16 +32,16 @@ ms.locfileid: "55288908"
   
 ### <a name="attributes"></a>屬性  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |`enabled`|指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱的預設值為 none。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[uri](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。|  
   
@@ -94,6 +94,7 @@ ms.locfileid: "55288908"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

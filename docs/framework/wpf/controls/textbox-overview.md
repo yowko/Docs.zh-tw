@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
-ms.openlocfilehash: 5ddd6600493cd127f8024f23594c628476cac19e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361066"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162642"
 ---
 # <a name="textbox-overview"></a>TextBox 概觀
 <xref:System.Windows.Controls.TextBox>類別可讓您顯示或編輯未格式化的文字。 常見用法<xref:System.Windows.Controls.TextBox>編輯表單中的未格式化的文字。 例如，要求使用者的名稱、 電話號碼格式等會使用<xref:System.Windows.Controls.TextBox>文字輸入控制項。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供範例，示範如何使用它在這兩[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和C#。  
-  
- 
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox 或 RichTextBox？  
  兩者<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>允許使用者輸入文字，但兩個控制項使用不同的情況。 A<xref:System.Windows.Controls.TextBox>需要較少的系統資源則<xref:System.Windows.Controls.RichTextBox>因此只能使用純文字需要進行編輯時很理想 （亦即，在表單中的使用量）。 A<xref:System.Windows.Controls.RichTextBox>是較好的選擇時所需的使用者編輯格式化的文字、 影像、 資料表或其他支援的內容。 例如，編輯文件、 文件或需要格式化的部落格映像、 使用最適合完成等<xref:System.Windows.Controls.RichTextBox>。 下表摘要說明主要的功能<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.TextBox>。  
@@ -68,5 +66,6 @@ ms.locfileid: "57361066"
  通常<xref:System.Windows.Controls.Primitives.TextBoxBase.TextChanged>事件應該用來偵測中的文字<xref:System.Windows.Controls.TextBox>或是<xref:System.Windows.Controls.RichTextBox>有所變更，而不是<xref:System.Windows.UIElement.KeyDown>跟您預期的一樣。 如需範例，請參閱[偵測 TextBox 中的文字變更](how-to-detect-when-text-in-a-textbox-has-changed.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [HOW-TO 主題](textbox-how-to-topics.md)
+
+- [HOW TO 主題](textbox-how-to-topics.md)
 - [RichTextBox 概觀](richtextbox-overview.md)

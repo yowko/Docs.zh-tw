@@ -2,12 +2,12 @@
 title: 追蹤與訊息記錄的建議設定
 ms.date: 03/30/2017
 ms.assetid: c6aca6e8-704e-4779-a9ef-50c46850249e
-ms.openlocfilehash: dff4b20547cccca628ac76afc890a2817e838907
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa6dc74a26f6a76591a15c549a892f31a65c521e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132353"
 ---
 # <a name="recommended-settings-for-tracing-and-message-logging"></a>追蹤與訊息記錄的建議設定
 本主題將說明不同作業環境中，建議的追蹤和訊息記錄設定。  
@@ -113,4 +113,5 @@ logman stop mytrace -ets
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 Windows Management Instrumentation 進行診斷](../../../../../docs/framework/wcf/diagnostics/wmi/index.md)

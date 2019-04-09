@@ -1,18 +1,18 @@
 ---
-title: HOW TO：設定 MDI 應用程式的自動功能表合併
+title: HOW TO：設定 MDI 應用程式的自動功能表合併功能
 ms.date: 03/30/2017
 helpviewer_keywords:
 - MenuStrip [Windows Forms], merging
 - Merging [Windows Forms], automatic menu
 ms.assetid: 55e32cad-1141-4a56-aa33-d9543ca3d393
-ms.openlocfilehash: 152db39e7c947d5a49eaed81b00d13c02aa8014c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 17edde6e3968823abc915eb5faed6d2751ed9393
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719724"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129346"
 ---
-# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>HOW TO：設定 MDI 應用程式的自動功能表合併
+# <a name="how-to-set-up-automatic-menu-merging-for-mdi-applications"></a>HOW TO：設定 MDI 應用程式的自動功能表合併功能
 下列程序提供的基本步驟來設定在多重文件介面 (MDI) 應用程式中使用的自動合併<xref:System.Windows.Forms.MenuStrip>。  
   
 ### <a name="to-set-up-automatic-menu-merging"></a>若要設定自動功能表合併功能  
@@ -32,6 +32,7 @@ ms.locfileid: "57719724"
 7.  使用<xref:System.Windows.Forms.ToolStripItem.MergeAction%2A>功能表上的屬性項目在子表單的<xref:System.Windows.Forms.MenuStrip>來控制它們合併至父表單的方式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - [MenuStrip 控制項概觀](menustrip-control-overview-windows-forms.md)

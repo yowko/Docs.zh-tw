@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
-ms.openlocfilehash: f80d89d66253df310395cdfa3139e8765da24edb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162877"
 ---
 # <a name="configuring-tracing"></a>設定追蹤
 本主題將說明如何啟用追蹤、設定追蹤來源以發出追蹤並設定追蹤層級、設定活動追蹤與傳播以支援端對端追蹤相互關聯，以及設定追蹤接聽項來存取追蹤。  
@@ -142,7 +142,7 @@ ms.locfileid: "54584908"
   
  您可以設定自訂追蹤接聽項，以將追蹤傳送到 Wire，例如傳送至遠端資料庫。 身為應用程式的部署者，您應該在遠端電腦的追蹤記錄上強制執行適當的存取控制。  
   
- 您也可以使用程式設計方式來設定追蹤接聽項。 如需詳細資訊，請參閱[＜How to：建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)並[建立自訂的 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
+ 您也可以使用程式設計方式來設定追蹤接聽項。 如需詳細資訊，請參閱[如何：建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)並[建立自訂的 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)。  
   
 > [!CAUTION]
 >  因為 `System.Diagnostics.XmlWriterTraceListener` 不具備執行緒安全，追蹤來源可能會在輸出追蹤時特別鎖定資源。 當許多執行緒將追蹤輸出至設定為使用此接聽項的追蹤來源時，可能會發生資源爭用的情況，進而造成顯著的效能問題。 若要解決這個問題，您應該實作具備執行緒安全的自訂接聽項。  
@@ -181,7 +181,8 @@ ms.locfileid: "54584908"
  您無法使用具有使用者定義追蹤來源的 `propagateActivity` 屬性。 若要進行使用者程式碼活動識別碼傳播，請確定您未設定 ServiceModel `ActivityTracing`，而且讓 ServiceModel `propagateActivity` 屬性仍舊設定為 `true`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [如何：建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [HOW TO：建立和初始化追蹤接聽項](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [建立自訂的 TraceListener](https://go.microsoft.com/fwlink/?LinkId=96239)

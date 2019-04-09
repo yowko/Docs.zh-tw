@@ -2,12 +2,12 @@
 title: <transport> 的 <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 4c5ba293-3d7e-47a6-b84e-e9022857b7e5
-ms.openlocfilehash: 3d305c90233e4af7dde2a0b80e79e2adbe85c356
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5d1ef059f8fde7c41e333571d1c025a9c0c7e03f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170634"
 ---
 # <a name="transport-of-basichttpbinding"></a>\<transport> of \<basicHttpBinding>
 定義可控制 HTTP 傳輸之驗證參數的屬性。  
@@ -56,7 +56,7 @@ ms.locfileid: "57360001"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|傳輸期間不會保護訊息的安全。|  
+|None|傳輸期間不會保護訊息的安全。|  
 |基本|指定基本驗證。|  
 |摘要|指定摘要式驗證。|  
 |Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
@@ -66,7 +66,7 @@ ms.locfileid: "57360001"
   
 |值|描述|  
 |-----------|-----------------|  
-|無|訊息在傳輸期間並未受到保護。|  
+|None|訊息在傳輸期間並未受到保護。|  
 |基本|指定基本驗證，所定義的 RFC 2617 – HTTP Authentication:基本和摘要式驗證。|  
 |摘要|指定摘要式驗證，所定義的 RFC 2617 – HTTP Authentication:基本和摘要式驗證。|  
 |Ntlm|指定可能的情況下以及 Windows 驗證失敗時的 NTLM 驗證。|  
@@ -74,13 +74,13 @@ ms.locfileid: "57360001"
 |憑證|使用憑證執行用戶端驗證。 這個選項只有在父 `Mode` 項目的 `security` 屬性設為 Transport 時才能使用，如果該屬性設為 TransportCredentialOnly，則無法使用。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)|定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。|  
   
 ## <a name="example"></a>範例  
  下列範例示範透過基本繫結來使用 SSL 傳輸安全性。 根據預設，基本繫結支援 HTTP 通訊。  
@@ -118,12 +118,13 @@ ms.locfileid: "57360001"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement.Transport%2A>
 - <xref:System.ServiceModel.BasicHttpSecurity.Transport%2A>
 - <xref:System.ServiceModel.Configuration.HttpTransportSecurityElement>
 - <xref:System.ServiceModel.HttpTransportSecurity>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

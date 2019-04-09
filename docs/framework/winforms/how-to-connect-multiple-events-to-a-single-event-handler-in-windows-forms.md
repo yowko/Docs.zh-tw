@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將多個事件連線至 Windows Forms 中的單一事件處理常式
+title: HOW TO：在 Windows Forms 中將多個事件連接到單一事件處理常式
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - Windows Forms controls, events
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
-ms.openlocfilehash: 71b17e8a4bedca54cb7fff5f14ce28a0c572fe88
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: d55ccc21efb92ba1e51f4ae88be5025f2f80905b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117958"
 ---
-# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>HOW TO：將多個事件連線至 Windows Forms 中的單一事件處理常式
+# <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>HOW TO：在 Windows Forms 中將多個事件連接到單一事件處理常式
 在您的應用程式的設計，您可能會發現需要使用多個事件的單一事件處理常式，或有多個執行相同的程序的事件。 比方說，它通常是功能強大時間的好幫手能夠引發相同的事件，如您在表單上的按鈕執行作業，如果它們在相同的功能公開 （expose） 的功能表命令。 您可以使用 [事件] 檢視中的 [屬性] 視窗的C#或使用`Handles`關鍵字和**類別名稱**並**方法名稱**下拉式清單方塊，在 Visual Basic 程式碼編輯器中。  
   
 ### <a name="to-connect-multiple-events-to-a-single-event-handler-in-visual-basic"></a>若要將多個事件連線至 Visual Basic 中的單一事件處理常式  
@@ -61,5 +61,6 @@ ms.locfileid: "57722645"
      程式碼會加入至表單，以將事件繫結至現有的事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)

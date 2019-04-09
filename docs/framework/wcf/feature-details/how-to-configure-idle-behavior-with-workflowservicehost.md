@@ -1,23 +1,23 @@
 ---
-title: HOW TO：使用 WorkflowServiceHost 設定閒置行為
+title: HOW TO：以 WorkflowServiceHost 設定閒置行為
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 1bb93652-d687-46ff-bff6-69ecdcf97437
-ms.openlocfilehash: dff9145954084d0f299edc1e3f2f6c0d7ea1a80e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d3fc95e7e92d3fc7c149790d4af00a464ab427f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727387"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164017"
 ---
-# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>HOW TO：使用 WorkflowServiceHost 設定閒置行為
-工作流程遇到必須由外部刺激繼續執行的書籤時，例如工作流程執行個體正在等候訊息使用 <xref:System.ServiceModel.Activities.Receive> 活動加以傳遞時，工作流程就會進入閒置狀態。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 是一種行為，可讓您指定從服務執行個體進入閒置到此執行個體保存或卸載的間隔時間。 其中包含兩個屬性，可用來設定這些時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 會指定從工作流程服務執行個體進入閒置到工作流程服務執行個體保存的時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 會指定從工作流程服務執行個體進入閒置到工作流程服務執行個體卸載的時間範圍，而卸載的意義是將執行個體保存到執行個體儲存區並從記憶體中移除。 本主題說明如何設定組態檔中的 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 。  
+# <a name="how-to-configure-idle-behavior-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定閒置行為
+工作流程遇到必須由外部刺激繼續執行的書籤時，例如工作流程執行個體正在等候訊息使用 <xref:System.ServiceModel.Activities.Receive> 活動加以傳遞時，工作流程就會進入閒置狀態。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 是可讓您指定的時間之間的服務執行個體閒置時保存或卸載執行個體的行為。 其中包含兩個屬性，可用來設定這些時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToPersist%2A> 指定當工作流程服務執行個體進入閒置到工作流程服務執行個體保存的時間範圍。 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior.TimeToUnload%2A> 指定的時間範圍時的工作流程服務執行個體進入閒置與卸載工作流程服務執行個體時，而卸載的意義執行個體保存到執行個體存放區，並從記憶體中移除。 本主題說明如何設定組態檔中的 <xref:System.ServiceModel.Activities.Description.WorkflowIdleBehavior> 。  
   
 ### <a name="to-configure-workflowidlebehavior"></a>若要設定 WorkflowIdleBehavior  
   
-1.  將 <`workflowIdle`> 項目加入 <`serviceBehaviors`> 項目內的 <`behavior`> 項目，如下例所示。  
+1.  加入 <`workflowIdle`> 項目至 <`behavior`> 項目內 <`serviceBehaviors`> 項目，如下列範例所示。  
   
     ```xml  
     <behaviors>  
@@ -42,6 +42,7 @@ ms.locfileid: "54727387"
      [!code-vb[Wf_SvcHost_Idle_persist#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/wf_svchost_idle_persist/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [工作流程服務主機擴充性](../../../../docs/framework/wcf/feature-details/workflow-service-host-extensibility.md)
-- [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)
 - [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties, returned by UI Automation providers
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
-ms.openlocfilehash: 80f1dba9cd99caa2d9ebf059d80479e2fd701fd3
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f3d5776441f1d4848adbb0a5f9435274f118a0da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678302"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167670"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>從 UI 自動化提供者傳回屬性
 > [!NOTE]
@@ -29,5 +29,6 @@ ms.locfileid: "57678302"
  [!code-vb[UIAFragmentProvider_snip#117](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListFragment.vb#117)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

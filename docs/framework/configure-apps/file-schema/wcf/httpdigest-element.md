@@ -2,12 +2,12 @@
 title: <httpDigest> 項目
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
-ms.openlocfilehash: c930efbc2cd7a6dc12795d5ac1c26ea92fc36599
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165317"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > 項目
 指定對服務驗證用戶端時，所使用的摘要式類型認證。  
@@ -35,7 +35,7 @@ ms.locfileid: "55259003"
 |`impersonationLevel`|設定用戶端與伺服器通訊的模擬喜好設定。 用戶端選取的模擬模式不會在伺服器上強制使用。 有效值包括以下的值：<br /><br /> 識別：伺服器可以取得身分識別和權限的用戶端，但無法模擬用戶端。<br />模擬：伺服器可以模擬用戶端的本機系統上的安全性內容。<br />-委派：伺服器可以模擬用戶端的安全性內容，在遠端系統上。<br />匿名：伺服器無法模擬或識別用戶端。<br />-None:未指派模擬等級。<br /><br /> 預設為 Identification。 此屬性的型別為 <xref:System.Security.Principal.TokenImpersonationLevel>。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -49,6 +49,7 @@ ms.locfileid: "55259003"
  此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 如需詳細資訊，請參閱 <<c0> [ 在 IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88443)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.HttpDigest%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -56,6 +57,6 @@ ms.locfileid: "55259003"
 - <xref:System.ServiceModel.Configuration.HttpDigestClientElement>
 - <xref:System.ServiceModel.Security.HttpDigestClientCredential>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
