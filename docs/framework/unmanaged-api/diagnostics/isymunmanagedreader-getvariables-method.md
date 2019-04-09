@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cca073cfccedacb037478903a603c375c876349c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 846ff76fb1073394cc27597c9a2015148581cc70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165096"
 ---
-# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="a4fc7-102">ISymUnmanagedReader::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="a4fc7-102">ISymUnmanagedReader::GetVariables Method</span></span>
-<span data-ttu-id="a4fc7-103">傳回非本機變數，其父系和名稱。</span><span class="sxs-lookup"><span data-stu-id="a4fc7-103">Returns a non-local variable, given its parent and name.</span></span>  
+# <a name="isymunmanagedreadergetvariables-method"></a><span data-ttu-id="beb69-102">ISymUnmanagedReader::GetVariables 方法</span><span class="sxs-lookup"><span data-stu-id="beb69-102">ISymUnmanagedReader::GetVariables Method</span></span>
+<span data-ttu-id="beb69-103">傳回非本機變數，其父系和名稱。</span><span class="sxs-lookup"><span data-stu-id="beb69-103">Returns a non-local variable, given its parent and name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="a4fc7-104">語法</span><span class="sxs-lookup"><span data-stu-id="a4fc7-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="beb69-104">語法</span><span class="sxs-lookup"><span data-stu-id="beb69-104">Syntax</span></span>  
   
 ```  
 HRESULT GetVariables (  
@@ -38,24 +38,25 @@ HRESULT GetVariables (
         length_is (*pcVars)] ISymUnmanagedVariable *pVars[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="a4fc7-105">參數</span><span class="sxs-lookup"><span data-stu-id="a4fc7-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="beb69-105">參數</span><span class="sxs-lookup"><span data-stu-id="beb69-105">Parameters</span></span>  
  `parent`  
- <span data-ttu-id="a4fc7-106">[in]變數的父代。</span><span class="sxs-lookup"><span data-stu-id="a4fc7-106">[in] The parent of the variable.</span></span>  
+ <span data-ttu-id="beb69-106">[in]變數的父代。</span><span class="sxs-lookup"><span data-stu-id="beb69-106">[in] The parent of the variable.</span></span>  
   
  `cVars`  
- <span data-ttu-id="a4fc7-107">[in] `pVars` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="a4fc7-107">[in] The size of the `pVars` array.</span></span>  
+ <span data-ttu-id="beb69-107">[in] `pVars` 陣列的大小。</span><span class="sxs-lookup"><span data-stu-id="beb69-107">[in] The size of the `pVars` array.</span></span>  
   
  `pcVars`  
- <span data-ttu-id="a4fc7-108">[out]此變數會接收傳入的變數數目的指標`pVars`。</span><span class="sxs-lookup"><span data-stu-id="a4fc7-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
+ <span data-ttu-id="beb69-108">[out]此變數會接收傳入的變數數目的指標`pVars`。</span><span class="sxs-lookup"><span data-stu-id="beb69-108">[out] A pointer to the variable that receives the number of variables returned in `pVars`.</span></span>  
   
  `pVars`  
- <span data-ttu-id="a4fc7-109">[out]接收變數的變數的指標。</span><span class="sxs-lookup"><span data-stu-id="a4fc7-109">[out] A pointer to the variable that receives the variables.</span></span>  
+ <span data-ttu-id="beb69-109">[out]接收變數的變數的指標。</span><span class="sxs-lookup"><span data-stu-id="beb69-109">[out] A pointer to the variable that receives the variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="a4fc7-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="a4fc7-110">Return Value</span></span>  
- <span data-ttu-id="a4fc7-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="a4fc7-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="beb69-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="beb69-110">Return Value</span></span>  
+ <span data-ttu-id="beb69-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="beb69-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="a4fc7-112">需求</span><span class="sxs-lookup"><span data-stu-id="a4fc7-112">Requirements</span></span>  
- <span data-ttu-id="a4fc7-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="a4fc7-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="beb69-112">需求</span><span class="sxs-lookup"><span data-stu-id="beb69-112">Requirements</span></span>  
+ <span data-ttu-id="beb69-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="beb69-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4fc7-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4fc7-114">See also</span></span>
-- [<span data-ttu-id="a4fc7-115">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="a4fc7-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
+## <a name="see-also"></a><span data-ttu-id="beb69-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="beb69-114">See also</span></span>
+
+- [<span data-ttu-id="beb69-115">ISymUnmanagedReader 介面</span><span class="sxs-lookup"><span data-stu-id="beb69-115">ISymUnmanagedReader Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)
