@@ -1,5 +1,5 @@
 ---
-title: HOW TO：防止資料列新增與 Windows Form DataGridView 控制項中刪除
+title: HOW TO：防止在 Windows Forms DataGridView 控制項中新增和刪除資料列
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,34 +9,34 @@ helpviewer_keywords:
 - data entry [Windows Forms], disabling in grids
 - data grids [Windows Forms], disabling data entry
 ms.assetid: ef9539ce-539b-404e-84b6-ac282b64b88c
-ms.openlocfilehash: c1e1d29cc7b13d34542a12050972be35eeed868d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a80b10f2d3c2b6dea198fea83f1ffaaa358b68ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147884"
 ---
-# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="29688-102">HOW TO：防止資料列新增與 Windows Form DataGridView 控制項中刪除</span><span class="sxs-lookup"><span data-stu-id="29688-102">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="29688-103">有時候您會想要防止使用者在您的 <xref:System.Windows.Forms.DataGridView> 控制項中輸入新的資料列或刪除現有的資料列。</span><span class="sxs-lookup"><span data-stu-id="29688-103">Sometimes you will want to prevent users from entering new rows of data or deleting existing rows in your <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="29688-104"> <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 屬性會指出新記錄的資料列是否出現在控制項的底部，而 <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> 屬性會指出是否可以移除資料列。</span><span class="sxs-lookup"><span data-stu-id="29688-104">The <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property indicates whether the row for new records is present at the bottom of the control, while the <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> property indicates whether rows can be removed.</span></span> <span data-ttu-id="29688-105">下列程式碼範例會使用這些屬性，也將會設定 <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> 屬性使控制項為完全唯讀。</span><span class="sxs-lookup"><span data-stu-id="29688-105">The following code example uses these properties and also sets the <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> property to make the control entirely read-only.</span></span>  
+# <a name="how-to-prevent-row-addition-and-deletion-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="34de8-102">HOW TO：防止在 Windows Forms DataGridView 控制項中新增和刪除資料列</span><span class="sxs-lookup"><span data-stu-id="34de8-102">How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="34de8-103">有時候您會想要防止使用者在您的 <xref:System.Windows.Forms.DataGridView> 控制項中輸入新的資料列或刪除現有的資料列。</span><span class="sxs-lookup"><span data-stu-id="34de8-103">Sometimes you will want to prevent users from entering new rows of data or deleting existing rows in your <xref:System.Windows.Forms.DataGridView> control.</span></span> <span data-ttu-id="34de8-104"><xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> 屬性會指出新記錄的資料列是否出現在控制項的底部，而 <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> 屬性會指出是否可以移除資料列。</span><span class="sxs-lookup"><span data-stu-id="34de8-104">The <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A> property indicates whether the row for new records is present at the bottom of the control, while the <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A> property indicates whether rows can be removed.</span></span> <span data-ttu-id="34de8-105">下列程式碼範例會使用這些屬性，也將會設定 <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> 屬性使控制項為完全唯讀。</span><span class="sxs-lookup"><span data-stu-id="34de8-105">The following code example uses these properties and also sets the <xref:System.Windows.Forms.DataGridView.ReadOnly%2A> property to make the control entirely read-only.</span></span>  
   
- <span data-ttu-id="29688-106">在 Visual Studio 中會支援這項工作。</span><span class="sxs-lookup"><span data-stu-id="29688-106">There is support for this task in Visual Studio.</span></span> <span data-ttu-id="29688-107">另請參閱[How to:防止資料列中新增和刪除 Windows Form DataGridView 控制項使用設計工具](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="29688-107">Also see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control Using the Designer](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).</span></span>  
+ <span data-ttu-id="34de8-106">在 Visual Studio 中會支援這項工作。</span><span class="sxs-lookup"><span data-stu-id="34de8-106">There is support for this task in Visual Studio.</span></span> <span data-ttu-id="34de8-107">另請參閱[How to:防止資料列中新增和刪除 Windows Form DataGridView 控制項使用設計工具](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md)。</span><span class="sxs-lookup"><span data-stu-id="34de8-107">Also see [How to: Prevent Row Addition and Deletion in the Windows Forms DataGridView Control Using the Designer](prevent-row-addition-and-deletion-in-the-datagrid-using-the-designer.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="29688-108">範例</span><span class="sxs-lookup"><span data-stu-id="29688-108">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="34de8-108">範例</span><span class="sxs-lookup"><span data-stu-id="34de8-108">Example</span></span>  
  [!code-csharp[System.Windows.Forms.DataGridViewMisc#090](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#090)]
  [!code-vb[System.Windows.Forms.DataGridViewMisc#090](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#090)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="29688-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="29688-109">Compiling the Code</span></span>  
- <span data-ttu-id="29688-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="29688-110">This example requires:</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="34de8-109">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="34de8-109">Compiling the Code</span></span>  
+ <span data-ttu-id="34de8-110">這個範例需要：</span><span class="sxs-lookup"><span data-stu-id="34de8-110">This example requires:</span></span>  
   
--   <span data-ttu-id="29688-111">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="29688-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
+-   <span data-ttu-id="34de8-111">名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。</span><span class="sxs-lookup"><span data-stu-id="34de8-111">A <xref:System.Windows.Forms.DataGridView> control named `dataGridView1`.</span></span>  
   
--   <span data-ttu-id="29688-112">
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="29688-112">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
+-   <span data-ttu-id="34de8-112"><xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。</span><span class="sxs-lookup"><span data-stu-id="34de8-112">References to the <xref:System?displayProperty=nameWithType> and <xref:System.Windows.Forms?displayProperty=nameWithType> assemblies.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="29688-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="29688-113">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="34de8-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="34de8-113">See also</span></span>
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.ReadOnly%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AllowUserToDeleteRows%2A?displayProperty=nameWithType>
-- [<span data-ttu-id="29688-114">Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能</span><span class="sxs-lookup"><span data-stu-id="29688-114">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [<span data-ttu-id="34de8-114">Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能</span><span class="sxs-lookup"><span data-stu-id="34de8-114">Basic Column, Row, and Cell Features in the Windows Forms DataGridView Control</span></span>](basic-column-row-and-cell-features-wf-datagridview-control.md)

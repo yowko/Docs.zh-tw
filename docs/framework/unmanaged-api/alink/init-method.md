@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cd29a84f6b3338203ddee7b13b58c9548e3240c9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 60602462376543fe934bb3c58bc4988fa8ab34bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119362"
 ---
-# <a name="init-method"></a><span data-ttu-id="636ae-102">Init 方法</span><span class="sxs-lookup"><span data-stu-id="636ae-102">Init Method</span></span>
-<span data-ttu-id="636ae-103">準備實作的物件[IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)供使用。</span><span class="sxs-lookup"><span data-stu-id="636ae-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
+# <a name="init-method"></a><span data-ttu-id="c62e4-102">Init 方法</span><span class="sxs-lookup"><span data-stu-id="c62e4-102">Init Method</span></span>
+<span data-ttu-id="c62e4-103">準備實作的物件[IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)供使用。</span><span class="sxs-lookup"><span data-stu-id="c62e4-103">Prepares objects implementing the [IALink Interface](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md) for use.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="636ae-104">語法</span><span class="sxs-lookup"><span data-stu-id="636ae-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c62e4-104">語法</span><span class="sxs-lookup"><span data-stu-id="c62e4-104">Syntax</span></span>  
   
 ```  
 HRESULT Init(  
@@ -35,20 +35,21 @@ HRESULT Init(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="636ae-105">參數</span><span class="sxs-lookup"><span data-stu-id="636ae-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c62e4-105">參數</span><span class="sxs-lookup"><span data-stu-id="c62e4-105">Parameters</span></span>  
  `pDispenser`  
- <span data-ttu-id="636ae-106">[IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)指標的中繼資料的分配程式。</span><span class="sxs-lookup"><span data-stu-id="636ae-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
+ <span data-ttu-id="c62e4-106">[IMetaDataDispenserEx 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md)指標的中繼資料的分配程式。</span><span class="sxs-lookup"><span data-stu-id="c62e4-106">[IMetaDataDispenserEx Interface](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-interface.md) pointer to the metadata dispenser.</span></span>  
   
  `pErrorHandler`  
- <span data-ttu-id="636ae-107">[IMetaDataError 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)選擇性錯誤處理介面指標。</span><span class="sxs-lookup"><span data-stu-id="636ae-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
+ <span data-ttu-id="c62e4-107">[IMetaDataError 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md)選擇性錯誤處理介面指標。</span><span class="sxs-lookup"><span data-stu-id="c62e4-107">[IMetaDataError Interface](../../../../docs/framework/unmanaged-api/metadata/imetadataerror-interface.md) pointer to an optional error handling interface.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="636ae-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="636ae-108">Return Value</span></span>  
- <span data-ttu-id="636ae-109">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="636ae-109">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c62e4-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="c62e4-108">Return Value</span></span>  
+ <span data-ttu-id="c62e4-109">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="c62e4-109">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="636ae-110">需求</span><span class="sxs-lookup"><span data-stu-id="636ae-110">Requirements</span></span>  
- <span data-ttu-id="636ae-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="636ae-111">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c62e4-110">需求</span><span class="sxs-lookup"><span data-stu-id="c62e4-110">Requirements</span></span>  
+ <span data-ttu-id="c62e4-111">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="c62e4-111">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="636ae-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="636ae-112">See also</span></span>
-- [<span data-ttu-id="636ae-113">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="636ae-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="636ae-114">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="636ae-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="636ae-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="636ae-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="c62e4-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c62e4-112">See also</span></span>
+
+- [<span data-ttu-id="c62e4-113">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="c62e4-113">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="c62e4-114">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="c62e4-114">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="c62e4-115">ALink API</span><span class="sxs-lookup"><span data-stu-id="c62e4-115">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

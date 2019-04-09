@@ -16,31 +16,32 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4b63d30c9662ce75df491e6e1329d2b955df2ba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c90df6a8b6f25a93835981b1593a4b3d123cd168
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645973"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116372"
 ---
-# <a name="imanagedobject-interface"></a><span data-ttu-id="a5e27-102">IManagedObject 介面</span><span class="sxs-lookup"><span data-stu-id="a5e27-102">IManagedObject Interface</span></span>
-<span data-ttu-id="a5e27-103">提供方法來控制受管理的物件。</span><span class="sxs-lookup"><span data-stu-id="a5e27-103">Provides methods for controlling a managed object.</span></span>  
+# <a name="imanagedobject-interface"></a><span data-ttu-id="99a4f-102">IManagedObject 介面</span><span class="sxs-lookup"><span data-stu-id="99a4f-102">IManagedObject Interface</span></span>
+<span data-ttu-id="99a4f-103">提供方法來控制受管理的物件。</span><span class="sxs-lookup"><span data-stu-id="99a4f-103">Provides methods for controlling a managed object.</span></span>  
   
-## <a name="methods"></a><span data-ttu-id="a5e27-104">方法</span><span class="sxs-lookup"><span data-stu-id="a5e27-104">Methods</span></span>  
+## <a name="methods"></a><span data-ttu-id="99a4f-104">方法</span><span class="sxs-lookup"><span data-stu-id="99a4f-104">Methods</span></span>  
   
-|<span data-ttu-id="a5e27-105">方法</span><span class="sxs-lookup"><span data-stu-id="a5e27-105">Method</span></span>|<span data-ttu-id="a5e27-106">描述</span><span class="sxs-lookup"><span data-stu-id="a5e27-106">Description</span></span>|  
+|<span data-ttu-id="99a4f-105">方法</span><span class="sxs-lookup"><span data-stu-id="99a4f-105">Method</span></span>|<span data-ttu-id="99a4f-106">描述</span><span class="sxs-lookup"><span data-stu-id="99a4f-106">Description</span></span>|  
 |------------|-----------------|  
-|[<span data-ttu-id="a5e27-107">GetObjectIdentity 方法</span><span class="sxs-lookup"><span data-stu-id="a5e27-107">GetObjectIdentity Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|<span data-ttu-id="a5e27-108">取得此受管理物件識別。</span><span class="sxs-lookup"><span data-stu-id="a5e27-108">Gets the identity of this managed object.</span></span>|  
-|[<span data-ttu-id="a5e27-109">GetSerializedBuffer 方法</span><span class="sxs-lookup"><span data-stu-id="a5e27-109">GetSerializedBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|<span data-ttu-id="a5e27-110">取得此受管理物件的字串表示。</span><span class="sxs-lookup"><span data-stu-id="a5e27-110">Gets the string representation of this managed object.</span></span>|  
+|[<span data-ttu-id="99a4f-107">GetObjectIdentity 方法</span><span class="sxs-lookup"><span data-stu-id="99a4f-107">GetObjectIdentity Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getobjectidentity-method.md)|<span data-ttu-id="99a4f-108">取得此受管理物件識別。</span><span class="sxs-lookup"><span data-stu-id="99a4f-108">Gets the identity of this managed object.</span></span>|  
+|[<span data-ttu-id="99a4f-109">GetSerializedBuffer 方法</span><span class="sxs-lookup"><span data-stu-id="99a4f-109">GetSerializedBuffer Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/imanagedobject-getserializedbuffer-method.md)|<span data-ttu-id="99a4f-110">取得此受管理物件的字串表示。</span><span class="sxs-lookup"><span data-stu-id="99a4f-110">Gets the string representation of this managed object.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="a5e27-111">需求</span><span class="sxs-lookup"><span data-stu-id="a5e27-111">Requirements</span></span>  
- <span data-ttu-id="a5e27-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a5e27-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="99a4f-111">需求</span><span class="sxs-lookup"><span data-stu-id="99a4f-111">Requirements</span></span>  
+ <span data-ttu-id="99a4f-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="99a4f-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="a5e27-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="a5e27-113">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="99a4f-113">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="99a4f-113">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="a5e27-114">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="a5e27-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="99a4f-114">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="99a4f-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="a5e27-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="a5e27-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="99a4f-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="99a4f-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="a5e27-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a5e27-116">See also</span></span>
-- [<span data-ttu-id="a5e27-117">裝載介面</span><span class="sxs-lookup"><span data-stu-id="a5e27-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="99a4f-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="99a4f-116">See also</span></span>
+
+- [<span data-ttu-id="99a4f-117">裝載介面</span><span class="sxs-lookup"><span data-stu-id="99a4f-117">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c2e1dc374a5205c774e4470363b38c604fa0862
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88d563918709a6cf31d9c14a52bbd461ae004420
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57500495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116151"
 ---
-# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="c4b8c-102">ICLRDataTarget::GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="c4b8c-102">ICLRDataTarget::GetThreadContext Method</span></span>
-<span data-ttu-id="c4b8c-103">取得目標處理序中指定的執行緒目前的執行內容。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="c4b8c-104">這個方法是由通用語言執行階段資料存取服務呼叫。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-104">This method is called by the common language runtime data access services.</span></span>  
+# <a name="iclrdatatargetgetthreadcontext-method"></a><span data-ttu-id="5f26d-102">ICLRDataTarget::GetThreadContext 方法</span><span class="sxs-lookup"><span data-stu-id="5f26d-102">ICLRDataTarget::GetThreadContext Method</span></span>
+<span data-ttu-id="5f26d-103">取得目標處理序中指定的執行緒目前的執行內容。</span><span class="sxs-lookup"><span data-stu-id="5f26d-103">Gets the current execution context for the given thread in the target process.</span></span> <span data-ttu-id="5f26d-104">這個方法是由通用語言執行階段資料存取服務呼叫。</span><span class="sxs-lookup"><span data-stu-id="5f26d-104">This method is called by the common language runtime data access services.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c4b8c-105">語法</span><span class="sxs-lookup"><span data-stu-id="c4b8c-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5f26d-105">語法</span><span class="sxs-lookup"><span data-stu-id="5f26d-105">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadContext (  
@@ -39,32 +39,33 @@ HRESULT GetThreadContext (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c4b8c-106">參數</span><span class="sxs-lookup"><span data-stu-id="c4b8c-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="5f26d-106">參數</span><span class="sxs-lookup"><span data-stu-id="5f26d-106">Parameters</span></span>  
  `threadID`  
- <span data-ttu-id="c4b8c-107">[in]目標處理序中的執行緒作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-107">[in] The operating system identifier of a thread in the target process.</span></span>  
+ <span data-ttu-id="5f26d-107">[in]目標處理序中的執行緒作業系統識別項。</span><span class="sxs-lookup"><span data-stu-id="5f26d-107">[in] The operating system identifier of a thread in the target process.</span></span>  
   
  `contextFlags`  
- <span data-ttu-id="c4b8c-108">[in]旗標，指定要傳回的內容中哪些部分。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="c4b8c-109">實作會傳回至少這些組件的內容。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-109">The implementation will return at least these parts of the context.</span></span>  
+ <span data-ttu-id="5f26d-108">[in]旗標，指定要傳回的內容中哪些部分。</span><span class="sxs-lookup"><span data-stu-id="5f26d-108">[in] Flags that specify which parts of the context to return.</span></span> <span data-ttu-id="5f26d-109">實作會傳回至少這些組件的內容。</span><span class="sxs-lookup"><span data-stu-id="5f26d-109">The implementation will return at least these parts of the context.</span></span>  
   
  `contextSize`  
- <span data-ttu-id="c4b8c-110">[in]內容的大小。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-110">[in] The size of the context.</span></span>  
+ <span data-ttu-id="5f26d-110">[in]內容的大小。</span><span class="sxs-lookup"><span data-stu-id="5f26d-110">[in] The size of the context.</span></span>  
   
  `context`  
- <span data-ttu-id="c4b8c-111">[out]在其中放置內容緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-111">[out] Pointer to a buffer in which to place the context.</span></span>  
+ <span data-ttu-id="5f26d-111">[out]在其中放置內容緩衝區的指標。</span><span class="sxs-lookup"><span data-stu-id="5f26d-111">[out] Pointer to a buffer in which to place the context.</span></span>  
   
- <span data-ttu-id="c4b8c-112">中的資料`context`Win32 的格式必須是緩衝區`CONTEXT`結構。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="c4b8c-113">這個內容會指定特定處理器的暫存器資料，因此 Win32 定義`CONTEXT`結構取決於處理器架構。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="c4b8c-114">請參閱 WinNT.h 標頭檔來定義的 Win32`CONTEXT`結構。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
+ <span data-ttu-id="5f26d-112">中的資料`context`Win32 的格式必須是緩衝區`CONTEXT`結構。</span><span class="sxs-lookup"><span data-stu-id="5f26d-112">The data in the `context` buffer must be in the format of the Win32 `CONTEXT` structure.</span></span> <span data-ttu-id="5f26d-113">這個內容會指定特定處理器的暫存器資料，因此 Win32 定義`CONTEXT`結構取決於處理器架構。</span><span class="sxs-lookup"><span data-stu-id="5f26d-113">The context specifies processor-specific register data, so the definition of the Win32 `CONTEXT` structure depends on the processor's architecture.</span></span> <span data-ttu-id="5f26d-114">請參閱 WinNT.h 標頭檔來定義的 Win32`CONTEXT`結構。</span><span class="sxs-lookup"><span data-stu-id="5f26d-114">Refer to the WinNT.h header file for the definition of the Win32 `CONTEXT` structure.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c4b8c-115">備註</span><span class="sxs-lookup"><span data-stu-id="c4b8c-115">Remarks</span></span>  
- <span data-ttu-id="c4b8c-116">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-116">This method is implemented by the writer of the debugging application.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5f26d-115">備註</span><span class="sxs-lookup"><span data-stu-id="5f26d-115">Remarks</span></span>  
+ <span data-ttu-id="5f26d-116">此方法是由偵錯應用程式的作者來實作。</span><span class="sxs-lookup"><span data-stu-id="5f26d-116">This method is implemented by the writer of the debugging application.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c4b8c-117">需求</span><span class="sxs-lookup"><span data-stu-id="c4b8c-117">Requirements</span></span>  
- <span data-ttu-id="c4b8c-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c4b8c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5f26d-117">需求</span><span class="sxs-lookup"><span data-stu-id="5f26d-117">Requirements</span></span>  
+ <span data-ttu-id="5f26d-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5f26d-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c4b8c-119">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="c4b8c-119">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="5f26d-119">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="5f26d-119">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="c4b8c-120">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c4b8c-120">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5f26d-120">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5f26d-120">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c4b8c-121">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c4b8c-121">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="5f26d-121">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="5f26d-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c4b8c-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c4b8c-122">See also</span></span>
-- [<span data-ttu-id="c4b8c-123">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="c4b8c-123">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
+## <a name="see-also"></a><span data-ttu-id="5f26d-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5f26d-122">See also</span></span>
+
+- [<span data-ttu-id="5f26d-123">ICLRDataTarget 介面</span><span class="sxs-lookup"><span data-stu-id="5f26d-123">ICLRDataTarget Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)
