@@ -2,12 +2,12 @@
 title: CustomBindingElement
 ms.date: 03/30/2017
 ms.assetid: df959dc5-1aef-4338-a123-6ff3e7bc37af
-ms.openlocfilehash: 23c8e7ca87002a6ee0c6e6a7aba649e00acbdc4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4609185857ffbce057c136d2c50a7b47aed341cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202751"
 ---
 # <a name="custombindingelement"></a>CustomBindingElement
 CustomBindingElement  
@@ -41,4 +41,5 @@ class CustomBindingElement : BindingElement
 |命名空間|於 root\ServiceModel 中定義|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.CustomBinding>

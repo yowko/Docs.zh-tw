@@ -2,12 +2,12 @@
 title: HOW TO：使用組態新增 ASP.NET AJAX 端點
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
-ms.openlocfilehash: 188e88d40536b1d31c72f404957ef2de4ff87b1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26a7b0d3fef67cf9dae0913e22e3cd7ec443c111
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202972"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>HOW TO：使用組態新增 ASP.NET AJAX 端點
 Windows Communication Foundation (WCF) 可讓您建立的服務，ASP.NET ajax 的端點可供使用，可以從 JavaScript 呼叫用戶端網站上。 若要建立此類端點，您可以使用組態檔，如同所有其他的 Windows Communication Foundation (WCF) 端點，或使用不需要任何組態項目的的方法。 本主題示範組態方法。  
@@ -105,5 +105,6 @@ Windows Communication Foundation (WCF) 可讓您建立的服務，ASP.NET ajax �
 1.  此端點設定在相對於.svc 檔案中，空白位址上，因此服務現已推出，並可以將要求傳送至 service.svc / 叫用\<作業 >-例如，service.svc/add`Add`作業。 您可以將端點 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱[使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立 ASP.NET AJAX 的 WCF 服務](../../../../docs/framework/wcf/feature-details/creating-wcf-services-for-aspnet-ajax.md)
-- [如何：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)
+- [HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF](../../../../docs/framework/wcf/feature-details/how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf.md)

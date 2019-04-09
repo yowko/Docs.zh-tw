@@ -2,12 +2,12 @@
 title: 針對巢狀項目指定的關聯進行對應
 ms.date: 03/30/2017
 ms.assetid: 24a2d3e5-4af7-4f9a-ab7a-fe6684c9e4fe
-ms.openlocfilehash: cec7be5bea466c353e5320c04c76b37764a87e1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9772f077991c758be65bbb44b9474f1ad341371f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203141"
 ---
 # <a name="map-relations-specified-for-nested-elements"></a>針對巢狀項目指定的關聯進行對應
 結構描述可以包含**msdata: relationship**註釋，明確指定結構描述中任何兩個項目之間的對應。 中指定的兩個元素**msdata: relationship**可以巢狀方式置於結構描述，但並不需要。 對應處理會使用**msdata: relationship**結構描述產生主索引鍵/外部索引鍵關聯性之間的兩個資料行中。  
@@ -75,6 +75,7 @@ ms.locfileid: "54527515"
  對應處理序未建立任何條件約束。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
 - [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

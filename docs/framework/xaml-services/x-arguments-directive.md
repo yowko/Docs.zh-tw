@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Arguments directive in XAML [XAML Services]
 - XAML [XAML Services], x:Arguments directive
 ms.assetid: 87cc10b0-b610-4025-b6b0-ab27ca27c92e
-ms.openlocfilehash: 351974786b9f4748499279d29202e2051d9268fd
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: a87542513ffeeec7efc526d4218f921d1b7579a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58043336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184843"
 ---
 # <a name="xarguments-directive"></a>x:Arguments 指示詞
 針對 XAML，非預設建構函式物件的項目宣告或 factory 方法的物件宣告，封裝建構引數。  
@@ -107,5 +107,6 @@ public Food TryLookupFood(string name)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [定義可搭配 .NET Framework XAML 服務使用的自訂類型](defining-custom-types-for-use-with-net-framework-xaml-services.md)
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

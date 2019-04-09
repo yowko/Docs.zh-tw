@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 - LinkLabel control [Windows Forms], about LinkLabel control
 ms.assetid: 9e248549-10ca-43a3-bb5e-60f583d369f1
-ms.openlocfilehash: 81edab0d44ae0bb9dcabe77ad568f281e6f5fffb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 541467b0f1285d372e5f6d502d9d8f28c8c6333e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083123"
 ---
 # <a name="linklabel-control-overview-windows-forms"></a>LinkLabel 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您將 Web 樣式連結新增至 Windows Forms 應用程式。 您可以使用<xref:System.Windows.Forms.LinkLabel>控制項，您可以使用的所有項目<xref:System.Windows.Forms.Label>控制; 您也可以設定文字的一部分為檔案、 資料夾或 Web 網頁的連結。  
@@ -24,7 +24,8 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您將 Web 樣�
  最簡單的用法<xref:System.Windows.Forms.LinkLabel>控制項是顯示單一連結，使用<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性，但您也可以顯示多個超連結使用<xref:System.Windows.Forms.LinkLabel.Links%2A>屬性。 <xref:System.Windows.Forms.LinkLabel.Links%2A>屬性可讓您存取連結的集合。 您也可以指定中的資料<xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>屬性的每個個別<xref:System.Windows.Forms.LinkLabel.Link>物件。 值<xref:System.Windows.Forms.LinkLabel.Link.LinkData%2A>屬性可以用來儲存要顯示之檔案的位置或網站的位址。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [Label 控制項概觀](label-control-overview-windows-forms.md)
-- [如何：連結的物件，或使用 Windows Forms LinkLabel 控制項的網頁](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
-- [如何：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [HOW TO：使用 Windows Forms LinkLabel 控制項連結至物件或網頁](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [HOW TO：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)

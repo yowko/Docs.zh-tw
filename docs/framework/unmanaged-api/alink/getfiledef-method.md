@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7cc7b83f7bf1657195778ea38944b2354b09c38
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9153c9b3735e265d59ba072f747c92434c95d9ed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471338"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184492"
 ---
 # <a name="getfiledef-method"></a>GetFileDef 方法
 擷取中繼資料 （而不是由 ALink 指派的權杖） 中所使用的實際 FileDef 語彙基元。  
@@ -53,6 +53,7 @@ HRESULT GetFileDef(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1aeffbd5d5b22bea87dd7a49a3268822ce84d38
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aab42e939651d75b1933962d72ba8bec1090f52d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481168"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184505"
 ---
 # <a name="precloseassembly-method"></a>PreCloseAssembly 方法
 關閉組件檔案。 關閉所有其他檔案之後, 但在關閉的組件檔案之前，請呼叫這個方法。 請勿呼叫這個方法的未繫結的模組。  
@@ -45,6 +45,7 @@ HRESULT PreCloseAssembly(
  需要 alink.h。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

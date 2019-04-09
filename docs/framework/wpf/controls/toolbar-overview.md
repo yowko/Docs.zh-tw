@@ -5,17 +5,16 @@ helpviewer_keywords:
 - controls [WPF], ToolBar
 - ToolBar control [WPF]
 ms.assetid: a8edb32c-118d-4f31-b6e6-8899082b504b
-ms.openlocfilehash: 6bd44e4b8406e945ea8f0913563d2f2f6e0b3822
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 711d55e46fb548787976a1f966c9fbf6dc7f12d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105322"
 ---
 # <a name="toolbar-overview"></a>ToolBar 概觀
 <xref:System.Windows.Controls.ToolBar> 控制項是一組命令或其功能通常彼此相關的控制項的容器。 A<xref:System.Windows.Controls.ToolBar>通常包含會叫用命令的按鈕。  
-  
-  
+
 <a name="ToolBarControl"></a>   
 ## <a name="toolbar-control"></a>ToolBar 控制項  
  <xref:System.Windows.Controls.ToolBar>控制項接受名稱，取自到單一資料列或資料行的按鈕或其他控制項的列類似的排列方式。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar> 控制項提供一種溢位機制而放置容納不下自然大小限制的任何項目<xref:System.Windows.Controls.ToolBar>到特殊的溢位區域。 此外， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.ToolBar>通常是使用控制項與相關<xref:System.Windows.Controls.ToolBarTray>提供特殊的版面配置行為，以及支援使用者起始調整大小和排列工具列的控制項。  
@@ -41,6 +40,7 @@ ms.locfileid: "58464953"
  [ToolBar 樣式和範本](toolbar-styles-and-templates.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Primitives.ToolBarPanel>
 - <xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>
 - [ToolBar 上的樣式控制項](how-to-style-controls-on-a-toolbar.md)

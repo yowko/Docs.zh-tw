@@ -1,17 +1,17 @@
 ---
-title: 設定 WS-Atomic 異動支援
+title: 設定 WS-Atomic 交易支援
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: bc21cba7889652a8b485d101205b15d6f189d12d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592428"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203531"
 ---
-# <a name="configuring-ws-atomic-transaction-support"></a>設定 WS-Atomic 異動支援
+# <a name="configuring-ws-atomic-transaction-support"></a>設定 WS-Atomic 交易支援
 這個主題說明如何使用 [WS-AT 組態公用程式] 來設定 WS-AtomicTransaction (WS-AT) 支援。  
   
 ## <a name="using-the-ws-at-configuration-utility"></a>使用 WS-AT 組態公用程式  
@@ -47,7 +47,7 @@ ms.locfileid: "54592428"
  `WsatConfig.exe –network:disable -restart`  
   
 ## <a name="configuring-trust-between-two-machines"></a>設定兩部電腦之間的信任  
- WS-AT 通訊協定服務需要系統管理員明確授權個別帳戶，才能參與分散式交易。 如果您是兩部電腦的系統管理員，可以透過下列方式設定這兩部電腦，以建立相互信任關係：交換這兩部電腦之間的正確憑證組、將這些憑證安裝到適當的憑證存放區，然後使用 wsatConfig.exe 工具將每部電腦的憑證新增至授權之參與者憑證的其他清單。 這是使用 WS-AT 在兩部電腦之間執行分散式交易的必要步驟。  
+ WS-AT 通訊協定服務需要系統管理員明確授權個別帳戶，才能參與分散式異動。 如果您是兩部電腦的系統管理員，可以透過下列方式設定這兩部電腦，以建立相互信任關係：交換這兩部電腦之間的正確憑證組、將這些憑證安裝到適當的憑證存放區，然後使用 wsatConfig.exe 工具將每部電腦的憑證新增至授權之參與者憑證的其他清單。 這是使用 WS-AT 在兩部電腦之間執行分散式異動的必要步驟。  
   
  下列範例說明在 A 和 B 這兩部電腦之間建立信任的步驟。  
   
@@ -91,10 +91,10 @@ ms.locfileid: "54592428"
 ## <a name="security"></a>安全性  
  由於某些與 MSDTC 和 WS-AT 相關的設定會分別存放在 HKLM\Software\Microsoft\MSDTC 和 HKLM\Software\Microsoft\WSAT 登錄中，請確定這些登錄機碼都已受到保護，只有系統管理員可以寫入。 在 [登錄編輯程式] 工具中，以滑鼠右鍵按一下您想要保護選取的索引鍵**權限**設定適當的存取控制。 低權限使用者對於重要機碼只有唯讀權限這點，對於系統的安全性和完整性相當重要。  
   
- 部署 MSDTC 時，系統管理員必須確定任何 MSDTC 資料交換都很安全。 在工作群組部署中，請對惡意使用者隔離交易基礎結構；在叢集部署中，請保護叢集登錄。  
+ 部署 MSDTC 時，系統管理員必須確定任何 MSDTC 資料交換都很安全。 在工作群組部署中，請對惡意使用者隔離異動基礎結構；在叢集部署中，請保護叢集登錄。  
   
 ## <a name="tracing"></a>追蹤  
- WS-AT 通訊協定服務支援整合式特定追蹤可供啟用及使用受管理的交易[WS-AtomicTransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)工具。  追蹤所包含的資料會指出登記特定異動的時間、異動到達終結狀態的時間、每個異動登記所接收的結果等。 您可以使用檢視的所有追蹤[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)工具。  
+ WS-AT 通訊協定服務支援整合式特定追蹤可供啟用及使用受管理的交易[WS-AtomicTransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)工具。  追蹤所包含的資料會指出登記特定交易的時間、交易到達終結狀態的時間、每個交易登記所接收的結果等。 您可以使用檢視的所有追蹤[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)工具。  
   
  WS-AT 通訊協定服務也支援經由 ETW 追蹤工作階段的整合式 ServiceModel 追蹤。 如此除了現有的交易追蹤之外，也會提供更詳細的通訊特定追蹤。  若要啟用這些額外的追蹤，請遵循這些步驟  
   
@@ -119,5 +119,6 @@ ms.locfileid: "54592428"
 -   31：詳細資訊  
   
 ## <a name="see-also"></a>另請參閱
-- [WS-AtomicTransaction 設定公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
-- [WS-AtomicTransaction 設定 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)
+
+- [WS-AtomicTransaction 組態公用程式 (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)
+- [WS-AtomicTransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)

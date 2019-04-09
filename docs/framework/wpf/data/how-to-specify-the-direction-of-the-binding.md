@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding direction [WPF]
 - data binding [WPF], direction of binding
 ms.assetid: 37334478-028b-4514-86c9-1420709f4818
-ms.openlocfilehash: 265271cee16d203d7652281c5416b93759e66d4b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4334ed178e7f2ed90928db6b434eb8c9fee77bf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206430"
 ---
 # <a name="how-to-specify-the-direction-of-the-binding"></a>HOW TO：指定繫結的方向
 本範例顯示如何指定繫結只更新繫結目標 (目標) 屬性、繫結來源 (來源) 屬性，或同時更新目標屬性與來源屬性。  
@@ -40,6 +40,7 @@ ms.locfileid: "57378212"
  針對<xref:System.Windows.Data.BindingMode.TwoWay>或是<xref:System.Windows.Data.BindingMode.OneWayToSource>繫結，您可以設定來控制來源更新的時機<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>屬性。 如需詳細資訊，請參閱 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Data.Binding>
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

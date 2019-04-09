@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1739c2a5e15d4c120d487c849819b6439afabade
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59080874"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > 項目 (.NET Native)
 如果原則已套用至包含類型或方法，則會將該原則套用至類型。  
@@ -69,8 +69,8 @@ ms.locfileid: "55288011"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至已建構的泛型類型及其所有成員。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將反映原則套用至方法。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
+|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將反映原則套用至方法。|  
   
 ## <a name="remarks"></a>備註  
  `<ImpliesType>` 元素的主要目的是要供程式庫使用。 它可以解決下列情況：  
@@ -79,7 +79,7 @@ ms.locfileid: "55288011"
   
 -   否則，無法將中繼資料用於第二個類型的隱含具現化，因為靜態分析並未指出中繼資料是必要的。  
   
- 大多數情況下，這兩個類型是含有共用類型引數的泛型具現化。  
+ 大多數情況下，這兩個類型是含有共用型別引數的泛型具現化。  
   
  `<ImpliesType>` 元素的定義是假設如果需要反映在其父元素指定的類型上，則表示需要反映在 `<ImpliesType>` 元素所指定的類型上。 例如，下列反映指示詞套用至 `Explicit<T>` 和 `Implicit<T>` 這兩種類型。  
   
@@ -111,6 +111,7 @@ ms.locfileid: "55288011"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

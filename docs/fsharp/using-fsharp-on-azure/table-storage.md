@@ -3,12 +3,12 @@ title: 開始使用 Azure 資料表儲存體使用F#
 description: 使用 Azure 資料表儲存體或 Azure Cosmos DB 在雲端中儲存結構化的資料。
 author: sylvanc
 ms.date: 03/26/2018
-ms.openlocfilehash: 2b74a33023065ea809c2d7eb6202b1a254018422
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 54c777acd454e4f675175b814675c185e41ad9a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59086698"
 ---
 # <a name="get-started-with-azure-table-storage-and-the-azure-cosmos-db-table-api-using-f"></a>開始使用 Azure 資料表儲存體和 Azure Cosmos DB 資料表 API 使用 F\#
 
@@ -35,7 +35,6 @@ Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲�
 ## <a name="prerequisites"></a>必要條件
 
 若要使用本指南，您必須先[建立 Azure 儲存體帳戶](/azure/storage/storage-create-storage-account)或是[Azure Cosmos DB 帳戶](https://azure.microsoft.com/try/cosmosdb/)。
-
 
 ## <a name="create-an-f-script-and-start-f-interactive"></a>建立F#指令碼，然後啟動F#互動
 
@@ -128,7 +127,6 @@ Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲�
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L84-L85)]
 
-
 ### <a name="retrieve-a-range-of-entities-in-a-partition"></a>擷取範圍的資料分割中的實體
 
 如果您不想要查詢資料分割中的所有實體，您可以藉由結合資料分割索引鍵篩選器與資料列索引鍵篩選器來指定範圍。 在這裡，您使用兩個篩選器來取得"Smith"資料分割中的所有實體資料列索引鍵 （名字） 開始的位置以字母"M"字母之前。
@@ -148,7 +146,6 @@ Azure Cosmos DB 會提供資料表 API 應用程式，會寫入 Azure 表格儲�
 您現在會列印結果：
 
 [!code-fsharp[TableStorage](../../../samples/snippets/fsharp/azure/table-storage.fsx#L113-L115)]
-
 
 ### <a name="replace-an-entity"></a>取代實體
 

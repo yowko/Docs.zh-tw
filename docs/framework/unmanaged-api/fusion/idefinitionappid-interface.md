@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4e8bb31967a6ad515761e6cd03657f2c834debe5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bd705ef549de3a8018efe731ef8735ef7b6b915
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083175"
 ---
 # <a name="idefinitionappid-interface"></a>IDefinitionAppId 介面
 代表目前範圍中定義應用程式的程式碼的唯一識別碼。  
@@ -42,7 +42,8 @@ ms.locfileid: "54545552"
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)

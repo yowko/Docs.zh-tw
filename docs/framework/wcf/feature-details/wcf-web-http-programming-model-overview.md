@@ -2,12 +2,12 @@
 title: WCF Web HTTP 程式設計模型概觀
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: 64428eb209d8ab4e708640ed1418765e16b4577a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199579"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP 程式設計模型概觀
 Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置 wcf WEB HTTP 服務所需的基本項目。 WCF WEB HTTP 服務設計用來存取最廣泛的可能的用戶端，包括網頁瀏覽器，並具有下列獨特的需求：  
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置 w
   
  WCF WEB HTTP 程式設計模型延伸來涵蓋 Web 樣式案例，包括 WEB HTTP 服務、 AJAX 和 JSON 服務，以及新聞訂閱 (ATOM/RSS) 摘要的 WCF 範圍。 如需 AJAX 和 JSON 服務的詳細資訊，請參閱[AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。 如需有關新聞訂閱的詳細資訊，請參閱[WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)。  
   
- 可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設支援哪些類型的詳細資訊請參閱 < **UriTemplate 查詢字串參數和 Url**下一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 如需詳細資訊，請參閱<xref:System.ServiceModel.Dispatcher.QueryStringConverter>。  
+ 可從 WEB HTTP 服務傳回的資料型別沒有額外的限制。 WEB HTTP 服務作業可傳回任何可序列化型別。 因為 WEB HTTP 服務作業可由 Web 瀏覽器叫用，所以可在 URL 中指定的資料型別具有一項限制。 如需預設支援哪些類型的詳細資訊請參閱 < **UriTemplate 查詢字串參數和 Url**下一節。 您可以提供自己的 T:System.ServiceModel.Dispatcher.QueryStringConverter 實作來變更預設行為，其中指定如何將 URL 中指定的參數轉換成實際的參數型別。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
 > [!CAUTION]
 >  使用 WCF WEB HTTP 程式設計模型撰寫的服務不會使用 SOAP 訊息。 因為未使用 SOAP，則無法使用由 WCF 所提供的安全性功能。 不過，您可透過以 HTTPS 裝載服務的方式來使用傳輸型安全性。 如需有關 WCF 安全性的詳細資訊，請參閱[安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)  
@@ -49,9 +49,9 @@ Windows Communication Foundation (WCF) WEB HTTP 程式設計模型提供建置 w
   
 -   您可以使用候選 URI 來呼叫 `Match`()，以便透過範本將候選 URI 切割為自身的構成部分，並傳回包含不同的 URI (已依據範本中的變數加上標籤) 部分的字典。  
   
--   `Bind`() 和 `Match`() 都是反向值，因此您可以呼叫 `Match`( `Bind`( x ) ) 並從一開始的相同環境重新開始。  
+-   `Bind`（) 和`Match`可讓您呼叫 （） 都是反向`Match`( `Bind`(x))，再回到您開始使用的相同環境。  
   
- 在許多情況下 (特別是在伺服器上，需要根據 URI 將要求分派到服務作業時) 您都想要追蹤資料結構中可以獨立處理每一個包含的範本的 <xref:System.UriTemplate> 物件集合。 <xref:System.UriTemplateTable> 表示一組 URI 範本，並且依據一組指定的範本及候選 URI 選取最佳對象。 這不是屬於任何特定的網路堆疊 （包含 WCF） 讓您可以在必要時使用它。  
+ 在許多情況下 (特別是在伺服器上，需要根據 URI 將要求分派到服務作業時) 您都想要追蹤資料結構中可以獨立處理每一個包含的範本的 <xref:System.UriTemplate> 物件集合。 <xref:System.UriTemplateTable> 代表一組 URI 範本，並選取最符合項目，並提供一組範本與候選 URI。 這不是屬於任何特定的網路堆疊 （包含 WCF） 讓您可以在必要時使用它。  
   
  WCF 服務模型會透過 <xref:System.UriTemplate> 和 <xref:System.UriTemplateTable> 將服務作業與 <xref:System.UriTemplate> 所描述的 URI 集合關聯在一起。 服務作業會透過 <xref:System.UriTemplate> 或 <xref:System.ServiceModel.Web.WebGetAttribute>，與 <xref:System.ServiceModel.Web.WebInvokeAttribute> 產生關聯。 如需詳細資訊<xref:System.UriTemplate>並<xref:System.UriTemplateTable>，請參閱[UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)  
   
@@ -80,7 +80,7 @@ interface ICustomer
   
  `POST /UpdateCustomerName`  
   
- <xref:System.ServiceModel.Web.WebInvokeAttribute> 會預設為 POST，但是您還是可以用它來控制其他動詞。  
+ <xref:System.ServiceModel.Web.WebInvokeAttribute> 預設為 POST，但是您也可以使用它來控制其他動詞。  
   
 ```  
 [ServiceContract]  
@@ -135,7 +135,7 @@ interface ICustomer
   
  這表示 WCF WEB HTTP 程式設計模型可以處理任何類型的資料，但您可能對程式設計<xref:System.IO.Stream>。  
   
- [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)]支援 JSON 資料 (AJAX) 以及新聞訂閱摘要 (包括 ATOM 和 RSS)。 如需這些功能的詳細資訊，請參閱[WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)並[AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
+ [!INCLUDE[netfx35_short](../../../../includes/netfx35-short-md.md)] 支援 JSON 資料 (AJAX) 以及新聞訂閱摘要 （包括 ATOM 和 RSS）。 如需這些功能的詳細資訊，請參閱[WCF Web HTTP 格式化](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)[WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)並[AJAX 整合與 JSON 支援](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)。  
   
 ## <a name="wcf-web-http-programming-model-and-security"></a>WCF WEB HTTP 程式設計模型和安全性  
  因為 WCF WEB HTTP 程式設計模型不支援 WS-* 通訊協定，來保護 WCF WEB HTTP 服務的唯一方法是運用 SSL 透過 HTTPS 公開服務。 如需有關設定使用 SSL [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，請參閱[如何在 IIS 中實作 SSL](https://go.microsoft.com/fwlink/?LinkId=131613)  
@@ -144,6 +144,7 @@ interface ICustomer
  當呼叫 WCF WEB HTTP 服務以使用 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 建立通道時，<xref:System.ServiceModel.Description.WebHttpBehavior> 會使用組態檔中設定的 <xref:System.ServiceModel.EndpointAddress>，即便傳遞至 <xref:System.ServiceModel.EndpointAddress> 的 <xref:System.ServiceModel.Channels.ChannelFactoryBase%601> 是另一個值亦然。  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF 摘要整合](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
+
+- [WCF 新聞訂閱](../../../../docs/framework/wcf/feature-details/wcf-syndication.md)
 - [WCF Web HTTP 程式設計物件模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-object-model.md)
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)

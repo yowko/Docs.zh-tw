@@ -9,12 +9,12 @@ helpviewer_keywords:
 - GDI+, cardinal splines
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
-ms.openlocfilehash: 6cc57698c8e43aefff0e0a63b0384417483d3b48
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705281"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200411"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ 中的基本曲線
 基本曲線是一連串個別加入形成更大的曲線的曲線。 指定曲線的點和張力參數陣列。 中的陣列; 每個點順利通過的基本曲線有沒有尖角和中的曲線 tightness 任何突然的變更。 下圖顯示一組點和通過集合中的每個點的基本曲線。  
@@ -36,5 +36,6 @@ ms.locfileid: "57705281"
  [!code-vb[LinesCurvesAndShapes#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#31)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
 - [建構和繪製曲線](constructing-and-drawing-curves.md)

@@ -2,12 +2,12 @@
 title: Entity Framework 詞彙
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 644c1f19c0dc87ea7a9ab5fabbbd85b63ad1d1b8
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904121"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104165"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework 詞彙
 本主題定義中最常參考的詞彙[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]文件。 而為相關主題提供的連結表示有其他可用的資訊。  
@@ -54,12 +54,12 @@ ms.locfileid: "55904121"
 |導覽屬性|表示與另一個實體類型之關聯性的實體類型屬性 (依關聯定義)。 導覽屬性是用來傳回相關物件做為 <xref:System.Data.Objects.DataClasses.EntityCollection%601> 或 <xref:System.Data.Objects.DataClasses.EntityReference%601> (視關聯另一端的多重性而定)。<br /><br /> 如需詳細資訊，請參閱 < [NavigationProperty 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl)並[導覽屬性](../../../../../docs/framework/data/adonet/navigation-property.md)。|  
 |Query Path - 查詢路徑|路徑的字串表示，其中指定在執行物件查詢時要傳回的相關物件。 查詢路徑是由在 <xref:System.Data.Objects.ObjectQuery%601.Include%2A> 上呼叫 <xref:System.Data.Objects.ObjectQuery%601> 方法來定義。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 載入相關物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))。|  
 |物件內容|表示概念模型中定義的實體容器。 它會包含基礎資料來源的連接並提供如變更追蹤和識別解析這類的服務。 物件內容是由 <xref:System.Data.Objects.ObjectContext> 或 `DbContext` 類別的執行個體來表示。<br /><br /> `DbContext` 是的一部分[Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)。 Entity Framework 5.0 不是 .NET Framework 的一部分，而是建置在 .NET Framework 4.5 之上。 Entity Framework 5.0 可[' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)封裝。 如需詳細資訊，請參閱 < [Entity Framework 版本與版本控制](https://go.microsoft.com/fwlink/?LinkId=234899)。|  
-|Object Layer - 物件層|Entity Framework 所使用的實體類型和物件內容定義。|  
+|Object Layer - 物件層|Entity Framework 所使用的實體類型和內容物件定義。|  
 |Object Query - 物件查詢|在物件內容中針對概念模型執行的查詢，該物件內容會傳回資料做為物件。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 物件查詢](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))。|  
 |Object-Relational Mapping - 物件關聯式對應|將資料從關聯式資料庫轉換成資料型別的技巧，該資料型別可在物件導向軟體應用程式中使用。<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 透過對應關聯式資料的方式，依儲存體模型中所定義提供物件關聯式對應服務給資料型別，如概念模型中所定義。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)。|  
 |物件服務|所提供的服務[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓應用程式程式碼來操作實體，例如[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]物件。|  
 |Persistence-Ignorant Object - 非持續性物件|不包含任何與資料儲存體相關之邏輯的物件。 也可稱為 POCO 實體。|  
-|POCO|Plain Old CLR Object - 單純 CLR 物件 不會繼承自另一類別或實作介面的物件。|  
+|POCO|Plain Old CLR Object - 簡單的 CLR 物件。 不會繼承自另一類別或實作介面的物件。|  
 |POCO entity - POCO 實體|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 中的實體，其並非繼承自 <xref:System.Data.Objects.DataClasses.EntityObject> 或 <xref:System.Data.Objects.DataClasses.ComplexObject> 也不會實作 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 介面。 POCO 實體通常，現有的使用中的網域物件[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]應用程式。 這些實體支援非持續性。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。|  
 |proxy object - Proxy 物件|衍生自 POCO 類別的物件，是由 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 產生來支援變更追蹤及消極式載入。 如需詳細資訊，請參閱 <<c0> [ 建立 POCO Proxy 的需求](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd468057(v=vs.100))。|  
 |Referential Constraint - 參考條件約束|概念模型中定義的條件約束，指出實體與另一個實體之間有相依關聯性。 這種限制式表示若無準則實體的對應執行個體，則相依實體的執行個體無法存在。<br /><br /> 如需詳細資訊，請參閱 < [ReferentialConstraint 項目 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#referentialconstraint-element-csdl)並[參考完整性條件約束](../../../../../docs/framework/data/adonet/referential-integrity-constraint.md)。|  
@@ -68,7 +68,7 @@ ms.locfileid: "55904121"
 |Scalar Property - 純量屬性|對應至儲存體模型中單一欄位的實體屬性。|  
 |Self-Tracking Entity - 自我追蹤實體|根據「文字範本轉換工具組」(Text Template Transformation Toolkit，T4) 建置而成的實體，這種實體能夠記錄純量、複雜和導覽屬性的變更。|  
 |Simple Type - 簡單型別|用於定義概念模型中屬性的基本型別 (Primitive Type)。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 概念模型型別 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)和[實體資料模型：基本資料型別](../../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)。|  
-|Split Entity - 分割實體|對應至儲存體模型中兩個不同類型的實體類型。<br /><br /> 如需詳細資訊，請參閱[＜How to：定義具有單一實體對應至兩個資料表的模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896233(v=vs.100))。|  
+|Split Entity - 分割實體|對應至儲存體模型中兩個不同類型的實體類型。<br /><br /> 如需詳細資訊，請參閱[如何：定義具有單一實體對應至兩個資料表的模型](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896233(v=vs.100))。|  
 |儲存體模型|支援的資料來源 (如關聯式資料庫) 中資料邏輯模型的定義。 儲存體模型在 .ssdl 檔案中是以 SSDL 定義的。<br /><br /> 如需詳細資訊，請參閱 <<c0> [ 模型和對應](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)並[SSDL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)。|  
 |.ssdl file - .ssdl 檔案|內含儲存體模型的 XML 檔案 (以 SSDL 表示)。|  
 |存放區結構描述定義語言 (SSDL)|以 XML 為架構的語言，用於定義儲存體模型 (通常相當於資料庫結構描述) 的實體類型、關聯、實體容器、實體集和關聯集。<br /><br /> 如需詳細資訊，請參閱 < [SSDL 規格](../../../../../docs/framework/data/adonet/ef/language-reference/ssdl-specification.md)。|  
@@ -76,6 +76,7 @@ ms.locfileid: "55904121"
 |一類一表|一種將資料庫內某個類型階層架構模型化的方法，此方法會使用多個具有一對一關聯性的資料表來設定各種類型的模型。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)

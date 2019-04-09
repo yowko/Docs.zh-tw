@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 - WCF Data Services, accessing data
 ms.assetid: 9665ff5b-3e3a-495d-bf83-d531d5d060ed
-ms.openlocfilehash: 9589656c00573f7b3bba07aee1f89902a34d61ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d4b0af7f20cbf932773df3ae226729a0a6c2500
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085866"
 ---
 # <a name="accessing-data-service-resources-wcf-data-services"></a>存取資料服務資源 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 支援[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為可由 Uri 定址的資源摘要。 會根據實體-關聯性慣例呈現這些資源[Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)。 在此模型中，實體代表資料運算單位 (這些資料在應用程式定義域中為資料型別)，例如客戶、訂單、項目及產品。 使用具像狀態傳輸 (REST) 的語意即可存取及變更實體資料，尤其是標準 HTTP 動作，例如 GET、PUT、POST 和 DELETE。  
@@ -97,4 +97,5 @@ http://services.odata.org/Northwind/Northwind.svc/Orders(10643)/$links/Shipper
  URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]資源可讓您定址服務所公開的實體資料。 當您的網頁瀏覽器的網址欄位中輸入 URI[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]傳回要求之資源的摘要表示法。 如需詳細資訊，請參閱 < [WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。 雖然 Web 瀏覽器可能適用於測試資料服務資源傳回預期的資料，可以也建立、 更新和刪除資料的實際執行資料服務通常會存取應用程式程式碼或指令碼語言，在網頁中的。 如需詳細資訊，請參閱 <<c0> [ 用戶端應用程式中使用的資料服務](../../../../docs/framework/data/wcf/using-a-data-service-in-a-client-application-wcf-data-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [開放式資料通訊協定網站](https://go.microsoft.com/fwlink/?LinkID=182204)
+
+- [Open Data Protocol 網站](https://go.microsoft.com/fwlink/?LinkID=182204)

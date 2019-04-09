@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 91c9eae4-c641-476c-a06e-d7ce39709763
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ba1c7056cfea3386e4456c09cc0c2ef98811053
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c92d71c9862dfbdace4de2e30cf48ace7becfd0b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54507222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105845"
 ---
 # <a name="reflection-and-net-native"></a>反映和 .NET Native
 在 .NET Framework 中，Managed 開發可透過反映 API 來支援 metaprogramming。 反映可讓您檢查應用程式中的物件、在透過檢查發現的物件上呼叫方法、在執行階段產生新的類型，並可支援許多其他動態程式碼案例。 它也支援序列化和還原序列化，可讓物件的欄位值保存下來，並於稍後還原。 這些案例全都需要 .NET Framework just-in-time (JIT) 編譯器依據可用的中繼資料來產生機器碼。  
@@ -34,5 +34,6 @@ ms.locfileid: "54507222"
 -   [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 .NET Native 編譯應用程式](../../../docs/framework/net-native/index.md)
-- [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET 原生和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)

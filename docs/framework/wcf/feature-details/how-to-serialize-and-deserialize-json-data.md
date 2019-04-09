@@ -1,13 +1,13 @@
 ---
-title: HOW TO：序列化和還原序列化 JSON 資料
+title: HOW TO：序列化及還原序列化 JSON 資料
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: c5da34b6ab7953dbff62ca757ba08d0c7364b4cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106154"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化和還原序列化 JSON 資料
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。  
@@ -136,5 +136,6 @@ public class TestDuplicateDataDerived : TestDuplicateDataBase
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [獨立 JSON 序列化](stand-alone-json-serialization.md)
 - [支援 JSON 和其他資料傳輸格式](support-for-json-and-other-data-transfer-formats.md)

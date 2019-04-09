@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: 041738ba375022be7c80526f25e5761314dffbf1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184817"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列
 當您使用<xref:System.Windows.Forms.DataGridView>編輯您的應用程式中的資料，您通常想要讓使用者能夠將新的資料列加入至資料存放區。 <xref:System.Windows.Forms.DataGridView>控制項支援藉由提供一個資料列的新記錄，這一律會顯示為最後一個資料列的這項功能。 它是使用星號 （*） 的符號標示其資料列行首。 下列各節將討論您的程式與新記錄的資料列的啟用時，您應該考慮的事項。  
@@ -58,7 +58,8 @@ ms.locfileid: "57703916"
  如果您要實作虛擬模式，您必須在必要時，新資料錄的資料列是在資料模型，以及何時要復原的資料列加入追蹤。 這項功能的實際實作取決於實作的資料模型和其交易語意，比方說，在資料列層級上是否為認可範圍。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>
-- [Windows Forms DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
-- [如何：指定 Windows Form DataGridView 控制項中的新資料列的預設值](specify-default-values-for-new-rows-in-the-datagrid.md)
+- [Windows Form DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：指定 Windows Form DataGridView 控制項的新資料列預設值](specify-default-values-for-new-rows-in-the-datagrid.md)

@@ -10,14 +10,14 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 80ec480b5d45a338c1f15796ae82015d6da24fc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705528"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078872"
 ---
-# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>逐步解說：建立主版/詳細表單使用兩個 Windows Form DataGridView 控制項
+# <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>逐步解說：使用兩個 Windows Forms DataGridView 控制項建立主從式表單
 其中一個最常見的案例，使用<xref:System.Windows.Forms.DataGridView>控制項是*主從式*表單，其中會顯示兩個資料庫資料表之間的父子式關聯性。 選取主要資料表中的資料列，會導致對應的子資料更新的詳細資料資料表。  
   
  實作的主版/詳細表單很容易使用之間的互動<xref:System.Windows.Forms.DataGridView>控制項和<xref:System.Windows.Forms.BindingSource>元件。 在本逐步解說中，您將建置使用兩個表單<xref:System.Windows.Forms.DataGridView>控制項和兩個<xref:System.Windows.Forms.BindingSource>元件。 表單會顯示兩個相關的 Northwind SQL Server 範例資料庫中的資料表：`Customers`和`Orders`。 當您完成時，就會顯示在 master 資料庫中的所有客戶的表單<xref:System.Windows.Forms.DataGridView>與所選客戶詳細資料中的所有訂單<xref:System.Windows.Forms.DataGridView>。  
@@ -76,8 +76,9 @@ ms.locfileid: "57705528"
 -   自訂儲存格的外觀。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)和[How to:設定 Windows Form DataGridView 控制項的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [如何：建立主版/詳細表單使用兩個 Windows Form DataGridView 控制項](create-a-master-detail-form-using-two-datagridviews.md)
-- [保護連線資訊](../../data/adonet/protecting-connection-information.md)
+- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：使用兩個 Windows Forms DataGridView 控制項建立主從式表單](create-a-master-detail-form-using-two-datagridviews.md)
+- [保護連接資訊](../../data/adonet/protecting-connection-information.md)

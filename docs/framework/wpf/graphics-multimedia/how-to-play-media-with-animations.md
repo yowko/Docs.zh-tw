@@ -7,12 +7,12 @@ helpviewer_keywords:
 - animation [WPF], media playback with
 - media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
-ms.openlocfilehash: 0dc39d08ef17a628675018c17602623f2efd0173
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 200f9d62c67a02088fe5a5789cdb41a04837d430
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079899"
 ---
 # <a name="how-to-play-media-with-animations"></a>HOW TO：以動畫播放媒體
 此範例示範如何同時播放媒體和動畫，使用<xref:System.Windows.Media.MediaTimeline>並<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>類別，在同一個<xref:System.Windows.Media.Animation.Storyboard>。  
@@ -25,11 +25,12 @@ ms.locfileid: "57372898"
  [!code-xaml[MediaGallery_snippet#MediaTimelinePlusAnimationExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/MediaGallery_snippet/CSharp/MediaTimelinePlusAnimationExample.xaml#mediatimelineplusanimationexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.MediaTimeline>
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>
-- [HOW-TO 主題](audio-and-video-how-to-topics.md)
+- [HOW TO 主題](audio-and-video-how-to-topics.md)
 - [分鏡腳本概觀](storyboards-overview.md)
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
 - [動畫概觀](animation-overview.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 GDI + 呈現影像
+title: HOW TO：使用 GDI+ 呈現影像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, rendering existing images
 ms.assetid: c128b79a-3e31-47d8-9e66-3470f570a056
-ms.openlocfilehash: d2c626f46862e5fdc7c51b509a6419a3d67c4102
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: cb43536f941ea7a6e1a48e78046089636360eef5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079444"
 ---
-# <a name="how-to-render-images-with-gdi"></a>HOW TO：使用 GDI + 呈現影像
+# <a name="how-to-render-images-with-gdi"></a>HOW TO：使用 GDI+ 呈現影像
 您可以使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 來呈現應用程式中以檔案形式存在的影像。 您可以建立新的物件<xref:System.Drawing.Image>類別 (例如<xref:System.Drawing.Bitmap>) 建立<xref:System.Drawing.Graphics>物件，這是指您要使用的繪圖介面，並呼叫<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>物件。 影像將繪製於此圖形類別所代表的繪圖介面上。 您可以在設計階段使用影像編輯器來建立及編輯影像檔案，而在執行階段使用 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 來呈現它們。 如需詳細資訊，請參閱[圖示的影像編輯器](/cpp/windows/image-editor-for-icons)。  
   
 ### <a name="to-render-an-image-with-gdi"></a>使用 GDI+ 呈現影像  
@@ -82,10 +82,11 @@ ms.locfileid: "57702824"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
 - [GDI+ 中的畫筆、線條和矩形](pens-lines-and-rectangles-in-gdi.md)
-- [如何：Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
-- [繪製線條或封閉的圖形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
+- [HOW TO：在 Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [繪製線條或封閉圖形](/cpp/windows/drawing-lines-or-closed-figures-image-editor-for-icons)
 - [圖示影像編輯器](/cpp/windows/image-editor-for-icons)
