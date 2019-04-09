@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 415c376fee92b1421392503c3e9b4c0848601e47
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b365aaa13b3070662a74ebcfc914f5ed3d291d76
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481335"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133987"
 ---
-# <a name="iclrdebugmanagerbeginconnection-method"></a><span data-ttu-id="39c69-102">ICLRDebugManager::BeginConnection 方法</span><span class="sxs-lookup"><span data-stu-id="39c69-102">ICLRDebugManager::BeginConnection Method</span></span>
-<span data-ttu-id="39c69-103">建立主應用程式與偵錯工具相關聯的工作清單識別碼和易記名稱之間的新連線。</span><span class="sxs-lookup"><span data-stu-id="39c69-103">Establishes a new connection between the host and the debugger to associate a list of tasks with an identifier and a friendly name.</span></span>  
+# <a name="iclrdebugmanagerbeginconnection-method"></a><span data-ttu-id="d3403-102">ICLRDebugManager::BeginConnection 方法</span><span class="sxs-lookup"><span data-stu-id="d3403-102">ICLRDebugManager::BeginConnection Method</span></span>
+<span data-ttu-id="d3403-103">建立主應用程式與偵錯工具相關聯的工作清單識別碼和易記名稱之間的新連線。</span><span class="sxs-lookup"><span data-stu-id="d3403-103">Establishes a new connection between the host and the debugger to associate a list of tasks with an identifier and a friendly name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="39c69-104">語法</span><span class="sxs-lookup"><span data-stu-id="39c69-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3403-104">語法</span><span class="sxs-lookup"><span data-stu-id="d3403-104">Syntax</span></span>  
   
 ```  
 HRESULT BeginConnection (  
@@ -36,44 +36,45 @@ HRESULT BeginConnection (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="39c69-105">參數</span><span class="sxs-lookup"><span data-stu-id="39c69-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d3403-105">參數</span><span class="sxs-lookup"><span data-stu-id="d3403-105">Parameters</span></span>  
  `dwConnectionId`  
- <span data-ttu-id="39c69-106">[in]將關聯的 common language runtime (CLR) 工作清單的識別項。</span><span class="sxs-lookup"><span data-stu-id="39c69-106">[in] An identifier to associate with the list of common language runtime (CLR) tasks.</span></span>  
+ <span data-ttu-id="d3403-106">[in]將關聯的 common language runtime (CLR) 工作清單的識別項。</span><span class="sxs-lookup"><span data-stu-id="d3403-106">[in] An identifier to associate with the list of common language runtime (CLR) tasks.</span></span>  
   
  `szConnectionName`  
- <span data-ttu-id="39c69-107">[in]將關聯的 CLR 工作清單中的易記名稱。</span><span class="sxs-lookup"><span data-stu-id="39c69-107">[in] A friendly name to associate with the list of CLR tasks.</span></span>  
+ <span data-ttu-id="d3403-107">[in]將關聯的 CLR 工作清單中的易記名稱。</span><span class="sxs-lookup"><span data-stu-id="d3403-107">[in] A friendly name to associate with the list of CLR tasks.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="39c69-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="39c69-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="d3403-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="d3403-108">Return Value</span></span>  
   
-|<span data-ttu-id="39c69-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="39c69-109">HRESULT</span></span>|<span data-ttu-id="39c69-110">描述</span><span class="sxs-lookup"><span data-stu-id="39c69-110">Description</span></span>|  
+|<span data-ttu-id="d3403-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="d3403-109">HRESULT</span></span>|<span data-ttu-id="d3403-110">描述</span><span class="sxs-lookup"><span data-stu-id="d3403-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="39c69-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="39c69-111">S_OK</span></span>|<span data-ttu-id="39c69-112">`BeginConnection` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="39c69-112">`BeginConnection` returned successfully.</span></span>|  
-|<span data-ttu-id="39c69-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="39c69-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="39c69-114">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="39c69-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="39c69-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="39c69-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="39c69-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="39c69-116">The call timed out.</span></span>|  
-|<span data-ttu-id="39c69-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="39c69-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="39c69-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="39c69-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="39c69-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="39c69-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="39c69-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="39c69-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="39c69-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="39c69-121">E_FAIL</span></span>|<span data-ttu-id="39c69-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="39c69-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="39c69-123">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="39c69-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="39c69-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="39c69-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
-|<span data-ttu-id="39c69-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="39c69-125">E_INVALIDARG</span></span>|<span data-ttu-id="39c69-126">`dwConnectionId` 是零，或`BeginConnection`已經使用這個呼叫`dwConnectionId`的值，或`szConnectionName`為 null。</span><span class="sxs-lookup"><span data-stu-id="39c69-126">`dwConnectionId` was zero, or `BeginConnection` was already called using this `dwConnectionId` value, or `szConnectionName` was null.</span></span>|  
-|<span data-ttu-id="39c69-127">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="39c69-127">E_OUTOFMEMORY</span></span>|<span data-ttu-id="39c69-128">記憶體不足，無法配置來保存與此連線相關聯的工作清單。</span><span class="sxs-lookup"><span data-stu-id="39c69-128">Not enough memory could be allocated to hold the list of tasks associated with this connection.</span></span>|  
+|<span data-ttu-id="d3403-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="d3403-111">S_OK</span></span>|`BeginConnection` <span data-ttu-id="d3403-112">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="d3403-112">returned successfully.</span></span>|  
+|<span data-ttu-id="d3403-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="d3403-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="d3403-114">不到程序中，載入 CLR 或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="d3403-114">The CLR has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="d3403-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="d3403-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="d3403-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="d3403-116">The call timed out.</span></span>|  
+|<span data-ttu-id="d3403-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="d3403-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="d3403-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="d3403-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="d3403-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="d3403-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="d3403-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="d3403-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="d3403-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="d3403-121">E_FAIL</span></span>|<span data-ttu-id="d3403-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="d3403-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="d3403-123">方法會傳回 E_FAIL 之後，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="d3403-123">After a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="d3403-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="d3403-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="d3403-125">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="d3403-125">E_INVALIDARG</span></span>|`dwConnectionId` <span data-ttu-id="d3403-126">是零，或`BeginConnection`已經使用這個呼叫`dwConnectionId`的值，或`szConnectionName`為 null。</span><span class="sxs-lookup"><span data-stu-id="d3403-126">was zero, or `BeginConnection` was already called using this `dwConnectionId` value, or `szConnectionName` was null.</span></span>|  
+|<span data-ttu-id="d3403-127">E_OUTOFMEMORY</span><span class="sxs-lookup"><span data-stu-id="d3403-127">E_OUTOFMEMORY</span></span>|<span data-ttu-id="d3403-128">記憶體不足，無法配置來保存與此連線相關聯的工作清單。</span><span class="sxs-lookup"><span data-stu-id="d3403-128">Not enough memory could be allocated to hold the list of tasks associated with this connection.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="39c69-129">備註</span><span class="sxs-lookup"><span data-stu-id="39c69-129">Remarks</span></span>  
- <span data-ttu-id="39c69-130">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法， `BeginConnection`， [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)，並[EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)，關聯識別碼和易記名稱的工作清單。</span><span class="sxs-lookup"><span data-stu-id="39c69-130">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) provides three methods, `BeginConnection`, [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md), and [EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md), for associating task lists with identifiers and friendly names.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d3403-129">備註</span><span class="sxs-lookup"><span data-stu-id="d3403-129">Remarks</span></span>  
+ <span data-ttu-id="d3403-130">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)提供三種方法， `BeginConnection`， [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)，並[EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)，關聯識別碼和易記名稱的工作清單。</span><span class="sxs-lookup"><span data-stu-id="d3403-130">[ICLRDebugManager](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md) provides three methods, `BeginConnection`, [SetConnectionTasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md), and [EndConnection](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md), for associating task lists with identifiers and friendly names.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="39c69-131">這三種方法必須呼叫每一組工作的特定順序。</span><span class="sxs-lookup"><span data-stu-id="39c69-131">These three methods must be called in a specific order for each set of tasks.</span></span> <span data-ttu-id="39c69-132">`BeginConnection` 會先呼叫來建立新的連線。</span><span class="sxs-lookup"><span data-stu-id="39c69-132">`BeginConnection` is called first to establish a new connection.</span></span> <span data-ttu-id="39c69-133">`SetConnectionTasks` 會接著呼叫以提供一組與該連接相關聯的工作。</span><span class="sxs-lookup"><span data-stu-id="39c69-133">`SetConnectionTasks` is called next to provide the set of tasks to be associated with that connection.</span></span> <span data-ttu-id="39c69-134">`EndConnection` 是最後呼叫以移除工作清單的識別碼和易記名稱之間的關聯。不過，可以是巢狀呼叫不同的連接。</span><span class="sxs-lookup"><span data-stu-id="39c69-134">`EndConnection` is called last to remove the association between the task list and the identifier and friendly name.However, calls for different connections can be nested.</span></span>  
+>  <span data-ttu-id="d3403-131">這三種方法必須呼叫每一組工作的特定順序。</span><span class="sxs-lookup"><span data-stu-id="d3403-131">These three methods must be called in a specific order for each set of tasks.</span></span> `BeginConnection` <span data-ttu-id="d3403-132">會先呼叫來建立新的連線。</span><span class="sxs-lookup"><span data-stu-id="d3403-132">is called first to establish a new connection.</span></span> `SetConnectionTasks` <span data-ttu-id="d3403-133">會接著呼叫以提供一組與該連接相關聯的工作。</span><span class="sxs-lookup"><span data-stu-id="d3403-133">is called next to provide the set of tasks to be associated with that connection.</span></span> `EndConnection` <span data-ttu-id="d3403-134">是最後呼叫以移除工作清單的識別碼和易記名稱之間的關聯。不過，可以是巢狀呼叫不同的連接。</span><span class="sxs-lookup"><span data-stu-id="d3403-134">is called last to remove the association between the task list and the identifier and friendly name.However, calls for different connections can be nested.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="39c69-135">需求</span><span class="sxs-lookup"><span data-stu-id="39c69-135">Requirements</span></span>  
- <span data-ttu-id="39c69-136">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="39c69-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d3403-135">需求</span><span class="sxs-lookup"><span data-stu-id="d3403-135">Requirements</span></span>  
+ <span data-ttu-id="d3403-136">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d3403-136">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="39c69-137">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="39c69-137">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="d3403-137">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="d3403-137">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="39c69-138">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="39c69-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="d3403-138">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d3403-138">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="39c69-139">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="39c69-139">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="d3403-139">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d3403-139">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="39c69-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39c69-140">See also</span></span>
-- [<span data-ttu-id="39c69-141">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="39c69-141">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
-- [<span data-ttu-id="39c69-142">ICLRDebugManager 介面</span><span class="sxs-lookup"><span data-stu-id="39c69-142">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
-- [<span data-ttu-id="39c69-143">EndConnection 方法</span><span class="sxs-lookup"><span data-stu-id="39c69-143">EndConnection Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)
-- [<span data-ttu-id="39c69-144">SetConnectionTasks 方法</span><span class="sxs-lookup"><span data-stu-id="39c69-144">SetConnectionTasks Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)
-- [<span data-ttu-id="39c69-145">IHostControl 介面</span><span class="sxs-lookup"><span data-stu-id="39c69-145">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="d3403-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3403-140">See also</span></span>
+
+- [<span data-ttu-id="d3403-141">ICLRControl 介面</span><span class="sxs-lookup"><span data-stu-id="d3403-141">ICLRControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
+- [<span data-ttu-id="d3403-142">ICLRDebugManager 介面</span><span class="sxs-lookup"><span data-stu-id="d3403-142">ICLRDebugManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-interface.md)
+- [<span data-ttu-id="d3403-143">EndConnection 方法</span><span class="sxs-lookup"><span data-stu-id="d3403-143">EndConnection Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-endconnection-method.md)
+- [<span data-ttu-id="d3403-144">SetConnectionTasks 方法</span><span class="sxs-lookup"><span data-stu-id="d3403-144">SetConnectionTasks Method</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)
+- [<span data-ttu-id="d3403-145">IHostControl 介面</span><span class="sxs-lookup"><span data-stu-id="d3403-145">IHostControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/ihostcontrol-interface.md)

@@ -1,73 +1,74 @@
 ---
-title: 逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作
+title: 逐步解說：使用 Windows Forms 控制項的智慧標籤執行一般工作
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DesignerAction object model
 - smart tags
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
-ms.openlocfilehash: 2805ebc66be5908c333e9a5db41076518ad77c1a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b20e903ce7eef7c69f55328f459d52537a1e85d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705853"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132055"
 ---
-# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a><span data-ttu-id="3b0a7-102">逐步解說：使用 Windows Form 控制項中的智慧標籤執行一般工作</span><span class="sxs-lookup"><span data-stu-id="3b0a7-102">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>
-<span data-ttu-id="3b0a7-103">您建構表單和控制項的 Windows Forms 應用程式時，有許多重複執行的工作。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-103">As you construct forms and controls for your Windows Forms application, there are many tasks you will perform repeatedly.</span></span> <span data-ttu-id="3b0a7-104">以下是一些經常執行的工作就會發生：</span><span class="sxs-lookup"><span data-stu-id="3b0a7-104">These are some of the commonly performed tasks you will encounter:</span></span>  
+# <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a><span data-ttu-id="795f1-102">逐步解說：使用 Windows Forms 控制項的智慧標籤執行一般工作</span><span class="sxs-lookup"><span data-stu-id="795f1-102">Walkthrough: Performing Common Tasks Using Smart Tags on Windows Forms Controls</span></span>
+<span data-ttu-id="795f1-103">您建構表單和控制項的 Windows Forms 應用程式時，有許多重複執行的工作。</span><span class="sxs-lookup"><span data-stu-id="795f1-103">As you construct forms and controls for your Windows Forms application, there are many tasks you will perform repeatedly.</span></span> <span data-ttu-id="795f1-104">以下是一些經常執行的工作就會發生：</span><span class="sxs-lookup"><span data-stu-id="795f1-104">These are some of the commonly performed tasks you will encounter:</span></span>  
   
--   <span data-ttu-id="3b0a7-105">新增或移除工作索引標籤上<xref:System.Windows.Forms.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-105">Adding or removing a tab on a <xref:System.Windows.Forms.TabControl>.</span></span>  
+-   <span data-ttu-id="795f1-105">新增或移除工作索引標籤上<xref:System.Windows.Forms.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="795f1-105">Adding or removing a tab on a <xref:System.Windows.Forms.TabControl>.</span></span>  
   
--   <span data-ttu-id="3b0a7-106">將控制項固定到其父代。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-106">Docking a control to its parent.</span></span>  
+-   <span data-ttu-id="795f1-106">將控制項固定到其父代。</span><span class="sxs-lookup"><span data-stu-id="795f1-106">Docking a control to its parent.</span></span>  
   
--   <span data-ttu-id="3b0a7-107">變更的方向<xref:System.Windows.Forms.SplitContainer>控制項。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-107">Changing the orientation of a <xref:System.Windows.Forms.SplitContainer> control.</span></span>  
+-   <span data-ttu-id="795f1-107">變更的方向<xref:System.Windows.Forms.SplitContainer>控制項。</span><span class="sxs-lookup"><span data-stu-id="795f1-107">Changing the orientation of a <xref:System.Windows.Forms.SplitContainer> control.</span></span>  
   
- <span data-ttu-id="3b0a7-108">若要加快開發的速度，許多控制項都提供智慧標籤，也就是可讓您在設計階段執行常見工作，像是這些功能是以單一軌跡的即時線上功能表。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-108">To speed development, many controls offer smart tags, which are context-sensitive menus that allow you to perform common tasks like these in a single gesture at design time.</span></span> <span data-ttu-id="3b0a7-109">這些工作會呼叫*智慧標籤動詞*。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-109">These tasks are called *smart-tag verbs*.</span></span>  
+ <span data-ttu-id="795f1-108">若要加快開發的速度，許多控制項都提供智慧標籤，也就是可讓您在設計階段執行常見工作，像是這些功能是以單一軌跡的即時線上功能表。</span><span class="sxs-lookup"><span data-stu-id="795f1-108">To speed development, many controls offer smart tags, which are context-sensitive menus that allow you to perform common tasks like these in a single gesture at design time.</span></span> <span data-ttu-id="795f1-109">這些工作會呼叫*智慧標籤動詞*。</span><span class="sxs-lookup"><span data-stu-id="795f1-109">These tasks are called *smart-tag verbs*.</span></span>  
   
- <span data-ttu-id="3b0a7-110">智慧標籤的設計工具中的存留期保持附加至控制項執行個體，並永遠都可以使用。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-110">Smart tags remain attached to a control instance for its lifetime in the designer and are always available.</span></span>  
+ <span data-ttu-id="795f1-110">智慧標籤的設計工具中的存留期保持附加至控制項執行個體，並永遠都可以使用。</span><span class="sxs-lookup"><span data-stu-id="795f1-110">Smart tags remain attached to a control instance for its lifetime in the designer and are always available.</span></span>  
   
- <span data-ttu-id="3b0a7-111">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="3b0a7-111">Tasks illustrated in this walkthrough include:</span></span>  
+ <span data-ttu-id="795f1-111">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="795f1-111">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="3b0a7-112">建立 Windows Forms 專案</span><span class="sxs-lookup"><span data-stu-id="3b0a7-112">Creating a Windows Forms project</span></span>  
+-   <span data-ttu-id="795f1-112">建立 Windows Forms 專案</span><span class="sxs-lookup"><span data-stu-id="795f1-112">Creating a Windows Forms project</span></span>  
   
--   <span data-ttu-id="3b0a7-113">使用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="3b0a7-113">Using smart tags</span></span>  
+-   <span data-ttu-id="795f1-113">使用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="795f1-113">Using smart tags</span></span>  
   
--   <span data-ttu-id="3b0a7-114">啟用和停用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="3b0a7-114">Enabling and Disabling Smart Tags</span></span>  
+-   <span data-ttu-id="795f1-114">啟用和停用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="795f1-114">Enabling and Disabling Smart Tags</span></span>  
   
- <span data-ttu-id="3b0a7-115">完成後，您就會了解這些重要配置功能所扮演的角色。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-115">When you are finished, you will have an understanding of the role played by these important layout features.</span></span>  
+ <span data-ttu-id="795f1-115">完成後，您就會了解這些重要配置功能所扮演的角色。</span><span class="sxs-lookup"><span data-stu-id="795f1-115">When you are finished, you will have an understanding of the role played by these important layout features.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="3b0a7-116">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="3b0a7-117">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="3b0a7-118">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-118">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
+>  <span data-ttu-id="795f1-116">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="795f1-116">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="795f1-117">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="795f1-117">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="795f1-118">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="795f1-118">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
   
-## <a name="creating-the-project"></a><span data-ttu-id="3b0a7-119">建立專案</span><span class="sxs-lookup"><span data-stu-id="3b0a7-119">Creating the Project</span></span>  
- <span data-ttu-id="3b0a7-120">第一個步驟是建立專案並設定表單。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-120">The first step is to create the project and set up the form.</span></span>  
+## <a name="creating-the-project"></a><span data-ttu-id="795f1-119">建立專案</span><span class="sxs-lookup"><span data-stu-id="795f1-119">Creating the Project</span></span>  
+ <span data-ttu-id="795f1-120">第一個步驟是建立專案並設定表單。</span><span class="sxs-lookup"><span data-stu-id="795f1-120">The first step is to create the project and set up the form.</span></span>  
   
-#### <a name="to-create-the-project"></a><span data-ttu-id="3b0a7-121">若要建立專案</span><span class="sxs-lookup"><span data-stu-id="3b0a7-121">To create the project</span></span>  
+#### <a name="to-create-the-project"></a><span data-ttu-id="795f1-121">若要建立專案</span><span class="sxs-lookup"><span data-stu-id="795f1-121">To create the project</span></span>  
   
-1.  <span data-ttu-id="3b0a7-122">建立以 Windows 為基礎的應用程式專案，稱為 「 SmartTagsExample"(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-122">Create a Windows-based application project called "SmartTagsExample" (**File** > **New** > **Project** > **Visual C#** or **Visual Basic** > **Classic Desktop** > **Windows Forms Application**).</span></span>  
+1.  <span data-ttu-id="795f1-122">建立以 Windows 為基礎的應用程式專案，稱為 「 SmartTagsExample"(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。</span><span class="sxs-lookup"><span data-stu-id="795f1-122">Create a Windows-based application project called "SmartTagsExample" (**File** > **New** > **Project** > **Visual C#** or **Visual Basic** > **Classic Desktop** > **Windows Forms Application**).</span></span>  
   
-2.  <span data-ttu-id="3b0a7-123">選取中的表單**Windows Form 設計工具**。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-123">Select the form in the **Windows Forms Designer**.</span></span>  
+2.  <span data-ttu-id="795f1-123">選取中的表單**Windows Form 設計工具**。</span><span class="sxs-lookup"><span data-stu-id="795f1-123">Select the form in the **Windows Forms Designer**.</span></span>  
   
-## <a name="using-smart-tags"></a><span data-ttu-id="3b0a7-124">使用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="3b0a7-124">Using Smart Tags</span></span>  
- <span data-ttu-id="3b0a7-125">在設計階段，它們提供的控制項上，都可以使用智慧標籤。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-125">Smart tags are always available at design time on controls that offer them.</span></span>  
+## <a name="using-smart-tags"></a><span data-ttu-id="795f1-124">使用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="795f1-124">Using Smart Tags</span></span>  
+ <span data-ttu-id="795f1-125">在設計階段，它們提供的控制項上，都可以使用智慧標籤。</span><span class="sxs-lookup"><span data-stu-id="795f1-125">Smart tags are always available at design time on controls that offer them.</span></span>  
   
-#### <a name="to-use-smart-tags"></a><span data-ttu-id="3b0a7-126">若要使用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="3b0a7-126">To use smart tags</span></span>  
+#### <a name="to-use-smart-tags"></a><span data-ttu-id="795f1-126">若要使用智慧標籤</span><span class="sxs-lookup"><span data-stu-id="795f1-126">To use smart tags</span></span>  
   
-1.  <span data-ttu-id="3b0a7-127">拖曳<xref:System.Windows.Forms.TabControl>從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-127">Drag a <xref:System.Windows.Forms.TabControl> from the **Toolbox** onto your form.</span></span> <span data-ttu-id="3b0a7-128">請注意智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，會出現在並存的<xref:System.Windows.Forms.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-128">Note the smart-tag glyph (![Smart Tag Glyph](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) that appears on the side of the <xref:System.Windows.Forms.TabControl>.</span></span>  
+1.  <span data-ttu-id="795f1-127">拖曳<xref:System.Windows.Forms.TabControl>從**工具箱**拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="795f1-127">Drag a <xref:System.Windows.Forms.TabControl> from the **Toolbox** onto your form.</span></span> <span data-ttu-id="795f1-128">請注意智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，會出現在並存的<xref:System.Windows.Forms.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="795f1-128">Note the smart-tag glyph (![Smart Tag Glyph](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) that appears on the side of the <xref:System.Windows.Forms.TabControl>.</span></span>  
   
-2.  <span data-ttu-id="3b0a7-129">按一下智慧標籤圖像 （glyph）。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-129">Click the smart-tag glyph.</span></span> <span data-ttu-id="3b0a7-130">在字符旁邊會出現快顯功能表中，選取**加入索引標籤**項目。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-130">In the shortcut menu that appears next to the glyph, select the **Add Tab** item.</span></span> <span data-ttu-id="3b0a7-131">觀察新的索引標籤頁加入<xref:System.Windows.Forms.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-131">Observe that a new tab page is added to the <xref:System.Windows.Forms.TabControl>.</span></span>  
+2.  <span data-ttu-id="795f1-129">按一下智慧標籤圖像 （glyph）。</span><span class="sxs-lookup"><span data-stu-id="795f1-129">Click the smart-tag glyph.</span></span> <span data-ttu-id="795f1-130">在字符旁邊會出現快顯功能表中，選取**加入索引標籤**項目。</span><span class="sxs-lookup"><span data-stu-id="795f1-130">In the shortcut menu that appears next to the glyph, select the **Add Tab** item.</span></span> <span data-ttu-id="795f1-131">觀察新的索引標籤頁加入<xref:System.Windows.Forms.TabControl>。</span><span class="sxs-lookup"><span data-stu-id="795f1-131">Observe that a new tab page is added to the <xref:System.Windows.Forms.TabControl>.</span></span>  
   
-3.  <span data-ttu-id="3b0a7-132">從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-132">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
+3.  <span data-ttu-id="795f1-132">從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="795f1-132">Drag a <xref:System.Windows.Forms.TableLayoutPanel> control from the **Toolbox** onto your form.</span></span>  
   
-4.  <span data-ttu-id="3b0a7-133">按一下智慧標籤圖像 （glyph）。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-133">Click the smart-tag glyph.</span></span> <span data-ttu-id="3b0a7-134">在字符旁邊會出現快顯功能表中，選取**加入資料行**項目。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-134">In the shortcut menu that appears next to the glyph, select the **Add Column** item.</span></span> <span data-ttu-id="3b0a7-135">觀察出新的資料行已經新增到<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-135">Observe that a new column is added to the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
+4.  <span data-ttu-id="795f1-133">按一下智慧標籤圖像 （glyph）。</span><span class="sxs-lookup"><span data-stu-id="795f1-133">Click the smart-tag glyph.</span></span> <span data-ttu-id="795f1-134">在字符旁邊會出現快顯功能表中，選取**加入資料行**項目。</span><span class="sxs-lookup"><span data-stu-id="795f1-134">In the shortcut menu that appears next to the glyph, select the **Add Column** item.</span></span> <span data-ttu-id="795f1-135">觀察出新的資料行已經新增到<xref:System.Windows.Forms.TableLayoutPanel>控制項。</span><span class="sxs-lookup"><span data-stu-id="795f1-135">Observe that a new column is added to the <xref:System.Windows.Forms.TableLayoutPanel> control.</span></span>  
   
-5.  <span data-ttu-id="3b0a7-136">從 [工具箱] <xref:System.Windows.Forms.SplitContainer>**將** 控制項拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-136">Drag a <xref:System.Windows.Forms.SplitContainer> control from the **Toolbox** onto your form.</span></span>  
+5.  <span data-ttu-id="795f1-136">從 [工具箱] <xref:System.Windows.Forms.SplitContainer>**將** 控制項拖曳至表單。</span><span class="sxs-lookup"><span data-stu-id="795f1-136">Drag a <xref:System.Windows.Forms.SplitContainer> control from the **Toolbox** onto your form.</span></span>  
   
-6.  <span data-ttu-id="3b0a7-137">按一下智慧標籤圖像 （glyph）。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-137">Click the smart-tag glyph.</span></span> <span data-ttu-id="3b0a7-138">在字符旁邊會出現快顯功能表中，選取**水平分隔器方向**項目。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-138">In the shortcut menu that appears next to the glyph, select the **Horizontal splitter orientation** item.</span></span> <span data-ttu-id="3b0a7-139">觀察<xref:System.Windows.Forms.SplitContainer>控制的分隔器列現在是水平方向。</span><span class="sxs-lookup"><span data-stu-id="3b0a7-139">Observe that the <xref:System.Windows.Forms.SplitContainer> control's splitter bar is now oriented horizontally.</span></span>  
+6.  <span data-ttu-id="795f1-137">按一下智慧標籤圖像 （glyph）。</span><span class="sxs-lookup"><span data-stu-id="795f1-137">Click the smart-tag glyph.</span></span> <span data-ttu-id="795f1-138">在字符旁邊會出現快顯功能表中，選取**水平分隔器方向**項目。</span><span class="sxs-lookup"><span data-stu-id="795f1-138">In the shortcut menu that appears next to the glyph, select the **Horizontal splitter orientation** item.</span></span> <span data-ttu-id="795f1-139">觀察<xref:System.Windows.Forms.SplitContainer>控制的分隔器列現在是水平方向。</span><span class="sxs-lookup"><span data-stu-id="795f1-139">Observe that the <xref:System.Windows.Forms.SplitContainer> control's splitter bar is now oriented horizontally.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3b0a7-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3b0a7-140">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="795f1-140">另請參閱</span><span class="sxs-lookup"><span data-stu-id="795f1-140">See also</span></span>
+
 - <xref:System.Windows.Forms.TextBox>
 - <xref:System.Windows.Forms.TabControl>
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.ComponentModel.Design.DesignerActionList>
-- <span data-ttu-id="3b0a7-141">[逐步解說：將智慧標籤加入至 Windows Form 元件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="3b0a7-141">[Walkthrough: Adding Smart Tags to a Windows Forms Component](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))</span></span>
+- [<span data-ttu-id="795f1-141">逐步解說：將智慧標籤加入至 Windows Form 元件</span><span class="sxs-lookup"><span data-stu-id="795f1-141">Walkthrough: Adding Smart Tags to a Windows Forms Component</span></span>](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171829(v=vs.120))
