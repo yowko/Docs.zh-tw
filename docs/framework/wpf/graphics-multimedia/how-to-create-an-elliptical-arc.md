@@ -1,19 +1,19 @@
 ---
-title: HOW TO：建立橢圓弧形
+title: HOW TO：建立橢圓形弧線
 ms.date: 03/30/2017
 helpviewer_keywords:
 - graphics [WPF], elliptical arcs
 - elliptical arcs [WPF], creating
 - arcs [WPF], elliptical
 ms.assetid: 3dcfe502-3485-45de-99fb-d53a1367c484
-ms.openlocfilehash: bb4b4d99aab9daef70f446af176bb462b0661d54
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: aae304b9963f3a8e5833b4d8ba0a54777a750225
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354345"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183647"
 ---
-# <a name="how-to-create-an-elliptical-arc"></a>HOW TO：建立橢圓弧形
+# <a name="how-to-create-an-elliptical-arc"></a>HOW TO：建立橢圓形弧線
 此範例示範如何繪製橢圓形弧線。使用來建立橢圓形弧線<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.ArcSegment>類別。  
   
 ## <a name="example"></a>範例  
@@ -36,5 +36,6 @@ ms.locfileid: "57354345"
  這個範例是某完整範例的一部分。 如需完整的範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立二次方貝茲曲線](how-to-create-a-quadratic-bezier-curve.md)
 - [建立三次方貝茲曲線](how-to-create-a-cubic-bezier-curve.md)

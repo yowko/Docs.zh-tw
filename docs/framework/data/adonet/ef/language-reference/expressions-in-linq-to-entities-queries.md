@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
-ms.openlocfilehash: 6ec61a295f50fa64c484902ed811a627a22ee1c7
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 234b3059f9109c23b8ecae4da37e15f7f094fbd1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203232"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的運算式
 運算式是可以評估為單一值、物件、方法或命名空間的程式碼片段。 運算式可以包含常值、方法呼叫、運算子及其運算元，或是簡單名稱。 簡單名稱可以是變數、型別成員、方法參數、命名空間或型別的名稱。 運算式可以使用運算子 (後者又可能使用其他運算式當做參數) 或方法呼叫 (它的參數又可能是其他方法呼叫)。 因此，運算式可以很簡單，也可以非常複雜。  
@@ -37,4 +37,5 @@ ms.locfileid: "55828042"
  [關聯性、 導覽屬性和外部索引鍵](/ef/ef6/fundamentals/relationships)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)

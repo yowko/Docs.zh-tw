@@ -2,12 +2,12 @@
 title: 部分信任最佳做法
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
-ms.openlocfilehash: d63c9de4b1ea935b35f718056d191689f28c3813
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54640104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184076"
 ---
 # <a name="partial-trust-best-practices"></a>部分信任最佳做法
 在部分信任環境中執行 Windows Communication Foundation (WCF) 時，本主題會描述最佳作法。  
@@ -29,7 +29,7 @@ ms.locfileid: "54640104"
   
 -   負責處理序列化事件 (例如，`OnSerializing`, `OnSerialized`、`OnDeserializing`，和 `OnDeserialized`) 的方法必須宣告為公用。 但是，同時支援 <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> 的明確與隱含實作。  
   
--   在標示為 `[DataContract]` 的組件中實作的 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 型別不可以在型別建構函式中執行安全性相關動作，因為 <xref:System.Runtime.Serialization.DataContractSerializer> 不會在還原序列化期間呼叫新產生物件的建構函式。 具體來說，`[DataContract]` 型別必須避免使用下列常見的安全性技巧：  
+-   `[DataContract]` 組件中實作的型別標示<xref:System.Security.AllowPartiallyTrustedCallersAttribute>絕不能執行為的型別建構函式中的安全性相關動作<xref:System.Runtime.Serialization.DataContractSerializer>不會在還原序列化期間呼叫的新具現化物件的建構函式。 具體來說，`[DataContract]` 型別必須避免使用下列常見的安全性技巧：  
   
 -   藉由將型別建構函式標示為內部或私用來嘗試限制部分信任存取。  
   
@@ -66,5 +66,6 @@ ms.locfileid: "54640104"
  最佳做法是，避免呼叫 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.PermitOnly%2A> 或 <xref:System.Security.PermissionSet.Deny%2A> 來建立執行緒特定權限內容。 反之，應該針對應用程式本身授與或拒絕權限，這樣就不會需要 <xref:System.Security.PermissionSet.Assert%2A>、<xref:System.Security.PermissionSet.Deny%2A> 或 <xref:System.Security.PermissionSet.PermitOnly%2A>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Xml.Serialization.IXmlSerializable>

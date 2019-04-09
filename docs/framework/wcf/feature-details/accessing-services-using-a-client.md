@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 03b37dae72be0ffa589159b2aedc2ac16e35139e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194522"
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、 設定及使用 WCF 用戶端或通道物件來與服務通訊。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件 」 和 「 建立基本的用戶端和通道物件，並運用所需的步驟的概觀。  
   
  本主題會就用戶端應用程式以及在不同案例下可能有用的用戶端和通道物件，提供一些相關問題的深入資訊。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  本主題將說明下列項目的相關行為和問題：  
   
 -   通道和工作階段存留期 (Lifetime)。  
@@ -43,7 +43,7 @@ ms.locfileid: "54583203"
  根據預設，大部分系統提供的繫結 (會將通道公開至應用程式層) 都會使用工作階段，但 <xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType> 則不會。 如需詳細資訊，請參閱 <<c0> [ 使用工作階段的](../../../../docs/framework/wcf/using-sessions.md)。  
   
 ### <a name="the-proper-use-of-sessions"></a>工作階段的正確用法  
- 工作階段會提供特定方式來瞭解整個訊息交換是否已經完成，以及兩端是否都認為此工作階段成功。 建議由呼叫應用程式在一個 try 區塊中開啟通道、使用通道，以及關閉通道。 如果工作階段通道已開啟，而呼叫一次 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 方法後有成功傳回該呼叫，就表示工作階段成功。 在這個案例中所謂的成功，是指所有傳遞可保證已達成指定的繫結，而且另一端在呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> 之前並沒有呼叫通道上的 <xref:System.ServiceModel.ICommunicationObject.Close%2A>。  
+ 工作階段會提供特定方式來瞭解整個訊息交換是否已經完成，以及兩端是否都認為此工作階段成功。 建議由呼叫應用程式在一個 try 區塊中開啟通道、使用通道，以及關閉通道。 如果工作階段通道已開啟，而呼叫一次 <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 方法後有成功傳回該呼叫，就表示工作階段成功。 在這個案例中所謂的成功，是指所有傳遞可保證已達成指定的繫結程序，而且另一端在呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A?displayProperty=nameWithType> 之前並沒有呼叫通道上的 <xref:System.ServiceModel.ICommunicationObject.Close%2A>。  
   
  下列章節將提供這個用戶端方法的範例。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54583203"
  如需更完整的應用程式層級資訊時發生錯誤有關的詳細資訊，請[指定及處理合約和服務中的錯誤](../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。 [預期的例外狀況](../../../../docs/framework/wcf/samples/expected-exceptions.md)說明預期的例外狀況，並示範如何處理它們。 如需如何開發通道時處理錯誤的詳細資訊，請參閱[處理的例外狀況和錯誤](../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)。  
   
 ### <a name="client-blocking-and-performance"></a>用戶端封鎖和效能  
- 當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式以同步方式叫用 WCF 用戶端物件或通道上的作業時，直到通道層可以將資料寫入至網路，或直到發生例外狀況時，不會傳回用戶端。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 如需詳細資訊，請參閱 <<c0> [ 單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
+ 當應用程式同步呼叫要求-回覆作業時，除非有收到傳回值或擲回例外狀況 (例如 <xref:System.TimeoutException?displayProperty=nameWithType>)，否則用戶端會封鎖。 這個行為類似本機行為。 當應用程式以同步方式叫用 WCF 用戶端物件或通道上的作業時，直到通道層可以將資料寫入至網路，或直到發生例外狀況時，不會傳回用戶端。 雖然單向訊息交換模式 (指定方式是標示作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 設定為 `true`) 可以讓某些用戶端更能有效回應，但單向作業也會根據繫結程序和已經傳送的訊息來執行封鎖。 單向作業只能進行訊息交換，無法執行其他作業。 如需詳細資訊，請參閱 <<c0> [ 單向服務](../../../../docs/framework/wcf/feature-details/one-way-services.md)。  
   
  不論在何種訊息交換模式下，大型資料區塊都會減慢用戶端的處理速度。 若要了解如何處理這些問題，請參閱[Large Data and Streaming](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)。  
   
@@ -94,10 +94,11 @@ ms.locfileid: "54583203"
  使用隱含方式的應用程式會叫用使用者介面初始設定式，但若應用程式的使用者無法在繫結的傳送逾時期限之內回應，當使用者介面傳回時就會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [雙工服務](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [如何：存取服務使用單向和要求-回覆合約](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [如何：Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [如何：存取 WSE 3.0 服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [如何：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [HOW TO：使用單向和要求-回覆合約來存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [HOW TO：使用雙面合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [HOW TO：存取 WSE 3.0 服務](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [HOW TO：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [HOW TO：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [中介層用戶端應用程式](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

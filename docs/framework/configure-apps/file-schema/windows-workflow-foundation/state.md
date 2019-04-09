@@ -3,12 +3,12 @@ title: <state>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 619414f2-61c2-4427-9977-d05009e343db
-ms.openlocfilehash: 38b0522b93c051473d7cdc28ae955cc3b7b58efe
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6f1a9474f3f12005df364a6fb84dc63aa1b68e04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108159"
 ---
 # <a name="state"></a>\<state>
 表示建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態集合。  
@@ -49,7 +49,7 @@ ms.locfileid: "55287231"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|字串，可指定建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態。|  
+|名稱|字串，可指定建立追蹤記錄時，追蹤的工作流程執行個體中的訂閱狀態。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -65,7 +65,7 @@ ms.locfileid: "55287231"
   
  下表說明可能的狀態值。  
   
-|狀態|描述|  
+|狀況|描述|  
 |-----------|-----------------|  
 |已中止|工作流程執行個體已中止。|  
 |已完成|工作流程執行個體已完成。|  
@@ -73,11 +73,11 @@ ms.locfileid: "55287231"
 |閒置|工作流程執行個體閒置中。|  
 |已保存|工作流程執行個體已保存。|  
 |已繼續|工作流程執行個體已繼續。|  
-|已啟動|工作流程執行個體已啟動。|  
+|自|工作流程執行個體已啟動。|  
 |未處理的例外狀況|工作流程執行個體發生未處理的例外狀況。|  
-|Unloaded|工作流程執行個體已卸載。|  
+|已卸載|工作流程執行個體已卸載。|  
 |已取消|工作流程執行個體已取消。|  
-|暫停|工作流程執行個體已暫停。|  
+|擱置|工作流程執行個體已暫停。|  
 |已終止|工作流程執行個體已終止。|  
 |Unsuspended|工作流程執行個體已取消暫停。|  
   
@@ -95,8 +95,9 @@ ms.locfileid: "55287231"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.WorkflowInstanceQueryElement?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.WorkflowInstanceQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

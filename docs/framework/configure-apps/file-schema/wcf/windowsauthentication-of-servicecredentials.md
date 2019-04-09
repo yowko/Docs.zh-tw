@@ -2,12 +2,12 @@
 title: <windowsAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: e0709473-0997-4de3-8f49-783527309a48
-ms.openlocfilehash: f366c85f895356594cf8bd9049ca41c8fb458c4c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ffddbae7effabcdafdc2638d588bbbf3e42d2c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280953"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200385"
 ---
 # <a name="windowsauthentication-of-servicecredentials"></a>\<windowsAuthentication> of \<serviceCredentials>
 指定 Windows 服務認證的設定。  
@@ -49,6 +49,7 @@ ms.locfileid: "55280953"
  使用此項目並藉由設定 `allowAnonymousLogons` 屬性，指定是否允許匿名 Windows 使用者存取。 您也可以藉由設定 `includeWindowsGroups` 屬性，指定是否要在 AuthorizationContext 中包含使用者所屬群組的資訊。 如果該屬性設為 `true` (預設值)，服務就可以判斷用戶端屬於哪個 Windows 群組。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.WindowsServiceElement>
 - <xref:System.ServiceModel.Configuration.ServiceCredentialsElement.WindowsAuthentication%2A>
 - <xref:System.ServiceModel.Description.ServiceCredentials.WindowsAuthentication%2A>

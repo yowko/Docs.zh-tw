@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: ad6442f6-1a9d-43b6-b733-04ac1b7f9b82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ec72b1a1e3a2526dfb52f562be9fe92c677747ec
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 6a4741c6a4745bdba00fdb525b39b70d0b15e005
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109444"
 ---
 # <a name="qualifyassembly-element"></a>\<qualifyAssembly > 項目
 指定應該在使用部分名稱時以動態方式載入的組件的完整名稱。  
@@ -76,6 +76,7 @@ ms.locfileid: "55674668"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [執行階段如何找出組件](../../../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [部分組件參考](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/0a7zy9z5(v=vs.100))

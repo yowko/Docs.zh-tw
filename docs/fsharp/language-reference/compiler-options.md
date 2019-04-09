@@ -2,22 +2,19 @@
 title: 編譯器選項
 description: 使用F#編譯器的命令列選項，以控制編譯您F#應用程式和程式庫。
 ms.date: 12/10/2018
-ms.openlocfilehash: d8e4331bcacd7082d7560ddc6fcadb4ce2b61cf8
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "53614489"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089753"
 ---
 # <a name="compiler-options"></a>編譯器選項
 
 本主題描述編譯器命令列選項F#編譯器、 fsc.exe。 此編譯環境也可以藉由設定專案屬性來控制。
 
-
 ## <a name="compiler-options-listed-alphabetically"></a>依字母順序排列的編譯器選項
 下表顯示依字母順序排列的編譯器選項。 某些F#編譯器選項會類似於C#編譯器選項。 如果這種情況下，將C#編譯器選項主題會提供。
-
-
 
 |編譯器選項|描述|
 |---------------|-----------|

@@ -2,12 +2,12 @@
 title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
-ms.openlocfilehash: b1de2a304a5dc4295497ea1f3b395240cb5ca9bc
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e2ce2111e4bb26cc6a51b4a772b1d8a4d3238c70
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200762"
 ---
 # <a name="privacynoticeat"></a>\<privacyNoticeAt>
 表示組態項目，指定用於 `wsFederationHttp` 繫結中的隱私權注意事項。  
@@ -48,6 +48,7 @@ ms.locfileid: "55254908"
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.PrivacyNoticeElement>
 - <xref:System.ServiceModel.Channels.PrivacyNoticeBindingElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>

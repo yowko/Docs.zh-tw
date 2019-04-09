@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data serialization [WCF]
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
-ms.openlocfilehash: 5192030fa2eda45431dd8a3765603d3081b93fa3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088401"
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
 在連線系統中，服務與用戶端會仰賴資料交換來完成任何工作。 身為開發人員的服務或用戶端中，您也必須了解 Windows Communication Foundation (WCF) 如何處理資料與資料序列化以建立有效率且容易維護的應用程式。  
@@ -37,7 +37,7 @@ ms.locfileid: "54595314"
  [篩選](../../../../docs/framework/wcf/feature-details/filtering.md)  
  說明可依據不同準則對訊息進行前置處理的篩選功能。  
   
- [大型資料和資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [大型資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  說明如何傳送大型資料區塊，例如二進位檔。  
   
  [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
@@ -61,5 +61,6 @@ ms.locfileid: "54595314"
  [擴充編碼器與序列化程式](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [服務版本設定](../../../../docs/framework/wcf/service-versioning.md)
+- [服務版本控制](../../../../docs/framework/wcf/service-versioning.md)

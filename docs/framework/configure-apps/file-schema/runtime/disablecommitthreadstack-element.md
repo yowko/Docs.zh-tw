@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5071b2c23b25d6368c84582b76c1f8d18e2a3dff
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257508"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106505"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 項目
 指定是否在執行緒啟動時認可完整執行緒堆疊。  
@@ -74,5 +74,6 @@ ms.locfileid: "55257508"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

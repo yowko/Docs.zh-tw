@@ -9,12 +9,12 @@ helpviewer_keywords:
 - administration [WCF]
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
-ms.openlocfilehash: 8ec59ef316bfa19046082a8ee0a4052c69d5c323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092276"
 ---
 # <a name="administration-and-diagnostics"></a>管理與診斷
 Windows Communication Foundation (WCF) 提供一組豐富的功能，可協助您監視應用程式的生命週期的不同階段。 例如，您可以使用組態在部署時設定服務與用戶端。 WCF 包含大量的效能計數器，可協助您測量應用程式的效能。 WCF 也會公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。 當應用程式遭遇失敗或開始發生異常行為時，您可以使用事件日誌檢查是否發生任何顯著的事件。 您也可以使用訊息記錄與追蹤檢查在應用程式中端對端之間發生的事件。 這些功能可協助開發人員和 IT 專業人員疑難排解 WCF 應用程式，當它的行為不正確。  
@@ -40,12 +40,13 @@ Windows Communication Foundation (WCF) 提供一組豐富的功能，可協助�
  WCF 也提供許多可讓您更輕鬆地建立、 部署和管理 WCF 應用程式 GUI 和命令列工具。 如需詳細資訊，請參閱 < [Windows Communication Foundation 工具](../../../../docs/framework/wcf/tools.md)。 例如，您可以使用[組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)來建立和編輯 WCF 組態設定，使用精靈，而不直接編輯 XML。 您也可以使用[Service Trace Viewer Tool (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)若要檢視、 分組和篩選追蹤訊息，以便您可以診斷、 修復，並確認與 WCF 服務的問題。  
   
 ## <a name="see-also"></a>另請參閱
-- [設定應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+
+- [設定您的應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
 - [部署服務](../../../../docs/framework/wcf/diagnostics/deploying-services.md)
 - [例外狀況參考](../../../../docs/framework/wcf/diagnostics/exceptions-reference/index.md)
 - [事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)
 - [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)
-- [設定編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [組態編輯器工具 (SvcConfigEditor.exe)](../../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [ServiceModel 註冊工具](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [追蹤](../../../../docs/framework/wcf/diagnostics/tracing/index.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
-ms.openlocfilehash: c78f608225d64a428b768fbc8d03f71a393d980d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096988"
 ---
 # <a name="deferred-versus-immediate-loading"></a>延後和立即載入的比較
 當您查詢物件時，實際上只擷取了所要求的物件。 *相關*物件不會自動擷取一次。 (如需詳細資訊，請參閱 <<c0> [ 跨關聯性查詢](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)因為嘗試存取相關物件會產生對相關物件進行擷取的要求，所以您看不到相關物件尚未載入的事實。  
@@ -34,4 +34,5 @@ ms.locfileid: "54516963"
 -   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> 方法，可以篩選針對特定關聯性 (Relationship) 所擷取的物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)

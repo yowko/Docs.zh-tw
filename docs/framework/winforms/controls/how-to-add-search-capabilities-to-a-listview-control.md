@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將搜尋功能加入至 ListView 控制項
+title: HOW TO：將搜尋功能新增至 ListView 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding search capabilities
 - searching [Windows Forms], adding search capabilities to ListView control
 ms.assetid: 557782d9-b705-4bab-b496-9938afddac82
-ms.openlocfilehash: c25349d4ab981d422ade93944f709c3068a7aba9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c1c59c3d4bb5d0d35103371575ebdd49d3559bbe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722357"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108546"
 ---
-# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>HOW TO：將搜尋功能加入至 ListView 控制項
+# <a name="how-to-add-search-capabilities-to-a-listview-control"></a>HOW TO：將搜尋功能新增至 ListView 控制項
 使用大型清單中的項目時，有時候<xref:System.Windows.Forms.ListView>控制項，您想要提供給使用者的搜尋功能。 <xref:System.Windows.Forms.ListView>控制兩個不同的方式提供這項功能： 文字比對和搜尋的位置。  
   
  <xref:System.Windows.Forms.ListView.FindItemWithText%2A>方法可讓您執行文字搜尋<xref:System.Windows.Forms.ListView>在清單或詳細資料檢視中，指定搜尋字串和選擇性開始和結束索引。 相反地，<xref:System.Windows.Forms.ListView.FindNearestItem%2A>方法可讓您尋找中的項目<xref:System.Windows.Forms.ListView>在圖示或圖格檢視中，指定一組 x 和 y 座標和要搜尋的方向。  
@@ -48,9 +48,10 @@ ms.locfileid: "57722357"
  [!code-vb[System.Windows.Forms.ListViewFindItems#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewFindItems/VB/form1.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.FindItemWithText%2A>
 - <xref:System.Windows.Forms.ListView.FindNearestItem%2A>
 - [ListView 控制項](listview-control-windows-forms.md)
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
-- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [HOW TO：使用 Windows Forms ListView 控制項新增和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：判斷格式化 Windows Forms RichTextBox 控制項中的屬性變更時
+title: HOW TO：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e463ac0fd77a31e4e11cb440f64ec0d4694af61f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e35ebb7c90be00a814d465af3546de2bcd11c5de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183935"
 ---
-# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>HOW TO：判斷格式化 Windows Forms RichTextBox 控制項中的屬性變更時
+# <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>HOW TO：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
 Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項正在格式化文字的字型選項或段落樣式等屬性。 您的應用程式可能需要追蹤的文字格式設定用來顯示工具列，就像許多文書處理應用程式中的任何變更。  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>若要回應的格式屬性變更  
@@ -81,7 +81,8 @@ Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項正�
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.RichTextBox.SelectionChanged>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

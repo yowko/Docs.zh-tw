@@ -10,18 +10,16 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: f1d31a5916f0c2a1763d8f24076ae7c1000a8296
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376363"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108962"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>初始化物件樹狀結構以外的物件項目
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 初始化的某些層面會延後處理，因為這些處理通常需要將該項目連接到邏輯樹狀結構或視覺化樹狀結構。 本主題說明為了初始化未連接到任一樹狀結構的項目所需的步驟。  
-  
- 
-  
+
 ## <a name="elements-and-the-logical-tree"></a>項目和邏輯樹狀結構  
  當您在程式碼中建立 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的執行個體時，您應該注意到 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的物件初始化有幾個層面刻意不屬於呼叫類別建構函式時所執行的程式碼。 特別是控制項類別，該控制項的視覺表示大部分不是由建構函式定義， 而是由控制項的範本來定義視覺表示。 範本可能來自各種不同的來源，但最常會從佈景主題樣式取得範本。 範本實際上是晚期繫結；必須等到相關控制項可以開始配置之後，才能將所需的範本附加至該控制項。 此外，控制項必須等到附加至連接到根目錄之呈現介面的邏輯樹狀結構之後，才能開始配置。 根層級項目會依照邏輯樹狀結構中的定義，來啟始其所有子項目的呈現。  
   
@@ -43,6 +41,7 @@ ms.locfileid: "57376363"
  [!code-vb[InitializeElements#Main](~/samples/snippets/visualbasic/VS_Snippets_Wpf/InitializeElements/VisualBasic/initializeelements.vb#main)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF 中的樹狀結構](trees-in-wpf.md)
 - [WPF 圖形轉譯概觀](../graphics-multimedia/wpf-graphics-rendering-overview.md)
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
-ms.openlocfilehash: 4119a762bd0db63108d08a9db9367e367adb6b58
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372083"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109040"
 ---
 # <a name="how-to-create-a-routedcommand"></a>HOW TO：建立 RoutedCommand
 此範例示範如何建立自訂<xref:System.Windows.Input.RoutedCommand>以及如何實作自訂的命令，藉由建立<xref:System.Windows.Input.ExecutedRoutedEventHandler>並<xref:System.Windows.Input.CanExecuteRoutedEventHandler>並將它們以連結<xref:System.Windows.Input.CommandBinding>。  如需有關命令的詳細資訊，請參閱 <<c0> [ 命令概觀](commanding-overview.md)。  
@@ -48,5 +48,6 @@ ms.locfileid: "57372083"
  按一下按鈕時，<xref:System.Windows.Input.RoutedCommand.Execute%2A>上的自訂方法<xref:System.Windows.Input.RoutedCommand>呼叫。  <xref:System.Windows.Input.RoutedCommand>引發<xref:System.Windows.Input.CommandManager.PreviewExecuted>和<xref:System.Windows.Input.CommandManager.Executed>路由事件。  這些事件會周遊元素樹狀結構以尋找<xref:System.Windows.Input.CommandBinding>這個特定的命令。  如果<xref:System.Windows.Input.CommandBinding>找到，則<xref:System.Windows.Input.ExecutedRoutedEventHandler>聯<xref:System.Windows.Input.CommandBinding>呼叫。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Input.RoutedCommand>
 - [命令概觀](commanding-overview.md)

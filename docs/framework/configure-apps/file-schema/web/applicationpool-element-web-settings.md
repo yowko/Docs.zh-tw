@@ -1,16 +1,16 @@
 ---
-title: <applicationPool> 項目 (Web 設定)
+title: <applicationPool> 項目 （Web 設定）
 ms.date: 03/30/2017
 helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: a9c81d98a5e531eaa547614c4d236b6c84526398
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758270"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184726"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 項目 （Web 設定）
 指定 asp.net 用於 ASP.NET 應用程式上執行整合模式中時，管理整個處理序行為的組態設定[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]或更新版本。  
@@ -95,4 +95,5 @@ ms.locfileid: "55758270"
 |可以是空白||  
   
 ## <a name="see-also"></a>另請參閱
-- [\<system.web> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)
+
+- [\<system.web > 項目 （Web 設定）](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)

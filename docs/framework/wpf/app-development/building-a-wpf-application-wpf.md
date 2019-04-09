@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: d60b6babebd69e45335ab4c12cb797126ec6b6a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184479"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可執行檔 (.exe)、 程式庫 (.dll) 或這兩種類型的組件的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
-  
-  
+
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>建置 WPF 應用程式  
  WPF 應用程式可透過下列方式編譯：  
@@ -102,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>標記編譯 - 第二階段  
- 並非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面都會在第一階段的標記編譯進行編譯。 已在本機定義類型參考 (相同專案中任何地方之程式碼中所定義的類型參考) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案就不是在此時編譯。 這是因為這些本機定義的類型只存在於來源中，而且尚未經過編譯。 為了判斷此情況，剖析器會使用牽涉到在標記檔案中尋找 `x:Name` 等項目的啟發方式。 找到這類執行個體之後，就會將標記檔案的編譯延後到程式碼檔編譯完成，在那之後，第二階段的標記編譯才會處理這些檔案。  
+ 並非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面都會在第一階段的標記編譯進行編譯。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 具有本機定義之類型參考 （參考相同專案中的其他地方的程式碼中定義的類型） 的檔案會豁免於這一次的編譯。 這是因為這些本機定義的類型只存在於來源中，而且尚未經過編譯。 為了判斷此情況，剖析器會使用牽涉到在標記檔案中尋找 `x:Name` 等項目的啟發方式。 找到這類執行個體之後，就會將標記檔案的編譯延後到程式碼檔編譯完成，在那之後，第二階段的標記編譯才會處理這些檔案。  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>檔案分類  
@@ -167,6 +166,7 @@ End Sub
 -   不重新編譯任何項目 (如果專案中沒有任何變更)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)
 - [WPF MSBuild 參考](/visualstudio/msbuild/wpf-msbuild-reference)
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)

@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: a78c84e82ac8507ad40cf3a9fdb44d58858a38d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089156"
 ---
 # <a name="types-of-bitmaps"></a>點陣圖類型
 點陣圖會指定每個像素色彩的像素矩形陣列中的位元陣列。 組成個別像素的位元數目會決定可以指派給該像素的色彩數目。 比方說，如果每個像素 4 個位元來表示，然後指定像素可以指派其中一個 16 不同的色彩 (2 ^4 = 16 個)。 下表顯示一些範例可以指派給像素，以表示指定之位元數的色彩數目。  
@@ -86,6 +86,7 @@ ms.locfileid: "57713211"
  TIFF 是富彈性且可擴充的格式支援的各種不同的平台和映像處理的應用程式。 TIFF 檔案可以儲存任意數目的每個像素的位元映像，而且可以利用各種不同的壓縮演算法。 數個映像可以儲存在單一、 多頁的 TIFF 檔中。 映像 （掃描器製作，主機電腦，類型壓縮、 方向、 每像素，並依此類推樣本） 相關的資訊可以儲存在檔案中，並透過標記使用排列。 可以擴充 TIFF 格式，視需要加入新的標記與核准。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Image?displayProperty=nameWithType>
 - <xref:System.Drawing.Bitmap?displayProperty=nameWithType>
 - <xref:System.Drawing.Imaging.PixelFormat?displayProperty=nameWithType>

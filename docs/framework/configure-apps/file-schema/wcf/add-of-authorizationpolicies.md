@@ -2,12 +2,12 @@
 title: <add> 的 <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
-ms.openlocfilehash: 6a1a7d6b1ef9732e015536d8a78c058fe348113f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 532f7f1a74cb3af24d7a1bc26046be901f3cf025
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205234"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<add> of \<authorizationPolicies>
 指定用於宣告轉換的驗證原則。  
@@ -52,6 +52,7 @@ ms.locfileid: "55255493"
  每個授權原則包含一個必要的 `policyType` 屬性字串。 該屬性會指定授權原則，可讓一組輸入宣告轉換成另一組宣告。 它可以做為授與或拒絕存取控制 (Access Control) 的基礎。 如需有關授權原則的運作方式的詳細資訊，請參閱<xref:System.IdentityModel.Policy.IAuthorizationPolicy>並[授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ServiceAuthorizationElement>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
@@ -60,6 +61,6 @@ ms.locfileid: "55255493"
 - <xref:System.ServiceModel.Configuration.AuthorizationPolicyTypeElementCollection>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - [授權存取服務作業](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [如何：建立自訂授權管理員服務](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [HOW TO：為服務建立自訂授權管理員](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-authorizationpolicies.md)
 - [授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)

@@ -2,12 +2,12 @@
 title: 與 ASP.NET Web 服務的互通性
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: 3d4416a67d467f60fa381abc648c3a7ea0b9ada1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108572"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>與 ASP.NET Web 服務的互通性
 之間的互通性[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]可藉由確保服務使用這兩種技術實作符合 ws-i Web 服務和 Windows Communication Foundation (WCF) Web 服務-Basic Profile 1.1 規格。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web 服務符合 WS-Basic Profile 1.1 會使用 WCF 系統提供繫結，與 WCF 用戶端互通<xref:System.ServiceModel.BasicHttpBinding>。  
@@ -56,4 +56,5 @@ public class Service : IEcho
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：設定 WCF 服務與 ASP.NET Web 服務用戶端交互操作](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)
+
+- [HOW TO：將 WCF 服務設為與 ASP.NET Web 服務用戶端交互操作](../../../../docs/framework/wcf/feature-details/config-wcf-service-with-aspnet-web-service.md)

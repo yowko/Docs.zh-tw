@@ -2,12 +2,12 @@
 title: <reliableSession>
 ms.date: 03/30/2017
 ms.assetid: 129b4a59-37f0-4030-b664-03795d257d29
-ms.openlocfilehash: add69cfe1503c5ab78640cebc7c241a1f93b364f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 324c46d88d084605dc2b873c65d2a7e7c7a2c4fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188379"
 ---
 # <a name="reliablesession"></a>\<reliableSession>
 定義 WS-Reliable 訊息設定。 將這個項目新增至自訂繫結時，產生的通道可支援確實傳送一次保證。  
@@ -44,11 +44,11 @@ ms.locfileid: "55283669"
 |maxPendingChannels|整數，指定可以在接聽程式上等待接受的通道數目上限。 這個值應介於 1 到 16384 之間 (含 1 和 16384)。 預設值為 4。<br /><br /> 通道在等待接受時會暫止。 一旦到達該限制，便不會建立通道。 通道反而會處於暫止模式，直到這個數字藉由接受暫止通道下降為止。 這是一項原廠限制。<br /><br /> 如果到達臨界值，而且遠端應用程式嘗試建立新的可靠工作階段，則要求會被拒絕，提示這個要求的開啟作業也會發生錯誤。 這項限制不適用於暫止傳出通道的數目。|  
 |maxRetryCount|整數，藉由針對可靠通道的基礎通道呼叫 Send，指定可靠通道嘗試重新傳輸其未收到認可之訊息的次數上限。<br /><br /> 這個值應大於零。 預設值為 8。<br /><br /> 這個值應為大於零的整數。 如果在最後一次重新傳輸後仍未收到認可，則通道會發生錯誤。<br /><br /> 如果收件者已認可該處的訊息傳遞，則訊息會視為要傳輸的訊息。<br /><br /> 如果在特定一段時間內沒有收到已傳輸之訊息的認可，則基礎結構會自動重新傳輸該訊息。 基礎結構會嘗試重新傳送該訊息達這個屬性所指定的最多次數。 如果在最後一次重新傳輸後仍未收到認可，則通道會發生錯誤。<br /><br /> 基礎結構會使用指數倒退演算法，根據計算出來的平均來回時間決定何時重新傳輸。 經過之後就重新傳輸訊息的時間起初從 1 秒開始，延遲時間也會隨著每次嘗試重新傳輸而加倍，因此第一次重新傳輸嘗試到最後一次重新傳輸嘗試之間會經過約 8.5 分鐘。 第一次嘗試重新傳輸的時間會根據計算出來的來回時間調整，這些嘗試所花費的時間也會因此而有所不同。 如此便可讓重新傳輸時間透過動態的方式適應多變的網路狀況。|  
 |maxTransferWindowSize|指定緩衝區大小上限的整數。 有效值為 1 到 4096 (含 1 和 4096)。<br /><br /> 在用戶端上，這個屬性會定義可靠通道用來保留收件者尚未認可之訊息的緩衝區大小上限。 配額是以訊息做為單位計算。 如果緩衝區已滿，則會封鎖其他 SEND 作業。<br /><br /> 在接收者上，這個屬性會定義通道用來存放尚未分派到應用程式之傳入訊息的最大緩衝區大小。 如果緩衝區已滿，接收者會在沒有通知的情況下捨棄其他訊息，而且需要用戶端重新傳輸訊息。|  
-|ordered|布林值，指定是否保證訊息以傳送時的順序到達。 如果這個設定為 `false`，則訊息可以不按照順序到達。 預設為 `true`。|  
+|排序|布林值，指定是否保證訊息以傳送時的順序到達。 如果這個設定為 `false`，則訊息可以不按照順序到達。 預設為 `true`。|  
 |reliableMessagingVersion|<xref:System.ServiceModel.ReliableMessagingVersion> 中的有效值，指定要使用的 WS-ReliableMessaging 版本。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -120,6 +120,7 @@ ms.locfileid: "55283669"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ReliableSessionElement>
 - <xref:System.ServiceModel.Channels.CustomBinding>
 - <xref:System.ServiceModel.Channels.ReliableSessionBindingElement>

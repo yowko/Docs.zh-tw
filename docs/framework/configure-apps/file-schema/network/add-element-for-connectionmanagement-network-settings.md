@@ -1,5 +1,5 @@
 ---
-title: connectionManagement 的 <add> 項目 (網路設定)
+title: <add> ConnectionManagement （網路設定） 的項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - add element, connectionManagement
 - connectionManagement, add element
 ms.assetid: 856bf57d-1c63-46c7-a178-03d97b0a4149
-ms.openlocfilehash: a7a4cfe952a32c859a113f0903696fec3681f800
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 3a046fd386536b29ea2dcad5660c65c08b7e4478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267614"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204246"
 ---
 # <a name="add-element-for-connectionmanagement-network-settings"></a>\<新增 > connectionManagement （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入連線管理清單中。  
@@ -49,7 +49,7 @@ ms.locfileid: "55267614"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[connectionManagement](../../../../../docs/framework/configure-apps/file-schema/network/connectionmanagement-element-network-settings.md)|指定連接至網路主機的連線數目上限。|  
   
@@ -76,6 +76,7 @@ ms.locfileid: "55267614"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.ServicePoint>
 - <xref:System.Net.ServicePointManager>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

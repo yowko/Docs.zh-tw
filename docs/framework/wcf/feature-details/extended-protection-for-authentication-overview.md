@@ -2,12 +2,12 @@
 title: 驗證的延伸保護概觀
 ms.date: 03/30/2017
 ms.assetid: 3d2ceffe-a7bf-4bd9-a5a2-9406423bd7f8
-ms.openlocfilehash: 5eb9e07bfd80e325a5223e6a7c6108134c4a3faa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b171644c3869df119f09ee4815a06563c4f2c160
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54647801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183673"
 ---
 # <a name="extended-protection-for-authentication-overview"></a>驗證的延伸保護概觀
 驗證的延伸保護有助於防範中間人 (MITM) 攻擊，以免用戶端的認證遭攻擊者攔截後再轉送至伺服器。  
@@ -24,7 +24,7 @@ ms.locfileid: "54647801"
   
  伺服器可以具備下列保護層級：  
   
--   無。 未執行通道繫結驗證。 此乃所有未更新之伺服器的行為。  
+-   無。 未執行通道繫結程序驗證。 此乃所有未更新之伺服器的行為。  
   
 -   部分。 所有已更新的用戶端都必須向伺服器提供通道繫結資訊。 尚未更新的用戶端則沒有這個必要。 此乃顧及應用程式相容性的中繼選項。  
   
@@ -33,4 +33,5 @@ ms.locfileid: "54647801"
  如需詳細資訊，請參閱「Win7 CBT/延伸保護」範例。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

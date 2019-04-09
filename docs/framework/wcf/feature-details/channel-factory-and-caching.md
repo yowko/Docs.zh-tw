@@ -2,17 +2,17 @@
 title: 通道處理站和快取
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
-ms.openlocfilehash: 055c9d1412338bb444ca33556f3c94b1ffc4c6a7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106453"
 ---
 # <a name="channel-factory-and-caching"></a>通道處理站和快取
 WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立與 WCF 服務的通訊通道。  建立 <xref:System.ServiceModel.ChannelFactory%601> 執行個體會產生額外負荷，因為這涉及到下列作業：  
   
--   建構 <xref:System.ServiceModel.Description.ContractDescription> 樹狀結構  
+-   建構 <xref:System.ServiceModel.Description.ContractDescription> 樹狀  
   
 -   反映所有必要的 CLR 型別  
   
@@ -25,7 +25,7 @@ WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601>
 > [!TIP]
 >  直接使用 <xref:System.ServiceModel.ChannelFactory%601> 類別時，您可以直接控制通道處理站的建立作業。  
   
- WCF 用戶端 proxy 產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)衍生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 會定義用於定義通道處理站快取行為的靜態 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 屬性。 快取設定會針對特定類型來設定。 例如，設定`ClientBase<ITest>.CacheSettings`其中一個下面定義的值將會影響只有那些 proxy/ClientBase 型別的`ITest`。 第一個 Proxy/ClientBase 執行個體一經建立，特定 <xref:System.ServiceModel.ClientBase%601> 的快取設定就會是不可變的。  
+ WCF 用戶端 proxy 產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)衍生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 定義靜態<xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>定義通道處理站快取行為的屬性。 快取設定會針對特定類型來設定。 例如，設定`ClientBase<ITest>.CacheSettings`其中一個下面定義的值將會影響只有那些 proxy/ClientBase 型別的`ITest`。 第一個 Proxy/ClientBase 執行個體一經建立，特定 <xref:System.ServiceModel.ClientBase%601> 的快取設定就會是不可變的。  
   
 ## <a name="specifying-caching-behavior"></a>指定快取行為  
  快取行為是藉由將 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 屬性設定為下列其中一個值所指定。  
@@ -112,8 +112,9 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
  在上述範例中，`TestClient` 的所有執行個體都會使用不同的通道處理站。 當每個端點各有不同的安全性需求，而進行快取沒有意義時，這種方式非常有用。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.ClientBase%601>
 - [建置用戶端](../../../../docs/framework/wcf/building-clients.md)
 - [用戶端](../../../../docs/framework/wcf/feature-details/clients.md)
 - [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [HOW TO：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

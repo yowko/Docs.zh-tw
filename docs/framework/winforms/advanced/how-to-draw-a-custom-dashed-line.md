@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繪製自訂短折線
+title: HOW TO：繪製自訂虛線
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 06555309b8432397e754bc9dfa717c89b052343f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410221"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109183"
 ---
-# <a name="how-to-draw-a-custom-dashed-line"></a>HOW TO：繪製自訂短折線
+# <a name="how-to-draw-a-custom-dashed-line"></a>HOW TO：繪製自訂虛線
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供數個虛線樣式中所列<xref:System.Drawing.Drawing2D.DashStyle>列舉型別。 如果這些標準的虛線樣式不符合您的需求，您可以建立自訂虛線圖樣。  
   
 ## <a name="example"></a>範例  
@@ -33,4 +33,5 @@ ms.locfileid: "58410221"
  建立 Windows 表單，並處理表單的<xref:System.Windows.Forms.Control.Paint>事件。 貼上上述程式碼到<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)

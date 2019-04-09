@@ -2,12 +2,12 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 573da0b608b3f74b9cf789a27a10183f3320f908
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513645"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197993"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。 <xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。 當<xref:System.Data.DataSet>寫入為 DiffGram，它會填入 DiffGram 的所有必要資訊，以正確重新建立內容，但不是架構的<xref:System.Data.DataSet>，包括資料行的值，同時從**原始**並**目前**資料列版本中，資料列錯誤資訊和資料列順序。  
@@ -85,7 +85,7 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
 |----------------|-----------------|  
 |**id**|用來在項目進行配對 **\<before>： 之前 >** 並 **\<diffgr:errors >** 區塊中的項目**\<*****DataInstance*** **>** 區塊。 值與**diffgr: id**註解會採用 *[TableName] [RowIdentifier]*。 例如：`<Customers diffgr:id="Customers1">`。|  
 |**parentId**|識別哪個項目**\<** ***DataInstance*** **>** 區塊是目前項目的父項目。 值與**diffgr: parentid**註解會採用 *[TableName] [RowIdentifier]*。 例如：`<Orders diffgr:parentId="Customers1">`。|  
-|**hasChanges**|識別中的資料列**\<** ***DataInstance*** **>** 封鎖，因為修改。 **HasChanges**註釋可以具有下列兩個值之一：<br /><br /> **inserted**<br /> 識別**Added**資料列。<br /><br /> **修改**<br /> 識別**Modified**包含資料列**原始**中的資料列版本 **\<before>： 之前 >** 區塊。 請注意， **Deleted**資料列會有**原始**中的資料列版本 **\<before>： 之前 >** 區塊，但會在沒有註釋項目**\<**  ***DataInstance*** **>** 區塊。|  
+|**hasChanges**|識別中的資料列**\<** ***DataInstance*** **>** 封鎖，因為修改。 **HasChanges**註釋可以具有下列兩個值之一：<br /><br /> **inserted**<br /> 識別**Added**資料列。<br /><br /> **modified**<br /> 識別**Modified**包含資料列**原始**中的資料列版本 **\<before>： 之前 >** 區塊。 請注意， **Deleted**資料列會有**原始**中的資料列版本 **\<before>： 之前 >** 區塊，但會在沒有註釋項目**\<**  ***DataInstance*** **>** 區塊。|  
 |**hasErrors**|識別中的資料列**\<** ***DataInstance*** **>** 區塊**RowError**。 錯誤項目會置於 **\<diffgr:errors >** 區塊。|  
 |**錯誤**|包含的文字**RowError**內的特定項目的 **\<diffgr:errors >** 區塊。|  
   
@@ -132,8 +132,9 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+
+- [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [從 XML 載入資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/loading-a-dataset-from-xml.md)
-- [將資料集內容當作 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
+- [將資料集內容當做 XML 資料寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-contents-as-xml-data.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

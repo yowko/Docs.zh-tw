@@ -2,12 +2,12 @@
 title: 在 SQL Server 中執行大量複製作業
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 787fc283a258842b762923b620541b709b119894
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54518107"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194795"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>在 SQL Server 中執行大量複製作業
 Microsoft SQL Server 包含名為的常用命令列公用程式**bcp**的快速大量複製到資料表或檢視 SQL Server 資料庫中的大型檔案。 <xref:System.Data.SqlClient.SqlBulkCopy> 類別可讓您撰寫會提供類似功能的 Managed 程式碼方案。 還可採用其他方式將資料載入 SQL Server 資料表 (例如，INSERT 陳述式)，但 <xref:System.Data.SqlClient.SqlBulkCopy> 的效能優勢明顯高於它們。  
@@ -20,7 +20,7 @@ Microsoft SQL Server 包含名為的常用命令列公用程式**bcp**的快速�
   
 -   多項大量複製作業  
   
--   在異動內的大量複製作業  
+-   在交易內的大量複製作業  
   
 > [!NOTE]
 >  使用.NET Framework 1.1 或更早版本時 (不支援<xref:System.Data.SqlClient.SqlBulkCopy>類別)，您可以執行 SQL Server TRANSACT-SQL **BULK INSERT**陳述式使用<xref:System.Data.SqlClient.SqlCommand>物件。  
@@ -36,8 +36,9 @@ Microsoft SQL Server 包含名為的常用命令列公用程式**bcp**的快速�
  說明如何使用 <xref:System.Data.SqlClient.SqlBulkCopy> 類別，執行資料到 SQL Server 執行個體的多項大量複製作業。  
   
  [異動和大量複製作業](../../../../../docs/framework/data/adonet/sql/transaction-and-bulk-copy-operations.md)  
- 說明如何在交易內執行大量複製作業，包含如何認可或復原交易。  
+ 說明如何在異動內執行大量複製作業，包含如何認可或復原異動。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

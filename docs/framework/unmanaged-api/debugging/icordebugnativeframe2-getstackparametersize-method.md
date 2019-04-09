@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7f4baa58159760af12afca5b84cb6b1b66e46093
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 47968d7550c3d16d201680caab705c0d7c85c784
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200138"
 ---
 # <a name="icordebugnativeframe2getstackparametersize-method"></a>ICorDebugNativeFrame2::GetStackParameterSize 方法
 X86 作業系統上的堆疊上傳回參數的累計大小。  
@@ -44,7 +44,7 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 |-------------|-----------------|  
 |S_OK|已成功地傳回堆疊大小。|  
 |S_FALSE|`GetStackParameterSize` 在非 x86 平台上呼叫。|  
-|E_FAIL|`The size of the parameters could not be returned`.|  
+|E_FAIL|`The size of the parameters could not be returned`。|  
 |E_INVALIDARG|`pSize` 是`null`。|  
   
 ## <a name="exceptions"></a>例外狀況  
@@ -55,13 +55,14 @@ HRESULT GetStackParameterSize([out] ULONG32 * pSize)
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugNativeFrame2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

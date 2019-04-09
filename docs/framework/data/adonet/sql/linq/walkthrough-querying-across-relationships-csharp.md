@@ -2,12 +2,12 @@
 title: 逐步解說：跨關聯性查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: a24d96c9d138f0dcd2f162dad474da01f49e45d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 52623b79492908a6c387715fef002d4b8927169c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184882"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>逐步解說：跨關聯性查詢 (C#)
 本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
@@ -19,7 +19,7 @@ ms.locfileid: "54563661"
 ## <a name="prerequisites"></a>必要條件  
  您必須先完成[逐步解說：簡單的物件模型和查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-csharp.md)。 此逐步解說建立於該逐步解說之上，其中包含出現在 c:\linqtest5 中的 northwnd.mdf 檔。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此逐步解說包含三項主要工作：  
   
 -   加入實體類別，以表示 Northwind 範例資料庫中的 Orders 資料表。  
@@ -40,7 +40,7 @@ ms.locfileid: "54563661"
 ## <a name="annotating-the-customer-class"></a>加入 Customer 類別的附註  
  在這個步驟中，您會加入 `Customer` 類別的附註，指出其與 `Order` 類別的關聯性 (此加入動作並非絕對必要，因為定義任一方向的關聯性就足以建立連結。 但加入此附註確實可讓您輕易地以任一方向巡覽物件)。  
   
-#### <a name="to-annotate-the-customer-class"></a>若要加入 Customer 類別的附註  
+#### <a name="to-annotate-the-customer-class"></a>若要標註 Customer 類別  
   
 -   將下列程式碼輸入或貼到 `Customer` 類別中：  
   
@@ -89,4 +89,5 @@ ms.locfileid: "54563661"
  下一個逐步解說 ([逐步解說：操作資料 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-csharp.md)) 會示範如何操作資料。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

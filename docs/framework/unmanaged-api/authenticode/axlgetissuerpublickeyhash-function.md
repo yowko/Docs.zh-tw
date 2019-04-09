@@ -10,12 +10,12 @@ api_type:
 ms.assetid: fb626b41-b888-4625-84c3-2c02b5e3866f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 252a3153a49867faf67051be01eeb141fa3ab681
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 448712561f1531a055ac141db9825581525c779c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59106700"
 ---
 # <a name="axlgetissuerpublickeyhash-function"></a>_AxlGetIssuerPublicKeyHash 函式
 擷取公開金鑰的 SHA-1 雜湊，該公開金鑰與用來簽署指定憑證的私密金鑰相關聯。  
@@ -37,7 +37,8 @@ HRESULT _AxlGetIssuerPublicKeyHash (
  [out] WCHAR * (要接收十六進位編碼的公開金鑰語彙基元) 的指標。  
   
 ## <a name="return-value"></a>傳回值  
- 若函式成功則傳回 `S_OK`：反之則傳回 `S_FALSE`。  
+ `S_OK` 如果函式成功，則否則`S_FALSE`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Authenticode](../../../../docs/framework/unmanaged-api/authenticode/index.md)

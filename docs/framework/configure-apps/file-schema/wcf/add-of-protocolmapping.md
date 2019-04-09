@@ -2,12 +2,12 @@
 title: <add> 的 <protocolMapping>
 ms.date: 03/30/2017
 ms.assetid: 08e62249-1641-41d1-91b1-66d7b46244e4
-ms.openlocfilehash: 18b50ec2d848bc6bb920fb8f630ac7703654b286
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 85d09c920de2ca1ab4971551ff98ea58c4492f44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280731"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109261"
 ---
 # <a name="add-of-protocolmapping"></a>\<add> of \<protocolMapping>
 代表傳輸通訊協定配置 （例如 http、 net.tcp、 net.pipe 等） 與 Windows Communication Foundation (WCF) 繫結之間的預設通訊協定對應。 當在執行階段建立預設端點，WCF 會查看所設定的對應，並決定哪些繫結，以使用特定基礎位址。  
@@ -31,7 +31,7 @@ ms.locfileid: "55280731"
   
 ### <a name="attributes"></a>屬性  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |繫結|指定在建立預設端點期間用於端點之繫結類型的字串。|  
 |bindingConfiguration|指定要參考之繫結組態區段名稱的字串。|  
@@ -63,5 +63,6 @@ ms.locfileid: "55280731"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ProtocolMappingSection?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Configuration.ProtocolMappingElement?displayProperty=nameWithType>

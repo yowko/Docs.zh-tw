@@ -1,5 +1,5 @@
 ---
-title: <servicePointManager> 項目 (網路設定)
+title: <servicePointManager> 項目 （網路設定）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#servicePointManager
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - servicePointManager element
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
-ms.openlocfilehash: 3a18f9eb3d38ef272b7a4df58d8588b622662184
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277546"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202205"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 項目 （網路設定）
 設定網路資源的連線。  
@@ -57,7 +57,7 @@ ms.locfileid: "55277546"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
@@ -67,6 +67,7 @@ ms.locfileid: "55277546"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.ServicePointManager>
 - <xref:System.Net.Security.EncryptionPolicy>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

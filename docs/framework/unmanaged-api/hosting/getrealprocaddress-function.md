@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6826ee1b94f9a1c48c19150271ebc84ac54dda25
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5d4723fbf2311316184cb77c90754d7e037badcd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089577"
 ---
 # <a name="getrealprocaddress-function"></a>GetRealProcAddress 函式
 取得指定從最新安裝 common language runtime (CLR) 版本匯出的函式的位址。  
@@ -50,7 +50,7 @@ HRESULT GetRealProcAddress (
 |傳回碼|描述|  
 |-----------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|E_POINTER|`ppv` 無效。|  
+|E_POINTER|`ppv` 不正確。|  
 |CLR_E_SHIM_RUNTIMEEXPORT|從執行階段不匯出函式。|  
   
 ## <a name="requirements"></a>需求  
@@ -58,9 +58,10 @@ HRESULT GetRealProcAddress (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** MSCorEE.dll  
+ **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
