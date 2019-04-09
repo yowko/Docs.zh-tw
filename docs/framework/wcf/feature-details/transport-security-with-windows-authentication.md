@@ -5,45 +5,45 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: 96fce3cb56cf328e0fbb589113e3ac24519de557
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125443"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148079"
 ---
-# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="9fbd4-102">Windows 驗證的傳輸安全性</span><span class="sxs-lookup"><span data-stu-id="9fbd4-102">Transport Security with Windows Authentication</span></span>
-<span data-ttu-id="9fbd4-103">下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務由 Windows 安全性保護。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="9fbd4-104">如需程式設計的詳細資訊，請參閱[How to:使用 Windows 認證的服務安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
+# <a name="transport-security-with-windows-authentication"></a><span data-ttu-id="7c03c-102">Windows 驗證的傳輸安全性</span><span class="sxs-lookup"><span data-stu-id="7c03c-102">Transport Security with Windows Authentication</span></span>
+<span data-ttu-id="7c03c-103">下列案例示範 Windows Communication Foundation (WCF) 用戶端和服務由 Windows 安全性保護。</span><span class="sxs-lookup"><span data-stu-id="7c03c-103">The following scenario shows a Windows Communication Foundation (WCF) client and service secured by Windows security.</span></span> <span data-ttu-id="7c03c-104">如需程式設計的詳細資訊，請參閱[How to:使用 Windows 認證的服務安全](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。</span><span class="sxs-lookup"><span data-stu-id="7c03c-104">For more information about programming, see [How to: Secure a Service with Windows Credentials](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md).</span></span>  
   
- <span data-ttu-id="9fbd4-105">內部網路 Web 服務顯示人力資源資訊。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="9fbd4-106">用戶端為 Windows Form 應用程式。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-106">The client is a Windows Form application.</span></span> <span data-ttu-id="9fbd4-107">應用程式部署於由 Kerberos 控制站負責網域安全的網域內。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
+ <span data-ttu-id="7c03c-105">內部網路 Web 服務顯示人力資源資訊。</span><span class="sxs-lookup"><span data-stu-id="7c03c-105">An intranet Web service displays human resources information.</span></span> <span data-ttu-id="7c03c-106">用戶端為 Windows Form 應用程式。</span><span class="sxs-lookup"><span data-stu-id="7c03c-106">The client is a Windows Form application.</span></span> <span data-ttu-id="7c03c-107">應用程式部署於由 Kerberos 控制站負責網域安全的網域內。</span><span class="sxs-lookup"><span data-stu-id="7c03c-107">The application is deployed in a domain with a Kerberos controller securing the domain.</span></span>  
   
  ![使用 Windows 驗證的傳輸安全性](./media/transport-security-with-windows-authentication/secured-windows-authentication.gif)  
   
-|<span data-ttu-id="9fbd4-109">特性</span><span class="sxs-lookup"><span data-stu-id="9fbd4-109">Characteristic</span></span>|<span data-ttu-id="9fbd4-110">描述</span><span class="sxs-lookup"><span data-stu-id="9fbd4-110">Description</span></span>|  
+|<span data-ttu-id="7c03c-109">特性</span><span class="sxs-lookup"><span data-stu-id="7c03c-109">Characteristic</span></span>|<span data-ttu-id="7c03c-110">描述</span><span class="sxs-lookup"><span data-stu-id="7c03c-110">Description</span></span>|  
 |--------------------|-----------------|  
-|<span data-ttu-id="9fbd4-111">安全性模式</span><span class="sxs-lookup"><span data-stu-id="9fbd4-111">Security Mode</span></span>|<span data-ttu-id="9fbd4-112">Transport</span><span class="sxs-lookup"><span data-stu-id="9fbd4-112">Transport</span></span>|  
-|<span data-ttu-id="9fbd4-113">互通性</span><span class="sxs-lookup"><span data-stu-id="9fbd4-113">Interoperability</span></span>|<span data-ttu-id="9fbd4-114">WCF 只</span><span class="sxs-lookup"><span data-stu-id="9fbd4-114">WCF only</span></span>|  
-|<span data-ttu-id="9fbd4-115">驗證 (伺服器)</span><span class="sxs-lookup"><span data-stu-id="9fbd4-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="9fbd4-116">驗證 (用戶端)</span><span class="sxs-lookup"><span data-stu-id="9fbd4-116">Authentication (Client)</span></span>|<span data-ttu-id="9fbd4-117">是 (使用 Windows 整合式驗證)</span><span class="sxs-lookup"><span data-stu-id="9fbd4-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="9fbd4-118">是 (使用 Windows 整合式驗證)</span><span class="sxs-lookup"><span data-stu-id="9fbd4-118">Yes (using Windows integrated authentication)</span></span>|  
-|<span data-ttu-id="9fbd4-119">完整性</span><span class="sxs-lookup"><span data-stu-id="9fbd4-119">Integrity</span></span>|<span data-ttu-id="9fbd4-120">是</span><span class="sxs-lookup"><span data-stu-id="9fbd4-120">Yes</span></span>|  
-|<span data-ttu-id="9fbd4-121">機密性</span><span class="sxs-lookup"><span data-stu-id="9fbd4-121">Confidentiality</span></span>|<span data-ttu-id="9fbd4-122">是</span><span class="sxs-lookup"><span data-stu-id="9fbd4-122">Yes</span></span>|  
-|<span data-ttu-id="9fbd4-123">Transport</span><span class="sxs-lookup"><span data-stu-id="9fbd4-123">Transport</span></span>|<span data-ttu-id="9fbd4-124">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="9fbd4-124">NET.TCP</span></span>|  
-|<span data-ttu-id="9fbd4-125">繫結</span><span class="sxs-lookup"><span data-stu-id="9fbd4-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
+|<span data-ttu-id="7c03c-111">安全性模式</span><span class="sxs-lookup"><span data-stu-id="7c03c-111">Security Mode</span></span>|<span data-ttu-id="7c03c-112">Transport</span><span class="sxs-lookup"><span data-stu-id="7c03c-112">Transport</span></span>|  
+|<span data-ttu-id="7c03c-113">互通性</span><span class="sxs-lookup"><span data-stu-id="7c03c-113">Interoperability</span></span>|<span data-ttu-id="7c03c-114">WCF 只</span><span class="sxs-lookup"><span data-stu-id="7c03c-114">WCF only</span></span>|  
+|<span data-ttu-id="7c03c-115">驗證 (伺服器)</span><span class="sxs-lookup"><span data-stu-id="7c03c-115">Authentication (Server)</span></span><br /><br /> <span data-ttu-id="7c03c-116">驗證 (用戶端)</span><span class="sxs-lookup"><span data-stu-id="7c03c-116">Authentication (Client)</span></span>|<span data-ttu-id="7c03c-117">是 (使用 Windows 整合式驗證)</span><span class="sxs-lookup"><span data-stu-id="7c03c-117">Yes (using Windows integrated authentication)</span></span><br /><br /> <span data-ttu-id="7c03c-118">是 (使用 Windows 整合式驗證)</span><span class="sxs-lookup"><span data-stu-id="7c03c-118">Yes (using Windows integrated authentication)</span></span>|  
+|<span data-ttu-id="7c03c-119">完整性</span><span class="sxs-lookup"><span data-stu-id="7c03c-119">Integrity</span></span>|<span data-ttu-id="7c03c-120">是</span><span class="sxs-lookup"><span data-stu-id="7c03c-120">Yes</span></span>|  
+|<span data-ttu-id="7c03c-121">機密性</span><span class="sxs-lookup"><span data-stu-id="7c03c-121">Confidentiality</span></span>|<span data-ttu-id="7c03c-122">是</span><span class="sxs-lookup"><span data-stu-id="7c03c-122">Yes</span></span>|  
+|<span data-ttu-id="7c03c-123">Transport</span><span class="sxs-lookup"><span data-stu-id="7c03c-123">Transport</span></span>|<span data-ttu-id="7c03c-124">NET.TCP</span><span class="sxs-lookup"><span data-stu-id="7c03c-124">NET.TCP</span></span>|  
+|<span data-ttu-id="7c03c-125">繫結</span><span class="sxs-lookup"><span data-stu-id="7c03c-125">Binding</span></span>|<xref:System.ServiceModel.NetTcpBinding>|  
   
-## <a name="service"></a><span data-ttu-id="9fbd4-126">服務</span><span class="sxs-lookup"><span data-stu-id="9fbd4-126">Service</span></span>  
- <span data-ttu-id="9fbd4-127">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="9fbd4-128">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="9fbd4-128">Do one of the following:</span></span>  
+## <a name="service"></a><span data-ttu-id="7c03c-126">服務</span><span class="sxs-lookup"><span data-stu-id="7c03c-126">Service</span></span>  
+ <span data-ttu-id="7c03c-127">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="7c03c-127">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="7c03c-128">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="7c03c-128">Do one of the following:</span></span>  
   
--   <span data-ttu-id="9fbd4-129">使用不含組態的程式碼建立獨立服務。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-129">Create a stand-alone service using the code with no configuration.</span></span>  
+-   <span data-ttu-id="7c03c-129">使用不含組態的程式碼建立獨立服務。</span><span class="sxs-lookup"><span data-stu-id="7c03c-129">Create a stand-alone service using the code with no configuration.</span></span>  
   
--   <span data-ttu-id="9fbd4-130">使用提供的組態建立服務，但不要定義任何端點。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
+-   <span data-ttu-id="7c03c-130">使用提供的組態建立服務，但不要定義任何端點。</span><span class="sxs-lookup"><span data-stu-id="7c03c-130">Create a service using the supplied configuration, but do not define any endpoints.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="9fbd4-131">程式碼</span><span class="sxs-lookup"><span data-stu-id="9fbd4-131">Code</span></span>  
- <span data-ttu-id="9fbd4-132">下列程式碼顯示如何建立使用 Windows 安全性的服務端點。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
+### <a name="code"></a><span data-ttu-id="7c03c-131">程式碼</span><span class="sxs-lookup"><span data-stu-id="7c03c-131">Code</span></span>  
+ <span data-ttu-id="7c03c-132">下列程式碼顯示如何建立使用 Windows 安全性的服務端點。</span><span class="sxs-lookup"><span data-stu-id="7c03c-132">The following code shows how to create a service endpoint that uses a Windows security.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#3)]
  [!code-vb[C_SecurityScenarios#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#3)]  
   
-### <a name="configuration"></a><span data-ttu-id="9fbd4-133">組態</span><span class="sxs-lookup"><span data-stu-id="9fbd4-133">Configuration</span></span>  
- <span data-ttu-id="9fbd4-134">可使用以下組態來取代程式碼設定服務端點。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
+### <a name="configuration"></a><span data-ttu-id="7c03c-133">組態</span><span class="sxs-lookup"><span data-stu-id="7c03c-133">Configuration</span></span>  
+ <span data-ttu-id="7c03c-134">可使用以下組態來取代程式碼設定服務端點。</span><span class="sxs-lookup"><span data-stu-id="7c03c-134">The following configuration can be used instead of the code to set up the service endpoint:</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -73,24 +73,24 @@ ms.locfileid: "58125443"
 </configuration>  
 ```  
   
-## <a name="client"></a><span data-ttu-id="9fbd4-135">用戶端</span><span class="sxs-lookup"><span data-stu-id="9fbd4-135">Client</span></span>  
- <span data-ttu-id="9fbd4-136">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="9fbd4-137">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="9fbd4-137">Do one of the following:</span></span>  
+## <a name="client"></a><span data-ttu-id="7c03c-135">用戶端</span><span class="sxs-lookup"><span data-stu-id="7c03c-135">Client</span></span>  
+ <span data-ttu-id="7c03c-136">下列程式碼和組態要獨立執行。</span><span class="sxs-lookup"><span data-stu-id="7c03c-136">The following code and configuration are meant to run independently.</span></span> <span data-ttu-id="7c03c-137">執行下列任一步驟：</span><span class="sxs-lookup"><span data-stu-id="7c03c-137">Do one of the following:</span></span>  
   
--   <span data-ttu-id="9fbd4-138">使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-138">Create a stand-alone client using the code (and client code).</span></span>  
+-   <span data-ttu-id="7c03c-138">使用此程式碼 (和用戶端程式碼) 建立獨立用戶端。</span><span class="sxs-lookup"><span data-stu-id="7c03c-138">Create a stand-alone client using the code (and client code).</span></span>  
   
--   <span data-ttu-id="9fbd4-139">建立未定義任何端點位址的用戶端，</span><span class="sxs-lookup"><span data-stu-id="9fbd4-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="9fbd4-140">然後改用可接受組態名稱當做引數的用戶端建構函式。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="9fbd4-141">例如：</span><span class="sxs-lookup"><span data-stu-id="9fbd4-141">For example:</span></span>  
+-   <span data-ttu-id="7c03c-139">建立未定義任何端點位址的用戶端，</span><span class="sxs-lookup"><span data-stu-id="7c03c-139">Create a client that does not define any endpoint addresses.</span></span> <span data-ttu-id="7c03c-140">然後改用可接受組態名稱當做引數的用戶端建構函式。</span><span class="sxs-lookup"><span data-stu-id="7c03c-140">Instead, use the client constructor that takes the configuration name as an argument.</span></span> <span data-ttu-id="7c03c-141">例如: </span><span class="sxs-lookup"><span data-stu-id="7c03c-141">For example:</span></span>  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  
   
-### <a name="code"></a><span data-ttu-id="9fbd4-142">程式碼</span><span class="sxs-lookup"><span data-stu-id="9fbd4-142">Code</span></span>  
- <span data-ttu-id="9fbd4-143">下列程式碼會建立用戶端。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-143">The following code creates the client.</span></span> <span data-ttu-id="9fbd4-144">繫結會設定為使用傳輸模式安全性，採用 TCP 傳輸，並將用戶端認證類型設為 Windows。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
+### <a name="code"></a><span data-ttu-id="7c03c-142">程式碼</span><span class="sxs-lookup"><span data-stu-id="7c03c-142">Code</span></span>  
+ <span data-ttu-id="7c03c-143">下列程式碼會建立用戶端。</span><span class="sxs-lookup"><span data-stu-id="7c03c-143">The following code creates the client.</span></span> <span data-ttu-id="7c03c-144">繫結會設定為使用傳輸模式安全性，採用 TCP 傳輸，並將用戶端認證類型設為 Windows。</span><span class="sxs-lookup"><span data-stu-id="7c03c-144">The binding is configured to use the Transport mode security, with the TCP transport, with the client credential type set to Windows.</span></span>  
   
  [!code-csharp[C_SecurityScenarios#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#4)]
  [!code-vb[C_SecurityScenarios#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#4)]  
   
-### <a name="configuration"></a><span data-ttu-id="9fbd4-145">組態</span><span class="sxs-lookup"><span data-stu-id="9fbd4-145">Configuration</span></span>  
- <span data-ttu-id="9fbd4-146">可使用以下組態來取代程式碼建立用戶端。</span><span class="sxs-lookup"><span data-stu-id="9fbd4-146">The following configuration can be used instead of the code to create the client.</span></span>  
+### <a name="configuration"></a><span data-ttu-id="7c03c-145">組態</span><span class="sxs-lookup"><span data-stu-id="7c03c-145">Configuration</span></span>  
+ <span data-ttu-id="7c03c-146">可使用以下組態來取代程式碼建立用戶端。</span><span class="sxs-lookup"><span data-stu-id="7c03c-146">The following configuration can be used instead of the code to create the client.</span></span>  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
@@ -117,7 +117,8 @@ ms.locfileid: "58125443"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="9fbd4-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9fbd4-147">See also</span></span>
-- [<span data-ttu-id="9fbd4-148">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="9fbd4-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [<span data-ttu-id="9fbd4-149">如何：使用 Windows 認證的服務安全</span><span class="sxs-lookup"><span data-stu-id="9fbd4-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [<span data-ttu-id="9fbd4-150">Windows Server App Fabric 的安全性模型</span><span class="sxs-lookup"><span data-stu-id="9fbd4-150">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+## <a name="see-also"></a><span data-ttu-id="7c03c-147">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c03c-147">See also</span></span>
+
+- [<span data-ttu-id="7c03c-148">安全性概觀</span><span class="sxs-lookup"><span data-stu-id="7c03c-148">Security Overview</span></span>](../../../../docs/framework/wcf/feature-details/security-overview.md)
+- [<span data-ttu-id="7c03c-149">HOW TO：使用 Windows 認證來確保服務安全</span><span class="sxs-lookup"><span data-stu-id="7c03c-149">How to: Secure a Service with Windows Credentials</span></span>](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [<span data-ttu-id="7c03c-150">Windows Server AppFabric 的資訊安全模型</span><span class="sxs-lookup"><span data-stu-id="7c03c-150">Security Model for Windows Server App Fabric</span></span>](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
