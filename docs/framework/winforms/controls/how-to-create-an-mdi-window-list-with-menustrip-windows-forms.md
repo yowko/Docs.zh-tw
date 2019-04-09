@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: e58f35304f70c82973ebbc9928bae5a7477e9c53
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bfe84ccb30b13b8232172749454bf8f3625269ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139200"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>HOW TO：使用 MenuStrip (Windows Form) 建立 MDI 視窗清單
 您可以使用多重文件介面 (MDI) 來建立應用程式，可以開啟多份文件在相同的時間和複製並貼到另一份文件內容。  
@@ -30,11 +30,11 @@ ms.locfileid: "57716123"
   
 4.  將子功能表項目加入 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設定為 `&Open`。  
   
-5.  設定<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的屬性<xref:System.Windows.Forms.MenuStrip>要`&Window` <xref:System.Windows.Forms.ToolStripMenuItem>。  
+5.  設定<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的屬性<xref:System.Windows.Forms.MenuStrip>至`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>。  
   
 6.  將表單加入專案，並新增您想要的控制項，例如另一個<xref:System.Windows.Forms.MenuStrip>。  
   
-7.  為 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件建立事件處理常式。  
+7.  建立事件處理常式<xref:System.Windows.Forms.Control.Click>事件的`&New`<xref:System.Windows.Forms.ToolStripMenuItem>。  
   
 8.  在事件處理常式中，插入程式碼，如下所示的建立和顯示的新執行個體`Form2`做為 MDI 子系的`Form1`。  
   
@@ -79,10 +79,10 @@ ms.locfileid: "57716123"
   
 -   `Form1` 上名為 `menuStrip1` 的 <xref:System.Windows.Forms.MenuStrip> 控制項，以及 `Form2` 上名為 `menuStrip2` 的 <xref:System.Windows.Forms.MenuStrip> 控制項。  
   
--   
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立 MDI 父表單](../advanced/how-to-create-mdi-parent-forms.md)
-- [如何：建立 MDI 子表單](../advanced/how-to-create-mdi-child-forms.md)
+
+- [HOW TO：建立 MDI 父表單](../advanced/how-to-create-mdi-parent-forms.md)
+- [HOW TO：建立 MDI 子表單](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip 控制項](menustrip-control-windows-forms.md)

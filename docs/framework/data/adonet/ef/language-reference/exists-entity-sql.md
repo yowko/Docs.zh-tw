@@ -2,12 +2,12 @@
 title: EXISTS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d28ead43-4afb-4bdc-af64-efd2e05005d7
-ms.openlocfilehash: e6668fa2f978ddb785c4dac950c32d3caa2979af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 76be542c64f75f27d126d7dbb6bde2baea8f6016
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552537"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078235"
 ---
 # <a name="exists-entity-sql"></a>EXISTS (Entity SQL)
 判斷集合是否為空。  
@@ -26,7 +26,7 @@ ms.locfileid: "54552537"
  指定 EXISTS 的結果為否定運算。  
   
 ## <a name="return-value"></a>傳回值  
- 如果集合不是空的則為 `true`，否則為 `false`。  
+ `true` 如果集合不是空的。否則， `false`。  
   
 ## <a name="remarks"></a>備註  
  EXISTS 是其中一個 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子。 所有 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 設定運算子都會從左到右評估。 優先順序資訊[!INCLUDE[esql](../../../../../../includes/esql-md.md)]設定運算子，請參閱 < [EXCEPT](../../../../../../docs/framework/data/adonet/ef/language-reference/except-entity-sql.md)。  
@@ -41,4 +41,5 @@ ms.locfileid: "54552537"
  [!code-csharp[DP EntityServices Concepts 2#EXISTS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#exists)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d186276f-6afb-4dfd-bf3c-4251edc2c299
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3ebb95b6131ae28dd453ab79c1c0b7b13fccb8e3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa36399320a8c396a222619172264a32f3eb3505
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072723"
 ---
 # <a name="etw-events-in-the-net-framework"></a>ETW Events in the .NET Framework
 Windows 事件追蹤 (ETW) 是 Windows 作業系統提供的高效能、低負擔、可擴充的追蹤系統。 它會補充由 .NET Framework 提供的程式碼剖析和偵錯支援，並可用於針對各種案例進行疑難排解。  
@@ -27,6 +27,7 @@ Windows 事件追蹤 (ETW) 是 Windows 作業系統提供的高效能、低負�
  描述 CLR ETW 事件如何補充 Common Language Runtime 所提供的分析和偵錯支援。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)
 - [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
 - [平行 LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)

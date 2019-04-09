@@ -10,12 +10,12 @@ helpviewer_keywords:
 - drawing text [Windows Forms], specified locations [Windows Forms]
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
-ms.openlocfilehash: 8327043f9afdec7e2d84e564801342d7d7cbef9d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 3f54da182e6cc1489eadba6fa1d3cef683c3ba51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075505"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>HOW TO：在指定的位置繪製文字
 當您執行自訂繪圖時，您可以在單一的水平列，從指定的點開始來繪製文字。 您也可以使用這個方式繪製文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Point>或<xref:System.Drawing.PointF>參數。 <xref:System.Drawing.Graphics.DrawString%2A>方法也需要<xref:System.Drawing.Brush>和 <xref:System.Drawing.Font>  
@@ -46,7 +46,8 @@ ms.locfileid: "58412236"
 -   <xref:System.Windows.Forms.PaintEventArgs>  `e`這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
+
+- [HOW TO：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
 - [使用字型和文字](using-fonts-and-text.md)
-- [如何：建構字型系列和字型](how-to-construct-font-families-and-fonts.md)
-- [如何：在矩形中繪製被包圍的文字](how-to-draw-wrapped-text-in-a-rectangle.md)
+- [HOW TO：建構字型家族和字型](how-to-construct-font-families-and-fonts.md)
+- [HOW TO：在矩形中繪製換行文字](how-to-draw-wrapped-text-in-a-rectangle.md)

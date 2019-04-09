@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 09f2e4ee-1d08-4ba8-8936-83394fee319d
-ms.openlocfilehash: b665fc9593cd73e759625bdfd537581958f8734d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b3aca6a71f88762084934d0d9c7cea15b5366c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595561"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072593"
 ---
 # <a name="applying-an-xslt-transform-to-a-dataset"></a>將 XSLT 轉換套用至 DataSet
 **WriteXml**方法<xref:System.Data.DataSet>可讓您的內容寫入**DataSet**為 XML 資料。 接下來，通用工作會使用 XML 轉換 (XSLT)，將這個 XML 轉換為另一種格式。 不過，同步處理**資料集**具有<xref:System.Xml.XmlDataDocument>可讓您套用 XSLT 樣式表的內容**DataSet**而不必先寫入的內容**資料集**做為 XML 資料使用**WriteXml**。  
@@ -124,5 +124,6 @@ writer.Close();
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

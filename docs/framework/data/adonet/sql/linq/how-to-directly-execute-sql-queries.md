@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e491b9bf-741a-4296-9f51-76c25ddf6a82
-ms.openlocfilehash: 1caf81df5998e5aaef4ad011a399d70aff43ca9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6423959ed5036cc8ab2a88bb7273ef7aa95c8958
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101532"
 ---
 # <a name="how-to-directly-execute-sql-queries"></a>HOW TO：直接執行 SQL 查詢
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將您撰寫的查詢轉譯為參數型 SQL 查詢 (文字格式)，並將它們傳送給 SQL Server 進行處理。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 平移您撰寫成 （以文字形式） 的參數化 SQL 查詢的查詢，並將它們傳送到 SQL server 處理。  
   
- SQL 無法執行您應用程式可以在本機使用的各種方法。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試將這些本機方法轉換為可以在 SQL 環境內進行的對等作業和函式。 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 內建型別的大部分方法和運算子都可以直接轉譯為 SQL 命令。 而有些方法和運算則可以透過可用的函式產生。 無法產生的部分則會產生執行階段例外狀況。 如需詳細資訊，請參閱 < [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
+ SQL 無法執行您應用程式可以在本機使用的各種方法。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 嘗試將這些本機方法轉換為相等的作業和為可以在 SQL 環境內的函式。 [!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 內建型別的大部分方法和運算子都可以直接轉譯為 SQL 命令。 而有些方法和運算則可以透過可用的函式產生。 無法產生的部分則會產生執行階段例外狀況。 如需詳細資訊，請參閱 < [SQL-CLR 類型對應](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)。  
   
  如果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢不足以進行特殊化工作，則可以使用 <xref:System.Data.Linq.DataContext.ExecuteQuery%2A> 方法執行 SQL 查詢，然後將查詢結果直接轉換為物件。  
   
@@ -36,5 +36,6 @@ ms.locfileid: "54634450"
  查詢文字中的參數使用與 `Console.WriteLine()` 和 `String.Format()` 所用的相同大括號標記法來表示。 事實上，`String.Format()`提供，例如取代以大括號的參數產生參數名稱的查詢字串稱為實際@p0， @p1 ...， @p(n)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
 - [查詢資料庫](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)

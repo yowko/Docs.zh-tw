@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 14aad5b3-84ab-4bbc-94e3-1eb92e258d10
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f63343b43481d1d91d1db30cd2ace3214c5590a9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8b33b07e7c9f83f5874dea1455cd70dcc3206de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105933"
 ---
 # <a name="icordebugmutabledatatarget-interface"></a>ICorDebugMutableDataTarget 介面
 擴充[ICorDebugDataTarget](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)介面，以支援可變動的資料目標。  
@@ -32,12 +32,13 @@ ms.locfileid: "54492295"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v46plus](../../../../includes/net-current-v46plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

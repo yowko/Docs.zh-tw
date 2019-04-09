@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Save File dialog box [Windows Forms], displaying
 - SaveFileDialog component [Windows Forms], about SaveFileDialog
 ms.assetid: be7a625f-46fd-4d06-9985-b613dcbf9bd2
-ms.openlocfilehash: 93bf0f63e18ee3a384aa062c80faa991b68a6abe
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b06c4d510cefdc7558944995594fd209b6121cb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721498"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103034"
 ---
 # <a name="savefiledialog-component-overview-windows-forms"></a>SaveFileDialog 元件概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的對話方塊。 它等同於標準**儲存檔案**Windows 所使用的對話方塊。 這個元件繼承自 <xref:System.Windows.Forms.CommonDialog> 類別。  
@@ -25,5 +25,6 @@ Windows Form <xref:System.Windows.Forms.SaveFileDialog> 元件是預先設定的
  當加入至表單，<xref:System.Windows.Forms.SaveFileDialog>元件會出現在底部的 Windows Form 設計工具的紙匣。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog 元件](savefiledialog-component-windows-forms.md)

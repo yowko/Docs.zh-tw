@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dd1a622faa095836a3d5c22c7a18084482074c2c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653212"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099946"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列舉
 表示變數的原生位置型別。  
@@ -51,11 +51,12 @@ typedef enum VariableLocationType
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

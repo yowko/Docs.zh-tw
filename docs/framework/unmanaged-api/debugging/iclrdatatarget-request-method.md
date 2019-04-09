@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bafc8be92da72cbb98f7cd47ec6632a3fbb76656
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e9005dd8fde0d7258bd1dd48b561e4925e87733b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102685"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request 方法
 由通用語言執行平台 (CLR) 資料存取服務要求的作業，呼叫，實作所定義。  
@@ -67,9 +67,10 @@ HRESULT Request (
   
  **標頭：** ClrData.idl, ClrData.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)

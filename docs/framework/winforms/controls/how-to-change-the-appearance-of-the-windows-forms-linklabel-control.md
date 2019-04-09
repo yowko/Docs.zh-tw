@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], LinkLabel control
 - LinkLabel control [Windows Forms], examples
 ms.assetid: fdc5854f-5162-4457-8cbe-1042feb2d132
-ms.openlocfilehash: 451faf04e3a51e7dbcb992feb3f38025894be631
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: be2f6e8e10d9f9b23b4f57fa696f1fb88c4726c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105023"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-linklabel-control"></a>HOW TO：變更 Windows Forms LinkLabel 控制項的外觀
 您可以變更所顯示的文字<xref:System.Windows.Forms.LinkLabel>控制項，以符合各種用途。 比方說，它是常見的作法是藉由設定才會出現在特定的色彩與底線的文字，可以按一下文字向使用者指示。 使用者按一下文字之後，色彩變更為不同的色彩。 若要控制此行為，您可以設定五個不同的屬性： <xref:System.Windows.Forms.LinkLabel.LinkBehavior%2A>， <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>， <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>， <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>，和<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性。  
@@ -122,10 +122,11 @@ ms.locfileid: "57717722"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.VisitedLinkColor%2A>
 - <xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>
 - [LinkLabel 控制項概觀](linklabel-control-overview-windows-forms.md)
-- [如何：連結的物件，或使用 Windows Forms LinkLabel 控制項的網頁](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
+- [HOW TO：使用 Windows Forms LinkLabel 控制項連結至物件或網頁](link-to-an-object-or-web-page-with-wf-linklabel-control.md)
 - [LinkLabel 控制項](linklabel-control-windows-forms.md)

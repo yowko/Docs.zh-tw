@@ -2,15 +2,15 @@
 title: 彙總函式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
-ms.openlocfilehash: e606d0e355bb715cfa0536ad9e33f08f5f692951
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104919"
 ---
 # <a name="aggregate-functions-entity-sql"></a>彙總函式 (Entity SQL)
-彙總是語言建構，可將集合壓縮至純量，做為群組作業的一部份。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 彙總以兩種形式出現：  
+彙總是語言建構，可將集合壓縮至純量，做為群組作業的一部份。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 彙總有兩種形式：  
   
 -   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集合函式可能會用於在運算式中的任何地方。 包括於投影和述詞中 (在集合上作用) 使用彙總函式。 集合函式是在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 中指定彙總的慣用模式。  
   
@@ -43,4 +43,5 @@ ms.locfileid: "54492048"
  GROUP BY 子句中使用的運算式會使用 WHERE 子句運算式中可見的相同名稱解析範圍，進行評估。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [函式](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)

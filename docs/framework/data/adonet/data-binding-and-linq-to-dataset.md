@@ -2,12 +2,12 @@
 title: 資料繫結和 LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: 91349de3b12b45e645ad4080c9fc972f28c669ca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54655773"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073555"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>資料繫結和 LINQ to DataSet
 *資料繫結*是應用程式 UI 與商務邏輯之間建立連接的程序。 如果繫結具有正確的設定而且資料提供了適當的通知，當資料變更其值時，繫結至資料的項目就會自動反映變更。 <xref:System.Data.DataSet> 是記憶體中的資料表示，可提供一致的關聯式程式撰寫模型 (Programming Model)，不論它所包含的資料來源為何都一樣。 ADO.NET 2.0 <xref:System.Data.DataView> 可讓您排序和篩選儲存在 <xref:System.Data.DataTable> 中的資料。 這項功能通常用於資料繫結的應用程式。 您可以透過使用 <xref:System.Data.DataView>，以不同排序順序公開 (Expose) 資料表中的資料，而且可以按照資料列狀態或根據篩選條件運算式來篩選資料。 如需詳細資訊<xref:System.Data.DataView>物件，請參閱 < [Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)。  
@@ -32,8 +32,9 @@ ms.locfileid: "54655773"
  [DataView 效能](../../../../docs/framework/data/adonet/dataview-performance.md)  
  提供有關 <xref:System.Data.DataView> 和效能的資訊。  
   
- [如何：將 DataView 物件繫結至 Windows Form DataGridView 控制項](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [HOW TO：將 DataView 物件繫結至 Windows Forms DataGridView 控制項](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  說明如何將 <xref:System.Data.DataView> 物件繫結至 <xref:System.Windows.Forms.DataGridView>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

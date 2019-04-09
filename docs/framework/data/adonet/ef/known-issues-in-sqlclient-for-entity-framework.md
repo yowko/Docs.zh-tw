@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient 已知問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 112c11edd3955f2bdc6d2b0510e385d4560b80ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3df5a42b40e1851875c35165301af082f5d3269
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497244"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073802"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>適用於 Entity Framework 的 SqlClient 已知問題
 本節說明與 .NET Framework Data Provider for SQL Server (SqlClient) 相關的已知問題。  
@@ -60,5 +60,6 @@ SELECT c, (SELECT c, (SELECT c FROM AdventureWorksModel.Vendor AS c  ) As Inner2
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 支援伺服器產生的 GUID 識別值，但是提供者必須支援在資插入資料列之後，傳回伺服器產生的識別值。 從 SQL Server 2005 開始，您可以傳回伺服器產生的 GUID 型別在 SQL Server 資料庫裡[OUTPUT 子句](https://go.microsoft.com/fwlink/?LinkId=169400)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [適用於 Entity Framework 的 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)
 - [LINQ to Entities 中的已知問題和考量](../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)

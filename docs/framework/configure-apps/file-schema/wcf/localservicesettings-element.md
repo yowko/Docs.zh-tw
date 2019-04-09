@@ -2,12 +2,12 @@
 title: <localServiceSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
-ms.openlocfilehash: 7d0b96badd1ee0abd3b1765dc777bdb73918a1fa
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288830"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102631"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > 項目
 指定此繫結之本機服務的安全性設定。  
@@ -68,7 +68,7 @@ ms.locfileid: "55288830"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
 |[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
   
 ## <a name="remarks"></a>備註  
@@ -76,17 +76,18 @@ ms.locfileid: "55288830"
   
  `localServiceSecuritySettings` 項目的下列屬性有助於降低阻絕服務 (DOS) 安全性攻擊：  
   
--   `maxCachedCookies`：控制在執行 SPNEGO 或 SSL 交涉之後，伺服器所快取有時間界限之 SecurityContextToken 的上限。  
+-   `maxCachedCookies`： 控制在執行 SPNEGO 或 SSL 交涉之後快取伺服器的時間界限之 Securitycontexttoken 的最大數目。  
   
--   `issuedCookieLifetime`：控制在 SPNEGO 或 SSL 交涉之後，伺服器所發出的 SecurityContextToken 的存留期 (Lifetime)。 伺服器會在這段時間內快取 SecurityContextToken。  
+-   `issuedCookieLifetime`： 控制在 SPNEGO 或 SSL 交涉的伺服器所發出的 Securitycontexttoken 的存留期。 伺服器會在這段時間內快取 SecurityContextToken。  
   
--   `maxPendingSessions`：控制在伺服器中建立的安全對話上限，但是不會針對這些對話處理應用程式訊息。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+-   `maxPendingSessions`： 控制在伺服器上，但其任何應用程式訊息處理所建立的安全交談的最大數目。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
--   `inactivityTimeout`：控制服務讓安全對話保持運作，而不會從中接收應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+-   `inactivityTimeout`： 控制時間上限，服務讓安全對話保持運作而不會從中接收訊息上的，應用程式。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
  在安全對話工作階段中，請注意繫結上的 `inactivityTimeout` 和 `receiveTimeout` 屬性都會影響工作階段逾時。 其中時間較短的屬性值會決定逾時發生的時間。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.LocalServiceSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalServiceSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalServiceSettings%2A>
@@ -96,5 +97,5 @@ ms.locfileid: "55288830"
 - [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

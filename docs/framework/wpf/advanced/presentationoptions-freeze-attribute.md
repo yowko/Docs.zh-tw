@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Freezable elements [WPF]
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
-ms.openlocfilehash: 3ff4a3221392d6b247d0a486e4e1f0406f539362
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074653"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 屬性
 設定組<xref:System.Windows.Freezable.IsFrozen%2A>狀態`true`上包含<xref:System.Windows.Freezable>項目。 預設行為<xref:System.Windows.Freezable>而不需要`PresentationOptions:Freeze`指定的屬性是<xref:System.Windows.Freezable.IsFrozen%2A>是`false`在載入時間和在一般的相依<xref:System.Windows.Freezable>在執行階段的行為。  
@@ -42,6 +42,7 @@ ms.locfileid: "57378856"
  任何值`Freeze`以外的其他屬性`true`（不區分大小寫） 會產生載入時間錯誤。 (指定`Freeze`屬性為`false`不是錯誤，但這已經預設值，因此將設定為`false`不執行任何動作)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Freezable>
 - [Freezable 物件概觀](freezable-objects-overview.md)
 - [mc:Ignorable 屬性](mc-ignorable-attribute.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
+title: HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], COM interop
 - Windows Forms, interop
 ms.assetid: a9e04765-d2de-4389-a494-a9a6d07aa6ee
-ms.openlocfilehash: 36f9280ff3269997098673c30a1b95f8b51b9df8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 39a9793f3046960032da32795e60314ea05a00fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59072671"
 ---
-# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>HOW TO：在它自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
+# <a name="how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread"></a>HOW TO：在自己的執行緒上顯示每個 Windows Form 以支援 COM Interop
 您可以藉由在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 訊息迴圈上顯示表單來解決 COM 互通性問題，這可使用 <xref:System.Windows.Forms.Application.Run%2A?displayProperty=nameWithType> 方法來建立。  
   
  若要讓 Windows Form 在 COM 用戶端應用程式正確運作，您必須在 Windows Form 訊息迴圈上執行表單。 若要執行此工作，請使用下列的其中一個方法：  
@@ -46,8 +46,9 @@ ms.locfileid: "57717475"
 -   請將 `COMForm`、 `Form1`和 `FormManager` 類型編譯至稱為 `COMWinform.dll`的組件中。 請使用 [Packaging an Assembly for COM](../../interop/packaging-an-assembly-for-com.md)所述的其中一種方法來登錄 COM Interop 組件。 您現在可以在 Unmanaged 應用程式中使用該組件和對應的類型程式庫 (.tlb) 檔案。 例如，您可以使用類型程式庫做為 Visual Basic 6.0 可執行檔專案中的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [將 .NET Framework 元件公開給 COM](../../interop/exposing-dotnet-components-to-com.md)
 - [封裝 COM 的組件](../../interop/packaging-an-assembly-for-com.md)
 - [向 COM 註冊組件](../../interop/registering-assemblies-with-com.md)
-- [如何：顯示 Windows Form 和 ShowDialog 方法以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)
-- [Windows Forms 和 Unmanaged 應用程式概觀](windows-forms-and-unmanaged-applications-overview.md)
+- [HOW TO：使用 ShowDialog 方法顯示 Windows Form 以支援 COM Interop](com-interop-by-displaying-a-windows-form-shadow.md)
+- [Windows Form 和 Unmanaged 應用程式概觀](windows-forms-and-unmanaged-applications-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 26a198db13e5855d9473cf7780dade9ce95e9298
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54610836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076857"
 ---
 # <a name="apis-that-rely-on-reflection"></a>依賴反映的 API
 在某些情況下，很難察覺程式碼中是否有使用反映，因此 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈不會保留執行階段所需的中繼資料。 本主題涵蓋一些常見的 API 或常見的程式設計模式，這些 API 或程式設計模式不是反映 API 的一部分，但依賴反映才能順利執行。 如果您在原始程式碼中使用這些 API 或程式設計模式，您可以將相關資訊加入至執行階段指示詞 (.rd.xml) 檔案，讓這些 API 的呼叫不會在執行階段擲回 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外狀況或某個其他例外狀況。  
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  若要成功執行，這個程式碼需要幾個中繼資料項目：  
   
--   您要呼叫其方法之類型的 `Browse` 中繼資料。  
+-   `Browse` 您想要呼叫其方法之類型的中繼資料。  
   
--   您要呼叫方法的 `Browse` 中繼資料。  如果這是公用方法，加入包含類型的公用 `Browse` 中繼資料也會包含這個方法。  
+-   `Browse` 您想要呼叫之方法的中繼資料。  如果這是公用方法，加入包含類型的公用 `Browse` 中繼資料也會包含這個方法。  
   
 -   您要呼叫之方法的動態中繼資料，如此一來，[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈便不會移除反映引動過程委派。 如果方法遺漏動態中繼資料，呼叫 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法時會擲回下列例外狀況：  
   
@@ -86,12 +86,13 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- 需要陣列類型的 `Browse` 中繼資料，才能動態具現化陣列。  下列執行階段指示詞可動態具現化 `Class1[]`。  
+ `Browse` 陣列型別的中繼資料，才能動態具現化。  下列執行階段指示詞可動態具現化 `Class1[]`。  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [快速入門](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

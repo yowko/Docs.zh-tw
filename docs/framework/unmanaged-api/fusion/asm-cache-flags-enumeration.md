@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 29388f7a83182fe3149a9df364a0f4721232012d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 619643eb50abc75fd10d59b38767013b2617c8cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077761"
 ---
 # <a name="asmcacheflags-enumeration"></a>ASM_CACHE_FLAGS 列舉
 指出所表示的組件的來源[IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)在全域組件快取中。  
@@ -53,11 +53,12 @@ typedef enum {
   
  **標頭：** Fusion.h  
   
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [GetCachePath 函式](../../../../docs/framework/unmanaged-api/fusion/getcachepath-function.md)
 - [IAssemblyCacheItem 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)
 - [融合列舉](../../../../docs/framework/unmanaged-api/fusion/fusion-enumerations.md)

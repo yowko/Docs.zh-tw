@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74eb098ee68f57477c8b9115db2bce60919f0b12
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8056ef18089f56f1f9b6717d505fa3d058957541
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54580209"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074413"
 ---
 # <a name="spawninstance-function"></a>SpawnInstance 函式
 建立類別的新執行個體。    
@@ -60,7 +60,7 @@ HRESULT SpawnInstance (
 |---------|---------|---------|
 | `WBEM_E_INCOMPLETE_CLASS` | 0x80041020 | `ptr` 不是有效的類別定義，並無法繁衍 （spawn） 的新執行個體。 已完成，或它尚未註冊使用 Windows Management 藉由呼叫[PutClassWmi](putclasswmi.md)。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 沒有足夠的記憶體可完成此作業。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 為 `null`。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` 是`null`。 |
 | `WBEM_S_NO_ERROR` | 0 | 函式呼叫成功。  |
   
 ## <a name="remarks"></a>備註
@@ -69,9 +69,6 @@ HRESULT SpawnInstance (
 
 `ptr` 必須在類別定義取得從 Windows 管理。 （請注意，支援繁衍的執行個體從執行個體，但傳回的執行個體是空的）。然後，您會使用此類別定義來建立新的執行個體。 呼叫[PutInstanceWmi](putinstancewmi.md)函式是必要的如果您想要撰寫 Windows 管理的執行個體。
 
-
-
-
 新的物件中傳回`ppNewClass`會自動變成目前物件的子類別。 無法覆寫這個行為。 沒有任何其他子類別 （衍生類別） 可以建立的方法。
 
 ## <a name="requirements"></a>需求  
@@ -79,7 +76,8 @@ HRESULT SpawnInstance (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

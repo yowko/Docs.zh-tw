@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - claims [WCF], and tokens
 ms.assetid: eff167f3-33f8-483d-a950-aa3e9f97a189
-ms.openlocfilehash: 21172ccda5f5f8070d81726d5f4dc6f9d80ab071
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 223b86310d90c877df15a99c90a0a72ea780734a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54568994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076259"
 ---
 # <a name="claims-and-tokens"></a>宣告與權杖
 本主題說明 Windows Communication Foundation (WCF) 從它所支援的預設權杖所建立的各種宣告類型。  
@@ -65,6 +65,7 @@ ms.locfileid: "54568994"
  如果沒有任何`ClaimSet`從用戶端認證產生的物件包含具有宣告`Right`的`Identity,`則<xref:System.ServiceModel.ServiceSecurityContext.IsAnonymous%2A>屬性會傳回`true`。 如果出現一或多個這類的宣告，則 `IsAnonymous` 屬性會傳回 `false`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Claims.Rights>

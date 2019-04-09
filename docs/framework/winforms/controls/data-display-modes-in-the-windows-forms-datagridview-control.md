@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], display modes
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
-ms.openlocfilehash: 86eda82cad778978711520bc2951a7a35d133753
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079691"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的資料顯示模式
 <xref:System.Windows.Forms.DataGridView>控制項可以顯示三種不同模式中的資料： 繫結、 解除繫結和虛擬。 選擇最適合的模式，根據您的需求。  
@@ -42,14 +42,15 @@ ms.locfileid: "57703059"
  如需有關虛擬模式的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)。 如需示範如何使用虛擬模式事件的範例，請參閱[逐步解說：實作虛擬模式中的 Windows Form DataGridView 控制項](implementing-virtual-mode-wf-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridViewColumn.DataPropertyName%2A?displayProperty=nameWithType>
-- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)
-- [逐步解說：建立未繫結的 Windows Form DataGridView 控制項](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
-- [如何：將資料繫結至 Windows Form DataGridView 控制項](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
-- [逐步解說：在 Windows Form DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)
+- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)
+- [逐步解說：建立未繫結的 Windows Forms DataGridView 控制項](walkthrough-creating-an-unbound-windows-forms-datagridview-control.md)
+- [HOW TO：將資料繫結至 Windows Forms DataGridView 控制項](how-to-bind-data-to-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-wf-datagridview-control.md)

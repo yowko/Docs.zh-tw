@@ -1,17 +1,17 @@
 ---
-title: <namedCaches> 項目 (快取設定)
+title: <namedCaches> 項目 （快取設定）
 ms.date: 03/30/2017
 helpviewer_keywords:
 - namedCaches element
 - caching [.NET Framework], configuration
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
-ms.openlocfilehash: 1dedd3ca192b5fb0ee561ce138f0948c52581f89
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55287478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104932"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 項目 （快取設定）
 指定的具名組態設定集合<xref:System.Runtime.Caching.MemoryCache>執行個體。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>屬性從一或多個參考的組態設定集合`namedCaches`組態檔的項目。  
@@ -88,4 +88,5 @@ ms.locfileid: "55287478"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [\<memoryCache > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/memorycache-element-cache-settings.md)

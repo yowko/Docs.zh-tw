@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b45d78548f2b1a7e17f61c5228cd68f228fe4980
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4c6a9473a698e4635c8b5cc9fb58963334dfd65e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478844"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081784"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping 方法
 取得記憶體區域的對應的檔，以及對應的類型。  
@@ -69,10 +69,11 @@ HRESULT GetFileMapping (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataInfo 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatainfo-interface.md)
 - [CorFileMapping 列舉](../../../../docs/framework/unmanaged-api/metadata/corfilemapping-enumeration.md)

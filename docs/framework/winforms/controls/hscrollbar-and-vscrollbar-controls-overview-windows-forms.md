@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBar control [Windows Forms], about ScrollBar control
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
-ms.openlocfilehash: cba28acf7e8594cd8eef88436ddde86efacada36
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714095"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097313"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar 和 VScrollBar 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.ScrollBar>控制項可用來提供輕鬆瀏覽一長串，項目或大量的資訊，請水平或垂直方式捲動應用程式或控制項內。 捲軸是通用的項目，在 Windows 介面中，因此<xref:System.Windows.Forms.ScrollBar>控制項通常會搭配控制項不是衍生自<xref:System.Windows.Forms.ScrollableControl>類別。 同樣地，許多開發人員選擇納入<xref:System.Windows.Forms.ScrollBar>控制撰寫自己的使用者控制項時。  
@@ -36,6 +36,7 @@ Windows Form<xref:System.Windows.Forms.ScrollBar>控制項可用來提供輕鬆�
  當使用者按下其中一個箭號的索引鍵，或按一下捲軸按鈕中，其中<xref:System.Windows.Forms.ScrollBar.Value%2A>屬性變更中設定的值根據<xref:System.Windows.Forms.ScrollBar.SmallChange%2A>屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.HScrollBar>
 - <xref:System.Windows.Forms.VScrollBar>
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

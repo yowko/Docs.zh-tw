@@ -2,12 +2,12 @@
 title: 依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF
 ms.date: 03/30/2017
 ms.assetid: d3890278-fa9b-4902-91ea-8da73b7143cc
-ms.openlocfilehash: 74ef2f3f3505125f8720695e218617817fcae82d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f57e895680b5cc043dad365b9f25f32477f42e72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147403"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used"></a>依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF
 ASP.NET Web 服務的設計目的為建置會透過 HTTP 使用簡易物件存取通訊協定 (Simple Object Access Protocol，SOAP)，傳送及接收訊息的應用程式。 可以使用 XML 結構描述來定義訊息的結構，也會提供工具提升在 .NET Framework 物件之間序列化訊息的速度。 這項技術可自動產生中繼資料以描述 Web 服務描述語言 (WSDL) 中的 Web 服務，接著提供第二個工具讓您可以從 WSDL 產生用於 Web 服務的用戶端。  
@@ -17,4 +17,5 @@ ASP.NET Web 服務的設計目的為建置會透過 HTTP 使用簡易物件存�
  ASP.NET Web 服務所支援的標準所述[Web 服務使用 ASP.NET 建立 XML](https://go.microsoft.com/fwlink/?LinkId=94872)。 由 WCF 所支援的標準更廣泛的清單會列在[Web 服務之互通性繫結所支援的通訊協定](../../../../docs/framework/wcf/feature-details/web-services-protocols-supported-by-system-provided-interoperability-bindings.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [根據開發情況比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

@@ -1,5 +1,5 @@
 ---
-title: bypasslist 的 <add> 項目 (網路設定)
+title: <add> Bypasslist （網路設定） 的項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/defaultProxy/bypasslist/add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <add> element, bypasslist
 - add element, bypasslist
 ms.assetid: a0b86e28-86b4-4497-abe8-d5fd614c7926
-ms.openlocfilehash: 702aa8ccefcdddee1ffc5a7519a4f955b1dc5dfb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 904c8e23f7a09a975a6f3b9322ed6bc4148d9ba4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098282"
 ---
 # <a name="add-element-for-bypasslist-network-settings"></a>\<新增 > bypasslist （網路設定） 的項目
 將 IP 位址或 DNS 名稱加入至 proxy 略過清單中。  
@@ -41,14 +41,14 @@ ms.locfileid: "55265658"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|**address**|描述 IP 位址或 DNS 名稱的規則運算式。|  
+|**位址**|描述 IP 位址或 DNS 名稱的規則運算式。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[bypasslist](../../../../../docs/framework/configure-apps/file-schema/network/bypasslist-element-network-settings.md)|提供一組規則運算式，其中說明不使用 proxy 的位址。|  
   
@@ -81,5 +81,6 @@ ms.locfileid: "55265658"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.WebProxy?displayProperty=nameWithType>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

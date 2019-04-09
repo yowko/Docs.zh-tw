@@ -2,12 +2,12 @@
 title: 不支援的功能
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
-ms.openlocfilehash: 5022c9011c2aac5b3272e359f991c40236a5673f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686696"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097869"
 ---
 # <a name="unsupported-functionality"></a>不支援的功能
 在 LINQ to SQL 中，下列 SQL 功能無法透過轉譯現有 Common Language Runtime (CLR) 和 .NET Framework 建構來公開 (Expose)：  
@@ -27,4 +27,5 @@ ms.locfileid: "54686696"
      LINQ to SQL 對於 `ROUND` 的支援有限。 如需詳細資訊，請參閱 < [System.Math 方法](system-math-methods.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料類型和函式](data-types-and-functions.md)
+
+- [資料類型與函式](data-types-and-functions.md)

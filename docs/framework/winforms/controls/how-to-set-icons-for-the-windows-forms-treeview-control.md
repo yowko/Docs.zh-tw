@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Windows Form TreeView 控制項的圖示
+title: HOW TO：設定 Windows Forms TreeView 控制項的圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 515ff2bd4ab0f4fa93eada61396bd45c587cded6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703565"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097615"
 ---
-# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>HOW TO：設定 Windows Form TreeView 控制項的圖示
+# <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>HOW TO：設定 Windows Forms TreeView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節點旁邊的圖示。 圖示位於節點文字的左邊。 若要顯示這些圖示，您必須建立關聯的樹狀檢視<xref:System.Windows.Forms.ImageList>控制項。 如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 > [!NOTE]
@@ -69,8 +69,9 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節�
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TreeView 控制項概觀](treeview-control-overview-windows-forms.md)
-- [如何：新增和移除節點，而在 Windows Form TreeView 控制項](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [如何：逐一查看 Windows Forms TreeView 控制項的所有節點](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
-- [如何：判斷按下哪個 TreeView 節點](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
-- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [HOW TO：使用 Windows Forms TreeView 控制項新增和移除節點](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [HOW TO：逐一查看 Windows Forms TreeView 控制項的所有節點](how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control.md)
+- [HOW TO：判斷按下了哪個 TreeView 節點](how-to-determine-which-treeview-node-was-clicked-windows-forms.md)
+- [HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)

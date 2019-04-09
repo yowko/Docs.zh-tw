@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5c7ea24a-39ac-4e5f-83b7-b9f9a1b556ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6af994284a56c573d70f3688ccec16459b8eed59
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 19103b2ac6e6dbba930050074fcea3cfd5a97661
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098012"
 ---
 # <a name="gcallowverylargeobjects-element"></a>\<Gcallowverylargeobjects> > 項目
 在 64 位元平台上，啟用總大小大於 2 GB 的陣列。  
@@ -78,5 +78,6 @@ ms.locfileid: "55273370"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

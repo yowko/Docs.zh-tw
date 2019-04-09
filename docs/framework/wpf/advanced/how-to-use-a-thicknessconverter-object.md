@@ -8,12 +8,12 @@ helpviewer_keywords:
 - border thickness [WPF]
 - ThicknessConverter objects [WPF]
 ms.assetid: 52682194-d7fd-499c-8005-73fcc84e7b2c
-ms.openlocfilehash: 7dcac523ad105f074df11cdd74126536a60497b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ebfb8642a01f6d602f4e5ffa58fde6a8ee0b4e1f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57350693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075947"
 ---
 # <a name="how-to-use-a-thicknessconverter-object"></a>HOW TO：使用 ThicknessConverter 物件
 ## <a name="example"></a>範例  
@@ -27,9 +27,10 @@ ms.locfileid: "57350693"
  [!code-vb[ThicknessConverter#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThicknessConverter/VisualBasic/Window1.xaml.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Thickness>
 - <xref:System.Windows.ThicknessConverter>
 - <xref:System.Windows.Controls.Border>
-- [如何：變更邊界屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
-- [如何：轉換成新的資料類型的 ListBoxItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
+- [HOW TO：變更邊界屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms750561(v=vs.90))
+- [HOW TO：轉換成新的資料類型的 ListBoxItem](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms749147(v=vs.90))
 - [面板概觀](../controls/panels-overview.md)

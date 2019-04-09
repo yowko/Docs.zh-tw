@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: f81812b766242311ac29c43de68906d65ae52b32
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100297"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>HOW TO：建立本身為 UI 的增益集
 此範例示範如何建立增益集是 Windows Presentation Foundation (WPF) 所裝載的 WPF 獨立應用程式。  
@@ -31,8 +31,7 @@ ms.locfileid: "57366383"
   
 ## <a name="example"></a>範例  
  若要建立為 WPF UI 的增益集需要特定的程式碼的每個管線區段、 增益集，和主應用程式。  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>實作合約管線區段  
  當增益集 UI，增益集的合約必須實作<xref:System.AddIn.Contract.INativeHandleContract>。 在範例中，`IWPFAddInContract`實作<xref:System.AddIn.Contract.INativeHandleContract>，如下列程式碼所示。  
@@ -63,17 +62,13 @@ ms.locfileid: "57366383"
 <a name="HostViewPipeline"></a>   
 ## <a name="implementing-the-host-view-pipeline-segment"></a>實作主應用程式檢視管線區段  
  在此模型中，主應用程式通常會預期主應用程式檢視是<xref:System.Windows.FrameworkElement>子類別。 主應用程式端配接器必須轉換<xref:System.AddIn.Contract.INativeHandleContract>要<xref:System.Windows.FrameworkElement>之後<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限。 因為方法不會呼叫主應用程式，以取得<xref:System.Windows.FrameworkElement>、 [主機] 檢視的動作必須"return"<xref:System.Windows.FrameworkElement>藉由包含它。 因此，主應用程式檢視必須衍生自的子類別<xref:System.Windows.FrameworkElement>可包含其他[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]，例如<xref:System.Windows.Controls.UserControl>。 下列程式碼顯示合約，並實作為主應用程式檢視`WPFAddInHostView`類別。  
-  
-  
-  
+
 <a name="HostSideAdapter"></a>   
 ## <a name="implementing-the-host-side-adapter-pipeline-segment"></a>實作主應用程式端配接器管線區段  
  雖然合約是<xref:System.AddIn.Contract.INativeHandleContract>，主應用程式預期<xref:System.Windows.Controls.UserControl>（如同 [主機] 檢視所指定）。 因此，<xref:System.AddIn.Contract.INativeHandleContract>必須轉換成<xref:System.Windows.FrameworkElement>跨越隔離界限之後，才能設定 [主機] 檢視的內容 (衍生自<xref:System.Windows.Controls.UserControl>)。  
   
  這項工作是由主應用程式端配接器所執行，如下列程式碼所示。  
-  
-  
-  
+
  如您所見，主應用程式端配接器取得<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫增益集端配接器<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>方法 (這是點位置<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限)。  
   
  然後將轉換的主應用程式端配接器<xref:System.AddIn.Contract.INativeHandleContract>要<xref:System.Windows.FrameworkElement>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。 最後，<xref:System.Windows.FrameworkElement>設為 [主機] 檢視的內容。  
@@ -81,19 +76,13 @@ ms.locfileid: "57366383"
 <a name="AddIn"></a>   
 ## <a name="implementing-the-add-in"></a>實作增益集  
  增益集端配接器和增益集檢視就定位之後，增益集可以藉由衍生自增益集檢視來實作，如下列程式碼所示。  
-  
-  
-  
-  
-  
+
  此範例中，您可以看到此模型的有趣的好處之一： 增益集開發人員只需要增益集 （因為它是 UI 也），而不是同時實作增益集類別和增益集 UI。  
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>實作主應用程式  
  主應用程式端配接器和建立的 [主機] 檢視中，主應用程式可以使用[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]增益集模型開啟管線，並取得增益集主應用程式檢視。 下列程式碼顯示這些步驟。  
-  
-  
-  
+
  主應用程式會使用一般的.NET Framework 增益集模型程式碼來啟動增益集，隱含傳回給主應用程式的 [主機] 檢視。 主應用程式接著會顯示 [主機] 檢視 (也就是<xref:System.Windows.Controls.UserControl>) 從<xref:System.Windows.Controls.Grid>。  
   
  處理增益集 UI 互動的程式碼會執行增益集的應用程式定義域中。 這些互動包括：  
@@ -105,5 +94,6 @@ ms.locfileid: "57366383"
  此活動完全與主應用程式隔離。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF 增益集概觀](wpf-add-ins-overview.md)

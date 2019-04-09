@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 6bf6e79923f0b3119c516ed97e0e86971368a34c
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083649"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098737"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>將演算法名稱對應至密碼編譯類別
 有四種方式，開發人員可以建立密碼編譯物件，使用[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
@@ -68,5 +68,6 @@ ms.locfileid: "55083649"
  如需預設名稱和它們對應到類別的清單，請參閱<xref:System.Security.Cryptography.CryptoConfig>。  
   
 ## <a name="see-also"></a>另請參閱
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../../docs/framework/configure-apps/configure-cryptography-classes.md)

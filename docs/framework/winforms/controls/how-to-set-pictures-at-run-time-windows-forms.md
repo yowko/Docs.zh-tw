@@ -13,12 +13,12 @@ helpviewer_keywords:
 - images [Windows Forms], adding with PictureBox control [Windows Forms]
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
-ms.openlocfilehash: 5afb4fe3ebef705cd0671312aacb6f9ad8219621
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073594"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>HOW TO：在執行階段 (Windows Form) 設定的圖片
 您可以透過程式設計方式設定顯示 Windows Form 的影像<xref:System.Windows.Forms.PictureBox>控制項。  
@@ -98,9 +98,10 @@ ms.locfileid: "57711213"
      此程式碼將會清除映像，即使圖形在設計階段時載入控制項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.PictureBox>
 - <xref:System.Drawing.Image.FromFile%2A?displayProperty=nameWithType>
 - [PictureBox 控制項概觀](picturebox-control-overview-windows-forms.md)
-- [如何：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [如何：在執行階段修改的大小或位置的圖片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [HOW TO：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [HOW TO：在執行階段修改圖片的大小或位置](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
 - [PictureBox 控制項](picturebox-control-windows-forms.md)

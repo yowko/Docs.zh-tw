@@ -2,12 +2,12 @@
 title: <resolver>
 ms.date: 03/30/2017
 ms.assetid: 0c00200c-f135-4e5c-a024-76b72bcbc021
-ms.openlocfilehash: f3d4b049afe55fb9fb80cbad56c49e8ec13e60db
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 39dcb868bd3ff25451509616e1dac7d41f94cfa1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075870"
 ---
 # <a name="resolver"></a>\<resolver>
 指定對等解析程式，用於將對等網狀結構 ID 解析成一組對等節點位址，這組位址可表示參與網狀結構的數個節點。  
@@ -52,6 +52,7 @@ ms.locfileid: "55758738"
  對等名稱解析程式是對等通道用來尋找參與對等網狀結構之對等節點的探索服務。 您也可以使用這個解析程式將節點「註冊」到對等網狀結構，透過這樣的機制使得對等節點成為已知的，並且可從對等網狀結構中取得。 如需有關對等解析程式的詳細資訊，請參閱 <<c0> [ 對等解析程式](../../../../../docs/framework/wcf/feature-details/peer-resolvers.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.PeerResolver>
 - <xref:System.ServiceModel.PeerResolvers.PeerResolverSettings>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Resolver%2A>

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 46f5b4b1a2721a07decb045cd3734ce6edaa0762
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522033"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074751"
 ---
 # <a name="extending-clients"></a>擴充用戶端
 在呼叫應用程式中，服務模型層會負責使用應用程式程式碼將方法引動過程轉譯到傳出訊息中、將這些訊息推送到基礎通道、將結果轉譯回應用程式程式碼中的傳回值與 out 參數，並將結果傳回到呼叫端。 服務模型延伸會修改或實作涉及用戶端或發送器功能、自訂行為、訊息與參數攔截以及其他擴充性功能的執行或通訊行為與功能。  
@@ -115,7 +115,8 @@ ms.locfileid: "54522033"
  如需示範攔截跨 WCF 用戶端的範例，請參閱[How to:檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Dispatcher.ClientRuntime>
 - <xref:System.ServiceModel.Dispatcher.ClientOperation>
-- [如何：檢查或修改用戶端上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
-- [如何：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)
+- [HOW TO：檢查或修改用戶端上的訊息](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)
+- [HOW TO：檢查或修改參數](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)

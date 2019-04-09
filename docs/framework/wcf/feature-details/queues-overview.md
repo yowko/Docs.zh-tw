@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], MSMQ integration
 ms.assetid: b8757992-ffce-40ad-9e9b-3243f6d0fce1
-ms.openlocfilehash: 1fd2809af805c641484545b1c3606898e0bc3e2d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: e34f2033ec0f7dac784634d06712d65786503299
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099764"
 ---
 # <a name="queues-overview"></a>佇列概觀
 本節將介紹已佇列通訊背後的一般和核心概念。 後續各節討論有關此處所述的佇列概念會列印文件的顯示，請在 Windows Communication Foundation (WCF) 的詳細資料。  
@@ -74,9 +74,10 @@ ms.locfileid: "58466162"
  在訊息到達目標佇列之後，服務可能會重複失敗而無法處理訊息。 例如，在交易下從佇列讀取訊息並更新資料庫的應用程式可能會發現資料庫暫時斷線。 在這種情況下，交易會復原，建立新的交易，然後從佇列重新讀取訊息。 第二次嘗試可能會成功或失敗。 在某些情況中，訊息可能會重複失敗而無法傳遞至應用程式，這要視錯誤的原因而定。 在這種情況下，會將訊息視為「有害」。 此類訊息會移到有害佇列中，可由有害處理的應用程式讀取。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
-- [無效信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
+- [寄不出的信件佇列](../../../../docs/framework/wcf/samples/dead-letter-queues.md)
 - [變動性佇列通訊](../../../../docs/framework/wcf/samples/volatile-queued-communication.md)
 - [Windows Communication Foundation 至訊息佇列](../../../../docs/framework/wcf/samples/wcf-to-message-queuing.md)
 - [安裝訊息佇列 (MSMQ)](../../../../docs/framework/wcf/samples/installing-message-queuing-msmq.md)

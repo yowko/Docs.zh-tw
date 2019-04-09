@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a0bfa4b1-99e5-4dd1-9912-4b825a9dc25c
-ms.openlocfilehash: a65b71378b18397e138f88f9b23669e7818feea4
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 87f8132fc8bc9d64fb02a78bc38d1261db032b5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138790"
 ---
 # <a name="method-based-query-syntax-examples-navigating-relationships"></a>以方法為基礎的查詢語法範例：巡覽關聯性
 [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] 中的導覽屬性是用來尋找位於關聯兩端之實體的捷徑屬性。 導覽屬性可讓使用者在不同實體之間巡覽，或是透過關聯集從某個實體巡覽至相關的實體。 本主題提供之以方法為基礎的查詢語法範例，將說明如何透過 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中的導覽屬性來巡覽關聯性。  
@@ -53,5 +53,6 @@ ms.locfileid: "55827444"
  [!code-vb[DP L2E Examples#WhereNavProperty](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#wherenavproperty)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [關聯性、 導覽屬性和外部索引鍵](/ef/ef6/fundamentals/relationships)
 - [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

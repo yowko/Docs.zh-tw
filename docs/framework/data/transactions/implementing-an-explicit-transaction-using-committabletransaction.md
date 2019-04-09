@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
-ms.openlocfilehash: 078102da95222d45bec82269edf1eb8e40866408
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105413"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>使用 CommittableTransaction 實作明確交易
 <xref:System.Transactions.CommittableTransaction> 類別為應用程式提供使用交易的明確方式，而非隱含地使用 <xref:System.Transactions.TransactionScope> 類別。 這個方法對想要跨多個函式呼叫或多個執行緒呼叫來使用相同交易的應用程式也很有用處。 與 <xref:System.Transactions.TransactionScope> 類別不同的是，應用程式寫入器需要特別呼叫 <xref:System.Transactions.CommittableTransaction.Commit%2A> 和 <xref:System.Transactions.Transaction.Rollback%2A> 方法，才能認可或中止交易。  
@@ -86,5 +86,6 @@ void OnCommitted(IAsyncResult asyncResult)
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [使用異動範圍實作隱含異動](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
+
+- [使用交易範圍實作隱含交易](../../../../docs/framework/data/transactions/implementing-an-implicit-transaction-using-transaction-scope.md)
 - [交易處理](../../../../docs/framework/data/transactions/index.md)

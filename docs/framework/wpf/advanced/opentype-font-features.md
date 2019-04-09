@@ -9,12 +9,12 @@ helpviewer_keywords:
 - typography [WPF], OpenType font technology
 - OpenType font technology [WPF]
 ms.assetid: 4061a9d1-fe8b-4921-9e17-18ec7d2e3ea2
-ms.openlocfilehash: a3bcca1e7d031a9351881a5192370bead18aa7bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 86921b610b4b42cfc0393af2966b70870bc650f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57467151"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104477"
 ---
 # <a name="opentype-font-features"></a>OpenType 字型功能
 
@@ -22,7 +22,7 @@ ms.locfileid: "57467151"
   
 <a name="overview"></a>   
 ## <a name="opentype-font-format"></a>OpenType 字型格式  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式是 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 字型格式的延伸模組，新增 PostScript 字型資料的支援。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 和 Adobe Corporation 共同開發。 支援 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型和作業系統服務，提供使用者簡單的字型安裝與使用方式，無論字型包含 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 外框或 CFF (PostScript) 外框。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式是 [!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)] 字型格式的延伸模組，新增 PostScript 字型資料的支援。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 和 Adobe Corporation 共同開發。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型和作業系統服務的支援[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]字型提供一個簡單的方式安裝和使用字型的使用者，無論字型包含[!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)]外框或 CFF (PostScript) 外框。  
   
  [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式解決下列開發人員難題︰  
   
@@ -42,7 +42,7 @@ ms.locfileid: "57467151"
  如需 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型格式的詳細資訊，請參閱 [OpenType 規格](https://go.microsoft.com/fwlink/?LinkId=96731)。  
   
 ### <a name="advanced-typographic-extensions"></a>進階的印刷樣式延伸模組  
- 進階印刷樣式資料表 ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置表格) 使用 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 或 CFF 外框來擴充字型功能。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置字型包含延伸字型功能的其他資訊，支援高品質的國際印刷樣式。 大部分 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型只公開總計的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 可用功能子集。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型提供下列功能。  
+ 進階印刷樣式資料表 ([!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置表格) 使用 [!INCLUDE[TLA2#tla_truetype](../../../../includes/tla2sharptla-truetype-md.md)] 或 CFF 外框來擴充字型功能。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 版面配置字型包含延伸字型的功能，以支援高品質的國際印刷樣式的其他資訊。 大部分 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型只公開總計的 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 可用功能子集。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型提供下列功能。  
   
 -   字元與字符之間的豐富對應，支援連音符號、位置形式、替代項目，以及其他字型替代項目。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "57467151"
   
 <a name="capitals"></a>   
 ## <a name="capitals"></a>大寫字  
- 大寫字是一組以大寫樣式字符轉譯文字的印刷格式。 一般而言，當文字全部轉譯為大寫時，字母之間的間距可能太近，字母的加權和比例會過重。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 支援數種大寫字樣式格式，包括小型大寫字、特小大寫字、標題和大寫字母間距。 這些樣式格式可讓您控制大寫字的外觀。  
+ 大寫字是一組以大寫樣式字符轉譯文字的印刷格式。 一般而言，當文字全部轉譯為大寫時，字母之間的間距可能太近，字母的加權和比例會過重。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 支援大寫字，包括小型大寫字、 特小大寫字、 標題和大寫字母間距數目樣式格式。 這些樣式格式可讓您控制大寫字的外觀。  
   
  下列文字顯示 Pescadero 字型的標準大寫字母，後面接著樣式設定為 "SmallCaps" 和 "AllSmallCaps" 的字母。 在此情況下，三個單字全都使用相同的字型大小。  
   
@@ -118,7 +118,7 @@ ms.locfileid: "57467151"
   
 <a name="ligatures"></a>   
 ## <a name="ligatures"></a>連音符號  
- 連音符號是兩個或以上的字符，形成單一字符以建立更清晰或更美觀的文字。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援四種連音符號︰  
+ 連音符號是兩個或以上的字符，形成單一字符以建立更清晰或更美觀的文字。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援四種連音符號：  
   
 -   **標準連音符號**。 設計目的旨在增進可讀性。 標準連音符號包括 "fi"、"fl" 和 "ff"。  
   
@@ -161,8 +161,7 @@ ms.locfileid: "57467151"
  花飾字是裝飾性字符，使用精心設計且通常與書寫體相關聯的裝飾。 下列文字顯示 Pescadero 字型的標準和花飾字字符。  
   
  ![使用 OpenType 標準和花飾字字符的文字](./media/opentype-font-features/opentype-standard-swash-glyphs.gif "使用 OpenType 標準和花飾字字符的文字")  
-  
-  
+
  花飾字通常用為簡短片語中的裝飾項目，例如事件宣告。 下列文字使用花飾字強調大寫字母的事件名稱。  
   
  ![使用 OpenType 花飾字的文字](./media/opentype-font-features/opentype-swashes.gif "使用 OpenType 花飾字的文字")  
@@ -182,11 +181,10 @@ ms.locfileid: "57467151"
   
 <a name="alternates"></a>   
 ## <a name="alternates"></a>替代項目  
- 替代項目是可以取代標準字符的字符。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型，例如下例使用的 Pericles 字型，可以包含替代字符，您可用來建立不同的文字外觀。 下列文字顯示 Pericles 字型的標準字符。  
+ 替代項目是可以取代標準字符的字符。 [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 例如在下列範例中，使用的 Pericles 字型的字型，可以包含您可用來建立不同的文字外觀的替代字符。 下列文字顯示 Pericles 字型的標準字符。  
   
  ![使用 OpenType 標準字符的文字](./media/opentype-font-features/opentype-standard-glyphs.gif "使用 OpenType 標準字符的文字")  
-  
-  
+
  Pericles [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型包含其他字符，可為標準的字符組提供文體替代字。 下列文字顯示文體替代字符。  
   
  ![使用 OpenType 文體替代字符的文字](./media/opentype-font-features/opentype-stylistic-alternate-glyphs.gif "使用 OpenType 文體替代字符的文字")  
@@ -226,7 +224,7 @@ ms.locfileid: "57467151"
  OpenType 字型支援大量可搭配文字中數值使用的功能。  
   
 ### <a name="fractions"></a>分數  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援分數樣式，包括斜式和直式。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援分數，包括斜式和堆疊的樣式。  
   
  下列文字顯示 Palatino Linotype 字型的分數樣式。  
   
@@ -250,7 +248,7 @@ ms.locfileid: "57467151"
  [!code-xaml[OpenTypeFontSamples#11](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/PageOne.xaml#11)]  
   
 ### <a name="proportional-and-tabular-figures"></a>調和間距與表格式數字  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援在使用數字時，以調和間距與表格式數字功能控制寬度對齊。 調和間距數字會將每一個數字視為具有不同的寬度，"1" 比 "5" 窄。 表格式數字則視為等寬數字，以便垂直對齊，可提高財務類資訊的可讀性。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援使用數字時，控制寬度對齊的調和間距與表格式圖功能。 調和間距數字會將每一個數字視為具有不同的寬度，"1" 比 "5" 窄。 表格式數字則視為等寬數字，以便垂直對齊，可提高財務類資訊的可讀性。  
   
  下列文字在第一個資料行中顯示使用 Miramonte 字型的兩個調和間距數字。 請注意數字 "5" 和 "1" 之間的寬度差異。 第二個資料行顯示相同的兩個數值，使用表格式數字功能調整其寬度。  
   
@@ -261,7 +259,7 @@ ms.locfileid: "57467151"
  [!code-xaml[OpenTypeFontSamples#OpenTypeFontSnippet19](~/samples/snippets/csharp/VS_Snippets_Wpf/OpenTypeFontSamples/CS/Window1.xaml#opentypefontsnippet19)]  
   
 ### <a name="slashed-zero"></a>加斜線的零  
- [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援加斜線的零數字格式，以強調字母 "O" 與數字 "0" 之間的差異。 加斜線的零數字通常用於財務和商務資訊中的識別碼。  
+ [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 字型支援加斜線的零數字格式，以強調字母"O"與數字"0"之間的差異。 加斜線的零數字通常用於財務和商務資訊中的識別碼。  
   
  下列文字顯示使用 Miramonte 字型的範例訂單識別碼。 第一行使用標準的數字。 第二行使用加斜線的零數字，以突顯與大寫字母 "O" 的對比。  
   
@@ -338,6 +336,7 @@ ms.locfileid: "57467151"
 |<xref:System.Windows.Documents.Typography.Variants%2A>|<xref:System.Windows.FontVariants.Inferior> &#124; <xref:System.Windows.FontVariants.Normal> &#124; <xref:System.Windows.FontVariants.Ordinal> &#124; <xref:System.Windows.FontVariants.Ruby> &#124; <xref:System.Windows.FontVariants.Subscript> &#124; <xref:System.Windows.FontVariants.Superscript>|<xref:System.Windows.FontVariants.Normal?displayProperty=nameWithType>|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Documents.Typography>
 - [OpenType 規格](https://go.microsoft.com/fwlink/?LinkId=96731)
 - [WPF 中的印刷樣式](typography-in-wpf.md)

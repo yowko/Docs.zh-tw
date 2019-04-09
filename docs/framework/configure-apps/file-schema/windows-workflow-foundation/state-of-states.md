@@ -3,12 +3,12 @@ title: <state> 的 <states>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: ab483c7f-a091-4933-ba6b-708d96846d38
-ms.openlocfilehash: 657814eb120878cdc71cd7603d0499ff65ca50e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ff75895949c50cd369e4297ea77dc21106994067
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367085"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073932"
 ---
 # <a name="state-of-states"></a>\<狀態 > 的\<狀態 >
 組態項目，其中包含應該發出追蹤記錄之已訂閱活動的狀態。  
@@ -48,7 +48,7 @@ ms.locfileid: "57367085"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|可指定追蹤記錄應發出之已訂閱活動狀態的字串。|  
+|名稱|可指定追蹤記錄應發出之已訂閱活動狀態的字串。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -77,7 +77,8 @@ ms.locfileid: "57367085"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElement?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

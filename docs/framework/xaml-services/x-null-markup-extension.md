@@ -12,12 +12,12 @@ helpviewer_keywords:
 - x:Null markup extension [XAML Services]
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
-ms.openlocfilehash: 34a2de71bec9b0929070aa908741de38b5904643
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58029370"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100804"
 ---
 # <a name="xnull-markup-extension"></a>x:Null 標記延伸
 指定`null`做為 XAML 成員的值。  
@@ -45,6 +45,7 @@ ms.locfileid: "58029370"
  請注意，`null`不一定是參考型別相依性屬性未設定的初始值。 初始預設值為每個相依性屬性而有所不同，並可根據特定屬性的中繼資料。 許多相依性屬性不接受`null`為值時，透過標記或程式碼，因為它們的驗證回呼實作。 如需有關相依性屬性的詳細資訊，請參閱 <<c0> [ 相依性屬性概觀](../wpf/advanced/dependency-properties-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.DependencyProperty.UnsetValue>
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [標記延伸和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

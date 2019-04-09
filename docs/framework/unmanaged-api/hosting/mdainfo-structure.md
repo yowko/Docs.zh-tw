@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2d48c3d701b0369ab00150625c26d94f4111b2d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104607"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 結構
 提供有關的詳細資料`Event_MDAFired`事件，這會觸發建立的 managed 偵錯助理 (MDA)。  
@@ -58,10 +58,11 @@ typedef struct _MDAInfo {
   
  **標頭：** MSCorEE.idl  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
 - [診斷 Managed 偵錯助理的錯誤](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

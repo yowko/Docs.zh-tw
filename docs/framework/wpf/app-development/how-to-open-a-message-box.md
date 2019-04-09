@@ -8,12 +8,12 @@ helpviewer_keywords:
 - message boxes [WPF], opening
 - opening message boxes [WPF]
 ms.assetid: acaad17f-af43-4eca-a004-f1c9e7c6f292
-ms.openlocfilehash: fa371b62c78a08e25de815fa44360230b6156008
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cf7534cdee5e17d53e95294573023d660135e395
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101103"
 ---
 # <a name="how-to-open-a-message-box"></a>HOW TO：開啟訊息方塊
 此範例示範如何開啟訊息方塊。  
@@ -25,4 +25,5 @@ ms.locfileid: "57369600"
  [!code-vb[MessageBoxSnippets#MessageBoxShow1CODE](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MessageBoxSnippets/visualbasic/show1window.xaml.vb#messageboxshow1code)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [MessageBox 範例](https://go.microsoft.com/fwlink/?LinkID=160023)

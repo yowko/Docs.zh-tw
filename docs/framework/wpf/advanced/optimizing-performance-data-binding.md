@@ -5,20 +5,18 @@ helpviewer_keywords:
 - binding data [WPF], performance
 - data binding [WPF], performance
 ms.assetid: 1506a35d-c009-43db-9f1e-4e230ad5be73
-ms.openlocfilehash: dfc58036bc39879009b31d29dc41247a914bcd59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ac7ca815bedf180c8a680840f585d08f7018d6ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352018"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087829"
 ---
 # <a name="optimizing-performance-data-binding"></a>最佳化效能：資料繫結
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結會提供簡單且一致的方式呈現，並與資料互動的應用程式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。  
   
  本主題提供資料繫結的效能建議。  
-  
 
-  
 <a name="HowDataBindingReferencesAreResolved"></a>   
 ## <a name="how-data-binding-references-are-resolved"></a>資料繫結參考的解析方式  
  在討論資料繫結效能問題之前，值得先探討 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結引擎如何解析物件參考以進行繫結。  
@@ -37,7 +35,7 @@ ms.locfileid: "57352018"
   
  下表比較的資料繫結的速度<xref:System.Windows.Controls.TextBlock.Text%2A>一千屬性<xref:System.Windows.Controls.TextBlock>使用這三種方法的項目。  
   
-|**繫結 TextBlock 的 Text 屬性**|**繫結時間 (毫秒)**|**轉譯時間 -- 包括繫結 (毫秒)**|  
+|**繫結 TextBlock 的 Text 屬性**|**繫結時間 （毫秒）**|**轉譯時間--包括繫結 （毫秒）**|  
 |--------------------------------------------------|-----------------------------|--------------------------------------------------|  
 |至 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件的屬性|115|314|  
 |屬性，[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]實作的物件 <xref:System.ComponentModel.INotifyPropertyChanged>|115|305|  
@@ -47,7 +45,7 @@ ms.locfileid: "57352018"
 ## <a name="binding-to-large-clr-objects"></a>繫結至大型 CLR 物件  
  當您將資料繫結至單一 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件而它具有數以千計的屬性時，會有顯著的效能影響。 您可以藉由將單一物件分割成多個較少屬性的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件來降低這種影響。 下表顯示單一大型 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件與多個較小物件之資料繫結的繫結和轉譯時間。  
   
-|**資料繫結 1000 個 TextBlock 物件**|**繫結時間 (毫秒)**|**轉譯時間 -- 包括繫結 (毫秒)**|  
+|**資料繫結 1000 個 TextBlock 物件**|**繫結時間 （毫秒）**|**轉譯時間--包括繫結 （毫秒）**|  
 |---------------------------------------------|-----------------------------|--------------------------------------------------|  
 |至具有 1000 個屬性的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件|950|1200|  
 |至 1000 個具有一個屬性的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件|115|314|  
@@ -60,7 +58,7 @@ ms.locfileid: "57352018"
   
  下表顯示更新所花費的時間<xref:System.Windows.Controls.ListBox>（具有關閉 UI 虛擬化） 時新增一個項目。 第一個資料列中的數字代表經過時間時[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]<xref:System.Collections.Generic.List%601>物件的繫結至<xref:System.Windows.Controls.ListBox>項目的<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。 第二個資料列中的數字代表經過時間時<xref:System.Collections.ObjectModel.ObservableCollection%601>繫結至<xref:System.Windows.Controls.ListBox>項目的<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>。 請注意很長的時間省下使用<xref:System.Collections.ObjectModel.ObservableCollection%601>資料繫結策略。  
   
-|**資料繫結 ItemsSource**|**1 個項目的更新時間 (毫秒)**|  
+|**資料繫結 ItemsSource**|**更新 1 的時間 （毫秒） 的項目**|  
 |--------------------------------------|---------------------------------------|  
 |若要[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]<xref:System.Collections.Generic.List%601>物件|1656|  
 |若要 <xref:System.Collections.ObjectModel.ObservableCollection%601>|20|  
@@ -71,9 +69,10 @@ ms.locfileid: "57352018"
   
 <a name="Do_not_Convert_CLR_objects_to_Xml_Just_For_Data_Binding"></a>   
 ## <a name="do-not-convert-clr-objects-to-xml-just-for-data-binding"></a>不要只為了資料繫結而將 CLR 物件轉換成 XML。  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您資料繫結至 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 內容。不過，資料繫結至 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] 內容會比資料繫結至 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件來得慢。 如果唯一的目的是資料繫結，請不要將 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件轉換成 XML。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您的資料繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]內容; 不過，資料繫結[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]內容低於資料繫結至[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件。 如果唯一的目的是資料繫結，請不要將 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件轉換成 XML。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
@@ -81,7 +80,7 @@ ms.locfileid: "57352018"
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)
 - [資料繫結概觀](../data/data-binding-overview.md)
-- [逐步解說：快取中的 WPF 應用程式的應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [逐步解說：在 WPF 應用程式中快取應用程式資料](walkthrough-caching-application-data-in-a-wpf-application.md)

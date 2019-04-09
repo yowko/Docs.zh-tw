@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從 Windows Form 播放的音效
+title: HOW TO：播放 Windows Forms 的音效
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - My.Computer.Audio object [Windows Forms], playing sounds
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
-ms.openlocfilehash: 7d8c723fc995e8b9987681e3db343c43d3bc2682
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714706"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078677"
 ---
-# <a name="how-to-play-a-sound-from-a-windows-form"></a>HOW TO：從 Windows Form 播放的音效
+# <a name="how-to-play-a-sound-from-a-windows-form"></a>HOW TO：播放 Windows Forms 的音效
 這個範例會在執行階段播放所指定路徑的音效。  
   
 ## <a name="example"></a>範例  
@@ -65,6 +65,6 @@ private void playSimpleSound()
  請勿根據檔案名稱來判斷檔案內容。 例如，`Form1.vb` 檔案可能不是 Visual Basic 來源檔案。 在應用程式中使用這些資料之前，請先驗證所有輸入值。  
   
 ## <a name="see-also"></a>另請參閱
-- <xref:System.Media.SoundPlayer>
-- [如何：在 Windows Form 中的非同步載入音效](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
 
+- <xref:System.Media.SoundPlayer>
+- [HOW TO：在 Windows Forms 中以非同步方式載入音效](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

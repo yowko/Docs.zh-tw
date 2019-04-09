@@ -1,5 +1,5 @@
 ---
-title: HOW TO：得知列印工作是否可在此時列印
+title: HOW TO：得知每天此時可否列印列印工作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: 2e93fe23a6084fec4e2a251b0361c29a4207e621
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352733"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099854"
 ---
-# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>HOW TO：得知列印工作是否可在此時列印
+# <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>HOW TO：得知每天此時可否列印列印工作
 列印佇列並不一定可為一天 24 小時。 還可以設定讓它們無法使用在一天的特定時間的開始和結束時間屬性。 這項功能可用，例如，保留獨佔使用的特定部門下午 5 點後的印表機。 該部門會有不同的佇列服務的印表機，比其他部門使用。 其他部門的佇列會被設定為無法使用下午 5 點後，而佇列為偏好的部門可能被設定為隨時可供使用。  
   
  此外，列印工作本身也可以設定為只在指定的時間範圍內的可列印。  
@@ -75,6 +75,7 @@ ms.locfileid: "57352733"
  [!code-vb[DiagnoseProblematicPrintJob#TimeConverter](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#timeconverter)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.DateTime>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.Printing.PrintQueue>

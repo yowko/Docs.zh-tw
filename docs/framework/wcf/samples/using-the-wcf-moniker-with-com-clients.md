@@ -2,12 +2,12 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: e784b40cb16177fe31f8031ea26617122b9b27db
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cb610f85c929c371299bc505646cdf924ecdaea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836203"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098126"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 此範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker 將 Web 服務整合至 COM 架構開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -236,4 +236,3 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 -   基於安全性目的，請在完成範例之後，移除虛擬目錄定義以及安裝步驟中所授與的權限。  
-  

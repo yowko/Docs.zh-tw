@@ -2,12 +2,12 @@
 title: <persistenceProvider>
 ms.date: 03/30/2017
 ms.assetid: a37049c5-a7ea-4519-94f2-912eeb010380
-ms.openlocfilehash: 054991687a54ecbf95cc18f58717a4ed3e36f050
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: dc8dea0ddd1ea074c08952e3e2ebfef2d12f7183
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260797"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099283"
 ---
 # <a name="persistenceprovider"></a>\<persistenceProvider>
 指定要使用的持續性提供者實作型別，以及持續性作業所使用的逾時。  
@@ -48,5 +48,6 @@ ms.locfileid: "55260797"
  這個項目會指定持續性提供者，該提供者會用來序列化 WCF 服務的狀態。 它應該搭配在 HTTP 標頭中傳遞狀態資訊的 `wsHttpContextBinding` 使用。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.PersistenceProviderElement>
 - <xref:System.ServiceModel.Persistence.PersistenceProvider>

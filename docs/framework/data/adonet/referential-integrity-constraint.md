@@ -2,12 +2,12 @@
 title: 參考完整性條件約束
 ms.date: 03/30/2017
 ms.assetid: 3d3ba44b-4302-40d8-a7a9-62932e0395e5
-ms.openlocfilehash: 7d3304393ef4e97887d9b8afec94ed265e38eaf0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a8ef035872317c6eaea0401164e7fa8c95f5f7ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073971"
 ---
 # <a name="referential-integrity-constraint"></a>參考完整性條件約束
 A*參考完整性條件約束*Entity Data Model (EDM) 中是類似於關聯式資料庫中的參考完整性條件約束。 從資料庫資料表資料行 （或資料行） 可以參考另一個資料表的主索引鍵的方式相同[屬性](../../../../docs/framework/data/adonet/property.md)（或屬性） 的[實體型別](../../../../docs/framework/data/adonet/entity-type.md)可以參考[實體索引鍵](../../../../docs/framework/data/adonet/entity-key.md)另一個實體類型。 參考的實體類型稱為*主體端點*條件約束。 參考主要端點的實體類型稱為*相依端點*條件約束。  
@@ -25,8 +25,7 @@ A*參考完整性條件約束*Entity Data Model (EDM) 中是類似於關聯式�
  在 EDM 中，參考完整性條件約束的目的在於確保有效的關聯永遠存在。 如需詳細資訊，請參閱 <<c0> [ 外部索引鍵屬性](../../../../docs/framework/data/adonet/foreign-key-property.md)。  
   
 ## <a name="example"></a>範例  
- 下圖顯示包含兩個關聯 (`WrittenBy` 和 `PublishedBy`) 的概念模型。 
-  `Book` 實體類型具有屬性 `PublisherId`，當您定義 `Publisher` 關聯的參考完整性條件約束時，此屬性會參考 `PublishedBy` 實體類型的實體索引鍵。  
+ 下圖顯示包含兩個關聯 (`WrittenBy` 和 `PublishedBy`) 的概念模型。 `Book` 實體類型具有屬性 `PublisherId`，當您定義 `Publisher` 關聯的參考完整性條件約束時，此屬性會參考 `PublishedBy` 實體類型的實體索引鍵。  
   
  ![RefConstraintModel](./media/referential-integrity-constraint/reference-constraint-model.gif "的參考條件約束模型範例")  
   
@@ -35,5 +34,6 @@ A*參考完整性條件約束*Entity Data Model (EDM) 中是類似於關聯式�
  [!code-xml[EDM_Example_Model#RefConstraint](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#refconstraint)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

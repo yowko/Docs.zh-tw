@@ -1,5 +1,5 @@
 ---
-title: < System.codedom > 項目
+title: <system.codedom> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.codedom
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - system.codedom element
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
-ms.openlocfilehash: e2c65044b99e2d5fda7025f24d1d4c4082ded4ec
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268219"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101610"
 ---
 # <a name="systemcodedom-element"></a>\<system.codedom > 項目
 指定可用語言提供者的編譯器組態設定。  
@@ -40,7 +40,7 @@ ms.locfileid: "55268219"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<compilers>](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目的容器；內含零或多個 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 項目。|  
+|[\<編譯器 >](../../../../../docs/framework/configure-apps/file-schema/compiler/compilers-element.md)|編譯器組態項目的容器；內含零或多個 [\<compiler>](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md) 項目。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -88,8 +88,9 @@ ms.locfileid: "55268219"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.CodeDom.Compiler.CompilerInfo>
 - <xref:System.CodeDom.Compiler.CodeDomProvider>
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [編譯器和語言提供者設定結構描述](../../../../../docs/framework/configure-apps/file-schema/compiler/index.md)
-- [\<編譯器> 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)
+- [\<編譯器 > 項目](../../../../../docs/framework/configure-apps/file-schema/compiler/compiler-element.md)

@@ -7,17 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: 395077b7c82ee54a51b8086df0c59f731e3a2b70
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59100076"
 ---
 # <a name="application-management-overview"></a>應用程式管理概觀
 所有應用程式通常會共用一組適用於應用程式實作和管理的通用功能。 本主題提供中的功能概觀<xref:System.Windows.Application>類別來建立及管理應用程式。  
-   
-  
+
 ## <a name="the-application-class"></a>Application 類別  
  在 WPF 中，應用程式範圍的常見功能封裝在<xref:System.Windows.Application>類別。 <xref:System.Windows.Application>類別包括下列功能：  
   
@@ -106,7 +105,7 @@ ms.locfileid: "58634215"
   
 <a name="Getting_the_Current_Application"></a>   
 ## <a name="getting-the-current-application"></a>取得目前的應用程式  
- 因為的功能<xref:System.Windows.Application>整個應用程式可共用的類別，則只有一個執行個體<xref:System.Windows.Application>每個類別<xref:System.AppDomain>。 為了強制執行此項目，<xref:System.Windows.Application>類別會實作為單一類別 (請參閱[C# 中實作的單一](https://go.microsoft.com/fwlink/?LinkId=100567))，這會建立本身的單一執行個體，並提供共用存取權與`static` <xref:System.Windows.Application.Current%2A>屬性。  
+ 因為的功能<xref:System.Windows.Application>整個應用程式可共用的類別，則只有一個執行個體<xref:System.Windows.Application>每個類別<xref:System.AppDomain>。 若要強制執行此項目，<xref:System.Windows.Application>類別會實作為單一類別 (請參閱[中實作 Singleton C# ](https://go.microsoft.com/fwlink/?LinkId=100567))，這會建立本身的單一執行個體，並提供共用存取權與`static`<xref:System.Windows.Application.Current%2A>屬性。  
   
  下列程式碼示範如何取得的參考<xref:System.Windows.Application>目前的物件<xref:System.AppDomain>。  
   
@@ -125,8 +124,7 @@ ms.locfileid: "58634215"
 <a name="Application_Lifetime"></a>   
 ## <a name="application-lifetime"></a>應用程式存留期  
  WPF 應用程式的存留期由多個所引發的事件標記<xref:System.Windows.Application>，讓您知道您的應用程式啟動時，經過啟用和停用，並已關閉。  
-  
-  
+
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>啟動顯示畫面  
  從開始[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]，您可以指定要在啟動視窗中，使用的影像或*啟動顯示畫面*。 <xref:System.Windows.SplashScreen>類別可讓您輕鬆地在載入您的應用程式時顯示啟動視窗。 <xref:System.Windows.SplashScreen>  視窗建立後之前, 所示<xref:System.Windows.Application.Run%2A>呼叫。 如需詳細資訊，請參閱 <<c0> [ 應用程式啟動時間](../advanced/application-startup-time.md)並[WPF 應用程式中加入啟動顯示畫面](how-to-add-a-splash-screen-to-a-wpf-application.md)。  
@@ -357,10 +355,11 @@ ms.locfileid: "58634215"
  ![XBAP &#45; 應用程式物件事件](./media/applicationmodeloverview-applicationobjectevents-xbap.png "ApplicationModelOverview_ApplicationObjectEvents_xbap")  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Application>
 - [WPF 視窗概觀](wpf-windows-overview.md)
-- [瀏覽概觀](navigation-overview.md)
+- [巡覽概觀](navigation-overview.md)
 - [WPF 應用程式資源、內容和資料檔案](wpf-application-resource-content-and-data-files.md)
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)
-- [應用程式模型：How to 主題](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
+- [應用程式模型：HOW TO 主題](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms749013(v=vs.100))
 - [應用程式開發](index.md)

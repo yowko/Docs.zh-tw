@@ -1,5 +1,5 @@
 ---
-title: HOW TO：調整 Windows Form 的大小
+title: HOW TO：調整 Windows Forms 大小
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - resizing Windows Forms
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
-ms.openlocfilehash: 9399069ad5365b025fe8c92b2f10c36c4666f4b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705412"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077221"
 ---
-# <a name="how-to-resize-windows-forms"></a>HOW TO：調整 Windows Form 的大小
+# <a name="how-to-resize-windows-forms"></a>HOW TO：調整 Windows Forms 大小
 您可以使用幾種方式來指定 Windows Form 的大小。 您可以為 <xref:System.Windows.Forms.Form.Size%2A> 屬性設定新值，或個別調整 <xref:System.Windows.Forms.Control.Height%2A> 或 <xref:System.Windows.Forms.Control.Width%2A> 屬性，以程式設計方式來變更表單的高度和寬度。 如果您使用 Visual Studio，您可以變更使用 Windows Form 設計工具的大小。 另請參閱[How to:調整 Windows Form 使用設計工具的大小](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))。  
   
 ### <a name="to-resize-a-form-programmatically"></a>以程式設計方式調整表單的大小  
@@ -113,5 +113,6 @@ ms.locfileid: "57705412"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)
+
+- [Windows Form 使用者入門](getting-started-with-windows-forms.md)
 - [增強 Windows Forms 應用程式](./advanced/index.md)

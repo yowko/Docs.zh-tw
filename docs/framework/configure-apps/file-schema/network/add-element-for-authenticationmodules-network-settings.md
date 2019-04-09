@@ -1,5 +1,5 @@
 ---
-title: authenticationModules 的 <add> 項目 (網路設定)
+title: <add> AuthenticationModules （網路設定） 的項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#add
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <authenticationModules>, add element
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
-ms.openlocfilehash: 12dc8be762e1158ddaabbd67e7165d7bdaca6461
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55276324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105868"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>\<新增 > authenticationModules （網路設定） 的項目
 將應用程式中的驗證模組。  
@@ -47,7 +47,7 @@ ms.locfileid: "55276324"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   
@@ -82,6 +82,7 @@ ms.locfileid: "55276324"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

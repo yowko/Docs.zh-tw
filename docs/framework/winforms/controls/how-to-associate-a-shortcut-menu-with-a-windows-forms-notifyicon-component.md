@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Forms NotifyIcon 元件關聯的捷徑功能表
+title: HOW TO：建立捷徑功能表與 Windows Forms NotifyIcon 元件的關聯
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: e9e50aee63ec36ac005daabed27c3ac3c42a4dc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720380"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097986"
 ---
-# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>HOW TO：使用 Windows Forms NotifyIcon 元件關聯的捷徑功能表
+# <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>HOW TO：建立捷徑功能表與 Windows Forms NotifyIcon 元件的關聯
 > [!NOTE]
 >  雖然<xref:System.Windows.Forms.MenuStrip>並<xref:System.Windows.Forms.ContextMenuStrip>取代及新增功能<xref:System.Windows.Forms.MainMenu>並<xref:System.Windows.Forms.ContextMenu>控制項的舊版本中，<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>會保留回溯相容性以及供未來使用，如果您選擇。  
   
@@ -127,8 +127,9 @@ contextMenu1 = gcnew System::Windows::Forms::ContextMenu();
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.NotifyIcon>
 - <xref:System.Windows.Forms.NotifyIcon.Icon%2A>
-- [如何：應用程式圖示加入工作列使用 Windows Forms NotifyIcon 元件](app-icons-to-the-taskbar-with-wf-notifyicon.md)
+- [HOW TO：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](app-icons-to-the-taskbar-with-wf-notifyicon.md)
 - [NotifyIcon 元件](notifyicon-component-windows-forms.md)
 - [NotifyIcon 元件概觀](notifyicon-component-overview-windows-forms.md)

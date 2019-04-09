@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 6743a0decebb9711a4e44d09b03fe32f88ff2f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55283474"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101311"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<類別名稱 >' 不符合 CLS 標準，因為介面'\<介面名稱 >' 它會實作不符合 CLS 標準
 當類別或介面衍生自或實作標記為 `<CLSCompliant(True)>` 或未標記的類型時，則標記為 `<CLSCompliant(False)>` 。  
@@ -32,5 +32,3 @@ ms.locfileid: "55283474"
 -   如果您必須符合 CLS 標準，請在不同的繼承階層或實作配置內定義這個類型。  
   
 -   如果您想要將這個類型保留在其目前繼承階層或實作配置內，請從其定義移除 <xref:System.CLSCompliantAttribute> 或將其標記為 `<CLSCompliant(False)>`。  
-  
- 

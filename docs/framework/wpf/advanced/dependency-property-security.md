@@ -10,17 +10,16 @@ helpviewer_keywords:
 - dependency properties [WPF], access
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
-ms.openlocfilehash: d51f8f5fd704b0c95b8e6f841b9b0ff8567899cb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364810"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077468"
 ---
 # <a name="dependency-property-security"></a>相依性屬性的安全性
 相依性屬性通常應該視為公用屬性。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 屬性系統在本質上會防止進行相依性屬性值的安全性保證。  
-  
-  
+
 <a name="AccessSecurity"></a>   
 ## <a name="access-and-security-of-wrappers-and-dependency-properties"></a>包裝函式和相依性屬性的存取和安全性  
  通常，相依性屬性會與「包裝函式」[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性一起實作，該屬性會簡化對執行個體屬性的取得或設定。 但包裝函式其實是便利的方法實作的基礎<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>與相依性屬性互動時所使用的靜態呼叫。 從另一個方面來思考，這些屬性會公開為剛好受到相依性屬性 (而不是私用欄位) 支援的[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 屬性。 套用到包裝函式的安全性機制，與屬性系統行為和基礎相依性屬性的存取並不相同。 在 包裝函式設置安全性要求只會防止使用這種方便的方法，但不是會防止呼叫<xref:System.Windows.DependencyObject.GetValue%2A>或<xref:System.Windows.DependencyObject.SetValue%2A>。 同樣地，對包裝函式設置保護或私用存取層級並不會提供任何有效的安全性防護。  
@@ -40,4 +39,5 @@ ms.locfileid: "57364810"
  藉由套用至<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>和預期要求失敗，以防止屬性所設定的驗證失敗不是足夠的安全性機制。 透過強制執行設定值失效<xref:System.Windows.DependencyProperty.ValidateValueCallback%2A>也可以隱藏被惡意呼叫端，如果這些呼叫端應用程式定義域內操作。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [自訂相依性屬性](custom-dependency-properties.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f612fa5b-4b62-4593-a19e-85c9b1018dce
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b0cb166f2753b910465aabb8abd68c31c6f56ff8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a7cba2bd1dd5b83e29c7a6c192a1a7e5e2d33ecc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076467"
 ---
 # <a name="stack-etw-event"></a>堆疊 ETW 事件
 堆疊事件應該搭配其他事件一起使用，以在引發事件之後產生堆疊追蹤。 它會在啟用執行階段提供者時記錄。 這是非常高頻率的事件，因為每當引發另一個執行階段事件時，就會引發此事件。 基於這個理由，我們建議您小心使用此事件。  
@@ -25,7 +25,7 @@ ms.locfileid: "54497534"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`CLRStackWalk`|82|搭配其他事件，來產生事件之後的堆疊追蹤。|  
   
@@ -40,4 +40,5 @@ ms.locfileid: "54497534"
 |堆疊|win:Pointer|指令指標的資料行。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

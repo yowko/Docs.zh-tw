@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], about Button control
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
-ms.openlocfilehash: 505b75d362cea0eddec2b51dc398e2cd8c8d4db8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713383"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076545"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.Button> 控制項可讓使用者按一下以執行動作。 按一下按鈕時，按鈕看起來就像被推入又釋放。 每當使用者按一下按鈕，<xref:System.Windows.Forms.Control.Click>叫用事件處理常式。 您將程式碼放在<xref:System.Windows.Forms.Control.Click>事件處理常式來執行您所選擇的任何動作。  
@@ -22,9 +22,10 @@ Windows Form <xref:System.Windows.Forms.Button> 控制項可讓使用者按一�
  <xref:System.Windows.Forms.Button>控制項也可以顯示使用的映像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>屬性。 如需詳細資訊，請參閱[如何：設定所顯示的映像的 Windows Form 控制項](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Button>
-- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
-- [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
-- [如何：將 Windows Form 按鈕指定為接受按鈕使用設計工具](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [如何：將 Windows Form 按鈕指定為取消按鈕使用設計工具](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [HOW TO：回應 Windows Forms 按鈕的按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [選取 Windows Form Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
+- [HOW TO：使用設計工具將 Windows Forms 的按鈕指定為接受按鈕](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [HOW TO：使用設計工具將 Windows Forms 的按鈕指定為取消按鈕](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button 控制項](button-control-windows-forms.md)

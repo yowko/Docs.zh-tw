@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: 19a37b2d988ba779c4373ba296b43f6508db5925
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b234a00f3194fcf40a33d25302cff16d5999b05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731266"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082980"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>在 Windows Process Activation Service 中裝載
 Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windows Communication Foundation (WCF) 服務的應用程式的工作者處理序的存留期。 WAS 處理序模型會藉由移除 HTTP 上的相依性，將 HTTP 伺服器的 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 處理序模型一般化。 這可讓 WCF 服務使用 HTTP 和非 HTTP 通訊協定，例如 Net.TCP，請在裝載環境中支援訊息型啟用，並可讓您裝載大量應用程式，在指定電腦上。  
@@ -52,8 +52,9 @@ Windows Process Activation Service (WAS) 管理啟動和包含該主機的 Windo
  為了定址與管理方便，應用程式會組織成網站。 在執行階段，應用程式也會組織成應用程式集區中的群組。 一個應用程式集區可包含來自許多不同網站的不同應用程式。 應用程式集區中的所有應用程式都共用一組執行階段特徵。 例如，它們會在相同版本的 Common Language Runtime (CLR) 中執行，而且共用相同的處理序身分識別。 每個應用程式集區都對應至一個背景工作處理序 (w3wp.exe) 的執行個體。 每個在共用應用程式集區內執行的 Managed 應用程式都會透過 CLR AppDomain 與其他應用程式隔離開來。  
   
 ## <a name="see-also"></a>另請參閱
-- [WAS 啟用架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
+
+- [WAS 啟動架構](../../../../docs/framework/wcf/feature-details/was-activation-architecture.md)
 - [設定用於 WCF 的 WAS](../../../../docs/framework/wcf/feature-details/configuring-the-wpa--service-for-use-with-wcf.md)
-- [如何：安裝及設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
-- [如何：裝載在 WAS 中的 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [HOW TO：安裝和設定 WCF 啟用元件](../../../../docs/framework/wcf/feature-details/how-to-install-and-configure-wcf-activation-components.md)
+- [HOW TO：在 WAS 中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
 - [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

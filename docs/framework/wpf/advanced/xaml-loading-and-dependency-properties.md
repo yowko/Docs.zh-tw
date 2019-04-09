@@ -9,17 +9,16 @@ helpviewer_keywords:
 - dependency properties [WPF], XAML loading and
 - loading XML data [WPF]
 ms.assetid: 6eea9f4e-45ce-413b-a266-f08238737bf2
-ms.openlocfilehash: ed608a658b5077a20ed56419c4ac731641610e3d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4db87c5f266a9eed136f0651f48d11720abede65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373071"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083826"
 ---
 # <a name="xaml-loading-and-dependency-properties"></a>XAML 載入和相依性屬性
 目前 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作，在本質上就會感知相依性屬性。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器在載入二進位 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 和處理相依性屬性的屬性時，會使用相依性屬性的屬性系統方法。 這可有效略過屬性的包裝函式。 當您實作自訂相依性屬性時，您必須負責此行為，而且應該避免任何其他程式碼置於屬性系統方法您屬性包裝函式<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>。  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題假設您已從相依性屬性的消費者和作者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)和[自訂相依性屬性](custom-dependency-properties.md)。 此外，您應已閱讀 [XAML 概觀 (WPF)](xaml-overview-wpf.md) 和 [XAML 語法詳細資料](xaml-syntax-in-detail.md)。  
@@ -42,9 +41,10 @@ ms.locfileid: "57373071"
  [!code-vb[WPFAquariumSln#AGWithWrapper](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFAquariumSln/visualbasic/wpfaquariumobjects/class1.vb#agwithwrapper)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
 - [相依性屬性中繼資料](dependency-property-metadata.md)
-- [集合類型的相依性屬性](collection-type-dependency-properties.md)
+- [集合類型相依性屬性](collection-type-dependency-properties.md)
 - [相依性屬性的安全性](dependency-property-security.md)
 - [DependencyObject 的安全建構函式模式](safe-constructor-patterns-for-dependencyobjects.md)

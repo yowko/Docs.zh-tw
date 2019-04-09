@@ -2,12 +2,12 @@
 title: 浮點數
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: a30252d7d25b3c3e09dd5e59f364d94aa40dd272
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102514"
 ---
 # <a name="floating-point-numbers"></a>浮點數
 本主題說明開發人員在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中使用浮點數值 (Floating-Point Number) 時經常遇到的一些問題。 這些問題是由電腦儲存浮點數值的方式而導致，而不是特定提供者 (例如 <xref:System.Data.SqlClient> 或 <xref:System.Data.OracleClient>) 所特有。  
@@ -19,5 +19,6 @@ ms.locfileid: "55903976"
  若要解決等號比較的問題，請考慮撰寫應用程式的程式碼，使最小顯著性數字中的變更可以忽略。 例如，與其比較兩個數字是否相等，請從一個數字中減去另一個數字。 如果差異是在可接受的捨入範圍內，則應用程式可以將這兩個數字視為相同。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [浮點數會失去精確度的原因](/cpp/build/reference/why-floating-point-numbers-may-lose-precision)
 - [ADO.NET 概觀](ado-net-overview.md)

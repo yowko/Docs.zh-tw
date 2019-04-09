@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e9d71edc580591b698ad039f8ee73e49c4e1d6a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139148"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection 方法
 取得指定的控制代碼所參考的基底中繼語言程式碼區段。  
@@ -46,9 +46,10 @@ HRESULT GetIlSection (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

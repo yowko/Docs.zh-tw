@@ -12,12 +12,12 @@ helpviewer_keywords:
 - controls [WPF], appearance specified by state
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
-ms.openlocfilehash: 5d4b16721dd8cabc5d662538274dcb82ab734cca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098958"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>透過建立 ControlTemplate 自訂現有控制項的外觀
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>指定的視覺結構和控制項的視覺行為。 您可以藉由提供新自訂控制項的外觀<xref:System.Windows.Controls.ControlTemplate>。 當您建立<xref:System.Windows.Controls.ControlTemplate>，您會取代現有控制項的外觀，而不變更其功能。 例如，您可以讓按鈕在您的應用程式而不是預設的方形，round，但仍會引發按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
@@ -31,8 +31,7 @@ ms.locfileid: "57375099"
   
  ![具有紅色外框的按鈕。](./media/ndp-buttonmouseover.png "NDP_ButtonMouseOver")  
 使用自訂控制項範本且滑鼠指標移至其上方的按鈕  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題假設您了解如何建立和使用控制項與樣式，如[控制項](index.md)所述。 本主題中討論的概念適用於項目繼承自<xref:System.Windows.Controls.Control>類別，除了<xref:System.Windows.Controls.UserControl>。 您不能套用<xref:System.Windows.Controls.ControlTemplate>至<xref:System.Windows.Controls.UserControl>。  
@@ -262,4 +261,5 @@ ms.locfileid: "57375099"
  [!code-xaml[VSMButtonTemplate#3](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/skinnedbutton.xaml#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [樣式設定和範本化](styling-and-templating.md)

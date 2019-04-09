@@ -5,22 +5,18 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d613a22b-07d7-41a4-bada-1adc653b9b5d
-ms.openlocfilehash: 8c0807a7b811cf2cb3a13576018373d135e3e5cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a5a32220ad1f638bf2e93051e9b436d8270aec2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082187"
 ---
 # <a name="overriding-the-identity-of-a-service-for-authentication"></a>覆寫服務的身分識別以進行驗證
 一般來說，您不需要在服務上設定身分識別，因為選擇用戶端認證類型，即表示服務中繼資料中公開的身分識別類型。 例如，下列組態程式碼會使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目和設定`clientCredentialType`屬性設定為 Windows。  
-  
-  
-  
+
  下列 Web 服務描述語言 (WSDL) 片段會顯示端點先前定義的身分識別。 在此範例中，服務以自我裝載的服務特定的使用者帳戶執行 (username@contoso.com)，因此使用者主體名稱 (UPN) 身分識別包含帳戶名稱。 UPN 在 Windows 網域中也稱為使用者登入名稱。  
-  
-  
-  
+
  示範身分識別設定的範例應用程式，請參閱[服務身分識別範例](../../../../docs/framework/wcf/samples/service-identity-sample.md)。 如需服務身分識別的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。  
   
 ## <a name="kerberos-authentication-and-identity"></a>Kerberos 驗證和身分識別  
@@ -52,13 +48,9 @@ ms.locfileid: "54554461"
   
 ### <a name="using-the-identity-element-in-configuration"></a>使用\<身分識別 > 組態中的項目  
  如果您在先前對 Certificate`,` 顯示的繫結中變更用戶端認證類型，則產生的 WSDL 會包含 Base64 序列化 X.509 憑證，這個憑證可用於身分識別值，其值如以下程式碼所示。 這是 Windows 以外所有用戶端認證類型的預設值。  
-  
-  
-  
- 您可以使用組態中的 <`identity`> 項目或在程式碼中設定身分識別，變更預設服務身分識別的值或變更身分識別的類型。 下列組態程式碼會以 `contoso.com` 這個值來設定網域名稱系統 (DNS) 身分識別。  
-  
-  
-  
+
+ 您可以變更預設服務身分識別的值，或變更身分識別類型，使用 <`identity`> 項目組態中或在程式碼中設定身分識別。 下列組態程式碼會以 `contoso.com` 這個值來設定網域名稱系統 (DNS) 身分識別。  
+
 ### <a name="setting-identity-programmatically"></a>以程式設計方式設定身分識別  
  您的服務並沒有明確指定身分識別，因為 WCF 會自動決定。 不過，WCF 可讓您指定的身分識別的端點，如有必要。 下列程式碼會新增具有特定 DNS 身分識別的新服務端點。  
   
@@ -66,5 +58,6 @@ ms.locfileid: "54554461"
  [!code-vb[C_Identity#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_identity/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
+
+- [HOW TO：建立自訂用戶端身分識別驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-client-identity-verifier.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60d9ae1abc97d348dced9e4a21236c70658a9141
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59105050"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -37,7 +37,7 @@ HRESULT GetEHClauses(
   
 ## <a name="parameters"></a>參數  
  `cClauses`  
- [in] `clauses` 陣列的儲存體容量。 如需詳細資訊，請參閱「備註」一節。  
+ [in] `clauses` 陣列的儲存體容量。 如需詳細資訊，請參閱＜備註＞一節。  
   
  `pcClauses`  
  [out] 其資訊寫入至 `clauses` 陣列的子句數。  
@@ -51,13 +51,14 @@ HRESULT GetEHClauses(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugILCode 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode-interface.md)
 - [CorDebugEHClause 結構](../../../../docs/framework/unmanaged-api/debugging/cordebugehclause-structure.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

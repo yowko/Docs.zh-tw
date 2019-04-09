@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image codecs [Windows Forms], listing
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
-ms.openlocfilehash: c40bb79dde4a9baf8b84f3cda5fdabc6e30ad0b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079406"
 ---
 # <a name="how-to-list-installed-decoders"></a>HOW TO：列出已安裝的解碼器
 若要列出可用的電腦上，影像解碼器，來判斷您的應用程式是否可以讀取特定影像檔案格式。 <xref:System.Drawing.Imaging.ImageCodecInfo>類別提供<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>靜態方法，如此您就可以判斷哪一個映像會提供解碼器。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 傳回的陣列<xref:System.Drawing.Imaging.ImageCodecInfo>物件。  
@@ -32,5 +32,6 @@ ms.locfileid: "57717527"
 -   A <xref:System.Windows.Forms.PaintEventArgs>，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：列出已安裝的編碼器](how-to-list-installed-encoders.md)
+
+- [HOW TO：列出已安裝的編碼器](how-to-list-installed-encoders.md)
 - [使用 Managed GDI+ 中的影像編碼器和解碼器](using-image-encoders-and-decoders-in-managed-gdi.md)

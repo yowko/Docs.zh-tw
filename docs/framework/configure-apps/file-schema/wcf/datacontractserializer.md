@@ -2,12 +2,12 @@
 title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
-ms.openlocfilehash: 933d49092c392fa293468d546e521bf7ed858376
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539840"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139044"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。  
@@ -30,7 +30,7 @@ ms.locfileid: "54539840"
   
 ### <a name="attributes"></a>屬性  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |ignoreExtensionDataObject|布林值，指定當端點序列化或還原序列化時，是否略過端點所提供的資料。|  
 |maxItemsInObjectGraph|整數，指定要序列化或還原序列化的項目數上限。|  
@@ -51,8 +51,9 @@ ms.locfileid: "54539840"
 >  `<dataContractSerializer>` 行為項目 (如果有的話) 必須永遠出現在組態檔中 `<enableWebScript>` 行為項目之前。 否則，產生的行為未定義。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
 - <xref:System.ServiceModel.Configuration.DataContractSerializerElement>
-- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [資料傳輸與序列化](../../../../../docs/framework/wcf/feature-details/data-transfer-and-serialization.md)

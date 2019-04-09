@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b33750e5792dcc83e261bc9bb8d1c5dbe35808aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59104854"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>HOW TO：在沙箱中執行部分信任程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -63,7 +63,7 @@ AppDomain.CreateDomain( string friendlyName,
     PermissionSet internetPS = SecurityManager.GetStandardSandbox(ev);  
     ```  
   
-     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法會根據在辨識項中的區域傳回 `Internet` 權限集合或 `LocalIntranet` 權限集合。 對於某些做為參考傳遞的辨識項物件，<xref:System.Security.SecurityManager.GetStandardSandbox%2A> 也會建構其識別權限。  
+     <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法會根據在辨識項中的區域傳回 `Internet` 權限集合或 `LocalIntranet` 權限集合。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 也會建構部分做為參考傳遞的辨識項物件的識別權限。  
   
 2.  簽署包含裝載類別 (在此範例中名為 `Sandboxer`) 的組件，該類別會呼叫不受信任的程式碼。 加入 <xref:System.Security.Policy.StrongName>，這會用來簽署組件給 <xref:System.AppDomain.CreateDomain%2A> 呼叫的 `fullTrustAssemblies` 參數之 <xref:System.Security.Policy.StrongName> 陣列。 裝載的類別必須以完全信任方式執行，以啟用部分信任程式碼的執行，或提供服務給部分信任應用程式。 這就是您讀取組件 <xref:System.Security.Policy.StrongName> 的方式。  
   
@@ -90,7 +90,7 @@ AppDomain.CreateDomain( string friendlyName,
         params StrongName[] fullTrustAssemblies)  
     ```  
   
-     其他資訊:  
+     其他資訊：  
   
     -   這是採用 <xref:System.Security.PermissionSet> 做為參數的 <xref:System.AppDomain.CreateDomain%2A> 方法之唯一多載，因此也是讓您在部分信任設定中載入應用程式的唯一多載。  
   
@@ -167,7 +167,7 @@ AppDomain.CreateDomain( string friendlyName,
     }  
     ```  
   
-     <xref:System.Reflection> 用來在部分信任組件中取得方法的控制代碼。 控制代碼可用來以安全的方式搭配最小權限執行程式碼。  
+     <xref:System.Reflection> 用來在部分信任的組件中取得的方法控制代碼。 控制代碼可用來以安全的方式搭配最小權限執行程式碼。  
   
      在先前的程式碼中，請先注意完全信任權限的 <xref:System.Security.PermissionSet.Assert%2A>，然後才列印 <xref:System.Security.SecurityException>。  
   
@@ -274,4 +274,5 @@ class Sandboxer : MarshalByRefObject
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)
