@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 0e44b2944a24ea4201fda2f0891d74c672a64a4a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112108"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>HOW TO：啟用 Windows Form 中 ToolStrip 控制項的 AutoComplete
 下列程序結合<xref:System.Windows.Forms.ToolStripLabel>與<xref:System.Windows.Forms.ToolStripComboBox>可被拉顯示一份項目，例如最近瀏覽的網站。 如果使用者輸入的字元符合其中一個項目清單中的第一個字元，會立即顯示的項目。  
@@ -90,6 +90,7 @@ ms.locfileid: "57718932"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripLabel>
 - <xref:System.Windows.Forms.ToolStripComboBox>

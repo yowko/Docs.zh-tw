@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 04c4e1db35b59748067b76cc037c0def6437c531
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54536642"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150757"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT 追蹤 ETW 事件
 <a name="top"></a> 這些事件會收集 just-in-time (JIT) 內嵌和 JIT tail 呼叫成功或失敗的相關資訊。  
@@ -35,7 +35,7 @@ ms.locfileid: "54536642"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningFailed`|186|JIT 內嵌失敗。|  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54536642"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitInliningSucceeded`|185|方法內嵌已成功。|  
   
@@ -98,7 +98,7 @@ ms.locfileid: "54536642"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallFailed`|189|方法 tail 呼叫失敗。|  
   
@@ -128,7 +128,7 @@ ms.locfileid: "54536642"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`MethodJitTailCallSucceeded`|188|方法 tail 呼叫成功。|  
   
@@ -150,4 +150,5 @@ ms.locfileid: "54536642"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

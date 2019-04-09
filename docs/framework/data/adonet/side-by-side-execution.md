@@ -2,12 +2,12 @@
 title: ADO.NET 中的並存執行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 122cb33f4cca203f09104c5a40a1ad5d13326c57
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136756"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET 中的並存執行
 在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中，並存執行是指在安裝多個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本的電腦上執行應用程式 (單獨使用針對編譯該應用程式所用的版本) 的能力。 如需設定並排顯示執行的詳細資訊，請參閱[並排顯示執行](../../../../docs/framework/deployment/side-by-side-execution.md)。  
@@ -15,7 +15,7 @@ ms.locfileid: "54538631"
  使用某個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本所編譯的應用程式可在不同的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本上執行。 但是，我們建議您最好先針對已安裝的每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 版本編譯應用程式版本，然後再個別執行。 不論是上述哪一種狀況，您都應該了解 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 各版本間的差異，因為它會影響應用程式的向前相容性或回溯相容性 (Backward Compatibility)。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>向前相容性和回溯相容性  
- 所謂向前相容性是指應用程式可以使用舊版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 編譯，但仍可順利在新版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上執行。 針對 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 1.1 版所撰寫的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程式碼可向前相容於更新版本。  
+ 所謂向前相容性是指應用程式可以使用舊版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 編譯，但仍可順利在新版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上執行。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 針對所撰寫的程式碼[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]1.1 版是向前相容於更新版本。  
   
  所謂回溯相容性是指針對新版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 所編譯的應用程式，但仍可在舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 上繼續執行，而不會減損任何功能。 當然，這不適用於新版的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 所引入的功能。  
   
@@ -56,7 +56,7 @@ SELECT * FROM dbo.Customers;
   
  如果您有使用任一 <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> 版本的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 行為，這個變更會影響應用程式的向前和回溯相容性。  
   
- 若應用程式會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的之前和以後版本上執行，則您可以撰寫程式碼來確保它在不同版本上的行為是相同的。 如果您想要確保某個命令會針對所有後續命令修改連接的狀態，我們建議您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 來執行命令。 如果您想要確保命令不會針對所有後續命令修改連接，則我們建議您在命令中加入要重設連接狀態的命令。 例如:   
+ 若應用程式會在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 的之前和以後版本上執行，則您可以撰寫程式碼來確保它在不同版本上的行為是相同的。 如果您想要確保某個命令會針對所有後續命令修改連接的狀態，我們建議您使用 <xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> 來執行命令。 如果您想要確保命令不會針對所有後續命令修改連接，則我們建議您在命令中加入要重設連接狀態的命令。 例如：  
   
 ```sql
 SET NOCOUNT ON;  
@@ -65,6 +65,7 @@ SET NOCOUNT OFF;
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

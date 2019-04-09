@@ -6,12 +6,12 @@ helpviewer_keywords:
 - strings [WPF], animating with key frames
 - key frames [WPF], animating strings with
 ms.assetid: c62bc9fd-c09a-4227-bce0-0a1ab82049dd
-ms.openlocfilehash: 70c5766da2ea91f519756cb47b20d688b33253e0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4a37408ad90fda12a95e66c1b44018967b376837
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356211"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204168"
 ---
 # <a name="how-to-animate-a-string-by-using-key-frames"></a>HOW TO：使用主要畫面格建立字串的動畫
 此範例示範如何以動畫顯示的字串，在此範例中是<xref:System.Windows.Controls.ContentControl.Content%2A>屬性<xref:System.Windows.Controls.Button>控制項，使用主要畫面格。  
@@ -26,9 +26,10 @@ ms.locfileid: "57356211"
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.StringAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.ContentControl.Content%2A>
 - <xref:System.Windows.Controls.Button>
 - <xref:System.Windows.Media.Animation.DiscreteStringKeyFrame>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
+- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)

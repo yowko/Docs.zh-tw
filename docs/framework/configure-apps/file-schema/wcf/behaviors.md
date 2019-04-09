@@ -2,12 +2,12 @@
 title: <behaviors>
 ms.date: 03/30/2017
 ms.assetid: 0e5da4e6-1aa5-466c-924e-f10efee57f0b
-ms.openlocfilehash: b9d30d7e1c9d211cd57982a0f03fe855a6b53c12
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 108c349a44ed3ac902652f86241c1e96a622549b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204233"
 ---
 # <a name="behaviors"></a>\<behaviors>
 這個項目會定義兩個名稱為 `endpointBehaviors` 和 `serviceBehaviors` 的子集合。  每個集合會定義分別由端點和服務使用的行為項目。 每個行為項目都由其唯一的 `name` 屬性所識別。 從 [!INCLUDE[netfx40_short](../../../../../includes/netfx40-short-md.md)] 開始，繫結和行為都不需要有名稱。 如需有關預設組態和無名稱繫結和行為的詳細資訊，請參閱 < [Simplified Configuration](../../../../../docs/framework/wcf/simplified-configuration.md)並[Simplified Configuration for WCF Services](../../../../../docs/framework/wcf/samples/simplified-configuration-for-wcf-services.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "55257913"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -48,6 +48,7 @@ ms.locfileid: "55257913"
  您可以使用 `<remove>` 項目移除集合中的特定行為。 若要這麼做，只需在 `name` 項目的 `<remove>` 屬性中提供要移除之行為的名稱。  您也可以使用 `<clear>` 項目來清除行為集合的所有內容，確保該行為集合在啟始時就是空的。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.BehaviorsSection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElementCollection>
 - <xref:System.ServiceModel.Configuration.EndpointBehaviorElement>
@@ -55,6 +56,6 @@ ms.locfileid: "55257913"
 - <xref:System.ServiceModel.Configuration.ServiceBehaviorElement>
 - [使用行為來設定與擴充執行階段](../../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)
 - [設定用戶端行為](../../../../../docs/framework/wcf/configuring-client-behaviors.md)
-- [指定用端執行階段行為](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [指定用戶端執行階段行為](../../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
 - [指定服務執行階段行為](../../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)

@@ -3,12 +3,12 @@ title: <arguments>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
-ms.openlocfilehash: 3e9fc4f286e7aba6406ce61910da9e614e13ffca
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b0d982997ab590ce7f0fc4c482b1ddfa6bc758f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152798"
 ---
 # <a name="arguments"></a>\<引數 >
 表示與某個活動狀態查詢相關聯之引數的集合。  
@@ -50,7 +50,7 @@ ms.locfileid: "57368086"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<argument>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|與活動狀態查詢相關聯的引數。|  
+|[\<引數 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|與活動狀態查詢相關聯的引數。|  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -76,7 +76,8 @@ ms.locfileid: "57368086"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

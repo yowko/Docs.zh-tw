@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Form MonthCalendar 控制項中顯示超過一個月
+title: HOW TO：在 Windows Forms MonthCalendar 控制項中顯示多個月份
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - calendars [Windows Forms], multiple months
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d197caa2-38a5-4cb4-acc3-562130c2ace3
-ms.openlocfilehash: febed820bae460f51bb19f08caa6027011abd55d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79100b52d8e0a5b651edb9d6555a4497287ed858
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209550"
 ---
-# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>HOW TO：在 Windows Form MonthCalendar 控制項中顯示超過一個月
+# <a name="how-to-display-more-than-one-month-in-the-windows-forms-monthcalendar-control"></a>HOW TO：在 Windows Forms MonthCalendar 控制項中顯示多個月份
 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可以顯示最多 12 個月一次。 根據預設，控制項會顯示一個月，但是您可以指定幾個月會顯示，而且在控制項內的排列方式。 當您變更行事曆維度時，控制項調整大小時，因此請務必針對新的維度在表單上沒有足夠的空間。  
   
 ### <a name="to-display-multiple-months"></a>若要顯示多個月份  
@@ -38,6 +38,7 @@ Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項可以顯示最多
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
-- [如何：在 Windows Form MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [如何：變更 Windows Form MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)
+- [HOW TO：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [HOW TO：變更 Windows Forms MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: a7965c1dcf36e956abd7930b8ff0154b13173b76
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204740"
 ---
 # <a name="how-keyboard-input-works"></a>鍵盤輸入的運作方式
 Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](using-keyboard-events.md)。  
@@ -69,6 +69,7 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
 |執行自訂助憶鍵處理；例如，您想要處理工具列內含主控描繪按鈕上的助憶鍵。|覆寫 <xref:System.Windows.Forms.Control.ProcessMnemonic%2A>。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Keys>
 - <xref:System.Windows.Forms.Control.WndProc%2A>
 - <xref:System.Windows.Forms.Control.PreProcessMessage%2A>

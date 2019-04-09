@@ -2,12 +2,12 @@
 title: WCF 中的安全性行為
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 3040f2af2f9db030d8434e977167810ac83f09dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180059"
 ---
 # <a name="security-behaviors-in-wcf"></a>WCF 中的安全性行為
 在 Windows Communication Foundation (WCF) 中，行為會修改服務層級或端點層級的執行階段行為。 (如需行為的詳細資訊在一般情況下，請參閱[指定服務執行階段行為](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。)*安全性行為*可控制認證、 驗證、 授權和稽核記錄。 您可以藉由程式設計的方式或透過組態的方式使用這些行為。 本主題將著重於設定下列與安全性功能相關的行為：  
@@ -25,7 +25,7 @@ ms.locfileid: "54592805"
 ## <a name="setting-credentials-with-behaviors"></a>設定認證與行為  
  使用[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)並[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)來設定服務或用戶端的認證值。 基礎繫結組態會判斷是否必須設定認證。 例如，若安全性模式設定為 `None`，則用戶端和服務不需互相驗證彼此，也不需要任何類型的認證。  
   
- 另一方面，服務繫結可以要求用戶端認證類型。 在這種情況下，您必須使用行為設定認證值 (如需可能的認證類型的詳細資訊，請參閱[選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)在某些情況下 (如：使用 Windows 認證進行驗證時)，環境會自動建立實際的認證值，您不需要明確地設定認證值 (除非您想要指定不同的認證集合)。  
+ 另一方面，服務繫結程序可以要求用戶端認證類型。 在這種情況下，您必須使用行為設定認證值 (如需可能的認證類型的詳細資訊，請參閱[選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)在某些情況下 (如：使用 Windows 認證進行驗證時)，環境會自動建立實際的認證值，您不需要明確地設定認證值 (除非您想要指定不同的認證集合)。  
   
  所有的服務認證會被視為子項目的[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)。 下列範例示範當成服務認證使用的憑證。  
   
@@ -115,7 +115,7 @@ ms.locfileid: "54592805"
 ```  
   
 #### <a name="clientcertifictate-element"></a>\<clientCertifictate > 項目  
- 使用此項目來設定用以驗證用戶端的憑證。 如需詳細資訊，請參閱[＜How to：指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 使用此項目來設定用以驗證用戶端的憑證。 如需詳細資訊，請參閱[如何：指定用戶端認證值](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 #### <a name="httpdigest"></a>\<httpDigest>  
  此功能必須與 Windows 和 Internet Information Services (IIS) 上的 Active Directory 一起啟用。 如需詳細資訊，請參閱 <<c0> [ 在 IIS 6.0 中的摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88443)。  
@@ -144,7 +144,7 @@ ms.locfileid: "54592805"
   
  使用[ \<scopedCertificates >](../../../../docs/framework/configure-apps/file-schema/wcf/scopedcertificates-element.md)並[\<新增 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-scopedcertificates-element.md)設定特定服務相關聯的服務憑證。 `<add>` 項目包含 `targetUri` 屬性，此屬性是用於將憑證與服務產生關聯。  
   
- [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)項目會指定用來驗證憑證的信任層級。 根據預設，層級會設為 "ChainTrust"，指定每一個憑證必須出現在鏈結頂端以受信任的憑證授權單位為結尾的憑證階層中。 這是最安全的模式。 您也可以將其值設定為 "PeerOrChainTrust"，指定可接受自行簽發的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 "ChainTrust" 值。 您也可以將值設定為 "Custom" 或 "None"。 若要使用 "Custom" 值，您必須同時將 `CustomCertificateValidatorType` 屬性設為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱[＜How to：建立使用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
+ [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)項目會指定用來驗證憑證的信任層級。 根據預設，層級會設為 "ChainTrust"，指定每一個憑證必須出現在鏈結頂端以受信任的憑證授權單位為結尾的憑證階層中。 這是最安全的模式。 您也可以將其值設定為 "PeerOrChainTrust"，指定可接受自行簽發的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 "ChainTrust" 值。 您也可以將值設定為 "Custom" 或 "None"。 若要使用 "Custom" 值，您必須同時將 `CustomCertificateValidatorType` 屬性設為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱[如何：建立使用自訂憑證驗證程式服務](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
  [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)項目包含`RevocationMode`屬性，指定如何檢查憑證撤銷。 預設為 "online"，指出會自動檢查該憑證是否已被撤銷。 如需詳細資訊，請參閱 < [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
@@ -218,5 +218,6 @@ ms.locfileid: "54592805"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -2,12 +2,12 @@
 title: 訊息安全性範例
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: 23304ba3be88e327f84943daf0dcd751d564d5f7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a4835f8f276786aa87506bc2be2a2bba534f4166
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825582"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112472"
 ---
 # <a name="message-security-sample"></a>訊息安全性範例
 這個範例會示範如何實作一個使用 `basicHttpBinding` 和訊息安全性的應用程式。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。  
@@ -143,7 +143,7 @@ Press <ENTER> to terminate client.
   
 5.  在伺服器上執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-6.  編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。 同時將基底位址的值變更成指定完整機器名稱，而不要指定 localhost`.`。  
+6.  編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。 也會變更指定完整機器名稱而不使用 localhost 基底位址的值`.`  
   
 7.  從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
@@ -178,4 +178,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\Basic\MessageSecurity`  
-  

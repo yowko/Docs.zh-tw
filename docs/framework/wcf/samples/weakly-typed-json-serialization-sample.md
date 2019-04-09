@@ -2,12 +2,12 @@
 title: 弱型別 JSON 序列化範例
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: 370030671a6a8c6709567bf070411543722ab8d8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 13c51c416c6efad9a168999b0751cb9c1d88baba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842664"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59205052"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱型別 JSON 序列化範例
 當將使用者定義的型別序列化為指定的 Wire 格式，或是將 Wire 格式還原序列化為使用者定義的型別時，服務和用戶端都必須提供指定的使用者定義型別，以供使用。 一般而言，若要完成這項操作， <xref:System.Runtime.Serialization.DataContractAttribute> 屬性會套用至這些使用者定義的型別，而 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性會套用至其成員。 這個機制也適用於使用 JavaScript Object Notation (JSON) 物件，如本主題中所述[How to:序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)。  
@@ -58,7 +58,7 @@ ms.locfileid: "58842664"
   
  這可能會很麻煩，特別是如果用戶端必須處理一種以上的 JSON 物件型別。  
   
- 這個範例提供的 `JsonObject` 型別引入還原序列化 JSON 物件的弱式型別表示。 `JsonObject` 需要依賴 JSON 物件與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 字典之間的自然對應以及 JSON 陣列與 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 陣列之間的對應。 下列程式碼會顯示 `JsonObject` 型別。  
+ 這個範例提供的 `JsonObject` 型別引入還原序列化 JSON 物件的弱式型別表示。 `JsonObject` 依賴 JSON 物件之間的自然對應以及[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]字典，以及 JSON 陣列之間的對應和[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]陣列。 下列程式碼會顯示 `JsonObject` 型別。  
   
 ```  
 // Instantiation of JsonObject json omitted  
@@ -139,4 +139,3 @@ My favorite bands are Band ABC and Band XYZ.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\Ajax\WeaklyTypedJson`  
-  

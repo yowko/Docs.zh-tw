@@ -9,12 +9,12 @@ helpviewer_keywords:
 - displaying option buttons [Windows Forms], MenuStrip [Windows Forms]
 - option buttons [Windows Forms], displaying in MenuStrip
 ms.assetid: 8b596af2-9ff8-4f7b-93d7-cba830e167f4
-ms.openlocfilehash: c64dd88915fdd17deee415b4d6c3fd088fbcfbfd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 61feda3f49c9a9e03a606c0284629f809d6876b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718866"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115527"
 ---
 # <a name="how-to-display-option-buttons-in-a-menustrip-windows-forms"></a>HOW TO：在 MenuStrip (Windows Form) 中的顯示選項按鈕
 選項按鈕，也稱為選項按鈕，如下核取方塊，不同之處在於使用者只能選取一個一次。 雖然預設<xref:System.Windows.Forms.ToolStripMenuItem>類別不會提供選項按鈕的行為，但是類別提供核取方塊的行為，您可以自訂實作的功能表項目中的選項按鈕行為<xref:System.Windows.Forms.MenuStrip>控制項。  
@@ -81,6 +81,7 @@ ms.locfileid: "57718866"
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStripMenuItem>
 - <xref:System.Windows.Forms.ToolStripMenuItem.CheckOnClick%2A?displayProperty=nameWithType>
@@ -90,4 +91,4 @@ ms.locfileid: "57718866"
 - <xref:System.Windows.Forms.ToolStripMenuItem.Enabled%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.RadioButtonRenderer>
 - [MenuStrip 控制項](menustrip-control-windows-forms.md)
-- [如何：實作自訂的 ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)
+- [HOW TO：實作自訂的 ToolStripRenderer](how-to-implement-a-custom-toolstriprenderer.md)

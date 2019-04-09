@@ -14,17 +14,17 @@ helpviewer_keywords:
 ms.assetid: 103eb3a3-1cf0-4406-8a9a-a7798fdc22d1
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c99ae7d222db2e44de471eb9a41fed614362e300
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 66f662114868832f909d734a482e1dc9aefb841a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614376"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150876"
 ---
 # <a name="gcunmanagedtomanaged-mda"></a>gcUnmanagedToManaged MDA
 每當執行緒從 Unmanaged 轉換到 Managed 程式碼時，`gcUnmanagedToManaged` Managed 偵錯助理 (MDA) 會造成記憶體回收。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  使用 COM 和平台叫用執行 Unmanaged 使用者元件的應用程式在 CLR 中造成不具決定性的存取違規。  
   
 ## <a name="cause"></a>原因  
@@ -36,7 +36,7 @@ ms.locfileid: "54614376"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  每當執行緒從 Unmanaged 轉換到 Managed 程式碼時，會造成記憶體回收。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  此 MDA 不會產生輸出。  
   
 ## <a name="configuration"></a>組態  
@@ -50,6 +50,7 @@ ms.locfileid: "54614376"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [gcManagedToUnmanaged](../../../docs/framework/debug-trace-profile/gcmanagedtounmanaged-mda.md)

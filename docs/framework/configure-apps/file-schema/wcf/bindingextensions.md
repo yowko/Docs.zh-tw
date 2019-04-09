@@ -2,12 +2,12 @@
 title: <bindingExtensions>
 ms.date: 03/30/2017
 ms.assetid: 8373f94d-d095-486f-8f1e-4ac2f72b58c7
-ms.openlocfilehash: 6eed4e8c549bccb06d8d425b084554a2ec7a1183
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ed55701e45d8580e37cf4776de6b9c5241e0548c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113031"
 ---
 # <a name="bindingextensions"></a>\<bindingExtensions>
 這個區段會啟用電腦或應用程式組態檔中使用者定義繫結的使用。 您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為使用者定義繫結，並將 `name` 屬性設定為使用者定義繫結的名稱，來將使用者定義繫結加入至這個集合。  
@@ -42,4 +42,5 @@ ms.locfileid: "55272756"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)

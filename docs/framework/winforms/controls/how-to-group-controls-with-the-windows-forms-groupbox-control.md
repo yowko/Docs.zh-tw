@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用 Windows Forms GroupBox 控制項的群組控制項
+title: HOW TO：使用 Windows Forms GroupBox 控制項分組控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], grouping
 - GroupBox control [Windows Forms], grouping controls
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
-ms.openlocfilehash: 14c832251a76eaff21611c88179c4d2ffa7ab738
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 706655c8cb2c2548b393b6ad731c13e47fd9381a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179620"
 ---
-# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>HOW TO：使用 Windows Forms GroupBox 控制項的群組控制項
+# <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>HOW TO：使用 Windows Forms GroupBox 控制項分組控制項
 Windows Form<xref:System.Windows.Forms.GroupBox>控制項用來分組其他控制項。 有三個群組控制項的原因：  
   
 -   若要建立明確的使用者介面的相關的表單項目的視覺化群組。  
@@ -33,5 +33,6 @@ Windows Form<xref:System.Windows.Forms.GroupBox>控制項用來分組其他控�
 3.  設定<xref:System.Windows.Forms.GroupBox.Text%2A>群組方塊中，為適當的 caption 屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.GroupBox>
 - [GroupBox 控制項](groupbox-control-windows-forms.md)

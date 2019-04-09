@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], From/to/by
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
-ms.openlocfilehash: 40a37542d6151d05910bc033657d85c6a9f5483b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209147"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By 動畫概觀
 本主題說明如何使用 From/To/By 動畫以動畫顯示相依性屬性。 From/To/By 動畫可建立兩個值之間的轉換。  
@@ -73,7 +73,7 @@ ms.locfileid: "57362756"
   
      若要指定動畫的結束值，請使用其<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性。 如果您使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>本身的屬性，動畫會取得其起始值從動畫顯示屬性，或從另一個套用至相同屬性的動畫的輸出。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>屬性搭配<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>來明確指定開始和結束值動畫的屬性。  
   
--   **位移值**  
+-   **位移的值**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性可讓您指定的位移，而非明確啟動或動畫的結束值。 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>動畫的屬性會指定多少動畫所變更的值在其持續期間內。 您可以使用<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性本身，或使用<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>屬性。 如果您只有指定<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>屬性，動畫之屬性的基底值或另一個動畫的輸出，請新增位移的值。  
   
@@ -138,9 +138,10 @@ ms.locfileid: "57362756"
   
 -   路徑動畫會產生輸出值<xref:System.Windows.Media.PathGeometry>。 如需詳細資訊，請參閱 <<c0> [ 路徑動畫概觀](path-animations-overview.md)。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也可讓您建立自己的自訂動畫類型。 如需詳細資訊，請參閱 <<c0> [ 自訂動畫概觀](custom-animations-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也可讓您建立您自己的自訂動畫類型。 如需詳細資訊，請參閱 <<c0> [ 自訂動畫概觀](custom-animations-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.Timeline>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - [動畫概觀](animation-overview.md)
@@ -148,4 +149,4 @@ ms.locfileid: "57362756"
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
 - [路徑動畫概觀](path-animations-overview.md)
 - [自訂動畫概觀](custom-animations-overview.md)
-- [From、To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [From、 To 和 By 動畫目標值範例](https://go.microsoft.com/fwlink/?LinkID=159988)

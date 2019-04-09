@@ -1,5 +1,5 @@
 ---
-title: HOW TO：透過 Blocks 屬性管理非固定格式內容項目
+title: HOW TO：透過 Blocks 屬性管理動態內容項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - properties [WPF], Blocks [WPF], manipulating flow content elements
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
-ms.openlocfilehash: a988f47b6b147b0db285af1928a4260c5deba542
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150133"
 ---
-# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>HOW TO：透過 Blocks 屬性管理非固定格式內容項目
+# <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>HOW TO：透過 Blocks 屬性管理動態內容項目
 這些範例會展示一些較常見可透過非固定格式內容的項目執行的作業**區塊**屬性。 這個屬性用來新增和移除項目從<xref:System.Windows.Documents.BlockCollection>。 非固定格式內容項目該功能**區塊**屬性包括：  
   
 -   <xref:System.Windows.Documents.Figure>  
@@ -63,10 +63,11 @@ ms.locfileid: "57365850"
  [!code-vb[FlowDocumentSnippets#_SectionBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_sectionblocksclear)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Documents.BlockCollection>
 - <xref:System.Windows.Documents.InlineCollection>
 - <xref:System.Windows.Documents.ListItemCollection>
 - [非固定格式文件概觀](flow-document-overview.md)
-- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [透過 Columns 屬性管理表格的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
-- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 Columns 屬性管理資料表的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

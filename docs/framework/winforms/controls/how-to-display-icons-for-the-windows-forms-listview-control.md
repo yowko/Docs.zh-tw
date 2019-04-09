@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Form ListView 控制項中顯示的圖示
+title: HOW TO：顯示 Windows Forms ListView 控制項的圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], with ListView control
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
-ms.openlocfilehash: ab515da932a4c73410e6ef22bec5ba8af200f270
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e01035a356c0293959676cd5907d2234bbf79f16
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704464"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151381"
 ---
-# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>HOW TO：Windows Form ListView 控制項中顯示的圖示
+# <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>HOW TO：顯示 Windows Forms ListView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個映像清單中的圖示。 清單、 詳細資料，以及 [smallicon] 檢視會顯示從映像清單中指定的映像<xref:System.Windows.Forms.ListView.SmallImageList%2A>屬性。 LargeIcon 檢視會顯示從映像清單中指定的映像<xref:System.Windows.Forms.ListView.LargeImageList%2A>屬性。 清單檢視也可以顯示一組額外的設定的圖示<xref:System.Windows.Forms.ListView.StateImageList%2A>大型或小型圖示旁邊的屬性。 如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
   
 ### <a name="to-display-images-in-a-list-view"></a>若要在清單檢視中顯示影像  
@@ -38,8 +38,9 @@ Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示三個映�
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#42](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#42)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
-- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [如何：資料行加入 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [HOW TO：使用 Windows Forms ListView 控制項新增和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [HOW TO：將資料行新增至 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 - [ImageList 元件](imagelist-component-windows-forms.md)

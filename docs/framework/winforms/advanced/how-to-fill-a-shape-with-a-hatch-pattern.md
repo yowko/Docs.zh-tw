@@ -1,5 +1,5 @@
 ---
-title: HOW TO：填滿形狀以規劃圖樣
+title: HOW TO：使用影線圖樣填滿形狀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling with patterns
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
-ms.openlocfilehash: 885f0d22e83767bda3ef76c54f0857dd2a148344
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118114"
 ---
-# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>HOW TO：填滿形狀以規劃圖樣
+# <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>HOW TO：使用影線圖樣填滿形狀
 從兩個色彩來進行以規劃圖樣： 一個用於背景，一個在背景上形成模式的程式碼行。 若要以規劃圖樣填滿一個封閉的形狀，請使用<xref:System.Drawing.Drawing2D.HatchBrush>物件。 下列範例示範如何使用以規劃圖樣填滿橢圓形：  
   
 ## <a name="example"></a>範例  
@@ -42,7 +42,8 @@ ms.locfileid: "57719711"
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用筆刷填滿形狀](using-a-brush-to-fill-shapes.md)

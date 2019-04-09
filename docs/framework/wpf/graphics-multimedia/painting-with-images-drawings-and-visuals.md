@@ -12,17 +12,16 @@ helpviewer_keywords:
 - brushes [WPF], painting with images
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
-ms.openlocfilehash: bb66c34a847f78f7921ae925d0c3d0640c11aeec
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361315"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204194"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>使用影像、繪圖和視覺效果繪製
 本主題描述如何使用<xref:System.Windows.Media.ImageBrush>， <xref:System.Windows.Media.DrawingBrush>，並<xref:System.Windows.Media.VisualBrush>物件來使用影像繪製區域<xref:System.Windows.Media.Drawing>，或<xref:System.Windows.Media.Visual>。  
-    
-  
+
 <a name="prereqs"></a>   
 ## <a name="prerequisites"></a>必要條件  
  若要了解本主題，您應該熟悉 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的不同筆刷類型及其基本功能。 如需簡介，請參閱 [WPF 筆刷概觀](wpf-brushes-overview.md)。  
@@ -135,6 +134,7 @@ DrawingBrush 所繪製的物件
  如需詳細資訊的並排顯示功能的相關<xref:System.Windows.Media.TileBrush>物件，請參閱[TileBrush 概觀](tilebrush-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.ImageBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - <xref:System.Windows.Media.VisualBrush>

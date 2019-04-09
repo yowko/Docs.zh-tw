@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 2b750f41343a4a68e29af6055815efd1e6470252
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148131"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>類型轉換函式 (Visual Basic)
 這些函式是編譯的內嵌，這表示，轉換程式碼評估運算式的程式碼的一部分。 有時是沒有呼叫程序來完成轉換，進而改善效能。 每個函式強制轉型為特定的資料類型的運算式。  
@@ -129,7 +129,7 @@ CUShort(expression)
 |`CDec`|[Decimal 資料類型](../../../visual-basic/language-reference/data-types/decimal-data-type.md)|+ /-零擴充的數字，也就是任何小數位數的數字 79228162514264337593543950335。 如 28 位小數的數字，範圍是 + /--7.9228162514264337593543950335。 最小可能的非零值是 0.0000000000000000000000000001 （+ /-1E-28)。|  
 |`CInt`|[Integer 資料類型](../../../visual-basic/language-reference/data-types/integer-data-type.md)|<xref:System.Int32.MinValue?displayProperty=nameWithType> (-2,147,483,648) 到<xref:System.Int32.MaxValue?displayProperty=nameWithType>(2147483647)，會捨去小數部分。<sup>1</sup> <br/><br/>從 Visual Basic 15.8 開始，Visual Basic 最佳化與整數轉換成浮點數的效能`CInt`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。 |  
 |`CLng`|[Long 資料類型](../../../visual-basic/language-reference/data-types/long-data-type.md)|<xref:System.Int64.MinValue?displayProperty=nameWithType> (-9223372036854775808) 到<xref:System.Int64.MaxValue?displayProperty=nameWithType>(9223372036854775807)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 將效能最佳化浮點，以使用 64 位元的整數轉換`CLng`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  
-|`CObj`|[Object 資料類型](../../../visual-basic/language-reference/data-types/object-data-type.md)|任何有效的運算式。|  
+|`CObj`|[Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)|任何有效的運算式。|  
 |`CSByte`|[SByte 資料類型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)|<xref:System.SByte.MinValue?displayProperty=nameWithType> (-128) 透過<xref:System.SByte.MaxValue?displayProperty=nameWithType>(127)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 最佳化的效能與帶正負號的位元組轉換成浮點數`CSByte`函式; 請參閱 <<c2> [ 備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  
 |`CShort`|[Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)|<xref:System.Int16.MinValue?displayProperty=nameWithType> (-32,768) 到<xref:System.Int16.MaxValue?displayProperty=nameWithType>(32,767)，會捨去小數部分。<sup>1</sup><br/><br/>從 Visual Basic 15.8 開始，Visual Basic 最佳化的效能與 16 位元的整數轉換成浮點數`CShort`函式; 請參閱[備註](#remarks)節的詳細資訊。 請參閱[CInt 範例](#cint-example)一節中的範例。|  
 |`CSng`|[Single 資料類型](../../../visual-basic/language-reference/data-types/single-data-type.md)|-3.402823 e + 38 到-1.401298E-45 (負值）從 1.401298E-45 到 3.402823 e + 38 的正數值。|  
@@ -142,7 +142,6 @@ CUShort(expression)
   
 ## <a name="remarks"></a>備註  
  因此，您應該使用 Visual Basic 型別轉換函式，而非.NET Framework 方法，例如`ToString()`，在<xref:System.Convert>類別或個別類型結構或類別。 Visual Basic 函式專為 Visual Basic 程式碼，最佳的互動，它們也可讓您的程式碼更簡短、 更方便閱讀。 此外，.NET Framework 轉換方法不一定會產生與 Visual Basic 函式，例如，轉換時相同的結果`Boolean`至`Integer`。 如需詳細資訊，請參閱 <<c0> [ 疑難排解資料型別](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)。  
-
 
 從 Visual Basic 15.8，浮點-點對點-整數的轉換的效能最佳化傳遞時<xref:System.Single>或是<xref:System.Double>遵循以下方法傳回整數的轉換函式的其中一個值 (`CByte`， `CShort`, `CInt`, `CLng`, `CSByte`, `CUShort`, `CUInt`, `CULng`):
 
@@ -299,4 +298,4 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 - <xref:Microsoft.VisualBasic.Conversion.Str%2A>
 - <xref:Microsoft.VisualBasic.Conversion.Val%2A>
 - [轉換函式](../../../visual-basic/language-reference/functions/conversion-functions.md)
-- [在 Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [Visual Basic 中的類型轉換](../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)

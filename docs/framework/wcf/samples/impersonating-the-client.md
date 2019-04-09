@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Impersonating the Client Sample [Windows Communication Foundation]
 - impersonation, Windows Communication Foundation sample
 ms.assetid: 8bd974e1-90db-4152-95a3-1d4b1a7734f8
-ms.openlocfilehash: 8338d04382e77c231232ca2080c21e8732a683b7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bd03ddb2478d8f9938a8c89c04f536a81e9e24da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836125"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202465"
 ---
 # <a name="impersonating-the-client"></a>模擬用戶端
 此模擬範例會示範如何在服務端模擬呼叫者應用程式，以便讓服務能夠代表該呼叫者存取系統資源。  
@@ -124,4 +124,3 @@ client.ClientCredentials.Windows.AllowedImpersonationLevel = TokenImpersonationL
      接著，提示您輸入密碼。 輸入先前指定帳戶的密碼。  
   
 5.  當您執行用戶端時，請注意用戶端在使用不同認證執行前後所具有的身分識別。  
-  

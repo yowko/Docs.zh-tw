@@ -10,12 +10,12 @@ helpviewer_keywords:
 - multimedia [WPF], controlling playback of media
 - media [WPF], controlling playback of
 ms.assetid: 6885a730-e054-4c16-8c1e-ffe17b1f7c32
-ms.openlocfilehash: 7fe8107f7b5b65f00f2c5ac029f806aeba758d20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bb7319fc7ccec0220cbd79a32d5d015f9f2422d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182854"
 ---
 # <a name="how-to-control-a-mediaelement-play-pause-stop-volume-and-speed"></a>HOW TO：控制 MediaElement (播放、暫停、停止、音量和速度)
 下列範例示範如何控制播放的媒體使用<xref:System.Windows.Controls.MediaElement>。 此範例會建立簡單的媒體播放程式，可讓您播放、 暫停、 停止和略過來回媒體中，以及調整音量和速度的比例。  
@@ -35,4 +35,5 @@ ms.locfileid: "57368502"
  [!code-vb[MediaGallery_snip#CodeBehindMediaElementExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/MediaGallery_snip/VB/MediaElementExample.xaml.vb#codebehindmediaelementexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用分鏡腳本控制 MediaElement](how-to-control-a-mediaelement-by-using-a-storyboard.md)

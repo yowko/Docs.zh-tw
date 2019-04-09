@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Polyline 項目繪製聚合線
+title: HOW TO：使用聚合線條元素繪製聚合線條
 ms.date: 03/30/2017
 helpviewer_keywords:
 - connected lines [WPF]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - lines [WPF], connected (see polylines)
 - drawing [WPF], polylines
 ms.assetid: 65db8935-d047-4295-87c4-b427ff3ad293
-ms.openlocfilehash: 35981f6d5a47ea5d5e024efe714b52103938eddf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4f55ecc206be0ef4947923047e796c36131c70ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114842"
 ---
-# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>HOW TO：使用 Polyline 項目繪製聚合線
+# <a name="how-to-draw-a-polyline-by-using-the-polyline-element"></a>HOW TO：使用聚合線條元素繪製聚合線條
 此範例示範如何繪製聚合線，也就是一系列連接的直線，使用<xref:System.Windows.Shapes.Polyline>項目。  
   
  若要繪製聚合線，請建立<xref:System.Windows.Shapes.Polyline>項目，並使用其<xref:System.Windows.Shapes.Polyline.Points%2A>屬性來指定圖形的頂點。 最後，使用<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>來描述聚合線條的屬性說明，因為沒有筆觸線條是不可見。  
@@ -35,6 +35,7 @@ ms.locfileid: "57378173"
  這個範例屬於較大型的範例;如需完整的範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Shapes.Polyline>
 - <xref:System.Windows.Shapes.Polygon>
 - <xref:System.Windows.Shapes.Shape>

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - bitmap images [WPF]
 - XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
-ms.openlocfilehash: d430c0c38f5f363b386102d21a172df6c812da21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fa5842040876754d5f0d358258f1eab7d09d79c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377686"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111575"
 ---
 # <a name="how-to-use-a-bitmapimage"></a>HOW TO：使用 BitmapImage
 此範例示範如何使用<xref:System.Windows.Media.Imaging.BitmapImage>做為來源<xref:System.Windows.Controls.Image>控制中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -25,4 +25,5 @@ ms.locfileid: "57377686"
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [影像處理概觀](imaging-overview.md)

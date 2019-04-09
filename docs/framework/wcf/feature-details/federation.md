@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: f05d4a9348c12a29dc3cd7b93334ab1134eeb1a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709386"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114025"
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 它也說明對部署聯合的安全性架構的 Windows Communication Foundation (WCF) 支援。 示範聯合的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -26,7 +26,7 @@ ms.locfileid: "54709386"
 ### <a name="elements-of-a-federated-security-architecture"></a>聯合安全性架構的項目  
  聯合安全性架構有三個索引鍵項目，如下表所示。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |網域/領域|安全性管理或信任的單一單位。 一般的網域會包含單一組織。|  
 |同盟|已建立信任的網域集合。 信任的層級可能會有所不同，但是一般來說會包含驗證，並且幾乎都包含授權。 一般的聯合可能會包含一些組織，這些組織已建立對資源集合之共用存取的信任。|  
@@ -60,7 +60,7 @@ ms.locfileid: "54709386"
   
  在聯合安全性架構中，組織 A 的使用者了解如果想要存取組織 B 中的 Web 服務，就必須在組織 B 提交來自 STS 的有效安全性權杖，以便驗證與授權存取特定服務。  
   
- 在連絡 STS B 時，使用者會接收到來自與 STS 關聯之原則的另一個間接取值層級。 在 STS B 將安全性權杖發行給他們之前，他們必須提交來自 STS A 的有效安全性權杖 (也就是用戶端信任領域)。 這是在兩個組織之間建立信任關係的必然結果，並且表示組織 B 不需要管理組織 A 使用者的識別。實際上，STS B 通常會有 Null 的 `issuerAddress` 和 `issuerMetadataAddress`。 如需詳細資訊，請參閱[＜How to：設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在此情況下，用戶端會查閱本機原則以便尋找 STS a。這個組態稱為*home realm federation*和它較易調整大小因為 STS B 不需要維護 STS A 有關的資訊  
+ 在連絡 STS B 時，使用者會接收到來自與 STS 關聯之原則的另一個間接取值層級。 在 STS B 將安全性權杖發行給他們之前，他們必須提交來自 STS A 的有效安全性權杖 (也就是用戶端信任領域)。 這是在兩個組織之間建立信任關係的必然結果，並且表示組織 B 不需要管理組織 A 使用者的識別。實際上，STS B 通常會有 Null 的 `issuerAddress` 和 `issuerMetadataAddress`。 如需詳細資訊，請參閱[如何：設定本機簽發者](../../../../docs/framework/wcf/feature-details/how-to-configure-a-local-issuer.md)。 在此情況下，用戶端會查閱本機原則以便尋找 STS a。這個組態稱為*home realm federation*和它較易調整大小因為 STS B 不需要維護 STS A 有關的資訊  
   
  然後使用者就可以在組織 A 連絡 STS，並藉由提交平常用來存取組織內任何其他資源的驗證認證以取得安全性權杖。這也可以改善使用者必須維護多個認證集合，或在多個服務站台使用相同認證集合的問題。  
   
@@ -290,4 +290,5 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
  聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 用於建置及部署分散式應用程式平台，WCF 會提供實作聯合的安全性的原生支援。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性](../../../../docs/framework/wcf/feature-details/security.md)

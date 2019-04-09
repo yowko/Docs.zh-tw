@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: 13d1a76779877bc2ab6d1cbd9c892bf14781e788
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54705939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118101"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 設計工具程式撰寫模型中的關鍵類型，允許編輯包含的項目集合。 這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。
@@ -32,15 +32,15 @@ ms.locfileid: "54705939"
 ## <a name="sample-highlights"></a>範例重點
  這個範例的程式碼示範下列操作：
 
--   設計工具建置的目標活動：`Parallel`
+-   活動設計工具建置的：  `Parallel`
 
 -   建立具有 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 的自訂活動設計工具 請注意下列幾點事項：
 
-    -   請注意繫結至 `ModelItem.Branches` 的 WPF 資料繫結用法。 `ModelItem` 是 `WorkflowElementDesigner` 上的屬性，它會參考設計工具的目標基礎物件，在這個範例中為 `Parallel`。
+    -   請注意繫結至 `ModelItem.Branches` 的 WPF 資料繫結用法。 `ModelItem` 屬性位於`WorkflowElementDesigner`設計工具使用，在此情況下，基礎物件，參考我們`Parallel`。
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> 可用來放置視覺效果，在集合中的個別項目之間顯示。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是範本，可供判斷集合中的項目配置。 在這個範例中，會使用水平堆疊面板。
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> 是可供判斷集合中的項目配置的範本。 在這個範例中，會使用水平堆疊面板。
 
  下列範例程式碼會示範這點。
 
@@ -158,5 +158,6 @@ End Sub
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\WorkflowItemsPresenter`  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Activities.Presentation.WorkflowItemsPresenter>
 - [使用工作流程設計工具開發應用程式](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

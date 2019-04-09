@@ -1,13 +1,13 @@
 ---
-title: <dataContractSerializer> < system.runtime.serialization >
+title: <dataContractSerializer> of <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: d9b3d625-be3f-4768-8e0d-1b7e6929f6a8
-ms.openlocfilehash: 488b0754194c1fa7896a168daac0a3a497076e56
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c81fdb040f2e0d6c9a3728d8ed3b917443ecb42e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55265931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115358"
 ---
 # <a name="datacontractserializer-of-systemruntimeserialization"></a>\<dataContractSerializer> of \<system.runtime.serialization>
 包含 <xref:System.Runtime.Serialization.DataContractSerializer> 的組態資料。  
@@ -40,7 +40,7 @@ ms.locfileid: "55265931"
   
 ### <a name="attributes"></a>屬性  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |ignoreExtensionDataObject|布林值，該值會指定當端點序列化或還原序列化時，是否略過端點所提供的資料。 此屬性只能在 `<dataContractSerializer>` 項目下的 `<behavior>` 設定。|  
 |maxItemsInObjectGraph|整數，指定要序列化或還原序列化的項目數上限。 此屬性為 65536。|  
@@ -61,6 +61,7 @@ ms.locfileid: "55265931"
  如需已知型別的詳細資訊，請參閱<xref:System.Runtime.Serialization.DataContractSerializer>並[Data Contract Known Types](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>
-- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)

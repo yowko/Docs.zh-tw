@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
-ms.openlocfilehash: 6d5d0b413f940a2c7f70e05135ff070c1fe5ba21
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374657"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123054"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>HOW TO：使用 LineGeometry 建立線條
 此範例示範如何使用<xref:System.Windows.Media.LineGeometry>類別來描述一條線。 A<xref:System.Windows.Media.LineGeometry>由其開始和結束點定義。  
@@ -31,6 +31,7 @@ ms.locfileid: "57374657"
  其他簡單幾何類別包括<xref:System.Windows.Media.LineGeometry>和<xref:System.Windows.Media.EllipseGeometry>。 這些幾何，以及更複雜的也可以建立使用<xref:System.Windows.Media.PathGeometry>或<xref:System.Windows.Media.StreamGeometry>。 如需詳細資訊，請參閱 <<c0> [ 幾何概觀](geometry-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [幾何概觀](geometry-overview.md)
-- [建立複合圖案](how-to-create-a-composite-shape.md)
-- [使用 PathGeometry 建立圖案](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [建立複合圖形](how-to-create-a-composite-shape.md)
+- [使用 PathGeometry 建立圖形](how-to-create-a-shape-by-using-a-pathgeometry.md)

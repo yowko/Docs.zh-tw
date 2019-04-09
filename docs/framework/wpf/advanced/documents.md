@@ -6,25 +6,26 @@ f1_keywords:
 helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
-ms.openlocfilehash: 6dba276e88f4c3dd475e3d79de43a9fca7a35206
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206937"
 ---
 # <a name="documents"></a>文件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組多功能的元件，可讓開發人員透過進階的文件功能和改良的閱讀經驗來建置應用程式。 除了增強功能和品質，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也針對文件封裝、安全性和儲存提供簡化的管理服務。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供一組多功能的元件可讓開發人員建置進階文件功能與改良的閱讀經驗的應用程式。 除了增強功能和品質，[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也針對文件封裝、安全性和儲存提供簡化的管理服務。  
   
 ## <a name="in-this-section"></a>本節內容  
  [WPF 中的文件](documents-in-wpf.md)  
  [文件序列化與儲存](document-serialization-and-storage.md)  
- [註釋](annotations.md)  
+ [標註](annotations.md)  
  [非固定格式內容](flow-content.md)  
  [印刷樣式](typography.md)  
  [列印和列印系統管理](printing-and-print-system-management.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.DocumentViewer>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps>

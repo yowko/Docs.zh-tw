@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e5e673f4-9b44-45ae-aaea-c504d1cc5d3e
-ms.openlocfilehash: 0f19e08aba36d2e93033fb944efe848d4e1125e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f4dfccad23bf5d15f5cbd0a33e76a136417e13ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59204155"
 ---
 # <a name="navigating-datarelations"></a>導覽 DataRelation
 <xref:System.Data.DataRelation> 的其中一個主要功能，是讓您可以從 <xref:System.Data.DataTable> 內的某個 <xref:System.Data.DataSet> 巡覽至另一個。 這可讓您擷取所有相關<xref:System.Data.DataRow>物件，其中一**DataTable**時指定單一**DataRow**某個**DataTable**。 例如，在建立後，才能**DataRelation**客戶資料表與資料表之間的訂單，您可以擷取特定客戶的資料列使用的所有訂單資料列**GetChildRows**。  
@@ -50,5 +50,6 @@ Customer ID: NORTS
  [!code-vb[DataWorks Data.DataTableNavigation#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks Data.DataTableNavigation/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

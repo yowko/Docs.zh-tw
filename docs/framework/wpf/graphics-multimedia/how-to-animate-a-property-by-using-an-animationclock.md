@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: d93f1eb352aef4f5e74512a8deeb0ec3fe7943c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201360"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>HOW TO：使用 AnimationClock 建立屬性的動畫
 此範例示範如何使用<xref:System.Windows.Media.Animation.Clock>以動畫顯示屬性的物件。  
@@ -37,6 +37,7 @@ ms.locfileid: "57357179"
  如需範例，示範如何以互動方式控制<xref:System.Windows.Media.Animation.Clock>啟動之後，請參閱[以互動方式控制時鐘](how-to-interactively-control-a-clock.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用分鏡腳本建立屬性的動畫](how-to-animate-a-property-by-using-a-storyboard.md)
 - [不使用分鏡腳本而建立屬性的動畫](how-to-animate-a-property-without-using-a-storyboard.md)
 - [屬性動畫技術概觀](property-animation-techniques-overview.md)

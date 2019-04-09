@@ -7,12 +7,12 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], about RichTextBox control
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
-ms.openlocfilehash: ded2c9bb0e5b3320de700ce6126710314ed9e4f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720236"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201594"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸入和操作具有格式的文字。 <xref:System.Windows.Forms.RichTextBox>控制一切<xref:System.Windows.Forms.TextBox>控制項，但它也顯示字型、 色彩和連結; 從檔案載入文字和內嵌的影像即可尋找指定的字元。 <xref:System.Windows.Forms.RichTextBox>控制項通常用來提供文字操作和顯示功能類似於文書處理應用程式，例如 Microsoft Word。 像是<xref:System.Windows.Forms.TextBox>控制項中，<xref:System.Windows.Forms.RichTextBox>控制項可以顯示捲軸，但不同於<xref:System.Windows.Forms.TextBox>視需要顯示水平與垂直捲軸的控制項，其預設值是和它具有其他捲軸設定。  
@@ -25,6 +25,7 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項用來顯示、 輸�
  您可以復原和取消復原中的大部分編輯作業<xref:System.Windows.Forms.RichTextBox>控制項，藉由呼叫<xref:System.Windows.Forms.TextBoxBase.Undo%2A>和<xref:System.Windows.Forms.RichTextBox.Redo%2A>方法。 <xref:System.Windows.Forms.RichTextBox.CanRedo%2A>方法可讓您判斷是否將使用者已復原的最後一個作業可以套用到控制項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)

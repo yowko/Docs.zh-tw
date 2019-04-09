@@ -9,12 +9,12 @@ helpviewer_keywords:
 - painting [WPF], with images
 - brushes [WPF], painting with images
 ms.assetid: 3432c533-1fc7-492d-94ee-0b13d60125ae
-ms.openlocfilehash: c1db803aacad85ce90fec519b5eabdd8df7bb584
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2b88982e7a8d196c31869dc74aac636d78f68386
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207808"
 ---
 # <a name="how-to-paint-an-area-with-an-image"></a>HOW TO：使用影像繪製區域
 此範例示範如何使用<xref:System.Windows.Media.ImageBrush>類別來使用影像繪製區域。 <xref:System.Windows.Media.ImageBrush>會顯示單一的映像，以指定其<xref:System.Windows.Media.ImageBrush.ImageSource%2A>屬性。  
@@ -36,4 +36,5 @@ ms.locfileid: "57369119"
  此程式碼範例是針對所提供之較大範例的一部分<xref:System.Windows.Media.ImageBrush>類別。 如需完整的範例，請參閱[ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)

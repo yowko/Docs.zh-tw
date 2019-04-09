@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b102f49a642d2bcd62e7f75a8dd0b9ab782ad674
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d0739cc38d1f12967f0daef2d6828e04a256ade6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491343"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201841"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace 方法
 指定目前開啟的語彙範圍內，正在使用指定的完整命名空間名稱。 將所有領域都繼承自目前開啟的範圍內使用的命名空間。 關閉目前的範圍也會停止使用命名空間。  
@@ -45,4 +45,5 @@ HRESULT UsingNamespace(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

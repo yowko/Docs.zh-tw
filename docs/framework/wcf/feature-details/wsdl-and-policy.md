@@ -2,12 +2,12 @@
 title: WSDL 與原則
 ms.date: 03/30/2017
 ms.assetid: cea87440-3519-4640-8494-b8a2b0e88c84
-ms.openlocfilehash: 1e6b315c1830602e72b4b498cd38eed8428bc5ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caaa54f04bbb10ed3b3dd65b53ace633b88f9126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151901"
 ---
 # <a name="wsdl-and-policy"></a>WSDL 與原則
 本主題涵蓋 Windows Communication Foundation (WCF) WSDL 1.1、 Ws-policy 和 Ws-policyattachment 實作詳細資料，以及其他 Ws-policy 判斷提示和 WSDL 1.1 延伸 WCF 所引進。  
@@ -73,6 +73,7 @@ ms.locfileid: "54741427"
 |mssp:RequireClientCertificate|巢狀|這個選用項目會對用戶端憑證指定要求，也就是是否要做為 TLSNEGO 通訊協定的一部分而提供。 如果出現這個判斷提示，則必須提供用戶端憑證。 如果未出現這個判斷提示，則不可提供用戶端憑證。 這個判斷提示不可在 mssp:SslContextToken 以外使用。|  
   
 ## <a name="see-also"></a>另請參閱
-- [自訂 WSDL 發行集](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
-- [如何：匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [如何：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+
+- [自訂 WSDL 發行物](../../../../docs/framework/wcf/samples/custom-wsdl-publication.md)
+- [HOW TO：匯出自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [HOW TO：匯入自訂 WSDL](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

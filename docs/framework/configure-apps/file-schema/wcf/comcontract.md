@@ -2,12 +2,12 @@
 title: <comContract>
 ms.date: 03/30/2017
 ms.assetid: 3f8e1c0c-cfdf-4c79-ac65-c64e9323a51c
-ms.openlocfilehash: 63383fbd711f3725748e85fcf12e06b185bf30d1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 8694f83a731363f83cb09de43214eb4b211ef5ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145063"
 ---
 # <a name="comcontract"></a>\<comContract>
 指定 COM+ 整合服務合約。  
@@ -50,7 +50,7 @@ ms.locfileid: "55257596"
 |屬性|描述|  
 |---------------|-----------------|  
 |Contract - 合約|包含合約型別的字串。|  
-|name|包含合約名稱的字串。|  
+|名稱|包含合約名稱的字串。|  
 |namespace|包含合約命名空間的字串。|  
 |requiresSession|布林值，指定合約是否只能用在工作階段繫結上。 當服務初始化時，整合執行階段會確保這個設定與要使用的繫結型別是一致的。 如果合約的一或多個繫結有衝突，便會產生例外狀況 (Exception)。 如果這個屬性是 `false`，而且正在使用單向通道且存在任何 [out] 參數時，也會產生例外狀況。|  
   
@@ -89,9 +89,10 @@ ms.locfileid: "55257596"
  當服務初始化時，指定的命名空間和合約名稱就會套用至所產生的服務描述。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElementCollection>
 - <xref:System.ServiceModel.Configuration.ComContractElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [整合 COM+ 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [HOW TO：設定 COM+ 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

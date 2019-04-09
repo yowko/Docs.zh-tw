@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: e9037fc035693e079e2471ad37263108656b8c01
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 567dc3942f79b6bfd29338b9103083aa64e66451
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55828590"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203193"
 ---
 # <a name="dacpmethoddescdata-structure"></a>DacpMethodDescData 結構
 
@@ -73,18 +73,18 @@ struct DacpMethodDescData
 | `rejitDataRequested`         | Rejit 要求的原生位址資訊。                                             |
 | `cJittedRejitVersions`       | 此方法已透過檢測 rejitted 的次數。                           |
 
-
 ## <a name="remarks"></a>備註
 
 此結構內執行階段，而且不會公開透過任何標頭或程式庫檔案。 若要使用它，定義如上述所指定的結構。
 
 ## <a name="requirements"></a>需求
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無  
-**程式庫：** 無  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標頭：** None  
+**LIBRARY:** None  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [一般資料類型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)
+- [常見資料類型](../../../../docs/framework/unmanaged-api/common-data-types-unmanaged-api-reference.md)

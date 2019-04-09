@@ -2,12 +2,12 @@
 title: <security> 的 <basicHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 6432708d-5465-4bd9-bfc2-466742db99cb
-ms.openlocfilehash: 964f2bf9571cd3c3b8668c7ab5306fab89de2ab0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: f1e166bec2254ed6d2c306eaccfa13e9fba1d70d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261291"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118049"
 ---
 # <a name="security-of-basichttpbinding"></a>\<安全性 > 的\<basicHttpBinding >
 定義的安全性功能[ \<basicHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)。  
@@ -37,13 +37,13 @@ ms.locfileid: "55261291"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|選擇項。 指定使用的安全性類型。 預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.BasicHttpSecurityMode>。|  
+|模式|選擇性。 指定使用的安全性類型。 預設為 `None`。 此屬性的型別為 <xref:System.ServiceModel.BasicHttpSecurityMode>。|  
   
 ## <a name="mode-attribute"></a>mode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
-|無|訊息在傳輸期間並未受到保護。|  
+|None|訊息在傳輸期間並未受到保護。|  
 |Transport|會使用 HTTPS 傳輸來提供安全性。 SOAP 訊息是使用 HTTPS 來保護其安全。 對用戶端驗證服務時，則是使用服務的 X.509 憑證。 用戶端會透過提供的 ClientCredentialType 來驗證。 請參閱[\<傳輸 >](../../../../../docs/framework/configure-apps/file-schema/wcf/transport-of-basichttpbinding.md)。|  
 |訊息|系統會使用 SOAP 訊息安全性來提供安全性。 根據預設，本文會經過加密與簽署。 對於此繫結，系統會要求將伺服器憑證提供給超出範圍的用戶端。 這個繫結唯一有效的 `ClientCredentialType` 是 `Certificate`。|  
 |TransportWithMessageCredential|完整性、機密性與伺服器驗證都是經由傳輸安全性來提供。 用戶端驗證是透過 SOAP 訊息安全性的方式提供。 當使用者是透過使用者名稱/密碼進行驗證，且有現有的 HTTP 部署來保護訊息傳輸的安全時，即與此模式有關。|  
@@ -66,13 +66,14 @@ ms.locfileid: "55261291"
  根據預設，SOAP 訊息並不安全，而且用戶端也尚未經過驗證。 這個項目可讓您設定 `basicHttpBinding` 項目的其他安全性設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.BasicHttpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement.Security%2A>
 - <xref:System.ServiceModel.Configuration.BasicHttpSecurityElement>
 - <xref:System.ServiceModel.BasicHttpSecurity>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 78a0410876016ef2d5249fe3b6a667cacc432320
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54654850"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147039"
 ---
 # <a name="introduction-to-extensibility"></a>擴充性簡介
 Windows Communication Foundation (WCF) 應用程式模型是設計用來解決任何分散式應用程式的通訊要求更高的一部分。 但是一定有預設應用程式模型和系統提供的實作所不支援的情況。 WCF 擴充性模型被要支援的自訂案例，可讓您修改每個層級，甚至到取代整個應用程式模型的系統行為。 本主題會概述各種擴充區域，並指向每個擴充區域的詳細資訊。  
@@ -53,4 +53,5 @@ Windows Communication Foundation (WCF) 應用程式模型是設計用來解決�
  若要修改裝載應用程式定義域與服務主機之間的關係，您必須擴充 <xref:System.ServiceModel.Activation.ServiceHostFactory?displayProperty=nameWithType> 類別。 如需詳細資訊，請參閱 <<c0> [ 擴充裝載使用 ServiceHostFactory](../../../docs/framework/wcf/extending/extending-hosting-using-servicehostfactory.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [擴充 WCF](../../../docs/framework/wcf/extending/index.md)
+
+- [延伸 WCF](../../../docs/framework/wcf/extending/index.md)

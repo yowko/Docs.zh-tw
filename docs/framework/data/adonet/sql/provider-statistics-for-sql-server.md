@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
-ms.openlocfilehash: 99f6e9e265071c2e7e3c79cf158ab5051eb78f04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149093"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server 的提供者統計資料
 從 .NET Framework 2.0 版開始，.NET Framework Data Provider for SQL Server 便支援執行階段統計資料。 建立有效的連接物件後，您必須藉由將 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 屬性設為 `True`，以啟用統計資料。 統計資料啟用後，透過 <xref:System.Collections.IDictionary> 物件的 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 方法擷取 <xref:System.Data.SqlClient.SqlConnection> 參考，可以將它們做為「某時間的快照集」進行檢閱。 您可使用一組名稱/值配對字典項目的形式透過清單列舉。 這些名稱/值配對沒有排列順序。 您可以隨時呼叫 <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> 物件的 <xref:System.Data.SqlClient.SqlConnection> 方法，以重設計數器。 如果尚未啟用統計資料蒐集，則不會產生例外狀況。 此外，如果呼叫 <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> 時未先呼叫 <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A>，則擷取的值會是每個項目的初始值。 如果啟用統計資料，並執行應用程式一段時間，然後停用統計資料，則擷取的值會反映到停用統計資料時所收集的值。 蒐集的所有統計資料值都是以每個連接為基礎。  
@@ -41,7 +41,7 @@ ms.locfileid: "54620262"
 |`SelectRows`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回選取的資料列數目。 此計數器會反映 SQL 陳述式產生的所有資料列，甚至包含呼叫端實際上並未使用的資料列。 例如，在讀取整個結果集之前關閉資料讀取器不會影響計數。 這會包含透過 FETCH 陳述式從游標擷取的資料列。|  
 |`ServerRoundtrips`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回連接傳送命令至伺服器並取得回覆的次數。|  
 |`SumResultSets`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回已使用的結果集數目。 例如，這會包含傳回至用戶端的任何結果集。 對於游標，會將每個擷取或封鎖擷取作業視為獨立的結果集。|  
-|`Transactions`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回已啟動的使用者交易數目，包括復原。 如果連接執行時已啟用自動認可，則會將每個命令視為交易。<br /><br /> 一旦執行 BEGIN TRAN 陳述式，此計數器便會遞增交易計數，而不論是否會認可或稍後復原交易。|  
+|`Transactions`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回已啟動的使用者異動數目，包括復原。 如果連接執行時已啟用自動認可，則會將每個命令視為異動。<br /><br /> 一旦執行 BEGIN TRAN 陳述式，此計數器便會遞增異動計數，而不論是否會認可或稍後復原異動。|  
 |`UnpreparedExecs`|一旦應用程式已開始使用提供者並啟用統計資料後，傳回透過連接執行之取消準備的陳述式數目。|  
   
 ### <a name="retrieving-a-value"></a>擷取值  
@@ -339,5 +339,6 @@ namespace CS_Stats_Console_GetAll
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 0c0d24111a2fdf856ff1f4ce154ec85afbbd61ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208861"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項的預設功能
 Windows Form<xref:System.Windows.Forms.DataGridView>控制項提供使用者一段很長的預設功能。  
@@ -47,5 +47,6 @@ Windows Form<xref:System.Windows.Forms.DataGridView>控制項提供使用者一�
 -   自動排序依據的基礎資料，當使用者按一下資料行標頭的資料列。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)

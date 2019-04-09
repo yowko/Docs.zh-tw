@@ -5,17 +5,16 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], DataGrid control
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
-ms.openlocfilehash: c04340cf2d2c8e318ea7348c978ef943563c24da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145973"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows Form DataGrid 控制項的鍵盤快速鍵
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  下表列出可用於巡覽 Windows 表單中的鍵盤快速鍵<xref:System.Windows.Forms.DataGrid>控制項：  
   
@@ -52,5 +51,6 @@ ms.locfileid: "57711768"
 |輸入<xref:System.DBNull.Value?displayProperty=nameWithType>在編輯模式中的儲存格中的值。|CTRL+0|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGrid 控制項概觀](datagrid-control-overview-windows-forms.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
