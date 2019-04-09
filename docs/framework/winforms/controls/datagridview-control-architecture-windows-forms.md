@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
-ms.openlocfilehash: 81ac17c9f78baa71d005883c9dd928e398b10a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842339"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130256"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView 控制項架構 (Windows Form)
 <xref:System.Windows.Forms.DataGridView>控制項以及與其相關的類別都是設計成有彈性、 可擴充的系統，來顯示和編輯表格式資料。 這些類別包含在<xref:System.Windows.Forms?displayProperty=nameWithType>命名空間，而且它們所有以"DataGridView"前置詞命名。  
@@ -137,6 +137,7 @@ ms.locfileid: "58842339"
  如果您啟用<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>屬性，加入新資料列的特殊資料列會顯示為最後一個資料列。 此資料列屬於<xref:System.Windows.Forms.DataGridView.Rows%2A>集合，但它有可能需要注意的特殊功能。 如需詳細資訊，請參閱 <<c0> [ 使用 Windows Form DataGridView 控制項中的新資料錄的資料列](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)
-- [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)
-- [使用 Windows Forms DataGridView 控制項中用於新增記錄的資料列](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)
+- [自訂 Windows Form DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)
+- [使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)

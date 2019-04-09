@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5ec801e1e20fdb495537505a71ddaef6218ad5fb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521366"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122144"
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含與 Windows Communication Foundation (WCF) 的系統提供繫結會提供程式 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
@@ -204,7 +204,7 @@ ms.locfileid: "54521366"
   
 |類型|描述|  
 |----------|-----------------|  
-|無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
+|None|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
 |基本|基本驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證：基本和摘要式驗證，網址[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |摘要|摘要式驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證：基本和摘要式驗證，網址[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
 |NTLM|NT LAN Manager (NTLM) 驗證。|  
@@ -217,16 +217,17 @@ ms.locfileid: "54521366"
   
 |類型|描述|  
 |----------|-----------------|  
-|無|允許服務與匿名用戶端互動。|  
+|None|允許服務與匿名用戶端互動。|  
 |Windows|允許在 Windows 認證的已驗證內容中進行 SOAP 訊息交換。|  
 |使用者名稱|允許服務要求用戶端必須以使用者名稱認證進行驗證。 請注意，當安全性模式設定為`TransportWithMessageCredential`，WCF 不支援傳送密碼摘要或衍生的金鑰使用的密碼，並使用訊息模式安全性這類金鑰。 因此，WCF 會強制使用使用者名稱認證時，保護傳輸。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
 |IssuedToken|允許服務使用安全性權杖服務提供自訂權杖。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

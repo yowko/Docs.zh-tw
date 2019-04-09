@@ -2,12 +2,12 @@
 title: <issuedTokenAuthentication> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 5c2e288f-f603-4d13-839a-0fd6d1981bec
-ms.openlocfilehash: c195791250831897b8bc9d09782d17609272e146
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d093b45269b230b4ff074d07a66290ab09592f60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178564"
 ---
 # <a name="issuedtokenauthentication-of-servicecredentials"></a>\<issuedTokenAuthentication> of \<serviceCredentials>
 指定發行為服務認證的自訂權杖。  
@@ -90,6 +90,7 @@ ms.locfileid: "55260278"
  如需有關使用這個組態項的詳細資訊，請參閱[How to:Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AllowedAudienceUris%2A>
 - <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator.AudienceUriMode%2A>
@@ -97,5 +98,5 @@ ms.locfileid: "55260278"
 - <xref:System.ServiceModel.Configuration.IssuedTokenServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A>
 - <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [如何：Federation Service 上設定認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [HOW TO：設定同盟服務的認證](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
