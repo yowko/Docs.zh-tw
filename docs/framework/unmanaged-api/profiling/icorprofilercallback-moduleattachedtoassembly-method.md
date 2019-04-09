@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6a8902df01e296c93bfbd94a1d90b0e3a40e81f0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 791827b9c4b60cb2ee963881bc8e1a6131cd00fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139915"
 ---
-# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="17137-102">ICorProfilerCallback::ModuleAttachedToAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="17137-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
-<span data-ttu-id="17137-103">通知分析工具模組，附加到其父組件。</span><span class="sxs-lookup"><span data-stu-id="17137-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
+# <a name="icorprofilercallbackmoduleattachedtoassembly-method"></a><span data-ttu-id="03aec-102">ICorProfilerCallback::ModuleAttachedToAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="03aec-102">ICorProfilerCallback::ModuleAttachedToAssembly Method</span></span>
+<span data-ttu-id="03aec-103">通知分析工具模組，附加到其父組件。</span><span class="sxs-lookup"><span data-stu-id="03aec-103">Notifies the profiler that a module is being attached to its parent assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="17137-104">語法</span><span class="sxs-lookup"><span data-stu-id="17137-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03aec-104">語法</span><span class="sxs-lookup"><span data-stu-id="03aec-104">Syntax</span></span>  
   
 ```  
 HRESULT ModuleAttachedToAssembly(  
@@ -35,24 +35,25 @@ HRESULT ModuleAttachedToAssembly(
     [in] AssemblyID AssemblyId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="17137-105">參數</span><span class="sxs-lookup"><span data-stu-id="17137-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03aec-105">參數</span><span class="sxs-lookup"><span data-stu-id="03aec-105">Parameters</span></span>  
  `moduleId`  
- <span data-ttu-id="17137-106">[in]要附加的模組識別碼。</span><span class="sxs-lookup"><span data-stu-id="17137-106">[in] The ID of the module that is being attached.</span></span>  
+ <span data-ttu-id="03aec-106">[in]要附加的模組識別碼。</span><span class="sxs-lookup"><span data-stu-id="03aec-106">[in] The ID of the module that is being attached.</span></span>  
   
  `AssemblyId`  
- <span data-ttu-id="17137-107">[in]要附加之模組的父組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="17137-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
+ <span data-ttu-id="03aec-107">[in]要附加之模組的父組件的識別碼。</span><span class="sxs-lookup"><span data-stu-id="03aec-107">[in] The ID of the parent assembly to which the module is attached.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="17137-108">備註</span><span class="sxs-lookup"><span data-stu-id="17137-108">Remarks</span></span>  
- <span data-ttu-id="17137-109">可以透過匯入位址表 (IAT)、 載入模組，透過呼叫`LoadLibrary`，或透過中繼資料參考。</span><span class="sxs-lookup"><span data-stu-id="17137-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="17137-110">如此一來，common language runtime (CLR) 載入器會有多個程式碼路徑，來判斷模組存留在其中的組件。</span><span class="sxs-lookup"><span data-stu-id="17137-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="17137-111">因此，很可能之後[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)呼叫時，此模組並不知道哪一個組件中，而且不可能取得父組件識別碼。</span><span class="sxs-lookup"><span data-stu-id="17137-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="17137-112">`ModuleAttachedToAssembly`模組連接到其父組件，且它可以取得識別碼的父組件時，會呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="17137-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="03aec-108">備註</span><span class="sxs-lookup"><span data-stu-id="03aec-108">Remarks</span></span>  
+ <span data-ttu-id="03aec-109">可以透過匯入位址表 (IAT)、 載入模組，透過呼叫`LoadLibrary`，或透過中繼資料參考。</span><span class="sxs-lookup"><span data-stu-id="03aec-109">A module can be loaded through an import address table (IAT), through a call to `LoadLibrary`, or through a metadata reference.</span></span> <span data-ttu-id="03aec-110">如此一來，common language runtime (CLR) 載入器會有多個程式碼路徑，來判斷模組存留在其中的組件。</span><span class="sxs-lookup"><span data-stu-id="03aec-110">As a result, the common language runtime (CLR) loader has multiple code paths for determining the assembly in which a module lives.</span></span> <span data-ttu-id="03aec-111">因此，很可能之後[icorprofilercallback:: Moduleloadfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md)呼叫時，此模組並不知道哪一個組件中，而且不可能取得父組件識別碼。</span><span class="sxs-lookup"><span data-stu-id="03aec-111">Therefore, it is possible that after [ICorProfilerCallback::ModuleLoadFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-moduleloadfinished-method.md) is called, the module does not know what assembly it is in and getting the parent assembly ID is not possible.</span></span> <span data-ttu-id="03aec-112">`ModuleAttachedToAssembly`模組連接到其父組件，且它可以取得識別碼的父組件時，會呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="03aec-112">The `ModuleAttachedToAssembly` method is called when the module is attached to its parent assembly and its parent assembly ID can be obtained.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="17137-113">需求</span><span class="sxs-lookup"><span data-stu-id="17137-113">Requirements</span></span>  
- <span data-ttu-id="17137-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="17137-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03aec-113">需求</span><span class="sxs-lookup"><span data-stu-id="03aec-113">Requirements</span></span>  
+ <span data-ttu-id="03aec-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03aec-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="17137-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="17137-115">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="03aec-115">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="03aec-115">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="17137-116">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="17137-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="03aec-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="03aec-116">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="17137-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="17137-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="03aec-117">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="03aec-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="17137-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17137-118">See also</span></span>
-- [<span data-ttu-id="17137-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="17137-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+## <a name="see-also"></a><span data-ttu-id="03aec-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03aec-118">See also</span></span>
+
+- [<span data-ttu-id="03aec-119">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="03aec-119">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
