@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: bf69a22f60724513122b5f17c5dd55bffc1fe561
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115744"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>HOW TO：建立傳回 UI 的增益集
 此範例示範如何建立 Windows Presentation Foundation (WPF) 傳回至主機的 WPF 獨立應用程式。  
@@ -31,8 +31,7 @@ ms.locfileid: "57364875"
   
 ## <a name="example"></a>範例  
  若要建立傳回 WPF UI 的增益集需要特定的程式碼的每個管線區段、 增益集，和主應用程式。  
-    
-  
+
 <a name="Contract"></a>   
 ## <a name="implementing-the-contract-pipeline-segment"></a>實作合約管線區段  
  必須傳回 UI 的合約所定義的方法和它的傳回值必須是型別的<xref:System.AddIn.Contract.INativeHandleContract>。 最好的證明`GetAddInUI`方法的`IWPFAddInContract`合約中的下列程式碼。  
@@ -90,5 +89,6 @@ ms.locfileid: "57364875"
  [!code-vb[SimpleAddInReturnsAUISample#GetUICode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SimpleAddInReturnsAUISample/VisualBasic/Host/MainWindow.xaml.vb#getuicode)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [WPF 增益集概觀](wpf-add-ins-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], paths
 - path animations [WPF]
 ms.assetid: 979c732c-df74-47a6-be96-8e07b3707d53
-ms.openlocfilehash: c8e628e11debadb88c365ac95d355f1ee641bdbc
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 195af217ddf3a78a0ef1bb54957a65b6ce62deae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367852"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182464"
 ---
 # <a name="path-animations-overview"></a>路徑動畫概觀
 <a name="introduction"></a> 本主題將介紹路徑動畫，它可讓您使用幾何路徑來產生輸出值。 路徑動畫很適合用來沿著複雜路徑移動和旋轉物件。  
@@ -53,7 +53,7 @@ ms.locfileid: "57367852"
   
 |屬性類型|對應路徑動畫類別|範例|  
 |-------------------|----------------------------------------|-------------|  
-|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[沿著路徑建立物件的動畫 (Double 動畫)](how-to-animate-an-object-along-a-path-double-animation.md)|  
+|<xref:System.Double>|<xref:System.Windows.Media.Animation.DoubleAnimationUsingPath>|[沿著路徑建立物件的動畫 (雙精度浮點數動畫)](how-to-animate-an-object-along-a-path-double-animation.md)|  
 |<xref:System.Windows.Media.Matrix>|<xref:System.Windows.Media.Animation.MatrixAnimationUsingPath>|[沿著路徑建立物件的動畫 (矩陣動畫)](how-to-animate-an-object-along-a-path-matrix-animation.md)|  
 |<xref:System.Windows.Point>|<xref:System.Windows.Media.Animation.PointAnimationUsingPath>|[沿著路徑建立物件的動畫 (點動畫)](how-to-animate-an-object-along-a-path-point-animation.md)|  
   
@@ -90,8 +90,9 @@ ms.locfileid: "57367852"
  如需路徑的語法中使用的詳細資訊[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]範例中，請參閱 <<c2> [ 路徑標記語法](path-markup-syntax.md)概觀。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [路徑標記語法](path-markup-syntax.md)
-- [路徑動畫操作說明主題](path-animation-how-to-topics.md)
+- [路徑動畫 HOW TO 主題](path-animation-how-to-topics.md)
 - [動畫概觀](animation-overview.md)
 - [屬性動畫技術概觀](property-animation-techniques-overview.md)

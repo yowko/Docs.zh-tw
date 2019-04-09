@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Windows Forms, font scheme changes
 ms.assetid: 4db27702-22e7-43bf-a07d-9a004549853c
-ms.openlocfilehash: 4c34a65ed8ddabfb99451e055048502cb7617e4f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85770687ecfad690a251eafec9051c4c20f45dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182100"
 ---
 # <a name="how-to-respond-to-font-scheme-changes-in-a-windows-forms-application"></a>HOW TO：回應 Windows Forms 應用程式中的字型配置變更
 在 Windows 作業系統中，使用者可以變更要顯示的預設字型放大或縮小的全系統字型設定。 變更這些字型設定是很重要的是視覺障礙者，而且需要較大的類型，以讀取在其螢幕上的文字的使用者。 您可以調整您的 Windows Forms 應用程式，來增加或減少大小的表單和內含的所有文字的字型配置變更時回應這些變更。 如果您想您的表單，以動態方式反應字型大小的變更，您可以在您的表單中加入程式碼。  
@@ -65,5 +65,6 @@ ms.locfileid: "57715967"
  此程式碼範例 constructer 包含呼叫`InitializeComponent`，也就是定義當您在 Visual Studio 中建立新的 Windows Forms 專案。 如果您要建置您的應用程式，在命令列上，請移除這行程式碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ContainerControl.PerformAutoScale%2A>
-- [Windows Forms 中的自動縮放比例](automatic-scaling-in-windows-forms.md)
+- [Windows Form 中的自動縮放比例](automatic-scaling-in-windows-forms.md)

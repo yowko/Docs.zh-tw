@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: 967537bb1828d323f1dcaa8d049604a1a6e30fa4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180228"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>HOW TO：使用主要畫面格建立大小變更的動畫
 這個範例示範如何使用主要畫面格建立大小變更的動畫。  
@@ -30,6 +30,7 @@ ms.locfileid: "57374179"
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.ArcSegment.Size%2A>
 - <xref:System.Windows.Media.ArcSegment>
@@ -37,4 +38,4 @@ ms.locfileid: "57374179"
 - <xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>
 - <xref:System.Windows.Media.Animation.SplineSizeKeyFrame>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
+- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)

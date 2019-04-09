@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
-ms.openlocfilehash: f57385b930ce533de3ff12b0dbd363690f04082d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54636010"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112082"
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
 本主題描述如何針對不同的案例設定訊息記錄。  
@@ -72,13 +72,13 @@ ms.locfileid: "54636010"
  您可以設定 `logMessagesAtServiceLevel` 項目的 `logMalformedMessages`、`logMessagesAtTransportLevel` 及 `messageLogging` 屬性以控制記錄層級。  
   
 ### <a name="service-level"></a>服務層級  
- 記錄在這層的是即將進入 (進行接收時) 或離開 (進行傳送時) 使用者程式碼的訊息。 如果有定義篩選條件，就只會記錄符合篩選條件的訊息。 否則，便會記錄服務層級中的所有訊息。 基礎結構訊息 (異動、對等通道及安全性) 也會記錄在此層級，除了可信賴傳訊訊息以外。 若是已進行資料流處理的訊息，則只記錄標頭。 此外，安全訊息會以解密形式記錄在此層級。  
+ 記錄在這層的是即將進入 (進行接收時) 或離開 (進行傳送時) 使用者程式碼的訊息。 如果有定義篩選條件，就只會記錄符合篩選條件的訊息。 否則，便會記錄服務層級中的所有訊息。 基礎結構訊息 (交易、對等通道及安全性) 也會記錄在此層級，除了可信賴傳訊訊息以外。 若是已進行資料流處理的訊息，則只記錄標頭。 此外，安全訊息會以解密形式記錄在此層級。  
   
 ### <a name="transport-level"></a>傳輸層級  
  記錄在這層的是要送到網路上傳輸或是在傳輸後而要進行編碼或解碼的訊息。 如果有定義篩選條件，就只會記錄符合篩選條件的訊息。 否則，便會記錄傳輸層級中的所有訊息。 所有的基礎結構訊息都會記錄在這層，其中包括可信賴傳訊訊息。 若是已進行資料流處理的訊息，則只記錄標頭。 此外，安全訊息會以加密形式記錄在此層級，除了使用 HTTPS 一類的安全傳輸的情況以外。  
   
 ### <a name="malformed-level"></a>格式錯誤層級  
- 格式不正確的訊息是處理的各個階段將會拒絕 WCF 堆疊的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
+ 格式不正確的訊息是處理的各個階段將會拒絕 WCF 堆疊的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義要以 CDATA 形式記錄訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
   
 ### <a name="other-options"></a>其他選項  
  除了記錄層級，使用者也可以指定下列選項：  
@@ -164,6 +164,7 @@ ms.locfileid: "54636010"
  請注意，`type` 屬性應該設定為此型別的限定組件名稱。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [\<messageLogging>](../../../../docs/framework/configure-apps/file-schema/wcf/messagelogging.md)
 - [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [追蹤與訊息記錄的建議設定](../../../../docs/framework/wcf/diagnostics/tracing/recommended-settings-for-tracing-and-message-logging.md)

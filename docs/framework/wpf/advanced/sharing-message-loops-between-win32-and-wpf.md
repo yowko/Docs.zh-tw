@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sharing message loops [WPF]
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
-ms.openlocfilehash: 2de3c2eba534618f6bd6dee0b2c23758f9e15f3f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378207"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115072"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>在 Win32 和 WPF 之間共用訊息迴圈
 本主題描述如何實作與互通訊息迴圈[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，藉由使用現有的訊息迴圈中的曝光度<xref:System.Windows.Threading.Dispatcher>或建立個別的訊息迴圈上[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]這邊的交互操作的程式碼。  
@@ -62,8 +62,9 @@ ms.locfileid: "57378207"
  前往鍵盤接收的訊息可能不會傳送至 HWND 如果使用加入該訊息的勾點<xref:System.Windows.Interop.HwndSource.AddHook%2A>方法。 訊息可能已處理訊息層級幫浦直接與不提交至`DispatchMessage`函式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Interop.ComponentDispatcher>
 - <xref:System.Windows.Interop.IKeyboardInputSink>
-- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
+- [WPF 和 Win32 互通](wpf-and-win32-interoperation.md)
 - [執行緒模型](threading-model.md)
 - [輸入概觀](input-overview.md)

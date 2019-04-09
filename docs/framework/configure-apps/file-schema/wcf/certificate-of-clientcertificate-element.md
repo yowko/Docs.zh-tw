@@ -1,13 +1,13 @@
 ---
-title: <certificate> 項目的 <clientCertificate>
+title: <certificate> <clientCertificate>項目
 ms.date: 03/30/2017
 ms.assetid: 00297efb-a7f2-4e03-bc2b-943d545610fc
-ms.openlocfilehash: 94241d022e8a97253100a67e2a779593861c093c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 98e60d750dad1529ffb35055d26e278ceb7c873a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113928"
 ---
 # <a name="certificate-of-clientcertificate-element"></a>\<憑證 > 的\<clientCertificate > 項目
 指定用來簽署與加密訊息的 X.509 憑證。  
@@ -75,9 +75,10 @@ ms.locfileid: "57366513"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Certificate%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateCredentialsElement>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [如何：建立使用自訂憑證驗證程式服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [HOW TO：建立使用自訂憑證驗證程式的服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

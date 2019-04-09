@@ -7,12 +7,12 @@ helpviewer_keywords:
 - graphics [WPF], GeometryDrawing class
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
-ms.openlocfilehash: 6eb604a8446000ef308c2b5a99480fb6a476c949
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179786"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>HOW TO：建立 GeometryDrawing
 此範例示範如何建立並顯示<xref:System.Windows.Media.GeometryDrawing>。 A<xref:System.Windows.Media.GeometryDrawing>可讓您建立與填滿外框的圖形建立關聯<xref:System.Windows.Media.Pen>並<xref:System.Windows.Media.Brush>使用<xref:System.Windows.Media.Geometry>。 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A>描述圖形的結構<xref:System.Windows.Media.GeometryDrawing.Brush%2A>描述圖案的填滿，而<xref:System.Windows.Media.GeometryDrawing.Pen%2A>說明圖形外框。  
@@ -30,7 +30,8 @@ ms.locfileid: "57373812"
  若要建立更複雜的繪圖，您可以將多個繪圖物件合併成單一複合繪圖使用<xref:System.Windows.Media.DrawingGroup>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.DrawingGroup>
 - [繪圖物件概觀](drawing-objects-overview.md)
 - [幾何概觀](geometry-overview.md)
-- [建立複合圖形](how-to-create-a-composite-drawing.md)
+- [建立複合繪圖](how-to-create-a-composite-drawing.md)

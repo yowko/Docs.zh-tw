@@ -7,25 +7,25 @@ helpviewer_keywords:
 - Imaging API [WPF]
 - images [WPF], how-to topics
 ms.assetid: 96834ee4-a5fc-4dd0-9948-b9bbc9437a5c
-ms.openlocfilehash: 80659117ab96a6bdb9a9536d3eba47d13a2c395f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 70294aff4c40bd5ae14b61e6a847155a10d675a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183036"
 ---
 # <a name="imaging-how-to-topics"></a>影像處理 HOW TO 主題
 在本節中的主題將示範如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以便顯示或變更點陣圖影像。  
   
 ## <a name="in-this-section"></a>本節內容  
  [在 XAML 中使用 BitmapImage](how-to-use-a-bitmapimage.md)  
- [將影像當做縮圖載入](how-to-load-an-image-as-a-thumbnail.md)  
+ [將影像作為縮圖載入](how-to-load-an-image-as-a-thumbnail.md)  
  [對點陣圖影像套用轉換](how-to-apply-a-transform-to-a-bitmapimage.md)  
- [從 Visual 建立點陣圖](how-to-create-a-bitmap-from-a-visual.md)  
- [將 Visual 編碼為影像檔](how-to-encode-a-visual-to-an-image-file.md)  
+ [從視覺物件建立點陣圖](how-to-create-a-bitmap-from-a-visual.md)  
+ [將視覺物件編碼為影像檔](how-to-encode-a-visual-to-an-image-file.md)  
  [建立新的 BitmapSource](how-to-create-a-new-bitmapsource.md)  
  [將 BitmapSource 物件鏈結在一起](how-to-chain-bitmapsource-objects-together.md)  
- [將 BitmapSource 轉換成不同的 PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
+ [將 BitmapSource 轉換為不同的 PixelFormat](how-to-convert-a-bitmapsource-to-a-different-pixelformat.md)  
  [將 BitmapSource 轉換為索引像素格式](how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md)  
  [編碼和解碼 JPEG 影像](how-to-encode-and-decode-a-jpeg-image.md)  
  [編碼和解碼 BMP 影像](how-to-encode-and-decode-a-bmp-image.md)  
@@ -34,7 +34,7 @@ ms.locfileid: "57359532"
  [編碼和解碼 GIF 影像](how-to-encode-and-decode-a-gif-image.md)  
  [編碼和解碼 TIFF 影像](how-to-encode-and-decode-a-tiff-image.md)  
  [將中繼資料寫入點陣圖](how-to-write-metadata-to-a-bitmap.md)  
- [讀取點陣圖的中繼資料](how-to-read-metadata-from-a-bitmap.md)  
+ [從點陣圖讀取中繼資料](how-to-read-metadata-from-a-bitmap.md)  
   
 ## <a name="reference"></a>參考資料  
  <xref:System.Windows.Controls.Image>  
@@ -44,4 +44,5 @@ ms.locfileid: "57359532"
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
 ## <a name="see-also"></a>另請參閱
+
 - [影像處理概觀](imaging-overview.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 5e903e04-17d0-4014-ac9a-a43330ec8b1c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 414526d498b39e894c6bd3530a446f8c06f46378
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d20bc002e52c3c6a42b45c0d1c5d559e65dc52c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113694"
 ---
 # <a name="silverlight-debugging"></a>Silverlight 偵錯
 本節中的主題說明 Common Language Runtime (CLR) 為了支援對 Windows 作業系統或 Macintosh 平台上執行的 Silverlight 應用程式進行偵錯，所提供的環境和介面。  
@@ -49,12 +49,13 @@ ms.locfileid: "54572743"
  針對處理序和執行階段列舉，建立與遠端目標的連接。  
   
  [InitDbgTransportManager 函式](../../../../docs/framework/unmanaged-api/debugging/initdbgtransportmanager-function.md)  
- 針對處理序和執行階段列舉，對要與遠端目標連接的傳輸管理員初始化。  
+ 針對處理序和執行階段列舉，初始化要與遠端目標連接的傳輸管理員。  
   
  [ShutdownDbgTransportManager 函式](../../../../docs/framework/unmanaged-api/debugging/shutdowndbgtransportmanager-function.md)  
- 關閉傳輸管理員，以便與遠端目標電腦連接。  
+ 關閉要與遠端目標電腦連接的傳輸管理員。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯 Coclass](../../../../docs/framework/unmanaged-api/debugging/debugging-coclasses.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯全域靜態函式](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

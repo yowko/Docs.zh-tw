@@ -8,17 +8,16 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: e002c07953320ac5e7c0854fe521896c3bca225c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353006"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179994"
 ---
 # <a name="geometry-overview"></a>幾何概觀
 本概觀說明如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]<xref:System.Windows.Media.Geometry>類別來描繪圖形。 本主題也會對照之間的差異<xref:System.Windows.Media.Geometry>物件和<xref:System.Windows.Shapes.Shape>項目。  
-  
-  
+
 <a name="wcpsdk_graphics_geometry_introduction"></a>   
 ## <a name="what-is-a-geometry"></a>什麼是幾何？  
  <xref:System.Windows.Media.Geometry>類別和類別衍生，例如<xref:System.Windows.Media.EllipseGeometry>， <xref:System.Windows.Media.PathGeometry>，和<xref:System.Windows.Media.CombinedGeometry>，讓您描繪 2d 圖形的幾何。 這些幾何描繪有許多用途，像是定義圖形來繪製到螢幕或定義點擊測試和裁剪區域。 您甚至可以使用幾何來定義動畫路徑。  
@@ -217,13 +216,14 @@ PathGeometry
  請參閱<xref:System.Windows.Media.Geometry>類別及其方法的完整清單。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Geometry>
 - <xref:System.Windows.Media.PathGeometry>
 - <xref:System.Windows.Shapes.Path>
 - <xref:System.Windows.Media.GeometryDrawing>
 - [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [路徑標記語法](path-markup-syntax.md)
-- [HOW-TO 主題](geometries-how-to-topics.md)
+- [HOW TO 主題](geometries-how-to-topics.md)
 - [動畫概觀](animation-overview.md)
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [繪圖物件概觀](drawing-objects-overview.md)

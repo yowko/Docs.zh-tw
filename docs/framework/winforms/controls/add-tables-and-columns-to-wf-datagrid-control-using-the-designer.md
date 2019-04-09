@@ -1,23 +1,22 @@
 ---
-title: HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項使用設計工具
+title: HOW TO：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], adding to DataGrid control
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 741da635ec187d8605a9f67aa010ff49a83ba86b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201529"
 ---
-# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項使用設計工具
+# <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
 
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  您可以在 Windows Form 中顯示資料<xref:System.Windows.Forms.DataGrid>中資料表和資料行，藉由建立控制項<xref:System.Windows.Forms.DataGridTableStyle>物件，並將它們加入至<xref:System.Windows.Forms.GridTableStylesCollection>物件，這透過存取<xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性。 每個資料表樣式會顯示任何資料表中指定的內容<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>屬性<xref:System.Windows.Forms.DataGridTableStyle>。 根據預設，沒有指定的資料行樣式的資料表樣式會顯示資料的資料表內的所有資料行。 您可以限制哪些資料行從資料表顯示加上<xref:System.Windows.Forms.DataGridColumnStyle>物件至<xref:System.Windows.Forms.GridColumnStylesCollection>，這透過存取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>每個屬性<xref:System.Windows.Forms.DataGridTableStyle>。  
   
@@ -59,5 +58,6 @@ ms.locfileid: "57725346"
 5.  在 **屬性** 方塊中的 集合編輯器中，選取<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>您想要顯示的資料行的值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [HOW TO：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7a424f289bb4ffba102d1023909b139ac2a70c33
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503738"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110789"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 物件模型
 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，以開發人員的程式語言表示的物件模型對應到關聯式資料庫的資料模型。 然後就會根據物件模型對資料執行作業。  
@@ -24,7 +24,7 @@ ms.locfileid: "54503738"
 |LINQ to SQL 物件模型|關聯式資料模型|  
 |------------------------------|---------------------------|  
 |實體類別|資料表|  
-|類別成員|Column|  
+|類別成員|資料行|  
 |關聯|外部索引鍵關聯性|  
 |方法|預存程序或函式|  
   
@@ -65,11 +65,11 @@ ms.locfileid: "54503738"
  如需詳細資訊，請參閱的關聯屬性 > 一節[屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL 方法和資料庫預存程序  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援預存程序和使用者定義函式。 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，好讓您可以存取它們以強型別的方式從用戶端程式碼，用戶端物件來對應這些資料庫定義的抽象概念。 方法簽章與資料庫中定義的程序和函式簽章十分相似。 您可以使用 IntelliSense 來探索這些方法。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援預存程序和使用者定義函數。 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，好讓您可以存取它們以強型別的方式從用戶端程式碼，用戶端物件來對應這些資料庫定義的抽象概念。 方法簽章與資料庫中定義的程序和函式簽章十分相似。 您可以使用 IntelliSense 來探索這些方法。  
   
  呼叫對應程序所傳回的結果集是強型別集合。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將預存程序和函式對應至方法。 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 屬性可以區分表示預存程序的方法和表示使用者定義函式的方法。 如果此屬性設為 `false` (預設值)，則此方法表示預存程序。 如果設為 `true`，則此方法表示資料庫函式。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用將預存程序和函式對應至方法<xref:System.Data.Linq.Mapping.FunctionAttribute>和<xref:System.Data.Linq.Mapping.ParameterAttribute>屬性。 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 屬性可以區分表示預存程序的方法和表示使用者定義函式的方法。 如果此屬性設為 `false` (預設值)，則此方法表示預存程序。 如果設為 `true`，則此方法表示資料庫函式。  
   
 > [!NOTE]
 >  如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來建立對應至預存程序和使用者定義函式的方法。  
@@ -81,5 +81,6 @@ ms.locfileid: "54503738"
  如需詳細資訊，請參閱函式屬性、 預存程序屬性 > 和 < 參數屬性的章節[屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)並[預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+
+- [屬性架構對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
