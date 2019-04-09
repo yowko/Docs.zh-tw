@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a5eada64-075b-4162-9655-ded84e4681f2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 928d3c528bef6d319f50464a0648e61de2603eb2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4244d47c099fe7a5b0093b94ef44b4354bae86f1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256617"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173130"
 ---
 # <a name="typeinstantiation-element-net-native"></a>\<TypeInstantiation > 項目 (.NET Native)
 將執行階段反映原則套用至建構的泛型類型。  
@@ -39,7 +39,7 @@ ms.locfileid: "55256617"
 |屬性|屬性類型|描述|  
 |---------------|--------------------|-----------------|  
 |`Name`|一般|必要屬性。 指定類型名稱。|  
-|`Arguments`|一般|必要屬性。 指定泛型類型引數。 如果有多個引數存在，會以逗號分隔。|  
+|`Arguments`|一般|必要屬性。 指定泛型型別引數。 如果有多個引數存在，會以逗號分隔。|  
 |`Activate`|反射|選擇性屬性。 控制建構函式的執行階段存取，以便啟動執行個體。|  
 |`Browse`|反射|選擇性屬性。 控制程式項目相關資訊的查詢，但不會啟用任何執行階段存取。|  
 |`Dynamic`|反射|選擇性屬性。 控制對所有類型成員 (包括建構函式、方法、欄位、屬性和事件) 的執行階段存取，以啟用動態程式設計。|  
@@ -73,12 +73,12 @@ ms.locfileid: "55256617"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|將反映原則套用至屬於此類型的事件。|  
-|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|將反映原則套用至屬於此類型的欄位。|  
+|[\<事件 >](../../../docs/framework/net-native/event-element-net-native.md)|將反映原則套用至屬於此類型的事件。|  
+|[\<欄位 >](../../../docs/framework/net-native/field-element-net-native.md)|將反映原則套用至屬於此類型的欄位。|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|如果原則已套用至包含 `<TypeInstantiation>` 元素所表示的類型，則會將該原則套用至類型。|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將反映原則套用至屬於此類型的方法。|  
-|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|將反映原則套用至屬於此類型的建構泛型方法。|  
-|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|將反映原則套用至屬於此類型的屬性。|  
+|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將反映原則套用至屬於此類型的方法。|  
+|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|將反映原則套用至屬於此類型的建構泛型方法。|  
+|[\<屬性 >](../../../docs/framework/net-native/property-element-net-native.md)|將反映原則套用至屬於此類型的屬性。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至巢狀類型。|  
 |`<TypeInstantiation>`|將反映原則套用至巢狀建構的泛型類型。|  
   
@@ -87,11 +87,11 @@ ms.locfileid: "55256617"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|  
-|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。|  
-|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至命名空間中的所有類型。|  
+|[\<組件 >](../../../docs/framework/net-native/assembly-element-net-native.md)|將反映原則套用至指定組件中的所有類型。|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。|  
+|[\<命名空間 >](../../../docs/framework/net-native/namespace-element-net-native.md)|將反映原則套用至命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|`<TypeInstantiation>`|將反映原則套用至已建構的泛型類型及其所有成員。|  
+|`<TypeInstantiation>`|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  反映、序列化和 interop 屬性都是選用性。 不過，必須至少有一個屬性存在。  
@@ -117,6 +117,7 @@ ms.locfileid: "55256617"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

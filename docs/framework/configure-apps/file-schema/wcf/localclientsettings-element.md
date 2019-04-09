@@ -2,12 +2,12 @@
 title: <localClientSettings> 項目
 ms.date: 03/30/2017
 ms.assetid: 4680ace5-f4e1-4fcb-b9d8-a4a4af5cd7ae
-ms.openlocfilehash: e43a03258f4a76c1d19c7bdcff99fcb1d1db19ac
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c5caf183e37edda6efc79ec81f1628180379fd46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163094"
 ---
 # <a name="localclientsettings-element"></a>\<localClientSettings > 項目
 指定此繫結之本機用戶端的安全性設定。  
@@ -56,19 +56,20 @@ ms.locfileid: "55278924"
 |`timestampValidityDuration`|正的 <xref:System.TimeSpan>，指定時間戳記有效的持續期間。 預設為 "00:15:00"。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)|指定自訂繫結的安全性選項。|  
 |[\<secureConversationBootstrap>](../../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)|指定用於啟始安全對話服務的預設值。|  
   
 ## <a name="remarks"></a>備註  
  這些是本機設定，這意味著它們不是衍生自服務之安全性原則的設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.LocalClientSecuritySettingsElement>
 - <xref:System.ServiceModel.Configuration.SecurityElementBase.LocalClientSettings%2A>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.LocalClientSettings%2A>
@@ -78,5 +79,5 @@ ms.locfileid: "55278924"
 - [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
 - [自訂繫結安全性](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

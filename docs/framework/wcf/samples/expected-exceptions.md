@@ -2,12 +2,12 @@
 title: 預期的例外狀況
 ms.date: 03/30/2017
 ms.assetid: 299a6987-ae6b-43c6-987f-12b034b583ae
-ms.openlocfilehash: 16b7a4029c9225984d71e5252605376d2d4b6d53
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ea48a9c7393e809b4267f4e089998fa0e73b49fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163608"
 ---
 # <a name="expected-exceptions"></a>預期的例外狀況
 此範例示範如何在使用型別用戶端時，攔截預期的例外狀況。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -79,4 +79,3 @@ Got System.TimeoutException
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ExpectedExceptions`  
-  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f0b9c76ca2c39fcba5a4d0519fc099d0a9d51ec2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f2ea67c6e4d860d41cfe67aaab73babb51f3ce45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210655"
 ---
 # <a name="icordebugguidtotypeenum-interface"></a>ICorDebugGuidToTypeEnum 介面
 提供列舉值會定義一組的 Guid 和其對應的類型，都由 ICorDebugType 的執行個體之間的對應。 此介面繼承自 ICorDebugEnum 介面的方法。  
@@ -38,11 +38,12 @@ ms.locfileid: "54721226"
 ## <a name="requirements"></a>需求  
  **平台：** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

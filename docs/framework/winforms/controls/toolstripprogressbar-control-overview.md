@@ -8,12 +8,12 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 - ToolStripProgressBar control [Windows Forms], about ToolStripProgressBar control
 ms.assetid: ec3ab522-5fe4-4b4d-a551-bc19e84f4774
-ms.openlocfilehash: 57a8c61c71fa17e1d3df309007823eab76d9efb1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380dabe2468ae3c7d9d7303498823d847a8d119e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54528624"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162107"
 ---
 # <a name="toolstripprogressbar-control-overview"></a>ToolStripProgressBar 控制項概觀
 <xref:System.Windows.Forms.ToolStripProgressBar>結合的浮動定位和所有的轉譯功能<xref:System.Windows.Forms.ToolStrip>控制項和其一般的程序追蹤功能。 A<xref:System.Windows.Forms.ToolStripProgressBar>最通常由<xref:System.Windows.Forms.StatusStrip>，且較不頻繁的<xref:System.Windows.Forms.ToolStrip>。  
@@ -32,4 +32,5 @@ ms.locfileid: "54528624"
 |<xref:System.Windows.Forms.ToolStripProgressBar.PerformStep%2A>|進度列目前位置前移數量<xref:System.Windows.Forms.ToolStripProgressBar.Step%2A>屬性。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStripProgressBar>

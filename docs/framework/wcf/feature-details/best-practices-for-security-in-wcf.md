@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
-ms.openlocfilehash: 1c615e2bdff0f361bef305157f635c86782c6039
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531963"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166123"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF 中安全性的最佳做法
 下列各節將列出在使用 Windows Communication Foundation (WCF) 建立安全應用程式時，應該考慮採用的最佳做法。 如需安全性的詳細資訊，請參閱[安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)、[資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)和[中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)。  
@@ -57,6 +57,7 @@ ms.locfileid: "54531963"
  當您建立自訂繫結時，您必須將 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `true`。 否則，如果 <xref:System.ServiceModel.Channels.SecurityBindingElement.IncludeTimestamp%2A> 設定為 `false`，而且用戶端使用以非對稱金鑰為基礎的權杖 (如 X509 憑證)，則不會簽署訊息。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
 - [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)
 - [中繼資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)

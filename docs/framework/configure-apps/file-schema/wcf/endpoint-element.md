@@ -2,12 +2,12 @@
 title: <endpoint> 項目
 ms.date: 03/30/2017
 ms.assetid: 2fc8fedc-78d0-4e87-8142-fbfd26c15a4e
-ms.openlocfilehash: 94b6cc6225171d90164e6d6880e1095513f16ece
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 667086cda010daf51cb92116d636b9b526b4b34b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163406"
 ---
 # <a name="endpoint-element"></a>\<結束點 > 項目
 指定服務端點的繫結、合約和位址屬性，以用於公開服務。  
@@ -41,7 +41,7 @@ ms.locfileid: "57354725"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|address|包含端點位址的字串。 位址可以指定為絕對或相對位址。 如果提供相對位址，主機必須為繫結中使用的傳輸配置提供適當的基底位址。 如果沒有設定位址，會將基底位址假設為該端點的位址。<br /><br /> 預設為空字串。|  
+|位址|包含端點位址的字串。 位址可以指定為絕對或相對位址。 如果提供相對位址，主機必須為繫結中使用的傳輸配置提供適當的基底位址。 如果沒有設定位址，會將基底位址假設為該端點的位址。<br /><br /> 預設為空字串。|  
 |behaviorConfiguration|字串，其中包含端點中所使用行為的名稱。|  
 |繫結|必要的字串屬性，其中指定要使用的繫結型別。 此型別必須要有註冊的組態區段，才能加以參考。 型別是以區段名稱進行註冊，而非以繫結的型別名稱進行註冊。|  
 |bindingConfiguration|字串，指定在產生端點時所使用繫結的繫結名稱。 繫結名稱必須在定義端點之處的範圍內。 預設為空字串。<br /><br /> 這個屬性用於搭配 `binding` 使用，以參考組態檔中特定的繫結組態。 如果您要嘗試使用自訂繫結，請設定這個屬性。 否則，會擲回例外狀況。|  
@@ -53,7 +53,7 @@ ms.locfileid: "57354725"
 |kind|字串，這個字串會指定所套用之標準端點的型別。 型別必須要在 `<extensions>` 區段或 machine.config 中註冊。如果未指定任何內容，則會建立一般服務端點。|  
 |listenUriMode|指定傳輸如何處理提供給服務接聽的 `ListenUri`。 有效值為<br /><br /> -   Explicit<br />唯一<br /><br /> 預設值為 Explicit。|  
 |listenUri|字串，指定服務端點接聽的 URI。 預設為空字串。|  
-|name|選擇性屬性。 指定服務端點名稱的字串。 預設值是繫結名稱和合約描述名稱的串連。 服務可能會有多個端點，因此端點的 `name` 屬性會與服務的名稱有所區別。|  
+|名稱|選擇性屬性。 指定服務端點名稱的字串。 預設值是繫結名稱和合約描述名稱的串連。 服務可能會有多個端點，因此端點的 `name` 屬性會與服務的名稱有所區別。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -85,8 +85,9 @@ ms.locfileid: "57354725"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ServiceEndpointElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.Description.ServiceEndpoint>
-- [端點：位址、 繫結和合約](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
-- [如何：在組態中建立服務端點](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)
+- [端點：位址、繫結和合約](../../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+- [HOW TO：在組態中建立服務端點](../../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Table
 - TableControl pattern
 ms.assetid: 880cd85c-aa8c-4fb5-9369-45491d34bb78
-ms.openlocfilehash: 45a2a3c158fb77c878673c00f73694fec7c1ac58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: dc1ddfaa13b83d06b1d3211e9d21bd82bfeabc3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144647"
 ---
 # <a name="implementing-the-ui-automation-table-control-pattern"></a>實作 UI 自動化 Table 控制項模式
 > [!NOTE]
@@ -48,9 +48,9 @@ ms.locfileid: "57674051"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.RowOrColumnMajor%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetColumnHeaders%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.ITableProvider.GetRowHeaders%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -59,10 +59,11 @@ ms.locfileid: "57674051"
  此控制項模式沒有任何相關聯的例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 TableItem 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-tableitem-control-pattern.md)
 - [實作 UI 自動化 Grid 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

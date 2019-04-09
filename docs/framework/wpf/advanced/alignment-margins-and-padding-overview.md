@@ -10,17 +10,16 @@ helpviewer_keywords:
 - padding [WPF]
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
-ms.openlocfilehash: eef28a178f11ea23ac23183c9ec7eb06b7f18a29
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209160"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>對齊、邊界和填補概觀
 <xref:System.Windows.FrameworkElement>類別會公開數個屬性，用來精確定位子項目。 本主題將討論四個最重要的屬性： <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>。 一定要了解這些屬性的作用，因為它們提供控制 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中項目位置的基礎。  
-  
-  
+
 <a name="wcpsdk_layout_amp_introduction"></a>   
 ## <a name="introduction-to-element-positioning"></a>項目定位簡介  
  有許多種方式可以使用 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 定位項目。 不過，達到理想的配置不僅止於只需選擇正確的<xref:System.Windows.Controls.Panel>項目。 定位的精細控制需要了解<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>， <xref:System.Windows.FrameworkElement.Margin%2A>， <xref:System.Windows.Controls.Border.Padding%2A>，和<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性。  
@@ -56,7 +55,7 @@ ms.locfileid: "57355400"
 |<xref:System.Windows.HorizontalAlignment.Left>|子項目對齊父項目的已配置版面配置空間的左側。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
 |<xref:System.Windows.HorizontalAlignment.Right>|子項目對齊父項目的已配置版面配置空間的右側。|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> （預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> (預設值)|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
   
  下列範例示範如何套用<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性設<xref:System.Windows.Controls.Button>項目。 為了更清楚說明各種不同的轉譯行為，會顯示每個屬性值。  
   
@@ -76,7 +75,7 @@ ms.locfileid: "57355400"
 |<xref:System.Windows.VerticalAlignment.Top>|子項目對齊父項目的已配置版面配置空間的頂端。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|子項目對齊父項目的已配置版面配置空間的底部。|  
-|<xref:System.Windows.VerticalAlignment.Stretch> （預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
+|<xref:System.Windows.VerticalAlignment.Stretch> (預設值)|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
   
  下列範例示範如何套用<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性設<xref:System.Windows.Controls.Button>項目。 為了更清楚說明各種不同的轉譯行為，會顯示每個屬性值。 此範例中，以利<xref:System.Windows.Controls.Grid>具有可見格線的元素與父代，可用來更清楚說明每個屬性值的版面配置行為。  
   
@@ -142,10 +141,11 @@ ms.locfileid: "57355400"
  有更詳細說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 版面配置的其他資源可供使用。 [面板概觀](../controls/panels-overview.md)主題包含有關的各種詳細<xref:System.Windows.Controls.Panel>項目。 本主題[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)介紹進階的技術，使用版面配置項目來定位元件，並將其動作繫結至資料來源。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
 - [面板概觀](../controls/panels-overview.md)
-- [版面配置](layout.md)
+- [配置](layout.md)
 - [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)

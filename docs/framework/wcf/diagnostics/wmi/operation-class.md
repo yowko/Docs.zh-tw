@@ -1,15 +1,15 @@
 ---
-title: Operation 類別
+title: 作業類別
 ms.date: 03/30/2017
 ms.assetid: b19d1496-ef06-4d0c-b2ae-e728ec00cca0
-ms.openlocfilehash: 9453d67854bb8439891661b07e3ab3aa373e23eb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9696a7f026e54afacb5ccbfa8703a2ba617a9f3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165070"
 ---
-# <a name="operation-class"></a>Operation 類別
+# <a name="operation-class"></a>作業類別
 運算  
   
 ## <a name="syntax"></a>語法  
@@ -129,4 +129,5 @@ class Operation
 |命名空間|於 root\ServiceModel 中定義|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.OperationDescription>

@@ -8,17 +8,16 @@ helpviewer_keywords:
 - controls [WPF], RichTextBox
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
-ms.openlocfilehash: 689094bda355f095c30d6cc2a462e6d0e630753b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378193"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162707"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox 概觀
 <xref:System.Windows.Controls.RichTextBox>控制項可讓您顯示或編輯非固定格式內容，包括段落、 影像、 資料表等等。 本主題將介紹<xref:System.Windows.Controls.TextBox>類別，並提供範例，示範如何使用它在這兩[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]和C#。  
-  
-  
+
 <a name="textbox_or_richtextbox"></a>   
 ## <a name="textbox-or-richtextbox"></a>TextBox 或 RichTextBox？  
  兩者<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.TextBox>允許使用者編輯文字，不過，不同的案例中使用兩個控制項。 A<xref:System.Windows.Controls.RichTextBox>時所需的使用者編輯格式化的文字、 影像、 表格或其他豐富的內容是較好的選擇。 例如，編輯文件、 文件或需要格式化的部落格映像、 使用最適合完成等<xref:System.Windows.Controls.RichTextBox>。 A<xref:System.Windows.Controls.TextBox>需要較少的系統資源則<xref:System.Windows.Controls.RichTextBox>僅純文字格式必須為編輯 （也就是表單中的使用量） 時相當理想。 請參閱[TextBox 概觀](textbox-overview.md)如需有關<xref:System.Windows.Controls.TextBox>。 下表摘要說明的主要特色<xref:System.Windows.Controls.TextBox>和<xref:System.Windows.Controls.RichTextBox>。  
@@ -95,5 +94,6 @@ ms.locfileid: "57378193"
  [!code-vb[RichTextBoxMiscSnippets_snip#SaveLoadPrintRTBCodeExampleWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBoxMiscSnippets_snip/VisualBasic/SaveLoadPrintRTB.xaml.vb#saveloadprintrtbcodeexamplewholepage)]  
   
 ## <a name="see-also"></a>另請參閱
-- [HOW-TO 主題](richtextbox-how-to-topics.md)
+
+- [HOW TO 主題](richtextbox-how-to-topics.md)
 - [TextBox 概觀](textbox-overview.md)

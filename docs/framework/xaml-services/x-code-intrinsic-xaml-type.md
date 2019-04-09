@@ -10,12 +10,12 @@ helpviewer_keywords:
 - x:Code XAML directive element [XAML Services]
 - XAML [XAML Services], x:Code directive element
 ms.assetid: 87986b13-1a2e-4830-ae36-15f9dc5629e8
-ms.openlocfilehash: 8d0dbc03bb5eaedd89d5a6ce97d625a51507e820
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7bb78b05be7b3edc4471bc276010eabd92a07a14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050594"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145232"
 ---
 # <a name="xcode-intrinsic-xaml-type"></a>x:Code 內建 XAML 類型
 可讓 XAML 生產環境中的程式碼的位置。 可以將 XAML 或留在稍後使用，例如解譯的 XAML 生產環境中的執行階段編譯任何 XAML 處理器實作編譯這類程式碼。  
@@ -49,6 +49,7 @@ ms.locfileid: "58050594"
 -   部分類別的 CLR 命名空間外部的程式碼實體的參考必須全部是完整名稱。 如果宣告的成員會覆寫部分類別可覆寫成員，這必須指定與語言特定覆寫的關鍵字。 如果成員宣告中`x:Code`與 XAML 建立的部分類別的成員相衝突的範圍，一種，編譯器會報告衝突，XAML 檔案無法編譯或載入。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [x:Class 指示詞](x-class-directive.md)
 - [WPF 中的程式碼後置和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

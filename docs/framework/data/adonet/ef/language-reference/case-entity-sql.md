@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: 9f41c99ab40a74a2c17e8dac207cc7887c77ba91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d038564683e0a97939cabc7081be3341f4542d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162798"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 評估一組 `Boolean` 運算式，以便判斷結果。  
@@ -29,13 +29,13 @@ END
  這是一個預留位置，表示可以使用多個 WHEN `Boolean_expression` THEN `result_expression` 子句。  
   
  THEN `result_expression`  
- 是在 `Boolean_expression` 評估為 `true`時傳回的運算式。 `result expression` 是任何有效的運算式。  
+ 是在 `Boolean_expression` 評估為 `true`時傳回的運算式。 `result expression` 是任何有效運算式。  
   
  ELSE `else_result_expression`  
- 這是沒有任何比較作業評估為 `true`時，所傳回的運算式。 如果省略這個引數，而且沒有比較作業評估為 `true`，CASE 便傳回 null。 `else_result_expression` 是任何有效的運算式。 `else_result_expression` 和任何 `result_expression` 的資料型別都必須相同，或必須為隱含轉換。  
+ 這是沒有任何比較作業評估為 `true`時，所傳回的運算式。 如果省略這個引數，而且沒有比較作業評估為 `true`，CASE 便傳回 null。 `else_result_expression` 是任何有效運算式。 `else_result_expression` 和任何 `result_expression` 的資料型別都必須相同，或必須為隱含轉換。  
   
  WHEN `Boolean_expression`  
- 這是使用搜尋的 CASE 格式時所評估的 `Boolean` 運算式。 `Boolean_expression` 是任何有效的 `Boolean` 運算式。  
+ 這是使用搜尋的 CASE 格式時所評估的 `Boolean` 運算式。 `Boolean_expression` 任何有效`Boolean`運算式。  
   
 ## <a name="return-value"></a>傳回值  
  從 `result_expression` 和選擇性 `else_result_expression`的型別集中，傳回優先順序最高的型別。  
@@ -57,6 +57,7 @@ END
  [!code-csharp[DP EntityServices Concepts 2#CASE_WHEN_THEN_ELSE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#case_when_then_else)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [THEN](../../../../../../docs/framework/data/adonet/ef/language-reference/then-entity-sql.md)
 - [SELECT](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

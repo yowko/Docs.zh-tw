@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: fbbbba1bd620858eaa57559b1a9787956bfef1f5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094940"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>HOW TO：使用 WebBrowser 控制項列印
 下列程式碼範例示範如何使用<xref:System.Windows.Forms.WebBrowser>控制項才能列印網頁而不會顯示它。  
@@ -33,11 +33,12 @@ ms.locfileid: "57702447"
 -   `System` 和 `System.Windows.Forms` 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [如何：瀏覽至 URL，以使用 WebBrowser 控制項](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [如何：將 Web 瀏覽器功能加入至 Windows Forms 應用程式](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [如何：建立 Windows Forms 應用程式中的 HTML 文件檢視器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [HOW TO：使用 WebBrowser 控制項巡覽至 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [HOW TO：將網頁瀏覽器功能新增至 Windows Forms 應用程式](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [HOW TO：在 Windows Forms 應用程式中建立 HTML 文件檢視器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [WebBrowser 控制項概觀](webbrowser-control-overview.md)
 - [WebBrowser 安全性](webbrowser-security.md)

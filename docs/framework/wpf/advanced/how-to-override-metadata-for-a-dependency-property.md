@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dependency properties [WPF], overriding metadata for
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
-ms.openlocfilehash: 5d2d692984bef34569b2c4bb80c3fb072e4c3f79
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209433"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>HOW TO：覆寫相依性屬性的中繼資料
 此範例示範如何覆寫預設相依性屬性中繼資料來自繼承的類別，藉由呼叫<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>方法，並提供特定類型的中繼資料。  
@@ -32,7 +32,8 @@ ms.locfileid: "57365876"
 [!code-vb[PropertySystemEsoterics#MyAdvancedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#myadvancedstatecontrol)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.DependencyProperty>
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [自訂相依性屬性](custom-dependency-properties.md)
-- [HOW-TO 主題](properties-how-to-topics.md)
+- [HOW TO 主題](properties-how-to-topics.md)

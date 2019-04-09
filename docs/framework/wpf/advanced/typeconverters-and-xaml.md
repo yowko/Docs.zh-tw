@@ -4,18 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: 7f42bb6e4333fcb5e83ee4b95e404230424b317f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352707"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164981"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 和 XAML
 本主題介紹將字串的類型轉換當成一般 XAML 語言功能的目的。 在.NET Framework 中，<xref:System.ComponentModel.TypeConverter>類別具有特殊用途的實作可用作 XAML 屬性使用方式中的屬性值的 managed 自訂類別的一部分。 如果您撰寫自訂類別，而且您想要您的類別可用來做為 XAML 可設定的屬性值的執行個體，您可能需要套用<xref:System.ComponentModel.TypeConverterAttribute>至您的類別撰寫自訂<xref:System.ComponentModel.TypeConverter>類別，或兩者。  
-  
 
-  
 ## <a name="type-conversion-concepts"></a>類型轉換概念  
   
 ### <a name="xaml-and-string-values"></a>XAML 和字串值  
@@ -73,7 +71,7 @@ ms.locfileid: "57352707"
   
  下一個最重要的方法是<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>。 （比方說，如果它已儲存至 XAML 檔案），如果要應用程式轉換成標記呈現，<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>負責產生標記表示法。 在此情況下，關係的 XAML 程式碼路徑時，您將傳遞`destinationType`的<xref:System.String>。  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是服務查詢 <xref:System.ComponentModel.TypeConverter> 實作之功能時所使用的支援方法。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 並<xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>會為服務查詢的功能時所使用的支援方法<xref:System.ComponentModel.TypeConverter>實作。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的文化特性資訊和類型轉換器  
  每個<xref:System.ComponentModel.TypeConverter>實作可以有它自己對於什麼可替代轉換的有效字串的解譯，也可以使用或忽略傳遞為參數的類型描述。 有一個關於文化特性和 XAML 類型轉換的重要考量。 XAML 完全支援使用可當地語系化的字串做為屬性值。 但不支援使用那個可當地語系化的字串做為具有特定文化特性需求的類型轉換器輸入，因為 XAML 屬性值的類型轉換器會使用 `en-US` 文化特性，來包含必然的固定語言剖析行為。 如需這項限制之設計考量的詳細資訊，請參閱 XAML 語言規格 ([\[MS-XAML\] (英文)](https://go.microsoft.com/fwlink/?LinkId=114525))。  
@@ -110,6 +108,7 @@ ms.locfileid: "57352707"
  您也可以提供每個屬性的類型轉換器。 將 [!INCLUDE[TLA#tla_netframewkattr](../../../../includes/tlasharptla-netframewkattr-md.md)] <xref:System.ComponentModel.TypeConverterAttribute> 套用至屬性定義 (主要定義，非其內的 `get`/`set` 實作)，而不是將它套用至類別定義。 屬性的類型必須符合您自訂類型轉換器所處理的類型。 如果已套用這個屬性，在 XAML 處理器處理該屬性的值時，就可以處理輸入字串並傳回物件執行個體。 每個屬性的類型轉換器技術是特別有用，如果您選擇使用來自 Microsoft.NET Framework 或某個其他程式庫，您無法控制類別定義，就無法套用的屬性類型<xref:System.ComponentModel.TypeConverterAttribute>那里。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ComponentModel.TypeConverter>
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)

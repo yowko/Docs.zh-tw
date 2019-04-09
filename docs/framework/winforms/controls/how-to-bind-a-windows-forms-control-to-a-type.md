@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將 Windows Forms 控制項繫結至型別
+title: HOW TO：將 Windows Forms 控制項繫結至類型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding to a type
 - types [Windows Forms], binding controls to
 ms.assetid: 94faeebb-d2bc-45d6-86d7-96a42661b43d
-ms.openlocfilehash: 8d6522f12944e2f1571fa6cbf0773991c54965c4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f47090f5d0765833f7ac17a947691a4693d9923b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724904"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162486"
 ---
-# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>HOW TO：將 Windows Forms 控制項繫結至型別
+# <a name="how-to-bind-a-windows-forms-control-to-a-type"></a>HOW TO：將 Windows Forms 控制項繫結至類型
 當您在建立與資料互動的控制項時，有時會發現有必要將控制項繫結至類型，而非物件。 特別是在設計階段會發生這種情況，此時資料可能無法使用，但是資料繫結控制項仍然需要顯示類型公用介面中的資訊。 例如，您可能會繫結 <xref:System.Windows.Forms.DataGridView> 控制項至 Web 服務所公開的物件，並想讓 <xref:System.Windows.Forms.DataGridView> 控制項將設計階段的資料行標記為自訂類型的成員名稱。  
   
  您可以輕鬆地繫結控制項至具有 <xref:System.Windows.Forms.BindingSource> 元件的類型。  
@@ -35,6 +35,7 @@ ms.locfileid: "57724904"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
