@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a1c1b2d8274baf5fd43991979bc65cd2c2299b46
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 166583f690fc7ed80f80cf2cf5cd5b0348708cc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484689"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159714"
 ---
-# <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a><span data-ttu-id="8cc2b-102">ICLRAssemblyIdentityManager::IsStronglyNamed 方法</span><span class="sxs-lookup"><span data-stu-id="8cc2b-102">ICLRAssemblyIdentityManager::IsStronglyNamed Method</span></span>
-<span data-ttu-id="8cc2b-103">取得值，指出是否指定的組件強式名稱。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-103">Gets a value that indicates whether the specified assembly is strongly named.</span></span>  
+# <a name="iclrassemblyidentitymanagerisstronglynamed-method"></a><span data-ttu-id="b3b39-102">ICLRAssemblyIdentityManager::IsStronglyNamed 方法</span><span class="sxs-lookup"><span data-stu-id="b3b39-102">ICLRAssemblyIdentityManager::IsStronglyNamed Method</span></span>
+<span data-ttu-id="b3b39-103">取得值，指出是否指定的組件強式名稱。</span><span class="sxs-lookup"><span data-stu-id="b3b39-103">Gets a value that indicates whether the specified assembly is strongly named.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8cc2b-104">語法</span><span class="sxs-lookup"><span data-stu-id="8cc2b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b3b39-104">語法</span><span class="sxs-lookup"><span data-stu-id="b3b39-104">Syntax</span></span>  
   
 ```  
 RESULT IsStronglyNamed (  
@@ -36,32 +36,33 @@ RESULT IsStronglyNamed (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8cc2b-105">參數</span><span class="sxs-lookup"><span data-stu-id="8cc2b-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b3b39-105">參數</span><span class="sxs-lookup"><span data-stu-id="b3b39-105">Parameters</span></span>  
  `pwzAssemblyIdentity`  
- <span data-ttu-id="8cc2b-106">[in]要評估的組件不透明的標準組件身分識別資料。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-106">[in] The opaque canonical assembly identity data of the assembly to be evaluated.</span></span>  
+ <span data-ttu-id="b3b39-106">[in]要評估的組件不透明的標準組件身分識別資料。</span><span class="sxs-lookup"><span data-stu-id="b3b39-106">[in] The opaque canonical assembly identity data of the assembly to be evaluated.</span></span>  
   
  `pbIsStronglyNamed`  
- <span data-ttu-id="8cc2b-107">[out]`true`，如果所參考的組件`pwzAssemblyIdentity`參數是強式命名，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-107">[out] `true`, if the assembly referenced by the `pwzAssemblyIdentity` parameter is strongly named; otherwise, `false`.</span></span>  
+ <span data-ttu-id="b3b39-107">[out]`true`，如果所參考的組件`pwzAssemblyIdentity`參數是強式命名，否則`false`。</span><span class="sxs-lookup"><span data-stu-id="b3b39-107">[out] `true`, if the assembly referenced by the `pwzAssemblyIdentity` parameter is strongly named; otherwise, `false`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8cc2b-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="8cc2b-108">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b3b39-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="b3b39-108">Return Value</span></span>  
   
-|<span data-ttu-id="8cc2b-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8cc2b-109">HRESULT</span></span>|<span data-ttu-id="8cc2b-110">描述</span><span class="sxs-lookup"><span data-stu-id="8cc2b-110">Description</span></span>|  
+|<span data-ttu-id="b3b39-109">HRESULT</span><span class="sxs-lookup"><span data-stu-id="b3b39-109">HRESULT</span></span>|<span data-ttu-id="b3b39-110">描述</span><span class="sxs-lookup"><span data-stu-id="b3b39-110">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8cc2b-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="8cc2b-111">S_OK</span></span>|<span data-ttu-id="8cc2b-112">此方法傳回成功。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-112">The method returned successfully.</span></span>|  
-|<span data-ttu-id="8cc2b-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="8cc2b-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="8cc2b-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
-|<span data-ttu-id="8cc2b-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="8cc2b-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="8cc2b-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-116">The call timed out.</span></span>|  
-|<span data-ttu-id="8cc2b-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="8cc2b-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="8cc2b-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-118">The caller does not own the lock.</span></span>|  
-|<span data-ttu-id="8cc2b-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="8cc2b-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="8cc2b-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
-|<span data-ttu-id="8cc2b-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="8cc2b-121">E_FAIL</span></span>|<span data-ttu-id="8cc2b-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="8cc2b-123">如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="8cc2b-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
+|<span data-ttu-id="b3b39-111">S_OK</span><span class="sxs-lookup"><span data-stu-id="b3b39-111">S_OK</span></span>|<span data-ttu-id="b3b39-112">此方法傳回成功。</span><span class="sxs-lookup"><span data-stu-id="b3b39-112">The method returned successfully.</span></span>|  
+|<span data-ttu-id="b3b39-113">HOST_E_CLRNOTAVAILABLE</span><span class="sxs-lookup"><span data-stu-id="b3b39-113">HOST_E_CLRNOTAVAILABLE</span></span>|<span data-ttu-id="b3b39-114">Common language runtime (CLR) 尚未載入到處理程序，或 CLR 處於的狀態不能在其中執行 managed 程式碼，或程序呼叫成功。</span><span class="sxs-lookup"><span data-stu-id="b3b39-114">The common language runtime (CLR) has not been loaded into a process, or the CLR is in a state in which it cannot run managed code or process the call successfully.</span></span>|  
+|<span data-ttu-id="b3b39-115">HOST_E_TIMEOUT</span><span class="sxs-lookup"><span data-stu-id="b3b39-115">HOST_E_TIMEOUT</span></span>|<span data-ttu-id="b3b39-116">呼叫已逾時。</span><span class="sxs-lookup"><span data-stu-id="b3b39-116">The call timed out.</span></span>|  
+|<span data-ttu-id="b3b39-117">HOST_E_NOT_OWNER</span><span class="sxs-lookup"><span data-stu-id="b3b39-117">HOST_E_NOT_OWNER</span></span>|<span data-ttu-id="b3b39-118">呼叫端未擁有鎖定。</span><span class="sxs-lookup"><span data-stu-id="b3b39-118">The caller does not own the lock.</span></span>|  
+|<span data-ttu-id="b3b39-119">HOST_E_ABANDONED</span><span class="sxs-lookup"><span data-stu-id="b3b39-119">HOST_E_ABANDONED</span></span>|<span data-ttu-id="b3b39-120">事件已取消時已封鎖的執行緒或 fiber 等候它。</span><span class="sxs-lookup"><span data-stu-id="b3b39-120">An event was canceled while a blocked thread or fiber was waiting on it.</span></span>|  
+|<span data-ttu-id="b3b39-121">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="b3b39-121">E_FAIL</span></span>|<span data-ttu-id="b3b39-122">發生未知的嚴重錯誤。</span><span class="sxs-lookup"><span data-stu-id="b3b39-122">An unknown catastrophic failure occurred.</span></span> <span data-ttu-id="b3b39-123">如果方法會傳回 E_FAIL，CLR 不再使用舊的處理序內。</span><span class="sxs-lookup"><span data-stu-id="b3b39-123">If a method returns E_FAIL, the CLR is no longer usable within the process.</span></span> <span data-ttu-id="b3b39-124">若要裝載方法的後續呼叫會傳回 HOST_E_CLRNOTAVAILABLE。</span><span class="sxs-lookup"><span data-stu-id="b3b39-124">Subsequent calls to hosting methods return HOST_E_CLRNOTAVAILABLE.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="8cc2b-125">需求</span><span class="sxs-lookup"><span data-stu-id="8cc2b-125">Requirements</span></span>  
- <span data-ttu-id="8cc2b-126">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8cc2b-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b3b39-125">需求</span><span class="sxs-lookup"><span data-stu-id="b3b39-125">Requirements</span></span>  
+ <span data-ttu-id="b3b39-126">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3b39-126">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8cc2b-127">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="8cc2b-127">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="b3b39-127">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="b3b39-127">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="8cc2b-128">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="8cc2b-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="b3b39-128">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="b3b39-128">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="8cc2b-129">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="8cc2b-129">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="b3b39-129">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="b3b39-129">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="8cc2b-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8cc2b-130">See also</span></span>
-- [<span data-ttu-id="8cc2b-131">ICLRAssemblyIdentityManager 介面</span><span class="sxs-lookup"><span data-stu-id="8cc2b-131">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
+## <a name="see-also"></a><span data-ttu-id="b3b39-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b3b39-130">See also</span></span>
+
+- [<span data-ttu-id="b3b39-131">ICLRAssemblyIdentityManager 介面</span><span class="sxs-lookup"><span data-stu-id="b3b39-131">ICLRAssemblyIdentityManager Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyidentitymanager-interface.md)
