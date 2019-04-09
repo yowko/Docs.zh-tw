@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0375fdd6f86ae89171545cfdcb44ac37074084e9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718711"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093653"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 結構
 包含要進行記憶體回收之物件的相關資訊。  
@@ -57,21 +57,22 @@ typedef struct _COR_GC_REFERENCE {
   
  `extraData`欄位包含額外的資料，取決於參考的來源 （或類型）。 可能的值為：  
   
--   `DependentSource`. 如果`type`已`CorGCREferenceType.CorHandleStrongDependent`，這個欄位是物件，如果保持運作，根目錄的物件進行記憶體回收在`COR_GC_REFERENCE.Location`。  
+-   `DependentSource`。 如果`type`已`CorGCREferenceType.CorHandleStrongDependent`，這個欄位是物件，如果保持運作，根目錄的物件進行記憶體回收在`COR_GC_REFERENCE.Location`。  
   
--   `RefCount`. 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，這個欄位是控制代碼的參考計數。  
+-   `RefCount`。 如果`type`是`CorGCREferenceType.CorHandleStrongRefCount`，這個欄位是控制代碼的參考計數。  
   
--   `Size`. 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，這個欄位是記憶體回收行程，導出物件根物件樹狀結構的最後大小。 請注意，這項計算不一定是最新狀態。  
+-   `Size`。 如果`type`是`CorGCREferenceType.CorHandleStrongSizedByref`，這個欄位是記憶體回收行程，導出物件根物件樹狀結構的最後大小。 請注意，這項計算不一定是最新狀態。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

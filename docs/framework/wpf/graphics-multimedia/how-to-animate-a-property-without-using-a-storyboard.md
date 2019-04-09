@@ -1,5 +1,5 @@
 ---
-title: HOW TO：不使用腳本而建立屬性的動畫
+title: HOW TO：不使用分鏡腳本而建立屬性的動畫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - local animation [WPF]
 - animation [WPF], non-Storyboard (local)
 ms.assetid: d411db70-4df7-487d-82bc-95a7c1b2e7f8
-ms.openlocfilehash: b76afeb0187065ff07c832363d3a52896aa36822
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 93609cdeb4d879cbec0f90096e4fa2c131a2ec5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371156"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091703"
 ---
-# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>HOW TO：不使用腳本而建立屬性的動畫
+# <a name="how-to-animate-a-property-without-using-a-storyboard"></a>HOW TO：不使用分鏡腳本而建立屬性的動畫
 此範例示範套用至屬性的動畫，而不使用的一種方法<xref:System.Windows.Media.Animation.Storyboard>。  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ ms.locfileid: "57371156"
  還有其他方式，而不使用動畫<xref:System.Windows.Media.Animation.Storyboard>物件; 如需詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.AnimationTimeline>
 - <xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>
 - <xref:System.Windows.Media.Animation>

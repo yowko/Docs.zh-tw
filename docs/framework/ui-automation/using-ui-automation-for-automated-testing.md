@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing, UI Automation
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
-ms.openlocfilehash: e9bab754302252cdf4e4e9303ecc4a188e651ca9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678391"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183972"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>使用 UI 自動化進行自動化測試
 > [!NOTE]
@@ -19,9 +19,9 @@ ms.locfileid: "57678391"
   
  本概觀說明 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 在自動化測試案例中做為程式設計存取的架構有何幫助。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供了一致的物件模型，可讓所有 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 架構透過可存取、輕鬆自動化的方式來公開複雜、豐富的功能。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供一致的物件模型，可讓所有[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]架構，來存取、 輕鬆自動化的方式公開複雜、 豐富的功能。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的開發目的是要接替 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 是現有的架構，專為提供存取控制項及應用程式的方案所設計。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 設計時未考慮測試自動化，但由於協助工具和自動化有極為相似的需求，進而發展為該角色。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]除了提供更精細的協助工具方案之外，還特別設計來提供穩固的自動化測試功能。 例如， [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 依賴單一介面來同時公開使用者介面的相關資訊及收集 AT 產品所需資訊； [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 則分隔兩個模型。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 已開發的後繼版本為[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 現有的架構被設計來提供解決方案，讓控制項和應用程式的存取。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 設計時未考慮測試自動化即使它逐漸發展成該角色有非常類似的需求的協助工具和自動化。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]除了提供更精細的解決方案，協助工具，還特別設計來提供強大的功能，進行自動化測試。 例如， [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 依賴單一介面來同時公開使用者介面的相關資訊及收集 AT 產品所需資訊； [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 則分隔兩個模型。  
   
  若要實作 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 讓它成為跟自動化測試工具一樣有用，就需要有提供者和用戶端。 使用者介面自動化提供者是應用程式，例如 Microsoft Word、Excel 和其他以 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統為基礎的協力廠商應用程式或控制項。 使用者介面自動化用戶端則包括自動化測試指令碼和輔助技術應用程式。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "57678391"
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>以程式設計方式存取  
- 程式設計存取能夠透過程式碼，模擬由傳統滑鼠和鍵盤輸入所公開的任何互動和體驗。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 透過五個元件啟用程式設計存取：  
+ 程式設計存取能夠透過程式碼，模擬由傳統滑鼠和鍵盤輸入所公開的任何互動和體驗。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 啟用以程式設計方式存取透過五個元件：  
   
 -   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構有助於巡覽 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]的結構。 此樹狀結構是由 hWnd 的集合建置而成。 如需詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
@@ -76,16 +76,16 @@ ms.locfileid: "57678391"
  在 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 中唯一識別並後續找出任何控制項的能力，可以為要在該 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]上操作的自動化測試應用程式提供基礎。 用戶端和提供者使用數個 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 屬性來輔助此項功能。  
   
 #### <a name="automationid"></a>AutomationID  
- 在同層級之間以唯一的方式識別自動化項目。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 並未當地語系化，與發行多國語言版本的產品時通常會當地語系化的屬性 (例如 <xref:System.Windows.Automation.AutomationElement.NameProperty> ) 不同。 請參閱 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)。  
+ 在同層級之間以唯一的方式識別自動化項目。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 並未當地語系化，不同於屬性例如<xref:System.Windows.Automation.AutomationElement.NameProperty>通常會當地語系化如果產品取得隨附於多個語言。 請參閱 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保證整個自動化樹狀結構中的唯一識別。 例如，應用程式可能會包含具有多個最上層功能表項目的功能表控制項，而這些項目也有多個子功能表項目。 這些次要功能表項目可由「項目 1」、「項目 2」、「項目 3」(依此類推) 之類的一般配置識別，因此最上層功能表項目的子系可以有重複識別項。  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 不保證整個自動化樹狀結構的唯一身分識別。 例如，應用程式可能會包含具有多個最上層功能表項目的功能表控制項，而這些項目也有多個子功能表項目。 這些次要功能表項目可由「項目 1」、「項目 2」、「項目 3」(依此類推) 之類的一般配置識別，因此最上層功能表項目的子系可以有重複識別項。  
   
 #### <a name="controltype"></a>ControlType  
  識別自動化項目所代表的控制項類型。 重要的資訊可以從對控制項類型的了解加以推斷。 請參閱 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)。  
   
 #### <a name="nameproperty"></a>NameProperty  
- 這是識別或說明控制項的文字字串。 因為<xref:System.Windows.Automation.AutomationElement.NameProperty> 可以當地語系化，所以應小心使用。 請參閱 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
+ 這是識別或說明控制項的文字字串。 <xref:System.Windows.Automation.AutomationElement.NameProperty> 應該謹慎使用因為可以當地語系化。 請參閱 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)。  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>在測試應用程式中實作使用者介面自動化  
@@ -95,7 +95,7 @@ ms.locfileid: "57678391"
 |加入使用者介面自動化參考。|以下列出使用者介面自動化用戶端所需的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] DLL。<br /><br /> -UIAutomationClient.dll 會提供存取[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]用戶端 Api。<br />-UIAutomationClientSideProvider.dll 提供能夠自動化[!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]控制項。 請參閱 [UI Automation Support for Standard Controls](../../../docs/framework/ui-automation/ui-automation-support-for-standard-controls.md)。<br />-UIAutomationTypes.dll 會提供存取權中定義的特定類型[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。|  
 |加入 <xref:System.Windows.Automation> 命名空間。|這個命名空間包含使用者介面自動化用戶端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 功能 (文字處理除外) 時需要的所有要件。|  
 |加入 <xref:System.Windows.Automation.Text> 命名空間。|這個命名空間包含使用者介面自動化用戶端使用 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 文字處理時需要的所有要件。|  
-|尋找想要的控制項|自動化測試指令碼會在自動化樹狀結構中尋找代表相關控制項的使用者介面自動化項目。<br /><br /> 您可透過多種方式使用程式碼取得使用者介面自動化項目。<br /><br /> -Query[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]使用<xref:System.Windows.Automation.Condition>陳述式。 通常會在此使用語言中性的 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 。 **注意：**<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>可以使用可以條列的 Inspect.exe 之類的工具來取得[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控制項的屬性。 <br /><br /> -使用<xref:System.Windows.Automation.TreeWalker>類別來周遊整個[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]樹狀目錄或其子集。<br />-追蹤焦點。<br />-使用控制項的 hWnd。<br />-使用畫面位置，例如滑鼠游標的位置。<br /><br /> 請參閱 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
+|尋找想要的控制項|自動化測試指令碼會在自動化樹狀結構中尋找代表相關控制項的使用者介面自動化項目。<br /><br /> 您可透過多種方式使用程式碼取得使用者介面自動化項目。<br /><br /> -Query[!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]使用<xref:System.Windows.Automation.Condition>陳述式。 通常會在此使用語言中性的 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 。 **注意：** <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty>可以使用可以條列的 Inspect.exe 之類的工具來取得[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]控制項的屬性。 <br /><br /> -使用<xref:System.Windows.Automation.TreeWalker>類別來周遊整個[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]樹狀目錄或其子集。<br />-追蹤焦點。<br />-使用控制項的 hWnd。<br />-使用畫面位置，例如滑鼠游標的位置。<br /><br /> 請參閱 [Obtaining UI Automation Elements](../../../docs/framework/ui-automation/obtaining-ui-automation-elements.md)|  
 |取得控制項模式|控制項模式會公開功能類似之控制項的一般行為。<br /><br /> 找到需要測試的控制項之後，自動化測試指令碼會從這些使用者介面自動化項目中取得想要的控制項模式。 例如，代表一般按鈕功能的 <xref:System.Windows.Automation.InvokePattern> 控制項模式，或是代表視窗功能的 <xref:System.Windows.Automation.WindowPattern> 控制項模式。<br /><br /> 請參閱 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)。|  
 |自動化使用者介面|自動化測試指令碼現在可以使用 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 控制項模式公開的資訊和功能，從 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構中控制想要的任何 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。|  
   
@@ -112,4 +112,5 @@ ms.locfileid: "57678391"
  如需安全性資訊，請參閱 [UI Automation Security Overview](../../../docs/framework/ui-automation/ui-automation-security-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [使用者介面自動化基礎觀念](../../../docs/framework/ui-automation/index.md)
+
+- [UI 自動化基礎觀念](../../../docs/framework/ui-automation/index.md)

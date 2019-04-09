@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], creating simple bindings
 - binding data [WPF], creating
 ms.assetid: 69b80f72-6259-44cb-8294-5bdcebca1e08
-ms.openlocfilehash: 157060e784e4169ac8e31c6028ed65f0a9568e0f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d617c8b97aa679398ed2d061a652f5164f1e499b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373578"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094381"
 ---
 # <a name="how-to-create-a-simple-binding"></a>HOW TO：建立簡單繫結
 此範例將示範如何建立簡單<xref:System.Windows.Data.Binding>。  
@@ -26,5 +26,6 @@ ms.locfileid: "57373578"
  包含反白顯示的列`<TextBlock>`項目再將繫結<xref:System.Windows.Controls.TextBlock>若要控制`PersonName`屬性。 如此一來， <xref:System.Windows.Controls.TextBlock> "Joe"的值會出現。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

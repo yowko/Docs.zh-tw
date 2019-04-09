@@ -1,17 +1,17 @@
 ---
-title: HOW TO：使用 Windows Communication Foundation 服務 Moniker，但不註冊
+title: HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], service monikers without registration
 ms.assetid: ee3cf5c0-24f0-4ae7-81da-73a60de4a1a8
-ms.openlocfilehash: 3ce388da75711ab1378ce59575c067cf828089e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: be4798663d0b39301ec496df45a4a7a5bf9c88e5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203973"
 ---
-# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker，但不註冊
+# <a name="how-to-use-the-windows-communication-foundation-service-moniker-without-registration"></a>HOW TO：使用 Windows Communication Foundation 服務 Moniker 且不註冊
 若要連接到並與 Windows Communication Foundation (WCF) 服務進行通訊，WCF 用戶端應用程式必須有服務位址、 繫結組態和服務合約的詳細資料。  
   
  WCF 服務 moniker 通常取得必要的合約，透過之前註冊的必要的屬性型別，但可能會有，這並不可行的情況。 如果沒有註冊，Moniker 可使用 `wsdl` 參數、中繼資料交換和使用 `mexAddress` 參數，即可用 Web 服務定義語言 (WSDL) 文件格式來取得合約的定義。  
@@ -58,4 +58,5 @@ binding=WSHttpBinding_IAffiliate, bindingNamespace=http://tempuri.org/
 >  如果 Moniker 的格式錯誤或服務無法使用，則呼叫 `GetObject` 時將會傳回「無效的語法」錯誤。 如果您收到這個錯誤，請確定您所使用的 Moniker 正確無誤，而且此服務為可用狀態。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：註冊並設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)
+
+- [HOW TO：註冊和設定服務 Moniker](../../../../docs/framework/wcf/feature-details/how-to-register-and-configure-a-service-moniker.md)

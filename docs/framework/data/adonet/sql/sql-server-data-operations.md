@@ -2,12 +2,12 @@
 title: ADO.NET 中的 SQL Server 資料作業
 ms.date: 03/30/2017
 ms.assetid: b864ebc9-ed8e-4059-85fd-36d9198f5521
-ms.openlocfilehash: 66e7a33edfc053760109ded4c18c84950869b4af
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4430e5b7f86253966f2778abe7d9ba58661a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143503"
 ---
 # <a name="sql-server-data-operations-in-adonet"></a>ADO.NET 中的 SQL Server 資料作業
 本節說明 .NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 特有的 SQL Server 特性和功能。  
@@ -16,7 +16,7 @@ ms.locfileid: "54702232"
  [在 SQL Server 中執行大量複製作業](../../../../../docs/framework/data/adonet/sql/bulk-copy-operations-in-sql-server.md)  
  說明 .NET Data Provider for SQL Server 的大量複製功能。  
   
- [Multiple Active Result Set (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
+ [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)  
  說明從不同命令啟動 <xref:System.Data.SqlClient.SqlDataReader> 的每個執行個體時，如何在一個連接上開啟多個 <xref:System.Data.SqlClient.SqlDataReader>。  
   
  [非同步作業](../../../../../docs/framework/data/adonet/sql/asynchronous-operations.md)  
@@ -26,6 +26,7 @@ ms.locfileid: "54702232"
  說明如何使用 SQL Server 2008 所導入的資料表值參數。  
   
 ## <a name="see-also"></a>另請參閱
-- [在 ADO.NET 中擷取和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+
+- [在 ADO.NET 中傳送和修改資料](../../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

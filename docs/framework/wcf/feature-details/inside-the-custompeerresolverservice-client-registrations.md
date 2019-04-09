@@ -1,15 +1,15 @@
 ---
-title: Custompeerresolverservice:用戶端註冊
+title: CustomPeerResolverService 內部：用戶端註冊
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
-ms.openlocfilehash: 90d40eb11dbfebf4a19ba4c42e0fd4b45a2b1e7a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095785"
 ---
-# <a name="inside-the-custompeerresolverservice-client-registrations"></a>Custompeerresolverservice:用戶端註冊
+# <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 內部：用戶端註冊
 網狀結構中的每一個節點都會將自己的端點資訊透過 `Register` 函式發佈給解析程式服務。 解析程式服務會儲存這項資訊做為註冊記錄。 這份記錄會包含該節點的唯一識別碼 (RegistrationID) 以及端點資訊 (PeerNodeAddress)。  
   
 ## <a name="stale-records-and-expiration-time"></a>失效記錄與到期時間  
@@ -34,4 +34,5 @@ ms.locfileid: "54541777"
  當一個節點註冊到解析程式服務時，該節點會收到來自服務的 <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> 物件。 指定新的時間量的 `RegistrationLifetime`，註冊項目將在經過這段時間後到期並由解析程式服務移除。 例如，假設 `RegistrationLifetime` 為 2 分鐘，那麼節點必須在 2 分鐘內呼叫 `Refresh`，才能確保記錄的更新狀況且沒有被刪除。 解析程式服務收到 `Refresh` 要求時，服務會檢查該記錄並且重設到期時間。 Refresh 會連同 <xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> 屬性傳回 `RegistrationLifetime` 物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對等解析程式](../../../../docs/framework/wcf/feature-details/peer-resolvers.md)

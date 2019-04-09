@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], DynamicResource markup extension
 - DynamicResource markup extensions [WPF]
 ms.assetid: 7324f243-03af-4c2b-b0db-26ac6cdfcbe4
-ms.openlocfilehash: a7b754ce3fb77314539e6391376b188fe9b15859
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d07816718ebee2507f1888cffb70e6f8037bb996
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369769"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091404"
 ---
 # <a name="dynamicresource-markup-extension"></a>DynamicResource 標記延伸
 提供值的任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]延後該值是定義資源的參考的屬性。 該資源查閱行為相當於執行階段查閱。  
@@ -56,12 +56,11 @@ ms.locfileid: "57369769"
   
  豐富的宣告式方法的參考資源是以[StaticResource 標記延伸](staticresource-markup-extension.md)。  
   
- 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 
-  `DynamicResource` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 延伸類別的 <xref:System.Windows.DynamicResourceExtension> 值。  
+ 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `DynamicResource` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 延伸類別的 <xref:System.Windows.DynamicResourceExtension> 值。  
   
  `DynamicResource` 可用於物件元素語法。 在此案例中，指定的值<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>屬性是必要項。  
   
- `DynamicResource` 也可以用於會指定 <xref:System.Windows.DynamicResourceExtension.ResourceKey%2A> 屬性 (Property) 做為 property=value 配對組的詳細屬性 (Attribute) 使用方式中。  
+ `DynamicResource` 也可以用於指定的詳細資訊的屬性使用方式<xref:System.Windows.DynamicResourceExtension.ResourceKey%2A>屬性做為屬性 = 值組：  
   
 ```xml  
 <object property="{DynamicResource ResourceKey=key}" .../>  
@@ -71,9 +70,10 @@ ms.locfileid: "57369769"
   
  在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作中，這個標記延伸的處理由定義<xref:System.Windows.DynamicResourceExtension>類別。  
   
- `DynamicResource` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `DynamicResource` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 資源](xaml-resources.md)
 - [資源和程式碼](resources-and-code.md)
 - [x:Key 指示詞](../../xaml-services/x-key-directive.md)

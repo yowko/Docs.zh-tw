@@ -6,15 +6,15 @@ helpviewer_keywords:
 - styling rows in ListViews implementing GridViews [WPF]
 - ListView controls [WPF], styling rows with GridViews
 ms.assetid: 2e406ba2-70a0-4e62-841f-0934859de76e
-ms.openlocfilehash: 0c8806c399959fdc1466e0839ba469881718092b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9af8d10c7db2d3bbe8b9443402cbb1cfeaa7edb3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361625"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091456"
 ---
 # <a name="how-to-style-a-row-in-a-listview-that-implements-a-gridview"></a>HOW TO：在實作 GridView 的 ListView 中設定資料列的樣式
-此範例示範如何在資料列的樣式<xref:System.Windows.Controls.ListView>控制項，可實作<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  
+此範例示範如何在資料列的樣式<xref:System.Windows.Controls.ListView>實作控制項<xref:System.Windows.Controls.GridView><xref:System.Windows.Controls.ListView.View%2A>模式。  
   
 ## <a name="example"></a>範例  
  您可以在資料列的樣式<xref:System.Windows.Controls.ListView>控制項，藉由設定<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>上<xref:System.Windows.Controls.ListView>控制項。 設定以其項目的樣式<xref:System.Windows.Controls.ListViewItem>物件。 <xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>參考<xref:System.Windows.Controls.ControlTemplate>用來顯示資料列內容的物件。  
@@ -34,8 +34,9 @@ ms.locfileid: "57361625"
  [!code-xaml[ListViewItemStyleSnippet#GridView](~/samples/snippets/csharp/VS_Snippets_Wpf/ListViewItemStyleSnippet/CS/Window1.xaml#gridview)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [HOW-TO 主題](listview-how-to-topics.md)
+- [HOW TO 主題](listview-how-to-topics.md)
 - [ListView 概觀](listview-overview.md)
 - [樣式設定和範本化](styling-and-templating.md)

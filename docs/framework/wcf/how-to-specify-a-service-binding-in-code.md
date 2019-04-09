@@ -1,18 +1,18 @@
 ---
-title: HOW TO：在程式碼中指定的服務繫結
+title: HOW TO：在程式碼中指定服務繫結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 67ab5dd8-79c1-4e62-aa75-828ea918a53a
-ms.openlocfilehash: f39b9d7bfdc1a5d8bf33c20f047738be1e41f226
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: edc7a4f5dc21a25ac9752dda60675d979fe18c69
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531199"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162354"
 ---
-# <a name="how-to-specify-a-service-binding-in-code"></a>HOW TO：在程式碼中指定的服務繫結
+# <a name="how-to-specify-a-service-binding-in-code"></a>HOW TO：在程式碼中指定服務繫結
 在此範例中，已為計算機服務定義了 `ICalculator` 合約、在 `CalculatorService` 類別中實作了服務，並於程式碼中定義其端點，同時指定服務必須使用 <xref:System.ServiceModel.BasicHttpBinding> 類別。  
   
  通常最佳作法是在組態中以宣告方式指定繫結和位址資訊，而不是在程式碼中強制指定。 在程式碼中定義端點通常不太實用，因為部署之服務的繫結和位址通常與開發服務時所使用的繫結和位址不同。 比較一般性的作法是將繫結和位址資訊留在程式碼外面，如此一來，不需要重新編譯或重新部署應用程式，就可以變更繫結和位址資訊。  
@@ -49,5 +49,6 @@ ms.locfileid: "54531199"
      [!code-vb[C_HowTo_CodeServiceBinding#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_codeservicebinding/vb/source.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
-- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+
+- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [指定端點位址](../../../docs/framework/wcf/specifying-an-endpoint-address.md)

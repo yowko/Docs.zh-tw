@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0ffd0b78e37b663b197620694d9459cd4e0129d9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703448"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140227"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>檔案對話方塊自訂位置的已知資料夾 GUID
 您使用<xref:System.Guid>來指定[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]已知資料夾，當您新增至資料夾<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。 已知資料夾 Guid 不區分大小寫和中的 KnownFolders.h 檔案中定義[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]。  
@@ -287,5 +287,6 @@ ms.locfileid: "57703448"
  F38BF404-1D43-42F2-9305-67DE0B28FC23  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [如何：將自訂位置加入至 [檔案] 對話方塊](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [如何：將自訂位置新增至檔案對話方塊](how-to-add-a-custom-place-to-a-file-dialog-box.md)

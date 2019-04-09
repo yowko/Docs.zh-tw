@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用 mailto： 要傳送郵件從頁面
+title: 'HOW TO：使用 mailto: 從頁面傳送郵件'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - 'sending mail from pages with mailto:'
 - mailto:, sending mail from pages
 - mail [WPF], sending from pages
 ms.assetid: b64b9518-df17-4232-94f2-455a4f77ee48
-ms.openlocfilehash: 93848842cd5dfffd52d2d1d2f64884204b43ce24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 68055c17b2bec4cd5c3efe05c48eda0ff973bc88
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090832"
 ---
-# <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>HOW TO：使用 mailto： 要傳送郵件從頁面
+# <a name="how-to-use-mailto-to-send-mail-from-a-page"></a>HOW TO：使用 mailto: 從頁面傳送郵件
 此範例示範如何使用<xref:System.Windows.Documents.Hyperlink>配合**mailto:**[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]。  
   
 ## <a name="example"></a>範例  
@@ -22,4 +22,5 @@ ms.locfileid: "57359961"
  [!code-xaml[HOWTONavigationMailToSnippet#MailToMARKUP](~/samples/snippets/csharp/VS_Snippets_Wpf/HOWTONavigationMailToSnippet/CS/HomePage.xaml#mailtomarkup)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)

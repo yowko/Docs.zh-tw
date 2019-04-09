@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: c982fae4fdbdd4963c92b17b609d517056c34b95
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825764"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144455"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>建置第一個宣告感知 WCF 服務
 ## <a name="applies-to"></a>適用於  
@@ -41,4 +41,5 @@ ms.locfileid: "58825764"
  若要建立第一個宣告感知 WCF 服務使用 WIF，請參閱[How To:啟用 WCF Web 服務應用程式的 WIF](../../../docs/framework/security/how-to-enable-wif-for-a-wcf-web-service-application.md)。
   
 ## <a name="see-also"></a>另請參閱
+
 - [開始使用 WIF](../../../docs/framework/security/getting-started-with-wif.md)

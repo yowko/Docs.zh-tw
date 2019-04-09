@@ -1,15 +1,15 @@
 ---
-title: HOW TO：建立支援認證
+title: HOW TO：建立支援的認證
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 1e56d595b389f2217f4c50db1242f418742a5d56
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539801"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093705"
 ---
-# <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援認證
+# <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
 您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證已*支援認證*。 本主題說明如何在 Windows Communication Foundation (WCF) 用戶端實作這類認證。  
   
 > [!NOTE]
@@ -81,4 +81,5 @@ ms.locfileid: "54539801"
  [!code-csharp[c_SupportingCredential#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_supportingcredential/cs/source.cs#1)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)

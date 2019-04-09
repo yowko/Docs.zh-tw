@@ -1,5 +1,5 @@
 ---
-title: HOW TO：若要新增或移除集合中的控制項在執行階段
+title: HOW TO：在執行階段於控制項集合中新增或移除
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 6ec4e41f5a3bee6302996f21afa81f2b5eeb9568
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143139"
 ---
-# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>HOW TO：若要新增或移除集合中的控制項在執行階段
+# <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>HOW TO：在執行階段於控制項集合中新增或移除
 在應用程式開發的一般工作會將控制項加入和移除您的表單上的任何容器控制項的控制項 (例如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控制項或甚至是表單本身)。 在設計階段，可以將控制項直接拖曳至面板或群組方塊。 在執行階段，這些控制項會維護 `Controls` 集合，以便持續追蹤有哪些控制項置於其上。  
   
 > [!NOTE]
@@ -101,5 +101,6 @@ ms.locfileid: "57720887"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Panel>
 - [Panel 控制項](panel-control-windows-forms.md)

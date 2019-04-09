@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML [XAML Services], TypeConverter
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
-ms.openlocfilehash: 62e92a0bf537bd5a15b71751b3d62755c6b12dfa
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58049497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095720"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML 類型轉換子概觀
 物件寫入器的類型轉換器供應邏輯，可將 XAML 標記中的字串轉換為物件圖形中的特定物件。 在 .NET Framework XAML 服務中，類型轉換器必須是衍生自 <xref:System.ComponentModel.TypeConverter>的類別。 有些轉換器也支援 XAML 儲存路徑，而且可用來將序列化標記中的物件序列化成字串格式。 本主題描述如何以及何時叫用 XAML 中的類型轉換器，並提供 <xref:System.ComponentModel.TypeConverter>之方法覆寫的實作建議。  
@@ -32,7 +32,7 @@ ms.locfileid: "58049497"
  XAML 處理器必須先處理標記延伸使用方式，才會檢查屬性類型和其他考量。 例如，如果設為屬性 (Attribute) 的屬性 (Property) 通常具有類型轉換，但在特定情況下是由標記延伸使用方式所設定，則會先處理標記延伸行為。 需要有標記延伸的一個常見情況是參考現有的物件。 在此案例中，無狀態類型轉換器只能產生新的執行個體，但這可能不是令人滿意的情況。 如需標記延伸的詳細資訊，請參閱 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)。  
   
 ### <a name="native-type-converters"></a>原生類型轉換器  
- 在 WPF 和.NET XAML 服務實作中，有具有原生類型轉換處理特定 CLR 型別，不過，這些 CLR 型別會不依照慣例視為基本類型。 這類類型的範例是 <xref:System.DateTime>。 其中一個原因是 .NET Framework 架構的運作方式：類型 <xref:System.DateTime> 定義於 mscorlib (.NET 中的最基本程式庫)。 <xref:System.DateTime> 不允許使用來自另一個引進相依性的組件進行屬性設定 (<xref:System.ComponentModel.TypeConverterAttribute> 來自系統)；因此，無法支援透過屬性設定的一般類型轉換器探索機制。 而是，XAML 剖析器都有一份需要原生處理的類型清單，而且這些類型的處理方式與 true 基本類型的處理方式類似。 如果是 <xref:System.DateTime>則此處理包含 <xref:System.DateTime.Parse%2A>呼叫。  
+ 在 WPF 和.NET XAML 服務實作中，有具有原生類型轉換處理特定 CLR 型別，不過，這些 CLR 型別會不依照慣例視為基本類型。 這類類型的範例是 <xref:System.DateTime>。 其中一個原因是 .NET Framework 架構的運作方式：類型 <xref:System.DateTime> 定義於 mscorlib (.NET 中的最基本程式庫)。 <xref:System.DateTime> 不允許來自另一個引進相依性的組件的屬性化 (<xref:System.ComponentModel.TypeConverterAttribute>來自系統)，因此，無法支援透過屬性設定的一般類型轉換器探索機制。 而是，XAML 剖析器都有一份需要原生處理的類型清單，而且這些類型的處理方式與 true 基本類型的處理方式類似。 如果是 <xref:System.DateTime>則此處理包含 <xref:System.DateTime.Parse%2A>呼叫。  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>實作類型轉換器  
@@ -43,7 +43,7 @@ ms.locfileid: "58049497"
   
  針對 XAML，會展開 <xref:System.ComponentModel.TypeConverter> 的角色。 基於 XAML， <xref:System.ComponentModel.TypeConverter> 是支援特定目標字串與來源字串轉換的基底類別。 來源字串會從 XAML 剖析字串屬性值。 目標字串可能會讓特定物件屬性的執行階段值處理回 XAML 中的屬性，以進行序列化。  
   
- <xref:System.ComponentModel.TypeConverter> 定義四個成員，而這些成員與基於 XAML 處理轉換目標字串和來源字串有關：  
+ <xref:System.ComponentModel.TypeConverter> 定義四個成員與相關的轉換目標字串和來源字串基於 XAML 處理目的：  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -57,7 +57,7 @@ ms.locfileid: "58049497"
   
  第二個最重要的方法是 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 如果應用程式轉換成標記呈現 (例如，如果儲存為 XAML 檔案)， <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> 會包含在 XAML 文字寫入器的較大案例中，而 XAML 文字寫入器會產生標記呈現。 在此情況下，XAML 的重要程式碼路徑是呼叫端通過 `destinationType` 的 <xref:System.String>時。  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是服務查詢 <xref:System.ComponentModel.TypeConverter> 實作之功能時所使用的支援方法。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 並<xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>會為服務查詢的功能時所使用的支援方法<xref:System.ComponentModel.TypeConverter>實作。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的文化特性資訊和類型轉換器  
  每個 <xref:System.ComponentModel.TypeConverter> 實作都可以唯一解譯轉換的有效字串，也可以使用或忽略傳遞為參數的類型描述。 文化特性和 XAML 類型轉換的重要考量如下：雖然 XAML 支援使用可當地語系化字串做為屬性值，但是您無法使用這些可當地語系化字串做為具有特定文化特性需求的類型轉換器輸入。 這項限制是因為 XAML 屬性值的類型轉換器包含使用 `en-US` 文化特性的必要固定語言 XAML 處理行為。 如需有關這項限制之設計原因的詳細資訊，請參閱 XAML 語言規格 ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) 或[WPF 全球化和當地語系化概觀](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
@@ -108,6 +108,7 @@ ms.locfileid: "58049497"
  如果您是使用 XAML 節點資料流，則尚未執行類型轉換器的動作或最終結果。 在載入路徑中，最後需要進行類型轉換才能載入的屬性字串仍然維持為開始成員和結束成員內的文字值。 使用 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> 屬性可以判定這項作業最後需要的類型轉換器。 不過，從 <xref:System.Xaml.XamlMember.TypeConverter%2A?displayProperty=nameWithType> 取得有效值是依賴具有 XAML 結構描述內容 (可透過基礎成員存取這類資訊) 或成員所使用物件值的類型。 叫用類型轉換行為時也需要 XAML 結構描述內容，因為這需要類型對應以及建立轉換器執行個體。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ComponentModel.TypeConverterAttribute>
 - [XAML 的類型轉換子和標記延伸](type-converters-and-markup-extensions-for-xaml.md)
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

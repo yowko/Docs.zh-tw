@@ -9,12 +9,12 @@ helpviewer_keywords:
 - graphics [WPF], rendering tiers
 - software rendering pipeline [WPF]
 ms.assetid: bfb89bae-7aab-4cac-a26c-a956eda8fce2
-ms.openlocfilehash: 1e0050dbf6ec5ade22e3f09ceee66f69826e56df
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 683804acf43065543fa5d4ffb1a5ecf7e5b4c49a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163172"
 ---
 # <a name="optimizing-performance-taking-advantage-of-hardware"></a>最佳化效能：運用硬體
 內部架構[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]有兩個呈現管線、 硬體和軟體。 本主題提供有關這些轉譯管線，以幫助您決定您的應用程式的效能最佳化的相關資訊。  
@@ -55,12 +55,13 @@ ms.locfileid: "57374254"
  如需詳細資訊[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯層，請參閱[圖形轉譯層](graphics-rendering-tiers.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [版面配置與設計](optimizing-performance-layout-and-design.md)
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)

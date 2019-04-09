@@ -8,12 +8,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], ContextMenu component
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
-ms.openlocfilehash: 7da0522dae00608ead356484a31d219a67ec4ba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090559"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu 元件概觀 (Windows Form)
 > [!IMPORTANT]
@@ -27,6 +27,7 @@ ms.locfileid: "54545669"
  索引鍵內容<xref:System.Windows.Forms.ContextMenu>元件是<xref:System.Windows.Forms.Menu.MenuItems%2A>屬性。 您可以新增功能表項目以程式設計方式建立<xref:System.Windows.Forms.MenuItem>物件，並將它們加入至<xref:System.Windows.Forms.Menu.MenuItemCollection>的快顯功能表。 快顯功能表中的項目通常取自其他功能表中，因為您將複製它們，以最常加入至捷徑功能表項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ContextMenu>
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

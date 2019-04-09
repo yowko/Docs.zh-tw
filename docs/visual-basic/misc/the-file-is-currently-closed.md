@@ -2,12 +2,12 @@
 title: 目前已關閉檔案
 ms.date: 07/20/2015
 ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
-ms.openlocfilehash: 3ec66ffaa103a134f2501ce6c3a26f5d6243e464
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28b60005dc4002ff1016df79a4cd3ed1f88d0057
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148651"
 ---
 # <a name="the-file-is-currently-closed"></a>目前已關閉檔案
 嘗試執行的作業只能對開啟的檔案執行，但目前已關閉檔案。  
@@ -17,7 +17,6 @@ ms.locfileid: "54692635"
 -   請開啟檔案，然後再次嘗試這項作業。  
   
 ## <a name="see-also"></a>另請參閱
-
 
 - [My.Computer.FileSystem](xref:Microsoft.VisualBasic.FileIO.FileSystem)
 - [使用 Visual Basic 存取檔案](../../visual-basic/developing-apps/programming/drives-directories-files/file-access.md)

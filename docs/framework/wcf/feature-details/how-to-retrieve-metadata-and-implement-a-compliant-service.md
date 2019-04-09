@@ -1,15 +1,15 @@
 ---
-title: HOW TO：擷取中繼資料，並實作相容服務
+title: HOW TO：擷取中繼資料並實作相容性服務
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
-ms.openlocfilehash: a043672ad564341209bc179f9d1596c228fe19cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ddc50e2851217002c825163761855d649b56db1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608491"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095967"
 ---
-# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>HOW TO：擷取中繼資料，並實作相容服務
+# <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>HOW TO：擷取中繼資料並實作相容性服務
 服務通常不會由同一個人設計並實作。 在重視應用程式之間互通性的環境中，可以使用 Web 服務描述語言 (WSDL) 來設計或描述合約，而開發人員則必須實作符合所提供合約的服務。 您也可以將現有服務移轉至 Windows Communication Foundation (WCF)，但是保留 wire 格式。 此外，雙工合約還會要求呼叫端也必須實作回呼合約。  
   
  在這些情況下，您必須使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) （或對等的工具） 來產生服務合約介面在 managed 語言中，您可以實作以滿足的需求合約。 通常[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可用來取得與通道處理站或 WCF 用戶端類型以及正確的繫結會設定用戶端組態檔使用的服務合約和地址。 若要使用產生的組態檔，您必須將它變更為服務組態檔。 您可能還需要修改服務合約。  
@@ -60,4 +60,5 @@ ms.locfileid: "54608491"
 [!code-xml[ClientProxyCodeSample#20](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/hostapplication.exe.config#20)]    
   
 ## <a name="see-also"></a>另請參閱
+
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

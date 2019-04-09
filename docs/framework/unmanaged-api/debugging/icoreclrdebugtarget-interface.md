@@ -18,12 +18,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4576d8ea7d601e1b37d0cb6f54802f93bc128622
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2972b87b2d0136f182f8e8223988953e1896f2bd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59183335"
 ---
 # <a name="icoreclrdebugtarget-interface"></a>ICoreClrDebugTarget 介面
 提供控制參考計數、 列舉處理序，並釋放記憶體偵錯工具附加至遠端的 Macintosh 的 Silverlight 目標相關聯的方法。  
@@ -70,6 +70,7 @@ class ICoreClrDebugTarget {
  **.NET framework 版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugRemoteTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremotetarget-interface.md)
 - [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

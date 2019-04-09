@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b52b12df9953dbafaeebfe223313288de0e559b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a1b189b79a02f04b7f795ff2524441f12b053cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143945"
 ---
 # <a name="iclrmetahost-interface"></a>ICLRMetaHost 介面
 提供方法，傳回 common language runtime (CLR) 的特定版本，其版本號碼為基礎，列出所有已安裝的 Clr，清單中指定的處理序所載入的所有執行階段中，探索用來編譯組件、 結束處理程序的 CLR 版本與全新的執行階段關閉舊版 API 繫結的查詢。  
@@ -52,10 +52,11 @@ HRESULT hr = CLRCreateInstance(CLSID_CLRMetaHost,
   
  **標頭：** MetaHost.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
 - [裝載](../../../../docs/framework/unmanaged-api/hosting/index.md)

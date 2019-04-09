@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], forward compatibility
 ms.assetid: 413c9044-26f8-4ecb-968c-18495ea52cd9
-ms.openlocfilehash: 732c47b03c2769a6147c3c812ddd6e81dab11a55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90d9409d7e41ddda99caf24ebe0e249ee04723d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095889"
 ---
 # <a name="forward-compatible-data-contracts"></a>向前相容資料合約
 一項功能的 Windows Communication Foundation (WCF) 資料合約系統的合約可以隨著時間在不中斷的方式。 也就是說，有舊版資料合約的用戶端可以與有新版相同資料合約的服務通訊，或是有新版資料合約的用戶端可以與有舊版相同資料合約通訊。 如需詳細資訊，請參閱[最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)。  
@@ -42,6 +42,7 @@ ms.locfileid: "54695643"
  在 `ignoreExtensionDataObject` 建構函式中將 `true` 設定為 <xref:System.Runtime.Serialization.DataContractSerializer> 或針對 <xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> 將 `true` 屬性設定為 <xref:System.ServiceModel.ServiceBehaviorAttribute>，即可關閉往返功能。 此功能關閉時，還原序列化程式將不會填入 <xref:System.Runtime.Serialization.IExtensibleDataObject.ExtensionData%2A> 屬性，而且序列化程式將不會發出屬性內容。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.IExtensibleDataObject>
 - <xref:System.Runtime.Serialization.ExtensionDataObject>
 - [資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)

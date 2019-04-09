@@ -11,12 +11,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 46061108226feb83e821edb21dfce2a57bdd3ac7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164966"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>AutoSize 在 TableLayoutPanel 控制項中的行為
 ## <a name="distinct-autosize-behaviors"></a>不同的調整行為  
@@ -35,5 +35,6 @@ ms.locfileid: "57708063"
 |`true`|類似於先前的互動，發生例外狀況，<xref:System.Windows.Forms.SizeType.Percent>資料行或資料列取得的自動調整大小的一環。<br /><br /> <xref:System.Windows.Forms.TableLayoutPanel>控制展開的資料行或資料列建立足夠的可用空間，讓任何資料行或資料列<xref:System.Windows.Forms.SizeType.Percent>樣式裁剪其內容。 <xref:System.Windows.Forms.TableLayoutPanel>控制配置的新空間按比例根據<xref:System.Windows.Forms.ColumnStyle.Width%2A>或<xref:System.Windows.Forms.RowStyle.Height%2A>屬性。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - [TableLayoutPanel 控制項概觀](tablelayoutpanel-control-overview.md)

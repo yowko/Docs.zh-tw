@@ -1,18 +1,18 @@
 ---
-title: HOW TO：將移出 toolstripcontainer 並移到表單上 ToolStrip
+title: HOW TO：將 ToolStrip 移出 ToolStripContainer 並移至表單上
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 96fe863cee296ec292bf7010494af587d43fd8b3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 100e744e6e49fbf214488e9bbb796b5b6fb9591a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142359"
 ---
-# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>HOW TO：將移出 toolstripcontainer 並移到表單上 ToolStrip
+# <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>HOW TO：將 ToolStrip 移出 ToolStripContainer 並移至表單上
 使用下列程序移動<xref:System.Windows.Forms.ToolStrip>共<xref:System.Windows.Forms.ToolStripContainer>拖曳至表單。  
   
 > [!NOTE]
@@ -31,6 +31,7 @@ ms.locfileid: "57708414"
 5.  設定<xref:System.Windows.Forms.ToolStrip.Dock%2A>的屬性<xref:System.Windows.Forms.ToolStrip>要**頂端**。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripContainer>
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

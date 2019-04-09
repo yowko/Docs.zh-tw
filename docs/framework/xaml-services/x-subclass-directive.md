@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Subclass attribute
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
-ms.openlocfilehash: c348d8fa2bd66a9abbb64c9363bb4dae0933ba34
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140786"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass 指示詞
 修改 XAML 標記編譯行為時`x:Class`也會提供。 而不是建立部分類別為基礎`x:Class`，提供`x:Class`會建立為中繼類別，並提供衍生的類別然後是根據預期`x:Class`。  
@@ -57,5 +57,6 @@ ms.locfileid: "58047995"
  當您定義這兩`x:Class`並`x:Subclass`，您不需要提供任何實作類別所參考的`x:Class`。 您只需要為它命名，以透過`x:Class`屬性，讓編譯器有一些類別，它會建立在中繼檔 （編譯器不會選取預設的名稱在此情況下） 中的指引。 您可以賦予`x:Class`類別的實作; 不過，這不是使用這兩個的典型案例`x:Class`和`x:Subclass`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [x:Class 指示詞](x-class-directive.md)
 - [WPF 的 XAML 和自訂類別](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)

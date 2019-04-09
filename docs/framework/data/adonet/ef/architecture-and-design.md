@@ -2,17 +2,17 @@
 title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 8b3515fac9ae7f9302ba607fcf842719718f6c55
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576326"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096133"
 ---
 # <a name="architecture-and-design"></a>架構與設計
-中的 SQL 產生模組[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀，在單一行程中完成。  
+中的 SQL 產生模組[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀結構，在單一行程中完成。  
   
- 樹狀節點的處理方式是由下而上。 首先，會產生中繼結構：: SqlSelectStatement 或 SqlBuilder，這兩個實作 ISqlFragment。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：  
+ 樹狀結構節點的處理方式是由下而上。 首先，會產生中繼結構：: SqlSelectStatement 或 SqlBuilder，這兩個實作 ISqlFragment。 接著，系統會根據該結構產生 SQL 陳述式字串。 使用中繼結構的原因有兩個：  
   
 -   就邏輯上來說，SQL SELECT 陳述式會以不按照順序的方式擴展。 系統會先造訪參與 FROM 子句的節點，然後再造訪參與 WHERE、GROUP BY 和 ORDER BY 子句的節點。  
   
@@ -167,7 +167,7 @@ internal sealed class SymbolTable {
  SQL 產生模組的每個執行個體都只有一個 SymbolTable。 系統會針對每個關聯節點進入並退出範圍。 除非具有相同名稱的其他符號隱藏了範圍，否則先前範圍中的所有符號都會顯示給後續範圍查看。  
   
 ### <a name="global-state-for-the-visitor"></a>造訪者的全域狀態  
- 若要協助重新命名別名和資料行，請維護已經透過查詢樹狀結構在第一個行程中使用的所有資料行名稱 (AllColumnNames) 和範圍別名 (AllExtentNames) 清單。  符號表會將變數名稱解析成符號。 IsVarRefSingle 僅用於驗證目的，並非絕對必要。  
+ 若要協助重新命名別名和資料行，請維護已經透過查詢樹狀在第一個行程中使用的所有資料行名稱 (AllColumnNames) 和範圍別名 (AllExtentNames) 清單。  符號表會將變數名稱解析成符號。 IsVarRefSingle 僅用於驗證目的，並非絕對必要。  
   
  經由 CurrentSelectStatement 和 IsParentAJoin 使用的兩個堆疊會用來將「參數」從父節點傳遞至子節點，因為造訪者模式不允許我們傳遞參數。  
   
@@ -188,7 +188,7 @@ private bool IsParentAJoin{get}
  本節將討論常見的提供者案例。  
   
 ### <a name="grouping-expression-nodes-into-sql-statements"></a>將運算式節點組成 SQL 陳述式  
- 由下而上造訪樹狀結構時，如果遇到第一個關聯節點 (通常是 DbScanExpression 範圍)，就會建立 SqlSelectStatement。 若要產生巢狀查詢越少越好的 SQL SELECT 陳述式，請在該 SqlSelectStatement 中盡可能彙總其父節點 (越多越好)。  
+ 由下而上造訪樹狀時，如果遇到第一個關聯節點 (通常是 DbScanExpression 範圍)，就會建立 SqlSelectStatement。 若要產生巢狀查詢越少越好的 SQL SELECT 陳述式，請在該 SqlSelectStatement 中盡可能彙總其父節點 (越多越好)。  
   
  決定給定 (關聯) 節點是否能加入至目前的 SqlSelectStatement (造訪輸入時傳回) 或者是否需要啟動新的陳述式是由 IsCompatible 方法計算而得，而且主要取決於已經存在 SqlSelectStatement 中的項目 (根據哪些節點低於給定節點而定)。  
   
@@ -214,13 +214,13 @@ private bool IsParentAJoin{get}
   
  若要說明輸入的別名重新導向，請參閱中的第一個範例[產生的 SQL，從命令樹-最佳作法](../../../../../docs/framework/data/adonet/ef/generating-sql-from-command-trees-best-practices.md)。  在該範例中，"a" 必須重新導向至投影中的 "b"。  
   
- 建立 SqlSelectStatement 物件時，屬於節點之輸入的範圍就會放入 SqlSelectStatement 的 From 屬性。 符號 (<symbol_b>) 是根據輸入繫結名稱 ("b") 建立以表示該範圍，而且 "AS  " + <symbol_b> 會附加至 From 子句。  此符號也會加入至 FromExtents 屬性。  
+ 建立 SqlSelectStatement 物件時，屬於節點之輸入的範圍就會放入 SqlSelectStatement 的 From 屬性。 符號 (< symbol_b >) 會根據輸入繫結名稱 ("b") 以表示該範圍而且"AS"+ < symbol_b > 會附加至 From 子句。  此符號也會加入至 FromExtents 屬性。  
   
- 此符號也會加入至符號表，以便將輸入繫結名稱連結至該符號 ("b", <symbol_b>)。  
+ 此符號也會加入至符號表，以便將輸入繫結名稱連結到它 （"b"，< symbol_b >） 中。  
   
  如果後續節點重複使用該 SqlSelectStatement，它就會在符號表中加入一個項目，以便將其輸入繫結名稱連結至該符號。 在本例中，輸入繫結名稱為"a"的 DbProjectExpression 會重複使用 SqlSelectStatement 並新增 ("a"、 \< symbol_b >) 的資料表。  
   
- 當運算式參考正在重複使用 SqlSelectStatement 之節點的輸入繫結名稱時，就會使用符號表，將該參考解析成正確的重新導向符號。 造訪代表 "a" 的 DbVariableReferenceExpression 時，如果從 "a.x" 解析了 "a"，它就會解析成符號 <symbol_b>。  
+ 當運算式參考正在重複使用 SqlSelectStatement 之節點的輸入繫結名稱時，就會使用符號表，將該參考解析成正確的重新導向符號。 "A"從"a.x"解析時同時造訪 DbVariableReferenceExpression 代表"a"it 會解析成符號 < symbol_b >。  
   
 ### <a name="join-alias-flattening"></a>聯結別名扁平化  
  聯結別名扁平化是在造訪 DbPropertyExpression 時達成，如＜DbPropertyExpression＞一節所述。  
@@ -389,7 +389,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 ```  
   
 ### <a name="dbnotexpression"></a>DbNotExpression  
- 在某些情況下，您可以使用 DbNotExpression 的輸入運算式來摺疊其轉譯。 例如：  
+ 在某些情況下，您可以使用 DbNotExpression 的輸入運算式來摺疊其轉譯。 例如:   
   
 ```  
 Not(IsNull(a)) =>  "a IS NOT NULL"  
@@ -412,7 +412,8 @@ IsEmpty(inut) = Not Exists(input)
   
  資料行重新命名是在將 Symbol 物件寫入字串時進行。 在第一個階段中，AddDefaultColumns 已經判斷出特定資料行符號是否必須重新命名。 在第二個階段中，只會進行重新命名作業，確保產生的名稱不會與 AllColumnNames 中使用的任何名稱發生衝突。  
   
- 若要同時針對範圍別名與資料行產生唯一的名稱，請使用 <existing_name>_n，其中 n 是尚未使用過的最小別名。 所有別名的全域清單會增加串聯重新命名的需求。  
+ 若要產生唯一的名稱，同時針對範圍別名與資料行，請使用 < existing_name > _n 其中 n 是尚未使用的最小別名。 所有別名的全域清單會增加串聯重新命名的需求。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

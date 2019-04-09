@@ -3,12 +3,12 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: cebdb0e69ae151afd9a1cc422cf48a201176313a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54703662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59092460"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
@@ -31,7 +31,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 6.  RP 從安全性權杖擷取用戶端的宣告，並進行授權決策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>搭配 ASP.NET 來使用同盟驗證模組  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是可將同盟驗證新增到 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式中的 HTTP 模組。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是 HTTP 模組，讓您新增的同盟的驗證[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
   
  您可以設定 WS-FAM，以便指定非驗證要求將重新導向至其中的 STS。 WIF 可讓您使用兩種方式來驗證使用者：  
   
@@ -61,7 +61,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
  ![顯示使用控制項進行登入的 SAM 時機圖表](../../../docs/framework/security/media/signinusingconrols-sam.gif "SignInUsingConrols_SAM")  
   
 ### <a name="events"></a>事件  
- <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>、<xref:System.IdentityModel.Services.SessionAuthenticationModule> 和其父類別 <xref:System.IdentityModel.Services.HttpModuleBase>，會在許多不同的 HTTP 要求處理階段引發事件。 您可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式的 `global.asax` 檔案中處理這些事件。  
+ <xref:System.IdentityModel.Services.WSFederationAuthenticationModule><xref:System.IdentityModel.Services.SessionAuthenticationModule>，和其父類別<xref:System.IdentityModel.Services.HttpModuleBase>，在處理 HTTP 要求的各個階段引發事件。 您可以在 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 應用程式的 `global.asax` 檔案中處理這些事件。  
   
 -   ASP.NET 基礎結構會叫用模組的 <xref:System.IdentityModel.Services.HttpModuleBase.Init%2A> 方法來初始化模組。  
   
@@ -140,6 +140,7 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Services.SessionAuthenticationModule>
 - <xref:System.IdentityModel.Services.WSFederationAuthenticationModule>
 - [\<federationConfiguration>](../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/federationconfiguration.md)

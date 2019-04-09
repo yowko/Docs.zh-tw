@@ -2,15 +2,15 @@
 title: 管理資料服務內容 (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: d339826cabc83d2e0cecb5451ba5b950e7f02321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631766"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184739"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>管理資料服務內容 (WCF Data Services)
-<xref:System.Data.Services.Client.DataServiceContext> 類別會封裝針對特定資料服務支援的作業。 雖然 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務無狀態，但是內容具有狀態。 因此，您可以使用<xref:System.Data.Services.Client.DataServiceContext>類別維護狀態，在用戶端資料服務，以支援與互動功能，例如變更管理。 這個類別也可以管理識別及追蹤變更。  
+<xref:System.Data.Services.Client.DataServiceContext> 類別會封裝針對特定資料服務支援的作業。 雖然 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務沒有狀態，但是內容具有狀態。 因此，您可以使用<xref:System.Data.Services.Client.DataServiceContext>類別維護狀態，在用戶端資料服務，以支援與互動功能，例如變更管理。 這個類別也可以管理識別及追蹤變更。  
   
 ## <a name="merge-options-and-identity-resolution"></a>合併選項和識別解析  
  當執行 <xref:System.Data.Services.Client.DataServiceQuery%601> 時，回應摘要中的實體會具體化成為物件。 如需詳細資訊，請參閱 <<c0> [ 物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)。 回應訊息中的項目具體化成為物件的方式是根據識別解析來執行，而且會取決於執行查詢時所使用的合併選項。 如果在單一 <xref:System.Data.Services.Client.DataServiceContext> 的範圍中執行多個查詢或載入要求，則 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端只會追蹤具有特定索引鍵值之物件的單一執行個體。 用來執行識別解析的這個索引鍵會唯一識別實體。  
@@ -20,7 +20,7 @@ ms.locfileid: "54631766"
 ## <a name="managing-concurrency"></a>管理並行存取  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援可讓資料服務偵測更新衝突的開放式並行存取。 可以透過一種方式來設定資料服務提供者，讓資料服務使用並行語彙基元來檢查實體的變更。 這個語彙基元包含實體類型的一個或多個屬性，資料服務會驗證這些屬性以判斷資源是否已變更。 並行語彙基元，包含要求及從資料服務回應的 eTag 標頭，則會為您管理[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
   
- <xref:System.Data.Services.Client.DataServiceContext> 會追蹤使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或是 <xref:System.Data.Services.Client.DataServiceCollection%601> 所手動提報的物件變更。 當呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，用戶端會將變更傳回資料服務。 當用戶端的資料變更與資料服務的變更衝突時，<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 會失敗。 當發生這個狀況時，您必須再次查詢實體資源，以接收更新資料。 若要覆寫資料服務中的變更，請使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合併選項執行查詢。 當您再次呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 時，用戶端所保留的變更會保存到資料服務，前提是尚未針對資料服務中的資源進行其他變更。  
+ <xref:System.Data.Services.Client.DataServiceContext> 會追蹤使用 <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> 和 <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> 或是 <xref:System.Data.Services.Client.DataServiceCollection%601> 所手動提報的物件變更。 當呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 方法時，用戶端會將變更傳回資料服務。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 當用戶端的資料變更與資料服務中的變更衝突時，可能會失敗。 當發生這個狀況時，您必須再次查詢實體資源，以接收更新資料。 若要覆寫資料服務中的變更，請使用 <xref:System.Data.Services.Client.MergeOption.PreserveChanges> 合併選項執行查詢。 當您再次呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 時，用戶端所保留的變更會保存到資料服務，前提是尚未針對資料服務中的資源進行其他變更。  
   
 ## <a name="saving-changes"></a>儲存變更  
  變更會在 <xref:System.Data.Services.Client.DataServiceContext> 執行個體中追蹤，但是不會立即傳送至伺服器。 在針對指定的活動完成所需的變更之後，請呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A>，將所有變更提交至資料服務。 <xref:System.Data.Services.Client.DataServiceResponse> 作業完成後，會傳回 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 物件。 <xref:System.Data.Services.Client.DataServiceResponse> 物件包含一連串的 <xref:System.Data.Services.Client.OperationResponse> 物件，其中依序包含一連串的 <xref:System.Data.Services.Client.EntityDescriptor> 或 <xref:System.Data.Services.Client.LinkDescriptor> 執行個體，表示持續性或嘗試性的變更。 在資料服務中建立或修改實體時，<xref:System.Data.Services.Client.EntityDescriptor> 會包括已更新實體的參考，其中包含任何伺服器產生的屬性值，例如以上範例中產生的 `ProductID` 值。 用戶端程式庫會自動更新 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 物件以便擁有這些新值。  
@@ -37,7 +37,8 @@ ms.locfileid: "54631766"
  預設情況下，用戶端程式庫會使用 POST、GET、PUT/MERGE/PATCH 和 DELETE 的對應 HTTP 方法，將建立、讀取、更新和刪除要求傳送給 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 服務。 這樣做表示支持代表性狀態傳輸 (Representational State Transfer，REST) 的基本原則。 不過，並不是所有 Web 伺服器實作都會支援完整的 HTTP 方法集。 在某些情況下，支援的方法可能僅限於 GET 和 POST。 像防火牆這樣的媒介透過某些方法阻擋要求時，就可能發生這種情況。 由於 GET 和 POST 方法最常受到支援，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 會使用 POST 要求來規定任何不受支援之 HTTP 方法的執行方式。 又稱為*方法通道*或是*POST 通道*，這可讓用戶端傳送 POST 要求的指定自訂的實際方法`X-HTTP-Method`標頭。 若要啟用 POST 通道以傳送要求，請將 <xref:System.Data.Services.Client.DataServiceContext.UsePostTunneling%2A> 執行個體上的 <xref:System.Data.Services.Client.DataServiceContext> 屬性設定為 `true`。  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)
 - [非同步作業](../../../../docs/framework/data/wcf/asynchronous-operations-wcf-data-services.md)
 - [批次處理作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)
