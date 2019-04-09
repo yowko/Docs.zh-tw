@@ -16,19 +16,19 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a999dc1850a41612f8896ff9a7ed96cd8c3a2fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ead1c1a91b910e7cfbb09f17ba823fc7a77ce0f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54509131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181437"
 ---
-# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="78a30-103">GetCurrentApartmentType 函式</span><span class="sxs-lookup"><span data-stu-id="78a30-103">GetCurrentApartmentType function</span></span>
-<span data-ttu-id="78a30-104">擷取呼叫者在其中執行之 Apartment 的型別。</span><span class="sxs-lookup"><span data-stu-id="78a30-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
+# <a name="getcurrentapartmenttype-function"></a><span data-ttu-id="f5fdc-103">GetCurrentApartmentType 函式</span><span class="sxs-lookup"><span data-stu-id="f5fdc-103">GetCurrentApartmentType function</span></span>
+<span data-ttu-id="f5fdc-104">擷取呼叫者在其中執行之 Apartment 的型別。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-104">Retrieves the type of apartment in which the caller is executing.</span></span>   
   
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
   
-## <a name="syntax"></a><span data-ttu-id="78a30-105">語法</span><span class="sxs-lookup"><span data-stu-id="78a30-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f5fdc-105">語法</span><span class="sxs-lookup"><span data-stu-id="f5fdc-105">Syntax</span></span>  
   
 ```  
 HRESULT GetCurrentApartmentType (
@@ -38,35 +38,35 @@ HRESULT GetCurrentApartmentType (
 ); 
 ```  
 
-## <a name="parameters"></a><span data-ttu-id="78a30-106">參數</span><span class="sxs-lookup"><span data-stu-id="78a30-106">Parameters</span></span>
+## <a name="parameters"></a><span data-ttu-id="f5fdc-106">參數</span><span class="sxs-lookup"><span data-stu-id="f5fdc-106">Parameters</span></span>
 
 `vFunc`  
-<span data-ttu-id="78a30-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="78a30-107">[in] This parameter is unused.</span></span>
+<span data-ttu-id="f5fdc-107">[in]未使用此參數。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-107">[in] This parameter is unused.</span></span>
 
 `ptr`  
-<span data-ttu-id="78a30-108">[in]指標[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)執行個體。</span><span class="sxs-lookup"><span data-stu-id="78a30-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
+<span data-ttu-id="f5fdc-108">[in]指標[IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo)執行個體。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-108">[in] A pointer to an [IComThreadingInfo](/windows/desktop/api/objidlbase/nn-objidlbase-icomthreadinginfo) instance.</span></span>
 
 `aptType`  
-<span data-ttu-id="78a30-109">[out]指標[APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype)列舉值，指出呼叫端的 apartment。</span><span class="sxs-lookup"><span data-stu-id="78a30-109">[out] A pointer to an [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) enumeration value that indicates the caller's apartment.</span></span>
+<span data-ttu-id="f5fdc-109">[out]指標[APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype)列舉值，指出呼叫端的 apartment。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-109">[out] A pointer to an [APTTYPE](/windows/desktop/api/objidlbase/ne-objidlbase-_apttype) enumeration value that indicates the caller's apartment.</span></span>
 
-## <a name="return-value"></a><span data-ttu-id="78a30-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="78a30-110">Return value</span></span>
+## <a name="return-value"></a><span data-ttu-id="f5fdc-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="f5fdc-110">Return value</span></span>
 
-
-|<span data-ttu-id="78a30-111">常數</span><span class="sxs-lookup"><span data-stu-id="78a30-111">Constant</span></span>  |<span data-ttu-id="78a30-112">值</span><span class="sxs-lookup"><span data-stu-id="78a30-112">Value</span></span>  |<span data-ttu-id="78a30-113">描述</span><span class="sxs-lookup"><span data-stu-id="78a30-113">Description</span></span>  |
+|<span data-ttu-id="f5fdc-111">常數</span><span class="sxs-lookup"><span data-stu-id="f5fdc-111">Constant</span></span>  |<span data-ttu-id="f5fdc-112">值</span><span class="sxs-lookup"><span data-stu-id="f5fdc-112">Value</span></span>  |<span data-ttu-id="f5fdc-113">描述</span><span class="sxs-lookup"><span data-stu-id="f5fdc-113">Description</span></span>  |
 |---------|---------|---------|
-| `S_OK` | <span data-ttu-id="78a30-114">0</span><span class="sxs-lookup"><span data-stu-id="78a30-114">0</span></span> | <span data-ttu-id="78a30-115">已成功完成函式。</span><span class="sxs-lookup"><span data-stu-id="78a30-115">The function completed successfully.</span></span> |
-| `E_FAIL` | <span data-ttu-id="78a30-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="78a30-116">0x80000008</span></span> | <span data-ttu-id="78a30-117">呼叫端不在 apartment 中執行。</span><span class="sxs-lookup"><span data-stu-id="78a30-117">The caller is not executing in an apartment.</span></span> |
+| `S_OK` | <span data-ttu-id="f5fdc-114">0</span><span class="sxs-lookup"><span data-stu-id="f5fdc-114">0</span></span> | <span data-ttu-id="f5fdc-115">已成功完成函式。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-115">The function completed successfully.</span></span> |
+| `E_FAIL` | <span data-ttu-id="f5fdc-116">0x80000008</span><span class="sxs-lookup"><span data-stu-id="f5fdc-116">0x80000008</span></span> | <span data-ttu-id="f5fdc-117">呼叫端不在 apartment 中執行。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-117">The caller is not executing in an apartment.</span></span> |
   
-## <a name="remarks"></a><span data-ttu-id="78a30-118">備註</span><span class="sxs-lookup"><span data-stu-id="78a30-118">Remarks</span></span>
+## <a name="remarks"></a><span data-ttu-id="f5fdc-118">備註</span><span class="sxs-lookup"><span data-stu-id="f5fdc-118">Remarks</span></span>
 
-<span data-ttu-id="78a30-119">此函式會包裝在呼叫[IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。</span><span class="sxs-lookup"><span data-stu-id="78a30-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
+<span data-ttu-id="f5fdc-119">此函式會包裝在呼叫[IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype)方法。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-119">This function wraps a call to the [IComThreadingInfo::GetCurrentApartmentType](/windows/desktop/api/objidlbase/nf-objidlbase-icomthreadinginfo-getcurrentapartmenttype) method.</span></span>
 
-## <a name="requirements"></a><span data-ttu-id="78a30-120">需求</span><span class="sxs-lookup"><span data-stu-id="78a30-120">Requirements</span></span>  
- <span data-ttu-id="78a30-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="78a30-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="f5fdc-120">需求</span><span class="sxs-lookup"><span data-stu-id="f5fdc-120">Requirements</span></span>  
+ <span data-ttu-id="f5fdc-121">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f5fdc-121">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="78a30-122">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="78a30-122">**Header:** WMINet_Utils.idl</span></span>  
+ <span data-ttu-id="f5fdc-122">**標頭：** WMINet_Utils.idl</span><span class="sxs-lookup"><span data-stu-id="f5fdc-122">**Header:** WMINet_Utils.idl</span></span>  
   
- <span data-ttu-id="78a30-123">**.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span><span class="sxs-lookup"><span data-stu-id="78a30-123">**.NET Framework Versions:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]</span></span>  
+ **<span data-ttu-id="f5fdc-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="f5fdc-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="78a30-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78a30-124">See also</span></span>
-- [<span data-ttu-id="78a30-125">WMI 和效能計數器 （Unmanaged API 參考）</span><span class="sxs-lookup"><span data-stu-id="78a30-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)
+## <a name="see-also"></a><span data-ttu-id="f5fdc-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f5fdc-124">See also</span></span>
+
+- [<span data-ttu-id="f5fdc-125">WMI 與效能計數器 (非受控 API 參考)</span><span class="sxs-lookup"><span data-stu-id="f5fdc-125">WMI and Performance Counters (Unmanaged API Reference)</span></span>](index.md)

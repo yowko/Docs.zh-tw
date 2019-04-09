@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d8cbf09ab4ad0192902a964d55a050685b024284
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 03b6f1b29157889d0e84e5dddc94d5e3ae27efce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574296"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180932"
 ---
-# <a name="cordebugplatform-enumeration"></a><span data-ttu-id="37dd5-102">CorDebugPlatform 列舉</span><span class="sxs-lookup"><span data-stu-id="37dd5-102">CorDebugPlatform Enumeration</span></span>
-<span data-ttu-id="37dd5-103">提供所使用的目標平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="37dd5-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
+# <a name="cordebugplatform-enumeration"></a><span data-ttu-id="cd5f4-102">CorDebugPlatform 列舉</span><span class="sxs-lookup"><span data-stu-id="cd5f4-102">CorDebugPlatform Enumeration</span></span>
+<span data-ttu-id="cd5f4-103">提供所使用的目標平台值[icordebugdatatarget:: Getplatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-103">Provides target platform values that are used by the [ICorDebugDataTarget::GetPlatform](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-getplatform-method.md) method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="37dd5-104">語法</span><span class="sxs-lookup"><span data-stu-id="37dd5-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cd5f4-104">語法</span><span class="sxs-lookup"><span data-stu-id="cd5f4-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugPlatform  
@@ -41,28 +41,29 @@ typedef enum CorDebugPlatform
 } CorDebugPlatform;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="37dd5-105">成員</span><span class="sxs-lookup"><span data-stu-id="37dd5-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="cd5f4-105">成員</span><span class="sxs-lookup"><span data-stu-id="cd5f4-105">Members</span></span>  
   
-|<span data-ttu-id="37dd5-106">成員</span><span class="sxs-lookup"><span data-stu-id="37dd5-106">Member</span></span>|<span data-ttu-id="37dd5-107">描述</span><span class="sxs-lookup"><span data-stu-id="37dd5-107">Description</span></span>|  
+|<span data-ttu-id="cd5f4-106">成員</span><span class="sxs-lookup"><span data-stu-id="cd5f4-106">Member</span></span>|<span data-ttu-id="cd5f4-107">描述</span><span class="sxs-lookup"><span data-stu-id="cd5f4-107">Description</span></span>|  
 |------------|-----------------|  
-|<span data-ttu-id="37dd5-108">CORDB_PLATFORM_WINDOWS_X86</span><span class="sxs-lookup"><span data-stu-id="37dd5-108">CORDB_PLATFORM_WINDOWS_X86</span></span>|<span data-ttu-id="37dd5-109">目標平台是在 Intel x86 硬體上執行的 Windows。</span><span class="sxs-lookup"><span data-stu-id="37dd5-109">The target platform is Windows running on Intel x86 hardware.</span></span>|  
-|<span data-ttu-id="37dd5-110">CORDB_PLATFORM_WINDOWS_AMD64</span><span class="sxs-lookup"><span data-stu-id="37dd5-110">CORDB_PLATFORM_WINDOWS_AMD64</span></span>|<span data-ttu-id="37dd5-111">目標平台是在 AMD64 或 Intel EM64T 硬體上執行的 64 位元 Windows。</span><span class="sxs-lookup"><span data-stu-id="37dd5-111">The target platform is 64 bit Windows running on AMD64 or Intel EM64T hardware.</span></span>|  
-|<span data-ttu-id="37dd5-112">CORDB_PLATFORM_WINDOWS_IA64</span><span class="sxs-lookup"><span data-stu-id="37dd5-112">CORDB_PLATFORM_WINDOWS_IA64</span></span>|<span data-ttu-id="37dd5-113">目標平台是在 Intel IA-64 硬體上執行的 32 位元 Windows。</span><span class="sxs-lookup"><span data-stu-id="37dd5-113">The target platform is 32 bit Windows running on Intel IA-64 hardware.</span></span>|  
-|<span data-ttu-id="37dd5-114">CORDB_PLATFORM_MAC_PPC</span><span class="sxs-lookup"><span data-stu-id="37dd5-114">CORDB_PLATFORM_MAC_PPC</span></span>|<span data-ttu-id="37dd5-115">目標平台是在 PowerPC 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="37dd5-115">The target platform is the Macintosh operating system running on PowerPC hardware.</span></span>|  
-|<span data-ttu-id="37dd5-116">CORDB_PLATFORM_MAC_X86</span><span class="sxs-lookup"><span data-stu-id="37dd5-116">CORDB_PLATFORM_MAC_X86</span></span>|<span data-ttu-id="37dd5-117">目標平台是在 Intel x86 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="37dd5-117">The target platform is the Macintosh operating system running on Intel x86 hardware.</span></span>|  
-|<span data-ttu-id="37dd5-118">CORDB_PLATFORM_WINDOWS_ARM</span><span class="sxs-lookup"><span data-stu-id="37dd5-118">CORDB_PLATFORM_WINDOWS_ARM</span></span>|<span data-ttu-id="37dd5-119">目標平台是在 Windows ARM 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="37dd5-119">The target platform is the Macintosh operating system running on Windows ARM hardware.</span></span>|  
-|<span data-ttu-id="37dd5-120">CORDB_PLATFORM_MAC_AMD64</span><span class="sxs-lookup"><span data-stu-id="37dd5-120">CORDB_PLATFORM_MAC_AMD64</span></span>|<span data-ttu-id="37dd5-121">目標平台是在 AMD64 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="37dd5-121">The target platform is the Macintosh operating system running on AMD64 hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-108">CORDB_PLATFORM_WINDOWS_X86</span><span class="sxs-lookup"><span data-stu-id="cd5f4-108">CORDB_PLATFORM_WINDOWS_X86</span></span>|<span data-ttu-id="cd5f4-109">目標平台是在 Intel x86 硬體上執行的 Windows。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-109">The target platform is Windows running on Intel x86 hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-110">CORDB_PLATFORM_WINDOWS_AMD64</span><span class="sxs-lookup"><span data-stu-id="cd5f4-110">CORDB_PLATFORM_WINDOWS_AMD64</span></span>|<span data-ttu-id="cd5f4-111">目標平台是在 AMD64 或 Intel EM64T 硬體上執行的 64 位元 Windows。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-111">The target platform is 64 bit Windows running on AMD64 or Intel EM64T hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-112">CORDB_PLATFORM_WINDOWS_IA64</span><span class="sxs-lookup"><span data-stu-id="cd5f4-112">CORDB_PLATFORM_WINDOWS_IA64</span></span>|<span data-ttu-id="cd5f4-113">目標平台是在 Intel IA-64 硬體上執行的 32 位元 Windows。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-113">The target platform is 32 bit Windows running on Intel IA-64 hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-114">CORDB_PLATFORM_MAC_PPC</span><span class="sxs-lookup"><span data-stu-id="cd5f4-114">CORDB_PLATFORM_MAC_PPC</span></span>|<span data-ttu-id="cd5f4-115">目標平台是在 PowerPC 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-115">The target platform is the Macintosh operating system running on PowerPC hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-116">CORDB_PLATFORM_MAC_X86</span><span class="sxs-lookup"><span data-stu-id="cd5f4-116">CORDB_PLATFORM_MAC_X86</span></span>|<span data-ttu-id="cd5f4-117">目標平台是在 Intel x86 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-117">The target platform is the Macintosh operating system running on Intel x86 hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-118">CORDB_PLATFORM_WINDOWS_ARM</span><span class="sxs-lookup"><span data-stu-id="cd5f4-118">CORDB_PLATFORM_WINDOWS_ARM</span></span>|<span data-ttu-id="cd5f4-119">目標平台是在 Windows ARM 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-119">The target platform is the Macintosh operating system running on Windows ARM hardware.</span></span>|  
+|<span data-ttu-id="cd5f4-120">CORDB_PLATFORM_MAC_AMD64</span><span class="sxs-lookup"><span data-stu-id="cd5f4-120">CORDB_PLATFORM_MAC_AMD64</span></span>|<span data-ttu-id="cd5f4-121">目標平台是在 AMD64 硬體上執行的 Macintosh 作業系統。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-121">The target platform is the Macintosh operating system running on AMD64 hardware.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="37dd5-122">需求</span><span class="sxs-lookup"><span data-stu-id="37dd5-122">Requirements</span></span>  
- <span data-ttu-id="37dd5-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="37dd5-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cd5f4-122">需求</span><span class="sxs-lookup"><span data-stu-id="cd5f4-122">Requirements</span></span>  
+ <span data-ttu-id="cd5f4-123">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-123">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="37dd5-124">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="37dd5-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="cd5f4-124">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cd5f4-124">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="37dd5-125">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="37dd5-125">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="cd5f4-125">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cd5f4-125">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="37dd5-126">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="37dd5-126">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="cd5f4-126">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="cd5f4-126">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
- <span data-ttu-id="37dd5-127">.NET Framework 4.5.2 及更新版本中有提供 `CORDB_PLATFORM_WINDOWS_ARM` 及 `CORDB_PLATFORM_MAC_AMD64` 成員。</span><span class="sxs-lookup"><span data-stu-id="37dd5-127">The `CORDB_PLATFORM_WINDOWS_ARM` and `CORDB_PLATFORM_MAC_AMD64` members are available in the .NET Framework 4.5.2 and later versions.</span></span>  
+ <span data-ttu-id="cd5f4-127">.NET Framework 4.5.2 及更新版本中有提供 `CORDB_PLATFORM_WINDOWS_ARM` 及 `CORDB_PLATFORM_MAC_AMD64` 成員。</span><span class="sxs-lookup"><span data-stu-id="cd5f4-127">The `CORDB_PLATFORM_WINDOWS_ARM` and `CORDB_PLATFORM_MAC_AMD64` members are available in the .NET Framework 4.5.2 and later versions.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="37dd5-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="37dd5-128">See also</span></span>
-- [<span data-ttu-id="37dd5-129">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="37dd5-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="cd5f4-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cd5f4-128">See also</span></span>
+
+- [<span data-ttu-id="cd5f4-129">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="cd5f4-129">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

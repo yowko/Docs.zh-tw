@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3de21f4bb91198a5eb77f94789d0389d97123b7a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 193abe173b259ff2679642e229fce96151e37872
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59179672"
 ---
-# <a name="imetadataimportenumsignatures-method"></a><span data-ttu-id="de74f-102">IMetaDataImport::EnumSignatures 方法</span><span class="sxs-lookup"><span data-stu-id="de74f-102">IMetaDataImport::EnumSignatures Method</span></span>
-<span data-ttu-id="de74f-103">列舉代表目前範圍中獨立簽章的簽章語彙基元。</span><span class="sxs-lookup"><span data-stu-id="de74f-103">Enumerates Signature tokens representing stand-alone signatures in the current scope.</span></span>  
+# <a name="imetadataimportenumsignatures-method"></a><span data-ttu-id="52479-102">IMetaDataImport::EnumSignatures 方法</span><span class="sxs-lookup"><span data-stu-id="52479-102">IMetaDataImport::EnumSignatures Method</span></span>
+<span data-ttu-id="52479-103">列舉代表目前範圍中獨立簽章的簽章語彙基元。</span><span class="sxs-lookup"><span data-stu-id="52479-103">Enumerates Signature tokens representing stand-alone signatures in the current scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="de74f-104">語法</span><span class="sxs-lookup"><span data-stu-id="de74f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="52479-104">語法</span><span class="sxs-lookup"><span data-stu-id="52479-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumSignatures (  
@@ -38,38 +38,39 @@ HRESULT EnumSignatures (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="de74f-105">參數</span><span class="sxs-lookup"><span data-stu-id="de74f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="52479-105">參數</span><span class="sxs-lookup"><span data-stu-id="52479-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="de74f-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="de74f-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="de74f-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="de74f-107">This must be NULL for the first call of this method.</span></span>  
+ <span data-ttu-id="52479-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="52479-106">[in, out] A pointer to the enumerator.</span></span> <span data-ttu-id="52479-107">首次呼叫這個方法，這必須是 NULL。</span><span class="sxs-lookup"><span data-stu-id="52479-107">This must be NULL for the first call of this method.</span></span>  
   
  `rSignatures`  
- <span data-ttu-id="de74f-108">[out]陣列，用來儲存簽章權杖。</span><span class="sxs-lookup"><span data-stu-id="de74f-108">[out] The array used to store the Signature tokens.</span></span>  
+ <span data-ttu-id="52479-108">[out]陣列，用來儲存簽章權杖。</span><span class="sxs-lookup"><span data-stu-id="52479-108">[out] The array used to store the Signature tokens.</span></span>  
   
  `cMax`  
- <span data-ttu-id="de74f-109">[in] `rSignatures` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="de74f-109">[in] The maximum size of the `rSignatures` array.</span></span>  
+ <span data-ttu-id="52479-109">[in] `rSignatures` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="52479-109">[in] The maximum size of the `rSignatures` array.</span></span>  
   
  `pcSignatures`  
- <span data-ttu-id="de74f-110">[out]簽章權杖中傳回的數目`rSignatures`。</span><span class="sxs-lookup"><span data-stu-id="de74f-110">[out] The number of Signature tokens returned in `rSignatures`.</span></span>  
+ <span data-ttu-id="52479-110">[out]簽章權杖中傳回的數目`rSignatures`。</span><span class="sxs-lookup"><span data-stu-id="52479-110">[out] The number of Signature tokens returned in `rSignatures`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="de74f-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="de74f-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="52479-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="52479-111">Return Value</span></span>  
   
-|<span data-ttu-id="de74f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="de74f-112">HRESULT</span></span>|<span data-ttu-id="de74f-113">描述</span><span class="sxs-lookup"><span data-stu-id="de74f-113">Description</span></span>|  
+|<span data-ttu-id="52479-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="52479-112">HRESULT</span></span>|<span data-ttu-id="52479-113">描述</span><span class="sxs-lookup"><span data-stu-id="52479-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|<span data-ttu-id="de74f-114">`EnumSignatures` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="de74f-114">`EnumSignatures` returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="de74f-115">沒有列舉語彙基元。</span><span class="sxs-lookup"><span data-stu-id="de74f-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="de74f-116">在此情況下，`pcSignatures`為零。</span><span class="sxs-lookup"><span data-stu-id="de74f-116">In that case, `pcSignatures` is zero.</span></span>|  
+|`S_OK`|`EnumSignatures` <span data-ttu-id="52479-114">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="52479-114">returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="52479-115">沒有列舉語彙基元。</span><span class="sxs-lookup"><span data-stu-id="52479-115">There are no tokens to enumerate.</span></span> <span data-ttu-id="52479-116">在此情況下，`pcSignatures`為零。</span><span class="sxs-lookup"><span data-stu-id="52479-116">In that case, `pcSignatures` is zero.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="de74f-117">備註</span><span class="sxs-lookup"><span data-stu-id="de74f-117">Remarks</span></span>  
- <span data-ttu-id="de74f-118">簽章權杖由[imetadataemit:: Gettokenfromsig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="de74f-118">The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="52479-117">備註</span><span class="sxs-lookup"><span data-stu-id="52479-117">Remarks</span></span>  
+ <span data-ttu-id="52479-118">簽章權杖由[imetadataemit:: Gettokenfromsig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="52479-118">The Signature tokens are created by the [IMetaDataEmit::GetTokenFromSig](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-gettokenfromsig-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="de74f-119">需求</span><span class="sxs-lookup"><span data-stu-id="de74f-119">Requirements</span></span>  
- <span data-ttu-id="de74f-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="de74f-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="52479-119">需求</span><span class="sxs-lookup"><span data-stu-id="52479-119">Requirements</span></span>  
+ <span data-ttu-id="52479-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="52479-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="de74f-121">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="de74f-121">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="52479-121">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="52479-121">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="de74f-122">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="de74f-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="52479-122">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="52479-122">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="de74f-123">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="de74f-123">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="52479-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="52479-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="de74f-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="de74f-124">See also</span></span>
-- [<span data-ttu-id="de74f-125">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="de74f-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="de74f-126">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="de74f-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+## <a name="see-also"></a><span data-ttu-id="52479-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="52479-124">See also</span></span>
+
+- [<span data-ttu-id="52479-125">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="52479-125">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="52479-126">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="52479-126">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
