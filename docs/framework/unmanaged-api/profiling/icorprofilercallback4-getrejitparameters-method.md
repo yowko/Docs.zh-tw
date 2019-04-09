@@ -17,46 +17,47 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7aae292daefe9333585a50d1d8c9ce49b1008cd9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ca176be93b92e44228d9b4063e87a62263e83e04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470779"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184869"
 ---
-# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="718cc-102">ICorProfilerCallback4::GetReJITParameters 方法</span><span class="sxs-lookup"><span data-stu-id="718cc-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
-<span data-ttu-id="718cc-103">可讓程式碼剖析工具，來設定新的重新編譯的方法主體的替代程式碼產生旗標。</span><span class="sxs-lookup"><span data-stu-id="718cc-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
+# <a name="icorprofilercallback4getrejitparameters-method"></a><span data-ttu-id="d558d-102">ICorProfilerCallback4::GetReJITParameters 方法</span><span class="sxs-lookup"><span data-stu-id="d558d-102">ICorProfilerCallback4::GetReJITParameters Method</span></span>
+<span data-ttu-id="d558d-103">可讓程式碼剖析工具，來設定新的重新編譯的方法主體的替代程式碼產生旗標。</span><span class="sxs-lookup"><span data-stu-id="d558d-103">Allows the code profiler to set alternate code generation flags for a new recompiled method body.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="718cc-104">語法</span><span class="sxs-lookup"><span data-stu-id="718cc-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d558d-104">語法</span><span class="sxs-lookup"><span data-stu-id="d558d-104">Syntax</span></span>  
   
 ```  
 HRESULT GetReJITParameters(     [in] ModuleID moduleId,     [in] mdMethodDef methodId,     [in] ICorProfilerFunctionControl *pFunctionControl);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="718cc-105">參數</span><span class="sxs-lookup"><span data-stu-id="718cc-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d558d-105">參數</span><span class="sxs-lookup"><span data-stu-id="d558d-105">Parameters</span></span>  
  `moduleID`  
- <span data-ttu-id="718cc-106">[in]包含 CLR 必須 JIT 重新編譯參數之方法的模組。</span><span class="sxs-lookup"><span data-stu-id="718cc-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="d558d-106">[in]包含 CLR 必須 JIT 重新編譯參數之方法的模組。</span><span class="sxs-lookup"><span data-stu-id="d558d-106">[in] The module that contains the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `methodId`  
- <span data-ttu-id="718cc-107">[in]`MethodDef` ，CLR 需要 JIT 重新編譯參數的方法。</span><span class="sxs-lookup"><span data-stu-id="718cc-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
+ <span data-ttu-id="d558d-107">[in]`MethodDef` ，CLR 需要 JIT 重新編譯參數的方法。</span><span class="sxs-lookup"><span data-stu-id="d558d-107">[in] The `MethodDef` of the method for which the CLR needs JIT recompilation parameters.</span></span>  
   
  `pFunctionControl`  
- <span data-ttu-id="718cc-108">[in]指標[ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)分析工具可用來提供方法重新編譯過的 JIT 重新編譯資訊的介面。</span><span class="sxs-lookup"><span data-stu-id="718cc-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
+ <span data-ttu-id="d558d-108">[in]指標[ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)分析工具可用來提供方法重新編譯過的 JIT 重新編譯資訊的介面。</span><span class="sxs-lookup"><span data-stu-id="d558d-108">[in] A pointer to an [ICorProfilerFunctionControl](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md) interface that the profiler can use to provide JIT recompilation information for the method being recompiled.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="718cc-109">備註</span><span class="sxs-lookup"><span data-stu-id="718cc-109">Remarks</span></span>  
- <span data-ttu-id="718cc-110">CLR 問題`GetReJITParameters`回呼，讓分析工具指定重新編譯特定的方法的參數。</span><span class="sxs-lookup"><span data-stu-id="718cc-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="718cc-111">`GetReJITParameters`回呼發出一次，每個函式，分析工具所提供的參數適用於所有的執行個體，該函式。</span><span class="sxs-lookup"><span data-stu-id="718cc-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="d558d-109">備註</span><span class="sxs-lookup"><span data-stu-id="d558d-109">Remarks</span></span>  
+ <span data-ttu-id="d558d-110">CLR 問題`GetReJITParameters`回呼，讓分析工具指定重新編譯特定的方法的參數。</span><span class="sxs-lookup"><span data-stu-id="d558d-110">The CLR issues a `GetReJITParameters` callback so that the profiler can specify the parameters for recompiling a given method.</span></span> <span data-ttu-id="d558d-111">`GetReJITParameters`回呼發出一次，每個函式，分析工具所提供的參數適用於所有的執行個體，該函式。</span><span class="sxs-lookup"><span data-stu-id="d558d-111">The `GetReJITParameters` callback is issued only once per function; the parameters supplied by the profiler apply to all instances of that function.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="718cc-112">需求</span><span class="sxs-lookup"><span data-stu-id="718cc-112">Requirements</span></span>  
- <span data-ttu-id="718cc-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="718cc-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d558d-112">需求</span><span class="sxs-lookup"><span data-stu-id="d558d-112">Requirements</span></span>  
+ <span data-ttu-id="d558d-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d558d-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="718cc-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="718cc-114">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d558d-114">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d558d-114">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="718cc-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="718cc-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d558d-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d558d-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="718cc-116">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="718cc-116">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="d558d-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d558d-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="718cc-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="718cc-117">See also</span></span>
-- [<span data-ttu-id="718cc-118">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="718cc-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="718cc-119">ICorProfilerCallback4 介面</span><span class="sxs-lookup"><span data-stu-id="718cc-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
-- [<span data-ttu-id="718cc-120">JITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="718cc-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
-- [<span data-ttu-id="718cc-121">ReJITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="718cc-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)
+## <a name="see-also"></a><span data-ttu-id="d558d-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d558d-117">See also</span></span>
+
+- [<span data-ttu-id="d558d-118">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="d558d-118">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d558d-119">ICorProfilerCallback4 介面</span><span class="sxs-lookup"><span data-stu-id="d558d-119">ICorProfilerCallback4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-interface.md)
+- [<span data-ttu-id="d558d-120">JITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="d558d-120">JITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-jitcompilationstarted-method.md)
+- [<span data-ttu-id="d558d-121">ReJITCompilationStarted 方法</span><span class="sxs-lookup"><span data-stu-id="d558d-121">ReJITCompilationStarted Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback4-rejitcompilationstarted-method.md)

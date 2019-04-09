@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 255e2ced8cf7ed06234f8eb8e5423c0bd6541e9a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6fdd50f0de014aa68b14303e9e22924b0790fa55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484520"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085112"
 ---
-# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="bd09c-102">IMetaDataFilter::MarkToken 方法</span><span class="sxs-lookup"><span data-stu-id="bd09c-102">IMetaDataFilter::MarkToken Method</span></span>
-<span data-ttu-id="bd09c-103">設定值，指出指定的中繼資料語彙基元已處理。</span><span class="sxs-lookup"><span data-stu-id="bd09c-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
+# <a name="imetadatafiltermarktoken-method"></a><span data-ttu-id="14727-102">IMetaDataFilter::MarkToken 方法</span><span class="sxs-lookup"><span data-stu-id="14727-102">IMetaDataFilter::MarkToken Method</span></span>
+<span data-ttu-id="14727-103">設定值，指出指定的中繼資料語彙基元已處理。</span><span class="sxs-lookup"><span data-stu-id="14727-103">Sets a value indicating that the specified metadata token has been processed.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bd09c-104">語法</span><span class="sxs-lookup"><span data-stu-id="bd09c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="14727-104">語法</span><span class="sxs-lookup"><span data-stu-id="14727-104">Syntax</span></span>  
   
 ```  
 HRESULT MarkToken (  
@@ -35,18 +35,19 @@ HRESULT MarkToken (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bd09c-105">參數</span><span class="sxs-lookup"><span data-stu-id="bd09c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="14727-105">參數</span><span class="sxs-lookup"><span data-stu-id="14727-105">Parameters</span></span>  
  `tk`  
- <span data-ttu-id="bd09c-106">[in]要標記為已處理的權杖。</span><span class="sxs-lookup"><span data-stu-id="bd09c-106">[in] The token to mark as processed.</span></span>  
+ <span data-ttu-id="14727-106">[in]要標記為已處理的權杖。</span><span class="sxs-lookup"><span data-stu-id="14727-106">[in] The token to mark as processed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bd09c-107">需求</span><span class="sxs-lookup"><span data-stu-id="bd09c-107">Requirements</span></span>  
- <span data-ttu-id="bd09c-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bd09c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="14727-107">需求</span><span class="sxs-lookup"><span data-stu-id="14727-107">Requirements</span></span>  
+ <span data-ttu-id="14727-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="14727-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bd09c-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="bd09c-109">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="14727-109">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="14727-109">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="bd09c-110">**程式庫：** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="bd09c-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="14727-110">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="14727-110">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="bd09c-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bd09c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="14727-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="14727-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="bd09c-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bd09c-112">See also</span></span>
-- [<span data-ttu-id="bd09c-113">IMetaDataFilter 介面</span><span class="sxs-lookup"><span data-stu-id="bd09c-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)
+## <a name="see-also"></a><span data-ttu-id="14727-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="14727-112">See also</span></span>
+
+- [<span data-ttu-id="14727-113">IMetaDataFilter 介面</span><span class="sxs-lookup"><span data-stu-id="14727-113">IMetaDataFilter Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

@@ -7,26 +7,27 @@ helpviewer_keywords:
 - controls [WPF], Image
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
-ms.openlocfilehash: 9a57b4a656ca5119ac6717579f49950437588328
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59184856"
 ---
-# <a name="image"></a><span data-ttu-id="59353-102">Image</span><span class="sxs-lookup"><span data-stu-id="59353-102">Image</span></span>
-<span data-ttu-id="59353-103"><xref:System.Windows.Controls.Image>項目用來顯示中的點陣圖影像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="59353-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
+# <a name="image"></a><span data-ttu-id="22957-102">Image</span><span class="sxs-lookup"><span data-stu-id="22957-102">Image</span></span>
+<span data-ttu-id="22957-103"><xref:System.Windows.Controls.Image>項目用來顯示中的點陣圖影像[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]應用程式。</span><span class="sxs-lookup"><span data-stu-id="22957-103">The <xref:System.Windows.Controls.Image> element is used to display bitmap images in [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="59353-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="59353-104">In This Section</span></span>  
- [<span data-ttu-id="59353-105">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="59353-105">How-to Topics</span></span>](image-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="22957-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="22957-104">In This Section</span></span>  
+ [<span data-ttu-id="22957-105">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="22957-105">How-to Topics</span></span>](image-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="59353-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="59353-106">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="22957-106">參考資料</span><span class="sxs-lookup"><span data-stu-id="22957-106">Reference</span></span>  
  <xref:System.Windows.Controls.Image>  
   
  <xref:System.Windows.Media.Imaging.BitmapImage>  
   
  <xref:System.Windows.Media.Imaging.BitmapSource>  
   
-## <a name="see-also"></a><span data-ttu-id="59353-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="59353-107">See also</span></span>
-- [<span data-ttu-id="59353-108">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="59353-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
-- [<span data-ttu-id="59353-109">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="59353-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
+## <a name="see-also"></a><span data-ttu-id="22957-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="22957-107">See also</span></span>
+
+- [<span data-ttu-id="22957-108">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="22957-108">Imaging Overview</span></span>](../graphics-multimedia/imaging-overview.md)
+- [<span data-ttu-id="22957-109">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="22957-109">How-to Topics</span></span>](../graphics-multimedia/imaging-how-to-topics.md)
