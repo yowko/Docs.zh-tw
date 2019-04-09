@@ -17,29 +17,30 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 107039643e097ada1756054b2d14fcf0cbb71c00
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7694c9b736700466ac1299b9632440e133109288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493371"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154072"
 ---
-# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="6d2c3-102">ISymUnmanagedDocument::GetDocumentType 方法</span><span class="sxs-lookup"><span data-stu-id="6d2c3-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
-<span data-ttu-id="6d2c3-103">取得此文件的文件類型。</span><span class="sxs-lookup"><span data-stu-id="6d2c3-103">Gets the document type of this document.</span></span>  
+# <a name="isymunmanageddocumentgetdocumenttype-method"></a><span data-ttu-id="6a36b-102">ISymUnmanagedDocument::GetDocumentType 方法</span><span class="sxs-lookup"><span data-stu-id="6a36b-102">ISymUnmanagedDocument::GetDocumentType Method</span></span>
+<span data-ttu-id="6a36b-103">取得此文件的文件類型。</span><span class="sxs-lookup"><span data-stu-id="6a36b-103">Gets the document type of this document.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6d2c3-104">語法</span><span class="sxs-lookup"><span data-stu-id="6d2c3-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6a36b-104">語法</span><span class="sxs-lookup"><span data-stu-id="6a36b-104">Syntax</span></span>  
   
 ```  
 HRESULT GetDocumentType(  
     [out, retval] GUID*  pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="6d2c3-105">參數</span><span class="sxs-lookup"><span data-stu-id="6d2c3-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6a36b-105">參數</span><span class="sxs-lookup"><span data-stu-id="6a36b-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="6d2c3-106">[out]接收文件類型的變數的指標。</span><span class="sxs-lookup"><span data-stu-id="6d2c3-106">[out] Pointer to a variable that receives the document type.</span></span>  
+ <span data-ttu-id="6a36b-106">[out]接收文件類型的變數的指標。</span><span class="sxs-lookup"><span data-stu-id="6a36b-106">[out] Pointer to a variable that receives the document type.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="6d2c3-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="6d2c3-107">Return Value</span></span>  
- <span data-ttu-id="6d2c3-108">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="6d2c3-108">S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="6a36b-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="6a36b-107">Return Value</span></span>  
+ <span data-ttu-id="6a36b-108">如果方法成功為 S_OK。</span><span class="sxs-lookup"><span data-stu-id="6a36b-108">S_OK if the method succeeds.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6d2c3-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6d2c3-109">See also</span></span>
-- [<span data-ttu-id="6d2c3-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="6d2c3-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)
+## <a name="see-also"></a><span data-ttu-id="6a36b-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6a36b-109">See also</span></span>
+
+- [<span data-ttu-id="6a36b-110">ISymUnmanagedDocument 介面</span><span class="sxs-lookup"><span data-stu-id="6a36b-110">ISymUnmanagedDocument Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b2597cf14f4f1fc9a99740b4a07502246f80087d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6fa8d42f9e849db6a02f6c62b37e04cf5dee016e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466592"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119648"
 ---
-# <a name="getassemblyrefhash-method"></a><span data-ttu-id="b83fe-102">GetAssemblyRefHash 方法</span><span class="sxs-lookup"><span data-stu-id="b83fe-102">GetAssemblyRefHash Method</span></span>
-<span data-ttu-id="b83fe-103">擷取指定的組件的雜湊 blob。</span><span class="sxs-lookup"><span data-stu-id="b83fe-103">Retrieves a hash blob for a given assembly.</span></span>  
+# <a name="getassemblyrefhash-method"></a><span data-ttu-id="b146a-102">GetAssemblyRefHash 方法</span><span class="sxs-lookup"><span data-stu-id="b146a-102">GetAssemblyRefHash Method</span></span>
+<span data-ttu-id="b146a-103">擷取指定的組件的雜湊 blob。</span><span class="sxs-lookup"><span data-stu-id="b146a-103">Retrieves a hash blob for a given assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b83fe-104">語法</span><span class="sxs-lookup"><span data-stu-id="b83fe-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="b146a-104">語法</span><span class="sxs-lookup"><span data-stu-id="b146a-104">Syntax</span></span>  
   
 ```  
 HRESULT GetAssemblyRefHash(  
@@ -36,23 +36,24 @@ HRESULT GetAssemblyRefHash(
 ) PURE;  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b83fe-105">參數</span><span class="sxs-lookup"><span data-stu-id="b83fe-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="b146a-105">參數</span><span class="sxs-lookup"><span data-stu-id="b146a-105">Parameters</span></span>  
  `FileToken`  
- <span data-ttu-id="b83fe-106">要雜湊會參考的組件識別碼。</span><span class="sxs-lookup"><span data-stu-id="b83fe-106">ID of assembly to which the hash will refer.</span></span>  
+ <span data-ttu-id="b146a-106">要雜湊會參考的組件識別碼。</span><span class="sxs-lookup"><span data-stu-id="b146a-106">ID of assembly to which the hash will refer.</span></span>  
   
  `ppvHash`  
- <span data-ttu-id="b83fe-107">接收所產生的雜湊 blob。</span><span class="sxs-lookup"><span data-stu-id="b83fe-107">Receives the resulting hash blob.</span></span>  
+ <span data-ttu-id="b146a-107">接收所產生的雜湊 blob。</span><span class="sxs-lookup"><span data-stu-id="b146a-107">Receives the resulting hash blob.</span></span>  
   
  `pcbHash`  
- <span data-ttu-id="b83fe-108">接收大小，以位元組為單位的雜湊 blob。</span><span class="sxs-lookup"><span data-stu-id="b83fe-108">Receives size, in bytes, of hash blob.</span></span>  
+ <span data-ttu-id="b146a-108">接收大小，以位元組為單位的雜湊 blob。</span><span class="sxs-lookup"><span data-stu-id="b146a-108">Receives size, in bytes, of hash blob.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="b83fe-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="b83fe-109">Return Value</span></span>  
- <span data-ttu-id="b83fe-110">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b83fe-110">Returns S_OK if the method succeeds.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="b146a-109">傳回值</span><span class="sxs-lookup"><span data-stu-id="b146a-109">Return Value</span></span>  
+ <span data-ttu-id="b146a-110">如果方法成功，則會傳回 S_OK。</span><span class="sxs-lookup"><span data-stu-id="b146a-110">Returns S_OK if the method succeeds.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b83fe-111">需求</span><span class="sxs-lookup"><span data-stu-id="b83fe-111">Requirements</span></span>  
- <span data-ttu-id="b83fe-112">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="b83fe-112">Requires alink.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="b146a-111">需求</span><span class="sxs-lookup"><span data-stu-id="b146a-111">Requirements</span></span>  
+ <span data-ttu-id="b146a-112">需要 alink.h</span><span class="sxs-lookup"><span data-stu-id="b146a-112">Requires alink.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b83fe-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b83fe-113">See also</span></span>
-- [<span data-ttu-id="b83fe-114">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="b83fe-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
-- [<span data-ttu-id="b83fe-115">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="b83fe-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
-- [<span data-ttu-id="b83fe-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="b83fe-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)
+## <a name="see-also"></a><span data-ttu-id="b146a-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b146a-113">See also</span></span>
+
+- [<span data-ttu-id="b146a-114">IALink 介面</span><span class="sxs-lookup"><span data-stu-id="b146a-114">IALink Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
+- [<span data-ttu-id="b146a-115">IALink2 介面</span><span class="sxs-lookup"><span data-stu-id="b146a-115">IALink2 Interface</span></span>](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
+- [<span data-ttu-id="b146a-116">ALink API</span><span class="sxs-lookup"><span data-stu-id="b146a-116">ALink API</span></span>](../../../../docs/framework/unmanaged-api/alink/index.md)

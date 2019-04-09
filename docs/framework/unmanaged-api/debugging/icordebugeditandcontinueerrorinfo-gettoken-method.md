@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79c159f218a3d842e532bffdac79066ffe5df820
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ab2a1c0c3f280f115a408adc81a46196eb5a804c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538462"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152577"
 ---
-# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="dc6b3-102">ICorDebugEditAndContinueErrorInfo::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="dc6b3-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
-<span data-ttu-id="dc6b3-103">`GetToken` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="dc6b3-103">`GetToken` is obsolete.</span></span> <span data-ttu-id="dc6b3-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="dc6b3-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinueerrorinfogettoken-method"></a><span data-ttu-id="6729d-102">ICorDebugEditAndContinueErrorInfo::GetToken 方法</span><span class="sxs-lookup"><span data-stu-id="6729d-102">ICorDebugEditAndContinueErrorInfo::GetToken Method</span></span>
+`GetToken` <span data-ttu-id="6729d-103">已過時。</span><span class="sxs-lookup"><span data-stu-id="6729d-103">is obsolete.</span></span> <span data-ttu-id="6729d-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="6729d-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="dc6b3-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="dc6b3-105">See also</span></span>
-- [<span data-ttu-id="dc6b3-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="dc6b3-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="6729d-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6729d-105">See also</span></span>
+
+- [<span data-ttu-id="6729d-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="6729d-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

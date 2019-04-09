@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e9a3b0320ac0be785f0823afef1819ab8a35eb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91b09be04499396a2229962fd592f29cb8bc8d04
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155554"
 ---
-# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="08956-102">CorDebugExceptionCallbackType 列舉</span><span class="sxs-lookup"><span data-stu-id="08956-102">CorDebugExceptionCallbackType Enumeration</span></span>
-<span data-ttu-id="08956-103">表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。</span><span class="sxs-lookup"><span data-stu-id="08956-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
+# <a name="cordebugexceptioncallbacktype-enumeration"></a><span data-ttu-id="6ad7a-102">CorDebugExceptionCallbackType 列舉</span><span class="sxs-lookup"><span data-stu-id="6ad7a-102">CorDebugExceptionCallbackType Enumeration</span></span>
+<span data-ttu-id="6ad7a-103">表示一種從進行的回呼[ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md)事件。</span><span class="sxs-lookup"><span data-stu-id="6ad7a-103">Indicates the type of callback that is made from an [ICorDebugManagedCallback2::Exception](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-exception-method.md) event.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="08956-104">語法</span><span class="sxs-lookup"><span data-stu-id="08956-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6ad7a-104">語法</span><span class="sxs-lookup"><span data-stu-id="6ad7a-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDebugExceptionCallbackType {  
@@ -37,23 +37,24 @@ typedef enum CorDebugExceptionCallbackType {
 } CorDebugExceptionCallbackType;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="08956-105">成員</span><span class="sxs-lookup"><span data-stu-id="08956-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="6ad7a-105">成員</span><span class="sxs-lookup"><span data-stu-id="6ad7a-105">Members</span></span>  
   
-|<span data-ttu-id="08956-106">成員</span><span class="sxs-lookup"><span data-stu-id="08956-106">Member</span></span>|<span data-ttu-id="08956-107">描述</span><span class="sxs-lookup"><span data-stu-id="08956-107">Description</span></span>|  
+|<span data-ttu-id="6ad7a-106">成員</span><span class="sxs-lookup"><span data-stu-id="6ad7a-106">Member</span></span>|<span data-ttu-id="6ad7a-107">描述</span><span class="sxs-lookup"><span data-stu-id="6ad7a-107">Description</span></span>|  
 |------------|-----------------|  
-|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="08956-108">擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="08956-108">An exception was thrown.</span></span>|  
-|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="08956-109">例外狀況結束處理序已輸入使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="08956-109">The exception windup process entered user code.</span></span>|  
-|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="08956-110">結束例外狀況的處理序已找到`catch`中使用者程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="08956-110">The exception windup process found a `catch` block in user code.</span></span>|  
-|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="08956-111">未處理例外狀況。</span><span class="sxs-lookup"><span data-stu-id="08956-111">The exception was not handled.</span></span>|  
+|`DEBUG_EXCEPTION_FIRST_CHANCE`|<span data-ttu-id="6ad7a-108">擲回例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6ad7a-108">An exception was thrown.</span></span>|  
+|`DEBUG_EXCEPTION_USER_FIRST_CHANCE`|<span data-ttu-id="6ad7a-109">例外狀況結束處理序已輸入使用者程式碼。</span><span class="sxs-lookup"><span data-stu-id="6ad7a-109">The exception windup process entered user code.</span></span>|  
+|`DEBUG_EXCEPTION_CATCH_HANDLER_FOUND`|<span data-ttu-id="6ad7a-110">結束例外狀況的處理序已找到`catch`中使用者程式碼區塊。</span><span class="sxs-lookup"><span data-stu-id="6ad7a-110">The exception windup process found a `catch` block in user code.</span></span>|  
+|`DEBUG_EXCEPTION_UNHANDLED`|<span data-ttu-id="6ad7a-111">未處理例外狀況。</span><span class="sxs-lookup"><span data-stu-id="6ad7a-111">The exception was not handled.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="08956-112">需求</span><span class="sxs-lookup"><span data-stu-id="08956-112">Requirements</span></span>  
- <span data-ttu-id="08956-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="08956-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6ad7a-112">需求</span><span class="sxs-lookup"><span data-stu-id="6ad7a-112">Requirements</span></span>  
+ <span data-ttu-id="6ad7a-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6ad7a-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="08956-114">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="08956-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="6ad7a-114">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="6ad7a-114">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="08956-115">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="08956-115">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="6ad7a-115">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="6ad7a-115">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="08956-116">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="08956-116">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="6ad7a-116">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="6ad7a-116">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="08956-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="08956-117">See also</span></span>
-- [<span data-ttu-id="08956-118">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="08956-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="6ad7a-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6ad7a-117">See also</span></span>
+
+- [<span data-ttu-id="6ad7a-118">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="6ad7a-118">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
