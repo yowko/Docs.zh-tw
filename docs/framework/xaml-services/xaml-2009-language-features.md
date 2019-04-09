@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML 2009 [XAML Services]
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
-ms.openlocfilehash: 6de103d9b5b59ec1a47098e44e07ee95a3db166e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58039577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162276"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 語言功能
 XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語言規格。 XAML 2009 引進了數個新的指示詞和建構。 其中包括[X:arguments 指示詞](x-arguments-directive.md); [X:factorymethod 指示詞](x-factorymethod-directive.md); [X:reference 標記延伸](x-reference-markup-extension.md); [X:typearguments 指示詞](x-typearguments-directive.md); 和通用語言基本類型的內建類型 (例如`x:Char`)。  
@@ -33,4 +33,5 @@ XAML 2009 是新 XAML 語言功能的縮寫詞彙，可擴充現有的 XAML 語�
  針對事件所支援的屬性，XAML 2006 會假定標記編譯與將事件送出到標記編譯有關。 XAML 2009 支援類似標記延伸的標記形式，這會將事件連接延遲到 XAML 的執行階段剖析和載入。 不過，WPF 應用程式和 WPF UI 的 XAML 情節通常不會使用這項功能。 WPF 及其 XAML 2006 實作會使用事件處理常式連接組合進行在 <xref:System.Windows.UIElement> 層級定義的路由事件，並使用其標記編譯器步驟進行大部分的事件屬性處理。 標記編譯器也會前置處理在 XAML 中找到的任何事件屬性，建置動作會在此 XAML 中宣告使用標記編譯器。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], auditing events
 ms.assetid: e71e9587-3336-46a2-9a9e-d72a1743ecec
-ms.openlocfilehash: f3d4ed8ea9a3c0f45185cd0f631cd983b0e364c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0dd025b8b7adc97420699eb2f5099ab1ee75b820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125752"
 ---
 # <a name="how-to-audit-windows-communication-foundation-security-events"></a>HOW TO：稽核 Windows Communication Foundation 安全性事件
 Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Windows 事件記錄檔，您可以使用 Windows 事件檢視器檢視。 這個主題會說明如何將應用程式設定為會記錄安全性事件。 如需有關 WCF 稽核的詳細資訊，請參閱[稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。  
@@ -88,6 +88,7 @@ Windows Communication Foundation (WCF) 可讓您將安全性事件記錄到 Wind
  如果<xref:System.ServiceModel.AuditLogLocation>屬性設定為<xref:System.ServiceModel.AuditLogLocation.Security>並**稽核物件存取**不一定都是**本機安全性原則**，稽核事件將不會寫入安全性記錄檔。 請注意，這時不會傳回任何失敗，但是稽核項目也不會寫入安全性記錄檔中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.AuditLogLocation%2A>
 - <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior>
 - <xref:System.ServiceModel.AuditLogLocation>

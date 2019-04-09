@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
-ms.openlocfilehash: 34d49416bb7d0da60624a1f60e4dbd01a1dff9cd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a4bbed1f115ef5cfb6b7b63156f2d84b071cf224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584541"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127110"
 ---
 # <a name="date-and-time-data"></a>日期和時間資料
 SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些新資料型別包括日期和時間的個別型別，以及具有較大範圍、精確度和時區感知的擴充資料型別。 從 .NET Framework 3.5 版 Service Pack (SP) 1 開始，.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient>) 就會針對 SQL Server 2008 Database Engine 的所有新功能提供完整支援。 您必須安裝 .NET Framework 3.5 SP1 (或更新版本) 才能使用這些新功能搭配 SqlClient。  
@@ -99,7 +99,7 @@ SQL Server 2008 導入了處理日期和時間資訊的新資料型別。 這些
 >  小於零或是大於或等於 24 小時的時間值將會擲回 <xref:System.ArgumentException>。  
   
 ### <a name="creating-parameters"></a>建立參數  
- 您可以使用 <xref:System.Data.SqlClient.SqlParameter> 物件的建構函式 (Constructor)，或將它加入至 <xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A> 集合 (透過呼叫 `Add` 的 <xref:System.Data.SqlClient.SqlParameterCollection> 方法)，藉以建立此物件。 `Add` 方法會將建構函式引數或現有的參數物件當做輸入。  
+ 您可以建立<xref:System.Data.SqlClient.SqlParameter>物件使用其建構函式，或將它加入至<xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>藉由呼叫集合`Add`方法<xref:System.Data.SqlClient.SqlParameterCollection>。 `Add` 方法會將建構函式引數或現有的參數物件當做輸入。  
   
  本主題的下列章節會提供如何指定 date 和 time 參數的範例。 如需使用參數的其他範例，請參閱[設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)並[DataAdapter 的參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)。  
   
@@ -240,7 +240,8 @@ command.Parameters.AddWithValue( _
 |[資料類型 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|說明 SQL Server 2008 中的系統資料型別。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 資料類型對應](../../../../../docs/framework/data/adonet/sql-server-data-type-mappings.md)
 - [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [SQL Server 資料類型和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-data-types.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

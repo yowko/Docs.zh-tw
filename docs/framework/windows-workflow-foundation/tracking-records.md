@@ -2,12 +2,12 @@
 title: 追蹤記錄
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
-ms.openlocfilehash: 753541814497b62cf05f0c22cc4e08c0d127e91b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f8b79cad7161e780f336a9c5902e69d9826b23d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163913"
 ---
 # <a name="tracking-records"></a>追蹤記錄
 工作流程執行階段經檢測會發出追蹤記錄，以追蹤工作流程執行個體的執行。  
@@ -50,16 +50,17 @@ ms.locfileid: "54676103"
   
  例如，若有包含 <xref:System.Activities.Statements.Sequence> 作業的簡單 <xref:System.Activities.Statements.WriteLine> 活動，其追蹤記錄是按下列順序發出的：  
   
-1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在啟動。  
+1.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示正在啟動工作流程。  
   
 2.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 表示活動已排程。 在此種情況下，這是 <xref:System.Activities.Statements.Sequence> 活動。  
   
-3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 代表 <xref:System.Activities.Statements.WriteLine> 活動。  
+3.  <xref:System.Activities.Tracking.ActivityScheduledRecord> 代表<xref:System.Activities.Statements.WriteLine>活動。  
   
 4.  有兩個 <xref:System.Activities.Tracking.ActivityStateRecord> 記錄，代表兩個即將完成的活動。  
   
-5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示工作流程正在完成。  
+5.  <xref:System.Activities.Tracking.WorkflowInstanceRecord> 表示即將完成的工作流程。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

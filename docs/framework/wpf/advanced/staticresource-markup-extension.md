@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XAML [WPF], StaticResource markup extension
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
-ms.openlocfilehash: f3fb2559510d85f6e55a4784f2b528f16737a2ab
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371108"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125142"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource 標記延伸
 提供值的任何[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬性，藉由查閱已定義之資源的參考。 該資源查閱行為相當於載入時間對應，它會尋找先前已載入，從目前標記的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]其他應用程式來源，以及頁面上，且會產生做為該資源值在執行階段物件中的屬性值。  
@@ -51,12 +51,11 @@ ms.locfileid: "57371108"
   
  豐富的宣告式方法的參考資源是以[DynamicResource 標記延伸](dynamicresource-markup-extension.md)。  
   
- 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 
-  `StaticResource` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 延伸類別的 <xref:System.Windows.StaticResourceExtension> 值。  
+ 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `StaticResource` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 延伸類別的 <xref:System.Windows.StaticResourceExtension> 值。  
   
  `StaticResource` 可用於物件元素語法。 在此案例中，指定的值<xref:System.Windows.StaticResourceExtension.ResourceKey%2A>屬性是必要項。  
   
- `StaticResource` 也可以用於會指定 <xref:System.Windows.StaticResourceExtension.ResourceKey%2A> 屬性 (Property) 做為 property=value 配對組的詳細屬性 (Attribute) 使用方式中。  
+ `StaticResource` 也可以用於指定的詳細資訊的屬性使用方式<xref:System.Windows.StaticResourceExtension.ResourceKey%2A>屬性做為屬性 = 值組：  
   
 ```xml  
 <object property="{StaticResource ResourceKey=key}" .../>  
@@ -66,9 +65,10 @@ ms.locfileid: "57371108"
   
  在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]處理器實作中，這個標記延伸的處理由定義<xref:System.Windows.StaticResourceExtension>類別。  
   
- `StaticResource` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `StaticResource` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [樣式設定和範本化](../controls/styling-and-templating.md)
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)

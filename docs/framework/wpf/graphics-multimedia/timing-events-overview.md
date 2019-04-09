@@ -8,12 +8,12 @@ helpviewer_keywords:
 - timelines [WPF]
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
-ms.openlocfilehash: 2ce4794c5f0abfc31ae9d6f813bcfd7a9d375611
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379571"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167163"
 ---
 # <a name="timing-events-overview"></a>計時事件概觀
 本主題描述如何使用提供的五個計時事件<xref:System.Windows.Media.Animation.Timeline>和<xref:System.Windows.Media.Animation.Clock>物件。  
@@ -56,7 +56,7 @@ ms.locfileid: "57379571"
   
 |Event - 事件|觸發互動式作業|其他觸發程序|  
 |-----------|--------------------------------------|--------------------|  
-|**Completed**|跳至填滿|時鐘完成。|  
+|**已完成**|跳至填滿|時鐘完成。|  
 |**CurrentGlobalSpeedInvalidated**|暫停、繼續、搜尋、設定速率、跳至填滿、停止|時鐘反轉、加速、啟動或停止。|  
 |**CurrentStateInvalidated**|開始、跳至填滿、停止|時鐘啟動、停止或填滿。|  
 |**CurrentTimeInvalidated**|開始、搜尋、跳至填滿、停止|時鐘進行。|  
@@ -77,6 +77,7 @@ ms.locfileid: "57379571"
  當您註冊<xref:System.Windows.Media.Animation.Timeline.Completed>時間軸上的事件，例如，您實際上告訴系統註冊針對<xref:System.Windows.Media.Animation.Clock.Completed>事件的時間軸會建立每個時鐘。 程式碼中，您必須註冊此活動之前<xref:System.Windows.Media.Animation.Clock>已經為這個時刻表; 否則您將不會收到通知。 發生這種情況中自動[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]; 剖析器會自動註冊的事件之前<xref:System.Windows.Media.Animation.Clock>建立。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [動畫和計時系統概觀](animation-and-timing-system-overview.md)
 - [動畫概觀](animation-overview.md)
 - [計時行為概觀](timing-behaviors-overview.md)

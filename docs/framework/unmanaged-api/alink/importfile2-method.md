@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 88006703ba4a491ae458868a1431be618d37252a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0c6279c790e9b28e5f3bac93d5d0fdd411dd8c0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127266"
 ---
 # <a name="importfile2-method"></a>ImportFile2 方法
 匯入組件和未繫結的模組。 這個方法就像是[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)，但即使正在匯入的檔案不存在磁碟上的運作方式。  
@@ -69,6 +69,7 @@ HRESULT ImportFile2(
  需要 alink.h。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

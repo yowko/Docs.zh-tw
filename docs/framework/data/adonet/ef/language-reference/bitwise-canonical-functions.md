@@ -2,12 +2,12 @@
 title: 位元標準函式
 ms.date: 03/30/2017
 ms.assetid: 993868ca-16e3-47b6-9915-c29cd63b0a21
-ms.openlocfilehash: 882ecd2e82c64981dd76b3c860711433293145b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 67d78e8d31f0bc3564a0a111b9bc71cbd0e14f5c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54742261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127791"
 ---
 # <a name="bitwise-canonical-functions"></a>位元標準函式
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 包含位元標準函式。  
@@ -23,4 +23,5 @@ ms.locfileid: "54742261"
 |`BitWiseXor (` `value1` `,`  `value2` `)`|傳回 `value1` 和 `value2` 的位元排除分離，作為 `value1` 和 `value2` 的型別。<br /><br /> **引數**<br /><br /> A `Byte`， `Int16`，`Int32`和`Int64`。<br /><br /> **範例**<br /><br /> `-- The following example returns 2.`<br /><br /> `BitWiseXor (1,3)`|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [標準函式](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)
