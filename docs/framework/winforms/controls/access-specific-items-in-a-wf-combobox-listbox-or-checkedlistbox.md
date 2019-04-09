@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取特定項目中的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項
+title: HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 33dcefa39cd6a8c981d03ce5fb63fc8135613640
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59077208"
 ---
-# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="b8362-102">HOW TO：存取特定項目中的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項</span><span class="sxs-lookup"><span data-stu-id="b8362-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
-<span data-ttu-id="b8362-103">存取 Windows Form 下拉式方塊、 清單方塊中或選取的清單方塊中的特定項目是必要的工作。</span><span class="sxs-lookup"><span data-stu-id="b8362-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="b8362-104">它可讓您以程式設計方式決定功能的清單中，在任何給定的位置。</span><span class="sxs-lookup"><span data-stu-id="b8362-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
+# <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a><span data-ttu-id="ce71e-102">HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目</span><span class="sxs-lookup"><span data-stu-id="ce71e-102">How to: Access Specific Items in a Windows Forms ComboBox, ListBox, or CheckedListBox Control</span></span>
+<span data-ttu-id="ce71e-103">存取 Windows Form 下拉式方塊、 清單方塊中或選取的清單方塊中的特定項目是必要的工作。</span><span class="sxs-lookup"><span data-stu-id="ce71e-103">Accessing specific items in a Windows Forms combo box, list box, or checked list box is an essential task.</span></span> <span data-ttu-id="ce71e-104">它可讓您以程式設計方式決定功能的清單中，在任何給定的位置。</span><span class="sxs-lookup"><span data-stu-id="ce71e-104">It enables you to programmatically determine what is in a list, at any given position.</span></span>  
   
-### <a name="to-access-a-specific-item"></a><span data-ttu-id="b8362-105">若要存取特定的項目</span><span class="sxs-lookup"><span data-stu-id="b8362-105">To access a specific item</span></span>  
+### <a name="to-access-a-specific-item"></a><span data-ttu-id="ce71e-105">若要存取特定的項目</span><span class="sxs-lookup"><span data-stu-id="ce71e-105">To access a specific item</span></span>  
   
-1.  <span data-ttu-id="b8362-106">查詢`Items`使用特定的項目索引的集合：</span><span class="sxs-lookup"><span data-stu-id="b8362-106">Query the `Items` collection using the index of the specific item:</span></span>  
+1.  <span data-ttu-id="ce71e-106">查詢`Items`使用特定的項目索引的集合：</span><span class="sxs-lookup"><span data-stu-id="ce71e-106">Query the `Items` collection using the index of the specific item:</span></span>  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  
@@ -51,8 +51,9 @@ ms.locfileid: "57714017"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b8362-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b8362-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ce71e-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ce71e-107">See also</span></span>
+
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
-- [<span data-ttu-id="b8362-108">用來列出選項的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="b8362-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
+- [<span data-ttu-id="ce71e-108">用來列出選項的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="ce71e-108">Windows Forms Controls Used to List Options</span></span>](windows-forms-controls-used-to-list-options.md)
