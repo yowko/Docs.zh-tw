@@ -9,17 +9,16 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 935d86195acaca94b0115a8cdcf7289c23613f7f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369756"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125116"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 內容模型概觀
 本內容模型概觀描述支援的內容<xref:System.Windows.Documents.TextElement>。 <xref:System.Windows.Documents.Paragraph>類別是一種<xref:System.Windows.Documents.TextElement>。 內容模型描述哪些物件/元素可包含於其他物件/元素內。 本概觀摘要說明用於衍生自物件的內容模型<xref:System.Windows.Documents.TextElement>。 如需詳細資訊，請參閱 <<c0> [ 非固定格式文件概觀](flow-document-overview.md)。  
-  
-  
+
 <a name="text_element_classes"></a>   
 ## <a name="content-model-diagram"></a>內容模型圖表  
  下圖摘要說明內容的模型類別衍生自<xref:System.Windows.Documents.TextElement>以及如何其他非`TextElement`符合此模型的類別。  
@@ -58,11 +57,11 @@ ms.locfileid: "57369756"
 ## <a name="working-with-textelement-content-programmatically"></a>以程式設計方式使用 TextElement 內容  
  內容<xref:System.Windows.Documents.TextElement>組成的集合，因此以程式設計方式操作的內容<xref:System.Windows.Documents.TextElement>物件是藉由使用這些集合。 有三個不同的集合，可供<xref:System.Windows.Documents.TextElement>-衍生的類別：  
   
--   <xref:System.Windows.Documents.InlineCollection>：表示 <xref:System.Windows.Documents.Inline> 項目的集合。 <xref:System.Windows.Documents.InlineCollection> 會定義 <xref:System.Windows.Documents.Paragraph>、<xref:System.Windows.Documents.Span> 和 <xref:System.Windows.Controls.TextBlock> 項目的可允許子內容。  
+-   <xref:System.Windows.Documents.InlineCollection>:表示 <xref:System.Windows.Documents.Inline> 項目的集合。 <xref:System.Windows.Documents.InlineCollection> 定義可允許子內容<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Span>，和<xref:System.Windows.Controls.TextBlock>項目。  
   
--   <xref:System.Windows.Documents.BlockCollection>：表示 <xref:System.Windows.Documents.Block> 項目的集合。 <xref:System.Windows.Documents.BlockCollection> 會定義 <xref:System.Windows.Documents.FlowDocument>、<xref:System.Windows.Documents.Section>、<xref:System.Windows.Documents.ListItem>、<xref:System.Windows.Documents.TableCell>、<xref:System.Windows.Documents.Floater> 和 <xref:System.Windows.Documents.Figure> 項目的可允許子內容。  
+-   <xref:System.Windows.Documents.BlockCollection>:表示 <xref:System.Windows.Documents.Block> 項目的集合。 <xref:System.Windows.Documents.BlockCollection> 定義可允許子內容<xref:System.Windows.Documents.FlowDocument>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.ListItem>， <xref:System.Windows.Documents.TableCell>， <xref:System.Windows.Documents.Floater>，和<xref:System.Windows.Documents.Figure>項目。  
   
--   <xref:System.Windows.Documents.ListItemCollection>：流動內容項目，表示特定的內容項目，在已排序或未按順序<xref:System.Windows.Documents.List>。  
+-   <xref:System.Windows.Documents.ListItemCollection>:流動內容項目，表示特定的內容項目，在已排序或未按順序<xref:System.Windows.Documents.List>。  
   
  您可以使用操作 （新增或移除項目） 從這些使用的個別屬性的集合**Inlines**，**區塊**，並**ListItems**。 下列範例示範如何操作的內容使用 Span **Inlines**屬性。  
   
@@ -102,8 +101,9 @@ ms.locfileid: "57369756"
  請參閱[WPF 內容模型](../controls/wpf-content-model.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [透過 Blocks 屬性管理 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [透過 Blocks 屬性管理非固定格式內容元素](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
+- [透過 Blocks 屬性管理動態內容項目](how-to-manipulate-flow-content-elements-through-the-blocks-property.md)
 - [透過 Blocks 屬性管理 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [透過 Columns 屬性管理表格的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
-- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 Columns 屬性管理資料表的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

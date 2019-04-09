@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 9e55714db55168c95f744665165e333d7f2ca730
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
+ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634553"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59055348"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結會提供簡單且一致的方式呈現，並與資料互動的應用程式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
   
  相較於傳統模型，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的資料繫結功能具有數個優點，包括本身就支援資料繫結的相當多屬性、資料的彈性 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 表示，以及 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 個別的清楚商務邏輯。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "58634553"
   
 -   目標屬性必須是相依性屬性。 大部分<xref:System.Windows.UIElement>屬性是相依性屬性，而大部分的相依性屬性，唯讀的除了預設支援資料繫結。 (僅<xref:System.Windows.DependencyObject>類型可以定義相依性屬性以及所有<xref:System.Windows.UIElement>均衍生自<xref:System.Windows.DependencyObject>。)  
   
--   雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件和 [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] 格式的資料。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
+-   雖然圖中未指出，但應該注意的是，繫結來源物件不限於自訂的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 物件。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 資料繫結支援資料的形式[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]物件和[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]。 若要提供一些範例，可能會繫結來源<xref:System.Windows.UIElement>，任何清單物件、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]相關聯的物件[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]資料或 Web 服務或 XmlNode，其中包含您[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需詳細資訊，請參閱[繫結來源概觀](binding-sources-overview.md)。  
   
  當您閱讀其他[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] 主題時有一點很重要，請記住在建立繫結時，是將繫結目標「繫結到」繫結來源。 例如，如果您要顯示一些基本[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]中的資料<xref:System.Windows.Controls.ListBox>使用資料繫結，您要繫結您<xref:System.Windows.Controls.ListBox>到[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。  
   
@@ -431,9 +431,9 @@ ms.locfileid: "58634553"
   
 ## <a name="see-also"></a>另請參閱
 - <xref:System.Windows.Controls.DataErrorValidationRule>
-- [WPF 第 4.5 版的新功能](../getting-started/whats-new.md)
+- [WPF 4.5 版的新功能](../getting-started/whats-new.md)
 - [繫結至 LINQ 查詢的結果](how-to-bind-to-the-results-of-a-linq-query.md)
 - [資料繫結](../advanced/optimizing-performance-data-binding.md)
 - [資料繫結示範](https://go.microsoft.com/fwlink/?LinkID=163703)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)
 - [繫結至 ADO.NET 資料來源](how-to-bind-to-an-ado-net-data-source.md)
