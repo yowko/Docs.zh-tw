@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: a4606b73835087a406d989960d7a6e24ad218769
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59191580"
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
 本主題介紹主要畫面格動畫。 主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
@@ -284,6 +284,7 @@ ms.locfileid: "57362977"
 8.  也就是排序主要畫面格的解決時間 （主索引鍵） 的順序和宣告 （次要索引鍵） 的順序，請使用穩定的排序根據已解析的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.KeyTime>
 - <xref:System.Windows.Media.Animation.KeySpline>
 - <xref:System.Windows.Media.Animation.Timeline>
@@ -291,5 +292,5 @@ ms.locfileid: "57362977"
 - [主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)
 - [動畫概觀](animation-overview.md)
 - [分鏡腳本概觀](storyboards-overview.md)
-- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
+- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)
 - [計時行為概觀](timing-behaviors-overview.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF services [WCF]
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
-ms.openlocfilehash: 38fd9b89e2719be8ce4d33b1b50f68171d587369
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197902"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>教學課程：裝載和執行基本的 Windows Communication Foundation 服務
 
@@ -30,7 +30,6 @@ ms.locfileid: "58410091"
 > - 加入裝載 WCF 服務的程式碼。
 > - 更新組態檔。
 > - 啟動 WCF 服務，並確認它正在執行。
-
 
 ## <a name="create-and-configure-a-console-app-project-for-hosting-the-service"></a>建立及設定裝載服務的主控台應用程式專案
 
@@ -176,7 +175,6 @@ ms.locfileid: "58410091"
     
     如需此程式碼的運作方式的資訊，請參閱[服務裝載程式步驟](#service-hosting-program-steps)。
 
-
 2. 更新專案屬性：
 
    1. 在 **方案總管**視窗中，選取**GettingStartedHost**資料夾，然後再選取**屬性**從捷徑功能表。
@@ -189,7 +187,6 @@ ms.locfileid: "58410091"
 
    3. 從**檔案**功能表上，選取**全部儲存**。
 
-
 ## <a name="verify-the-service-is-working"></a>確認服務正常運作
 
 1. 建置方案，然後再執行**GettingStartedHost**主控台應用程式在 Visual Studio 內從。 
@@ -200,7 +197,6 @@ ms.locfileid: "58410091"
    
    > [!NOTE]
    > 此類服務需要在接聽的機器上的 HTTP 位址註冊適當的權限。 系統管理員帳戶具有此權限，但是非系統管理員帳戶則必須被授與 HTTP 命名空間的權限。 如需如何設定命名空間保留的詳細資訊，請參閱[設定 HTTP 和 HTTPS](feature-details/configuring-http-and-https.md)。 
-
 
 ## <a name="service-hosting-program-steps"></a>服務裝載程式步驟
 
@@ -223,7 +219,6 @@ ms.locfileid: "58410091"
 > 當您新增的 WCF 服務程式庫時，Visual Studio 裝載它，如果您啟動服務主機來偵錯。 若要避免衝突，您可以防止 Visual Studio 裝載 WCF 服務程式庫。 
 > 1. 選取  **GettingStartedLib**專案中**方案總管**，然後選擇 **屬性**從捷徑功能表。
 > 2. 選取  **WCF 選項**並取消核取**啟動 WCF 服務主機時相同的方案中的另一個專案進行偵錯**。
-
 
 ## <a name="next-steps"></a>後續步驟
 

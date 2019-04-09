@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 184be04c963116906c1dc2c0a5803814402ea8e0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 97dadfa8b7d32d4f0f981e50d6eb90ca74ecdaa3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826430"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147104"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>使用組態檔設定應用程式
 .NET Framework 透過組態檔賦予開發人員和系統管理員對於應用程式執行方式的控制和彈性。 組態檔是可以按需要變更的 XML 檔。 系統管員能夠控制應用程式可以存取哪些受保護的資源、應用程式將使用之組件的版本為何，以及遠端應用程式和物件要位於何處。 開發人員則可以將設定值置於組態檔，排除每當設定值變更時重新編譯應用程式的需要。 本章節說明可以設定些什麼以及設定應用程式會很有用處的原因。  
@@ -101,7 +101,7 @@ ms.locfileid: "55826430"
 -   使用者原則組態檔：%USERPROFILE%\Application data\Microsoft\CLR security config\v*xx.xx*\Security.config  
   
 ## <a name="in-this-section"></a>本節內容  
- [如何：使用 DEVPATH 找出組件](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
+ [HOW TO：使用 DEVPATH 找出組件](../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)  
  說明如何在搜尋組件時指示執行階段使用 DEVPATH 環境變數。  
   
  [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)  
@@ -113,13 +113,14 @@ ms.locfileid: "55826430"
  [設定密碼編譯類別](../../../docs/framework/configure-apps/configure-cryptography-classes.md)  
  說明如何將演算法名稱對應到加密類別，物件識別項對應到加密演算法。  
   
- [如何：建立發行者原則](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
+ [HOW TO：建立發行者原則](../../../docs/framework/configure-apps/how-to-create-a-publisher-policy.md)  
  說明您何時應該以何種方式新增發行者原則檔，以指定組件重新導向和程式碼基底設定。  
   
  [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)  
  說明啟動、執行階段、網路和其他類型組態設定的結構描述階層架構。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [組態檔結構描述](../../../docs/framework/configure-apps/file-schema/index.md)
 - [指定組件的位置](../../../docs/framework/configure-apps/specify-assembly-location.md)
 - [重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)
