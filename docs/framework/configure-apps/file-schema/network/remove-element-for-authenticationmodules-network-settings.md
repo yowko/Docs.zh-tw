@@ -1,5 +1,5 @@
 ---
-title: authenticationModules 的 <remove> 項目 (網路設定)
+title: <remove> AuthenticationModules （網路設定） 的項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -10,22 +10,22 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: a8afdf442f8dc4e57a407583ea6c452330dae53f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125249"
 ---
-# <a name="remove-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="c92b2-102">\<移除 > authenticationModules （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="c92b2-102">\<remove> Element for authenticationModules (Network Settings)</span></span>
-<span data-ttu-id="c92b2-103">移除應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="c92b2-103">Removes an authentication module from the application.</span></span>  
+# <a name="remove-element-for-authenticationmodules-network-settings"></a><span data-ttu-id="2deb0-102">\<移除 > authenticationModules （網路設定） 的項目</span><span class="sxs-lookup"><span data-stu-id="2deb0-102">\<remove> Element for authenticationModules (Network Settings)</span></span>
+<span data-ttu-id="2deb0-103">移除應用程式中的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="2deb0-103">Removes an authentication module from the application.</span></span>  
   
- <span data-ttu-id="c92b2-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="c92b2-104">\<configuration></span></span>  
-<span data-ttu-id="c92b2-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="c92b2-105">\<system.net></span></span>  
-<span data-ttu-id="c92b2-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="c92b2-106">\<authenticationModules></span></span>  
-<span data-ttu-id="c92b2-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="c92b2-107">\<remove></span></span>  
+ <span data-ttu-id="2deb0-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="2deb0-104">\<configuration></span></span>  
+<span data-ttu-id="2deb0-105">\<system.net></span><span class="sxs-lookup"><span data-stu-id="2deb0-105">\<system.net></span></span>  
+<span data-ttu-id="2deb0-106">\<authenticationModules></span><span class="sxs-lookup"><span data-stu-id="2deb0-106">\<authenticationModules></span></span>  
+<span data-ttu-id="2deb0-107">\<remove></span><span class="sxs-lookup"><span data-stu-id="2deb0-107">\<remove></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c92b2-108">語法</span><span class="sxs-lookup"><span data-stu-id="c92b2-108">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2deb0-108">語法</span><span class="sxs-lookup"><span data-stu-id="2deb0-108">Syntax</span></span>  
   
 ```xml  
 <remove   
@@ -33,34 +33,34 @@ ms.locfileid: "55281017"
 />  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="c92b2-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="c92b2-109">Attributes and Elements</span></span>  
- <span data-ttu-id="c92b2-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="c92b2-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="2deb0-109">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="2deb0-109">Attributes and Elements</span></span>  
+ <span data-ttu-id="2deb0-110">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="2deb0-110">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="c92b2-111">屬性</span><span class="sxs-lookup"><span data-stu-id="c92b2-111">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="2deb0-111">屬性</span><span class="sxs-lookup"><span data-stu-id="2deb0-111">Attributes</span></span>  
   
-|<span data-ttu-id="c92b2-112">**屬性**</span><span class="sxs-lookup"><span data-stu-id="c92b2-112">**Attribute**</span></span>|<span data-ttu-id="c92b2-113">**描述**</span><span class="sxs-lookup"><span data-stu-id="c92b2-113">**Description**</span></span>|  
+|**<span data-ttu-id="2deb0-112">屬性</span><span class="sxs-lookup"><span data-stu-id="2deb0-112">Attribute</span></span>**|**<span data-ttu-id="2deb0-113">描述</span><span class="sxs-lookup"><span data-stu-id="2deb0-113">Description</span></span>**|  
 |-------------------|---------------------|  
-|<span data-ttu-id="c92b2-114">**type**</span><span class="sxs-lookup"><span data-stu-id="c92b2-114">**type**</span></span>|<span data-ttu-id="c92b2-115">若要移除的驗證模組的名稱。</span><span class="sxs-lookup"><span data-stu-id="c92b2-115">The name of the authentication module to remove.</span></span>|  
+|**<span data-ttu-id="2deb0-114">類型</span><span class="sxs-lookup"><span data-stu-id="2deb0-114">type</span></span>**|<span data-ttu-id="2deb0-115">若要移除的驗證模組的名稱。</span><span class="sxs-lookup"><span data-stu-id="2deb0-115">The name of the authentication module to remove.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="c92b2-116">子元素</span><span class="sxs-lookup"><span data-stu-id="c92b2-116">Child Elements</span></span>  
- <span data-ttu-id="c92b2-117">無。</span><span class="sxs-lookup"><span data-stu-id="c92b2-117">None.</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="2deb0-116">子元素</span><span class="sxs-lookup"><span data-stu-id="2deb0-116">Child Elements</span></span>  
+ <span data-ttu-id="2deb0-117">無。</span><span class="sxs-lookup"><span data-stu-id="2deb0-117">None.</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="c92b2-118">父項目</span><span class="sxs-lookup"><span data-stu-id="c92b2-118">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="2deb0-118">父項目</span><span class="sxs-lookup"><span data-stu-id="2deb0-118">Parent Elements</span></span>  
   
-|<span data-ttu-id="c92b2-119">**目**</span><span class="sxs-lookup"><span data-stu-id="c92b2-119">**Element**</span></span>|<span data-ttu-id="c92b2-120">**描述**</span><span class="sxs-lookup"><span data-stu-id="c92b2-120">**Description**</span></span>|  
+|**<span data-ttu-id="2deb0-119">項目</span><span class="sxs-lookup"><span data-stu-id="2deb0-119">Element</span></span>**|**<span data-ttu-id="2deb0-120">描述</span><span class="sxs-lookup"><span data-stu-id="2deb0-120">Description</span></span>**|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="c92b2-121">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="c92b2-121">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="c92b2-122">指定用來驗證網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="c92b2-122">Specifies modules used to authenticate network requests.</span></span>|  
+|[<span data-ttu-id="2deb0-121">authenticationModules</span><span class="sxs-lookup"><span data-stu-id="2deb0-121">authenticationModules</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|<span data-ttu-id="2deb0-122">指定用來驗證網路要求的模組。</span><span class="sxs-lookup"><span data-stu-id="2deb0-122">Specifies modules used to authenticate network requests.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="c92b2-123">備註</span><span class="sxs-lookup"><span data-stu-id="c92b2-123">Remarks</span></span>  
- <span data-ttu-id="c92b2-124">`remove`項目移除先前已定義在組態檔中或在組態階層架構中較高層級的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="c92b2-124">The `remove` element removes authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2deb0-123">備註</span><span class="sxs-lookup"><span data-stu-id="2deb0-123">Remarks</span></span>  
+ <span data-ttu-id="2deb0-124">`remove`項目移除先前已定義在組態檔中或在組態階層架構中較高層級的驗證模組。</span><span class="sxs-lookup"><span data-stu-id="2deb0-124">The `remove` element removes authentication modules that were defined earlier in the configuration file or at a higher level in the configuration hierarchy.</span></span>  
   
- <span data-ttu-id="c92b2-125">值`type`屬性應該是有效的類別名稱。</span><span class="sxs-lookup"><span data-stu-id="c92b2-125">The value for the `type` attribute should be a valid class name.</span></span>  
+ <span data-ttu-id="2deb0-125">值`type`屬性應該是有效的類別名稱。</span><span class="sxs-lookup"><span data-stu-id="2deb0-125">The value for the `type` attribute should be a valid class name.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="c92b2-126">組態檔</span><span class="sxs-lookup"><span data-stu-id="c92b2-126">Configuration Files</span></span>  
- <span data-ttu-id="c92b2-127">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="c92b2-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="2deb0-126">組態檔</span><span class="sxs-lookup"><span data-stu-id="2deb0-126">Configuration Files</span></span>  
+ <span data-ttu-id="2deb0-127">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="2deb0-127">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="c92b2-128">範例</span><span class="sxs-lookup"><span data-stu-id="c92b2-128">Example</span></span>  
- <span data-ttu-id="c92b2-129">下列範例會移除驗證模組。</span><span class="sxs-lookup"><span data-stu-id="c92b2-129">The following example removes an authentication module.</span></span>  
+## <a name="example"></a><span data-ttu-id="2deb0-128">範例</span><span class="sxs-lookup"><span data-stu-id="2deb0-128">Example</span></span>  
+ <span data-ttu-id="2deb0-129">下列範例會移除驗證模組。</span><span class="sxs-lookup"><span data-stu-id="2deb0-129">The following example removes an authentication module.</span></span>  
   
 ```xml  
 <configuration>  
@@ -72,7 +72,8 @@ ms.locfileid: "55281017"
 </configuration>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="c92b2-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c92b2-130">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2deb0-130">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2deb0-130">See also</span></span>
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
-- [<span data-ttu-id="c92b2-131">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="c92b2-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="2deb0-131">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="2deb0-131">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
