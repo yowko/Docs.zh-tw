@@ -17,32 +17,33 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eae5b0bc6ba9f891527282a0a8c209dd3698c4df
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7b3c9c637bdaa0d0e18dbfd9655790ff5ebd46f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141839"
 ---
-# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="7c179-102">ISymUnmanagedScope::GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="7c179-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
-<span data-ttu-id="7c179-103">取得此範圍內定義的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="7c179-103">Gets a count of the local variables defined within this scope.</span></span>  
+# <a name="isymunmanagedscopegetlocalcount-method"></a><span data-ttu-id="aa302-102">ISymUnmanagedScope::GetLocalCount 方法</span><span class="sxs-lookup"><span data-stu-id="aa302-102">ISymUnmanagedScope::GetLocalCount Method</span></span>
+<span data-ttu-id="aa302-103">取得此範圍內定義的本機變數的計數。</span><span class="sxs-lookup"><span data-stu-id="aa302-103">Gets a count of the local variables defined within this scope.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7c179-104">語法</span><span class="sxs-lookup"><span data-stu-id="7c179-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="aa302-104">語法</span><span class="sxs-lookup"><span data-stu-id="aa302-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalCount(  
     [out, retval] ULONG32 *pRetVal);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="7c179-105">參數</span><span class="sxs-lookup"><span data-stu-id="7c179-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="aa302-105">參數</span><span class="sxs-lookup"><span data-stu-id="aa302-105">Parameters</span></span>  
  `pRetVal`  
- <span data-ttu-id="7c179-106">[out]指標`ULONG32`接收本機變數數目。</span><span class="sxs-lookup"><span data-stu-id="7c179-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
+ <span data-ttu-id="aa302-106">[out]指標`ULONG32`接收本機變數數目。</span><span class="sxs-lookup"><span data-stu-id="aa302-106">[out] A pointer to a `ULONG32` that receives the count of local variables.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="7c179-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="7c179-107">Return Value</span></span>  
- <span data-ttu-id="7c179-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="7c179-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="aa302-107">傳回值</span><span class="sxs-lookup"><span data-stu-id="aa302-107">Return Value</span></span>  
+ <span data-ttu-id="aa302-108">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="aa302-108">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7c179-109">需求</span><span class="sxs-lookup"><span data-stu-id="7c179-109">Requirements</span></span>  
- <span data-ttu-id="7c179-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="7c179-110">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="aa302-109">需求</span><span class="sxs-lookup"><span data-stu-id="aa302-109">Requirements</span></span>  
+ <span data-ttu-id="aa302-110">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="aa302-110">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7c179-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7c179-111">See also</span></span>
-- [<span data-ttu-id="7c179-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="7c179-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)
+## <a name="see-also"></a><span data-ttu-id="aa302-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aa302-111">See also</span></span>
+
+- [<span data-ttu-id="aa302-112">ISymUnmanagedScope 介面</span><span class="sxs-lookup"><span data-stu-id="aa302-112">ISymUnmanagedScope Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedscope-interface.md)

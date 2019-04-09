@@ -6,27 +6,28 @@ helpviewer_keywords:
 - graphics [WPF], lines
 - lines [WPF], drawing
 ms.assetid: 0513ee01-6b27-4bb3-85f3-3a3e6710d80e
-ms.openlocfilehash: a194fad5471cafcb567aa00522a597a4186ef4af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c11dfb9523834ec2e622cb2e62bd6982a1a78fd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374178"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143516"
 ---
-# <a name="how-to-draw-a-line"></a><span data-ttu-id="1a049-102">HOW TO：繪製線條</span><span class="sxs-lookup"><span data-stu-id="1a049-102">How to: Draw a Line</span></span>
-<span data-ttu-id="1a049-103">此範例將示範如何藉由繪製線條<xref:System.Windows.Shapes.Line>項目。</span><span class="sxs-lookup"><span data-stu-id="1a049-103">This example shows you how to draw lines by using the <xref:System.Windows.Shapes.Line> element.</span></span>  
+# <a name="how-to-draw-a-line"></a><span data-ttu-id="6fe23-102">HOW TO：繪製線條</span><span class="sxs-lookup"><span data-stu-id="6fe23-102">How to: Draw a Line</span></span>
+<span data-ttu-id="6fe23-103">此範例將示範如何藉由繪製線條<xref:System.Windows.Shapes.Line>項目。</span><span class="sxs-lookup"><span data-stu-id="6fe23-103">This example shows you how to draw lines by using the <xref:System.Windows.Shapes.Line> element.</span></span>  
   
- <span data-ttu-id="1a049-104">若要繪製一條線，請建立<xref:System.Windows.Shapes.Line>項目。</span><span class="sxs-lookup"><span data-stu-id="1a049-104">To draw a line, create a <xref:System.Windows.Shapes.Line> element.</span></span> <span data-ttu-id="1a049-105">使用其<xref:System.Windows.Shapes.Line.X1%2A>並<xref:System.Windows.Shapes.Line.Y1%2A>屬性來設定它的起點，並使用其<xref:System.Windows.Shapes.Line.X2%2A>和<xref:System.Windows.Shapes.Line.Y2%2A>屬性來設定其端點。</span><span class="sxs-lookup"><span data-stu-id="1a049-105">Use its <xref:System.Windows.Shapes.Line.X1%2A> and <xref:System.Windows.Shapes.Line.Y1%2A> properties to set its start point; and use its <xref:System.Windows.Shapes.Line.X2%2A> and <xref:System.Windows.Shapes.Line.Y2%2A> properties to set its end point.</span></span> <span data-ttu-id="1a049-106">最後，設定其<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>因為沒有筆觸線條是不可見。</span><span class="sxs-lookup"><span data-stu-id="1a049-106">Finally, set its <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> because a line without a stroke is invisible.</span></span>  
+ <span data-ttu-id="6fe23-104">若要繪製一條線，請建立<xref:System.Windows.Shapes.Line>項目。</span><span class="sxs-lookup"><span data-stu-id="6fe23-104">To draw a line, create a <xref:System.Windows.Shapes.Line> element.</span></span> <span data-ttu-id="6fe23-105">使用其<xref:System.Windows.Shapes.Line.X1%2A>並<xref:System.Windows.Shapes.Line.Y1%2A>屬性來設定它的起點，並使用其<xref:System.Windows.Shapes.Line.X2%2A>和<xref:System.Windows.Shapes.Line.Y2%2A>屬性來設定其端點。</span><span class="sxs-lookup"><span data-stu-id="6fe23-105">Use its <xref:System.Windows.Shapes.Line.X1%2A> and <xref:System.Windows.Shapes.Line.Y1%2A> properties to set its start point; and use its <xref:System.Windows.Shapes.Line.X2%2A> and <xref:System.Windows.Shapes.Line.Y2%2A> properties to set its end point.</span></span> <span data-ttu-id="6fe23-106">最後，設定其<xref:System.Windows.Shapes.Shape.Stroke%2A>和<xref:System.Windows.Shapes.Shape.StrokeThickness%2A>因為沒有筆觸線條是不可見。</span><span class="sxs-lookup"><span data-stu-id="6fe23-106">Finally, set its <xref:System.Windows.Shapes.Shape.Stroke%2A> and <xref:System.Windows.Shapes.Shape.StrokeThickness%2A> because a line without a stroke is invisible.</span></span>  
   
- <span data-ttu-id="1a049-107">設定<xref:System.Windows.Shapes.Shape.Fill%2A>一行的項目會有任何作用，由於線條沒有任何內部。</span><span class="sxs-lookup"><span data-stu-id="1a049-107">Setting the <xref:System.Windows.Shapes.Shape.Fill%2A> element for a line has no effect, because a line has no interior.</span></span>  
+ <span data-ttu-id="6fe23-107">設定<xref:System.Windows.Shapes.Shape.Fill%2A>一行的項目會有任何作用，由於線條沒有任何內部。</span><span class="sxs-lookup"><span data-stu-id="6fe23-107">Setting the <xref:System.Windows.Shapes.Shape.Fill%2A> element for a line has no effect, because a line has no interior.</span></span>  
   
- <span data-ttu-id="1a049-108">下列範例會繪製內的三行<xref:System.Windows.Controls.Canvas>項目。</span><span class="sxs-lookup"><span data-stu-id="1a049-108">The following example draws three lines inside a <xref:System.Windows.Controls.Canvas> element.</span></span>  
+ <span data-ttu-id="6fe23-108">下列範例會繪製內的三行<xref:System.Windows.Controls.Canvas>項目。</span><span class="sxs-lookup"><span data-stu-id="6fe23-108">The following example draws three lines inside a <xref:System.Windows.Controls.Canvas> element.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="1a049-109">範例</span><span class="sxs-lookup"><span data-stu-id="1a049-109">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6fe23-109">範例</span><span class="sxs-lookup"><span data-stu-id="6fe23-109">Example</span></span>  
  [!code-xaml[drawingwithshapeelements#LineExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingWithShapeElements/CS/lineexample.xaml#lineexample1)]  
   
- <span data-ttu-id="1a049-110">這個範例屬於較大型的範例;如需完整的範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。</span><span class="sxs-lookup"><span data-stu-id="1a049-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](https://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
+ <span data-ttu-id="6fe23-110">這個範例屬於較大型的範例;如需完整的範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。</span><span class="sxs-lookup"><span data-stu-id="6fe23-110">This example is part of a larger sample; for the complete sample, see [Shape Elements Sample](https://go.microsoft.com/fwlink/?LinkID=160037).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1a049-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1a049-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6fe23-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6fe23-111">See also</span></span>
+
 - <xref:System.Windows.Shapes.Line>
-- [<span data-ttu-id="1a049-112">圖形元素範例</span><span class="sxs-lookup"><span data-stu-id="1a049-112">Shape Elements Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160037)
+- [<span data-ttu-id="6fe23-112">圖形元素範例</span><span class="sxs-lookup"><span data-stu-id="6fe23-112">Shape Elements Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160037)

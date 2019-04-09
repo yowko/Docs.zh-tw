@@ -6,35 +6,36 @@ helpviewer_keywords:
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8adb5d0348fe53cecbdabf8ffa3b244fe34831e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134859"
 ---
-# <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="a4d9e-102">HOW TO：建立二次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="a4d9e-102">How to: Create a Quadratic Bezier Curve</span></span>
-<span data-ttu-id="a4d9e-103">此範例示範如何建立二次方貝茲曲線。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="a4d9e-104">若要建立二次方貝茲曲線，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.QuadraticBezierSegment>類別。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  
+# <a name="how-to-create-a-quadratic-bezier-curve"></a><span data-ttu-id="f28b7-102">HOW TO：建立二次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="f28b7-102">How to: Create a Quadratic Bezier Curve</span></span>
+<span data-ttu-id="f28b7-103">此範例示範如何建立二次方貝茲曲線。</span><span class="sxs-lookup"><span data-stu-id="f28b7-103">This example shows how to create a quadratic Bezier curve.</span></span>  <span data-ttu-id="f28b7-104">若要建立二次方貝茲曲線，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.QuadraticBezierSegment>類別。</span><span class="sxs-lookup"><span data-stu-id="f28b7-104">To create a quadratic Bezier curve, use the <xref:System.Windows.Media.PathGeometry>, <xref:System.Windows.Media.PathFigure>, and <xref:System.Windows.Media.QuadraticBezierSegment> classes.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="a4d9e-105">範例</span><span class="sxs-lookup"><span data-stu-id="a4d9e-105">Example</span></span>  
- <span data-ttu-id="a4d9e-106">在下列範例中，會從 (10100) 到 (300100) 繪製二次方貝茲曲線。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-106">In the following examples, a quadratic Bezier curve is drawn from (10,100) to (300,100).</span></span> <span data-ttu-id="a4d9e-107">曲線具有 (200200) 的控制點。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-107">The curve has a control point of (200,200).</span></span>  
+## <a name="example"></a><span data-ttu-id="f28b7-105">範例</span><span class="sxs-lookup"><span data-stu-id="f28b7-105">Example</span></span>  
+ <span data-ttu-id="f28b7-106">在下列範例中，會從 (10100) 到 (300100) 繪製二次方貝茲曲線。</span><span class="sxs-lookup"><span data-stu-id="f28b7-106">In the following examples, a quadratic Bezier curve is drawn from (10,100) to (300,100).</span></span> <span data-ttu-id="f28b7-107">曲線具有 (200200) 的控制點。</span><span class="sxs-lookup"><span data-stu-id="f28b7-107">The curve has a control point of (200,200).</span></span>  
   
- <span data-ttu-id="a4d9e-108">[xaml]</span><span class="sxs-lookup"><span data-stu-id="a4d9e-108">[xaml]</span></span>  
+ <span data-ttu-id="f28b7-108">[xaml]</span><span class="sxs-lookup"><span data-stu-id="f28b7-108">[xaml]</span></span>  
   
- <span data-ttu-id="a4d9e-109">在  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您可以使用屬性語法來描述路徑。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
+ <span data-ttu-id="f28b7-109">在  [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，您可以使用屬性語法來描述路徑。</span><span class="sxs-lookup"><span data-stu-id="f28b7-109">In [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)], you can use attribute syntax to describe a path.</span></span>  
   
  [!code-xaml[GeometrySample#54](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/geometryattributesyntaxexample.xaml#54)]  
   
- <span data-ttu-id="a4d9e-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="a4d9e-110">[xaml]</span></span>  
+ <span data-ttu-id="f28b7-110">[xaml]</span><span class="sxs-lookup"><span data-stu-id="f28b7-110">[xaml]</span></span>  
   
- <span data-ttu-id="a4d9e-111">(請注意，此屬性語法實際上會建立<xref:System.Windows.Media.StreamGeometry>，輕量版<xref:System.Windows.Media.PathGeometry>。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-111">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="a4d9e-112">如需詳細資訊，請參閱[路徑標記語法](path-markup-syntax.md)頁面。)</span><span class="sxs-lookup"><span data-stu-id="a4d9e-112">For more information, see the [Path Markup Syntax](path-markup-syntax.md) page.)</span></span>  
+ <span data-ttu-id="f28b7-111">(請注意，此屬性語法實際上會建立<xref:System.Windows.Media.StreamGeometry>，輕量版<xref:System.Windows.Media.PathGeometry>。</span><span class="sxs-lookup"><span data-stu-id="f28b7-111">(Note that this attribute syntax actually creates a <xref:System.Windows.Media.StreamGeometry>, a lighter-weight version of a <xref:System.Windows.Media.PathGeometry>.</span></span> <span data-ttu-id="f28b7-112">如需詳細資訊，請參閱[路徑標記語法](path-markup-syntax.md)頁面。)</span><span class="sxs-lookup"><span data-stu-id="f28b7-112">For more information, see the [Path Markup Syntax](path-markup-syntax.md) page.)</span></span>  
   
- <span data-ttu-id="a4d9e-113">在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可能也會繪製二次方貝茲曲線，使用物件元素語法。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a quadratic Bezier curve using object element syntax.</span></span> <span data-ttu-id="a4d9e-114">下列範例相當於先前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-114">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
+ <span data-ttu-id="f28b7-113">在  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可能也會繪製二次方貝茲曲線，使用物件元素語法。</span><span class="sxs-lookup"><span data-stu-id="f28b7-113">In [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)], you may also draw a quadratic Bezier curve using object element syntax.</span></span> <span data-ttu-id="f28b7-114">下列範例相當於先前的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 範例。</span><span class="sxs-lookup"><span data-stu-id="f28b7-114">The following is equivalent to the previous [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] example.</span></span>  
   
  [!code-xaml[GeometrySample#34](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample/CS/pathgeometryexample.xaml#34)]  
   
- <span data-ttu-id="a4d9e-115">這個範例屬於較大型的範例；如需完整範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。</span><span class="sxs-lookup"><span data-stu-id="a4d9e-115">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
+ <span data-ttu-id="f28b7-115">這個範例屬於較大型的範例；如需完整範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。</span><span class="sxs-lookup"><span data-stu-id="f28b7-115">This example is part of larger sample; for the complete sample, see the [Geometries Sample](https://go.microsoft.com/fwlink/?LinkID=159989).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="a4d9e-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a4d9e-116">See also</span></span>
-- [<span data-ttu-id="a4d9e-117">建立橢圓形弧線</span><span class="sxs-lookup"><span data-stu-id="a4d9e-117">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)
-- [<span data-ttu-id="a4d9e-118">建立三次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="a4d9e-118">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)
+## <a name="see-also"></a><span data-ttu-id="f28b7-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f28b7-116">See also</span></span>
+
+- [<span data-ttu-id="f28b7-117">建立橢圓形弧線</span><span class="sxs-lookup"><span data-stu-id="f28b7-117">Create an Elliptical Arc</span></span>](how-to-create-an-elliptical-arc.md)
+- [<span data-ttu-id="f28b7-118">建立三次方貝茲曲線</span><span class="sxs-lookup"><span data-stu-id="f28b7-118">Create a Cubic Bezier Curve</span></span>](how-to-create-a-cubic-bezier-curve.md)
