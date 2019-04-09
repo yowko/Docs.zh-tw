@@ -6,12 +6,12 @@ helpviewer_keywords:
 - quadratic Bezier curves [WPF], creating
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
-ms.openlocfilehash: 8adb5d0348fe53cecbdabf8ffa3b244fe34831e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134859"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>HOW TO：建立二次方貝茲曲線
 此範例示範如何建立二次方貝茲曲線。  若要建立二次方貝茲曲線，使用<xref:System.Windows.Media.PathGeometry>， <xref:System.Windows.Media.PathFigure>，和<xref:System.Windows.Media.QuadraticBezierSegment>類別。  
@@ -36,5 +36,6 @@ ms.locfileid: "57363718"
  這個範例屬於較大型的範例；如需完整範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立橢圓形弧線](how-to-create-an-elliptical-arc.md)
 - [建立三次方貝茲曲線](how-to-create-a-cubic-bezier-curve.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 647b1807957b611b9ba75ee90a7ac2257246d14c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261577"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150744"
 ---
 # <a name="namespace-element-net-native"></a>\<命名空間 > 項目 (.NET Native)
 將執行階段反映原則套用至指定命名空間中的所有類型。  
@@ -74,8 +74,8 @@ ms.locfileid: "55261577"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|做為容器，以包含整個應用程式的類型，以及中繼資料可在執行階段用於反映的類型成員。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 項目可以有零、一或多個 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目。|  
-|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將執行階段反映原則套用至指定組件中的所有類型。|  
-|[\<程式庫>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，該類型和類型成員的中繼資料會在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目可以有零或一個 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目。|  
+|[\<組件 >](../../../docs/framework/net-native/assembly-element-net-native.md)|將執行階段反映原則套用至指定組件中的所有類型。|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|定義包含類型和類型成員的組件，這些類型和類型成員的中繼資料可在執行階段用於反映。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 項目可以有零或一個 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目。|  
 |`<Namespace>`|將反映原則套用至父命名空間中的所有類型。|  
   
 ## <a name="remarks"></a>備註  
@@ -84,6 +84,7 @@ ms.locfileid: "55261577"
  當它是 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目的子項時，`<Namespace>` 項目會覆寫 [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 項目定義的執行階段反映原則。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

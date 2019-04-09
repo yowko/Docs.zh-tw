@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], get started
 - get started [WCF]
 ms.assetid: df939177-73cb-4440-bd95-092a421516a1
-ms.openlocfilehash: 66211cfcf2b742e43eccbefb2bc7c4bd1147b05b
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: d4613edefeb8db2c0d1e11e925f8ac41329efb0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408856"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137919"
 ---
 # <a name="tutorial-get-started-with-windows-communication-foundation-applications"></a>教學課程：開始使用 Windows Communication Foundation 應用程式
 下面一系列教學課程會為您介紹至 Windows Communication Foundation (WCF) 程式設計經驗。 透過這些教學課程中順序的工作會提供您建立 WCF 應用程式所需的步驟大致了解。 完成之後，您必須執行的 WCF 服務和 WCF 用戶端呼叫服務。 
@@ -63,14 +63,12 @@ ms.locfileid: "58408856"
 - [基本程式設計週期](basic-programming-lifecycle.md)
 - [建置用戶端](building-clients.md)
 - [基本 WCF 程式設計](basic-wcf-programming.md)
-- [如何：建立雙工合約](feature-details/how-to-create-a-duplex-contract.md)
-- [如何：Access services 搭配雙工合約](feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [HOW TO：建立雙工合約](feature-details/how-to-create-a-duplex-contract.md)
+- [HOW TO：Access services 搭配雙工合約](feature-details/how-to-access-services-with-a-duplex-contract.md)
 - [ServiceModel Metadata Utility 工具 (Svcutil.exe)](servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [如何：使用 Svcutil.exe 來下載中繼資料文件](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
-- [如何：發佈服務，使用組態檔的中繼資料](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [HOW TO：使用 Svcutil.exe 來下載中繼資料文件](feature-details/how-to-use-svcutil-exe-to-download-metadata-documents.md)
+- [HOW TO：發佈服務，使用組態檔的中繼資料](feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
 - [使用繫結設定服務和用戶端](using-bindings-to-configure-services-and-clients.md)
 - [開始使用範例](samples/getting-started-sample.md)
 - [Windows Communication Foundation 範例](samples/index.md)
 - [自我裝載](samples/self-host.md)
-
-

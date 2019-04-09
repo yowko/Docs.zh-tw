@@ -2,12 +2,12 @@
 title: 用戶端組態
 ms.date: 03/30/2017
 ms.assetid: 5da5bd3b-65d9-43b7-91b9-cc9e989b1350
-ms.openlocfilehash: 1cd7a066622c7d317b1a9c62658531521082c964
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: b9975c6caeedc94bf4a7773e71a95eb0d8c7aed2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144686"
 ---
 # <a name="client-configuration"></a>用戶端組態
 您可以使用 Windows Communication Foundation (WCF) 用戶端設定來指定位址、 繫結、 行為以及合約，用戶端端點，用戶端用於連接至服務端點的"ABC"屬性。 [\<用戶端 >](../../configure-apps/file-schema/wcf/client.md)項目具有[\<端點 >](../../configure-apps/file-schema/wcf/endpoint-of-client.md)元素的屬性用來設定端點 Abc。 這些屬性會討論[設定端點](#configuring-endpoints)一節。  
@@ -94,5 +94,6 @@ ms.locfileid: "56261800"
  [\<中繼資料 >](../../../../docs/framework/configure-apps/file-schema/wcf/metadata.md)項目用以指定用來註冊中繼資料的設定匯入延伸模組。 如需擴充中繼資料系統的詳細資訊，請參閱 <<c0> [ 擴充中繼資料系統](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [端點：位址、 繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
+
+- [端點：位址、繫結和合約](../../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)
 - [設定用戶端行為](../../../../docs/framework/wcf/configuring-client-behaviors.md)

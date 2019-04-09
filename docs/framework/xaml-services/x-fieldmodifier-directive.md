@@ -6,12 +6,12 @@ helpviewer_keywords:
 - x:FieldModifier attribute [XAML Services]
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
-ms.openlocfilehash: 27ff9d027f5ff5155543097b7f0f0c2839387fe5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042446"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144543"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier 指示詞
 修改 XAML 編譯行為，以便以定義已命名的物件參考的欄位<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>而不是存取<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>預設行為。  
@@ -51,6 +51,7 @@ ms.locfileid: "58042446"
  根據預設，部分類別的根項目是公用的;不過，您可以使其非公用利用[X:classmodifier 指示詞](x-classmodifier-directive.md)。 [X:classmodifier 指示詞](x-classmodifier-directive.md)也會影響根項目類別的執行個體的存取層級。 您可以將兩者放`x:Name`並`x:FieldModifier`上的根項目，但這只會使公用欄位複本的根元素，則為 true 的根項目類別的存取層級仍受到[X:classmodifier 指示詞](x-classmodifier-directive.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF 的 XAML 和自訂類別](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)
 - [WPF 中的程式碼後置和 XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)
 - [x:Name 指示詞](x-name-directive.md)

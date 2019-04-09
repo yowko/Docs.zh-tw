@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定所顯示的映像的 Windows Form 控制項使用設計工具
+title: HOW TO：使用設計工具設定 Windows Forms 控制項所顯示的影像
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], images
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 265fc88fb2bb9aef0696ea0d7e707ae07084df1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2e0837e4a3058db7f1086d6a8ed53136ec86c7ac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153487"
 ---
-# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>HOW TO：設定所顯示的映像的 Windows Form 控制項使用設計工具
+# <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms 控制項所顯示的影像
 數個 Windows Form 控制項來顯示影像。 映像可以釐清的控制項，例如磁碟圖示 按鈕，表示目的圖示**儲存**命令。 或者，圖示可以是您想要的外觀，讓控制項的背景影像。  
   
 > [!NOTE]
@@ -33,7 +33,8 @@ ms.locfileid: "57702253"
 2.  選取您想要顯示的影像。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Image.FromFile%2A>
 - <xref:System.Drawing.Image>
 - <xref:System.Windows.Forms.Control.BackgroundImage%2A>
-- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

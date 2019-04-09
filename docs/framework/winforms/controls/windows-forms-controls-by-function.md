@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms, controls by function
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
-ms.openlocfilehash: bdfb2d5a3ce45deb471aaa465c35b82e738a128b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115475"
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
 Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windows Form 控制項和元件，根據一般的函式。 此外，其中有多個控制項提供相同的功能，建議使用的控制項都會列出它所取代的控制項的相關附註。 在個別的後續資料表，其建議的取代項目會列出已被取代的控制項。  
@@ -23,7 +23,7 @@ Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windo
   
 |功能|控制項|描述|  
 |--------------|-------------|-----------------|  
-|資料顯示|<xref:System.Windows.Forms.DataGridView> 控制項|<xref:System.Windows.Forms.DataGridView>控制項提供可自訂的資料表顯示資料。 <xref:System.Windows.Forms.DataGridView>類別可讓您自訂的資料格、 資料列、 資料行和框線。 **注意：**<xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱[差異 Windows Form DataGridView 和 DataGrid 控制項之間](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
+|資料顯示|<xref:System.Windows.Forms.DataGridView> 控制項|<xref:System.Windows.Forms.DataGridView>控制項提供可自訂的資料表顯示資料。 <xref:System.Windows.Forms.DataGridView>類別可讓您自訂的資料格、 資料列、 資料行和框線。 **注意：** <xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 如需詳細資訊，請參閱[差異 Windows Form DataGridView 和 DataGrid 控制項之間](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)|  
 |資料繫結和瀏覽|<xref:System.Windows.Forms.BindingSource> 元件|提供貨幣管理、 變更通知和其他服務，以簡化將控制項繫結至資料的表單上。|  
 ||<xref:System.Windows.Forms.BindingNavigator> 控制項|提供工具列型別介面來瀏覽和操作表單上的資料。|  
 |文字編輯|<xref:System.Windows.Forms.TextBox> 控制項|顯示可編輯的使用者在執行階段，或以程式設計方式變更設計階段時輸入的文字。|  
@@ -56,18 +56,18 @@ Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windo
 ||<xref:System.Windows.Forms.PrintPreviewDialog> 控制項|顯示對話方塊，顯示如何控制<xref:System.Drawing.Printing.PrintDocument>元件會在列印時出現。|  
 ||<xref:System.Windows.Forms.FolderBrowserDialog> 控制項|會顯示一個對話方塊，可讓使用者瀏覽、 建立，並最終選取資料夾。|  
 ||<xref:System.Windows.Forms.SaveFileDialog> 控制項|顯示對話方塊，可讓使用者儲存檔案。|  
-|功能表控制項|<xref:System.Windows.Forms.MenuStrip> 控制項|建立自訂功能表。 **注意：**<xref:System.Windows.Forms.MenuStrip>設計來取代<xref:System.Windows.Forms.MainMenu>控制項。|  
-||<xref:System.Windows.Forms.ContextMenuStrip> 控制項|建立自訂內容功能表。 **注意：**<xref:System.Windows.Forms.ContextMenuStrip>設計來取代<xref:System.Windows.Forms.ContextMenu>控制項。|  
+|功能表控制項|<xref:System.Windows.Forms.MenuStrip> 控制項|建立自訂功能表。 **注意：** <xref:System.Windows.Forms.MenuStrip>設計來取代<xref:System.Windows.Forms.MainMenu>控制項。|  
+||<xref:System.Windows.Forms.ContextMenuStrip> 控制項|建立自訂內容功能表。 **注意：** <xref:System.Windows.Forms.ContextMenuStrip>設計來取代<xref:System.Windows.Forms.ContextMenu>控制項。|  
 |命令|<xref:System.Windows.Forms.Button> 控制項|啟動、 停止或中斷處理程序。|  
 ||<xref:System.Windows.Forms.LinkLabel> 控制項|為 Web 樣式連結顯示文字，並觸發事件，當使用者按一下的特殊文字。 文字通常是另一個視窗或網站的連結。|  
 ||<xref:System.Windows.Forms.NotifyIcon> 控制項|表示在背景中執行的應用程式在工作列的狀態通知區域中顯示的圖示。|  
-||<xref:System.Windows.Forms.ToolStrip> 控制項|建立可以有 Microsoft Windows XP、 Microsoft Office、 Microsoft Internet Explorer 中或自訂外觀及操作、 使用或佈景主題，而不支援溢位和執行階段項目重新排序的工具列。 **注意：**<xref:System.Windows.Forms.ToolStrip>控制項的設計是要取代<xref:System.Windows.Forms.ToolBar>控制項。|  
+||<xref:System.Windows.Forms.ToolStrip> 控制項|建立可以有 Microsoft Windows XP、 Microsoft Office、 Microsoft Internet Explorer 中或自訂外觀及操作、 使用或佈景主題，而不支援溢位和執行階段項目重新排序的工具列。 **注意：** <xref:System.Windows.Forms.ToolStrip>控制項的設計是要取代<xref:System.Windows.Forms.ToolBar>控制項。|  
 |使用者說明|<xref:System.Windows.Forms.HelpProvider> 元件|提供控制項的快顯畫面或線上說明。|  
 ||<xref:System.Windows.Forms.ToolTip> 元件|提供當使用者將滑鼠指標停留在控制項上時，會顯示控制項用途的簡短描述的快顯視窗。|  
 |群組其他控制項|<xref:System.Windows.Forms.Panel> 控制項|將一組未加上標籤、 可捲動的畫面格上的控制項。|  
 ||<xref:System.Windows.Forms.GroupBox> 控制項|一組的控制項 （例如選項按鈕） 上加上標籤，不可捲動的框架。|  
 ||<xref:System.Windows.Forms.TabControl> 控制項|提供有效率的方式來組織及存取索引標籤式的頁面分組的物件。|  
-||<xref:System.Windows.Forms.SplitContainer> 控制項|提供以可移動的分隔列分隔的兩個面板。 **注意：**<xref:System.Windows.Forms.SplitContainer>控制項的設計是要取代<xref:System.Windows.Forms.Splitter>控制項。|  
+||<xref:System.Windows.Forms.SplitContainer> 控制項|提供以可移動的分隔列分隔的兩個面板。 **注意：** <xref:System.Windows.Forms.SplitContainer>控制項的設計是要取代<xref:System.Windows.Forms.Splitter>控制項。|  
 ||<xref:System.Windows.Forms.TableLayoutPanel> 控制項|代表會在資料列和資料行所組成的方格中動態配置其內容的面板。|  
 ||<xref:System.Windows.Forms.FlowLayoutPanel> 控制項|代表透過水平或垂直方式動態配置其內容的面板。|  
 |音效|<xref:System.Media.SoundPlayer> 控制項|播放.wav 格式的音效檔。 可以載入或以非同步方式播放音效。|  
@@ -85,5 +85,6 @@ Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windo
 |表單配置|<xref:System.Windows.Forms.Splitter>|<xref:System.Windows.Forms.SplitContainer>|  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)

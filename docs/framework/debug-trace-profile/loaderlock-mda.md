@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8c10fa02-1b9c-4be5-ab03-451d943ac1ee
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1001777f00524f3a183e1641718b9d3121c94e66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a70b8c3509b785d70b041b449c759e7994e5984
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54637933"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148716"
 ---
 # <a name="loaderlock-mda"></a>loaderLock MDA
 `loaderLock` Managed 偵錯助理 (MDA) 偵測到在保留 Microsoft Windows 作業系統載入器鎖定的執行緒上，有執行 Managed 程式碼的嘗試。  所有這樣的執行都不合法，因為它可能會產生死結，並在作業系統載入器尚未初始化 DLL 之前就先使用 DLL。  
@@ -42,7 +42,7 @@ ms.locfileid: "54637933"
   
  在某些罕見的情況下，也可能會在未初始化即被呼叫的 DLL 中，觸發存取違規或類似問題。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  此 MDA 會報告正在嘗試不合法的 Managed 執行。  您需要檢查執行緒的堆疊，以判斷載入器鎖定發生的原因，以及如何修正此問題。  
   
 ## <a name="configuration"></a>組態  
@@ -56,4 +56,5 @@ ms.locfileid: "54637933"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

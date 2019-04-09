@@ -2,12 +2,12 @@
 title: 查詢運算式 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c36f327b-e230-48d4-bbd5-78dc6478c447
-ms.openlocfilehash: 5a200c8fc5adcb6334d0a0ddf290d275de4eb768
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f89028b9c501dd840f1dc9445418e4757967db8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54696876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146909"
 ---
 # <a name="query-expressions-entity-sql"></a>查詢運算式 (Entity SQL)
 查詢運算式將許多不同的查詢運算子結合成單一語法。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 提供不同種類的運算式，包括下列：[常值](../../../../../../docs/framework/data/adonet/ef/language-reference/literals-entity-sql.md)，[參數](../../../../../../docs/framework/data/adonet/ef/language-reference/parameters-entity-sql.md)，[變數](../../../../../../docs/framework/data/adonet/ef/language-reference/variables-entity-sql.md)，運算子[函式](../../../../../../docs/framework/data/adonet/ef/language-reference/functions-entity-sql.md)、 設定運算子，等等。 如需詳細資訊，請參閱 < [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)。  
@@ -19,4 +19,5 @@ ms.locfileid: "54696876"
  FROM 子句中定義的名稱會依出現的順序 (從左到右) 導入 FROM 範圍內。 在 JOIN 清單中，運算式可以參考之前定義在清單中的名稱。 FROM 子句中所識別的項目的公用屬性不會加入至 FROM 範圍：它們必須永遠參考透過別名限定的名稱。 一般而言，SELECT 運算式的所有部分都視為在 FROM 範圍中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

@@ -9,18 +9,16 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 3589ba1d13c4ec57cfcec8c52b61556344e8def2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144023"
 ---
 # <a name="drawing-objects-overview"></a>繪圖物件概觀
 本主題將介紹<xref:System.Windows.Media.Drawing>物件，並說明如何使用它們來有效率地繪製圖形、 點陣圖、 文字及媒體。 使用 <xref:System.Windows.Media.Drawing>物件，當您建立美工圖案、 繪製<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>物件。  
-  
- 
-  
+
 <a name="whatisadrawingsection"></a>   
 ## <a name="what-is-a-drawing-object"></a>什麼是繪圖物件？  
  A<xref:System.Windows.Media.Drawing>物件可描繪可見內容，例如圖形、 點陣圖、 視訊或文字行。 不同類型的繪圖可描繪不同類型的內容。 以下列出不同類型的繪圖物件。  
@@ -234,6 +232,7 @@ DrawingImage
  [!code-csharp[DrawingMiscSnippets_snip#GraphicsMMRetrieveDrawings](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/EnumerateDrawingsExample.xaml.cs#graphicsmmretrievedrawings)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Drawing>
 - <xref:System.Windows.Media.DrawingGroup>
 - [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
@@ -242,4 +241,4 @@ DrawingImage
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)
 - [Freezable 物件概觀](../advanced/freezable-objects-overview.md)
-- [HOW-TO 主題](drawings-how-to-topics.md)
+- [HOW TO 主題](drawings-how-to-topics.md)

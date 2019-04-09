@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: fb8d2161800b336cd7f605dda79f28dbb5b91848
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333465"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135774"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 Windows Communication Foundation (WCF) 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -107,8 +107,7 @@ ms.locfileid: "56333465"
 </configuration>  
 ```  
   
- 若要設定的用戶端認證組態中，新增[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)至組態檔的項目。 此外，您必須將新增的行為項目連結至服務的端點使用`behaviorConfiguration`的屬性[\<端點 > 的\<用戶端 >](../configure-apps/file-schema/wcf/endpoint-of-client.md)項目，如下列範例所示。 
-  `behaviorConfiguration` 屬性的值必須與 `name` 屬性的值相符。  
+ 若要設定的用戶端認證組態中，新增[ \<endpointBehaviors >](../../../docs/framework/configure-apps/file-schema/wcf/endpointbehaviors.md)至組態檔的項目。 此外，您必須將新增的行為項目連結至服務的端點使用`behaviorConfiguration`的屬性[\<端點 > 的\<用戶端 >](../configure-apps/file-schema/wcf/endpoint-of-client.md)項目，如下列範例所示。 `behaviorConfiguration` 屬性的值必須與 `name` 屬性的值相符。  
 
 ```xml
 <configuration>
@@ -130,7 +129,7 @@ ms.locfileid: "56333465"
  如需有關如何設定用戶端憑證的詳細資訊，請參閱[How to:指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
->  `ClientCredentialType` 設定為 `SecurityMode` 時，會忽略 `"TransportWithMessageCredential",`，如下列範例組態所示。  
+>  `ClientCredentialType` 則會忽略`SecurityMode`設為`"TransportWithMessageCredential",`如下列範例組態所示。  
   
 ```xml  
 <wsHttpBinding>  
@@ -146,15 +145,16 @@ ms.locfileid: "56333465"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.ClientBase%601>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
-- [設定編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
+- [組態編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [保護服務的安全](../../../docs/framework/wcf/securing-services.md)
 - [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [如何：指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [HOW TO：指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [如何：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [HOW TO：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

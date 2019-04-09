@@ -3,12 +3,12 @@ title: <trackingProfile>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 154830ff-ddd3-4397-a3b5-5b334907777f
-ms.openlocfilehash: ff5bf2b4140665e7af8f8ec0103c32fe2e8a3142
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 747660df58604dd9384abefccb51ea665f97e2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55267855"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139668"
 ---
 # <a name="trackingprofile"></a>\<trackingProfile>
 表示組態區段，用於建立工作流程追蹤記錄中追蹤參與者的訂用帳戶。 追蹤設定檔包含追蹤查詢，這些查詢允許追蹤參與者訂閱工作流程執行個體狀態在執行時期變更時所發出的工作流程事件。 追蹤設定檔區段中定義的查詢會定義訂閱所傳回的事件類型。  
@@ -84,7 +84,7 @@ ms.locfileid: "55267855"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|指定追蹤設定檔名稱的字串。|  
+|名稱|指定追蹤設定檔名稱的字串。|  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -126,7 +126,8 @@ ms.locfileid: "55267855"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ProfileElement>
 - <xref:System.Activities.Tracking.TrackingProfile>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤設定檔](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

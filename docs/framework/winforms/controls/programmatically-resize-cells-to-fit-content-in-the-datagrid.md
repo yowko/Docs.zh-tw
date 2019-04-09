@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以程式設計方式調整大小以符合內容，在 Windows Form DataGridView 控制項中的資料格
+title: HOW TO：以程式設計方式調整儲存格大小使符合 Windows Forms DataGridView 控制項的內容
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], resizing cells
 - grids [Windows Forms], resizing cells to fit content
 ms.assetid: 63d770dc-b3f5-462b-901a-3125b2753792
-ms.openlocfilehash: 09ac5e43653a3389737777258db3bb5e0ed4c0a1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e8240d1d5ac9784bd33d65e4c79c3d5ac7595657
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722915"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138628"
 ---
-# <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>HOW TO：以程式設計方式調整大小以符合內容，在 Windows Form DataGridView 控制項中的資料格
+# <a name="how-to-programmatically-resize-cells-to-fit-content-in-the-windows-forms-datagridview-control"></a>HOW TO：以程式設計方式調整儲存格大小使符合 Windows Forms DataGridView 控制項的內容
 您可以使用 <xref:System.Windows.Forms.DataGridView> 控制項方法來調整資料列、資料行和標頭的大小，讓它們可以顯示完整的值，而不至發生截斷狀況。 您有時可使用這些方法來調整您選擇的 <xref:System.Windows.Forms.DataGridView> 項目大小。 此外，您可以將控制項設定為每當內容變更時，就自動調整這些項目的大小。 不過，在使用大型資料集或資料經常變更時，這樣做可能會沒有效率。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)。  
   
  一般而言，只有在從資料來源載入新資料或當使用者已編輯某個值時，才會以程式設計方式調整 <xref:System.Windows.Forms.DataGridView> 項目，以符合項目的內容大小。 這對於最佳化效能很有用，不過如果想讓使用者使用滑鼠手動調整資料列和資料行的大小，這也非常有用。  
@@ -38,6 +38,7 @@ ms.locfileid: "57722915"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
@@ -51,6 +52,6 @@ ms.locfileid: "57722915"
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnsMode>
 - <xref:System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode>
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
-- [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [如何：自動調整大小的資料格，當 Windows Form DataGridView 控制項中的內容變更](automatically-resize-cells-when-content-changes-in-the-datagrid.md)
+- [調整 Windows Form DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：在 Windows Forms DataGridView 控制項的內容變更時自動調整儲存格大小](automatically-resize-cells-when-content-changes-in-the-datagrid.md)

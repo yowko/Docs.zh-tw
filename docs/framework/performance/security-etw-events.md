@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cd5e660778b852cfee84359bb4d7253ca8f118d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134026"
 ---
 # <a name="security-etw-events"></a>安全性 ETW 事件
 <a name="top"></a> 強式名稱驗證和 Authenticode 驗證期間，會引發安全性事件。  
@@ -33,7 +33,7 @@ ms.locfileid: "54608072"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`StrongNameVerificationStart_V1`|181|強式名稱驗證的開頭。|  
 |`StrongNameVerificationStop_V1`|182|強式名稱驗證的結尾。|  
@@ -59,7 +59,7 @@ ms.locfileid: "54608072"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`AuthenticodeVerificationStart_V1`|183|Authenticode 驗證的開頭。|  
 |`AuthenticodeVerificationStop_V1`|184|Authenticode 驗證的結尾。|  
@@ -74,4 +74,5 @@ ms.locfileid: "54608072"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

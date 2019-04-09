@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bfe06c1300a22757b363236454f4f494dab1978a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6c6d298c84b801b87832c56026b05f647cb5a9dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135165"
 ---
 # <a name="getresolutionscope-method"></a>GetResolutionScope 方法
 擷取指定型別的範圍。  
@@ -57,6 +57,7 @@ HRESULT GetResolutionScope(
  需要 alink.h。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

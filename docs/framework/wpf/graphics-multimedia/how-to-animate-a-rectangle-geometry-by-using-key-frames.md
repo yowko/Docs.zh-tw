@@ -9,12 +9,12 @@ helpviewer_keywords:
 - RectangleGeometry objects [WPF], animating with key frames
 - animation [WPF], RectangleGeometry objects with key frames
 ms.assetid: a8b45ceb-0e32-4ba1-928f-df6d30db17c6
-ms.openlocfilehash: 30bd09ac61c855e0cda81261ca652f0574aa73e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7a4ba4e682ad5880e7059b1a5babe3094bd1770a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139616"
 ---
 # <a name="how-to-animate-a-rectangle-geometry-by-using-key-frames"></a>HOW TO：使用主要畫面格建立矩形幾何的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.RectangleGeometry.Rect%2A>屬性<xref:System.Windows.Media.RectangleGeometry>使用主要畫面格。  
@@ -35,8 +35,9 @@ ms.locfileid: "57375931"
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.RectangleGeometry>
 - <xref:System.Windows.Media.RectangleGeometry.Rect%2A>
 - <xref:System.Windows.Media.Animation.RectAnimationUsingKeyFrames>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
+- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)

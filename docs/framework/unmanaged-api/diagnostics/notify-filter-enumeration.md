@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fcd1d7fb1fdcd8b1ad1abf159a7828e51be392a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 63c3ecd0ae0d9e1df62d73eb05b759093583f652
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142879"
 ---
 # <a name="notifyfilter-enumeration"></a>NOTIFY_FILTER 列舉
 識別偵錯工具的函式的回呼。 如需詳細資訊，請參閱 < [INotifySource2::SetNotifyFilter](../../../../docs/framework/unmanaged-api/diagnostics/inotifysource2-setnotifyfilter-method.md)方法。  
@@ -57,4 +57,5 @@ enum tagNOTIFY_FILTER
  **標頭：** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區列舉](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-enumerations.md)

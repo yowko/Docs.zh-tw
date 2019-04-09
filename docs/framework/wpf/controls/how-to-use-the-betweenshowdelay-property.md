@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], BetweenShowDelay time property
 - BetweenShowDelay time property [WPF]
 ms.assetid: 984ea76d-f2a2-4326-a02e-f97ec3d036d6
-ms.openlocfilehash: e0653fbcb8eb052b12be7344ffe239431b67a951
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b6d55c72c8264546949833fc086937a8b1fe2540
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370960"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139590"
 ---
 # <a name="how-to-use-the-betweenshowdelay-property"></a>HOW TO：使用 BetweenShowDelay 屬性
 此範例示範如何使用<xref:System.Windows.Controls.ToolTipService.BetweenShowDelay%2A>時間屬性，如此工具提示會顯示快速 — 幾乎沒有任何延遲，當使用者將從一個工具提示直接到另一個滑鼠指標。  
@@ -28,7 +28,8 @@ ms.locfileid: "57370960"
 [!code-xaml[ToolTipService#NoToolTip](~/samples/snippets/csharp/VS_Snippets_Wpf/ToolTipService/CSharp/Pane1.xaml#notooltip)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [HOW-TO 主題](tooltip-how-to-topics.md)
-- [工具提示概觀](tooltip-overview.md)
+- [HOW TO 主題](tooltip-how-to-topics.md)
+- [ToolTip 概觀](tooltip-overview.md)

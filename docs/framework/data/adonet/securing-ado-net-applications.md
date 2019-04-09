@@ -2,12 +2,12 @@
 title: 設定 ADO.NET 應用程式的安全性
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
-ms.openlocfilehash: 7429393df980757e5fea326489d84cec8b6c131a
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092237"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149379"
 ---
 # <a name="securing-adonet-applications"></a>設定 ADO.NET 應用程式的安全性
 撰寫安全的 ADO.NET 應用程式並不只是為了避免常見的編碼錯誤，例如未驗證使用者輸入。 用於存取資料的應用程式有許多潛在的錯誤，攻擊者可以利用這些錯誤來擷取、管理或毀損機密資料。 因此，了解安全性的所有面向就相當重要，從應用程式設計階段期間的威脅模組處理，到最終的部署以及進行中的作業，都包括在內。  
@@ -20,7 +20,7 @@ ms.locfileid: "56092237"
  [安全性概觀](../../../../docs/framework/data/adonet/security-overview.md)  
  針對設計安全的 ADO. NET 應用程式提供建議。  
   
- [安全資料存取](../../../../docs/framework/data/adonet/secure-data-access.md)  
+ [安全存取資料](../../../../docs/framework/data/adonet/secure-data-access.md)  
  說明如何使用安全資料來源的資料。  
   
  [保護用戶端應用程式的安全](../../../../docs/framework/data/adonet/secure-client-applications.md)  
@@ -45,12 +45,13 @@ ms.locfileid: "56092237"
  [安全性工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/7w3fd0wb(v=vs.90))  
  保護及管理安全性原則的 .NET Framework 工具。  
   
- [用於建立安全應用程式的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
+ [建立安全應用程式的資源](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165101(v=vs.100))  
  提供建立安全應用程式的主題連結。  
   
  [安全性參考書目](/visualstudio/ide/security-bibliography)  
  提供可線上使用及列印版本的外部資源連結。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,25 +8,26 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
-ms.openlocfilehash: 0328b5da837fa11a6c2b7dba9ae761a1e88729bb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376929"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142684"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>視覺分層程式設計 HOW TO 主題
 在本節中的主題示範如何使用點擊測試和低層級組合的視覺分層。  
   
 ## <a name="in-this-section"></a>本節內容  
- [取得 Visual 的位移](how-to-get-the-offset-of-a-visual.md)  
- [列舉 Visual 的繪圖內容](how-to-enumerate-drawing-content-of-a-visual.md)  
- [對 Visual 中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)  
- [使用幾何做為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)  
- [使用 Win32 裝載容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)  
- [使用 CompositionTarget 在單格間隔轉譯](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
+ [取得視覺物件的位移](how-to-get-the-offset-of-a-visual.md)  
+ [列舉視覺物件的繪圖內容](how-to-enumerate-drawing-content-of-a-visual.md)  
+ [對視覺物件中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)  
+ [使用幾何作為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)  
+ [使用 Win32 主機容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)  
+ [使用 CompositionTarget 在單格間隔進行轉譯](how-to-render-on-a-per-frame-interval-using-compositiontarget.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

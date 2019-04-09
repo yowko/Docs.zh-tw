@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Timelines RepeatBehavior property [WPF]
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
-ms.openlocfilehash: a098c912289f59f8be48edeec0f066b7f94b9fda
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150536"
 ---
 # <a name="how-to-repeat-an-animation"></a>HOW TO：重複動畫
 此範例示範如何使用<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>屬性<xref:System.Windows.Media.Animation.Timeline>以控制動畫的重複行為。  
@@ -29,8 +29,9 @@ ms.locfileid: "57353995"
  如需完整的範例，請參閱[動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在重複循環期間累加動畫值](how-to-accumulate-animation-values-during-repeat-cycles.md)
-- [指定時刻表是否會自動反轉](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [動畫和計時 how to 主題](animation-and-timing-how-to-topics.md)
+- [指定時間表是否自動反轉](how-to-specify-whether-a-timeline-automatically-reverses.md)
+- [動畫和計時 HOW TO 主題](animation-and-timing-how-to-topics.md)
 - [動畫概觀](animation-overview.md)
 - [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)

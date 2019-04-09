@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: 891254ff44926a719bb0c124e5dc098fd3f3e82e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366539"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168983"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 項目的配置考量
 本主題描述如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目互動[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置系統。  
@@ -40,7 +40,7 @@ ms.locfileid: "57366539"
   
 -   在某些情況下，無法調整 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項大小，或只能將它調整為特定維度。 例如， [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>控制項支援只有單一高度由控制項字型大小所定義。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]其中項目可以垂直延伸，裝載的動態配置<xref:System.Windows.Forms.ComboBox>控制項將不會如預期延伸。  
   
--   無法旋轉或扭曲 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目引發<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果您套用扭曲或旋轉轉換。 如果您不會處理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件， <xref:System.InvalidOperationException> ，就會引發。  
+-   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項無法旋轉或扭曲。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目引發<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件，如果您套用扭曲或旋轉轉換。 如果您不會處理<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>事件， <xref:System.InvalidOperationException> ，就會引發。  
   
 -   在大部分情況下，[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項不支援等比例縮放。 雖然會縮放控制項的整體維度，但是可能無法如預期調整控制項的子控制項和元件大小。 這項限制取決於每個 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項支援縮放比例的程度。 此外，您無法調整[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項到 0 像素的大小。  
   
@@ -99,9 +99,10 @@ ms.locfileid: "57366539"
 -   如果<xref:System.Windows.Forms.Control.Size%2A>屬性會傳回與指定的條件約束，較小的大小<xref:System.Windows.Forms.Integration.WindowsFormsHost>接受這個大小值，並傳回值，以[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置系統。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [逐步解說：在 WPF 中排列 Windows Forms 控制項](walkthrough-arranging-windows-forms-controls-in-wpf.md)
 - [排列 Windows Form 控制項，在 WPF 範例](https://go.microsoft.com/fwlink/?LinkID=159971)
-- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
 - [移轉和互通性](migration-and-interoperability.md)

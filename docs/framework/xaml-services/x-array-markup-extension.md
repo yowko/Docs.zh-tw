@@ -8,12 +8,12 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4d528039245e2720f78e8817e1752d88ca94e6e0
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047877"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139135"
 ---
 # <a name="xarray-markup-extension"></a>x:Array 標記延伸
 支援一般的 XAML 中透過標記延伸的物件陣列。 這會對應至`x:ArrayExtension`[MS-XAML] 中的 XAML 型別。  
@@ -44,7 +44,7 @@ ms.locfileid: "58047877"
   
  `x:Array` 是多個適用於一般 XAML 中的語言擴充性。 但`x:Array`也可用於指定 XAML 的採用，XAML 支援集合做為其結構化的屬性內容的特定屬性的值。 例如，您可以在其中指定的內容<xref:System.Collections.IEnumerable>屬性與`x:Array`使用量。  
   
- `x:Array` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 `x:Array` 有一部分是該規則的例外狀況因為而不是提供替代的屬性值的處理，`x:Array`提供替代處理其內部文字內容。 此行為可讓現有的內容模型分組為陣列，並存取具名的陣列; 稍後在程式碼後置中參考可能不支援的類型您可以呼叫<xref:System.Array>方法，以取得個別的陣列項目。  
+ `x:Array` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 `x:Array` 有一部分是該規則的例外狀況因為而不是提供替代的屬性值的處理，`x:Array`提供替代處理其內部文字內容。 此行為可讓現有的內容模型分組為陣列，並存取具名的陣列; 稍後在程式碼後置中參考可能不支援的類型您可以呼叫<xref:System.Array>方法，以取得個別的陣列項目。  
   
  在 XAML 中的所有標記延伸都使用大括號 ({,} `)`在其屬性語法中，這是用的 XAML 處理器知道某個標記延伸必須處理的屬性值的慣例。 如需一般的標記延伸的詳細資訊，請參閱[Type Converters and Markup Extensions for XAML](type-converters-and-markup-extensions-for-xaml.md)。  
   
@@ -70,5 +70,6 @@ ms.locfileid: "58047877"
  對於自訂類型做為陣列項目，此類別也必須支援的需求在 XAML 中具現化為物件項目。 如需詳細資訊，請參閱 < [XAML 和自訂類別，如 WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [標記延伸和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [從 WPF 移轉至 System.Xaml 的類型](types-migrated-from-wpf-to-system-xaml.md)

@@ -11,18 +11,16 @@ helpviewer_keywords:
 - procedural code [WPF], accessing resources from
 - resources [WPF], creating with procedural code
 ms.assetid: c1cfcddb-e39c-41c8-a7f3-60984914dfae
-ms.openlocfilehash: 12f9acccfc23364795cd18ef1da2ced5b442c6f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d36d30dd336bbe50b192b10a6a60d2c7e382adb8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137705"
 ---
 # <a name="resources-and-code"></a>資源和程式碼
 本概觀將著重於如何使用程式碼 (而非 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 語法) 來存取 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資源。 如需從 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 語法觀點來了解一般資源使用方式和資源的詳細資訊，請參閱 [XAML 資源](xaml-resources.md)。  
-  
-  
-  
+
 <a name="accessing"></a>   
 ## <a name="accessing-resources-from-code"></a>從程式碼存取資源  
  如果您利用程式碼要求資源，則用來識別資源是否要透過 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 所定義之資源的索引鍵，也可用來擷取特定的資源。 從程式碼擷取資源的最簡單方式是呼叫其中一個<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.TryFindResource%2A>從應用程式中的架構層級物件的方法。 這些方法之間的行為差異在於，找不到要求的索引鍵時會發生什麼情況。 <xref:System.Windows.FrameworkElement.FindResource%2A> 引發例外狀況;<xref:System.Windows.FrameworkElement.TryFindResource%2A>將不會引發例外狀況，但傳回`null`。 每個方法都會取得資源索引鍵做為輸入參數，並傳回弱類型的物件。 一般而言，資源索引鍵是一個字串，但偶而會有非字串的使用方式；如需詳細資訊，請參閱[使用物件做為索引鍵](#objectaskey)一節。 通常您會將傳回的物件轉型為您在要求資源時設定之屬性所需的類型。 程式碼資源解析的查閱邏輯會與動態資源參考 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 案例相同。 資源的搜尋會從呼叫元素開始，然後繼續進行邏輯樹狀結構中後續的父元素。 查閱會視需要繼續尋找應用程式資源、主題和系統資源。 資源的程式碼要求將實際負責處理資源字典中的執行階段變更，這些可能是在從 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 載入該資源字典之後所進行的變更，同時也會負責處理即時系統資源變更。  
@@ -47,5 +45,6 @@ ms.locfileid: "57367972"
  大多數的資源使用方式會將資源的索引鍵設定為字串。 不過，各種 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能刻意不使用字串類型來指定索引鍵，而是此參數就是一個物件。 讓物件將資源當成索引鍵的功能，是透過 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 樣式和佈景主題支援來使用。 在成為非樣式控制項的預設樣式的佈景主題樣式每個特定<xref:System.Type>它們應套用至的控制項。 依類型做為索引鍵，會提供可靠的查閱機制，在每個控制項類型的預設執行個體上運作，而且類型可以依反射來偵測，並用於設定衍生類型的樣式，即使衍生的類型不具預設樣式也一樣。 您可以指定<xref:System.Type>中所定義之資源的索引鍵[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]利用[X:type 標記延伸](../../xaml-services/x-type-markup-extension.md)。 還有類似的延伸可供支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能的其他非字串索引鍵使用方式使用，例如 [ComponentResourceKey 標記延伸](componentresourcekey-markup-extension.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 資源](xaml-resources.md)
 - [樣式設定和範本化](../controls/styling-and-templating.md)

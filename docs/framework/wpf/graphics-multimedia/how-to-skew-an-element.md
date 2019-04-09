@@ -1,19 +1,19 @@
 ---
-title: HOW TO：傾斜項目
+title: HOW TO：扭曲元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - skewing elements [WPF]
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: fec3ec38a19b552e988d26ea57c6f9beed6ce06e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144959"
 ---
-# <a name="how-to-skew-an-element"></a>HOW TO：傾斜項目
+# <a name="how-to-skew-an-element"></a>HOW TO：扭曲元素
 此範例示範如何使用<xref:System.Windows.Media.SkewTransform>來扭曲元素。 扭曲也稱為傾斜，這種轉換會以非一致的方式延伸座標空間。 一般用途<xref:System.Windows.Media.SkewTransform>會模擬[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]深度[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]物件。  
   
  使用<xref:System.Windows.Media.SkewTransform.CenterX%2A>並<xref:System.Windows.Media.SkewTransform.CenterY%2A>屬性，以指定中心點的<xref:System.Windows.Media.SkewTransform>。  
@@ -43,7 +43,8 @@ ms.locfileid: "57359364"
  如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.SkewTransform>
 - [轉換概觀](transforms-overview.md)
-- [HOW-TO 主題](transformations-how-to-topics.md)
+- [HOW TO 主題](transformations-how-to-topics.md)

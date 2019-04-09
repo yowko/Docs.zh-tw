@@ -9,19 +9,19 @@ helpviewer_keywords:
 - Transforms [WPF], how-to topics
 - transformations [WPF], how-to topics
 ms.assetid: ff71384e-8811-420f-8cc8-0a3332e0397f
-ms.openlocfilehash: 0a6fb777502db021b7b4d5f9403f4cd1d6d7f85a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6e630b76e05803ffc4ac3c69c403d1ea2741b112
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361352"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140864"
 ---
 # <a name="transformations-how-to-topics"></a>轉換 HOW TO 主題
 在本節中的主題描述如何將不同的轉換套用至物件。  
   
 ## <a name="in-this-section"></a>本節內容  
- [在事件發生時套用轉換至元素](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
- [將多個轉換套用至物件](how-to-apply-multiple-transforms-to-an-object.md)  
+ [在事件發生時將轉換套用至元素](how-to-apply-a-transform-to-an-element-when-an-event-occurs.md)  
+ [對物件套用多個轉換](how-to-apply-multiple-transforms-to-an-object.md)  
  [使元素就地旋轉](how-to-make-an-element-spin-in-place.md)  
  [旋轉物件](how-to-rotate-an-object.md)  
  [縮放元素](how-to-scale-an-element.md)  
@@ -31,7 +31,8 @@ ms.locfileid: "57361352"
  [使用 MatrixTransform 建立自訂轉換](how-to-use-a-matrixtransform-to-create-custom-transforms.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Transform>
 - [圖形和多媒體](index.md)
 - [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)
-- [版面配置](../advanced/layout.md)
+- [配置](../advanced/layout.md)

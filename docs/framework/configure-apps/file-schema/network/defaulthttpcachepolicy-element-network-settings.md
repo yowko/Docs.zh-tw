@@ -1,5 +1,5 @@
 ---
-title: <defaultHttpCachePolicy> 項目 (網路設定)
+title: <defaultHttpCachePolicy> 項目 （網路設定）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/requestCaching/defaultHttpCachePolicy
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - defaultHttpCachePolicy element
 - <defaultHttpCachePolicy> element
 ms.assetid: 2c1247d0-39b0-4c12-919a-a925ce075c79
-ms.openlocfilehash: a48fa5e4a5768f97d3aeabebe4d594ec9f498ca2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20d9b92ca2bbffd6b98b8641e5cef5e567cb84cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177371"
 ---
 # <a name="defaulthttpcachepolicy-element-network-settings"></a>\<defaultHttpCachePolicy > 項目 （網路設定）
 描述 HTTP 快取是否作用中，並且描述的預設快取原則。  
@@ -47,7 +47,7 @@ ms.locfileid: "55260667"
 |`policyLevel`|指定是否快取原則會自動進行，或是否略過快取。 預設值為 `BypassCache`。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -81,6 +81,7 @@ ms.locfileid: "55260667"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.Cache>
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.Cache.RequestCacheLevel>

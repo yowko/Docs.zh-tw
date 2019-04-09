@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [Windows Forms], world transformation
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
-ms.openlocfilehash: cc6bcca42e84580199f75c64087af6d98f476d4b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715694"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139954"
 ---
 # <a name="using-the-world-transformation"></a>使用全局轉換
 全局轉換是屬性<xref:System.Drawing.Graphics>類別。 指定全局轉換的數字會儲存在<xref:System.Drawing.Drawing2D.Matrix>物件，代表 3 × 3 的矩陣。 <xref:System.Drawing.Drawing2D.Matrix>和<xref:System.Drawing.Graphics>類別有幾種方式來設定數字的自然變換矩陣中。  
@@ -42,6 +42,7 @@ ms.locfileid: "57715694"
  [!code-vb[System.Drawing.MiscLegacyTopics#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.MiscLegacyTopics/VB/Class1.vb#14)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Drawing2D.Matrix>
 - [座標系統和轉換](coordinate-systems-and-transformations.md)
 - [使用 Managed GDI+ 中的轉換](using-transformations-in-managed-gdi.md)
