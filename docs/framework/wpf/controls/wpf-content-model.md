@@ -11,25 +11,23 @@ helpviewer_keywords:
 - arbitrary content classes [WPF], content model
 - ContentControl class [WPF], displaying content
 ms.assetid: 214da5ef-547a-4cf8-9b07-4aa8a0e52cdd
-ms.openlocfilehash: 6cbb13fdcba2cf014c4c31a5dc5b21fe2721b214
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f866e0366a7781c287b3ebae7b668c2b296a5cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134585"
 ---
 # <a name="wpf-content-model"></a>WPF 內容模型
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是展示平台，提供許多以顯示不同類型內容為主要目的的控制項和類控制項類型。 為了判斷要使用哪一種控制項或從哪一種控制項衍生，您應該了解特定控制項顯示哪些物件的效果最佳。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 是展示平台，提供許多控制項和類控制項類型的主要用途是內容的顯示不同類型。 為了判斷要使用哪一種控制項或從哪一種控制項衍生，您應該了解特定控制項顯示哪些物件的效果最佳。  
   
  本主題摘要說明 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項和類控制項類型所適用的內容模型。 內容模型描述控制項中可使用的內容。 本主題同時列出每一個內容模型的內容屬性。 內容屬性是一種用於儲存物件內容的屬性。  
-  
- 
-  
+
 <a name="classes_that_contain_arbitrary_content"></a>   
 ## <a name="classes-that-contain-arbitrary-content"></a>包含任意內容的類別  
  有些控制項可能包含任何類型，例如字串、 物件<xref:System.DateTime>物件，或<xref:System.Windows.UIElement>也就是其他項目的容器。 例如，<xref:System.Windows.Controls.Button>可以包含影像和某些文字; 或<xref:System.Windows.Controls.CheckBox>可包含的值<xref:System.DateTime.Now%2A?displayProperty=nameWithType>。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 有四種可包含任意內容的類別。 下表列出的類別，繼承自<xref:System.Windows.Controls.Control>。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 具有四個可包含任意內容的類別。 下表列出的類別，繼承自<xref:System.Windows.Controls.Control>。  
   
 |包含任意內容的類別|內容|  
 |-------------------------------------------|-------------|  
@@ -217,7 +215,7 @@ ms.locfileid: "58816911"
   
 <a name="classes_that_provides_visual_feedback_about_a_uielement"></a>   
 ## <a name="classes-that-provide-visual-feedback-about-a-uielement"></a>提供 UIElement 相關視覺化回應的類別  
- <xref:System.Windows.Documents.Adorner>類別會提供視覺提示給使用者。 例如，使用<xref:System.Windows.Documents.Adorner>將功能控點加入項目，或提供控制項的狀態資訊。 <xref:System.Windows.Documents.Adorner>類別所提供的架構，讓您可以建立自己的裝飾項。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不會提供任何已實作的裝飾項。 如需詳細資訊，請參閱[裝飾項概觀](adorners-overview.md)。  
+ <xref:System.Windows.Documents.Adorner>類別會提供視覺提示給使用者。 例如，使用<xref:System.Windows.Documents.Adorner>將功能控點加入項目，或提供控制項的狀態資訊。 <xref:System.Windows.Documents.Adorner>類別所提供的架構，讓您可以建立自己的裝飾項。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 不提供任何實作的裝飾項。 如需詳細資訊，請參閱[裝飾項概觀](adorners-overview.md)。  
   
 <a name="classes_that_enable_users_to_enter_text"></a>   
 ## <a name="classes-that-enable-users-to-enter-text"></a>可讓使用者輸入文字的類別  
@@ -250,4 +248,5 @@ ms.locfileid: "58816911"
  <xref:System.Windows.Documents.TextElement> 和其相關的類別可讓您格式化文字。 <xref:System.Windows.Documents.TextElement> 物件包含和中的文字格式化<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>物件。 兩種主要類型<xref:System.Windows.Documents.TextElement>物件<xref:System.Windows.Documents.Block>項目和<xref:System.Windows.Documents.Inline>項目。 A<xref:System.Windows.Documents.Block>項目代表一個區塊的文字，例如段落或清單。 <xref:System.Windows.Documents.Inline>項目代表一部分的區塊中的文字。 許多<xref:System.Windows.Documents.Inline>類別可讓您指定套用至文字的格式。 每個<xref:System.Windows.Documents.TextElement>都有自己的內容模型。 如需詳細資訊，請參閱 [TextElement 內容模型概觀](../advanced/textelement-content-model-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [進階](../advanced/index.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在背景將檔案下載
+title: HOW TO：在背景下載檔案
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 9b7bc5ae-051c-4904-9720-18f6667388bd
-ms.openlocfilehash: 57a904c5d54b0c3f68efaf017a3405786600ace7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: af5a607b4800635d096e83b55a5bd5a912c8538d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128774"
 ---
-# <a name="how-to-download-a-file-in-the-background"></a>HOW TO：在背景將檔案下載
+# <a name="how-to-download-a-file-in-the-background"></a>HOW TO：在背景下載檔案
 下載檔案是常見的工作，在不同執行緒上執行這種可能很耗時的作業通常會相當實用。 使用 <xref:System.ComponentModel.BackgroundWorker> 元件，以非常少的程式碼來完成這項工作。  
   
 ## <a name="example"></a>範例  
@@ -66,6 +66,7 @@ ms.locfileid: "57715811"
  請務必檢查您 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> 事件處理常式中的 <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> 屬性，再嘗試存取可能會受 <xref:System.ComponentModel.BackgroundWorker.DoWork> 事件處理常式影響的 <xref:System.ComponentModel.RunWorkerCompletedEventArgs.Result%2A?displayProperty=nameWithType> 屬性或任何其他物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ComponentModel.BackgroundWorker>
-- [如何：在背景執行作業](how-to-run-an-operation-in-the-background.md)
-- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [HOW TO：在背景執行作業](how-to-run-an-operation-in-the-background.md)
+- [HOW TO：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)

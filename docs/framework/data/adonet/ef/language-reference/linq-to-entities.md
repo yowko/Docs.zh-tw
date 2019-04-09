@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 19849f318d07a11fe0d894f7f0a68cd37f1ee249
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129684"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開發人員使用 Visual Basic 或 Visual C# 針對 Entity Framework 概念模型撰寫查詢。 針對 Entity Framework 執行的查詢是以命令樹查詢來表示，每一個查詢都會針對物件內容來執行。 LINQ to Entities 會將 Language-Integrated Queries (LINQ) 查詢轉換成命令樹查詢、針對 Entity Framework 執行查詢，並傳回 Entity Framework 和 LINQ 都可以使用的物件。 下列是建立及執行 LINQ to Entities 查詢的程序：  
@@ -35,7 +35,7 @@ LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開�
 ## <a name="query-conversion"></a>查詢轉換  
  若要針對 Entity Framework 執行 LINQ to Entities 查詢，LINQ 查詢必須轉換成可以針對 Entity Framework 執行的命令樹表示法。  
   
- LINQ to Entities 查詢是由 LINQ 標準查詢運算子 (如 <xref:System.Linq.Queryable.Select%2A>、<xref:System.Linq.Queryable.Where%2A> 和 <xref:System.Linq.Queryable.GroupBy%2A>) 和運算式 (x > 10、Contact.LastName 等等) 所組成。 LINQ 運算子並不是由類別所定義，而是類別上的方法。 在 LINQ 中，運算式可以包含 <xref:System.Linq.Expressions> 命名空間內類型所允許的任何項目，以及能以 Lambda 函式表示的任何項目 (依擴充而定)。 這是 Entity Framework 所允許之運算式的超集，根據定義，這些運算式限制為只有資料庫上允許且 <xref:System.Data.Objects.ObjectQuery%601> 支援的作業。  
+ 包含 LINQ to Entities 查詢的 LINQ 標準查詢運算子 (例如<xref:System.Linq.Queryable.Select%2A>， <xref:System.Linq.Queryable.Where%2A>，和<xref:System.Linq.Queryable.GroupBy%2A>) 和 (x > 10、 10、contact.lastname 等等） 的運算式。 LINQ 運算子並不是由類別所定義，而是類別上的方法。 在 LINQ 中，運算式可以包含 <xref:System.Linq.Expressions> 命名空間內類型所允許的任何項目，以及能以 Lambda 函式表示的任何項目 (依擴充而定)。 這是 Entity Framework 所允許之運算式的超集，根據定義，這些運算式限制為只有資料庫上允許且 <xref:System.Data.Objects.ObjectQuery%601> 支援的作業。  
   
  在 Entity Framework 中，運算子和運算式都是由單一型別階層所代表，然後會將它們置於命令樹中。 Entity Framework 會使用此命令樹來執行查詢。 如果 LINQ 查詢不能表示為命令樹，則當轉換查詢時，將會擲回例外狀況。 LINQ to Entities 查詢的轉換牽涉到兩個子轉換：標準查詢運算子的轉換及運算式的轉換。  
   
@@ -82,13 +82,14 @@ LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開�
   
  [LINQ to Entities 查詢中的標準查詢運算子](../../../../../../docs/framework/data/adonet/ef/language-reference/standard-query-operators-in-linq-to-entities-queries.md)  
   
- [CLR 方法與標準函式的對應](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
+ [標準函式的對應 CLR 方法](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)  
   
- [支援和不支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
+ [支援與不支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)  
   
  [LINQ to Entities 中的已知問題和考量](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Entities 中的已知問題和考量](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)
 - [Language Integrated Query (LINQ)C#](../../../../../csharp/programming-guide/concepts/linq/index.md)
 - [語言整合式的查詢 (LINQ)-Visual Basic](../../../../../visual-basic/programming-guide/concepts/linq/index.md)

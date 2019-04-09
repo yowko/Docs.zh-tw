@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
-ms.openlocfilehash: 12eafa006e65527a70245c4332a34eb55f7d8af0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136951"
 ---
 # <a name="security-overview"></a>安全性概觀
 Windows Communication Foundation (WCF) 是 SOAP 訊息為基礎分散式程式設計平台，並保護用戶端與服務之間的訊息，請務必保護資料。 WCF 會提供交換安全訊息根據現有安全性基礎結構和認可的安全性標準的 SOAP 訊息的多用途和互通平台。  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) 是 SOAP 訊息為基礎分散式程式�
   
 -   駭客重新執行，駭客會重新執行相同採購單來進行騷擾。 例如，線上書店接收數以百計的訂單，並將書籍傳送至未訂購的客戶。  
   
--   服務無法驗證用戶端。 在這種情況下，服務無法確定適當人員執行交易。  
+-   服務無法驗證用戶端。 在這種情況下，服務無法確定適當人員執行異動。  
   
  摘要說明，傳輸安全性提供了下列保證：  
   
@@ -98,18 +98,19 @@ Windows Communication Foundation (WCF) 是 SOAP 訊息為基礎分散式程式�
  *稽核*是在 Windows 事件記錄檔的安全性事件的記錄。 您可以記錄安全性相關的事件，例如驗證失敗 (或成功)。 如需詳細資訊，請參閱 <<c0> [ 稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)。 程式設計的詳細資訊，請參閱[How to:稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
+- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)
 - [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
-- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [聯合與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [使用設定檔設定服務](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [安全性指引與最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [使用組態檔設定服務](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [端點建立概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

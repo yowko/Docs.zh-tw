@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - WCF, security
 ms.assetid: 42055ee0-6d0c-443d-9d89-788dfc345d6d
-ms.openlocfilehash: 6cc19f7719b9cdbcd3852c99f450c1d728dc833b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16b3afe9540f3e2953311f602408fce5412be2eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745955"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112212"
 ---
 # <a name="security-considerations-in-wcf"></a>WCF 的安全性考量
 在本節中的主題列出各種安全性相關的項目設計的 Windows Communication Foundation (WCF) 應用程式時需要考量。  
   
 ## <a name="in-this-section"></a>本節內容  
- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
+ [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)  
  討論資訊可能遭到洩漏或受到攻擊的各種方式，以及如何減少這種情況。  
   
  [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)  
  討論提供攻擊者超出初始所授與之使用權限的影響，以及如何減少這種情況。  
   
- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
+ [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)  
  討論系統無法適當處理訊息時可能發生的情況，以及如何減少這種情況。  
   
  [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)  
@@ -48,7 +48,8 @@ ms.locfileid: "54745955"
  <xref:System.ServiceModel>  
   
 ## <a name="related-sections"></a>相關章節  
- [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [安全性指引與最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性](../../../../docs/framework/wcf/feature-details/security.md)

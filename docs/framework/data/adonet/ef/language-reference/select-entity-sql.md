@@ -2,12 +2,12 @@
 title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
-ms.openlocfilehash: b7e339764e5baee93ccac64cb41d7fba43438476
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f5bc3b795eb20551abda2104c2f399c8da10a962
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136015"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
 指定查詢要傳回的項目。  
@@ -39,7 +39,7 @@ SELECT VALUE [ ALL | DISTINCT ] [ topSubclause ] expr FROM fromClause [ WHERE wh
  `aliasedExpr`  
  以下格式的運算式：  
   
- `expr` 為`identifier`&#124; `expr`  
+ `expr` as `identifier` &#124; `expr`  
   
  `expr`  
  常值或運算式。  
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  您也可以使用 JOIN 語法 (FULL、INNER、LEFT、OUTER、ON 和 RIGHT)。 ON 是內部聯結的必要項，但不可使用於交叉聯結。  
   
 ## <a name="row-and-value-select-clauses"></a>資料列選取和值選取子句  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種 SELECT 子句的變異形式。 第一種變異形式是由 SELECT 關鍵字識別的資料列選取，用來指定應該投影來的一或多個值。由於傳回的值會以隱含方式加上資料列包裝函式，所以查詢運算式的結果一定是資料列的多重集。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種 SELECT 子句變化。 第一種變異形式是由 SELECT 關鍵字識別的資料列選取，用來指定應該投影來的一或多個值。由於傳回的值會以隱含方式加上資料列包裝函式，所以查詢運算式的結果一定是資料列的多重集。  
   
  資料列選取中的每一個查詢運算式必須指定一個別名。 如果未指定別名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會嘗試依據別名產生規則產生別名。  
   
@@ -101,6 +101,7 @@ SELECT a1, a2 FROM T1 AS a1, T2 AS a2
  [!code-csharp[DP EntityServices Concepts 2#LESS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#less)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expressions-entity-sql.md)
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [TOP](../../../../../../docs/framework/data/adonet/ef/language-reference/top-entity-sql.md)

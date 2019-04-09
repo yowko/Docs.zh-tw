@@ -1,5 +1,5 @@
 ---
-title: < System.web > 項目 （Web 設定）
+title: <system.web> 項目 (Web 設定)
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Web.config configuration file [ASP.NET]
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ASP.NET configuration system
 - configuration files [ASP.NET]
 ms.assetid: 24c4cf4f-ad32-42b2-b040-8e4549e2855e
-ms.openlocfilehash: a8d0905dc64ae3e3c4977639ccf881a677de73a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 50566422c5e28585e93171c991144cf12a6866eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55272808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131946"
 ---
 # <a name="systemweb-element-web-settings"></a>\<system.web > 項目 （Web 設定）
 包含 ASP.NET 裝載層管理整個處理序行為的方式的相關資訊。  
@@ -73,4 +73,5 @@ ms.locfileid: "55272808"
 |可以是空白||  
   
 ## <a name="see-also"></a>另請參閱
-- [\<applicationPool> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)
+
+- [\<applicationPool > 項目 （Web 設定）](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)

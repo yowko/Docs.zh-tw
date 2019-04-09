@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - queues [WCF]. grouping messages
 ms.assetid: 63b23b36-261f-4c37-99a2-cc323cd72a1a
-ms.openlocfilehash: 260e8b38f110ffc2c2fdc5e2768db8c95fb01860
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0246f059079b2024dd1bd16ae6afc4950d08e0a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115267"
 ---
 # <a name="grouping-queued-messages-in-a-session"></a>在工作階段中群組佇列訊息
 Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處理的相關訊息的單一接收應用程式的工作階段。 本身是工作階段一部分的訊息，也必須是屬於相同的異動。 由於所有訊息都屬於相同的異動，所以如果有任何一個訊息無法進行處理，就會回復整個工作階段。 工作階段對於寄不出的信件佇列與有害佇列，會採取類似行為。 針對工作階段在佇列繫結上設定的存留時間 (TTL) 屬性會完整地套用到工作階段。 如果工作階段中只有部分訊息在 TTL 到期之前傳送出去，則整個工作階段將置於寄不出的信件佇列中。 同樣地，當工作階段中的訊息無法從應用程式佇列傳送到應用程式的話，則整個工作階段將置於有害佇列 (如果有的話)。  
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處�
     [ServiceBehavior(InstanceContextMode=InstanceContextMode.PerSession)]  
     ```  
   
-4.  每個服務作業都需要一筆交易。 請使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性來加以指定。 完成交易的作業應該同時將 `TransactionAutoComplete` 設為 `true`。  
+4.  每個服務作業都需要一筆異動。 請使用 <xref:System.ServiceModel.OperationBehaviorAttribute> 屬性來加以指定。 完成異動的作業應該同時將 `TransactionAutoComplete` 設為 `true`。  
   
     ```  
     [OperationBehavior(TransactionScopeRequired = true, TransactionAutoComplete = true)]   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處�
   
 5.  設定使用系統提供之 `NetMsmqBinding` 繫結的端點。  
   
-6.  使用 <xref:System.Messaging> 來建立異動式佇列。 您也可以使用訊息佇列 (MSMQ) 或 MMC 來建立佇列。 如果您要這麼做，請建立交易式佇列。  
+6.  使用 <xref:System.Messaging> 來建立交易式佇列。 您也可以使用訊息佇列 (MSMQ) 或 MMC 來建立佇列。 如果您要這麼做，請建立異動式佇列。  
   
 7.  請使用 <xref:System.ServiceModel.ServiceHost> 來建立服務的服務主機。  
   
@@ -76,15 +76,12 @@ Windows Communication Foundation (WCF) 提供可讓您將一組一起進行處�
 ### <a name="code-for-the-service"></a>服務的程式碼  
  [!code-csharp[S_Msmq_Session#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/service.cs#1)]
  [!code-vb[S_Msmq_Session#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/service.vb#1)]  
-  
-  
-  
+
 ### <a name="code-for-the-client"></a>用戶端的程式碼  
  [!code-csharp[S_Msmq_Session#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_msmq_session/cs/client.cs#3)]
  [!code-vb[S_Msmq_Session#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_msmq_session/vb/client.vb#3)]  
-  
-  
-  
+
 ## <a name="see-also"></a>另請參閱
+
 - [工作階段和佇列](../../../../docs/framework/wcf/samples/sessions-and-queues.md)
 - [佇列概觀](../../../../docs/framework/wcf/feature-details/queues-overview.md)

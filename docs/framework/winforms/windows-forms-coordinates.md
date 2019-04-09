@@ -7,12 +7,12 @@ helpviewer_keywords:
 - client coordinates
 - coordinates [Windows Forms], Windows Forms
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
-ms.openlocfilehash: a6f082eb57a9cfe1af0d4207cbf5226637191c90
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54556047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116128"
 ---
 # <a name="windows-forms-coordinates"></a>Windows Form 座標
 在 Windows Form 座標系統根據裝置座標和量值在 Windows Form 中描繪時的基本單位是裝置單位 （一般而言，像素）。 在螢幕上的點的 x 和 y 座標組說明增加到右並增加從上往下 y 座標的 x 座標。 相對於畫面中，原點的位置會因您指定螢幕或用戶端座標。  
@@ -29,5 +29,6 @@ ms.locfileid: "54556047"
  有時候，您可能需要從螢幕座標對應至用戶端座標。 您可以使用，輕鬆地完成這<xref:System.Windows.Forms.Control.PointToClient%2A>並<xref:System.Windows.Forms.Control.PointToScreen%2A>方法，可<xref:System.Windows.Forms.Control>類別。 比方說，<xref:System.Windows.Forms.Control.MousePosition%2A>屬性<xref:System.Windows.Forms.Control>回報在螢幕座標中，但您可能想要將這些座標轉換。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Control.PointToClient%2A>
 - <xref:System.Windows.Forms.Control.PointToScreen%2A>

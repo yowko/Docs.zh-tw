@@ -2,12 +2,12 @@
 title: 服務稽核行為
 ms.date: 03/30/2017
 ms.assetid: 59bf0cda-e496-4418-a3a1-2f0f6e85f8ce
-ms.openlocfilehash: e92f50005870b1c02571cebe0f532bd1810a40dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5fdc213551b5a7b3474321551d7c2cb149ca978d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574946"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151420"
 ---
 # <a name="service-auditing-behavior"></a>服務稽核行為
 這個範例會示範如何使用 <xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior> 以啟用稽核服務作業期間的安全性事件。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 服務和用戶端已使用[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)。 `mode`的屬性[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)已設為`Message`並`clientCredentialType`已設為`Windows`。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -34,7 +34,7 @@ ms.locfileid: "54574946"
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在主控台視窗中按 ENTER 鍵，即可關閉用戶端。  
   
- 執行事件檢視器可看到結果稽核記錄。 根據預設，在 Windows XP 中，您可以在應用程式記錄檔中查看稽核事件，而在 Windows Server 2003 和 Windows Vista 中，則可以在安全性記錄檔中查看稽核事件。 在 Windows Server 2008 和 Windows 7 上，您可以在應用程式記錄檔和服務記錄檔中查看稽核事件。 可以指定稽核事件的位置，藉由設定`auditLogLocation`屬性設定為 「 應用程式 」 或 「 安全性 」。 如需詳細資訊，請參閱[＜How to：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。 如果事件要寫入安全性記錄檔，則 LocalSecurityPolicy-> Enable Object Access 應設為 "Success" 和 "Failure"。  
+ 執行事件檢視器可看到結果稽核記錄。 根據預設，在 Windows XP 中，您可以在應用程式記錄檔中查看稽核事件，而在 Windows Server 2003 和 Windows Vista 中，則可以在安全性記錄檔中查看稽核事件。 在 Windows Server 2008 和 Windows 7 上，您可以在應用程式記錄檔和服務記錄檔中查看稽核事件。 可以指定稽核事件的位置，藉由設定`auditLogLocation`屬性設定為 「 應用程式 」 或 「 安全性 」。 如需詳細資訊，請參閱[如何：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)。 如果事件要寫入安全性記錄檔，則 localsecuritypolicy-> Enable Object Access 應設為"Success"和"Failure"。  
   
  在查看事件記錄檔時，稽核事件的來源為 "ServiceModel Audit 3.0.0.0"。 訊息驗證稽核記錄會有"MessageAuthentication"的類別，而服務驗證稽核記錄的分類為"ServiceAuthorization"。  
   
@@ -51,5 +51,6 @@ ms.locfileid: "54574946"
 3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [如何：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [HOW TO：稽核安全性事件](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)

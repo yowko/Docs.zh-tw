@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
-ms.openlocfilehash: dc7c94bc3031a2c4c0330bd36a6b7e493ad8ce5d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137744"
 ---
 # <a name="hosting-workflows"></a>裝載工作流程
 本節中的主題討論裝載工作流程。  
@@ -24,13 +24,14 @@ ms.locfileid: "57709077"
  [活動樹狀結構檢查](activity-tree-inspection.md)  
  說明工作流程裝載作者如何使用 <xref:System.Activities.WorkflowInspectionServices> 檢查工作流程。  
   
- [對 XAML 來回進行序列化工作流程與活動](serializing-workflows-and-activities-to-and-from-xaml.md)  
+ [序列化工作流程及 XAML 之間的活動 ](serializing-workflows-and-activities-to-and-from-xaml.md)  
  描述如何將工作流程序列化為 XAML，以及使用序列化的工作流程定義。  
   
- [使用 WorkflowIdentity 與版本設定](using-workflowidentity-and-versioning.md)  
+ [使用 WorkflowIdentity 與版本控制](using-workflowidentity-and-versioning.md)  
  描述如何使用 `WorkflowIdentity` 裝載工作流程並存的多個版本。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Workflow Foundation 程式設計](programming.md)
 - [設計工作流程](designing-workflows.md)
 - [Windows Workflow Foundation 資料模型](data-model.md)

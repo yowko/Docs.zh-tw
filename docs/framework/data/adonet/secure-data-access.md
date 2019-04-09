@@ -2,12 +2,12 @@
 title: 安全存取資料
 ms.date: 03/30/2017
 ms.assetid: 473ebd69-21a3-4627-b95e-4e04d035c56f
-ms.openlocfilehash: 6fad9145cde499d7f0fc1b158810b75ff85c039b
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 32106f83785759f4e9aaadcf2198afdcdb24363d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56094031"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137250"
 ---
 # <a name="secure-data-access"></a>安全存取資料
 若要撰寫安全的 ADO.NET 程式碼，您必須了解基礎資料存放區或資料庫中可用的安全性機制。 您也需要考量您的應用程式所可能包含的其他功能或元件的安全性隱含。  
@@ -15,7 +15,7 @@ ms.locfileid: "56094031"
 ## <a name="authentication-authorization-and-permissions"></a>驗證、授權和權限  
  在連接 Microsoft SQL Server 時，您也可以選擇使用「Windows 驗證」(也稱為「整合式安全性」)，它使用目前使用中的 Windows 使用者識別，而非傳遞使用者 ID 和密碼。 強烈建議您使用「Windows 驗證」，因為使用者認證並不會在連接字串中公開 (Expose)。 如果無法使用「Windows 驗證」連接到 SQL Server，則請考慮使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 在執行階段建立連接字串。  
   
- 根據應用程式類型，需要以不同方式處理驗證所使用的認證。 例如，在 Windows Form 應用程式中，系統會提示使用者提供驗證資訊，或可使用使用者的 Windows 認證。 不過，Web 應用程式通常使用應用程式本身 (而非使用者) 提供的認證來存取資料。  
+ 根據應用程式類型，需要以不同方式處理驗證所使用的認證。 例如，在 Windows Forms 應用程式中，系統會提示使用者提供驗證資訊，或可使用使用者的 Windows 認證。 不過，Web 應用程式通常使用應用程式本身 (而非使用者) 提供的認證來存取資料。  
   
  使用者一旦經過驗證，其動作範圍就會根據所授與的權限而定。 請務必遵守最小權限的原則，並僅授與絕對必要的權限。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "56094031"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
+|[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)|描述保護連接資訊的安全性最佳作法和技術，例如使用受保護的組態來加密連接字串。|  
 |[資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))|提供存取資料及執行資料庫作業的建議。|  
 |[連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)|說明如何在執行階段從使用者輸入建立連接字串。|  
 |[SQL Server 安全性概觀](../../../../docs/framework/data/adonet/sql/overview-of-sql-server-security.md)|說明 SQL Server 安全性架構。|  
@@ -35,9 +35,9 @@ ms.locfileid: "56094031"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[DataAdapter 參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
+|[DataAdapter 的參數](../../../../docs/framework/data/adonet/dataadapter-parameters.md)|說明如何將參數搭配 `DataAdapter` 使用。|  
 |[使用預存程序修改資料](../../../../docs/framework/data/adonet/modifying-data-with-stored-procedures.md)|說明如何指定參數並取得傳回值。|  
-|[在 SQL Server 中使用預存程序來管理權限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
+|[使用預存程序管理 SQL Server 中的權限](../../../../docs/framework/data/adonet/sql/managing-permissions-with-stored-procedures-in-sql-server.md)|說明如何使用 SQL Server 預存程序以封裝資料存取。|  
   
 ## <a name="script-exploits"></a>指令碼攻擊  
  指令碼攻擊是另一種形式的插入，此種攻擊會使用插入至網頁的惡意字元。 瀏覽器並不會驗證插入的字元，而會將其當做網頁的一部分來處理。  
@@ -55,8 +55,8 @@ ms.locfileid: "56094031"
   
 |資源|描述|  
 |--------------|-----------------|  
-|[例外狀況處理基本概念](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|說明 try/catch/finally 結構化例外狀況處理 (Structured Exception Handling) 的基本形式。|  
-|[例外狀況的最佳做法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|說明處理例外狀況的最佳做法。|  
+|[例外狀況處理基礎觀念](../../../../docs/standard/exceptions/exception-handling-fundamentals.md)|說明 try/catch/finally 結構化例外狀況處理 (Structured Exception Handling) 的基本形式。|  
+|[例外狀況的最佳作法](../../../../docs/standard/exceptions/best-practices-for-exceptions.md)|說明處理例外狀況的最佳做法。|  
   
 ## <a name="protecting-microsoft-access-and-excel-data-sources"></a>保護 Microsoft Access 和 Excel 資料來源  
  當安全性需求為最低或不存在時，可將 Microsoft Access 和 Microsoft Excel 當做 ADO.NET 應用程式的資料存放區。 其安全性功能可有效遏止侵擾，但僅止於阻擋狀況外使用者的干擾。 Access 和 Excel 的實體資料檔存在於檔案系統中，而且必須讓所有的使用者都可以存取。 這使得這些檔案易遭受因竊取或資料遺失而導致的攻擊，因為檔案可以輕易地複製或變更。 在需要強固安全性時，請使用 SQL Server 或其他伺服器架構的資料庫，因為其中的實體資料檔是無法從檔案系統讀取的。  
@@ -66,8 +66,8 @@ ms.locfileid: "56094031"
 |資源|描述|  
 |--------------|-----------------|  
 |[Access 2007 的安全性考量和指引](https://go.microsoft.com/fwlink/?LinkId=98354)|說明 Access 2007 的安全性技巧，例如加密檔案、管理密碼、將資料庫轉換為新的 ACCDB 和 ACCDE 格式，以及使用其他的安全性選項。|  
-|[了解工作群組資訊檔的角色存取安全性](https://support.microsoft.com/kb/305542)|說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。|  
-|[問題的相關 Microsoft Access 安全性常見問題集的 Microsoft Access 2.0 版到 2000](https://go.microsoft.com/fwlink/?LinkId=47698)|可下載版本的 Microsoft Access 安全性常見問題集。|  
+|[了解工作群組資訊檔在 Access 安全性的角色](https://support.microsoft.com/kb/305542)|說明 Access 2003 安全性中的工作群組資訊檔的角色和關係。|  
+|[關於 Microsoft Access 2.0 版到 2000 的 Microsoft Access 安全性常見問題集](https://go.microsoft.com/fwlink/?LinkId=47698)|可下載版本的 Microsoft Access 安全性常見問題集。|  
 ## <a name="enterprise-services"></a>企業服務  
  COM+ 本身包含根據 Windows NT 帳戶和處理序/執行緒模擬而定的安全性模型。 <xref:System.EnterpriseServices> 命名空間提供包裝函式，這些包裝函式允許 .NET 應用程式透過 <xref:System.EnterpriseServices.ServicedComponent> 類別來整合 Managed 程式碼與 COM+ 安全性服務。  
   
@@ -88,9 +88,10 @@ ms.locfileid: "56094031"
 |[進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx(v=vs.100))|包含主要 Interop 組件 (Assembly)、執行緒和自訂封送處理 (Marshaling) 等進階主題。|
 
 ## <a name="see-also"></a>另請參閱
+
 - [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
-- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
 - [連接字串產生器](../../../../docs/framework/data/adonet/connection-string-builders.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

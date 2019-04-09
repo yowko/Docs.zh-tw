@@ -11,23 +11,21 @@ helpviewer_keywords:
 - object performance considerations [WPF]
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
-ms.openlocfilehash: 5548292480f07fa192985800931f9d0262f2b791
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352681"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137432"
 ---
 # <a name="optimizing-performance-object-behavior"></a>最佳化效能：物件行為
 了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件的內建行為有助您做出功能和效能之間的正確取捨。  
-  
 
-  
 <a name="Not_Removing_Event_Handlers"></a>   
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>不移除物件的事件處理常式可能會保持物件運作  
  物件傳遞給其事件的委派實際上是對該物件的參考。 因此，事件處理常式可以讓物件保持運作時間超出預期。 在對已註冊要接聽物件事件的物件執行清除時，務必要在釋放物件之前先移除該委派。 讓不需要的物件保持運行狀態會增加應用程式的記憶體使用量。 特別是當物件是邏輯樹狀結構或視覺化樹狀結構的根目錄時。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 針對適用於來源與接聽程式之間物件存留期關係難以追蹤的情況的事件，引進了弱式事件接聽程式模式。 某些現有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件會使用此模式。 如果您正在以自訂事件實作物件，這個模式可能對您有用。 如需詳細資訊，請參閱[弱式事件模式](weak-event-patterns.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 引進了弱式事件接聽程式模式可用於使用情況下，來源與接聽程式之間物件存留期關係難以追蹤的事件。 某些現有的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件會使用此模式。 如果您正在以自訂事件實作物件，這個模式可能對您有用。 如需詳細資訊，請參閱[弱式事件模式](weak-event-patterns.md)。  
   
  有數個工具，例如 CLR 分析工具和工作集檢視器，可以提供有關指定處理序的記憶體使用量資訊。 CLR 分析工具包含許多配置設定檔的極有用檢視，包括已配置類型長條圖、配置和呼叫圖形、顯示各種層代記憶體回收的時間線和回收之後產生的 managed 堆積狀態，以及顯示每個方法配置和組件載入的呼叫樹狀結構。 如需詳細資訊，請參閱 [.NET Framework Developer Center](https://go.microsoft.com/fwlink/?LinkId=117435) (.NET Framework 開發人員中心)。  
   
@@ -67,7 +65,7 @@ ms.locfileid: "57352681"
   
  凍結<xref:System.Windows.Freezable>可以改善其效能，因為它不再需要花費資源維護變更通知。 下表顯示簡單的大小<xref:System.Windows.Media.SolidColorBrush>當其<xref:System.Windows.Freezable.IsFrozen%2A>屬性設定為`true`，相較於不是。 這是假設套用一筆刷<xref:System.Windows.Shapes.Shape.Fill%2A>屬性的十個<xref:System.Windows.Shapes.Rectangle>物件。  
   
-|**狀態**|**Size**|  
+|**狀況**|**大小**|  
 |---------------|--------------|  
 |凍結 <xref:System.Windows.Media.SolidColorBrush>|212 個位元組|  
 |未凍結 <xref:System.Windows.Media.SolidColorBrush>|972 個位元組|  
@@ -105,18 +103,19 @@ ms.locfileid: "57352681"
   
  下表顯示經過的時間新增並轉譯 5000<xref:System.Windows.Controls.TextBlock>項目<xref:System.Windows.Controls.StackPanel>和<xref:System.Windows.Controls.VirtualizingStackPanel>。 在此案例中，測量結果代表附加到文字字串之間的時間<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性<xref:System.Windows.Controls.ItemsControl>面板項目顯示的文字字串時的時間的物件。  
   
-|**主面板**|**轉譯時間 (毫秒)**|  
+|**主面板**|**呈現時間 （毫秒）**|  
 |--------------------|----------------------------|  
 |<xref:System.Windows.Controls.StackPanel>|3210|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|46|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
 - [版面配置與設計](optimizing-performance-layout-and-design.md)
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)

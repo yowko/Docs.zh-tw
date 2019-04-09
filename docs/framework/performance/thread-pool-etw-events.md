@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f2a21e3a-3b6c-4433-97f3-47ff16855ecc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 309570fb5a159d24f5b423d96fd9987ee3bb886f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: caacee591c4df8389cea241916618f50da56b22b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503309"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119128"
 ---
 # <a name="thread-pool-etw-events"></a>執行緒集區 ETW 事件
 <a name="top"></a> 這些事件會收集背景工作和 I/O 執行緒的資訊。  
@@ -36,7 +36,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-|-|-|  
 |`ThreadPoolWorkerThreadStart`|50|建立背景工作執行緒時。|  
 |`ThreadPoolWorkerThreadStop`|51|停止背景工作執行緒時。|  
@@ -63,7 +63,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentSample`|54|表示單一範例的資訊集合。亦即，具有特定並行層級之輸送量的瞬間量。|  
   
@@ -83,7 +83,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentAdjustment`|55|當執行緒插入 (攀登) 演算法判斷具有並行層級時，記錄控制中的變更。|  
   
@@ -105,7 +105,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|描述|  
+|Event - 事件|事件 ID|描述|  
 |-----------|--------------|-----------------|  
 |`ThreadPoolWorkerThreadAdjustmentStats`|56|收集執行緒集區的資料。|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-|-|-|  
 |`IOThreadCreate_V1`|44|在執行緒集區中建立 I/O 執行緒時。|  
   
@@ -161,7 +161,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`IOThreadRetire_V1`|46|當 I/O 執行緒變成淘汰候選時。|  
   
@@ -182,7 +182,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`IOThreadUnretire_V1`|47|因為在執行緒變成淘汰候選之後，I/O 在等候期間內到達，而導致 I/O 執行緒取消淘汰時。|  
   
@@ -203,7 +203,7 @@ ms.locfileid: "54503309"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`IOThreadTerminate`|45|在執行緒集區中建立 I/O 執行緒時。|  
   
@@ -216,4 +216,5 @@ ms.locfileid: "54503309"
 |ClrInstanceID|Win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

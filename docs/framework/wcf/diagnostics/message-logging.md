@@ -2,12 +2,12 @@
 title: 訊息記錄
 ms.date: 03/30/2017
 ms.assetid: 6bce0682-75ef-4d65-a659-b328fba4a8b5
-ms.openlocfilehash: 405b29bc68773400f1ece06c01794d24f40b1c3c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e189b6c2997c7d4d7422e61fa22be95678aeb911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585847"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154449"
 ---
 # <a name="message-logging"></a>訊息記錄
 Windows Communication Foundation (WCF) 提供讓您記錄傳入和傳出訊息以便離線使用。 訊息記錄功能可讓您看到訊息與訊息本文的樣貌。 這種記錄類型特別適合用來讓您了解傳入了哪些引數，以及接收端點以何種方式來理解以 XML 表示的引數。 此外，記錄收到的訊息可讓您診斷格式不正確的訊息並查看訊息的抵達方式。 您也可以檢查所使用的安全性權杖、加密與簽署的部分，以及保留不變的部分。  
@@ -30,4 +30,5 @@ Windows Communication Foundation (WCF) 提供讓您記錄傳入和傳出訊息�
  此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [管理與診斷](../../../../docs/framework/wcf/diagnostics/index.md)

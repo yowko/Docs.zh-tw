@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF], finding in a claimset
 - claims [WCF]
 ms.assetid: a76ce107-aeb3-47d0-bfa9-134c53664e20
-ms.openlocfilehash: 81212d5b85ec516ae69c9c015c147cd011a9fd14
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 42e6ee682220913f872da337eb41f6c290082988
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59137120"
 ---
 # <a name="finding-claims-in-a-claimset"></a>在 ClaimSet 中尋找宣告
 檢查 <xref:System.IdentityModel.Claims.ClaimSet> 內容以尋找特定類型的宣告，是在使用宣告架構授權時的常見工作。 若要檢查 <xref:System.IdentityModel.Claims.ClaimSet> 是否存在特定的宣告，請使用 <xref:System.IdentityModel.Claims.ClaimSet.FindClaims%2A> 方法。 這個方法比直接在 <xref:System.IdentityModel.Claims.ClaimSet> 上逐一查看提供更高的效能。 下列範例會示範這種使用方式。 請注意，`claimType` 和 `claimRight` 參數可以是 `null`。 在此情況下，這些參數將比對所有的宣告類型和宣告權限。  
@@ -23,4 +23,5 @@ ms.locfileid: "54495094"
  [!code-vb[c_FindClaimsPerf#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_findclaimsperf/vb/c_findclaimsperf.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)

@@ -2,12 +2,12 @@
 title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
-ms.openlocfilehash: 1ab7058d8667344197e8bc1ddc59cc7200f22270
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142840"
 ---
 # <a name="servicedebug"></a>\<serviceDebug>
 指定 Windows Communication Foundation (WCF) 服務的偵錯和說明資訊功能。  
@@ -71,8 +71,9 @@ ms.locfileid: "55268557"
  選用的 `httpHelpPageBinding` 和 `httpHelpPageBinding` 屬性可讓您設定用來存取服務網頁的繫結。 如果未指定這些繫結，則會依適當情形，使用預設的繫結 (使用 HTTP 時為 `HttpTransportBindingElement`，使用 HTTPS 時則為 `HttpsTransportBindingElement`) 存取服務說明頁面。 請注意，這些屬性 (Attribute) 無法搭配內建的 WCF 繫結使用。 只有當繫結支援 xref:System.ServiceModel.Channels.IReplyChannel 的內部繫結項目 > 將會支援。 此外，該繫結的 <xref:System.ServiceModel.Channels.MessageVersion?displayProperty=nameWithType> 屬性 (Property) 必須是 <xref:System.ServiceModel.Channels.MessageVersion.None?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ServiceDebugElement>
 - <xref:System.ServiceModel.Description.ServiceDebugBehavior>
-- [指定及處理合約與服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
-- [處理例外狀況和失敗](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
+- [指定與處理合約和服務中的錯誤](../../../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [處理例外狀況和錯誤](../../../../../docs/framework/wcf/extending/handling-exceptions-and-faults.md)
 - [服務偵錯行為](../../../../../docs/framework/wcf/samples/service-debug-behavior.md)

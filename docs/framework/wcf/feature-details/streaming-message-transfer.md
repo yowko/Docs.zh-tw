@@ -2,12 +2,12 @@
 title: 資料流訊息傳輸
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: 5a146b9f0bd2eb74b5ef4b5877e6cb925d386abc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136873"
 ---
 # <a name="streaming-message-transfer"></a>資料流訊息傳輸
 Windows Communication Foundation (WCF) 傳輸的傳輸訊息支援兩種模式：  
@@ -47,4 +47,5 @@ Windows Communication Foundation (WCF) 傳輸的傳輸訊息支援兩種模式�
  將傳輸模式由緩衝處理變更為資料流處理，會同時變更 TCP 與具名管道傳輸的原生通道類型。 對於緩衝處理的傳輸來說，原生的通道類型為 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>。 對於資料流處理的傳輸來說，原生通道為 <xref:System.ServiceModel.Channels.IRequestChannel> 和 <xref:System.ServiceModel.Channels.IReplyChannel>。 在直接使用這些傳輸 (亦即，並未透過服務合約) 的現有應用程式中變更傳輸模式，需要變更通道處理站與接聽項的預期通道類型。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [HOW TO：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

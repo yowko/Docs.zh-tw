@@ -2,12 +2,12 @@
 title: 適用於 Entity Framework 的 SqlClient 函式
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
-ms.openlocfilehash: dc111d3f8321170a02c70f168bf8ae5c2a3521e8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730629"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117773"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>適用於 Entity Framework 的 SqlClient 函式
 適用於 Entity Framework 的 .NET Framework Data Provider for SQL Server (SqlClient) 提供了一組可執行數學和彙總 (Aggregation) 計算的函式，以及可執行 `System.DateTime` 和 `string` 作業的函式。 這些函式位於 `SQLServer` 命名空間 (Namespace) 中。  
@@ -21,7 +21,7 @@ ms.locfileid: "54730629"
   
  [彙總函式](../../../../../docs/framework/data/adonet/ef/aggregate-functions-sqlclient-for-entity-framework.md)  
   
- [日期和時間函式](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
+ [日期及時間函式](../../../../../docs/framework/data/adonet/ef/date-and-time-functions.md)  
   
  [數學函式](../../../../../docs/framework/data/adonet/ef/mathematical-functions.md)  
   
@@ -30,5 +30,6 @@ ms.locfileid: "54730629"
  [系統函式](../../../../../docs/framework/data/adonet/ef/system-functions.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL 概觀](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
