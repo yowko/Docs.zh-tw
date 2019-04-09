@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
-ms.openlocfilehash: d3c343d3cf5068e473efbd62de019a25cf19dc10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128332"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>判斷序列中的任何或所有項目是否全都符合條件
 如果序列中所有的項目都符合條件，則 <xref:System.Linq.Enumerable.All%2A> 運算子會傳回 `true`。  
@@ -34,4 +34,5 @@ ms.locfileid: "54702570"
  [!code-csharp[DLinqQueryExamples#38](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#38)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [查詢範例](../../../../../../docs/framework/data/adonet/sql/linq/query-examples.md)

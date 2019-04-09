@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows Form Timer 元件集間隔執行程序
+title: HOW TO：使用 Windows Forms Timer 元件依設定的間隔執行程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Timer component [Windows Forms], initializing
 - procedures [Windows Forms], specific time intervals
 ms.assetid: 8025247a-2de4-4d86-b8ab-a8cb8aeab2ea
-ms.openlocfilehash: 03f386917e554cfdf9d65778474ae809d81d1939
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ed433ee03bc82931e9b640f45ebd798e0ef73204
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127032"
 ---
-# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>HOW TO：使用 Windows Form Timer 元件集間隔執行程序
+# <a name="how-to-run-procedures-at-set-intervals-with-the-windows-forms-timer-component"></a>HOW TO：使用 Windows Forms Timer 元件依設定的間隔執行程序
 您有時可能會想要建立一個程序，依特定時間間隔執行，直到迴圈完成，或是在經過設定的時間間隔之後執行。 <xref:System.Windows.Forms.Timer> 元件可讓您建立這樣的程序。  
   
  這個元件是專為 Windows Form 環境所設計。 如果您需要適用於伺服器環境的計時器，請參閱[伺服器架構的計時器簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/tb9yt5e6(v=vs.90))。  
@@ -30,7 +30,7 @@ ms.locfileid: "57705567"
   
 ## <a name="to-run-a-procedure-at-set-intervals-with-the-timer-component"></a>若要使用計時器元件，依設定的間隔來執行程序  
   
-1.  將 <xref:System.Windows.Forms.Timer> 加入您的表單。 請參閱下面的＜範例＞一節，以取得以程式設計方式執行此動作的範例。 Visual Studio 也有將元件加入表單的支援。 另請參閱[How to:將沒有使用者介面的控制項新增至 Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
+1.  加入 <xref:System.Windows.Forms.Timer> 至您的表單。 請參閱下面的＜範例＞一節，以取得以程式設計方式執行此動作的範例。 Visual Studio 也有將元件加入表單的支援。 另請參閱[How to:將沒有使用者介面的控制項新增至 Windows Forms](how-to-add-controls-without-a-user-interface-to-windows-forms.md)。  
   
 2.  設定計時器的 <xref:System.Windows.Forms.Timer.Interval%2A> 屬性 (以毫秒為單位)。 此屬性可決定，經過多少時間之後，會再執行該程序。  
   
@@ -243,6 +243,7 @@ private:
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Timer>
 - [Timer 元件](timer-component-windows-forms.md)
 - [Timer 元件概觀](timer-component-overview-windows-forms.md)

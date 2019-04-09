@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 3d67da6330cdceaf975c62b474c1580b853a2676
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160104"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>HOW TO：排列 MDI 子表單
 應用程式通常會包含 [並排]、[重疊顯示] 和 [排列] 等動作的功能表命令，以便控制所開啟之 MDI 子表單的配置。 您可以搭配使用 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 方法和其中一個 <xref:System.Windows.Forms.MdiLayout> 列舉值，來重新排列 MDI 父表單中的子表單。  
@@ -48,8 +48,9 @@ ms.locfileid: "57711894"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
-- [如何：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
-- [如何：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
-- [如何：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
-- [如何：將資料傳送至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
+- [HOW TO：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
+- [HOW TO：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
+- [HOW TO：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
+- [HOW TO：傳送資料至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
-ms.openlocfilehash: 1cd6962a02a50ecd9f9b634148eeb38ad0a45e05
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664040"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149704"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 資料行值
 SQL Server 支援`xml`資料類型，而開發人員可以擷取包含這個類型使用標準行為的結果集<xref:System.Data.SqlClient.SqlCommand>類別。 如同擷取任意資料行一樣，您可以擷取 `xml` 資料行 (例如，擷取至 <xref:System.Data.SqlClient.SqlDataReader>)，但是如果您要以 XML 的型式來使用資料行的內容，則必須使用 <xref:System.Xml.XmlReader>。  
@@ -25,6 +25,7 @@ SQL Server 支援`xml`資料類型，而開發人員可以擷取包含這個類�
  [!code-vb[DataWorks SqlClient.GetXmlDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlClient.GetXmlDataReader/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.SqlTypes.SqlXml>
 - [SQL Server 中的 XML 資料](../../../../../docs/framework/data/adonet/sql/xml-data-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

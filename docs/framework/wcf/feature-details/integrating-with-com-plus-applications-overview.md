@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 708c23f80dc3ed0a5b134295a16a20747d555be4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153240"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散式應用程式。 如果您已經使用裝載於 COM + 元件為基礎的應用程式邏輯，您可以使用 WCF 來擴充現有邏輯，而不需要重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散�
 ### <a name="limited-object-reference-support"></a>限制的物件參考支援  
  由於一些已部署的 COM+ 元件確實會依參考參數而使用物件 (例如，傳回 ADO 資料錄集 (Recordset) 物件)，因此 COM+ 整合中就包括物件參考參數的限制支援。 支援會受限於實作 `IPersistStream` COM 介面的物件。 其中包括 ADO 資料錄集物件，並且可針對特定於應用程式的 COM 物件來實作。  
   
- 若要啟用這項支援，ComSvcConfig.exe 工具提供**allowreferences**交換器會停用一般方法簽章參數，並檢查以確定不會使用物件參考參數執行此工具. 此外，必須在 <`persistableTypes`> 組態項目內 (此項目為 <`comContract`> 項目的子項) 命名及識別您當做參數傳遞的物件型別。  
+ 若要啟用這項支援，ComSvcConfig.exe 工具提供**allowreferences**交換器會停用一般方法簽章參數，並檢查以確定不會使用物件參考參數執行此工具. 此外，您當做參數傳遞的物件類型必須進行命名，並識別在 <`persistableTypes`> 子系的組態項目 <`comContract`> 項目。  
   
  使用這個功能時，COM+ 整合服務會使用 `IPersistStream` 介面來序列化或還原序列化物件執行個體。 如果物件執行個體不支援 `IPersistStream`，就會擲回例外狀況。  
   
@@ -102,4 +102,5 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散�
  在整合應用程式上無法使用 COM+ 處理序回收功能。 如果應用程式是設定為使用處理序回收，而且是在 COM+ 主控的處理序中執行元件，將無法啟動服務。 這項需求不包括使用 Web 主控同處理序模式的服務，因為這個服務中未套用處理序回收設定。  
   
 ## <a name="see-also"></a>另請參閱
-- [整合 COM+ 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)
+
+- [整合 COM 應用程式概觀](../../../../docs/framework/wcf/feature-details/integrating-with-com-applications-overview.md)

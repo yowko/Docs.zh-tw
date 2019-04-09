@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
-ms.openlocfilehash: cf9a06c4604ee71e3e98de22c6729cc4a874e741
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127838"
 ---
 # <a name="controls-by-category"></a>按分類區隔控制項
 Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為數個類別。 從這些分類可看出哪些控制項有類似的使用模式或功能，方便您視情況選擇適合的控制項。  
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>文件  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含幾個專用於檢視文件的控制項。 這些控制項會根據目標使用者的情況，提供最佳的閱讀體驗。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含數個特殊的控制項，用於檢視文件。 這些控制項會根據目標使用者的情況，提供最佳的閱讀體驗。  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>媒體  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含裝載音訊和視訊內容的整合支援，以及大多數常見影像格式的「轉碼器」。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含裝載音訊和視訊內容，以及 [轉碼器] 的整合的支援，最受歡迎的影像格式。  
   
 -   <xref:System.Windows.Controls.Image>  
   
@@ -178,4 +178,5 @@ Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為
 -   <xref:System.Windows.Controls.InkPresenter>  
   
 ## <a name="see-also"></a>另請參閱
+
 - [控制項程式庫](control-library.md)

@@ -2,12 +2,12 @@
 title: 資料流
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
-ms.openlocfilehash: ca6c4a2f8bfd87982bc1b8574c65c5d5a2282a93
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e4e70a3bf4137169afa94a122225f27c25909713
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828091"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127305"
 ---
 # <a name="stream"></a>資料流
 這個資料流範例將示範資料流傳輸模式通訊的使用。 服務會公開數個傳送和接收資料流的作業。 這個範例會自我裝載。 用戶端和服務都是主控台程式。  
@@ -36,7 +36,7 @@ public interface IStreamingSample
 }  
 ```  
   
- `GetStream` 作業會接收經過緩衝處理做為字串的一些輸入資料，然後傳回經過資料流處理的 `Stream`。 相反地，`UploadStream` 會接受 `Stream` (經過資料流處理) 並傳回 `bool` (經過緩衝處理)。 `EchoStream` 會接受並傳回 `Stream`，而這項作業也是對輸入和輸出兩種訊息都進行資料流處理的範例。 最後，`GetReversedStream` 不接受任何輸入，而只是傳回 `Stream` (經過資料流處理)。  
+ `GetStream` 作業會接收經過緩衝處理做為字串的一些輸入資料，然後傳回經過資料流處理的 `Stream`。 相反地，`UploadStream` 會接受 `Stream` (經過資料流處理) 並傳回 `bool` (經過緩衝處理)。 `EchoStream` 會接受並傳回`Stream`是作業的範例的輸入和輸出訊息會以資料流處理。 最後，`GetReversedStream` 不接受任何輸入，而只是傳回 `Stream` (經過資料流處理)。  
   
 ## <a name="enabling-streamed-transfers"></a>啟用資料流處理的傳輸  
  如先前所述，定義作業合約就可以在程式設計模型層級上提供資料流。 如果您在此停止作業，則傳輸仍然會緩衝整個訊息內容。 若要啟用傳輸資料流，請在傳輸的繫結項目上選取傳輸模式。 繫結項目包含可設為 `TransferMode`、`Buffered`、`Streamed` 或 `StreamedRequest` 的 `StreamedResponse` 屬性。 將傳輸模式設為 `Streamed` 可啟用雙向資料流通訊。 將傳輸模式設為 `StreamedRequest` 或 `StreamedResponse` 可以分別啟用只有要求或回應方向的資料流通訊。  
@@ -66,7 +66,7 @@ public interface IStreamingSample
 ## <a name="processing-data-as-it-is-streamed"></a>在資料流處理時處理資料  
  `GetStream`、`UploadStream` 和 `EchoStream` 作業都會處理直接從檔案傳送資料或直接將接收資料儲存至檔案的作業。 但是在某些情況下，還是需要傳送或接收大量的資料，並在資料送達或收到時對其資料區塊 (Chunk) 進行某種處理。 處理此類案例的其中一種方式是，撰寫自訂資料流 (衍生自 <xref:System.IO.Stream> 的類別)，以便在讀取或寫入資料時加以處理。 例如，`GetReversedStream` 作業和 `ReverseStream` 類別即是這種方式的範例。  
   
- `GetReversedStream` 會建立並傳回 `ReverseStream` 的新執行個體。 實際的處理會在系統從這個 `ReverseStream` 物件讀取時進行。 `ReverseStream.Read` 的實作會從基礎檔案讀取位元組區塊，然後將其反向，再傳回此反向的位元組。 這並不會反向整個檔案內容；一次只反向一個位元組區塊。 下列是示範如何在對資料流讀取或寫入內容時執行資料流處理的範例。  
+ `GetReversedStream` 建立並傳回的新執行個體`ReverseStream`。 實際的處理會在系統從這個 `ReverseStream` 物件讀取時進行。 `ReverseStream.Read` 的實作會從基礎檔案讀取位元組區塊，然後將其反向，再傳回此反向的位元組。 這並不會反向整個檔案內容；一次只反向一個位元組區塊。 下列是示範如何在對資料流讀取或寫入內容時執行資料流處理的範例。  
   
 ```csharp
 class ReverseStream : Stream  
@@ -184,4 +184,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Stream`  
-  

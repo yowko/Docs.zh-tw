@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 03be79e6300afa6d25a005b0a21b8c2bf15d27be
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152954"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance 介面
 
@@ -35,7 +35,6 @@ ms.locfileid: "57202271"
 | [GetILAddressMap](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getiladdressmap-method.md) | 取得地址對應資訊的 IL。 |
 | [GetRepresentativeEntryAddress](../../../../docs/framework/unmanaged-api/debugging/ixclrdatamethodinstance-getrepresentativeentryaddress-method.md) | 取得所有可能的進入點之方法的原生編譯的最具代表性的進入點位址。 |
 
-
 ## <a name="remarks"></a>備註
 
 此介面的執行階段內，而且不會公開透過任何標頭或程式庫檔案。 不過，它是 COM 介面衍生自`IUnknown`含有 GUID `ECD73800-22CA-4b0d-AB55-E9BA7E6318A5` ，可以透過一般的 COM 機制取得。
@@ -43,9 +42,9 @@ ms.locfileid: "57202271"
 ## <a name="requirements"></a>需求
 
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
-**標頭：** 無  
-**程式庫：** 無  
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**標頭：** None  
+**LIBRARY:** None  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dialog boxes [WPF], creating
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
-ms.openlocfilehash: 57edaa173b85bc06c6859b08d3edec281e1b8942
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149522"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>HOW TO：使用 Grid 建置標準 UI 對話方塊
 此範例示範如何建立標準[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]對話方塊中，使用<xref:System.Windows.Controls.Grid>項目。  
@@ -33,7 +33,8 @@ ms.locfileid: "57372851"
  [!code-vb[GridRunDialog#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GridRunDialog/VisualBasic/grid_vb.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
 - [面板概觀](panels-overview.md)
-- [HOW-TO 主題](grid-how-to-topics.md)
+- [HOW TO 主題](grid-how-to-topics.md)

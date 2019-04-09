@@ -2,12 +2,12 @@
 title: <add> 的 <transportConfigurationType>
 ms.date: 03/30/2017
 ms.assetid: 03d79db9-571d-4534-acef-d05e5467b257
-ms.openlocfilehash: 84ad745e7789fc2de8dcc23f3607b63702af05a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c71a58b13e89bedb5eed24d784c82fb1525f7625
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263444"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126720"
 ---
 # <a name="add-of-transportconfigurationtype"></a>\<add> of \<transportConfigurationType>
 此項目是索引鍵/值組，可用來識別特定傳輸的型別。  
@@ -35,11 +35,11 @@ ms.locfileid: "55263444"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|必要的 String 屬性。<br /><br /> 包含唯一識別傳輸型別的使用者定義索引鍵。|  
+|名稱|必要的 String 屬性。<br /><br /> 包含唯一識別傳輸型別的使用者定義索引鍵。|  
 |transportConfigurationType|字串，包含可實作特定傳輸的型別。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -59,6 +59,7 @@ ms.locfileid: "55263444"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.TransportConfigurationTypeElement>
 - <xref:System.ServiceModel.Configuration.ServiceHostingEnvironmentSection>
 - <xref:System.ServiceModel.ServiceHostingEnvironment>

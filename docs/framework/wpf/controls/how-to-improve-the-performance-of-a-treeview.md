@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - TreeView control [WPF], improving the performance
 ms.assetid: b792c740-cf2b-4da8-8ba8-3d2e5a821874
-ms.openlocfilehash: d04d5997e6f02a4227704b668fdf19324ea20f26
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de1b46da2a7c6c3db0c0c19cdbb654fcf2fbbd6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364732"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153435"
 ---
 # <a name="how-to-improve-the-performance-of-a-treeview"></a>HOW TO：改善 TreeView 的效能
 如果<xref:System.Windows.Controls.TreeView>包含許多項目，載入所花費的時間長度可能在使用者介面項目會造成明顯的延遲。 您可以藉由設定改善載入時間`VirtualizingStackPanel.IsVirtualizing`附加屬性`true`。  UI 也可能會變慢，以回應使用者捲動時<xref:System.Windows.Controls.TreeView>藉由使用滑鼠滾輪，或拖曳捲軸捲動方塊。 您可以改善效能<xref:System.Windows.Controls.TreeView>當使用者捲動藉由設定`VirtualizingStackPanel.VirtualizationMode`; 附加屬性<xref:System.Windows.Controls.VirtualizationMode.Recycling?displayProperty=nameWithType>。  
@@ -31,4 +31,5 @@ ms.locfileid: "57364732"
  [!code-vb[RecycleItemContainerShippets#TreeViewData](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RecycleItemContainerShippets/visualbasic/window1.xaml.vb#treeviewdata)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [控制項](../advanced/optimizing-performance-controls.md)

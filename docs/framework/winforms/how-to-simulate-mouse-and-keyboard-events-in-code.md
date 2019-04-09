@@ -1,5 +1,5 @@
 ---
-title: HOW TO：模擬滑鼠和鍵盤事件的程式碼
+title: HOW TO：以程式碼模擬滑鼠和鍵盤事件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: bb51cd5ac3c4961381ceff89054d79dc52531627
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59123444"
 ---
-# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>HOW TO：模擬滑鼠和鍵盤事件的程式碼
+# <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>HOW TO：以程式碼模擬滑鼠和鍵盤事件
 Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選項。 本主題提供這些選項的概觀。  
   
 ## <a name="simulating-mouse-input"></a>模擬滑鼠輸入  
@@ -27,7 +27,7 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>以程式設計方式按一下滑鼠右鍵  
   
-1.  建立 <xref:System.Windows.Forms.MouseEventArgs>，並將其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 屬性設定為 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。  
+1.  建立 <xref:System.Windows.Forms.MouseEventArgs> ，並將其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 屬性設定為 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。  
   
 2.  呼叫 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，並以這個 <xref:System.Windows.Forms.MouseEventArgs> 做為引數。  
   
@@ -90,4 +90,5 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 中的使用者輸入](user-input-in-windows-forms.md)
+
+- [Windows Form 中的使用者輸入](user-input-in-windows-forms.md)
