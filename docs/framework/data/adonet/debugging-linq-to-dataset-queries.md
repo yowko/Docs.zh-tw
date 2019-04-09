@@ -2,12 +2,12 @@
 title: 偵錯 LINQ to DataSet 查詢
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 636d42566275f042f82f939e160c7fec5f180e96
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825504"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133325"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>偵錯 LINQ to DataSet 查詢
 
@@ -28,5 +28,6 @@ Visual Studio 支援的偵錯[!INCLUDE[linq_dataset](../../../../includes/linq-d
  在 Visual Basic 在 Visual Studio 中，您可以使用 編輯後繼續非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼，即使在包含方法[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢。 您可以新增或移除程式碼，再[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]陳述式，即使這些變更會影響的行號[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢。 Visual Basic 偵錯體驗，非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]程式碼維持不變之前[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]引進。 您無法變更、 新增或移除[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]查詢，不過，除非您停止偵錯以套用所做的變更。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯 Managed 程式碼](/visualstudio/debugger/debugging-managed-code)
 - [程式設計手冊](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

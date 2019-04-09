@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], objects along paths (point animation)
 - point animation [WPF]
 ms.assetid: 1fa3f817-35bc-41a1-b366-f5a20b70da0c
-ms.openlocfilehash: 13cf583277b4e105da01c5ab56111123cf03038c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ef28118975d02500916676ca50e0f9622c7a3e2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129580"
 ---
 # <a name="how-to-animate-an-object-along-a-path-point-animation"></a>HOW TO：沿著路徑建立物件的動畫 (點動畫)
 此範例示範如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingPath>物件來以動畫顯示<xref:System.Windows.Point>沿著曲線路徑。  
@@ -31,6 +31,7 @@ ms.locfileid: "57351613"
  上述範例中使用的程式碼版本<xref:System.Windows.Media.Animation.Storyboard>來以動畫顯示<xref:System.Windows.Media.EllipseGeometry>，即使只有一張動畫已套用。 A<xref:System.Windows.Media.Animation.Storyboard>通常是最簡單的方式套用多個動畫，因為這些動畫可以控制由相同<xref:System.Windows.Media.Animation.Storyboard>。 不過，若要將單一動畫套用至屬性，使用程式碼時更簡單的方法是使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>方法。 如需範例，請參閱[不使用分鏡腳本而建立屬性的動畫](how-to-animate-a-property-without-using-a-storyboard.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路徑動畫範例](https://go.microsoft.com/fwlink/?LinkID=160028)
 - [動畫概觀](animation-overview.md)
-- [路徑動畫操作說明主題](path-animation-how-to-topics.md)
+- [路徑動畫 HOW TO 主題](path-animation-how-to-topics.md)

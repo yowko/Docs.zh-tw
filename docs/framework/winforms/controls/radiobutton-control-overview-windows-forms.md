@@ -9,12 +9,12 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], determining state
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
-ms.openlocfilehash: cc511a79cf70bb8df8980c8703b1ad49d15516aa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129112"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控制項概觀 (Windows Form)
 Windows Form<xref:System.Windows.Forms.RadioButton>控制項呈現給使用者的一組的兩個或多個互斥的選項。 選項按鈕和核取方塊可能看起來運作同樣地，雖然還有一項重要差異： 當使用者選取的選項按鈕，不能也選取相同的群組中的其他選項按鈕。 相反地，您可以選取任意數目的核取方塊。 定義選項按鈕群組會告知使用者，「 此處 」 一組的其中之一，您可以選擇的選項。  
@@ -25,11 +25,12 @@ Windows Form<xref:System.Windows.Forms.RadioButton>控制項呈現給使用者�
  <xref:System.Windows.Forms.RadioButton>控制項可以顯示像命令按鈕，如果已壓下，如果選取，會出現<xref:System.Windows.Forms.RadioButton.Appearance%2A>屬性設定為<xref:System.Windows.Forms.Appearance.Button>。 選項按鈕也可以顯示使用的映像<xref:System.Windows.Forms.ButtonBase.Image%2A>和<xref:System.Windows.Forms.ButtonBase.ImageList%2A>屬性。 如需詳細資訊，請參閱[如何：設定所顯示的映像的 Windows Form 控制項](how-to-set-the-image-displayed-by-a-windows-forms-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.RadioButton>
 - [Panel 控制項概觀](panel-control-overview-windows-forms.md)
 - [GroupBox 控制項概觀](groupbox-control-overview-windows-forms.md)
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)
-- [如何：建立 Windows Form 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)
-- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [如何：群組 Windows Form RadioButton 控制項為一組的函式](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [HOW TO：建立 Windows Forms 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)
+- [HOW TO：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [HOW TO：將 Windows Forms RadioButton 控制項分組成函式集](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton 控制項](radiobutton-control-windows-forms.md)

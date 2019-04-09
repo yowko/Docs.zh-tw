@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: bb82921070cb5040cd279830bafd3d0e718d1374
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372700"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131012"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>建立外觀可自訂的控制項
 <a name="introduction"></a>
@@ -47,7 +47,7 @@ ms.locfileid: "57372700"
   
 -   [提供控制項合約](#providing_the_control_contract)  
   
--   [完整的範例](#complete_example)  
+-   [完整範例](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
@@ -121,7 +121,7 @@ ms.locfileid: "57372700"
 ### <a name="use-the-visualstatemanager-to-manage-states"></a>使用 VisualStateManager 管理狀態  
  <xref:System.Windows.VisualStateManager>會追蹤控制項的狀態以及執行狀態之間轉換所需的邏輯。 當您將加入<xref:System.Windows.VisualState>物件至<xref:System.Windows.Controls.ControlTemplate>，將它們加入<xref:System.Windows.VisualStateGroup>並新增<xref:System.Windows.VisualStateGroup>來<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>附加屬性，讓<xref:System.Windows.VisualStateManager>可存取它們。  
   
- 下列範例會重複上一個範例會顯示<xref:System.Windows.VisualState>對應至物件`Positive`和`Negative`控制項狀態。 <xref:System.Windows.Media.Animation.Storyboard>中`Negative`<xref:System.Windows.VisualState>會變成<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>紅色。   當`NumericUpDown`控制項處於`Negative`狀態時，在分鏡腳本`Negative`狀態開始。  然後<xref:System.Windows.Media.Animation.Storyboard>中`Negative`時，控制權會傳回狀態就會停止`Positive`狀態。  `Positive` <xref:System.Windows.VisualState>不必包含<xref:System.Windows.Media.Animation.Storyboard>因為時<xref:System.Windows.Media.Animation.Storyboard>for`Negative`停止，<xref:System.Windows.Controls.TextBlock.Foreground%2A>回到其原始的色彩。  
+ 下列範例會重複上一個範例會顯示<xref:System.Windows.VisualState>對應至物件`Positive`和`Negative`控制項狀態。 <xref:System.Windows.Media.Animation.Storyboard>中`Negative`<xref:System.Windows.VisualState>會變成<xref:System.Windows.Controls.TextBlock.Foreground%2A>的<xref:System.Windows.Controls.TextBlock>紅色。   當`NumericUpDown`控制項處於`Negative`狀態時，在分鏡腳本`Negative`狀態開始。  然後<xref:System.Windows.Media.Animation.Storyboard>中`Negative`時，控制權會傳回狀態就會停止`Positive`狀態。  `Positive`<xref:System.Windows.VisualState>不需要包含<xref:System.Windows.Media.Animation.Storyboard>因為時<xref:System.Windows.Media.Animation.Storyboard>如`Negative`停止，<xref:System.Windows.Controls.TextBlock.Foreground%2A>回到其原始的色彩。  
   
  [!code-xaml[VSMCustomControl#ValueStates](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#valuestates)]  
   
@@ -156,7 +156,7 @@ ms.locfileid: "57372700"
   
  如果您傳遞的狀態名稱<xref:System.Windows.VisualStateManager.GoToState%2A>控制項已處於該狀態中，當<xref:System.Windows.VisualStateManager.GoToState%2A>不執行任何動作，因此您不需要檢查控制項的目前狀態。  例如，如果`Value`從一個負的數字變更為另一個負數數字，分鏡腳本`Negative`狀態不會中斷與使用者看不到控制項中的變更。  
   
- <xref:System.Windows.VisualStateManager>會使用<xref:System.Windows.VisualStateGroup>物件來判斷的狀態下，當您呼叫結束<xref:System.Windows.VisualStateManager.GoToState%2A>。 此控制項一律會在每個狀態<xref:System.Windows.VisualStateGroup>定義於其<xref:System.Windows.Controls.ControlTemplate>後進入另一個狀態從相同，只保留狀態<xref:System.Windows.VisualStateGroup>。 比方說，<xref:System.Windows.Controls.ControlTemplate>的`NumericUpDown`控制項會定義`Positive`並`Negative`<xref:System.Windows.VisualState>中其中一個物件<xref:System.Windows.VisualStateGroup>和`Focused`並`Unfocused`<xref:System.Windows.VisualState>中另一個物件。 (您所見`Focused`和`Unfocused`<xref:System.Windows.VisualState>中定義[完整範例](#complete_example)當控制項將會從本主題中的區段`Positive`狀態`Negative`狀態，或反之亦然，控制項中仍會停留`Focused`或`Unfocused`狀態。  
+ <xref:System.Windows.VisualStateManager>會使用<xref:System.Windows.VisualStateGroup>物件來判斷的狀態下，當您呼叫結束<xref:System.Windows.VisualStateManager.GoToState%2A>。 此控制項一律會在每個狀態<xref:System.Windows.VisualStateGroup>定義於其<xref:System.Windows.Controls.ControlTemplate>後進入另一個狀態從相同，只保留狀態<xref:System.Windows.VisualStateGroup>。 比方說，<xref:System.Windows.Controls.ControlTemplate>的`NumericUpDown`控制項會定義`Positive`並`Negative`<xref:System.Windows.VisualState>中其中一個物件<xref:System.Windows.VisualStateGroup>而`Focused`和`Unfocused`<xref:System.Windows.VisualState>中另一個物件。 (您所見`Focused`並`Unfocused`<xref:System.Windows.VisualState>中定義[完整範例](#complete_example)時的控制項將會從本主題中的區段`Positive`狀態`Negative`狀態，或反之亦然，控制會保留在請`Focused`或`Unfocused`狀態。  
   
  有三個典型的地方，其中可能會變更控制項的狀態：  
   
@@ -238,5 +238,6 @@ ms.locfileid: "57372700"
  [!code-vb[VSMCustomControl#ControlLogic](~/samples/snippets/visualbasic/VS_Snippets_Wpf/vsmcustomcontrol/visualbasic/numericupdown.vb#controllogic)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)
 - [控制項自訂](control-customization.md)

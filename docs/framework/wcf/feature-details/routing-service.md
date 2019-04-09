@@ -2,12 +2,12 @@
 title: 路由服務
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
-ms.openlocfilehash: b0d58e70d482532e3f148d3f4f92741f46221982
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54495301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129437"
 ---
 # <a name="routing-service"></a>路由服務
 「路由服務」是一種泛型 SOAP 媒介，可做為訊息路由器。 路由服務的核心功能是可根據訊息內容傳送訊息的能力，這可讓訊息根據訊息 (不論是標頭或訊息本文) 內部本身的值轉送至用戶端端點。  
@@ -106,6 +106,7 @@ ms.locfileid: "54495301"
 -   動態組態  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)
 - [路由合約](../../../../docs/framework/wcf/feature-details/routing-contracts.md)
-- [訊息篩選](../../../../docs/framework/wcf/feature-details/message-filters.md)
+- [訊息篩選條件](../../../../docs/framework/wcf/feature-details/message-filters.md)

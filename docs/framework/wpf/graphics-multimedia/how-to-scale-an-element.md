@@ -1,18 +1,18 @@
 ---
-title: HOW TO：縮放項目
+title: HOW TO：縮放元素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - scaling [WPF], elements
 - graphics [WPF], scaling elements
 ms.assetid: 18158d94-bbe7-4f6a-814e-84d27fa748bf
-ms.openlocfilehash: 6decc10c954b51d64c6045c01f1264df35429862
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 607b3a11085f746503c1b82552f1740b49d9ef5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131699"
 ---
-# <a name="how-to-scale-an-element"></a>HOW TO：縮放項目
+# <a name="how-to-scale-an-element"></a>HOW TO：縮放元素
 此範例示範如何使用<xref:System.Windows.Media.ScaleTransform>來縮放元素。  
   
  使用<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>和<xref:System.Windows.Media.ScaleTransform.ScaleY%2A>屬性所指定的因數調整元素的大小。 比方說，<xref:System.Windows.Media.ScaleTransform.ScaleX%2A>的 1.5 倍的值會自動縮放其原始寬度的 150%的項目。 A <xref:System.Windows.Media.ScaleTransform.ScaleY%2A> 50%的值為 0.5 會縮小的項目的高度。  
@@ -38,7 +38,8 @@ ms.locfileid: "57358609"
  如需完整範例，請參閱 [2D 轉換範例](https://go.microsoft.com/fwlink/?LinkID=158252)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.ScaleTransform>
 - [轉換概觀](transforms-overview.md)
-- [HOW-TO 主題](transformations-how-to-topics.md)
+- [HOW TO 主題](transformations-how-to-topics.md)

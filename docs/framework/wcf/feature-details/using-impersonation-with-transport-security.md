@@ -2,12 +2,12 @@
 title: 使用模擬搭配傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 803edee3e051c40a65ad63db620c65bcdbdcae50
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151433"
 ---
 # <a name="using-impersonation-with-transport-security"></a>使用模擬搭配傳輸安全性
 *模擬*是伺服器應用程式才會在用戶端的身分識別的能力。 對服務而言，驗證存取資源時使用模擬是很常見的。 伺服器應用程式使用服務帳戶執行，但是伺服器在接受用戶端連線會模擬用戶端，藉此使用用戶端的認證執行存取檢查。 傳輸安全性是一種用於傳遞認證與使用該認證保護通訊安全性的機制。 本主題描述使用傳輸安全性的設定，在 Windows Communication Foundation (WCF) 搭配模擬功能。 如需有關使用訊息安全性模擬的詳細資訊，請參閱[委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -17,7 +17,7 @@ ms.locfileid: "54532704"
   
 |模擬等級|描述|  
 |-------------------------|-----------------|  
-|無|伺服器不嘗試模擬用戶端。|  
+|None|伺服器不嘗試模擬用戶端。|  
 |匿名|伺服器應用程式可以根據用戶端的認證執行存取檢查，但不會接收任何有關用戶端身分識別的資訊。 模擬等級只對電腦上的通訊有意義，例如具名管道。 使用 `Anonymous` 搭配遠端連線將模擬等級提升至識別。|  
 |識別|伺服器應用程式知道用戶端的身分，而且可以根據用戶端的認證執行存取驗證，但無法模擬用戶端。 識別是除非權杖提供者提供不同的模擬等級，WCF 中搭配 SSPI 認證使用的預設模擬等級。|  
 |Impersonate|除了執行存取檢查外，伺服器應用程式可以存取做為用戶端的伺服器電腦上的資源。 伺服器應用程式無法使用用戶端識別存取遠端電腦上的資源，因為模擬的權杖沒有網路認證。|  
@@ -55,7 +55,8 @@ ms.locfileid: "54532704"
  如需 HTTP 傳輸的詳細資訊，請參閱[選擇傳輸](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)
-- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [如何：服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [HOW TO：在服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [了解 HTTP 驗證](../../../../docs/framework/wcf/feature-details/understanding-http-authentication.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 348b49e5-589d-4eb2-a597-d6ff60ab52d1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 008a61a75aa96faad801e6da8bb0f8a86f65829c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9fdc4441a8a11df5427badfaea95edb0abe52bde
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288076"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131712"
 ---
 # <a name="method-element-net-native"></a>\<方法 > 項目 (.NET Native)
 將執行階段反映原則套用到建構函式或方法。  
@@ -67,7 +67,7 @@ ms.locfileid: "55288076"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至已建構的泛型類型及其所有成員。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  泛型方法的 `<Method>` 的元素會將其原則套用至沒有自己原則的所有具現化。  
@@ -146,7 +146,8 @@ ms.locfileid: "55288076"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<MethodInstantiation> 項目](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)
+- [\<MethodInstantiation > 項目](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)

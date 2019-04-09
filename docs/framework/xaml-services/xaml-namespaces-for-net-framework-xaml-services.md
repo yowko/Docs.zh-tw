@@ -2,12 +2,12 @@
 title: .NET Framework XAML 服務的 XAML 命名空間
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
-ms.openlocfilehash: e9d644f4f62d70a1feec0030a680067412baa5e6
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58030519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153552"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML 服務的 XAML 命名空間
 XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於 XML 命名空間，您可以定義 XAML 命名空間使用`xmlns`標記中的屬性。 XAML 命名空間也都被表示 XAML 節點資料流和其他 XAML 服務 Api。 本主題定義 XAML 命名空間概念，並描述如何定義 XAML 命名空間，並可供 XAML 結構描述內容與.NET Framework XAML 服務的其他層面。  
@@ -64,4 +64,5 @@ XAML 命名空間是一個擴充的 XML 命名空間定義的概念。 類似於
  屬性是與相關的.NET Framework XAML 服務中處理的 XAML 命名空間的其他兩個 API<xref:System.Windows.Markup.XmlnsDefinitionAttribute>和<xref:System.Windows.Markup.XmlnsPrefixAttribute>。 這些屬性套用至組件。 <xref:System.Windows.Markup.XmlnsDefinitionAttribute> 會使用 XAML 結構描述內容來解譯包含 URI 的任何 XAML 命名空間宣告。 <xref:System.Windows.Markup.XmlnsPrefixAttribute> 會使用發出 XAML，以便可以序列化特定的 XAML 命名空間，以可預測的前置詞的工具。 如需詳細資訊，請參閱 < [XAML-Related 自訂類型和程式庫的 CLR 屬性](xaml-related-clr-attributes-for-custom-types-and-libraries.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [認識 XAML 節點資料流結構和概念](understanding-xaml-node-stream-structures-and-concepts.md)

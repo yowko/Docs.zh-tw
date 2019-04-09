@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: f909b987da31a0a4af605d603d1c7b7a35615f19
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151498"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation 隱私權資訊
 Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程式使用 Windows Communication Foundation (WCF) 3.0 版，您的應用程式可能會影響到使用者的隱私權。 例如，應用程式可能會明確收集使用者的連絡資訊，或者透過網際網路向您的網站要求資訊或傳送資訊至網站。 如果您在應用程式中內嵌 Microsoft 技術，則該技術可能帶有會影響隱私權的行為。 WCF 不會傳送任何資訊給 Microsoft 從您的應用程式除非您本人或使用者選擇要傳送給我們。  
@@ -19,7 +19,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
 ## <a name="wcf-in-brief"></a>WCF 簡介  
  WCF 是使用 Microsoft.NET Framework 可讓開發人員建置分散式應用程式的分散式訊息架構。 而在兩個應用程式之間通訊的訊息則包含標頭和本文資訊。  
   
- 根據應用程式使用的服務而定，標頭可能包含訊息路由、安全性資訊、交易及其他項目。 根據預設，訊息通常會經過加密。 唯一的例外為使用 `BasicHttpBinding` 時，此項原本就設計用於不受安全保護的舊式 Web 服務。 身為應用程式設計師，您要負責做好最後的設計。 在 SOAP 主體中的訊息包含應用程式專屬資料;不過，這項資料，例如應用程式定義的個人資訊，您可以保護使用 WCF 加密或機密性功能。 下列章節將描述可能影響隱私權的功能。  
+ 根據應用程式使用的服務而定，標頭可能包含訊息路由、安全性資訊、異動及其他項目。 根據預設，訊息通常會經過加密。 唯一的例外為使用 `BasicHttpBinding` 時，此項原本就設計用於不受安全保護的舊式 Web 服務。 身為應用程式設計師，您要負責做好最後的設計。 在 SOAP 主體中的訊息包含應用程式專屬資料;不過，這項資料，例如應用程式定義的個人資訊，您可以保護使用 WCF 加密或機密性功能。 下列章節將描述可能影響隱私權的功能。  
   
 ## <a name="messaging"></a>訊息  
  每個 WCF 訊息具有指定的訊息目的地的位址標頭和回覆去處。  
@@ -44,7 +44,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
   
  執行驗證之後，會在進行通訊的端點之間建立安全工作階段。 這個工作階段是由會在安全性工作階段的存留期間持續活動的 GUID 所識別。 下表會顯示所保留的項目的位置。  
   
-|資料|儲存區|  
+|資料|存放裝置|  
 |----------|-------------|  
 |展示認證，例如使用者名稱、X.509 憑證、Kerberos 語彙基元和認證的各種參照。|標準 Windows 認證管理機制，例如 Windows 憑證存放庫。|  
 |使用者成員資格資訊，例如使用者名稱和密碼。|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 成員資格提供者。|  
@@ -61,9 +61,9 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
   
  交易傳播中使用的交易標頭可能包含屬於 GUID 的交易識別碼或登記識別碼。  
   
- 交易功能會使用 Microsoft Distributed Transaction Coordinator (MSDTC) 的交易管理員 (一種 Windows 元件) 來管理交易狀態。 根據預設，系統會加密交易管理員之間的通訊。 交易管理員可能會記錄端點參照、交易識別碼和登記識別碼，作為其長期狀態的一部分。 這個狀態的存留期則是由交易管理員的記錄檔存留期所決定。 MSDTC 服務則擁有並維護此記錄。  
+ 異動功能會使用 Microsoft Distributed Transaction Coordinator (MSDTC) 的異動管理員 (一種 Windows 元件) 來管理異動狀態。 根據預設，系統會加密異動管理員之間的通訊。 交易管理員可能會記錄端點參照、交易識別碼和登記識別碼，作為其長期狀態的一部分。 這個狀態的存留期則是由異動管理員的記錄檔存留期所決定。 MSDTC 服務則擁有並維護此記錄。  
   
- 交易功能會實作 WS-Coordination 和 WS-Atomic 交易標準。  
+ 異動功能會實作 WS-Coordination 和 WS-Atomic 異動標準。  
   
 ## <a name="reliable-sessions"></a>可靠工作階段  
  在 WCF 中的可靠工作階段提供訊息的傳輸，傳輸或中繼失敗發生時。 即使中斷基礎傳輸 (例如，無線網路上的 TCP 連線) 或遺失訊息 (HTTP Proxy 捨棄了傳出或傳入的訊息)，這些可靠的工作階段仍可確實傳送一次訊息。 可靠的工作階段也會復原重新排列順序後的訊息 (在多路徑路由時可能會發生)，保留訊息傳送的順序。  
@@ -77,7 +77,7 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
   
  佇列通道功能不會將標頭新增至訊息。 該功能會以適當的 [訊息佇列] 訊息屬性設定，來建立 [訊息佇列] 的訊息，並叫用 [訊息佇列] 方法以將訊息放置在 [訊息佇列] 的佇列中。 [訊息佇列] 是隨附於 Windows 的選用元件。  
   
- 佇列通道功能並不會在使用者電腦上保留任何資訊，而這都歸功於使用 [訊息佇列] 做為佇列基礎結構。  
+ 佇列通道功能並不會在終端使用者電腦上保留任何資訊，而這都歸功於使用 [訊息佇列] 做為佇列基礎結構。  
   
 ## <a name="com-integration"></a>COM+ 整合  
  這項功能會包裝現有的 COM 和 COM + 功能以建立與 WCF 服務相容的服務。 這項功能不會使用特定標頭，也不會在終端使用者的電腦上保留任何資料。  
@@ -402,5 +402,6 @@ Microsoft 一向致力於保護使用者的隱私權。 當您建置的應用程
  Web 服務描述語言 (WSDL) 中包含了連接埠定義。 每個連接埠都有端點位址，以及表示應用程式所使用服務的繫結。 您可以透過組態決定是否公開 WSDL。 在電腦上不會保留任何資訊。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Communication Foundation](index.md)
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)

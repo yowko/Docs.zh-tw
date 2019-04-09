@@ -19,12 +19,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9b434edc10a7c11d738bd3fc10402ef3f83d9dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59134670"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes 方法
 列舉遠端電腦上所執行之指定處理序中的 Common Language Runtime (CLR)。  
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  成功。  
   
  S_FALSE  
- `dwInternalProcessID` 不符合電腦上所執行的任何處理序，可能是因為處理序已終止。 `pcRuntimes` 和 `ppRuntimes` 將為 null。  
+ `dwInternalProcessID` 不符合的電腦，執行任何處理序可能因為處理序已終止。 `pcRuntimes` 和`ppRuntimes`將會是 null。  
   
  E_OUTOFMEMORY  
  無法為 `ppRuntimes` 配置足夠的記憶體。  
@@ -75,4 +75,5 @@ HRESULT EnumRuntimes (
  **.NET framework 版本：** 3.5 SP1  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICoreClrDebugTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icoreclrdebugtarget-interface.md)

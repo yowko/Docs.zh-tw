@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Form MonthCalendar 控制項中選取一個日期範圍
+title: HOW TO：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - calendars [Windows Forms], selecting date range
 - MonthCalendar control [Windows Forms], selecting date range
 ms.assetid: 95d9ab95-b0f8-4c19-9f63-b5cd4593a5d0
-ms.openlocfilehash: 21cda9fb11edd3f6148d7128621fbde8d3ff913c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 0e032a6285c43d7e96c7d59444da6d6598bd8100
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129944"
 ---
-# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>HOW TO：在 Windows Form MonthCalendar 控制項中選取一個日期範圍
+# <a name="how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control"></a>HOW TO：在 Windows Forms 的 MonthCalendar 控制項中選取一個日期範圍
 一項重要功能的 Windows Form<xref:System.Windows.Forms.MonthCalendar>控制項是使用者可以選取日期範圍。 這項功能是改良的日期選取項目功能<xref:System.Windows.Forms.DateTimePicker>控制項，只讓使用者可以選取單一日期/時間值。 您可以設定日期範圍，或取得使用者所使用的屬性設定的選取範圍<xref:System.Windows.Forms.MonthCalendar>控制項。 下列程式碼範例示範如何設定選取範圍。  
   
 ### <a name="to-select-a-range-of-dates"></a>若要選取的日期範圍  
@@ -75,7 +75,8 @@ ms.locfileid: "57723812"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [MonthCalendar 控制項](monthcalendar-control-windows-forms.md)
-- [如何：變更 Windows Form MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)
-- [如何：粗體的顯示特定日期中的使用 Windows Form MonthCalendar 控制項](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [如何：在 Windows Form MonthCalendar 控制項中顯示超過一個月](display-more-than-one-month-wf-monthcalendar-control.md)
+- [HOW TO：變更 Windows Forms MonthCalendar 控制項的外觀](how-to-change-monthcalendar-control-appearance.md)
+- [HOW TO：使用 Windows Forms MonthCalendar 控制項以粗體顯示特定日期](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [HOW TO：在 Windows Forms MonthCalendar 控制項中顯示多個月份](display-more-than-one-month-wf-monthcalendar-control.md)

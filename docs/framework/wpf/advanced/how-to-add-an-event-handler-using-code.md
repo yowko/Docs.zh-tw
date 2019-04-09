@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用程式碼加入事件處理常式
+title: HOW TO：使用程式碼新增事件處理常式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - event handlers [WPF], adding
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
-ms.openlocfilehash: 05eaae0f5b893f42d421717ac73373d4c79004c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352187"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129352"
 ---
-# <a name="how-to-add-an-event-handler-using-code"></a>HOW TO：使用程式碼加入事件處理常式
+# <a name="how-to-add-an-event-handler-using-code"></a>HOW TO：使用程式碼新增事件處理常式
 此範例示範如何使用程式碼，將事件處理常式新增至項目。  
   
  如果您想要新增事件處理常式[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]項目和包含的項目 [標記] 頁面已載入，您必須新增處理常式，使用程式碼。 或者，如果您正在建置應用程式完全使用程式碼和未宣告任何項目使用的項目樹狀結構中向上[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，您可以呼叫特定方法，將事件處理常式新增至建構的項目樹狀結構。  
@@ -38,5 +38,6 @@ ms.locfileid: "57352187"
 >  加入事件處理常式中一開始剖析[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面是更簡單。 在您要加入事件處理常式的物件項目，新增符合您想要處理的事件名稱的屬性。 然後指定該屬性的值，做為您的程式碼後置檔案中定義的事件處理常式方法名稱[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]頁面。 如需詳細資訊，請參閱 < [XAML 概觀 (WPF)](xaml-overview-wpf.md)或是[路由事件概觀](routed-events-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由事件概觀](routed-events-overview.md)
-- [HOW-TO 主題](events-how-to-topics.md)
+- [HOW TO 主題](events-how-to-topics.md)

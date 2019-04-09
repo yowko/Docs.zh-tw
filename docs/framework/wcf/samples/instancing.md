@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, instancing sample
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
-ms.openlocfilehash: 25c29afce4890dcb9cc5f9000ec3d46a91d3e846
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 046bb61b50540b2c58bd8ed9971620662f308823
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58836190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133584"
 ---
 # <a name="instancing"></a>執行個體
 執行個體範例會示範執行個體行為設定，此設定會控制如何建立可回應用戶端需求的服務類別執行個體。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會定義繼承自 `ICalculatorInstance` 的新合約 `ICalculator`。 由 `ICalculatorInstance` 指定的合約會提供三種額外作業以檢查服務執行個體的狀態。 藉由改變執行個體設定，您可以在執行用戶端時觀察行為上的改變。  
@@ -22,11 +22,11 @@ ms.locfileid: "58836190"
   
  以下為可用的執行個體模式：  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>：針對每個用戶端要求建立新的服務執行個體。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerCall>:針對每個用戶端要求建立新的服務執行個體。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>：新執行個體是針對每個新的用戶端工作階段中，建立和維護 （需要支援工作階段的繫結） 該工作階段的存留期。  
+-   <xref:System.ServiceModel.InstanceContextMode.PerSession>:新執行個體是針對每個新的用戶端工作階段中，建立和維護 （需要支援工作階段的繫結） 該工作階段的存留期。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>：單一執行個體的服務類別會處理所有的用戶端要求應用程式的存留期。  
+-   <xref:System.ServiceModel.InstanceContextMode.Single>:單一執行個體的服務類別會處理所有的用戶端要求應用程式的存留期。  
   
  此服務類別會指定具有 `[ServiceBehavior(InstanceContextMode=<setting>)]` 屬性的執行個體行為，如下列程式碼範例所示。 藉由將程式碼行標記為註解，您便可以觀察到每個執行個體模式的行為。 請記得在變更執行個體模式後重建服務。 這時並不需要在用戶端上指定任何與執行個體相關的設定。  
   
@@ -138,4 +138,3 @@ static void Main()
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Instancing`  
-  

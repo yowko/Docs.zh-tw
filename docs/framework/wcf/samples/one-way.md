@@ -2,12 +2,12 @@
 title: 單向
 ms.date: 03/30/2017
 ms.assetid: 74e3e03d-cd15-4191-a6a5-1efa2dcb9e73
-ms.openlocfilehash: e4b8a805fdbe4f330496233d5234abc0169b8c6e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 53718b6523bb76e30233540323d5f4f87d466fed
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826687"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131322"
 ---
 # <a name="one-way"></a>單向
 這個範例示範具有單向服務作業的服務合約。 與雙向服務作業的情況不同，用戶端不會等候服務作業完成。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，並使用`wsHttpBinding`繫結。 這個範例中的服務是自我裝載的主控台應用程式，您可以用來觀察接收和處理要求的服務。 用戶端也是主控台應用程式。  
@@ -84,7 +84,7 @@ Processing Divide(22,7) - result: 3.14285714285714
 ```  
   
 > [!NOTE]
->  根據定義，HTTP 是一種要求/回應通訊協定；當要求提出時，就會傳回回應。 即便是在 HTTP 上公開的單向服務作業，也是如此。 呼叫作業時，服務會在服務作業執行以前傳回 202 的 HTTP 狀態碼。 這個狀態碼表示已接受要求進行處理，但是處理尚未完成。 呼叫此項作業的用戶端會封鎖，直到從服務收到 202 回應為止。 當使用設定為使用工作階段的繫結來傳送多則單向訊息時，這可能會產生某種未預期的行為。 根據預設，這個範例中使用的 `wsHttpBinding` 繫結會設定為使用工作階段，以便建立安全性內容。 在預設情況下，將保證工作階段中的訊息依照傳送的順序抵達。 因此，傳送工作階段中的第二則訊息時，就不會在第一則訊息處理完成之前加以處理。 因此，除非完成處理上一則的訊息，否則，用戶端將不會收到訊息的 202 回應。 所以用戶端會顯示為封鎖每次呼叫後續的作業。 為了避免這種行為，此範例將執行階段設定為同時分派訊息至不同執行個體以進行處理。 範例將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 設定為 `PerCall`，讓個別訊息可以分別由不同執行個體來處理。 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 會設定為 `Multiple`，以允許多個執行緒同時分派訊息。  
+>  根據定義，HTTP 是一種要求/回應通訊協定；當要求提出時，就會傳回回應。 即便是在 HTTP 上公開的單向服務作業，也是如此。 呼叫作業時，服務會在服務作業執行以前傳回 202 的 HTTP 狀態碼。 這個狀態碼表示已接受要求進行處理，但是處理尚未完成。 呼叫此項作業的用戶端會封鎖，直到從服務收到 202 回應為止。 當使用設定為使用工作階段的繫結來傳送多則單向訊息時，這可能會產生某種未預期的行為。 根據預設，這個範例中使用的 `wsHttpBinding` 繫結會設定為使用工作階段，以便建立安全性內容。 在預設情況下，將保證工作階段中的訊息依照傳送的順序抵達。 因此，傳送工作階段中的第二則訊息時，就不會在第一則訊息處理完成之前加以處理。 因此，除非完成處理上一則的訊息，否則，用戶端將不會收到訊息的 202 回應。 所以用戶端會顯示為封鎖每次呼叫後續的作業。 為了避免這種行為，此範例將執行階段設定為同時分派訊息至不同執行個體以進行處理。 範例將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 設定為 `PerCall`，讓個別訊息可以分別由不同執行個體來處理。 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 設定為`Multiple`以允許多個執行緒同時分派訊息。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -105,4 +105,3 @@ Processing Divide(22,7) - result: 3.14285714285714
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Oneway`  
-  

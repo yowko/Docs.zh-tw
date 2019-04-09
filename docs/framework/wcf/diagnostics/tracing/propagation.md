@@ -2,12 +2,12 @@
 title: 傳播
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
-ms.openlocfilehash: 680f732fa4e75eb1eaa82a861f0a0021dc9c974c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686331"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154033"
 ---
 # <a name="propagation"></a>傳播
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動傳播。  
@@ -77,6 +77,7 @@ ms.locfileid: "54686331"
  若要在執行於不同電腦的端點之間同步處理事件，請將 CorrelationId 新增至訊息中所傳播的 ActivityId 標頭。 工具可以使用這個識別碼，在時鐘不一致的電腦之間同步處理事件。 具體來說，「服務追蹤檢視器」工具會使用這個識別碼來顯示端點之間的訊息流動。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

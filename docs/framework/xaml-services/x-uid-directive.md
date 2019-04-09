@@ -7,12 +7,12 @@ helpviewer_keywords:
 - x:Uid attribute [XAML Services]
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
-ms.openlocfilehash: 6e946c63227a06b2032ce27e61899c1b8f05ec9f
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152512"
 ---
 # <a name="xuid-directive"></a>x:Uid 指示詞
 提供標記項目的唯一識別碼。 在許多情況下，這個唯一識別碼使用 XAML 的當地語系化程序和工具。  
@@ -42,6 +42,7 @@ ms.locfileid: "58042967"
  如需有關所扮演的角色`x:Uid`在 WPF 當地語系化程序和 BAML 形式的 XAML，請參閱[WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)或 <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Markup.Localizer.BamlLocalizableResourceKey.Uid%2A>
 - <xref:Microsoft.Build.Tasks.Windows.UidManager>
 - [WPF 的全球化](../wpf/advanced/globalization-for-wpf.md)

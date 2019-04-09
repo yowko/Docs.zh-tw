@@ -4,12 +4,12 @@ ms.date: 05/10/2018
 helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
-ms.openlocfilehash: 1858411e5543448e6d822c97b6e5c18da4a6c11e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639597"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151771"
 ---
 # <a name="protected-friend-visual-basic"></a>受保護的 Friend (Visual Basic)
 
@@ -22,14 +22,13 @@ ms.locfileid: "54639597"
 
 - **宣告內容。** 您可以使用`Protected Friend`只能在類別層級。 這表示的宣告內容`Protected`項目必須是類別，，而且不能是原始程式檔、 命名空間、 介面、 模組、 結構或程序。 
 
-
 ## <a name="see-also"></a>另請參閱
 
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
 - [Protected](../../../visual-basic/language-reference/modifiers/protected.md)
 - [Friend](friend.md)
 - [Private](../../../visual-basic/language-reference/modifiers/private.md)
-- [Private Protected](./private-protected.md)
+- [受保護的私用](./private-protected.md)
 - [在 Visual Basic 中的存取層級](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [程序](../../../visual-basic/programming-guide/language-features/procedures/index.md)
 - [結構](../../../visual-basic/programming-guide/language-features/data-types/structures.md)

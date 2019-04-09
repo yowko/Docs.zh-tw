@@ -3,12 +3,12 @@ title: WIF 和 Web 伺服陣列
 ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
-ms.openlocfilehash: 85fbebcd210e7df17212d39b8e3aca9bf76bfb67
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543051"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135352"
 ---
 # <a name="wif-and-web-farms"></a>WIF 和 Web 伺服陣列
 當您使用 Windows Identity Foundation (WIF) 來保護部署於 Web 伺服陣列中的信賴憑證者 (RP) 應用程式的資源時，必須採取特定的步驟，以確保 WIF 可以處理伺服陣列中不同電腦上所執行之 RP 應用程式執行個體的權杖。 這項處理包含驗證工作階段權杖簽章、加密和解密工作階段權杖、快取工作階段權杖，以及偵測重新執行的安全性權杖。  
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- 下列程式碼示範 WCF 快取服務的實作。 在此範例中，將使用 WIF 所實作的記憶體內部工作階段權杖快取 (預設值)。 或者，您可以實作資料庫支援的持久快取。 `ISessionSecurityTokenCacheService` 定義了上述介面。 在此範例中，為求簡潔起見，不會顯示實作介面所需的全部方法。  
+ 下列程式碼示範 WCF 快取服務的實作。 在此範例中，將使用 WIF 所實作的記憶體內部工作階段權杖快取 (預設值)。 或者，您可以實作資料庫支援的持久快取。 `ISessionSecurityTokenCacheService` 定義如上所示的介面。 在此範例中，為求簡潔起見，不會顯示實作介面所需的全部方法。  
   
 ```  
 using System;  
@@ -251,6 +251,7 @@ namespace CacheLibrary
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenCache>
 - <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>
 - <xref:System.IdentityModel.Services.Tokens.MachineKeySessionSecurityTokenHandler>

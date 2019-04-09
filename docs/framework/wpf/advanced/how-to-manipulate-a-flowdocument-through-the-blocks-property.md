@@ -1,5 +1,5 @@
 ---
-title: 'HOW TO：透過 Blocks 屬性管理 FlowDocument '
+title: HOW TO：透過 Blocks 屬性管理 FlowDocument
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - 'documents [WPF], manipulating FlowDocuments through Blocks property [WPF], , '
 - ', '
 ms.assetid: cbb7291e-3f1b-433e-9e16-f4d93ced14e8
-ms.openlocfilehash: c8098df74bb8472648dae2ca04de7a18f062c9e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c307d85bf24e2d8a20226856181e0758758d40c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130880"
 ---
-# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>HOW TO：透過 Blocks 屬性管理 FlowDocument 
+# <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>HOW TO：透過 Blocks 屬性管理 FlowDocument
 這些範例會展示一些較常見的作業，可對<xref:System.Windows.Documents.FlowDocument>透過<xref:System.Windows.Documents.FlowDocument.Blocks%2A>屬性。  
   
 ## <a name="example"></a>範例  
@@ -49,6 +49,7 @@ ms.locfileid: "57365928"
  [!code-vb[FlowDocumentSnippets#_FlowDocumentBlocksClear](~/samples/snippets/visualbasic/VS_Snippets_Wpf/FlowDocumentSnippets/visualbasic/window1.xaml.vb#_flowdocumentblocksclear)]  
   
 ## <a name="see-also"></a>另請參閱
-- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
-- [透過 Columns 屬性管理表格的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
-- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+
+- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 Columns 屬性管理資料表的資料行](how-to-manipulate-table-columns-through-the-columns-property.md)
+- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

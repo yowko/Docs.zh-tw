@@ -2,12 +2,12 @@
 title: 最佳做法：媒介
 ms.date: 03/30/2017
 ms.assetid: 2d41b337-8132-4ac2-bea2-6e9ae2f00f8d
-ms.openlocfilehash: 8a95bd555e6c1acf896daa77e93d7c735d1f091c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bd553486bfb89a0ec14c42a1bb7d2ed9c4c540d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54663618"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59131725"
 ---
 # <a name="best-practices-intermediaries"></a>最佳做法：媒介
 當呼叫媒介時必須務必注意地正確處理錯誤，以確認媒介的服務端通道有正常關閉。  
@@ -33,5 +33,6 @@ catch (Exception e)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 錯誤處理](../../../docs/framework/wcf/wcf-error-handling.md)
-- [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)

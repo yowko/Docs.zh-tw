@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 15663b4acc78f89a40fbbc364debfc6de45d8e6c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e447cd5ccf84e49ff384bd3591884404736d04f8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54709425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132051"
 ---
 # <a name="distributed-application-security"></a>分散式應用程式安全性
 Windows Communication Foundation (WCF) 安全性分為三個主要的功能區域： 傳輸安全性、 存取控制和稽核。 傳輸安全性提供完整性、機密性與驗證。 傳輸安全性是由下列其中一項提供：傳輸安全性、訊息安全性或 `TransportWithMessageCredential`。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
 ## <a name="transfer-security-scenarios"></a>傳輸安全性案例  
  採用 WCF 傳輸安全性的常見案例包括下列各項：  
   
--   使用 Windows 保護傳輸。 WCF 用戶端和服務部署在 Windows 網域 （或 Windows 樹系）。 由於訊息包含個人資料，因此要求會包括用戶端和服務的雙向驗證、訊息完整性及訊息機密性。 此外，特殊異動發生時需要證明，例如訊息接收者應記錄簽章資訊。  
+-   使用 Windows 保護傳輸。 WCF 用戶端和服務部署在 Windows 網域 （或 Windows 樹系）。 由於訊息包含個人資料，因此要求會包括用戶端和服務的雙向驗證、訊息完整性及訊息機密性。 此外，特殊交易發生時需要證明，例如訊息接收者應記錄簽章資訊。  
   
 -   使用 `UserName` 和 HTTPS 保護傳輸。 WCF 用戶端和服務需要經過開發才能跨網際網路運作。 用戶端認證會根據使用者名稱/密碼組的資料庫進行驗證。 服務會使用受信任的安全通訊端層 (SSL) 憑證部署在 HTTPS 位址。 由於訊息會透過網際網路傳輸，因此用戶端和服務需要經過雙向驗證，而且必須維持傳輸期間訊息的機密性與完整性。  
   
--   使用憑證保護傳輸。 WCF 用戶端和服務需要經過開發才能透過公用網際網路運作。 用戶端和服務都有憑證，可以用來保護訊息的安全。 用戶端和服務會使用網際網路彼此通訊，以及執行要求有訊息完整性、機密性與雙向驗證的高價值異動。  
+-   使用憑證保護傳輸。 WCF 用戶端和服務需要經過開發才能透過公用網際網路運作。 用戶端和服務都有憑證，可以用來保護訊息的安全。 用戶端和服務會使用網際網路彼此通訊，以及執行要求有訊息完整性、機密性與雙向驗證的高價值交易。  
   
 ## <a name="integrity-confidentiality-and-authentication"></a>完整性、機密性與驗證  
  完整性、機密性及驗證這三項功能合稱為傳輸安全性。 傳輸安全性所提供的各種功能，會協助減少分散式應用程式的威脅。 下表簡要說明構成傳輸安全性的這三項功能。  
@@ -40,11 +40,11 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
   
 |模式|描述|  
 |----------|-----------------|  
-|無|未在傳輸層或訊息層提供任何安全性。 無預先定義的繫結使用此模式，根據預設，除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)項目或使用程式碼時<xref:System.ServiceModel.BasicHttpBinding>類別。|  
+|None|未在傳輸層或訊息層提供任何安全性。 無預先定義的繫結使用此模式，根據預設，除了[ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)項目或使用程式碼時<xref:System.ServiceModel.BasicHttpBinding>類別。|  
 |Transport|使用安全傳輸 (例如 HTTPS) 以獲得完整性、機密性和雙向驗證。|  
 |訊息|使用 SOAP 訊息安全性，以獲得完整性、機密性和雙向驗證。 SOAP 訊息是根據 WS-Security 標準加以保護。|  
 |混合模式|使用傳輸安全性，以獲得完整性、機密性和伺服器驗證。 使用訊息安全性 (WS-Security 和其他標準) 以獲得用戶端驗證。<br /><br /> (此模式的列舉型別為 `TransportWithMessageCredential`)|  
-|兩種模式|在兩個層級執行保護和驗證。 此模式是僅適用於[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)項目。|  
+|兩者|在兩個層級執行保護和驗證。 此模式是僅適用於[ \<netMsmqBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)項目。|  
   
 ## <a name="credentials-and-transfer-security"></a>認證和傳輸安全性  
  A*認證*向建立宣告的身分識別或功能的資料。 出示認證包括出示資料以及資料的所有權證明。 WCF 支援各種不同的傳輸和訊息安全性層級的認證類型。 您可以指定一種 WCF 繫結的認證。  
@@ -64,7 +64,7 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
   
 |設定|描述|  
 |-------------|-----------------|  
-|無|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
+|None|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
 |基本|指定基本驗證。  如需詳細資訊，請參閱 RFC2617 「[HTTP 驗證：基本和摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88313)。 」|  
 |摘要|指定摘要式驗證。  如需詳細資訊，請參閱 RFC2617 「[HTTP 驗證：基本和摘要式驗證](https://go.microsoft.com/fwlink/?LinkId=88313)。 」|  
 |Ntlm|指定在 Windows 網域上使用 SSPI 交涉的 Windows 驗證。<br /><br /> SSPI 交涉的結果會是使用 Kerberos 通訊協定或 NT LanMan (NTLM)。|  
@@ -76,7 +76,7 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
   
 |設定|描述|  
 |-------------|-----------------|  
-|無|允許服務與匿名用戶端互動。|  
+|None|允許服務與匿名用戶端互動。|  
 |Windows|允許在 Windows 認證的已驗證內容中發生 SOAP 訊息交換。 使用 SSPI 交涉機制挑選 Kerberos 通訊協定或 NTLM 做為驗證服務。|  
 |使用者名稱|允許服務要求用戶端必須使用使用者名稱認證進行驗證。 請注意，WCF 不允許任何密碼編譯作業的使用者名稱，例如產生簽章或加密資料。 因此，WCF 會強制使用使用者名稱認證時，保護傳輸。|  
 |憑證|允許服務要求用戶端使用憑證進行驗證。|  
@@ -95,7 +95,8 @@ Windows Communication Foundation (WCF) 安全性分為三個主要的功能區�
  訊息安全性模式還可讓您執行傳輸安全性，如此服務認證就會在初始交涉的過程中與用戶端交換。 若要啟用交涉，請將 <xref:System.ServiceModel.MessageSecurityOverHttp.NegotiateServiceCredential%2A> 屬性設為 `true`。  
   
 ## <a name="see-also"></a>另請參閱
-- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+
+- [端點建立概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
