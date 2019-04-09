@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: df1e9d317294127a931bebf100295290a0dd6b23
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 494f39855132bc4a9551b78f746517862d285034
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59074725"
 ---
-# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="36872-102">ISymENCUnmanagedMethod::GetFileNameFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="36872-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
-<span data-ttu-id="36872-103">取得行位移與相關聯的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="36872-103">Gets the file name for the line associated with an offset.</span></span>  
+# <a name="isymencunmanagedmethodgetfilenamefromoffset-method"></a><span data-ttu-id="4ef49-102">ISymENCUnmanagedMethod::GetFileNameFromOffset 方法</span><span class="sxs-lookup"><span data-stu-id="4ef49-102">ISymENCUnmanagedMethod::GetFileNameFromOffset Method</span></span>
+<span data-ttu-id="4ef49-103">取得行位移與相關聯的檔案名稱。</span><span class="sxs-lookup"><span data-stu-id="4ef49-103">Gets the file name for the line associated with an offset.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="36872-104">語法</span><span class="sxs-lookup"><span data-stu-id="36872-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="4ef49-104">語法</span><span class="sxs-lookup"><span data-stu-id="4ef49-104">Syntax</span></span>  
   
 ```  
 HRESULT GetFileNameFromOffset(  
@@ -38,24 +38,25 @@ HRESULT GetFileNameFromOffset(
        length_is(*pcchName)] WCHAR szName[]);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="36872-105">參數</span><span class="sxs-lookup"><span data-stu-id="36872-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="4ef49-105">參數</span><span class="sxs-lookup"><span data-stu-id="4ef49-105">Parameters</span></span>  
  `dwOffset`  
- <span data-ttu-id="36872-106">[in]A`ULONG32`包含位移。</span><span class="sxs-lookup"><span data-stu-id="36872-106">[in] A `ULONG32` that contains the offset.</span></span>  
+ <span data-ttu-id="4ef49-106">[in]A`ULONG32`包含位移。</span><span class="sxs-lookup"><span data-stu-id="4ef49-106">[in] A `ULONG32` that contains the offset.</span></span>  
   
  `cchName`  
- <span data-ttu-id="36872-107">[in]A`ULONG32`表示的大小`szName`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="36872-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
+ <span data-ttu-id="4ef49-107">[in]A`ULONG32`表示的大小`szName`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="4ef49-107">[in] A `ULONG32` that indicates the size of the `szName` buffer.</span></span>  
   
  `pcchName`  
- <span data-ttu-id="36872-108">[out]指標`ULONG32`接收大小，以字元為單位，以包含檔案名稱所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="36872-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
+ <span data-ttu-id="4ef49-108">[out]指標`ULONG32`接收大小，以字元為單位，以包含檔案名稱所需的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="4ef49-108">[out] A pointer to a `ULONG32` that receives the size, in characters, of the buffer required to contain the file names.</span></span>  
   
  `szName`  
- <span data-ttu-id="36872-109">[out]包含檔案名稱的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="36872-109">[out] The buffer that contains the file names.</span></span>  
+ <span data-ttu-id="4ef49-109">[out]包含檔案名稱的緩衝區。</span><span class="sxs-lookup"><span data-stu-id="4ef49-109">[out] The buffer that contains the file names.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="36872-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="36872-110">Return Value</span></span>  
- <span data-ttu-id="36872-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="36872-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="4ef49-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="4ef49-110">Return Value</span></span>  
+ <span data-ttu-id="4ef49-111">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="4ef49-111">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="36872-112">需求</span><span class="sxs-lookup"><span data-stu-id="36872-112">Requirements</span></span>  
- <span data-ttu-id="36872-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="36872-113">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="4ef49-112">需求</span><span class="sxs-lookup"><span data-stu-id="4ef49-112">Requirements</span></span>  
+ <span data-ttu-id="4ef49-113">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="4ef49-113">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="36872-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="36872-114">See also</span></span>
-- [<span data-ttu-id="36872-115">ISymENCUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="36872-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)
+## <a name="see-also"></a><span data-ttu-id="4ef49-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="4ef49-114">See also</span></span>
+
+- [<span data-ttu-id="4ef49-115">ISymENCUnmanagedMethod 介面</span><span class="sxs-lookup"><span data-stu-id="4ef49-115">ISymENCUnmanagedMethod Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymencunmanagedmethod-interface.md)

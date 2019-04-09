@@ -2,25 +2,25 @@
 title: <transport> 的 <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: d7116240-845c-4b6f-b203-262de6b597ef
-ms.openlocfilehash: 3dbeda5d418c30f378515fa83979eaca289370f9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9b6f548515afbba5068659bd5c6f7f2b33f80cda
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59075999"
 ---
-# <a name="transport-of-peertransport"></a><span data-ttu-id="265d9-102">\<傳輸 > 的\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="265d9-102">\<transport> of \<peerTransport></span></span>
-<span data-ttu-id="265d9-103">指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="265d9-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  
+# <a name="transport-of-peertransport"></a><span data-ttu-id="be232-102">\<傳輸 > 的\<peerTransport ></span><span class="sxs-lookup"><span data-stu-id="be232-102">\<transport> of \<peerTransport></span></span>
+<span data-ttu-id="be232-103">指定使用這個繫結設定之對等所傳送安全訊息的傳輸類型。</span><span class="sxs-lookup"><span data-stu-id="be232-103">Specifies the transport type for secured messages sent by peers configured with this binding.</span></span>  
   
- <span data-ttu-id="265d9-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="265d9-104">\<system.serviceModel></span></span>  
-<span data-ttu-id="265d9-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="265d9-105">\<bindings></span></span>  
-<span data-ttu-id="265d9-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="265d9-106">\<customBinding></span></span>  
-<span data-ttu-id="265d9-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="265d9-107">\<binding></span></span>  
-<span data-ttu-id="265d9-108">\<peerTransport></span><span class="sxs-lookup"><span data-stu-id="265d9-108">\<peerTransport></span></span>  
-<span data-ttu-id="265d9-109">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="265d9-109">\<security></span></span>  
-<span data-ttu-id="265d9-110">\<transport></span><span class="sxs-lookup"><span data-stu-id="265d9-110">\<transport></span></span>  
+ <span data-ttu-id="be232-104">\<system.serviceModel></span><span class="sxs-lookup"><span data-stu-id="be232-104">\<system.serviceModel></span></span>  
+<span data-ttu-id="be232-105">\<bindings></span><span class="sxs-lookup"><span data-stu-id="be232-105">\<bindings></span></span>  
+<span data-ttu-id="be232-106">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="be232-106">\<customBinding></span></span>  
+<span data-ttu-id="be232-107">\<binding></span><span class="sxs-lookup"><span data-stu-id="be232-107">\<binding></span></span>  
+<span data-ttu-id="be232-108">\<peerTransport></span><span class="sxs-lookup"><span data-stu-id="be232-108">\<peerTransport></span></span>  
+<span data-ttu-id="be232-109">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="be232-109">\<security></span></span>  
+<span data-ttu-id="be232-110">\<transport></span><span class="sxs-lookup"><span data-stu-id="be232-110">\<transport></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="265d9-111">語法</span><span class="sxs-lookup"><span data-stu-id="265d9-111">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="be232-111">語法</span><span class="sxs-lookup"><span data-stu-id="be232-111">Syntax</span></span>  
   
 ```xml  
 <security>
@@ -28,43 +28,44 @@ ms.locfileid: "55284007"
 </security>
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="265d9-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="265d9-112">Attributes and Elements</span></span>  
- <span data-ttu-id="265d9-113">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="265d9-113">The following sections describe attributes, child elements, and parent elements</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="be232-112">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="be232-112">Attributes and Elements</span></span>  
+ <span data-ttu-id="be232-113">下列各節說明屬性、子元素和父元素</span><span class="sxs-lookup"><span data-stu-id="be232-113">The following sections describe attributes, child elements, and parent elements</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="265d9-114">屬性</span><span class="sxs-lookup"><span data-stu-id="265d9-114">Attributes</span></span>  
+### <a name="attributes"></a><span data-ttu-id="be232-114">屬性</span><span class="sxs-lookup"><span data-stu-id="be232-114">Attributes</span></span>  
   
-|<span data-ttu-id="265d9-115">屬性</span><span class="sxs-lookup"><span data-stu-id="265d9-115">Attribute</span></span>|<span data-ttu-id="265d9-116">描述</span><span class="sxs-lookup"><span data-stu-id="265d9-116">Description</span></span>|  
+|<span data-ttu-id="be232-115">屬性</span><span class="sxs-lookup"><span data-stu-id="be232-115">Attribute</span></span>|<span data-ttu-id="be232-116">描述</span><span class="sxs-lookup"><span data-stu-id="be232-116">Description</span></span>|  
 |---------------|-----------------|  
-|<span data-ttu-id="265d9-117">credentialType</span><span class="sxs-lookup"><span data-stu-id="265d9-117">credentialType</span></span>|<span data-ttu-id="265d9-118">選擇項。</span><span class="sxs-lookup"><span data-stu-id="265d9-118">Optional.</span></span> <span data-ttu-id="265d9-119">指定認證的類型，用於驗證對等傳輸所傳送的訊息。</span><span class="sxs-lookup"><span data-stu-id="265d9-119">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="265d9-120">此屬性的型別為 <xref:System.ServiceModel.PeerTransportCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="265d9-120">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
+|<span data-ttu-id="be232-117">credentialType</span><span class="sxs-lookup"><span data-stu-id="be232-117">credentialType</span></span>|<span data-ttu-id="be232-118">選擇性。</span><span class="sxs-lookup"><span data-stu-id="be232-118">Optional.</span></span> <span data-ttu-id="be232-119">指定認證的類型，用於驗證對等傳輸所傳送的訊息。</span><span class="sxs-lookup"><span data-stu-id="be232-119">Specifies the type of credentials used to verify messages sent with the peer transport.</span></span> <span data-ttu-id="be232-120">此屬性的型別為 <xref:System.ServiceModel.PeerTransportCredentialType>。</span><span class="sxs-lookup"><span data-stu-id="be232-120">This attribute is of type <xref:System.ServiceModel.PeerTransportCredentialType>.</span></span>|  
   
-## <a name="credentialtype-attribute"></a><span data-ttu-id="265d9-121">credentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="265d9-121">credentialType Attribute</span></span>  
+## <a name="credentialtype-attribute"></a><span data-ttu-id="be232-121">credentialType 屬性</span><span class="sxs-lookup"><span data-stu-id="be232-121">credentialType Attribute</span></span>  
   
-|<span data-ttu-id="265d9-122">值</span><span class="sxs-lookup"><span data-stu-id="265d9-122">Value</span></span>|<span data-ttu-id="265d9-123">描述</span><span class="sxs-lookup"><span data-stu-id="265d9-123">Description</span></span>|  
+|<span data-ttu-id="be232-122">值</span><span class="sxs-lookup"><span data-stu-id="be232-122">Value</span></span>|<span data-ttu-id="be232-123">描述</span><span class="sxs-lookup"><span data-stu-id="be232-123">Description</span></span>|  
 |-----------|-----------------|  
-|<span data-ttu-id="265d9-124">憑證</span><span class="sxs-lookup"><span data-stu-id="265d9-124">Certificate</span></span>|<span data-ttu-id="265d9-125">對等通道傳輸的驗證作業需要 X509 憑證。</span><span class="sxs-lookup"><span data-stu-id="265d9-125">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
-|<span data-ttu-id="265d9-126">密碼</span><span class="sxs-lookup"><span data-stu-id="265d9-126">Password</span></span>|<span data-ttu-id="265d9-127">對等通道傳輸的驗證作業需要正確的密碼。</span><span class="sxs-lookup"><span data-stu-id="265d9-127">Authentication of the peer channel transport requires a correct password.</span></span>|  
+|<span data-ttu-id="be232-124">憑證</span><span class="sxs-lookup"><span data-stu-id="be232-124">Certificate</span></span>|<span data-ttu-id="be232-125">對等通道傳輸的驗證作業需要 X509 憑證。</span><span class="sxs-lookup"><span data-stu-id="be232-125">Authentication of the peer channel transport requires an X509 certificate.</span></span>|  
+|<span data-ttu-id="be232-126">密碼</span><span class="sxs-lookup"><span data-stu-id="be232-126">Password</span></span>|<span data-ttu-id="be232-127">對等通道傳輸的驗證作業需要正確的密碼。</span><span class="sxs-lookup"><span data-stu-id="be232-127">Authentication of the peer channel transport requires a correct password.</span></span>|  
   
-### <a name="child-elements"></a><span data-ttu-id="265d9-128">子元素</span><span class="sxs-lookup"><span data-stu-id="265d9-128">Child Elements</span></span>  
- <span data-ttu-id="265d9-129">無</span><span class="sxs-lookup"><span data-stu-id="265d9-129">None</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="be232-128">子元素</span><span class="sxs-lookup"><span data-stu-id="be232-128">Child Elements</span></span>  
+ <span data-ttu-id="be232-129">None</span><span class="sxs-lookup"><span data-stu-id="be232-129">None</span></span>  
   
-### <a name="parent-elements"></a><span data-ttu-id="265d9-130">父項目</span><span class="sxs-lookup"><span data-stu-id="265d9-130">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="be232-130">父項目</span><span class="sxs-lookup"><span data-stu-id="be232-130">Parent Elements</span></span>  
   
-|<span data-ttu-id="265d9-131">項目</span><span class="sxs-lookup"><span data-stu-id="265d9-131">Element</span></span>|<span data-ttu-id="265d9-132">描述</span><span class="sxs-lookup"><span data-stu-id="265d9-132">Description</span></span>|  
+|<span data-ttu-id="be232-131">項目</span><span class="sxs-lookup"><span data-stu-id="be232-131">Element</span></span>|<span data-ttu-id="be232-132">描述</span><span class="sxs-lookup"><span data-stu-id="be232-132">Description</span></span>|  
 |-------------|-----------------|  
-|[<span data-ttu-id="265d9-133">\<security></span><span class="sxs-lookup"><span data-stu-id="265d9-133">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|<span data-ttu-id="265d9-134">定義對等傳輸的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="265d9-134">Defines the security settings for a peer transport.</span></span>|  
+|[<span data-ttu-id="be232-133">\<安全性 ></span><span class="sxs-lookup"><span data-stu-id="be232-133">\<security></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)|<span data-ttu-id="be232-134">定義對等傳輸的安全性設定。</span><span class="sxs-lookup"><span data-stu-id="be232-134">Defines the security settings for a peer transport.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="265d9-135">備註</span><span class="sxs-lookup"><span data-stu-id="265d9-135">Remarks</span></span>  
- <span data-ttu-id="265d9-136">只有當設定這個項目的 mode 屬性[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)設定為`Transport`或`TransportWithMessageCredential`。</span><span class="sxs-lookup"><span data-stu-id="265d9-136">This element is set only if the mode attribute of [\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) is set to `Transport` or `TransportWithMessageCredential`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="be232-135">備註</span><span class="sxs-lookup"><span data-stu-id="be232-135">Remarks</span></span>  
+ <span data-ttu-id="be232-136">只有當設定這個項目的 mode 屬性[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md)設定為`Transport`或`TransportWithMessageCredential`。</span><span class="sxs-lookup"><span data-stu-id="be232-136">This element is set only if the mode attribute of [\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-peertransport.md) is set to `Transport` or `TransportWithMessageCredential`.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="265d9-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="265d9-137">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="be232-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be232-137">See also</span></span>
+
 - <xref:System.ServiceModel.Configuration.PeerTransportSecurityElement>
 - <xref:System.ServiceModel.PeerSecuritySettings.Transport%2A>
 - <xref:System.ServiceModel.PeerTransportSecuritySettings>
 - <xref:System.ServiceModel.Channels.CustomBinding>
-- [<span data-ttu-id="265d9-138">傳輸安全性</span><span class="sxs-lookup"><span data-stu-id="265d9-138">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)
-- [<span data-ttu-id="265d9-139">傳輸</span><span class="sxs-lookup"><span data-stu-id="265d9-139">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)
-- [<span data-ttu-id="265d9-140">選擇傳輸</span><span class="sxs-lookup"><span data-stu-id="265d9-140">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
-- [<span data-ttu-id="265d9-141">繫結</span><span class="sxs-lookup"><span data-stu-id="265d9-141">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
-- [<span data-ttu-id="265d9-142">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="265d9-142">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
-- [<span data-ttu-id="265d9-143">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="265d9-143">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
-- [<span data-ttu-id="265d9-144">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="265d9-144">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
+- [<span data-ttu-id="be232-138">傳輸安全性</span><span class="sxs-lookup"><span data-stu-id="be232-138">Transport Security</span></span>](../../../../../docs/framework/wcf/feature-details/transport-security.md)
+- [<span data-ttu-id="be232-139">傳輸</span><span class="sxs-lookup"><span data-stu-id="be232-139">Transports</span></span>](../../../../../docs/framework/wcf/feature-details/transports.md)
+- [<span data-ttu-id="be232-140">選擇傳輸</span><span class="sxs-lookup"><span data-stu-id="be232-140">Choosing a Transport</span></span>](../../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)
+- [<span data-ttu-id="be232-141">繫結</span><span class="sxs-lookup"><span data-stu-id="be232-141">Bindings</span></span>](../../../../../docs/framework/wcf/bindings.md)
+- [<span data-ttu-id="be232-142">擴充繫結</span><span class="sxs-lookup"><span data-stu-id="be232-142">Extending Bindings</span></span>](../../../../../docs/framework/wcf/extending/extending-bindings.md)
+- [<span data-ttu-id="be232-143">自訂繫結</span><span class="sxs-lookup"><span data-stu-id="be232-143">Custom Bindings</span></span>](../../../../../docs/framework/wcf/extending/custom-bindings.md)
+- [<span data-ttu-id="be232-144">\<customBinding></span><span class="sxs-lookup"><span data-stu-id="be232-144">\<customBinding></span></span>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
