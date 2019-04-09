@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: cec371c414d6945386816703232abbc642633070
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661838"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120662"
 ---
 # <a name="oracle-and-adonet"></a>Oracle 和 ADO.NET
 > [!NOTE]
@@ -68,15 +68,16 @@ csc /r:System.Data.OracleClient.dll
  [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  說明如何建立及使用 `DataSets`、具型別 `DataSets`、`DataTables` 和 `DataViews`。  
   
- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  說明如何使用 ADO.NET 中的資料。  
   
  [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)  
  說明如何使用 SQL Server 特有的特性和功能。  
   
- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
+ [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
  說明可讓您在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中撰寫提供者獨立程式碼的泛用類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

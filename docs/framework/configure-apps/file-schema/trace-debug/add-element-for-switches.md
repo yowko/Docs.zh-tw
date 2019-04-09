@@ -1,5 +1,5 @@
 ---
-title: <add> 的 <switches> 項目
+title: <add> 項目 <switches>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <add> element for <switches>
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
-ms.openlocfilehash: 88cd8c9ba7244256ca9ddd3b2957f86d9485933c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120090"
 ---
 # <a name="add-element-for-switches"></a>\<新增 > 項目\<參數 >
 指定設定追蹤參數的層級。  
@@ -36,7 +36,7 @@ ms.locfileid: "55273289"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**name**|必要屬性。<br /><br /> 指定參數的名稱。 此屬性的值會對應到*displayName*傳遞至參數的建構函式的參數。|  
+|**名稱**|必要屬性。<br /><br /> 指定參數的名稱。 此屬性的值會對應到*displayName*傳遞至參數的建構函式的參數。|  
 |**value**|必要屬性。<br /><br /> 指定的交換器層級。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -68,6 +68,7 @@ ms.locfileid: "55273289"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.Switch>
 - <xref:System.Diagnostics.TraceSwitch>
 - <xref:System.Diagnostics.BooleanSwitch>

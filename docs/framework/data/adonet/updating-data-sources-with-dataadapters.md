@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
-ms.openlocfilehash: 6989204fac64fc18cae547e272f6d52004c3af69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59153591"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>使用 DataAdapter 更新資料來源
 呼叫 `Update` 的 <xref:System.Data.Common.DataAdapter> 方法，可將 <xref:System.Data.DataSet> 的變更解析回資料來源。 `Update` 方法類似 `Fill` 方法，會將 `DataSet` 的執行個體以及選擇性 (Optional) <xref:System.Data.DataTable> 物件或 `DataTable` 名稱做為引數。 `DataSet` 執行個體是包含已進行之變更的 `DataSet`，而 `DataTable` 則識別要從中擷取變更的資料表。 如果沒有指定任何 `DataTable`，就會使用 `DataTable` 中的第一個 `DataSet`。  
@@ -46,7 +46,7 @@ ms.locfileid: "54728826"
   
  若要處理呼叫時，可能會發生的例外狀況`Update`方法，您可以使用`RowUpdated`事件發生時，資料列更新錯誤回應 (請參閱[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md))，或者您可以設定`DataAdapter.ContinueUpdateOnError`至`true`呼叫之前，先`Update`，並回應錯誤資訊儲存在`RowError`屬性的特定資料列更新完成時 (請參閱[資料列錯誤資訊](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md))。  
   
- **附註**呼叫`AcceptChanges`上`DataSet`， `DataTable`，或`DataRow`會導致所有`Original`值`DataRow`可以覆寫`Current`值`DataRow`。 如果識別資料列為唯一的欄位值已經被修改，則在呼叫 `AcceptChanges` 之後，`Original` 值就不會再與資料來源內的值相符。 此時，系統會在呼叫 `AcceptChanges` 的 Update 方法期間，自動針對每個資料列呼叫 `DataAdapter`。 您可以先將 `AcceptChangesDuringUpdate` 的 `DataAdapter` 屬性設定為 false，或針對 `RowUpdated` 事件建立事件處理常式並將 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 設定為 <xref:System.Data.UpdateStatus.SkipCurrentRow>，藉以在呼叫 Update 方法期間保留原始值。 如需詳細資訊，請參閱 <<c0> [ 合併的資料集內容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)並[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
+ **附註**呼叫`AcceptChanges`上`DataSet`， `DataTable`，或`DataRow`會導致所有`Original`值`DataRow`可以覆寫`Current`值`DataRow`。 如果識別資料列為唯一的欄位值已經被修改，則在呼叫 `AcceptChanges` 之後，`Original` 值就不會再與資料來源內的值相符。 `AcceptChanges` 會自動呼叫每個資料列的 Update 方法呼叫期間`DataAdapter`。 您可以先將 `AcceptChangesDuringUpdate` 的 `DataAdapter` 屬性設定為 false，或針對 `RowUpdated` 事件建立事件處理常式並將 <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> 設定為 <xref:System.Data.UpdateStatus.SkipCurrentRow>，藉以在呼叫 Update 方法期間保留原始值。 如需詳細資訊，請參閱 <<c0> [ 合併的資料集內容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)並[處理 DataAdapter 事件](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何藉由明確設定執行修改過的資料列更新`UpdateCommand`的`DataAdapter`，然後呼叫其`Update`方法。 請注意，在 UPDATE 陳述式之 WHERE 子句中指定的參數是設定為使用 `Original` 的 `SourceColumn` 值。 這一點相當重要，因為 `Current` 值可能已經修改，而不符合資料來源中的值。 `Original` 值是用來填入資料來源之 `DataTable` 的值。  
@@ -369,9 +369,10 @@ class Program {
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [資料列狀態和資料列版本](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)
 - [AcceptChanges 和 RejectChanges](../../../../docs/framework/data/adonet/dataset-datatable-dataview/acceptchanges-and-rejectchanges.md)
-- [合併 DataSet 內容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
-- [擷取身分識別或自動編號值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [合併資料集內容](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)
+- [擷取識別或自動編號值](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 80cda4c31ca78e0350639df809ec1e9f1dcbbaea
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a60bf279c143559e7410d8dfd8213d3da1d05a6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127553"
 ---
 # <a name="isymunmanageddocumentgetchecksum-method"></a>ISymUnmanagedDocument::GetCheckSum 方法
 取得總和檢查碼。  
@@ -50,4 +50,5 @@ HRESULT GetCheckSum(
  如果方法成功，則為 S_OK否則，出現錯誤代碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedDocument 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocument-interface.md)

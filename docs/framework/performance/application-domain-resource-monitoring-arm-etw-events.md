@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8442b8723476984b90f740beac912688719f1791
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689831"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59133818"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>應用程式定義域資源監視 (ARM) ETW 事件
 <a name="top"></a> 這些事件可提供有關應用程式網域狀態的詳細診斷資訊。 您可以使用這些事件或使用應用程式網域資源監視 (ARM) 功能，取得相同的資訊。  
@@ -42,7 +42,7 @@ ms.locfileid: "54689831"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ThreadCreated`|85|已為應用程式網域建立執行緒。|  
   
@@ -69,7 +69,7 @@ ms.locfileid: "54689831"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemAllocated`|83|每 4 MB 的記憶體 (大約)，配置於應用程式網域中。|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "54689831"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`AppDomainMemSurvived`|84|已結束回收每個記憶體。|  
   
@@ -119,7 +119,7 @@ ms.locfileid: "54689831"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ThreadAppDomainEnter`|87|進入應用程式網域的執行緒。|  
   
@@ -144,7 +144,7 @@ ms.locfileid: "54689831"
   
  下表說明事件資訊。  
   
-|事件|事件 ID|引發的時機|  
+|Event - 事件|事件 ID|引發的時機|  
 |-----------|--------------|-----------------|  
 |`ThreadTerminated`|86|一個執行緒終止。|  
   
@@ -157,4 +157,5 @@ ms.locfileid: "54689831"
 |ClrInstanceID|win:UInt16|CLR 或 CoreCLR 執行個體的唯一 ID。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CLR ETW 事件](../../../docs/framework/performance/clr-etw-events.md)

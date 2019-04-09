@@ -2,12 +2,12 @@
 title: 訊息記錄的安全性考量
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 0bee1543a6c29dc34abcb2af08ee520923766175
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170660"
 ---
 # <a name="security-concerns-for-message-logging"></a>訊息記錄的安全性考量
 此主題描述如何保護訊息記錄以及記錄訊息時所產生之事件中的敏感性資料，使其不會被公開。  
@@ -110,5 +110,6 @@ ms.locfileid: "54731994"
  您可以在 Windows 的 [事件檢視器] 工具中檢視這些事件。 如需詳細資訊，請參閱[事件記錄](../../../../docs/framework/wcf/diagnostics/event-logging/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [訊息記錄](../../../../docs/framework/wcf/diagnostics/message-logging.md)
 - [追蹤的安全性考量及實用秘訣](../../../../docs/framework/wcf/diagnostics/tracing/security-concerns-and-useful-tips-for-tracing.md)

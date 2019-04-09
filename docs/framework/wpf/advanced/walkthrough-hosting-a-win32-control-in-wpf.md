@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：裝載在 WPF 中的 Win32 控制項
+title: 逐步解說：將 Win32 控制項裝載在 WPF 中
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,19 +8,18 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 13845eb662064e0ac1db913bedc0b21214292db5
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160689"
 ---
-# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：裝載在 WPF 中的 Win32 控制項
+# <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：將 Win32 控制項裝載在 WPF 中
 Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程式。 不過，當您已長期開發 Win32 程式碼中，它可能會重複使用至少一些更有效率的 WPF 應用程式中的程式碼而不是完全重寫程式。 WPF 提供簡單的機制，以裝載 Win32 視窗中，WPF 頁面上。  
   
  本主題將逐步引導您透過應用程式，[裝載 Win32 ListBox 控制項中 WPF 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)，主機 Win32 清單方塊控制項。 此一般程序可以延伸到裝載任何 Win32 視窗中。  
-  
-  
+
 <a name="requirements"></a>   
 ## <a name="requirements"></a>需求  
  本主題假設基本的熟悉 WPF 和 Windows API 的程式設計。 如需基本 WPF 程式設計簡介，請參閱 <<c0> [ 開始使用](../getting-started/index.md)。 Windows API 程式設計簡介，請參閱任何書籍，特別*程式設計 Windows* Charles petzold 的。  
@@ -154,6 +153,7 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
  最後，設定`handled`至`true`表示已處理訊息。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Interop.HwndHost>
-- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
+- [WPF 和 Win32 互通](wpf-and-win32-interoperation.md)
 - [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)

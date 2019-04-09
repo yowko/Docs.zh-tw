@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0a53f433d1b6caca98b2b0d564774820239320f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739663"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170763"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` Managed 偵錯助理 (MDA) 會變更 <xref:System.Object> 類別對 <xref:System.Object.GetHashCode%2A> 方法所傳回之雜湊碼執行模數作業的行為。 此 MDA 的預設模數是 1，讓 <xref:System.Object.GetHashCode%2A> 針對所有物件都傳回 0。  
@@ -46,7 +46,7 @@ ms.locfileid: "54739663"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  啟用此 MDA 時，應用程式的執行速度會更慢。 此 MDA 只會採用已傳回的雜湊碼，並改成在除以模數時傳回餘數。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  沒有此 MDA 的輸出。  
   
 ## <a name="configuration"></a>組態  
@@ -61,6 +61,7 @@ ms.locfileid: "54739663"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Object.GetHashCode%2A?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
