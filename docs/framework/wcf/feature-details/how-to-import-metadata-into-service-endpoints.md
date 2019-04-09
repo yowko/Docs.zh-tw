@@ -1,15 +1,15 @@
 ---
-title: HOW TO：中繼資料匯入服務端點
+title: HOW TO：將中繼資料匯入服務端點
 ms.date: 03/30/2017
 ms.assetid: b69dbe20-92a1-4911-89d8-ffbc3dad4663
-ms.openlocfilehash: 5a6375f0a0b0f657401a1ac2254be942d4e618aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 05106295448c4682f07dd17295574ecdc39bf903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548673"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126863"
 ---
-# <a name="how-to-import-metadata-into-service-endpoints"></a>HOW TO：中繼資料匯入服務端點
+# <a name="how-to-import-metadata-into-service-endpoints"></a>HOW TO：將中繼資料匯入服務端點
 本主題說明如何在中繼資料匯入服務端點的集合，並使用服務中定義[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 本主題將示範如何建立用戶端應用程式，從服務匯入中繼資料，然後在服務上呼叫 `Add` 方法。  
   
 ### <a name="to-import-metadata-into-service-endpoints"></a>將中繼資料匯入服務端點  
@@ -27,7 +27,7 @@ ms.locfileid: "54548673"
      [!code-csharp[UE_ImportMetadata#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#2)]  
   
     > [!NOTE]
-    >  在您匯入中繼資料之後，將無法建立用戶端通道或匯出中繼資料。 這是因為此時沒有可用的型別資訊。 實際與服務互動或匯出中繼資料需要型別資訊。 如果要產生型別資訊，您需要產生程式碼，如步驟 4 和 5 中所示。 或者，您可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 協助程式類別。 如需詳細資訊，請參閱[＜How to：使用 MetadataResolver 來動態取得繫結中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)。  
+    >  在您匯入中繼資料之後，將無法建立用戶端通道或匯出中繼資料。 這是因為此時沒有可用的型別資訊。 實際與服務互動或匯出中繼資料需要型別資訊。 如果要產生型別資訊，您需要產生程式碼，如步驟 4 和 5 中所示。 或者，您可以使用 <xref:System.ServiceModel.Description.MetadataResolver> 協助程式類別。 如需詳細資訊，請參閱[如何：使用 MetadataResolver 來動態取得繫結中繼資料](../../../../docs/framework/wcf/feature-details/how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically.md)。  
   
 4.  產生各個合約的型別資訊。  
   
@@ -38,5 +38,6 @@ ms.locfileid: "54548673"
      [!code-csharp[UE_ImportMetadata#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/ue_importmetadata/cs/client.cs#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)
 - [快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：處理 ContextMenuStrip Opening 事件
+title: HOW TO：處理 ContextMenuStrip 開啟事件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - event handling [Windows Forms], context menus
 - shortcut menus [Windows Forms], event handling
 ms.assetid: b661b3dd-7815-4cc2-a1aa-a9a391ab3427
-ms.openlocfilehash: 179411da96362fd9ba42e2b97682f335beb894c1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3001480959ef90cb31048cbcf70aeff1632979fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715447"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170707"
 ---
-# <a name="how-to-handle-the-contextmenustrip-opening-event"></a>HOW TO：處理 ContextMenuStrip Opening 事件
+# <a name="how-to-handle-the-contextmenustrip-opening-event"></a>HOW TO：處理 ContextMenuStrip 開啟事件
 您可以自訂的行為您<xref:System.Windows.Forms.ContextMenuStrip>藉由處理控制項<xref:System.Windows.Forms.ToolStripDropDown.Opening>事件。  
   
 ## <a name="example"></a>範例  
@@ -30,6 +30,7 @@ ms.locfileid: "57715447"
  設定<xref:System.ComponentModel.CancelEventArgs.Cancel%2A?displayProperty=nameWithType>屬性設`true`以防止開啟的功能表。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.ComponentModel.CancelEventArgs.Cancel%2A>
 - <xref:System.Windows.Forms.ToolStripDropDown>

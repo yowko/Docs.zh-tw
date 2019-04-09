@@ -12,18 +12,16 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: 2ef632ee1335d1ee0e94eaa1a7f25cbe34ed4e6f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165265"
 ---
 # <a name="binding-declarations-overview"></a>繫結宣告概觀
 本主題討論可以用來宣告繫結的不同方法。  
-  
- 
-  
+
 <a name="Prereq"></a>   
 ## <a name="prerequisites"></a>必要條件  
  在閱讀本主題之前，請務必先熟悉標記延伸的概念和使用方式。 如需標記延伸的詳細資訊，請參閱[標記延伸和 WPF XAML](../advanced/markup-extensions-and-wpf-xaml.md)。  
@@ -36,7 +34,7 @@ ms.locfileid: "57363406"
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>標記延伸使用方式  
- <xref:System.Windows.Data.Binding> 是一種標記延伸。 當您使用繫結延伸宣告繫結時，該宣告是由一系列子句組成，這些子句接在 `Binding` 關鍵字後面，並以逗號 (,) 分隔。 繫結宣告中的子句可以按照任何順序，而且有許多可能的組合。 子句*名稱*=*值*配對，其中*名稱*名稱<xref:System.Windows.Data.Binding>屬性及*值*是您要設定屬性值。  
+ <xref:System.Windows.Data.Binding> 是標記延伸。 當您使用繫結延伸宣告繫結時，該宣告是由一系列子句組成，這些子句接在 `Binding` 關鍵字後面，並以逗號 (,) 分隔。 繫結宣告中的子句可以按照任何順序，而且有許多可能的組合。 子句*名稱*=*值*配對，其中*名稱*名稱<xref:System.Windows.Data.Binding>屬性及*值*是您要設定屬性值。  
   
  在標記中建立繫結宣告字串時，必須將這些字串附加至目標物件的特定相依性屬性。 下列範例示範如何繫結<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>屬性使用的繫結延伸模組，指定<xref:System.Windows.Data.Binding.Source%2A>和<xref:System.Windows.Data.Binding.Path%2A>屬性。  
   
@@ -81,7 +79,7 @@ ms.locfileid: "57363406"
   
 -   屬性的索引子可以在方括弧內指定，接在套用索引子的屬性名稱後面。 例如，子句 `Path=ShoppingCart[0]` 會將繫結設定為索引，而該索引對應於屬性之內部索引處理常值字串 "0" 的方式。 此語法也支援巢狀索引子。  
   
--   `Path` 子句中可以混合使用索引子和子屬性；例如，`Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   索引子和子屬性中可以混合使用`Path`子句，例如 `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   您可以在索引子內加入多個以逗號 (,) 分隔的索引子參數。 各個參數的型別可以使用括號指定。 例如，您可以加入 `Path="[(sys:Int32)42,(sys:Int32)24]"`，其中 `sys` 對應至 `System` 命名空間。  
   
@@ -126,7 +124,8 @@ ms.locfileid: "57363406"
 -   預設值<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>值而異<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>和<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>依據的繫結的相依性屬性。 大多數相依性屬性的預設值為 <xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>，而 <xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType> 屬性具有 <xref:System.Windows.Data.UpdateSourceTrigger.LostFocus> 的預設值。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)
 - [資料繫結](../advanced/optimizing-performance-data-binding.md)
 - [PropertyPath XAML 語法](../advanced/propertypath-xaml-syntax.md)

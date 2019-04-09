@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], about BindingSource component
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
-ms.openlocfilehash: 9348d44697b2c617481b55242faa83ab517e6226
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707816"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59165343"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 元件架構
 使用<xref:System.Windows.Forms.BindingSource>元件，都將資料來源所有的 Windows Form 控制項繫結。  
@@ -149,7 +149,7 @@ ms.locfileid: "57707816"
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
+-   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
@@ -169,11 +169,12 @@ ms.locfileid: "57707816"
  您可以使用<xref:System.Windows.Forms.BindingSource>元件，以將任何 Windows Form 控制項繫結至資料來源，但<xref:System.Windows.Forms.BindingNavigator>控制項是專為搭配<xref:System.Windows.Forms.BindingSource>元件。 <xref:System.Windows.Forms.BindingNavigator>控制項提供使用者介面來控制<xref:System.Windows.Forms.BindingSource>元件的目前項目。 根據預設，<xref:System.Windows.Forms.BindingNavigator>控制項提供的巡覽方法對應的按鈕<xref:System.Windows.Forms.BindingSource>元件。 如需詳細資訊，請參閱[如何：使用 Windows Forms BindingNavigator 控制項巡覽資料](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource 元件概觀](bindingsource-component-overview.md)
 - [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)
-- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [如何：反映 Windows Form 控制項使用 BindingSource 中的資料來源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [Windows Form 資料繫結](../windows-forms-data-binding.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [HOW TO：將 Windows Forms 控制項繫結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [HOW TO：使用 BindingSource 反映 Windows Forms 控制項中的資料來源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cryptographySettings element
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
-ms.openlocfilehash: 11f07bbf5de04edc98a5a5bc0ba07f1629763a9f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55258704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164134"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 項目
 包含密碼編譯設定。  
@@ -77,6 +77,7 @@ ms.locfileid: "55258704"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)

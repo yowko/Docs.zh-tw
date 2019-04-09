@@ -1,5 +1,5 @@
 ---
-title: HOW TO：服務上模擬用戶端
+title: HOW TO：在服務上模擬用戶端
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 260ff8b2131e1ee3c42197187f7067ab9c1328d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c414d0af033d9d703fcf947d008aeefcef5b876
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497500"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169113"
 ---
-# <a name="how-to-impersonate-a-client-on-a-service"></a>HOW TO：服務上模擬用戶端
+# <a name="how-to-impersonate-a-client-on-a-service"></a>HOW TO：在服務上模擬用戶端
 模擬的 Windows Communication Foundation (WCF) 服務上的用戶端，可讓服務代表用戶端執行動作。 關於存取控制清單 (ACL) 檢查的動作，例如存取機器上的目錄和檔案或存取 SQL Server 資料庫，請根據用戶端使用者帳戶檢查 ACL。 本主題說明在 Windows 網域中啟用用戶端以設定用戶端模擬等級所需的基本步驟。 如需此文件的實用範例，請參閱 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需有關用戶端模擬的詳細資訊，請參閱 <<c0> [ 委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ ms.locfileid: "54497500"
      [!code-vb[c_SimpleImpersonation#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_simpleimpersonation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.OperationBehaviorAttribute>
 - <xref:System.Security.Principal.TokenImpersonationLevel>
 - [模擬用戶端](../../../docs/framework/wcf/samples/impersonating-the-client.md)

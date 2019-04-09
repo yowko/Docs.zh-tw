@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 663ceda1c0621e1152e795db79c3953be0090d5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 88f23c2e03966bffccc9153e18e1b54e6847987d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681786"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127604"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
 無法載入組件時，會啟用 `bindingFailure` Managed 偵錯助理 (MDA)。  
@@ -48,7 +48,7 @@ ms.locfileid: "54681786"
   
 -   根據先前的判斷來解決原因。 可能的解決方式選項如下：  
   
-    -   在全域組件快取中安裝所要求的組件，並呼叫 <xref:System.Reflection.Assembly.Load%2A> 方法，依身分識別載入組件。  
+    -   在全域組件快取中安裝所要求的組件，並呼叫 <xref:System.Reflection.Assembly.Load%2A> 若要依身分識別載入組件的方法。  
   
     -   將所要求的組件複製至應用程式目錄，並呼叫 <xref:System.Reflection.Assembly.Load%2A> 方法，依身分識別載入組件。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "54681786"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。 它只會回報繫結失敗的資料。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  MDA 回報無法載入的組件，包含要求的路徑和 (或) 顯示名稱、繫結內容、在其中要求載入的應用程式定義域，以及失敗原因。  
   
  如果該資料無法用於 CLR，則顯示名稱或所要求的路徑可能空白。 如果失敗的呼叫是 <xref:System.Reflection.Assembly.Load%2A> 方法，則執行階段可能無法判斷組件的顯示名稱。  
@@ -99,4 +99,5 @@ namespace ConsoleApplication1
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
