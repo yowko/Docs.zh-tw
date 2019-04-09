@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
-ms.openlocfilehash: 97cae018f8cdf19da390b9586334f7c8b7f1c239
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903808"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142334"
 ---
 # <a name="establishing-the-connection"></a>建立連接
 若要連接至 Microsoft SQL Server，請使用 .NET Framework Data Provider for SQL Server 的 <xref:System.Data.SqlClient.SqlConnection> 物件。 若要連接至 OLE DB 資料來源，請使用 .NET Framework Data Provider for OLE DB 的 <xref:System.Data.OleDb.OleDbConnection> 物件。 若要連接至 ODBC 資料來源，請使用 ODBC 的 .NET Framework 資料提供者的 <xref:System.Data.Odbc.OdbcConnection> 物件。 若要連接至 Oracle 資料來源，請使用 Oracle 的 .NET Framework 資料提供者的 <xref:System.Data.OracleClient.OracleConnection> 物件。 安全地儲存及擷取連接字串，請參閱[保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
@@ -143,7 +143,8 @@ nwindConn.Open();
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+
+- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
 - [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)
 - [OLE DB、ODBC 和 Oracle 連接共用](../../../../docs/framework/data/adonet/ole-db-odbc-and-oracle-connection-pooling.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

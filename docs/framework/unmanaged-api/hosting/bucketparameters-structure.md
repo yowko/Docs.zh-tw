@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cf52f74c38b479664ad7e015180b26e0a53c235e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5998ce684726b2386d8f1e05eb7eaeccf455747c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110452"
 ---
 # <a name="bucketparameters-structure"></a>BucketParameters 結構
 儲存目前的例外狀況與事件相關聯的事件和參數的類型名稱。  
@@ -49,7 +49,8 @@ typedef struct _BucketParameters {
   
  **標頭：** MSCorEE.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)

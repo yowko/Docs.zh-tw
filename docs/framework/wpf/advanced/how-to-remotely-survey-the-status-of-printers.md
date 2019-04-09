@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 6eba3c5edd9095a25c0a387a3b37f68e3799d1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359701"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143542"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>HOW TO：從遠端調查印表機的狀態
 在任何時候，中型和大型公司都可能有多部印表機因為夾紙或紙張用完或一些其他問題狀況而無法運作。 一組豐富印表機屬性中公開的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行印表機狀態的快速問卷調查。  
@@ -74,6 +74,7 @@ ms.locfileid: "57359701"
  [!code-vb[PrinterStatusSurvey#UsingStartAndUntilTimes](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PrinterStatusSurvey/visualbasic/program.vb#usingstartanduntiltimes)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Printing.PrintQueue.StartTimeOfDay%2A>
 - <xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>
 - <xref:System.DateTime>
@@ -84,6 +85,6 @@ ms.locfileid: "57359701"
 - <xref:System.Printing.LocalPrintServer>
 - <xref:System.Printing.EnumeratedPrintQueueTypes>
 - <xref:System.Printing.PrintQueue>
-- [& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 運算子 (C# 參考)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)

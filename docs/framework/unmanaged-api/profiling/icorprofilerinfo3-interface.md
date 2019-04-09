@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57caee7a0da019fc45bd35b7b81f8d066991081b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178759"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 介面
 提供程式碼分析工具用於和 Common Language Runtime (CLR) 通訊，以控制事件監視以及要求資訊的方法。 `ICorProfilerInfo3`介面是擴充功能[ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)介面。 它提供在 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 和更新版本中支援的新方法。  
@@ -32,7 +32,7 @@ ms.locfileid: "54557977"
 |------------|-----------------|  
 |[EnumJITedFunctions 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)|傳回所有先前 JIT 編譯函式的列舉。|  
 |[EnumModules 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)|傳回提供循序逐一查看 Managed 模組集合方法的列舉，其中該模組被載入至應用程式中。|  
-|[GetAppDomainsContainingModule 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getappdomainscontainingmodule-method.md)|取得程式定義域的識別項，其中已載入提供的模組。|  
+|[GetAppDomainsContainingModule 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getappdomainscontainingmodule-method.md)|取得已載入指定模組之應用程式定義域的識別項。|  
 |[GetFunctionEnter3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)|提供給分析工具所報告的函式之堆疊框架和引數資訊[FunctionEnter3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functionenter3withinfo-function.md)函式; lze vyvolat pouze během`FunctionEnter3WithInfo`回呼。|  
 |[GetFunctionLeave3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionleave3info-method.md)|提供的堆疊框架和傳回值的函式報告給分析工具所[FunctionLeave3WithInfo 函式](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)函式; lze vyvolat pouze během`FunctionLeave3WithInfo`回呼。|  
 |[GetFunctionTailcall3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)|提供給分析工具所報告的函式的堆疊框架[FunctionTailcall3WithInfo](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3withinfo-function.md)函式; lze vyvolat pouze během`FunctionTailcall3WithInfo`回呼。|  
@@ -55,10 +55,11 @@ ms.locfileid: "54557977"
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

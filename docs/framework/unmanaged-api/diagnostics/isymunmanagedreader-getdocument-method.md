@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f20f7aabc05bb9e15b040d968c08d10444efd8fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2a173c23ea33532f05e30d072677715e15d04018
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093679"
 ---
 # <a name="isymunmanagedreadergetdocument-method"></a>ISymUnmanagedReader::GetDocument 方法
 尋找文件。 文件語言、 廠商和類型是選擇性的。  
@@ -61,4 +61,5 @@ HRESULT GetDocument (
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedReader 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedreader-interface.md)

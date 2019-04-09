@@ -2,12 +2,12 @@
 title: 自訂權杖
 ms.date: 03/30/2017
 ms.assetid: e7fd8b38-c370-454f-ba3e-19759019f03d
-ms.openlocfilehash: f056e54197a98a0218ef94e4df2fc46745a08985
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3632738ce7afaa5f458dfe26eb562cd70c2e2896
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817314"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201763"
 ---
 # <a name="custom-token"></a>自訂權杖
 此範例示範如何新增自訂權杖實作 Windows Communication Foundation (WCF) 應用程式。 範例會使用 `CreditCardToken`，將用戶端的信用卡資訊安全地傳遞至服務。 權杖會在 WS-Security 訊息標頭中傳遞，並且是使用對稱安全性繫結程序項目，與訊息本文及其他訊息標頭一起經過簽署和加密。 當內建權杖的安全性不足時，這會十分有幫助。 這個範例將示範如何提供自訂安全性權杖給服務，而不使用其中一個內建權杖。 服務會實作定義要求-回覆通訊模式的合約。
@@ -628,4 +628,3 @@ string GetCallerCreditCardNumber()
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
 1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
-  

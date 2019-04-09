@@ -2,12 +2,12 @@
 title: Entity Container - 實體容器
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: d2ad565ce73b2de4b10d2f15406b283a13bbef6e
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409883"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144062"
 ---
 # <a name="entity-container"></a>Entity Container - 實體容器
 *實體容器*是邏輯分組[實體集](../../../../docs/framework/data/adonet/entity-set.md)，[關聯集](../../../../docs/framework/data/adonet/association-set.md)，以及[函式匯入](../../../../docs/framework/data/adonet/model-declared-function.md)。  
@@ -30,5 +30,6 @@ ms.locfileid: "58409883"
  [!code-xml[EDM_Example_Model#EntityContainerExample](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books.edmx#entitycontainerexample)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

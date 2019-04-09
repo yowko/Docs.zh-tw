@@ -2,12 +2,12 @@
 title: 了解 HTTP 驗證
 ms.date: 03/30/2017
 ms.assetid: 9376309a-39e3-4819-b47b-a73982b57620
-ms.openlocfilehash: 77fbed8cae070285925bcdc13c76fe28c3cb13cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 430b0ddb98514b605178124f331e5152605a2b89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206391"
 ---
 # <a name="understanding-http-authentication"></a>了解 HTTP 驗證
 驗證是一種識別用戶端是否具備存取資源之資格的程序。 HTTP 通訊協定支援驗證作為存取安全資源的交涉方法。  
@@ -36,6 +36,7 @@ ms.locfileid: "54525790"
 -   伺服器不應存在任何 (以 WWW-Authentication 標頭表示) 不預備接受或未能提供保護資源適當安全的配置。 用戶端可自行選擇任何伺服器提供的驗證配置。 有些用戶端預設選擇最薄弱的驗證配置，或是伺服器清單中第一項驗證配置。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [傳輸安全性概觀](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)
 - [使用模擬搭配傳輸安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [委派和模擬](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

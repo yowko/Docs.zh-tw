@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 ms.date: 03/30/2017
 ms.assetid: a99275b9-4975-4899-8e21-594ba552f981
-ms.openlocfilehash: 117a172d11e67e23c4c3dca0449acb48c432b59c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fd9a3dcfb609b068e0200561b1fe52b44ee30b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54629745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109722"
 ---
 # <a name="systemservicemodelchannelspeerfloodedmessagenotpropagated"></a>System.ServiceModel.Channels.PeerFloodedMessageNotPropagated
 PeerNode 已接收訊息，但沒有傳播至芳鄰。  
@@ -19,6 +19,7 @@ PeerNode 已接收訊息，但沒有傳播至芳鄰。
  檢查訊息傳播篩選條件是否存在。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

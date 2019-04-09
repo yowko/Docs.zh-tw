@@ -4,17 +4,16 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
-ms.openlocfilehash: a7ed16690172f2720424807325150ea3db5d5caa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372824"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110054"
 ---
 # <a name="base-elements-overview"></a>基底項目概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中有高百分比的類別衍生自 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 文件中通稱為基底項目類別的四個類別。 這些類別是<xref:System.Windows.UIElement>， <xref:System.Windows.FrameworkElement>， <xref:System.Windows.ContentElement>，和<xref:System.Windows.FrameworkContentElement>。 <xref:System.Windows.DependencyObject>類別也會相關，因為它是通用的基底類別，這兩者的<xref:System.Windows.UIElement>和 <xref:System.Windows.ContentElement>  
- 
-  
+
 <a name="base_apis"></a>   
 ## <a name="base-element-apis-in-wpf-classes"></a>WPF 類別中的基底項目 API  
  兩者<xref:System.Windows.UIElement>並<xref:System.Windows.ContentElement>衍生自<xref:System.Windows.DependencyObject>，透過略為不同的路徑。 在此層級分割會處理如何<xref:System.Windows.UIElement>或<xref:System.Windows.ContentElement>會用於使用者介面和應用程式中提供它們的目的。 <xref:System.Windows.UIElement> 也有<xref:System.Windows.Media.Visual>在其類別階層中，這是會公開較低層級圖形支援基礎類別[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。 <xref:System.Windows.Media.Visual> 藉由定義獨立矩形螢幕區域來提供轉譯架構。 在實務上，<xref:System.Windows.UIElement>是項目將會支援較大的物件模型，都將是用來轉譯和版面配置，可描述為矩形螢幕區域，和其中的內容模型是刻意更開放，以允許不同的區域項目組合。 <xref:System.Windows.ContentElement> 不是衍生自<xref:System.Windows.Media.Visual>; 其模型在於<xref:System.Windows.ContentElement>就可供其他用途，例如讀取器或接著解譯項目並產生完整的檢視器<xref:System.Windows.Media.Visual>的[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]取用。 某些<xref:System.Windows.UIElement>類別要作為內容主機︰ 它們提供裝載和轉譯一或多個<xref:System.Windows.ContentElement>類別 (<xref:System.Windows.Controls.DocumentViewer>是這種類別的範例)。 <xref:System.Windows.ContentElement> 項目具有略小的物件模型的基底類別，並且更能處理的文字、 資訊或文件內容可能會裝載於當做<xref:System.Windows.UIElement>。  
@@ -98,6 +97,7 @@ ms.locfileid: "57372824"
  <xref:System.Windows.Controls.Control> 是預期的基底類別類型，為 ad-hoc 控制項或元件，根據的技術。 一般而言，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 控制項類別是直接代表 UI 控制項或緊密參與控制項組合的類別。 主要功能，<xref:System.Windows.Controls.Control>啟用是控制項範本。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Control>
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [控制項撰寫概觀](../controls/control-authoring-overview.md)

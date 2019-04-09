@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3d3ef78da9dd639d0f9050a8b61d1e365cd8b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 204f04b1ed1ea293639e0b9826f7e0ce6f384763
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650245"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198539"
 ---
 # <a name="cormanifestresourceflags-enumeration"></a>CorManifestResourceFlags 列舉
 指出編碼的組件資訊清單中的資源的可見性。  
@@ -51,7 +51,8 @@ typedef enum CorManifestResourceFlags {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

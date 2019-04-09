@@ -3,12 +3,12 @@ title: <system.identityModel>
 ms.date: 03/30/2017
 ms.assetid: 210ce7e9-d07b-400c-800f-5f525dcf95e8
 author: BrucePerlerMS
-ms.openlocfilehash: fd17c0318480f5e157c8c9114116735b82bbfcef
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2f0040fb7084b9d53adbd1a114f1cfc62d58e5a1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351290"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110002"
 ---
 # <a name="systemidentitymodel"></a>\<system.identityModel>
 提供啟用應用程式中的 Windows Identity Foundation (WIF) 選項的設定。  
@@ -26,7 +26,7 @@ ms.locfileid: "57351290"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -76,4 +76,5 @@ ms.locfileid: "57351290"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Configuration.SystemIdentityModelSection>

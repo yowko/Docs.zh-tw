@@ -12,15 +12,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f586cd610e77f5b3eb2e0e4dad778141e5d45595
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f0d73da04242bfe5a4958a62d2a48b609b474309
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54738218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195406"
 ---
 # <a name="icordebugprocess7-interface"></a>ICorDebugProcess7 介面
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  提供用來設定偵錯工具的方法，以控制代碼目標處理序中的記憶體中中繼資料更新。  
   
@@ -35,12 +35,13 @@ ms.locfileid: "54738218"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

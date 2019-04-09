@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2b6c29861faa469f03ca5f2d3cb18e95b3e78f52
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 25d5e412dc52e4ce26995ff88454b33ccea64c89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110093"
 ---
 # <a name="imetadataassemblyemitsetassemblyrefprops-method"></a>IMetaDataAssemblyEmit::SetAssemblyRefProps 方法
 修改指定的 `AssemblyRef` 中繼資料結構。  
@@ -75,9 +75,10 @@ HRESULT SetAssemblyRefProps (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataAssemblyEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

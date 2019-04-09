@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, metadata publishing sample
 - Metadata Publishing Behaviors Sample [Windows Communication Foundation]
 ms.assetid: 78c13633-d026-4814-910e-1c801cffdac7
-ms.openlocfilehash: 3fa806207a92e031d9015c5a8b783df4b1cc2d21
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5651df09626ae3bd3fd1f1bead8dcb07c4fd2c43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843142"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202413"
 ---
 # <a name="metadata-publishing-behavior"></a>中繼資料發行行為
 中繼資料發行行為範例會示範如何控制服務的中繼資料發行功能。 若要避免不小心洩露可能含有機密的服務中繼資料，Windows Communication Foundation (WCF) 服務的預設組態會停用中繼資料發行。 這個行為依預設為安全行為，但也表示您無法使用中繼資料匯入工具 (例如 Svcutil.exe) 來產生呼叫服務所需的用戶端程式碼，除非組態中已明確啟用服務的中繼發行行為。  
@@ -85,4 +85,3 @@ ms.locfileid: "58843142"
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Metadata`  
-  

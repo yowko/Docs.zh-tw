@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8f5eec26-b809-4aca-8778-7e202356d856
-ms.openlocfilehash: b7f92c0341a63df6bb5553d656469b374755aae7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e210c36ee2ab8ddba7451ac7b346ad72288d94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54562637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096351"
 ---
 # <a name="datarows-and-datarowviews"></a>DataRow 和 DataRowView
 <xref:System.Data.DataView> 公開可列舉之 <xref:System.Data.DataRowView> 物件的集合。 **DataRowView**物件將值公開為物件陣列，會依名稱或序數參考的基礎資料表中的資料行編製索引。 您可以存取<xref:System.Data.DataRow>公開**DataRowView**利用<xref:System.Data.DataRowView.Row%2A>屬性**DataRowView**。  
@@ -60,9 +60,10 @@ public static void WriteView(DataView thisDataView)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataRowVersion>
 - <xref:System.Data.DataViewRowState>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

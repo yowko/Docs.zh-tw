@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Split Button
 - UI Automation, Split Button control type
 ms.assetid: 14b05ccf-bcd8-4045-9bae-f7679cd98711
-ms.openlocfilehash: 41c4d087b81b56bb4c3c19aa718fedac32701419
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 0c133704dda03f722aa1231b1eaf15e714082789
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206950"
 ---
 # <a name="ui-automation-support-for-the-splitbutton-control-type"></a>SplitButton 控制項類型的 UI 自動化支援
 > [!NOTE]
@@ -62,15 +62,15 @@ ms.locfileid: "57679000"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有分割按鈕控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必要項|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|無|  
-|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。|必要|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|無|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|無|  
+|<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent>|必要項|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.IsEnabledProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.ExpandCollapsePatternIdentifiers.ExpandCollapseStateProperty> 屬性變更事件。|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要|None|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.StructureChangedEvent>|必要|None|  
   
 <a name="Split_Button_Control_Example"></a>   
 ## <a name="splitbutton-control-example"></a>SplitButton 控制項範例  
@@ -80,11 +80,12 @@ ms.locfileid: "57679000"
   
  與資料格和分割按鈕控制項相關、使用者介面自動化樹狀結構的控制項檢視和內容檢視顯示如下。 每個自動化項目的控制項模式顯示在括號中。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |<ul><li>SplitButton "名稱" (Invoke, ExpandCollapse)</li><li>Button "更多選項" (Invoke)<br /><br /> <ul><li>功能表</li><li>MenuItem</li><li>…</li></ul></li></ul>|<ul><li>SplitButton "名稱" (Invoke, ExpandCollapse)</li><li>Button "更多選項" (Invoke)<br /><br /> <ul><li>功能表</li><li>MenuItem</li><li>…</li></ul></li></ul>|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Automation.ControlType.SplitButton>
 - [UI 自動化控制項類型概觀](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)
 - [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

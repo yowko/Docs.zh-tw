@@ -1,23 +1,23 @@
 ---
-title: HOW TO：呼叫模型定義函式當做物件方法
+title: HOW TO：將模型定義函式當作物件方法來呼叫
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 33bae8a8-4ed8-4a1f-85d1-c62ff288cc61
-ms.openlocfilehash: 3b145c3d2b262729fae9a03b7930b286f7641d36
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 2b3e25187d2865a8e754c553f8057c3c8e3cff37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825715"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59151225"
 ---
-# <a name="how-to-call-model-defined-functions-as-object-methods"></a>HOW TO：呼叫模型定義函式當做物件方法
+# <a name="how-to-call-model-defined-functions-as-object-methods"></a>HOW TO：將模型定義函式當作物件方法來呼叫
 本主題描述如何呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法，或做為自訂類別上的靜態方法。 A*模型定義函式*是概念模型中所定義的函式。 本主題的程序說明如何直接呼叫這些函式，而不是從 LINQ to Entities 查詢呼叫函式。 呼叫 LINQ to Entities 查詢的模型定義的函式的相關資訊，請參閱[How to:在查詢中呼叫模型定義函式](../../../../../../docs/framework/data/adonet/ef/language-reference/how-to-call-model-defined-functions-in-queries.md)。  
   
  無論您是呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 方法，或是做為自訂類別上的靜態方法，您必須先使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 將方法對應至模型定義函式。 不過，當您定義 <xref:System.Data.Objects.ObjectContext> 類別上的方法時，您必須使用 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 屬性公開 LINQ 提供者，而當您定義自訂類別上的靜態方法時，您必須使用 <xref:System.Linq.IQueryable.Provider%2A> 屬性公開 LINQ 提供者。 如需詳細資訊，請參閱下列程序後的範例。  
   
- 以下程序提供的重要概述，是關於呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法，以及呼叫做為自訂類別上的靜態方法。 下面的範例提供更多關於程序中之步驟的詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱[＜How to：概念模型中定義自訂函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))。  
+ 以下程序提供的重要概述，是關於呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法，以及呼叫做為自訂類別上的靜態方法。 下面的範例提供更多關於程序中之步驟的詳細資訊。 程序假設您已在概念模型中定義函式。 如需詳細資訊，請參閱[如何：概念模型中定義自訂函式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100))。  
   
 ### <a name="to-call-a-model-defined-function-as-a-method-on-an-objectcontext-object"></a>呼叫模型定義函式做為 ObjectContext 物件上的方法  
   
@@ -27,7 +27,7 @@ ms.locfileid: "55825715"
   
     -   對應至概念模型中定義的函式。 若要對應方法，您必須將 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 套用至方法。 請注意，屬性的 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.NamespaceName%2A> 和 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute.FunctionName%2A> 參數分別是概念模型的命名空間名稱和概念模型中的函式名稱。 LINQ 的函式名稱解析是區分大小寫的。  
   
-    -   傳回由 <xref:System.Linq.IQueryProvider.Execute%2A> 屬性所傳回的 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 方法結果。  
+    -   由 <xref:System.Linq.IQueryProvider.Execute%2A> 屬性傳回的方法會傳回 <xref:System.Data.Objects.ObjectContext.QueryProvider%2A> 的結果。  
   
 3.  呼叫方法做為 <xref:System.Data.Objects.ObjectContext> 類別之執行個體上的成員。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "55825715"
 2.  呼叫方法做為自訂類別上之靜態方法的成員  
   
 ## <a name="example"></a>範例  
- **做為 ObjectContext 物件上的方法中呼叫模型定義函式**  
+ **呼叫模型定義函式做為 ObjectContext 物件上的方法**  
   
  下列範例示範如何呼叫模型定義函式做為 <xref:System.Data.Objects.ObjectContext> 物件上的方法。 此範例會使用[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "55825715"
  [!code-vb[DP L2E Methods on ObjectContext#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#9)]  
   
 ## <a name="example"></a>範例  
- **做為自訂類別上的靜態方法呼叫模型定義函式**  
+ **呼叫模型定義函式做為自訂類別上的靜態方法**  
   
  下一個範例示範如何呼叫模型定義函式做為自訂類別上的靜態方法。 此範例會使用[AdventureWorks Sales Model](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks)。  
   
@@ -106,6 +106,7 @@ ms.locfileid: "55825715"
  [!code-vb[DP L2E Methods on ObjectContext#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/dp l2e methods on objectcontext/vb/module1.vb#6)]  
   
 ## <a name="see-also"></a>另請參閱
-- [.edmx 檔案概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
+
+- [.edmx 檔概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))
 - [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)
 - [在 LINQ to Entities 查詢中呼叫函式](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)

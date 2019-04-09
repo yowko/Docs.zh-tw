@@ -9,12 +9,12 @@ helpviewer_keywords:
 - parts [WPF], StatusBar
 - StatusBar [WPF], styles and templates
 ms.assetid: 9f5e1c25-81eb-4756-a0ac-d9e1fbe33ee2
-ms.openlocfilehash: 42bf7aa672addadbc4205c796c09914fe8f3054d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 64b5b66f7f32ea31b51b4da990ceede4078c27cf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372471"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177719"
 ---
 # <a name="statusbar-styles-and-templates"></a>StatusBar 樣式和範本
 本主題描述的樣式和範本<xref:System.Windows.Controls.Primitives.StatusBar>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
@@ -55,6 +55,7 @@ ms.locfileid: "57372471"
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項的樣式和範本](control-styles-and-templates.md)

@@ -2,12 +2,12 @@
 title: DataTables
 ms.date: 03/30/2017
 ms.assetid: 52ff0e32-3e5a-41de-9a3b-7b04ea52b83e
-ms.openlocfilehash: f0f429d7f28360fd76dfff0e7d4a4eba019e5acf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f6509400d7f6633749155f778e3ba58ec6c27ec2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207314"
 ---
 # <a name="datatables"></a>DataTables
 <xref:System.Data.DataSet> 是由資料表集合、關係和條件約束所組成。 在 ADO.NET 中，<xref:System.Data.DataTable>物件用來代表中的資料表**資料集**。 A **DataTable**表示記憶體中關聯式資料; 的一個資料表資料位於本機。以.NET 為基礎的應用程式它位於，但可以從資料來源，例如 Microsoft SQL Server 使用填入**DataAdapter**如需詳細資訊，請參閱[從 DataAdapter 填入 DataSet](../../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md).  
@@ -30,7 +30,7 @@ ms.locfileid: "54653241"
  [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)  
  說明如何加入、修改和刪除資料表中的資料。 說明如何使用**DataTable**事件，以檢視資料表中的資料變更。  
   
- [處理 DataTable 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
+ [處理 DataTable 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-datatable-events.md)  
  提供可用事件的相關資訊，供**DataTable**，包括已修改資料行的值，並新增或刪除資料列時的事件。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -56,4 +56,5 @@ ms.locfileid: "54653241"
  提供.NET Framework 類別庫的概觀包括**系統**命名空間以及它的第二層命名空間**System.Data**。  
   
 ## <a name="see-also"></a>另請參閱
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

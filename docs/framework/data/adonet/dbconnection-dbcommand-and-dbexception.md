@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 58aab611-7e6f-4749-b983-28ab7ae87dbe
-ms.openlocfilehash: 31bd23d854afd10d0c292042ac3963978de5fd4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 759b2f36f9d38cdac0cfe4ff8e451b38012493e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143828"
 ---
 # <a name="dbconnection-dbcommand-and-dbexception"></a>DbConnection、DbCommand 和 DbException
 在建立 <xref:System.Data.Common.DbProviderFactory> 和 <xref:System.Data.Common.DbConnection> 之後，接著就可以使用命令和資料讀取器從資料來源擷取資料。  
@@ -64,7 +64,8 @@ finally
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)
+
+- [DbProviderFactory](../../../../docs/framework/data/adonet/dbproviderfactories.md)
 - [取得 DbProviderFactory](../../../../docs/framework/data/adonet/obtaining-a-dbproviderfactory.md)
 - [使用 DbDataAdapter 修改資料](../../../../docs/framework/data/adonet/modifying-data-with-a-dbdataadapter.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

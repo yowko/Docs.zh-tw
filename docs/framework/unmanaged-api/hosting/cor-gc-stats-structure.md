@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fc212321b28545f62f0a1c2965281d02ac73e40
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d335a62545f06a66d4044b59aa9499d3f7ede515
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638102"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208471"
 ---
 # <a name="corgcstats-structure"></a>COR_GC_STATS 結構
 提供 common language runtime (CLR) 記憶體回收機制的相關統計資料。  
@@ -82,11 +82,12 @@ pCLRGCManager->GetStats(&GCStats);
   
  **標頭：** GCHost.idl  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載結構](../../../../docs/framework/unmanaged-api/hosting/hosting-structures.md)
-- [自動管理記憶體](../../../../docs/standard/automatic-memory-management.md)
+- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
 - [記憶體回收](../../../../docs/standard/garbage-collection/index.md)

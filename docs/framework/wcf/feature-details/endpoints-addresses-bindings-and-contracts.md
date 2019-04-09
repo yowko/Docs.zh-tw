@@ -1,19 +1,19 @@
 ---
-title: 端點：位址、 繫結和合約
+title: 端點：位址、繫結和合約
 ms.date: 03/30/2017
 helpviewer_keywords:
 - endpoints [WCF]
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: a10d9ac5718bf6b88a3a00902f90045c705f8431
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721785"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207522"
 ---
-# <a name="endpoints-addresses-bindings-and-contracts"></a>端點：位址、 繫結和合約
+# <a name="endpoints-addresses-bindings-and-contracts"></a>端點：位址、繫結和合約
 使用 Windows Communication Foundation (WCF) 服務的所有通訊都都會透過*端點*的服務。 端點可讓用戶端存取至 WCF 服務所提供的功能。  
   
  端點包含四項屬性：  
@@ -64,7 +64,7 @@ ms.locfileid: "54721785"
 -   行為：您可以使用端點行為來自訂服務端點的本機行為。 端點行為會藉由參與建置 WCFruntime 的過程中達到此目的。 <xref:System.ServiceModel.Description.ServiceEndpoint.ListenUri%2A> 屬性是一個端點行為範例，它可讓您指定不同於 SOAP 或 Web 服務描述語言 (WSDL) 位址的接聽位址。 如需詳細資訊，請參閱 < [ClientViaBehavior](../../../../docs/framework/wcf/diagnostics/wmi/clientviabehavior.md)。  
   
 ## <a name="defining-endpoints"></a>定義端點  
- 您可以透過命令式程式碼或是宣告式組態來指定服務端點。 如需詳細資訊，請參閱[＜How to：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[How to:在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
+ 您可以透過命令式程式碼或是宣告式組態來指定服務端點。 如需詳細資訊，請參閱[如何：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)和[How to:在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  本章節說明繫結、端點與位址的用途；說明如何設定繫結與端點；並示範如何使用 `ClientVia` 行為和 `ListenUri` 屬性。  
@@ -78,15 +78,16 @@ ms.locfileid: "54721785"
  [合約](../../../../docs/framework/wcf/feature-details/contracts.md)  
  說明合約如何定義服務方法。  
   
- [如何：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
+ [HOW TO：在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)  
  說明如何透過組態建立服務端點。  
   
- [如何：在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
+ [HOW TO：在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)  
  說明如何透過程式碼建立服務端點。  
   
- [如何：使用 Svcutil.exe 來驗證已編譯的服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
+ [HOW TO：使用 Svcutil.exe 來驗證已編譯服務程式碼](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-validate-compiled-service-code.md)  
  描述如何在服務實作和設定中偵測到錯誤，而不需要裝載服務會使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定服務](../../../../docs/framework/wcf/configuring-services.md)
 - [擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)

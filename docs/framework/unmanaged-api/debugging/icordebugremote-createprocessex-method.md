@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b8c72a2dde70a93b589181b0cc1bd7824b3f52d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a38812803127857281f9766fa3ed551971ec0330
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093514"
 ---
 # <a name="icordebugremotecreateprocessex-method"></a>ICorDebugRemote::CreateProcessEx 方法
 啟動處理序在偵錯工具在遠端電腦上。  
@@ -102,11 +102,12 @@ HRESULT CreateProcessEx (
   
  **標頭：** CorDebug.idl  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
  **.NET framework 版本：** 4.5，4，3.5 SP1  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugRemote 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugremote-interface.md)
 - [ICorDebug 介面](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)
 

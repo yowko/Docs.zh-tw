@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b949466c5557415ec06bac601380675beed7fd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d3e4affa363083ce55ac3764c26412a0d60ba3f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203089"
 ---
 # <a name="iclrsyncmanager-interface"></a>ICLRSyncManager 介面
 定義方法，可讓主應用程式取得要求的工作的相關資訊，以及偵測死結的同步處理實作中。  
@@ -40,11 +40,12 @@ ms.locfileid: "54549859"
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Threading.Thread>
 - [IHostSyncManager 介面](ihostsyncmanager-interface.md)
 - [Managed 和 Unmanaged 執行緒處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/5s8ee185(v=vs.100))

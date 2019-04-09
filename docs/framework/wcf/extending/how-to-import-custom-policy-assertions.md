@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1f41d787-accb-4a10-bfc6-a807671d1581
-ms.openlocfilehash: ff727922aeee7aeaea801dabd842f913ce75c220
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e27c6ed6508544180d8659717b700e604b0f3d3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59073620"
 ---
 # <a name="how-to-import-custom-policy-assertions"></a>HOW TO：匯入自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。  用戶端應用程式可使用服務中繼資料中的原則判斷提示，來設定用戶端繫結或自訂服務端點的服務合約。  
   
- 您可以藉由實作 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 介面並將該物件傳遞至中繼資料系統，或藉由在應用程式組態檔中註冊實作類型，來匯入自訂原則判斷提示。  <xref:System.ServiceModel.Description.IPolicyImportExtension> 介面的實作必須提供預設建構函式。  
+ 您可以藉由實作 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 介面並將該物件傳遞至中繼資料系統，或藉由在應用程式組態檔中註冊實作類型，來匯入自訂原則判斷提示。   <xref:System.ServiceModel.Description.IPolicyImportExtension> 介面的實作必須提供預設建構函式。  
   
 ### <a name="to-import-custom-policy-assertions"></a>若要匯入自訂原則判斷提示  
   
@@ -64,6 +64,7 @@ ms.locfileid: "54674777"
 1.  先將匯入工具新增至 <xref:System.ServiceModel.Description.MetadataImporter.PolicyImportExtensions%2A?displayProperty=nameWithType> 屬性 (例如，如果您目前使用的是 <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>)，再匯入中繼資料。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Description.MetadataResolver?displayProperty=nameWithType>

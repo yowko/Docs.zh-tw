@@ -1,18 +1,18 @@
 ---
-title: HOW TO：註冊並設定服務 Moniker
+title: HOW TO：註冊和設定服務 Moniker
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 2f8f19e70b3345b61f1f5caba2fc6f764b58cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141917"
 ---
-# <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊並設定服務 Moniker
+# <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 之前使用型別之合約中的 Windows Communication Foundation (WCF) 服務 moniker，在 COM 應用程式中的，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>使用 COM 註冊必要的屬性化型別  
@@ -98,4 +98,5 @@ ms.locfileid: "54593793"
      這樣會修改匯入的介面定義，讓所有方法都會傳回 `HResult`。 其他傳回值都會轉換為 Out 參數。 整體的執行方法仍然相同。 這樣可讓您在 Proxy 上呼叫方法時，判斷發生例外狀況的原因。 不過這個功能只能用於 C++ 程式碼。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

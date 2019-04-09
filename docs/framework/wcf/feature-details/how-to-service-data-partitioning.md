@@ -2,12 +2,12 @@
 title: 如何：服務資料分割
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
-ms.openlocfilehash: 3755a9ecb61148bcc426e9d510dc2eab1c34eeb4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c5cfd56943c97b70ef12276f1bae47fa870366a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590626"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59150094"
 ---
 # <a name="how-to-service-data-partitioning"></a>如何：服務資料分割
 本主題概要說明在相同目的地服務之多個執行個體中分割訊息所需的基本步驟。 使用服務資料分割的時機，通常是在需要調整服務的規模以便提供更優良的服務品質，或是需要以某種特定的方式處理來自不同客戶的要求。 例如，從最高值或 「 金級 」 客戶的訊息可能需要處理更高的優先順序比標準客戶的訊息。  
@@ -174,4 +174,5 @@ ms.locfileid: "54590626"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)

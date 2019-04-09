@@ -1,18 +1,18 @@
 ---
-title: HOW TO：建立 Windows Form 上的簡單繫結控制項
+title: HOW TO：在 Windows Form 上建立簡單繫結控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data binding [Windows Forms], simple data binding
 - Windows Forms controls, data binding
 ms.assetid: 3bcaded8-0f1a-4cc0-8830-f59be253bf4e
-ms.openlocfilehash: f481b85c07a107b10d88d47c4873b555191bac7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 85b19c43441650789eed6b92a771d2f2433c6a10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094062"
 ---
-# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>HOW TO：建立 Windows Form 上的簡單繫結控制項
+# <a name="how-to-create-a-simple-bound-control-on-a-windows-form"></a>HOW TO：在 Windows Form 上建立簡單繫結控制項
 具有*簡單繫結*，您可以在控制項中顯示單一資料元素，例如資料集資料表中的資料行值。 您可以簡單繫結控制項的任何屬性的資料值。  
   
 > [!NOTE]
@@ -46,6 +46,7 @@ ms.locfileid: "57708336"
     >  由於簡單繫結控制項顯示單一資料元素，就經常包含 Windows 表單以簡單繫結控制項中的 瀏覽邏輯。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Binding>
-- [Windows Forms 資料繫結](windows-forms-data-binding.md)
-- [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)
+- [Windows Form 資料繫結](windows-forms-data-binding.md)
+- [資料繫結和 Windows Form](data-binding-and-windows-forms.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8284b23f5d36f7b3405bfff706e0ee7f0e32a042
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3d7ac84971f7d0e97f7ccd26710151d1aeefe729
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207210"
 ---
 # <a name="isymunmanagednamespacegetnamespaces-method"></a>ISymUnmanagedNamespace::GetNamespaces 方法
 取得這個命名空間的子系。  
@@ -54,4 +54,5 @@ HRESULT GetNamespaces(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedNamespace 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagednamespace-interface.md)

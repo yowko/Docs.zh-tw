@@ -1,15 +1,15 @@
 ---
-title: HOW TO：建立接受任意資料服務使用 WCF REST 程式設計模型
+title: HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
 ms.date: 03/30/2017
 ms.assetid: e566c15a-b600-4e4a-be3a-4af43e767dae
-ms.openlocfilehash: 8728afbe5ebfe31d619b311f521eb1012a0dc323
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c03450c66cf8de14d6c638550a510a91593c45b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666994"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59144075"
 ---
-# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：建立接受任意資料服務使用 WCF REST 程式設計模型
+# <a name="how-to-create-a-service-that-accepts-arbitrary-data-using-the-wcf-rest-programming-model"></a>HOW TO：使用 WCF REST 程式設計模型建立接受任意資料的服務
 有時候，開發人員必須要能夠完全控制資料從服務作業傳回的方式。 這是服務作業必須傳回格式的資料不支援 byWCF 情況。 本主題說明如何使用 WCF REST 程式設計模型建立接收任意資料的服務。  
   
 ### <a name="to-implement-the-service-contract"></a>若要實作服務合約  
@@ -194,6 +194,7 @@ namespace ReceiveRawData
 -   編譯程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UriTemplate 與 UriTemplateTable](../../../../docs/framework/wcf/feature-details/uritemplate-and-uritemplatetable.md)
 - [WCF Web HTTP 程式設計模型](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)
 - [WCF Web HTTP 程式設計模型概觀](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model-overview.md)

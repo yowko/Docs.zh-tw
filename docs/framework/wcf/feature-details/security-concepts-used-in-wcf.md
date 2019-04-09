@@ -2,12 +2,12 @@
 title: 用於 WCF 的安全性概念
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: 2dd820d4b6ba38f194074465ac7c1f40289fd928
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142216"
 ---
 # <a name="security-concepts-used-in-wcf"></a>用於 WCF 的安全性概念
 Windows Communication Foundation (WCF) 安全性是已在使用中的概念中建置及部署各種安全性基礎結構。  
@@ -47,5 +47,6 @@ Windows Communication Foundation (WCF) 安全性是已在使用中的概念中�
  如需有關這些主題，請參閱[存取控制機制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

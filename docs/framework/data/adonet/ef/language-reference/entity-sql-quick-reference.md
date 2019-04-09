@@ -2,12 +2,12 @@
 title: Entity SQL 快速參考
 ms.date: 03/30/2017
 ms.assetid: e53dad9e-5e83-426e-abb4-be3e78e3d6dc
-ms.openlocfilehash: 20d8d1cb1e4b5cbf37dffcce6a7e79c2a4c265d3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4e3eaf8abd82b63fa2663b47f878ecfa9584897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54539399"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207067"
 ---
 # <a name="entity-sql-quick-reference"></a>Entity SQL 快速參考
 本主題提供 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢的快速參考。 本主題中的查詢是以 AdventureWorks Sales model 為基礎。  
@@ -48,7 +48,7 @@ DATETIME '2006-12-25 01:01'
 |-----------|  
 |12/25/2006 1:01:00 AM|  
   
-### <a name="integer"></a>Integer  
+### <a name="integer"></a>整數  
  整數常值可以屬於型別 Int32 (123)、UInt32 (123U)、Int64 (123L) 和 UInt64 (123UL)。  
   
  範例：  
@@ -268,7 +268,7 @@ SELECT c.ContactID as ID, c.LastName as Name FROM
   
  輸出：  
   
-|ID|名稱|  
+|識別碼|名稱|  
 |--------|----------|  
 |10|Adina|  
 |11|Agcaoili|  
@@ -286,7 +286,7 @@ SELECT VALUE name FROM AdventureWorksEntities.Product as P
   
  輸出：  
   
-|name|  
+|名稱|  
 |----------|  
 |LL Mountain Seat Assembly|  
 |ML Mountain Seat Assembly|  
@@ -334,7 +334,7 @@ SELECT VALUE p.Name FROM AdventureWorksEntities.Product as p
 |...|  
   
 ### <a name="select"></a>SELECT  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也提供資料列建構函式來建構任意資料列。 SELECT 會擷取投影中的一個或多個項目，並且產生具有欄位的資料記錄，例如：`SELECT a, b, c`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 也會提供資料列建構函式來建構任意的資料列。 SELECT 會擷取投影中的一個或多個項目，並且產生具有欄位的資料記錄，例如：`SELECT a, b, c`。  
   
  範例：  
   
@@ -363,5 +363,6 @@ CASE WHEN AVG({25,12,11}) < 100 THEN TRUE ELSE FALSE END
 |true|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

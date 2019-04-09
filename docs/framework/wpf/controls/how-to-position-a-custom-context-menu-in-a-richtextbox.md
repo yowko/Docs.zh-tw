@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 RichTextBox 中放置自訂內容功能表
+title: HOW TO：在 RichTextBox 中置放自訂操作功能表
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - RichTextBox control [WPF], positioning custom context menus
 - context menus [WPF], positioning
 ms.assetid: bf77c930-a546-4573-9a56-9af345ba189a
-ms.openlocfilehash: abb5bbb5d5a537b14f334782e87fa7caf0c7976f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f9407f59c3daafd09fa5b84006f33ef2f3ebd31f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367870"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209420"
 ---
-# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>HOW TO：在 RichTextBox 中放置自訂內容功能表
+# <a name="how-to-position-a-custom-context-menu-in-a-richtextbox"></a>HOW TO：在 RichTextBox 中置放自訂操作功能表
 此範例說明如何放置自訂操作功能表<xref:System.Windows.Controls.RichTextBox>。  
   
  當您實作 **RichTextBox** 的自訂操作功能表時，需負責處理操作功能表的位置。  自訂操作功能表預設會在 **RichTextBox** 的中央開啟。  
@@ -35,5 +35,6 @@ ms.locfileid: "57367870"
  [!code-vb[RichTextBox_ContextMenu#_ListenerBody](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RichTextBox_ContextMenu/VisualBasic/app.xaml.vb#_listenerbody)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [RichTextBox 概觀](richtextbox-overview.md)
 - [TextBox 概觀](textbox-overview.md)

@@ -2,12 +2,12 @@
 title: 類型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 7ac27c3dd43cb83272bff991dbd713e8269ccbb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54743526"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096019"
 ---
 # <a name="type-definitions-entity-sql"></a>類型定義 (Entity SQL)
 型別定義用於 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 內嵌函式中的宣告陳述式。  
@@ -31,11 +31,11 @@ ms.locfileid: "54743526"
   
  型別定義的選項是：  
   
--   `IdentifierName supported_type` 或  
+-   `IdentifierName supported_type`或  
   
--   `IdentifierName` COLLECTION(`type_definition`)，或  
+-   `IdentifierName` 集合 (`type_definition`)，或  
   
--   `IdentifierName` ROW(`property_definition`)，或  
+-   `IdentifierName` 資料列 (`property_definition`)，或  
   
 -   `IdentifierName` REF(`supported_entity_type`)  
   
@@ -87,5 +87,6 @@ select Ref(x) from AdventureWorksEntities.SalesOrderHeaders as x
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

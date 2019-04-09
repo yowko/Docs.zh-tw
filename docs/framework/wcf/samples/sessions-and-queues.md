@@ -2,12 +2,12 @@
 title: 工作階段和佇列
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 4aa8aea2e829f89714ad9fa946121d4ebab21c4c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 38bc581d8264c0f226677e0c6f1bfd12b489bac8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814519"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097209"
 ---
 # <a name="sessions-and-queues"></a>工作階段和佇列
 這個範例示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -268,4 +268,3 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
     > [!NOTE]
     >  將安全性模式設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。  
-  

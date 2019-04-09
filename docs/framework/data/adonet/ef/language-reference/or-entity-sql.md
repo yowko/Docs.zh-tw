@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 4d0bed2fb000e96e9fd0ceac6ea90e19b8fa7514
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ceaf33d8baba9776008cddcbe2e2d70f13fe089
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554851"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141280"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 結合兩個 `Boolean` 運算式。  
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  傳回 `Boolean`的任何有效運算式。  
   
 ## <a name="return-value"></a>傳回值  
- 當其中一個條件為`true` 時就會傳回 `true`，否則會傳回 `false`。  
+ `true` 其中一個條件時`true`; 否則`false`。  
   
 ## <a name="remarks"></a>備註  
  OR 是 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 邏輯運算子， 它是用來結合兩個條件。 當在陳述式中使用一個以上的邏輯運算子時，OR 運算子會在 AND 運算子之後評估。 然而，您可以使用括號來變更評估的順序。  
@@ -36,9 +36,9 @@ boolean_expression || boolean_expression
   
 ||`TRUE`|`FALSE`|`NULL`|  
 |-|------------|-------------|------------|  
-|`TRUE`|true|TRUE|TRUE|  
-|`FALSE`|TRUE|FALSE|NULL|  
-|`NULL`|TRUE|NULL|NULL|  
+|`TRUE`|true|true|true|  
+|`FALSE`|true|false|NULL|  
+|`NULL`|true|NULL|NULL|  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 OR 運算子結合兩個 `Boolean` 運算式。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
@@ -50,4 +50,5 @@ boolean_expression || boolean_expression
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

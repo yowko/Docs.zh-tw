@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 996f9af1bccb446ad4fcc6faec60b88e511262de
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c6a30dff869075a201a669d1e703bc003b011fc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474276"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196277"
 ---
 # <a name="isymunmanagedvariablegetstartoffset-method"></a>ISymUnmanagedVariable::GetStartOffset 方法
 取得這個變數，其父系內的起始位移。 如果這是本機變數的範圍內，起始位移會落在定義範圍的位移。  
@@ -45,5 +45,6 @@ HRESULT GetStartOffset(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedVariable 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)
 - [GetEndOffset 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-getendoffset-method.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6773d9387ae3b91125b413dee51b0c3fcbbb1edd
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59140565"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain 方法
 卸載指定的應用程式定義域，從目前的處理序。  
@@ -53,11 +53,12 @@ HRESULT UnloadDomain (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

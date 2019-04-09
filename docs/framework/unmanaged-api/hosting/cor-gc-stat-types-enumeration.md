@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4bd12feb47352d9bb78aa8ef056072f9bdc6fba3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9e228cfbdade420c4d5248ffd417c6131083ee74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54710322"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110413"
 ---
 # <a name="corgcstattypes-enumeration"></a>COR_GC_STAT_TYPES 列舉
 指定要記錄的記憶體回收的統計資料。  
@@ -50,8 +50,9 @@ typedef enum {
   
  **標頭：** GCHost.idl GCHost.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [COR_GC_STATS 結構](../../../../docs/framework/unmanaged-api/hosting/cor-gc-stats-structure.md)
 - [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

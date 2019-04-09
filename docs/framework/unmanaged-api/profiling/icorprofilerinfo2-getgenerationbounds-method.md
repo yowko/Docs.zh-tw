@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec0f953ecd0b578d25bcbe155f4bec97274e176c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 19288b5631fea8865530f936ac6d77c0286ee169
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110374"
 ---
 # <a name="icorprofilerinfo2getgenerationbounds-method"></a>ICorProfilerInfo2::GetGenerationBounds 方法
 取得記憶體區域，也就是堆積的區段，會組成各種記憶體回收層代。  
@@ -62,9 +62,10 @@ HRESULT GetGenerationBounds(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorProfilerInfo 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
 - [ICorProfilerInfo2 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f8b97862-e8bb-470d-8b96-07733c21fe26
-ms.openlocfilehash: 7447830de81471c6d9e5b7812ec7a0ad1dbd2ccf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cee570bdc9d7bf6debfc4ec226e91f3fd79a01dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704702"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095148"
 ---
 # <a name="how-to-customize-a-system-provided-binding"></a>HOW TO：自訂系統提供的繫結
 Windows Communication Foundation (WCF) 包含數個系統提供繫結可讓您設定部分屬性，基礎的繫結項目，而非全部的屬性。 本主題示範如何設定繫結項目上的屬性來建立自訂繫結。  
@@ -51,6 +51,7 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結可讓您�
      [!code-vb[C_HowTo_ChangeStandardBinding#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_changestandardbinding/vb/program.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Channels.CustomBinding>

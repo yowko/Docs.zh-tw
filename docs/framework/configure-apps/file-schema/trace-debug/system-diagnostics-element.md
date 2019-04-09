@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <system.diagnostics> element
 - system.diagnostics element
 ms.assetid: 3f348f42-fa72-4ff2-aa1c-bb9eecad4bb2
-ms.openlocfilehash: 31768c1a66accab33a8867fac6e813c6ae93bda7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 026805ffb9b89aa55e84cf9a5c4afb8ed63cec09
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142703"
 ---
 # <a name="systemdiagnostics-element"></a>\<system.diagnostics > 項目
 指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
@@ -73,6 +73,7 @@ ms.locfileid: "55284215"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.Debug>
 - [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

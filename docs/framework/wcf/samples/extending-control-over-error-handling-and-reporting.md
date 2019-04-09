@@ -2,12 +2,12 @@
 title: 延伸對錯誤處理和報告的控制
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
-ms.openlocfilehash: 8a6064d5ebc8f80eb5fe3cba309c0eb1c71ee020
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 520a939c5527fa341a6c3a609297c69ec05dd7ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094108"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>延伸對錯誤處理和報告的控制
 這個範例會示範如何擴充對錯誤處理和錯誤報告中使用 Windows Communication Foundation (WCF) 服務的控制<xref:System.ServiceModel.Dispatcher.IErrorHandler>介面。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)搭配其他程式碼新增至服務，以處理錯誤。 用戶端會強制產生數個錯誤狀況。 服務則攔截這些錯誤並記錄在檔案中。  
@@ -19,7 +19,7 @@ ms.locfileid: "58814337"
   
  在這個範例中，`CalculatorErrorHandler` 型別會實作 <xref:System.ServiceModel.Dispatcher.IErrorHandler> 介面。 在  
   
- <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法中，`CalculatorErrorHandler` 會將錯誤記錄寫入 c:\logs 中的 Error.txt 文字檔。 請注意，此範例會記錄錯誤，但不加以隱藏，目的是為了將該錯誤回報到用戶端。  
+ <xref:System.ServiceModel.Dispatcher.IErrorHandler.HandleError%2A> 方法，`CalculatorErrorHandler`的錯誤記錄寫入 c:\logs 中 Error.txt 文字檔。 請注意，此範例會記錄錯誤，但不加以隱藏，目的是為了將該錯誤回報到用戶端。  
   
 ```  
 public class CalculatorErrorHandler : IErrorHandler  
@@ -157,4 +157,3 @@ Fault: Reason = Invalid Argument: The argument must be greater than zero.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\ErrorHandling`  
-  

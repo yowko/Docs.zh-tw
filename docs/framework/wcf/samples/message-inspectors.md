@@ -2,12 +2,12 @@
 title: 訊息偵測器
 ms.date: 03/30/2017
 ms.assetid: 9bd1f305-ad03-4dd7-971f-fa1014b97c9b
-ms.openlocfilehash: 248e74e039c0ebb0b1580ec2cb4f19d713d95c51
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e8afbc1fc85dab18d6fbd5e8d49b10847a7d230f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199800"
 ---
 # <a name="message-inspectors"></a>訊息偵測器
 這個範例會示範如何實作與設定用戶端和服務訊息偵測器。  
@@ -41,7 +41,7 @@ public class SchemaValidationMessageInspector : IClientMessageInspector, IDispat
   
  任何服務 (發送器) 偵測器都必須實作兩個 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector> 方法 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 和 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>。  
   
- 接收訊息時，發送器會叫用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A>，但將此項解除序列化並分派至作業之前，是由通道堆疊所處理並指派至服務。 如果已加密傳入訊息，在訊息抵達訊息偵測器時就會進行解密。 方法會取得當做參考屬性傳遞的 `request` 訊息，而此參考屬性可讓您根據需要檢查訊息、管理或取代訊息。 傳回值可以是服務將回覆傳回現行訊息時，當做傳遞至 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> 之相互關聯狀態物件使用的任何物件。 在此範例中，<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 會將訊息檢查 (驗證) 委派給私用的本機方法 `ValidateMessageBody`，而且不會傳回任何相互關聯狀態物件。 這個方法會確定不會有無效的訊息傳遞至服務。  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 會叫用由發送器當訊息接收、 處理由通道堆疊並指派給服務，但再還原序列化並分派至作業。 如果已加密傳入訊息，在訊息抵達訊息偵測器時就會進行解密。 方法會取得當做參考屬性傳遞的 `request` 訊息，而此參考屬性可讓您根據需要檢查訊息、管理或取代訊息。 傳回值可以是服務將回覆傳回現行訊息時，當做傳遞至 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A> 之相互關聯狀態物件使用的任何物件。 在此範例中，<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 會將訊息檢查 (驗證) 委派給私用的本機方法 `ValidateMessageBody`，而且不會傳回任何相互關聯狀態物件。 這個方法會確定不會有無效的訊息傳遞至服務。  
   
 ```  
 object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Channels.Message request, System.ServiceModel.IClientChannel channel, System.ServiceModel.InstanceContext instanceContext)  
@@ -56,7 +56,7 @@ object IDispatchMessageInspector.AfterReceiveRequest(ref System.ServiceModel.Cha
 }  
 ```  
   
- 已處理傳入訊息時，每次準備將回覆傳送回用戶端，或者傳入訊息為單向訊息時，就會叫用 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29>。 這樣可不管 MEP，都將延伸項目當做已對稱地呼叫。 搭配 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 使用時，會當做參考參數傳遞訊息，並且可檢查、修改或取代訊息。 在此範例中執行的訊息驗證會再次委派給 `ValidMessageBody` 方法，在這裡的驗證錯誤處理方式稍有不同。  
+ <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%28System.ServiceModel.Channels.Message%40%2CSystem.Object%29> 每當回覆時就會傳送給用戶端，或如果是單向的訊息，在處理內送訊息時，會叫用。 這樣可不管 MEP，都將延伸項目當做已對稱地呼叫。 搭配 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 使用時，會當做參考參數傳遞訊息，並且可檢查、修改或取代訊息。 在此範例中執行的訊息驗證會再次委派給 `ValidMessageBody` 方法，在這裡的驗證錯誤處理方式稍有不同。  
   
  如果是在服務上發生驗證錯誤，`ValidateMessageBody` 方法會擲回 <xref:System.ServiceModel.FaultException> 衍生的例外狀況。 在 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.AfterReceiveRequest%2A> 中，這些例外狀況可以放入服務模型基礎結構，在這裡會自動將例外狀況轉換為 SOAP 錯誤，並轉送至用戶端。 在 <xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector.BeforeSendReply%2A>, <xref:System.ServiceModel.FaultException> 中，例外狀況不可放置在基礎結構中，因為服務擲回的錯誤例外狀況轉換會在呼叫訊息偵測器之前即發生。 因此，下列實作可以攔截已知的 `ReplyValidationFault` 例外狀況，並以明確的錯誤訊息取代回覆訊息。 這個方法可確定服務實作不會傳回無效的訊息。  
   
@@ -82,7 +82,7 @@ void IDispatchMessageInspector.BeforeSendReply(ref System.ServiceModel.Channels.
   
  用戶端訊息偵測器的運作方法也很類似。 必須從 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector> 實作的這兩個方法為 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.AfterReceiveReply%2A> 和 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>。  
   
- 當用戶端應用程式或作業格式器編寫訊息時，就會叫用 <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A>。 搭配使用發送器訊息偵測器時，就可以只檢查或完全取代訊息。 在此範例中，偵測器會分派至相同的本機 `ValidateMessageBody` Helper 方法，而這個方法也會用於委派訊息偵測器。  
+ <xref:System.ServiceModel.Dispatcher.IClientMessageInspector.BeforeSendRequest%2A> 當用戶端應用程式或作業格式器編寫訊息時，會叫用。 搭配使用發送器訊息偵測器時，就可以只檢查或完全取代訊息。 在此範例中，偵測器會分派至相同的本機 `ValidateMessageBody` Helper 方法，而這個方法也會用於委派訊息偵測器。  
   
  用戶端和服務驗證 (如建構函式中指定) 之間的行為差異，主要是在用戶端驗證擲回的本機例外狀況會放置在使用者程式碼中，其原因為這些例外狀況是在本機產生，而不是因為服務錯誤所產生。 一般來說，規則為服務發送器偵測器會擲回錯誤，而用戶端偵測器則是擲回例外狀況。  
   
@@ -412,4 +412,3 @@ catch (Exception e)
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\MessageInspectors`  
-  

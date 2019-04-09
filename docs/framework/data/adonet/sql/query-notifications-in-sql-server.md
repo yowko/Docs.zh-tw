@@ -2,12 +2,12 @@
 title: SQL Server 中的查詢通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 166471658ccd1ef48db2ac1647f74ea696f3263d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092289"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203674"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
 依據 Service Broker 基礎結構所建置的查詢通知可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
@@ -30,13 +30,13 @@ ms.locfileid: "56092289"
   
 -   [使用查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms175110(v=sql.105))  
   
--   [建立查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [為通知建立查詢](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
 -   [開發 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522889(v=sql.105))  
   
 -   [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [開發人員指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+-   [開發人員手冊 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="in-this-section"></a>本節內容  
  [啟用查詢通知](../../../../../docs/framework/data/adonet/sql/enabling-query-notifications.md)  
@@ -62,5 +62,6 @@ ms.locfileid: "56092289"
  說明 <xref:System.Web.Caching.SqlCacheDependency> 類別及其所有成員。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

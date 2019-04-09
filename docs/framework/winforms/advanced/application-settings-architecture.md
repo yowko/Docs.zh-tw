@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: dd527234b90e94b5883d15b336f5e5abc9709880
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59099777"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -147,10 +147,11 @@ ms.locfileid: "57710676"
  您的提供者不需要支援所有的屬性中定義的設定<xref:System.Configuration?displayProperty=nameWithType>命名空間，但它必須在最小支援<xref:System.Configuration.ApplicationScopedSettingAttribute>並<xref:System.Configuration.UserScopedSettingAttribute>，也應該支援和<xref:System.Configuration.DefaultSettingValueAttribute>。 對於不支援的屬性，您的提供者應該失敗且不需要通知，也就是不應該擲回例外狀況。 如果設定類別使用無效的屬性組合，但是 — 例如套用<xref:System.Configuration.ApplicationScopedSettingAttribute>和<xref:System.Configuration.UserScopedSettingAttribute>相同的設定 — 您的提供者應該擲回例外狀況，並停止作業。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [應用程式設定概觀](application-settings-overview.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [自訂控制項的應用程式設定](application-settings-for-custom-controls.md)
 - [ClickOnce 和應用程式設定](/visualstudio/deployment/clickonce-and-application-settings)
 - [應用程式設定結構描述](../../configure-apps/file-schema/application-settings-schema.md)

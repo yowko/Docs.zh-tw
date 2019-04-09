@@ -1,5 +1,5 @@
 ---
-title: HOW TO：存取 Managed 的 HTML 文件物件模型中的 HTML 原始檔
+title: HOW TO：存取受控 HTML 文件物件模型中的 HTML 原始檔
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - managed HTML DOM
 - HTML [Windows Forms], accessing in Windows Forms
 ms.assetid: 53db79fa-8a5e-448e-88c2-f54ace3860b6
-ms.openlocfilehash: b9122e2c5bebdde2e04507973ccfeb924d0ad23e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 98341270ffdb7788aa5c2713682d7d836bde220e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203258"
 ---
-# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>HOW TO：存取 Managed 的 HTML 文件物件模型中的 HTML 原始檔
+# <a name="how-to-access-the-html-source-in-the-managed-html-document-object-model"></a>HOW TO：存取受控 HTML 文件物件模型中的 HTML 原始檔
 在第一次顯示目前的文件時，<xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> 控制項的 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 與 <xref:System.Windows.Forms.WebBrowser> 屬性會傳回其舊版的 HTML。 您若是使用方法與屬性呼叫 (例如 <xref:System.Windows.Forms.HtmlElement.AppendChild%2A> 與 <xref:System.Windows.Forms.HtmlElement.InnerHtml%2A>) 修改頁面，這些變更將不會在您呼叫 <xref:System.Windows.Forms.WebBrowser.DocumentStream%2A> 及 <xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 時出現。 若要取得 DOM 的最新 HTML 來源，您必須呼叫 HTML 元素的 <xref:System.Windows.Forms.HtmlElement.OuterHtml%2A> 屬性。  
   
  下列程序示範如何擷取動態來源，以及如何在個別的捷徑功能表中顯示該來源。  
@@ -46,5 +46,6 @@ ms.locfileid: "57723643"
  嘗試擷取之前，請務必先測試 <xref:System.Windows.Forms.WebBrowser.Document%2A> 的值。 在未完全載入目前的頁面之前，可能不會起始設定 <xref:System.Windows.Forms.WebBrowser.Document%2A> 或其一或多個子物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 Managed HTML 文件物件模型](using-the-managed-html-document-object-model.md)
 - [WebBrowser 控制項概觀](webbrowser-control-overview.md)

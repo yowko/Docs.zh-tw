@@ -2,12 +2,12 @@
 title: HOW TO：使用 ASP.NET 角色提供者搭配服務
 ms.date: 03/30/2017
 ms.assetid: 88d33a81-8ac7-48de-978c-5c5b1257951e
-ms.openlocfilehash: 0ad581a6967c759095d85d946a8557b47a075355
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 20ffd1bb51bc2d6ac106927f805c7349c12059c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658230"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209082"
 ---
 # <a name="how-to-use-the-aspnet-role-provider-with-a-service"></a>HOW TO：使用 ASP.NET 角色提供者搭配服務
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 角色提供者 (以及 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者) 這項功能可讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 開發人員建立網站，以允許使用者在網站中建立帳戶，並允許對使用者指派角色做為授權用途。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 就可以使用該網站與其服務。  
@@ -67,5 +67,6 @@ ms.locfileid: "54658230"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [成員資格和角色提供者](../../../../docs/framework/wcf/samples/membership-and-role-provider.md)
-- [如何：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [HOW TO：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)

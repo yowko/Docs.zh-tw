@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bf3f781e23d0787d01a1ef04b41b2c38eaaa9e0d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 70d78942d4db2fea2cc1ccbcc5ddb20d743e9fdf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479333"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093666"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString 方法
 取得儲存在指定的相對虛擬位址的字串。  
@@ -50,9 +50,10 @@ HRESULT GetString (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

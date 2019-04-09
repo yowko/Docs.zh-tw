@@ -1,5 +1,5 @@
 ---
-title: HOW TO：新增和移除功能表項目，使用 Windows Form ContextMenu 元件
+title: HOW TO：使用 Windows Forms ContextMenu 元件新增和移除功能表項目
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: 8b63182bdb37e47a71bee2d22500263cd4889ac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094459"
 ---
-# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>HOW TO：新增和移除功能表項目，使用 Windows Form ContextMenu 元件
+# <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>HOW TO：使用 Windows Forms ContextMenu 元件新增和移除功能表項目
 說明如何新增和移除 Windows Form 中的捷徑功能表項目。  
   
  Windows Form<xref:System.Windows.Forms.ContextMenu>元件提供給所選物件相關的常用命令的功能表。 您也可以加入至捷徑功能表新增項目<xref:System.Windows.Forms.MenuItem>物件至<xref:System.Windows.Forms.Menu.MenuItems%2A>集合。  
@@ -75,6 +75,7 @@ ms.locfileid: "57725060"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ContextMenu>
 - [ContextMenu 元件](contextmenu-component-windows-forms.md)
 - [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)

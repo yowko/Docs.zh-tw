@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 162341ee8cb27e5edc455207bbe094356c5167e7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 274b91793cd51348c42661bf12a4e4385e17f630
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466072"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093965"
 ---
 # <a name="getappidauthority-function"></a>GetAppIdAuthority 函式
 取得指標[IAppIdAuthority](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)管理應用程式身分識別和參考的索引鍵的執行個體。  
@@ -44,8 +44,9 @@ HRESULT GetAppIdAuthority (
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IAppIdAuthority 介面](../../../../docs/framework/unmanaged-api/fusion/iappidauthority-interface.md)
 - [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)

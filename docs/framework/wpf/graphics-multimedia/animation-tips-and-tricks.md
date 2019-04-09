@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: e8b2a6b5386ec33ad8aa5281d808bb7089149764
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362431"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202140"
 ---
 # <a name="animation-tips-and-tricks"></a>動畫秘訣和訣竅
 使用中的動畫時[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 有一些秘訣和技巧，讓動畫有較佳，並減少您的挫折。  
@@ -75,7 +75,7 @@ ms.locfileid: "57362431"
   
 2.  第二個分鏡腳本會生效，並從目前的位置 (現在是 0) 以動畫顯示到 500。  
   
- **但這不是發生的動作。** 相反地，矩形並未跳回，而是繼續向右移動。 這是因為第二個動畫使用第一個動畫的目前值做為其開始值，並從該值以動畫顯示到 500。 當第二個動畫會取代第一個因為<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>使用，則<xref:System.Windows.Media.Animation.FillBehavior>的第一個動畫並不重要。  
+ **但這不會發生什麼事。** 相反地，矩形並未跳回，而是繼續向右移動。 這是因為第二個動畫使用第一個動畫的目前值做為其開始值，並從該值以動畫顯示到 500。 當第二個動畫會取代第一個因為<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>使用時，<xref:System.Windows.Media.Animation.FillBehavior>的第一個動畫並不重要。  
   
 #### <a name="fillbehavior-and-the-completed-event"></a>FillBehavior 和已完成的事件  
  下面的範例示範另一個案例，其中<xref:System.Windows.Media.Animation.FillBehavior.Stop><xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>似乎沒有任何作用。 同樣地，此範例會使用分鏡腳本以動畫顯示<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>從 0 到 350。 不過，這次範例會註冊<xref:System.Windows.Media.Animation.Timeline.Completed>事件。  
@@ -116,7 +116,7 @@ ms.locfileid: "57362431"
  如需以動畫顯示屬性的不同方式的詳細資訊，請參閱[屬性動畫技術概觀](property-animation-techniques-overview.md)。  
   
 ### <a name="using-the-compose-handoffbehavior-consumes-system-resources"></a>使用 Compose HandoffBehavior 會耗用系統資源  
- 當您套用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.Media.Animation.AnimationTimeline>，或<xref:System.Windows.Media.Animation.AnimationClock>屬性，使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose> <xref:System.Windows.Media.Animation.HandoffBehavior>、 任何<xref:System.Windows.Media.Animation.Clock>先前該屬性相關聯的物件會繼續耗用系統資源，計時系統不會自動移除這些時鐘。  
+ 當您套用<xref:System.Windows.Media.Animation.Storyboard>， <xref:System.Windows.Media.Animation.AnimationTimeline>，或<xref:System.Windows.Media.Animation.AnimationClock>屬性，使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose><xref:System.Windows.Media.Animation.HandoffBehavior>、 任何<xref:System.Windows.Media.Animation.Clock>先前該屬性相關聯的物件會繼續耗用系統資源，計時系統將不會移除這些時鐘自動的。  
   
  若要避免發生效能問題，當您套用大量時鐘使用<xref:System.Windows.Media.Animation.HandoffBehavior.Compose>，完成之後，您應該從動畫屬性移除組成的時鐘。 有幾個方式可移除時鐘。  
   
@@ -129,4 +129,5 @@ ms.locfileid: "57362431"
  如需時鐘物件的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [動畫概觀](animation-overview.md)

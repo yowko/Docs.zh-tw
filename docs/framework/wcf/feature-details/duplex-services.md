@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: 9adbb4166d713cea0344c9fa58ce85e5afce086d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f8e13c6983b6c3a88bc1d9f559f7fac3d6342d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717894"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110080"
 ---
 # <a name="duplex-services"></a>雙工服務
 雙工服務合約為訊息交換模式，其中的兩個端點可以彼此獨立地傳送訊息。 因此，雙工服務可以將訊息傳送回用戶端端點，以提供類似事件的行為。 用戶端建立與服務的連線，並提供服務所需的通道以供服務將訊息傳回用戶端，這個程序即是所謂的雙工通訊。 請注意，雙工服務的類似事件行為只會在工作階段內運作。  
@@ -40,9 +40,7 @@ ms.locfileid: "54717894"
  服務的組態必須進行設定，以提供同時支援工作階段通訊和雙工通訊的繫結。 `wsDualHttpBinding` 項目支援工作階段通訊，並且藉由提供雙重 HTTP 連接 (一個方向一個連接) 允許雙工通訊。  
   
  在用戶端上，您必須設定伺服器可用來連接用戶端的位址，如下面的範例組態中所示。  
-  
-  
-  
+
 > [!NOTE]
 >  無法使用安全對話來進行驗證的非雙工用戶端通常會擲回 <xref:System.ServiceModel.Security.MessageSecurityException>。 不過，如果使用安全對話的雙工用戶端驗證失敗，則用戶端會收到 <xref:System.TimeoutException>。  
   
@@ -90,6 +88,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 >  此雙工模型不會自動偵測服務或用戶端關閉其通道的時間。 因此，如果某個用戶端意外終止，預設不會通知此服務，或者如果某個用戶端意外終止，也不會通知此服務。 用戶端和服務可以實作自己的通訊協定來通知彼此 (如果選擇這樣做的話)。  
   
 ## <a name="see-also"></a>另請參閱
-- [雙面](../../../../docs/framework/wcf/samples/duplex.md)
-- [指定用端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
-- [如何：建立通道處理站，並使用它來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)
+
+- [雙工](../../../../docs/framework/wcf/samples/duplex.md)
+- [指定用戶端執行階段行為](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)
+- [HOW TO：建立通道處理站並使用它來建立與管理通道](../../../../docs/framework/wcf/feature-details/how-to-create-a-channel-factory-and-use-it-to-create-and-manage-channels.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6364f9091b399182a44f143cef9e47a4fe667913
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: acc006894f05536ed76bac60b0fde9277a460813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59199020"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef 方法
 取得 TypeRef 語彙基元的指標<xref:System.Type>，位於指定的範圍內且具有指定的名稱的參考。  
@@ -52,10 +52,11 @@ HRESULT FindTypeRef (
   
  **標頭：** Cor.h  
   
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

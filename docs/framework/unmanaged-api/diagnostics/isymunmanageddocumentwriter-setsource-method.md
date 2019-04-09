@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bcdda6f8cdd0fc0b333b81d58a8bff7c21aa1fef
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 64982308c6eb7e9df4b94b4e123857c65939f044
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486403"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142476"
 ---
 # <a name="isymunmanageddocumentwritersetsource-method"></a>ISymUnmanagedDocumentWriter::SetSource 方法
 設定內嵌正在寫入的文件的來源。  
@@ -49,4 +49,5 @@ HRESULT SetSource(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedDocumentWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanageddocumentwriter-interface.md)

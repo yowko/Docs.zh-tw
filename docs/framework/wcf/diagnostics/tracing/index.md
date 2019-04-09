@@ -2,6 +2,12 @@
 title: 追蹤
 ms.date: 03/30/2017
 ms.assetid: 2649eae2-dbf8-421c-9cfb-cfa9e01de87f
+ms.openlocfilehash: 2379b290494e72b65db5ddc6a7bc5df376d4373f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: MT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093393"
 ---
 # <a name="tracing"></a>追蹤
 Windows Communication Foundation (WCF) 會提供錯誤監視與分析應用程式檢測和診斷資料。 您可以不使用偵錯工具而改用追蹤，以了解應用程式行為以及發生錯誤的原因。 您也可以將各元件的錯誤與處理相互關聯，以提供端對端的經驗。  
@@ -21,7 +27,7 @@ Windows Communication Foundation (WCF) 會提供錯誤監視與分析應用程�
   
  本節描述如何將活動追蹤和散佈用於端對端的相互關聯，以便協助偵錯。  
   
- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
+ [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)  
   
  本節描述如何使用追蹤為應用程式偵錯。  
   
@@ -34,4 +40,5 @@ Windows Communication Foundation (WCF) 會提供錯誤監視與分析應用程�
  本主題列出由 WCF 所產生的所有追蹤。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)

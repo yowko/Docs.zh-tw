@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b478f963156a2c8f189bbbdbc027927df8974dc2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263559"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110210"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > 項目 (.NET Native)
 將原則套用至傳遞給某個方法之類型引數所代表的類型。  
@@ -68,7 +68,7 @@ ms.locfileid: "55263559"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
   
 ## <a name="remarks"></a>備註  
  `<TypeParameter>` 元素與 [\<Parameter>](../../../docs/framework/net-native/parameter-element-net-native.md) 元素類似，不同之處在於您只能將它套用至 <xref:System.Type> 類型的參數。 這個項目會將原則套用至 `Name` 屬性所指定的類型引數在執行階段所代表的任何類型。  
@@ -95,7 +95,8 @@ Object obj = JsonConvert.DeserializeObject(data, t);
  反映指示詞會在執行階段，將 `StockQuote` 類型的中繼資料提供給 NewtonSoft JSON 序列化程式。  
   
 ## <a name="see-also"></a>另請參閱
-- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<方法 > 項目](../../../docs/framework/net-native/method-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)

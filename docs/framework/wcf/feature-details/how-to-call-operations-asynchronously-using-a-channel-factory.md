@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cc17dd47-b9ad-451c-a362-e36e0aac7ba0
-ms.openlocfilehash: e266dbf3fed2c1f1bcadd010e2ad6dfd0804230d
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 0662b82661e4fb3cde85930c2c4544f541d3a2a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260643"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202725"
 ---
 # <a name="how-to-call-operations-asynchronously-using-a-channel-factory"></a>HOW TO：使用通道處理站以非同步方式呼叫作業
 本主題涵蓋用戶端如何能夠在使用 <xref:System.ServiceModel.ChannelFactory%601> 架構的用戶端應用程式時，非同步地存取服務作業  (當使用 <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> 物件來叫用服務時，您可以使用事件驅動的非同步呼叫模型。 如需詳細資訊，請參閱[如何：以非同步方式呼叫服務作業](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。 如需事件架構非同步呼叫模型的詳細資訊，請參閱[事件架構非同步模式 (EAP)](../../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)。)  
@@ -46,4 +46,3 @@ ms.locfileid: "56260643"
   
  [!code-csharp[C_How_To_CF_Async#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_how_to_cf_async/cs/service.cs#4)]
  [!code-vb[C_How_To_CF_Async#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_how_to_cf_async/vb/service.vb#4)]  
-  

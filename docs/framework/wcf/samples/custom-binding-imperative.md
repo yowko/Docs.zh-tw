@@ -2,12 +2,12 @@
 title: 命令式自訂繫結
 ms.date: 03/30/2017
 ms.assetid: 6e13bf96-5de0-4476-b646-5f150774418d
-ms.openlocfilehash: 62c043e616073a71f2aaabe4f2098592e975f661
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: d8d185aefcf9a5efe6f50c4ff5389df2de520f1d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332776"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198890"
 ---
 # <a name="custom-binding-imperative"></a>命令式自訂繫結
 此範例示範如何撰寫命令式程式碼來定義及使用自訂繫結，而不使用組態檔或 Windows Communication Foundation (WCF) 產生用戶端。 這個範例會結合 HTTP 傳輸和可靠工作階段通道所提供的功能來建立可靠的 HTTP 架構繫結。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。  
@@ -81,4 +81,5 @@ Press <ENTER> to terminate client.
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Binding\Custom\Imperative`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [自訂繫結範例](custom-binding.md)

@@ -2,12 +2,12 @@
 title: '- （除法）(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
-ms.openlocfilehash: 42fc5e2a9f9f159a8a60973dbed6540b3188fba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ca63835a3be23137a1a40d6d6597083ae2128ac7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745229"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094888"
 ---
 # <a name="-divide-entity-sql"></a>/ (除號) (Entity SQL)
 將一個數字除以另一個數字。  
@@ -20,10 +20,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>引數  
  `dividend`  
- 要當做被除數的數值運算式。 `dividend` 是任何一個數值資料型別的任何有效運算式。  
+ 要當做被除數的數值運算式。 `dividend` 為任何一個數值資料類型的任何有效運算式。  
   
  `divisor`  
- 要當做除數的數值運算式。 `divisor` 是任何一個數值資料型別的任何有效運算式。  
+ 要當做除數的數值運算式。 `divisor` 為任何一個數值資料類型的任何有效運算式。  
   
 ## <a name="result-types"></a>結果型別  
  從兩個引數的隱含型別提升產生的資料型別。 如需有關隱含型別提升的詳細資訊，請參閱[型別系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)。  
@@ -38,4 +38,5 @@ dividend / divisor
  [!code-csharp[DP EntityServices Concepts 2#DIVIDE](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#divide)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

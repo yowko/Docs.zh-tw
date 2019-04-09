@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
-ms.openlocfilehash: 640e8976b95b5228f1caa967c053ffd95d2553ac
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651600"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203934"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server 連接共用 (ADO.NET)
 連接到資料庫伺服器通常需要執行幾個很費時的步驟。 必須要建立實體頻道 (如通訊端或具名管道)，必須建立與伺服器的初始信號交換、必須剖析連接字串資訊、伺服器必須要驗證連接，以及必須檢查是否已在現行交易中登記等。  
@@ -19,7 +19,7 @@ ms.locfileid: "54651600"
   
  連接共用可減少開啟新連接的必要次數。 *共用器*維護實體連接的擁有權。 它藉由讓每個指定連接組態的作用中連接集保持運行狀態，來管理連接。 只要使用者針對連接呼叫 `Open`，共用器便會查看集區中是否有可用的連接。 如果共用的連接可用，則共用器會將其傳回至呼叫端，而不會開啟新的連接。 應用程式針對連接呼叫 `Close` 時，共用器會將其傳回至共用的作用中連接集，而不會真正關閉它。 連接一旦傳回至集區，便已備妥在下一次 `Open` 呼叫中重複使用。  
   
- 只能共用具有相同組態的連接。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 會同時保持數個集區，每個組態一個集區。 使用整合安全性時，會按連接字串及 Windows 識別將連接分成多個集區。 連接也會根據是否登記於交易中而進行共用。 當使用 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> 時，<xref:System.Data.SqlClient.SqlCredential> 執行個體會影響連線集區。 即使使用者 ID 和密碼相同，不同的 <xref:System.Data.SqlClient.SqlCredential> 執行個體仍將使用不同的連線集區。  
+ 只能共用具有相同組態的連接。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 在此同時，每個組態一個讓數個集區。 使用整合安全性時，會按連接字串及 Windows 識別將連接分成多個集區。 連接也會根據是否登記於交易中而進行共用。 當使用 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> 時，<xref:System.Data.SqlClient.SqlCredential> 執行個體會影響連線集區。 即使使用者 ID 和密碼相同，不同的 <xref:System.Data.SqlClient.SqlCredential> 執行個體仍將使用不同的連線集區。  
   
  共用連接可顯著提高應用程式的效能及延展性。 依預設，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的連接共用是啟用的。 除非您明確停用，否則在應用程式中開啟及關閉連接時，共用器會對連接進行最佳化。 您也可提供幾個連接字串修飾詞，以控制連接共用行為。 如需詳細資訊，請參閱本章稍後的＜使用連接字串關鍵字控制連接共用＞。  
   
@@ -80,7 +80,7 @@ using (SqlConnection connection = new SqlConnection(
  如果連接是與已消失的伺服器連接，即使連接共用器尚未偵測到已嚴重損毀的連接並將其標記為無效，此連接還是會從集區中建立。 這是因為檢查連接是否仍然有效的額外負荷抵銷了集區的優點，它導致了與伺服器之間的往返通訊。 發生此情況時，第一次嘗試使用該連接時將偵測到連接已嚴重損毀，並擲回例外狀況。  
   
 ## <a name="clearing-the-pool"></a>清除集區  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 引進兩種清除集區的新方法：<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> 和 <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>。 `ClearAllPools` 會清除指定提供者的連接集區， `ClearPool` 會清除與特定連接相關聯的連接集區。 如果呼叫時有正在使用中的連接，則會適當地標記它們。 而當連接關閉時，會捨棄它們，而不是將其傳回集區。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 導入了兩種清除集區的新方法：<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A>和<xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>。 `ClearAllPools` 清除指定提供者，連接集區和`ClearPool`清除與特定連接相關聯的連接集區。 如果呼叫時有正在使用中的連接，則會適當地標記它們。 而當連接關閉時，會捨棄它們，而不是將其傳回集區。  
   
 ## <a name="transaction-support"></a>異動支援  
  從集區中描繪連接，並根據交易內容進行指派。 除非已在連接字串中指定 `Enlist=false`，否則連接集區會確保將連接登記在 <xref:System.Transactions.Transaction.Current%2A>內容中。 連接關閉並傳回到具有已登記 `System.Transactions` 交易的集區時會先擱置。如果下一個要求發出時此連接是可用狀態，具有相同 `System.Transactions` 交易之連接集區就會傳回相同的連接。 如果這類要求發出，但沒有可用的共用連接，則會從集區的非交易部分建立連接並登記。 如果共用的連接可用，則共用器會將其傳回至呼叫端，而不會開啟新的連接。  
@@ -130,7 +130,8 @@ using (SqlConnection connection = new SqlConnection(
  建議您善加利用安全機制，以取代應用程式角色。 如需詳細資訊，請參閱 < [SQL Server 中建立應用程式角色](../../../../docs/framework/data/adonet/sql/creating-application-roles-in-sql-server.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [連接共用](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [效能計數器](../../../../docs/framework/data/adonet/performance-counters.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

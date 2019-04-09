@@ -1,18 +1,18 @@
 ---
-title: 逐步解說：在 WPF 中裝載 Direct3D9 內容
+title: 逐步解說：將 Direct3D9 內容裝載在 WPF 中
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Direct3D9 [WPF interoperability], hosting Direct3D9 content
 - WPF [WPF], hosting Direct3D9 content
 ms.assetid: 60983736-0ab5-42cc-8b16-e9fbde261a43
-ms.openlocfilehash: e588118e995694ea899b73d238e00f63e92feea4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 90d0c578c6797342c667f16afdb523b1b4ad6685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145908"
 ---
-# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：在 WPF 中裝載 Direct3D9 內容
+# <a name="walkthrough-hosting-direct3d9-content-in-wpf"></a>逐步解說：將 Direct3D9 內容裝載在 WPF 中
 本逐步解說示範如何裝載 Windows Presentation Foundation (WPF) 應用程式中的 Direct3D9 內容。  
   
  在這個逐步解說中，您將執行下列工作：  
@@ -72,5 +72,6 @@ ms.locfileid: "57352044"
      Direct3D9 內容會出現在 WPF 應用程式中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)

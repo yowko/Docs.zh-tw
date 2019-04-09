@@ -2,12 +2,12 @@
 title: <endToEndTracing>
 ms.date: 03/30/2017
 ms.assetid: 5034f5de-bb60-4157-9ad4-58aaade094e0
-ms.openlocfilehash: 1867e307ba004af821045e7d1b5775c470d8a3e8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 266b33e9b0386d0346a86ba8bd82cc65def4f0c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59180150"
 ---
 # <a name="endtoendtracing"></a>\<endToEndTracing>
 組態檔項目，此項目可讓您啟用與停用執行服務應用程式期間不同層面的端對端追蹤。  
@@ -49,6 +49,7 @@ ms.locfileid: "55266750"
 |[\<diagnostics>](../../../../../docs/framework/configure-apps/file-schema/wcf/diagnostics.md)|為系統管理員定義執行階段檢查和控制的 WCF 設定。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.DiagnosticSection>
 - <xref:System.ServiceModel.Diagnostics>
 - <xref:System.ServiceModel.Configuration.DiagnosticSection.EndToEndTracing%2A>

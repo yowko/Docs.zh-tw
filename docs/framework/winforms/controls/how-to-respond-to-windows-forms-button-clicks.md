@@ -1,5 +1,5 @@
 ---
-title: HOW TO：回應 Windows Form Button 按一下動作
+title: HOW TO：回應 Windows Forms 按鈕的按一下動作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
-ms.openlocfilehash: e6e6d041422a79171ec4b6159f0789b8aa6a50d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724982"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110067"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a>HOW TO：回應 Windows Form Button 按一下動作
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a>HOW TO：回應 Windows Forms 按鈕的按一下動作
 Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在按下按鈕時執行某些程式碼。  
   
  按一下 <xref:System.Windows.Forms.Button>控制項也會產生有多個其他事件，例如<xref:System.Windows.Forms.Control.MouseEnter>， <xref:System.Windows.Forms.Control.MouseDown>，和<xref:System.Windows.Forms.Control.MouseUp>事件。 如果您想要將這些相關事件的事件處理常式的連接，請確定其動作不會發生衝突。 比方說，如果按一下按鈕來清除文字方塊中輸入使用者的資訊，將滑鼠指標暫停按鈕應該不顯示工具提示，其中目前不存在的資訊。  
@@ -56,6 +56,7 @@ Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Button 控制項概觀](button-control-overview-windows-forms.md)
-- [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
+- [選取 Windows Form Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
 - [Button 控制項](button-control-windows-forms.md)

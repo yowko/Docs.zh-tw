@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing with tab stops
 - tabs [Windows Forms], drawn text
 ms.assetid: 64878f98-39ba-4303-b63f-0859ab682eeb
-ms.openlocfilehash: 76431d34504b40a299200693735a0a989127d683
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 68dbebfc4fab773fe749f9443d0c61883099d2ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832303"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197486"
 ---
 # <a name="how-to-set-tab-stops-in-drawn-text"></a>HOW TO：在繪製的文字中設定定位停駐點
 您可以藉由呼叫設定定位停駐點的文字<xref:System.Drawing.StringFormat.SetTabStops%2A>方法<xref:System.Drawing.StringFormat>物件，然後再傳遞<xref:System.Drawing.StringFormat>物件<xref:System.Drawing.Graphics.DrawString%2A>方法<xref:System.Drawing.Graphics>類別。  
@@ -38,5 +38,6 @@ ms.locfileid: "58832303"
 -   上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用字型和文字](using-fonts-and-text.md)
-- [如何：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
+- [HOW TO：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)

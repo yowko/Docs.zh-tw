@@ -2,12 +2,12 @@
 title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 59b56ce5b3be031a598c690976d5f9c23932fc66
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2d8041bf3efefa085e94636624e92abb573c1820
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59196914"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作 Windows Communication Foundation (WCF) 程式的清單架構發行訂閱模式。  
@@ -160,4 +160,3 @@ public class PriceChangeEventArgs : EventArgs
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DesignPatterns/ListBasedPublishSubscribe`  
-  

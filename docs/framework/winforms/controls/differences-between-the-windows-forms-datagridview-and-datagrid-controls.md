@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], DataGridView control compared
 - DataGridView control [Windows Forms], DataGrid control compared
 ms.assetid: d412c786-140e-4210-8a56-a68467530a55
-ms.openlocfilehash: b7d97431bfdbdafd5e87bfbfb9c5badd9ba273ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6802ef375d8d15826725e68f5065317192523178
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720484"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095668"
 ---
 # <a name="differences-between-the-windows-forms-datagridview-and-datagrid-controls"></a>Windows Form DataGridView 和 DataGrid 控制項之間的差異
 <xref:System.Windows.Forms.DataGridView>控制項是新的控制項，它會取代<xref:System.Windows.Forms.DataGrid>控制項。 <xref:System.Windows.Forms.DataGridView>控制項提供許多基本和進階功能中遺漏<xref:System.Windows.Forms.DataGrid>控制項。 此外，架構<xref:System.Windows.Forms.DataGridView>控制項讓它更容易擴充和自訂比<xref:System.Windows.Forms.DataGrid>控制項。  
@@ -33,17 +33,18 @@ ms.locfileid: "57720484"
  因為<xref:System.Windows.Forms.DataGridView>控制項的全新架構，沒有簡單的轉換路徑，可讓您使用<xref:System.Windows.Forms.DataGrid>使用自訂<xref:System.Windows.Forms.DataGridView>控制項。 許多<xref:System.Windows.Forms.DataGrid>自訂項目不需要使用<xref:System.Windows.Forms.DataGridView>控制，不過，因為新的控制項中的可用內建的功能。 如果您已建立的自訂資料行類型<xref:System.Windows.Forms.DataGrid>您想要使用的控制項<xref:System.Windows.Forms.DataGridView>控制項，您必須實作它們一次使用新的架構。 如需詳細資訊，請參閱 <<c0> [ 自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGrid>
 - <xref:System.Windows.Forms.BindingSource>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
 - [BindingSource 元件](bindingsource-component.md)
-- [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料格式](data-formatting-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料行排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的選取模式](selection-modes-in-the-windows-forms-datagridview-control.md)
-- [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料格式](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的調整大小選項](sizing-options-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料行排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的選取模式](selection-modes-in-the-windows-forms-datagridview-control.md)
+- [自訂 Windows Form DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)

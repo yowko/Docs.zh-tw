@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: 9a6869b84746081df7917aca32042002b8b044c5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097222"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>HOW TO：使用 XMLDataProvider 和 XPath 查詢繫結至 XML 資料
 此範例示範如何將繫結至[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]資料使用<xref:System.Windows.Data.XmlDataProvider>。  
@@ -38,11 +38,11 @@ ms.locfileid: "57371342"
   
 -   `XPath="Book[1]"` 會傳回第一個書籍元素 ("XML in Action")。 請注意，**XPath** 索引以 1 為起始，而非 0。  
   
--   `XPath="Book[@*]"` 會傳回所有具有屬性的書籍元素。  
+-   `XPath="Book[@*]"` 會傳回具有任何屬性的所有 book 項目。  
   
--   `XPath="Book[last()-1]"` 會傳回第二個至最後一個書籍元素 ("Introducing Microsoft .NET")。  
+-   `XPath="Book[last()-1]"` 會傳回第二個到最後一個書籍元素 ("Introducing Microsoft.NET")。  
   
--   `XPath="*[position()>3]"` 會傳回除前 3 個以外的所有書籍元素。  
+-   `XPath="*[position()>3]"` 會傳回所有 book 項目，除了第一個 3。  
   
  當您執行**XPath**查詢，它會傳回<xref:System.Xml.XmlNode>或 XmlNodes 的清單。 <xref:System.Xml.XmlNode> 已[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]物件，這表示您可以使用<xref:System.Windows.Data.Binding.Path%2A>屬性繫結至[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]屬性。 再看一次上一個範例。 如果此範例的其餘部分維持不變，而且您變更<xref:System.Windows.Controls.TextBlock>繫結至下列，您會看到在所傳回之 Xmlnode 的名稱<xref:System.Windows.Controls.ListBox>。 在這個案例中，所有傳回的節點名稱都將為 *Book*。  
   
@@ -59,9 +59,10 @@ ms.locfileid: "57371342"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Data.ObjectDataProvider>
 - [繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ](how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results.md)
 - [使用含階層式 XML 資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [繫結來源概觀](binding-sources-overview.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

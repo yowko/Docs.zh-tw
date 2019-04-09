@@ -6,18 +6,16 @@ helpviewer_keywords:
 - ListView controls [WPF], GridView view mode
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
-ms.openlocfilehash: 9457430ab61681ad154aba98d72850f19d30280d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59201295"
 ---
 # <a name="gridview-overview"></a>GridView 概觀
 <xref:System.Windows.Controls.GridView> 檢視模式是一種檢視模式的<xref:System.Windows.Controls.ListView>控制項。 <xref:System.Windows.Controls.GridView>類別和其支援的類別讓您和您的使用者可以檢視通常使用按鈕作為互動式資料行標頭的資料表中的集合項目。 本主題將介紹<xref:System.Windows.Controls.GridView>類別並概述其用法。  
-  
-  
-  
+
 <a name="DefiningaListViewthatusesGridViewView"></a>   
 ## <a name="what-is-a-gridview-view"></a>什麼是 GridView 檢視？  
  <xref:System.Windows.Controls.GridView>模式會顯示一份資料的項目所繫結至資料行的資料欄位，並顯示資料行標頭來識別欄位的檢視。 預設值<xref:System.Windows.Controls.GridView>樣式會將作為資料行標頭按鈕。 藉由使用資料行標頭按鈕，您可以實作重要的使用者互動功能;例如，使用者可以按一下資料行標頭來排序<xref:System.Windows.Controls.GridView>根據特定的資料行的內容資料。  
@@ -75,30 +73,30 @@ ms.locfileid: "58185437"
   
  下列清單的討論將更詳細的功能使用<xref:System.Windows.Controls.GridView>與使用者互動：  
   
--   **使用拖放方法來重新排列資料行。**  
+-   **使用拖放方法，重新排列資料行。**  
   
      使用者可以重新排列資料行中的<xref:System.Windows.Controls.GridView>資料行標頭上方時，請按下滑鼠左的按鈕，然後再將該資料行拖曳到新位置。 當使用者拖曳資料行標頭時，除了會顯示一條指出資料行插入位置的實心黑線之外，也會顯示該標頭的浮動版本。  
   
      如果您想要修改標頭的浮動版本的預設樣式，指定<xref:System.Windows.Controls.ControlTemplate>for<xref:System.Windows.Controls.GridViewColumnHeader>類型，它是時觸發<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>屬性設定為<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>。 如需詳細資訊，請參閱[為已拖曳的 GridView 資料行標頭建立樣式](how-to-create-a-style-for-a-dragged-gridview-column-header.md)。  
   
--   **依資料行內容調整資料行大小。**  
+-   **調整大小的資料行，其內容。**  
   
      使用者可以按兩下資料行標頭右邊的移駐夾，來依資料行內容調整資料行大小。  
   
     > [!NOTE]
     >  您可以設定<xref:System.Windows.Controls.GridViewColumn.Width%2A>屬性設`Double.NaN`產生相同的效果。  
   
--   **選取資料列項目。**  
+-   **選取的資料列的項目。**  
   
      使用者可以選取一或多個項目中的<xref:System.Windows.Controls.GridView>。  
   
      如果您想要變更<xref:System.Windows.Style>的 選取的項目，請參閱[樣式的 ListView 中的選取項目使用之觸發程序](how-to-use-triggers-to-style-selected-items-in-a-listview.md)。  
   
--   **捲動以檢視一開始在畫面上看不到的內容。**  
+-   **捲動到檢視一開始在螢幕上看不到的內容。**  
   
      如果大小<xref:System.Windows.Controls.GridView>不是大到足以顯示所有項目，使用者可以捲動水平或垂直藉由使用捲軸，這由提供<xref:System.Windows.Controls.ScrollViewer>控制項。 A<xref:System.Windows.Controls.Primitives.ScrollBar>會隱藏如果所有內容都會顯示在特定的方向。 資料行標頭不會以垂直捲軸捲動，但是會以水平方式捲動。  
   
--   **按一下資料行標頭按鈕來與資料行進行互動。**  
+-   **按一下資料行標頭按鈕互動的資料行。**  
   
      如果您已提供排序演算法，則當使用者按一下資料行標頭按鈕時，將可排序該資料行中顯示的資料。  
   
@@ -125,6 +123,7 @@ ms.locfileid: "58185437"
 -   <xref:System.Windows.Controls.GridViewColumnHeaderRole>  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.ListViewItem>
 - <xref:System.Windows.Controls.GridViewColumn>
@@ -134,4 +133,4 @@ ms.locfileid: "58185437"
 - <xref:System.Windows.Controls.ViewBase>
 - [ListView 概觀](listview-overview.md)
 - [在按一下標頭時排序 GridView 資料行](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [HOW-TO 主題](listview-how-to-topics.md)
+- [HOW TO 主題](listview-how-to-topics.md)

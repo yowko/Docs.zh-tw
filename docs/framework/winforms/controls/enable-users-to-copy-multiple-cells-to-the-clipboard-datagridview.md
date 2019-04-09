@@ -1,5 +1,5 @@
 ---
-title: HOW TO：讓使用者能夠將多個儲存格複製到剪貼簿中，從 Windows Form DataGridView 控制項
+title: HOW TO：讓使用者將 Windows Forms DataGridView 控制項的多個儲存格複製到剪貼簿
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], copying multiple cells
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
-ms.openlocfilehash: e0524b9e5b6f0d1a75df573a24a1f062219e3ff0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f7b6c37db0935dae703e9641b2c2605b2ec88126
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142229"
 ---
-# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>HOW TO：讓使用者能夠將多個儲存格複製到剪貼簿中，從 Windows Form DataGridView 控制項
+# <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>HOW TO：讓使用者將 Windows Forms DataGridView 控制項的多個儲存格複製到剪貼簿
 當您啟用儲存格複製時，會使其他應用程式可以透過 <xref:System.Windows.Forms.Clipboard> 輕易存取 <xref:System.Windows.Forms.DataGridView> 控制項中的資料。 選取之儲存格的值會轉換為字串，並加入剪貼簿，針對 [記事本] 和 Excel 等應用程式以 Tab 鍵分隔文字值貼入，而針對 Word 等應用程式以 HTML 格式資料表貼入。  
   
  您可以將儲存格複製設定為僅複製儲存格的值、包含剪貼簿資料中的資料列和資料行標頭文字，或僅在使用者選取整個資料列或資料行時包含標頭文字。  
@@ -45,7 +45,8 @@ ms.locfileid: "57725268"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A>
 - <xref:System.Windows.Forms.DataGridView.GetClipboardContent%2A>
-- [選取範圍和剪貼簿與 Windows Forms DataGridView 控制項搭配使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)
+- [選取範圍和剪貼簿與 Windows Form DataGridView 控制項搭配使用](selection-and-clipboard-use-with-the-windows-forms-datagridview-control.md)

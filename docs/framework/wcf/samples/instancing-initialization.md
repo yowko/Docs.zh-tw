@@ -2,12 +2,12 @@
 title: 執行個體初始化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
-ms.openlocfilehash: ec44276d56b0a914c742a5a709f2207f8111e57b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 553272c9059b41eac7d8807ef7a283edbfb8f791
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142372"
 ---
 # <a name="instancing-initialization"></a>執行個體初始化
 這個範例會延續[Pooling](../../../../docs/framework/wcf/samples/pooling.md)範例藉由定義介面， `IObjectControl`，其中藉由啟動和停用自訂物件的初始化。 用戶端會叫用將物件傳回集區的方法，以及不將物件傳回集區的方法。  
@@ -23,9 +23,9 @@ ms.locfileid: "58827909"
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
  在 WCF 中，EndpointDispatcher 會建立服務類別的執行個體所使用的執行個體提供者可實作<xref:System.ServiceModel.Dispatcher.IInstanceProvider>介面。 這個介面只有兩個方法：  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>：當訊息抵達時，發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>方法用來建立服務類別，來處理訊息的執行個體。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，則會建立服務類別的執行個體來處理送達的每個訊息，這表示只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>:當訊息抵達時，發送器會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>方法用來建立服務類別，來處理訊息的執行個體。 呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。 例如，如果 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType>，則會建立服務類別的執行個體來處理送達的每個訊息，這表示只要訊息一送達就會呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>：當服務執行個體完成處理訊息時，endpointdispatcher 就會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>方法。 如同 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。  
+-   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>:當服務執行個體完成處理訊息時，endpointdispatcher 就會呼叫<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>方法。 如同 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法，呼叫此方法的頻率是由 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性決定。  
   
 ## <a name="the-object-pool"></a>物件集區  
  `ObjectPoolInstanceProvider` 類別包含物件集區 (Object Pool) 的實作。 這個類別會實作 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 介面，以便與服務模型層互動。 當 EndpointDispatcher 呼叫 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> 方法而不是建立新執行個體時，自訂實作會在記憶體中集區尋找現有的物件。 如果找到了，就會將物件傳回。 否則，`ObjectPoolInstanceProvider` 會檢查 `ActiveObjectsCount` 屬性 (從集區傳回的物件數目) 是否已達到集區的大小上限。 如果未達到，則會建立新執行個體並傳回至呼叫者，接著 `ActiveObjectsCount` 就會遞增。 否則，物件建立要求會在預先設定的期間內加入佇列。 下列範例程式碼會示範 `GetObjectFromThePool` 實作。  
@@ -154,11 +154,11 @@ if (activeObjectsCount == 0)
   
  這個範例會使用自訂屬性。 建構 <xref:System.ServiceModel.ServiceHost> 時，會檢查服務型別定義中使用的屬性，並將可用的行為加入至服務描述的行為集合。  
   
- <xref:System.ServiceModel.Description.IServiceBehavior>介面有三個方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 WCF 會呼叫這些方法時<xref:System.ServiceModel.ServiceHost>正在初始化。 首先會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType>，這個方法允許檢查服務有無不一致之處。 接著會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType>，這個方法只有在非常進階的狀況中才需要使用。 最後會呼叫 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>，這個方法負責設定執行階段。 下列參數會傳遞至 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
+ <xref:System.ServiceModel.Description.IServiceBehavior>介面有三個方法： <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A>`,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A>`,`和<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>。 WCF 會呼叫這些方法時<xref:System.ServiceModel.ServiceHost>正在初始化。 <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> 首先，呼叫它允許檢查服務有無不一致之處。 <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> 接下來，呼叫這個方法只有在非常進階的案例中執行。 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> 最後的呼叫，而且會負責設定執行階段。 下列參數會傳遞至 <xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType>：  
   
--   `Description`：這個參數提供整個服務的服務描述。 可以用來檢查有關服務端點、合約、繫結程序以及與服務相關聯之其他資料的描述資料。  
+-   `Description`:這個參數提供整個服務的服務描述。 可以用來檢查有關服務端點、合約、繫結程序以及與服務相關聯之其他資料的描述資料。  
   
--   `ServiceHostBase`：這個參數提供<xref:System.ServiceModel.ServiceHostBase>，目前正在初始化。  
+-   `ServiceHostBase`:這個參數提供<xref:System.ServiceModel.ServiceHostBase>，目前正在初始化。  
   
  在自訂 <xref:System.ServiceModel.Description.IServiceBehavior> 實作中，會為 `ObjectPoolInstanceProvider` 產生新的執行個體，並將新執行個體指派至附加到 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 之每個 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 中的 <xref:System.ServiceModel.ServiceHostBase> 屬性。  
   
@@ -203,7 +203,7 @@ public class PoolService : IPoolService
 ## <a name="hooking-activation-and-deactivation"></a>攔截啟動與停用  
  物件共用的主要目標是，最佳化存留較短且建立和初始化時較會耗費資源的物件。 因此，好好利用的話，可以大幅提高應用程式的效能。 由於物件是從集區傳回，因此只能呼叫建構函式一次。 不過，有些應用程式會需要某些層級的控制權，以便初始化及清除單一內容期間使用的資源。 例如，用於一組計算的物件可以在處理下個計算之前，先重設私用欄位。 Enterprise Services 藉由讓物件開發人員覆寫來自 `Activate` 基底類別的 `Deactivate` 和 <xref:System.EnterpriseServices.ServicedComponent> 方法，啟用了這種特定內容的初始化。  
   
- 物件集區會在從集區傳回物件之前，呼叫 `Activate` 方法。 當物件傳回集區時，會呼叫 `Deactivate`。 <xref:System.EnterpriseServices.ServicedComponent> 基底類別也有名為 `boolean` 的 `CanBePooled` 屬性，可以用來通知集區是否能進一步共用物件。  
+ 物件集區會在從集區傳回物件之前，呼叫 `Activate` 方法。 `Deactivate` 物件傳回集區時呼叫。 <xref:System.EnterpriseServices.ServicedComponent> 基底類別也有名為 `boolean` 的 `CanBePooled` 屬性，可以用來通知集區是否能進一步共用物件。  
   
  為了模擬此功能，範例會宣告具有上述成員的公用介面 (`IObjectControl`)。 接著，服務類別會實作這個介面，以提供內容特定的初始化。 <xref:System.ServiceModel.Dispatcher.IInstanceProvider> 實作必須經過修改，才能符合這些需求。 現在，每當您取得的物件呼叫`GetInstance`方法，您必須檢查物件是否實作`IObjectControl.`若是如此，您必須呼叫`Activate`方法適當地。  
   
@@ -264,4 +264,3 @@ else if (pool.Count < minPoolSize)
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Initialization`  
-  

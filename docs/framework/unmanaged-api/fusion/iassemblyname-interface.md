@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 22276e543e8eeb9c6cf9aeee7a9af92c503d3a7d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0d8d59ef282818dd9852d0ff8d2ec2abd40986d0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097131"
 ---
 # <a name="iassemblyname-interface"></a>IAssemblyName 介面
 提供方法來描述和使用組件的唯一身分識別。  
@@ -44,8 +44,9 @@ ms.locfileid: "54549011"
   
  **標頭：** Fusion.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IAssemblyEnum 介面](../../../../docs/framework/unmanaged-api/fusion/iassemblyenum-interface.md)

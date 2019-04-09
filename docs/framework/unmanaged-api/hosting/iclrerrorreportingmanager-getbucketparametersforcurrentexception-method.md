@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3877f00a22c43ef5f22974b621b32b78ce15d795
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3cb2a8d2a4e089d16b6c2129c165a9d8b6828f3f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141724"
 ---
 # <a name="iclrerrorreportingmanagergetbucketparametersforcurrentexception-method"></a>ICLRErrorReportingManager::GetBucketParametersForCurrentException 方法
 取得目前的例外狀況，在呼叫執行緒上的 Watson 值區。  
@@ -46,9 +46,10 @@ HRESULT GetBucketParametersForCurrentException(
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRErrorReportingManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b1c5132be72cfd9f70d3a81297425109f636195
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c153e6ae8558eeab2efa99765405fb7c84632b01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623752"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110028"
 ---
 # <a name="ihosttaskalert-method"></a>IHostTask::Alert 方法
 要求主機喚醒表示由目前的工作[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體，因此可以中止的工作。  
@@ -55,11 +55,12 @@ HRESULT Alert ();
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5da300e2-74c0-4d13-9202-fc20ed8212d8
-ms.openlocfilehash: e5a48c5caf9239e0e7b7f2e7a3ad8ab5df168ba1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 72af4b049153ce647cc1ceb2d40c3b17cc7ed988
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54684186"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206547"
 ---
 # <a name="finding-rows"></a>尋找資料列
 您可以使用 <xref:System.Data.DataView.Find%2A> 的 <xref:System.Data.DataView.FindRows%2A> 和 <xref:System.Data.DataView> 方法，依照資料列的排序索引鍵值來搜尋資料列。 中值的搜尋區分大小寫**尋找**並**FindRows**取決於方法**CaseSensitive**基礎屬性<xref:System.Data.DataTable>。 搜尋值必須完全符合現有的排序索引鍵值，才能傳回結果。  
@@ -94,7 +94,8 @@ else
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e5c382b3841aa0d36e7b326da27be4b371c9a51c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bbba208296dd2099c9da58c81ff66fddc78fdc86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474772"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59093810"
 ---
 # <a name="corbindtoruntimebycfg-function"></a>CorBindToRuntimeByCfg 函式
 載入處理序的 common language runtime (CLR) 使用的讀取 XML 檔案的版本資訊。  
@@ -43,10 +43,10 @@ HRESULT CorBindToRuntimeByCfg (
   
 ## <a name="parameters"></a>參數  
  `pCfgStream`  
- [in]指標`IStream`讀取 XML 檔案的物件。  
+ [in]A pointer to an `IStream` object that reads the XML file.  
   
  `reserved`  
- [in]保留供日後使用。 使用 0 （零） 做為值。  
+ [in]Reserved for future use. 使用 0 （零） 做為值。  
   
  `startupFlags`  
  [in]值為[STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列舉，指定 CLR 的啟動行為。  
@@ -68,11 +68,12 @@ HRESULT CorBindToRuntimeByCfg (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** MSCorEE.dll  
+ **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CorBindToCurrentRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtocurrentruntime-function.md)
 - [CorBindToRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
 - [CorBindToRuntimeEx 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)

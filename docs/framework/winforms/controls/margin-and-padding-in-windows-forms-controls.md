@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Forms, layout
 - Margin property [Windows Forms]
 ms.assetid: 3781b5a1-3085-4072-bed0-44670c23ffdc
-ms.openlocfilehash: 60c808138436b947ef78b61863fc353b731b4a8f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: bf1f88f6efcedd740bff92dda391470391f16ce5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702811"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094044"
 ---
 # <a name="margin-and-padding-in-windows-forms-controls"></a>Windows Form 控制項的邊界和邊框距離
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間提供您許多版面配置功能來完成這項作業。 最重要的兩項是 <xref:System.Windows.Forms.Control.Margin%2A> 和 <xref:System.Windows.Forms.Control.Padding%2A> 屬性。  
@@ -28,6 +28,7 @@ ms.locfileid: "57702811"
  Visual Studio 中有針對此功能提供的設計階段支援。 另請參閱[逐步解說：配置 Windows Form 控制項與邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Control.AutoSize%2A>
 - <xref:System.Windows.Forms.Control.Margin%2A>
 - <xref:System.Windows.Forms.Control.Padding%2A>

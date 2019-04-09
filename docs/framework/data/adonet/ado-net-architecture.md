@@ -2,12 +2,12 @@
 title: ADO.NET 架構
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2af1d6339b17871d56b949d845534479380c46ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202634"
 ---
 # <a name="adonet-architecture"></a>ADO.NET 架構
 傳統的資料處理主要是依賴相互連接的雙層式模型。 隨著資料處理朝多層式架構發展，程式設計人員也逐漸改用中斷連接的方式，使應用程式更具延展性 (Scalability)。  
@@ -40,7 +40,7 @@ ADO.NET 架構
  如果您不需要 `DataSet` 所提供的功能，則可採用 `DataReader` 以順向、唯讀的方式來傳回資料，藉以提升應用程式的效能。 雖然`DataAdapter`會使用`DataReader`來填滿的內容`DataSet`(請參閱[從 DataAdapter 填入 DataSet](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md))，使用`DataReader`，可以提升效能，因為您將節省記憶體會由`DataSet`，並避免所需建立和填入的內容處理`DataSet`。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- LINQ to DataSet 會針對在 DataSet 物件中快取的資料提供查詢功能和編譯階段型別檢查。 它可讓您使用其中一種 .NET Framework 開發語言 (例如 C# 或 Visual Basic) 來撰寫查詢。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
+ LINQ to DataSet 會針對在 DataSet 物件中快取的資料提供查詢功能和編譯時間型別檢查。 它可讓您使用其中一種 .NET Framework 開發語言 (例如 C# 或 Visual Basic) 來撰寫查詢。 如需詳細資訊，請參閱 [LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)。  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  LINQ to SQL 可針對對應到關聯式資料庫資料結構的物件模型進行查詢，而不必使用中繼的概念模型。 每個資料表都是由個別的類別表示，將物件模型與關聯式資料庫結構描述緊密結合。 LINQ to SQL 會將物件模型中的 Language-Integrated Query 轉譯成 Transact-SQL，然後將其傳送至資料庫進行執行。 當資料庫傳回結果時，LINQ to SQL 會將結果轉譯回物件。 如需詳細資訊，請參閱 [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)。  
@@ -49,13 +49,14 @@ ADO.NET 架構
  ADO.NET Entity Framework 的設計目標是要讓開發人員針對概念應用程式模型進行程式設計來建立資料存取應用程式，而不用直接對關聯式儲存結構描述進行程式設計。 其目的是要減少資料導向應用程式所需程式碼和維護的工作量。 如需詳細資訊，請參閱 < [ADO.NET Entity Framework](../../../../docs/framework/data/adonet/ef/index.md)。  
   
 ## <a name="wcf-data-services"></a>WCF 資料服務  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 是用於在 Web 或內部網路上部署資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用來部署 Web 或內部網路上的資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="xml-and-adonet"></a>XML 和 ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 會利用 XML 的功能，以中斷連接的方式存取資料。 在 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中，已將 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 XML 類別設計得相當緊密，因為這兩者都是同一個架構上的元件。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 會利用 XML 的功能，以提供已中斷連線的存取權的資料。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 已設計的手中-庫存中的 XML 類別與[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]; 兩者都是單一架構的元件。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 中的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 和 XML 類別的交集在於 `DataSet` 物件。 `DataSet` 可以填入 XML 來源的資料，無論它是檔案或 XML 資料流都一樣。 不管 `DataSet` 的資料來源為何，`DataSet` 都可組合成與全球資訊網協會 (W3C) 相容的 XML，而且包含其結構描述當做 XML 結構描述定義語言 (XSD) 結構描述。 由於 `DataSet` 的原生序列化格式是 XML，所以相當適合當做在各層之間移動資料的媒體，如此當需要在遠端對 XML Web Service 來回傳送資料和結構描述內容時，`DataSet` 將會是最佳選擇。 如需詳細資訊，請參閱 [XML 文件和資料](../../../../docs/standard/data/xml/index.md)。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 和中的 XML 類別[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]交集在於`DataSet`物件。 `DataSet` 可以填入 XML 來源的資料，無論它是檔案或 XML 資料流都一樣。 不管 `DataSet` 的資料來源為何，`DataSet` 都可組合成與全球資訊網協會 (W3C) 相容的 XML，而且包含其結構描述當做 XML 結構描述定義語言 (XSD) 結構描述。 由於 `DataSet` 的原生序列化格式是 XML，所以相當適合當做在各層之間移動資料的媒體，如此當需要在遠端對 XML Web Service 來回傳送資料和結構描述內容時，`DataSet` 將會是最佳選擇。 如需詳細資訊，請參閱 [XML 文件和資料](../../../../docs/standard/data/xml/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

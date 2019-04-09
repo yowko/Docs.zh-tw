@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
-ms.openlocfilehash: e8270fc181779950222b21fd196a1a1a6226e2b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142450"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF 資料服務使用者入門
 在本節中的主題可協助您快速了解[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]以及如何使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]來公開及取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要說明基礎技術。 本節包括概念性內容及[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)教學課程。  
@@ -17,7 +17,7 @@ ms.locfileid: "54597240"
 ## <a name="in-this-section"></a>本節內容  
  下列主題將描述如何使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 來建立資料服務。  
   
- [將資料當作服務公開](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
+ [將資料公開為服務](../../../../docs/framework/data/wcf/exposing-your-data-as-a-service-wcf-data-services.md)  
  描述使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 建立資料服務所需的步驟。  
   
  [存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)  
@@ -29,7 +29,7 @@ ms.locfileid: "54597240"
  [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)  
  示範如何建立及存取簡單[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-架構會公開摘要，根據 Northwind 範例資料庫的服務。  
   
- [應用程式案例](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
+ [應用程式情節](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
  強調 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 所支援的一組核心 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 案例。  
   
  [資源](../../../../docs/framework/data/wcf/wcf-data-services-resources.md)  
@@ -41,4 +41,5 @@ ms.locfileid: "54597240"
  [快速入門](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [OData SDK](https://go.microsoft.com/fwlink/?LinkID=185248)

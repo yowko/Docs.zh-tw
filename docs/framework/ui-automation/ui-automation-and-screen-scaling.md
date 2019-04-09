@@ -10,18 +10,18 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 4b2988314afbe501623fd050a989876842f68601
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8c2477e5e7086e1bbfaab1e4b116c9e6bb4e2d30
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674532"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194056"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI 自動化和畫面縮放比例
 > [!NOTE]
 >  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 可讓使用者變更 [!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)] 設定，以便讓畫面上大部分的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 項目看起來較大。 雖然在 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中早已經提供這項功能，但在舊版中，縮放比例必須由應用程式實作。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面視窗管理員會針對所有不處理其本身縮放比例的應用程式執行預設的縮放功能。 使用者介面自動化用戶端應用程式必須將這項功能納入考量。  
+ [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] 可讓使用者變更[!INCLUDE[TLA#tla_dpi](../../../includes/tlasharptla-dpi-md.md)]設定因此大部分[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]在螢幕上的項目看起來更大。 雖然在 [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)]中早已經提供這項功能，但在舊版中，縮放比例必須由應用程式實作。 在 [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)]中，桌面視窗管理員會針對所有不處理其本身縮放比例的應用程式執行預設的縮放功能。 使用者介面自動化用戶端應用程式必須將這項功能納入考量。  
   
 <a name="Scaling_in_Windows_Vista"></a>   
 ## <a name="scaling-in-windows-vista"></a>Windows Vista 中的縮放比例  
@@ -76,4 +76,5 @@ ms.locfileid: "57674532"
  如果您的應用程式與非 [!INCLUDE[TLA2#tla_dpi](../../../includes/tla2sharptla-dpi-md.md)]感知的應用程式執行直接跨處理序通訊，您可能必須使用 [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 函式 `PhysicalToLogicalPoint` 和 `LogicalToPhysicalPoint`，在邏輯與實體座標之間轉換。  
   
 ## <a name="see-also"></a>另請參閱
-- [Highlighter Sample](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)
+
+- [螢光筆範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/Highlighter)

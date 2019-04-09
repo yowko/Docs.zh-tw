@@ -2,12 +2,12 @@
 title: <policyImporter>
 ms.date: 03/30/2017
 ms.assetid: b0d03456-546f-44bb-ab12-1b2ce7f98fca
-ms.openlocfilehash: ab9193d5974ccffcbfa3e741ac4d32ff357ed372
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 81f38d2a163163ca7255ca546bbddbbb58fa3a1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59094173"
 ---
 # <a name="policyimporter"></a>\<policyImporter>
 指定原則匯入工具，此工具會控制匯入有關繫結的自訂原則判斷提示 (Assertion)。  
@@ -38,7 +38,7 @@ ms.locfileid: "55269233"
 |`type`|此項目的型別。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -50,6 +50,7 @@ ms.locfileid: "55269233"
  原則匯入工具是用來搜尋有關繫結功能的自訂原則判斷提示，以及附加可實作判斷提示所需要功能的自訂繫結項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.PolicyImporterElementCollection>
 - <xref:System.ServiceModel.Configuration.PolicyImporterElement>
 - <xref:System.ServiceModel.Configuration.MetadataElement>

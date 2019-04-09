@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c9c3d92-f0de-4d4d-87f1-0c702a4808af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea60ecd542300bf3833c4977b7f0910399a2e409
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5b787302902779695c48df6e02e2ee00b28f44cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504024"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142463"
 ---
 # <a name="icordebugsymbolprovider2-interface"></a>ICorDebugSymbolProvider2 介面
 以邏輯方式擴充[ICorDebugSymbolProvider](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)來擷取其他偵錯符號資訊的介面。  
@@ -29,13 +29,14 @@ ms.locfileid: "54504024"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

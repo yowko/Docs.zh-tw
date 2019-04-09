@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 872f5a9eaa17a777cfbb14fea34cc80e0b7c04ad
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: b23e1d26d62012efe338eeb179db0e7ee17cd658
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110465"
 ---
 # <a name="imetadatatablesgetnextguid-method"></a>IMetaDataTables::GetNextGuid 方法
 取得目前的資料表資料行中的下一個 GUID 值的索引。  
@@ -51,10 +51,11 @@ HRESULT GetNextGuid (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataTables 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables-interface.md)
 - [IMetaDataTables2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatatables2-interface.md)

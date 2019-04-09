@@ -3,12 +3,12 @@ title: <workflowUnhandledException>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 57adeab5-f06a-44b2-916b-0e177cf0f4a6
-ms.openlocfilehash: caf5be7aaff0df436be3a1d618a9f89bb32e6bb7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: cfe3350ac42d1e0e837b79f25753f62dc2051dd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254843"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096247"
 ---
 # <a name="workflowunhandledexception"></a>\<workflowUnhandledException>
 這個服務行為可讓您指定工作流程服務內發生未處理的例外狀況時要採取的動作。  
@@ -38,7 +38,7 @@ ms.locfileid: "55254843"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|action|字串，可指定發生未處理的例外狀況時要採取的動作。 此屬性的型別為 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>。|  
+|action|字串，可指定發生未處理的例外狀況時要採取的動作。 此屬性是類型 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction>|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -50,5 +50,6 @@ ms.locfileid: "55254843"
 |[\<行為 > 的\<v >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/behavior-of-servicebehaviors-of-workflow.md)|指定行為項目。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.WorkflowUnhandledExceptionElement>

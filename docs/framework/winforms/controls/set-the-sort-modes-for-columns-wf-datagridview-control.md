@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Windows Form DataGridView 控制項中的資料行排序模式
+title: HOW TO：設定 Windows Forms DataGridView 控制項的資料行排序模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
-ms.openlocfilehash: a0ef450559a1106de635c6d3b16891c23c41b050
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725047"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096364"
 ---
-# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Form DataGridView 控制項中的資料行排序模式
+# <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Forms DataGridView 控制項的資料行排序模式
 在 <xref:System.Windows.Forms.DataGridView>自動排序依預設，而其他資料行類型不會自動排序控制項中，文字方塊資料行使用。 有時候您會想要覆寫這些預設值。 例如，您可以顯示影像取代文字、 數字或列舉型別資料格的值。 雖然映像無法進行排序，就可以排序它們所代表的基礎值。  
   
  在 <xref:System.Windows.Forms.DataGridView>控制項，<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>資料行的屬性值會決定其排序行為。  
@@ -35,12 +35,12 @@ ms.locfileid: "57725047"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項 ，包含名為 `Priority` 的資料行。  
   
--   
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - [在 Windows Forms DataGridView 控制項中排序資料](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料行排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)
-- [如何：自訂 Windows Form DataGridView 控制項中排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料行排序模式](column-sort-modes-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：自訂 Windows Forms DataGridView 控制項中的排序](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

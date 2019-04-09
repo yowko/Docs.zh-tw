@@ -13,12 +13,12 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - encoding PNG images [WPF]
 ms.assetid: 3d31d186-af73-47f0-b5a7-c26ae46409a6
-ms.openlocfilehash: 132ccc2fca4b1b3984c88f1e75d3fd1934d8bf24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 46d4a7ffbfe7a6a620c26447cce30f3a0bd35adc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358089"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090846"
 ---
 # <a name="how-to-encode-and-decode-a-png-image"></a>HOW TO：編碼和解碼 PNG 影像
 下列範例示範如何編碼和解碼[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]映像使用特定<xref:System.Windows.Media.Imaging.PngBitmapDecoder>和<xref:System.Windows.Media.Imaging.PngBitmapEncoder>物件。  
@@ -38,4 +38,5 @@ ms.locfileid: "57358089"
  [!code-vb[PngBitmapDecoderEncoder#4](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PngBitmapDecoderEncoder/VB/PngEncoderDecoder.vb#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [影像處理概觀](imaging-overview.md)
