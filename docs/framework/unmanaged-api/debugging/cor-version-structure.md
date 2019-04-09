@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e07487f536454d9d2dcfff15eb871124112d250e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00e58d83c19c3cb6a2e1eb38942500d7f5dc5cf9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634939"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118920"
 ---
-# <a name="corversion-structure"></a><span data-ttu-id="19d87-102">COR_VERSION 結構</span><span class="sxs-lookup"><span data-stu-id="19d87-102">COR_VERSION Structure</span></span>
-<span data-ttu-id="19d87-103">儲存通用語言執行平台的標準四部分版本號碼。</span><span class="sxs-lookup"><span data-stu-id="19d87-103">Stores the standard four-part version number of the common language runtime.</span></span>  
+# <a name="corversion-structure"></a><span data-ttu-id="a45d6-102">COR_VERSION 結構</span><span class="sxs-lookup"><span data-stu-id="a45d6-102">COR_VERSION Structure</span></span>
+<span data-ttu-id="a45d6-103">儲存通用語言執行平台的標準四部分版本號碼。</span><span class="sxs-lookup"><span data-stu-id="a45d6-103">Stores the standard four-part version number of the common language runtime.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="19d87-104">語法</span><span class="sxs-lookup"><span data-stu-id="19d87-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a45d6-104">語法</span><span class="sxs-lookup"><span data-stu-id="a45d6-104">Syntax</span></span>  
   
 ```  
 typedef struct _COR_VERSION {  
@@ -37,27 +37,28 @@ typedef struct _COR_VERSION {
 } COR_VERSION;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="19d87-105">成員</span><span class="sxs-lookup"><span data-stu-id="19d87-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="a45d6-105">成員</span><span class="sxs-lookup"><span data-stu-id="a45d6-105">Members</span></span>  
   
-|<span data-ttu-id="19d87-106">成員</span><span class="sxs-lookup"><span data-stu-id="19d87-106">Member</span></span>|<span data-ttu-id="19d87-107">描述</span><span class="sxs-lookup"><span data-stu-id="19d87-107">Description</span></span>|  
+|<span data-ttu-id="a45d6-106">成員</span><span class="sxs-lookup"><span data-stu-id="a45d6-106">Member</span></span>|<span data-ttu-id="a45d6-107">描述</span><span class="sxs-lookup"><span data-stu-id="a45d6-107">Description</span></span>|  
 |------------|-----------------|  
-|`dwMajor`|<span data-ttu-id="19d87-108">主要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="19d87-108">The major version number.</span></span>|  
-|`dwMinor`|<span data-ttu-id="19d87-109">次要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="19d87-109">The minor version number.</span></span>|  
-|`dwBuild`|<span data-ttu-id="19d87-110">組建編號。</span><span class="sxs-lookup"><span data-stu-id="19d87-110">The build number.</span></span>|  
-|`dwSubBuild`|<span data-ttu-id="19d87-111">子組建編號。</span><span class="sxs-lookup"><span data-stu-id="19d87-111">The sub-build number.</span></span>|  
+|`dwMajor`|<span data-ttu-id="a45d6-108">主要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="a45d6-108">The major version number.</span></span>|  
+|`dwMinor`|<span data-ttu-id="a45d6-109">次要版本號碼。</span><span class="sxs-lookup"><span data-stu-id="a45d6-109">The minor version number.</span></span>|  
+|`dwBuild`|<span data-ttu-id="a45d6-110">組建編號。</span><span class="sxs-lookup"><span data-stu-id="a45d6-110">The build number.</span></span>|  
+|`dwSubBuild`|<span data-ttu-id="a45d6-111">子組建編號。</span><span class="sxs-lookup"><span data-stu-id="a45d6-111">The sub-build number.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="19d87-112">備註</span><span class="sxs-lookup"><span data-stu-id="19d87-112">Remarks</span></span>  
- <span data-ttu-id="19d87-113">如果版本號碼是 1.0.3705.288，1 是主要版本號碼、 0 是次要版本號碼、 3705 是組建編號，和 288 為子組建編號。</span><span class="sxs-lookup"><span data-stu-id="19d87-113">If the version number is 1.0.3705.288, 1 is the major version number, 0 is the minor version number, 3705 is the build number, and 288 is the sub-build number.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a45d6-112">備註</span><span class="sxs-lookup"><span data-stu-id="a45d6-112">Remarks</span></span>  
+ <span data-ttu-id="a45d6-113">如果版本號碼是 1.0.3705.288，1 是主要版本號碼、 0 是次要版本號碼、 3705 是組建編號，和 288 為子組建編號。</span><span class="sxs-lookup"><span data-stu-id="a45d6-113">If the version number is 1.0.3705.288, 1 is the major version number, 0 is the minor version number, 3705 is the build number, and 288 is the sub-build number.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="19d87-114">需求</span><span class="sxs-lookup"><span data-stu-id="19d87-114">Requirements</span></span>  
- <span data-ttu-id="19d87-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="19d87-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="a45d6-114">需求</span><span class="sxs-lookup"><span data-stu-id="a45d6-114">Requirements</span></span>  
+ <span data-ttu-id="a45d6-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="a45d6-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="19d87-116">**標頭：** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="19d87-116">**Header:** CorDebug.idl</span></span>  
+ <span data-ttu-id="a45d6-116">**標頭：** CorDebug.idl</span><span class="sxs-lookup"><span data-stu-id="a45d6-116">**Header:** CorDebug.idl</span></span>  
   
- <span data-ttu-id="19d87-117">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="19d87-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="a45d6-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="a45d6-117">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="19d87-118">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="19d87-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="a45d6-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="a45d6-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="19d87-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="19d87-119">See also</span></span>
-- [<span data-ttu-id="19d87-120">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="19d87-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
-- [<span data-ttu-id="19d87-121">偵錯</span><span class="sxs-lookup"><span data-stu-id="19d87-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="a45d6-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a45d6-119">See also</span></span>
+
+- [<span data-ttu-id="a45d6-120">偵錯結構</span><span class="sxs-lookup"><span data-stu-id="a45d6-120">Debugging Structures</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
+- [<span data-ttu-id="a45d6-121">偵錯</span><span class="sxs-lookup"><span data-stu-id="a45d6-121">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
