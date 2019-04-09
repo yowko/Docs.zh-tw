@@ -19,18 +19,16 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: cc5e60b1a8059e58ce6d23801eb51d8b2eb414d6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379233"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102826"
 ---
 # <a name="xaml-overview-wpf"></a>XAML 概觀 (WPF)
 本主題說明 XAML 語言的功能，並示範如何使用 XAML 撰寫 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式。 本主題特別針對以 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作的 XAML 進行描述。 就語言概念而言，XAML 本身涵蓋的範圍比 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 還要廣。  
-  
-  
-  
+
 <a name="what_is_xaml"></a>   
 ## <a name="what-is-xaml"></a>何謂 XAML？  
  XAML 是一種宣告式的標記語言。 當套用至.NET Framework 程式設計模型，XAML 可簡化建立[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)].NET Framework 應用程式。 您可以在宣告式 XAML 標記中建立可見的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，然後藉由使用程式碼後置的檔案 (已透過部分類別定義而聯結至該標記)，區隔 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 定義和執行階段邏輯。 XAML 會以組件中定義的一組支援型別，直接表示物件的執行個體化。 這一點有別於其他大部分的標記語言，通常大部分的標記語言是與支援型別系統沒有此種直接關連的直譯式語言。 XAML 會啟用工作流程，其中個別獨立的人員因而能夠使用不同的工具，操作應用程式的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與邏輯。  
@@ -205,14 +203,14 @@ ms.locfileid: "57379233"
   
  使用 `xmlns` 定義命名空間使用和對應的範圍，與 XML 1.0 規格是一致的。 XAML 命名空間與 XML 命名空間唯一的差異在於，XAML 命名空間也帶有其他意涵，指出當涉及型別解析和剖析 XAML 時，型別會如何支援名稱範圍的元素。  
   
- 請注意，每個 XAML 檔案的根元素才必須要有 `xmlns` 屬性。 `xmlns` 定義會套用至根元素的所有子元素上 (這個行為再度與 `xmlns` 的 XML 1.0 規格一致)。`xmlns` 屬性也可以用在根元素底下的其他元素上，而且應該套用至定義元素下的任何子元素。 然而，過於頻繁地定義或重新定義 XAML 命名空間會造成 XAML 標記樣式難以閱讀。  
+ 請注意，每個 XAML 檔案的根元素才必須要有 `xmlns` 屬性。 `xmlns` 定義會套用至根項目的所有子代項目 (這個行為也與 XML 1.0 規格一致`xmlns`。)`xmlns`屬性也允許在根目錄底下的其他項目，而且應該套用至任何子系的項目定義的項目。 然而，過於頻繁地定義或重新定義 XAML 命名空間會造成 XAML 標記樣式難以閱讀。  
   
  其 XAML 處理器的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 實作包含能夠辨認 WPF 核心組件的基礎結構。 廣為人知的一點是，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 核心組件包含支援將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 對應至預設 XAML 命名空間的型別。 這項功能可以透過屬於專案組建檔以及 WPF 組建與專案系統的組態進行啟用。 因此，必須將預設的 XAML 命名空間宣告為預設的 `xmlns`，才能夠參考來自 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 組件的 XAML 元素。  
   
 ### <a name="the-x-prefix"></a>X： 前置詞  
  在先前的根元素範例中，前置詞 `x:` 會用於對應 XAML 命名空間 [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)]，它是支援 XAML 語言建構的專屬 XAML 命名空間。 這個 `x:` 前置詞會用於對應範例中專案範本的這個 XAML 命名空間，同時整份 [!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] 說明文件中也會使用這個前置詞。 XAML 語言的 XAML 命名空間包含數種您在 XAML 中會經常使用的程式設計建構。 下列清單是您最常使用的 `x:` 前置詞程式設計建構：  
   
--   [X:key](../../xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 您通常在 WPF 應用程式標記中看到的 `x:`，大概有 90% 都是 `x:Key`。  
+-   [X:key](../../xaml-services/x-key-directive.md):設定中每個資源的唯一索引鍵<xref:System.Windows.ResourceDictionary>（或其他架構中類似字典的概念）。 `x:Key` 可能會有 90%的`x:`一般 WPF 應用程式的標記中，您會看到的使用方式。  
   
 -   [X:class](../../xaml-services/x-class-directive.md):指定[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]提供 XAML 頁面程式碼後置類別的命名空間和類別名稱。 依據 WPF 程式撰寫模型，您必須有這類支援程式碼後置的類別，因此您幾乎都會看到 `x:` 對應，即使沒有資源也一樣。  
   
@@ -309,7 +307,7 @@ ms.locfileid: "57379233"
 ## <a name="xaml-security"></a>XAML 安全性  
  XAML 是直接表示物件執行個體化和執行的標記語言。 因此，XAML 中建立的元素在與系統資源互動方面 (例如網路存取、檔案系統 IO)，跟對等的產生程式碼具有一樣的能力。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 安全性架構 [!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 這表示在網際網路區域中執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行權限會降低。 「鬆散的 XAML」(於載入時間由 XAML 檢視器解譯的未編譯 XAML 的頁面) 和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常是在這個網際網路區域中執行，並具有相同的權限設定。  然而，完全信任應用程式中載入的 XAML，具有與裝載應用程式相同的系統資源存取權限。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]安全性架構[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]。 這表示在網際網路區域中執行的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的執行權限會降低。 「鬆散的 XAML」(於載入時間由 XAML 檢視器解譯的未編譯 XAML 的頁面) 和 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] 通常是在這個網際網路區域中執行，並具有相同的權限設定。  然而，完全信任應用程式中載入的 XAML，具有與裝載應用程式相同的系統資源存取權限。 如需詳細資訊，請參閱 [WPF 部分信任安全性](../wpf-partial-trust-security.md)。  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>從程式碼載入 XAML  
@@ -328,9 +326,10 @@ ms.locfileid: "57379233"
  [相依性屬性概觀](dependency-properties-overview.md) 提供您有關 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中多樣化屬性的詳細資訊，並介紹相依性屬性的概念。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 語法詳細資料](xaml-syntax-in-detail.md)
 - [WPF 的 XAML 和自訂類別](xaml-and-custom-classes-for-wpf.md)
-- [XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
-- [WPF XAML 延伸](wpf-xaml-extensions.md)
+- [XAML 命名空間 (x:)語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 擴充功能](wpf-xaml-extensions.md)
 - [基底項目概觀](base-elements-overview.md)
 - [WPF 中的樹狀結構](trees-in-wpf.md)

@@ -2,15 +2,15 @@
 title: 追蹤參與者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 343c2eea5d8e4cb7e90f2e2344cce9f3418c25dd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462990"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59138823"
 ---
 # <a name="tracking-participants"></a>追蹤參與者
-追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄以做為 Windows 事件追蹤 (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
+追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
   
 ## <a name="tracking-participants"></a>追蹤參與者  
  追蹤基礎結構可讓應用程式篩選外送的追蹤記錄，讓參與者可訂閱記錄的子集。 此機制會透過追蹤設定檔來套用篩選。  
@@ -18,7 +18,7 @@ ms.locfileid: "58462990"
  Windows Workflow Foundation (WF) 中[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]提供將追蹤記錄寫入至 ETW 工作階段的追蹤參與者。 透過在設定檔中加入特定追蹤的行為，您可以設定工作流程服務上的參與者。 啟用 ETW 追蹤參與者可在事件檢視器中檢視追蹤記錄。 ETW 式追蹤的 SDK 範例是熟悉使用 ETW 式追蹤參與者之 WF 追蹤的理想方式。  
   
 ## <a name="etw-tracking-participant"></a>ETW 追蹤參與者  
- [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包含將追蹤記錄寫入至 ETW 工作階段的 ETW 追蹤參與者。 這是非常有效率的方式，對應用程式效能或伺服器輸送量所造成的衝擊最小。 使用標準 ETW 追蹤參與者的優點在於，可在 Windows 事件檢視器中使用其他應用程式和系統記錄來檢視它所收到的追蹤記錄。  
+ [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 包含 ETW 追蹤參與者，將追蹤記錄寫入至 ETW 工作階段。 這是非常有效率的方式，對應用程式效能或伺服器輸送量所造成的衝擊最小。 使用標準 ETW 追蹤參與者的優點在於，可在 Windows 事件檢視器中使用其他應用程式和系統記錄來檢視它所收到的追蹤記錄。  
   
  標準 ETW 追蹤參與者會在 Web.config 檔中配置，如以下範例所示。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "58462990"
 ## <a name="custom-tracking-participant"></a>自訂追蹤參與者  
  追蹤參與者 API 允許以使用者提供的追蹤者來擴充追蹤執行階段，可包含自訂邏輯以處理工作流程執行階段發出的追蹤記錄。 若要寫入自訂追蹤參與者，開發人員必須實作 `Track` 類別上的 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 當工作流程執行階段發出追蹤記錄時，會呼叫此方法。  
   
- 追蹤參與者衍生自 <xref:System.Activities.Tracking.TrackingParticipant> 類別。 系統提供的 <xref:System.Activities.Tracking.EtwTrackingParticipant> 會針對所收到的每個追蹤記錄發出 Windows 事件追蹤 (ETW) 事件。 若要建立自訂追蹤參與者，會建立衍生自 <xref:System.Activities.Tracking.TrackingParticipant> 的類別。 若要提供基本追蹤功能，請覆寫 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>。 當執行階段傳送追蹤記錄且可以想要的方式來處理時，就會呼叫 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>。 在以下範例中，自訂追蹤參與者的類別是定義為發出所有追蹤記錄至主控台視窗。 您也可實作 <xref:System.Activities.Tracking.TrackingParticipant> 物件，此物件會使用其 `BeginTrack` 和 `EndTrack` 方法來非同步處理追蹤記錄。  
+ 追蹤參與者衍生自 <xref:System.Activities.Tracking.TrackingParticipant> 類別。 系統提供的 <xref:System.Activities.Tracking.EtwTrackingParticipant> 會針對所收到的每個追蹤記錄發出 Windows 事件追蹤 (ETW) 事件。 若要建立自訂追蹤參與者，會建立衍生自 <xref:System.Activities.Tracking.TrackingParticipant> 的類別。 若要提供基本追蹤功能，請覆寫 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A>。 <xref:System.Activities.Tracking.TrackingParticipant.Track%2A> 執行階段傳送追蹤記錄，且可以想要的方式處理時呼叫。 在以下範例中，自訂追蹤參與者的類別是定義為發出所有追蹤記錄至主控台視窗。 您也可實作 <xref:System.Activities.Tracking.TrackingParticipant> 物件，此物件會使用其 `BeginTrack` 和 `EndTrack` 方法來非同步處理追蹤記錄。  
   
 ```csharp  
 class ConsoleTrackingParticipant : TrackingParticipant  
@@ -141,5 +141,6 @@ instance.Extensions.Add(new ConsoleTrackingParticipant());
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Server App Fabric 監控](https://go.microsoft.com/fwlink/?LinkId=201273)
 - [使用 App Fabric 監控應用程式](https://go.microsoft.com/fwlink/?LinkId=201275)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d1f4796d86ca2733674c537591d91912f53811b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d084c3065bc23d45173a094bbfa9cc4c62cd4133
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485638"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085996"
 ---
 # <a name="imetadatafilterunmarkall-method"></a>IMetaDataFilter::UnmarkAll 方法
 處理標記移除目前的中繼資料範圍內的所有權杖。  
@@ -41,9 +41,10 @@ HRESULT UnmarkAll ();
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataFilter 介面](../../../../docs/framework/unmanaged-api/metadata/imetadatafilter-interface.md)

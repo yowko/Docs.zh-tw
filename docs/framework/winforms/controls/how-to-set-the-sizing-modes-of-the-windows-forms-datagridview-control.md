@@ -1,5 +1,5 @@
 ---
-title: HOW TO：設定 Windows Forms DataGridView 控制項的縮放模式
+title: HOW TO：設定 Windows Forms DataGridView 控制項的調整大小模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], setting sizing modes
 - DataGridView control [Windows Forms], sizing modes
 ms.assetid: e9ad15e6-b4bb-44aa-a767-3738e9db1651
-ms.openlocfilehash: 85322afcaae96b07d085d2b44d923542ecbf9bf6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d92322da6644c110f5e3177acebea62799a0ed89
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59085450"
 ---
-# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Forms DataGridView 控制項的縮放模式
+# <a name="how-to-set-the-sizing-modes-of-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Forms DataGridView 控制項的調整大小模式
 下列程序示範一些常見的情況，這些自訂或結合可用的調整大小選項以供 <xref:System.Windows.Forms.DataGridView> 控制項以及控制項中的特定資料行使用。  
   
 ### <a name="to-create-a-fixed-width-column"></a>建立固定寬度資料行  
@@ -59,6 +59,7 @@ ms.locfileid: "57708882"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode>

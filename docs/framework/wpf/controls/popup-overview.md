@@ -5,18 +5,16 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 4d480adbbd35084b30e2ca1c74d7392814b87783
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358466"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102774"
 ---
 # <a name="popup-overview"></a>快顯功能表概觀
 <xref:System.Windows.Controls.Primitives.Popup>控制項可用來顯示不同的視窗以漂浮在目前的應用程式視窗相對於指定的項目或螢幕座標中的內容。 本主題將介紹<xref:System.Windows.Controls.Primitives.Popup>控制項，並提供其用法的相關資訊。  
-  
- 
-  
+
 <a name="What_Is_a_Popup_"></a>   
 ## <a name="what-is-a-popup"></a>什麼是快顯？  
  A<xref:System.Windows.Controls.Primitives.Popup>控制項會顯示在相對於項目或在螢幕上的點分隔視窗的內容。 當<xref:System.Windows.Controls.Primitives.Popup>是可見的<xref:System.Windows.Controls.Primitives.Popup.IsOpen%2A>屬性設定為`true`。  
@@ -36,13 +34,13 @@ ms.locfileid: "57358466"
 ## <a name="controls-that-implement-a-popup"></a>實作快顯的控制項  
  您可以建置<xref:System.Windows.Controls.Primitives.Popup>到其他控制項的控制項。 下列控制項會實作<xref:System.Windows.Controls.Primitives.Popup>適用於特定用途的控制項：  
   
--   <xref:System.Windows.Controls.ToolTip>. 如果您想要建立項目的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
+-   <xref:System.Windows.Controls.ToolTip>。 如果您想要建立項目的工具提示，使用<xref:System.Windows.Controls.ToolTip>和<xref:System.Windows.Controls.ToolTipService>類別。 如需詳細資訊，請參閱 [ToolTip 概觀](tooltip-overview.md)。  
   
--   <xref:System.Windows.Controls.ContextMenu>. 如果您想要建立項目的內容功能表中，使用<xref:System.Windows.Controls.ContextMenu>控制項。 如需詳細資訊，請參閱 [ContextMenu 概觀](contextmenu-overview.md)。  
+-   <xref:System.Windows.Controls.ContextMenu>。 如果您想要建立項目的內容功能表中，使用<xref:System.Windows.Controls.ContextMenu>控制項。 如需詳細資訊，請參閱 [ContextMenu 概觀](contextmenu-overview.md)。  
   
--   <xref:System.Windows.Controls.ComboBox>. 如果您想要建立具有可顯示或隱藏的使用下拉式清單方塊的選取項目控制項<xref:System.Windows.Controls.ComboBox>控制項。  
+-   <xref:System.Windows.Controls.ComboBox>。 如果您想要建立具有可顯示或隱藏的使用下拉式清單方塊的選取項目控制項<xref:System.Windows.Controls.ComboBox>控制項。  
   
--   <xref:System.Windows.Controls.Expander>. 如果您想要建立顯示具有可摺疊區域的標頭的控制項，會顯示內容，請使用<xref:System.Windows.Controls.Expander>控制項。 如需詳細資訊，請參閱 [Expander 概觀](expander-overview.md)。  
+-   <xref:System.Windows.Controls.Expander>。 如果您想要建立顯示具有可摺疊區域的標頭的控制項，會顯示內容，請使用<xref:System.Windows.Controls.Expander>控制項。 如需詳細資訊，請參閱 [Expander 概觀](expander-overview.md)。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>快顯行為和外觀  
@@ -89,6 +87,7 @@ ms.locfileid: "57358466"
  <xref:System.Windows.Controls.Primitives.Popup>控制項會維護指向其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容做為邏輯的子系。 當建立新的視窗的內容<xref:System.Windows.Controls.Primitives.Popup>變成視覺化視窗的子系，並維持的邏輯子系<xref:System.Windows.Controls.Primitives.Popup>。 相反地，<xref:System.Windows.Controls.Primitives.Popup>保持邏輯父代及其<xref:System.Windows.Controls.Primitives.Popup.Child%2A>內容。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Primitives.Popup>
 - <xref:System.Windows.Controls.Primitives.PopupPrimaryAxis>
 - <xref:System.Windows.Controls.Primitives.PlacementMode>
@@ -96,5 +95,5 @@ ms.locfileid: "57358466"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [HOW-TO 主題](popup-how-to-topics.md)
-- [HOW-TO 主題](tooltip-how-to-topics.md)
+- [HOW TO 主題](popup-how-to-topics.md)
+- [HOW TO 主題](tooltip-how-to-topics.md)

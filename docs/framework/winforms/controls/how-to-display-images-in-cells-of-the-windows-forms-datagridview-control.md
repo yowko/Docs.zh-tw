@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Forms DataGridView 控制項的儲存格的顯示影像
+title: HOW TO：在 Windows Forms DataGridView 控制項的儲存格中顯示影像
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], displaying images
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
-ms.openlocfilehash: 280f274a0957f098add7fbf2e3b919c33c4c5233
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704398"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082991"
 ---
-# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>HOW TO：Windows Forms DataGridView 控制項的儲存格的顯示影像
+# <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項的儲存格中顯示影像
 圖片或圖形是其中一個值，您可以將資料列中顯示。 通常，這些圖形的形式是員工的照片或公司標誌。  
   
  將圖片很簡單，當您顯示內的資料時<xref:System.Windows.Forms.DataGridView>控制項。 <xref:System.Windows.Forms.DataGridView>控制項以原生方式處理支援之任何映像格式<xref:System.Drawing.Image>類別，如 OLE 圖片某些資料庫所使用的格式。  
@@ -37,10 +37,10 @@ ms.locfileid: "57704398"
   
 -   名為內嵌的圖示資源`tree.ico`。  
   
--   
-  <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：自訂 Windows Form DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [HOW TO：自訂 Windows Forms DataGridView 控制項中的資料格式](how-to-customize-data-formatting-in-the-windows-forms-datagridview-control.md)

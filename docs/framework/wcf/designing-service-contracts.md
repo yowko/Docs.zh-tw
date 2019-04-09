@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF]
 ms.assetid: 8e89cbb9-ac84-4f0d-85ef-0eb6be0022fd
-ms.openlocfilehash: 37639bfc71918dd92a2334f4076dc2b4d6ff9698
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68ea866b736350b8a393d1f4788e4b08754e5ab4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102735"
 ---
 # <a name="designing-service-contracts"></a>設計服務合約
 本主題說明何謂服務合約、如何定義服務合約、能夠進行哪些作業 (以及對基礎訊息交換的影響)、使用哪些資料型別以及其他問題，協助您設計能夠適當滿足情況需求的作業。  
@@ -270,11 +270,12 @@ End Interface
  這麼做的結果就是，如果未明確設定名稱和命名空間，對組件使用 IL 混淆會變更合約型別名稱和命名空間，並且導致 WSDL 遭到修改和連線交換 (通常會失敗)。 如果您未明確設定合約名稱和命名空間，但是想要使用混淆，請使用 <xref:System.Reflection.ObfuscationAttribute> 和 <xref:System.Reflection.ObfuscateAssemblyAttribute> 屬性，以防止合約型別名稱和命名空間遭到修改。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
-- [如何：建立單向合約](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
-- [如何：建立雙工合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+
+- [HOW TO：建立要求-回覆合約](../../../docs/framework/wcf/feature-details/how-to-create-a-request-reply-contract.md)
+- [HOW TO：建立單向合約](../../../docs/framework/wcf/feature-details/how-to-create-a-one-way-contract.md)
+- [HOW TO：建立雙面合約](../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [指定服務合約中的資料傳輸](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
-- [指定及處理合約與服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
+- [指定與處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [使用工作階段](../../../docs/framework/wcf/using-sessions.md)
 - [同步和非同步作業](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)
 - [可靠的服務](../../../docs/framework/wcf/reliable-services.md)

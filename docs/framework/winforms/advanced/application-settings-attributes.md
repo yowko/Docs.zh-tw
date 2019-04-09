@@ -6,12 +6,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], application settings
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
-ms.openlocfilehash: cfbaac8ad9a8576d076ed34059fb62e9e0a91ebc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079639"
 ---
 # <a name="application-settings-attributes"></a>應用程式設定屬性
 應用程式設定架構提供許多可套用至應用程式設定包裝函式類別或其個別屬性的屬性。 這些屬性會檢查在執行階段應用程式設定基礎結構，通常會特別設定提供者，才能調整其運作的自訂包裝函式所述的需求。  
@@ -21,7 +21,7 @@ ms.locfileid: "57714654"
 > [!NOTE]
 >  為自訂設定提供者中，衍生自<xref:System.Configuration.SettingsProvider>類別中，只有需要辨識下列的三個屬性：**ApplicationScopedSettingAttribute**， **UserScopedSettingAttribute**，以及**DefaultSettingValueAttribute**。  
   
-|屬性|目標|描述|  
+|屬性|Target|描述|  
 |---------------|------------|-----------------|  
 |<xref:System.Configuration.SettingsProviderAttribute>|兩者|指定要用於持續性設定提供者的簡短名稱。<br /><br /> 如果未提供這個屬性，預設的提供者， <xref:System.Configuration.LocalFileSettingsProvider>，會假設。|  
 |<xref:System.Configuration.UserScopedSettingAttribute>|兩者|為使用者範圍的應用程式設定中定義的屬性。|  
@@ -38,7 +38,8 @@ ms.locfileid: "57714654"
  *類別*指出，屬性可以只套用至應用程式設定包裝函式類別。 *屬性*指出屬性可以套用唯一的設定屬性。 *兩者*指出屬性可以套用在任一個層級。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - [應用程式設定架構](application-settings-architecture.md)
-- [如何：建立應用程式設定](how-to-create-application-settings.md)
+- [HOW TO：建立應用程式設定](how-to-create-application-settings.md)

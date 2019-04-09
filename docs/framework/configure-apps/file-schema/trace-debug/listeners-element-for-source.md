@@ -1,5 +1,5 @@
 ---
-title: <listeners> 的 <source> 項目
+title: <listeners> 項目 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - listeners element for <source>
 - <listeners> element for <source>
 ms.assetid: a2991f43-b4d3-4614-a8e7-da392de9697f
-ms.openlocfilehash: 34085d06ec3f3b91e5efdba6220d79032baaea52
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b15a30fb6d356f92312bf33bc1964c7922ba1383
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266771"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089649"
 ---
 # <a name="listeners-element-for-source"></a>\<接聽程式 > 項目\<來源 >
 新增或移除接聽程式中的<xref:System.Diagnostics.TraceSource.Listeners%2A>集合<xref:System.Diagnostics.TraceSource>。 接聽程式會將適當的目標，例如記錄檔、 視窗或文字檔追蹤輸出。  
@@ -88,6 +88,7 @@ ms.locfileid: "55266771"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.TraceListener>
 - [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)
 - [追蹤接聽項](../../../../../docs/framework/debug-trace-profile/trace-listeners.md)

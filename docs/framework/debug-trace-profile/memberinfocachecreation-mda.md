@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 028ff1048813ccbc845d5ad3e7f522b492348f87
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651028"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59103762"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 建立 <xref:System.Reflection.MemberInfo> 快取時，會啟用 `memberInfoCacheCreation` Managed 偵錯助理 (MDA)。 這明顯指出利用耗用大量資源之反映功能的程式。  
@@ -36,7 +36,7 @@ ms.locfileid: "54651028"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  會針對每個建立的 <xref:System.Reflection.MemberInfo> 快取啟用此 MDA。 效能影響微不足道。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  MDA 會輸出訊息，指出已建立 <xref:System.Reflection.MemberInfo> 快取。 使用偵錯工具取得堆疊追蹤，以顯示將在程式中使用反映的位置。  
   
 ## <a name="configuration"></a>組態  
@@ -65,5 +65,6 @@ public class Exe
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection.MemberInfo>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

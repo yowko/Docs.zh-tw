@@ -1,13 +1,13 @@
 ---
-title: schemeSettings 的 <add> 項目 (Uri 設定)
+title: <add> SchemeSettings （Uri 設定） 的項目
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
-ms.openlocfilehash: 672d279f35db64bec7f5b26bd1930d7048c406f1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279576"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139928"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<新增 > schemeSettings （Uri 設定） 的項目
 新增為結構描述名稱的配置設定。  
@@ -42,13 +42,13 @@ ms.locfileid: "55279576"
 |genericUriParserOptions|此配置剖析器選項。 僅支援的值是 genericUriParserOptions ="DontUnescapePathDotsAndSlashes 」。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<schemeSettings> 項目 (URI 設定)](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
+|[\<schemeSettings > 項目 （Uri 設定）](../../../../../docs/framework/configure-apps/file-schema/network/schemesettings-element-uri-settings.md)|指定如何針對特定配置剖析 <xref:System.Uri>。|  
   
 ## <a name="remarks"></a>備註  
  根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，然後再執行路徑壓縮。 這被實作為安全性機制，抵禦攻擊，如下所示：  
@@ -82,6 +82,7 @@ ms.locfileid: "55279576"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
 - <xref:System.Configuration.UriSection?displayProperty=nameWithType>

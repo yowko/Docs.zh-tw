@@ -1,5 +1,5 @@
 ---
-title: HOW TO：為 Windows Form DataGridView 控制項中的預設儲存格樣式
+title: HOW TO：設定 Windows Forms DataGridView 控制項的預設儲存格樣式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: 1aaaca43-5340-447e-99c0-9177d9776aa1
-ms.openlocfilehash: c7ece81e193f29960f29b749438280bbff0591f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 12951166f26780360821cb77e98cdc3633a34b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703123"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142606"
 ---
-# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>HOW TO：為 Windows Form DataGridView 控制項中的預設儲存格樣式
+# <a name="how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control"></a>HOW TO：設定 Windows Forms DataGridView 控制項的預設儲存格樣式
 您可以使用 <xref:System.Windows.Forms.DataGridView> 控制項為整個控制項，以及為特定資料行和資料列，指定預設儲存格樣式。 這些預設值會從控制項層級往下篩選至資料行層級，接著至資料列層級，然後至儲存格層級。 如果在儲存格層級未設定特定 <xref:System.Windows.Forms.DataGridViewCellStyle> 屬性，則會使用資料列層級的預設屬性設定。 如果在資料列層級也未設定這個屬性，則會使用預設資料行設定。 最後，如果在資料行層級還是未設定這個屬性，則會使用預設 <xref:System.Windows.Forms.DataGridView> 設定。 您可以利用這項設定，避免必須在多個層級重複設定屬性。 您只需要在每個層級指定不同於上一層級的樣式。 如需詳細資訊，請參閱 < [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  
   
  在 Visual Studio 中對於本工作有更詳盡的支援。  另請參閱[How to:設定預設儲存格樣式和資料格式的 Windows Form DataGridView 控制項使用設計工具](default-cell-styles-datagridview.md)。  
@@ -47,18 +47,18 @@ ms.locfileid: "57703123"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   
-  <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="robust-programming"></a>穩固程式設計  
  若要在您使用非常大量的資料集時達到最大延展性，您應該共用使用相同樣式的多個資料列、資料行或儲存格之間的 <xref:System.Windows.Forms.DataGridViewCellStyle> 物件，而不是分別設定每個項目的樣式屬性。 此外，您應該建立共用資料列，並使用 <xref:System.Windows.Forms.DataGridViewRowCollection.SharedRow%2A?displayProperty=nameWithType> 屬性來加以存取。 如需詳細資訊，請參閱 <<c0> [ 縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewBand.DefaultCellStyle%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [縮放 Windows Forms DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
-- [如何：設定 Windows Form DataGridView 控制項中替代資料列樣式](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [縮放 Windows Form DataGridView 控制項的最佳作法](best-practices-for-scaling-the-windows-forms-datagridview-control.md)
+- [HOW TO：設定 Windows Forms DataGridView 控制項的替代資料列樣式](how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control.md)

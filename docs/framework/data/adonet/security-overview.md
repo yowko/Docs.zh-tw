@@ -2,12 +2,12 @@
 title: 安全性 Overview2
 ms.date: 03/30/2017
 ms.assetid: 33e09965-61d5-48cc-9e8c-3b047cc4f194
-ms.openlocfilehash: 0b5b86aad2365c76351ff748228826ba703223dc
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b93b78a5fabbcf60eefb386144ec90e877cfed0e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091795"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089857"
 ---
 # <a name="security-overview"></a>安全性概觀
 保護應用程式是持續進行的工作。 開發人員無法絕對保證應用程式可避開所有攻擊，因為您無法預測未來的新科技會帶來哪些類型的攻擊。 反之，也不能因為至目前為止，沒有人察覺 (或公佈) 系統上的安全性漏洞，就表示安全性漏洞確實存在或確實不存在。 您需要在專案的設計階段就進行安全性的規劃，也必須規劃該如何在應用程式的存留期維護安全性。  
@@ -102,7 +102,8 @@ ms.locfileid: "56091795"
 |[安全性原則的最佳作法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sa4se9bc(v=vs.100))|提供說明如何管理安全性原則的連結。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [在.NET 中的安全性](../../../standard/security/index.md)
+- [.NET 的安全性](../../../standard/security/index.md)
 - [SQL Server 安全性](../../../../docs/framework/data/adonet/sql/sql-server-security.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

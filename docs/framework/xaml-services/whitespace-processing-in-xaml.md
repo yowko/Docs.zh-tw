@@ -1,5 +1,5 @@
 ---
-title: 在 XAML 中處理泛空白字元
+title: XAML 中的空白字元處理
 ms.date: 03/30/2017
 helpviewer_keywords:
 - East Asian characters [XAML Services]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - white-space processing in XAML [XAML Services]
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
-ms.openlocfilehash: da559a7e009861faaba16484276eb97be537482b
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: ca628a366b000b23a2abe38b1c8b7272299bff16
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59102228"
 ---
-# <a name="white-space-processing-in-xaml"></a>在 XAML 中處理泛空白字元
+# <a name="white-space-processing-in-xaml"></a>XAML 中的空白字元處理
 XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]處理器實作中。 本主題說明這些 XAML 語言規則， 它還會列出所定義的額外空白字元處理[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]XAML 處理器和序列化的 XAML 寫入器的實作。  
   
 <a name="whitespace_definition"></a>   
@@ -75,6 +75,7 @@ XAML 的語言規則狀態必須處理該顯著泛空白字元[!INCLUDE[TLA2#tla
  此外，某些非固定格式文件模型中的分行符號的內嵌項目應該刻意不引入額外的空間，甚至是中的空白有效集合。 例如，<xref:System.Windows.Documents.LineBreak>項目具有相同的目的\<b R / > 標記中的[!INCLUDE[TLA2#tla_html](../../../includes/tla2sharptla-html-md.md)]，並以方便閱讀，在標記中，通常<xref:System.Windows.Documents.LineBreak>隔開撰寫的換行字元的任何後續文字。 該換行字元不應該正規化為下一行的前置空格。 若要啟用該行為，類別定義<xref:System.Windows.Documents.LineBreak>項目會套用<xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>，這樣就會在由解譯[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]周圍的空白字元的處理器<xref:System.Windows.Documents.LineBreak>為一律修剪。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [XML 字元實體和 XAML](xml-character-entities-and-xaml.md)
 - [在 XAML 中處理的 xml: space](xml-space-handling-in-xaml.md)

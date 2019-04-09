@@ -2,12 +2,12 @@
 title: 不具類型的要求-回覆
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
-ms.openlocfilehash: bdd0ae5ac53bf1a35817efba7ae11d947e3a5b33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ae3c89f9eec9b1684f8c87af200ba87ca8dec093
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101185"
 ---
 # <a name="untyped-requestreply"></a>不具型別的要求/回覆
 這個範例會示範如何定義使用 Message 類別的作業合約。  
@@ -88,4 +88,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Message\Untyped`  
-  

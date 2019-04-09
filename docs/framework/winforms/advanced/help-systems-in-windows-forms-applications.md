@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Help [Windows Forms], Windows Forms
 - HelpProvider component [Windows Forms], providing Help in Windows applications
 ms.assetid: 2a96a278-432c-41fc-9e3c-5bfedf5e1267
-ms.openlocfilehash: 22c07490d0d3b54be96f32d67c9b4aee70306c1d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1a02271d59a59f0a6e06a652a34922ba5dcdf1f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718307"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087266"
 ---
 # <a name="help-systems-in-windows-forms-applications"></a>Windows Form 應用程式中的說明系統
 其中一個最重要的優待的您的應用程式，開發人員可以提供您的使用者是裁判的 [說明] 系統。 這是他們將會在其中開啟時使用者感到混淆、 求助對象。 提供以 Windows 為基礎的應用程式中的 [說明] 系統很容易，利用[HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)。  
@@ -24,8 +24,9 @@ ms.locfileid: "57718307"
  您可以產生 HTML Help Workshop HTML 說明 1.x 檔案。 如需有關 HTML 說明檔的詳細資訊，請參閱 「 HTML Help Workshop 」 或在 MSDN 中的其他 [HTML 說明] 主題。  
   
 ## <a name="see-also"></a>另請參閱
-- [整合 Windows Forms 中的使用者說明](integrating-user-help-in-windows-forms.md)
+
+- [整合 Windows Form 中的使用者說明](integrating-user-help-in-windows-forms.md)
 - [HelpProvider 元件](../controls/helpprovider-component-windows-forms.md)
 - [ToolTip 元件](../controls/tooltip-component-windows-forms.md)
-- [Windows Forms 概觀](../windows-forms-overview.md)
+- [Windows Form 概觀](../windows-forms-overview.md)
 - [Windows Forms](../index.md)

@@ -2,12 +2,12 @@
 title: 連接字串語法
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
-ms.openlocfilehash: f6cbfc9676c2c373ab833ac556cf04bb0ba15096
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524542"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084949"
 ---
 # <a name="connection-string-syntax"></a>連接字串語法
 每個 .NET Framework 資料提供者都擁有一個 `Connection` 物件，繼承自 <xref:System.Data.Common.DbConnection> 以及提供者特定的 <xref:System.Data.Common.DbConnection.ConnectionString%2A> 屬性。 每個提供者的特定連接字串語法會記錄在其 `ConnectionString` 屬性中。 下表列出 .NET Framework 中包含的四個資料提供者。  
@@ -43,7 +43,7 @@ ms.locfileid: "54524542"
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  與 `Integrated Security=true` 提供者搭配使用時，`OleDb` 會擲回例外狀況。  
+>  `Integrated Security=true` 搭配使用時，發生例外狀況`OleDb`提供者。  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 連接字串  
 <xref:System.Data.SqlClient.SqlConnection> 連接字串的語法列於 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> 屬性中。 您可以使用 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 屬性來取得或設定 SQL Server 資料庫的連接字串。 如果您需要連接至舊版的 SQL Server，則必須使用 .NET Framework Data Provider for OleDb (<xref:System.Data.OleDb>)。 大多數的連接字串關鍵字也可對應至 <xref:System.Data.SqlClient.SqlConnectionStringBuilder> 中的屬性。  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  可提供連接資訊**OleDbConnection**在通用資料連結 (UDL) 檔案中; 不過您應該避免這種方式。 UDL 檔並未加密，並且會以純文字的格式公開連接字串資訊。 因為對您的應用程式而言，UDL 檔是外部的檔案型資源，所以您無法使用 .NET Framework 來保護該檔案。 不支援 UDL 檔案**SqlClient**。  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>使用 DataDirectory 連接至 Access/Jet  
- `DataDirectory` 並不是由 `SqlClient` 所獨佔， 也可以搭配 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> .NET data 提供者使用。 下列範例 <xref:System.Data.OleDb.OleDbConnection> 字串所示範的語法，是連接到位於應用程式的 app_data 資料夾中的 Northwind.mdb 所需。 系統資料庫 (System.mdw) 也是儲存於該位置。  
+ `DataDirectory` 不是專為`SqlClient`。 也可以搭配 <xref:System.Data.OleDb> 和 <xref:System.Data.Odbc> .NET data 提供者使用。 下列範例 <xref:System.Data.OleDb.OleDbConnection> 字串所示範的語法，是連接到位於應用程式的 app_data 資料夾中的 Northwind.mdb 所需。 系統資料庫 (System.mdw) 也是儲存於該位置。  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  
@@ -195,6 +195,7 @@ Data Source=Oracle9i;User ID=*****;Password=*****;
  如需 ODBC 連接字串語法的詳細資訊，請參閱 <xref:System.Data.OracleClient.OracleConnection.ConnectionString%2A>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)
-- [連接至資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [連接資料來源](../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

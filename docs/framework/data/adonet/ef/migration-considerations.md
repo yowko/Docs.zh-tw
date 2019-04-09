@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: d783bc79585740710e663d26ecd4110f64882b44
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903911"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59089883"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -29,7 +29,7 @@ ms.locfileid: "55903911"
  移轉現有應用程式至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 的途徑取決於應用程式的類型以及現有資料存取策略。 不過，在將現有應用程式移轉至 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 時，一律必須執行下列工作：  
   
 > [!NOTE]
->  當您使用 Entity Data Model 工具，從 Visual Studio 2008 開始，所有這些工作會自動執行。 如需詳細資訊，請參閱[＜How to：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
+>  當您使用 Entity Data Model 工具，從 Visual Studio 2008 開始，所有這些工作會自動執行。 如需詳細資訊，請參閱[如何：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 1.  升級應用程式。  
   
@@ -37,23 +37,23 @@ ms.locfileid: "55903911"
   
 2.  定義模型與對應  
   
-     模型和對應檔案定義概念模型中的實體、資料來源中的結構 (例如資料表、預存程序和檢視表)，以及實體與資料來源結構間的對應。 如需詳細資訊，請參閱[＜How to：手動定義模型和對應檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))。  
+     模型和對應檔案定義概念模型中的實體、資料來源中的結構 (例如資料表、預存程序和檢視表)，以及實體與資料來源結構間的對應。 如需詳細資訊，請參閱[如何：手動定義模型和對應檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))。  
   
-     儲存體模型中定義的類型必須與資料來源中物件的名稱相符。 如果現有應用程式將資料公開 (Expose) 為物件，您必須確保概念模型中定義的實體和屬性與這些現有資料類別和屬性的名稱相符。 如需詳細資訊，請參閱[＜How to：自訂模型和對應檔，以搭配自訂物件運作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))。  
+     儲存體模型中定義的類型必須與資料來源中物件的名稱相符。 如果現有應用程式將資料公開 (Expose) 為物件，您必須確保概念模型中定義的實體和屬性與這些現有資料類別和屬性的名稱相符。 如需詳細資訊，請參閱[如何：自訂模型和對應檔，以搭配自訂物件運作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738625(v=vs.100))。  
   
     > [!NOTE]
     >  Entity Data Model Designer 可以用來重新命名概念模型中的實體，使其與現有物件相符。 如需詳細資訊，請參閱 < [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。  
   
 3.  定義連接字串 (Connection String)。  
   
-     針對概念模型執行查詢時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用特殊格式化的連接字串。 此連接字串會封裝與模型和對應檔以及資料來源連接有關的資訊。 如需詳細資訊，請參閱[＜How to：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
+     針對概念模型執行查詢時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用特殊格式化的連接字串。 此連接字串會封裝與模型和對應檔以及資料來源連接有關的資訊。 如需詳細資訊，請參閱[如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
   
 4.  設定 Visual Studio 專案。  
   
-     若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[＜How to：手動設定 Entity Framework 專案](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
+     若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[如何：手動設定 Entity Framework 專案](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>適用於具有現有物件的應用程式之考量  
- 從 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 版開始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可支援「單純」(plain old) CLR 物件 (POCO)，又稱為非持續性物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。 您也可以移轉應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱[＜How to：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
+ 從 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 版開始，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 可支援「單純」(plain old) CLR 物件 (POCO)，又稱為非持續性物件。 大部分的情況下，只要稍加變更您現有的物件，它們都能與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 搭配使用。 如需詳細資訊，請參閱 <<c0> [ 處理 POCO 實體](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))。 您也可以移轉應用程式[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]並使用 Entity Framework 工具所產生的資料類別。 如需詳細資訊，請參閱[如何：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>適用於使用 ADO.NET 提供者的應用程式之考量  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者，如 SqlClient，可讓您查詢資料來源，進而傳回表格式資料。 也將資料載入至[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]資料集。 下列清單說明適用於升級使用現有 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 提供者的應用程式之考量：  
@@ -75,7 +75,7 @@ ms.locfileid: "55903911"
 
   當您查詢概念模型中，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]傳回資料當做實體類型的執行個體的物件。 這些物件可以直接繫結控制項，此繫結支援更新。 所做的變更至控制項，例如中的資料列中的資料<xref:System.Windows.Forms.DataGridView>，會自動取得儲存至資料庫時<xref:System.Data.Objects.ObjectContext.SaveChanges%2A>呼叫方法。  
   
-  如果應用程式列舉查詢的結果，以在 <xref:System.Windows.Forms.DataGridView> 或其他支援資料繫結的控制項類型中顯示資料，您則可以把應用程式修改為將控制項繫結至 <xref:System.Data.Objects.ObjectQuery%601> 的結果。  
+  如果應用程式列舉查詢的結果，以在 <xref:System.Windows.Forms.DataGridView> 或其他支援資料繫結程序的控制項類型中顯示資料，您則可以把應用程式修改為將控制項繫結程序至 <xref:System.Data.Objects.ObjectQuery%601> 的結果。  
   
   如需詳細資訊，請參閱 <<c0> [ 將物件繫結至控制項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100))。  
   
@@ -103,5 +103,6 @@ ms.locfileid: "55903911"
   [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web 應用程式必須經常維護 Web 網頁或使用者工作階段的狀態。 中的物件<xref:System.Data.Objects.ObjectContext>執行個體可以儲存在用戶端檢視狀態，或在工作階段狀態，在伺服器上，並稍後再擷取和重新附加至新的物件內容。 如需詳細資訊，請參閱 <<c0> [ 附加和卸離物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [Entity Framework 詞彙](../../../../../docs/framework/data/adonet/ef/terminology.md)

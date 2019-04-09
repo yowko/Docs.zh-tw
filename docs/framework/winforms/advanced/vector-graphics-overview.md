@@ -9,12 +9,12 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: a78030dd53f526e7d4403f4696ea54e881b60022
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720406"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087959"
 ---
 # <a name="vector-graphics-overview"></a>向量圖形概觀
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系統上繪製線條、 矩形和其他形狀。 您可以選擇各式各樣的座標系統，但預設座標系統具有原點左上角的 x 軸指向右側和 y 軸指向下方。 預設座標系統中的測量單位為像素。  
@@ -57,7 +57,8 @@ ms.locfileid: "57720406"
  [!code-vb[LinesCurvesAndShapes#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#11)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
