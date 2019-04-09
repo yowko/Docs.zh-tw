@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 7666918cbff7a395a93a274629fe574ff20e170c
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 877992227df417badf7322be7f9be79bf7256e69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545685"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308649"
 ---
 # <a name="c-operators"></a>C# 運算子
 
@@ -75,7 +75,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 [-x](subtraction-operator.md) – 數值否定。
 
-[\!x](logical-negation-operator.md) – 邏輯否定。
+[\!x](boolean-logical-operators.md#logical-negation-operator-) – 邏輯否定。
 
 [~x](bitwise-complement-operator.md) – 位元補數。
 
@@ -163,13 +163,13 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x && y](conditional-and-operator.md) – 邏輯 AND。 如果第一個運算元評估為 false，C# 就不會評估第二個運算元。
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 邏輯 AND。 如果第一個運算元評估為 false，C# 就不會評估第二個運算元。
 
 ## <a name="conditional-or-operator"></a>條件 OR 運算子
 
 此運算子具有的優先順序高於下一個區段且低於前一個區段。
 
-[x &#124;&#124; y](conditional-or-operator.md) – 邏輯 OR。 如果第一個運算元評估為 true，C# 就不會評估第二個運算元。
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 邏輯 OR。 如果第一個運算元評估為 true，C# 就不會評估第二個運算元。
 
 ## <a name="null-coalescing-operator"></a>Null 聯合運算子
 
@@ -214,7 +214,7 @@ C# 提供許多運算子，也就是指定要在運算式中執行哪些作業 (
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C#](../../index.md)
-- [多載運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [可多載的運算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [C# 關鍵字](../keywords/index.md)

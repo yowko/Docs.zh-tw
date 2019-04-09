@@ -2,12 +2,12 @@
 title: C# 教學課程
 description: 探索這些 C# 教學課程以了解如何建置 C# 程式，並了解 C# 語言功能。
 ms.date: 10/25/2018
-ms.openlocfilehash: 54c05f2fcc80d21b10cbb6a2baee37014aa62d07
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920483"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214438"
 ---
 # <a name="c-tutorials"></a>C# 教學課程
 
@@ -61,5 +61,3 @@ ms.locfileid: "58920483"
 * [使用 LINQ](working-with-linq.md)：示範 LINQ 的許多功能和支援的語言元素。
 * [使用屬性](attributes.md)：示範如何在 C# 中建立及使用屬性。
 * [字串內插補點](exploration/interpolated-strings.yml)教學課程示範如何在字串中插入值。 您會學到如何使用內嵌 C# 運算式建立插入字串，以及如何控制結果字串中運算式結果的文字外觀。 此教學課程也可以[在您的本機電腦上執行](exploration/interpolated-strings-local.md)。
-
-
