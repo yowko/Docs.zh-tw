@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9796dd234611fd6bbdf2b949b8a0ed66527aaba9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c86a4fd2788c8ea2df5d9e54c5c221afd179704
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091417"
 ---
-# <a name="assemblyflags-enumeration"></a><span data-ttu-id="7ad37-102">AssemblyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="7ad37-102">AssemblyFlags Enumeration</span></span>
-<span data-ttu-id="7ad37-103">包含描述的組件的執行階段功能的值。</span><span class="sxs-lookup"><span data-stu-id="7ad37-103">Contains values that describe run-time features of an assembly.</span></span>  
+# <a name="assemblyflags-enumeration"></a><span data-ttu-id="fc9c8-102">AssemblyFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="fc9c8-102">AssemblyFlags Enumeration</span></span>
+<span data-ttu-id="fc9c8-103">包含描述的組件的執行階段功能的值。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-103">Contains values that describe run-time features of an assembly.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7ad37-104">語法</span><span class="sxs-lookup"><span data-stu-id="7ad37-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fc9c8-104">語法</span><span class="sxs-lookup"><span data-stu-id="fc9c8-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -38,28 +38,29 @@ typedef enum {
 } AssemblyFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="7ad37-105">成員</span><span class="sxs-lookup"><span data-stu-id="7ad37-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fc9c8-105">成員</span><span class="sxs-lookup"><span data-stu-id="fc9c8-105">Members</span></span>  
   
-|<span data-ttu-id="7ad37-106">成員</span><span class="sxs-lookup"><span data-stu-id="7ad37-106">Member</span></span>|<span data-ttu-id="7ad37-107">描述</span><span class="sxs-lookup"><span data-stu-id="7ad37-107">Description</span></span>|  
+|<span data-ttu-id="fc9c8-106">成員</span><span class="sxs-lookup"><span data-stu-id="fc9c8-106">Member</span></span>|<span data-ttu-id="fc9c8-107">描述</span><span class="sxs-lookup"><span data-stu-id="fc9c8-107">Description</span></span>|  
 |------------|-----------------|  
-|`afImplicitExportedTypes`|<span data-ttu-id="7ad37-108">指定匯出的型別定義隱含構成組件檔案中。</span><span class="sxs-lookup"><span data-stu-id="7ad37-108">Specifies that exported type definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="7ad37-109">在.NET framework 1.0 和 1.1 版中，這個值永遠都會假設設定。</span><span class="sxs-lookup"><span data-stu-id="7ad37-109">In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
-|`afImplicitResources`|<span data-ttu-id="7ad37-110">指定的資源定義中是隱含包含組件的檔案。</span><span class="sxs-lookup"><span data-stu-id="7ad37-110">Specifies that resource definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="7ad37-111">在.NET Framework 1.0 和 1.1 中，這個值永遠都會假設設定。</span><span class="sxs-lookup"><span data-stu-id="7ad37-111">In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
-|`afNonSideBySideAppDomain`|<span data-ttu-id="7ad37-112">指定是否它們相同的應用程式定義域中執行，無法與其他版本一起執行的組件。</span><span class="sxs-lookup"><span data-stu-id="7ad37-112">Specifies that the assembly cannot execute with other versions if they are running in the same application domain.</span></span>|  
-|`afNonSideBySideProcess`|<span data-ttu-id="7ad37-113">指定是否它們在相同的程序執行，無法與其他版本一起執行的組件。</span><span class="sxs-lookup"><span data-stu-id="7ad37-113">Specifies that the assembly cannot execute with other versions if they are running in the same process.</span></span>|  
-|`afNonSideBySideMachine`|<span data-ttu-id="7ad37-114">指定是否在同一部電腦上執行，無法與其他版本一起執行的組件。</span><span class="sxs-lookup"><span data-stu-id="7ad37-114">Specifies that the assembly cannot execute with other versions if they are running on the same computer.</span></span>|  
+|`afImplicitExportedTypes`|<span data-ttu-id="fc9c8-108">指定匯出的型別定義隱含構成組件檔案中。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-108">Specifies that exported type definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="fc9c8-109">在.NET framework 1.0 和 1.1 版中，這個值永遠都會假設設定。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-109">In the .NET Framework versions 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
+|`afImplicitResources`|<span data-ttu-id="fc9c8-110">指定的資源定義中是隱含包含組件的檔案。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-110">Specifies that resource definitions are implicit within the files that comprise the assembly.</span></span> <span data-ttu-id="fc9c8-111">在.NET Framework 1.0 和 1.1 中，這個值永遠都會假設設定。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-111">In the .NET Framework 1.0 and 1.1, this value is always assumed to be set.</span></span>|  
+|`afNonSideBySideAppDomain`|<span data-ttu-id="fc9c8-112">指定是否它們相同的應用程式定義域中執行，無法與其他版本一起執行的組件。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-112">Specifies that the assembly cannot execute with other versions if they are running in the same application domain.</span></span>|  
+|`afNonSideBySideProcess`|<span data-ttu-id="fc9c8-113">指定是否它們在相同的程序執行，無法與其他版本一起執行的組件。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-113">Specifies that the assembly cannot execute with other versions if they are running in the same process.</span></span>|  
+|`afNonSideBySideMachine`|<span data-ttu-id="fc9c8-114">指定是否在同一部電腦上執行，無法與其他版本一起執行的組件。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-114">Specifies that the assembly cannot execute with other versions if they are running on the same computer.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="7ad37-115">備註</span><span class="sxs-lookup"><span data-stu-id="7ad37-115">Remarks</span></span>  
- <span data-ttu-id="7ad37-116">0x0010 與 0x0070 之間的值用來描述所參考組件的並排顯示相容性功能。</span><span class="sxs-lookup"><span data-stu-id="7ad37-116">The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly.</span></span> <span data-ttu-id="7ad37-117">如果沒有這些值的設定，則會將組件假設為並排顯示相容。</span><span class="sxs-lookup"><span data-stu-id="7ad37-117">If none of these values are set, the assembly is assumed to be side-by-side compatible.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="fc9c8-115">備註</span><span class="sxs-lookup"><span data-stu-id="fc9c8-115">Remarks</span></span>  
+ <span data-ttu-id="fc9c8-116">0x0010 與 0x0070 之間的值用來描述所參考組件的並排顯示相容性功能。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-116">The values between 0x0010 and 0x0070, inclusive, are used to describe side-by-side compatibility features of the referenced assembly.</span></span> <span data-ttu-id="fc9c8-117">如果沒有這些值的設定，則會將組件假設為並排顯示相容。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-117">If none of these values are set, the assembly is assumed to be side-by-side compatible.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ad37-118">需求</span><span class="sxs-lookup"><span data-stu-id="7ad37-118">Requirements</span></span>  
- <span data-ttu-id="7ad37-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ad37-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fc9c8-118">需求</span><span class="sxs-lookup"><span data-stu-id="fc9c8-118">Requirements</span></span>  
+ <span data-ttu-id="fc9c8-119">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fc9c8-119">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ad37-120">**標頭：** MsCorEE.h</span><span class="sxs-lookup"><span data-stu-id="7ad37-120">**Header:** MsCorEE.h</span></span>  
+ <span data-ttu-id="fc9c8-120">**標頭：** MsCorEE.h</span><span class="sxs-lookup"><span data-stu-id="fc9c8-120">**Header:** MsCorEE.h</span></span>  
   
- <span data-ttu-id="7ad37-121">**程式庫：** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7ad37-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="fc9c8-121">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="fc9c8-121">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- <span data-ttu-id="7ad37-122">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7ad37-122">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="fc9c8-122">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="fc9c8-122">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="7ad37-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7ad37-123">See also</span></span>
-- [<span data-ttu-id="7ad37-124">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="7ad37-124">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
-- [<span data-ttu-id="7ad37-125">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="7ad37-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)
+## <a name="see-also"></a><span data-ttu-id="fc9c8-123">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fc9c8-123">See also</span></span>
+
+- [<span data-ttu-id="fc9c8-124">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="fc9c8-124">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="fc9c8-125">IMetaDataAssemblyEmit 介面</span><span class="sxs-lookup"><span data-stu-id="fc9c8-125">IMetaDataAssemblyEmit Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-interface.md)

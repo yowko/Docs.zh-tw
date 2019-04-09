@@ -5,51 +5,52 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3a73991e-fd4e-4610-93fb-7ced4dc6b7f9
-ms.openlocfilehash: 082994085a3cbb9a229ae6c6eea30f15b796fc20
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea7dbc4f760a446440cb7291413d69b1202f80e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543932"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162655"
 ---
-# <a name="adding-business-logic-by-using-partial-methods"></a><span data-ttu-id="17bc2-102">使用部分方法加入商務邏輯</span><span class="sxs-lookup"><span data-stu-id="17bc2-102">Adding Business Logic By Using Partial Methods</span></span>
-<span data-ttu-id="17bc2-103">您可以自訂 Visual Basic 和C#產生的程式碼，在您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]使用的專案*部分方法*。</span><span class="sxs-lookup"><span data-stu-id="17bc2-103">You can customize Visual Basic and C# generated code in your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects by using *partial methods*.</span></span> <span data-ttu-id="17bc2-104">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 產生的程式碼會將簽章定義成部分方法的一部分。</span><span class="sxs-lookup"><span data-stu-id="17bc2-104">The code that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates defines signatures as one part of a partial method.</span></span> <span data-ttu-id="17bc2-105">如果您想實作此方法，可以加入自己的部分方法。</span><span class="sxs-lookup"><span data-stu-id="17bc2-105">If you want to implement the method, you can add your own partial method.</span></span> <span data-ttu-id="17bc2-106">如果您未加入自己的實作 (Implementation)，則編譯器 (Compiler) 會捨棄部分方法簽章並呼叫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的預設方法。</span><span class="sxs-lookup"><span data-stu-id="17bc2-106">If you do not add your own implementation, the compiler discards the partial methods signature and calls the default methods in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
+# <a name="adding-business-logic-by-using-partial-methods"></a><span data-ttu-id="6c245-102">使用部分方法加入商務邏輯</span><span class="sxs-lookup"><span data-stu-id="6c245-102">Adding Business Logic By Using Partial Methods</span></span>
+<span data-ttu-id="6c245-103">您可以自訂 Visual Basic 和C#產生的程式碼，在您[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]使用的專案*部分方法*。</span><span class="sxs-lookup"><span data-stu-id="6c245-103">You can customize Visual Basic and C# generated code in your [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] projects by using *partial methods*.</span></span> <span data-ttu-id="6c245-104">[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 產生的程式碼會將簽章定義成部分方法的一部分。</span><span class="sxs-lookup"><span data-stu-id="6c245-104">The code that [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] generates defines signatures as one part of a partial method.</span></span> <span data-ttu-id="6c245-105">如果您想實作此方法，可以加入自己的部分方法。</span><span class="sxs-lookup"><span data-stu-id="6c245-105">If you want to implement the method, you can add your own partial method.</span></span> <span data-ttu-id="6c245-106">如果您未加入自己的實作 (Implementation)，則編譯器 (Compiler) 會捨棄部分方法簽章並呼叫 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的預設方法。</span><span class="sxs-lookup"><span data-stu-id="6c245-106">If you do not add your own implementation, the compiler discards the partial methods signature and calls the default methods in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)].</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="17bc2-107">如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]將驗證和其他自訂項目加入至實體類別。</span><span class="sxs-lookup"><span data-stu-id="17bc2-107">If you are using Visual Studio, you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to add validation and other customizations to entity classes.</span></span>  
+>  <span data-ttu-id="6c245-107">如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]將驗證和其他自訂項目加入至實體類別。</span><span class="sxs-lookup"><span data-stu-id="6c245-107">If you are using Visual Studio, you can use the [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] to add validation and other customizations to entity classes.</span></span>  
   
- <span data-ttu-id="17bc2-108">例如，Northwind 範例資料庫中 `Customer` 類別的預設對應包含下列部分方法：</span><span class="sxs-lookup"><span data-stu-id="17bc2-108">For example, the default mapping for the `Customer` class in the Northwind sample database includes the following partial method:</span></span>  
+ <span data-ttu-id="6c245-108">例如，Northwind 範例資料庫中 `Customer` 類別的預設對應包含下列部分方法：</span><span class="sxs-lookup"><span data-stu-id="6c245-108">For example, the default mapping for the `Customer` class in the Northwind sample database includes the following partial method:</span></span>  
   
  [!code-csharp[DLinqOverrideDefault#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/northwind.cs#2)]
  [!code-vb[DLinqOverrideDefault#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/northwind.vb#2)]  
   
- <span data-ttu-id="17bc2-109">您可以將下列程式碼加入至自己的部分 `Customer` 類別，進而實作自己的方法：</span><span class="sxs-lookup"><span data-stu-id="17bc2-109">You can implement your own method by adding code such as the following to your own partial `Customer` class:</span></span>  
+ <span data-ttu-id="6c245-109">您可以將下列程式碼加入至自己的部分 `Customer` 類別，進而實作自己的方法：</span><span class="sxs-lookup"><span data-stu-id="6c245-109">You can implement your own method by adding code such as the following to your own partial `Customer` class:</span></span>  
   
  [!code-csharp[DLinqOverrideDefault#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/Program.cs#3)]
  [!code-vb[DLinqOverrideDefault#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/Module1.vb#3)]  
   
- <span data-ttu-id="17bc2-110">這種方法通常會用於[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]覆寫預設方法，如`Insert`， `Update`， `Delete`，以及先驗證物件生命週期事件期間的屬性。</span><span class="sxs-lookup"><span data-stu-id="17bc2-110">This approach is typically used in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] to override default methods for `Insert`, `Update`, `Delete`, and to validate properties during object life-cycle events.</span></span>  
+ <span data-ttu-id="6c245-110">這種方法通常會用於[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]覆寫預設方法，如`Insert`， `Update`， `Delete`，以及先驗證物件生命週期事件期間的屬性。</span><span class="sxs-lookup"><span data-stu-id="6c245-110">This approach is typically used in [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] to override default methods for `Insert`, `Update`, `Delete`, and to validate properties during object life-cycle events.</span></span>  
   
- <span data-ttu-id="17bc2-111">如需詳細資訊，請參閱 <<c0> [ 部分方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)(Visual Basic) 或[partial （方法） (C#參考)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#)。</c0></span><span class="sxs-lookup"><span data-stu-id="17bc2-111">For more information, see [Partial Methods](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) or [partial (Method) (C# Reference)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).</span></span>  
+ <span data-ttu-id="6c245-111">如需詳細資訊，請參閱 <<c0> [ 部分方法](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md)(Visual Basic) 或[partial （方法） (C#參考)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#)。</c0></span><span class="sxs-lookup"><span data-stu-id="6c245-111">For more information, see [Partial Methods](~/docs/visual-basic/programming-guide/language-features/procedures/partial-methods.md) (Visual Basic) or [partial (Method) (C# Reference)](~/docs/csharp/language-reference/keywords/partial-method.md) (C#).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="17bc2-112">範例</span><span class="sxs-lookup"><span data-stu-id="17bc2-112">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6c245-112">範例</span><span class="sxs-lookup"><span data-stu-id="6c245-112">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="17bc2-113">描述</span><span class="sxs-lookup"><span data-stu-id="17bc2-113">Description</span></span>  
- <span data-ttu-id="17bc2-114">下列範例會先顯示 `ExampleClass`，因為它可能是由程式碼產生工具 (例如 SQLMetal) 所定義，然後顯示您如何僅實作其中一種方法。</span><span class="sxs-lookup"><span data-stu-id="17bc2-114">The following example shows `ExampleClass` first as it might be defined by a code-generating tool such as SQLMetal, and then how you might implement only one of the two methods.</span></span>  
+### <a name="description"></a><span data-ttu-id="6c245-113">描述</span><span class="sxs-lookup"><span data-stu-id="6c245-113">Description</span></span>  
+ <span data-ttu-id="6c245-114">下列範例會先顯示 `ExampleClass`，因為它可能是由程式碼產生工具 (例如 SQLMetal) 所定義，然後顯示您如何僅實作其中一種方法。</span><span class="sxs-lookup"><span data-stu-id="6c245-114">The following example shows `ExampleClass` first as it might be defined by a code-generating tool such as SQLMetal, and then how you might implement only one of the two methods.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="17bc2-115">程式碼</span><span class="sxs-lookup"><span data-stu-id="17bc2-115">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="6c245-115">程式碼</span><span class="sxs-lookup"><span data-stu-id="6c245-115">Code</span></span>  
  [!code-csharp[DLinqSubmittingChanges#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqSubmittingChanges/cs/Program.cs#4)]
  [!code-vb[DLinqSubmittingChanges#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSubmittingChanges/vb/Module1.vb#4)]  
   
-## <a name="example"></a><span data-ttu-id="17bc2-116">範例</span><span class="sxs-lookup"><span data-stu-id="17bc2-116">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="6c245-116">範例</span><span class="sxs-lookup"><span data-stu-id="6c245-116">Example</span></span>  
   
-### <a name="description"></a><span data-ttu-id="17bc2-117">描述</span><span class="sxs-lookup"><span data-stu-id="17bc2-117">Description</span></span>  
- <span data-ttu-id="17bc2-118">下列範例會使用 `Shipper` 和 `Order` 實體 (Entity) 之間的關聯性 (Relationship)。</span><span class="sxs-lookup"><span data-stu-id="17bc2-118">The following example uses the relationship between `Shipper` and `Order` entities.</span></span> <span data-ttu-id="17bc2-119">請注意部分方法中的 `InsertShipper` 和 `DeleteShipper` 方法。</span><span class="sxs-lookup"><span data-stu-id="17bc2-119">Note among the methods the partial methods, `InsertShipper` and `DeleteShipper`.</span></span> <span data-ttu-id="17bc2-120">這些方法會覆寫所提供的預設部分方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]對應。</span><span class="sxs-lookup"><span data-stu-id="17bc2-120">These methods override the default partial methods supplied by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapping.</span></span>  
+### <a name="description"></a><span data-ttu-id="6c245-117">描述</span><span class="sxs-lookup"><span data-stu-id="6c245-117">Description</span></span>  
+ <span data-ttu-id="6c245-118">下列範例會使用 `Shipper` 和 `Order` 實體 (Entity) 之間的關聯性 (Relationship)。</span><span class="sxs-lookup"><span data-stu-id="6c245-118">The following example uses the relationship between `Shipper` and `Order` entities.</span></span> <span data-ttu-id="6c245-119">請注意部分方法中的 `InsertShipper` 和 `DeleteShipper` 方法。</span><span class="sxs-lookup"><span data-stu-id="6c245-119">Note among the methods the partial methods, `InsertShipper` and `DeleteShipper`.</span></span> <span data-ttu-id="6c245-120">這些方法會覆寫所提供的預設部分方法[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]對應。</span><span class="sxs-lookup"><span data-stu-id="6c245-120">These methods override the default partial methods supplied by [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] mapping.</span></span>  
   
-### <a name="code"></a><span data-ttu-id="17bc2-121">程式碼</span><span class="sxs-lookup"><span data-stu-id="17bc2-121">Code</span></span>  
+### <a name="code"></a><span data-ttu-id="6c245-121">程式碼</span><span class="sxs-lookup"><span data-stu-id="6c245-121">Code</span></span>  
  [!code-csharp[DLinqOverrideDefault#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqOverrideDefault/cs/northwind.cs#1)]
  [!code-vb[DLinqOverrideDefault#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefault/vb/northwind.vb#1)]  
   
-## <a name="see-also"></a><span data-ttu-id="17bc2-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17bc2-122">See also</span></span>
-- [<span data-ttu-id="17bc2-123">變更和提交資料</span><span class="sxs-lookup"><span data-stu-id="17bc2-123">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
-- [<span data-ttu-id="17bc2-124">自訂插入、更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="17bc2-124">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
+## <a name="see-also"></a><span data-ttu-id="6c245-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6c245-122">See also</span></span>
+
+- [<span data-ttu-id="6c245-123">變更資料和提交</span><span class="sxs-lookup"><span data-stu-id="6c245-123">Making and Submitting Data Changes</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+- [<span data-ttu-id="6c245-124">自訂插入、更新和刪除作業</span><span class="sxs-lookup"><span data-stu-id="6c245-124">Customizing Insert, Update, and Delete Operations</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)
