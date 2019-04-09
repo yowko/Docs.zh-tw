@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 Windows 認證的服務安全
+title: HOW TO：使用 Windows 認證來確保服務安全
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: b5fece86dca524cb3f94f64dcb98361a93bf84a3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410923"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111328"
 ---
-# <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證的服務安全
+# <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
 本主題說明如何啟用位於 Windows 網域，而且由相同的網域中的用戶端呼叫的 Windows Communication Foundation (WCF) 服務上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱 < [Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
   
  這個主題假設您擁有現有的合約介面、已定義了實作 (Implementation)，以及一些附加內容。 您也可以修改現有的服務和用戶端。  
@@ -148,8 +148,9 @@ ms.locfileid: "58410923"
  [!code-vb[c_SecureWindowsClient#0](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#0)]      
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
-- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
+- [HOW TO：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [保護服務的安全](../../../docs/framework/wcf/securing-services.md)
 - [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)

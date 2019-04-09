@@ -5,12 +5,12 @@ helpviewer_keywords:
 - mc:ProcessContent attribute
 - XAML [WPF], mc:ProcessContent attribute
 ms.assetid: 2689b2c8-b4dc-4b71-b9bd-f95e619122d7
-ms.openlocfilehash: a9af18d1fac9101a75ac16918adf8e86ef7d2ba4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 865b1a3ccc30ff5efab4b08956bf7ba2bba4769c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357374"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59110582"
 ---
 # <a name="mcprocesscontent-attribute"></a>mc:ProcessContent 屬性
 指定哪些[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]項目仍有其內容相關的父項目處理，即使的直屬父項目可能會忽略[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]因為指定的處理器[mc: Ignorable 屬性](mc-ignorable-attribute.md). `mc:ProcessContent`屬性支援標記相容性，以及自訂的命名空間對應性[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]版本控制。  
@@ -47,5 +47,6 @@ ms.locfileid: "57357374"
  [!INCLUDE[TLA#tla_mcxmlnsv1](../../../../includes/tlasharptla-mcxmlnsv1-md.md)]命名空間會定義其他項目和屬性的這個區域中未記載之[!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)]。 如需詳細資訊，請參閱 < [XML 標記相容性規格](https://go.microsoft.com/fwlink/?LinkId=73824)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [mc:Ignorable 屬性](mc-ignorable-attribute.md)
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)

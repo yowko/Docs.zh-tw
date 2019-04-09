@@ -14,15 +14,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b49b63049d33c41757db1abae82ed2a4e266b42
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 62e4328b75a7f6fecc28cd620ec3ac18460316c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572210"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111133"
 ---
 # <a name="writeablemetadataupdatemode-enumeration"></a>WriteableMetadataUpdateMode 列舉
-[在 .NET Framework 4.5.2 及更新版本中支援]  
+[.NET Framework 4.5.2 與更新版本提供支援]  
   
  提供值來指定偵錯工具是否可以看見對中繼資料的記憶體中更新。  
   
@@ -39,7 +39,7 @@ typedef enum WriteableMetadataUpdateMode {
   
 |成員名稱|描述|  
 |-----------------|-----------------|  
-|`LegacyCompatPolicy`|在對中繼資料可見性進行記憶體中更新時，維護與舊版 .NET Framework 的相容性。 如需詳細資訊，請參閱「備註」一節。|  
+|`LegacyCompatPolicy`|在對中繼資料可見性進行記憶體中更新時，維護與舊版 .NET Framework 的相容性。 如需詳細資訊，請參閱＜備註＞一節。|  
 |`AlwaysShowUpdates`|針對可讓偵錯工具看見的中繼資料進行記憶體中更新。|  
   
 ## <a name="remarks"></a>備註  
@@ -50,12 +50,13 @@ typedef enum WriteableMetadataUpdateMode {
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [SetWriteableMetadataUpdateMode 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess7-setwriteablemetadataupdatemode-method.md)

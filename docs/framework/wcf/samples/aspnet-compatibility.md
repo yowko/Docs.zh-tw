@@ -2,12 +2,12 @@
 title: ASP.NET 相容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 1128183e990567d15b133bf8aa4ff5d32f10c663
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 521ab07d2a747927a7b26c38221f59de736990b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54541088"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112524"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 相容性
 此範例示範如何啟用 ASP.NET 相容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 相容性模式會充分參與 ASP.NET 應用程式管線和可執行的服務使用的 ASP.NET 功能，例如檔案 /URL 授權、 工作階段狀態和<xref:System.Web.HttpContext>類別。 <xref:System.Web.HttpContext>類別可讓您存取 cookie、 工作階段和其他 ASP.NET 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  
@@ -128,4 +128,5 @@ Press <ENTER> to terminate client.
 4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

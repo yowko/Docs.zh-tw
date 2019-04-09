@@ -9,12 +9,12 @@ helpviewer_keywords:
 - configuration files [ASP.NET]
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 4bde008661e78fc85c428fa5100f81483936b460
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083596"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113057"
 ---
 # <a name="web-settings-schema"></a>Web 設定結構描述
 Web 設定會指定 CPU 和執行層級 ASP.NET 設定，這些設定將套用至 ASP.NET 裝載層管理的整個處理序行為。 這些設定不同於 ASP.NET 應用程式之 Web.config 檔中所指定的應用程式定義域類型設定。  
@@ -25,16 +25,17 @@ Web 設定會指定 CPU 和執行層級 ASP.NET 設定，這些設定將套用�
   
  Web 設定會在於任何其他組態檔中使用，例如 machine.config 檔、根目錄 Web.config 或應用程式層級 Web.config 檔。  
   
- [\<configuration> 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<組態 > 項目](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<system.web> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
+ [\<system.web > 項目 （Web 設定）](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
   
- [\<applicationPool> 項目 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
+ [\<applicationPool > 項目 （Web 設定）](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|包含 ASP.NET 裝載層使用的資訊。|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|指定 CPU 和執行層級 ASP.NET 設定，這些設定將套用至 ASP.NET 裝載層管理的整個處理序行為。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

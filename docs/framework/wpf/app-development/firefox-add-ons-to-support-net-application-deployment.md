@@ -7,12 +7,12 @@ helpviewer_keywords:
 - .NET application deployment [WPF], deploying with Firefox add-ons
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
-ms.openlocfilehash: 837ed1cd41869031e8c0b549ffcd26e3285570cd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111731"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>支援 .NET 應用程式部署的 Firefox 附加元件
 啟用 Windows Presentation Foundation (WPF) 外掛程式 Firefox 和.NET Framework Assistant for Firefox [!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、 鬆散[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，與 ClickOnce 應用程式，才能使用 Mozilla Firefox 瀏覽器。  
@@ -34,6 +34,7 @@ ms.locfileid: "57368060"
  .NET Framework Assistant for Firefox 隨附[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]。 移除適用於 Firefox 的.NET Framework Assistant 的詳細資訊，請參閱[如何移除適用於 Firefox 的.NET Framework Assistant](https://go.microsoft.com/fwlink/?LinkId=177944)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)
 - [WPF XAML 瀏覽器應用程式概觀](wpf-xaml-browser-applications-overview.md)
 - [偵測有無安裝 Firefox 的 WPF 外掛程式](how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 03f3ce51eaab9e08d5f05932d9360adc4fd2110f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59113772"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>安全及公開唯讀陣列欄位
 定義界限的行為或應用程式的安全性，因為可以修改公用唯讀陣列欄位，從 managed 程式庫永遠不會使用公用唯讀陣列欄位。  
@@ -26,4 +26,5 @@ ms.locfileid: "54560981"
  請注意.NET Framework 型別不會在內部定義界限類型使用的公用欄位。  相反地，.NET Framework 會使用個別的私用欄位。  變更這些公用欄位的值不會改變行為的.NET Framework 型別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

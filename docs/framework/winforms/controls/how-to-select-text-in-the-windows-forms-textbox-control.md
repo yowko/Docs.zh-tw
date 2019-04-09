@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Forms TextBox 控制項中選取文字
+title: HOW TO：選取 Windows Forms TextBox 控制項的文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: acb5434911b569b0a663f47ec5de04db13b436d3
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722280"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111432"
 ---
-# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>HOW TO：在 Windows Forms TextBox 控制項中選取文字
+# <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>HOW TO：選取 Windows Forms TextBox 控制項的文字
 您可以在 Windows Forms 中，以程式設計方式選取文字<xref:System.Windows.Forms.TextBox>控制項。 比方說，如果您建立函式，以搜尋特定字串的文字時，您可以選取要以視覺化方式警示找到的字串位置的讀取器的文字。  
   
 ### <a name="to-select-text-programmatically"></a>若要以程式設計方式選取文字  
@@ -68,11 +68,12 @@ ms.locfileid: "57722280"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.TextBox>
 - [TextBox 控制項概觀](textbox-control-overview-windows-forms.md)
-- [如何：控制 Windows Forms TextBox 控制項中的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [如何：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
-- [如何：將引號放入字串](how-to-put-quotation-marks-in-a-string-windows-forms.md)
-- [如何：在 Windows Forms TextBox 控制項中檢視多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [HOW TO：控制 Windows Forms TextBox 控制項的插入點](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [HOW TO：使用 Windows Forms TextBox 控制項建立密碼文字方塊](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [HOW TO：建立唯讀文字方塊](how-to-create-a-read-only-text-box-windows-forms.md)
+- [HOW TO：將引號放入字串中](how-to-put-quotation-marks-in-a-string-windows-forms.md)
+- [HOW TO：檢視 Windows Forms TextBox 控制項中的多行](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
 - [TextBox 控制項](textbox-control-windows-forms.md)

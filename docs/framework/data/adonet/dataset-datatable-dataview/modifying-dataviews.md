@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 697a3991-b660-4a5a-8a54-1a2304ff158e
-ms.openlocfilehash: f892a371ed23a810f71ef5a51393de4145478c10
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e340b9b72735598650d2eefa6e19ab40fffc2e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573240"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111549"
 ---
 # <a name="modifying-dataviews"></a>修改 DataView
 您可以使用 <xref:System.Data.DataView> 加入、刪除或修改基底資料表中的資料列。 若要使用的能力**DataView**修改基礎資料表中的資料由控制設定的三個布林值屬性的其中一個**DataView**。 這些屬性是 <xref:System.Data.DataView.AllowNew%2A>、<xref:System.Data.DataView.AllowEdit%2A> 和 <xref:System.Data.DataView.AllowDelete%2A>。 它們會設定為 **，則為 true**預設。  
@@ -52,8 +52,9 @@ newDRV.EndEdit();
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - <xref:System.Data.DataRowView>
 - [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db9876727244d528ec3b7f1c3c9875bb5ca645b5
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59111653"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 項目 (.NET Native)
 將原則套用到泛型類型或方法的參數類型。  
@@ -53,7 +53,7 @@ ms.locfileid: "55257768"
   
 |值|描述|  
 |-----------|-----------------|  
-|*generic_parameter_name*|必要屬性。 泛型類型參數的名稱。 例如，針對泛型委派的 <xref:System.Func%603>，"TResult" 的 *generic_parameter_name* 值會將執行階段原則套用至委派的傳回值。|  
+|*generic_parameter_name*|必要屬性。 泛型型別參數的名稱。 例如，針對泛型委派的 <xref:System.Func%603>，"TResult" 的 *generic_parameter_name* 值會將執行階段原則套用至委派的傳回值。|  
   
 ## <a name="all-other-attributes"></a>所有其他屬性  
   
@@ -68,7 +68,7 @@ ms.locfileid: "55257768"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
   
 ## <a name="remarks"></a>備註  
@@ -87,7 +87,8 @@ ms.locfileid: "55257768"
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
+
+- [\<方法 > 項目](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
