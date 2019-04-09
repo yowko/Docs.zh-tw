@@ -1,15 +1,15 @@
 ---
-title: 預計採用 Windows Communication Foundation:簡化未來整合
+title: 預計採用 Windows Communication Foundation：簡化未來整合
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: c20011c6cf7a31d8c45769b6995bb6754088bba6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731279"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124796"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>預計採用 Windows Communication Foundation:簡化未來整合
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>預計採用 Windows Communication Foundation：簡化未來整合
 如果您使用 ASP.NET，並預計在未來使用 WCF，本主題會提供指引以確定新的 ASP.NET Web 服務能夠順利與 WCF 應用程式。  
   
 ## <a name="general-recommendations"></a>一般建議  
@@ -44,4 +44,5 @@ public interface IEcho
  請避免使用 Internet Information Services (IIS) 提供的驗證選項。 WCF 用戶端不支援它們。 如果服務需要受到保護，請使用 WCF，因為這些選項會更豐富，並會以標準的通訊協定為基礎所提供的選項。  
   
 ## <a name="see-also"></a>另請參閱
-- [預計採用 Windows Communication Foundation:簡化未來移轉](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+
+- [預計採用 Windows Communication Foundation：簡化未來移轉](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)

@@ -1,5 +1,5 @@
 ---
-title: authenticationModules 的 <remove> 項目 (網路設定)
+title: <remove> AuthenticationModules （網路設定） 的項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - <remove> element, authenticationModules
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
-ms.openlocfilehash: a8afdf442f8dc4e57a407583ea6c452330dae53f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125249"
 ---
 # <a name="remove-element-for-authenticationmodules-network-settings"></a>\<移除 > authenticationModules （網路設定） 的項目
 移除應用程式中的驗證模組。  
@@ -40,14 +40,14 @@ ms.locfileid: "55281017"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|**type**|若要移除的驗證模組的名稱。|  
+|**類型**|若要移除的驗證模組的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   
@@ -73,6 +73,7 @@ ms.locfileid: "55281017"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.IAuthenticationModule>
 - <xref:System.Net.AuthenticationManager>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

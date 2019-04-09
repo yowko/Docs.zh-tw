@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 34f1c761a127fe00612259a79dae47d1c9d5512f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54534416"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121975"
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
 通常當建置 Windows Communication Foundation (WCF) 應用程式，開發人員密切注意資料結構與序列化的問題，並不需要顧慮傳送資料的訊息結構。 針對這類應用程式，建立參數的資料合約或傳回值是很明確的。 (如需詳細資訊，請參閱 < [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)  
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> 可讓您指定 WrapperName 和 WrapperNamespace 屬性，用來控制 SOAP 訊息本文中包裝函式元素的名稱。 預設情況下，訊息合約型別的名稱會用於包裝函式，而在訊息合約中定義的命名空間 `http://tempuri.org/` 會當做預設命名空間使用。  
   
 > [!NOTE]
->  在訊息合約中會忽略 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，請將其置於使用有問題之訊息合約的作業。  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性會被忽略，在訊息合約。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，請將其置於使用有問題之訊息合約的作業。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>控制標頭和本文部分的名稱與命名空間  
  在訊息合約的 SOAP 表示法中，每個標頭和本文部分會對應至擁有名稱與命名空間的 XML 項目。  
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 標頭屬性  
  SOAP 標準會定義下列可能存在於標頭的屬性：  
   
--   `Actor/Role` (在 SOAP 1.1 中為 `Actor`，在 SOAP 1.2 中為 `Role`)  
+-   `Actor/Role` (`Actor` soap 1.1，`Role`在 SOAP 1.2)  
   
 -   `MustUnderstand`  
   
@@ -336,7 +336,7 @@ public class BankingTransaction
   
 -   繼承階層架構中的所有訊息標頭都會收集在一起，以形成訊息標頭的完整集合。  
   
--   繼承階層架構中的所有訊息本文部分都會收集在一起，以形成完整的訊息本文。 本文部分會根據常用排序規則 (根據 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性，然後再根據字母順序) 進行排序，並且與它們在繼承階層架構中的位置無關。 強烈建議不要在繼承樹狀結構之多個層級中發生訊息本文部分的情況下，使用訊息合約繼承。 如果基底類別和衍生類別使用相同名稱定義標頭或本文部分，則會使用來自最底層類別的成員儲存該標頭或本文部分的值。  
+-   繼承階層架構中的所有訊息本文部分都會收集在一起，以形成完整的訊息本文。 本文部分會根據常用排序規則 (根據 <xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> 屬性，然後再根據字母順序) 進行排序，並且與它們在繼承階層架構中的位置無關。 強烈建議不要在繼承樹狀之多個層級中發生訊息本文部分的情況下，使用訊息合約繼承。 如果基底類別和衍生類別使用相同名稱定義標頭或本文部分，則會使用來自最底層類別的成員儲存該標頭或本文部分的值。  
   
  請考量下列程式碼範例中的類別。  
   
@@ -448,5 +448,6 @@ public class OperationDetails
  如果您要接收訊息物件做為 `Result` 屬性，並讓傳回的值做為該物件的屬性，則使用 `/messageContract` 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立使用自訂憑證驗證程式服務
+title: HOW TO：建立使用自訂憑證驗證程式的服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: bb0190ff-0738-4e54-8d22-c97d343708bf
-ms.openlocfilehash: c4e9be8cb24745cd9651d4ee649a9a37520aa58d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c2eb820a7e087d99ebd2c463db6e10595f7c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569319"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119622"
 ---
-# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>HOW TO：建立使用自訂憑證驗證程式服務
+# <a name="how-to-create-a-service-that-employs-a-custom-certificate-validator"></a>HOW TO：建立使用自訂憑證驗證程式的服務
 這個主題將示範如何實作自訂憑證驗證程式，以及如何設定用戶端或服務認證，以使用自訂憑證驗證程式來取代預設的憑證驗證邏輯。  
   
  如果 X.509 憑證來驗證用戶端或服務，Windows Communication Foundation (WCF) 設定預設使用 Windows 憑證存放區和 Crypto API 來驗證憑證，並確保它是受信任。 有時內建的憑證驗證功能不足，必須變更。 WCF 會提供簡單的方法，以變更驗證邏輯可讓使用者新增的自訂憑證驗證。 如果指定的自訂憑證驗證，則 WCF 不會使用內建的憑證驗證邏輯，但改為依賴自訂驗證程式。  
@@ -130,4 +130,5 @@ ms.locfileid: "54569319"
  [!code-vb[c_CustomCertificateValidator#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcertificatevalidator/vb/source.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Selectors.X509CertificateValidator>
