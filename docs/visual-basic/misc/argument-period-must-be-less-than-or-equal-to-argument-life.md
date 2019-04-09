@@ -4,21 +4,20 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrFinancial_PeriodLELife
 ms.assetid: dc575d41-b376-4b05-bbbe-6de1e98385f1
-ms.openlocfilehash: 29945e72dfcd93910a96d14d840a0052ce9f40d2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcf343a224efd7fac3767dd37d93136c95242b08
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605639"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152187"
 ---
-# <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a><span data-ttu-id="927f3-102">引數 'Period' 必須小於或等於引數 'Life'</span><span class="sxs-lookup"><span data-stu-id="927f3-102">Argument 'Period' must be less than or equal to argument 'Life'</span></span>
-<span data-ttu-id="927f3-103">`Period` 引數 (指定計算資產折舊期間) 的值大於 `Life` 引數的值。</span><span class="sxs-lookup"><span data-stu-id="927f3-103">The value of the `Period` argument, which specifies the period for which asset depreciation is calculated, is greater than the value of the `Life` argument.</span></span>  
+# <a name="argument-period-must-be-less-than-or-equal-to-argument-life"></a><span data-ttu-id="d6dcb-102">引數 'Period' 必須小於或等於引數 'Life'</span><span class="sxs-lookup"><span data-stu-id="d6dcb-102">Argument 'Period' must be less than or equal to argument 'Life'</span></span>
+<span data-ttu-id="d6dcb-103">`Period` 引數 (指定計算資產折舊期間) 的值大於 `Life` 引數的值。</span><span class="sxs-lookup"><span data-stu-id="d6dcb-103">The value of the `Period` argument, which specifies the period for which asset depreciation is calculated, is greater than the value of the `Life` argument.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="927f3-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="927f3-104">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d6dcb-104">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="d6dcb-104">To correct this error</span></span>  
   
--   <span data-ttu-id="927f3-105">確定 `Life` 和 `Period` 引數以相同的單位表示。</span><span class="sxs-lookup"><span data-stu-id="927f3-105">Ensure that the `Life` and `Period` arguments are expressed in the same units.</span></span> <span data-ttu-id="927f3-106">例如，如果 `Life` 是以月份為測量單位，則 `Period` 應該也是。</span><span class="sxs-lookup"><span data-stu-id="927f3-106">For example, if `Life` is measured in months, `Period` should be as well.</span></span>  
+-   <span data-ttu-id="d6dcb-105">確定 `Life` 和 `Period` 引數以相同的單位表示。</span><span class="sxs-lookup"><span data-stu-id="d6dcb-105">Ensure that the `Life` and `Period` arguments are expressed in the same units.</span></span> <span data-ttu-id="d6dcb-106">例如，如果 `Life` 是以月份為測量單位，則 `Period` 應該也是。</span><span class="sxs-lookup"><span data-stu-id="d6dcb-106">For example, if `Life` is measured in months, `Period` should be as well.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="927f3-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="927f3-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d6dcb-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d6dcb-107">See also</span></span>
 
-
-- [<span data-ttu-id="927f3-108">以傳值和傳址方式傳遞引數</span><span class="sxs-lookup"><span data-stu-id="927f3-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)
+- [<span data-ttu-id="d6dcb-108">以傳值和傳址方式傳遞引數</span><span class="sxs-lookup"><span data-stu-id="d6dcb-108">Passing Arguments by Value and by Reference</span></span>](../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference.md)

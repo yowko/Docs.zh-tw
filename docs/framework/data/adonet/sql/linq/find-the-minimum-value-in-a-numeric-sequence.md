@@ -5,39 +5,39 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 78203093-f242-4572-9b31-9495b10926aa
-ms.openlocfilehash: f92558798267760eb6cfd1bfc6365451cdcc1c62
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 84002609c550cc2de76f9948bf77f9fd88261f64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136717"
 ---
-# <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="d0fc8-102">尋找數值序列中的最小值</span><span class="sxs-lookup"><span data-stu-id="d0fc8-102">Find the Minimum Value in a Numeric Sequence</span></span>
-<span data-ttu-id="d0fc8-103">使用 <xref:System.Linq.Enumerable.Min%2A> 運算子可傳回數值序列中的最小值。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  
+# <a name="find-the-minimum-value-in-a-numeric-sequence"></a><span data-ttu-id="cc6f7-102">尋找數值序列中的最小值</span><span class="sxs-lookup"><span data-stu-id="cc6f7-102">Find the Minimum Value in a Numeric Sequence</span></span>
+<span data-ttu-id="cc6f7-103">使用 <xref:System.Linq.Enumerable.Min%2A> 運算子可傳回數值序列中的最小值。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-103">Use the <xref:System.Linq.Enumerable.Min%2A> operator to return the minimum value from a sequence of numeric values.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="d0fc8-104">範例</span><span class="sxs-lookup"><span data-stu-id="d0fc8-104">Example</span></span>  
- <span data-ttu-id="d0fc8-105">下列範例會尋找任何產品的最低單價。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-105">The following example finds the lowest unit price of any product.</span></span>  
+## <a name="example"></a><span data-ttu-id="cc6f7-104">範例</span><span class="sxs-lookup"><span data-stu-id="cc6f7-104">Example</span></span>  
+ <span data-ttu-id="cc6f7-105">下列範例會尋找任何產品的最低單價。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-105">The following example finds the lowest unit price of any product.</span></span>  
   
- <span data-ttu-id="d0fc8-106">如果您對 Northwind 範例資料庫執行這個查詢，則輸出為：`2.5000`。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-106">If you run this query against the Northwind sample database, the output is: `2.5000`.</span></span>  
+ <span data-ttu-id="cc6f7-106">如果您對 Northwind 範例資料庫執行這個查詢，則輸出為：`2.5000`。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-106">If you run this query against the Northwind sample database, the output is: `2.5000`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#9](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#9)]
  [!code-vb[DLinqQueryExamples#9](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#9)]  
   
-## <a name="example"></a><span data-ttu-id="d0fc8-107">範例</span><span class="sxs-lookup"><span data-stu-id="d0fc8-107">Example</span></span>  
- <span data-ttu-id="d0fc8-108">下列範例會尋找任何訂單的最低運費金額。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-108">The following example finds the lowest freight amount for any order.</span></span>  
+## <a name="example"></a><span data-ttu-id="cc6f7-107">範例</span><span class="sxs-lookup"><span data-stu-id="cc6f7-107">Example</span></span>  
+ <span data-ttu-id="cc6f7-108">下列範例會尋找任何訂單的最低運費金額。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-108">The following example finds the lowest freight amount for any order.</span></span>  
   
- <span data-ttu-id="d0fc8-109">如果您對 Northwind 範例資料庫執行這個查詢，則輸出為：`0.0200`。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-109">If you run this query against the Northwind sample database, the output is: `0.0200`.</span></span>  
+ <span data-ttu-id="cc6f7-109">如果您對 Northwind 範例資料庫執行這個查詢，則輸出為：`0.0200`。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-109">If you run this query against the Northwind sample database, the output is: `0.0200`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#10](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#10)]
  [!code-vb[DLinqQueryExamples#10](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#10)]  
   
-## <a name="example"></a><span data-ttu-id="d0fc8-110">範例</span><span class="sxs-lookup"><span data-stu-id="d0fc8-110">Example</span></span>  
- <span data-ttu-id="d0fc8-111">下列範例會使用 Min 來尋找各分類中具有最低單價的 `Products`。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-111">The following example uses Min to find the `Products` that have the lowest unit price in each category.</span></span> <span data-ttu-id="d0fc8-112">輸出會按照分類排列。</span><span class="sxs-lookup"><span data-stu-id="d0fc8-112">The output is arranged by category.</span></span>  
+## <a name="example"></a><span data-ttu-id="cc6f7-110">範例</span><span class="sxs-lookup"><span data-stu-id="cc6f7-110">Example</span></span>  
+ <span data-ttu-id="cc6f7-111">下列範例會使用 Min 來尋找各分類中具有最低單價的 `Products`。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-111">The following example uses Min to find the `Products` that have the lowest unit price in each category.</span></span> <span data-ttu-id="cc6f7-112">輸出會按照分類排列。</span><span class="sxs-lookup"><span data-stu-id="cc6f7-112">The output is arranged by category.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#11](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#11)]
  [!code-vb[DLinqQueryExamples#11](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#11)]  
   
- <span data-ttu-id="d0fc8-113">如果您對 Northwind 範例資料庫執行前一個查詢，則結果會類似下列：</span><span class="sxs-lookup"><span data-stu-id="d0fc8-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
+ <span data-ttu-id="cc6f7-113">如果您對 Northwind 範例資料庫執行前一個查詢，則結果會類似下列：</span><span class="sxs-lookup"><span data-stu-id="cc6f7-113">If you run the previous query against the Northwind sample database, your results will resemble the following:</span></span>  
   
  `1`  
   
@@ -71,6 +71,7 @@ ms.locfileid: "54529985"
   
  `Konbu`  
   
-## <a name="see-also"></a><span data-ttu-id="d0fc8-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0fc8-114">See also</span></span>
-- [<span data-ttu-id="d0fc8-115">彙總查詢</span><span class="sxs-lookup"><span data-stu-id="d0fc8-115">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
-- [<span data-ttu-id="d0fc8-116">下載範例資料庫</span><span class="sxs-lookup"><span data-stu-id="d0fc8-116">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
+## <a name="see-also"></a><span data-ttu-id="cc6f7-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cc6f7-114">See also</span></span>
+
+- [<span data-ttu-id="cc6f7-115">彙總查詢</span><span class="sxs-lookup"><span data-stu-id="cc6f7-115">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [<span data-ttu-id="cc6f7-116">下載範例資料庫</span><span class="sxs-lookup"><span data-stu-id="cc6f7-116">Downloading Sample Databases</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)

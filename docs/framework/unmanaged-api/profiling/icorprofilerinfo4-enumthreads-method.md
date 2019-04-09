@@ -17,40 +17,41 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c4d754ea00dae3893b8630e248523b97ae96d78
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bd0a4149b6dc6023579e8bc5b40751d23416e3a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496777"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59202361"
 ---
-# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="bce21-102">ICorProfilerInfo4::EnumThreads 方法</span><span class="sxs-lookup"><span data-stu-id="bce21-102">ICorProfilerInfo4::EnumThreads Method</span></span>
-<span data-ttu-id="bce21-103">傳回提供循序逐一查看集合的已分析的處理序中的所有 managed 執行緒的方法的列舉。</span><span class="sxs-lookup"><span data-stu-id="bce21-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
+# <a name="icorprofilerinfo4enumthreads-method"></a><span data-ttu-id="e4887-102">ICorProfilerInfo4::EnumThreads 方法</span><span class="sxs-lookup"><span data-stu-id="e4887-102">ICorProfilerInfo4::EnumThreads Method</span></span>
+<span data-ttu-id="e4887-103">傳回提供循序逐一查看集合的已分析的處理序中的所有 managed 執行緒的方法的列舉。</span><span class="sxs-lookup"><span data-stu-id="e4887-103">Returns an enumerator that provides methods to sequentially iterate through the collection of all managed threads in the profiled process.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="bce21-104">語法</span><span class="sxs-lookup"><span data-stu-id="bce21-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e4887-104">語法</span><span class="sxs-lookup"><span data-stu-id="e4887-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumThreads([out]  
             ICorProfilerThreadEnum** ppEnum);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="bce21-105">參數</span><span class="sxs-lookup"><span data-stu-id="bce21-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e4887-105">參數</span><span class="sxs-lookup"><span data-stu-id="e4887-105">Parameters</span></span>  
  `ppEnum`  
- <span data-ttu-id="bce21-106">[out]指標[ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="bce21-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
+ <span data-ttu-id="e4887-106">[out]指標[ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)介面。</span><span class="sxs-lookup"><span data-stu-id="e4887-106">[out] A pointer to an [ICorProfilerThreadEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md) interface.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="bce21-107">備註</span><span class="sxs-lookup"><span data-stu-id="bce21-107">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e4887-107">備註</span><span class="sxs-lookup"><span data-stu-id="e4887-107">Remarks</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="bce21-108">需求</span><span class="sxs-lookup"><span data-stu-id="bce21-108">Requirements</span></span>  
- <span data-ttu-id="bce21-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="bce21-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e4887-108">需求</span><span class="sxs-lookup"><span data-stu-id="e4887-108">Requirements</span></span>  
+ <span data-ttu-id="e4887-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e4887-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="bce21-110">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="bce21-110">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="e4887-110">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="e4887-110">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="bce21-111">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="bce21-111">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e4887-111">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e4887-111">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="bce21-112">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="bce21-112">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
+ **<span data-ttu-id="e4887-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="e4887-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="bce21-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bce21-113">See also</span></span>
-- [<span data-ttu-id="bce21-114">ICorProfilerThreadEnum 介面</span><span class="sxs-lookup"><span data-stu-id="bce21-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
-- [<span data-ttu-id="bce21-115">ICorProfilerInfo4 介面</span><span class="sxs-lookup"><span data-stu-id="bce21-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
-- [<span data-ttu-id="bce21-116">分析介面</span><span class="sxs-lookup"><span data-stu-id="bce21-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
-- [<span data-ttu-id="bce21-117">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="bce21-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)
+## <a name="see-also"></a><span data-ttu-id="e4887-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4887-113">See also</span></span>
+
+- [<span data-ttu-id="e4887-114">ICorProfilerThreadEnum 介面</span><span class="sxs-lookup"><span data-stu-id="e4887-114">ICorProfilerThreadEnum Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerthreadenum-interface.md)
+- [<span data-ttu-id="e4887-115">ICorProfilerInfo4 介面</span><span class="sxs-lookup"><span data-stu-id="e4887-115">ICorProfilerInfo4 Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo4-interface.md)
+- [<span data-ttu-id="e4887-116">分析介面</span><span class="sxs-lookup"><span data-stu-id="e4887-116">Profiling Interfaces</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
+- [<span data-ttu-id="e4887-117">程式碼剖析</span><span class="sxs-lookup"><span data-stu-id="e4887-117">Profiling</span></span>](../../../../docs/framework/unmanaged-api/profiling/index.md)

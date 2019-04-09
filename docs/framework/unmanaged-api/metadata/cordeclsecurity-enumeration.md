@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 47819740207ae94b814b3009708c2fd247688661
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5409d1b89ba3e50c4ae17ed5aa6bf063cf6c93cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563999"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136964"
 ---
-# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="af103-102">CorDeclSecurity 列舉</span><span class="sxs-lookup"><span data-stu-id="af103-102">CorDeclSecurity Enumeration</span></span>
-<span data-ttu-id="af103-103">指定可以使用宣告式安全性執行的安全性動作。</span><span class="sxs-lookup"><span data-stu-id="af103-103">Specifies the security actions that can be performed using declarative security.</span></span>  
+# <a name="cordeclsecurity-enumeration"></a><span data-ttu-id="8e531-102">CorDeclSecurity 列舉</span><span class="sxs-lookup"><span data-stu-id="8e531-102">CorDeclSecurity Enumeration</span></span>
+<span data-ttu-id="8e531-103">指定可以使用宣告式安全性執行的安全性動作。</span><span class="sxs-lookup"><span data-stu-id="8e531-103">Specifies the security actions that can be performed using declarative security.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="af103-104">語法</span><span class="sxs-lookup"><span data-stu-id="af103-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="8e531-104">語法</span><span class="sxs-lookup"><span data-stu-id="8e531-104">Syntax</span></span>  
   
 ```  
 typedef enum CorDeclSecurity {  
@@ -56,38 +56,39 @@ typedef enum CorDeclSecurity {
 } CorDeclSecurity;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="af103-105">成員</span><span class="sxs-lookup"><span data-stu-id="af103-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="8e531-105">成員</span><span class="sxs-lookup"><span data-stu-id="8e531-105">Members</span></span>  
   
-|<span data-ttu-id="af103-106">成員</span><span class="sxs-lookup"><span data-stu-id="af103-106">Member</span></span>|<span data-ttu-id="af103-107">描述</span><span class="sxs-lookup"><span data-stu-id="af103-107">Description</span></span>|  
+|<span data-ttu-id="8e531-106">成員</span><span class="sxs-lookup"><span data-stu-id="8e531-106">Member</span></span>|<span data-ttu-id="8e531-107">描述</span><span class="sxs-lookup"><span data-stu-id="8e531-107">Description</span></span>|  
 |------------|-----------------|  
-|`dclActionMask`|<span data-ttu-id="af103-108">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-108">Reserved.</span></span>|  
-|`dclActionNil`|<span data-ttu-id="af103-109">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-109">Reserved.</span></span>|  
-|`dclRequest`|<span data-ttu-id="af103-110">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-110">Reserved.</span></span>|  
-|`dclDemand`|<span data-ttu-id="af103-111">呼叫堆疊中較高層的所有呼叫端，必須已獲得目前權限物件所指定的權限。</span><span class="sxs-lookup"><span data-stu-id="af103-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
-|`dclAssert`|<span data-ttu-id="af103-112">呼叫端程式碼可以存取目前權限物件所識別的資源，即使堆疊中較高層的呼叫端未獲得存取資源的權限</span><span class="sxs-lookup"><span data-stu-id="af103-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
-|`dclDeny`|<span data-ttu-id="af103-113">存取目前的使用權限物件所指定之資源的能力被拒絕呼叫端，即使使用者已獲得存取權限。</span><span class="sxs-lookup"><span data-stu-id="af103-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
-|`dclPermitOnly`|<span data-ttu-id="af103-114">只可存取這個權限物件所指定的資源，即使程式碼已獲得其他資源存取權限亦然。</span><span class="sxs-lookup"><span data-stu-id="af103-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
-|`dclLinktimeCheck`|<span data-ttu-id="af103-115">已授與指定的一段時間的指定權限需要立即呼叫端。</span><span class="sxs-lookup"><span data-stu-id="af103-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
-|`dclInheritanceCheck`|<span data-ttu-id="af103-116">衍生的類別繼承另一個類別或覆寫的方法，才能獲得指定權限。</span><span class="sxs-lookup"><span data-stu-id="af103-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
-|`dclRequestMinimum`|<span data-ttu-id="af103-117">呼叫端可以要求執行的程式碼所需的最低權限。</span><span class="sxs-lookup"><span data-stu-id="af103-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="af103-118">這個動作只能在組件的範圍內使用。</span><span class="sxs-lookup"><span data-stu-id="af103-118">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestOptional`|<span data-ttu-id="af103-119">呼叫端可以要求的是選擇性的 （不需要執行） 的其他權限。</span><span class="sxs-lookup"><span data-stu-id="af103-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="af103-120">這項要求會隱含拒絕未特別要求的所有其他權限。</span><span class="sxs-lookup"><span data-stu-id="af103-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="af103-121">這個動作只能在組件的範圍內使用。</span><span class="sxs-lookup"><span data-stu-id="af103-121">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclRequestRefuse`|<span data-ttu-id="af103-122">未被授與呼叫端的要求可能遭到誤用的權限。</span><span class="sxs-lookup"><span data-stu-id="af103-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="af103-123">這個動作只能在組件的範圍內使用。</span><span class="sxs-lookup"><span data-stu-id="af103-123">This action can only be used within the scope of the assembly.</span></span>|  
-|`dclPrejitGrant`|<span data-ttu-id="af103-124">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-124">Reserved.</span></span>|  
-|`dclPrejitDenied`|<span data-ttu-id="af103-125">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-125">Reserved.</span></span>|  
-|`dclNonCasDemand`|<span data-ttu-id="af103-126">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-126">Reserved.</span></span>|  
-|`dclNonCasLinkDemand`|<span data-ttu-id="af103-127">直接呼叫端必須已獲得指定權限。</span><span class="sxs-lookup"><span data-stu-id="af103-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
-|`dclNonCasInheritance`|<span data-ttu-id="af103-128">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-128">Reserved.</span></span>|  
-|`dclLinkDemandChoice`|<span data-ttu-id="af103-129">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-129">Reserved.</span></span>|  
-|`dclInheritanceDemandChoice`|<span data-ttu-id="af103-130">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-130">Reserved.</span></span>|  
-|`dclDemandChoice`|<span data-ttu-id="af103-131">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-131">Reserved.</span></span>|  
-|`dclMaximumValue`|<span data-ttu-id="af103-132">保留的。</span><span class="sxs-lookup"><span data-stu-id="af103-132">Reserved.</span></span>|  
+|`dclActionMask`|<span data-ttu-id="8e531-108">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-108">Reserved.</span></span>|  
+|`dclActionNil`|<span data-ttu-id="8e531-109">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-109">Reserved.</span></span>|  
+|`dclRequest`|<span data-ttu-id="8e531-110">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-110">Reserved.</span></span>|  
+|`dclDemand`|<span data-ttu-id="8e531-111">呼叫堆疊中較高層的所有呼叫端，必須已獲得目前權限物件所指定的權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-111">All callers higher in the call stack are required to have been granted the permission specified by the current permission object.</span></span>|  
+|`dclAssert`|<span data-ttu-id="8e531-112">呼叫端程式碼可以存取目前權限物件所識別的資源，即使堆疊中較高層的呼叫端未獲得存取資源的權限</span><span class="sxs-lookup"><span data-stu-id="8e531-112">The calling code can access the resource identified by the current permission object, even if callers higher in the stack have not been granted permission to access the resource</span></span>|  
+|`dclDeny`|<span data-ttu-id="8e531-113">存取目前的使用權限物件所指定之資源的能力被拒絕呼叫端，即使使用者已獲得存取權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-113">The ability to access the resource specified by the current permission object is denied to callers, even if they have been granted permission to access it.</span></span>|  
+|`dclPermitOnly`|<span data-ttu-id="8e531-114">只可存取這個權限物件所指定的資源，即使程式碼已獲得其他資源存取權限亦然。</span><span class="sxs-lookup"><span data-stu-id="8e531-114">Only the resources specified by this permission object can be accessed, even if the code has been granted permission to access other resources.</span></span>|  
+|`dclLinktimeCheck`|<span data-ttu-id="8e531-115">已授與指定的一段時間的指定權限需要立即呼叫端。</span><span class="sxs-lookup"><span data-stu-id="8e531-115">The immediate caller is required to have been granted the specified permission for a given period of time.</span></span>|  
+|`dclInheritanceCheck`|<span data-ttu-id="8e531-116">衍生的類別繼承另一個類別或覆寫的方法，才能獲得指定權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-116">The derived class inheriting another class or overriding a method is required to have been granted the specified permission.</span></span>|  
+|`dclRequestMinimum`|<span data-ttu-id="8e531-117">呼叫端可以要求執行的程式碼所需的最低權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-117">The caller can request for the minimum permissions required for code to run.</span></span> <span data-ttu-id="8e531-118">這個動作只能在組件的範圍內使用。</span><span class="sxs-lookup"><span data-stu-id="8e531-118">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestOptional`|<span data-ttu-id="8e531-119">呼叫端可以要求的是選擇性的 （不需要執行） 的其他權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-119">The caller can request for additional permissions that are optional (not required to run).</span></span> <span data-ttu-id="8e531-120">這項要求會隱含拒絕未特別要求的所有其他權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-120">This request implicitly refuses all other permissions not specifically requested.</span></span> <span data-ttu-id="8e531-121">這個動作只能在組件的範圍內使用。</span><span class="sxs-lookup"><span data-stu-id="8e531-121">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclRequestRefuse`|<span data-ttu-id="8e531-122">未被授與呼叫端的要求可能遭到誤用的權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-122">The caller's request for permissions that might be misused will not be granted.</span></span> <span data-ttu-id="8e531-123">這個動作只能在組件的範圍內使用。</span><span class="sxs-lookup"><span data-stu-id="8e531-123">This action can only be used within the scope of the assembly.</span></span>|  
+|`dclPrejitGrant`|<span data-ttu-id="8e531-124">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-124">Reserved.</span></span>|  
+|`dclPrejitDenied`|<span data-ttu-id="8e531-125">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-125">Reserved.</span></span>|  
+|`dclNonCasDemand`|<span data-ttu-id="8e531-126">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-126">Reserved.</span></span>|  
+|`dclNonCasLinkDemand`|<span data-ttu-id="8e531-127">直接呼叫端必須已獲得指定權限。</span><span class="sxs-lookup"><span data-stu-id="8e531-127">The immediate caller is required to have been granted the specified permission.</span></span>|  
+|`dclNonCasInheritance`|<span data-ttu-id="8e531-128">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-128">Reserved.</span></span>|  
+|`dclLinkDemandChoice`|<span data-ttu-id="8e531-129">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-129">Reserved.</span></span>|  
+|`dclInheritanceDemandChoice`|<span data-ttu-id="8e531-130">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-130">Reserved.</span></span>|  
+|`dclDemandChoice`|<span data-ttu-id="8e531-131">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-131">Reserved.</span></span>|  
+|`dclMaximumValue`|<span data-ttu-id="8e531-132">保留的。</span><span class="sxs-lookup"><span data-stu-id="8e531-132">Reserved.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="af103-133">需求</span><span class="sxs-lookup"><span data-stu-id="af103-133">Requirements</span></span>  
- <span data-ttu-id="af103-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="af103-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="8e531-133">需求</span><span class="sxs-lookup"><span data-stu-id="8e531-133">Requirements</span></span>  
+ <span data-ttu-id="8e531-134">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8e531-134">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="af103-135">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="af103-135">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="8e531-135">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="8e531-135">**Header:** CorHdr.h</span></span>  
   
- <span data-ttu-id="af103-136">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="af103-136">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="8e531-136">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="8e531-136">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="af103-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="af103-137">See also</span></span>
-- [<span data-ttu-id="af103-138">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="af103-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="8e531-137">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8e531-137">See also</span></span>
+
+- [<span data-ttu-id="8e531-138">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="8e531-138">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
