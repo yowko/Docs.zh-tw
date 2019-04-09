@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92911469383e9e8a1484eff4dedfaf61117e5982
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88f86385ba4f4186d14994a2028ee11c42127546
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108341"
 ---
-# <a name="igchostgetthreadstats-method"></a><span data-ttu-id="9df1d-102">IGCHost::GetThreadStats 方法</span><span class="sxs-lookup"><span data-stu-id="9df1d-102">IGCHost::GetThreadStats Method</span></span>
-<span data-ttu-id="9df1d-103">取得每個執行緒統計資料進行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="9df1d-103">Gets the per-thread statistics for garbage collection.</span></span>  
+# <a name="igchostgetthreadstats-method"></a><span data-ttu-id="cfe6c-102">IGCHost::GetThreadStats 方法</span><span class="sxs-lookup"><span data-stu-id="cfe6c-102">IGCHost::GetThreadStats Method</span></span>
+<span data-ttu-id="cfe6c-103">取得每個執行緒統計資料進行記憶體回收。</span><span class="sxs-lookup"><span data-stu-id="cfe6c-103">Gets the per-thread statistics for garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="9df1d-104">語法</span><span class="sxs-lookup"><span data-stu-id="9df1d-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="cfe6c-104">語法</span><span class="sxs-lookup"><span data-stu-id="cfe6c-104">Syntax</span></span>  
   
 ```  
 HRESULT GetThreadStats (  
@@ -36,21 +36,22 @@ HRESULT GetThreadStats (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="9df1d-105">參數</span><span class="sxs-lookup"><span data-stu-id="9df1d-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="cfe6c-105">參數</span><span class="sxs-lookup"><span data-stu-id="cfe6c-105">Parameters</span></span>  
  `pFiberCookie`  
- <span data-ttu-id="9df1d-106">[in]Fiber cookie，指定要擷取的統計資料的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="9df1d-106">[in] A pointer to a fiber cookie that specifies the thread for which to retrieve the statistics.</span></span>  
+ <span data-ttu-id="cfe6c-106">[in]Fiber cookie，指定要擷取的統計資料的執行緒指標。</span><span class="sxs-lookup"><span data-stu-id="cfe6c-106">[in] A pointer to a fiber cookie that specifies the thread for which to retrieve the statistics.</span></span>  
   
  `pStats`  
- <span data-ttu-id="9df1d-107">[in、 out]指標[COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)結構，其中包含指定的執行緒的記憶體回收集合統計資料。</span><span class="sxs-lookup"><span data-stu-id="9df1d-107">[in, out] A pointer to a [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) structure that contains the garbage collection statistics for the specified thread.</span></span>  
+ <span data-ttu-id="cfe6c-107">[in、 out]指標[COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)結構，其中包含指定的執行緒的記憶體回收集合統計資料。</span><span class="sxs-lookup"><span data-stu-id="cfe6c-107">[in, out] A pointer to a [COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md) structure that contains the garbage collection statistics for the specified thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="9df1d-108">需求</span><span class="sxs-lookup"><span data-stu-id="9df1d-108">Requirements</span></span>  
- <span data-ttu-id="9df1d-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="9df1d-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="cfe6c-108">需求</span><span class="sxs-lookup"><span data-stu-id="cfe6c-108">Requirements</span></span>  
+ <span data-ttu-id="cfe6c-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cfe6c-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="9df1d-110">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="9df1d-110">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="cfe6c-110">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="cfe6c-110">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="9df1d-111">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="9df1d-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="cfe6c-111">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="cfe6c-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="9df1d-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="9df1d-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="cfe6c-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="cfe6c-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="9df1d-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9df1d-113">See also</span></span>
-- [<span data-ttu-id="9df1d-114">IGCHost 介面</span><span class="sxs-lookup"><span data-stu-id="9df1d-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+## <a name="see-also"></a><span data-ttu-id="cfe6c-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cfe6c-113">See also</span></span>
+
+- [<span data-ttu-id="cfe6c-114">IGCHost 介面</span><span class="sxs-lookup"><span data-stu-id="cfe6c-114">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

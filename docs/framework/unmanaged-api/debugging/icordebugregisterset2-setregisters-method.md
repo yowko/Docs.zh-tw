@@ -17,20 +17,20 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4f7ba8228ae47508e3aa3ac79cf635fcf4eba329
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b4cd4f7e1b0737672f33bdd7fec4f7953e20593f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604427"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108340"
 ---
-# <a name="icordebugregisterset2setregisters-method"></a><span data-ttu-id="cf538-102">ICorDebugRegisterSet2::SetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="cf538-102">ICorDebugRegisterSet2::SetRegisters Method</span></span>
-<span data-ttu-id="cf538-103">`SetRegisters` 未實作在.NET Framework 2.0 版。</span><span class="sxs-lookup"><span data-stu-id="cf538-103">`SetRegisters` is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="cf538-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="cf538-104">Do not call this method.</span></span>  
+# <a name="icordebugregisterset2setregisters-method"></a><span data-ttu-id="c059e-102">ICorDebugRegisterSet2::SetRegisters 方法</span><span class="sxs-lookup"><span data-stu-id="c059e-102">ICorDebugRegisterSet2::SetRegisters Method</span></span>
+`SetRegisters` <span data-ttu-id="c059e-103">未實作在.NET Framework 2.0 版。</span><span class="sxs-lookup"><span data-stu-id="c059e-103">is not implemented in the .NET Framework version 2.0.</span></span> <span data-ttu-id="c059e-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="c059e-104">Do not call this method.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="cf538-105">使用較高層級的作業，例如[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)或是[icordebugnativeframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)。</span><span class="sxs-lookup"><span data-stu-id="cf538-105">Use the higher-level operations such as [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) or [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).</span></span>  
+>  <span data-ttu-id="c059e-105">使用較高層級的作業，例如[icordebugilframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md)或是[icordebugnativeframe:: Setip](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md)。</span><span class="sxs-lookup"><span data-stu-id="c059e-105">Use the higher-level operations such as [ICorDebugILFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugilframe-setip-method.md) or [ICorDebugNativeFrame::SetIP](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe-setip-method.md).</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="cf538-106">語法</span><span class="sxs-lookup"><span data-stu-id="cf538-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c059e-106">語法</span><span class="sxs-lookup"><span data-stu-id="c059e-106">Syntax</span></span>  
   
 ```  
 HRESULT SetRegisters (  
@@ -41,15 +41,16 @@ HRESULT SetRegisters (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="cf538-107">需求</span><span class="sxs-lookup"><span data-stu-id="cf538-107">Requirements</span></span>  
- <span data-ttu-id="cf538-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="cf538-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c059e-107">需求</span><span class="sxs-lookup"><span data-stu-id="c059e-107">Requirements</span></span>  
+ <span data-ttu-id="c059e-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c059e-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="cf538-109">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="cf538-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c059e-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c059e-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="cf538-110">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="cf538-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c059e-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c059e-110">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="cf538-111">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="cf538-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="c059e-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="c059e-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="cf538-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cf538-112">See also</span></span>
-- [<span data-ttu-id="cf538-113">ICorDebugRegisterSet2 介面</span><span class="sxs-lookup"><span data-stu-id="cf538-113">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
-- [<span data-ttu-id="cf538-114">ICorDebugRegisterSet 介面</span><span class="sxs-lookup"><span data-stu-id="cf538-114">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
+## <a name="see-also"></a><span data-ttu-id="c059e-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c059e-112">See also</span></span>
+
+- [<span data-ttu-id="c059e-113">ICorDebugRegisterSet2 介面</span><span class="sxs-lookup"><span data-stu-id="c059e-113">ICorDebugRegisterSet2 Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset2-interface.md)
+- [<span data-ttu-id="c059e-114">ICorDebugRegisterSet 介面</span><span class="sxs-lookup"><span data-stu-id="c059e-114">ICorDebugRegisterSet Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-interface.md)
