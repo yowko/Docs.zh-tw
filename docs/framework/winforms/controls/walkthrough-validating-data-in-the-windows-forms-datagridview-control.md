@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：驗證 Windows Form DataGridView 控制項中的資料
+title: 逐步解說：驗證 Windows Forms DataGridView 控制項的資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: 6bb46a9bc54652d781d3421051b7d6e09fc91772
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127344"
 ---
-# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>逐步解說：驗證 Windows Form DataGridView 控制項中的資料
+# <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>逐步解說：驗證 Windows Forms DataGridView 控制項的資料
 當您向使用者顯示的項目資料功能時，您經常必須驗證您的表單中輸入的資料。 <xref:System.Windows.Forms.DataGridView>類別提供便利的方式，資料就會認可到資料存放區之前先執行驗證。 您可以藉由處理驗證資料<xref:System.Windows.Forms.DataGridView.CellValidating>事件，會引發<xref:System.Windows.Forms.DataGridView>目前儲存格的變更時。  
   
  在本逐步解說中，您將擷取的資料列`Customers`Northwind 範例資料庫中的表格，以及它們顯示在<xref:System.Windows.Forms.DataGridView>控制項。 當使用者編輯中的資料格`CompanyName`資料行，嘗試將資料格，保留<xref:System.Windows.Forms.DataGridView.CellValidating>事件處理常式會檢查新的公司名稱字串，以確定它是不是空的; 如果新的值為空字串，<xref:System.Windows.Forms.DataGridView>會造成使用者的資料指標從輸入非空白字串之前，請將儲存格。  
@@ -89,9 +89,10 @@ ms.locfileid: "57710026"
 -   自訂儲存格的外觀。 如需詳細資訊，請參閱[如何：自訂 Windows Form DataGridView 控制項中的儲存格的外觀](customize-the-appearance-of-cells-in-the-datagrid.md)和[How to:設定 Windows Form DataGridView 控制項中的 字型和色彩樣式](how-to-set-font-and-color-styles-in-the-windows-forms-datagridview-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
-- [Windows Forms DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
-- [如何：驗證 Windows Form DataGridView 控制項中的資料](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
-- [逐步解說：處理 Windows Form DataGridView 控制項中的資料輸入期間所發生的錯誤](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
-- [保護連線資訊](../../data/adonet/protecting-connection-information.md)
+- [Windows Form DataGridView 控制項中的資料輸入](data-entry-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：驗證 Windows Forms DataGridView 控制項的資料](how-to-validate-data-in-the-windows-forms-datagridview-control.md)
+- [逐步解說：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)
+- [保護連接資訊](../../data/adonet/protecting-connection-information.md)
