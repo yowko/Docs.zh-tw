@@ -10,12 +10,12 @@ helpviewer_keywords:
 - visual themes [Windows Forms], applying to Windows Forms controls
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
-ms.openlocfilehash: d9da43b1686f416cf2149cef07665b0a726c3b0c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723149"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163568"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>HOW TO：使用控制項呈現類別
 此範例示範如何使用<xref:System.Windows.Forms.ComboBoxRenderer>來呈現的下拉式箭號，下拉式方塊控制項的類別。 此範例包含<xref:System.Windows.Forms.Control.OnPaint%2A>簡單的自訂控制項的方法。 <xref:System.Windows.Forms.ComboBoxRenderer.IsSupported%2A?displayProperty=nameWithType>屬性用來判斷是否已啟用視覺化樣式的應用程式視窗的工作區中。 如果視覺化樣式作用中，則<xref:System.Windows.Forms.ComboBoxRenderer.DrawDropDownButton%2A?displayProperty=nameWithType>方法會呈現具有視覺化樣式; 的下拉式箭號，否則為<xref:System.Windows.Forms.ControlPaint.DrawComboButton%2A?displayProperty=nameWithType>方法會呈現傳統的 Windows 樣式的下拉式箭號。  
@@ -35,4 +35,5 @@ ms.locfileid: "57723149"
 -   若要參考<xref:System?displayProperty=nameWithType>， <xref:System.Drawing?displayProperty=nameWithType>， <xref:System.Windows.Forms?displayProperty=nameWithType>，和<xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType>命名空間。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用視覺化樣式呈現控制項](rendering-controls-with-visual-styles.md)

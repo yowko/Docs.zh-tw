@@ -2,12 +2,12 @@
 title: 開發及部署考量因素
 ms.date: 03/30/2017
 ms.assetid: 535e6611-02de-484c-b5ff-6ffeed04d740
-ms.openlocfilehash: 31b9015ea898047dc346c9bf2ec4c8510e7e69b9
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: d0402fde61b1bfcdee6e0e8e435d35e59ad76b6f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169659"
 ---
 # <a name="development-and-deployment-considerations"></a>開發及部署考量因素
 本節中的主題陳述在開發或部署以 ADO.NET Entity Framework 為基礎之應用程式時要考量的問題。  
@@ -22,6 +22,7 @@ ms.locfileid: "55826365"
  [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET Entity Framework](../../../../../docs/framework/data/adonet/ef/index.md)
 - [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)
 - [快速入門](../../../../../docs/framework/data/adonet/ef/getting-started.md)

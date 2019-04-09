@@ -2,12 +2,12 @@
 title: 模型宣告函式
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: 31efbab4b8323ff8cec9498fa20fa40b1efb819e
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: c9abf9a3340cd22ab5d654588b1d22e10b5c05fa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904080"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59130542"
 ---
 # <a name="model-declared-function"></a>模型宣告函式
 A*模型宣告函式*是宣告在概念模型中，但該概念模型中未定義的函式。 該函式可能是在裝載或儲存環境中定義的。 例如，模型宣告函式可能對應到在資料庫中定義的函式，因而在概念模型中公開伺服器端的功能。  
@@ -29,5 +29,6 @@ A*模型宣告函式*是宣告在概念模型中，但該概念模型中未定�
  [!code-xml[EDM_Example_Model#FunctionImport](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books4.edmx#functionimport)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

@@ -1,5 +1,5 @@
 ---
-title: <httpWebRequest> 項目 (網路設定)
+title: <httpWebRequest> 項目 （網路設定）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/httpWebRequest
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <httpWebRequest> element
 - httpWebRequest element
 ms.assetid: 52acd9d2-5bdc-4dc4-9c2a-f0a476ccbb31
-ms.openlocfilehash: f19c39922105cebe179dd9f26fdc6beac8ddc0ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 722b2f726c9085f6dee6bad82044da3011b98702
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268271"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169295"
 ---
 # <a name="httpwebrequest-element-network-settings"></a>\<httpWebRequest > 項目 （網路設定）
 自訂 Web 要求參數。  
@@ -51,9 +51,9 @@ ms.locfileid: "55268271"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  根據預設，.NET Framework 嚴格強制 RFC 2616 的 URI 剖析。 某些伺服器的回應可能包含控制字元，禁止在欄位中，這會導致<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>方法會擲回<xref:System.Net.WebException>。 如果**useUnsafeHeaderParsing**設為 **，則為 true**，<xref:System.Net.HttpWebRequest.GetResponse?displayProperty=nameWithType>在此情況下，但是不會擲回，您的應用程式將會有數種形式的 URI 剖析攻擊弱點。 若要變更伺服器，以便回應不包含控制字元是最佳的解決方案。  
@@ -77,5 +77,6 @@ ms.locfileid: "55268271"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.HttpWebRequest.MaximumResponseHeadersLength%2A>
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將功能表項目加入 ContextMenuStrip
+title: HOW TO：將功能表項目新增至 ContextMenuStrip
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], adding items
 - context menus [Windows Forms], adding menu items
 ms.assetid: 1ec14776-3ea2-4752-bd22-4fae0fd19e1a
-ms.openlocfilehash: a12a201ac73c86bf391d39f47baa47c87bf96095
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 534bbd2c2edb68dca0f2a1c2997ff1ba762ef07c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716750"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135079"
 ---
-# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>HOW TO：將功能表項目加入 ContextMenuStrip
+# <a name="how-to-add-menu-items-to-a-contextmenustrip"></a>HOW TO：將功能表項目新增至 ContextMenuStrip
 您可以一次新增一個功能表項目或數個項目<xref:System.Windows.Forms.ContextMenuStrip>。  
   
 ### <a name="to-add-a-single-menu-item-to-a-contextmenustrip"></a>若要將單一功能表項目加入 ContextMenuStrip  
@@ -48,4 +48,5 @@ ms.locfileid: "57716750"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ContextMenuStrip 控制項](contextmenustrip-control.md)

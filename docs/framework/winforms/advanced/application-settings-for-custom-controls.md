@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: d12caf9ed2cb80d837080badab436b2e9b0b3728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714342"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169737"
 ---
 # <a name="application-settings-for-custom-controls"></a>自訂控制項的應用程式設定
 您必須完成某些工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。  
@@ -46,6 +46,7 @@ ms.locfileid: "57714342"
  未提供的值之控制項的任何執行個體<xref:System.Configuration.ApplicationSettingsBase.SettingsKey%2A>會共用相同的設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.IPersistComponentSettings>
 - [應用程式設定架構](application-settings-architecture.md)
