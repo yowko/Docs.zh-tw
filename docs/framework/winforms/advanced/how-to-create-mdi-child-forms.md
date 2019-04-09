@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 02e19470aaac76e7bcab5a324138bb50dedb212f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720195"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59124523"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>HOW TO：建立 MDI 子表單
 MDI 子表單是不可或缺的元素[多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)，如下列形式會使用者互動的中心。  
@@ -107,8 +107,9 @@ MDI 子表單是不可或缺的元素[多重文件介面 (MDI) 應用程式](mul
     >  在 <xref:System.Windows.Forms.MainMenu> 元件 (這個元件通常具有功能表項目的功能表結構) 的 MDI 父表單中，開啟同樣具有 <xref:System.Windows.Forms.MainMenu> 元件 (這個元件通常具有功能表項目的功能表結構) 的 MDI 子表單時，如果您已設定 <xref:System.Windows.Forms.MenuItem.MergeType%2A> 屬性 (並選擇性地設定 <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> 屬性)，則功能表項目會自動合併。 將上述兩個 <xref:System.Windows.Forms.MainMenu> 的 <xref:System.Windows.Forms.MenuItem.MergeType%2A> 屬性和子表單的所有功能表項目設定為 <xref:System.Windows.Forms.MenuMerge.MergeItems>。 接著再設定 <xref:System.Windows.Forms.MenuItem.MergeOrder%2A> 屬性，如此一來，來自兩個功能表的功能表項目即可依指定順序出現。 再者，請記住，在關閉 MDI 父表單時，每個 MDI 子表單都會在 MDI 父表單的 <xref:System.Windows.Forms.Form.Closing> 事件引發前，先引發 <xref:System.Windows.Forms.Form.Closing> 事件。 只取消 MDI 子表單的 <xref:System.Windows.Forms.Form.Closing> 事件並無法避免引發 MDI 父表單的 <xref:System.Windows.Forms.Form.Closing> 事件；不過，MDI 父表單之 <xref:System.Windows.Forms.Form.Closing> 事件的 <xref:System.ComponentModel.CancelEventArgs> 引數現在會設定為 `true`。 您可以將 <xref:System.ComponentModel.CancelEventArgs> 引數設定為 `false`，以強制關閉 MDI 父表單和所有 MDI 子表單。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
-- [如何：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
-- [如何：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
-- [如何：將資料傳送至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
-- [如何：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
+- [HOW TO：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
+- [HOW TO：決定作用中的 MDI 子系](how-to-determine-the-active-mdi-child.md)
+- [HOW TO：傳送資料至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
+- [HOW TO：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)

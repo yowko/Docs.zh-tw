@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4210dedd77c6ab041189fa287e192bb7038080b2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491400"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146935"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints 方法
 在目前的方法內定義一組序列點。 每個起始行和起始資料行定義中方法的陳述式開頭。 每個結束行和結束資料行定義方法內的陳述式的結尾。 要以位移的遞增順序排序的陣列。 位移一律是從方法，以位元組為單位的開頭進行測量。  
@@ -69,4 +69,5 @@ HRESULT DefineSequencePoints(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

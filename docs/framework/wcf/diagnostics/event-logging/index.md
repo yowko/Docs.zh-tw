@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: d8bc1f06308fba41f622307ff65d8fc3f9720a5a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2dd4f82e8a100074850b21d298e91dc5dc15c59d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653654"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175275"
 ---
 # <a name="event-logging-in-wcf"></a>WCF 的事件記錄
 Windows Communication Foundation (WCF) 追蹤 Windows 事件記錄檔中的內部事件。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) 追蹤 Windows 事件記錄檔中的內�
   
 -   共用接聽項：WCF TCP Port Sharing Service 會記錄事件時無法啟動。  
   
--   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]：當服務無法啟動的事件記錄。  
+-   [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]:當服務無法啟動的事件記錄。  
   
 -   嚴重和錯誤事件，例如啟動失敗或當機  
   
@@ -48,5 +48,6 @@ Windows Communication Foundation (WCF) 追蹤 Windows 事件記錄檔中的內�
  當您按一下 [詳細資訊] 時在事件檢視器中檢視事件，事件檢視器可能會透過網際網路傳送資訊。 如需詳細資訊，請參閱「事件檢視器」的說明。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [事件一般參考](../../../../../docs/framework/wcf/diagnostics/event-logging/events-general-reference.md)

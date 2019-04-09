@@ -1,19 +1,19 @@
 ---
-title: HOW TO：使用設計工具將 Windows Forms ListView 控制項中的群組項目
+title: HOW TO：使用設計工具在 Windows Forms ListView 控制項中分組項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], grouping items
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 4c3e20ad7a09cc21e6c1d2a6d8fbbc47d11c903d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703552"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136652"
 ---
-# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms ListView 控制項中的群組項目
+# <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具在 Windows Forms ListView 控制項中分組項目
 分組功能<xref:System.Windows.Forms.ListView>控制項可讓您以群組顯示相關的項目集。 這些群組是在螢幕上分隔包含群組標題的水平群組標頭。 您可以使用<xref:System.Windows.Forms.ListView>群組，使導覽更容易的大型清單依字母順序，分組項目，依日期，或任何其他的邏輯群組。 下圖顯示一些分組的項目。  
   
  ![ListView 群組](./media/listviewgroups.gif "ListViewGroups")  
@@ -46,9 +46,10 @@ ms.locfileid: "57703552"
 3.  選取<xref:System.Windows.Forms.ListViewItem.Group%2A>屬性，然後從下拉式清單中選擇 群組。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.ListView.Groups%2A>
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView 控制項](listview-control-windows-forms.md)
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
-- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [HOW TO：使用 Windows Forms ListView 控制項新增和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

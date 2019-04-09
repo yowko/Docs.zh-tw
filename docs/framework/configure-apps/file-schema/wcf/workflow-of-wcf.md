@@ -2,12 +2,12 @@
 title: <workflow> WCF 的
 ms.date: 03/30/2017
 ms.assetid: c0443eba-d3b4-4fae-886e-9878daf77691
-ms.openlocfilehash: 9920a9b75a033515584f4108503faa45687b7203
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 190e66096cf2dfa2028c95b22526fc3c84712ab8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362197"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122066"
 ---
 # <a name="workflow-of-wcf"></a>\<工作流程 > 的 WCF
 設定追蹤參與者，這些參與者會接聽執行階段直接發出的追蹤記錄並處理記錄，無論記錄的設定為何。 這包括寫入至特定的輸出 (例如檔案、主控台、ETW)、處理/彙總記錄，或任何其他可能需要的組合。  
@@ -36,9 +36,9 @@ ms.locfileid: "57362197"
   
 ### <a name="attributes"></a>屬性  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
-|name|指定追蹤參與者名稱的字串。|  
+|名稱|指定追蹤參與者名稱的字串。|  
 |profileName|指定追蹤設定檔名稱的字串，該設定檔定義了追蹤參與者已訂閱的追蹤記錄。|  
 |類型|指定追蹤參與者型別的字串。|  
   
@@ -89,8 +89,9 @@ ms.locfileid: "57362197"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.TrackingSection>
 - <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>
 - <xref:System.ServiceModel.Activities.Configuration.EtwTrackingBehaviorElement>
-- [工作流程追蹤及追蹤](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [工作流程追蹤與追查](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追蹤參與者](../../../../../docs/framework/windows-workflow-foundation/tracking-participants.md)

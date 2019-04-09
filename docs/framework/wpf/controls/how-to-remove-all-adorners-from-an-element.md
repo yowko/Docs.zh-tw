@@ -1,5 +1,5 @@
 ---
-title: HOW TO：移除項目的所有裝飾項
+title: HOW TO：從元素移除所有 Adorner
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: fe5303a3-b76e-4643-aafb-51419032b47b
-ms.openlocfilehash: 6b2b1832898a847f54f11cca26ecd50dbd7285ff
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8504bb1ec70de188033b2b092bbb66cf9da3dc11
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116790"
 ---
-# <a name="how-to-remove-all-adorners-from-an-element"></a>HOW TO：移除項目的所有裝飾項
+# <a name="how-to-remove-all-adorners-from-an-element"></a>HOW TO：從元素移除所有 Adorner
 此範例示範如何以程式設計方式移除所有裝飾指定<xref:System.Windows.UIElement>。  
   
 ## <a name="example"></a>範例  
@@ -30,4 +30,5 @@ ms.locfileid: "57374163"
  [!code-vb[AdornersMiscCode#_RemoveAllAdornersShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AdornersMiscCode/visualbasic/window1.xaml.vb#_removealladornersshort)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝飾項概觀](adorners-overview.md)

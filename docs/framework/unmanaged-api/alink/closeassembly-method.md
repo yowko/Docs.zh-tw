@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c89fd080e61db78ed21c03c2aa63c97337c09585
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 94c1c083d010cd82fd9e9e2f02b23e81d88fedd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497544"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116437"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly 方法
 完成組件作業。 開始新的組件或未繫結的模組之前呼叫這個方法。  
@@ -46,6 +46,7 @@ HRESULT CloseAssembly(
  需要 alink.h。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

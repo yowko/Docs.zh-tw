@@ -2,12 +2,12 @@
 title: 不支援的案例
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 381175a95b696145df8a1e19b9a40f2e697eef1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178772"
 ---
 # <a name="unsupported-scenarios"></a>不支援的案例
 基於各種原因，Windows Communication Foundation (WCF) 不支援某些特定的安全性案例。 比方說， [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition 不會實作 SSPI 或 Kerberos 驗證通訊協定，並因此 WCF 不支援該平台上，執行使用 Windows 驗證的服務。 執行 WCF 只有 Windows XP Home Edition 下的時，會支援其他驗證機制，例如使用者名稱/密碼和 HTTP/HTTPS 整合式的驗證。  
@@ -28,9 +28,9 @@ ms.locfileid: "54631255"
   
 -   建立以狀態為基礎的安全性內容權杖 (SCT) (根據預設會停用建立作業)。  
   
- 您只能透過自訂繫結來建立以狀態為基礎的 SCT ( 如需詳細資訊，請參閱[＜How to：建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
+ 您只能透過自訂繫結來建立以狀態為基礎的 SCT ( 如需詳細資訊，請參閱[如何：建立安全性內容權杖的安全工作階段](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)。)在程式碼中，您可以使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 方法來建立安全性繫結項目 (可能是 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>)，並將 `requireCancellation` 參數設為 `false`，藉此啟用權杖。 此參數會參考 SCT 的快取。 將值設為 `false` 會啟用以狀態為基礎的 SCT 功能。  
   
- 另外，您可以在組態中建立 <`customBinding`> 並新增 <`security`> 項目，然後將 `authenticationMode` 屬性設為 SecureConversation 並將 `requireSecurityContextCancellation` 屬性設為 `true`，藉此啟用權杖。  
+ 或者，在組態中，藉此啟用權杖建立 <`customBinding`>，然後再新增 <`security`> 項目，並設定`authenticationMode`屬性設為 SecureConversation 並`requireSecurityContextCancellation`屬性設定為`true`。  
   
 > [!NOTE]
 >  執行作業之前有一些特定需求： 例如，<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> 將建立會變成 Windows 識別的繫結項目，但是不會建立 SCT。 因此，您可以將其與 `Required` 上的 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 選項搭配使用。  
@@ -75,7 +75,7 @@ ms.locfileid: "54631255"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>如果需要使用 ASP.NET 模擬與 ASP.NET 相容性的話，訊息安全性就會失敗  
  WCF 不支援下列設定的組合，因為它們可以防止用戶端驗證發生：  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 模擬已啟用。 在 Web.config 檔案中將 <`identity`> 項目的 `impersonate` 屬性設為 `true`，即可完成此作業。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 已啟用模擬。 這是在 web.config 中藉由設定`impersonate`屬性的 <`identity`> 項目`true`。  
   
 -   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 藉由設定啟用相容性模式`aspNetCompatibilityEnabled`的屬性[ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)到`true`。  
   
@@ -109,9 +109,10 @@ ms.locfileid: "54631255"
  解決方式是匯入之後直接在用戶端修改繫結。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf9071f8b5c4569ace53b13f7b9b7282bf8e87c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54711969"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143763"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>Unmanaged 程式碼的安全編碼指南
 某些程式庫程式碼需要呼叫 Unmanaged 程式碼 (例如原生程式碼 API，像是 Win32)。 由於這表示要越過 Managed 程式碼的安全性範疇，所以充分的警告是必要的。 若您的程式碼是安全性中性的，則您的程式碼以及它所呼叫的任何程式碼，都必須具備 Unmanaged 程式碼權限 (指定了具有<xref:System.Security.Permissions.SecurityPermission> 旗標的 <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> )。  
@@ -47,9 +47,10 @@ ms.locfileid: "54711969"
   
 |關鍵字|安全性考量|  
 |-------------|-----------------------------|  
-|**Safe.GetTimeOfDay**|對於任何程式碼，即使是惡意程式碼，呼叫都完全無害。 就像其他 Managed 程式碼一樣可以使用。 例如，取得一天中的時間之函式通常都是安全的。|  
-|**Native.Xyz**|安全性中性；也就是 Unmanaged 程式碼需要 Unmanaged 程式碼權限來呼叫。 會檢查安全性，這會停止未經授權的呼叫端。|  
-|**Unsafe.DangerousAPI**|已隱藏安全性、有潛在危險的 Unmanaged 程式碼進入點。 當使用這類 Unmanaged 程式碼時，開發人員應高度警覺，確定其他保護已就位，以避免安全性弱點。 開發人員必須要負責，因為這個關鍵字會覆寫安全性系統。|  
+|**安全**|對於任何程式碼，即使是惡意程式碼，呼叫都完全無害。 就像其他 Managed 程式碼一樣可以使用。 例如，取得一天中的時間之函式通常都是安全的。|  
+|**native**|安全性中性；也就是 Unmanaged 程式碼需要 Unmanaged 程式碼權限來呼叫。 會檢查安全性，這會停止未經授權的呼叫端。|  
+|**unsafe**|已隱藏安全性、有潛在危險的 Unmanaged 程式碼進入點。 當使用這類 Unmanaged 程式碼時，開發人員應高度警覺，確定其他保護已就位，以避免安全性弱點。 開發人員必須要負責，因為這個關鍵字會覆寫安全性系統。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全程式碼撰寫方針](../../../docs/standard/security/secure-coding-guidelines.md)

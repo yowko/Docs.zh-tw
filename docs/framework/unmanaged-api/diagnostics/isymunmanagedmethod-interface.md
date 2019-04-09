@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b19e5ce88ea34188b2757d2a0c313341fbf1e7e6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c29656a4787c674886505a3be2508470460dfc10
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604241"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136522"
 ---
 # <a name="isymunmanagedmethod-interface"></a>ISymUnmanagedMethod 介面
 代表符號存放區內的方法。 這個介面會提供屬性的權限只與符號相關的方法，而不是型別相關的屬性。  
@@ -45,4 +45,5 @@ ms.locfileid: "54604241"
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

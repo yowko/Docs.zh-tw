@@ -15,12 +15,12 @@ helpviewer_keywords:
 - scaled text [WPF]
 - typography [WPF], skewed text
 ms.assetid: 0d61678a-4185-4f2a-85c6-c1d020f96fa0
-ms.openlocfilehash: be0b6a0bbe927f248be434afd15dde6a66791fe6
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 46a57364e0c18cc4c9fe7884642cd0b718c20f31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/17/2019
-ms.locfileid: "58126119"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59208666"
 ---
 # <a name="how-to-apply-transforms-to-text"></a>HOW TO：對文字套用轉換
 轉換可以變更應用程式中文字的顯示。 下列範例會使用不同類型的轉譯轉換來影響中的文字顯示<xref:System.Windows.Controls.TextBlock>控制項。  
@@ -65,4 +65,5 @@ ms.locfileid: "58126119"
 >  <xref:System.Windows.Media.Effects.DropShadowBitmapEffect>提供一組豐富的功能來提供陰影效果。 如需詳細資訊，請參閱 <<c0> [ 建立含陰影的文字](how-to-create-text-with-a-shadow.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [對文字套用動畫](how-to-apply-animations-to-text.md)

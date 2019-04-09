@@ -1,5 +1,5 @@
 ---
-title: ICorProfilerCallback8 Interface
+title: ICorProfilerCallback8 介面
 ms.date: 04/10/2018
 api_name:
 - ICorProfilerCallback8
@@ -10,14 +10,14 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3bdf79582619777a22c80caac5b4e90d603f3a8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e536e61a8d812e442e1e54188c99d6a1d4586757
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54675011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125563"
 ---
-# <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 Interface
+# <a name="icorprofilercallback8-interface"></a>ICorProfilerCallback8 介面
 [.NET Framework 4.7 及更新版本中支援]  
 
  子類別[ICorProfilerCallback7](icorprofilercallback7-interface.md)提供 common language runtime 用來通知分析工具中的動態方法的 JIT 編譯已啟動並完成的回呼方法。 
@@ -34,8 +34,9 @@ ms.locfileid: "54675011"
   
  **標頭：** CorProf.idl, CorProf.h  
   
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>另請參閱
+
 - [分析介面](profiling-interfaces.md)
 - [ICorProfilerCallback9 介面](icorprofilercallback9-interface.md)

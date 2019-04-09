@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: e47707d040cd7bf67008fab33ac482706963ce39
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725242"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59125017"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>HOW TO：建立線形漸層
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供水平、 垂直和對角線形漸層。 根據預設，線性漸層色彩一致變更。 不過，您可以自訂的線性漸層，以便的色彩會變更以非統一的方式。  
@@ -78,5 +78,6 @@ ms.locfileid: "57725242"
      [!code-vb[System.Drawing.UsingaGradientBrush#23](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingaGradientBrush/VB/Class1.vb#23)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用漸層筆刷填滿形狀](using-a-gradient-brush-to-fill-shapes.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

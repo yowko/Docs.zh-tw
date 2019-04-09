@@ -3,12 +3,12 @@ title: <chunkedCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: 7220de45-1d14-4aec-a29e-4a2ea8ac861f
 author: BrucePerlerMS
-ms.openlocfilehash: 383ce39816ec7d3f2567765549b537073ee7e081
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: d9c81d5de7bea343f0d67fa00037763fbae7b8c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277026"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59120779"
 ---
 # <a name="chunkedcookiehandler"></a>\<chunkedCookieHandler>
 設定<xref:System.IdentityModel.Services.ChunkedCookieHandler>。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 預設 」 或 「 區塊 」。  
@@ -41,7 +41,7 @@ ms.locfileid: "55277026"
 |chunkSize|最大的大小，以字元為單位的任何一個的 HTTP cookie 的 HTTP cookie 資料。 您必須小心調整區塊大小。 網頁瀏覽器 cookie 和每一個網域允許的數字的大小有不同的限制。 例如，原始的 Netscape 規格約定這些限制：4096 個位元組，每個 cookie 標頭 （包括中繼資料，不只是 cookie 值），以及每個網域的 20 cookie 總 300 的 cookie。 預設值是 2000年。 必要項。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -64,4 +64,5 @@ ms.locfileid: "55277026"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Services.ChunkedCookieHandler>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - service behaviors, concurency sample
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
-ms.openlocfilehash: 81abc4cd3d9f5be3ca461754f9f84287ffe2f752
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f0d4996a7ea8ab49df780635127f39064b1050c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59119141"
 ---
 # <a name="concurrency"></a>並行
 並行範例會示範搭配 <xref:System.ServiceModel.ServiceBehaviorAttribute> 列舉使用 <xref:System.ServiceModel.ConcurrencyMode>，以控制服務的執行個體要循序處理或並行處理訊息。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，它會實作`ICalculator`服務合約。 這個範例會定義繼承自 `ICalculatorConcurrency` 的新合約 `ICalculator`，並提供兩個額外作業來檢查服務的並行狀態。 藉由改變並行設定，您可以在執行用戶端時觀察行為上的改變。  
@@ -22,11 +22,11 @@ ms.locfileid: "58835402"
   
  其中提供三種可用的並行模式：  
   
--   `Single`：每個服務執行個體一次處理一個訊息。 這是預設的並行模式。  
+-   `Single`:每個服務執行個體一次處理一個訊息。 這是預設的並行模式。  
   
--   `Multiple`：每個服務執行個體同時處理多個訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
+-   `Multiple`:每個服務執行個體同時處理多個訊息。 此服務實作必須是安全執行緒，才能使用這種並行模式。  
   
--   `Reentrant`：每個服務執行個體一次處理一個訊息，但接受可重新進入的呼叫。 服務只有在對外呼叫時才會接受這些呼叫。可重新進入所示[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)範例。  
+-   `Reentrant`:每個服務執行個體一次處理一個訊息，但接受可重新進入的呼叫。 服務只有在對外呼叫時才會接受這些呼叫。可重新進入所示[ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)範例。  
   
  並存的使用與執行個體模式有關。 在 <xref:System.ServiceModel.InstanceContextMode.PerCall> 執行個體中，並行模式沒有任何相關，因為每個訊息都是由新的服務執行個體處理。 在 <xref:System.ServiceModel.InstanceContextMode.Single> 執行個體中，只有 <xref:System.ServiceModel.ConcurrencyMode.Single> 或 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，並行模式才相關，這點會依單一執行個體是循序處理或並行處理訊息而定。 在 <xref:System.ServiceModel.InstanceContextMode.PerSession> 執行個體中，任何並行模式都可能相關。  
   
@@ -111,4 +111,3 @@ public class CalculatorService : ICalculatorConcurrency
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Behaviors\Concurrency`  
-  

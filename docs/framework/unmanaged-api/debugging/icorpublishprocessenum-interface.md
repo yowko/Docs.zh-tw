@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b72f2581b9670dbc110f2ab33cb861128bd78dca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5186df61eb82b29fcfa9776408498b748068e122
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54525842"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173650"
 ---
 # <a name="icorpublishprocessenum-interface"></a>ICorPublishProcessEnum 介面
 子類別[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)介面會提供方法來周遊集合[ICorPublishProcess](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocess-interface.md)物件。  
@@ -30,7 +30,7 @@ ms.locfileid: "54525842"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|取得指定的數目`ICorPublishProcess`從集合中，從目前位置開始的執行個體。|  
+|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icorpublishprocessenum-next-method.md)|取得指定的數目`ICorPublishProcess`從集合中，從目前位置開始的執行個體。|  
   
 ## <a name="remarks"></a>備註  
  `ICorPublishProcessEnum`介面實作的抽象的介面，方法[ICorPublishEnum](../../../../docs/framework/unmanaged-api/debugging/icorpublishenum-interface.md)。  
@@ -42,10 +42,11 @@ ms.locfileid: "54525842"
   
  **標頭：** CorPub.idl CorPub.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [CorpubPublish Coclass](../../../../docs/framework/unmanaged-api/debugging/corpubpublish-coclass.md)

@@ -1,18 +1,18 @@
 ---
-title: HOW TO：新增和移除項目時使用設計工具在 Windows Form ListView 控制項
+title: HOW TO：使用設計工具以 Windows Forms ListView 控制項新增和移除項目
 ms.date: 03/30/2017
 helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 04fe8b1add938f4e7aaa35e08d9924102c91cb9b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 37e793104eb29c21e67b975a7caa372cc817e57f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721215"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143880"
 ---
-# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>HOW TO：新增和移除項目時使用設計工具在 Windows Form ListView 控制項
+# <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms ListView 控制項新增和移除項目
 加入 Windows Form 中的項目中的程序<xref:System.Windows.Forms.ListView>控制主要包含指定的項目，並將屬性指派給它。 隨時都可以新增或移除清單項目。  
   
  下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.ListView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。  
@@ -33,9 +33,10 @@ ms.locfileid: "57721215"
 4.  若要移除的項目，請選取它，然後按一下**移除** 按鈕。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ListView 控制項概觀](listview-control-overview-windows-forms.md)
-- [如何：資料行加入 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [如何：使用 Windows Forms ListView 控制項的資料行顯示子項目](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
-- [如何：Windows Form ListView 控制項中顯示的圖示](how-to-display-icons-for-the-windows-forms-listview-control.md)
-- [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
-- [如何：在 Windows Form ListView 控制項中的群組項目](how-to-group-items-in-a-windows-forms-listview-control.md)
+- [HOW TO：將資料行新增至 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [HOW TO：使用 Windows Forms ListView 控制項顯示資料行的子項目](how-to-display-subitems-in-columns-with-the-windows-forms-listview-control.md)
+- [HOW TO：顯示 Windows Forms ListView 控制項的圖示](how-to-display-icons-for-the-windows-forms-listview-control.md)
+- [HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [HOW TO：在 Windows Forms ListView 控制項中分組項目](how-to-group-items-in-a-windows-forms-listview-control.md)

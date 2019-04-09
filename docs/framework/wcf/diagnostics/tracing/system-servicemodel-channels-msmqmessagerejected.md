@@ -2,12 +2,12 @@
 title: System.ServiceModel.Channels.MsmqMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 9b7c10a7-2af6-44a2-8b1a-90bba0c7cf26
-ms.openlocfilehash: 87d6e6fc3205fff9bd977ebe77004dfa489098cb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4feeb1b57d79c7445d51f5d688b0a9f55e761542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681218"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143386"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagerejected"></a>System.ServiceModel.Channels.MsmqMessageRejected
 MSMQ 已拒絕訊息。  
@@ -22,8 +22,9 @@ MSMQ 已拒絕訊息。
  請參閱[MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)如需詳細資訊被拒絕的訊息表示 MSMQ 中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)
 - [有害訊息處理](https://go.microsoft.com/fwlink/?LinkID=99546)
 - [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkID=99548)

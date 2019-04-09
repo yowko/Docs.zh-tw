@@ -6,12 +6,12 @@ helpviewer_keywords:
 - security [WCF]
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
-ms.openlocfilehash: 9827d14a1e64b6111c6c3c9cf53a49170f1a9077
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592818"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59118192"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation 安全性
 在本節中的主題會描述 Windows Communication Foundation (WCF) 安全性功能，以及如何使用它們來保護訊息。  
@@ -34,16 +34,16 @@ ms.locfileid: "54592818"
  [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)  
  安全性導向的繫結檢視，包括示範如何建立自訂安全性繫結的各個主題。  
   
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
  說明如何保護使用 WCF 安全性功能的訊息。  
   
  [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)  
  示範一般驗證工作。  
   
- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
+ [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)  
  說明使用安全性實作的一般授權案例。  
   
- [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
+ [聯合與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)  
  說明聯合的基本概念，以及如何建立可與聯合伺服器通訊的用戶端。  
   
  [部分信任](../../../../docs/framework/wcf/feature-details/partial-trust.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "54592818"
  [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)  
  說明如何稽核安全性事件。  
   
- [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
+ [安全性指引與最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)  
  建立安全的 WCF 應用程式的指導方針。  
   
 ## <a name="reference"></a>參考資料  
@@ -67,7 +67,8 @@ ms.locfileid: "54592818"
   
  [快速入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)  
   
- [概念性概觀](../../../../docs/framework/wcf/conceptual-overview.md)  
+ [概觀說明](../../../../docs/framework/wcf/conceptual-overview.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [設定應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)
+
+- [設定您的應用程式](../../../../docs/framework/wcf/diagnostics/configuring-your-application.md)

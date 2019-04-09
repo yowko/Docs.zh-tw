@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 460d6781405b6042262d50e1aa79ee8c77f781a7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e5cddf34f1a6277e966901c9692bff63e26a3b8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489718"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136730"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>ISymUnmanagedAsyncMethod::IsAsyncMethod 方法
 檢查方法是否非同步處理的資訊。  
@@ -35,4 +35,5 @@ HRESULT IsAsyncMethod(    [out, retval] BOOL* pRetVal);
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedAsyncMethod 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethod-interface.md)

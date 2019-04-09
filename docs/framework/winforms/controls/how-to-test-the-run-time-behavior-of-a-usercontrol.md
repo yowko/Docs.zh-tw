@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UserControl Test Container
 - UserControl class [Windows Forms], run-time behavior
 ms.assetid: 4e4d5c49-1346-40ac-9d96-40211b573583
-ms.openlocfilehash: 0b87034487ef0f2cabed786354682f394500cafc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1719d0461fbb582a1486dcc0726253ec97a07ac6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707881"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116489"
 ---
 # <a name="how-to-test-the-run-time-behavior-of-a-usercontrol"></a>HOW TO：測試 UserControl 的執行階段行為
 當您開發<xref:System.Windows.Forms.UserControl>，您要測試其執行階段行為。 您可以建立個別的 Windows 應用程式專案，並將您的控制項上測試表單中，但此程序是很不方便。 更快速且輕鬆的方式是使用**UserControl 測試容器**Visual Studio 所提供。 直接從您的 Windows 控制項程式庫專案，啟動這個測試容器。  
@@ -67,8 +67,9 @@ ms.locfileid: "57707881"
 6.  使用**選取 使用者控制項**<xref:System.Windows.Forms.ComboBox>切換兩個使用者控制項，從**TestContainerExample**專案。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.UserControl>
-- [如何：撰寫複合控制項](how-to-author-composite-controls.md)
-- [逐步解說：撰寫使用 Visual Basic 複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [逐步解說：撰寫複合控制項具有視覺效果C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [HOW TO：撰寫複合控制項](how-to-author-composite-controls.md)
+- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [逐步解說：使用 Visual C# 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
 - [使用者控制項設計工具](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/183c3hth(v=vs.100))

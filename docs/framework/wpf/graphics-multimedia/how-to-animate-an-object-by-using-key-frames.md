@@ -5,12 +5,12 @@ helpviewer_keywords:
 - animation [WPF], objects with key frames
 - key frames [WPF], animating objects with
 ms.assetid: b1f15ba9-cac7-4cea-8699-5c6b55c05c5e
-ms.openlocfilehash: 1e0e464adf70aeeaecb522d328d3087ca66a530c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 0b2b517410c6cbc4f3deca13e5948c8de583fd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177797"
 ---
 # <a name="how-to-animate-an-object-by-using-key-frames"></a>HOW TO：使用主要畫面格建立物件的動畫
 此範例示範如何以動畫顯示物件，這在此範例中是<xref:System.Windows.Controls.Page.Background%2A>屬性<xref:System.Windows.Controls.Page>控制項，使用主要畫面格。  
@@ -34,6 +34,7 @@ ms.locfileid: "57368554"
  如需完整的範例，請參閱[主要畫面格動畫範例](https://go.microsoft.com/fwlink/?LinkID=160012)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Animation.ObjectAnimationUsingKeyFrames>
 - <xref:System.Windows.Controls.Page.Background%2A>
 - <xref:System.Windows.Controls.Page>
@@ -42,4 +43,4 @@ ms.locfileid: "57368554"
 - <xref:System.Windows.Media.RadialGradientBrush>
 - <xref:System.Windows.Media.DrawingBrush>
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [主要畫面格操作說明主題](key-frame-animation-how-to-topics.md)
+- [關於主要畫面格操作說明的主題](key-frame-animation-how-to-topics.md)

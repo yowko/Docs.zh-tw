@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
-ms.openlocfilehash: 9f6969f9ad838ae913f049c4fc65d987e1aff9fa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718476"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117452"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+ 中的橢圓形和弧形
 您可以輕鬆地繪製橢圓形和弧形使用<xref:System.Drawing.Graphics.DrawEllipse%2A>並<xref:System.Drawing.Graphics.DrawArc%2A>方法<xref:System.Drawing.Graphics>類別。  
@@ -48,9 +48,10 @@ ms.locfileid: "57718476"
  ![橢圓形和弧形](./media/aboutgdip02-art06.gif "Aboutgdip02_art06")  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
-- [如何：建立畫筆](how-to-create-a-pen.md)
-- [如何：繪製外框的形狀](how-to-draw-an-outlined-shape.md)
+- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [HOW TO：建立畫筆](how-to-create-a-pen.md)
+- [HOW TO：繪製外框形狀](how-to-draw-an-outlined-shape.md)

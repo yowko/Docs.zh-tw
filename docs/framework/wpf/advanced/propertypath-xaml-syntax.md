@@ -5,17 +5,16 @@ helpviewer_keywords:
 - PropertyPath object [WPF]
 - XAML [WPF], PropertyPath object
 ms.assetid: 0e3cdf07-abe6-460a-a9af-3764b4fd707f
-ms.openlocfilehash: 25214a3c177975505713a444b69a7006c0fd523f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7db435e45ddc55346af5ea5fdbcce611173c774b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363510"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122911"
 ---
 # <a name="propertypath-xaml-syntax"></a>PropertyPath XAML 語法
 <xref:System.Windows.PropertyPath>物件支援複雜的內嵌[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]語法來設定各種屬性採用<xref:System.Windows.PropertyPath>做為其值的型別。 本主題說明<xref:System.Windows.PropertyPath>套用至繫結和動畫語法的語法。  
-    
-  
+
 <a name="where"></a>   
 ## <a name="where-propertypath-is-used"></a>PropertyPath 的用途  
  <xref:System.Windows.PropertyPath> 是一個常見的物件，可用於數種[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]功能。 即使使用常見<xref:System.Windows.PropertyPath>傳達屬性路徑資訊，每個使用方式功能區域其中<xref:System.Windows.PropertyPath>用來做為型別而異。 因此，依功能來說明語法會比較實際。  
@@ -48,7 +47,7 @@ ms.locfileid: "57363510"
 <Binding Path="[key]" .../>  
 ```  
   
- `key` 必須是對字典或雜湊表之具類型的索引，或是陣列的整數索引。 此外，索引鍵值的類型必須是可直接繫結至要套用它的屬性。 比方說，包含字串索引鍵和字串值的雜湊表可以用這種方式繫結文字<xref:System.Windows.Controls.TextBox>。 或者，如果索引鍵指向集合或子索引，您可以使用此語法來繫結至目標集合屬性。 否則，您需要透過語法 (例如 `<Binding Path="[key].propertyName" .../>`) 來參考特定的屬性。  
+ `key` 必須是具類型的索引，對字典或雜湊表，或是陣列的整數索引。 此外，索引鍵值的類型必須是可直接繫結至要套用它的屬性。 比方說，包含字串索引鍵和字串值的雜湊表可以用這種方式繫結文字<xref:System.Windows.Controls.TextBox>。 或者，如果索引鍵指向集合或子索引，您可以使用此語法來繫結至目標集合屬性。 否則，您需要透過語法 (例如 `<Binding Path="[key].propertyName" .../>`) 來參考特定的屬性。  
   
  您可以視需要指定索引的類型。 如需這方面索引的屬性路徑的詳細資訊，請參閱<xref:System.Windows.Data.Binding.Path%2A?displayProperty=nameWithType>。  
   
@@ -68,7 +67,7 @@ ms.locfileid: "57363510"
 <object property="(ownerType.propertyName)" .../>  
 ```  
   
- 括號，表示這個屬性在<xref:System.Windows.PropertyPath>應該使用部分限定性條件來建構。 它可以使用 XML 命名空間來尋找具有適當對應的類型。 `ownerType`搜尋型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]顆處理器具有存取權，透過<xref:System.Windows.Markup.XmlnsDefinitionAttribute>每個組件中的宣告。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。  `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 此語法通常用於下列其中一種情況：  
+ 括號，表示這個屬性在<xref:System.Windows.PropertyPath>應該使用部分限定性條件來建構。 它可以使用 XML 命名空間來尋找具有適當對應的類型。 `ownerType`搜尋型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]顆處理器具有存取權，透過<xref:System.Windows.Markup.XmlnsDefinitionAttribute>每個組件中的宣告。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。  `propertyName` 必須解析為存在於屬性名稱`ownerType`。 此語法通常用於下列其中一種情況：  
   
 -   指定於 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的路徑，其位於不具指定目標類型的樣式或範本中。 除此之外，限定用法通常是無效的，因為在非樣式和非範本的情況中，屬性會存在於執行個體上，而非類型上。  
   
@@ -166,7 +165,7 @@ or
   
  `propertyName` 必須是屬性<xref:System.Windows.Freezable>實值類型或基本類型，這存在於指定<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>型別。  
   
- `propertyName2` 必須是存在於值為 `propertyName` 之物件上的相依性屬性名稱。 亦即`propertyName2`相依性屬性的型別上必須存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
+ `propertyName2` 必須是值的物件存在的相依性屬性的名稱`propertyName`。 亦即`propertyName2`相依性屬性的型別上必須存在`propertyName` <xref:System.Windows.DependencyProperty.PropertyType%2A>。  
   
  由於已套用樣式和範本，因此需要間接設定動畫的目標。 若要設定動畫的目標，您必須<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>目標物件，而且該名稱藉由[X:name](../../xaml-services/x-name-directive.md)或<xref:System.Windows.FrameworkElement.Name%2A>。 雖然範本和樣式元素也可以有名稱，但那些名稱只在樣式和範本的名稱範圍內有效 (如果範本和樣式會與應用程式標記共用名稱範圍，則名稱不能是唯一的。 樣式和範本實際上會在執行個體之間共用，因此會永久保存重複的名稱)。所以，如果您希望顯示為動畫之元素的個別屬性是來自樣式或範本，您就必須從不是來自樣式範本的具名元素執行個體開始，然後將目標設為樣式或範本視覺化樹狀結構中，以到達您要顯示為動畫的屬性。  
   
@@ -179,7 +178,7 @@ or
 <animation Storyboard.TargetProperty="(ownerType.propertyName)" .../>  
 ```  
   
- 括號，表示這個屬性在<xref:System.Windows.PropertyPath>應該使用部分限定性條件來建構。 它可使用 XML 命名空間來尋找此類型。 `ownerType`搜尋型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]顆處理器具有存取權，透過<xref:System.Windows.Markup.XmlnsDefinitionAttribute>每個組件中的宣告。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。 `propertyName` 必須解析為存在於 `ownerType` 上的屬性名稱。 為指定的屬性`propertyName`必須是<xref:System.Windows.DependencyProperty>。 (所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加屬性都會實作為相依性屬性，因此只有自訂附加屬性才會發生此問題)。  
+ 括號，表示這個屬性在<xref:System.Windows.PropertyPath>應該使用部分限定性條件來建構。 它可使用 XML 命名空間來尋找此類型。 `ownerType`搜尋型別[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]顆處理器具有存取權，透過<xref:System.Windows.Markup.XmlnsDefinitionAttribute>每個組件中的宣告。 大部分的應用程式都有對應至 [!INCLUDE[TLA#tla_wpfxmlnsv1](../../../../includes/tlasharptla-wpfxmlnsv1-md.md)] 命名空間的預設 XML 命名空間，因此，前置詞通常只需用於自訂類型或該命名空間以外的類型。 `propertyName` 必須解析為存在於屬性名稱`ownerType`。 為指定的屬性`propertyName`必須是<xref:System.Windows.DependencyProperty>。 (所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 附加屬性都會實作為相依性屬性，因此只有自訂附加屬性才會發生此問題)。  
   
 <a name="indexanim"></a>   
 ### <a name="indexers"></a>索引子  
@@ -197,6 +196,7 @@ or
  一般情況下，<xref:System.Windows.PropertyPath>設計為使用兩個不同的建構函式，一個用於繫結和最簡單的動畫使用方式，一個用於複雜動畫。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>用於繫結，其中物件字串的簽章。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.Object%29>單一步驟動畫路徑，在物件所在的簽章<xref:System.Windows.DependencyProperty>。 使用<xref:System.Windows.PropertyPath.%23ctor%28System.String%2CSystem.Object%5B%5D%29>用於複雜動畫的簽章。 後面這個建構函式會針對第一個參數使用語彙基元字串，並使用物件陣列來填滿語彙基元字串中的位置，以定義屬性路徑關聯性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.PropertyPath>
 - [資料繫結概觀](../data/data-binding-overview.md)
 - [分鏡腳本概觀](../graphics-multimedia/storyboards-overview.md)

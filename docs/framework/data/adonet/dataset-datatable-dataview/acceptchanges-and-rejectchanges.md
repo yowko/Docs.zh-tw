@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: e2d1a6fe-31f9-4b83-9728-06c406a3394e
-ms.openlocfilehash: 84381a9a71ae85baad618684ebf783039456854f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bbcc666b99c2bade479e5ee51750b043c820845d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54538384"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172896"
 ---
 # <a name="acceptchanges-and-rejectchanges"></a>AcceptChanges 和 RejectChanges
 在驗證中的資料變更的正確性之後<xref:System.Data.DataTable>，您可以接受變更<xref:System.Data.DataRow.AcceptChanges%2A>方法<xref:System.Data.DataRow>， <xref:System.Data.DataTable>，或<xref:System.Data.DataSet>，它會將設定**目前**資料列值必須是**原始**值，並將設定**RowState**屬性設**Unchanged**。 接受或拒絕變更會清除任何**RowError**資訊，並且**HasErrors**屬性設**false**。 接受或拒絕變更也會影響資料來源中的資料更新。 如需詳細資訊，請參閱 <<c0> [ 使用 Dataadapter 更新資料來源](../../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)。  
@@ -57,8 +57,9 @@ workTable.AcceptChanges();
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataRow>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [在 DataTable 中操作資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/manipulating-data-in-a-datatable.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
