@@ -9,25 +9,26 @@ helpviewer_keywords:
 - content [WPF], ScrollViewer control
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
-ms.openlocfilehash: cbed07ac08005e801b56b9538f46361df723bcb0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128657"
 ---
-# <a name="scrollviewer"></a><span data-ttu-id="8b98d-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="8b98d-102">ScrollViewer</span></span>
-<span data-ttu-id="8b98d-103"><xref:System.Windows.Controls.ScrollViewer>控制項會建立其中內容可以捲動水平或垂直捲動區域。</span><span class="sxs-lookup"><span data-stu-id="8b98d-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
+# <a name="scrollviewer"></a><span data-ttu-id="2198e-102">ScrollViewer</span><span class="sxs-lookup"><span data-stu-id="2198e-102">ScrollViewer</span></span>
+<span data-ttu-id="2198e-103"><xref:System.Windows.Controls.ScrollViewer>控制項會建立其中內容可以捲動水平或垂直捲動區域。</span><span class="sxs-lookup"><span data-stu-id="2198e-103">The <xref:System.Windows.Controls.ScrollViewer> control creates a scrollable region wherein content can be scrolled horizontally or vertically.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="8b98d-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="8b98d-104">In This Section</span></span>  
- [<span data-ttu-id="8b98d-105">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="8b98d-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
- [<span data-ttu-id="8b98d-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="8b98d-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="2198e-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="2198e-104">In This Section</span></span>  
+ [<span data-ttu-id="2198e-105">ScrollViewer 概觀</span><span class="sxs-lookup"><span data-stu-id="2198e-105">ScrollViewer Overview</span></span>](scrollviewer-overview.md)  
+ [<span data-ttu-id="2198e-106">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="2198e-106">How-to Topics</span></span>](scrollviewer-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="8b98d-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="8b98d-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="2198e-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="2198e-107">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="8b98d-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b98d-108">See also</span></span>
-- [<span data-ttu-id="8b98d-109">面板概觀</span><span class="sxs-lookup"><span data-stu-id="8b98d-109">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="8b98d-110">版面配置</span><span class="sxs-lookup"><span data-stu-id="8b98d-110">Layout</span></span>](../advanced/layout.md)
+## <a name="see-also"></a><span data-ttu-id="2198e-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2198e-108">See also</span></span>
+
+- [<span data-ttu-id="2198e-109">面板概觀</span><span class="sxs-lookup"><span data-stu-id="2198e-109">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="2198e-110">配置</span><span class="sxs-lookup"><span data-stu-id="2198e-110">Layout</span></span>](../advanced/layout.md)
