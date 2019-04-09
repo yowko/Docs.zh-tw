@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 64624508a50eb6e28337baa1a3600298e2c83fd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710741"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115787"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>逐步解說：建立專業樣式的 ToolStrip 控制項
 您可以提供給您的應用程式<xref:System.Windows.Forms.ToolStrip>撰寫您自己的類別衍生自控制項專業外觀和行為<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型別。  
@@ -185,8 +185,9 @@ ms.locfileid: "57710741"
 -   建立多個文件介面 (MDI) 表單使用停駐<xref:System.Windows.Forms.ToolStrip>控制項。 如需詳細資訊，請參閱[如何：使用功能表合併和 ToolStrip 控制項建立 MDI 表單](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.StatusStrip>
 - [ToolStrip 控制項](toolstrip-control-windows-forms.md)
-- [如何：對表單提供標準功能表項目](how-to-provide-standard-menu-items-to-a-form.md)
+- [HOW TO：向表單提供標準的功能表項目](how-to-provide-standard-menu-items-to-a-form.md)

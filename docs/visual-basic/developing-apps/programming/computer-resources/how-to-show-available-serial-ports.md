@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中顯示可用的序列埠
+title: 作法：在 Visual Basic 中顯示可用的序列埠
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Computer.Ports object
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
-ms.openlocfilehash: 92888967212f56f3845dc5fb1642931b11bbace5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979550"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58834643"
 ---
 # <a name="how-to-show-available-serial-ports-in-visual-basic"></a>作法：在 Visual Basic 中顯示可用的序列埠
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 來顯示電腦的可用序列埠。  
@@ -44,6 +44,7 @@ ms.locfileid: "56979550"
 >  在 Windows 98 上執行時，`My.Computer.Ports.SerialPortNames` 所傳回的序列埠名稱可能不正確。 為了避免應用程式錯誤，請在使用序列埠名稱開啟序列埠時，使用例外狀況處理，例如 `Try...Catch...Finally` 陳述式或 `Using` 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - [如何：撥接與序列埠連接的數據機](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-dial-modems-attached-to-serial-ports.md)
 - [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)

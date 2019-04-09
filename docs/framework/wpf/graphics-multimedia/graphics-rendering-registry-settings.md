@@ -8,18 +8,16 @@ helpviewer_keywords:
 - troubleshooting graphics rendering [WPF]
 - graphics [WPF], rendering
 ms.assetid: f4b41b42-327d-407c-b398-3ed5f505df8b
-ms.openlocfilehash: 4b02a5ef1fb28e83ecdfc257dd81d9a890b77121
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 616c74ccd787d9acdcb2a3bbe281c2f43bb49c2e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375346"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59135534"
 ---
 # <a name="graphics-rendering-registry-settings"></a>圖形轉譯登錄設定
 本主題會概略說明會影響 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 圖形轉譯登錄設定。  
-  
 
-  
 <a name="overview"></a>   
 ## <a name="when-to-use-graphics-rendering-registry-settings"></a>使用圖形轉譯登錄設定的時機  
  這些登錄設定是為了進行疑難排解、偵錯，以及產品支援目的而提供。 因為變更登錄會影響所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式，所以您的應用程式永遠不應自動或在安裝期間更改這些登錄機碼。  
@@ -30,7 +28,7 @@ ms.locfileid: "57375346"
   
 <a name="registry_settings"></a>   
 ## <a name="registry-settings"></a>登錄設定  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供四個登錄設定來控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供四個登錄設定來控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯：  
   
 |設定|描述|  
 |-------------|-----------------|  
@@ -98,5 +96,6 @@ ms.locfileid: "57375346"
  「使用軟體模擬轉譯器選項」採用 DWORD 值。 值為 0 表示未使用軟體模擬轉譯器。 任何其他非零的值都會強制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用軟體模擬轉譯器。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [圖形轉譯層](../advanced/graphics-rendering-tiers.md)
 - [WPF 圖形轉譯概觀](wpf-graphics-rendering-overview.md)

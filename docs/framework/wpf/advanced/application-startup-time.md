@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 0bd7875f1e819497ea3a4d846a2876084a54ab80
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379103"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59173026"
 ---
 # <a name="application-startup-time"></a>應用程式啟動時間
 WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明各種技術來縮短 Windows Presentation Foundation (WPF) 應用程式的認知和實際啟動時間。  
@@ -123,10 +123,11 @@ WPF 應用程式啟動所需的時間可能有很大的差異。 本主題說明
  而不是使用 XAML 來設定<xref:System.Windows.FrameworkElement.DataContext%2A>宣告的主視窗中，請考慮設定它以程式設計方式在<xref:System.Windows.Application.OnActivated%2A>方法。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.SplashScreen>
 - <xref:System.AppDomain>
 - <xref:System.Resources.NeutralResourcesLanguageAttribute>
 - <xref:System.Resources.ResourceManager>
-- [在 WPF 應用程式中加入啟動顯示畫面](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
+- [將啟動顯示畫面新增至 WPF 應用程式](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (原生映像產生器)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence> 元素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence > 項目](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

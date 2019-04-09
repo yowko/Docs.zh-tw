@@ -2,12 +2,12 @@
 title: 逐步解說：僅使用預存程序 (C#)
 ms.date: 03/30/2017
 ms.assetid: ecde4bf2-fa4d-4252-b5e4-96a46b9e097d
-ms.openlocfilehash: 5234b4a2743effa4282fb8c211c42511c6432dfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8f3bc061f626f6c29ca62131fc1cb0fc2dea9249
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54650823"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59098165"
 ---
 # <a name="walkthrough-using-only-stored-procedures-c"></a>逐步解說：僅使用預存程序 (C#)
 本逐步解說會針對只執行預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -70,7 +70,7 @@ ms.locfileid: "54650823"
   
 5.  在 **位置**方塊中，確認您要儲存專案檔。  
   
-6.  按一下 [確定 **Deploying Office Solutions**]。  
+6.  按一下 [確定] 。  
   
      Windows Forms 設計工具隨即開啟。  
   
@@ -156,7 +156,7 @@ ms.locfileid: "54650823"
   
 #### <a name="to-test-the-application"></a>若要測試應用程式  
   
-1.  按 F5 鍵啟動偵錯作業。  
+1.  按 F5 開始偵錯作業。  
   
      Form1 隨即出現。  
   
@@ -188,5 +188,6 @@ ms.locfileid: "54650823"
  您可以進行一些變更，以強化這個專案。 例如，您可以在清單方塊中列出可用的預存程序，讓使用者選取所要執行的程序。 您也可以將報表輸出送至文字檔。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

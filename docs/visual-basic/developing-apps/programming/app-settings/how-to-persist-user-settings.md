@@ -6,14 +6,14 @@ helpviewer_keywords:
 - persistence [Visual Basic], persisting user settings [Visual Basic]
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
-ms.openlocfilehash: 45d5fbf6fda34407d8b7eb3f959f215e7621f1c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 35997db52a59aeaff5a2c404ea83b15639ea23a0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966940"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58825177"
 ---
-# <a name="how-to-persist-user-settings-in-visual-basic"></a>HOW TO：保存 Visual Basic 中的使用者設定
+# <a name="how-to-persist-user-settings-in-visual-basic"></a>作法：保存 Visual Basic 中的使用者設定
 您可以使用 `My.Settings.Save` 方法來保存使用者設定的變更。  
   
  通常，應用程式設計成在關閉應用程式時，保存使用者設定的變更。 這是因為儲存變更可能需要幾秒鐘的時間，視幾個因素而定。  
@@ -31,6 +31,7 @@ ms.locfileid: "56966940"
  為了確保此範例正常運作，您的應用程式必須具有 `Date` 類型的 `LastChanged` 使用者設定。 如需詳細資訊，請參閱[管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [如何：在 Visual Basic 中變更使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

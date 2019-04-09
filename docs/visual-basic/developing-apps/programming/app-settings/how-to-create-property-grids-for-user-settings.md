@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property grids [Visual Basic], creating for user settings
 - property grids
 ms.assetid: b0bc737e-50d1-43d1-a6df-268db6e6f91c
-ms.openlocfilehash: c528b2a0ada0f638f2f901ba7638771e0f4b3dda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 20c475fd7bd4b2cec6c6e10182a88a43fa7c56f1
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969033"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58843041"
 ---
 # <a name="how-to-create-property-grids-for-user-settings-in-visual-basic"></a>作法：在 Visual Basic 中建立使用者設定的屬性方格
 您可以使用 `My.Settings` 物件的使用者設定屬性填入 <xref:System.Windows.Forms.PropertyGrid> 控制項，以建立使用者設定的屬性方格。  
@@ -50,6 +50,7 @@ ms.locfileid: "56969033"
  應用程式關閉時，會儲存使用者設定。 若要立即儲存設定，請呼叫 `My.Settings.Save` 方法。 如需詳細資訊，請參閱[如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [如何：在 Visual Basic 中變更使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)

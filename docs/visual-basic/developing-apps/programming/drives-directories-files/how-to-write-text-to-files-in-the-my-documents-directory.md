@@ -7,14 +7,14 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 147dad822a8bc8b8e9692b88f6b498f841bac1fa
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 245e00402196ab2a8c5998e9515205bb6f37cce0
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966745"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828403"
 ---
-# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>HOW TO：在 Visual Basic 中將文字寫入 [我的文件] 目錄中的檔案
+# <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>作法：在 Visual Basic 中將文字寫入 [我的文件] 目錄中的檔案
 `My.Computer.FileSystem.SpecialDirectories` 物件可讓您存取特殊目錄，例如 [我的文件] 目錄。  
   
 ## <a name="procedure"></a>程序  
@@ -44,6 +44,7 @@ ms.locfileid: "56966745"
  這個範例會建立新的檔案。 如果應用程式需要建立檔案，該應用程式就需要資料夾的 [建立] 權限。 您可以使用存取控制清單來設定權限。 如果檔案已經存在，則應用程式只需要 [寫入] 權限，這是較小的權限。 若有可能，更為安全的做法是在部署期間建立檔案，並且只授與單一檔案的 [讀取] 權限，而不授與資料夾的 [建立] 權限。 此外，將資料寫入使用者資料夾，而不是根資料夾或 **Program Files** 資料夾，也更加安全。 如需詳細資訊，請參閱 [ACL 技術概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms229742(v=vs.100))。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IO.Path.Combine%2A?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Devices.Computer>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>

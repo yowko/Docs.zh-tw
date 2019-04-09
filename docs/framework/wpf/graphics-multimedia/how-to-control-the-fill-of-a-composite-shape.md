@@ -1,5 +1,5 @@
 ---
-title: HOW TO：控制複合圖案的填色
+title: HOW TO：控制複合圖形的填色
 ms.date: 03/30/2017
 helpviewer_keywords:
 - shapes [WPF], composite [WPF], controlling fill
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - graphics [WPF], composite shapes
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
-ms.openlocfilehash: 0b2e71e7db403857aa1a3b0dddcfe907150f9528
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9b3ab1f7b81c296aa1ee766136b6c95b82cab105
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357283"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084046"
 ---
-# <a name="how-to-control-the-fill-of-a-composite-shape"></a>HOW TO：控制複合圖案的填色
+# <a name="how-to-control-the-fill-of-a-composite-shape"></a>HOW TO：控制複合圖形的填色
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A>的屬性<xref:System.Windows.Media.GeometryGroup>或<xref:System.Windows.Media.PathGeometry>，指定一個 「 規則 」 會使用複合圖案用來判斷指定的點是否為幾何的一部分。 有兩個可能的值，如<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>和<xref:System.Windows.Media.FillRule.Nonzero>。 以下各節將說明如何使用這兩個規則。  
   
  **EvenOdd:** 此規則會判斷某個點是否在填滿區域中，藉由從該點朝任意方向繪製無限遠的光線，並且計算給定圖案中與光線相交中的路徑區段數目。 如果這個數字是奇數，該點即是在區域內；如為偶數，該點即在區域外。  
@@ -62,5 +62,6 @@ ms.locfileid: "57357283"
 ## <a name="example"></a>範例  
   
 ## <a name="see-also"></a>另請參閱
-- [建立複合圖案](how-to-create-a-composite-shape.md)
+
+- [建立複合圖形](how-to-create-a-composite-shape.md)
 - [幾何概觀](geometry-overview.md)

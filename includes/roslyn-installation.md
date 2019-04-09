@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 72acd0029d0189de1c724856572957f111b9d18f
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760387"
+---
 ## <a name="installation-instructions"></a>安裝指示 
 
 有兩種不同方式可以在 [Visual Studio 安裝程式] 中尋找 [.NET Compiler Platform SDK]：

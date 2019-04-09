@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 97c8580b5573348e58acb85b7368eb23927cde17
-ms.sourcegitcommit: 75567a3cb437009db55949c6092f4e77ed1a9da4
+ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54307171"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920892"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 字串內插補點 (C# 參考)
 
@@ -87,7 +87,7 @@ ms.locfileid: "54307171"
 
 ## <a name="additional-resources"></a>其他資源
 
-如果您是字串插補的新手，請參閱 [C# 中的字串插補](../../tutorials/intro-to-csharp/interpolated-strings.yml)互動式教學課程。 或者您也可以在本機電腦上嘗試 [C# 中的字串插補](../../tutorials/string-interpolation.md)教學課程。
+如果您是字串插補的新手，請參閱 [C# 中的字串插補](../../tutorials/exploration/interpolated-strings.yml)互動式教學課程。 或者您也可以在本機電腦上嘗試 [C# 中的字串插補](../../tutorials/string-interpolation.md)教學課程。
 
 ## <a name="see-also"></a>另請參閱
 
@@ -97,6 +97,6 @@ ms.locfileid: "54307171"
 - [複合格式](../../../standard/base-types/composite-formatting.md)
 - [格式化數值結果表](../keywords/formatting-numeric-results-table.md)
 - [字串](../../programming-guide/strings/index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 特殊字元](index.md)
 - [C# 參考](../index.md)

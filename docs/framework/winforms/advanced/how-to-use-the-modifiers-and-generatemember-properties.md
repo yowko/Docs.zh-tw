@@ -15,12 +15,12 @@ helpviewer_keywords:
 - form inheritance
 - Windows Forms, inheritance
 ms.assetid: 3381a5e4-e1a3-44e2-a765-a0b758937b85
-ms.openlocfilehash: 277d2bdebc1d3b85efb70510b8acd34ed3a91087
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 612d323305c2dbd4698c6d687fb19ec36983bde4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710793"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59143906"
 ---
 # <a name="how-to-use-the-modifiers-and-generatemember-properties"></a>HOW TO：使用修飾詞和 GenerateMember 屬性
 當您將元件放在 Windows Form 上時，在設計環境所提供兩個屬性：`GenerateMember`和`Modifiers`。 `GenerateMember`屬性會指定當 Windows Form 設計工具產生元件的成員變數。 `Modifiers`屬性是指派給該成員變數的存取修飾詞。 如果值`GenerateMember`屬性是`false`，值`Modifiers`屬性沒有任何作用。  
@@ -60,7 +60,8 @@ ms.locfileid: "57710793"
 >  根據預設，Windows Form 設計工具會指派`private`(`Friend` Visual Basic 中) 等容器控制項的修飾詞<xref:System.Windows.Forms.Panel>。 如果您的基底<xref:System.Windows.Forms.UserControl>或<xref:System.Windows.Forms.Form>有容器控制項，它將不會接受新的子系繼承的控制項和表單中。 解決方法是變更的基底容器控制項的修飾詞`protected`或`public`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Button>
-- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)
+- [Windows Form 視覺繼承](windows-forms-visual-inheritance.md)
 - [逐步解說：示範視覺化繼承](walkthrough-demonstrating-visual-inheritance.md)
-- [如何：繼承 Windows Forms](how-to-inherit-windows-forms.md)
+- [HOW TO：繼承 Windows Forms](how-to-inherit-windows-forms.md)

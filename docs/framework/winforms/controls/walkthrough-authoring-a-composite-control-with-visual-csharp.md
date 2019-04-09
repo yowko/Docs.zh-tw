@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user controls [C#]
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
-ms.openlocfilehash: 48d29c12407f7364794040f4fccd351156244a69
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2f8c295e961fdf62a14b7e63ab990e8f99379cfd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723630"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177370"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>逐步解說：撰寫使用 Visual c# 複合控制項\#
 複合控制項提供可以建立及重複使用自訂圖形介面的方法。 複合控制項基本上是具有視覺表示的元件。 因此，它可能包含一或多個 Windows Forms 控制項、元件或程式碼區塊，可以藉由驗證使用者輸入、修改顯示屬性，或執行作者需要的其他工作來擴充功能。 複合控制項可以放在 Windows Forms 上，與其他控制項的方式相同。 在本逐步解說的第一個部分中，您可以建立簡單的複合控制項，稱為 `ctlClock`。 在逐步解說的第二個部分中，您透過繼承擴充 `ctlClock` 的功能。  
@@ -30,7 +30,7 @@ ms.locfileid: "57723630"
   
 2.  從 Visual C# 專案的清單中，選取**Windows Form 控制項程式庫**專案範本中，輸入`ctlClockLib`中**名稱**方塊，然後再按一下**確定**。  
   
-     專案名稱，`ctlClockLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ctlClock`，您可以使用 `ctlClockLib.ctlClock.` 指定您的 `ctlClock` 元件  
+     專案名稱，`ctlClockLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為`ctlClock`，您可以指定您`ctlClock`元件使用 `ctlClockLib.ctlClock.`  
   
 3.  以滑鼠右鍵按一下 [方案總管] 中的 [UserControl1.cs]，然後按一下 [重新命名]。 將檔案名稱變更為 `ctlClock.cs`。 當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "57723630"
     |屬性|變更為|  
     |--------------|---------------|  
     |**名稱**|`lblDisplay`|  
-    |**Text**|`(blank space)`|  
+    |**文字**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -248,9 +248,9 @@ ms.locfileid: "57723630"
     |屬性|設定|  
     |--------------|-------------|  
     |**名稱**|`lblAlarm`|  
-    |**Text**|**Alarm!**|  
+    |**文字**|**警示 ！**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**可見**|`false`|  
+    |**Visible**|`false`|  
   
 ### <a name="adding-the-alarm-functionality"></a>新增警示功能  
  在先前的程序中，您新增屬性和控制項，在您的複合控制項中啟用警示功能。 在此程序中，您將會新增程式碼以比較目前時間與警示時間，如果它們相同，則讓警示閃爍。 藉由覆寫 `ctlClock` 的 `timer1_Tick` 方法，並且將額外程式碼新增至其中，您就可以擴充 `ctlAlarmClock` 的功能，同時保留 `ctlClock` 的所有固有功能。  
@@ -320,7 +320,7 @@ ms.locfileid: "57723630"
     |屬性|值|  
     |--------------|-----------|  
     |**名稱**|`btnAlarmOff`|  
-    |**Text**|**停用警示**|  
+    |**文字**|**停用警示**|  
   
 3.  在設計工具中，按兩下 [btnAlarmOff]。  
   
@@ -367,7 +367,7 @@ ms.locfileid: "57723630"
   
     |控制項|屬性|值|  
     |-------------|--------------|-----------|  
-    |`label1`|**Text**|`(blank space)`|  
+    |`label1`|**文字**|`(blank space)`|  
     ||**名稱**|`lblTest`|  
     |`dateTimePicker1`|**名稱**|`dtpTest`|  
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -405,6 +405,7 @@ ms.locfileid: "57723630"
      本逐步解說涵蓋了數個重要概念。 您已經了解藉由將控制項和元件合併成複合控制項容器，來建立複合控制項。 您已經了解將屬性新增至您的控制項，以及撰寫程式碼來實作自訂功能。 在最後一節中，您會了解透過繼承擴充指定複合控制項的功能，並且藉由覆寫這些方法來變更主方法的功能。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [各種自訂控制項](varieties-of-custom-controls.md)
-- [如何：顯示中的控制項選擇工具箱項目對話方塊](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [逐步解說：繼承自具有視覺效果的 Windows Forms 控制項C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [逐步解說：使用 Visual C# 繼承來自 Windows Form 的控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -1,20 +1,20 @@
 ---
 title: 開始使用語意分析
-description: 此教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
+description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
 ms.date: 02/06/2018
 ms.custom: mvc
 ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359623"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760049"
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
-此教學課程假設您熟悉 Syntax API。 [開始使用語意分析](syntax-analysis.md)一文提供充分的簡介。
+本教學課程假設您熟悉 Syntax API。 [開始使用語意分析](syntax-analysis.md)一文提供充分的簡介。
 
-在此教學課程中，您會探索 **Symbol** 和 **Binding API**。 這些 API 提供程式的_語意_相關資訊。 它們可讓您詢問和回答程式中任何符號所表示之類型的問題。
+在本教學課程中，您會探索 **Symbol** 和 **Binding API**。 這些 API 提供程式的_語意_相關資訊。 它們可讓您詢問和回答程式中任何符號所表示之類型的問題。
 
 您必須安裝 **.NET Compiler Platform SDK**：
 
@@ -30,7 +30,7 @@ ms.locfileid: "57359623"
 
 ## <a name="querying-symbols"></a>查詢符號
 
-在此教學課程中，您會重新看到 "Hello World" 程式。 此時，您查詢程式中的符號來了解這些符號所代表的類型。 您查詢命名空間中的類型，並學習如何尋找類型上可用的方法。
+在本教學課程中，您會重新看到 "Hello World" 程式。 此時，您查詢程式中的符號來了解這些符號所代表的類型。 您查詢命名空間中的類型，並學習如何尋找類型上可用的方法。
 
 您可以在 [GitHub 存放庫](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/SemanticQuickStart)中查看此範例中完成的程式碼。
 
@@ -101,7 +101,7 @@ Press any key to continue . . .
 
 ### <a name="binding-an-expression"></a>繫結運算式
 
-上述程式碼示範如何繫結至名稱來尋找符號。 C# 程式中具有可繫結且不是名稱的其他運算式。 為示範此功能，讓我們存取與簡單字串常值的繫結。
+上述程式碼示範如何繫結至名稱來尋找符號。 C# 程式中具有可繫結且不是名稱的其他運算式。 若要示範這項功能，請存取與簡單字串常值的繫結。
 
 "Hello World" 程式包含 <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LiteralExpressionSyntax?displayProperty=nameWithType>，"Hello, World!" 字串會顯示在主控台中。
 
@@ -113,7 +113,7 @@ Press any key to continue . . .
 
 [!code-csharp[Find the semantic information about the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#8 "Use the string literal to access the semantic information in the string type.")]
 
-若要完成此教學課程，請建置 LINQ 查詢，以建立傳回 `string` 之 `string` 類型上所宣告的一系列所有公用方法。 此查詢過於複雜，因此請逐行建置它，然後將它重新建構為單一查詢。 此查詢的來源是 `string` 類型上所宣告的所有成員序列：
+若要完成本教學課程，請建置 LINQ 查詢，以建立傳回 `string` 之 `string` 類型上所宣告的一系列所有公用方法。 此查詢過於複雜，因此請逐行建置它，然後將它重新建構為單一查詢。 此查詢的來源是 `string` 類型上所宣告的所有成員序列：
 
 [!code-csharp[Access the sequence of members on the string type](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#9 "Access the sequence of members on the string type.")]
 

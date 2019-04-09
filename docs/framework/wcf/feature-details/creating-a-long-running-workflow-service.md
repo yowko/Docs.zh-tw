@@ -2,12 +2,12 @@
 title: 建立長期執行的工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 8fe1ad70db6c788a304d9099fb2f35a4d89db489
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679433"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109651"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>建立長期執行的工作流程服務
 本主題會說明如何建立長時間執行的工作流程服務。 長時間執行的工作流程服務可能會執行一段很長的時間。 有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。 發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。 當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。  在本案例中，您要實作非常簡化的訂購系統。  用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。 然後，服務會將訂單 ID 傳回給用戶端。 此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。  當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。 在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。 此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。 本主題假設您知道如何建立 Visual Studio 2012 專案和方案。
@@ -19,7 +19,7 @@ ms.locfileid: "57679433"
 
 2.  Visual Studio 2012
 
-3.  Microsoft [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
 4.  您已熟悉 WCF 和 Visual Studio 2012，並了解如何建立專案/方案。
 
@@ -199,4 +199,5 @@ ms.locfileid: "57679433"
     ```
 
 ## <a name="see-also"></a>另請參閱
+
 - [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)

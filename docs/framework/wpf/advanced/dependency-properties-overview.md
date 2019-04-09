@@ -14,12 +14,12 @@ helpviewer_keywords:
 - dependency properties [WPF]
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
-ms.openlocfilehash: 0d336a55ee849ea3e9584cdcfd87e5d6c4befe25
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374644"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188639"
 ---
 # <a name="dependency-properties-overview"></a>相依性屬性概觀
 
@@ -91,7 +91,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 
 - [樣式](#styles)
 
-- [動畫](#animations)
+- [Animations](#animations)
 
 - [中繼資料覆寫](#metadata-overrides)
 
@@ -197,6 +197,7 @@ XAML 支援各種設定屬性的語法形式。 特定屬性要使用哪種語�
 - 相依性屬性通常應該視為公用屬性，任何可存取執行個體的呼叫端皆可存取或至少可探索它們。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。
 
 ## <a name="see-also"></a>另請參閱
+
 - [自訂相依性屬性](custom-dependency-properties.md)
 - [唯讀相依性屬性](read-only-dependency-properties.md)
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)

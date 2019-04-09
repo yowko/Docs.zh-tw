@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: de61369f9fcc7493dbc3197d91c58cec9e926c13
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723916"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59181476"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
 查閱資料表是具有資料行的資料表，而此資料行會從相關資料表的記錄中顯示資料。 在下列程序中，會使用 <xref:System.Windows.Forms.ComboBox> 控制項顯示從父資料表到子資料表具有外部索引鍵關聯性的欄位。  
@@ -37,8 +37,7 @@ ms.locfileid: "57723916"
   
  [ComboBox 控制項](combobox-control-windows-forms.md)上設定了四個重要的屬性，以供建立查閱資料表。  
   
--   
-  <xref:System.Windows.Forms.ComboBox.DataSource%2A> 屬性包含資料表的名稱。  
+-   <xref:System.Windows.Forms.ComboBox.DataSource%2A> 屬性包含資料表的名稱。  
   
 -   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> 屬性包含該資料表中您想要為控制項文字 (客戶姓名) 顯示的資料行。  
   
@@ -93,6 +92,7 @@ ms.locfileid: "57723916"
 8.  從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結程序至您想要顯示的詳細資料欄位。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 元件](bindingsource-component.md)
 - [ComboBox 控制項](combobox-control-windows-forms.md)

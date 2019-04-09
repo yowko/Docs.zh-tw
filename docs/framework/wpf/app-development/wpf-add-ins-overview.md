@@ -12,18 +12,16 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 859e586d6cb0b334a7ad766de5d3aabb0e1864ac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59091612"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
-  
 
-  
 <a name="Requirements"></a>   
 ## <a name="prerequisites"></a>必要條件  
  需要熟悉.NET Framework 增益集模型。 如需詳細資訊，請參閱[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))。  
@@ -167,7 +165,7 @@ ms.locfileid: "57365837"
  下列各小節將詳細說明這些工作。  
   
 ### <a name="configuring-the-pipeline-and-add-in-for-clickonce-deployment"></a>設定 ClickOnce 部署的管線和增益集  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 會下載到 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 部署快取的安全資料夾中並執行。 為了讓 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 裝載增益集，管線和增益集組件必須也下載到安全資料夾。 為達到此目的，您需要設定應用程式資訊清單包含管線和增益集組件以供下載。 這在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 最容易完成，雖然管線和增益集組件需要位在裝載 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案的根資料夾中，才能讓 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 偵測管線組件。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 若要下載並從安全資料夾中執行[!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署快取。 為了讓 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 裝載增益集，管線和增益集組件必須也下載到安全資料夾。 為達到此目的，您需要設定應用程式資訊清單包含管線和增益集組件以供下載。 這在 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 最容易完成，雖然管線和增益集組件需要位在裝載 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案的根資料夾中，才能讓 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 偵測管線組件。  
   
  因此，第一個步驟是設定每個管線組件和增益集組件專案的組建輸出，組建 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案根目錄的管線和增益集組件。 下表顯示管線組件專案及增益集組件專案的組建輸出路徑，這些專案和裝載 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案位在相同的解決方案和根資料夾中。  
   
@@ -283,9 +281,10 @@ ms.locfileid: "57365837"
  根據預設，當使用多個應用程式定義域時，每個應用程式所需的各種.NET Framework 組件全部載入該應用程式定義域。 如此一來，建立新應用程式定義域以及從其中啟動應用程式所需的時間，可能會影響效能。 不過，.NET Framework 可讓您降低啟動時間，指示應用程式定義域間共用組件，如果已載入的應用程式。 您可以使用<xref:System.LoaderOptimizationAttribute>屬性，它必須套用至進入點方法 (`Main`)。 在此情況下，您必須只使用程式碼實作您的應用程式定義 (請參閱[應用程式管理概觀](application-management-overview.md))。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.LoaderOptimizationAttribute>
 - [增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))
 - [應用程式定義域](../../app-domains/application-domains.md)
-- [.NET framework 遠端處理概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
+- [NET Framework 遠端處理概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/kwdt6w2k(v=vs.100))
 - [讓物件變成可遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))
-- [HOW-TO 主題](how-to-topics.md)
+- [HOW TO 主題](how-to-topics.md)

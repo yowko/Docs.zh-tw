@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 97964f64f1a846327b2d014088c22e53d85231e4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720861"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112743"
 ---
 # <a name="how-to-inherit-windows-forms"></a>HOW TO：繼承 Windows Forms
 藉由繼承自基底表單建立新的 Windows Form，可以很快地複製您的最佳成果，而無須在每次需要它時都要完成重建表單的程序。  
@@ -41,8 +41,9 @@ ms.locfileid: "57720861"
  繼承表單時，請記住，呼叫兩次事件處理常式可能會發生問題，因為每個事件都會由基底類別和繼承的類別處理。 如需如何避免這個問題的詳細資訊，請參閱[針對 Visual Basic 中的繼承事件處理常式進行疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](~/docs/visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)
-- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)
+- [Windows Form 視覺繼承](windows-forms-visual-inheritance.md)

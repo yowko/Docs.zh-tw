@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
-ms.openlocfilehash: 0d8b3e476488f81e4154c876e555b3090d0287f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: c092ad49f40257467245a07a6e4b9849822e1835
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076558"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>逐步解說：使用 XAML 建立按鈕
 本逐步解說的目的是要了解如何在 Windows Presentation Foundation (WPF) 應用程式中建立動畫的按鈕，供使用。 本逐步解說會使用樣式和範本來建立自訂的按鈕資源可讓您重複使用程式碼及從按鈕宣告按鈕的邏輯分隔開來。 本逐步解說完全在撰寫[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
@@ -432,6 +432,7 @@ ms.locfileid: "57377164"
 -   自訂的按鈕，以回應使用者動作的行為 (例如<xref:System.Windows.UIElement.MouseEnter>， <xref:System.Windows.UIElement.MouseLeave>，和<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) 包含的動畫效果。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 Microsoft Expression Blend 建立按鈕](walkthrough-create-a-button-by-using-microsoft-expression-blend.md)
 - [樣式設定和範本化](styling-and-templating.md)
 - [動畫概觀](../graphics-multimedia/animation-overview.md)

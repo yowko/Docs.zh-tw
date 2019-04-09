@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項
+title: 逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - FlowLayoutPanel control [Windows Forms], walkthroughs
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: fdb92a1ec9aa349c8768b5dc4ddf3d403297cf7f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4ab2ca5530c87775e28951de8c1c3ebd056291dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59195679"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
   
  <xref:System.Windows.Forms.FlowLayoutPanel> 控制項和 <xref:System.Windows.Forms.TableLayoutPanel> 控制項提供直覺的方式，排列表單上的控制項。 這兩者都提供自動且可設定的功能，可用來控制其內含子控制項的相對位置，而且也都能為執行階段提供動態配置功能，所以每當父表單變更維度時，子控制項的大小和位置就會相應調整。 配置面板可以巢嵌在配置面板內，從而提供精緻的使用者介面。  
@@ -188,12 +188,13 @@ ms.locfileid: "57703535"
 -   將其中一個控制項的 <xref:System.Windows.Forms.Control.Visible%2A> 屬性設為 `false` ，注意 <xref:System.Windows.Forms.FlowLayoutPanel> 如何回應重訂方向。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。Redmond，WA:Microsoft Press，1999年。(USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
+- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Microsoft Windows 使用者經驗, 使用者介面開發人員和設計人員的正式方針。 Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1)](https://www.microsoft.com/mspress/southpacific/books/book11588.htm)
 - [AutoSize 屬性概觀](autosize-property-overview.md)
-- [如何：停駐在 Windows Forms 上控制項](how-to-dock-controls-on-windows-forms.md)
-- [如何：在 Windows Forms 上控制項的錨定](how-to-anchor-controls-on-windows-forms.md)
-- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)
+- [HOW TO：固定 Windows Forms 上的控制項](how-to-dock-controls-on-windows-forms.md)
+- [HOW TO：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
+- [逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)

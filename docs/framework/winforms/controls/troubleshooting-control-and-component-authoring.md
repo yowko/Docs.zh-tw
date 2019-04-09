@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: aa3548ce8f785f7c8b1adddf54dde0cd07482749
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712691"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59168060"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控制項和元件撰寫疑難排解
 本主題列出當開發元件和控制項時，會發生下列常見問題。 如需詳細資訊，請參閱[使用元件進行程式設計](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))。  
@@ -108,9 +108,10 @@ ms.locfileid: "57712691"
  當您使用<xref:System.Drawing.ToolboxBitmapAttribute>来關聯圖示與您的自訂元件，點陣圖不會出現在工具箱中自動產生元件。 若要查看點陣圖，請使用 [選擇工具箱項目] 對話方塊，重新載入控制項。 如需詳細資訊，請參閱[如何：為控制項提供工具箱點陣圖](how-to-provide-a-toolbox-bitmap-for-a-control.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
-- [逐步解說：自動填入 [工具箱] 中的以自訂元件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
-- [如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
-- [逐步解說：在設計階段針對自訂 Windows Forms 控制項進行偵錯](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
+
+- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)
+- [逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [HOW TO：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+- [逐步解說：在設計階段偵錯自訂 Windows Forms 控制項](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)
 - [元件撰寫](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/5dya64wy(v=vs.120))
-- [疑難排解設計階段開發](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [設計階段開發疑難排解](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))

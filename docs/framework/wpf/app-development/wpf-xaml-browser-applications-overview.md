@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: a9ac7fcc3ea4da699111ac288a5786e9f9f8b572
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59194808"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -118,7 +118,7 @@ ms.locfileid: "58410157"
   
 7.  在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
   
-8.  按一下 [確定 **Deploying Office Solutions**]。  
+8.  按一下 [確定] 。  
   
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
@@ -187,5 +187,6 @@ ms.locfileid: "58410157"
  此外，ClickOnce 下載順序的改善的並行會改善最多 10%的開始時間。 ClickOnce 下載和驗證之後資訊清單、 應用程式的下載會啟動，而進度列開始更新。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務](configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md)
 - [部署 WPF 應用程式](deploying-a-wpf-application-wpf.md)

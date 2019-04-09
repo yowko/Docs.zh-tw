@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: b5b5295e61f2a417c3565e62000021019381536f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 04eb56fe78aa2d9ef5ab0daae4ba1c873cfc2b26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712184"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097755"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合
 您的自訂控制項有時候會公開為屬性的集合。 本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。 套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保會序列化屬性。  
@@ -48,9 +48,9 @@ ms.locfileid: "57712184"
   
     |屬性|變更為|  
     |--------------|---------------|  
-    |**多行**|`true`|  
-    |**Dock**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |[ScrollBars]|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
+    |**Multiline**|`true`|  
+    |**停駐**|<xref:System.Windows.Forms.DockStyle.Fill>|  
+    |**ScrollBars**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
     |**ReadOnly**|`true`|  
   
 6.  在 **程式碼編輯器**，宣告名為字串陣列欄位`stringsValue`在`SerializationDemoControl`。  
@@ -131,14 +131,15 @@ ms.locfileid: "57712184"
   
 -   [設計階段架構](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
   
--   [Windows Forms 控制項中的屬性](attributes-in-windows-forms-controls.md)  
+-   [Windows Form 控制項中的屬性](attributes-in-windows-forms-controls.md)  
   
 -   [設計工具序列化概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
   
--   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](creating-a-wf-control-design-time-features.md)  
+-   [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
 - [設計工具序列化概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
-- [如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [逐步解說：自動填入 [工具箱] 中的以自訂元件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- [HOW TO：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
+- [逐步解說：自動將自訂元件填入工具箱](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在應用程式啟動或關閉時記錄訊息 (Visual Basic)
+title: 作法：在應用程式啟動或關閉時記錄訊息 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
 - event logs, shutdown
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Shutdown event [Visual Basic]
 - My.Log object, logging
 ms.assetid: 67624d05-cddf-48b7-8c36-5c99baa4c621
-ms.openlocfilehash: 40236a1ab5daea0003fce0ad6e35e258a42cc405
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 19cfc4d8104ce3575bf9355f750bdb4616450743
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973921"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835763"
 ---
-# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>HOW TO：在應用程式啟動或關閉時記錄訊息 (Visual Basic)
+# <a name="how-to-log-messages-when-the-application-starts-or-shuts-down-visual-basic"></a>作法：在應用程式啟動或關閉時記錄訊息 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 此範例示範如何使用 `My.Application.Log.WriteEntry` 方法 `Startup` 和 `Shutdown` 事件寫入追蹤資訊。  
   
 ### <a name="to-access-the-applications-event-handler-code"></a>存取應用程式的事件處理常式程式碼  
@@ -59,6 +59,7 @@ ms.locfileid: "56973921"
  [!code-vb[VbVbalrMyApplicationLog#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/MyEventsFake.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>

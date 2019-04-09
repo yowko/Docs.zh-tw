@@ -2,12 +2,12 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 0b3d90ed756b2bb2b9bebc0ac9e36789a80df1d7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162824"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -28,7 +28,7 @@ ms.locfileid: "54745437"
   
  Net.Msmq 接聽程式配接器服務 (NetMsmqActivator) 會根據佇列中的訊息啟動佇列應用程式。  
   
- 用戶端會將採購單從交易範圍內傳送至服務。 服務則在交易中接收訂單，然後加以處理。 服務以訂單的狀態來回呼用戶端。 為了促進雙向通訊，用戶端與服務都會使用佇列將採購單和訂單狀態加入佇列。  
+ 用戶端會將採購單從異動範圍內傳送至服務。 服務則在交易中接收訂單，然後加以處理。 服務以訂單的狀態來回呼用戶端。 為了促進雙向通訊，用戶端與服務都會使用佇列將採購單和訂單狀態加入佇列。  
   
  服務合約 `IOrderProcessor` 會定義適合與佇列一起使用的單向服務作業。 服務作業使用回覆端點，將訂單狀態傳送至用戶端。 回覆端點的位址是用來將訂單狀態傳回用戶端的佇列 URI。 訂單處理應用程式會實作這個合約。  
   
@@ -53,7 +53,7 @@ public interface IOrderStatus
 }  
 ```  
   
- 服務作業會處理已送出的採購單。 <xref:System.ServiceModel.OperationBehaviorAttribute> 會套用至服務作業以便在用來從佇列接收訊息的交易中指定自動進行登記，以及在服務作業完成時自動完成交易。 `Orders` 類別會封裝訂單處理功能。 在本例中，這個類別會將採購單新增至字典。 `Orders` 類別中的作業可以使用服務作業所登記的交易。  
+ 服務作業會處理已送出的採購單。 <xref:System.ServiceModel.OperationBehaviorAttribute> 會套用至服務作業以便在用來從佇列接收訊息的異動中指定自動進行登記，以及在服務作業完成時自動完成異動。 `Orders` 類別會封裝訂單處理功能。 在本例中，這個類別會將採購單新增至字典。 `Orders` 類別中的作業可以使用服務作業所登記的交易。  
   
  服務作業除了處理已送出的採購單外，也會將訂單狀態回覆至用戶端。  
   
@@ -101,7 +101,7 @@ public class OrderProcessorService : IOrderProcessor
 <%@Assembly name="System.Transactions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"%>  
 ```  
   
- 用戶端會建立一個交易範圍。 與服務的通訊會在交易範圍內進行，形成不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。 呼叫交易範圍上的 `Complete`，即可認可交易。  
+ 用戶端會建立一個交易範圍。 與服務的通訊會在異動範圍內進行，形成不可部分完成的原子單位 (Atomic Unit)，其中的訊息若不是全部成功，就是全部失敗。 呼叫異動範圍上的 `Complete`，即可認可異動。  
   
 ```csharp  
 using (ServiceHost serviceHost = new ServiceHost(typeof(OrderStatusService)))  
@@ -351,4 +351,5 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 主控與持續性範例](https://go.microsoft.com/fwlink/?LinkId=193961)

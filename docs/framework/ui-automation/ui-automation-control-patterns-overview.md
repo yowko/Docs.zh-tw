@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
-ms.openlocfilehash: 12bfe994e02e1a330cc543ca1afd21ddf32dac66
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673674"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126356"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI 自動化控制項模式概觀
 > [!NOTE]
@@ -73,6 +73,7 @@ ms.locfileid: "57673674"
 |<xref:System.Windows.Automation.WindowPattern>|<xref:System.Windows.Automation.Provider.IWindowProvider>|公開視窗 ( [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] 作業系統的基本概念) 的特定資訊。 視窗控制項範例包括最上層應用程式視窗 ([!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]、 [!INCLUDE[TLA#tla_winexpl](../../../includes/tlasharptla-winexpl-md.md)]等等)、 [!INCLUDE[TLA#tla_mdi](../../../includes/tlasharptla-mdi-md.md)] 子視窗和對話方塊。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 自動化用戶端的控制項模式對應](../../../docs/framework/ui-automation/control-pattern-mapping-for-ui-automation-clients.md)
 - [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 576c7c10b5ce36092dae7ab9cd7d973568168260
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
-ms.translationtype: MT
+ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220948"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081485"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
 不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式，請遵循下列步驟：  
@@ -106,16 +106,17 @@ ms.locfileid: "56220948"
   
  如需處理測試應用程式時所發生之例外狀況和其他問題的一些特定範例，請參閱：  
   
--   [例如：資料繫結時處理例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
+-   [範例：處理繫結資料時所發生的例外狀況](../../../docs/framework/net-native/example-handling-exceptions-when-binding-data.md)  
   
--   [例如：動態程式設計疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
+-   [範例：針對動態程式設計進行疑難排解](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)  
   
--   [.NET Native 應用程式中的執行階段例外狀況](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
+-   [.NET 原生 App 中的執行階段例外狀況](../../../docs/framework/net-native/runtime-exceptions-in-net-native-apps.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
-- [.NET native 設定和組態](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
-- [.NET Native 和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
+- [.NET Native 設定和組態](https://docs.microsoft.com/previous-versions/dn600164(v=vs.110))
+- [.NET 原生和編譯](../../../docs/framework/net-native/net-native-and-compilation.md)
 - [反映和 .NET Native](../../../docs/framework/net-native/reflection-and-net-native.md)
 - [依賴反映的 API](../../../docs/framework/net-native/apis-that-rely-on-reflection.md)
 - [序列化和中繼資料](../../../docs/framework/net-native/serialization-and-metadata.md)

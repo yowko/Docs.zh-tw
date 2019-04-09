@@ -1,17 +1,17 @@
 ---
-title: HOW TO：在 Visual Basic 中撥接與序列埠連接的數據機
+title: 作法：在 Visual Basic 中撥接與序列埠連接的數據機
 ms.date: 07/20/2015
 helpviewer_keywords:
 - modems [Visual Basic], dialing
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: f8eda72f72a1d152030aef620a4e3868573b7244
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 98c35e3fc7e2ef5ab5ff06de751f05ab17e2662c
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971646"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58829898"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>作法：在 Visual Basic 中撥接與序列埠連接的數據機
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 撥接數據機。  
@@ -52,6 +52,7 @@ ms.locfileid: "56971646"
  在此範例中，應用程式會在撥接數據機之後中斷與序列埠的連接。 實際上，您會想要將資料傳輸至數據機，或從中傳輸出。 如需詳細資訊，請參閱[如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
 - [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)

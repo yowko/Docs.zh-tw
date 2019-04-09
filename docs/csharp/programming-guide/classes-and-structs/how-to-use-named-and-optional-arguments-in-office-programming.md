@@ -8,11 +8,11 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 ms.assetid: 65b8a222-bcd8-454c-845f-84adff5a356f
 ms.openlocfilehash: aecac583e509d2a08fae55d911a26134330c74c7
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412197"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760075"
 ---
 # <a name="how-to-use-named-and-optional-arguments-in-office-programming-c-programming-guide"></a>作法：在 Office 程式設計中使用具名引數和選用引數 (C# 程式設計指南)
 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 中引進的具名引數和選擇性引數，可加強 C# 程式設計的便利性、彈性和可讀性。 此外，這些功能還可大幅加速對 COM 介面 (例如 Microsoft Office Automation API) 的存取。  

@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項
+title: 逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: fb58d7c8-b702-4478-ad31-b00cae118882
-ms.openlocfilehash: 479e1a652c442651375c687288923f8abb60fd61
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c7e4f49fa5bd4de1e15e8f3cf39b95779c33ef94
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087062"
 ---
-# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項
+# <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項
 使用 Visual Basic 中，您可以建立功能強大的自訂控制項，透過*繼承*。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕會繼承標準 Windows Form 的功能<xref:System.Windows.Forms.Button>控制項，並會公開 （expose） 的自訂屬性，稱為`ButtonValue`。  
   
 > [!NOTE]
@@ -96,7 +96,7 @@ ms.locfileid: "57703487"
   
 2.  選取 [Visual Basic] 專案節點，然後按一下**Windows Forms 應用程式**。  
   
-3.  在 [名稱]  方塊中，輸入 `Test`。  
+3.  在 [名稱] 方塊中，輸入 `Test`。  
   
 4.  在方案總管中，按一下 [顯示所有檔案] 按鈕。  
   
@@ -147,7 +147,8 @@ ms.locfileid: "57703487"
      數字 '5' 會顯示在 `Label1` 中，示範繼承的控制項之 `ButtonValue` 屬性已透過 `ValueButton1_Click` 方法傳遞至 `Label1`。 因此，`ValueButton` 控制項會繼承標準 Windows Forms 按鈕的所有功能，但是會公開額外的自訂屬性。  
   
 ## <a name="see-also"></a>另請參閱
-- [逐步解說：撰寫使用 Visual Basic 複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [如何：顯示中的控制項選擇工具箱項目對話方塊](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
-- [繼承基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)
+
+- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
+- [繼承的基本概念 (Visual Basic)](~/docs/visual-basic/programming-guide/language-features/objects-and-classes/inheritance-basics.md)

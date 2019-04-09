@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fac921bbe6250b039aba8527a1b9b5203af0972e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54492945"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59182295"
 ---
 # <a name="lazy-initialization"></a>延遲初始設定
 物件的「延遲初始設定」表示物件一直延遲到第一次使用才建立。 (在本主題中，「延遲初始設定」和「延遲具現化」二詞為同義字。)延遲初始設定主要是用來改善效能，避免不必要的計算，並減少程式記憶體需求。 以下為最常見的案例：  
@@ -23,7 +23,7 @@ ms.locfileid: "54492945"
   
 -   當建立某個物件會耗費大量資源，而您想要延遲到完成其他耗費資源的作業後，再建立它。 例如，假設當程式啟動時會載入數個物件執行個體，但只有部分是立即需要的。 您可以延遲到必要的物件皆已建立後，再對不需要的物件進行初始設定，以改善程式的啟動效能。  
   
- 雖然您可以自行撰寫程式碼執行延遲初始設定，但仍建議您改用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 及其相關類型也支援安全執行緒，並提供一致的例外狀況傳播原則。  
+ 雖然您可以自行撰寫程式碼執行延遲初始設定，但仍建議您改用 <xref:System.Lazy%601>。 <xref:System.Lazy%601> 和其相關的類型也支援安全執行緒，以及提供一致的例外狀況傳播原則。  
   
  下表列出 .NET Framework 第 4 版提供的類型，以在不同案例中啟用延遲初始化。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "54492945"
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|否|否|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|是|是|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或 `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|否|否|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) 或`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|是|是|  
 |Lazy(T)(LazyThreadSafetyMode)|使用者指定的|否|否|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|使用者指定的|是|如果使用者指定了 <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> 則為否；否則為是。|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "54492945"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> 包裝其物件的方法，和 <xref:System.Lazy%601> 極其相似，但有以下基本差異：  
+ <xref:System.Threading.ThreadLocal%601> 在相同的方式為包裝其物件<xref:System.Lazy%601>，具有以下基本差異：  
   
 -   每個執行緒都是使用不能從其他執行緒存取的專用私用資料，來初始化執行緒區域變數。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "54492945"
  [!code-vb[Lazy#9](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#9)]  
   
 ## <a name="thread-local-variables-in-parallelfor-and-foreach"></a>Parallel.For 和 ForEach 的執行緒區域變數  
- 當您使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法平行逐一查看資料來源時，您可以使用有執行緒區域資料內建支援的多載。 在這些方法中，執行緒位置是使用本機委派建立、存取和清除資料所達成的。 如需詳細資訊，請參閱[＜How to：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[How to:撰寫含有資料分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
+ 當您使用 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> 方法或 <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> 方法平行逐一查看資料來源時，您可以使用有執行緒區域資料內建支援的多載。 在這些方法中，執行緒位置是使用本機委派建立、存取和清除資料所達成的。 如需詳細資訊，請參閱[如何：撰寫含有執行緒區域變數的 Parallel.For 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-for-loop-with-thread-local-variables.md)和[如何：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈](../../../docs/standard/parallel-programming/how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md)。  
   
 ## <a name="using-lazy-initialization-for-low-overhead-scenarios"></a>低負荷情況下使用延遲初始設定  
  在必須延遲初始化大量物件的情況下，您可能會判定，包裝 <xref:System.Lazy%601> 中的每個物件需要太多記憶體或太多的運算資源。 或者，您可能對延遲初始設定的公開方式有嚴格的要求。 在這種情況下，您可以使用 <xref:System.Threading.LazyInitializer?displayProperty=nameWithType> 類別的 `static` (Visual Basic 為 `Shared`) 方法，延遲初始化每個物件，不將它包裝在 <xref:System.Lazy%601> 的執行個體中。  
@@ -153,7 +153,8 @@ ms.locfileid: "54492945"
  請注意，本例是在每次反覆迴圈時叫用初始化程序。 在多執行緒案例中，第一個叫用初始化程序的執行緒，其值會被所有執行緒看到。 後續其他執行緒也會叫用初始化程序，但其結果不被採用。 如果無法接受這種潛在的競爭條件，請使用採用布林值引數和同步處理物件的 <xref:System.Threading.LazyInitializer.EnsureInitialized%2A?displayProperty=nameWithType> 多載。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Managed 執行緒處理的基本概念](../../../docs/standard/threading/managed-threading-basics.md)
 - [執行緒和執行緒處理](../../../docs/standard/threading/threads-and-threading.md)
 - [工作平行程式庫 (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [如何：執行延遲初始化的物件](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [HOW TO：執行物件的延遲初始設定](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

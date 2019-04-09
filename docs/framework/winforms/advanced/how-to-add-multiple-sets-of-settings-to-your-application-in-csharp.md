@@ -1,16 +1,16 @@
 ---
-title: 如何：將多組設定新增至您的應用程式C#
+title: 如何：在 C# 中將多組設定新增至應用程式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], multiple sets
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
-ms.openlocfilehash: 43402d8a1b0b1ca26e656be1424a5fa341ac4728
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 106e0ee0b8775f329f3ffd8babe458cac8492bd5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59187378"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>如何：將多組設定新增至您在 C 中的應用程式\#
 在某些情況下，您可能想要的應用程式中有多組設定。 比方說，如果您正在開發應用程式特定群組的設定應該在其中經常變更，它可能是個明智的選擇，讓檔案可以全面，取代成單一檔案的所有分隔它們保留其他設定不會受到影響。 Visual Studio 可讓您將多組設定新增至您的專案。 可透過 Properties.Settings 物件存取設定的其他集合。  
@@ -26,5 +26,6 @@ ms.locfileid: "57719646"
 4.  新增並使用此檔案中的設定，就如同任何其他的設定檔。 您可以存取此設定，透過 Properties.Settings 物件群組。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用應用程式設定和使用者設定](using-application-settings-and-user-settings.md)
 - [應用程式設定概觀](application-settings-overview.md)

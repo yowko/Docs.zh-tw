@@ -1,19 +1,19 @@
 ---
-title: HOW TO：資料繫結至 Windows Form DataGridView 控制項中使用設計工具
+title: HOW TO：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Windows Forms controls, binding to a data source
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 8c90366111957f27a6bd86035013eba00426f46b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718502"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200229"
 ---
-# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：資料繫結至 Windows Form DataGridView 控制項中使用設計工具
+# <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
 您可以使用設計工具來連接<xref:System.Windows.Forms.DataGridView>的數個不同，包括資料庫、 商務物件或 Web 服務的資料來源的控制項。 控制當您將控制項繫結至資料來源，使用設計工具時，自動繫結至<xref:System.Windows.Forms.BindingSource>表示資料來源的元件。 此外，控制項中會自動產生資料行，以符合資料來源所提供的結構描述資訊。  
   
  產生資料行之後，您可加以修改以符合您的需求。 例如，您可以移除或隱藏您不想顯示的資料行、可以重新排列資料行，或者可以修改資料行類型。 如需修改資料行的詳細資訊，請參閱＜另請參閱＞一節中所列的主題。  
@@ -45,18 +45,19 @@ ms.locfileid: "57718502"
     >  如果專案已經有資料來源，您也可以使用 [資料來源] 視窗建立資料表單。 如需詳細資訊，請參閱[資料來源視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
-- [如何：連接到資料庫中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [如何：新增和移除使用設計工具的 Windows Form DataGridView 控制項中的資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [如何：變更 Windows Form DataGridView 控制項中使用設計工具中的資料行的順序](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [如何：使用設計工具的 Windows Forms DataGridView 資料行的類型變更](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [如何：凍結 Windows Form DataGridView 控制項中使用設計工具中的資料行](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [如何：隱藏 Windows Form DataGridView 控制項中使用設計工具中的資料行](hide-columns-in-the-datagrid-using-the-designer.md)
-- [如何：讓唯讀使用設計工具的 Windows Form DataGridView 控制項中的資料行](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [HOW TO：連接到資料庫中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
+- [HOW TO：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [HOW TO：使用設計工具變更 Windows Forms DataGridView 控制項的資料行順序](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [HOW TO：使用設計工具變更 Windows Forms DataGridView 資料行的類型](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [HOW TO：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [HOW TO：使用設計工具隱藏 Windows Forms DataGridView 控制項的資料行](hide-columns-in-the-datagrid-using-the-designer.md)
+- [HOW TO：使用設計工具將 Windows Forms DataGridView 控制項的資料行設為唯讀](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
 - [資料來源視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
-- [如何：Windows Forms 應用程式中顯示相關的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))
+- [HOW TO：Windows Forms 應用程式中顯示相關的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

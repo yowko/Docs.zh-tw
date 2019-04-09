@@ -1,5 +1,5 @@
 ---
-title: 如何：將自訂位置加入至 [檔案] 對話方塊
+title: 如何：將自訂位置新增至檔案對話方塊
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - adding Custom Place to dialog box
 - CustomPlaces collection
 ms.assetid: 63f6469b-59cd-40f6-9e61-8b5831856780
-ms.openlocfilehash: d9c1373a16f7d62c2933e01e513478fc6c9866d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79836dd260cb13912ccba43cfb4a0a3e0ad195fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721875"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087679"
 ---
-# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>如何：將自訂位置加入至 [檔案] 對話方塊
+# <a name="how-to-add-a-custom-place-to-a-file-dialog-box"></a>如何：將自訂位置新增至檔案對話方塊
 [!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)] 上的預設開啟和儲存對話方塊，在 [最愛的連結] 對話方塊左側有一個區域。 這個區域稱為自訂位置。 <xref:System.Windows.Forms.OpenFileDialog>並<xref:System.Windows.Forms.SaveFileDialog>類別可讓您加入資料夾來<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>集合。  
   
 > [!NOTE]
@@ -37,6 +37,7 @@ ms.locfileid: "57721875"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.FileDialog>
 - <xref:System.Windows.Forms.FileDialogCustomPlacesCollection.Add%2A?displayProperty=nameWithType>
 - [檔案對話方塊自訂位置的已知資料夾 GUID](known-folder-guids-for-file-dialog-custom-places.md)

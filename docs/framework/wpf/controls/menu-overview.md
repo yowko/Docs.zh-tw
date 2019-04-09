@@ -5,17 +5,16 @@ helpviewer_keywords:
 - Menu control [WPF]
 - controls [WPF], Menu
 ms.assetid: 67df6de5-db96-4c71-b752-af90729a6537
-ms.openlocfilehash: d5f53603ea22b2ae12a9846ba6bdce525790ce15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a3250cfd3fd651cb4ed3c4fd6975f5b5c89195f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360937"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166369"
 ---
 # <a name="menu-overview"></a>功能表概觀
 <xref:System.Windows.Controls.Menu>類別可讓您組織與命令和事件處理常式，以階層順序相關聯的項目。 每個<xref:System.Windows.Controls.Menu>項目包含集合<xref:System.Windows.Controls.MenuItem>項目。  
-  
-  
+
 <a name="menu_control"></a>   
 ## <a name="menu-control"></a>功能表控制項  
  <xref:System.Windows.Controls.Menu>控制項顯示的清單，這些項目指定命令或應用程式的選項。 一般而言，按一下<xref:System.Windows.Controls.MenuItem>開啟子功能表，或讓應用程式執行命令。  
@@ -60,4 +59,5 @@ ms.locfileid: "57360937"
  [!code-xaml[MenuStylesSnippet#2](~/samples/snippets/csharp/VS_Snippets_Wpf/MenuStylesSnippet/CS/app.xaml#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)

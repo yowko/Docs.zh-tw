@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繼承自 Control 類別
+title: HOW TO：繼承控制項類別
 ms.date: 03/30/2017
 helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: cf1b3c7d7d530710c4c7e0fbd137667c3598500a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141982"
 ---
-# <a name="how-to-inherit-from-the-control-class"></a>HOW TO：繼承自 Control 類別
+# <a name="how-to-inherit-from-the-control-class"></a>HOW TO：繼承控制項類別
 如果您想要建立完全自訂的控制項，以在 Windows Form 上使用，您應該繼承自<xref:System.Windows.Forms.Control>類別。 同時繼承自<xref:System.Windows.Forms.Control>類別會要求您執行更多的規劃和實作，它也提供您最多的選項。 繼承自時<xref:System.Windows.Forms.Control>，還會繼承非常基本的功能，可讓使用控制項。 固有的功能<xref:System.Windows.Forms.Control>類別來處理透過鍵盤和滑鼠的使用者輸入，定義繫結和控制項的大小，提供的 windows 控制代碼，並提供訊息處理和安全性。 它不會併入任何繪製功能 (在此例中是控制項圖形化介面的實際轉譯)，也不會併入任何特定的使用者互動功能。 您必須透過自訂程式碼來提供上述一切。  
   
 > [!NOTE]
@@ -44,9 +44,10 @@ ms.locfileid: "57702967"
 8.  儲存並測試您的控制項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [各種自訂控制項](varieties-of-custom-controls.md)
-- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
-- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
-- [如何：撰寫 Windows forms 的控制項](how-to-author-controls-for-windows-forms.md)
+- [HOW TO：繼承 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [HOW TO：繼承現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+- [HOW TO：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
+- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)

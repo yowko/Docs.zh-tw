@@ -1,5 +1,5 @@
 ---
-title: HOW TO：繼承自現有的 Windows Forms 控制項
+title: HOW TO：繼承現有的 Windows Forms 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - inheritance [Windows Forms], Windows Forms custom controls
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
-ms.openlocfilehash: 9b3b5b2420a1121be81bc299dea645051f941cd8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 90008b00c95906ba43364c5a4ae3f85d9fdf0e22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707972"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59087868"
 ---
-# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>HOW TO：繼承自現有的 Windows Forms 控制項
+# <a name="how-to-inherit-from-existing-windows-forms-controls"></a>HOW TO：繼承現有的 Windows Forms 控制項
 如果您想要擴充現有控制項的功能，您可以透過繼承來建立衍生自現有控制項的控制項。 繼承自現有的控制項時，您會繼承該控制項的所有功能和視覺屬性。 例如，如果您所建立的控制項繼承自<xref:System.Windows.Forms.Button>、 您的新控制項看起來和 act 完全像標準<xref:System.Windows.Forms.Button>控制項。 您就可以透過實作自訂方法和屬性，來擴充或修改新控制項的功能。 在一些控制項中，您也可以變更繼承的控制項的視覺外觀藉由覆寫其<xref:System.Windows.Forms.Control.OnPaint%2A>方法。  
   
 > [!NOTE]
@@ -84,10 +84,11 @@ ms.locfileid: "57707972"
 11. 儲存並測試您的控制項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [各種自訂控制項](varieties-of-custom-controls.md)
-- [如何：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)
-- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
-- [如何：撰寫 Windows forms 的控制項](how-to-author-controls-for-windows-forms.md)
+- [HOW TO：繼承控制項類別](how-to-inherit-from-the-control-class.md)
+- [HOW TO：繼承 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [HOW TO：撰寫 Windows Forms 的控制項](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic 中的繼承事件處理常式疑難排解](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
-- [逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [逐步解說：繼承自具有視覺效果的 Windows Forms 控制項C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [逐步解說：使用 Visual C# 繼承來自 Windows Form 的控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

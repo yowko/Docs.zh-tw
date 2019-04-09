@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用對齊線的 Windows Form 上排列控制項
+title: 逐步解說：使用對齊線排列 Windows Forms 的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], arranging with snaplines
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: f898a15fd2157c625767d53d8b53c5469fb9a957
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4d352ee5c431ba43bbe338a9caf7bd0716e91834
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703591"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139785"
 ---
-# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線的 Windows Form 上排列控制項
+# <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>逐步解說：使用對齊線排列 Windows Forms 的控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 Windows Form 設計工具會提供您許多版面配置工具，來完成這項作業。 其中一個最重要的是<xref:System.Windows.Forms.Design.Behavior.SnapLine>功能。  
   
  對齊線所顯示的精確對齊控制項與其他控制項的位置。 也會顯示您的 Windows 使用者介面指導方針所指定的控制項之間的邊界的建議的距離。 如需詳細資訊，請參閱 <<c0> [ 使用者介面設計和開發](https://go.microsoft.com/FWLink/?LinkId=83878)。  
@@ -240,8 +240,9 @@ ms.locfileid: "57703591"
  Windows 使用者介面設計的相關資訊，請參閱本書*Microsoft Windows 使用者經驗、 使用者介面開發人員和設計人員的正式方針*Redmond，WA:Microsoft Press，1999年。 (USBN:0-7356-0566-1).  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Design.Behavior.SnapLine>
-- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：配置 Windows Form 控制項和邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)
-- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項](windows-forms-controls-padding-autosize.md)
+- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)

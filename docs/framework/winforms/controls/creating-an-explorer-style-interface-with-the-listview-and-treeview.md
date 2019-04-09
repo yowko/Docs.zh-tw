@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：以 ListView 和 TreeView 控制項使用設計工具建立檔案總管樣式介面
+title: 逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: a849eae086c3507bbaf7050afd2e0496ab5a970e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716977"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59117984"
 ---
-# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：以 ListView 和 TreeView 控制項使用設計工具建立檔案總管樣式介面
+# <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應用程式在短量。 常見的案例建立使用者介面 (UI) 與<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管功能的控制項。 Windows 檔案總管會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
   
 > [!NOTE]
@@ -46,7 +46,7 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
     1.  將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-    2.  將 <xref:System.Windows.Forms.TreeView.ImageList%2A> 屬性設定為 `imagelist1.`  
+    2.  設定<xref:System.Windows.Forms.TreeView.ImageList%2A>屬性 `imagelist1.`  
   
 7.  新增<xref:System.Windows.Forms.ListView>控制項，名為`listView1`至表單，並將其放置在右邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`listview1`執行下列動作：  
   
@@ -56,7 +56,7 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
     3.  開啟 [ColumnHeader 集合編輯器] 中，依序按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 中<xref:System.Windows.Forms.ListView.Columns%2A>屬性 **。** 新增三個資料行並設定其<xref:System.Windows.Forms.ColumnHeader.Text%2A>屬性，以`Name`， `Type`，和`Last Modified`分別。 按一下 [確定]  關閉對話方塊。  
   
-    4.  將 <xref:System.Windows.Forms.ListView.SmallImageList%2A> 屬性設定為 `imageList1.`  
+    4.  設定<xref:System.Windows.Forms.ListView.SmallImageList%2A>屬性 `imageList1.`  
   
 8.  實作程式碼來填入<xref:System.Windows.Forms.TreeView>節點與子節點。 新增下列程式碼`Form1`類別。  
   
@@ -94,16 +94,17 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
 ## <a name="next-steps"></a>後續步驟  
  此應用程式可讓您的方式，您可以使用範例<xref:System.Windows.Forms.TreeView>和<xref:System.Windows.Forms.ListView>一起控制。 如需有關這些控制項的詳細資訊，請參閱下列主題：  
   
--   [如何：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Form)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
+-   [HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)](add-custom-information-to-a-treeview-or-listview-control-wf.md)  
   
--   [如何：將搜尋功能加入至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)  
+-   [HOW TO：將搜尋功能新增至 ListView 控制項](how-to-add-search-capabilities-to-a-listview-control.md)  
   
--   [如何：將捷徑功能表附加至 TreeView 節點](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
+-   [HOW TO：將捷徑功能表附加至 TreeView 節點](how-to-attach-a-shortcut-menu-to-a-treeview-node.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ListView>
 - <xref:System.Windows.Forms.TreeView>
 - [ListView 控制項](listview-control-windows-forms.md)
-- [如何：新增和移除節點，而在 Windows Form TreeView 控制項](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
-- [如何：新增和移除項目，使用 Windows Forms ListView 控制項](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [如何：資料行加入 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [HOW TO：使用 Windows Forms TreeView 控制項新增和移除節點](how-to-add-and-remove-nodes-with-the-windows-forms-treeview-control.md)
+- [HOW TO：使用 Windows Forms ListView 控制項新增和移除項目](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [HOW TO：將資料行新增至 Windows Form ListView 控制項](how-to-add-columns-to-the-windows-forms-listview-control.md)

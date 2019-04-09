@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: 318473c146f5822259a3131192ce33b9d28a5461
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055348"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081264"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結會提供簡單且一致的方式呈現，並與資料互動的應用程式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -23,8 +23,7 @@ ms.locfileid: "59055348"
  相較於傳統模型，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的資料繫結功能具有數個優點，包括本身就支援資料繫結的相當多屬性、資料的彈性 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 表示，以及 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 個別的清楚商務邏輯。  
   
  本主題會先討論基本概念[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]資料繫結，然後再說明使用<xref:System.Windows.Data.Binding>類別和資料繫結的其他功能。  
-  
-  
+
 <a name="what_is_data_binding"></a>   
 ## <a name="what-is-data-binding"></a>資料繫結是什麼？  
  資料繫結是指在應用程式 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 與商務邏輯之間建立連接的程序。 如果繫結具有正確的設定而且資料提供了適當的通知，則當資料變更其值時，繫結至資料的元素就會自動反映變更。 資料繫結也代表在元素資料的外部表示變更時，基礎資料也會自動更新以反映變更。 例如，如果使用者編輯中的值<xref:System.Windows.Controls.TextBox>項目，基礎資料值會自動更新以反映該變更。  
@@ -232,8 +231,7 @@ ms.locfileid: "59055348"
 <a name="collection_views"></a>   
 ### <a name="collection-views"></a>集合檢視  
  一旦您<xref:System.Windows.Controls.ItemsControl>繫結至資料集合，您可能想要排序、 篩選或群組資料。 若要這樣做，您可以使用集合檢視，也就是類別可實作<xref:System.ComponentModel.ICollectionView>介面。  
-  
-  
+
 #### <a name="what-are-collection-views"></a>集合檢視是什麼  
  集合檢視是以繫結來源集合為基礎的一層，可以讓您依據排序、篩選和群組查詢來巡覽和顯示來源集合，而不需要變更基礎來源集合本身。 集合檢視也會保留集合中目前項目的指標。 如果來源集合實作<xref:System.Collections.Specialized.INotifyCollectionChanged>介面，所引發的變更<xref:System.Collections.Specialized.INotifyCollectionChanged.CollectionChanged>事件傳播至檢視。  
   
@@ -430,6 +428,7 @@ ms.locfileid: "59055348"
  您可以設定附加的屬性<xref:System.Diagnostics.PresentationTraceSources.TraceLevel%2A?displayProperty=nameWithType>上繫結相關的物件，以接收特定繫結的相關狀態資訊。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.DataErrorValidationRule>
 - [WPF 4.5 版的新功能](../getting-started/whats-new.md)
 - [繫結至 LINQ 查詢的結果](how-to-bind-to-the-results-of-a-linq-query.md)

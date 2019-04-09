@@ -1,19 +1,19 @@
 ---
-title: HOW TO：設定輸入的遮罩
+title: HOW TO：設定輸入遮罩
 ms.date: 03/30/2017
 f1_keywords:
 - net.ComponentModel.MaskPropertyEditor
 helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
-ms.openlocfilehash: 53bb8d0e301f83c25ab292b1cb6324dd5f21f100
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 14591b313b0ba4fc2a0a30a45c693147f00050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702356"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207535"
 ---
-# <a name="how-to-set-the-input-mask"></a>HOW TO：設定輸入的遮罩
+# <a name="how-to-set-the-input-mask"></a>HOW TO：設定輸入遮罩
 遮罩的文字方塊控制項是支援的宣告式語法，以接受或拒絕使用者輸入增強的文字方塊控制項。 藉由設定 [遮罩] 屬性，您可以指定允許使用者輸入，而不需要撰寫任何自訂驗證邏輯應用程式中。 如需詳細資訊，請參閱的 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox>類別。  
   
 ## <a name="setting-the-mask-property-manually"></a>手動設定遮罩屬性  
@@ -64,4 +64,5 @@ ms.locfileid: "57702356"
      在 輸入遮罩**遮罩**中的屬性**屬性**視窗。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [逐步解說：使用 MaskedTextBox 控制項](walkthrough-working-with-the-maskedtextbox-control.md)

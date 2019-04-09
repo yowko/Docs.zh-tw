@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中變更使用者設定
+title: 作法：在 Visual Basic 中變更使用者設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - My.Settings object [Visual Basic], changing user settings
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
-ms.openlocfilehash: 4e93dbf453b831bb28707250466ea928bfe9a716
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 05c95026d061918b38cf301209afefa9498e33bf
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976378"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58820967"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>作法：在 Visual Basic 中變更使用者設定
 您可以將新值指派給 `My.Settings` 物件的設定屬性，來變更使用者設定。  
@@ -32,6 +32,7 @@ ms.locfileid: "56976378"
  應用程式關閉時，會儲存使用者設定。 若要立即儲存設定，請呼叫 `My.Settings.Save` 方法。 如需詳細資訊，請參閱[如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)
 - [如何：在 Visual Basic 中讀取應用程式設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)
 - [如何：保存 Visual Basic 中的使用者設定](../../../../visual-basic/developing-apps/programming/app-settings/how-to-persist-user-settings.md)

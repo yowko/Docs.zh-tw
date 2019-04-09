@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 7c696d24dd84aee568706200389839dea080d7b4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 686d1797666c36f47d1ab0244754bbf2daf97eaf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188567"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>逐步解說：僅使用預存程序 (Visual Basic)
 本逐步解說會針對只用預存程序來存取資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 資料庫管理員會使用這個方法來限制對資料存放區的存取。  
@@ -70,7 +70,7 @@ ms.locfileid: "54577378"
   
 4.  在 **名稱**方塊中，輸入**SprocOnlyApp**。  
   
-5.  按一下 [確定 **Deploying Office Solutions**]。  
+5.  按一下 [確定] 。  
   
      Windows Forms 設計工具隨即開啟。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "54577378"
   
 1.  在 [**方案總管] 中**，以滑鼠右鍵按一下**Form1.vb**，然後按一下**檢視程式碼**。  
   
-     `Class Form1` 會顯示在程式碼編輯器中。  
+     `Class Form1` 在程式碼編輯器隨即出現。  
   
 2.  在 `Form1` 程式碼區塊中輸入下列程式碼：  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54577378"
   
 #### <a name="to-test-the-application"></a>若要測試應用程式  
   
-1.  按 F5 鍵啟動偵錯作業。  
+1.  按 F5 開始偵錯作業。  
   
      Form1 隨即出現。  
   
@@ -192,5 +192,6 @@ ms.locfileid: "54577378"
  您可以進行一些變更，以強化這個專案。 例如，您可以在清單方塊中列出可用的預存程序，讓使用者選取所要執行的程序。 您也可以將報表輸出送至文字檔。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)
 - [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

@@ -1,19 +1,19 @@
 ---
-title: HOW TO：重新指派至不同的父代的現有控制項
+title: HOW TO：將現有控制項重新指派至不同的父代
 ms.date: 03/30/2017
 helpviewer_keywords:
 - container controls [Windows Forms], Windows Forms
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 650d10fd681a55dfb17425111ef9d81726551da9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720182"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162237"
 ---
-# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>HOW TO：重新指派至不同的父代的現有控制項
+# <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>HOW TO：將現有控制項重新指派至不同的父代
 您可以將表單上現有的控制項指派給新的容器控制項。  
   
 > [!NOTE]
@@ -44,8 +44,9 @@ ms.locfileid: "57720182"
      三個 <xref:System.Windows.Forms.Button> 控制項現在都已插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.FlowLayoutPanel>
 - <xref:System.Windows.Forms.TableLayoutPanel>
-- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
-- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
+- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)

@@ -2,12 +2,12 @@
 title: HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
-ms.openlocfilehash: 3c7052a67e756ae0c3fa1692c3ed746419384de4
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: dfbb32a751623fb1e3753cfd8bbbaf5910d571b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410936"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59142996"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>HOW TO：將啟用 AJAX 的 ASP.NET Web 服務移轉至 WCF
 本主題概述將基本的 ASP.NET AJAX 服務移轉至對等的 AJAX 啟用 Windows Communication Foundation (WCF) 服務的程序。 它示範如何建立同等功效的 WCF 版本的 ASP.NET AJAX 服務。 這兩項服務可以接著使用並排顯示，或 WCF 服務可以用來取代 ASP.NET AJAX 服務。
@@ -175,8 +175,7 @@ namespace ASPHello
 }
 ```
 
- 
-  <xref:System.Xml.XmlDocument> 不支援 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 型別，因為它無法由 <xref:System.Xml.Serialization.XmlSerializer> 來序列化。 您可以使用 <xref:System.Xml.Linq.XDocument> 型別，或是改為序列化 <xref:System.Xml.XmlDocument.DocumentElement%2A>。
+ <xref:System.Xml.XmlDocument> 不支援 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 型別，因為它無法由 <xref:System.Xml.Serialization.XmlSerializer> 來序列化。 您可以使用 <xref:System.Xml.Linq.XDocument> 型別，或是改為序列化 <xref:System.Xml.XmlDocument.DocumentElement%2A>。
 
  如果 ASMX Web 服務正在升級和移轉至 WCF 服務的並排顯示，以避免兩個型別對應至用戶端上相同的名稱。 如果在 <xref:System.Web.Services.WebMethodAttribute> 和 <xref:System.ServiceModel.ServiceContractAttribute> 中使用相同的型別，會造成序列化程式中的例外狀況：
 
@@ -184,8 +183,7 @@ namespace ASPHello
 
 -   如果先新增 ASMX Web 服務，則叫用 WCF 服務上的方法會導致例外狀況中的<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>因為在 proxy 中順序的 Web 服務樣式定義會取得優先權。
 
- 
-  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 之間在行為上有許多不同之處。 例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將字典表示為索引鍵/值配對的陣列，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 會將字典表示為實際的 JSON 物件。 因此下面是在 ASP.NET AJAX 中表示的字典。
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 和 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 之間在行為上有許多不同之處。 例如，<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 會將字典表示為索引鍵/值配對的陣列，而 ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> 會將字典表示為實際的 JSON 物件。 因此下面是在 ASP.NET AJAX 中表示的字典。
 
 ```
 Dictionary<string, int> d = new Dictionary<string, int>();
@@ -195,27 +193,25 @@ d.Add("two", 2);
 
  這個字典在 JSON 物件中的表示如下列清單所示：
 
--   [{"Key":"one","Value":1},{"Key":"two","Value":2}]，透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   [{"Key":"one","Value":1},{"Key":"two","Value":2}] by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
 
 -   {"one": 1，"two": 2} 的 ASP.NET ajax <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
- 
-  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的功能較為強大，因為它可以處理其中金鑰類型不是字串的字典，但是 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 卻無法這麼做。 然而後者較容易用來處理 JSON。
+ <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的功能較為強大，因為它可以處理其中金鑰類型不是字串的字典，但是 <xref:System.Web.Script.Serialization.JavaScriptSerializer> 卻無法這麼做。 然而後者較容易用來處理 JSON。
 
  下表將摘要說明序列化程式之間的許多差異。
 
 |差異分類|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |將空的緩衝區 (新的 byte[0]) 還原序列化成 <xref:System.Object> (或 <xref:System.Uri> 或一些其他的類別)。|SerializationException|null|
-|
-  <xref:System.DBNull.Value> 的序列化|{} (或 {"__type":"#System"})|Null|
+|序列化 <xref:System.DBNull.Value>|{} (或 {"__type":"#System"})|Null|
 |[Serializable] 型別的私用成員序列化|已序列化|未序列化|
-|
-  <xref:System.Runtime.Serialization.ISerializable> 型別的公用屬性序列化。|未序列化|已序列化|
+|<xref:System.Runtime.Serialization.ISerializable> 型別的公用屬性序列化。|未序列化|已序列化|
 |JSON 的 "Extensions"|遵守 JSON 規格，需要在物件成員名稱上加上引號 ({"a":"hello"})。|支援不加引號的物件成員名稱 ({a:"hello"})。|
-|<xref:System.DateTime> 以 Coordinated Universal Time (UTC) 時間計算|不支援格式"\\/Date(123456789U)\\/ 」 或 「\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\\\/)".|支援格式"\\/Date(123456789U)\\/"和"\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\ \\/)"做為 DateTime 值。|
+|<xref:System.DateTime> 國際標準時間 (UTC)|不支援格式"\\/Date(123456789U)\\/ 」 或 「\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\\\/)".|支援格式"\\/Date(123456789U)\\/"和"\\/日期\\(\d+ (U&#124;(\\+\\-[\d{4}]))？\\)\\ \\/)"做為 DateTime 值。|
 |字典表示法|陣列的 KeyValuePair\<K，V >，可處理索引鍵的類型不是字串。|做為實際的 JSON 物件 - 但只能處理屬於字串的金鑰型別。|
 |逸出字元|一律使用逸出正斜線 (/)；絕不允許使用未逸出的無效 JSON 字元，例如 "\n"。|使用逸出斜線 (/) 做為 DateTime 值。|
 
 ## <a name="see-also"></a>另請參閱
-- [如何：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+
+- [HOW TO：使用組態新增 ASP.NET AJAX 端點](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

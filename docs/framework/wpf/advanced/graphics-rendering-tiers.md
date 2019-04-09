@@ -8,18 +8,16 @@ helpviewer_keywords:
 - graphics rendering tiers [WPF]
 - graphics [WPF], rendering tiers
 ms.assetid: 08dd1606-02a2-4122-9351-c0afd2ec3a70
-ms.openlocfilehash: f56a8435b1cdebe0e0af6531c37dccfbe6617a0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: d5924ff9336bc6e93022caf1b85d5fd98f7a617d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357517"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197382"
 ---
 # <a name="graphics-rendering-tiers"></a>圖形轉譯層
 轉譯層定義執行 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式之裝置的圖形硬體及效能層級。  
-  
 
-  
 <a name="graphics_hardware"></a>   
 ## <a name="graphics-hardware"></a>圖形硬體  
  對轉譯層級的影響最大的圖形硬體功能如下︰  
@@ -70,10 +68,10 @@ ms.locfileid: "57357517"
 |-------------|-----------|  
 |2D 轉譯|大部分 2D 轉譯都予以支援。|  
 |3D 點陣化|支援大部分的 3D 點陣化。|  
-|3D 非等向性篩選|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 嘗試在轉譯 3D 內容時使用非等向性篩選。 非等向性篩選指的是增強離相機最遠且角度最陡之表面上紋理的影像品質。|  
-|3D MIP 對應|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 嘗試在轉譯 3D 內容時使用 MIP 對應。 紋理佔用較小的檢視欄位時，MIP 對應可改善紋理轉譯品質<xref:System.Windows.Controls.Viewport3D>。|  
+|3D 非等向性篩選|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 嘗試使用非等向性篩選轉譯 3D 內容時。 非等向性篩選指的是增強離相機最遠且角度最陡之表面上紋理的影像品質。|  
+|3D MIP 對應|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 嘗試轉譯 3D 內容時使用 MIP 對應。 紋理佔用較小的檢視欄位時，MIP 對應可改善紋理轉譯品質<xref:System.Windows.Controls.Viewport3D>。|  
 |放射狀漸層|雖然支援，但避免使用<xref:System.Windows.Media.RadialGradientBrush>大型物件上。|  
-|3D 光源計算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會執行每個頂點光線，這表示必須計算每個套用至網狀結構之資料的每個頂點的光源強度。|  
+|3D 光源計算|[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 執行每個頂點光線，這表示，必須計算套用至網狀結構之資料的每個頂點的光源強度。|  
 |文字轉譯|子像素字型轉譯會在圖形硬體上使用可用的像素著色器。|  
   
  下列是僅針對轉譯層 2 提供硬體加速的功能：  
@@ -98,7 +96,7 @@ ms.locfileid: "57357517"
  下列資源可協助您分析 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的效能特性。  
   
 ### <a name="graphics-rendering-registry-settings"></a>圖形轉譯登錄設定  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供四個登錄設定來控制 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 轉譯：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供四個登錄設定來控制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]轉譯：  
   
 |設定|描述|  
 |-------------|-----------------|  
@@ -110,7 +108,7 @@ ms.locfileid: "57357517"
  這些設定可由知道如何參考 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 登錄設定的外部組態公用程式所存取。 您也可以使用 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 登錄編輯程式直接存取這些值來建立或修改這些設定。 如需詳細資訊，請參閱[圖形轉譯登錄設定](../graphics-multimedia/graphics-rendering-registry-settings.md)。  
   
 ### <a name="wpf-performance-profiling-tools"></a>WPF 效能程式碼剖析工具  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一套效能分析工具，可讓您分析應用程式的執行階段行為，並判斷您可以套用的效能最佳化類型。 下表列出 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具 (WPF 效能套件) 所包含的效能剖析工具：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供一套程式碼剖析工具，可讓您分析您的應用程式的執行階段行為，並判斷型別，您可以將套用的效能最佳化的效能。 下表列出 [!INCLUDE[TLA2#tla_lhsdk](../../../../includes/tla2sharptla-lhsdk-md.md)] 工具 (WPF 效能套件) 所包含的效能剖析工具：  
   
 |工具|描述|  
 |----------|-----------------|  
@@ -130,9 +128,10 @@ ms.locfileid: "57357517"
 DirectX 診斷工具主要視窗  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.RenderCapability>
 - <xref:System.Windows.Media.RenderOptions>
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [WPF 效能套件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aa969767(v=vs.100))
 - [圖形轉譯登錄設定](../graphics-multimedia/graphics-rendering-registry-settings.md)
-- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

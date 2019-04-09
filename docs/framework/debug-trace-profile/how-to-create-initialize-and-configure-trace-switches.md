@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立、 初始化和設定追蹤參數
+title: HOW TO：建立、初始化和設定追蹤參數
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c42d7d13c630a0aef8a6ca65bd391fb232b48bfb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739611"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079132"
 ---
-# <a name="how-to-create-initialize-and-configure-trace-switches"></a>HOW TO：建立、 初始化和設定追蹤參數
+# <a name="how-to-create-initialize-and-configure-trace-switches"></a>HOW TO：建立、初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
   
 <a name="create"></a>   
@@ -67,7 +67,7 @@ ms.locfileid: "54739611"
 > [!NOTE]
 >  在 .NET Framework 2.0 版中，您可以使用文字來指定參數的值。 例如，<xref:System.Diagnostics.BooleanSwitch> 的 `true`，或是代表列舉值的文字 (例如 <xref:System.Diagnostics.TraceSwitch> 的 `Error`)。 `<add name="myTraceSwitch" value="Error" />` 這一行相當於 `<add name="myTraceSwitch" value="1" />`。  
   
- 為了讓使用者能夠設定應用程式的追蹤參數，您必須在應用程式中提供有關參數的詳細文件。 您應詳述參數類型及其控制項目，以及如何開啟和關閉參數。 您也應為終端使用者提供 .config 檔案，以在註解中提供適當的說明。  
+ 為了讓終端使用者能夠設定應用程式的追蹤參數，您必須在應用程式中提供有關參數的詳細文件。 您應詳述參數類型及其控制項目，以及如何開啟和關閉參數。 您也應為使用者提供 .config 檔案，以在註解中提供適當的說明。  
   
 #### <a name="to-configure-trace-switches"></a>設定追蹤參數  
   
@@ -77,7 +77,7 @@ ms.locfileid: "54739611"
   
     -   **Visual Basic:** 在 **加入新項目**對話方塊方塊中，選擇**應用程式組態檔**。  
   
-         隨即會建立並開啟應用程式組態檔。 這是根項目為 `<configuration>.` 的 XML 文件。  
+         隨即會建立並開啟應用程式組態檔。 這是其根項目是 XML 文件 `<configuration>.`  
   
     -   **視覺化C#:** 在 **加入新項目**對話方塊方塊中，選擇**XML 檔案**。 將這個檔案命名為 **app.config**。在 XML 編輯器中，於 XML 宣告後加入下列 XML：  
   
@@ -126,7 +126,8 @@ ms.locfileid: "54739611"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+
+- [追蹤和稽核應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [HOW TO：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [追蹤和偵錯設定結構描述](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

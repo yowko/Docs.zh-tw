@@ -5,14 +5,14 @@ helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
-ms.openlocfilehash: 0fac312c4c20f57e93dc88d0d6bb6b13932f7682
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56966974"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58814143"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中重新命名檔案
+# <a name="how-to-rename-a-file-in-visual-basic"></a>作法：在 Visual Basic 中重新命名檔案
 您可以使用 `My.Computer.FileSystem` 物件的 `RenameFile` 方法，藉由提供目前的位置、檔案名稱和新的檔案名稱，來重新命名檔案。 這個方法無法用來移動檔案，請使用 `MoveFile` 方法來移動並重新命名檔案。  
   
 ### <a name="to-rename-a-file"></a>重新命名檔案  
@@ -47,6 +47,7 @@ ms.locfileid: "56966974"
 -   使用者沒有必要的權限 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.RenameFile%2A>
 - [如何：移動檔案](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-move-a-file.md)
 - [建立、刪除和移動檔案和目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/creating-deleting-and-moving-files-and-directories.md)

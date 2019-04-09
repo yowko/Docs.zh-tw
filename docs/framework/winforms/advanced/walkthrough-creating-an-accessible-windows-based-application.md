@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 19ff49cfa465cce479a4fd5264c565cbb305c84f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823463"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203687"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  
@@ -141,7 +141,6 @@ ms.locfileid: "58823463"
     
       ![名稱文字方塊中，與大小配料選取比薩訂購表單。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
-  
 ## <a name="supporting-high-contrast-mode"></a>支援高對比模式  
  高對比模式是 Windows 系統的一項設定，使用對比色彩和字型大小以提升可讀性，對於視覺受損的使用者很有幫助。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>屬性可用來判斷是否已設定高對比模式。  
   

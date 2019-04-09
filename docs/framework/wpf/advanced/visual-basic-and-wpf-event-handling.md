@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Visual Basic [WPF], event handlers
 - event handlers [WPF], Visual Basic
 ms.assetid: ad4eb9aa-3afc-4a71-8cf6-add3fbea54a1
-ms.openlocfilehash: 736542a4d12f96c40e836f84066dbeb8e66b9436
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c6e1863850ebf04408c7ffc7b784e9ca3ca12cf5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358947"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078014"
 ---
 # <a name="visual-basic-and-wpf-event-handling"></a>Visual Basic 和 WPF 事件處理
 Microsoft Visual Basic.NET 語言的具體來說，您可以使用語言特有`Handles`關鍵字加入事件處理常式關聯執行個體，而不是附加屬性的事件處理常式，或使用<xref:System.Windows.UIElement.AddHandler%2A>方法。 不過，將處理常式附加至執行個體的 `Handles` 技術有一些限制，因為 `Handles` 語法無法支援 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件系統中某些特定的路由事件功能。  
@@ -27,11 +27,11 @@ Microsoft Visual Basic.NET 語言的具體來說，您可以使用語言特有`H
  您可以使用 `Handles` 來附加路由事件的處理常式，只要您將處理常式附加至會在其成員資料表中定義要處理事件的執行個體。 針對路由事件，以附加處理常式`Handles`做為附加處理常式一樣，遵循相同的路由規則[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]屬性，或使用的常見簽章<xref:System.Windows.UIElement.AddHandler%2A>。 這表示，如果事件標示為已處理 (<xref:System.Windows.RoutedEventArgs.Handled%2A>事件資料中的屬性是`True`)，則處理常式附加`Handles`不會叫用該事件執行個體的回應。 事件可能是透過路由中另一個元素上的執行個體處理常式標示為已處理，或是透過路由上目前元素或先前元素上所處理的類別來標示。 對於支援配對的通道/事件反昇事件的輸入事件，通道路由可能已將事件配對標示已處理。 如需路由事件的詳細資訊，請參閱[路由事件概觀](routed-events-overview.md)。  
   
 ## <a name="limitations-of-handles-for-adding-handlers"></a>加入處理常式的「Handles」限制  
- `Handles` 不能參考附加事件的處理常式。 您必須針對該附加事件使用 `add` 存取子方法，或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 typename.eventname 事件屬性。 如需詳細資訊，請參閱[路由事件概觀](routed-events-overview.md)。  
+ `Handles` 不能參考附加事件處理常式。 您必須針對該附加事件使用 `add` 存取子方法，或 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的 typename.eventname 事件屬性。 如需詳細資訊，請參閱[路由事件概觀](routed-events-overview.md)。  
   
  針對路由事件，您只能使用 `Handles` 來指派執行個體的處理常式，該事件存在於執行個體成員資料表中。 不過，透過路由事件，父元素通常可以是來自子元素之事件的接聽程式，即使父元素的成員資料表中沒有該事件也一樣。 在屬性語法中，您可以透過 typename.membername 屬性格式來指定此動作，此格式會限定哪種類型實際上會定義您想要處理的事件。 比方說，父代`Page`(含`Click`定義的事件) 可以接聽按鈕 click 事件表單中的屬性處理常式，指派`Button.Click`。 但是 `Handles` 不支援 typename.membername 格式，因為它必須支援衝突的 Instance.Event 格式。 如需詳細資訊，請參閱[路由事件概觀](routed-events-overview.md)。  
   
- `Handles` 無法附加要針對已經標示為已處理之事件叫用的處理常式。 相反地，您必須使用程式碼並呼叫`handledEventsToo`多載<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。  
+ `Handles` 無法附加叫用的已標記為已處理的事件處理常式。 相反地，您必須使用程式碼並呼叫`handledEventsToo`多載<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>。  
   
 > [!NOTE]
 >  請勿使用`Handles`Visual Basic 程式碼，當您在 XAML 中指定的相同事件的事件處理常式的語法。 在這個情況下，會呼叫事件處理常式兩次。  
@@ -43,6 +43,7 @@ Microsoft Visual Basic.NET 語言的具體來說，您可以使用語言特有`H
 >  在 [!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)] 內，[!INCLUDE[TLA2#tla_intellisense](../../../../includes/tla2sharptla-intellisense-md.md)] 可以顯示您已完成讓元素可供頁面中的 `Handles` 參考使用。 不過，這可能需要採取一次編譯傳遞，讓中繼檔案可以填入所有的 `Friends` 參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.UIElement.AddHandler%2A>
 - [將路由事件標記為已處理以及類別處理](marking-routed-events-as-handled-and-class-handling.md)
 - [路由事件概觀](routed-events-overview.md)

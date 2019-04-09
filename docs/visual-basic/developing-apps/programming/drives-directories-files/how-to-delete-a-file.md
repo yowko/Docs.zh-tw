@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Visual Basic 中刪除檔案
+title: 作法：在 Visual Basic 中刪除檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - files [Visual Basic], manipulating
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
-ms.openlocfilehash: c083855ea298fa62459d107651e62c13d65c52c5
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 288c54fa854d753e9b8030463968137b32353b4e
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972829"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58828559"
 ---
 # <a name="how-to-delete-a-file-in-visual-basic"></a>作法：在 Visual Basic 中刪除檔案
 `My.Computer.FileSystem` 物件的 `DeleteFile` 方法可讓您刪除檔案。 提供的選項包括︰是否要將已刪除的檔案傳送至 [資源回收筒]、是否要求使用者確認應該刪除檔案，以及使用者取消該作業時該怎麼辦。  
@@ -59,6 +59,7 @@ ms.locfileid: "56972829"
 -   使用者已取消作業，而且 `onUserCancel` 設定為 `ThrowException` (<xref:System.OperationCanceledException>)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.FileIO.UICancelOption>
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem>
 - <xref:Microsoft.VisualBasic.FileIO.UIOption>

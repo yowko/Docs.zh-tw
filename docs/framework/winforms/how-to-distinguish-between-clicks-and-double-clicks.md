@@ -10,12 +10,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], double-click
 - mouse clicks [Windows Forms], single versus double
 ms.assetid: d836ac8c-85bc-4f3a-a761-8aee03dc682c
-ms.openlocfilehash: 2d02e8faac1dd55e2a7e64b00137df011c931f32
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 26b3a64533747e80c7b9270918030da76d5e00c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59139395"
 ---
 # <a name="how-to-distinguish-between-clicks-and-double-clicks"></a>HOW TO：區分按一下和按兩下
 一般而言，單一「按一下」(click) 會啟始使用者介面 (UI) 動作，而「按兩下」(double-click) 會擴充此動作。 例如，按一下通常會選取項目，而按兩下可編輯選取的項目。 不過，Windows Form Click 事件並不輕易滿足按一下和按兩下會執行不相容動作的案例，因為會先執行與 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件相關的動作，之後此動作才會與 <xref:System.Windows.Forms.Control.DoubleClick> 或 <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件相關。 本主題會示範兩種解決這個問題的方案。 一個解決方案是處理按兩下事件，並復原處理 Click 事件的動作。 在罕見的情況下您可能需要處理 <xref:System.Windows.Forms.Control.MouseDown> 事件並使用 <xref:System.Windows.Forms.SystemInformation> 類別的 <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> 和 <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> 屬性來模擬按一下和按兩下行為。 您可測量點擊間隔時間，如果第二個點擊在達到 <xref:System.Windows.Forms.SystemInformation.DoubleClickTime%2A> 的值之前就先發生，且該點擊位於由 <xref:System.Windows.Forms.SystemInformation.DoubleClickSize%2A> 所定義的矩形內，則執行按兩下動作；否則執行按一下動作。  
@@ -43,4 +43,5 @@ ms.locfileid: "57707492"
  Visual Basic 或 Visual C# 建置這些範例從命令列的相關資訊，請參閱[從命令列建置](../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置 Visual Studio 中的這些範例。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Forms 應用程式中的滑鼠輸入](mouse-input-in-a-windows-forms-application.md)

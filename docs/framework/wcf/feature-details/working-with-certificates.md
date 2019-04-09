@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: d9bf6bd6b142fadbf8326c96f7220c9b74fbc1d0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693606"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115696"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -24,7 +24,7 @@ ms.locfileid: "54693606"
  憑證必須由憑證授權單位發行，此單位通常是憑證的協力廠商簽發者。 在 Windows 網域中，會包含憑證授權單位以便用來對網域中的電腦發行憑證。  
   
 ## <a name="viewing-certificates"></a>檢視憑證  
- 使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱[＜How to：使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
+ 使用憑證時，通常需要檢視並檢查其內容。 您可以透過 Microsoft Management Console (MMC) 嵌入式管理單元工具輕鬆達到這個目的。 如需詳細資訊，請參閱[如何：使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 ## <a name="certificate-stores"></a>憑證存放區  
  您可以在存放區中找到憑證。 兩個主要的存放區位置還可進一步細分為子存放區。 如果您是電腦的系統管理員，就可以使用 MMC 嵌入式管理單元工具來同時檢視兩個主要的存放區。 非系統管理員只能檢視目前使用者的存放區。  
@@ -74,7 +74,7 @@ ms.locfileid: "54693606"
   
  您也可以使用組態來設定屬性。 下列項目可用來指定驗證模式：  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
@@ -171,8 +171,9 @@ ms.locfileid: "54693606"
  在第一版的 WCF 中，您不需要諮詢網域原則便可進行對應。 因此，當啟用對應功能且 X.509 憑證無法滿足網域原則要求時，以往在第一版中能夠順利執行的舊版應用程式可能會無法執行。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels>
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

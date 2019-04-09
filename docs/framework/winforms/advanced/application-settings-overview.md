@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: eac8c932e9f661933f943a507485a170dc6b6132
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59203622"
 ---
 # <a name="application-settings-overview"></a>應用程式設定概觀
 本主題討論如何代表您的應用程式和使用者來建立及儲存設定資料。  
@@ -48,13 +48,14 @@ ms.locfileid: "57713053"
  您也可以使用 <xref:System.Windows.Forms.Binding> 類別以程式設計的方式來繫結設定至表單和控制項上的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.ApplicationSettingsBase>
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [如何：驗證應用程式設定](how-to-validate-application-settings.md)
+- [HOW TO：驗證應用程式設定](how-to-validate-application-settings.md)
 - [管理應用程式設定 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [如何：在執行階段使用的讀取設定C#](how-to-read-settings-at-run-time-with-csharp.md)
+- [如何：在執行階段使用 C# 讀取設定](how-to-read-settings-at-run-time-with-csharp.md)
 - [使用應用程式設定和使用者設定](using-application-settings-and-user-settings.md)
 - [應用程式設定架構](application-settings-architecture.md)
-- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)
+- [自訂控制項的應用程式設定](application-settings-for-custom-controls.md)

@@ -2,12 +2,12 @@
 title: 安裝訊息佇列 (MSMQ)
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
-ms.openlocfilehash: 2aae92ba6e373af2d8bc9cff0b4c9d317ba10136
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2edd293d8616c2e3c140f909728d87437d20b34c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588021"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101493"
 ---
 # <a name="installing-message-queuing-msmq"></a>安裝訊息佇列 (MSMQ)
 下列程序示範如何安裝 Message Queuing 4.0 和 Message Queuing 3.0。  
@@ -41,7 +41,7 @@ ms.locfileid: "54588021"
   
     -   MSMQ HTTP 支援。  
   
-4.  按一下 [確定 **Deploying Office Solutions**]。  
+4.  按一下 [確定] 。  
   
 5.  如果提示您重新啟動電腦時，請按一下**確定**才能完成安裝。  
   
@@ -63,4 +63,5 @@ ms.locfileid: "54588021"
 6.  如果提示您重新啟動電腦時，請按一下**確定**才能完成安裝。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定指示](../../../../docs/framework/wcf/samples/set-up-instructions.md)

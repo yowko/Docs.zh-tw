@@ -15,12 +15,12 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 - I/O [Visual Basic], reading text from files
 ms.assetid: 7d2109eb-f98a-4389-b43d-30f384aaa7d5
-ms.openlocfilehash: 56d753c9bb4e3585049eb98929774ac810d8ed40
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 2361a42ececbe12b5f61833e5a40607c8215a65d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978172"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58821058"
 ---
 # <a name="walkthrough-manipulating-files-by-using-net-framework-methods-visual-basic"></a>逐步解說：使用 .NET Framework 方法管理檔案 (Visual Basic)
 本逐步解說示範如何使用 <xref:System.IO.StreamReader> 類別開啟和讀取檔案、檢查是否正在存取檔案、在 <xref:System.IO.StreamReader> 類別執行個體讀取的檔案內搜尋字串，並使用 <xref:System.IO.StreamWriter> 類別寫入檔案。  
@@ -148,6 +148,7 @@ ms.locfileid: "56978172"
  若要測試您的程式碼，請按 F5 以編譯應用程式。 按一下 [取得項目]，並選取項目，然後按一下 [顯示]。 此項目會出現在 `DisplayEntry`<xref:System.Windows.Forms.TextBox> 中。 按一下 [編輯項目]。 此項目會出現在 `Entry`<xref:System.Windows.Forms.TextBox> 中。 編輯 `Entry`<xref:System.Windows.Forms.TextBox> 中的項目，然後按一下 [提交編輯]。 開啟 `MyDiary.txt` 檔案，確認您的修正。 現在，選取項目，然後按一下 [刪除項目]。 當 <xref:System.Windows.Forms.MessageBox> 要求確認時，請按一下 [確定]。 關閉應用程式，並開啟 `MyDiary.txt` 以確認刪除。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IO.StreamReader>
 - <xref:System.IO.StreamWriter>
 - [逐步解說](../../../../visual-basic/walkthroughs.md)
