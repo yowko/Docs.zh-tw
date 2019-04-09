@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: aedbecc1-c33c-4fb4-8861-fdf7e1dc6b8a
-ms.openlocfilehash: 91d74d1d72bb2a39c6b6d408839746c45ddad3db
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 93aa679e02482e5c237c233655ee19f3bae17fd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155944"
 ---
 # <a name="customizing-operations-by-using-stored-procedures"></a>使用預存程序來自訂作業
 預存程序表示用以覆寫預設行為的常見方法。 本主題中的範例顯示如何使用針對預存程序產生的方法包裝函式，以及如何才能直接呼叫預存程序。  
@@ -48,4 +48,5 @@ ms.locfileid: "54555514"
  [!code-vb[DLinqOverrideDefaultSproc#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqOverrideDefaultSproc/vb/Module1.vb#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [開發人員覆寫預設行為的責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)
