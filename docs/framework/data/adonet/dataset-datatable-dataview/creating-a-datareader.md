@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d4422a-7464-4ab8-8ec7-90185fde3ecf
-ms.openlocfilehash: d3c20fa4394b09e9ceec332d430ed638166bed8e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8932f393af58f2014f643c5b6ebd6dc7a127b7eb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54491659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122001"
 ---
-# <a name="creating-a-datareader"></a><span data-ttu-id="2df5c-102">建立 DataReader</span><span class="sxs-lookup"><span data-stu-id="2df5c-102">Creating a DataReader</span></span>
-<span data-ttu-id="2df5c-103"><xref:System.Data.DataTable> 和 <xref:System.Data.DataSet> 類別 (Class) 具有 <xref:System.Data.DataTable.CreateDataReader%2A> 方法，可以用一或多個唯讀的順向結果集來傳回 <xref:System.Data.DataTable> 的內容或 <xref:System.Data.DataSet> 物件的 <xref:System.Data.DataSet.Tables%2A> 集合內容。</span><span class="sxs-lookup"><span data-stu-id="2df5c-103">The <xref:System.Data.DataTable> and <xref:System.Data.DataSet> classes have a <xref:System.Data.DataTable.CreateDataReader%2A> method that returns the contents of the <xref:System.Data.DataTable> or the contents of the <xref:System.Data.DataSet> object's <xref:System.Data.DataSet.Tables%2A> collection as one or more read-only, forward-only result sets.</span></span>  
+# <a name="creating-a-datareader"></a><span data-ttu-id="bd3d2-102">建立 DataReader</span><span class="sxs-lookup"><span data-stu-id="bd3d2-102">Creating a DataReader</span></span>
+<span data-ttu-id="bd3d2-103"><xref:System.Data.DataTable> 和 <xref:System.Data.DataSet> 類別 (Class) 具有 <xref:System.Data.DataTable.CreateDataReader%2A> 方法，可以用一或多個唯讀的順向結果集來傳回 <xref:System.Data.DataTable> 的內容或 <xref:System.Data.DataSet> 物件的 <xref:System.Data.DataSet.Tables%2A> 集合內容。</span><span class="sxs-lookup"><span data-stu-id="bd3d2-103">The <xref:System.Data.DataTable> and <xref:System.Data.DataSet> classes have a <xref:System.Data.DataTable.CreateDataReader%2A> method that returns the contents of the <xref:System.Data.DataTable> or the contents of the <xref:System.Data.DataSet> object's <xref:System.Data.DataSet.Tables%2A> collection as one or more read-only, forward-only result sets.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2df5c-104">範例</span><span class="sxs-lookup"><span data-stu-id="2df5c-104">Example</span></span>  
- <span data-ttu-id="2df5c-105">下列的主控台應用程式會建立 <xref:System.Data.DataTable> 執行個體 (Instance)。</span><span class="sxs-lookup"><span data-stu-id="2df5c-105">The following console application creates a <xref:System.Data.DataTable> instance.</span></span> <span data-ttu-id="2df5c-106">範例接著會傳遞將填滿<xref:System.Data.DataTable>要呼叫的程序<xref:System.Data.DataTable.CreateDataReader%2A>方法，這個方法會逐一查看包含在結果<xref:System.Data.DataTableReader>。</span><span class="sxs-lookup"><span data-stu-id="2df5c-106">The example then passes the filled <xref:System.Data.DataTable> to a procedure that calls the <xref:System.Data.DataTable.CreateDataReader%2A> method, which iterates through the results contained within the <xref:System.Data.DataTableReader>.</span></span>  
+## <a name="example"></a><span data-ttu-id="bd3d2-104">範例</span><span class="sxs-lookup"><span data-stu-id="bd3d2-104">Example</span></span>  
+ <span data-ttu-id="bd3d2-105">下列的主控台應用程式會建立 <xref:System.Data.DataTable> 執行個體 (Instance)。</span><span class="sxs-lookup"><span data-stu-id="bd3d2-105">The following console application creates a <xref:System.Data.DataTable> instance.</span></span> <span data-ttu-id="bd3d2-106">範例接著會傳遞將填滿<xref:System.Data.DataTable>要呼叫的程序<xref:System.Data.DataTable.CreateDataReader%2A>方法，這個方法會逐一查看包含在結果<xref:System.Data.DataTableReader>。</span><span class="sxs-lookup"><span data-stu-id="bd3d2-106">The example then passes the filled <xref:System.Data.DataTable> to a procedure that calls the <xref:System.Data.DataTable.CreateDataReader%2A> method, which iterates through the results contained within the <xref:System.Data.DataTableReader>.</span></span>  
   
  [!code-csharp[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/CS/source.cs#1)]
  [!code-vb[DataWorks DataTable.CreateDataReader#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks DataTable.CreateDataReader/VB/source.vb#1)]  
   
- <span data-ttu-id="2df5c-107">此範例會在主控台視窗中顯示以下輸出：</span><span class="sxs-lookup"><span data-stu-id="2df5c-107">The example displays the following output in the console window:</span></span>  
+ <span data-ttu-id="bd3d2-107">此範例會在主控台視窗中顯示以下輸出：</span><span class="sxs-lookup"><span data-stu-id="bd3d2-107">The example displays the following output in the console window:</span></span>  
   
 ```  
 1 Mary  
@@ -30,8 +30,9 @@ ms.locfileid: "54491659"
 4 Russ  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="2df5c-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2df5c-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="bd3d2-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bd3d2-108">See also</span></span>
+
 - <xref:System.Data.DataTable.CreateDataReader%2A>
 - <xref:System.Data.DataSet.CreateDataReader%2A>
-- [<span data-ttu-id="2df5c-109">DataTableReader</span><span class="sxs-lookup"><span data-stu-id="2df5c-109">DataTableReaders</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
-- [<span data-ttu-id="2df5c-110">ADO.NET Managed 提供者和 DataSet 開發人員中心</span><span class="sxs-lookup"><span data-stu-id="2df5c-110">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [<span data-ttu-id="bd3d2-109">DataTableReader</span><span class="sxs-lookup"><span data-stu-id="bd3d2-109">DataTableReaders</span></span>](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatablereaders.md)
+- [<span data-ttu-id="bd3d2-110">ADO.NET Managed 提供者和DataSet開發人員中心</span><span class="sxs-lookup"><span data-stu-id="bd3d2-110">ADO.NET Managed Providers and DataSet Developer Center</span></span>](https://go.microsoft.com/fwlink/?LinkId=217917)

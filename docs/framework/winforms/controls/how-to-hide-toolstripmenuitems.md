@@ -12,19 +12,19 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
-ms.openlocfilehash: a82df42240ae045f0d6f355f642acfb8082c87a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc9daa945f2a546548f2cc6ea033378bd9ceff93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715252"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127422"
 ---
-# <a name="how-to-hide-toolstripmenuitems"></a><span data-ttu-id="b6991-102">HOW TO：隱藏 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="b6991-102">How to: Hide ToolStripMenuItems</span></span>
-<span data-ttu-id="b6991-103">隱藏功能表項目是用來控制您的應用程式的使用者介面，並限制使用者命令。</span><span class="sxs-lookup"><span data-stu-id="b6991-103">Hiding menu items is a way to control the user interface of your application and restrict user commands.</span></span> <span data-ttu-id="b6991-104">通常，您要隱藏整個功能表無法使用時，所有在其上的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="b6991-104">Often, you will want to hide an entire menu when all of the menu items on it are unavailable.</span></span> <span data-ttu-id="b6991-105">這代表使用者分心。</span><span class="sxs-lookup"><span data-stu-id="b6991-105">This presents fewer distractions for the user.</span></span> <span data-ttu-id="b6991-106">此外，您可能想要隱藏和停用功能表或功能表項目，為單獨的隱藏不會防止使用者使用攠摝坫存取功能表命令。</span><span class="sxs-lookup"><span data-stu-id="b6991-106">Furthermore, you might want to both hide and disable the menu or menu item, as hiding alone does not prevent the user from accessing a menu command by using a shortcut key.</span></span>  
+# <a name="how-to-hide-toolstripmenuitems"></a><span data-ttu-id="d12c5-102">HOW TO：隱藏 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="d12c5-102">How to: Hide ToolStripMenuItems</span></span>
+<span data-ttu-id="d12c5-103">隱藏功能表項目是用來控制您的應用程式的使用者介面，並限制使用者命令。</span><span class="sxs-lookup"><span data-stu-id="d12c5-103">Hiding menu items is a way to control the user interface of your application and restrict user commands.</span></span> <span data-ttu-id="d12c5-104">通常，您要隱藏整個功能表無法使用時，所有在其上的功能表項目。</span><span class="sxs-lookup"><span data-stu-id="d12c5-104">Often, you will want to hide an entire menu when all of the menu items on it are unavailable.</span></span> <span data-ttu-id="d12c5-105">這代表使用者分心。</span><span class="sxs-lookup"><span data-stu-id="d12c5-105">This presents fewer distractions for the user.</span></span> <span data-ttu-id="d12c5-106">此外，您可能想要隱藏和停用功能表或功能表項目，為單獨的隱藏不會防止使用者使用攠摝坫存取功能表命令。</span><span class="sxs-lookup"><span data-stu-id="d12c5-106">Furthermore, you might want to both hide and disable the menu or menu item, as hiding alone does not prevent the user from accessing a menu command by using a shortcut key.</span></span>  
   
-### <a name="to-hide-any-menu-item-programmatically"></a><span data-ttu-id="b6991-107">若要以程式設計方式隱藏任何功能表項目</span><span class="sxs-lookup"><span data-stu-id="b6991-107">To hide any menu item programmatically</span></span>  
+### <a name="to-hide-any-menu-item-programmatically"></a><span data-ttu-id="d12c5-107">若要以程式設計方式隱藏任何功能表項目</span><span class="sxs-lookup"><span data-stu-id="d12c5-107">To hide any menu item programmatically</span></span>  
   
--   <span data-ttu-id="b6991-108">在方法中您用來設定功能表項目的屬性，加入程式碼以設定<xref:System.Windows.Forms.ToolStripItem.Visible%2A>屬性設`false`。</span><span class="sxs-lookup"><span data-stu-id="b6991-108">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property to `false`.</span></span>  
+-   <span data-ttu-id="d12c5-108">在方法中您用來設定功能表項目的屬性，加入程式碼以設定<xref:System.Windows.Forms.ToolStripItem.Visible%2A>屬性設`false`。</span><span class="sxs-lookup"><span data-stu-id="d12c5-108">Within the method where you set the properties of the menu item, add code to set the <xref:System.Windows.Forms.ToolStripItem.Visible%2A> property to `false`.</span></span>  
   
     ```vb  
     MenuItem3.Visible = False  
@@ -38,8 +38,9 @@ ms.locfileid: "57715252"
     menuItem3->Visible = false;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="b6991-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b6991-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d12c5-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d12c5-109">See also</span></span>
+
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
-- [<span data-ttu-id="b6991-110">MenuStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="b6991-110">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
-- [<span data-ttu-id="b6991-111">如何：停用 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="b6991-111">How to: Disable ToolStripMenuItems</span></span>](how-to-disable-toolstripmenuitems.md)
+- [<span data-ttu-id="d12c5-110">MenuStrip 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="d12c5-110">MenuStrip Control Overview</span></span>](menustrip-control-overview-windows-forms.md)
+- [<span data-ttu-id="d12c5-111">HOW TO：停用 ToolStripMenuItems</span><span class="sxs-lookup"><span data-stu-id="d12c5-111">How to: Disable ToolStripMenuItems</span></span>](how-to-disable-toolstripmenuitems.md)
