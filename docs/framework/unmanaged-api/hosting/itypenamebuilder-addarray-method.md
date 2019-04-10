@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3f25fa942d329ebcafb48585fb68a13f36743f18
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b203c9414a500116f2f3622fb7fb4a71afb9ce2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717567"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224971"
 ---
-# <a name="itypenamebuilderaddarray-method"></a><span data-ttu-id="72bfa-102">ITypeNameBuilder::AddArray 方法</span><span class="sxs-lookup"><span data-stu-id="72bfa-102">ITypeNameBuilder::AddArray Method</span></span>
-<span data-ttu-id="72bfa-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="72bfa-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
+# <a name="itypenamebuilderaddarray-method"></a><span data-ttu-id="031ac-102">ITypeNameBuilder::AddArray 方法</span><span class="sxs-lookup"><span data-stu-id="031ac-102">ITypeNameBuilder::AddArray Method</span></span>
+<span data-ttu-id="031ac-103">此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。</span><span class="sxs-lookup"><span data-stu-id="031ac-103">This method supports the .NET Framework infrastructure and is not intended to be used directly from your code.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="72bfa-104">語法</span><span class="sxs-lookup"><span data-stu-id="72bfa-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="031ac-104">語法</span><span class="sxs-lookup"><span data-stu-id="031ac-104">Syntax</span></span>  
   
 ```  
 HRESULT AddArray (  
@@ -35,14 +35,15 @@ HRESULT AddArray (
 );  
 ```  
   
-## <a name="requirements"></a><span data-ttu-id="72bfa-105">需求</span><span class="sxs-lookup"><span data-stu-id="72bfa-105">Requirements</span></span>  
- <span data-ttu-id="72bfa-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="72bfa-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="031ac-105">需求</span><span class="sxs-lookup"><span data-stu-id="031ac-105">Requirements</span></span>  
+ <span data-ttu-id="031ac-106">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="031ac-106">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="72bfa-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="72bfa-107">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="031ac-107">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="031ac-107">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="72bfa-108">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="72bfa-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="031ac-108">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="031ac-108">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="72bfa-109">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="72bfa-109">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="031ac-109">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="031ac-109">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="72bfa-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="72bfa-110">See also</span></span>
-- [<span data-ttu-id="72bfa-111">裝載介面</span><span class="sxs-lookup"><span data-stu-id="72bfa-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="031ac-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="031ac-110">See also</span></span>
+
+- [<span data-ttu-id="031ac-111">裝載介面</span><span class="sxs-lookup"><span data-stu-id="031ac-111">Hosting Interfaces</span></span>](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

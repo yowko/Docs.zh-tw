@@ -2,23 +2,24 @@
 title: Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata
 ms.date: 03/30/2017
 ms.assetid: 99ebe70b-8980-447f-b785-ecfcbdbaea72
-ms.openlocfilehash: 2607e24eb36dd1fb875105f2ecaebf547ad7c510
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a3323357e2be4c6986da4458d130dc67ca92df9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718620"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224607"
 ---
-# <a name="microsofttransactionstransactionbridgerecoveredcoordinatorinvalidmetadata"></a><span data-ttu-id="d7fea-102">Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata</span><span class="sxs-lookup"><span data-stu-id="d7fea-102">Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata</span></span>
-<span data-ttu-id="d7fea-103">在協調者修復記錄項目中找到的端點參照，包含無效或不相容的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="d7fea-103">The endpoint reference found in a coordinator recovery log entry contained invalid or incompatible metadata.</span></span>  
+# <a name="microsofttransactionstransactionbridgerecoveredcoordinatorinvalidmetadata"></a><span data-ttu-id="6041a-102">Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata</span><span class="sxs-lookup"><span data-stu-id="6041a-102">Microsoft.Transactions.TransactionBridge.RecoveredCoordinatorInvalidMetadata</span></span>
+<span data-ttu-id="6041a-103">在協調者修復記錄項目中找到的端點參照，包含無效或不相容的中繼資料。</span><span class="sxs-lookup"><span data-stu-id="6041a-103">The endpoint reference found in a coordinator recovery log entry contained invalid or incompatible metadata.</span></span>  
   
-## <a name="description"></a><span data-ttu-id="d7fea-104">描述</span><span class="sxs-lookup"><span data-stu-id="d7fea-104">Description</span></span>  
- <span data-ttu-id="d7fea-105">系統無法為已修復的協調者登記建立 Proxy。</span><span class="sxs-lookup"><span data-stu-id="d7fea-105">The system cannot create a proxy for a recovered coordinator enlistment.</span></span>  
+## <a name="description"></a><span data-ttu-id="6041a-104">描述</span><span class="sxs-lookup"><span data-stu-id="6041a-104">Description</span></span>  
+ <span data-ttu-id="6041a-105">系統無法為已修復的協調者登記建立 Proxy。</span><span class="sxs-lookup"><span data-stu-id="6041a-105">The system cannot create a proxy for a recovered coordinator enlistment.</span></span>  
   
-## <a name="troubleshooting"></a><span data-ttu-id="d7fea-106">疑難排解</span><span class="sxs-lookup"><span data-stu-id="d7fea-106">Troubleshooting</span></span>  
- <span data-ttu-id="d7fea-107">如果問題持續存在，請連絡 Microsoft。</span><span class="sxs-lookup"><span data-stu-id="d7fea-107">Contact Microsoft if problem persists.</span></span>  
+## <a name="troubleshooting"></a><span data-ttu-id="6041a-106">疑難排解</span><span class="sxs-lookup"><span data-stu-id="6041a-106">Troubleshooting</span></span>  
+ <span data-ttu-id="6041a-107">如果問題持續存在，請連絡 Microsoft。</span><span class="sxs-lookup"><span data-stu-id="6041a-107">Contact Microsoft if problem persists.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d7fea-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7fea-108">See also</span></span>
-- [<span data-ttu-id="d7fea-109">追蹤</span><span class="sxs-lookup"><span data-stu-id="d7fea-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [<span data-ttu-id="d7fea-110">使用追蹤為應用程式進行疑難排解</span><span class="sxs-lookup"><span data-stu-id="d7fea-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
-- [<span data-ttu-id="d7fea-111">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="d7fea-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)
+## <a name="see-also"></a><span data-ttu-id="6041a-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6041a-108">See also</span></span>
+
+- [<span data-ttu-id="6041a-109">追蹤</span><span class="sxs-lookup"><span data-stu-id="6041a-109">Tracing</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
+- [<span data-ttu-id="6041a-110">使用追蹤來疑難排解應用程式</span><span class="sxs-lookup"><span data-stu-id="6041a-110">Using Tracing to Troubleshoot Your Application</span></span>](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [<span data-ttu-id="6041a-111">管理與診斷</span><span class="sxs-lookup"><span data-stu-id="6041a-111">Administration and Diagnostics</span></span>](../../../../../docs/framework/wcf/diagnostics/index.md)

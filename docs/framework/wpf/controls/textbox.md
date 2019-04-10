@@ -7,21 +7,21 @@ helpviewer_keywords:
 - controls [WPF], TextBox
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
-ms.openlocfilehash: f2a261b72fe3205c9a03292f1f6bbcebdcf8649b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356971"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226950"
 ---
-# <a name="textbox"></a><span data-ttu-id="00d49-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="00d49-102">TextBox</span></span>
-<span data-ttu-id="00d49-103"><xref:System.Windows.Controls.TextBox> WPF 應用程式中的基本的文字輸入控制項提供支援。</span><span class="sxs-lookup"><span data-stu-id="00d49-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
+# <a name="textbox"></a><span data-ttu-id="d4c6d-102">TextBox</span><span class="sxs-lookup"><span data-stu-id="d4c6d-102">TextBox</span></span>
+<span data-ttu-id="d4c6d-103"><xref:System.Windows.Controls.TextBox> WPF 應用程式中的基本的文字輸入控制項提供支援。</span><span class="sxs-lookup"><span data-stu-id="d4c6d-103">The <xref:System.Windows.Controls.TextBox> control provides support for basic text input in WPF applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="00d49-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="00d49-104">In This Section</span></span>  
- [<span data-ttu-id="00d49-105">TextBox 概觀</span><span class="sxs-lookup"><span data-stu-id="00d49-105">TextBox Overview</span></span>](textbox-overview.md)  
- [<span data-ttu-id="00d49-106">HOW-TO 主題</span><span class="sxs-lookup"><span data-stu-id="00d49-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
+## <a name="in-this-section"></a><span data-ttu-id="d4c6d-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="d4c6d-104">In This Section</span></span>  
+ [<span data-ttu-id="d4c6d-105">TextBox 概觀</span><span class="sxs-lookup"><span data-stu-id="d4c6d-105">TextBox Overview</span></span>](textbox-overview.md)  
+ [<span data-ttu-id="d4c6d-106">HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="d4c6d-106">How-to Topics</span></span>](textbox-how-to-topics.md)  
   
-## <a name="reference"></a><span data-ttu-id="00d49-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="00d49-107">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="d4c6d-107">參考資料</span><span class="sxs-lookup"><span data-stu-id="d4c6d-107">Reference</span></span>  
  <xref:System.Windows.Controls.TextBox>  
   
  <xref:System.Windows.Controls.RichTextBox>  
@@ -30,6 +30,7 @@ ms.locfileid: "57356971"
   
  <xref:System.Windows.Controls.PasswordBox>  
   
-## <a name="see-also"></a><span data-ttu-id="00d49-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="00d49-108">See also</span></span>
-- [<span data-ttu-id="00d49-109">WPF 控制項陳列庫範例</span><span class="sxs-lookup"><span data-stu-id="00d49-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
-- [<span data-ttu-id="00d49-110">TextBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="00d49-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)
+## <a name="see-also"></a><span data-ttu-id="d4c6d-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d4c6d-108">See also</span></span>
+
+- [<span data-ttu-id="d4c6d-109">WPF 控制項陳列庫範例</span><span class="sxs-lookup"><span data-stu-id="d4c6d-109">WPF Controls Gallery Sample</span></span>](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [<span data-ttu-id="d4c6d-110">TextBox 樣式和範本</span><span class="sxs-lookup"><span data-stu-id="d4c6d-110">TextBox Styles and Templates</span></span>](textbox-styles-and-templates.md)

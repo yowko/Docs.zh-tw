@@ -17,33 +17,34 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a5e2501a5ab62c6aaef2b3f754f9eed10e4e4b97
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 136dab5c05c310d85a5e18bcdc6da0de901d3ace
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227466"
 ---
-# <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a><span data-ttu-id="f8af2-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads 方法</span><span class="sxs-lookup"><span data-stu-id="f8af2-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads Method</span></span>
-<span data-ttu-id="f8af2-103">主應用程式的偵錯的服務是即將要釋放所有封鎖的執行緒。</span><span class="sxs-lookup"><span data-stu-id="f8af2-103">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>  
+# <a name="idebuggerthreadcontrolreleaseallruntimethreads-method"></a><span data-ttu-id="1587b-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads 方法</span><span class="sxs-lookup"><span data-stu-id="1587b-102">IDebuggerThreadControl::ReleaseAllRuntimeThreads Method</span></span>
+<span data-ttu-id="1587b-103">主應用程式的偵錯的服務是即將要釋放所有封鎖的執行緒。</span><span class="sxs-lookup"><span data-stu-id="1587b-103">Notifies the host that the debugging services are about to release all threads that are blocked.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="f8af2-104">語法</span><span class="sxs-lookup"><span data-stu-id="f8af2-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1587b-104">語法</span><span class="sxs-lookup"><span data-stu-id="1587b-104">Syntax</span></span>  
   
 ```  
 HRESULT ReleaseAllRuntimeThreads ( );  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="f8af2-105">備註</span><span class="sxs-lookup"><span data-stu-id="f8af2-105">Remarks</span></span>  
- <span data-ttu-id="f8af2-106">`ReleaseAllRuntimeThreads`絕不會在執行階段的執行緒上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="f8af2-106">The `ReleaseAllRuntimeThreads` method will never be called on a runtime thread.</span></span> <span data-ttu-id="f8af2-107">如果主機有執行階段的執行緒封鎖，它應該立即釋放。</span><span class="sxs-lookup"><span data-stu-id="f8af2-107">If the host has a runtime thread blocked, it should release it now.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1587b-105">備註</span><span class="sxs-lookup"><span data-stu-id="1587b-105">Remarks</span></span>  
+ <span data-ttu-id="1587b-106">`ReleaseAllRuntimeThreads`絕不會在執行階段的執行緒上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="1587b-106">The `ReleaseAllRuntimeThreads` method will never be called on a runtime thread.</span></span> <span data-ttu-id="1587b-107">如果主機有執行階段的執行緒封鎖，它應該立即釋放。</span><span class="sxs-lookup"><span data-stu-id="1587b-107">If the host has a runtime thread blocked, it should release it now.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="f8af2-108">需求</span><span class="sxs-lookup"><span data-stu-id="f8af2-108">Requirements</span></span>  
- <span data-ttu-id="f8af2-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="f8af2-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1587b-108">需求</span><span class="sxs-lookup"><span data-stu-id="1587b-108">Requirements</span></span>  
+ <span data-ttu-id="1587b-109">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1587b-109">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="f8af2-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="f8af2-110">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="1587b-110">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="1587b-110">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="f8af2-111">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="f8af2-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="1587b-111">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="1587b-111">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="f8af2-112">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="f8af2-112">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="1587b-112">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="1587b-112">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="f8af2-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f8af2-113">See also</span></span>
-- [<span data-ttu-id="f8af2-114">IDebuggerThreadControl 介面</span><span class="sxs-lookup"><span data-stu-id="f8af2-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+## <a name="see-also"></a><span data-ttu-id="1587b-113">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1587b-113">See also</span></span>
+
+- [<span data-ttu-id="1587b-114">IDebuggerThreadControl 介面</span><span class="sxs-lookup"><span data-stu-id="1587b-114">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

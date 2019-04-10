@@ -16,17 +16,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cd385c1176bea41b41a981e743c6104227d8acd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80ea3afef4aee51760e3a2ce6a2b895bca4a6ec5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224034"
 ---
-# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="e4706-102">CLRDataEnumMemoryFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="e4706-102">CLRDataEnumMemoryFlags Enumeration</span></span>
-<span data-ttu-id="e4706-103">指出哪些記憶體區域呼叫[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法應該包含。</span><span class="sxs-lookup"><span data-stu-id="e4706-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
+# <a name="clrdataenummemoryflags-enumeration"></a><span data-ttu-id="fdc9b-102">CLRDataEnumMemoryFlags 列舉</span><span class="sxs-lookup"><span data-stu-id="fdc9b-102">CLRDataEnumMemoryFlags Enumeration</span></span>
+<span data-ttu-id="fdc9b-103">指出哪些記憶體區域呼叫[iclrdataenummemoryregions:: Enummemoryregions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md)方法應該包含。</span><span class="sxs-lookup"><span data-stu-id="fdc9b-103">Indicates which memory regions a call to the [ICLRDataEnumMemoryRegions::EnumMemoryRegions](../../../../docs/framework/unmanaged-api/debugging/iclrdataenummemoryregions-enummemoryregions-method.md) method should include.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e4706-104">語法</span><span class="sxs-lookup"><span data-stu-id="e4706-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="fdc9b-104">語法</span><span class="sxs-lookup"><span data-stu-id="fdc9b-104">Syntax</span></span>  
   
 ```  
 typedef enum CLRDataEnumMemoryFlags {  
@@ -36,21 +36,22 @@ typedef enum CLRDataEnumMemoryFlags {
 } CLRDataEnumMemoryFlags;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e4706-105">成員</span><span class="sxs-lookup"><span data-stu-id="e4706-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="fdc9b-105">成員</span><span class="sxs-lookup"><span data-stu-id="fdc9b-105">Members</span></span>  
   
-|<span data-ttu-id="e4706-106">成員</span><span class="sxs-lookup"><span data-stu-id="e4706-106">Member</span></span>|<span data-ttu-id="e4706-107">描述</span><span class="sxs-lookup"><span data-stu-id="e4706-107">Description</span></span>|  
+|<span data-ttu-id="fdc9b-106">成員</span><span class="sxs-lookup"><span data-stu-id="fdc9b-106">Member</span></span>|<span data-ttu-id="fdc9b-107">描述</span><span class="sxs-lookup"><span data-stu-id="fdc9b-107">Description</span></span>|  
 |------------|-----------------|  
-|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="e4706-108">小型傾印，也就是疏鬆的記憶體傾印。</span><span class="sxs-lookup"><span data-stu-id="e4706-108">A minidump, that is, a sparse memory dump.</span></span>|  
-|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="e4706-109">完整的堆積傾印。</span><span class="sxs-lookup"><span data-stu-id="e4706-109">A full heap dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_DEFAULT`|<span data-ttu-id="fdc9b-108">小型傾印，也就是疏鬆的記憶體傾印。</span><span class="sxs-lookup"><span data-stu-id="fdc9b-108">A minidump, that is, a sparse memory dump.</span></span>|  
+|`CLRDATA_ENUM_MEM_HEAP`|<span data-ttu-id="fdc9b-109">完整的堆積傾印。</span><span class="sxs-lookup"><span data-stu-id="fdc9b-109">A full heap dump.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="e4706-110">需求</span><span class="sxs-lookup"><span data-stu-id="e4706-110">Requirements</span></span>  
- <span data-ttu-id="e4706-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e4706-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="fdc9b-110">需求</span><span class="sxs-lookup"><span data-stu-id="fdc9b-110">Requirements</span></span>  
+ <span data-ttu-id="fdc9b-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fdc9b-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e4706-112">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="e4706-112">**Header:** ClrData.idl, ClrData.h</span></span>  
+ <span data-ttu-id="fdc9b-112">**標頭：** ClrData.idl, ClrData.h</span><span class="sxs-lookup"><span data-stu-id="fdc9b-112">**Header:** ClrData.idl, ClrData.h</span></span>  
   
- <span data-ttu-id="e4706-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e4706-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="fdc9b-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="fdc9b-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="e4706-114">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e4706-114">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
+ **<span data-ttu-id="fdc9b-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="fdc9b-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="e4706-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e4706-115">See also</span></span>
-- [<span data-ttu-id="e4706-116">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="e4706-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+## <a name="see-also"></a><span data-ttu-id="fdc9b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fdc9b-115">See also</span></span>
+
+- [<span data-ttu-id="fdc9b-116">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="fdc9b-116">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
