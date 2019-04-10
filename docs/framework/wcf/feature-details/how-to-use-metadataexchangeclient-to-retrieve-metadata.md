@@ -2,12 +2,12 @@
 title: HOW TO：使用 MetadataExchangeClient 來擷取中繼資料
 ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
-ms.openlocfilehash: ec4177e71c7d46dc5c908f01a051dc5a0df6baa4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327876"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>HOW TO：使用 MetadataExchangeClient 來擷取中繼資料
 使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 類別，即可使用 WS-MetadataExchange (MEX) 通訊協定來下載中繼資料。 所擷取的中繼資料檔案會當做 <xref:System.ServiceModel.Description.MetadataSet> 物件傳回。 傳回的 <xref:System.ServiceModel.Description.MetadataSet> 物件包含 <xref:System.ServiceModel.Description.MetadataSection> 物件的集合，其中每一個都會包含特定的中繼資料方言和識別項。 您可以將傳回的中繼資料寫入至檔案，或者當傳回的中繼資料含有 Web 服務描述語言 (WSDL) 文件時，您便可以使用 <xref:System.ServiceModel.Description.WsdlImporter> 來匯入中繼資料。  
@@ -21,11 +21,11 @@ ms.locfileid: "59168612"
   
 ### <a name="to-use-metadataexchangeclient-to-obtain-metadata"></a>使用 MetadataExchangeClient 來擷取中繼資料  
   
-1.  透過明確指定繫結、端點組態名稱或中繼資料位址的方式，即可建立新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 物件。  
+1. 透過明確指定繫結、端點組態名稱或中繼資料位址的方式，即可建立新的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 物件。  
   
-2.  視您的需要設定 <xref:System.ServiceModel.Description.MetadataExchangeClient>。 例如，您可以指定在要求中繼資料時所要使用的認證、控制中繼資料的解析方式，以及設定 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 屬性來控制中繼資料要求必須在逾時前多久傳回。  
+2. 視您的需要設定 <xref:System.ServiceModel.Description.MetadataExchangeClient>。 例如，您可以指定在要求中繼資料時所要使用的認證、控制中繼資料的解析方式，以及設定 <xref:System.ServiceModel.Description.MetadataExchangeClient.OperationTimeout%2A> 屬性來控制中繼資料要求必須在逾時前多久傳回。  
   
-3.  取得 <xref:System.ServiceModel.Description.MetadataSet> 物件，這個物件包含透過呼叫其中一個 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 方法而擷取到的中繼資料。 請注意，如果已經在建構 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 時明確指定了位址，您就只能使用不接受任何引數的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 多載。  
+3. 取得 <xref:System.ServiceModel.Description.MetadataSet> 物件，這個物件包含透過呼叫其中一個 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 方法而擷取到的中繼資料。 請注意，如果已經在建構 <xref:System.ServiceModel.Description.MetadataExchangeClient.GetMetadata%2A> 時明確指定了位址，您就只能使用不接受任何引數的 <xref:System.ServiceModel.Description.MetadataExchangeClient> 多載。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會示範如何使用 <xref:System.ServiceModel.Description.MetadataExchangeClient> 來下載並列舉中繼資料檔案。  

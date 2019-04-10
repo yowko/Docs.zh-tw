@@ -2,12 +2,12 @@
 title: HOW TO：讓模型和對應檔成為內嵌資源
 ms.date: 03/30/2017
 ms.assetid: 20dfae4d-e95a-4264-9540-f5ad23b462d3
-ms.openlocfilehash: b00ccdd0a1fc1cb22cf7cc0d0a3177dcc0e8017f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eae3681664ab1fd095487a7b7ed395302faf2588
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329527"
 ---
 # <a name="how-to-make-model-and-mapping-files-embedded-resources"></a>HOW TO：讓模型和對應檔成為內嵌資源
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]可讓您部署模型和對應檔做為內嵌資源的應用程式。 具有內嵌模型和對應檔的組件必須載入與實體連接相同的應用程式定義域中。 如需詳細資訊，請參閱[連接字串](../../../../../docs/framework/data/adonet/ef/connection-strings.md)。 根據預設，[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] 工具會內嵌模型和對應檔。 當您手動定義模型和對應檔時，請使用這個程序，確保檔案與 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式已一起部署為內嵌資源。  
@@ -17,13 +17,13 @@ ms.locfileid: "59138582"
   
 ### <a name="to-embed-model-and-mapping-files"></a>內嵌模型和對應檔  
   
-1.  在 [**方案總管] 中**，選取概念 (.csdl) 檔案。  
+1. 在 [**方案總管] 中**，選取概念 (.csdl) 檔案。  
   
-2.  在 **屬性**窗格中，將**建置動作**來**內嵌資源**。  
+2. 在 **屬性**窗格中，將**建置動作**來**內嵌資源**。  
   
-3.  針對儲存 (.ssdl) 檔和對應檔 (.msl) 重複步驟 1 和 2。  
+3. 針對儲存 (.ssdl) 檔和對應檔 (.msl) 重複步驟 1 和 2。  
   
-4.  在**方案總管**中，按兩下 App.config 檔案，然後修改`Metadata`中的參數`connectionString`屬性根據下列格式之一：  
+4. 在**方案總管**中，按兩下 App.config 檔案，然後修改`Metadata`中的參數`connectionString`屬性根據下列格式之一：  
   
     -   `Metadata=` `res://<assemblyFullName>/<resourceName>;`  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Points [WPF], animating with key frames
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
-ms.openlocfilehash: 2e34ba035c8d7f9132915a9269d545f32033cbed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132583"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328773"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>HOW TO：使用主要畫面格建立點的動畫
 此範例示範如何使用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>類別以動畫顯示<xref:System.Windows.Point>。  
@@ -22,11 +22,11 @@ ms.locfileid: "59132583"
 ## <a name="example"></a>範例  
  下列範例會沿著三角路徑來移動橢圓形。 此範例會使用<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>類別以動畫顯示<xref:System.Windows.Media.EllipseGeometry.Center%2A>屬性<xref:System.Windows.Media.EllipseGeometry>。 這個動畫會以下列方式使用三個主要畫面格：  
   
-1.  在前半秒，期間使用的執行個體<xref:System.Windows.Media.Animation.LinearPointKeyFrame>將橢圓形沿著路徑以穩定速率，從其起始位置的類別。 線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearPointKeyFrame>建立平滑的線性插補值之間。  
+1. 在前半秒，期間使用的執行個體<xref:System.Windows.Media.Animation.LinearPointKeyFrame>將橢圓形沿著路徑以穩定速率，從其起始位置的類別。 線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearPointKeyFrame>建立平滑的線性插補值之間。  
   
-2.  下一步 結束期間半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>突然將橢圓形沿著路徑移動到下一個位置的類別。 特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>建立突然跳躍點之間的值。  
+2. 下一步 結束期間半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>突然將橢圓形沿著路徑移動到下一個位置的類別。 特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscretePointKeyFrame>建立突然跳躍點之間的值。  
   
-3.  在最後的兩秒期間使用的執行個體<xref:System.Windows.Media.Animation.SplinePointKeyFrame>類別來將橢圓形移回起始位置。 曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplinePointKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>屬性。 在此範例中，動畫一開始速度緩慢，然後在接近時間區段結尾時會以指數方式加速。  
+3. 在最後的兩秒期間使用的執行個體<xref:System.Windows.Media.Animation.SplinePointKeyFrame>類別來將橢圓形移回起始位置。 曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplinePointKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplinePointKeyFrame.KeySpline%2A>屬性。 在此範例中，動畫一開始速度緩慢，然後在接近時間區段結尾時會以指數方式加速。  
   
  [!code-csharp[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/PointAnimationUsingKeyFramesExample.cs#pointanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#PointAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/pointanimationusingkeyframesexample.vb#pointanimationusingkeyframeswholepage)]

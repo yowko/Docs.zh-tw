@@ -2,12 +2,12 @@
 title: 使用序列化繫結器
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 5fd90febac8c75df9fa2472e4aab591a5630076e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33503154"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329839"
 ---
 # <a name="usage-of-serialization-binder"></a>使用序列化繫結器
 此範例示範如何使用 <xref:System.Runtime.Serialization.SerializationBinder> 變更序列化時一般類型的版本。  
@@ -24,10 +24,10 @@ ms.locfileid: "33503154"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要設定、建置及執行範例  
   
-1.  若要執行用戶端，以滑鼠右鍵按一下 sbgenericsvts （6 個專案），然後選取 **屬性**。  
+1. 若要執行用戶端，以滑鼠右鍵按一下 sbgenericsvts （6 個專案），然後選取**屬性**。  
   
-2.  在**通用屬性**，選取**啟始專案**，然後選取**多個啟始專案**。  
+2. 在 **通用屬性**，選取**啟始專案**，然後選取**多個啟始專案**。  
   
-3.  選取**伺服器**第一個，然後**Client20**然後**Client40**。 選取**啟動**這三個動作專案，然後將設定為其餘**無**。  
+3. 選取 **伺服器**第一，然後**Client20** ，然後**Client40**。 選取 **開始**這三個動作專案，並保留其餘設定為**無**。  
   
-4.  按一下**確定**，然後按 F5 執行範例。
+4. 按一下 **確定**，然後按 F5 執行範例。

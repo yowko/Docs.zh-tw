@@ -11,12 +11,12 @@ helpviewer_keywords:
 - inferring type information [LINQ in Visual Basic]
 - relationships [LINQ in Visual Basic]
 ms.assetid: b5ff4da5-f3fd-4a8e-aaac-1cbf52fa16f6
-ms.openlocfilehash: fd2bcfad0ae24288887500ae6286e6ac73fddac5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 14f17e89e2a4143580b4a2ca7f9d30013ded58f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822332"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327629"
 ---
 # <a name="type-relationships-in-query-operations-visual-basic"></a>查詢作業中的類型關聯性 (Visual Basic)
 在中使用變數[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]查詢作業強型別，且必須彼此相容。 資料來源、 查詢本身，及執行查詢，則會使用強型別。 下圖識別用來描述[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]查詢。 如需查詢的組件的詳細資訊，請參閱[基本查詢作業 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)。  
@@ -49,11 +49,11 @@ ms.locfileid: "58822332"
   
  下列關聯性會存在於這兩個先前的程式碼範例中，是否決定類型的隱含或明確的範圍。  
   
-1.  在資料來源中，元素的型別`names`，為範圍變數的型別`name`，在查詢中。  
+1. 在資料來源中，元素的型別`names`，為範圍變數的型別`name`，在查詢中。  
   
-2.  已選取的物件型別`name`，決定查詢變數的型別`mNames`。 這裡`name`是一個字串，因此查詢變數是在 Visual Basic 的 IEnumerable (Of String)。  
+2. 已選取的物件型別`name`，決定查詢變數的型別`mNames`。 這裡`name`是一個字串，因此查詢變數是在 Visual Basic 的 IEnumerable (Of String)。  
   
-3.  中定義的查詢`mNames`中執行`For Each`迴圈。 迴圈會逐一執行查詢的結果。 因為`mNames`，當它執行時，會傳回一系列的字串，迴圈反覆運算變數`nm`，也是一個字串。  
+3. 中定義的查詢`mNames`中執行`For Each`迴圈。 迴圈會逐一執行查詢的結果。 因為`mNames`，當它執行時，會傳回一系列的字串，迴圈反覆運算變數`nm`，也是一個字串。  
   
 ## <a name="queries-that-return-one-field-from-selected-elements"></a>從選取的項目傳回一個欄位的查詢  
  下列範例所示[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]查詢傳回的序列包含每個資料來源的已選取的項目只有一個部分的作業。 查詢需要耗費的集合`Customer`物件做為其資料來源，並僅限專案`Name`結果中的屬性。 因為客戶名稱是字串，此查詢會產生一序列的字串做為輸出。  
@@ -72,11 +72,11 @@ Next
   
  就像是較簡單的範例中的變數之間的關聯性。  
   
-1.  在資料來源中，元素的型別`customers`，為範圍變數的型別`cust`，在查詢中。 在此範例中，類型`Customer`。  
+1. 在資料來源中，元素的型別`customers`，為範圍變數的型別`cust`，在查詢中。 在此範例中，類型`Customer`。  
   
-2.  `Select`陳述式會傳回`Name`每個屬性`Customer`而不是整個物件的物件。 因為`Name`是一個字串，查詢變數`custNames`，將會一次是 IEnumerable (Of String)，不`Customer`。  
+2. `Select`陳述式會傳回`Name`每個屬性`Customer`而不是整個物件的物件。 因為`Name`是一個字串，查詢變數`custNames`，將會一次是 IEnumerable (Of String)，不`Customer`。  
   
-3.  因為`custNames`代表字串的一連串`For Each`迴圈的反覆運算變數， `custName`，必須是字串。  
+3. 因為`custNames`代表字串的一連串`For Each`迴圈的反覆運算變數， `custName`，必須是字串。  
   
  區域型別推斷，如果沒有上一個範例是較為撰寫，並了解，如下列範例所示。  
   
@@ -110,11 +110,11 @@ Next
   
  雖然您不能在上述範例中指定的所有變數的型別，關聯性維持不變。  
   
-1.  資料來源中項目的類型一次是在查詢中範圍變數的類型。 在此範例中，`cust`的執行個體`Customer`。  
+1. 資料來源中項目的類型一次是在查詢中範圍變數的類型。 在此範例中，`cust`的執行個體`Customer`。  
   
-2.  因為`Select`陳述式會產生匿名型別，查詢變數`nameCityQuery`，必須為匿名型別隱含型別。 匿名型別沒有可用的名稱，並因此無法明確地指定。  
+2. 因為`Select`陳述式會產生匿名型別，查詢變數`nameCityQuery`，必須為匿名型別隱含型別。 匿名型別沒有可用的名稱，並因此無法明確地指定。  
   
-3.  在反覆項目變數的型別`For Each`迴圈是步驟 2 中建立匿名型別。 因為類型沒有可用的名稱，必須以隱含方式決定迴圈的反覆項目變數的型別。  
+3. 在反覆項目變數的型別`For Each`迴圈是步驟 2 中建立匿名型別。 因為類型沒有可用的名稱，必須以隱含方式決定迴圈的反覆項目變數的型別。  
   
 ## <a name="see-also"></a>另請參閱
 

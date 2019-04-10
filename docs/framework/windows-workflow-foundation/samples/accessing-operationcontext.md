@@ -2,12 +2,12 @@
 title: 存取 OperationContext
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
-ms.openlocfilehash: 3c7ce1c9c37ee93b58a07376e0aeae045f0ca408
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43864296"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327954"
 ---
 # <a name="accessing-operationcontext"></a>存取 OperationContext
 這個範例會示範如何傳訊活動 (<xref:System.ServiceModel.Activities.Receive>並<xref:System.ServiceModel.Activities.Send>) 可以與自訂範圍活動用來存取<xref:System.ServiceModel.OperationContext.Current%2A>以及附加或擷取傳出或傳入訊息中的自訂訊息標頭。  
@@ -20,13 +20,13 @@ ms.locfileid: "43864296"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  這個範例使用 HTTP 端點公開工作流程服務。 若要執行這個範例，適當的 URL Acl 必須加入 (請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊)，是由系統管理員身分執行 Visual Studio 或執行下列命令，提高權限的提示來加入適當 Acl。 請確定您的網域和使用者名稱已用來取代。  
+1. 這個範例使用 HTTP 端點公開工作流程服務。 若要執行這個範例，適當的 URL Acl 必須加入 (請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊)，是由系統管理員身分執行 Visual Studio 或執行下列命令，提高權限的提示來加入適當 Acl。 請確定您的網域和使用者名稱已用來取代。  
   
     ```  
     netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%  
     ```  
   
-2.  一旦加入 URL ACL，請使用下列步驟。  
+2. 一旦加入 URL ACL，請使用下列步驟。  
   
     1.  建置方案。  
   

@@ -2,21 +2,21 @@
 title: 路由服務的 Hello World
 ms.date: 03/30/2017
 ms.assetid: 0f4b0d5b-6522-4ad5-9f3a-baa78316d7d1
-ms.openlocfilehash: b84d4dc17db5bb422ba86fbab9c25d3348be7488
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 37d2eaffa1ca5a4cce27c4950d00987828a61196
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59120155"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329735"
 ---
 # <a name="hello-world-with-the-routing-service"></a>路由服務的 Hello World
 這個範例會示範 Windows Communication Foundation (WCF) 路由服務。 路由服務是一種 WCF 元件，可讓您更輕鬆地在您的應用程式中加入內容為基礎的路由器。 此範例會調整標準 WCF 計算機範例，以便使用路由服務進行通訊。 在此範例中，計算機用戶端設定為傳送訊息到路由器所公開的端點。 路由服務會設定為接受傳送給它的所有訊息，並將其轉送到對應於計算機服務的端點。 因此，傳送自用戶端的訊息會由路由器接收，然後再重新路由至實際的計算機服務。 來自計算機服務的訊息會傳送回路由器，接著再將其傳遞回計算機用戶端。
 
 ### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  使用 Visual Studio 2012，請開啟 HelloRoutingService.sln。
+1. 使用 Visual Studio 2012，請開啟 HelloRoutingService.sln。
 
-2.  按下 F5 或 CTRL+SHIFT+B。
+2. 按下 F5 或 CTRL+SHIFT+B。
 
     > [!NOTE]
     >  如果按下 F5，計算機用戶端會自動啟動。 如果您按下 CTRL+SHIFT+B (建置)，則必須自行啟動下列應用程式。
@@ -25,7 +25,7 @@ ms.locfileid: "59120155"
     > 2.  計算機服務 (./CalculatorService/bin/service.exe)
     > 3.  路由服務 (./RoutingService/bin/RoutingService.exe)
 
-3.  按 ENTER 鍵以啟動用戶端。
+3. 按 ENTER 鍵以啟動用戶端。
 
      您應該會看到下列輸出：
 

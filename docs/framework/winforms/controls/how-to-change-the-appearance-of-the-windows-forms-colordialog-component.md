@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], formatting appearance
 - color dialog box [Windows Forms], configuring appearance
 ms.assetid: bba4e262-1cd7-4f63-89cf-330a36f7b539
-ms.openlocfilehash: d79139ac3d11d3cd9a7d1bbe1f12e14df83530e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d2bb9e06d9d84a9b61c67510e9c012066f69d55e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094641"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329228"
 ---
 # <a name="how-to-change-the-appearance-of-the-windows-forms-colordialog-component"></a>HOW TO：變更 Windows Forms ColorDialog 元件的外觀
 您可以設定 Windows Form 的外觀<xref:System.Windows.Forms.ColorDialog>元件使用之一些屬性。 對話方塊中有兩個區段，其中顯示基本色彩，允許使用者定義自訂色彩。  
@@ -26,7 +26,7 @@ ms.locfileid: "59094641"
   
 ### <a name="to-configure-the-appearance-of-the-color-dialog-box"></a>若要設定 [色彩] 對話方塊的外觀  
   
-1.  設定<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>， <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>， <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>，和<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>想要的值的屬性。  
+1. 設定<xref:System.Windows.Forms.ColorDialog.AllowFullOpen%2A>， <xref:System.Windows.Forms.ColorDialog.AnyColor%2A>， <xref:System.Windows.Forms.ColorDialog.SolidColorOnly%2A>，和<xref:System.Windows.Forms.ColorDialog.ShowHelp%2A>想要的值的屬性。  
   
     ```vb  
     ColorDialog1.AllowFullOpen = True  

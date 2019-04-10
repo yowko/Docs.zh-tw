@@ -2,12 +2,12 @@
 title: HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
-ms.openlocfilehash: 01a27c21948e3030059ddd1416d8c7727ac6435c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194457"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328344"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>HOW TO：使用 Svcutil.exe 來下載中繼資料文件
 您可以使用 Svcutil.exe 從正在執行的服務下載中繼資料，並將該中繼資料儲存至本機檔案。 對於 HTTP 和 HTTPS URL 配置，Svcutil.exe 會嘗試使用 Ws-metadataexchange 擷取中繼資料並[XML Web Service 探索](https://go.microsoft.com/fwlink/?LinkId=94950)。 對於所有其他的 URL 配置，Svcutil.exe 只會使用 WS-MetadataExchange。  
@@ -23,11 +23,11 @@ ms.locfileid: "59194457"
   
 ## <a name="to-download-metadata-using-svcutilexe"></a>使用 Svcutil.exe 來下載中繼資料  
   
-1.  在下列位置找到 Svcutil.exe 工具：  
+1. 在下列位置找到 Svcutil.exe 工具：  
   
      C:\Program Files\Microsoft SDKs\Windows\v1.0.\bin  
   
-2.  在命令提示字元中，使用下列格式啟動該工具。  
+2. 在命令提示字元中，使用下列格式啟動該工具。  
   
     ```  
     svcutil.exe /t:metadata  <url>* | <epr>  
@@ -35,7 +35,7 @@ ms.locfileid: "59194457"
   
      您必須指定 `/t:metadata` 選項才能下載中繼資料。 否則，便會產生用戶端程式碼與組態。  
   
-3.  <`url`> 引數指定的 url 提供服務端點的中繼資料或是線上裝載之中繼資料文件 URL。 <`epr`> 引數會指定要包含之 Ws-addressing 的 XML 檔案的路徑`EndpointAddress`支援 Ws-metadataexchange 之服務端點。  
+3. <`url`> 引數指定的 url 提供服務端點的中繼資料或是線上裝載之中繼資料文件 URL。 <`epr`> 引數會指定要包含之 Ws-addressing 的 XML 檔案的路徑`EndpointAddress`支援 Ws-metadataexchange 之服務端點。  
   
  如需使用此工具來下載中繼資料的其他選項，請參閱[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   

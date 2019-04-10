@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: 7a1747860a081fbbfc54b8657d5db6b57cdf168e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b5294080d0cc76fdb98bc0908f4273dbb011f982
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153240"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328721"
 ---
 # <a name="integrating-with-com-applications-overview"></a>整合 COM+ 應用程式概觀
 Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散式應用程式。 如果您已經使用裝載於 COM + 元件為基礎的應用程式邏輯，您可以使用 WCF 來擴充現有邏輯，而不需要重新撰寫程式碼。 一個常見案例就是當您要透過 Web 服務，公開現有的 COM+ 或 Enterprise Services 商務邏輯之時。  
@@ -36,13 +36,13 @@ Windows Communication Foundation (WCF) 提供豐富的環境，以建立分散�
   
  下列為將 COM+ 元件的介面公開為 Web 服務、而不用修改元件的必要步驟：  
   
-1.  判斷 COM+ 元件的介面是否可以公開為 Web 服務。  
+1. 判斷 COM+ 元件的介面是否可以公開為 Web 服務。  
   
-2.  選取適當的裝載模式。  
+2. 選取適當的裝載模式。  
   
-3.  使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。 如需如何使用 ComSvcConfig.exe 的詳細資訊，請參閱[How to:使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
+3. 使用 COM+ 服務模型組態工具 (ComSvcConfig.exe) 以新增介面的 Web 服務。 如需如何使用 ComSvcConfig.exe 的詳細資訊，請參閱[How to:使用 COM + 服務模型組態工具](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)。  
   
-4.  在應用程式組態檔中進行其他服務設定。 如需如何設定元件的詳細資訊，請參閱[How to:設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
+4. 在應用程式組態檔中進行其他服務設定。 如需如何設定元件的詳細資訊，請參閱[How to:設定 COM + 服務設定](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)。  
   
 ## <a name="supported-interfaces"></a>支援的介面  
  對於可公開為 Web 服務之介面的型別，有一些限制存在。 不支援下列介面型別：  

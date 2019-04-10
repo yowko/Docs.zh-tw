@@ -2,12 +2,12 @@
 title: 探索範圍範例
 ms.date: 03/30/2017
 ms.assetid: 6a37a754-6b8c-4ebe-bdf2-d4f0520271d5
-ms.openlocfilehash: 553a7adbe2d6daf29d4acf76990503df09c3bff1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ad20e63e00464ed615620b9d0ec83fb90d07444
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328084"
 ---
 # <a name="discovery-with-scopes-sample"></a>探索範圍範例
 此範例示範如何使用範圍分類可探索的端點，以及如何使用 <xref:System.ServiceModel.Discovery.DiscoveryClient> 執行端點的非同步搜尋。 在服務上，此範例會示範如何透過加入端點探索行為並使用該行為將範圍加入至端點，以及控制端點的可搜尋性來自訂每個端點的探索。 在用戶端上，此範例會檢查用戶端如何建立 <xref:System.ServiceModel.Discovery.DiscoveryClient> 並微調搜尋參數，以便透過將範圍加入至 <xref:System.ServiceModel.Discovery.FindCriteria> 來納入範圍。 此範例也會示範用戶端如何透過加入終止準則來限制回應。  
@@ -20,13 +20,13 @@ ms.locfileid: "59122703"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊。 以更高的權限執行下列命令應該就能加入適當的 ACL。 您可能想要將 Domain 和 Username 替換下列引數，如果命令無法運作，因為： `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 這個範例使用 HTTP 端點，若要執行這個範例，則必須加入正確的 URL ACL。 請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊。 以更高的權限執行下列命令應該就能加入適當的 ACL。 您可能想要將 Domain 和 Username 替換下列引數，如果命令無法運作，因為： `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  建置方案。  
+2. 建置方案。  
   
-3.  從組建目錄執行服務的可執行檔。  
+3. 從組建目錄執行服務的可執行檔。  
   
-4.  執行用戶端可執行檔。 請注意，用戶端可以尋找服務。  
+4. 執行用戶端可執行檔。 請注意，用戶端可以尋找服務。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

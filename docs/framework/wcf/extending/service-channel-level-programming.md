@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8d8dcd85-0a05-4c44-8861-4a0b3b90cca9
-ms.openlocfilehash: e00b5ae2c72a4d4dcd2140e9c280d5bfda3531c2
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: be5c73e2ac9fcc45d136280c869148326cd91315
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50197193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329126"
 ---
 # <a name="service-channel-level-programming"></a>服務通道層級的程式設計
 本主題描述如何撰寫 Windows Communication Foundation (WCF) 服務應用程式，而不需使用<xref:System.ServiceModel.ServiceHost?displayProperty=nameWithType>及其相關聯的物件模型。  
@@ -18,15 +18,15 @@ ms.locfileid: "50197193"
 ## <a name="receiving-messages"></a>接收訊息  
  以下為準備接收和處理訊息時所需的步驟：  
   
-1.  建立繫結。  
+1. 建立繫結。  
   
-2.  建置通道接聽程式。  
+2. 建置通道接聽程式。  
   
-3.  開啟通道接聽程式。  
+3. 開啟通道接聽程式。  
   
-4.  讀取要求並傳送回覆。  
+4. 讀取要求並傳送回覆。  
   
-5.  關閉所有通道物件。  
+5. 關閉所有通道物件。  
   
 #### <a name="creating-a-binding"></a>建立繫結。  
  接聽與接收訊息的第一步，就是建立繫結。 WCF 隨附數個內建或系統提供繫結，可供直接具現化其中一個。 此外，您也可以產生 CustomBinding 類別來建立自己的自訂繫結 (清單 1 中的程式碼也會執行相同作業)。  
@@ -36,7 +36,7 @@ ms.locfileid: "50197193"
 #### <a name="building-a-channellistener"></a>建置 ChannelListener  
  在建立繫結後，我們可以呼叫 <xref:System.ServiceModel.Channels.Binding.BuildChannelListener%2A?displayProperty=nameWithType> 來建置通道接聽程式，其中的型別參數就是要建立的通道類型。 在此範例中，我們會使用 <xref:System.ServiceModel.Channels.IReplyChannel?displayProperty=nameWithType>，因為我們想要以要求/回覆訊息交換模式來接聽傳入訊息。  
   
- <xref:System.ServiceModel.Channels.IReplyChannel> 會被用來接收要求訊息與傳回回覆訊息。 呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 會傳回 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，以便用來接收要求訊息並傳回回覆訊息。  
+ <xref:System.ServiceModel.Channels.IReplyChannel> 用來接收要求訊息與傳回回覆訊息。 呼叫 <xref:System.ServiceModel.Channels.IReplyChannel.ReceiveRequest%2A?displayProperty=nameWithType> 會傳回 <xref:System.ServiceModel.Channels.IRequestChannel?displayProperty=nameWithType>，以便用來接收要求訊息並傳回回覆訊息。  
   
  在建立接聽程式時，我們會傳送接聽程式所接聽的網路位址，在此範例為 `http://localhost:8080/channelapp`。 一般來說，每個傳輸通道都支援一到數個位址配置，例如，HTTP 傳輸同時支援 http 和 https 配置。  
   

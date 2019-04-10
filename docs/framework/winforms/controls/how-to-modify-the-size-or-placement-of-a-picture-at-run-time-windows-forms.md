@@ -11,12 +11,12 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], picture size and alignment
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
-ms.openlocfilehash: 5d817d34e47253b2e35afa7bb41c59eea06e1f94
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328331"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>HOW TO：修改的大小或位置的圖片，在執行階段 (Windows Form)
 如果您使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項在表單中，您可以設定<xref:System.Windows.Forms.PictureBox.SizeMode%2A>上它的屬性：  
@@ -33,7 +33,7 @@ ms.locfileid: "59178824"
   
 ### <a name="to-set-the-sizemode-property-at-run-time"></a>若要在執行階段設定的大小模式屬性  
   
-1.  設定<xref:System.Windows.Forms.PictureBox.SizeMode%2A>要<xref:System.Windows.Forms.PictureBoxSizeMode.Normal>（預設值）， <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>， <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>，或<xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> 表示影像置於控制項的左上角。如果影像大於此控制項，其低和右緣被裁剪。 <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> 表示影像置於控制項中，如果影像大於此控制項，則會裁剪圖片的外邊緣。 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> 表示控制項的大小會調整為影像的大小。 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> 相反地，，表示影像的大小調整控制項大小的。  
+1. 設定<xref:System.Windows.Forms.PictureBox.SizeMode%2A>要<xref:System.Windows.Forms.PictureBoxSizeMode.Normal>（預設值）， <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize>， <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage>，或<xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage>。 <xref:System.Windows.Forms.PictureBoxSizeMode.Normal> 表示影像置於控制項的左上角。如果影像大於此控制項，其低和右緣被裁剪。 <xref:System.Windows.Forms.PictureBoxSizeMode.CenterImage> 表示影像置於控制項中，如果影像大於此控制項，則會裁剪圖片的外邊緣。 <xref:System.Windows.Forms.PictureBoxSizeMode.AutoSize> 表示控制項的大小會調整為影像的大小。 <xref:System.Windows.Forms.PictureBoxSizeMode.StretchImage> 相反地，，表示影像的大小調整控制項大小的。  
   
      在下列範例中，映像的位置所設定的路徑會是 [我的文件] 資料夾。 這麼做，因為您可以假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。 也可讓具備最小系統存取層級的使用者安全地執行應用程式。 下列範例假設表單<xref:System.Windows.Forms.PictureBox>已經加入的控制項。  
   

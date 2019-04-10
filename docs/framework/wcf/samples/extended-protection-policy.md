@@ -2,12 +2,12 @@
 title: 延伸保護原則
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
-ms.openlocfilehash: 59a377a94978741f3f116bab819dff77d8b0fee4
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43785449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328747"
 ---
 # <a name="extended-protection-policy"></a>延伸保護原則
 延伸保護是防止攔截式攻擊的一項安全性方案。 MITM 攻擊是一項安全性威脅，其方式為 MITM 取得用戶端的認證並將它轉送至伺服器。  
@@ -26,25 +26,25 @@ ms.locfileid: "43785449"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  安裝 Internet Information Services，從**控制台中**，**新增/移除程式**， **Windows 功能**。  
+1. 安裝 Internet Information Services，從**控制台中**，**新增/移除程式**， **Windows 功能**。  
   
-2.  安裝**Windows 驗證**中**Windows 功能**， **Internet Information Services**， **World Wide Web 服務**， **安全性**，並**Windows 驗證**。  
+2. 安裝**Windows 驗證**中**Windows 功能**， **Internet Information Services**， **World Wide Web 服務**， **安全性**，並**Windows 驗證**。  
   
-3.  安裝**Windows Communication Foundation HTTP 啟動**中**Windows 功能**， **Microsoft.NET Framework 3.5.1**，和**Windows 通訊Foundation HTTP 啟動**。  
+3. 安裝**Windows Communication Foundation HTTP 啟動**中**Windows 功能**， **Microsoft.NET Framework 3.5.1**，和**Windows 通訊Foundation HTTP 啟動**。  
   
-4.  這個範例需由用戶端建立與伺服器之間的安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
+4. 這個範例需由用戶端建立與伺服器之間的安全通道，所以必須有可從 Internet Information Services (IIS) 管理員進行安裝的伺服器憑證。  
   
     1.  開啟 [IIS Manager]。 開啟**伺服器憑證**，會出現在**功能檢視**索引標籤上，選取根節點 （電腦名稱） 時。  
   
     2.  若要測試這個範例，請建立自我簽署憑證。 如果您不希望 Internet Explorer 出現憑證可能不安全的提示，請將此憑證安裝到 [受信任的根憑證授權單位] 存放區。  
   
-5.  開啟**動作**預設網站 窗格。 按一下 **編輯站台**，**繫結**。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
+5. 開啟**動作**預設網站 窗格。 按一下 **編輯站台**，**繫結**。 加入 HTTPS 做為類型 (如果尚未存在)，並且使用連接埠號碼 443。 指派上一個步驟中建立的 SSL 憑證。  
   
-6.  建置服務。 這樣會在 IIS 中建立一個虛擬目錄，並且視需要複製 Web 主控服務的 .dll、.svc 和 .config 檔案。  
+6. 建置服務。 這樣會在 IIS 中建立一個虛擬目錄，並且視需要複製 Web 主控服務的 .dll、.svc 和 .config 檔案。  
   
-7.  開啟 [IIS Manager]。 以滑鼠右鍵按一下 虛擬目錄 (**ExtendedProtection**) 上, 一個步驟中建立。 選取 **轉換成應用程式**。  
+7. 開啟 [IIS Manager]。 以滑鼠右鍵按一下 虛擬目錄 (**ExtendedProtection**) 上, 一個步驟中建立。 選取 **轉換成應用程式**。  
   
-8.  開啟**驗證**模組在 [IIS 管理員] 中，此虛擬目錄和啟用**Windows 驗證**。  
+8. 開啟**驗證**模組在 [IIS 管理員] 中，此虛擬目錄和啟用**Windows 驗證**。  
   
 9. 開啟**進階設定**下方**Windows 驗證**此虛擬目錄並將它設定為**需要**。  
   

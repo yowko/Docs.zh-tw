@@ -6,12 +6,12 @@ helpviewer_keywords:
 - layout [Windows Forms], resizing
 - layout [Windows Forms], child controls
 ms.assetid: 5a5723ff-34e0-4b6f-a57b-be4ebe35cb34
-ms.openlocfilehash: 113afc642ca313f10062a496d2f170e3666d5043
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2639322707c1c7e378f6d389a1dec80fd619841c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162237"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328214"
 ---
 # <a name="how-to-reassign-existing-controls-to-a-different-parent"></a>HOW TO：將現有控制項重新指派至不同的父代
 您可以將表單上現有的控制項指派給新的容器控制項。  
@@ -21,25 +21,25 @@ ms.locfileid: "59162237"
   
 ### <a name="to-reassign-existing-controls-to-a-different-parent"></a>將現有控制項重新指派至不同的父代  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將三個** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將三個** 控制項拖曳至表單。  
   
      將它們放在相鄰的位置，但不要對齊。  
   
-2.  按一下 [工具箱] 的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。  
+2. 按一下 [工具箱] 的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。  
   
      請勿將圖示拖曳到表單上。  
   
-3.  將滑鼠指標靠近三個 <xref:System.Windows.Forms.Button> 控制項。  
+3. 將滑鼠指標靠近三個 <xref:System.Windows.Forms.Button> 控制項。  
   
      指標會變成十字形狀並附有 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。  
   
-4.  按住滑鼠按鈕。  
+4. 按住滑鼠按鈕。  
   
-5.  拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的外框。  
+5. 拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的外框。  
   
-6.  繪製三個 <xref:System.Windows.Forms.Button> 控制項的外框。  
+6. 繪製三個 <xref:System.Windows.Forms.Button> 控制項的外框。  
   
-7.  放開滑鼠按鈕。  
+7. 放開滑鼠按鈕。  
   
      三個 <xref:System.Windows.Forms.Button> 控制項現在都已插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。  
   

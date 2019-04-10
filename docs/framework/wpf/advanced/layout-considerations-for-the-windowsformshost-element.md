@@ -9,12 +9,12 @@ helpviewer_keywords:
 - dynamic layout [WPF interoperability]
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
-ms.openlocfilehash: ff52d3bbf7bf5d9d85f7a6fd5f73d9730dde8fad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327850"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 項目的配置考量
 本主題描述如何<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目互動[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]版面配置系統。  
@@ -84,13 +84,13 @@ ms.locfileid: "59168983"
 ### <a name="sizing-algorithm"></a>調整大小演算法  
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>項目使用下列程序來裝載的控制項的大小：  
   
-1.  <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素會覆寫<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。  
+1. <xref:System.Windows.Forms.Integration.WindowsFormsHost>元素會覆寫<xref:System.Windows.FrameworkElement.MeasureOverride%2A>和<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法。  
   
-2.  若要判斷所裝載的控制項的大小<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法會呼叫裝載的控制項<xref:System.Windows.Forms.Control.GetPreferredSize%2A>含有條件約束的方法會轉譯從傳遞給條件約束<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
+2. 若要判斷所裝載的控制項的大小<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法會呼叫裝載的控制項<xref:System.Windows.Forms.Control.GetPreferredSize%2A>含有條件約束的方法會轉譯從傳遞給條件約束<xref:System.Windows.FrameworkElement.MeasureOverride%2A>方法。  
   
-3.  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法會嘗試將指定的大小條件約束來設定裝載的控制項。  
+3. <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>方法會嘗試將指定的大小條件約束來設定裝載的控制項。  
   
-4.  如果裝載的控制項<xref:System.Windows.Forms.Control.Size%2A>屬性符合指定的條件約束，裝載的控制項大小為條件約束。  
+4. 如果裝載的控制項<xref:System.Windows.Forms.Control.Size%2A>屬性符合指定的條件約束，裝載的控制項大小為條件約束。  
   
  如果<xref:System.Windows.Forms.Control.Size%2A>屬性不符合指定的條件約束，裝載的控制項不支援連續的調整大小。 比方說，<xref:System.Windows.Forms.MonthCalendar>控制項可讓只有離散的大小。 這個控制項允許的大小會組成高度和寬度的整數 （表示的月數）。 在此情況下<xref:System.Windows.Forms.Integration.WindowsFormsHost>項目行為，如下所示：  
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - icons [Windows Forms], setting for TreeView control
 - tree nodes in TreeView control [Windows Forms], icons
 ms.assetid: c14ddcc0-e5a6-4c21-a2d5-6799fd491781
-ms.openlocfilehash: 12b8354890f0ba613b35615dc5cf3a5b3555e7ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a857aade86d2366bb68ce14d716b3ce532ecb05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328409"
 ---
 # <a name="how-to-set-icons-for-the-windows-forms-treeview-control"></a>HOW TO：設定 Windows Forms TreeView 控制項的圖示
 Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節點旁邊的圖示。 圖示位於節點文字的左邊。 若要顯示這些圖示，您必須建立關聯的樹狀檢視<xref:System.Windows.Forms.ImageList>控制項。 如需有關影像清單的詳細資訊，請參閱[ImageList 元件](imagelist-component-windows-forms.md)和[How to:新增或移除映像的 Windows Form ImageList 元件](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)。  
@@ -27,7 +27,7 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節�
   
 ### <a name="to-display-images-in-a-tree-view"></a>若要在樹狀檢視中顯示影像  
   
-1.  設定<xref:System.Windows.Forms.TreeView>控制項的<xref:System.Windows.Forms.TreeView.ImageList%2A>屬性，以現有<xref:System.Windows.Forms.ImageList>您想要使用的控制項。  
+1. 設定<xref:System.Windows.Forms.TreeView>控制項的<xref:System.Windows.Forms.TreeView.ImageList%2A>屬性，以現有<xref:System.Windows.Forms.ImageList>您想要使用的控制項。  
   
      在設計工具中使用 [屬性] 視窗中，或在程式碼，可以設定這些屬性。  
   
@@ -43,7 +43,7 @@ Windows Form<xref:System.Windows.Forms.TreeView>控制項可以顯示每個節�
     treeView1->ImageList = imageList1;  
     ```  
   
-2.  將節點的設定<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>屬性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>屬性會決定節點的一般或展開狀態，所顯示的影像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>屬性決定節點的選取狀態顯示的影像。  
+2. 將節點的設定<xref:System.Windows.Forms.TreeNode.ImageIndex%2A>和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>屬性。 <xref:System.Windows.Forms.TreeNode.ImageIndex%2A>屬性會決定節點的一般或展開狀態，所顯示的影像和<xref:System.Windows.Forms.TreeNode.SelectedImageIndex%2A>屬性決定節點的選取狀態顯示的影像。  
   
      在程式碼，或在 TreeNode 編輯器內，可以設定這些屬性。 若要開啟 TreeNode 編輯器，請按一下 [省略符號按鈕 ( ![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.TreeView.Nodes%2A>屬性] 視窗上的屬性。  
   

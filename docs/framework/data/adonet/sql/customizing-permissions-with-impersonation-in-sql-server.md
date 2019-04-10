@@ -2,12 +2,12 @@
 title: 在 SQL Server 中使用模擬來自訂權限
 ms.date: 03/30/2017
 ms.assetid: dc733d09-1d6d-4af0-9c4b-8d24504860f1
-ms.openlocfilehash: 9c3e84e8a432a54cdcd2cbe4e01dada870cd1366
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dd7fb4c94c5a0a9bca0cd36b8d76864158072d4e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326966"
 ---
 # <a name="customizing-permissions-with-impersonation-in-sql-server"></a>在 SQL Server 中使用模擬來自訂權限
 許多應用程式會使用預存程序 (Stored Procedure) 來存取資料，並仰賴擁有權鏈結來限制基底資料表的存取。 您可以授與預存程序的 EXECUTE 權限，並撤銷或拒絕基底資料表的權限。 如果預存程序和資料表具有相同的擁有者，SQL Server 就不會檢查呼叫端的權限。 不過，如果物件具有不同的擁有者或在動態 SQL 的情況中，擁有權鏈結便沒有作用。  
@@ -34,15 +34,15 @@ EXECUTE AS USER = 'userName';
   
  在程序中使用 EXECUTE AS 子句包含三個步驟。  
   
-1.  在資料庫中建立沒有對應至登入的 Proxy 使用者。 雖然這並非必要條件，但是在管理權限時很有用。  
+1. 在資料庫中建立沒有對應至登入的 Proxy 使用者。 雖然這並非必要條件，但是在管理權限時很有用。  
   
 ```  
 CREATE USER proxyUser WITHOUT LOGIN  
 ```  
   
-1.  將必要權限授與 Proxy 使用者。  
+1. 將必要權限授與 Proxy 使用者。  
   
-2.  將 EXECUTE AS 子句加入至預存程序或使用者定義函式。  
+2. 將 EXECUTE AS 子句加入至預存程序或使用者定義函式。  
   
 ```  
 CREATE PROCEDURE [procName] WITH EXECUTE AS 'proxyUser' AS ...  

@@ -2,12 +2,12 @@
 title: JSONP
 ms.date: 03/30/2017
 ms.assetid: c13b4d7b-dac7-4ffd-9f84-765c903511e1
-ms.openlocfilehash: 0e284ee6cce4ab513c03e7be402cc9c0f0c4ee1a
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 37da57a000376f972cd6da9e04be46ddec1b7144
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48581910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329657"
 ---
 # <a name="jsonp"></a>JSONP
 此範例示範如何在 WCF REST 服務中支援 JSON with Padding (JSONP)。 JSONP 是一項慣例，透過在目前文件中產生指令碼標記，用來叫用 (Invoke) 跨網域指令碼。 結果會傳回到指定的回呼函式 (Callback Function)。 JSONP 的基礎概念是，這類`<script src="http://..." >`可以評估來自任何網域的指令碼，而這些標記擷取的指令碼會以其他函式可能已定義範圍內評估。
@@ -64,8 +64,8 @@ Sys._json0({"__type":"Customer:#Microsoft.Samples.Jsonp","Address":"1 Example Wa
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
-1.  開啟 JSONP 範例的方案。  
+1. 開啟 JSONP 範例的方案。  
   
-2.  按 F5 以啟動`http://localhost:26648/JSONPClientPage.aspx`瀏覽器中。  
+2. 按 F5 以啟動`http://localhost:26648/JSONPClientPage.aspx`瀏覽器中。  
   
-3.  請注意，在頁面載入之後，"Name"和"Address"的文字輸入會以值填入。  瀏覽器完成頁面的呈現之後從 WCF 服務的呼叫提供這些值。
+3. 請注意，在頁面載入之後，"Name"和"Address"的文字輸入會以值填入。  瀏覽器完成頁面的呈現之後從 WCF 服務的呼叫提供這些值。

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
-ms.openlocfilehash: 70b8e2f28559d5fc54736db1319d2309aa5b86a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111328"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329345"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>HOW TO：使用 Windows 認證來確保服務安全
 本主題說明如何啟用位於 Windows 網域，而且由相同的網域中的用戶端呼叫的 Windows Communication Foundation (WCF) 服務上的傳輸安全性。 如需有關此案例的詳細資訊，請參閱 < [Windows 驗證的傳輸安全性](../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)。 範例應用程式，請參閱[WSHttpBinding](../../../docs/framework/wcf/samples/wshttpbinding.md)範例。  
@@ -30,15 +30,15 @@ ms.locfileid: "59111328"
   
 #### <a name="to-create-a-wshttpbinding-that-uses-windows-credentials-and-message-security"></a>建立會使用 Windows 認證和訊息安全性的 WSHttpBinding  
   
-1.  這個程序的程式碼會插入至「範例」一節服務程式碼中 `Run` 類別的 `Test` 方法開頭。  
+1. 這個程序的程式碼會插入至「範例」一節服務程式碼中 `Run` 類別的 `Test` 方法開頭。  
   
-2.  建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體。  
+2. 建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體。  
   
-3.  將 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 類別的 <xref:System.ServiceModel.WSHttpSecurity> 屬性設定為 <xref:System.ServiceModel.SecurityMode.Message>。  
+3. 將 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 類別的 <xref:System.ServiceModel.WSHttpSecurity> 屬性設定為 <xref:System.ServiceModel.SecurityMode.Message>。  
   
-4.  將 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 類別的 <xref:System.ServiceModel.MessageSecurityOverHttp> 屬性設定為 <xref:System.ServiceModel.MessageCredentialType.Windows>。  
+4. 將 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 類別的 <xref:System.ServiceModel.MessageSecurityOverHttp> 屬性設定為 <xref:System.ServiceModel.MessageCredentialType.Windows>。  
   
-5.  這項程序的程式碼如下所示：  
+5. 這項程序的程式碼如下所示：  
   
      [!code-csharp[c_SecureWindowsService#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#1)]
      [!code-vb[c_SecureWindowsService#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#1)]  
@@ -48,19 +48,19 @@ ms.locfileid: "59111328"
   
 ##### <a name="to-use-a-binding-in-a-service"></a>在服務中使用繫結  
   
-1.  將這個程序的程式碼插入到前一個程序的程式碼後面。  
+1. 將這個程序的程式碼插入到前一個程序的程式碼後面。  
   
-2.  建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 當您使用 Visual Basic，使用`GetType`運算子; 使用 C# 中，使用時`typeof`關鍵字。  
+2. 建立名稱為 <xref:System.Type> 的 `contractType` 變數，並將其類型指派為介面 (`ICalculator`)。 當您使用 Visual Basic，使用`GetType`運算子; 使用 C# 中，使用時`typeof`關鍵字。  
   
-3.  建立第二個名稱為 <xref:System.Type> 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。  
+3. 建立第二個名稱為 <xref:System.Type> 的 `serviceType` 變數，並將其類型指派為實作的合約 (`Calculator`)。  
   
-4.  使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別元 (URI)"localhost"與連接埠號碼 (8036)，以及基底的端點位址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
+4. 使用服務的基底位址，建立名稱為 <xref:System.Uri> 之 `baseAddress` 類別的執行個體。 基底位址必須具有符合傳輸的配置。 在此情況下，傳輸配置為 HTTP，而位址中則包含特殊統一資源識別元 (URI)"localhost"與連接埠號碼 (8036)，以及基底的端點位址 ("serviceModelSamples /): `http://localhost:8036/serviceModelSamples/`。  
   
-5.  使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 變數，建立 `baseAddress` 類別的執行個體。  
+5. 使用 <xref:System.ServiceModel.ServiceHost> 和 `serviceType` 變數，建立 `baseAddress` 類別的執行個體。  
   
-6.  使用 `contractType`、繫結和端點名稱 (secureCalculator)，將端點新增至服務。 初始化服務的呼叫時，用戶端必須串連基底位址和端點名稱。  
+6. 使用 `contractType`、繫結和端點名稱 (secureCalculator)，將端點新增至服務。 初始化服務的呼叫時，用戶端必須串連基底位址和端點名稱。  
   
-7.  呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法啟動服務。 這項程序的程式碼如下所示：  
+7. 呼叫 <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> 方法啟動服務。 這項程序的程式碼如下所示：  
   
      [!code-csharp[c_SecureWindowsService#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsservice/cs/secureservice.cs#2)]
      [!code-vb[c_SecureWindowsService#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsservice/vb/secureservice.vb#2)]  
@@ -74,19 +74,19 @@ ms.locfileid: "59111328"
   
 ##### <a name="to-use-a-binding-in-a-client-with-code"></a>搭配程式碼在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
+1. 使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。 產生的 proxy 程式碼繼承自<xref:System.ServiceModel.ClientBase%601>類別，可確保每個用戶端具有必要的建構函式、 方法和屬性與 WCF 服務進行通訊。 在這個範例中，產生的程式碼包含 `CalculatorClient` 類別，這個類別會實作 `ICalculator` 介面，因此就會與服務程式碼相容。  
   
-2.  此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
+2. 此程序的程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
-3.  建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，將其安全性模式設定為 `Message`，並將其用戶端認證類型設定為 `Windows`。 這個範例會將變數命名為 `clientBinding`。  
+3. 建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，將其安全性模式設定為 `Message`，並將其用戶端認證類型設定為 `Windows`。 這個範例會將變數命名為 `clientBinding`。  
   
-4.  建立名稱為 <xref:System.ServiceModel.EndpointAddress> 之 `serviceAddress` 類別的執行個體。 使用與端點名稱串連的基底位址初始化執行個體。  
+4. 建立名稱為 <xref:System.ServiceModel.EndpointAddress> 之 `serviceAddress` 類別的執行個體。 使用與端點名稱串連的基底位址初始化執行個體。  
   
-5.  使用 `serviceAddress` 和 `clientBinding` 變數，建立產生之用戶端類別的執行個體。  
+5. 使用 `serviceAddress` 和 `clientBinding` 變數，建立產生之用戶端類別的執行個體。  
   
-6.  呼叫 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下列程式碼所示。  
+6. 呼叫 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下列程式碼所示。  
   
-7.  呼叫服務並顯示結果。  
+7. 呼叫服務並顯示結果。  
   
      [!code-csharp[c_secureWindowsClient#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#1)]
      [!code-vb[c_secureWindowsClient#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securewindowsclient/vb/secureclient.vb#1)]  
@@ -100,15 +100,15 @@ ms.locfileid: "59111328"
   
 #### <a name="to-enable-transfer-security-on-a-service-in-a-windows-domain-using-configuration"></a>使用組態在 Windows 網域的服務上啟用傳輸安全性  
   
-1.  新增[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目區段的組態檔。  
+1. 新增[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目區段的組態檔。  
   
-2.  加入 <`binding`> 項目至 <`WSHttpBinding`> 項目並將`configurationName`屬性適用於您的應用程式的值。  
+2. 加入 <`binding`> 項目至 <`WSHttpBinding`> 項目並將`configurationName`屬性適用於您的應用程式的值。  
   
-3.  加入 <`security`> 項目並將`mode`屬性至訊息。  
+3. 加入 <`security`> 項目並將`mode`屬性至訊息。  
   
-4.  加入 <`message`> 項目並將`clientCredentialType`屬性設定為 Windows。  
+4. 加入 <`message`> 項目並將`clientCredentialType`屬性設定為 Windows。  
   
-5.  在服務的組態檔中，將 `<bindings>` 區段取代為下列程式碼。 如果您還沒有服務組態檔，請參閱[使用的繫結設定服務及用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
+5. 在服務的組態檔中，將 `<bindings>` 區段取代為下列程式碼。 如果您還沒有服務組態檔，請參閱[使用的繫結設定服務及用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)。  
   
     ```xml  
     <bindings>  
@@ -127,17 +127,17 @@ ms.locfileid: "59111328"
   
 ##### <a name="to-use-a-binding-in-a-client-with-configuration"></a>搭配組態在用戶端中使用繫結  
   
-1.  使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+1. 使用 SvcUtil.exe 工具，從服務的中繼資料產生 Proxy 程式碼和組態檔。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
-2.  取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)為前一個區段的組態程式碼產生的組態檔區段。  
+2. 取代[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)為前一個區段的組態程式碼產生的組態檔區段。  
   
-3.  程序程式碼會插入至用戶端程式的 `Main` 方法開頭。  
+3. 程序程式碼會插入至用戶端程式的 `Main` 方法開頭。  
   
-4.  建立已產生之用戶端類別的執行個體，將組態檔中繫結的名稱當做輸入參數傳遞。  
+4. 建立已產生之用戶端類別的執行個體，將組態檔中繫結的名稱當做輸入參數傳遞。  
   
-5.  呼叫 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下列程式碼所示。  
+5. 呼叫 <xref:System.ServiceModel.ClientBase%601.Open%2A> 方法，如下列程式碼所示。  
   
-6.  呼叫服務並顯示結果。  
+6. 呼叫服務並顯示結果。  
   
      [!code-csharp[c_secureWindowsClient#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_securewindowsclient/cs/secureclient.cs#2)]  
   

@@ -2,12 +2,12 @@
 title: 依逐步解說學習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: fdcc2db1507d8ee2c6d1b07a79c531267fbb5714
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188997"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329306"
 ---
 # <a name="learning-by-walkthroughs"></a>依逐步解說學習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件提供了幾個逐步解說。 本主題會處理某些一般逐步解說問題 (包含疑難排解)，並提供數個入門級逐步解說的連結，供您學習 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
@@ -53,13 +53,13 @@ ms.locfileid: "59188997"
   
 ##### <a name="to-verify-or-change-the-database-log-on"></a>若要驗證或變更資料庫登入  
   
-1.  在 Windows 上**開始**功能表上，指向**所有程式**， **Microsoft SQL Server 2005**，指向**組態工具**，然後按一下**SQL Server 組態管理員**。  
+1. 在 Windows 上**開始**功能表上，指向**所有程式**， **Microsoft SQL Server 2005**，指向**組態工具**，然後按一下**SQL Server 組態管理員**。  
   
-2.  在左窗格中**SQL Server 組態管理員**，按一下**SQL Server 2005 服務**。  
+2. 在左窗格中**SQL Server 組態管理員**，按一下**SQL Server 2005 服務**。  
   
-3.  在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**屬性**。  
+3. 在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**屬性**。  
   
-4.  按一下 **登入**索引標籤，並確認您試圖登入伺服器的方式。  
+4. 按一下 **登入**索引標籤，並確認您試圖登入伺服器的方式。  
   
      在大部分情況下，**本機系統**的運作方式。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59188997"
   
 ##### <a name="to-enable-the-named-pipes-protocol"></a>若要啟用具名管道通訊協定  
   
-1.  在左窗格中**SQL Server 組態管理員**，展開**SQL Server 2005 網路組態**，然後按一下**SQLEXPRESS 的通訊協定**。  
+1. 在左窗格中**SQL Server 組態管理員**，展開**SQL Server 2005 網路組態**，然後按一下**SQLEXPRESS 的通訊協定**。  
   
-2.  在右窗格中，請確定**Named Pipes**啟用通訊協定。 如果沒有，請以滑鼠右鍵按一下**具名管道**，然後按一下**啟用**。  
+2. 在右窗格中，請確定**Named Pipes**啟用通訊協定。 如果沒有，請以滑鼠右鍵按一下**具名管道**，然後按一下**啟用**。  
   
      您將必須停止並重新啟動服務。 步驟如下一小節所述。  
   
@@ -81,11 +81,11 @@ ms.locfileid: "59188997"
   
 ##### <a name="to-stop-and-restart-the-service"></a>若要停止並重新啟動服務  
   
-1.  在左窗格中**SQL Server 組態管理員**，按一下**SQL Server 2005 服務**。  
+1. 在左窗格中**SQL Server 組態管理員**，按一下**SQL Server 2005 服務**。  
   
-2.  在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**停止**。  
+2. 在右窗格中，以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**停止**。  
   
-3.  以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**重新啟動**。  
+3. 以滑鼠右鍵按一下**SQL Server (SQLEXPRESS)**，然後按一下**重新啟動**。  
   
 ## <a name="see-also"></a>另請參閱
 

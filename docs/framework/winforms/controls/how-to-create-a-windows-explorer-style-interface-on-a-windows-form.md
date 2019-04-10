@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], Explorer-style interface
 - forms [Windows Forms], Windows Explorer type
 ms.assetid: 9a3d5f4f-5dda-4350-9ad5-57ce5976dc47
-ms.openlocfilehash: e559702d5fd7f0f56c7b2b010713e3129504746a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dd70feaba29e29748ac56729632fa359582a6914
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192130"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327369"
 ---
 # <a name="how-to-create-a-windows-explorerstyle-interface-on-a-windows-form"></a>HOW TO：在 Windows Forms 中建立 Windows 檔案總管樣式的介面
 Windows 檔案總管會是應用程式的一般使用者介面選擇，因為其準備好的熟悉度。  
@@ -25,9 +25,9 @@ Windows 檔案總管會是應用程式的一般使用者介面選擇，因為其
   
 ### <a name="to-create-a-windows-explorer-style-windows-form"></a>若要建立 Windows 檔案總管樣式的 Windows 表單  
   
-1.  建立新的 Windows 應用程式專案 (**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
+1. 建立新的 Windows 應用程式專案 (**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
-2.  從**工具箱**:  
+2. 從**工具箱**:  
   
     1.  拖曳<xref:System.Windows.Forms.SplitContainer>控制項拖曳至表單。  
   
@@ -35,14 +35,14 @@ Windows 檔案總管會是應用程式的一般使用者介面選擇，因為其
   
     3.  拖曳<xref:System.Windows.Forms.ListView>程式控制**SplitterPanel2** (的面板<xref:System.Windows.Forms.SplitContainer>控制標記**Panel2**)。  
   
-3.  按下 CTRL 鍵並依序按一下以選取所有的三個控制項。 當您選取<xref:System.Windows.Forms.SplitContainer>控制項中按一下 分隔器列，而不是面板。  
+3. 按下 CTRL 鍵並依序按一下以選取所有的三個控制項。 當您選取<xref:System.Windows.Forms.SplitContainer>控制項中按一下 分隔器列，而不是面板。  
   
     > [!NOTE]
     >  請勿使用**全選**命令**編輯**功能表。 如果您這樣做，請在下一個步驟中所需的屬性不會出現在**屬性**視窗。  
   
-4.  在 [屬性]  視窗中，將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+4. 在 [屬性]  視窗中，將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-5.  按 F5 執行應用程式。  
+5. 按 F5 執行應用程式。  
   
      此表單會顯示兩個部分使用者介面，類似於 Windows 檔案總管。  
   

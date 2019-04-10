@@ -2,12 +2,12 @@
 title: 永久性發行權杖提供者
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: 72c8b4e74607a1ed7f616959a6445f21b595a956
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103255"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329748"
 ---
 # <a name="durable-issued-token-provider"></a>永久性發行權杖提供者
 這個範例示範如何實作自訂用戶端發行的權杖提供者。  
@@ -114,7 +114,7 @@ ms.locfileid: "59103255"
   
 #### <a name="to-develop-a-custom-token-provider"></a>若要開發自訂權杖提供者  
   
-1.  撰寫自訂權杖提供者。  
+1. 撰寫自訂權杖提供者。  
   
      範例會實作自訂權杖提供者，以傳回擷取自快取的安全性權杖。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "59103255"
     }  
     ```  
   
-2.  撰寫自訂安全性權杖管理員。  
+2. 撰寫自訂安全性權杖管理員。  
   
      此 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 會用來建立特定 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> (以 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 方法傳遞至該管理員) 的 `CreateSecurityTokenProvider`。 安全性權杖管理員也會用來建立權杖驗證器與權杖序列化程式，但是這些不在本範例的討論範圍。 在這個範例中，自訂安全性權杖管理員繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，並且會覆寫 `CreateSecurityTokenProvider` 方法，以便在傳遞的權杖需求表示要求發行的權杖時傳回自訂權杖提供者。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "59103255"
     }  
     ```  
   
-3.  撰寫自訂用戶端憑證。  
+3. 撰寫自訂用戶端憑證。  
   
      用戶端認證類別會用來代表針對用戶端 Proxy 設定的認證，並且建立用來取得權杖驗證器、權杖提供者及權杖序列化程式的安全性權杖管理員。  
   
@@ -204,7 +204,7 @@ ms.locfileid: "59103255"
     }  
     ```  
   
-4.  實作權杖快取。 範例實作會使用抽象基底類別，而指定之權杖快取的消費者則透過此基底類別與快取進行互動。  
+4. 實作權杖快取。 範例實作會使用抽象基底類別，而指定之權杖快取的消費者則透過此基底類別與快取進行互動。  
   
     ```  
     public abstract class IssuedTokenCache  
@@ -233,17 +233,17 @@ ms.locfileid: "59103255"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  執行 Setup.cmd 檔以建立所需的憑證。  
+1. 執行 Setup.cmd 檔以建立所需的憑證。  
   
-2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 確認已建置方案中的所有專案 (Shared、RSTRSTR、Service、SecurityTokenService 和 Client)。  
+2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 確認已建置方案中的所有專案 (Shared、RSTRSTR、Service、SecurityTokenService 和 Client)。  
   
-3.  確定 Service.exe 和 SecurityTokenService.exe 都以系統管理員權限執行中。  
+3. 確定 Service.exe 和 SecurityTokenService.exe 都以系統管理員權限執行中。  
   
-4.  執行 Client.exe。  
+4. 執行 Client.exe。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
-1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.cmd。  
+1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.cmd。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

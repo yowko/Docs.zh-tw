@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cc9f276cc278d4a9c376d72f1ab38d89ea6dd5b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328591"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>HOW TO：將資料列插入至資料庫
 您將資料列插入資料庫將物件新增至相關聯[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>集合，然後將變更提交至資料庫。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會轉譯成適當的 SQL 變更`INSERT`命令。  
@@ -24,11 +24,11 @@ ms.locfileid: "59169594"
   
 ### <a name="to-insert-a-row-into-the-database"></a>若要將資料列插入至資料庫  
   
-1.  建立包含所要提交之資料欄資料的新物件。  
+1. 建立包含所要提交之資料欄資料的新物件。  
   
-2.  將新的物件加入[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`資料庫之目標資料表相關聯的集合。  
+2. 將新的物件加入[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]`Table`資料庫之目標資料表相關聯的集合。  
   
-3.  將變更提交至資料庫。  
+3. 將變更提交至資料庫。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會建立 `Order` 型別的新物件，並且以適當的值填入 (Populate) 其中。 然後，將新物件加入至 `Order` 集合中。 最後，將變更當做 `Orders` 資料表中的新資料列，提交至資料庫。  

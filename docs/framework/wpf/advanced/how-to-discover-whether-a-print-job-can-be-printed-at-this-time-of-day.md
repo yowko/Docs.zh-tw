@@ -10,12 +10,12 @@ helpviewer_keywords:
 - printers [WPF], availability
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
-ms.openlocfilehash: dab836af8ba3d177719d910142cd93f8f6de0002
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099854"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326862"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>HOW TO：得知每天此時可否列印列印工作
 列印佇列並不一定可為一天 24 小時。 還可以設定讓它們無法使用在一天的特定時間的開始和結束時間屬性。 這項功能可用，例如，保留獨佔使用的特定部門下午 5 點後的印表機。 該部門會有不同的佇列服務的印表機，比其他部門使用。 其他部門的佇列會被設定為無法使用下午 5 點後，而佇列為偏好的部門可能被設定為隨時可供使用。  
@@ -29,9 +29,9 @@ ms.locfileid: "59099854"
   
  發生這種函式的兩個主要步驟如下所示。  
   
-1.  讀取<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>並<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>的屬性<xref:System.Printing.PrintQueue>來判斷目前的時間兩者之間。  
+1. 讀取<xref:System.Printing.PrintQueue.StartTimeOfDay%2A>並<xref:System.Printing.PrintQueue.UntilTimeOfDay%2A>的屬性<xref:System.Printing.PrintQueue>來判斷目前的時間兩者之間。  
   
-2.  讀取<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>並<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>的屬性<xref:System.Printing.PrintSystemJobInfo>來判斷目前的時間兩者之間。  
+2. 讀取<xref:System.Printing.PrintSystemJobInfo.StartTimeOfDay%2A>並<xref:System.Printing.PrintSystemJobInfo.UntilTimeOfDay%2A>的屬性<xref:System.Printing.PrintSystemJobInfo>來判斷目前的時間兩者之間。  
   
  但很複雜的情況起因於這些屬性不是<xref:System.DateTime>物件。 而是<xref:System.Int32>express 一天的時間為午夜起的分鐘數的物件。 此外，這不是午夜中目前的時區，但午夜 UTC （國際標準時間）。  
   

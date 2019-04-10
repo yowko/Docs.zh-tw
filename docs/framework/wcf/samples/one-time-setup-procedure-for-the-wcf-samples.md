@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 範例的單次安裝程序
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: 76cf2c7ec7edbfaaa186b45f4b810c7d4c0b1d47
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825166"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326706"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation 範例的單次安裝程序
 大部分的 Windows Communication Foundation (WCF) 範例是裝載在網際網路資訊服務 (IIS)，然後執行常見的虛擬目錄中。 這個單次安裝程序會建立磁碟; 上的資料夾它也將虛擬目錄加入至名為 IIS **ServiceModelSamples**。
@@ -19,13 +19,13 @@ ms.locfileid: "58825166"
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF 範例的單次安裝程序  
   
-1.  請確定已安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 如需有關如何設定[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，請參閱 < [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
+1. 請確定已安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]。 如需有關如何設定[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，請參閱 < [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)。  
   
-2.  請確定已安裝 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。 搜尋下列目錄 v4.0 （或更新版本）： **\Windows\Microsoft.NET\Framework**  
+2. 請確定已安裝 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]。 搜尋下列目錄 v4.0 （或更新版本）： **\Windows\Microsoft.NET\Framework**  
   
-3.  如果未安裝 Visual Studio 2012，而且您的作業系統不是 Windows Server 2008 SP2 或更新版本中，安裝[Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693)。  
+3. 如果未安裝 Visual Studio 2012，而且您的作業系統不是 Windows Server 2008 SP2 或更新版本中，安裝[Hotfix 251798](https://go.microsoft.com/fwlink/?LinkId=184693)。  
   
-4.  執行下列命令。 如需有關為什麼必須執行這些命令的詳細資訊，請參閱[IIS 裝載的服務失敗](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))。  
+4. 執行下列命令。 如需有關為什麼必須執行這些命令的詳細資訊，請參閱[IIS 裝載的服務失敗](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752252(v=vs.90))。  
   
     > [!WARNING]
     >  如果您重新安裝了 IIS，就必須再次執行下列命令。
@@ -38,13 +38,13 @@ ms.locfileid: "58825166"
     > [!WARNING]
     >  執行命令`aspnet_regiis –i –enable`將預設應用程式集區執行使用[!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)]，這可能會產生相同的電腦上的其他應用程式的不相容問題。  
   
-5.  請遵循[防火牆指示](../../../../docs/framework/wcf/samples/firewall-instructions.md)啟用範例所使用的連接埠。  
+5. 請遵循[防火牆指示](../../../../docs/framework/wcf/samples/firewall-instructions.md)啟用範例所使用的連接埠。  
   
-6.  請檢查下列預設目錄：\<InstallDrive >:**\WF_WCF_Samples**。 如果先前安裝了範例，這就是預設目錄。  
+6. 請檢查下列預設目錄：\<InstallDrive >:**\WF_WCF_Samples**。 如果先前安裝了範例，這就是預設目錄。  
   
-7.  如果未安裝範例，從安裝的範例下載位置[Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939)或是[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)。  
+7. 如果未安裝範例，從安裝的範例下載位置[Visual C#](https://go.microsoft.com/fwlink/?LinkId=190939)或是[Visual Basic](https://go.microsoft.com/fwlink/?LinkID=193373)。  
   
-8.  在安裝後的範例，請移至：\<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
+8. 在安裝後的範例，請移至：\<InstallDrive>:**\WF_WCF_Samples\WCF\Setup\\**  
   
 9. 執行**Setupvroot.bat**批次檔。 系統會執行下列步驟：  
   

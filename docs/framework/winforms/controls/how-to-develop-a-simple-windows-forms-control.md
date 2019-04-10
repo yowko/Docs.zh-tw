@@ -9,19 +9,19 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating simple controls using code
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
-ms.openlocfilehash: 845e550d0e784568723acbe098fabb2a555ce9b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 457069cd7ac5af62e08115d84060c9c7fb25beee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089356"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328136"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>HOW TO：開發簡單的 Windows Forms 控制項
 本節將逐步引導您完成撰寫自訂 Windows Forms 控制項的重要步驟。 在本逐步解說中開發的簡單控制項允許的對齊方式與其<xref:System.Windows.Forms.Control.Text%2A>来變更屬性。 它不會引發或處理事件。  
   
 ### <a name="to-create-a-simple-custom-control"></a>建立簡單自訂控制項  
   
-1.  定義衍生自 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 的類別。  
+1. 定義衍生自 <xref:System.Windows.Forms.Control?displayProperty=nameWithType> 的類別。  
   
     ```vb  
     Public Class FirstControl  
@@ -34,26 +34,26 @@ ms.locfileid: "59089356"
     public class FirstControl:Control {}  
     ```  
   
-2.  定義屬性。 (您不需要定義屬性，因為控制項繼承許多屬性，從<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常會定義其他屬性。)下列程式碼片段會定義名為的屬性`TextAlignment`所`FirstControl`使用的顯示格式<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。 如需有關定義屬性的詳細資訊，請參閱[屬性概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))。  
+2. 定義屬性。 (您不需要定義屬性，因為控制項繼承許多屬性，從<xref:System.Windows.Forms.Control>類別，但大部分的自訂控制項通常會定義其他屬性。)下列程式碼片段會定義名為的屬性`TextAlignment`所`FirstControl`使用的顯示格式<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>。 如需有關定義屬性的詳細資訊，請參閱[屬性概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/65zdfbdt(v%3dvs.120))。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#3)]
      [!code-vb[System.Windows.Forms.FirstControl#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#3)]  
   
      當您設定可變更控制項的視覺顯示屬性時，您必須叫用<xref:System.Windows.Forms.Control.Invalidate%2A>方法來重繪控制項。 <xref:System.Windows.Forms.Control.Invalidate%2A> 定義於基底類別<xref:System.Windows.Forms.Control>。  
   
-3.  覆寫受保護<xref:System.Windows.Forms.Control.OnPaint%2A>方法繼承自<xref:System.Windows.Forms.Control>提供呈現邏輯移至您的控制項。 如果您不會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項將無法繪製本身。 在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法會顯示<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>所指定的對齊`alignmentValue`欄位。  
+3. 覆寫受保護<xref:System.Windows.Forms.Control.OnPaint%2A>方法繼承自<xref:System.Windows.Forms.Control>提供呈現邏輯移至您的控制項。 如果您不會覆寫<xref:System.Windows.Forms.Control.OnPaint%2A>，您的控制項將無法繪製本身。 在下列程式碼片段中，<xref:System.Windows.Forms.Control.OnPaint%2A>方法會顯示<xref:System.Windows.Forms.Control.Text%2A>屬性繼承自<xref:System.Windows.Forms.Control>所指定的對齊`alignmentValue`欄位。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#4)]
      [!code-vb[System.Windows.Forms.FirstControl#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#4)]  
   
-4.  為您的控制項提供屬性 (attribute)。 屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。 下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。 Visual Studio 中，例如設計工具中<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成屬性會顯示在邏輯類別之下。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成描述性字串顯示在底部**屬性** 視窗時`TextAlignment`選取屬性。 如需屬性的詳細資訊，請參閱[元件的設計階段屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
+4. 為您的控制項提供屬性 (attribute)。 屬性可讓視覺化設計工具在設計階段適當地顯示您的控制項及其屬性與事件。 下列程式碼片段會將屬性 (attribute) 套用至 `TextAlignment` 屬性 (property)。 Visual Studio 中，例如設計工具中<xref:System.ComponentModel.CategoryAttribute.Category%2A>屬性 （如程式碼片段所示） 會造成屬性會顯示在邏輯類別之下。 <xref:System.ComponentModel.DescriptionAttribute.Description%2A>屬性會造成描述性字串顯示在底部**屬性** 視窗時`TextAlignment`選取屬性。 如需屬性的詳細資訊，請參閱[元件的設計階段屬性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/tk67c2t8(v=vs.120))。  
   
      [!code-csharp[System.Windows.Forms.FirstControl#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/CS/FirstControl.cs#5)]
      [!code-vb[System.Windows.Forms.FirstControl#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FirstControl/VB/FirstControl.vb#5)]  
   
-5.  (選擇性) 為您的控制項提供資源。 您可以使用編譯器選項 (`/res` 適用於 C#) 來封裝資源與您的控制項，為您的控制項提供資源 (例如點陣圖)。 在執行階段，資源可以使用擷取的方法<xref:System.Resources.ResourceManager>類別。 如需有關建立和使用資源的詳細資訊，請參閱[桌面應用程式中的資源](../../resources/index.md)。  
+5. (選擇性) 為您的控制項提供資源。 您可以使用編譯器選項 (`/res` 適用於 C#) 來封裝資源與您的控制項，為您的控制項提供資源 (例如點陣圖)。 在執行階段，資源可以使用擷取的方法<xref:System.Resources.ResourceManager>類別。 如需有關建立和使用資源的詳細資訊，請參閱[桌面應用程式中的資源](../../resources/index.md)。  
   
-6.  編譯及部署您的控制項。 若要編譯及部署 `FirstControl,`，請執行下列步驟︰  
+6. 編譯及部署您的控制項。 若要編譯及部署 `FirstControl,`，請執行下列步驟︰  
   
     1.  將下列範例中的程式碼儲存至原始程式檔 (SimpleForm.cs 或 SimpleForms.vb)。  
   
@@ -79,9 +79,9 @@ ms.locfileid: "59089356"
   
 #### <a name="to-compile-and-run-this-sample"></a>若要編譯和執行這個範例  
   
-1.  將下列範例中的程式碼儲存至原始程式檔 (SimpleForm.cs 或 SimpleForms.vb)。  
+1. 將下列範例中的程式碼儲存至原始程式檔 (SimpleForm.cs 或 SimpleForms.vb)。  
   
-2.  從包含原始程式檔的目錄執行下列命令，將原始程式檔編譯成可執行檔的組件。  
+2. 從包含原始程式檔的目錄執行下列命令，將原始程式檔編譯成可執行檔的組件。  
   
     ```console  
     vbc -r:CustomWinControls.dll -r:System.dll -r:System.Windows.Forms.dll -r:System.Drawing.dll SimpleForm.vb  
@@ -93,7 +93,7 @@ ms.locfileid: "59089356"
   
      CustomWinControls.dll 是包含類別的組件`FirstControl`。 此組件所在的目錄必須與存取該組件之表單的原始程式檔 (SimpleForm.cs 或 SimpleForms.vb) 相同。  
   
-3.  使用下列命令執行 SimpleForm.exe。  
+3. 使用下列命令執行 SimpleForm.exe。  
   
     ```console
     SimpleForm  
