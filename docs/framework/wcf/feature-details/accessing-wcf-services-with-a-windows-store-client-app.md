@@ -2,12 +2,12 @@
 title: 使用 Windows 市集用戶端應用程式存取 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e2002ef4-5dee-4a54-9d87-03b33d35fc52
-ms.openlocfilehash: 6617a8cd207b68505396db7fdb4c9d08fd759d06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a7d87e6014f26842c35b0d1bf5028682a4cf69e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294856"
 ---
 # <a name="accessing-wcf-services-with-a-windows-store-client-app"></a>使用 Windows 市集用戶端應用程式存取 WCF 服務
 Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 這些應用程式都是以觸控式螢幕介面為設計主軸。 .NET Framework 4.5 可讓 Windows 市集應用程式呼叫 WCF 服務。  
@@ -24,31 +24,31 @@ Windows 8 引入新的應用程式型別，稱為 Windows 市集應用程式。 
 ### <a name="supported-bindings"></a>支援的繫結  
  Windows 市集應用程式支援下列 WCF 繫結：  
   
-1.  <xref:System.ServiceModel.BasicHttpBinding>  
+1. <xref:System.ServiceModel.BasicHttpBinding>  
   
-2.  <xref:System.ServiceModel.NetTcpBinding>  
+2. <xref:System.ServiceModel.NetTcpBinding>  
   
-3.  <xref:System.ServiceModel.NetHttpBinding>  
+3. <xref:System.ServiceModel.NetHttpBinding>  
   
-4.  <xref:System.ServiceModel.Channels.CustomBinding>
+4. <xref:System.ServiceModel.Channels.CustomBinding>
   
  Windows 市集應用程式支援下列繫結項目  
   
-1.  <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
+1. <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>  
   
-2.  <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
+2. <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>  
   
-3.  <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
+3. <xref:System.ServiceModel.Channels.ConnectionOrientedTransportBindingElement>  
   
-4.  <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+4. <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
-5.  <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+5. <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
-6.  <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
+6. <xref:System.ServiceModel.Channels.TcpTransportBindingElement>  
   
-7.  <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
+7. <xref:System.ServiceModel.Channels.HttpTransportBindingElement>  
   
-8.  <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+8. <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
 9. <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
@@ -97,11 +97,11 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
 ### <a name="serialization"></a>序列化  
  Windows 市集應用程式支援下列序列化程式：  
   
-1.  DataContractSerializer  
+1. DataContractSerializer  
   
-2.  DataContractJsonSerializer  
+2. DataContractJsonSerializer  
   
-3.  XmlSerializer  
+3. XmlSerializer  
   
 > [!WARNING]
 >  XmlDictionaryWriter.Write(DateTime) 現在會將 DateTime 物件當做字串寫入。  
@@ -120,21 +120,21 @@ public partial class Service1Client : System.ServiceModel.ClientBase<MetroWcfCli
   
 Windows 市集應用程式支援下列用戶端認證類型：
   
-1.  None  
+1. None  
   
-2.  基本  
+2. 基本  
   
-3.  摘要  
+3. 摘要  
   
-4.  交涉  
+4. 交涉  
   
-5.  NTLM  
+5. NTLM  
   
-6.  Windows  
+6. Windows  
   
-7.  使用者名稱 (訊息安全性)  
+7. 使用者名稱 (訊息安全性)  
   
-8.  Windows (傳輸安全性)  
+8. Windows (傳輸安全性)  
   
  若要讓 Windows 市集應用程式存取和傳送預設 Windows 認證，您必須在 Package.appmanifest 檔案中啟用這個功能。 開啟這個檔案並選取 [功能] 索引標籤並選取 「 預設 Windows 認證 」。 這可讓應用程式連接至需要網域認證的內部網路資源。  
   
@@ -144,11 +144,11 @@ Windows 市集應用程式支援下列用戶端認證類型：
 ### <a name="misc"></a>其他  
  Windows 市集應用程式支援使用下列類別：  
   
-1.  <xref:System.ServiceModel.ChannelFactory>  
+1. <xref:System.ServiceModel.ChannelFactory>  
   
-2.  <xref:System.ServiceModel.DuplexChannelFactory%601>
+2. <xref:System.ServiceModel.DuplexChannelFactory%601>
   
-3.  <xref:System.ServiceModel.CallbackBehaviorAttribute>  
+3. <xref:System.ServiceModel.CallbackBehaviorAttribute>  
   
 ### <a name="defining-service-contracts"></a>定義服務合約  
  建議您只定義使用以工作為基礎之非同步模式的非同步服務作業。 這樣可以確保 Windows 市集應用程式在呼叫服務作業時仍能保持回應。  

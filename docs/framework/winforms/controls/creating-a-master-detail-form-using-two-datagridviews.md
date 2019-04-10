@@ -10,12 +10,12 @@ helpviewer_keywords:
 - master-details lists [Windows Forms], displaying on Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
-ms.openlocfilehash: 66807287dcaffae4bd310040312e0f56e8fda5d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078872"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295792"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>逐步解說：使用兩個 Windows Forms DataGridView 控制項建立主從式表單
 其中一個最常見的案例，使用<xref:System.Windows.Forms.DataGridView>控制項是*主從式*表單，其中會顯示兩個資料庫資料表之間的父子式關聯性。 選取主要資料表中的資料列，會導致對應的子資料更新的詳細資料資料表。  
@@ -33,14 +33,14 @@ ms.locfileid: "59078872"
   
 #### <a name="to-create-a-masterdetail-form"></a>若要建立主版/詳細表單  
   
-1.  建立衍生自類別<xref:System.Windows.Forms.Form>且包含兩個<xref:System.Windows.Forms.DataGridView>控制項和兩個<xref:System.Windows.Forms.BindingSource>元件。 下列程式碼提供基本表單初始化，而且包含`Main`方法。 如果您使用 Visual Studio 設計工具來建立您的表單時，您可以使用設計工具產生的程式碼，而不是此程式碼，但務必要使用變數的宣告中所顯示的名稱。  
+1. 建立衍生自類別<xref:System.Windows.Forms.Form>且包含兩個<xref:System.Windows.Forms.DataGridView>控制項和兩個<xref:System.Windows.Forms.BindingSource>元件。 下列程式碼提供基本表單初始化，而且包含`Main`方法。 如果您使用 Visual Studio 設計工具來建立您的表單時，您可以使用設計工具產生的程式碼，而不是此程式碼，但務必要使用變數的宣告中所顯示的名稱。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#02)]  
   
-2.  在您的表單類別定義處理資料庫連接的詳細資料中實作的方法。 這個範例會使用`GetData`方法會填入<xref:System.Data.DataSet>物件，將<xref:System.Data.DataRelation>物件的資料集，並繫結<xref:System.Windows.Forms.BindingSource>元件。 請務必將 `connectionString` 變數設定為適用於您資料庫的值。  
+2. 在您的表單類別定義處理資料庫連接的詳細資料中實作的方法。 這個範例會使用`GetData`方法會填入<xref:System.Data.DataSet>物件，將<xref:System.Data.DataRelation>物件的資料集，並繫結<xref:System.Windows.Forms.BindingSource>元件。 請務必將 `connectionString` 變數設定為適用於您資料庫的值。  
   
     > [!IMPORTANT]
     >  在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。 使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。 如需詳細資訊，請參閱[保護連線資訊](../../data/adonet/protecting-connection-information.md)。  
@@ -48,7 +48,7 @@ ms.locfileid: "59078872"
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#20)]  
   
-3.  實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>繫結的事件<xref:System.Windows.Forms.DataGridView>控制項，成為<xref:System.Windows.Forms.BindingSource>元件並呼叫`GetData`方法。 下列範例包含會調整大小的程式碼<xref:System.Windows.Forms.DataGridView>欄位至最適大小所顯示的資料。  
+3. 實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>繫結的事件<xref:System.Windows.Forms.DataGridView>控制項，成為<xref:System.Windows.Forms.BindingSource>元件並呼叫`GetData`方法。 下列範例包含會調整大小的程式碼<xref:System.Windows.Forms.DataGridView>欄位至最適大小所顯示的資料。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/CS/masterdetails.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewMasterDetails#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMasterDetails/VB/masterdetails.vb#10)]  

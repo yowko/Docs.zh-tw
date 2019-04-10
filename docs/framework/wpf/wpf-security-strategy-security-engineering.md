@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: c840912f755e1d6bf76720ad0178057c50e4cfd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186142"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300563"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
 高可信度電腦運算是一項 Microsoft 開發案，用於確保生產安全的程式碼。 高可信度電腦運算開發案的一個重要項目是 [!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)]。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 是可用來搭配標準工程程序協助安全的程式碼傳遞之工程實務。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] 包含 10 個階段，結合正規化、可衡量性與其他結構到最佳做法，包括：  
@@ -47,11 +47,11 @@ ms.locfileid: "59186142"
   
  高階的威脅模型牽涉到下列重要步驟，藉由使用雜貨店做為範例：  
   
-1.  **識別資產**。 雜貨店的資產可能包含員工、保險箱、收銀機和庫存。  
+1. **識別資產**。 雜貨店的資產可能包含員工、保險箱、收銀機和庫存。  
   
-2.  **列舉進入點**。 雜貨店的進入點可能包含前門和後門、窗戶、卸貨平台和空調設備。  
+2. **列舉進入點**。 雜貨店的進入點可能包含前門和後門、窗戶、卸貨平台和空調設備。  
   
-3.  **使用進入點調查針對資產的攻擊**。 一次可能的攻擊或許會經由「空調」進入點，以雜貨店的「保險箱」資產為攻擊目標；空調設備可能被拆下，讓保險箱能從中被拖出來，搬到商店外。  
+3. **使用進入點調查針對資產的攻擊**。 一次可能的攻擊或許會經由「空調」進入點，以雜貨店的「保險箱」資產為攻擊目標；空調設備可能被拆下，讓保險箱能從中被拖出來，搬到商店外。  
   
  威脅模型套用到整個 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 並包含下列各項：  
   

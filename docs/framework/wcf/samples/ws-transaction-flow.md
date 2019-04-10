@@ -1,23 +1,23 @@
 ---
-title: WS 異動流程
+title: WS 交易流程
 ms.date: 03/30/2017
 helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
-ms.openlocfilehash: 35af3090c0f898578a5f8dfb81d02d22a0074ad2
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47108490"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296091"
 ---
-# <a name="ws-transaction-flow"></a>WS 異動流程
-這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務，但作業屬於示範如何使用`TransactionFlowAttribute`具有**TransactionFlowOption**若要判斷何種程度的交易流程已啟用的列舉型別。 在流動的交易範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調交易之前都會保存該記錄檔。如果用戶端交易未完成，Web 服務交易一定不會認可對資料庫進行適當的更新。  
+# <a name="ws-transaction-flow"></a>WS 交易流程
+這個範例會示範用戶端協調異動的用法，以及使用 WS-Atomic 異動或 OleTransactions 通訊協定之異動流程的用戶端和伺服器選項。 此樣本根據[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務，但作業屬於示範如何使用`TransactionFlowAttribute`具有**TransactionFlowOption**若要判斷何種程度的交易流程已啟用的列舉型別。 在流動的異動範圍內，會將所要求作業的記錄檔寫入資料庫，並在完成用戶端協調異動之前都會保存該記錄檔。如果用戶端異動未完成，Web 服務異動一定不會認可對資料庫進行適當的更新。  
   
 > [!NOTE]
 >  此範例的安裝程序與建置指示位於本主題的結尾。  
   
- 初始服務和交易的連線之後，用戶端會存取一些服務作業。 將使用示範 `TransactionFlowOption` 之不同設定的每項作業，以下列方式定義服務的合約。  
+ 初始服務和異動的連線之後，用戶端會存取一些服務作業。 將使用示範 `TransactionFlowOption` 之不同設定的每項作業，以下列方式定義服務的合約。  
 
 ```csharp
 [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -43,9 +43,9 @@ public interface ICalculator
   
 -   `Subtract` 作業要求可能包括流動的交易。  
   
--   `Multiply` 作業要求不可在明確的 NotAllowed 設定中包含流動的交易。  
+-   `Multiply` 作業要求不可在明確的 NotAllowed 設定中包含流動的異動。  
   
--   `Divide` 作業要求在省略 `TransactionFlow` 屬性時不可包含流動的交易。  
+-   `Divide` 作業要求在省略 `TransactionFlow` 屬性時不可包含流動的異動。  
   
  若要啟用交易流程，使用的繫結[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)必須使用啟用的屬性，以及適當的作業屬性。 在此範例中，除了中繼資料交換端點以外，服務組態也會公開 TCP 端點和 HTTP 端點。 TCP 端點和 HTTP 端點會使用下列的繫結，這兩者都有[ \<transactionFlow >](../../../../docs/framework/configure-apps/file-schema/wcf/transactionflow.md)啟用的屬性。  
   
@@ -66,7 +66,7 @@ public interface ICalculator
 > [!NOTE]
 >  系統提供的 netTcpBinding 允許使用 transactionProtocol 規格，而系統提供的 wsHttpBinding 僅使用更具互通性的 WSAtomicTransactionOctober2004 通訊協定。 OleTransactions 通訊協定僅適用於使用 Windows Communication Foundation (WCF) 用戶端。  
   
- 針對實作 `ICalculator` 介面的類別，將會以設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 的 `true` 屬性 (Property)，屬性化 (Attributed) 所有方法。 這個設定的宣告為，將會在交易範圍內發生方法內採用的所有動作。 在此情況下，採取的動作包含記錄資料庫的記錄。 如果作業要求中包含流動的交易，則會在傳入交易範圍內發生動作，或者自動產生新的交易範圍。  
+ 針對實作 `ICalculator` 介面的類別，將會以設定為 <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 的 `true` 屬性 (Property)，屬性化 (Attributed) 所有方法。 這個設定的宣告為，將會在交易範圍內發生方法內採用的所有動作。 在此情況下，採取的動作包含記錄資料庫的記錄。 如果作業要求中包含流動的異動，則會在傳入異動範圍內發生動作，或者自動產生新的異動範圍。  
   
 > [!NOTE]
 >  <xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> 屬性會定義服務方法實作的本機行為，而不會定義用戶端的能力或流動交易的需求。  
@@ -182,15 +182,15 @@ Console.WriteLine("Transaction committed");
 
  作業的呼叫如下所示：  
   
--   `Add` 要求會將必要的交易流動至服務，而服務的動作則是在用戶端的交易範圍內發生。  
+-   `Add` 要求會將必要的異動流動至服務，而服務的動作則是在用戶端的異動範圍內發生。  
   
 -   第一個 `Subtract` 要求也會將允許的交易流動至服務，而服務的動作再次是在用戶端的交易範圍內發生。  
   
--   第二個 `Subtract` 要求會在以 `TransactionScopeOption.Suppress` 選項宣告的新交易範圍內執行。 這樣做會隱藏用戶端的初始外部交易，而且要求不會將交易流動至服務。 這個方法可讓用戶端明確地不參與，並在不需要將交易流動至服務時，防止進行此動作。 會在新的和未連接的異動範圍內發生服務動作。  
+-   第二個 `Subtract` 要求會在以 `TransactionScopeOption.Suppress` 選項宣告的新交易範圍內執行。 這樣做會隱藏用戶端的初始外部異動，而且要求不會將異動流動至服務。 這個方法可讓用戶端明確地不參與，並在不需要將交易流動至服務時，防止進行此動作。 會在新的和未連接的異動範圍內發生服務動作。  
   
--   `Multiply`要求不會流動至服務的交易，因為用戶端產生的定義`ICalculator`介面包括<xref:System.ServiceModel.TransactionFlowAttribute>設定為<xref:System.ServiceModel.TransactionFlowOption> `NotAllowed`。  
+-   `Multiply`要求不會流動至服務的交易，因為用戶端產生的定義`ICalculator`介面包括<xref:System.ServiceModel.TransactionFlowAttribute>設定為<xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`。  
   
--   `Divide` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義再次不包含 `TransactionFlowAttribute`。 再次會在其他新的和未連接的交易範圍內發生服務動作。  
+-   `Divide` 要求不會將交易流動至服務，因為用戶端產生之 `ICalculator` 介面的定義再次不包含 `TransactionFlowAttribute`。 再次會在其他新的和未連接的異動範圍內發生服務動作。  
   
  當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。 在用戶端視窗中按下 ENTER 鍵，即可關閉用戶端。  
   
@@ -219,15 +219,15 @@ Press <ENTER> to terminate the service.
   
  成功執行之後，會完成用戶端交易範圍，並且認可該範圍內採取的所有動作。 特別來說，記下的 5 筆記錄會保存在服務的資料庫中。 前兩項則是在用戶端的交易範圍內發生。  
   
- 如果在用戶端的 `TransactionScope` 任意處發生例外狀況，則無法完成交易。 這會導致在該範圍內記載的記錄，不會對資料庫認可。 在取消註解呼叫以完成外部 `TransactionScope` 之後，重複執行範例即可觀察這個影響。 在這種執行中，只會記錄後三個動作 (第二個 `Subtract`、`Multiply` 和 `Divide` 要求)，這是因為用戶端交易並沒有流動至這三項。  
+ 如果在用戶端的 `TransactionScope` 任意處發生例外狀況，則無法完成異動。 這會導致在該範圍內記載的記錄，不會對資料庫認可。 在取消註解呼叫以完成外部 `TransactionScope` 之後，重複執行範例即可觀察這個影響。 在這種執行中，只會記錄後三個動作 (第二個 `Subtract`、`Multiply` 和 `Divide` 要求)，這是因為用戶端交易並沒有流動至這三項。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  若要建置方案的 C# 或 Visual Basic.NET 版本，請依照下列中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
+1. 若要建置方案的 C# 或 Visual Basic.NET 版本，請依照下列中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2.  確定您已安裝 SQL Server Express Edition 或 SQL Server，而且已在服務的應用程式組態檔中正確設定連接字串。 若要在不使用資料庫的情況下執行範例，請將服務之應用程式組態檔中的 `usingSql` 值設定為 `false`。  
+2. 確定您已安裝 SQL Server Express Edition 或 SQL Server，而且已在服務的應用程式組態檔中正確設定連接字串。 若要執行範例但不使用資料庫時，設定`usingSql`服務的應用程式組態檔中的值 `false`  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
     > [!NOTE]
     >  若為跨電腦組態，請使用下列指示來啟用分散式異動協調器，然後使用 Windows SDK 中的 WsatConfig.exe 工具來啟用 WCF 異動網路支援。 請參閱[設定 Ws-atomic 交易支援](https://go.microsoft.com/fwlink/?LinkId=190370)如需設定 WsatConfig.exe 的詳細資訊。  
@@ -236,7 +236,7 @@ Press <ENTER> to terminate the service.
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援執行範例  
   
-1.  在執行 Windows Server 2003 或 Windows XP 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
+1. 在執行 Windows Server 2003 或 Windows XP 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
     1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
@@ -252,7 +252,7 @@ Press <ENTER> to terminate the service.
   
     7.  按一下 [確定]  關閉對話方塊。  
   
-2.  在執行 Windows Server 2008 或 Windows Vista 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
+2. 在執行 Windows Server 2008 或 Windows Vista 的服務電腦上，請遵循下列指示設定 MSDTC 以允許傳入網路異動。  
   
     1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
@@ -266,7 +266,7 @@ Press <ENTER> to terminate the service.
   
     6.  按一下 [確定]  關閉對話方塊。  
   
-3.  在用戶端電腦上，設定 MSDTC 以允許傳出網路異動：  
+3. 在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
   
     1.  從**開始** 功能表中，瀏覽至`Control Panel`，然後**系統管理工具**，然後**元件服務**。  
   

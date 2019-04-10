@@ -2,12 +2,12 @@
 title: 在 Windows 事件追蹤中追蹤事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
-ms.openlocfilehash: 6384c74aa245db490d04fa95f37bd860dfb9bad9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166526"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300641"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
 此範例示範如何啟用 Windows Workflow Foundation (WF) 工作流程服務上追蹤，以及發出追蹤事件的事件追蹤的 Windows (ETW)。 為了將工作流程追蹤記錄發出到 ETW，此範例會使用 ETW 追蹤參與者 (<xref:System.Activities.Tracking.EtwTrackingParticipant>)。
@@ -39,33 +39,33 @@ ms.locfileid: "59166526"
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  使用 Visual Studio 2010 開啟 EtwTrackingParticipantSample.sln 方案檔案。
+1. 使用 Visual Studio 2010 開啟 EtwTrackingParticipantSample.sln 方案檔案。
 
-2.  若要建置此方案，請按 CTRL+SHIFT+B。
+2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
-3.  若要執行此方案，請按 F5。
+3. 若要執行此方案，請按 F5。
 
      根據預設，此服務會接聽連接埠 53797 (http://localhost:53797/SampleWorkflowService.xamlx)。
 
-4.  使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 開啟 WCF 測試用戶端。
+4. 使用 [!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)] 開啟 WCF 測試用戶端。
 
      WCF 測試用戶端 (WcfTestClient.exe) 位於\<Visual Studio 2010 的安裝資料夾 > \Common7\IDE\ 資料夾。
 
      預設 Visual Studio 2010 的安裝資料夾是 C:\Program Files\Microsoft Visual Studio 10.0。
 
-5.  在 WCF 測試用戶端中，選取**新增服務**從**檔案**功能表。
+5. 在 WCF 測試用戶端中，選取**新增服務**從**檔案**功能表。
 
      在輸入方塊中加入端點位址。 預設為 `http://localhost:53797/SampleWorkflowService.xamlx`。
 
-6.  開啟 [事件檢視器] 應用程式。
+6. 開啟 [事件檢視器] 應用程式。
 
      之前叫用服務，啟動 事件檢視器，從**開始**功能表上，選取**執行**中輸入`eventvwr.exe`。 確認事件記錄檔正在接聽從工作流程服務發出的追蹤事件。
 
-7.  在 事件檢視器 樹狀 檢視中，瀏覽至**事件檢視器**， **Applications and Services Logs**，並**Microsoft**。 以滑鼠右鍵按一下**Microsoft** ，然後選取**檢視**，然後**顯示分析與偵錯記錄檔**啟用分析和偵錯記錄檔
+7. 在 事件檢視器 樹狀 檢視中，瀏覽至**事件檢視器**， **Applications and Services Logs**，並**Microsoft**。 以滑鼠右鍵按一下**Microsoft** ，然後選取**檢視**，然後**顯示分析與偵錯記錄檔**啟用分析和偵錯記錄檔
 
      請確認**顯示分析與偵錯記錄檔**核取選項。
 
-8.  在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**啟用的記錄檔**以啟用**分析**記錄檔。
+8. 在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**啟用的記錄檔**以啟用**分析**記錄檔。
 
 9. 若要使用 WCF 測試用戶端測試此服務，請按兩下 `GetData`。
 
@@ -123,13 +123,13 @@ ms.locfileid: "59166526"
 
 #### <a name="to-clean-up-optional"></a>若要清除 (選擇性)
 
-1.  開啟 [事件檢視器]。
+1. 開啟 [事件檢視器]。
 
-2.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**停用記錄**。
+2. 瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**停用記錄**。
 
-3.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**清除記錄檔**。
+3. 瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**清除記錄檔**。
 
-4.  選擇**清除**選項來清除事件。
+4. 選擇**清除**選項來清除事件。
 
 ## <a name="known-issue"></a>已知問題
 

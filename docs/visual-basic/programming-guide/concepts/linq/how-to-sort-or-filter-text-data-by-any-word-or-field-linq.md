@@ -2,19 +2,19 @@
 title: HOW TO：排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9df137fe-335b-46e0-aecf-ea8a9eddd4e3
-ms.openlocfilehash: 6a5277e26b74ccf54af0cdc5f671516fcc7badb8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 46c9149a7cb1809bf94162649de0a35110bbc697
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294505"
 ---
 # <a name="how-to-sort-or-filter-text-data-by-any-word-or-field-linq-visual-basic"></a>HOW TO：排序或篩選文字資料，依任何字或欄位 (LINQ) (Visual Basic)
 下列範例示範如何依行中的任一欄位，來排序多行結構化文字 (例如逗號分隔值)。 此欄位可能會在執行階段以動態方式指定。 假設 scores.csv 中的欄位各代表學生的學號和四個測驗分數。  
   
 ### <a name="to-create-a-file-that-contains-data"></a>建立內含資料的檔案  
   
-1.  從[如何：將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)並將它儲存到您的方案資料夾。  
+1. 從[如何：將內容從不同的檔案 (LINQ) (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/how-to-join-content-from-dissimilar-files-linq.md)並將它儲存到您的方案資料夾。  
   
 ## <a name="example"></a>範例  
   

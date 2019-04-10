@@ -1,5 +1,5 @@
 ---
-title: HOW TO：對 Visual 中的幾何進行點擊測試
+title: HOW TO：對視覺物件中的幾何進行點擊測試
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - visual objects [WPF], hit tests on
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
-ms.openlocfilehash: e51dd73a65666ffee5958325079e8f06f13ac61b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363796"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227336"
 ---
-# <a name="how-to-hit-test-geometry-in-a-visual"></a>HOW TO：對 Visual 中的幾何進行點擊測試
+# <a name="how-to-hit-test-geometry-in-a-visual"></a>HOW TO：對視覺物件中的幾何進行點擊測試
 此範例示範如何組成一或多個視覺物件上執行點擊的測試<xref:System.Windows.Media.Geometry>物件。  
   
 ## <a name="example"></a>範例  
@@ -36,5 +36,6 @@ ms.locfileid: "57363796"
 >  這個範例不會將任何可能套用至幾何的轉換或裁剪列入考慮。 此外，這個範例無法搭配樣式化控制項運作，因為它不具備任何直接與其相關聯的圖案。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [視覺分層中的點擊測試](hit-testing-in-the-visual-layer.md)
-- [使用幾何做為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)
+- [使用幾何作為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)

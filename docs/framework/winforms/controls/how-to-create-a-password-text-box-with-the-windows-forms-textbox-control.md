@@ -12,23 +12,23 @@ helpviewer_keywords:
 - passwords [Windows Forms], input mask
 - passwords [Windows Forms], password text box
 ms.assetid: d105d6b9-3d50-44cd-80d8-2c0e2f486727
-ms.openlocfilehash: f2017ccfd6d8320d6afc7b5e8a2ce8349c4fbd17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ab5df1233c16a7ce076efa817fb14808b588ebcd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110608"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300979"
 ---
 # <a name="how-to-create-a-password-text-box-with-the-windows-forms-textbox-control"></a>HOW TO：使用 Windows Forms TextBox 控制項建立密碼文字方塊
 密碼方塊是 Windows Form 的文字方塊中，會顯示預留位置字元，而使用者輸入字串。  
   
 ### <a name="to-create-a-password-text-box"></a>若要建立密碼文字方塊  
   
-1.  設定<xref:System.Windows.Forms.TextBox.PasswordChar%2A>屬性<xref:System.Windows.Forms.TextBox>控制項的特殊字元。  
+1. 設定<xref:System.Windows.Forms.TextBox.PasswordChar%2A>屬性<xref:System.Windows.Forms.TextBox>控制項的特殊字元。  
   
      <xref:System.Windows.Forms.TextBox.PasswordChar%2A>屬性會指定顯示在文字方塊中的字元。 例如，如果您想在 密碼 方塊中顯示的星號，請指定 * 的<xref:System.Windows.Forms.TextBox.PasswordChar%2A>屬性 視窗中的屬性。 然後，不論何種使用者類型在文字方塊中的字元，會顯示一個星號。  
   
-2.  （選擇性）設定<xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>屬性。 屬性會決定可以在文字方塊中輸入的幾個字元。 如果超過最大長度時，系統會發出嗶聲，文字方塊不接受任何更多的字元。 請注意，您可能不想要這樣做為密碼的最大長度可能是使用的駭客嘗試猜測密碼。  
+2. （選擇性）設定<xref:System.Windows.Forms.TextBoxBase.MaxLength%2A>屬性。 屬性會決定可以在文字方塊中輸入的幾個字元。 如果超過最大長度時，系統會發出嗶聲，文字方塊不接受任何更多的字元。 請注意，您可能不想要這樣做為密碼的最大長度可能是使用的駭客嘗試猜測密碼。  
   
      下列程式碼範例示範如何初始化將會接受最多 14 個字元長的字串，並顯示星號取代字串的文字方塊。 `InitializeMyControl`程序將不會自動執行; 它必須先呼叫。  
   

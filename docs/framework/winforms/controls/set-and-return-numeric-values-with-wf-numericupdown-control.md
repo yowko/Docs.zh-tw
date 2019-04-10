@@ -11,19 +11,19 @@ helpviewer_keywords:
 - Windows Forms controls, NumericUpDown
 - NumericUpDown control [Windows Forms], setting and returning values
 ms.assetid: 5bd8f8cd-4c12-49ea-9cc3-2a647d064689
-ms.openlocfilehash: 281fbbd4459230056fcac2e6c684422c91dc0817
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c73200eb1c373f1d723ba82f2e6be5b625496b59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300498"
 ---
 # <a name="how-to-set-and-return-numeric-values-with-the-windows-forms-numericupdown-control"></a>HOW TO：使用 Windows Forms NumericUpDown 控制項設定和傳回數值
 Windows Form 的數值<xref:System.Windows.Forms.NumericUpDown>控制項由其<xref:System.Windows.Forms.NumericUpDown.Value%2A>屬性。 您可以撰寫條件式測試控制項的值，如同任何其他屬性。 一次<xref:System.Windows.Forms.NumericUpDown.Value%2A>屬性設定，您可以調整它直接撰寫程式碼來執行作業，或您可以呼叫<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>和<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法。  
   
 ### <a name="to-set-the-numeric-value"></a>若要設定的數值  
   
-1.  指派值給<xref:System.Windows.Forms.NumericUpDown.Value%2A>在程式碼，或在 [屬性] 視窗中的屬性。  
+1. 指派值給<xref:System.Windows.Forms.NumericUpDown.Value%2A>在程式碼，或在 [屬性] 視窗中的屬性。  
   
     ```vb  
     NumericUpDown1.Value = 55  
@@ -39,7 +39,7 @@ Windows Form 的數值<xref:System.Windows.Forms.NumericUpDown>控制項由其<x
   
      -或-  
   
-2.  呼叫<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>或是<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法，以增加或減少值中指定的數量<xref:System.Windows.Forms.NumericUpDown.Increment%2A>屬性。  
+2. 呼叫<xref:System.Windows.Forms.NumericUpDown.UpButton%2A>或是<xref:System.Windows.Forms.NumericUpDown.DownButton%2A>方法，以增加或減少值中指定的數量<xref:System.Windows.Forms.NumericUpDown.Increment%2A>屬性。  
   
     ```vb  
     NumericUpDown1.UpButton()  

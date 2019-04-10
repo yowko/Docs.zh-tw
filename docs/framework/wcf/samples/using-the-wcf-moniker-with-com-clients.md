@@ -2,12 +2,12 @@
 title: 利用 COM 用戶端使用 WCF Moniker
 ms.date: 03/30/2017
 ms.assetid: e2799bfe-88bd-49d7-9d6d-ac16a9b16b04
-ms.openlocfilehash: 3cb610f85c929c371299bc505646cdf924ecdaea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 14907dd3df66478e8f84b7735a84dd500855448b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098126"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294843"
 ---
 # <a name="using-the-wcf-moniker-with-com-clients"></a>利用 COM 用戶端使用 WCF Moniker
 此範例示範如何使用 Windows Communication Foundation (WCF) 服務 moniker 將 Web 服務整合至 COM 架構開發環境，例如 Microsoft Office Visual Basic for Applications (Office VBA) 或 Visual Basic 6.0。 這個範例由 Windows Script Host 用戶端 (.vbs)、支援的用戶端程式庫 (.dll) 和網際網路資訊服務 (IIS) 裝載的服務程式庫 (.dll) 所組成。 服務為計算機服務，而 COM 用戶端會呼叫服務上的數學作業：加法、減法、乘法和除法。 您可以在訊息方塊視窗中看到用戶端活動。  
@@ -184,46 +184,46 @@ WScript.Echo "MEX service moniker: 9 * 81.25 = " & mexServiceMoniker.Multiply(9,
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  從開發人員命令提示字元中適用於 Visual Studio，開啟語言特定資料夾下 \client\bin 資料夾中。  
+3. 從開發人員命令提示字元中適用於 Visual Studio，開啟語言特定資料夾下 \client\bin 資料夾中。  
   
     > [!NOTE]
     >  如果您是使用 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[lserver](../../../../includes/lserver-md.md)]、Windows 7 或 Windows Server 2008 R2，請務必使用系統管理員權限來執行命令提示字元。  
   
-4.  輸入`tlbexp.exe client.dll /out:CalcProxy.tlb`dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
+4. 輸入`tlbexp.exe client.dll /out:CalcProxy.tlb`dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
-5.  輸入`regasm.exe /tlb:CalcProxy.tlb client.dll`向 COM 註冊型別 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
+5. 輸入`regasm.exe /tlb:CalcProxy.tlb client.dll`向 COM 註冊型別 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
-6.  輸入`gacutil.exe /i client.dll`加入到全域組件快取的組件。  
+6. 輸入`gacutil.exe /i client.dll`加入到全域組件快取的組件。  
   
 #### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例  
   
-1.  您可以使用瀏覽器輸入下列位址的服務的測試： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
+1. 您可以使用瀏覽器輸入下列位址的服務的測試： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
   
-2.  在語言特定資料夾下的 \client 中，執行 ComCalcClient.vbs。 用戶端活動會顯示在訊息方塊視窗中。  
+2. 在語言特定資料夾下的 \client 中，執行 ComCalcClient.vbs。 用戶端活動會顯示在訊息方塊視窗中。  
   
-3.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
-1.  在服務電腦上，建立一個名為 ServiceModelSamples 的虛擬目錄。 您可以使用範例隨附的 Setupvroot.bat 指令碼，建立磁碟目錄和虛擬目錄。  
+1. 在服務電腦上，建立一個名為 ServiceModelSamples 的虛擬目錄。 您可以使用範例隨附的 Setupvroot.bat 指令碼，建立磁碟目錄和虛擬目錄。  
   
-2.  將服務程式檔案從 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 複製到服務電腦上的 ServiceModelSamples 虛擬目錄。 請務必將檔案放在 \bin 目錄中。  
+2. 將服務程式檔案從 %SystemDrive%\Inetpub\wwwroot\servicemodelsamples 複製到服務電腦上的 ServiceModelSamples 虛擬目錄。 請務必將檔案放在 \bin 目錄中。  
   
-3.  將語言特定資料夾下 \client 資料夾中的用戶端指令碼檔，複製到用戶端電腦。  
+3. 將語言特定資料夾下 \client 資料夾中的用戶端指令碼檔，複製到用戶端電腦。  
   
-4.  在指令碼檔中，變更端點定義的位址值以符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
+4. 在指令碼檔中，變更端點定義的位址值以符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
-5.  將 WSDL 檔案複製到用戶端電腦。 在 WSDL 檔案 serviceWsdl.xml 中，在位址中以完整網域名稱取代 "localhost" 的任何參考。  
+5. 將 WSDL 檔案複製到用戶端電腦。 在 WSDL 檔案 serviceWsdl.xml 中，在位址中以完整網域名稱取代 "localhost" 的任何參考。  
   
-6.  將語言特定資料夾下 \client\bin 資料夾的 Client.dll 程式庫，複製到用戶端電腦上的目錄。  
+6. 將語言特定資料夾下 \client\bin 資料夾的 Client.dll 程式庫，複製到用戶端電腦上的目錄。  
   
-7.  從命令提示字元巡覽至用戶端電腦上的目的目錄。 如果使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，請務必使用系統管理員身分執行命令提示字元。  
+7. 從命令提示字元巡覽至用戶端電腦上的目的目錄。 如果使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 或 [!INCLUDE[lserver](../../../../includes/lserver-md.md)]，請務必使用系統管理員身分執行命令提示字元。  
   
-8.  輸入`tlbexp.exe client.dll /out:CalcProxy.tlb`dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
+8. 輸入`tlbexp.exe client.dll /out:CalcProxy.tlb`dll 匯出至 tlb 檔案。 預期會出現「型別程式庫匯出工具警告」，但這不是很重要，因為不需要使用泛型型別。  
   
 9. 輸入`regasm.exe /tlb:CalcProxy.tlb client.dll`向 COM 註冊型別 請確定該路徑已設定為包含的資料夾`regasm.exe`執行命令之前。  
   

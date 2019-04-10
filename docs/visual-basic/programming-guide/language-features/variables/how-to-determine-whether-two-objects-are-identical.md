@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [Visual Basic], comparing
 - object variables [Visual Basic], determining identity
 ms.assetid: 7829f817-0d1f-4749-a707-de0b95e0cf5c
-ms.openlocfilehash: 2b2c43811cbb3a06ed1e8c092ca42e50a4d037c0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: aae053ae0473ed6ced0f28da3d5e5afc0be629df
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816079"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295029"
 ---
 # <a name="how-to-determine-whether-two-objects-are-identical-visual-basic"></a>HOW TO：判斷兩個物件是否相同 (Visual Basic)
 在 Visual Basic 中，兩個變數的參考會視為相同其指標都相同，也就是說，如果兩個變數都指向相同的類別執行個體，在記憶體中。 比方說，在 Windows Forms 應用程式中，您可能想要進行比較來決定是否目前的執行個體 (`Me`) 等同於特定的執行個體，例如`Form2`。  
@@ -22,9 +22,9 @@ ms.locfileid: "58816079"
   
 #### <a name="to-determine-if-two-objects-are-identical"></a>若要判斷兩個物件是否相同  
   
-1.  設定`Boolean`來測試兩個物件的運算式。  
+1. 設定`Boolean`來測試兩個物件的運算式。  
   
-2.  在您測試的運算式中，使用`Is`運算子與運算元為兩個物件。  
+2. 在您測試的運算式中，使用`Is`運算子與運算元為兩個物件。  
   
      `Is` 傳回`True`如果物件指向相同的類別執行個體。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "58816079"
   
 #### <a name="to-determine-if-two-objects-are-not-identical"></a>若要判斷兩個物件是否不相同  
   
-1.  設定`Boolean`來測試兩個物件的運算式。  
+1. 設定`Boolean`來測試兩個物件的運算式。  
   
-2.  在您測試的運算式中，使用`IsNot`運算子與運算元為兩個物件。  
+2. 在您測試的運算式中，使用`IsNot`運算子與運算元為兩個物件。  
   
      `IsNot` 傳回`True`如果物件不會指向相同的類別執行個體。  
   
@@ -52,10 +52,10 @@ ms.locfileid: "58816079"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
 - [Is 運算子](../../../../visual-basic/language-reference/operators/is-operator.md)
 - [IsNot 運算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)
-- [如何：判斷兩個物件是否關聯](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
+- [HOW TO：判斷兩個物件是否關聯](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-related.md)
 - [Me、My、MyBase 和 MyClass](../../../../visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md)

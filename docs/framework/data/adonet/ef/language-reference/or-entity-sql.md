@@ -2,12 +2,12 @@
 title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
-ms.openlocfilehash: 3ceaf33d8baba9776008cddcbe2e2d70f13fe089
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141280"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297794"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
 結合兩個 `Boolean` 運算式。  
@@ -43,9 +43,9 @@ boolean_expression || boolean_expression
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 OR 運算子結合兩個 `Boolean` 運算式。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
-2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
+2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#OR](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#or)]  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32098
 ms.assetid: bab05325-dde8-4621-a5f6-368b5b7b2d76
-ms.openlocfilehash: 974d2935e64151109b688f576229fb008b59b229
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ba7348ae50965ffcf2719b20934451916c8fa95a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819797"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296351"
 ---
 # <a name="type-parameters-cannot-be-used-as-qualifiers"></a>類型參數不能當做限定詞使用
 限定性條件字串，包含型別參數被限定的程式設計項目。  
@@ -34,12 +34,12 @@ End Function
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  移除限定性條件字串的型別參數，或取代已定義的類型。  
+1. 移除限定性條件字串的型別參數，或取代已定義的類型。  
   
-2.  如果您需要找出所限定的程式設計項目時，用以建構的類型，您必須使用其他程式邏輯。  
+2. 如果您需要找出所限定的程式設計項目時，用以建構的類型，您必須使用其他程式邏輯。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
-- [Generic Types in Visual Basic](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
-- [類型清單](../../../visual-basic/language-reference/statements/type-list.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic 中的泛型類型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Type List](../../../visual-basic/language-reference/statements/type-list.md)

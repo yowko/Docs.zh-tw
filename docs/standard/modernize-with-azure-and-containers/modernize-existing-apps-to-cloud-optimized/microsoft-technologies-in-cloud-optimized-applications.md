@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2f1d624365c168d14e98ed175d369f6aef18e42e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 45eeee165a1dcbfc7b6dbc5146ce2c4b2be2e643
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53153874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296247"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>雲端最佳化應用程式中的 Microsoft 技術
 
@@ -25,9 +25,9 @@ ms.locfileid: "53153874"
 
 -   **監視、 記錄和稽核的遙測**:監視及稽核的應用程式和在雲端中執行的容器的能力是很重要的任何雲端最佳化應用程式。 [Azure Application Insights](https://azure.microsoft.com/services/application-insights/)並[Microsoft Operations Management Suite](https://www.microsoft.com/cloud-platform/operations-management-suite)是主要的 Microsoft 工具，提供雲端最佳化應用程式監視和稽核。
 
--   **佈建**:自動化工具可協助您佈建基礎結構和應用程式部署至多個環境 （生產、 測試、 預備環境）。 您可以使用 Chef 和 Puppet 等工具來管理應用程式的組態和環境。 此圖層也可以實作使用較為簡單且直接的方法。 比方說，您可以使用工具、 Azure 命令列介面 (Azure CLI) 來直接部署然後使用持續部署和發行管理中的管線[Azure DevOps 服務](https://visualstudio.microsoft.com/team-services/)。
+-   **佈建**:自動化工具可協助您佈建基礎結構和應用程式部署至多個環境 （生產、 測試、 預備環境）。 您可以使用 Chef 和 Puppet 等工具來管理應用程式的組態和環境。 此圖層也可以實作使用較為簡單且直接的方法。 比方說，您可以使用工具、 Azure 命令列介面 (Azure CLI) 來直接部署然後使用持續部署和發行管理中的管線[Azure DevOps 服務](https://azure.microsoft.com/services/devops/)。
 
--   **應用程式生命週期**:[Azure 的 DevOps 服務](https://visualstudio.microsoft.com/team-services/)和其他工具，例如 Jenkins 會建置的 automation 伺服器可協助您實作 CI/CD 管線，包括發行管理。
+-   **應用程式生命週期**:[Azure 的 DevOps 服務](https://azure.microsoft.com/services/devops/)和其他工具，例如 Jenkins 會建置的 automation 伺服器可協助您實作 CI/CD 管線，包括發行管理。
 
 這一章，以及相關的逐步解說中下, 一節特別著重於執行階段層 （Windows 容器） 的相關詳細資料。 本指南說明您可以部署在 Windows Server 2016 （和更新版本） 的 Windows 容器的 Vm 和 Azure 容器執行個體的方式。 此外，它也會涵蓋更進階的 PaaS 平台，例如 Azure App Service 和 Azure Service Fabric 等 Azure Kubernetes 服務的協調器。
 

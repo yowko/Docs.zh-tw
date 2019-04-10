@@ -2,12 +2,12 @@
 title: 使用動作實作伺服器端行為
 ms.date: 03/30/2017
 ms.assetid: 11a372db-7168-498b-80d2-9419ff557ba5
-ms.openlocfilehash: c21208b53745d0bf30d64ff827c1fb5e78a97cb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4467d52df5dbb134947111e96782e257eef253e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144114"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294934"
 ---
 # <a name="using-actions-to-implement-server-side-behavior"></a>使用動作實作伺服器端行為
 
@@ -40,11 +40,11 @@ OData 動作可實作一種行為，以依據從 OData 服務擷取的資源而�
 ### <a name="idataserviceinvokable"></a>IDataServiceInvokable  
  這個介面會提供一種執行 WCF 資料服務動作的方式。 實作 IDataServiceInvokable 時，您必須負責處理 3 件事：  
   
-1.  擷取參數，而且可能要封送處理  
+1. 擷取參數，而且可能要封送處理  
   
-2.  將參數分派給呼叫 Invoke() 時實際實作動作的程式碼  
+2. 將參數分派給呼叫 Invoke() 時實際實作動作的程式碼  
   
-3.  儲存來自 Invoke() 的任何結果，以便使用 GetResult() 來擷取這些結果  
+3. 儲存來自 Invoke() 的任何結果，以便使用 GetResult() 來擷取這些結果  
   
  參數可能會以 Token 的形式傳遞。 這是因為您可以寫入使用代表資源之 Token 的資料服務提供者，如果是這種情況，您可能必須先將這些 Token 轉換 (封送處理) 成實際資源，然後再分派給實際動作。 封送處理參數之後，它必須處於可編輯狀態，如此一來，叫用動作時對資源進行的任何變更才會儲存並寫入磁碟。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - extending data types [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
-ms.openlocfilehash: aca8f18c4bc53318792a119617b1ca0d6c4cc32e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822072"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296234"
 ---
 # <a name="extension-methods-visual-basic"></a>擴充方法 (Visual Basic)
 擴充方法可讓開發人員將自訂功能加入至已定義而不需要建立新的衍生的類型的資料類型。 擴充方法可使您能夠撰寫可視為現有類型的執行個體方法呼叫的方法。  
@@ -160,17 +160,17 @@ End Module
 ## <a name="extension-method-precedence"></a>擴充方法優先順序  
  當兩個具有相同簽章的擴充方法是在範圍內且可供存取時，就會叫用具有較高的優先順序。 擴充方法優先順序根據用來將方法帶入範圍的機制。 下列清單顯示優先順序階層中的，從最高到最低。  
   
-1.  目前的模組內定義的擴充方法。  
+1. 目前的模組內定義的擴充方法。  
   
-2.  擴充方法內定義資料類型在目前命名空間或任何其父代，其子命名空間的優先順序高於父命名空間。  
+2. 擴充方法內定義資料類型在目前命名空間或任何其父代，其子命名空間的優先順序高於父命名空間。  
   
-3.  在目前的檔案類型匯入內定義的擴充方法。  
+3. 在目前的檔案類型匯入內定義的擴充方法。  
   
-4.  目前的檔案中，命名空間匯入內定義的擴充方法。  
+4. 目前的檔案中，命名空間匯入內定義的擴充方法。  
   
-5.  專案層級類型匯入內定義的擴充方法。  
+5. 專案層級類型匯入內定義的擴充方法。  
   
-6.  專案層級命名空間匯入內定義的擴充方法。  
+6. 專案層級命名空間匯入內定義的擴充方法。  
   
  如果優先順序無法解決模稜兩可，您可以使用完整格式的名稱來指定您要呼叫的方法。 如果`Print`方法，在前面範例中的名為模組中定義`StringExtensions`，完整的名稱是`StringExtensions.Print(example)`而不是`example.Print()`。  
   
@@ -184,4 +184,4 @@ End Module
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
 - [屬性概觀](../../../../visual-basic/programming-guide/concepts/attributes/index.md)
-- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

@@ -14,23 +14,23 @@ helpviewer_keywords:
 - color palettes [Windows Forms], showing in ColorDialog component
 - colors [Windows Forms], showing palettes
 ms.assetid: ee050f61-dbc8-4436-ba22-51360981ab48
-ms.openlocfilehash: fcaf5da9958cf66fb63bd753dc94cba9c10f62f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 587b2c3a502ec8a1cb2f4f7c0d981baa0f18ead6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096032"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298015"
 ---
 # <a name="how-to-show-a-color-palette-with-the-colordialog-component"></a>HOW TO：使用 ColorDialog 元件顯示調色盤
 [ColorDialog](colordialog-component-windows-forms.md)元件會顯示色的調色盤，並傳回包含使用者選取的色彩屬性。  
   
 ### <a name="to-choose-a-color-using-the-colordialog-component"></a>若要選擇色彩，其使用 ColorDialog 元件  
   
-1.  顯示對話方塊方塊中，使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
+1. 顯示對話方塊方塊中，使用<xref:System.Windows.Forms.CommonDialog.ShowDialog%2A>方法。  
   
-2.  使用<xref:System.Windows.Forms.DialogResult>屬性來決定對話方塊關閉的方式。  
+2. 使用<xref:System.Windows.Forms.DialogResult>屬性來決定對話方塊關閉的方式。  
   
-3.  使用<xref:System.Windows.Forms.ColorDialog.Color%2A>屬性<xref:System.Windows.Forms.ColorDialog>元件來設定選擇的色彩。  
+3. 使用<xref:System.Windows.Forms.ColorDialog.Color%2A>屬性<xref:System.Windows.Forms.ColorDialog>元件來設定選擇的色彩。  
   
      在下列範例中，<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式會開啟<xref:System.Windows.Forms.ColorDialog>元件。 色彩選擇和使用者時按下 **[確定]**，則<xref:System.Windows.Forms.Button>控制項的背景色彩會設為選擇的色彩。 此範例假設您的表單具有<xref:System.Windows.Forms.Button>控制項和<xref:System.Windows.Forms.ColorDialog>元件。  
   

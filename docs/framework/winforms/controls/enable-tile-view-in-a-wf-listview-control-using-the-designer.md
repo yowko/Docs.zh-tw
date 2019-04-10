@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], tile view
 - tiling [Windows Forms], Windows Forms, controls
 ms.assetid: 12f0816a-52b8-41ee-a6d9-ded3a8a5817a
-ms.openlocfilehash: 7f7e3f0fadeccafc867c49d76f6f6cf11300fddc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8c8a1b2e3d2adfa7daadd609051ffc304150efe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59102475"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300589"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具在 Windows Forms ListView 控制項中啟用並排顯示
 並排顯示檢視功能<xref:System.Windows.Forms.ListView>控制項可讓您提供圖形和文字資訊之間的視覺化平衡。 並排顯示檢視中針對項目顯示的文字資訊與詳細資料檢視所定義的資料行資訊相同。 並排顯示檢視函式搭配的群組 」 或 「 插入標記功能<xref:System.Windows.Forms.ListView>控制項。  
@@ -31,9 +31,9 @@ ms.locfileid: "59102475"
   
 ### <a name="to-set-tile-view-in-the-designer"></a>若要在設計師中設定並排顯示檢視  
   
-1.  選取<xref:System.Windows.Forms.ListView>您表單上的控制項。  
+1. 選取<xref:System.Windows.Forms.ListView>您表單上的控制項。  
   
-2.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.ListView.View%2A>屬性，然後選擇**圖格**。  
+2. 在 **屬性**視窗中，選取<xref:System.Windows.Forms.ListView.View%2A>屬性，然後選擇**圖格**。  
   
 ## <a name="see-also"></a>另請參閱
 

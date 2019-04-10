@@ -8,12 +8,12 @@ helpviewer_keywords:
 - With block
 - object variables [Visual Basic], accessing
 ms.assetid: 3eb7657f-c9fe-4e05-8bc3-4bb14d5ae585
-ms.openlocfilehash: b10876c22d2f6dd5832baa0d498db7c4205a3fcb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 94c838a69aab9fcae9dc0c79b6038ee90e2369e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816279"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299133"
 ---
 # <a name="how-to-speed-up-access-to-an-object-with-a-long-qualification-path-visual-basic"></a>HOW TO：加快存取具有限定性條件長路徑 (Visual Basic) 的物件
 如果您經常存取的物件需要的一些方法和屬性的限定性條件路徑，您可以加快您的程式碼不重複的限定性條件路徑。  
@@ -22,13 +22,13 @@ ms.locfileid: "58816279"
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-assigning-it-to-a-variable"></a>若要加快存取大量限定的物件將它指派給變數  
   
-1.  宣告您經常存取的物件類型的變數。 指定限定性條件路徑，在宣告中初始化的一部分。  
+1. 宣告您經常存取的物件類型的變數。 指定限定性條件路徑，在宣告中初始化的一部分。  
   
     ```  
     Dim ctrlActv As Control = someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  您可以使用變數來存取物件的成員。  
+2. 您可以使用變數來存取物件的成員。  
   
     ```  
     ctrlActv.Text = "Test"  
@@ -38,13 +38,13 @@ ms.locfileid: "58816279"
   
 ### <a name="to-speed-up-access-to-a-heavily-qualified-object-by-using-a-withend-with-block"></a>若要加快存取大量限定的物件使用 With...With...end With 區塊  
   
-1.  限定性條件路徑放入`With`陳述式。  
+1. 限定性條件路徑放入`With`陳述式。  
   
     ```  
     With someForm.ActiveForm.ActiveControl  
     ```  
   
-2.  存取內部物件的成員`With`之前封鎖`End With`陳述式。  
+2. 存取內部物件的成員`With`之前封鎖`End With`陳述式。  
   
     ```  
         .Text = "Test"  

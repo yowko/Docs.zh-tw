@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 1032b282801db485253da18536b448e8d3b65ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59186663"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296208"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip 控制項架構
 <xref:System.Windows.Forms.ToolStrip>和<xref:System.Windows.Forms.ToolStripItem>類別提供具彈性且可擴充的系統顯示工具列、 狀態和功能表項目。 這些類別包含在<xref:System.Windows.Forms>命名空間和其所有通常以"ToolStrip"前置詞命名 (例如<xref:System.Windows.Forms.ToolStripOverflow>) 或 「 帶狀 」 的後置詞 (例如<xref:System.Windows.Forms.MenuStrip>)。  
@@ -121,19 +121,19 @@ ms.locfileid: "59186663"
 #### <a name="toolstripcontainer-support-of-inheritance"></a>ToolStripContainer 的繼承的支援  
  <xref:System.Windows.Forms.ToolStripContainer>控制項支援有限繼承的案例，如下列範例：  
   
-1.  新建 Windows Forms 應用程式  
+1. 新建 Windows Forms 應用程式  
   
-2.  將 <xref:System.Windows.Forms.ToolStripContainer> 加入表單。  
+2. 將 <xref:System.Windows.Forms.ToolStripContainer> 加入表單。  
   
-3.  設定的存取修飾詞<xref:System.Windows.Forms.ToolStripContainer>要`public`或`protected`。  
+3. 設定的存取修飾詞<xref:System.Windows.Forms.ToolStripContainer>要`public`或`protected`。  
   
-4.  新增的任何組合<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，並<xref:System.Windows.Forms.ContextMenuStrip>控制項新增至<xref:System.Windows.Forms.ToolStripPanel>區域<xref:System.Windows.Forms.ToolStripContainer>。  
+4. 新增的任何組合<xref:System.Windows.Forms.ToolStrip>， <xref:System.Windows.Forms.MenuStrip>，並<xref:System.Windows.Forms.ContextMenuStrip>控制項新增至<xref:System.Windows.Forms.ToolStripPanel>區域<xref:System.Windows.Forms.ToolStripContainer>。  
   
-5.  建置專案。  
+5. 建置專案。  
   
-6.  加入繼承自第一種形式的表單。  
+6. 加入繼承自第一種形式的表單。  
   
-7.  選取 繼承<xref:System.Windows.Forms.ToolStripContainer>表單上。  
+7. 選取 繼承<xref:System.Windows.Forms.ToolStripContainer>表單上。  
   
 #### <a name="inherited-behavior-of-child-controls"></a>子控制項的繼承的行為  
  完成上述步驟之後，就會發生下列繼承的行為：  

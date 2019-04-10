@@ -2,12 +2,12 @@
 title: 從 .NET 遠端處理移轉到 WCF
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
-ms.openlocfilehash: 38ec11b529c7b0444d47971938fb711fe40bee3d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56333062"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296195"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>從 .NET 遠端處理移轉到 WCF
 此文章說明如何將使用 .NET 遠端處理的應用程式移轉為使用 Windows Communication Foundation (WCF)。 此文章會先比較這這些產品的類似概念，再說明如何在 WCF 中完成幾個常見的遠端處理案例。  
@@ -101,9 +101,9 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  設定及裝載 WCF 服務的方法有許多種。 這只是其中一個範例，稱為「自我裝載」。 如需詳細資訊，請參閱下列主題：  
   
--   [如何：定義服務合約](how-to-define-a-wcf-service-contract.md)  
+-   [HOW TO：定義服務合約](how-to-define-a-wcf-service-contract.md)  
   
--   [使用設定檔設定服務](configuring-services-using-configuration-files.md)  
+-   [使用組態檔設定服務](configuring-services-using-configuration-files.md)  
   
 -   [裝載服務](hosting-services.md)  
   
@@ -144,16 +144,16 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
 -   [用戶端通道層級的程式設計](./extending/client-channel-level-programming.md)  
   
--   [如何：新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
+-   [HOW TO：新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
 ### <a name="serialization-usage"></a>序列化使用方式  
  雖然 .NET 遠端處理與 WCF 都是使用序列化在用戶端與伺服器之間傳送物件，但是它們在下列幾個重要方面有所不同：  
   
-1.  它們使用不同的序列化程式與慣例，來指出要序列化的項目。  
+1. 它們使用不同的序列化程式與慣例，來指出要序列化的項目。  
   
-2.  .NET 遠端處理支援「傳址」序列化，允許在某個階層上存取方法或屬性，以在另一個階層上執行程式碼，也就是跨安全性界限。 此功能有安全性弱點，這也是為什麼絕不能將遠端處理端點公開給未受信任的用戶端的主要原因之一。  
+2. .NET 遠端處理支援「傳址」序列化，允許在某個階層上存取方法或屬性，以在另一個階層上執行程式碼，也就是跨安全性界限。 此功能有安全性弱點，這也是為什麼絕不能將遠端處理端點公開給未受信任的用戶端的主要原因之一。  
   
-3.  遠端處理所使用的序列化必須選擇退出 (明確排除不要序列化的項目)，而 WCF 序列化必須選擇加入 (明確標記要序列化的成員)。  
+3. 遠端處理所使用的序列化必須選擇退出 (明確排除不要序列化的項目)，而 WCF 序列化必須選擇加入 (明確標記要序列化的成員)。  
   
 #### <a name="serialization-in-net-remoting"></a>.NET 遠端處理的序列化  
  .NET 遠端處理支援以兩種方式在用戶端與伺服器之間序列化及還原序列化物件：  
@@ -286,9 +286,9 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **.NET 遠端處理是舊版產品。** 中所述[.NET 遠端處理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)，它會被視為舊版產品，並不建議用於新的開發。 建議針對新的和現有的應用程式使用 WCF 或 ASP.NET Web API。  
   
--   **WCF 會使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
+-   **WCF 使用跨平台標準。** WCF 的設計將跨平台互通性納入考量，並支援許多業界標準 (SOAP、WS-Security、WS-Trust 等)。 WCF 服務可以與在非 Windows 作業系統上執行的用戶端互通。 遠端處理的設計主要是針對在 Windows 作業系統上使用 .NET Framework 執行伺服器和用戶端應用程式的環境。  
   
--   **WCF 具有內建的安全性。** WCF 的設計將安全性納入考量，並提供驗證、傳輸層級安全性、訊息層級安全性等許多選項。遠端處理的設計是為了讓應用程式輕鬆地互通，而不是為了確保在未受信任環境中的安全性。 WCF 的設計是為了在受信任和未受信任的環境中都能夠正常運作。  
+-   **WCF 具有內建安全性。** WCF 的設計將安全性納入考量，並提供驗證、傳輸層級安全性、訊息層級安全性等許多選項。遠端處理的設計是為了讓應用程式輕鬆地互通，而不是為了確保在未受信任環境中的安全性。 WCF 的設計是為了在受信任和未受信任的環境中都能夠正常運作。  
   
 ### <a name="migration-recommendations"></a>移轉建議  
  以下是從 .NET 遠端處理移轉至 WCF 的建議步驟：  
@@ -297,7 +297,7 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **建立資料合約。** 定義要在伺服器與用戶端之間交換的資料類型，並以 [DataContract] 屬性標記這些類型。 將用戶端可搭配 [DataMember] 使用之所有欄位和屬性都加以標記。  
   
--   **建立錯誤合約 （選擇性）。** 建立遇到錯誤時，要在伺服器與用戶端之間交換的類型。 以 [DataContract] 和 [DataMember] 標記這些類型，使這些類型可序列化。 針對已標記為 [OperationContract] 的所有服務作業，您也應該將它們標記為 [FaultContract]，以指出這些服務作業可能傳回的錯誤。  
+-   **建立錯誤合約 (選擇性)。** 建立遇到錯誤時，要在伺服器與用戶端之間交換的類型。 以 [DataContract] 和 [DataMember] 標記這些類型，使這些類型可序列化。 針對已標記為 [OperationContract] 的所有服務作業，您也應該將它們標記為 [FaultContract]，以指出這些服務作業可能傳回的錯誤。  
   
 -   **設定及裝載服務。** 建立服務合約之後，下一個步驟是設定繫結，以公開端點上的服務。 如需詳細資訊，請參閱[端點：位址、 繫結和合約](./feature-details/endpoints-addresses-bindings-and-contracts.md)。  
   
@@ -305,16 +305,16 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **停用 MarshalByRefObject。** MarshalByRefObject 類型只適用於遠端處理，而且不會由 WCF 使用。 任何具有子類別 MarshalByRefObject 的應用程式類型都應予以移除或變更。  
   
--   **停止使用 [Serializable] 與 ISerializable。** [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。  
+-   **停用 [Serializable] 與 ISerializable。** [Serializable] 屬性與 ISerializable 介面原本是為了在信任的環境中序列化類型所設計，而且由遠端處理使用。 WCF 序列化必須以 [DataContract] 與 [DataMember] 來標記類型。 應用程式所使用的資料類型應該修改為使用 [DataContract]，而不是使用 ISerializable 或 [Serializable]。  
   
 ### <a name="migration-scenarios"></a>移轉案例  
  現在我們來看看如何在 WCF 中完成下列常見的遠端處理案例：  
   
-1.  伺服器以傳值方式將物件傳回至用戶端  
+1. 伺服器以傳值方式將物件傳回至用戶端  
   
-2.  伺服器以傳址方式將物件傳回至用戶端  
+2. 伺服器以傳址方式將物件傳回至用戶端  
   
-3.  用戶端以傳值方式將物件傳送至伺服器  
+3. 用戶端以傳值方式將物件傳送至伺服器  
   
 > [!NOTE]
 >  在 WCF 中不允許以傳址方式將物件從用戶端傳送至伺服器。  
@@ -338,7 +338,7 @@ public class RemotingServer : MarshalByRefObject
 #### <a name="scenario-1-service-returns-an-object-by-value"></a>案例 1:服務傳值方式傳回物件  
  這個案例示範伺服器如何以傳值方式將物件傳回至用戶端。 WCF 一律會以傳值方式從伺服器傳回物件，因此下列步驟只會說明如何建置一般 WCF 服務。  
   
-1.  一開始請定義 WCF 服務的公用介面並以 [ServiceContract] 屬性標記。 我們會使用 [OperationContract] 來識別用戶端將呼叫的伺服器端方法。  
+1. 一開始請定義 WCF 服務的公用介面並以 [ServiceContract] 屬性標記。 我們會使用 [OperationContract] 來識別用戶端將呼叫的伺服器端方法。  
   
    ```csharp
    [ServiceContract]  
@@ -352,7 +352,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-2.  下一個步驟是建立此服務的資料合約。 若要執行此作業，請建立以 [DataContract] 屬性標記的類別 (而不是介面)。 我們想要顯示給用戶端與伺服器的個別屬性或欄位都會以 [DataMember] 標記。 如果我們想要允許衍生類型，則必須使用 [KnownType] 屬性加以識別。 WCF 唯一可讓此服務序列化或還原序列化的類型是服務介面中的類型或「已知類型」。 嘗試交換不在這個清單中的其他任何類型都會遭到拒絕。  
+2. 下一個步驟是建立此服務的資料合約。 若要執行此作業，請建立以 [DataContract] 屬性標記的類別 (而不是介面)。 我們想要顯示給用戶端與伺服器的個別屬性或欄位都會以 [DataMember] 標記。 如果我們想要允許衍生類型，則必須使用 [KnownType] 屬性加以識別。 WCF 唯一可讓此服務序列化或還原序列化的類型是服務介面中的類型或「已知類型」。 嘗試交換不在這個清單中的其他任何類型都會遭到拒絕。  
   
    ```csharp
    [DataContract]  
@@ -377,7 +377,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-3.  接下來，我們將提供服務介面的實作。  
+3. 接下來，我們將提供服務介面的實作。  
   
    ```csharp  
    public class CustomerService : ICustomerService  
@@ -394,7 +394,7 @@ public class RemotingServer : MarshalByRefObject
    }  
    ```  
   
-4.  若要執行 WCF 服務，我們需要宣告一個端點，這個端點會使用特定 WCF 繫結在特定 URL 上公開該服務介面。 將下列區段加入到伺服器專案的 web.config 檔案通常可達成目的。  
+4. 若要執行 WCF 服務，我們需要宣告一個端點，這個端點會使用特定 WCF 繫結在特定 URL 上公開該服務介面。 將下列區段加入到伺服器專案的 web.config 檔案通常可達成目的。  
   
     ```xml  
     <configuration>  
@@ -410,7 +410,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-5.  接著會使用下列程式碼來啟動 WCF 服務：  
+5. 接著會使用下列程式碼來啟動 WCF 服務：  
   
    ```csharp
    ServiceHost customerServiceHost = new ServiceHost(typeof(CustomerService));  
@@ -419,7 +419,7 @@ public class RemotingServer : MarshalByRefObject
   
      當啟動這個 ServiceHost 時，它會使用 web.config 檔案來建立適當的合約、繫結與端點。 如需有關組態檔的詳細資訊，請參閱 <<c0> [ 設定服務使用組態檔](./configuring-services-using-configuration-files.md)。 這種啟動伺服器的方式稱為自我裝載。 若要深入了解裝載 WCF 服務的其他選擇，請參閱[裝載的服務](./hosting-services.md)。  
   
-6.  用戶端專案的 app.config 必須宣告服務端點的相符繫結資訊。 若要這樣做的 Visual Studio 中的最簡單方式是使用**加入服務參考**，它將會自動更新 app.config 檔案。 您也可以手動加入這些相同的變更。  
+6. 用戶端專案的 app.config 必須宣告服務端點的相符繫結資訊。 若要這樣做的 Visual Studio 中的最簡單方式是使用**加入服務參考**，它將會自動更新 app.config 檔案。 您也可以手動加入這些相同的變更。  
   
     ```xml  
     <configuration>  
@@ -436,7 +436,7 @@ public class RemotingServer : MarshalByRefObject
   
      如需使用詳細資訊**加入服務參考**，請參閱[How to:新增、 更新或移除服務參考](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)。  
   
-7.  現在我們可以從用戶端呼叫 WCF 服務。 若要執行此作業，請建立該服務的通道處理站，針對通道要求通道處理站，然後在該通道上直接呼叫所需的方法。 我們可以這樣做的原因，是因為通道會實作服務的介面並為我們處理基礎要求/回覆邏輯。 從該方法呼叫傳回的值是伺服器回應的已還原序列化複本。  
+7. 現在我們可以從用戶端呼叫 WCF 服務。 若要執行此作業，請建立該服務的通道處理站，針對通道要求通道處理站，然後在該通道上直接呼叫所需的方法。 我們可以這樣做的原因，是因為通道會實作服務的介面並為我們處理基礎要求/回覆邏輯。 從該方法呼叫傳回的值是伺服器回應的已還原序列化複本。  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  
@@ -451,7 +451,7 @@ public class RemotingServer : MarshalByRefObject
 #### <a name="scenario-2-server-returns-an-object-by-reference"></a>案例 2:伺服器傳址方式傳回物件  
  這個案例示範伺服器如何以傳址方式將物件提供給用戶端。 在 .NET 遠端處理中，所有衍生自以傳址方式序列化之 MarshalByRefObject 的類型都將自動處理。 這個案例的範例是讓多個用戶端具有獨立工作階段的伺服器端物件。 如前所述，WCF 服務所傳回的物件一律為傳值物件，因此沒有傳址物件的直接對應項，但這個物件可能取得與使用 <xref:System.ServiceModel.EndpointAddress10> 物件之傳址語意類似的結果。 這是可序列化的傳值物件，可供用戶端用來取得伺服器上的工作階段傳址物件。 如此一來，便可讓多個用戶端具有獨立工作階段的伺服器端物件。  
   
-1.  首先，我們需要定義對應到工作階段物件本身的 WCF 服務合約。  
+1. 首先，我們需要定義對應到工作階段物件本身的 WCF 服務合約。  
   
    ```csharp
    [ServiceContract(SessionMode = SessionMode.Allowed)]  
@@ -466,9 +466,9 @@ public class RemotingServer : MarshalByRefObject
    ```  
   
     > [!TIP]
-    >  請注意，工作階段物件是以 [ServiceContract] 標記，因此是一般 WCF 服務介面。 設定 SessionMode 屬性表示它將會是工作階段服務。 在 WCF 中，工作階段是將兩個端點之間傳送的多個訊息相互關聯的方式。 這表示一旦用戶端取得此服務的連接，便會在用戶端與伺服器之間建立工作階段。 用戶端會針對此單一工作階段內的所有互動，使用伺服器端物件的唯一執行個體。  
+    >  請注意，工作階段物件是以 [ServiceContract] 標記，因此是一般 WCF 服務介面。 設定 SessionMode 屬性表示它將會是工作階段服務。 在 WCF 中，工作階段是將兩個端點之間傳送的多個訊息相互關聯的方式。 這表示一旦用戶端取得此服務的連接，便會在用戶端與伺服器之間建立工作階段。 用戶端會針對這個工作階段內的所有互動，使用伺服器端物件的唯一執行個體。  
   
-2.  接下來，我們需要提供此服務介面的實作。 我們透過以 [ServiceBehavior] 標記並設定 InstanceContextMode，來告知 WCF 將要為每個工作階段使用此類型的唯一執行個體。  
+2. 接下來，我們需要提供此服務介面的實作。 我們透過以 [ServiceBehavior] 標記並設定 InstanceContextMode，來告知 WCF 將要為每個工作階段使用此類型的唯一執行個體。  
   
    ```csharp
    [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerSession)]  
@@ -489,7 +489,7 @@ public class RemotingServer : MarshalByRefObject
        }  
    ```  
   
-3.  現在我們需要設法取得此工作階段物件的執行個體。 若要執行此作業，請建立傳回 EndpointAddress10 物件的另一個 WCF 服務介面。 這是端點的可序列化形式，可供用戶端用來建立工作階段物件。  
+3. 現在我們需要設法取得此工作階段物件的執行個體。 若要執行此作業，請建立傳回 EndpointAddress10 物件的另一個 WCF 服務介面。 這是端點的可序列化形式，可供用戶端用來建立工作階段物件。  
   
    ```csharp
    [ServiceContract]  
@@ -522,7 +522,7 @@ public class RemotingServer : MarshalByRefObject
   
      此實作會維護單一通道處理站來建立工作階段物件。 呼叫 GetInstanceAddress() 時，它會建立通道，並建立有效指向與這個通道關聯之遠端位址的 EndpointAddress10 物件。 EndpointAddress10 是能夠以傳值方式傳回至用戶端的資料類型。  
   
-4.  我們需要執行下列兩個動作，來修改伺服器的組態檔，如下列範例所示：  
+4. 我們需要執行下列兩個動作，來修改伺服器的組態檔，如下列範例所示：  
   
     1.  宣告\<用戶端 > 區段，其中說明工作階段物件端點。 由於在這種情況下伺服器也會當做用戶端，因此必須執行這個動作。  
   
@@ -568,7 +568,7 @@ public class RemotingServer : MarshalByRefObject
    sessionHost.Open();  
    ```  
   
-5.  我們藉由在用戶端之專案的 app.config 檔案中宣告這些相同的端點，來設定用戶端。  
+5. 我們藉由在用戶端之專案的 app.config 檔案中宣告這些相同的端點，來設定用戶端。  
   
     ```xml  
     <configuration>  
@@ -591,7 +591,7 @@ public class RemotingServer : MarshalByRefObject
     </configuration>  
     ```  
   
-6.  若要建立及使用這個工作階段物件，用戶端必須執行下列步驟：  
+6. 若要建立及使用這個工作階段物件，用戶端必須執行下列步驟：  
   
     1.  建立 ISessionBoundFactory 服務的通道。  
   
@@ -634,9 +634,9 @@ public class RemotingServer : MarshalByRefObject
 #### <a name="scenario-3-client-sends-server-a-by-value-instance"></a>案例 3:用戶端會傳送伺服器的傳值執行個體  
  這個案例示範用戶端如何以傳值方式將非基本物件執行個體傳送至伺服器。 由於 WCF 只會以傳值方式傳送物件，因此這個案例會示範一般 WCF 使用方式。  
   
-1.  使用案例 1 中的相同 WCF 服務。  
+1. 使用案例 1 中的相同 WCF 服務。  
   
-2.  使用用戶端來建立新的傳值物件 (客戶)，建立要與 ICustomerService 服務通訊的通道，然後將物件傳送至通道。  
+2. 使用用戶端來建立新的傳值物件 (客戶)，建立要與 ICustomerService 服務通訊的通道，然後將物件傳送至通道。  
   
    ```csharp
    ChannelFactory<ICustomerService> factory =  

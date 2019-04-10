@@ -8,52 +8,52 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 43347e3afdf55277ee8969954626d02192a10ec5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295428"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>HOW TO：設定同盟服務的認證
 在 Windows Communication Foundation (WCF) 中，建立聯合的服務包含下列主要程序：  
   
-1.  設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。 如需建立適當的繫結的詳細資訊，請參閱[How to:建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
+1. 設定 <xref:System.ServiceModel.WSFederationHttpBinding> 或類似的自訂繫結。 如需建立適當的繫結的詳細資訊，請參閱[How to:建立 WSFederationHttpBinding](../../../../docs/framework/wcf/feature-details/how-to-create-a-wsfederationhttpbinding.md)。  
   
-2.  設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，此認證可控制如何驗證提供給服務的已發行權杖。  
+2. 設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential>，此認證可控制如何驗證提供給服務的已發行權杖。  
   
  本主題會提供第二個步驟的詳細資訊。 如需聯合的服務的運作方式的詳細資訊，請參閱[同盟](../../../../docs/framework/wcf/feature-details/federation.md)。  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-code"></a>使用程式碼來設定 IssuedTokenServiceCredential 的屬性  
   
-1.  使用 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 類別的 <xref:System.ServiceModel.Description.ServiceCredentials> 屬性，傳回 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 執行個體 (Instance) 的參照。 此屬性可從 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 類別的 <xref:System.ServiceModel.ServiceHostBase> 屬性存取。  
+1. 使用 <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> 類別的 <xref:System.ServiceModel.Description.ServiceCredentials> 屬性，傳回 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 執行個體 (Instance) 的參照。 此屬性可從 <xref:System.ServiceModel.ServiceHostBase.Credentials%2A> 類別的 <xref:System.ServiceModel.ServiceHostBase> 屬性存取。  
   
-2.  如果是要驗證類似 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡的自行發行權杖，則將 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。 預設為 `false`。  
+2. 如果是要驗證類似 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> 卡的自行發行權杖，則將 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。 預設為 `false`。  
   
-3.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回的集合填入 (Populate) <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。 每個執行個體都代表服務將會從該處驗證權杖的簽發者。  
+3. 將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> 屬性所傳回的集合填入 (Populate) <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。 每個執行個體都代表服務將會從該處驗證權杖的簽發者。  
   
     > [!NOTE]
     >  不同於 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential.ScopedCertificates%2A> 屬性所傳回的用戶端集合，已知憑證集合並不是有索引鍵的集合。 無論傳送包含已發行權杖之訊息的用戶端位址為何，服務都會接受已指定憑證所發行的權杖 (仍有其他條件限制，將於本主題稍後內容中說明)。  
   
-4.  將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性設定為其中一個 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列舉值。 只有透過程式碼才能做到這點。 預設為 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>。  
+4. 將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性設定為其中一個 <xref:System.ServiceModel.Security.X509CertificateValidationMode> 列舉值。 只有透過程式碼才能做到這點。 預設為 <xref:System.IdentityModel.Selectors.X509CertificateValidator.ChainTrust%2A>。  
   
-5.  如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性是設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>，則會將自訂 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性。  
+5. 如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 屬性是設定為 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom>，則會將自訂 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別的執行個體指派給 <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CustomCertificateValidator%2A> 屬性。  
   
-6.  如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 是設定為 `ChainTrust` 或 `PeerOrChainTrust`，則會將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列舉中的適當值。 請注意，在 `PeerTrust` 或 `Custom` 驗證模式中沒有使用撤銷模式。  
+6. 如果 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> 是設定為 `ChainTrust` 或 `PeerOrChainTrust`，則會將 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.RevocationMode%2A> 屬性設定為 <xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> 列舉中的適當值。 請注意，在 `PeerTrust` 或 `Custom` 驗證模式中沒有使用撤銷模式。  
   
-7.  如有需要，將自訂 <xref:System.IdentityModel.Tokens.SamlSerializer> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> 屬性。 例如，需要使用自訂的安全性判斷提示標記語言 (Security Assertions Markup Language，SAML) 序列化程式來剖析自訂 SAML 時。  
+7. 如有需要，將自訂 <xref:System.IdentityModel.Tokens.SamlSerializer> 類別的執行個體指派給 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.SamlSerializer%2A> 屬性。 例如，需要使用自訂的安全性判斷提示標記語言 (Security Assertions Markup Language，SAML) 序列化程式來剖析自訂 SAML 時。  
   
 ### <a name="to-set-the-properties-of-issuedtokenservicecredential-in-configuration"></a>使用組態來設定 IssuedTokenServiceCredential 的屬性  
   
-1.  建立`<issuedTokenAuthentication>`的子系的項目 <`serviceCredentials`> 項目。  
+1. 建立`<issuedTokenAuthentication>`的子系的項目 <`serviceCredentials`> 項目。  
   
-2.  如果是要驗證類似 `allowUntrustedRsaIssuers` 卡的自行發行權杖，則將 `<issuedTokenAuthentication>` 項目的 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。  
+2. 如果是要驗證類似 `allowUntrustedRsaIssuers` 卡的自行發行權杖，則將 `<issuedTokenAuthentication>` 項目的 `true` 屬性設定為 [!INCLUDE[infocard](../../../../includes/infocard-md.md)]。  
   
-3.  建立 `<knownCertificates>` 項目做為 `<issuedTokenAuthentication>` 項目的子項。  
+3. 建立 `<knownCertificates>` 項目做為 `<issuedTokenAuthentication>` 項目的子項。  
   
-4.  建立零個或多個 `<add>` 項目做為 `<knownCertificates>` 項目的子項目，並使用 `storeLocation`, `storeName`、`x509FindType` 及 `findValue` 屬性來指定如何找到該憑證。  
+4. 建立零個或多個 `<add>` 項目做為 `<knownCertificates>` 項目的子項目，並使用 `storeLocation`, `storeName`、`x509FindType` 及 `findValue` 屬性來指定如何找到該憑證。  
   
-5.  如有必要，設定`samlSerializer`屬性的 <`issuedTokenAuthentication`> 項目類型名稱的自訂<xref:System.IdentityModel.Tokens.SamlSerializer>類別。  
+5. 如有必要，設定`samlSerializer`屬性的 <`issuedTokenAuthentication`> 項目類型名稱的自訂<xref:System.IdentityModel.Tokens.SamlSerializer>類別。  
   
 ## <a name="example"></a>範例  
  下列範例會示範使用程式碼來設定 <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> 的屬性。  

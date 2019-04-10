@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: afe33835c8d29c4fe0e16ab4c7e00808336d0752
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2e51133850a59de2b68164870f909ef50d47b69
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087894"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298873"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>資料流處理提供者 (WCF Data Services)
 資料服務可以公開大型物件二進位資料。 這項二進位資料可能代表視訊和音訊資料流、影像、文件檔案，或其他類型的二進位媒體。 當資料模型中的實體包含一個或多個二進位屬性時，資料服務會在回應摘要的項目內，傳回這個 base-64 編碼形式的二進位資料。 載入及序列化大型二進位資料，以這種方式可能會影響效能，因為[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]定義一個機制來獨立擷取二進位資料與其所屬的實體無關。 只要將實體中的二進位資料分成一個或多個資料流就可以完成這項處理。  
@@ -28,15 +28,15 @@ ms.locfileid: "59087894"
   
  設定資料服務來支援二進位資料的資料流處理需要進行以下步驟：  
   
-1.  將資料模型中的一個或多個實體歸類為媒體連結項目。 這些實體不應該包含要進行資料流處理的二進位資料。 實體的任何二進位屬性一定會在此項目中以 base-64 二進位編碼形式傳回。  
+1. 將資料模型中的一個或多個實體歸類為媒體連結項目。 這些實體不應該包含要進行資料流處理的二進位資料。 實體的任何二進位屬性一定會在此項目中以 base-64 二進位編碼形式傳回。  
   
-2.  實作 T:System.Data.Services.Providers.IDataServiceStreamProvider 介面。  
+2. 實作 T:System.Data.Services.Providers.IDataServiceStreamProvider 介面。  
   
-3.  定義資料服務來實作 <xref:System.IServiceProvider> 介面。 此資料服務會使用 <xref:System.IServiceProvider.GetService%2A> 實作來存取資料流處理資料提供者實作。 這個方法會傳回適當的資料流處理提供者實作。  
+3. 定義資料服務來實作 <xref:System.IServiceProvider> 介面。 此資料服務會使用 <xref:System.IServiceProvider.GetService%2A> 實作來存取資料流處理資料提供者實作。 這個方法會傳回適當的資料流處理提供者實作。  
   
-4.  在 Web 應用程式組態中啟用大型訊息資料流。  
+4. 在 Web 應用程式組態中啟用大型訊息資料流。  
   
-5.  啟用伺服器上或資料來源中之二進位資源的存取權。  
+5. 啟用伺服器上或資料來源中之二進位資源的存取權。  
   
  本主題的範例以資料流處理相片服務，後者的討論文章中深入了解範例[資料服務資料流處理提供者系列：實作資料流處理提供者 （第 1 部分）](https://go.microsoft.com/fwlink/?LinkID=198989)。 此範例服務的原始程式碼位於[資料流處理相片資料服務範例頁面](https://go.microsoft.com/fwlink/?LinkID=198988)MSDN Code Gallery 上。  
   

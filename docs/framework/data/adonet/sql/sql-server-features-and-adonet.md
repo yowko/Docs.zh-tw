@@ -2,12 +2,12 @@
 title: SQL Server 功能和 ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 2839529b-a79b-4450-be5d-07a98dbc7a0f
-ms.openlocfilehash: b07f5e1e62744e4301acd64034481cf391100af8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4f2d93ca2abc15e4c7af8489d5b875c0a46d7185
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107519"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294895"
 ---
 # <a name="sql-server-features-and-adonet"></a>SQL Server 功能和 ADO.NET
 本節中的主題將討論使用 ADO.NET 來開發資料庫應用程式的 SQL Server 功能。  
@@ -16,7 +16,7 @@ ms.locfileid: "59107519"
   
  **SQL Server 線上叢書**  
   
-1.  [開發 (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
+1. [開發 (Database Engine)](https://go.microsoft.com/fwlink/?LinkId=115245)  
   
 ## <a name="in-this-section"></a>本節內容  
  [列舉 SQL Server 執行個體 (ADO.NET)](../../../../../docs/framework/data/adonet/sql/enumerating-instances-of-sql-server.md)  

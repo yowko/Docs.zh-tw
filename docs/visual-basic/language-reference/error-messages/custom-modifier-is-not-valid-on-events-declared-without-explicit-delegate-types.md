@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31122
 ms.assetid: 6911f0d1-641a-473b-906d-8ee5681194be
-ms.openlocfilehash: 0fc645671eb899faff0dbb5c6d745ba23faf4557
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 169cb49cc5abc76b7c52785392d0083b81a99450
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827220"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300940"
 ---
 # <a name="custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types"></a>'Custom' 修飾詞在沒有以明確委派類型宣告的事件中無效
 不同於非自訂事件`Custom Event`宣告需要`As`事件名稱，明確地指定事件的委派型別後面的子句。  
@@ -23,13 +23,13 @@ ms.locfileid: "58827220"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  定義自訂事件的委派具有相同的參數清單。  
+1. 定義自訂事件的委派具有相同的參數清單。  
   
      例如，如果`Custom Event`已定義`Custom Event Test(ByVal sender As Object, ByVal i As Integer)`，則對應的委派會是如下所示。  
   
      [!code-vb[VbVbalrEventError#18](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEventError/VB/VbVbalrEventError.vb#18)]  
   
-2.  將自訂事件的參數清單`As`子句指定的委派型別。  
+2. 將自訂事件的參數清單`As`子句指定的委派型別。  
   
      此範例中，再繼續`Custom Event`宣告重新撰寫，如下所示。  
   

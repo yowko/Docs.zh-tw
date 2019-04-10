@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30424
 ms.assetid: 2d402c2f-27ad-428b-b699-d45cd62f7196
-ms.openlocfilehash: f82a548c820aec7d2ae13c30a67d778fc167a8b6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 88bbab2005b464ee97d647f2b4b9be6ff81e2d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58813103"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299107"
 ---
 # <a name="constants-must-be-of-an-intrinsic-or-enumerated-type-not-a-class-structure-type-parameter-or-array-type"></a>常數必須是內建或列舉類型，而不是類別、結構、型別參數或陣列類型
 您已嘗試宣告為類別、 結構或陣列類型或型別參數所包含的泛型類型定義的常數。  
@@ -23,9 +23,9 @@ ms.locfileid: "58813103"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  宣告作為內建常數或`Enum`型別。  
+1. 宣告作為內建常數或`Enum`型別。  
   
-2.  常數，也可以是特殊值，例如`True`， `False`，或`Nothing`。 編譯器會考慮這些預先定義的值必須是適當的內建類型。  
+2. 常數，也可以是特殊值，例如`True`， `False`，或`Nothing`。 編譯器會考慮這些預先定義的值必須是適當的內建類型。  
   
 ## <a name="see-also"></a>另請參閱
 

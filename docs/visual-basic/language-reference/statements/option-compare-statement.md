@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Option Compare statement [Visual Basic]
 - text [Visual Basic], comparing
 ms.assetid: 54e8eeeb-3b0d-4fb9-acce-fbfbd5975f6e
-ms.openlocfilehash: b092d54e6cf4d8a96a35e6b1cc818fad8f26e3ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e7c1e8e4431b7a653bb3a086589c35921f8001b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834071"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300628"
 ---
 # <a name="option-compare-statement"></a>Option Compare 陳述式
 宣告比較字串資料時要使用的預設比較方法。  
@@ -65,11 +65,11 @@ Option Compare { Binary | Text }
   
 #### <a name="to-set-option-compare-in-the-ide"></a>在 IDE 中設定選項比較  
   
-1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
+1. 在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
-2.  按一下 [編譯] 索引標籤。  
+2. 按一下 [編譯] 索引標籤。  
   
-3.  在設定的值**Option Compare**  方塊中。  
+3. 在設定的值**Option Compare**  方塊中。  
   
  當您建立專案時， **Option Compare**上設定**編譯**索引標籤設定為**Option Compare**中設定**選項** 對話方塊。 若要變更這項設定，在**工具**功能表上，按一下**選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是**二進位**。  
   
@@ -96,8 +96,8 @@ Option Compare { Binary | Text }
 - <xref:Microsoft.VisualBasic.Strings.StrComp%2A>
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [比較運算子](../../../visual-basic/language-reference/operators/comparison-operators.md)
-- [在 Visual Basic 中的比較運算子](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
+- [Comparison Operators in Visual Basic](../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md)
 - [Like 運算子](../../../visual-basic/language-reference/operators/like-operator.md)
 - [字串函式](../../../visual-basic/language-reference/functions/string-functions.md)
 - [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)

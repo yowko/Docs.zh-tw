@@ -2,12 +2,12 @@
 title: 用於 WCF 的安全性概念
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
-ms.openlocfilehash: c995705e998ceee34ac9a3c2fc2343366f92ca00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295545"
 ---
 # <a name="security-concepts-used-in-wcf"></a>用於 WCF 的安全性概念
 Windows Communication Foundation (WCF) 安全性是已在使用中的概念中建置及部署各種安全性基礎結構。  
@@ -34,15 +34,15 @@ Windows Communication Foundation (WCF) 安全性是已在使用中的概念中�
 ## <a name="access-control-mechanisms"></a>存取控制機制  
  WCF 提供數種方法來控制服務或作業的存取權。 包括  
   
-1.  <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
+1. <xref:System.Security.Permissions.PrincipalPermissionAttribute>  
   
-2.  ASP.NET 成員資格提供者  
+2. ASP.NET 成員資格提供者  
   
-3.  ASP.NET 角色提供者  
+3. ASP.NET 角色提供者  
   
-4.  授權管理員  
+4. 授權管理員  
   
-5.  識別模型  
+5. 識別模型  
   
  如需有關這些主題，請參閱[存取控制機制](../../../../docs/framework/wcf/feature-details/access-control-mechanisms.md)  
   

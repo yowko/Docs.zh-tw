@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 9edd6b71-0fa5-4649-ae1d-ac1c12541019
-ms.openlocfilehash: e07fd6598d6b2d1bbd52e5e6735264821b8986bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b284a8f085ab7e93651c829ac16e47fb63a8b51
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180241"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297775"
 ---
 # <a name="consuming-a-dataset-from-an-xml-web-service"></a>從 XML Web Service 使用資料集
 <xref:System.Data.DataSet> 採用中斷連接設計為架構，而部分原因是為了使網際網路的資料傳輸更方便。 **資料集**，它可以指定為輸入或輸出自 XML Web service，而不需要任何額外的程式碼所需資料流的內容是 「 序列化 」 **DataSet**從 XML Web service用戶端和上一步。 **資料集**是隱含地轉換成使用 DiffGram 格式的 XML 資料流傳送透過網路，然後重新建構 XML 資料流，做為從**DataSet**在接收端。 您可以採用這種簡單靈活的方式，以 XML Web Service 來傳輸和傳回關聯式資料。 如需有關 DiffGram 格式的詳細資訊，請參閱[DiffGrams](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)。  
@@ -22,7 +22,7 @@ ms.locfileid: "59180241"
   
 ### <a name="to-create-an-xml-web-service-that-returns-and-consumes-a-dataset"></a>若要建立傳回和使用 DataSet 的 XML Web Service  
   
-1.  建立 XML Web Service  
+1. 建立 XML Web Service  
   
      在此範例中，XML Web service 會建立傳回資料，在此情況下從客戶的清單**Northwind**資料庫，然後接收**資料集**與更新資料，其中 XML Web service解析回原始的資料來源。  
   
@@ -159,7 +159,7 @@ ms.locfileid: "59180241"
   
      在典型的案例中， **UpdateCustomers**會寫入方法，來攔截開放式同步存取違規。 為了簡化起見，這個範例並不包括這項步驟。 如需有關開放式並行存取的詳細資訊，請參閱[開放式並行存取](../../../../../docs/framework/data/adonet/optimistic-concurrency.md)。  
   
-2.  建立 XML Web Service Proxy  
+2. 建立 XML Web Service Proxy  
   
      XML Web Service 的用戶端需要 SOAP Proxy，才能使用公開方法。 您可以命令 Visual Studio 產生這個 Proxy。 藉由從 Visual Studio 中設定現有 Web 服務的 Web 參考，會透明地執行這個步驟所說明的所有行為。 如果要自行建立 Proxy 類別，請繼續這些說明。 然而在大多數情況下，使用 Visual Studio 來建立用戶端應用程式的 Proxy 類別已足以因應。  
   
@@ -187,7 +187,7 @@ ms.locfileid: "59180241"
     csc -t:library -out:sample.dll sample.cs -r:System.dll -r:System.Web.Services.dll -r:System.Data.dll -r:System.Xml.dll  
     ```  
   
-3.  建立 XML Web Service 用戶端。  
+3. 建立 XML Web Service 用戶端。  
   
      如果您想要有 Visual Studio 為您產生 Web 服務 proxy 類別，只要建立用戶端專案中，在 方案總管 視窗中，以滑鼠右鍵按一下專案，請按一下**加入 Web 參考**，然後選取 從 Web 服務清單中可用的 Web 服務 （這可能需要提供 Web 服務端點的位址，如果 Web 服務無法使用目前的方案，或目前的電腦上）。如果您自行建立 XML Web Service Proxy (如上述步驟所述)，您可以將它匯入您的用戶端程式碼，並使用 XML Web Service 方法。 下列範例程式碼會匯入 proxy 程式庫，呼叫**GetCustomers**若要取得一份客戶，將新的客戶，然後傳回**資料集**更新**UpdateCustomers**.  
   

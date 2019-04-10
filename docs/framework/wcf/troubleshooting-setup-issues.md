@@ -2,12 +2,12 @@
 title: 疑難排解安裝程式問題
 ms.date: 03/30/2017
 ms.assetid: 1644f885-c408-4d5f-a5c7-a1a907bc8acd
-ms.openlocfilehash: 41e266ba5b54bfb37313f9588515f7ae9cc6f79d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69242ec745f2a5b945ae64eb558070dbf0d39c10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59153071"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299614"
 ---
 # <a name="troubleshooting-setup-issues"></a>疑難排解安裝程式問題
 本主題描述如何疑難排解 Windows Communication Foundation (WCF) 設定問題。  
@@ -30,13 +30,13 @@ ms.locfileid: "59153071"
 ## <a name="wmi-service-corruption-blocks-installation-of-the-windows-communication-foundation-wmi-provider-during-installation-of-net-framework-30-package"></a>WMI 服務損毀在 .NET Framework 3.0 套件安裝期間封鎖 Windows Communication Foundation WMI 提供者的安裝  
  WMI 服務損毀可能會封鎖 Windows Communication Foundation WMI 提供者的安裝。 在進行安裝時，Windows Communication Foundation 安裝程式無法使用 mofcomp.exe 元件來註冊 WCF .mof 檔。 可能徵兆如下所示：  
   
-1.  .NET Framework 3.0 安裝成功完成，不過 WCF WMI 提供者並未註冊。  
+1. .NET Framework 3.0 安裝成功完成，不過 WCF WMI 提供者並未註冊。  
   
-2.  應用程式記錄檔中顯示關於在註冊 WCF 的 WMI 提供者、或執行 mofcomp.exe 時所發生問題的錯誤事件。  
+2. 應用程式記錄檔中顯示關於在註冊 WCF 的 WMI 提供者、或執行 mofcomp.exe 時所發生問題的錯誤事件。  
   
-3.  在使用者的 %temp% 目錄中名為 dd_wcf_retCA* 的安裝記錄檔，包含了無法註冊 WCF WMI 提供者的相關資訊。  
+3. 在使用者的 %temp% 目錄中名為 dd_wcf_retCA* 的安裝記錄檔，包含了無法註冊 WCF WMI 提供者的相關資訊。  
   
-4.  在事件記錄檔或安裝追蹤記錄檔中，可能會列出下列其中一個例外狀況 (Exception)：  
+4. 在事件記錄檔或安裝追蹤記錄檔中，可能會列出下列其中一個例外狀況 (Exception)：  
   
      ServiceModelReg [11:09:59:046]:System.ApplicationException:預期的結果 3 執行 E:\WINDOWS\system32\wbem\mofcomp.exe 以"E:\WINDOWS\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModel.mof"  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59153071"
   
  您必須遵循下列步驟才能解決上述問題。  
   
-1.  執行[WMI Diagnosis Utility，2.0 版](https://go.microsoft.com/fwlink/?LinkId=94685)以修復 WMI 服務。 如需使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主題。  
+1. 執行[WMI Diagnosis Utility，2.0 版](https://go.microsoft.com/fwlink/?LinkId=94685)以修復 WMI 服務。 如需使用此工具的詳細資訊，請參閱[WMI Diagnosis Utility](https://go.microsoft.com/fwlink/?LinkId=94686)主題。  
   
  使用修復.NET Framework 3.0 安裝**新增/移除程式**小程式位於**控制台**，或解除安裝/重新安裝.NET Framework 3.0。  
   

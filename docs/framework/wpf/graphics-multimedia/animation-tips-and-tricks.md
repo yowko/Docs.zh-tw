@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 1337dac083ad9d52a4cfd99bddee80baebf474de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202140"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295948"
 ---
 # <a name="animation-tips-and-tricks"></a>動畫秘訣和訣竅
 使用中的動畫時[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、 有一些秘訣和技巧，讓動畫有較佳，並減少您的挫折。  
@@ -71,9 +71,9 @@ ms.locfileid: "59202140"
   
  如果您按一下第二個按鈕，在第一個<xref:System.Windows.Media.Animation.Storyboard>是正在播放，您可能預期下列行為：  
   
-1.  第一個分鏡腳本結束，並將矩形傳送回其原始位置，因為動畫<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。  
+1. 第一個分鏡腳本結束，並將矩形傳送回其原始位置，因為動畫<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>的<xref:System.Windows.Media.Animation.FillBehavior.Stop>。  
   
-2.  第二個分鏡腳本會生效，並從目前的位置 (現在是 0) 以動畫顯示到 500。  
+2. 第二個分鏡腳本會生效，並從目前的位置 (現在是 0) 以動畫顯示到 500。  
   
  **但這不會發生什麼事。** 相反地，矩形並未跳回，而是繼續向右移動。 這是因為第二個動畫使用第一個動畫的目前值做為其開始值，並從該值以動畫顯示到 500。 當第二個動畫會取代第一個因為<xref:System.Windows.Media.Animation.HandoffBehavior.SnapshotAndReplace><xref:System.Windows.Media.Animation.HandoffBehavior>使用時，<xref:System.Windows.Media.Animation.FillBehavior>的第一個動畫並不重要。  
   

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - StatusStrip control [Windows Forms]
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
-ms.openlocfilehash: f9e54ecd49fc3bd295f236292715393358bab0b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094875"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296390"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>逐步解說：向表單提供標準的功能表項目
 您可以使用 <xref:System.Windows.Forms.MenuStrip> 控制項來為您的表單提供標準功能表。  
@@ -47,53 +47,53 @@ ms.locfileid: "59094875"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立 Windows 應用程式專案，稱為**StandardMenuForm** (**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Form應用程式**)。  
+1. 建立 Windows 應用程式專案，稱為**StandardMenuForm** (**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Form應用程式**)。  
   
-2.  在 Windows Form 設計工具中，選取的表單。  
+2. 在 Windows Form 設計工具中，選取的表單。  
   
 ## <a name="creating-a-standard-menu"></a>建立標準功能表  
  Windows Form 設計工具可以自動填入<xref:System.Windows.Forms.MenuStrip>具有標準功能表項目控制項。  
   
 #### <a name="to-create-a-standard-menu"></a>建立標準功能表  
   
-1.  從**工具箱**，拖曳<xref:System.Windows.Forms.MenuStrip>控制項拖曳至表單。  
+1. 從**工具箱**，拖曳<xref:System.Windows.Forms.MenuStrip>控制項拖曳至表單。  
   
-2.  按一下 <xref:System.Windows.Forms.MenuStrip>控制項的智慧標籤圖像 （glyph) (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然後選取**插入標準項目**。  
+2. 按一下 <xref:System.Windows.Forms.MenuStrip>控制項的智慧標籤圖像 （glyph) (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然後選取**插入標準項目**。  
   
      <xref:System.Windows.Forms.MenuStrip>控制項填入標準功能表項目。  
   
-3.  按一下 **檔案**功能表項目，以查看其預設功能表項目和對應的圖示。  
+3. 按一下 **檔案**功能表項目，以查看其預設功能表項目和對應的圖示。  
   
 ## <a name="creating-a-statusstrip-control"></a>建立 StatusStrip 控制項  
  使用<xref:System.Windows.Forms.StatusStrip>控制項來顯示 Windows Forms 應用程式的狀態。 在目前的範例中，使用者所選取的功能表項目會顯示在<xref:System.Windows.Forms.StatusStrip>控制項。  
   
 #### <a name="to-create-a-statusstrip-control"></a>若要建立 StatusStrip 控制項  
   
-1.  從**工具箱**，拖曳<xref:System.Windows.Forms.StatusStrip>控制項拖曳至表單。  
+1. 從**工具箱**，拖曳<xref:System.Windows.Forms.StatusStrip>控制項拖曳至表單。  
   
      <xref:System.Windows.Forms.StatusStrip>控制項自動停駐於表單底部。  
   
-2.  按一下 <xref:System.Windows.Forms.StatusStrip>控制項的下拉式按鈕，然後選取**statuslabel 設**以新增<xref:System.Windows.Forms.ToolStripStatusLabel>若要控制<xref:System.Windows.Forms.StatusStrip>控制項。  
+2. 按一下 <xref:System.Windows.Forms.StatusStrip>控制項的下拉式按鈕，然後選取**statuslabel 設**以新增<xref:System.Windows.Forms.ToolStripStatusLabel>若要控制<xref:System.Windows.Forms.StatusStrip>控制項。  
   
 ## <a name="handling-item-selection"></a>處理項目選取  
  處理<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件以回應使用者選取功能表項目時。  
   
 #### <a name="to-handle-item-selection"></a>若要處理的項目選取  
   
-1.  按一下 **檔案**功能表項目，您在 「 建立中建立標準功能表一節。  
+1. 按一下 **檔案**功能表項目，您在 「 建立中建立標準功能表一節。  
   
-2.  在 [屬性] 視窗中按一下 [事件]。  
+2. 在 [屬性] 視窗中按一下 [事件]。  
   
-3.  按兩下<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件。  
+3. 按兩下<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件。  
   
      Windows Form 設計工具產生的事件處理常式<xref:System.Windows.Forms.ToolStripDropDownItem.DropDownItemClicked>事件。  
   
-4.  事件處理常式中插入下列程式碼。  
+4. 事件處理常式中插入下列程式碼。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#3)]  
   
-5.  插入`UpdateStatus`在表單的公用程式方法定義。  
+5. 插入`UpdateStatus`在表單的公用程式方法定義。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StandardMenu#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StandardMenu/VB/Form1.vb#2)]  
@@ -102,11 +102,11 @@ ms.locfileid: "59094875"
   
 #### <a name="to-test-your-form"></a>若要測試您的表單  
   
-1.  按 F5 以編譯並執行您的表單。  
+1. 按 F5 以編譯並執行您的表單。  
   
-2.  按一下 **檔案**以開啟功能表的功能表項目。  
+2. 按一下 **檔案**以開啟功能表的功能表項目。  
   
-3.  在 [**檔案**] 功能表中，按一下其中一個項目，即可選取它。  
+3. 在 [**檔案**] 功能表中，按一下其中一個項目，即可選取它。  
   
      <xref:System.Windows.Forms.StatusStrip>控制項會顯示選取的項目。  
   

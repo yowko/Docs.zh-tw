@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: bfe84ccb30b13b8232172749454bf8f3625269ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139200"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299640"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>HOW TO：使用 MenuStrip (Windows Form) 建立 MDI 視窗清單
 您可以使用多重文件介面 (MDI) 來建立應用程式，可以開啟多份文件在相同的時間和複製並貼到另一份文件內容。  
@@ -22,21 +22,21 @@ ms.locfileid: "59139200"
   
 ### <a name="to-create-an-mdi-window-list-on-a-menustrip"></a>若要在 MenuStrip 建立 MDI 視窗清單  
   
-1.  建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
+1. 建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
   
-2.  將 <xref:System.Windows.Forms.MenuStrip> 加入表單。  
+2. 將 <xref:System.Windows.Forms.MenuStrip> 加入表單。  
   
-3.  將兩個最上層功能表項目加入<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.Control.Text%2A>屬性，以`&File`和`&Window`。  
+3. 將兩個最上層功能表項目加入<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.Control.Text%2A>屬性，以`&File`和`&Window`。  
   
-4.  將子功能表項目加入 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設定為 `&Open`。  
+4. 將子功能表項目加入 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.ToolStripItem.Text%2A> 屬性設定為 `&Open`。  
   
-5.  設定<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的屬性<xref:System.Windows.Forms.MenuStrip>至`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>。  
+5. 設定<xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>的屬性<xref:System.Windows.Forms.MenuStrip>至`&Window`<xref:System.Windows.Forms.ToolStripMenuItem>。  
   
-6.  將表單加入專案，並新增您想要的控制項，例如另一個<xref:System.Windows.Forms.MenuStrip>。  
+6. 將表單加入專案，並新增您想要的控制項，例如另一個<xref:System.Windows.Forms.MenuStrip>。  
   
-7.  建立事件處理常式<xref:System.Windows.Forms.Control.Click>事件的`&New`<xref:System.Windows.Forms.ToolStripMenuItem>。  
+7. 建立事件處理常式<xref:System.Windows.Forms.Control.Click>事件的`&New`<xref:System.Windows.Forms.ToolStripMenuItem>。  
   
-8.  在事件處理常式中，插入程式碼，如下所示的建立和顯示的新執行個體`Form2`做為 MDI 子系的`Form1`。  
+8. 在事件處理常式中，插入程式碼，如下所示的建立和顯示的新執行個體`Form2`做為 MDI 子系的`Form1`。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(ByVal sender As _  

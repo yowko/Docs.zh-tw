@@ -10,12 +10,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], removing
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
-ms.openlocfilehash: 6e0d453903b817e9acd743e835f4d466e3565271
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c84d260783e3a511b5ef6a651c71f1ee55acffe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132830"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295337"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>HOW TO：從 MDI 下拉式功能表 (Windows Form) 移除 ToolStripMenuItem
 在某些應用程式中，多重文件介面 (MDI) 子視窗的類型可能與 MDI 父視窗不同。 例如，MDI 父視窗可能是試算表，而 MDI 子視窗可能是圖表。 在這種情況下，由於已啟動各種不同類型的 MDI 子視窗，因此您需要以 MDI 子視窗功能表的內容更新 MDI 父視窗功能表的內容。  
@@ -24,21 +24,21 @@ ms.locfileid: "59132830"
   
 ### <a name="to-remove-a-menustrip-from-an-mdi-drop-down-menu"></a>若要從 MDI 下拉式功能表移除 MenuStrip  
   
-1.  建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
+1. 建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
   
-2.  將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+2. 將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
   
-3.  將最上層功能表項目，加入`Form1`<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.Control.Text%2A>屬性設`&File`。  
+3. 將最上層功能表項目，加入`Form1`<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.Control.Text%2A>屬性設`&File`。  
   
-4.  將三個的子功能表項目加入`&File`功能表項目和設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性，以`&Open`， `&Import from`，和`E&xit`。  
+4. 將三個的子功能表項目加入`&File`功能表項目和設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性，以`&Open`， `&Import from`，和`E&xit`。  
   
-5.  將兩個的子功能表項目加入`&Import from`子功能表項目和設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性，以`&Word`和`&Excel`。  
+5. 將兩個的子功能表項目加入`&Import from`子功能表項目和設定其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性，以`&Word`和`&Excel`。  
   
-6.  將表單加入專案，加入<xref:System.Windows.Forms.MenuStrip>至表單，並將<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>屬性`Form2`<xref:System.Windows.Forms.MenuStrip>至`true`。  
+6. 將表單加入專案，加入<xref:System.Windows.Forms.MenuStrip>至表單，並將<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>屬性`Form2`<xref:System.Windows.Forms.MenuStrip>至`true`。  
   
-7.  將最上層功能表項目，加入`Form2`<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性設`&File`。  
+7. 將最上層功能表項目，加入`Form2`<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.ToolStripItem.Text%2A>屬性設`&File`。  
   
-8.  新增`&Import from`子功能表項目`&File`功能表`Form2`，並新增`&Word` 子功能表項目`&File`功能表。  
+8. 新增`&Import from`子功能表項目`&File`功能表`Form2`，並新增`&Word` 子功能表項目`&File`功能表。  
   
 9. 設定<xref:System.Windows.Forms.MergeAction>並<xref:System.Windows.Forms.ToolStripItem.MergeIndex%2A>屬性的`Form2`下表所示的功能表項目。  
   

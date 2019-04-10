@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID91
 ms.assetid: 2f03e611-f0ed-465c-99a2-a816e034faa3
-ms.openlocfilehash: 1b24bec6dd7c4b5af10349cf523d9a7e93b385fe
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b2c0c47b359e218111c1629ea574303a6d663046
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831653"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297924"
 ---
 # <a name="object-variable-or-with-block-variable-not-set"></a>未設定物件變數或 With 區塊變數
 正在參考無效的物件變數。   發生這個錯誤的原因有下列幾種︰  
@@ -36,7 +36,7 @@ ms.locfileid: "58831653"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  設定`Option Strict`至`On`藉由將下列程式碼新增至檔案的開頭：  
+1. 設定`Option Strict`至`On`藉由將下列程式碼新增至檔案的開頭：  
   
 ```vb  
 Option Strict On  
@@ -44,13 +44,13 @@ Option Strict On
 
      When you run the project, a compiler error will appear in the **Error List** for any variable that was specified without a type.  
   
-2.  如果您不想要啟用`Option Strict`，搜尋您的程式碼所指定型別沒有任何變數 (`Dim x`而不是`Dim x As String`) 並將預定的型別新增至宣告。  
+2. 如果您不想要啟用`Option Strict`，搜尋您的程式碼所指定型別沒有任何變數 (`Dim x`而不是`Dim x As String`) 並將預定的型別新增至宣告。  
   
-3.  請確定您已設定為物件變數不參考`Nothing`。  搜尋您的程式碼，關鍵字`Nothing`，和修訂您的程式碼，讓物件未設定為`Nothing`直到之後，您已參考它。  
+3. 請確定您已設定為物件變數不參考`Nothing`。  搜尋您的程式碼，關鍵字`Nothing`，和修訂您的程式碼，讓物件未設定為`Nothing`直到之後，您已參考它。  
   
-4.  請確定陣列的任何變數建立維度，才能存取它們。 當您第一次建立陣列時，您可以是指派維度 (`Dim x(5) As String`而非`Dim x() As String`)，或使用`ReDim`設定陣列的維度，然後第一次存取關鍵字。  
+4. 請確定陣列的任何變數建立維度，才能存取它們。 當您第一次建立陣列時，您可以是指派維度 (`Dim x(5) As String`而非`Dim x() As String`)，或使用`ReDim`設定陣列的維度，然後第一次存取關鍵字。  
   
-5.  請確定您`With`區塊會藉由執行初始化`With`陳述式的進入點。  
+5. 請確定您`With`區塊會藉由執行初始化`With`陳述式的進入點。  
   
 ## <a name="see-also"></a>另請參閱
 

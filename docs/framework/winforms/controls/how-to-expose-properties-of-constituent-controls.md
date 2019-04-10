@@ -10,12 +10,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], exposing properties
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
-ms.openlocfilehash: 750caa1f45f870e63a5b7ccbe0c309e6fb0b3178
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106349"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294908"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>HOW TO：公開組成控制項的屬性
 組成複合控制項的控制項稱為*組成控制項*。 這些控制項通常宣告為私用，因此開發人員無法存取。 如果您想要讓未來的使用者都可以使用這些控制項的屬性，您必須將它們公開給使用者。 組成控制項的屬性會公開在使用者控制項中，建立屬性，並使用`get`和`set`該屬性的存取子中組成控制項的私用屬性的變更生效。  
@@ -51,11 +51,11 @@ public Color ButtonColor
   
 ### <a name="to-expose-a-property-of-a-constituent-control"></a>若要公開組成控制項的屬性  
   
-1.  建立您的使用者控制項的公用屬性。  
+1. 建立您的使用者控制項的公用屬性。  
   
-2.  在 `get`區段的屬性，撰寫程式碼，擷取您想要公開之屬性的值。  
+2. 在 `get`區段的屬性，撰寫程式碼，擷取您想要公開之屬性的值。  
   
-3.  在 `set`屬性，也就是撰寫程式碼，將屬性的值傳遞給公開組成控制項的屬性區段。  
+3. 在 `set`屬性，也就是撰寫程式碼，將屬性的值傳遞給公開組成控制項的屬性區段。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolStrip control [Windows Forms], rendering
 ms.assetid: 88a804ba-679f-4ba3-938a-0dc396199c5b
-ms.openlocfilehash: d8a85edf8c001b19191fdfd74d1f9ebdf87024ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ca1a7444c029632f83b1600e5855a13c83777594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195484"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296377"
 ---
 # <a name="how-to-create-and-set-a-custom-renderer-for-the-toolstrip-control-in-windows-forms"></a>HOW TO：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器
 <xref:System.Windows.Forms.ToolStrip> 控制項讓您輕鬆支援佈景主題和樣式。 您可以達到完全自訂的外觀和行為 （外觀及操作） 設定<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>屬性或<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。  
@@ -27,9 +27,9 @@ ms.locfileid: "59195484"
   
 ### <a name="to-create-a-custom-renderer"></a>若要建立自訂轉譯器  
   
-1.  擴充<xref:System.Windows.Forms.ToolStripRenderer>類別。  
+1. 擴充<xref:System.Windows.Forms.ToolStripRenderer>類別。  
   
-2.  實作所需的自訂轉譯藉由覆寫適當*上...* 成員  
+2. 實作所需的自訂轉譯藉由覆寫適當*上...* 成員  
   
     ```vb  
     Public Class RedTextRenderer  
@@ -59,7 +59,7 @@ ms.locfileid: "59195484"
   
 ### <a name="to-set-the-custom-renderer-to-be-the-current-renderer"></a>若要設定為目前的轉譯器的自訂轉譯器  
   
-1.  若要設定自訂轉譯器，其中<xref:System.Windows.Forms.ToolStrip>，將<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。  
+1. 若要設定自訂轉譯器，其中<xref:System.Windows.Forms.ToolStrip>，將<xref:System.Windows.Forms.ToolStrip.Renderer%2A?displayProperty=nameWithType>自訂轉譯器的屬性。  
   
     ```vb  
     toolStrip1.Renderer = New RedTextRenderer()  
@@ -69,7 +69,7 @@ ms.locfileid: "59195484"
     toolStrip1.Renderer = new RedTextRenderer();  
     ```  
   
-2.  或若要設定所有的自訂轉譯器<xref:System.Windows.Forms.ToolStrip>類別包含在您的應用程式：設定<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>為自訂轉譯器並將屬性<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>屬性設<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>。  
+2. 或若要設定所有的自訂轉譯器<xref:System.Windows.Forms.ToolStrip>類別包含在您的應用程式：設定<xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType>為自訂轉譯器並將屬性<xref:System.Windows.Forms.ToolStrip.RenderMode%2A>屬性設<xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode>。  
   
     ```vb  
     toolStrip1.RenderMode = ToolStripRenderMode.ManagerRenderMode  

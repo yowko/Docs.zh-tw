@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 5817d4d37610c87bb7e4ade407421ddce7a3a862
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295766"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic 程式的結構
 從標準建置組塊，已建立 Visual Basic 程式。 A*解決方案*可以包含一或多個專案。 A*專案*又可以包含一或多個組件。 每個*組件*編譯一或多個原始程式檔。 A*原始程式檔*提供定義和實作的類別、 結構、 模組和介面，最後會包含所有的程式碼。  
@@ -22,11 +22,11 @@ ms.locfileid: "58828117"
 ## <a name="file-level-programming-elements"></a>檔案層級的程式設計項目  
  當您啟動專案或檔案，並開啟程式碼編輯器中時，您會看到一些程式碼已經位於正確位置，以及正確的順序。 您撰寫任何程式碼應該遵循下列順序：  
   
-1.  `Option` 陳述式  
+1. `Option` 陳述式  
   
-2.  `Imports` 陳述式  
+2. `Imports` 陳述式  
   
-3.  `Namespace` 陳述式和命名空間層級項目  
+3. `Namespace` 陳述式和命名空間層級項目  
   
  如果您以不同方式輸入陳述式，會導致編譯錯誤。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58828117"
   
 -   [Sub 陳述式](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)  
+-   [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)  
+-   [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property 陳述式](../../../visual-basic/language-reference/statements/property-statement.md)  
+-   [Property Statement](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 -   [Event 陳述式](../../../visual-basic/language-reference/statements/event-statement.md)  
   
@@ -94,6 +94,6 @@ ms.locfileid: "58828117"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic 中的 Main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
 - [Visual Basic 命名慣例](../../../visual-basic/programming-guide/program-structure/naming-conventions.md)
 - [Visual Basic 的限制](../../../visual-basic/programming-guide/program-structure/limitations.md)

@@ -2,12 +2,12 @@
 title: MSMQ 啟用
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 80ce76d5cee8bb55bebdaeaea065aa41a0264bac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d83759f321abe7fa7e39202daadd4ceda82d8f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162824"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295675"
 ---
 # <a name="msmq-activation"></a>MSMQ 啟用
 這個範例示範如何在 Windows Process Activation Service (WAS) 中裝載可從訊息佇列讀取的應用程式。 這個範例會使用`netMsmqBinding`且根據[雙向通訊](../../../../docs/framework/wcf/samples/two-way-communication.md)範例。 本例中的服務是 Web 裝載的應用程式，而用戶端則會自我裝載並輸出至主控台，以便觀察所送出採購單的狀態。  
@@ -215,9 +215,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定已安裝 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因為 WAS 啟動時需要它。  
+1. 請確定已安裝 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]，因為 WAS 啟動時需要它。  
   
-2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟動元件：  
+2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。 此外，您必須安裝 WCF 非 HTTP 啟動元件：  
   
     1.  在 [開始] 功能表內選擇 [控制台]。  
   
@@ -229,11 +229,11 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  依序展開**Microsoft.NET Framework 3.0**節點，並檢查**Windows Communication Foundation 非 HTTP 啟動**功能。  
   
-3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4.  從命令視窗執行 client.exe，以執行用戶端。 這會建立佇列，並將訊息傳送給它。 讓用戶端繼續執行，以便查看服務讀取訊息的結果。  
+4. 從命令視窗執行 client.exe，以執行用戶端。 這會建立佇列，並將訊息傳送給它。 讓用戶端繼續執行，以便查看服務讀取訊息的結果。  
   
-5.  根據預設，MSMQ 啟動服務會以網路服務的身分執行。 因此，用來啟動應用程式的佇列必須讓「網路服務」擁有接收和查看其中訊息的權限。 您可以使用訊息佇列 MMC 來新增此權限：  
+5. 根據預設，MSMQ 啟動服務會以網路服務的身分執行。 因此，用來啟動應用程式的佇列必須讓「網路服務」擁有接收和查看其中訊息的權限。 您可以使用訊息佇列 MMC 來新增此權限：  
   
     1.  從**開始**功能表上，按一下**執行**，然後輸入`Compmgmt.msc`按 ENTER 鍵。  
   
@@ -245,7 +245,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     5.  在 **安全性**索引標籤上，按一下**新增**將查看和接收的網路服務的權限。  
   
-6.  設定 Windows Process Activation Service (WAS) 以支援 MSMQ 啟動。  
+6. 設定 Windows Process Activation Service (WAS) 以支援 MSMQ 啟動。  
   
      為了方便起見，下列步驟會以範例目錄中名為 AddMsmqSiteBinding.cmd 的批次檔實作。  
   
@@ -272,9 +272,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
          此命令會啟用 /servicemodelsamples 應用程式使用來存取`http://localhost/servicemodelsamples`和`net.msmq://localhost/servicemodelsamples`。
   
-7.  如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 從**開始**功能表上，按一下**執行**，然後輸入`Services.msc`。 搜尋的服務清單**Net.Msmq 接聽程式配接器**。 以滑鼠右鍵按一下並選取**屬性**。 設定**啟動類型**要**自動**，按一下 **套用**，按一下 **啟動** 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。  
+7. 如果您之前未曾這麼做，請確定 MSMQ 啟動服務已啟用。 從**開始**功能表上，按一下**執行**，然後輸入`Services.msc`。 搜尋的服務清單**Net.Msmq 接聽程式配接器**。 以滑鼠右鍵按一下並選取**屬性**。 設定**啟動類型**要**自動**，按一下 **套用**，按一下 **啟動** 按鈕。 這個步驟只需要在第一次使用 Net.Msmq 接聽程式配接器服務之前執行一次。  
   
-8.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 請使用下列程式碼：  
+8. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 此外，還要在發送採購單的用戶端上變更程式碼，以便在送出採購單時將電腦名稱反映於佇列的 URI。 請使用下列程式碼：  
   
     ```csharp  
     client.SubmitPurchaseOrder(po, "net.msmq://localhost/private/ServiceModelSamples/OrderStatus");  
@@ -309,7 +309,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例  
   
-1.  如果您的電腦不是網域的一部分，請將驗證模式和保護層級設定為 None，以關閉傳輸安全性，如下面的範例組態所示：  
+1. 如果您的電腦不是網域的一部分，請將驗證模式和保護層級設定為 None，以關閉傳輸安全性，如下面的範例組態所示：  
   
     ```xml  
     <bindings>  
@@ -321,12 +321,12 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
     </bindings>  
     ```  
   
-2.  請先變更伺服器與用戶端上的組態，再執行範例。  
+2. 請先變更伺服器與用戶端上的組態，再執行範例。  
   
     > [!NOTE]
     >  將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。  
   
-3.  若要在已加入工作群組的電腦中啟用啟動作業，則啟動服務和背景工作處理序都必須透過特定使用者帳戶 (這兩者的帳戶必須相同) 來執行，而且佇列必須具有特定使用者帳戶的 ACL。  
+3. 若要在已加入工作群組的電腦中啟用啟動作業，則啟動服務和背景工作處理序都必須透過特定使用者帳戶 (這兩者的帳戶必須相同) 來執行，而且佇列必須具有特定使用者帳戶的 ACL。  
   
      若要變更背景工作處理序用以執行的身分識別：  
   
@@ -342,9 +342,9 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     2.  以滑鼠右鍵按一下**Net.MsmqListener 配接器**，然後選擇**屬性**。  
   
-4.  變更此帳戶**登入** 索引標籤。  
+4. 變更此帳戶**登入** 索引標籤。  
   
-5.  在工作群組中，服務還必須使用不受限制的權杖來執行。 若要這麼做，請在命令視窗中執行下列命令：  
+5. 在工作群組中，服務還必須使用不受限制的權杖來執行。 若要這麼做，請在命令視窗中執行下列命令：  
   
     ```console  
     sc sidtype netmsmqactivator unrestricted  

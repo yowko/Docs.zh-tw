@@ -2,12 +2,12 @@
 title: USING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
-ms.openlocfilehash: 6a5b374bc253cb2deb7a9e1de942c32d8e8bbfcf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e14b7857a65898683939647c872c48d0b3fe458a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297859"
 ---
 # <a name="using-entity-sql"></a>USING (Entity SQL)
 指定查詢運算式中使用的命名空間 (Namespace)。  
@@ -28,9 +28,9 @@ USING [ alias = ] namespace
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 USING 運算子來指定查詢運算式中使用的命名空間。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
+1. 請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。  
   
-2.  將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
+2. 將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：  
   
 ```  
 using SqlServer; RAND()  

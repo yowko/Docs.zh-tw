@@ -2,12 +2,12 @@
 title: 預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 1312541321e74668e6527c6c54e712342fbb3a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295597"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>預設 XAML 結構描述內容和 WPF XAML 結構描述內容
 XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境與撰寫行為，包括類型對應的解析，已載入組件的方式、 如何特定讀取器和寫入器物件之間的互動方式在概念實體設定會被解譯。 本主題描述.NET Framework XAML 服務和相關聯的預設 XAML 結構描述內容，以 CLR 型別系統為基礎的功能。 本主題也描述用於 WPF 的 XAML 結構描述內容。  
@@ -46,9 +46,9 @@ XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境
   
 #### <a name="xaml-reader-input-loose-xaml"></a>XAML 讀取器輸入 (鬆散的 XAML)  
   
-1.  逐一查看 XAML 結構描述內容<xref:System.AppDomain>的應用程式中，尋找符合名稱的所有層面的已載入組件從最開始的最近載入的組件。 如果找到相符項目，則該組件用於解析。  
+1. 逐一查看 XAML 結構描述內容<xref:System.AppDomain>的應用程式中，尋找符合名稱的所有層面的已載入組件從最開始的最近載入的組件。 如果找到相符項目，則該組件用於解析。  
   
-2.  下列技術之一，否則為根據 CLR <xref:System.Reflection.Assembly> API 用來載入組件：  
+2. 下列技術之一，否則為根據 CLR <xref:System.Reflection.Assembly> API 用來載入組件：  
   
     -   如果為限定名稱，在對應中，呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名稱。  
   
@@ -61,9 +61,9 @@ XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境
   
  請注意，組件參考透過`XamlBuildTask`一律是完整限定。  
   
-1.  呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名稱。  
+1. 呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名稱。  
   
-2.  如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+2. 如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 #### <a name="baml-presentationbuildtask"></a>BAML (PresentationBuildTask)  
  有兩個層面需要組件載入為 BAML： 載入初始的組件，其中包含做為元件，BAML 和載入型別支援的組件的 BAML 生產所參考的任何型別。  
@@ -71,16 +71,16 @@ XAML 結構描述內容是限定使用特定的 XAML 詞彙的 XAML 生產環境
 ##### <a name="assembly-load-for-initial-markup"></a>初始標記的組件載入：  
  若要載入標記的來源組件的參考總是不合格。  
   
-1.  WPF XAML 結構描述內容逐一<xref:System.AppDomain>的 WPF 應用程式中，尋找符合名稱的所有層面的已載入組件從最開始的最近載入的組件。 如果找到相符項目，則該組件用於解析。  
+1. WPF XAML 結構描述內容逐一<xref:System.AppDomain>的 WPF 應用程式中，尋找符合名稱的所有層面的已載入組件從最開始的最近載入的組件。 如果找到相符項目，則該組件用於解析。  
   
-2.  如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
+2. 如果上一個步驟失敗時，使用簡短名稱 （和公開金鑰語彙基元如果有的話） 來呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>。  
   
 ##### <a name="assembly-references-by-baml-types"></a>BAML 類型的組件參考：  
  BAML 生產環境中所使用之類型的組件參考一律是完整名稱，作為建置工作的輸出。  
   
-1.  WPF XAML 結構描述內容逐一<xref:System.AppDomain>的 WPF 應用程式中，尋找符合名稱的所有層面的已載入組件從最開始的最近載入的組件。 如果找到相符項目，則該組件用於解析。  
+1. WPF XAML 結構描述內容逐一<xref:System.AppDomain>的 WPF 應用程式中，尋找符合名稱的所有層面的已載入組件從最開始的最近載入的組件。 如果找到相符項目，則該組件用於解析。  
   
-2.  否則，下列技術的其中一個用來載入組件：  
+2. 否則，下列技術的其中一個用來載入組件：  
   
     -   呼叫<xref:System.Reflection.Assembly.Load%28System.String%29?displayProperty=nameWithType>限定名稱。  
   

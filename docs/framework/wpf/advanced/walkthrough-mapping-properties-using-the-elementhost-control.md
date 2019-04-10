@@ -8,12 +8,12 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
-ms.openlocfilehash: 3fe3f00950fdfdf92c3f95dc42b27cc9110e0c95
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371680"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300914"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>逐步解說：使用 ElementHost 控制項對應屬性
 
@@ -43,9 +43,9 @@ ms.locfileid: "57371680"
 
 ### <a name="to-create-the-project"></a>若要建立專案
 
-1.  建立**Windows Forms 應用程式**專案，命名為`PropertyMappingWithElementHost`。
+1. 建立**Windows Forms 應用程式**專案，命名為`PropertyMappingWithElementHost`。
 
-2.  在 **方案總管**，將參考加入至下列[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件。
+2. 在 **方案總管**，將參考加入至下列[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]組件。
 
     -   PresentationCore
 
@@ -55,16 +55,16 @@ ms.locfileid: "57371680"
 
     -   WindowsFormsIntegration
 
-3.  將下列程式碼複製到頂端`Form1`程式碼檔案。
+3. 將下列程式碼複製到頂端`Form1`程式碼檔案。
 
      [!code-csharp[PropertyMappingWithElementHost#10](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#10)]
      [!code-vb[PropertyMappingWithElementHost#10](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#10)]
 
-4.  在 Windows Form 設計工具中開啟 `Form1`。 按兩下表單，以新增事件處理常式<xref:System.Windows.Forms.Form.Load>事件。
+4. 在 Windows Form 設計工具中開啟 `Form1`。 按兩下表單，以新增事件處理常式<xref:System.Windows.Forms.Form.Load>事件。
 
-5.  返回 Windows Form 設計工具，並新增事件處理常式的表單<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱[如何：建立使用設計工具的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。
+5. 返回 Windows Form 設計工具，並新增事件處理常式的表單<xref:System.Windows.Forms.Control.Resize>事件。 如需詳細資訊，請參閱[如何：建立使用設計工具的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。
 
-6.  宣告<xref:System.Windows.Forms.Integration.ElementHost>欄位中`Form1`類別。
+6. 宣告<xref:System.Windows.Forms.Integration.ElementHost>欄位中`Form1`類別。
 
      [!code-csharp[PropertyMappingWithElementHost#16](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#16)]
      [!code-vb[PropertyMappingWithElementHost#16](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#16)]
@@ -75,7 +75,7 @@ ms.locfileid: "57371680"
 
 ### <a name="to-define-new-property-mappings"></a>若要定義新的屬性對應
 
-1.  將下列程式碼複製到的定義`Form1`類別。
+1. 將下列程式碼複製到的定義`Form1`類別。
 
      [!code-csharp[PropertyMappingWithElementHost#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#12)]
      [!code-vb[PropertyMappingWithElementHost#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#12)]
@@ -84,7 +84,7 @@ ms.locfileid: "57371680"
 
      `OnMarginChange`方法會將轉譯<xref:System.Windows.Forms.Control.Margin%2A>屬性設[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement.Margin%2A>屬性。
 
-2.  將下列程式碼複製到的定義`Form1`類別。
+2. 將下列程式碼複製到的定義`Form1`類別。
 
      [!code-csharp[PropertyMappingWithElementHost#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#14)]
      [!code-vb[PropertyMappingWithElementHost#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#14)]
@@ -125,7 +125,7 @@ ms.locfileid: "57371680"
 
 ## <a name="initialize-your-property-mappings"></a>初始化屬性對應
 
-1.  將下列程式碼複製到的定義`Form1`類別。
+1. 將下列程式碼複製到的定義`Form1`類別。
 
      [!code-csharp[PropertyMappingWithElementHost#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#11)]
      [!code-vb[PropertyMappingWithElementHost#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#11)]
@@ -138,13 +138,13 @@ ms.locfileid: "57371680"
 
     -   將初始值指派給對應的屬性。
 
-2.  按 F5 鍵建置並執行應用程式。
+2. 按 F5 鍵建置並執行應用程式。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)

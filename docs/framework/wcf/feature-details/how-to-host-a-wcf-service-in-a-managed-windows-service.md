@@ -1,18 +1,18 @@
 ---
-title: HOW TO：將 WCF 服務裝載於 Managed 的 Windows 服務
+title: HOW TO：在受控的 Windows 服務中裝載 WCF 服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 8e37363b-4dad-4fb6-907f-73c30fac1d9a
-ms.openlocfilehash: b4cb2ae3b2db8cdfab962c61ead387baf1bb7158
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c63b249cf16100f0b18d622fdecd7cd375df83d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54613817"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297755"
 ---
-# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：將 WCF 服務裝載於 Managed 的 Windows 服務
+# <a name="how-to-host-a-wcf-service-in-a-managed-windows-service"></a>HOW TO：在受控的 Windows 服務中裝載 WCF 服務
 
 本主題概要說明建立 Windows 服務裝載 Windows Communication Foundation (WCF) 服務所需的基本步驟。 此案例會啟用受管理的 Windows 服務裝載是不是啟動訊息的安全環境中裝載網際網路資訊服務 (IIS) 外部的長時間執行 WCF 服務的選項。 服務的存留期會改由作業系統來控制。 所有 Windows 版本都提供這個裝載選項。
 
@@ -22,13 +22,13 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 
 ## <a name="construct-the-service-and-provide-the-hosting-code"></a>建構服務並提供裝載程式碼
 
-1.  建立新的 Visual Studio**主控台應用程式**專案，稱為**服務**。
+1. 建立新的 Visual Studio**主控台應用程式**專案，稱為**服務**。
 
-2.  將 Program.cs 重新命名為 Service.cs。
+2. 將 Program.cs 重新命名為 Service.cs。
 
-3.  若要將命名空間變更`Microsoft.ServiceModel.Samples`。
+3. 若要將命名空間變更`Microsoft.ServiceModel.Samples`。
 
-4.  加入下列組件的參考：
+4. 加入下列組件的參考：
 
     - System.ServiceModel.dll
 
@@ -36,22 +36,22 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 
     - System.Configuration.Install.dll
 
-5.  使用陳述式將下列內容加入至 Service.cs。
+5. 使用陳述式將下列內容加入至 Service.cs。
 
      [!code-csharp[c_HowTo_HostInNTService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#0)]
      [!code-vb[c_HowTo_HostInNTService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#0)]
 
-6.  定義 `ICalculator` 服務合約，如下列程式碼所示。
+6. 定義 `ICalculator` 服務合約，如下列程式碼所示。
 
      [!code-csharp[c_HowTo_HostInNTService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#1)]
      [!code-vb[c_HowTo_HostInNTService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#1)]
 
-7.  在 `CalculatorService` 類別中實作服務合約，如下列程式碼所示。
+7. 在 `CalculatorService` 類別中實作服務合約，如下列程式碼所示。
 
      [!code-csharp[c_HowTo_HostInNTService#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#2)]
      [!code-vb[c_HowTo_HostInNTService#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#2)]
 
-8.  建立繼承自 `CalculatorWindowsService` 類別的新類別，名為 <xref:System.ServiceProcess.ServiceBase>。 加入名為 `serviceHost` 的區域變數，以參考 <xref:System.ServiceModel.ServiceHost> 執行個體。 定義 `Main` 方法來呼叫 `ServiceBase.Run(new CalculatorWindowsService)`。
+8. 建立繼承自 `CalculatorWindowsService` 類別的新類別，名為 <xref:System.ServiceProcess.ServiceBase>。 加入名為 `serviceHost` 的區域變數，以參考 <xref:System.ServiceModel.ServiceHost> 執行個體。 定義`Main`呼叫的方法 `ServiceBase.Run(new CalculatorWindowsService)`
 
      [!code-csharp[c_HowTo_HostInNTService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_hostinntservice/cs/service.cs#3)]
      [!code-vb[c_HowTo_HostInNTService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_hostinntservice/vb/service.vb#3)]
@@ -116,13 +116,13 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 
 ## <a name="install-and-run-the-service"></a>安裝並執行服務
 
-1.  建置方案以建立 `Service.exe` 可執行檔。
+1. 建置方案以建立 `Service.exe` 可執行檔。
 
-2.  開啟 Visual Studio 開發人員命令提示字元並巡覽至專案目錄。 在命令提示字元中輸入 `installutil bin\service.exe` 以安裝 Windows 服務 
+2. 開啟 Visual Studio 開發人員命令提示字元並巡覽至專案目錄。 在命令提示字元中輸入 `installutil bin\service.exe` 以安裝 Windows 服務 
 
      在命令提示字元中輸入 `services.msc` 以存取服務控制管理員 (SCM)。 Windows 服務應該會在 [服務] 中顯示為 "WCFWindowsServiceSample"。 如果 Windows 服務執行用戶端只可以回應的 WCF 服務。 若要啟動服務，以滑鼠右鍵按一下它在 SCM 和 [啟動]，選取或類型**net start WCFWindowsServiceSample**在命令提示字元。
 
-3.  若要變更服務，必須先加以停止並解除安裝。 若要停止服務，以滑鼠右鍵按一下 SCM 中的服務並選取 [停止]，或是**輸入 net stop WCFWindowsServiceSample**在命令提示字元。 請注意，如果您在停止 Windows 服務後執行用戶端，則當用戶端嘗試存取此服務時將會發生 <xref:System.ServiceModel.EndpointNotFoundException> 例外狀況。 若要解除安裝 Windows 服務型別**installutil /u bin\service.exe**在命令提示字元。
+3. 若要變更服務，必須先加以停止並解除安裝。 若要停止服務，以滑鼠右鍵按一下 SCM 中的服務並選取 [停止]，或是**輸入 net stop WCFWindowsServiceSample**在命令提示字元。 請注意，如果您在停止 Windows 服務後執行用戶端，則當用戶端嘗試存取此服務時將會發生 <xref:System.ServiceModel.EndpointNotFoundException> 例外狀況。 若要解除安裝 Windows 服務型別**installutil /u bin\service.exe**在命令提示字元。
 
 ## <a name="example"></a>範例
 
@@ -135,7 +135,7 @@ Windows 服務可以透過 Microsoft Management Console (MMC) 中的 Microsoft.M
 
 ## <a name="see-also"></a>另請參閱
 
-- [簡化設定](../../../../docs/framework/wcf/simplified-configuration.md)
+- [簡化的組態](../../../../docs/framework/wcf/simplified-configuration.md)
 - [在 Managed 應用程式中裝載](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)
 - [裝載服務](../../../../docs/framework/wcf/hosting-services.md)
 - [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

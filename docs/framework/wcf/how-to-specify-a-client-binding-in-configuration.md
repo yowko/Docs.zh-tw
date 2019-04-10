@@ -2,12 +2,12 @@
 title: HOW TO：在組態中指定用戶端繫結
 ms.date: 03/30/2017
 ms.assetid: 4a7c79aa-50ee-4991-891e-adc0599323a7
-ms.openlocfilehash: 81e9b4b5949d3a89749911a30ad199c4f0da300f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 633bb0feeb0f9354bd6ff8ee6637f123d3e3cbf4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295129"
 ---
 # <a name="how-to-specify-a-client-binding-in-configuration"></a>HOW TO：在組態中指定用戶端繫結
 在此範例中，建立了一個使用計算機服務的用戶端主控台應用程式，並在組態中以宣告方式指定用戶端的繫結。 用戶端會存取 `CalculatorService` (該服務會實作 `ICalculator` 介面)，而服務和用戶端都會使用 <xref:System.ServiceModel.BasicHttpBinding> 類別。  
@@ -24,31 +24,31 @@ ms.locfileid: "59091560"
   
 ### <a name="specifying-a-client-binding-in-configuration"></a>指定組態中的用戶端繫結  
   
-1.  從命令列使用 Svcutil.exe 產生取自服務中繼資料的程式碼。  
+1. 從命令列使用 Svcutil.exe 產生取自服務中繼資料的程式碼。  
   
     ```  
     Svcutil.exe <service's Metadata Exchange (MEX) address or HTTP GET address>   
     ```  
   
-2.  所產生的用戶端會包含 `ICalculator` 介面，其中定義了用戶端實作所必須滿足的服務合約。  
+2. 所產生的用戶端會包含 `ICalculator` 介面，其中定義了用戶端實作所必須滿足的服務合約。  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#1)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#1)]  
   
-3.  產生的用戶端也會包含 `ClientCalculator` 的實作。  
+3. 產生的用戶端也會包含 `ClientCalculator` 的實作。  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/generatedclient.cs#2)]
      [!code-csharp[C_HowTo_ConfigureClientBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/source.cs#2)]  
   
-4.  Svcutil.exe 也會為使用 <xref:System.ServiceModel.BasicHttpBinding> 類別的用戶端產生組態。 使用 Visual Studio 時，此檔案 App.config 的名稱。請注意，服務的實作內部並未指定位址和繫結資訊。 同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。  
+4. Svcutil.exe 也會為使用 <xref:System.ServiceModel.BasicHttpBinding> 類別的用戶端產生組態。 使用 Visual Studio 時，此檔案 App.config 的名稱。請注意，服務的實作內部並未指定位址和繫結資訊。 同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。  
   
      [!code-xml[C_HowTo_ConfigureClientBinding#100](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/common/client.exe.config#100)]   
             
-5.  在應用程式內建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。  
+5. 在應用程式內建立 `ClientCalculator` 的執行個體，然後呼叫服務作業。  
   
      [!code-csharp[C_HowTo_ConfigureClientBinding#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureclientbinding/cs/client.cs#3)]  
   
-6.  請編譯並執行用戶端。  
+6. 請編譯並執行用戶端。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: fc9e04e8-2d05-4870-8cd6-5bd276814afc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1ff4db5216cf984af764176fef636bb586f97c2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f72a1d6a10c5899a02019bf826dc3cc9d5457bed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081485"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298470"
 ---
 # <a name="getting-started-with-net-native"></a>.NET Native 使用者入門
 不論是為了 Windows 10 撰寫新的 Windows 應用程式，或是移轉現有的 Windows 市集應用程式，都可遵循一組相同的程序進行。 若要建立 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 應用程式，請遵循下列步驟：  
   
-1.  [開發以 Windows 10 為目標的通用 Windows 平台 (UWP) 應用程式](#Step1)，並測試應用程式的偵錯組建，以確保運作正常。  
+1. [開發以 Windows 10 為目標的通用 Windows 平台 (UWP) 應用程式](#Step1)，並測試應用程式的偵錯組建，以確保運作正常。  
   
-2.  [處理其他反映和序列化使用](#Step2)。  
+2. [處理其他反映和序列化使用](#Step2)。  
   
-3.  [部署並測試應用程式的發行組建](#Step3)。  
+3. [部署並測試應用程式的發行組建](#Step3)。  
   
-4.  [手動解決遺漏中繼資料的問題](#Step4)，然後重複 [步驟 3](#Step3) 直到所有問題解決為止。  
+4. [手動解決遺漏中繼資料的問題](#Step4)，然後重複 [步驟 3](#Step3) 直到所有問題解決為止。  
   
 > [!NOTE]
 >  如果您要將現有的 Windows 市集應用程式移轉至 [!INCLUDE[net_native](../../../includes/net-native-md.md)]，請務必檢閱 [將您的 Windows 市集應用程式移轉至 .NET Native](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md)。  
@@ -29,9 +29,9 @@ ms.locfileid: "59081485"
 ## <a name="step-1-develop-and-test-debug-builds-of-your-uwp-app"></a>步驟 1：開發和測試您的 UWP 應用程式的偵錯組建  
  不論您要開發新的應用程式，或移轉現有的應用程式，都會遵循與所有 Windows 應用程式相同的程序。  
   
-1.  使用適用於 Visual C# 或 Visual Basic 的通用 Windows 應用程式範本，在 Visual Studio 中建立新的 UWP 專案。 根據預設，所有 UWP 應用程式都會以 CoreCLR 為目標，而其發行組建則使用 .NET Native 工具鏈進行編譯。  
+1. 使用適用於 Visual C# 或 Visual Basic 的通用 Windows 應用程式範本，在 Visual Studio 中建立新的 UWP 專案。 根據預設，所有 UWP 應用程式都會以 CoreCLR 為目標，而其發行組建則使用 .NET Native 工具鏈進行編譯。  
   
-2.  請注意，使用 .NET Native 工具鏈編譯 UWP 應用程式專案與不使用此工具進行編譯之間有一些已知的相容性問題。 如需詳細資訊，請參閱 [移轉指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。  
+2. 請注意，使用 .NET Native 工具鏈編譯 UWP 應用程式專案與不使用此工具進行編譯之間有一些已知的相容性問題。 如需詳細資訊，請參閱 [移轉指南](../../../docs/framework/net-native/migrating-your-windows-store-app-to-net-native.md) 。  
   
  您現在可以針對在本機系統上 (或模擬器中) 執行的 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 介面區，撰寫 C# 或 Visual Basic 程式碼。  
   

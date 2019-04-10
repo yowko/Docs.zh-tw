@@ -6,12 +6,12 @@ helpviewer_keywords:
 - win32manifest compiler option [Visual Basic]
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
-ms.openlocfilehash: bd9a708b99d11b90e47c3413bb0003ce2def13a1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833710"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300794"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 識別要內嵌到專案的可攜式執行檔 (PE) 中的使用者定義 Win32 應用程式資訊清單檔。  
@@ -38,9 +38,9 @@ ms.locfileid: "58833710"
   
  如果其中一個下列條件成立時，您的應用程式會受限於虛擬化：  
   
-1.  您使用`-nowin32manifest`選項，而且未提供後面建置步驟中，或做為一部分的 Windows 資源 (.res) 檔案的資訊清單使用`-win32resource`選項。  
+1. 您使用`-nowin32manifest`選項，而且未提供後面建置步驟中，或做為一部分的 Windows 資源 (.res) 檔案的資訊清單使用`-win32resource`選項。  
   
-2.  您可以提供未指定所要求執行層級的自訂資訊清單。  
+2. 您可以提供未指定所要求執行層級的自訂資訊清單。  
   
  Visual Studio 會建立預設.manifest 檔案，並將它與可執行檔一起儲存在偵錯和發行目錄中。 您可以檢視或編輯預設 app.manifest 檔案，依序按一下**檢視的 UAC 設定**上**應用程式**專案設計工具中的索引標籤。 如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   

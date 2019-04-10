@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3889e48019f30f93a9eaa677de26445dbcc33d80
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 13bf7342157de48e0183537afea2f2e53d1498dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198799"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300303"
 ---
 # <a name="iclrtaskreset-method"></a>ICLRTask::Reset 方法
 通知 common language runtime (CLR) 主機已完成一項工作，並可讓重複使用目前的 CLR [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)來代表另一項工作的執行個體。  
@@ -55,15 +55,15 @@ HRESULT Reset (
 ## <a name="remarks"></a>備註  
  CLR 可以回收之前建立`ICLRTask`避免重複建立新的執行個體，每次需要新的工作負載的執行個體。 主應用程式啟用這項功能，藉由呼叫`ICLRTask::Reset`而非[iclrtask:: Exittask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-exittask-method.md)何時已完成工作。 下列清單摘要說明一般生命週期的`ICLRTask`執行個體：  
   
-1.  執行階段建立新`ICLRTask`執行個體。  
+1. 執行階段建立新`ICLRTask`執行個體。  
   
-2.  執行階段會呼叫[ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)來取得目前的主控件工作的參考。  
+2. 執行階段會呼叫[ihosttaskmanager:: Getcurrenttask](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-getcurrenttask-method.md)來取得目前的主控件工作的參考。  
   
-3.  執行階段會呼叫[ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)主應用程式工作相關聯的新執行個體。  
+3. 執行階段會呼叫[ihosttask:: Setclrtask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-setclrtask-method.md)主應用程式工作相關聯的新執行個體。  
   
-4.  工作執行，並完成。  
+4. 工作執行，並完成。  
   
-5.  主機會終結工作，藉由呼叫`ICLRTask::ExitTask`。  
+5. 主機會終結工作，藉由呼叫`ICLRTask::ExitTask`。  
   
  `Reset` 改變此案例中的有兩種。 在步驟 5，主機會呼叫上述`Reset`重設為初始狀態的工作，然後以減少`ICLRTask`與其關聯的執行個體[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)執行個體。 如有需要，主應用程式也可以快取`IHostTask`供重複使用的執行個體。 在步驟 1 所述，執行階段提取回收`ICLRTask`從快取，而不是建立新的執行個體。  
   

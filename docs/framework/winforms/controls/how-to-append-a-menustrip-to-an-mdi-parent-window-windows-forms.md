@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], appending
 - MDI [Windows Forms], merging menu items
 ms.assetid: ab70c936-b452-4653-b417-17be57bb795b
-ms.openlocfilehash: 9c39b80c06cae91c43c7a79390cef71ae781489e
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: a335531b090983de4e2b3daccc9f956930cbad6e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442740"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298938"
 ---
 # <a name="how-to-append-a-menustrip-to-an-mdi-parent-window-windows-forms"></a>HOW TO：將 MenuStrip 附加至 MDI 父視窗 (Windows Form)
 在某些應用程式中，多重文件介面 (MDI) 子視窗的類型可能與 MDI 父視窗不同。 例如，MDI 父視窗可能是試算表，而 MDI 子視窗可能是圖表。 在這種情況下，由於已啟動各種不同類型的 MDI 子視窗，因此您需要以 MDI 子視窗功能表的內容更新 MDI 父視窗功能表的內容。  
@@ -25,25 +25,25 @@ ms.locfileid: "56442740"
   
 ### <a name="to-append-a-menu-item-to-an-mdi-parent"></a>將功能表項目附加至 MDI 父視窗  
   
-1.  建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
+1. 建立表單，並將其 <xref:System.Windows.Forms.Form.IsMdiContainer%2A> 屬性設定為 `true`。  
   
-2.  將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+2. 將 <xref:System.Windows.Forms.MenuStrip> 加入 `Form1`，並將 <xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
   
-3.  將 `Form1`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStripItem.Visible%2A> 屬性設定為 `false`。  
+3. 設定<xref:System.Windows.Forms.ToolStripItem.Visible%2A>的屬性`Form1`<xref:System.Windows.Forms.MenuStrip>至`false`。  
   
-4.  將最上層功能表項目加入 `Form1`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.Control.Text%2A> 屬性設定為 `&File`。  
+4. 將最上層功能表項目，加入`Form1`<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.Control.Text%2A>屬性設`&File`。  
   
-5.  將子功能表項目加入 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性設定為 `&Open`。  
+5. 將子功能表項目加入 `&File` 功能表項目，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性設定為 `&Open`。  
   
-6.  將表單加入專案，將 <xref:System.Windows.Forms.MenuStrip> 加入表單，並將 `Form2`<xref:System.Windows.Forms.MenuStrip> 的 <xref:System.Windows.Forms.ToolStrip.AllowMerge%2A> 屬性設定為 `true`。  
+6. 將表單加入專案，加入<xref:System.Windows.Forms.MenuStrip>至表單，並將<xref:System.Windows.Forms.ToolStrip.AllowMerge%2A>屬性`Form2`<xref:System.Windows.Forms.MenuStrip>至`true`。  
   
-7.  將最上層功能表項目加入 `Form2`<xref:System.Windows.Forms.MenuStrip>，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性設定為 `&Special`。  
+7. 將最上層功能表項目，加入`Form2`<xref:System.Windows.Forms.MenuStrip>並將其<xref:System.Windows.Forms.Form.Text%2A>屬性設`&Special`。  
   
-8.  將兩個子功能表項目加入 `&Special` 功能表項目，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性分別設定為 `Command&1` 和 `Command&2`。  
+8. 將兩個子功能表項目加入 `&Special` 功能表項目，並將其 <xref:System.Windows.Forms.Form.Text%2A> 屬性分別設定為 `Command&1` 和 `Command&2`。  
   
 9. 將 `&Special`、`Command&1` 和 `Command&2` 功能表項目的 <xref:System.Windows.Forms.MergeAction> 屬性設定為 <xref:System.Windows.Forms.MergeAction.Append>。  
   
-10. 為 `&New`<xref:System.Windows.Forms.ToolStripMenuItem> 的 <xref:System.Windows.Forms.Control.Click> 事件建立事件處理常式。  
+10. 建立事件處理常式<xref:System.Windows.Forms.Control.Click>事件的`&New`<xref:System.Windows.Forms.ToolStripMenuItem>。  
   
 11. 在事件處理常式中，插入類似下列程式碼範例的程式碼，以建立和顯示 `Form2` 的新執行個體，做為 `Form1` 的 MDI 子視窗。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "56442740"
     }  
     ```  
   
-12. 將類似下列程式碼範例的程式碼放入 `&Open`<xref:System.Windows.Forms.ToolStripMenuItem> 之中，以註冊事件處理常式。  
+12. 將程式碼放在類似下列程式碼範例在`&Open`<xref:System.Windows.Forms.ToolStripMenuItem>註冊事件處理常式。  
   
     ```vb  
     Private Sub openToolStripMenuItem_Click(sender As Object, e As _  

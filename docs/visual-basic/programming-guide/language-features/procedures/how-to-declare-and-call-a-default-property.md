@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - default properties
 ms.assetid: 68b4026e-09ef-4613-808e-f6287494ff63
-ms.openlocfilehash: f11b5a184b72df68e302094dee762ec6876a397c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9ca9a0ccdac3ac13429928233a0c09d58427ce74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295636"
 ---
 # <a name="how-to-declare-and-call-a-default-property-in-visual-basic"></a>HOW TO：宣告，並在 Visual Basic 中呼叫預設屬性
 A*屬性預設*是類別或結構的屬性，不需要指定它可以存取您的程式碼。 在呼叫程式碼命名類別或結構，但不是屬性，與內容允許存取屬性時，Visual Basic 會解析成該類別或結構的預設屬性存取若有的話。  
@@ -26,37 +26,37 @@ A*屬性預設*是類別或結構的屬性，不需要指定它可以存取您�
   
 ### <a name="to-declare-a-default-property"></a>若要宣告預設屬性  
   
-1.  以一般方式宣告的屬性。 未指定`Shared`或`Private`關鍵字。  
+1. 以一般方式宣告的屬性。 未指定`Shared`或`Private`關鍵字。  
   
-2.  包含`Default`屬性宣告中的關鍵字。  
+2. 包含`Default`屬性宣告中的關鍵字。  
   
-3.  指定至少一個參數的屬性。 您無法定義預設屬性未採用至少一個引數。  
+3. 指定至少一個參數的屬性。 您無法定義預設屬性未採用至少一個引數。  
   
      [!code-vb[VbVbcnProcedures#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#17)]  
   
 ### <a name="to-call-a-default-property"></a>若要呼叫預設屬性  
   
-1.  宣告包含的類別或結構類型的變數。  
+1. 宣告包含的類別或結構類型的變數。  
   
      [!code-vb[VbVbcnProcedures#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#16)]  
   
-2.  使用單獨在運算式中的變數名稱，您通常會包含屬性名稱。  
+2. 使用單獨在運算式中的變數名稱，您通常會包含屬性名稱。  
   
      [!code-vb[VbVbcnProcedures#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#21)]  
   
-3.  變數名稱後面加括號括住的引數清單。 預設屬性必須採用至少一個引數。  
+3. 變數名稱後面加括號括住的引數清單。 預設屬性必須採用至少一個引數。  
   
      [!code-vb[VbVbcnProcedures#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#20)]  
   
-4.  若要擷取預設屬性值，請使用變數的名稱，引數清單中，在運算式中，或等於下列 (`=`) 登入在指派陳述式。  
+4. 若要擷取預設屬性值，請使用變數的名稱，引數清單中，在運算式中，或等於下列 (`=`) 登入在指派陳述式。  
   
      [!code-vb[VbVbcnProcedures#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#15)]  
   
-5.  若要設定預設屬性值，使用指派陳述式左邊的引數清單中的變數名稱。  
+5. 若要設定預設屬性值，使用指派陳述式左邊的引數清單中的變數名稱。  
   
      [!code-vb[VbVbcnProcedures#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#14)]  
   
-6.  就像您一樣存取任何其他屬性，您一律可以指定變數的名稱，連同預設屬性名稱。  
+6. 就像您一樣存取任何其他屬性，您一律可以指定變數的名稱，連同預設屬性名稱。  
   
      [!code-vb[VbVbcnProcedures#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#19)]  
   
@@ -85,11 +85,11 @@ A*屬性預設*是類別或結構的屬性，不需要指定它可以存取您�
 
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [Default](../../../../visual-basic/language-reference/modifiers/default.md)
-- [在 Visual Basic 中屬性和變數之間的差異](./differences-between-properties-and-variables.md)
-- [如何：建立屬性](./how-to-create-a-property.md)
-- [如何：宣告混合的存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)
-- [如何：將值放在屬性中](./how-to-put-a-value-in-a-property.md)
-- [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)
+- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [預設](../../../../visual-basic/language-reference/modifiers/default.md)
+- [Visual Basic 中屬性和變數的差別](./differences-between-properties-and-variables.md)
+- [HOW TO：建立屬性](./how-to-create-a-property.md)
+- [HOW TO：宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [HOW TO：呼叫屬性程序](./how-to-call-a-property-procedure.md)
+- [HOW TO：將值置入屬性](./how-to-put-a-value-in-a-property.md)
+- [HOW TO：取得屬性值](./how-to-get-a-value-from-a-property.md)

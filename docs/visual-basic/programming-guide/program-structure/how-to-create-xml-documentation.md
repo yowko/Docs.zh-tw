@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XML comments
 - XML documentation [Visual Basic], creating
 ms.assetid: 27b5b06c-09b9-496a-8245-f9542d846230
-ms.openlocfilehash: 2f32847c1b3a0fdf1892d6b423bb33783b6bdfe3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 95f6c5b23deadc16eb1e81f274e2cc5149598fb7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814584"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294480"
 ---
 # <a name="how-to-create-xml-documentation-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立 XML 文件
 此範例示範如何將 XML 文件註解新增至您的程式碼。  
@@ -19,22 +19,22 @@ ms.locfileid: "58814584"
   
 ### <a name="to-create-xml-documentation-for-a-type-or-member"></a>若要建立的型別或成員的 XML 文件  
   
-1.  在 **程式碼編輯器**，您的游標放在上面類型或成員的項目，您要建立文件行。  
+1. 在 **程式碼編輯器**，您的游標放在上面類型或成員的項目，您要建立文件行。  
   
-2.  型別`'''`（三個單引號）。  
+2. 型別`'''`（三個單引號）。  
   
      型別或成員的 XML 基本架構中新增**程式碼編輯器**。  
   
-3.  新增適當的標記之間的描述性資訊。  
+3. 新增適當的標記之間的描述性資訊。  
   
     > [!NOTE]
     >  如果您新增其他行，XML 文件區塊內，每一行的開頭必須`'''`。  
   
-4.  新增額外的程式碼會使用新的 XML 文件註解中的型別或成員。  
+4. 新增額外的程式碼會使用新的 XML 文件註解中的型別或成員。  
   
      IntelliSense 會顯示從文字\<摘要 > 標記的型別或成員。  
   
-5.  編譯程式碼以產生包含文件註解的 XML 檔案。 如需詳細資訊，請參閱 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)。  
+5. 編譯程式碼以產生包含文件註解的 XML 檔案。 如需詳細資訊，請參閱 [/doc](../../../visual-basic/reference/command-line-compiler/doc.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

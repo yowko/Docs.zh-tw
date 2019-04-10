@@ -2,12 +2,12 @@
 title: HOW TO：使用組態檔發行服務的中繼資料
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
-ms.openlocfilehash: 2aa85aa9682f1f5f4b6c13465034000bb01f0e62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295532"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>HOW TO：使用組態檔發行服務的中繼資料
 這是其中兩個示範 Windows Communication Foundation (WCF) 服務發行中繼資料的使用說明主題。 有兩種方法可以指定服務發行中繼資料的方式，分別是使用組態檔和使用程式碼。 本主題說明如何使用組態檔發行服務的中繼資料。  
@@ -92,15 +92,15 @@ namespace Metadata.Samples
   
 ### <a name="to-publish-metadata-for-a-wcf-service-using-an-application-configuration-file"></a>若要使用應用程式組態檔來發行 WCF 服務的中繼資料  
   
-1.  在 App.config 檔案中，於結尾的 `</services>` 項目之後，建立 `<behaviors>` 項目。  
+1. 在 App.config 檔案中，於結尾的 `</services>` 項目之後，建立 `<behaviors>` 項目。  
 
-2.  在 `<behaviors>` 項目中，新增 `<serviceBehaviors>` 項目。  
+2. 在 `<behaviors>` 項目中，新增 `<serviceBehaviors>` 項目。  
 
-3.  將 `<behavior>` 項目新增至 `<serviceBehaviors>` 項目，並指定 `name` 項目的  `<behavior>` 屬性值。  
+3. 將 `<behavior>` 項目新增至 `<serviceBehaviors>` 項目，並指定 `name` 項目的  `<behavior>` 屬性值。  
 
-4.  將 `<serviceMetadata>` 項目加入至 `<behavior>` 項目。 將 `httpGetEnabled` 屬性設為 `true` 並將 `policyVersion` 屬性設為 Policy15。 `httpGetEnabled` 允許服務回應 HTTP GET 要求所做的中繼資料要求。 `policyVersion` 會告知服務符合 Ws-policy 1.5，產生中繼資料時。  
+4. 將 `<serviceMetadata>` 項目加入至 `<behavior>` 項目。 將 `httpGetEnabled` 屬性設為 `true` 並將 `policyVersion` 屬性設為 Policy15。 `httpGetEnabled` 允許服務回應 HTTP GET 要求所做的中繼資料要求。 `policyVersion` 會告知服務符合 Ws-policy 1.5，產生中繼資料時。  
 
-5.  將 `behaviorConfiguration` 屬性加入至 `<service>` 項目，並指定 `name` 項目的 `<behavior>` 屬性 (於步驟 1 中加入)，如下列程式碼範例所示。  
+5. 將 `behaviorConfiguration` 屬性加入至 `<service>` 項目，並指定 `name` 項目的 `<behavior>` 屬性 (於步驟 1 中加入)，如下列程式碼範例所示。  
   
     ```xml  
     <services>  
@@ -119,7 +119,7 @@ namespace Metadata.Samples
     </behaviors>  
     ```  
   
-6.  加入一個或多個 `<endpoint>` 項目，並將合約設為 `IMetadataExchange`，如下列程式碼範例所示。  
+6. 加入一個或多個 `<endpoint>` 項目，並將合約設為 `IMetadataExchange`，如下列程式碼範例所示。  
   
     ```xml  
     <services>  
@@ -138,7 +138,7 @@ namespace Metadata.Samples
     </services>  
     ```  
   
-7.  針對上一個步驟中加入的中繼資料端點，將 `binding` 屬性設為下列其中一項：  
+7. 針對上一個步驟中加入的中繼資料端點，將 `binding` 屬性設為下列其中一項：  
   
     -   `mexHttpBinding` HTTP 發行集。  
   
@@ -148,7 +148,7 @@ namespace Metadata.Samples
   
     -   `mexTcpBinding` 適用 TCP 發行。  
   
-8.  針對上一個步驟中加入的中繼資料端點，將位址設為與下列項目相等：  
+8. 針對上一個步驟中加入的中繼資料端點，將位址設為與下列項目相等：  
   
     -   如果基底位址與中繼資料繫結相同，則設定空字串以使用主應用程式的基底位址做為發行點。  
   
@@ -162,7 +162,7 @@ namespace Metadata.Samples
   
 ### <a name="to-use-default-endpoints"></a>若要使用預設端點  
   
-1.  若要對使用預設端點的服務設定中繼資料，請在組態檔中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> (如上一個範例所示)，但不要指定任何端點。 組態檔如下所示。  
+1. 若要對使用預設端點的服務設定中繼資料，請在組態檔中指定 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> (如上一個範例所示)，但不要指定任何端點。 組態檔如下所示。  
   
     ```xml  
     <configuration>  

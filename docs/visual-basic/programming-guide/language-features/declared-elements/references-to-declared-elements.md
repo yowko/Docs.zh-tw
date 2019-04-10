@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 5aea43c2dab4eb44ab40449ee6e970a28fdc4abb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58821448"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296702"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>已宣告之項目的參考 (Visual Basic)
 當您的程式碼參考宣告的項目時，Visual Basic 編譯器會符合您適當的宣告該名稱的參考中的名稱。 如果多個項目宣告具有相同名稱時，您可以控制這些項目所要參考即*合格*它的名稱。  
@@ -50,7 +50,7 @@ End Module
   
 #### <a name="to-access-a-declared-element-by-qualifying-its-name"></a>若要限定其名稱來存取宣告的項目  
   
-1.  判斷已定義的項目所在的位置。 這可能包括命名空間或甚至是命名空間的階層。 最低層級命名空間內的項目必須包含在模組、 類別或結構。  
+1. 判斷已定義的項目所在的位置。 這可能包括命名空間或甚至是命名空間的階層。 最低層級命名空間內的項目必須包含在模組、 類別或結構。  
   
     ```vb  
     ' Assume the following hierarchy exists outside your code.  
@@ -66,23 +66,23 @@ End Module
     End Namespace  
     ```  
   
-2.  判斷限定性條件路徑，根據目標項目的位置。 開始使用的最高層級的命名空間，繼續在最低層級命名空間中，且結尾模組、 類別或結構，其中包含目標項目。 在路徑中的每個項目必須包含在它後面的項目。  
+2. 判斷限定性條件路徑，根據目標項目的位置。 開始使用的最高層級的命名空間，繼續在最低層級命名空間中，且結尾模組、 類別或結構，其中包含目標項目。 在路徑中的每個項目必須包含在它後面的項目。  
   
      `outerSpace` → `innerSpace` → `holdsTotals` → `totals`  
   
-3.  準備目標項目的限定性條件字串。 將句號 (`.`) 後的路徑中的每個項目。 應用程式必須具有限定性條件字串中的每個項目的存取權。  
+3. 準備目標項目的限定性條件字串。 將句號 (`.`) 後的路徑中的每個項目。 應用程式必須具有限定性條件字串中的每個項目的存取權。  
   
     ```vb  
     outerSpace.innerSpace.holdsTotals.totals.  
     ```  
   
-4.  撰寫運算式或指派陳述式以一般方式參考目標項目。  
+4. 撰寫運算式或指派陳述式以一般方式參考目標項目。  
   
     ```vb  
     grandTotal = 9000  
     ```  
   
-5.  目標項目名稱前加限定性條件字串。 名稱應該立即接在句號 (`.`)，跟模組、 類別或結構，其包含的項目。  
+5. 目標項目名稱前加限定性條件字串。 名稱應該立即接在句號 (`.`)，跟模組、 類別或結構，其包含的項目。  
   
     ```vb  
     ' Assume the following module is part of your code.  
@@ -93,7 +93,7 @@ End Module
     End Module  
     ```  
   
-6.  編譯器會用來尋找要符合目標項目參考的清楚且明確宣告的限定性條件字串。  
+6. 編譯器會用來尋找要符合目標項目參考的清楚且明確宣告的限定性條件字串。  
   
  您也可能必須限定名稱參考，如果您的應用程式可以存取多個具有相同名稱的程式設計項目。 例如，<xref:System.Windows.Forms>並<xref:System.Web.UI.WebControls>這兩個的命名空間包含`Label`類別 (<xref:System.Windows.Forms.Label?displayProperty=nameWithType>和<xref:System.Web.UI.WebControls.Label?displayProperty=nameWithType>)。 如果您的應用程式同時使用兩者，則它會定義它自己`Label`類別，您必須以不同的方式區分`Label`物件。 在變數宣告中包含的命名空間或匯入的別名。 下列範例會使用匯入別名。  
   
@@ -195,7 +195,7 @@ Dim xDoc As xD.XmlDocument
   
 ## <a name="see-also"></a>另請參閱
 
-- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
 - [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - LINQ queries [Visual Basic]
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
-ms.openlocfilehash: 362d241d1da01ea935ab3bb3dcdfcba30cb8c67e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975143"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295870"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>撰寫第一個 LINQ 查詢 (Visual Basic)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢會以專用的查詢語言來表示。 經過一段時間，不同的語言所開發的不同類型的資料來源，例如 SQL 用於關聯式資料庫，而 XQuery 用於 XML。 這可讓您所需的應用程式開發人員若要了解新的查詢語言，每種類型的資料來源或支援的資料格式。  
@@ -21,11 +21,11 @@ ms.locfileid: "56975143"
 ## <a name="three-stages-of-a-query-operation"></a>查詢作業的三個階段  
  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業是由三個動作所組成：  
   
-1.  取得資料來源。  
+1. 取得資料來源。  
   
-2.  建立查詢。  
+2. 建立查詢。  
   
-3.  執行查詢。  
+3. 執行查詢。  
   
  在  [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]，查詢的執行是不同的查詢建立。 您不只是藉由建立查詢擷取任何資料。 本主題稍後會詳細討論這一點。  
   

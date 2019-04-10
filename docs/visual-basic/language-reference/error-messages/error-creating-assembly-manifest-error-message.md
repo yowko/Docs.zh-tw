@@ -1,5 +1,5 @@
 ---
-title: '建立組件資訊清單時發生錯誤: <error message>'
+title: 建立組件資訊清單時發生錯誤： <error message>
 ms.date: 07/20/2015
 f1_keywords:
 - bc30140
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30140
 ms.assetid: 1beb5aa0-7b79-4c85-946b-5c2d0a41d1d2
-ms.openlocfilehash: f9d7867157b65d746809d9b2f50797285d7fcd9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0f67b772bab3104c00510954d01b200aadfa9e8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831954"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296286"
 ---
 # <a name="error-creating-assembly-manifest-error-message"></a>建立組件資訊清單時發生錯誤：\<錯誤訊息 >
 Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產生資訊清單的組件。 連結器在建立組件的前置發出階段回報了錯誤。  
@@ -23,13 +23,13 @@ Visual Basic 編譯器呼叫組件連結器 (Al.exe，也稱為 Alink)，以產�
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  檢查引用的錯誤訊息，並參考主題[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。 取得錯誤 AL1019 的進一步說明和建議  
+1. 檢查引用的錯誤訊息，並參考主題[Al.exe](../../../framework/tools/al-exe-assembly-linker.md)。 取得錯誤 AL1019 的進一步說明和建議  
   
-2.  如果錯誤持續發生，請收集情況的相關資訊，並通知 Microsoft 產品支援服務。  
+2. 如果錯誤持續發生，請收集情況的相關資訊，並通知 Microsoft 產品支援服務。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：使用強式名稱簽署組件](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
-- [專案設計工具、簽署頁面](/visualstudio/ide/reference/signing-page-project-designer)
+- [HOW TO：使用強式名稱簽署組件](../../../framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [專案設計工具、簽署頁](/visualstudio/ide/reference/signing-page-project-designer)
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

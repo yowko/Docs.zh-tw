@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
-ms.openlocfilehash: 564e9e424b8b82e8837a0a58cb8c11389920c297
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139629"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294804"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>HOW TO：建立狀態機器工作流程
 工作流程可以從內建活動建構，也可以從自訂活動建構。 本主題將逐步解說如何建立這類使用內建活動的工作流程<xref:System.Activities.Statements.StateMachine>活動，並從先前的自訂活動[How to:建立活動](how-to-create-an-activity.md)主題。 此工作流程會以數字猜測遊戲為模型。  
@@ -23,31 +23,31 @@ ms.locfileid: "59139629"
   
 ### <a name="to-create-the-workflow"></a>建立工作流程  
   
-1.  以滑鼠右鍵按一下**NumberGuessWorkflowActivities**中**方案總管**，然後選取**新增**，**新項目**。  
+1. 以滑鼠右鍵按一下**NumberGuessWorkflowActivities**中**方案總管**，然後選取**新增**，**新項目**。  
   
-2.  在 **已安裝**，**通用的項目**節點中，選取**工作流程**。 選取 **活動**從**工作流程**清單。  
+2. 在 **已安裝**，**通用的項目**節點中，選取**工作流程**。 選取 **活動**從**工作流程**清單。  
   
-3.  型別`StateMachineNumberGuessWorkflow`成**名稱**方塊，然後按一下**新增**。  
+3. 型別`StateMachineNumberGuessWorkflow`成**名稱**方塊，然後按一下**新增**。  
   
-4.  拖曳**StateMachine**活動，從**狀態機器**一節**工具箱**拖曳至**活動拖曳到這裏**上加上標籤工作流程設計介面中。  
+4. 拖曳**StateMachine**活動，從**狀態機器**一節**工具箱**拖曳至**活動拖曳到這裏**上加上標籤工作流程設計介面中。  
   
 ### <a name="to-create-the-workflow-variables-and-arguments"></a>若要建立工作流程變數和引數  
   
-1.  按兩下**StateMachineNumberGuessWorkflow.xaml**中**方案總管 中**時所要顯示工作流程設計工具中，在不顯示。  
+1. 按兩下**StateMachineNumberGuessWorkflow.xaml**中**方案總管 中**時所要顯示工作流程設計工具中，在不顯示。  
   
-2.  按一下 **引數**以顯示工作流程設計工具左下角**引數**窗格。  
+2. 按一下 **引數**以顯示工作流程設計工具左下角**引數**窗格。  
   
-3.  按一下  **Vytvořit Argument**。  
+3. 按一下  **Vytvořit Argument**。  
   
-4.  型別`MaxNumber`成**名稱**方塊中，選取**中**從**方向**下拉式清單中，選取**Int32**從**引數型別**下拉式清單，然後按下 ENTER 儲存引數。  
+4. 型別`MaxNumber`成**名稱**方塊中，選取**中**從**方向**下拉式清單中，選取**Int32**從**引數型別**下拉式清單，然後按下 ENTER 儲存引數。  
   
-5.  按一下  **Vytvořit Argument**。  
+5. 按一下  **Vytvořit Argument**。  
   
-6.  型別`Turns`成**名稱**下方新增`MaxNumber`引數，選取**Out**從**方向**下拉式清單中，選取**Int32**從**引數型別**下拉式清單，然後按 ENTER 鍵。  
+6. 型別`Turns`成**名稱**下方新增`MaxNumber`引數，選取**Out**從**方向**下拉式清單中，選取**Int32**從**引數型別**下拉式清單，然後按 ENTER 鍵。  
   
-7.  按一下 **引數**關閉的活動設計工具左下角**引數**窗格。  
+7. 按一下 **引數**關閉的活動設計工具左下角**引數**窗格。  
   
-8.  按一下 **變數**以顯示工作流程設計工具左下角**變數**窗格。  
+8. 按一下 **變數**以顯示工作流程設計工具左下角**變數**窗格。  
   
 9. 按一下 **建立的變數**。  
   
@@ -64,14 +64,14 @@ ms.locfileid: "59139629"
   
 ### <a name="to-add-the-workflow-activities"></a>若要加入工作流程活動  
   
-1.  按一下  **State1**來選取它。 在 [**屬性] 視窗**，變更**DisplayName**到`Initialize Target`。  
+1. 按一下  **State1**來選取它。 在 [**屬性] 視窗**，變更**DisplayName**到`Initialize Target`。  
   
     > [!TIP]
     >  如果**屬性 視窗**顯示，請選取**屬性視窗**從**檢視**功能表。  
   
-2.  按兩下剛剛重新命名**初始化目標**狀態中的工作流程設計工具，將它展開。  
+2. 按兩下剛剛重新命名**初始化目標**狀態中的工作流程設計工具，將它展開。  
   
-3.  拖曳**指派**活動，從**基本型別**一節**工具箱**拖曳至**項目**狀態一節。 型別`Target`成**要** 方塊中，下列運算式**輸入 C# 運算式**或**輸入 VB 運算式** 方塊中。  
+3. 拖曳**指派**活動，從**基本型別**一節**工具箱**拖曳至**項目**狀態一節。 型別`Target`成**要** 方塊中，下列運算式**輸入 C# 運算式**或**輸入 VB 運算式** 方塊中。  
   
     ```vb  
     New System.Random().Next(1, MaxNumber + 1)  
@@ -84,15 +84,15 @@ ms.locfileid: "59139629"
     > [!TIP]
     >  如果**工具箱**未顯示視窗中，選取**工具箱**從**檢視**功能表。  
   
-4.  傳回的整體狀態機器工作流程設計工具檢視中的，依序按一下**StateMachine**階層連結顯示在工作流程設計工具的頂端。  
+4. 傳回的整體狀態機器工作流程設計工具檢視中的，依序按一下**StateMachine**階層連結顯示在工作流程設計工具的頂端。  
   
-5.  拖曳**狀態**活動，從**狀態機器**一節**工具箱**拖曳至工作流程設計工具，將滑鼠移至**初始化目標**狀態。 請注意周圍會出現四個三角形**初始化目標**上方有新的狀態時的狀態。 新狀態放置在正下方的三角形**初始化目標**狀態。 這會將新的狀態，到工作流程，並建立從轉換**初始化目標**狀態到新的狀態。  
+5. 拖曳**狀態**活動，從**狀態機器**一節**工具箱**拖曳至工作流程設計工具，將滑鼠移至**初始化目標**狀態。 請注意周圍會出現四個三角形**初始化目標**上方有新的狀態時的狀態。 新狀態放置在正下方的三角形**初始化目標**狀態。 這會將新的狀態，到工作流程，並建立從轉換**初始化目標**狀態到新的狀態。  
   
-6.  按一下  **State1**來選取它，變更**DisplayName**到`Enter Guess`，然後按兩下以展開工作流程設計工具中的狀態。  
+6. 按一下  **State1**來選取它，變更**DisplayName**到`Enter Guess`，然後按兩下以展開工作流程設計工具中的狀態。  
   
-7.  拖曳**WriteLine**活動，從**基本型別**一節**工具箱**拖曳至**項目**狀態一節。  
+7. 拖曳**WriteLine**活動，從**基本型別**一節**工具箱**拖曳至**項目**狀態一節。  
   
-8.  輸入下列運算式**文字** 屬性方塊**WriteLine**。  
+8. 輸入下列運算式**文字** 屬性方塊**WriteLine**。  
   
     ```vb  
     "Please enter a number between 1 and " & MaxNumber  
@@ -183,7 +183,7 @@ ms.locfileid: "59139629"
   
 ### <a name="to-build-the-workflow"></a>若要建置工作流程  
   
-1.  按下 CTRL+SHIFT+B 以建置方案。  
+1. 按下 CTRL+SHIFT+B 以建置方案。  
   
      如需有關如何執行工作流程，指示，請參閱下一個主題中， [How to:執行工作流程](how-to-run-a-workflow.md)。 如果您已經完成[How to:執行工作流程](how-to-run-a-workflow.md)步驟來搭配另一個樣式的工作流程並想要使用此步驟的狀態機器工作流程執行，請直接跳到[以建置並執行應用程式](how-to-run-a-workflow.md#BKMK_ToRunTheApplication)一節[How to:執行工作流程](how-to-run-a-workflow.md)。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC33000
 ms.assetid: 15c5d8eb-3a8c-4141-8f41-33151afabf97
-ms.openlocfilehash: dac8613d79e3262e4d1fd6ad1599fd01182e329b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4283547109ec312cc4fe07a054bbb8db3bff660f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819368"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299185"
 ---
 # <a name="operator-declaration-must-be-one-of----amp-like-mod-and-or-xor-not--"></a>運算子宣告必須是其中一個: +、-，*，\,/、 ^， &amp;，例如，Mod、，Or、 Xor、 不是， \< \<，>>...
 您可以宣告適用於多載的運算子。 下表列出您可以宣告的運算子。  
@@ -29,14 +29,14 @@ ms.locfileid: "58819368"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  從一組可多載的運算子中選取運算子。  
+1. 從一組可多載的運算子中選取運算子。  
   
-2.  如果您需要多載無法直接多載之運算子的功能，請建立接受適當參數並傳回適當值的 `Function` 程序。  
+2. 如果您需要多載無法直接多載之運算子的功能，請建立接受適當參數並傳回適當值的 `Function` 程序。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Operator 陳述式](../../../visual-basic/language-reference/statements/operator-statement.md)
+- [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)
 - [運算子程序](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)
-- [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
-- [如何：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
+- [HOW TO：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [HOW TO：定義轉換運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-a-conversion-operator.md)
 - [Function 陳述式](../../../visual-basic/language-reference/statements/function-statement.md)

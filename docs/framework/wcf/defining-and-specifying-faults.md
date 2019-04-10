@@ -8,12 +8,12 @@ helpviewer_keywords:
 - handling faults [WCF], specifying
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
-ms.openlocfilehash: 337d0a60543aa4ebf42bb2ca0c147607a2548301
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079327"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299321"
 ---
 # <a name="defining-and-specifying-faults"></a>定義並指定錯誤
 SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案例中，則是以互通的方式從用戶端傳送到服務。 本主題討論何時及如何定義自訂錯誤內容，並指定可以傳回它們的作業。 如需有關服務或雙工用戶端，可以傳送這些錯誤，且用戶端或服務的應用程式如何處理這些錯誤的詳細資訊，請參閱 < [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)。 如需 Windows Communication Foundation (WCF) 應用程式中的錯誤處理的概觀，請參閱 <<c0> [ 指定及處理合約和服務中的錯誤](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)。  
@@ -21,11 +21,11 @@ SOAP 錯誤會將錯誤狀況資訊從服務傳送到用戶端，而在雙工案
 ## <a name="overview"></a>總覽  
  已宣告的 SOAP 錯誤是其中作業具有指定自訂 SOAP 錯誤類型之 <xref:System.ServiceModel.FaultContractAttribute?displayProperty=nameWithType>的 SOAP 錯誤。 未宣告的 SOAP 錯誤則是在作業的合約中未指定的 SOAP 錯誤。 本主題將協助您識別這些錯誤狀況，並為您的服務建立錯誤合約，讓用戶端在收到自訂 SOAP 錯誤的通知時，可以用於正確處理這些錯誤狀況。 基本的工作依序為：  
   
-1.  定義您服務的用戶端應該知道的錯誤狀況。  
+1. 定義您服務的用戶端應該知道的錯誤狀況。  
   
-2.  定義這些錯誤狀況的 SOAP 錯誤的自訂內容。  
+2. 定義這些錯誤狀況的 SOAP 錯誤的自訂內容。  
   
-3.  標示您的作業，讓其擲回的特定 SOAP 錯誤以 WSDL 格式對用戶端公開。  
+3. 標示您的作業，讓其擲回的特定 SOAP 錯誤以 WSDL 格式對用戶端公開。  
   
 ### <a name="defining-error-conditions-that-clients-should-know-about"></a>定義用戶端應知道的錯誤狀況  
  SOAP 錯誤是公開描述的訊息，具有特定作業的錯誤資訊。 由於它們是和其他作業訊息一起以 WSDL 描述的，因此用戶端知道並預期在叫用作業時處理這類錯誤。 但是因為 WCF 服務以 managed 程式碼，決定哪些錯誤條件在 managed 程式碼中的要轉換成錯誤，而傳回至用戶端則提供一個機會來分開正式錯誤的錯誤情況及您的服務中的 bug您有與用戶端的交談。  

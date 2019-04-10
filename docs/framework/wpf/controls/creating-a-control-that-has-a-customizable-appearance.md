@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 17b6fd604b5eca54d6323701dafdd38f9f6e7328
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59131012"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298340"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>建立外觀可自訂的控制項
 <a name="introduction"></a>
@@ -94,15 +94,15 @@ ms.locfileid: "59131012"
   
  下列作法可確保您的控制項適當地回應遺漏<xref:System.Windows.FrameworkElement>物件：  
   
-1.  設定`x:Name`針對每個屬性<xref:System.Windows.FrameworkElement>，您需要在程式碼中參考。  
+1. 設定`x:Name`針對每個屬性<xref:System.Windows.FrameworkElement>，您需要在程式碼中參考。  
   
-2.  針對每一個定義私用屬性<xref:System.Windows.FrameworkElement>，您需要進行互動。  
+2. 針對每一個定義私用屬性<xref:System.Windows.FrameworkElement>，您需要進行互動。  
   
-3.  訂閱及取消訂閱從您的控制項處理中的任何事件<xref:System.Windows.FrameworkElement>屬性的 set 存取子。  
+3. 訂閱及取消訂閱從您的控制項處理中的任何事件<xref:System.Windows.FrameworkElement>屬性的 set 存取子。  
   
-4.  設定<xref:System.Windows.FrameworkElement>中所定義的屬性中的步驟 2<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>方法。 這是最早的<xref:System.Windows.FrameworkElement>在<xref:System.Windows.Controls.ControlTemplate>是控制項可用。 使用`x:Name`的<xref:System.Windows.FrameworkElement>若要取得從<xref:System.Windows.Controls.ControlTemplate>。  
+4. 設定<xref:System.Windows.FrameworkElement>中所定義的屬性中的步驟 2<xref:System.Windows.FrameworkElement.OnApplyTemplate%2A>方法。 這是最早的<xref:System.Windows.FrameworkElement>在<xref:System.Windows.Controls.ControlTemplate>是控制項可用。 使用`x:Name`的<xref:System.Windows.FrameworkElement>若要取得從<xref:System.Windows.Controls.ControlTemplate>。  
   
-5.  請確認<xref:System.Windows.FrameworkElement>不是`null`之前存取它的成員。  如果是`null`，不會回報錯誤。  
+5. 請確認<xref:System.Windows.FrameworkElement>不是`null`之前存取它的成員。  如果是`null`，不會回報錯誤。  
   
  下列範例會顯示如何`NumericUpDown`與控制項互動<xref:System.Windows.FrameworkElement>符合前述清單中建議的物件。  
   

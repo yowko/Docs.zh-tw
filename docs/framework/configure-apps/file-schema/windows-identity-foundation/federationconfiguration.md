@@ -3,12 +3,12 @@ title: <federationConfiguration>
 ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
-ms.openlocfilehash: e1e92fccfad792fc1b9df86a582f0406a87f34e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297483"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 會設定<xref:System.IdentityModel.Services.WSFederationAuthenticationModule>(WSFAM) 和<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) 時使用同盟驗證透過 WS-同盟通訊協定。 會設定<xref:System.Security.Claims.ClaimsAuthorizationManager>使用時<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>或<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>類別提供的宣告型存取控制。  
@@ -58,13 +58,13 @@ ms.locfileid: "59195282"
   
  此案例中，不論執行階段會載入預設的同盟設定。 定義行為，如下所示：  
   
-1.  如果沒有任何`<federationConfiguration>`元素，執行階段會建立同盟設定，並填入預設值。 這個預設的同盟組態會參考預設身分識別組態。  
+1. 如果沒有任何`<federationConfiguration>`元素，執行階段會建立同盟設定，並填入預設值。 這個預設的同盟組態會參考預設身分識別組態。  
   
-2.  如果單一`<federationConfiguration>`項目已存在，它是預設的同盟設定，不論它是具名或未命名的。 如果其`identityConfiguration`指定屬性時，參考具名的身分識別組態，否則參考預設身分識別組態。  
+2. 如果單一`<federationConfiguration>`項目已存在，它是預設的同盟設定，不論它是具名或未命名的。 如果其`identityConfiguration`指定屬性時，參考具名的身分識別組態，否則參考預設身分識別組態。  
   
-3.  如果有未命名`<federationConfiguration>`項目已存在，它是預設的同盟設定。 如果其`identityConfiguration`指定屬性時，參考具名的身分識別組態，否則參考預設身分識別組態。  
+3. 如果有未命名`<federationConfiguration>`項目已存在，它是預設的同盟設定。 如果其`identityConfiguration`指定屬性時，參考具名的身分識別組態，否則參考預設身分識別組態。  
   
-4.  如果多個名為`<federationConfiguration>`項目會存在且未具名`<federationConfiguration>`項目存在，則會擲回例外狀況。  
+4. 如果多個名為`<federationConfiguration>`項目會存在且未具名`<federationConfiguration>`項目存在，則會擲回例外狀況。  
   
  一般而言，只有一個`<federationConfiguration>`區段定義。 本節是預設的同盟設定。 您可以指定多個唯一命名`<federationConfiguration>`項目; 不過，在此情況下，如果您想要載入非未命名的同盟設定，您必須提供的處理常式。 <xref:System.IdentityModel.Services.FederatedAuthentication.FederationConfigurationCreated> 事件和設定<xref:System.IdentityModel.Services.Configuration.FederationConfigurationCreatedEventArgs.FederationConfiguration%2A?displayProperty=nameWithType>內的處理常式屬性<xref:System.IdentityModel.Services.Configuration.FederationConfiguration>物件從適當的值初始化`<federationConfiguration>`組態檔中的項目。  
   

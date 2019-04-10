@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], editing
 - rows [Windows Forms], editing
 ms.assetid: c367ed43-40dc-49eb-9e0f-ba70e83dfec0
-ms.openlocfilehash: eb194052ecd78d585f251789730a1f9855c509d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2149cac7fb15052c2602ef20a6684696730aae1b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201958"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294459"
 ---
 # <a name="how-to-edit-columns-and-rows-in-a-tablelayoutpanel-control"></a>HOW TO：編輯 TableLayoutPanel 控制項中的資料行和資料列
 您可以使用的集合編輯器<xref:System.Windows.Forms.TableLayoutPanel>控制項，呼叫**資料行和資料列樣式**對話方塊中，若要編輯的資料列和資料行的控制項。  
@@ -27,21 +27,21 @@ ms.locfileid: "59201958"
   
 ### <a name="to-edit-rows-and-columns"></a>若要編輯的資料列和資料行  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
-2.  按一下 [<xref:System.Windows.Forms.TableLayoutPanel>控制項的智慧標籤圖像 （glyph) (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然後選取**編輯資料列和資料行**以開啟**資料行和資料列樣式**] 對話方塊。 您也可以以滑鼠右鍵按一下<xref:System.Windows.Forms.TableLayoutPanel>控制項，並選取**編輯資料列和資料行**從捷徑功能表。  
+2. 按一下 [<xref:System.Windows.Forms.TableLayoutPanel>控制項的智慧標籤圖像 （glyph) (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph"))，然後選取**編輯資料列和資料行**以開啟**資料行和資料列樣式**] 對話方塊。 您也可以以滑鼠右鍵按一下<xref:System.Windows.Forms.TableLayoutPanel>控制項，並選取**編輯資料列和資料行**從捷徑功能表。  
   
-3.  若要新增或移除資料行，選取**資料行**從**的成員型別**下拉式清單方塊。  
+3. 若要新增或移除資料行，選取**資料行**從**的成員型別**下拉式清單方塊。  
   
-4.  若要新增或移除資料列，選取**資料列**從**的成員型別**下拉式清單方塊。  
+4. 若要新增或移除資料列，選取**資料列**從**的成員型別**下拉式清單方塊。  
   
-5.  按一下 **新增**按鈕以新增資料列或資料行的結尾**成員**清單。  
+5. 按一下 **新增**按鈕以新增資料列或資料行的結尾**成員**清單。  
   
-6.  按一下 **插入**按鈕以新增資料列或目前選取的項目之前的資料行清單中。  
+6. 按一下 **插入**按鈕以新增資料列或目前選取的項目之前的資料行清單中。  
   
-7.  如果您要新增的資料列或資料行，選取**大小類型**新的資料列或資料行。 如需詳細資訊，請參閱<xref:System.Windows.Forms.SizeType>。  
+7. 如果您要新增的資料列或資料行，選取**大小類型**新的資料列或資料行。 如需詳細資訊，請參閱<xref:System.Windows.Forms.SizeType>。  
   
-8.  若要移除的資料列或資料行，請按一下**移除** 按鈕來刪除目前選取的項目，在**成員**清單。  
+8. 若要移除的資料列或資料行，請按一下**移除** 按鈕來刪除目前選取的項目，在**成員**清單。  
   
 ## <a name="see-also"></a>另請參閱
 
