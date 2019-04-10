@@ -6,12 +6,12 @@ title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
 ms.lasthandoff: 04/09/2019
-ms.locfileid: "59297261"
+ms.locfileid: "59427483"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -231,8 +231,8 @@ ms.locfileid: "59297261"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 指南</a></h3>
-                                                <p><a href="/dotnet/machine-learning/index#tutorials">教學課程</a></p>
-                                                <p><a href="/dotnet/machine-learning/index#resources">資源</a></p>
+                                                <p><a href="/dotnet/machine-learning/tutorials">教學課程</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources">資源</a></p>
                                                 <p><a href="/dotnet/machine-learning/resources/glossary">字彙表</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 參考</a></p>
                                             </div>
