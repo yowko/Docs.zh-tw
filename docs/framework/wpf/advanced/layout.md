@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 4c967bf34c66cd2dcc4365a2a3ec214c9bac5623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231119"
 ---
 # <a name="layout"></a>配置
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
@@ -149,6 +149,7 @@ ms.locfileid: "58464563"
  了解如何測量和排列項目是了解版面配置的第一個步驟。 如需有關可用<xref:System.Windows.Controls.Panel>項目，請參閱[面板概觀](../controls/panels-overview.md)。 若要進一步了解會影響版面配置的各種定位屬性，請參閱[對齊、邊界和填補概觀](alignment-margins-and-padding-overview.md)。 如需自訂的範例<xref:System.Windows.Controls.Panel>項目，請參閱 <<c2> [ 自訂放射狀面板範例](https://go.microsoft.com/fwlink/?LinkID=159982)。 當您準備好要組合在一起的輕量應用程式中時，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.FrameworkElement>
 - <xref:System.Windows.UIElement>
 - [面板概觀](../controls/panels-overview.md)

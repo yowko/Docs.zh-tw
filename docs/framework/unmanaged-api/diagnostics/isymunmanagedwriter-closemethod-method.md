@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f8c8b522aabfce3b83b6b624bd0ca9757448ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591279a80b7d6a770127fb98eb71c056c48bdffd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231210"
 ---
 # <a name="isymunmanagedwriterclosemethod-method"></a>ISymUnmanagedWriter::CloseMethod 方法
 關閉目前的方法。 一旦關閉方法，則可以在其中定義沒有更多的符號。  
@@ -40,5 +40,6 @@ HRESULT CloseMethod();
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
 - [OpenMethod 方法](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

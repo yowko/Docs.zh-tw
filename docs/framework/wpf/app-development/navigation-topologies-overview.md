@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 3e5cca90861ccdeaff904a34c6f484cfdd32c975
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819589"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230859"
 ---
 # <a name="navigation-topologies-overview"></a>巡覽拓撲概觀
 <a name="introduction"></a> 本概觀介紹中的巡覽拓撲[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]。 並接著說明三種常見的巡覽拓撲及其範例。  
@@ -141,6 +141,7 @@ ms.locfileid: "58819589"
 -   完成精靈時 (已接受或取消)，即會從日誌中移除精靈所含的頁面。 這可將精靈的每個執行個體隔離，以避免潛在的資料或狀態異常。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.Page>
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>

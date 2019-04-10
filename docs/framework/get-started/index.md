@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ad380b5e411a61db648495875a5b697df54e2849
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56304683"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314967"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework 使用者入門
 
@@ -71,19 +71,19 @@ ms.locfileid: "56304683"
 
 2. 選取您要用來開發應用程式且 .NET Framework 也支援的語言。 有多種語言可供選擇，包括 Microsoft 的 [Visual Basic](../../visual-basic/index.md)[C#](../../csharp/index.md)、[F#](../../fsharp/index.md) 及 [C++/CLI](/cpp/dotnet/dotnet-programming-with-cpp-cli-visual-cpp)。 (可讓您開發 .NET Framework 應用程式的程式設計語言會遵循[通用語言基礎結構 (CLI) 規格](https://visualstudio.microsoft.com/license-terms/ecma-c-common-language-infrastructure-standards/))。
 
-3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 並有多個版本可供使用。
+3. 選取並安裝要用來建立應用程式，且支援所選程式設計語言的開發環境。 適用於 .NET Framework 應用程式的 Microsoft 整合式開發環境 (IDE) 為 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)。 並有多個版本可供使用。
 
 如需開發以 .NET Framework 為目標之應用程式的詳細資訊，請參閱[開發指南](../development-guide.md)。
 
 ## <a name="related-topics"></a>相關主題
 
-| 標題 | 描述 |
+| 標題 | 說明 |
 | ----- |------------ |
-| [概觀](overview.md) | 替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。 |
-| [安裝指南 (英文)](../install/index.md) | 提供安裝 .NET Framework 的相關資訊。 |  
-| [.NET Framework 和不定期發行](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 的頻外發行以及如何將其運用在您的應用程式中。 |
+| [總覽](overview.md) | 替建置以 .NET Framework 為目標之應用程式的開發人員提供詳細資訊。 |
+| [安裝指南](../install/index.md) | 提供安裝 .NET Framework 的相關資訊。 |  
+| [.NET Framework 和 Out-of-Band 發行版本](the-net-framework-and-out-of-band-releases.md) | 描述 .NET Framework 的頻外發行以及如何將其運用在您的應用程式中。 |
 | [系統需求](system-requirements.md) | 列出執行 .NET Framework 的硬體與軟體需求。 |
-| [.NET Core 和開放原始碼](net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。 |
+| [.NET 的核心和開放原始碼](net-core-and-open-source.md) | 描述 .NET Core 的相關 .NET Framework 功能，以及如何存取開放原始碼 .NET Core 專案。 |
 | [.NET Core 文件](../../core/index.md) | 提供適用於 .NET Core 的概念性及 API 參考文件。 |
 | [.NET Standard](../../standard/net-standard.md) | 討論 .NET Standard，這是個別 .NET 實作支援的版本化規格，以保證在多個平台上都能使用一組一致的 API。
 

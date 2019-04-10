@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65da00d99fec5f2280bcd00ce97b8eddafede680
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f150fe80302cd03e872ca8bdf5d172caae1ce599
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57485001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230768"
 ---
 # <a name="icorruntimehostcloseenum-method"></a>ICorRuntimeHost::CloseEnum 方法
 將網域列舉值重設回網域清單的開頭。  
@@ -53,10 +53,11 @@ HRESULT CloseEnum (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CorBindToRuntimeEx 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)
 - [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

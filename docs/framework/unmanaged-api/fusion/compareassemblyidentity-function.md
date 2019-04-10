@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0088ed696b2018054dc34a0b363def97c5753fe0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 652000367c19572f73296c704047830ce1c74574
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494086"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231033"
 ---
 # <a name="compareassemblyidentity-function"></a>CompareAssemblyIdentity 函式
 比較兩個組件身分識別，以判斷它們是否相等。  
@@ -80,10 +80,11 @@ STDAPI CompareAssemblyIdentity (
   
  **標頭：** Fusion.h  
   
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [融合全域靜態函式](../../../../docs/framework/unmanaged-api/fusion/fusion-global-static-functions.md)
 - [AssemblyComparisonResult 列舉](../../../../docs/framework/unmanaged-api/fusion/assemblycomparisonresult-enumeration.md)

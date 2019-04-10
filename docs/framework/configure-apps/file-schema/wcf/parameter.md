@@ -2,12 +2,12 @@
 title: <parameter>
 ms.date: 03/30/2017
 ms.assetid: 0fb41e2d-64f7-44ab-993e-05892eac6d82
-ms.openlocfilehash: 8b14dc1908ef3a06549154f70efb2d4e5cb10076
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 22ef3c3c6d23d6c68c27d6b5d1ed35b7c9910d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289420"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230794"
 ---
 # <a name="parameter"></a>\<parameter>
 指定當宣告型別為泛型型別時的泛型參數。  
@@ -60,7 +60,8 @@ ms.locfileid: "55289420"
  此組態項目不可以同時具有這兩個屬性。 如果同時設定了這兩個屬性，就會發生 <xref:System.Configuration.ConfigurationErrorsException>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

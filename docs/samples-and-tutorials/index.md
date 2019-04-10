@@ -4,12 +4,12 @@ description: 針對 .NET Core、ASP.NET Core 及 C# 語言的範例和教學課�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 682c60ca4a0e801ec8e138a88124b86b88f39615
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "57558946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330814"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
 
@@ -19,7 +19,7 @@ ms.locfileid: "57558946"
 
 ### <a name="samples"></a>範例
 
-**[使用 DotNet 測試的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**
+**[使用 dotnet test 的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**
 
 此指南說明如何建立 ASP.NET Core Web 應用程式及相關聯的單元測試。 它會從建立簡單的 Web 服務應用程式開始，然後再新增測試。 它接著會建立更多測試，來引導新功能的實作。 [完整範例](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
@@ -75,7 +75,7 @@ ms.locfileid: "57558946"
 
 此教學課程示範 Web 通訊、JSON 序列化，以及 C# 語言的物件導向功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
-**[使用 LINQ](../csharp/tutorials/working-with-linq.md)**
+**[處理 LINQ](../csharp/tutorials/working-with-linq.md)**
 
 此教學課程示範 LINQ 的許多功能及支援的語言項目。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
@@ -85,11 +85,11 @@ ms.locfileid: "57558946"
 
 **[使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
-本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
+此教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
 
 **[建立支援外掛程式的 .NET Core 應用程式](../core/tutorials/creating-app-with-plugin-support.md)**
 
-本教學課程會向您示範如何在支援外掛程式架構的 .NET Core 上建置簡單的應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
+此教學課程會向您示範如何在支援外掛程式架構的 .NET Core 上建置簡單的應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ## <a name="deploying-to-containers"></a>部署至容器
 
@@ -112,6 +112,6 @@ ms.locfileid: "57558946"
 1. 於存放庫的資料夾內瀏覽至範例的位置。 範例位置的相對路徑會在您依循範例連結時，顯示於瀏覽器的網址列中。
 1. 您有數個選項可以執行範例：
    * 使用 [dotnet CLI 工具](../core/tools/index.md)：在主控台視窗中，瀏覽至範例的資料夾，並使用 dotnet CLI 命令。
-   * 使用 [Visual Studio](https://visualstudio.microsoft.com/) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/visual-studio-mac/)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。
+   * 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或 [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)：從功能表列選取 [檔案] > [開啟] > [專案/方案]，瀏覽至範例專案資料夾，並選取專案檔案 (*.csproj* 或 *.fsproj*) 來開啟範例。
    * 使用 [Visual Studio Code](https://code.visualstudio.com/)：從功能表列選取 [檔案] > [開啟資料夾]，並選取範例的專案資料夾來開啟範例。
    * 使用支援 .NET Core 專案的另一個 IDE。

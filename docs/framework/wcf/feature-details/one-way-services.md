@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], one-way service contracts
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
-ms.openlocfilehash: ad285b5a0fa37867b1b80b3d7293a976fbd12c61
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54527792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231275"
 ---
 # <a name="one-way-services"></a>單向服務
 服務作業的預設行為是要求-回覆模式。 在要求-回覆模式中，用戶端也都會等候回覆訊息，即使該服務作業已透過程式碼表示為 `void` 方法也是如此。 在單向作業中，只會傳輸一則訊息。 接收者不會傳送回覆訊息，傳送者也不會期待回覆訊息。  
@@ -55,4 +55,5 @@ public interface IOneWayCalculator
  因此，建議的做法是檢查服務及用戶端上的各種控制項，然後測試您的應用程式案例以判斷兩端的最佳組態。 例如，如果使用工作階段會封鎖服務上的訊息處理，您可以將 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A?displayProperty=nameWithType> 屬性設定為 <xref:System.ServiceModel.InstanceContextMode.PerCall> 以使每則訊息都能由不同的服務執行個體處理，並將 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 設定為 <xref:System.ServiceModel.ConcurrencyMode.Multiple>，以便一次讓一個以上的執行緒發送訊息。 另一種處理方法則是增加服務與用戶端繫結的讀取配額。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [單向](../../../../docs/framework/wcf/samples/one-way.md)

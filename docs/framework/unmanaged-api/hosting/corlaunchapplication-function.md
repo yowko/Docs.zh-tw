@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e10a92b1748fcdf518fa68cb7054731f4511396b
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4c997ab107ba3ceb7773bc9235b9c9dcd4d97df8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231444"
 ---
 # <a name="corlaunchapplication-function"></a>CorLaunchApplication 函式
 啟動指定的網路路徑，使用指定的資訊清單和其他應用程式資料的應用程式。  
@@ -70,9 +70,10 @@ HRESULT CorLaunchApplication (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** MSCorEE.dll  
+ **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [已被取代的 CLR 裝載函式](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)

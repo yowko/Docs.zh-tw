@@ -2,12 +2,12 @@
 title: CLR 預存程序
 ms.date: 03/30/2017
 ms.assetid: fd7eea9b-218a-4988-8c9a-8abcc6031c66
-ms.openlocfilehash: 1459ebc9c24875bcd7e8b0d711d710c514df0dd4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 9b31d93c1ebc0af9aa8e41b3a4c328af62da7e23
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230807"
 ---
 # <a name="clr-stored-procedures"></a>CLR 預存程序
 預存程序是無法在純量運算式中使用的常式。 它們可將表格式結果及訊息傳回到用戶端、叫用資料定義語言 (DDL) 及資料操作語言 (DML) 陳述式，並傳回輸出參數。  
@@ -26,5 +26,6 @@ Public Shared Sub ExecuteToClient( <Out()> ByRef number As Integer)
 1. [CLR 預存程序](https://go.microsoft.com/fwlink/?LinkId=115400)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Managed 程式碼中建立 SQL Server 2005 物件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/6s0s2at1(v=vs.90))
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

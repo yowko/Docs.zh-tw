@@ -1,14 +1,14 @@
 ---
 title: ML.NET 內容指南
 description: 了解如何建置量身打造的 AI 解決方案，並使用 ML.NET 將其整合到您的 .NET 應用程式中。
-ms.date: 01/18/2019
+ms.date: 04/05/2019
 ms.custom: seodec18
-ms.openlocfilehash: fe9129fd6975ba9176ccce025b06f03734803155
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: de681daea5a29a121d350271ced4ccc2c0b1b533
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231327"
 ---
 # <a name="mlnet-content-guide"></a>ML.NET 內容指南
 
@@ -33,7 +33,11 @@ ms.locfileid: "58920762"
 
 [使用迴歸模型預測價格](./tutorials/taxi-fare.md)說明如何建置預測用應用程式以使用來自歷史資料的許多因素來判斷答案。
 
-[使用特性來將鳶尾花分類](./tutorials/iris-clustering.md)說明如何使用叢集模型來分析鳶尾花資料集。 
+[使用特性來將鳶尾花分類](./tutorials/iris-clustering.md)說明如何使用叢集模型來分析鳶尾花資料集。
+
+[使用 ML.NET 建立電影推薦工具](./tutorials/movie-recommmendation.md)顯示如何建置推薦應用程式以根據使用者的記錄向使用者推薦電影。
+
+[使用 TensorFlow 建置 ML.NET 自訂影像分類工具](./tutorials/image-classification.md)：示範如何使用 ML.NET 將現有的 Tensorflow 模型重新定型以建立自訂影像分類工具。
 
 ## <a name="how-to-guide"></a>操作說明指南
 
@@ -46,7 +50,6 @@ ms.locfileid: "58920762"
 [機器學習工作](./resources/tasks.md)描述工作，例如分類與異常偵測。 
 
 [資料轉換](./resources/transforms.md)描述 ML.NET 中的資料準備功能。
-
 
 ## <a name="api-reference"></a>應用程式開發介面參考
 
