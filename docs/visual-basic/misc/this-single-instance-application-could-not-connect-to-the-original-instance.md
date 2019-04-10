@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_SingleInstanceCantConnect
 ms.assetid: 7c2c0cee-02a1-4157-be03-39d18e18408f
-ms.openlocfilehash: 241ad5b9986e78f88ab5ca39bc73f7372162ba76
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 7ffa9b185e16cfdf8223ce84e77d1a0e1fa67f65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58037511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322650"
 ---
 # <a name="this-single-instance-application-could-not-connect-to-the-original-instance"></a>此單一執行個體應用程式無法連接到原始執行個體
 此單一執行個體應用程式無法連接到原始執行個體。 此問題的部分可能原因如下：  
@@ -22,15 +22,15 @@ ms.locfileid: "58037511"
   
 ## <a name="to-correct-this-error-when-developing-the-application"></a>在開發應用程式時更正這個錯誤  
   
-1.  檢查應用程式並未進入沒有回應的狀態。  
+1. 檢查應用程式並未進入沒有回應的狀態。  
   
-2.  檢查應用程式有足夠的權限可建立核心物件。  
+2. 檢查應用程式有足夠的權限可建立核心物件。  
   
-3.  重新啟動應用程式的原始執行個體。  
+3. 重新啟動應用程式的原始執行個體。  
   
-4.  重新啟動電腦，以針對連接到原始執行個體應用程式所需的資源，清除可能正在使用它的任何處理序。  
+4. 重新啟動電腦，以針對連接到原始執行個體應用程式所需的資源，清除可能正在使用它的任何處理序。  
   
-5.  記下錯誤發生時的情況，並致電 Microsoft 產品支援服務。  
+5. 記下錯誤發生時的情況，並致電 Microsoft 產品支援服務。  
   
 ## <a name="see-also"></a>另請參閱
 

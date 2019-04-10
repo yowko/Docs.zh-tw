@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 5162f5c4-8781-4cc4-9425-bb7620eaeaf4
-ms.openlocfilehash: 2bbdcc8e5a55f9d2cdbb80bf83443f0ad8850452
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ae2aa4c5629096ee7d888e7c4e334c3b6696db3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59105283"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323313"
 ---
 # <a name="how-to-restrict-access-with-the-principalpermissionattribute-class"></a>HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取
 控制 Windows 網域電腦上資源的存取，是基本的安全性工作。 例如，只有特定使用者能夠檢視機密資料 (如薪資資料)。 本主題說明如何透過將使用者歸屬到預先定義的群組，以限制方法的存取。 如需實用範例，請參閱 <<c0> [ 授權存取服務作業](../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)。  
@@ -23,25 +23,25 @@ ms.locfileid: "59105283"
   
 ### <a name="to-create-a-windows-group"></a>建立 Windows 群組  
   
-1.  開啟**電腦管理**主控台。  
+1. 開啟**電腦管理**主控台。  
   
-2.  在左窗格中，按一下**本機使用者和群組**。  
+2. 在左窗格中，按一下**本機使用者和群組**。  
   
-3.  以滑鼠右鍵按一下**群組**，然後按一下**新增群組**。  
+3. 以滑鼠右鍵按一下**群組**，然後按一下**新增群組**。  
   
-4.  在 **群組名稱**方塊中，輸入新群組的名稱。  
+4. 在 **群組名稱**方塊中，輸入新群組的名稱。  
   
-5.  在 **描述**方塊中，輸入新群組的描述。  
+5. 在 **描述**方塊中，輸入新群組的描述。  
   
-6.  按一下 [**新增**] 按鈕，將新成員新增至群組。  
+6. 按一下 [**新增**] 按鈕，將新成員新增至群組。  
   
-7.  如果您將自己加入群組中，而且想要測試以下程式碼，則必須先登出電腦然後再登入，才能包含在該群組中。  
+7. 如果您將自己加入群組中，而且想要測試以下程式碼，則必須先登出電腦然後再登入，才能包含在該群組中。  
   
 ### <a name="to-demand-user-membership"></a>要求使用者成員資格  
   
-1.  開啟 Windows Communication Foundation (WCF) 程式碼檔案，其中包含實作的服務合約程式碼。 如需有關如何實作合約的詳細資訊，請參閱 < [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)。  
+1. 開啟 Windows Communication Foundation (WCF) 程式碼檔案，其中包含實作的服務合約程式碼。 如需有關如何實作合約的詳細資訊，請參閱 < [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
-2.  將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 屬性 (Attribute) 套用至每一個必須限於特定群組的方法。 將 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 屬性設為 <xref:System.Security.Permissions.SecurityAction.Demand>，並將 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 屬性設為群組名稱。 例如：  
+2. 將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 屬性 (Attribute) 套用至每一個必須限於特定群組的方法。 將 <xref:System.Security.Permissions.SecurityAttribute.Action%2A> 屬性設為 <xref:System.Security.Permissions.SecurityAction.Demand>，並將 <xref:System.Security.Permissions.PrincipalPermissionAttribute.Role%2A> 屬性設為群組名稱。 例如：  
   
      [!code-csharp[c_PrincipalPermissionAttribute#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#1)]
      [!code-vb[c_PrincipalPermissionAttribute#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#1)]  
@@ -56,16 +56,16 @@ ms.locfileid: "59105283"
   
 #### <a name="to-control-access-using-a-certificate"></a>使用憑證控制存取  
   
-1.  將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別套用至您要限制存取的方法。  
+1. 將 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別套用至您要限制存取的方法。  
   
-2.  將屬性 (Attribute) 的動作設為 <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>。  
+2. 將屬性 (Attribute) 的動作設為 <xref:System.Security.Permissions.SecurityAction.Demand?displayProperty=nameWithType>。  
   
-3.  將 `Name` 屬性設為字串，包含主體名稱和憑證的指紋。 使用分號和空格分隔這兩個值，如以下範例所示：  
+3. 將 `Name` 屬性設為字串，包含主體名稱和憑證的指紋。 使用分號和空格分隔這兩個值，如以下範例所示：  
   
      [!code-csharp[c_PrincipalPermissionAttribute#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_principalpermissionattribute/cs/source.cs#2)]
      [!code-vb[c_PrincipalPermissionAttribute#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_principalpermissionattribute/vb/source.vb#2)]  
   
-4.  將 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 屬性設為 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，如以下組態範例所示：  
+4. 將 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.PrincipalPermissionMode%2A> 屬性設為 <xref:System.ServiceModel.Description.PrincipalPermissionMode.UseAspNetRoles>，如以下組態範例所示：  
   
     ```xml  
     <behaviors>  

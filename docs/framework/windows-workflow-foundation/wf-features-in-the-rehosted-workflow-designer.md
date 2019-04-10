@@ -2,12 +2,12 @@
 title: 針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: bed49e4a62e597c9cffd113b24551872ee1053d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a7b7ed6987320314ee3fdccf0e58a8c7314fe50d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714940"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324158"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>針對重新裝載之工作流程設計工具中的新 Workflow Foundation 4.5 功能提供的支援
 Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]導入許多新功能，包括工作流程設計工具經驗的數個增強功能。 本主題詳細介紹重新裝載的設計工具支援其中哪些功能，以及目前不支援的功能。
@@ -124,13 +124,13 @@ Windows Workflow Foundation (WF) 中[!INCLUDE[net_v45](../../../includes/net-v45
 ### <a name="state-machine-workflows"></a>狀態機器工作流程  
  狀態機器工作流程引進為.NET Framework 4.0.1 中一部分[Microsoft.NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)。 此更新包括若干新類別和活動，可讓開發人員建立狀態機器工作流程。 這些類別和活動在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中皆已更新。 更新包括：  
   
-1.  可設定狀態中斷點的功能  
+1. 可設定狀態中斷點的功能  
   
-2.  可在工作流程設計工具中複製和貼上轉換的功能  
+2. 可在工作流程設計工具中複製和貼上轉換的功能  
   
-3.  設計工具支援建立共用的觸發程序轉換  
+3. 設計工具支援建立共用的觸發程序轉換  
   
-4.  用來建立狀態機器工作流程的活動包括：<xref:System.Activities.Statements.StateMachine>、<xref:System.Activities.Statements.State> 和 <xref:System.Activities.Statements.Transition>  
+4. 用來建立狀態機器工作流程，包括活動： <xref:System.Activities.Statements.StateMachine>， <xref:System.Activities.Statements.State>，及 <xref:System.Activities.Statements.Transition>  
   
  下列螢幕擷取畫面會顯示已完成的狀態機器工作流程，從[入門教學課程](getting-started-tutorial.md)步驟[How to:建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)。  
   

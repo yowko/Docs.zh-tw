@@ -2,12 +2,12 @@
 title: 效能考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: d0ee92b96a22b0ecb59ee76fb2f2e9d64442ce22
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59087946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324041"
 ---
 # <a name="performance-considerations-entity-framework"></a>效能考量 (Entity Framework)
 本主題說明 ADO.NET Entity Framework 的效能特性，並提供一些考量因素以協助提升 Entity Framework 應用程式的效能。  
@@ -82,11 +82,11 @@ ms.locfileid: "59087946"
 ### <a name="query-paths"></a>查詢路徑  
  根據預設，執行 <xref:System.Data.Objects.ObjectQuery%601> 時，不會傳回相關物件 (即使物件表示關聯性本身)。 您可以利用下列三種方法中的任何一種方式載入相關物件：  
   
-1.  在執行 <xref:System.Data.Objects.ObjectQuery%601> 之前設定查詢路徑。  
+1. 在執行 <xref:System.Data.Objects.ObjectQuery%601> 之前設定查詢路徑。  
   
-2.  在物件公開的導覽屬性上呼叫 `Load` 方法。  
+2. 在物件公開的導覽屬性上呼叫 `Load` 方法。  
   
-3.  將 <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> 上的 <xref:System.Data.Objects.ObjectContext> 選項設定為 `true`。 請注意，這會自動完成時產生物件層程式碼[Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。 如需詳細資訊，請參閱[產生的程式碼概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))。  
+3. 將 <xref:System.Data.Objects.ObjectContextOptions.LazyLoadingEnabled%2A> 上的 <xref:System.Data.Objects.ObjectContext> 選項設定為 `true`。 請注意，這會自動完成時產生物件層程式碼[Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。 如需詳細資訊，請參閱[產生的程式碼概觀](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982041(v=vs.100))。  
   
  考慮要使用哪一種方式時，請特別留意，在對資料庫要求的數目與單一查詢所傳回的資料量之間，必須有所取捨。 如需詳細資訊，請參閱 <<c0> [ 載入相關物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896272(v=vs.100))。  
   

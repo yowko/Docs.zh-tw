@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5e7ff0be-3f23-4996-a92c-bd54d65c3836
-ms.openlocfilehash: 4fdd578f1537e3521093fd12655a452feaa5a38d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b2783779965505d09f73c7203770c19ccaa78d26
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112067"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323365"
 ---
 # <a name="single-bulk-copy-operations"></a>單一大量複製作業
 執行 SQL Server 大量複製作業的最簡單方法是：針對資料庫執行單一作業。 根據預設，會以隔離作業執行大量複製作業：複製作業會以非交易性方式執行，且沒有復原的機會。  
@@ -22,19 +22,19 @@ ms.locfileid: "59112067"
   
  執行大量複製作業的一般步驟如下：  
   
-1.  連接至來源伺服器，並取得要複製的資料。 如果可從 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 物件擷取資料，則資料也可來自其他來源。  
+1. 連接至來源伺服器，並取得要複製的資料。 如果可從 <xref:System.Data.IDataReader> 或 <xref:System.Data.DataTable> 物件擷取資料，則資料也可來自其他來源。  
   
-2.  連接到目的地伺服器 (除非您想**SqlBulkCopy**為您建立的連線)。  
+2. 連接到目的地伺服器 (除非您想**SqlBulkCopy**為您建立的連線)。  
   
-3.  建立 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，設定所有必要的屬性。  
+3. 建立 <xref:System.Data.SqlClient.SqlBulkCopy> 物件，設定所有必要的屬性。  
   
-4.  設定**DestinationTableName**屬性來指定目標資料表，進行大量插入作業。  
+4. 設定**DestinationTableName**屬性來指定目標資料表，進行大量插入作業。  
   
-5.  呼叫其中一種**WriteToServer**方法。  
+5. 呼叫其中一種**WriteToServer**方法。  
   
-6.  （選擇性） 更新屬性，並呼叫**WriteToServer**視一次。  
+6. （選擇性） 更新屬性，並呼叫**WriteToServer**視一次。  
   
-7.  呼叫 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或將大量複製作業包裝至 `Using` 陳述式內。  
+7. 呼叫 <xref:System.Data.SqlClient.SqlBulkCopy.Close%2A>，或將大量複製作業包裝至 `Using` 陳述式內。  
   
 > [!CAUTION]
 >  建議來源與目標資料行的資料型別相符。 如果不相符的資料類型， **SqlBulkCopy**會嘗試將每個來源值轉換成目標資料類型，使用所採用的規則<xref:System.Data.SqlClient.SqlParameter.Value%2A>。 轉換可能會影響效能，亦可能導致意外的錯誤。 例如，`Double` 資料型別通常可轉換為 `Decimal` 資料型別，但並非始終如此。  

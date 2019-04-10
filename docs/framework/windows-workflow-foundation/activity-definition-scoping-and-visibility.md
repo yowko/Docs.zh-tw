@@ -2,19 +2,19 @@
 title: 活動定義範圍和可視性
 ms.date: 03/30/2017
 ms.assetid: ccdffa07-9503-4eea-a61b-17f1564368b7
-ms.openlocfilehash: 7b09ac6d27dd3be502c98ce3ac0a90f636714fc2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 27c43323a176c841f3d90cb9c52f25599bc0686d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723838"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325211"
 ---
 # <a name="activity-definition-scoping-and-visibility"></a>活動定義範圍和可視性
 就像物件的範圍和可視性一樣，活動定義範圍和可視性是其他物件或活動存取活動成員的能力。 活動定義是由下列實作所執行：  
   
-1.  決定活動公開給其使用者的成員 (<xref:System.Activities.Argument>、<xref:System.Activities.Variable> 和 <xref:System.Activities.ActivityDelegate> 物件及子活動)。  
+1. 決定活動公開給其使用者的成員 (<xref:System.Activities.Argument>、<xref:System.Activities.Variable> 和 <xref:System.Activities.ActivityDelegate> 物件及子活動)。  
   
-2.  實作活動的執行邏輯  
+2. 實作活動的執行邏輯  
   
  此實作所牽涉到的成員可能未公開給活動的消費者，但是為實作的詳細資料。  與型別定義類似，活動模型允許作者限定有關所定義之活動定義的活動成員可視性。  此可視性會控管成員使用的層面，例如資料範圍。  
   
@@ -27,9 +27,9 @@ ms.locfileid: "57723838"
 ### <a name="activity-members"></a>活動成員  
  活動模型會定義該活動提供給消費者使用的引數、變數、委派和子活動。 這些成員的每一個都可以宣告為 `public` 或 `private`。 Public 成員是由活動的消費者所設定，而 `private` 成員則會使用活動作者所固定的實作。 資料範圍的可視性規則如下所示：  
   
-1.  Public 成員以及 Public 子活動的 Public 成員可以參考 Public 變數。  
+1. Public 成員以及 Public 子活動的 Public 成員可以參考 Public 變數。  
   
-2.  Private 成員以及 public 子活動的 public 成員可以參考引數和 private 變數。  
+2. Private 成員以及 public 子活動的 public 成員可以參考引數和 private 變數。  
   
  可由活動的消費者所設定的成員絕對不能為 private。  
   

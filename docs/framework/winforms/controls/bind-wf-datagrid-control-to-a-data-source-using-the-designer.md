@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - bound controls [Windows Forms]
 ms.assetid: 4e96e3d0-b1cc-4de1-8774-bc9970ec4554
-ms.openlocfilehash: a7b03ab5417eacf7962f2a05b674ceb45c7d558c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe54c650e1d19f36d681053c7da47e12527c5827
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115722"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320882"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms DataGrid 控制項繫結至資料來源
 
@@ -37,11 +37,11 @@ ms.locfileid: "59115722"
   
 ### <a name="to-data-bind-the-datagrid-control-to-a-single-table-in-the-designer"></a>以資料繫結 DataGrid 控制項至設計工具中的單一資料表  
   
-1.  將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至的資料項目物件的屬性。  
+1. 將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至的資料項目物件的屬性。  
   
-2.  如果資料來源的資料集，請設定<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性繫結至資料表的名稱。  
+2. 如果資料來源的資料集，請設定<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性繫結至資料表的名稱。  
   
-3.  如果資料來源之資料集或資料集資料表為基礎的資料檢視，請將程式碼加入表單，以填入資料集。  
+3. 如果資料來源之資料集或資料集資料表為基礎的資料檢視，請將程式碼加入表單，以填入資料集。  
   
      您使用的確切程式碼取決於資料集從何處取得資料。 如果直接從資料庫填入資料集，您通常會呼叫`Fill`方法的資料配接器，如下列程式碼範例中，會填入資料集所示`DsCategories1`:  
   
@@ -57,17 +57,17 @@ ms.locfileid: "59115722"
     sqlDataAdapter1->Fill(dsCategories1);  
     ```  
   
-4.  （選擇性）將適當的資料表樣式和資料行樣式加入方格中。  
+4. （選擇性）將適當的資料表樣式和資料行樣式加入方格中。  
   
      如果不有任何資料表樣式，您會看到資料表，但搭配最少的格式與可見的所有資料行。  
   
 ### <a name="to-data-bind-the-datagrid-control-to-multiple-tables-in-a-dataset-in-the-designer"></a>若要進行資料繫結 DataGrid 控制項中的資料集設計工具中的多個資料表  
   
-1.  將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至的資料項目物件的屬性。  
+1. 將控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>包含您想要繫結至的資料項目物件的屬性。  
   
-2.  如果資料集包含相關的資料表 （也就是如果它包含的關聯性物件），將<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性設為父資料表的名稱。  
+2. 如果資料集包含相關的資料表 （也就是如果它包含的關聯性物件），將<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性設為父資料表的名稱。  
   
-3.  撰寫程式碼以填入資料集。  
+3. 撰寫程式碼以填入資料集。  
   
 ## <a name="see-also"></a>另請參閱
 

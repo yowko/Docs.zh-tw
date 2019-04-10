@@ -2,12 +2,12 @@
 title: 自訂安全中繼資料端點
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
-ms.openlocfilehash: f025f76289705899e45db6f693f3678df3ed6b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104490"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325965"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>自訂安全中繼資料端點
 這個範例會示範如何實作具有使用其中一個非中繼資料交換繫結，安全的中繼資料端點的服務以及如何設定[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)或用戶端從這類中繼端點的中繼資料。 有兩個系統提供的繫結可用來公開中繼資料端點：mexHttpBinding 和 mexHttpsBinding。 mexHttpBinding 可用來以不安全的方式，透過 HTTP 公開中繼資料端點。 mexHttpsBinding 可用來以安全的方式，透過 HTTPS 公開中繼資料端點。 此範例說明如何使用 <xref:System.ServiceModel.WSHttpBinding> 公開安全的中繼資料端點。 當您要變更繫結上的安全性設定時，您會想要這麼做，但是您不想使用 HTTPS。 如果使用 mexHttpsBinding，您的中繼資料端點將是安全的，但是沒有方法可以修改繫結設定。  
@@ -132,37 +132,37 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。 請注意，Setup.bat 會使用 FindPrivateKey.exe 工具，執行從 setupCertTool.bat 即可安裝[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。 請注意，Setup.bat 會使用 FindPrivateKey.exe 工具，執行從 setupCertTool.bat 即可安裝[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  從 \MetadataResolverClient\bin 或 \SvcutilClient\bin 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
+2. 從 \MetadataResolverClient\bin 或 \SvcutilClient\bin 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-3.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
-4.  當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
+4. 當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1.  在伺服器上執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+1. 在伺服器上執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-2.  在伺服器上編輯 Web.config，以反映新的憑證名稱。 也就是變更`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)機器完整網域名稱的項目。  
+2. 在伺服器上編輯 Web.config，以反映新的憑證名稱。 也就是變更`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-clientcredentials-element.md)機器完整網域名稱的項目。  
   
-3.  從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
+3. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
-4.  在用戶端上執行 `setup.bat client`。 執行`setup.bat`與`client`引數會建立名為 Client.com 的用戶端憑證，並將用戶端憑證匯出為名為 Client.cer 的檔案。  
+4. 在用戶端上執行 `setup.bat client`。 執行`setup.bat`與`client`引數會建立名為 Client.com 的用戶端憑證，並將用戶端憑證匯出為名為 Client.cer 的檔案。  
   
-5.  在用戶端機器上之 `MetadataResolverClient` 的 App.config 檔案中，變更 MEX 端點的位址值以符合服務的新位址。 您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。 也請將 metadataResolverClient.cs 檔案中的其他 "localhost" 變更為新的服務憑證名稱 (伺服器的完整網域名稱)。 對 SvcutilClient 專案的 App.config 執行相同的動作。  
+5. 在用戶端機器上之 `MetadataResolverClient` 的 App.config 檔案中，變更 MEX 端點的位址值以符合服務的新位址。 您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。 也請將 metadataResolverClient.cs 檔案中的其他 "localhost" 變更為新的服務憑證名稱 (伺服器的完整網域名稱)。 對 SvcutilClient 專案的 App.config 執行相同的動作。  
   
-6.  從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。  
+6. 從用戶端目錄將 Client.cer 檔案複製到伺服器上的服務目錄中。  
   
-7.  在用戶端上執行 `ImportServiceCert.bat`。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
+7. 在用戶端上執行 `ImportServiceCert.bat`。 這樣會將服務憑證從 Service.cer 檔案匯入至 CurrentUser - TrustedPeople 存放區中。  
   
-8.  在伺服器上執行 `ImportClientCert.bat`，這樣會從 Client.cer 檔案中將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
+8. 在伺服器上執行 `ImportClientCert.bat`，這樣會從 Client.cer 檔案中將用戶端憑證匯入至 LocalMachine - TrustedPeople 存放區中。  
   
 9. 在服務機器的 Visual Studio 中建置服務專案，並在 Web 瀏覽器中選取說明頁以驗證是否是在執行。  
   

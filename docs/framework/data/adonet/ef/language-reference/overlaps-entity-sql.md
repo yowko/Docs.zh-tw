@@ -2,12 +2,12 @@
 title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
-ms.openlocfilehash: 74399c4c5701fcf039666ef3de19de2cf9a6b50e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104197"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319634"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
 判斷兩個集合是否有共同項目。  
@@ -35,9 +35,9 @@ expression OVERLAPS expression
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 OVERLAPS 運算子來判斷兩個集合是否具有共通的值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
-2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
+2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#OVERLAPS](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#overlaps)]  
   

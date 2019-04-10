@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML browser applications (XBAP)
 - browser-hosted applications [WPF]
 ms.assetid: 3a7a86a8-75d5-4898-96b9-73da151e5e16
-ms.openlocfilehash: 5d7e3788ee05c14cc24bf5084b4c3b94b9fe98bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81ae93871fa5e3fc46382ee9a1810808574fb043
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194808"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320128"
 ---
 # <a name="wpf-xaml-browser-applications-overview"></a>WPF XAML 瀏覽器應用程式概觀
 <a name="introduction"></a>
@@ -100,25 +100,25 @@ ms.locfileid: "59194808"
 ### <a name="debugging-xbaps-that-use-hostscript"></a>針對使用 HostScript 的 XBAP 進行偵錯  
  如果您的 XBAP 使用<xref:System.Windows.Interop.BrowserInteropHelper.HostScript%2A>通訊 [HTML] 視窗中，有兩個設定，您必須指定執行和偵錯 Visual Studio 中的應用程式的物件。 應用程式必須能夠存取它的來源網站，而且您必須使用包含 XBAP 的 HTML 網頁來啟動應用程式。 下列步驟說明如何檢查這兩項設定︰  
   
-1.  在 Visual Studio 中，開啟專案屬性。  
+1. 在 Visual Studio 中，開啟專案屬性。  
   
-2.  在 [安全性] 索引標籤上，按一下 [進階]。  
+2. 在 [安全性] 索引標籤上，按一下 [進階]。  
   
      [進階安全性設定] 對話方塊隨即出現。  
   
-3.  請確定 [允許應用程式存取它的來源網站] 核取方塊已勾選，然後按一下 [確定]。  
+3. 請確定 [允許應用程式存取它的來源網站] 核取方塊已勾選，然後按一下 [確定]。  
   
-4.  在 [偵錯] 索引標籤上，選取 [瀏覽器起始 URL] 選項，並且指定包含 XBAP 之 HTML 網頁的 URL。  
+4. 在 [偵錯] 索引標籤上，選取 [瀏覽器起始 URL] 選項，並且指定包含 XBAP 之 HTML 網頁的 URL。  
   
-5.  在 Internet Explorer 中，按一下 [工具] 按鈕，然後選取 [網際網路選項]。  
+5. 在 Internet Explorer 中，按一下 [工具] 按鈕，然後選取 [網際網路選項]。  
   
      [網際網路選項] 對話方塊隨即出現。  
   
-6.  按一下 [進階] 按鈕。  
+6. 按一下 [進階] 按鈕。  
   
-7.  在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
+7. 在 [安全性] 底下的 [設定]清單中，勾選 [允許檔案中的主動式內容在我的電腦上執行] 核取方塊。  
   
-8.  按一下 [確定] 。  
+8. 按一下 [確定] 。  
   
      變更在重新啟動 Internet Explorer 之後才會生效。  
   
@@ -146,9 +146,9 @@ ms.locfileid: "59194808"
 ### <a name="creating-a-full-trust-xbap"></a>建立完全信任 XBAP  
  如果您的 XBAP 需要完全信任，您可以變更專案以啟用此權限。 下列步驟描述如何啟用完全信任︰  
   
-1.  在 Visual Studio 中，開啟專案屬性。  
+1. 在 Visual Studio 中，開啟專案屬性。  
   
-2.  在 [安全性] 索引標籤上，選取 [這是完全信任的應用程式] 選項。  
+2. 在 [安全性] 索引標籤上，選取 [這是完全信任的應用程式] 選項。  
   
  這項設定會進行下列變更︰  
   

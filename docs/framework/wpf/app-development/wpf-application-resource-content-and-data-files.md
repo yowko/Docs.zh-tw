@@ -17,12 +17,12 @@ helpviewer_keywords:
 - application development [WPF], files
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
-ms.openlocfilehash: f9fd936c15454a81058d42825800a388c5c90a40
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379194"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211917"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 應用程式經常依賴檔案包含非可執行檔的資料，例如[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]、 影像、 視訊和音訊。 Windows Presentation Foundation (WPF) 提供設定、 用來識別，以及使用這些類型的資料檔案，稱為應用程式資料檔案的特殊支援。 這項支援是以一組特定的應用程式資料檔案類型為中心，包括：  
@@ -38,8 +38,7 @@ ms.locfileid: "57379194"
  若要參考應用程式資料檔案，Windows Presentation Foundation (WPF) 使用 Pack[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]配置，這會在將詳細說明[WPF 中的 Pack Uri](pack-uris-in-wpf.md))。  
   
  本主題描述何設定及使用應用程式資料檔案。  
-  
-  
+
 <a name="Resource_Files"></a>   
 ## <a name="resource-files"></a>資源檔  
  若應用程式資料檔案必須一律可供應用程式使用，確保可用性的唯一方法是將檔案編譯成應用程式的主要可執行檔組件或是應用程式的其中一個參考組件。 這種類型的應用程式資料檔案稱為*資源檔*。  
@@ -198,7 +197,7 @@ ms.locfileid: "57379194"
 ### <a name="configuring-site-of-origin-files"></a>設定來源網站檔  
  如果您的來源檔案的網站會在編譯時期為不存在或未知，您需要使用傳統的部署機制，確保所需的檔案可在執行階段，包括使用`XCopy`命令列程式或[!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- 如果您知道在編譯時期，您會想要找的來源站台，但仍想要避免產生明確相依性的檔案，您可以新增這些檔案[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]專案做為`None`項目。 如同內容檔案，您需要設定[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`屬性來指定來源網站檔會複製到相對於已建置的組件，是由指定的位置`Always`值或`PreserveNewest`值。  
+ 如果您知道在編譯時期，您會想要找的來源站台，但仍想要避免產生明確相依性的檔案，您可以新增這些檔案[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]專案做為`None`項目。 如同內容檔案，您需要設定[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`屬性來指定來源網站檔會複製到相對於已建置的組件，是由指定的位置`Always`的值或`PreserveNewest`值。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  
@@ -239,4 +238,5 @@ ms.locfileid: "57379194"
  在變更應用程式資料檔案的組建類型之後，您必須重建整個應用程式，以確認套用這些變更。 若您只建置應用程式，則不會套用變更。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF 中的 Pack URI](pack-uris-in-wpf.md)

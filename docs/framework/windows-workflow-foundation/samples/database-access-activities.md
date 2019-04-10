@@ -2,12 +2,12 @@
 title: 資料庫存取活動
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: db79f2d7605a71997ede134152b12395b9193f95
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
+ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322598"
 ---
 # <a name="database-access-activities"></a>資料庫存取活動
 資料庫存取活動可讓您存取工作流程內的資料庫。 這些活動可讓您存取資料庫以擷取或修改資訊以及使用[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)來存取資料庫。  
@@ -242,12 +242,12 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 |CommandType|要執行之 <xref:System.Data.Common.DbCommand> 的型別。|
 |Sql|要執行的 SQL 命令。|
 |參數|SQL 查詢的參數集合。|
-|結果|查詢執行之後取得的 <xref:System.Data.DataSet>。|
+|結果|<xref:System.Data.DataSet> 執行查詢之後，會取得之項目。|
 
 ## <a name="configuring-connection-information"></a>設定連接資訊
  所有 DbActivities 會共用相同的組態參數。 您可以透過兩種方式加以設定：
 
--   `ConnectionString + InvariantName`：設定 ADO.NET 提供者非變異名稱和連接字串。
+-   `ConnectionString + InvariantName`:設定 ADO.NET 提供者非變異名稱和連接字串。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`：設定包含連接資訊的組態區段名稱。
+-   `ConfigName`:設定包含連接資訊的組態區段名稱。
 
     ```xml
     <connectionStrings>
@@ -299,26 +299,26 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
 ##### <a name="to-run-setupcmd"></a>若要執行 Setup.cmd
 
-1.  開啟命令提示字元。
+1. 開啟命令提示字元。
 
-2.  移至 DbActivities 範例資料夾。
+2. 移至 DbActivities 範例資料夾。
 
-3.  輸入"setup.cmd"，然後按 ENTER。
+3. 輸入"setup.cmd"，然後按 ENTER。
 
     > [!NOTE]
     >  Setup.cmd 會嘗試在本機電腦 SqlExpress 執行個體中安裝範例。 如果您想要將它安裝到其他 SQL Server 執行個體中，請使用新的執行個體名稱編輯 Setup.cmd。
 
 ##### <a name="to-uninstall-the-sample-database"></a>若要解除安裝範例資料庫
 
-1.  在命令提示字元中從相同資料夾執行 Cleanup.cmd。
+1. 在命令提示字元中從相同資料夾執行 Cleanup.cmd。
 
 ##### <a name="to-run-the-sample"></a>若要執行範例
 
-1.  在 Visual Studio 2010 中開啟方案
+1. 在 Visual Studio 2010 中開啟方案
 
-2.  若要編譯方案，請按下 CTRL+SHIFT+B。
+2. 若要編譯方案，請按下 CTRL+SHIFT+B。
 
-3.  若要執行範例但不進行偵錯，請按 CTRL+F5。
+3. 若要執行範例但不進行偵錯，請按 CTRL+F5。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

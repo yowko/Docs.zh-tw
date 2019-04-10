@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：自訂文字編碼器-WCF
 ms.date: 03/30/2017
 ms.assetid: 68ff5c74-3d33-4b44-bcae-e1d2f5dea0de
-ms.openlocfilehash: acfd3b50e46bda7ff995383caf2d7bbf432b5ce5
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: a1523c854bbae09b2ac5cb0565962b394ec9b70e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890406"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320700"
 ---
 # <a name="custom-message-encoder-custom-text-encoder"></a>自訂訊息編碼器：自訂文字編碼器
 
@@ -36,17 +36,17 @@ ms.locfileid: "58890406"
 
 ## <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。
+1. 使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。
 
     ```
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable
     ```
 
-2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-3.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+3. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
 
 ## <a name="message-encoder-factory-and-the-message-encoder"></a>訊息編碼器處理站和訊息編碼器
 

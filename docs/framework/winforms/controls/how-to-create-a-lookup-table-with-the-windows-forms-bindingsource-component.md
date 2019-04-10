@@ -7,12 +7,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], creating a lookup table
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
-ms.openlocfilehash: b2b588a8529983699e49531f51aae8e4225e9608
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321896"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>HOW TO：使用 Windows Forms BindingSource 元件建立查閱資料表
 查閱資料表是具有資料行的資料表，而此資料行會從相關資料表的記錄中顯示資料。 在下列程序中，會使用 <xref:System.Windows.Forms.ComboBox> 控制項顯示從父資料表到子資料表具有外部索引鍵關聯性的欄位。  
@@ -49,21 +49,21 @@ ms.locfileid: "59181476"
   
 ### <a name="to-create-the-user-interface"></a>若要建立使用者介面  
   
-1.  從**工具箱**，拖曳<xref:System.Windows.Forms.ComboBox>控制項拖曳至表單。  
+1. 從**工具箱**，拖曳<xref:System.Windows.Forms.ComboBox>控制項拖曳至表單。  
   
      此控制項會從父資料表顯示資料行。  
   
-2.  拖曳其他控制項以從子資料表顯示詳細資料。 資料表中的資料格式會決定您要選擇哪些控制項。 如需詳細資訊，請參閱[依功能區分的 Windows Forms 控制項](windows-forms-controls-by-function.md)。  
+2. 拖曳其他控制項以從子資料表顯示詳細資料。 資料表中的資料格式會決定您要選擇哪些控制項。 如需詳細資訊，請參閱[依功能區分的 Windows Forms 控制項](windows-forms-controls-by-function.md)。  
   
-3.  將 <xref:System.Windows.Forms.BindingNavigator> 控制項拖曳至表單上，這可讓您巡覽子資料表中的資料。  
+3. 將 <xref:System.Windows.Forms.BindingNavigator> 控制項拖曳至表單上，這可讓您巡覽子資料表中的資料。  
   
 ### <a name="to-connect-to-the-data-and-bind-it-to-controls"></a>連接至資料並將資料繫節至控制項  
   
-1.  選取 <xref:System.Windows.Forms.ComboBox>，然後按一下 [智慧工作提示] 圖像，以顯示 [智慧工作提示] 對話方塊。  
+1. 選取 <xref:System.Windows.Forms.ComboBox>，然後按一下 [智慧工作提示] 圖像，以顯示 [智慧工作提示] 對話方塊。  
   
-2.  選取 [使用資料繫結項目]。  
+2. 選取 [使用資料繫結項目]。  
   
-3.  按一下 [資料來源] 下拉式方塊旁邊的箭頭。 若之前已為專案或表單設定過資料來源，則會顯示；若無設定，請完成下列步驟 (此範例使用 Northwind 範例資料庫的 Customers 及 Orders 資料表，並在引用時使用括號)。  
+3. 按一下 [資料來源] 下拉式方塊旁邊的箭頭。 若之前已為專案或表單設定過資料來源，則會顯示；若無設定，請完成下列步驟 (此範例使用 Northwind 範例資料庫的 Customers 及 Orders 資料表，並在引用時使用括號)。  
   
     1.  按一下 [新增專案資料來源] 以連接至資料，並建立資料來源。  
   
@@ -81,15 +81,15 @@ ms.locfileid: "59181476"
   
     8.  按一下 [ **完成**]。  
   
-4.  在 [顯示成員] 下拉式方塊中，選取要顯示在下拉式方塊中的資料行名稱 (例如 ContactName)。  
+4. 在 [顯示成員] 下拉式方塊中，選取要顯示在下拉式方塊中的資料行名稱 (例如 ContactName)。  
   
-5.  在 [值成員] 下拉式方塊中，選取要在子資料表中執行查詢作業的資料行名稱 (例如 CustomerID)。  
+5. 在 [值成員] 下拉式方塊中，選取要在子資料表中執行查詢作業的資料行名稱 (例如 CustomerID)。  
   
-6.  在 [選取的值] 下拉式方塊中，巡覽至 [專案資料來源]，以及您剛剛建立包含父資料表及子資料表的資料集。 選取與父資料表的值成員相同的子資料表屬性 (例如 Orders.CustomerID)。 將會建立適當的 <xref:System.Windows.Forms.BindingSource>、資料集和資料表配接器元件，並加入至表單中。  
+6. 在 [選取的值] 下拉式方塊中，巡覽至 [專案資料來源]，以及您剛剛建立包含父資料表及子資料表的資料集。 選取與父資料表的值成員相同的子資料表屬性 (例如 Orders.CustomerID)。 將會建立適當的 <xref:System.Windows.Forms.BindingSource>、資料集和資料表配接器元件，並加入至表單中。  
   
-7.  將 <xref:System.Windows.Forms.BindingNavigator> 控制項繫結至子資料表的 <xref:System.Windows.Forms.BindingSource> (例如 `OrdersBindingSource`)。  
+7. 將 <xref:System.Windows.Forms.BindingNavigator> 控制項繫結至子資料表的 <xref:System.Windows.Forms.BindingSource> (例如 `OrdersBindingSource`)。  
   
-8.  從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結程序至您想要顯示的詳細資料欄位。  
+8. 從子資料表的 <xref:System.Windows.Forms.ComboBox> (例如 <xref:System.Windows.Forms.BindingNavigator>)，將 <xref:System.Windows.Forms.BindingSource> 和 `OrdersBindingSource` 以外的控制項繫結程序至您想要顯示的詳細資料欄位。  
   
 ## <a name="see-also"></a>另請參閱
 

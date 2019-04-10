@@ -2,12 +2,12 @@
 title: 處理非同步應用程式 (Visual Basic) 中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
-ms.openlocfilehash: 151cdcb841a7a67ba0bf8f5560d3f6baf999c365
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374881"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324782"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
 當您將非同步程式碼納入您的應用程式時，應該考慮並防止可能發生的重新進入，也就是在完成前重新進入的非同步作業。 如果您不找出並處理重新進入的可能性，它可能會導致非預期的結果。  
@@ -136,7 +136,7 @@ End Sub
   
  若要設定此案例，請對[檢閱及執行範例應用程式](#BKMD_SettingUpTheExample)中提供的基本程式碼進行下列變更。 您也可以從 [Async Samples:Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (非同步範例︰重新進入 .NET 傳統型應用程式) 下載壓縮檔案。 此專案的名稱是 CancelAndRestart。  
   
-1.  宣告 <xref:System.Threading.CancellationTokenSource> 變數 `cts`，這是在所有方法的範圍內。  
+1. 宣告 <xref:System.Threading.CancellationTokenSource> 變數 `cts`，這是在所有方法的範圍內。  
   
     ```vb  
     Class MainWindow // Or Class MainPage  
@@ -145,7 +145,7 @@ End Sub
         Dim cts As CancellationTokenSource  
     ```  
   
-2.  在 `StartButton_Click` 中，判定作業是否已在進行中。 如果值`cts`是`Nothing`，沒有任何作業已在使用中。 如果值不是`Nothing`，已在執行的作業已取消。  
+2. 在 `StartButton_Click` 中，判定作業是否已在進行中。 如果值`cts`是`Nothing`，沒有任何作業已在使用中。 如果值不是`Nothing`，已在執行的作業已取消。  
   
     ```vb  
     ' *** If a download process is already underway, cancel it.  
@@ -154,7 +154,7 @@ End Sub
     End If  
     ```  
   
-3.  將 `cts` 設為代表目前程序的不同值。  
+3. 將 `cts` 設為代表目前程序的不同值。  
   
     ```vb  
     ' *** Now set cts to cancel the current process if the button is chosen again.  
@@ -162,7 +162,7 @@ End Sub
     cts = newCTS  
     ```  
   
-4.  在結尾`StartButton_Click`目前的程序已完成，因此設定的值`cts`回到`Nothing`。  
+4. 在結尾`StartButton_Click`目前的程序已完成，因此設定的值`cts`回到`Nothing`。  
   
     ```vb  
     ' *** When the process completes, signal that another process can proceed.  
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 方法  
  此範例會將 `AccessTheWebAsync` 分為兩個方法。 第一種方法為 `AccessTheWebAsync`，可啟動群組的所有下載工作，並且設定 `pendingWork` 來控制顯示程序。 此方法會使用 Language Integrated Query (LINQ 查詢) 和 <xref:System.Linq.Enumerable.ToArray%2A> 來同時啟動所有下載工作。  
   
- `AccessTheWebAsync` 接著呼叫 `FinishOneGroupAsync` 來等候每個下載完成，並顯示它的長度。  
+ `AccessTheWebAsync` 然後呼叫`FinishOneGroupAsync`等候每個下載完成，並顯示它的長度。  
   
- `FinishOneGroupAsync` 傳回工作，該工作指派給 `AccessTheWebAsync` 中的 `pendingWork`。 在工作完成前，該值會防止另一項作業中斷該工作。  
+ `FinishOneGroupAsync` 傳回的工作，會指派給`pendingWork`在`AccessTheWebAsync`。 在工作完成前，該值會防止另一項作業中斷該工作。  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  
@@ -535,42 +535,42 @@ End Function
   
 ### <a name="BKMK_DownloadingTheApp"></a> 下載應用程式  
   
-1.  從 [Async Samples:Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (非同步範例︰重新進入 .NET 傳統型應用程式) 下載壓縮檔案。  
+1. 從 [Async Samples:Reentrancy in .NET Desktop Apps](https://code.msdn.microsoft.com/Async-Sample-Preventing-a8489f06) (非同步範例︰重新進入 .NET 傳統型應用程式) 下載壓縮檔案。  
   
-2.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
+2. 解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
-3.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
+3. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-4.  導覽至保存解壓縮之範例程式碼的資料夾，然後開啟方案 (.sln) 檔案。  
+4. 導覽至保存解壓縮之範例程式碼的資料夾，然後開啟方案 (.sln) 檔案。  
   
-5.  在方案總管中，開啟要執行之專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
+5. 在方案總管中，開啟要執行之專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
-6.  選擇 CTRL + F5 鍵以建置並執行專案。  
+6. 選擇 CTRL + F5 鍵以建置並執行專案。  
   
 ### <a name="BKMK_BuildingTheApp"></a> 建置應用程式  
  下節提供將範例建置為 WPF 應用程式的程式碼。  
   
 ##### <a name="to-build-a-wpf-app"></a>若要建置 WPF 應用程式  
   
-1.  啟動 Visual Studio。  
+1. 啟動 Visual Studio。  
   
-2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
+2. 在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  在 **已安裝的範本**窗格中，展開**Visual Basic**，然後展開**Windows**。  
+3. 在 **已安裝的範本**窗格中，展開**Visual Basic**，然後展開**Windows**。  
   
-4.  在專案類型清單中，選擇 [WPF 應用程式]。  
+4. 在專案類型清單中，選擇 [WPF 應用程式]。  
   
-5.  將專案命名為 `WebsiteDownloadWPF`，然後選擇 [確定] 按鈕。  
+5. 將專案命名為 `WebsiteDownloadWPF`，然後選擇 [確定] 按鈕。  
   
      新的專案隨即會出現在方案總管中。  
   
-6.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
+6. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
   
      如未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [檢視程式碼]。  
   
-7.  在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。  
+7. 在 MainWindow.xaml 的 [XAML] 檢視中，以下列程式碼取代程式碼。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -590,7 +590,7 @@ End Function
   
      包含文字方塊和按鈕的簡易視窗會出現在 MainWindow.xaml 的 [設計] 檢視中。  
   
-8.  加入 <xref:System.Net.Http> 的參考。  
+8. 加入 <xref:System.Net.Http> 的參考。  
   
 9. 在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。  
   

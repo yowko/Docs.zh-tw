@@ -2,21 +2,21 @@
 title: LINQ to SQL 中的程式碼產生
 ms.date: 03/30/2017
 ms.assetid: ddcbdaa1-e7fa-4d85-a379-313b49965c07
-ms.openlocfilehash: 48035b0f7b4a8c9a37fade5dfc2e2c45ea779dba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6565655cdb3222a8c9fa7e7759bac09d57ee269b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174885"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321584"
 ---
 # <a name="code-generation-in-linq-to-sql"></a>LINQ to SQL 中的程式碼產生
 您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]或 SQLMetal 命令列工具，來產生表示資料庫的程式碼。 無論使用哪種工具，端對端程式碼產生都可分為三個階段：  
   
-1.  *DBML 擷取器*從資料庫擷取結構描述資訊，並重新組合成 XML 格式的 DBML 檔案的資訊。  
+1. *DBML 擷取器*從資料庫擷取結構描述資訊，並重新組合成 XML 格式的 DBML 檔案的資訊。  
   
-2.  DBML 檔案由掃描*DBML Validator*的錯誤。  
+2. DBML 檔案由掃描*DBML Validator*的錯誤。  
   
-3.  如果沒有發現驗證錯誤，檔案會傳遞給程式碼產生器。  
+3. 如果沒有發現驗證錯誤，檔案會傳遞給程式碼產生器。  
   
  如需詳細資訊，請參閱 [SqlMetal.exe (程式碼產生工具)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)。 使用 Visual Studio 的開發人員也可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]產生程式碼。 請參閱[LINQ to SQL 工具，在 Visual Studio 中](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   

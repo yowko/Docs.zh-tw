@@ -13,19 +13,19 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing items
 - CheckedListBox control [Windows Forms], accessing items
 ms.assetid: 1216742f-bcf9-4ff8-8a62-d7c9053c2b96
-ms.openlocfilehash: 3d61a9b38f809d16e95b485893acaadcf04d826f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fbdd9168fe286823db7cf066ae0f821b8db88ecb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324522"
 ---
 # <a name="how-to-access-specific-items-in-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中存取特定項目
 存取 Windows Form 下拉式方塊、 清單方塊中或選取的清單方塊中的特定項目是必要的工作。 它可讓您以程式設計方式決定功能的清單中，在任何給定的位置。  
   
 ### <a name="to-access-a-specific-item"></a>若要存取特定的項目  
   
-1.  查詢`Items`使用特定的項目索引的集合：  
+1. 查詢`Items`使用特定的項目索引的集合：  
   
     ```vb  
     Private Function GetItemText(i As Integer) As String  

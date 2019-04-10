@@ -2,12 +2,12 @@
 title: HOW TO：建立支援的認證
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
-ms.openlocfilehash: 3ae2b59abf59b0256741ef4e908305d9f4350b4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093705"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326043"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>HOW TO：建立支援的認證
 您可能具有需要多個認證的自訂安全性配置。 例如，服務對用戶端的要求可能不只是提供使用者名稱和密碼，可能也要提供可證明用戶端已超過 18 歲的認證。 第二個認證已*支援認證*。 本主題說明如何在 Windows Communication Foundation (WCF) 用戶端實作這類認證。  
@@ -68,9 +68,9 @@ ms.locfileid: "59093705"
   
 #### <a name="to-create-a-custom-binding-that-includes-supporting-credentials"></a>建立包含支援認證的自訂繫結  
   
-1.  建立安全性繫結項目。 底下的範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 驗證模式建立 `UserNameForCertificate`。 請使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> 方法。  
+1. 建立安全性繫結項目。 底下的範例會使用 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 驗證模式建立 `UserNameForCertificate`。 請使用 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateUserNameForCertificateBindingElement%2A> 方法。  
   
-2.  將支援參數新增至適當屬性 (`Endorsing`、`Signed`、`SignedEncrypted` 或 `SignedEndorsed`) 所傳回的類型集合。 <xref:System.ServiceModel.Security.Tokens> 命名空間中的類型包含常用類型，例如 <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>。  
+2. 將支援參數新增至適當屬性 (`Endorsing`、`Signed`、`SignedEncrypted` 或 `SignedEndorsed`) 所傳回的類型集合。 <xref:System.ServiceModel.Security.Tokens> 命名空間中的類型包含常用類型，例如 <xref:System.ServiceModel.Security.Tokens.X509SecurityTokenParameters>。  
   
 ## <a name="example"></a>範例  
   

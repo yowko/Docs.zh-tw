@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column hiding
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
-ms.openlocfilehash: e0255cca5c614f07bbc4a7dfc9a908612e8867a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: aa81eb7470b818fa2b65200503e5ce65b467c0f2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324444"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具隱藏 Windows Forms DataGridView 控制項的資料行
 有時候您會想要只顯示 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項中某些可用的資料行。 例如，您可能想要顯示員工薪資資料行具有管理認證，同時隱藏其他使用者的使用者。 或者，您可能要將控制項繫結至資料來源，其中包含您想要顯示的只有其中一些的許多資料行。 在此情況下，您通常會移除您不想要顯示，而不是隱藏它們的資料行。 如需詳細資訊，請參閱[如何：新增和移除資料行中的 Windows Form DataGridView 控制項使用設計工具](add-and-remove-columns-in-the-datagrid-using-the-designer.md)。  
@@ -24,11 +24,11 @@ ms.locfileid: "59122378"
   
 ### <a name="to-hide-a-column-using-the-designer"></a>若要隱藏資料行使用設計工具  
   
-1.  按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再選取**編輯資料行**。  
+1. 按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再選取**編輯資料行**。  
   
-2.  選取的資料行**選取的資料行**清單。  
+2. 選取的資料行**選取的資料行**清單。  
   
-3.  在 **資料行屬性**方格中，設定<xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>屬性設`false`。  
+3. 在 **資料行屬性**方格中，設定<xref:System.Windows.Forms.DataGridViewColumn.Visible%2A>屬性設`false`。  
   
     > [!NOTE]
     >  您也可以新增藉由清除時隱藏資料行**Visible**中的核取方塊**加入資料行** 對話方塊。  

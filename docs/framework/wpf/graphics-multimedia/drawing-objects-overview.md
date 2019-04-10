@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Drawing objects [WPF]
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
-ms.openlocfilehash: 51ff0317172d545c746d35808d7c672e9586eeae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144023"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325510"
 ---
 # <a name="drawing-objects-overview"></a>繪圖物件概觀
 本主題將介紹<xref:System.Windows.Media.Drawing>物件，並說明如何使用它們來有效率地繪製圖形、 點陣圖、 文字及媒體。 使用 <xref:System.Windows.Media.Drawing>物件，當您建立美工圖案、 繪製<xref:System.Windows.Media.DrawingBrush>，或使用<xref:System.Windows.Media.Visual>物件。  
@@ -94,27 +94,27 @@ GeometryDrawing
   
  若要播放媒體，而不需要建立您自己<xref:System.Windows.Media.MediaTimeline>，執行下列步驟。  
   
-1.  建立 <xref:System.Windows.Media.MediaPlayer> 物件。  
+1. 建立 <xref:System.Windows.Media.MediaPlayer> 物件。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline1)]  
   
-2.  使用<xref:System.Windows.Media.MediaPlayer.Open%2A>方法來載入媒體檔案。  
+2. 使用<xref:System.Windows.Media.MediaPlayer.Open%2A>方法來載入媒體檔案。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline2)]  
   
-3.  建立 <xref:System.Windows.Media.VideoDrawing>。  
+3. 建立 <xref:System.Windows.Media.VideoDrawing>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline3)]  
   
-4.  指定的大小和位置，藉由設定繪製媒體<xref:System.Windows.Media.VideoDrawing.Rect%2A>屬性<xref:System.Windows.Media.VideoDrawing>。  
+4. 指定的大小和位置，藉由設定繪製媒體<xref:System.Windows.Media.VideoDrawing.Rect%2A>屬性<xref:System.Windows.Media.VideoDrawing>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline4)]  
   
-5.  設定<xref:System.Windows.Media.VideoDrawing.Player%2A>的屬性<xref:System.Windows.Media.VideoDrawing>使用<xref:System.Windows.Media.MediaPlayer>您所建立。  
+5. 設定<xref:System.Windows.Media.VideoDrawing.Player%2A>的屬性<xref:System.Windows.Media.VideoDrawing>使用<xref:System.Windows.Media.MediaPlayer>您所建立。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline5](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline5)]  
   
-6.  使用<xref:System.Windows.Media.MediaPlayer.Play%2A>方法的<xref:System.Windows.Media.MediaPlayer>開始播放媒體。  
+6. 使用<xref:System.Windows.Media.MediaPlayer.Play%2A>方法的<xref:System.Windows.Media.MediaPlayer>開始播放媒體。  
   
      [!code-csharp[DrawingMiscSnippets_snip#VideoDrawingExampleInline6](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#videodrawingexampleinline6)]  
   
@@ -124,19 +124,19 @@ GeometryDrawing
   
  若要取得其他計時控制項，透過媒體，請使用<xref:System.Windows.Media.MediaTimeline>具有<xref:System.Windows.Media.MediaPlayer>和<xref:System.Windows.Media.VideoDrawing>物件。 <xref:System.Windows.Media.MediaTimeline>可讓您指定是否應重複播放視訊。 若要使用<xref:System.Windows.Media.MediaTimeline>與<xref:System.Windows.Media.VideoDrawing>，執行下列步驟：  
   
-1.  宣告<xref:System.Windows.Media.MediaTimeline>並設定其計時行為。  
+1. 宣告<xref:System.Windows.Media.MediaTimeline>並設定其計時行為。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline1](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline1)]  
   
-2.  建立<xref:System.Windows.Media.MediaClock>從<xref:System.Windows.Media.MediaTimeline>。  
+2. 建立<xref:System.Windows.Media.MediaClock>從<xref:System.Windows.Media.MediaTimeline>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline2](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline2)]  
   
-3.  建立<xref:System.Windows.Media.MediaPlayer>並用<xref:System.Windows.Media.MediaClock>若要設定其<xref:System.Windows.Media.MediaPlayer.Clock%2A>屬性。  
+3. 建立<xref:System.Windows.Media.MediaPlayer>並用<xref:System.Windows.Media.MediaClock>若要設定其<xref:System.Windows.Media.MediaPlayer.Clock%2A>屬性。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline3](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline3)]  
   
-4.  建立<xref:System.Windows.Media.VideoDrawing>並指派<xref:System.Windows.Media.MediaPlayer>要<xref:System.Windows.Media.VideoDrawing.Player%2A>屬性<xref:System.Windows.Media.VideoDrawing>。  
+4. 建立<xref:System.Windows.Media.VideoDrawing>並指派<xref:System.Windows.Media.MediaPlayer>要<xref:System.Windows.Media.VideoDrawing.Player%2A>屬性<xref:System.Windows.Media.VideoDrawing>。  
   
      [!code-csharp[DrawingMiscSnippets_snip#RepeatingVideoDrawingExampleInline4](~/samples/snippets/csharp/VS_Snippets_Wpf/DrawingMiscSnippets_snip/CSharp/VideoDrawingExample.cs#repeatingvideodrawingexampleinline4)]  
   

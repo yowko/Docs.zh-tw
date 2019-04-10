@@ -8,12 +8,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], event handlers
 - procedures [Visual Basic], calling
 ms.assetid: 72e18ef8-144e-40df-a1f4-066a57271e28
-ms.openlocfilehash: dd21f80e4b3892cbd9db901b619ecff98f6b70bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3690d1c2eb8ece9059b8b25b5a14bef2021bc8f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320167"
 ---
 # <a name="how-to-call-an-event-handler-in-visual-basic"></a>HOW TO：在 Visual Basic 中呼叫事件處理常式
 *事件*是動作或狀況，例如滑鼠按一下或一種信用限制超過 — 可以辨認某些程式的元件，以及您可以撰寫程式碼來回應。 *事件處理常式*是您撰寫來回應事件的程式碼。  
@@ -26,13 +26,13 @@ ms.locfileid: "58837763"
   
 ### <a name="to-call-an-event-handler-using-handles-and-withevents"></a>使用您建立事件處理常式處理的呼叫和 WithEvents  
   
-1.  請確定事件以宣告[Event 陳述式](../../../../visual-basic/language-reference/statements/event-statement.md)。  
+1. 請確定事件以宣告[Event 陳述式](../../../../visual-basic/language-reference/statements/event-statement.md)。  
   
-2.  宣告物件變數在模組或類別層級，請使用[WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)關鍵字。 `As`子句，這個變數必須指定引發事件的類別。  
+2. 宣告物件變數在模組或類別層級，請使用[WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)關鍵字。 `As`子句，這個變數必須指定引發事件的類別。  
   
-3.  在宣告中的事件處理`Sub`程序中，新增[處理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句，指定`WithEvents`變數和事件名稱。  
+3. 在宣告中的事件處理`Sub`程序中，新增[處理](../../../../visual-basic/language-reference/statements/handles-clause.md)子句，指定`WithEvents`變數和事件名稱。  
   
-4.  發生事件時，Visual Basic 會自動呼叫`Sub`程序。 您的程式碼可以使用`RaiseEvent`陳述式，使就會發生此事件。  
+4. 發生事件時，Visual Basic 會自動呼叫`Sub`程序。 您的程式碼可以使用`RaiseEvent`陳述式，使就會發生此事件。  
   
      下列範例會定義事件和`WithEvents`引發事件的類別是指的變數。 事件處理`Sub`程序會使用`Handles`子句，以指定的類別和它所處理的事件。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "58837763"
   
 ### <a name="to-call-an-event-handler-using-addhandler"></a>若要呼叫事件處理常式使用 AddHandler  
   
-1.  請確定事件宣告與`Event`陳述式。  
+1. 請確定事件宣告與`Event`陳述式。  
   
-2.  執行[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)動態連接事件處理`Sub`與事件的程序。  
+2. 執行[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)動態連接事件處理`Sub`與事件的程序。  
   
-3.  發生事件時，Visual Basic 會自動呼叫`Sub`程序。 您的程式碼可以使用`RaiseEvent`陳述式，使就會發生此事件。  
+3. 發生事件時，Visual Basic 會自動呼叫`Sub`程序。 您的程式碼可以使用`RaiseEvent`陳述式，使就會發生此事件。  
   
      下列範例會定義`Sub`程序來處理<xref:System.Windows.Forms.Form.Closing>型態的事件。 然後它會使用[AddHandler 陳述式](../../../../visual-basic/language-reference/statements/addhandler-statement.md)建立關聯`catchClose`做為事件處理常式的程序<xref:System.Windows.Forms.Form.Closing>。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "58837763"
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [Sub 程序](./sub-procedures.md)
+- [子程序](./sub-procedures.md)
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
 - [AddressOf 運算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [如何：建立程序](./how-to-create-a-procedure.md)
-- [如何：呼叫不傳回值的程序](./how-to-call-a-procedure-that-does-not-return-a-value.md)
+- [HOW TO：建立程序](./how-to-create-a-procedure.md)
+- [HOW TO：呼叫不傳回值的程序](./how-to-call-a-procedure-that-does-not-return-a-value.md)

@@ -2,25 +2,25 @@
 title: 傳輸：WSE 3.0 TCP 互通性
 ms.date: 03/30/2017
 ms.assetid: 5f7c3708-acad-4eb3-acb9-d232c77d1486
-ms.openlocfilehash: 9b2fcc2e7d96d2cfbb3b55934fa19ec24487bce7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc483e44e625534d87ea94e84fc984f0aff880f9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324210"
 ---
 # <a name="transport-wse-30-tcp-interoperability"></a>傳輸：WSE 3.0 TCP 互通性
 WSE 3.0 TCP 互通性傳輸範例示範如何實作 TCP 雙工工作階段做為自訂的 Windows Communication Foundation (WCF) 傳輸。 也會示範如何使用通道層的擴充性，透過網路與現有的已部署系統相連結。 下列步驟示範如何建置此自訂 WCF 傳輸：  
   
-1.  從 TCP 通訊端 (Socket) 開始，建立會使用 DIME 框架來描述訊息界限之 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的用戶端和伺服器實作。  
+1. 從 TCP 通訊端 (Socket) 開始，建立會使用 DIME 框架來描述訊息界限之 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 的用戶端和伺服器實作。  
   
-2.  建立會連接至 WSE TCP 服務，並透過用戶端 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s 傳送框架處理訊息的通道處理站。  
+2. 建立會連接至 WSE TCP 服務，並透過用戶端 <xref:System.ServiceModel.Channels.IDuplexSessionChannel>s 傳送框架處理訊息的通道處理站。  
   
-3.  建立通道接聽程式，以接受連入的 TCP 連線並產生對應的通道。  
+3. 建立通道接聽程式，以接受連入的 TCP 連線並產生對應的通道。  
   
-4.  確認已將所有網路特定例外狀況正規化為適當的 <xref:System.ServiceModel.CommunicationException> 衍生類別。  
+4. 確認已將所有網路特定例外狀況正規化為適當的 <xref:System.ServiceModel.CommunicationException> 衍生類別。  
   
-5.  新增繫結項目，而此繫結項目會將自訂傳輸新增至通道堆疊。 如需詳細資訊，請參閱 [新增繫結項目]。  
+5. 新增繫結項目，而此繫結項目會將自訂傳輸新增至通道堆疊。 如需詳細資訊，請參閱 [新增繫結項目]。  
   
 ## <a name="creating-iduplexsessionchannel"></a>建立 IDuplexSessionChannel  
  撰寫 WSE 3.0 TCP 互通性傳輸的第一個步驟，就是在 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 之上建立 <xref:System.Net.Sockets.Socket> 的實作。 `WseTcpDuplexSessionChannel` 衍生自<xref:System.ServiceModel.Channels.ChannelBase>。 傳送訊息的邏輯是由兩個主要部分所組成：（1） 將訊息編碼成位元組，以及 (2) 框架處理這些位元組而透過線路傳送它們。  
@@ -172,12 +172,12 @@ Symbols:
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  如果要執行這個範例，您必須已安裝 WSE 3.0 和 WSE `TcpSyncStockService` 範例。 您可以下載[從 MSDN 的 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)。  
+1. 如果要執行這個範例，您必須已安裝 WSE 3.0 和 WSE `TcpSyncStockService` 範例。 您可以下載[從 MSDN 的 WSE 3.0](https://go.microsoft.com/fwlink/?LinkId=95000)。  
   
 > [!NOTE]
 >  由於 [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上不支援 WSE 3.0，因此您無法在該作業系統上安裝或執行 `TcpSyncStockService` 範例。  
   
-1.  在安裝 `TcpSyncStockService` 範例之後，請執行下列步驟：  
+1. 在安裝 `TcpSyncStockService` 範例之後，請執行下列步驟：  
   
     1.  開啟 Visual Studio 中的 `TcpSyncStockService` (請注意，TcpSyncStockService 範例是隨著 WSE 3.0 一起安裝， 它不屬於此範例程式碼的一部分)。  
   

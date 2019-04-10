@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在金鑰容器儲存非對稱金鑰
+title: HOW TO：將對稱金鑰儲存在金鑰容器中
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,31 +17,31 @@ helpviewer_keywords:
 ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ff86db89eadc36faf3ebdcd1f653d73fc958595a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972790"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326186"
 ---
-# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>HOW TO：在金鑰容器儲存非對稱金鑰
+# <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>HOW TO：將對稱金鑰儲存在金鑰容器中
 非對稱私密金鑰不應逐字或以純文字儲存到本機電腦上。 如果您需要儲存私密金鑰，您應該使用金鑰容器。 如需金鑰容器的詳細資訊，請參閱[了解電腦層級和使用者層級的 RSA 金鑰容器](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))。  
   
 ### <a name="to-create-an-asymmetric-key-and-save-it-in-a-key-container"></a>建立非對稱金鑰並儲存到金鑰容器中  
   
-1.  建立的新執行個體<xref:System.Security.Cryptography.CspParameters>類別，並傳遞您想要呼叫的金鑰容器名稱<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>欄位。  
+1. 建立的新執行個體<xref:System.Security.Cryptography.CspParameters>類別，並傳遞您想要呼叫的金鑰容器名稱<xref:System.Security.Cryptography.CspParameters.KeyContainerName?displayProperty=nameWithType>欄位。  
   
-2.  建立衍生自類別的新執行個體<xref:System.Security.Cryptography.AsymmetricAlgorithm>類別 (通常**RSACryptoServiceProvider**或是**DSACryptoServiceProvider**)，並傳遞先前建立**一個是 CspParameters**其建構函式的物件。  
+2. 建立衍生自類別的新執行個體<xref:System.Security.Cryptography.AsymmetricAlgorithm>類別 (通常**RSACryptoServiceProvider**或是**DSACryptoServiceProvider**)，並傳遞先前建立**一個是 CspParameters**其建構函式的物件。  
   
 ### <a name="to-delete-the-key-from-a-key-container"></a>從金鑰容器中刪除金鑰  
   
-1.  建立 **CspParameters** 類別的新執行個體，並將您為金鑰容器命名的名稱傳遞至 **CspParameters.KeyContainerName** 欄位。  
+1. 建立 **CspParameters** 類別的新執行個體，並將您為金鑰容器命名的名稱傳遞至 **CspParameters.KeyContainerName** 欄位。  
   
-2.  建立衍生自 **AsymmetricAlgorithm** 類別 (通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**) 之類別的新執行個體，並將先前建立的 **CspParameters** 物件傳遞至其建構函式。  
+2. 建立衍生自 **AsymmetricAlgorithm** 類別 (通常是 **RSACryptoServiceProvider** 或 **DSACryptoServiceProvider**) 之類別的新執行個體，並將先前建立的 **CspParameters** 物件傳遞至其建構函式。  
   
-3.  將衍生自 **AsymmetricAlgorithm** 之類別的 **PersistKeyInCSP** 屬性設定為 **false** (在 Visual Basic 中為 **False**)。  
+3. 將衍生自 **AsymmetricAlgorithm** 之類別的 **PersistKeyInCSP** 屬性設定為 **false** (在 Visual Basic 中為 **False**)。  
   
-4.  呼叫衍生自 **AsymmetricAlgorithm** 之類別的 **Clear** 方法。 這個方法會釋放該類別的所有資源，並清除金鑰容器。  
+4. 呼叫衍生自 **AsymmetricAlgorithm** 之類別的 **Clear** 方法。 這個方法會釋放該類別的所有資源，並清除金鑰容器。  
   
 ## <a name="example"></a>範例  
  下列範例示範如何建立非對稱金鑰、將金鑰儲存到金鑰容器中、在稍後擷取金鑰，以及從容器中刪除金鑰。  
@@ -228,4 +228,4 @@ Key deleted.
 - [產生加密和解密金鑰](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)
 - [加密資料](../../../docs/standard/security/encrypting-data.md)
 - [解密資料](../../../docs/standard/security/decrypting-data.md)
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 4ab2ca5530c87775e28951de8c1c3ebd056291dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195679"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321883"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項
 有些應用程式需要表單能在調整表單大小或變更內容大小時，自行適當排列配置。 當需要動態配置但不想用程式碼明確處理 <xref:System.Windows.Forms.Control.Layout> 事件時，請考慮使用配置面板。  
@@ -51,9 +51,9 @@ ms.locfileid: "59195679"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立以 Windows 為基礎的應用程式專案，名"為 FlowLayoutPanelExample"(**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**).  
+1. 建立以 Windows 為基礎的應用程式專案，名"為 FlowLayoutPanelExample"(**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**).  
   
-2.  選取 [表單設計工具] 中的表單。  
+2. 選取 [表單設計工具] 中的表單。  
   
 ## <a name="arranging-controls-horizontally-and-vertically"></a>以水平或垂直方式排列控制項  
  <xref:System.Windows.Forms.FlowLayoutPanel> 控制項允許您沿著資料列或資料行放置控制項，但不需要精確指定每個個別控制項的位置。  
@@ -62,56 +62,56 @@ ms.locfileid: "59195679"
   
 #### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>使用 FlowLayoutPanel 以水平及垂直方式排列控制項  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.FlowLayoutPanel>**將** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.FlowLayoutPanel>**將** 控制項拖曳至表單。  
   
-2.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至 <xref:System.Windows.Forms.FlowLayoutPanel>。 請注意，它會自動移至 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的左上角。  
+2. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至 <xref:System.Windows.Forms.FlowLayoutPanel>。 請注意，它會自動移至 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的左上角。  
   
-3.  從 [工具箱] <xref:System.Windows.Forms.Button>**將另一個** 控制項拖曳至 <xref:System.Windows.Forms.FlowLayoutPanel>。 請注意， <xref:System.Windows.Forms.Button> 控制項會自動移至第一個 <xref:System.Windows.Forms.Button> 控制項旁邊的位置。 如果您的 <xref:System.Windows.Forms.FlowLayoutPanel> 太窄無法在同一資料列中容納兩個控制項，新的 <xref:System.Windows.Forms.Button> 控制項會自動移至下一列。  
+3. 從 [工具箱] <xref:System.Windows.Forms.Button>**將另一個** 控制項拖曳至 <xref:System.Windows.Forms.FlowLayoutPanel>。 請注意， <xref:System.Windows.Forms.Button> 控制項會自動移至第一個 <xref:System.Windows.Forms.Button> 控制項旁邊的位置。 如果您的 <xref:System.Windows.Forms.FlowLayoutPanel> 太窄無法在同一資料列中容納兩個控制項，新的 <xref:System.Windows.Forms.Button> 控制項會自動移至下一列。  
   
-4.  從 [工具箱] <xref:System.Windows.Forms.Button>**將更多的** 控制項拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel>。 繼續放置 <xref:System.Windows.Forms.Button> 控制項，直到其中一個換行至下列為止。  
+4. 從 [工具箱] <xref:System.Windows.Forms.Button>**將更多的** 控制項拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel>。 繼續放置 <xref:System.Windows.Forms.Button> 控制項，直到其中一個換行至下列為止。  
   
-5.  變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 屬性值為 `false`。 請注意，子控制項不再移到下一列。 而是改為移至第一列並加以裁剪。  
+5. 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 屬性值為 `false`。 請注意，子控制項不再移到下一列。 而是改為移至第一列並加以裁剪。  
   
-6.  變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 屬性值為 `true`。 請注意，子控制項再次自動換行到下一列。  
+6. 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.WrapContents%2A> 屬性值為 `true`。 請注意，子控制項再次自動換行到下一列。  
   
-7.  減少 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的寬度，直到所有的 <xref:System.Windows.Forms.Button> 控制項都移入第一個資料行。  
+7. 減少 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的寬度，直到所有的 <xref:System.Windows.Forms.Button> 控制項都移入第一個資料行。  
   
-8.  增加 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的寬度，直到所有的 <xref:System.Windows.Forms.Button> 控制項都移入第一個資料列。 您可能需要調整表單大小以容納較大的寬度。  
+8. 增加 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的寬度，直到所有的 <xref:System.Windows.Forms.Button> 控制項都移入第一個資料列。 您可能需要調整表單大小以容納較大的寬度。  
   
 ## <a name="changing-flow-direction"></a>變更文字方向  
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性允許您變更控制項的排列方向。 子控制項的排列方向可以由左到右、由右到左、由上到下或由下到上。  
   
 #### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>在 FlowLayoutPanel 中變更文字方向  
   
-1.  變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值為 <xref:System.Windows.Forms.FlowDirection.TopDown>。 請注意，子控制項會視控制項的高度重新排列成一或多個資料行。  
+1. 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值為 <xref:System.Windows.Forms.FlowDirection.TopDown>。 請注意，子控制項會視控制項的高度重新排列成一或多個資料行。  
   
-2.  調整 <xref:System.Windows.Forms.FlowLayoutPanel> 的大小，讓高度比 <xref:System.Windows.Forms.Button> 控制項的資料行短。 請注意， <xref:System.Windows.Forms.FlowLayoutPanel> 會重新排列子控制項以移入下一個資料行。 繼續縮短高度，並注意，子控制項會移入接續的資料行。 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值為 <xref:System.Windows.Forms.FlowDirection.RightToLeft>。 請注意，子控制項的位置反了過來。 當您將 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值變更成 <xref:System.Windows.Forms.FlowDirection.BottomUp>時，請觀察配置。  
+2. 調整 <xref:System.Windows.Forms.FlowLayoutPanel> 的大小，讓高度比 <xref:System.Windows.Forms.Button> 控制項的資料行短。 請注意， <xref:System.Windows.Forms.FlowLayoutPanel> 會重新排列子控制項以移入下一個資料行。 繼續縮短高度，並注意，子控制項會移入接續的資料行。 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值為 <xref:System.Windows.Forms.FlowDirection.RightToLeft>。 請注意，子控制項的位置反了過來。 當您將 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值變更成 <xref:System.Windows.Forms.FlowDirection.BottomUp>時，請觀察配置。  
   
 ## <a name="inserting-flow-breaks"></a>插入流向中斷點  
  <xref:System.Windows.Forms.FlowLayoutPanel> 控制項提供 FlowBreak 屬性給它的子控制項。 將 FlowBreak 屬性的值設為 `true` ，會導致 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項停止以目前的文字方向來配置控制項，並包裝至下一個資料列或資料行。  
   
 #### <a name="to-insert-flow-breaks"></a>插入流向中斷點  
   
-1.  變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值為 <xref:System.Windows.Forms.FlowDirection.TopDown>。  
+1. 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> 屬性值為 <xref:System.Windows.Forms.FlowDirection.TopDown>。  
   
-2.  在最左邊的資料行中間選取其中一個 <xref:System.Windows.Forms.Button> 控制項。  
+2. 在最左邊的資料行中間選取其中一個 <xref:System.Windows.Forms.Button> 控制項。  
   
-3.  將 <xref:System.Windows.Forms.Button> 控制項的 FlowBreak 屬性設為 `true`。 請注意，資料行已中斷，遵循所選 <xref:System.Windows.Forms.Button> 控制項的控制項會移入下一個資料行。 將 <xref:System.Windows.Forms.Button> 控制項的 FlowBreak 屬性設為 `false` ，回復原來的行為。  
+3. 將 <xref:System.Windows.Forms.Button> 控制項的 FlowBreak 屬性設為 `true`。 請注意，資料行已中斷，遵循所選 <xref:System.Windows.Forms.Button> 控制項的控制項會移入下一個資料行。 將 <xref:System.Windows.Forms.Button> 控制項的 FlowBreak 屬性設為 `false` ，回復原來的行為。  
   
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>使用停駐和錨定來定位控制項  
  子控制項的停駐和錨定行為，和其他容器控制項的行為不一樣。 停駐和錨定是相對於文字方向中的最大控制項。  
   
 #### <a name="to-position-controls-using-docking-and-anchoring"></a>使用停駐和錨定來定位控制項  
   
-1.  增加 <xref:System.Windows.Forms.FlowLayoutPanel> 的大小直到 <xref:System.Windows.Forms.Button> 控制項全都排列在資料行中。  
+1. 增加 <xref:System.Windows.Forms.FlowLayoutPanel> 的大小直到 <xref:System.Windows.Forms.Button> 控制項全都排列在資料行中。  
   
-2.  選取最上方的 <xref:System.Windows.Forms.Button> 控制項。 增加它的寬度，使其成為其他 <xref:System.Windows.Forms.Button> 控制項的兩倍寬。  
+2. 選取最上方的 <xref:System.Windows.Forms.Button> 控制項。 增加它的寬度，使其成為其他 <xref:System.Windows.Forms.Button> 控制項的兩倍寬。  
   
-3.  選取第二個 <xref:System.Windows.Forms.Button> 控制項。 將其 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性的值變更為 <xref:System.Windows.Forms.AnchorStyles.Right>。 請注意，它已移動，因此它的右框線對齊第一個 <xref:System.Windows.Forms.Button> 控制項的右框線。  
+3. 選取第二個 <xref:System.Windows.Forms.Button> 控制項。 將其 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性的值變更為 <xref:System.Windows.Forms.AnchorStyles.Right>。 請注意，它已移動，因此它的右框線對齊第一個 <xref:System.Windows.Forms.Button> 控制項的右框線。  
   
-4.  將其 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值變更為 <xref:System.Windows.Forms.AnchorStyles.Right> 和 <xref:System.Windows.Forms.AnchorStyles.Left>。 請注意，它的大小調整成和第一個 <xref:System.Windows.Forms.Button> 控制項一樣寬。  
+4. 將其 <xref:System.Windows.Forms.Control.Anchor%2A> 屬性值變更為 <xref:System.Windows.Forms.AnchorStyles.Right> 和 <xref:System.Windows.Forms.AnchorStyles.Left>。 請注意，它的大小調整成和第一個 <xref:System.Windows.Forms.Button> 控制項一樣寬。  
   
-5.  選取第三個 <xref:System.Windows.Forms.Button> 控制項。 將其 <xref:System.Windows.Forms.Control.Dock%2A> 屬性的值變更為 <xref:System.Windows.Forms.DockStyle.Fill>。 請注意，它的大小調整成和第一個 <xref:System.Windows.Forms.Button> 控制項一樣寬。  
+5. 選取第三個 <xref:System.Windows.Forms.Button> 控制項。 將其 <xref:System.Windows.Forms.Control.Dock%2A> 屬性的值變更為 <xref:System.Windows.Forms.DockStyle.Fill>。 請注意，它的大小調整成和第一個 <xref:System.Windows.Forms.Button> 控制項一樣寬。  
   
 ## <a name="arranging-controls-using-padding-and-margins"></a>使用填補和邊界排列控制項  
  藉由變更 <xref:System.Windows.Forms.FlowLayoutPanel> 和 <xref:System.Windows.Forms.Control.Padding%2A> 屬性，您也可以排列 <xref:System.Windows.Forms.Control.Margin%2A> 控制項中的控制項。  
@@ -122,59 +122,59 @@ ms.locfileid: "59195679"
   
 #### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>使用填補和邊界屬性排列控制項  
   
-1.  變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值為 <xref:System.Windows.Forms.DockStyle.Fill>。 如果表單夠大， <xref:System.Windows.Forms.Button> 控制項就會移到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的第一個資料行。  
+1. 變更 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的 <xref:System.Windows.Forms.Control.Dock%2A> 屬性值為 <xref:System.Windows.Forms.DockStyle.Fill>。 如果表單夠大， <xref:System.Windows.Forms.Button> 控制項就會移到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的第一個資料行。  
   
-2.  展開 [屬性] <xref:System.Windows.Forms.FlowLayoutPanel><xref:System.Windows.Forms.Control.Padding%2A> 視窗的 <xref:System.Windows.Forms.Control.Padding%2A> 項目，將 **屬性設為** 20 <xref:System.Windows.Forms.Padding.All%2A> ，以變更 **控制項的**屬性值。 如需詳細資訊，請參閱[逐步解說：配置 Windows Form 控制項與邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)。 請注意，子控制項朝 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的中心移動。 <xref:System.Windows.Forms.Control.Padding%2A> 屬性增加的值會將子控制項推離 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的邊線。  
+2. 展開 [屬性] <xref:System.Windows.Forms.FlowLayoutPanel><xref:System.Windows.Forms.Control.Padding%2A> 視窗的 <xref:System.Windows.Forms.Control.Padding%2A> 項目，將 **屬性設為** 20 <xref:System.Windows.Forms.Padding.All%2A> ，以變更 **控制項的**屬性值。 如需詳細資訊，請參閱[逐步解說：配置 Windows Form 控制項與邊框距離、 邊界和 AutoSize 屬性](windows-forms-controls-padding-autosize.md)。 請注意，子控制項朝 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的中心移動。 <xref:System.Windows.Forms.Control.Padding%2A> 屬性增加的值會將子控制項推離 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的邊線。  
   
-3.  選取 <xref:System.Windows.Forms.Button> 的全部 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，將 <xref:System.Windows.Forms.Control.Margin%2A> 屬性的值設為 **20**。 請注意， <xref:System.Windows.Forms.Button> 控制項之間的間距增加，所以它們移得更開。 您可能需要調整 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的大小，大到能看見所有的子控制項。  
+3. 選取 <xref:System.Windows.Forms.Button> 的全部 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，將 <xref:System.Windows.Forms.Control.Margin%2A> 屬性的值設為 **20**。 請注意， <xref:System.Windows.Forms.Button> 控制項之間的間距增加，所以它們移得更開。 您可能需要調整 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的大小，大到能看見所有的子控制項。  
   
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>在 [工具箱] 中按兩下控制項以插入控制項  
  在 [工具箱] <xref:System.Windows.Forms.FlowLayoutPanel>**中按兩下控制項，即可填入**控制項。  
   
 #### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>在 [工具箱] 中按兩下控制項以插入控制項  
   
-1.  在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項隨即出現在 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。  
+1. 在 [工具箱] <xref:System.Windows.Forms.Button>**中按兩下**控制項圖示。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項隨即出現在 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。  
   
-2.  在數個 [工具箱] 的控制項上按兩下。 請注意， <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中會陸續出現新的控制項。  
+2. 在數個 [工具箱] 的控制項上按兩下。 請注意， <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中會陸續出現新的控制項。  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項  
  您可以將控制項插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中，在儲存格中繪製其外框來指定其大小。  
   
 #### <a name="to-insert-a-control-by-drawing-its-outline"></a>繪製控制項外框以插入控制項  
   
-1.  按一下 [工具箱] 的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。  
+1. 按一下 [工具箱] 的 <xref:System.Windows.Forms.Button> 控制項圖示。 請勿拖曳到表單。  
   
-2.  將滑鼠指標移至 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項上。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。  
+2. 將滑鼠指標移至 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項上。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.Button> 控制項圖示。  
   
-3.  按住滑鼠按鈕。  
+3. 按住滑鼠按鈕。  
   
-4.  拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.Button> 控制項的外框。 如滿意大小，請放開滑鼠按鈕。 請注意， <xref:System.Windows.Forms.Button> 控制項是建立在 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的下一個開啟位置上。  
+4. 拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.Button> 控制項的外框。 如滿意大小，請放開滑鼠按鈕。 請注意， <xref:System.Windows.Forms.Button> 控制項是建立在 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的下一個開啟位置上。  
   
 ## <a name="inserting-controls-using-the-insertion-bar"></a>使用插入列以插入控制項  
  您可以將控制項插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的特定位置。 當您將控制項拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的用戶端區域中，插入列隨即出現，指出控制項要插入的位置。  
   
 #### <a name="to-insert-a-control-using-the-caret"></a>使用插入號以插入控制項  
   
-1.  將 <xref:System.Windows.Forms.Button> 控制項從 [工具箱]  拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，指向兩個 <xref:System.Windows.Forms.Button> 控制項之間的空白處。 請注意已繪製插入列，指出要在何處<xref:System.Windows.Forms.Button>放入<xref:System.Windows.Forms.FlowLayoutPanel>控制項。 請先移動滑鼠指標，觀察插入列的移動方式，再將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
+1. 將 <xref:System.Windows.Forms.Button> 控制項從 [工具箱]  拖曳到 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項，指向兩個 <xref:System.Windows.Forms.Button> 控制項之間的空白處。 請注意已繪製插入列，指出要在何處<xref:System.Windows.Forms.Button>放入<xref:System.Windows.Forms.FlowLayoutPanel>控制項。 請先移動滑鼠指標，觀察插入列的移動方式，再將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
   
-2.  將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項未對齊其他控制項，因為其 <xref:System.Windows.Forms.Control.Margin%2A> 屬性有不同的值。  
+2. 將新的 <xref:System.Windows.Forms.Button> 控制項放入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。 請注意，新的 <xref:System.Windows.Forms.Button> 控制項未對齊其他控制項，因為其 <xref:System.Windows.Forms.Control.Margin%2A> 屬性有不同的值。  
   
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>將現有控制項重新指派至不同的父代  
  您可以將表單上現有的控制項指派給新的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項。  
   
 #### <a name="to-reparent-existing-controls"></a>重設現有控制項的父代  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將三個** 控制項拖曳至表單。 將它們放在相鄰的位置，但不要對齊。  
+1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將三個** 控制項拖曳至表單。 將它們放在相鄰的位置，但不要對齊。  
   
-2.  按一下 [工具箱] 的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。 請勿拖曳到表單。  
+2. 按一下 [工具箱] 的 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。 請勿拖曳到表單。  
   
-3.  將滑鼠指標靠近三個 <xref:System.Windows.Forms.Button> 控制項。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。  
+3. 將滑鼠指標靠近三個 <xref:System.Windows.Forms.Button> 控制項。 請注意，指標會變成十字形狀並附有 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項圖示。  
   
-4.  按住滑鼠按鈕。  
+4. 按住滑鼠按鈕。  
   
-5.  拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的外框。 繪製三個 <xref:System.Windows.Forms.Button> 控制項的外框。  
+5. 拖曳滑鼠指標以繪製 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項的外框。 繪製三個 <xref:System.Windows.Forms.Button> 控制項的外框。  
   
-6.  放開滑鼠按鈕。 請注意，三個 <xref:System.Windows.Forms.Button> 控制項都已插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。  
+6. 放開滑鼠按鈕。 請注意，三個 <xref:System.Windows.Forms.Button> 控制項都已插入 <xref:System.Windows.Forms.FlowLayoutPanel> 控制項中。  
   
 ## <a name="next-steps"></a>後續步驟  
  您可以組合配置面板和控制項，完成複雜的配置。 進一步的探索建議包括：  

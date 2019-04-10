@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1f45259623d4a481e635ac1b54ecb9a17497ab5e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325581"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>HOW TO：將追蹤陳述式新增至應用程式程式碼
 追蹤最常使用的方法是將輸出寫入至接聽程式的方法：**撰寫**， **WriteIf**， **WriteLine**， **WriteLineIf**， **Assert**，以及**失敗**。 這些方法可以分為兩類：**撰寫**， **WriteLine**，以及**失敗**所有無條件地發出輸出，而**WriteIf**， **WriteLineIf**，以及**判斷提示**測試布林條件，並寫入或不會寫入根據條件的值。 如果條件為 `true`，**WriteIf** 與 **WriteLineIf** 會發出輸出，而如果條件為 `false`，則 **Assert** 會發出輸出。  
@@ -29,7 +29,7 @@ ms.locfileid: "59204090"
   
 ### <a name="to-write-a-complete-line"></a>若要撰寫完整行  
   
-1.  呼叫 <xref:System.Diagnostics.Trace.WriteLine%2A> 或 <xref:System.Diagnostics.Trace.WriteLineIf%2A> 方法。  
+1. 呼叫 <xref:System.Diagnostics.Trace.WriteLine%2A> 或 <xref:System.Diagnostics.Trace.WriteLineIf%2A> 方法。  
   
      將歸位字元附加到此方法傳回的訊息結尾，讓由 **Write**、**WriteIf**、**WriteLine** 或 **WriteLineIf** 傳回的下一個訊息，從下行開始：  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59204090"
   
 ### <a name="to-write-a-partial-line"></a>若要寫入部分行  
   
-1.  呼叫 <xref:System.Diagnostics.Trace.Write%2A> 或 <xref:System.Diagnostics.Trace.WriteIf%2A> 方法。  
+1. 呼叫 <xref:System.Diagnostics.Trace.Write%2A> 或 <xref:System.Diagnostics.Trace.WriteIf%2A> 方法。  
   
      由 **Write**、**WriteIf**、**WriteLine** 或 **WriteLineIf** 放出的下一個訊息，將會以 **Write** 或 **WriteIf** 陳述式所放出訊息的相同行開始：  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59204090"
   
 ### <a name="to-verify-that-certain-conditions-exist-either-before-or-after-you-execute-a-method"></a>若要確認特定條件存在 (不論在執行方法之前或之後)  
   
-1.  呼叫 <xref:System.Diagnostics.Trace.Assert%2A> 方法。  
+1. 呼叫 <xref:System.Diagnostics.Trace.Assert%2A> 方法。  
   
     ```vb  
     Dim i As Integer = 4  

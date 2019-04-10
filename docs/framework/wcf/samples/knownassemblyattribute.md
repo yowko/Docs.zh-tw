@@ -2,12 +2,12 @@
 title: KnownAssemblyAttribute
 ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
-ms.openlocfilehash: 7b5484ee7b8d98ce3ac449fb9d23029f27c8932a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325770"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。 此範例示範如何在序列化和還原序列化期間動態加入已知的型別。  
@@ -346,21 +346,21 @@ Lists combined:
   
 #### <a name="to-set-up-run-and-build-the-sample"></a>若要設定、執行及建立範例  
   
-1.  以滑鼠右鍵按一下方案**KnownAssemblyAttribute** ，然後選取**屬性**。  
+1. 以滑鼠右鍵按一下方案**KnownAssemblyAttribute** ，然後選取**屬性**。  
   
-2.  在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。  
+2. 在 **通用屬性**，選取**啟始專案**，然後按一下**多個啟始專案**。  
   
-3.  新增**開始**動作來**服務**並**用戶端**專案。  
+3. 新增**開始**動作來**服務**並**用戶端**專案。  
   
-4.  按一下  **確定**，然後按**F5**執行範例。  
+4. 按一下  **確定**，然後按**F5**執行範例。  
   
-5.  如果應用程式沒有正確執行，請遵循下列步驟確認您的環境已正確設定：  
+5. 如果應用程式沒有正確執行，請遵循下列步驟確認您的環境已正確設定：  
   
-6.  請確定您已執行[單次安裝程序的 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150774)。  
+6. 請確定您已執行[單次安裝程序的 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150774)。  
   
-7.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150775)。  
+7. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150775)。  
   
-8.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150776)。  
+8. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](https://go.microsoft.com/fwlink/?LinkId=150776)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

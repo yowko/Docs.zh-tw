@@ -5,33 +5,33 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 1d1d0ad559442ecfc595dfb8cdee112a22a77479
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319998"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF 疑難排解快速入門
 本主題列出客戶在開發 WCF 用戶端和服務時會碰到的幾個已知問題。 如果您遇到的問題不在此清單中，建議您為您的服務設定追蹤。 這會產生一個追蹤檔案，您可以使用追蹤檔案檢視器檢視這個檔案，並取得服務中可能會發生之例外狀況的詳細資訊。 如需有關如何設定追蹤的詳細資訊，請參閱：[設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。 如需有關追蹤檔案檢視器的詳細資訊，請參閱：[服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)。  
   
-1.  [安裝 Windows 7 和 IIS 之後，當我嘗試瀏覽至 WCF 服務時得到下列錯誤訊息：HTTP 錯誤 404.3 – 找不到](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
+1. [安裝 Windows 7 和 IIS 之後，當我嘗試瀏覽至 WCF 服務時得到下列錯誤訊息：HTTP 錯誤 404.3 – 找不到](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#bkmk_0)  
   
      HTTP 錯誤 404.3 – 找不到。由於延伸組態的緣故，無法提供您要求的網頁。 若網頁是指令碼，請加入處理常式。 如應下載檔案，請加入 MIME 對應。 詳細的錯誤 InformationModule StaticFileModule。  
   
-2.  [如果我的用戶端在第一個要求之後閒置一陣子，有時我會在第二個要求收到 MessageSecurityException。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
+2. [如果我的用戶端在第一個要求之後閒置一陣子，有時我會在第二個要求收到 MessageSecurityException。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q1)  
   
-3.  [我的服務在與大約 10 個用戶端互動之後，開始拒絕新的用戶端。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
+3. [我的服務在與大約 10 個用戶端互動之後，開始拒絕新的用戶端。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q2)  
   
-4.  [我可以從 WCF 應用程式的組態檔以外的地方載入我的服務組態嗎？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
+4. [我可以從 WCF 應用程式的組態檔以外的地方載入我的服務組態嗎？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q3)  
   
-5.  [我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
+5. [我的服務和用戶端運作良好，但是當用戶端在另一台電腦上時，它們就無法運作。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q4)  
   
-6.  [當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
+6. [當我擲回 FaultException\<例外狀況 > 其中型別是例外狀況，我一定會收到一般的 FaultException 型別，用戶端上並不是泛型類型。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q5)  
   
-7.  [當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
+7. [當回覆未包含任何資料時，單向和要求與回覆作業似乎會以大約相同的速度傳回。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q6)  
   
-8.  [我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
+8. [我使用 X.509 憑證搭配我的服務，然後得到 System.Security.Cryptography.CryptographicException。 發生什麼事？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q77)  
   
 9. [我將作業的第一個參數從大寫變更為小寫；現在我的用戶端擲回了例外狀況。 這是為什麼？](../../../docs/framework/wcf/wcf-troubleshooting-quickstart.md#BKMK_q88)  
   

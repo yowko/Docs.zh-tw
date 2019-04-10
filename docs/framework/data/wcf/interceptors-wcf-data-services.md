@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: e33ae8dc-8069-41d0-99a0-75ff28db7050
-ms.openlocfilehash: 31308f8c2b031ec0efd77b41bc395d85e7e5307a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 35554c8d5e1dd33ab942cecb80075ec2fb1e131c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192851"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326251"
 ---
 # <a name="interceptors-wcf-data-services"></a>攔截器 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 讓應用程式攔截要求訊息，因此您可以將自訂邏輯加入至作業。 您可以使用這個自訂邏輯來驗證傳入訊息中的資料。 您還可以使用它進一步限制查詢要求的範圍，例如，以根據要求來插入自訂授權原則。  
@@ -27,9 +27,9 @@ ms.locfileid: "59192851"
   
  變更處理非查詢作業時呼叫的攔截器，必須傳回 `void` (在 Visual Basic 為 `Nothing`)。 變更攔截器方法必須接受下列兩個參數：  
   
-1.  其類型相容於實體集實體類型的參數。 資料服務叫用變更攔截器時，此參數的值會反映出要求所傳送的實體資訊。  
+1. 其類型相容於實體集實體類型的參數。 資料服務叫用變更攔截器時，此參數的值會反映出要求所傳送的實體資訊。  
   
-2.  類型為 <xref:System.Data.Services.UpdateOperations> 的參數。 資料服務叫用變更攔截器時，此參數的值會反映出要求嘗試執行的作業。  
+2. 類型為 <xref:System.Data.Services.UpdateOperations> 的參數。 資料服務叫用變更攔截器時，此參數的值會反映出要求嘗試執行的作業。  
   
  以下是變更攔截器的定義範例。  
   

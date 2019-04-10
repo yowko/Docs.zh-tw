@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d7b8551c8b82ca880d989a1b58411f9555a9feb4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325705"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>HOW TO：建立、初始化和設定追蹤參數
 追蹤參數可讓您啟用、停用和篩選追蹤輸出。  
@@ -31,9 +31,9 @@ ms.locfileid: "59079132"
   
 #### <a name="to-create-and-initialize-a-trace-switch"></a>建立和初始化追蹤參數  
   
-1.  將參數定義為 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類型，並設定參數的名稱和描述。  
+1. 將參數定義為 <xref:System.Diagnostics.BooleanSwitch?displayProperty=nameWithType> 類型或 <xref:System.Diagnostics.TraceSwitch?displayProperty=nameWithType> 類型，並設定參數的名稱和描述。  
   
-2.  設定追蹤參數。 如需詳細資訊，請參閱[設定追蹤參數](#configure)。  
+2. 設定追蹤參數。 如需詳細資訊，請參閱[設定追蹤參數](#configure)。  
   
      下列程式碼會建立兩個參數，每種類型各一個：  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59079132"
   
 #### <a name="to-configure-trace-switches"></a>設定追蹤參數  
   
-1.  若要使用追蹤參數，您必須先加以建立，並放在您的程式碼中，方法如[建立和初始化追蹤參數](#create)一節中所述。  
+1. 若要使用追蹤參數，您必須先加以建立，並放在您的程式碼中，方法如[建立和初始化追蹤參數](#create)一節中所述。  
   
-2.  如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
+2. 如果您的專案未包含組態檔 (app.config 或 Web.config)，請從 [專案] 功能表中選取 [新增項目]。  
   
     -   **Visual Basic:** 在 **加入新項目**對話方塊方塊中，選擇**應用程式組態檔**。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "59079132"
   
          在編譯專案之後，app.config 檔案會複製到專案輸出資料夾，並重新命名為 *applicationname*.exe.config。  
   
-3.  在 `<configuration>` 標記後及 `</configuration>` 標記前，新增適當的 XML 以設定參數。 下列範例使用 `DataMessageSwitch` 的 **DisplayName** 屬性來示範 **BooleanSwitch**，並使用 `TraceLevelSwitch` 的 **DisplayName** 屬性來示範 **TraceSwitch**。  
+3. 在 `<configuration>` 標記後及 `</configuration>` 標記前，新增適當的 XML 以設定參數。 下列範例使用 `DataMessageSwitch` 的 **DisplayName** 屬性來示範 **BooleanSwitch**，並使用 `TraceLevelSwitch` 的 **DisplayName** 屬性來示範 **TraceSwitch**。  
   
     ```xml  
     <system.diagnostics>  
@@ -101,11 +101,11 @@ ms.locfileid: "59079132"
   
      在這個組態中，這兩個參數都是關閉狀態。  
   
-4.  如果您需要開啟 **BooleanSwitch**，例如先前範例中顯示的 `DataMessagesSwitch`，請將 **Value** 變更為任何非 0 的整數。  
+4. 如果您需要開啟 **BooleanSwitch**，例如先前範例中顯示的 `DataMessagesSwitch`，請將 **Value** 變更為任何非 0 的整數。  
   
-5.  如果您需要開啟 **TraceSwitch**，例如先前範例中顯示的 `TraceLevelSwitch`，請將 **Value** 變更為適當的層級設定 (1 至 4)。  
+5. 如果您需要開啟 **TraceSwitch**，例如先前範例中顯示的 `TraceLevelSwitch`，請將 **Value** 變更為適當的層級設定 (1 至 4)。  
   
-6.  將註解加入 .config 檔案，讓終端使用者清楚了解要變更哪個值以適當設定參數。  
+6. 將註解加入 .config 檔案，讓終端使用者清楚了解要變更哪個值以適當設定參數。  
   
      下列範例顯示最後程式碼 (包含註解) 可能的樣子：  
   

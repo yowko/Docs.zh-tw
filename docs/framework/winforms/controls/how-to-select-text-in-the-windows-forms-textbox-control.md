@@ -10,27 +10,27 @@ helpviewer_keywords:
 - text boxes [Windows Forms], selecting text programmatically
 - text [Windows Forms], selecting in text boxes programmatically
 ms.assetid: 8c591546-6a01-45c7-8e03-f78431f903b1
-ms.openlocfilehash: f96ac69f16eefb5bf4a0625ff83e207c289a105b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 3bb1245cd47084935d632ff345a32058db6074e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321704"
 ---
 # <a name="how-to-select-text-in-the-windows-forms-textbox-control"></a>HOW TO：選取 Windows Forms TextBox 控制項的文字
 您可以在 Windows Forms 中，以程式設計方式選取文字<xref:System.Windows.Forms.TextBox>控制項。 比方說，如果您建立函式，以搜尋特定字串的文字時，您可以選取要以視覺化方式警示找到的字串位置的讀取器的文字。  
   
 ### <a name="to-select-text-programmatically"></a>若要以程式設計方式選取文字  
   
-1.  設定<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>至您想要選取的文字開頭的屬性。  
+1. 設定<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>至您想要選取的文字開頭的屬性。  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>屬性指出插入點的文字字串內的數字，0 是最左邊位置。 如果<xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A>屬性設定為值等於或大於的字元數在文字方塊中，將插入點後面的最後一個字元。  
   
-2.  設定<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>屬性，以您想要選取的文字的長度。  
+2. 設定<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>屬性，以您想要選取的文字的長度。  
   
      <xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>屬性是一個數字的值，設定插入點的寬度。 設定<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>更大的數字 0 會導致該要選取的字元數，比從目前的插入點。  
   
-3.  （選擇性）存取選取的文字，透過<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>屬性。  
+3. （選擇性）存取選取的文字，透過<xref:System.Windows.Forms.TextBoxBase.SelectedText%2A>屬性。  
   
      選取以下的程式碼的文字內容方塊時的控制項<xref:System.Windows.Forms.Control.Enter>就會發生事件。 這個範例會檢查文字方塊是否為值<xref:System.Windows.Forms.TextBox.Text%2A>不是屬性`null`或空字串。 當文字方塊取得焦點時，會選取目前的文字在文字方塊中。 `TextBox1_Enter`事件處理常式必須繫結至控制項; 如需詳細資訊，請參閱[How to:在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。  
   

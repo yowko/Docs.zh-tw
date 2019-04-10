@@ -3,12 +3,12 @@ title: 如何：啟用 WCF Web 服務應用程式的 WIF
 ms.date: 03/30/2017
 ms.assetid: bfc64b3d-64e9-4093-a6a4-72e933917af7
 author: BrucePerlerMS
-ms.openlocfilehash: c3d22d812fdd5a1fc7567b3da34e7fd5a59531cd
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584187"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323300"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>如何：啟用 WCF Web 服務應用程式的 WIF
 ## <a name="applies-to"></a>適用於  
@@ -18,7 +18,7 @@ ms.locfileid: "48584187"
 -   Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>總結  
- 這篇使用方法文章提供了在 WCF Web 服務中啟用 WIF 的詳細逐步程序。 此外，它還提供如何測試應用程式以確認應用程式執行時 Web 服務可正確提出宣告的指示。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
+ 這篇使用方法文章提供了在 WCF Web 服務中啟用 WIF 的詳細逐步程序。 此外，它還提供如何測試應用程式以確認應用程式執行時 Web 服務可正確提出宣告的指示。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 它可以從下列位置下載：[身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>內容  
   
@@ -43,13 +43,13 @@ ms.locfileid: "48584187"
 ## <a name="overview"></a>總覽  
  這篇使用方法文章的目的是要示範開發人員如何在開發 WCF 服務時使用同盟驗證。 在 WCF 服務中使用同盟的其中一些優點包括：  
   
-1.  將驗證邏輯排除在 WCF 服務程式碼外  
+1. 將驗證邏輯排除在 WCF 服務程式碼外  
   
-2.  重複使用現有的身分識別管理方案  
+2. 重複使用現有的身分識別管理方案  
   
-3.  與其他識別方案的互通性  
+3. 與其他識別方案的互通性  
   
-4.  未來變更的靈活性和彈性  
+4. 未來變更的靈活性和彈性  
   
  WIF 與相關聯的識別和存取工具可讓您使用同盟驗證更輕鬆地開發及測試 WCF 服務，如下面步驟所示。  
   
@@ -66,19 +66,19 @@ ms.locfileid: "48584187"
   
 #### <a name="to-create-a-simple-wcf-service"></a>若要建立簡單的 WCF 服務  
   
-1.  以系統管理員身分的高階權限模式來啟動 Visual Studio。  
+1. 以系統管理員身分的高階權限模式來啟動 Visual Studio。  
   
-2.  在 Visual Studio 中，依序按一下 [檔案]、[新增] 和 [專案]。  
+2. 在 Visual Studio 中，依序按一下 [檔案]、[新增] 和 [專案]。  
   
-3.  在 [新增專案] 視窗中，按一下 [WCF 服務應用程式]。  
+3. 在 [新增專案] 視窗中，按一下 [WCF 服務應用程式]。  
   
-4.  在 [名稱] 中，輸入 `TestService`，然後按 [確定]。  
+4. 在 [名稱] 中，輸入 `TestService`，然後按 [確定]。  
   
-5.  以滑鼠右鍵按一下方案總管 底下的 [TestService]，然後選取 [身分識別與存取]。  
+5. 以滑鼠右鍵按一下方案總管 底下的 [TestService]，然後選取 [身分識別與存取]。  
   
-6.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [使用本機開發 STS 測試應用程式]，然後按一下 [套用]。 身分識別與存取工具會在 *Web.config* 檔案中新增組態項目，藉以設定服務使用 WIF，並將驗證外包給本機開發 STS (**LocalSTS**)。  
+6. [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [使用本機開發 STS 測試應用程式]，然後按一下 [套用]。 身分識別與存取工具會在 *Web.config* 檔案中新增組態項目，藉以設定服務使用 WIF，並將驗證外包給本機開發 STS (**LocalSTS**)。  
   
-7.  在 *Service1.svc.cs* 檔案中，**System.Security.Claims** 命名空間新增一個 `using` 指示詞，並使用下面程式碼來取代現有的程式碼，然後儲存檔案：  
+7. 在 *Service1.svc.cs* 檔案中，**System.Security.Claims** 命名空間新增一個 `using` 指示詞，並使用下面程式碼來取代現有的程式碼，然後儲存檔案：  
   
     ```csharp  
     public class Service1 : IService1  
@@ -115,7 +115,7 @@ ms.locfileid: "48584187"
   
      `ComputeResponse` 方法會顯示由 **LocalSTS** 所簽發的各種宣告的屬性。  
   
-8.  在 *IService1.cs* 檔案中，以下列程式碼取代現有的程式碼，然後儲存檔案：  
+8. 在 *IService1.cs* 檔案中，以下列程式碼取代現有的程式碼，然後儲存檔案：  
   
     ```csharp  
     [ServiceContract]  
@@ -138,18 +138,18 @@ ms.locfileid: "48584187"
   
 #### <a name="to-create-a-client-application"></a>若要建立用戶端應用程式  
   
-1.  在 Visual Studio 中，以滑鼠右鍵按一下方案，然後依序按一下 [新增] 和 [新增專案]。  
+1. 在 Visual Studio 中，以滑鼠右鍵按一下方案，然後依序按一下 [新增] 和 [新增專案]。  
   
-2.  在 [新增專案] 視窗中，選取 [Visual C#] 範本清單中的 [主控台應用程式]，輸入 `Client`，然後按 [確定]。 您的方案資料夾中就會建立新的專案。  
+2. 在 [新增專案] 視窗中，選取 [Visual C#] 範本清單中的 [主控台應用程式]，輸入 `Client`，然後按 [確定]。 您的方案資料夾中就會建立新的專案。  
   
-3.  以滑鼠右鍵按一下 [Client] 專案底下的 [參考]，然後按一下 [加入服務參考]。  
+3. 以滑鼠右鍵按一下 [Client] 專案底下的 [參考]，然後按一下 [加入服務參考]。  
   
-4.  在 [加入服務參考] 視窗中，按一下 [探索] 按鈕上的下拉箭號，然後按一下 [方案中的服務]。 [位址] 會自動填入您稍早建立的 WCF 服務，而 [命名空間] 則會設定為 **ServiceReference1**。 按一下 [確定 **Deploying Office Solutions**]。  
+4. 在 [加入服務參考] 視窗中，按一下 [探索] 按鈕上的下拉箭號，然後按一下 [方案中的服務]。 [位址] 會自動填入您稍早建立的 WCF 服務，而 [命名空間] 則會設定為 **ServiceReference1**。 按一下 [確定] 。  
   
     > [!IMPORTANT]
     >  當您將服務參考新增至用戶端時，**TestService** 和 **LocalSTS** 都必須是在執行中。  
   
-5.  Visual Studio 會產生 WCF 服務的 Proxy 類別，並加入所有必要的參考資訊。 它也會將項目新增至 *App.config* 檔案中，來設定用戶端從 STS 取得權杖以便向服務進行驗證。 當這個程序完成之後，**Program.cs** 檔案隨即開啟。 為 **System.ServiceModel** 新增 `using` 指示詞，也為 **Client.ServiceReference1** 新增指示詞，並以下列程式碼取代 **Main** 方法，然後儲存檔案：  
+5. Visual Studio 會產生 WCF 服務的 Proxy 類別，並加入所有必要的參考資訊。 它也會將項目新增至 *App.config* 檔案中，來設定用戶端從 STS 取得權杖以便向服務進行驗證。 當這個程序完成之後，**Program.cs** 檔案隨即開啟。 為 **System.ServiceModel** 新增 `using` 指示詞，也為 **Client.ServiceReference1** 新增指示詞，並以下列程式碼取代 **Main** 方法，然後儲存檔案：  
   
     ```csharp  
     static void Main(string[] args)  
@@ -209,7 +209,7 @@ ms.locfileid: "48584187"
     }  
     ```  
   
-6.  開啟 *App.config* 檔案，並在 `<system.serviceModel>` 項目底下新增下列 XML 作為第一個子項目，然後儲存檔案：  
+6. 開啟 *App.config* 檔案，並在 `<system.serviceModel>` 項目底下新增下列 XML 作為第一個子項目，然後儲存檔案：  
   
     ```xml  
     <behaviors>  
@@ -227,18 +227,18 @@ ms.locfileid: "48584187"
   
      這會停用憑證驗證。  
   
-7.  以滑鼠右鍵按一下 [TestService] 方案，然後按一下 [設定啟始專案]。 [啟始專案] 屬性頁隨即開啟。 在 [啟始專案] 屬性頁上，選取 [多個啟始專案] ，然後在每個專案的 [動作] 欄位中按一下，並從下拉式功能表中選取 [啟動]。 按一下 [確定] 儲存這些設定。  
+7. 以滑鼠右鍵按一下 [TestService] 方案，然後按一下 [設定啟始專案]。 [啟始專案] 屬性頁隨即開啟。 在 [啟始專案] 屬性頁上，選取 [多個啟始專案] ，然後在每個專案的 [動作] 欄位中按一下，並從下拉式功能表中選取 [啟動]。 按一下 [確定] 儲存這些設定。  
   
-8.  建置方案。  
+8. 建置方案。  
   
 ## <a name="step-3--test-your-solution"></a>步驟 3 – 測試方案  
  在這個步驟中，您要測試啟用了 WIF 的 WCF 應用程式並確認有提出宣告。  
   
 #### <a name="to-test-your-wif-enabled-wcf-application-for-claims"></a>若要針對宣告測試啟用了 WIF 的 WCF 應用程式  
   
-1.  按 **F5** 鍵建置並執行應用程式。 您應該會看到一個主控台視窗，並看到下面文字：**Press Enter key to invoke service, any other key to quit application:**  
+1. 按 **F5** 鍵建置並執行應用程式。 您應該會看到主控台視窗，並將下列文字：**按下 Enter 鍵來叫用服務，若要結束應用程式的任何其他索引鍵：**  
   
-2.  按 **Enter**，然後主控台中應該會顯示下列宣告資訊：  
+2. 按 **Enter**，然後主控台中應該會顯示下列宣告資訊：  
   
     ```  
     Computed by Service1  
@@ -255,4 +255,4 @@ ms.locfileid: "48584187"
     > [!IMPORTANT]
     >  在您按 **Enter** 之前，**TestService** 和 **LocalSTS** 都必須是在執行中。 此時應該會開啟一個服務網頁，您可以查看通知區域 (系統匣) 以確認 **LocalSTS** 正在執行。  
   
-3.  如果這些宣告出現在主控台中，則您已成功與 STS 進行驗證以顯示 WCF 服務的宣告。
+3. 如果這些宣告出現在主控台中，則您已成功與 STS 進行驗證以顯示 WCF 服務的宣告。

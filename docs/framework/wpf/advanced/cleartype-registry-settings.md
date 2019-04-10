@@ -5,20 +5,19 @@ helpviewer_keywords:
 - ClearType [WPF], registry settings
 - typography [WPF], ClearType registry settings
 ms.assetid: 56f314bb-b30b-4f67-8492-8b8a9fa432ae
-ms.openlocfilehash: a2b24077145b3b24fa021121450534264aea0c8b
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a776c3d4060b9ca291e4e919ab6ca33fb713434c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675896"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59079990"
 ---
 # <a name="cleartype-registry-settings"></a>ClearType 登錄設定
 本主題概述[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)]所使用的登錄設定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
-  
-  
+
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>技術概觀  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈現文字至顯示裝置使用的應用程式[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]特性可提供增強的閱讀體驗。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的運作方式是存取 LCD 螢幕中每個像素的個別垂直色帶項目。 如需詳細資訊[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，請參閱 < [ClearType 概觀](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 呈現文字至顯示裝置使用的應用程式[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]特性可提供增強的閱讀體驗。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術開發[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]，改進了現有 Lcd （液晶顯示器），例如膝上型電腦螢幕、 Pocket PC 螢幕和平面監視器上文字的可讀性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 藉由存取個別垂直色帶項目在每個像素的 LCD 螢幕中的運作方式。 如需詳細資訊[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]，請參閱 < [ClearType 概觀](cleartype-overview.md)。  
   
  使用呈現的文字[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]可以出現在不同的顯示裝置上檢視時的明顯不同。 例如，少數監視器實作色帶項目以藍色、 綠色、 紅色的順序，而不是較常見的紅色、 綠色、 藍色 ( [!INCLUDE[TLA#tla_rgb](../../../../includes/tlasharptla-rgb-md.md)]) 順序。  
   
@@ -32,7 +31,7 @@ ms.locfileid: "58675896"
   
 |設定|描述|  
 |-------------|-----------------|  
-|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 層級|描述的層級[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。|  
+|[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] level|描述的層級[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]色彩清晰度。|  
 |色差補正層級|說明顯示裝置的像素色彩元件層級。|  
 |像素結構|說明顯示裝置的像素排列。|  
 |文字對比層級|說明顯示文字的對比層級。|  
@@ -84,8 +83,8 @@ ms.locfileid: "58675896"
 |類型|值|描述|  
 |----------|-----------|-----------------|  
 |一般|0|顯示裝置沒有像素結構。 這表示每種色彩光源都平均分布在像素區域，此即為灰階轉譯。 這是標準顯示裝置運作的方式。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 永遠不會套用至轉譯的文字。|  
-|RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 套用至轉譯的文字。|  
-|BGR|2|顯示裝置的像素色帶組成順序如下︰藍色、綠色和紅色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 套用至轉譯的文字。 請注意順序由 RGB 類型反轉的方式。|  
+|RGB|1|顯示裝置的像素色帶組成順序如下︰紅色、綠色和藍色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 會套用至轉譯的文字。|  
+|BGR|2|顯示裝置的像素色帶組成順序如下︰藍色、綠色和紅色。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 會套用至轉譯的文字。 請注意順序由 RGB 類型反轉的方式。|  
   
  像素結構對應至範圍從 0 到 2 的整數值。 預設層級為 0 表示一般的像素結構。  
   
@@ -115,5 +114,6 @@ ms.locfileid: "58675896"
  ![在登錄編輯器中的 ClearType 設定。](./media/cleartype-registry-settings/cleartype-settings-registry-editor.png)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ClearType 概觀](cleartype-overview.md)
 - [ClearType 消除鋸齒功能](/windows/desktop/gdi/cleartype-antialiasing)

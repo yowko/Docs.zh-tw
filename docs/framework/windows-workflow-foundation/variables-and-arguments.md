@@ -2,12 +2,12 @@
 title: 變數與引數
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
-ms.openlocfilehash: 6e534a54802228d6d001838008fc9d8f36fc0827
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717813"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320739"
 ---
 # <a name="variables-and-arguments"></a>變數與引數
 在 Windows Workflow Foundation (WF) 中，變數表示資料的儲存體，而引數表示資料流程傳入和傳出活動。 活動有一組引數，且它們會構成活動的簽章。 此外，活動也包含變數的清單，開發人員可在設計工作流程時加入或移除其中的變數。 引數會使用傳回值的運算式來繫結。  
@@ -63,11 +63,11 @@ Variable<string> var = new Variable<string>
   
  工作流程執行階段會對資料進出活動的時機提供以下保證：  
   
-1.  當活動開始執行時，會計算其所有輸入與輸入/輸出引數的值。 例如，不論何時呼叫 <xref:System.Activities.Argument.Get%2A>，傳回的值優先為執行階段所計算的值，然後才是其 `Execute` 的引動值。  
+1. 當活動開始執行時，會計算其所有輸入與輸入/輸出引數的值。 例如，不論何時呼叫 <xref:System.Activities.Argument.Get%2A>，傳回的值優先為執行階段所計算的值，然後才是其 `Execute` 的引動值。  
   
-2.  當呼叫 <xref:System.Activities.InOutArgument%601.Set%2A> 時，執行階段會立即設定值。  
+2. 當呼叫 <xref:System.Activities.InOutArgument%601.Set%2A> 時，執行階段會立即設定值。  
   
-3.  引數可以選擇是否要指定它們的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 是指定評估引數順序之以零為起始的值。 根據預設，引數的預設評估順序未指定，而且等於 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 設定 <xref:System.Activities.Argument.EvaluationOrder%2A> 為大於或等於零的值，以指定這個引數的評估順序。 Windows Workflow Foundation 會評估引數的指定的評估順序，依遞增順序排列。 請注意，未指定評估順序的引數會在有指定評估順序的引數之前先進行評估。  
+3. 引數可以選擇是否要指定它們的 <xref:System.Activities.Argument.EvaluationOrder%2A>。 <xref:System.Activities.Argument.EvaluationOrder%2A> 以零為起始的值，指定評估引數的順序。 根據預設，引數的預設評估順序未指定，而且等於 <xref:System.Activities.Argument.UnspecifiedEvaluationOrder> 值。 設定 <xref:System.Activities.Argument.EvaluationOrder%2A> 為大於或等於零的值，以指定這個引數的評估順序。 Windows Workflow Foundation 會評估引數的指定的評估順序，依遞增順序排列。 請注意，未指定評估順序的引數會在有指定評估順序的引數之前先進行評估。  
   
  活動作者可使用強型別的機制來公開其引數。 藉由宣告型別 <xref:System.Activities.InArgument%601>、<xref:System.Activities.OutArgument%601> 與 <xref:System.Activities.InOutArgument%601> 的屬性，即可完成此動作。 這可讓活動作者建立資料進出活動的相關特定合約。  
   
@@ -87,7 +87,7 @@ public class Prompt : Activity
 >  傳回單一值的活動可衍生自 <xref:System.Activities.Activity%601>、<xref:System.Activities.NativeActivity%601> 或 <xref:System.Activities.CodeActivity%601>。 這些活動具有充分定義的 <xref:System.Activities.OutArgument%601> 具名 <xref:System.Activities.Activity%601.Result%2A>，其中包含活動的傳回值。  
   
 ### <a name="using-variables-and-arguments-in-workflows"></a>在工作流程中使用變數與引數  
- 下列範例示範如何在工作流程中使用變數與引數。 工作流程會依照順序宣告三種變數：`var1`、`var2` 與 `var3`。 工作流程中的第一個活動是指派變數 `Assign` 值到變數 `var1` 的 `var2` 活動。 這之後的 `WriteLine` 活動會列印 `var2` 變數的值。 下一步是指派變數 `Assign` 到變數 `var2` 的其他 `var3` 活動。 最後一步是另一個 `WriteLine` 活動，這個活動會列印 `var3` 變數的值。 第一個 `Assign` 活動會使用明確表示活動引數繫結的 `InArgument<string>` 和 `OutArgument<string>`。 `InArgument<string>` 適用於 <xref:System.Activities.Statements.Assign.Value%2A>，因為該值會透過其 <xref:System.Activities.Statements.Assign%601> 引數流入 <xref:System.Activities.Statements.Assign.Value%2A> 活動中，而 `OutArgument<string>` 適用於 <xref:System.Activities.Statements.Assign.To%2A>，因為該值會從 <xref:System.Activities.Statements.Assign.To%2A> 引數流出到變數中。 第二個 `Assign` 活動會完成同樣的工作，並使用更精簡但使用隱含轉型的對等語法。 `WriteLine` 活動也會使用精簡語法。  
+ 下列範例示範如何在工作流程中使用變數與引數。 工作流程會依照順序宣告三種變數：`var1`、`var2` 與 `var3`。 工作流程中的第一個活動是指派變數 `Assign` 值到變數 `var1` 的 `var2` 活動。 這之後的 `WriteLine` 活動會列印 `var2` 變數的值。 下一步是指派變數 `Assign` 到變數 `var2` 的其他 `var3` 活動。 最後一步是另一個 `WriteLine` 活動，這個活動會列印 `var3` 變數的值。 第一個 `Assign` 活動會使用明確表示活動引數繫結的 `InArgument<string>` 和 `OutArgument<string>`。 `InArgument<string>` 使用於<xref:System.Activities.Statements.Assign.Value%2A>因為值是否正流入<xref:System.Activities.Statements.Assign%601>活動透過其<xref:System.Activities.Statements.Assign.Value%2A>引數，和`OutArgument<string>`使用於<xref:System.Activities.Statements.Assign.To%2A>因為值正流向共<xref:System.Activities.Statements.Assign.To%2A>到變數引數。 第二個 `Assign` 活動會完成同樣的工作，並使用更精簡但使用隱含轉型的對等語法。 `WriteLine` 活動也會使用精簡語法。  
   
 ```csharp  
 // Declare three variables; the first one is given an initial value.  
@@ -123,7 +123,7 @@ WorkflowInvoker.Invoke(wf);
 ```  
   
 ### <a name="using-variables-and-arguments-in-code-based-activities"></a>在程式碼式活動中使用變數與引數  
- 先前的範例示範如何在工作流程中使用引數與宣告式活動。 在程式碼式活動中也會使用引數與變數。 概念上，其用法很類似。 變數表示活動內的資料存放區，而引數表示資料對活動的流入或流出，且是由工作流程作者繫結至工作流程中表示資料流出或流入位置的其他變數或引數。 若要取得或設定活動中的變數或引數值，必須使用表示活動目前執行環境的活動內容。 這會由工作流程執行階段傳遞至活動的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法。 在此範例中，會定義含有兩個 `Add` 引數的自訂 <xref:System.Activities.ArgumentDirection.In> 活動。 若要存取引數值，則會使用 <xref:System.Activities.Argument.Get%2A> 方法，且要使用工作流程執行階段所傳遞的內容。  
+ 先前的範例示範如何在工作流程中使用引數與宣告式活動。 在程式碼式活動中也會使用引數與變數。 概念上，其用法很類似。 變數表示活動內的資料存放區，而引數表示資料對活動的流入或流出，且是由工作流程作者繫結程序至工作流程中表示資料流出或流入位置的其他變數或引數。 若要取得或設定活動中的變數或引數值，必須使用表示活動目前執行環境的活動內容。 這會由工作流程執行階段傳遞至活動的 <xref:System.Activities.CodeActivity%601.Execute%2A> 方法。 在此範例中，會定義含有兩個 `Add` 引數的自訂 <xref:System.Activities.ArgumentDirection.In> 活動。 若要存取引數值，則會使用 <xref:System.Activities.Argument.Get%2A> 方法，且要使用工作流程執行階段所傳遞的內容。  
   
 ```csharp  
 public sealed class Add : CodeActivity<int>  

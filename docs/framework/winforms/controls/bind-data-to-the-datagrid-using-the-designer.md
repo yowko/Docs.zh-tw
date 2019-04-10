@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to Windows Forms controls
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
-ms.openlocfilehash: 70bd2d25f848f1602fbd12a76f898f8fe902d696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59200229"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321844"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具將資料繫結至 Windows Forms DataGridView 控制項
 您可以使用設計工具來連接<xref:System.Windows.Forms.DataGridView>的數個不同，包括資料庫、 商務物件或 Web 服務的資料來源的控制項。 控制當您將控制項繫結至資料來源，使用設計工具時，自動繫結至<xref:System.Windows.Forms.BindingSource>表示資料來源的元件。 此外，控制項中會自動產生資料行，以符合資料來源所提供的結構描述資訊。  
@@ -27,19 +27,19 @@ ms.locfileid: "59200229"
   
 ### <a name="to-bind-the-control-to-a-data-source"></a>將控制項繫結至資料來源  
   
-1.  按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項。  
+1. 按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項。  
   
-2.  按一下 [選擇資料來源] 選項的下拉式箭號。  
+2. 按一下 [選擇資料來源] 選項的下拉式箭號。  
   
-3.  如果您的專案還沒有資料來源，請按一下 [新增專案資料來源] 並遵循精靈所指示的步驟。  
+3. 如果您的專案還沒有資料來源，請按一下 [新增專案資料來源] 並遵循精靈所指示的步驟。  
   
      如需詳細資訊，請參閱[資料來源設定精靈](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/w4dd7z6t(v=vs.120))。 新的資料來源會出現在 [選擇資料來源] 下拉式視窗中。 如果新的資料來源只包含一個成員，例如單一資料庫資料表，則控制項會自動繫結至該成員。 否則請繼續下一個步驟。  
   
-4.  如果 [其他資料來源] 和 [專案資料來源] 節點尚未展開，請加以展開，然後選取控制項所要繫結的資料來源。  
+4. 如果 [其他資料來源] 和 [專案資料來源] 節點尚未展開，請加以展開，然後選取控制項所要繫結的資料來源。  
   
-5.  如果您的資料來源包含多個成員，例如，如果您已建立<xref:System.Data.DataSet?displayProperty=nameWithType>，其中包含多個資料表，依序展開 資料來源，然後選取要繫結至特定的成員。  
+5. 如果您的資料來源包含多個成員，例如，如果您已建立<xref:System.Data.DataSet?displayProperty=nameWithType>，其中包含多個資料表，依序展開 資料來源，然後選取要繫結至特定的成員。  
   
-6.  若要在建立主從式關聯性**選擇資料來源**第二個下拉式清單視窗<xref:System.Windows.Forms.DataGridView>控制中，展開<xref:System.Windows.Forms.BindingSource>建立父資料表，並從清單中選取相關的子資料表顯示。  
+6. 若要在建立主從式關聯性**選擇資料來源**第二個下拉式清單視窗<xref:System.Windows.Forms.DataGridView>控制中，展開<xref:System.Windows.Forms.BindingSource>建立父資料表，並從清單中選取相關的子資料表顯示。  
   
     > [!NOTE]
     >  如果專案已經有資料來源，您也可以使用 [資料來源] 視窗建立資料表單。 如需詳細資訊，請參閱[資料來源視窗](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))。  

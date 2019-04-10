@@ -2,12 +2,12 @@
 title: 執行個體存放區
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
-ms.openlocfilehash: 7ea29c3604042d773590448e31ce4ea95125ca1f
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43519574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323326"
 ---
 # <a name="instance-stores"></a>執行個體存放區
 執行個體存放區是執行個體的邏輯容器者。 這是儲存執行個體資料和中繼資料的位置。 執行個體存放區並不是指專用的實際儲存區。 執行個體存放區可包含 SQL Server 資料庫中的耐久資訊，或記憶體中的非耐久狀態資訊。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 隨附於 SQL 工作流程執行個體存放區，是執行個體存放區的具體實作，可讓工作流程將執行個體資料與中繼資料保存在 SQL Server 2005 或 SQL Server 2008 資料庫中。 此外，Windows Server App Fabric 還提供執行個體存放區的 concrete 實作。 如需詳細資訊，請參閱 < [Windows Server App Fabric 執行個體存放區、 查詢和控制提供者](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)。  
@@ -22,10 +22,10 @@ ms.locfileid: "43519574"
   
  下列清單包含主機與執行個體存放區互動時的相關重要步驟。  
   
-1.  取得**InstanceStore**從持續性提供者。  
+1. 取得**InstanceStore**從持續性提供者。  
 
-2.  取得執行個體的控制代碼藉由呼叫<xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A>方法**InstanceStore**。  
+2. 取得執行個體的控制代碼藉由呼叫<xref:System.Runtime.DurableInstancing.InstanceStore.CreateInstanceHandle%2A>方法**InstanceStore**。  
   
-3.  藉由呼叫叫用命令的執行個體控制代碼<xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A>方法**InstanceStore**。  
+3. 藉由呼叫叫用命令的執行個體控制代碼<xref:System.Runtime.DurableInstancing.InstanceStore.Execute%2A>方法**InstanceStore**。  
   
-4.  檢查<xref:System.Runtime.DurableInstancing.InstanceView>所傳回**InstanceStore.Execute**來判斷命令的結果。
+4. 檢查<xref:System.Runtime.DurableInstancing.InstanceView>所傳回**InstanceStore.Execute**來判斷命令的結果。

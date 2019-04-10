@@ -6,12 +6,12 @@ helpviewer_keywords:
 - grouping
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 8b615000-69d9-4c64-acaf-b54fa09b69e3
-ms.openlocfilehash: 223c2a639fdb7a05506eca333a44ca31c0dae75f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c25c012798adcf90c652beb91a7550406e5f8ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136652"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321428"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具在 Windows Forms ListView 控制項中分組項目
 分組功能<xref:System.Windows.Forms.ListView>控制項可讓您以群組顯示相關的項目集。 這些群組是在螢幕上分隔包含群組標題的水平群組標頭。 您可以使用<xref:System.Windows.Forms.ListView>群組，使導覽更容易的大型清單依字母順序，分組項目，依日期，或任何其他的邏輯群組。 下圖顯示一些分組的項目。  
@@ -29,21 +29,21 @@ ms.locfileid: "59136652"
   
 ### <a name="to-add-or-remove-groups-in-the-designer"></a>若要新增或移除群組，在設計工具  
   
-1.  在 [**屬性**] 視窗中，按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 下一步按鈕<xref:System.Windows.Forms.ListView.Groups%2A>屬性。  
+1. 在 [**屬性**] 視窗中，按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 下一步按鈕<xref:System.Windows.Forms.ListView.Groups%2A>屬性。  
   
      **ListViewGroup 集合編輯器**隨即出現。  
   
-2.  若要新增的群組，請按一下**新增** 按鈕。 您可以再設定屬性的新群組，例如<xref:System.Windows.Forms.ListViewGroup.Header%2A>和<xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A>屬性。 若要移除群組，請選取它，然後按一下**移除** 按鈕。  
+2. 若要新增的群組，請按一下**新增** 按鈕。 您可以再設定屬性的新群組，例如<xref:System.Windows.Forms.ListViewGroup.Header%2A>和<xref:System.Windows.Forms.ListViewGroup.HeaderAlignment%2A>屬性。 若要移除群組，請選取它，然後按一下**移除** 按鈕。  
   
 ### <a name="to-assign-items-to-groups-in-the-designer"></a>若要將項目指派給設計工具中的群組  
   
-1.  在 [**屬性**] 視窗中，按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 下一步按鈕<xref:System.Windows.Forms.ListView.Items%2A>屬性。  
+1. 在 [**屬性**] 視窗中，按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 下一步按鈕<xref:System.Windows.Forms.ListView.Items%2A>屬性。  
   
      **ListViewItem 集合編輯器**隨即出現。  
   
-2.  若要加入新項目，按一下**新增** 按鈕。 您可以再設定屬性的新的項目，例如<xref:System.Windows.Forms.ListViewItem.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>屬性。  
+2. 若要加入新項目，按一下**新增** 按鈕。 您可以再設定屬性的新的項目，例如<xref:System.Windows.Forms.ListViewItem.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>屬性。  
   
-3.  選取<xref:System.Windows.Forms.ListViewItem.Group%2A>屬性，然後從下拉式清單中選擇 群組。  
+3. 選取<xref:System.Windows.Forms.ListViewItem.Group%2A>屬性，然後從下拉式清單中選擇 群組。  
   
 ## <a name="see-also"></a>另請參閱
 

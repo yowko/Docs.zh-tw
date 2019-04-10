@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30298
 ms.assetid: 2d77b7f4-0640-4f89-9c65-f101fd2847c0
-ms.openlocfilehash: ef20f74055a07071ef9634973c6852ac58c3143c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8459ee7fec6d761161a721c88ccdc88e513fc95f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824703"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324379"
 ---
 # <a name="constructor-name-cannot-call-itself"></a>建構函式 '\<名稱 >' 不可呼叫其本身
 A`Sub New`類別或結構中的程序呼叫本身。  
@@ -23,9 +23,9 @@ A`Sub New`類別或結構中的程序呼叫本身。
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請檢查建構函式所呼叫的參數清單。 它應該是不同的建構函式進行呼叫。  
+1. 請檢查建構函式所呼叫的參數清單。 它應該是不同的建構函式進行呼叫。  
   
-2.  如果您不想呼叫不同的建構函式，移除`Sub New`完全呼叫。  
+2. 如果您不想呼叫不同的建構函式，移除`Sub New`完全呼叫。  
   
 ## <a name="see-also"></a>另請參閱
 

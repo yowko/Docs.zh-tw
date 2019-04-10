@@ -2,12 +2,12 @@
 title: 佇列訊息的疑難排解
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: b2193755beddd6c0d0eef4f95ca311b8e2b75b3c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463107"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322039"
 ---
 # <a name="troubleshooting-queued-messaging"></a>佇列訊息的疑難排解
 本章節包含常見問題與疑難排解說明，以便使用 Windows Communication Foundation (WCF) 中的佇列。  
@@ -96,9 +96,9 @@ ms.locfileid: "58463107"
   
  **答：** 最常見的原因是權限。  
   
-1.  請確定 `NetMsmqActivator` 處理序正在執行，而且 `NetMsmqActivator` 處理序的身分識別已授與在佇列上讀取和搜尋的權限。  
+1. 請確定 `NetMsmqActivator` 處理序正在執行，而且 `NetMsmqActivator` 處理序的身分識別已授與在佇列上讀取和搜尋的權限。  
   
-2.  如果 `NetMsmqActivator` 正在監視遠端電腦上的佇列，請確定 `NetMsmqActivator` 不是以受限制的權杖執行。 若要以不受限制的權杖執行 `NetMsmqActivator`：  
+2. 如果 `NetMsmqActivator` 正在監視遠端電腦上的佇列，請確定 `NetMsmqActivator` 不是以受限制的權杖執行。 若要以不受限制的權杖執行 `NetMsmqActivator`：  
   
     ```  
     sc sidtype NetMsmqActivator unrestricted  
@@ -157,19 +157,19 @@ System.ServiceModel.MsmqPoisonMessageException: The transport channel detected a
   
  **答：** 您無法在憑證模式下使用本機電腦憑證存放區。 您必須使用憑證嵌入式管理單元，將憑證從電腦憑證存放區複製到目前使用者存放區。 若要取得憑證嵌入式管理單元：  
   
-1.  按一下 **開始**，選取**執行**，型別`mmc`，然後按一下**確定**。  
+1. 按一下 **開始**，選取**執行**，型別`mmc`，然後按一下**確定**。  
   
-2.  在  **Microsoft Management Console**，開啟**檔案**功能表，然後選取**新增/移除嵌入式管理單元**。  
+2. 在  **Microsoft Management Console**，開啟**檔案**功能表，然後選取**新增/移除嵌入式管理單元**。  
   
-3.  在 **新增/移除嵌入式管理單元** 對話方塊中，按一下**新增** 按鈕。  
+3. 在 **新增/移除嵌入式管理單元** 對話方塊中，按一下**新增** 按鈕。  
   
-4.  在 **新增獨立嵌入式管理單元** 對話方塊中，選取憑證然後按一下 **新增**。  
+4. 在 **新增獨立嵌入式管理單元** 對話方塊中，選取憑證然後按一下 **新增**。  
   
-5.  在 **憑證**嵌入式管理單元對話方塊方塊中，選取**我的使用者帳戶**，按一下 **完成**。  
+5. 在 **憑證**嵌入式管理單元對話方塊方塊中，選取**我的使用者帳戶**，按一下 **完成**。  
   
-6.  接下來，新增第二個憑證嵌入式管理單元使用先前步驟中，但這次請選取**電腦帳戶**然後按一下**下一步**。  
+6. 接下來，新增第二個憑證嵌入式管理單元使用先前步驟中，但這次請選取**電腦帳戶**然後按一下**下一步**。  
   
-7.  選取 **本機電腦**然後按一下**完成**。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。  
+7. 選取 **本機電腦**然後按一下**完成**。 現在，您可以從電腦憑證存放區將憑證拖放到目前使用者存放區。  
   
  **問：** 當我的服務會從工作群組模式中的另一部電腦上的佇列讀取時，我會收到 「 拒絕存取 」 例外狀況。  
   

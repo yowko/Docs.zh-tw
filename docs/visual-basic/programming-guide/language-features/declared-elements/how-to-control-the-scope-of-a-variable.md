@@ -12,12 +12,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
-ms.openlocfilehash: ef7957a991718112fe01c4fa3a85f29b9226abd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818719"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324314"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>HOW TO：控制的範圍變數 (Visual Basic)
 一般而言，變數會處於*範圍*，或顯示供您參考，在宣告它的區域。 在某些情況下，變數的*存取層級*可能會影響其範圍。  
@@ -43,19 +43,19 @@ ms.locfileid: "58818719"
   
 #### <a name="to-make-a-variable-visible-throughout-a-module-class-or-structure"></a>若要顯示在整個模組、 類別或結構變數  
   
-1.  位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
+1. 位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
   
-2.  包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)中的關鍵字`Dim`陳述式。  
+2. 包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)中的關鍵字`Dim`陳述式。  
   
-3.  您可以參考變數，從模組、 類別或結構內的任何位置，而不是從其外部。  
+3. 您可以參考變數，從模組、 類別或結構內的任何位置，而不是從其外部。  
   
 #### <a name="to-make-a-variable-visible-throughout-a-namespace"></a>若要顯示整個命名空間變數  
   
-1.  位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
+1. 位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
   
-2.  包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或是[公用](../../../../visual-basic/language-reference/modifiers/public.md)中的關鍵字`Dim`陳述式。  
+2. 包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)或是[公用](../../../../visual-basic/language-reference/modifiers/public.md)中的關鍵字`Dim`陳述式。  
   
-3.  您可以從任何位置參考此變數包含模組、 類別或結構的命名空間內。  
+3. 您可以從任何位置參考此變數包含模組、 類別或結構的命名空間內。  
   
 ## <a name="example"></a>範例  
  下列範例會宣告一個變數，在模組層級，並限制其可見性的模組中的程式碼。  
@@ -88,8 +88,8 @@ Public strMsg As String
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
-- [在 Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
+- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的存留期](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)
 - [在 Visual Basic 中的存取層級](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)
 - [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)

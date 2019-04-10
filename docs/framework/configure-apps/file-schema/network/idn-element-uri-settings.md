@@ -2,12 +2,12 @@
 title: <idn> 項目 （Uri 設定）
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
-ms.openlocfilehash: 3940f30f2ef90a77560a82edc909071f0ee8e130
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129398"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321749"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 項目 （Uri 設定）
 指定是否國際化網域名稱 (IDN) 剖析套用至網域名稱。  
@@ -50,13 +50,13 @@ ms.locfileid: "59129398"
   
  若要啟用 IRI 支援，下列兩項變更是必要的：  
   
-1.  將下行新增至.NET Framework 2.0 目錄下的 machine.config 檔案  
+1. 將下行新增至.NET Framework 2.0 目錄下的 machine.config 檔案  
   
     ```xml  
     <section name="uri" type="System.Configuration.UriSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />  
     ```  
   
-2.  指定是否要國際化網域名稱 (IDN) 剖析套用至網域名稱以及是否應該套用 IRI 剖析規則。 此作業可在 machine.config 或 app.config 檔案中完成。  
+2. 指定是否要國際化網域名稱 (IDN) 剖析套用至網域名稱以及是否應該套用 IRI 剖析規則。 此作業可在 machine.config 或 app.config 檔案中完成。  
   
  有三個可能的值進行 IDN 根據所使用的 DNS 伺服器：  
   

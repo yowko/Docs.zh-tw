@@ -5,12 +5,12 @@ helpviewer_keywords:
 - members [Visual Basic], accessing
 - object variables [Visual Basic], accessing members
 ms.assetid: a0072514-6a79-4dd6-8d03-ca8c13e61ddc
-ms.openlocfilehash: 2b7e600a23ed326fe3e914957b4e698bc34c6135
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: de00e428cc3d9d7a5688e853b0ff4295fec5b3e9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322754"
 ---
 # <a name="how-to-access-members-of-an-object-visual-basic"></a>HOW TO：存取成員的物件 (Visual Basic)
 當您參考之物件的物件變數時，您通常會想要使用該物件，例如方法、 屬性、 欄位和事件的成員。 例如，一旦您建立新<xref:System.Windows.Forms.Form>物件，您可能想要設定其<xref:System.Windows.Forms.Control.Text%2A>屬性或呼叫其<xref:System.Windows.Forms.Control.Focus%2A>方法。  
@@ -33,7 +33,7 @@ ms.locfileid: "58819643"
   
 #### <a name="to-access-members-of-an-object-for-which-you-know-the-type-at-compile-time"></a>若要存取，您知道在編譯時期類型物件的成員  
   
-1.  宣告物件變數是您想要指派給變數物件的類型。  
+1. 宣告物件變數是您想要指派給變數物件的類型。  
   
     ```  
     Dim extraForm As System.Windows.Forms.Form  
@@ -41,7 +41,7 @@ ms.locfileid: "58819643"
   
      具有`Option Strict On`，您可以僅指派<xref:System.Windows.Forms.Form>物件 (或類型的物件衍生自<xref:System.Windows.Forms.Form>) 來`extraForm`。 如果您已定義類別或結構與擴展`CType`轉換成<xref:System.Windows.Forms.Form>，您也可以指派該類別或結構`extraForm`。  
   
-2.  使用成員存取運算子 (`.`) 之間的物件變數的名稱和成員名稱。  
+2. 使用成員存取運算子 (`.`) 之間的物件變數的名稱和成員名稱。  
   
     ```  
     extraForm.Show()  
@@ -54,7 +54,7 @@ ms.locfileid: "58819643"
   
 #### <a name="to-access-members-of-an-object-for-which-you-do-not-know-the-type-at-compile-time"></a>若要存取，您不知道類型在編譯時期物件的成員  
   
-1.  將物件變數的宣告[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 (宣告為變數`Object`等同於它宣告為<xref:System.Object?displayProperty=nameWithType>。)  
+1. 將物件變數的宣告[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)。 (宣告為變數`Object`等同於它宣告為<xref:System.Object?displayProperty=nameWithType>。)  
   
     ```  
     Dim someControl As Object  
@@ -62,7 +62,7 @@ ms.locfileid: "58819643"
   
      具有`Option Strict On`，您可以存取只有成員上定義之<xref:System.Object>類別。  
   
-2.  使用成員存取運算子 (`.`) 之間的物件變數的名稱和成員名稱。  
+2. 使用成員存取運算子 (`.`) 之間的物件變數的名稱和成員名稱。  
   
     ```  
     someControl.GetType()  
@@ -77,5 +77,5 @@ ms.locfileid: "58819643"
 - <xref:System.MemberAccessException>
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數宣告](../../../../visual-basic/programming-guide/language-features/variables/object-variable-declaration.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
-- [Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Long](../../../../visual-basic/language-reference/statements/option-strict-statement.md)

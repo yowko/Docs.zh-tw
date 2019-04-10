@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: 433efade37d9aa07f99a212b631a571dfbc766dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095863"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320921"
 ---
 # <a name="using-sessions"></a>使用工作階段
 在 Windows Communication Foundation (WCF) 應用程式*工作階段*與一組訊息相互關聯至對話。 WCF 工作階段的不同中可用的工作階段物件[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式支援不同的行為，以及控制的方式。 本主題描述在 WCF 中的工作階段啟用功能的應用程式，以及如何使用它們。  
@@ -53,9 +53,9 @@ ms.locfileid: "59095863"
   
  當 WCF 服務接受用戶端工作階段時，預設會啟用下列功能：  
   
-1.  WCF 用戶端物件之間的所有呼叫是由相同的服務執行個體都處理。  
+1. WCF 用戶端物件之間的所有呼叫是由相同的服務執行個體都處理。  
   
-2.  不同的工作階段架構繫結會提供額外的功能。  
+2. 不同的工作階段架構繫結會提供額外的功能。  
   
 ## <a name="system-provided-session-types"></a>系統提供的工作階段類型  
  工作階段架構繫結支援服務執行個體與特定工作階段之間的預設關聯。 然而，除了啟用先前所述的工作階段架構執行個體控制之外，不同的工作階段架構繫結也支援不同的功能。  

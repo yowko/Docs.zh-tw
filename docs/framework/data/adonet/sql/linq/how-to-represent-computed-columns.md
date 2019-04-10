@@ -2,12 +2,12 @@
 title: HOW TO：表示計算資料行
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
-ms.openlocfilehash: f624bb49773af2c0053851ac55727b6db8632131
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: df72562b303e5b9a7c31334df06926f157b59b05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324732"
 ---
 # <a name="how-to-represent-computed-columns"></a>HOW TO：表示計算資料行
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>屬性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>屬性以表示其內容為計算結果的資料行。  
@@ -19,9 +19,9 @@ ms.locfileid: "59204116"
   
 ### <a name="to-represent-a-computed-column"></a>若要表示計算資料行  
   
-1.  將 <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute)。  
+1. 將 <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute)。  
   
-2.  將公式的字串表示指派至 <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 屬性 (Property)。  
+2. 將公式的字串表示指派至 <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A> 屬性 (Property)。  
   
 ## <a name="see-also"></a>另請參閱
 

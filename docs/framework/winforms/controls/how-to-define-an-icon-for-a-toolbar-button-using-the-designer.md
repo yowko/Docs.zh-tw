@@ -9,12 +9,12 @@ helpviewer_keywords:
 - icons [Windows Forms], toolbar buttons
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
-ms.openlocfilehash: 6657a9bbb850a24ae47be11854d6affd2a02f9b7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118270"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323703"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>HOW TO：使用設計工具定義工具列按鈕的圖示
 > [!NOTE]
@@ -29,17 +29,17 @@ ms.locfileid: "59118270"
   
 ### <a name="to-set-an-icon-for-a-toolbar-button-at-design-time"></a>若要在設計階段設定的工具列按鈕的圖示  
   
-1.  新增映像發佈至<xref:System.Windows.Forms.ImageList>元件。 如需詳細資訊，請參閱[如何：新增或移除 ImageList 影像與設計工具](how-to-add-or-remove-imagelist-images-with-the-designer.md)。  
+1. 新增映像發佈至<xref:System.Windows.Forms.ImageList>元件。 如需詳細資訊，請參閱[如何：新增或移除 ImageList 影像與設計工具](how-to-add-or-remove-imagelist-images-with-the-designer.md)。  
   
-2.  選取<xref:System.Windows.Forms.ToolBar>您表單上的控制項。  
+2. 選取<xref:System.Windows.Forms.ToolBar>您表單上的控制項。  
   
-3.  在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ImageList%2A>屬性設<xref:System.Windows.Forms.ImageList>元件。  
+3. 在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ImageList%2A>屬性設<xref:System.Windows.Forms.ImageList>元件。  
   
-4.  按一下 <xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性來加以選取，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，開啟**ToolBarButton 集合編輯器**。  
+4. 按一下 <xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性來加以選取，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，開啟**ToolBarButton 集合編輯器**。  
   
-5.  使用**新增** 按鈕，將按鈕加入<xref:System.Windows.Forms.ToolBar>控制項。  
+5. 使用**新增** 按鈕，將按鈕加入<xref:System.Windows.Forms.ToolBar>控制項。  
   
-6.  在**屬性**出現在右側窗格中的視窗**ToolBarButton 集合編輯器**，將<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>的每個工具列按鈕，以在清單中，值的其中一個屬性的您加入的映像會取自<xref:System.Windows.Forms.ImageList>元件。  
+6. 在**屬性**出現在右側窗格中的視窗**ToolBarButton 集合編輯器**，將<xref:System.Windows.Forms.ToolBarButton.ImageIndex%2A>的每個工具列按鈕，以在清單中，值的其中一個屬性的您加入的映像會取自<xref:System.Windows.Forms.ImageList>元件。  
   
 ## <a name="see-also"></a>另請參閱
 

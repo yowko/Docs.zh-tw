@@ -2,12 +2,12 @@
 title: 程式設計模型項目樹狀
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: f3def07ecbc60362b2a8c1d38689dc686cd5bbd5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321129"
 ---
 # <a name="programming-model-item-tree"></a>程式設計模型項目樹狀
 這個範例會示範如何瀏覽<xref:System.Activities.Presentation.Model.ModelItem>使用宣告式資料繫結，從 Windows Presentation Foundation (WPF) 樹狀結構檢視。
@@ -29,15 +29,15 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  Visual Studio 2010 中開啟 [programmingmodelitemtree.sln] 方案。
+1. Visual Studio 2010 中開啟 [programmingmodelitemtree.sln] 方案。
 
-2.  選取 建置方案**建置方案**從**建置**功能表。
+2. 選取 建置方案**建置方案**從**建置**功能表。
 
-3.  按 F5 執行應用程式。 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 格式隨即顯示。
+3. 按 F5 執行應用程式。 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] 格式隨即顯示。
 
-4.  按一下 **載入 WF**按鈕以載入<xref:System.Activities.Presentation.Model.ModelItem>並將它繫結至樹狀檢視。
+4. 按一下 **載入 WF**按鈕以載入<xref:System.Activities.Presentation.Model.ModelItem>並將它繫結至樹狀檢視。
 
-5.  按一下 **變更模型項目樹狀結構**按鈕會執行上述程式碼新增到樹狀結構的項目和設定的屬性。
+5. 按一下 **變更模型項目樹狀結構**按鈕會執行上述程式碼新增到樹狀結構的項目和設定的屬性。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
-ms.openlocfilehash: ab6a4a0e6736e2af9c1fa0dd170b6aa4c42d9e4a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817145"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321469"
 ---
 # <a name="end-of-statement-expected"></a>必須有陳述式結尾
 陳述式語法上完成，但其他程式設計項目會遵循完成陳述式的項目。 需要在每個陳述式結尾的行結束字元。
@@ -23,11 +23,11 @@ ms.locfileid: "58817145"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤
   
-1.  檢查看看是否兩個不同的陳述式不小心存放在同一行。
+1. 檢查看看是否兩個不同的陳述式不小心存放在同一行。
   
-2.  完成陳述式的項目之後插入的行結束字元。
+2. 完成陳述式的項目之後插入的行結束字元。
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [HOW TO：中斷和合併程式碼中的陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)

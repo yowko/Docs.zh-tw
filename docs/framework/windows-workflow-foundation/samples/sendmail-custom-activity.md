@@ -2,12 +2,12 @@
 title: SendMail 自訂活動
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 4cd2ed8c80bd5ab4c4e784f4c5c86a58ecceda2f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181286"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321857"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail 自訂活動
 此範例示範如何建立衍生自 <xref:System.Activities.AsyncCodeActivity> 的自訂活動，以便使用 SMTP 傳送郵件供工作流程應用程式使用。 自訂活動使用的功能<xref:System.Net.Mail.SmtpClient>以非同步方式傳送電子郵件並傳送具有驗證的郵件。 也會提供一些終端使用者功能，例如測試模式、語彙基元替換、檔案範本和測試置放路徑。  
@@ -17,9 +17,9 @@ ms.locfileid: "50181286"
 |名稱|類型|描述|  
 |-|-|-|  
 |主機|String|SMTP 伺服器主機的位址。|  
-|通訊埠|String|SMTP 服務在主機中的連接埠。|  
+|連接埠|String|SMTP 服務在主機中的連接埠。|  
 |EnableSsl|bool|指定 <xref:System.Net.Mail.SmtpClient> 是否使用 Secure Sockets Layer (SSL) 加密連接。|  
-|UserName|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的使用者名稱。|  
+|使用者名稱|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的使用者名稱。|  
 |密碼|String|設定認證來驗證寄件者 <xref:System.Net.Mail.SmtpClient.Credentials%2A> 屬性的密碼。|  
 |主旨|<xref:System.Activities.InArgument%601>\<string>|訊息的主旨。|  
 |本文|<xref:System.Activities.InArgument%601>\<string>|訊息的本文。|  
@@ -36,7 +36,7 @@ ms.locfileid: "50181286"
 ## <a name="solution-contents"></a>方案內容  
  此方案包含兩個專案。  
   
-|Project|描述|重要檔案|  
+|專案|描述|重要檔案|  
 |-------------|-----------------|---------------------|  
 |SendMail|SendMail 活動|1.SendMail.cs：主要活動的實作<br />2.SendMailDesigner.xaml 和 SendMailDesigner.xaml.cs：SendMail 活動的設計工具<br />3.MailTemplateBody.htm：要外送之電子郵件的範本。|  
 |SendMailTestClient|測試 SendMail 活動的用戶端。  此專案會示範兩個方式來叫用 SendMail 活動：宣告方式和程式設計方式。|1.Sequence1.xaml：叫用 SendMail 活動的工作流程。<br />2.Program.cs：叫用 Sequence1 並以程式設計方式建立一個使用 SendMail 的工作流程。|  
@@ -109,9 +109,9 @@ new SendMail
   
 -   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [設定 SMTP 服務 (IIS 6.0)](https://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [設定 SMTP 服務 (IIS 6.0) (英文)](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0： 設定 SMTP 電子郵件](https://go.microsoft.com/fwlink/?LinkId=150457)  
+-   [IIS 7.0:設定 SMTP 電子郵件](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
 -   [如何安裝 SMTP 服務](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
@@ -119,17 +119,17 @@ new SendMail
   
 ##### <a name="to-run-this-sample"></a>若要執行這個範例  
   
-1.  使用 Visual Studio 2010 開啟 SendMail.sln 方案檔案。  
+1. 使用 Visual Studio 2010 開啟 SendMail.sln 方案檔案。  
   
-2.  確定您可以存取有效的 SMTP 伺服器。 請參閱設定指示。  
+2. 確定您可以存取有效的 SMTP 伺服器。 請參閱設定指示。  
   
-3.  使用您的伺服器位址，以及從和電子郵件地址，請設定程式。  
+3. 使用您的伺服器位址，以及從和電子郵件地址，請設定程式。  
   
      若要正確執行此範例中，您可能需要在 Program.cs 和 Sequence.xaml 中設定電子郵件地址以及 SMTP 伺服器的位址的值。 您需要在這兩個位置中變更地址，因為此程式會以兩個不同的方式傳送郵件。  
   
-4.  若要建置此方案，請按 CTRL+SHIFT+B。  
+4. 若要建置此方案，請按 CTRL+SHIFT+B。  
   
-5.  若要執行此方案，請按下 CTRL+F5。  
+5. 若要執行此方案，請按下 CTRL+F5。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

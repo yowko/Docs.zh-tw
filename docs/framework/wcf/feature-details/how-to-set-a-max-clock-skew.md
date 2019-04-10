@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MaxClockSkew property
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
-ms.openlocfilehash: e487da6316ec381c2009ee33575848dd80df8ab2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1a8d99e5d2bd21a74318718f43b5d1c091ed073e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322143"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>HOW TO：設定最大時鐘誤差
 如果兩台電腦上的時鐘設定不相同，時間關鍵功能將脫離常軌。 若要降低這種可能性，您可以將 `MaxClockSkew` 屬性設定為 <xref:System.TimeSpan>。 此屬性可在兩種類別上使用：  
@@ -29,41 +29,41 @@ ms.locfileid: "59076624"
   
 ### <a name="to-create-a-custom-binding-with-a-new-clock-skew-value-in-code"></a>若要使用程式碼中的新時鐘扭曲值立自訂繫結  
   
-1.  > [!WARNING]
+1. > [!WARNING]
     >  請注意下列命名空間，在您的程式碼中加入參考： <xref:System.ServiceModel.Channels>， <xref:System.ServiceModel.Description>， <xref:System.Security.Permissions>，和<xref:System.ServiceModel.Security.Tokens>。  
   
      建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，並將其安全性模式設定為 <xref:System.ServiceModel.SecurityMode.Message>。  
   
-2.  呼叫 <xref:System.ServiceModel.Channels.BindingElementCollection> 方法建立 <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> 類別的新執行個體。  
+2. 呼叫 <xref:System.ServiceModel.Channels.BindingElementCollection> 方法建立 <xref:System.ServiceModel.WSHttpBinding.CreateBindingElements%2A> 類別的新執行個體。  
   
-3.  使用 <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> 類別的 <xref:System.ServiceModel.Channels.BindingElementCollection> 方法尋找安全性繫結項目。  
+3. 使用 <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> 類別的 <xref:System.ServiceModel.Channels.BindingElementCollection> 方法尋找安全性繫結項目。  
   
-4.  使用 <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> 方法時，轉換為實際型別。 下列範例轉換為 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 型別。  
+4. 使用 <xref:System.ServiceModel.Channels.BindingElementCollection.Find%2A> 方法時，轉換為實際型別。 下列範例轉換為 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 型別。  
   
-5.  設定安全性繫結項目上的 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> 屬性。  
+5. 設定安全性繫結項目上的 <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxClockSkew%2A> 屬性。  
   
-6.  使用適當的服務型別和基底位址建立 <xref:System.ServiceModel.ServiceHost>。  
+6. 使用適當的服務型別和基底位址建立 <xref:System.ServiceModel.ServiceHost>。  
   
-7.  使用 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> 方法新增端點並加入 <xref:System.ServiceModel.Channels.CustomBinding>。  
+7. 使用 <xref:System.ServiceModel.ServiceHost.AddServiceEndpoint%2A> 方法新增端點並加入 <xref:System.ServiceModel.Channels.CustomBinding>。  
   
      [!code-csharp[c_MaxClockSkew#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_maxclockskew/cs/source.cs#1)]
      [!code-vb[c_MaxClockSkew#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_maxclockskew/vb/source.vb#1)]  
   
 ### <a name="to-set-the-maxclockskew-in-configuration"></a>若要設定組態中的 MaxClockSkew  
   
-1.  建立[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)中[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素區段。  
+1. 建立[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)中[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)元素區段。  
   
-2.  建立[\<繫結 >](../../../../docs/framework/misc/binding.md)項目並將`name`屬性設為適當的值。 下列範例將它設定為 `MaxClockSkewBinding`。  
+2. 建立[\<繫結 >](../../../../docs/framework/misc/binding.md)項目並將`name`屬性設為適當的值。 下列範例將它設定為 `MaxClockSkewBinding`。  
   
-3.  新增編碼項目。 下列範例會新增[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
+3. 新增編碼項目。 下列範例會新增[ \<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)。  
   
-4.  新增[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目並將`authenticationMode`屬性進行適當的設定。 下列範例將屬性設定為 `Kerberos` 以說明該服務使用 Windows 驗證。  
+4. 新增[\<安全性 >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)項目並將`authenticationMode`屬性進行適當的設定。 下列範例將屬性設定為 `Kerberos` 以說明該服務使用 Windows 驗證。  
   
-5.  新增[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)並將`maxClockSkew`屬性值的形式`"##:##:##"`。 下列範例將它設定為 7 分鐘。 （選擇性） 加入[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) ，並設定`maxClockSkew`屬性進行適當的設定。  
+5. 新增[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md)並將`maxClockSkew`屬性值的形式`"##:##:##"`。 下列範例將它設定為 7 分鐘。 （選擇性） 加入[ \<localServiceSettings >](../../../../docs/framework/configure-apps/file-schema/wcf/localservicesettings-element.md) ，並設定`maxClockSkew`屬性進行適當的設定。  
   
-6.  新增傳輸項目。 下列範例會使用[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
+6. 新增傳輸項目。 下列範例會使用[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)。  
   
-7.  安全對談，安全性設定必須發生在中啟動程序[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)項目。  
+7. 安全對談，安全性設定必須發生在中啟動程序[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)項目。  
   
     ```xml  
     <bindings>  

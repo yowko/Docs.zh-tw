@@ -2,12 +2,12 @@
 title: DataContractResolver
 ms.date: 03/30/2017
 ms.assetid: 6c200c02-bc14-4b8d-bbab-9da31185b805
-ms.openlocfilehash: a42bf12e6ee8275814898a0158348f56bfb2688e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 981b70011979e1e0fbd8fc6b22ba54774c824342
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112862"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325172"
 ---
 # <a name="datacontractresolver"></a>DataContractResolver
 此範例示範如何使用 <xref:System.Runtime.Serialization.DataContractResolver> 類別來自訂序列化和還原序列化程序。 此範例會示範如何使用 DataContractResolver，在序列化和還原序列化期間來回對應 CLR 型別與 xsi:type 表示。
@@ -152,9 +152,9 @@ class MyDataContractResolver : DataContractResolver
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  使用 Visual Studio 2012，請開啟 DCRSample.sln 方案檔案。
+1. 使用 Visual Studio 2012，請開啟 DCRSample.sln 方案檔案。
 
-2.  若要執行方案，請按 F5
+2. 若要執行方案，請按 F5
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
