@@ -5,31 +5,31 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: 364329954591199c4b0d3123c662c4e124c242fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313576"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>HOW TO：註冊和設定服務 Moniker
 之前使用型別之合約中的 Windows Communication Foundation (WCF) 服務 moniker，在 COM 應用程式中的，您必須向 COM 註冊必要的屬性的類型，並使用必要的繫結設定 COM 應用程式和 moniker組態設定。  
   
 ### <a name="to-register-the-required-attributed-types-with-com"></a>使用 COM 註冊必要的屬性化型別  
   
-1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具從 WCF 服務擷取中繼資料合約。 此 WCF 用戶端組件和用戶端應用程式組態檔中產生的原始程式碼。  
+1. 使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)工具從 WCF 服務擷取中繼資料合約。 此 WCF 用戶端組件和用戶端應用程式組態檔中產生的原始程式碼。  
   
-2.  請確定組件中的型別已標示為 `ComVisible`。 若要這樣做，請在 Visual Studio 專案中將下列屬性新增至 AssemblyInfo.cs 檔。  
+2. 請確定組件中的型別已標示為 `ComVisible`。 若要這樣做，請在 Visual Studio 專案中將下列屬性新增至 AssemblyInfo.cs 檔。  
   
     ```  
     [assembly: ComVisible(true)]  
     ```  
   
-3.  編譯 managed 的 WCF 用戶端，做為強式名稱組件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱 <<c0> [ 簽署以強式名稱組件](https://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。  
+3. 編譯 managed 的 WCF 用戶端，做為強式名稱組件。 這樣做將需要以密碼金鑰組 (Key Pairs) 進行簽署。 如需詳細資訊，請參閱 <<c0> [ 簽署以強式名稱組件](https://go.microsoft.com/fwlink/?LinkId=94874).NET 開發人員指南中。  
   
-4.  使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。  
+4. 使用組件註冊 (Regasm.exe) 工具並搭配 `/tlb` 選項，以使用 COM 註冊組件中的型別。  
   
-5.  使用全域組件快取 (Gacutil.exe) 工具，將組件新增至全域組件快取中。  
+5. 使用全域組件快取 (Gacutil.exe) 工具，將組件新增至全域組件快取中。  
   
     > [!NOTE]
     >  簽署組件並將該組件新增至全域組件快取都是選用性步驟，但這兩個步驟可以簡化在執行階段時，從正確的位置載入組件的程序。  

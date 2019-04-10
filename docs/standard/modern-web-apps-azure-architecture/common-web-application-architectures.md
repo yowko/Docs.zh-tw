@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 05d696f5cbceaedb35e3e4e97f8c4e89124d43dc
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 68f88d29a6c88f4ce261a0a2794035d43db1fc0c
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826729"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58921100"
 ---
 # <a name="common-web-application-architectures"></a>一般 Web 應用程式架構
 
@@ -61,7 +61,7 @@ ms.locfileid: "55826729"
 
 ![](./media/image5-2.png)
 
-**圖 5-2.** 一般應用程式層級。
+**圖 5-2。** 一般應用程式層級。
 
 這些層級經常縮寫為 UI、BLL (商務邏輯層)，以及 DAL (資料存取層)。 使用此架構，使用者會透過 UI 層提出要求，這個層級只與 BLL 互動。 接著，BLL 可以呼叫 DAL 以處理資料存取要求。 UI 層應該不會對 DAL 直接提出任何要求，也不應直接透過其他方式與持續性互動。 同樣地，BLL 應該只能透過 DAL 與持續性互動。 如此一來，每個層級都會有自己的已知責任。
 
@@ -71,19 +71,19 @@ ms.locfileid: "55826729"
 
 ![](./media/image5-3.png)
 
-**圖 5-3.** 簡單的整合型應用程式，含三個專案。
+**圖 5-3。** 簡單的整合型應用程式，含三個專案。
 
 雖然此應用程式為了組織的目的而使用數個專案，但它仍會部署為單一單位，且其用戶端會以單一 Web 應用程式與它互動。 這樣能有非常簡單的部署程序。 圖 5-4 將示範這類應用程式可如何使用 Azure 來裝載。
 
 ![](./media/image5-4.png)
 
-**圖 5-4.** Azure Web 應用程式的簡單部署
+**圖 5-4。** Azure Web 應用程式的簡單部署
 
 當應用程式需求成長，可能需要更複雜且功能強大的部署解決方案。 圖 5-5 示範更複雜的部署計劃範例，它支援額外的功能。
 
 ![](./media/image5-5.png)
 
-**圖 5-5.** 將 Web 應用程式部署至 Azure App Service
+**圖 5-5。** 將 Web 應用程式部署至 Azure App Service
 
 就內部而言，根據責任將此專案組織成多個專案，可以改善應用程式的可維護性。
 
@@ -106,7 +106,7 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 ![](./media/image5-7.png)
 
-**圖 5-7.** Clean Architecture；洋蔥檢視
+**圖 5-7。** Clean Architecture；洋蔥檢視
 
 在此圖中，相依性會流向最內層的圓形。 應用程式核心從其在此圖核心的位置擷取其名稱。 如圖所示，應用程式核心對於其他應用程式層級沒有任何相依性。 應用程式的實體和介面位於正中心。 在外面一點，但仍在應用程式核心中，則是網域服務，它們通常會實作內部圓形中定義的介面。 在應用程式核心外面，UI 與基礎結構層都相依於應用程式核心，但彼此不一定相依。
 
@@ -114,7 +114,7 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 ![](./media/image5-8.png)
 
-**圖 5-8.** Clean Architecture；水平層檢視
+**圖 5-8。** Clean Architecture；水平層檢視
 
 請注意，實心箭號代表編譯時期相依性，而虛線箭頭代表僅限執行階段的相依性。 使用 Clean Architecture，UI 層適用於在編譯時期，在應用程式核心中定義的介面，並且在理想情況下，應該不知道基礎結構層定義的實作類型。 不過，在執行階段，必須有這些實作類型，應用程式才能執行，因此它們必須存在並透過相依性插入而連接到應用程式核心介面。
 
@@ -122,17 +122,17 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 ![ASPNET Core 架構](./media/image5-9.png)
 
-**圖 5-9.** 遵循 Clean Architecture 的 ASP.NET Core 架構圖表。
+**圖 5-9。** 遵循 Clean Architecture 的 ASP.NET Core 架構圖表。
 
 因為應用程式核心不會相依於基礎結構，所以很容易就能為此層級撰寫自動化的單元測試。 圖 5-10 和 5-11 顯示測試如何配合這個架構。
 
 ![UnitTestCore](./media/image5-10.png)
 
-**圖 5-10.** 隔離進行應用程式核心的單元測試。
+**圖 5-10。** 隔離進行應用程式核心的單元測試。
 
 ![IntegrationTests](./media/image5-11.png)
 
-**圖 5-11.** 整合測試具有外部相依性的基礎結構實作。
+**圖 5-11。** 整合測試具有外部相依性的基礎結構實作。
 
 因為 UI 層對於基礎結構專案中定義的類型沒有直接的相依性，所以同樣很容易就能換掉實作，以方便測試或回應不斷變更的應用程式需求。 ASP.NET Core 的內建相依性插入使用和支援，可讓此架構成為建構重要整合型應用程式的最適當方式。
 
@@ -140,7 +140,7 @@ Clean Architecture 會將商務邏輯和應用程式模型放在應用程式的�
 
 ![ASP.NET Core 架構 2](./media/image5-12.png)
 
-**圖 5-12.** 範例 ASP.NET Core 應用程式的執行階段架構。
+**圖 5-12。** 範例 ASP.NET Core 應用程式的執行階段架構。
 
 ### <a name="organizing-code-in-clean-architecture"></a>以 Clean Architecture 組織程式碼
 
@@ -263,7 +263,7 @@ networks:
 `docker-compose.yml` 檔案參考了 `Web` 專案中的 `Dockerfile`。 `Dockerfile` 是用來指定將使用的基底容器，以及如何在其上設定應用程式。 `Web` 的 `Dockerfile`：
 
 ```
-FROM microsoft/dotnet:2.2-sdk AS build
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
 WORKDIR /app
 
 COPY *.sln .
@@ -273,7 +273,7 @@ RUN dotnet restore
 
 RUN dotnet publish -c Release -o out
 
-FROM microsoft/dotnet:2.2-aspnetcore-runtime AS runtime
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS runtime
 WORKDIR /app
 COPY --from=build /app/src/Web/out ./
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - application event logs, Visual Basic
 - application event logs
 ms.assetid: 2581afd1-5791-4bc4-86b2-46244e9fe468
-ms.openlocfilehash: afd35b67fc11cb556159ed0d37130cd86d72c30f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 00c54a59ccfe2a49dcf35b322ca077a10a48ae7d
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354826"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58839635"
 ---
 # <a name="working-with-application-logs-in-visual-basic"></a>在 Visual Basic 中使用應用程式記錄檔
 
@@ -23,11 +23,11 @@ ms.locfileid: "57354826"
 
 下列圖表顯示寫入至 `WriteEntry` 方法的訊息如何傳遞至記錄檔追蹤接聽項的 `WriteLine` 方法︰
 
-![My 記錄檔呼叫](../../../../visual-basic/developing-apps/programming/log-info/media/mylogcall.png "MyLogCall")
+![顯示 My 記錄檔呼叫的圖表。](./media/working-with-application-logs/my-log-call-messages.png)
 
 您可以藉由變更應用程式的組態檔來變更記錄檔和追蹤接聽項的行為。 下列圖表顯示記錄檔組件和組態檔之間的通信。
 
-![My 記錄檔組態](../../../../visual-basic/developing-apps/programming/log-info/media/mylogconfig.png "MyLogConfig")
+![顯示 My 記錄檔組態的圖表。](./media/working-with-application-logs/my-log-configuration.png)
 
 ## <a name="where-messages-are-logged"></a>記錄訊息的位置
 

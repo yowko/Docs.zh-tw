@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event handlers [WPF], weak event pattern
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
-ms.openlocfilehash: 49795235d489ebc70cec11332e6be4a9452bc21d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139252"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316163"
 ---
 # <a name="weak-event-patterns"></a>弱式事件模式
 在應用程式，它可能會附加到事件來源的處理常式不會終結協調的方式處理常式附加至來源接聽程式物件。 這種情況可能會導致記憶體流失無關。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 導入了可用來解決這個問題，提供的專用的管理員類別的特定事件，並針對該事件的接聽程式上實作介面的設計模式。 這種設計模式就所謂*弱式事件模式*。  
@@ -50,11 +50,11 @@ ms.locfileid: "59139252"
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>使用現有的弱式事件管理員類別  
   
-1.  尋找現有的弱式事件管理員。  
+1. 尋找現有的弱式事件管理員。  
   
      WPF 隨附的弱式事件管理員的清單，請參閱中的繼承階層<xref:System.Windows.WeakEventManager>類別。  
   
-2.  使用新的弱式事件管理員，而不是一般事件連結。  
+2. 使用新的弱式事件管理員，而不是一般事件連結。  
   
      例如，如果您的程式碼使用下列模式來訂閱事件：  
   
@@ -82,7 +82,7 @@ ms.locfileid: "59139252"
   
 ### <a name="using-the-generic-weak-event-manager-class"></a>使用泛型的弱式事件管理員類別  
   
-1.  使用泛型<xref:System.Windows.WeakEventManager%602>類別而不是一般事件連結。  
+1. 使用泛型<xref:System.Windows.WeakEventManager%602>類別而不是一般事件連結。  
   
      當您使用<xref:System.Windows.WeakEventManager%602>若要註冊事件接聽程式，您會提供事件來源與<xref:System.EventArgs>型別做為型別參數至類別，並呼叫<xref:System.Windows.WeakEventManager%602.AddHandler%2A>如下列程式碼所示：  
   
@@ -92,19 +92,19 @@ ms.locfileid: "59139252"
   
 ### <a name="creating-a-custom-weak-event-manager-class"></a>建立自訂的弱式事件管理員類別  
   
-1.  將下列類別範本複製到您的專案中。  
+1. 將下列類別範本複製到您的專案中。  
   
      這個類別繼承自<xref:System.Windows.WeakEventManager>類別。  
   
      [!code-csharp[WeakEvents#WeakEventManagerTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/WeakEvents/CSharp/WeakEventManagerTemplate.cs#weakeventmanagertemplate)]  
   
-2.  取代`SomeEventWeakEventManager`名稱與您自己的名稱。  
+2. 取代`SomeEventWeakEventManager`名稱與您自己的名稱。  
   
-3.  取代為您的活動相對應的名稱與先前所述的三個名稱。 (`SomeEvent`， `EventSource`，和`SomeEventEventArgs`)  
+3. 取代為您的活動相對應的名稱與先前所述的三個名稱。 (`SomeEvent`， `EventSource`，和`SomeEventEventArgs`)  
   
-4.  若要為其所管理的事件相同的可視性設定弱式事件管理員類別的可視性 （公用 / 內部 / 私用）。  
+4. 若要為其所管理的事件相同的可視性設定弱式事件管理員類別的可視性 （公用 / 內部 / 私用）。  
   
-5.  使用新的弱式事件管理員，而不是一般事件連結。  
+5. 使用新的弱式事件管理員，而不是一般事件連結。  
   
      例如，如果您的程式碼使用下列模式來訂閱事件：  
   

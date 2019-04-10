@@ -11,12 +11,12 @@ helpviewer_keywords:
 - print queues [WPF], cloning
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
-ms.openlocfilehash: f654c9f1431a0ab8aa4df568b405dabf881bb1bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310456"
 ---
 # <a name="how-to-clone-a-printer"></a>HOW TO：複製印表機
 大多數企業在某個時間點，將會購買相同模型的多台的印表機。 一般而言，這些會安裝所有使用幾乎完全相同的組態設定。 安裝每一部印表機可能相當耗時又容易出錯。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>命名空間和<xref:System.Printing.PrintServer.InstallPrintQueue%2A>都會以 Microsoft.NET Framework 公開的類別可讓您立即安裝任意數目的所複製的其他列印佇列，從現有的列印佇列。  
@@ -24,9 +24,9 @@ ms.locfileid: "59104087"
 ## <a name="example"></a>範例  
  在下列範例中，第二個列印佇列會複製從現有的列印佇列。 第二個與第一個只在其名稱、 位置、 連接埠和共用的狀態。 執行此動作的主要步驟如下所示。  
   
-1.  建立<xref:System.Printing.PrintQueue>現有印表機即將要複製的物件。  
+1. 建立<xref:System.Printing.PrintQueue>現有印表機即將要複製的物件。  
   
-2.  建立<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>從<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>的<xref:System.Printing.PrintQueue>。 <xref:System.Collections.DictionaryEntry.Value%2A>這個字典中的每個項目屬性是其中一個衍生自型別的物件<xref:System.Printing.IndexedProperties.PrintProperty>。 有兩種方式可以設定這個字典中項目的值。  
+2. 建立<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>從<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>的<xref:System.Printing.PrintQueue>。 <xref:System.Collections.DictionaryEntry.Value%2A>這個字典中的每個項目屬性是其中一個衍生自型別的物件<xref:System.Printing.IndexedProperties.PrintProperty>。 有兩種方式可以設定這個字典中項目的值。  
   
     -   使用此字典**移除**和<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A>方法來移除項目，然後再重新加入想要的值。  
   
@@ -34,17 +34,17 @@ ms.locfileid: "59104087"
   
      下列範例說明這兩種方式。  
   
-3.  建立<xref:System.Printing.IndexedProperties.PrintBooleanProperty>物件，並設定其<xref:System.Printing.IndexedProperties.PrintProperty.Name%2A>到 「 IsShared"並將其<xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A>至`true`。  
+3. 建立<xref:System.Printing.IndexedProperties.PrintBooleanProperty>物件，並設定其<xref:System.Printing.IndexedProperties.PrintProperty.Name%2A>到 「 IsShared"並將其<xref:System.Printing.IndexedProperties.PrintBooleanProperty.Value%2A>至`true`。  
   
-4.  使用<xref:System.Printing.IndexedProperties.PrintBooleanProperty>物件的值<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>的"IsShared 」 項目。  
+4. 使用<xref:System.Printing.IndexedProperties.PrintBooleanProperty>物件的值<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>的"IsShared 」 項目。  
   
-5.  建立<xref:System.Printing.IndexedProperties.PrintStringProperty>物件，並設定其<xref:System.Printing.IndexedProperties.PrintProperty.Name%2A>到 「 ShareName"並將其<xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A>適當<xref:System.String>。  
+5. 建立<xref:System.Printing.IndexedProperties.PrintStringProperty>物件，並設定其<xref:System.Printing.IndexedProperties.PrintProperty.Name%2A>到 「 ShareName"並將其<xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A>適當<xref:System.String>。  
   
-6.  使用<xref:System.Printing.IndexedProperties.PrintStringProperty>物件的值<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>的 「 ShareName"項目。  
+6. 使用<xref:System.Printing.IndexedProperties.PrintStringProperty>物件的值<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>的 「 ShareName"項目。  
   
-7.  建立另一個<xref:System.Printing.IndexedProperties.PrintStringProperty>物件，並設定其<xref:System.Printing.IndexedProperties.PrintProperty.Name%2A>到 「 位置 」 並將其<xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A>適當<xref:System.String>。  
+7. 建立另一個<xref:System.Printing.IndexedProperties.PrintStringProperty>物件，並設定其<xref:System.Printing.IndexedProperties.PrintProperty.Name%2A>到 「 位置 」 並將其<xref:System.Printing.IndexedProperties.PrintStringProperty.Value%2A>適當<xref:System.String>。  
   
-8.  使用第二個<xref:System.Printing.IndexedProperties.PrintStringProperty>物件的值<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>的 「 位置 」 項目。  
+8. 使用第二個<xref:System.Printing.IndexedProperties.PrintStringProperty>物件的值<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>的 「 位置 」 項目。  
   
 9. 建立陣列<xref:System.String>s。 每個項目是在伺服器上的連接埠的名稱。  
   

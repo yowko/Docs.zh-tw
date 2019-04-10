@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: c43935cd53d1b58ce695164e957b4b5376d52536
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318425"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
 當您將像是 Customers 或 Orders 等實體物件透過網路序列化到用戶端時，這些實體會與其資料內容中斷連結。 資料內容不會再追蹤它們的變更或它們與其他物件的關聯。 如果用戶端只讀取資料，這就不成問題。 此外，要讓用戶端加入資料列到資料庫，也相對來說簡單。 不過，如果您的應用程式要讓用戶端能夠更新或刪除資料，就必須將實體附加到新的資料內容，才能呼叫 <xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType>。 此外，如果您使用開放式並行存取 (Optimistic Concurrency) 來檢查原始值，那麼也需要想辦法將原始實體和修改過的實體提供給資料庫。 `Attach` 方法即是提供來讓您將中斷連結的實體放入新的資料內容。  
@@ -394,11 +394,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="state"></a>狀況  
  實體物件在附加到 <xref:System.Data.Linq.DataContext> 執行個體之後，會視為處於 `PossiblyModified` 狀態。 有三種方式可將附加物件強制視為 `Modified`。  
   
-1.  以未修改的形式附加，再執行修改欄位。  
+1. 以未修改的形式附加，再執行修改欄位。  
   
-2.  使用接受目前和原始物件執行個體的 <xref:System.Data.Linq.Table%601.Attach%2A> 多載附加。 這會將新舊值一起提供給變更 Tracker，這樣它就會自動得知哪些欄位已變更。  
+2. 使用接受目前和原始物件執行個體的 <xref:System.Data.Linq.Table%601.Attach%2A> 多載附加。 這會將新舊值一起提供給變更 Tracker，這樣它就會自動得知哪些欄位已變更。  
   
-3.  使用接受第二個布林值參數 (設為 true) 的 <xref:System.Data.Linq.Table%601.Attach%2A> 多載附加。 這會指示變更 Tracker 將物件視為已修改，而無須提供任何原始值。 在此方式中，物件必須有版本/時間戳記欄位。  
+3. 使用接受第二個布林值參數 (設為 true) 的 <xref:System.Data.Linq.Table%601.Attach%2A> 多載附加。 這會指示變更 Tracker 將物件視為已修改，而無須提供任何原始值。 在此方式中，物件必須有版本/時間戳記欄位。  
   
  如需詳細資訊，請參閱 <<c0> [ 物件狀態和變更追蹤](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)。  
   

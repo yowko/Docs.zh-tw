@@ -12,12 +12,12 @@ helpviewer_keywords:
 - mouse clicks [Windows Forms], simulating
 - mouse [Windows Forms], event simulation
 ms.assetid: 6abcb67e-3766-4af2-9590-bf5dabd17e41
-ms.openlocfilehash: aa0139c4b51bf33f9156eeb9dab6b9b6093524d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6931f9b012a67c2d18995f2a3a56f290be0f0ddb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313082"
 ---
 # <a name="how-to-simulate-mouse-and-keyboard-events-in-code"></a>HOW TO：以程式碼模擬滑鼠和鍵盤事件
 Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選項。 本主題提供這些選項的概觀。  
@@ -27,9 +27,9 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 #### <a name="to-programmatically-click-the-right-mouse-button"></a>以程式設計方式按一下滑鼠右鍵  
   
-1.  建立 <xref:System.Windows.Forms.MouseEventArgs> ，並將其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 屬性設定為 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。  
+1. 建立 <xref:System.Windows.Forms.MouseEventArgs> ，並將其 <xref:System.Windows.Forms.MouseEventArgs.Button%2A> 屬性設定為 <xref:System.Windows.Forms.MouseButtons.Right?displayProperty=nameWithType> 值。  
   
-2.  呼叫 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，並以這個 <xref:System.Windows.Forms.MouseEventArgs> 做為引數。  
+2. 呼叫 <xref:System.Windows.Forms.Control.OnMouseClick%2A> 方法，並以這個 <xref:System.Windows.Forms.MouseEventArgs> 做為引數。  
   
  如需自訂控制項的詳細資訊，請參閱[在設計階段開發 Windows Form 控制項](./controls/developing-windows-forms-controls-at-design-time.md)。  
   
@@ -58,7 +58,7 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 #### <a name="to-send-a-keystroke-to-the-same-application"></a>將按鍵動作傳送至相同的應用程式  
   
-1.  請呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 類別的 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 或 <xref:System.Windows.Forms.SendKeys> 方法。 應用程式的作用控制項會接收指定的按鍵動作。 下列程式碼範例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 來模擬當使用者按兩下表單介面時，按下 ENTER 鍵的動作。 這個範例假設 <xref:System.Windows.Forms.Form> 含有一個定位點索引為 0 的 <xref:System.Windows.Forms.Button> 控制項。  
+1. 請呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 類別的 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 或 <xref:System.Windows.Forms.SendKeys> 方法。 應用程式的作用控制項會接收指定的按鍵動作。 下列程式碼範例使用 <xref:System.Windows.Forms.SendKeys.Send%2A> 來模擬當使用者按兩下表單介面時，按下 ENTER 鍵的動作。 這個範例假設 <xref:System.Windows.Forms.Form> 含有一個定位點索引為 0 的 <xref:System.Windows.Forms.Button> 控制項。  
   
      [!code-cpp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/cpp/form1.cpp#10)]
      [!code-csharp[System.Windows.Forms.SimulateKeyPress#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.SimulateKeyPress/CS/form1.cs#10)]
@@ -66,7 +66,7 @@ Windows Form 提供以程式設計方式模擬滑鼠和鍵盤輸入的數個選�
   
 #### <a name="to-send-a-keystroke-to-a-different-application"></a>將按鍵動作傳送至不同的應用程式  
   
-1.  啟動會接收按鍵動作的應用程式視窗，然後呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由於沒有可啟動另一個應用程式的 Managed 方法，因此您必須使用原生 Windows 方法強制將焦點放在其他應用程式上。 下列程式碼範例使用平台叫用呼叫 `FindWindow` 和 `SetForegroundWindow` 方法，以啟動 [小算盤] 應用程式視窗，然後再呼叫 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 對 [小算盤] 應用程式發出一連串計算。  
+1. 啟動會接收按鍵動作的應用程式視窗，然後呼叫 <xref:System.Windows.Forms.SendKeys.Send%2A> 或 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 方法。 由於沒有可啟動另一個應用程式的 Managed 方法，因此您必須使用原生 Windows 方法強制將焦點放在其他應用程式上。 下列程式碼範例使用平台叫用呼叫 `FindWindow` 和 `SetForegroundWindow` 方法，以啟動 [小算盤] 應用程式視窗，然後再呼叫 <xref:System.Windows.Forms.SendKeys.SendWait%2A> 對 [小算盤] 應用程式發出一連串計算。  
   
     > [!NOTE]
     >  用於尋找 [小算盤] 應用程式之 `FindWindow` 呼叫的正確參數會隨您的 Windows 版本而異。  下列程式碼會尋找 [!INCLUDE[win7](../../../includes/win7-md.md)]上的 [小算盤] 應用程式。 在 [!INCLUDE[windowsver](../../../includes/windowsver-md.md)]上，將第一個參數變更為 "SciCalc"。 您可以使用 Visual Studio 隨附的 Spy++ 工具來判斷正確的參數。  

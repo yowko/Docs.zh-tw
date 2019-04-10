@@ -2,18 +2,18 @@
 title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 12/12/2018
-ms.openlocfilehash: 1c8c8003f81d4c15f2abdc26dc15849d88582843
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654571"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920671"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
 
 C# 6.0 版包含許多功能，能提升開發人員的產能。 這些功能的整體影響是您可撰寫更簡潔且更具可讀性的程式碼，。 語法包含許多常見做法的較少繁瑣細節。 繁瑣細節較少時比較容易看出設計目的。 徹底了解這些功能，可讓您提升生產力，並撰寫更容易閱讀的程式碼。 您可以更專注於您的功能，而不是語言的建構。
 
-此文章的其餘部分將概述每項功能，並提供連結以探索每項功能。 您也可以在＜教學課程＞一節的 [C# 6 互動式探索](../tutorials/exploration/csharp-6.yml)中探索這些功能。
+本文的其餘部分將概述每項功能，並提供連結以探索每項功能。 您也可以在＜教學課程＞一節的 [C# 6 互動式探索](../tutorials/exploration/csharp-6.yml)中探索這些功能。
 
 ## <a name="read-only-auto-properties"></a>唯讀 Auto 屬性
 
@@ -106,7 +106,7 @@ public class Student
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-確保左側只評估一次也可讓您在 `?.` 的左側使用任何運算式，包括方法呼叫
+確保左側只評估一次也可讓您使用包括方法呼叫在內的任何運算式，使用位置在以下項目左側： `?.`
 
 ## <a name="string-interpolation"></a>字串插補
 
@@ -127,7 +127,7 @@ FormattableString str = $"Average grade is {s.Grades.Average()}";
 var gradeStr = str.ToString(new System.Globalization.CultureInfo("de-DE"));
 ```
 
-若要開始使用字串插補，請參閱 [C# 中的字串插補](../tutorials/intro-to-csharp/interpolated-strings.yml)互動式教學課程、[字串插補](../language-reference/tokens/interpolated.md)一文，以及 [C# 中的字串插補](../tutorials/string-interpolation.md)教學課程。
+若要開始使用字串插補，請參閱 [C# 中的字串插補](../tutorials/exploration/interpolated-strings.yml)互動式教學課程、[字串插補](../language-reference/tokens/interpolated.md)一文，以及 [C# 中的字串插補](../tutorials/string-interpolation.md)教學課程。
 
 ## <a name="exception-filters"></a>例外狀況篩選條件
 

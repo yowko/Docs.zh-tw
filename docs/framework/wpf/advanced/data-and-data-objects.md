@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataFormats class [WPF]
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
-ms.openlocfilehash: 483491ea7408c1df57f31b4b984116b085ea50ba
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367540"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312055"
 ---
 # <a name="data-and-data-objects"></a>資料與資料物件
 拖放作業的一部分傳送的資料會儲存在資料物件。  就概念而言，資料物件包含一或多個下列組合：  
@@ -87,11 +87,11 @@ ms.locfileid: "57367540"
 ### <a name="removing-data-from-a-data-object"></a>從資料物件中移除資料  
  無法直接移除資料，從資料物件。  若要有效地從資料物件中移除資料，請遵循下列步驟：  
   
-1.  建立新的資料物件，包含只有您想要保留的資料。  
+1. 建立新的資料物件，包含只有您想要保留的資料。  
   
-2.  「 複製 」 所需的資料從舊的資料物件新的資料物件。  若要複製資料，請使用其中一種<xref:System.Windows.DataObject.GetData%2A>方法來擷取<xref:System.Object>包含原始資料，但接著會使用其中一種<xref:System.Windows.DataObject.SetData%2A>方法，以將資料加入新的資料物件。  
+2. 「 複製 」 所需的資料從舊的資料物件新的資料物件。  若要複製資料，請使用其中一種<xref:System.Windows.DataObject.GetData%2A>方法來擷取<xref:System.Object>包含原始資料，但接著會使用其中一種<xref:System.Windows.DataObject.SetData%2A>方法，以將資料加入新的資料物件。  
   
-3.  以新的取代舊的資料物件。  
+3. 以新的取代舊的資料物件。  
   
 > [!NOTE]
 >  <xref:System.Windows.DataObject.SetData%2A>方法只會將資料加入至資料物件; 它們並不會取代資料，即使資料和資料格式是完全由先前呼叫相同。 呼叫<xref:System.Windows.DataObject.SetData%2A>兩次，針對相同的資料和資料格式會導致出現兩次相同的資料物件的資料/資料格式。

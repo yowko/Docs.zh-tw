@@ -1,16 +1,16 @@
 ---
-title: 如何：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式
+title: 如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式
 ms.date: 03/30/2017
 ms.assetid: efb264dd-f47b-49a9-85ee-9f45d4425765
 author: BrucePerlerMS
-ms.openlocfilehash: 83b5808ced1bc6243294b23d9784ec7993e3ba4a
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 74f15c3ac6e5192ce3565579d515198d3b7e39f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47207150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302266"
 ---
-# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET Web Form 應用程式
+# <a name="how-to-build-claims-aware-aspnet-web-forms-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式
 ## <a name="applies-to"></a>適用於  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -51,18 +51,18 @@ ms.locfileid: "47207150"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
-1.  啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
+1. 啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
   
-2.  在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
+2. 在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
   
-3.  在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
+3. 在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
   
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-based-authentication"></a>步驟 2 – 設定宣告型驗證的 ASP.NET Web Forms 應用程式  
  在此步驟中，您將組態項目新增至 ASP.NET Web Forms 應用程式的 *Web.config* 組態檔，使其成為宣告感知。  
   
 #### <a name="to-configure-aspnet-application-for-claims-based-authentication"></a>設定宣告型驗證的 ASP.NET 應用程式  
   
-1.  緊接在 **\<configuration>** 開啟項目後，將下列組態區段項目新增至 *Web.config* 組態檔：  
+1. 緊接在 **\<configuration>** 開啟項目後，將下列組態區段項目新增至 *Web.config* 組態檔：  
   
     ```xml  
     <configSections>  
@@ -71,7 +71,7 @@ ms.locfileid: "47207150"
     </configSections>  
     ```  
   
-2.  新增 **\<location>** 項目，以允許存取應用程式的同盟中繼資料：  
+2. 新增 **\<location>** 項目，以允許存取應用程式的同盟中繼資料：  
   
     ```xml  
     <location path="FederationMetadata">  
@@ -83,7 +83,7 @@ ms.locfileid: "47207150"
     </location>  
     ```  
   
-3.  在 **\<system.web>** 項目內新增下列組態項目，以拒絕使用者、停用原始驗證，以及啟用 WIF 來管理驗證。  
+3. 在 **\<system.web>** 項目內新增下列組態項目，以拒絕使用者、停用原始驗證，以及啟用 WIF 來管理驗證。  
   
     ```xml  
     <authorization>  
@@ -92,7 +92,7 @@ ms.locfileid: "47207150"
     <authentication mode="None" />  
     ```  
   
-4.  新增 **\<system.webServer>** 項目，以定義同盟驗證的模組。 請注意，*PublicKeyToken* 屬性必須與先前新增之 **\<configSections>** 項目的 *PublicKeyToken* 屬性相同：  
+4. 新增 **\<system.webServer>** 項目，以定義同盟驗證的模組。 請注意，*PublicKeyToken* 屬性必須與先前新增之 **\<configSections>** 項目的 *PublicKeyToken* 屬性相同：  
   
     ```xml  
     <system.webServer>  
@@ -103,7 +103,7 @@ ms.locfileid: "47207150"
     </system.webServer>  
     ```  
   
-5.  新增下列 Windows Identity Foundation 相關組態項目，並確認 ASP.NET 應用程式的 URL 和連接埠編號符合 **\<audienceUris>** 項目、**\<wsFederation>** 項目的 **realm** 屬性和 **\<wsFederation>** 項目的 **reply** 屬性。 也請確認 **issuer** 值符合安全性權杖服務 (STS) 的 URL。  
+5. 新增下列 Windows Identity Foundation 相關組態項目，並確認 ASP.NET 應用程式的 URL 和連接埠編號符合 **\<audienceUris>** 項目、**\<wsFederation>** 項目的 **realm** 屬性和 **\<wsFederation>** 項目的 **reply** 屬性。 也請確認 **issuer** 值符合安全性權杖服務 (STS) 的 URL。  
   
     ```xml  
     <system.identityModel>  
@@ -127,16 +127,16 @@ ms.locfileid: "47207150"
     </system.identityModel.services>  
     ```  
   
-6.  新增 <xref:System.IdentityModel> 組件的參考。  
+6. 新增 <xref:System.IdentityModel> 組件的參考。  
   
-7.  編譯方案，以確定沒有任何錯誤。  
+7. 編譯方案，以確定沒有任何錯誤。  
   
 ## <a name="step-3--test-your-solution"></a>步驟 3 – 測試方案  
  在此步驟中，您將測試針對宣告型驗證設定的 ASP.NET Web Forms 應用程式。 為了執行基本測試，您將新增程式碼以顯示安全性權杖服務 (STS) 所發行之權杖中的宣告。  
   
 #### <a name="to-test-your-aspnet-web-form-application-for-claims-based-authentication"></a>測試宣告型驗證的 ASP.NET Web Forms 應用程式  
   
-1.  開啟 **TestApp** 專案下的 **Default.aspx** 檔案，並將其現有標記取代為下列標記：  
+1. 開啟 **TestApp** 專案下的 **Default.aspx** 檔案，並將其現有標記取代為下列標記：  
   
     ```  
     %@ Page Language="C#" AutoEventWireup="true" CodeFile="Default.aspx.cs" Inherits="_Default" %>  
@@ -158,12 +158,12 @@ ms.locfileid: "47207150"
     </html>  
     ```  
   
-2.  儲存 **Default.aspx**，然後開啟其名為 **Default.aspx.cs** 的程式碼後置檔案。  
+2. 儲存 **Default.aspx**，然後開啟其名為 **Default.aspx.cs** 的程式碼後置檔案。  
   
     > [!NOTE]
     >  在方案總管中，**Default.aspx.cs** 可能隱藏在 **Default.aspx** 的下方。 如果看不到 **Default.aspx.cs**，請按一下 **Default.aspx** 旁邊的三角形來展開它。  
   
-3.  將 **Default.aspx.cs** 之 **Page_Load** 方法中的現有程式碼，取代為下列程式碼：  
+3. 將 **Default.aspx.cs** 之 **Page_Load** 方法中的現有程式碼，取代為下列程式碼：  
   
     ```csharp  
     using System;  
@@ -202,8 +202,8 @@ ms.locfileid: "47207150"
     }  
     ```  
   
-4.  儲存 **Default.aspx.cs**，然後建置方案。  
+4. 儲存 **Default.aspx.cs**，然後建置方案。  
   
-5.  按 **F5** 鍵執行方案。  
+5. 按 **F5** 鍵執行方案。  
   
-6.  您應該會看到頁面，其中顯示安全性權杖服務所發出之權杖中的宣告。
+6. 您應該會看到頁面，其中顯示安全性權杖服務所發出之權杖中的宣告。

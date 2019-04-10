@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 606698b0-cb1a-42ca-beeb-0bea34205d20
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b90c8fc25b0d33d084fbfd4979088e568c0618df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2559ae686820b1972e457b013565aeb28842392e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698386"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314450"
 ---
 # <a name="how-to-use-data-protection"></a>HOW TO：使用資料保護
 .NET Framework 提供資料保護 API (DPAPI) 的存取，這可讓您使用目前使用者帳戶或電腦的資訊來加密資料。  當您使用 DPAPI 時，會減少明確產生並儲存密碼編譯金鑰的困難問題。  
@@ -34,25 +34,25 @@ ms.locfileid: "54698386"
   
 ### <a name="to-encrypt-in-memory-data-using-data-protection"></a>使用資料保護來加密記憶體中的資料  
   
-1.  呼叫靜態 <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> 方法並傳遞要加密的位元組陣列、entropy 及記憶體保護範圍。  
+1. 呼叫靜態 <xref:System.Security.Cryptography.ProtectedMemory.Protect%2A> 方法並傳遞要加密的位元組陣列、entropy 及記憶體保護範圍。  
   
 ### <a name="to-decrypt-in-memory-data-using-data-protection"></a>使用資料保護來解密記憶體中的資料  
   
-1.  呼叫靜態 <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> 方法並傳遞要解密的位元組陣列及記憶體保護範圍。  
+1. 呼叫靜態 <xref:System.Security.Cryptography.ProtectedMemory.Unprotect%2A> 方法並傳遞要解密的位元組陣列及記憶體保護範圍。  
   
 ### <a name="to-encrypt-data-to-a-file-or-stream-using-data-protection"></a>使用資料保護將資料加密到檔案或資料流  
   
-1.  建立隨機的 entropy。  
+1. 建立隨機的 entropy。  
   
-2.  呼叫靜態 <xref:System.Security.Cryptography.ProtectedData.Protect%2A> 方法並傳遞要加密的位元組陣列、entropy 及資料保護範圍。  
+2. 呼叫靜態 <xref:System.Security.Cryptography.ProtectedData.Protect%2A> 方法並傳遞要加密的位元組陣列、entropy 及資料保護範圍。  
   
-3.  將加密的資料寫入檔案或資料流。  
+3. 將加密的資料寫入檔案或資料流。  
   
 ### <a name="to-decrypt-data-from-a-file-or-stream-using-data-protection"></a>使用資料保護從檔案或資料流解密資料  
   
-1.  從檔案或資料流讀取加密的資料。  
+1. 從檔案或資料流讀取加密的資料。  
   
-2.  呼叫靜態 <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> 方法並傳遞要解密的位元組陣列及資料保護範圍。  
+2. 呼叫靜態 <xref:System.Security.Cryptography.ProtectedData.Unprotect%2A> 方法並傳遞要解密的位元組陣列及資料保護範圍。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例示範兩種形式的加密和解密。  首先，程式碼範例會加密，然後再解密記憶體中的位元組陣列。  接下來，程式碼範例會加密位元組陣列的複本、將它儲存至檔案、從檔案載入資料，然後再解密資料。  此範例會顯示原始資料、加密的資料和解密的資料。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30712
 ms.assetid: c7ffbd6d-05c6-4261-b44b-1bcd521bb350
-ms.openlocfilehash: 049db16875b14bc095e293d2a923917a9ec1d99b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 42f31df7f4bc849374d8beb09e17394c3cdd5ec4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318193"
 ---
 # <a name="unable-to-load-information-for-class-classname"></a>無法載入類別資訊\<類別名稱 >'
 參考了未提供的類別。  
@@ -21,9 +21,9 @@ ms.locfileid: "58814454"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請確認已定義類別和名稱的拼字正確。  
+1. 請確認已定義類別和名稱的拼字正確。  
   
-2.  嘗試存取模組中所宣告的其中一個成員。 在某些情況下，偵錯環境找不到成員，因為尚未載入宣告它們的模組。  
+2. 嘗試存取模組中所宣告的其中一個成員。 在某些情況下，偵錯環境找不到成員，因為尚未載入宣告它們的模組。  
   
 ## <a name="see-also"></a>另請參閱
 

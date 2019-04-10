@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
-ms.openlocfilehash: 9af95b397bef4a19654510619cf0864c8ab7b76f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2bbae640ca65c95411cae24a9506fe2076b62cba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833564"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296468"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>尚未指定啟動表單
 應用程式使用<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>類別，但未指定啟動表單。  
@@ -18,11 +18,11 @@ ms.locfileid: "58833564"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  指定應用程式的啟動物件。  
+1. 指定應用程式的啟動物件。  
   
      如需詳細資訊，請參閱[專案設計工具、應用程式頁 (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)。  
   
-2.  覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>方法來設定<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>啟動表單的屬性。  
+2. 覆寫<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnCreateMainForm%2A>方法來設定<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.MainForm%2A>啟動表單的屬性。  
   
 ## <a name="see-also"></a>另請參閱
 

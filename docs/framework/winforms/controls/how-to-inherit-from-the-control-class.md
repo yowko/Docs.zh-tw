@@ -8,12 +8,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
-ms.openlocfilehash: b173f322018921ef1c0fec6aa785ae6c9d9e6957
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141982"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314213"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>HOW TO：繼承控制項類別
 如果您想要建立完全自訂的控制項，以在 Windows Form 上使用，您應該繼承自<xref:System.Windows.Forms.Control>類別。 同時繼承自<xref:System.Windows.Forms.Control>類別會要求您執行更多的規劃和實作，它也提供您最多的選項。 繼承自時<xref:System.Windows.Forms.Control>，還會繼承非常基本的功能，可讓使用控制項。 固有的功能<xref:System.Windows.Forms.Control>類別來處理透過鍵盤和滑鼠的使用者輸入，定義繫結和控制項的大小，提供的 windows 控制代碼，並提供訊息處理和安全性。 它不會併入任何繪製功能 (在此例中是控制項圖形化介面的實際轉譯)，也不會併入任何特定的使用者互動功能。 您必須透過自訂程式碼來提供上述一切。  
@@ -23,25 +23,25 @@ ms.locfileid: "59141982"
   
 ### <a name="to-create-a-custom-control"></a>建立自訂控制項  
   
-1.  建立新的 [Windows 應用程式] 或 [Windows 控制項程式庫] 專案。  
+1. 建立新的 [Windows 應用程式] 或 [Windows 控制項程式庫] 專案。  
   
-2.  從 [專案] 功能表中，選擇 [新增類別]。  
+2. 從 [專案] 功能表中，選擇 [新增類別]。  
   
-3.  在 [新增項目] 對話方塊中，按一下 [自訂控制項]。  
+3. 在 [新增項目] 對話方塊中，按一下 [自訂控制項]。  
   
      新的自訂控制項會新增至您的專案。  
   
-4.  按 F7 鍵，開啟自訂控制項的 [程式碼編輯器]。  
+4. 按 F7 鍵，開啟自訂控制項的 [程式碼編輯器]。  
   
-5.  找出<xref:System.Windows.Forms.Control.OnPaint%2A>方法，將會是空白，除了呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>基底類別的方法。  
+5. 找出<xref:System.Windows.Forms.Control.OnPaint%2A>方法，將會是空白，除了呼叫<xref:System.Windows.Forms.Control.OnPaint%2A>基底類別的方法。  
   
-6.  修改程式碼，以併入您要用於控制項的任何自訂繪製功能。  
+6. 修改程式碼，以併入您要用於控制項的任何自訂繪製功能。  
   
      如需撰寫程式碼來轉譯控制項圖形的相關資訊，請參閱[自訂控制項繪製和轉譯](custom-control-painting-and-rendering.md)。  
   
-7.  實作您的控制項將併入的任何自訂方法、屬性或事件。  
+7. 實作您的控制項將併入的任何自訂方法、屬性或事件。  
   
-8.  儲存並測試您的控制項。  
+8. 儲存並測試您的控制項。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,33 +6,33 @@ helpviewer_keywords:
 - writing extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: fb2739cc-958d-4ef4-a38b-214a74c93413
-ms.openlocfilehash: d6f8b85945bd400d1f4b54a50260d72c750add8b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 00d62d275f7afc06e066a375dc1ffcd74b23c9ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313758"
 ---
 # <a name="how-to-write-an-extension-method-visual-basic"></a>HOW TO：撰寫擴充方法 (Visual Basic)
 擴充方法可讓您將方法加入至現有的類別。 可以呼叫擴充方法，如同它是該類別的執行個體。  
   
 ### <a name="to-define-an-extension-method"></a>若要定義擴充方法  
   
-1.  Visual Studio 中開啟新的或現有的 Visual Basic 應用程式。  
+1. Visual Studio 中開啟新的或現有的 Visual Basic 應用程式。  
   
-2.  在您要在其中定義擴充方法的檔案頂端，加入下列 import 陳述式：  
+2. 在您要在其中定義擴充方法的檔案頂端，加入下列 import 陳述式：  
   
     ```  
     Imports System.Runtime.CompilerServices  
     ```  
   
-3.  在新的或現有應用程式中的模組，開始以擴充屬性的方法定義：  
+3. 在新的或現有應用程式中的模組，開始以擴充屬性的方法定義：  
   
     ```  
     <Extension()>  
     ```  
   
-4.  不同之處在於第一個參數的型別必須是您想要擴充的資料類型，請以一般方式，宣告您的方法。  
+4. 不同之處在於第一個參數的型別必須是您想要擴充的資料類型，請以一般方式，宣告您的方法。  
   
     ```  
     <Extension()>   
@@ -87,4 +87,4 @@ End Module
 - [擴充方法](./extension-methods.md)
 - [Module 陳述式](../../../../visual-basic/language-reference/statements/module-statement.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

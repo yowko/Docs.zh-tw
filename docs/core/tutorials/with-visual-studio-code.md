@@ -4,12 +4,12 @@ description: 了解如何在 C# 中使用 Visual Studio Code 建立並偵錯您�
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: 8df26651a7b35e5b6c9bdcb54d09c97525e12426
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788332"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890549"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# 與 Visual Studio Code 使用者入門
 
@@ -91,14 +91,14 @@ ms.locfileid: "57788332"
 ## <a name="add-a-class"></a>新增類別
 
 1. 若要新增類別，請在「VSCode 總管」中按一下滑鼠右鍵，然後選取 [新增檔案]。 這會在您於 VSCode 中開啟的資料夾內新增檔案。
-2. 將檔案命名為 `Class1.cs`。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
+2. 將檔案命名為 `MyClass.cs`。 您必須在結尾加上 `.cs` 副檔名來儲存它，系統才能將它辨識為 csharp 檔案。
 3. 新增下方程式碼來建立您的第一個類別。 請務必包含正確的命名空間，如此您才能夠從 `Program.cs` 檔案參考它。
 ``` csharp
 using System;
 
 namespace HelloWorld
 {
-    public class Class1
+    public class MyClass
     {
         public string ReturnMessage()
         {
@@ -119,7 +119,7 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            Class1 c1 = new Class1();
+            MyClass c1 = new MyClass();
             Console.WriteLine($"Hello World! {c1.ReturnMessage()}");
         }
     }
@@ -140,5 +140,5 @@ Visual Studio Code C# 延伸模組可為您產生用於建置和偵錯的資產�
 
 ## <a name="see-also"></a>另請參閱
 
-- [設定 Visual Studio Code (英文)](https://code.visualstudio.com/docs/setup/setup-overview)
-- [在 Visual Studio Code 中偵錯 (英文)](https://code.visualstudio.com/Docs/editor/debugging)
+- [設定 Visual Studio Code](https://code.visualstudio.com/docs/setup/setup-overview)
+- [在 Visual Studio Code 中偵錯](https://code.visualstudio.com/Docs/editor/debugging)

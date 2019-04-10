@@ -2,12 +2,12 @@
 title: <bindings>
 ms.date: 01/22/2018
 ms.assetid: b62cd369-5409-4030-8490-9759a462dd3a
-ms.openlocfilehash: 7cafd8c1ba96a4fa1014f3570413b4bb83f69766
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 479941593b1abefe637525703140b02917c6692b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474718"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316787"
 ---
 # <a name="bindings"></a>\<bindings>
 
@@ -29,15 +29,15 @@ ms.locfileid: "57474718"
   
  項目在堆疊中的出現順序很重要，因為這是作業套用至訊息的順序。 建議的堆疊項目順序如下所示：  
   
-1.  交易 (選擇性)  
+1. 交易 (選擇性)  
   
-2.  可靠傳訊 （選擇性）  
+2. 可靠傳訊 （選擇性）  
   
-3.  安全性 (選擇性)  
+3. 安全性 (選擇性)  
   
-4.  編碼器  
+4. 編碼器  
   
-5.  Transport  
+5. Transport  
   
  自訂繫結是由其 `name` 屬性所識別。 如需有關自訂繫結的詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   

@@ -2,12 +2,12 @@
 title: 自訂複合設計工具 - 工作流程項目展示器
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
-ms.openlocfilehash: 4c1258a49ac3ef2227d520fe11f341819f8663a0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089194"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311119"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 <xref:System.Activities.Presentation.WorkflowItemPresenter>是 WF 設計工具程式設計模型，可讓您建立的 「 卸除區 」 可以放置任意活動的索引鍵類型。 這個範例示範如何建立活動設計工具會呈現這類 「 卸除區。 」
@@ -67,9 +67,9 @@ ms.locfileid: "59089194"
 
 #### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例
 
-1.  Visual Studio 2010 中開啟的方案。
+1. Visual Studio 2010 中開啟的方案。
 
-2.  按 F5 編譯和執行應用程式。
+2. 按 F5 編譯和執行應用程式。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

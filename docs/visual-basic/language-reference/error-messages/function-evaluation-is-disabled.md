@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30957
 ms.assetid: 561e593a-f50a-4b72-a708-4cab60ec7b28
-ms.openlocfilehash: d024420fbbc3efbd3d19bb58c9379eacbafac5d3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bc4d05e52434cf62fa90671d29b407c83114b5d2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58820732"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315773"
 ---
 # <a name="function-evaluation-is-disabled-because-a-previous-function-evaluation-timed-out"></a>函式評估已停用，因為先前的函式評估逾時
 函式評估已停用，因為先前的函式評估逾時。若要重新啟用函式評估，再次逐步執行或重新啟動偵錯。  
@@ -27,9 +27,9 @@ ms.locfileid: "58820732"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  可能的話，判斷先前的函式評估的已和逾時的原因。否則，您可能會遇到這個錯誤一次。  
+1. 可能的話，判斷先前的函式評估的已和逾時的原因。否則，您可能會遇到這個錯誤一次。  
   
-2.  同樣地，逐步偵錯工具或終止，並重新啟動偵錯。  
+2. 同樣地，逐步偵錯工具或終止，並重新啟動偵錯。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - key frames [WPF], about key-frame animations
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
-ms.openlocfilehash: caad7d5694139729ebe89e686ea70a981a0a94d2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191580"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316735"
 ---
 # <a name="key-frame-animations-overview"></a>主要畫面格動畫概觀
 本主題介紹主要畫面格動畫。 主要畫面格動畫可讓您使用兩個以上的目標值來建立動畫，並且控制動畫的插補方法。  
@@ -259,9 +259,9 @@ ms.locfileid: "59191580"
   
  下列清單說明在主要畫面格動畫中，解析主要畫面格關鍵時間的程序。  
   
-1.  解決<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>值。  
+1. 解決<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>值。  
   
-2.  決定動畫的「總插補時間」，也就是主要畫面格動畫用於完成向前逐一查看的總時間。  
+2. 決定動畫的「總插補時間」，也就是主要畫面格動畫用於完成向前逐一查看的總時間。  
   
     1.  如果動畫<xref:System.Windows.Media.Animation.Timeline.Duration%2A>不是<xref:System.Windows.Duration.Automatic%2A>或是<xref:System.Windows.Duration.Forever%2A>，總插補時間為動畫的<xref:System.Windows.Media.Animation.Timeline.Duration%2A>屬性。  
   
@@ -269,19 +269,19 @@ ms.locfileid: "59191580"
   
     3.  否則，總插補時間為 1 秒。  
   
-3.  使用總插補時間值來解決<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。  
+3. 使用總插補時間值來解決<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>值。  
   
-4.  如果尚未在先前步驟中解析最後一個主要畫面格，則加以解析。 如果<xref:System.Windows.Media.Animation.KeyTime>之最後一個是主要畫面格<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，其解析後的時間將會等於總插補時間。  
+4. 如果尚未在先前步驟中解析最後一個主要畫面格，則加以解析。 如果<xref:System.Windows.Media.Animation.KeyTime>之最後一個是主要畫面格<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>或<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，其解析後的時間將會等於總插補時間。  
   
      如果<xref:System.Windows.Media.Animation.KeyTime>的第一個主要畫面格是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>這個動畫有多個主要畫面格，在解決和其<xref:System.Windows.Media.Animation.KeyTime>值為零; 如果只有一個主要畫面格並將其<xref:System.Windows.Media.Animation.KeyTime>值是<xref:System.Windows.Media.Animation.KeyTime.Paced%2A>，它會解析成總計插補時間，在上一個步驟中所述。  
   
-5.  解析剩餘<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值： 每個授與他們為平均共用可用的時間。  在此過程中，無法解析<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值會暫時視為<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值，以及取得暫時的解決時間。  
+5. 解析剩餘<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值： 每個授與他們為平均共用可用的時間。  在此過程中，無法解析<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值會暫時視為<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A><xref:System.Windows.Media.Animation.KeyTime>值，以及取得暫時的解決時間。  
   
-6.  解決<xref:System.Windows.Media.Animation.KeyTime>使用的主要畫面格的值未指定關鍵時間，使用主要畫面格宣告最接近解決<xref:System.Windows.Media.Animation.KeyTime>值。  
+6. 解決<xref:System.Windows.Media.Animation.KeyTime>使用的主要畫面格的值未指定關鍵時間，使用主要畫面格宣告最接近解決<xref:System.Windows.Media.Animation.KeyTime>值。  
   
-7.  解析剩餘<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用<xref:System.Windows.Media.Animation.KeyTime>鄰近的值索引鍵來判斷其解析後的時間的畫面格。  這是為了確保動畫的速度維持在此主要畫面格的解析時間。  
+7. 解析剩餘<xref:System.Windows.Media.Animation.KeyTime.Paced%2A><xref:System.Windows.Media.Animation.KeyTime>值。 <xref:System.Windows.Media.Animation.KeyTime.Paced%2A> <xref:System.Windows.Media.Animation.KeyTime> 使用<xref:System.Windows.Media.Animation.KeyTime>鄰近的值索引鍵來判斷其解析後的時間的畫面格。  這是為了確保動畫的速度維持在此主要畫面格的解析時間。  
   
-8.  也就是排序主要畫面格的解決時間 （主索引鍵） 的順序和宣告 （次要索引鍵） 的順序，請使用穩定的排序根據已解析的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>值。  
+8. 也就是排序主要畫面格的解決時間 （主索引鍵） 的順序和宣告 （次要索引鍵） 的順序，請使用穩定的排序根據已解析的主要畫面格<xref:System.Windows.Media.Animation.KeyTime>值。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], Doubles with key frames
 - key frames [WPF], animating Doubles with
 ms.assetid: 3a1a7dba-7694-4907-8a2f-3408baebfa82
-ms.openlocfilehash: 33d567b1bb91060a5b0e1da67236a27815262474
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 73cbeab8aee566313bad8e8a18a5500374287de0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208772"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305581"
 ---
 # <a name="how-to-animate-a-double-by-using-key-frames"></a>HOW TO：使用主要畫面格建立雙精度浮點數的動畫
 此範例示範如何以動畫顯示採用屬性的值<xref:System.Double>使用主要畫面格。  
@@ -22,11 +22,11 @@ ms.locfileid: "59208772"
 ## <a name="example"></a>範例  
  下列範例會讓矩形橫越畫面移動。 此範例會使用<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>類別以動畫顯示<xref:System.Windows.Media.TranslateTransform.X%2A>屬性<xref:System.Windows.Media.TranslateTransform>套用至<xref:System.Windows.Shapes.Rectangle>。 這個不斷重複的動畫會以下列方式使用三個主要畫面格：  
   
-1.  在前三秒內，會使用的執行個體<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>類別將矩形沿著路徑以穩定速率的資料從其起始位置移動到 500 位置。 線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>建立平滑的線性轉換值之間。  
+1. 在前三秒內，會使用的執行個體<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>類別將矩形沿著路徑以穩定速率的資料從其起始位置移動到 500 位置。 線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>建立平滑的線性轉換值之間。  
   
-2.  在第四秒結束時，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>突然將矩形移動到下一個位置的類別。 特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>建立突然跳躍點之間的值。 在此範例中，矩形位在起始位置，接著會突然出現在 500 位置。  
+2. 在第四秒結束時，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>突然將矩形移動到下一個位置的類別。 特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>建立突然跳躍點之間的值。 在此範例中，矩形位在起始位置，接著會突然出現在 500 位置。  
   
-3.  在最後兩秒，使用的執行個體<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>類別來將矩形移回起始位置。 曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>屬性。 在此範例中，矩形一開始會緩慢移動，然後在接近時間區段結尾時以指數方式加速移動。  
+3. 在最後兩秒，使用的執行個體<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>類別來將矩形移回起始位置。 曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame.KeySpline%2A>屬性。 在此範例中，矩形一開始會緩慢移動，然後在接近時間區段結尾時以指數方式加速移動。  
   
  [!code-csharp[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_snip/CSharp/AltDoubleAnimationUsingKeyFramesExample.cs#altdoubleanimationusingkeyframeswholepage)]
  [!code-vb[keyframes_snip#AltDoubleAnimationUsingKeyFramesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/keyframes_snip/visualbasic/altdoubleanimationusingkeyframesexample.vb#altdoubleanimationusingkeyframeswholepage)]

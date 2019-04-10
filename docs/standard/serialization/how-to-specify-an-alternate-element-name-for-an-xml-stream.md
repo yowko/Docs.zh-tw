@@ -1,5 +1,5 @@
 ---
-title: HOW TO：指定 XML Stream 的替代項目名稱
+title: HOW TO：指定 XML 資料流的替代項目名稱
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,34 +12,34 @@ helpviewer_keywords:
 - classes, overriding
 - overriding classes
 ms.assetid: 5cc1c0b0-f94b-4525-9a41-88a582cd6668
-ms.openlocfilehash: d11fd0353faccdb19e1a39b7a57df9fe3bca3190
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 577b96517632ca1ae06891540f22c2c3c3886cd1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465473"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317788"
 ---
-# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>HOW TO：指定 XML Stream 的替代項目名稱
+# <a name="how-to-specify-an-alternate-element-name-for-an-xml-stream"></a>HOW TO：指定 XML 資料流的替代項目名稱
   
 使用 <xref:System.Xml.Serialization.XmlSerializer>，以相同類別集，可產生一個以上的 XML 資料流。 當兩個不同的 XML Web 服務要求相同的基本資訊以及些微差異時，您也許會想這麼做。 例如，試想有兩家處理書本訂單的 XML Web 服務，而且都需要 ISBN 號碼。 一個服務使用標記 \<ISBN>，另一個則使用標記 \<BookID>。 您有名為 `Book` 的類別，其中包含名為 `ISBN`的欄位。 當 `Book` 類別的執行個體序列化時，它會根據預設使用成員名稱 (ISBN) 做為標記項目名稱。 對於第一個 XML Web 服務，這正如預期。 不過要想要傳送 XML 資料流至第二個 XML Web 服務，您必須覆寫序列化，讓標記的項目名稱為 `BookID`。  
   
 ## <a name="to-create-an-xml-stream-with-an-alternate-element-name"></a>以其他項目名稱建立 XML 資料流  
   
-1.  建立 <xref:System.Xml.Serialization.XmlElementAttribute> 類別的執行個體。  
+1. 建立 <xref:System.Xml.Serialization.XmlElementAttribute> 類別的執行個體。  
   
-2.  將 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 設為 "BookID"。  
+2. 將 <xref:System.Xml.Serialization.XmlElementAttribute.ElementName%2A> 的 <xref:System.Xml.Serialization.XmlElementAttribute> 設為 "BookID"。  
   
-3.  建立 <xref:System.Xml.Serialization.XmlAttributes> 類別的執行個體。  
+3. 建立 <xref:System.Xml.Serialization.XmlAttributes> 類別的執行個體。  
   
-4.  將 `XmlElementAttribute` 物件加入至透過 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 之 <xref:System.Xml.Serialization.XmlAttributes> 屬性存取的集合。  
+4. 將 `XmlElementAttribute` 物件加入至透過 <xref:System.Xml.Serialization.XmlAttributes.XmlElements%2A> 之 <xref:System.Xml.Serialization.XmlAttributes> 屬性存取的集合。  
   
-5.  建立 <xref:System.Xml.Serialization.XmlAttributeOverrides> 類別的執行個體。  
+5. 建立 <xref:System.Xml.Serialization.XmlAttributeOverrides> 類別的執行個體。  
   
-6.  將 `XmlAttributes` 加入至 <xref:System.Xml.Serialization.XmlAttributeOverrides>，傳遞要覆寫的物件型別及遭覆寫的成員名稱。  
+6. 將 `XmlAttributes` 加入至 <xref:System.Xml.Serialization.XmlAttributeOverrides>，傳遞要覆寫的物件型別及遭覆寫的成員名稱。  
   
-7.  使用 `XmlSerializer``XmlAttributeOverrides`建立  類別的執行個體。  
+7. 使用 `XmlSerializer``XmlAttributeOverrides`建立  類別的執行個體。  
   
-8.  建立 `Book` 類別的執行個體，將它序列化或還原序列化。  
+8. 建立 `Book` 類別的執行個體，將它序列化或還原序列化。  
   
 ## <a name="example"></a>範例  
   
@@ -98,5 +98,5 @@ public class SerializeOverride()
 - <xref:System.Xml.Serialization.XmlAttributeOverrides>
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [HOW TO：將物件還原序列化](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

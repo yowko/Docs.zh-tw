@@ -2,12 +2,12 @@
 title: 在 LINQ to Entities 查詢中呼叫函式
 ms.date: 03/30/2017
 ms.assetid: 12a525a9-727c-4464-a0c7-71a0ef541792
-ms.openlocfilehash: 69a0d11893b528d53dfe5bdca97fa36a65b0a45b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6fa1a7204a91a62c30e8683c449cc2be44132b4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180878"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312081"
 ---
 # <a name="calling-functions-in-linq-to-entities-queries"></a>在 LINQ to Entities 查詢中呼叫函式
 本章節的主題描述如何使用呼叫 LINQ to Entities 查詢中的函式。  
@@ -16,11 +16,11 @@ ms.locfileid: "59180878"
   
  呼叫自訂函式的程序需要三個基本步驟：  
   
-1.  定義概念模型中的函式或宣告儲存模型中的函式。  
+1. 定義概念模型中的函式或宣告儲存模型中的函式。  
   
-2.  使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 將方法加入至應用程式，並將它對應至模型中的函式。  
+2. 使用 <xref:System.Data.Objects.DataClasses.EdmFunctionAttribute> 將方法加入至應用程式，並將它對應至模型中的函式。  
   
-3.  呼叫 LINQ to Entities 查詢中的函式。  
+3. 呼叫 LINQ to Entities 查詢中的函式。  
   
  如需詳細資料，請參閱本節中的主題。  
   

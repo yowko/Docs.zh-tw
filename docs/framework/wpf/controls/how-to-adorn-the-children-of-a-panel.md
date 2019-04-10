@@ -8,12 +8,12 @@ helpviewer_keywords:
 - adorners [WPF], binding to children of Panels
 - Panel control [WPF], binding adorners to children
 ms.assetid: 4cc9b972-b472-4e5c-bdf3-3702d7fbb1f5
-ms.openlocfilehash: e96e1772794a1594d97e1a0109d944d23515468d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 746f197a5132934f94a678dc3b5e2a1f65eb93bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59100882"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299809"
 ---
 # <a name="how-to-adorn-the-children-of-a-panel"></a>HOW TO：裝飾 Panel 的子系
 此範例示範如何以程式設計方式將裝飾項繫結至指定的子系<xref:System.Windows.Controls.Panel>。  
@@ -21,9 +21,9 @@ ms.locfileid: "59100882"
 ## <a name="example"></a>範例  
  裝飾項繫結的項目子系<xref:System.Windows.Controls.Panel>，請遵循下列步驟：  
   
-1.  宣告新<xref:System.Windows.Documents.AdornerLayer>物件，然後呼叫`static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>方法來尋找要裝飾其子系的項目中的裝飾項層。  
+1. 宣告新<xref:System.Windows.Documents.AdornerLayer>物件，然後呼叫`static`<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>方法來尋找要裝飾其子系的項目中的裝飾項層。  
   
-2.  列舉父項目並呼叫的子系<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法的裝飾項繫結至每個子項目。  
+2. 列舉父項目並呼叫的子系<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法的裝飾項繫結至每個子項目。  
   
  下列範例會將 SimpleCircleAdorner （如上所示） 的項目子系繫結<xref:System.Windows.Controls.StackPanel>名為*myStackPanel*。  
   

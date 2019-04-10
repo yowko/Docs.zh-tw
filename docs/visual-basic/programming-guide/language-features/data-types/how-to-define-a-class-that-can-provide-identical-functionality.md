@@ -26,12 +26,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: a914adf8-e68f-4819-a6b1-200d1cf1c21c
-ms.openlocfilehash: 1bc82fe9ecee577125c4353677fb19cd3a57b0cf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 9121041f936c091cda0e2af41b4f5be8d826d582
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837061"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318439"
 ---
 # <a name="how-to-define-a-class-that-can-provide-identical-functionality-on-different-data-types-visual-basic"></a>HOW TO：定義的類別，可提供完全相同的功能上不同的資料類型 (Visual Basic)
 您可以定義一個類別，以從中建立可在不同資料類型上提供相同功能的物件。 若要這樣做，請在定義中指定一個或多個 *「類型參數」* (type parameter)。 類別之後可以作為使用各種資料類型之物件的範本。 使用這種方法所定義的類別稱為 *「泛型類別」*(generic class)。  
@@ -42,13 +42,13 @@ ms.locfileid: "58837061"
   
 ### <a name="to-define-a-class-with-a-type-parameter"></a>定義具有類型參數的類別  
   
-1.  以一般方式定義類別。  
+1. 以一般方式定義類別。  
   
-2.  立即在類別名稱後面加入 `(Of` *類型參數*`)` ，以指定類型參數。  
+2. 立即在類別名稱後面加入 `(Of` *類型參數*`)` ，以指定類型參數。  
   
-3.  如果您有多個類型參數，請在括號內建立以逗號分隔的清單。 請不要重複 `Of` 關鍵字。  
+3. 如果您有多個類型參數，請在括號內建立以逗號分隔的清單。 請不要重複 `Of` 關鍵字。  
   
-4.  如果您的程式碼對類型參數執行簡單指派以外的作業，請在該類型參數後面加上 `As` 子句來加入一個或多個 *「條件約束」*(constraint)。 條件約束保證針對該類型參數所提供的類型符合下列這類需求：  
+4. 如果您的程式碼對類型參數執行簡單指派以外的作業，請在該類型參數後面加上 `As` 子句來加入一個或多個 *「條件約束」*(constraint)。 條件約束保證針對該類型參數所提供的類型符合下列這類需求：  
   
     -   支援您程式碼所執行的作業 (例如 `>`)  
   
@@ -58,9 +58,9 @@ ms.locfileid: "58837061"
   
      如果您未指定任何條件約束，則您程式碼可使用的唯一作業和成員是 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)所支援的作業和成員。 如需詳細資訊，請參閱 [Type List](../../../../visual-basic/language-reference/statements/type-list.md)。  
   
-5.  識別要宣告所提供類型的每個類別成員，並將它宣告為 `As` `typeparameter`。 這適用於內部儲存體、程序參數和傳回值。  
+5. 識別要宣告所提供類型的每個類別成員，並將它宣告為 `As` `typeparameter`。 這適用於內部儲存體、程序參數和傳回值。  
   
-6.  請確定您的程式碼只會使用它可提供給 `itemType`之任何資料類型所支援的作業和方法。  
+6. 請確定您的程式碼只會使用它可提供給 `itemType`之任何資料類型所支援的作業和方法。  
   
      下列範例定義可管理極簡單清單的類別。 它會將清單保留在內部陣列 `items`中，而 using 程式碼可以宣告清單項目的資料類型。 參數化建構函式可讓 using 程式碼設定 `items`上限，而預設建構函式會將此項目設為 9 (共 10 個項目)。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "58837061"
 ## <a name="see-also"></a>另請參閱
 
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
-- [Generic Types in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
+- [Visual Basic 中的泛型類型](../../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)
 - [語言獨立性以及與語言無關的元件](../../../../standard/language-independence-and-language-independent-components.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
-- [類型清單](../../../../visual-basic/language-reference/statements/type-list.md)
-- [如何：使用泛型類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Type List](../../../../visual-basic/language-reference/statements/type-list.md)
+- [HOW TO：使用泛型類別](../../../../visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: ca6537d81f080120fcbea0cf083f450dce4e9f62
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826011"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316267"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>HOW TO：比對的字串和模式 (Visual Basic)
 如果您想要找出是否有運算式[字串資料類型](../../../../visual-basic/language-reference/data-types/string-data-type.md)滿足模式，則您可以使用[Like 運算子](../../../../visual-basic/language-reference/operators/like-operator.md)。  
@@ -68,11 +68,11 @@ ms.locfileid: "58826011"
   
 #### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters-or-no-character"></a>若要符合的字元或字元清單的字串運算式中的字元  
   
-1.  呼叫`Like`運算子兩次相同的字串運算式，並連接兩個呼叫使用[或運算子](../../../../visual-basic/language-reference/operators/or-operator.md)或[OrElse 運算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)。  
+1. 呼叫`Like`運算子兩次相同的字串運算式，並連接兩個呼叫使用[或運算子](../../../../visual-basic/language-reference/operators/or-operator.md)或[OrElse 運算子](../../../../visual-basic/language-reference/operators/orelse-operator.md)。  
   
-2.  在模式比對字串的前`Like`子句中，包含字元清單中，以括弧括住 (`[ ]`)。  
+2. 在模式比對字串的前`Like`子句中，包含字元清單中，以括弧括住 (`[ ]`)。  
   
-3.  在第二個模式比對字串`Like`子句，請不要將任何字元的位置有問題。  
+3. 在第二個模式比對字串`Like`子句，請不要將任何字元的位置有問題。  
   
      下列範例會測試的七位數電話號碼`phoneNum`剛好三個數值的數字，後面接著一個空格、 連字號 (`–`)、 句號 (`.`)，或任何字元，後面接著剛好四位數字。  
   

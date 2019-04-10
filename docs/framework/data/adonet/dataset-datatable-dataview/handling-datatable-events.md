@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 62f404a5-13ea-4b93-a29f-55b74a16c9d3
-ms.openlocfilehash: 3cd679c5bb869a648eecf9702182129d9719d141
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 414be4a5bdbd1fe5d65475efcd5e72606b73685f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098919"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312822"
 ---
 # <a name="handling-datatable-events"></a>處理 DataTable 的事件
 <xref:System.Data.DataTable> 物件提供一系列可由應用程式處理的事件。 下表說明 `DataTable` 事件。  
@@ -47,21 +47,21 @@ ms.locfileid: "59098919"
 ## <a name="sequence-of-operations"></a>作業序列  
  這是發生在加入、修改或刪除 `DataRow` 後的作業序列：  
   
-1.  建立建議的記錄並套用任何變更。  
+1. 建立建議的記錄並套用任何變更。  
   
-2.  請檢查非運算式資料行的條件約束。  
+2. 請檢查非運算式資料行的條件約束。  
   
-3.  依需要引發 `RowChanging` 或 `RowDeleting` 事件。  
+3. 依需要引發 `RowChanging` 或 `RowDeleting` 事件。  
   
-4.  將建議的記錄設定為目前的記錄。  
+4. 將建議的記錄設定為目前的記錄。  
   
-5.  更新任何相關的索引。  
+5. 更新任何相關的索引。  
   
-6.  針對相關的 `ListChanged` 物件引發 `DataView` 事件；針對相關的 `PropertyChanged` 物件引發 `DataRowView` 事件。  
+6. 針對相關的 `ListChanged` 物件引發 `DataView` 事件；針對相關的 `PropertyChanged` 物件引發 `DataRowView` 事件。  
   
-7.  評估所有的運算式資料行，但延遲檢查這些資料行上所有的條件約束。  
+7. 評估所有的運算式資料行，但延遲檢查這些資料行上所有的條件約束。  
   
-8.  針對相關的 `ListChanged` 物件引發 `DataView` 事件；針對受到運算式資料行評估影響的相關 `PropertyChanged` 物件引發 `DataRowView` 事件。  
+8. 針對相關的 `ListChanged` 物件引發 `DataView` 事件；針對受到運算式資料行評估影響的相關 `PropertyChanged` 物件引發 `DataRowView` 事件。  
   
 9. 依需要引發 `RowChanged` 或 `RowDeleted` 事件。  
   

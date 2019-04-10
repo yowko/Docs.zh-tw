@@ -2,12 +2,12 @@
 title: 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
-ms.openlocfilehash: da2ae3db0ff0432a49fcbf6de674bfb730be1286
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136431"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300277"
 ---
 # <a name="error-handling"></a>錯誤處理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation 的錯誤處理  
@@ -34,15 +34,15 @@ ms.locfileid: "59136431"
   
  當例外狀況擲回時，您可使用 IErrorHandler 明確控制應用程式的行為。 您可以：  
   
-1.  決定是否要傳送錯誤給用戶端。  
+1. 決定是否要傳送錯誤給用戶端。  
   
-2.  以錯誤取代例外狀況。  
+2. 以錯誤取代例外狀況。  
   
-3.  以另一個錯誤取代錯誤  
+3. 以另一個錯誤取代錯誤  
   
-4.  執行記錄或追蹤  
+4. 執行記錄或追蹤  
   
-5.  執行其他自訂活動  
+5. 執行其他自訂活動  
   
  針對您的服務將錯誤處理常式加入通道發送器的 ErrorHandlers 屬性，即可安裝自訂錯誤處理常式。  錯誤處理常式可能不只一個，會依照它們加入集合的順序呼叫它們。  
   

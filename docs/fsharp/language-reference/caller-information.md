@@ -2,12 +2,12 @@
 title: 呼叫端資訊
 description: 描述如何使用呼叫端資訊引數屬性來取得方法的呼叫端資訊。
 ms.date: 04/25/2017
-ms.openlocfilehash: fd9ce204193ae7402a2e8cf3440cb831ac446af0
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316150"
 ---
 # <a name="caller-information"></a>呼叫端資訊
 
@@ -28,24 +28,22 @@ ms.locfileid: "58890302"
 ```fsharp
 open System.Diagnostics
 open System.Runtime.CompilerServices
+open System.Runtime.InteropServices
 
 type Tracer() =
     member __.DoTrace(message: string,
-                      [<CallerMemberName>] ?memberName: string,
-                      [<CallerFilePath>] ?path: string,
-                      [<CallerLineNumber>] ?line: int) =
+                      [<CallerMemberName; Optional; DefaultParameterValue("")>] memberName: string,
+                      [<CallerFilePath; Optional; DefaultParameterValue("")>] path: string,
+                      [<CallerLineNumber; Optional; DefaultParameterValue(0)>] line: int) =
         Trace.WriteLine(sprintf "Message: %s" message)
-        match (memberName, path, line) with
-        | Some m, Some p, Some l ->
-            Trace.WriteLine(sprintf "Member name: %s" m)
-            Trace.WriteLine(sprintf "Source file path: %s" p)
-            Trace.WriteLine(sprintf "Source line number: %d" l)
-        | _,_,_ -> ()
+        Trace.WriteLine(sprintf "Member name: %s" memberName)
+        Trace.WriteLine(sprintf "Source file path: %s" path)
+        Trace.WriteLine(sprintf "Source line number: %d" line)
 ```
 
 ## <a name="remarks"></a>備註
 
-呼叫端資訊屬性只能套用至選擇性參數。 您必須提供明確的值，每一個選擇性參數。 Caller Info 屬性會導致編譯器寫入每個使用 Caller Info 屬性裝飾的選擇性參數的適當值。
+呼叫端資訊屬性只能套用至選擇性參數。 Caller Info 屬性會導致編譯器寫入每個使用 Caller Info 屬性裝飾的選擇性參數的適當值。
 
 在編譯時期，Caller Info 的值會做為常值發出至中繼語言 (IL)。 結果不同[StackTrace](/dotnet/api/system.diagnostics.stacktrace)屬性中的例外狀況，結果不受模糊化所影響。
 

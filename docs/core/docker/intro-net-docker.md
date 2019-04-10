@@ -1,196 +1,73 @@
 ---
 title: Docker 簡介
 description: 本文在 .NET Core 應用程式內容中提供了 Docker 的簡介及概觀。
-ms.date: 11/06/2017
+ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: b2640a1cea4d77158b7d9ed6ec63cf36d9e1f9cd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676274"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58817251"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET 和 Docker 簡介
 
-本文提供在 Docker 上使用 .NET 的簡介和概念背景。
+.NET Core 能夠很容易地在 Docker 容器中執行。 容器提供精簡的方式將您的應用程式與主機系統的其餘部分隔離、只共用核心，以及使用提供給應用程式的資源。 如果不熟悉 Docker，強烈建議閱讀 Docker 的[概觀文件](https://docs.docker.com/engine/docker-overview/) \(英文\)。
 
-## <a name="docker-packaging-your-apps-to-deploy-and-run-anywhere"></a>Docker：封裝您的應用程式以在任何位置部署及執行
+如需有關如何安裝 Docker 的詳細資訊，請參閱 [Docker Desktop：Community Edition](https://www.docker.com/products/docker-desktop) \(英文\) 的下載頁面。
 
-[Docker](../../standard/microservices-architecture/container-docker-introduction/docker-defined.md) 是一個開放的平台，可讓開發人員和系統管理員在稱為[容器](https://www.docker.com/what-container) \(英文\) 的鬆散隔離環境中，建立[映像](https://docs.docker.com/glossary/?term=image) \(英文\)、遞送及執行分散式應用程式。 此作法能在開發、QA 和生產環境之間，實現有效率的應用程式生命週期管理。
- 
-[Docker 平台](https://docs.docker.com/engine/docker-overview/#the-docker-platform) \(英文\) 使用 [Docker 引擎](https://docs.docker.com/engine/docker-overview/#docker-engine) \(英文\) 來將應用程式快速建置及封裝為 [Docker 映像](https://docs.docker.com/glossary/?term=image) \(英文\)，映像是使用以 [Dockerfile](https://docs.docker.com/glossary/?term=Dockerfile) \(英文\) 格式撰寫的檔案來建立，並於後續會將它部署到[分層式容器](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#container-and-layers) \(英文\) 並在其中執行。
+## <a name="docker-basics"></a>Docker 基本知識
 
-您可以建立自己的[分層式映像](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/#images-and-layers) \(英文\) 作為 Dockerfile，或使用來自 [Docker Hub](https://docs.docker.com/glossary/?term=Docker%20Hub) \(英文\) 等[登錄](https://docs.docker.com/glossary/?term=registry) \(英文\) 的現有分層式映像。
+有幾個概念您應該很熟悉。 Docker 用戶端有命令列介面方案，可讓您用來管理映像和容器。 如先前所述，您應該仔細閱讀 [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\) 文件。 
 
-在[進行容器化應用程式或微服務的架構設計及建置](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)時，[Docker 容器、映像和登錄之間的關係](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
+### <a name="images"></a>影像
 
-### <a name="further-reading-and-watching"></a>延伸閱讀 (及觀賞)
+映像是構成容器基礎且已排序的檔案系統變更集合。 映像沒有狀態，而且是唯讀的。 映像很多時候會以另一個映像作為基礎，但包含一些自訂項目。 例如，在建立新的應用程式映像時，可以利用已包含 .NET Core 執行階段的現有映像作為基礎。
 
-* [Windows-based containers:Modern app development with enterprise-grade control](https://www.youtube.com/watch?v=Ryx3o0rD5lY&feature=youtu.be) (Windows 型容器：具企業級控制的新式應用程式開發)。
-* [Docker 概觀](https://docs.docker.com/engine/docker-overview/) \(英文\)
-* [Windows 容器上的 Dockerfile](/virtualization/windowscontainers/manage-docker/manage-windows-dockerfile)
-* [撰寫 Dockerfile 的最佳做法](https://docs.docker.com/engine/userguide/eng-image/dockerfile_best-practices/) \(英文\)
-* [建置 .NET Core 應用程式的 Docker 映像](../docker/building-net-docker-images.md)
+因為容器是從映像建立的，所以映像會有一組在容器啟動時執行的執行參數 (例如啟動可執行檔)。
 
+### <a name="containers"></a>容器
 
-### <a name="getting-net-docker-images"></a>取得 .NET Docker 映像
+容器是可執行的映像執行個體。 建置映像時，可以部署您的應用程式和相依項目。 然後，可以具現化多個容器，每個都會彼此隔離。 每個容器執行個體都有自己的檔案系統、記憶體和網路介面。
 
-官方 .NET Docker 映像是由 Microsoft 所建立及最佳化。 它們在 Docker Hub 上的 Microsoft 存放庫中公開提供。 視 .NET 版本和 OS 版本而定，每個存放庫可能會包含多個映像。 大部分的映像存放庫提供大量的標籤，來協助您選取特定的架構版本和 OS (Linux 發行版本或 Windows 版本)。
+### <a name="registries"></a>登錄
 
-## <a name="scenario-based-guidance"></a>以案例為基礎的指引
+容器登錄是映像存放庫的集合。 您可以使用登錄映像作為映像的基礎。 您可以在登錄中直接從映像建立容器。 在[進行容器化應用程式或微服務的架構設計及建置](../../standard/microservices-architecture/architect-microservice-container-applications/index.md)時，[Docker 容器、映像和登錄之間的關係](../../standard/microservices-architecture/container-docker-introduction/docker-containers-images-registries.md)是相當重要的概念。 此作法能大幅縮短開發和部署之間的時間。
 
-Microsoft 針對 .NET 存放庫的目的，是要提供細微且專注的存放庫，以代表特定的案例或工作負載。
+Docker 擁有公用登錄，已裝載於 [Docker Hub](https://hub.docker.com/) \(英文\) 供您使用。 Docker Hub 會列出 [.NET core 相關映像](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。 
 
-`microsoft/aspnetcore` 映像已針對 Docker 上的 ASP.NET Core 應用程式進行最佳化，使容器可以更快速地啟動。
+Microsoft 容器登錄 (MCR) 是 Microsoft 提供容器映像的官方來源。 MCR 建置在 Azure CDN 上，用來提供全域複寫的映像。 不過，MCR 並沒有公開網站，因此了解 Microsoft 所提供容器映像的主要方式是透過 [Microsoft Docker Hub 頁面](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\)。
 
-.NET Core 映像 (`microsoft/dotnet`) 則適用於以 .NET Core 為基礎的主控台應用程式。 例如，批次處理、Azure WebJobs 及其他主控台案例，都應使用最佳化的 .NET Core 映像。
+### <a name="dockerfile"></a>Dockerfile
 
-最明顯的 Docker 和 .NET 應用程式水平使用案例，是將它們用於生產部署和裝載。 結果顯示生產只是單一案例，而其他案例也同樣有用。 這些案例並非 .NET 特定，但應該適用於大部分的開發人員平台。
+**Dockerfile** 是一個檔案，定義了一組建立映像的指示。 **Dockerfile** 中的每個指示都會在映像中建立一個圖層。 在大部分的情況下，當您重建映像時，系統只會重建已變更的圖層。 **Dockerfile** 可以散發給其他人，並讓他們以和您相同的方式重新建立新的映像。 雖然這可讓您散發映像建立方式的*指示*，但散發映像的主要方式是將它發行至登錄。
 
-* **低負擔安裝**：不須在本機安裝就能試用 .NET。 只要下載具有 .NET 的 Docker 映像即可。
+## <a name="net-core-images"></a>.NET Core 映像
 
-* **在容器中開發**：您可以在一致的環境中開發，來使開發環境與生產環境相似 (避免開發人員電腦上的全域狀態等問題)。 Visual Studio Tools for Docker 甚至可讓您直接從 Visual Studio 啟動容器。
+官方 .NET Core Docker 映像會發佈至 Microsoft 容器登錄 (MCR)，並且可在 [Microsoft.NET Core Docker Hub 存放庫](https://hub.docker.com/_/microsoft-dotnet-core/) \(英文\) 中找到。 每個存放庫都包含您可以使用的 .NET (SDK 或執行階段) 與作業系統不同組合的映像。 
 
-* **在容器中測試**：您可以在容器中測試，以減少因環境設定不正確，或是因上一個測試所遺留的變更所造成的失敗。
+Microsoft 會提供針對特定案例量身訂做的映像。 例如，[ASP.NET Core 存放庫](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/) \(英文\) 可提供為了在生產環境中執行 ASP.NET Core 應用程式而建置的映像。
 
-* **在容器中建置**：您可以在容器中建置程式碼，以免除針對多個環境正確設定共用組建電腦的必要性，並改為採用 "BYOC" (自備容器) 的作法。
+## <a name="azure-services"></a>Azure 服務
 
-* **在所有環境中部署**：您可以透過所有環境部署映像。 此作法可減少因設定差異所造成的失敗，通常是因外部設定而變更映像行為 (例如插入環境變數)。
+各種 Azure 服務支援容器。 您可以為應用程式建立 Docker 映像，並將它部署到下列其中一個服務：
 
-可協助針對 Docker 容器開發在 .NET Core 和 .NET Framework 之間進行決定的[一般指引](../../standard/microservices-architecture/net-core-net-framework-containers/general-guidance.md)。
+* [Azure Kubernetes Service (AKS)](https://azure.microsoft.com/services/kubernetes-service/)\
+調整規模及協調使用 Kubernetes 的 Linux 容器。
 
-### <a name="common-docker-development-scenarios"></a>常見的 Docker 開發案例
+* [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
+在 PaaS 環境中使用 Linux 容器部署 Web 應用程式或 API。
 
-#### <a name="net-core"></a>.NET Core
+* [Azure Batch](https://azure.microsoft.com/services/batch/)\
+使用容器執行重複的計算工作。
 
-**.NET Core 資源**
+* [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)\
+使用 Windows Server 容器將 .NET 應用程式提升、轉移及現代化至微服務
 
- 挑選符合感興趣之案例的 .NET Core 範例。 所有範例指示都會描述如何從 Windows、Linux 或 macOS 主機將 Windows 或 Linux Docker 映像設為目標。
-
-範例使用 .NET Core 2.0。 它們會在適當之處使用 Docker [多階段建置](https://github.com/dotnet/announcements/issues/18) \(英文\) 和[多架構標籤](https://github.com/dotnet/announcements/issues/14) \(英文\)。
-
-* [Docker Hub 上的 .NET Core 映像](https://hub.docker.com/r/microsoft/dotnet/) \(英文\)
-
-* [將 .NET Core 應用程式 Docker 化](https://docs.docker.com/engine/examples/dotnetcore/) \(英文\)
-
-* 此 .NET Core Docker 範例示範如何[在您的 .NET Core 開發程序中使用 Docker](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-dev) \(英文\)。 該範例可與 Linux 或 Windows 容器搭配使用。
-
-* 此 .NET Core Docker 範例示範[建置適用於生產之 .NET Core 應用程式的 Docker 映像](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-prod) \(英文\) 的最佳做法模式。 該範例可與 Linux 或 Windows 容器搭配使用。
-
-* 此 [.NET Core Docker 範例](https://github.com/dotnet/dotnet-docker-samples/tree/master/dotnetapp-selfcontained) \(英文\) 示範建置[獨立 .NET Core 應用程式](../deploying/index.md)的 Docker 映像的最佳做法模式。 用於最小的生產容器，而沒有因[在容器之間共用基礎映像](https://docs.docker.com/engine/userguide/storagedriver/imagesandcontainers/) \(英文\) 所產生的優點。 不過，可共用較底層的 Docker 層。
-
-#### <a name="arm32--raspberry-pi"></a>ARM32 / Raspberry Pi
-
-* [.NET Core 執行階段 ARM32 組建宣告](https://github.com/dotnet/announcements/issues/29) \(英文\)
-
-* [Docker Hub 上的 ARM32 / Raspberry Pi .NET Core 映像](https://hub.docker.com/r/microsoft/dotnet/) \(英文\)
-
-* [GitHub 上的 ARM32 / Raspberry Pi .NET Core Docker 範例](https://github.com/dotnet/dotnet-docker-samples#arm32--raspberry-pi) \(英文\)
-
-#### <a name="net-framework"></a>.NET Framework
-
-* [Docker Hub 上的 .NET Framework 映像](https://hub.docker.com/r/microsoft/dotnet-framework/) \(英文\)
-
-此存放庫包含示範各種 .NET Framework Docker 設定的範例。 您可以使用這些映像作為自己 Docker 映像的基礎。
-
-**.NET Framework 4.7**
-
-[dotnet-framework:4.7 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.7) 示範 [.NET Framework 4.7](../../framework/whats-new/index.md#v47) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.7 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.7/Dockerfile) \(英文\) 建置及部署該應用程式。
-
-**.NET Framework 4.6.2**
-
-[dotnet-framework:4.6.2 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-4.6.2) \(英文\) 示範 [.NET Framework 4.6.2](../../framework/whats-new/index.md#v462) 的基本 "Hello World" 使用方式。 它示範如何仰賴 [.NET Framework 4.6.2 Docker 映像](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-4.6.2/Dockerfile) \(英文\) 建置及部署該應用程式。
-
-**.NET Framework 3.5**
-
- [dotnet-framework:3.5 範例](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/dotnetapp-3.5) \(英文\) 示範 [.NET Framework 3.5](https://github.com/Microsoft/dotnet-framework-docker-samples/blob/master/dotnetapp-3.5/dotnetapp-3.5/Dockerfile) \(英文\) 的基本 "Hello World" 使用方式。 它示範如何仰賴 Docker 中的 .NET Framework 3.5 建置及部署專案。
-
-#### <a name="aspnet-core"></a>ASP.NET Core
-
-* [此 ASP.NET Core Docker 範例](https://github.com/dotnet/dotnet-docker-samples/tree/master/aspnetapp) \(英文\) 示範建置適用於生產之 ASP.NET Core 應用程式的 Docker 映像的最佳做法模式。 該範例可與 Linux 或 Windows 容器搭配使用。
-
-* [Docker Hub 上的 ASP.NET Core 映像](https://hub.docker.com/r/microsoft/aspnetcore-build/) \(英文\)
-
-* [GitHub 上的 ASP.NET Core 映像](https://github.com/aspnet/aspnet-docker) \(英文\)
-
-#### <a name="aspnet-framework"></a>ASP.NET Framework
-
-* [Docker Hub 上的 ASP.NET Framework 映像](https://hub.docker.com/r/microsoft/aspnet/) \(英文\)
-
-* [.NET Framework 4.6.2 範例上的 ASP.NET Web Form 應用程式](https://github.com/Microsoft/dotnet-framework-docker-samples/tree/master/aspnetapp) \(英文\)
-
-#### <a name="windows-communication-framework-wcf"></a>Windows Communication Framework (WCF)
-
-* [Docker Hub 上的 Windows Communication Framework (WCF) 映像](https://hub.docker.com/r/microsoft/wcf/) \(英文\)
-
-* [GitHub 上的 Windows Communication Framework (WCF) 映像](https://github.com/microsoft/wcf-docker) \(英文\)
-
-* [使用 .NET Framework 4.6.2 的 Windows Communication Framework (WCF) Docker 範例](https://github.com/Microsoft/wcf-docker-samples)
-
-#### <a name="internet-information-server-iis"></a>Internet Information Server (IIS)
-
-* [Docker Hub 上的 Internet Information Server (IIS) 映像](https://hub.docker.com/r/microsoft/iis/) \(英文\)
-
-* [GitHub 上的 Internet Information Server (IIS) 映像](https://github.com/microsoft/iis-docker) \(英文\)
-
-### <a name="interact-with-other-microsoft-stack-container-images"></a>與其他 Microsoft 堆疊容器映像互動
-
-#### <a name="microsoft-sql-server"></a>Microsoft SQL Server
-
-* [透過 Docker 快速入門執行適用於 Linux 的 Microsoft SQL Server 2017 容器映像](https://docs.microsoft.com/sql/linux/quickstart-install-connect-docker) \(機器翻譯\)
-
-* [Docker Hub 上適用於 Linux 的 Microsoft SQL Server 映像](https://hub.docker.com/r/microsoft/mssql-server-linux/) \(英文\)
-
-* [Docker Hub 上適用於 Windows 容器的 Microsoft SQL Server Express 版本映像](https://hub.docker.com/r/microsoft/mssql-server-windows-express/) \(英文\)
-
-* [Docker Hub 上適用於 Windows 容器的 Microsoft SQL Server Developer 版本映像](https://hub.docker.com/r/microsoft/mssql-server-windows-developer/) \(英文\)
-
-#### <a name="azure-devops-services-agent"></a>Azure DevOps Services 代理程式
-
-* [DockerHub 上的 Azure DevOps Services 代理程式](https://hub.docker.com/r/microsoft/vsts-agent/)
-
-* [GitHub 上的 Azure DevOps Services 代理程式](https://github.com/Microsoft/vsts-agent-docker)
-
-#### <a name="operations-management-suite-oms-linux-agent"></a>Operations Management Suite (OMS) Linux 代理程式
-
-* [Operations Management Suite (OMS) Linux 代理程式概觀](https://github.com/Microsoft/OMS-Agent-for-Linux/blob/master/docs/Docker-Instructions.md) \(英文\)
-
-* [Docker Hub 上的 Operations Management Suite (OMS) 映像](https://hub.docker.com/r/microsoft/oms/) \(英文\)
-
-* [GitHub 上的 Operations Management Suite (OMS) 映像](https://github.com/Microsoft/OMS-docker) \(英文\)
-
-#### <a name="microsoft-azure-command-line-interface-cli"></a>Microsoft Azure 命令列介面 (CLI)
-
-* [Docker Hub 上的 Microsoft Azure 命令列介面 (CLI) 映像](https://hub.docker.com/r/microsoft/azure-cli/) \(英文\) 
-
-* [GitHub 上的 Microsoft Azure 命令列介面 (CLI) 映像](https://github.com/Azure/azure-cli#Docker) \(英文\)
-
-> [!NOTE]
-> 如果您沒有 Azure 訂用帳戶，請[立即註冊](https://azure.microsoft.com/free/?b=16.48)可免費使用 30 天的帳戶，並獲得 $200 美元的 Azure 點數來試用其他的 Azure 服務組合。
-
-#### <a name="microsoft-azure-cosmos-db-emulator-windows-containers-only"></a>Microsoft Azure Cosmos DB 模擬器 (僅限 Windows 容器)
-
-* [Docker Hub 上的 Microsoft Azure Cosmos DB 模擬器映像](https://hub.docker.com/r/microsoft/azure-cosmosdb-emulator) \(英文\) 
-
-* [將 Azure Cosmos DB 模擬器用於本機開發及測試](/azure/cosmos-db/local-emulator#developing-with-the-emulator)
-
-## <a name="exploring-the-rich-docker-development-ecosystem"></a>探索豐富的 Docker 開發生態系統
-
-在了解 Docker 平台和不同的 Docker 映像之後，您接著可以探索豐富的 Docker 生態系統。 以下連結能提供 Microsoft 工具支援容器開發的方式。
-
-* [搭配使用 .NET 和 Docker](https://devblogs.microsoft.com/dotnet/using-net-and-docker-together/) \(英文\)
-* [設計和開發多容器和微服務 .NET 應用程式](../../standard/microservices-architecture/multi-container-microservice-net-applications/index.md)
-* [Visual Studio Code Docker 擴充功能](https://code.visualstudio.com/docs/languages/dockerfile) \(英文\)
-* [了解如何使用 Azure Service Fabric](/azure/service-fabric/index)
-* [Service Fabric 使用者入門範例](https://azure.microsoft.com/resources/samples/service-fabric-dotnet-getting-started/) \(英文\)
-* [Windows 容器的優點](/virtualization/windowscontainers/about/index#video-overview)
-* [使用 Visual Studio Docker 工具](/aspnet/core/host-and-deploy/docker/visual-studio-tools-for-docker)
-* [將 Docker 映像從 Azure Container Registry 部署到 Azure 容器執行個體](https://blogs.msdn.microsoft.com/stevelasker/2017/07/28/deploying-docker-images-from-the-azure-container-registry-to-azure-container-instances/) \(英文\)
-* [使用 Visual Studio Code 進行偵錯](https://code.visualstudio.com/docs/nodejs/debugging-recipes#_nodejs-typescript-docker-container) \(英文\)
-* [開始使用 Visual Studio for Mac、容器，以及雲端中的無伺服器程式碼](https://blogs.msdn.microsoft.com/visualstudio/2017/08/31/hands-on-with-visual-studio-for-mac-containers-serverless-code-in-the-cloud/#comments) \(英文\)
-* [開始使用 Docker 和 Visual Studio for Mac 實驗室](https://github.com/Microsoft/vs4mac-labs/tree/master/Docker/Getting-Started) \(英文\)
+* [Azure Container Registry](https://azure.microsoft.com/services/container-registry/)\
+儲存及管理所有 Azure 部署類型的容器映像。
 
 ## <a name="next-steps"></a>後續步驟
 
-* [了解 .NET Core 的 Docker 基本概念](docker-basics-dotnet-core.md)
-* [建置 .NET Core Docker 映像](building-net-docker-images.md)
+* [了解如何將 .NET Core 應用程式容器化。](build-docker-netcore-container.md)
+* [嘗試了解 ASP.NET Core 微服務教學課程。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro) \(英文\)

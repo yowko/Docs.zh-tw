@@ -2,12 +2,12 @@
 title: 設計模式：以清單為基礎的發行訂閱
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
-ms.openlocfilehash: 2d8041bf3efefa085e94636624e92abb573c1820
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59196914"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312042"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>設計模式：以清單為基礎的發行訂閱
 這個範例說明實作 Windows Communication Foundation (WCF) 程式的清單架構發行訂閱模式。  
@@ -112,23 +112,23 @@ public class PriceChangeEventArgs : EventArgs
   
 ### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  您可以使用瀏覽器中輸入下列位址的服務的測試： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
+1. 您可以使用瀏覽器中輸入下列位址的服務的測試： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。  
   
-2.  從 \client\bin 執行 Client.exe\\，從語言特定資料夾之下。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
+2. 從 \client\bin 執行 Client.exe\\，從語言特定資料夾之下。 用戶端活動會顯示在用戶端主控台視窗上。 啟動數個用戶端。  
   
-3.  從 \datasource\bin 執行 Datasource.exe\\，從語言特定資料夾之下。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
+3. 從 \datasource\bin 執行 Datasource.exe\\，從語言特定資料夾之下。 資料來源活動會顯示在主控台視窗上。 一旦資料來源將資訊傳送至服務，服務就必須將它傳遞給每個用戶端。  
   
-4.  如果用戶端、 資料來源和服務程式能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端、 資料來源和服務程式能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1.  設定服務機器：  
+1. 設定服務機器：  
   
     1.  在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 批次檔 Setupvroot.bat [Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用來建立磁碟目錄與虛擬目錄。  
   
@@ -136,21 +136,21 @@ public class PriceChangeEventArgs : EventArgs
   
     3.  測試您是否能夠使用瀏覽器，從用戶端機器存取服務。  
   
-2.  設定用戶端機器：  
+2. 設定用戶端機器：  
   
     1.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器。  
   
     2.  在每個用戶端組態檔中，將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
-3.  設定資料來源機器：  
+3. 設定資料來源機器：  
   
     1.  將語言特定資料夾下 \datasource\bin\ 資料夾中的資料來源程式檔複製到資料來源機器中。  
   
     2.  在資料來源組態檔中，將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
-4.  在用戶端機器上，從命令提示字元啟動 Client.exe。  
+4. 在用戶端機器上，從命令提示字元啟動 Client.exe。  
   
-5.  在資料來源機器上，從命令提示字元啟動 Datasource.exe。  
+5. 在資料來源機器上，從命令提示字元啟動 Datasource.exe。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

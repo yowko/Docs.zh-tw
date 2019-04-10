@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 5cda0517e8653e89aabde3a9c0459a2dbae61616
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cbecb82acb22915af96fa26f08e441b4f6686c4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129476"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312708"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>HOW TO：在 Windows 應用程式中提供說明
 您可以使用的<xref:System.Windows.Forms.HelpProvider>附加至 Windows Form 上的特定控制項的說明檔內的 [說明] 主題的元件。 說明檔可以是 HTML 或 HTMLHelp 1.x 或更高的格式。  
@@ -23,17 +23,17 @@ ms.locfileid: "59129476"
   
 ### <a name="to-provide-help"></a>提供說明  
   
-1.  從**工具箱**，拖曳<xref:System.Windows.Forms.HelpProvider>元件至您的表單。  
+1. 從**工具箱**，拖曳<xref:System.Windows.Forms.HelpProvider>元件至您的表單。  
   
      此元件將位在 Windows Forms 設計工具底部的系統匣中。  
   
-2.  在 **屬性**視窗中，將<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>屬性設為.chm、.col 或.htm 說明檔案。  
+2. 在 **屬性**視窗中，將<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>屬性設為.chm、.col 或.htm 說明檔案。  
   
-3.  選取您已在您的表單，然後在另一個控制項**屬性**視窗中，將<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>屬性。  
+3. 選取您已在您的表單，然後在另一個控制項**屬性**視窗中，將<xref:System.Windows.Forms.HelpProvider.SetHelpKeyword%2A>屬性。  
   
      這是透過傳遞的字串<xref:System.Windows.Forms.HelpProvider>元件至您的說明檔，以叫出適當的 [說明] 主題。  
   
-4.  在 **屬性**視窗中，將<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>屬性設為值的<xref:System.Windows.Forms.HelpNavigator>列舉型別。  
+4. 在 **屬性**視窗中，將<xref:System.Windows.Forms.HelpProvider.SetHelpNavigator%2A>屬性設為值的<xref:System.Windows.Forms.HelpNavigator>列舉型別。  
   
      這會決定將 **HelpKeyword** 屬性傳遞給說明系統的方式。 下表顯示可能的設定和其描述。  
   

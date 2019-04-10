@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrForLoop_CommonType3
 ms.assetid: 21c45bcf-539c-488a-9cae-221558c37146
-ms.openlocfilehash: 198207e14a0468a47c01d1a53d38cdf149bb31a5
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cdf92cfcba6b17e49ad818d99066c63635ff9809
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316241"
 ---
 # <a name="cannot-convert-start-value-of-type-type1-limit-value-of-type2-and-step-value-of-type3-to-a-common-type"></a>無法轉換類型的起始值 '\<type1 >'，限制的值'\<type2 >' 的間距值和 '\<類型 3> >' 為一般類型
 指定的 `For...Next` 控制項值具有不同的類型，因此無效，因為它們無法轉換成一般類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  變更一個或多個值的類型，以全部轉換成一般類型。  
+1. 變更一個或多個值的類型，以全部轉換成一般類型。  
   
 ## <a name="see-also"></a>另請參閱
 

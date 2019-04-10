@@ -21,23 +21,23 @@ helpviewer_keywords:
 - controls [Windows Forms], captions
 - forms [Windows Forms], captions
 ms.assetid: 36b95bff-8780-479d-b86a-f1a0673653aa
-ms.openlocfilehash: e9bf2077f10648dbe3ebf214bbbf9546cbb398c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 59570af89e6236e3c13866d45dc5361d52b84274
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308519"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control"></a>HOW TO：設定 Windows Forms 控制項所顯示的文字
 Windows Form 控制項通常會顯示與控制項主要功能相關的一些文字。 例如，<xref:System.Windows.Forms.Button> 控制項通常會顯示一個標題，指出當按下按鈕時，就會執行什麼動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。 您也可以使用設計工具來設定文字。  另請參閱[How to:建立 Windows form 控制項使用設計工具的便捷鍵](how-to-create-access-keys-for-windows-forms-controls-using-the-designer.md)， [How to:設定所顯示之文字的 Windows Form 控制項使用設計工具](how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer.md)， [How to:設定所顯示的映像的 Windows Form 控制項使用設計工具](how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer.md)。  
   
 ### <a name="to-set-the-text-displayed-by-a-control-programmatically"></a>以程式設計方式來設定控制項所顯示的文字  
   
-1.  將 <xref:System.Windows.Forms.Control.Text%2A> 屬性設為字串。  
+1. 將 <xref:System.Windows.Forms.Control.Text%2A> 屬性設為字串。  
   
      若要建立加上底線的便捷鍵，包括連字號 (&) 要存取的索引鍵的字母前面。  
   
-2.  將 <xref:System.Windows.Forms.Control.Font%2A> 屬性設為 <xref:System.Drawing.Font> 類型的物件。  
+2. 將 <xref:System.Windows.Forms.Control.Font%2A> 屬性設為 <xref:System.Drawing.Font> 類型的物件。  
   
     ```vb  
     Button1.Text = "Click here to save changes"  

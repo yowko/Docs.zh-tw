@@ -9,20 +9,19 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 20b60fb425278dacb56ee5f888967554a1f76aeb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825374"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318932"
 ---
 # <a name="decision-structures-visual-basic"></a>決策結構 (Visual Basic)
 Visual Basic 可讓您測試條件，並執行不同的作業，視該測試的結果而定。 您可以測試條件為 true 或 false，針對各種不同值的運算式，或當您執行一系列的陳述式時，產生的各種例外狀況。  
   
  下圖顯示測試條件為 true，並採用不同的動作，取決於它是否為 true 或 false 的決策結構。  
   
- ![流程圖表的 If...Then...其他建構](../../../../visual-basic/programming-guide/language-features/control-flow/media/ifthenelse.gif "IfThenElse")  
-當條件為 true，且當為 false 時，採取不同的動作  
+ ![如果流量圖表...Then...其他建構。](./media/decision-structures/if-then-else-construction.gif)  
   
 ## <a name="ifthenelse-construction"></a>If...Then...其他建構  
  `If...Then...Else` 建構可讓您測試一或多個條件，並執行一或多個陳述式，根據每個條件。 您可以測試條件，並以下列方式來採取動作：  

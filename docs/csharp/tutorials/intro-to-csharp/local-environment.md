@@ -2,12 +2,12 @@
 title: C# 簡介 - 熟悉開發工具
 description: 此文章提供您將用來在電腦上開發 C# 與 .NET 應用程式的工具基本簡介。
 ms.date: 10/23/2018
-ms.openlocfilehash: cf5bf68c1497bf62826656aa9cd2bd981128d3a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: db0b3228272a17feaa11ec754fa0aa4952a0d1ee
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129983"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920658"
 ---
 # <a name="become-familiar-with-the-net-development-tools"></a>熟悉 .NET 開發工具
 
@@ -26,31 +26,25 @@ ms.locfileid: "53129983"
 
 您可以從下列任何一個教學課程開始：
 
-## <a name="numbers-in-cnumbers-in-csharp-localmd"></a>[C# 中的數字](numbers-in-csharp-local.md)
+## [<a name="numbers-in-c"></a>C# 中的數字](numbers-in-csharp-local.md)
 
 在 [C# 中的數字](numbers-in-csharp-local.md)教學課程中，您將會學習電腦儲存數字的方式，以及如何使用不同的數值型別來執行計算。 您將會學習進位的基本概念，以及如何使用 C# 執行數學計算。
 
 此教學課程假設您已完成 [Hello World](hello-world.yml) 課程。
 
-## <a name="branches-and-loopsbranches-and-loops-localmd"></a>[分支和迴圈](branches-and-loops-local.md)
+## [<a name="branches-and-loops"></a>分支和迴圈](branches-and-loops-local.md)
 
 [分支和迴圈](branches-and-loops-local.md)教學課程會指導您如何根據儲存在變數中的值選取不同程式碼執行路徑的基本概念。 您將會學習控制流程的基本概念，也就是程式做出決定並選擇不同動作的基礎機制。
 
 此教學課程假設您已完成 [Hello World](hello-world.yml) 與 [C# 中的數字](numbers-in-csharp-local.md)課程。
 
-## <a name="string-interpolationinterpolated-strings-localmd"></a>[字串內插補點](interpolated-strings-local.md)
-
-[字串內插補點](interpolated-strings-local.md)教學課程示範如何在字串中插入值。 您將會學到如何使用內嵌 C# 運算式建立插入字串，以及如何控制結果字串的格式。
-
-此教學課程假設您已完成 [Hello World](hello-world.yml)、[C# 中的數字](numbers-in-csharp-local.md)與[分支和迴圈](branches-and-loops-local.md)課程。
-
-## <a name="list-collectionarrays-and-collectionsmd"></a>[List 集合](arrays-and-collections.md)
+## [<a name="list-collection"></a>清單集合](arrays-and-collections.md)
 
 [List 集合](arrays-and-collections.md)課程會為您說明可儲存資料序列的「List 集合」類型。 您將會學習如何新增及移除項目、搜尋項目，以及對清單進行排序。 您會探索各種不同的清單。 
 
 此教學課程假設您已完成上述課程。
 
-## <a name="introduction-to-classesintroduction-to-classesmd"></a>[類別簡介](introduction-to-classes.md)
+## [<a name="introduction-to-classes"></a>類別簡介](introduction-to-classes.md)
 
 這個最後的 C# 教學課程簡介只能使用您自己的本機開發環境與 .NET Core 在您的電腦上執行。
 您會建置一個主控台應用程式，並了解 C# 語言的基本物件導向功能。

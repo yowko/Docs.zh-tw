@@ -7,12 +7,12 @@ helpviewer_keywords:
 - pointers [C#], & operator
 - pointer expressions [C#], address-of operator
 ms.assetid: 44fe2cd9-a64f-4ef5-be2a-09ce807c0182
-ms.openlocfilehash: cba33803c31ccc144479ad3e7b073ea7057495d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b12d3bf99f32a3526bd4a1ec8c49b1fd88afd68a
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54490554"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58832342"
 ---
 # <a name="how-to-obtain-the-address-of-a-variable-c-programming-guide"></a>操作說明：取得變數位址 (C# 程式設計手冊)
 
@@ -23,7 +23,7 @@ int number;
 int* p = &number; //address-of operator &  
 ```  
   
- 傳址運算子只能套用至變數。 如果變數是可移動的變數，您可以使用 [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)暫時修正變數，然後再取得其位址。  
+ 傳址運算子只能套用至變數。 如果變數是可移動的變數，您可以使用 [fixed 陳述式](../../../csharp/language-reference/keywords/fixed-statement.md)暫時修正變數，然後再取得其位址。 如需可移動變數的相關詳細資訊，請參閱[固定和可移動變數](/dotnet/csharp/language-reference/language-specification/unsafe-code#fixed-and-moveable-variables)。 
   
  您必須負責確保變數已初始化。 如果變數未初始化，編譯器不會發出錯誤訊息。  
   

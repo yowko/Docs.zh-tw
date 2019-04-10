@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /optioninfer compiler option [Visual Basic]
 - optioninfer compiler option [Visual Basic]
 ms.assetid: f6c09db1-0553-464a-abe3-d4510c61d6ed
-ms.openlocfilehash: 89fcd981dbb5442f6150f539db4c7d404fe8d691
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f1dcc03a67880727893e55c13d65a804586b3f56
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839843"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315500"
 ---
 # <a name="-optioninfer"></a>-optioninfer
 可讓您在變數宣告中使用區域類型推斷。  
@@ -38,9 +38,9 @@ ms.locfileid: "58839843"
   
 ### <a name="to-set--optioninfer-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定-optioninfer  
   
-1.  選取的專案中**方案總管 中**。 在 [專案] 功能表上，按一下 [屬性]。  
+1. 選取的專案中**方案總管 中**。 在 [專案] 功能表上，按一下 [屬性]。  
   
-2.  在 [**編譯**索引標籤上，修改中的值**Option infer** ] 方塊中。  
+2. 在 [**編譯**索引標籤上，修改中的值**Option infer** ] 方塊中。  
   
 ## <a name="example"></a>範例  
  下列程式碼會在已啟用區域類型推斷下編譯 `test.vb`。  
@@ -59,6 +59,6 @@ vbc -optioninfer+ test.vb
 - [Option Infer 陳述式](../../../visual-basic/language-reference/statements/option-infer-statement.md)
 - [區域類型推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)
-- [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [專案設計工具、編譯頁 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [/noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)
 - [從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)

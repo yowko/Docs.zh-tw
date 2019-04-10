@@ -7,12 +7,12 @@ helpviewer_keywords:
 - loop structures [Visual Basic], optimizing performance
 - control flow [Visual Basic]
 ms.assetid: c60d7589-51f2-4463-a2d5-22506bbc1554
-ms.openlocfilehash: 5fc96e1ae3624adc197b5b13029498b9aa90c95e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b13fd85ae01fd0b6f3c963d87a372add930be99d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302578"
 ---
 # <a name="walkthrough-implementing-ienumerableof-t-in-visual-basic"></a>逐步解說：在 Visual Basic 中實作 IEnumerable(Of T)
 <xref:System.Collections.Generic.IEnumerable%601>可以一次傳回的值的一個項目序列的類別會實作介面。 傳回的資料一次的一個項目是您沒有將一組完整的資料載入記憶體，才能使用它的優點。 您只需要使用足夠的記憶體載入資料的單一項目。 類別實作`IEnumerable(T)`介面可與`For Each`迴圈或 LINQ 查詢。  
@@ -29,13 +29,13 @@ ms.locfileid: "58819498"
   
 **建立 enumerable 類別專案**
 
-1.  在 Visual Basic 中，在**檔案**功能表上，指向**新增**，然後按一下 **專案**。
+1. 在 Visual Basic 中，在**檔案**功能表上，指向**新增**，然後按一下 **專案**。
 
-1.  在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 在 [範本] 窗格中，選取 [類別庫]。 在 [名稱] 方塊中，輸入 `StreamReaderEnumerable` 並按一下 [確定]。 新的專案會顯示。
+1. 在 [新增專案] 對話方塊的 [專案類型] 窗格中，確認已選取 [Windows]。 在 [範本] 窗格中，選取 [類別庫]。 在 [名稱] 方塊中，輸入 `StreamReaderEnumerable` 並按一下 [確定]。 新的專案會顯示。
 
-1.  在 **方案總管**，以滑鼠右鍵按一下 Class1.vb 檔案，然後按一下**重新命名**。 將檔案重新命名為 `StreamReaderEnumerable.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `StreamReaderEnumerable`。 此類別會實作 `IEnumerable(Of String)` 介面。
+1. 在 **方案總管**，以滑鼠右鍵按一下 Class1.vb 檔案，然後按一下**重新命名**。 將檔案重新命名為 `StreamReaderEnumerable.vb`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `StreamReaderEnumerable`。 此類別會實作 `IEnumerable(Of String)` 介面。
 
-1.  StreamReaderEnumerable 專案上按一下滑鼠右鍵，指向**新增**，然後按一下**新項目**。 選取 **類別**範本。 在 **名稱**方塊中，輸入`StreamReaderEnumerator.vb`然後按一下**確定**。
+1. StreamReaderEnumerable 專案上按一下滑鼠右鍵，指向**新增**，然後按一下**新項目**。 選取 **類別**範本。 在 **名稱**方塊中，輸入`StreamReaderEnumerator.vb`然後按一下**確定**。
 
  在此專案中的第一個類別是 enumerable 類別，並且會實作`IEnumerable(Of String)`介面。 這個泛型介面實作<xref:System.Collections.IEnumerable>介面和這個類別的取用者可以存取做為輸入值的保證`String`。  
   

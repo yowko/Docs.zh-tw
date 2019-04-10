@@ -13,12 +13,12 @@ helpviewer_keywords:
 - XBAP security [WPF]
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
-ms.openlocfilehash: 01b1b30ceca316ecebacfaf23f458f71f1953d04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193664"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313563"
 ---
 # <a name="security-wpf"></a>安全性 (WPF)
 <a name="introduction"></a> 在開發 Windows Presentation Foundation (WPF) 獨立和瀏覽器裝載的應用程式時，您必須考量的安全性模型。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 獨立應用程式使用不受限制的權限執行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**權限集合)，不論部署使用 Windows Installer (.msi)、 XCopy 或[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]。 不支援使用 ClickOnce 部署部分信任的獨立 WPF 應用程式。 不過，完全信任主應用程式可以建立部分信任<xref:System.AppDomain>使用.NET Framework 增益集模型。 如需詳細資訊，請參閱 < [WPF 增益集概觀](./app-development/wpf-add-ins-overview.md)。  
@@ -103,15 +103,15 @@ ms.locfileid: "59193664"
   
  您可以在這種方式保護的功能集合已設定為針對每個區域為基礎**網際網路**，**內部網路**，**信任的網站**，和**限制的網站**區域。 下列步驟描述如何設定安全性設定：  
   
-1.  開啟**控制台中**。  
+1. 開啟**控制台中**。  
   
-2.  按一下 **網路和網際網路**，然後按一下**網際網路選項**。  
+2. 按一下 **網路和網際網路**，然後按一下**網際網路選項**。  
   
      [網際網路選項] 對話方塊隨即出現。  
   
-3.  在 **安全性**索引標籤上，選取要設定的安全性設定區域。  
+3. 在 **安全性**索引標籤上，選取要設定的安全性設定區域。  
   
-4.  按一下 [**自訂層級**] 按鈕。  
+4. 按一下 [**自訂層級**] 按鈕。  
   
      **安全性設定** 對話方塊隨即出現，而且您可以設定所選區域的安全性設定。  
   

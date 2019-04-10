@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: bb903f6d182c7a8be915daf67a4df30475cfae62
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315877"
 ---
 # <a name="data-transfer-architectural-overview"></a>資料傳輸架構概觀
 Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可以接收訊息、加以處理，然後分派到使用者程式碼執行進一步動作，或是使用使用者程式碼提供的資料建構訊息，然後傳遞到目的地。 此主題將針對進階程式開發人員，描述處理訊息與所包含資料的架構。 如需如何傳送與接收資料的簡化型工作導向檢視，請參閱 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。  
@@ -107,15 +107,15 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  為了要能夠這樣做，就必須在整個 `Message` 執行個體與 XML Infoset 之間定義對應。 事實上，存在這類對應：WCF 會使用 SOAP 標準定義這個對應。 當寫出 `Message` 執行個體當做 XML Infoset 時，產生的 Infoset 是包含訊息的有效 SOAP 封套。 因此， `WriteMessage` 通常會執行下列步驟：  
   
-1.  寫入 SOAP 封套項目開頭標記。  
+1. 寫入 SOAP 封套項目開頭標記。  
   
-2.  寫入 SOAP 標頭項目開頭標記、寫出所有的標頭，然後關閉標頭項目。  
+2. 寫入 SOAP 標頭項目開頭標記、寫出所有的標頭，然後關閉標頭項目。  
   
-3.  寫入 SOAP 本文項目開頭標記。  
+3. 寫入 SOAP 本文項目開頭標記。  
   
-4.  呼叫 `WriteBodyContents` 或對等的方法以寫出本文。  
+4. 呼叫 `WriteBodyContents` 或對等的方法以寫出本文。  
   
-5.  關閉本文與封套項目。  
+5. 關閉本文與封套項目。  
   
  之前的步驟與 SOAP 標準緊密相關。 因為事實上存在多個 SOAP 版本導致情況變得複雜；例如，可以在不了解使用中之 SOAP 版本的情況下正確寫出 SOAP 封套項目。 同樣地，在某些案例中，可能想要完全關閉這項複雜的 SOAP 特定對應。  
   
@@ -170,11 +170,11 @@ Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 它可�
   
  為此，這時會使用 <xref:System.Xml.IStreamProvider> 介面。 這個介面具有可以傳回要寫入之資料流的 <xref:System.Xml.IStreamProvider.GetStream> 方法。 寫出 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 中已由資料流處理之訊息本文的正確方式如下所示：  
   
-1.  在資料流前面寫入任何必要的資訊，(例如，開頭 XML 標記)。  
+1. 在資料流前面寫入任何必要的資訊，(例如，開頭 XML 標記)。  
   
-2.  配合傳回要寫入之資料流的 `WriteValue` 實作，在接受 <xref:System.Xml.XmlDictionaryWriter> 的 <xref:System.Xml.IStreamProvider>上呼叫 `IStreamProvider` 多載。  
+2. 配合傳回要寫入之資料流的 `WriteValue` 實作，在接受 <xref:System.Xml.XmlDictionaryWriter> 的 <xref:System.Xml.IStreamProvider>上呼叫 `IStreamProvider` 多載。  
   
-3.  在資料流後面寫入任何資訊，(例如，結束 XML 標記)。  
+3. 在資料流後面寫入任何資訊，(例如，結束 XML 標記)。  
   
  透過這種方式，XML 寫入器就可以選擇呼叫 <xref:System.Xml.IStreamProvider.GetStream> 以及寫出經過資料流處理之資料的時機。 例如，文字及二進位 XML 寫入器將立即呼叫此方法，並在開始與結束標記之間寫出資料流處理內容。 MTOM 寫入器則可能會決定於稍後準備好要寫入訊息的適當部分時，再呼叫 <xref:System.Xml.IStreamProvider.GetStream> 。  
   

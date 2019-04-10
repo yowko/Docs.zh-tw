@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_TwoOperands
 ms.assetid: b2b1e6ce-d262-4644-8085-e48a2e2f06a6
-ms.openlocfilehash: ae48f4d42fd358662200035e083c314d94766ef5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: c13638d7be3081ceaddd6ff7096ba670b39d173a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315981"
 ---
 # <a name="operator-is-not-valid-for-name1-and-name2"></a>運算子不是有效的 '\<name1 >' 和'\<name2 >'
 運算子不適用於所操作的類型。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請確定運算子適用於所操作的類型。  
+1. 請確定運算子適用於所操作的類型。  
   
 ## <a name="see-also"></a>另請參閱
 

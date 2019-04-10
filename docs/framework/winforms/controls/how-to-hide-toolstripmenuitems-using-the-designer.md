@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], hiding menu items in designer
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
-ms.openlocfilehash: ddfbcbe78cdf8e5b0d126e82189589edef2be58a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317671"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>HOW TO：使用設計工具隱藏 ToolStripMenuItems
 隱藏功能表項目是用來控制您的應用程式的使用者介面 (UI)，並限制使用者命令。 通常，您要隱藏整個功能表無法使用時，所有在其上的功能表項目。 這代表使用者分心。 此外，您可能想要隱藏和停用功能表或功能表項目，為單獨的隱藏不會防止使用者使用攠摝坫存取功能表命令。 如需有關如何停用功能表項目的詳細資訊，請參閱[How to:使用設計工具停用 ToolStripMenuItems](how-to-disable-toolstripmenuitems-using-the-designer.md)。  
@@ -21,7 +21,7 @@ ms.locfileid: "59085684"
   
 ### <a name="to-hide-a-top-level-menu-and-its-submenu-items"></a>若要隱藏最上層的功能表和它的子功能表項目  
   
-1.  選取最上層的功能表項目，並設定其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>或是<xref:System.Windows.Forms.ToolStripItem.Available%2A>屬性設`false`。  
+1. 選取最上層的功能表項目，並設定其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>或是<xref:System.Windows.Forms.ToolStripItem.Available%2A>屬性設`false`。  
   
      當您隱藏最上層的功能表項目時，同時也會隱藏該功能表內的所有功能表項目。 如果您按一下以外的地方上<xref:System.Windows.Forms.MenuStrip>設定之後<xref:System.Windows.Forms.ToolStripItem.Visible%2A>到`false`，整個最上層功能表項目和它的子功能表項目會消失從您的表單，因此顯示執行階段的影響您的動作。 若要在設計階段顯示隱藏的最上層功能表項目，請按一下<xref:System.Windows.Forms.MenuStrip>中**元件匣**，在**文件大綱**，或在屬性方格的頂端。  
   
@@ -30,7 +30,7 @@ ms.locfileid: "59085684"
   
 ### <a name="to-hide-a-submenu-item"></a>若要隱藏的子功能表項目  
   
-1.  選取子功能表項目，並設定其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>屬性設`false`。  
+1. 選取子功能表項目，並設定其<xref:System.Windows.Forms.ToolStripItem.Visible%2A>屬性設`false`。  
   
      當您隱藏子功能表項目時，它仍會顯示在設計階段在表單上，讓您可以進一步的工作，輕鬆地選取它。 實際上會在執行階段隱藏。  
   

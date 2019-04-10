@@ -1,14 +1,14 @@
 ---
 title: 處理 LINQ
-description: 此教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
+description: 本教學課程會教導您如何使用 LINQ 產生序列、撰寫用於 LINQ 查詢的方法，並區分立即和延遲評估。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: 7613051bf5a8419244453339dd036d92249d2002
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679648"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58815579"
 ---
 # <a name="working-with-linq"></a>處理 LINQ
 
@@ -22,13 +22,13 @@ ms.locfileid: "57679648"
 
 您將建置一個應用程式來學習這些技術，其中將示範任何魔術師都會的基礎技巧：[完美洗牌 (英文)](https://en.wikipedia.org/wiki/Faro_shuffle)。 簡單地說，完美洗牌是將牌組確實分成兩半，然後互相交錯每一張紙牌來重建原始牌堆的技術。
 
-魔術師使用此技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。
+魔術師使用這項技術的原因，是因為在每次洗牌後，每張紙牌都會在已知的位置，其順序會遵循重複性的模式。
 
 基於您的目的，這是以較輕鬆的方式來了解對資料序列的操作。 您將建置的應用程式會建構牌堆，然後執行一連串的洗牌，每次洗牌都會寫出序列。 您也會比較原始的順序與更新過的順序。
 
-此教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以在 dotnet/samples GitHub 存放機制中查看[完整範例](https://github.com/dotnet/samples/blob/master/csharp/getting-started/console-linq)。 如需下載指示，請參閱[範例和教學課程](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 您必須設定電腦以執行 .NET Core。 您可以在 [.NET Core (英文)](https://www.microsoft.com/net/core) 頁面找到安裝指示。 您可以在 Windows、Ubuntu Linux、OS X 或是 Docker 容器中執行此應用程式。 您將必須安裝慣用的程式碼編輯器。 以下說明使用 [Visual Studio Code (英文)](https://code.visualstudio.com/)，這是開放原始碼的跨平台編輯器。 不過，您可以使用您熟悉的任何工具。
 
@@ -115,7 +115,7 @@ var startingDeck = Suits().SelectMany(suit => Ranks().Select(rank => new { Suit 
 
 現在，請執行您目前所建置的範例。 它會顯示牌堆中全部 52 張紙牌。 您會發現以偵錯工具執行此範例，對於觀察 `Suits()` 和 `Ranks()` 方法的執行方式非常有用。 您可以清楚地看見每個序列中的每個字串都只會在需要時產生。
 
-![主控台視窗顯示寫出 52 張紙牌的應用程式](./media/working-with-linq/console.png)
+![主控台視窗顯示寫出 52 張紙牌的應用程式。](./media/working-with-linq/console-52-card-application.png)
 
 ## <a name="manipulating-the-order"></a>操作順序
 

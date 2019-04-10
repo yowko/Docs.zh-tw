@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], validation
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
-ms.openlocfilehash: aead8cbd500262a4cba535fd023dd9701d50257a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086802"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305946"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>HOW TO：使用 DataGrid 控制項實作驗證
 <xref:System.Windows.Controls.DataGrid>控制項可讓您執行的資料格 」 和 「 資料列層級的驗證。 資料格層級驗證，您驗證繫結的資料物件的個別屬性，當使用者更新的值。 資料列層級驗證，您會驗證整個資料的物件，當使用者認可變更的資料列。 您也可以提供自訂的視覺化回饋，對於驗證錯誤，或使用預設的視覺化回饋，<xref:System.Windows.Controls.DataGrid>控制項提供。  
@@ -42,14 +42,14 @@ ms.locfileid: "59086802"
   
 ### <a name="to-validate-multiple-values-in-a-single-row"></a>若要驗證的單一資料列中的多個值  
   
-1.  實作<xref:System.Windows.Controls.ValidationRule>檢查多個屬性的繫結的資料物件的子類別。 在您<xref:System.Windows.Controls.ValidationRule.Validate%2A>轉換方法實作`value`參數值以<xref:System.Windows.Data.BindingGroup>執行個體。 然後，您就可以存取資料物件，可透過<xref:System.Windows.Data.BindingGroup.Items%2A>屬性。  
+1. 實作<xref:System.Windows.Controls.ValidationRule>檢查多個屬性的繫結的資料物件的子類別。 在您<xref:System.Windows.Controls.ValidationRule.Validate%2A>轉換方法實作`value`參數值以<xref:System.Windows.Data.BindingGroup>執行個體。 然後，您就可以存取資料物件，可透過<xref:System.Windows.Data.BindingGroup.Items%2A>屬性。  
   
      下列範例示範此程序來驗證是否`StartDate`屬性值`Course`物件是早於其`EndDate`屬性值。  
   
      [!code-csharp[DataGrid_Validation#CourseValidationRule](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#coursevalidationrule)]
      [!code-vb[DataGrid_Validation#CourseValidationRule](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#coursevalidationrule)]  
   
-2.  新增驗證規則，以<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>集合。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>屬性會提供直接存取<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>屬性<xref:System.Windows.Data.BindingGroup>群組控制項所使用的所有繫結的執行個體。  
+2. 新增驗證規則，以<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A?displayProperty=nameWithType>集合。 <xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>屬性會提供直接存取<xref:System.Windows.Data.BindingGroup.ValidationRules%2A>屬性<xref:System.Windows.Data.BindingGroup>群組控制項所使用的所有繫結的執行個體。  
   
      下列範例會設定<xref:System.Windows.Controls.DataGrid.RowValidationRules%2A>在 XAML 中的屬性。 <xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>屬性設定為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>如此才會更新繫結的資料物件，就會發生驗證。  
   

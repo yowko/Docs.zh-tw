@@ -5,21 +5,21 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 03a10e95362b1d49e4929c07ab6193f53898d34f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 95e613cb280813cd75d887d3cf147d7c897bc2e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318883"
 ---
 # <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a>如何：變更應用程式工作階段之間的設定值
 有些時候，您可能要變更設定，以編譯及部署應用程式之後的應用程式工作階段之間的值。 例如，您可能要變更連接字串以指向正確的資料庫位置。 由於編譯及部署應用程式之後，都無法使用設計階段工具，您必須變更設定值，以手動方式在檔案中。  
   
 ### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a>若要變更應用程式工作階段之間的設定值  
   
-1.  使用 Microsoft 記事本或一些其他文字編輯器或 XML 編輯器，開啟您的應用程式相關聯.config 檔案。  
+1. 使用 Microsoft 記事本或一些其他文字編輯器或 XML 編輯器，開啟您的應用程式相關聯.config 檔案。  
   
-2.  找出您想要變更設定的項目。 它看起來應該類似下列的範例。  
+2. 找出您想要變更設定的項目。 它看起來應該類似下列的範例。  
   
     ```xml  
     <setting name="Setting1" serializeAs="String" >  
@@ -27,7 +27,7 @@ ms.locfileid: "59142853"
     </setting>  
     ```  
   
-3.  輸入您設定的新值，然後儲存檔案。  
+3. 輸入您設定的新值，然後儲存檔案。  
   
 ## <a name="see-also"></a>另請參閱
 

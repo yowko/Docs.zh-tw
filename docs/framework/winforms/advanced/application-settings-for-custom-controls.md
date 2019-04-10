@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], application settings
 - application settings [Windows Forms], custom controls
 ms.assetid: f44afb74-76cc-44f2-890a-44b7cdc211a1
-ms.openlocfilehash: b036167c2e1a4dff557d2ef90eaa964710533410
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 69a5caef8bab45503b9f34422de8c2ba2e7f01ff
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169737"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317294"
 ---
 # <a name="application-settings-for-custom-controls"></a>自訂控制項的應用程式設定
 您必須完成某些工作，讓您的自訂控制項能夠保存應用程式設定，在第三方應用程式中裝載控制項時。  
@@ -22,9 +22,9 @@ ms.locfileid: "59169737"
   
  此外，您應該實作下列為了讓應用程式設定的自訂控制項以在 Visual Studio 這類的設計階段環境中正常運作：  
   
-1.  自訂應用程式設定類別的建構函式與<xref:System.ComponentModel.IComponent>做為單一參數。 您可以使用這個類別來儲存及載入所有的應用程式設定。 當您建立這個類別的新執行個體時，傳遞您使用建構函式的自訂控制項。  
+1. 自訂應用程式設定類別的建構函式與<xref:System.ComponentModel.IComponent>做為單一參數。 您可以使用這個類別來儲存及載入所有的應用程式設定。 當您建立這個類別的新執行個體時，傳遞您使用建構函式的自訂控制項。  
   
-2.  已建立並放置在表單上，例如在表單的控制項之後，請建立此自訂設定類別<xref:System.Windows.Forms.Form.Load>事件處理常式。  
+2. 已建立並放置在表單上，例如在表單的控制項之後，請建立此自訂設定類別<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
  如需建立自訂設定類別的指示，請參閱[How to:建立應用程式設定](how-to-create-application-settings.md)。  
   

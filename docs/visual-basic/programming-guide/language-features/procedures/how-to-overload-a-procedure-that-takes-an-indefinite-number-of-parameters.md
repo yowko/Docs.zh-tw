@@ -10,29 +10,29 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
-ms.openlocfilehash: bae420e88a74fbe3f7e8ad3592133fdcaf191029
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838985"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316449"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>HOW TO：多載不定數目參數 (Visual Basic) 的程序
 如果程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，您不能定義採用的參數陣列的一維陣列的多載的版本。 如需詳細資訊，請參閱 「 隱含多載的參數陣列參數 」 中[多載化程序中的考量](./considerations-in-overloading-procedures.md)。  
   
 ### <a name="to-overload-a-procedure-that-takes-a-variable-number-of-parameters"></a>若要多載接受各種數目參數的程序  
   
-1.  確認此程序與呼叫程式碼邏輯方面，從多載版本，從多個`ParamArray`參數。 請參閱中的 < 多載和參數陣列 >[多載化程序的考量](./considerations-in-overloading-procedures.md)。  
+1. 確認此程序與呼叫程式碼邏輯方面，從多載版本，從多個`ParamArray`參數。 請參閱中的 < 多載和參數陣列 >[多載化程序的考量](./considerations-in-overloading-procedures.md)。  
   
-2.  判斷程序應該接受的提供值的數字中變數參數清單的一部分。 這可能包括的任何值，大小寫，且它可能包含單一的一維陣列的大小寫。  
+2. 判斷程序應該接受的提供值的數字中變數參數清單的一部分。 這可能包括的任何值，大小寫，且它可能包含單一的一維陣列的大小寫。  
   
-3.  針對每個可接受提供的值數目，撰寫`Sub`或`Function`定義對應的參數清單的宣告陳述式。 請勿使用`Optional`或`ParamArray`在這個多載的版本中的關鍵字。  
+3. 針對每個可接受提供的值數目，撰寫`Sub`或`Function`定義對應的參數清單的宣告陳述式。 請勿使用`Optional`或`ParamArray`在這個多載的版本中的關鍵字。  
   
-4.  在每個宣告中，在前面`Sub`或是`Function`關鍵字搭配[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。  
+4. 在每個宣告中，在前面`Sub`或是`Function`關鍵字搭配[多載](../../../../visual-basic/language-reference/modifiers/overloads.md)關鍵字。  
   
-5.  下列每個宣告中，撰寫呼叫程式碼提供與該宣告的參數清單的對應值時執行的程序程式碼。  
+5. 下列每個宣告中，撰寫呼叫程式碼提供與該宣告的參數清單的對應值時執行的程序程式碼。  
   
-6.  終止與每個程序`End Sub`或`End Function`適當的陳述式。  
+6. 終止與每個程序`End Sub`或`End Function`適當的陳述式。  
   
 ## <a name="example"></a>範例  
  下列範例示範使用定義的程序[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)參數，然後按一下 對等一組多載程序。  
@@ -59,9 +59,9 @@ ms.locfileid: "58838985"
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
-- [程序多載化](./procedure-overloading.md)
-- [程序的疑難排解](./troubleshooting-procedures.md)
-- [如何：定義多個版本的程序](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
-- [如何：多載會採用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [多載解析](./overload-resolution.md)
+- [程序多載](./procedure-overloading.md)
+- [針對程序進行疑難排解](./troubleshooting-procedures.md)
+- [HOW TO：定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)
+- [HOW TO：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
+- [HOW TO：多載使用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [Overload Resolution](./overload-resolution.md)

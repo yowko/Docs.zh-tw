@@ -2,12 +2,12 @@
 title: 預計採用 Windows Communication Foundation：簡化未來整合
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
-ms.openlocfilehash: 2f733f9cc33846913539fee4afdd95efa9224058
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124796"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316332"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>預計採用 Windows Communication Foundation：簡化未來整合
 如果您使用 ASP.NET，並預計在未來使用 WCF，本主題會提供指引以確定新的 ASP.NET Web 服務能夠順利與 WCF 應用程式。  
@@ -34,9 +34,9 @@ public interface IEcho
 ## <a name="data-representation"></a>資料表示  
  根據預設，<xref:System.Xml.Serialization.XmlSerializer> 序列化型別的目標 XML 在語意上與 <xref:System.Runtime.Serialization.DataContractSerializer> 序列化型別的目標 XML 是一樣的 (前提是 XML 的命名空間已明確定義)。 當定義未來預期的採用 WCF 與 ASP.NET Web 服務搭配使用的資料類型，執行下列作業：  
   
-1.  使用 .NET Framework 類別，而不是 XML 結構描述來定義型別。  
+1. 使用 .NET Framework 類別，而不是 XML 結構描述來定義型別。  
   
-2.  僅將 <xref:System.SerializableAttribute> 和 <xref:System.Xml.Serialization.XmlRootAttribute> 新增至類別，並使用後者明確定義該型別的命名空間。 請勿從 <xref:System.Xml.Serialization> 命名空間新增其他屬性，以控制 .NET Framework 類別轉譯成 XML 的方式。  
+2. 僅將 <xref:System.SerializableAttribute> 和 <xref:System.Xml.Serialization.XmlRootAttribute> 新增至類別，並使用後者明確定義該型別的命名空間。 請勿從 <xref:System.Xml.Serialization> 命名空間新增其他屬性，以控制 .NET Framework 類別轉譯成 XML 的方式。  
   
  採用這個方法之後，您稍後應該可以藉由新增 <xref:System.Runtime.Serialization.DataContractAttribute> 和 <xref:System.Runtime.Serialization.DataMemberAttribute>，將 .NET 類別納入資料合約中，而不用特別提醒針對傳輸需要而序列化類別的目標 XML。 在訊息中的 ASP.NET Web 服務所使用的型別都能夠處理當做資料合約，WCF 應用程式產生，除了其他益處，較佳的效能，在 WCF 應用程式以外。  
   

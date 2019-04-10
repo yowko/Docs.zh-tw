@@ -6,19 +6,19 @@ helpviewer_keywords:
 - read-only text boxes
 - text boxes [Windows Forms], read-only
 ms.assetid: 60baa9ab-fa57-44ad-bb7c-61b05aa64296
-ms.openlocfilehash: be85eedf272e596ceb10e7510b8c99ce6aed0727
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 72dc188993474ad4b39f0cfa74cadffdb99ff46f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59130724"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308571"
 ---
 # <a name="how-to-create-a-read-only-text-box-windows-forms"></a>HOW TO：建立唯讀文字方塊 (Windows Form)
 您可以將可編輯的 Windows Form 文字方塊中轉換成唯讀的控制項。 例如，文字方塊可能會顯示值通常進行編輯，但可能不是目前因為應用程式的狀態。  
   
 ### <a name="to-create-a-read-only-text-box"></a>若要建立唯讀文字方塊  
   
-1.  設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A>屬性設`true`。 屬性設為`true`，使用者仍然可以捲動，並反白顯示 不允許變更 文字 方塊中的文字。 A**複製**命令會在文字方塊中中, 運作，但**剪下**並**貼上**命令不是。  
+1. 設定<xref:System.Windows.Forms.TextBox>控制項的<xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A>屬性設`true`。 屬性設為`true`，使用者仍然可以捲動，並反白顯示 不允許變更 文字 方塊中的文字。 A**複製**命令會在文字方塊中中, 運作，但**剪下**並**貼上**命令不是。  
   
     > [!NOTE]
     >  <xref:System.Windows.Forms.TextBoxBase.ReadOnly%2A>屬性只會影響在執行階段的使用者互動。 您仍然可以變更文字方塊內容以程式設計方式在執行階段變更<xref:System.Windows.Forms.TextBox.Text%2A>文字方塊的屬性。  

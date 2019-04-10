@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：建立裝載在 WPF 中的 Direct3D9 內容
+title: 逐步解說：建立 Direct3D9 內容以裝載在 WPF 中
 ms.date: 03/30/2017
 dev_langs:
 - cpp
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 286e98bc-1eaa-4b5e-923d-3490a9cca5fc
-ms.openlocfilehash: 8acef4a52c9317618485a7c46c1e22cc2524dd69
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 160395b84ef7ca447d162ceff34752113a1d59a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379597"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300264"
 ---
-# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立裝載在 WPF 中的 Direct3D9 內容
+# <a name="walkthrough-creating-direct3d9-content-for-hosting-in-wpf"></a>逐步解說：建立 Direct3D9 內容以裝載在 WPF 中
 本逐步解說示範如何建立適用於 Windows Presentation Foundation (WPF) 應用程式中裝載 Direct3D9 內容。 如需有關裝載 WPF 應用程式中的 Direct3D9 內容的詳細資訊，請參閱[WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)。
 
  在這個逐步解說中，您將執行下列工作：
@@ -37,29 +37,29 @@ ms.locfileid: "57379597"
 
 #### <a name="to-create-the-direct3d9-project"></a>若要建立 Direct3D9 專案
 
-1.  名為 c + + 中建立新的 Win32 專案`D3DContent`。
+1. 建立新的 Win32 專案，在C++名為`D3DContent`。
 
      Win32 應用程式精靈 隨即開啟，並顯示歡迎畫面。
 
-2.  按 [ **下一步**]。
+2. 按 [ **下一步**]。
 
      [應用程式設定] 畫面隨即出現。
 
-3.  在 **應用程式類型：** 區段中，選取**DLL**選項。
+3. 在 **應用程式類型：** 區段中，選取**DLL**選項。
 
-4.  按一下 [ **完成**]。
+4. 按一下 [ **完成**]。
 
      會產生 D3DContent 專案。
 
-5.  在 方案總管 中，以滑鼠右鍵按一下 D3DContent 專案，然後選取**屬性**。
+5. 在 方案總管 中，以滑鼠右鍵按一下 D3DContent 專案，然後選取**屬性**。
 
      **D3DContent 屬性頁**對話方塊隨即開啟。
 
-6.  選取  **C/c + +** 節點。
+6. 選取  **C /C++** 節點。
 
-7.  在 **其他 Include 目錄**欄位中，指定的 DirectX 位置包含的資料夾。 此資料夾的預設位置是 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Include。
+7. 在 **其他 Include 目錄**欄位中，指定的 DirectX 位置包含的資料夾。 此資料夾的預設位置是 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Include。
 
-8.  按兩下**連結器**節點來展開它。
+8. 按兩下**連結器**節點來展開它。
 
 9. 在 **其他程式庫目錄**欄位中，指定 DirectX 程式庫資料夾的位置。 此資料夾的預設位置是 %ProgramFiles%\Microsoft DirectX SDK (*版本*) \Lib\x86。
 
@@ -74,7 +74,7 @@ ms.locfileid: "57379597"
 
 #### <a name="to-create-the-direct3d9-content"></a>建立 Direct3D9 內容
 
-1.  使用 [方案總管] 中，加入名為下列專案的三個 c + + 類別。
+1. 使用 [方案總管] 中，新增三個C++類別的專案，稱為下列。
 
      `CRenderer` （含虛擬的解構函式）
 
@@ -82,31 +82,31 @@ ms.locfileid: "57379597"
 
      `CTriangleRenderer`
 
-2.  在程式碼編輯器中開啟 Renderer.h，並以下列程式碼取代自動產生的程式碼。
+2. 在程式碼編輯器中開啟 Renderer.h，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.h#rendererh)]
 
-3.  在程式碼編輯器中開啟 Renderer.cpp，並以下列程式碼取代自動產生的程式碼。
+3. 在程式碼編輯器中開啟 Renderer.cpp，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderer.cpp#renderercpp)]
 
-4.  在程式碼編輯器中開啟 RendererManager.h，並以下列程式碼取代自動產生的程式碼。
+4. 在程式碼編輯器中開啟 RendererManager.h，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.h#renderermanagerh)]
 
-5.  在程式碼編輯器中開啟 RendererManager.cpp，並以下列程式碼取代自動產生的程式碼。
+5. 在程式碼編輯器中開啟 RendererManager.cpp，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#RendererManagerCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/renderermanager.cpp#renderermanagercpp)]
 
-6.  在程式碼編輯器中開啟 TriangleRenderer.h，並以下列程式碼取代自動產生的程式碼。
+6. 在程式碼編輯器中開啟 TriangleRenderer.h，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.h#trianglerendererh)]
 
-7.  在程式碼編輯器中開啟 TriangleRenderer.cpp，並以下列程式碼取代自動產生的程式碼。
+7. 在程式碼編輯器中開啟 TriangleRenderer.cpp，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#TriangleRendererCPP](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/trianglerenderer.cpp#trianglerenderercpp)]
 
-8.  在程式碼編輯器中開啟 stdafx.h，並以下列程式碼取代自動產生的程式碼。
+8. 在程式碼編輯器中開啟 stdafx.h，並以下列程式碼取代自動產生的程式碼。
 
      [!code-cpp[System.Windows.Interop.D3DImage#StdafxH](~/samples/snippets/cpp/VS_Snippets_Wpf/System.Windows.Interop.D3DImage/cpp/stdafx.h#stdafxh)]
 
@@ -143,4 +143,4 @@ ms.locfileid: "57379597"
 
 - <xref:System.Windows.Interop.D3DImage>
 - [Direct3D9 和 WPF 互通性的效能考量](performance-considerations-for-direct3d9-and-wpf-interoperability.md)
-- [逐步解說：在 WPF 中裝載 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [逐步解說：將 Direct3D9 內容裝載在 WPF 中](walkthrough-hosting-direct3d9-content-in-wpf.md)

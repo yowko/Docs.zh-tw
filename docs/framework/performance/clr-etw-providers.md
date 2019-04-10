@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2d7757b50eedb25247b11fced3d4f9567691c380
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188600"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302617"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW 提供者
 Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取消提供者。  
@@ -58,7 +58,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
 ## <a name="etw-data-collection-using-runtime-and-rundown-providers"></a>使用執行階段和取消提供者的 ETW 資料收集  
  下列範例示範如何使用 CLR 取消提供者，而方式是允許 Managed 處理序的符號解析，並且影響最少，而且不論處理序是在分析的時間範圍內部或外部開始或結束。  
   
-1.  使用 CLR 執行階段提供者開啟 ETW 記錄：  
+1. 使用 CLR 執行階段提供者開啟 ETW 記錄：  
   
     ```  
     xperf -start clr -on e13c0d23-ccbc-4e12-931b-d9cc2eee27e4:0x1CCBD:0x5 -f clr1.etl      
@@ -66,7 +66,7 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
      記錄會儲存至 clr1.etl 檔案。  
   
-2.  若要在處理序繼續執行時停止分析，請啟動取消提供者來擷取 `DCEnd` 事件：  
+2. 若要在處理序繼續執行時停止分析，請啟動取消提供者來擷取 `DCEnd` 事件：  
   
     ```  
     xperf -start clrRundown -on A669021C-C450-4609-A035-5AF59AF4DF18:0xB8:0x5 -f clr2.etl      
@@ -74,14 +74,14 @@ Common Language Runtime (CLR) 有兩個提供者：執行階段提供者和取�
   
      這會啟用 `DCEnd` 事件的收集來啟動取消工作階段。 您可能需要等待 30 到 60 秒的時間，以收集所有事件。 記錄會儲存至 clr1.et2 檔案。  
   
-3.  關閉所有 ETW 分析：  
+3. 關閉所有 ETW 分析：  
   
     ```  
     xperf -stop clrRundown   
     xperf -stop clr  
     ```  
   
-4.  合併設定檔以建立一個記錄檔：  
+4. 合併設定檔以建立一個記錄檔：  
   
     ```  
     xperf -merge clr1.etl clr2.etl merged.etl  

@@ -2,12 +2,12 @@
 title: HOW TO：指定私用儲存欄位
 ms.date: 03/30/2017
 ms.assetid: 5a40e816-cc6e-43a0-b32a-9caaa0ab6912
-ms.openlocfilehash: e0928b2f2e817c8cc936f7aa1190229842a121a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 843b7ae8dbddb76e0e5fa33d3594a5655dbf1a37
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302448"
 ---
 # <a name="how-to-specify-private-storage-fields"></a>HOW TO：指定私用儲存欄位
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A>屬性上的<xref:System.Data.Linq.Mapping.DataAttribute>屬性來指定基礎儲存欄位的名稱。  
@@ -16,9 +16,9 @@ ms.locfileid: "59195432"
   
 ### <a name="to-specify-the-name-of-an-underlying-storage-field"></a>若要指定基礎儲存欄位的名稱  
   
-1.  將 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute)。  
+1. 將 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute)。  
   
-2.  指定欄位名稱做為 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 屬性 (Property) 的值。  
+2. 指定欄位名稱做為 <xref:System.Data.Linq.Mapping.DataAttribute.Storage%2A> 屬性 (Property) 的值。  
   
 ## <a name="see-also"></a>另請參閱
 

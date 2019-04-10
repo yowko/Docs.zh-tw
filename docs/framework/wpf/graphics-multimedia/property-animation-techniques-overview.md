@@ -9,12 +9,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], methods for
 - properties [WPF], methods for animating
 ms.assetid: 74f61413-f8c0-4e75-bf04-951886426c8b
-ms.openlocfilehash: 5ec401aea139a868b3633afce4c74558aafcaa1e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ebee350f69b5c5e4f9d38c452b9c87bf003528ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59165434"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317905"
 ---
 # <a name="property-animation-techniques-overview"></a>屬性動畫技術概觀
 本主題說明建立屬性動畫的不同方法︰分鏡腳本、本機動畫、時鐘與每一畫面格動畫。  
@@ -42,13 +42,13 @@ ms.locfileid: "59165434"
   
  A<xref:System.Windows.Media.Animation.Storyboard>是一種特殊的容器<xref:System.Windows.Media.Animation.Timeline>，提供其包含之動畫的目標資訊。 若要以動畫顯示<xref:System.Windows.Media.Animation.Storyboard>，完成下列三個步驟。  
   
-1.  宣告<xref:System.Windows.Media.Animation.Storyboard>和一或多個動畫。  
+1. 宣告<xref:System.Windows.Media.Animation.Storyboard>和一或多個動畫。  
   
-2.  使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加屬性來指定目標物件以及每個動畫的屬性。  
+2. 使用<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>和<xref:System.Windows.Media.Animation.Storyboard.TargetProperty>附加屬性來指定目標物件以及每個動畫的屬性。  
   
-3.  （僅限程式碼）定義<xref:System.Windows.NameScope>for<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 註冊以動畫顯示與該物件的名稱<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
+3. （僅限程式碼）定義<xref:System.Windows.NameScope>for<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 註冊以動畫顯示與該物件的名稱<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。  
   
-4.  開始<xref:System.Windows.Media.Animation.Storyboard>。  
+4. 開始<xref:System.Windows.Media.Animation.Storyboard>。  
   
  從開始<xref:System.Windows.Media.Animation.Storyboard>動畫套用至它們要建立動畫的屬性，並啟動它們。 有兩種方式可以開始<xref:System.Windows.Media.Animation.Storyboard>： 您可以使用<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>所提供的方法<xref:System.Windows.Media.Animation.Storyboard>類別，或者您可以使用<xref:System.Windows.Media.Animation.BeginStoryboard>動作。 在中建立動畫的唯一辦法[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]是使用<xref:System.Windows.Media.Animation.BeginStoryboard>動作。 A<xref:System.Windows.Media.Animation.BeginStoryboard>動作可用於<xref:System.Windows.EventTrigger>，屬性<xref:System.Windows.Trigger>，或<xref:System.Windows.DataTrigger>。  
   
@@ -70,9 +70,9 @@ ms.locfileid: "59165434"
   
  若要使用本機動畫建立動畫，請完成下列步驟。  
   
-1.  建立<xref:System.Windows.Media.Animation.AnimationTimeline>物件。  
+1. 建立<xref:System.Windows.Media.Animation.AnimationTimeline>物件。  
   
-2.  使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationTimeline>給您指定的屬性。  
+2. 使用<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationTimeline>給您指定的屬性。  
   
  下列範例示範如何以動畫顯示的寬度和背景色彩<xref:System.Windows.Controls.Button>。  
   
@@ -87,11 +87,11 @@ ms.locfileid: "59165434"
   
  若要將單一套用<xref:System.Windows.Media.Animation.Clock>屬性，您會完成下列步驟。  
   
-1.  建立<xref:System.Windows.Media.Animation.AnimationTimeline>物件。  
+1. 建立<xref:System.Windows.Media.Animation.AnimationTimeline>物件。  
   
-2.  使用<xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A>方法<xref:System.Windows.Media.Animation.AnimationTimeline>建立<xref:System.Windows.Media.Animation.AnimationClock>。  
+2. 使用<xref:System.Windows.Media.Animation.AnimationTimeline.CreateClock%2A>方法<xref:System.Windows.Media.Animation.AnimationTimeline>建立<xref:System.Windows.Media.Animation.AnimationClock>。  
   
-3.  使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationClock>至您指定的屬性。  
+3. 使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationClock>至您指定的屬性。  
   
  下列範例示範如何建立<xref:System.Windows.Media.Animation.AnimationClock>並將它套用至兩個類似的屬性。  
   
@@ -100,11 +100,11 @@ ms.locfileid: "59165434"
   
  若要建立計時樹狀結構並使用它來建立屬性的動畫，請完成下列步驟。  
   
-1.  使用<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.AnimationTimeline>物件，以建立計時樹狀結構。  
+1. 使用<xref:System.Windows.Media.Animation.ParallelTimeline>和<xref:System.Windows.Media.Animation.AnimationTimeline>物件，以建立計時樹狀結構。  
   
-2.  使用<xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A>的根目錄<xref:System.Windows.Media.Animation.ParallelTimeline>建立<xref:System.Windows.Media.Animation.ClockGroup>。  
+2. 使用<xref:System.Windows.Media.Animation.TimelineGroup.CreateClock%2A>的根目錄<xref:System.Windows.Media.Animation.ParallelTimeline>建立<xref:System.Windows.Media.Animation.ClockGroup>。  
   
-3.  逐一查看<xref:System.Windows.Media.Animation.ClockGroup.Children%2A>的<xref:System.Windows.Media.Animation.ClockGroup>並套用其子系<xref:System.Windows.Media.Animation.Clock>物件。 每個<xref:System.Windows.Media.Animation.AnimationClock>子系，使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationClock>至您指定的屬性  
+3. 逐一查看<xref:System.Windows.Media.Animation.ClockGroup.Children%2A>的<xref:System.Windows.Media.Animation.ClockGroup>並套用其子系<xref:System.Windows.Media.Animation.Clock>物件。 每個<xref:System.Windows.Media.Animation.AnimationClock>子系，使用<xref:System.Windows.Media.Animation.Animatable.ApplyAnimationClock%2A>物件，您想要建立動畫套用方法<xref:System.Windows.Media.Animation.AnimationClock>至您指定的屬性  
   
  如需時鐘物件的詳細資訊，請參閱[動畫和計時系統概觀](animation-and-timing-system-overview.md)。  
   

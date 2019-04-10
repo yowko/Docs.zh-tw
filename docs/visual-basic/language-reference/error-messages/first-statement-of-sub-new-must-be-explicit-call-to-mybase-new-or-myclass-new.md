@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30920
 ms.assetid: e47dc755-4294-4368-b813-2177b7677957
-ms.openlocfilehash: 737f9119814e784ebabcbb4629ab6948ce164168
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 89b6c241bb637f2efc6014c4640b3b463c4facfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814090"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313473"
 ---
 # <a name="first-statement-of-this-sub-new-must-be-an-explicit-call-to-mybasenew-or-myclassnew-because-the-constructorname-in-the-base-class-baseclassname-of-derivedclassname-is-marked-obsolete-errormessage"></a>此 'Sub New' 的第一個陳述式必須明確呼叫 'MyBase.New' 或 'MyClass.New'，因為'\<constructorname >' 中的基底類別\<基 >' 的 '\<衍生類別名稱 >' 已標記為過時:'\<錯誤訊息 >'
 類別建構函式未明確地呼叫基底類別建構函式，而且隱含的基底類別建構函式已使用 <xref:System.ObsoleteAttribute> 屬性和指示詞標記，以將其視為錯誤。  
@@ -25,9 +25,9 @@ ms.locfileid: "58814090"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請檢查引用的錯誤訊息，並採取適當的動作。  
+1. 請檢查引用的錯誤訊息，並採取適當的動作。  
   
-2.  包含 `MyBase.New()` 或 `MyClass.New()` 的呼叫作為衍生類別中 `Sub New` 的第一個陳述式。  
+2. 包含 `MyBase.New()` 或 `MyClass.New()` 的呼叫作為衍生類別中 `Sub New` 的第一個陳述式。  
   
 ## <a name="see-also"></a>另請參閱
 

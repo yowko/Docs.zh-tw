@@ -1,36 +1,36 @@
 ---
-title: 如何：從工作流程應用程式存取服務
+title: 如何：存取來自工作流程應用程式的服務
 ms.date: 03/30/2017
 ms.assetid: 925ef8ea-5550-4c9d-bb7b-209e20c280ad
-ms.openlocfilehash: 790f8f24ed8a6c3b7592fb8e78befc8ee5e2214d
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 178fb04244cb3e5075722877fdd3e2b5a92b8502
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309312"
 ---
-# <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：從工作流程應用程式存取服務
+# <a name="how-to-access-a-service-from-a-workflow-application"></a>如何：存取來自工作流程應用程式的服務
 本主題描述如何從工作流程主控台應用程式呼叫工作流程服務。 這取決於完成[How to:使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。 雖然本主題說明如何從工作流程應用程式呼叫工作流程服務，但相同的方法可用來從工作流程應用程式呼叫任何 Windows Communication Foundation (WCF) 服務。
 
 ### <a name="create-a-workflow-console-application-project"></a>建立工作流程主控台應用程式專案
 
-1.  啟動 Visual Studio 2012。
+1. 啟動 Visual Studio 2012。
 
-2.  載入您在中建立的 MyWFService 專案[How to:使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。
+2. 載入您在中建立的 MyWFService 專案[How to:使用訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)主題。
 
-3.  以滑鼠右鍵按一下**MyWFService**中的解決方案**方案總管**，然後選取**新增**，**新專案**。 選取 **工作流程**中**已安裝的範本**並**工作流程主控台應用程式**從專案類型清單。 將專案命名為 MyWFClient，並且使用預設位置，如下圖所示。
+3. 以滑鼠右鍵按一下**MyWFService**中的解決方案**方案總管**，然後選取**新增**，**新專案**。 選取 **工作流程**中**已安裝的範本**並**工作流程主控台應用程式**從專案類型清單。 將專案命名為 MyWFClient，並且使用預設位置，如下圖所示。
 
      ![加入新的專案對話方塊](./media/how-to-access-a-service-from-a-workflow-application/add-new-project-dialog.jpg)
 
      按一下 [ **[確定]** 按鈕以關閉**新增新的專案] 對話方塊**。
 
-4.  建立專案之後，Workflow1.xaml 檔會在設計工具中開啟。 按一下 [**工具箱**索引標籤，以開啟工具箱] 中，如果不是已開啟，然後按一下圖釘，讓工具箱視窗保持開啟。
+4. 建立專案之後，Workflow1.xaml 檔會在設計工具中開啟。 按一下 [**工具箱**索引標籤，以開啟工具箱] 中，如果不是已開啟，然後按一下圖釘，讓工具箱視窗保持開啟。
 
-5.  按下**Ctrl**+**F5**以建置並啟動服務。 ASP.NET 程式開發伺服器會如往常一般隨即啟動，而且 Internet Explorer 會顯示 WCF 說明網頁。 請記下這個網頁的 URI，因為您必須在下一個步驟中使用。
+5. 按下**Ctrl**+**F5**以建置並啟動服務。 ASP.NET 程式開發伺服器會如往常一般隨即啟動，而且 Internet Explorer 會顯示 WCF 說明網頁。 請記下這個網頁的 URI，因為您必須在下一個步驟中使用。
 
      ![顯示 WCF 說明頁面及 URI 的 IE](./media/how-to-access-a-service-from-a-workflow-application/ie-wcf-help-page-uri.jpg)
 
-6.  以滑鼠右鍵按一下**MyWFClient**專案中**方案總管**，然後選取**新增** > **服務參考**。 按一下 **探索**按鈕，以搜尋目前方案中的任何服務。 按一下 [服務] 清單中 Service1.xamlx 旁邊的三角形。 按一下 Service1 旁邊的三角形，即可列出 Service1 服務實作的合約。 依序展開**Service1**中的節點**服務**清單。 Echo 作業會顯示在**作業**列出如下圖所示。
+6. 以滑鼠右鍵按一下**MyWFClient**專案中**方案總管**，然後選取**新增** > **服務參考**。 按一下 **探索**按鈕，以搜尋目前方案中的任何服務。 按一下 [服務] 清單中 Service1.xamlx 旁邊的三角形。 按一下 Service1 旁邊的三角形，即可列出 Service1 服務實作的合約。 依序展開**Service1**中的節點**服務**清單。 Echo 作業會顯示在**作業**列出如下圖所示。
 
      ![加入服務參考對話方塊](./media/how-to-access-a-service-from-a-workflow-application/add-service-reference.jpg)
 
@@ -42,9 +42,9 @@ ms.locfileid: "58185424"
 
      ![在 [工具箱] 的 Echo 活動](./media/how-to-access-a-service-from-a-workflow-application/echo-activity-toolbox.jpg)
 
-7.  將 <xref:System.Activities.Statements.Sequence> 活動拖放至設計工具介面上。 其低於**控制流程**工具箱的區段。
+7. 將 <xref:System.Activities.Statements.Sequence> 活動拖放至設計工具介面上。 其低於**控制流程**工具箱的區段。
 
-8.  具有<xref:System.Activities.Statements.Sequence>活動在成為焦點，按**變數**連結並新增名為的字串變數`inString`。 提供變數的預設值`"Hello, world"`以及字串變數，名為`outString`如下圖所示。
+8. 具有<xref:System.Activities.Statements.Sequence>活動在成為焦點，按**變數**連結並新增名為的字串變數`inString`。 提供變數的預設值`"Hello, world"`以及字串變數，名為`outString`如下圖所示。
 
      ![加入 inString 變數](./media/how-to-access-a-service-from-a-workflow-application/add-instring-variable.jpg)
 
@@ -65,5 +65,5 @@ ms.locfileid: "58185424"
 ## <a name="see-also"></a>另請參閱
 
 - [工作流程服務](../../../../docs/framework/wcf/feature-details/workflow-services.md)
-- [如何：搭配訊息活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
-- [使用 WCF 服務，從工作流程中的 Web 專案](https://go.microsoft.com/fwlink/?LinkId=207725)
+- [HOW TO：使用傳訊活動建立工作流程服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-workflow-service-with-messaging-activities.md)
+- [從 Web 專案的工作流程中取用 WCF 服務](https://go.microsoft.com/fwlink/?LinkId=207725)

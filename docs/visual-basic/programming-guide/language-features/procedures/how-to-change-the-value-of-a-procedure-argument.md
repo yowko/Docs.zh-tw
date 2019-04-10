@@ -13,12 +13,12 @@ helpviewer_keywords:
 - arguments [Visual Basic], ByRef
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
-ms.openlocfilehash: 6aee795fefe36c2ad19390c0ac6d1613b2199415
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837481"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316618"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>HOW TO：變更值的程序引數 (Visual Basic)
 當您呼叫程序時，您提供每個引數會對應至其中一個程序中所定義的參數。 在某些情況下，程序程式碼可以變更基礎呼叫程式碼中的引數的值。 在其他情況下，此程序可以變更其本機複本的引數。  
@@ -31,13 +31,13 @@ ms.locfileid: "58837481"
   
 #### <a name="to-change-the-underlying-value-of-a-procedure-argument-in-the-calling-code"></a>若要變更基礎值的程序中的引數呼叫的程式碼  
   
-1.  在程序宣告中，指定[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)參數對應到引數。  
+1. 在程序宣告中，指定[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)參數對應到引數。  
   
-2.  在呼叫的程式碼，做為引數會傳遞可修改的程式設計項目。  
+2. 在呼叫的程式碼，做為引數會傳遞可修改的程式設計項目。  
   
-3.  在呼叫的程式碼中，未將引數清單中的括號括住的引數。  
+3. 在呼叫的程式碼中，未將引數清單中的括號括住的引數。  
   
-4.  在程序程式碼中，使用參數名稱來指派值給呼叫程式碼對應的項目。  
+4. 在程序程式碼中，使用參數名稱來指派值給呼叫程式碼對應的項目。  
   
  範例，請參閱稍後如需示範。  
   
@@ -46,13 +46,13 @@ ms.locfileid: "58837481"
   
 #### <a name="to-change-the-copy-of-a-procedure-argument-in-the-procedure-code"></a>若要變更的程序程式碼中的程序引數的複本  
   
-1.  在程序宣告中，指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)參數對應到引數。  
+1. 在程序宣告中，指定[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)參數對應到引數。  
   
      -或-  
   
      在呼叫的程式碼中，括住的引數清單中的括號括住的引數。 這會強制 Visual Basic，以傳遞引數的值，即使對應的參數會指定`ByRef`。  
   
-2.  在程序程式碼中，使用參數名稱來指派值給引數的本機副本。 不會變更呼叫程式碼中的對應值。  
+2. 在程序程式碼中，使用參數名稱來指派值給引數的本機副本。 不會變更呼叫程式碼中的對應值。  
   
 ## <a name="example"></a>範例  
  下列範例會顯示取得陣列變數和操作的兩個程序，其項目上。 `increase`程序只需新增至每個項目。 `replace`程序會將新的陣列指派給參數`a()`，然後新增一個每個項目。  
@@ -81,11 +81,11 @@ ms.locfileid: "58837481"
 
 - [程序](./index.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)
+- [HOW TO：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)
 - [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)
 - [可修改引數和不可修改引數之間的差異](./differences-between-modifiable-and-nonmodifiable-arguments.md)
 - [以傳值或傳址方式傳遞引數的差別](./differences-between-passing-an-argument-by-value-and-by-reference.md)
-- [如何：防止程序引數的值變更](./how-to-protect-a-procedure-argument-against-value-changes.md)
-- [如何：強制以傳值方式傳遞的引數](./how-to-force-an-argument-to-be-passed-by-value.md)
+- [HOW TO：防止程序引數的值變更](./how-to-protect-a-procedure-argument-against-value-changes.md)
+- [HOW TO：強制以傳值方式傳遞引數](./how-to-force-an-argument-to-be-passed-by-value.md)
 - [依位置和名稱傳遞引數](./passing-arguments-by-position-and-by-name.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)

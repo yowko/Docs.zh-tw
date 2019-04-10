@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], examples
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
-ms.openlocfilehash: d75d96f8db216ab78e13ba5f8409ea5aa535d685
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59192689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315150"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>HOW TO：使用 Windows Forms 建立多窗格使用者介面
 在下列程序中，您將建立類似於使用 Microsoft Outlook 中所使用的多窗格使用者介面**資料夾** 清單中，**訊息**窗格中，和**預覽**  窗格。 這種排列方式是主要透過停駐控制項的表單來達成的。  
@@ -30,7 +30,7 @@ ms.locfileid: "59192689"
   
 ### <a name="to-create-an-outlook-style-user-interface-programmatically"></a>若要以程式設計方式建立的 Outlook 樣式使用者介面  
   
-1.  在表單中，宣告每個包含您的使用者介面的控制項。 此範例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>為了模仿 Microsoft Outlook 使用者介面的控制項。  
+1. 在表單中，宣告每個包含您的使用者介面的控制項。 此範例中，使用<xref:System.Windows.Forms.TreeView>， <xref:System.Windows.Forms.ListView>， <xref:System.Windows.Forms.SplitContainer>，和<xref:System.Windows.Forms.RichTextBox>為了模仿 Microsoft Outlook 使用者介面的控制項。  
   
     ```vb  
     Private WithEvents treeView1 As System.Windows.Forms.TreeView  
@@ -50,7 +50,7 @@ ms.locfileid: "59192689"
     private System.Windows.Forms. SplitContainer splitContainer1;  
     ```  
   
-2.  建立您的使用者介面會定義程序。 下列程式碼設定的屬性，使表單看起來將類似 Microsoft Outlook 中的使用者介面。 不過，藉由使用其他控制項，或停駐它們以不同的方式，它是一樣的容易建立一樣具有彈性的其他使用者介面。  
+2. 建立您的使用者介面會定義程序。 下列程式碼設定的屬性，使表單看起來將類似 Microsoft Outlook 中的使用者介面。 不過，藉由使用其他控制項，或停駐它們以不同的方式，它是一樣的容易建立一樣具有彈性的其他使用者介面。  
   
     ```vb  
     Public Sub CreateOutlookUI()  
@@ -164,7 +164,7 @@ ms.locfileid: "59192689"
     }  
     ```  
   
-3.  在 Visual Basic 中，新增您在建立程序的呼叫`New()`程序。 在視覺效果C#，將這行程式碼新增至表單類別的建構函式。  
+3. 在 Visual Basic 中，新增您在建立程序的呼叫`New()`程序。 在視覺效果C#，將這行程式碼新增至表單類別的建構函式。  
   
     ```vb  
     ' Add this to the New procedure.  

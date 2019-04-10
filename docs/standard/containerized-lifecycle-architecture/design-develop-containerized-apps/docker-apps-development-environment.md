@@ -4,12 +4,12 @@ description: 了解最重要的開發工具選項可支援 Docker 開發生命�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 38a9f8209200635c752f60af90e22ef916796525
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3a2fcbe3b9380083622b6ce72cea4bab17d7c2ea
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677236"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318815"
 ---
 # <a name="development-environment-for-docker-apps"></a>Docker 應用程式的開發環境
 
@@ -33,7 +33,7 @@ ms.locfileid: "57677236"
 
 ### <a name="visual-studio-for-mac-mac-development-machine"></a>Visual Studio for Mac （Mac 開發電腦）
 
-您可以使用[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/)開發以 Docker 為基礎的應用程式時。 Visual Studio for Mac 提供更豐富的 IDE，相較於 Visual Studio Code for mac。
+您可以使用[Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link)開發以 Docker 為基礎的應用程式時。 Visual Studio for Mac 提供更豐富的 IDE，相較於 Visual Studio Code for mac。
 
 ## <a name="language-and-framework-choices"></a>語言和架構選項
 

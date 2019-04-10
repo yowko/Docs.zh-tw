@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32022
 ms.assetid: 4dcfcb8d-a9fa-46a7-a034-29d9ff3a59b3
-ms.openlocfilehash: eb0b40a80d37788bcab32791d7ed701a77505371
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: bf900566bdb4ecf8d8961a12b5dd67ba426caf27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831424"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305594"
 ---
 # <a name="eventname-is-an-event-and-cannot-be-called-directly"></a>'\<事件名稱 >' 是個事件，並不能直接呼叫
 ' <`eventname`>' 是個事件，並因此無法直接呼叫。 使用`RaiseEvent`陳述式來引發事件。  
@@ -23,7 +23,7 @@ ms.locfileid: "58831424"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  使用`RaiseEvent`陳述式來對事件發出信號，並叫用程序或處理程序。  
+1. 使用`RaiseEvent`陳述式來對事件發出信號，並叫用程序或處理程序。  
   
 ## <a name="see-also"></a>另請參閱
 

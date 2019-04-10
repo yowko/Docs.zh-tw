@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
-ms.openlocfilehash: 8fe76cfa0dbcd8bc7ef8248ac798a8b45bf87201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203531"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315175"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>設定 WS-Atomic 交易支援
 這個主題說明如何使用 [WS-AT 組態公用程式] 來設定 WS-AtomicTransaction (WS-AT) 支援。  
@@ -56,19 +56,19 @@ ms.locfileid: "59203531"
   
  您必須已擁有必要的憑證，才能建立信任。 若要了解如何建立及安裝新的憑證，在以下步驟前，請參閱[How to:建立並在 WCF 中的暫存用戶端憑證安裝在開發期間](https://go.microsoft.com/fwlink/?LinkId=158925)。  
   
-1.  在電腦 A 上，使用 MMC 憑證嵌入式管理單元將現有的憑證 (certA) 匯入 LocalMachine\MY (個人節點) 和 LocalMachine\ROOT 存放區 (受信任的根憑證授權單位節點)。 若要將憑證匯入特定的節點，以滑鼠右鍵按一下節點，然後選擇**所有工作/匯入**。  
+1. 在電腦 A 上，使用 MMC 憑證嵌入式管理單元將現有的憑證 (certA) 匯入 LocalMachine\MY (個人節點) 和 LocalMachine\ROOT 存放區 (受信任的根憑證授權單位節點)。 若要將憑證匯入特定的節點，以滑鼠右鍵按一下節點，然後選擇**所有工作/匯入**。  
   
-2.  在電腦 B 上，使用 MMC 憑證嵌入式管理單元，建立或取得具有私密金鑰的憑證 certB，並將該憑證匯入 LocalMachine\MY (個人節點) 和 LocalMachine\ROOT 存放區 (受信任的根憑證授權單位節點)。  
+2. 在電腦 B 上，使用 MMC 憑證嵌入式管理單元，建立或取得具有私密金鑰的憑證 certB，並將該憑證匯入 LocalMachine\MY (個人節點) 和 LocalMachine\ROOT 存放區 (受信任的根憑證授權單位節點)。  
   
-3.  將 certA 的公開金鑰匯出至檔案 (如果尚未匯出的話)。  
+3. 將 certA 的公開金鑰匯出至檔案 (如果尚未匯出的話)。  
   
-4.  將 certB 的公開金鑰匯出至檔案 (如果尚未匯出的話)。  
+4. 將 certB 的公開金鑰匯出至檔案 (如果尚未匯出的話)。  
   
 ### <a name="establishing-mutual-trust-between-machines"></a>建立電腦之間的相互信任  
   
-1.  在電腦 A 上，將 certB 的檔案代表匯入 LocalMachine\MY 和 LocalMachine\ROOT 存放區。 這樣表示電腦 A 信任 certB，並可進行通訊。  
+1. 在電腦 A 上，將 certB 的檔案代表匯入 LocalMachine\MY 和 LocalMachine\ROOT 存放區。 這樣表示電腦 A 信任 certB，並可進行通訊。  
   
-2.  在電腦 B 上，將 certA 的檔案匯入 LocalMachine\MY 和 LocalMachine\ROOT 存放區。 這樣表示電腦 B 信任 certA，並可進行通訊。  
+2. 在電腦 B 上，將 certA 的檔案匯入 LocalMachine\MY 和 LocalMachine\ROOT 存放區。 這樣表示電腦 B 信任 certA，並可進行通訊。  
   
  完成這些步驟之後，兩部電腦之間隨即建立信任，並可將這些電腦設定為使用 WS-AT 彼此通訊。  
   
@@ -77,9 +77,9 @@ ms.locfileid: "59203531"
   
  您可以使用 MMC WS-AT 嵌入式管理單元設定此項。 如需有關這項工具的詳細資訊，請參閱 < [WS-AtomicTransaction 組態 MMC 嵌入式管理單元](../../../../docs/framework/wcf/ws-atomictransaction-configuration-mmc-snap-in.md)主題。 下列步驟描述如何在執行 MSDTC 的兩部電腦之間建立信任。  
   
-1.  進行電腦 A 的設定。 「 端點憑證 」，請選取 certA。 「 已授權憑證 」，請選取 certB。  
+1. 進行電腦 A 的設定。 「 端點憑證 」，請選取 certA。 「 已授權憑證 」，請選取 certB。  
   
-2.  進行電腦 B 的設定。 「 端點憑證 」，請選取 certB。 「 已授權憑證 」，請選取 certA。  
+2. 進行電腦 B 的設定。 「 端點憑證 」，請選取 certB。 「 已授權憑證 」，請選取 certA。  
   
 > [!NOTE]
 >  當某一部電腦將訊息傳送至其他電腦時，傳送者會嘗試驗證收件者憑證的主體名稱和收件者的電腦名稱是否相符。 如果不符，憑證驗證就會失敗，而這兩部電腦則無法進行通訊。  
@@ -98,13 +98,13 @@ ms.locfileid: "59203531"
   
  WS-AT 通訊協定服務也支援經由 ETW 追蹤工作階段的整合式 ServiceModel 追蹤。 如此除了現有的交易追蹤之外，也會提供更詳細的通訊特定追蹤。  若要啟用這些額外的追蹤，請遵循這些步驟  
   
-1.  開啟**開始/執行** 功能表中，輸入方塊中輸入"regedit"，然後選取**確定**。  
+1. 開啟**開始/執行** 功能表中，輸入方塊中輸入"regedit"，然後選取**確定**。  
   
-2.  在 **登錄編輯程式**，瀏覽至下列資料夾，在左窗格中，Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
+2. 在 **登錄編輯程式**，瀏覽至下列資料夾，在左窗格中，Hkey_Local_Machine\SOFTWARE\Microsoft\WSAT\3.0\  
   
-3.  以滑鼠右鍵按一下`ServiceModelDiagnosticTracing`右窗格中的值，然後選取**修改**。  
+3. 以滑鼠右鍵按一下`ServiceModelDiagnosticTracing`右窗格中的值，然後選取**修改**。  
   
-4.  在 **數值資料**輸入方塊中，輸入其中一個有效的下列值，指定您想要啟用的追蹤層級。  
+4. 在 **數值資料**輸入方塊中，輸入其中一個有效的下列值，指定您想要啟用的追蹤層級。  
   
 -   0：關閉  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - explicit variable declaration
 - Option Explicit statement [Visual Basic]
 ms.assetid: e82ac1ad-2cd3-49b2-b985-8bcf016f3fcc
-ms.openlocfilehash: c42dd74ea0dc01b8ae7ffb7eb04737a9784625a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0a319ba4259e66ed9a37aa2de9e97d2335b78663
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841447"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308610"
 ---
 # <a name="option-explicit-statement-visual-basic"></a>Option Explicit 陳述式 (Visual Basic)
 會強制明確宣告在檔案中，所有變數，或允許隱含宣告的變數。  
@@ -47,11 +47,11 @@ Option Explicit { On | Off }
   
 #### <a name="to-set-option-explicit-in-the-ide"></a>若要設定在 IDE 中的 Option Explicit  
   
-1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
+1. 在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
-2.  按一下 [編譯] 索引標籤。  
+2. 按一下 [編譯] 索引標籤。  
   
-3.  在設定的值**Option Explicit**  方塊中。  
+3. 在設定的值**Option Explicit**  方塊中。  
   
  當您建立新的專案中， **Option Explicit**上設定**編譯**索引標籤設定為**Option Explicit**中設定**VB 預設值** 對話方塊。 若要存取**VB 預設值**對話方塊的 **工具**功能表上，按一下 **選項**。 在 [選項] 對話方塊中，展開 [專案和方案]，然後按一下 [VB 預設值]。 中的初始預設設定**VB 預設值**是`On`。  
   
@@ -71,7 +71,7 @@ Option Explicit { On | Off }
 - [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)
 - [ReDim 陳述式](../../../visual-basic/language-reference/statements/redim-statement.md)
 - [Option Compare 陳述式](../../../visual-basic/language-reference/statements/option-compare-statement.md)
-- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [/optioncompare](../../../visual-basic/reference/command-line-compiler/optioncompare.md)
 - [/optionexplicit](../../../visual-basic/reference/command-line-compiler/optionexplicit.md)
 - [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)

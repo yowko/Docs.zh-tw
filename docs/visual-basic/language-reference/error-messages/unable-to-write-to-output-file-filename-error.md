@@ -1,5 +1,5 @@
 ---
-title: "無法寫入輸出檔案 '<filename>': <error>"
+title: "無法寫入輸出檔 '<filename>': <error>"
 ms.date: 07/20/2015
 f1_keywords:
 - vbc31019
@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31019
 ms.assetid: 0845b245-11bb-46fd-95ca-f6cef3c318ef
-ms.openlocfilehash: 61ba4dbc668f7b236b0631f797feb4e81068e517
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f29eb628c079f65a520cf5e1ccd8afed549f7cad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58827186"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318217"
 ---
 # <a name="unable-to-write-to-output-file-filename-error"></a>無法寫入輸出檔 '\<檔案名稱 >':\<錯誤 >
 建立檔案時發生問題。  
@@ -31,32 +31,32 @@ ms.locfileid: "58827186"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  再次編譯程式，看看錯誤是否重複發生。  
+1. 再次編譯程式，看看錯誤是否重複發生。  
   
-2.  如果錯誤持續發生，請儲存您的工作，然後重新啟動 Visual Studio。  
+2. 如果錯誤持續發生，請儲存您的工作，然後重新啟動 Visual Studio。  
   
-3.  如果錯誤繼續發生，請重新啟動電腦。  
+3. 如果錯誤繼續發生，請重新啟動電腦。  
   
-4.  如果錯誤重複發生，請重新安裝 Visual Basic。  
+4. 如果錯誤重複發生，請重新安裝 Visual Basic。  
   
-5.  如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
+5. 如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
   
 ### <a name="to-check-file-attributes-in-file-explorer"></a>在檔案總管中檢查檔案屬性  
   
-1.  開啟您感興趣的資料夾。  
+1. 開啟您感興趣的資料夾。  
   
-2.  按一下 **檢視**圖示，然後選擇**詳細資料**。  
+2. 按一下 **檢視**圖示，然後選擇**詳細資料**。  
   
-3.  以滑鼠右鍵按一下資料行標頭，然後選擇**屬性**從下拉式清單。  
+3. 以滑鼠右鍵按一下資料行標頭，然後選擇**屬性**從下拉式清單。  
   
 ### <a name="to-change-the-attributes-of-a-file-or-folder"></a>變更檔案或資料夾的屬性  
   
-1.  在 **檔案總管**，以滑鼠右鍵按一下檔案或資料夾，然後選擇**屬性**。  
+1. 在 **檔案總管**，以滑鼠右鍵按一下檔案或資料夾，然後選擇**屬性**。  
   
-2.  在 [**屬性**一節**一般**索引標籤上，清除**唯讀**] 方塊中。  
+2. 在 [**屬性**一節**一般**索引標籤上，清除**唯讀**] 方塊中。  
   
-3.  按 [確定]。  
+3. 按 [確定]。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

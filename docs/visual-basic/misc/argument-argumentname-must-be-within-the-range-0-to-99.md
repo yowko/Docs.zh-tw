@@ -4,21 +4,21 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrArgument_Range0to99_1
 ms.assetid: d9d9a15e-c5ee-4104-9504-b48a4a191415
-ms.openlocfilehash: 660c011e16e646a755d11a338ba47d13610a46e1
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: a582559c4914e6c05f1aef2a78a49adbb244aa59
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299679"
 ---
 # <a name="argument-argumentname-must-be-within-the-range-0-to-99"></a>引數 '\<引數名稱 >' 必須是介於 0 到 99 之間
 引數無效，因為它超出 0 到 99 的範圍。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  請檢查運算式中的引數拼法。 拼錯的變數名稱可能會隱含地建立初始化為零的數值變數。  
+1. 請檢查運算式中的引數拼法。 拼錯的變數名稱可能會隱含地建立初始化為零的數值變數。  
   
-2.  請檢查運算式中先前的變數作業，特別是那些作為引數從其他程序傳遞至程序的變數。  
+2. 請檢查運算式中先前的變數作業，特別是那些作為引數從其他程序傳遞至程序的變數。  
   
 ## <a name="see-also"></a>另請參閱
 

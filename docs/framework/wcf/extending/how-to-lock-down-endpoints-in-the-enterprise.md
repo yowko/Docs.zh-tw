@@ -2,12 +2,12 @@
 title: HOW TO：鎖定企業的端點
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
-ms.openlocfilehash: 9bfd077abf0956f014c78a7c398670822724f7e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181338"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305951"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>HOW TO：鎖定企業的端點
 大型企業通常需要在遵循企業安全性原則的環境中開發應用程式。 下列主題討論如何開發與安裝用戶端端點驗證器，可用來驗證所有安裝在電腦上的 Windows Communication Foundation (WCF) 用戶端應用程式。  
@@ -25,23 +25,23 @@ ms.locfileid: "59181338"
   
 ### <a name="to-create-the-endpoint-validator"></a>若要建立端點驗證器  
   
-1.  以 <xref:System.ServiceModel.Description.IEndpointBehavior> 方法中所需的驗證步驟建立 <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>。 下列程式碼提供一個範例。 (`InternetClientValidatorBehavior`取自[安全性驗證](../../../../docs/framework/wcf/samples/security-validation.md)範例。)  
+1. 以 <xref:System.ServiceModel.Description.IEndpointBehavior> 方法中所需的驗證步驟建立 <xref:System.ServiceModel.Description.IEndpointBehavior.Validate%2A>。 下列程式碼提供一個範例。 (`InternetClientValidatorBehavior`取自[安全性驗證](../../../../docs/framework/wcf/samples/security-validation.md)範例。)  
   
      [!code-csharp[LockdownValidation#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorbehavior.cs#2)]  
   
-2.  建立新的 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>，它會註冊步驟 1 中建立的端點驗證器。 下列程式碼範例會顯示這點。 (此範例中的原始程式碼位於[安全性驗證](../../../../docs/framework/wcf/samples/security-validation.md)範例。)  
+2. 建立新的 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement>，它會註冊步驟 1 中建立的端點驗證器。 下列程式碼範例會顯示這點。 (此範例中的原始程式碼位於[安全性驗證](../../../../docs/framework/wcf/samples/security-validation.md)範例。)  
   
      [!code-csharp[LockdownValidation#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/lockdownvalidation/cs/internetclientvalidatorelement.cs#3)]  
   
-3.  請務必以強式名稱簽署編譯的組件。 如需詳細資訊，請參閱[強式名稱工具 (SN。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)和您語言的編譯器命令。  
+3. 請務必以強式名稱簽署編譯的組件。 如需詳細資訊，請參閱[強式名稱工具 (SN。EXE)](https://go.microsoft.com/fwlink/?LinkId=248217)和您語言的編譯器命令。  
   
 ### <a name="to-install-the-validator-into-the-target-computer"></a>若要將驗證器安裝至目標電腦  
   
-1.  使用適當的機制安裝端點驗證器。 在企業中，您可以使用群組原則和 Systems Management Server (SMS) 安裝端點驗證器。  
+1. 使用適當的機制安裝端點驗證器。 在企業中，您可以使用群組原則和 Systems Management Server (SMS) 安裝端點驗證器。  
   
-2.  強式名稱組件安裝到全域組件快取使用[Gacutil.exe （全域組件快取工具）](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
+2. 強式名稱組件安裝到全域組件快取使用[Gacutil.exe （全域組件快取工具）](../../../../docs/framework/tools/gacutil-exe-gac-tool.md)。  
   
-3.  使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空間型別以：  
+3. 使用 <xref:System.Configuration?displayProperty=nameWithType> 命名空間型別以：  
   
     1.  將延伸加入至[ \<behaviorExtensions >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviorextensions.md)區段使用完整類型名稱，並鎖定項目。  
   

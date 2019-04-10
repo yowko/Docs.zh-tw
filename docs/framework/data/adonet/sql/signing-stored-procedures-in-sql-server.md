@@ -2,12 +2,12 @@
 title: 在 SQL Server 中簽署預存程序
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
-ms.openlocfilehash: 1caf3de06a03d4eab97e68ac1ecdc00dacdd5dc8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094615"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313914"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>在 SQL Server 中簽署預存程序
  數位簽章是指使用簽署者之私密金鑰 (Private Key) 加密的資料摘要。 私密金鑰可確保數位簽章對於其 Bearer 或擁有者而言是唯一的。 您可以簽署預存程序、 函式 （除了內嵌資料表值函式）、 觸發程序，以及組件。  
@@ -23,25 +23,25 @@ ms.locfileid: "59094615"
   
  簽署模組是兩個所需的步驟：  
   
-1.  使用 Transact-SQL `CREATE CERTIFICATE [certificateName]` 陳述式來建立憑證。 這個陳述式具有許多設定開始和結束日期與密碼的選項。 預設的到期日是一年。  
+1. 使用 Transact-SQL `CREATE CERTIFICATE [certificateName]` 陳述式來建立憑證。 這個陳述式具有許多設定開始和結束日期與密碼的選項。 預設的到期日是一年。  
   
-1.  使用 Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` 陳述式並搭配憑證來簽署程序。  
+1. 使用 Transact-SQL `ADD SIGNATURE TO [procedureName] BY CERTIFICATE [certificateName]` 陳述式並搭配憑證來簽署程序。  
 
 一旦已簽署的模組，一或多個主體，就必須建立以便保存應與憑證相關聯的額外權限。  
 
 如果此模組需要額外的資料庫層級權限：  
   
-1.  使用 Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` 陳述式來建立與憑證相關聯的資料庫使用者。 這位使用者只會在資料庫中存在，而且不與登入相關聯，除非也從相同的憑證建立登入。  
+1. 使用 Transact-SQL `CREATE USER [userName] FROM CERTIFICATE [certificateName]` 陳述式來建立與憑證相關聯的資料庫使用者。 這位使用者只會在資料庫中存在，而且不與登入相關聯，除非也從相同的憑證建立登入。  
   
-1.  授與憑證使用者必要的資料庫層級權限。  
+1. 授與憑證使用者必要的資料庫層級權限。  
   
 如果此模組需要額外的伺服器層級權限：  
   
-1.  若要將憑證複製`master`資料庫。  
+1. 若要將憑證複製`master`資料庫。  
  
-1.  建立與使用 TRANSACT-SQL 該憑證相關聯的登入`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`陳述式。  
+1. 建立與使用 TRANSACT-SQL 該憑證相關聯的登入`CREATE LOGIN [userName] FROM CERTIFICATE [certificateName]`陳述式。  
   
-1.  授與憑證登入需要的伺服器層級權限。  
+1. 授與憑證登入需要的伺服器層級權限。  
   
 > [!NOTE]  
 >  憑證無法授與權限給擁有使用 DENY 陳述式撤銷之權限的使用者。 DENY 的優先順序永遠高於 GRANT，可防止呼叫端繼承授與憑證使用者的權限。  

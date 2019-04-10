@@ -2,12 +2,12 @@
 title: 探索路由器服務
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
-ms.openlocfilehash: 9c0c409eb6cf3146a198b9f4bcd6d76660f5da36
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43509077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318763"
 ---
 # <a name="discovery-router-service"></a>探索路由器服務
 此範例示範如何將探索訊息轉送到其他端點。  
@@ -22,13 +22,13 @@ ms.locfileid: "43509077"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  建置 (Build) 範例。  
+1. 建置 (Build) 範例。  
   
-2.  執行 DiscoveryRouter 可執行檔。  
+2. 執行 DiscoveryRouter 可執行檔。  
   
-3.  從組建目錄執行服務的可執行檔。  
+3. 從組建目錄執行服務的可執行檔。  
   
-4.  執行用戶端可執行檔。 請注意，用戶端會尋找服務。  
+4. 執行用戶端可執行檔。 請注意，用戶端會尋找服務。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [WPF], about data binding
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
-ms.openlocfilehash: a11118f0fad98d7c719951b97d7ad2b431e7af6d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59081264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315318"
 ---
 # <a name="data-binding-overview"></a>資料繫結概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結會提供簡單且一致的方式呈現，並與資料互動的應用程式。 項目可以和各種資料來源的資料繫結，資料的形式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]。 <xref:System.Windows.Controls.ContentControl>這類的 s<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.ItemsControl>這類的 s<xref:System.Windows.Controls.ListBox>和<xref:System.Windows.Controls.ListView>有內建的功能，可讓彈性的樣式，單一資料項目的集合。 您可以在資料上方產生排序、篩選和群組檢視。  
@@ -404,17 +404,17 @@ ms.locfileid: "59081264"
   
  以下描述「驗證」程序。 請注意，如果在此程序執行期間發生驗證錯誤或其他型別錯誤，程序就會中止。  
   
-1.  繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.RawProposedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>直到其中一個執行時發生錯誤或直到它們全部都通過之後。  
+1. 繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.RawProposedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>直到其中一個執行時發生錯誤或直到它們全部都通過之後。  
   
-2.  接著，繫結引擎就會在有轉換器的情況下呼叫轉換器。  
+2. 接著，繫結引擎就會在有轉換器的情況下呼叫轉換器。  
   
-3.  如果轉換器成功，繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>直到其中一個會遇到錯誤，或直到它們全部都通過之後。  
+3. 如果轉換器成功，繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設定為<xref:System.Windows.Controls.ValidationStep.ConvertedProposedValue>直到其中一個會遇到錯誤，或直到它們全部都通過之後。  
   
-4.  繫結引擎會設定來源屬性。  
+4. 繫結引擎會設定來源屬性。  
   
-5.  繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>直到其中一個會遇到錯誤，或直到它們全部都通過之後。 如果<xref:System.Windows.Controls.DataErrorValidationRule>相關聯的繫結及其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為預設值， <xref:System.Windows.Controls.ValidationStep.UpdatedValue>，則<xref:System.Windows.Controls.DataErrorValidationRule>此時檢查。 這也是點時擁有的繫結<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>設定為`true`會檢查。  
+5. 繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>直到其中一個會遇到錯誤，或直到它們全部都通過之後。 如果<xref:System.Windows.Controls.DataErrorValidationRule>相關聯的繫結及其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為預設值， <xref:System.Windows.Controls.ValidationStep.UpdatedValue>，則<xref:System.Windows.Controls.DataErrorValidationRule>此時檢查。 這也是點時擁有的繫結<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>設定為`true`會檢查。  
   
-6.  繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.CommittedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.CommittedValue>直到其中一個會遇到錯誤，或直到它們全部都通過之後。  
+6. 繫結引擎會檢查是否有任何自訂<xref:System.Windows.Controls.ValidationRule>物件定義其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.CommittedValue>該<xref:System.Windows.Data.Binding>，它會在此情況下呼叫<xref:System.Windows.Controls.ValidationRule.Validate%2A>方法，在每個<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.CommittedValue>直到其中一個會遇到錯誤，或直到它們全部都通過之後。  
   
  如果<xref:System.Windows.Controls.ValidationRule>未通過此程序期間的任何時間，在繫結引擎會建立<xref:System.Windows.Controls.ValidationError>物件，並將它加入至<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>繫結元素的集合。 之前的繫結引擎會執行<xref:System.Windows.Controls.ValidationRule>物件在任何給定的步驟中，它會移除任何<xref:System.Windows.Controls.ValidationError>已加入至<xref:System.Windows.Controls.Validation.Errors%2A?displayProperty=nameWithType>該步驟期間，連接繫結項目的屬性。 例如，如果<xref:System.Windows.Controls.ValidationRule>其<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>失敗，發生驗證程序，繫結引擎會移除，在下一次<xref:System.Windows.Controls.ValidationError>立即之前呼叫任何<xref:System.Windows.Controls.ValidationRule>具有<xref:System.Windows.Controls.ValidationRule.ValidationStep%2A>設為<xref:System.Windows.Controls.ValidationStep.UpdatedValue>.  
   

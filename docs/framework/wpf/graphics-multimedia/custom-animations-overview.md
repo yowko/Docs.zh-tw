@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], custom classes
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
-ms.openlocfilehash: 78c32c8aa1cf63ad6b9c9c51d856b02ccec68384
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313940"
 ---
 # <a name="custom-animations-overview"></a>自訂動畫概觀
 本主題說明如何以及何時建立自訂主要畫面格、動畫類別來擴充 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫系統，或使用每一畫面的回呼來略過它。  
@@ -99,9 +99,9 @@ ms.locfileid: "59190726"
   
  建議的範例 (由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 動畫使用) 是使用兩個繼承層級︰  
   
-1.  建立抽象*\<類型 >* AnimationBase 類別衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 這個類別應該覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它也應該引進新的抽象方法 GetCurrentValueCore 並覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，因此它會驗證預設原始值和預設目的值參數的類型，然後呼叫 GetCurrentValueCore。  
+1. 建立抽象*\<類型 >* AnimationBase 類別衍生自<xref:System.Windows.Media.Animation.AnimationTimeline>。 這個類別應該覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A>方法。 它也應該引進新的抽象方法 GetCurrentValueCore 並覆寫<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>，因此它會驗證預設原始值和預設目的值參數的類型，然後呼叫 GetCurrentValueCore。  
   
-2.  建立另一個類別繼承自新*\<類型 >* AnimationBase 類別並覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法中，您引進的 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>屬性。  
+2. 建立另一個類別繼承自新*\<類型 >* AnimationBase 類別並覆寫<xref:System.Windows.Freezable.CreateInstanceCore%2A>方法中，您引進的 GetCurrentValueCore 方法和<xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A>屬性。  
   
  **替代方法**  
   

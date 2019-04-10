@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 2f48f9486c5d29fc0b70e4487a12a1c499235cba
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: efea92fa5176641ac64265dfffd44a088115bb61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305932"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>建立 .NET Framework 用戶端應用程式 (WCF 資料服務快速入門)
 
@@ -21,38 +21,38 @@ ms.locfileid: "54732644"
 
 ## <a name="to-create-the-client-application-by-using-visual-studio"></a>若要使用 Visual Studio 建立用戶端應用程式
 
-1.  中**方案總管**，以滑鼠右鍵按一下方案，按一下**新增**，然後按一下 **新專案**。
+1. 中**方案總管**，以滑鼠右鍵按一下方案，按一下**新增**，然後按一下 **新專案**。
 
-2.  在左窗格中，選取**已安裝**> [**Visual C#** 或是**Visual Basic**] > **Windows Desktop**，然後選取  **WPF 應用程式**範本。
+2. 在左窗格中，選取**已安裝**> [**Visual C#** 或是**Visual Basic**] > **Windows Desktop**，然後選取  **WPF 應用程式**範本。
 
-3.  請輸入`NorthwindClient`做為專案名稱，然後按一下 **[確定]**。
+3. 請輸入`NorthwindClient`做為專案名稱，然後按一下 **[確定]**。
 
-4.  開啟 MainWindow.xaml 檔案，並以下列程式碼取代 XAML 程式碼：
+4. 開啟 MainWindow.xaml 檔案，並以下列程式碼取代 XAML 程式碼：
 
      [!code-xaml[Astoria Quickstart Client#Window1Xaml](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml#window1xaml)]
 
 ## <a name="to-add-a-data-service-reference-to-the-project"></a>若要將資料服務參考加入至專案
 
-1.  在 **方案總管 中**，以滑鼠右鍵按一下 NorthwindClient 專案，按一下 **新增** > **服務參考**，然後按一下 **探索**.
+1. 在 **方案總管 中**，以滑鼠右鍵按一下 NorthwindClient 專案，按一下 **新增** > **服務參考**，然後按一下 **探索**.
 
      這會顯示您在第一個工作中建立的 Northwind 資料服務。
 
-2.  在 **命名空間**文字方塊中，輸入`Northwind`，然後按一下**確定**。
+2. 在 **命名空間**文字方塊中，輸入`Northwind`，然後按一下**確定**。
 
      這會將新的程式碼檔案加入至專案中，此專案包含的資料類別可用來存取做為物件的資料服務資源，並與之進行互動。 在命名空間 `NorthwindClient.Northwind` 中建立資料類別。
 
 ## <a name="to-access-data-service-data-in-the-wpf-application"></a>在 WPF 應用程式中存取資料服務的資料
 
-1.  在**方案總管**下方**NorthwindClient**，以滑鼠右鍵按一下專案，然後按一下**加入參考**。
+1. 在**方案總管**下方**NorthwindClient**，以滑鼠右鍵按一下專案，然後按一下**加入參考**。
 
-2.  在 [**加入參考**] 對話方塊中，按一下 **.NET**索引標籤上，選取 System.Data.Services.Client.dll 組件，然後按一下 **[確定]**。
+2. 在 [**加入參考**] 對話方塊中，按一下 **.NET**索引標籤上，選取 System.Data.Services.Client.dll 組件，然後按一下 **[確定]**。
 
 3. 在**方案總管**下方**NorthwindClient**，開啟 MainWindow.xaml 檔案的字碼頁，並新增下列`using`陳述式 (`Imports` Visual Basic 中)。
 
      [!code-csharp[Astoria Quickstart Client#Using](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#using)]
      [!code-vb[Astoria Quickstart Client#Using](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#using)]
 
-3.  插入下列查詢資料服務的程式碼，並將 <xref:System.Data.Services.Client.DataServiceCollection%601> 的結果繫結到 `MainWindow` 類別裡：
+3. 插入下列查詢資料服務的程式碼，並將 <xref:System.Data.Services.Client.DataServiceCollection%601> 的結果繫結到 `MainWindow` 類別裡：
 
     > [!NOTE]
     > 您必須用裝載 Northwind 資料服務之執行個體的伺服器及連接埠來取代主機名稱 `localhost:12345`。
@@ -60,20 +60,20 @@ ms.locfileid: "54732644"
      [!code-csharp[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#querycode)]
      [!code-vb[Astoria Quickstart Client#QueryCode](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#querycode)]
 
-4.  將下列儲存變更的程式碼插入 `MainWindow` 類別中：
+4. 將下列儲存變更的程式碼插入 `MainWindow` 類別中：
 
      [!code-csharp[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart client/cs/window1.xaml.cs#savechanges)]
      [!code-vb[Astoria Quickstart Client#SaveChanges](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart client/vb/window1.xaml.vb#savechanges)]
 
 ## <a name="to-build-and-run-the-northwindclient-application"></a>建置和執行 NorthwindClient 應用程式
 
-1.  在 **方案總管**，以滑鼠右鍵按一下 NorthwindClient 專案，然後選取**設定為啟始專案**。
+1. 在 **方案總管**，以滑鼠右鍵按一下 NorthwindClient 專案，然後選取**設定為啟始專案**。
 
-2.  按下**F5**啟動應用程式。
+2. 按下**F5**啟動應用程式。
 
      如此會建置方案，並啟動用戶端應用程式。 從服務要求資料，並顯示在主控台中。
 
-3.  編輯中的值**Quantity**資料行的資料格，然後按一下**儲存**。
+3. 編輯中的值**Quantity**資料行的資料格，然後按一下**儲存**。
 
      資料服務的變更會被儲存。
 

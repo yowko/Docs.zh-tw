@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ff226ce3-f6b5-47a1-8d22-dc78b67e07f5
-ms.openlocfilehash: c49d28f42dec311d4a0c35a7115b00d989411358
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 67c1307bb18b3e86e05b56f4853a39f6831ab9cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073711"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313589"
 ---
 # <a name="sqldependency-in-an-aspnet-application"></a>ASP.NET 應用程式中的 SqlDependency
 本節中的範例將顯示如何藉由使用 ASP.NET <xref:System.Data.SqlClient.SqlDependency> 物件，間接使用 <xref:System.Web.Caching.SqlCacheDependency>。 <xref:System.Web.Caching.SqlCacheDependency> 物件會使用 <xref:System.Data.SqlClient.SqlDependency> 來接聽通知並正確地更新快取。  
@@ -24,11 +24,11 @@ ms.locfileid: "59073711"
 ## <a name="creating-the-sample-application"></a>建立範例應用程式  
  請遵循下列步驟來建立並執行範例應用程式：  
   
-1.  建立新的 ASP.NET 網站。  
+1. 建立新的 ASP.NET 網站。  
   
-2.  將 <xref:System.Web.UI.WebControls.Label> 和 <xref:System.Web.UI.WebControls.GridView> 控制項加入至 Default.aspx 頁面。  
+2. 將 <xref:System.Web.UI.WebControls.Label> 和 <xref:System.Web.UI.WebControls.GridView> 控制項加入至 Default.aspx 頁面。  
   
-3.  開啟頁面的類別模組，並加入下列指示詞：  
+3. 開啟頁面的類別模組，並加入下列指示詞：  
   
     ```vb  
     Option Strict On  
@@ -42,12 +42,12 @@ ms.locfileid: "59073711"
     using System.Web.Caching;  
     ```  
   
-4.  將下列程式碼加入至頁面的 `Page_Load` 事件：  
+4. 將下列程式碼加入至頁面的 `Page_Load` 事件：  
   
      [!code-csharp[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#1)]
      [!code-vb[DataWorks SqlDependency.AspNet#1](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#1)]  
   
-5.  加入兩個 Helper 方法：`GetConnectionString` 及 `GetSQL`。 定義的連接字串會使用整合安全性。 您必須確認您使用的帳戶具有必要的資料庫權限，而且範例資料庫**AdventureWorks**，已啟用通知。
+5. 加入兩個 Helper 方法：`GetConnectionString` 及 `GetSQL`。 定義的連接字串會使用整合安全性。 您必須確認您使用的帳戶具有必要的資料庫權限，而且範例資料庫**AdventureWorks**，已啟用通知。
   
      [!code-csharp[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/CS/Default.aspx.cs#2)]
      [!code-vb[DataWorks SqlDependency.AspNet#2](../../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlDependency.AspNet/VB/Default.aspx.vb#2)]  

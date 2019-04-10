@@ -2,12 +2,12 @@
 title: WSStreamedHttpBinding
 ms.date: 03/30/2017
 ms.assetid: 97ce4d3d-ca6f-45fa-b33b-2429bb84e65b
-ms.openlocfilehash: 2c672f6f90de874a487ec3e2f2d8ad5c7bbc9809
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: de0c5683b081ecebf2168ffb5d6a2768fdd0a1fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59164810"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313979"
 ---
 # <a name="wsstreamedhttpbinding"></a>WSStreamedHttpBinding
 本範例會示範如何建立可在使用 HTTP 傳輸時支援資料流案例的繫結。  
@@ -26,7 +26,7 @@ ms.locfileid: "59164810"
   
  建立與設定新標準繫結的步驟如下所示。  
   
-1.  建立新標準繫結  
+1. 建立新標準繫結  
   
      例如 basicHttpBinding 以及 netTcpBinding 的標準繫結 Windows Communication Foundation (WCF) 中設定的基礎傳輸與通道堆疊的特定需求。 在這個範例中，`WSStreamedHttpBinding` 會將通道堆疊設定成支援資料流。 根據預設，WS-Security 和可信賴傳訊不會新增至通道堆疊中，因為資料流並不支援這兩項功能。 新繫結是透過衍生自 `WSStreamedHttpBinding` 的 <xref:System.ServiceModel.Channels.Binding> 類別所實作的。 `WSStreamedHttpBinding` 包含下列繫結項目：<xref:System.ServiceModel.Channels.HttpTransportBindingElement>、<xref:System.ServiceModel.Channels.HttpsTransportBindingElement>、<xref:System.ServiceModel.Channels.TransactionFlowBindingElement> 和 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>。 類別會提供 `CreateBindingElements()` 方法以設定結果繫結堆疊，如下列範例程式碼所示。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59164810"
     }  
     ```  
   
-2.  新增組態支援  
+2. 新增組態支援  
   
      為了透過組態公開傳輸，此範例會實作兩個額外的類別：`WSStreamedHttpBindingConfigurationElement` 和 `WSStreamedHttpBindingSection`。 此類別`WSStreamedHttpBindingSection`是<xref:System.ServiceModel.Configuration.StandardBindingCollectionElement%602>公開`WSStreamedHttpBinding`至 WCF 組態系統。 大量實作會委派至衍生自 `WSStreamedHttpBindingConfigurationElement` 的 <xref:System.ServiceModel.Configuration.StandardBindingElement>。 類別 `WSStreamedHttpBindingConfigurationElement` 有對應至 `WSStreamedHttpBinding` 之屬性的屬性，以及將每個組態項目對應至繫結的功能。  
   
@@ -86,21 +86,21 @@ ms.locfileid: "59164810"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  請確定您有執行中列出的步驟[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您有執行中列出的步驟[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  請確定您已執行[Internet Information Services (IIS) 伺服器憑證安裝指示](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
+3. 請確定您已執行[Internet Information Services (IIS) 伺服器憑證安裝指示](../../../../docs/framework/wcf/samples/iis-server-certificate-installation-instructions.md)。  
   
-4.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+4. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-5.  若要在跨電腦組態中執行範例，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+5. 若要在跨電腦組態中執行範例，請依照中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-6.  當用戶端視窗顯示時，請輸入 "Sample.txt"。 您應該會在目錄中找到「複製 - Sample.txt」。  
+6. 當用戶端視窗顯示時，請輸入 "Sample.txt"。 您應該會在目錄中找到「複製 - Sample.txt」。  
   
 ## <a name="the-wsstreamedhttpbinding-sample-service"></a>WSStreamedHttpBinding 範例服務  
  使用 `WSStreamedHttpBinding` 的範例服務位於服務子目錄中。 `OperationContract` 的實作會先使用 `MemoryStream` 從傳入資料流擷取所有資料，接著再傳回 `MemoryStream`。 此範例服務是由網際網路資訊服務 (IIS) 裝載。  

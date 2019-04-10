@@ -10,29 +10,29 @@ helpviewer_keywords:
 - signatures [Visual Basic], procedure
 - overloads [Visual Basic], resolution
 ms.assetid: 766115d1-4352-45fb-859f-6063e0de0ec0
-ms.openlocfilehash: e7a05a5fb0b2053e92d9f947f197bdb2dcfa7ce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f81c7377423899c142c4270f325bbd7ed20b877
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832277"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312237"
 ---
 # <a name="overload-resolution-visual-basic"></a>多載解析 (Visual Basic)
 當 Visual Basic 編譯器遇到定義在數個多載版本的程序的呼叫時，編譯器必須決定要呼叫的多載。 它會執行下列步驟：  
   
-1.  **協助工具。** 它會排除任何多載，以防止呼叫程式碼呼叫它的存取層級。  
+1. **存取範圍。** 它會排除任何多載，以防止呼叫程式碼呼叫它的存取層級。  
   
-2.  **參數的數目。** 它會排除任何在呼叫中定義不同數目的參數所提供的多載。  
+2. **參數的數目。** 它會排除任何在呼叫中定義不同數目的參數所提供的多載。  
   
-3.  **參數資料類型。** 編譯器會提供於延伸方法的執行個體方法的喜好設定。 如果找不到需要僅限於擴展轉換，來比對程序呼叫的任何執行個體方法，會卸除所有擴充方法，編譯器會繼續進行 僅執行個體方法候選對象。 如果找不到任何這類執行個體方法，它會繼續與執行個體和擴充方法。  
+3. **參數資料類型。** 編譯器會提供於延伸方法的執行個體方法的喜好設定。 如果找不到需要僅限於擴展轉換，來比對程序呼叫的任何執行個體方法，會卸除所有擴充方法，編譯器會繼續進行 僅執行個體方法候選對象。 如果找不到任何這類執行個體方法，它會繼續與執行個體和擴充方法。  
   
      在此步驟中，它會排除任何多載的呼叫的引數的資料類型無法轉換至多載中定義的參數類型。  
   
-4.  **縮小轉換。** 它會排除任何多載，必須呼叫的引數型別定義的參數類型是縮小轉換。 這是 true 不論類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`或`Off`。  
+4. **縮小轉換。** 它會排除任何多載，必須呼叫的引數型別定義的參數類型是縮小轉換。 這是 true 不論類型檢查參數 ([Option Strict 陳述式](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) 是`On`或`Off`。  
   
-5.  **最小的擴展。** 編譯器會考慮在配對中剩餘的多載。 針對每一組，它會比較定義之參數的資料類型。 如果中其中一個所有多載的型別會擴展為其他對應的型別，則編譯器會排除後者。 也就是說，它會保留需要最少擴展的多載。  
+5. **最小的擴展。** 編譯器會考慮在配對中剩餘的多載。 針對每一組，它會比較定義之參數的資料類型。 如果中其中一個所有多載的型別會擴展為其他對應的型別，則編譯器會排除後者。 也就是說，它會保留需要最少擴展的多載。  
   
-6.  **單一的候選項目。** 它會繼續考量之前只有一個配對中的多載多載會保留，且能解決該多載的呼叫。 如果編譯器無法減少為單一的候選者的多載，它會產生錯誤。  
+6. **單一的候選項目。** 它會繼續考量之前只有一個配對中的多載多載會保留，且能解決該多載的呼叫。 如果編譯器無法減少為單一的候選者的多載，它會產生錯誤。  
   
  下圖顯示決定哪一個多載版本，以呼叫一組程序。  
   
@@ -62,12 +62,12 @@ ms.locfileid: "58832277"
 
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
-- [程序多載化](./procedure-overloading.md)
-- [程序的疑難排解](./troubleshooting-procedures.md)
-- [如何：定義多個版本的程序](./how-to-define-multiple-versions-of-a-procedure.md)
-- [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
-- [如何：多載會採用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [如何：多載不定數目參數的程序](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
-- [多載化程序的考慮因素](./considerations-in-overloading-procedures.md)
-- [多載](../../../../visual-basic/language-reference/modifiers/overloads.md)
+- [程序多載](./procedure-overloading.md)
+- [針對程序進行疑難排解](./troubleshooting-procedures.md)
+- [HOW TO：定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)
+- [HOW TO：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
+- [HOW TO：多載使用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [HOW TO：多載使用不確定參數數目的程序](./how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md)
+- [多載程序的考量](./considerations-in-overloading-procedures.md)
+- [Overloads](../../../../visual-basic/language-reference/modifiers/overloads.md)
 - [擴充方法](./extension-methods.md)

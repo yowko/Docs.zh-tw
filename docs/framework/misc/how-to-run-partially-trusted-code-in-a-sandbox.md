@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74a897c1fca51c92e8290f6362d947730349344c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59104854"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316527"
 ---
 # <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>HOW TO：在沙箱中執行部分信任程式碼
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -48,7 +48,7 @@ AppDomain.CreateDomain( string friendlyName,
   
 ### <a name="to-run-an-application-in-a-sandbox"></a>在沙箱中執行應用程式  
   
-1.  建立要授與給不受信任的應用程式之授權集。 您可以授與的最小權限是 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限。 您也可授與其他您認為對不受信任的程式碼可能安全的權限；例如 <xref:System.Security.Permissions.IsolatedStorageFilePermission>。 下列程式碼會建立新的權限集合，其中只有 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限。  
+1. 建立要授與給不受信任的應用程式之授權集。 您可以授與的最小權限是 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限。 您也可授與其他您認為對不受信任的程式碼可能安全的權限；例如 <xref:System.Security.Permissions.IsolatedStorageFilePermission>。 下列程式碼會建立新的權限集合，其中只有 <xref:System.Security.Permissions.SecurityPermissionFlag.Execution> 權限。  
   
     ```csharp
     PermissionSet permSet = new PermissionSet(PermissionState.None);  
@@ -65,7 +65,7 @@ AppDomain.CreateDomain( string friendlyName,
   
      <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 方法會根據在辨識項中的區域傳回 `Internet` 權限集合或 `LocalIntranet` 權限集合。 <xref:System.Security.SecurityManager.GetStandardSandbox%2A> 也會建構部分做為參考傳遞的辨識項物件的識別權限。  
   
-2.  簽署包含裝載類別 (在此範例中名為 `Sandboxer`) 的組件，該類別會呼叫不受信任的程式碼。 加入 <xref:System.Security.Policy.StrongName>，這會用來簽署組件給 <xref:System.AppDomain.CreateDomain%2A> 呼叫的 `fullTrustAssemblies` 參數之 <xref:System.Security.Policy.StrongName> 陣列。 裝載的類別必須以完全信任方式執行，以啟用部分信任程式碼的執行，或提供服務給部分信任應用程式。 這就是您讀取組件 <xref:System.Security.Policy.StrongName> 的方式。  
+2. 簽署包含裝載類別 (在此範例中名為 `Sandboxer`) 的組件，該類別會呼叫不受信任的程式碼。 加入 <xref:System.Security.Policy.StrongName>，這會用來簽署組件給 <xref:System.AppDomain.CreateDomain%2A> 呼叫的 `fullTrustAssemblies` 參數之 <xref:System.Security.Policy.StrongName> 陣列。 裝載的類別必須以完全信任方式執行，以啟用部分信任程式碼的執行，或提供服務給部分信任應用程式。 這就是您讀取組件 <xref:System.Security.Policy.StrongName> 的方式。  
   
     ```csharp
     StrongName fullTrustAssembly = typeof(Sandboxer).Assembly.Evidence.GetHostEvidence<StrongName>();  
@@ -73,14 +73,14 @@ AppDomain.CreateDomain( string friendlyName,
   
      .NET Framework 組件，例如 mscorlib 和 System.dll 就不必加入完全信任清單，因為它們會以完全信任方式從全域組件快取中載入。  
   
-3.  初始化 <xref:System.AppDomain.CreateDomain%2A> 方法的 <xref:System.AppDomainSetup> 參數。 使用這個參數，您可以控制許多新的 <xref:System.AppDomain> 設定。 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性是重要的設定，而且應該不同於裝載應用程式的 <xref:System.AppDomain> 之 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定相同，則部分信任應用程式可取得裝載的應用程式，以載入 (以完全信任方式) 它所定義的例外狀況，因而加以利用。 這是為什麼不建議使用 catch (例外狀況) 的另一個原因。 將主機的應用程式基底設定為不同於沙箱應用程式的應用程式基底，可減少惡意探索的風險。  
+3. 初始化 <xref:System.AppDomain.CreateDomain%2A> 方法的 <xref:System.AppDomainSetup> 參數。 使用這個參數，您可以控制許多新的 <xref:System.AppDomain> 設定。 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性是重要的設定，而且應該不同於裝載應用程式的 <xref:System.AppDomain> 之 <xref:System.AppDomainSetup.ApplicationBase%2A> 屬性。 如果 <xref:System.AppDomainSetup.ApplicationBase%2A> 設定相同，則部分信任應用程式可取得裝載的應用程式，以載入 (以完全信任方式) 它所定義的例外狀況，因而加以利用。 這是為什麼不建議使用 catch (例外狀況) 的另一個原因。 將主機的應用程式基底設定為不同於沙箱應用程式的應用程式基底，可減少惡意探索的風險。  
   
     ```csharp
     AppDomainSetup adSetup = new AppDomainSetup();  
     adSetup.ApplicationBase = Path.GetFullPath(pathToUntrusted);  
     ```  
   
-4.  呼叫 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> 方法多載來使用我們已指定的參數建立應用程式定義域。  
+4. 呼叫 <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29> 方法多載來使用我們已指定的參數建立應用程式定義域。  
   
      此方法的簽章是：  
   
@@ -106,7 +106,7 @@ AppDomain.CreateDomain( string friendlyName,
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
     ```  
   
-5.  將程式碼載入您所建立的沙箱 <xref:System.AppDomain> 中。 有兩種方法可以達到這個目的：  
+5. 將程式碼載入您所建立的沙箱 <xref:System.AppDomain> 中。 有兩種方法可以達到這個目的：  
   
     -   呼叫組件的 <xref:System.AppDomain.ExecuteAssembly%2A> 方法。  
   
@@ -130,13 +130,13 @@ AppDomain.CreateDomain( string friendlyName,
     class Sandboxer:MarshalByRefObject  
     ```  
   
-6.  解除包裝新定義域之執行個體至此定義域的參考。 這個參考用來執行不受信任的程式碼。  
+6. 解除包裝新定義域之執行個體至此定義域的參考。 這個參考用來執行不受信任的程式碼。  
   
     ```csharp
     Sandboxer newDomainInstance = (Sandboxer) handle.Unwrap();  
     ```  
   
-7.  請在您剛建立的 `Sandboxer` 類別之執行個體中呼叫 `ExecuteUntrustedCode` 方法。  
+7. 請在您剛建立的 `Sandboxer` 類別之執行個體中呼叫 `ExecuteUntrustedCode` 方法。  
   
     ```csharp
     newDomainInstance.ExecuteUntrustedCode(untrustedAssembly, untrustedClass, entryPoint, parameters);  

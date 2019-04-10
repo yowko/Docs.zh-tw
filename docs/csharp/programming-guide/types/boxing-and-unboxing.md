@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: 8340d05b18c4fb19e9ba8f8ecffa5657b7febd79
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201751"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58835163"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>Boxing 和 Unboxing (C# 程式設計手冊)
 Boxing 是將[實值型別](../../../csharp/language-reference/keywords/value-types.md)轉換為 `object` 類型或是由這個實值型別實作之任何介面類型的程序。 當 CLR Box 處理實值類型時，它會將值包裝在 System.Object 內，並儲存到 Managed 堆積上。 Unbox 處理則會從物件中擷取實值類型。 Boxing 是隱含處理，unboxing 則是明確處理。 Boxing 和 unboxing 的概念是 C# 類型系統統一檢視的基礎，其中任何類型的值都可視為物件。  
@@ -46,10 +46,9 @@ Boxing 是將[實值型別](../../../csharp/language-reference/keywords/value-ty
   
  [!code-csharp[csProgGuideTypes#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#18)]  
   
- 這個陳述式的結果是在堆疊上建立物件參考 `o`，用於參考堆積中 `int` 類型的值。 這個值是指派給變數 `i` 之實值類型值的複本。 `i` 和 `o` 這兩個變數之間的差異如下圖所示。  
+ 這個陳述式的結果是在堆疊上建立物件參考 `o`，用於參考堆積中 `int` 類型的值。 這個值是指派給變數 `i` 之實值類型值的複本。 `i` 和 `o` 這兩個變數之間的差異如下方 Boxing 轉換圖所示：  
   
- ![BoxingConversion 圖形](../../../csharp/programming-guide/types/media/vcboxingconversion.gif "vcBoxingConversion")  
-Boxing 轉換  
+ ![顯示 i 和 o 變數之間差異的圖形。](./media/boxing-and-unboxing/boxing-operation-i-o-variables.gif)    
   
  您也可以執行明確的 boxing 處理，如同下列範例中所示，但是明確的 boxing 處理並非必要：  
   
@@ -72,10 +71,9 @@ Boxing 轉換
   
  [!code-csharp[csProgGuideTypes#21](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#21)]  
   
- 下圖示範上述陳述式的結果。  
+ 下圖示範上述陳述式的結果： 
   
- ![UnBoxing 轉換圖形](../../../csharp/programming-guide/types/media/vcunboxingconversion.gif "vcUnBoxingConversion")  
-Unboxing 轉換  
+ ![顯示 Unboxing 轉換的圖形。](./media/boxing-and-unboxing/unboxing-conversion-operation.gif)
   
  若要在執行階段成功對實值類型進行 Unbox 處理，要進行 Unbox 處理的項目必須是物件的參考，而且該物件是先前對該實值類型的執行個體進行 Box 處理所建立的物件。 嘗試對 `null` 進行 Unbox 處理會造成 <xref:System.NullReferenceException>。 嘗試對不相容的實值類型參考進行 Unbox 處理會造成 <xref:System.InvalidCastException>。  
   

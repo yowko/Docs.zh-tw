@@ -2,12 +2,12 @@
 title: 探索安全性範例
 ms.date: 03/30/2017
 ms.assetid: b8db01f4-b4a1-43fe-8e31-26d4e9304a65
-ms.openlocfilehash: b0999b51d5e371c4167bf4712781b3a229119fd0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e956b9f8162d55891233a3ab664b05658d50eeab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160760"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318399"
 ---
 # <a name="discovery-security-sample"></a>探索安全性範例
 探索規格不會要求參與探索程序的端點是安全的。 增強探索訊息的安全性會減少各種攻擊 (訊息變更、阻斷服務、重新執行、詐騙)。 此範例使用精簡簽章格式 (如 WS-Discovery 規格的第 8.2 節所述) 實作計算與驗證訊息簽章的自訂通道。 此範例同時支援[2005年探索規格](https://go.microsoft.com/fwlink/?LinkId=177912)並[1.1 版](https://go.microsoft.com/fwlink/?LinkId=179677)。  
@@ -60,11 +60,11 @@ ms.locfileid: "59160760"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  Visual Studio 執行 Setup.bat 指令碼從開發人員命令提示字元。 此範例會使用憑證來簽署與驗證訊息。 指令碼會使用 Makecert.exe 建立憑證，然後使用 Certmgr.exe 進行安裝。 此指令碼必須以系統管理員權限的身分來執行。  
+1. Visual Studio 執行 Setup.bat 指令碼從開發人員命令提示字元。 此範例會使用憑證來簽署與驗證訊息。 指令碼會使用 Makecert.exe 建立憑證，然後使用 Certmgr.exe 進行安裝。 此指令碼必須以系統管理員權限的身分來執行。  
   
-2.  若要建置並執行範例，在 Visual Studio 中開啟的 Security.sln 檔案，然後選擇**Rebuild All**。 更新方案屬性以啟動多個專案： 選取**啟動**discoverysecurechannels 的所有專案。 按照一般方式執行方案。  
+2. 若要建置並執行範例，在 Visual Studio 中開啟的 Security.sln 檔案，然後選擇**Rebuild All**。 更新方案屬性以啟動多個專案： 選取**啟動**discoverysecurechannels 的所有專案。 按照一般方式執行方案。  
   
-3.  完成此範例之後，請執行 Cleanup.bat 指令碼，以移除針對此範例建立的憑證。  
+3. 完成此範例之後，請執行 Cleanup.bat 指令碼，以移除針對此範例建立的憑證。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

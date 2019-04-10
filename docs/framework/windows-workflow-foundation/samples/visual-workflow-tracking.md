@@ -2,12 +2,12 @@
 title: Visual 工作流程追蹤
 ms.date: 03/30/2017
 ms.assetid: 0143448f-2044-40a0-8a3d-941f6d12468b
-ms.openlocfilehash: c89a63ac80b4705fff5c7714e7f40646c5b5d26d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6e87b0ef5a0d6fa97c87c99a63fe0e23c389140c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703578"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296455"
 ---
 # <a name="visual-workflow-tracking"></a>Visual 工作流程追蹤
 這個範例示範如何使用透過 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 提供的偵錯功能，撰寫視覺化工作流程追蹤應用程式。
@@ -19,17 +19,17 @@ ms.locfileid: "57703578"
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  從 Visual Studio 2010 中的範例目錄中開啟 [workflowsimulator.sln] 檔案。
+1. 從 Visual Studio 2010 中的範例目錄中開啟 [workflowsimulator.sln] 檔案。
 
-2.  按下 CTRL+SHIFT+B 以建置方案。
+2. 按下 CTRL+SHIFT+B 以建置方案。
 
-3.  按 CTRL+F5 以執行範例。 這樣會在重新裝載的工作流程設計工具視窗中顯示 Workflow.xaml。
+3. 按 CTRL+F5 以執行範例。 這樣會在重新裝載的工作流程設計工具視窗中顯示 Workflow.xaml。
 
-4.  按一下 **檔案**功能表，然後選取**執行工作流程...**.
+4. 按一下 **檔案**功能表，然後選取**執行工作流程...**.
 
-5.  請注意，目前執行的活動會如上所述反白顯示，而追蹤記錄會在應用程式視窗的右側顯示。
+5. 請注意，目前執行的活動會如上所述反白顯示，而追蹤記錄會在應用程式視窗的右側顯示。
 
-6.  當工作流程完成時，您可以按一下任何一項追蹤記錄，查看它所對應的活動。
+6. 當工作流程完成時，您可以按一下任何一項追蹤記錄，查看它所對應的活動。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

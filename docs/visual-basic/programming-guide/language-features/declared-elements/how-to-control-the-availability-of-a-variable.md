@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb7c04ac6c24648dfb2a8cfa5e01bf97c6b0b3be
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311522"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>HOW TO：控制變數 (Visual Basic) 的可用性
 指定控制變數的可用性及其*存取層級*。 存取層級會判斷哪些程式碼有權讀取或寫入變數。  
@@ -31,25 +31,25 @@ ms.locfileid: "58841689"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-module-class-or-structure"></a>若要存取只能從其模組、 類別或結構中的變數  
   
-1.  地方[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)內模組、 類別或結構，但在任何程序之外的變數。  
+1. 地方[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)內模組、 類別或結構，但在任何程序之外的變數。  
   
-2.  包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)中的關鍵字`Dim`陳述式。  
+2. 包含[私人](../../../../visual-basic/language-reference/modifiers/private.md)中的關鍵字`Dim`陳述式。  
   
      您可以讀取或寫入變數，從模組、 類別或結構內的任何位置，而不是從其外部。  
   
 #### <a name="to-make-a-variable-accessible-from-any-code-that-can-see-it"></a>若要從任何可以看到它的程式碼存取變數  
   
-1.  成員變數，將`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
+1. 成員變數，將`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
   
-2.  包含[公開金鑰](../../../../visual-basic/language-reference/modifiers/public.md)中的關鍵字`Dim`陳述式。  
+2. 包含[公開金鑰](../../../../visual-basic/language-reference/modifiers/public.md)中的關鍵字`Dim`陳述式。  
   
      您可以讀取或寫入變數的交互操作的任何程式碼與您的組件。  
   
  -或-  
   
-1.  本機變數中，放置`Dim`程序內變數的陳述式。  
+1. 本機變數中，放置`Dim`程序內變數的陳述式。  
   
-2.  不包含`Public`中的關鍵字`Dim`陳述式。  
+2. 不包含`Public`中的關鍵字`Dim`陳述式。  
   
      您可以讀取或寫入變數，從程序中的任何位置，而不是從其外部。  
   
@@ -58,17 +58,17 @@ ms.locfileid: "58841689"
   
 #### <a name="to-make-a-variable-accessible-only-from-within-its-class-and-any-derived-classes"></a>若要在其類別和任何衍生的類別內只能從存取變數  
   
-1.  位置`Dim`陳述式的類別，但任何程序之外的變數。  
+1. 位置`Dim`陳述式的類別，但任何程序之外的變數。  
   
-2.  包含[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)中的關鍵字`Dim`陳述式。  
+2. 包含[Protected](../../../../visual-basic/language-reference/modifiers/protected.md)中的關鍵字`Dim`陳述式。  
   
      您可以讀取或寫入變數，從任何地方在類別中，以及從任何類別衍生，而不是從衍生鏈結中的任何類別外部。  
   
 #### <a name="to-make-a-variable-accessible-only-from-within-the-same-assembly"></a>若要只能從相同的組件中存取變數  
   
-1.  位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
+1. 位置`Dim`變數內模組、 類別或結構，但以外的任何程序的陳述式。  
   
-2.  包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)中的關鍵字`Dim`陳述式。  
+2. 包含[Friend](../../../../visual-basic/language-reference/modifiers/friend.md)中的關鍵字`Dim`陳述式。  
   
      您可以讀取或寫入變數，從模組、 類別或結構內的任何位置，以及從任何程式碼位於相同的組件，而不是從外部組件。  
   

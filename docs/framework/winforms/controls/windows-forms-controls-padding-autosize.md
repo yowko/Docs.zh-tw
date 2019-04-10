@@ -15,12 +15,12 @@ helpviewer_keywords:
 - layout [Windows Forms], margins and padding
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
-ms.openlocfilehash: c07afa1e408c2950ea45f206f43125fc9329ad14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167865"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302461"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>逐步解說：使用邊框間距、邊界和自動調整屬性配置 Windows Forms 控制項
 對許多應用程式而言，控制項在表單上的精確位置是高優先順序。 **Windows Form 設計工具**提供您許多版面配置工具，來完成這項作業。 三個最重要的是<xref:System.Windows.Forms.Control.Margin%2A>， <xref:System.Windows.Forms.Control.Padding%2A>，和<xref:System.Windows.Forms.Control.AutoSize%2A>都存在於所有 Windows Form 控制項的屬性。  
@@ -60,53 +60,53 @@ ms.locfileid: "59167865"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立**Windows 應用程式**專案，稱為`LayoutExample`。 如需詳細資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。  
+1. 建立**Windows 應用程式**專案，稱為`LayoutExample`。 如需詳細資訊，請參閱[如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)。  
   
-2.  選取中的表單**Windows Form 設計工具**。  
+2. 選取中的表單**Windows Form 設計工具**。  
   
 ## <a name="setting-margins-for-your-controls"></a>設定您的控制項的邊界  
  您可以將預設的距離設定為您使用的控制項<xref:System.Windows.Forms.Control.Margin%2A>屬性。 當您移動控制項時接近另一個控制項，您會看到顯示兩個控制項的邊界的對齊線。 您要移動的控制項也會貼齊邊界所定義的距離。  
   
 #### <a name="to-arrange-controls-on-your-form-using-the-margin-property"></a>若要排列使用 Margin 屬性在表單上的控制項  
   
-1.  將兩個<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。  
+1. 將兩個<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。  
   
-2.  選取其中一個<xref:System.Windows.Forms.Button>控制，並移動接近另一個，直到幾乎碰觸。  
+2. 選取其中一個<xref:System.Windows.Forms.Button>控制，並移動接近另一個，直到幾乎碰觸。  
   
      觀察出現在它們之間的對齊線。 這個距離很的兩個控制項的總和<xref:System.Windows.Forms.Control.Margin%2A>值。 您要移動的控制項會貼齊至這個距離。 如需詳細資訊，請參閱[逐步解說：排列控制項，在 Windows Form 使用對齊線](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)。  
   
-3.  變更<xref:System.Windows.Forms.Control.Margin%2A>屬性的其中一個方法是展開的控制項<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性為 20。  
+3. 變更<xref:System.Windows.Forms.Control.Margin%2A>屬性的其中一個方法是展開的控制項<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性為 20。  
   
-4.  選取其中一個<xref:System.Windows.Forms.Button>控制，並將它移到靠近其他。  
+4. 選取其中一個<xref:System.Windows.Forms.Button>控制，並將它移到靠近其他。  
   
      對齊線定義邊界值的總和較長，而且從另一個控制項的控制項會貼齊至較大的距離。  
   
-5.  變更<xref:System.Windows.Forms.Control.Margin%2A>藉由展開選取之控制項的屬性<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.Top%2A>為 5 的屬性。  
+5. 變更<xref:System.Windows.Forms.Control.Margin%2A>藉由展開選取之控制項的屬性<xref:System.Windows.Forms.Control.Margin%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.Top%2A>為 5 的屬性。  
   
-6.  將其他控制項下方選取的控制項，並觀察對齊線是較短。 將選取的控制項移至其他控制項的左邊，並觀察對齊線會保留在步驟 4 中觀察到的值。  
+6. 將其他控制項下方選取的控制項，並觀察對齊線是較短。 將選取的控制項移至其他控制項的左邊，並觀察對齊線會保留在步驟 4 中觀察到的值。  
   
-7.  您可以設定每個層面<xref:System.Windows.Forms.Control.Margin%2A>屬性， <xref:System.Windows.Forms.Padding.Left%2A>， <xref:System.Windows.Forms.Padding.Top%2A>， <xref:System.Windows.Forms.Padding.Right%2A>， <xref:System.Windows.Forms.Padding.Bottom%2A>，以不同的值，或者您可以將它們設定為相同的值與所有<xref:System.Windows.Forms.Padding.All%2A>屬性。  
+7. 您可以設定每個層面<xref:System.Windows.Forms.Control.Margin%2A>屬性， <xref:System.Windows.Forms.Padding.Left%2A>， <xref:System.Windows.Forms.Padding.Top%2A>， <xref:System.Windows.Forms.Padding.Right%2A>， <xref:System.Windows.Forms.Padding.Bottom%2A>，以不同的值，或者您可以將它們設定為相同的值與所有<xref:System.Windows.Forms.Padding.All%2A>屬性。  
   
 ## <a name="setting-padding-for-your-controls"></a>設定您的控制項的邊框距離  
  若要達成精確應用程式所需的版面配置，您的控制項通常會包含子控制項。 當您想要指定子控制項的框線的單字，至父控制項的框線時，使用父控制項的<xref:System.Windows.Forms.Control.Padding%2A>搭配子控制項的屬性<xref:System.Windows.Forms.Control.Margin%2A>屬性。 <xref:System.Windows.Forms.Control.Padding%2A>屬性也用來控制控制項內容的鄰近性 (例如<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性) 到其框線。  
   
 #### <a name="to-arrange-controls-on-your-form-using-padding"></a>若要排列您使用的填補的表單上的控制項  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
-2.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。  
+2. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。  
   
-3.  變更<xref:System.Windows.Forms.Control.Padding%2A>藉由展開的屬性<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>為 5 的屬性。  
+3. 變更<xref:System.Windows.Forms.Control.Padding%2A>藉由展開的屬性<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>為 5 的屬性。  
   
      控制項展開以提供新的邊框距離的空間。  
   
-4.  從 [工具箱] <xref:System.Windows.Forms.GroupBox>**將** 控制項拖曳至表單。 拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.GroupBox>控制項。 位置<xref:System.Windows.Forms.Button>控制項讓它與右下角齊<xref:System.Windows.Forms.GroupBox>控制項。  
+4. 從 [工具箱] <xref:System.Windows.Forms.GroupBox>**將** 控制項拖曳至表單。 拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.GroupBox>控制項。 位置<xref:System.Windows.Forms.Button>控制項讓它與右下角齊<xref:System.Windows.Forms.GroupBox>控制項。  
   
      觀察如下所示的對齊線<xref:System.Windows.Forms.Button>控制方法的下框線和右框線的<xref:System.Windows.Forms.GroupBox>控制項。 這些對齊線會對應至<xref:System.Windows.Forms.Control.Margin%2A>屬性<xref:System.Windows.Forms.Button>。  
   
-5.  變更<xref:System.Windows.Forms.GroupBox>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性來擴充<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性為 20。  
+5. 變更<xref:System.Windows.Forms.GroupBox>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性來擴充<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性**視窗和設定<xref:System.Windows.Forms.Padding.All%2A>屬性為 20。  
   
-6.  選取 <xref:System.Windows.Forms.Button>控制項中<xref:System.Windows.Forms.GroupBox>控制項並將它移向的中央<xref:System.Windows.Forms.GroupBox>。  
+6. 選取 <xref:System.Windows.Forms.Button>控制項中<xref:System.Windows.Forms.GroupBox>控制項並將它移向的中央<xref:System.Windows.Forms.GroupBox>。  
   
      從的框線對齊線會出現在較大的距離<xref:System.Windows.Forms.GroupBox>控制項。 這個距離很總和<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Margin%2A>屬性並<xref:System.Windows.Forms.GroupBox>控制項的<xref:System.Windows.Forms.Control.Padding%2A>屬性。  
   
@@ -117,29 +117,29 @@ ms.locfileid: "59167865"
   
 #### <a name="to-arrange-controls-on-your-form-using-the-autosize-property"></a>若要排列使用 AutoSize 屬性在表單上的控制項  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。  
   
-2.  變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。  
+2. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。  
   
-3.  變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性為"**此按鈕有其 Text 屬性一長串**。 」  
+3. 變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性為"**此按鈕有其 Text 屬性一長串**。 」  
   
      當您認可變更，<xref:System.Windows.Forms.Button>控制項自動調整大小以容納新的文字。  
   
-4.  將另一個<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。  
+4. 將另一個<xref:System.Windows.Forms.Button>控制項從**工具箱**拖曳至表單。  
   
-5.  變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性為"**此按鈕會有一長串其 Text 屬性。**"  
+5. 變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Text%2A>屬性為"**此按鈕會有一長串其 Text 屬性。**"  
   
      當您認可變更，<xref:System.Windows.Forms.Button>控制項調整本身，都不大小和文字由控制項的右邊緣裁剪。  
   
-6.  變更<xref:System.Windows.Forms.Control.Padding%2A>藉由展開的屬性<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>為 5 的屬性。  
+6. 變更<xref:System.Windows.Forms.Control.Padding%2A>藉由展開的屬性<xref:System.Windows.Forms.Control.Padding%2A>中的項目**屬性** 視窗和設定<xref:System.Windows.Forms.Padding.All%2A>為 5 的屬性。  
   
      在控制項的內部文字會裁剪四個邊。  
   
-7.  變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。  
+7. 變更<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。  
   
      <xref:System.Windows.Forms.Button>控制項調整大小，以包含整個字串。 填補此外，新增該文字周圍，造成<xref:System.Windows.Forms.Button>展開所有 4 個方向的控制項。  
   
-8.  從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。 請將它放置在表單的右下角附近。  
+8. 從 [工具箱] <xref:System.Windows.Forms.Button>**將** 控制項拖曳至表單。 請將它放置在表單的右下角附近。  
   
 9. 變更 <xref:System.Windows.Forms.Button> 控制項的 <xref:System.Windows.Forms.Control.AutoSize%2A> 屬性值為 `true`。  
   
@@ -154,24 +154,24 @@ ms.locfileid: "59167865"
   
 #### <a name="to-use-the-autosizemode-property"></a>若要使用 AutoSizeMode 屬性  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.Panel>**將** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.Panel>**將** 控制項拖曳至表單。  
   
-2.  設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。  
+2. 設定的值<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.AutoSize%2A>屬性設`true`。  
   
-3.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.Panel>控制項。  
+3. 拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**成<xref:System.Windows.Forms.Panel>控制項。  
   
-4.  地方<xref:System.Windows.Forms.Button>右下角附近的控制項<xref:System.Windows.Forms.Panel>控制項。  
+4. 地方<xref:System.Windows.Forms.Button>右下角附近的控制項<xref:System.Windows.Forms.Panel>控制項。  
   
-5.  選取<xref:System.Windows.Forms.Panel>控制項，並抓取的右下角調整大小控點。 調整大小<xref:System.Windows.Forms.Panel>為較大且較小的控制項。  
+5. 選取<xref:System.Windows.Forms.Panel>控制項，並抓取的右下角調整大小控點。 調整大小<xref:System.Windows.Forms.Panel>為較大且較小的控制項。  
   
     > [!NOTE]
     >  您可以自由地調整大小<xref:System.Windows.Forms.Panel>控制項，但是您無法將其大小小於位置<xref:System.Windows.Forms.Button>控制項的右下角。 此行為是預設值所指定的`AutoSizeMode`屬性，這是<xref:System.Windows.Forms.AutoSizeMode.GrowOnly>。  
   
-6.  設定的值<xref:System.Windows.Forms.Panel>控制項的`AutoSizeMode`屬性設<xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>。  
+6. 設定的值<xref:System.Windows.Forms.Panel>控制項的`AutoSizeMode`屬性設<xref:System.Windows.Forms.AutoSizeMode.GrowAndShrink>。  
   
      <xref:System.Windows.Forms.Panel>控制大小本身來括住<xref:System.Windows.Forms.Button>控制項。 您無法調整大小<xref:System.Windows.Forms.Panel>控制項。  
   
-7.  拖曳<xref:System.Windows.Forms.Button>控制項左上角<xref:System.Windows.Forms.Panel>控制項。  
+7. 拖曳<xref:System.Windows.Forms.Button>控制項左上角<xref:System.Windows.Forms.Panel>控制項。  
   
      <xref:System.Windows.Forms.Panel>控制項會調整大小以<xref:System.Windows.Forms.Button>控制項的新位置。  
   

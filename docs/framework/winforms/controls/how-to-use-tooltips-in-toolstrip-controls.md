@@ -6,12 +6,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding tooltips
 - tooltips [Windows Forms], adding
 ms.assetid: c5d86024-a7c5-44ee-8b3f-2daf53d80d3e
-ms.openlocfilehash: 884fb75d53e425702cdef46615a16394b835518f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ffaf859fafc87131de525f7bf2f52db421a208c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59076466"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316995"
 ---
 # <a name="how-to-use-tooltips-in-toolstrip-controls"></a>HOW TO：在 ToolStrip 控制項使用工具提示
 您可以顯示<xref:System.Windows.Forms.ToolTip>for<xref:System.Windows.Forms.ToolStrip>您想要藉由設定控制項的控制項<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性設`true`。  
@@ -24,9 +24,9 @@ ms.locfileid: "59076466"
   
 ### <a name="to-use-the-tooltiptext-property-for-the-tooltip-text-of-a-toolstripbutton"></a>要用於工具提示文字的 prvek ToolStripButton ToolTipText 屬性  
   
-1.  設定<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性的按鈕`true`。  
+1. 設定<xref:System.Windows.Forms.ToolStrip.ShowItemToolTips%2A>屬性的按鈕`true`。  
   
-2.  設定<xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType>屬性的按鈕`false`。  
+2. 設定<xref:System.Windows.Forms.ToolStripButton.AutoToolTip%2A?displayProperty=nameWithType>屬性的按鈕`false`。  
   
      `AutoToolTip`屬性是`true`的預設<xref:System.Windows.Forms.ToolStripButton>， <xref:System.Windows.Forms.ToolStripDropDownButton>，和<xref:System.Windows.Forms.ToolStripSplitButton>。  
   

@@ -2,12 +2,12 @@
 title: 使用 Windows Management Instrumentation 進行診斷
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: a5dae1479c9be7954b9eec1eed197f358eb48e4f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239510"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308584"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>使用 Windows Management Instrumentation 進行診斷
 Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows Management Instrumentation (WMI) 提供者的執行階段檢查的資料。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
  這個組態項目會公開 WMI 介面。 現在，管理應用程式可以透過這個介面進行連線，並存取應用程式的管理測試設備。  
   
 ## <a name="accessing-wmi-data"></a>存取 WMI 資料  
- 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 指令碼、 Visual Basic 應用程式、 c + + 應用程式，提供了 WMI Api 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
+ 您可以使用各種不同的方式來存取 WMI 資料。 Microsoft 提供了 WMI Api 針對指令碼，Visual Basic 應用程式，C++應用程式，而[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 使用 WMI](https://go.microsoft.com/fwlink/?LinkId=95183)。  
   
 > [!CAUTION]
 >  如果您使用 .NET Framework 提供的方法，以程式設計方式存取 WMI 資料，您要注意，當連線建立時，這類方法可能會擲回例外狀況。 連線不是在建構 <xref:System.Management.ManagementObject> 執行個體期間建立的，而是在第一次要求實際資料交換時建立。 因此，您應該使用 `try..catch` 區塊攔截可能的例外狀況。  
@@ -56,26 +56,26 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
   
  若要修改使用者權限層級，請依照下列步驟執行。  
   
-1.  按一下 [開始]，然後執行，並輸入**compmgmt.msc**。  
+1. 按一下 [開始]，然後執行，並輸入**compmgmt.msc**。  
   
-2.  以滑鼠右鍵按一下**服務和應用程式 /WMI 控制項**來選取**屬性**。  
+2. 以滑鼠右鍵按一下**服務和應用程式 /WMI 控制項**來選取**屬性**。  
   
-3.  選取 **安全性**索引標籤上，並瀏覽至**Root/ServiceModel**命名空間。 按一下 [**安全性**] 按鈕。  
+3. 選取 **安全性**索引標籤上，並瀏覽至**Root/ServiceModel**命名空間。 按一下 [**安全性**] 按鈕。  
   
-4.  選取 特定群組或您想要控制存取和使用的使用者**允許**或是**拒絕**核取方塊以設定權限。  
+4. 選取 特定群組或您想要控制存取和使用的使用者**允許**或是**拒絕**核取方塊以設定權限。  
   
 ## <a name="granting-wcf-wmi-registration-permissions-to-additional-users"></a>將 WCF WMI 註冊權限授與其他使用者  
  WCF 會將管理資料公開至 WMI。 它會裝載同處理序 WMI 提供者，有時也稱為 「 低耦合提供者 」。 若要讓管理資料公開，註冊此提供者的帳戶必須有適當權限。 在 Windows 中，預設只有一小組授權的帳戶可以登錄低耦合提供者。 這是一個問題，因為使用者通常想要從非預設集合中之帳戶下執行的 WCF 服務公開 WMI 資料。  
   
  若要提供此存取權，系統管理員必須依下列順序將下列權限授與其他帳戶：  
   
-1.  存取 WCF WMI 命名空間的權限。  
+1. 存取 WCF WMI 命名空間的權限。  
   
-2.  註冊 WCF 低耦合 WMI 提供者的權限。  
+2. 註冊 WCF 低耦合 WMI 提供者的權限。  
   
 #### <a name="to-grant-wmi-namespace-access-permission"></a>若要授與 WMI 命名空間存取權限  
   
-1.  執行下列 PowerShell 指令碼。  
+1. 執行下列 PowerShell 指令碼。  
   
     ```powershell  
     write-host ""  
@@ -122,7 +122,7 @@ Windows Communication Foundation (WCF) 公開服務，以在透過 WCF Windows M
   
 #### <a name="to-grant-provider-registration-access"></a>若要授與提供者註冊存取  
   
-1.  執行下列 PowerShell 指令碼。  
+1. 執行下列 PowerShell 指令碼。  
   
     ```powershell  
     write-host ""  
@@ -157,16 +157,16 @@ Whoami /user
   
  **%windir%\Program Files\WMI 工具\\**  
   
-1.  在 **連接至命名空間：** 視窗中，輸入**root\ServiceModel**按一下**確定。**  
+1. 在 **連接至命名空間：** 視窗中，輸入**root\ServiceModel**按一下**確定。**  
   
-2.  在 [ **WMI CIM Studio 登入**] 視窗中，按一下**選項 >>** 按鈕展開視窗。 選取**封包私密性**for**驗證層級**，然後按一下**確定**。  
+2. 在 [ **WMI CIM Studio 登入**] 視窗中，按一下**選項 >>** 按鈕展開視窗。 選取**封包私密性**for**驗證層級**，然後按一下**確定**。  
   
 ### <a name="windows-management-instrumentation-tester"></a>Windows Management Instrumentation 測試器  
  這個工具是由 Windows 進行安裝。 若要執行它，請啟動命令主控台中輸入**cmd.exe**中**開始/執行**對話方塊中，然後按一下**確定**。 然後，輸入**wbemtest.exe**命令視窗中。 [Windows Management Instrumentation 測試器] 工具隨即啟動。  
   
-1.  按一下  **Connect**視窗的右上角的按鈕。  
+1. 按一下  **Connect**視窗的右上角的按鈕。  
   
-2.  在新視窗中，輸入**root\ServiceModel** for**命名空間**欄位，然後選取**封包私密性**如**驗證層級**。 按一下 **[Connect]**(連線)。  
+2. 在新視窗中，輸入**root\ServiceModel** for**命名空間**欄位，然後選取**封包私密性**如**驗證層級**。 按一下 **[Connect]**(連線)。  
   
 ### <a name="using-managed-code"></a>使用 Managed 程式碼  
  您也可以使用 <xref:System.Management> 命名空間提供的類別，以程式設計方式存取遠端 WMI 執行個體。 下列程式碼範例示範如何執行這項操作。  

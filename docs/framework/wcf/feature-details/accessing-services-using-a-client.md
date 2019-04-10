@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
-ms.openlocfilehash: 127b06b32e597f8c2ea7e2bfdb1caca850fb5e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59194522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314876"
 ---
 # <a name="accessing-services-using-a-client"></a>使用用戶端存取服務
 用戶端應用程式必須建立、 設定及使用 WCF 用戶端或通道物件來與服務通訊。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)主題提供的物件 」 和 「 建立基本的用戶端和通道物件，並運用所需的步驟的概觀。  
@@ -83,11 +83,11 @@ ms.locfileid: "59194522"
   
  如果使用明確方式，應用程式必須依照順序執行下列步驟：  
   
-1.  呼叫 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (或非同步版本)。  
+1. 呼叫 <xref:System.ServiceModel.ClientBase%601.DisplayInitializationUI%2A?displayProperty=nameWithType> 或 <xref:System.ServiceModel.IClientChannel.DisplayInitializationUI%2A?displayProperty=nameWithType> (或非同步版本)。  
   
-2.  當初始設定式已回傳時，在 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 物件或是 <xref:System.ServiceModel.IClientChannel> 屬性傳回的 <xref:System.ServiceModel.IClientChannel> 物件上呼叫 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 方法。  
+2. 當初始設定式已回傳時，在 <xref:System.ServiceModel.ICommunicationObject.Open%2A> 物件或是 <xref:System.ServiceModel.IClientChannel> 屬性傳回的 <xref:System.ServiceModel.IClientChannel> 物件上呼叫 <xref:System.ServiceModel.ClientBase%601.InnerChannel%2A?displayProperty=nameWithType> 方法。  
   
-3.  呼叫作業。  
+3. 呼叫作業。  
   
  建議您採用明確方式來處理使用者介面的實際執行品質應用程式控制。  
   

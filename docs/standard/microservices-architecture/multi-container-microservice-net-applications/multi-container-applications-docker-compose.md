@@ -4,12 +4,12 @@ description: 如何使用 docker-compose.yml 指定多容器應用程式的微�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: df185950d8155d61b60c9b54e3a8751ec3980408
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4f4918a6f26a617fad38c7955415c4ff559a9187
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463523"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920775"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>使用 docker-compose.yml 定義多容器應用程式
 
@@ -433,7 +433,7 @@ Docker-compose 預期 .env 檔案中每行的格式都是 \<變數\>=\<值\>。
 如果您要在網際網路上探索來源上的 Docker 和 .NET Core，則會發現 Dockerfiles，以將您的來源複製至容器來示範建置 Docker 映像的簡單性。 這些範例建議透過使用簡單組態，您可以擁有具有與您應用程式一起封裝之環境的 Docker 映像。 下列範例示範類似的簡單 Dockerfile。
 
 ```Dockerfile
-FROM microsoft/dotnet
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 WORKDIR /app
 ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
@@ -446,7 +446,7 @@ ENTRYPOINT ["dotnet", "run"]
 
 在容器和微服務模型中，您將會不斷地啟動容器。 因為容器是可處置的，所以容器的一般使用方式不會重新啟動睡眠中容器。 協調器 (例如 Kubernetes 和 Azure Service Fabric) 只會建立映像的新執行個體。 這表示您需要在建置應用程式時對其先行編譯來進行最佳化，讓具現化程序更為快速。 容器在啟動時，應該就已準備好執行。 您不應該在執行階段從 dotnet CLI 使用 `dotnet restore` 和 `dotnet build` 命令進行還原和編譯，如許多 .NET Core 和 Docker 部落格文章中所見。
 
-.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *microsoft/dotnet*的 Docker Hub 登錄中加以發佈：
+.NET 小組已執行重要工作，讓 .NET Core 和 ASP.NET Core 成為容器最佳化架構。 .NET Core 不僅已是磁碟使用量低的輕量型架構，從 2.1 版起，小組還將重點放在針對三大情境將 Docker 映像最佳化，以便於 *dotnet/core*的 Docker Hub 登錄中加以發佈：
 
 1. **開發**：最優先事項是能夠快速進行整合，及對變更進行偵錯，而大小則次之。
 
@@ -454,11 +454,12 @@ ENTRYPOINT ["dotnet", "run"]
 
 3. **生產**：因為重點在於快速地部署和啟動容器，所以這些映像只限於二進位檔及執行應用程式所需的內容。
 
-為達到這項目標，.NET 小組目前在 [microsoft/dotnet](https://hub.docker.com/r/microsoft/dotnet/) (Docker Hub) 提供三種基本變體：
+為達到這項目標，.NET 小組目前在 [dotnet/core](https://hub.docker.com/_/microsoft-dotnet-core/) (Docker Hub) 提供 四種基本變體：
 
-1. **sdk**：適用於開發與建置環節。
-2. **runtime**：適用於生產環節和
-3. **runtime-deps**：適用於[獨立式應用程式](../../../core/deploying/index.md#self-contained-deployments-scd)的生產環節。
+1. **sdk**：適用於開發與建置環節
+1. **aspnet**：ASP.NET 生產環境案例
+1. **aspnet**：.NET 生產環境案例
+1. **runtime-deps**：適用於[獨立式應用程式](../../../core/deploying/index.md#self-contained-deployments-scd)的生產環節。
 
 為了啟動更快，執行階段映像也會將 spnetcore\_urls 自動設定為連接埠 80，並使用 Ngen 建立組件的原生映像快取。
 

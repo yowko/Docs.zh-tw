@@ -2,12 +2,12 @@
 title: 傳輸
 ms.date: 03/30/2017
 ms.assetid: dfcfa36c-d3bb-44b4-aa15-1c922c6f73e6
-ms.openlocfilehash: 8263093944cf01a38a49b52d71f7a6e54195a3c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4753ec85c458a0dde3db4a6b7cdad41c69185019
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145037"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311015"
 ---
 # <a name="transfer"></a>傳輸
 本主題說明 Windows Communication Foundation (WCF) 的活動追蹤模型中的傳輸。  
@@ -42,21 +42,21 @@ ms.locfileid: "59145037"
 ## <a name="activity-transfer-sequence"></a>活動傳輸順序  
  格式正確的活動傳輸順序包括下列步驟。  
   
-1.  開始新活動，而此活動是由選取新 gAId 所組成。  
+1. 開始新活動，而此活動是由選取新 gAId 所組成。  
   
-2.  從目前活動識別碼中，將傳輸追蹤發出至該新 gAId  
+2. 從目前活動識別碼中，將傳輸追蹤發出至該新 gAId  
   
-3.  在 TLS 中設定新識別碼  
+3. 在 TLS 中設定新識別碼  
   
-4.  發出啟動追蹤，以指出新活動的起點。  
+4. 發出啟動追蹤，以指出新活動的起點。  
   
-5.  傳回原始活動則包含下列各項：  
+5. 傳回原始活動則包含下列各項：  
   
-6.  將傳輸追蹤發出至原始 gAId  
+6. 將傳輸追蹤發出至原始 gAId  
   
-7.  發出停止追蹤以指出新活動的結束  
+7. 發出停止追蹤以指出新活動的結束  
   
-8.  將 TLS 設定為舊 gAId。  
+8. 將 TLS 設定為舊 gAId。  
   
  下列程式碼範例會示範如何執行這項操作。 這個範例會假設傳輸至新活動時已產生區塊呼叫，而且其中也包含暫止/繼續追蹤。  
   

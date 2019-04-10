@@ -3,12 +3,12 @@ title: 分支和迴圈 - C# 教學課程簡介
 description: 在這個關於分支和迴圈的教學課程中，您將會撰寫 C# 程式碼以探索支援條件式分支和迴圈的語言語法，以重複執行陳述式。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: c9e2ede3ee8632304a86efdf25bb2a8db5354a13
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677782"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920944"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>透過分支和迴圈陳述式了解條件式邏輯
 
@@ -249,7 +249,7 @@ for(int index = 0; index < 10; index++)
 
 您已經完成＜分支和迴圈＞教學課程。
 
-您可以在自己的開發環境中，繼續完成[字串插補](interpolated-strings-local.md)教學課程。
+您可以在自己的開發環境中，繼續完成[陣列和集合](arrays-and-collections.md)教學課程中的內容。
 
 您可以在下列主題中深入了解這些概念：
 

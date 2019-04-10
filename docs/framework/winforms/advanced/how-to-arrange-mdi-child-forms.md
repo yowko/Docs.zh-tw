@@ -8,12 +8,12 @@ helpviewer_keywords:
 - child forms [Windows Forms], arranging
 - MDI [Windows Forms], arranging child forms
 ms.assetid: a0786378-3206-4ccc-898e-7d3b38cc5089
-ms.openlocfilehash: 60cba801446d043fa8c0b36d97628e9b0f8df11d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c7a9d03ef60586e1162f088d662dfe44bbdcb591
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160104"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317229"
 ---
 # <a name="how-to-arrange-mdi-child-forms"></a>HOW TO：排列 MDI 子表單
 應用程式通常會包含 [並排]、[重疊顯示] 和 [排列] 等動作的功能表命令，以便控制所開啟之 MDI 子表單的配置。 您可以搭配使用 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 方法和其中一個 <xref:System.Windows.Forms.MdiLayout> 列舉值，來重新排列 MDI 父表單中的子表單。  
@@ -24,7 +24,7 @@ ms.locfileid: "59160104"
   
 ### <a name="to-arrange-child-forms"></a>排列子表單  
   
-1.  在方法中，使用 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 方法設定 MDI 父表單的 <xref:System.Windows.Forms.MdiLayout> 列舉。 下列範例針對 MDI 父表單 (<xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType>) 的子視窗，使用 `Form1` 列舉值。 列舉型別會使用於程式碼中的事件處理常式<xref:System.Windows.Forms.Control.Click>事件的**串聯 Windows**功能表項目。  
+1. 在方法中，使用 <xref:System.Windows.Forms.Form.LayoutMdi%2A> 方法設定 MDI 父表單的 <xref:System.Windows.Forms.MdiLayout> 列舉。 下列範例針對 MDI 父表單 (<xref:System.Windows.Forms.MdiLayout.Cascade?displayProperty=nameWithType>) 的子視窗，使用 `Form1` 列舉值。 列舉型別會使用於程式碼中的事件處理常式<xref:System.Windows.Forms.Control.Click>事件的**串聯 Windows**功能表項目。  
   
     ```vb  
     Protected Sub CascadeWindows_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)  
@@ -41,7 +41,7 @@ ms.locfileid: "59160104"
     > [!NOTE]
     >  您也可以藉由變更所使用的 <xref:System.Windows.Forms.MdiLayout> 列舉值，來並排顯示視窗，以及將視窗排列為圖示。  
   
-2.  如果使用 Visual C#，請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。  
+2. 如果使用 Visual C#，請將下列程式碼置於表單的建構函式中，以註冊事件處理常式。  
   
     ```csharp  
     this.button1.Click += new System.EventHandler(this.button1_Click);  

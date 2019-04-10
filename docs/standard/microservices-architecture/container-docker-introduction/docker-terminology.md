@@ -4,12 +4,12 @@ description: 容器化 .NET 應用程式的 .NET 微服務架構 | Docker 術語
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 2229599ab2fdc008c1668fb317f6cbe7dae95380
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: 9cfb8ceb4fa1b95603ccc9aa006dd6ee3e8e8b3a
+ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479993"
+ms.lasthandoff: 04/04/2019
+ms.locfileid: "58920970"
 ---
 # <a name="docker-terminology"></a>Docker 術語
 
@@ -31,9 +31,9 @@ ms.locfileid: "55479993"
 
 **存放庫**：相關的 Docker 映像集合，已加上標籤指出映像版本。 某些存放庫包含特定映像的多種變化，例如包含 SDK 的映像 (較大)、只包含執行階段的映像 (較小) 等等。這些變化可以加上標記。 一個存放庫可以包含多種平台變化，例如 Linux 映像和 Windows 映像。
 
-**登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有)。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
+**登錄**：提供存放庫存取權的服務。 大多數公用映像的預設登錄是 [Docker Hub](https://hub.docker.com/) (以組織形式為 Docker 所擁有）。 登錄通常會包含來自多個小組的存放庫。 公司通常會有私人登錄來儲存及管理其所建立的映像。 Azure Container Registry 是另一個範例。
 
-**多架構映像**：針對多架構，此功能可根據 Docker 執行所在的平台簡化適當映像的選取，例如當 Dockerfile 從登錄要求基底映像 **FROM microsoft/dotnet:2.2-sdk** 時，實際上是依據 Docker 執行所在的作業系統和版本，取得 **2.2-sdk-nanoserver-1709**、**2.2-sdk-nanoserver-1803**、**2.2-sdk-nanoserver-1809** 或 **2.2-sdk-alpine**。
+**多架構映像**：針對多架構，此功能可根據 Docker 執行所在的平台簡化適當映像的選取，例如當 Dockerfile 從登錄要求基底映像 **FROM mcr.microsoft.com/dotnet/core/sdk:2.2** 時，實際上是依據 Docker 執行所在的作業系統和版本，取得 **2.2-sdk-nanoserver-1709**、**2.2-sdk-nanoserver-1803**、**2.2-sdk-nanoserver-1809** 或 **2.2-sdk-stretch**。
 
 **Docker Hub**：上傳並使用映像的公開登錄。 Docker Hub 提供 Docker 映像裝載、公開或私人登錄、組建觸發程序和 Webhook，以及與 GitHub 和 Bitbucket 的整合。
 

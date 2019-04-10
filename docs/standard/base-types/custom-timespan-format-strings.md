@@ -1,5 +1,5 @@
 ---
-title: 自訂 TimeSpan 格式字串
+title: 自訂 TimeSpan 格式字串 - .NET
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bfab03a6dc7ae62a7564815f7b054370cde64f8
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b06e367d119a93e872325a85cd951cc5087068be
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677106"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58819628"
 ---
 # <a name="custom-timespan-format-strings"></a>自訂 TimeSpan 格式字串
 
@@ -29,8 +29,7 @@ ms.locfileid: "57677106"
 > [!IMPORTANT]
 > 自訂 <xref:System.TimeSpan> 格式規範不包含預留位置分隔符號，例如分隔天與小時、小時與分鐘或是秒與小數秒的符號。 相反地，這些符號必須包含在自訂格式字串中作為字串常值。 例如，`"dd\.hh\:mm"` 會定義句號 (.) 作為天與小時之間的分隔符號，並定義冒號 (:) 作為小時與分鐘之間的分隔符號。
 >
-> 自訂 <xref:System.TimeSpan> 格式規範也不包括讓您區分正負時間間隔的正負號。 若要包括正負號，您必須使用條件邏輯建構格式字串。 
-  [其他字元](#Other)一節中將提供範例。
+> 自訂 <xref:System.TimeSpan> 格式規範也不包括讓您區分正負時間間隔的正負號。 若要包括正負號，您必須使用條件邏輯建構格式字串。 [其他字元](#other-characters)一節中會提供範例。
 
 產生 <xref:System.TimeSpan> 值的字串表示時，會藉由呼叫 <xref:System.TimeSpan.ToString%2A?displayProperty=nameWithType> 方法的多載，以及藉由支援複合格式設定的方法 (例如 <xref:System.String.Format%2A?displayProperty=nameWithType>)，來產生。 如需詳細資訊，請參閱[格式化類型](formatting-types.md)和[複合格式設定](composite-formatting.md)。 下列範例說明如何在格式設定作業中使用自訂格式自串。
 
@@ -48,11 +47,11 @@ ms.locfileid: "57677106"
 |----------------------|-----------------|-------------|
 |"d"、"%d"|時間間隔中的完整天數。<br /><br /> 詳細資訊：["d" 自訂格式規範](#dSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%d` --> "6"<br /><br /> `d\.hh\:mm` --> "6.14:32"|
 |"dd"-"dddddddd"|時間間隔中的完整天數，視需要填補前置零。<br /><br /> 詳細資訊：["dd"-"dddddddd" 自訂格式規範](#ddSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `ddd` --> "006"<br /><br /> `dd\.hh\:mm` --> "06.14:32"|
-|"h"、"%h"|時間間隔中未計入天數部分的完整時數。 一位數的小時不會有前置零。<br /><br /> 詳細資訊：["h" 自訂格式規範](#hSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --> "14"<br /><br /> `hh\:mm` --> "14:32"|
+|"h"、"%h"|時間間隔中未計入天數部分的完整時數。 單一位數的小時數前面不會加上零。<br /><br /> 詳細資訊：["h" 自訂格式規範](#hSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `%h` --> "14"<br /><br /> `hh\:mm` --> "14:32"|
 |"hh"|時間間隔中未計入天數部分的完整時數。 一位數的小時有前置零。<br /><br /> 詳細資訊：["hh" 自訂格式規範](#hhSpecifier)。|`new TimeSpan(6, 14, 32, 17, 685):`<br /><br /> `hh` --> "14"<br /><br /> `new TimeSpan(6, 8, 32, 17, 685):`<br /><br /> `hh` --> 08|
-|"m"、"%m"|時間間隔中未納入時數或天數部分的完整分鐘數。 一位數的分鐘不會有前置零。<br /><br /> 詳細資訊：["m" 自訂格式規範](#mSpecifier)。|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
+|"m"、"%m"|時間間隔中未納入時數或天數部分的完整分鐘數。 單一位數的分鐘數前面不會加上零。<br /><br /> 詳細資訊：["m" 自訂格式規範](#mSpecifier)。|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `%m` --> "8"<br /><br /> `h\:m` --> "14:8"|
 |"mm"|時間間隔中未納入時數或天數部分的完整分鐘數。 一位數的分鐘有前置零。<br /><br /> 詳細資訊：["mm" 自訂格式規範](#mmSpecifier)。|`new TimeSpan(6, 14, 8, 17, 685):`<br /><br /> `mm` --> "08"<br /><br /> `new TimeSpan(6, 8, 5, 17, 685):`<br /><br /> `d\.hh\:mm\:ss` --> 6.08:05:17|
-|"s"、"%s"|時間間隔中未納入時數、天數或分鐘數部分的完整秒數。 一位數的秒不會有前置零。<br /><br /> 詳細資訊：["s" 自訂格式規範](#sSpecifier)。|`TimeSpan.FromSeconds(12.965)`：<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
+|"s"、"%s"|時間間隔中未納入時數、天數或分鐘數部分的完整秒數。 單一位數的秒鐘數前面不會加上零。<br /><br /> 詳細資訊：["s" 自訂格式規範](#sSpecifier)。|`TimeSpan.FromSeconds(12.965)`：<br /><br /> `%s` --> 12<br /><br /> `s\.fff` --> 12.965|
 |"ss"|時間間隔中未納入時數、天數或分鐘數部分的完整秒數。  一位數的秒有前置零。<br /><br /> 詳細資訊：["ss" 自訂格式規範](#ssSpecifier)。|`TimeSpan.FromSeconds(6.965)`：<br /><br /> `ss` --> 06<br /><br /> `ss\.fff` --> 06.965|
 |"f"、"%f"|時間間隔中的十分之一秒。<br /><br /> 詳細資訊：["f" 自訂格式規範](#fSpecifier)。|`TimeSpan.FromSeconds(6.895)`：<br /><br /> `f` --> 8<br /><br /> `ss\.f` --> 06.8|
 |"ff"|時間間隔中的百分之一秒。<br /><br /> 詳細資訊：["ff" 自訂格式規範](#ffSpecifier)。|`TimeSpan.FromSeconds(6.895)`：<br /><br /> `ff` --> 89<br /><br /> `ss\.ff` --> 06.89|
@@ -68,13 +67,11 @@ ms.locfileid: "57677106"
 |"FFFFF"|時間間隔中的十萬分之一秒。 不包含小數點後的零。<br /><br /> 詳細資訊：["FFFFF" 自訂格式規範](#F5_Specifier)。|`TimeSpan.Parse("00:00:06.329179")`：<br /><br /> `FFFFF`：32917<br /><br /> `TimeSpan.Parse("0:0:3.100009")`：<br /><br /> `ss\.FFFFF`：03.1|
 |"FFFFFF"|時間間隔中的百萬分之一秒。 不顯示小數點後的零。<br /><br /> 詳細資訊：["FFFFFF" 自訂格式規範](#F6_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：329179<br /><br /> `TimeSpan.Parse("0:0:3.1000009")`：<br /><br /> `ss\.FFFFFF`：03.1|
 |"FFFFFFF"|時間間隔中的千萬分之一秒。 不顯示小數點後的零或七位數都是零。<br /><br /> 詳細資訊：["FFFFFFF" 自訂格式規範](#F7_Specifier)。|`TimeSpan.Parse("00:00:06.3291791")`：<br /><br /> `FFFFFF`：3291791<br /><br /> `TimeSpan.Parse("0:0:3.1900000")`：<br /><br /> `ss\.FFFFFF`：03.19|
-|'*string*'|常值字串分隔符號。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
-|&#92;|逸出字元。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
-|任意字元|其他任何未逸出字元都會解譯為自訂格式規範。<br /><br /> 詳細資訊：[其他字元](#Other)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|'*string*'|常值字串分隔符號。<br /><br /> 詳細資訊：[其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh':'mm':'ss` --> "14:32:17"|
+|&#92;|逸出字元。<br /><br /> 詳細資訊：[其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
+|任意字元|其他任何未逸出字元都會解譯為自訂格式規範。<br /><br /> 詳細資訊：[其他字元](#other-characters)。|`new TimeSpan(14, 32, 17):`<br /><br /> `hh\:mm\:ss` --> "14:32:17"|
 
-<a name="dSpecifier"></a>
-
-## <a name="the-d-custom-format-specifier"></a>"d" 自訂格式規範
+## <a name="dSpecifier"></a>"d" 自訂格式規範
 
 "d" 自訂格式規範會輸出 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中的完整天數。 它會輸出 <xref:System.TimeSpan> 值中的完整天數，即使該值有多個位數也一樣。 如果 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType>屬性的值為零，此規範就會輸出 "0"。
 
@@ -90,9 +87,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="ddSpecifier"></a>
-
-## <a name="the-dd-dddddddd-custom-format-specifiers"></a>"dd"-"dddddddd" 自訂格式規範
+## <a name="ddSpecifier"></a>"dd"-"dddddddd" 自訂格式規範
 
 "dd"、"ddd"、"dddd"、"ddddd"、"dddddd"、"ddddddd" 和 "dddddddd" 自訂格式規範會輸出 <xref:System.TimeSpan.Days%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中的完整天數。
 
@@ -105,9 +100,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="hSpecifier"></a>
-
-## <a name="the-h-custom-format-specifier"></a>"h" 自訂格式規範
+## <a name="hSpecifier"></a>"h" 自訂格式規範
 
 "h" 自訂格式規範會輸出 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未計入天數部分的完整時數。 如果 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值為 0 到 9，就會傳回一位數的字串值；如果 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值為 10 到 23，則會傳回兩位數的字串值。
 
@@ -128,9 +121,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="hhSpecifier"></a>
-
-## <a name="the-hh-custom-format-specifier"></a>"hh" 自訂格式規範
+## <a name="hhSpecifier"></a>"hh" 自訂格式規範
 
 "hh" 自訂格式規範會輸出 <xref:System.TimeSpan.Hours%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未計入天數部分的完整時數。 對於從 0 到 9 的值，輸出字串會包含前置零。
 
@@ -146,9 +137,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="mSpecifier"></a>
-
-## <a name="the-m-custom-format-specifier"></a>"m" 自訂格式規範
+## <a name="mSpecifier"></a>"m" 自訂格式規範
 
 "m" 自訂格式規範會輸出 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未計入天數部分的完整分鐘數。 如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值為 0 到 9，就會傳回一位數的字串值；如果 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值為 10 到 59，則會傳回兩位數的字串值。
 
@@ -169,9 +158,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="mmSpecifier"></a>
-
-## <a name="the-mm-custom-format-specifier"></a>"mm" 自訂格式規範
+## <a name="mmSpecifier"></a>"mm" 自訂格式規範
 
 "mm" 自訂格式規範會輸出 <xref:System.TimeSpan.Minutes%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未包含在時數或天數部分中的完整分鐘數。 對於從 0 到 9 的值，輸出字串會包含前置零。
 
@@ -187,9 +174,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="sSpecifier"></a>
-
-## <a name="the-s-custom-format-specifier"></a>"s" 自訂格式規範
+## <a name="sSpecifier"></a>"s" 自訂格式規範
 
 "s" 自訂格式規範會輸出 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未包含在時數、天數或分鐘數部分中的完整秒數。 如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值為 0 到 9，就會傳回一位數的字串值；如果 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值為 10 到 59，則會傳回兩位數的字串值。
 
@@ -210,9 +195,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="ssSpecifier"></a>
-
-## <a name="the-ss-custom-format-specifier"></a>"ss" 自訂格式規範
+## <a name="ssSpecifier"></a>"ss" 自訂格式規範
 
 "ss" 自訂格式規範會輸出 <xref:System.TimeSpan.Seconds%2A?displayProperty=nameWithType> 屬性的值，這代表時間間隔中未包含在時數、天數或分鐘數部分中的完整秒數。 對於從 0 到 9 的值，輸出字串會包含前置零。
 
@@ -228,9 +211,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="fSpecifier"></a>
-
-## <a name="thef-custom-format-specifier"></a>"f" 自訂格式規範
+## <a name="fSpecifier"></a>"f" 自訂格式規範
 
 "f" 自訂格式規範會輸出時間間隔中的十分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含一個小數位數。
 
@@ -243,9 +224,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="ffSpecifier"></a>
-
-## <a name="the-ff-custom-format-specifier"></a>"ff" 自訂格式規範
+## <a name="ffSpecifier"></a> "ff" 自訂格式規範
 
 "ff" 自訂格式規範會輸出時間間隔中的百分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含兩個小數位數。
 
@@ -256,9 +235,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="f3Specifier"></a>
-
-## <a name="the-fff-custom-format-specifier"></a>"fff" 自訂格式規範
+## <a name="f3Specifier"></a>"fff" 自訂格式規範
 
 "fff" 自訂格式規範 (有三個 "f" 字元) 會輸出時間間隔中的毫秒。 在格式化作業中，會截斷其餘任何小數位數。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含三個小數位數。
 
@@ -269,9 +246,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="f4Specifier"></a>
-
-## <a name="the-ffff-custom-format-specifier"></a>"ffff" 自訂格式規範
+## <a name="f4Specifier"></a>"ffff" 自訂格式規範
 
 "ffff" 自訂格式規範 (有四個 "f" 字元) 會輸出時間間隔中的萬分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含四個小數位數。
 
@@ -282,9 +257,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="f5Specifier"></a>
-
-## <a name="the-fffff-custom-format-specifier"></a>"fffff" 自訂格式規範
+## <a name="f5Specifier"></a>"fffff" 自訂格式規範
 
 "fffff" 自訂格式規範 (有五個 "f" 字元) 會輸出時間間隔中的十萬分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含五個小數位數。
 
@@ -295,9 +268,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="f6Specifier"></a>
-
-## <a name="the-ffffff-custom-format-specifier"></a>"ffffff" 自訂格式規範
+## <a name="f6Specifier"></a>"ffffff" 自訂格式規範
 
 "ffffff" 自訂格式規範 (有六個 "f" 字元) 會輸出時間間隔中的百萬分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含六個小數位數。
 
@@ -308,9 +279,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="f7Specifier"></a>
-
-## <a name="the-fffffff-custom-format-specifier"></a>"fffffff" 自訂格式規範
+## <a name="f7Specifier"></a>"fffffff" 自訂格式規範
 
 "fffffff" 自訂格式規範 (有七個 "f" 字元) 會輸出時間間隔中的千萬分之一秒 (或刻度的小數值)。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，輸入字串必須確切包含七個小數位數。
 
@@ -321,9 +290,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="F_Specifier"></a>
-
-## <a name="the-f-custom-format-specifier"></a>"F" 自訂格式規範
+## <a name="F_Specifier"></a>"F" 自訂格式規範
 
 "F" 自訂格式規範會輸出時間間隔中的十分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 如果時間間隔十分之一秒的值為零，它就不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要使用十分之一秒的位數。
 
@@ -336,9 +303,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="FF_Specifier"></a>
-
-## <a name="the-ff-custom-format-specifier"></a>"FF" 自訂格式規範
+## <a name="FF_Specifier"></a>"FF" 自訂格式規範
 
 "FF" 自訂格式規範會輸出時間間隔中的百分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 如果小數點後有任何零，這些零不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要使用十分之一秒和百分之一秒的位數。
 
@@ -349,9 +314,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="F3_Specifier"></a>
-
-## <a name="the-fff-custom-format-specifier"></a>"FFF" 自訂格式規範
+## <a name="F3_Specifier"></a>"FFF" 自訂格式規範
 
 "FFF" 自訂格式規範 (有三個 "F" 字元) 會輸出時間間隔中的毫秒。 在格式化作業中，會截斷其餘任何小數位數。 如果小數點後有任何零，這些零不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要使用十分之一秒、百分之一秒及千分之一秒的位數。
 
@@ -362,9 +325,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="F4_Specifier"></a>
-
-## <a name="the-ffff-custom-format-specifier"></a>"FFFF" 自訂格式規範
+## <a name="F4_Specifier"></a>"FFFF" 自訂格式規範
 
 "FFFF" 自訂格式規範 (有四個 "F" 字元) 會輸出時間間隔中的萬分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 如果小數點後有任何零，這些零不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要使用十分之一秒、百分之一秒、千分之一秒及萬分之一秒的位數。
 
@@ -375,9 +336,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="F5_Specifier"></a>
-
-## <a name="the-fffff-custom-format-specifier"></a>"FFFFF" 自訂格式規範
+## <a name="F5_Specifier"></a>"FFFFF" 自訂格式規範
 
 "FFFFF" 自訂格式規範 (有五個 "F" 字元) 會輸出時間間隔中的十萬分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 如果小數點後有任何零，這些零不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要使用十分之一秒、百分之一秒、千分之一秒、萬分之一秒及十萬分之一秒的位數。
 
@@ -388,9 +347,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="F6_Specifier"></a>
-
-## <a name="the-ffffff-custom-format-specifier"></a>"FFFFFF" 自訂格式規範
+## <a name="F6_Specifier"></a>"FFFFFF" 自訂格式規範
 
 "FFFFFF" 自訂格式規範 (有六個 "F" 字元) 會輸出時間間隔中的百萬分之一秒。 在格式化作業中，會截斷其餘任何小數位數。 如果小數點後有任何零，這些零不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要使用十分之一秒、百分之一秒、千分之一秒、萬分之一秒、十萬分之一秒及百萬分之一秒的位數。
 
@@ -401,9 +358,7 @@ ms.locfileid: "57677106"
 
 [回到表格](#table)
 
-<a name="F7_Specifier"></a>
-
-## <a name="the-fffffff-custom-format-specifier"></a>"FFFFFFF" 自訂格式規範
+## <a name="F7_Specifier"></a>"FFFFFFF" 自訂格式規範
 
 "FFFFFFF" 自訂格式規範 (有七個 "F" 字元) 會輸出時間間隔中的千萬分之一秒 (或刻度的小數值)。 如果小數點後有任何零，這些零不會包含在結果字串中。 在呼叫 <xref:System.TimeSpan.ParseExact%2A?displayProperty=nameWithType> 或 <xref:System.TimeSpan.TryParseExact%2A?displayProperty=nameWithType> 方法的剖析作業中，可以視需要在輸入字串中使用七個小數位數。
 
@@ -413,8 +368,6 @@ ms.locfileid: "57677106"
 [!code-vb[Conceptual.TimeSpan.Custom#27](~/samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.timespan.custom/vb/f_specifiers1.vb#27)]
 
 [回到表格](#table)
-
-<a name="Other"></a>
 
 ## <a name="other-characters"></a>其他字元
 

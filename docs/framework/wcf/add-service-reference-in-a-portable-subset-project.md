@@ -2,12 +2,12 @@
 title: 將服務參考加入至可攜式子集專案
 ms.date: 03/30/2017
 ms.assetid: 61ccfe0f-a34b-40ca-8f5e-725fa1b8095e
-ms.openlocfilehash: e1d65df46c0ed6d9d271727ad04a661c5e34a1ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92ee180da531259b005b5782c180a139fd66847b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59145427"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316722"
 ---
 # <a name="add-service-reference-in-a-portable-subset-project"></a>將服務參考加入至可攜式子集專案
 可攜式子集專案可讓.NET 組件的程式設計人員維護單一來源樹狀結構，並建置系統，同時仍可支援多個.NET 實作 （桌上型電腦、 Silverlight、 Windows Phone 和 XBOX）。 可攜式子集專案僅參考也就是可以使用任何.NET 實作的.NET framework 組件的.NET 可攜式程式庫。  
@@ -15,21 +15,21 @@ ms.locfileid: "59145427"
 ## <a name="add-service-reference-details"></a>加入服務參考詳細資料  
  將服務參考加入至可攜式子集專案時會強制執行下列限制：  
   
-1.  <xref:System.Xml.Serialization.XmlSerializer> 只能使用常值編碼。 SOAP 編碼會在匯出期間產生錯誤。  
+1. <xref:System.Xml.Serialization.XmlSerializer> 只能使用常值編碼。 SOAP 編碼會在匯出期間產生錯誤。  
   
-2.  對於使用 <xref:System.Runtime.Serialization.DataContractSerializer> 案例的服務，會提供資料合約 Surrogate 以確保重複使用的型別只能來自可攜式子集。  
+2. 對於使用 <xref:System.Runtime.Serialization.DataContractSerializer> 案例的服務，會提供資料合約 Surrogate 以確保重複使用的型別只能來自可攜式子集。  
   
-3.  可攜式程式庫不支援需要依賴繫結程序的端點 (所有繫結程序，但是不包括 <xref:System.ServiceModel.BasicHttpBinding>、沒有異動流程的 <xref:System.ServiceModel.WSHttpBinding>、可靠工作階段或 MTOM 編碼和對等的自訂繫結程序)，將會被忽略。  
+3. 可攜式程式庫不支援需要依賴繫結程序的端點 (所有繫結程序，但是不包括 <xref:System.ServiceModel.BasicHttpBinding>、沒有異動流程的 <xref:System.ServiceModel.WSHttpBinding>、可靠工作階段或 MTOM 編碼和對等的自訂繫結程序)，將會被忽略。  
   
-4.  在匯出之前，會刪除所有作業中全部訊息描述之訊息標頭。  
+4. 在匯出之前，會刪除所有作業中全部訊息描述之訊息標頭。  
   
-5.  會從產生的用戶端 Proxy 程式碼中移除非可攜式屬性 <xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute> 和 <xref:System.ServiceModel.TransactionFlowAttribute>。  
+5. 會從產生的用戶端 Proxy 程式碼中移除非可攜式屬性 <xref:System.ComponentModel.DesignerCategoryAttribute>、<xref:System.SerializableAttribute> 和 <xref:System.ServiceModel.TransactionFlowAttribute>。  
   
-6.  會從 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和 <xref:System.ServiceModel.FaultContractAttribute> 中移除非可攜式屬性 ProtectionLevel、SessionMode、IsInitiating 和 IsTerminating。  
+6. 會從 <xref:System.ServiceModel.ServiceContractAttribute>、<xref:System.ServiceModel.OperationContractAttribute> 和 <xref:System.ServiceModel.FaultContractAttribute> 中移除非可攜式屬性 ProtectionLevel、SessionMode、IsInitiating 和 IsTerminating。  
   
-7.  所有服務作業都會產生為用戶端 Proxy 上的非同步作業。  
+7. 所有服務作業都會產生為用戶端 Proxy 上的非同步作業。  
   
-8.  會將所產生且使用非可攜式型別的用戶端建構函式移除。  
+8. 會將所產生且使用非可攜式型別的用戶端建構函式移除。  
   
 9. <xref:System.Net.CookieContainer> 執行個體會在產生的用戶端上公開。  
   

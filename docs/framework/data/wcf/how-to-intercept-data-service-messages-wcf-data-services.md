@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, customizing
 - query interceptors [WCF Data Services]
 ms.assetid: 24b9df1b-b54b-4795-a033-edf333675de6
-ms.openlocfilehash: 56e4a3f95c7449ae5693172728c9d777113679bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a11334abc83db20bec06fd2459d7b8598f672f2f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101288"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317476"
 ---
 # <a name="how-to-intercept-data-service-messages-wcf-data-services"></a>HOW TO：攔截資料服務訊息 (WCF Data Services)
 使用 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，您可以攔截要求訊息，因此您可以將自訂邏輯加入至作業。 若要攔截訊息中,，您可以使用特別屬性化的方法中的資料服務。 如需詳細資訊，請參閱 <<c0> [ 攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)。  
@@ -22,23 +22,23 @@ ms.locfileid: "59101288"
   
 ### <a name="to-define-a-query-interceptor-for-the-orders-entity-set"></a>定義 Orders 實體集的查詢攔截器  
   
-1.  在 Northwind 資料服務專案中，開啟 Northwind.svc 檔案。  
+1. 在 Northwind 資料服務專案中，開啟 Northwind.svc 檔案。  
   
-2.  在 `Northwind` 類別的字碼頁中，加入下列 `using` 陳述式 (在 Visual Basic 中是 `Imports`)。  
+2. 在 `Northwind` 類別的字碼頁中，加入下列 `using` 陳述式 (在 Visual Basic 中是 `Imports`)。  
   
      [!code-csharp[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#usinglinqexpressions)]
      [!code-vb[Astoria Northwind Service#UsingLinqExpressions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#usinglinqexpressions)]  
   
-3.  在 `Northwind` 類別中，定義名為 `OnQueryOrders` 的服務作業方法，如下所示：  
+3. 在 `Northwind` 類別中，定義名為 `OnQueryOrders` 的服務作業方法，如下所示：  
   
      [!code-csharp[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#queryinterceptordef)]
      [!code-vb[Astoria Northwind Service#QueryInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#queryinterceptordef)]  
   
 ### <a name="to-define-a-change-interceptor-for-the-products-entity-set"></a>定義 Products 實體集的變更攔截器  
   
-1.  在 Northwind 資料服務專案中，開啟 Northwind.svc 檔案。  
+1. 在 Northwind 資料服務專案中，開啟 Northwind.svc 檔案。  
   
-2.  在 `Northwind` 類別中，定義名為 `OnChangeProducts` 的服務作業方法，如下所示：  
+2. 在 `Northwind` 類別中，定義名為 `OnChangeProducts` 的服務作業方法，如下所示：  
   
      [!code-csharp[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#changeinterceptordef)]
      [!code-vb[Astoria Northwind Service#ChangeInterceptorDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#changeinterceptordef)]  

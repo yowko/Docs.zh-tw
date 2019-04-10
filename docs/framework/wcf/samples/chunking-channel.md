@@ -2,12 +2,12 @@
 title: 區塊處理通道
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: fafaef5f9e255adc9d8ff50748c7c82a7888c4cd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302695"
 ---
 # <a name="chunking-channel"></a>區塊處理通道
 傳送使用 Windows Communication Foundation (WCF) 的大型訊息時，它通常會限制用來緩衝處理這些訊息的記憶體數量。 一個可能的方案為以資料流處理訊息本文 (假設本文中有大量資料)。 然而，有些通訊協定需要緩衝處理整個訊息。 例如，可靠的傳訊和安全性。 另一個可能的方案為將較大訊息分成較小的訊息 (稱為區塊 (Chunk))，一次以單一區塊傳送這些區塊，然後在接收端重新構成較大訊息。 應用程式本身便可執行此區塊處理和取消區塊處理，或可以使用自訂通道來進行此作業。 區塊處理通道範例會顯示如何使用自訂通訊協定或層次通道，以便區塊處理和取消區塊處理任意較大訊息。  
@@ -203,11 +203,11 @@ as the ChunkingStart message.
   
  在下一個層級中，`ChunkingChannel` 需要數個元件才能實作區塊處理通訊協定。 在傳送端中，通道會使用名稱為 <xref:System.Xml.XmlDictionaryWriter> 且執行實際區塊處理的自訂 `ChunkingWriter`。 `ChunkingWriter` 會使用內部通道直接傳送區塊。 使用自訂 `XmlDictionaryWriter` 可讓您在寫入原始訊息的較大本文時，傳送出區塊。 這表示您不會緩衝處理整個原始訊息。  
   
- ![區塊處理通道](../../../../docs/framework/wcf/samples/media/chunkingchannel1.gif "ChunkingChannel1")  
+ ![此圖顯示區塊處理通道傳送架構。](./media/chunking-channel/chunking-channel-send.gif)  
   
  在接收端上，`ChunkingChannel` 會從內部通道提取訊息，並將這些訊息傳遞給自訂 <xref:System.Xml.XmlDictionaryReader> (稱為 `ChunkingReader`)，而這個項目會將傳入的區塊重新構成原始訊息。 `ChunkingChannel` 包裝這`ChunkingReader`在自訂`Message`稱為實作`ChunkingMessage`和此訊息傳回上一層。 `ChunkingReader` 和 `ChunkingMessage` 的組合可讓您在上一層讀取原始訊息本文時，進行取消區塊處理，而不需要緩衝處理整個原始訊息本文。 `ChunkingReader` 擁有的佇列中，緩衝傳入的區塊，最大的可設定緩衝處理的區塊數目。 達到此上限時，讀取器會等待讓上一層清空佇列中的訊息 (也就是只從原始訊息本文讀取)，或直到到達接收逾時上限為止。  
   
- ![區塊處理通道](../../../../docs/framework/wcf/samples/media/chunkingchannel2.gif "ChunkingChannel2")  
+ ![此圖顯示區塊處理通道接收架構。](./media/chunking-channel/chunking-channel-receive.gif)  
   
 ## <a name="chunking-programming-model"></a>區塊處理程式設計模型  
  服務開發人員可以將 `ChunkingBehavior` 屬性套用至合約內的作業，即可指定要區塊處理的訊息。 屬性 (Attribute) 會公開 `AppliesTo` 屬性 (Property)，讓開發人員指定是否要將區塊處理套用至輸入訊息、輸出訊息或兩者皆套用。 下列範例會示範 `ChunkingBehavior` 屬性的用法：  
@@ -309,19 +309,19 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-5.  先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  
+5. 先執行 Service.exe，然後執行 Client.exe，再查看兩個主控台視窗上的輸出。  
   
  執行範例時，預期會產生下列輸出。  
   

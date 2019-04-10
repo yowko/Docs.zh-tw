@@ -2,12 +2,12 @@
 title: 建置 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: 2899e7a5-9cb2-4e8d-b8d2-f31391549198
-ms.openlocfilehash: b6b541b93661f3da656e36d65ef3f94d76cae0c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b1f1005e32687d2683f757d847d9fa19e098f290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658867"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317853"
 ---
 # <a name="building-the-windows-communication-foundation-samples"></a>建置 Windows Communication Foundation 範例
 
@@ -18,9 +18,9 @@ ms.locfileid: "54658867"
 
 ## <a name="to-build-the-sample-using-a-command-prompt"></a>若要使用命令提示字元建置範例
 
-1.  開啟 Visual Studio 開發人員命令提示字元並瀏覽至安裝範例所在目錄位置下的語言特定子目錄。
+1. 開啟 Visual Studio 開發人員命令提示字元並瀏覽至安裝範例所在目錄位置下的語言特定子目錄。
 
-2.  型別`msbuild`在命令列。 用戶端程式檔案內建*client\bin*和服務程式檔內建*service\bin*。 如果服務裝載網際網路資訊服務 (IIS)，則服務程式檔也會複製到*servicemodelsamples*目錄及其*\bin*子目錄。
+2. 型別`msbuild`在命令列。 用戶端程式檔案內建*client\bin*和服務程式檔內建*service\bin*。 如果服務裝載網際網路資訊服務 (IIS)，則服務程式檔也會複製到*servicemodelsamples*目錄及其*\bin*子目錄。
 
 > [!NOTE]
 > 您必須上設定 Acl *%systemdrive%\inetpub\wwwroot*授與修改權限給您所執行的帳戶。 否則，有些建置後事件將會失敗。 或者，您也可以不去改變這些 ACL，而以系統管理員身分來執行 SDK 命令提示字元。
@@ -50,9 +50,9 @@ ms.locfileid: "54658867"
 
 ### <a name="to-regenerate-the-client-and-configuration-files"></a>若要重新產生用戶端與組態檔
 
-1.  開啟 [SDK 命令提示字元]，並巡覽至安裝範例所在目錄位置下任一語言特定子目錄。
+1. 開啟 [SDK 命令提示字元]，並巡覽至安裝範例所在目錄位置下任一語言特定子目錄。
 
-2.  如果服務是 Web 裝載的型別，請使用下列命令。
+2. 如果服務是 Web 裝載的型別，請使用下列命令。
 
     ```
     svcutil.exe /n:"http://Microsoft.ServiceModel.Samples,Microsoft.ServiceModel.Samples" http://localhost/servicemodelsamples/service.svc/mex /out:generatedClient.cs

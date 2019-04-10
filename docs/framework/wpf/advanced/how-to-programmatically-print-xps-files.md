@@ -8,12 +8,12 @@ helpviewer_keywords:
 - printing XPS files programmatically [WPF]
 - XPS files [WPF], printing programmatically
 ms.assetid: 0b1c0a3f-b19e-43d6-bcc9-eb3ec4e555ad
-ms.openlocfilehash: f113516fd96b88ea04b5ee155f808200dd2c893d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1d6d45289c9278271a7c7bef5225ad024a5ab0fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114292"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312068"
 ---
 # <a name="how-to-programmatically-print-xps-files"></a>HOW TO：以程式設計方式列印 XPS 檔
 您可以使用一個多載<xref:System.Printing.PrintQueue.AddJob%2A>方法來列印[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]不需開啟的檔案<xref:System.Windows.Controls.PrintDialog>或基本上，任何[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]完全。  
@@ -25,13 +25,13 @@ ms.locfileid: "59114292"
 ## <a name="example"></a>範例  
  使用三個參數的主要步驟<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法如下所示。 下列範例會提供詳細資料。  
   
-1.  判斷印表機是否為 XPSDrv 印表機。 (如需 XPSDrv 的詳細資訊，請參閱[列印概觀](printing-overview.md)。)  
+1. 判斷印表機是否為 XPSDrv 印表機。 (如需 XPSDrv 的詳細資訊，請參閱[列印概觀](printing-overview.md)。)  
   
-2.  如果印表機不是 XPSDrv 印表機，將執行緒的 Apartment 設定為單一執行緒。  
+2. 如果印表機不是 XPSDrv 印表機，將執行緒的 Apartment 設定為單一執行緒。  
   
-3.  將列印伺服器與列印佇列物件具現化。  
+3. 將列印伺服器與列印佇列物件具現化。  
   
-4.  呼叫方法，指定作業名稱、 要列印的檔案和<xref:System.Boolean>旗標，指出印表機是否為 XPSDrv 印表機。  
+4. 呼叫方法，指定作業名稱、 要列印的檔案和<xref:System.Boolean>旗標，指出印表機是否為 XPSDrv 印表機。  
   
  下列範例示範如何批次列印目錄中的所有 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案。 雖然應用程式會提示使用者指定的目錄，包含三個參數<xref:System.Printing.PrintQueue.AddJob%28System.String%2CSystem.String%2CSystem.Boolean%29>方法不需要[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 它可以使用於任何程式碼路徑，其中包含您可以傳遞至的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 檔案名稱和路徑。  
   

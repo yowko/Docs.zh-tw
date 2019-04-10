@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31393
 ms.assetid: 2963cf3f-c527-4aa7-b67c-ee80b6d23186
-ms.openlocfilehash: 6d2edadc323994f7f25394321fb1aff18f7154c5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 017a2458562068727674bd3fd9cda8c33d989e8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824269"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314616"
 ---
 # <a name="expression-has-the-type-typename-which-is-a-restricted-type-and-cannot-be-used-to-access-members-inherited-from-object-or-valuetype"></a>運算式包含類型 '\<類型名稱 >' 其為受限制的類型，且不能用來存取繼承自 'Object' 或 'ValueType' 的成員
 運算式評估為 common language runtime (CLR) 無法 box 處理的類型，但是會存取需要 boxing 處理的成員。  
@@ -25,11 +25,11 @@ ms.locfileid: "58824269"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  找出評估至所指出類型的運算式。  
+1. 找出評估至所指出類型的運算式。  
   
-2.  找出您嘗試呼叫的方法繼承自的陳述式的一部分<xref:System.Object>或<xref:System.ValueType>。  
+2. 找出您嘗試呼叫的方法繼承自的陳述式的一部分<xref:System.Object>或<xref:System.ValueType>。  
   
-3.  請重寫陳述式，以避免在方法呼叫。  
+3. 請重寫陳述式，以避免在方法呼叫。  
   
 ## <a name="see-also"></a>另請參閱
 

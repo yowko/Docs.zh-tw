@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9bb09571ea8c9fb3a6d16a9f16c5269326d7f7da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f6dcd8e47fcbbee1e17e9e9ca1cb93f6076b4475
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712470"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58826596"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>記憶體回收的基本概念
 <a name="top"></a> 在 Common Language Runtime (CLR) 中，記憶體回收行程會當做自動記憶體管理員。 它提供了下列優點：  
@@ -198,7 +198,7 @@ ms.locfileid: "57712470"
 ### <a name="configuring-garbage-collection"></a>設定記憶體回收  
  您可以使用執行階段組態結構描述的 [\<gcServer> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)來指定您想讓 CLR 執行的記憶體回收類型。 當此項目的 `enabled` 屬性設定為 `false` (預設值) 時，CLR 就會執行工作站記憶體回收。 當您將 `enabled` 屬性設定為 `true`時，CLR 就會執行伺服器記憶體回收。  
   
- 並行記憶體回收是使用執行階段組態結構描述的 [\<gcConcurrent> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來指定。 預設的設定值是 `enabled`。 此設定可控制並行和背景記憶體回收。  
+ 並行記憶體回收是使用執行階段組態結構描述的 [\<gcConcurrent> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcconcurrent-element.md)來指定。 預設的設定值是 `enabled`。 這項設定可控制並行和背景記憶體回收。  
   
  您也可以使用 Unmanaged 裝載介面來指定伺服器記憶體回收。 請注意，ASP.NET 和 SQL Server 會自動啟用伺服器記憶體回收 (如果您的應用程式裝載在其中一個環境內部的話)。  
   
@@ -261,21 +261,19 @@ ms.locfileid: "57712470"
   
  背景記憶體回收會移除並行記憶體回收所加諸的配置限制，因為暫時記憶體回收可能會在背景記憶體回收期間進行。 這表示，背景記憶體回收可以移除暫時層代中的無作用物件，而且也可以在層代 1 記憶體回收期間視需要擴展堆積。  
   
- 下圖顯示在工作站上另一個專用執行緒上執行的背景記憶體回收。  
+下圖顯示在工作站上另一個專用執行緒上執行的背景記憶體回收：
   
- ![背景工作站記憶體回收](../../../docs/standard/garbage-collection/media/backgroundworkstn.png "BackgroundWorkstn")  
-背景工作站記憶體回收  
-  
+ ![顯示背景工作站記憶體回收的圖表。](./media/fundamentals/background-workstation-garbage-collection.png)
+   
  [回到頁首](#top)  
   
 <a name="background_server_garbage_collection"></a>   
 ## <a name="background-server-garbage-collection"></a>背景伺服器記憶體回收  
  從 .NET Framework 4.5 開始，背景伺服器記憶體回收是伺服器記憶體回收的預設模式。 若要選擇這個模式，在執行階段組態結構描述中，將 [\<gcServer> 項目](../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)的 `enabled` 屬性設定為 `true`。 這個模式的功能類似於背景工作站記憶體回收 (如上一節所述)，不過仍有一些差異。 背景工作站記憶體回收會使用一個專用的背景記憶體回收執行緒，而背景伺服器記憶體回收則使用多個執行緒，通常是針對每個邏輯處理器使用一個專用的執行緒。 與工作站背景記憶體回收執行緒不同的是，這些執行緒不會逾時。  
   
- 下圖顯示在伺服器上另一個專用執行緒上執行的背景記憶體回收。  
+ 下圖顯示在伺服器上另一個專用執行緒上執行的背景記憶體回收：  
   
- ![背景伺服器記憶體回收](../../../docs/standard/garbage-collection/media/backgroundserver.png "BackgroundServer")  
-背景伺服器記憶體回收  
+ ![顯示背景伺服器記憶體回收的圖表。](./media/fundamentals/background-server-garbage-collection.png)  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], forms
 - Windows Forms, inheritance
 ms.assetid: cb3e1c0f-3d2a-4cdc-b0d1-c92eae567ffb
-ms.openlocfilehash: 20473c844c6fc93724d9e1aacab9b6687f3a7637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0d8799359a12b9bb64331d83df2500bede8c0ff2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314538"
 ---
 # <a name="how-to-inherit-windows-forms"></a>HOW TO：繼承 Windows Forms
 藉由繼承自基底表單建立新的 Windows Form，可以很快地複製您的最佳成果，而無須在每次需要它時都要完成重建表單的程序。  
@@ -25,9 +25,9 @@ ms.locfileid: "59112743"
   
 ### <a name="to-inherit-a-form-programmatically"></a>以程式設計方式繼承表單  
   
-1.  在類別中，加入對包含您想要繼承之表單的命名空間的參考。  
+1. 在類別中，加入對包含您想要繼承之表單的命名空間的參考。  
   
-2.  在類別定義中，加入要繼承之表單的參考。 參考必須包括包含表單的命名空間，後面接著句點，然後是基底表單本身的名稱。  
+2. 在類別定義中，加入要繼承之表單的參考。 參考必須包括包含表單的命名空間，後面接著句點，然後是基底表單本身的名稱。  
   
     ```vb  
     Public Class Form2  

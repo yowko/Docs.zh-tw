@@ -2,12 +2,12 @@
 title: WCF 服務發行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 04912d94568cf144e874513395e6a6f31375fb7c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441433"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299718"
 ---
 # <a name="wcf-service-publishing"></a>WCF 服務發行
 
@@ -35,13 +35,13 @@ WCF 服務發行支援發佈的 WCF 服務建立的一組 WCF 服務庫範本和
 
 執行下列步驟，部署服務實作：
 
-1.  使用提高的權限開啟 Visual Studio (以滑鼠右鍵按一下可執行檔，然後選擇 **系統管理員身分執行**以開啟它)。  如果您使用 IIS 7.0 或更新版本中，確定您已安裝 「 IIS Metabase 及 IIS6 設定相容性 」 元件使用控制台中的 [關閉 Windows 功能開啟或關閉]。
+1. 使用提高的權限開啟 Visual Studio (以滑鼠右鍵按一下可執行檔，然後選擇 **系統管理員身分執行**以開啟它)。  如果您使用 IIS 7.0 或更新版本中，確定您已安裝 「 IIS Metabase 及 IIS6 設定相容性 」 元件使用控制台中的 [關閉 Windows 功能開啟或關閉]。
 
-2.  開啟服務專案中，選取**建置** > **發行\<專案名稱 >** 從主功能表中，或以滑鼠右鍵按一下專案中的**方案總管] 中**按一下 [**發行**。
+2. 開啟服務專案中，選取**建置** > **發行\<專案名稱 >** 從主功能表中，或以滑鼠右鍵按一下專案中的**方案總管] 中**按一下 [**發行**。
 
-3.  **發佈** 視窗隨即出現。 按一下  **...**. 按鈕，指定服務應部署至其中的目標位置。 您可以選取應用程式部署至本機 IIS、 檔案系統或 FTP 站台。 如果部署到本機 IIS 應用程式，您可以選取您的網站，並建立您的 web 應用程式，方法是按一下**建立新的 Web 應用程式**在右上角的圖示。
+3. **發佈** 視窗隨即出現。 按一下  **...**. 按鈕，指定服務應部署至其中的目標位置。 您可以選取應用程式部署至本機 IIS、 檔案系統或 FTP 站台。 如果部署到本機 IIS 應用程式，您可以選取您的網站，並建立您的 web 應用程式，方法是按一下**建立新的 Web 應用程式**在右上角的圖示。
 
-4.  按一下 之後**發佈**在主視窗中，Visual Studio 部署到指定的目標位置的應用程式並將 Web.config、.svc 和組件檔案複製到目標目錄。 。 .Svc 的名稱會是"ProjectName.ServiceName.svc"。 已成功發行服務之後，您可以找到在 Visual Studio 輸出視窗中，看起來類似"連接到`http://localhost/WebApplicationFolderName...`"。 您可以按下 CTRL，然後按一下此連結，以便在 Visual Studio 內部開啟瀏覽器頁面來檢視服務目錄結構。
+4. 按一下 之後**發佈**在主視窗中，Visual Studio 部署到指定的目標位置的應用程式並將 Web.config、.svc 和組件檔案複製到目標目錄。 。 .Svc 的名稱會是"ProjectName.ServiceName.svc"。 已成功發行服務之後，您可以找到在 Visual Studio 輸出視窗中，看起來類似"連接到`http://localhost/WebApplicationFolderName...`"。 您可以按下 CTRL，然後按一下此連結，以便在 Visual Studio 內部開啟瀏覽器頁面來檢視服務目錄結構。
 
      如果您無法瀏覽至網站，可能是因為 IIS 沒有啟用目錄瀏覽器。 請依照若要啟用它 「 項目您可以試試看 」 一節中的提示。 或者，您可以直接輸入`http://localhost/WebApplicationFolderName/ProjectName.ServiceName.svc`若要檢視您的服務頁面。
 

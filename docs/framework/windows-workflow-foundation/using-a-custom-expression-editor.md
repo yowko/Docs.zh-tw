@@ -2,12 +2,12 @@
 title: 使用自訂運算式編輯器
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
-ms.openlocfilehash: 2a390dd57d31994e8a2ba6a424d74bf7ee44fc10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59101272"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314083"
 ---
 # <a name="using-a-custom-expression-editor"></a>使用自訂運算式編輯器
 可以實作自訂運算式編輯器，以提供更豐富、更簡單的運算式編輯體驗。 在一些案例中，您可能會想要使用自訂運算式編輯器：  
@@ -18,11 +18,11 @@ ms.locfileid: "59101272"
   
  實作自訂運算式編輯器所需的三個基本步驟：  
   
-1.  實作 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。 這個介面可管理建立和解構運算式編輯器。  
+1. 實作 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。 這個介面可管理建立和解構運算式編輯器。  
   
-2.  實作 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 介面。 這個介面會實作運算式編輯 UI 的 UI。  
+2. 實作 <xref:System.Activities.Presentation.View.IExpressionEditorInstance> 介面。 這個介面會實作運算式編輯 UI 的 UI。  
   
-3.  在重新裝載的工作流程應用程式中發行 <xref:System.Activities.Presentation.View.IExpressionEditorService>。  
+3. 在重新裝載的工作流程應用程式中發行 <xref:System.Activities.Presentation.View.IExpressionEditorService>。  
   
 ## <a name="implementing-a-custom-expression-editor-in-a-class-library"></a>在類別庫中實作自訂運算式編輯器  
  以下為 (概念證明) `MyEditorService` 類別的程式碼範例，該類別會實作包含在 MyExpressionEditorService 程式庫專案中的 <xref:System.Activities.Presentation.View.IExpressionEditorService> 介面。  

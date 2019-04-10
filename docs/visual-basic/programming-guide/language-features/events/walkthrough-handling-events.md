@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WithEvents keyword [Visual Basic], walkthroughs
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
-ms.openlocfilehash: 2a8b515f500884d743b7dcca41ffe8c1607375a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308558"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>逐步解說：處理事件 (Visual Basic)
 這是示範如何使用事件的兩個主題的第二個。 第一個主題中，[逐步解說：宣告和引發事件](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)，示範如何宣告及引發事件。 本節會使用表單和類別，從該逐步解說示範如何處理它們發生的事件。  
@@ -23,7 +23,7 @@ ms.locfileid: "58840922"
   
 ### <a name="to-handle-the-percentdone-event-of-the-widget-class"></a>若要處理 PercentDone 類別之事件的小工具  
   
-1.  將下列程式碼中的`Form1`:  
+1. 將下列程式碼中的`Form1`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#4)]  
   
@@ -38,20 +38,20 @@ ms.locfileid: "58840922"
   
 #### <a name="to-handle-an-event"></a>若要處理的事件  
   
-1.  選取 `mWidget`左邊的下拉式清單中從**程式碼編輯器**。  
+1. 選取 `mWidget`左邊的下拉式清單中從**程式碼編輯器**。  
   
-2.  選取`PercentDone`右邊下拉式清單中的事件。 **程式碼編輯器**開啟`mWidget_PercentDone`事件程序。  
+2. 選取`PercentDone`右邊下拉式清單中的事件。 **程式碼編輯器**開啟`mWidget_PercentDone`事件程序。  
   
     > [!NOTE]
     >  **程式碼編輯器**十分有用，但並非必要，插入新的事件處理常式。 在此逐步解說中，它是更為直接的方式只是事件處理常式將直接複製到您的程式碼項目。  
   
-3.  將下列程式碼加入至 `mWidget_PercentDone` 事件處理常式：  
+3. 將下列程式碼加入至 `mWidget_PercentDone` 事件處理常式：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#5)]  
   
      每當`PercentDone`就會引發事件時，將事件程序會顯示完成百分比`Label`控制項。 `DoEvents`方法可讓標籤以重新繪製，並提供使用者有機會按一下 [**取消**] 按鈕。  
   
-4.  新增下列程式碼`Button2_Click`事件處理常式：  
+4. 新增下列程式碼`Button2_Click`事件處理常式：  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#6)]  
   
@@ -64,11 +64,11 @@ ms.locfileid: "58840922"
   
 #### <a name="to-create-an-object-and-assign-a-reference-to-it"></a>若要建立物件，並指派給它的參考  
   
-1.  選取  **（Form1 事件）** 左邊的下拉式清單中從**程式碼編輯器**。  
+1. 選取  **（Form1 事件）** 左邊的下拉式清單中從**程式碼編輯器**。  
   
-2.  選取`Load`右邊下拉式清單中的事件。 **程式碼編輯器**開啟`Form1_Load`事件程序。  
+2. 選取`Load`右邊下拉式清單中的事件。 **程式碼編輯器**開啟`Form1_Load`事件程序。  
   
-3.  新增下列程式碼`Form1_Load`事件的程序來建立`Widget`:  
+3. 新增下列程式碼`Form1_Load`事件的程序來建立`Widget`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#7)]  
   
@@ -88,11 +88,11 @@ ms.locfileid: "58840922"
   
 #### <a name="to-run-the-program"></a>執行程式  
   
-1.  若要將專案放在執行模式中按 f5 鍵。  
+1. 若要將專案放在執行模式中按 f5 鍵。  
   
-2.  按一下 [**開始工作**] 按鈕。 每次`PercentDone`就會引發事件，標籤已更新之工作的完成百分比。  
+2. 按一下 [**開始工作**] 按鈕。 每次`PercentDone`就會引發事件，標籤已更新之工作的完成百分比。  
   
-3.  按一下 **取消**按鈕以停止工作。 請注意的外觀**取消**按鈕不會變更，請立即按一下它。 `Click`事件不會發生之前`My.Application.DoEvents`陳述式可讓事件處理。  
+3. 按一下 **取消**按鈕以停止工作。 請注意的外觀**取消**按鈕不會變更，請立即按一下它。 `Click`事件不會發生之前`My.Application.DoEvents`陳述式可讓事件處理。  
   
     > [!NOTE]
     >  `My.Application.DoEvents`方法不會處理事件中完全相同的方式像表單一樣。 例如，在此逐步解說中，您必須按一下**取消**按鈕兩次。 若要允許表單以直接處理事件，您可以使用多執行緒處理。 如需詳細資訊，請參閱 < [Managed 執行緒處理](../../../../standard/threading/index.md)。

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - metadata [WPF], framework properties
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
-ms.openlocfilehash: b6bacf6f0c27b123d36f17510d84e5ef5e2cf122
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314694"
 ---
 # <a name="framework-property-metadata"></a>架構屬性中繼資料
 針對在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 架構中視為 WPF 架構層級的物件項目屬性，報告架構屬性中繼資料選項。 WPF 架構層級指定一般會需要由 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡報 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 和可執行檔處理的轉譯、資料繫結和屬性系統調整等功能。 這些系統會查詢架構屬性中繼資料，以判斷特定項目屬性的特定功能特性。  
@@ -48,9 +48,9 @@ ms.locfileid: "59108702"
   
  如果您要建立<xref:System.Windows.FrameworkPropertyMetadata>執行個體，有兩種方式可以填入該中繼資料的通訊架構屬性特性的特定屬性的值：  
   
-1.  使用<xref:System.Windows.FrameworkPropertyMetadata>建構函式簽章，可讓`flags`參數。 這個參數應該填入所有所需的組合值的<xref:System.Windows.FrameworkPropertyMetadataOptions>列舉旗標。  
+1. 使用<xref:System.Windows.FrameworkPropertyMetadata>建構函式簽章，可讓`flags`參數。 這個參數應該填入所有所需的組合值的<xref:System.Windows.FrameworkPropertyMetadataOptions>列舉旗標。  
   
-2.  使用其中一個不含簽章`flags`參數，然後將每個報告布林值屬性<xref:System.Windows.FrameworkPropertyMetadata>到`true`適用於每個所需的特性變更。 如果這麼做，您必須先設定這些屬性，才能建構具有此相依性屬性的任何項目；布林值屬性為讀寫，以允許此避免 `flags` 參數的行為，且仍可填入中繼資料，但在屬性使用前必須有效密封中繼資料。 因此，嘗試在要求中繼資料之後設定屬性，是無效的作業。  
+2. 使用其中一個不含簽章`flags`參數，然後將每個報告布林值屬性<xref:System.Windows.FrameworkPropertyMetadata>到`true`適用於每個所需的特性變更。 如果這麼做，您必須先設定這些屬性，才能建構具有此相依性屬性的任何項目；布林值屬性為讀寫，以允許此避免 `flags` 參數的行為，且仍可填入中繼資料，但在屬性使用前必須有效密封中繼資料。 因此，嘗試在要求中繼資料之後設定屬性，是無效的作業。  
   
 <a name="Framework_Property_Metadata_Merge_Behavior"></a>   
 ## <a name="framework-property-metadata-merge-behavior"></a>架構屬性中繼資料合併行為  

@@ -2,12 +2,12 @@
 title: 公司購買程序
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: 511250b8e9c08268ddf917e19fd99281149af08a
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 346d4b58d8d59c416fbdd51f5fbe02b54f9e078f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442239"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313329"
 ---
 # <a name="corporate-purchase-process"></a>公司購買程序
 這個範例示範如何建立一個具有自動最佳提案選取、非常基本的提案徵求書 (RFP) 架構採購程序。 它結合 <xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601> 和 <xref:System.Activities.Statements.ForEach%601>，以及自訂活動，建立代表此程序的工作流程。
@@ -18,7 +18,7 @@ ms.locfileid: "56442239"
 
 -   Visual Studio 2012.
 
--   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)].
+-   [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。
 
 ## <a name="demonstrates"></a>示範
 
@@ -50,35 +50,35 @@ ms.locfileid: "56442239"
 ## <a name="description-of-the-process"></a>程序說明  
  此範例會示範 Windows Workflow Foundation (WF) 程式，以從一般公司的供應商收集提案的實作。  
   
-1.  X 公司的員工建立提案徵求書 (RFP)。  
+1. X 公司的員工建立提案徵求書 (RFP)。  
   
     1.  員工輸入 RFP 標題和描述。  
   
     2.  員工選取數家供應商，希望邀請他們提交提案。  
   
-2.  員工提交提案。  
+2. 員工提交提案。  
   
     1.  建立工作流程執行個體。  
   
     2.  工作流程等候所有供應商提交提案。  
   
-3.  收到所有提案之後，工作流程逐一查看所有收到的提案並選取最佳提案。  
+3. 收到所有提案之後，工作流程逐一查看所有收到的提案並選取最佳提案。  
   
     1.  每個供應商都有評價 (這個範例將評價清單儲存在 VendorRepository.cs)。  
   
     2.  提案的總值是由 (供應商輸入的值) * (供應商記錄評價) / 100 所決定。  
   
-4.  原始要求者可以看到所有提交的提案。 在報表的特殊區段中呈現最佳提案。  
+4. 原始要求者可以看到所有提交的提案。 在報表的特殊區段中呈現最佳提案。  
   
-## <a name="process-definition"></a>程序定義  
- 此範例的核心邏輯使用 <xref:System.Activities.Statements.ParallelForEach%601> 活動，等候每個供應商的提案 (使用可建立書籤的自訂活動)，而且將供應商提案註冊為 RFP (使用 <xref:System.Activities.Statements.InvokeMethod> 活動)。  
+## <a name="process-definition"></a>流程定義  
+ 此範例的核心邏輯使用 <xref:System.Activities.Statements.ParallelForEach%601> 活動，等候每個供應商的供應項目 (使用可建立書籤的自訂活動)，而且將供應商提案註冊為 RFP (使用 <xref:System.Activities.Statements.InvokeMethod> 活動)。  
   
- 範例接著逐一查看儲存在 `RfpRepository` 中所有收到的提案，計算調整值 (使用 <xref:System.Activities.Statements.Assign> 活動和 <xref:System.Activities.Expressions> 活動)，如果調整值優於上一個最佳提案，則會將新值指派為最佳提案 (使用 <xref:System.Activities.Statements.If> 和 <xref:System.Activities.Statements.Assign> 活動)。  
+ 範例接著逐一查看儲存在 `RfpRepository` 中所有收到的提案，計算調整值 (使用 <xref:System.Activities.Statements.Assign> 活動和 <xref:System.Activities.Expressions> 活動)，如果調整值優於上一個最佳供應項目，則會將新值指派為最佳供應項目 (使用 <xref:System.Activities.Statements.If> 和 <xref:System.Activities.Statements.Assign> 活動)。  
   
 ## <a name="projects-in-this-sample"></a>這個範例中的專案  
  這個範例包含下列專案。  
   
-|Project|描述|  
+|專案|描述|  
 |-------------|-----------------|  
 |通用|程序中使用的實體物件 (Request for Proposal、Vendor 和 Vendor Proposal)。|  
 |WfDefinition|用戶端應用程式用來建立及使用採購程序工作流程執行個體之程序 ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] 程式) 和主機 (`PurchaseProcessHost`) 的定義。|  
@@ -111,7 +111,7 @@ ms.locfileid: "56442239"
 |RfpRepository|提案徵求書的儲存機制。 這個實作包含使用 Linq to XML 查詢結構描述化的持續性所產生的提案徵求書 XML 檔案。 |  
 |IOHelper|這個類別處理所有 I/O 相關問題 (資料夾、路徑等等)。|  
   
-### <a name="web-client"></a>Web 用戶端  
+### <a name="web-client"></a>網頁用戶端  
  下表包含 Web 用戶端專案中最重要網頁的描述。  
   
 |檔案|描述|  
@@ -143,15 +143,15 @@ ms.locfileid: "56442239"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  使用 Visual Studio 2010 開啟 PurchaseProcess.sln 方案檔。  
+1. 使用 Visual Studio 2010 開啟 PurchaseProcess.sln 方案檔。  
   
-2.  若要執行 Web 用戶端專案，請開啟**方案總管**上按一下滑鼠右鍵**Web 用戶端**專案。 選取 **設定為啟始專案**。  
+2. 若要執行 Web 用戶端專案，請開啟**方案總管**上按一下滑鼠右鍵**Web 用戶端**專案。 選取 **設定為啟始專案**。  
   
-3.  若要執行 WinForms 用戶端專案，請開啟**方案總管**上按一下滑鼠右鍵**WinForms 用戶端**專案。 選取 **設定為啟始專案**。  
+3. 若要執行 WinForms 用戶端專案，請開啟**方案總管**上按一下滑鼠右鍵**WinForms 用戶端**專案。 選取 **設定為啟始專案**。  
   
-4.  若要建置此方案，請按 CTRL+SHIFT+B。  
+4. 若要建置此方案，請按 CTRL+SHIFT+B。  
   
-5.  若要執行此方案，請按下 CTRL+F5。  
+5. 若要執行此方案，請按下 CTRL+F5。  
   
 ### <a name="web-client-options"></a>Web 用戶端選項  
   

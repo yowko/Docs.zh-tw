@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
-ms.openlocfilehash: a514134ed0af3b691a2e66720f81594a51747b6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089519"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313205"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>HOW TO：使用類別建立 Windows Communication Foundation 合約
 建立 Windows Communication Foundation (WCF) 合約的慣用的方法是使用介面。 如需詳細資訊，請參閱[如何：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)。 另一個方式就像這裡所略述的步驟，先建立一個類別，然後將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性直接套用至該類別，並將 <xref:System.ServiceModel.OperationContractAttribute> 屬性套用該類別中屬於合約部分的各個方法。  
@@ -22,13 +22,13 @@ ms.locfileid: "59089519"
   
 ### <a name="creating-a-windows-communication-foundation-contract-with-a-class"></a>以類別建立 Windows Communication Foundation 合約  
   
-1.  建立新的類別，使用 Visual Basic 中， C#，或任何其他 common language runtime 語言。  
+1. 建立新的類別，使用 Visual Basic 中， C#，或任何其他 common language runtime 語言。  
   
-2.  將 <xref:System.ServiceModel.ServiceContractAttribute> 類別套用至該類別。  
+2. 將 <xref:System.ServiceModel.ServiceContractAttribute> 類別套用至該類別。  
   
-3.  建立類別內的方法。  
+3. 建立類別內的方法。  
   
-4.  套用<xref:System.ServiceModel.OperationContractAttribute>必須公開為公用 WCF 合約一部分的每個方法的類別。  
+4. 套用<xref:System.ServiceModel.OperationContractAttribute>必須公開為公用 WCF 合約一部分的每個方法的類別。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會示範定義服務合約的類別。  

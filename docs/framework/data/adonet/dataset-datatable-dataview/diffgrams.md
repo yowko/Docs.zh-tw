@@ -2,12 +2,12 @@
 title: DiffGram
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
-ms.openlocfilehash: 1324e6536390b598ca9ef1f0cd3102f8ec49d45a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59197993"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313511"
 ---
 # <a name="diffgrams"></a>DiffGram
 DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。 <xref:System.Data.DataSet> 使用 DiffGram 格式以載入保存內容，並將內容序列化以透過網路連接傳輸。 當<xref:System.Data.DataSet>寫入為 DiffGram，它會填入 DiffGram 的所有必要資訊，以正確重新建立內容，但不是架構的<xref:System.Data.DataSet>，包括資料行的值，同時從**原始**並**目前**資料列版本中，資料列錯誤資訊和資料列順序。  
@@ -20,26 +20,26 @@ DiffGram 是 XML 格式，可用來識別資料項目的目前和原始版本。
   
 ### <a name="to-generate-a-diffgram"></a>若要產生 Diffgram  
   
-1.  產生根資料表 (即不具任何父項目的資料表) 的清單。  
+1. 產生根資料表 (即不具任何父項目的資料表) 的清單。  
   
-2.  針對清單中的每個資料表及其子代 (Descendant)，在 Diffgram 的第一個區段中寫出所有資料列的目前版本。  
+2. 針對清單中的每個資料表及其子代 (Descendant)，在 Diffgram 的第一個區段中寫出所有資料列的目前版本。  
   
-3.  每個資料表中<xref:System.Data.DataSet>，寫出的所有資料列，原始的版本，如果有的話，請在**\<之前 >** Diffgram 的區段。  
+3. 每個資料表中<xref:System.Data.DataSet>，寫出的所有資料列，原始的版本，如果有的話，請在**\<之前 >** Diffgram 的區段。  
   
-4.  如有錯誤，資料列寫入錯誤內容中**\<錯誤 >** Diffgram 的區段。  
+4. 如有錯誤，資料列寫入錯誤內容中**\<錯誤 >** Diffgram 的區段。  
   
  Diffgram 會從 XML 檔案的開頭依序處理到結尾。  
   
 ### <a name="to-process-a-diffgram"></a>若要處理 Diffgram  
   
-1.  處理 Diffgram 的第一個區段，其中包含資料列的目前版本。  
+1. 處理 Diffgram 的第一個區段，其中包含資料列的目前版本。  
   
-2.  處理第二個或**\<之前 >** 區段，其中包含原始資料列版本的修改和刪除資料列。  
+2. 處理第二個或**\<之前 >** 區段，其中包含原始資料列版本的修改和刪除資料列。  
   
     > [!NOTE]
     >  如果資料列標示為已刪除，則刪除作業可能也會刪除該資料列的子代，根據目前 `Cascade` 的 <xref:System.Data.DataSet> 屬性而定。  
   
-3.  處理程序**\<錯誤 >** 一節。 針對此區段中每個項目的指定資料列和資料行設定錯誤資訊。  
+3. 處理程序**\<錯誤 >** 一節。 針對此區段中每個項目的指定資料列和資料行設定錯誤資訊。  
   
 > [!NOTE]
 >  如果將 <xref:System.Data.XmlWriteMode> 設定為 Diffgram，則目標 <xref:System.Data.DataSet> 和原始 <xref:System.Data.DataSet> 的內容可能不同。  

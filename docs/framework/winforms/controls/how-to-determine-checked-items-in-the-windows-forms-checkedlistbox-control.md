@@ -9,19 +9,19 @@ helpviewer_keywords:
 - check boxes [Windows Forms], determining checked state
 - CheckedListBox control [Windows Forms], determining checked state
 ms.assetid: 178b477d-27c9-489c-8914-44a9623a4d41
-ms.openlocfilehash: 0cfb34d058486c44ffb01e6c105134e3ca4c2175
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 10793053934dce0bb83113004a79f1c265f5f267
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184674"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316566"
 ---
 # <a name="how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control"></a>HOW TO：判斷 Windows Forms CheckedListBox 控制項中的已核取項目
 呈現 Windows Forms 中的資料時<xref:System.Windows.Forms.CheckedListBox>控制項，您可以請逐一查看集合中儲存<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>屬性或逐步執行清單使用<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，以判斷選取的項目。 <xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法會將項目索引編號，做為其引數並傳回`true`或`false`。 相對於您預期，<xref:System.Windows.Forms.ListBox.SelectedItems%2A>和<xref:System.Windows.Forms.ListBox.SelectedIndices%2A>屬性不會決定選取哪一個項目，它們會判斷哪些項目會反白顯示。  
   
 ### <a name="to-determine-checked-items-in-a-checkedlistbox-control"></a>若要判斷 CheckedListBox 控制項中選取的項目  
   
-1.  逐一查看<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>開始 0，因為集合是以零為起始的集合。 請注意，這個方法會提供您的項目編號的清單中選取項目，不是整個清單。 所以如果在清單中的第一個項目不會檢查第二個項目已選取，下列程式碼會顯示類似的文字 」 已檢查的項目 1 = MyListItem2"。  
+1. 逐一查看<xref:System.Windows.Forms.CheckedListBox.CheckedItems%2A>開始 0，因為集合是以零為起始的集合。 請注意，這個方法會提供您的項目編號的清單中選取項目，不是整個清單。 所以如果在清單中的第一個項目不會檢查第二個項目已選取，下列程式碼會顯示類似的文字 」 已檢查的項目 1 = MyListItem2"。  
   
     ```vb  
     ' Determine if there are any items checked.  
@@ -68,7 +68,7 @@ ms.locfileid: "59184674"
   
      - 或 -  
   
-2.  您可以逐步<xref:System.Windows.Forms.CheckedListBox.Items%2A>集合，從 0 開始因為集合是以零起始，並呼叫<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，每個項目。 請注意，這個方法會提供您的項目編號在整體的清單中，因此如果中的第一個項目不會檢查清單和第二個項目已選取，它會顯示類似 「 項目 2 = MyListItem2"。  
+2. 您可以逐步<xref:System.Windows.Forms.CheckedListBox.Items%2A>集合，從 0 開始因為集合是以零起始，並呼叫<xref:System.Windows.Forms.CheckedListBox.GetItemChecked%2A>方法，每個項目。 請注意，這個方法會提供您的項目編號在整體的清單中，因此如果中的第一個項目不會檢查清單和第二個項目已選取，它會顯示類似 「 項目 2 = MyListItem2"。  
   
     ```vb  
     Dim i As Integer  

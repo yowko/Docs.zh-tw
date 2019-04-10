@@ -2,12 +2,12 @@
 title: 非同步方法的傳回類型 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 07890291-ee72-42d3-932a-fa4d312f2c60
-ms.openlocfilehash: 7a8bc3ba98da830c8415284771460a25e0927895
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 227a187f7046d128a7170b272f90f77cfaac61c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838348"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313277"
 ---
 # <a name="async-return-types-visual-basic"></a>非同步方法的傳回類型 (Visual Basic)
 非同步方法有三種可能的傳回類型：<xref:System.Threading.Tasks.Task%601>、<xref:System.Threading.Tasks.Task> 和 void。 在 Visual Basic 中，void 傳回型別會撰寫為 [Sub](../../../../visual-basic/programming-guide/language-features/procedures/sub-procedures.md) 程序。 如需有關非同步方法的詳細資訊，請參閱[使用 Async 和 Await (Visual Basic) 的非同步程式設計](../../../../visual-basic/programming-guide/concepts/async/index.md)。  
@@ -98,7 +98,7 @@ Async Function Task_MethodAsync() As Task
 End Function  
 ```  
   
- 使用 await 陳述式呼叫並等候 `Task_MethodAsync`，而不是使用 await 運算式，類似於同步 `Sub` 或傳回 void 方法的呼叫陳述式。 應用程式的`Await`運算子在此情況下不會產生值。  
+ `Task_MethodAsync` 呼叫並等候使用 await 陳述式，而不是使用 await 運算式，類似於同步呼叫的陳述式`Sub`或傳回 void 的方法。 應用程式的`Await`運算子在此情況下不會產生值。  
   
  下列程式碼會呼叫並等候方法 `Task_MethodAsync`。  
   
@@ -150,23 +150,23 @@ End Sub
   
  若要執行專案，請執行下列步驟：  
   
-1.  啟動 Visual Studio。  
+1. 啟動 Visual Studio。  
   
-2.  在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
+2. 在功能表列上，選擇 [檔案] 、[新增] 、[專案] 。  
   
      [ **新增專案** ] 對話方塊隨即開啟。  
   
-3.  在**已安裝**，**範本**分類中，選擇**Visual Basic**，然後選擇**Windows**。 在專案類型清單中，選擇 [WPF 應用程式]。  
+3. 在**已安裝**，**範本**分類中，選擇**Visual Basic**，然後選擇**Windows**。 在專案類型清單中，選擇 [WPF 應用程式]。  
   
-4.  輸入 `AsyncReturnTypes` 作為專案的名稱，然後選擇 [確定] 按鈕。  
+4. 輸入 `AsyncReturnTypes` 作為專案的名稱，然後選擇 [確定] 按鈕。  
   
      新的專案隨即出現在方案總管中。  
   
-5.  在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
+5. 在 Visual Studio 程式碼編輯器中，選擇 [ **MainWindow.xaml** ] 索引標籤。  
   
      如果未顯示索引標籤，請在方案總管中開啟 MainWindow.xaml 的捷徑功能表，然後選擇 [開啟]。  
   
-6.  在 MainWindow.xaml 的 [XAML] 視窗中，將程式碼取代為下列程式碼。  
+6. 在 MainWindow.xaml 的 [XAML] 視窗中，將程式碼取代為下列程式碼。  
   
     ```vb  
     <Window x:Class="MainWindow"  
@@ -183,9 +183,9 @@ End Sub
   
      包含文字方塊和按鈕的簡單視窗會出現在 MainWindow.xaml 的 [設計] 視窗中。  
   
-7.  在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。  
+7. 在 **方案總管**，開啟 MainWindow.xaml.vb，捷徑功能表，然後選擇**檢視程式碼**。  
   
-8.  以下列程式碼取代 MainWindow.xaml.vb 中的程式碼。  
+8. 以下列程式碼取代 MainWindow.xaml.vb 中的程式碼。  
   
     ```vb  
     Class MainWindow  
@@ -296,6 +296,6 @@ End Sub
 
 - <xref:System.Threading.Tasks.Task.FromResult%2A>
 - [逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [非同步程式中的控制流程 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
+- [非同步程式 (Visual Basic) 中的控制流程](../../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)

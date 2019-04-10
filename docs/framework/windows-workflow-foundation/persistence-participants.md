@@ -2,31 +2,31 @@
 title: 持續性參與者
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: f9a1f2142a2aef617c3337bf1bc384a51c8ed049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115891"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316358"
 ---
 # <a name="persistence-participants"></a>持續性參與者
 持續性參與者可參與由應用程式主機所觸發的持續性作業 (「儲存」或「載入」)。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]隨附兩個抽象類別， **PersistenceParticipant**並**PersistenceIOParticipant**，這可用來建立持續性參與者。 持續性參與者會衍生自這些類別的其中一個、實作感興趣的方法，然後將類別的執行個體加入至 <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> 上的 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 集合。 應用程式主機保存工作流程執行個體時，可能會尋找此類工作流程擴充功能，並且在適當的時間於持續性參與者上叫用適當的方法。  
   
  以下清單描述持續性子系統在不同階段的「保存」(儲存) 作業時所執行的工作。 持續性參與者會用於第三與第四階段。 如果參與者是 I/O 參與者 （亦同時參與 I/O 作業的持續性參與者），參與者也會在第六個階段。  
   
-1.  收集內建值，包含工作流程狀態、書籤、對應的變數以及時間戳記。  
+1. 收集內建值，包含工作流程狀態、書籤、對應的變數以及時間戳記。  
   
-2.  收集加入至與工作流程執行個體相關之擴充集合的所有持續性參與者。  
+2. 收集加入至與工作流程執行個體相關之擴充集合的所有持續性參與者。  
   
-3.  叫用由所有持續性參與者實作的 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 方法。  
+3. 叫用由所有持續性參與者實作的 <xref:System.Activities.Persistence.PersistenceParticipant.CollectValues%2A> 方法。  
   
-4.  叫用由所有持續性參與者實作的 <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法。  
+4. 叫用由所有持續性參與者實作的 <xref:System.Activities.Persistence.PersistenceParticipant.MapValues%2A> 方法。  
   
-5.  保存工作流程，或將工作流程儲存至持續性存放區中。  
+5. 保存工作流程，或將工作流程儲存至持續性存放區中。  
   
-6.  叫用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A>所有 I/O 的持續性參與者上的方法。 如果參與者並非 I/O 參與者，會略過這項工作。 如果持續性的時段屬於交易性質，則交易會在 Transaction.Current 屬性中提供。  
+6. 叫用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnSave%2A>所有 I/O 的持續性參與者上的方法。 如果參與者並非 I/O 參與者，會略過這項工作。 如果持續性的時段屬於交易性質，則交易會在 Transaction.Current 屬性中提供。  
   
-7.  等候所有持續性參與者完成。 如果所有參與者成功保存執行個體資料，則認可異動。  
+7. 等候所有持續性參與者完成。 如果所有參與者成功保存執行個體資料，則認可異動。  
   
  持續性參與者衍生自**PersistenceParticipant**類別，並可能實作**CollectValues**並**MapValues**方法。 I/O 的持續性參與者衍生自**PersistenceIOParticipant**類別，並可能實作**BeginOnSave**除了實作方法**CollectValues**並**MapValues**方法。  
   
@@ -34,15 +34,15 @@ ms.locfileid: "59115891"
   
  以下清單描述持續性子系統在不同階段的「載入」作業時所執行的工作。 持續性參與者會用於第四階段。 持續性 I/O 參與者 （也參與 I/O 作業持續性參與者），也會在第三個階段。  
   
-1.  收集加入至與工作流程執行個體相關之擴充集合的所有持續性參與者。  
+1. 收集加入至與工作流程執行個體相關之擴充集合的所有持續性參與者。  
   
-2.  自持續性存放區載入工作流程。  
+2. 自持續性存放區載入工作流程。  
   
-3.  叫用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>上所有的 I/O 的持續性參與者並等候所有持續性參與者完成。 如果持續性的時段屬於異動性質，則異動會在 Transaction.Current 中提供。  
+3. 叫用<xref:System.Activities.Persistence.PersistenceIOParticipant.BeginOnLoad%2A>上所有的 I/O 的持續性參與者並等候所有持續性參與者完成。 如果持續性的時段屬於異動性質，則異動會在 Transaction.Current 中提供。  
   
-4.  根據從持續性存放區所擷取的資料，載入記憶體中的工作流程執行個體。  
+4. 根據從持續性存放區所擷取的資料，載入記憶體中的工作流程執行個體。  
   
-5.  叫用每個持續性參與者上的 <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A>。  
+5. 叫用每個持續性參與者上的 <xref:System.Activities.Persistence.PersistenceParticipant.PublishValues%2A>。  
   
  持續性參與者衍生自**PersistenceParticipant**類別，並可能實作**PublishValues**方法。 I/O 的持續性參與者衍生自**PersistenceIOParticipant**類別，並可能實作**BeginOnLoad**除了實作方法**PublishValues**方法。  
   

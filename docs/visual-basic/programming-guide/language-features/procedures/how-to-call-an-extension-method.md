@@ -5,12 +5,12 @@ helpviewer_keywords:
 - calling extension methods [Visual Basic]
 - extension methods [Visual Basic]
 ms.assetid: df07750f-40f4-4c07-a79e-1113a27cfbea
-ms.openlocfilehash: 2543694e6bf8da5b67ecaccc92633a8448154063
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5cb0684637a716dfec947740ba345c62eaabddd7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837117"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313797"
 ---
 # <a name="how-to-call-an-extension-method-visual-basic"></a>HOW TO：呼叫擴充方法 (Visual Basic)
 擴充方法可讓您將方法加入至現有的類別。 擴充方法宣告，然後帶入範圍之後，您可以呼叫它，如擴充類型的執行個體方法。 如需如何撰寫擴充方法的詳細資訊，請參閱[How to:撰寫擴充方法](./how-to-write-an-extension-method.md)。  
@@ -34,13 +34,13 @@ End Module
   
 ### <a name="to-call-an-extension-method"></a>若要呼叫擴充方法  
   
-1.  宣告具有將擴充方法的第一個參數的資料類型的變數。 針對`PrintAndPunctuate`，您需要<xref:System.String>變數：  
+1. 宣告具有將擴充方法的第一個參數的資料類型的變數。 針對`PrintAndPunctuate`，您需要<xref:System.String>變數：  
   
     ```  
     Dim example = "Ready"  
     ```  
   
-2.  變數將會叫用擴充方法，和其值會繫結至第一個參數， `aString`。 下列呼叫的陳述式將會顯示`Ready?`。  
+2. 變數將會叫用擴充方法，和其值會繫結至第一個參數， `aString`。 下列呼叫的陳述式將會顯示`Ready?`。  
   
     ```  
     example.PrintAndPunctuate("?")  
@@ -53,7 +53,7 @@ End Module
     example.IndexOf("R")  
     ```  
   
-3.  宣告另一個字串變數，並呼叫方法，再以查看其運作以任何字串。  
+3. 宣告另一個字串變數，並呼叫方法，再以查看其運作以任何字串。  
   
     ```  
     Dim example2 = " or not"  
@@ -96,6 +96,6 @@ End Module
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：撰寫擴充方法](./how-to-write-an-extension-method.md)
+- [HOW TO：撰寫延伸模組](./how-to-write-an-extension-method.md)
 - [擴充方法](./extension-methods.md)
-- [在 Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)
+- [Visual Basic 中的範圍](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)

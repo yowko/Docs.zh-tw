@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, security
 - ProtectionLevel property
 ms.assetid: 3d4e8f80-0f9e-4a26-9899-beb6584e78df
-ms.openlocfilehash: ce9fc8549218db5a1446026421f1a7ba1e5a23aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 77596d682af6f2579ca512b0a6de1694452e025b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089844"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317775"
 ---
 # <a name="how-to-set-the-protectionlevel-property"></a>HOW TO：設定 ProtectionLevel 屬性
 您可以套用適當的屬性 (Attribute) 並設定屬性 (Property)，藉此設定保護層級。 您可以設定服務層級的保護，以影響每一個訊息的所有部分，或是從方法到訊息部分，設定越發細微的保護層級。 如需詳細資訊`ProtectionLevel`屬性，請參閱 <<c2> [ 了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)。  
@@ -23,20 +23,20 @@ ms.locfileid: "59089844"
   
 ### <a name="to-sign-all-messages-for-a-service"></a>簽署服務的所有訊息  
   
-1.  建立服務的介面。  
+1. 建立服務的介面。  
   
-2.  將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性 (Attribute) 套用至服務，並且將 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.Sign>，如以下程式碼中所示 (預設層級為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>)。  
+2. 將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性 (Attribute) 套用至服務，並且將 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.Sign>，如以下程式碼中所示 (預設層級為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>)。  
   
      [!code-csharp[C_ProtectionLevel#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#1)]
      [!code-vb[C_ProtectionLevel#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#1)]  
   
 ### <a name="to-sign-all-message-parts-for-an-operation"></a>簽署作業的所有訊息部分  
   
-1.  建立服務的介面，並且將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性套用至介面。  
+1. 建立服務的介面，並且將 <xref:System.ServiceModel.ServiceContractAttribute> 屬性套用至介面。  
   
-2.  將方法宣告加入至介面。  
+2. 將方法宣告加入至介面。  
   
-3.  將 <xref:System.ServiceModel.OperationContractAttribute> 屬性 (Attribute) 套用至方法，並且將 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.Sign>，如以下程式碼中所示。  
+3. 將 <xref:System.ServiceModel.OperationContractAttribute> 屬性 (Attribute) 套用至方法，並且將 <xref:System.ServiceModel.ServiceContractAttribute.ProtectionLevel%2A> 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.Sign>，如以下程式碼中所示。  
   
      [!code-csharp[C_ProtectionLevel#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#2)]
      [!code-vb[C_ProtectionLevel#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#2)]  
@@ -46,16 +46,16 @@ ms.locfileid: "59089844"
   
 #### <a name="to-protect-a-fault-message"></a>保護錯誤訊息  
   
-1.  建立表示錯誤訊息的類型。 以下範例將建立名為 `MathFault` 的類別，其中包含兩個欄位。  
+1. 建立表示錯誤訊息的類型。 以下範例將建立名為 `MathFault` 的類別，其中包含兩個欄位。  
   
-2.  將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至類型，並且將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性套用至應序列化的每一個欄位，如以下程式碼所示。  
+2. 將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至類型，並且將 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性套用至應序列化的每一個欄位，如以下程式碼所示。  
   
      [!code-csharp[C_ProtectionLevel#3](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#3)]
      [!code-vb[C_ProtectionLevel#3](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#3)]  
   
-3.  在傳回錯誤的介面中，將 <xref:System.ServiceModel.FaultContractAttribute> 屬性套用至傳回錯誤的方法，並且將 `detailType` 參數設為錯誤類別的類型。  
+3. 在傳回錯誤的介面中，將 <xref:System.ServiceModel.FaultContractAttribute> 屬性套用至傳回錯誤的方法，並且將 `detailType` 參數設為錯誤類別的類型。  
   
-4.  同時，在建構函式中，將 <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> 屬性設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如以下程式碼所示。  
+4. 同時，在建構函式中，將 <xref:System.ServiceModel.FaultContractAttribute.ProtectionLevel%2A> 屬性設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如以下程式碼所示。  
   
      [!code-csharp[C_ProtectionLevel#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#4)]
      [!code-vb[C_ProtectionLevel#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#4)]  
@@ -65,13 +65,13 @@ ms.locfileid: "59089844"
   
 #### <a name="to-protect-a-message-body"></a>保護訊息本文  
   
-1.  建立表示訊息的類型。 以下範例將建立 `Company` 類別，其中包含兩個欄位 `CompanyName` 和 `CompanyID`。  
+1. 建立表示訊息的類型。 以下範例將建立 `Company` 類別，其中包含兩個欄位 `CompanyName` 和 `CompanyID`。  
   
-2.  將 <xref:System.ServiceModel.MessageContractAttribute> 屬性 (Attribute) 套用至類別，並且將 <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
+2. 將 <xref:System.ServiceModel.MessageContractAttribute> 屬性 (Attribute) 套用至類別，並且將 <xref:System.ServiceModel.MessageContractAttribute.ProtectionLevel%2A> 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
-3.  將 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性 (Attribute) 套用以訊息標頭表示的欄位，並且將 `ProtectionLevel` 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
+3. 將 <xref:System.ServiceModel.MessageHeaderAttribute> 屬性 (Attribute) 套用以訊息標頭表示的欄位，並且將 `ProtectionLevel` 屬性 (Property) 設為 <xref:System.Net.Security.ProtectionLevel.EncryptAndSign>。  
   
-4.  適用於<xref:System.ServiceModel.MessageBodyMemberAttribute>，將會以訊息內文的部分表示，並設定的任何欄位`ProtectionLevel`屬性設<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如下列範例所示。  
+4. 適用於<xref:System.ServiceModel.MessageBodyMemberAttribute>，將會以訊息內文的部分表示，並設定的任何欄位`ProtectionLevel`屬性設<xref:System.Net.Security.ProtectionLevel.EncryptAndSign>，如下列範例所示。  
   
      [!code-csharp[C_ProtectionLevel#5](../../../samples/snippets/csharp/VS_Snippets_CFX/c_protectionlevel/cs/source.cs#5)]
      [!code-vb[C_ProtectionLevel#5](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_protectionlevel/vb/source.vb#5)]  

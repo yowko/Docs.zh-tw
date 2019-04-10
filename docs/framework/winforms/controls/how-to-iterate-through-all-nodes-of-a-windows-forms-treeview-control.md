@@ -10,12 +10,12 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], iterating through nodes
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
-ms.openlocfilehash: e8e5ef299ca7b5555a02e86e4422ca9f5b8a584f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199709"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314226"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>HOW TO：逐一查看 Windows Forms TreeView 控制項的所有節點
 可能會很有用來檢查 Windows Forms 中的每個節點<xref:System.Windows.Forms.TreeView>才能執行一些計算節點值上的控制項。 使用遞迴程序 (採用 C# 和 C++ 的遞迴方法) 來逐一查看每個樹狀集合中的每個節點，即可完成這項作業。  
@@ -24,9 +24,9 @@ ms.locfileid: "59199709"
   
 ### <a name="to-iterate-through-all-nodes-of-the-treeview-control"></a>逐一查看 TreeView 控制項的所有節點  
   
-1.  建立用以測試每個節點的遞迴程序 (採用 C# 和 C++ 的遞迴方法)。  
+1. 建立用以測試每個節點的遞迴程序 (採用 C# 和 C++ 的遞迴方法)。  
   
-2.  呼叫此程序。  
+2. 呼叫此程序。  
   
      下列範例示範如何列印每個<xref:System.Windows.Forms.TreeNode>物件的<xref:System.Windows.Forms.TreeNode.Text%2A>屬性：  
   

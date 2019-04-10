@@ -7,12 +7,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - Video How tos, Visual Basic
 ms.assetid: 0f53a553-efd6-466d-80bf-6b679e5cd174
-ms.openlocfilehash: 314706207800b2e86aa0032a52d8c50fbb726887
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 775c40cbb62272f913297d5a58914a0c82c5a7d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825129"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305308"
 ---
 # <a name="how-to-declare-an-object-by-using-an-object-initializer-visual-basic"></a>HOW TO：宣告物件使用物件初始設定式 (Visual Basic)
 物件初始設定式可讓您宣告並具現化類別，以單一陳述式的執行個體。 此外，您可以在此同時，初始化執行個體的一或多個成員，而不叫用的參數化建構函式。  
@@ -27,33 +27,33 @@ ms.locfileid: "58825129"
   
 ### <a name="to-create-an-object-of-a-named-class-by-using-an-object-initializer"></a>若要使用物件初始設定式建立具名類別的物件  
   
-1.  如果您打算使用建構函式，請開始宣告。  
+1. 如果您打算使用建構函式，請開始宣告。  
   
      `Dim student1 As New Student`  
   
-2.  輸入關鍵字`With`，後面接著括號括住的初始化清單。  
+2. 輸入關鍵字`With`，後面接著括號括住的初始化清單。  
   
      `Dim student1 As New Student With { <initialization list> }`  
   
-3.  在初始設定清單中，包含每個您想要初始化，並將初始值指派給它的屬性。 屬性的名稱前面有一個句號。  
+3. 在初始設定清單中，包含每個您想要初始化，並將初始值指派給它的屬性。 屬性的名稱前面有一個句號。  
   
      [!code-vb[VbVbalrObjectInit#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#21)]  
   
      您可以初始化類別的一或多個成員。  
   
-4.  或者，您可以宣告類別的新執行個體，並再將值指派給它。 首先，宣告的執行個體`Student`:  
+4. 或者，您可以宣告類別的新執行個體，並再將值指派給它。 首先，宣告的執行個體`Student`:  
   
      `Dim student2 As Student`  
   
-5.  開始建立的執行個體`Student`以一般方式。  
+5. 開始建立的執行個體`Student`以一般方式。  
   
      `Dim student2 As Student = New Student`  
   
-6.  型別`With`，然後物件初始設定式來初始化新執行個體的一或多個成員。  
+6. 型別`With`，然後物件初始設定式來初始化新執行個體的一或多個成員。  
   
      [!code-vb[VbVbalrObjectInit#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#22)]  
   
-7.  您可以簡化在上一個步驟中的定義，藉由略過`As Student`。 如果您這麼做時，編譯器會判斷所`student3`的執行個體`Student`使用區域型別推斷。  
+7. 您可以簡化在上一個步驟中的定義，藉由略過`As Student`。 如果您這麼做時，編譯器會判斷所`student3`的執行個體`Student`使用區域型別推斷。  
   
      [!code-vb[VbVbalrObjectInit#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class2.vb#23)]  
   
@@ -62,6 +62,6 @@ ms.locfileid: "58825129"
 ## <a name="see-also"></a>另請參閱
 
 - [區域類型推斷](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)
-- [如何：建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
-- [物件初始設定式：具名和匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [HOW TO：建立項目清單](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)
+- [物件初始設定式：具名和匿名型別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
 - [匿名類型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)

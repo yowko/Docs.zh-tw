@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 878aef544b2706bfd10a3dddce1b902655ef003a
+ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58760964"
+---
 ### <a name="x509certificateclaimsetfindclaims-considers-all-claimtypes"></a>X509CertificateClaimSet.FindClaims 會考慮所有 claimTypes
 
 |   |   |

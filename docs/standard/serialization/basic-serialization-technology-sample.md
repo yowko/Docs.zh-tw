@@ -2,12 +2,12 @@
 title: 基本序列化技術範例
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
-ms.openlocfilehash: 43e69ce90b86053badad91b62ec288378e63e2ed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315006"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本序列化技術範例
 [下載範例](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -18,25 +18,25 @@ ms.locfileid: "54681699"
   
 ### <a name="to-build-the-sample-using-the-command-prompt"></a>若要使用命令提示字元建置範例  
   
-1.  使用 [命令提示字元]，巡覽至 Technologies\Serialization\Runtime Serialization\Basic 目錄下的其中一個語言特定子目錄。  
+1. 使用 [命令提示字元]，巡覽至 Technologies\Serialization\Runtime Serialization\Basic 目錄下的其中一個語言特定子目錄。  
   
-2.  根據您選擇的程式設計語言，在命令列鍵入 **msbuild SerializationCS.sln**、**msbuild SerializationJSL.sln** 或 **msbuild SerializationVB.sln**。  
+2. 根據您選擇的程式設計語言，在命令列鍵入 **msbuild SerializationCS.sln**、**msbuild SerializationJSL.sln** 或 **msbuild SerializationVB.sln**。  
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>若要使用 Visual Studio 建置範例  
   
-1.  開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。  
+1. 開啟 [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]，並巡覽至此範例任一程式設計語言的子目錄。  
   
-2.  根據您選擇的程式設計語言，按兩下 SerializationCS.sln、SerializationJSL.sln 或 SerializationVB.sln 檔案的圖示，在 Visual Studio 中開啟這個檔案。  
+2. 根據您選擇的程式設計語言，按兩下 SerializationCS.sln、SerializationJSL.sln 或 SerializationVB.sln 檔案的圖示，在 Visual Studio 中開啟這個檔案。  
   
-3.  在 [建置] 功能表中，選取 [建置方案]。  
+3. 在 [建置] 功能表中，選取 [建置方案]。  
   
  這個範例應用程式將建置於預設的 \bin 或 \bin\Debug 子目錄中。  
   
 ### <a name="to-run-the-sample"></a>若要執行範例  
   
-1.  巡覽至包含已建置之可執行檔的目錄。  
+1. 巡覽至包含已建置之可執行檔的目錄。  
   
-2.  在命令列鍵入 **Serialization.exe** 以及您想要的參數值。  
+2. 在命令列鍵入 **Serialization.exe** 以及您想要的參數值。  
   
     > [!NOTE]
     >  這個範例會建置一個主控台應用程式。 您必須使用命令提示字元啟動，才能檢視它的輸出。  
@@ -64,19 +64,19 @@ ms.locfileid: "54681699"
   
 -   執行階段序列化  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> 用來參考 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 或 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 物件。  
+    -   <xref:System.Runtime.Serialization.IFormatter> 用來參考<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>或<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>物件。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來將連結串列序列化成二進位格式的資料流。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。  
+    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 用來序列化中一種二進位格式的資料流的連結的清單。 二進位格式子使用的格式只有 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型別才了解。 不過，資料相當簡明。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來將連結串列序列化成 SOAP 格式的資料流。 SOAP 是一種標準格式。  
+    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> 用來序列化至 SOAP 格式的資料流的連結的清單。 SOAP 是一種標準格式。  
   
 -   資料流 I/O  
   
-    -   <xref:System.IO.Stream> 用來執行序列化及還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。  
+    -   <xref:System.IO.Stream> 用來序列化和還原序列化。 這個範例所用的特定資料流型別是 <xref:System.IO.FileStream> 型別。 不過，序列化可以使用衍生自 <xref:System.IO.Stream> 的任何型別。  
   
-    -   <xref:System.IO.File> 用來建立 <xref:System.IO.FileStream> 物件，以便在磁碟上讀取及建立檔案。  
+    -   <xref:System.IO.File> 用來建立<xref:System.IO.FileStream>物件來讀取及建立磁碟上的檔案。  
   
-    -   <xref:System.IO.FileStream> 用來將連結串列序列化及還原序列化。  
+    -   <xref:System.IO.FileStream> 用來序列化和還原序列化連結的清單。  
   
 ## <a name="see-also"></a>另請參閱
 

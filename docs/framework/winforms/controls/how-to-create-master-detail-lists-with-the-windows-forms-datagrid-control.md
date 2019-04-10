@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 20388c6a-94f9-4d96-be18-8c200491247f
-ms.openlocfilehash: f1acfab747c2309a2860870f8bcec9c0cf3b7bf0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 92b4a7d9513ce0ec9b7c02f57c23fa4267fb26ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094979"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302395"
 ---
 # <a name="how-to-create-masterdetail-lists-with-the-windows-forms-datagrid-control"></a>HOW TO：使用 Windows Forms DataGrid 控制項建立主從式清單
 > [!NOTE]
@@ -25,17 +25,17 @@ ms.locfileid: "59094979"
   
 ### <a name="to-set-a-masterdetail-relationship-programmatically"></a>以程式設計方式設定的主要/詳細資料關聯性  
   
-1.  建立兩個新<xref:System.Windows.Forms.DataGrid>控制，並設定其屬性。  
+1. 建立兩個新<xref:System.Windows.Forms.DataGrid>控制，並設定其屬性。  
   
-2.  您可以將資料表加入資料集。  
+2. 您可以將資料表加入資料集。  
   
-3.  宣告型別的變數<xref:System.Data.DataRelation>來代表您想要建立的關聯性。  
+3. 宣告型別的變數<xref:System.Data.DataRelation>來代表您想要建立的關聯性。  
   
-4.  具現化關聯性指定的關聯性的名稱，並指定資料表、 資料行和會往回繫結兩個資料表的項目。  
+4. 具現化關聯性指定的關聯性的名稱，並指定資料表、 資料行和會往回繫結兩個資料表的項目。  
   
-5.  新增關聯性<xref:System.Data.DataSet>物件的<xref:System.Data.DataSet.Relations%2A>集合。  
+5. 新增關聯性<xref:System.Data.DataSet>物件的<xref:System.Data.DataSet.Relations%2A>集合。  
   
-6.  使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法<xref:System.Windows.Forms.DataGrid>繫結至方格的每個<xref:System.Data.DataSet>。  
+6. 使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法<xref:System.Windows.Forms.DataGrid>繫結至方格的每個<xref:System.Data.DataSet>。  
   
      下列範例示範如何設定主版/詳細資料之間的關聯性中先前產生的 Customers 和 Orders 資料表<xref:System.Data.DataSet>(`ds`)。  
   

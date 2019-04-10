@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
-ms.openlocfilehash: 34abe6b07cebc446324785bde1061c7aa2b04e4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115917"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312328"
 ---
 # <a name="wcf-client-overview"></a>WCF 用戶端概觀
 本節說明用戶端應用程式做什麼、 如何設定、 建立和使用 Windows Communication Foundation (WCF) 用戶端，以及如何保護用戶端應用程式。  
@@ -20,13 +20,13 @@ ms.locfileid: "59115917"
 ## <a name="using-wcf-client-objects"></a>使用 WCF 用戶端物件  
  用戶端應用程式是受管理的應用程式與其他應用程式，用來通訊的 WCF 用戶端。 若要建立用戶端為 WCF 服務的應用程式需要下列步驟：  
   
-1.  取得服務端點的服務合約、繫結和位址資訊。  
+1. 取得服務端點的服務合約、繫結和位址資訊。  
   
-2.  建立 WCF 用戶端使用該資訊。  
+2. 建立 WCF 用戶端使用該資訊。  
   
-3.  呼叫作業。  
+3. 呼叫作業。  
   
-4.  關閉 WCF 用戶端物件。  
+4. 關閉 WCF 用戶端物件。  
   
  下列各節將討論這些步驟，並簡要介紹以下問題：  
   

@@ -2,19 +2,19 @@
 title: MSMQ 4.0 中的有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: 4555a6d322cbf9ca43aca0f93bc6eafe021fa569
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/07/2018
-ms.locfileid: "48846216"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316462"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 中的有害訊息處理
 這個範例會示範如何在服務中執行有害訊息處理。 此樣本根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding`。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
 
  在佇列通訊中，用戶端會使用佇列與服務通訊。 更精確地說，用戶端會傳送訊息至佇列。 服務會接收來自佇列的訊息。 因此，服務與用戶端不需同時執行，就能使用佇列通訊。
 
- 有害訊息是指會從佇列反覆讀取的訊息，此時讀取該訊息的服務無法處理訊息，因而終止訊息讀取時所位於的交易。 此時，服務會重試訊息。 如果訊息有問題，理論上這種情形會不斷發生。 請注意，只有當您使用交易來讀取佇列並叫用服務作業時，才會發生這個情況。
+ 有害訊息是指會從佇列反覆讀取的訊息，此時讀取該訊息的服務無法處理訊息，因而終止訊息讀取時所位於的異動。 此時，服務會重試訊息。 如果訊息有問題，理論上這種情形會不斷發生。 請注意，只有當您使用交易來讀取佇列並叫用服務作業時，才會發生這個情況。
 
  根據 MSMQ 的版本，NetMsmqBinding 支援有害訊息的有限到完整偵測。 訊息已偵測為有害之後，有多種方法可以處理此訊息。 同樣地，根據 MSMQ 的版本，NetMsmqBinding 會支援完整處理有害訊息的有限處理功能。
 
@@ -23,17 +23,17 @@ ms.locfileid: "48846216"
 ## <a name="msmq-v40-poison-handling-sample"></a>MSMQ v4.0 有害訊息處理範例
  在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，MSMQ 會提供能夠用來儲存有害訊息的有害訊息子佇列功能。 這個範例會示範使用 [!INCLUDE[wv](../../../../includes/wv-md.md)] 處理有害訊息的最佳作法。
 
- 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，有害訊息偵測功能已經相當成熟。 有三個屬性能夠協助偵測。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是從佇列重新讀取指定訊息、並接著分派至應用程式以便進行處理的次數。 因為訊息無法分派至應用程式，或應用程式在服務作業中回復交易而使訊息放回佇列時，該訊息就會從佇列重新讀取。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是將訊息移至重試佇列的次數。 當達到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 時，訊息就會移至重試佇列。 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 屬性是指時間延遲，在經過此段時間之後，訊息就會從重試佇列移回主要佇列。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 會重設為 0。 這時訊息會再試一次。 如果讀取訊息的所有嘗試都失敗，該訊息就會被標記為有害。
+ 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 中，有害訊息偵測功能已經相當成熟。 有三個屬性能夠協助偵測。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 是從佇列重新讀取指定訊息、並接著分派至應用程式以便進行處理的次數。 因為訊息無法分派至應用程式，或應用程式在服務作業中回復交易而使訊息放回佇列時，該訊息就會從佇列重新讀取。 <xref:System.ServiceModel.MsmqBindingBase.MaxRetryCycles%2A> 是訊息會移至重試佇列的次數。 當達到 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 時，訊息就會移至重試佇列。 <xref:System.ServiceModel.MsmqBindingBase.RetryCycleDelay%2A> 屬性是指時間延遲，在經過此段時間之後，訊息就會從重試佇列移回主要佇列。 <xref:System.ServiceModel.MsmqBindingBase.ReceiveRetryCount%2A> 會重設為 0。 這時訊息會再試一次。 如果讀取訊息的所有嘗試都失敗，該訊息就會被標記為有害。
 
  一旦訊息標記為有害，該訊息就會根據 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 列舉中的設定加以處理。 若要重新逐一查看可能的值：
 
--   Fault (預設)：使接聽程式和服務主機發生錯誤。
+-   錯誤 （預設值）：若要接聽程式和服務主機錯誤。
 
--   Drop：捨棄訊息。
+-   卸除：若要卸除訊息。
 
--   Move：將訊息移至有害訊息子佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+-   移動：若要將訊息移至有害訊息子佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
--   Reject：拒絕訊息，並將訊息傳回至傳送者之寄不出的信件佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+-   拒絕：若要拒絕的訊息，將訊息傳送回給寄件者寄不出信件佇列。 這個值只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
  此範例會示範對有害訊息使用 `Move` 處置。 `Move` 會導致訊息移至有害子佇列。
 
@@ -48,7 +48,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服務作業會顯示訊息，指出正在處理訂單。 為了示範有害訊息功能，`SubmitPurchaseOrder` 服務作業會擲回例外狀況，以復原在隨機叫用服務時的交易。 這樣會導致訊息必須放回佇列中。 最後，訊息會標示為有害。 組態會設定成將有害訊息移至有害訊息子佇列。
+ 服務作業會顯示訊息，指出正在處理訂單。 為了示範有害訊息功能，`SubmitPurchaseOrder` 服務作業會擲回例外狀況，以復原在隨機叫用服務時的異動。 這樣會導致訊息必須放回佇列中。 最後，訊息會標示為有害。 組態會設定成將有害訊息移至有害訊息子佇列。
 
 ```csharp
 // Service class that implements the service contract.
@@ -273,9 +273,9 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
+2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
     1.  開啟 Visual Studio 2012 中的 伺服器管理員。
 
@@ -287,15 +287,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
     5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
-3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4.  若要在單一或跨電腦組態中執行範例時，變更 佇列名稱以反映實際主機名稱，而不是 localhost，並遵循中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+4. 若要在單一或跨電腦組態中執行範例時，變更 佇列名稱以反映實際主機名稱，而不是 localhost，並遵循中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
 
- 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您在不屬於網域的電腦上執行這個範例，就會收到下列錯誤：「使用者的內部訊息佇列憑證不存在」。
+ 根據預設，安全性會透過 `netMsmqBinding` 繫結傳輸啟用。 `MsmqAuthenticationMode` 和 `MsmqProtectionLevel` 這兩個屬性會共同決定傳輸安全性的類型。 根據預設，驗證模式會設定為 `Windows`，保護層級則會設定為 `Sign`。 若要 MSMQ 提供驗證和簽署功能，則 MSMQ 必須是網域的一部分。 如果您不屬於網域的電腦上執行此範例中，您會收到下列錯誤：「 使用者的內部訊息佇列憑證不存在 」。
 
 #### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
-1.  如果您的電腦不是網域的一部分，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下面的範例組態所示：
+1. 如果您的電腦不是網域的一部分，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下面的範例組態所示：
 
     ```xml
     <bindings>
@@ -309,12 +309,12 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
      請透過設定端點的 bindingConfiguration 屬性，確定端點與繫結相關聯。
 
-2.  請務必先變更 PoisonMessageServer、伺服器和用戶端上的組態，再執行範例。
+2. 請務必先變更 PoisonMessageServer、伺服器和用戶端上的組態，再執行範例。
 
     > [!NOTE]
     >  將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。  
   
-3.  若要讓中繼資料交換正常運作，我們要向 http 繫結登錄 URL。 這時需要在更高權限的命令視窗中執行服務。 否則，您如得到例外狀況： `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`。  
+3. 若要讓中繼資料交換正常運作，我們要向 http 繫結登錄 URL。 這時需要在更高權限的命令視窗中執行服務。 否則，您如得到例外狀況： `Unhandled Exception: System.ServiceModel.AddressAccessDeniedException: HTTP could not register URL http://+:8000/ServiceModelSamples/service/. Your process does not have access rights to this namespace (see https://go.microsoft.com/fwlink/?LinkId=70353 for details). ---> System.Net.HttpListenerException: Access is denied`。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

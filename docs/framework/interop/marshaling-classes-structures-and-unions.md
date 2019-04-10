@@ -20,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a4461d14299264a35f36133480cb11709c346ce
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c481b6889c1f10124465a4e851adfb25a1ba2eff
+ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221273"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58890289"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
 在 .NET Framework 中，類別和結構相類似。 兩者都可以有欄位、屬性和事件。 也可以有靜態和非靜態方法。 一個值得注意的差異在於結構是實值類型，而類別是參考類型。  
   
  下表列出類別、結構和等位的封送處理選項，並描述其用法，以及提供對應平台的叫用範例連結。  
   
-|類型|描述|範例|  
+|類型|說明|範例|  
 |----------|-----------------|------------|  
 |傳值呼叫|做為 In/Out 參數，如 Managed 案例，會傳遞具有整數成員的類別。|SysTime 範例|  
 |結構傳值。|傳遞結構做為 In 參數。|結構範例|  
@@ -68,7 +68,7 @@ ms.locfileid: "56221273"
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是自訂的非受控程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的非受控程式庫，其中包含先前所列出函式和四個結構的實作：**MYPERSON**、**MYPERSON2**、**MYPERSON3** 和 **MYARRAYSTRUCT**。 這些結構包含下列項目：  
   
 ```  
 typedef struct _MYPERSON  
@@ -108,8 +108,7 @@ typedef struct _MYARRAYSTRUCT
   
  對於本範例的所有結構，套用 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
- 
-  `LibWrap` 類別包含 `TestStructInStruct`、`TestStructInStruct3` 及 `TestArrayInStruct` 方法的 Managed 原型，這些方法由 `App` 類別所呼叫。 每一個原型會宣告單一參數，如下所示：  
+ `LibWrap` 類別包含 `TestStructInStruct`、`TestStructInStruct3` 及 `TestArrayInStruct` 方法的 Managed 原型，這些方法由 `App` 類別所呼叫。 每一個原型會宣告單一參數，如下所示：  
   
 -   `TestStructInStruct` 宣告一個參考給 `MyPerson2` 類型做為它的參數。  
   
@@ -160,8 +159,7 @@ typedef struct _WIN32_FIND_DATA
   
  在此範例中， `FindData` 類別包含原始結構的每個項目所對應的資料成員和內嵌結構。 為了取代 2 個原始字元緩衝區，類別會替代字串。 **MarshalAsAttribute** 會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在 Unmanaged 結構中內嵌固定長度的字元陣列。  
   
- 
-  `LibWrap` 類別包含 `FindFirstFile` 方法的 Managed 原型，會傳遞 `FindData` 類別做為參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。  
+ `LibWrap` 類別包含 `FindFirstFile` 方法的 Managed 原型，會傳遞 `FindData` 類別做為參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。  
   
 ### <a name="declaring-prototypes"></a>宣告原型  
  [!code-cpp[Conceptual.Interop.Marshaling#17](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/findfile.cpp#17)]
@@ -184,7 +182,7 @@ typedef struct _WIN32_FIND_DATA
     void TestUnion(MYUNION u, int type);  
     ```  
   
- [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式以及 **MYUNION** 和 **MYUNION2** 這兩個等位的實作。 此等位包含下列項目：  
+ [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 是自訂的 Unmanaged 程式庫，其中包含先前所列出函式以及 **MYUNION** 和 **MYUNION2** 這兩個等位的實作。 此等位包含下列項目：  
   
 ```  
 union MYUNION  
@@ -200,15 +198,11 @@ union MYUNION2
 };  
 ```  
   
- 在 Managed 程式碼中，會定義等位為結構。 
-  `MyUnion` 結構包含兩個做為其成員的實值類型：整數和雙精度浮點數。 設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來控制每個資料成員的精確位置。 
-  <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 屬性會提供等位的 Unmanaged 表示中的欄位實體位置。 請注意這兩個成員具有相同的位移值，所以成員可以定義相同的記憶體。  
+ 在 Managed 程式碼中，會定義等位為結構。 `MyUnion` 結構包含兩個做為其成員的實值類型：整數和雙精度浮點數。 設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來控制每個資料成員的精確位置。 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 屬性會提供等位的 Unmanaged 表示中的欄位實體位置。 請注意這兩個成員具有相同的位移值，所以成員可以定義相同的記憶體。  
   
- `MyUnion2_1` 和 `MyUnion2_2` 分別包含實值類型 (整數) 和字串。 在 Managed 程式碼中，實值類型及參考類型不允許重疊。 此範例會使用方法多載化來讓呼叫端在呼叫相同 Unmanaged 函式時使用這兩種類型。 
-  `MyUnion2_1` 配置則是明確的，且具有精確位移值。 相反地，`MyUnion2_2` 具有循序配置，因為對參考類型不允許明確的配置。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在該等位的 Unmanaged 表示中內嵌固定長度的字元陣列。  
+ `MyUnion2_1` 和 `MyUnion2_2` 分別包含實值型別 (整數) 和字串。 在 Managed 程式碼中，實值類型及參考類型不允許重疊。 此範例會使用方法多載化來讓呼叫端在呼叫相同 Unmanaged 函式時使用這兩種類型。 `MyUnion2_1` 配置則是明確的，且具有精確位移值。 相反地，`MyUnion2_2` 具有循序配置，因為對參考類型不允許明確的配置。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在該等位的 Unmanaged 表示中內嵌固定長度的字元陣列。  
   
- 
-  `LibWrap` 類別包含 `TestUnion` 和 `TestUnion2` 方法的原型。 `TestUnion2` 被多載，以宣告 `MyUnion2_1` 或 `MyUnion2_2` 做為參數。  
+ `LibWrap` 類別包含 `TestUnion` 和 `TestUnion2` 方法的原型。 `TestUnion2` 被多載，以宣告 `MyUnion2_1` 或 `MyUnion2_2` 做為參數。  
   
 ### <a name="declaring-prototypes"></a>宣告原型  
  [!code-cpp[Conceptual.Interop.Marshaling#28](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/unions.cpp#28)]
@@ -248,9 +242,7 @@ typedef struct _SYSTEMTIME {
   
  在此範例中，`SystemTime` 類別包含表示為類別成員原始結構的項目。 已設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來確定此成員以其顯示的順序循序排列在記憶體中。  
   
- 
-  `LibWrap` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))。 
-  `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
+ `LibWrap` 類別包含 `GetSystemTime` 方法的 Managed 原型，根據預設會傳遞 `SystemTime` 類別做為 In/Out 參數。 參數必須以 <xref:System.Runtime.InteropServices.InAttribute> 和 <xref:System.Runtime.InteropServices.OutAttribute> 屬性宣告，因為根據預設，會傳遞參考類型的類別做為 In 參數。 若要讓呼叫端接收結果，則必須明確地套用這些[方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))。 `App` 類別建立 `SystemTime` 類別的新執行個體，並存取其資料欄位。  
   
 ### <a name="code-samples"></a>程式碼範例  
  [!code-cpp[Conceptual.Interop.Marshaling#25](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/systime.cpp#25)]
@@ -262,7 +254,7 @@ typedef struct _SYSTEMTIME {
   
  這個範例示範如何藉由使用 <xref:System.Runtime.InteropServices.Marshal> 類別和使用 Unsafe 程式碼來呼叫原生函式。  
   
- 這個範例使用定義在 [PinvokeLib.dll](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/as6wyhwt(v=vs.100)) 中的包裝函式和平台叫用，這些也在原始程式檔中提供。 它會使用 `TestOutArrayOfStructs` 函式和 `MYSTRSTRUCT2` 結構。 此結構包含下列項目：  
+ 這個範例使用定義在 [PinvokeLib.dll](marshaling-data-with-platform-invoke.md#pinvokelibdll) 中的包裝函式和平台叫用，這些也在原始程式檔中提供。 它會使用 `TestOutArrayOfStructs` 函式和 `MYSTRSTRUCT2` 結構。 此結構包含下列項目：  
   
 ```  
 typedef struct _MYSTRSTRUCT2  
@@ -272,15 +264,11 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- 
-  `MyStruct` 類別包含 ANSI 字元的字串物件。 
-  <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位指定 ANSI 格式。 `MyUnsafeStruct` 為包含 <xref:System.IntPtr> 類型的結構，而非字串。  
+ `MyStruct` 類別包含 ANSI 字元的字串物件。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位指定 ANSI 格式。 `MyUnsafeStruct`為包含 <xref:System.IntPtr> 類型的結構，而非字串。  
   
- 
-  `LibWrap` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 不能使用 Unsafe 程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
+ `LibWrap` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 不能使用 Unsafe 程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
   
- 
-  `App` 類別會實作 `UsingMarshaling` 方法，該方法會執行所有用來傳遞陣列的必要工作。 該陣列以 `out` (在 Visual Basic 中為`ByRef`) 關鍵字標記，表示該資料從被呼叫端傳遞至呼叫端。 此實作會使用下列 <xref:System.Runtime.InteropServices.Marshal> 類別方法：  
+ `App` 類別會實作 `UsingMarshaling` 方法，該方法會執行所有用來傳遞陣列的必要工作。 該陣列以 `out` (在 Visual Basic 中為`ByRef`) 關鍵字標記，表示該資料從被呼叫端傳遞至呼叫端。 此實作會使用下列 <xref:System.Runtime.InteropServices.Marshal> 類別方法：  
   
 -   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> 從 Unmanaged 緩衝區封送處理資料至 Managed 物件。  
   

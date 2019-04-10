@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d86c590f2d5fe6bc970c2f8ac6de43d3e8485650
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
+ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/09/2018
-ms.locfileid: "44183141"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58831978"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML 與關聯式資料和 ADO.NET 互相整合
 **XmlDataDocument** 類別是 **XmlDocument** 的衍生類別，而且含有 XML 資料。 **XmlDataDocument** 的好處是提供關聯式與階層式資料之間的橋樑。 可被結合到 **DataSet**，而且兩種類別都可以隨內含資料而同步變更的即是 **XmlDocument**。 結合 **DataSet** 的 **XmlDocument** 允許 XML 和關聯式資料互相整合，因而您的資料並不一定要成為 XML 或以關聯式格式表示。 兩種您都可以選擇，而不必受限於單一資料表示法。  
@@ -29,9 +29,9 @@ ms.locfileid: "44183141"
   
  因為 **XmlDataDocument** 繼承自 **XmlDocument**，因此會提供 W3C DOM 的實作。 **XmlDataDocument** 與 **DataSet** 有關，而且在 Dataset 中儲存其資料的子集，但仍然不會限制或更改將它做為 **XmlDocument** 來使用。 為使用 **XmlDocument** 而撰寫的程式碼不會隨 **XmlDataDocument** 而變更。 **DataSet** 藉由定義資料表、資料行、關聯和限制，提供相同資料的關聯式檢視，而且是獨立、記憶體中的使用者資料存放區。  
   
- 下圖說明 XML 資料和 **DataSet** 與 **XmlDataDocument** 的不同關係。  
+ 下圖說明 XML 資料和 **DataSet** 與 **XmlDataDocument** 的不同關係： 
   
- ![XML DataSet](../../../../docs/standard/data/xml/media/xmlintegrationwithrelationaldataandadodotnet.gif "xmlIntegrationWithRelationalDataAndADOdotNet")  
+ ![顯示與 XML 資料集不同關係的圖表。](./media/xml-integration-with-relational-data-and-adonet/xml-integration-relational-data-adodotnet.gif)  
   
  圖例中顯示 XML 資料可直接載入 **DataSet**，它允許以關聯方式直接管理 XML。 或者，XML 也可以載入 **XmlDataDocument** 的 DOM 衍生類別中，之後並會載入且和 **DataSet** 同步。 因為 **DataSet** 和 **XmlDataDocument** 都與單一的資料集同步，所以一個存放區所做的資料變更會反映到另一個存放區。  
   
