@@ -2,12 +2,12 @@
 title: 持續性資料庫結構描述
 ms.date: 03/30/2017
 ms.assetid: 34f69f4c-df81-4da7-b281-a525a9397a5c
-ms.openlocfilehash: 2c8d74413be64cdf88f7f1821c3678b2bcd2e2b1
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 38df4b3d629840f1b5def2eafa0d074a2b2397a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515254"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331061"
 ---
 # <a name="persistence-database-schema"></a>持續性資料庫結構描述
 本主題描述 SQL 工作流程執行個體存放區所支援的公用檢視表。  
@@ -30,7 +30,7 @@ ms.locfileid: "43515254"
 |ExecutionStatus|Nvarchar(450)|表示工作流程的目前執行狀態。 可能的狀態包括 「 **Executing**，**閒置**， **Closed**。|  
 |IsInitialized|位元|表示工作流程執行個體是否已初始化。 初始化的工作流程執行個體是至少已保存一次的工作流程執行個體。|  
 |IsSuspended|位元|表示工作流程執行個體是否已暫止。|  
-|IsCompleted|位元|表示工作流程執行個體是否已完成執行。 **注意︰** Iif **InstanceCompletionAction**屬性設定為**DeleteAll**，從完成時檢視中移除執行個體。|  
+|IsCompleted|位元|表示工作流程執行個體是否已完成執行。 **注意：** Iif **InstanceCompletionAction**屬性設定為**DeleteAll**，從完成時檢視中移除執行個體。|  
 |EncodingOption|TinyInt|描述用來序列化資料屬性的編碼方式。<br /><br /> 0 – 無編碼<br />-1 – GzipStream|  
 |ReadWritePrimitiveDataProperties|Varbinary(max)|包含的序列化執行個體資料屬性將在執行個體載入時提供回到工作流程執行階段。<br /><br /> 每個基本屬性都是原生 CLR 類型，這表示不需要特殊組件還原序列化 Blob。|  
 |WriteOnlyPrimitiveDataProperties|Varbinary(max)|包含的序列化執行個體資料屬性在執行個體載入時不會提供回到工作流程執行階段。<br /><br /> 每個基本屬性都是原生 CLR 類型，這表示不需要特殊組件還原序列化 Blob。|  
@@ -60,9 +60,9 @@ ms.locfileid: "43515254"
   
  ServiceDeployments 檢視表也包含 Delete 觸發程序。 具有適當權限的使用者可以對此檢視表執行 Delete 陳述式，從資料庫移除 ServiceDeployment 項目。 請注意：  
   
-1.  從這個檢視表刪除項目會耗用大量成本，因為在執行這項作業之前整個資料庫必須鎖定， 以避免工作流程執行個體可能參考不存在之 ServiceDeployment 項目的狀況。 只在停機 / 維護時段，才從此檢視表刪除。  
+1. 從這個檢視表刪除項目會耗用大量成本，因為在執行這項作業之前整個資料庫必須鎖定， 以避免工作流程執行個體可能參考不存在之 ServiceDeployment 項目的狀況。 只在停機 / 維護時段，才從此檢視表刪除。  
   
-2.  任何嘗試刪除中的項目會參考的 ServiceDeployment 資料列**執行個體**檢視將會導致執行任何作業。 您只能刪除零參考的 ServiceDeployment 資料列。  
+2. 任何嘗試刪除中的項目會參考的 ServiceDeployment 資料列**執行個體**檢視將會導致執行任何作業。 您只能刪除零參考的 ServiceDeployment 資料列。  
   
 ## <a name="instancepromotedproperties-view"></a>InstancePromotedProperties 檢視表  
  **InstancePromotedProperties**檢視包含所有使用者所指定的升級屬性的資訊。 已提升的屬性是做為第一級屬性，供使用者用於查詢以擷取執行個體。  例如，使用者可以加入 PurchaseOrder 提升，一律會儲存在訂單成本**Value1**資料行。 這可讓使用者查詢成本超過特定值的所有採購單。  

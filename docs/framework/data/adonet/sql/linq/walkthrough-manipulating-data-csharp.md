@@ -2,12 +2,12 @@
 title: 逐步解說：操作資料 (C#)
 ms.date: 03/30/2017
 ms.assetid: 24adfbe0-0ad6-449f-997d-8808e0770d2e
-ms.openlocfilehash: 2a4b9fc5bf9afcace373a3f09b246e2bffd49e3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5418bdbdeee162bbc8c0abcb11fd39f2cc82ce73
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330775"
 ---
 # <a name="walkthrough-manipulating-data-c"></a>逐步解說：操作資料 (C#)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -53,30 +53,30 @@ ms.locfileid: "59143282"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下**專案**。  
+1. 在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下**專案**。  
   
-2.  在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual C#** 。  
+2. 在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual C#** 。  
   
-3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
+4. 在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
   
-5.  在 **位置**方塊中，確認您要儲存專案檔。  
+5. 在 **位置**方塊中，確認您要儲存專案檔。  
   
-6.  按一下 [確定] 。  
+6. 按一下 [確定] 。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中的參考，請按照下列步驟所述將它加入：  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
+1. 在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
+2. 在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
-3.  將下列指示詞加在 Program.cs 的上方：  
+3. 將下列指示詞加在 Program.cs 的上方：  
   
      [!code-csharp[DLinqWalk3CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#1)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59143282"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
-1.  在 **專案**功能表上，按一下**加入現有項目**。  
+1. 在 **專案**功能表上，按一下**加入現有項目**。  
   
-2.  在 [**加入現有項目**] 對話方塊中，巡覽至 c:\linqtest6\northwind.cs，，，然後按一下**新增**。  
+2. 在 [**加入現有項目**] 對話方塊中，巡覽至 c:\linqtest6\northwind.cs，，，然後按一下**新增**。  
   
      northwind.cs 檔案會加入至專案。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "59143282"
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>若要設定和測試資料庫連接  
   
-1.  將下列程式碼輸入或貼入 Program 類別的 `Main` 方法：  
+1. 將下列程式碼輸入或貼入 Program 類別的 `Main` 方法：  
   
      [!code-csharp[DLinqWalk3CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#2)]  
   
-2.  按 F5，立即測試應用程式。  
+2. 按 F5，立即測試應用程式。  
   
      A**主控台**視窗隨即開啟。  
   
@@ -113,13 +113,13 @@ ms.locfileid: "59143282"
   
 #### <a name="to-add-a-new-customer-entity-object"></a>若要加入新的 Customer 實體物件  
   
-1.  在 `Customer` 方法的 `Console.ReadLine();` 前面加入下列程式碼，建立新的 `Main`：  
+1. 在 `Customer` 方法的 `Console.ReadLine();` 前面加入下列程式碼，建立新的 `Main`：  
   
      [!code-csharp[DLinqWalk3CS#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#3)]  
   
-2.  按 F5 對方案進行偵錯。  
+2. 按 F5 對方案進行偵錯。  
   
-3.  中按 Enter 鍵**主控台**視窗以停止偵錯並繼續進行本逐步解說。  
+3. 中按 Enter 鍵**主控台**視窗以停止偵錯並繼續進行本逐步解說。  
   
 ## <a name="updating-an-entity"></a>更新實體  
  在下列步驟中，您會擷取 `Customer` 物件，並修改它的其中一個屬性。  
@@ -146,17 +146,17 @@ ms.locfileid: "59143282"
   
 #### <a name="to-submit-changes-to-the-database"></a>若要將變更送出至資料庫  
   
-1.  將下列程式碼插入至 `Console.ReadLine` 的正上方：  
+1. 將下列程式碼插入至 `Console.ReadLine` 的正上方：  
   
      [!code-csharp[DLinqWalk3CS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#6)]  
   
-2.  將下列程式碼插入至 `SubmitChanges` 的後面，以顯示送出變更之前和之後的效果：  
+2. 將下列程式碼插入至 `SubmitChanges` 的後面，以顯示送出變更之前和之後的效果：  
   
      [!code-csharp[DLinqWalk3CS#7](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk3CS/cs/Program.cs#7)]  
   
-3.  按 F5 對方案進行偵錯。  
+3. 按 F5 對方案進行偵錯。  
   
-4.  中按 Enter 鍵**主控台**關閉應用程式的視窗。  
+4. 中按 Enter 鍵**主控台**關閉應用程式的視窗。  
   
 > [!NOTE]
 >  送出變更以加入新的客戶之後，無法再照原狀執行這個方案。 若要重新執行方案，請變更要加入的客戶名稱和客戶識別碼。  

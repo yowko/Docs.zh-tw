@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 18849e61ea9af503d49e6be1894e7ebd53cce9fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201529"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329956"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具將資料表和資料行新增至 Windows Forms DataGrid 控制項
 
@@ -27,35 +27,35 @@ ms.locfileid: "59201529"
   
 ### <a name="to-add-a-table-to-the-datagrid-control-in-the-designer"></a>若要將資料表加入至設計工具中的 DataGrid 控制項  
   
-1.  若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>資料集的控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項繫結至資料來源，使用設計工具](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)。  
+1. 若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>資料集的控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項繫結至資料來源，使用設計工具](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)。  
   
-2.  選取 <xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性中 [屬性] 視窗中，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊要顯示的屬性**Styl 集合編輯器**。  
+2. 選取 <xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性中 [屬性] 視窗中，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊要顯示的屬性**Styl 集合編輯器**。  
   
-3.  在集合編輯器 中，按一下**新增**插入資料表樣式。  
+3. 在集合編輯器 中，按一下**新增**插入資料表樣式。  
   
-4.  按一下 [ **[確定]** 以關閉集合編輯器] 中，並再重新開啟它，依序按一下省略符號按鈕旁<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性。  
+4. 按一下 [ **[確定]** 以關閉集合編輯器] 中，並再重新開啟它，依序按一下省略符號按鈕旁<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性。  
   
      當您重新開啟集合編輯器時，任何繫結至控制項的資料表會出現在下拉式清單，如<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>資料表樣式的屬性。  
   
-5.  在 [**成員**] 方塊中的集合編輯器] 中，按一下 [資料表樣式。  
+5. 在 [**成員**] 方塊中的集合編輯器] 中，按一下 [資料表樣式。  
   
-6.  在 **屬性** 方塊中的 集合編輯器中，選取<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>您想要顯示的資料表的值。  
+6. 在 **屬性** 方塊中的 集合編輯器中，選取<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>您想要顯示的資料表的值。  
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>若要將資料行加入至設計工具中的 DataGrid 控制項  
   
-1.  在 **成員**的方塊**Styl 集合編輯器**，選取適當的資料表樣式。 在 **屬性**] 方塊中的 [集合編輯器中，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 來顯示屬性旁**DataGridColumnStyle 集合編輯器**。  
+1. 在 **成員**的方塊**Styl 集合編輯器**，選取適當的資料表樣式。 在 **屬性**] 方塊中的 [集合編輯器中，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>集合，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 來顯示屬性旁**DataGridColumnStyle 集合編輯器**。  
   
-2.  在集合編輯器 中，按一下**新增**插入資料行樣式，或按一下向下箭號旁**新增**來指定資料行類型。  
+2. 在集合編輯器 中，按一下**新增**插入資料行樣式，或按一下向下箭號旁**新增**來指定資料行類型。  
   
      在下拉式清單方塊中，您可以選取<xref:System.Windows.Forms.DataGridTextBoxColumn>或<xref:System.Windows.Forms.DataGridBoolColumn>型別。  
   
-3.  按一下 [確定] 以關閉**DataGridColumnStyle 集合編輯器**，然後重新開啟它，依序按一下省略符號按鈕旁<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性。  
+3. 按一下 [確定] 以關閉**DataGridColumnStyle 集合編輯器**，然後重新開啟它，依序按一下省略符號按鈕旁<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性。  
   
      當您重新開啟集合編輯器時，任何資料行，資料表中的繫結的資料會出現在下拉式清單，如<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>屬性的資料行樣式。  
   
-4.  在 [**成員**] 方塊中的集合編輯器] 中，按一下 [資料行樣式。  
+4. 在 [**成員**] 方塊中的集合編輯器] 中，按一下 [資料行樣式。  
   
-5.  在 **屬性** 方塊中的 集合編輯器中，選取<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>您想要顯示的資料行的值。  
+5. 在 **屬性** 方塊中的 集合編輯器中，選取<xref:System.Windows.Forms.DataGridColumnStyle.MappingName%2A>您想要顯示的資料行的值。  
   
 ## <a name="see-also"></a>另請參閱
 

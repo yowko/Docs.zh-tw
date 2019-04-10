@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 12300bf4-c730-4405-9f65-d286f68b5a43
-ms.openlocfilehash: 9c8b2cb0417db6481ce0171d85b225ef3a784c1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2aed766e6b2da7ebaf7b5b863375ee95b99eb159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330333"
 ---
 # <a name="securitybindingelement-authentication-modes"></a>SecurityBindingElement 驗證模式
 Windows Communication Foundation (WCF) 提供數種模式的用戶端和服務來相互驗證。 您可以在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上使用靜態方法或透過組態，建立這些驗證模式的安全性繫結項目。 本主題會簡短說明這 18 種驗證模式。  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF) 提供數種模式的用戶端和服務�
   
 #### <a name="to-set-the-authentication-mode-in-configuration"></a>使用組態來設定驗證模式  
   
-1.  若要[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目，新增[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
+1. 若要[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目，新增[ \<customBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)。  
   
-2.  做為子項目中，新增[\<繫結 >](../../../../docs/framework/misc/binding.md)項目`<customBinding>`項目。  
+2. 做為子項目中，新增[\<繫結 >](../../../../docs/framework/misc/binding.md)項目`<customBinding>`項目。  
   
-3.  將 `<security>` 項目加入至 `<binding>` 項目。  
+3. 將 `<security>` 項目加入至 `<binding>` 項目。  
   
-4.  將 `authenticationMode` 屬性設定為下列其中一個描述值。 例如，下列程式碼會將此模式設定為 `AnonymousForCertificate`。  
+4. 將 `authenticationMode` 屬性設定為下列其中一個描述值。 例如，下列程式碼會將此模式設定為 `AnonymousForCertificate`。  
   
     ```xml  
     <bindings>  
@@ -42,14 +42,14 @@ Windows Communication Foundation (WCF) 提供數種模式的用戶端和服務�
   
 #### <a name="to-set-the-mode-programmatically"></a>以程式設計方式來設定模式  
   
-1.  判斷傳回型別，該型別可能是下列其中一種型別：<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+1. 判斷傳回型別，該型別可能是下列其中一種型別：<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>、<xref:System.ServiceModel.Channels.TransportSecurityBindingElement>、<xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> 或 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
-2.  呼叫 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的適當靜態方法。 例如，下列程式碼會呼叫 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> 方法。  
+2. 呼叫 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的適當靜態方法。 例如，下列程式碼會呼叫 <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateAnonymousForCertificateBindingElement%2A> 方法。  
   
      [!code-csharp[c_CustomBindingsAuthMode#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_custombindingsauthmode/cs/source.cs#3)]
      [!code-vb[c_CustomBindingsAuthMode#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombindingsauthmode/vb/source.vb#3)]  
   
-3.  使用繫結項目來建立自訂繫結。 如需詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
+3. 使用繫結項目來建立自訂繫結。 如需詳細資訊，請參閱 <<c0> [ 自訂繫結](../../../../docs/framework/wcf/extending/custom-bindings.md)。  
   
 ## <a name="mode-descriptions"></a>模式描述  
   

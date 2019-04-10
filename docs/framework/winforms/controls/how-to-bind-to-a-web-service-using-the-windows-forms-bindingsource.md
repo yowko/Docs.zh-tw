@@ -12,29 +12,29 @@ helpviewer_keywords:
 - controls [Windows Forms], binding to Web service
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
-ms.openlocfilehash: cf5352ff60aabe45473c3c9103e8369597db2e8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330996"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>HOW TO：使用 Windows Forms BindingSource 繫結至 Web 服務
 如果您想要將 Windows Form 控制項繫結至取自呼叫 XML Web service 的結果，您可以使用 <xref:System.Windows.Forms.BindingSource> 元件。 此程序是類似於繫結 <xref:System.Windows.Forms.BindingSource> 元件到一種類型上。 您必須建立用戶端 Proxy，其中包含方法和 Web 服務所公開的類型。 您可以由 Web 服務 (.asmx) 本身或它的 Web 服務描述語言 (WSDL) 檔案來產生用戶端 Proxy 。 此外，用戶端 Proxy 必須公開欄位，內容為被 Web 服務做為公用屬性的複雜類型。 然後再繫結 <xref:System.Windows.Forms.BindingSource> 到其中一個在 Web 服務 Proxy 中被公開的類型。  
   
 ### <a name="to-create-and-bind-to-a-client-side-proxy"></a>建立並繫結至用戶端 Proxy  
   
-1.  依照您的選擇，以適當的命名空間在目錄中建立 Windows Form。  
+1. 依照您的選擇，以適當的命名空間在目錄中建立 Windows Form。  
   
-2.  新增 <xref:System.Windows.Forms.BindingSource> 元件至表單。  
+2. 新增 <xref:System.Windows.Forms.BindingSource> 元件至表單。  
   
-3.  開啟 [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] 命令提示字元，並瀏覽至您的表單所位於的相同目錄。  
+3. 開啟 [!INCLUDE[winsdklong](../../../../includes/winsdklong-md.md)] 命令提示字元，並瀏覽至您的表單所位於的相同目錄。  
   
-4.  使用 WSDL 工具中，輸入 `wsdl` 以及 .asmx 或者 Web 服務之 WSDL 檔案的 URL，接著是您的應用程式命名空間，最後可以選擇加上您使用的語言。  
+4. 使用 WSDL 工具中，輸入 `wsdl` 以及 .asmx 或者 Web 服務之 WSDL 檔案的 URL，接著是您的應用程式命名空間，最後可以選擇加上您使用的語言。  
   
      下列程式碼範例會使用 Web 服務位於`http://webservices.eraserver.net/zipcoderesolver/zipcoderesolver.asmx`。 例如，針對 C# 輸入 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService`，或針對 Visual Basic 輸入 `wsdl http://webservices.eraserver.net.zipcoderesolver/zipcoderesolver.asmx /n:BindToWebService /language:VB`。 在特定的語言中，將路徑當做引數傳遞至 WSDL 工具會產生用戶端 Proxy 於相同的目錄和命名空間中，並做為您的應用程式。 如果您使用 Visual Studio，請將檔案加入您的專案。  
   
-5.  在用戶端 Proxy 的類型中選取一個來繫結。  
+5. 在用戶端 Proxy 的類型中選取一個來繫結。  
   
      這通常是由 Web 服務所提供的方法來傳回的類型。 被選取類型的欄位必須公開為公用屬性，以供繫結用途。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59106752"
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.DataConnectorWebService#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/VB/form1.vb#4)]  
   
-6.  設定 <xref:System.Windows.Forms.BindingSource> 中的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性為您希望被包含在Web 服務用戶端 Proxy 的類型。  
+6. 設定 <xref:System.Windows.Forms.BindingSource> 中的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性為您希望被包含在Web 服務用戶端 Proxy 的類型。  
   
      [!code-cpp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CPP/form1.cpp#2)]
      [!code-csharp[System.Windows.Forms.DataConnectorWebService#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataConnectorWebService/CS/form1.cs#2)]

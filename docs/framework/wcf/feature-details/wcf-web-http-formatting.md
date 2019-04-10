@@ -2,12 +2,12 @@
 title: WCF Web HTTP 格式化
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: 37f0506822ca03aed3755ad42f9bf7ecdc962da7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094446"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331035"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 格式化
 WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所使用的最佳格式。 兩種可用來判斷最適合格式的方法分別為：自動和明確。  
@@ -15,13 +15,13 @@ WCF Web HTTP 程式設計模型可讓您動態決定服務作業傳回回應所�
 ## <a name="automatic-formatting"></a>自動格式化  
  啟用時，自動格式化會選擇傳回回應所使用的最佳格式。 此方法會透過依序檢查下列各項來判斷最佳格式：  
   
-1.  要求訊息之 Accept 標頭中的媒體類型。  
+1. 要求訊息之 Accept 標頭中的媒體類型。  
   
-2.  要求訊息的內容類型。  
+2. 要求訊息的內容類型。  
   
-3.  作業中的預設格式設定。  
+3. 作業中的預設格式設定。  
   
-4.  WebHttpBehavior 中的預設格式設定。  
+4. WebHttpBehavior 中的預設格式設定。  
   
  如果要求訊息包含 Accept 標頭的 Windows Communication Foundation (WCF) 基礎結構會搜尋它支援的類型。 如果 `Accept` 標頭指定其媒體類型的優先權，則會遵循優先權。 如果 `Accept` 標頭中找不到適合的格式，則會使用要求訊息的內容類型。 如果未指定適合的內容類型，則會使用作業的預設格式設定。 預設格式會使用 `ResponseFormat` 和 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的 <xref:System.ServiceModel.Web.WebInvokeAttribute> 參數設定。 如果作業上未指定預設格式，則會使用 <xref:System.ServiceModel.Description.WebHttpBehavior.DefaultOutgoingResponseFormat%2A> 屬性的值。 自動格式化會仰賴 <xref:System.ServiceModel.Description.WebHttpBehavior.AutomaticFormatSelectionEnabled%2A> 屬性。 當此屬性設定為 `true` 時，WCF 基礎結構會判斷要使用的最佳格式。 為了提供回溯相容性，自動格式選取預設為停用。 自動格式選取可以透過程式設計方式或透過組態啟用。 下列範例顯示如何在程式碼中啟用自動格式選取。  
   

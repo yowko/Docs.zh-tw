@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC32500
 ms.assetid: 6fa34c55-368e-4d7d-b488-07a3fffe045f
-ms.openlocfilehash: ab821db45ae834e82aa134b6f20ded14d43709ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d27c326b6a88271ba4abf0144e71027f6671b17e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58832264"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330671"
 ---
 # <a name="attribute-cannot-be-applied-because-the-format-of-the-guid-number-is-not-correct"></a>'\<屬性 >' 無法套用，因為 GUID 的格式'\<編號 >' 不正確
 A`COMClassAttribute`屬性區塊指定全域唯一識別碼 (GUID) guid 不符合為適當格式。 `COMClassAttribute` 使用 Guid 來唯一識別類別、 介面，以及建立事件。  
@@ -23,9 +23,9 @@ A`COMClassAttribute`屬性區塊指定全域唯一識別碼 (GUID) guid 不符�
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  判斷正確的 GUID 或需要識別 COM 物件的 Guid。  
+1. 判斷正確的 GUID 或需要識別 COM 物件的 Guid。  
   
-2.  請確定正確複製要呈現給 `COMClassAttribute` 屬性區塊的 GUID 字串。  
+2. 請確定正確複製要呈現給 `COMClassAttribute` 屬性區塊的 GUID 字串。  
   
 ## <a name="see-also"></a>另請參閱
 

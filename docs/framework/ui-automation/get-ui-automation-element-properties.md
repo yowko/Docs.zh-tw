@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties, retrieving
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
-ms.openlocfilehash: f04381bae2ebed5f0f65b4c6b4043c86ac7f63ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330762"
 ---
 # <a name="get-ui-automation-element-properties"></a>取得 UI 自動化項目屬性
 > [!NOTE]
@@ -23,15 +23,15 @@ ms.locfileid: "59078378"
   
 ### <a name="get-a-current-property-value"></a>取得目前的屬性值  
   
-1.  取得<xref:System.Windows.Automation.AutomationElement>您想要取得其屬性。  
+1. 取得<xref:System.Windows.Automation.AutomationElement>您想要取得其屬性。  
   
-2.  呼叫<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Current%2A>屬性結構，以及如何取得其成員之一的值。  
+2. 呼叫<xref:System.Windows.Automation.AutomationElement.GetCurrentPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Current%2A>屬性結構，以及如何取得其成員之一的值。  
   
 ### <a name="get-a-cached-property-value"></a>取得快取的屬性值  
   
-1.  取得<xref:System.Windows.Automation.AutomationElement>您想要取得其屬性。 屬性必須具有在指定<xref:System.Windows.Automation.CacheRequest>。  
+1. 取得<xref:System.Windows.Automation.AutomationElement>您想要取得其屬性。 屬性必須具有在指定<xref:System.Windows.Automation.CacheRequest>。  
   
-2.  呼叫<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Cached%2A>屬性結構，以及如何取得其成員之一的值。  
+2. 呼叫<xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>，或擷取<xref:System.Windows.Automation.AutomationElement.Cached%2A>屬性結構，以及如何取得其成員之一的值。  
   
 ## <a name="example"></a>範例  
  下列範例示範各種方式來擷取目前的屬性<xref:System.Windows.Automation.AutomationElement>。  

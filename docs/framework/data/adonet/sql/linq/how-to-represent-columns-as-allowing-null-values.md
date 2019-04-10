@@ -2,12 +2,12 @@
 title: HOW TO：將資料行表示為可存放 Null 值的資料行
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
-ms.openlocfilehash: e3bab3f307bcba77e0d311b96fa79d5a0d01e937
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ef8fa87963b91ef7140fbaefb657fc7904604b5b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169633"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331152"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>HOW TO：將資料行表示為可存放 Null 值的資料行
 使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A>屬性上的<xref:System.Data.Linq.Mapping.ColumnAttribute>屬性來指定相關聯的資料庫資料行可以保存 null 值。  
@@ -16,9 +16,9 @@ ms.locfileid: "59169633"
   
 ### <a name="to-designate-a-column-as-allowing-null-values"></a>若要指定資料行允許 null 值  
   
-1.  將 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute)。  
+1. 將 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.ColumnAttribute> 屬性 (Attribute)。  
   
-2.  將 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 屬性 (Property) 值設定為 `true`。  
+2. 將 <xref:System.Data.Linq.Mapping.ColumnAttribute.CanBeNull%2A> 屬性 (Property) 值設定為 `true`。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: 從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 ms.date: 03/30/2017
 ms.assetid: 5a6fa180-3094-4e6e-ba2b-8c80975d18d1
-ms.openlocfilehash: 15a74e47774c532e75eca8a60a1af3a3e4f03f58
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ebeda2805f3393b298e43aa4dcc601298ce176f6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591639"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330320"
 ---
 # <a name="accessing-the-service-from-a-web-browser-wcf-data-services-quickstart"></a>從 Web 瀏覽器存取服務 (WCF 資料服務快速入門)
 
@@ -18,16 +18,16 @@ ms.locfileid: "54591639"
 
 ## <a name="to-request-the-default-service-document-by-using-internet-explorer"></a>若要使用 Internet Explorer 要求預設服務文件
 
-1.  在 Internet Explorer 中，從**工具**功能表上，選取**網際網路選項**，按一下 **內容**索引標籤上，按一下 **設定**，並清除**開啟摘要讀取檢視**。
+1. 在 Internet Explorer 中，從**工具**功能表上，選取**網際網路選項**，按一下 **內容**索引標籤上，按一下 **設定**，並清除**開啟摘要讀取檢視**。
 
      這樣可以確保摘要讀取功能已停用。 如果未停用此功能，Web 瀏覽器會將傳回的 AtomPub 編碼文件視為 XML 摘要，而不會顯示原始的 XML 資料。
 
     > [!NOTE]
     > 如果您的瀏覽器無法將摘要顯示為原始的 XML 資料，您應該仍然可以將摘要檢視為頁面的原始程式碼。
 
-2.  在 Visual Studio 中按**F5**鍵開始偵錯應用程式。
+2. 在 Visual Studio 中按**F5**鍵開始偵錯應用程式。
 
-3.  開啟本機電腦上的 Web 瀏覽器。 在位址列中輸入下列 URI：
+3. 開啟本機電腦上的 Web 瀏覽器。 在位址列中輸入下列 URI：
 
     ```
     http://localhost:12345/northwind.svc
@@ -37,7 +37,7 @@ ms.locfileid: "54591639"
 
 ## <a name="to-access-entity-set-resources-from-a-web-browser"></a>從 Web 瀏覽器存取實體集資源
 
-1.  在 Web 瀏覽器的位址列中輸入下列 URI：
+1. 在 Web 瀏覽器的位址列中輸入下列 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers
@@ -45,7 +45,7 @@ ms.locfileid: "54591639"
 
      這樣會傳回 Northwind 範例資料庫中的所有客戶。
 
-2.  在 Web 瀏覽器的位址列中輸入下列 URI：
+2. 在 Web 瀏覽器的位址列中輸入下列 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')
@@ -53,7 +53,7 @@ ms.locfileid: "54591639"
 
      這樣會傳回特定客戶 `ALFKI` 的實體執行個體。
 
-3.  在 Web 瀏覽器的位址列中輸入下列 URI：
+3. 在 Web 瀏覽器的位址列中輸入下列 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders
@@ -61,7 +61,7 @@ ms.locfileid: "54591639"
 
      這樣會周遊客戶與訂單之間的關聯性，傳回特定客戶 `ALFKI` 的所有訂單。
 
-4.  在 Web 瀏覽器的位址列中輸入下列 URI：
+4. 在 Web 瀏覽器的位址列中輸入下列 URI：
 
     ```
     http://localhost:12345/northwind.svc/Customers('ALFKI')/Orders?$filter=OrderID eq 10643
