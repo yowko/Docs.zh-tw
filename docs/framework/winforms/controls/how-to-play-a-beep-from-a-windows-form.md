@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從 Windows Form 播放嗶聲
+title: HOW TO：播放 Windows Forms 的嗶聲
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - forms [Windows Forms], sounds
 - examples [Windows Forms], sounds
 ms.assetid: 7ea5cded-4888-4f35-8f28-5cab1a55c973
-ms.openlocfilehash: d04bf4bd45aa6ba5dfe231d5f69c2b2a13765373
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 0aa01f600873dd8853e1c33d5443448835e11455
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146220"
 ---
-# <a name="how-to-play-a-beep-from-a-windows-form"></a>HOW TO：從 Windows Form 播放嗶聲
+# <a name="how-to-play-a-beep-from-a-windows-form"></a>HOW TO：播放 Windows Forms 的嗶聲
 這個範例會在執行階段播放嗶聲。  
   
 ## <a name="example"></a>範例  
@@ -43,7 +43,8 @@ public void onePing()
  針對C#，此範例需要參考<xref:System.Media?displayProperty=nameWithType>命名空間。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:Microsoft.VisualBasic.Interaction.Beep%2A>
 - <xref:System.Media.SoundPlayer>
-- [如何：從 Windows Form 播放系統音效](how-to-play-a-system-sound-from-a-windows-form.md)
-- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [HOW TO：播放 Windows Forms 的系統音效](how-to-play-a-system-sound-from-a-windows-form.md)
+- [HOW TO：播放 Windows Forms 的音效](how-to-play-a-sound-from-a-windows-form.md)

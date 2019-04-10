@@ -11,18 +11,18 @@ helpviewer_keywords:
 ms.assetid: 55d6ab12-f251-4aab-aa64-aacbe9d9f974
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aebcd2d2f2387f478c36e84dad82d90d4d70d68e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f076cbc556c7d9feff8a226f050743cd7728622
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148144"
 ---
 # <a name="exceptionswallowedoncallfromcom-mda"></a>exceptionSwallowedOnCallFromCom MDA
 透過不含 Unmanaged HRESULT 傳回型別的方法，從 COM 呼叫的通用語言執行平台 (CLR) 擲回例外狀況時，就會啟用 `exceptionSwallowedOnCallFromCOM` Managed 偵錯助理 (MDA)。  
   
 ## <a name="symptoms"></a>徵兆  
- 從 COM 呼叫 Managed 元件時，傳回的值為 FALSE 或 0。 或者，如果方法具有 void 傳回類型，執行方法期間可能不會指出已擲回例外狀況。 在這種情況下，會以無訊息模式攔截例外狀況，而執行作業會返回 COM 呼叫端。  
+ 從 COM 呼叫 Managed 元件時，傳回的值為 FALSE 或 0。 或者，如果方法具有 void 傳回型別，執行方法期間可能不會指出已擲回例外狀況。 在這種情況下，會以無訊息模式攔截例外狀況，而執行作業會返回 COM 呼叫端。  
   
 ## <a name="cause"></a>原因  
  已擲回例外狀況，但沒有有效的方式來進行提報。  
@@ -33,7 +33,7 @@ ms.locfileid: "54554669"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。 它只會提報以無訊息模式攔截例外狀況的相關資料。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  告知性訊息，包含方法名稱、類型名稱和例外狀況訊息。  
   
 ## <a name="configuration"></a>組態  
@@ -47,6 +47,7 @@ ms.locfileid: "54554669"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

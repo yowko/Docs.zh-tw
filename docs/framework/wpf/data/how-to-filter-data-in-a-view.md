@@ -9,12 +9,12 @@ helpviewer_keywords:
 - filtering data in views [WPF]
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
-ms.openlocfilehash: 51f95834556153448d416157460cf63da0d409e1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373942"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147468"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>HOW TO：篩選檢視中的資料
 此範例示範如何篩選檢視中的資料。  
@@ -48,8 +48,9 @@ ms.locfileid: "57373942"
  [!code-vb[DataBindingLab#5](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataBindingLab/VisualBasic/MainWindow.xaml.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Data.CollectionView.CanFilter%2A>
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [資料繫結概觀](data-binding-overview.md)
 - [排序檢視中的資料](how-to-sort-data-in-a-view.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

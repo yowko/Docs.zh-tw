@@ -2,16 +2,15 @@
 title: 例外狀況
 ms.date: 03/30/2017
 ms.assetid: 065205cc-52dd-4f30-9578-b17d8d113136
-ms.openlocfilehash: 94a0a2430ffe7db47152517c742aed1c18a39e64
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64a8338133c265ee1b4c7acbd9b4d168318b66a5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717267"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59145986"
 ---
 # <a name="exceptions"></a>例外狀況
-工作流程可以利用 <xref:System.Activities.Statements.TryCatch> 活動處理在工作流程執行期間引發的例外狀況。 工作流程可以處理這些例外狀況，也可以利用 <xref:System.Activities.Statements.Rethrow> 活動重新擲回。 
-  <xref:System.Activities.Statements.TryCatch.Finally%2A> 區段中的活動是在 <xref:System.Activities.Statements.TryCatch.Try%2A> 區段或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 區段完成時執行的。 所裝載的工作流程<xref:System.Activities.WorkflowApplication>執行個體也可以使用<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件處理常式來處理未處理的例外狀況<xref:System.Activities.Statements.TryCatch>活動。  
+工作流程可以利用 <xref:System.Activities.Statements.TryCatch> 活動處理在工作流程執行期間引發的例外狀況。 工作流程可以處理這些例外狀況，也可以利用 <xref:System.Activities.Statements.Rethrow> 活動重新擲回。 <xref:System.Activities.Statements.TryCatch.Finally%2A> 區段中的活動是在 <xref:System.Activities.Statements.TryCatch.Try%2A> 區段或 <xref:System.Activities.Statements.TryCatch.Catches%2A> 區段完成時執行的。 所裝載的工作流程<xref:System.Activities.WorkflowApplication>執行個體也可以使用<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>事件處理常式來處理未處理的例外狀況<xref:System.Activities.Statements.TryCatch>活動。  
   
 ## <a name="causes-of-exceptions"></a>例外狀況的原因  
  在工作流程中，例外狀況會發生在下列情況：  
@@ -25,8 +24,7 @@ ms.locfileid: "57717267"
 -   從外部程式碼 (例如程式庫、元件或工作流程中使用的服務) 擲回例外狀況。  
   
 ## <a name="handling-exceptions"></a>例外狀況處理  
- 如果活動擲回例外狀況，且該例外狀況未經處理，預設的行為是終止該工作流程執行個體。 如果自訂的 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 處理常式存在，即可覆寫這個預設行為。 這個處理常式可讓工作流程主機作者提供適當的處理，例如自訂登入、中止工作流程、取消工作流程，或者終止工作流程。  如果工作流程引發未處理的例外狀況，則會叫用 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 處理常式。 
-  <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 會傳回三種可能的動作，這些動作決定工作流程最終的結果。  
+ 如果活動擲回例外狀況，且該例外狀況未經處理，預設的行為是終止該工作流程執行個體。 如果自訂的 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 處理常式存在，即可覆寫這個預設行為。 這個處理常式可讓工作流程主機作者提供適當的處理，例如自訂登入、中止工作流程、取消工作流程，或者終止工作流程。  如果工作流程引發未處理的例外狀況，則會叫用 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 處理常式。 <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> 會傳回三種可能的動作，這些動作決定工作流程最終的結果。  
   
 -   **取消**-取消的工作流程執行個體是分支執行非失誤性結束。 您可以建立取消行為模型 (例如使用 CancellationScope 活動)。 取消流程完成時，將叫用 Completed 處理常式。 取消的工作流程處於 Cancelled 狀態。  
   
@@ -53,6 +51,7 @@ ms.locfileid: "57717267"
  例外狀況處理與補償之間的不同在於，例外狀況處理會發生於活動執行期間。 補償則是發生於活動順利完成後。 例外狀況處理可讓您在活動引發例外狀況後進行清理，而補償則提供一種機制，利用這種機制即可復原先前完成之活動順利完成的工作。 如需詳細資訊，請參閱 <<c0> [ 補償](compensation.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Activities.Statements.TryCatch>
 - <xref:System.Activities.WorkflowApplication.OnUnhandledException%2A>
 - <xref:System.Activities.Statements.CompensableActivity>

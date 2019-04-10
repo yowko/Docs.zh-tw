@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: caef9590e57503171ab295f6e99b62d860bc0a81
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: b0b301bca33842dfb68de9143b665bed73f17b74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708050"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146766"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>使用視覺化樣式呈現控制項
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 會使用作業系統支援的視覺化樣式，來支援控制項和其他 Windows 使用者介面 (UI) 項目的呈現。 本主題說明在 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 中使用作業系統目前的視覺化樣式，來呈現控制項和其他 UI 項目的數種支援層級。  
@@ -54,9 +54,9 @@ ms.locfileid: "57708050"
 ## <a name="visual-style-element-and-rendering-classes"></a>視覺化樣式項目和呈現類別  
  <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間所包含的類別可以用來繪製視覺化樣式所支援的任何控制項或 UI 項目，並取得相關的詳細資訊。 支援的控制項包括：在 <xref:System.Windows.Forms?displayProperty=nameWithType> 命名空間中具有呈現類別的通用控制項 (請參閱上一節)，以及其他控制項 (例如索引標籤控制項和 Rebar 控制項)。 其他支援的 UI 項目包含 [開始]  功能表組件、工具列以及視窗的非工作區。  
   
- <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間的主要類別是 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是基礎類別，可供識別視覺化樣式支援的任何控制項或使用者介面項目。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身以外， <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間還包含許多具有 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 屬性的 `static` 巢狀類別，該屬性會為視覺化樣式支援的控制項、控制項組件或其他 UI 項目的每個狀態，傳回 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 。  
+ <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間的主要類別是 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 和 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>。 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 是基礎類別，用來識別視覺化樣式支援的任何控制項或使用者介面元素。 除了 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 本身以外， <xref:System.Windows.Forms.VisualStyles?displayProperty=nameWithType> 命名空間還包含許多具有 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 屬性的 `static` 巢狀類別，該屬性會為視覺化樣式支援的控制項、控制項組件或其他 UI 項目的每個狀態，傳回 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> 。  
   
- <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供相關方法，可供繪製作業系統目前的視覺化樣式所定義的每一個 <xref:System.Windows.Forms.VisualStyles.VisualStyleElement> ，並取得其資訊。 系統可以擷取的項目資訊包括：其預設大小、背景類型和色彩定義。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包裝了 Windows Platform SDK 之 Windows Shell 部分的視覺化樣式 (UxTheme) API 功能。 如需詳細資訊，請參閱 <<c0> [ 啟用視覺化樣式](/windows/desktop/controls/cookbook-overview)。  
+ <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 提供繪製和取得每項資訊的方法<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>作業系統的目前視覺化樣式所定義。 系統可以擷取的項目資訊包括：其預設大小、背景類型和色彩定義。 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 包裝的視覺化樣式 (UxTheme) API 的 Windows 平台 sdk 的 Windows Shell 部分的功能。 如需詳細資訊，請參閱 <<c0> [ 啟用視覺化樣式](/windows/desktop/controls/cookbook-overview)。  
   
  如需使用詳細資訊<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>並<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>，請參閱[How to:呈現視覺化樣式項目](how-to-render-a-visual-style-element.md)。  
   
@@ -79,4 +79,5 @@ ms.locfileid: "57708050"
 >  如果您想在使用者啟用或切換視覺化樣式時使用 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 呈現控制項或 UI 項目，請務必在處理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件時進行此作業，而不是在處理 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging> 事件時這麼做。 如果您在處理 <xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer> 時使用 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanging>類別，便會擲回例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
-- [自訂控制項繪製和轉譯 ](custom-control-painting-and-rendering.md)
+
+- [自訂控制項繪製和轉譯](custom-control-painting-and-rendering.md)

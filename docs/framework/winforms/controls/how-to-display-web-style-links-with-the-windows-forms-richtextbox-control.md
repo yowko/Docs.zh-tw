@@ -1,5 +1,5 @@
 ---
-title: HOW TO：顯示 Web 樣式連結，使用 Windows Forms RichTextBox 控制項
+title: HOW TO：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], text boxes
 - RichTextBox control [Windows Forms], linking to Web pages
 ms.assetid: 95089a37-a202-4f7a-94ee-6ee312908851
-ms.openlocfilehash: 64a2c8d9a9f6b8a7271a659b80ca2a63c423b3bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 1902557e5dbdcee3c1facc18b6f5c3037c266a8e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148235"
 ---
-# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>HOW TO：顯示 Web 樣式連結，使用 Windows Forms RichTextBox 控制項
+# <a name="how-to-display-web-style-links-with-the-windows-forms-richtextbox-control"></a>HOW TO：使用 Windows Forms RichTextBox 控制項顯示 Web 樣式連結
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以顯示為彩色和加底線的網頁連結。 您可以撰寫程式碼，會開啟瀏覽器視窗顯示時按一下連結，連結文字中指定的網站。  
   
 ### <a name="to-link-to-a-web-page-with-the-richtextbox-control"></a>若要連結至網頁上使用 RichTextBox 控制項  
@@ -117,8 +117,9 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以顯示為彩�
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.RichTextBox.DetectUrls%2A>
 - <xref:System.Windows.Forms.RichTextBox.LinkClicked>
 - <xref:System.Windows.Forms.RichTextBox>
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

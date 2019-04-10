@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c4a942bb-2651-4b65-8718-809f892a0659
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78d9d769deefedef0c72b847c86e7b9fc175288c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 380334dbe9b91ea369de6cbe58686a9a74254c2c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732670"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148222"
 ---
 # <a name="datetimeinvalidlocalformat-mda"></a>dateTimeInvalidLocalFormat MDA
 使用只能用於當地 <xref:System.DateTime> 執行個體的格式來格式化儲存為全球定位時間 (UTC) 的 <xref:System.DateTime> 執行個體時，會啟用 `dateTimeInvalidLocalFormat` MDA。 針對未指定或預設 <xref:System.DateTime> 執行個體，不會啟用此 MDA。  
@@ -53,7 +53,7 @@ Serialize(myDateTime.ToString("o"));
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 不會影響執行階段。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  此 MDA 啟用沒有任何特殊輸出。不過，呼叫堆疊可以用來決定已啟用 MDA 之 <xref:System.DateTime.ToString%2A> 呼叫的位置。  
   
 ## <a name="configuration"></a>組態  
@@ -87,5 +87,6 @@ String serialized = XmlConvert.ToString(myDateTime,
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Globalization.DateTimeFormatInfo>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

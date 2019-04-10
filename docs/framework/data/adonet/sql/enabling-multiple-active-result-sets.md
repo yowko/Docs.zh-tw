@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: bbd70631a365c8687ad9b7ed89639e9041e4366e
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
-ms.translationtype: MT
+ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845662"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147546"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Sets
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它允許在單一連接中執行多個批次作業。 啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連接中加入工作階段。  
@@ -57,9 +57,9 @@ string connectionString = "Data Source=MSSQL1;" +
 ### <a name="statement-interleaving"></a>陳述式交錯  
  MARS 作業會在伺服器上同步執行。 允許 SELECT 及 BULK INSERT 陳述式的陳述式交錯。 但是，資料管理語言 (DML) 及資料定義語言 (DDL) 陳述式會以原子方式執行。 嘗試於原子批次執行時執行的任何陳述式都會被封鎖。 伺服器的平行執行不是 MARS 功能。  
   
- 如果在 MARS 連接下送出兩個批次作業，其中一個包含 SELECT 陳述式，另一個包含 DML 陳述式，則可以在執行 SELECT 陳述式時開始執行 DML。 不過，DML 陳述式必須先完成執行，才能繼續執行 SELECT 陳述式。 如果兩個陳述式同時在同一個交易下執行，則 DML 陳述式在 SELECT 陳述式已開始執行後所進行的任何變更，對於讀取作業都是不可見的。  
+ 如果在 MARS 連接下送出兩個批次作業，其中一個包含 SELECT 陳述式，另一個包含 DML 陳述式，則可以在執行 SELECT 陳述式時開始執行 DML。 不過，DML 陳述式必須先完成執行，才能繼續執行 SELECT 陳述式。 如果兩個陳述式同時在同一個異動下執行，則 DML 陳述式在 SELECT 陳述式已開始執行後所進行的任何變更，對於讀取作業都是不可見的。  
   
- SELECT 陳述式內的 WAITFOR 陳述式在等待期間，即產生第一個資料列之前，不會產生交易。 這表示在 WAITFOR 陳述式等待期間，無法在同一連接內執行其他批次作業。  
+ SELECT 陳述式內的 WAITFOR 陳述式在等待期間，即產生第一個資料列之前，不會產生異動。 這表示在 WAITFOR 陳述式等待期間，無法在同一連接內執行其他批次作業。  
   
 ### <a name="mars-session-cache"></a>MARS 工作階段快取  
  開啟啟用 MARS 的連接時，會建立邏輯工作階段，如此會增加額外負荷。 若要最小化負荷並提高效能， **SqlClient**快取連接內的 MARS 工作階段。 快取包含最多 10 個 MARS 工作階段。 使用者不可調整此值。 如果達到工作階段限制，則會建立新的工作階段而不會產生錯誤。 其中包含的快取及工作階段是以每個連接為基礎的，不可跨連接共用。 釋放工作階段時，會將其傳回集區，直至達到集區上限為止。 如果快取集區已滿，則工作階段會關閉。 MARS 工作階段不會過期。 只會在處置連接物件時清除它們。 MARS 工作階段快取不會預先載入。 應用程式需要更多工作階段時會將其載入。  
@@ -85,7 +85,7 @@ string connectionString = "Data Source=MSSQL1;" +
   
 -   最上層暫存資料表  
   
- 使用 MARS，預設的執行環境可與連接產生關聯。 在指定連接下開始執行的每個新批次作業，都會收到預設環境的複本。 每當程式碼在指定批次作業下執行時，對環境所做的所有變更都只限於該特定批次作業。 執行一旦完成，便會將執行設定複製到預設環境中。 當單一批次作業發出要在同一交易下循序執行的數個命令時，其語意與舊版用戶端或伺服器相關的連接所公開的語意相同。  
+ 使用 MARS，預設的執行環境可與連接產生關聯。 在指定連接下開始執行的每個新批次作業，都會收到預設環境的複本。 每當程式碼在指定批次作業下執行時，對環境所做的所有變更都只限於該特定批次作業。 執行一旦完成，便會將執行設定複製到預設環境中。 當單一批次作業發出要在同一異動下循序執行的數個命令時，其語意與舊版用戶端或伺服器相關的連接所公開的語意相同。  
   
 ### <a name="parallel-execution"></a>平行執行  
  MARS 未設計為在應用程式內移除對多重連接的所有需求。 如果應用程式確實需要針對伺服器平行執行命令，則應使用多重連接。  
@@ -112,5 +112,6 @@ string connectionString = "Data Source=MSSQL1;" +
  應用程式可以藉由讀取 `SqlConnection.ServerVersion` 值來檢查 MARS 支援。 SQL Server 2005 和 SQL Server 2008 的主版本號碼應為分別為 9 和 10。  
   
 ## <a name="see-also"></a>另請參閱
-- [Multiple Active Result Set (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: a35f4543543aa9023fd43de1757975c7ada87da9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148950"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -172,7 +172,7 @@ await simpleServiceClient.SampleMethodTaskAsync("hello, world");
 svcutil http://localhost:8000/servicemodelsamples/service/mex /async /tcv:Version35  
 ```  
   
- 當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[How to:以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
+ 當完成時，Svcutil.exe 會產生 WCF 用戶端類別，其中的事件基礎結構能夠呼叫應用程式去實作與指派事件處理常式，以接收回應並採取適當的動作。 如需完整範例，請參閱[如何：以非同步方式呼叫服務作業](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)。  
   
  但是，事件架構非同步呼叫只能在 [!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)] 中使用。 此外，使用 <xref:System.ServiceModel.ChannelFactory%601?displayProperty=nameWithType> 建立 WCF 用戶端通道時，即使在 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] 中亦不支援此呼叫。 透過 WCF 用戶端通道物件，您必須使用 <xref:System.IAsyncResult?displayProperty=nameWithType> 物件以非同步方式叫用您的作業。 若要使用此方法，請使用 [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) 指定 **/async** 命令選項，如下列範例所示。  
   
@@ -182,7 +182,7 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
   
  這會產生服務合約，其中的每個作業會模型化為其 `<Begin>` 屬性會設為 <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A> 的 `true` 方法，和對應的 `<End>` 方法。 完整範例，使用<xref:System.ServiceModel.ChannelFactory%601>，請參閱[How to:呼叫作業以非同步方式使用通道處理站](../../../docs/framework/wcf/feature-details/how-to-call-operations-asynchronously-using-a-channel-factory.md)。  
   
- 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 實作作業的方式對用戶端來說並不重要；回應訊息送達時，其內容會分派至用戶端的非同步 <`End`> 方法，而用戶端便會擷取該資訊。  
+ 無論何種情況下，即使是以同步方式實作服務，應用程式仍可以使用非同步方式叫用作業，而透過相同的方式，應用程式可以使用相同的模式，以非同步方式叫用本機同步方法。 實作作業的方式並不重要的用戶端。回應訊息送達時，其內容會分派至用戶端的非同步 <`End`> 方法，而用戶端擷取資訊。  
   
 ### <a name="one-way-message-exchange-patterns"></a>單向訊息交換模式  
  您也可以建立非同步訊息交換模式，而在這個模式中，用戶端或服務可以不管另一端，以任何方向傳送單向作業 (這是 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A?displayProperty=nameWithType> 為 `true` 的作業，而且沒有相關聯的回應)  (這會使用具有單向訊息的雙工訊息交換模式)。在這個情況下，服務合約會指定單向訊息交換，這表示每一端都可在適當時，選擇是否要實作為非同步呼叫或實作。 一般來說，當合約為單向訊息交換時，就可以大量地非同步實作，因為一旦傳送訊息時，應用程式不會等待回覆就可繼續執行其他工作。  
@@ -193,5 +193,6 @@ svcutil http://localhost:8000/servicemodelsamples/service/mex /async
  如果您要以 `Result` 屬性的形式接收訊息物件，並讓傳回值以該物件屬性的形式呈現，請使用 **/messageContract** 命令選項。 這會產生一個簽章，此簽章會將回應訊息傳回做為 `Result` 物件的 <xref:System.EventArgs> 屬性。 然後，所有的內部傳回值都成為回應訊息物件的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>
 - <xref:System.ServiceModel.OperationContractAttribute.AsyncPattern%2A>

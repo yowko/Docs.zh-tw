@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bed202d927cc026b903cb006220620210893056e
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59083829"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
 使用集合進行儲存與管理時，通常可以更有效率地處理類似的資料。 您可以使用 <xref:System.Array?displayProperty=nameWithType> 類別或 <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent> 和 System.Collections.Immutable 命名空間中的類別，來新增、移除和修改集合中的個別項目或某個範圍項目。  
@@ -25,8 +25,7 @@ ms.locfileid: "56836145"
  有兩種主要的集合類型；泛型集合和非泛型集合。 泛型集合已加入.NET Framework 2.0 中，且會在編譯階段提供類型安全的集合。 因此，泛型集合通常會有較佳的效能。 建構泛型集合後，泛型集合可接受類型參數，且當您加入或移除集合中的項目時，不需要轉換成 <xref:System.Object> 類型或從該類型進行轉換。  此外，在 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]應用程式中支援大部分的泛型集合。 非泛型集合會將項目儲存為 <xref:System.Object>，而這需要進行轉型，且 [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)]應用程式開發也不支援大多數的項目。 但您可能會在較舊的程式碼中看到非泛型集合。  
   
  從 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 開始，<xref:System.Collections.Concurrent> 命名空間中的集合提供了有效率的安全執行緒作業，可從多個執行緒存取集合項目。 System.Collections.Immutable 命名空間 ([NuGet 套件](https://www.nuget.org/packages/System.Collections.Immutable)) 中不可變的集合類別，原本就是安全執行緒，因為作業會在原始集合的複本上執行，且不能修改原始集合。  
-  
-  
+
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>常見集合功能  
  所有集合都提供加入、移除或尋找集合中項目的方法。 此外，直接或間接實作 <xref:System.Collections.ICollection> 介面或 <xref:System.Collections.Generic.ICollection%601> 介面的所有集合，都可共用這些功能：  
@@ -51,7 +50,7 @@ ms.locfileid: "56836145"
   
 -   **一致的下限**  
   
-     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
+     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 <xref:System.Array> 預設有零的下限，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
   
 -   **從多個執行緒存取的同步處理** (僅限 <xref:System.Collections> 類別)。  
   

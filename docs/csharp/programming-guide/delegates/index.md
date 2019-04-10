@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, delegates
 - delegates [C#]
 ms.assetid: 97de039b-c76b-4b9c-a27d-8c1e1c8d93da
-ms.openlocfilehash: 8dca99f5b6cd315b31bbefb9515cde5065601730
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: fa69a03d160e7079f532e8e00245a7af3f3a8999
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203505"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59088739"
 ---
 # <a name="delegates-c-programming-guide"></a>委派 (C# 程式設計手冊)
 [委派](../../../csharp/language-reference/keywords/delegate.md)是一種類型，代表具有特定參數清單及傳回型別的方法參考。 當您具現化委派時，可以將其執行個體與任何具有相容簽章和傳回型別的方法產生關聯。 您可以透過委派執行個體叫用 (或呼叫) 方法。  
@@ -46,19 +46,18 @@ ms.locfileid: "57203505"
   
 -   [使用委派](../../../csharp/programming-guide/delegates/using-delegates.md)  
   
--   [何時應使用委派，而不使用介面 （C# 程式設計指南）](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
+-   [何時應使用委派，而不使用介面 (C# 程式設計指南)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms173173(v=vs.100))  
   
--   [具名方法委派與匿名方法委派](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
+-   [具名方法委派與匿名方法](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)  
   
 -   [匿名方法](../../../csharp/programming-guide/statements-expressions-operators/anonymous-methods.md)  
   
 -   [在委派中使用變異數](../../../csharp/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)  
   
--   [如何：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
+-   [作法：組合委派 (多點傳送委派)](../../../csharp/programming-guide/delegates/how-to-combine-delegates-multicast-delegates.md)  
   
--   [如何：宣告和使用委派及將其具現化](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
-  
-  
+-   [作法：宣告、具現化和使用委派](../../../csharp/programming-guide/delegates/how-to-declare-instantiate-and-use-a-delegate.md)  
+
 ## <a name="c-language-specification"></a>C# 語言規格  
 
 如需詳細資訊，請參閱 [C# 語言規格](../../language-reference/language-specification/index.md)中的[委派](~/_csharplang/spec/delegates.md)。 語言規格是 C# 語法及用法的限定來源。
@@ -71,5 +70,5 @@ ms.locfileid: "57203505"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Delegate>
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [事件](../../../csharp/programming-guide/events/index.md)

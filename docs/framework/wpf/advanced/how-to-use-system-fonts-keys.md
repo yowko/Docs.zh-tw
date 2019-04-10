@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - resource keys [WPF], SystemFonts class
 ms.assetid: 036ebea7-5677-4f60-8ba4-56c9f9d9b8bd
-ms.openlocfilehash: 8d354bb598da6912bfa34f611cb55d4dcd7920a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e924f4c14d98380d9f4c0defe27d9f98c3293114
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352837"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148924"
 ---
 # <a name="how-to-use-system-fonts-keys"></a>HOW TO：使用系統字型索引鍵
 系統資源會將數個系統度量資訊公開為資源，協助開發人員建立與系統設定一致的視覺效果。 <xref:System.Windows.SystemFonts> 是包含系統字型值以及繫結至值的系統字型資源的類別，例如<xref:System.Windows.SystemFonts.CaptionFontFamily%2A>和<xref:System.Windows.SystemFonts.CaptionFontFamilyKey%2A>。  
@@ -25,6 +25,7 @@ ms.locfileid: "57352837"
  [!code-xaml[SystemRes_snip#FontDynamicResources](~/samples/snippets/csharp/VS_Snippets_Wpf/SystemRes_snip/CSharp/MyApp.xaml#fontdynamicresources)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用系統筆刷繪製區域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [使用 SystemParameters](how-to-use-systemparameters.md)
 - [使用 SystemFonts](how-to-use-systemfonts.md)

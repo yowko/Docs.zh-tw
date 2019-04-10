@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - 3-D graphics [WPF]
 ms.assetid: 4bcf949d-d92f-4d8d-8a9b-1e4c61b25bf6
-ms.openlocfilehash: 48e8310e003dcd3ebca579654b81363efaac9068
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8629748c37aae8e35bb928c5a8d5a9caa7046942
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364004"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59147520"
 ---
 # <a name="maximize-wpf-3d-performance"></a>最大化 WPF 3D 效能
 當您使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]建置 3D 的控制項，並納入您的應用程式的 3D 場景，務必考慮效能最佳化。 本主題提供 3D 類別和應用程式，以及最佳化效能，當您使用它們時的建議會影響效能的屬性的清單。  
@@ -43,7 +43,7 @@ ms.locfileid: "57364004"
 |<xref:System.Windows.Media.Brush>|使用<xref:System.Windows.Media.ImageBrush>而非<xref:System.Windows.Media.VisualBrush>或<xref:System.Windows.Media.DrawingBrush>時不會變更到筆刷的內容。  2D 內容可以轉換成<xref:System.Windows.Controls.Image>經由<xref:System.Windows.Media.Imaging.RenderTargetBitmap>並接著用於<xref:System.Windows.Media.ImageBrush>。|  
 |<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>|不用<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>除非您真的需要查看後的臉部您<xref:System.Windows.Media.Media3D.GeometryModel3D>。|  
 |<xref:System.Windows.Media.Media3D.Light>|淺的速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.AmbientLight><br /><br /> <xref:System.Windows.Media.Media3D.DirectionalLight><br /><br /> <xref:System.Windows.Media.Media3D.PointLight><br /><br /> <xref:System.Windows.Media.Media3D.SpotLight>|  
-|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|嘗試保留在這些限制的網格大小：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>：20001<xref:System.Windows.Media.Media3D.Point3D>執行個體<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>：60,003<xref:System.Int32>執行個體|  
+|<xref:System.Windows.Media.Media3D.MeshGeometry3D>|嘗試保留在這些限制的網格大小：<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>:20001<xref:System.Windows.Media.Media3D.Point3D>執行個體<br /><br /> <xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>:60,003<xref:System.Int32>執行個體|  
 |<xref:System.Windows.Media.Media3D.Material>|材質的速度 （最快到最慢）：<br /><br /> <xref:System.Windows.Media.Media3D.EmissiveMaterial><br /><br /> <xref:System.Windows.Media.Media3D.DiffuseMaterial><br /><br /> <xref:System.Windows.Media.Media3D.SpecularMaterial>|  
 |<xref:System.Windows.Media.Brush>|[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 3D 並未退出一致的方式不可見的筆刷 （黑色的環境筆刷、 清楚的筆刷等）。  請考慮從場景省略。|  
 |<xref:System.Windows.Media.Media3D.MaterialGroup>|每個<xref:System.Windows.Media.Media3D.Material>在<xref:System.Windows.Media.Media3D.MaterialGroup>會導致另一個轉譯階段，因此包含許多資料，甚至是簡單的資料，可能會大幅增加您的 GPU 的填滿需求。  中的資料數目降到最低您<xref:System.Windows.Media.Media3D.MaterialGroup>。|  
@@ -60,4 +60,5 @@ ms.locfileid: "57364004"
 |<xref:System.Windows.Media.Media3D.MeshGeometry3D>|若要將大型集合中的建構時間降至最低[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，例如 MeshGeometry3D <xref:System.Windows.Media.Media3D.MeshGeometry3D.Positions%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.Normals%2A>， <xref:System.Windows.Media.Media3D.MeshGeometry3D.TextureCoordinates%2A>，和<xref:System.Windows.Media.Media3D.MeshGeometry3D.TriangleIndices%2A>，預先調整大小的集合值的母體擴展之前。 可能的話，請傳遞集合的建構函式預先填入的資料結構，例如陣列或清單。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [立體圖形概觀](3-d-graphics-overview.md)

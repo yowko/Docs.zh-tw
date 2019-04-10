@@ -2,12 +2,12 @@
 title: SQL 追蹤
 ms.date: 03/30/2017
 ms.assetid: bcaebeb1-b9e5-49e8-881b-e49af66fd341
-ms.openlocfilehash: e2cb86a92e075d9117f2fe208f2044d4bc30dac9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6d3974cbf181734f2a3cab0fbc7d8f32c16699bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710013"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59146337"
 ---
 # <a name="sql-tracking"></a>SQL 追蹤
 此範例示範如何撰寫自訂的 SQL 追蹤參與者，將追蹤記錄寫入至 SQL 資料庫。 Windows Workflow Foundation (WF) 提供工作流程追蹤來查看執行工作流程執行個體。 追蹤執行階段會在工作流程執行期間發出工作流程追蹤記錄。 如需有關工作流程追蹤的詳細資訊，請參閱 <<c0> [ 工作流程追蹤](../workflow-tracking-and-tracing.md)。
@@ -60,4 +60,5 @@ ms.locfileid: "57710013"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\SqlTracking`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)
