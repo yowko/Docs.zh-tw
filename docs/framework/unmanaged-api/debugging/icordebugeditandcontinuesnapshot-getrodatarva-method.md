@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0fcd03fde49622a8c388bb821549cec2cf3a154
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bfec360dc7817864c57ae99c9d1648c805f524b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531011"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154463"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="06344-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA 方法</span><span class="sxs-lookup"><span data-stu-id="06344-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
-<span data-ttu-id="06344-103">`GetRoDataRVA` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="06344-103">`GetRoDataRVA` is obsolete.</span></span> <span data-ttu-id="06344-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="06344-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetrodatarva-method"></a><span data-ttu-id="cb75b-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA 方法</span><span class="sxs-lookup"><span data-stu-id="cb75b-102">ICorDebugEditAndContinueSnapshot::GetRoDataRVA Method</span></span>
+`GetRoDataRVA` <span data-ttu-id="cb75b-103">已過時。</span><span class="sxs-lookup"><span data-stu-id="cb75b-103">is obsolete.</span></span> <span data-ttu-id="cb75b-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="cb75b-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="06344-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="06344-105">See also</span></span>
-- [<span data-ttu-id="06344-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="06344-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+## <a name="see-also"></a><span data-ttu-id="cb75b-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="cb75b-105">See also</span></span>
+
+- [<span data-ttu-id="cb75b-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="cb75b-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

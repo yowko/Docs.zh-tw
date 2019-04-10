@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217077"
 ---
-# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="07384-102">IValidator::FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="07384-102">IValidator::FormatEventInfo Method</span></span>
-<span data-ttu-id="07384-103">取得對應至指定的驗證錯誤的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="07384-103">Gets the error message corresponding to the specified validation error.</span></span>  
+# <a name="ivalidatorformateventinfo-method"></a><span data-ttu-id="21706-102">IValidator::FormatEventInfo 方法</span><span class="sxs-lookup"><span data-stu-id="21706-102">IValidator::FormatEventInfo Method</span></span>
+<span data-ttu-id="21706-103">取得對應至指定的驗證錯誤的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="21706-103">Gets the error message corresponding to the specified validation error.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="07384-104">語法</span><span class="sxs-lookup"><span data-stu-id="07384-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="21706-104">語法</span><span class="sxs-lookup"><span data-stu-id="21706-104">Syntax</span></span>  
   
 ```  
 HRESULT FormatEventInfo(  
@@ -39,30 +39,27 @@ HRESULT FormatEventInfo(
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="07384-105">參數</span><span class="sxs-lookup"><span data-stu-id="07384-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="21706-105">參數</span><span class="sxs-lookup"><span data-stu-id="21706-105">Parameters</span></span>  
  `hVECode`  
- <span data-ttu-id="07384-106">[in]HRESULT 值傳遞給驗證的錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="07384-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
+ <span data-ttu-id="21706-106">[in]HRESULT 值傳遞給驗證的錯誤處理常式。</span><span class="sxs-lookup"><span data-stu-id="21706-106">[in] The HRESULT value that was passed to the validation error handler.</span></span>  
   
  `Context`  
- <span data-ttu-id="07384-107">[in]A`VEContext`執行個體，其中包含驗證錯誤的內容資訊。</span><span class="sxs-lookup"><span data-stu-id="07384-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
+ <span data-ttu-id="21706-107">[in]A`VEContext`執行個體，其中包含驗證錯誤的內容資訊。</span><span class="sxs-lookup"><span data-stu-id="21706-107">[in] A `VEContext` instance that contains context information about the validation error.</span></span>  
   
  `msg`  
- <span data-ttu-id="07384-108">[in、 out]字串，包含傳回的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="07384-108">[in, out] A string that contains the returned error message.</span></span>  
+ <span data-ttu-id="21706-108">[in、 out]字串，包含傳回的錯誤訊息。</span><span class="sxs-lookup"><span data-stu-id="21706-108">[in, out] A string that contains the returned error message.</span></span>  
   
  `ulMaxLength`  
- <span data-ttu-id="07384-109">[in]錯誤訊息的最大長度。</span><span class="sxs-lookup"><span data-stu-id="07384-109">[in] The maximum length of the error message.</span></span>  
+ <span data-ttu-id="21706-109">[in]錯誤訊息的最大長度。</span><span class="sxs-lookup"><span data-stu-id="21706-109">[in] The maximum length of the error message.</span></span>  
   
  `psa`  
- <span data-ttu-id="07384-110">[in]安全陣列，包含描述錯誤的其他參數。</span><span class="sxs-lookup"><span data-stu-id="07384-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
+ <span data-ttu-id="21706-110">[in]安全陣列，包含描述錯誤的其他參數。</span><span class="sxs-lookup"><span data-stu-id="21706-110">[in] A safe array that contains additional parameters describing the error.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="07384-111">需求</span><span class="sxs-lookup"><span data-stu-id="07384-111">Requirements</span></span>  
- <span data-ttu-id="07384-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="07384-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="21706-111">需求</span><span class="sxs-lookup"><span data-stu-id="21706-111">Requirements</span></span>  
+ <span data-ttu-id="21706-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="21706-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="07384-113">**標頭：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="07384-113">**Header:** IValidator.idl, IValidator.h</span></span>  
+ <span data-ttu-id="21706-113">**標頭：** IValidator.idl, IValidator.h</span><span class="sxs-lookup"><span data-stu-id="21706-113">**Header:** IValidator.idl, IValidator.h</span></span>  
   
- <span data-ttu-id="07384-114">**程式庫：** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="07384-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="21706-114">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="21706-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- <span data-ttu-id="07384-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="07384-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
-  
-## <a name="see-also"></a><span data-ttu-id="07384-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="07384-116">See also</span></span>
-
+ **<span data-ttu-id="21706-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="21706-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

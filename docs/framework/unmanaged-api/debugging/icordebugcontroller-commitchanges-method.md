@@ -17,15 +17,14 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e1af7bfa321313ee8d3e7e72ffd5703a8ced561e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 115f3a8c81bcedb48669d06e57f26b88d36148d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744761"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156361"
 ---
-# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="5b746-102">ICorDebugController::CommitChanges 方法</span><span class="sxs-lookup"><span data-stu-id="5b746-102">ICorDebugController::CommitChanges Method</span></span>
-<span data-ttu-id="5b746-103">`CommitChanges` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="5b746-103">`CommitChanges` is obsolete.</span></span> <span data-ttu-id="5b746-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="5b746-104">Do not call this method.</span></span>  
+# <a name="icordebugcontrollercommitchanges-method"></a><span data-ttu-id="69381-102">ICorDebugController::CommitChanges 方法</span><span class="sxs-lookup"><span data-stu-id="69381-102">ICorDebugController::CommitChanges Method</span></span>
+`CommitChanges` <span data-ttu-id="69381-103">已過時。</span><span class="sxs-lookup"><span data-stu-id="69381-103">is obsolete.</span></span> <span data-ttu-id="69381-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="69381-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="5b746-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5b746-105">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="69381-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69381-105">See also</span></span>

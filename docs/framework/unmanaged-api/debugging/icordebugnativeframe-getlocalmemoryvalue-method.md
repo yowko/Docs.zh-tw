@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5a35072b788321d22cec6de2f05a2863341417dc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 6c44f3e369ac64773811a6aea74756783dedd2fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57474757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209459"
 ---
-# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="2396a-102">ICorDebugNativeFrame::GetLocalMemoryValue 方法</span><span class="sxs-lookup"><span data-stu-id="2396a-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
-<span data-ttu-id="2396a-103">取得引數或儲存在指定的記憶體位置，這個原生框架中區域變數的值。</span><span class="sxs-lookup"><span data-stu-id="2396a-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
+# <a name="icordebugnativeframegetlocalmemoryvalue-method"></a><span data-ttu-id="39bfe-102">ICorDebugNativeFrame::GetLocalMemoryValue 方法</span><span class="sxs-lookup"><span data-stu-id="39bfe-102">ICorDebugNativeFrame::GetLocalMemoryValue Method</span></span>
+<span data-ttu-id="39bfe-103">取得引數或儲存在指定的記憶體位置，這個原生框架中區域變數的值。</span><span class="sxs-lookup"><span data-stu-id="39bfe-103">Gets the value of an argument or local variable that is stored in the specified memory location for this native frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2396a-104">語法</span><span class="sxs-lookup"><span data-stu-id="2396a-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="39bfe-104">語法</span><span class="sxs-lookup"><span data-stu-id="39bfe-104">Syntax</span></span>  
   
 ```  
 HRESULT GetLocalMemoryValue (  
@@ -38,27 +38,26 @@ HRESULT GetLocalMemoryValue (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2396a-105">參數</span><span class="sxs-lookup"><span data-stu-id="2396a-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="39bfe-105">參數</span><span class="sxs-lookup"><span data-stu-id="39bfe-105">Parameters</span></span>  
  `address`  
- <span data-ttu-id="2396a-106">[in]A`CORDB_ADDRESS`值，指定記憶體位置包含的值。</span><span class="sxs-lookup"><span data-stu-id="2396a-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
+ <span data-ttu-id="39bfe-106">[in]A`CORDB_ADDRESS`值，指定記憶體位置包含的值。</span><span class="sxs-lookup"><span data-stu-id="39bfe-106">[in] A `CORDB_ADDRESS` value that specifies the memory location containing the value.</span></span>  
   
  `cbSigBlob`  
- <span data-ttu-id="2396a-107">[in]整數，指定所參考的二進位中繼資料簽章大小`pvSigBlob`參數。</span><span class="sxs-lookup"><span data-stu-id="2396a-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
+ <span data-ttu-id="39bfe-107">[in]整數，指定所參考的二進位中繼資料簽章大小`pvSigBlob`參數。</span><span class="sxs-lookup"><span data-stu-id="39bfe-107">[in] An integer that specifies the size of the binary metadata signature which is referenced by the `pvSigBlob` parameter.</span></span>  
   
  `pvSigBlob`  
- <span data-ttu-id="2396a-108">[in]A`PCCOR_SIGNATURE`指向的值類型的二進位中繼資料簽章的值。</span><span class="sxs-lookup"><span data-stu-id="2396a-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
+ <span data-ttu-id="39bfe-108">[in]A`PCCOR_SIGNATURE`指向的值類型的二進位中繼資料簽章的值。</span><span class="sxs-lookup"><span data-stu-id="39bfe-108">[in] A `PCCOR_SIGNATURE` value that points to the binary metadata signature of the value's type.</span></span>  
   
  `ppValue`  
- <span data-ttu-id="2396a-109">[out]「 ICorDebugValue 」 物件，代表儲存在指定的記憶體位置的擷取的值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="2396a-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
+ <span data-ttu-id="39bfe-109">[out]「 ICorDebugValue 」 物件，代表儲存在指定的記憶體位置的擷取的值的位址指標。</span><span class="sxs-lookup"><span data-stu-id="39bfe-109">[out] A pointer to the address of an "ICorDebugValue" object representing the retrieved value that is stored in the specified memory location.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2396a-110">需求</span><span class="sxs-lookup"><span data-stu-id="2396a-110">Requirements</span></span>  
- <span data-ttu-id="2396a-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2396a-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="39bfe-110">需求</span><span class="sxs-lookup"><span data-stu-id="39bfe-110">Requirements</span></span>  
+ <span data-ttu-id="39bfe-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="39bfe-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2396a-112">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2396a-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="39bfe-112">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="39bfe-112">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2396a-113">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2396a-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="39bfe-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="39bfe-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="2396a-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2396a-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
+ **<span data-ttu-id="39bfe-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="39bfe-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="2396a-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2396a-115">See also</span></span>
-
+## <a name="see-also"></a><span data-ttu-id="39bfe-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39bfe-115">See also</span></span>

@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dd1038fdc8b22b99e1c8c7b753b46b9ce877355
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5f5d44b6497e971e6d1ed030c043b91b88c070b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496439"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218507"
 ---
-# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="c9418-102">ICLRDebuggingLibraryProvider::ProvideLibrary 方法</span><span class="sxs-lookup"><span data-stu-id="c9418-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
-<span data-ttu-id="c9418-103">取得程式庫提供者回呼介面，可讓 common language runtime (CLR) 版本特定偵錯程式庫尋找並載入需求。</span><span class="sxs-lookup"><span data-stu-id="c9418-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  
+# <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a><span data-ttu-id="04042-102">ICLRDebuggingLibraryProvider::ProvideLibrary 方法</span><span class="sxs-lookup"><span data-stu-id="04042-102">ICLRDebuggingLibraryProvider::ProvideLibrary Method</span></span>
+<span data-ttu-id="04042-103">取得程式庫提供者回呼介面，可讓 common language runtime (CLR) 版本特定偵錯程式庫尋找並載入需求。</span><span class="sxs-lookup"><span data-stu-id="04042-103">Gets a library provider callback interface that allows common language runtime (CLR) version-specific debugging libraries to be located and loaded on demand.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9418-104">語法</span><span class="sxs-lookup"><span data-stu-id="c9418-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="04042-104">語法</span><span class="sxs-lookup"><span data-stu-id="04042-104">Syntax</span></span>  
   
 ```  
 HRESULT ProvideLibrary(  
@@ -37,47 +37,48 @@ HRESULT ProvideLibrary(
      [out] HMODULE* hModule);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9418-105">參數</span><span class="sxs-lookup"><span data-stu-id="c9418-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="04042-105">參數</span><span class="sxs-lookup"><span data-stu-id="04042-105">Parameters</span></span>  
  `pwszFilename`  
- <span data-ttu-id="c9418-106">[in]所要求的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="c9418-106">[in] The name of the module being requested.</span></span>  
+ <span data-ttu-id="04042-106">[in]所要求的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="04042-106">[in] The name of the module being requested.</span></span>  
   
  `dwTimestamp`  
- <span data-ttu-id="c9418-107">[in]COFF 檔案標頭的 PE 檔中儲存的日期時間戳記。</span><span class="sxs-lookup"><span data-stu-id="c9418-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>  
+ <span data-ttu-id="04042-107">[in]COFF 檔案標頭的 PE 檔中儲存的日期時間戳記。</span><span class="sxs-lookup"><span data-stu-id="04042-107">[in] The date time stamp stored in the COFF file header of PE files.</span></span>  
   
  `pLibraryProvider`  
- <span data-ttu-id="c9418-108">[in]`SizeOfImage` COFF 選用的檔案標頭的 PE 檔中儲存的欄位。</span><span class="sxs-lookup"><span data-stu-id="c9418-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>  
+ <span data-ttu-id="04042-108">[in]`SizeOfImage` COFF 選用的檔案標頭的 PE 檔中儲存的欄位。</span><span class="sxs-lookup"><span data-stu-id="04042-108">[in] The `SizeOfImage` field stored in the COFF optional file header of PE files.</span></span>  
   
  `hModule`  
- <span data-ttu-id="c9418-109">[out]要求的模組控制代碼。</span><span class="sxs-lookup"><span data-stu-id="c9418-109">[out] The handle to the requested module.</span></span>  
+ <span data-ttu-id="04042-109">[out]要求的模組控制代碼。</span><span class="sxs-lookup"><span data-stu-id="04042-109">[out] The handle to the requested module.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c9418-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="c9418-110">Return Value</span></span>  
- <span data-ttu-id="c9418-111">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="c9418-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="04042-110">傳回值</span><span class="sxs-lookup"><span data-stu-id="04042-110">Return Value</span></span>  
+ <span data-ttu-id="04042-111">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="04042-111">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="c9418-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c9418-112">HRESULT</span></span>|<span data-ttu-id="c9418-113">描述</span><span class="sxs-lookup"><span data-stu-id="c9418-113">Description</span></span>|  
+|<span data-ttu-id="04042-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="04042-112">HRESULT</span></span>|<span data-ttu-id="04042-113">描述</span><span class="sxs-lookup"><span data-stu-id="04042-113">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="c9418-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="c9418-114">S_OK</span></span>|<span data-ttu-id="c9418-115">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="c9418-115">The method completed successfully.</span></span>|  
+|<span data-ttu-id="04042-114">S_OK</span><span class="sxs-lookup"><span data-stu-id="04042-114">S_OK</span></span>|<span data-ttu-id="04042-115">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="04042-115">The method completed successfully.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="c9418-116">例外狀況</span><span class="sxs-lookup"><span data-stu-id="c9418-116">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="04042-116">例外狀況</span><span class="sxs-lookup"><span data-stu-id="04042-116">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="c9418-117">備註</span><span class="sxs-lookup"><span data-stu-id="c9418-117">Remarks</span></span>  
- <span data-ttu-id="c9418-118">`ProvideLibrary` 可讓偵錯工具提供所需的偵錯特定的 CLR 檔案，例如 mscordbi.dll 和 mscordacwks.dll 的模組。</span><span class="sxs-lookup"><span data-stu-id="c9418-118">`ProvideLibrary` allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="c9418-119">模組控制代碼必須保持有效，直到呼叫[iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法表示它們可能會釋出，此時必須負責呼叫者釋放控制代碼。</span><span class="sxs-lookup"><span data-stu-id="c9418-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="04042-117">備註</span><span class="sxs-lookup"><span data-stu-id="04042-117">Remarks</span></span>  
+ `ProvideLibrary` <span data-ttu-id="04042-118">可讓偵錯工具提供所需的偵錯特定的 CLR 檔案，例如 mscordbi.dll 和 mscordacwks.dll 的模組。</span><span class="sxs-lookup"><span data-stu-id="04042-118">allows the debugger to provide modules that are needed for debugging specific CLR files such as mscordbi.dll and mscordacwks.dll.</span></span> <span data-ttu-id="04042-119">模組控制代碼必須保持有效，直到呼叫[iclrdebugging:: Canunloadnow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md)方法表示它們可能會釋出，此時必須負責呼叫者釋放控制代碼。</span><span class="sxs-lookup"><span data-stu-id="04042-119">The module handles have to remain valid until a call to the [ICLRDebugging::CanUnloadNow](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-canunloadnow-method.md) method indicates that they may be freed, at which point it is the caller’s responsibility to free the handles.</span></span>  
   
- <span data-ttu-id="c9418-120">偵錯工具可以使用任何可用的方式，來找出或購買的偵錯的模組。</span><span class="sxs-lookup"><span data-stu-id="c9418-120">The debugger may use any available means to locate or procure the debugging module.</span></span>  
+ <span data-ttu-id="04042-120">偵錯工具可以使用任何可用的方式，來找出或購買的偵錯的模組。</span><span class="sxs-lookup"><span data-stu-id="04042-120">The debugger may use any available means to locate or procure the debugging module.</span></span>  
   
 > [!IMPORTANT]
->  <span data-ttu-id="c9418-121">這項功能可讓 API 呼叫端，以提供包含可執行檔，並可能是惡意的程式碼的模組。</span><span class="sxs-lookup"><span data-stu-id="c9418-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="c9418-122">為了安全起見，呼叫端不應該使用`ProvideLibrary`散發不願意執行本身的任何程式碼。</span><span class="sxs-lookup"><span data-stu-id="c9418-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>  
+>  <span data-ttu-id="04042-121">這項功能可讓 API 呼叫端，以提供包含可執行檔，並可能是惡意的程式碼的模組。</span><span class="sxs-lookup"><span data-stu-id="04042-121">This feature allows the API caller to provide modules that contain executable, and possibly malicious, code.</span></span> <span data-ttu-id="04042-122">為了安全起見，呼叫端不應該使用`ProvideLibrary`散發不願意執行本身的任何程式碼。</span><span class="sxs-lookup"><span data-stu-id="04042-122">As a security precaution, the caller should not use `ProvideLibrary` to distribute any code that it is not willing to execute itself.</span></span>  
 >   
->  <span data-ttu-id="c9418-123">如果已發行的文件庫，例如 mscordbi.dll 或 mscordacwks.dll 中, 探索到嚴重的安全性問題可辨識不正確的版本檔案的修補填充碼。</span><span class="sxs-lookup"><span data-stu-id="c9418-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="c9418-124">填充碼然後發出要求的修補檔案的版本，並拒絕不正確的版本，如果提供以回應任何要求。</span><span class="sxs-lookup"><span data-stu-id="c9418-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="c9418-125">這可能是只有當使用者有新的版本，填充碼修正的項目。</span><span class="sxs-lookup"><span data-stu-id="c9418-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="c9418-126">未更新的版本仍易受攻擊。</span><span class="sxs-lookup"><span data-stu-id="c9418-126">Unpatched versions will remain vulnerable.</span></span>  
+>  <span data-ttu-id="04042-123">如果已發行的文件庫，例如 mscordbi.dll 或 mscordacwks.dll 中, 探索到嚴重的安全性問題可辨識不正確的版本檔案的修補填充碼。</span><span class="sxs-lookup"><span data-stu-id="04042-123">If a serious security issue is discovered in an already released library, such as mscordbi.dll or mscordacwks.dll, the shim can be patched to recognize the bad versions of the files.</span></span> <span data-ttu-id="04042-124">填充碼然後發出要求的修補檔案的版本，並拒絕不正確的版本，如果提供以回應任何要求。</span><span class="sxs-lookup"><span data-stu-id="04042-124">The shim can then issue requests for the patched versions of the files and reject the bad versions if they are provided in response to any request.</span></span> <span data-ttu-id="04042-125">這可能是只有當使用者有新的版本，填充碼修正的項目。</span><span class="sxs-lookup"><span data-stu-id="04042-125">This can occur only if the user has patched to a new version of the shim.</span></span> <span data-ttu-id="04042-126">未更新的版本仍易受攻擊。</span><span class="sxs-lookup"><span data-stu-id="04042-126">Unpatched versions will remain vulnerable.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9418-127">需求</span><span class="sxs-lookup"><span data-stu-id="c9418-127">Requirements</span></span>  
- <span data-ttu-id="c9418-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c9418-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="04042-127">需求</span><span class="sxs-lookup"><span data-stu-id="04042-127">Requirements</span></span>  
+ <span data-ttu-id="04042-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="04042-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9418-129">**標頭：** CorDebug.idl、 CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c9418-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="04042-129">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="04042-129">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="c9418-130">**程式庫：** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c9418-130">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="04042-130">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="04042-130">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="c9418-131">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c9418-131">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
+ **<span data-ttu-id="04042-131">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="04042-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
-## <a name="see-also"></a><span data-ttu-id="c9418-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9418-132">See also</span></span>
-- [<span data-ttu-id="c9418-133">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="c9418-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="c9418-134">偵錯</span><span class="sxs-lookup"><span data-stu-id="c9418-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+## <a name="see-also"></a><span data-ttu-id="04042-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="04042-132">See also</span></span>
+
+- [<span data-ttu-id="04042-133">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="04042-133">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="04042-134">偵錯</span><span class="sxs-lookup"><span data-stu-id="04042-134">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

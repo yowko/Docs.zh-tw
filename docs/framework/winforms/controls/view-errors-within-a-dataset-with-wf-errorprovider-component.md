@@ -1,5 +1,5 @@
 ---
-title: HOW TO：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤
+title: HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,22 +9,22 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 6202ac758d2cbf599c7e48a31ed2804608c70977
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 190b53a248a77f03dd5d8cb13cb59a439fa9960d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705378"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157621"
 ---
-# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="17cd7-102">HOW TO：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤</span><span class="sxs-lookup"><span data-stu-id="17cd7-102">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>
-<span data-ttu-id="17cd7-103">您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件來檢視資料集或其他資料來源內的資料行錯誤。</span><span class="sxs-lookup"><span data-stu-id="17cd7-103">You can use the Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to view column errors within a dataset or other data source.</span></span> <span data-ttu-id="17cd7-104">針對<xref:System.Windows.Forms.ErrorProvider>元件，以在表單上顯示資料的錯誤不一定要直接控制項相關聯。</span><span class="sxs-lookup"><span data-stu-id="17cd7-104">For an <xref:System.Windows.Forms.ErrorProvider> component to display data errors on a form, it does not have to be directly associated with a control.</span></span> <span data-ttu-id="17cd7-105">一旦它已繫結至資料來源，它可以顯示錯誤圖示旁邊繫結至相同的資料來源的任何控制項。</span><span class="sxs-lookup"><span data-stu-id="17cd7-105">Once it is bound to a data source, it can display an error icon next to any control that is bound to the same data source.</span></span>  
+# <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a><span data-ttu-id="0833e-102">HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤</span><span class="sxs-lookup"><span data-stu-id="0833e-102">How to: View Errors Within a DataSet with the Windows Forms ErrorProvider Component</span></span>
+<span data-ttu-id="0833e-103">您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件來檢視資料集或其他資料來源內的資料行錯誤。</span><span class="sxs-lookup"><span data-stu-id="0833e-103">You can use the Windows Forms <xref:System.Windows.Forms.ErrorProvider> component to view column errors within a dataset or other data source.</span></span> <span data-ttu-id="0833e-104">針對<xref:System.Windows.Forms.ErrorProvider>元件，以在表單上顯示資料的錯誤不一定要直接控制項相關聯。</span><span class="sxs-lookup"><span data-stu-id="0833e-104">For an <xref:System.Windows.Forms.ErrorProvider> component to display data errors on a form, it does not have to be directly associated with a control.</span></span> <span data-ttu-id="0833e-105">一旦它已繫結至資料來源，它可以顯示錯誤圖示旁邊繫結至相同的資料來源的任何控制項。</span><span class="sxs-lookup"><span data-stu-id="0833e-105">Once it is bound to a data source, it can display an error icon next to any control that is bound to the same data source.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="17cd7-106">如果您變更的錯誤提供者<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>並<xref:System.Windows.Forms.ErrorProvider.DataMember%2A>在執行階段的屬性，您應該使用<xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A>方法，以避免發生衝突。</span><span class="sxs-lookup"><span data-stu-id="17cd7-106">If you change the error provider's <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> and <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> properties at run time, you should use the <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> method to avoid conflicts.</span></span>  
+>  <span data-ttu-id="0833e-106">如果您變更的錯誤提供者<xref:System.Windows.Forms.ErrorProvider.DataSource%2A>並<xref:System.Windows.Forms.ErrorProvider.DataMember%2A>在執行階段的屬性，您應該使用<xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A>方法，以避免發生衝突。</span><span class="sxs-lookup"><span data-stu-id="0833e-106">If you change the error provider's <xref:System.Windows.Forms.ErrorProvider.DataSource%2A> and <xref:System.Windows.Forms.ErrorProvider.DataMember%2A> properties at run time, you should use the <xref:System.Windows.Forms.ErrorProvider.BindToDataAndErrors%2A> method to avoid conflicts.</span></span>  
   
-### <a name="to-display-data-errors"></a><span data-ttu-id="17cd7-107">若要顯示資料錯誤</span><span class="sxs-lookup"><span data-stu-id="17cd7-107">To display data errors</span></span>  
+### <a name="to-display-data-errors"></a><span data-ttu-id="0833e-107">若要顯示資料錯誤</span><span class="sxs-lookup"><span data-stu-id="0833e-107">To display data errors</span></span>  
   
-1.  <span data-ttu-id="17cd7-108">將元件的繫結至資料表中的特定資料行。</span><span class="sxs-lookup"><span data-stu-id="17cd7-108">Bind the component to a specific column within a data table.</span></span>  
+1.  <span data-ttu-id="0833e-108">將元件的繫結至資料表中的特定資料行。</span><span class="sxs-lookup"><span data-stu-id="0833e-108">Bind the component to a specific column within a data table.</span></span>  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "57705378"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  <span data-ttu-id="17cd7-109">設定<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性到表單。</span><span class="sxs-lookup"><span data-stu-id="17cd7-109">Set the <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> property to the form.</span></span>  
+2.  <span data-ttu-id="0833e-109">設定<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性到表單。</span><span class="sxs-lookup"><span data-stu-id="0833e-109">Set the <xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A> property to the form.</span></span>  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "57705378"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  <span data-ttu-id="17cd7-110">將目前記錄的位置，設定包含資料行發生錯誤的資料列。</span><span class="sxs-lookup"><span data-stu-id="17cd7-110">Set the position of the current record to a row that contains a column error.</span></span>  
+3.  <span data-ttu-id="0833e-110">將目前記錄的位置，設定包含資料行發生錯誤的資料列。</span><span class="sxs-lookup"><span data-stu-id="0833e-110">Set the position of the current record to a row that contains a column error.</span></span>  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  
@@ -62,6 +62,7 @@ ms.locfileid: "57705378"
     this.BindingContext [DataTable1].Position = 5;  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="17cd7-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17cd7-111">See also</span></span>
-- [<span data-ttu-id="17cd7-112">ErrorProvider 元件概觀</span><span class="sxs-lookup"><span data-stu-id="17cd7-112">ErrorProvider Component Overview</span></span>](errorprovider-component-overview-windows-forms.md)
-- [<span data-ttu-id="17cd7-113">如何：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示</span><span class="sxs-lookup"><span data-stu-id="17cd7-113">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](display-error-icons-for-form-validation-with-wf-errorprovider.md)
+## <a name="see-also"></a><span data-ttu-id="0833e-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0833e-111">See also</span></span>
+
+- [<span data-ttu-id="0833e-112">ErrorProvider 元件概觀</span><span class="sxs-lookup"><span data-stu-id="0833e-112">ErrorProvider Component Overview</span></span>](errorprovider-component-overview-windows-forms.md)
+- [<span data-ttu-id="0833e-113">HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示</span><span class="sxs-lookup"><span data-stu-id="0833e-113">How to: Display Error Icons for Form Validation with the Windows Forms ErrorProvider Component</span></span>](display-error-icons-for-form-validation-with-wf-errorprovider.md)
