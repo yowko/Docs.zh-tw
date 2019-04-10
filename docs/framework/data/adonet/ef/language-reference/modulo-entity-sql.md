@@ -2,41 +2,41 @@
 title: (模數) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
-ms.openlocfilehash: b08689b6f5b17950738c557e02f995fa85aeb35e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160481"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326732"
 ---
-# <a name="modulo-entity-sql"></a><span data-ttu-id="91fa9-102">(模數) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="91fa9-102">(Modulo) (Entity SQL)</span></span>
-<span data-ttu-id="91fa9-103">傳回某個運算式除以另一個運算式的餘數。</span><span class="sxs-lookup"><span data-stu-id="91fa9-103">Returns the remainder of one expression divided by another.</span></span>  
+# <a name="modulo-entity-sql"></a><span data-ttu-id="d3b6d-102">(模數) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="d3b6d-102">(Modulo) (Entity SQL)</span></span>
+<span data-ttu-id="d3b6d-103">傳回某個運算式除以另一個運算式的餘數。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-103">Returns the remainder of one expression divided by another.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="91fa9-104">語法</span><span class="sxs-lookup"><span data-stu-id="91fa9-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d3b6d-104">語法</span><span class="sxs-lookup"><span data-stu-id="d3b6d-104">Syntax</span></span>  
   
 ```  
 dividend % divisor  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="91fa9-105">引數</span><span class="sxs-lookup"><span data-stu-id="91fa9-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="d3b6d-105">引數</span><span class="sxs-lookup"><span data-stu-id="d3b6d-105">Arguments</span></span>  
  `dividend`  
- <span data-ttu-id="91fa9-106">要當做被除數的數值運算式。</span><span class="sxs-lookup"><span data-stu-id="91fa9-106">The numeric expression to divide.</span></span> `dividend` <span data-ttu-id="91fa9-107">為任何一個數值資料類型的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="91fa9-107">is any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="d3b6d-106">要當做被除數的數值運算式。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-106">The numeric expression to divide.</span></span> `dividend` <span data-ttu-id="d3b6d-107">為任何一個數值資料類型的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-107">is any valid expression of any one of the numeric data types.</span></span>  
   
  `divisor`  
- <span data-ttu-id="91fa9-108">要當做除數的數值運算式。</span><span class="sxs-lookup"><span data-stu-id="91fa9-108">The numeric expression to divide the dividend by.</span></span> `divisor` <span data-ttu-id="91fa9-109">為任何一個數值資料類型的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="91fa9-109">is any valid expression of any one of the numeric data types.</span></span>  
+ <span data-ttu-id="d3b6d-108">要當做除數的數值運算式。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-108">The numeric expression to divide the dividend by.</span></span> `divisor` <span data-ttu-id="d3b6d-109">為任何一個數值資料類型的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-109">is any valid expression of any one of the numeric data types.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="91fa9-110">結果型別</span><span class="sxs-lookup"><span data-stu-id="91fa9-110">Result Types</span></span>  
- <span data-ttu-id="91fa9-111">Edm.Int32</span><span class="sxs-lookup"><span data-stu-id="91fa9-111">Edm.Int32</span></span>  
+## <a name="result-types"></a><span data-ttu-id="d3b6d-110">結果型別</span><span class="sxs-lookup"><span data-stu-id="d3b6d-110">Result Types</span></span>  
+ <span data-ttu-id="d3b6d-111">Edm.Int32</span><span class="sxs-lookup"><span data-stu-id="d3b6d-111">Edm.Int32</span></span>  
   
-## <a name="example"></a><span data-ttu-id="91fa9-112">範例</span><span class="sxs-lookup"><span data-stu-id="91fa9-112">Example</span></span>  
- <span data-ttu-id="91fa9-113">下列 Entity SQL 查詢會使用 % 算術運算子來傳回某個運算式除以另一個運算式的餘數。</span><span class="sxs-lookup"><span data-stu-id="91fa9-113">The following Entity SQL query uses the % arithmetic operator to return the remainder of one expression divided by another.</span></span> <span data-ttu-id="91fa9-114">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="91fa9-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="91fa9-115">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="91fa9-115">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="d3b6d-112">範例</span><span class="sxs-lookup"><span data-stu-id="d3b6d-112">Example</span></span>  
+ <span data-ttu-id="d3b6d-113">下列 Entity SQL 查詢會使用 % 算術運算子來傳回某個運算式除以另一個運算式的餘數。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-113">The following Entity SQL query uses the % arithmetic operator to return the remainder of one expression divided by another.</span></span> <span data-ttu-id="d3b6d-114">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-114">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="d3b6d-115">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="d3b6d-115">To compile and run this query, follow these steps:</span></span>  
   
-1.  <span data-ttu-id="91fa9-116">請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="91fa9-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
+1. <span data-ttu-id="d3b6d-116">請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="d3b6d-116">Follow the procedure in [How to: Execute a Query that Returns StructuralType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md).</span></span>  
   
-2.  <span data-ttu-id="91fa9-117">將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="91fa9-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
+2. <span data-ttu-id="d3b6d-117">將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="d3b6d-117">Pass the following query as an argument to the `ExecuteStructuralTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#MODULO](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#modulo)]  
   
-## <a name="see-also"></a><span data-ttu-id="91fa9-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="91fa9-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d3b6d-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d3b6d-118">See also</span></span>
 
-- [<span data-ttu-id="91fa9-119">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="91fa9-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="d3b6d-119">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="d3b6d-119">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
