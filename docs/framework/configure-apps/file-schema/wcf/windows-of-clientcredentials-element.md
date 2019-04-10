@@ -1,13 +1,13 @@
 ---
-title: <windows> 項目的 <clientCredentials>
+title: <windows> <clientCredentials>項目
 ms.date: 03/30/2017
 ms.assetid: 793e41c2-31ea-4159-abbc-2123bf097233
-ms.openlocfilehash: fb55fb9901e4c08a3c5d7662fdb3bf12a71876bb
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b5e92745b9e39534d2a0bc35504c2dbc8346d2ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275154"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221016"
 ---
 # <a name="windows-of-clientcredentials-element"></a>\<windows > 的\<clientCredentials > 項目
 指定要用於代表用戶端的 Windows 認證的設定。  
@@ -46,6 +46,7 @@ ms.locfileid: "55275154"
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.WindowsClientElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -53,6 +54,6 @@ ms.locfileid: "55275154"
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

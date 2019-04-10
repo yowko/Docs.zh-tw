@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: 0ba4ca2589a61a9331308a816da6ddb5276adbc9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703656"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59149080"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>逐步解說：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
@@ -101,8 +101,9 @@ ms.locfileid: "57703656"
 -   實作元件支援非同步模式的類別。 如需詳細資訊，請參閱 <<c0> [ 實作事件架構非同步模式](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ComponentModel.BackgroundWorker>
 - <xref:System.ComponentModel.DoWorkEventArgs>
-- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
-- [如何：在背景執行作業](how-to-run-an-operation-in-the-background.md)
+- [HOW TO：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [HOW TO：在背景執行作業](how-to-run-an-operation-in-the-background.md)
 - [BackgroundWorker 元件](backgroundworker-component.md)

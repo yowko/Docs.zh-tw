@@ -1,18 +1,18 @@
 ---
 title: C# 的教學課程 - C# 指南
 description: 第一次接觸 C#？ 了解該語言的基本概念。
-ms.date: 08/10/2016
-ms.assetid: ebc727cd-8112-42e7-b59c-3c2873ad661c
-ms.openlocfilehash: 4a59d08cc60b94308fce06efc46f683779ff1468
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.date: 04/05/2019
+ms.custom: seoapril2019
+ms.openlocfilehash: d1373b65d6cb821871c68574662360c1431d79cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59152057"
 ---
 # <a name="a-tour-of-the-c-language"></a>C# 語言教學課程
 
-C# (發音為 "See Sharp") 是簡單、物件導向、型別安全的現代化程式設計語言。 C# 源自於是 C 系列語言，使用 C、C++、Java 和 JavaScript 的程式設計人員會立即感到熟悉。
+C# (發音為 "See Sharp") 是簡單、物件導向、型別安全的現代化程式設計語言。 C# 源自於是 C 系列語言，使用 C、C++、Java 和 JavaScript 的程式設計人員會立即感到熟悉。 此教學課程提供語言主要元件的概觀。 若要透過互動式範例探索語言，請嘗試我們的 [C# 簡介](../tutorials/intro-to-csharp/index.md)教學課程。
 
 C# 是物件導向的語言，但 C# 更進一步支援「元件導向」程式設計。 現代軟體設計逐漸依賴功能性上獨立與屬於自我描述套件的軟體元件。 這類元件的關鍵在於它們呈現含有屬性、方法和事件的程式設計模型；它們提供元件相關宣告資訊的屬性，且併入自己的文件。 C# 提供語言建構來直接支援這些概念，使 C# 成為對建立及使用軟體元件都非常自然的語言。
 
@@ -42,7 +42,6 @@ Hello, World
 
 > [!IMPORTANT]
 > `csc` 命令會針對完整架構進行編譯，而且可能不是在所有平台上都能取得。
-
 
 “Hello, World” 程式的開頭為 `using` 指示詞，會參考 `System` 命名空間。 命名空間提供組織 C# 程式和程式庫的階層式方法。 命名空間包含型別和其他命名空間，例如 `System` 命名空間包含數個型別 (如程式中參考的 `Console` 類別)，和數個其他命名空間 (如 `IO` 和 `Collections`)。 使用 `using` 指示詞參考指定的命名空間，就能以非限定的方式使用屬於該命名空間成員的型別。 因為 `using` 指示詞的緣故，該程式可以使用 `Console.WriteLine` 當作 `System.Console.WriteLine` 的縮寫。
 

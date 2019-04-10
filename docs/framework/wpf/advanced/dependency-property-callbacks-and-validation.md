@@ -11,18 +11,16 @@ helpviewer_keywords:
 - dependency properties [WPF], callbacks
 - validation of dependency properties [WPF]
 ms.assetid: 48db5fb2-da7f-49a6-8e81-3540e7b25825
-ms.openlocfilehash: ff7cbd995ba52f3cea712cb02b72f91d40422c33
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 95a40b4a357b1a601eced6c8e5214871b95fcbd2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219807"
 ---
 # <a name="dependency-property-callbacks-and-validation"></a>相依性屬性回呼和驗證
 本主題說明如何針對屬性相關的功能建立使用替代自訂實作的相依性屬性，例如：驗證判斷、每當屬性有效值變更時叫用的回撥，以及覆寫值決策的可能外在影響。 本主題也會討論適合使用這些技術在展開預設屬性系統行為的案例。  
-  
-  
-  
+
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。 如需相關內容，請參閱[自訂相依性屬性](custom-dependency-properties.md)和[相依性屬性中繼資料](dependency-property-metadata.md)。  
@@ -81,6 +79,7 @@ ms.locfileid: "57363926"
  屬性系統會將任何<xref:System.Windows.CoerceValueCallback>的傳回值<xref:System.Windows.DependencyProperty.UnsetValue>視為特殊案例。 表示屬性變更，導致這種特殊案例<xref:System.Windows.CoerceValueCallback>呼叫應該由屬性系統，遭到拒絕，且屬性系統應該改為回報屬性有任何先前的值。 這項機制很有用，可用來檢查過去以非同步方式初始化的屬性變更，現在是否對目前的物件狀態仍然有效，如果無效，則隱藏這些變更。 另一個可能的情況是，您可以看哪一個屬性值決定元件負責要回報的值，選擇性地隱藏值。 若要這樣做，您可以使用<xref:System.Windows.DependencyProperty>做為輸入傳遞回撥和屬性的識別項<xref:System.Windows.DependencyPropertyHelper.GetValueSource%2A>，然後再處理<xref:System.Windows.ValueSource>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [相依性屬性中繼資料](dependency-property-metadata.md)
 - [自訂相依性屬性](custom-dependency-properties.md)

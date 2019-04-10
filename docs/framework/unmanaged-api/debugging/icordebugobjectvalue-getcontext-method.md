@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7e9125b68412aab12585bf5dade3c718301dc7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c741e58eb0389211fc6d8784d2c5bc66efbb773
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54545497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59206053"
 ---
 # <a name="icordebugobjectvaluegetcontext-method"></a>ICorDebugObjectValue::GetContext 方法
 `GetContext` 未在此版本的.NET Framework 中實作。  
@@ -36,8 +36,6 @@ HRESULT GetContext (
 ```  
   
 ## <a name="requirements"></a>需求  
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
 ## <a name="see-also"></a>另請參閱
-
-

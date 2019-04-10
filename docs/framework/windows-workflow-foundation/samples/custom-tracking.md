@@ -2,12 +2,12 @@
 title: 自訂追蹤
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
-ms.openlocfilehash: a03c36c2f060651dd7b8b9e9aff103ad2a600a4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ca53d74f31059532118f3b5d96760a25ed72b3d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54523722"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161841"
 ---
 # <a name="custom-tracking"></a>自訂追蹤
 這個範例示範如何建立自訂追蹤參與者，以及將追蹤資料的內容寫入主控台中。 此外，範例還會示範如何發出其中填入使用者定義資料的 <xref:System.Activities.Tracking.CustomTrackingRecord> 物件。 主控台式追蹤參與者會使用程式碼中建立的追蹤設定檔物件，篩選工作流程所發出的 <xref:System.Activities.Tracking.TrackingRecord> 物件。
@@ -18,7 +18,7 @@ ms.locfileid: "54523722"
 |元件|描述|
 |---------------|-----------------|
 |追蹤執行階段|提供基礎結構以發出追蹤記錄。|
-|追蹤參與者|耗用追蹤記錄。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 隨附追蹤參與者，可將追蹤記錄當做 Windows 事件追蹤 (ETW) 事件撰寫。|
+|追蹤參與者|耗用追蹤記錄。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 隨附追蹤參與者寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件。|
 |追蹤設定檔|篩選機制，可讓追蹤參與者訂閱從工作流程執行個體發出之追蹤記錄的子集。|
 
  下表詳細說明工作流程執行階段發出的追蹤記錄。
@@ -149,4 +149,5 @@ context.Track(customRecord);
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\Tracking\CustomTracking`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

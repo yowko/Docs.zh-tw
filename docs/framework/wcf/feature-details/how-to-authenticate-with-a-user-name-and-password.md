@@ -1,17 +1,17 @@
 ---
-title: HOW TO：使用使用者名稱和密碼進行驗證
+title: HOW TO：使用使用者名稱與密碼來驗證
 ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: f6939659249ea40e97f340771017d0587ec6a08f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412262"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174131"
 ---
-# <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱和密碼進行驗證
+# <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
 
 本主題示範如何啟用 Windows Communication Foundation (WCF) 服務驗證用戶端的 Windows 網域使用者名稱和密碼。 這裡假設您有運作中的自我裝載 WCF 服務。 如需範例，建立基本自我裝載的 WCF 服務，請參閱[入門教學課程](../../../../docs/framework/wcf/getting-started-tutorial.md)。 本主題假設服務是在程式碼中進行設定。 如果您想要看到的設定類似服務，使用組態檔範例請參閱[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)  
   
@@ -83,6 +83,7 @@ ms.locfileid: "58412262"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.WSHttpBinding>
 - <xref:System.ServiceModel.WSHttpSecurity>
 - <xref:System.ServiceModel.SecurityMode>
@@ -91,6 +92,6 @@ ms.locfileid: "58412262"
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - <xref:System.ServiceModel.WSHttpSecurity.Mode%2A>
 - <xref:System.ServiceModel.HttpTransportSecurity.ClientCredentialType%2A>
-- [使用基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
+- [基本驗證的傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)
 - [分散式應用程式安全性](../../../../docs/framework/wcf/feature-details/distributed-application-security.md)
 - [\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)

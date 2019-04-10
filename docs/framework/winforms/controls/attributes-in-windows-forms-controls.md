@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [Windows Forms], control properties
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
-ms.openlocfilehash: 8e845df7eb83f01adb2086025cf47e7fdc896ba6
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724397"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213595"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
 .NET Framework 提供各種不同的屬性，供您套用至自訂控制項和元件的成員。 其中一些屬性會影響類別的執行階段行為，有些則會影響設計階段行為。  
@@ -61,7 +61,8 @@ ms.locfileid: "57724397"
 |<xref:System.ComponentModel.ToolboxItemFilterAttribute>|指定用於工具箱項目的篩選字串和篩選類型。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Attribute>
-- [如何：在 Windows Form 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
+- [HOW TO：在 Windows Forms 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
 - [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)

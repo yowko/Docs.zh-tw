@@ -1,17 +1,17 @@
 ---
-title: HOW TO：執行應用程式之間的拖放作業
+title: HOW TO：在應用程式之間執行拖放作業
 ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: 1e9556a69f3f5da4a47c5f5b1a6043a9a73dd8ff
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713432"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221752"
 ---
-# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>HOW TO：執行應用程式之間的拖放作業
+# <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>HOW TO：在應用程式之間執行拖放作業
 在應用程式之間執行拖放作業與在應用程式之內啟用這個動作並無不同，只要涉及的兩個應用程式根據 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> 和 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 屬性之間建立的「合約」表現即可。  
   
  在下列程序中，您將使用您建立的 Windows 架構應用程式以及隨附於 Windows 作業系統、用來執行應用程式間拖放作業的 WordPad 文書處理器。 WordPad 具有一組特定的允許拖曳和卸除文字的效果集；您將為其撰寫程式碼的 Windows 架構應用程式將會使用這些效果，如此便可能會成功完成拖放作業。  
@@ -39,6 +39,7 @@ ms.locfileid: "57713432"
      此外，您可以設定您的 <xref:System.Windows.Forms.TextBox> 控制項，以允許將文字字串拖放到 WordPad。 如需詳細資訊，請參閱[逐步解說：在 Windows Form 中執行拖放作業](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：將資料加入至剪貼簿](how-to-add-data-to-the-clipboard.md)
-- [如何：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
+
+- [HOW TO：將資料新增至剪貼簿](how-to-add-data-to-the-clipboard.md)
+- [HOW TO：從剪貼簿擷取資料](how-to-retrieve-data-from-the-clipboard.md)
 - [拖放作業和剪貼簿支援](drag-and-drop-operations-and-clipboard-support.md)

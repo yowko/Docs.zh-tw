@@ -2,12 +2,12 @@
 title: ADO.NET 技術選項和方針
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
-ms.openlocfilehash: b24e06fef52397a550717893876e1e1cf33f371f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664792"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212527"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET 技術選項和方針
 ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念實體資料模型進行程式設計，藉以減少所需程式碼和維護的工作量。 這個平台包含 ADO.NET Entity Framework 和相關的技術。  
@@ -34,12 +34,13 @@ ADO.NET 資料平台是一種多重發行策略，可讓開發人員針對概念
  Entity Framework 會提供一些命令列工具、精靈和設計工具來協助您建立 EDM 應用程式。 EntityDataSource 控制項支援以 EDM 為基礎的資料繫結案例。 EntityDataSource 控制項的程式設計介面與 Visual Studio 中的其他資料來源控制項很相似。 如需詳細資訊，請參閱 < [ADO.NET 實體資料模型工具](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))。  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
- LINQ to SQL 是物件關聯式對應 (OR/M) 實作，可讓您透過使用 .NET Framework 類別將 SQL Server 資料庫製成模型。 LINQ to SQL 可讓您使用 LINQ 來查詢資料庫，以及在其中更新、插入和刪除資料。 LINQ to SQL 支援交易、檢視表和預存程序，也是您將資料驗證及商務邏輯整合到資料模型時可用的簡易方法。 您可以使用物件關聯式設計工具 (O/R 設計工具)，將以資料庫之物件為基礎的實體類別和關聯製成模型。 如需詳細資訊，請參閱 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
+ LINQ to SQL 是物件關聯式對應 (OR/M) 實作，可讓您透過使用 .NET Framework 類別將 SQL Server 資料庫製成模型。 LINQ to SQL 可讓您使用 LINQ 來查詢資料庫，以及在其中更新、插入和刪除資料。 LINQ to SQL 支援異動、檢閱表和預存程序，也是您將資料驗證及商務邏輯整合到資料模型時可用的簡易方法。 您可以使用物件關聯式設計工具 (O/R 設計工具)，將以資料庫之物件為基礎的實體類別和關聯製成模型。 如需詳細資訊，請參閱 [Visual Studio 中的 LINQ to SQL 工具](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)。  
   
 ## <a name="wcf-data-services"></a>WCF 資料服務  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 會在 Web 或內部網路上部署資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 部署在網站上或內部網路上的資料服務。 系統會根據實體資料模型的規格，讓資料結構化成實體與關聯性。 部署在這個模型上的資料可由標準 HTTP 通訊協定定址。 如需詳細資訊，請參閱 [WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [ADO.NET 的新功能](../../../../docs/framework/data/adonet/whats-new.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

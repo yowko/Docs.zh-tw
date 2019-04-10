@@ -2,12 +2,12 @@
 title: <security> 的 <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
-ms.openlocfilehash: 06c4b537c336804c28492124e6a4fa8cc4ff3091
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266295"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170088"
 ---
 # <a name="security-of-netpeerbinding"></a>\<security> of \<netPeerBinding>
 定義的安全性設定[ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)、 包括的驗證類型使用，以及使用訊息傳輸的安全性。  
@@ -37,14 +37,14 @@ ms.locfileid: "55266295"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|模式|選擇項。 指定此繫結所設定之對等要使用的安全性類型。 預設值是 `Message`。 此屬性的型別為 <xref:System.ServiceModel.SecurityMode>。|  
+|模式|選擇性。 指定此繫結所設定之對等要使用的安全性類型。 預設值為 `Message`。 此屬性的型別為 <xref:System.ServiceModel.SecurityMode>。|  
   
 ## <a name="mode-attribute"></a>mode 屬性  
   
 |值|描述|  
 |-----------|-----------------|  
 |訊息|SOAP 安全性提供驗證、完整性和機密性。|  
-|無|停用安全性。|  
+|None|停用安全性。|  
 |Transport|系統會使用 HTTPS 來提供安全性。|  
 |TransportWithMessageCredential|HTTPS 提供驗證和機密性。 SOAP 訊息提供豐富的認證類型。|  
   
@@ -64,13 +64,14 @@ ms.locfileid: "55266295"
  安全性可以是訊息特定或傳輸特定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.PeerSecurityElement>
 - <xref:System.ServiceModel.NetPeerTcpBinding.Security%2A>
 - <xref:System.ServiceModel.Configuration.NetPeerTcpBindingElement.Security%2A>
 - <xref:System.ServiceModel.PeerSecuritySettings>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [選取認證類型](../../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

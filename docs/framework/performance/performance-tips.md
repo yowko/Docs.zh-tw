@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
-ms.openlocfilehash: c2969551bef279e6b13d2b08ff7f0e4711a80794
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219239"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216466"
 ---
 # <a name="net-performance-tips"></a>.NET 效能秘訣
 「效能」這個詞一般指的是程式的執行速度。 您有時可以遵循原始程式碼中的特定基本規則來增加執行速度。 在某些程式中，請務必仔細檢查程式碼，並使用程式碼剖析工具，確定以最快速度執行。 在其他程式中，您不需要執行這類最佳化，因為程式碼會以撰寫時的可接受速度快速執行。 本文列出效能可能會降低的一些常見區域和其改善祕訣，以及其他效能主題的連結。 如需效能規劃和測量的詳細資訊，請參閱[效能](../../../docs/framework/performance/index.md)。  
@@ -34,15 +34,16 @@ ms.locfileid: "56219239"
   
 -   [撰寫高效能 Managed 應用程式：入門](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (記憶體回收行程基本概念和效能提示)  
+-   [記憶體回收行程的基礎概念和效能提示](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297) (.NET 應用程式中的效能祕訣和訣竅)  
+-   [效能祕訣和訣竅，.NET 應用程式中](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Rico Mariani 的效能花絮)  
+-   [Rico mariani 's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
 -   [Vance Morrison 的部落格](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>另請參閱
+
 - [效能](../../../docs/framework/performance/index.md)
 - [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)
-- [C# 程式設計指南](../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../csharp/programming-guide/index.md)

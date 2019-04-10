@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 204c2dfbf28f95c1b8c2d2c1b757730e64a8e91d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b6fa729b131d12b2825a2def700fd918ce8acc40
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503699"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220171"
 ---
 # <a name="callid-structure"></a>CALL_ID 結構
 提供偵錯工具所呼叫之函數的相關資訊。 請參閱[INotifySink2](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)介面，如需詳細資訊。  
@@ -55,5 +55,6 @@ typedef struct tagCALL_ID
  **標頭：** ProtocolNotify2.idl  
   
 ## <a name="see-also"></a>另請參閱
+
 - [INotifySink2 介面](../../../../docs/framework/unmanaged-api/diagnostics/inotifysink2-interface.md)
 - [診斷符號存放區結構](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-structures.md)

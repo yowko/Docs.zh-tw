@@ -1,5 +1,5 @@
 ---
-title: <socket> 項目 (網路設定)
+title: <socket> 項目 （網路設定）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/settings/socket
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 3f599d6ada288db861f69fc64e6b84ee326b5830
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55256886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160156"
 ---
 # <a name="socket-element-network-settings"></a>\<通訊端 > 項目 （網路設定）
 指定通訊端作業是否使用完成通訊埠。  
@@ -49,9 +49,9 @@ ms.locfileid: "55256886"
   
 ### <a name="parent-elements"></a>父項目  
   
-|**目**|**描述**|  
+|**項目**|**描述**|  
 |-----------------|---------------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
  `alwaysUseCompletionPortsForAccept` 和 `alwaysUseCompletionPortsForConnect` 屬性用來指定與 <xref:System.Net.Sockets?displayProperty=nameWithType> 命名空間中的類別使用完成通訊埠有關的預設行為。 高效能伺服器應用程式的建議完成連接埠。  
@@ -104,6 +104,7 @@ ms.locfileid: "55256886"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net?displayProperty=nameWithType>
 - <xref:System.Net.Configuration.SocketElement?displayProperty=nameWithType>
 - <xref:System.Net.Sockets?displayProperty=nameWithType>

@@ -2,12 +2,12 @@
 title: 使用傳輸安全性來確保訊息的安全
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
-ms.openlocfilehash: 354b014825b3282e494cf75637fb2434acdb2dbe
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332337"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160884"
 ---
 # <a name="securing-messages-using-transport-security"></a>使用傳輸安全性來確保訊息的安全
 本節討論訊息佇列 (MSMQ) 的傳輸安全性，您可以使用這項傳輸安全性確保傳送至佇列之訊息的安全。  
@@ -97,6 +97,7 @@ ms.locfileid: "56332337"
  支援的演算法為 `MD5`、`SHA1`、`SHA256` 和 `SHA512`。 預設為 `SHA1`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [佇列概觀](queues-overview.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

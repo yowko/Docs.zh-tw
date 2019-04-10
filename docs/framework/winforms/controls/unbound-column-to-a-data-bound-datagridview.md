@@ -1,5 +1,5 @@
 ---
-title: HOW TO：未繫結的資料行加入資料繫結 Windows Form DataGridView 控制項
+title: HOW TO：將未繫結資料行新增至已繫結資料的 Windows Forms DataGridView 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], adding unbound columns
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
-ms.openlocfilehash: d7f96aa8d11cee9427a9e51f8e79fc55adc79355
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 40308f7e8cc12dcff5b7d4393645f6a9007cc2b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711991"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215829"
 ---
-# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>HOW TO：未繫結的資料行加入資料繫結 Windows Form DataGridView 控制項
+# <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>HOW TO：將未繫結資料行新增至已繫結資料的 Windows Forms DataGridView 控制項
 您在 <xref:System.Windows.Forms.DataGridView> 控制項中顯示的資料，通常來自於某種的資料來源，但您可能想要顯示不是來自資料來源之資料的資料行。 這種資料行稱為未繫結資料行。 未繫結資料行可以有許多形式。 通常，它們用來提供資料列詳細資料的存取權。  
   
  下列程式碼範例示範如何建立未繫結的資料行**詳細資料**實作主從式案例時，父資料表中的特定資料列與按鈕，以顯示子資料表。 若要回應按下按鈕後，實作 <xref:System.Windows.Forms.DataGridView.CellClick?displayProperty=nameWithType> 事件處理常式，其顯示包含子資料表的表單。  
@@ -32,10 +32,10 @@ ms.locfileid: "57711991"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
-- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)
+- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項的資料顯示模式](data-display-modes-in-the-windows-forms-datagridview-control.md)

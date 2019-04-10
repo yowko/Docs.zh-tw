@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ea62fc06-55fb-42e0-aa2b-8867bdf4b415
-ms.openlocfilehash: 69d85c9d9da6fe605c7cbeda16e801d32eb30d49
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: b8643a5321bbab692ebb704101c664105b4ab55c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162185"
 ---
 # <a name="messagesenderauthentication"></a>\<messageSenderAuthentication>
 為訊息寄件者使用的對等憑證指定驗證設定。  
@@ -54,6 +54,7 @@ ms.locfileid: "55758908"
  如果已選取訊息驗證，則必須設定這個項目。 針對輸出通道，每個訊息會使用簽章所提供的憑證[\<憑證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-element.md)。 所有訊息在傳遞至應用程式之前，都會使用這個項目的 `customCertificateValidatorType` 之屬性所指定的驗證程式來檢查訊息認證。 驗證器可接受或拒絕認證。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.X509PeerCertificateAuthenticationElement>
 - <xref:System.ServiceModel.Security.X509PeerCertificateAuthentication>
 - <xref:System.ServiceModel.Security.PeerCredential.MessageSenderAuthentication%2A>
@@ -62,4 +63,4 @@ ms.locfileid: "55758908"
 - [對等網路](../../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)
 - [對等通道訊息驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/aa967730(v=vs.90))
 - [對等通道自訂驗證](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751447(v=vs.90))
-- [保護對等通道應用程式的安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [確保對等通道應用程式安全](../../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)

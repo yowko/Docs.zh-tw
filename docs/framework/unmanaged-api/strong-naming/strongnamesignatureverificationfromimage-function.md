@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 844449bbce847883e5ba125d656adc4480f1fd23
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 54b1d35d1c40289bad465978750ba738acf28c90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57497063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212436"
 ---
 # <a name="strongnamesignatureverificationfromimage-function"></a>StrongNameSignatureVerificationFromImage 函式
 驗證已對應到記憶體的組件對關聯的公開金鑰而言有效。  
@@ -77,10 +77,11 @@ BOOLEAN StrongNameSignatureVerificationFromImage (
   
  **標頭：** StrongName.h  
   
- **程式庫：** 包含做為 mscoree.dll 中的資源  
+ **LIBRARY:** 包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [StrongNameSignatureVerificationFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamesignatureverificationfromimage-method.md)
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

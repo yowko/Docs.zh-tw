@@ -2,12 +2,12 @@
 title: 互通物件參考
 ms.date: 03/30/2017
 ms.assetid: cb8da4c8-08ca-4220-a16b-e04c8f527f1b
-ms.openlocfilehash: 5d2f7d93544cafab7cfe5d8dcbb8a4c5d5c5b576
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9cbbd5a34269a7c4a5c33d72487a02df21f2f0fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582414"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222701"
 ---
 # <a name="interoperable-object-references"></a>互通物件參考
 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer> 會以傳值方式序列化物件。 您可以使用 <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A> 屬性，指示資料合約序列化程式在序列化此類型物件時保留物件參考。  
@@ -95,6 +95,7 @@ public class SomeClass
  使用 `IsReference` 確保往返的訊息相符。 否則，當某類型自結構描述產生時，針對該類型傳回的 XML，不一定與結構描述原本預期的類型相容。 換句話說，即使 `id` 和 `ref` 屬性已序列化，原始結構描述仍可能禁止這些屬性 (或所有屬性) 出現在該 XML 中。 在 `IsReference` 已套用至資料成員的情況下，該成員就會在往返時繼續被視為「可參考」。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.CollectionDataContractAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute.IsReference%2A>

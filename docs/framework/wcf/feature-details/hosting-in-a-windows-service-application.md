@@ -2,12 +2,12 @@
 title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 52c62ef1be7dafc97c5cf958f30444e47f900e92
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621967"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216752"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
 Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以設定為啟動電腦，因此合適的裝載環境為 「 永遠開啟 」 應用程式時自動啟動 Windows 服務處理程序。 如需有關 Windows 服務應用程式的詳細資訊，請參閱 < [Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -37,9 +37,10 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
      裝載 WCF 服務的 Windows 服務應用程式部署與管理方式相同，因為不會進行 Windows 服務應用程式使用 WCF。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceProcess>
 - [逐步解說：在 元件設計工具中建立 Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [如何：將 WCF 服務裝載於 Managed 的 Windows 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [HOW TO：在受控的 Windows 服務中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows 服務主機](../../../../docs/framework/wcf/samples/windows-service-host.md)
 - [服務應用程式的程式設計架構](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

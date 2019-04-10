@@ -2,12 +2,12 @@
 title: 訊息相互關聯
 ms.date: 03/30/2017
 ms.assetid: 3f62babd-c991-421f-bcd8-391655c82a1f
-ms.openlocfilehash: f60d34ba7348b75f10be326319738fd1555d42df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 8db7793064cb94b21feee73353b9ab5e40290fb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54520655"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157753"
 ---
 # <a name="message-correlation"></a>訊息相互關聯
 此範例示範訊息佇列 (MSMQ) 應用程式如何將 MSMQ 訊息傳送至 Windows Communication Foundation (WCF) 服務，以及如何訊息可以相互關聯的要求/回應案例中的傳送者與接收者應用程式之間。 這個範例會使用 msmqIntegrationBinding 繫結。 本實例中的服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 K  
@@ -28,7 +28,7 @@ public interface IOrderProcessor
 }
 ```
 
- 服務作業會處理採購單，並在服務主控台視窗中顯示採購單內容及其狀態。 <xref:System.ServiceModel.OperationBehaviorAttribute> 將作業設定為先向佇列登記交易，然後在作業回傳時標記交易完成。 `PurchaseOrder` 包含必須由服務進行處理的採購單明細。
+ 服務作業會處理採購單，並在服務主控台視窗中顯示採購單內容及其狀態。 <xref:System.ServiceModel.OperationBehaviorAttribute> 將作業設定為先向佇列登記異動，然後在作業回傳時標記異動完成。 `PurchaseOrder` 包含必須由服務進行處理的採購單明細。
 
 ```csharp
 // Service class that implements the service contract.
@@ -313,5 +313,6 @@ static void DisplayOrderStatus()
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Binding\MSMQIntegration\MessageCorrelation`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [訊息佇列](https://go.microsoft.com/fwlink/?LinkId=94968)

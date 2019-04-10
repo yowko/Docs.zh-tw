@@ -2,12 +2,12 @@
 title: 型別用戶端
 ms.date: 03/30/2017
 ms.assetid: 62c40e8f-e9b4-4b1a-939a-93c37393d343
-ms.openlocfilehash: d56fe49c87ee31e68a389413d6c776826c54a0af
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f4a969b645637f1a8ed4562af0168576fb3b42a7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834084"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161417"
 ---
 # <a name="typed-client"></a>型別用戶端
 此範例示範如何從所產生的型別用戶端取得資訊[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 在這個範例中，用戶端是主控台應用程式 (.exe)，而服務則是由網際網路資訊服務 (IIS) 所裝載。  
@@ -66,4 +66,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\TypedClient`  
-  

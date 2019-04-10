@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 613ad742-3c11-401d-a6b3-893ceb8de4f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3908663a12f0e4edd8024c7f53f21b2e82bb8dbd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 876f0fe3c40cb6754b4ba714833dd160dc4de3a8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665392"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176952"
 ---
 # <a name="invalidgchandlecookie-mda"></a>invalidGCHandleCookie MDA
 當嘗試從無效的 <xref:System.IntPtr> Cookie 轉換成 <xref:System.Runtime.InteropServices.GCHandle> 時，就會啟動 `invalidGCHandleCookie` Managed 偵錯助理 (MDA)。  
@@ -32,7 +32,7 @@ ms.locfileid: "54665392"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  啟用此 MDA 時，偵錯工具即不再能夠追蹤回其物件的根，因為傳回的 Cookie 值和未啟用 MDA 時傳回的 Cookie 值不同。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  已報告無效的 <xref:System.IntPtr> Cookie 值。  
   
 ## <a name="configuration"></a>組態  
@@ -46,6 +46,7 @@ ms.locfileid: "54665392"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.GCHandle.FromIntPtr%2A>
 - <xref:System.Runtime.InteropServices.GCHandle>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

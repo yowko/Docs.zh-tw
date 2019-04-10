@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
-ms.openlocfilehash: 0fe97e381bea19458df50e1eb94f2027a6a95d4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e3835b0d699d58eb55e06ed3ade1328ec30b2ef
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721265"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213605"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>HOW TO：匯出自訂原則判斷提示
 原則判斷提示描述服務端點的功能與需求。 服務應用程式可使用服務中繼資料中的自訂原則判斷提示，與用戶端應用程式進行端點、繫結或合約自訂資訊的通訊。 若要匯出 WSDL 繫結程序端點、 作業或功能或您要溝通的需求而定的訊息主體以附加原則運算式中的判斷提示，您可以使用 Windows Communication Foundation (WCF)。  
@@ -50,6 +50,7 @@ ms.locfileid: "54721265"
      [!code-vb[s_imperative#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_imperative/vb/service.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [如何：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [HOW TO：匯入自訂原則判斷提示](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

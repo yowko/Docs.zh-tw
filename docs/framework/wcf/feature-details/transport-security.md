@@ -2,12 +2,12 @@
 title: 傳輸安全性
 ms.date: 03/30/2017
 ms.assetid: 86c94153-e48d-4539-b6cf-cd8060582e7f
-ms.openlocfilehash: f9cb184c1fae3088f6bc682e4e54c63f201ac8c7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 036c3db96a14b6e2be299380f495f54436b5c87d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218962"
 ---
 # <a name="transport-security"></a>傳輸安全性
 傳輸安全性的 Windows Communication Foundation (WCF) 取決於選取的繫結。 繫結所實作的傳輸將決定實際的安全性機制。 本章節中的主題說明所實作的機制及其選項。  
@@ -25,7 +25,7 @@ ms.locfileid: "54559927"
  [使用模擬搭配傳輸安全性](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)  
  說明傳輸安全性模式可能搭配的五種模擬層級。  
   
- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
+ [HOW TO：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)  
  逐步說明使用 X.509 憑證在電腦上設定連接埠以獲得 SSL (傳輸) 安全性的基本概念。  
   
 ## <a name="reference"></a>參考資料  
@@ -36,7 +36,8 @@ ms.locfileid: "54559927"
  <xref:System.ServiceModel.Security>  
   
 ## <a name="related-sections"></a>相關章節  
- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
+ [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 安全性程式設計](../../../../docs/framework/wcf/feature-details/programming-wcf-security.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: f3355969d0f12f0f3ed9b49bdb7efa6913c5e4c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222056"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>HOW TO：繫結兩個控制項的屬性
 此範例示範如何具現化控制項屬性繫結至另一個使用<xref:System.Windows.Data.Binding.ElementName%2A>屬性。  
@@ -28,5 +28,6 @@ ms.locfileid: "57372096"
  **附註**繫結目標屬性 (在此範例中，<xref:System.Windows.Controls.Panel.Background%2A>屬性) 必須是相依性屬性。 如需詳細資訊，請參閱 [資料繫結概觀](data-binding-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [指定繫結來源](how-to-specify-the-binding-source.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

@@ -2,12 +2,12 @@
 title: HTTPS 上的自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: 16aaa80d-3ffe-47c4-8b16-ec65c4d25f8d
-ms.openlocfilehash: eaf82e304dec2c8210cede64d4874670c8642156
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: e29910be074f8196094186f7d81787ac5ee829b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172428"
 ---
 # <a name="custom-binding-reliable-session-over-https"></a>HTTPS 上的自訂繫結可靠工作階段
 這個範例示範透過可靠工作階段來使用 SSL 傳輸安全性。 可靠工作階段會實作 WS-Reliable Messaging 通訊協定。 您可以經由在可靠工作階段上撰寫 WS-Security 來建立安全可靠工作階段。 但有時候，您可以改成選擇搭配 SSL 來使用 HTTP 傳輸安全性。  
@@ -135,4 +135,3 @@ Press <ENTER> to terminate client.
 4.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
 5.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
-  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f61efdecfb87ed598dd9675c0b8804259849e64c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 878941f7af71fa5e3de8e38c4a68a66cb964983d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706257"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223156"
 ---
 # <a name="icordebugtype2-interface"></a>ICorDebugType2 介面
 可擴充 ICorDebugType 介面來擷取基底型別或複雜的 （使用者定義） 型別的型別識別項。  
@@ -57,11 +57,12 @@ pType2->GetTypeID(&id);
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v462plus](../../../../includes/net-current-v462plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

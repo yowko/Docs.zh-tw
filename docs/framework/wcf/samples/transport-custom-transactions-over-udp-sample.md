@@ -1,15 +1,15 @@
 ---
-title: 傳輸:自訂跨 UDP 異動範例
+title: 傳輸：自訂跨 UDP 異動範例
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: 931cedfeb5604b00ec1cf3f4d2742e2dff2eacca
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 283e35b7701a6f95aa000cdd0acabaad81142bc8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552201"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174274"
 ---
-# <a name="transport-custom-transactions-over-udp-sample"></a>傳輸:自訂跨 UDP 異動範例
+# <a name="transport-custom-transactions-over-udp-sample"></a>傳輸：自訂跨 UDP 異動範例
 此樣本根據[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows Communication Foundation (WCF) 中的範例[傳輸擴充性](../../../../docs/framework/wcf/samples/transport-extensibility.md)。 它會延伸 UDP 傳輸範例以支援自訂異動流程，並示範 <xref:System.ServiceModel.Channels.TransactionMessageProperty> 屬性的使用方式。  
   
 ## <a name="code-changes-in-the-udp-transport-sample"></a>變更 UDP 傳輸範例中的程式碼  
@@ -46,13 +46,13 @@ byte[] txmsgBuffer =                TransactionMessageBuffer.WriteTransactionMes
 int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFlags.None, this.remoteEndPoint);  
 ```  
   
- `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是 Helper 方法，其中包含的新功能可以將目前交易的傳播權杖與訊息實體 (Entity) 合併，再將它放在緩衝區中。  
+ `TransactionMessageBuffer.WriteTransactionMessageBuffer` 是包含要合併具有訊息實體的目前交易的傳播權杖，並將它放到緩衝區的新功能的協助程式方法。  
   
- 針對自訂異動流程傳輸，用戶端實作必須知道何種服務作業需要異動流程，並將這項資訊傳遞至 WCF。 其中也必須有可以用來傳輸使用者異動至傳輸層的機制。 這個範例會使用 「 WCF 訊息偵測器 」 來取得這項資訊。 此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：  
+ 針對自訂異動流程傳輸，用戶端實作必須知道何種服務作業需要異動流程，並將這項資訊傳遞至 WCF。 其中也必須有可以用來傳輸使用者交易至傳輸層的機制。 這個範例會使用 「 WCF 訊息偵測器 」 來取得這項資訊。 此處實作的用戶端訊息偵測器稱為 `TransactionFlowInspector`，它會執行下列工作：  
   
--   判斷異動是否必須針對指定的訊息動作流動 (這會在 `IsTxFlowRequiredForThisOperation()` 中進行)。  
+-   判斷交易是否必須針對指定的訊息動作流動 (這會在 `IsTxFlowRequiredForThisOperation()` 中進行)。  
   
--   在需要流動交易時，使用 `TransactionFlowProperty` 將目前環境交易附加至訊息 (這會在 `BeforeSendRequest()` 中完成)。  
+-   在需要流動異動時，使用 `TransactionFlowProperty` 將目前環境異動附加至訊息 (這會在 `BeforeSendRequest()` 中完成)。  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  
@@ -117,7 +117,7 @@ public class TransactionFlowBehavior : IEndpointBehavior
 }  
 ```  
   
- 備妥前述機制之後，使用者程式碼會在呼叫服務作業之前建立 `TransactionScope`。 如果需要讓異動流動至服務作業，訊息偵測器可以確保異動傳遞給傳輸。  
+ 備妥前述機制之後，使用者程式碼會在呼叫服務作業之前建立 `TransactionScope`。 如果需要讓交易流動至服務作業，訊息偵測器可以確保交易傳遞給傳輸。  
   
 ```  
 CalculatorContractClient calculatorClient = new CalculatorContractClient("SampleProfileUdpBinding_ICalculatorContract");  
@@ -151,7 +151,7 @@ catch (Exception)
 }  
 ```  
   
- 從用戶端收到 UDP 封包時，服務會將它還原序列化，以擷取訊息及可能的異動。  
+ 從用戶端收到 UDP 封包時，服務會將它還原序列化，以擷取訊息及可能的交易。  
   
 ```  
 count = listenSocket.EndReceiveFrom(result, ref dummy);  
@@ -159,9 +159,9 @@ count = listenSocket.EndReceiveFrom(result, ref dummy);
 // read the transaction and message                       TransactionMessageBuffer.ReadTransactionMessageBuffer(buffer, count, out transaction, out msg);  
 ```  
   
- `TransactionMessageBuffer.ReadTransactionMessageBuffer()` 是 Helper 方法，它會反轉 `TransactionMessageBuffer.WriteTransactionMessageBuffer()` 所執行的序列化 (Serialization) 程序。  
+ `TransactionMessageBuffer.ReadTransactionMessageBuffer()` 是 helper 方法，它會反轉由序列化處理序`TransactionMessageBuffer.WriteTransactionMessageBuffer()`。  
   
- 如果有交易流入，就會將它附加至 `TransactionMessageProperty` 中的訊息。  
+ 如果有異動流入，就會將它附加至 `TransactionMessageProperty` 中的訊息。  
   
 ```  
 message = MessageEncoderFactory.Encoder.ReadMessage(msg, bufferManager);  
@@ -172,7 +172,7 @@ if (transaction != null)
 }  
 ```  
   
- 這可以確保發送器在分派階段收到交易，且在呼叫訊息所定址的服務作業時使用此交易。  
+ 這可以確保發送器在分派階段收到異動，且在呼叫訊息所定址的服務作業時使用此異動。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
@@ -219,7 +219,7 @@ if (transaction != null)
        adding 4 + 8  
     ```  
   
-6.  如果服務應用程式可以找到與用戶端傳送的交易識別碼 (在 `The client transaction has flowed to the service` 作業的 `clientTransactionId` 參數中傳送) 相符的服務交易識別碼，就會顯示`CalculatorService.Add()`訊息。 只有在用戶端異動已流至服務時，才能取得相符的異動識別項。  
+6.  如果服務應用程式可以找到與用戶端傳送的異動識別碼 (在 `The client transaction has flowed to the service` 作業的 `clientTransactionId` 參數中傳送) 相符的服務異動識別碼，就會顯示`CalculatorService.Add()`訊息。 只有在用戶端異動已流至服務時，才能取得相符的異動識別項。  
   
 7.  若要使用組態來對已發行的端點執行用戶端應用程式，請在服務應用程式視窗上按下 ENTER，然後再執行測試用戶端一次。 您應該會在服務上看見下列輸出。  
   
@@ -263,4 +263,5 @@ if (transaction != null)
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Transactions\TransactionMessagePropertyUDPTransport`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)

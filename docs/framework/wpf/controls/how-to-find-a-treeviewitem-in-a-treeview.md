@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TreeView control [WPF], finding a TreeViewItem
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
-ms.openlocfilehash: c90db5312d58cfba18910f299386e2884fb36ce6
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219040"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>HOW TO：在 TreeView 中尋找 TreeViewItem
 <xref:System.Windows.Controls.TreeView>控制項提供便利的方式，來顯示階層式資料。 如果您<xref:System.Windows.Controls.TreeView>繫結至資料來源，<xref:System.Windows.Controls.TreeView.SelectedItem%2A>屬性提供便利的方式，讓您快速擷取選取的資料物件。 通常最好使用基礎資料物件中，但有時候您可能需要以程式設計方式操作的資料包含<xref:System.Windows.Controls.TreeViewItem>。 例如，您可能需要以程式設計方式展開<xref:System.Windows.Controls.TreeViewItem>，或選取不同的項目中<xref:System.Windows.Controls.TreeView>。  
@@ -42,4 +42,5 @@ ms.locfileid: "57360213"
  [!code-xaml[TreeViewFindTVI#3](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewFindTVI/CSharp/MainWindow.xaml#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [改善 TreeView 的效能](how-to-improve-the-performance-of-a-treeview.md)

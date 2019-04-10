@@ -1,18 +1,18 @@
 ---
-title: HOW TO：設定自訂 Ws-metadata Exchange 繫結
+title: HOW TO：設定自訂 WS-Metadata Exchange 繫結
 ms.date: 03/30/2017
 helpviewer_keywords:
 - WS-Metadata Exchange [WCF]
 - WS-Metadata Exchange [WCF], configuring a custom binding
 ms.assetid: cdba4d73-da64-4805-bc56-9822becfd1e4
-ms.openlocfilehash: 4328306a6b67d2eac498ec48d1769bdf4bd5f81e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ab659e7e586b28f5c06b9b6ba12b313f318c6542
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642460"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210499"
 ---
-# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>HOW TO：設定自訂 Ws-metadata Exchange 繫結
+# <a name="how-to-configure-a-custom-ws-metadata-exchange-binding"></a>HOW TO：設定自訂 WS-Metadata Exchange 繫結
 本主題說明如何設定自訂的 WS-Metadata Exchange 繫結。 Windows Communication Foundation (WCF) 包含四個系統定義的中繼資料繫結，但您可以發行中繼資料使用任何您想要的繫結。 這個主題會告訴您如何使用 `wsHttpBinding` 發行中繼資料。 這個繫結會提供讓您以安全的方法公開中繼資料的選項。 這篇文章中的程式碼根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
   
 ### <a name="using-a-configuration-file"></a>使用組態檔  
@@ -114,6 +114,7 @@ ms.locfileid: "54642460"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料發行行為](../../../../docs/framework/wcf/samples/metadata-publishing-behavior.md)
 - [擷取中繼資料](../../../../docs/framework/wcf/samples/retrieve-metadata.md)
 - [中繼資料](../../../../docs/framework/wcf/feature-details/metadata.md)

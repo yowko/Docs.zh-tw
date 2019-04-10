@@ -9,12 +9,12 @@ helpviewer_keywords:
 - rendering support with Visual objects [WPF]
 - visual layer [WPF]
 ms.assetid: d82c89db-077f-4c3c-a4f8-310ebfbe0fe2
-ms.openlocfilehash: b49ba43a163db9e6e94b531aa99123dde9f09b4e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 599ef73e2e8c772559badb3a562a12f8311e9c60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376854"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172064"
 ---
 # <a name="visual-layer-programming"></a>視覺分層程式設計
 <xref:System.Windows.Media.Visual>物件是核心[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]物件，其主要角色是提供轉譯支援。 使用者介面控制項，例如<xref:System.Windows.Controls.Button>並<xref:System.Windows.Controls.TextBox>，衍生自<xref:System.Windows.Media.Visual>類別，並使用它來保存其轉譯資料。  
@@ -23,9 +23,10 @@ ms.locfileid: "57376854"
  [視覺分層中的點擊測試](hit-testing-in-the-visual-layer.md)  
  [使用 DrawingVisual 物件](using-drawingvisual-objects.md)  
  [教學課程：在 Win32 應用程式中裝載視覺物件](tutorial-hosting-visual-objects-in-a-win32-application.md)  
- [HOW-TO 主題](visual-layer-programming-how-to-topics.md)  
+ [HOW TO 主題](visual-layer-programming-how-to-topics.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Visual>
 - <xref:System.Windows.Media.VisualTreeHelper>
 - <xref:System.Windows.Media.DrawingVisual>

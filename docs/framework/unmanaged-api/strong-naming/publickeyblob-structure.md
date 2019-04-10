@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a5e18c0cf65ee8f336b74a2d8e44fcf5af0cfef
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: 1a361e04b6f8f39ec0083471d8cb47d5a29376c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214815"
 ---
 # <a name="publickeyblob-structure"></a>PublicKeyBlob 結構
 以二進位格式，表示公用/私密金鑰組的公開金鑰。  
@@ -54,10 +54,11 @@ typedef struct {
   
  **標頭：** StrongName.h  
   
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [StrongNameGetPublicKey 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamegetpublickey-function.md)
 - [StrongNameSignatureGeneration 函式](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignaturegeneration-function.md)

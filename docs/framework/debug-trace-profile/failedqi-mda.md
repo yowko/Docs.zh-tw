@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9a3338595e8b541fcda93b091eeddf17919a483c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614389"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217623"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 當執行階段代表執行階段可呼叫包裝函式 (RCW)，在 COM 介面指標上呼叫 `QueryInterface`，而 `QueryInterface` 呼叫失敗時，就會啟動 `failedQI` Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  在 RCW 上轉換失敗，或從 RCW 呼叫 COM 時意外失敗。  
   
 ## <a name="cause"></a>原因  
@@ -37,7 +37,7 @@ ms.locfileid: "54614389"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  如果 `QueryInterface` 呼叫失敗，內容就會切換，然後重新嘗試 `QueryInterface` 呼叫，以查看是否有不正確的內容出錯。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  介面的 Managed 名稱、介面的 GUID，以及失敗的 HRESULT。  
   
 ## <a name="configuration"></a>組態  
@@ -51,6 +51,7 @@ ms.locfileid: "54614389"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

@@ -17,15 +17,16 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 56273146670dc2f4efde06a2f96e755f6fb86d99
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: af2512800b7903d3142a48ae17d22a2e19683e5d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712748"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222233"
 ---
 # <a name="icordebugeditandcontinueerrorinfogetstring-method"></a>ICorDebugEditAndContinueErrorInfo::GetString 方法
-`GetString` 已經過時。 請勿呼叫這個方法。  
+`GetString` 已過時。 請勿呼叫這個方法。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

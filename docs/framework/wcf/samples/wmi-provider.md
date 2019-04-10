@@ -2,12 +2,12 @@
 title: WMI 提供者
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
-ms.openlocfilehash: 938eb4fd376c699ddbfedf80f05ef62f81232ca2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2c20fd6804761dd472a8accd25ab98f662b0292a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497179"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162289"
 ---
 # <a name="wmi-provider"></a>WMI 提供者
 此範例示範如何從在執行階段的 Windows Communication Foundation (WCF) 服務收集資料，使用 WCF 內建的 Windows Management Instrumentation (WMI) 提供者。 此外，這個範例還會示範如何將使用者定義的 WMI 物件新增至服務。 此範例會啟動的 WMI 提供者[快速入門](../../../../docs/framework/wcf/samples/getting-started-sample.md)，並示範如何收集資料，從`ICalculator`服務在執行階段。  
@@ -32,7 +32,7 @@ ms.locfileid: "54497179"
  新增 WMI 物件至服務，可以將使用者定義的資訊連同內建 WMI 提供者的資訊一併公開。 只要使用 Installutil.exe 應用程式將服務的結構描述發行至 WMI，就能達成這個目的。 有關完成這項作業的指示以及詳細資料，可在本主題結尾的安裝指示中找到。  
   
 ## <a name="accessing-wmi-information"></a>存取 WMI 資訊  
- 您可以使用各種不同方式來存取 WMI 資料。 Microsoft 提供了 WMI Api 指令碼、 Visual Basic 應用程式、 c + + 應用程式，而[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)](https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi)。  
+ 您可以使用各種不同方式來存取 WMI 資料。 Microsoft 提供了 WMI Api 針對指令碼，Visual Basic 應用程式，C++應用程式，而[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)](https://docs.microsoft.com/windows/desktop/wmisdk/using-wmi)。  
   
  這個範例會使用兩個 Java 指令碼：一個是用來列舉電腦上執行的服務及其部分屬性，而第二個則是用來檢視使用者定義的 WMI 資料。 指令碼會開啟 WMI 提供者的連線、剖析資料，以及顯示收集到的資料。  
   
@@ -144,4 +144,5 @@ cscript EnumerateCustomObjects.js
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Management\WMIProvider`  
   
 ## <a name="see-also"></a>另請參閱
+
 - [AppFabric 監控範例](https://go.microsoft.com/fwlink/?LinkId=193959)

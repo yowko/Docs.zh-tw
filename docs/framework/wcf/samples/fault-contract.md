@@ -2,12 +2,12 @@
 title: 錯誤合約
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
-ms.openlocfilehash: 64d02ae6b45cd0e538509d2c7186ac63b9844c14
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 0729bae4e8630687a0df10ed4be49261225cd663
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218260"
 ---
 # <a name="fault-contract"></a>錯誤合約
 錯誤合約範例會示範如何在服務與用戶端之間傳達錯誤資訊。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，具有一些額外的程式碼新增至服務，以將內部例外狀況轉換為錯誤。 用戶端會嘗試執行除數為零，以便強制在服務上造成錯誤狀況。  
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- 根據預設，未預期之例外狀況的詳細資訊並不會傳送到用戶端，以避免服務實作的詳細資訊逸出服務的安全界限。 `FaultContract` 提供方法說明合約中的錯誤，並將某些例外狀況類型標記為適合傳輸至用戶端。 `FaultException<T>` 會提供將錯誤傳送至取用者的執行階段機制。  
+ 根據預設，未預期之例外狀況的詳細資訊並不會傳送到用戶端，以避免服務實作的詳細資訊逸出服務的安全界限。 `FaultContract` 提供描述合約中的錯誤，並將標示為適合傳輸至用戶端的例外狀況的特定類型的方式。 `FaultException<T>` 提供將錯誤傳送給取用者的執行階段機制。  
   
  但是，在偵錯時檢視服務失敗的內部詳細資訊是很有用的。 若要關閉之前描述的安全行為，您可以指示在伺服器上的每個未處理例外狀況的詳細資訊是否應該要包含在傳送至用戶端的錯誤中。 這是透過將 <xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> 設定為 `true` 所完成的。 您可以透過程式碼或組態來設定它，如下列範例所示。  
   
@@ -135,4 +135,3 @@ catch (FaultException<MathFault> e)
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Contract\Service\Faults`  
-  

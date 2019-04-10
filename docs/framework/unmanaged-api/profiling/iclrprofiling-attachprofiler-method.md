@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7fcbc75d17f0c154671d5997d7e6cbb59ef8440e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0e3898fb836409df3b685d985d0d72ab63230a93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468997"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174170"
 ---
 # <a name="iclrprofilingattachprofiler-method"></a>ICLRProfiling::AttachProfiler 方法
 將指定的程式碼剖析工具附加至指定的處理序。  
@@ -47,15 +47,13 @@ HRESULT AttachProfiler(
  [in] 讓 `AttachProfiler` 完成的持續時間，以毫秒為單位。 觸發處理序應該傳遞已知足以讓特定程式碼剖析工具完成初始化的逾時值。  
   
  `pClsidProfiler`  
- [in] 要載入程式碼剖析工具的 CLSID 指標。 
-  `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。  
+ [in] 要載入程式碼剖析工具的 CLSID 指標。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。  
   
  `wszProfilerPath`  
  [in] 要載入之程式碼剖析工具 DLL 檔的完整路徑。 此字串應該包含不超過 260 個字元，包括 null 結束字元。 如果 `wszProfilerPath` 是 null 或空字串，Common Language Runtime (CLR) 會嘗試在登錄中尋找 `pClsidProfiler` 指向的 CLSID，以尋找程式碼剖析工具 DLL 檔的位置。  
   
  `pvClientData`  
- [in]要傳遞至分析工具的資料指標[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 
-  `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。 如果 `pvClientData` 為 null，則 `cbClientData` 必須是 0 (零)。  
+ [in]要傳遞至分析工具的資料指標[ICorProfilerCallback3::InitializeForAttach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)方法。 `AttachProfiler` 傳回之後，觸發處理序可以重複使用此記憶體。 如果 `pvClientData` 為 null，則 `cbClientData` 必須是 0 (零)。  
   
  `cbClientData`  
  [in] `pvClientData` 指向的資料大小 (以位元組為單位)。  
@@ -88,11 +86,12 @@ HRESULT AttachProfiler(
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorProfilerCallback 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
 - [ICorProfilerInfo3 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-interface.md)
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)

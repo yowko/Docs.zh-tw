@@ -17,18 +17,16 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 34bb8c1cde71f6280ae2924a82ddb2efb0efbdf2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8a21b5e69e8fb3f9781d862bd62b0db92073b1dc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378825"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172103"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>將路由事件標記為已處理以及類別處理
 路由事件的處理常式可以將事件資料內的事件標記為已處理。 處理事件時，即可有效地縮短路由。 類別處理是一種程式設計概念，此概念與路由事件相輔相成。 類別處理常式有機會在類別層級上使用處理常式來處理特定的路由事件 (此處理常式會優先叫用，之後才輪到在該類別任何執行個體上的任何執行個體處理常式)。  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題將詳細說明[路由事件概觀](routed-events-overview.md)中介紹的概念。  
@@ -99,6 +97,7 @@ ms.locfileid: "57378825"
  第二個技術只適用於輸入事件，其中路由事件的通道和事件反昇版本是成對的。 針對這些路由事件，您可以改為將處理常式新增至預覽/通道對等路由事件。 假設您在應用程式項目樹狀結構中的某些祖系項目層級附加預覽處理常式，該路由事件會從根目錄開始通過路由，因此按鈕類別處理程式碼不會攔截此事件。 如果您使用這種方式，在將任何預覽事件標示為已處理時，請務必小心。 例如，假設具有<xref:System.Windows.UIElement.PreviewMouseLeftButtonDown>處理的根項目，如果您將事件標記為<xref:System.Windows.RoutedEventArgs.Handled%2A>在處理常式的實作中，您實際上會隱藏<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。 這通常是不合理的行為。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.EventManager>
 - [預覽事件](preview-events.md)
 - [建立自訂路由事件](how-to-create-a-custom-routed-event.md)

@@ -2,12 +2,12 @@
 title: 大型資料與資料流
 ms.date: 03/30/2017
 ms.assetid: ab2851f5-966b-4549-80ab-c94c5c0502d2
-ms.openlocfilehash: 8fa49f9da7caf9146f73017ec051381a8e9ef9e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 25ecc1db8218dfb49f591998140d86f551c5a0d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176328"
 ---
 # <a name="large-data-and-streaming"></a>大型資料與資料流
 Windows Communication Foundation (WCF) 是一種以 XML 為基礎的通訊基礎結構。 因為 XML 資料通常編碼中定義的標準文字格式[XML 1.0 規格](https://go.microsoft.com/fwlink/?LinkId=94838)、 已連線系統開發人員和架構設計人員通常會關心傳送訊息的網路使用量 （或大小） 之間網路和以文字為基礎的編碼 XML 帶來的特殊挑戰的二進位資料的傳輸效率。  
@@ -173,7 +173,7 @@ class MyData
      …  
     <bindings>  
       <basicHttpBinding>  
-        <binding name="ExampleBinding" transferMode="Streaming"/>  
+        <binding name="ExampleBinding" transferMode="Streamed"/>  
       </basicHttpBinding>  
     </bindings>  
      …  
@@ -239,4 +239,5 @@ public class UploadStreamMessage
 >  使用緩衝或資料流傳輸是由端點處決定。 如果是 HTTP 傳輸，傳輸模式不會在連線上傳播，或是在 Proxy 伺服器與其他媒介之間進行傳播。 設定傳輸模式不會反映在服務介面的描述中。 之後產生 WCF 用戶端至服務，您必須編輯組態檔來設定模式，搭配資料流傳輸使用的服務。 如果是 TCP 和具名管道傳輸，會傳播傳輸模式做為原則判斷提示。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+
+- [HOW TO：啟用資料流](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)

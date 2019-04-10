@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [WPF], DocumentViewer
 - DocumentViewer control [WPF]
 ms.assetid: c21eb322-d6b3-474b-ab05-94527bd1b0fa
-ms.openlocfilehash: dd87b81dbfc412168566f5b58bb2040c0e05b080
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cc9031a19cb49736cf039d53d02ff2bc571ff978
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365421"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59167852"
 ---
 # <a name="documentviewer"></a>DocumentViewer
 <xref:System.Windows.Controls.DocumentViewer>控制項用來檢視<xref:System.Windows.Documents.FixedDocument>內容 (例如[!INCLUDE[TLA#tla_metro](../../../../includes/tlasharptla-metro-md.md)]文件) 的編頁的格式。  
@@ -23,6 +23,7 @@ ms.locfileid: "57365421"
  <xref:System.Windows.Documents.FixedDocument>  
   
 ## <a name="see-also"></a>另請參閱
+
 - [文件](../advanced/documents.md)
 - [文件序列化與儲存](../advanced/document-serialization-and-storage.md)
 - [列印概觀](../advanced/printing-overview.md)

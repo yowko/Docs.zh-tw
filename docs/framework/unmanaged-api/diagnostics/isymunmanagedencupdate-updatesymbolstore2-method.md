@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5a4bcc4e6994f06fabf69e5548ad6922343b7dd5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 82f2f335299cfd3041dcecc7d176cb77ce54ae96
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479788"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172129"
 ---
 # <a name="isymunmanagedencupdateupdatesymbolstore2-method"></a>ISymUnmanagedENCUpdate::UpdateSymbolStore2 方法
 讓編譯器將省略尚未經過修改的程式資料庫 (PDB)，從資料流的函式，提供行資訊符合需求。 使用舊的 PDB 行資訊和函式中的所有行的一個差異，您可以判斷正確的行資訊。  
@@ -53,4 +53,5 @@ HRESULT UpdateSymbolStore2(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedENCUpdate 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedencupdate-interface.md)

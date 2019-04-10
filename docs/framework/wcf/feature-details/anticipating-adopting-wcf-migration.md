@@ -1,15 +1,15 @@
 ---
-title: 預計採用 Windows Communication Foundation:簡化未來移轉
+title: 預計採用 Windows Communication Foundation：簡化未來移轉
 ms.date: 03/30/2017
 ms.assetid: f49664d9-e9e0-425c-a259-93f0a569d01b
-ms.openlocfilehash: 41deb6cb982e65b2af054840cdcb84e3d1db3451
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4492626c2cb0958f8aa79fa2b511d9aa9e90b16a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695253"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176380"
 ---
-# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>預計採用 Windows Communication Foundation:簡化未來移轉
+# <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-migration"></a>預計採用 Windows Communication Foundation：簡化未來移轉
 若要確保更容易未來新 ASP.NET 應用程式移轉至 WCF，請遵循上述建議，以及下列建議。  
   
 ## <a name="protocols"></a>通訊協定  
@@ -125,4 +125,5 @@ throw new SoapException(
 -   考慮使用 ASP.NET 2.0 角色提供者，來授權存取服務資源。  
   
 ## <a name="see-also"></a>另請參閱
-- [預計採用 Windows Communication Foundation:簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+
+- [預計採用 Windows Communication Foundation：簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)

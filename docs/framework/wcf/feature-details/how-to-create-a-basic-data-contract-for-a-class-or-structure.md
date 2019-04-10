@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataContractAttribute class
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
-ms.openlocfilehash: 29105b7f3177403aacf5f8e628f2dceda4e26354
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: b46273c468891aa2b18c04adc1ee035c98255ded
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220509"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>HOW TO：建立類別或結構的基本資料合約
 本主題將示範使用類別或結構來建立資料合約的基本步驟。 如需有關資料合約和其使用方式的詳細資訊，請參閱[Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -37,6 +37,7 @@ ms.locfileid: "54747865"
  [!code-vb[DataContractAttribute#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/datacontractattribute/vb/overview.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [使用資料合約](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)

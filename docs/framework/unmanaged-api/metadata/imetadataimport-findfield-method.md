@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a6f2e428366d2fe96313879ef1256d7b86ddd29
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88cd08b4290739808079bc8ecb713a5c5ea96584
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172558"
 ---
 # <a name="imetadataimportfindfield-method"></a>IMetaDataImport::FindField 方法
 取得指標 FieldDef 語彙基元的欄位，以指定<xref:System.Type>且具有指定的名稱和中繼資料簽章。  
@@ -67,10 +67,11 @@ HRESULT FindField (
   
  **標頭：** Cor.h  
   
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
 - [IMetaDataImport2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

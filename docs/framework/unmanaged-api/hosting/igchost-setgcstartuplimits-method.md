@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6962b52925ab5b70a8b34c6d3720bb45c85b24c0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 365261883f0b81884bb7cf70614628c05f9067c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57473886"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221003"
 ---
 # <a name="igchostsetgcstartuplimits-method"></a>IGCHost::SetGCStartupLimits 方法
 層代 0 設定區段的大小和大小上限。  
@@ -54,9 +54,10 @@ HRESULT SetGCStartupLimits (
   
  **標頭：** GCHost.idl GCHost.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IGCHost 介面](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

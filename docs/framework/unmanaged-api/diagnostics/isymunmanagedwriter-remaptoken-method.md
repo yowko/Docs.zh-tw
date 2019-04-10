@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ec4a486b9dfb72c05a9e614fca22626dd84a83f7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 979d14b4c404c3bf12c427bd5b8b1d4997805e7b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57468453"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160676"
 ---
 # <a name="isymunmanagedwriterremaptoken-method"></a>ISymUnmanagedWriter::RemapToken 方法
 通知的符號寫入器中繼資料語彙基元已重新對應，因為在發出中繼資料。 如果符號寫入器已存放在符號存放區中舊的語彙基元，則它必須的更新為新的值，或者使用儲存的權杖必須儲存對應的符號讀取器在讀取階段期間重新對應的對應。  
@@ -49,4 +49,5 @@ HRESULT RemapToken(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedWriter 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)

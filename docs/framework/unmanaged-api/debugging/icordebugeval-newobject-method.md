@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 97217421d30ee4065aa1b2500e9486405e438902
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 9c2d6a66eca080b480b508afea36c33b3e0aeec0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57471364"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178226"
 ---
 # <a name="icordebugevalnewobject-method"></a>ICorDebugEval::NewObject 方法
 配置新的物件執行個體，並呼叫指定的建構函式方法。  
@@ -52,11 +52,12 @@ HRESULT NewObject (
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
  **.NET framework 版本：** 1.1, 1.0  
   
 ## <a name="see-also"></a>另請參閱
+
 - [NewParameterizedObject 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugeval2-newparameterizedobject-method.md)

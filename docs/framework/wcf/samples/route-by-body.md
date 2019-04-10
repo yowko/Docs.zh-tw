@@ -2,12 +2,12 @@
 title: 依本文路由
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
-ms.openlocfilehash: fe201161ebed66b8444c23229a6907be329d3641
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 3f6be962db2d07bef3a7adc714e9f4e72d621d37
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172311"
 ---
 # <a name="route-by-body"></a>依本文路由
 這個範例會示範如何實作使用任何 SOAP 動作接受訊息物件的服務。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。 此服務會實作接受 `Calculate` 要求參數並傳回 <xref:System.ServiceModel.Channels.Message> 回應的單一 <xref:System.ServiceModel.Channels.Message> 作業。  
@@ -35,7 +35,7 @@ ms.locfileid: "58835124"
     }  
 ```  
   
- 如果是合約，服務需要自訂分派行為 `DispatchByBodyBehavior`，以允許在作業之間分派訊息。 這個分派行為會初始化`DispatchByBodyElementOperationSelector`自訂作業選取器依個別包裝元素之 QName 鍵入的作業名稱的資料表。 `DispatchByBodyElementOperationSelector` 會查看本文之第一個子系的開始標記，並使用先前提到的資料表來選取作業。  
+ 如果是合約，服務需要自訂分派行為 `DispatchByBodyBehavior`，以允許在作業之間分派訊息。 這個分派行為會初始化`DispatchByBodyElementOperationSelector`自訂作業選取器依個別包裝元素之 QName 鍵入的作業名稱的資料表。 `DispatchByBodyElementOperationSelector` 會查看本文的第一個子系的開始標記，並選取使用先前提到的資料表作業。  
   
  用戶端會使用從 WSDL 匯出服務會使用自動產生的 proxy [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
@@ -72,4 +72,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Interop\RouteByBody`  
-  

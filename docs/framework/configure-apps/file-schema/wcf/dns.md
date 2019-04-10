@@ -2,12 +2,12 @@
 title: <dns>
 ms.date: 03/30/2017
 ms.assetid: 81819dae-4825-43b7-bccd-f16d2d3d2f06
-ms.openlocfilehash: eb5459625cf58feeef5ba29d76e74691a4f87cc8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ce12d0a82c8a443994559ed772496897f359b4e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364693"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166669"
 ---
 # <a name="dns"></a>\<dns>
 指定伺服器的預期身分識別。 如果伺服器的憑證包含具有相同值的 DNS，這個身分識別對於 X509 憑證驗證模式是有效的。 如果 SPN 具有相同的值，則對於 Windows 驗證模式也是有效的。  
@@ -51,6 +51,7 @@ ms.locfileid: "57364693"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.IdentityElement>
 - <xref:System.ServiceModel.EndpointAddress>
 - <xref:System.ServiceModel.EndpointAddress.Identity%2A>

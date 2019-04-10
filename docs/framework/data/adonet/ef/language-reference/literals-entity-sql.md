@@ -2,12 +2,12 @@
 title: 常值 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 092ef693-6e5f-41b4-b868-5b9e82928abf
-ms.openlocfilehash: 71c77a3cb91d0981614e83221ad82d17067dc321
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bff9b1907d3424dc2e3df80480b6ab12f5ab9261
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643100"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209771"
 ---
 # <a name="literals-entity-sql"></a>常值 (Entity SQL)
 本主題將描述常值 (Literal) 的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援。  
@@ -22,7 +22,7 @@ ms.locfileid: "54643100"
 ## <a name="boolean"></a>Boolean  
  布林常值是由 `true` 和 `false` 關鍵字代表。  
   
-## <a name="integer"></a>Integer  
+## <a name="integer"></a>整數  
  整數常值可以屬於 <xref:System.Int32> 或 <xref:System.Int64> 型別。 <xref:System.Int32> 常值是一連串數字字元。 <xref:System.Int64> 常值是一連串數字字元，後面接著大寫 L。  
   
 ## <a name="decimal"></a>Decimal  
@@ -102,4 +102,5 @@ GUID  '1AFC7F5C-FFA0-4741-81CF-F12EAAB822BF'
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

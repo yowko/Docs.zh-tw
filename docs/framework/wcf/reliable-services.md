@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], reliable sessions
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
-ms.openlocfilehash: a3a53cb26ffb0e5934982c1c9f367115177b9b59
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216765"
 ---
 # <a name="reliable-services"></a>可靠的服務
 佇列和可靠工作階段會實作可信賴傳訊的 Windows Communication Foundation (WCF) 功能。 本主題說明 WCF 的可靠傳訊功能。  
@@ -45,5 +45,6 @@ ms.locfileid: "54559394"
  佇列之間的區隔性以及可信賴傳訊，可讓鬆散耦合的應用程式進行可靠的通訊。 與可靠工作階段不同的是，來源和目的地不需要同時執行。 這個特點促使當來源的訊息生產率與目的地的訊息消耗率不相同時，作用中的佇列會被用來當做負載撫平機制。 如需有關佇列的詳細資訊，請參閱 < [WCF 中的佇列](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [可靠工作階段概觀](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+
+- [可靠的工作階段概觀](../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
 - [WCF 中的佇列](../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)

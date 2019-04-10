@@ -14,21 +14,21 @@ helpviewer_keywords:
 - DynamicRenderer objects [WPF]
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
-ms.openlocfilehash: 329bad9d5e0fa24f66fbd63def4936cb047e62e3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 80385b904f4ff5de86bf7e011f6a883b957d0ceb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378063"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219664"
 ---
 # <a name="creating-an-ink-input-control"></a>建立筆墨輸入控制項
 您可以建立自訂控制項，以動態方式，並以靜態方式呈現筆墨。 當使用者繪製筆劃，導致出現 「 順著 」 tablet 畫筆，和顯示筆墨之後加入至控制項，透過 tablet 畫筆，從剪貼簿 貼上或從檔案載入的筆墨，也就是呈現筆墨。 若要動態轉譯筆跡，必須使用您的控制項<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>。 若要以靜態方式轉譯筆跡，您必須覆寫的手寫筆事件方法 (<xref:System.Windows.UIElement.OnStylusDown%2A>， <xref:System.Windows.UIElement.OnStylusMove%2A>，和<xref:System.Windows.UIElement.OnStylusUp%2A>) 來收集<xref:System.Windows.Input.StylusPoint>資料，建立筆劃，並將其新增<xref:System.Windows.Controls.InkPresenter>（會呈現在控制項上的筆墨）。  
   
  本主題包含下列子章節：  
   
--   [如何：收集手寫筆點資料，並建立筆墨筆劃](#CollectingStylusPointDataAndCreatingInkStrokes)  
+-   [HOW TO：收集手寫筆點資料，並建立筆墨筆劃](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [如何：啟用您的控制項為接受來自滑鼠輸入](#EnablingYourControlToAcceptInputTromTheMouse)  
+-   [HOW TO：啟用您的控制項為接受來自滑鼠輸入](#EnablingYourControlToAcceptInputTromTheMouse)  
   
 -   [將它放在一起](#PuttingItTogether)  
   
@@ -99,5 +99,6 @@ ms.locfileid: "57378063"
  您可以建立會收集並呈現筆墨藉由覆寫的手寫筆事件方法的控制項。 藉由建立您自己的控制項，衍生您自己<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>類別，以及將它們插入到<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>，您可以實作幾乎任何想像以數位筆墨的行為。 您可以存取<xref:System.Windows.Input.StylusPoint>做為它產生的資料，讓您有機會自訂<xref:System.Windows.Input.Stylus>輸入，並以適合您的應用程式螢幕上呈現。 因為您有這類低層級的存取權<xref:System.Windows.Input.StylusPoint>資料，您可以實作筆跡收集，並在您的應用程式的該屬性呈現以獲得最佳效能。  
   
 ## <a name="see-also"></a>另請參閱
-- [筆跡進階處理](advanced-ink-handling.md)
+
+- [筆墨進階處理](advanced-ink-handling.md)
 - [存取和管理手寫筆輸入](https://go.microsoft.com/fwlink/?LinkId=50752&clcid=0x409)

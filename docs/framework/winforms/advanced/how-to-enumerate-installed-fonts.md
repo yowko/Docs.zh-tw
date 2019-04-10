@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], enumerating installed
 - examples [Windows Forms], fonts
 ms.assetid: 26d74ef5-0f39-4eeb-8d20-00e66e014abe
-ms.openlocfilehash: e56f06d6f7a762a1ef1ff85fa30751ea64f9f14b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 92f27399cce9e03a4679c8a34fbdafcf28c32252
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653739"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155008"
 ---
 # <a name="how-to-enumerate-installed-fonts"></a>HOW TO：列舉已安裝的字型
 <xref:System.Drawing.Text.InstalledFontCollection>類別繼承自<xref:System.Drawing.Text.FontCollection>抽象基底類別。 您可以使用<xref:System.Drawing.Text.InstalledFontCollection>物件來列舉電腦上安裝的字型。 <xref:System.Drawing.Text.FontCollection.Families%2A>的屬性<xref:System.Drawing.Text.InstalledFontCollection>物件為陣列的<xref:System.Drawing.FontFamily>物件。  
@@ -32,4 +32,5 @@ ms.locfileid: "58653739"
  上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。 此外，您應該匯入<xref:System.Drawing.Text>命名空間。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用字型和文字](using-fonts-and-text.md)

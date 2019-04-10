@@ -2,12 +2,12 @@
 title: <exposedMethod>
 ms.date: 03/30/2017
 ms.assetid: 61c938cd-4ee9-4b06-ab28-922ef491ab11
-ms.openlocfilehash: 151929cd99df08b705bee94eb6fd6f10c254a660
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 91eafa46aa73b5e6d359fcbe48f098f9f8a4d0f0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55259848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174508"
 ---
 # <a name="exposedmethod"></a>\<exposedMethod>
 表示 COM+ 方法，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。  
@@ -36,7 +36,7 @@ ms.locfileid: "55259848"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|name|包含 COM+ 方法的字串，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。|  
+|名稱|包含 COM+ 方法的字串，這個方法會在 COM+ 元件上的介面公開為 Web 服務時公開。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -69,8 +69,9 @@ ms.locfileid: "55259848"
  在服務初始化階段，執行階段會嘗試反映，並加入只包含在清單中的方法來產生服務合約[ \<exposedMethod >](../../../../../docs/framework/configure-apps/file-schema/wcf/exposedmethod.md)項目。 這時會針對每個未包含在服務合約中的介面方法加以追蹤。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ComMethodElementCollection>
 - <xref:System.ServiceModel.Configuration.ComMethodElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
-- [整合 COM 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [如何：設定 COM + 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [整合 COM+ 應用程式](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
+- [HOW TO：設定 COM+ 服務設定](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

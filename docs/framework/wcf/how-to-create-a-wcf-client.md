@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: 0f7f622221e6612ecdb0ea04084d81e923218a5c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174365"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>教學課程：建立 Windows Communication Foundation 用戶端
 
@@ -30,7 +30,6 @@ ms.locfileid: "58634059"
 > [!div class="checklist"]
 > - 建立及設定 WCF 用戶端的主控台應用程式專案。
 > - 加入服務參考至 WCF 服務，以產生 proxy 類別和組態檔。
-
 
 ## <a name="create-a-windows-communication-foundation-client"></a>建立 Windows Communication Foundation 用戶端
 
@@ -67,7 +66,6 @@ ms.locfileid: "58634059"
    3. 選取  **CalculatorService**將它展開並顯示服務所實作的服務合約。 保留預設值**命名空間**，然後選擇**確定**。
 
       Visual Studio 會加入新項目底下**已連線的服務**中的資料夾**GettingStartedClient**專案。 
-
 
 ### <a name="servicemodel-metadata-utility-tool"></a>ServiceModel Metadata Utility 工具
 
@@ -129,5 +127,3 @@ svcutil.exe /language:vb /out:generatedProxy.vb /config:app.config http://localh
 
 > [!div class="nextstepaction"]
 > [教學課程：使用 WCF 用戶端](how-to-use-a-wcf-client.md)
-
-

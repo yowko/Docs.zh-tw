@@ -2,12 +2,12 @@
 title: 自訂繫結可靠工作階段
 ms.date: 03/30/2017
 ms.assetid: c5fcd409-246f-4f3e-b3f1-629506ca4c04
-ms.openlocfilehash: d970f4a84f51755db16d84d22178c343624de03f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: d419a5793abd6c89b4cddb3b5d3c3359361d5b5b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824763"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172415"
 ---
 # <a name="custom-binding-reliable-session"></a>自訂繫結可靠工作階段
 自訂繫結由經過排序的獨立繫結項目清單所定義。 此範例示範如何使用各種傳輸與訊息編碼項目設定自訂繫結，特別是啟用可靠工作階段。  
@@ -122,4 +122,3 @@ Press <ENTER> to terminate client.
     ... />  
     <compositeDuplex clientBaseAddress="http://client_machine_name:8000/myClient/" />  
     ```  
-  

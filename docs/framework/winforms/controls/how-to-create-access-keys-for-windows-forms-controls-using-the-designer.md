@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用設計工具的 Windows Form 控制項建立便捷鍵
+title: HOW TO：使用設計工具建立 Windows Forms 控制項的便捷鍵
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], access keys
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4c374c4c-4ca9-4a68-ac96-9dc3ab0f518a
-ms.openlocfilehash: 3d4112d87dbd448c7e34d2b84d11b49f56e1dc44
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 900a955173c28c7b86fce73e418561ed437719c4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713341"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216921"
 ---
-# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>HOW TO：使用設計工具的 Windows Form 控制項建立便捷鍵
+# <a name="how-to-create-access-keys-for-windows-forms-controls-using-the-designer"></a>HOW TO：使用設計工具建立 Windows Forms 控制項的便捷鍵
 *便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。 它可讓使用者 「 按一下 」 按鈕，然後按下 ALT 鍵組合中的預先定義的存取金鑰。 例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將連字號 (&)"P"會導致字母"P"會加上底線的按鈕文字在執行階段的字母前面。 使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。 您不能有無法接收焦點的控制項的便捷鍵。  
   
 > [!NOTE]
@@ -33,7 +33,8 @@ ms.locfileid: "57713341"
 1.  在 **屬性**視窗中，將`Text`屬性設為字串，包含連字號 (&) 要存取的索引鍵的字母前面。 例如，若要設定為便捷鍵的字母"P"，輸入**列印 &** 到方格內。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Button>
-- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
-- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [HOW TO：回應 Windows Forms 按鈕的按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [HOW TO：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)

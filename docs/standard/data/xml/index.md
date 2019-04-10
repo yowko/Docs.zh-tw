@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1edd267ed388f630cc332caa278d5c47a40d77d5
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171167"
 ---
 # <a name="xml-documents-and-data"></a>XML 文件和資料
 .NET Framework 提供一組完整且整合的類別，好讓您輕鬆地建置可感知 XML 的應用程式。 下列命名空間中的類別支援 XML 的剖析與撰寫、記憶體中 XML 資料的編輯、資料驗證和 XSLT 轉換。  
@@ -55,9 +55,7 @@ ms.locfileid: "56835118"
   
      為了要在每次需要 XSLT 處理時都提高效能，您可以使用 <xref:System.Xml.XPath.XPathDocument> 類別，它是最佳化的唯讀 XPath 查詢存放區，其設計目的是要與 <xref:System.Xml.Xsl.XslCompiledTransform> 類別有效率地一起運作。  
   
--   **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 
-  <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 
-  <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。  
+-   **與 ADO.NET 整合。** XML 類別與 [ADO.NET](../../../../docs/framework/data/adonet/index.md) 緊密整合在一起，可讓關聯式資料和 XML 結合在一起。 <xref:System.Data.DataSet> 類別是一項擷取自資料庫的記憶體中資料快取。 <xref:System.Data.DataSet> 類別可使用 <xref:System.Xml.XmlReader> 和 <xref:System.Xml.XmlWriter> 類別來讀取及寫入 XML，將其內部的關聯式結構描述結構保存為 XML 結構描述 (XSD)，還可以推斷 XML 文件的結構描述結構。  
   
 ## <a name="in-this-section"></a>本節內容  
  [XML 處理選項](../../../../docs/standard/data/xml/xml-processing-options.md)  
@@ -78,7 +76,7 @@ ms.locfileid: "56835118"
  [管理 XML 文件中的命名空間](../../../../docs/standard/data/xml/managing-namespaces-in-an-xml-document.md)  
  說明 <xref:System.Xml.XmlNamespaceManager> 類別如何用來儲存及維護命名空間資訊。  
   
- [System.Xml 類別中的類型支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
+ [System.Xml 類別中的型別支援](../../../../docs/standard/data/xml/type-support-in-the-system-xml-classes.md)  
  說明 XML 資料類型如何對應到 CLR 類型、如何轉換 XML 資料類型，以及 <xref:System.Xml> 類別中的其他類型支援功能。  
   
 ## <a name="related-sections"></a>相關章節  
@@ -87,4 +85,3 @@ ms.locfileid: "56835118"
   
  [安全性](../../../../docs/standard/security/index.md)  
  提供 .NET Framework 安全性系統的概觀。  
-  

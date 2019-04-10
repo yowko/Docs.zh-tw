@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XDocument
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
-ms.openlocfilehash: 6c220bf7b06e6eaf4cf661c07a0a8c6c37ec333d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358258"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209654"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>HOW TO：繫結至 XML 查詢結果的 XDocument、XElement 或 LINQ
 此範例示範如何繫結至 XML 資料<xref:System.Windows.Controls.ItemsControl>使用<xref:System.Xml.Linq.XDocument>。  
@@ -40,6 +40,7 @@ ms.locfileid: "57358258"
  [!code-vb[XLinqExample#BindToResults](~/samples/snippets/visualbasic/VS_Snippets_Wpf/XLinqExample/visualbasic/window1.xaml.vb#bindtoresults)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [繫結來源概觀](binding-sources-overview.md)
 - [WPF 資料繫結與 LINQ to XML 概觀](/visualstudio/designers/wpf-data-binding-with-linq-to-xml-overview)
 - [使用 LINQ to XML 的 WPF 資料繫結範例](/visualstudio/designers/wpf-data-binding-using-linq-to-xml-example)

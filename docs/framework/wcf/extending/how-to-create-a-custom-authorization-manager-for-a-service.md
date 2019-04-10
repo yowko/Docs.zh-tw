@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立自訂授權管理員服務
+title: HOW TO：為服務建立自訂授權管理員
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 571c1d66bcf1ea62972eb1be3fd694964581db38
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465135"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156490"
 ---
-# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>HOW TO：建立自訂授權管理員服務
+# <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>HOW TO：為服務建立自訂授權管理員
 身分識別模型基礎結構在 Windows Communication Foundation (WCF) 支援可延伸的宣告型授權模型。 從語彙基元擷取的宣告可以選擇性地由自訂授權原則進行處理並放入 <xref:System.IdentityModel.Policy.AuthorizationContext>。 授權管理員會檢查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的宣告來做出授權決策。  
   
  根據預設，<xref:System.ServiceModel.ServiceAuthorizationManager> 類別會做出授權決策，不過，您也可以建立自訂的授權管理員來覆寫這些決策。 若要建立自訂的授權管理員，請建立衍生自 <xref:System.ServiceModel.ServiceAuthorizationManager> 的類別，然後實作 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法。 授權決策會在 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%2A> 方法中進行，並在授與存取權時傳回 `true`，在拒絕存取權時傳回 `false`。  
@@ -118,5 +118,6 @@ ms.locfileid: "58465135"
  [!code-vb[c_CustomAuthMgr#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
 - [授權原則](../../../../docs/framework/wcf/samples/authorization-policy.md)

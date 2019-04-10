@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 2648296d01f0e237847fc16535b01dbd8e9c5b62
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377112"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157868"
 ---
 # <a name="panels-overview"></a>面板概觀
 <xref:System.Windows.Controls.Panel> 元素是控制元素轉譯的元件，其大小和維度、 其位置和其子內容的排列方式。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]提供數個預先定義<xref:System.Windows.Controls.Panel>項目，以及能夠建構自訂<xref:System.Windows.Controls.Panel>項目。  
@@ -23,7 +23,7 @@ ms.locfileid: "57377112"
   
 -   [面板類別](#Panels_view_from_10000_feet)  
   
--   [面板元素的一般成員](#Panels_declared_members)  
+-   [面板項目中的一般成員](#Panels_declared_members)  
   
 -   [衍生的面板元素](#Panels_derived_elements)  
   
@@ -242,7 +242,7 @@ ms.locfileid: "57377112"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>當地語系化/全球化支援  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援一些功能，能夠協助建立可當地語系化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援多種功能，可協助建立可當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
  所有面板皆原生支援<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性，可用來以動態方式自動重排內容取決於使用者的地區設定或語言設定。 如需詳細資訊，請參閱<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
@@ -253,9 +253,10 @@ ms.locfileid: "57377112"
  如需有關建立具有可當地語系化 [!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)] 之 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的其他資訊，請參閱[使用自動版面配置概觀](../advanced/use-automatic-layout-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)
-- [版面配置](../advanced/layout.md)
+- [配置](../advanced/layout.md)
 - [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [對齊、邊界和填補概觀](../advanced/alignment-margins-and-padding-overview.md)
 - [建立自訂的內容換行面板範例](https://go.microsoft.com/fwlink/?LinkID=159979)

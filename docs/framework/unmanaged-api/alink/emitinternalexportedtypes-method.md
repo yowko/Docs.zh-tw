@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6cee275dab33b847bb3a6e9839164615bdaa4a14
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c196bcc159b18b9dc04329d817ebe16e07bb8bb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502575"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218247"
 ---
 # <a name="emitinternalexportedtypes-method"></a>EmitInternalExportedTypes 方法
 會發出新增至組件的類型。 呼叫這個方法之後稱為已加入內部的類型。  
@@ -46,6 +46,7 @@ HRESULT EmitInternalExportedTypes(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

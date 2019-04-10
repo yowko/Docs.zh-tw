@@ -14,17 +14,16 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 5da74abb107bc93bff496a35ecfc7a1233e5a76d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702954"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176679"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>HOW TO：將 Windows Forms DataGrid 控制項繫結至資料來源
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  Windows Form<xref:System.Windows.Forms.DataGrid>控制項專為顯示從資料來源的資訊。 您將控制項繫結在執行階段藉由呼叫<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法。 雖然您可以顯示來自各種資料來源的資料，但最常見的來源是資料集] 和 [資料檢視。  
   
@@ -105,7 +104,8 @@ ms.locfileid: "57702954"
 3.  （選擇性）將適當的資料表樣式和資料行樣式加入方格中。 如果不有任何資料表樣式，您會看到資料表，但搭配最少的格式與可見的所有資料行。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGrid 控制項概觀](datagrid-control-overview-windows-forms.md)
-- [如何：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
+- [HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項](how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
-- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
+- [Windows Form 資料繫結](../windows-forms-data-binding.md)

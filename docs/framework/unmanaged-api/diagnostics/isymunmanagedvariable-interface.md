@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 50c38c5a9e1799a460c5be1f7234b36968dc3da2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 712eca7f3f9fec9c81e638802f5a664ec6469d53
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706887"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164342"
 ---
 # <a name="isymunmanagedvariable-interface"></a>ISymUnmanagedVariable 介面
 表示變數，例如參數、 區域變數或欄位。  
@@ -44,4 +44,5 @@ ms.locfileid: "54706887"
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0af3bd64-92a2-4b47-ae62-f5df35f131a6
-ms.openlocfilehash: db38d42e9c7dc1657e06030599ae2b8ba66ef6b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e19e4e7cc0ea92e9d93e45c2a50d009e46b78c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54549872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175496"
 ---
 # <a name="creating-expression-columns"></a>建立運算式資料行
 您可以定義資料行的運算式，使其包含從相同資料列的其他資料行值，或從資料表的多重資料列的資料行值來計算所得的值。 若要定義要評估的運算式，請使用目標資料行的 <xref:System.Data.DataColumn.Expression%2A> 屬性，並使用 <xref:System.Data.DataColumn.ColumnName%2A> 屬性來參照運算式中的其他資料行。 運算式資料行的 <xref:System.Data.DataColumn.DataType%2A> 必須適用於運算式傳回的值。  
@@ -19,7 +19,7 @@ ms.locfileid: "54549872"
   
 |運算式型別|範例|  
 |---------------------|-------------|  
-|比較|"Total >= 500"|  
+|邏輯比對|「 總 > = 500"|  
 |計算|"UnitPrice * Quantity"|  
 |彙總|Sum(Price)|  
   
@@ -39,9 +39,10 @@ workTable.Columns.Add("SalesTax", typeof(Double), "Total * 0.086");
  運算式可參考其他運算式資料行；但循環參考 (兩個運算式互相參考) 將產生例外狀況。 如需有關撰寫運算式的規則，請參閱<xref:System.Data.DataColumn.Expression%2A>的屬性**DataColumn**類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Data.DataColumn>
 - <xref:System.Data.DataSet>
 - <xref:System.Data.DataTable>
 - [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
-- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

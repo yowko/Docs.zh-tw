@@ -6,19 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: e99683bf6746cc5a85448bb22a996c04b7dcaa8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709688"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219417"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控制項概觀 (Windows Form)
 Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個複合控制項，其中包含兩個可移動的分隔列所分隔的面板。 將滑鼠指標移到分隔列上時，指標會變更形狀，以顯示分隔列是可移動的。  
   
 > [!IMPORTANT]
->  在 **工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 
-  <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 <xref:System.Windows.Forms.Splitter>類別仍然包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相容性與現有的應用程式，但強烈建議您將<xref:System.Windows.Forms.SplitContainer>針對新專案的控制項。  
+>  在 **工具箱**，<xref:System.Windows.Forms.SplitContainer>控制項取代了<xref:System.Windows.Forms.Splitter>是否有舊版的 Visual Studio 中的控制項。 <xref:System.Windows.Forms.SplitContainer> 控制項會比 <xref:System.Windows.Forms.Splitter> 控制項合用。 <xref:System.Windows.Forms.Splitter>類別仍然包含在[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]相容性與現有的應用程式，但強烈建議您將<xref:System.Windows.Forms.SplitContainer>針對新專案的控制項。  
   
  使用<xref:System.Windows.Forms.SplitContainer>控制項，您可以建立複雜的使用者介面; 通常，一個面板中的選取範圍會決定在其他窗格中所顯示的物件。 這種排列方式可有效地顯示及瀏覽資訊。 有兩個面板可讓您彙總資訊方面的情況下，，和列中或 「 分隔器 」 可以方便使用者調整面板的大小。  
   
@@ -47,10 +46,11 @@ Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性|決定在可移動的分隔器列的像素的左邊緣或上邊緣的距離。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性|決定的最短距離，單位為像素，使用者可以移動分隔器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 屬性|判斷粗細，單位為像素的分隔器。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|發生於分隔器移動。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|發生於分隔器移動。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Event - 事件|發生於分隔器移動。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Event - 事件|發生於分隔器移動。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.SplitContainer>
 - [SplitContainer 控制項](splitcontainer-control-windows-forms.md)
 - [SplitContainer 控制項範例](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/0ffz7d1b(v=vs.90))

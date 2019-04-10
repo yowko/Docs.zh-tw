@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c867945f8a75cade5c7405b2908e2819f5d261d9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54652727b4684d71068a19eb5eeb2e862f413f25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54706968"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215075"
 ---
 # <a name="cordebugblockingreason-enumeration"></a>CorDebugBlockingReason 列舉
 指定給定物件上封鎖執行緒的原因。  
@@ -51,12 +51,13 @@ Typedef enum CorDebugBlockingReason
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯列舉](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

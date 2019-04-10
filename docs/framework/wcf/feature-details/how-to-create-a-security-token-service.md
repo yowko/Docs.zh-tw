@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 98e82101-4cff-4bb8-a220-f7abed3556e5
-ms.openlocfilehash: 1d2621b43428fa249fb6ebb820885ebe0a2221f9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1d4964cf0379b35c4955bf45d8a7c0fd40477c9f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212475"
 ---
 # <a name="how-to-create-a-security-token-service"></a>HOW TO：建立安全性權杖服務
 安全性權杖服務實作於 WS-Trust 規格定義的通訊協定。 此通訊協定定義用來核發、更新、取消及驗證安全性權杖的訊息格式以及訊息交換模式。 指定的安全性權杖服務提供一個或一個以上的這些功能。 此主題檢視最常見的狀況：實作權杖核發。  
@@ -124,6 +124,7 @@ ms.locfileid: "54577254"
  安全性權杖服務的完整程式碼，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Tokens.SigningCredentials>
 - <xref:System.IdentityModel.Tokens.SecurityKey>
 - <xref:System.IdentityModel.Tokens.SecurityKeyIdentifier>
@@ -131,4 +132,4 @@ ms.locfileid: "54577254"
 - <xref:System.IdentityModel.Tokens.SamlAssertion>
 - <xref:System.ServiceModel.Security.Tokens.BinarySecretSecurityToken>
 - <xref:System.IdentityModel.Tokens.SecurityKeyIdentifierClause>
-- [同盟範例](../../../../docs/framework/wcf/samples/federation-sample.md)
+- [聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)

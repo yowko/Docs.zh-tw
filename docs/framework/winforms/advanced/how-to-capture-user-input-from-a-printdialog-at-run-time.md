@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在執行階段擷取使用者輸入從 PrintDialog
+title: HOW TO：在執行階段從 PrintDialog 擷取使用者輸入
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - print options
 - run time [Windows Forms], changing print options
 ms.assetid: 438501d8-9a70-4fb3-aae6-e46579aba0c6
-ms.openlocfilehash: 69a3632ddb4d68f5a916f5ffca020630abe1bd68
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c1b0a7e66a4c2050ea5b92a55a39ea46a7b762c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707323"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176718"
 ---
-# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>HOW TO：在執行階段擷取使用者輸入從 PrintDialog
+# <a name="how-to-capture-user-input-from-a-printdialog-at-run-time"></a>HOW TO：在執行階段從 PrintDialog 擷取使用者輸入
 雖然您可以設定在設計階段的列印相關的選項，您有時要變更這些選項在執行階段，最有可能因為使用者所做的選擇。 您可以擷取列印文件使用的使用者輸入<xref:System.Windows.Forms.PrintDialog>而<xref:System.Drawing.Printing.PrintDocument>元件。  
   
 ### <a name="to-change-print-options-programmatically"></a>若要以程式設計方式變更列印選項  
@@ -56,5 +56,6 @@ ms.locfileid: "57707323"
 4.  使用者的列印選項，從對話方塊將會複製到<xref:System.Drawing.Printing.PrinterSettings>屬性<xref:System.Drawing.Printing.PrintDocument>元件。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：列印 Windows Form 中的多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
-- [Windows Forms 列印支援](windows-forms-print-support.md)
+
+- [HOW TO：在 Windows Forms 中列印多頁文字檔](how-to-print-a-multi-page-text-file-in-windows-forms.md)
+- [Windows Form 列印支援](windows-forms-print-support.md)

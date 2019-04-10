@@ -14,12 +14,12 @@ helpviewer_keywords:
 - sizing [Windows Forms], automatic
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
-ms.openlocfilehash: 6be6d0904d5b52e5188f0a5a16aaefa08265379c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674189"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222324"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel 控制項的最佳作法
 <xref:System.Windows.Forms.TableLayoutPanel>控制項提供功能強大的版面配置功能，您應該仔細考慮您的 Windows Forms 上使用之前。  
@@ -56,5 +56,6 @@ ms.locfileid: "54674189"
  <xref:System.Windows.Forms.TableLayoutPanel>控制項不支援在 Windows Form 設計工具的視覺化繼承。 A <xref:System.Windows.Forms.TableLayoutPanel> 「 已鎖定 」 在設計階段，會出現在衍生類別中的控制項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.TableLayoutPanel>
 - <xref:System.Windows.Forms.FlowLayoutPanel>

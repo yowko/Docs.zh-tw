@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], DatePicker
 - DatePicker control [WPF]
 ms.assetid: 619765c8-8d25-4315-aec2-79aea08fed9f
-ms.openlocfilehash: a135188b2c573a578aa5b6be4910e6d02471aee1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 555bf31b27ba233ffa54438077984b02b5e3084a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161329"
 ---
 # <a name="datepicker"></a>DatePicker
 <xref:System.Windows.Controls.DatePicker>控制項可讓使用者輸入到文字欄位，或使用下拉式清單選取日期<xref:System.Windows.Controls.Calendar>控制項。  
@@ -25,5 +25,6 @@ DatePicker 控制項
  使用者可以直接在文字欄位中，它會設定輸入日期<xref:System.Windows.Controls.DatePicker.Text%2A>屬性。 如果<xref:System.Windows.Controls.DatePicker>無法將輸入的字串轉換成有效的日期，<xref:System.Windows.Controls.DatePicker.DateValidationError>就會引發事件。 根據預設，這會導致例外狀況，但事件處理常式<xref:System.Windows.Controls.DatePicker.DateValidationError>可以設定<xref:System.Windows.Controls.DatePickerDateValidationErrorEventArgs.ThrowException%2A>屬性設`false`並避免引發例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [控制項](index.md)
 - [樣式設定和範本化](styling-and-templating.md)

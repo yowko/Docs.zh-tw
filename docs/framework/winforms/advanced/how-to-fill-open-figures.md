@@ -8,12 +8,12 @@ helpviewer_keywords:
 - open figures [Windows Forms], filling
 - figures [Windows Forms], filling
 ms.assetid: 5a36b0e4-f1f4-46c0-a85a-22ae98491950
-ms.openlocfilehash: c7d193fdad554048ecd0f2cca5a83cfccbc2a403
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: addcf959e429974b9306353abb743bb2bb3114e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654077"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174560"
 ---
 # <a name="how-to-fill-open-figures"></a>HOW TO：填滿開放圖形
 您可以藉由傳遞填滿的路徑<xref:System.Drawing.Drawing2D.GraphicsPath>物件至<xref:System.Drawing.Graphics.FillPath%2A>方法。 <xref:System.Drawing.Graphics.FillPath%2A>方法填入填滿模式 （替代或捲繞） 根據目前設定路徑的路徑。 如果路徑中有任何開啟的數字，如同這些數字都已關閉，會填滿的路徑。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 關閉圖表，藉由透過其結束點繪製一條直線，到它的起點。  
@@ -32,5 +32,6 @@ ms.locfileid: "58654077"
  上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [GDI+ 中的圖形路徑](graphics-paths-in-gdi.md)

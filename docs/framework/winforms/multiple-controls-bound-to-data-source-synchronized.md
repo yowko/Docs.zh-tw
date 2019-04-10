@@ -1,5 +1,5 @@
 ---
-title: HOW TO：請確定多個控制項繫結至相同的資料來源都能保持同步
+title: HOW TO：確保繫結至相同資料來源的多個控制項都能保持同步
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - controls [Windows Forms], binding multiple
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
-ms.openlocfilehash: 01cec80c85beb64975648b2250c914fe04d3ac95
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170335"
 ---
-# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>HOW TO：請確定多個控制項繫結至相同的資料來源都能保持同步
+# <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>HOW TO：確保繫結至相同資料來源的多個控制項都能保持同步
 使用 Windows Form 中的資料繫結時，有時候多個控制項繫結至相同的資料來源中。 在某些情況下，可能必須採取額外步驟以確保控制項的繫結的內容維持彼此以及與資料來源同步處理。 這些步驟會需要有兩種情況：  
   
 -   如果資料來源不會實作<xref:System.ComponentModel.IBindingList>，並因此產生<xref:System.ComponentModel.IBindingList.ListChanged>類型的事件<xref:System.ComponentModel.ListChangedType.ItemChanged>。  
@@ -41,7 +41,8 @@ ms.locfileid: "57721381"
 -   使用表單<xref:System.Windows.Forms.Form.Load>處理的事件和呼叫`InitializeControlsAndDataSource`方法，在範例中，從表單的<xref:System.Windows.Forms.Form.Load>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：使用 BindingSource 元件跨表單共用繫結的資料](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+
+- [HOW TO：使用 BindingSource 元件跨表單共用繫結資料](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
 - [與資料繫結相關的介面](interfaces-related-to-data-binding.md)
-- [Windows Forms 資料繫結](windows-forms-data-binding.md)
+- [Windows Form 資料繫結](windows-forms-data-binding.md)

@@ -2,12 +2,12 @@
 title: 服務追蹤檢視器工具 (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
-ms.openlocfilehash: 723b1c6858f0c56d4834dc937b9f4883e22156e6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 4697e43ee1ae08d5eec02b042aea0ec69d6eeac4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213385"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>服務追蹤檢視器工具 (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您分析由 WCF 所產生的診斷追蹤。 服務追蹤檢視器可讓您輕鬆合併、 檢視及篩選記錄檔中的追蹤訊息，以便您可以診斷、 修復以及驗證 WCF 服務問題的辦法。  
@@ -456,6 +456,7 @@ Windows Communication Foundation (WCF) 服務追蹤檢視器工具可協助您�
  如果您開啟的是使用阿拉伯文作業系統建立的追蹤記錄，可能會發現時間篩選器無法運作。 例如，2005 年對應到阿拉伯曆的 1427 年。 但是，服務追蹤檢視器工具篩選器所支援的時間範圍並不支援 1752 年之前的日期。 這就表示您無法在該篩選器中選取正確的日期。 若要解決此問題，您可以建立自訂篩選器 (**檢視/自訂篩選**) 使用 XPath 運算式來包含特定時間範圍。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [設定追蹤](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [端對端追蹤](./diagnostics/tracing/end-to-end-tracing.md)

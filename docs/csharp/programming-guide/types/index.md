@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 2017e7ed1df18ea0b469207cd06396c74125cb19
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 92156bcd05ba1eb559714a71a23efacfdd29fc52
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465495"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219508"
 ---
 # <a name="types-c-programming-guide"></a>類型 (C# 程式設計手冊)
 ## <a name="types-variables-and-values"></a>型別、變數和值  
@@ -75,8 +75,7 @@ ms.locfileid: "58465495"
  下圖顯示 CTS 中的實值型別和參考型別之間的關聯性。
 
  下圖顯示 CTS 中的實值型別和參考型別： 
-  
-  
+
  ![顯示 CTS 實值型別和參考型別的螢幕擷取畫面。](./media/index/value-reference-types-common-type-system.png)  
   
 > [!NOTE]
@@ -167,15 +166,15 @@ stringList.Add(4);
 ## <a name="related-sections"></a>相關章節  
  如需詳細資訊，請參閱下列主題：  
   
--   [轉換和型別轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+-   [轉換和類型轉換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
 -   [Boxing 和 Unboxing](../../../csharp/programming-guide/types/boxing-and-unboxing.md)  
   
--   [使用動態型別](../../../csharp/programming-guide/types/using-type-dynamic.md)  
+-   [使用動態類型](../../../csharp/programming-guide/types/using-type-dynamic.md)  
   
--   [實值型別](../../../csharp/language-reference/keywords/value-types.md)  
+-   [實值類型](../../../csharp/language-reference/keywords/value-types.md)  
   
--   [參考型別](../../../csharp/language-reference/keywords/reference-types.md)  
+-   [參考類型](../../../csharp/language-reference/keywords/reference-types.md)  
   
 -   [類別和結構](../../../csharp/programming-guide/classes-and-structs/index.md)  
   
@@ -189,6 +188,6 @@ stringList.Add(4);
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
-- [XML 資料類型轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [XML 資料型別轉換](../../../standard/data/xml/conversion-of-xml-data-types.md)
 - [整數型別表](../../../csharp/language-reference/keywords/integral-types-table.md)

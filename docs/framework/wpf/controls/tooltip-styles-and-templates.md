@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ControlTemplate [WPF], ToolTip
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
-ms.openlocfilehash: 424cfc196474d342f1efdc049350acb71b8fb1eb
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 24def466509c12eb69307de139e83dd5a1ed5ce4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211617"
 ---
 # <a name="tooltip-styles-and-templates"></a>ToolTip 樣式和範本
 本主題描述的樣式和範本<xref:System.Windows.Controls.ToolTip>控制項。 您可以修改預設<xref:System.Windows.Controls.ControlTemplate>，讓控制項的獨特的外觀。 如需詳細資訊，請參閱[透過建立 ControlTemplate 自訂現有控制項的外觀](customizing-the-appearance-of-an-existing-control.md)。  
@@ -45,6 +45,7 @@ ms.locfileid: "57375359"
  如需完整的範例，請參閱[使用 ControlTemplate 設定樣式範例](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.FrameworkElement.Style%2A>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項的樣式和範本](control-styles-and-templates.md)

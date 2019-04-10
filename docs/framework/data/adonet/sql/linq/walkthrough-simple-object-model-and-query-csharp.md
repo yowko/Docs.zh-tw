@@ -2,12 +2,12 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: 25e23b77f6f5547a5516c6db240537cb00685edc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155125"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
@@ -24,7 +24,7 @@ ms.locfileid: "54686864"
   
 -   這個逐步解說需要使用 Northwind 範例資料庫。 如果您的開發電腦上沒有這個資料庫，則可以從 Microsoft 下載網站下載。 如需相關指示，請參閱 <<c0> [ 下載範例資料庫](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)。 下載此資料庫之後，請將檔案複製到 c:\linqtest5 資料夾。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此逐步解說包含六個主要工作：  
   
 -   建立[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]Visual Studio 中的方案。  
@@ -54,7 +54,7 @@ ms.locfileid: "54686864"
   
 5.  在 **位置**方塊中，確認您要儲存專案檔。  
   
-6.  按一下 [確定 **Deploying Office Solutions**]。  
+6.  按一下 [確定] 。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中參考 (展開**參考**中的節點**方案總管 中**)，請將它加入下列的步驟中所述。  
@@ -87,7 +87,7 @@ ms.locfileid: "54686864"
   
 -   您會指定 `CustomerID` 屬性 (Property)，以表示資料庫中的主索引鍵資料行。  
   
--   您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。 然後，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以直接儲存和擷取值，而不必使用可能含有商務邏輯的公用存取子。  
+-   您會指定 `_CustomerID` 和 `_City` 欄位做為私用儲存區。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 可以然後儲存和擷取值直接管理，而不是使用可能含有商務邏輯的公用存取子。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>若要表示兩個資料庫資料行的特性  
   
@@ -155,4 +155,5 @@ ms.locfileid: "54686864"
  如果您想執行＜跨關聯性查詢＞逐步解說，請務必儲存您剛在本逐步解說完成的方案，這是必要的條件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

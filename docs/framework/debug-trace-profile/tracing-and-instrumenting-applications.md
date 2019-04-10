@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5947f1e84bc5b1f35f0bd479a9fc879dbe63c9f2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4e97bc5f9846757e02f9e55de31bee96a9d24c2f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547812"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219209"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
 追蹤可讓您在應用程式執行時，監視應用程式的執行。 您可以在開發 .NET Framework 應用程式時，加入追蹤和偵錯檢測，當您在開發應用程式時，以及將其部署之後，都可以使用該檢測。 您可以使用 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> 類別，將錯誤和應用程式執行的相關資訊，記錄在記錄檔、文字檔案或其他裝置中，以供稍後進行分析。  
@@ -58,11 +58,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  每個範例會顯示"Hello World ！" 在 [輸出] 視窗中偵錯工具執行應用程式時。  
   
- 這可讓您偵錯應用程式，並依據其於測試環境中的的行為，將其效能最佳化。 您可在已啟動 <xref:System.Diagnostics.Debug> 條件屬性的偵錯組建中進行應用程式偵錯，以接收所有的偵錯輸出。 當您準備發行應用程式時，可以在不啟動 <xref:System.Diagnostics.Debug> 條件屬性的情況下編譯發行組建，如此編譯器就不會將偵錯程式碼納入最終可執行檔中。 如需詳細資訊，請參閱[＜How to：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 如需您的應用程式適用之不同組建組態的詳細資訊，請參閱[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
+ 這可讓您偵錯應用程式，並依據其於測試環境中的的行為，將其效能最佳化。 您可在已啟動 <xref:System.Diagnostics.Debug> 條件屬性的偵錯組建中進行應用程式偵錯，以接收所有的偵錯輸出。 當您準備發行應用程式時，可以在不啟動 <xref:System.Diagnostics.Debug> 條件屬性的情況下編譯發行組建，如此編譯器就不會將偵錯程式碼納入最終可執行檔中。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。 如需您的應用程式適用之不同組建組態的詳細資訊，請參閱[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)。  
   
- 您還可以使用 <xref:System.Diagnostics.Trace> 類別的方法，追蹤已安裝應用程式中程式碼執行的情形。 將[追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)放在您的程式碼中，可控制是否進行追蹤及其廣泛程度。 這可讓您監視應用程式在生產環境中的狀態。 這很重要，特別是在有多個元件在多部電腦上執行的商務應用程式中。 您可以透過組態檔來控制部署之後如何使用參數。 如需詳細資訊，請參閱[＜How to：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+ 您還可以使用 <xref:System.Diagnostics.Trace> 類別的方法，追蹤已安裝應用程式中程式碼執行的情形。 將[追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)放在您的程式碼中，可控制是否進行追蹤及其廣泛程度。 這可讓您監視應用程式在生產環境中的狀態。 這很重要，特別是在有多個元件在多部電腦上執行的商務應用程式中。 您可以透過組態檔來控制部署之後如何使用參數。 如需詳細資訊，請參閱[如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
- 在開發要使用追蹤的應用程式時，您通常會將追蹤和偵錯訊息都包含在應用程式程式碼中。 當您準備好要部署應用程式時，可以編譯發行組建，而不需開啟**偵錯**條件屬性。 不過，您可以開啟**追蹤**條件屬性，讓編譯器在可執行檔中包含您的追蹤程式碼。 如需詳細資訊，請參閱[＜How to：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。  
+ 在開發要使用追蹤的應用程式時，您通常會將追蹤和偵錯訊息都包含在應用程式程式碼中。 當您準備好要部署應用程式時，可以編譯發行組建，而不需開啟**偵錯**條件屬性。 不過，您可以開啟**追蹤**條件屬性，讓編譯器在可執行檔中包含您的追蹤程式碼。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)。  
   
 ### <a name="phases-of-code-tracing"></a>程式碼追蹤的階段  
  程式碼追蹤分為三個階段：  
@@ -81,7 +81,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 1.  請考慮您在部署應用程式之後，會想要在現場接收哪些追蹤輸出。  
   
-2.  建立一組參數。 如需詳細資訊，請參閱[＜How to：設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
+2.  建立一組參數。 如需詳細資訊，請參閱[如何：設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。  
   
 3.  將追蹤陳述式加入應用程式程式碼  
   
@@ -104,7 +104,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 8.  分析追蹤訊息，以識別並了解應用程式中的問題。  
   
 ## <a name="trace-instrumentation-and-distributed-applications"></a>追蹤檢測和分散式應用程式  
- 當您建立分散式應用程式時，可能會發現很難以將要使用應用程式的方式來測試應用程式。 很少有開發小組能夠測試所有可能的作業系統或 Web 瀏覽器的組合 (包括所有當地語系化的語言選項)，或是模擬將會同時存取應用程式的大量使用者。 在這些情況下，您無法測試分散式應用程式將如何回應龐大的數量、不同的設定，以及獨特的使用者行為。 此外，分散式應用程式的許多部分都沒有使用者介面可讓您直接互動或檢視的那些部分的活動。  
+ 當您建立分散式應用程式時，可能會發現很難以將要使用應用程式的方式來測試應用程式。 很少有開發小組能夠測試所有可能的作業系統或 Web 瀏覽器的組合 (包括所有當地語系化的語言選項)，或是模擬將會同時存取應用程式的大量使用者。 在這些情況下，您無法測試分散式應用程式將如何回應龐大的數量、不同的設定，以及獨特的終端使用者行為。 此外，分散式應用程式的許多部分都沒有使用者介面可讓您直接互動或檢視的那些部分的活動。  
   
  不過，為了彌補這一點，您可以「檢測」應用程式，也就是將追蹤陳述式放在程式碼的策略性位置上，讓分散式應用程式向系統管理員描述所感興趣的特定事件，尤其是出差錯的事情。 然後如果在執行階段時發生非預期的事件 (例如，回應時間極慢)，您就可以判斷可能的原因。  
   
@@ -120,9 +120,9 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  下表列出寫入追蹤資訊的六個 <xref:System.Diagnostics.Debug> 成員和 <xref:System.Diagnostics.Trace>方法。  
   
-|方法|輸出|  
+|方法|Output|  
 |------------|------------|  
-|**Assert**|指定的文字；或者如果未指定，則為呼叫堆疊。 唯有在 **Assert** 陳述式中指定做為引數的條件是 **false** 時，才會寫入輸出。|  
+|**判斷提示**|指定的文字；或者如果未指定，則為呼叫堆疊。 唯有在 **Assert** 陳述式中指定做為引數的條件是 **false** 時，才會寫入輸出。|  
 |**失敗**|指定的文字；或者如果未指定，則為呼叫堆疊。|  
 |**Write**|指定的文字。|  
 |**WriteIf**|指定的文字 (如果符合在 **WriteIf** 陳述式中指定作為引數的條件)。|  
@@ -136,20 +136,21 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 > [!NOTE]
 >  在 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 中，**Debug.Write**、**Debug.WriteIf**、**Debug.WriteLine** 和 **Debug.WriteLineIf** 方法，已經取代舊版 Visual Basic 中可用的 **Debug.Print** 方法。  
   
- **Write** 和 **WriteLine** 方法一律會寫入您指定的文字。 **Assert**、**WriteIf** 和 **WriteLineIf** 需要 Boolean 引數，以控制是否要寫入指定的文字；只有當運算式為 **true** (針對 **WriteIf** 和 **WriteLineIf**) 或 **false** (針對 **Assert**) 時，才會寫入指定的文字。 **Fail** 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[＜How to：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)和.NET Framework 參考。  
+ **Write** 和 **WriteLine** 方法一律會寫入您指定的文字。 **Assert**、**WriteIf** 和 **WriteLineIf** 需要 Boolean 引數，以控制是否要寫入指定的文字；只有當運算式為 **true** (針對 **WriteIf** 和 **WriteLineIf**) 或 **false** (針對 **Assert**) 時，才會寫入指定的文字。 **Fail** 方法一律會寫入指定的文字。 如需詳細資訊，請參閱[如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)和.NET Framework 參考。  
   
 ## <a name="security-concerns"></a>安全性考量  
- 如果您在部署 ASP.NET 應用程式之前，沒有先停用追蹤和偵錯，您的應用程式可能會顯示其本身會遭惡意程式利用的相關資訊。 如需詳細資訊，請參閱[＜How to：使用追蹤和偵錯，有條件地編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)，和[How to:建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。 偵錯也可以透過 Internet Information Services (IIS) 來設定。  
+ 如果您在部署 ASP.NET 應用程式之前，沒有先停用追蹤和偵錯，您的應用程式可能會顯示其本身會遭惡意程式利用的相關資訊。 如需詳細資訊，請參閱[如何：使用追蹤和偵錯，有條件地編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)，[編譯和建置](/visualstudio/ide/compiling-and-building-in-visual-studio)，和[How to:建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)。 偵錯也可以透過 Internet Information Services (IIS) 來設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - [程式碼合約](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [C#、F# 和 Visual Basic 專案類型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [如何：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [如何：含有追蹤接聽項中使用 TraceSource 和篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [HOW TO：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [HOW TO：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [HOW TO：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [HOW TO：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [HOW TO：使用 TraceSource 和含有追蹤接聽項的篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)

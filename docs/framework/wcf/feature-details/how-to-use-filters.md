@@ -2,23 +2,23 @@
 title: 如何：使用篩選器
 ms.date: 03/30/2017
 ms.assetid: f2c7255f-c376-460e-aa20-14071f1666e5
-ms.openlocfilehash: 1d521162f2878a00d4d8ff7515ca2aabf32db97e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 6f145a9bc2842eaa5dad1a1c0ec6d77eb2b37552
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54530985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216193"
 ---
 # <a name="how-to-use-filters"></a>如何：使用篩選器
 本主題概要說明建立使用多個篩選條件之路由組態所需的基本步驟。 在此範例中，會將訊息路由至計算機服務的兩種實作 (regularCalc 與 roundingCalc)。 兩項實作都支援相同的作業，不過其中一個服務會在傳回之前將所有的計算結果四捨五入至最接近的整數值。 用戶端應用程式必須能夠指出是否要使用四捨五入後的服務版本，如果未指定任何服務偏好設定，則會在兩項服務之間平衡訊息負載。 由這兩項服務公開的作業為：  
   
--   Add  
+-   新增  
   
--   Subtract  
+-   差集  
   
 -   乘法  
   
--   Divide  
+-   分割  
   
  由於兩項服務皆實作同一個作業，因此您不能使用 [動作] 篩選條件，因為訊息中指定的動作不會是唯一的動作。 相反的，您必須進行額外的工作，以確保訊息能夠路由至正確的端點。  
   
@@ -326,4 +326,5 @@ ms.locfileid: "54530985"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由服務](../../../../docs/framework/wcf/samples/routing-services.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：回應 Windows Form CheckBox 按一下動作
+title: HOW TO：回應 Windows Forms 核取方塊的按一下動作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: fff08bebf4e0eeea7dff8146ed8805e9d71247da
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724497"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211981"
 ---
-# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>HOW TO：回應 Windows Form CheckBox 按一下動作
+# <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>HOW TO：回應 Windows Forms 核取方塊的按一下動作
 每當使用者按一下 Windows Form<xref:System.Windows.Forms.CheckBox>控制項，<xref:System.Windows.Forms.Control.Click>就會發生事件。 您可以編寫您的應用程式，以執行某些動作的核取方塊狀態而定。  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>若要回應 CheckBox 按一下動作  
@@ -136,7 +136,8 @@ ms.locfileid: "57724497"
     >  當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性會傳回`true`同時<xref:System.Windows.Forms.CheckState.Checked>和<xref:System.Windows.Forms.CheckState.Indeterminate>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.CheckBox>
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)
-- [如何：設定使用 Windows Form 核取方塊控制項的選項](how-to-set-options-with-windows-forms-checkbox-controls.md)
+- [HOW TO：使用 Windows Forms CheckBox 控制項設定選項](how-to-set-options-with-windows-forms-checkbox-controls.md)
 - [CheckBox 控制項](checkbox-control-windows-forms.md)

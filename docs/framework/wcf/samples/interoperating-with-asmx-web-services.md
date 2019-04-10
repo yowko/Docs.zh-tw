@@ -2,12 +2,12 @@
 title: 與 ASMX Web 服務交互操作
 ms.date: 03/30/2017
 ms.assetid: a7c11f0a-9e68-4f03-a6b1-39cf478d1a89
-ms.openlocfilehash: bef5239a52787629986eada60341cc121b22ba34
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 71bc7f0828e7ab1fbf97bc3b009418c1a763cbf4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214971"
 ---
 # <a name="interoperating-with-asmx-web-services"></a>與 ASMX Web 服務交互操作
 這個範例示範如何整合 Windows Communication Foundation (WCF) 用戶端應用程式與現有的 ASMX Web 服務。  
@@ -130,4 +130,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\Interop\ASMX`  
-  

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Join ToolStripPanels
+title: HOW TO：聯結 ToolStripPanels
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - toolbars [Windows Forms], joining together
 - ToolStripPanel control [Windows Forms], joining together
 ms.assetid: 4eadda6d-e3b8-4151-aaf2-a8d564fbe6b3
-ms.openlocfilehash: 297e3bfec9bb24fb2c06e903a5f32410618812d2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f73c13c4aac1abef70a2ceb0a30c3e46d8664748
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161001"
 ---
-# <a name="how-to-join-toolstrippanels"></a>HOW TO：Join ToolStripPanels
+# <a name="how-to-join-toolstrippanels"></a>HOW TO：聯結 ToolStripPanels
 您可以在執行階段將 <xref:System.Windows.Forms.ToolStrip> 控制項加入 <xref:System.Windows.Forms.ToolStripPanel>，以提供多重文件介面 (MDI) 應用程式的彈性。  
   
 ## <a name="example"></a>範例  
@@ -32,6 +32,7 @@ ms.locfileid: "57703669"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStripPanel>
-- [如何：針對 MDI 使用 ToolStripPanels](how-to-use-toolstrippanels-for-mdi.md)
+- [HOW TO：針對 MDI 使用 ToolStripPanels](how-to-use-toolstrippanels-for-mdi.md)

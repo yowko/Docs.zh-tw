@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b7a7641398d2d083a3ea1b7f44186c3be02213c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9a0372afe6718e5b8cf4d5ed99b3198a8163ae7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566602"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214763"
 ---
 # <a name="eclrassemblyidentityflags-enumeration"></a>ECLRAssemblyIdentityFlags 列舉
 指示組件的身分識別的型別。  
@@ -45,7 +45,8 @@ typedef enum _CLRAssemblyIdentityFlags {
   
  **標頭：** MSCorEE.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載列舉](../../../../docs/framework/unmanaged-api/hosting/hosting-enumerations.md)

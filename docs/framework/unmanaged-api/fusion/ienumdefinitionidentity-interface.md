@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3ff37acd9b4dffe80112f0a0ebe9c9cd86ae66f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d19ca92db6f57a004dca54f6e22db10603c9498a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54668441"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214841"
 ---
 # <a name="ienumdefinitionidentity-interface"></a>IEnumDefinitionIdentity 介面
 做為集合的列舉值`IDefinitionIdentity`物件。  
@@ -65,8 +65,9 @@ IEnumDefinitionIdentity : IUnknown {
   
  **標頭：** Isolation.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [融合介面](../../../../docs/framework/unmanaged-api/fusion/fusion-interfaces.md)
 - [IDefinitionIdentity 介面](../../../../docs/framework/unmanaged-api/fusion/idefinitionidentity-interface.md)

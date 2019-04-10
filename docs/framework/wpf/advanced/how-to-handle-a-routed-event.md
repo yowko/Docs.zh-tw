@@ -8,12 +8,12 @@ helpviewer_keywords:
 - routed events [WPF], handling
 - bubbling events [WPF]
 ms.assetid: 157787b4-f469-4047-8777-5b034145f32e
-ms.openlocfilehash: 42f5f247e775fbf0bd323fc693a74d6149c87bb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edb3d6724af89b7e85986c50b579084e3c4e5070
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211591"
 ---
 # <a name="how-to-handle-a-routed-event"></a>HOW TO：處理路由事件
 此範例示範事件反昇事件運作方式，以及如何撰寫可處理路由事件資料的處理常式。  
@@ -35,8 +35,9 @@ ms.locfileid: "57368190"
  [!code-vb[RoutedEventHandle#Handler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/RoutedEventHandle/VisualBasic/MainWindow.xaml.vb#handler)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.RoutedEvent>
 - [輸入概觀](input-overview.md)
 - [路由事件概觀](routed-events-overview.md)
-- [HOW-TO 主題](events-how-to-topics.md)
+- [HOW TO 主題](events-how-to-topics.md)
 - [XAML 語法詳細資料](xaml-syntax-in-detail.md)

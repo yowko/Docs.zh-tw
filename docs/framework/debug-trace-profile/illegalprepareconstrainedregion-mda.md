@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 2f9b5031-f910-4e01-a196-f89eab313eaf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b3e962bd68d78d9a61e41b1e6049dc35acc50c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 23a36d1709f03583ce39af0e7c80bb1ecd7cf809
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54623075"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158973"
 ---
 # <a name="illegalprepareconstrainedregion-mda"></a>illegalPrepareConstrainedRegion MDA
 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A?displayProperty=nameWithType> 方法呼叫並未緊接在例外狀況處理常式的 `try` 陳述式前面時，`illegalPrepareConstrainedRegion` Managed 偵錯助理 (MDA) 就會啟動。 這項限制屬於 MSIL 層級，因此可允許在呼叫和 `try` 之間具有不產生程式碼的來源，例如註解。  
@@ -32,7 +32,7 @@ ms.locfileid: "54623075"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  MDA 會顯示呼叫 <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A> 方法的方法名稱、MSIL 位移，以及指出呼叫並未緊接在 try 區塊開頭前面的訊息。  
   
 ## <a name="configuration"></a>組態  
@@ -65,6 +65,7 @@ void MethodWithInvalidPCR()
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - <xref:System.Runtime.CompilerServices.RuntimeHelpers.PrepareConstrainedRegions%2A>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

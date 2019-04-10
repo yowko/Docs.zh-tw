@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: babd601bb29fc2aa9c906921082a18942f6649c0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369704"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211033"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>HOW TO：診斷問題列印工作
 網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的列印工作中公開的屬性[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行列印工作的快速遠端診斷。  
@@ -82,10 +82,11 @@ ms.locfileid: "57369704"
  [!code-vb[DiagnoseProblematicPrintJob#HandlePausedJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#handlepausedjob)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Printing.PrintJobStatus>
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 運算子 (C#參考)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 運算子 (C# 參考)](~/docs/csharp/language-reference/operators/and-operator.md)
 - [WPF 中的文件](documents-in-wpf.md)
 - [列印概觀](printing-overview.md)

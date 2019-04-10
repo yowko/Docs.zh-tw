@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b682904a8e7f2eafa8833d784febe7b3b2a1e5f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2d6de2a5ff4d2743c7aca2e46b3af848138c15fb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54611081"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158778"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 函式
 開始列舉型別物件的可用方法。  
@@ -74,7 +74,8 @@ HRESULT BeginMethodEnumeration (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

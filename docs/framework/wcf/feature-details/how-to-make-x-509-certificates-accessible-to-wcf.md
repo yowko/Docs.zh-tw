@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 7c90d5b0541edfc11145d9373c2554ee4595a7b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 85f572f021f1613e0a2bb70cc090f58d2833182e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54741873"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219911"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
 若要存取以 Windows Communication Foundation (WCF) 的 X.509 憑證，請的憑證存放區名稱和位置，必須指定應用程式程式碼。 在某些狀況下，處理序身分識別必須能夠存取包含與 X.509 憑證相關聯之私密金鑰的檔案。 若要取得相關聯的憑證存放區中 X.509 憑證的私密金鑰，WCF 必須進行此作業的權限。 根據預設，只有擁有人和系統帳戶能夠存取憑證的私密金鑰。  
@@ -71,6 +71,7 @@ ms.locfileid: "54741873"
         ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [HOW TO：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：反映 Windows Form 控制項使用 BindingSource 中的資料來源更新
+title: HOW TO：使用 BindingSource 反映 Windows Forms 控制項中的資料來源更新
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - data sources [Windows Forms], updating
 - BindingSource component [Windows Forms], examples
 ms.assetid: bd8bd9b2-af8a-4f11-a3d5-54eecbe2400b
-ms.openlocfilehash: 06204c909987041ac6bf4e64e6f72a850910ca67
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 16dbe4da1efecd120d4da4d66c3d79ec907b92a6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710104"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218640"
 ---
-# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>HOW TO：反映 Windows Form 控制項使用 BindingSource 中的資料來源更新
+# <a name="how-to-reflect-data-source-updates-in-a-windows-forms-control-with-the-bindingsource"></a>HOW TO：使用 BindingSource 反映 Windows Forms 控制項中的資料來源更新
 當您使用資料繫結控制項時，如果資料來源未引發清單變更事件，您有時必須回應資料來源中的變更。 當您使用 <xref:System.Windows.Forms.BindingSource> 元件將資料來源繫結至 Windows Form 控制項時，可藉由呼叫 <xref:System.Windows.Forms.BindingSource.ResetBindings%2A> 方法來通知控制項資料來源已變更。  
   
 ## <a name="example"></a>範例  
@@ -37,8 +37,9 @@ ms.locfileid: "57710104"
  Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.BindingNavigator>
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [BindingSource 元件](bindingsource-component.md)
-- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [HOW TO：將 Windows Forms 控制項繫結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 49dc456df684d6905370ee6ab8c8883449bea990
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ff159cf794d566be6478ef890c769a0ac72c9b25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176601"
 ---
 # <a name="exportnestedtype-method"></a>ExportNestedType 方法
 指定巢狀型別為可匯出。 [ExportType 方法](../../../../docs/framework/unmanaged-api/alink/exporttype-method.md)也可以匯出巢狀類型，但這個方法會比較快。  
@@ -70,6 +70,7 @@ HRESULT ExportNestedType(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation, Value control pattern
 - Value control pattern
 ms.assetid: b0fcdd87-3add-4345-bca9-e891205e02ba
-ms.openlocfilehash: 8a306fe648c42e1e94126f10b0d4c92f9dfc8831
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: cccaf1afa55d786e43863e094a9745a0a1d00870
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678069"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174950"
 ---
 # <a name="implementing-the-ui-automation-value-control-pattern"></a>實作 UI 自動化 Value 控制項模式
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57678069"
   
 -   <xref:System.Windows.Automation.Provider.IValueProvider> 不支援擷取格式設定資訊或子字串值。 在這些案例中請實作 <xref:System.Windows.Automation.Provider.ITextProvider> 。  
   
--   <xref:System.Windows.Automation.Provider.IValueProvider> 必須由例如來自 **F:System.Windows.Automation.ValuePattern.IsReadOnlyProperty** 的色彩選擇器 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] 選擇控制項等控制項實作 (下面詳述)，它可支援色彩值 (例如「黃色」) 和對等內部 [!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)] 結構之間的字串對應。  
+-   <xref:System.Windows.Automation.Provider.IValueProvider> 必須實作控制項這類**色彩選擇器**選取控制項[!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)]（下面詳述），可支援色彩值 （例如 「 黃色 」） 與對等的內部之間的字串對應[!INCLUDE[TLA#tla_rgb](../../../includes/tlasharptla-rgb-md.md)]結構。  
   
  ![反白顯示黃色的色彩選擇器。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色樣字串對應範例  
@@ -49,9 +49,9 @@ ms.locfileid: "57678069"
   
 |必要成員|成員類型|注意|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|屬性|無|  
-|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|無|  
-|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|無|  
+|<xref:System.Windows.Automation.ValuePattern.IsReadOnlyProperty>|屬性|None|  
+|<xref:System.Windows.Automation.ValuePattern.ValueProperty>|屬性|None|  
+|<xref:System.Windows.Automation.ValuePattern.SetValue%2A>|方法|None|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外狀況  
@@ -64,9 +64,10 @@ ms.locfileid: "57678069"
 |<xref:System.Windows.Automation.ElementNotEnabledException>|<xref:System.Windows.Automation.ValuePattern.SetValue%2A><br /><br /> -當會嘗試將管理未啟用的控制項。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [ValuePattern 插入文字範例](https://github.com/Microsoft/WPF-Samples/tree/master/Accessibility/InsertText)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

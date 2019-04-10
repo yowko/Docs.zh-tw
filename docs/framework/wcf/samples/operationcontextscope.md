@@ -2,12 +2,12 @@
 title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
-ms.openlocfilehash: 24c4478ac53ab5f1a38476d00d47152cafb7db0d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: f48a63b1706cad3dfa8b58d84d4a2b5ef818ea92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212501"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope 範例會示範如何傳送上使用標頭的 Windows Communication Foundation (WCF) 呼叫的額外資訊。 在此範例中，伺服器與用戶端都是主控台應用程式。  
@@ -129,4 +129,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\OperationContextScope`  
-  

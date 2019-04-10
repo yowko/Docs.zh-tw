@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 361e9bd4-447d-44b7-8629-3c11f1a7ffbb
-ms.openlocfilehash: e2688baf3e459c9d0586a0cf4310539e32f49d8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a3e2298341d5ea938e0d13df09d3428837f53cec
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599586"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218639"
 ---
 # <a name="retrieving-data-from-multiple-ref-cursors-using-an-oracledatareader"></a>使用 OracleDataReader 從多個 REF CURSOR 擷取資料
 此 Microsoft Visual Basic 範例執行可傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用 <xref:System.Data.OracleClient.OracleDataReader> 讀取值。  
@@ -51,5 +51,6 @@ End Sub
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccab0f311e51c0e82998b58f75f38359271065e3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 889c3bb2d5e0cd1feb9e592e667d47dedd4ede36
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57493137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171141"
 ---
 # <a name="icordebugblockingobjectenumnext-method"></a>ICorDebugBlockingObjectEnum::Next 方法
 取得指定的數目[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)從列舉型別，從目前位置開始的物件。  
@@ -52,7 +52,7 @@ HRESULT Next([in] ULONG  celt,
 |HRESULT|描述|  
 |-------------|-----------------|  
 |S_OK|已成功完成命令。|  
-|S_FALSE|`pceltFetched` 不等於 `celt`。|  
+|S_FALSE|`pceltFetched` 不等於`celt`。|  
   
 ## <a name="remarks"></a>備註  
  這個方法會如同一般的 COM 列舉值。  
@@ -65,13 +65,14 @@ HRESULT Next([in] ULONG  celt,
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugDataTarget 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugdatatarget-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

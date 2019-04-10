@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f4a062e060e7b367f0d56b3633238de74ae8ed88
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c58be27334bcb862367464475a4eade5e01bdbb2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281667"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221609"
 ---
 # <a name="field-element-net-native"></a>\<欄位 > 項目 (.NET Native)
 將執行階段反映原則套用至欄位。  
@@ -55,12 +55,13 @@ ms.locfileid: "55281667"
 |項目|描述|  
 |-------------|-----------------|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將反映原則套用至類型及其所有成員。|  
-|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至已建構的泛型類型及其所有成員。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將反映原則套用至建構泛型類型及其所有成員。|  
   
 ## <a name="remarks"></a>備註  
  如果未明確定義欄位的原則，則會繼承其父元素的執行階段原則。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

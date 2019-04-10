@@ -1,5 +1,5 @@
 ---
-title: HOW TO：定義調整大小和位置行為在分隔視窗
+title: HOW TO：定義分割視窗的調整大小和位置行為
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: a0e16a1961e5eb7fcb81503d0ccead38e08974dc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628249"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217064"
 ---
-# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>HOW TO：定義調整大小和位置行為在分隔視窗
+# <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>HOW TO：定義分割視窗的調整大小和位置行為
 個面板<xref:System.Windows.Forms.SplitContainer>控制項讓他們也正在調整大小，並由使用者操作。 不過，可能會當您將想要以程式設計方式控制分隔器，其中的位置，而哪種程度移動。  
   
  <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>屬性和其他屬性，在<xref:System.Windows.Forms.SplitContainer>控制項讓您精確地控制您的使用者介面，以符合您需求的行為。 下表會列出這些屬性。  
@@ -64,5 +64,6 @@ ms.locfileid: "54628249"
      向左或向右稍微移動分隔器會有任何顯著的作用中;不過，當滑鼠指標進入任一方向的 10 個像素，分隔器會貼齊至新位置中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.SplitContainer>
 - <xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>

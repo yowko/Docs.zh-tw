@@ -1,5 +1,5 @@
 ---
-title: HOW TO：啟用混合式應用程式中的視覺化樣式
+title: HOW TO：在混合應用程式中啟用視覺化樣式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
-ms.openlocfilehash: 9588a2e2d839af43ffe4397303c4a45cad5af2e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 76055358f9dede9749d1575a5f43d5593c1c9b51
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371914"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176367"
 ---
-# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>HOW TO：啟用混合式應用程式中的視覺化樣式
+# <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>HOW TO：在混合應用程式中啟用視覺化樣式
 本主題說明如何啟用[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]視覺化樣式上[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]為基礎的應用程式。  
   
  如果您的應用程式呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法，則大部分您[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]上執行您的應用程式時，控制項將會自動使用視覺化樣式[!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 呈現具有視覺化樣式的控制項](../../winforms/controls/rendering-controls-with-visual-styles.md)。  
@@ -67,8 +67,9 @@ ms.locfileid: "57371914"
      [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項使用預設系統樣式所繪製。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Application.EnableVisualStyles%2A>
 - <xref:System.Windows.Forms.VisualStyles>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [使用視覺化樣式呈現控制項](../../winforms/controls/rendering-controls-with-visual-styles.md)
-- [逐步解說：裝載在 WPF 中的 Windows Forms 控制項](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [逐步解說：將 Windows Forms 控制項裝載在 WPF 中](walkthrough-hosting-a-windows-forms-control-in-wpf.md)

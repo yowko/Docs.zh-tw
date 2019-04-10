@@ -1,5 +1,5 @@
 ---
-title: <webProxyScript> 項目 (網路設定)
+title: <webProxyScript> 項目 （網路設定）
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#webProxyScript
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <webProxyScript> element
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
-ms.openlocfilehash: e823d6065ea23f3a47dad6853a1b9e1237a616c9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257820"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218663"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 項目 （網路設定）
 設定用來探索 Web proxy 指令碼的特性。  
@@ -47,7 +47,7 @@ ms.locfileid: "55257820"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
+|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|為 <xref:System.Net> 命名空間設定基本的網路選項。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -55,4 +55,5 @@ ms.locfileid: "55257820"
  此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [網路設定結構描述](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

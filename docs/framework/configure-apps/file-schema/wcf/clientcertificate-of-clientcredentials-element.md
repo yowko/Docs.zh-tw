@@ -1,13 +1,13 @@
 ---
-title: <clientCertificate> 項目的 <clientCredentials>
+title: <clientCertificate> <clientCredentials>項目
 ms.date: 03/30/2017
 ms.assetid: 3b3fa000-3434-4142-a178-11903bdd2c5d
-ms.openlocfilehash: 1ca2973b4c0e745f13c1364b2284909d07da738c
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 5abf0a99beff1b9fb3655cb82d74484f3b88237f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216453"
 ---
 # <a name="clientcertificate-of-clientcredentials-element"></a>\<clientCertificate > 的\<clientCredentials > 項目
 定義用於向服務驗證的 X.509 憑證。  
@@ -50,9 +50,10 @@ ms.locfileid: "55273122"
 |[\<clientCredentials>](../../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)|指定用來對服務驗證用戶端的認證。|  
   
 ## <a name="remarks"></a>備註  
- 這個組態項目會指定憑證，此憑證會用來驗證具有這個項目的用戶端。 如需詳細資訊，請參閱[＜How to：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
+ 這個組態項目會指定憑證，此憑證會用來驗證具有這個項目的用戶端。 如需詳細資訊，請參閱[如何：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ClientCertificate%2A>
 - <xref:System.ServiceModel.Description.ClientCredentials>
@@ -60,7 +61,7 @@ ms.locfileid: "55273122"
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [如何：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [HOW TO：指定用戶端認證值](../../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

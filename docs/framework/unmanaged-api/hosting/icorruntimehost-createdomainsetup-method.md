@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2758deaabf9db1cbc5465eb9b5976add534e87b4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 88f5de9882f8a029769d0ccbdac21aec541582a4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469661"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157361"
 ---
 # <a name="icorruntimehostcreatedomainsetup-method"></a>ICorRuntimeHost::CreateDomainSetup 方法
 取得介面指標的類型來 IAppDomainSetup<xref:System.AppDomainSetup?displayProperty=nameWithType>執行個體。 `IAppDomainSetup` 提供方法來設定應用程式定義域的層面，才能建立。  
@@ -56,11 +56,12 @@ HRESULT CreateDomainSetup (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.AppDomainSetup>

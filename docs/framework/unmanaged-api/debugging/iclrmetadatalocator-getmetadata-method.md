@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74a54da0bc4257ccc50d2d99177a17b796380fb3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e677aefd5420f71867c1f11a2c9408c77d305c45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57481426"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161370"
 ---
 # <a name="iclrmetadatalocatorgetmetadata-method"></a>ICLRMetadataLocator::GetMetadata 方法
 由通用語言執行平台 (CLR) 資料存取服務擷取的映像的中繼資料的呼叫。  
@@ -80,9 +80,10 @@ HRESULT GetMetadata(
   
  **標頭：** ClrData.idl, ClrData.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRMetadataLocator 介面](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-interface.md)

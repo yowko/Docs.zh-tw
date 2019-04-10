@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 077a28f345b886fd9ec183b5828c0535ce688cb4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: a6ac0158c4fb9d766fd56ee50d0b1b6cc91e5de3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364836"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219625"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>HOW TO：處理 ContextMenuOpening 事件
 <xref:System.Windows.FrameworkElement.ContextMenuOpening>可以調整現有內容功能表之前以顯示或隱藏的功能表，否則會顯示藉由設定應用程式中處理事件<xref:System.Windows.RoutedEventArgs.Handled%2A>屬性設`true`事件資料中。 設定的一般原因<xref:System.Windows.RoutedEventArgs.Handled%2A>要`true`在事件資料就是把完全與新的功能表<xref:System.Windows.Controls.ContextMenu>物件時，有時需要取消作業，並啟動新的開放。 如果您撰寫處理常式<xref:System.Windows.FrameworkElement.ContextMenuOpening>事件，您應該留意之間的計時問題<xref:System.Windows.Controls.ContextMenu>控制項和負責開啟並定位操作功能表控制項的一般服務。 本主題說明一些不同的內容功能表開啟案例的程式碼技術，並說明其中計時問題派上用場的情況。  
@@ -56,6 +56,7 @@ ms.locfileid: "57364836"
  [!code-csharp[ContextMenuOpeningHandlers#ReplaceReopen](~/samples/snippets/csharp/VS_Snippets_Wpf/ContextMenuOpeningHandlers/CSharp/Pane1.xaml.cs#replacereopen)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.ContextMenu>
 - <xref:System.Windows.FrameworkElement.ContextMenu%2A?displayProperty=nameWithType>
 - [基底項目概觀](base-elements-overview.md)

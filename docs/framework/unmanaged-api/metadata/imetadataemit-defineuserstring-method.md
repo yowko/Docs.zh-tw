@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 820b0c464f591ca71072d35886a910f5409f654e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f24dd3864be1bda454ac5e863f3fa2caf736bda9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478293"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215218"
 ---
 # <a name="imetadataemitdefineuserstring-method"></a>IMetaDataEmit::DefineUserString 方法
 取得指定的常值字串的中繼資料語彙基元。  
@@ -52,10 +52,11 @@ HRESULT DefineUserString (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ed45c3975c58331490f89d8ca705f080d01d74e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 7a538f14e7dbf24a94343f364201e968bffa757f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158921"
 ---
 # <a name="icorruntimehostcreatedomainex-method"></a>ICorRuntimeHost::CreateDomainEx 方法
 建立應用程式定義域。 呼叫端會收到類型的介面指標<xref:System._AppDomain>，執行個體的型別<xref:System.AppDomain?displayProperty=nameWithType>。 這個方法可讓呼叫端傳遞 IAppDomainSetup 執行個體來設定傳回的其他功能<xref:System._AppDomain>執行個體。  
@@ -68,11 +68,12 @@ HRESULT CreateDomainEx (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - <xref:System.IAppDomainSetup?displayProperty=nameWithType>

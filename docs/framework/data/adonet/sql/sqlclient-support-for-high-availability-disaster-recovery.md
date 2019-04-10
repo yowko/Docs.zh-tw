@@ -2,12 +2,12 @@
 title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 50f2e4c46fbb8c043237aac90ffee98112b8cefa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609118"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213788"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
 本主題討論高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 的 SqlClient 支援 (在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中新增)。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
@@ -55,7 +55,7 @@ ms.locfileid: "54609118"
   
 -   提高 `Connect Timeout` 的值可延長容錯移轉時間並減少應用程式重試連接的次數。  
   
--   不支援分散式交易。  
+-   不支援分散式異動。  
   
  如果唯讀路由沒有作用，在下列情況下連接到次要複本位置會失敗：  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54609118"
   
 2.  如果應用程式使用 `ApplicationIntent=ReadWrite` (討論如下)，且次要複本位置設定為唯讀存取。  
   
- 唯讀次要複本不支援 <xref:System.Data.SqlClient.SqlDependency>。  
+ <xref:System.Data.SqlClient.SqlDependency> 不支援在唯讀的次要複本上。  
   
  如果主要複本設定為拒絕唯讀工作負載，且連接字串包含 `ApplicationIntent=ReadOnly`，連接將會失敗。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "54609118"
   
  `ApplicationIntent` 關鍵字不適用於舊式的唯讀資料庫。  
   
- 資料庫可以允許或不允許目標 AlwaysOn 資料庫上的讀取工作負載。 (此作業會透過 `ALLOW_CONNECTIONS` 和 `PRIMARY_ROLE``SECONDARY_ROLE` 陳述式的 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 子句來完成)。  
+ 資料庫可以允許或不允許目標 AlwaysOn 資料庫上的讀取工作負載。 (這藉`ALLOW_CONNECTIONS`子句`PRIMARY_ROLE`和`SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]陳述式。)  
   
  `ApplicationIntent` 關鍵字可用於啟用唯讀路由。  
   
@@ -97,5 +97,6 @@ ms.locfileid: "54609118"
  唯讀路由連接到主要複本的時間較長，因為唯讀路由會先連接到主要複本，再尋找最適合的可讀次要複本。 因此，您應延長登入逾時。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 功能和 ADO.NET](../../../../../docs/framework/data/adonet/sql/sql-server-features-and-adonet.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

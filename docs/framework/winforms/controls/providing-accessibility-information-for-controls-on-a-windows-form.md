@@ -6,12 +6,12 @@ helpviewer_keywords:
 - controls [Windows Forms], accessibility
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
-ms.openlocfilehash: 976aff327a5212c181d455bab1cdc84f98d75a2a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540908"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218325"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>為 Windows Form 上的控制項提供可及性資訊
 協助工具是特製化的程式和裝置，可以協助殘障人士更有效地使用電腦。 範例包括針對視障人士的螢幕助讀程式，以及提供口頭指令，而不是使用滑鼠或鍵盤的人所適用的語音輸入公用程式。 這些協助工具會與 Windows Forms 控制項所公開的協助工具屬性互動。 這些屬性是：  
@@ -89,6 +89,7 @@ pictureBox1->AccessibleRole = AccessibleRole::Chart;
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.AccessibleObject>
 - <xref:System.Windows.Forms.Control.AccessibilityObject%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.AccessibleDefaultActionDescription%2A?displayProperty=nameWithType>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - PrincipalPermissionMode
 - PrincipalPermissionAttribute
 ms.assetid: c4845fca-0ed9-4adf-bbdc-10812be69b61
-ms.openlocfilehash: 8f957419bcb12b0dbe735240df3cd38fa7d16e76
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b8b18f6c66fdb8f2446d3ddc5c584c5bad44ef3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54739676"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158791"
 ---
 # <a name="how-to-create-a-custom-principal-identity"></a>HOW TO：建立自訂主體身分識別
 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 是控制存取服務方法的宣告式方法。 當使用這個屬性時，<xref:System.ServiceModel.Description.PrincipalPermissionMode> 列舉會指定執行授權檢查的模式。 當這個模式設定為 <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> 時，可讓使用者指定由 <xref:System.Security.Principal.IPrincipal> 屬性傳回的自訂 <xref:System.Threading.Thread.CurrentPrincipal%2A> 類別。 本主題將示範當使用 <xref:System.ServiceModel.Description.PrincipalPermissionMode.Custom> 結合自訂授權原則和自訂主體時的案例。  
@@ -50,8 +50,9 @@ ms.locfileid: "54739676"
 -   <xref:System.IdentityModel.Policy>  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.ServiceModel.Description.PrincipalPermissionMode>
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [如何：使用 ASP.NET 角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [如何：以 PrincipalPermissionAttribute 類別限制存取](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [HOW TO：使用 ASP.NET 角色提供者搭配服務](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)

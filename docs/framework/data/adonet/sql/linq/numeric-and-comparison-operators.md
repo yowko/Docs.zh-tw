@@ -2,12 +2,12 @@
 title: 數值與比較運算子
 ms.date: 03/30/2017
 ms.assetid: 25b4a26a-06f2-4f80-87a9-76705ed46197
-ms.openlocfilehash: e2bdc55cd6c2203bc96d0766e5e53a57294d4d7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9b31fd2d819afbb1e589ad74f23ec139830c68b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212163"
 ---
 # <a name="numeric-and-comparison-operators"></a>數值與比較運算子
 除了下列幾點以外，在 Common Language Runtime (CLR) 中算術和比較運算子都會如預期運作：  
@@ -25,7 +25,7 @@ ms.locfileid: "54554708"
   
     -   `+`  
   
-    -   `-` (減法)  
+    -   `-` （減法）  
   
     -   `*`  
   
@@ -39,13 +39,13 @@ ms.locfileid: "54554708"
   
     -   `>>`  
   
-    -   `-` (一元否定運算)  
+    -   `-` （一元否定運算）  
   
 -   基本比較運算子：  
   
-    -   Visual Basic `=` 和 C# `==`  
+    -   Visual Basic`=`和 C# `==`  
   
-    -   Visual Basic `<>` 和 C# `!=`  
+    -   Visual Basic`<>`和 C# `!=`  
   
     -   Visual Basic `Is/IsNot`  
   
@@ -58,6 +58,7 @@ ms.locfileid: "54554708"
     -   `>=`  
   
 ## <a name="see-also"></a>另請參閱
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
+- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
 - [C# 運算子](../../../../../../docs/csharp/language-reference/operators/index.md)
 - [運算子](../../../../../visual-basic/language-reference/operators/index.md)

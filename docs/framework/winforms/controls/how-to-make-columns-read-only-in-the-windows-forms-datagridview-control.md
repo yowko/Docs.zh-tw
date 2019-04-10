@@ -1,5 +1,5 @@
 ---
-title: HOW TO：讓唯讀的 Windows Form DataGridView 控制項中的資料行
+title: HOW TO：將 Windows Forms DataGridView 控制項的資料行設成唯讀
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], read-only columns
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
-ms.openlocfilehash: cad80a7b242622802b5897d9903c765a877e6fd4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171921"
 ---
-# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>HOW TO：讓唯讀的 Windows Form DataGridView 控制項中的資料行
+# <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>HOW TO：將 Windows Forms DataGridView 控制項的資料行設成唯讀
 並非所有資料都是可編輯的。 在 <xref:System.Windows.Forms.DataGridView> 控制項中，資料行 <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A> 屬性值會決定使用者是否能編輯該資料行中的儲存格。 如需如何將控制項設完全唯讀的資訊，請參閱[How to:防止資料列中新增和刪除 Windows Form DataGridView 控制項](prevent-row-addition-and-deletion-datagridview.md)。  
   
  在 Visual Studio 中會支援這項工作。  另請參閱[How to:資料行設為唯讀模式中的 Windows Form DataGridView 控制項使用設計工具](make-columns-read-only-in-the-datagrid-using-the-designer.md)。  
@@ -32,12 +32,12 @@ ms.locfileid: "57718355"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項，包含名為 `CompanyName` 的資料行。  
   
--   
-  <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType> 和 <xref:System.Windows.Forms?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
-- [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [如何：防止資料列新增與 Windows Form DataGridView 控制項中刪除](prevent-row-addition-and-deletion-datagridview.md)
+- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [HOW TO：防止在 Windows Forms DataGridView 控制項中新增和刪除資料列](prevent-row-addition-and-deletion-datagridview.md)

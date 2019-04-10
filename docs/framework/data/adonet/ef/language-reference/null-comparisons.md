@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: b5535343b5ac40b12aa06ffb5b587e114f5cd757
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54521396"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222662"
 ---
 # <a name="null-comparisons"></a>Null 比較
 資料來源中的 `null` 值表示該值未知。 在 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] 查詢中，您可以檢查 null 值，以便讓某些計算或比較只會在包含有效或非 null 資料的資料列上執行。 不過，CLR null 語意 (Semantics) 可能與資料來源的 null 語意不同。 大部分的資料庫都使用三值邏輯來處理 null 比較， 也就是針對 null 值的比較不會評估`true`或是`false`，其評估結果為`unknown`。 通常，這是 ANSI NULLS 的實作，可是實際情況不一定如此。  
@@ -47,4 +47,5 @@ WHERE h.ShipDate IS Null
  在  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]，當您傳遞一組支援`IQueryable`彙總函式，在資料庫上執行彙總的作業。 可能的記憶體中執行的查詢以及在資料庫中執行的查詢結果中的差異。 使用記憶體中查詢，如果沒有相符的項目，查詢會傳回零。 同樣的查詢在資料庫中則會傳回 `null`。 如果`null`值會傳遞至 LINQ 彙總函式，將會擲回例外狀況。 若要接受可能`null`值，轉換的類型和類型接收查詢結果為 null 類型的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Entities 查詢中的運算式](../../../../../../docs/framework/data/adonet/ef/language-reference/expressions-in-linq-to-entities-queries.md)

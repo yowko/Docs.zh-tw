@@ -11,19 +11,19 @@ helpviewer_keywords:
 - configuration sections [.NET Framework]
 - elements [.NET Framework], trace and debug settings
 ms.assetid: 277ca5f6-e1c4-41b6-a47f-3a67ce5b94ac
-ms.openlocfilehash: 0ea53f0c9a209d9bcbcc1e758cdcf957cde095dc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 79054ba450dcab1a18562aaadd71b9171896c1e9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177433"
 ---
 # <a name="trace-and-debug-settings-schema"></a>追蹤和偵錯設定結構描述
 追蹤和偵錯設定會指定用於收集、儲存及路由傳送訊息的追蹤接聽項，以及設定追蹤參數的層級。  
   
  下表描述每個追蹤和偵錯設定項目的函式。  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-source.md)|將接聽項新增至追蹤來源的 `Listeners` 集合。|  
 |[\<add>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/add-element-for-listeners-for-trace.md)|將接聽項新增至 `Listeners` 集合。|  
@@ -48,6 +48,7 @@ ms.locfileid: "55083492"
 |[\<trace>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)|包含用於收集、儲存及路由傳送追蹤訊息的接聽項。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.Trace>
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.Debug>

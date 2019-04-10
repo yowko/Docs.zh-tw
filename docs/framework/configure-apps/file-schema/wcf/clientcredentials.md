@@ -2,12 +2,12 @@
 title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
-ms.openlocfilehash: 7ee49d6960864826dc74fbff629f502fcc70b4bf
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254804"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157231"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
 指定用來對服務驗證用戶端的認證。  
@@ -45,7 +45,7 @@ ms.locfileid: "55254804"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|`supportInteractive`|布林值，指定互動式使用者是否可以在執行階段選取用戶端認證。 預設值是 `true`。|  
+|`supportInteractive`|布林值，指定互動式使用者是否可以在執行階段選取用戶端認證。 預設值為 `true`。|  
 |`type`|字串，指定這個組態項目的型別。|  
   
 ### <a name="child-elements"></a>子元素  
@@ -69,7 +69,8 @@ ms.locfileid: "55254804"
  在需要雙向驗證的情況下，用戶端認證可用於驗證服務的用戶端。 在用戶端必須以服務的憑證保護傳遞給服務的訊息時，這個組態區段也可以用來指定服務憑證。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)

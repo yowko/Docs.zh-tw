@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b71c177c7c0cb029fb7cfa734f54c87abf20b348
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7864bb81c3b457bf8ec07cd194d24b29a42bd441
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557834"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156061"
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager 介面
 實作回呼方法，讓以通知 common language runtime (CLR) 主機狀態的指定的 I/O 要求。  
@@ -40,11 +40,12 @@ ms.locfileid: "54557834"
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IHostIoCompletionManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-interface.md)
 - [IHostThreadPoolManager 介面](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-interface.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

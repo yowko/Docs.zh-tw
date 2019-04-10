@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], enumeration
 - enumeration [WPF]
 ms.assetid: b9091eba-1119-424e-868b-d1a4168b3732
-ms.openlocfilehash: df26d2bd08e4691837f739a4e71d3bb1a25bdd00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5026261366d6abde82790f05780d8ba2c29c4a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210018"
 ---
 # <a name="how-to-bind-to-an-enumeration"></a>HOW TO：繫結至列舉
 此範例示範如何將繫結至繫結至列舉型別的 GetValues 方法來列舉型別。  
@@ -22,6 +22,7 @@ ms.locfileid: "57377790"
  [!code-xaml[BindToEnum#BindToEnum](~/samples/snippets/csharp/VS_Snippets_Wpf/BindToEnum/CS/Window1.xaml#bindtoenum)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [繫結至方法](how-to-bind-to-a-method.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

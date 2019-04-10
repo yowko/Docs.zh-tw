@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 219c710e8552ae3291c2b144c6048f4ff6710540
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048913"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221596"
 ---
 # <a name="generics-in-xaml"></a>XAML 中的泛型
 .NET Framework XAML 服務中 System.Xaml 實作提供支援使用泛型的 CLR 型別。 這項支援包括作為類型引數中指定的泛型條件約束，並強制執行條件約束，藉由呼叫適當`Add`泛型集合案例的方法。 本主題描述使用和參考 XAML 中的泛型類型的層面。  
@@ -43,6 +43,7 @@ ms.locfileid: "58048913"
  針對 Windows Workflow Foundation 中的自訂工作流程[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]不支援一般的 XAML 用途。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [x:TypeArguments 指示詞](x-typearguments-directive.md)
 - [x:Class 指示詞](x-class-directive.md)
 - [通用 XAML 語言基本類型的內建類型](built-in-types-for-common-xaml-language-primitives.md)

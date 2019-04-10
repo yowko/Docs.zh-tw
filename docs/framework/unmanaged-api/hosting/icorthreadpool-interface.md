@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc01cf25000d4b5f3fa44ae96cb885b7cb67365b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a30f10e322961d52c1fa726d5fd81e4c710a5835
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737120"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211760"
 ---
 # <a name="icorthreadpool-interface"></a>ICorThreadpool 介面
 提供方法來存取執行緒集區。  
@@ -50,9 +50,10 @@ ms.locfileid: "54737120"
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

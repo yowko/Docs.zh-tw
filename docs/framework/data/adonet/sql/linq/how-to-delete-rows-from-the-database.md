@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 598828f7750fe02082dfccacc64102f96588cb3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54554305"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213294"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>HOW TO：從資料庫刪除資料列
 您可以刪除資料列，在資料庫中的移除對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]從其資料表相關集合的物件。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會轉譯成適當的 SQL 變更`DELETE`命令。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯 (Cascade) 刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須完成下列其中一項工作：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援或辨識串聯刪除作業。 如果您要刪除有條件約束之資料表中的資料列，必須完成下列其中一項工作：  
   
 -   在資料庫的外部索引鍵條件約束中設定 `ON DELETE CASCADE` 規則。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "54554305"
 >   
 >  使用 Visual Studio 的開發人員可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來開發預存程序，針對相同目的。  
   
- 下列步驟假設一個有效的 <xref:System.Data.Linq.DataContext> 會將您連接至 Northwind 資料庫。 如需詳細資訊，請參閱[＜How to：連接到資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)。  
+ 下列步驟假設一個有效的 <xref:System.Data.Linq.DataContext> 會將您連接至 Northwind 資料庫。 如需詳細資訊，請參閱[如何：連接到資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)。  
   
 ### <a name="to-delete-a-row-in-the-database"></a>若要從資料庫刪除資料列  
   
@@ -51,6 +51,7 @@ ms.locfileid: "54554305"
  [!code-vb[DLinqCascadeWorkaround#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCascadeWorkaround/vb/Module1.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
-- [如何：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
-- [變更和提交資料](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)
+
+- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [HOW TO：指派用來執行更新、插入和刪除的預存程序 (O/R 設計工具)](/visualstudio/data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer)
+- [變更資料和提交](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

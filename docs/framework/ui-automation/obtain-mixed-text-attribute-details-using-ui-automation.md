@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d0e4c005-abd1-42bb-92a4-5faf87097311
-ms.openlocfilehash: 01131da94c7484cd2bd0141fdafc67c21cd55f39
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: f52ff1b669f821d102a65888189d9bbf2c000da8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675744"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158479"
 ---
 # <a name="obtain-mixed-text-attribute-details-using-ui-automation"></a>利用 UI 自動化取得混合文字屬性的詳細資料
 > [!NOTE]
@@ -27,9 +27,10 @@ ms.locfileid: "57675744"
  <xref:System.Windows.Automation.TextPattern> 控制項模式 (結合 <xref:System.Windows.Automation.Text.TextPatternRange> 類別) 可支援基本文字屬性 (Attribute)、屬性 (Property) 及方法。 如果是 <xref:System.Windows.Automation.TextPattern> 或 <xref:System.Windows.Automation.Text.TextPatternRange>不支援的控制項特定功能， <xref:System.Windows.Automation.AutomationElement> 類別會提供使用者介面自動化用戶端方法，以存取對應的原生物件模型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化 TextPattern 概觀](../../../docs/framework/ui-automation/ui-automation-textpattern-overview.md)
-- [使用 UI 自動化將內容新增至文字方塊](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
-- [使用 UI 自動化尋找和反白顯示文字](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
+- [使用 UI 自動化將內容加入至文字方塊](../../../docs/framework/ui-automation/add-content-to-a-text-box-using-ui-automation.md)
+- [利用 UI 自動化尋找和反白顯示文字](../../../docs/framework/ui-automation/find-and-highlight-text-using-ui-automation.md)
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [使用 UI 自動化取得文字屬性](../../../docs/framework/ui-automation/obtain-text-attributes-using-ui-automation.md)

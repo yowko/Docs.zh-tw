@@ -6,12 +6,12 @@ helpviewer_keywords:
 - cells [Windows Forms], styles
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
-ms.openlocfilehash: a22fc29d2cab21977c0411a440b847b426fb5915
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ec2a34deb25cd5f4cf492d92129ffc61d14001ab
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712268"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171518"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的儲存格樣式
 每個資料格內<xref:System.Windows.Forms.DataGridView>控制項可以有它自己的樣式，例如文字格式、 背景色彩、 前景色彩和字型。 一般而言，不過，多個資料格會共用特定樣式特性。  
@@ -145,6 +145,7 @@ ms.locfileid: "57712268"
 >  快取儲存在儲存格的值<xref:System.Windows.Forms.DataGridViewCell.Style%2A>屬性是非常重要，不論是否已設定特定的樣式值。 如果您暫時將樣式設定，將它還原到其原始的 「 未設定 」 狀態可確保儲存格將回送到較高層級繼承樣式設定。 如果您需要決定儲存格值，不管是否繼承樣式是作用中的實際樣式，請使用儲存格的<xref:System.Windows.Forms.DataGridViewCell.InheritedStyle%2A>屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewCellStyle>
 - <xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A?displayProperty=nameWithType>
@@ -162,6 +163,6 @@ ms.locfileid: "57712268"
 - <xref:System.Windows.Forms.DataGridView.CellStyleContentChanged?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType>
-- [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [如何：為 Windows Form DataGridView 控制項中的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的資料格式](data-formatting-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [HOW TO：設定 Windows Forms DataGridView 控制項的預設儲存格樣式](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的資料格式](data-formatting-in-the-windows-forms-datagridview-control.md)

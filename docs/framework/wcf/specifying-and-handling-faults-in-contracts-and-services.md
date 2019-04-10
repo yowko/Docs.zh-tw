@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
-ms.openlocfilehash: e0a81915d35bc382cb4f51ec6d26a429c8a759c1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594924"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210668"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>指定與處理合約和服務中的錯誤
 Windows Communication Foundation (WCF) 應用程式會將 managed 例外狀況物件對應至 SOAP 錯誤物件，並對 managed 例外狀況物件的 SOAP 錯誤物件，以處理錯誤情況。 本節中的主題討論如何設計合約以將錯誤條件公開為自訂 SOAP 錯誤、如何將此類錯誤當成服務實作的一部份傳回，以及用戶端如何捕捉此類錯誤。  
@@ -56,6 +56,7 @@ Windows Communication Foundation (WCF) 應用程式會將 managed 例外狀況�
  還原序列化錯誤合約時，WCF 會先嘗試使用錯誤合約型別來比對 SOAP 訊息中的錯誤合約名稱。 如果它找不到完全符合的項目，就會按照字母順序，在可用的錯誤合約清單中搜尋相容型別。 如果有兩個錯誤合約是相容型別 (例如，其中一個合約是另一個合約的子類別)，可能會使用錯誤的型別來還原序列化錯誤合約。 只有當錯誤合約沒有指定名稱、命名空間和動作時，才會發生這種情況。 若要避免此問題發生，請一律指定名稱、命名空間和動作屬性，藉以完整限定錯誤合約。 此外，如果您已經定義許多衍生自共用基底類別的相關錯誤合約，請務必使用 `[DataMember(IsRequired=true)]` 來標記任何新成員。 如需這個 `IsRequired` 屬性的詳細資訊，請參閱 <xref:System.Runtime.Serialization.DataMemberAttribute>。 這個屬性可避免基底類別成為相容型別，並且強制將錯誤合約還原序列化成正確的衍生型別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.FaultException>
 - <xref:System.ServiceModel.FaultContractAttribute>
 - <xref:System.ServiceModel.FaultException>

@@ -2,12 +2,12 @@
 title: 可序列化的型別
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: 0fe29d2eb2b50d2515d71745bc062255dbfb60ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 44fc538ccb69296b91c94d2b9ae497be599c0c7e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54608046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160845"
 ---
 # <a name="serializable-types"></a>可序列化的型別
 根據預設，<xref:System.Runtime.Serialization.DataContractSerializer> 會序列化所有公開可見的型別。 型別的所有公用讀取/寫入屬性 (Property) 和欄位都會序列化。  
@@ -27,7 +27,7 @@ ms.locfileid: "54608046"
   
 -   唯讀欄位、沒有 `get` 或 `set` 方法的屬性，以及具有內部或私用 `set` 或 `get` 方法的屬性不會序列化。 這類屬性會被略過，而且不會擲回例外狀況，但不包括 get-only 集合。  
   
--   <xref:System.Xml.Serialization.XmlSerializer> 屬性 (例如 `XmlElement`、`XmlAttribute`、`XmlIgnore`、`XmlInclude` 等屬性) 會被略過。  
+-   <xref:System.Xml.Serialization.XmlSerializer> 屬性 (例如`XmlElement`， `XmlAttribute`， `XmlIgnore`，`XmlInclude`等等) 都會被忽略。  
   
 -   如果您未將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性套用至指定的型別，則序列化程式會忽略該型別中任何已套用 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性的成員。  
   
@@ -39,8 +39,9 @@ ms.locfileid: "54608046"
  未標記的型別 (沒有 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性的型別) 可以繼承自沒有這個屬性的型別，不過不允許反向操作，也就是說，擁有這個屬性的型別無法繼承自未標記的型別。 強制執行這個規則的主要原因，是為了確保與使用舊版 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 撰寫的程式碼回溯相容。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Xml.Serialization.XmlSerializer>
-- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)

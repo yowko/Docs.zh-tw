@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, changing data
 ms.assetid: e3f2d71d-434c-4e98-91c3-95adae4702b6
-ms.openlocfilehash: 2a515609feff343b6e917bf420a06cfb9dc468df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6fa8e9d66fa89eb058aafd1e74164097b7f5c3a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614220"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157848"
 ---
 # <a name="how-to-attach-an-existing-entity-to-the-dataservicecontext-wcf-data-services"></a>HOW TO：將現有實體附加至 DataServiceContext (WCF Data Services)
 當實體已經存在於資料服務時，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫可讓您附加物件，表示實體直接<xref:System.Data.Services.Client.DataServiceContext>且不需先執行查詢。 如需詳細資訊，請參閱 <<c0> [ 更新資料服務](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)。  
@@ -26,4 +26,5 @@ ms.locfileid: "54614220"
  [!code-vb[Astoria Northwind Client#AttachObject](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#attachobject)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

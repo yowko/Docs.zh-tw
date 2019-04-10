@@ -3,12 +3,12 @@ title: <trustedIssuers>
 ms.date: 03/30/2017
 ms.assetid: d818c917-07b4-40db-9801-8676561859fd
 author: BrucePerlerMS
-ms.openlocfilehash: bb4cb5178885b90ef25ee827c2f11593ead6e73d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: cebfc2f3598f32f233db6039dfe82076d2ffce46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221700"
 ---
 # <a name="trustedissuers"></a>\<trustedIssuers>
 設定使用的組態為基礎的簽發者名稱登錄的受信任簽發者憑證的清單 (<xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>)。  
@@ -44,7 +44,7 @@ ms.locfileid: "57354553"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -77,5 +77,6 @@ ms.locfileid: "57354553"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Tokens.ConfigurationBasedIssuerNameRegistry>
 - <xref:System.IdentityModel.Tokens.IssuerNameRegistry>

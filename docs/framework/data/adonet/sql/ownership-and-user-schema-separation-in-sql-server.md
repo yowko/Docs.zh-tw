@@ -2,12 +2,12 @@
 title: SQL Server 中的擁有權和使用者結構描述分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
-ms.openlocfilehash: 68a65cb950c54be9a4f9354a6ca20cbeeaafb938
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092601"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221856"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server 中的擁有權和使用者結構描述分離
 SQL Server 安全性的核心概念是物件的擁有者具有不可撤銷的物件管理權限。 您無法移除物件擁有者的權限，而使用者只要擁有資料庫中的物件，就無法將其從資料庫卸除。  
@@ -58,9 +58,10 @@ Server.Database.DatabaseSchema.DatabaseObject
 |[使用者結構描述分隔](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms190387(v=sql.105))|說明由使用者結構描述分隔引入的變更。 包括新增行為、對擁有權的影響、目錄檢視和權限。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [SQL Server 中的應用程式安全性案例](../../../../../docs/framework/data/adonet/sql/application-security-scenarios-in-sql-server.md)
 - [在 SQL Server 中進行驗證](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server 中的伺服器和資料庫角色](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server 中的授權和權限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

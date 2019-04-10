@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以程式設計的方式將項目插入文字
+title: HOW TO：以程式設計方式將項目插入文字
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - TextPointer objects [WPF]
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
-ms.openlocfilehash: c93a1c7542a4ddb33b3880de423c256adcc3f1c3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169581"
 ---
-# <a name="how-to-insert-an-element-into-text-programmatically"></a>HOW TO：以程式設計的方式將項目插入文字
+# <a name="how-to-insert-an-element-into-text-programmatically"></a>HOW TO：以程式設計方式將項目插入文字
 下列範例示範如何使用兩個<xref:System.Windows.Documents.TextPointer>物件，以指定要套用文字內的範圍<xref:System.Windows.Documents.Span>項目。  
   
 ## <a name="example"></a>範例  
@@ -30,4 +30,5 @@ ms.locfileid: "57378557"
  ![已套用至某一文字範圍的 Span 項目](./media/flow-insertelementintotextprogrammatically.png "Flow_InsertElementIntoTextProgrammatically")  
   
 ## <a name="see-also"></a>另請參閱
+
 - [非固定格式文件概觀](flow-document-overview.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - security [XAML Services], .NET XAML services
 - XAML security [XAML Services]
 ms.assetid: 544296d4-f38e-4498-af49-c9f4dad28964
-ms.openlocfilehash: 6cd09295f9dac26011652d6b0a33318841b04072
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648358"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162668"
 ---
 # <a name="xaml-security-considerations"></a>XAML 安全性考量
 本主題描述在應用程式中的安全性最佳作法，當您使用 XAML 和.NET Framework XAML 服務 API。  
@@ -42,4 +42,5 @@ ms.locfileid: "54648358"
  XAML 支援它自己的型別系統，這在許多方面是 CLR 如何實作基本的 CLR 型別系統之對等。 不過，您會在其中進行信任決策，根據其類型資訊的型別相關的類型感知的特定部分，您應該延後至支援型別在 CLR 中的類型資訊。 這是因為一些 XAML 類型系統的特定報告功能會保持在開啟為虛擬方法，因此，並不是完全在原始的.NET Framework XAML 服務實作的控制之下。 這些擴充點存在，因為 XAML 型別系統可延伸，以符合 XAML 本身的擴充性和其可能的替代類型對應策略與預設 XAML 結構描述內容與預設 CLR 為基礎的實作。 詳細資訊，請參閱特定的附註，數個屬性上<xref:System.Xaml.XamlType>和<xref:System.Xaml.XamlMember>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Xaml.Permissions.XamlAccessLevel>

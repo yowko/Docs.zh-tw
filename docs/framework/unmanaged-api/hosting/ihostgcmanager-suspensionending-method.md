@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1995321e8598d010188fee2437640b4489eaa294
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 527607d5c39e7f698ab44baf4af0e7600ae2f473
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57472027"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222818"
 ---
 # <a name="ihostgcmanagersuspensionending-method"></a>IHostGCManager::SuspensionEnding 方法
 通知主機 common language runtime (CLR) 會繼續已暫止記憶體回收的執行緒上的工作執行。  
@@ -61,11 +61,12 @@ HRESULT SuspensionEnding (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

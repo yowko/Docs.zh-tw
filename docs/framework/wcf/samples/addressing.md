@@ -2,12 +2,12 @@
 title: 定址
 ms.date: 03/30/2017
 ms.assetid: d438e6f2-d0f3-43aa-b259-b51b5bda2e64
-ms.openlocfilehash: 3de6c3556ce2a11e1ebcfba179c08a45d87bea6b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 62d1d4206bd0595ac84cb5ec6942f914a89fbaae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835046"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221322"
 ---
 # <a name="addressing"></a>定址
 此定址範例會示範端點位址的各方面與功能。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。 在此範例中的服務會自動裝載。 服務和用戶端都是主控台應用程式。 服務會定義使用相對與絕對端點位址組合的多個端點。  
@@ -135,4 +135,3 @@ Press <ENTER> to terminate client.
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Services\Addressing`  
-  

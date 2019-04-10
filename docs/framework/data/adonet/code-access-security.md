@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 93e099eb-daa1-4f1e-b031-c1e10a996f88
-ms.openlocfilehash: af3fe9a233972e939dc14117fc08343bca9d5fd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6c26ae82939a3d011ecb7ecd97e162ab2f45cd48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411560"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174105"
 ---
 # <a name="code-access-security-and-adonet"></a>程式碼存取安全性和 ADO.NET
 .NET Framework 會提供以角色為基礎的安全性和程式碼存取安全性 (CAS)，而這兩種安全性都是使用 Common Language Runtime (CLR) 所提供的通用基礎結構所實作的。 在 Unmanaged 程式碼的作用範圍內，大多數應用程式都是以使用者或主體的權限執行。 因此，當擁有更高權限的使用者執行惡意或充滿錯誤的軟體時，就可能損害電腦系統和竊取私人資料。  
@@ -27,12 +27,11 @@ ms.locfileid: "58411560"
   
  程式碼存取權限有三種類型：  
   
--   `Code access permissions`衍生自 <xref:System.Security.CodeAccessPermission> 類別。 為了存取受保護資源 (例如檔案和環境變數) 以及執行受保護作業 (例如存取 Unmanaged 程式碼)，因此需要權限。  
+-   `Code access permissions` 衍生自<xref:System.Security.CodeAccessPermission>類別。 為了存取受保護資源 (例如檔案和環境變數) 以及執行受保護作業 (例如存取 Unmanaged 程式碼)，因此需要權限。  
   
 -   `Identity permissions` 代表可識別組件的特性。 系統會根據辨識項 (可能包含數位簽章或程式碼來源等項目)，將權限授與組件。 識別權限也衍生自 <xref:System.Security.CodeAccessPermission> 基底類別 (Base Class)。  
   
--   `Role-based security permissions`是以主體是否具有指定的識別或屬於指定角色成員為基礎。 
-  <xref:System.Security.Permissions.PrincipalPermission> 類別允許針對使用中主體進行宣告式和必要的權限檢查。  
+-   `Role-based security permissions` 會根據主體是否具有指定的識別，或指定之角色的成員。 <xref:System.Security.Permissions.PrincipalPermission> 類別允許針對使用中主體進行宣告式和必要的權限檢查。  
   
  為了判斷程式碼是否經授權可存取資源或執行某項作業，執行階段的安全性系統會周遊呼叫堆疊，並比較每個呼叫端被授與的權限與要求的權限。 如果呼叫堆疊中的任何呼叫端沒有要求的權限，系統就會擲回 <xref:System.Security.SecurityException> 並拒絕存取。  
   
@@ -191,12 +190,13 @@ Failed, as expected: Request failed.
 ```  
   
 ## <a name="interoperability-with-unmanaged-code"></a>與 Unmanaged 程式碼的互通性  
- 在 CLR 外部執行的程式碼稱為 Unmanaged 程式碼。 因此，CAS 等安全性機制無法套用至 Unmanaged 程式碼。 COM 元件、 ActiveX 介面及 Windows API 函式是 unmanaged 程式碼的範例。 執行 Unmanaged 程式碼時，您應該套用特殊安全性考量，以免危及整體應用程式安全性。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)。  
+ 在 CLR 外部執行的程式碼稱為 Unmanaged 程式碼。 因此，CAS 等安全性機制無法套用至 Unmanaged 程式碼。 COM 元件、ActiveX 介面及 Windows API 函式都是 Unmanaged 程式碼的範例。 執行 Unmanaged 程式碼時，您應該套用特殊安全性考量，以免危及整體應用程式安全性。 如需詳細資訊，請參閱[與 Unmanaged 程式碼互通](../../../../docs/framework/interop/index.md)。  
   
  .NET Framework 也透過 COM Interop 提供存取，藉以支援現有 COM 元件的回溯相容性 (Backward Compatibility)。 您可以使用 COM Interop 工具來匯入相關的 COM 型別，以便將 COM 元件併入 .NET Framework 應用程式中。 一旦匯入之後，COM 型別便可供使用。 COM Interop 也會將組件中繼資料匯出至型別程式庫並將 Managed 元件註冊為 COM 元件，藉以讓 COM 用戶端存取 Managed 程式碼。 如需詳細資訊，請參閱 <<c0> [ 進階 COM 互通性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bd9cdfyx)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
-- [原生和.NET Framework 程式碼中的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
+- [機器碼和 .NET Framework 程式碼中的安全性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/1787tk12(v=vs.100))
 - [以角色為基礎的安全性](../../../../docs/standard/security/role-based-security.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

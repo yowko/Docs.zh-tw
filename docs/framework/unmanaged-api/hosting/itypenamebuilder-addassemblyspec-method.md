@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6e85570be7a957c94d16c8f08e2d66f596587821
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d327de4f1e279e264d92b043def03c59f3840d48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54546461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211747"
 ---
 # <a name="itypenamebuilderaddassemblyspec-method"></a>ITypeNameBuilder::AddAssemblySpec 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -40,9 +40,10 @@ HRESULT AddAssemblySpec (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

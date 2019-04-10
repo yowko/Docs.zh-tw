@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af2fa38bab8b22f86429dbcd95c842cec9ae73c3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e23232b55a841672ee193b980c310995ba688e00
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484821"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160988"
 ---
 # <a name="strongnamegetblob-function"></a>StrongNameGetBlob 函式
 使用位於所指定位址之可執行檔的二進位表示法填滿指定的緩衝區。  
@@ -59,11 +59,12 @@ BOOLEAN StrongNameGetBlob (
   
  **標頭：** StrongName.h  
   
- **程式庫：** 包含做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [StrongNameGetBlob 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblob-method.md)
 - [StrongNameGetBlobFromImage 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetblobfromimage-method.md)
 - [ICLRStrongName 介面](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)

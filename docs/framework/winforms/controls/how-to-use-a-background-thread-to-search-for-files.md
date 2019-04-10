@@ -10,12 +10,12 @@ helpviewer_keywords:
 - threading [Windows Forms], custom controls
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
-ms.openlocfilehash: 5bf345e4195c64d3cf7fab7bf9a826dc99d47463
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157732"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>HOW TO：使用背景執行緒搜尋檔案
 <xref:System.ComponentModel.BackgroundWorker>元件會取代並且將功能加入<xref:System.Threading>命名空間; 然而，<xref:System.Threading>命名空間會保留回溯相容性和未來使用，如果您選擇。 如需詳細資訊，請參閱 < [BackgroundWorker 元件概觀](backgroundworker-component-overview.md)。  
@@ -763,6 +763,7 @@ namespace SampleUsage
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ComponentModel.BackgroundWorker>
-- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)
+- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
 - [事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

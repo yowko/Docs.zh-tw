@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation, properties
 - properties, UI Automation
 ms.assetid: a6c31d7b-b33e-49b3-b5c1-31a345f9b7c8
-ms.openlocfilehash: b38cc51cb7eaf0913ed821bb60f10cdde2430916
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9028f9f99ee22dd480d817bc8aa94c7113a15c9d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676053"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223000"
 ---
 # <a name="ui-automation-properties-overview"></a>UI 自動化屬性概觀
 > [!NOTE]
@@ -28,9 +28,9 @@ ms.locfileid: "57676053"
 ## <a name="property-identifiers"></a>屬性識別項  
  每一個屬性都是由一個編號及名稱所識別。 屬性名稱僅用於偵錯及診斷作業。 提供者使用數值 [!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)] 來識別傳入的屬性要求。 但是，用戶端應用程式只使用 <xref:System.Windows.Automation.AutomationProperty>(會封裝編號及名稱) 以識別它們要擷取的屬性。  
   
- <xref:System.Windows.Automation.AutomationProperty> 物件代表特定屬性，其在許多類別中可做為欄位使用。 基於安全性考量，使用者介面自動化提供者會從 Uiautomationtypes.dll 內含的不同類別集之中取得這些物件。  
+ <xref:System.Windows.Automation.AutomationProperty> 物件代表特定屬性，可為各種類別中的欄位。 基於安全性考量，使用者介面自動化提供者會從 Uiautomationtypes.dll 內含的不同類別集之中取得這些物件。  
   
- 下表按照內含 <xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]。  
+ 下表包含類別分類屬性<xref:System.Windows.Automation.AutomationProperty>[!INCLUDE[TLA2#tla_id#plural](../../../includes/tla2sharptla-idsharpplural-md.md)]。  
   
 |屬性的種類|用戶端取得 ID 的來源|提供者取得 ID 的來源|  
 |-------------------------|--------------------------|----------------------------|  
@@ -137,7 +137,7 @@ ms.locfileid: "57676053"
   
 <a name="Localization"></a>   
 ## <a name="localization"></a>當地語系化  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該以作業系統所使用的語言來顯示下列屬性：  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 提供者應該以作業系統的語言來顯示下列屬性：  
   
 -   <xref:System.Windows.Automation.AutomationElementIdentifiers.AcceleratorKeyProperty>  
   
@@ -160,6 +160,7 @@ ms.locfileid: "57676053"
  用戶端可以透過訂閱事件的方式以接聽事件。 訂閱事件就是建立可處理事件的委派方法，然後將方法以及會和這些方法一起處理的特定事件一起傳送至 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 。 特別是針對屬性變更事件，用戶端必須實作 <xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)
 - [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
 - [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

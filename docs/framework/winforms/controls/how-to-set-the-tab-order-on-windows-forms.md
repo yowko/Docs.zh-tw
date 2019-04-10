@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在 Windows Form 上設定定位順序
+title: HOW TO：設定 Windows Forms 的定位順序
 ms.date: 03/30/2017
 f1_keywords:
 - TabStop
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - controls [Windows Forms], setting tab order
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
-ms.openlocfilehash: 3f566dfb5dbc118c5a6be7f874b5b4857756075a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: cd86757d43d7d57dc7777422086a7b7a96b6611e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162120"
 ---
-# <a name="how-to-set-the-tab-order-on-windows-forms"></a>HOW TO：在 Windows Form 上設定定位順序
+# <a name="how-to-set-the-tab-order-on-windows-forms"></a>HOW TO：設定 Windows Forms 的定位順序
 定位順序是以使用者焦點從某個控制項移動到另一個按下 TAB 鍵的順序。 每個表單有它自己的定位順序。 根據預設，定位順序是您可以在其中建立控制項的順序相同。 定位順序編號從 0 開始。  
   
 > [!NOTE]
@@ -55,7 +55,8 @@ ms.locfileid: "57705872"
     >  選項按鈕群組有一個索引標籤停止在執行階段。 [選取] 按鈕 (也就是具有按鈕其<xref:System.Windows.Forms.RadioButton.Checked%2A>屬性設定為`true`) 具有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性會自動設定為`true`，而其他按鈕有其<xref:System.Windows.Forms.Control.TabStop%2A>屬性設定為`false`。 如需有關分組<xref:System.Windows.Forms.RadioButton>控制項，請參閱[當成一組群組 Windows Form RadioButton 控制項](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 控制項](index.md)
-- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)
+
+- [Windows Form 控制項](index.md)
+- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Form 控制項](windows-forms-controls-by-function.md)

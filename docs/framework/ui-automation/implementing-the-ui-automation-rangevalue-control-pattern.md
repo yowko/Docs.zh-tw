@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Range Value control pattern
 - UI Automation, Range Value control pattern
 ms.assetid: 225feaa4-918e-418b-938e-7389338d0a69
-ms.openlocfilehash: 34044b337dfb7498fd75f7f9a8bd17c2db9eb7d2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: aeb14bddf98adf53a52c8897994bd0fb6fa498ad
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680109"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175784"
 ---
 # <a name="implementing-the-ui-automation-rangevalue-control-pattern"></a>實作 UI 自動化 RangeValue 控制項模式
 > [!NOTE]
@@ -37,13 +37,13 @@ ms.locfileid: "57680109"
   
 |必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|屬性|無|  
-|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|屬性|無|  
-|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|屬性|無|  
-|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|屬性|無|  
-|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|屬性|無|  
-|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|屬性|無|  
-|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|無|  
+|<xref:System.Windows.Automation.RangeValuePattern.IsReadOnlyProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.ValueProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.LargeChangeProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SmallChangeProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>|屬性|None|  
+|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -53,11 +53,12 @@ ms.locfileid: "57680109"
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 以大於 <xref:System.Windows.Automation.RangeValuePattern.MaximumProperty> 或小於 <xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>的值呼叫。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.RangeValuePattern.SetValue%2A> 呼叫其中一個值大於<xref:System.Windows.Automation.RangeValuePattern.MaximumProperty>或小於<xref:System.Windows.Automation.RangeValuePattern.MinimumProperty>。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -2,12 +2,12 @@
 title: 複雜類型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
-ms.openlocfilehash: 4e18ecf18399f57769dcdfc77192e72ec47f5df3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54555436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160806"
 ---
 # <a name="complex-type"></a>複雜類型
 A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../../../docs/framework/data/adonet/entity-type.md)或其他複雜類型。 每個範本包含下列資訊：  
@@ -38,5 +38,6 @@ A*複雜型別*是上定義豐富結構化屬性的範本[實體類型](../../..
  [!code-xml[EDM_Example_Model#EntityWithComplexType](../../../../samples/snippets/xml/VS_Snippets_Data/edm_example_model/xml/books3.edmx#entitywithcomplextype)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [實體資料模型索引鍵概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
 - [實體資料模型](../../../../docs/framework/data/adonet/entity-data-model.md)

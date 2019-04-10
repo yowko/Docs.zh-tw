@@ -6,28 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - typography [WPF], how-to topics
 ms.assetid: 82d50325-7cb2-4975-aea3-027c00e6bbfc
-ms.openlocfilehash: b4f4297fdc5c49270ac97513295fc5aa2e0f2213
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: f5d54b892f61bfb1804b3c4c561533e5aa549d0c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353708"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209732"
 ---
 # <a name="typography-how-to-topics"></a>印刷樣式 HOW TO 主題
 在本節中的主題描述如何使用[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]支援豐富的呈現您的應用程式中的文字。  
   
 ## <a name="in-this-section"></a>本節內容  
  [建立文字裝飾](how-to-create-a-text-decoration.md)  
- [指定超連結是否要加上底線](how-to-specify-whether-a-hyperlink-is-underlined.md)  
+ [指定超連結是否加上底線](how-to-specify-whether-a-hyperlink-is-underlined.md)  
  [對文字套用轉換](how-to-apply-transforms-to-text.md)  
  [對文字套用動畫](how-to-apply-animations-to-text.md)  
  [建立含陰影的文字](how-to-create-text-with-a-shadow.md)  
  [建立外框文字](how-to-create-outlined-text.md)  
- [繪製文字至控制項的背景](how-to-draw-text-to-a-control-background.md)  
- [繪製文字至視覺效果](how-to-draw-text-to-a-visual.md)  
+ [在控制項的背景繪製文字](how-to-draw-text-to-a-control-background.md)  
+ [在視覺效果繪製文字](how-to-draw-text-to-a-visual.md)  
  [在 XAML 中使用特殊字元](how-to-use-special-characters-in-xaml.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Documents.Typography>
 - [WPF 中的文件](documents-in-wpf.md)
 - [OpenType 字型功能](opentype-font-features.md)

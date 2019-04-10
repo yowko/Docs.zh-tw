@@ -12,12 +12,12 @@ helpviewer_keywords:
 - views [WPF], grouping data
 - sorting data in views [WPF]
 ms.assetid: f4c43578-01b7-4774-a953-acb95a13b94a
-ms.openlocfilehash: 41ee5cded04559acac5e7270c5e1a2450c70a5aa
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 32f73d3c3ba213778654f0d1ee7bbae16b9d845b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211253"
 ---
 # <a name="how-to-sort-data-in-a-view"></a>HOW TO：排序檢視中的資料
 這個範例說明如何排序檢視中的資料。  
@@ -37,8 +37,9 @@ ms.locfileid: "57377115"
  如需如何將排序邏輯中的範例[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]，請參閱 <<c2> [ 排序與群組資料使用 XAML 中的檢視](how-to-sort-and-group-data-using-a-view-in-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Data.ListCollectionView.CustomSort%2A>
 - [在按一下標頭時排序 GridView 資料行](../controls/how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
 - [資料繫結概觀](data-binding-overview.md)
 - [篩選檢視中的資料](how-to-filter-data-in-a-view.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

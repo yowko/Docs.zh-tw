@@ -2,19 +2,19 @@
 title: 將 ASP.NET Web 服務移轉至 WCF
 ms.date: 03/30/2017
 ms.assetid: 1adbb931-f0b1-47f3-9caf-169e4edc9907
-ms.openlocfilehash: 6fb96dc431008936658bb941f16373037e712f51
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 703088cdaae69d90d71fb950912538ea0662229b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211084"
 ---
 # <a name="migrating-aspnet-web-services-to-wcf"></a>將 ASP.NET Web 服務移轉至 WCF
 ASP.NET 提供 .NET Framework 類別程式庫與工具以建立 Web 服務，並提供在 Internet Information Services (IIS) 中裝載服務所需的功能。 Windows Communication Foundation (WCF) 提供.NET Framework 類別庫、 工具和裝載功能，讓軟體實體，使用任何通訊協定，包括所使用的 Web 服務進行通訊。  ASP.NET Web 服務移轉至 WCF 可讓您的應用程式，以善用新功能和增強 WCF 特有的。  
   
  WCF 有幾項重要的優點，相對於 ASP.NET Web 服務。 雖然 ASP.NET Web 服務工具僅供建置 Web 服務，WCF 會提供工具，可以在軟體實體必須對彼此進行通訊時使用。 這將會減少程式開發人員為了要考慮到不同的軟體通訊案例所需要了解的技術數量，進而降低軟體開發資源的成本，並縮短完成軟體開發專案的時間。  
   
- 即使的 Web 服務開發專案，WCF 會支援多個 Web 服務通訊協定，比 ASP.NET Web 服務支援。 這些額外的通訊協定可供更多高階方案使用，具備可靠的工作階段與異動。  
+ 即使的 Web 服務開發專案，WCF 會支援多個 Web 服務通訊協定，比 ASP.NET Web 服務支援。 這些額外的通訊協定可供更多高階方案使用，具備可靠的工作階段與交易。  
   
  WCF 支援數個通訊協定傳輸訊息比 ASP.NET Web 服務。 ASP.NET Web 服務僅支援使用超文字傳輸協定 (HTTP) 傳送訊息。 WCF 會使用 HTTP，以及傳輸控制通訊協定 (TCP)、 具名管道以及 Microsoft Message Queuing (MSMQ)，以支援傳送訊息。 更重要的是，WCF 可以延伸以支援其他傳輸通訊協定。 因此，使用 WCF 開發的軟體可用於更廣泛的其他軟體，藉此增加潛在投資報酬率搭配運作。  
   
@@ -36,8 +36,9 @@ ASP.NET 提供 .NET Framework 類別程式庫與工具以建立 Web 服務，並
  本節描述這些選項，在 詳細資料、 比較 ASP.NET Web 服務與 WCF，並說明如何將您的 ASP.NET Web 服務程式碼移轉至 WCF。  
   
 ## <a name="see-also"></a>另請參閱
-- [預計採用 Windows Communication Foundation:簡化未來移轉](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
-- [預計採用 Windows Communication Foundation:簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
+
+- [預計採用 Windows Communication Foundation：簡化未來移轉](../../../../docs/framework/wcf/feature-details/anticipating-adopting-wcf-migration.md)
+- [預計採用 Windows Communication Foundation：簡化未來整合](../../../../docs/framework/wcf/feature-details/anticipating-adopting-the-wcf-easing-future-integration.md)
 - [採用 Windows Communication Foundation](../../../../docs/framework/wcf/feature-details/adopting-wcf.md)
-- [根據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
+- [依據用途與使用的標準來比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-purpose-and-standards-used.md)
 - [根據開發情況比較 ASP.NET Web 服務與 WCF](../../../../docs/framework/wcf/feature-details/comparing-aspnet-web-services-to-wcf-based-on-development.md)

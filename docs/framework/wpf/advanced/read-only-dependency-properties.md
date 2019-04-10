@@ -5,18 +5,16 @@ helpviewer_keywords:
 - dependency properties [WPF], read-only
 - read-only dependency properties [WPF]
 ms.assetid: f23d6ec9-3780-4c09-a2ff-b2f0a2deddf1
-ms.openlocfilehash: 9aeeab95342bce94c53e89229003f55009118f96
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 45385e3e3eb8e756008a0d9ef560e061f9a31964
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379000"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59162419"
 ---
 # <a name="read-only-dependency-properties"></a>唯讀相依性屬性
 本主題說明唯讀相依性屬性，包括現有的唯讀相依性屬性，以及用於建立自訂唯讀相依性屬性的案例和技術。  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題假設您已了解實作相依性屬性的基本案例，以及如何將中繼資料套用到自訂相依性屬性。 如需相關內容，請參閱[自訂相依性屬性](custom-dependency-properties.md)和[相依性屬性中繼資料](dependency-property-metadata.md)。  
@@ -44,6 +42,7 @@ ms.locfileid: "57379000"
  因為<xref:System.Windows.DependencyPropertyKey>屬私人性質，並且不會傳播屬性系統，您的程式碼之外，唯讀相依性屬性有更好設定安全性會比讀寫相依性屬性。 針對讀寫相依性屬性，識別欄位是明確或隱含公開的，因此該屬性是可廣泛設定的。 如需詳細資訊，請參閱[相依性屬性的安全性](dependency-property-security.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [自訂相依性屬性](custom-dependency-properties.md)
 - [樣式設定和範本化](../controls/styling-and-templating.md)

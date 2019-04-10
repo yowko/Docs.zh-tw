@@ -2,12 +2,12 @@
 title: SQL Server Express 安全性
 ms.date: 03/30/2017
 ms.assetid: cf9cf6d9-4b05-43e9-ac7b-6cefbfcd6d4e
-ms.openlocfilehash: 73f94d25e90197ade5e27ab6d9ff13602a5c854f
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: f4291de89b397f60aedd35b89d6aa3130d348be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664246"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174547"
 ---
 # <a name="sql-server-express-security"></a>SQL Server Express 安全性
 Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL Server 為基礎，可支援大部分資料庫引擎的功能。 其設計方式是在預設情況下關閉非必要的功能和網路連接。 這樣做可減少受到惡意使用者攻擊的表面區域。  
@@ -36,6 +36,7 @@ Microsoft SQL Server Express Edition (SQL Server Express) 是以 Microsoft SQL S
 |[SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)|說明 ADO.NET 應用程式中的使用者執行個體功能。 提供有關如何啟用使用者執行個體、使用 <xref:System.Data.SqlClient.SqlConnection> 來連接至使用者執行個體、使用者執行個體存留期 (Lifetime) 和使用者執行個體案例的資訊。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [SQL Server 安全性](../../../../../docs/framework/data/adonet/sql/sql-server-security.md)
 - [SQL Server Express 使用者執行個體](../../../../../docs/framework/data/adonet/sql/sql-server-express-user-instances.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

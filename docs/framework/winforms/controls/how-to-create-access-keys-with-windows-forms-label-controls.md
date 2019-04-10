@@ -17,12 +17,12 @@ helpviewer_keywords:
 - keyboard shortcuts [Windows Forms], creating for controls
 - access keys [Windows Forms], Windows Forms
 ms.assetid: 5ee8f823-80be-4a4f-96a4-412671e2e306
-ms.openlocfilehash: 227880ad15e452df3f05807c41f3923cccb6fe3a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: ff603ee784978a8b2bab2cccd4610fc50b45d477
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708297"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171713"
 ---
 # <a name="how-to-create-access-keys-with-windows-forms-label-controls"></a>HOW TO：使用 Windows Forms Label 控制項建立便捷鍵
 Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他控制項的便捷鍵。 當您在標籤控制項中定義的存取金鑰時，使用者可以按 ALT 鍵加上您指定要將焦點移至之控制項的定位順序中接在後面的字元。 因為標籤不會收到焦點，焦點就會自動移至定位順序中的下一個控制項中。 您可以使用這項技術，將文字方塊、 下拉式方塊、 清單方塊和資料格的存取金鑰。  
@@ -64,6 +64,7 @@ Windows Form<xref:System.Windows.Forms.Label>控制項可以用來定義其他�
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：調整大小以容納其內容的 Windows Form Label 控制項](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+
+- [HOW TO：調整 Windows Forms Label 控制項的大小使符合其內容](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
 - [Label 控制項概觀](label-control-overview-windows-forms.md)
 - [Label 控制項](label-control-windows-forms.md)

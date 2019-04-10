@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: b9349291979e76650f07db5e433620554928eb4b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614566"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158622"
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是建置在資料合約模型時的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
@@ -84,7 +84,7 @@ ms.locfileid: "54614566"
  之前的範例會將 `InventorySurrogated` 型別的物件轉換回初始型別 `Inventory`。 在這個案例中，資料是從 `InventorySurrogated` 直接傳輸回 `Inventory` 中對應的欄位。 由於沒有資料管理，因此每個成員欄位都會包含與序列化之前相同的值。  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 方法  
- 匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如:   
+ 匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -116,7 +116,7 @@ ms.locfileid: "54614566"
 ### <a name="processimportedtype-method"></a>ProcessImportedType 方法  
  <xref:System.Runtime.Serialization.IDataContractSurrogate.ProcessImportedType%2A> 方法會自訂任何從結構描述匯入作業建立的型別。 這個方法是一個選擇項目。  
   
- 當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如:   
+ 當匯入結構描述時，這個方法會允許自訂任何匯入的型別和編譯資訊。 例如：  
   
  [!code-csharp[C_IDataContractSurrogate#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#7)]  
   
@@ -192,6 +192,7 @@ ms.locfileid: "54614566"
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.IDataContractSurrogate>
 - <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>

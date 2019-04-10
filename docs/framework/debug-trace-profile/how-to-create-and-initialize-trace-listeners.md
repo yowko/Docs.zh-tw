@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee0ad6b34e30b03ec42ff793e37d0e13b448cbfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222714"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>HOW TO：建立和初始化追蹤接聽項
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 類別會將訊息傳送給名稱為接聽程式的物件，以接收和處理這些訊息。 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType> 就是這類接聽程式之一，其會在啟用追蹤或偵錯時自動建立與初始化。 如果您要將 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 輸出導向任何其他來源，您必須建立和初始化其他的追蹤接聽程式。  
@@ -95,7 +95,8 @@ ms.locfileid: "54583099"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)
-- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [HOW TO：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [追蹤和稽核應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

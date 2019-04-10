@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490d78cbc8724e12dff8ac24c81e499268e4ed6c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: d0acb322fa3348f0bb2d819529a370110580343c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487751"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178057"
 ---
 # <a name="corbindtocurrentruntime-function"></a>CorBindToCurrentRuntime 函式
 載入處理序的 common language runtime (CLR) 使用的 XML 檔案中儲存的版本資訊。 XML 檔案的格式被仿造自標準的應用程式組態檔。 如需組態檔的詳細資訊，請參閱[組態檔結構描述](../../../../docs/framework/configure-apps/file-schema/index.md)。  
@@ -62,11 +62,12 @@ HRESULT CorBindToCurrentRuntime (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** MSCorEE.dll  
+ **LIBRARY:** MSCorEE.dll  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [CorBindToRuntime 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)
 - [CorBindToRuntimeByCfg 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimebycfg-function.md)
 - [CorBindToRuntimeEx 函式](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b1cdcfcaf29cc2b0ec6da1108e0ecd91710db36c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: bf7b54ab7a2318e8194bf39dbe41b864633ddb43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487301"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212904"
 ---
 # <a name="emitassembly-method"></a>EmitAssembly 方法
 建立組件。 之後的組件檔案除外的其他所有檔案都已都關閉，請呼叫這個方法。 產生未繫結的模組時，請勿呼叫這個方法。  
@@ -46,6 +46,7 @@ HRESULT EmitAssembly(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: 2fbb1f520a1497ef5aa3227d038b3759b8327eda
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714993"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218208"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
 安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。 根據預設，會在聯合的安全性案例中，使用 Windows Communication Foundation (WCF) 的 SAML 權杖*發行的權杖*。  
@@ -43,13 +43,14 @@ ms.locfileid: "54714993"
  當 SAML 權杖在訊息內接收時，SAML 權杖內的各種陳述式會轉變成 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 物件，置於 <xref:System.IdentityModel.Policy.AuthorizationContext>之內。 來自每個 SAML 陳述式的宣告均由 <xref:System.IdentityModel.Policy.AuthorizationContext.ClaimSets%2A> 的 <xref:System.IdentityModel.Policy.AuthorizationContext> 屬性傳回，並且可進行檢查以決定是否驗證並授權使用者。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Policy.IAuthorizationPolicy>
 - <xref:System.IdentityModel.Claims.ClaimSet>
 - [同盟](../../../../docs/framework/wcf/feature-details/federation.md)
-- [如何：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
-- [如何：Federation Service 上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [HOW TO：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [HOW TO：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
 - [使用身分識別模型來管理宣告與授權](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [HOW TO：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)

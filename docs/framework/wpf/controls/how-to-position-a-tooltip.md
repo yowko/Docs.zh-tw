@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ToolTip control [WPF], positioning
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
-ms.openlocfilehash: 64b3823be5203ffcb9dcea371495dbb6ead1605f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58840493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212345"
 ---
 # <a name="how-to-position-a-tooltip"></a>HOW TO：置放工具提示
 此範例示範如何在螢幕上指定工具提示的位置。  
@@ -62,7 +62,8 @@ ms.locfileid: "58840493"
  [!code-vb[ToolTipService#NoToolTipCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ToolTipService/visualbasic/pane1.xaml.vb#notooltipcode)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [HOW-TO 主題](tooltip-how-to-topics.md)
-- [工具提示概觀](tooltip-overview.md)
+- [HOW TO 主題](tooltip-how-to-topics.md)
+- [ToolTip 概觀](tooltip-overview.md)

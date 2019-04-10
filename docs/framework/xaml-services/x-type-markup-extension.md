@@ -14,12 +14,12 @@ helpviewer_keywords:
 - TargetType attribute [XAML Services]
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
-ms.openlocfilehash: 86e5619774cc1512e39fa2fb50f4c0ba5f1d074c
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042090"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211630"
 ---
 # <a name="xtype-markup-extension"></a>x:Type 標記延伸
 提供 CLR<xref:System.Type>是指定的 XAML 類型的基礎類型的物件。  
@@ -52,8 +52,7 @@ ms.locfileid: "58042090"
   
  在特定架構實作中，某些屬性會採用<xref:System.Type>值所能直接接受型別的名稱 (類型的字串值`Name`)。 不過，實作此行為是複雜的案例。 如需範例，請參閱 < WPF 使用方式附註 > 一節。  
   
- 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 
-  `x:Type` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 延伸類別的 <xref:System.Windows.Markup.TypeExtension> 值。 在.NET Framework XAML 服務中，此作業取決於 CLR 型別的預設 XAML 結構描述內容的值，這個屬性是<xref:System.Reflection.MemberInfo.Name%2A>所需的類型，或包含的<xref:System.Reflection.MemberInfo.Name%2A>加上非預設 XAML 命名空間的前置詞對應。  
+ 屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `x:Type` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.Markup.TypeExtension.TypeName%2A> 延伸類別的 <xref:System.Windows.Markup.TypeExtension> 值。 在.NET Framework XAML 服務中，此作業取決於 CLR 型別的預設 XAML 結構描述內容的值，這個屬性是<xref:System.Reflection.MemberInfo.Name%2A>所需的類型，或包含的<xref:System.Reflection.MemberInfo.Name%2A>加上非預設 XAML 命名空間的前置詞對應。  
   
  `x:Type`標記延伸可用於物件元素語法。 在此案例中，指定的值<xref:System.Windows.Markup.TypeExtension.TypeName%2A>屬性才能正確地初始化 擴充功能。  
   
@@ -81,6 +80,7 @@ ms.locfileid: "58042090"
  在 WPF 中，您可以使用 XAML 2009 功能，但只能針對鬆散的 XAML (未標記編譯的 XAML)。 WPF 之編譯標記的 XAML 和 BAML 形式的 XAML 目前不支援 XAML 2009 關鍵字和功能。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Style>
 - [樣式設定和範本化](../wpf/controls/styling-and-templating.md)
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

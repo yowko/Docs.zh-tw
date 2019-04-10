@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF, authentication
 ms.assetid: 10e245f7-d31e-42e7-82a2-d5780325d372
-ms.openlocfilehash: df45f943da62624b92d483851e788dad0e240f47
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
-ms.translationtype: MT
+ms.openlocfilehash: 7cd1cd22a216458add2cef97e45ce2daef3f9f9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261124"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177095"
 ---
 # <a name="how-to-create-a-custom-security-token-authenticator"></a>如何： 建立自訂安全性權杖驗證器
 本主題會示範如何建立自訂安全性權杖驗證器，以及如何將其與自訂的安全性權杖管理員整合。 安全性權杖驗證器會驗證傳入訊息所提供之安全性權杖的內容。 如果驗證成功，驗證器便會傳回在進行評估時會傳回一組宣告之 <xref:System.IdentityModel.Policy.IAuthorizationPolicy> 執行個體的集合。  
@@ -59,9 +59,10 @@ ms.locfileid: "56261124"
      [!code-vb[c_CustomTokenAuthenticator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenauthenticator/vb/source.vb#2)]  
  
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator>
 - <xref:System.IdentityModel.Selectors.SecurityTokenRequirement>
 - <xref:System.IdentityModel.Selectors.SecurityTokenManager>
 - <xref:System.IdentityModel.Tokens.UserNameSecurityToken>
-- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
-- [如何：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)
+- [逐步解說：建立自訂用戶端與服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [HOW TO：建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)

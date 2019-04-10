@@ -16,19 +16,19 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: d9a58dbaeae3f0cd165d72b8fd281b903ad9cca2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172182"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>HOW TO：自訂繪製 ToolStrip 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
   
--   <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供您作業系統的外觀和樣式。  
+-   <xref:System.Windows.Forms.ToolStripSystemRenderer> 提供的外觀和樣式，您的作業系統。  
   
--   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 提供 Microsoft Office 的外觀和樣式。  
+-   <xref:System.Windows.Forms.ToolStripProfessionalRenderer> 提供的外觀和 Microsoft Office 樣式。  
   
 -   <xref:System.Windows.Forms.ToolStripRenderer> 為其他兩個呈現類別的抽象基底類別。  
   
@@ -134,9 +134,10 @@ ms.locfileid: "57705745"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStripSystemRenderer>
 - <xref:System.Windows.Forms.ToolStripProfessionalRenderer>
 - <xref:System.Windows.Forms.ToolStripRenderer>
 - [使用內建主控描繪支援的控制項](controls-with-built-in-owner-drawing-support.md)
-- [如何：建立和設定 Windows Form 中 ToolStrip 控制項自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
+- [HOW TO：建立和設定 Windows Forms 中 ToolStrip 控制項的自訂轉譯器](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)
 - [ToolStrip 控制項概觀](toolstrip-control-overview-windows-forms.md)

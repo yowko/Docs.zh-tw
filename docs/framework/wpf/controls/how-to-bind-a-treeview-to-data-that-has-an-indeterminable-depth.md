@@ -1,17 +1,17 @@
 ---
-title: HOW TO：將樹狀檢視繫結至未知深度的資料
+title: HOW TO：將 TreeView 繫結至未知深度的資料
 ms.date: 03/30/2017
 helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
-ms.openlocfilehash: 6c0361674c4f6f740784a7657e018d5257c6edac
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377232"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214854"
 ---
-# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>HOW TO：將樹狀檢視繫結至未知深度的資料
+# <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>HOW TO：將 TreeView 繫結至未知深度的資料
 當您想要繫結的時候<xref:System.Windows.Controls.TreeView>深度不知道資料來源。  這可能是資料是遞迴的本質，例如檔案系統，其中的資料夾可以包含資料夾或公司的組織結構，其中的員工有其他直屬員工。  
   
  資料來源必須具有階層式物件模型。 比方說，`Employee`類別可能包含員工的直屬員工物件的集合。 如果資料不是階層式的方式表示，您必須建置資料的階層式表示法。  
@@ -26,5 +26,6 @@ ms.locfileid: "57377232"
  [!code-xaml[TreeViewWithUnknownDepth#1](~/samples/snippets/csharp/VS_Snippets_Wpf/TreeViewWithUnknownDepth/CS/Window1.xaml#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料繫結概觀](../data/data-binding-overview.md)
 - [資料範本化概觀](../data/data-templating-overview.md)

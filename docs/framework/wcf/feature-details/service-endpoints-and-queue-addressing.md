@@ -2,12 +2,12 @@
 title: 服務端點與佇列定址
 ms.date: 03/30/2017
 ms.assetid: 7d2d59d7-f08b-44ed-bd31-913908b83d97
-ms.openlocfilehash: 7b4eca1519eeb1ed6357b625a3253105ece2b8ad
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 4064b13b00d44f90a372df5364406fb16c1da9fd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332516"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172519"
 ---
 # <a name="service-endpoints-and-queue-addressing"></a>服務端點與佇列定址
 本主題將討論用戶端如何針對從佇列讀取的服務進行定址，以及服務端點如何對應至佇列。 提醒您下, 圖顯示傳統 Windows Communication Foundation (WCF) 已排入佇列的應用程式部署。  
@@ -105,4 +105,5 @@ ms.locfileid: "56332516"
  請注意，您無法使用包含 `MsmqIntegrationBinding` 的 net.msmq:// 定址。 因為`MsmqIntegrationBinding`支援自由形式 MSMQ 格式名稱定址，您可以使用 WCF 服務使用此繫結至 MSMQ 中使用多點傳送與通訊群組清單功能。 當您使用 `CustomDeadLetterQueue` 時，需指定 `MsmqIntegrationBinding` 則是一個例外。 它必須是 net.msmq:// 的格式，與使用 `NetMsmqBinding` 來指定的方式很類似。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [以 Web 裝載佇列應用程式](../../../../docs/framework/wcf/feature-details/web-hosting-a-queued-application.md)

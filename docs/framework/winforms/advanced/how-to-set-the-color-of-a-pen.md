@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pens [Windows Forms], setting color
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
-ms.openlocfilehash: a2645112950be88cbc569e0be7889c0f1019223d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213411"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>HOW TO：設定畫筆顏色
 這個範例會變更預先存在的色彩<xref:System.Drawing.Pen>物件  
@@ -33,8 +33,9 @@ ms.locfileid: "57710377"
  您應該呼叫<xref:System.Drawing.Pen.Dispose%2A>耗用系統資源的物件 (例如<xref:System.Drawing.Pen>物件) 使用它們完畢之後。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Pen>
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [如何：建立畫筆](how-to-create-a-pen.md)
+- [HOW TO：建立畫筆](how-to-create-a-pen.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)
 - [GDI+ 中的畫筆、線條和矩形](pens-lines-and-rectangles-in-gdi.md)

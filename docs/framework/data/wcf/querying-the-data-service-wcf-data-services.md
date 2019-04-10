@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: da015fcd20745ef67831b7133242d66392f923e1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620401"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175977"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您使用熟悉的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程式設計模式針對資料服務執行查詢，包括使用 Language Integrated Query (LINQ)。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫會接收回應訊息，並將它轉譯成用戶端資料服務類別的執行個體。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。  
@@ -41,7 +41,7 @@ ms.locfileid: "54620401"
  [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersspecific)]  
  [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersspecific)]  
   
- 如需詳細資訊，請參閱[＜How to：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)。  
   
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端支援晚期繫結物件，例如當您使用查詢*動態*輸入C#。 不過，基於效能因素，您應該一律針對資料服務撰寫強型別的查詢。 用戶端不支援 <xref:System.Tuple> 型別和動態物件。  
   
@@ -63,7 +63,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  如需詳細資訊，請參閱 < [LINQ 考量](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)。  
   
 ## <a name="adding-query-options"></a>加入查詢選項  
- 資料服務查詢支援 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供的所有查詢選項。 您可以呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將查詢選項附加至 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 會傳回新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體，其相當於原始的查詢，但使用新的查詢選項集。 下列查詢在執行時會傳回 `Orders`，其係經由 `Freight` 值進行篩選並依 `OrderID` 遞減順序排序：  
+ 資料服務查詢支援 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供的所有查詢選項。 您可以呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將查詢選項附加至 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 傳回新<xref:System.Data.Services.Client.DataServiceQuery%601>就相當於原始查詢的執行個體但使用新的查詢選項集。 下列查詢在執行時會傳回 `Orders`，其係經由 `Freight` 值進行篩選並依 `OrderID` 遞減順序排序：  
   
  [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
  [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
@@ -73,7 +73,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
  [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
   
- 您可以連續呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法來建構複雜的查詢運算式。 如需詳細資訊，請參閱[＜How to：將查詢選項加入至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)。  
+ 您可以連續呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法來建構複雜的查詢運算式。 如需詳細資訊，請參閱[如何：將查詢選項加入至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)。  
   
  查詢選項提供您另一種表示 LINQ 查詢語法元件的方式。 如需詳細資訊，請參閱 < [LINQ 考量](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)。  
   
@@ -99,17 +99,17 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  <xref:System.Data.Services.Client.QueryOperationResponse%601> 還有下列成員，可讓您存取有關查詢結果的其他資訊：  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A> - 取得作業擲回的錯誤 (若有發生錯誤的話)。  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -取得作業，所擲回的錯誤，如果有任何已發生。  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> - 包含與查詢回應相關聯之 HTTP 回應標頭的集合。  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -包含與查詢回應相關聯的 HTTP 回應標頭的集合。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> - 取得產生 <xref:System.Data.Services.Client.DataServiceQuery%601> 的原始 <xref:System.Data.Services.Client.QueryOperationResponse%601>。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -取得原始<xref:System.Data.Services.Client.DataServiceQuery%601>產生<xref:System.Data.Services.Client.QueryOperationResponse%601>。  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> - 取得查詢回應的 HTTP 回應碼。  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -取得查詢回應的 HTTP 回應碼。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> - 在 <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法時，取得實體集中的實體總數。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -取得在實體中的實體總數時，設定<xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A>上呼叫方法<xref:System.Data.Services.Client.DataServiceQuery%601>。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 傳回包含下一頁結果之 URI 的 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 物件。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -傳回<xref:System.Data.Services.Client.DataServiceQueryContinuation>物件，包含結果的下一頁的 URI。  
   
  根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]只會傳回查詢 URI 所明確選取的資料。 它還提供選項可讓您於必要時，從資料服務明確載入其他資料。 每次您從資料服務明確載入資料時，就會傳送一個要求至資料服務。 可以明確載入的資料包括相關實體、分頁的回應資料，以及二進位資料流。  
   
@@ -121,7 +121,7 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="getting-a-count-of-the-total-number-of-entities-in-the-set"></a>取得集合中實體總數的計數  
  在部分情況下，這麼做有助於得知實體集中的實體總數，且不僅是查詢傳回的數目。 在 <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法，以要求集合中的這項實體總計數包含在查詢結果中。 在此案例中，傳回之 <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> 的 <xref:System.Data.Services.Client.QueryOperationResponse%601> 屬性會傳回集合中的實體總數。  
   
- 您也可以分別呼叫 <xref:System.Int32> 或 <xref:System.Int64> 方法，藉此只取得集合中的實體總計數，以做為 <xref:System.Linq.Enumerable.Count%2A> 或做為 <xref:System.Linq.Enumerable.LongCount%2A> 值。 呼叫這些方法時，並未傳回 <xref:System.Data.Services.Client.QueryOperationResponse%601>；只會傳回計數值。 如需詳細資訊，請參閱[＜How to：判斷查詢所傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)。  
+ 您也可以分別呼叫 <xref:System.Int32> 或 <xref:System.Int64> 方法，藉此只取得集合中的實體總計數，以做為 <xref:System.Linq.Enumerable.Count%2A> 或做為 <xref:System.Linq.Enumerable.LongCount%2A> 值。 呼叫這些方法時，並未傳回 <xref:System.Data.Services.Client.QueryOperationResponse%601>；只會傳回計數值。 如需詳細資訊，請參閱[如何：判斷查詢所傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)。  
   
 ## <a name="in-this-section"></a>本節內容  
  [查詢投影](../../../../docs/framework/data/wcf/query-projections-wcf-data-services.md)  
@@ -130,17 +130,18 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [LINQ 考量](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
- [如何：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+ [HOW TO：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [如何：將查詢選項加入至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [HOW TO：將查詢選項新增至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [如何：判斷查詢所傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [HOW TO：判斷查詢傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [如何：指定資料服務的用戶端認證要求](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [HOW TO：指定資料服務要求的用戶端認證](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [如何：設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [HOW TO：設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [如何：專案查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [HOW TO：投影查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

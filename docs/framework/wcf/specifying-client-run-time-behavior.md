@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
-ms.openlocfilehash: 2f6879f5e46e62db29e482444d55680d39dd8ccc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587173"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164368"
 ---
 # <a name="specifying-client-run-time-behavior"></a>指定用戶端執行階段行為
 Windows Communication Foundation (WCF) 用戶端，例如 Windows Communication Foundation (WCF) 服務，可以設定以修改以符合用戶端應用程式的執行階段行為。 指定用戶端執行階段行為時有三個屬性可供使用。 雙工用戶端回呼物件可以使用 <xref:System.ServiceModel.CallbackBehaviorAttribute> 和 <xref:System.ServiceModel.Description.CallbackDebugBehavior> 屬性來修改其執行階段行為。 而另一個屬性 <xref:System.ServiceModel.Description.ClientViaBehavior> 則可用來區隔邏輯目的和立即網路目的。 此外，雙工用戶端回呼類型也可使用一些服務端的行為。 如需詳細資訊，請參閱 <<c0> [ 指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)。  
@@ -44,4 +44,5 @@ Windows Communication Foundation (WCF) 用戶端，例如 Windows Communication 
  您可以使用 <xref:System.ServiceModel.Description.ClientViaBehavior> 行為，對應該建立的傳輸通道指定統一資源識別項。 當立即網路目的不是訊息的預期處理器時，請使用這個行為。 當呼叫應用程式不需要知道最終目的，或者目的 `Via` 標頭不是位址時，這個行為可啟用多重躍點交談。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [指定服務執行階段行為](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

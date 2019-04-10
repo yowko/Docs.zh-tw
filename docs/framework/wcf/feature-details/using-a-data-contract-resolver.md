@@ -2,12 +2,12 @@
 title: 使用資料合約解析程式
 ms.date: 03/30/2017
 ms.assetid: 2e68a16c-36f0-4df4-b763-32021bff2b89
-ms.openlocfilehash: 844c4e0861c2cf4e6acb2b128ff1f5cefa0f7fa0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: b1c545d84db68f4b13925dd9088cc9d81050b5e7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55279145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222441"
 ---
 # <a name="using-a-data-contract-resolver"></a>使用資料合約解析程式
 資料合約解析程式可讓您動態設定已知型別。 在序列化或還原序列化資料合約未預期的型別時，就會需要已知型別。 如需已知型別的詳細資訊，請參閱[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。 已知型別通常會以靜態方式指定。 這表示，實作作業時，您必須知道此作業可能會接收的所有可能型別。 不過，這項條件在某些情況中並不成立，此時，能夠以動態方式指定已知型別就很重要。  
@@ -88,6 +88,7 @@ SerializerBehavior.DataContractResolver = new MyCustomerResolver();
  您可以透過實作可套用至服務的屬性，以宣告方式指定資料合約解析程式。  如需詳細資訊，請參閱 < [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)範例。 這個範例會實作稱為"KnownAssembly"的屬性，將自訂資料合約解析程式新增至服務的行為。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+
+- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [DataContractSerializer 範例](../../../../docs/framework/wcf/samples/datacontractserializer-sample.md)
 - [KnownAssemblyAttribute](../../../../docs/framework/wcf/samples/knownassemblyattribute.md)

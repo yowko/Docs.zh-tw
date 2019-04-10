@@ -1,18 +1,18 @@
 ---
-title: HOW TO：設定 WCF 用戶端與 wse 3.0 服務交互操作
+title: HOW TO：將 WCF 用戶端設為與 WSE3.0 服務交互操作
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
-ms.openlocfilehash: 345677f992491022a12fb03981f644343e405dfe
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 0136fa7c3a51a7d64340c6251e9f5eb63017ffd4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220691"
 ---
-# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>HOW TO：設定 WCF 用戶端與 wse 3.0 服務交互操作
+# <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>HOW TO：將 WCF 用戶端設為與 WSE3.0 服務交互操作
 當 WCF 用戶端會設定為使用 August 2004 版本的 Ws-addressing 規格，Windows Communication Foundation (WCF) 用戶端會將與 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 服務的連線層級相容性。  
   
 ### <a name="to-configure-a-wcf-client-to-interoperate-with-a-wse-30-web-service"></a>將 WCF 用戶端設定為與 WSE 3.0 Web 服務交互操作  
@@ -57,11 +57,11 @@ ms.locfileid: "55066450"
   
 ## <a name="example"></a>範例  
  下列程式碼範例會定義自訂的繫結，此繫結會公開 WSE 3.0 通行安全性判斷提示屬性的對應屬性。 自訂繫結，名為`WseHttpBinding`，然後用來指定 WCF 用戶端的繫結屬性。  
-  
-  
+
 [!code-csharp[c_WCFClientToWSEService#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/client.cs#0)]
 [!code-vb[c_WCFClientToWSEService#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/client.vb#0)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.Binding>
 - [與 WSE 交互操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)

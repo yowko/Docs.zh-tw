@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: d02705422b088800d9f2e081d6a28924d9b84078
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710728"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157744"
 ---
 # <a name="events-overview-windows-forms"></a>事件概觀 (Windows Form)
 事件是您可以透過程式碼加以回應或「處理」的動作。 使用者動作 (例如按一下滑鼠按鈕或按下按鍵)、程式碼或系統都可以產生事件。  
@@ -44,5 +44,6 @@ ms.locfileid: "57710728"
  委派會隨機使用繫結機制，其可能在執行時繫結到任何簽章符合事件處理程式簽章的方法。 您可以利用此功能視條件設定或變更繫結方法，以及隨機將事件處理常式連結至控制項。  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+
+- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)

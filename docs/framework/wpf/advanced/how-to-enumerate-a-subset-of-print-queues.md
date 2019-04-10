@@ -9,12 +9,12 @@ helpviewer_keywords:
 - enumerating [WPF], subset of print queues
 - print queues [WPF], enumerating subset of
 ms.assetid: cc4a1b5b-d46f-4c5e-bc26-22c226e4bee0
-ms.openlocfilehash: 7cdd0ebeb03d078a952dd9ffe4d2ed7590417054
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: adcfff0196bd0430ec1ae563fbd5489062de11f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359480"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217181"
 ---
 # <a name="how-to-enumerate-a-subset-of-print-queues"></a>HOW TO：列舉列印佇列的子集
 管理印表機的全公司組的資訊技術 (IT) 專業人員所面臨的常見情況是產生一份具有特定特性的印表機。 此功能會由<xref:System.Printing.PrintServer.GetPrintQueues%2A>方法<xref:System.Printing.PrintServer>物件和<xref:System.Printing.EnumeratedPrintQueueTypes>列舉型別。  
@@ -35,6 +35,7 @@ ms.locfileid: "57359480"
  您可以擴充此範例由`foreach`透過每個列印佇列的步驟執行進一步的迴圈檢測。 比方說，您無法篩選出由迴圈呼叫不支援雙面列印的印表機每個列印佇列<xref:System.Printing.PrintQueue.GetPrintCapabilities%2A>方法，測試傳回的值是否存在的雙面列印。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Printing.PrintServer.GetPrintQueues%2A>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.LocalPrintServer>

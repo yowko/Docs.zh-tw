@@ -2,12 +2,12 @@
 title: 查詢計畫快取 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
-ms.openlocfilehash: 75c097d66ae23d32465b5a717ae627d35cdc003f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671131"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178174"
 ---
 # <a name="query-plan-caching-entity-sql"></a>查詢計畫快取 (Entity SQL)
 每當嘗試執行查詢時，查詢管線就會查閱它的查詢快取計畫，以查看精確的查詢是否已編譯且可用。 如果確實如此，它會重複使用快取的計畫，而不是建立新的計畫。 如果查詢計畫快取中找不到相符項目，就會編譯及快取此查詢。 查詢是由它的 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 文字和參數集合 (名稱和型別) 所識別。 所有的文字比較都會區分大小寫。  
@@ -36,7 +36,7 @@ ms.locfileid: "54671131"
   
 -   查詢文字應該是固定模式，最好是某個固定字串或資源。  
   
--   每當必須傳遞使用者提供的值時，就應該使用 <xref:System.Data.EntityClient.EntityParameter> 或 <xref:System.Data.Objects.ObjectParameter>。  
+-   <xref:System.Data.EntityClient.EntityParameter> 或<xref:System.Data.Objects.ObjectParameter>每當必須傳遞使用者提供的值應該使用。  
   
  您應該避免下列查詢模式，這樣會耗用查詢計畫快取中的位置，而這是不必要的：  
   
@@ -49,4 +49,5 @@ ms.locfileid: "54671131"
 -   變更為註解內的文字。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 概觀](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)

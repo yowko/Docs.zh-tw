@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [Windows Forms], context-sensitive Help
 - Windows Forms, context-sensitive Help
 ms.assetid: 6b10c2cc-c577-4cb5-9669-e37b33416af9
-ms.openlocfilehash: f9cf0c165c6c64186eff53676c8b1b06f74361fc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 177b61cab99d21a844298632020244fa424d8d2a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708375"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176575"
 ---
 # <a name="helpprovider-component-overview-windows-forms"></a>HelpProvider 元件概觀 (Windows Form)
 Windows Forms [HelpProvider](helpprovider-component-windows-forms.md)元件可用來將 HTML 說明 1.x 說明檔 （.chm 檔案，以 HTML Help Workshop 產生或.htm 檔） 與 Windows 應用程式產生關聯。 您可以提供說明各種不同的方式：  
@@ -37,4 +37,5 @@ Windows Forms [HelpProvider](helpprovider-component-windows-forms.md)元件可�
 >  您可能會遇到問題時指定的路徑中的說明檔案，請使用相對路徑<xref:System.Windows.Forms.Help.ShowHelp%2A>方法或<xref:System.Windows.Forms.HelpProvider.HelpNamespace%2A>屬性<xref:System.Windows.Forms.HelpProvider>控制項。 因此，請務必使用指定的說明檔的絕對檔案路徑。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 應用程式中的說明系統](../advanced/help-systems-in-windows-forms-applications.md)
+
+- [Windows Form 應用程式中的說明系統](../advanced/help-systems-in-windows-forms-applications.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], addresses
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
-ms.openlocfilehash: 22af8cd6a8bdce590736ee14705f73bef1dc4d16
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56261098"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220431"
 ---
 # <a name="endpoint-addresses"></a>端點位址
 每個端點都有與其相關聯的位址，以便用來找出並識別端點。 這個位址主要包含一個可指定端點位置的統一資源識別元 (URI)。 在由 Windows Communication Foundation (WCF) 程式設計模型中表示端點位址<xref:System.ServiceModel.EndpointAddress>類別，其中包含選擇性<xref:System.ServiceModel.EndpointAddress.Identity%2A>屬性可讓其他端點之端點的驗證，交換訊息，以及一組選擇性的<xref:System.ServiceModel.EndpointAddress.Headers%2A>屬性，定義取用服務時所需任何其他 SOAP 標頭。 選擇性標頭會提供額外與更詳細的定址資訊，以便識別端點或與服務端點互動。 端點位址會在網路上表示為 WS-Addressing 端點參考 (EPR)。  
@@ -138,5 +138,6 @@ ms.locfileid: "56261098"
  在某些情況中，端點會接收抵達基礎傳輸的所有訊息，而不只有包含適當 `To` 標頭的訊息。 若要啟用這項功能，使用者可以使用 <xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> 類別。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [指定端點位址](../../../../docs/framework/wcf/specifying-an-endpoint-address.md)
 - [服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)

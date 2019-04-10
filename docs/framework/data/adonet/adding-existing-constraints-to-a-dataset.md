@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 307d2809-208b-4cf8-b6a9-5d16f15fc16c
-ms.openlocfilehash: 39b1e9945a1cf6cd847fbe82c0b29e50f23bf785
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 18c391e97baa170b78dcfe0165fb38b6c6d739f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714145"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210551"
 ---
 # <a name="adding-existing-constraints-to-a-dataset"></a>將現有條件約束加入至資料集
 **填滿**方法**DataAdapter**填滿<xref:System.Data.DataSet>只使用資料表資料行和資料列從資料來源; 不過條件約束通常由設定資料來源，**填滿**方法不會加入到此結構描述資訊**資料集**預設。 若要填入**資料集**從資料來源的現有主索引鍵條件約束資訊，您可以呼叫**FillSchema**方法**DataAdapter**，或設定**MissingSchemaAction**屬性**DataAdapter**來**AddWithKey**呼叫之前，先**填滿**。 這可確保該主索引鍵中的條件約束**資料集**反映出資料來源。 外部索引鍵條件約束資訊就不會包含，而且必須明確地中所示建立[DataTable 條件約束](../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-constraints.md)。  
@@ -61,7 +61,8 @@ custAdapter.Fill(custDataSet, "Customers");
 >  如果**FillSchema**方法**OleDbDataAdapter**物件針對傳回多個結果集的命令呼叫，會傳回只從第一個結果集的結構描述資訊。 傳回多個結果的結構描述資訊時設定使用**OleDbDataAdapter**，則建議您指定**MissingSchemaAction**的**AddWithKey**並取得結構描述資訊時呼叫**填滿**方法。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataAdapter 和 DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)
 - [DataSet、DataTable 和 DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

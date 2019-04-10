@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data collections [WPF], creating views of
 - data binding [WPF], creating views of data collections
 ms.assetid: b641e96c-c2f6-42ea-9c5d-bac81176ad65
-ms.openlocfilehash: 28a21aae7f8a08efebfd16bacd2a2d82b04de0c1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 746331e69ee1e5eee795a0e35202f4889b72c53f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57360065"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222103"
 ---
 # <a name="how-to-get-the-default-view-of-a-data-collection"></a>HOW TO：取得資料集合的預設檢視
 檢視可讓在不同的方式，取決於排序、 篩選或群組準則中檢視相同的資料收集。 每個集合都有一個共用的預設檢視，繫結會指定做為其來源集合時，可做為實際的繫結來源。 此範例示範如何取得集合的預設檢視。  
@@ -33,5 +33,6 @@ ms.locfileid: "57360065"
  集合檢視所提供之功能的範例，請參閱[檢視中的排序資料](how-to-sort-data-in-a-view.md)，[檢視中的篩選資料](how-to-filter-data-in-a-view.md)，和[瀏覽透過物件在資料 CollectionView](how-to-navigate-through-the-objects-in-a-data-collectionview.md).  
   
 ## <a name="see-also"></a>另請參閱
-- [使用 XAML 中的檢視排序和群組資料](how-to-sort-and-group-data-using-a-view-in-xaml.md)
-- [HOW-TO 主題](data-binding-how-to-topics.md)
+
+- [使用 XAML 中的檢視排序和分組資料](how-to-sort-and-group-data-using-a-view-in-xaml.md)
+- [HOW TO 主題](data-binding-how-to-topics.md)

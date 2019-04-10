@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 6e5ede5141d2edb24a688bf700c22870c8886906
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157666"
 ---
 # <a name="securing-services"></a>保護服務的安全
 Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需求： 傳輸安全性和授權。 (第三個需求中所述之安全性事件的稽核[稽核](../../../docs/framework/wcf/feature-details/auditing-security-events.md)。)簡言之，傳輸安全性包含驗證 (驗證服務和用戶端兩者的身分識別)、機密性 (訊息加密) 和完整性 (用來偵測竄改的數位簽章)。 授權會控制存取資源，例如，只允許有權限的使用者讀取檔案。 使用 WCF 的功能，即可輕鬆實作的兩個主要需求。  
@@ -41,7 +41,7 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
  若要保護只在 Windows 網域上執行的應用程式，您可以使用 <xref:System.ServiceModel.WSHttpBinding> 或 <xref:System.ServiceModel.NetTcpBinding> 繫結的預設安全性設定。 根據預設，在相同的 Windows 網域上的任何人都可以存取 WCF 服務。 因為這些使用者已經登入網路，所以他們都是受信任的。 服務和用戶端之間的訊息會為了機密性而加密，且為了完整性而簽署。 如需如何建立使用 Windows 安全性的服務的詳細資訊，請參閱[How to:使用 Windows 認證的服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)。  
   
 ### <a name="authorization-using-the-principalpermissionattribute-class"></a>使用 PrincipalPermissionAttribute 類別的授權  
- 如果您必須限制存取電腦上的資源，最簡單的方式是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別。 這個屬性可藉由要求使用者應為指定的 Windows 群組或角色或特定使用者，來限制服務作業的引動過程。 如需詳細資訊，請參閱[＜How to：以 PrincipalPermissionAttribute 類別限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
+ 如果您必須限制存取電腦上的資源，最簡單的方式是使用 <xref:System.Security.Permissions.PrincipalPermissionAttribute> 類別。 這個屬性可藉由要求使用者應為指定的 Windows 群組或角色或特定使用者，來限制服務作業的引動過程。 如需詳細資訊，請參閱[如何：以 PrincipalPermissionAttribute 類別限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)。  
   
 ### <a name="impersonation"></a>模擬  
  模擬是另一個可用來控制存取資源的機制。 根據預設，由 IIS 裝載的服務必須在 ASPNET 帳戶的身分識別下執行。 ASPNET 帳戶只能存取它有權限的資源。 不過，也可以將資料夾的 ACL 設定為排除 ASPNET 服務帳戶，但允許某些其他身分識別來存取資料夾。 接下來的問題是，如果不允許 ASPNET 帳戶存取資料夾，如何允許其他使用者存取資料夾。 答案是使用模擬，藉此讓服務能使用用戶端的認證來存取特定資源。 另一個範例是當存取只有某些使用者有權限的 SQL Server 資料庫。 如需使用模擬的詳細資訊，請參閱[How to:服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)並[委派和模擬](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)。  
@@ -73,7 +73,7 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
  常用的通訊協定包含 HTTP 和 TCP。 每個這些通訊協定都會藉由通訊協定特定的 (一或多個) 機制來保護訊息傳輸。 例如，HTTP 通訊協定使用 SSL over HTTP (通常縮寫為 "HTTPS") 而受到保護。 因此，當您選取安全性的傳輸模式時，會依照通訊協定規定來選擇使用機制。 例如，如果您選取 <xref:System.ServiceModel.WSHttpBinding> 類別，並將其安全性模式設定為 Transport，同時會選取 SSL over HTTP (HTTPS) 做為安全性機制。 傳輸模式的優點是比訊息模式更有效率，因為安全性是整合在相當低的層級。 使用傳輸模式時，安全性機制必須依照傳輸規格來實作，因此只有在點對點傳輸時訊息才能安全流動。  
   
 #### <a name="message-mode"></a>訊息模式  
- 相對之下，訊息模式是藉由包含安全性資料做為每個訊息的一部分，來提供安全性。 使用 XML 和 SOAP 安全性標頭，為確保訊息完整性和機密性所需的認證和其他資料會包含在每個訊息中。 每個訊息包含安全性資料且必須個別處理，因此會影響效能  (在傳輸模式中，一旦傳輸層通過驗證，所有訊息都會自由流動)。但是比起傳輸安全性，訊息安全性有一個優勢：更有彈性。 也就是說，安全性需求不是由傳輸決定的。 您可以使用任何類型的用戶端認證來保護訊息 (在傳輸模式中，傳輸通訊協定會決定可使用的用戶端認證類型)。  
+ 相對之下，訊息模式是藉由包含安全性資料做為每個訊息的一部分，來提供安全性。 使用 XML 和 SOAP 安全性標頭，為確保訊息完整性和機密性所需的認證和其他資料會包含在每個訊息中。 每個訊息包含安全性資料且必須個別處理，因此會影響效能 (在傳輸模式中，一旦傳輸層通過驗證，所有訊息都會自由流動)。但是比起傳輸安全性，訊息安全性有一個優勢：更有彈性。 也就是說，安全性需求不是由傳輸決定的。 您可以使用任何類型的用戶端認證來保護訊息 (在傳輸模式中，傳輸通訊協定會決定可使用的用戶端認證類型)。  
   
 #### <a name="transport-with-message-credentials"></a>使用訊息認證的傳輸  
  第三個模式結合傳輸和訊息安全性兩者的優點。 在這個模式中，傳輸安全性會用來有效確保每個訊息的機密性和完整性。 同時，每個訊息包含它自己的認證資料，以便驗證訊息。 使用驗證時，也可以實作授權。 藉由驗證傳送者，可以依照傳送者的身分識別來授與 (或拒絕) 資源的存取權限。  
@@ -91,7 +91,7 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
  「 *認證值* 」(Credential Value) 是服務使用的實際認證。 一旦指定認證類型，您可能也要使用實際認證來設定服務。 如果已選取 Windows (而且服務將在 Windows 網域上執行)，則不需要指定實際認證值。  
   
 ## <a name="identity"></a>身分識別  
- 在 WCF 中，詞彙*識別*對伺服器和用戶端有不同意義。 簡言之，當執行服務時，識別是在驗證後指派至安全性內容。 若要檢視實際識別，請檢查 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 類別的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext> 屬性。 如需詳細資訊，請參閱[＜How to：檢查安全性內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)。  
+ 在 WCF 中，詞彙*識別*對伺服器和用戶端有不同意義。 簡言之，當執行服務時，識別是在驗證後指派至安全性內容。 若要檢視實際識別，請檢查 <xref:System.ServiceModel.ServiceSecurityContext.WindowsIdentity%2A> 類別的 <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> 和 <xref:System.ServiceModel.ServiceSecurityContext> 屬性。 如需詳細資訊，請參閱[如何：檢查安全性內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)。  
   
  相對之下，在用戶端，識別是用來驗證服務。 在設計階段，用戶端開發人員可以設定[\<身分識別 >](../../../docs/framework/configure-apps/file-schema/wcf/identity.md)從服務取得的值的項目。 在執行階段，用戶端會比對服務的實際識別，來檢查項目的值。 如果檢查失敗，用戶端會結束通訊。 如果服務在特定使用者的識別下執行，此值可以是使用者主要名稱 (UPN)，如果服務在電腦帳戶下執行，則為服務主要名稱 (SPN)。 如需詳細資訊，請參閱 <<c0> [ 服務身分識別和驗證](../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)。 認證也可以是憑證，或是憑證上識別憑證的欄位。  
   
@@ -99,6 +99,7 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
  `ProtectionLevel` 屬性 (Property) 會出現在多個屬性 (Attribute) 類別 (例如 <xref:System.ServiceModel.ServiceContractAttribute> 和 <xref:System.ServiceModel.OperationContractAttribute> 類別)。 保護層級是一個值，會指定支援服務的訊息 (或訊息部分) 為經過簽署、經過簽署且加密，或是已傳送但未包含簽章或加密。 如需有關屬性的詳細資訊，請參閱[了解保護層級](../../../docs/framework/wcf/understanding-protection-level.md)，以及程式設計範例，請參閱[How to:設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)。 如需有關設計服務合約`ProtectionLevel`在內容中，請參閱[Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ServiceContractAttribute>
@@ -109,10 +110,10 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
 - [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)
 - [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [如何：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [如何：使用 Windows 認證的服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [如何：設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [如何：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [如何：以 PrincipalPermissionAttribute 類別限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [如何：服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [如何：檢查安全性內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [HOW TO：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [HOW TO：使用 Windows 認證來確保服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [HOW TO：設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [HOW TO：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [HOW TO：在服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [HOW TO：檢查資訊安全內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

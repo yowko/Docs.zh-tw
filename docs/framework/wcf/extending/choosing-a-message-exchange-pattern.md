@@ -2,12 +2,12 @@
 title: 選擇訊息交換模式
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
-ms.openlocfilehash: 927324e0f707284e31baefa261d4d90b147e4e24
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54594755"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157731"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>選擇訊息交換模式
 撰寫自訂傳輸的第一個步驟是決定哪一種*訊息交換模式*（又稱為 Mep） 所需的通道所開發。 本主題會說明可用的選項，並討論各種需求。 這是通道開發工作清單中所述的第一個工作[開發通道](../../../../docs/framework/wcf/extending/developing-channels.md)。  
@@ -93,4 +93,5 @@ ms.locfileid: "54594755"
 -   當某一端在您的通道上呼叫 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> 時，立即終止工作階段而不執行 I/O。 同樣地，這可能表示不進行任何動作，或是牽涉到中止網路連線或其他一些資源。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)

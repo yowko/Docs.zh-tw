@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 658f5b7ede2895eaf774b2ef9cf7ca17f6682ac8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 96cdfb79c1573648173305d6ee789aa8db030ff8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496790"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211006"
 ---
 # <a name="icorprofilercallback9dynamicmethodunloaded-method"></a>ICorProfilerCallback9::DynamicMethodUnloaded 方法
 [.NET Framework 4.7.2 和更新版本中支援]  
@@ -39,11 +39,12 @@ HRESULT DynamicMethodUnloaded(
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorProfilerCallback8.DynamicMethodJITCompilationStarted 方法](icorprofilercallback8-dynamicmethodjitcompilationstarted-method.md)
 - [ICorProfilerCallback8.DynamicMethodJITCompilationFinished 方法](icorprofilercallback8-dynamicmethodjitcompilationfinished-method.md)
 - [ICorProfilerCallback9 介面](icorprofilercallback9-interface.md)

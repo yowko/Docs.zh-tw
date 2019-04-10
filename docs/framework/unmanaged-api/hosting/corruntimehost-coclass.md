@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7c81a39acee31986421c810e2814a4f7e6c4d970
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2143fc13db1757ac2fa8a9c5a43f104a0c519ca0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54597524"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218559"
 ---
 # <a name="corruntimehost-coclass"></a>CorRuntimeHost Coclass
 提供介面來管理由 common language runtime 所執行的應用程式。  
@@ -53,9 +53,10 @@ coclass CorRuntimeHost {
   
  **標頭：** MSCorEE.idl  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載 Coclass](../../../../docs/framework/unmanaged-api/hosting/hosting-coclasses.md)

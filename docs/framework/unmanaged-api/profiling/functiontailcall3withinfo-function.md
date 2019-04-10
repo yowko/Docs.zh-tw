@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c4c3487f39d4f4c667ec9eb4705e17ccf29d9a4c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4352d006c95a5b85341625220e6c7e62a86b482a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490381"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59178083"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 函式
 通知分析工具目前正在執行的函式即將執行結尾呼叫另一個函式，並提供可以傳遞至控制代碼[ICorProfilerInfo3::GetFunctionTailcall3Info 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)擷取堆疊框架。  
@@ -61,11 +61,12 @@ void __stdcall FunctionTailcall3WithInfo(
   
  **標頭：** CorProf.idl  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [FunctionEnter3](../../../../docs/framework/unmanaged-api/profiling/functionenter3-function.md)
 - [FunctionLeave3](../../../../docs/framework/unmanaged-api/profiling/functionleave3-function.md)
 - [FunctionTailcall3](../../../../docs/framework/unmanaged-api/profiling/functiontailcall3-function.md)

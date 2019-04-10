@@ -8,12 +8,12 @@ helpviewer_keywords:
 - claims [WCF]
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
-ms.openlocfilehash: 1f9881cd1a63e00aaf414f93c91885e57ea0b145
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540556"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155086"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
 授權就是決定哪些實體可以擁有變更、檢視或另外存取電腦資源等權限的程序。 例如，在公司裡只有經理可以存取這家公司員工的檔案。 Windows Communication Foundation (WCF) 支援兩種機制執行授權程序。 第一種機制可讓您使用現有的 Common Language Runtime (CLR) 建構來控制授權。 第二個是宣告為基礎的模型，稱為*身分識別模型*。 WCF 會使用身分識別模型來建立宣告，從內送訊息;身分識別模型類別可加以擴充以支援新的宣告類型，用於自訂授權配置。 本主題將顯示識別模型功能的主要程式設計概念概觀，以及此功能使用之最重要類別的清單。  
@@ -160,6 +160,7 @@ ms.locfileid: "54540556"
 |<xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ExternalAuthorizationPolicies%2A>|對此服務所指定的自訂授權原則集合。 除了與傳入訊息中之認證關聯的原則以外，這些原則也會加以評估。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Policy.AuthorizationContext>
 - <xref:System.IdentityModel.Claims.Claim>
 - <xref:System.IdentityModel.Policy.EvaluationContext>
@@ -173,9 +174,9 @@ ms.locfileid: "54540556"
 - [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [宣告與拒絕資源的存取](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [如何：建立自訂授權原則](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [如何：建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [HOW TO：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [HOW TO：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [HOW TO：建立自訂授權原則](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [HOW TO：為服務建立自訂授權管理員](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

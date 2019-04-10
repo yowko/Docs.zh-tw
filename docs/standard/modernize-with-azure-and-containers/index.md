@@ -4,12 +4,12 @@ description: 了解如何隨即轉移和現代化現有應用程式到 Azure 雲
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 68d5ce7ad71fae5ed3e1460c56581dd69c3925f3
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
-ms.translationtype: MT
+ms.openlocfilehash: ed291309d04e3e5bfed6c73cdf8a67b79431a363
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675922"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156386"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 （第 2 版）
 
@@ -91,7 +91,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 表 1-1 描述了選擇各項移轉或現代化方法的主要優點及理由。
 
-| **雲端基礎結構就緒** <br /> *隨即轉移* | **Cloud-Optimized** <br /> *現代化* | **Cloud-Native** <br /> *現代化、 重建和重寫* |
+| **雲端基礎結構就緒** <br /> *原形移轉* | **雲端最佳化** <br /> *現代化* | **雲端原生** <br /> *現代化、 重建和重寫* |
 |---|---|---|
 | **應用程式的計算目標** |
 | 在 Azure 中部署到 VM 的應用程式 | 龐大且單一的體系或部署至 Azure App Service、 Azure 容器執行個體 (ACI)、 Vm 與容器、 Azure Service Fabric 中或 AKS (Azure Kubernetes Service) 的多層式架構應用程式 | 在 Azure Kubernetes Service (AKS)、 Service Fabric 和/或無伺服器 Azure 函式為基礎的微服務的容器化微服務。 |
@@ -111,7 +111,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 圖 1-2 顯示了在三個雲端成熟度等級中，各自使用的主要技術及架構樣式：
 
-![各個成熟度等級將現有 .NET Web 應用程式現代化時使用的主要技術](./media/image1-2.png)
+![將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術](./media/image1-2.png)
 
 > **圖 1-2。** 將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術
 
@@ -154,7 +154,6 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 > **圖 1-6。** 範例雲端最佳化應用程式案例中，使用 Windows 容器及受控的服務
 
 更進一步地說，您可以藉由新增特定案例的幾個微服務擴充您現有的雲端最佳化應用程式。 這會將您部分雲端原生的模型，也就是不存在的指導方針的主要重點的層級。
-
 
 ## <a name="what-this-guide-does-not-cover"></a>本指南未涵蓋的內容
 

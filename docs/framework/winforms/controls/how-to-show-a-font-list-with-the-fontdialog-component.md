@@ -1,5 +1,5 @@
 ---
-title: HOW TO：顯示字型清單使用 FontDialog 元件
+title: HOW TO：使用 FontDialog 元件顯示字型清單
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], displaying
 - fonts [Windows Forms], selecting
 ms.assetid: 35692c1b-0937-4b7a-9207-1ae6bdc244a0
-ms.openlocfilehash: 4036b6e12d8c4df2c4edfd5df293160d9197b61a
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fba9caecc71c5cb77c811fc112616647c79689c6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717059"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220184"
 ---
-# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>HOW TO：顯示字型清單使用 FontDialog 元件
+# <a name="how-to-show-a-font-list-with-the-fontdialog-component"></a>HOW TO：使用 FontDialog 元件顯示字型清單
 [FontDialog](fontdialog-component-windows-forms.md)元件可讓使用者選取的字型，以及變更其顯示的層面，例如其加權和大小。  
   
  在對話方塊中選取的字型會傳入<xref:System.Windows.Forms.FontDialog.Font%2A>屬性。 因此，利用使用者所選取是字型的簡單，只要讀取屬性。  
@@ -77,5 +77,6 @@ ms.locfileid: "57717059"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.FontDialog>
 - [FontDialog 元件](fontdialog-component-windows-forms.md)

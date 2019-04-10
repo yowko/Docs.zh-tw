@@ -21,17 +21,16 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 45214b5f0e6827c36f87a4d45592ff0989c9a877
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890806"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209706"
 ---
 # <a name="imaging-overview"></a>影像處理概觀
 本主題提供 [!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] 的簡介。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 可讓開發人員顯示、 轉換和格式化映像。  
-  
-  
+
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF 影像處理元件  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 提供顯著的增強功能，在映像中的功能[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]。 之前的影像處理功能 (例如顯示點陣圖或在通用控制項上使用影像) 要依賴 [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] 或 [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] 程式庫運作。 這些 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 提供基本影像處理功能，但是缺少一些功能，例如支援轉碼器擴充性和高畫質影像支援。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 若要克服的缺點設計[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]並[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]，並提供一組新的[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]顯示，並使用您的應用程式的映像。  
@@ -190,9 +189,10 @@ ms.locfileid: "58890806"
 >  轉碼器必須經過數位簽署，系統才能辨識它。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.Imaging.BitmapSource>
 - <xref:System.Windows.Media.Imaging.BitmapImage>
 - <xref:System.Windows.Controls.Image>
 - <xref:System.Windows.Media.Imaging.BitmapMetadata>
-- [2D 圖形和影像](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
+- [2D 圖形和影像處理](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [Win32 範例轉碼器](https://go.microsoft.com/fwlink/?LinkID=160052)

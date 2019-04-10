@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cb23c25c-1075-4cc3-a8ff-4db72e536c0d
-ms.openlocfilehash: d414218604887fca2d69a02b40dfa87f13961aae
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 8f09983aa90be666cc13ae4eba018db2ae706daa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55825377"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219222"
 ---
 # <a name="method-based-query-syntax-examples-grouping"></a>以方法為基礎的查詢語法範例：群組
 本主題中的範例會示範如何使用`GroupBy`方法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)使用以方法為基礎的查詢語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
@@ -39,4 +39,5 @@ ms.locfileid: "55825377"
  [!code-vb[DP L2E Examples#GroupByCount_MQ](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#groupbycount_mq)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

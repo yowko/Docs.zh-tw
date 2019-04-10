@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 7c8c1697ff18e919711e84e724b5b8698dfe088e
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
-ms.translationtype: MT
+ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161508"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 可由裝載的內容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，則<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可由組件識別的頁面所組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和超連結巡覽至。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -20,9 +20,7 @@ ms.locfileid: "58125599"
  不過，其他類型的應用程式有需要知道被巡覽的頁面。 例如，假設人力資源應用程式有列出組織中所有員工的頁面：「員工清單」頁面。 此頁面也允許使用者按一下超連結新增新進員工。 按一下時，頁面會巡覽至「新增員工」頁面，收集新進員工的詳細資料，並傳回「員工清單」頁面建立新的員工以及更新清單。 這種巡覽樣式類似於呼叫方法執行一些處理並傳回值，稱之為結構化程式設計。 因此，這種巡覽稱之為「結構化巡覽」。  
   
  <xref:System.Windows.Controls.Page>類別不實作結構化巡覽的支援。 相反地，<xref:System.Windows.Navigation.PageFunction%601>類別衍生自<xref:System.Windows.Controls.Page>並將它擴充與結構化巡覽所需的基本建構。 本主題說明如何建立使用結構化的巡覽<xref:System.Windows.Navigation.PageFunction%601>。  
-  
- 
-  
+
 <a name="Structured_Navigation"></a>   
 ## <a name="structured-navigation"></a>結構化巡覽  
  當一個頁面在結構化巡覽中呼叫另一個頁面時，需要下列部分或全部行為︰  
@@ -170,6 +168,7 @@ ms.locfileid: "58125599"
  在其他情況下，應用程式可能會令相依於結構化巡覽的複雜巡覽拓撲有效運作。 如需詳細資訊，請參閱[巡覽拓撲概觀](navigation-topologies-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Navigation.PageFunction%601>
 - <xref:System.Windows.Navigation.NavigationService>
 - [巡覽拓撲概觀](navigation-topologies-overview.md)

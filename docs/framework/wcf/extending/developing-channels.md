@@ -2,12 +2,12 @@
 title: 開發通道
 ms.date: 03/30/2017
 ms.assetid: 0513af9f-a0c2-457b-9a50-5b6bfee48513
-ms.openlocfilehash: 74a54972ffa7d00d702a2339665d18acdcbf93ef
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1922f5158d72bc5bc443e92c6eabb28510dec0ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54519134"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175197"
 ---
 # <a name="developing-channels"></a>開發通道
 若要開發可以使用與 Windows Communication Foundation (WCF) 通訊協定或傳輸通道應用程式層會需要幾個步驟。 本主題將說明這些步驟，並指引您前往特定主題以取得詳細資訊。 若要了解通道模式以及本主題所述的各種類型，請參閱[通道模型概觀](../../../../docs/framework/wcf/extending/channel-model-overview.md)。 如需完整的傳輸通道範例中，請參閱[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)。  
@@ -34,4 +34,5 @@ ms.locfileid: "54519134"
 4.  新增繫結區段和繫結組態項目，即可將繫結公開至組態系統。 如需詳細資訊，請參閱 <<c0> [ 組態與中繼資料支援](../../../../docs/framework/wcf/extending/configuration-and-metadata-support.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)

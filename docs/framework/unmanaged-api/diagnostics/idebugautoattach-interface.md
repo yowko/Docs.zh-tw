@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3492cac305370c8b9aa969dbb0a88e1d9c45af34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d13d8226d944b170bd84ce3d069ca79099c6417d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54550652"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220561"
 ---
 # <a name="idebugautoattach-interface"></a>IDebugAutoAttach 介面
 針對伺服器叫用偵錯工具自動附加，請定義的介面。  
@@ -36,4 +36,5 @@ ms.locfileid: "54550652"
  **標頭：** DbgAutoAttach.idl  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

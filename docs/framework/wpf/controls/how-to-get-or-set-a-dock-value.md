@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Dock values [WPF], setting
 - Dock values [WPF], getting
 ms.assetid: fcf4ab8a-c7cd-4835-8d04-de1c999ab4a8
-ms.openlocfilehash: 7825377146532a6660e1838fa25631b788afe035
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: fb6c8a7d62aa09a6e1d82cb4079d1425a7f39f8c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374515"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160729"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>HOW TO：取得或設定 Dock 值
 下列範例示範如何指派<xref:System.Windows.Controls.Dock>物件的值。 此範例會使用<xref:System.Windows.Controls.DockPanel.GetDock%2A>並<xref:System.Windows.Controls.DockPanel.SetDock%2A>方法<xref:System.Windows.Controls.DockPanel>。  
@@ -25,6 +25,7 @@ ms.locfileid: "57374515"
  [!code-vb[DockPanelSetDock#1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DockPanelSetDock/VisualBasic/DockPanel_SetDock.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Controls.DockPanel>
 - <xref:System.Windows.Controls.DockPanel.GetDock%2A>
 - <xref:System.Windows.Controls.DockPanel.SetDock%2A>

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WPF [WPF], about application development
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
-ms.openlocfilehash: 979a5324fe9cb6c3469660e061d5df7f312ef2c4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365122"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211058"
 ---
 # <a name="application-development"></a>應用程式開發
 <a name="introduction"></a> Windows Presentation Foundation (WPF) 是一種展示架構，可用來開發下列類型的應用程式：  
   
 -   獨立應用程式 (建置為可執行組件的傳統式 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 應用程式，這些應用程式會安裝到用戶端電腦並從中執行)。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (以瀏覽頁面組成的應用程式，這些應用程式會建置為可執行組件，並由 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Mozilla Firefox 等網頁瀏覽器裝載)。  
+-   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] (應用程式的建置為可執行檔的組件及這類裝載的網頁瀏覽器的瀏覽頁面組成[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)]或 Mozilla Firefox)。  
   
 -   自訂控制項程式庫 (非可執行組件，其中包含可重複使用的控制項)。  
   
@@ -27,9 +27,7 @@ ms.locfileid: "57365122"
 >  強烈建議不要在 Windows 服務中使用 WPF 類型。 如果您嘗試在 Windows 服務中使用這些功能，它們可能無法如預期般運作。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作多項服務，以建置這組應用程式。 本主題提供這些服務的概觀，並說明何處可以找到更多資訊。  
-  
 
-  
 <a name="Application_Management"></a>   
 ## <a name="application-management"></a>應用程式管理  
  可執行的 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式通常需要一組核心功能，其中包括：  
@@ -74,7 +72,7 @@ ms.locfileid: "57365122"
   
  如需詳細資訊，請參閱 [WPF 視窗概觀](wpf-windows-overview.md)。  
   
- <xref:System.Windows.Window> 可建立一種特殊的視窗類型，稱為對話方塊。 您可以建立強制回應和非強制回應類型的對話方塊。  
+ <xref:System.Windows.Window> 支援建立稱為 [對話方塊] 視窗的一種特殊類型的能力。 您可以建立強制回應和非強制回應類型的對話方塊。  
   
  為了方便起見，和可重複使用性和跨應用程式，提供一致的使用者體驗的優點[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]會公開三個常見的 [Windows] 對話方塊： <xref:Microsoft.Win32.OpenFileDialog>， <xref:Microsoft.Win32.SaveFileDialog>，和<xref:System.Windows.Controls.PrintDialog>。  
   
@@ -84,7 +82,7 @@ ms.locfileid: "57365122"
   
 <a name="Navigation"></a>   
 ## <a name="navigation"></a>巡覽  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援使用頁面 (<xref:System.Windows.Controls.Page>) 和超連結 (<xref:System.Windows.Documents.Hyperlink>) 的 Web 式瀏覽。 您可以透過各種方式來實作瀏覽，包括：  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 支援使用頁面的 Web 式瀏覽 (<xref:System.Windows.Controls.Page>) 和超連結 (<xref:System.Windows.Documents.Hyperlink>)。 您可以透過各種方式來實作瀏覽，包括：  
   
 -   裝載於網頁瀏覽器的獨立頁面。  
   
@@ -96,7 +94,7 @@ ms.locfileid: "57365122"
   
  為了加速瀏覽，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會實作下列項目：  
   
--   <xref:System.Windows.Navigation.NavigationService>，這是處理瀏覽要求的共用瀏覽引擎，可供 <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow> 和 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 用來支援應用程式內的瀏覽。  
+-   <xref:System.Windows.Navigation.NavigationService>處理巡覽要求所使用的共用瀏覽引擎<xref:System.Windows.Controls.Frame>， <xref:System.Windows.Navigation.NavigationWindow>，和[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)]來支援應用程式內部瀏覽。  
   
 -   要啟始瀏覽的瀏覽方法。  
   
@@ -106,11 +104,11 @@ ms.locfileid: "57365122"
   
  如需相關資訊，請參閱[瀏覽概觀](navigation-overview.md)。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也支援一種特殊的瀏覽類型，稱為結構化瀏覽。 結構化瀏覽可用來呼叫一或多個頁面，這些頁面會以與呼叫函式一致的結構化且可預期方式傳回資料。 此功能相依於 <xref:System.Windows.Navigation.PageFunction%601> 類別，這在[結構化巡覽概觀](structured-navigation-overview.md)中將進一步說明。 <xref:System.Windows.Navigation.PageFunction%601> 也可用來簡化複雜瀏覽拓撲的建立，這在[巡覽拓撲概觀](navigation-topologies-overview.md)中將進行說明。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 也支援一種特殊的稱為結構化巡覽的巡覽。 結構化瀏覽可用來呼叫一或多個頁面，這些頁面會以與呼叫函式一致的結構化且可預期方式傳回資料。 此功能相依於 <xref:System.Windows.Navigation.PageFunction%601> 類別，這在[結構化巡覽概觀](structured-navigation-overview.md)中將進一步說明。 <xref:System.Windows.Navigation.PageFunction%601> 也可用來簡化建立中所述的複雜巡覽拓撲[巡覽拓撲概觀](navigation-topologies-overview.md)。  
   
 <a name="Hosting"></a>   
 ## <a name="hosting"></a>裝載  
- [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以裝載於 [!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] 或 Firefox。 每個裝載模型有各自的一組考量和條件約束，[裝載](hosting-wpf-applications.md)中將進行說明。  
+ [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 可以裝載於[!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)]或 Firefox。 每個裝載模型有各自的一組考量和條件約束，[裝載](hosting-wpf-applications.md)中將進行說明。  
   
 <a name="Build_and_Deploy"></a>   
 ## <a name="build-and-deploy"></a>建置和部署  
@@ -125,7 +123,7 @@ ms.locfileid: "57365122"
 |-----------|-----------------|  
 |[應用程式管理概觀](application-management-overview.md)|提供 <xref:System.Windows.Application> 類別的概觀，包括管理應用程式存留期、視窗、應用程式資源和瀏覽。|  
 |[WPF 中的視窗](windows-in-wpf-applications.md)|提供在應用程式中管理視窗的詳細資料，包括如何使用 <xref:System.Windows.Window> 類別和對話方塊。|  
-|[瀏覽概觀](navigation-overview.md)|提供有關管理在應用程式頁面之間瀏覽的概觀。|  
+|[巡覽概觀](navigation-overview.md)|提供有關管理在應用程式頁面之間瀏覽的概觀。|  
 |[裝載](hosting-wpf-applications.md)|提供 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 的概觀。|  
 |[建置和部署](building-and-deploying-wpf-applications.md)|描述如何建置及部署 WPF 應用程式。|  
 |[Visual Studio 中的 WPF 簡介](../getting-started/introduction-to-wpf-in-vs.md)|描述 WPF 的主要功能。|  

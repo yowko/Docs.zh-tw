@@ -2,12 +2,12 @@
 title: 活動
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: 970f2978f65b2c1a2585a207d66e4b97fbe4af1a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54505584"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170205"
 ---
 # <a name="activity"></a>活動
 本主題說明 Windows Communication Foundation (WCF) 追蹤模型中的活動追蹤。 活動指的是協助使用者縮小失敗範圍的處理單位。 發生在同一個活動中的錯誤都是直接相關的。 例如，因為訊息解密失敗而導致作業失敗。 作業與訊息解密失敗的追蹤會同時出現在同一個活動中，顯示解密錯誤與要求錯誤之間直接的相互關聯性。  
@@ -38,9 +38,9 @@ ms.locfileid: "54505584"
 ## <a name="defining-the-scope-of-an-activity"></a>定義活動範圍  
  活動係於設計階段定義，代表工作的邏輯單位。 發出的追蹤 (具有相同的活動識別項) 是直接相關的，因為它們隸屬於相同的活動。 由於活動可以跨越端點界限 (要求)，因此會定義兩個活動範圍。  
   
--   每個應用程式的 `Global` 範圍。 在此範圍中，活動是由本身的 128 位元全域唯一活動識別項 (亦即 gAId) 所識別。 在端點之間傳播的識別項就是 gAid。  
+-   `Global` 每個應用程式的範圍。 在此範圍中，活動是由本身的 128 位元全域唯一活動識別項 (亦即 gAId) 所識別。 在端點之間傳播的識別項就是 gAid。  
   
--   每個端點的 `Local` 範圍。 在此範圍中，活動是由本身的 gAId，加上發出活動追蹤與處理序識別碼的追蹤來源名稱所識別。此三項一體構成了本地活動識別碼，亦即 lAId。 lAId 可用來定義活動的 (本地) 界限。  
+-   `Local` 每個端點的範圍。 在此範圍中，活動是由本身的 gAId，加上發出活動追蹤與處理序識別碼的追蹤來源名稱所識別。此三項一體構成了本地活動識別碼，亦即 lAId。 lAId 可用來定義活動的 (本地) 界限。  
   
 ## <a name="trace-schema"></a>追蹤結構描述  
  您可以使用任何結構描述並跨各種 Microsoft 平台來發出追蹤。 "e2e"（代表 「 端對端 」） 是常用的結構描述。 這個結構描述包含 128 位元的識別項 (gAId)、追蹤來源名稱與處理序識別碼。 在 Managed 程式碼中，<xref:System.Diagnostics.XmlWriterTraceListener> 會在 E2E 結構描述中發出追蹤。  
@@ -85,7 +85,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 ## <a name="guidelines-for-using-activity-tracing"></a>使用活動追蹤的方針  
  下列為使用 ActivityTracing 追蹤 (開始、停止、暫停、繼續與傳輸) 的方針。  
   
--   追蹤是直接循環的圖形，而不是樹狀結構。 您可以將控制項傳回已繁衍 (Spawn) 活動的活動。  
+-   追蹤是直接循環的圖形，而不是樹狀。 您可以將控制項傳回已繁衍 (Spawn) 活動的活動。  
   
 -   活動代表處理界限，這對系統管理員或支援能力而言十分重要。  
   
@@ -98,6 +98,7 @@ traceSource.TraceEvent(TraceEventType.Warning, eventId, "Information");
 -   活動就是代表活動，但不一定代表物件。 活動應該解讀為 「 它的發生時。 。 。 (已發出有意義的追蹤)」。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)
 - [使用服務追蹤檢視器檢視相關追蹤並進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
 - [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)

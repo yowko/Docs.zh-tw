@@ -1,5 +1,5 @@
 ---
-title: HOW TO：連結的物件，或使用 Windows Forms LinkLabel 控制項的網頁
+title: HOW TO：使用 Windows Forms LinkLabel 控制項連結至物件或網頁
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 34d6807b874596bd46f11ff90052ab85cc93b5d5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222727"
 ---
-# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>HOW TO：連結的物件，或使用 Windows Forms LinkLabel 控制項的網頁
+# <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>HOW TO：使用 Windows Forms LinkLabel 控制項連結至物件或網頁
 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上建立 Web 樣式連結。 按一下連結時，您可以變更其色彩會指出已瀏覽連結。 如需有關如何變更色彩的詳細資訊，請參閱[How to:變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
   
 ## <a name="linking-to-another-form"></a>連結至另一個表單  
@@ -179,7 +179,8 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.Process.Start%2A?displayProperty=nameWithType>
 - [LinkLabel 控制項概觀](linklabel-control-overview-windows-forms.md)
-- [如何：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
+- [HOW TO：變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)
 - [LinkLabel 控制項](linklabel-control-windows-forms.md)

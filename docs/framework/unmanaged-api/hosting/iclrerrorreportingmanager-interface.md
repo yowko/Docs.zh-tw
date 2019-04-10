@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d10fe0240073464e3c2677343288e5379840885d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a20b79dd5eda9c431511cc49e7e3adaa9486b2aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732787"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155983"
 ---
 # <a name="iclrerrorreportingmanager-interface"></a>ICLRErrorReportingManager 介面
 提供方法，可讓主應用程式設定錯誤報告的自訂堆疊傾印。  
@@ -45,10 +45,11 @@ ms.locfileid: "54732787"
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ECustomDumpItemKind 列舉](../../../../docs/framework/unmanaged-api/hosting/ecustomdumpitemkind-enumeration.md)
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

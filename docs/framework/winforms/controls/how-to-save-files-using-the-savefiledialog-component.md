@@ -11,12 +11,12 @@ helpviewer_keywords:
 - files [Windows Forms], saving
 - OpenFile method [Windows Forms], saving files with SaveFileDialog component
 ms.assetid: 02e8f409-b83f-4707-babb-e71f6b223d90
-ms.openlocfilehash: 2a6f21f79f56c1fcad4c94ec89cbf7dc43b19638
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 3394acbb26fff4c099ad746a3dc63e663374716a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719425"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176796"
 ---
 # <a name="how-to-save-files-using-the-savefiledialog-component"></a>HOW TO：使用 SaveFileDialog 元件儲存檔案
 <xref:System.Windows.Forms.SaveFileDialog>元件可讓使用者瀏覽檔案系統，然後選取要儲存的檔案。 對話方塊會傳回使用者在對話方塊中所選取之檔案的路徑和名稱。 不過，您必須撰寫程式碼，以實際將檔案寫入至磁碟。  
@@ -178,5 +178,6 @@ ms.locfileid: "57719425"
     >  特定控制項，例如<xref:System.Windows.Forms.RichTextBox>控制項，都將能夠儲存檔案。 如需詳細資訊，請參閱 MSDN Online Library 技術文件 [Essential Code for Windows Forms Dialog Boxes](https://go.microsoft.com/fwlink/?LinkID=102575) (Windows Forms 對話方塊的基本程式碼) 的＜SaveFileDialog 元件＞一節。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.SaveFileDialog>
 - [SaveFileDialog 元件](savefiledialog-component-windows-forms.md)

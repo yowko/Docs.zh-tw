@@ -2,12 +2,12 @@
 title: 永久性執行個體內容
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 9981c4293f651bce3a0abaa3e0243d0d656ff257
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160962"
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
 此範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
@@ -459,4 +459,3 @@ Press ENTER to shut down client
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Extensibility\Instancing\Durable`  
-  

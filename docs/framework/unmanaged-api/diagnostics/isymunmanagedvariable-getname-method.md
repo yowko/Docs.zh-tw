@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5aa6f01f161ce7c497cc103493e3bf4506fa3394
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e863640e18ca64de084331327e0fa39468b54b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475017"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176237"
 ---
 # <a name="isymunmanagedvariablegetname-method"></a>ISymUnmanagedVariable::GetName 方法
 取得這個變數的名稱。  
@@ -54,4 +54,5 @@ HRESULT GetName(
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ISymUnmanagedVariable 介面](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedvariable-interface.md)

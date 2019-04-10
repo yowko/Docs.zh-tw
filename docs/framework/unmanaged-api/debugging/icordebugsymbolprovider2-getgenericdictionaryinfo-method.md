@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: ba28fe4e-5491-4670-bff7-7fde572d7593
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5696dc8fcf4b5c84e12ca60f93679f7b67d5f7e9
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: f171af8dbfa4e812711e95e5587b314753cd9350
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216817"
 ---
 # <a name="icordebugsymbolprovider2getgenericdictionaryinfo-method"></a>ICorDebugSymbolProvider2::GetGenericDictionaryInfo 方法
 擷取泛型字典對應。  
@@ -74,12 +74,13 @@ Heap Size = Stream.Length – (Directory Size + 4)
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugSymbolProvider2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider2-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

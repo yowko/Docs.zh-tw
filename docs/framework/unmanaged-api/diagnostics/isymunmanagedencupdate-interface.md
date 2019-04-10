@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 634716b36a0e5826cd7667a9ae948e8172724a1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 378322c28d59b2a6e7c09f2f2c4bf55bb019d01d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54630862"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171831"
 ---
 # <a name="isymunmanagedencupdate-interface"></a>ISymUnmanagedENCUpdate 介面
 [編輯後繼續] 功能提供函式。  
@@ -40,4 +40,5 @@ ms.locfileid: "54630862"
  **標頭：** 於 CorSym.idl CorSym.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [診斷符號存放區介面](../../../../docs/framework/unmanaged-api/diagnostics/diagnostics-symbol-store-interfaces.md)

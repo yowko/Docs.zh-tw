@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcbc9625-7cf7-476e-85d2-058f12682f54
-ms.openlocfilehash: e7591e68490bf1ac35b56d5f483d1838a0a7d0c2
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: ea9e7cb61facb880a050fbfae3aa9b07c03361fc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164147"
 ---
 # <a name="query-expression-syntax-examples-ordering"></a>查詢運算式語法範例：排序
 本主題中的範例將示範如何使用`OrderBy`並`OrderByDescending`方法來查詢[AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)透過查詢運算式語法。 這些範例中使用的 AdventureWorks Sales Model 是從 AdventureWorks 範例資料庫中的 Contact、Address、Product、SalesOrderHeader 和 SalesOrderDetail 資料表所建立。  
@@ -59,4 +59,5 @@ ms.locfileid: "55826313"
  [!code-vb[DP L2E Examples#ThenByDescendingSimple](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Examples/VB/Module1.vb#thenbydescendingsimple)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to Entities 中的查詢](../../../../../../docs/framework/data/adonet/ef/language-reference/queries-in-linq-to-entities.md)

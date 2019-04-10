@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 329e25b31deb1761d8522636675fe3160cad9e15
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 1238c81e2607da6fc5e742aacd1b1dcc69996a8b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54721200"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209940"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>HOW TO：檢查或修改參數
 您可以檢查或修改傳入或傳出訊息上的 Windows Communication Foundation (WCF) 用戶端物件或 WCF 服務的單一作業的實作<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>介面，並將其插入至用戶端或服務執行階段。 一般來說，作業行為是用於新增單一作業的參數偵測器；其他行為可用於提供範圍更大之執行階段的簡易存取。 如需詳細資訊，請參閱 <<c0> [ 擴充用戶端](../../../../docs/framework/wcf/extending/extending-clients.md)並[擴充發送器](../../../../docs/framework/wcf/extending/extending-dispatchers.md)。  
@@ -41,4 +41,5 @@ ms.locfileid: "54721200"
  [!code-xml[Interceptors#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/client.exe.config#3)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用行為來設定與擴充執行階段](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md)

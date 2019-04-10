@@ -2,12 +2,12 @@
 title: <synchronousReceive> 項目
 ms.date: 03/30/2017
 ms.assetid: cc070387-3d11-4b02-a952-bc08ad2df05a
-ms.openlocfilehash: f4a8868304ebae9a7ed5e6afbfb14fb2116afc49
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 20390f747c8beaccba1cfea7a9ea0ed366037ecb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278469"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166539"
 ---
 # <a name="synchronousreceive-element"></a>\<synchronousReceive > 項目
 這個組態項目用於指定在服務或用戶端應用程式中接收訊息的執行階段行為。 它沒有任何屬性或子項目。  
@@ -43,5 +43,6 @@ ms.locfileid: "55278469"
  您可以使用此行為指示通道接聽程式使用同步接收，而非預設的非同步接收。 Windows Communication Foundation (WCF) 會發出新的執行緒，以提取每個接受的通道。 如果有許多個通道，執行緒可能會用完。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.SynchronousReceiveElement>
 - <xref:System.ServiceModel.Description.SynchronousReceiveBehavior>

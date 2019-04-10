@@ -12,12 +12,12 @@ api_type:
 ms.assetid: a1bfb649-4584-4d35-b3e6-8fe59b53992a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7fa8e2f06faa399734c44b1a52b41246296ef3f
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: aff6f63bb9f41fe45b22854787667070929bf987
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498909"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213762"
 ---
 # <a name="icorprofilerinfo7applymetadata-method"></a>ICorProfilerInfo7::ApplyMetaData 方法
 [在 .NET Framework 4.6.1 及更新版本中支援]  
@@ -64,9 +64,10 @@ HRESULT ApplyMetaData(
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v461plus](../../../../includes/net-current-v461plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorProfilerInfo7 介面](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo7-interface.md)

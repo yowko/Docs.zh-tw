@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: 51cdcc4789ac553c2775c89d6124cf90624b8747
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54716048"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216405"
 ---
 # <a name="designing-and-implementing-services"></a>設計與實作服務
 本節將說明如何定義及實作 WCF 合約。 服務合約會指定端點與外界溝通的內容。 更具體來說，這是關於一組會組織到基本訊息交換模式 (MEP) 之特定訊息的聲明，而這些交換模式包括要求/回覆、單向和雙工。 如果服務合約為一組邏輯相關的訊息交換，則服務作業就是單一的訊息交換。 例如，`Hello` 作業一定會明確地接收一個訊息 (這樣呼叫端才能宣告歡迎畫面)，但卻不一定會傳回訊息 (需視作業的禮節而定)。  
@@ -55,17 +55,18 @@ ms.locfileid: "54716048"
  如需有關如何設計合約的詳細資訊，請參閱 < [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)。 如需有關如何實作合約的詳細資訊，請參閱 < [Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)。  
   
 ### <a name="messages-up-front-and-center"></a>最新的訊息  
- 如果您已經習慣遠端程序呼叫 (RPC) 樣式的方法簽章，那麼使用 Managed 的介面、類別和方法來建立服務作業模型將更為簡單，此時傳遞參數至方法及接收傳回值是物件或其他類型程式碼之要求功能的一般形式。 比方說，使用 managed 的語言，例如 Visual Basic 和 c + + COM 的程式設計人員可以套用其專業知識的 RPC 樣式方法 （不論使用物件或介面） 的 WCF 服務合約建立而不會遇到的問題RPC 樣式分散式物件系統。 服務方向除了提供鬆散耦合、訊息導向之程式設計的優點，同時保留簡易且熟悉的 RPC 程式設計經驗。  
+ 如果您已經習慣遠端程序呼叫 (RPC) 樣式的方法簽章，那麼使用 Managed 的介面、類別和方法來建立服務作業模型將更為簡單，此時傳遞參數至方法及接收傳回值是物件或其他類型程式碼之要求功能的一般形式。 例如，程式設計人員使用 managed 語言，例如 Visual Basic 和C++COM 可以套用其專業知識的 RPC 樣式方法 （不論使用物件或介面） 的 WCF 服務合約建立而不會遇到的問題在 RPC 樣式分散式物件系統。 服務方向除了提供鬆散耦合、訊息導向之程式設計的優點，同時保留簡易且熟悉的 RPC 程式設計經驗。  
   
  有許多程式設計人員更熟悉使用訊息導向的應用程式開發介面，例如 Microsoft MSMQ 之類的訊息佇列、.NET Framework 中的 <xref:System.Messaging> 命名空間 (Namespace)，或在 HTTP 要求中傳送非結構化的 XML，以上只是略舉部分例子。 如需在訊息層級進行程式設計的詳細資訊，請參閱[Using Message Contracts](../../../docs/framework/wcf/feature-details/using-message-contracts.md)，[服務通道層級程式設計](../../../docs/framework/wcf/extending/service-channel-level-programming.md)，和[與 POX 應用程式互通性](../../../docs/framework/wcf/feature-details/interoperability-with-pox-applications.md).  
   
 ### <a name="understanding-the-hierarchy-of-requirements"></a>瞭解需求的階層架構  
  服務合約可將作業分組、指定訊息交換模式、訊息類型，以及這些訊息所包含的資料型別，並指出實作必須擁有以支援合約的執行階段行為類別 (例如，合約可能會要求加密及簽署訊息)。 服務合約本身並不會清楚地指定如何達到這些需求，而只會指定必須達到這些需求。 加密類型或簽署訊息的方式取決於實作以及相容性服務的組態。  
   
- 請注意，合約需要服務合約實作和執行階段組態中的某些項目才能新增行為。 必須符合才能公開服務提供使用的一組需求，是採用前一組需求來做為建置基礎。 如果合約有提出實作需求，則實作可能會需要更多的組態和繫結才能夠讓服務執行。 最後，主應用程式 (Host Application) 也必須支援服務組態和繫結程序所新增的任何需求。  
+ 請注意，合約需要服務合約實作和執行階段組態中的某些項目才能新增行為。 必須符合才能公開服務提供使用的一組需求，是採用前一組需求來做為建置基礎。 如果合約有提出實作需求，則實作可能會需要更多的組態和繫結程序才能夠讓服務執行。 最後，主應用程式 (Host Application) 也必須支援服務組態和繫結程序所新增的任何需求。  
   
  這加總的需求程序是很重要要牢記在心，同時設計、 實作、 設定及裝載 Windows Communication Foundation (WCF) 服務應用程式。 例如，合約可以指定必須支援某個工作階段。 若是如此，您就必須將繫結程序設定成可支援該合約需求，否則服務實作將無法運作。 或者，如果您的服務需要 Windows 整合式驗證而且已裝載於網際網路資訊服務 (IIS)，則服務所在的 Web 應用程式必須啟用 Windows 整合式驗證並關閉匿名支援。 如需有關之功能和影響的不同服務主應用程式類型的詳細資訊，請參閱[裝載的服務](../../../docs/framework/wcf/hosting-services.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)
-- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 55f1c0da651d786dfdcfda6a54ee1b29db35f3d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: faf1be65d308b223490f3ae67eed3d8a2b1688b9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587735"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223065"
 ---
 # <a name="corsegment-structure"></a>COR_SEGMENT 結構
 包含 Managed 堆積中記憶體區域的相關資訊。  
@@ -47,19 +47,20 @@ typedef struct _COR_SEGMENT {
 |`heap`|記憶體區域所在的堆積號碼。 如需詳細資訊，請參閱＜備註＞一節。|  
   
 ## <a name="remarks"></a>備註  
- `COR_SEGMENTS` 結構代表受空控堆積中的記憶體區域。  `COR_SEGMENTS` 物件是 [ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md) 集合物件的成員，集合物件的填入是藉由呼叫 [icordebugprocess5:: Enumerateheapregions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md) 方法。  
+ `COR_SEGMENTS` 結構代表受空控堆積中的記憶體區域。  `COR_SEGMENTS` 物件是屬於[ICorDebugHeapRegionEnum](../../../../docs/framework/unmanaged-api/debugging/icordebugheapsegmentenum-interface.md)集合物件，其中會填入呼叫[ICorDebugProcess5::EnumerateHeapRegions](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess5-enumerateheapregions-method.md)方法。  
   
  `heap` 欄位是處理器號碼，其對應到正在回報的堆積。 針對工作站記憶體回收行程，其值一律為零，因為工作站只有一個記憶體回收堆積。 針對伺服器記憶體回收行程，其值對應至堆積附加的處理器。 請注意，可能會有比實際處理器更多或更少記憶體回收堆積，這是因為記憶體回收行程的實作詳細資料所致。  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

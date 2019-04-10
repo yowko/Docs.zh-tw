@@ -2,12 +2,12 @@
 title: HOW TO：測試探索 Proxy
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
-ms.openlocfilehash: 3c159481813266386706b34d172bbf9614a8253d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 13d2e8ca46e634e3b27c8eb967d89d860df1c72d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176276"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>HOW TO：測試探索 Proxy
 本主題是四個主題中的第四個，示範如何實作探索 Proxy。 在上一個主題中， [How to:實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)，實作使用探索 proxy 尋找服務，然後再呼叫服務的 WCF 用戶端應用程式。 本主題描述如何確認探索 Proxy、服務以及用戶端應用程式如預期般運作。  
@@ -51,7 +51,8 @@ ms.locfileid: "54590509"
 3.  關閉探索 Proxy。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [如何：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [如何：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [如何：實作使用探索 Proxy 尋找服務的用戶端應用程式](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [HOW TO：實作探索 Proxy](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [HOW TO：實作以探索 Proxy 註冊的可探索服務](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [HOW TO：實作使用探索 Proxy 的用戶端應用程式來尋找服務](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)

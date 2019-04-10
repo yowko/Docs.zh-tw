@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: 5360a7bce1b5470271bc6b512484964ebb9fd8d1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164732"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>資料集和 XmlDataDocument 同步處理
 ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存取階層式資料，可以使用 .NET Framework 中提供的 XML 類別。 過去，這兩個資料表示一直是分開使用； 不過，.NET Framework 可讓您透過資料的關聯式和階層式表示的即時、 同步存取**資料集**物件和<xref:System.Xml.XmlDataDocument>物件，分別。  
@@ -96,11 +96,11 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
  [對資料集執行 XPath 查詢](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/performing-an-xpath-query-on-a-dataset.md)  
  示範的內容中執行 XPath 查詢**資料集**。  
   
- [將 XSLT 轉換套用至資料集](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
+ [將 XSLT 轉換套用至 DataSet](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/applying-an-xslt-transform-to-a-dataset.md)  
  示範如何將 XSLT 轉換套用至的內容**資料集**。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
+ [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)  
  描述如何**資料集**XML 當成資料來源，包括載入和保存的內容互動**DataSet**為 XML 資料。  
   
  [巢狀 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)  
@@ -113,4 +113,5 @@ ADO.NET <xref:System.Data.DataSet> 提供資料的關聯式表示。 若要存�
  包含的相關參考資訊**XmlDataDocument**類別。  
   
 ## <a name="see-also"></a>另請參閱
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

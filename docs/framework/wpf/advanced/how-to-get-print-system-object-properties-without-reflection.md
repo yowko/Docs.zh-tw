@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
-ms.openlocfilehash: b03be30422a93980ecdbcdbd428600fd41abd824
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: b9ca7444b2c49f4563ff0d7baef8b2d250a7f331
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367579"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215270"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>HOW TO：取得列印系統物件屬性但不使用反映
 使用反映來詳細列出的物件上的屬性 （和這些屬性的類型） 可能會降低應用程式的效能。 <xref:System.Printing.IndexedProperties>命名空間提供一個方法來取得這項資訊搭配使用反映。  
@@ -34,6 +34,7 @@ ms.locfileid: "57367579"
  [!code-vb[GetPrintObjectPropertyTypesWithoutReflection#ShowPropertyTypesWithoutReflection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/GetPrintObjectPropertyTypesWithoutReflection/visualbasic/program.vb#showpropertytypeswithoutreflection)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Printing.IndexedProperties.PrintProperty>
 - <xref:System.Printing.PrintSystemObject>
 - <xref:System.Printing.IndexedProperties>

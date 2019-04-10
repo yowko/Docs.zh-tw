@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7ace11aa2cc3c24a6582b227f9a7ff8816ea0668
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 559c265c70c199e64782ba185d4925d293d6a778
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492110"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158687"
 ---
 # <a name="iclrvalidatorvalidate-method"></a>ICLRValidator::Validate 方法
 驗證的可攜式執行檔 (PE) 或 Microsoft intermediate language (MSIL)，在指定的檔案。  
@@ -83,9 +83,10 @@ HRESULT Validate (
   
  **標頭：** IValidator.idl, IValidator.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRValidator 介面](../../../../docs/framework/unmanaged-api/hosting/iclrvalidator-interface.md)

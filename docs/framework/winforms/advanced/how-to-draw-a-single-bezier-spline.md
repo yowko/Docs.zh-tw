@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Bezier splines [Windows Forms], drawing
 - drawing [Windows Forms], Bezier splines
 ms.assetid: f4f3fe30-f0a6-4743-ac91-11310cebea9f
-ms.openlocfilehash: 0731595dc25b1afb4b3dbcc7eedbfb92ef32d267
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ebb53e7df979a553ed4a44deba34345c9ecac772
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126275"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171674"
 ---
 # <a name="how-to-draw-a-single-b233zier-spline"></a>HOW TO：繪製單一 B&#233;zier 曲線
 四個點所定義的貝茲曲線︰ 起點、 兩個控制點和結束點。  
@@ -29,9 +29,10 @@ ms.locfileid: "58126275"
  [!code-vb[System.Drawing.ConstructingDrawingCurves#31](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingCurves/VB/Class1.vb#31)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Graphics.DrawBezier%2A>
 - [GDI+ 中的貝茲曲線](bezier-splines-in-gdi.md)
-- [如何：繪製一連串的貝茲曲線](how-to-draw-a-sequence-of-bezier-splines.md)
+- [HOW TO：繪製一連串的貝茲曲線](how-to-draw-a-sequence-of-bezier-splines.md)

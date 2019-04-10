@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5ed5f01d-acb2-4dd4-be60-f04c2d570fa8
-ms.openlocfilehash: 88f7e71c3008818a657bc54ae6459e75359ab3f3
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 88d9c7299c9dbf024a07f223ef7ec7d03f8066d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55903599"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215127"
 ---
 # <a name="method-based-query-syntax-examples-aggregate-operators-linq-to-dataset"></a>以方法為基礎的查詢語法範例：彙總運算子 (LINQ to DataSet)
 此主題中的範例將示範如何使用 <xref:System.Linq.Enumerable.Aggregate%2A>、<xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.LongCount%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Min%2A> 和 <xref:System.Linq.Enumerable.Sum%2A> 運算子並搭配方法查詢語法來查詢 <xref:System.Data.DataSet> 以及彙總資料。  
@@ -24,7 +24,7 @@ ms.locfileid: "55903599"
  [!code-csharp[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#importsusing)]
  [!code-vb[DP LINQ to DataSet Examples#ImportsUsing](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#importsusing)]  
   
- 如需詳細資訊，請參閱[＜How to：在 Visual Studio 中建立 LINQ to DataSet 專案](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。  
+ 如需詳細資訊，請參閱[如何：在 Visual Studio 中建立 LINQ to DataSet 專案](../../../../docs/framework/data/adonet/how-to-create-a-linq-to-dataset-project-in-vs.md)。  
   
 ## <a name="aggregate"></a>彙總  
   
@@ -34,7 +34,7 @@ ms.locfileid: "55903599"
  [!code-csharp[DP LINQ to DataSet Examples#Aggregate_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#aggregate_mq)]
  [!code-vb[DP LINQ to DataSet Examples#Aggregate_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#aggregate_mq)]  
   
-## <a name="average"></a>Average  
+## <a name="average"></a>平均  
   
 ### <a name="example"></a>範例  
  這則範例會使用 <xref:System.Linq.Enumerable.Average%2A> 方法來尋找產品的平均標價。  
@@ -94,7 +94,7 @@ ms.locfileid: "55903599"
  [!code-csharp[DP LINQ to DataSet Examples#LongCountSimple](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#longcountsimple)]
  [!code-vb[DP LINQ to DataSet Examples#LongCountSimple](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#longcountsimple)]  
   
-## <a name="max"></a>最大值  
+## <a name="max"></a>最大  
   
 ### <a name="example"></a>範例  
  這則範例會使用 <xref:System.Linq.Enumerable.Max%2A> 方法來取得最大總金額。  
@@ -114,7 +114,7 @@ ms.locfileid: "55903599"
  [!code-csharp[DP LINQ to DataSet Examples#MaxElements_MQ](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#maxelements_mq)]
  [!code-vb[DP LINQ to DataSet Examples#MaxElements_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#maxelements_mq)]  
   
-## <a name="min"></a>最小值  
+## <a name="min"></a>最小  
   
 ### <a name="example"></a>範例  
  這則範例會使用 <xref:System.Linq.Enumerable.Min%2A> 方法來取得最小總金額。  
@@ -148,6 +148,7 @@ ms.locfileid: "55903599"
  [!code-vb[DP LINQ to DataSet Examples#SumGrouped_MQ](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#sumgrouped_mq)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [將資料載入至資料集](../../../../docs/framework/data/adonet/loading-data-into-a-dataset.md)
 - [LINQ to DataSet 範例](../../../../docs/framework/data/adonet/linq-to-dataset-examples.md)
 - [標準查詢運算子概觀 (C#)](../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)

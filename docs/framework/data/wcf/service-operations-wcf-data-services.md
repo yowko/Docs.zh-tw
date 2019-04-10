@@ -8,15 +8,15 @@ helpviewer_keywords:
 - service operations [WCF Data Services]
 - WCF Data Services, service operations
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
-ms.openlocfilehash: 38e9553d77612635f0403a8dc34c368379116e8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b63c6d8f3a5a949299a925a321ca8f01c67b1d8f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497114"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211968"
 ---
 # <a name="service-operations-wcf-data-services"></a>服務作業 (WCF 資料服務)
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可以讓您定義資料服務上的服務作業，以公開伺服器上的方法。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI (根據[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務) 會將值傳遞`London`到`city`參數：  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 可讓您定義資料服務，以公開伺服器上的方法上的服務作業。 如同其他資料服務資源，服務作業依 URI 定址。 服務作業可讓您公開資料服務中的業務邏輯，例如實作驗證邏輯、套用以角色為基礎的安全性，或公開特殊的查詢功能。 服務作業是加入至資料服務類別的方法，衍生自 <xref:System.Data.Services.DataService%601>。 如同所有其他資料服務資源，您可以將參數提供給服務作業方法。 例如，下列服務作業 URI (根據[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務) 會將值傳遞`London`到`city`參數：  
   
 ```  
 http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'  
@@ -27,7 +27,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
  [!code-csharp[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind service/cs/northwind2.svc.cs#serviceoperationdef)]
  [!code-vb[Astoria Northwind Service#ServiceOperationDef](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#serviceoperationdef)]  
   
- 您可以使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601>，直接存取資料服務所使用的資料來源。 如需詳細資訊，請參閱[＜How to：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
+ 您可以使用 <xref:System.Data.Services.DataService%601.CurrentDataSource%2A> 的 <xref:System.Data.Services.DataService%601>，直接存取資料服務所使用的資料來源。 如需詳細資訊，請參閱[如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
   
  如需如何從.NET Framework 用戶端應用程式呼叫服務作業的資訊，請參閱[呼叫服務作業](../../../../docs/framework/data/wcf/calling-service-operations-wcf-data-services.md)。  
   
@@ -42,7 +42,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   該方法必須傳回下列其中一項：  
   
-    -   `void` (在 Visual Basic 中為 `Nothing`)  
+    -   `void` (`Nothing`在 Visual Basic)  
   
     -   <xref:System.Collections.Generic.IEnumerable%601>  
   
@@ -56,11 +56,11 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'
   
 -   服務作業必須傳回 <xref:System.Linq.IQueryable%601>，才能支援使用，導覽屬性存取相關實體。  
   
--   此方法必須以 `[WebGet]` 或 `[WebInvoke]` 屬性加上附註。  
+-   此方法必須以 `[WebGet]` 或 `[WebInvoke]` 屬性標註。  
   
-    -   `[WebGet]` 可讓您使用 GET 要求來叫用方法。  
+    -   `[WebGet]` 可讓使用 GET 要求來叫用方法。  
   
-    -   `[WebInvoke(Method = "POST")]` 可讓您使用 POST 要求來叫用方法。 不支援其他 <xref:System.ServiceModel.Web.WebInvokeAttribute> 方法。  
+    -   `[WebInvoke(Method = "POST")]` 可讓使用 POST 要求叫用方法。 不支援其他 <xref:System.ServiceModel.Web.WebInvokeAttribute> 方法。  
   
 -   服務作業可能會以 <xref:System.Data.Services.SingleResultAttribute> 加上附註，以便指定此方法的傳回值是單一實體而非實體的集合。 此項差異表示 URI 中會顯示所產生的回應序列化，以及其他導覽屬性周遊的方法。 例如，使用 AtomPub 序列化時，單一資源類型執行個體會表示成 entry 項目，而一組執行個體則表示成 feed 項目。  
   
@@ -73,11 +73,11 @@ http://localhost:12345/Northwind.svc/GetOrdersByState?state='CA'&includeItems=tr
   
  呼叫服務作業時，系統會將參數當做查詢選項提供。 先前的服務作業會同時接受字串參數 `state` 和布林值參數 `includeItems`，以指出是否在回應中包含相關的 `Order_Detail` 物件。  
   
- 以下是服務作業的有效傳回類型：  
+ 以下是服務作業的有效傳回型別：  
   
 |有效傳回類型|URI 規則|  
 |------------------------|---------------|  
-|`void` (在 Visual Basic 中為 `Nothing`)<br /><br /> -或-<br /><br /> 實體類型<br /><br /> -或-<br /><br /> 基本類型|URI 必須是單一路徑區段，且為服務作業的名稱。 不允許使用查詢選項。|  
+|`void` (`Nothing`在 Visual Basic)<br /><br /> -或-<br /><br /> 實體類型<br /><br /> -或-<br /><br /> 基本類型|URI 必須是單一路徑區段，且為服務作業的名稱。 不允許使用查詢選項。|  
 |<xref:System.Collections.Generic.IEnumerable%601>|URI 必須是單一路徑區段，且為服務作業的名稱。 因為結果類型不是 <xref:System.Linq.IQueryable%601> 類型，因此不允許查詢選項。|  
 |<xref:System.Linq.IQueryable%601>|除了為服務作業名稱的路徑外，允許查詢其他路徑區段。 亦允許使用查詢選項。|  
   
@@ -96,7 +96,7 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
 > [!NOTE]
 >  如果服務作業具有已透過現制存取基礎實體集隱藏的傳回型別，則用戶端應用程式就無法使用服務作業。  
   
- 如需詳細資訊，請參閱[＜How to：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：定義服務作業](../../../../docs/framework/data/wcf/how-to-define-a-service-operation-wcf-data-services.md)。  
   
 ## <a name="raising-exceptions"></a>引發例外狀況  
  每當您在資料服務執行中引發例外狀況時，建議您使用 <xref:System.Data.Services.DataServiceException> 類別。 這是因為資料服務執行階段知道如何將此例外狀況物件的屬性正確對應到 HTTP 回應訊息。 當您在服務作業中引發 <xref:System.Data.Services.DataServiceException> 時，傳回的例外狀況會以 <xref:System.Reflection.TargetInvocationException> 包裝。 若要傳回沒有以 <xref:System.Data.Services.DataServiceException> 括住的基礎 <xref:System.Reflection.TargetInvocationException>，您必須覆寫 <xref:System.Data.Services.DataService%601.HandleException%2A> 中的 <xref:System.Data.Services.DataService%601> 方法、從 <xref:System.Data.Services.DataServiceException> 擷取 <xref:System.Reflection.TargetInvocationException>，然後將其當做最上層錯誤傳回，如以下範例所示：  
@@ -105,4 +105,5 @@ http://localhost:12345/Northwind.svc/GetOrdersByCity?city='London'&$expand=Order
  [!code-vb[Astoria Northwind Service#HandleExceptions](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind service/vb/northwind2.svc.vb#handleexceptions)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [攔截器](../../../../docs/framework/data/wcf/interceptors-wcf-data-services.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], equivalence
 ms.assetid: f06f3c7e-c235-4ec1-b200-68142edf1ed1
-ms.openlocfilehash: ca74650428c4536cd21694a49b74370b07c77667
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a526a58ef801e91775756e6a84a94a066d32d284
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708931"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214932"
 ---
 # <a name="data-contract-equivalence"></a>資料合約等價
 若要讓用戶端成功地將特定型別的資料傳送至服務，或讓服務成功地將資料傳送至用戶端，傳送的型別不一定要存在於接收端。 唯一的需求是這兩個型別的資料合約必須相等  (某些情況下，嚴格等價並非必要，所述[資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)。)  
@@ -61,8 +61,9 @@ ms.locfileid: "54708931"
  在應用程式之間傳遞參數和傳回值時，如果預期型別是介面，它相當於 <xref:System.Object> 型別的預期型別。 因為每個型別最終都是衍生自 <xref:System.Object>，所以每個資料合約最終都會衍生自 <xref:System.Object> 的資料合約。 因此，如果需要介面，則可以傳遞任何資料合約類型。 若要成功使用介面，不需要其他步驟如需詳細資訊，請參閱 < [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractAttribute>
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)

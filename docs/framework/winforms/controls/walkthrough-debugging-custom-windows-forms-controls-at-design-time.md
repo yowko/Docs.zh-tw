@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
+title: 逐步解說：在設計階段偵錯自訂 Windows Forms 控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: 9bd3f822e5a1f8572ebb7f5991abccde904150b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: b5c54acc89317104eddc3b1f5b350edcb263d208
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717826"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213683"
 ---
-# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂的 Windows Form 控制項
+# <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>逐步解說：在設計階段偵錯自訂 Windows Forms 控制項
 當您建立自訂控制項時，通常會發現它需要偵錯它的設計階段行為。 這是特別有用，如果您撰寫自訂的設計工具為您的自訂控制項。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](creating-a-wf-control-design-time-features.md)。  
   
  就像您會偵錯任何其他.NET Framework 類別，您可以偵錯使用 Visual Studio 中，您的自訂控制項。 差別在於您要偵錯 Visual Studio 執行您的自訂控制項程式碼的個別執行個體  
@@ -173,6 +173,7 @@ ms.locfileid: "57717826"
 -   您可以撰寫自訂的設計工具為您的自訂控制項。 這可讓您使用 Visual Studio 所公開的可擴充設計工具基礎結構的設計經驗的完整控制。 如需詳細資訊，請參閱[逐步解說：建立 Windows Form 會充分利用 Visual Studio 設計階段功能的控制項](creating-a-wf-control-design-time-features.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項](creating-a-wf-control-design-time-features.md)
-- [如何：存取設計階段服務](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
-- [如何：在 Windows Forms 中存取設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))
+
+- [逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項](creating-a-wf-control-design-time-features.md)
+- [HOW TO：存取設計階段服務](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171822(v=vs.120))
+- [HOW TO：在 Windows Forms 中存取設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171827(v=vs.120))

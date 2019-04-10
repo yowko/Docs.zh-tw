@@ -9,12 +9,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], global
 - transformations [Windows Forms], local
 ms.assetid: b601d66d-d572-4f11-9d2e-92f0dc8893f3
-ms.openlocfilehash: 07ef61e3a41448f051fb9b7da2cfd91d7cbf26b5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: e4ed103e781cc2e59d62c11f3233357c77b81cb9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711846"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213749"
 ---
 # <a name="global-and-local-transformations"></a>全域和區域轉換
 「 全域 」 轉換這種轉換會套用至由繪製每個項目指定<xref:System.Drawing.Graphics>物件。 相較之下，「 本機 」 轉換是套用至特定的項目要繪製的轉換。  
@@ -61,5 +61,6 @@ ms.locfileid: "57711846"
  ![Transformations](./media/aboutgdip05-art16.gif "AboutGdip05_art16")  
   
 ## <a name="see-also"></a>另請參閱
+
 - [座標系統和轉換](coordinate-systems-and-transformations.md)
 - [使用 Managed GDI+ 中的轉換](using-transformations-in-managed-gdi.md)

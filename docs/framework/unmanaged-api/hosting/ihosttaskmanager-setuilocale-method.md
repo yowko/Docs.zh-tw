@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0379e7a0f1e82f15b2457b270760c7b8a3cf1a36
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e110f1f5ea326c232c7c96bb05913080e950083d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57502354"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158895"
 ---
 # <a name="ihosttaskmanagersetuilocale-method"></a>IHostTaskManager::SetUILocale 方法
 Common language runtime (CLR) 已變更的使用者介面 (UI) 的地區設定或在目前執行之工作的文化特性，會告知主應用程式。  
@@ -59,11 +59,12 @@ HRESULT SetUILocale (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICLRTask 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)
 - [ICLRTaskManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrtaskmanager-interface.md)
 - [IHostTask 介面](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)

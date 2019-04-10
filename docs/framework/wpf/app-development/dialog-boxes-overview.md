@@ -10,12 +10,12 @@ helpviewer_keywords:
 - message boxes [WPF]
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
-ms.openlocfilehash: 14ed5655f31c8c73e6d7b8e987d1856fc869c9de
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634449"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59177407"
 ---
 # <a name="dialog-boxes-overview"></a>對話方塊概觀
 獨立應用程式通常具有主視窗，其中顯示的主要資料的應用程式運作，並公開的功能來處理該資料透過[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]功能表列、 工具列和狀態列等機制。 重要的應用程式還可能顯示其他視窗來執行下列動作：  
@@ -33,9 +33,7 @@ ms.locfileid: "58634449"
  A*非強制回應* 對話方塊中，相反地，不會防止使用者啟動其他視窗開啟時。 例如，如果使用者想要尋找出現在文件中的特定字組，主視窗通常會開啟對話方塊，詢問使用者要尋找哪個字組。 不過，由於尋找字組並不會防止使用者編輯文件，因此對話方塊不需要是強制回應。 非強制回應對話方塊至少會提供**關閉**按鈕以關閉對話方塊，並可能會提供其他按鈕來執行特定函式，例如**尋找下一個**按鈕來尋找下一步，word比對準則的文字搜尋。  
   
  Windows Presentation Foundation (WPF) 可讓您建立數種類型的對話方塊，包括訊息方塊、 通用對話方塊，以及自訂對話方塊。 本主題將討論每個，而[對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)提供相符的範例。  
-  
- 
-  
+
 <a name="Message_Boxes"></a>   
 ## <a name="message-boxes"></a>訊息方塊  
  A*訊息方塊*是可用來顯示文字資訊，並允許使用者透過按鈕做出決定的對話方塊。 下圖所示的訊息方塊顯示文字資訊、提出問題，並提供使用者三個按鈕來回答問題。  
@@ -65,7 +63,7 @@ ms.locfileid: "58634449"
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>通用對話方塊  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 實作所有應用程式通用之各種可重複使用的對話方塊，包括用於開啟檔案、儲存檔案和列印的對話方塊。 由於這些對話方塊是由作業系統實作，因此可在作業系統上執行的所有應用程式之間共用，以協助確保使用者體驗的一致性；當使用者在一個應用程式中熟悉如何使用某個作業系統提供的對話方塊時，就不需要了解如何在其他應用程式中使用該對話方塊。 因為這些對話方塊分別是提供給所有的應用程式，因為它們可以協助提供一致的使用者體驗，其稱為*通用對話方塊*。  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 實作各種不同的可重複使用的對話方塊通用於所有應用程式，其中包括用於開啟檔案、 儲存檔案和列印對話方塊。 由於這些對話方塊是由作業系統實作，因此可在作業系統上執行的所有應用程式之間共用，以協助確保使用者體驗的一致性；當使用者在一個應用程式中熟悉如何使用某個作業系統提供的對話方塊時，就不需要了解如何在其他應用程式中使用該對話方塊。 因為這些對話方塊分別是提供給所有的應用程式，因為它們可以協助提供一致的使用者體驗，其稱為*通用對話方塊*。  
   
  Windows Presentation Foundation (WPF) 會封裝開啟之檔案、 儲存檔案，並列印通用對話方塊和其公開為 managed 的類別，供您使用獨立應用程式中的資料。 本主題提供每個對話方塊的簡短概觀。  
   
@@ -210,7 +208,7 @@ ms.locfileid: "58634449"
   
  ![無效的左邊的界值周圍的紅色框線的邊界 對話方塊。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- 在使用者輸入有效的資料之前，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不會將使用者侷限在無效的控制項。 這是很好的對話方塊行為；使用者應該能夠自由地巡覽對話方塊中的控制項，而不論資料是否有效。 不過，這表示使用者可以輸入無效的資料，然後按**確定** 按鈕。 基於這個理由，您的程式碼也需要驗證對話方塊中的所有控制項時 **[確定]** 藉由處理按下按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 不會限制使用者無效的控制項，直到使用者輸入有效的資料。 這是很好的對話方塊行為；使用者應該能夠自由地巡覽對話方塊中的控制項，而不論資料是否有效。 不過，這表示使用者可以輸入無效的資料，然後按**確定** 按鈕。 基於這個理由，您的程式碼也需要驗證對話方塊中的所有控制項時 **[確定]** 藉由處理按下按鈕<xref:System.Windows.Controls.Primitives.ButtonBase.Click>事件。  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  
@@ -345,6 +343,7 @@ ms.locfileid: "58634449"
 [!code-vb[DialogBoxSample#FindDialogCloseCODEBEHIND2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/FindDialogBox.xaml.vb#finddialogclosecodebehind2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [快顯功能表概觀](../controls/popup-overview.md)
 - [對話方塊範例](https://go.microsoft.com/fwlink/?LinkID=159984)
-- [ColorPicker Custom Control Sample](https://go.microsoft.com/fwlink/?LinkID=159977) (ColorPicker 自訂控制項範例)
+- [ColorPicker 自訂控制項範例](https://go.microsoft.com/fwlink/?LinkID=159977)

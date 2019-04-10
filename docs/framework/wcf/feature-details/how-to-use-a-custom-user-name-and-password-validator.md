@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用自訂的使用者名稱和密碼驗證程式
+title: HOW TO：使用自訂使用者名稱與密碼驗證程式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - WCF, username and password
 ms.assetid: 8e08b74b-fa44-4018-b63d-0d0805f85e3f
-ms.openlocfilehash: 619d3e80a8206ae3ceef2d7ff822dc3bfa8f65be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 0c5f5783f4f302b7a33c6d960049d68ed18dac91
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700529"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160247"
 ---
-# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>HOW TO：使用自訂的使用者名稱和密碼驗證程式
+# <a name="how-to-use-a-custom-user-name-and-password-validator"></a>HOW TO：使用自訂使用者名稱與密碼驗證程式
 根據預設，使用者名稱和密碼是用來進行驗證，Windows Communication Foundation (WCF) 會使用 Windows 驗證的使用者名稱和密碼。 不過，WCF 可讓自訂使用者名稱和密碼驗證配置，也稱為*驗證*。 若要納入自訂的使用者名稱和密碼驗證程式，請建立衍生自 <xref:System.IdentityModel.Selectors.UserNamePasswordValidator> 的類別，然後予以設定。  
   
  範例應用程式，請參閱[使用者名稱密碼驗證程式](../../../../docs/framework/wcf/samples/user-name-password-validator.md)。  
@@ -118,6 +118,7 @@ ms.locfileid: "54700529"
 [!code-vb[C_CustomUsernameAndPasswordValidator#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customusernameandpasswordvalidator/vb/service.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Selectors.UserNamePasswordValidator>
-- [如何：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
+- [HOW TO：使用 ASP.NET 成員資格提供者](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-membership-provider.md)
 - [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)

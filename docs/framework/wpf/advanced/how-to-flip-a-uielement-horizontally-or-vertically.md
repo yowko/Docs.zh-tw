@@ -5,12 +5,12 @@ helpviewer_keywords:
 - flipping UIElements [WPF]
 - UIElements [WPF], flipping
 ms.assetid: 02c6730f-65c0-40d5-a553-4cb663721882
-ms.openlocfilehash: 3dd9a8e2a94acf62973701094e8966c8ebff15c9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6b3da322493d17e4f8e36a35b9a0e40fdc9dc685
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215517"
 ---
 # <a name="how-to-flip-a-uielement-horizontally-or-vertically"></a>HOW TO：水平或垂直翻轉 UIElement
 此範例示範如何使用<xref:System.Windows.Media.ScaleTransform>翻轉<xref:System.Windows.UIElement>水平或垂直。 在此範例中，<xref:System.Windows.Controls.Button>控制項 (一種<xref:System.Windows.UIElement>) 已藉由套用翻轉<xref:System.Windows.Media.ScaleTransform>至其<xref:System.Windows.UIElement.RenderTransform%2A>屬性。  
@@ -50,4 +50,5 @@ ms.locfileid: "57356347"
 垂直翻轉的按鈕  
   
 ## <a name="see-also"></a>另請參閱
+
 - [轉換概觀](../graphics-multimedia/transforms-overview.md)

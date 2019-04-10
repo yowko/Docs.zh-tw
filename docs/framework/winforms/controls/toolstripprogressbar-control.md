@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], progress bars
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
-ms.openlocfilehash: 3b56d31cab84a43a488499748710355671980ad0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711872"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158960"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar 控制項
 <xref:System.Windows.Forms.ToolStripProgressBar>結合<xref:System.Windows.Forms.ToolStrip>呈現和浮動定位和一般程序追蹤功能的功能。  
@@ -29,4 +29,5 @@ ms.locfileid: "57711872"
  提供 <xref:System.Windows.Forms.ToolStripProgressBar> 控制項的參考文件。  
   
 ## <a name="see-also"></a>另請參閱
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

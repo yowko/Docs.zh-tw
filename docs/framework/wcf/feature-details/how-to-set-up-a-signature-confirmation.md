@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 5163436f75e403ee7f682cdbe378922657116063
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54513613"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176159"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>HOW TO：設定簽章確認
 *簽章確認*是訊息啟動器，以確保收到的回覆已產生來回應寄件者的原始訊息的機制。 簽章確認是定義在 WS-Security 1.1 規格中。 如果端點支援 WS-Security 1.0，您就無法使用簽章確認。  
@@ -67,8 +67,9 @@ ms.locfileid: "54513613"
  [!code-vb[c_SignatureConfirmation#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_signatureconfirmation/vb/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateMutualCertificateBindingElement%2A>
-- [如何：建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [如何：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)
+- [HOW TO：使用 SecurityBindingElement 建立自訂繫結](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [HOW TO：為指定的驗證模式建立 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)

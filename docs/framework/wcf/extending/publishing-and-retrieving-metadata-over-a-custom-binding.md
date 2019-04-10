@@ -2,12 +2,12 @@
 title: 發行與擷取自訂繫結上的中繼資料
 ms.date: 03/30/2017
 ms.assetid: 904e11b4-d90e-45c6-9ee5-c3472c90008c
-ms.openlocfilehash: 850f341e933e44d92f130dae90aff5b5c1a882b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33777358262465e9ecbadd75df8abf066bafcd01
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54639545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222974"
 ---
 # <a name="publishing-and-retrieving-metadata-over-a-custom-binding"></a>發行與擷取自訂繫結上的中繼資料
 <xref:System.ServiceModel.Description.ServiceMetadataBehavior?displayProperty=nameWithType> 提供新增中繼資料端點到服務的支援。 這些中繼資料端點可以回應 HTTP GET 要求，在具有 URL `?wsdl` querystring 和 Ws-transfer GET 要求 Ws-metadataexchange (MEX) 規格中所定義。 MEX 端點會實作 <xref:System.ServiceModel.Description.IMetadataExchange?displayProperty=nameWithType> 合約。  
@@ -28,7 +28,8 @@ ms.locfileid: "54639545"
  發行自訂繫結上的中繼資料時，繫結務必要提供您中繼資料所需的安全性支援。 例如，若要避免資訊洩漏，並且確定您的用戶端有權限可取得中繼資料，您可將 <xref:System.ServiceModel.Description.IMetadataExchange> 端點設為需要驗證和加密，讓中繼資料和應用程式更安全。 此範例[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)示範此案例。  
   
 ## <a name="see-also"></a>另請參閱
-- [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
+
+- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)
 - [WS-MetadataExchange 繫結](../../../../docs/framework/wcf/extending/ws-metadataexchange-bindings.md)
-- [如何：設定自訂 Ws-metadata Exchange 繫結](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
-- [如何：擷取透過非 MEX 繫結中繼資料](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)
+- [HOW TO：設定自訂 WS-Metadata Exchange 繫結](../../../../docs/framework/wcf/extending/how-to-configure-a-custom-ws-metadata-exchange-binding.md)
+- [HOW TO：透過非 MEX 繫結擷取中繼資料](../../../../docs/framework/wcf/extending/how-to-retrieve-metadata-over-a-non-mex-binding.md)

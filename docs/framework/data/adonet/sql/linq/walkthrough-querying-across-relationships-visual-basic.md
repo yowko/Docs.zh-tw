@@ -1,17 +1,17 @@
 ---
-title: 逐步解說：查詢跨關聯性 (Visual Basic)
+title: 逐步解說：跨關聯性查詢 (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: 2246ad1f9f36af2f8f4383647ccb97ee7be3b64b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213346"
 ---
-# <a name="walkthrough-querying-across-relationships-visual-basic"></a>逐步解說：查詢跨關聯性 (Visual Basic)
+# <a name="walkthrough-querying-across-relationships-visual-basic"></a>逐步解說：跨關聯性查詢 (Visual Basic)
 本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
   
  [!INCLUDE[note_settings_general](../../../../../../includes/note-settings-general-md.md)]  
@@ -21,7 +21,7 @@ ms.locfileid: "54585467"
 ## <a name="prerequisites"></a>必要條件  
  您必須先完成[逐步解說：簡單的物件模型和查詢 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-simple-object-model-and-query-visual-basic.md)。 本逐步解決建置於該逐步解決之上，包含存在於 c:\linqtest 中的 northwnd.mdf 檔。  
   
-## <a name="overview"></a>概觀  
+## <a name="overview"></a>總覽  
  此逐步解說包含三項主要工作：  
   
 -   加入實體類別，以表示 Northwind 範例資料庫中的 Orders 資料表。  
@@ -42,7 +42,7 @@ ms.locfileid: "54585467"
 ## <a name="annotating-the-customer-class"></a>加入 Customer 類別的附註  
  在這個步驟中，您會加入 `Customer` 類別的附註，指出其與 `Order` 類別的關聯性 (此加入動作並非絕對必要，因為定義任一方向的關聯性就足以建立連結。 但加入此附註確實可讓您輕易地以任一方向巡覽物件)。  
   
-#### <a name="to-annotate-the-customer-class"></a>若要加入 Customer 類別的附註  
+#### <a name="to-annotate-the-customer-class"></a>若要標註 Customer 類別  
   
 -   將下列程式碼輸入或貼到 `Customer` 類別中：  
   
@@ -92,4 +92,5 @@ ms.locfileid: "54585467"
  下一個逐步解說 ([逐步解說：操作資料 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 示範如何操作資料。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)

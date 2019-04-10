@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 084b80e90ea3950245606c56de7ed3e18fd27662
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57486429"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217077"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo 方法
 取得對應至指定的驗證錯誤的錯誤訊息。  
@@ -60,9 +60,6 @@ HRESULT FormatEventInfo(
   
  **標頭：** IValidator.idl, IValidator.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
-  
-## <a name="see-also"></a>另請參閱
-
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  

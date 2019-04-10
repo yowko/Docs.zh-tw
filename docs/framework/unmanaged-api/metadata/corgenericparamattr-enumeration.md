@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cf73f382c1da15e0285ee95be9e8bce39575ae0a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0aa9b84c9e16811f799a3cd2ad096508db3f7d34
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557355"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220496"
 ---
 # <a name="corgenericparamattr-enumeration"></a>CorGenericParamAttr 列舉
 包含描述值<xref:System.Type>呼叫中使用的泛型類型參數[IMetaDataEmit2::DefineGenericParam](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-definegenericparam-method.md)。  
@@ -64,7 +64,8 @@ typedef enum CorGenericParamAttr {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

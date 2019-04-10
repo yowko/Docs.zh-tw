@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: f4aeb3dd60186a4060f7825257c7adb274fc8b24
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363146"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154410"
 ---
 # <a name="controls"></a>控制項
 <a name="introduction"></a>
@@ -95,16 +95,16 @@ ms.locfileid: "57363146"
   
 -   <xref:System.Windows.Controls.HeaderedItemsControl>，繼承自這個類別的類別部分範例如下<xref:System.Windows.Controls.MenuItem>， <xref:System.Windows.Controls.TreeViewItem>，和<xref:System.Windows.Controls.ToolBar>。  
 
-  
  如需有關這些基底類別的詳細資訊，請參閱 < [WPF 內容模型](wpf-content-model.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [樣式設定和範本化](styling-and-templating.md)
-- [依分類列出控制項](controls-by-category.md)
+- [按分類區隔控制項](controls-by-category.md)
 - [控制項程式庫](control-library.md)
 - [資料範本化概觀](../data/data-templating-overview.md)
 - [資料繫結概觀](../data/data-binding-overview.md)
 - [輸入](../advanced/input-wpf.md)
 - [啟用命令](../advanced/how-to-enable-a-command.md)
-- [逐步解說：建立自訂動畫的按鈕](walkthroughs-create-a-custom-animated-button.md)
+- [逐步解說：建立自訂動畫按鈕](walkthroughs-create-a-custom-animated-button.md)
 - [控制項自訂](control-customization.md)

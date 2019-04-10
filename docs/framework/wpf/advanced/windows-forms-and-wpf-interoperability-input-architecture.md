@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 50097ef86fb6bc5341d7ea16ccee441b89823401
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352417"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160975"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Form 和 WPF 互通性輸入架構
 互通性之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]需要這兩種技術都有適當的鍵盤輸入的處理。 本主題會說明這些技術的實作方式鍵盤和訊息處理，以達到在混合式應用程式中的平順互通性。  
@@ -129,10 +129,11 @@ ms.locfileid: "57352417"
  訊息傳送至<xref:System.Windows.Forms.Integration.ElementHost>作用中的表單中的控制項。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost.EnableModelessKeyboardInterop%2A>
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：裝載 Windows Forms 中的 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
-- [WPF 和 Win32 交互操作](wpf-and-win32-interoperation.md)
+- [逐步解說：將 Windows Forms 複合控制項裝載在 WPF 中](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [逐步解說：在 Windows Forms 中裝載 WPF 複合控制項](walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md)
+- [WPF 和 Win32 互通](wpf-and-win32-interoperation.md)

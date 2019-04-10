@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 51129f9bb3a278d32a5da723dcc339f5e918c0f4
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289805"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157374"
 ---
 # <a name="relativebindforresources-element"></a>\<Relativebindforresources> > 項目
 最佳化附屬組件的探查。  
@@ -72,6 +72,7 @@ ms.locfileid: "55289805"
 -   它不會引發<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>事件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [封裝和部署資源](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

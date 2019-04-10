@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0481cfc3fa88aeb6fd7cd6ba93554d426f8eb2e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0d1b28eadc9f09abff799f99d1d6012c98b1d3dd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492045"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59215764"
 ---
 # <a name="getpublickeytoken-method"></a>GetPublicKeyToken 方法
 擷取指定的金鑰檔或金鑰容器的公用金鑰語彙基元。  
@@ -57,6 +57,7 @@ HRESULT GetPublicKeyToken(
  需要 alink.h。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

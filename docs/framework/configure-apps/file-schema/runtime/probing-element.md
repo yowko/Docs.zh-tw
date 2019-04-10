@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 09c80fc9-1ba5-4192-89f7-3a79b2e4b024
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f66ba8307a33a0a0b80cd71dd027852f67c03f72
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 9402c9f28c123affb7b90fc189484bb1fd43db46
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210265"
 ---
 # <a name="probing-element"></a>\<探查 > 項目
 指定應用程式基底的 common language runtime 載入組件時所要搜尋的子目錄。  
@@ -66,6 +66,7 @@ ms.locfileid: "55257041"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [指定組件的位置](../../../../../docs/framework/configure-apps/specify-assembly-location.md)

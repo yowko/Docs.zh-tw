@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: 9a1738e8be0471e24744a440fee10e5b1152ab10
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717631"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217415"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView 控制項技術摘要 (Windows Form)
 本主題提供有關 `DataGridView` 控制項及支援這些控制項之類別的摘要資訊。  
@@ -61,6 +61,7 @@ ms.locfileid: "57717631"
  <xref:System.Windows.Forms.DataGridView>控制項可以在關閉搭配運作<xref:System.Windows.Forms.BindingSource>元件。 此元件設計為表單的主要資料來源。 它可以管理之間的互動<xref:System.Windows.Forms.DataGridView>控制項和其資料來源，不論資料來源類型。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [DataGridView 控制項概觀](datagridview-control-overview-windows-forms.md)
 - [DataGridView 控制項架構](datagridview-control-architecture-windows-forms.md)
-- [保護連線資訊](../../data/adonet/protecting-connection-information.md)
+- [保護連接資訊](../../data/adonet/protecting-connection-information.md)

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 510ef77f217cdd6e3441e3d6684d431fc31307fd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b0625dc72d44485dbb69b42cba5387085d1862bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698917"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210421"
 ---
 # <a name="stacktracesimplecontext-structure"></a>StackTrace_SimpleContext 結構
 提供可用來代替完整 `CONTEXT` 結構的簡單內容。  
@@ -54,8 +54,9 @@ struct StackTrace_SimpleContext
   
  **標頭：** SOS_Stacktrace.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯結構](../../../../docs/framework/unmanaged-api/debugging/debugging-structures.md)
 - [偵錯](../../../../docs/framework/unmanaged-api/debugging/index.md)

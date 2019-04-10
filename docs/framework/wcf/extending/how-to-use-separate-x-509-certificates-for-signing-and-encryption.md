@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用個別 X.509 憑證來簽署和加密
+title: HOW TO：使用個別 X.509 憑證簽署與加密
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,27 +9,27 @@ helpviewer_keywords:
 - ClientCredentials class
 - ClientCredentialsSecurityTokenManager class
 ms.assetid: 0b06ce4e-7835-4d82-8baf-d525c71a0e49
-ms.openlocfilehash: 6910b7abeb6a97cce1da9655fdab99b5295cc346
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 9a6b043420554e41d0804e32313b87f05cf54631
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500482"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160936"
 ---
-# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證來簽署和加密
+# <a name="how-to-use-separate-x509-certificates-for-signing-and-encryption"></a>HOW TO：使用個別 X.509 憑證簽署與加密
 本主題說明如何設定 Windows Communication Foundation (WCF) 訊息簽章和加密用戶端和服務上的使用不同的憑證。  
   
  若要啟用另一個要用於簽署和加密的憑證，自訂用戶端或服務認證 （或兩者） 必須建立，因為 WCF 不會提供 API，以設定多個用戶端或服務的憑證。 此外，必須提供安全性權杖管理員才能運用多份憑證的資訊，以及建立可用於特定金鑰使用方式和訊息方向的適當安全性權杖提供者。  
   
  下方圖表會顯示所使用的主要類別、它們繼承的來源類別 (以上指標示)，以及特定方向和屬性所傳回的類別。  
   
--   `MyClientCredentials` 為 <xref:System.ServiceModel.Description.ClientCredentials> 的自訂實作。  
+-   `MyClientCredentials` 是的自訂實作<xref:System.ServiceModel.Description.ClientCredentials>。  
   
     -   它在圖表中所顯示的屬性都會傳回 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 的執行個體。  
   
     -   它的方法 <xref:System.ServiceModel.Description.ClientCredentials.CreateSecurityTokenManager%2A> 會傳回 `MyClientCredentialsSecurityTokenManager` 的執行個體。  
   
--   `MyClientCredentialsSecurityTokenManager` 為 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的自訂實作。  
+-   `MyClientCredentialsSecurityTokenManager` 是的自訂實作<xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>。  
   
     -   它的方法 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager.CreateSecurityTokenProvider%2A> 會傳回 <xref:System.IdentityModel.Selectors.X509SecurityTokenProvider> 的執行個體。  
   
@@ -90,9 +90,10 @@ ms.locfileid: "54500482"
      [!code-vb[c_FourCerts#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_fourcerts/vb/source.vb#7)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - <xref:System.ServiceModel.Description.ServiceCredentials>
 - <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager>
 - <xref:System.ServiceModel.Security.IdentityVerifier>
-- [逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)
+- [逐步解說：建立自訂用戶端與服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)

@@ -1,5 +1,5 @@
 ---
-title: <clear> 的 <listeners> 適用之 <source> 項目
+title: <clear> 項目<listeners>的 <source>
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/clear
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <source>
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
-ms.openlocfilehash: ee4d5f1880cf6b7aac871149bf7bf59a06903bf2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286737"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158349"
 ---
 # <a name="clear-element-for-listeners-for-source"></a>\<清除 > 項目\<接聽程式 > 針對\<來源 >
 清除追蹤來源的 `Listeners` 集合。  
@@ -85,6 +85,7 @@ ms.locfileid: "55286737"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Diagnostics.TraceSource>
 - <xref:System.Diagnostics.TraceListener>
 - [追蹤和偵錯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

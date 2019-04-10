@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f8c95249ec28b9018db42ec70443b30ae4f1409c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6717c48fca14f2200f783a984594388ef3b29c15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54567213"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211922"
 ---
 # <a name="imetadataimport2-interface"></a>IMetaDataImport2 介面
 擴充[IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)介面，以提供泛用型別所使用的功能。  
@@ -44,11 +44,12 @@ ms.locfileid: "54567213"
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection.PortableExecutableKinds>
 - [中繼資料介面](../../../../docs/framework/unmanaged-api/metadata/metadata-interfaces.md)
 - [IMetaDataImport 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)

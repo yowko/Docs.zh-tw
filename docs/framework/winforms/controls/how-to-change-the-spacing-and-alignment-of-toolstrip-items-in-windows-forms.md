@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更的間距和對齊 Windows Forms 中 ToolStrip 項目
+title: HOW TO：變更 Windows Forms 中 ToolStrip 項目的間距和對齊方式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - toolbars [Windows Forms], aligning items
 ms.assetid: cd483466-0f49-43df-addf-e2b5fcd64027
-ms.openlocfilehash: 954087fa893baf3aa623c912efb081491304d3fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 2e569f7254c2436a7c05eeeb139bf75bf61f900e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719438"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213307"
 ---
-# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>HOW TO：變更的間距和對齊 Windows Forms 中 ToolStrip 項目
+# <a name="how-to-change-the-spacing-and-alignment-of-toolstrip-items-in-windows-forms"></a>HOW TO：變更 Windows Forms 中 ToolStrip 項目的間距和對齊方式
 <xref:System.Windows.Forms.ToolStrip>完全支援控制項的版面配置功能，例如調整大小、 間距<xref:System.Windows.Forms.ToolStripItem>彼此相對，控制項的排列方式的控制項<xref:System.Windows.Forms.ToolStrip>，以及相對於控制項的間距<xref:System.Windows.Forms.ToolStrip>。  
   
  因為預設值<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性是`true`，除非您設定控制項的自動大小<xref:System.Windows.Forms.ToolStripItem.AutoSize%2A>屬性設`false`。  
@@ -80,6 +80,7 @@ ms.locfileid: "57719438"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.Control.Layout>
 - <xref:System.Windows.Forms.ToolStrip.LayoutCompleted>

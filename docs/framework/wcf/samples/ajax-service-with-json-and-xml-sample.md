@@ -2,12 +2,12 @@
 title: 含 JSON 和 XML 的 AJAX 服務範例
 ms.date: 03/30/2017
 ms.assetid: 8ea5860d-0c42-4ae9-941a-e07efdd8e29c
-ms.openlocfilehash: f8e112a75d537927d7a099d2988c1219515e2c1a
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: e5f2838575b212f6b95fd01b469d771017ef534c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332336"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59207473"
 ---
 # <a name="ajax-service-with-json-and-xml-sample"></a>含 JSON 和 XML 的 AJAX 服務範例
 此範例示範如何使用 Windows Communication Foundation (WCF) 建立會傳回 JavaScript 物件標記法 (JSON) 或 XML 資料的 Asynchronous JavaScript and XML (AJAX) 服務。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
@@ -19,7 +19,7 @@ ms.locfileid: "56332336"
 > [!NOTE]
 > 此範例的安裝程序與建置指示位於本主題的結尾。
   
-若要啟用非 ASP.NET AJAX 用戶端，請使用 .svc 檔案中的 <xref:System.ServiceModel.Activation.WebServiceHostFactory> (而非 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>)。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 會將 <xref:System.ServiceModel.Description.WebHttpEndpoint> 標準端點加入至服務。 此端點被設定在相對於.svc 檔案中; 的空位址這表示服務的位址是`http://localhost/ServiceModelSamples/service.svc`，使用作業名稱以外的任何其他後置字元。  
+若要啟用非 ASP.NET AJAX 用戶端，請使用 .svc 檔案中的 <xref:System.ServiceModel.Activation.WebServiceHostFactory> (而非 <xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>)。 <xref:System.ServiceModel.Activation.WebServiceHostFactory> 新增<xref:System.ServiceModel.Description.WebHttpEndpoint>服務的標準端點。 此端點被設定在相對於.svc 檔案中; 的空位址這表示服務的位址是`http://localhost/ServiceModelSamples/service.svc`，使用作業名稱以外的任何其他後置字元。  
   
 ```svc
 <%@ServiceHost language="c#" Debug="true" Service="Microsoft.Samples.XmlAjaxService.CalculatorService" Factory="System.ServiceModel.Activation.WebServiceHostFactory" %>  
@@ -112,4 +112,5 @@ xmlHttp.onreadystatechange=function(){
 3.  瀏覽至`http://localhost/ServiceModelSamples/XmlAjaxClientPage.htm`（不要在瀏覽器從專案目錄開啟 XmlAjaxClientPage.htm）。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 HTTP POST 的 AJAX 服務](../../../../docs/framework/wcf/samples/ajax-service-using-http-post.md)

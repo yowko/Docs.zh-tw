@@ -8,12 +8,12 @@ api_name:
 api_location:
 - PresentationHost_v0400.dll
 ms.assetid: 6dd101a3-44ad-4143-b228-772156f9b8ff
-ms.openlocfilehash: 853931b7b968f8103af8bf9c33c07d40ac653069
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f6413558ff1f259e497c6a1c31eb2664f70cc48
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213712"
 ---
 # <a name="savetohistory-function-wpf-unmanaged-api-reference"></a>SaveToHistory 函式 (WPF Unmanaged API 參考)
 此 API 支援 Windows Presentation Foundation (WPF) 基礎結構，並不是直接從您的程式碼使用。  
@@ -46,4 +46,5 @@ HRESULT SaveToHistory(
  **.NET framework 版本：** [!INCLUDE[net_current_v30plus](../../../../includes/net-current-v30plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
-- [WPF Unmanaged API 參考](wpf-unmanaged-api-reference.md)
+
+- [WPF 非受控 API 參考](wpf-unmanaged-api-reference.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: ff3f52d37a7d45b92981969983652f48f5071959
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 932eb0af6afbe958695d5c084d2cb0c0bc188830
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675767"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176614"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>實作 UI 自動化 GridItem 控制項模式
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "57675767"
   
 -   合併的資料格將會根據其基礎的錨定儲存格 (如使用者介面自動化提供者所定義)，報告其 <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> 和 <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> 屬性。 通常，它會是最上層或最左邊的資料列或資料行。  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供方格的主動操作，例如合併或分割儲存格。  
+-   <xref:System.Windows.Automation.Provider.IGridItemProvider> 不提供例如合併或分割資料格方格的主動操作。  
   
 -   通常可以使用鍵盤周遊實作 <xref:System.Windows.Automation.Provider.IGridItemProvider> 的控制項 (也就是，使用者介面自動化用戶端可以移到相鄰的控制項)。  
   
@@ -52,9 +52,10 @@ ms.locfileid: "57675767"
  此控制項模式沒有任何相關聯的例外狀況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [實作 UI 自動化 Grid 控制項模式](../../../docs/framework/ui-automation/implementing-the-ui-automation-grid-control-pattern.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

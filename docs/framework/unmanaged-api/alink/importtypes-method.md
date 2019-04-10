@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 92dfc2bec33501a5cd9ca6b4ec4c3629b6d89946
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 622e57aedf6c49e95dc2d7e40ba598361b3e6a26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487950"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222857"
 ---
 # <a name="importtypes-method"></a>ImportTypes 方法
 匯入的類型，從透過匯入每個範圍的起始[ImportFile 方法](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)。  
@@ -65,6 +65,7 @@ HRESULT ImportTypes(
  需要 alink.h  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IALink 介面](../../../../docs/framework/unmanaged-api/alink/ialink-interface.md)
 - [IALink2 介面](../../../../docs/framework/unmanaged-api/alink/ialink2-interface.md)
 - [ALink API](../../../../docs/framework/unmanaged-api/alink/index.md)

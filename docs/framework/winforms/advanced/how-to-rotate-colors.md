@@ -8,12 +8,12 @@ helpviewer_keywords:
 - colors [Windows Forms], rotating
 - examples [Windows Forms], rotating colors
 ms.assetid: e2e4c300-159c-4f4a-9b56-103b0f7cbc05
-ms.openlocfilehash: d3fa49e6129c93df93378fb2b607a87a5a0be087
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 241d2824fc2d87a0505eb6e790c865bfa7d8ef90
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58125885"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175535"
 ---
 # <a name="how-to-rotate-colors"></a>HOW TO：旋轉色彩
 四維色彩空間中的旋轉很難視覺化。 我們可以輕鬆地視覺化起來要保留固定的色彩元件之一。 假設同意將固定為 1 的 alpha 元件 （完全不透明）。 然後我們可以將三維色彩空間視覺化具有紅色、 綠色和藍色的軸，如下圖所示。  
@@ -45,10 +45,11 @@ ms.locfileid: "58125885"
  [!code-vb[System.Drawing.RotateColors#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RotateColors/VB/Form1.vb#1)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。 取代`RotationInput.bmp`映像檔案名稱和您系統上有效的路徑。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 取代`RotationInput.bmp`映像檔案名稱和您系統上有效的路徑。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
-- [為影像重新著色](recoloring-images.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [將影像重新著色](recoloring-images.md)

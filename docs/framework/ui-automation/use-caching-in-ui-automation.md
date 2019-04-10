@@ -8,12 +8,12 @@ helpviewer_keywords:
 - caching, UI Automation
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
-ms.openlocfilehash: 0c12b8347e0dfe239189a7e1d1569aaf2dabc0a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
-ms.translationtype: MT
+ms.openlocfilehash: 41c1aa0e2a5219cdb40ba6d79c2a55bbf8568322
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675494"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211409"
 ---
 # <a name="use-caching-in-ui-automation"></a>使用 UI 自動化中的快取
 > [!NOTE]
@@ -64,4 +64,5 @@ ms.locfileid: "57675494"
  [!code-vb[UIAClient_snip#108](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAClient_snip/VisualBasic/ClientForm.vb#108)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

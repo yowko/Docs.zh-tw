@@ -1,5 +1,5 @@
 ---
-title: HOW TO：瀏覽 Windows Form 中的資料
+title: HOW TO：巡覽 Windows Forms 中的資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: 920f6d6206a8f33a912d8a7d1b46a3047ed874bc
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725329"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154592"
 ---
-# <a name="how-to-navigate-data-in-windows-forms"></a>HOW TO：瀏覽 Windows Form 中的資料
+# <a name="how-to-navigate-data-in-windows-forms"></a>HOW TO：巡覽 Windows Forms 中的資料
 在 Windows 應用程式中，瀏覽資料來源中記錄的最簡單方式是繫結<xref:System.Windows.Forms.BindingSource>元件至資料來源，然後將控制項繫結至<xref:System.Windows.Forms.BindingSource>。 然後您可以使用內建的巡覽方法上<xref:System.Windows.Forms.BindingSource>這類<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用這些方法會自動調整<xref:System.Windows.Forms.BindingSource.Position%2A>並<xref:System.Windows.Forms.BindingSource.Current%2A>屬性的<xref:System.Windows.Forms.BindingSource>適當。 您也可以尋找項目，並將它設為目前的項目中，藉由設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性。  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>要遞增的資料來源中的位置  
@@ -51,7 +51,8 @@ ms.locfileid: "57725329"
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows Forms 支援的資料來源](data-sources-supported-by-windows-forms.md)
-- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
-- [資料繫結和 Windows Forms](data-binding-and-windows-forms.md)
-- [Windows Forms 資料繫結](windows-forms-data-binding.md)
+
+- [Windows Form 支援的資料來源](data-sources-supported-by-windows-forms.md)
+- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [資料繫結和 Windows Form](data-binding-and-windows-forms.md)
+- [Windows Form 資料繫結](windows-forms-data-binding.md)

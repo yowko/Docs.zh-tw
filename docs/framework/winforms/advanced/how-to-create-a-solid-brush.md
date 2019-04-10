@@ -10,12 +10,12 @@ helpviewer_keywords:
 - brushes [Windows Forms], examples
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
-ms.openlocfilehash: d7fb7c11a69cae69210dd2eece3336bc40c505c7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711976"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213437"
 ---
 # <a name="how-to-create-a-solid-brush"></a>HOW TO：建立實心筆刷
 這個範例會建立<xref:System.Drawing.SolidBrush>物件，可供<xref:System.Drawing.Graphics>來填滿圖形的物件。  
@@ -29,6 +29,7 @@ ms.locfileid: "57711976"
  使用完畢之後，您應該呼叫<xref:System.IDisposable.Dispose%2A>耗用系統資源，例如筆刷物件的物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.SolidBrush>
 - <xref:System.Drawing.Brush>
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)

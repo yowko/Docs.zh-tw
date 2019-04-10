@@ -1,15 +1,15 @@
 ---
-title: 工作 2:裝載工作流程設計工具
+title: 工作 2：裝載工作流程設計工具
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: e02134408b38e5c9aee9c59d86b1dfce032653d1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708635"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218702"
 ---
-# <a name="task-2-host-the-workflow-designer"></a>工作 2:裝載工作流程設計工具
+# <a name="task-2-host-the-workflow-designer"></a>工作 2：裝載工作流程設計工具
 本主題說明的程序裝載的執行個體[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 應用程式中。  
   
  程序會設定**方格**控制項，其中包含設計工具中，以程式設計方式建立的執行個體<xref:System.Activities.Presentation.WorkflowDesigner>，其中包含預設<xref:System.Activities.Statements.Sequence>活動，會註冊提供的設計工具中繼資料設計工具支援所有內建活動和主機[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]在[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]應用程式。  
@@ -122,6 +122,7 @@ ms.locfileid: "57708635"
 10. 請參閱[工作 3:建立工具箱與 PropertyGrid 窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)以了解如何新增**工具箱**並**PropertyGrid**支援新增至您的重新裝載工作流程設計工具。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [重新裝載工作流程設計工具](rehosting-the-workflow-designer.md)
-- [工作 1:建立新的 Windows Presentation Foundation 應用程式](task-1-create-a-new-wpf-app.md)
-- [工作 3:建立工具箱與 PropertyGrid 窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)
+- [工作 1：建立新的 Windows Presentation Foundation 應用程式](task-1-create-a-new-wpf-app.md)
+- [工作 3：建立工具箱與 PropertyGrid 窗格](task-3-create-the-toolbox-and-propertygrid-panes.md)

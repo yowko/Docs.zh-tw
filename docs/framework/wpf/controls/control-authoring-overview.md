@@ -8,18 +8,16 @@ helpviewer_keywords:
 - controls [WPF], authoring overview
 - authoring overview for controls [WPF]
 ms.assetid: 3d864748-cff0-4e63-9b23-d8e5a635b28f
-ms.openlocfilehash: 2007ee7680707cd1cc9628cc3900ca1068db8678
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 4b0a37814e22260eaaa655dddca278a1f30af09e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368723"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171856"
 ---
 # <a name="control-authoring-overview"></a>控制項撰寫概觀
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 控制項模型由於具有擴充性，因此大幅減少了建立新控制項的需求。 不過，在某些情況下，您可能還是需要建立自訂控制項。 本主題將討論可讓您建立自訂控制項的需求降到最低的一些功能，以及 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中的不同控制項撰寫模型。 本主題也將示範如何建立新的控制項。  
-  
- 
-  
+
 <a name="when_to_write_a_new_control"></a>   
 ## <a name="alternatives-to-writing-a-new-control"></a>撰寫新控制項的替代方案  
  在過去，若要從現有控制項自訂控制項，只能變更控制項的標準屬性，例如背景色彩、框線寬度和字型大小。 除了這些預先定義的參數外，若還想擴充控制項的外觀或行為，就需要建立新的控制項，建立的方式通常是繼承現有控制項並覆寫負責繪製控制項。  雖然您現在還是可以使用前述方式，但 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可以讓您藉由使用其豐富的內容模型、樣式、範本和觸發程序來自訂現有的控制項。 下列清單提供的範例說明如何在不建立新控制項的情況下，使用這些功能來建立自訂且一致的控制項。  
@@ -43,7 +41,7 @@ ms.locfileid: "57368723"
   
 <a name="models_for_control_authoring"></a>   
 ## <a name="models-for-control-authoring"></a>控制項撰寫模型  
- 豐富的內容模型、樣式、範本和觸發程序，可以讓您將建立新控制項的需求降到最低。 然而，若有必要建立新的控制項，最好能先了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的不同控制項撰寫模型。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供三種建立控制項的常用模型，每種模型都提供不同的功能集和不同程度的彈性。 基底類別的三個模型都<xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Controls.Control>，和<xref:System.Windows.FrameworkElement>。  
+ 豐富的內容模型、樣式、範本和觸發程序，可以讓您將建立新控制項的需求降到最低。 然而，若有必要建立新的控制項，最好能先了解 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的不同控制項撰寫模型。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供三種一般的模型建立的控制項，其中每一個提供一組不同的功能和彈性層級。 基底類別的三個模型都<xref:System.Windows.Controls.UserControl>， <xref:System.Windows.Controls.Control>，和<xref:System.Windows.FrameworkElement>。  
   
 ### <a name="deriving-from-usercontrol"></a>衍生自 UserControl  
  中建立控制項最簡單的辦法[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]是衍生自<xref:System.Windows.Controls.UserControl>。 當您建置控制項，繼承自<xref:System.Windows.Controls.UserControl>，您將現有的元件，加入<xref:System.Windows.Controls.UserControl>、 為元件命名，並參考中的事件處理常式[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 接著，您可以在程式碼中參考該具名項目，並定義事件處理常式。 這個開發模型與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中應用程式開發所使用的模型非常類似。  
@@ -114,7 +112,7 @@ ms.locfileid: "57368723"
   
 -   藉由實作屬性的 `get` 和 `set` 存取子，定義名為 `Value` 的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 包裝函式屬性，這個名稱與註冊相依性屬性所使用的名稱相同。 請注意，`get`並`set`存取子只呼叫<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別。 建議是因為，相依性屬性的存取子不包含額外的邏輯用戶端和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]存取子和呼叫就可以略過<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>直接。 例如，在屬性繫結到資料來源時，就不會呼叫屬性的 `set` 存取子。  而不是將其他邏輯新增至 get 和 set 存取子，請使用<xref:System.Windows.ValidateValueCallback>， <xref:System.Windows.CoerceValueCallback>，和<xref:System.Windows.PropertyChangedCallback>回應，或變更時，請檢查值的委派。  如需這些回呼的詳細資訊，請參閱[相依性屬性回呼和驗證](../advanced/dependency-property-callbacks-and-validation.md)。  
   
--   定義方法<xref:System.Windows.CoerceValueCallback>名為`CoerceValue`。 `CoerceValue` 可以確保 `Value` 大於或等於 `MinValue`，且小於或等於 `MaxValue`。  
+-   定義方法<xref:System.Windows.CoerceValueCallback>名為`CoerceValue`。 `CoerceValue` 可確保`Value`大於或等於`MinValue`且小於或等於`MaxValue`。  
   
 -   定義方法<xref:System.Windows.PropertyChangedCallback>具名`OnValueChanged`。 `OnValueChanged` 會建立<xref:System.Windows.RoutedPropertyChangedEventArgs%601>物件，並準備引發`ValueChanged`路由的事件。 下一節中將討論路由事件。  
   
@@ -184,7 +182,7 @@ ms.locfileid: "57368723"
   
 -   實作一組 `public` `static` CLR 方法，分別名為 `Set`<屬性名稱> 和 `Get`<屬性名稱>。 這兩種方法應接受衍生自<xref:System.Windows.DependencyProperty>做為其第一個引數。 `Set`*PropertyName* 方法也接受其型別與屬性之已註冊資料型別相符的引數。 <屬性名稱>`Get` 方法應傳回相同類型的值。 若遺漏 <屬性名稱>`Set` 方法，屬性就會標示為唯讀。  
   
--   `Set` *PropertyName*並`Get` *PropertyName*必須直接路由傳送<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別於目標相依性的方法物件。 藉由呼叫方法包裝函式，或直接呼叫目標相依性物件，設計工具可以存取附加屬性。  
+-   `Set` **PropertyName*並`Get` *PropertyName*必須直接路由傳送<xref:System.Windows.DependencyObject.GetValue%2A>和<xref:System.Windows.DependencyObject.SetValue%2A>分別於目標相依性的方法物件。D藉由呼叫方法包裝函式，或直接呼叫目標相依性物件，設計工具可以存取附加屬性。  
   
  如需附加屬性的詳細資訊，請參閱[附加屬性概觀](../advanced/attached-properties-overview.md)。  
   
@@ -229,7 +227,7 @@ ms.locfileid: "57368723"
  [!code-csharp[SharedResources#4](~/samples/snippets/csharp/VS_Snippets_Wpf/SharedResources/CS/ShapeResizer.xaml.cs#4)]  
   
 #### <a name="defining-resources-at-the-theme-level"></a>在佈景主題層級定義資源  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您為不同的 Windows 佈景主題建立資源。  身為控制項作者，您可以為特定佈景主題定義資源，以根據使用的佈景主題變更控制項的外觀。 例如的外觀<xref:System.Windows.Controls.Button>佈景主題 （Windows 2000 的預設佈景主題） 不同於在 Windows 傳統<xref:System.Windows.Controls.Button>Windows Luna 佈景主題 （Windows XP 的預設佈景主題） 中因為<xref:System.Windows.Controls.Button>會使用不同<xref:System.Windows.Controls.ControlTemplate>每個佈景主題。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您建立不同的 Windows 佈景主題的資源。  身為控制項作者，您可以為特定佈景主題定義資源，以根據使用的佈景主題變更控制項的外觀。 例如的外觀<xref:System.Windows.Controls.Button>佈景主題 （Windows 2000 的預設佈景主題） 不同於在 Windows 傳統<xref:System.Windows.Controls.Button>Windows Luna 佈景主題 （Windows XP 的預設佈景主題） 中因為<xref:System.Windows.Controls.Button>會使用不同<xref:System.Windows.Controls.ControlTemplate>每個佈景主題。  
   
  某個佈景主題專屬的資源會存放在具有特定檔名的資源字典中。 這些檔案必須位於名為 `Themes` 的資料夾中，這是包含控制項之資料夾的子資料夾。 下表列出資源字典檔以及與每個檔案相關聯的佈景主題：  
   
@@ -269,6 +267,7 @@ ms.locfileid: "57368723"
  [!code-vb[CustomControlNumericUpDown#ThemesSection](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomControlNumericUpDown/visualbasic/customcontrollibrary/my project/assemblyinfo.vb#themessection)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
 - [WPF 中的 Pack URI](../app-development/pack-uris-in-wpf.md)
 - [控制項自訂](control-customization.md)

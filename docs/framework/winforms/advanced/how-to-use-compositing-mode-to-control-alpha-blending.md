@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用複合模式控制 Alpha 混色
+title: HOW TO：使用複合模式控制 Alpha 透明混色
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 1a5cf23890cd6183d92e33ec4e24f87c226e8ec3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462860"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210686"
 ---
-# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>HOW TO：使用複合模式控制 Alpha 混色
+# <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>HOW TO：使用複合模式控制 Alpha 透明混色
 可能有您想来建立一個幕外的點陣圖，具有下列特性：  
   
 -   色彩必須是小於 255 的 alpha 值。  
@@ -54,8 +54,9 @@ ms.locfileid: "58462860"
  [!code-vb[System.Drawing.AlphaBlending#43](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlphaBlending/VB/Class1.vb#43)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例設計是為搭配 Windows Form 使用所設計，而且需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.PaintEventHandler> 的參數。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [Alpha 混色線條和填色](alpha-blending-lines-and-fills.md)

@@ -2,12 +2,12 @@
 title: 使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 ms.date: 03/30/2017
 ms.assetid: 05d2321c-8acb-49d7-a6cd-8ef2220c6775
-ms.openlocfilehash: fc1b75d7f2d97103f99b9dbf0fa8cbbfbe2270cd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: 80a19bf1e433ffcb0dcf29a4636fb79bedaeeb61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465057"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160663"
 ---
 # <a name="using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting"></a>使用服務追蹤檢視器檢視相關追蹤並進行疑難排解
 本主題說明追蹤資料的格式、檢視方式，以及如何使用服務追蹤檢視器來排解應用程式問題的方法。  
@@ -45,7 +45,7 @@ ms.locfileid: "58465057"
   
 -   `<SubType>` （追蹤層級）。  
   
--   `<TimeCreated>`.  
+-   `<TimeCreated>`。  
   
 -   `<Source>` （追蹤來源名稱）。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "58465057"
   
 -   `<Execution>` （處理序和執行緒識別碼）。  
   
--   `<Computer>`.  
+-   `<Computer>`。  
   
 -   `<ExtendedData>`其中包括`<Action>`，`<MessageID>`而`<ActivityId>`傳送訊息時，訊息標頭中設定。  
   
@@ -169,8 +169,7 @@ ms.locfileid: "58465057"
  下圖顯示 WCF 服務活動的圖形檢視：   
 
  ![螢幕擷取畫面的追蹤檢視器顯示的 WCF 服務活動清單](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/wcf-service-activities.gif)  
-  
-  
+
  下列螢幕擷取畫面同時說明用戶端與服務的活動，並強調處理序之間的「處理動作」(新增活動) (橘色)。 箭頭將把用戶端與服務所傳送與接收的要求與回應訊息關聯起來。 圖表中的「處理動作」追蹤將按照處理序來分門別類，但是將於右上角面板中顯示為相同活動的一部份。 在此面板中，我們可以看到傳送訊息的用戶端追蹤，後面接著已接收及已處理訊息的服務追蹤。  
   
  下圖顯示這兩個 WCF 用戶端與服務活動的圖形檢視  
@@ -189,8 +188,7 @@ ms.locfileid: "58465057"
   
   下圖顯示如何選取紅色或黃色活動以找出問題的根目錄。   
  ![螢幕擷取畫面，找出問題根源的紅色或黃色活動。](./media/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting/service-trace-viewer.gif)  
- 
-  
+
  您可以透過右上角面板，檢查您於左面板中選取的活動追蹤。 接著，您可以檢查該面板中的紅色或黃色追蹤，並檢視它們之間的相互關係。 在上一個圖形中，我們在同一個「處理動作」活動中同時看到用戶端與服務的警告追蹤。  
   
  如果這些追蹤並未提供您錯誤的根本原因，可以連按兩下左面板中的選取活動 (此處為「處理動作」) 來使用圖形。 這時會顯示具有相關活動的圖形。 您接著可以擴充相關的活動 （藉由按一下"+"號） 來尋找紅色或黃色標示相關的活動中的第一個發出的追蹤。 針對您感興趣的紅色或黃色追蹤，從頭展開這些追蹤之前的所有活動，並接著展開相關活動的傳輸或端點之間的訊息流，直到您找到問題的根本原因為止。  
@@ -207,6 +205,7 @@ ms.locfileid: "58465057"
 若要開始疑難排解，您也可以挑選紅色或黃色訊息追蹤，並按兩下來追蹤根本原因。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [端對端追蹤案例](../../../../../docs/framework/wcf/diagnostics/tracing/end-to-end-tracing-scenarios.md)
 - [服務追蹤檢視器工具 (SvcTraceViewer.exe)](../../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)

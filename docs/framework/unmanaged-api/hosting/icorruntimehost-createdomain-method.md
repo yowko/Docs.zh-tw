@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 662a47f75f2eef75b39ee877ea4645311cae6210
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: ea63627bc1e689c93634c8fe8b9048b271758573
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57484869"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156113"
 ---
 # <a name="icorruntimehostcreatedomain-method"></a>ICorRuntimeHost::CreateDomain 方法
 建立應用程式定義域。 呼叫端會收到類型的介面指標<xref:System._AppDomain>型別的執行個體<xref:System.AppDomain?displayProperty=nameWithType>。  
@@ -61,11 +61,12 @@ HRESULT CreateDomain (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
  **.NET framework 版本：** 1.0, 1.1  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System._AppDomain>
 - <xref:System.AppDomain>
 - [ICorRuntimeHost 介面](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)

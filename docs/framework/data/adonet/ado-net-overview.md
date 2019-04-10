@@ -2,12 +2,12 @@
 title: ADO.NET 概觀
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 6769370396fc263f237a2884435630a2930b882b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714382"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170051"
 ---
 # <a name="adonet-overview"></a>ADO.NET 概觀
 ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML)，以及透過 OLE DB 和 ODBC 所公開的資料來源。 資料共用的消費者應用程式可使用 ADO.NET 來連接至這些資料來源，並且擷取、處理及更新其中所含的資料。  
@@ -54,10 +54,11 @@ ADO.NET 可讓您以一致的方式存取資料來源 (例如 SQL Server 與 XML
  [ADO.NET 中的資料類型對應](../../../../docs/framework/data/adonet/data-type-mappings-in-ado-net.md)  
  說明 .NET Framework 資料型別與 .NET Framework 資料提供者之間的資料型別對應。  
   
- [在 ADO.NET 中擷取和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
+ [在 ADO.NET 中傳送和修改資料](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)  
  說明如何連接至資料來源、擷取資料和修改資料。 這包括 `DataReaders` 和 `DataAdapters`。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [存取 Visual Studio 中的資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [在 Visual Studio 中存取資料](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

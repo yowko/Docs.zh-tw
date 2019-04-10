@@ -2,18 +2,18 @@
 title: HOW TO：指定通道安全性認證
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
-ms.openlocfilehash: dac85a31a3194af3dff8a14461591d0f1a97399f
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.openlocfilehash: 761f461c1c0cb24901729a717a41bfb1b599112b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55066190"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222597"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>HOW TO：指定通道安全性認證
 Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼叫 WCF 服務。 大部分的 WCF 服務要求用戶端指定用於驗證和授權的認證。 當從 WCF 用戶端呼叫 WCF 服務，您可以在 managed 程式碼或應用程式組態檔中指定這些認證。 當從 COM 應用程式呼叫 WCF 服務，您可以使用<xref:System.ServiceModel.ComIntegration.IChannelCredentials>介面來指定認證。 本主題將說明各種使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 介面指定認證的方式。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，因此您無法在 Visual Studio 環境中使用 IntelliSense 功能。  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> 是以 IDispatch 為基礎的介面，並將 Visual Studio 環境中無法取得 IntelliSense 功能。  
   
  這篇文章會使用 WCF 服務中定義[訊息安全性範例](../../../../docs/framework/wcf/samples/message-security-sample.md)。  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
   
 7.  執行 Visual Basic 應用程式及驗證結果。  
   
-     Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。 您也可以使用 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 或 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> 替代 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> 來設定用戶端憑證：  
+     Visual Basic 應用程式將會顯示含有呼叫 Add(3, 4) 之結果的訊息方塊。 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> 或是<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>也可用的位置<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>來設定用戶端憑證：  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -65,13 +65,9 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
 ### <a name="to-specify-user-name-and-password"></a>若要指定使用者名稱和密碼  
   
 1.  將服務的 App.config 檔案修改為使用 `wsHttpBinding`。 這對使用者名稱和密碼驗證而言是必要的動作：  
-  
-  
-  
+
 2.  將 `clientCredentialType` 設定為使用者名稱：  
-  
-  
-  
+
 3.  開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
     ```  
@@ -96,9 +92,7 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
 ### <a name="to-specify-windows-credentials"></a>若要指定 Windows 認證  
   
 1.  在服務的 App.config 檔案中，將 `clientCredentialType` 設定為 Windows：  
-  
-  
-  
+
 2.  開啟 Visual Basic 6.0，並建立新的標準 .exe 檔案。 將按鈕加入至表單中，然後按兩下這個按鈕，將下列程式碼加入至 Click 處理常式：  
   
     ```  
@@ -138,8 +132,9 @@ Windows Communication Foundation (WCF) 服務 Moniker 允許 COM 應用程式呼
      如需此方法之參數的詳細資訊，請參閱 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetIssuedToken%28System.String%2CSystem.String%2CSystem.String%29>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [同盟](../../../../docs/framework/wcf/feature-details/federation.md)
-- [如何：Federation Service 上設定認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [如何：建立聯合用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [HOW TO：設定同盟服務的認證](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [HOW TO：建立同盟用戶端](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [訊息安全性](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, binary data
 - WCF Data Services, streams
 ms.assetid: aeccc45c-d5c5-4671-ad63-a492ac8043ac
-ms.openlocfilehash: 44507d8e746584ecf8efaa0b361d1707eae50156
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 82a773623c1941320aa155dd5bd937d318c1238a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570586"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170322"
 ---
 # <a name="working-with-binary-data-wcf-data-services"></a>使用二進位資料 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫可讓您擷取及更新中的二進位資料[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要在下列方面：  
@@ -67,5 +67,6 @@ ms.locfileid: "54570586"
 >  當您呼叫 <xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> 時，並不會將資料流傳送到資料服務，直到呼叫 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> 為止。  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [將資料繫結至控制項](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)

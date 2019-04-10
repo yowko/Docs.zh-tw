@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: ff68a8bee17b55f7865d6f6c289ba514729be70d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093436"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155931"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在用戶端應用程式中使用資料服務 (WCF 資料服務)
 您可以存取服務公開[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]摘要將 URI 提供給網頁瀏覽器。 URI 可提供資源的位址，而要求訊息會傳送至這些位址，以存取或變更資源所代表的基礎資料。 瀏覽器會發出 HTTP GET 命令，並且以 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要的形式傳回要求的資源。 如需詳細資訊，請參閱 <<c0> [ 從網頁瀏覽器存取服務](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)。  
@@ -21,7 +21,7 @@ ms.locfileid: "56093436"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 有助於確保公開 （expose） 的服務之間的互通性[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要與取用應用程式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 應用程式存取和變更資料[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的服務傳送要求訊息的特定 HTTP 動作和動作應該執行的實體資源定址的 uri。 當必須提供實體資料時，會在訊息本文中以特定編碼的裝載形式提供。  
   
 ### <a name="http-actions"></a>HTTP 動作  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 可支援下列 HTTP 動作，在定址資源代表的實體資料上，執行建立、讀取、更新，以及刪除作業：  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援下列 HTTP 動作來執行建立、 讀取、 更新和刪除作業，在定址的資源代表的實體資料：  
   
 -   **HTTP GET** -這是從瀏覽器存取資源時的預設動作。 要求訊息中不會提供任何承載，同時會以包含所要求之資料的承載傳回回應方法。  
   
@@ -52,5 +52,6 @@ ms.locfileid: "56093436"
  有一些程式庫可供您可以用來取用[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]其他種類的用戶端應用程式中的摘要。 如需詳細資訊，請參閱 < [OData SDK](https://go.microsoft.com/fwlink/?LinkId=185796)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [存取資料服務資源](../../../../docs/framework/data/wcf/accessing-data-service-resources-wcf-data-services.md)
 - [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

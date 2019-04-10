@@ -2,12 +2,12 @@
 title: 中介層用戶端應用程式
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: 457a215274c4804ac38958d8f840e8f4100a7be0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 667cc98f46b131fe91e17f3b1b16af429dc597ee
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718893"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174079"
 ---
 # <a name="middle-tier-client-applications"></a>中介層用戶端應用程式
 本主題討論使用 Windows Communication Foundation (WCF) 的中介層用戶端應用程式特定的各種問題。  
@@ -33,7 +33,8 @@ ms.locfileid: "54718893"
   
  如需示範如何重複使用多個要求的用戶端的最佳作法的範例，請參閱[中的 ASP.NET 用戶端資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)。  
   
- 此外，您還可以為那些使用可透過 <xref:System.Xml.Serialization.XmlSerializer> 加以序列化之資料型別的用戶端增進啟動效能。這些用戶端會在執行階段針對這些資料型別產生並編譯序列化程式碼，可能因此拖慢啟動效能。 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可改善這些應用程式的啟動效能，藉由從應用程式編譯的組件產生必要的序列化程式碼。 如需詳細資訊，請參閱[＜How to：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。  
+ 此外，您還可以為那些使用可透過 <xref:System.Xml.Serialization.XmlSerializer> 加以序列化之資料型別的用戶端增進啟動效能。這些用戶端會在執行階段針對這些資料型別產生並編譯序列化程式碼，可能因此拖慢啟動效能。 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)可改善這些應用程式的啟動效能，藉由從應用程式編譯的組件產生必要的序列化程式碼。 如需詳細資訊，請參閱[如何：改善啟動時間的 WCF 用戶端應用程式的使用 XmlSerializer](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/feature-details/accessing-services-using-a-client.md)

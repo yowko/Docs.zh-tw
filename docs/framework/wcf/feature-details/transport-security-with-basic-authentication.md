@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b54f491d-196b-4279-876c-76b83ec0442c
-ms.openlocfilehash: 33f69f749934e724ee187aee2e3544f232a1b45d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3efe8b8716a264848d07ecc37d4e11d07a8ba0a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463926"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172493"
 ---
 # <a name="transport-security-with-basic-authentication"></a>基本驗證的傳輸安全性
 下圖顯示 Windows Communication Foundation (WCF) 服務和用戶端。 伺服器需要可用於 Secure Sockets Layer (SSL) 的有效 X.509 憑證，而用戶端必須信任伺服器的憑證。 此外，Web 服務已經有可以使用的 SSL 實作。 如需啟用基本驗證在網際網路資訊服務 (IIS)，請參閱[ https://go.microsoft.com/fwlink/?LinkId=83822 ](https://go.microsoft.com/fwlink/?LinkId=83822)。  
@@ -111,10 +111,11 @@ ms.locfileid: "58463926"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>
 - <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [HOW TO：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [\<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)
-- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 485579df9c3976d70d2560c10d74f0402f48492e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590379"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161066"
 ---
 # <a name="security-transparent-code-level-1"></a>安全性透明程式碼，層級 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -131,5 +131,6 @@ public class B
  除了 `Critical` 方法 (明確標記為安全性關鍵) 之外，前述程式碼是透明程式碼。 即使有組件層級 <xref:System.Security.SecurityCriticalAttribute> 屬性，透明度仍是預設的設定。  
   
 ## <a name="see-also"></a>另請參閱
-- [安全性透明程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
+
+- [安全性透明的程式碼，層級 2](../../../docs/framework/misc/security-transparent-code-level-2.md)
 - [安全性變更](../../../docs/framework/security/security-changes.md)

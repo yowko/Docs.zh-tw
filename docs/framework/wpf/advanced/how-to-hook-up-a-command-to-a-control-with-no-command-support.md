@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將命令與沒有命令支援的控制項連結
+title: HOW TO：將命令連結到沒有命令支援的控制項
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,20 +10,20 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], attaching to a Control
 - classes [WPF], RoutedCommand [WPF], attaching to a Control
 ms.assetid: dad08f64-700b-46fb-ad3f-fbfee95f0dfe
-ms.openlocfilehash: 66b371f4d67c1102ddf341dd4b70aac66aa41605
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ae45c9a9e33a3cb53ada6e1e5430ae0f9e6c198
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352668"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216973"
 ---
-# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>HOW TO：將命令與沒有命令支援的控制項連結
+# <a name="how-to-hook-up-a-command-to-a-control-with-no-command-support"></a>HOW TO：將命令連結到沒有命令支援的控制項
 下列範例示範如何將 <xref:System.Windows.Input.RoutedCommand> 與沒有命令內建支援的 <xref:System.Windows.Controls.Control> 連結。  如需將命令連結至多個來源的完整範例，請參閱[建立自訂的 RoutedCommand 範例](https://github.com/Microsoft/WPF-Samples/tree/master/Input%20and%20Commands/CustomRoutedCommand)範例。  
   
 ## <a name="example"></a>範例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供應用程式設計人員經常遇到之常見命令的程式庫。  命令程式庫包含的類別如下：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands> 和 <xref:System.Windows.Documents.EditingCommands>。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供應用程式的程式設計人員經常遇到的常見命令程式的庫。  命令程式庫包含的類別如下：<xref:System.Windows.Input.ApplicationCommands>、<xref:System.Windows.Input.ComponentCommands>、<xref:System.Windows.Input.NavigationCommands>、<xref:System.Windows.Input.MediaCommands> 和 <xref:System.Windows.Documents.EditingCommands>。  
   
- 構成這些類別的靜態 <xref:System.Windows.Input.RoutedCommand> 物件不提供命令邏輯。  此命令的邏輯會與具有 <xref:System.Windows.Input.CommandBinding> 的命令建立關聯。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的許多控制項都有命令程式庫中一些命令的內建支援。  比方說，<xref:System.Windows.Controls.TextBox> 支援許多應用程式編輯命令，例如<xref:System.Windows.Input.ApplicationCommands.Paste%2A>、<xref:System.Windows.Input.ApplicationCommands.Copy%2A>、<xref:System.Windows.Input.ApplicationCommands.Cut%2A>、<xref:System.Windows.Input.ApplicationCommands.Redo%2A> 和 <xref:System.Windows.Input.ApplicationCommands.Undo%2A>。  應用程式開發人員不需要特別執行任何作業，即可取得這些命令來使用這些控制項。  如果 <xref:System.Windows.Controls.TextBox> 在執行命令時是命令目標，它將使用控制項內建的 <xref:System.Windows.Input.CommandBinding> 來處理命令。  
+ 構成這些類別的靜態 <xref:System.Windows.Input.RoutedCommand> 物件不提供命令邏輯。  此命令的邏輯會與具有 <xref:System.Windows.Input.CommandBinding> 的命令建立關聯。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的許多控制項都有命令程式庫中一些命令的內建支援。  <xref:System.Windows.Controls.TextBox>例如，支援許多應用程式編輯命令，例如<xref:System.Windows.Input.ApplicationCommands.Paste%2A>， <xref:System.Windows.Input.ApplicationCommands.Copy%2A>， <xref:System.Windows.Input.ApplicationCommands.Cut%2A>， <xref:System.Windows.Input.ApplicationCommands.Redo%2A>，和<xref:System.Windows.Input.ApplicationCommands.Undo%2A>。  應用程式開發人員不需要特別執行任何作業，即可取得這些命令來使用這些控制項。  如果 <xref:System.Windows.Controls.TextBox> 在執行命令時是命令目標，它將使用控制項內建的 <xref:System.Windows.Input.CommandBinding> 來處理命令。  
   
  下列範例示範如何使用 <xref:System.Windows.Controls.Button> 作為 <xref:System.Windows.Input.ApplicationCommands.Open%2A> 命令的命令來源。  會建立一個 <xref:System.Windows.Input.CommandBinding>，將指定的 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 和 <xref:System.Windows.Input.CanExecuteRoutedEventHandler> 與 <xref:System.Windows.Input.RoutedCommand> 建立關聯。  
   
@@ -47,5 +47,6 @@ ms.locfileid: "57352668"
  [!code-vb[CommandHandlerProcedural#CommandHandlerBindingInit](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CommandHandlerProcedural/visualbasic/window1.xaml.vb#commandhandlerbindinginit)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [命令概觀](commanding-overview.md)
-- [將命令與含有命令支援的控制項連結](how-to-hook-up-a-command-to-a-control-with-command-support.md)
+- [將命令連結到有命令支援的控制項](how-to-hook-up-a-command-to-a-control-with-command-support.md)

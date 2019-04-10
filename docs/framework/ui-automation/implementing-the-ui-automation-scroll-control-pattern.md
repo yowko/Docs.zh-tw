@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control patterns, Scroll
 - Scroll control pattern
 ms.assetid: 73d64242-6cbb-424c-92dd-dc69530b7899
-ms.openlocfilehash: 8efbe02098041b2037da94925e56244a28895e0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: bb473b7f10aa400dc42303e1acc15c2bdcd34516
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677509"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59154527"
 ---
 # <a name="implementing-the-ui-automation-scroll-control-pattern"></a>實作 UI 自動化 Scroll 控制項模式
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.locfileid: "57677509"
   
 -   若捲動是以百分比為單位，則與捲動刻度相關的所有值或數量必須標準化為 0 到 100 之間的範圍。  
   
--   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 和 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> 與 <xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>無關。  
+-   <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> 並<xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty>無關<xref:System.Windows.Automation.AutomationElement.IsEnabledProperty>。  
   
 -   如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontallyScrollableProperty> = `false` ，則 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalViewSizeProperty> 應設為 100%，而且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.HorizontalScrollPercentProperty> 應設為 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 同樣地，如果 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticallyScrollableProperty> = `false` ，則 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalViewSizeProperty> 應設為 100%，而且 <xref:System.Windows.Automation.ScrollPatternIdentifiers.VerticalScrollPercentProperty> 應設為 <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>。 若用戶端不想捲動的方向啟動時，這可讓使用者介面自動化用戶端在 <xref:System.Windows.Automation.ScrollPattern.SetScrollPercent%2A> 方法中使用這些屬性值，以免發生 [競爭情形](https://support.microsoft.com/default.aspx?scid=kb;en-us;317723) 。  
   
@@ -48,14 +48,14 @@ ms.locfileid: "57677509"
   
 |必要成員|成員類型|注意|  
 |---------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|屬性|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|無|  
-|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|無|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalScrollPercent%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalScrollPercent%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontalViewSize%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticalViewSize%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.HorizontallyScrollable%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.VerticallyScrollable%2A>|屬性|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A>|方法|None|  
+|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A>|方法|None|  
   
  此控制項模式沒有任何相關聯的事件。  
   
@@ -65,14 +65,15 @@ ms.locfileid: "57677509"
   
 |例外狀況類型|條件|  
 |--------------------|---------------|  
-|<xref:System.ArgumentException>|如果控制項僅支援垂直或水平捲動的<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 值，但傳入了 <xref:System.Windows.Automation.ScrollAmount.SmallIncrement> 值， <xref:System.Windows.Automation.ScrollAmount.LargeIncrement> 就會擲回這個例外狀況。|  
-|<xref:System.ArgumentException>|當傳入無法轉換成雙精度浮點數的值時，<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 便會擲回這個例外狀況。|  
-|<xref:System.ArgumentOutOfRangeException>|當傳入大於 100 或小於 0 的值 (-1 例外，因為它相當於<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> ) 時， <xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>就會擲回這個例外狀況。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 如果控制項支援，會擲回這個例外狀況<xref:System.Windows.Automation.ScrollAmount.SmallIncrement>專為水平或垂直捲動的值，但<xref:System.Windows.Automation.ScrollAmount.LargeIncrement>傳入的值無效。|  
+|<xref:System.ArgumentException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 當傳入無法轉換為雙精度浮點數的值時，會擲回這個例外狀況。|  
+|<xref:System.ArgumentOutOfRangeException>|<xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 當傳入大於 100 或小於 0 的值時，會擲回這個例外狀況 (除了-1，相當於<xref:System.Windows.Automation.ScrollPatternIdentifiers.NoScroll>)。|  
 |<xref:System.InvalidOperationException>|嘗試在不支援的方向捲動時， <xref:System.Windows.Automation.Provider.IScrollProvider.Scroll%2A> 和 <xref:System.Windows.Automation.Provider.IScrollProvider.SetScrollPercent%2A> 都會擲回這個例外狀況。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

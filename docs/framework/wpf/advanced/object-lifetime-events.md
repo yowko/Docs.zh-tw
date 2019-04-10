@@ -24,25 +24,23 @@ helpviewer_keywords:
 - startup events [WPF]
 - lifetime events of objects [WPF]
 ms.assetid: face6fc7-465b-4502-bfe5-e88d2e729a78
-ms.openlocfilehash: b5f38492fff9aa87094542b174becc54ee324a78
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8ecc3f716061dfd08ac95652d1a9d8e06e26d949
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371485"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175786"
 ---
 # <a name="object-lifetime-events"></a>物件存留期事件
 本主題說明特定的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 事件，表示物件的建立、使用和解構存留期階段。  
-  
 
-  
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
  本主題假設您已從 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 類別的現有相依性屬性消費者角度了解相依性屬性，並已閱讀[相依性屬性概觀](dependency-properties-overview.md)主題。 為了解本主題中的範例，您也應該了解 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] (請參閱 [XAML 概觀 (WPF)](xaml-overview-wpf.md)) 並知道如何撰寫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式。  
   
 <a name="intro"></a>   
 ## <a name="object-lifetime-events"></a>物件存留期事件  
- Microsoft.NET Framework managed 程式碼中的所有物件會都通過一組類似的生命、 建立、 使用和解構的階段。 許多物件的生命最終階段也會發生在解構階段，成為此階段的一部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件，更確切的說就是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 識別為項目的視覺物件，也有一系列常見的物件生命階段。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式設計和應用程式模型會將這些階段公開為一系列的事件。 關於存留期事件，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有四種主要的物件類型：一般項目、視窗項目、巡覽裝載和應用程式物件。 視窗和巡覽裝載也在較大的群組視覺物件 (項目) 內。 本主題說明通用於所有項目的存留期事件，再介紹適用於應用程式定義、視窗或巡覽裝載的較特定存留期事件。  
+ Microsoft.NET Framework managed 程式碼中的所有物件會都通過一組類似的生命、 建立、 使用和解構的階段。 許多物件的生命最終階段也會發生在解構階段，成為此階段的一部分。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 物件，更具體來說視覺物件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]識別做為項目，也有一組通用物件生命階段。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式設計和應用程式模型會將這些階段公開為一系列的事件。 關於存留期事件，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中有四種主要的物件類型：一般項目、視窗項目、巡覽裝載和應用程式物件。 視窗和巡覽裝載也在較大的群組視覺物件 (項目) 內。 本主題說明通用於所有項目的存留期事件，再介紹適用於應用程式定義、視窗或巡覽裝載的較特定存留期事件。  
   
 <a name="common_events"></a>   
 ## <a name="common-lifetime-events-for-elements"></a>項目共通的存留期事件  
@@ -68,12 +66,13 @@ ms.locfileid: "57371485"
 ## <a name="lifetime-events-application-model-elements"></a>存留期事件應用程式模型項目  
  建置通用的存留期事件項目為下列應用程式模型項目： <xref:System.Windows.Application>， <xref:System.Windows.Window>， <xref:System.Windows.Controls.Page>， <xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>。 這些會延伸共通存留期事件及與其特定用途相關的其他事件。 下列位置對這些有詳細討論：  
   
--   <xref:System.Windows.Application>：[應用程式管理概觀](../app-development/application-management-overview.md)。  
+-   <xref:System.Windows.Application>:[應用程式管理概觀](../app-development/application-management-overview.md)。  
   
--   <xref:System.Windows.Window>：[WPF Windows 概觀](../app-development/wpf-windows-overview.md)。  
+-   <xref:System.Windows.Window>:[WPF Windows 概觀](../app-development/wpf-windows-overview.md)。  
   
 -   <xref:System.Windows.Controls.Page><xref:System.Windows.Navigation.NavigationWindow>，和<xref:System.Windows.Controls.Frame>:[瀏覽概觀](../app-development/navigation-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [相依性屬性值優先順序](dependency-property-value-precedence.md)
 - [路由事件概觀](routed-events-overview.md)

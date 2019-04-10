@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7ac44d29dd99e0205c515905f9846263033babf3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479294"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222688"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember 方法
 建立指定的成員類型或模組，可定義在目前的範圍之外，並定義該參考語彙基元的參考。  
@@ -83,10 +83,11 @@ HRESULT DefineImportMember (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [IMetaDataEmit 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-interface.md)
 - [IMetaDataEmit2 介面](../../../../docs/framework/unmanaged-api/metadata/imetadataemit2-interface.md)

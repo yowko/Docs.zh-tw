@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 0664dbb70df61c0f68d34c4ab364db6623805bfa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542765"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59174625"
 ---
 # <a name="transport-quotas"></a>傳輸配額
 傳輸配額是用來判斷連線何時過度使用資源的原則機制。 配額是硬性限制，一旦超出配額值，就會無法使用其他資源。 傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
@@ -108,6 +108,7 @@ ms.locfileid: "54542765"
  應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。 在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。 例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.HttpTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TcpTransportBindingElement>

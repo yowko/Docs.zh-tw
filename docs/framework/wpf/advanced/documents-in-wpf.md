@@ -10,20 +10,19 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 20d90f96647989be35bf2c9cdf6243e8e868cd1e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361365"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169607"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 所提供的各種文件功能可以建立高精確度的內容，此種內容的設計會比在舊版 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] 中更加容易存取與閱讀。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
-  
-  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供各種不同的文件的功能，可讓設計成更容易存取與讀取比在舊版中的高逼真度內容建立[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
+
 <a name="types_of_documents"></a>   
 ## <a name="types-of-documents"></a>文件的類型  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 根據文件的預期用途將文件分為兩大類，這兩種文件分類稱為「固定格式文件」與「非固定格式文件」。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件分成兩大類別，根據其用途;這些文件類別都稱為 「 固定格式文件 」 和 「 非固定格式文件。 」  
   
  固定格式文件適用於需要精確 [!INCLUDE[TLA#tla_wys](../../../../includes/tlasharptla-wys-md.md)] 呈現方式的應用程式，與所使用的顯示器或印表機硬體無關。 固定格式文件一般用於桌上出版、文書處理和表單配置，必須嚴格遵循原始頁面設計。 固定格式文件會在其配置中維持內容項目的精確位置，不受使用中的顯示器或列印裝置影響。 例如，在 96 dpi 顯示器上檢視的固定格式文件頁面，不論是輸出到 600 dpi 雷射印表機或輸出到 4800 dpi 相紙輸出機，看起來都完全一樣。 文件品質會充分發揮各裝置的性能，但頁面配置永遠相同。  
   
@@ -54,7 +53,7 @@ ms.locfileid: "57361365"
   
 <a name="text_in_the_user_interface"></a>   
 ### <a name="text-in-the-user-interface"></a>使用者介面中的文字  
- 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>必要項目，例如一個簡短的句子，在有限的文字支援時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
+ 除了將文字新增至文件，您顯然也能在表單等應用程式 UI 中使用文字。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個控制項的文字繪製到螢幕。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。 一般情況下，<xref:System.Windows.Controls.TextBlock>必要項目，例如一個簡短的句子，在有限的文字支援時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 如需詳細資訊，請參閱 [TextBlock 概觀](../controls/textblock-overview.md)。  
   
 <a name="packaging"></a>   
 ## <a name="document-packaging"></a>文件封裝  
@@ -62,7 +61,7 @@ ms.locfileid: "57361365"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 封裝架構是下列幾個重要技術的基礎：  
   
--   符合 [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 的 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件。  
+-   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 文件符合[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]。  
   
 -   Microsoft Office "12" Open XML 格式文件 (.docx)。  
   
@@ -124,7 +123,7 @@ ms.locfileid: "57361365"
   
 <a name="XPS_Documents"></a>   
 ## <a name="xps-documents"></a>XPS 文件  
- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件是一種封裝，其中包含一或多份固定格式文件，以及進行呈現所需的所有資源和資訊。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是原生 [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 列印多工緩衝檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中，而且可以包含 XML 和二進位的元件，例如影像和字型檔案組成。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  <xref:System.Windows.Xps.Packaging.XpsDocument>設計提供支援多個使用單一、 高精確文件解決方案：  
+ [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] 文件是包含一或多個固定文件以及所有的資源和呈現所需的資訊的封裝。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 也是原生[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]列印多工緩衝檔案格式。  <xref:System.Windows.Xps.Packaging.XpsDocument>會儲存在標準 ZIP 資料集中，而且可以包含 XML 和二進位的元件，例如影像和字型檔案組成。 [PackageRelationships](#PackageRelationships) 可用來定義完整呈現文件所需的內容和資源之間的相依性。  <xref:System.Windows.Xps.Packaging.XpsDocument>設計提供支援多個使用單一、 高精確文件解決方案：  
   
 -   將固定格式文件內容和資源當做單一可攜式且容易散發的檔案，進行讀取、寫入及儲存。  
   
@@ -135,6 +134,7 @@ ms.locfileid: "57361365"
 -   將文件直接路由傳送至 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 相容的印表機。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Documents.FixedDocument>
 - <xref:System.Windows.Documents.FlowDocument>
 - <xref:System.Windows.Xps.Packaging.XpsDocument>
@@ -142,7 +142,7 @@ ms.locfileid: "57361365"
 - <xref:System.IO.Packaging.ZipPackagePart>
 - <xref:System.IO.Packaging.PackageRelationship>
 - <xref:System.Windows.Controls.DocumentViewer>
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [非固定格式文件概觀](flow-document-overview.md)
 - [列印概觀](printing-overview.md)
 - [文件序列化與儲存](document-serialization-and-storage.md)

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 548c6007d4ed685c521676de87c5a98f56a222a4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376984"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214867"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函式
 在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。
@@ -106,15 +106,14 @@ HRESULT ConnectServerWmi (
 
 `strUser` 不可以是空的字串。 如果在指定網域`strAuthority`，它不也必須包含在`strUser`，或函式會傳回`WBEM_E_INVALID_PARAMETER`。
 
-
 ## <a name="requirements"></a>需求
 
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
 
  **標頭：** WMINet_Utils.idl
 
- **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
+- [WMI 與效能計數器 (非受控 API 參考)](index.md)

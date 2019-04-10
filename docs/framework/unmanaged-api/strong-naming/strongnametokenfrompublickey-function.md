@@ -20,12 +20,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6b095d999f1e7e37c068c800e66f56c293422127
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: fbfd3ae32f4d3033894fdaf6b1bcc880c324e928
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57490394"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219794"
 ---
 # <a name="strongnametokenfrompublickey-function"></a>StrongNameTokenFromPublicKey 函式
 取得代表公開金鑰的權杖。 強式名稱語彙基元是公開金鑰的縮短格式。  
@@ -69,11 +69,12 @@ BOOLEANStrongNameTokenFromPublicKey (
   
  **標頭：** StrongName.h  
   
- **程式庫：** 包含做為 mscoree.dll 中的資源  
+ **LIBRARY:** 包含做為 mscoree.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [StrongNameTokenFromPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnametokenfrompublickey-method.md)
 - [StrongNameGetPublicKey 方法](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-strongnamegetpublickey-method.md)
 - [PublicKeyBlob 結構](../../../../docs/framework/unmanaged-api/strong-naming/publickeyblob-structure.md)

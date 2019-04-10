@@ -2,12 +2,12 @@
 title: 逐步解說：SQL 產生
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 3210fb8872e1610c37070330082b11dddc37aa06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d88916b06dd1fc01f10889fc94d5bcf8c571c228
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733437"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164576"
 ---
 # <a name="walkthrough-sql-generation"></a>逐步解說：SQL 產生
 本主題說明中的 SQL 產生如何發[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)。 下列 Entity SQL 查詢會使用範例提供者所隨附的模型：  
@@ -126,11 +126,11 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  ![Diagram](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")  
   
- 下一個 "false" 會推送到 IsParentAJoin 堆疊上，而且會處理聯結條件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(Extenent1) 會在查詢符號表之後解析為 <symbol_Extent1>。 執行個體已解析為簡單的符號，處理 Var(Extent1) 的結果。CategoryID、 sqlbuilder 並包含\<symbol1 >。 」會傳回 CategoryID"。 同樣地，將會處理比較的另一端，而且瀏覽聯結條件的結果會附加到 SelectStatement1 的 FROM 子句，並從 IsParentAJoin 堆疊推出 "false" 的值。  
+ 下一個 "false" 會推送到 IsParentAJoin 堆疊上，而且會處理聯結條件 Var(Extent1).CategoryID == Var(Extent2).CategoryID。 Var(extenent1 會解析為 < symbol_Extent1 > 了解之後設定符號表中。 執行個體已解析為簡單的符號，處理 Var(Extent1) 的結果。CategoryID、 sqlbuilder 並包含\<symbol1 >。 」會傳回 CategoryID"。 同樣地，將會處理比較的另一端，而且瀏覽聯結條件的結果會附加到 SelectStatement1 的 FROM 子句，並從 IsParentAJoin 堆疊推出 "false" 的值。  
   
  這樣就已經完整處理 Join1，而且會從符號表推出範圍。  
   
- 控制權會傳回正在處理的 Join4，它是 Join1 的父系。 因為子系已重複使用 Select 陳述式，所以會使用單一 Join 符號 <joinSymbol_Join1> 來取代 Join1 範圍。 此外，新項目會加入至符號表中，以便將 Join1 與 <joinSymbol_Join1> 產生關聯。  
+ 控制權會傳回正在處理的 Join4，它是 Join1 的父系。 因為子系已重複使用 Select 陳述式，會使用單一 Join 符號 < joinSymbol_Join1 > 來取代 Join1 範圍。 此外新項目會加入至符號表，以便將 Join1 與 < joinSymbol_Join1 > 產生關聯。  
   
  下一個要處理的節點是 Join3，這是 Join4 的第二個子系。 因為它是右邊子系，所以會將 "false" 推送到 IsParentAJoin 堆疊。 此時造訪者的狀態會在下一個圖中說明。  
   
@@ -148,9 +148,9 @@ LEFT OUTER JOIN [dbo].[InternationalOrders] AS [Extent5] ON [Extent4].[OrderID] 
   
  下一個圖顯示造訪者在處理 DbPropertyExpression "Var(Join2).Extent4.OrderID" 之前的狀態。  
   
- 考慮如何瀏覽 "Var(Join2).Extent4.OrderID"。 首先會瀏覽執行個體屬性 "Var(Join2).Extent4" (這是另一個 DbPropertyExpression) 並初次瀏覽它的執行個體 "Var(Join2)"。 在符號表的最上層範圍中，"Join2" 會解析為 <joinSymbol_join2>。 在 DbPropertyExpression 處理 "Var(Join2).Extent4" 的瀏覽方法中，請注意當瀏覽執行個體時已傳回聯結符號，而且需要扁平化。  
+ 考慮如何瀏覽 "Var(Join2).Extent4.OrderID"。 首先會瀏覽執行個體屬性 "Var(Join2).Extent4" (這是另一個 DbPropertyExpression) 並初次瀏覽它的執行個體 "Var(Join2)"。 在符號表中的最上層範圍，"Join2"會解析為 < joinSymbol_join2 >。 在 DbPropertyExpression 處理 "Var(Join2).Extent4" 的瀏覽方法中，請注意當瀏覽執行個體時已傳回聯結符號，而且需要扁平化。  
   
- 因為它是巢狀聯結，所以我們會查詢聯結符號的 NameToExtent 字典中的屬性 "Extent4"，並將它解析為 <symbol_Extent4>，然後傳回新的 SymbolPair(<joinSymbol_join2>, <symbol_Extent4>)。 因為符號組是從處理 "Var(Join2).Extent4.OrderID" 執行個體所傳回，所以會從該符號組 (<symbol_Extent4>) 的 ColumnPart 解析 "OrderID" 屬性，這個符號組具有其所代表之範圍的資料行清單。 所以，"Var(Join2).Extent4.OrderID" 會解析為 { <joinSymbol_Join2>, ".", <symbol_OrderID>}。  
+ 因為它是巢狀的聯結，我們查閱聯結符號的 NameToExtent 字典中的屬性"extent4，並"、 它解析為 < symbol_Extent4 >，並傳回新的 SymbolPair (< joinSymbol_join2 >，< symbol_Extent4 >)。 因為符號組從傳回執行個體"var(join2 處理。Extent4.OrderID 」，是從具有它所代表之範圍的資料行清單該符號組 (< symbol_Extent4 >) 的 ColumnPart 解析"OrderID"屬性。 因此，"var(join2。Extent4.OrderID"會解析為 {< joinSymbol_Join2 >，"。"，< symbol_OrderID >}。  
   
  Join4 的聯結條件會以類似的方式處理。 控制權會傳回已處理最上層專案的 VisitInputExpression 方法。 在查看傳回之 SelectStatement0 的 FromExtents 時，輸入會識別為聯結，而且會移除原始範圍，並使用只有聯結符號的新範圍來加以取代。 也會更新符號表，接下來會處理專案的投射部分。 屬性的解析以及聯結範圍的扁平化如同之前所述。  
   
@@ -195,9 +195,10 @@ FROM: "[dbo].[Orders]", " AS ", <symbol_Extent4>,
 ### <a name="second-phase-of-sql-generation-generating-the-string-command"></a>SQL 產生的第二個階段：產生字串命令  
  第二個階段會產生實際的符號名稱，我們只著重於代表 "OrderID" 資料行的符號，因為這個情況下需要解決衝突。 這些會在 SqlSelectStatement 中強調。 請注意，圖中所用的尾碼只是為了強調這些是不同的執行個體，不是為了代表任何新的名稱，因為在這個階段尚未指派其最終的名稱 (可能與原始名稱不同)。  
   
- 找到的需要重新命名的第一個符號是 <symbol_OrderID>。 它的新名稱會指派為 "OrderID1"，而且 1 會標示為上次用於 "OrderID" 的尾碼，而且此符號會標示為不需要重新命名。 接下來會找到第一個使用的 <symbol_OrderID_2>。 它會重新命名來使用下一個可用的尾碼 ("OrderID2") 而且會再次標示為不需要重新命名，所以下次使用它時就不會重新命名。 也會針對 <symbol_OrderID_3> 進行這項處理。  
+ 第一個符號可讓您找到的需要重新命名為 < symbol_OrderID >。 它的新名稱會指派為 "OrderID1"，而且 1 會標示為上次用於 "OrderID" 的尾碼，而且此符號會標示為不需要重新命名。 接下來，找到 < symbol_OrderID_2 > 第一次使用。 它會重新命名來使用下一個可用的尾碼 ("OrderID2") 而且會再次標示為不需要重新命名，所以下次使用它時就不會重新命名。 這也是為了 < symbol_OrderID_3 >。  
   
  第二個階段結束時，將會產生最終的 SQL 陳述式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [範例提供者中的 SQL 產生](../../../../../docs/framework/data/adonet/ef/sql-generation-in-the-sample-provider.md)

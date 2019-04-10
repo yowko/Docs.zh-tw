@@ -1,17 +1,17 @@
 ---
-title: 將現有.NET 應用程式部署為 Windows 容器
+title: 將現有 .NET 應用程式部署為 Windows 容器
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |將現有.NET 應用程式部署為 Windows 容器
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 646acc6fd14c1ff85593dbf6074f0d03d86f04bd
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143743"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216661"
 ---
-# <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有.NET 應用程式部署為 Windows 容器
+# <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
 Windows 容器為基礎的部署是適用於雲端最佳化應用程式和雲端原生應用程式。
 
@@ -134,7 +134,6 @@ Linux 容器，例如 Windows Server 容器會管理使用 Docker 引擎。 與 
 -   **資訊圖︰Microsoft 和容器**
 
     [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
-
 
 ## <a name="the-container-ecosystem-in-azure"></a>在 Azure 中的容器生態系統
 

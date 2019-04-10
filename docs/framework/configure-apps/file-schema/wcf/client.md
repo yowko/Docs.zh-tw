@@ -5,12 +5,12 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.ServiceModel/client
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
-ms.openlocfilehash: 93365c109f015b2ec72b5216dcb8c46258d022e2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164355"
 ---
 # <a name="client"></a>\<client>
 `client` 項目會定義用戶端可連線的端點清單。  
@@ -35,7 +35,7 @@ ms.locfileid: "55280900"
  下列各節描述屬性、子項目和父項目。  
   
 ### <a name="attributes"></a>屬性  
- 無  
+ None  
   
 ### <a name="child-elements"></a>子元素  
   
@@ -73,6 +73,7 @@ ms.locfileid: "55280900"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.ClientSection>
 - <xref:System.ServiceModel.Configuration.MetadataElement>
 - [WCF 用戶端組態](../../../../../docs/framework/wcf/feature-details/client-configuration.md)

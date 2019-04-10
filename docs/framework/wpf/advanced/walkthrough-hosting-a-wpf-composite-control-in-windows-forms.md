@@ -1,18 +1,18 @@
 ---
-title: 逐步解說：裝載 Windows Forms 中的 WPF 複合控制項
+title: 逐步解說：在 Windows Forms 中裝載 WPF 複合控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: d38a9c67edb5df89554e9e02274410a825b3384b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
-ms.translationtype: MT
+ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654545"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219599"
 ---
-# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：裝載 Windows Forms 中的 WPF 複合控制項
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../controls/control-customization.md)。  
+# <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Forms 中裝載 WPF 複合控制項
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../controls/control-customization.md)。  
   
  本逐步解說引導您完成應用程式以裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項，以在 Windows Forms 應用程式中執行資料輸入。 複合控制項會封裝在 DLL 中。 這個一般程序可以延伸到更複雜的應用程式和控制項。 本逐步解說設計成幾乎完全相同的外觀和功能[逐步解說：在 WPF 中裝載 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)。 主要差異在於裝載案例相反。  
   
@@ -35,7 +35,6 @@ ms.locfileid: "58654545"
 
  下圖顯示 WPF 複合控制項： 
 
-  
  ![如果螢幕擷取畫面顯示簡單的 WPF 控制項。](./media/walkthrough-hosting-a-wpf-composite-control-in-windows-forms/windows-presentation-foundation-composite-control.png)  
   
 ### <a name="creating-the-project"></a>建立專案  
@@ -324,8 +323,9 @@ namespace MyControls
  建置並執行應用程式。 按一下不同的選項按鈕，以查看在 WPF 複合控制項上的效果。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
-- [逐步解說：裝載 Windows Forms 中的 3d WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)
+- [逐步解說：將 Windows Forms 複合控制項裝載在 WPF 中](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)
+- [逐步解說：在 Windows Forms 中裝載立體 WPF 複合控制項](walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md)

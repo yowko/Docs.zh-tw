@@ -2,12 +2,12 @@
 title: 外部對應
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
-ms.openlocfilehash: 5cc72c360a2dfbb7446a5157cde898be93d29171
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54614568"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218676"
 ---
 # <a name="external-mapping"></a>外部對應
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援*外部對應*，供您必須使用個別的 XML 檔案來指定資料庫的資料模型和物件模型之間對應的程序。 使用外部對應檔案的好處如下：  
@@ -23,11 +23,11 @@ ms.locfileid: "54614568"
   
 -   對應檔案必須是 XML 檔。  
   
--   XML 對應檔案必須根據 XML 結構描述定義檔進行驗證。 如需詳細資訊，請參閱[＜How to：驗證 DBML 和外部對應檔](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
+-   XML 對應檔案必須根據 XML 結構描述定義檔進行驗證。 如需詳細資訊，請參閱[如何：驗證 DBML 和外部對應檔](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)。  
   
 -   外部對應會覆寫以屬性 (Attribute) 為基礎的對應。 也就是說，當您使用外部對應來源建立 <xref:System.Data.Linq.DataContext> 時，<xref:System.Data.Linq.DataContext> 會忽略已在類別上建立的所有對應屬性。 不論類別是否包含在外部對應檔案中，結果都是一樣。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援混合使用兩種對應方式 (以屬性為基礎和外部)。  
+-   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援混合使用兩種對應方式 （以屬性為基礎和外部）。  
   
 ## <a name="xml-schema-definition-file"></a>XML 結構描述定義檔  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 中的外部對應必須根據下列 XML 結構描述定義進行驗證。  
@@ -142,6 +142,7 @@ elementFormDefault="qualified" >
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [LINQ to SQL 中的程式碼產生](../../../../../../docs/framework/data/adonet/sql/linq/code-generation-in-linq-to-sql.md)
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
-- [如何：產生物件模型當做外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)
+- [HOW TO：產生物件模型作為外部檔案](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：加入相依性屬性的擁有者類型
+title: HOW TO：新增相依性屬性的擁有者類型
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - classes [WPF], adding as owners of dependency properties
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
-ms.openlocfilehash: 03ffec87c98c88452aa8fde89c64646eaf48a8da
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369587"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217090"
 ---
-# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>HOW TO：加入相依性屬性的擁有者類型
+# <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>HOW TO：新增相依性屬性的擁有者類型
 此範例示範如何將類別新增為相依性屬性註冊不同類型的擁有者。 這樣做， [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]讀取器和屬性系統都能夠辨識為其他屬性的擁有者的類別。 （選擇性） 新增為擁有者，可讓新增的類別，以提供特定類型的中繼資料。  
   
  在下列範例中，`StateProperty`屬性的註冊`MyStateControl`類別。 此類別`UnrelatedStateControl`將本身新增為擁有者`StateProperty`使用<xref:System.Windows.DependencyProperty.AddOwner%2A>方法，特別使用存在於將型別，可讓新的相依性屬性中繼資料的簽章。 請注意，您應該提供[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]類似於範例所示的屬性存取子[實作相依性屬性](how-to-implement-a-dependency-property.md)範例中，以及重新公開類別 order_filled 上的相依性屬性識別項身為擁有者。  
@@ -31,5 +31,6 @@ ms.locfileid: "57369587"
 [!code-vb[PropertySystemEsoterics#UnrelatedStateControl](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertySystemEsoterics/visualbasic/sdksamplelibrary/class1.vb#unrelatedstatecontrol)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [自訂相依性屬性](custom-dependency-properties.md)
 - [相依性屬性概觀](dependency-properties-overview.md)

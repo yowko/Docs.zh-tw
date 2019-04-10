@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: bd6c27203284b392742b766b22f664b08a7b3a40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57722408"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59214724"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>在 Windows Form DataGridView 控制項中的資料行填入模式
 在資料行填滿模式中，<xref:System.Windows.Forms.DataGridView> 控制項會自動調整其資料行的大小，使資料行填滿可用顯示區域的寬度。 只有在必須將每個資料行的寬度保持等於或大於其 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 屬性值時，這個控制項才會顯示水平捲軸。  
@@ -45,9 +45,9 @@ ms.locfileid: "57722408"
 ### <a name="comments"></a>註解  
  若要使用這個示範應用程式：  
   
--   變更表單的大小。 觀察資料行如何在維持比例 (由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性值指定) 的同時，變更其寬度。  
+-   變更表單的大小 觀察資料行如何在維持比例 (由 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 屬性值指定) 的同時，變更其寬度。  
   
--   使用滑鼠拖曳資料行分割線，藉此變更資料行大小。 觀察 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 值如何變更。  
+-   使用滑鼠拖曳資料行分隔線來變更資料行大小。 觀察 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 值如何變更。  
   
 -   變更一個資料行的 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值，然後以拖曳方式調整表單的大小。 觀察當表單變得很小時，<xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 值如何維持在 <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 值以上。  
   
@@ -63,6 +63,7 @@ ms.locfileid: "57722408"
 -   Visual Basic 或 Visual C# 建置此範例從命令列的相關資訊，請參閱[從命令列建置](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)或是[命令列使用 csc.exe 建置](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)。 您也可以將程式碼貼入新的專案，以建置此範例的 Visual Studio。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A?displayProperty=nameWithType>
@@ -76,4 +77,4 @@ ms.locfileid: "57722408"
 - <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.Resizable%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.RightToLeft%2A?displayProperty=nameWithType>
-- [調整 Windows Forms DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
+- [調整 Windows Form DataGridView 控制項中資料行和資料列的大小](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)

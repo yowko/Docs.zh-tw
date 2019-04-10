@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
-ms.openlocfilehash: 357fad55c3c47a5697df7887f251074238a5ff4d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54498228"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209472"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>對資料集執行 XPath 查詢
 同步處理之間的關聯性<xref:System.Data.DataSet>並<xref:System.Xml.XmlDataDocument>可讓您使用 XML 服務，例如 XML 路徑語言 (XPath) 查詢中，存取**XmlDataDocument** ，而且可以執行特定功能比存取更方便**資料集**直接。 比方說，而不是使用**選取 **方法<xref:System.Data.DataTable>巡覽至其他資料表中的關聯性**資料集**，您可以針對執行 XPath 查詢**XmlDataDocument** ，會與同步處理**資料集**，以取得 XML 項目清單的形式<xref:System.Xml.XmlNodeList>。 中的節點**XmlNodeList**轉換為<xref:System.Xml.XmlElement>節點，然後傳遞至**GetRowFromElement**方法**XmlDataDocument**，以傳回比對<xref:System.Data.DataRow>處於同步處理資料表的資料列參考**資料集**。  
@@ -102,5 +102,6 @@ foreach (XmlNode xmlNode in nodeList)
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料集和 XmlDataDocument 同步處理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataset-and-xmldatadocument-synchronization.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

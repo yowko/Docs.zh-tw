@@ -5,12 +5,12 @@ helpviewer_keywords:
 - UI Automation caching in clients
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
-ms.openlocfilehash: 003928d718579948a9baf188d02a7847edb676e1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676859"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175821"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI 自動化用戶端中的快取
 > [!NOTE]
@@ -70,7 +70,7 @@ ms.locfileid: "57676859"
   
  如果要求的屬性不在快取中，會引發例外狀況。  
   
- <xref:System.Windows.Automation.AutomationElement.Cached%2A>就像 <xref:System.Windows.Automation.AutomationElement.Current%2A>一樣，會將個別屬性公開為結構的成員。 不過，您不需要擷取此結構，而可以直接存取個別的屬性。 例如， <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 屬性可以取自 `element.Cached.Name`，其中 `element` 是一種 <xref:System.Windows.Automation.AutomationElement>。  
+ <xref:System.Windows.Automation.AutomationElement.Cached%2A>例如<xref:System.Windows.Automation.AutomationElement.Current%2A>，會將個別屬性公開為結構的成員。 不過，您不需要擷取此結構，而可以直接存取個別的屬性。 例如， <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.Name%2A> 屬性可以取自 `element.Cached.Name`，其中 `element` 是一種 <xref:System.Windows.Automation.AutomationElement>。  
   
 <a name="Retrieving_Cached_Control_Patterns"></a>   
 ## <a name="retrieving-cached-control-patterns"></a>擷取快取控制項模式  
@@ -102,6 +102,7 @@ ms.locfileid: "57676859"
  更新快取不會更改任何現有 <xref:System.Windows.Automation.AutomationElement> 參考的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [用戶端的 UI 自動化事件](../../../docs/framework/ui-automation/ui-automation-events-for-clients.md)
-- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [FetchTimer 範例](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms771456(v=vs.90))

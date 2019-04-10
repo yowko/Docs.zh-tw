@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text [Windows Forms], aligning
 - Windows Forms, aligning drawn text
 ms.assetid: 83c10a81-1a90-4b5c-98aa-2c6c4b280079
-ms.openlocfilehash: ab97ab713067af26455fa4261bbddaf900ec91b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5214ef2c69349514f05ba68cc023a7622e119e3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725255"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59210447"
 ---
 # <a name="how-to-align-drawn-text"></a>HOW TO：對齊繪製的文字
 當您執行自訂繪圖時，您通常可以在表單或控制項上的繪製的文字置中對齊。 您可以輕鬆地將以繪製文字的對齊<xref:System.Drawing.Graphics.DrawString%2A>或<xref:System.Windows.Forms.TextRenderer.DrawText%2A>方法藉由建立正確的格式物件，並設定適當的格式旗標。  
@@ -33,9 +33,10 @@ ms.locfileid: "57725255"
      [!code-vb[System.Drawing.AlignDrawnText#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#20)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述程式碼範例專為搭配 Windows Form 使用，而且它們需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
+ 上述程式碼範例專為搭配 Windows Form 使用，而且它們需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.PaintEventHandler>。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
+
+- [HOW TO：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
 - [使用字型和文字](using-fonts-and-text.md)
-- [如何：建構字型系列和字型](how-to-construct-font-families-and-fonts.md)
+- [HOW TO：建構字型家族和字型](how-to-construct-font-families-and-fonts.md)

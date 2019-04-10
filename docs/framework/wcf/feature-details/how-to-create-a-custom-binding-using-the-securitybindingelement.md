@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立自訂繫結使用 SecurityBindingElement
+title: HOW TO：使用 SecurityBindingElement 建立自訂繫結
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: 2c2aa5703e31b2529e0b98d909a763b8b4b23035
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576147"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175587"
 ---
-# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：建立自訂繫結使用 SecurityBindingElement
+# <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
 Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可以設定，但不是能提供充分的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
   
 > [!WARNING]
->  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> 通道圖案，當 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Buffered> 時，這是 TCP 傳輸使用的預設通道圖案。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
+>  <xref:System.ServiceModel.Channels.SecurityBindingElement> 不支援<xref:System.ServiceModel.Channels.IDuplexSessionChannel>通道圖案，也就是預設通道圖案所使用的 TCP 傳輸的時機<xref:System.ServiceModel.TransferMode>設定為<xref:System.ServiceModel.TransferMode.Buffered>。 您必須將 <xref:System.ServiceModel.TransferMode> 設定為 <xref:System.ServiceModel.TransferMode.Streamed>，才能在這個情況中使用 <xref:System.ServiceModel.Channels.SecurityBindingElement>。  
   
 ## <a name="creating-a-custom-binding"></a>建立自訂繫結  
  在 WCF 中的所有繫結組成*繫結項目*。 每個繫結項目均衍生自 <xref:System.ServiceModel.Channels.BindingElement> 類別。 如果是標準系統提供的繫結，雖然您可以自訂某些屬性設定，但是系統仍會為您先建立並且設定好繫結項目。  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
   
 -   合約中指定的訊息交換模式 (MEP)。  
   
- 下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。 請注意，這些都是基本需求。 您可以將其他繫結程序項目加入繫結程序中，如訊息編碼繫結程序項目、異動繫結程序項目以及其他繫結程序項目。  
+ 下表針對前述的因素，列出每一個組合的有效繫結項目堆疊組態。 請注意，這些都是基本需求。 您可以將其他繫結項目加入繫結中，如訊息編碼繫結項目、交易繫結項目以及其他繫結項目。  
   
 |安全性模式|Transport|合約訊息交換模式|合約訊息交換模式|合約訊息交換模式|  
 |-------------------|---------------|---------------------------------------|---------------------------------------|---------------------------------------|  
@@ -95,7 +95,7 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
   
 6.  建立新自訂繫結，方式是建立 <xref:System.ServiceModel.Channels.CustomBinding> 類別的執行個體，並將 `outputBec` 集合傳遞至建構函式。  
   
-7.  產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。 其他兩項可透過使用標準繫結程序上的設定來控制。  
+7.  產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。 其他兩項可透過使用標準繫結上的設定來控制。  
   
 ## <a name="example"></a>範例  
   
@@ -107,6 +107,7 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
  [!code-vb[c_CustomBinding#20](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_custombinding/vb/source.vb#20)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.SecurityBindingElement>
 - <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>
 - <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>

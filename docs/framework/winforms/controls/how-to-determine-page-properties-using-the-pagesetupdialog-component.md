@@ -10,12 +10,12 @@ helpviewer_keywords:
 - page setup
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
-ms.openlocfilehash: 482825c1e17811b31c3520a0280d7d0434489bf5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 6eefe7dd69d02712b650d95ddf14394c10792807
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713198"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213699"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>HOW TO：使用 PageSetupDialog 元件決定頁面屬性
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) 元件會向文件使用者呈現配置、紙張大小和其他頁面配置選項。  
@@ -88,6 +88,7 @@ ms.locfileid: "57713198"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.PageSetupDialog>
-- [如何：建立標準的 Windows Forms 列印工作](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
+- [HOW TO：建立標準的 Windows Forms 列印工作](../advanced/how-to-create-standard-windows-forms-print-jobs.md)
 - [PageSetupDialog 元件](pagesetupdialog-component-windows-forms.md)

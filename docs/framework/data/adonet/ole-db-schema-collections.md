@@ -2,12 +2,12 @@
 title: OLE DB 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: f753f35aab0a0200da5de463a73abb9813253d11
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54658451"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164680"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB 結構描述集合
 本節將討論 Microsoft SQL Server、Oracle 和 Microsoft Jet 之 OLE DB 提供者的結構描述集合支援。  
@@ -25,7 +25,7 @@ ms.locfileid: "54658451"
   
 -   Catalog  
   
--   Indexes  
+-   索引  
   
 ### <a name="tables"></a>資料表  
   
@@ -121,7 +121,7 @@ ms.locfileid: "54658451"
 |CATALOG_NAME|String|  
 |DESCRIPTION|String|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>索引  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -166,7 +166,7 @@ ms.locfileid: "54658451"
   
 -   檢視  
   
--   Indexes  
+-   索引  
   
 ### <a name="tables"></a>資料表  
   
@@ -264,7 +264,7 @@ ms.locfileid: "54658451"
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>索引  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -305,7 +305,7 @@ ms.locfileid: "54658451"
   
 -   檢視  
   
--   Indexes  
+-   索引  
   
 ### <a name="tables"></a>資料表  
   
@@ -381,7 +381,7 @@ ms.locfileid: "54658451"
 |DATE_CREATED|DateTime|  
 |DATE_MODIFIED|DateTime|  
   
-### <a name="indexes"></a>Indexes  
+### <a name="indexes"></a>索引  
   
 |ColumnName|DataType|  
 |----------------|--------------|  
@@ -412,4 +412,5 @@ ms.locfileid: "54658451"
 |INTEGRATED|Boolean|  
   
 ## <a name="see-also"></a>另請參閱
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

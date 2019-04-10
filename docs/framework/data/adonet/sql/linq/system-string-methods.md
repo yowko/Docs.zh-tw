@@ -2,15 +2,15 @@
 title: System.String 方法
 ms.date: 03/30/2017
 ms.assetid: ce307f14-87e6-4816-8694-8a4147f6b784
-ms.openlocfilehash: 569010c36296e18487eb52527d3df0cc0b97cf06
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a7b45f27441d889524f5055eb5c6a3b06937bd3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618099"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160494"
 ---
 # <a name="systemstring-methods"></a>System.String 方法
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列 <xref:System.String> 方法。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不支援下列<xref:System.String>方法。  
   
 ## <a name="unsupported-systemstring-methods-in-general"></a>一般不支援的 System.String 方法  
  一般不支援的 <xref:System.String> 方法：  
@@ -56,4 +56,5 @@ ms.locfileid: "54618099"
 -   因為許多方法 (如 `Replace`、`ToLower`、`ToUpper` 和字元索引子 (Indexer)) 都沒有 `TEXT` 或 `NTEXT` 資料行和 XML 的有效轉譯，所以如果正常轉譯，則會發生 `SqlExceptions`。 對這些型別而言，這個行為是可接受的行為。 不過，所有字串作業都必須符合 `VARCHAR`、`NVARCHAR`、`VARCHAR(max)` 和 `NVARCHAR(max)` 的 Common Language Runtime (CLR) 語意。  
   
 ## <a name="see-also"></a>另請參閱
-- [資料類型和函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)
+
+- [資料類型與函式](../../../../../../docs/framework/data/adonet/sql/linq/data-types-and-functions.md)

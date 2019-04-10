@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 4b3e7a3994423c962866b643ffc5173669e3a2e5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212280"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>HOW TO：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  
@@ -57,7 +57,8 @@ ms.locfileid: "58841157"
     >  當您將繼承的控制項和元件與標準控制項和 Windows Form 上的元件結合時，您可能會遇到疊置順序衝突。 您可以藉由修改疊置順序來修正，其作法是在 [格式]  功能表中按一下，指向 [順序]，然後按一下 [提到最上層] 或 [移到最下層]。 控制項的疊置順序的相關資訊，請參閱[How to:在 Windows Forms 上的物件分層](../controls/how-to-layer-objects-on-windows-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
-- [Inherits 陳述式](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
+
+- [Inherits Statement](~/docs/visual-basic/language-reference/statements/inherits-statement.md)
 - [using](~/docs/csharp/language-reference/keywords/using.md)
 - [修改基底表單外觀的效果](effects-of-modifying-base-form-appearance.md)
-- [Windows Forms 視覺繼承](windows-forms-visual-inheritance.md)
+- [Windows Form 視覺繼承](windows-forms-visual-inheritance.md)

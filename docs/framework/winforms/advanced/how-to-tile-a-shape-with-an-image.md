@@ -1,5 +1,5 @@
 ---
-title: HOW TO：並排顯示影像與圖案
+title: HOW TO：使用影像並排顯示圖案
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - shapes [Windows Forms], tiling with images
 - bitmaps [Windows Forms], filling shapes with
 ms.assetid: 6d407891-6e5c-4495-a546-3da5604e9fb8
-ms.openlocfilehash: d873ba717fa94852692ce395ef7da30c512aba59
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: ad7b8737a63028e533cadfa6db56b063eb943f22
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719685"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221534"
 ---
-# <a name="how-to-tile-a-shape-with-an-image"></a>HOW TO：並排顯示影像與圖案
+# <a name="how-to-tile-a-shape-with-an-image"></a>HOW TO：使用影像並排顯示圖案
 如同可以彼此討論 floor 旁邊放圖格，可以彼此相鄰放矩形的映像，來填滿 (tile) 圖形。 若要並排顯示圖案的內部，使用紋理筆刷。 當您建構<xref:System.Drawing.TextureBrush>物件時，您將傳遞至建構函式的引數之一<xref:System.Drawing.Image>物件。 當您使用的材質筆刷來繪製圖形的內部時，圖形會填入此映像的重複副本。  
   
  自動換行模式屬性<xref:System.Drawing.TextureBrush>物件可以決定如何將映像為導向重複矩形格線中。 您可以進行所有的磚，在方格中有相同的方向，或您可從一個格線位置翻轉至下一個映像。 翻轉為水平、 垂直或兩者。 下列範例示範如何使用不同類型的翻轉並排顯示。  
@@ -61,4 +61,5 @@ ms.locfileid: "57719685"
  [!code-vb[System.Drawing.UsingABrush#34](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#34)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用筆刷填滿形狀](using-a-brush-to-fill-shapes.md)

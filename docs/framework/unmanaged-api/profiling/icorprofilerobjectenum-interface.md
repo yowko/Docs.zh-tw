@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cb6e12e7badff9bcd00196f50bf1291df630122
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 92370751b38029435b12c177b75cd4d9402369b2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54500180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59220938"
 ---
 # <a name="icorprofilerobjectenum-interface"></a>ICorProfilerObjectEnum 介面
 提供方法，以循序逐一查看所產生的凍結物件的集合[Ngen.exe （原生映像產生器）](../../../../docs/framework/tools/ngen-exe-native-image-generator.md)。  
@@ -32,7 +32,7 @@ ms.locfileid: "54500180"
 |------------|-----------------|  
 |[Clone 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-clone-method.md)|取得這個 `ICorProfilerObjectEnum` 介面複本的介面指標。|  
 |[GetCount 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-getcount-method.md)|取得集合中的凍結物件總數。|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-next-method.md)|取得指定的數目的連續物件從物件，從序列中列舉值的目前位置開始的循序集合。|  
+|[下一個方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-next-method.md)|取得指定的數目的連續物件從物件，從序列中列舉值的目前位置開始的循序集合。|  
 |[Reset 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-reset-method.md)|將這個列舉值的資料指標移至序列的開始位置。|  
 |[Skip 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-skip-method.md)|將這個列舉值的資料指標從其目前位置前移，以略過指定的數目的項目。|  
   
@@ -46,10 +46,11 @@ ms.locfileid: "54500180"
   
  **標頭：** CorProf.idl, CorProf.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [分析介面](../../../../docs/framework/unmanaged-api/profiling/profiling-interfaces.md)
 - [EnumModuleFrozenObjects 方法](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-enummodulefrozenobjects-method.md)

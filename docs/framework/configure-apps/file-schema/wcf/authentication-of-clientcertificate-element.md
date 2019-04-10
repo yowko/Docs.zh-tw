@@ -1,13 +1,13 @@
 ---
-title: <authentication> 項目的 <clientCertificate>
+title: <authentication> <clientCertificate>項目
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
-ms.openlocfilehash: 6b07eae96367222907dd23968d445efd75906ea7
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55263003"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221198"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<驗證 > 的\<clientCertificate > 項目
 指定服務所使用之用戶端憑證的驗證行為。  
@@ -81,7 +81,7 @@ ms.locfileid: "55263003"
 ## <a name="remarks"></a>備註  
  `<authentication>` 項目對應至 <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication> 類別。 它可讓您自訂驗證用戶端的方法。 您可以將 `certificateValidationMode` 屬性 (Attribute) 設定為 `None`、`ChainTrust`、`PeerOrChainTrust`、`PeerTrust` 或 `Custom`。 根據預設，層級設定為`ChainTrust`，指定每個憑證必須位於結尾中的憑證階層*根授權單位*在鏈結頂端。 這是最安全的模式。 您也可以將值設定為 `PeerOrChainTrust`，指定可接受自行發出的憑證 (對等信任)，以及信任鏈結內的憑證。 這個值會在開發及偵錯用戶端和服務時使用，因為自行發出的憑證不需要從受信任的授權單位購買。 部署用戶端時，請改用 `ChainTrust` 值。  
   
- 您也可以將值設定為 `Custom`。 設定為 `Custom` 值時，您還必須將 `customCertificateValidatorType` 屬性設定為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱[＜How to：建立使用自訂憑證驗證程式服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
+ 您也可以將值設定為 `Custom`。 設定為 `Custom` 值時，您還必須將 `customCertificateValidatorType` 屬性設定為可用來驗證憑證的組件與型別。 若要建立自己的自訂驗證程式，您必須繼承自抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> 類別。 如需詳細資訊，請參閱[如何：建立使用自訂憑證驗證程式服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼會在 `<authentication>` 項目中指定 X.509 憑證和自訂驗證類型。  
@@ -105,11 +105,12 @@ ms.locfileid: "55263003"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Security.X509ClientCertificateAuthentication>
 - <xref:System.ServiceModel.Security.X509CertificateValidationMode>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement.Authentication%2A>
 - <xref:System.ServiceModel.Configuration.X509ClientCertificateAuthenticationElement>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [如何：建立使用自訂憑證驗證程式服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
+- [HOW TO：建立使用自訂憑證驗證程式的服務](../../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

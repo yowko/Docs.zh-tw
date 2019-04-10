@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 63ddd3b5cc79cedba6d6acc6a9b6b70c00d917fc
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 1eabf5631fcfe7a187d0e203d64c7a7f4f5a819a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476226"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59209953"
 ---
 # <a name="iceegenemitstring-method"></a>ICeeGen::EmitString 方法
 程式碼基底到發出指定的字串。  
@@ -50,9 +50,10 @@ HRESULT EmitString (
   
  **標頭：** Cor.h  
   
- **程式庫：** 做為 MsCorEE.dll 中的資源  
+ **LIBRARY:** 做為 MsCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICeeGen 介面](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)

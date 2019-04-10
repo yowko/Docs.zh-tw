@@ -8,12 +8,12 @@ helpviewer_keywords:
 - UI Automation, enabling navigation in provider
 - navigation, enabling in UI Automation provider
 ms.assetid: 3cb6092a-58c9-4ca0-84a5-0e54d5d00a0d
-ms.openlocfilehash: f5a6de0df834a2dc0c80801c141e3d0793a859ed
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e97494e01a81ad75820cd3cffa51b5a508152355
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680096"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175990"
 ---
 # <a name="enable-navigation-in-a-ui-automation-fragment-provider"></a>在 UI 自動化片段提供者中啟用巡覽
 > [!NOTE]
@@ -28,5 +28,6 @@ ms.locfileid: "57680096"
  [!code-vb[UIAFragmentProvider_snip#103](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAFragmentProvider_snip/VisualBasic/ListItemFragment.vb#103)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [UI 自動化提供者概觀](../../../docs/framework/ui-automation/ui-automation-providers-overview.md)
 - [伺服器端 UI 自動化提供者實作](../../../docs/framework/ui-automation/server-side-ui-automation-provider-implementation.md)

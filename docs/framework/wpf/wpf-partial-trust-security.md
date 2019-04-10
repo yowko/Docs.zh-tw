@@ -15,12 +15,12 @@ helpviewer_keywords:
 - feature security requirements [WPF]
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
-ms.openlocfilehash: c0391099d02933cb8a32a2e134dad949034138ad
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371628"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59218377"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信任安全性
 <a name="introduction"></a> 一般而言，網際網路應用程式應該限制不得直接存取重要的系統資源，以防止惡意損害。 根據預設，[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]和用戶端指令碼語言都不能存取重要的系統資源。 您可以從瀏覽器中啟動 Windows Presentation Foundation (WPF) 瀏覽器裝載的應用程式，因為它們應該符合一組類似的限制。 若要強制執行這些限制，[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]同時依賴[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]並[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](請參閱[WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md))。 根據預設，瀏覽器裝載的應用程式會要求網際網路區域[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]組權限，無論是否啟動從網際網路、 近端內部網路或在本機電腦。 使用少於完整權限集執行的應用程式便是以部分信任執行。  
@@ -164,6 +164,7 @@ ms.locfileid: "57371628"
  或者，您可以使用 ClickOnce 受信任部署模型，以從任何安全性區域進行完全信任部署。 如需詳細資訊，請參閱 < [Trusted Application Deployment Overview](/visualstudio/deployment/trusted-application-deployment-overview)並[安全性](security-wpf.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性](security-wpf.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [WPF 安全性策略 – 安全性工程](wpf-security-strategy-security-engineering.md)

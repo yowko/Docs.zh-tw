@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors of elements [WPF], changing
 - elements [WPF], changing color of
 ms.assetid: 7e246802-3625-47a7-ae9d-c8a2a40fd040
-ms.openlocfilehash: 0d2c297108da7af09e5f01551bdedc5f0ac5e9af
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 744963cc543110121a777e1d4c3cdcb3cec40d9e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217636"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>HOW TO：使用焦點事件變更項目的色彩
 此範例示範如何取得及使用失去焦點時，變更項目的色彩<xref:System.Windows.UIElement.GotFocus>和<xref:System.Windows.UIElement.LostFocus>事件。  
@@ -32,4 +32,5 @@ ms.locfileid: "57361001"
  [!code-vb[gotfocusLostfocusEffectUsingEvent#GotLostFocusSampleEventHandlers](~/samples/snippets/visualbasic/VS_Snippets_Wpf/gotfocusLostfocusEffectUsingEvent/VisualBasic/Window1.xaml.vb#gotlostfocussampleeventhandlers)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [輸入概觀](input-overview.md)

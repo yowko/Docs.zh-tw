@@ -2,12 +2,12 @@
 title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
-ms.openlocfilehash: a8c028bf0fc2890b932c62aa9efe94cab153503d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: f4fa8cbc07513321e59b93503b59af172c0a6f05
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54693486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59211318"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
 判斷某個值是否與集合中的任何值相符。  
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  傳回要測試是否有相符項目之集合的任何有效運算式。 所有運算式都必須具有與 `value`相同的型別或是共同基底型別或衍生型別。  
   
 ## <a name="return-value"></a>傳回值  
- 如果在集合中找到值，就是 `true`。如果此值為 null 或集合為 null，就是 null，否則為 `false`。 使用 NOT IN 會執行 IN 結果的否定運算。  
+ `true` 如果在集合中，找到的值如果此值為 null 則為 null 或集合為 null;否則， `false`。 使用 NOT IN 會執行 IN 結果的否定運算。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 IN 運算子來判斷某個值是否與集合中的任何值相符。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
@@ -41,4 +41,5 @@ value [ NOT ] IN expression
  [!code-csharp[DP EntityServices Concepts 2#IN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#in)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

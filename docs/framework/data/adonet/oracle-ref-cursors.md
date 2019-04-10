@@ -2,12 +2,12 @@
 title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
-ms.openlocfilehash: 4dd0a78fafe63197987938021195723e3eed0885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740992"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213164"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Data Provider for Oracle 支援 Oracle **REF CURSOR**資料型別。 透過資料提供者使用 Oracle REF CURSOR 時，您應考量下列行為。  
@@ -39,9 +39,10 @@ ms.locfileid: "54740992"
  [使用 OracleDataReader 從多個 REF CURSOR 擷取資料](../../../../docs/framework/data/adonet/retrieving-data-from-multiple-ref-cursors.md)  
  示範如何執行傳回兩個 REF CURSOR 參數，並讀取使用的值的 PL/SQL 預存程序**OracleDataReader**。  
   
- [使用一或多個 REF CURSOR 填入資料集](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
+ [使用一個或多個 REF CURSOR 填入資料集](../../../../docs/framework/data/adonet/filling-a-dataset-using-one-or-more-ref-cursors.md)  
  示範如何執行傳回兩個 REF CURSOR 參數的 PL/SQL 預存程序，並使用傳回的資料列填入 <xref:System.Data.DataSet>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Oracle 和 ADO.NET](../../../../docs/framework/data/adonet/oracle-and-adonet.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

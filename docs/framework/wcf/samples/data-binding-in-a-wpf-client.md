@@ -2,12 +2,12 @@
 title: Windows Presentation Foundation 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: bb8c8293-5973-4aef-9b07-afeff5d3293c
-ms.openlocfilehash: c8382df188c7a2e47394ec73741c1e583f46fba6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.openlocfilehash: 2687e406743a8f503175a8775b25c76630aea9b7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58838995"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223169"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation 用戶端中的資料繫結
 這個範例示範使用 Windows Presentation Foundation (WPF) 用戶端中的資料繫結。 此範例會使用隨機產生的用戶端的專輯陣列的 Windows Communication Foundation (WCF) 服務。 每張專輯各有名稱、價格和曲目表。 曲目有名稱和時間長度。 Windows Presentation Foundation (WPF) 用戶端所提供的使用者介面 (UI) 時，會自動繫結的服務所傳回的資訊。  
@@ -81,4 +81,3 @@ void client_GetAlbumListCompleted(object sender, GetAlbumListCompletedEventArgs 
 >  如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。 此範例位於下列目錄。  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Scenario\DataBinding\WPFDataBinding`  
-  

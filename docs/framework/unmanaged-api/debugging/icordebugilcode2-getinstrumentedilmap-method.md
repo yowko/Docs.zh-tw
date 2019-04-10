@@ -14,12 +14,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1f2e481942586e1e5ea6364370ff1385db134dd3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 4197b018ea85402762a8591b40f3503c02af3974
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475680"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59222870"
 ---
 # <a name="icordebugilcode2getinstrumentedilmap-method"></a>ICorDebugILCode2::GetInstrumentedILMap 方法
 [.NET Framework 4.5.2 與更新版本提供支援]  
@@ -38,7 +38,7 @@ HRESULT GetInstrumentedILMap(
   
 ## <a name="parameters"></a>參數  
  cMap  
- [in] `map` 陣列的儲存體容量。 如需詳細資訊，請參閱「備註」一節。  
+ [in] `map` 陣列的儲存體容量。 如需詳細資訊，請參閱＜備註＞一節。  
   
  pcMap  
  [out]COR_IL_MAP 值寫入至對應陣列數目。  
@@ -56,13 +56,14 @@ HRESULT GetInstrumentedILMap(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v452plus](../../../../includes/net-current-v452plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorProfilerInfo::SetILInstrumentedCodeMap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilinstrumentedcodemap-method.md)
 - [ICorDebugILCode2 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugilcode2-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

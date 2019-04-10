@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 452216a2ba4e8013d107977d82eae1508b2aba78
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 0144539987f14bed83bfc9eab2f5ca26d2a609ae
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157726"
 ---
 # <a name="icordebugobjectenum-interface"></a>ICorDebugObjectEnum 介面
 
@@ -31,7 +31,7 @@ ms.locfileid: "56967759"
   
 |方法|描述|  
 |------------|-----------------|  
-|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|從列舉型別，從目前位置開始，取得指定的物件數目的 Rva。|  
+|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icordebugobjectenum-next-method.md)|從列舉型別，從目前位置開始，取得指定的物件數目的 Rva。|  
   
 ## <a name="remarks"></a>備註  
   
@@ -41,11 +41,12 @@ ms.locfileid: "56967759"
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 44cd98ba-95e5-40a1-874d-e8e163612c51
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69dea1adb2d751b44f6c8bc529353ff78cad60ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3b149a9b8ee41f5e196fd69258044f9b6563cb99
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673038"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59217870"
 ---
 # <a name="releasehandlefailed-mda"></a>releaseHandleFailed MDA
 當衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法傳回 `false` 時，會啟動 `releaseHandleFailed` Managed 偵錯助理 (MDA) 來通知開發人員。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  資源或記憶體流失。  如果衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 之類別的 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法失敗，則該類別所封裝的資源可能尚未釋出或清除。  
   
 ## <a name="cause"></a>原因  
  如果使用者建立衍生自 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 的類別，則必須提供 <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法的實作；因此，這是個別資源特有的情況。 不過，需求如下：  
   
--   <xref:System.Runtime.InteropServices.SafeHandle> 和 <xref:System.Runtime.InteropServices.CriticalHandle> 類型代表重要處理序資源周圍的包裝函式。 記憶體遺漏會使處理序過一段時間後即無法使用。  
+-   <xref:System.Runtime.InteropServices.SafeHandle> 和<xref:System.Runtime.InteropServices.CriticalHandle>類型代表重要處理序資源周圍的包裝函式。 記憶體遺漏會使處理序過一段時間後即無法使用。  
   
 -   <xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 方法執行其函式時，絕不能失敗。 一旦處理序取得這類資源，<xref:System.Runtime.InteropServices.SafeHandle.ReleaseHandle%2A> 是將其釋出的唯一方式。 因此，失敗即代表資源流失。  
   
@@ -52,8 +52,8 @@ ms.locfileid: "54673038"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對 CLR 沒有影響。  
   
-## <a name="output"></a>輸出  
- 訊息指出 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 無法適當地釋放控制代碼。 例如：  
+## <a name="output"></a>Output  
+ 訊息指出 <xref:System.Runtime.InteropServices.SafeHandle> 或 <xref:System.Runtime.InteropServices.CriticalHandle> 無法適當地釋放控制代碼。 例如:   
   
 ```  
 "A SafeHandle or CriticalHandle of type 'MyBrokenSafeHandle'   
@@ -91,6 +91,7 @@ bool ReleaseHandle()
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

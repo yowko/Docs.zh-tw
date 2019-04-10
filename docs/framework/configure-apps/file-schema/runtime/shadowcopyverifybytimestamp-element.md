@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 902ed07264615e91721d92861b9d974ea10f0d1e
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273880"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216406"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<Shadowcopyverifybytimestamp> > 項目
 指定陰影複製是否使用在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 引進的預設啟動行為，或是要還原成舊版 .NET Framework 的啟動行為。  
@@ -68,6 +68,7 @@ ms.locfileid: "55273880"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [陰影複製組件](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)

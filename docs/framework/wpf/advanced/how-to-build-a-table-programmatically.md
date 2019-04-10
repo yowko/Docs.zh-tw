@@ -1,5 +1,5 @@
 ---
-title: HOW TO：以程式設計的方式建置資料表
+title: HOW TO：以程式設計方式建置資料表
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
-ms.openlocfilehash: 3848032bf527f64ce591eb2cda98028c835d79f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371927"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172623"
 ---
-# <a name="how-to-build-a-table-programmatically"></a>HOW TO：以程式設計的方式建置資料表
+# <a name="how-to-build-a-table-programmatically"></a>HOW TO：以程式設計方式建置資料表
 下列範例示範如何以程式設計方式建立<xref:System.Windows.Documents.Table>並填入內容。 資料表的內容會分配到五個資料列 (由<xref:System.Windows.Documents.TableRow>中所包含的物件<xref:System.Windows.Documents.Table.RowGroups%2A>物件) 和六個資料行 (由<xref:System.Windows.Documents.TableColumn>物件)。 資料列可用於不同的顯示用途，包括用來為整個表格加上標題的標題資料列、用來說明表格中資料之資料行的標頭資料列，以及含有摘要資訊的頁尾資料列。  請注意，「標題」、「標頭」和「頁尾」資料列的概念不是表格固有的；這些只是具有不同特性的資料列。 資料表資料格包含實際的內容，其中包括文字、 影像或幾乎任何其他的[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]項目。  
   
 ## <a name="example"></a>範例  
@@ -57,4 +57,5 @@ ms.locfileid: "57371927"
  [!code-vb[TableSnippets#_TableAddFooterRow](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TableSnippets/VisualBasic/Table.vb#_tableaddfooterrow)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [資料表概觀](table-overview.md)

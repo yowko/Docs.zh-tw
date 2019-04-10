@@ -1,21 +1,21 @@
 ---
-title: HOW TO：使用對應的多個結果圖案的預存程序
+title: HOW TO：使用與多個結果型式對應的預存程序
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: c2b84dfe-7fec-489a-92de-45215cec4518
-ms.openlocfilehash: 6ea318e89cf91dcbf16747117b8000dfa3f9571d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 406e44a0ee3b086ceb47b25a80c4fd0ff5a92607
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54573659"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164667"
 ---
-# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>HOW TO：使用對應的多個結果圖案的預存程序
+# <a name="how-to-use-stored-procedures-mapped-for-multiple-result-shapes"></a>HOW TO：使用與多個結果型式對應的預存程序
 如果預存程序 (Stored Procedure) 可以傳回多個結果圖案，則傳回型別不可以強型別 (Strongly Typed) 為單一投影圖案。 雖然[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以產生所有可能的投影類型，但是無法得知在它們將傳回的順序。  
   
- 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[＜How to：使用對應的循序結果型式的預存程序](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)。  
+ 請將這個案例與循序產生多個結果圖案的預存程序案例比較。 如需詳細資訊，請參閱[如何：使用對應的循序結果型式的預存程序](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md)。  
   
  <xref:System.Data.Linq.Mapping.ResultTypeAttribute> 屬性 (Attribute) 會套用至傳回多個結果型別的預存程序，以指定程序可以傳回的型別集。  
   
@@ -44,4 +44,5 @@ else if(@shape = 2)
  [!code-vb[DLinqSprox#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqSprox/vb/Module1.vb#5)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [預存程序](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

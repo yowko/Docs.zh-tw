@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 392f526df53474dd2926e631e24ec5449bd1b199
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 52fd0e9dac1d255197909d153099d9c6f2bd8ff7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57498467"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59212930"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange 方法
 提供方法中的相對虛擬位址 (RVA)，以取得方法起始位址和大小。  
@@ -42,12 +42,13 @@ HRESULT GetCodeRange(
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
   
- **標頭：** CorDebug.idl、 CorDebug.h  
+ **標頭：** CorDebug.idl、CorDebug.h  
   
- **程式庫：** CorGuids.lib  
+ **LIBRARY:** CorGuids.lib  
   
- **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [ICorDebugSymbolProvider 介面](../../../../docs/framework/unmanaged-api/debugging/icordebugsymbolprovider-interface.md)
 - [偵錯介面](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

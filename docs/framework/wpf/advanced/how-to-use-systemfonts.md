@@ -9,12 +9,12 @@ helpviewer_keywords:
 - fonts [WPF], system fonts
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
-ms.openlocfilehash: 5ed44da316ddee5ea3a83262f913da571bf75276
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378895"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216778"
 ---
 # <a name="how-to-use-systemfonts"></a>HOW TO：使用 SystemFonts
 此範例示範如何使用的靜態資源<xref:System.Windows.SystemFonts>類別，以便設定或自訂按鈕的樣式。  
@@ -37,11 +37,12 @@ ms.locfileid: "57378895"
  [!code-vb[SystemRes_snip#FontResourcesCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/SystemRes_snip/VisualBasic/Pane1.xaml.vb#fontresourcescode)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.SystemFonts>
 - [使用系統筆刷繪製區域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [使用 SystemParameters](how-to-use-systemparameters.md)
 - [使用系統字型索引鍵](how-to-use-system-fonts-keys.md)
-- [HOW-TO 主題](resources-how-to-topics.md)
+- [HOW TO 主題](resources-how-to-topics.md)
 - [x:Static 標記延伸](../../xaml-services/x-static-markup-extension.md)
 - [XAML 資源](xaml-resources.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)

@@ -2,12 +2,12 @@
 title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
-ms.openlocfilehash: dc95b1a31d582f255740152a235b9ca5e67cf5c6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411313"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59172818"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 指定 HTTP 傳輸，以傳輸自訂繫結的 SOAP 訊息。  
@@ -66,15 +66,15 @@ ms.locfileid: "58411313"
   
 ### <a name="parent-elements"></a>父項目  
   
-|元素|描述|  
+|項目|描述|  
 |-------------|-----------------|  
 |[\<binding>](../../../../../docs/framework/misc/binding.md)|定義自訂繫結的所有繫結功能。|  
   
 ## <a name="remarks"></a>備註  
- 
-  `httpsTransport` 項目是建立自訂繫結時的起點，此繫結會實作 HTTPS 傳輸通訊協定。 HTTPS 是用於安全互通性目的的主要傳輸。 藉由 Windows Communication Foundation (WCF) 以確保與其他 Web 服務堆疊互通時，會支援 HTTPS。  
+ `httpsTransport` 項目是建立自訂繫結時的起點，此繫結會實作 HTTPS 傳輸通訊協定。 HTTPS 是用於安全互通性目的的主要傳輸。 藉由 Windows Communication Foundation (WCF) 以確保與其他 Web 服務堆疊互通時，會支援 HTTPS。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.HttpsTransportElement>
 - <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

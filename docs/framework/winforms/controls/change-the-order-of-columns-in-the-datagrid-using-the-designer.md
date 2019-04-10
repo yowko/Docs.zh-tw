@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 Windows Form DataGridView 控制項中使用設計工具中的資料行的順序
+title: HOW TO：使用設計工具變更 Windows Forms DataGridView 控制項的資料行順序
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], order of
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Windows Forms, columns
 - data [Windows Forms], displaying
 ms.assetid: 7fe52a98-75d6-448c-97a5-65ca2c568c1a
-ms.openlocfilehash: 58a92b4f5f604bba0da4b5a42ff25b0122b6f01e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 131ef2a04caa17aa268c0e8d229a1070061c4373
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702941"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59175301"
 ---
-# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：變更 Windows Form DataGridView 控制項中使用設計工具中的資料行的順序
+# <a name="how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具變更 Windows Forms DataGridView 控制項的資料行順序
 當您繫結 Windows Form<xref:System.Windows.Forms.DataGridView>控制項資料來源時，會自動產生的資料行的顯示順序取決於資料來源。 如果此順序是不是您所喜好，您可以變更使用設計工具的資料行的順序。 您也可以將未繫結的資料行新增至控制項，並變更其顯示順序。 如需如何以程式設計方式變更的資料行順序的資訊，請參閱[How to:變更 Windows Form DataGridView 控制項中的資料行的順序](how-to-change-the-order-of-columns-in-the-windows-forms-datagridview-control.md)。  
   
  下列程序需要**Windows 應用程式**表單，其中包含專案<xref:System.Windows.Forms.DataGridView>控制項。 如需這類專案的設定資訊，請參閱[How to:建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)和[How to:將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。  
@@ -31,7 +31,8 @@ ms.locfileid: "57702941"
 3.  按一下向上箭頭或向下箭號右側**所選資料行**清單，直到所選資料行是在您要的位置。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
-- [如何：新增和移除使用設計工具的 Windows Form DataGridView 控制項中的資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [HOW TO：使用設計工具在 Windows Forms DataGridView 控制項中新增和移除資料行](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

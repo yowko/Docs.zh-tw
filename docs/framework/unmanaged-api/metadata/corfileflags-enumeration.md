@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a614ad1bd9738c993775667ccd261a089e8b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 076d5de3e9d1925e3a030fee4a06a89862105897
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54624250"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59159610"
 ---
 # <a name="corfileflags-enumeration"></a>CorFileFlags 列舉
 包含值，描述要呼叫中所定義的檔案類型[imetadataassemblyemit:: Definefile](../../../../docs/framework/unmanaged-api/metadata/imetadataassemblyemit-definefile-method.md)。  
@@ -49,7 +49,8 @@ typedef enum CorFileFlags {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

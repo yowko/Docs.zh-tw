@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8a4cc17bdcaea5099d0d2b0195ae4fa28e3d4744
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a2f71a277484adbbfe3628222c635528cdab03e6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54744595"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59156126"
 ---
 # <a name="corimportoptions-enumeration"></a>CorImportOptions 列舉
 包含旗標值，這些值可控制在匯入目前範圍之外的組件期間所發生的行為。  
@@ -63,7 +63,8 @@ typedef enum CorImportOptions {
   
  **標頭：** CorHdr.h  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [中繼資料列舉](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

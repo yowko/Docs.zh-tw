@@ -7,18 +7,16 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: e5a044166023069cdb6e1091339044cd7f964825
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377222"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59171884"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互通
-本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供用來建立應用程式的豐富環境。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
-  
+本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
 
-  
 <a name="basics"></a>   
 ## <a name="wpf-and-win32-interoperation-basics"></a>WPF 和 Win32 交互操作基本概念  
  針對 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 與 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼之間的交互操作，有兩個基本技術。  
@@ -31,7 +29,7 @@ ms.locfileid: "57377222"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 交互操作專案  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 是 Managed 程式碼，但大部分現有 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式都是使用 Unmanaged [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 所撰寫。  您無法從真正的 Unmanaged 程式呼叫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。 不過，搭配使用 `/clr` 選項與 [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] 編譯器，即可建立混合式 Managed/Unmanaged 程式，以順暢地混用 Managed 和 Unmanaged [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼叫。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] are managed code, but most existing [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2smanaged 程式碼，但大部分現有[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]撰寫的程式非受控[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]。en您無法從真正的 Unmanaged 程式呼叫 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]。n不過，搭配使用 `/clr` 選項與 [!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] 編譯器，即可建立混合式 Managed/Unmanaged 程式，以順暢地混用 Managed 和 Unmanaged [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼叫。  
   
  其中一個專案層級複雜在於您無法將 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 檔案編譯至 [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 專案。  有數個專案部門技術可彌補這一點。  
   
@@ -157,8 +155,9 @@ ms.locfileid: "57377222"
  這些介面僅支援在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 與 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 區域之間轉換時所發生的情況。 在 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 區域內，定位處理行為完全是透過 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 實作的定位處理邏輯所控制 (如果有的話)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Interop.HwndHost>
 - <xref:System.Windows.Interop.HwndSource>
 - <xref:System.Windows.Interop>
-- [逐步解說：裝載在 WPF 中的 Win32 控制項](walkthrough-hosting-a-win32-control-in-wpf.md)
-- [逐步解說：在 Win32 中裝載 WPF 內容](walkthrough-hosting-wpf-content-in-win32.md)
+- [逐步解說：將 Win32 控制項裝載在 WPF 中](walkthrough-hosting-a-win32-control-in-wpf.md)
+- [逐步解說：將 WPF 內容裝載在 Win32 中](walkthrough-hosting-wpf-content-in-win32.md)

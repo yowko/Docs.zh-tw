@@ -1,5 +1,5 @@
 ---
-title: HOW TO：顯示網頁，自 Windows Forms LinkLabel 控制項 (Visual Basic)
+title: HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)
 ms.date: 03/30/2017
 dev_langs:
 - vb
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - Windows Forms, linking to Web pages
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 477a7398-5971-4de3-b24c-f49f32bdb28a
-ms.openlocfilehash: 7e80dba9cd43385be016506ac2a7e887a68dedf2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 1be9ff06e749d14b46946e899c6ffb6c3a950d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705224"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170023"
 ---
-# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>HOW TO：顯示網頁，自 Windows Forms LinkLabel 控制項 (Visual Basic)
+# <a name="how-to-display-a-web-page-from-a-windows-forms-linklabel-control-visual-basic"></a>HOW TO：從 Windows Forms LinkLabel 控制項顯示網頁 (Visual Basic)
 此範例會顯示在預設瀏覽器網頁當使用者按一下 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項。  
   
 ## <a name="example"></a>範例  
@@ -50,5 +50,6 @@ End Sub
  若要呼叫<xref:System.Diagnostics.Process.Start%2A>方法需要完全信任。 如需詳細資訊，請參閱<xref:System.Security.SecurityException>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.LinkLabel>
 - [LinkLabel 控制項](linklabel-control-windows-forms.md)

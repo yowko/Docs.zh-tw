@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 1529d4d62004becca4495d96fa893da20caa3954
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709669"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59158440"
 ---
 # <a name="user-drawn-controls"></a>使用者自訂描繪控制項
 .NET Framework 會提供您能夠輕鬆地開發自己的控制項。 您可以建立使用者控制項，也就是一組標準的控制項繫結在一起的程式碼，或您可以設計自己的控制項所打造的註冊。 您甚至可以使用繼承建立繼承自現有控制項的控制項，並將新增至其固有的功能。 任何方法使用時，.NET Framework 提供的功能，以繪製自訂的圖形化介面，以您所建立的任何控制項。  
@@ -76,11 +76,12 @@ SetStyle(ControlStyles.ResizeRedraw, true);
 >  使用<xref:System.Windows.Forms.Control.Region%2A?displayProperty=nameWithType>來實作非矩形控制項的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.Control.Region%2A>
 - <xref:System.Windows.Forms.ControlStyles>
 - <xref:System.Drawing.Graphics>
 - <xref:System.Windows.Forms.Control.OnPaint%2A>
 - <xref:System.Windows.Forms.PaintEventArgs>
-- [如何：建立繪圖的圖形物件](../advanced/how-to-create-graphics-objects-for-drawing.md)
+- [HOW TO：建立繪製的圖形物件](../advanced/how-to-create-graphics-objects-for-drawing.md)
 - [組成控制項](constituent-controls.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

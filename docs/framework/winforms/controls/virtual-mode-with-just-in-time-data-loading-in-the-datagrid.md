@@ -1,5 +1,5 @@
 ---
-title: HOW TO：Windows Form DataGridView 控制項中實作虛擬模式，以在 Just-in-time 資料載入
+title: HOW TO：在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - virtual mode [Windows Forms], just-in-time data loading
 ms.assetid: 33825f92-7a22-40ee-86d9-9a2ed1ead7b7
-ms.openlocfilehash: 0aeba7c39bb19de0300e166936e3f8b8f70f83b0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6fdf2bd16297820026fa84bdaefe61cc495cea4f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169880"
 ---
-# <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>HOW TO：Windows Form DataGridView 控制項中實作虛擬模式，以在 Just-in-time 資料載入
+# <a name="how-to-implement-virtual-mode-with-just-in-time-data-loading-in-the-windows-forms-datagridview-control"></a>HOW TO：在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式
 下列程式碼範例示範如何使用 <xref:System.Windows.Forms.DataGridView> 控制項中的虛擬模式，其中的資料快取只會在需要時才從伺服器載入資料。 此範例中會詳細說明[以 Just-In-Time 資料載入 Windows Forms DataGridView 控制項中實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)。  
   
 ## <a name="example"></a>範例  
@@ -39,9 +39,10 @@ ms.locfileid: "57702798"
  在連接字串內儲存機密資訊 (例如密碼) 會影響應用程式的安全性。 使用 Windows 驗證 (也稱為整合式安全性) 是控制資料庫存取的更安全方式。 如需詳細資訊，請參閱[保護連線資訊](../../data/adonet/protecting-connection-information.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.VirtualMode%2A>
 - <xref:System.Windows.Forms.DataGridView.CellValueNeeded>
-- [在 Windows Forms DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
-- [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)
+- [在 Windows Form DataGridView 控制項中以 Just-In-Time 資料載入方式實作虛擬模式](implementing-virtual-mode-jit-data-loading-in-the-datagrid.md)
+- [Windows Form DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的虛擬模式](virtual-mode-in-the-windows-forms-datagridview-control.md)

@@ -2,12 +2,12 @@
 title: 物件運算式
 description: 了解如何使用F#物件運算式，當您想要避免額外的程式碼和額外負荷才能建立新的具名型別。
 ms.date: 02/08/2019
-ms.openlocfilehash: c00b2e329a97b86ec2c8c84c143d2aa199875442
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56091665"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157843"
 ---
 # <a name="object-expressions"></a>物件運算式
 
@@ -53,7 +53,7 @@ let obj2 = delimiter("{","}", "Bananas!");
 
 printfn "%A" (System.String.Format("{0:D}", obj2))
 
-// This object expression implements multiple interfaces.
+// Define two interfaces
 type IFirst =
   abstract F : unit -> unit
   abstract G : unit -> unit
@@ -63,7 +63,7 @@ type ISecond =
   abstract H : unit -> unit
   abstract J : unit -> unit
 
-// This object expression implements an interface chain.
+// This object expression implements both interfaces.
 let implementer() =
     { new ISecond with
         member this.H() = ()

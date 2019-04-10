@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining custom types [XAML Services]
 ms.assetid: c2667cbd-2f46-4a7f-9dfc-53696e35e8e4
-ms.openlocfilehash: fa341b7df32823c653df25ddb0dabcb4658b72b5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: be9c0e26574a15279ce89af2c7862abaa8713360
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58042637"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164433"
 ---
 # <a name="defining-custom-types-for-use-with-net-framework-xaml-services"></a>定義可搭配 .NET Framework XAML 服務使用的自訂類型
 當您定義了商務物件的自訂類型，或在特定架構上沒有相依性的類型時，但也有特定的 XAML，您可以遵循的最佳作法。 如果您遵循這些作法時，.NET Framework XAML 服務及其 XAML 讀取器和 XAML 寫入器可以探索您類型的 XAML 特性，並提供適當的表示，使用 XAML 型別系統的 XAML 節點資料流中。 本主題說明類型定義、 成員定義，以及 CLR 屬性的型別或成員的最佳作法。  
@@ -70,7 +70,7 @@ ms.locfileid: "58042637"
 #### <a name="the-getpropertyname-accessor"></a>GetPropertyName 存取子  
  `Get`<屬性名稱> 存取子的簽章必須是︰  
   
- `public static object Get` <屬性名稱> `(object`  `target` `)`  
+ `public static object Get` *PropertyName* `(object`  `target` `)`  
   
 -   `target` 物件可以指定為實作中的更特定類型。 您可以使用這個限定範圍的使用量，您可附加成員;您預期的範圍之外的使用方式，就會擲回無效轉換例外狀況，然後呈現由 XAML 剖析錯誤。 參數名稱`target`並非必要，但名為`target`依照慣例，在大部分的實作。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "58042637"
 #### <a name="the-setpropertyname-accessor"></a>SetPropertyName 存取子  
  集合的簽章*PropertyName*存取子必須是：  
   
- `public static void Set` <屬性名稱> `(object`  `target` `, object`  `value` `)`  
+ `public static void Set` *PropertyName* `(object`  `target` `, object`  `value` `)`  
   
 -   `target`物件可以指定為在您實作中，使用相同的邏輯和結果的更特定類型，如上一節所述。  
   
@@ -115,5 +115,6 @@ ms.locfileid: "58042637"
  在 WPF XAML 術語*內部型別*是相同的組件也包含參考的 XAML 所定義的型別。 這種類型可以對應 XAML 命名空間，刻意省略組件 = 部分的對應，比方說， `xmlns:local="clr-namespace:WPFApplication1"`。  如果 BAML 參考內部的型別和型別具有`internal`存取層級，這會產生`GeneratedInternalTypeHelper`組件的類別。 如果您想要避免`GeneratedInternalTypeHelper`，您必須使用`public`存取層級，或必須納入個別的組件相關的類別，並將該組件相依。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [自訂類型和程式庫的 XAML 相關 CLR 屬性](xaml-related-clr-attributes-for-custom-types-and-libraries.md)
-- [XAML Services](index.md)
+- [XAML 服務](index.md)

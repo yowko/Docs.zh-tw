@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: e41d2146c07655548ad36de8ffc7041ed63ee5be
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54606513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59213945"
 ---
 # <a name="manipulating-data"></a>操作資料
 引進 Multiple Active Result Set (MARS) 之前，開發人員必須使用多重連接或伺服器端游標來解析某些案例。 此外，當在異動中使用多重連接時，繫結連接 (使用**sp_getbindtoken**並**sp_bindsession**) 都是必要項。 下列案例顯示如何以啟用 MARS 的連接取代多重連接。  
@@ -167,7 +167,7 @@ static void Main()
  MARS 允許將連接用於讀取作業及資料操作語言 (DML) 作業 (具有多個暫止作業)。 使用此功能，應用程式即無需處理連接繁忙錯誤。 此外，您可以使用 MARS 代替通常會消耗更多資源的伺服器端游標。 最後，因為多個作業可以在單一連接上運作，它們可以共用相同的交易內容，而不必使用**sp_getbindtoken**並**sp_bindsession**系統預存程序。  
   
 ### <a name="example"></a>範例  
- 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 會執行計算以決定新**OnOrderQty**應該是。 第三個命令物件然後用來更新**ProductVendor**以新值的資料表。 這整個處理序會在單一異動中發生，並在結束時復原。  
+ 下列主控台應用程式示範如何使用具有三個 <xref:System.Data.SqlClient.SqlDataReader> 物件的兩個 <xref:System.Data.SqlClient.SqlCommand> 物件，及啟用 MARS 的單一 <xref:System.Data.SqlClient.SqlConnection> 物件。 第一個命令物件會擷取信用評等為 5 的廠商清單。 第二個命令物件會使用 <xref:System.Data.SqlClient.SqlDataReader> 提供的廠商 ID，以載入第二個 <xref:System.Data.SqlClient.SqlDataReader> 及該特定廠商的所有產品。 第二個 <xref:System.Data.SqlClient.SqlDataReader> 會造訪每個產品記錄。 會執行計算以決定新**OnOrderQty**應該是。 第三個命令物件然後用來更新**ProductVendor**以新值的資料表。 這整個處理序會在單一交易中發生，並在結束時復原。  
   
 > [!NOTE]
 >  下列範例使用範例**AdventureWorks**隨附於 SQL Server 的資料庫。 範例程式碼中提供的連接字串假設本機電腦已安裝並可使用資料庫。 視環境需要修改連接字串。  
@@ -403,5 +403,6 @@ private static string GetConnectionString()
 ```  
   
 ## <a name="see-also"></a>另請參閱
-- [Multiple Active Result Set (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [Multiple Active Result Sets (MARS)](../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
