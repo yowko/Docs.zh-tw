@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: 6803468c8814b229df752e3ed9bc48aa0e632dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54699593"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223823"
 ---
 # <a name="routing-scenarios"></a>路由案例
 若路由服務的自訂性相當高，在從頭建立新組態時設計足夠的路由邏輯可能會相當困難。  不過，大多數路由服務組態會遵循數種常見案例。 雖然這些案例可能無法直接套用於特定的組態，但若了解如何設定路由服務處理這些案例，就能協助您了解路由服務。  
@@ -37,7 +37,7 @@ ms.locfileid: "54699593"
  如需用來建立服務版本控制組態的步驟，請參閱[How To:服務版本設定](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)。
   
 ### <a name="service-data-partitioning"></a>服務資料分割  
- 設計分散式環境時，通常最好能夠跨多個電腦散播處理負載，以便提供高可用性、減少個別電腦的處理負載，或是針對特定的訊息子集提供專用資源。 雖然路由服務無法取代專用負載平衡解決方案，但它具備根據內容執行路由的功能，因此可用於將類似的訊息路由至特定的目的地。 例如，您可能必須將來自特定用戶端的訊息與來自其他用戶端的訊息分開處理。  
+ 設計分散式環境時，通常最好能夠跨多個電腦散播處理負載，以便提供高可用性、減少個別電腦的處理負載，或是針對特定的訊息子集提供專用資源。 雖然路由服務無法取代專用負載平衡解決方案，但它具備根據內容執行路由的能力，因此可用於將類似的訊息路由至特定的目的地。 例如，您可能必須將來自特定用戶端的訊息與來自其他用戶端的訊息分開處理。  
   
  如需用來建立服務資料分割組態的步驟，請參閱[How To:服務資料分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "54699593"
  如需用來設定錯誤處理的步驟，請參閱[How To:錯誤處理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)。
   
 ### <a name="in-this-section"></a>本節內容  
- [如何：服務版本設定](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
+ [如何：服務版本控制](../../../../docs/framework/wcf/feature-details/how-to-service-versioning.md)  
   
  [如何：服務資料分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
@@ -75,4 +75,5 @@ ms.locfileid: "54699593"
  [如何：錯誤處理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [路由簡介](../../../../docs/framework/wcf/feature-details/routing-introduction.md)

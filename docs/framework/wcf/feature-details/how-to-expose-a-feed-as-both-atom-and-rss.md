@@ -1,23 +1,23 @@
 ---
-title: HOW TO：公開 （expose) 的摘要為這兩個 Atom 和 RSS
+title: HOW TO：將摘要同時公開為 Atom 和 RSS
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 43ad8ae0b12b07e2d0abe3e208f6d1ccdb2ec77d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 17494b00259839be3beb580a516ff017ec3de50e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54681166"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228402"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>HOW TO：公開 （expose) 的摘要為這兩個 Atom 和 RSS
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>HOW TO：將摘要同時公開為 Atom 和 RSS
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。 此服務會公開可傳回任何一種新聞訂閱格式的端點。 為了簡要說明，此範例中使用的服務為自我裝載。 在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。 如需有關不同的 WCF 裝載選項的詳細資訊，請參閱[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>若要建立基本新聞訂閱服務  
   
-1.  使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。 請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。 `UriTemplate` 會指定用來叫用此服務作業的 URL。 此參數的字串包含常值和變數，以大括號 ({*格式*})。 此變數對應至服務作業的 `format` 參數。 如需詳細資訊，請參閱<xref:System.UriTemplate>。 `BodyStyle` 會影響此服務作業所傳送與接收之訊息的寫入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 會指定傳送至此服務作業，以及來自此服務作業的資料都不得透過基礎結構定義的 XML 元素來包裝。 如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
+1.  使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。 請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。 `UriTemplate` 指定用來叫用此服務作業的 URL。 此參數的字串包含常值和變數，以大括號 ({*格式*})。 此變數對應至服務作業的 `format` 參數。 如需詳細資訊，請參閱<xref:System.UriTemplate>。 `BodyStyle` 會影響此服務作業會傳送與接收訊息的寫入方式。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> 指定此服務作業來回傳送的資料未包裝的基礎結構定義的 XML 項目。 如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
@@ -96,5 +96,6 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
  在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>

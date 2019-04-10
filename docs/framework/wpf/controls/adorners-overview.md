@@ -7,18 +7,16 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 94075189d82e5d446b3058b944c789a4288c26ca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
-ms.translationtype: MT
+ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634527"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227687"
 ---
 # <a name="adorners-overview"></a>裝飾項概觀
 裝飾項是一種特殊型別的<xref:System.Windows.FrameworkElement>，用來提供視覺提示給使用者。 除了其他用法，裝飾項還可用來將功能控點加入項目，或提供控制項的狀態資訊。  
-  
-  
-  
+
 <a name="about_Adorners"></a>   
 ## <a name="about-adorners"></a>關於裝飾項  
  <xref:System.Windows.Documents.Adorner>是自訂<xref:System.Windows.FrameworkElement>繫結至<xref:System.Windows.UIElement>。 裝飾項會轉譯在<xref:System.Windows.Documents.AdornerLayer>，這是一律為裝飾項目或裝飾項目集合之上的轉譯介面。 裝飾項轉譯是分開的轉譯<xref:System.Windows.UIElement>裝飾項繫結至。 裝飾項的位置通常會相對於它繫結到的項目，並使用標準 2D 座標，原點位於裝飾項目的左上角。  
@@ -102,8 +100,9 @@ ms.locfileid: "58634527"
  [!code-vb[Adorners_SimpleCircleAdorner#_AdornChildren](~/samples/snippets/visualbasic/VS_Snippets_Wpf/Adorners_SimpleCircleAdorner/VisualBasic/Window1.xaml.vb#_adornchildren)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.AdornerHitTestResult>
 - [WPF 中圖案和基本繪圖概觀](../graphics-multimedia/shapes-and-basic-drawing-in-wpf-overview.md)
 - [使用影像、繪圖和視覺效果繪製](../graphics-multimedia/painting-with-images-drawings-and-visuals.md)
 - [繪圖物件概觀](../graphics-multimedia/drawing-objects-overview.md)
-- [HOW-TO 主題](adorners-how-to-topics.md)
+- [HOW TO 主題](adorners-how-to-topics.md)

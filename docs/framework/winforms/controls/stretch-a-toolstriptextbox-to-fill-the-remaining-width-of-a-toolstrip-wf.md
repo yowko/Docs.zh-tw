@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 7a557a3d278c2b6d8d083b2ebf8c8129bc498afa
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223572"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>HOW TO：Toolstriptextbox 以填滿 ToolStrip (Windows Form) 的剩餘寬度
 當您設定<xref:System.Windows.Forms.ToolStrip.Stretch%2A>屬性<xref:System.Windows.Forms.ToolStrip>若要控制`true`，控制項從端對端的填滿其容器和其容器調整大小時，會調整大小。 在此組態中，您可能會發現它可在控制項中，延伸項目，例如<xref:System.Windows.Forms.ToolStripTextBox>、 填滿可用空間及調整大小的控制項調整大小時。 自動縮放非常有用，例如，如果您想要達到外觀和行為類似於 Microsoft® Internet Explorer 中的 [網址] 列。  
@@ -30,9 +30,10 @@ ms.locfileid: "57702759"
 -   System、System.Drawing 和 System.Windows.Forms 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ToolStrip>
 - <xref:System.Windows.Forms.ToolStrip.Stretch%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ToolStripTextBox>
 - <xref:System.Windows.Forms.ToolStripTextBox.GetPreferredSize%2A?displayProperty=nameWithType>
 - [ToolStrip 控制項架構](toolstrip-control-architecture.md)
-- [如何：在 StatusStrip 中以互動方式使用 Spring 屬性](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)
+- [HOW TO：在 StatusStrip 中以互動方式使用 Spring 屬性](how-to-use-the-spring-property-interactively-in-a-statusstrip.md)

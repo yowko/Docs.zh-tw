@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dependency properties [WPF], backing properties with
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
-ms.openlocfilehash: 8ee944c521b7e4ec75394c821e8bd509dd4eca74
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223797"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>HOW TO：實作相依性屬性
 此範例示範如何備份[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]屬性與<xref:System.Windows.DependencyProperty>欄位，進而定義相依性屬性。 如果您定義自己的屬性，並想要它們支援 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 功能的許多層面 (包括樣式、資料繫結、繼承、動畫和預設值)，則應該將它們實作為相依性屬性。  
@@ -33,5 +33,6 @@ ms.locfileid: "57374410"
  如需相依性屬性實作方式和原因的詳細資訊，而不是支援 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 屬性與私用欄位的詳細資訊，請參閱[相依性屬性概觀](dependency-properties-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [相依性屬性概觀](dependency-properties-overview.md)
-- [HOW-TO 主題](properties-how-to-topics.md)
+- [HOW TO 主題](properties-how-to-topics.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 92f69d0f9ad962dff231308ed3f5d59a0d406792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368164"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227479"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a> 本主題包含全新和增強功能的詳細資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。  
@@ -126,4 +126,5 @@ ms.locfileid: "57368164"
  WPF 4.5 支援事件的標記延伸。  WPF 不會定義要用於事件的標記延伸，協力廠商可以建立可與事件一起使用的標記延伸。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [.NET Framework 的新功能](../../whats-new/index.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 TileBrush 建立不同的並排顯示模式
+title: HOW TO：使用 TileBrush 建立不同的拼貼模式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - tile patterns [WPF], creating
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
-ms.openlocfilehash: 2efd070ac9ad502f2539d100fa450f95bcdddced
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227401"
 ---
-# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>HOW TO：使用 TileBrush 建立不同的並排顯示模式
+# <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>HOW TO：使用 TileBrush 建立不同的拼貼模式
 此範例示範如何使用<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性<xref:System.Windows.Media.TileBrush>建立模式。  
   
  <xref:System.Windows.Media.TileBrush.TileMode%2A>屬性可讓您指定了內容<xref:System.Windows.Media.TileBrush>重複，也就是，並排顯示以填滿輸出區域。 若要建立的模式，您設定<xref:System.Windows.Media.TileBrush.TileMode%2A>要<xref:System.Windows.Media.TileMode.Tile>， <xref:System.Windows.Media.TileMode.FlipX>， <xref:System.Windows.Media.TileMode.FlipY>，或<xref:System.Windows.Media.TileMode.FlipXY>。 您也必須設定<xref:System.Windows.Media.TileBrush.Viewport%2A>的<xref:System.Windows.Media.TileBrush>，讓它小於您所繪製; 區域，否則為單一並排顯示已產生，而不論其<xref:System.Windows.Media.TileBrush.TileMode%2A>您所使用的設定。  
@@ -34,5 +34,6 @@ ms.locfileid: "57367774"
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMDrawingBrushTileModeExample](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/TileModeExample.xaml#graphicsmmdrawingbrushtilemodeexample)]  
   
 ## <a name="see-also"></a>另請參閱
-- [設定 TileBrush 的並排顯示大小](how-to-set-the-tile-size-for-a-tilebrush.md)
+
+- [設定 TileBrush 的拼貼大小](how-to-set-the-tile-size-for-a-tilebrush.md)
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)

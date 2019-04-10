@@ -2,12 +2,12 @@
 title: <bindingElementExtensions>
 ms.date: 03/30/2017
 ms.assetid: bb597fc0-c947-451c-afda-bf23d42f4f4d
-ms.openlocfilehash: 9a2a3af093949c1d724fdea13655bbb80fe71048
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 775f93f319c136a29a32ffaa1dfabc12ee081b29
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270457"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227505"
 ---
 # <a name="bindingelementextensions"></a>\<bindingElementExtensions>
 這個區段會啟用電腦或應用程式組態檔中自訂繫結項目的使用。 您可以透過使用 `add` 關鍵字，將項目的 `type` 屬性設定為繫結項目延伸，以及將 `name` 屬性設定為自訂繫結項目，來將自訂繫結項目加入至這個集合。  
@@ -44,5 +44,6 @@ ms.locfileid: "55270457"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.BindingElementExtensionElement>
 - [擴充繫結](../../../../../docs/framework/wcf/extending/extending-bindings.md)

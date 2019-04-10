@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - IEnumRAWINPUTDEVICE interface [WPF]
 ms.assetid: 88c8b389-a48b-46b9-b895-8ed7b1e26fea
-ms.openlocfilehash: e7bc6f2c96413f3898a17b541733eeecd6a260f7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 04caca0c580d26fde7fc9a3e3a11b7a8fed26d65
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375060"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225517"
 ---
 # <a name="ienumrawinputdevice"></a>IEnumRAWINPUTDEVICE
 此介面列舉未經處理的輸入裝置，並且只供 PresentationHost.exe 使用。  
@@ -27,4 +27,5 @@ ms.locfileid: "57375060"
 |[IEnumRAWINPUTDEVIC:Clone](ienumrawinputdevic-clone.md)|使用與目前列舉程式相同的狀態，來建立另一個未經處理的輸入裝置列舉程式，以反覆查看相同的清單。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [關於未經處理的輸入](/windows/desktop/inputdev/about-raw-input)

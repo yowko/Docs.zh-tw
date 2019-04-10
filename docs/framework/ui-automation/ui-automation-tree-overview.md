@@ -5,12 +5,12 @@ helpviewer_keywords:
 - automation tree
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
-ms.openlocfilehash: 19e416271e0c6e717a46821569983a250ef0ae0b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675572"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225946"
 ---
 # <a name="ui-automation-tree-overview"></a>UI 自動化樹狀目錄概觀
 > [!NOTE]
@@ -55,5 +55,6 @@ ms.locfileid: "57675572"
  內容檢閱是藉由搜尋 <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> 屬性已設為 `true` 的項目而取得，或是藉由使用 <xref:System.Windows.Automation.TreeWalker.ContentViewWalker> 來導覽樹狀而取得。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Automation.AutomationElement>
 - [UI 自動化概觀](../../../docs/framework/ui-automation/ui-automation-overview.md)

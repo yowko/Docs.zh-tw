@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
-ms.openlocfilehash: 86ef0da37ec35b991557af97a97bc9ca3da2d68c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717254"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223286"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>選取 Windows Form Button 控制項的方法
 將 Windows Form 按鈕可以下列方式選取：  
@@ -29,6 +29,7 @@ ms.locfileid: "57717254"
 -   呼叫<xref:System.Windows.Forms.Button.PerformClick%2A>方法來以程式設計方式選取的按鈕。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Button 控制項概觀](button-control-overview-windows-forms.md)
-- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [HOW TO：回應 Windows Forms 按鈕的按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button 控制項](button-control-windows-forms.md)

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：啟用使用 Windows Forms RichTextBox 控制項的拖放作業
+title: HOW TO：啟用 Windows Forms RichTextBox 控制項的拖放作業
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - text boxes [Windows Forms], drag-and-drop operations
 - RichTextBox control [Windows Forms], drag-and-drop operations
 ms.assetid: ca167d1c-2014-4cf0-96a0-20598470be3b
-ms.openlocfilehash: ead61b4b889119b47675e49bc95e9631a8ad664e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: e61f7743d984d99b1c6811cb1980b97705c304a9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711001"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223957"
 ---
-# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>HOW TO：啟用使用 Windows Forms RichTextBox 控制項的拖放作業
+# <a name="how-to-enable-drag-and-drop-operations-with-the-windows-forms-richtextbox-control"></a>HOW TO：啟用 Windows Forms RichTextBox 控制項的拖放作業
 使用 Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項的拖放作業，可藉由處理 <xref:System.Windows.Forms.RichTextBox.DragEnter> 和 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件來完成。 因此，使用 <xref:System.Windows.Forms.RichTextBox> 控制項進行拖放作業相當簡單。  
   
 ### <a name="to-enable-drag-operations-in-a-richtextbox-control"></a>在 RichTextBox 控制項中啟用拖曳作業  
@@ -165,7 +165,8 @@ ms.locfileid: "57711001"
      當您放開滑鼠按鈕時，會放下選取的文字 (也就是，會引發 <xref:System.Windows.Forms.RichTextBox.DragDrop> 事件)，並插入 <xref:System.Windows.Forms.RichTextBox> 控制項內。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.RichTextBox>
-- [如何：執行應用程式之間的拖放作業](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
+- [HOW TO：在應用程式之間執行拖放作業](../advanced/how-to-perform-drag-and-drop-operations-between-applications.md)
 - [RichTextBox 控制項](richtextbox-control-windows-forms.md)
-- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)

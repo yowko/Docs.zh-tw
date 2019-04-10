@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立繪圖的圖形物件
+title: HOW TO：建立繪製的圖形物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: e609fbff29d058c04a839a5dcb79aab16a518298
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709044"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223624"
 ---
-# <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪圖的圖形物件
+# <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪製的圖形物件
 您可以繪製線條與圖形之前，呈現文字，或顯示和管理映像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪圖介面，而是用來建立圖形影像物件。  
   
  使用圖形有兩個步驟：  
@@ -165,13 +165,14 @@ ms.locfileid: "57709044"
   
     |若要轉譯|請參閱|  
     |---------------|---------|  
-    |線條|[如何：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)|  
-    |圖形|[如何：繪製外框的形狀](how-to-draw-an-outlined-shape.md)|  
-    |文字|[如何：Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)|  
-    |影像|[如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)|  
+    |線條|[HOW TO：在 Windows Form 上繪製線條](how-to-draw-a-line-on-a-windows-form.md)|  
+    |圖形|[HOW TO：繪製外框形狀](how-to-draw-an-outlined-shape.md)|  
+    |文字|[HOW TO：在 Windows Form 上繪製文字](how-to-draw-text-on-a-windows-form.md)|  
+    |影像|[HOW TO：使用 GDI+ 呈現影像](how-to-render-images-with-gdi.md)|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [如何：使用 GDI + 呈現影像](how-to-render-images-with-gdi.md)
+- [HOW TO：使用 GDI+ 呈現影像](how-to-render-images-with-gdi.md)

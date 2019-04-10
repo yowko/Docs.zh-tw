@@ -2,12 +2,12 @@
 title: SQL Server 結構描述集合
 ms.date: 03/30/2017
 ms.assetid: c6403cc3-d78b-4f85-bab1-ada7a3446ec5
-ms.openlocfilehash: 2445ab2ffbe30b647e256e223f712300bcf19931
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 79bf9f1253b64863d3eabddff8c33b6ffab70f41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635035"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224551"
 ---
 # <a name="sql-server-schema-collections"></a>SQL Server 結構描述集合
 除了通用結構描述集合之外，Microsoft .NET Framework Data Provider for SQL Server 還支援其他結構描述集合。 這些結構描述集合會因您目前使用的 SQL Server 版本而稍微不同。 若要判斷支援的結構描述集合清單，請呼叫**GetSchema**方法沒有引數，或以結構描述集合名稱"MetaDataCollections"。 這會傳回 <xref:System.Data.DataTable>，包括支援的結構描述集合清單、每個集合所支援的限制數目，以及集合所使用之識別項部分的數目。  
@@ -20,7 +20,7 @@ ms.locfileid: "54635035"
 |dbid|Int16|資料庫 ID。|  
 |create_date|DateTime|資料庫的建立日期。|  
   
-## <a name="foreign-keys"></a>Foreign Keys  
+## <a name="foreign-keys"></a>外部索引鍵  
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
@@ -34,7 +34,7 @@ ms.locfileid: "54635035"
 |IS_DEFERRABLE|String|指定條件約束是否可以延遲。 傳回 NO。|  
 |INITIALLY_DEFERRED|String|指定條件約束一開始是否可以延遲。 傳回 NO。|  
   
-## <a name="indexes"></a>Indexes  
+## <a name="indexes"></a>索引  
   
 |ColumnName|DataType|描述|  
 |----------------|--------------|-----------------|  
@@ -244,10 +244,10 @@ ms.locfileid: "54635035"
 |----------------|--------------|-----------------|  
 |assembly_name|String|組件檔案的名稱。|  
 |udt_name|String|組件的類別名稱。|  
-|version_major|物件|主要版本號碼。|  
-|version_minor|物件|次要版本號碼。|  
-|version_build|物件|組建編號。|  
-|version_revision|物件|修訂編號。|  
+|version_major|Object|主要版本號碼。|  
+|version_minor|Object|次要版本號碼。|  
+|version_build|Object|組建編號。|  
+|version_revision|Object|修訂編號。|  
 |culture_info|Object|與此 UDT 相關的文化特性資訊。|  
 |public_key|Object|此組件使用的公開金鑰。|  
 |is_fixed_length|Boolean|指定型別的長度是否永遠與 max_length 相同。|  
@@ -256,5 +256,6 @@ ms.locfileid: "54635035"
 |Permission_set_desc|String|組件使用權限集合/安全性層級的易記名稱。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [擷取資料庫結構描述資訊](../../../../docs/framework/data/adonet/retrieving-database-schema-information.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

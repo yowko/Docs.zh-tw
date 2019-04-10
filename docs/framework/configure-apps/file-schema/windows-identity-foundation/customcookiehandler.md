@@ -3,12 +3,12 @@ title: <customCookieHandler>
 ms.date: 03/30/2017
 ms.assetid: a03b153d-5ec6-4915-9031-6f0c3fd348be
 author: BrucePerlerMS
-ms.openlocfilehash: 752b1188fccb6f09cdcab6a50653abf26e8e2a53
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0129c63fe17b63889a77ea1a56c0d7e657def859
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55288180"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223972"
 ---
 # <a name="customcookiehandler"></a>\<customCookieHandler>
 設定自訂 cookie 處理常式型別。 這個項目只會出現如果`mode`屬性的`<cookieHandler>`項目是 「 自訂 」。 自訂型別必須衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。  
@@ -41,7 +41,7 @@ ms.locfileid: "55288180"
 |類型|指定自訂型別衍生自<xref:System.IdentityModel.Services.CookieHandler>類別。 如需有關如何指定`type`屬性，請參閱[自訂型別參考](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/index.md)。|  
   
 ### <a name="child-elements"></a>子元素  
- 無  
+ None  
   
 ### <a name="parent-elements"></a>父項目  
   
@@ -64,4 +64,5 @@ ms.locfileid: "55288180"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.IdentityModel.Services.CookieHandler>

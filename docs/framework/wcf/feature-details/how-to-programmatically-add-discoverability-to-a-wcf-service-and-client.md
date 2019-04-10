@@ -1,15 +1,15 @@
 ---
-title: HOW TO：以程式設計方式將探索能力加入 WCF 服務和用戶端
+title: HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: a0240d09c07a23c2c578008885e5bca00169acdd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643126"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224204"
 ---
-# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力加入 WCF 服務和用戶端
+# <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 本主題說明如何讓 Windows Communication Foundation (WCF) 服務可以探索。 它根據[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
@@ -58,7 +58,7 @@ ms.locfileid: "54643126"
   
 1.  將新主控台應用程式加入至名為 `DiscoveryClientApp` 的方案。  
   
-2.  將參考加入至 `System.ServiceModel.dll` 和 `System.ServiceModel.Discovery.dll`  
+2.  將參考加入`System.ServiceModel.dll`和 `System.ServiceModel.Discovery.dll`  
   
 3.  從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管**，選取**複製**，然後選取**DiscoveryClientApp**專案、 以滑鼠右鍵按一下，然後選取**貼上**。  
   
@@ -341,5 +341,6 @@ namespace DiscoveryClientApp
 ```  
 
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 探索概觀](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
 - [WCF 探索物件模型](../../../../docs/framework/wcf/feature-details/wcf-discovery-object-model.md)

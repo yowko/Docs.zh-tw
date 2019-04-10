@@ -11,12 +11,12 @@ helpviewer_keywords:
 - StatusBar control [Windows Forms], refreshing panels
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
-ms.openlocfilehash: 3ad76899f86013e3395b5b7859538c4c59c9b1ee
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 61fb68a43132b350b62f073ca8683fada3be52d8
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716461"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225764"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>逐步解說：在執行階段更新狀態列資訊
 > [!IMPORTANT]
@@ -85,8 +85,9 @@ ms.locfileid: "57716461"
     >  需要大約 30 秒的時間讓時鐘出現在狀態列中。 這是為了盡可能取得最準確的時間。 相反地，若要讓時鐘更早出現，您可以減少的值<xref:System.Windows.Forms.Timer.Interval%2A>您在之前程序中的步驟 7 中設定的屬性。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [如何：將面板新增至 StatusBar 控制項](how-to-add-panels-to-a-statusbar-control.md)
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [HOW TO：將面板新增至 StatusBar 控制項](how-to-add-panels-to-a-statusbar-control.md)
+- [HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

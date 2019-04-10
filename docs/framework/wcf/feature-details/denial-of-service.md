@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: bc209d184ac330b112d17c34f0bf1c479a8b5f7e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516157"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228873"
 ---
 # <a name="denial-of-service"></a>阻斷服務
 當系統由於無法處理訊息，或者處理訊息的速度極為緩慢而爆滿時，就會發生阻絕服務。  
@@ -17,7 +17,7 @@ ms.locfileid: "54516157"
 ## <a name="excess-memory-consumption"></a>過多記憶體耗用  
  讀取具有大量唯一本機名稱、命名空間或前置詞的 XML 文件時，會發生問題。 如果您正在使用衍生自 <xref:System.Xml.XmlReader> 的類別，且您為每個項目呼叫 <xref:System.Xml.XmlReader.LocalName%2A>、<xref:System.Xml.XmlReader.Prefix%2A> 或 <xref:System.Xml.XmlReader.NamespaceURI%2A> 屬性，則傳回的字串會新增至 <xref:System.Xml.NameTable>。 <xref:System.Xml.NameTable> 所持有的集合大小一定不會減小，它會建立字串控制代碼的虛擬「記憶體遺漏」(Memory Leak)。  
   
- 緩解的方式包括：  
+ 風險降低的方式包括：  
   
 -   衍生自 <xref:System.Xml.NameTable> 類別並強制執行最大的大小配額  (當配額已滿時，您無法避免使用 <xref:System.Xml.NameTable> 或切換 <xref:System.Xml.NameTable>)。  
   
@@ -28,18 +28,18 @@ ms.locfileid: "54516157"
   
  風險降低：使用下列屬性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>類別：  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制時間界限之 `SecurityContextToken` 的上限，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後快取的上限。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>： 控制時間界限的最大數目`SecurityContextToken`伺服器會快取之後的 s`SPNego`或`SSL`交涉。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制 `SecurityContextTokens` 的存留時間，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後發出的存留時間。 伺服器在這段時間內會快取 `SecurityContextToken`。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>： 控制的存留期`SecurityContextTokens`的下列伺服器問題`SPNego`或`SSL`交涉。 伺服器在這段時間內會快取 `SecurityContextToken`。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在伺服器中建立的安全對話上限，但是不會針對這些對話處理應用程式訊息。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>： 控制在伺服器上，但其任何應用程式訊息處理所建立的安全交談的最大數目。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服務將安全對話保留在作用中，而不會從用戶端中接收該對話之應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>： 控制服務讓安全對話保持運作而不會從交談的用戶端收到應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 或雙重自訂繫結需要用戶端驗證  
  根據預設，<xref:System.ServiceModel.WSDualHttpBinding> 已啟用安全性。 不過，如果透過將 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 屬性設定為 <xref:System.ServiceModel.MessageCredentialType.None> 而停用用戶端驗證，則惡意使用者可能在第三個服務上導致阻絕服務攻擊。 可能是因為惡意用戶端可以導向至服務，並將訊息資料流傳送至第三個服務。  
   
- 若要避免這個情況，請不要將屬性設定為 `None`。 建立具有雙重訊息模式的自訂繫結時，也請留意這個可能性。  
+ 若要避免這個情況，請不要將屬性設定為 `None`。 建立具有雙重訊息模式的自訂繫結程序時，也請留意這個可能性。  
   
 ## <a name="auditing-event-log-can-be-filled"></a>稽核事件記錄檔已滿  
  如果惡意使用者發現已啟用稽核，攻擊者就可以傳送無效的訊息，而造成寫入稽核項目。 如果是因為這個方法而填滿稽核記錄檔，稽核系統就會失敗。  
@@ -80,10 +80,11 @@ ms.locfileid: "54516157"
  若要避免這個情況，請設定 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別的 <xref:System.ServiceModel.Channels.SecurityBindingElement> 屬性，以設定作用中工作階段數的上限和工作階段的最長存留時間。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

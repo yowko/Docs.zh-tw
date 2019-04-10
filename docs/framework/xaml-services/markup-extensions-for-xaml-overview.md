@@ -5,12 +5,12 @@ helpviewer_keywords:
 - markup extensions [XAML Services], custom
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
-ms.openlocfilehash: 81e142a6989ad2c2c365def4ad43e1bad505c411
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58019163"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224919"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML 標記延伸概觀
 標記延伸是一種 XAML 技巧，用於取得不是基本類型和特定 XAML 類型的值。 對於屬性使用方式，標記延伸使用左大括號 `{` 的已知字元序列進入標記延伸範圍，並使用右大括號 `}` 結束。 使用 .NET Framework XAML 服務時，您可以使用 System.Xaml 組件中的一些預先定義 XAML 語言標記延伸。 您也可以從 <xref:System.Windows.Markup.MarkupExtension> 類別產生子類別 (定義於 System.Xaml 中)，以及定義您自己的標記延伸。 或者，您可以使用特定架構所定義的標記延伸 (如果已參考該架構)。  
@@ -25,19 +25,19 @@ ms.locfileid: "58019163"
 >  `x:` 前置詞用於 XAML 生產的根項目中 XAML 語言命名空間的一般 XAML 命名空間對應。 例如，各種特定架構的 Visual Studio 專案和頁面範本起始 XAML 檔案，使用此`x:`對應。 您可以選擇專屬 XAML 命名空間對應中的不同前置詞語彙基元，但是這份文件將假設使用預設 `x:` 對應來識別這些是 XAML 語言 XAML 命名空間之定義部分的實體，而非特定 Framework 的預設 XAML 命名空間或其他任意 CLR 或 XML 命名空間。  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` 提供具名類型的 <xref:System.Type> 物件。 這項功能最常用於延遲機制，而延遲機制使用基礎 CLR 類型和類型衍生做為群組 Moniker 或識別碼。 WPF 樣式和樣板 (以及其 `TargetType` 屬性使用方式) 是特定範例。 如需詳細資訊，請參閱 [x:Type Markup Extension](x-type-markup-extension.md)。  
+ `x:Type` 提供<xref:System.Type>具名類型的物件。 這項功能最常用於延遲機制，而延遲機制使用基礎 CLR 類型和類型衍生做為群組 Moniker 或識別碼。 WPF 樣式和樣板 (以及其 `TargetType` 屬性使用方式) 是特定範例。 如需詳細資訊，請參閱 [x:Type Markup Extension](x-type-markup-extension.md)。  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` 會從實值類型程式碼實體 (非直接是屬性值的類型) 產生靜態值，但可評估為該類型。 這適用於指定已存在做為類型定義中已知常數的值。 如需詳細資訊，請參閱 [x:Static Markup Extension](x-static-markup-extension.md)。  
+ `x:Static` 會產生從實值型別程式碼實體不直接是屬性的值的型別，但可以評估為該類型的靜態值。 這適用於指定已存在做為類型定義中已知常數的值。 如需詳細資訊，請參閱 [x:Static Markup Extension](x-static-markup-extension.md)。  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` 指定 `null` 做為 XAML 成員的值。 根據特定類型的設計或更大的架構概念， `null` 不一定是屬性的預設值或空字串屬性的隱含值。 如需詳細資訊，請參閱 [x:Null Markup Extension](x-null-markup-extension.md)。  
+ `x:Null` 指定`null`做為 XAML 成員的值。 根據特定類型的設計或更大的架構概念， `null` 不一定是屬性的預設值或空字串屬性的隱含值。 如需詳細資訊，請參閱 [x:Null Markup Extension](x-null-markup-extension.md)。  
   
 ### <a name="xarray"></a>x:Array  
- 如果故意不使用基底項目和控制模型所提供的集合支援，則`x:Array` 支援使用 XAML 語法建立一般陣列。 如需詳細資訊，請參閱 [x:Array Markup Extension](x-array-markup-extension.md)。 具體來說，在 XAML 2009 中，陣列會存取為語言基本類型，而不是延伸。 如需詳細資訊，請參閱 [XAML 2009 Language Features](xaml-2009-language-features.md)。  
+ `x:Array` 支援在故意不使用基底項目和控制模型所提供的集合支援的情況中的 XAML 語法建立一般陣列。 如需詳細資訊，請參閱 [x:Array Markup Extension](x-array-markup-extension.md)。 具體來說，在 XAML 2009 中，陣列會存取為語言基本類型，而不是延伸。 如需詳細資訊，請參閱 [XAML 2009 Language Features](xaml-2009-language-features.md)。  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` 是 XAML 2009 的一部分 (原始 (2006) 語言集的延伸模組)。 `x:Reference` 代表物件圖形中另一個現有物件的參考。 該物件是透過其 `x:Name`進行識別。 如需詳細資訊，請參閱 [x:Reference Markup Extension](x-reference-markup-extension.md)。  
+ `x:Reference` 是 XAML 2009 中，原始 (2006) 語言集的延伸模組的一部分。 `x:Reference` 代表物件圖形中的另一個現有物件的參考。 該物件是透過其 `x:Name`進行識別。 如需詳細資訊，請參閱 [x:Reference Markup Extension](x-reference-markup-extension.md)。  
   
 ### <a name="other-x-constructs"></a>其他 x:建構  
  具有支援 XAML 語言功能的其他 `x:` 建構，但這些不會實作為標記延伸。 如需詳細資訊，請參閱[XAML 命名空間 （x:）語言功能](xaml-namespace-x-language-features.md)。  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>自訂標記延伸的屬性設定  
  為了支援設計環境和特定 XAML 物件寫入器案例，您應該設定具有數個 CLR 屬性之標記延伸支援類型的屬性。 這些屬性會報告預定標記延伸使用方式。  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 會報告 <xref:System.Type> 所傳回之物件類型的 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 資訊。 透過其純正簽章， <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 會傳回 <xref:System.Object>。 但是，各種消費者可能想要更精確的傳回類型資訊。 包括：  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> 報表<xref:System.Type>物件的資訊類型<xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A>傳回。 透過其純正簽章， <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 會傳回 <xref:System.Object>。 但是，各種消費者可能想要更精確的傳回類型資訊。 包括：  
   
 -   設計人員和 IDE，可能可以提供標記延伸使用方式的類型感知支援。  
   
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  如果標記延伸使用方式使用位置引數，則會呈現為具有初始化值的啟動物件。 節點資料流是以粗略的文字表示，看起來如下：  
   
- `StartObject` (<xref:System.Xaml.XamlType> 是標記延伸的定義類型，而不是它的傳回類型)  
+ `StartObject` (<xref:System.Xaml.XamlType>是標記延伸的定義類型，不是它的傳回型別)  
   
- `StartMember` ( <xref:System.Xaml.XamlMember> 的名稱是 `_InitializationText`)  
+ `StartMember` (名稱<xref:System.Xaml.XamlMember>是`_InitializationText`)  
   
- `Value` (值是字串形式的位置引數，包括中間分隔符號)  
+ `Value` （值為位置的引數為字串，包括中間分隔符號）  
   
  `EndMember`  
   
@@ -155,6 +155,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
  如果您是在儲存路徑上使用 XAML 節點資料流，則物件圖形呈現中通常不會有任何項目可通知您：要序列化的物件一開始是由標記延伸使用方式和 `ProvideValue` 結果所提供。 如果案例需要針對來回處理保存標記延伸使用方式，同時擷取物件圖形中的其他變更，則必須設計自己的技術來保留原始 XAML 輸入中的標記延伸使用方式知識。 例如，若要還原標記延伸使用方式，您可能需要在儲存路徑上使用節點資料流才能還原標記延伸使用方式，或在原始 XAML 與往返 XAML 之間執行某種類型的合併。 一些實作 XAML 的架構 (例如 WPF) 使用中繼類型 (運算式)，協助代表標記延伸使用方式提供值的情況。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Markup.MarkupExtension>
 - [XAML 的類型轉換子和標記延伸](type-converters-and-markup-extensions-for-xaml.md)
 - [標記延伸和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)

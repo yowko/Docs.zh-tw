@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
-ms.openlocfilehash: 121f285a95d0169db79bdc302d80dba03b3b40c2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720039"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229351"
 ---
 # <a name="how-to-load-and-display-metafiles"></a>HOW TO：載入和顯示中繼檔
 <xref:System.Drawing.Imaging.Metafile>類別，繼承自<xref:System.Drawing.Image>類別中，提供記錄、 顯示及檢查向量影像的方法。  
@@ -31,7 +31,8 @@ ms.locfileid: "57720039"
  [!code-vb[System.Drawing.WorkingWithImages#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs> `e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
+ 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用影像、點陣圖、圖示和中繼檔](working-with-images-bitmaps-icons-and-metafiles.md)

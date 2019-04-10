@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], specifying the certificate authority certificate chain
 - certificates [WCF], verifying signatures
 ms.assetid: 7c719355-aa41-4567-80d0-5115a8cf73fd
-ms.openlocfilehash: 8d44e9f9278a212813fca5e77ebfca72734c60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 43296fad9519a08db5facdd220492ac70dffeca2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54648780"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224462"
 ---
 # <a name="how-to-specify-the-certificate-authority-certificate-chain-used-to-verify-signatures-wcf"></a>HOW TO：指定用來驗證簽章 (WCF) 的憑證授權單位憑證鏈結
 當 Windows Communication Foundation (WCF) 收到透過 X.509 憑證簽署的 SOAP 訊息時，預設會確認 X.509 憑證已發行的受信任的憑證授權單位。 它會搜尋憑證存放區並判斷該憑證授權單位的憑證是否已指定為受信任來完成所有程序。 為了讓 WCF 來做出此判斷，憑證授權單位憑證鏈結必須安裝在正確的憑證存放區中。  
@@ -34,4 +34,5 @@ ms.locfileid: "54648780"
          如需使用 MMC 憑證嵌入式管理單元的詳細資訊，請參閱[How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

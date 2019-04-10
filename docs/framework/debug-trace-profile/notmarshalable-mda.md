@@ -13,17 +13,17 @@ helpviewer_keywords:
 ms.assetid: 96e7b2c1-843f-4d64-b519-740c3a18b50a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cec3fd0c3b20c70b6ddf3e875c481e829dd5eb28
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 30db07ddf935b5ce13b1fe4212f7f6a40270ae93
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54695487"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226101"
 ---
 # <a name="notmarshalable-mda"></a>notMarshalable MDA
 在跨內容封送處理介面時，當 Common Language Runtime (CLR) 遇到 COM 介面指標，卻無有效已登錄的 Proxy/Stub 或 `IMarshal` 界面實作不正確，則會啟動 `notMarshalable` Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  未服務呼叫，或呼叫在錯誤的 COM 介面指標的內容中發生。  
   
 ## <a name="cause"></a>原因  
@@ -35,7 +35,7 @@ ms.locfileid: "54695487"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對執行階段沒有影響。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  描述問題的訊息。  
   
 ## <a name="configuration"></a>組態  
@@ -49,6 +49,7 @@ ms.locfileid: "54695487"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

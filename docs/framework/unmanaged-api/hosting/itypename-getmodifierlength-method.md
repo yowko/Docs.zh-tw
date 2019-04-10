@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7eb11c9b38c1df82f3dbb6990e76e6071e421bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 09354eb7314c73464241c20efb61912cf83050b5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54576277"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228649"
 ---
 # <a name="itypenamegetmodifierlength-method"></a>ITypeName::GetModifierLength 方法
 此方法支援 .NET Framework 結構而且並非設計直接從程式碼使用。  
@@ -40,9 +40,10 @@ HRESULT GetModifierLength (
   
  **標頭：** MSCorEE.h  
   
- **程式庫：** 包含做為 MSCorEE.dll 中的資源  
+ **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [裝載介面](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

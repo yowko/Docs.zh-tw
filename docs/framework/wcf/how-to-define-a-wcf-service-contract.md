@@ -7,12 +7,12 @@ dev_langs:
 - CSharp
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
-ms.openlocfilehash: f93ef787c74a4581d45c24c5a704cc5fb044bd46
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409961"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228389"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>教學課程：定義 Windows Communication Foundation 服務合約
 
@@ -29,10 +29,9 @@ ms.locfileid: "58409961"
 > - 建立**WCF 服務程式庫**專案。
 > - 定義服務合約介面。
 
-
 ## <a name="create-a-wcf-service-library-project-and-define-a-service-contract-interface"></a>建立 WCF 服務程式庫專案，並定義服務合約介面
 
-1. 系統管理員身分開啟 Visual Studio。 若要這樣做，請選取 [Visual Studio 方案中的**開始**] 功能表，然後選取**詳細** > **系統管理員身分執行**從捷徑功能表。
+1. 以系統管理員身分開啟 Visual Studio。 若要這樣做，請選取 [Visual Studio 方案中的**開始**] 功能表，然後選取**詳細** > **系統管理員身分執行**從捷徑功能表。
 
 2. 建立**WCF 服務程式庫**專案。
 
@@ -54,7 +53,6 @@ ms.locfileid: "58409961"
 
       > [!NOTE]
       > 如果您安裝 Visual Studio 與 Visual Basic 開發人員環境設定時，可能會隱藏方案。 如果發生這種情況，請選取**選項**從**工具**功能表，然後選取**專案和方案** > **一般**中**選項**視窗。 選取 **一律顯示方案**。 此外，確認**儲存新專案時建立**已選取。
-
 
 3. 從**方案總管**，開啟**IService1.cs**或是**IService1.vb**檔案，並以下列程式碼取代其程式碼：
 

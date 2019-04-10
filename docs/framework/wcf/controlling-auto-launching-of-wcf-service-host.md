@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
-ms.openlocfilehash: f7f58a684449819fe945ad1ba5bff12f425c8294
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712388"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228493"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>控制 WCF 服務主機的自動啟動功能
 相同的 Visual Studio 方案包含多個專案中的另一個專案進行偵錯時，您可以控制 WCF 服務程式庫專案中，Windows Communication Foundation (WCF) 服務主機 (WcfSvcHost.exe) 的自動啟動功能。  
@@ -29,4 +29,5 @@ ms.locfileid: "54712388"
 -   新聞訂閱服務程式庫專案。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WCF 服務主機 (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)

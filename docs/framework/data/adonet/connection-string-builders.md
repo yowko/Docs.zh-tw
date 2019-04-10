@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: ab72fe5a22ca88b33a93d94d4b5e16bbc470a4da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54733216"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226881"
 ---
 # <a name="connection-string-builders"></a>連接字串產生器
 在舊版[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]的編譯時間檢查含有串連字串值並未發生，連接字串，以便在執行階段，產生不正確的關鍵字<xref:System.ArgumentException>。 每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者都支援不同語法的連接字串關鍵字，導致人工建構有效連接字串的難度大為增加。 為了處理這個問題，[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 為每個 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者導入了全新的連接字串產生器 (Builder)。 每個資料提供者都具有繼承自 <xref:System.Data.Common.DbConnectionStringBuilder> 強型別連接字串產生器類別。 下表列出 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 資料提供者和其相關的連接字串產生器類別。  
@@ -80,6 +80,7 @@ initial catalog="AdventureWorks;NewValue=Bad"
  [!code-vb[DataWorks SqlConnectionStringBuilder.UserNamePwd#1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DataWorks SqlConnectionStringBuilder.UserNamePwd/VB/source.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [連接字串](../../../../docs/framework/data/adonet/connection-strings.md)
 - [隱私權和資料安全性](../../../../docs/framework/data/adonet/privacy-and-data-security.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ScrollBarVisibility enumeration [WPF]
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
-ms.openlocfilehash: 05fe4ba4e2125b01637bc9066d23b5738d81f98d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358934"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224282"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>最佳化效能：其他建議
 <a name="introduction"></a> 本主題提供[最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)一節中主題所涵蓋內容以外的效能建議。  
@@ -25,7 +25,7 @@ ms.locfileid: "57358934"
   
 -   [筆刷透明度與項目透明度的比較](#Opacity)  
   
--   [物件瀏1覽](#Navigation_Objects)  
+-   [物件瀏覽](#Navigation_Objects)  
   
 -   [大型立體表面的點擊測試](#Hit_Testing)  
   
@@ -73,12 +73,13 @@ ms.locfileid: "57358934"
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 字型快取服務可在 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式之間共用字型資料。 您所執行的第一個 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式會啟動此服務 (若尚未執行)。 如果您使用[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]，您可以從 「 手動 」 （預設值） 設定 「 Windows Presentation Foundation (WPF) Font Cache 3.0.0.0"服務，為 [自動 （延遲開始）]，以減少初始啟動時間[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)
 - [版面配置與設計](optimizing-performance-layout-and-design.md)
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [Text](optimizing-performance-text.md)
+- [文字](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
-- [動畫祕訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)
+- [動畫秘訣和訣竅](../graphics-multimedia/animation-tips-and-tricks.md)

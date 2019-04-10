@@ -7,17 +7,16 @@ helpviewer_keywords:
 - ProgressBar control [Windows Forms], about ProgressBar control
 - progress controls [Windows Forms], about progress controls
 ms.assetid: a05d9cba-3a6a-4f8f-94b8-8ec12799fb80
-ms.openlocfilehash: db0a43534080d630323d8c1c95759fd2dcc04a85
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 24b47669cdf8ed0a8f0f936b0b3b9c354e62445f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227492"
 ---
 # <a name="progressbar-control-overview-windows-forms"></a>ProgressBar 控制項概觀 (Windows Form)
 > [!IMPORTANT]
->  
-  <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
+>  <xref:System.Windows.Forms.ToolStripProgressBar> 控制項會取代 <xref:System.Windows.Forms.ProgressBar> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.ProgressBar> 控制項，以提供回溯相容性及未來使用。  
   
  Windows Form<xref:System.Windows.Forms.ProgressBar>控制項顯示適量的矩形排列在水平列表示處理程序的進度。 處理程序完成時，會填滿的列。 進度列通常用來讓使用者大致了解長等待處理序完成;比方說，當大型檔案載入。  
   
@@ -37,5 +36,6 @@ ms.locfileid: "57707935"
 >  <xref:System.Windows.Forms.StatusStrip>及<xref:System.Windows.Forms.ToolStripStatusLabel>控制項會取代及新增功能<xref:System.Windows.Forms.StatusBar>並<xref:System.Windows.Forms.StatusBarPanel>控制項，不過，<xref:System.Windows.Forms.StatusBar>和<xref:System.Windows.Forms.StatusBarPanel>控制項保留回溯相容性和未來使用，如果您選擇。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ProgressBar>
 - [ProgressBar 控制項](progressbar-control-windows-forms.md)

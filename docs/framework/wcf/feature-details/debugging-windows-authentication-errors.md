@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: a68a291b1974e86c9a4f16f9d90a879649076533
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54595132"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228249"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，它們會顯示由 Windows Communication Foundation (WCF)。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -91,7 +91,7 @@ ms.locfileid: "54595132"
   
 3.  透過拒絕使用 NTLM 來要求 SSPI 交涉使用 Kerberos：  
   
-    1.  在程式碼中使用下列陳述式來做到這點：`ChannelFactory.Credentials.Windows.AllowNtlm = false`  
+    1.  程式碼中使用下列陳述式執行這項操作： `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   
     2.  或者，您可以將組態檔中的 `allowNtlm` 屬性設定為 `false` 來做到這點。 此屬性包含在[ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)。  
   
@@ -145,6 +145,7 @@ ms.locfileid: "54595132"
  如果您在某一台電腦上開發應用程式，然後又在另一台電腦上進行部署，而且在每一台電腦上都使用不同的帳戶類型進行驗證，您可能會產生不同的行為。 例如，假設您是使用 `SSPI Negotiated`驗證模式，在 Windows XP Pro 機器上開發應用程式。 您又使用本機使用者帳戶進行身分驗證，然後又使用了 NTLM 通訊協定。 應用程式開發完成後，您以網域帳戶先在 Windows Server 2003 機器上部署服務而後執行。 此時，用戶端將無法驗證該服務，因為用戶端使用的是 Kerberos 及網域控制站。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Security.WindowsClientCredential>
 - <xref:System.ServiceModel.Security.WindowsServiceCredential>
 - <xref:System.ServiceModel.Security.WindowsClientCredential>

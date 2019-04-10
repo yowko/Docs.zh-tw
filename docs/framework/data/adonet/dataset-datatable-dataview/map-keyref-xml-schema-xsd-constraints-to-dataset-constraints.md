@@ -2,12 +2,12 @@
 title: 將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 ms.date: 03/30/2017
 ms.assetid: 5b634fea-cc1e-4f6b-9454-10858105b1c8
-ms.openlocfilehash: bc3863bbe6fd7c290c25056e2420107ed2d8bff3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcb295aef6d93222e682ef7f720c83963036e795
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54732800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229741"
 ---
 # <a name="map-keyref-xml-schema-xsd-constraints-to-dataset-constraints"></a>將 keyref XML 結構描述 (XSD) 條件約束對應至資料集條件約束
 **Keyref**元素可讓您建立文件內的項目之間的連結。 這與關聯式資料庫中的外部索引鍵關聯性很類似。 如果指定了結構描述**keyref**項目，項目會轉換至對應外部索引鍵條件約束的資料表中的資料行的結構描述對應程序<xref:System.Data.DataSet>。 根據預設， **keyref**項目也會產生關聯，以**ParentTable**， **ChildTable**， **ParentColumn**，以及**ChildColumn**在關聯上指定的屬性。  
@@ -110,6 +110,7 @@ Order(OrderNumber, EmpNumber)
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [將 XML 結構描述 (XSD) 條件約束對應至資料集條件約束](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/mapping-xml-schema-xsd-constraints-to-dataset-constraints.md)
 - [從 XML 結構描述 (XSD) 產生資料集關聯](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/generating-dataset-relations-from-xml-schema-xsd.md)
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

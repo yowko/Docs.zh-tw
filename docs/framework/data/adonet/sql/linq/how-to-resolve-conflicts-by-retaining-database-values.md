@@ -1,18 +1,18 @@
 ---
-title: HOW TO：解決衝突，藉由保留資料庫值
+title: HOW TO：藉由保留資料庫值來解決衝突
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
-ms.openlocfilehash: f647dad951acfbc309257212018db32e655169df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54531261"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230105"
 ---
-# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>HOW TO：解決衝突，藉由保留資料庫值
+# <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>HOW TO：藉由保留資料庫值來解決衝突
 若要先協調預期和實際資料庫值之間的差異再重新送出變更，可以使用 <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> 將找到的值保留在資料庫中。 這樣會覆寫物件模型 (Object Model) 中的目前值。 如需詳細資訊，請參閱[開放式並行存取：概觀](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)。  
   
 > [!NOTE]
@@ -21,17 +21,17 @@ ms.locfileid: "54531261"
 ## <a name="example"></a>範例  
  在這個案例下，當 User1 嘗試送出變更時，因為 User2 同時變更了 Assistant 和 Department 資料行，所以會擲回 <xref:System.Data.Linq.ChangeConflictException> 例外狀況。 下表顯示這個情況。  
   
-||Manager|Assistant|Department|  
+||主管|Assistant|部門|  
 |------|-------------|---------------|----------------|  
 |User1 和 User2 查詢時的原始資料庫狀態。|Alfreds|Maria|Sales|  
-|User1 準備送出這些變更。|Alfred||Marketing|  
+|User1 準備送出這些變更。|Alfred||行銷|  
 |User2 已送出這些變更。||Mary|服務|  
   
  User1 決定讓較新的資料庫值覆寫物件模型中的目前值，來解決這個衝突。  
   
  User1 使用 <xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> 解決衝突時，資料庫中的結果會如同下表：  
   
-||Manager|Assistant|Department|  
+||主管|Assistant|部門|  
 |------|-------------|---------------|----------------|  
 |解決衝突後的新狀態。|Alfreds<br /><br /> (原始)|Mary<br /><br /> (來自 User2)|服務<br /><br /> (來自 User2)|  
   
@@ -41,4 +41,5 @@ ms.locfileid: "54531261"
  [!code-vb[System.Data.Linq.RefreshMode#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/system.data.linq.refreshmode/vb/module1.vb#1)]  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+
+- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

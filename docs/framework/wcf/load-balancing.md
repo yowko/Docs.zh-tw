@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - load balancing [WCF]
 ms.assetid: 148e0168-c08d-4886-8769-776d0953b80f
-ms.openlocfilehash: 2a0644ea17db2923f5729feda40f3b2bff364231
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a43546b9cbb95cd16c1d94372e786acd103ea0bb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228627"
 ---
 # <a name="load-balancing"></a>負載平衡
 增加 Windows Communication Foundation (WCF) 應用程式容量的一種方法是將其相應放大程式部署到負載平衡的伺服器陣列。 WCF 應用程式可以進行負載平衡使用標準負載平衡技術，包括軟體負載平衡器，例如 Windows 網路負載平衡，以及硬體架構的負載平衡裝置。  
@@ -92,4 +92,5 @@ ms.locfileid: "54660745"
  為了在負載平衡案例中創造最佳效能，請考慮使用 <xref:System.ServiceModel.NetTcpSecurity> (<xref:System.ServiceModel.SecurityMode.Transport> 或 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>)。  
   
 ## <a name="see-also"></a>另請參閱
-- [Internet Information Services 裝載最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)
+
+- [網際網路資訊服務裝載最佳做法](../../../docs/framework/wcf/feature-details/internet-information-services-hosting-best-practices.md)

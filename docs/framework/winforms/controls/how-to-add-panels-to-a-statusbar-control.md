@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 0c7c843fd3b837cb221e055bd96f735fb5e9c4ed
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713278"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227791"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>HOW TO：將面板新增至 StatusBar 控制項
 > [!IMPORTANT]
@@ -121,10 +121,11 @@ ms.locfileid: "57713278"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [集合編輯器對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
-- [如何：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)
+- [[集合編輯器] 對話方塊](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/xc4yyekt(v=vs.100))
+- [HOW TO：設定狀態列面板的大小](how-to-set-the-size-of-status-bar-panels.md)
 - [逐步解說：在執行階段更新狀態列資訊](walkthrough-updating-status-bar-information-at-run-time.md)
-- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

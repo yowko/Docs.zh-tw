@@ -2,12 +2,12 @@
 title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
-ms.openlocfilehash: 1b2c4615445a906d1c48f386288a3d21e1e1f470
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758725"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229598"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 用來設定 <xref:System.ServiceModel.UdpBinding> 繫結的組態元素。  
@@ -81,7 +81,7 @@ ms.locfileid: "55758725"
  UdpBinding 允許 WCF 服務透過 UDP 傳輸進行通訊。 它允許 「 射後不理 」 訊息交換其中用戶端將訊息傳送至服務，而不預期有回應傳回。  
   
 ## <a name="example"></a>範例  
- 下列範例示範如何使用 <<xref:System.ServiceModel.UdpBinding>> 項目設定 `udpBinding`。  
+ 下列範例示範如何設定<xref:System.ServiceModel.UdpBinding>使用 <`udpBinding`> 項目。  
   
 ```xml  
 <udpBinding>
@@ -104,11 +104,12 @@ ms.locfileid: "55758725"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Channels.Binding>
 - <xref:System.ServiceModel.Channels.BindingElement>
 - <xref:System.ServiceModel.BasicHttpBinding>
 - <xref:System.ServiceModel.Configuration.BasicHttpBindingElement>
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

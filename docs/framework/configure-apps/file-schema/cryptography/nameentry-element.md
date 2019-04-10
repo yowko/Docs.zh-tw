@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <nameEntry> element
 - nameEntry element
 ms.assetid: 7d7535e9-4b4a-4b8c-82e2-e40dff5a7821
-ms.openlocfilehash: b5f92ca2956f32382b12c9a1dec4e5d41ea4ee2a
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 97521ba9073820beeea62f5fc7cab480b5422fb0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285919"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225322"
 ---
 # <a name="nameentry-element"></a>\<nameEntry > 項目
 將類別名稱對應至易記的演算法名稱，允許一個類別有許多易記名稱。  
@@ -37,8 +37,8 @@ ms.locfileid: "55285919"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**name**|必要屬性。<br /><br /> 指定密碼編譯類別會實作演算法的易記名稱。|  
-|**class**|必要屬性。<br /><br /> 指定的值**名稱**屬性中[ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)項目。|  
+|**名稱**|必要屬性。<br /><br /> 指定密碼編譯類別會實作演算法的易記名稱。|  
+|**Class - 類別**|必要屬性。<br /><br /> 指定的值**名稱**屬性中[ \<cryptoClass >](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptoclass-element.md)項目。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
@@ -76,7 +76,8 @@ ms.locfileid: "55285919"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)
 - [設定密碼編譯類別](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

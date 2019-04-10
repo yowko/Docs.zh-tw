@@ -1,16 +1,16 @@
 ---
-title: <remove> 的 <namedCaches> 項目
+title: <remove> 項目 <namedCaches>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - remove element for namedCaches
 - <remove> element for namedCaches
 ms.assetid: 24211ea5-163e-4fe5-aed8-004d8499760c
-ms.openlocfilehash: 22d06ab1df0d5ed74073772302421a680f1665ef
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 053e2776153489dfdd61547fdc039980646ae697
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55257015"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229767"
 ---
 # <a name="remove-element-for-namedcaches"></a>\<移除 > 項目\<namedCaches >
 從記憶體快取的 `namedCaches` 集合移除具名快取項目。  
@@ -38,7 +38,7 @@ ms.locfileid: "55257015"
 ### <a name="attributes"></a>屬性  
  `None`  
   
-### <a name="child-elements"></a>子項目  
+### <a name="child-elements"></a>子元素  
  `None`  
   
 ### <a name="parent-elements"></a>父項目  
@@ -51,4 +51,5 @@ ms.locfileid: "55257015"
  `remove`項目移除`namedCache`從記憶體快取的具名快取集合的項目。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [\<namedCaches > 項目 （快取設定）](../../../../../docs/framework/configure-apps/file-schema/runtime/namedcaches-element-cache-settings.md)

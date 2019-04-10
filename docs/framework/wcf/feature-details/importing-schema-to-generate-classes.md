@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, schema import and export
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
-ms.openlocfilehash: e12b4967a84797432ec30cdc88863f8530ea9afd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54620522"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228584"
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
 若要從可與 Windows Communication Foundation (WCF) 的結構描述產生類別，使用<xref:System.Runtime.Serialization.XsdDataContractImporter>類別。 這個主題將說明處理程序和變化。  
@@ -27,11 +27,11 @@ ms.locfileid: "54620522"
   
 ### <a name="to-import-a-schema"></a>匯入結構描述  
   
-1. 建立 <xref:System.Runtime.Serialization.XsdDataContractImporter> 的執行個體。  
+1. 建立 <xref:System.Runtime.Serialization.XsdDataContractImporter>的執行個體。  
   
-2. 選擇項。 傳遞建構函式中的 `CodeCompileUnit`。 在結構描述匯入期間產生的型別會新增至這個 `CodeCompileUnit` 執行個體，而不是從空白的 `CodeCompileUnit` 開始。  
+2. 選擇性。 傳遞建構函式中的 `CodeCompileUnit`。 在結構描述匯入期間產生的型別會新增至這個 `CodeCompileUnit` 執行個體，而不是從空白的 `CodeCompileUnit` 開始。  
   
-3. 選擇項。 呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> 方法。 此方法會判斷指定的結構描述是否為有效資料合約結構描述，且可以匯入。 `CanImport` 方法有和 `Import` 相同的多載 (下一個步驟)。  
+3. 選擇性。 呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractImporter.CanImport%2A> 方法。 此方法會判斷指定的結構描述是否為有效資料合約結構描述，且可以匯入。 `CanImport` 方法有和 `Import` 相同的多載 (下一個步驟)。  
   
 4. 呼叫其中一個多載 `Import` 方法，例如 <xref:System.Runtime.Serialization.XsdDataContractImporter.Import%28System.Xml.Schema.XmlSchemaSet%29> 方法。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "54620522"
   
  一般來說，公用型別是從結構描述產生的，其中包含私用欄位和相符的公用資料成員屬性。 如果要改為產生內部型別，請將 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 屬性設定為 `true`。  
   
- 下列範例會顯示當 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 屬性設定為 `true.` 時，轉換成內部類別的結構描述。  
+ 下列範例示範結構描述轉換成內部類別時<xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>屬性設定為 `true.`  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  
@@ -180,6 +180,7 @@ ms.locfileid: "54620522"
 -   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 屬性。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 實作可以使用這個屬性來指定。 <xref:System.Runtime.Serialization.IDataContractSurrogate> 會自訂匯入處理程序。 如需詳細資訊，請參閱 <<c0> [ 資料合約代理](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)。 根據預設，不會使用 Surrogate。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.Serialization.DataContractSerializer>
 - <xref:System.Runtime.Serialization.XsdDataContractImporter>
 - <xref:System.Runtime.Serialization.XsdDataContractExporter>

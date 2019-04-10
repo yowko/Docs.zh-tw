@@ -1,19 +1,19 @@
 ---
-title: HOW TO：撰寫 Windows forms 的控制項
+title: HOW TO：撰寫 Windows Forms 的控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - controls [Windows Forms], creating
 - UserControl class [Windows Forms], Windows Forms
 - custom controls [Windows Forms], creating
 ms.assetid: 7570e982-545b-4c3a-a7c7-55581d313400
-ms.openlocfilehash: 38416f28546f2aebc04d9ecf2c6995282b4720b8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 5240b9aaaf4d73cb2899a9003f9658dbd8958f3c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713407"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224334"
 ---
-# <a name="how-to-author-controls-for-windows-forms"></a>HOW TO：撰寫 Windows forms 的控制項
+# <a name="how-to-author-controls-for-windows-forms"></a>HOW TO：撰寫 Windows Forms 的控制項
 控制項所代表使用者與程式之間的圖形化連結。 控制項可以提供或處理資料、接受使用者輸入、回應事件，或執行任意數目的其他功能來連接使用者與應用程式。 因為控制項本質上是具有圖形化介面的元件，所以可以提供元件所執行的任何功能，以及提供使用者互動。 建立控制項以提供特定用途，而編寫控制項只是另一個程式設計工作。 記住這點，下列步驟代表控制項撰寫處理序的概觀。 連結可提供各個步驟的其他資訊。  
   
 > [!NOTE]
@@ -52,10 +52,11 @@ ms.locfileid: "57713407"
 10. 封裝並部署您的控制項。 如需詳細資訊，請參閱 <<c0> [ 初步了解在 Visual Studio 中的部署](/visualstudio/deployment/deploying-applications-services-and-components)。  
   
 ## <a name="see-also"></a>另請參閱
-- [逐步解說：撰寫使用 Visual Basic 複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [逐步解說：繼承自使用 Visual Basic 的 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [如何：繼承自 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
-- [如何：繼承自 Control 類別](how-to-inherit-from-the-control-class.md)
-- [如何：繼承自現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
-- [如何：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
+
+- [逐步解說：使用 Visual Basic 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-basic.md)
+- [逐步解說：使用 Visual Basic 繼承 Windows Forms 控制項](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [HOW TO：繼承 UserControl 類別](how-to-inherit-from-the-usercontrol-class.md)
+- [HOW TO：繼承控制項類別](how-to-inherit-from-the-control-class.md)
+- [HOW TO：繼承現有的 Windows Forms 控制項](how-to-inherit-from-existing-windows-forms-controls.md)
+- [HOW TO：測試 UserControl 的執行階段行為](how-to-test-the-run-time-behavior-of-a-usercontrol.md)
 - [各種自訂控制項](varieties-of-custom-controls.md)

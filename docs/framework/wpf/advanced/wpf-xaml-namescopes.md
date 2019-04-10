@@ -10,18 +10,16 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: f5a49198d6f55c9a3aa3c7557a96ab791d54351b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366747"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225790"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名稱範圍
 XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍中的名稱可以用來建立物件的 XAML 定義名稱與其在物件樹狀結構中的執行個體對等項目之間的關聯性。 一般而言，載入 XAML 應用程式的個別 XAML 頁面根時，會建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Managed 程式碼中的 XAML 名稱範圍。 作為程式設計物件的 XAML 名稱範圍由<xref:System.Windows.Markup.INameScope>介面，並由實際的類別也會實作<xref:System.Windows.NameScope>。  
-  
-  
-  
+
 <a name="Namescopes_in_Loaded_XAML_Applications"></a>   
 ## <a name="namescopes-in-loaded-xaml-applications"></a>所載入 XAML 應用程式中的名稱範圍  
  在更廣泛的程式設計或電腦科學內容中，程式設計概念通常包括可用來存取物件之唯一識別碼或名稱的原則。 針對使用識別碼或名稱的系統，在要求該名稱的物件時，名稱範圍會定義程序或技術將在其內搜尋的界限，或是在其中強制執行識別名稱唯一性的界限。 這些一般原則適用於 XAML 名稱範圍。 在 WPF 中，載入 XAML 頁面時，會在頁面的根項目上建立 XAML 名稱範圍。 在頁面根開始之 XAML 頁面內所指定的每個名稱都會新增至適當的 XAML 名稱範圍。  
@@ -97,5 +95,6 @@ XAML 名稱範圍是識別 XAML 中所定義物件的概念。 XAML 名稱範圍
 -   <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>另請參閱
+
 - [WPF XAML 的 XAML 命名空間和命名空間對應](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)
 - [x:Name 指示詞](../../xaml-services/x-name-directive.md)

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextBox control [WPF], retrieving text
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
-ms.openlocfilehash: fdd0e3974964e141c4b65e1c8851f3c371a4d501
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357608"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224581"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>HOW TO：擷取文字選取項目
 此範例示範使用一種方式<xref:System.Windows.Controls.TextBox.SelectedText%2A>屬性，以擷取使用者已在選取的文字<xref:System.Windows.Controls.TextBox>控制項。  
@@ -33,5 +33,6 @@ ms.locfileid: "57357608"
  [!code-vb[TextBox_MiscCode#_SelectText](~/samples/snippets/visualbasic/VS_Snippets_Wpf/TextBox_MiscCode/VisualBasic/Window1.xaml.vb#_selecttext)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [TextBox 概觀](textbox-overview.md)
 - [RichTextBox 概觀](richtextbox-overview.md)

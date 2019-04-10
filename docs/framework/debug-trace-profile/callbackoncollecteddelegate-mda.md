@@ -16,17 +16,17 @@ helpviewer_keywords:
 ms.assetid: 398b0ce0-5cc9-4518-978d-b8263aa21e5b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31aa9f18729bf5d85e28d484f5fd1f5aac762470
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 459465064fe9db9f2f0aebb4153a3caea173af4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54593533"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223637"
 ---
 # <a name="callbackoncollecteddelegate-mda"></a>callbackOnCollectedDelegate MDA
 如果委派以函式指標形式從 Managed 程式碼封送處理至 Unmanaged 程式碼，而在對委派進行記憶體回收之後，將回呼放在該函式指標上，`callbackOnCollectedDelegate` Managed 偵錯助理 (MDA) 就會啟動。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  嘗試透過從 Managed 委派取得的函式指標，呼叫至 Managed 程式碼中時，就會發生存取違規。 這些失敗雖然不是 Common Language Runtime (CLR) 錯誤，但看起來可能很像，因為 CLR 程式碼中發生存取違規。  
   
  失敗情況不一致，有時在函式指標上呼叫成功，有時則失敗。 只有在負載過重，或嘗試不定次數時，可能會發生失敗。  
@@ -44,7 +44,7 @@ ms.locfileid: "54593533"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  當委派被封送處理為函式指標時，執行階段會配置從 Unmanaged 轉換到 Managed 的 Thunk。 這個 Thunk 是最後叫用 Managed 委派之前，Unmanaged 程式碼實際呼叫的項目。 若未啟用 `callbackOnCollectedDelegate` MDA，當委派被回收時，會刪除 Unmanaged 封送處理程式碼。 若已啟用 `callbackOnCollectedDelegate` MDA，當委派被回收時，就不會立即刪除 Unmanaged 封送處理程式碼。 相反地，最後 1,000 個執行個體會依預設保持運作，並且在被呼叫時，變更為啟用 MDA。 在回收超過 1,001 個封送處理的委派之後，最後會刪除 Thunk。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  MDA 會報告在其 Unmanaged 函式指標上嘗試回呼之前，所回收之委派的類型名稱。  
   
 ## <a name="configuration"></a>組態  
@@ -112,6 +112,7 @@ public class Entry
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

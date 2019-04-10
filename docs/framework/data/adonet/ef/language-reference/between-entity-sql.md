@@ -2,12 +2,12 @@
 title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
-ms.openlocfilehash: cface8ab50e53f21293ad54ea6961c7e308080b3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 2c411fd7fcac9d98323d5fcfb1874f98bc664991
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54690682"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225257"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
 判斷運算式是否會產生所指定範圍內的值。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] BETWEEN 運算式具有相同的功能，做為 TRANSACT-SQL BETWEEN 運算式。  
@@ -20,13 +20,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>引數  
  `expression`  
- 用來測試是否在 `begin_expression` 和 `end_expression` 所定義範圍中的任何有效運算式。 `expression` 必須與 `begin_expression` 和 `end_expression` 兩者型別相同。  
+ 用來測試是否在 `begin_expression` 和 `end_expression` 所定義範圍中的任何有效運算式。 `expression` 必須是相同的類型`begin_expression`和`end_expression`。  
   
  `begin_expression`  
- 任何有效的運算式。 `begin_expression` 必須與 `expression` 和 `end_expression` 兩者型別相同。 `begin_expression` 應小於 `end_expression`，否則便會否定傳回值。  
+ 任何有效的運算式。 `begin_expression` 必須是相同的類型`expression`和`end_expression`。 `begin_expression` 應小於`end_expression`，否則便會否定傳回值。  
   
  `end_expression`  
- 任何有效的運算式。 `end_expression` 必須與 `expression` 和 `begin_expression` 兩者型別相同。  
+ 任何有效的運算式。 `end_expression` 必須是相同的類型`expression`和`begin_expression`。  
   
  NOT  
  指定要否定 BETWEEN 的結果。  
@@ -35,10 +35,10 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  做為一個預留位置，用來指出 `expression` 應該在 `begin_expression` 和 `end_expression` 所指示的範圍內。  
   
 ## <a name="return-value"></a>傳回值  
- 如果 `true` 是在 `expression` 和 `begin_expression` 所指定的範圍內則為 `end_expression`；否則為 `false`。 如果 `null` 為 `expression`，或者 `null` 或 `begin_expression` 為 `end_expression`，便會傳回 `null`。  
+ `true` 如果`expression`所指定的範圍之間`begin_expression`並`end_expression`; 否則`false`。 `null` 會傳回`expression`是`null`或者`begin_expression`或是`end_expression`是`null`。  
   
 ## <a name="remarks"></a>備註  
- 若要指定排除範圍，請使用大於 (>) 及小於 (<) 運算子，不要用 BETWEEN。  
+ 若要指定排除範圍，請使用大於 (>) 和小於 (<) 運算子來取代 BETWEEN。  
   
 ## <a name="example"></a>範例  
  以下 Entity SQL 查詢使用 BETWEEN 運算子來判斷運算式是否會產生所指定範圍內的值。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
@@ -50,4 +50,5 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  [!code-csharp[DP EntityServices Concepts 2#BETWEEN](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#between)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Entity SQL 參考](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)

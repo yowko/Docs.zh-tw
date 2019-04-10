@@ -1,18 +1,18 @@
 ---
-title: HOW TO：針對自動配置使用格線
+title: HOW TO：針對自動版面配置使用格線
 ms.date: 03/30/2017
 helpviewer_keywords:
 - grids [WPF], automatic layout
 - automatic layout [WPF], grid use
 ms.assetid: ab9de407-e0c1-4047-bdf0-24951bf73879
-ms.openlocfilehash: 5fa023002ac66a65e3c179434841c975287d170c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 590ad7292fea572b20ccaa09ce2886724e004a6a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357478"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227114"
 ---
-# <a name="how-to-use-a-grid-for-automatic-layout"></a>HOW TO：針對自動配置使用格線
+# <a name="how-to-use-a-grid-for-automatic-layout"></a>HOW TO：針對自動版面配置使用格線
 此範例說明如何使用自動版面配置方法中的格線，以建立當地語系化的應用程式。  
   
  當地語系化[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]可以是耗時的程序。 當地語系化人員除了翻譯文字以外，通常還需要重新調整項目的大小並重新定位。 在過去每一種語言，[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]已調整的需要調整。 現在使用的功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]，您可以設計可降低的需求調整的項目。 在呼叫的方法來撰寫應用程式都可以更輕鬆地重新調整大小和重新置放`auto layout`。  
@@ -30,5 +30,6 @@ ms.locfileid: "57357478"
 Grid  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用自動配置概觀](use-automatic-layout-overview.md)
-- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
+- [使用自動配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)

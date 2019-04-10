@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: b98d3ef62fc9dda48920d32fed6f6acf797334d6
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
-ms.translationtype: MT
+ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758985"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59227388"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>HOW TO：建立發行者原則
 組件的廠商可以應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔的狀態。 發行者原則檔會指定組件重新導向和程式碼基底設定，並使用應用程式組態檔相同的格式。 發行者原則檔會編譯成組件，並放置於全域組件快取。  
@@ -101,6 +101,7 @@ ms.locfileid: "55758985"
     >  發行者原則組件無法新增至全域組件快取，除非原始發行者原則檔位於與組件相同的目錄中。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用組件設計程式](../../../docs/framework/app-domains/programming-with-assemblies.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [使用組態檔設定應用程式](../../../docs/framework/configure-apps/index.md)

@@ -2,12 +2,12 @@
 title: 事件
 description: 了解如何F#事件可讓您在函式呼叫相關聯使用者的動作，也就是很重要的 GUI 程式設計。
 ms.date: 05/16/2016
-ms.openlocfilehash: 38eb15e59611d018b6005f64a957c9275ec931a4
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612162"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226998"
 ---
 # <a name="events"></a>事件
 
@@ -30,7 +30,7 @@ ms.locfileid: "53612162"
 
 F#事件由F#[事件](https://msdn.microsoft.com/library/f3b47c8a-4ee5-4ce8-9a72-ad305a17c4b9)類別，它會實作[IEvent](https://msdn.microsoft.com/library/8dbca0df-f8a1-40bd-8d50-aa26f6a8b862)介面。 `IEvent` 本身是結合了功能，兩個其他介面，介面`System.IObservable<'T>`並[IDelegateEvent](https://msdn.microsoft.com/library/3d849465-6b8e-4fc5-b36c-2941d734268a)。 因此，`Event` 具有相當於其他語言中委派的功能，加上來自 `IObservable` 的額外功能，這表示 F# 事件支援事件篩選，以及使用 F# 第一級函式和 Lambda 運算式做為事件處理常式。 提供此功能[事件模組](https://msdn.microsoft.com/library/8b883baa-a460-4840-9baa-de8260351bc7)。
 
-若要在類別上建立其運作方式與任何其他 .NET Framework 事件類似的事件，請將 `let` 繫結 (將 `Event` 定義為類別中的欄位) 加入至類別。 您可以指定所需的事件引數類型做為類型引數，或是空過，讓編譯器推斷適當類型。 您也必須定義將事件公開為 CLI 事件的事件成員。 這個成員應該[CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)屬性。 它會宣告屬性和它的實作是只是呼叫[發佈](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)事件的屬性。 您類別的使用者可以使用已發行事件的 `Add` 方法加入處理常式。 `Add` 方法的引數可以是 Lambda 運算式。 您可以使用事件的 `Trigger` 屬性引發事件，將引數傳遞至處理函式。 下列程式碼範例會說明這點。 在此範例中，推斷的事件型別引數是 Tuple，代表 Lambda 運算式的引數。
+若要在類別上建立其運作方式與任何其他 .NET Framework 事件類似的事件，請將 `let` 繫結 (將 `Event` 定義為類別中的欄位) 加入至類別。 您可以指定所需的事件引數類型做為型別引數，或是空過，讓編譯器推斷適當類型。 您也必須定義將事件公開為 CLI 事件的事件成員。 這個成員應該[CLIEvent](https://msdn.microsoft.com/library/d359f1dd-ffa5-42fb-8808-b4c8131a0333)屬性。 它會宣告屬性和它的實作是只是呼叫[發佈](https://msdn.microsoft.com/library/b0fdaad5-25e5-43d0-9c0c-ce37c4aeb68e)事件的屬性。 您類別的使用者可以使用已發行事件的 `Add` 方法加入處理常式。 `Add` 方法的引數可以是 Lambda 運算式。 您可以使用事件的 `Trigger` 屬性引發事件，將引數傳遞至處理函式。 下列程式碼範例會說明這點。 在此範例中，推斷的事件類型引數是 Tuple，代表 Lambda 運算式的引數。
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3605.fs)]
 
@@ -97,7 +97,6 @@ type AppForm() as this =
     [<CLIEvent>]
     member this.PropertyChanged = propertyChanged.Publish
 
-
     // Define the add and remove methods to implement this interface.
     interface INotifyPropertyChanged with
         member this.add_PropertyChanged(handler) = propertyChanged.Publish.AddHandler(handler)
@@ -138,7 +137,6 @@ type AppForm private (dummy) as this =
         this.Click |> Event.add(fun evArgs -> this.Property1 <- "text2"
         this.Property2 <- "text3")
 
-
     // This property does not have the property changed event set.
     member val Property1 : string = "text" with get, set
 
@@ -169,7 +167,6 @@ type AppForm private (dummy) as this =
             let inpc = this :> INotifyPropertyChanged
             inpc.PropertyChanged.Add(this.OnPropertyChanged)
 
-
 // Create a form, hook up the event handler, and start the application.
 let appForm = new AppForm()
 Application.Run(appForm)
@@ -179,7 +176,7 @@ Application.Run(appForm)
 
 - [成員](index.md)
 - [處理和引發事件](../../../../docs/standard/events/index.md)
-- [Lambda 運算式：`fun` 關鍵字](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda 運算式：`fun`關鍵字](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event 模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;無法&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;'Delegate'，引數&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

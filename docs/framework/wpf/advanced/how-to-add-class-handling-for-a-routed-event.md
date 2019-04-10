@@ -1,5 +1,5 @@
 ---
-title: HOW TO：加入路由事件的類別處理
+title: HOW TO：新增路由事件的類別處理
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - task_core_add_class_handling_routed_properties [WPF]
 - class handlers [WPF], routed events
 ms.assetid: 15b7b06c-9112-4ee5-b30a-65d10c5c5df6
-ms.openlocfilehash: 8c973871336c3389161ce25ae52d2dfaef9c53a5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 7b897954cbdab461dc0305c6290e67c1af5282c3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361768"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224263"
 ---
-# <a name="how-to-add-class-handling-for-a-routed-event"></a>HOW TO：加入路由事件的類別處理
+# <a name="how-to-add-class-handling-for-a-routed-event"></a>HOW TO：新增路由事件的類別處理
 藉由類別處理常式或路由中任何指定節點上的執行個體處理常式可以處理路由的事件。 類別處理常式會先叫用，而且可以由類別實作來隱藏執行個體處理的事件，或引進其他事件的特定行為的基底類別所擁有的事件。 此範例說明兩種密切相關的技術，實作類別處理常式。  
   
 ## <a name="example"></a>範例  
@@ -33,6 +33,7 @@ ms.locfileid: "57361768"
  [!code-vb[ClassHandling#StaticAndRegisterClassHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ClassHandling/visualbasic/sdksamplelibrary/class1.vb#staticandregisterclasshandler)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.EventManager>
 - [將路由事件標記為已處理以及類別處理](marking-routed-events-as-handled-and-class-handling.md)
 - [處理路由事件](how-to-handle-a-routed-event.md)

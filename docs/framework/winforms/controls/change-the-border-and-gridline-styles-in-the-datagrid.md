@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 框線 及 Windows Form DataGridView 控制項中的格線樣式
+title: HOW TO：變更 Windows Forms DataGridView 控制項的框線和格線樣式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: b4984dca6fb7dc8575b00758f0d61d9ff011e1ca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703359"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224984"
 ---
-# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>HOW TO：變更 框線 及 Windows Form DataGridView 控制項中的格線樣式
+# <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>HOW TO：變更 Windows Forms DataGridView 控制項的框線和格線樣式
 使用<xref:System.Windows.Forms.DataGridView>控制項，您可以自訂控制項的框線和格線可改善使用者體驗的外觀。 您可以修改格線的色彩，除了在控制項內的資料格的框線樣式的控制項框線樣式。 您也可以套用不同的儲存格一般的資料格、 資料列標題儲存格和資料行標題儲存格的框線樣式。  
   
 > [!NOTE]
@@ -54,10 +54,10 @@ ms.locfileid: "57703359"
   
 -   名為 `dataGridView1` 的 <xref:System.Windows.Forms.DataGridView> 控制項。  
   
--   
-  <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
+-   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType> 和 <xref:System.Drawing?displayProperty=nameWithType> 組件的參考。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.BorderStyle>
 - <xref:System.Windows.Forms.DataGridView.BorderStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.CellBorderStyle%2A?displayProperty=nameWithType>
@@ -66,4 +66,4 @@ ms.locfileid: "57703359"
 - <xref:System.Windows.Forms.DataGridView.RowHeadersBorderStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellBorderStyle>
 - <xref:System.Windows.Forms.DataGridViewHeaderBorderStyle>
-- [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)

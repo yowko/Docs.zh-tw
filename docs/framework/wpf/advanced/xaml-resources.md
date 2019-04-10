@@ -7,20 +7,19 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: f5d6ae2d21058e7e6dd9fa9736800237082766d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364745"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230014"
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](resources-and-code.md)。  
   
 > [!NOTE]
 >  本主題中所述的資源檔案為不同的資源檔中所述[WPF 應用程式資源、 內容和資料檔案](../app-development/wpf-application-resource-content-and-data-files.md)也不同於中所述的內嵌或連結資源[管理應用程式資源 (.NET)](/visualstudio/ide/managing-application-resources-dotnet)。  
-  
-  
+
 <a name="usingresources"></a>   
 ## <a name="using-resources-in-xaml"></a>在 XAML 中使用資源  
  下列範例會定義<xref:System.Windows.Media.SolidColorBrush>頁面的根項目上的資源。 此範例會參考資源，並使用它來設定屬性的數個子項目，包括<xref:System.Windows.Shapes.Ellipse>，則<xref:System.Windows.Controls.TextBlock>，和<xref:System.Windows.Controls.Button>。  
@@ -129,7 +128,7 @@ ms.locfileid: "57364745"
   
 -   要設定的屬性必須是屬性上<xref:System.Windows.FrameworkElement>或<xref:System.Windows.FrameworkContentElement>。 屬性都必須受<xref:System.Windows.DependencyProperty>。  
   
--   參考中的值是<xref:System.Windows.Style> <xref:System.Windows.Setter>。  
+-   參考中的值是<xref:System.Windows.Style><xref:System.Windows.Setter>。  
   
 -   所設定的屬性必須是屬性上<xref:System.Windows.Freezable>提供的值為<xref:System.Windows.FrameworkElement>或是<xref:System.Windows.FrameworkContentElement>屬性，或<xref:System.Windows.Setter>值。  
   
@@ -145,7 +144,7 @@ ms.locfileid: "57364745"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- 該樣式其實有索引鍵： 隱含索引鍵`typeof(` <xref:System.Windows.Controls.Button> `)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
+ 該樣式其實有索引鍵： 隱含索引鍵`typeof(`<xref:System.Windows.Controls.Button>`)`。 在標記中，您可以指定<xref:System.Windows.Style.TargetType%2A>直接做為類型名稱 (或您可以選擇性地使用[{x: Type...}](../../xaml-services/x-type-markup-extension.md) 要傳回<xref:System.Type>。  
   
  透過所使用的預設佈景主題樣式機制[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]，樣式會套用作為執行階段樣式<xref:System.Windows.Controls.Button>在頁面上，即使<xref:System.Windows.Controls.Button>本身不會嘗試指定其<xref:System.Windows.FrameworkElement.Style%2A>屬性或特定的資源參考的樣式。 稍早在比使用佈景主題字典樣式所具有的相同金鑰的佈景主題字典樣式的查閱序列中找到您頁面中定義的樣式。 您可以指定`<Button>Hello</Button>`頁面，並以您定義的樣式中的任何地方<xref:System.Windows.Style.TargetType%2A>的`Button`會套用至該按鈕。 如果您想，您可以仍然明確樣式的索引鍵具有相同的型別值<xref:System.Windows.Style.TargetType%2A>、 清楚的標記，但為選用。  
   
@@ -154,11 +153,12 @@ ms.locfileid: "57364745"
  <xref:System.Windows.DataTemplate> 也有隱含索引鍵。 隱含索引鍵<xref:System.Windows.DataTemplate>是<xref:System.Windows.DataTemplate.DataType%2A>屬性值。 <xref:System.Windows.DataTemplate.DataType%2A> 也可以指定為型別名稱，而不是使用明確[{x: Type...}](../../xaml-services/x-type-markup-extension.md). 如需詳細資訊，請參閱 <<c0> [ 資料範本化概觀](../data/data-templating-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.ResourceDictionary>
 - [應用程式資源](optimizing-performance-application-resources.md)
 - [資源和程式碼](resources-and-code.md)
 - [定義和參考資源](how-to-define-and-reference-a-resource.md)
 - [應用程式管理概觀](../app-development/application-management-overview.md)
-- [x:Type 標記延伸模組](../../xaml-services/x-type-markup-extension.md)
+- [x:Type 標記延伸](../../xaml-services/x-type-markup-extension.md)
 - [StaticResource 標記延伸](staticresource-markup-extension.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)

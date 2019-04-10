@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: 110b8ffe2fb3e00d7a6787e32d066f62126ebf9a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617183"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225127"
 ---
 # <a name="how-to-specify-client-credential-values"></a>HOW TO：指定用戶端認證值
 使用 Windows Communication Foundation (WCF)，服務可以指定用戶端驗證服務的方式。 例如，服務可以規定用戶端必須出示憑證交付驗證。  
@@ -39,7 +39,7 @@ ms.locfileid: "54617183"
 ```  
   
 ## <a name="example-tcp-transport-mode-with-certificate-as-client-credential"></a>範例：TCP 傳輸模式結合用戶端認證的憑證  
- 這個範例會將安全性模式設為傳輸模式，並將用戶端認證值設為 X.509 憑證。 下列程序示範如何透過程式碼與組態，設定用戶端的用戶端認證值。 這是假設您已使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務傳回中繼資料 （程式碼和組態）。 如需詳細資訊，請參閱[＜How to：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
+ 這個範例會將安全性模式設為傳輸模式，並將用戶端認證值設為 X.509 憑證。 下列程序示範如何透過程式碼與組態，設定用戶端的用戶端認證值。 這是假設您已使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務傳回中繼資料 （程式碼和組態）。 如需詳細資訊，請參閱[如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)。  
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>若要透過程式碼指定用戶端的用戶端認證值  
   
@@ -92,6 +92,7 @@ ms.locfileid: "54617183"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.NetTcpBinding>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential.SetCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateRecipientServiceCredential>
@@ -101,9 +102,9 @@ ms.locfileid: "54617183"
 - [選取認證類型](../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
 - [使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)
-- [如何：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [HOW TO：建立用戶端](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [\<netTcpBinding>](../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)
-- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<安全性 >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
 - [\<message>](../../../docs/framework/configure-apps/file-schema/wcf/message-element-of-nettcpbinding.md)
 - [\<behavior>](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)
 - [\<behaviors>](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)

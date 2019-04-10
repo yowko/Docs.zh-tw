@@ -2,12 +2,12 @@
 title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 0f32fd6d65db529ba1015dedd98f99efd7f408c4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588101"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225582"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
 Windows Communication Foundation (WCF) 範例的目的是共用一個通用的虛擬目錄，名為 servicemodelsamples 的會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
@@ -33,7 +33,7 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 6.  設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的實體路徑。  建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
-7.  按一下 [確定 **Deploying Office Solutions**]。 隨即為 WCF 範例建立 Web 應用程式。  
+7.  按一下 [確定] 。 隨即為 WCF 範例建立 Web 應用程式。  
   
     > [!NOTE]
     >  這項工作必須執行一次，因為所有的 WCF 範例都使用相同的 servicemodelsamples Web 應用程式。  
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 7.  預設會選取下列核取方塊：  
   
-    -   **Read**  
+    -   **讀取**  
   
-    -   **執行指令碼 （例如 ASP)**  
+    -   **執行指令碼 (如 ASP)**  
   
 8.  按一下 **下一步**，然後按一下**完成**以完成精靈。  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 2.  預設會選取下列核取方塊：  
   
-    -   **Read**  
+    -   **讀取**  
   
     -   **記錄查閱**  
   
-    -   **此資源編製索引**  
+    -   **編製這個資源的索引**  
   
 3.  選取 **瀏覽目錄**核取方塊。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
   
@@ -191,4 +191,5 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
     3.  在 **群組**資料行中，確認的值**ASPNET**是 「 使用者 」。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Internet Information Service 裝載指示](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)

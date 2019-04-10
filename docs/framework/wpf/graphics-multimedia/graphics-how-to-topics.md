@@ -8,12 +8,12 @@ helpviewer_keywords:
 - graphics [WPF], how-to topics
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
-ms.openlocfilehash: 957040cd8202f2fa2bb1838718a49dbe028c02b1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358781"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230651"
 ---
 # <a name="graphics-how-to-topics"></a>圖形 HOW TO 主題
 下列主題示範如何使用的圖形功能[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]。  
@@ -23,10 +23,11 @@ ms.locfileid: "57358781"
  [使用 PointAnimation 建立物件位置的動畫](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [轉換點和向量](how-to-transform-points-and-vectors.md)  
  [將玻璃框架擴充至 WPF 應用程式中](extend-glass-frame-into-a-wpf-application.md)  
- [如何：透過快取元素改善轉譯效能](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [如何：使用快取項目當做筆刷](how-to-use-a-cached-element-as-a-brush.md)  
+ [HOW TO：透過快取項目改善轉譯效能](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [HOW TO：使用快取的項目作為筆刷](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Shapes.Shape>
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Imaging.BitmapImage>

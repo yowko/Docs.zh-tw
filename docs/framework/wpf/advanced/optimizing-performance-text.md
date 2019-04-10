@@ -11,15 +11,15 @@ helpviewer_keywords:
 - text [WPF], performance
 - glyphs [WPF]
 ms.assetid: 66b1b9a7-8618-48db-b616-c57ea4327b98
-ms.openlocfilehash: 14751d8241dabd0cf7c41f2920fab32e21dc43e2
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.openlocfilehash: e5dfa170d2744e634ed456de491d61c0e442eb45
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409402"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225959"
 ---
 # <a name="optimizing-performance-text"></a>最佳化效能：文字
-[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援透過使用功能豐富的 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 控制項來呈現文字內容。 一般而言，您可以將文字轉譯劃分為三個層級：  
+[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援透過使用功能豐富的文字內容的呈現方式[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]控制項。 一般而言，您可以將文字轉譯劃分為三個層級：  
   
 1.  使用<xref:System.Windows.Documents.Glyphs>和<xref:System.Windows.Media.GlyphRun>直接物件。  
   
@@ -28,8 +28,7 @@ ms.locfileid: "58409402"
 3.  使用高階的控制項，例如<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>物件。  
   
  本主題提供文字轉譯的效能建議。  
-  
-  
+
 <a name="Glyph_Level"></a>   
 ## <a name="rendering-text-at-the-glyph-level"></a>在圖像層級轉譯文字  
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供進階的文字支援包括圖像層級標記，直接存取<xref:System.Windows.Documents.Glyphs>客戶想要攔截和保存格式化之後的文字。 這些功能可針對下列每個案例中的不同文字轉譯需求提供重要支援。  
@@ -38,9 +37,9 @@ ms.locfileid: "58409402"
   
 -   列印案例。  
   
-    -   使用 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作為裝置印表機語言。  
+    -   [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 作為裝置印表機語言。  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)].  
+    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
   
     -   先前的印表機驅動程式，從 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 應用程式輸出為固定格式。  
   
@@ -75,7 +74,7 @@ ms.locfileid: "58409402"
   
 <a name="FlowDocument_TextBlock_Label"></a>   
 ## <a name="flowdocument-textblock-and-label-controls"></a>FlowDocument、TextBlock 和 Label 控制項  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個將文字繪製到螢幕的控制項。 每個控制項都是針對不同案例，而且有自己的功能與限制清單。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 包含多個控制項的文字繪製到螢幕。 每個控制項都是不同案例的目標，且有自己的功能與限制清單。  
   
 ### <a name="flowdocument-impacts-performance-more-than-textblock-or-label"></a>FlowDocument 對效能的影響超過 TextBlock 或 Label  
  一般情況下，<xref:System.Windows.Controls.TextBlock>必要項目，例如一個簡短的句子，在有限的文字支援時，就應該使用項目[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]。 <xref:System.Windows.Controls.Label> 需要最少的文字支援時，可以使用。 <xref:System.Windows.Documents.FlowDocument>元素是支援豐富呈現內容，自動重排文件的容器，因此，具有比使用更高的效能影響<xref:System.Windows.Controls.TextBlock>或<xref:System.Windows.Controls.Label>控制項。  
@@ -98,7 +97,7 @@ ms.locfileid: "58409402"
   
  下表顯示顯示 1000年個的成本<xref:System.Windows.Controls.TextBlock>物件，包含或不含明確<xref:System.Windows.Documents.Run>。  
   
-|**TextBlock 類型**|**建立時間 (毫秒)**|**轉譯時間 (毫秒)**|  
+|**TextBlock 類型**|**建立時間 （毫秒）**|**呈現時間 （毫秒）**|  
 |------------------------|------------------------------|----------------------------|  
 |Run 設定文字屬性|146|540|  
 |TextBlock 設定文字屬性|43|453|  
@@ -108,7 +107,7 @@ ms.locfileid: "58409402"
   
  這個問題的解決方法很簡單。 如果<xref:System.Windows.Controls.Label>未設為自訂<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>值，取代<xref:System.Windows.Controls.Label>具有<xref:System.Windows.Controls.TextBlock>和資料繫結其<xref:System.Windows.Controls.TextBlock.Text%2A>來源字串的屬性。  
   
-|**資料繫結屬性**|**更新時間 (毫秒)**|  
+|**資料繫結屬性**|**更新時間 （毫秒）**|  
 |-----------------------------|----------------------------|  
 |Label.Content|835|  
 |TextBlock.Text|242|  
@@ -143,14 +142,14 @@ ms.locfileid: "58409402"
   
  下表顯示的效能成本，顯示 1000年個<xref:System.Windows.Documents.Hyperlink>與且不含底線的項目。  
   
-|**超連結**|**建立時間 (毫秒)**|**轉譯時間 (毫秒)**|  
+|**超連結**|**建立時間 （毫秒）**|**呈現時間 （毫秒）**|  
 |-------------------|------------------------------|----------------------------|  
 |包含底線|289|1130|  
 |不含底線|299|776|  
   
 <a name="Text_Formatting_Features"></a>   
 ## <a name="text-formatting-features"></a>文字格式設定功能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供 RTF 文字格式設定服務，例如自動斷字。 這些服務可能會影響應用程式效能，只有在必要時才應使用。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供 rtf 文字格式設定服務，例如自動斷字。 這些服務可能會影響應用程式效能，只有在必要時才應使用。  
   
 ### <a name="avoid-unnecessary-use-of-hyphenation"></a>避免使用不必要的斷字  
  自動斷字功能尋找的文字行，連字號中斷點，並允許其他中斷位置中的線條<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Documents.FlowDocument>物件。 這些物件預設已停用自動斷字功能。 您可以將物件的 IsHyphenationEnabled 屬性設定為 `true` 來啟用此功能。 然而，啟用此功能會導致 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 起始 [!INCLUDE[TLA#tla_com](../../../../includes/tlasharptla-com-md.md)] 的互通性，這可能會影響應用程式效能。 若非必要，建議您不要使用自動斷字功能。  
@@ -162,6 +161,7 @@ ms.locfileid: "58409402"
  最佳段落功能<xref:System.Windows.Documents.FlowDocument>物件配置段落，讓空白字元盡量平均分散。 依預設已停用最佳段落功能。 您可以啟用此功能藉由設定物件的<xref:System.Windows.Documents.FlowDocument.IsOptimalParagraphEnabled%2A>屬性設`true`。 不過，啟用此功能會影響應用程式效能。 若非必要，建議您不要使用最佳段落功能。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [最佳化 WPF 應用程式效能](optimizing-wpf-application-performance.md)
 - [應用程式效能規劃](planning-for-application-performance.md)
 - [運用硬體](optimizing-performance-taking-advantage-of-hardware.md)

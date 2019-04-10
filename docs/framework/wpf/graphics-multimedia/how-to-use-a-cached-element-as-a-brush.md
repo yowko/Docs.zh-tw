@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用快取項目當做筆刷
+title: HOW TO：使用快取的項目作為筆刷
 ms.date: 03/30/2017
 helpviewer_keywords:
 - BitmapCache [WPF], using
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - BitmapCacheBrush [WPF], using
 - CacheMode [WPF], using
 ms.assetid: d36e944a-866e-4baf-98c4-fd6a75f6fdd0
-ms.openlocfilehash: 008bec87390a807ae2b4797af8b86aaf59c92ef5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 78df242c7f00b69e36ea4ab6751f51509d9e2220
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372486"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229364"
 ---
-# <a name="how-to-use-a-cached-element-as-a-brush"></a>HOW TO：使用快取項目當做筆刷
+# <a name="how-to-use-a-cached-element-as-a-brush"></a>HOW TO：使用快取的項目作為筆刷
 使用<xref:System.Windows.Media.BitmapCacheBrush>類別，以有效率地重複使用的快取的項目。 若要快取項目，建立的新執行個體<xref:System.Windows.Media.BitmapCache>類別，並將它指派給項目的<xref:System.Windows.UIElement.CacheMode%2A>屬性。  
   
 ## <a name="example"></a>範例  
@@ -23,7 +23,8 @@ ms.locfileid: "57372486"
  [!code-xaml[System.Windows.Media.BitmapCacheBrush#_BitmapCacheBrushXAML](~/samples/snippets/csharp/VS_Snippets_Wpf/system.windows.media.bitmapcachebrush/cs/window1.xaml#_bitmapcachebrushxaml)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Media.BitmapCache>
 - <xref:System.Windows.Media.BitmapCacheBrush>
 - <xref:System.Windows.UIElement.CacheMode%2A>
-- [如何：透過快取元素改善轉譯效能](how-to-improve-rendering-performance-by-caching-an-element.md)
+- [HOW TO：透過快取項目改善轉譯效能](how-to-improve-rendering-performance-by-caching-an-element.md)

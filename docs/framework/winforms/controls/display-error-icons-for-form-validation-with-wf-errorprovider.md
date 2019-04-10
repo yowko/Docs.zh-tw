@@ -1,5 +1,5 @@
 ---
-title: HOW TO：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示
+title: HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - ErrorProvider component [Windows Forms], displaying error icons
 - error messages [Windows Forms], displaying icons
 ms.assetid: 3b681a32-9db4-497b-a34b-34980eabee46
-ms.openlocfilehash: f676454849c37da8c0a5f944be05c3f6c95887b4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 39dd77fee36b172f6c38746bfe970094ec9edb4e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707634"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223546"
 ---
-# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>HOW TO：表單驗證，使用 Windows Forms ErrorProvider 元件顯示錯誤圖示
+# <a name="how-to-display-error-icons-for-form-validation-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件顯示表單驗證的錯誤圖示
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件，以在使用者輸入無效的資料時顯示錯誤圖示。 您必須擁有至少兩個控制項其間索引標籤，並藉此叫用的驗證程式碼以在表單上。  
   
 ### <a name="to-display-an-error-icon-when-a-controls-value-is-invalid"></a>控制項的值無效時顯示錯誤圖示  
@@ -93,6 +93,7 @@ ms.locfileid: "57707634"
 4.  執行專案。 在第一個控制項，然後第二個索引標籤中輸入無效 （在此範例中，非數字） 的資料。 顯示錯誤圖示時，請指向它以查看錯誤文字的滑鼠指標。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Forms.ErrorProvider.SetError%2A>
 - [ErrorProvider 元件概觀](errorprovider-component-overview-windows-forms.md)
-- [如何：資料集使用 Windows Forms ErrorProvider 元件檢視錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)
+- [HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤](view-errors-within-a-dataset-with-wf-errorprovider-component.md)

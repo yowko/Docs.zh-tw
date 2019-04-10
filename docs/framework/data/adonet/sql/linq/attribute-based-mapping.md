@@ -2,19 +2,19 @@
 title: 屬性架構對應
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: bd16731684a04ca7a92dbb6560b5c008558896cf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54713898"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223559"
 ---
 # <a name="attribute-based-mapping"></a>屬性架構對應
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 對應至 SQL Server 資料庫[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]任一個套用的屬性或使用外部對應檔案的物件模型。 本主題概述以屬性 (Attribute) 為基礎的方法。  
   
- 以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 (Relationship) 對應至這些類別中的屬性 (Property)。 您也可以使用屬性 (Attribute) 來對應物件模型中的繼承階層架構 (Inheritance Hierarchy)。 如需詳細資訊，請參閱[＜How to：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 以最基本形式存在的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將資料庫對應至 <xref:System.Data.Linq.DataContext>、將資料表對應至類別，並且將資料行和關聯性 (Relationship) 對應至這些類別中的屬性 (Property)。 您也可以使用屬性 (Attribute) 來對應物件模型中的繼承階層架構 (Inheritance Hierarchy)。 如需詳細資訊，請參閱[如何：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
- 通常使用 Visual Studio 的開發人員執行以屬性為基礎的對應使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。 如需詳細資訊，請參閱[＜How to：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
+ 通常使用 Visual Studio 的開發人員執行以屬性為基礎的對應使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]。 您也可以使用 SQLMetal 命令列工具，或者自行撰寫屬性的程式碼。 如需詳細資訊，請參閱[如何：在 Visual Basic 中產生物件模型或C# ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)。  
   
 > [!NOTE]
 >  您也可以使用外部 XML 檔進行對應。 如需詳細資訊，請參閱 <<c0> [ 外部對應](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)。  
@@ -26,12 +26,12 @@ ms.locfileid: "54713898"
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 使用，可以指定資料庫的名稱。|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|請參閱 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 使用，可以指定資料庫的名稱。|  
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 屬性  
- 使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將具有這個屬性的類別視為持續性類別。 下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 (Property)。  
+ 使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將此屬性會做為持續性的類別的類別。 下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 (Property)。  
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "54713898"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|表示資料行含有 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 繼承階層架構 (Inheritance Hierarchy) 所需的鑑別子值。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|表示這個類別成員是資料表的主索引鍵 (可能是唯一一個也可能是多個主索引鍵之一)。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|以資料庫時間戳記或版本號碼識別成員的資料行型別。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`，除非成員的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 為 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`除非<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>是`true`成員|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。|  
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "54713898"
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteOnNull%2A>|Boolean|`false`|如果位於外部索引鍵成員都不可為 null 的關聯上，則會在關聯設為 null 時刪除物件。|  
-|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|無|將刪除行為加入至關聯。|  
+|<xref:System.Data.Linq.Mapping.AssociationAttribute.DeleteRule%2A>|String|None|將刪除行為加入至關聯。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsForeignKey%2A>|Boolean|`false`|若為 true，則指定這個成員做為代表資料庫關聯性之關聯中的外部索引鍵。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.IsUnique%2A>|Boolean|`false`|若為 true，則表示外部索引鍵有唯一性條件約束。|  
 |<xref:System.Data.Linq.Mapping.AssociationAttribute.OtherKey%2A>|String|相關類別的 ID|指定目標實體類別的一個或多個成員，做為關聯另一端的索引值。|  
@@ -114,7 +114,7 @@ ms.locfileid: "54713898"
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|無|指定資料庫型別。|  
+|<xref:System.Data.Linq.Mapping.ParameterAttribute.DbType%2A>|String|None|指定資料庫型別。|  
 |<xref:System.Data.Linq.Mapping.ParameterAttribute.Name%2A>|String|與資料庫中的參數名稱相同的字串|指定參數的名稱。‏|  
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ParameterAttribute>。  
@@ -143,4 +143,5 @@ ms.locfileid: "54713898"
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DataAttribute>。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)

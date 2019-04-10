@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 009115d985c51961bffddaaa3149e15ba9a5502b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679757"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223973"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
@@ -50,12 +50,12 @@ ms.locfileid: "54679757"
 ## <a name="unexpected-query-results"></a>未預期的查詢結果  
  問： 我的查詢傳回未預期的結果。 我該如何檢查發生了什麼狀況？  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供多項工具來檢查它所產生的 SQL 程式碼。 最重要的其中一項工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 如需詳細資訊，請參閱 <<c0> [ 偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供數個工具來檢查它所產生的 SQL 程式碼。 最重要的其中一項工具就是 <xref:System.Data.Linq.DataContext.Log%2A>。 如需詳細資訊，請參閱 <<c0> [ 偵錯支援](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)。  
   
 ## <a name="unexpected-stored-procedure-results"></a>未預期的預存程序結果  
  問： 我有一個預存程序，它的傳回值是由 `MAX()` 計算的。 當我將預存程序拖曳到 [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)]介面時，傳回值不正確。  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供兩種方式來藉由預存程序傳回資料庫產生的值。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 提供兩種方式可傳回資料庫產生的值，藉由預存程序：  
   
 -   藉由命名輸出結果。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "54679757"
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>避免在插入或更新時明確設定資料庫產生的值  
  問： 我的資料庫資料表有個 `DateCreated` 資料行，它預設為 SQL `Getdate()`。 當我嘗試使用 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 插入新的資料錄時，值會設成 `NULL`。 但我本來預期它會設成資料庫預設值。  
   
- 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會自動針對識別 (自動遞增)、rowguidcol (資料庫產生的 GUID) 和時間戳記資料行處理這種情況。 在其他情況下，您應該手動設定<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`並<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>屬性。  
+ 答： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 處理這種情況下，自動針對識別 （自動遞增）、 rowguidcol (資料庫產生的 GUID) 和時間戳記資料行。 在其他情況下，您應該手動設定<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A> = `true`並<xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A> = <xref:System.Data.Linq.Mapping.AutoSync.Always> / <xref:System.Data.Linq.Mapping.AutoSync.OnInsert> / <xref:System.Data.Linq.Mapping.AutoSync.OnUpdate>屬性。  
   
 ## <a name="multiple-dataloadoptions"></a>多個 DataLoadOptions  
  問： 我可以指定其他載入選項，而不覆寫第一個載入選項嗎？  
@@ -149,7 +149,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="sql-injection-attacks"></a>SQL 插入攻擊  
  問： [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何保護不受 SQL 插入攻擊？  
   
- 答： 對於以串連使用者輸入形成的傳統 SQL 查詢來說，SQL 插入一直是相當重大的風險。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 藉由在查詢中使用 <xref:System.Data.SqlClient.SqlParameter>，可避免這類插入。 使用者輸入會轉換成參數值。 如此一來，惡意命令就無法藉由客戶輸入來使用。  
+ 答： 對於以串連使用者輸入形成的傳統 SQL 查詢來說，SQL 插入一直是相當重大的風險。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用會避免這類插入<xref:System.Data.SqlClient.SqlParameter>在查詢中。 使用者輸入會轉換成參數值。 如此一來，惡意命令就無法藉由客戶輸入來使用。  
   
 ## <a name="changing-read-only-flag-in-dbml-files"></a>變更 DBML 檔案中的唯讀旗標  
  問： 從 DBML 檔案建立物件模型時，要如何排除部分屬性的 setter？  
@@ -160,7 +160,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
 2.  加入部分類別。 針對唯讀成員建立含參數的建構函式。  
   
-3.  檢閱預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
+3.  檢視預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
   
     > [!CAUTION]
     >  如果您使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能會覆寫您的變更。  
@@ -175,7 +175,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="mapping-data-from-multiple-tables"></a>對應多個資料表的資料  
  問： 我的實體中的資料來自於多個資料表。 我該如何對應這些資料？  
   
- 答： 您可以在資料庫中建立檢視，然後將實體對應到該檢視。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會針對檢視產生與資料表相同的 SQL。  
+ 答： 您可以在資料庫中建立檢視，然後將實體對應到該檢視。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會產生與檢視相同的 SQL 資料表。  
   
 > [!NOTE]
 >  在這種情況下使用檢視會有限制。 此方式在基礎檢視支援 <xref:System.Data.Linq.Table%601> 上所執行的作業時最安全。 只有您才知道會執行哪些作業。 例如，大部分的應用程式都是唯讀的而另外有相當多執行`Create` / `Update` / `Delete`作業只能藉由使用預存程序，針對檢視。  
@@ -190,7 +190,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="second-datacontext-is-not-updated"></a>第二個 DataContext 未更新  
  問： 我使用一個 <xref:System.Data.Linq.DataContext> 執行個體來儲存資料庫中的值。 但是，相同資料庫上的第二個 <xref:System.Data.Linq.DataContext> 卻未反映更新的值。 第二個 <xref:System.Data.Linq.DataContext> 執行個體似乎傳回快取的值。  
   
- 答： 這種行為是設計上的預期行為。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會繼續傳回您在第一個執行個體中看到的相同執行個體/值。 當您進行更新時，會使用開放式並行存取。 這時會使用原始資料來檢查目前資料庫狀態，以確認它實際上是否仍未變更。 如果變更，就會發生衝突，而應用程式必須解決此衝突。 應用程式可選擇的其中一種做法是將原始狀態重設為目前資料庫狀態，然後嘗試再次更新。 如需詳細資訊，請參閱[＜How to：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
+ 答： 這種行為是設計上的預期行為。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會繼續傳回相同的執行個體/值，您所見，第一個執行個體中。 當您進行更新時，會使用開放式並行存取。 這時會使用原始資料來檢查目前資料庫狀態，以確認它實際上是否仍未變更。 如果變更，就會發生衝突，而應用程式必須解決此衝突。 應用程式可選擇的其中一種做法是將原始狀態重設為目前資料庫狀態，然後嘗試再次更新。 如需詳細資訊，請參閱[如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)。  
   
  您也可以將 <xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A> 設定為 false，以關閉快取和變更追蹤。 這樣每次查詢時，就能擷取最新的值。  
   
@@ -200,6 +200,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
  答： 內容在唯讀模式下無法追蹤變更。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [參考資料](../../../../../../docs/framework/data/adonet/sql/linq/reference.md)
 - [疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)
 - [LINQ to SQL 中的安全性](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)

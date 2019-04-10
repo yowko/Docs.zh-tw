@@ -2,18 +2,18 @@
 title: 使用自訂活動設計工具中的 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 87f1052b5bf2c7c4e260aa606cb03b978726bb77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587865"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229377"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>使用自訂活動設計工具中的 ExpressionTextBox
 這個範例示範如何在自訂活動設計工具內使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自訂活動 `MultiAssign` 會將兩個字串值指派給兩個字串變數。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控制項會繫結至 <xref:System.Activities.InArgument>，而某些則繫結至 <xref:System.Activities.OutArgument>。
 
 ## <a name="sample-details"></a>範例詳細資料
- `ArgumentToExpressionConverter` 是將運算式繫結至引數時所使用的型別轉換子。 `ConverterParameter` 必須適當地設定為 `In` 或 `Out`。 不支援 `InOut`。
+ `ArgumentToExpressionConverter` 是將運算式繫結至引數時所使用的型別轉換子。 `ConverterParameter` 必須適當地設定為 `In` 或 `Out`。 `InOut` 不支援。
 
  `UseLocationExpression`屬性會用於`OutArgument`以指定的運算式應該是 l-value （「 左的值 」 或 「 位置值 」） 運算式。 在大多數情況下，L-value 運算式是有效的 Visual Basic 識別碼，用來指出傳回的 `OutArgument` 為變數或引數名稱。
 
@@ -47,5 +47,6 @@ ms.locfileid: "54587865"
 >  `<InstallDrive>:\WF_WCF_Samples\WF\Basic\CustomActivities\CustomActivityDesigners\ExpressionTextBox`  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Activities.Presentation.View.ExpressionTextBox>
 - [使用工作流程設計工具開發應用程式](/visualstudio/workflow-designer/developing-applications-with-the-workflow-designer)

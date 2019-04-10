@@ -1,5 +1,5 @@
 ---
-title: HOW TO：從線條、 曲線和形狀建立圖形
+title: HOW TO：從直線、曲線和形狀建立圖形
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from shapes
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
-ms.openlocfilehash: 1977f1c9efe2c379ef6039870aade300efca2bdd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709493"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224906"
 ---
-# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>HOW TO：從線條、 曲線和形狀建立圖形
+# <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>HOW TO：從直線、曲線和形狀建立圖形
 若要建立圖表，建構<xref:System.Drawing.Drawing2D.GraphicsPath>，然後呼叫方法，例如<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>和<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>，以新增至路徑的基本項目。  
   
 ## <a name="example"></a>範例  
@@ -35,6 +35,7 @@ ms.locfileid: "57709493"
  先前的範例專為搭配 Windows Form 使用，而且它們需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Drawing.Drawing2D.GraphicsPath>
 - [建構和繪製路徑](constructing-and-drawing-paths.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)

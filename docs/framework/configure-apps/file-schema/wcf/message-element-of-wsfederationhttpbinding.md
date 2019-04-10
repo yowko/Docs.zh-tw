@@ -1,13 +1,13 @@
 ---
-title: <message> 的 <wsFederationHttpBinding> 項目
+title: <message> 元素 (屬於 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
-ms.openlocfilehash: d5e5ba1785dd5c6c3aaeccd5bdd7ac4443f85661
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759115"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223810"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<訊息 > 項目\<wsFederationHttpBinding >
 定義訊息層級安全性設定[ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)。  
@@ -86,7 +86,7 @@ ms.locfileid: "55759115"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|algorithmSuite|設定訊息加密和金鑰包裝演算法。 請參閱「algorithmSuite 屬性」表格中此屬性的有效值。 預設值是 `Basic256`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。|  
+|algorithmSuite|設定訊息加密和金鑰包裝演算法。 請參閱「algorithmSuite 屬性」表格中此屬性的有效值。 預設值為 `Basic256`。<br /><br /> 此屬性的型別為 <xref:System.ServiceModel.Security.SecurityAlgorithmSuite>。 這些演算法會對應至安全性原則語言 (WS-SecurityPolicy) 規格中指定的演算法。|  
 |issuedKeyType|指定要發行的金鑰類型。 有效值包括以下的值：<br /><br /> -   SymmetricKey<br />-   PublicKey<br /><br /> 預設為 `SymmetricKey`。 此屬性的型別為 <xref:System.IdentityModel.Tokens.SecurityKeyType>。|  
 |issuedTokenType|字串，其中包含的 URI 指定要發行的權杖型別。 預設為 `null`。|  
 |negotiateServiceCredential|布林值，指定服務認證是否應交換做為交涉的一部分，或可供超出範圍使用。 預設為 `true`，意指交涉服務認證。|  
@@ -125,15 +125,16 @@ ms.locfileid: "55759115"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|定義繫結的安全性設定。|  
+|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|定義繫結的安全性設定。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.FederatedMessageSecurityOverHttp>
 - <xref:System.ServiceModel.Configuration.WSFederationHttpSecurityElement.Message%2A>
 - <xref:System.ServiceModel.WSFederationHttpSecurity.Message%2A>
 - <xref:System.ServiceModel.Configuration.FederatedMessageSecurityOverHttpElement>
-- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

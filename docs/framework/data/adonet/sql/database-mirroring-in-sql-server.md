@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: e70624a43945d29c1690fbed6e39da4f8da6cfe4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599981"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230989"
 ---
 # <a name="database-mirroring-in-sql-server"></a>在 SQL Server 中建立資料庫鏡像
 SQL Server 中的資料庫鏡像可讓您將 SQL Server 資料庫的複本或鏡像保存在待命伺服器上。 鏡像可確保永遠存在兩份分開的資料複本，這會提供高可用性及完整的資料重複性。 .NET Data Provider for SQL Server 提供對資料庫鏡像的隱含支援，這樣將其設定給 SQL Server 資料庫後，開發人員即無需採取任何動作或撰寫任何程式碼。 此外，<xref:System.Data.SqlClient.SqlConnection> 物件支援明確連接模式，可在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供容錯移轉夥伴伺服器的名稱。  
@@ -19,7 +19,7 @@ SQL Server 中的資料庫鏡像可讓您將 SQL Server 資料庫的複本或鏡
   
 1.  用戶端應用程式成功連接至主體資料庫，伺服器再傳送回夥伴伺服器的名稱，稍後會在用戶端上快取該名稱。  
   
-2.  如果包含主體資料庫的伺服器失敗或連接中斷，則會遺失連接及交易狀態。 用戶端應用程式會嘗試重新建立與主體資料庫的連接，但失敗。  
+2.  如果包含主體資料庫的伺服器失敗或連接中斷，則會遺失連接及異動狀態。 用戶端應用程式會嘗試重新建立與主體資料庫的連接，但失敗。  
   
 3.  然後，用戶端應用程式會透明地嘗試建立與夥伴伺服器上鏡像資料庫的連接。 如果成功，則連接會重新導向至稍後會變成新主體資料庫的鏡像資料庫。  
   
@@ -64,4 +64,5 @@ string activeServer = connection.DataSource;
 |[資料庫鏡像](/sql/database-engine/database-mirroring/database-mirroring-sql-server)|說明如何在 SQL Server 中設定鏡像。|  
   
 ## <a name="see-also"></a>另請參閱
-- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+
+- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 02119ab6-1e91-448e-97ad-e7b2e5c4bbbd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d085fe8b9cf11e2f195468a93b3fa9b3f0817503
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 71cc69eba17de8465cc7999f334c724e4ec14e7d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286555"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224373"
 ---
 # <a name="appdomainresourcemonitoring-element"></a>\<appDomainResourceMonitoring > 項目
 針對處理序存留期間，指示執行階段收集處理序中所有應用程式網域的統計資料。  
@@ -73,6 +73,7 @@ ms.locfileid: "55286555"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.AppDomain.MonitoringIsEnabled%2A?displayProperty=nameWithType>
 - [執行階段設定結構描述](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)

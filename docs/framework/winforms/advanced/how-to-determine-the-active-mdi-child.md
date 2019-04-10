@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], activating forms
 - MDI [Windows Forms], locating focus
 ms.assetid: 33880ec3-0207-4c2b-a616-ff140443cc0f
-ms.openlocfilehash: 95958491d624052922df9af37b188b9515480397
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: 81cb9b55f53c152e755ada1803e4ba5731498627
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714318"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59229468"
 ---
 # <a name="how-to-determine-the-active-mdi-child"></a>HOW TO：決定作用中的 MDI 子系
 在某些情況下，您要在目前作用中的子表單具有焦點的控制項上提供作業的命令。 例如，假設您想要選取的文字複製到剪貼簿的子表單的文字方塊。 您會建立一個程序，將選取的文字複製到剪貼簿使用<xref:System.Windows.Forms.Control.Click>的複製功能表項目，標準的 [編輯] 功能表上的事件。  
@@ -84,8 +84,9 @@ ms.locfileid: "57714318"
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)
-- [如何：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
-- [如何：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
-- [如何：將資料傳送至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
-- [如何：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)
+- [HOW TO：建立 MDI 父表單](how-to-create-mdi-parent-forms.md)
+- [HOW TO：建立 MDI 子表單](how-to-create-mdi-child-forms.md)
+- [HOW TO：傳送資料至作用中的 MDI 子系](how-to-send-data-to-the-active-mdi-child.md)
+- [HOW TO：排列 MDI 子表單](how-to-arrange-mdi-child-forms.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - inheritance [Windows Forms], walkthroughs
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
-ms.openlocfilehash: ad5f2211319599dbc29055b9f04b547f84f7b9fd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.openlocfilehash: c5668bd056c180f2cdf9b6160aa4d96e2ac2f5f9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707803"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228597"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>逐步解說：繼承自使用 Visual c# Windows Forms 控制項\#
 使用 [!INCLUDE[csprcslong](../../../../includes/csprcslong-md.md)]，您可以透過「繼承」建立功能強大的自訂控制項。 您可以透過繼承建立控制項，不僅保留標準 Windows Forms 控制項的所有固有功能，同時也納入自訂功能。 在本逐步解說中，您將會建立簡單的繼承控制項，名為 `ValueButton`。 此按鈕會繼承標準 Windows Form 的功能<xref:System.Windows.Forms.Button>控制項，並會公開 （expose） 的自訂屬性，稱為`ButtonValue`。  
@@ -142,5 +142,6 @@ ms.locfileid: "57707803"
      數字 '5' 會顯示在 `label1` 中，示範繼承的控制項之 `ButtonValue` 屬性已透過 `valueButton1_Click` 方法傳遞至 `label1`。 因此，`ValueButton` 控制項會繼承標準 Windows Forms 按鈕的所有功能，但是會公開額外的自訂屬性。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：顯示中的控制項選擇工具箱項目對話方塊](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [逐步解說：撰寫複合控制項具有視覺效果C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+
+- [HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [逐步解說：使用 Visual C# 撰寫複合控制項](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

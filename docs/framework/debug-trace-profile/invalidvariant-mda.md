@@ -10,17 +10,17 @@ helpviewer_keywords:
 ms.assetid: d273e070-d1b1-4a53-a9c7-7af837b04a3d
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7d29d3f3638b3dae4381524fcaf55e1afeddc9f8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 64f5a4425d70974bae8c4f7bec28041e687fe95f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54730798"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228480"
 ---
 # <a name="invalidvariant-mda"></a>invalidVariant MDA
 當從機器碼或 Unmanaged 程式碼呼叫至 Managed 程式碼時遇到無效的 `VARIANT` 結構，就會啟動 `invalidVariant` Managed 偵錯助理 (MDA)。  
   
-## <a name="symptoms"></a>徵兆   
+## <a name="symptoms"></a>徵兆  
  在機器碼和 Managed 程式碼轉換期間的未預期行為，這會牽涉到封送處理 `VARIANT` 給物件。  
   
 ## <a name="cause"></a>原因  
@@ -32,7 +32,7 @@ ms.locfileid: "54730798"
 ## <a name="effect-on-the-runtime"></a>對執行階段的影響  
  此 MDA 對執行階段行為沒有影響。  
   
-## <a name="output"></a>輸出  
+## <a name="output"></a>Output  
  MDA 訊息，指出執行階段偵測到無效的 `VARIANT` 由 Unmanaged 模組傳遞至 Managed 程式碼。  
   
 ## <a name="configuration"></a>組態  
@@ -46,6 +46,7 @@ ms.locfileid: "54730798"
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
 - [診斷 Managed 偵錯助理的錯誤](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

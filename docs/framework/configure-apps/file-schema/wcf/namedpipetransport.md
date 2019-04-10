@@ -2,12 +2,12 @@
 title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
-ms.openlocfilehash: e30fcd5952fadc3b6cf30cb352a3bb51c86cc117
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285897"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228233"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 定義傳輸，這個傳輸會使通道在包含於自訂繫結時使用具名管道來傳輸訊息。  
@@ -73,6 +73,7 @@ ms.locfileid: "55285897"
 `namedPipeTransport` 項目建立自訂繫結時的起點，此繫結會實作具名管道傳輸通訊協定。 這個傳輸是用於電腦的 Windows Communication Foundation (WCF) 至 WCF 通訊。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.ServiceModel.Configuration.NamedPipeTransportElement>
 - <xref:System.ServiceModel.Channels.NamedPipeTransportBindingElement>
 - <xref:System.ServiceModel.Channels.TransportBindingElement>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - Add Service Reference dialog box
 ms.assetid: 314077c1-ac10-47e1-bed4-940b5462359d
-ms.openlocfilehash: 41f4e7cd633cf6175b6b167937cf53ceb4d9ec59
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 96b7bfabef589464e99e808d19f0dee6cfb23536
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092094"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225816"
 ---
 # <a name="generating-the-data-service-client-library-wcf-data-services"></a>產生資料服務用戶端程式庫 (WCF 資料服務)
 資料服務可實作[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]可以傳回服務中繼資料文件，描述所公開的資料模型[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 如需詳細資訊，請參閱[OData:服務中繼資料文件](https://go.microsoft.com/fwlink/?LinkId=186070)。 您可以使用**加入服務參考**對話方塊，在 Visual Studio 中將參考加入至[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-型服務。 當您使用此工具將傳回的中繼資料的參考[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要的用戶端專案中，執行下列動作：  
@@ -27,9 +27,9 @@ ms.locfileid: "56092094"
   
 -   將參考加入至專案的 `System.Data.Services.Client` 組件。  
   
- 如需詳細資訊，請參閱[＜How to：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。  
+ 如需詳細資訊，請參閱[如何：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。  
   
- 也可以使用產生的用戶端資料服務類別[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)在命令提示字元工具。 如需詳細資訊，請參閱[＜How to：手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
+ 也可以使用產生的用戶端資料服務類別[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)在命令提示字元工具。 如需詳細資訊，請參閱[如何：手動產生用戶端資料服務類別](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)。  
   
 ## <a name="client-data-type-mapping"></a>用戶端資料型別對應  
  當您使用**加入服務參考**Visual Studio 中的對話方塊或`DataSvcUtil.exe`工具來產生用戶端資料類別為基礎的[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要時，.NET Framework 資料型別會對應至從基本的類型資料模型，如下所示：  
@@ -53,5 +53,6 @@ ms.locfileid: "56092094"
  如需詳細資訊，請參閱[OData:基本資料型別](https://go.microsoft.com/fwlink/?LinkId=186072)。  
   
 ## <a name="see-also"></a>另請參閱
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
 - [快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)

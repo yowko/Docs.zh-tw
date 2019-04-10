@@ -6,20 +6,20 @@ helpviewer_keywords:
 - client-side UI Automation provider, implementation
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
-ms.openlocfilehash: dd795eae1ac4610c90c0decece3b19fcad2ca438
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678935"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59224454"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>用戶端 UI 自動化提供者實作
 > [!NOTE]
 >  這份文件適用於想要使用 <xref:System.Windows.Automation> 命名空間中定義之 Managed [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 類別的 .NET Framework 開發人員。 如需最新資訊[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，請參閱[Windows Automation API:使用者介面自動化](https://go.microsoft.com/fwlink/?LinkID=156746)。  
   
- [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 作業系統中，包括 [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] 、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，使用數個不同的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]架構。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 會公開使用者介面項目相關資訊給用戶端。 不過， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 本身不會知道這些架構中存在的不同控制項類型，也不具備從這些架構中擷取資訊的必要技術。 它會將這項工作交給稱為提供者的物件。 提供者會從特定控制項擷取資訊，並將該資訊傳遞給 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，再由它以一致的方式呈現給用戶端。  
+ [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 作業系統中，包括 [!INCLUDE[TLA#tla_ms](../../../includes/tlasharptla-ms-md.md)] 、 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)]和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)]，使用數個不同的 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]架構。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] 會公開給用戶端的 UI 項目相關的資訊。 不過， [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 本身不會知道這些架構中存在的不同控制項類型，也不具備從這些架構中擷取資訊的必要技術。 它會將這項工作交給稱為提供者的物件。 提供者會從特定控制項擷取資訊，並將該資訊傳遞給 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]，再由它以一致的方式呈現給用戶端。  
   
- 提供者可以存在於伺服器端或用戶端上。 伺服器端的提供者是由控制項本身所實作。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 項目會實作提供者，任何撰寫時考慮到 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 的協力廠商控制項也可以實作提供者。  
+ 提供者可以存在於伺服器端或用戶端上。 伺服器端的提供者是由控制項本身所實作。 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 項目會實作提供者，可以使用撰寫任何協力廠商控制項[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]記住。  
   
  不過，較舊的控制項，例如 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../includes/tlasharptla-winforms-md.md)] 中的控制項，並不會直接支援 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]。 這些控制項會改由存在於用戶端處理序並使用跨處理序通訊 (例如，藉由監視控制項的往來視窗訊息) 來取得控制項相關資訊的提供者服務。 這種用戶端提供者有時稱為 Proxy。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "57678935"
   
 <a name="Distributing_Client-Side_Providers"></a>   
 ## <a name="distributing-client-side-providers"></a>散發用戶端提供者  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 會預期在 Managed 程式碼組件中找到用戶端提供者。 這個組件中的命名空間應該和組件同名。 例如，稱為 ContosoProxies.dll 的組件會包含 ContosoProxies 命名空間。 在命名空間中，建立 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> 類別。 在靜態 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> 欄位的實作中，建立用於說明提供者的 <xref:System.Windows.Automation.ClientSideProviderDescription> 結構陣列。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 預期在 managed 程式碼組件中找到用戶端提供者。 這個組件中的命名空間應該和組件同名。 例如，稱為 ContosoProxies.dll 的組件會包含 ContosoProxies 命名空間。 在命名空間中，建立 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders> 類別。 在靜態 <xref:UIAutomationClientsideProviders.UIAutomationClientSideProviders.ClientSideProviderDescriptionTable> 欄位的實作中，建立用於說明提供者的 <xref:System.Windows.Automation.ClientSideProviderDescription> 結構陣列。  
   
 <a name="Registering_and_Configuring_Client-Side_Providers"></a>   
 ## <a name="registering-and-configuring-client-side-providers"></a>註冊及設定用戶端提供者  
@@ -50,5 +50,6 @@ ms.locfileid: "57678935"
  最後兩個參數為選擇性的。 當用戶端要針對不同應用程式使用不同提供者時，它可以指定目標應用程式的映像名稱。 例如，在支援多個檢視模式的已知應用程式中，用戶端可以針對 [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 清單檢視控制項使用一個提供者，而在另一個不支援多個檢視模式的已知應用程式中，則針對類似控制項使用另一個提供者。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立用戶端 UI 自動化提供者](../../../docs/framework/ui-automation/create-a-client-side-ui-automation-provider.md)
 - [在用戶端應用程式中實作 UI 自動化提供者](../../../docs/framework/ui-automation/implement-ui-automation-providers-in-a-client-application.md)

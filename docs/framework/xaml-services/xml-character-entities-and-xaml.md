@@ -20,12 +20,12 @@ helpviewer_keywords:
 - quotation mark (") [XAML Services]
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
-ms.openlocfilehash: 3fefbe9696ba7618dc811c6ac8f600bb6322dad5
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58048056"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59228194"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 字元實體和 XAML
 XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一些特定字元實體，以及針對 XAML 中其他 XML 概念的一般考量。  
@@ -46,7 +46,7 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
   
 |字元|實體|注意|  
 |---------------|------------|-----------|  
-|& (連字號)|\&amp;|必須用於屬性值和項目內容。|  
+|& （連字號）|\&amp;|必須用於屬性值和項目內容。|  
 |> (大於-字元)|\&gt;|必須用於屬性值，但 > 是，只要元素的內容可接受 < 前面沒有它。|  
 |< (小於-字元)|\&lt;|必須用於屬性值，但\<是可接受的項目，只要內容 > 未遵循。|  
 |" (雙引號)|\&quot;|必須用於屬性值，但可接受雙引號 (") 做為項目內容。 請注意，屬性值可以使用單引號 (') 或雙引號 ('') 括住；先出現的字元會定義括住的屬性值，而另一種引號則可以接著用來括住值內的常值。|  
@@ -63,7 +63,8 @@ XAML 使用 XML 中針對特殊字元定義的字元實體。 本主題說明一
  XAML 會根據 XML 規格來處理 XML 處理指令，該規格表示必須將指令傳遞通過。 在.NET Framework XAML 服務所處理的 XAML 不會使用任何處理指示。 其他使用 XAML 的現有架構，也都不會使用 XAML 的處理指令。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [XAML 概觀 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [標記延伸和 WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName 文法](xamlname-grammar.md)
-- [在 XAML 中處理泛空白字元](whitespace-processing-in-xaml.md)
+- [XAML 中的空白字元處理](whitespace-processing-in-xaml.md)
