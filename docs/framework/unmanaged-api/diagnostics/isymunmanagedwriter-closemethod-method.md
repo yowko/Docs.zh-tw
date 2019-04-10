@@ -17,28 +17,29 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a6f8c8b522aabfce3b83b6b624bd0ca9757448ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 591279a80b7d6a770127fb98eb71c056c48bdffd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54666016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231210"
 ---
-# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="71abc-102">ISymUnmanagedWriter::CloseMethod 方法</span><span class="sxs-lookup"><span data-stu-id="71abc-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
-<span data-ttu-id="71abc-103">關閉目前的方法。</span><span class="sxs-lookup"><span data-stu-id="71abc-103">Closes the current method.</span></span> <span data-ttu-id="71abc-104">一旦關閉方法，則可以在其中定義沒有更多的符號。</span><span class="sxs-lookup"><span data-stu-id="71abc-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
+# <a name="isymunmanagedwriterclosemethod-method"></a><span data-ttu-id="51278-102">ISymUnmanagedWriter::CloseMethod 方法</span><span class="sxs-lookup"><span data-stu-id="51278-102">ISymUnmanagedWriter::CloseMethod Method</span></span>
+<span data-ttu-id="51278-103">關閉目前的方法。</span><span class="sxs-lookup"><span data-stu-id="51278-103">Closes the current method.</span></span> <span data-ttu-id="51278-104">一旦關閉方法，則可以在其中定義沒有更多的符號。</span><span class="sxs-lookup"><span data-stu-id="51278-104">Once a method is closed, no more symbols can be defined within it.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="71abc-105">語法</span><span class="sxs-lookup"><span data-stu-id="71abc-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="51278-105">語法</span><span class="sxs-lookup"><span data-stu-id="51278-105">Syntax</span></span>  
   
 ```  
 HRESULT CloseMethod();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="71abc-106">傳回值</span><span class="sxs-lookup"><span data-stu-id="71abc-106">Return Value</span></span>  
- <span data-ttu-id="71abc-107">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="71abc-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="51278-106">傳回值</span><span class="sxs-lookup"><span data-stu-id="51278-106">Return Value</span></span>  
+ <span data-ttu-id="51278-107">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="51278-107">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="71abc-108">需求</span><span class="sxs-lookup"><span data-stu-id="71abc-108">Requirements</span></span>  
- <span data-ttu-id="71abc-109">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="71abc-109">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="51278-108">需求</span><span class="sxs-lookup"><span data-stu-id="51278-108">Requirements</span></span>  
+ <span data-ttu-id="51278-109">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="51278-109">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="71abc-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="71abc-110">See also</span></span>
-- [<span data-ttu-id="71abc-111">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="71abc-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="71abc-112">OpenMethod 方法</span><span class="sxs-lookup"><span data-stu-id="71abc-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)
+## <a name="see-also"></a><span data-ttu-id="51278-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="51278-110">See also</span></span>
+
+- [<span data-ttu-id="51278-111">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="51278-111">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="51278-112">OpenMethod 方法</span><span class="sxs-lookup"><span data-stu-id="51278-112">OpenMethod Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-openmethod-method.md)

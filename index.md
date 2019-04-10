@@ -6,12 +6,12 @@ title: .NET 文件
 description: 了解如何使用 C#、Visual Basic 及 F#，在任何平台上使用 .NET 建立各種應用程式。 瀏覽 API 參考、範例程式碼、教學課程及更多資源。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: 31e810246528c99a665128d3535b92dbfcb4352d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 132cab6f7c196f88fdc02259e55d0fcb5fbbfd10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464511"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297261"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -77,7 +77,7 @@ ms.locfileid: "58464511"
         <h1>.NET 文件</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">文件</a>
+                <a data-default="true" href="#docs">Docs</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">開始使用</a>
@@ -174,7 +174,7 @@ ms.locfileid: "58464511"
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/csharp">C# 指南</a></h3>
                                                 <p><a href="/dotnet/csharp/getting-started">開始使用</a></p>
-                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# 的教學課程</a></p>
+                                                <p><a href="/dotnet/csharp/tour-of-csharp">C# 導覽</a></p>
                                                 <p><a href="/dotnet/csharp/whats-new">C# 的新功能</a></p>
                                                 <p><a href="/dotnet/csharp/language-reference">C# 語言參考</a></p>
                                             </div>
@@ -231,9 +231,9 @@ ms.locfileid: "58464511"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/dotnet/machine-learning">ML.NET 指南</a></h3>
-                                                <p><a href="/dotnet/machine-learning/tutorials">教學課程</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources">資源</a></p>
-                                                <p><a href="/dotnet/machine-learning/resources/glossary">字彙</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#tutorials">教學課程</a></p>
+                                                <p><a href="/dotnet/machine-learning/index#resources">資源</a></p>
+                                                <p><a href="/dotnet/machine-learning/resources/glossary">字彙表</a></p>
                                                 <p><a href="/dotnet/api?view=ml-dotnet">ML.NET API 參考</a></p>
                                             </div>
                                         </div>
@@ -434,7 +434,7 @@ ms.locfileid: "58464511"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">行動裝置</a>
+                        <a href="#mobile">行動訊息</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -496,7 +496,7 @@ ms.locfileid: "58464511"
                         </ul>
                     </li>
                     <li>
-                        <a href="#desktop">傳統型</a>
+                        <a href="#desktop">桌面</a>
                         <ul id="desktop" class="cardsC">
                             <li>
                                 <a href="/uwp">
@@ -582,7 +582,7 @@ ms.locfileid: "58464511"
                         <a href="#gaming">遊戲</a>
                         <ul id="gaming" class="cardsC">
                             <li>
-                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/">
+                                <a href="https://visualstudio.microsoft.com/vs/features/game-development/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
