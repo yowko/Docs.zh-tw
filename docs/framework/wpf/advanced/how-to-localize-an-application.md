@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LocBaml tool [WPF]
 - applications [WPF], localizing
 ms.assetid: 5001227e-9326-48a4-9dcd-ba1b89ee6653
-ms.openlocfilehash: 6bc2d5c45ef6f8626e51f9f760ec299db19627d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d08f991204b2d74899cbd1aee82c0cc23e175dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171570"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298314"
 ---
 # <a name="how-to-localize-an-application"></a>HOW TO：將應用程式當地語系化
 本教學課程說明如何使用 LocBaml 工具來建立當地語系化的應用程式。  
@@ -38,13 +38,13 @@ ms.locfileid: "59171570"
 ## <a name="create-a-sample-application"></a>建立範例應用程式  
  在此步驟中，您將準備要當地語系化的應用程式。 在 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 範例中有提供一個 HelloApp 範例，將用於此討論中的程式碼範例。 如果您想要使用此範例中，下載[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]從檔案[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
   
-1.  將您的應用程式開發至您要當地語系化的開始點。  
+1. 將您的應用程式開發至您要當地語系化的開始點。  
   
-2.  在專案檔中指定開發語言，讓 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 產生主要組件和附屬組件 (副檔名為 .resources.dll 的檔案)，以包含中性語言資源。 HelloApp 範例中的專案檔是 HelloApp.csproj。 在該檔案中，您會發現識別如下的開發語言：  
+2. 在專案檔中指定開發語言，讓 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] 產生主要組件和附屬組件 (副檔名為 .resources.dll 的檔案)，以包含中性語言資源。 HelloApp 範例中的專案檔是 HelloApp.csproj。 在該檔案中，您會發現識別如下的開發語言：  
   
      `<UICulture>en-US</UICulture>`  
   
-3.  將 UID 加入您的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。 UID 可用來追蹤對檔案的變更，以及識別必須轉譯的項目。 若要將 Uid 新增至您的檔案中，執行**updateuid**專案檔：  
+3. 將 UID 加入您的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。 UID 可用來追蹤對檔案的變更，以及識別必須轉譯的項目。 若要將 Uid 新增至您的檔案中，執行**updateuid**專案檔：  
   
      **msbuild -t:updateuid helloapp.csproj**  
   
@@ -66,30 +66,30 @@ ms.locfileid: "59171570"
 ## <a name="create-the-neutral-language-resources-satellite-assembly"></a>建立中性語言資源附屬組件  
  設定應用程式來產生中性語言資源附屬組件之後，您要建置應用程式。 這會產生主應用程式組件，以及 LocBaml 進行當地語系化所需的中性語言資源附屬組件。 若要建置應用程式：  
   
-1.  編譯 HelloApp 以建立 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]：  
+1. 編譯 HelloApp 以建立 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]：  
   
      **msbuild helloapp.csproj**  
   
-2.  新建立的主應用程式組件 HelloApp.exe 會建立在下列資料夾中：  
+2. 新建立的主應用程式組件 HelloApp.exe 會建立在下列資料夾中：  
   
      `C:\HelloApp\Bin\Debug\`  
   
-3.  新建立的中性語言資源附屬組件 HelloApp.resources.dll 會建立下列資料夾中：  
+3. 新建立的中性語言資源附屬組件 HelloApp.resources.dll 會建立下列資料夾中：  
   
      `C:\HelloApp\Bin\Debug\en-US\`  
   
 <a name="build_locbaml"></a>   
 ## <a name="build-the-locbaml-tool"></a>建置 LocBaml 工具  
   
-1.  建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 從 C# 檔案下載[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
+1. 建置 LocBaml 時所需的所有檔案都位在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 範例中。 從 C# 檔案下載[LocBaml 工具範例](https://go.microsoft.com/fwlink/?LinkID=160016)。  
   
-2.  從命令列執行專案檔 (locbaml.csproj)，以建置工具：  
+2. 從命令列執行專案檔 (locbaml.csproj)，以建置工具：  
   
      **msbuild locbaml.csproj**  
   
-3.  移至 Bin\Release 目錄，尋找新建立的可執行檔 (locbaml.exe)。 範例：C:\LocBaml\Bin\Release\locbaml.exe。  
+3. 移至 Bin\Release 目錄，尋找新建立的可執行檔 (locbaml.exe)。 範例：C:\LocBaml\Bin\Release\locbaml.exe。  
   
-4.  當您執行 LocBaml 時，可指定的選項如下：  
+4. 當您執行 LocBaml 時，可指定的選項如下：  
   
     -   **剖析**或 **-p:** 剖析 Baml、 資源或[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]檔案，以產生.csv 或.txt 檔案。  
   
@@ -114,16 +114,16 @@ ms.locfileid: "59171570"
 ## <a name="use-locbaml-to-parse-a-file"></a>使用 LocBaml 來剖析檔案  
  現在您已經建立 LocBaml 工具，就準備好用它來剖析 HelloApp.resources.dll，以擷取要當地語系化的文字內容。  
   
-1.  將 LocBaml.exe 複製到應用程式的 bin\debug 資料夾，這是建立主要應用程式組件的位置。  
+1. 將 LocBaml.exe 複製到應用程式的 bin\debug 資料夾，這是建立主要應用程式組件的位置。  
   
-2.  若要剖析附屬組件檔案，並將輸出儲存成 .csv 檔案，請使用下列命令：  
+2. 若要剖析附屬組件檔案，並將輸出儲存成 .csv 檔案，請使用下列命令：  
   
      **LocBaml.exe /parse HelloApp.resources.dll /out:Hello.csv**  
   
     > [!NOTE]
     >  如果輸入檔 HelloApp.resources.dll 不是在與 LocBaml.exe 相同的目錄中，請移動其中一個檔案，讓這兩個檔案都在相同的目錄中。  
   
-3.  當您執行 LocBaml 來剖析檔案時，輸出中會包含以逗號 (.csv 檔案) 或定位點 (.txt 檔) 分隔的七個欄位。 下面顯示針對 HelloApp.resources.dll 所剖析的 .csv 檔案：
+3. 當您執行 LocBaml 來剖析檔案時，輸出中會包含以逗號 (.csv 檔案) 或定位點 (.txt 檔) 分隔的七個欄位。 下面顯示針對 HelloApp.resources.dll 所剖析的 .csv 檔案：
 
    | |
    |-|
@@ -157,7 +157,7 @@ ms.locfileid: "59171570"
   
    請注意，所有的值**註解**欄位不含任何值; 如果欄位沒有值，它是空的。 另請注意，第一個資料列中的項目無法讀取或修改，且"ignore"做為其**分類**一切都表示的值不是可當地語系化的值。  
   
-4.  為了幫助探索可當地語系化中的項目已剖析的檔案，特別是在大型檔案，您可以排序或篩選的項目**分類**，**可讀性**，和**可修改性**. 例如，您可以篩選出無法讀取及無法修改的值。  
+4. 為了幫助探索可當地語系化中的項目已剖析的檔案，特別是在大型檔案，您可以排序或篩選的項目**分類**，**可讀性**，和**可修改性**. 例如，您可以篩選出無法讀取及無法修改的值。  
   
 <a name="translate_loc_content"></a>   
 ## <a name="translate-the-localizable-content"></a>轉譯可當地語系化的內容  
@@ -167,26 +167,26 @@ ms.locfileid: "59171570"
 ## <a name="use-locbaml-to-generate-a-new-resourcesdll-file"></a>使用 LocBaml 來產生新的 .resources.dll 檔案  
  藉由使用 LocBaml 來剖析 HelloApp.resources.dll 而識別的內容已轉譯，且必須合併回原始應用程式。 使用**產生**或是 **-g**來產生新的選項.resources.dll 檔案。  
   
-1.  使用下列語法來產生新的 HelloApp.resources.dll 檔案。 將文化特性標示為 en-US (/cul:en-US)。  
+1. 使用下列語法來產生新的 HelloApp.resources.dll 檔案。 將文化特性標示為 en-US (/cul:en-US)。  
   
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hello.csv /out:c:\ /cul:en-US**  
   
     > [!NOTE]
     >  如果輸入檔 Hello.csv 不是在與可執行檔 LocBaml.exe 相同的目錄中，請移動其中一個檔案，讓這兩個檔案都在相同的目錄中。  
   
-2.  以新建立的 HelloApp.resources.dll 檔案，取代 C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll 目錄中舊的 HelloApp.resources.dll 檔案。  
+2. 以新建立的 HelloApp.resources.dll 檔案，取代 C:\HelloApp\Bin\Debug\en-US\HelloApp.resources.dll 目錄中舊的 HelloApp.resources.dll 檔案。  
   
-3.  "Hello World" 和 "Goodbye World" 現在應該已在您的應用程式中轉譯。  
+3. "Hello World" 和 "Goodbye World" 現在應該已在您的應用程式中轉譯。  
   
-4.  若要轉譯為不同的文化特性，請使用您想要轉譯之語言的文化特性。 下列範例示範如何轉譯成加拿大法文：  
+4. 若要轉譯為不同的文化特性，請使用您想要轉譯之語言的文化特性。 下列範例示範如何轉譯成加拿大法文：  
   
      **LocBaml.exe /generate HelloApp.resources.dll /trans:Hellofr-CA.csv /out:c:\ /cul:fr-CA**  
   
-5.  在與主應用程式組件相同的組件中，建立新的特定文化特性資料夾，以存放新的附屬組件。 針對加拿大法文，資料夾會是 fr-CA。  
+5. 在與主應用程式組件相同的組件中，建立新的特定文化特性資料夾，以存放新的附屬組件。 針對加拿大法文，資料夾會是 fr-CA。  
   
-6.  將所產生的附屬組件複製到新的資料夾。  
+6. 將所產生的附屬組件複製到新的資料夾。  
   
-7.  若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種做法：  
+7. 若要測試新的附屬組件，您需要變更您的應用程式用來執行的文化特性。 您可以使用下列其中一種做法：  
   
     -   變更您的作業系統地區設定 (**開始** &#124; **控制台中** &#124; **地區及語言選項**)。  
   

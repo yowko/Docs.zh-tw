@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: f686fa00662ad29323c1883c45ed0e790b133f2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099777"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312562"
 ---
 # <a name="application-settings-architecture"></a>應用程式設定架構
 本主題描述應用程式設定的運作方式，並且瀏覽架構的進階功能 (例如群組設定和設定索引鍵)。  
@@ -100,11 +100,11 @@ ms.locfileid: "59099777"
 ### <a name="settings-serialization"></a>設定序列化  
  當<xref:System.Configuration.LocalFileSettingsProvider>必須將設定儲存至磁碟，它會執行下列動作：  
   
-1.  使用反映來檢查的所有屬性上定義您<xref:System.Configuration.ApplicationSettingsBase>衍生類別中，尋找與所套用<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>。  
+1. 使用反映來檢查的所有屬性上定義您<xref:System.Configuration.ApplicationSettingsBase>衍生類別中，尋找與所套用<xref:System.Configuration.ApplicationScopedSettingAttribute>或<xref:System.Configuration.UserScopedSettingAttribute>。  
   
-2.  將屬性序列化至磁碟。 它會先嘗試呼叫<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>或是<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>上的相關聯的型別<xref:System.ComponentModel.TypeConverter>。 如果不成功，則改用 XML 序列化。  
+2. 將屬性序列化至磁碟。 它會先嘗試呼叫<xref:System.ComponentModel.TypeConverter.ConvertToString%2A>或是<xref:System.ComponentModel.TypeConverter.ConvertFromString%2A>上的相關聯的型別<xref:System.ComponentModel.TypeConverter>。 如果不成功，則改用 XML 序列化。  
   
-3.  根據設定的屬性，判斷哪些設定在哪些檔案中。  
+3. 根據設定的屬性，判斷哪些設定在哪些檔案中。  
   
  如果您實作您自己的設定類別，您可以使用<xref:System.Configuration.SettingsSerializeAsAttribute>將設定標示為針對二進位或自訂序列化使用<xref:System.Configuration.SettingsSerializeAs>列舉型別。 如需有關如何在程式碼中建立您自己的設定類別的詳細資訊，請參閱[How to:建立應用程式設定](how-to-create-application-settings.md)。  
   
