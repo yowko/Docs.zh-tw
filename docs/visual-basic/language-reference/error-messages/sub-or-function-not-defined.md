@@ -4,35 +4,35 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
-ms.openlocfilehash: 6bca368e13a32559bcb7cbb028dcaa1dea0353e3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819784"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59294674"
 ---
-# <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="8b6ed-102">Sub 或 Function 未定義 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="8b6ed-102">Sub or Function not defined (Visual Basic)</span></span>
-<span data-ttu-id="8b6ed-103">A`Sub`或`Function`必須定義，才能呼叫。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="8b6ed-104">可能導致本錯誤的原因包括：</span><span class="sxs-lookup"><span data-stu-id="8b6ed-104">Possible causes of this error include:</span></span>  
+# <a name="sub-or-function-not-defined-visual-basic"></a><span data-ttu-id="d107b-102">Sub 或 Function 未定義 (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="d107b-102">Sub or Function not defined (Visual Basic)</span></span>
+<span data-ttu-id="d107b-103">A`Sub`或`Function`必須定義，才能呼叫。</span><span class="sxs-lookup"><span data-stu-id="d107b-103">A `Sub` or `Function` must be defined in order to be called.</span></span> <span data-ttu-id="d107b-104">可能導致本錯誤的原因包括：</span><span class="sxs-lookup"><span data-stu-id="d107b-104">Possible causes of this error include:</span></span>  
   
--   <span data-ttu-id="8b6ed-105">拼錯下列程序名稱。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-105">Misspelling the procedure name.</span></span>  
+-   <span data-ttu-id="d107b-105">拼錯下列程序名稱。</span><span class="sxs-lookup"><span data-stu-id="d107b-105">Misspelling the procedure name.</span></span>  
   
--   <span data-ttu-id="8b6ed-106">嘗試從另一個專案呼叫的程序，而不需明確新增至該專案中的參考**參考** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-106">Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.</span></span>  
+-   <span data-ttu-id="d107b-106">嘗試從另一個專案呼叫的程序，而不需明確新增至該專案中的參考**參考** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="d107b-106">Trying to call a procedure from another project without explicitly adding a reference to that project in the **References** dialog box.</span></span>  
   
--   <span data-ttu-id="8b6ed-107">指定看不到呼叫的程序的程序。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-107">Specifying a procedure that is not visible to the calling procedure.</span></span>  
+-   <span data-ttu-id="d107b-107">指定看不到呼叫的程序的程序。</span><span class="sxs-lookup"><span data-stu-id="d107b-107">Specifying a procedure that is not visible to the calling procedure.</span></span>  
   
--   <span data-ttu-id="8b6ed-108">Windows 動態連結程式庫 (DLL) 常式或 Macintosh 不在指定的文件庫或程式碼資源的程式碼資源常式宣告。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-108">Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.</span></span>  
+-   <span data-ttu-id="d107b-108">Windows 動態連結程式庫 (DLL) 常式或 Macintosh 不在指定的文件庫或程式碼資源的程式碼資源常式宣告。</span><span class="sxs-lookup"><span data-stu-id="d107b-108">Declaring a Windows dynamic-link library (DLL) routine or Macintosh code-resource routine that is not in the specified library or code resource.</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="8b6ed-109">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="8b6ed-109">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="d107b-109">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="d107b-109">To correct this error</span></span>  
   
-1.  <span data-ttu-id="8b6ed-110">請確定程序名稱拼字正確。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-110">Make sure that the procedure name is spelled correctly.</span></span>  
+1. <span data-ttu-id="d107b-110">請確定程序名稱拼字正確。</span><span class="sxs-lookup"><span data-stu-id="d107b-110">Make sure that the procedure name is spelled correctly.</span></span>  
   
-2.  <span data-ttu-id="8b6ed-111">尋找包含您想要呼叫的程序的專案名稱**參考** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-111">Find the name of the project containing the procedure you want to call in the **References** dialog box.</span></span> <span data-ttu-id="8b6ed-112">如果沒有出現，請按一下**瀏覽**按鈕來搜尋它。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-112">If it does not appear, click the **Browse** button to search for it.</span></span> <span data-ttu-id="8b6ed-113">選取的專案名稱，左邊的核取方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-113">Select the check box to the left of the project name, and then click **OK**.</span></span>  
+2. <span data-ttu-id="d107b-111">尋找包含您想要呼叫的程序的專案名稱**參考** 對話方塊。</span><span class="sxs-lookup"><span data-stu-id="d107b-111">Find the name of the project containing the procedure you want to call in the **References** dialog box.</span></span> <span data-ttu-id="d107b-112">如果沒有出現，請按一下**瀏覽**按鈕來搜尋它。</span><span class="sxs-lookup"><span data-stu-id="d107b-112">If it does not appear, click the **Browse** button to search for it.</span></span> <span data-ttu-id="d107b-113">選取的專案名稱，左邊的核取方塊，然後按一下**確定**。</span><span class="sxs-lookup"><span data-stu-id="d107b-113">Select the check box to the left of the project name, and then click **OK**.</span></span>  
   
-3.  <span data-ttu-id="8b6ed-114">請檢查常式的名稱。</span><span class="sxs-lookup"><span data-stu-id="8b6ed-114">Check the name of the routine.</span></span>  
+3. <span data-ttu-id="d107b-114">請檢查常式的名稱。</span><span class="sxs-lookup"><span data-stu-id="d107b-114">Check the name of the routine.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8b6ed-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8b6ed-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d107b-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d107b-115">See also</span></span>
 
-- [<span data-ttu-id="8b6ed-116">錯誤類型</span><span class="sxs-lookup"><span data-stu-id="8b6ed-116">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
-- [<span data-ttu-id="8b6ed-117">管理專案中的參考</span><span class="sxs-lookup"><span data-stu-id="8b6ed-117">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
-- [<span data-ttu-id="8b6ed-118">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="8b6ed-118">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [<span data-ttu-id="8b6ed-119">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="8b6ed-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
+- [<span data-ttu-id="d107b-116">錯誤類型</span><span class="sxs-lookup"><span data-stu-id="d107b-116">Error Types</span></span>](../../../visual-basic/programming-guide/language-features/error-types.md)
+- [<span data-ttu-id="d107b-117">管理專案中的參考</span><span class="sxs-lookup"><span data-stu-id="d107b-117">Managing references in a project</span></span>](/visualstudio/ide/managing-references-in-a-project)
+- [<span data-ttu-id="d107b-118">Sub 陳述式</span><span class="sxs-lookup"><span data-stu-id="d107b-118">Sub Statement</span></span>](../../../visual-basic/language-reference/statements/sub-statement.md)
+- [<span data-ttu-id="d107b-119">Function 陳述式</span><span class="sxs-lookup"><span data-stu-id="d107b-119">Function Statement</span></span>](../../../visual-basic/language-reference/statements/function-statement.md)
