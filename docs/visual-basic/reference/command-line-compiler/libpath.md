@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /libpath compiler option [Visual Basic]
 - -libpath compiler option [Visual Basic]
 ms.assetid: 5f1c26c9-3455-4e89-bdf3-b12d6c2e655b
-ms.openlocfilehash: b8e28b821f6536ddb5c7612e8706e024dd79a0bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b7bfcb0f2034145822922126fe61efea8d8ef269
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58833298"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344204"
 ---
 # <a name="-libpath"></a>-libpath
 指定參考的組件的位置。  
@@ -33,13 +33,13 @@ ms.locfileid: "58833298"
   
  編譯器會以下列順序搜尋不完整的組件參考：  
   
-1.  目前的工作目錄。 這是叫用編譯器的起點目錄。  
+1. 目前的工作目錄。 這是叫用編譯器的起點目錄。  
   
-2.  通用語言執行平台系統目錄。  
+2. 通用語言執行平台系統目錄。  
   
-3.  所指定的目錄`/libpath`。  
+3. 所指定的目錄`/libpath`。  
   
-4.  LIB 環境變數所指定的目錄。  
+4. LIB 環境變數所指定的目錄。  
   
  `-libpath`選項為加法; 指定超過一次附加到任何先前的值。  
   

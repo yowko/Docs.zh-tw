@@ -2,12 +2,12 @@
 title: 使用者名稱密碼驗證程式
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: d15a3753bbea023cd992ed50549ef2c7b0dad74f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162746"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345010"
 ---
 # <a name="user-name-password-validator"></a>使用者名稱密碼驗證程式
 這個範例會示範如何實作自訂的 UserNamePassword 驗證程式。 當內建 UserNamePassword 驗證模式都不符合應用程式需求時，這個驗證程式就很有用；例如，當使用者名稱/密碼組儲存在某些外部存放區時，例如資料庫中。 這個範例示範的服務具有可檢查兩組特定使用者名稱/密碼組的自訂驗證程式。 用戶端會使用這些使用者名稱/密碼組來向服務驗證。
@@ -278,40 +278,40 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
 #### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例
 
-1.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
-2.  若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
+2. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例
 
-1.  從範例安裝資料夾，在 Visual Studio 2012 的命令提示字元執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1. 從範例安裝資料夾，在 Visual Studio 2012 的命令提示字元執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
     >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。  
   
-2.  從 service\bin 啟動 Service.exe。  
+2. 從 service\bin 啟動 Service.exe。  
   
-3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
+3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1.  在服務機器上為服務二進位碼檔案建立一個目錄。  
+1. 在服務機器上為服務二進位碼檔案建立一個目錄。  
   
-2.  將服務程式檔複製到服務機器的服務目錄上。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務機器中。  
+2. 將服務程式檔複製到服務機器的服務目錄上。 同時，將 Setup.bat 和 Cleanup.bat 檔案複製到服務機器中。  
   
-3.  您伺服器憑證的主體名稱必須包含機器的完整網域名稱。 伺服器的組態檔必須更新以反映這個新憑證名稱。  
+3. 您伺服器憑證的主體名稱必須包含機器的完整網域名稱。 伺服器的組態檔必須更新以反映這個新憑證名稱。  
   
-4.  將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 只有在伺服器憑證不是由受信任的簽發者發行時才需要這麼做。  
+4. 將伺服器憑證複製到用戶端的 CurrentUser-TrustedPeople 存放區中。 只有在伺服器憑證不是由受信任的簽發者發行時才需要這麼做。  
   
-5.  在服務機器的 App.config 檔中變更基底位址的值，以指定完整機器名稱而不要指定 localhost。  
+5. 在服務機器的 App.config 檔中變更基底位址的值，以指定完整機器名稱而不要指定 localhost。  
   
-6.  在服務機器上，從命令提示視窗啟動 Service.exe。  
+6. 在服務機器上，從命令提示視窗啟動 Service.exe。  
   
-7.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器中。  
+7. 將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器中。  
   
-8.  在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
+8. 在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。  
   
 9. 在用戶端機器上，從命令提示字元視窗啟動 Client.exe。  
   
@@ -319,4 +319,4 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
-1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。 這樣會從憑證存放區中移除伺服器憑證。  
+1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。 這樣會從憑證存放區中移除伺服器憑證。  

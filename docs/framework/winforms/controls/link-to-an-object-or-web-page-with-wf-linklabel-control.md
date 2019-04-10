@@ -15,12 +15,12 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms], linking to object or Web page
 - LinkLabel control [Windows Forms], examples
 ms.assetid: 6c91c975-3cb7-4504-82f0-fc6255f8fb85
-ms.openlocfilehash: 49d53e068ea35b663affac79f689a8688763fac2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: edebfaee6f0da6826f4b757568408662f3208d41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344009"
 ---
 # <a name="how-to-link-to-an-object-or-web-page-with-the-windows-forms-linklabel-control"></a>HOW TO：使用 Windows Forms LinkLabel 控制項連結至物件或網頁
 Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上建立 Web 樣式連結。 按一下連結時，您可以變更其色彩會指出已瀏覽連結。 如需有關如何變更色彩的詳細資訊，請參閱[How to:變更 Windows Forms LinkLabel 控制項的外觀](how-to-change-the-appearance-of-the-windows-forms-linklabel-control.md)。  
@@ -29,9 +29,9 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
   
 #### <a name="to-link-to-another-form-with-a-linklabel-control"></a>若要連結至另一種形式使用 LinkLabel 控制項  
   
-1.  設定<xref:System.Windows.Forms.LinkLabel.Text%2A>屬性設為適當的標題。  
+1. 設定<xref:System.Windows.Forms.LinkLabel.Text%2A>屬性設為適當的標題。  
   
-2.  設定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性來判斷哪一部分的標題會指出以連結形式。 指示它的方式取決於連結標籤的外觀相關屬性。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>值由<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>物件，其中包含兩個數字，起始字元位置的字元數。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>可以設定屬性，在 [屬性] 視窗中，或在類似下列程式碼中：  
+2. 設定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性來判斷哪一部分的標題會指出以連結形式。 指示它的方式取決於連結標籤的外觀相關屬性。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>值由<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>物件，其中包含兩個數字，起始字元位置的字元數。 <xref:System.Windows.Forms.LinkLabel.LinkArea%2A>可以設定屬性，在 [屬性] 視窗中，或在類似下列程式碼中：  
   
     ```vb  
     ' In this code example, the link area has been set to begin  
@@ -54,7 +54,7 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
     linkLabel1->LinkArea = LinkArea(0,8);  
     ```  
   
-3.  在 <xref:System.Windows.Forms.LinkLabel.LinkClicked>事件處理常式，叫用<xref:System.Windows.Forms.Form.Show%2A>方法，以在專案中，開啟另一個表單，並設定<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性設`true`。  
+3. 在 <xref:System.Windows.Forms.LinkLabel.LinkClicked>事件處理常式，叫用<xref:System.Windows.Forms.Form.Show%2A>方法，以在專案中，開啟另一個表單，並設定<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性設`true`。  
   
     > [!NOTE]
     >  執行個體<xref:System.Windows.Forms.LinkLabelLinkClickedEventArgs>類別具有其參考<xref:System.Windows.Forms.LinkLabel>已按下，這樣就不需要轉換的控制`sender`物件。  
@@ -97,11 +97,11 @@ Windows Form<xref:System.Windows.Forms.LinkLabel>控制項可讓您在表單上�
   
 #### <a name="to-start-internet-explorer-and-link-to-a-web-page-with-a-linklabel-control"></a>啟動 Internet Explorer 並連結到網頁上使用 LinkLabel 控制項  
   
-1.  設定<xref:System.Windows.Forms.LinkLabel.Text%2A>屬性設為適當的標題。  
+1. 設定<xref:System.Windows.Forms.LinkLabel.Text%2A>屬性設為適當的標題。  
   
-2.  設定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性來判斷哪一部分的標題會指出以連結形式。  
+2. 設定<xref:System.Windows.Forms.LinkLabel.LinkArea%2A>屬性來判斷哪一部分的標題會指出以連結形式。  
   
-3.  在<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件處理常式，當中的例外狀況處理區塊中，呼叫設定的第二個程序<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性設`true`，並使用<xref:System.Diagnostics.Process.Start%2A>方法來啟動預設瀏覽器的 url。 若要使用<xref:System.Diagnostics.Process.Start%2A>方法，您需要將參考加入<xref:System.Diagnostics?displayProperty=nameWithType>命名空間。  
+3. 在<xref:System.Windows.Forms.LinkLabel.LinkClicked>事件處理常式，當中的例外狀況處理區塊中，呼叫設定的第二個程序<xref:System.Windows.Forms.LinkLabel.LinkVisited%2A>屬性設`true`，並使用<xref:System.Diagnostics.Process.Start%2A>方法來啟動預設瀏覽器的 url。 若要使用<xref:System.Diagnostics.Process.Start%2A>方法，您需要將參考加入<xref:System.Diagnostics?displayProperty=nameWithType>命名空間。  
   
     > [!IMPORTANT]
     >  如果在部分信任環境中執行下列程式碼 (例如共用的磁碟機上)，JIT 編譯器失敗`VisitLink`呼叫方法。 `System.Diagnostics.Process.Start`陳述式會導致失敗的連結要求。 藉由捕捉例外狀況時`VisitLink`呼叫方法，下列程式碼可確保如果 JIT 編譯器失敗，錯誤為處理依正常程序。  

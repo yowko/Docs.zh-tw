@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a2b5c90f-6cc3-4128-bfab-1db488d5af26
-ms.openlocfilehash: 84ef85b1e53d97ff468c3360af5e394a0e4ad776
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e40866c5160d6850b39133050d09026f5ffd6cc5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091189"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344168"
 ---
 # <a name="how-to-update-rows-in-the-database"></a>HOW TO：更新資料庫中的資料列
 您可以藉由修改與相關聯之物件的成員值來更新資料庫中的資料列[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>集合，然後將變更提交至資料庫。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會轉譯成適當的 SQL 變更`UPDATE`命令。  
@@ -24,11 +24,11 @@ ms.locfileid: "59091189"
   
 ### <a name="to-update-a-row-in-the-database"></a>若要更新資料庫中的資料列  
   
-1.  查詢資料庫，以找出要更新的資料列。  
+1. 查詢資料庫，以找出要更新的資料列。  
   
-2.  對結果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件中的成員值進行所需的變更。  
+2. 對結果 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 物件中的成員值進行所需的變更。  
   
-3.  將變更提交至資料庫。  
+3. 將變更提交至資料庫。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會查詢資料庫中的訂單編號 11000，然後變更結果 `ShipName` 物件中 `ShipVia` 和 `Order` 的值。 最後，這些成員值的變更會提交至資料庫，成為 `ShipName` 和 `ShipVia` 資料行的變更。  

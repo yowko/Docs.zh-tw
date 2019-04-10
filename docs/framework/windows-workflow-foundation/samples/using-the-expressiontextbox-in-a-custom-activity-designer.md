@@ -2,12 +2,12 @@
 title: 使用自訂活動設計工具中的 ExpressionTextBox
 ms.date: 03/30/2017
 ms.assetid: f82e73e7-a256-4a4d-82b7-c0d62f4ab5e7
-ms.openlocfilehash: 7c1ba262046a665b8d63157fe3cdb4b1a41c37bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c85254f1ae7ba8a269568cf1a14acf367b595e33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229377"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344971"
 ---
 # <a name="using-the-expressiontextbox-in-a-custom-activity-designer"></a>使用自訂活動設計工具中的 ExpressionTextBox
 這個範例示範如何在自訂活動設計工具內使用 <xref:System.Activities.Presentation.View.ExpressionTextBox>。 自訂活動 `MultiAssign` 會將兩個字串值指派給兩個字串變數。 某些 <xref:System.Activities.Presentation.View.ExpressionTextBox> 控制項會繫結至 <xref:System.Activities.InArgument>，而某些則繫結至 <xref:System.Activities.OutArgument>。
@@ -23,19 +23,19 @@ ms.locfileid: "59229377"
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  使用 Visual Studio 2010 開啟 ExpressionTextBoxSample.sln 檔案。
+1. 使用 Visual Studio 2010 開啟 ExpressionTextBoxSample.sln 檔案。
 
-2.  若要建置此方案，請按 CTRL+SHIFT+B。
+2. 若要建置此方案，請按 CTRL+SHIFT+B。
 
 #### <a name="to-run-this-sample"></a>若要執行這個範例
 
-1.  將新的工作流程主控台應用程式加入至方案。
+1. 將新的工作流程主控台應用程式加入至方案。
 
-2.  將參考加入**ExpressionTextBoxSample**從新的工作流程主控台應用程式專案的專案。
+2. 將參考加入**ExpressionTextBoxSample**從新的工作流程主控台應用程式專案的專案。
 
-3.  建置方案。
+3. 建置方案。
 
-4.  拖曳**MultiAssign**活動從 [工具箱] 拖放到工作流程。
+4. 拖曳**MultiAssign**活動從 [工具箱] 拖放到工作流程。
 
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

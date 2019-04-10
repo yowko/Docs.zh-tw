@@ -7,12 +7,12 @@ helpviewer_keywords:
 - IsTrue operator [Visual Basic]
 - OrElse operator [Visual Basic]
 ms.assetid: b6cec0f2-61b1-4331-a7f0-4d07ee3179d6
-ms.openlocfilehash: cb8ad8cb4a1ec13611edfcc3de7f4b7eb33fc553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6c5ec6d953d174b525dee7ad3034d2d01ae4950f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344945"
 ---
 # <a name="istrue-operator-visual-basic"></a>IsTrue 運算子 (Visual Basic)
 判斷運算式是否為`True`。  
@@ -24,15 +24,15 @@ ms.locfileid: "58829924"
 ## <a name="compiler-use-of-istrue"></a>IsTrue 的編譯器使用  
  當您已定義類別或結構時，您可以使用在該類型的變數`For`， `If`， `Else If`，或`While`陳述式，或在`When`子句。 如果您這麼做時，編譯器需要轉換成您類型的運算子`Boolean`值讓它可以測試條件。 它會搜尋適當的運算子，以下列順序：  
   
-1.  擴展的轉換運算子，從您的類別或結構`Boolean`。  
+1. 擴展的轉換運算子，從您的類別或結構`Boolean`。  
   
-2.  擴展的轉換運算子，從您的類別或結構`Boolean?`。  
+2. 擴展的轉換運算子，從您的類別或結構`Boolean?`。  
   
-3.  `IsTrue`運算子，在您自己的類別或結構。  
+3. `IsTrue`運算子，在您自己的類別或結構。  
   
-4.  若要縮小轉換`Boolean?`，未牽涉到從轉換`Boolean`至`Boolean?`。  
+4. 若要縮小轉換`Boolean?`，未牽涉到從轉換`Boolean`至`Boolean?`。  
   
-5.  縮小的轉換運算子，從您的類別或結構`Boolean`。  
+5. 縮小的轉換運算子，從您的類別或結構`Boolean`。  
   
  如果您還沒有定義任何轉換成`Boolean`或`IsTrue`運算子，編譯器會發出錯誤信號。  
   
@@ -47,5 +47,5 @@ ms.locfileid: "58829924"
 ## <a name="see-also"></a>另請參閱
 
 - [IsFalse 運算子](../../../visual-basic/language-reference/operators/isfalse-operator.md)
-- [如何：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
+- [HOW TO：定義運算子](../../../visual-basic/programming-guide/language-features/procedures/how-to-define-an-operator.md)
 - [OrElse 運算子](../../../visual-basic/language-reference/operators/orelse-operator.md)

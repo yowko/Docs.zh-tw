@@ -7,12 +7,12 @@ helpviewer_keywords:
 - statements [Visual Basic], structure
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
-ms.openlocfilehash: 7fc4aed4d405729b64a2f7ba772cdd794df40f2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58825088"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343554"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>HOW TO：宣告結構 (Visual Basic)
 開始使用在 structure 宣告[Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)，然後您使用`End Structure`陳述式。 這兩個陳述式之間必須宣告至少一個*項目*。 項目可以是任何資料類型，但至少一個必須為非共用的變數或非共用、 非自訂的事件。  
@@ -25,7 +25,7 @@ ms.locfileid: "58825088"
   
 ### <a name="to-declare-a-structure"></a>若要宣告結構  
   
-1.  建立的開始和結束陳述式中的結構。  
+1. 建立的開始和結束陳述式中的結構。  
   
      您可以指定的結構，使用的存取層級[公開金鑰](../../../../visual-basic/language-reference/modifiers/public.md)，[受保護](../../../../visual-basic/language-reference/modifiers/protected.md)， [Friend](../../../../visual-basic/language-reference/modifiers/friend.md)，或[私人](../../../../visual-basic/language-reference/modifiers/private.md)關鍵字，或者您可以讓它預設為`Public`。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "58825088"
     End Structure  
     ```  
   
-2.  加入結構主體中的項目。  
+2. 加入結構主體中的項目。  
   
      結構必須有至少一個項目。 您必須宣告每個項目，並為其指定存取層級。 如果您使用[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)而不需要任何關鍵字，可存取性，預設值為`Public`。  
   
@@ -62,8 +62,8 @@ ms.locfileid: "58825088"
 - [複合資料類型](../../../../visual-basic/programming-guide/language-features/data-types/composite-data-types.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [結構](../../../../visual-basic/programming-guide/language-features/data-types/structures.md)
-- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [資料類型疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [結構變數](../../../../visual-basic/programming-guide/language-features/data-types/structure-variables.md)
 - [結構和其他程式設計項目](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md)
 - [結構和類別](../../../../visual-basic/programming-guide/language-features/data-types/structures-and-classes.md)
-- [使用者定義的資料類型](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)
+- [使用者定義資料類型](../../../../visual-basic/language-reference/data-types/user-defined-data-type.md)

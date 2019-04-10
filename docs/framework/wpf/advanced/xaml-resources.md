@@ -7,12 +7,12 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
-ms.openlocfilehash: d736d80a05469dafecbdaf196701c14528ee7d26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230014"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344919"
 ---
 # <a name="xaml-resources"></a>XAML 資源
 資源是可在應用程式中不同位置重複使用的物件。 資源的範例包括筆刷和樣式。 本概觀說明如何使用中的資源[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]。 您也可以建立及存取資源，使用程式碼，或是交換使用程式碼之間和[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。 如需詳細資訊，請參閱 <<c0> [ 資源和程式碼](resources-and-code.md)。  
@@ -69,11 +69,11 @@ ms.locfileid: "59230014"
   
 #### <a name="static-resource-lookup-behavior"></a>靜態資源查閱行為  
   
-1.  查閱程序會檢查設定屬性之項目所定義的資源字典內，是否有要求的索引鍵。  
+1. 查閱程序會檢查設定屬性之項目所定義的資源字典內，是否有要求的索引鍵。  
   
-2.  查閱程序接著會在邏輯樹狀結構中，向上周游到父項目及其資源字典。 這會繼續直到到達根項目。  
+2. 查閱程序接著會在邏輯樹狀結構中，向上周游到父項目及其資源字典。 這會繼續直到到達根項目。  
   
-3.  接下來，會檢查應用程式資源。 應用程式資源則由定義資源字典內<xref:System.Windows.Application>物件您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
+3. 接下來，會檢查應用程式資源。 應用程式資源則由定義資源字典內<xref:System.Windows.Application>物件您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
   
  資源字典內的靜態資源參考必須參考資源參考之前已在語彙上定義的資源。 靜態資源參考無法解析向前參考。 因此，如果您使用靜態資源參考，您必須設計資源字典結構，讓預期要供某個資源使用的所有資源都在每個相關資源字典開頭或附近定義。  
   
@@ -101,19 +101,19 @@ ms.locfileid: "59230014"
 #### <a name="dynamic-resource-lookup-behavior"></a>動態資源查閱行為  
  動態資源參考的資源查閱行為平行程式碼中的查閱行為，如果您呼叫<xref:System.Windows.FrameworkElement.FindResource%2A>或<xref:System.Windows.FrameworkElement.SetResourceReference%2A>。  
   
-1.  查閱程序會檢查設定屬性之項目所定義的資源字典內，是否有要求的索引鍵。  
+1. 查閱程序會檢查設定屬性之項目所定義的資源字典內，是否有要求的索引鍵。  
   
     -   如果項目定義<xref:System.Windows.FrameworkElement.Style%2A>屬性，<xref:System.Windows.Style.Resources%2A>字典內<xref:System.Windows.Style>已核取。  
   
     -   如果項目定義<xref:System.Windows.Controls.Control.Template%2A>屬性，<xref:System.Windows.FrameworkTemplate.Resources%2A>字典內<xref:System.Windows.FrameworkTemplate>已核取。  
   
-2.  查閱程序接著會在邏輯樹狀結構中，向上周游到父項目及其資源字典。 這會繼續直到到達根項目。  
+2. 查閱程序接著會在邏輯樹狀結構中，向上周游到父項目及其資源字典。 這會繼續直到到達根項目。  
   
-3.  接下來，會檢查應用程式資源。 應用程式資源則由定義資源字典內<xref:System.Windows.Application>物件您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
+3. 接下來，會檢查應用程式資源。 應用程式資源則由定義資源字典內<xref:System.Windows.Application>物件您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。  
   
-4.  檢查目前使用中佈景主題的佈景主題資源字典。 如果佈景主題在執行階段變更，則會重新評估其值。  
+4. 檢查目前使用中佈景主題的佈景主題資源字典。 如果佈景主題在執行階段變更，則會重新評估其值。  
   
-5.  檢查系統資源。  
+5. 檢查系統資源。  
   
  例外狀況行為 (如果有的話) 則有所不同：  
   

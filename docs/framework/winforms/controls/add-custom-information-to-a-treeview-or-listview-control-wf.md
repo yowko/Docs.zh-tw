@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding custom information
 - TreeView control [Windows Forms], adding custom information
 ms.assetid: 68be11de-1d5b-430e-901f-cfbe48d14b19
-ms.openlocfilehash: 15533b2b1fb13ad43bba645d3f52dbad53b17033
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 302eb1b88d4e43b4e2bd6395e27a3a6489320085
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59188932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344152"
 ---
 # <a name="how-to-add-custom-information-to-a-treeview-or-listview-control-windows-forms"></a>HOW TO：將自訂資訊新增至 TreeView 或 ListView 控制項 (Windows Forms)
 您可以在 Windows Forms 中建立衍生的節點<xref:System.Windows.Forms.TreeView>控制項或中的衍生項目<xref:System.Windows.Forms.ListView>控制項。 衍生可讓您新增您所需的任何欄位，以及新增自訂方法和建構函式來處理它們。 這項功能的其中一個用途是將 Customer 物件附加至每個樹狀節點或清單項目。 這裡的範例是針對<xref:System.Windows.Forms.TreeView>控制項，但是相同的方法可用於<xref:System.Windows.Forms.ListView>控制項。  
@@ -70,7 +70,7 @@ ms.locfileid: "59188932"
   
 ### <a name="to-use-a-derived-tree-node"></a>使用衍生樹狀節點  
   
-1.  您可以使用新的衍生樹狀節點做為函式呼叫的參數。  
+1. 您可以使用新的衍生樹狀節點做為函式呼叫的參數。  
   
      在下列範例中，針對文字檔案位置設定的路徑是 [我的文件] 資料夾。 這是因為您可以假設大部分執行 Windows 作業系統的電腦都會包含這個目錄。 也可讓具備最小系統存取層級的使用者安全地執行應用程式。  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59188932"
        "\\TextFile.txt")));  
     ```  
   
-2.  如果您傳遞的樹狀節點和它的類型為<xref:System.Windows.Forms.TreeNode>類別，則您必須轉換為衍生的類別。 轉型是物件類型之間的明確轉換。 如需有關轉換的詳細資訊，請參閱 <<c0> [ 隱含和明確轉換](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic)、 [（) 運算子](~/docs/csharp/language-reference/operators/invocation-operator.md)(Visual C#)，或[轉型運算子: （)](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</c0>  
+2. 如果您傳遞的樹狀節點和它的類型為<xref:System.Windows.Forms.TreeNode>類別，則您必須轉換為衍生的類別。 轉型是物件類型之間的明確轉換。 如需有關轉換的詳細資訊，請參閱 <<c0> [ 隱含和明確轉換](~/docs/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)(Visual Basic)、 [（) 運算子](~/docs/csharp/language-reference/operators/invocation-operator.md)(Visual C#)，或[轉型運算子: （)](/cpp/cpp/cast-operator-parens) ([!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]).</c0>  
   
     ```vb  
     Public Sub TreeView1_AfterSelect(ByVal sender As Object, ByVal e As System.Windows.Forms.TreeViewEventArgs) Handles TreeView1.AfterSelect  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XAML [WPF], procedural code in lieu of
 - InkCanvas (WPF)
 ms.assetid: 760332dd-594a-475d-865b-01659db8cab7
-ms.openlocfilehash: 2fb3f975fedbae1cf898d5ec2f7c0809e0215ecd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 4309b1108b2ea96eb298ff3bb876a0f63b80dc32
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365564"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343586"
 ---
 # <a name="get-started-with-ink-in-wpf"></a>開始使用 WPF 中的筆墨
 
@@ -22,7 +22,7 @@ Windows Presentation Foundation (WPF) 具有筆跡功能，可讓您輕鬆地將
 
 ## <a name="prerequisites"></a>必要條件
 
-若要使用下列範例中，第一次[安裝 Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 它也有助於了解如何撰寫基本的 WPF 應用程式。 開始使用 WPF 的協助，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
+若要使用下列的範例，請先安裝[Microsoft Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。 它也有助於了解如何撰寫基本的 WPF 應用程式。 開始使用 WPF 的協助，請參閱[逐步解說：我第一個 WPF 桌面應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)。
 
 ## <a name="quick-start"></a>快速入門
 

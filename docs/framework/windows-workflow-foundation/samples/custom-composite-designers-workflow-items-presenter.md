@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
-ms.openlocfilehash: f4db3325081a820a37a8791849d2ad9697d15151
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118101"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344867"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>自訂複合設計工具 - 工作流程項目展示器
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> 是 WF 設計工具程式撰寫模型中的關鍵類型，允許編輯包含的項目集合。 這個範例示範如何建置會呈現這類可編輯集合的活動設計工具。
@@ -25,9 +25,9 @@ ms.locfileid: "59118101"
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  開啟**UsingWorkflowItemsPresenter.sln**適用於 C# 或 Visual Studio 2010 中的 VB 範例方案。
+1. 開啟**UsingWorkflowItemsPresenter.sln**適用於 C# 或 Visual Studio 2010 中的 VB 範例方案。
 
-2.  建置並執行方案。 重新裝載的工作流程設計工具應用程式應該會開啟，您可以將活動拖曳至畫布上。
+2. 建置並執行方案。 重新裝載的工作流程設計工具應用程式應該會開啟，您可以將活動拖曳至畫布上。
 
 ## <a name="sample-highlights"></a>範例重點
  這個範例的程式碼示範下列操作：

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], large data sets
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
-ms.openlocfilehash: 7509e2f5035cb05c20af379f9f6a141177d540d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127045"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344321"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>逐步解說：在 Windows Forms DataGridView 控制項中實作虛擬模式
 當您想要顯示非常大量的中的表格式資料的地方<xref:System.Windows.Forms.DataGridView>控制項，您可以設定<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>屬性設`true`並明確地管理其資料存放區的控制項的互動。 這可讓您微調控制項在此情況下的效能。  
@@ -30,7 +30,7 @@ ms.locfileid: "59127045"
   
 #### <a name="to-implement-virtual-mode"></a>若要實作虛擬模式  
   
-1.  建立衍生自類別<xref:System.Windows.Forms.Form>且包含<xref:System.Windows.Forms.DataGridView>控制項。  
+1. 建立衍生自類別<xref:System.Windows.Forms.Form>且包含<xref:System.Windows.Forms.DataGridView>控制項。  
   
      下列程式碼包含一些基本的初始化。 它會宣告一些變數，用以在稍後步驟中，提供`Main`方法，並提供簡單的表單中的版面配置的類別建構函式。  
   
@@ -41,13 +41,13 @@ ms.locfileid: "59127045"
     [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#002)]
     [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#002](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#002)]  
   
-2.  實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>控制，並於其中填入資料存放區的範例值。  
+2. 實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>控制，並於其中填入資料存放區的範例值。  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#110)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#110)]  
   
-3.  實作的處理常式<xref:System.Windows.Forms.DataGridView.CellValueNeeded>從資料存放區擷取要求的資料格的值的事件或`Customer`中編輯目前的物件。  
+3. 實作的處理常式<xref:System.Windows.Forms.DataGridView.CellValueNeeded>從資料存放區擷取要求的資料格的值的事件或`Customer`中編輯目前的物件。  
   
      這個事件就會發生<xref:System.Windows.Forms.DataGridView>控制項需要繪製儲存格。  
   
@@ -55,13 +55,13 @@ ms.locfileid: "59127045"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#120)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#120](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#120)]  
   
-4.  實作的處理常式<xref:System.Windows.Forms.DataGridView.CellValuePushed>儲存已編輯儲存格的值中的事件`Customer`物件，表示編輯的資料列。 每當使用者認可儲存格值的變更，就會發生此事件。  
+4. 實作的處理常式<xref:System.Windows.Forms.DataGridView.CellValuePushed>儲存已編輯儲存格的值中的事件`Customer`物件，表示編輯的資料列。 每當使用者認可儲存格值的變更，就會發生此事件。  
   
      [!code-cpp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CPP/virtualmode.cpp#130)]
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#130)]  
   
-5.  實作的處理常式<xref:System.Windows.Forms.DataGridView.NewRowNeeded>建立新的事件`Customer`物件，代表新建立的資料列。  
+5. 實作的處理常式<xref:System.Windows.Forms.DataGridView.NewRowNeeded>建立新的事件`Customer`物件，代表新建立的資料列。  
   
      每當使用者輸入新資料錄的資料列，就會發生此事件。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "59127045"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#140)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#140](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#140)]  
   
-6.  實作的處理常式<xref:System.Windows.Forms.DataGridView.RowValidated>將新的或修改過的資料列儲存至資料存放區的事件。  
+6. 實作的處理常式<xref:System.Windows.Forms.DataGridView.RowValidated>將新的或修改過的資料列儲存至資料存放區的事件。  
   
      每當使用者變更目前的資料列，就會發生此事件。  
   
@@ -77,7 +77,7 @@ ms.locfileid: "59127045"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#150)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#150](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#150)]  
   
-7.  實作的處理常式<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件，表示是否<xref:System.Windows.Forms.DataGridView.CancelRowEdit>事件會發生於使用者按下 esc 鍵，在編輯模式中的兩次或一次編輯模式外表示資料列回復。  
+7. 實作的處理常式<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件，表示是否<xref:System.Windows.Forms.DataGridView.CancelRowEdit>事件會發生於使用者按下 esc 鍵，在編輯模式中的兩次或一次編輯模式外表示資料列回復。  
   
      根據預設，<xref:System.Windows.Forms.DataGridView.CancelRowEdit>除非已修改目前的資料列中的任何資料格時，會發生在資料列回復<xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType>屬性設定為`true`在<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件處理常式。 當認可範圍在執行階段決定時，這個事件會很實用。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "59127045"
      [!code-csharp[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/CS/virtualmode.cs#160)]
      [!code-vb[System.Windows.Forms.DataGridView.VirtualMode#160](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.VirtualMode/VB/virtualmode.vb#160)]  
   
-8.  實作的處理常式<xref:System.Windows.Forms.DataGridView.CancelRowEdit>的值就會捨棄的事件`Customer`物件，表示目前資料列。  
+8. 實作的處理常式<xref:System.Windows.Forms.DataGridView.CancelRowEdit>的值就會捨棄的事件`Customer`物件，表示目前資料列。  
   
      當使用者按下 esc 鍵，在編輯模式中的兩次或一次編輯模式外表示資料列回復時，就會發生此事件。 如果目前的資料列中沒有儲存格已經過修改或者不會發生此事件的值<xref:System.Windows.Forms.QuestionEventArgs.Response%2A?displayProperty=nameWithType>屬性已設定為`false`在<xref:System.Windows.Forms.DataGridView.RowDirtyStateNeeded>事件處理常式。  
   

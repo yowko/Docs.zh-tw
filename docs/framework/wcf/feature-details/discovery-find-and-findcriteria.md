@@ -2,12 +2,12 @@
 title: 探索尋找與尋找準則
 ms.date: 03/30/2017
 ms.assetid: 99016fa4-1778-495b-b4cc-0e22fbec42c6
-ms.openlocfilehash: c95f8e1b48c4e58c6d521bd06df4a470999fa375
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6efbfe34bbe5b15696d247c291f1d88006a53a36
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095772"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345777"
 ---
 # <a name="discovery-find-and-findcriteria"></a>探索尋找與尋找準則
 探索尋找作業是由用戶端初始化，用於探索一項或多項服務，並且為探索中的其中一個主要動作。 執行尋找會透過網路傳送 WS-Discovery Probe 訊息。 符合指定準則的服務會以 WS-Discovery ProbeMatch 訊息回覆。 如需有關探索訊息的詳細資訊，請參閱[Ws-discovery 規格](https://go.microsoft.com/fwlink/?LinkID=122347)。  
@@ -40,9 +40,9 @@ ms.locfileid: "59095772"
   
  終止準則包括：  
   
-1.  <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 若要在網路上等待服務回覆的-最大時間。 預設持續時間為 20 秒。  
+1. <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 若要在網路上等待服務回覆的-最大時間。 預設持續時間為 20 秒。  
   
-2.  <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 等候回覆-最大數目。 如果在 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 經過之前，先收到 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 回覆，尋找作業就會結束。  
+2. <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 等候回覆-最大數目。 如果在 <xref:System.ServiceModel.Discovery.FindCriteria.MaxResults%2A> 經過之前，先收到 <xref:System.ServiceModel.Discovery.FindCriteria.Duration%2A> 回覆，尋找作業就會結束。  
   
 ## <a name="findresponse"></a>FindResponse  
  <xref:System.ServiceModel.Discovery.FindResponse> 具有<xref:System.ServiceModel.Discovery.FindResponse.Endpoints%2A>集合屬性，其中包含任何比對在網路上的服務傳送的回覆。 如果沒有任何服務回覆，則集合會是空的。 如果有一項或多項服務回覆，則每個回覆都會儲存在 <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> 物件中，其中包含與服務相關的位址、合約和一些額外資訊。  

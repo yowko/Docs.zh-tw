@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column freezing
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
-ms.openlocfilehash: 437e49a1f8e5a154f1a54fc7a266579cb5f0122c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344308"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具凍結 Windows Forms DataGridView 控制項的資料行
 當使用者檢視顯示於 Windows Form <xref:System.Windows.Forms.DataGridView> 控制項的資料時，有時候需要經常參考單一資料行或資料行集合。 比方說，當您顯示客戶資訊，其中包含許多資料行的資料表時，它可用於您隨時都能在其他資料行的可見區域外捲動時顯示客戶的名稱。  
@@ -26,11 +26,11 @@ ms.locfileid: "59099998"
   
 ### <a name="to-freeze-a-column-using-the-designer"></a>若要凍結資料行使用設計工具  
   
-1.  按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再選取**編輯資料行**。  
+1. 按一下智慧標籤圖像 (![智慧標籤圖像](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) 的右上角<xref:System.Windows.Forms.DataGridView>控制項，然後再選取**編輯資料行**。  
   
-2.  選取的資料行**選取的資料行**清單。  
+2. 選取的資料行**選取的資料行**清單。  
   
-3.  在 **資料行屬性**方格中，設定<xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A>屬性設`true`。  
+3. 在 **資料行屬性**方格中，設定<xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A>屬性設`true`。  
   
     > [!NOTE]
     >  您也可以將它加入選取時凍結資料行**Frozen**方塊中**加入資料行** 對話方塊。  

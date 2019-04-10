@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms controls, adding to form
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
-ms.openlocfilehash: 72b5931a79284a93a4e0fdf3cb2cc3b03157f5f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343580"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>HOW TO：將控制項新增至 Windows Forms
 大部分的表單都設計成將控制項加入表單的介面，來定義使用者介面 (UI)。 A*控制*是用來顯示資訊，或接受使用者輸入表單上的元件。 如需控制項的詳細資訊，請參閱[Windows Forms 控制項](index.md)。  
@@ -24,11 +24,11 @@ ms.locfileid: "59106479"
   
 ### <a name="to-draw-a-control-on-a-form"></a>若要繪製在表單上控制項  
   
-1.  開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
+1. 開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
-2.  在 **工具箱**，按一下您想要新增至表單的控制項。  
+2. 在 **工具箱**，按一下您想要新增至表單的控制項。  
   
-3.  在表單中，按一下您想要找出，控制項的左上角並拖曳至要放置控制項的右下角的位置。  
+3. 在表單中，按一下您想要找出，控制項的左上角並拖曳至要放置控制項的右下角的位置。  
   
      控制項會加入至表單的指定的位置和大小。  
   
@@ -37,9 +37,9 @@ ms.locfileid: "59106479"
   
 ### <a name="to-drag-a-control-to-a-form"></a>若要將控制項拖曳至表單  
   
-1.  開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
+1. 開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
-2.  在 **工具箱**，按一下您想要並將它拖曳至表單的控制項。  
+2. 在 **工具箱**，按一下您想要並將它拖曳至表單的控制項。  
   
      控制項會加入至指定的位置，以預設大小的表單。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59106479"
   
 ### <a name="to-add-a-control-to-a-form-programmatically"></a>若要以程式設計方式將控制項加入表單  
   
-1.  在方法中處理按鈕的`Click`事件，在您的表單類別中，插入程式碼如下所示將參考加入至您的控制項變數，將控制項的`Location`，並加入控制項。  
+1. 在方法中處理按鈕的`Click`事件，在您的表單類別中，插入程式碼如下所示將參考加入至您的控制項變數，將控制項的`Location`，並加入控制項。  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  

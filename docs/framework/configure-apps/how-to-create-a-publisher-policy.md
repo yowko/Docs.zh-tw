@@ -7,23 +7,23 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ed73b9c15d5d9279b97063077f210d3ac5dc68e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227388"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344659"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>HOW TO：建立發行者原則
 組件的廠商可以應用程式應該使用較新版的組件，包含與升級後的組件的發行者原則檔的狀態。 發行者原則檔會指定組件重新導向和程式碼基底設定，並使用應用程式組態檔相同的格式。 發行者原則檔會編譯成組件，並放置於全域組件快取。  
   
  建立發行者原則是三個步驟：  
   
-1.  建立發行者原則檔。  
+1. 建立發行者原則檔。  
   
-2.  建立發行者原則組件。  
+2. 建立發行者原則組件。  
   
-3.  將發行者原則組件新增至全域組件快取中。  
+3. 將發行者原則組件新增至全域組件快取中。  
   
  發行者原則的結構描述所述[重新導向組件版本](../../../docs/framework/configure-apps/redirect-assembly-versions.md)。 下列範例顯示發行者原則檔會將重新導向的一個版本`myAssembly`到另一個。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59227388"
   
 #### <a name="to-create-a-publisher-policy-assembly"></a>若要建立發行者原則組件  
   
-1.  在命令提示字元中輸入下列命令：  
+1. 在命令提示字元中輸入下列命令：  
   
      **al /link:** *publisherPolicyFile* **/out:** *publisherPolicyAssemblyFile* **/keyfile:** *keyPairFile* **/platform:** *processorArchitecture*  
   
@@ -87,7 +87,7 @@ ms.locfileid: "59227388"
   
 #### <a name="to-add-the-publisher-policy-assembly-to-the-global-assembly-cache"></a>將發行者原則組件新增至全域組件快取  
   
-1.  在命令提示字元中輸入下列命令：  
+1. 在命令提示字元中輸入下列命令：  
   
      **gacutil /i**  *publisherPolicyAssemblyFile*  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
-ms.openlocfilehash: c5003b6d4892839d43ba9da103473c4c7e3d947a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817132"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346310"
 ---
 # <a name="class-classname-cannot-be-found"></a>類別\<類別名稱 >' 找不到
 類別\<類別名稱 >' 找不到。 此狀況通常是因為 'Microsoft.VisualBasic.dll' 不符。  
@@ -23,14 +23,14 @@ ms.locfileid: "58817132"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  再次編譯程式，看看錯誤是否重複發生。  
+1. 再次編譯程式，看看錯誤是否重複發生。  
   
-2.  如果錯誤重複發生，請儲存您的工作，然後重新啟動 Visual Studio。  
+2. 如果錯誤重複發生，請儲存您的工作，然後重新啟動 Visual Studio。  
   
-3.  如果錯誤持續發生，請重新安裝 Visual Basic。  
+3. 如果錯誤持續發生，請重新安裝 Visual Basic。  
   
-4.  如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
+4. 如果錯誤在重新安裝之後持續發生，請通知 Microsoft 產品支援服務。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [告訴我們](/visualstudio/ide/talk-to-us)
+- [Talk to Us](/visualstudio/ide/talk-to-us)

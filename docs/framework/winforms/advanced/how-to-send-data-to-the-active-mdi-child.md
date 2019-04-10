@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], pasting
 - Clipboard [Windows Forms], getting data from
 ms.assetid: 1047d2fe-1235-46db-aad9-563aea1d743b
-ms.openlocfilehash: 0ffe87d55f7325f77bd33bdbf5d5fbab9f321f93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f4399d8548eff76aaa4effae6da7239cd3b0284b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203323"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343710"
 ---
 # <a name="how-to-send-data-to-the-active-mdi-child"></a>HOW TO：傳送資料至作用中的 MDI 子系
 內容中，通常[多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)，您必須將資料傳送至作用中的子視窗，例如當使用者將資料從剪貼簿貼到 MDI 應用程式。  
@@ -25,7 +25,7 @@ ms.locfileid: "59203323"
   
 ### <a name="to-send-data-to-the-active-mdi-child-window-from-the-clipboard"></a>若要將資料傳送至作用中的 MDI 子視窗中，從剪貼簿  
   
-1.  在方法中，將文字複製到剪貼簿上到作用中的子表單的作用中的控制項。  
+1. 在方法中，將文字複製到剪貼簿上到作用中的子表單的作用中的控制項。  
   
     > [!NOTE]
     >  這個範例假設沒有 MDI 父表單 (`Form1`)，其包含的一或多個 MDI 子視窗<xref:System.Windows.Forms.RichTextBox>控制項。 如需詳細資訊，請參閱 <<c0> [ 建立 MDI 父表單](how-to-create-mdi-parent-forms.md)。  

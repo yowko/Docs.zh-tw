@@ -2,12 +2,12 @@
 title: 自訂訊息篩選條件
 ms.date: 03/30/2017
 ms.assetid: 98dd0af8-fce6-4255-ac32-42eb547eea67
-ms.openlocfilehash: 31816ae67e3273e033b53951ff78d662ef8192c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 34e6d851bd0aa3515c5c43521be6213451b7ed12
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172831"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345816"
 ---
 # <a name="custom-message-filter"></a>自訂訊息篩選條件
 此範例示範如何取代 Windows Communication Foundation (WCF) 用來將訊息分派至端點的訊息篩選。  
@@ -119,11 +119,11 @@ Hello
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  若要在單一電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+2. 若要在單一電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-3.  若要在跨電腦組態中執行範例，請遵循指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)和變更在 Client.cs 中的下列這一行。  
+3. 若要在跨電腦組態中執行範例，請遵循指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)和變更在 Client.cs 中的下列這一行。  
   
     ```  
     Uri serviceVia = new Uri("http://localhost/ServiceModelSamples/service.svc");  

@@ -2,12 +2,12 @@
 title: HOW TO：不使用組態新增 ASP.NET AJAX 端點
 ms.date: 03/30/2017
 ms.assetid: b05c1742-8d0a-4673-9d71-725b18a3008e
-ms.openlocfilehash: caaa89573d272c5d11d179b08c2d9e24c76d21e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 078580b96ab911f65790e58338951532cd7ad704
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140617"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344685"
 ---
 # <a name="how-to-add-an-aspnet-ajax-endpoint-without-using-configuration"></a>HOW TO：不使用組態新增 ASP.NET AJAX 端點
 Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 的端點，可從 JavaScript 呼叫用戶端網站上的服務。 若要建立此類端點，您可以使用組態檔 (與建立其他所有 WCF 端點一樣)，或是使用不需要任何組態項目的方法。 本主題示範第二種方法。  
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 
   
 ### <a name="to-create-a-basic-wcf-service"></a>若要建立基本 WCF 服務  
   
-1.  定義基本的 WCF 服務合約介面標記為<xref:System.ServiceModel.ServiceContractAttribute>屬性。 以 <xref:System.ServiceModel.OperationContractAttribute> 標記每項作業。 請務必設定 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 屬性。  
+1. 定義基本的 WCF 服務合約介面標記為<xref:System.ServiceModel.ServiceContractAttribute>屬性。 以 <xref:System.ServiceModel.OperationContractAttribute> 標記每項作業。 請務必設定 <xref:System.ServiceModel.ServiceContractAttribute.Namespace%2A> 屬性。  
   
     ```csharp  
     [ServiceContract(Namespace = "MyService")]]  
@@ -35,7 +35,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 
     }  
     ```  
   
-2.  使用 `ICalculator` 來實作 `CalculatorService` 服務合約。  
+2. 使用 `ICalculator` 來實作 `CalculatorService` 服務合約。  
   
     ```csharp  
     public class CalculatorService : ICalculator  
@@ -48,7 +48,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 
     //Other operations omitted…  
     ```  
   
-3.  定義 `ICalculator` 和 `CalculatorService` 實作的命名空間，方法是將它們包裝在命名空間區塊中。  
+3. 定義 `ICalculator` 和 `CalculatorService` 實作的命名空間，方法是將它們包裝在命名空間區塊中。  
   
     ```csharp  
     Namespace Microsoft.Ajax.Samples  
@@ -59,7 +59,7 @@ Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 
   
 ### <a name="to-host-the-service-in-internet-information-services-without-configuration"></a>若要將服務裝載到不含組態的網際網路資訊服務中  
   
-1.  在應用程式中建立名為 service 且包含 .svc 副檔名的新檔案。 編輯此檔案加上適當[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)服務的指示詞資訊。 指定<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>是要用於[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞，以自動設定 ASP.NET AJAX 端點。  
+1. 在應用程式中建立名為 service 且包含 .svc 副檔名的新檔案。 編輯此檔案加上適當[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)服務的指示詞資訊。 指定<xref:System.ServiceModel.Activation.WebScriptServiceHostFactory>是要用於[ \@ServiceHost](../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)指示詞，以自動設定 ASP.NET AJAX 端點。  
   
     ```  
     <%@ServiceHost   
@@ -70,11 +70,11 @@ Windows Communication Foundation (WCF) 可讓您建立公開啟用 ASP.NET AJAX 
     %>  
     ```  
   
-2.  建置服務並從用戶端呼叫。 網際網路資訊服務 (IIS) 會在收到呼叫時啟用服務。 如需有關如何在 IIS 中裝載的詳細資訊，請參閱[How to:將 WCF 服務裝載於 IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
+2. 建置服務並從用戶端呼叫。 網際網路資訊服務 (IIS) 會在收到呼叫時啟用服務。 如需有關如何在 IIS 中裝載的詳細資訊，請參閱[How to:將 WCF 服務裝載於 IIS](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)。  
   
 ### <a name="to-call-the-service"></a>若要呼叫服務  
   
-1.  此端點設定在相對於.svc 檔案中，空白位址上，因此服務現已推出，並可以將要求傳送至 service.svc / 叫用\<作業 >-例如，service.svc/add`Add`作業。 您可以將服務 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱[AJAX 服務而不需要組態](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)。  
+1. 此端點設定在相對於.svc 檔案中，空白位址上，因此服務現已推出，並可以將要求傳送至 service.svc / 叫用\<作業 >-例如，service.svc/add`Add`作業。 您可以將服務 URL 輸入 ASP.NET AJAX 指令碼管理員控制項的指令碼集合來加以使用。 如需範例，請參閱[AJAX 服務而不需要組態](../../../../docs/framework/wcf/samples/ajax-service-without-configuration.md)。  
   
 ## <a name="example"></a>範例  
   

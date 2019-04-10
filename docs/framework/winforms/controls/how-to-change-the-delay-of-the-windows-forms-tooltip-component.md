@@ -10,19 +10,19 @@ helpviewer_keywords:
 - tooltips [Windows Forms], delay values
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
-ms.openlocfilehash: 5b903f48035ac27cdd79f0ea38a7a68d558b3c1f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59198656"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345478"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>HOW TO：變更 Windows Forms ToolTip 元件的延遲時間
 有多個您可以設定 Windows Form 的延遲值<xref:System.Windows.Forms.ToolTip>元件。 所有這些屬性的測量單位為毫秒。 <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>屬性會決定使用者必須指向相關聯的控制項才會出現工具提示字串的時間長度。 <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>屬性會設定後續的工具提示字串，以顯示當滑鼠移動到另一個工具提示相關聯的控制項中所花費的毫秒數。 <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>屬性會決定的工具提示字串會顯示的時間長度。 您可以個別或藉由設定的值來設定這些值<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>屬性; 屬性會根據設定的值指派給其他延遲<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>屬性。 例如，當<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>設為值 N，<xref:System.Windows.Forms.ToolTip.InitialDelay%2A>設定為 N，<xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>設定的值為<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>除以五個 （或 N/5），並<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>值是五倍的值，這個值會設<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>屬性 （或 5N）。  
   
 ### <a name="to-set-the-delay"></a>若要設定的延遲  
   
-1.  在此範例中所示，請設定下列屬性。  
+1. 在此範例中所示，請設定下列屬性。  
   
     ```vb  
     ToolTip1.InitialDelay = 500  

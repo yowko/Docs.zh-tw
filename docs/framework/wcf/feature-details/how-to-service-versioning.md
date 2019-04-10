@@ -2,12 +2,12 @@
 title: 如何：服務版本控制
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
-ms.openlocfilehash: dc81fcde3c4f731257bf759cbd3f31542483618d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085372"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346284"
 ---
 # <a name="how-to-service-versioning"></a>如何：服務版本控制
 本主題概要說明建立路由組態服務時所需的基本步驟，該組態可傳送訊息至相同服務的不同版本。 在此範例中，會將訊息傳送至兩個不同版本的計算器服務，`roundingCalc` (v1) 和 `regularCalc` (v2)。 兩項實作都支援相同的作業，不過較舊的服務 `roundingCalc` 會在傳回之前將所有的計算結果捨入至最接近的整數值。 用戶端應用程式必須能夠表示是否可使用較新的 `regularCalc` 服務。  
@@ -37,7 +37,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
   
 ### <a name="implement-service-versioning"></a>實作服務版本  
   
-1.  藉由指定服務所公開的服務端點，建立基本路由服務組態。 下列範例定義將用於接收訊息的單一服務端點。 它也定義將用於傳送訊息至 `roundingCalc` (v1) 和 `regularCalc` (v2) 服務的用戶端端點。  
+1. 藉由指定服務所公開的服務端點，建立基本路由服務組態。 下列範例定義將用於接收訊息的單一服務端點。 它也定義將用於傳送訊息至 `roundingCalc` (v1) 和 `regularCalc` (v2) 服務的用戶端端點。  
   
     ```xml  
     <services>  
@@ -69,7 +69,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
         </client>  
     ```  
   
-2.  定義用於傳送訊息至目的地端點的篩選條件。  例如，XPath 篩選條件用來偵測"CalcVer"自訂標頭來判斷訊息應該路由傳送至哪一個版本的值。 XPath 篩選條件也可用來偵測並包含"CalcVer"標頭的訊息。 下列範例定義必要的篩選條件和命名空間資料表。  
+2. 定義用於傳送訊息至目的地端點的篩選條件。  例如，XPath 篩選條件用來偵測"CalcVer"自訂標頭來判斷訊息應該路由傳送至哪一個版本的值。 XPath 篩選條件也可用來偵測並包含"CalcVer"標頭的訊息。 下列範例定義必要的篩選條件和命名空間資料表。  
   
     ```xml  
     <!-- use the namespace table element to define a prefix for our custom namespace-->  
@@ -96,7 +96,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     > [!NOTE]
     > S12 命名空間前置詞定義預設會在命名空間資料表，且代表命名空間`http://www.w3.org/2003/05/soap-envelope`。
   
-3.  定義篩選資料表，其使用用戶端端點關聯每個篩選條件。 如果訊息包含"CalcVer"標頭值是 1，則它會傳送至 regularCalc 服務。 如果標頭包含的值為 2，便會傳送標頭至 roundingCalc 服務。 如果沒有標頭，則訊息會傳送至 regularCalc。  
+3. 定義篩選資料表，其使用用戶端端點關聯每個篩選條件。 如果訊息包含"CalcVer"標頭值是 1，則它會傳送至 regularCalc 服務。 如果標頭包含的值為 2，便會傳送標頭至 roundingCalc 服務。 如果沒有標頭，則訊息會傳送至 regularCalc。  
   
      下列範例定義篩選資料表並加入先前定義的篩選條件。  
   
@@ -117,7 +117,7 @@ messageHeadersElement.Add(MessageHeader.CreateHeader("CalcVer", "http://my.custo
     </filterTables>  
     ```  
   
-4.  若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何將相關聯`filterTable1`與服務端點：  
+4. 若要針對包含在篩選資料表之篩選條件的傳入訊息加以評估，您必須使用路由行為產生篩選資料表與服務端點的關聯。 下列範例示範如何將相關聯`filterTable1`與服務端點：  
   
     ```xml  
     <behaviors>  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ab3f1dd633193dcf88401d097d6835e6894aaa5a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122235"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345517"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>使用 WCF 的委派和模擬
 「*模擬* 」(Impersonation) 是服務用來限制用戶端存取服務網域資源的常用技術。 服務網域資源可以是像是本機檔案 (模擬) 的電腦資源，或是在另一部電腦上的資源，例如檔案共用 (委派)。 如需範例應用程式，請參閱 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)。 如需如何使用模擬的範例，請參閱[How to:服務上模擬用戶端](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)。  
@@ -191,13 +191,13 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 ### <a name="how-to-configure-an-application-to-use-constrained-delegation"></a>如何設定應用程式使用限制委派  
  在您可以使用限制委派之前，傳送者、接收者和網域控制站必須先設定為可使用限制委派。 下列程序列出啟用限制委派的步驟。 如需委派和限制委派之間差異的詳細資訊，請參閱 [Windows Server 2003 Kerberos 延伸](https://go.microsoft.com/fwlink/?LinkId=100194) (英文) 部分中有關限制的討論。  
   
-1.  在網域控制站上，清除用戶端應用程式執行所在之帳戶的 [ **這是機密帳戶，無法委派** ] 核取方塊。  
+1. 在網域控制站上，清除用戶端應用程式執行所在之帳戶的 [ **這是機密帳戶，無法委派** ] 核取方塊。  
   
-2.  在網域控制站上，選取用戶端應用程式執行所在之帳戶的 [ **帳戶受信任可以委派** ] 核取方塊。  
+2. 在網域控制站上，選取用戶端應用程式執行所在之帳戶的 [ **帳戶受信任可以委派** ] 核取方塊。  
   
-3.  在網域控制站上，按一下 [ **信任電腦以便進行委派** ] 選項，將中介層電腦設定為受信任，可進行委派。  
+3. 在網域控制站上，按一下 [ **信任電腦以便進行委派** ] 選項，將中介層電腦設定為受信任，可進行委派。  
   
-4.  在網域控制站上，按一下 [ **信任這台電腦所委派的特定服務** ] 選項，將中介層電腦設定為使用限制委派。  
+4. 在網域控制站上，按一下 [ **信任這台電腦所委派的特定服務** ] 選項，將中介層電腦設定為使用限制委派。  
   
  如需設定限制委派的詳細指示，請參閱 MSDN 的下列主題：  
   

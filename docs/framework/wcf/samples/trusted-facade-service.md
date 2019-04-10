@@ -2,12 +2,12 @@
 title: 信任的外觀服務
 ms.date: 03/30/2017
 ms.assetid: c34d1a8f-e45e-440b-a201-d143abdbac38
-ms.openlocfilehash: 4b02928224f1cb96a25dc71941273625e7d9e5e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4921b2746b9df362a0bb3e6048602d41f3f2faaf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091547"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346154"
 ---
 # <a name="trusted-facade-service"></a>信任的外觀服務
 此案例的範例示範如何呼叫者的身分識別資訊從一個服務到另一個使用 Windows Communication Foundation (WCF) 安全性基礎結構。  
@@ -260,27 +260,27 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
 #### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  確定路徑中包含 Makecert.exe 所在的資料夾。  
+1. 確定路徑中包含 Makecert.exe 所在的資料夾。  
   
-2.  從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。  
+2. 從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。  
   
-3.  從不同主控台視窗中的 \BackendService\bin 目錄啟動 BackendService.exe  
+3. 從不同主控台視窗中的 \BackendService\bin 目錄啟動 BackendService.exe  
   
-4.  從不同主控台視窗中的 \FacadeService\bin 目錄啟動 FacadeService.exe  
+4. 從不同主控台視窗中的 \FacadeService\bin 目錄啟動 FacadeService.exe  
   
-5.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
+5. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-6.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+6. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 #### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   
-1.  當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
+1. 當您完成執行範例後，請執行範例資料夾中的 Cleanup.bat。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

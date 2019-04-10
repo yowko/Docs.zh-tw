@@ -2,19 +2,19 @@
 title: HOW TO：透過非 MEX 繫結擷取中繼資料
 ms.date: 03/30/2017
 ms.assetid: 2292e124-81b2-4317-b881-ce9c1ec66ecb
-ms.openlocfilehash: 04acde96d7e712d8c6bc64988775a37fc79aaeab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 4a127e3e2283050018705c85606bd7c03c36de8b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074153"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59345946"
 ---
 # <a name="how-to-retrieve-metadata-over-a-non-mex-binding"></a>HOW TO：透過非 MEX 繫結擷取中繼資料
 本主題說明如何透過非 MEX 繫結，擷取 MEX 端點的中繼資料。 在此範例中的程式碼根據[自訂安全中繼資料端點](../../../../docs/framework/wcf/samples/custom-secure-metadata-endpoint.md)範例。  
   
 ### <a name="to-retrieve-metadata-over-a-non-mex-binding"></a>透過非 MEX 繫結擷取中繼資料  
   
-1.  判定 MEX 端點使用的繫結。 對於 Windows Communication Foundation (WCF) 服務，您可以藉由存取服務的組態檔來判斷 MEX 繫結。 在此例中，MEX 繫結是定義於下列服務組態。  
+1. 判定 MEX 端點使用的繫結。 對於 Windows Communication Foundation (WCF) 服務，您可以藉由存取服務的組態檔來判斷 MEX 繫結。 在此例中，MEX 繫結是定義於下列服務組態。  
   
     ```xml  
     <services>  
@@ -48,7 +48,7 @@ ms.locfileid: "59074153"
      </bindings>  
     ```  
   
-2.  在用戶端組態檔中，設定相同的自訂繫結。 在此用戶端也會定義 `clientCredentials` 行為以提供憑證，當要求 MEX 端點的中繼資料時可以用來驗證服務。 當使用 Svcutil.exe 透過自訂繫結要求中繼資料時，您應該將 MEX 端點組態新增至 Svcutil.exe 的組態檔 (Svcutil.exe.config)，並且端點組態的名稱應符合 MEX 端點位址的 URI 結構描述，如下列程式碼所示。  
+2. 在用戶端組態檔中，設定相同的自訂繫結。 在此用戶端也會定義 `clientCredentials` 行為以提供憑證，當要求 MEX 端點的中繼資料時可以用來驗證服務。 當使用 Svcutil.exe 透過自訂繫結要求中繼資料時，您應該將 MEX 端點組態新增至 Svcutil.exe 的組態檔 (Svcutil.exe.config)，並且端點組態的名稱應符合 MEX 端點位址的 URI 結構描述，如下列程式碼所示。  
   
     ```xml  
     <system.serviceModel>  
@@ -83,7 +83,7 @@ ms.locfileid: "59074153"
     </system.serviceModel>  
     ```  
   
-3.  建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。 這有兩種做法：您可以在組態中指定自訂繫結，或是在程式碼中指定自訂繫結，如下列範例所示。  
+3. 建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。 這有兩種做法：您可以在組態中指定自訂繫結，或是在程式碼中指定自訂繫結，如下列範例所示。  
   
     ```  
     // The custom binding is specified in configuration.  
@@ -114,14 +114,14 @@ ms.locfileid: "59074153"
     MetadataSet mexSet2 = mexClient2.GetMetadata(mexAddress);  
     ```  
   
-4.  建立 `WsdlImporter` 並呼叫 `ImportAllEndpoints`，如下列程式碼所示。  
+4. 建立 `WsdlImporter` 並呼叫 `ImportAllEndpoints`，如下列程式碼所示。  
   
     ```  
     WsdlImporter importer = new WsdlImporter(mexSet);  
     ServiceEndpointCollection endpoints = importer.ImportAllEndpoints();  
     ```  
   
-5.  此時，您會擁有服務端點的集合。 如需有關如何匯入中繼資料的詳細資訊，請參閱[How to:中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
+5. 此時，您會擁有服務端點的集合。 如需有關如何匯入中繼資料的詳細資訊，請參閱[How to:中繼資料匯入服務端點](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

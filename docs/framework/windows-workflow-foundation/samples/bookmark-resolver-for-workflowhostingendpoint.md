@@ -2,12 +2,12 @@
 title: WorkflowHostingEndpoint 的書籤解析程式
 ms.date: 03/30/2017
 ms.assetid: 97fd5816-935e-4625-ad04-e6f6befa07de
-ms.openlocfilehash: 48053ec7882b2e742b61fdc293b6bc5f8a129ca5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.openlocfilehash: 4676b3c624a7ba1539a7a12ed38c286f688dcf9f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47081951"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344288"
 ---
 # <a name="bookmark-resolver-for-workflowhostingendpoint"></a>WorkflowHostingEndpoint 的書籤解析程式
 這個範例示範 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 如何與 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 搭配使用以建立工作流程執行個體。  
@@ -16,7 +16,7 @@ ms.locfileid: "47081951"
  <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint>, <xref:System.ServiceModel.Activities.WorkflowServiceHost>  
   
 ## <a name="discussion"></a>討論  
- 這個範例使用 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 來建立以 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載的工作流程執行個體。 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 是 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 的擴充點，可用於以下情形：  
+ 這個範例使用 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 來建立以 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 裝載的工作流程執行個體。 <xref:System.ServiceModel.Activities.WorkflowHostingEndpoint> 是擴充性點<xref:System.ServiceModel.Activities.WorkflowServiceHost>可用於下列案例：  
   
 -   建立新的工作流程執行個體。  
   
@@ -26,9 +26,9 @@ ms.locfileid: "47081951"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  建置方案。  
+1. 建置方案。  
   
-2.  執行應用程式。 建立工作流程執行個體之後，`CreationEndpoint` 主控台會顯示包含執行個體識別碼的訊息。 訊息"Hello World ！" 列印工作流程執行個體。  
+2. 執行應用程式。 建立工作流程執行個體之後，`CreationEndpoint` 主控台會顯示包含執行個體識別碼的訊息。 訊息"Hello World ！" 列印工作流程執行個體。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

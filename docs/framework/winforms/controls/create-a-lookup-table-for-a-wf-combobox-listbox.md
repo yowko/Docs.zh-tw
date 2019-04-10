@@ -14,12 +14,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], lookup tables
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
-ms.openlocfilehash: 95b1962b83a44a99ebc466e27c732917d63dc3c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125965"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344100"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>HOW TO：為 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項建立查閱資料表
 在 Windows Form 上以方便使用的格式來顯示資料，但以對程式更有意義的格式來存放資料，這樣的做法有時候相當實用。 例如，食品的訂單表單可能會在清單方塊中依名稱來顯示功能表項目。 但是，記錄訂單的資料表則會包含代表食品的唯一 ID 編號。 下表將顯示如何存放並顯示食品訂單表單資料的範例。  
@@ -46,13 +46,13 @@ ms.locfileid: "59125965"
   
 ### <a name="to-create-a-lookup-table"></a>若要建立查閱資料表  
   
-1.  將 <xref:System.Windows.Forms.ComboBox>、<xref:System.Windows.Forms.ListBox> 或 <xref:System.Windows.Forms.CheckedListBox> 控制項加入表單。  
+1. 將 <xref:System.Windows.Forms.ComboBox>、<xref:System.Windows.Forms.ListBox> 或 <xref:System.Windows.Forms.CheckedListBox> 控制項加入表單。  
   
-2.  連接到您的資料來源。  
+2. 連接到您的資料來源。  
   
-3.  在兩個資料表之間建立資料關聯。 請參閱[DataRelation 物件簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))。  
+3. 在兩個資料表之間建立資料關聯。 請參閱[DataRelation 物件簡介](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0k21zcyx(v=vs.120))。  
   
-4.  設定下列屬性。 您可以在程式碼或設計工具中設定這些屬性。  
+4. 設定下列屬性。 您可以在程式碼或設計工具中設定這些屬性。  
   
     |屬性|設定|  
     |--------------|-------------|  
@@ -60,7 +60,7 @@ ms.locfileid: "59125965"
     |<xref:System.Windows.Forms.ListControl.DisplayMember%2A>|想要在控制項中顯示的資料來源資料表之資料行。 在前述案例中，這是`"Name"`（程式碼中設定，請使用引號）。|  
     |<xref:System.Windows.Forms.ListControl.ValueMember%2A>|包含儲存資訊的資料來源資料表之資料行。 在前述案例中，這是`"ID"`（程式碼中設定，請使用引號）。|  
   
-5.  在程序中，呼叫 <xref:System.Windows.Forms.ControlBindingsCollection> 類別的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，藉此將控制項的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 屬性繫結至記錄表單輸入的資料表。 您也可以執行此程式碼中，而不是設計工具中藉由存取控制<xref:System.Windows.Forms.Control.DataBindings%2A>中的屬性**屬性**視窗。 在前述案例中，這是`OrderDetailsTable`，而資料行是`"ItemID"`。  
+5. 在程序中，呼叫 <xref:System.Windows.Forms.ControlBindingsCollection> 類別的 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 方法，藉此將控制項的 <xref:System.Windows.Forms.ListControl.SelectedValue%2A> 屬性繫結至記錄表單輸入的資料表。 您也可以執行此程式碼中，而不是設計工具中藉由存取控制<xref:System.Windows.Forms.Control.DataBindings%2A>中的屬性**屬性**視窗。 在前述案例中，這是`OrderDetailsTable`，而資料行是`"ItemID"`。  
   
     ```vb  
     ListBox1.DataBindings.Add("SelectedValue", OrderDetailsTable, "ItemID")  

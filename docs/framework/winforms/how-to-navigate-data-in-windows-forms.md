@@ -11,19 +11,19 @@ helpviewer_keywords:
 - CurrencyManager class [Windows Forms], navigating Windows Forms data
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
-ms.openlocfilehash: fb5747ec3c6b640821e4875d86273467eeb922df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154592"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344997"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>HOW TO：巡覽 Windows Forms 中的資料
 在 Windows 應用程式中，瀏覽資料來源中記錄的最簡單方式是繫結<xref:System.Windows.Forms.BindingSource>元件至資料來源，然後將控制項繫結至<xref:System.Windows.Forms.BindingSource>。 然後您可以使用內建的巡覽方法上<xref:System.Windows.Forms.BindingSource>這類<xref:System.Windows.Forms.BindingSource.MoveNext%2A>， <xref:System.Windows.Forms.BindingSource.MoveLast%2A>，<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>和<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>。 使用這些方法會自動調整<xref:System.Windows.Forms.BindingSource.Position%2A>並<xref:System.Windows.Forms.BindingSource.Current%2A>屬性的<xref:System.Windows.Forms.BindingSource>適當。 您也可以尋找項目，並將它設為目前的項目中，藉由設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性。  
   
 ### <a name="to-increment-the-position-in-a-data-source"></a>要遞增的資料來源中的位置  
   
-1.  設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性<xref:System.Windows.Forms.BindingSource>繫結資料移至的記錄位置。 下列範例說明如何利用<xref:System.Windows.Forms.BindingSource.MoveNext%2A>方法<xref:System.Windows.Forms.BindingSource>遞增<xref:System.Windows.Forms.BindingSource.Position%2A>屬性時`nextButton`按下。 <xref:System.Windows.Forms.BindingSource>相關聯`Customers`資料表的資料集`Northwind`。  
+1. 設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性<xref:System.Windows.Forms.BindingSource>繫結資料移至的記錄位置。 下列範例說明如何利用<xref:System.Windows.Forms.BindingSource.MoveNext%2A>方法<xref:System.Windows.Forms.BindingSource>遞增<xref:System.Windows.Forms.BindingSource.Position%2A>屬性時`nextButton`按下。 <xref:System.Windows.Forms.BindingSource>相關聯`Customers`資料表的資料集`Northwind`。  
   
     > [!NOTE]
     >  設定<xref:System.Windows.Forms.BindingSource.Position%2A>屬性設為值之外的第一個或最後一筆記錄不會導致發生錯誤時，為[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]將不允許您將位置設定的值超出清單的範圍。 如果您知道是否您已經看過的第一個或最後一筆記錄的應用程式中很重要，，包括邏輯，以測試是否就會超出資料元素計數。  
@@ -33,7 +33,7 @@ ms.locfileid: "59154592"
   
 ### <a name="to-check-whether-you-have-passed-the-end-or-beginning"></a>若要檢查是否已通過結尾或開頭  
   
-1.  建立 <xref:System.Windows.Forms.BindingSource.PositionChanged> 事件的事件處理常式。 在處理常式中，您可以測試是否建議的位置值已超過實際的資料元素計數。  
+1. 建立 <xref:System.Windows.Forms.BindingSource.PositionChanged> 事件的事件處理常式。 在處理常式中，您可以測試是否建議的位置值已超過實際的資料元素計數。  
   
      下列範例說明如何測試是否已到達最後一個資料元素。 在範例中，如果您在最後一個元素，**下一步**表單上的按鈕已停用。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59154592"
   
 ### <a name="to-find-an-item-and-set-it-as-the-current-item"></a>尋找項目，並將它設為目前的項目  
   
-1.  尋找您想要設定為目前的項目記錄。 您可以使用<xref:System.Windows.Forms.BindingSource.Find%2A>方法<xref:System.Windows.Forms.BindingSource>，如果您的資料來源實作<xref:System.ComponentModel.IBindingList>。 資料的一些範例來源可實<xref:System.ComponentModel.IBindingList>都<xref:System.ComponentModel.BindingList%601>和<xref:System.Data.DataView>。  
+1. 尋找您想要設定為目前的項目記錄。 您可以使用<xref:System.Windows.Forms.BindingSource.Find%2A>方法<xref:System.Windows.Forms.BindingSource>，如果您的資料來源實作<xref:System.ComponentModel.IBindingList>。 資料的一些範例來源可實<xref:System.ComponentModel.IBindingList>都<xref:System.ComponentModel.BindingList%601>和<xref:System.Data.DataView>。  
   
      [!code-csharp[System.Windows.Forms.NavigatingData#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.NavigatingData#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.NavigatingData/VB/Form1.vb#2)]  

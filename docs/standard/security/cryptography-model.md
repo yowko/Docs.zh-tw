@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e39e9b3cf83be03d9bb3a55e3741915588e755a5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499573"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343866"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework 密碼編譯模型
 .NET Framework 提供許多標準密碼編譯演算法的實作。 這些演算法容易使用，並且具有最安全的可能預設屬性。 此外，.NET Framework 的物件繼承、資料流設計與組態的密碼編譯模型非常具可擴充性。  
@@ -32,17 +32,17 @@ ms.locfileid: "54499573"
 ## <a name="how-algorithms-are-implemented-in-the-net-framework"></a>.NET Framework 中的演算法實作方式  
  做為可供演算法使用的不同實作方式範例，請考慮對稱演算法。 所有對稱演算法的基礎是 <xref:System.Security.Cryptography.SymmetricAlgorithm>，它由下列演算法所繼承：  
   
-1.  <xref:System.Security.Cryptography.Aes>  
+1. <xref:System.Security.Cryptography.Aes>  
   
-2.  <xref:System.Security.Cryptography.DES>  
+2. <xref:System.Security.Cryptography.DES>  
   
-3.  <xref:System.Security.Cryptography.RC2>  
+3. <xref:System.Security.Cryptography.RC2>  
   
-4.  <xref:System.Security.Cryptography.Rijndael>  
+4. <xref:System.Security.Cryptography.Rijndael>  
   
-5.  <xref:System.Security.Cryptography.TripleDES>  
+5. <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes> 會由兩個類別繼承：<xref:System.Security.Cryptography.AesCryptoServiceProvider> 和 <xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 類別是 Aes 的 Windows 密碼編譯 API (CAPI) 實作的包裝函式，而 <xref:System.Security.Cryptography.AesManaged> 類別完全以 managed 程式碼撰寫。 除了 Managed 和 CAPI 實作，另外還有第三種類型的實作，Cryptography Next Generation (CNG)。 CNG 演算法的範例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 演算法可用於 Windows Vista 和更新版本。  
+ <xref:System.Security.Cryptography.Aes> 兩個類別都會繼承：<xref:System.Security.Cryptography.AesCryptoServiceProvider>和<xref:System.Security.Cryptography.AesManaged>。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> 類別是 Aes 的 Windows 密碼編譯 API (CAPI) 實作的包裝函式，而 <xref:System.Security.Cryptography.AesManaged> 類別完全以 managed 程式碼撰寫。 除了 Managed 和 CAPI 實作，另外還有第三種類型的實作，Cryptography Next Generation (CNG)。 CNG 演算法的範例是 <xref:System.Security.Cryptography.ECDiffieHellmanCng>。 CNG 演算法可用於 Windows Vista 和更新版本。  
   
  您可以選擇哪一個實作最適合您。  可支援 .NET Framework 的所有平台上都可使用 Managed 實作。  CAPI 實作可用於較舊的作業系統，並且不會再開發。 CNG 是最新的實作，將在這裡進行新的開發工作。 不過，Manged 實作未經美國聯邦資訊處理標準 (FIPS) 認證，而且可能比包裝函式類別慢。  
   
@@ -89,4 +89,4 @@ ms.locfileid: "54499573"
   
 ## <a name="see-also"></a>另請參閱
 
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)

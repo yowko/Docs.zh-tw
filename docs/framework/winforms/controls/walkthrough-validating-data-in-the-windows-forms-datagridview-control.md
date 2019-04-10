@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a9572bf469f539fdf52f414b2e0b6aa10f7ea288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127344"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346050"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>逐步解說：驗證 Windows Forms DataGridView 控制項的資料
 當您向使用者顯示的項目資料功能時，您經常必須驗證您的表單中輸入的資料。 <xref:System.Windows.Forms.DataGridView>類別提供便利的方式，資料就會認可到資料存放區之前先執行驗證。 您可以藉由處理驗證資料<xref:System.Windows.Forms.DataGridView.CellValidating>事件，會引發<xref:System.Windows.Forms.DataGridView>目前儲存格的變更時。  
@@ -35,7 +35,7 @@ ms.locfileid: "59127344"
   
 #### <a name="to-validate-data-entered-in-a-datagridview"></a>若要驗證在 DataGridView 中輸入的資料  
   
-1.  建立衍生自類別<xref:System.Windows.Forms.Form>且包含<xref:System.Windows.Forms.DataGridView>控制項和<xref:System.Windows.Forms.BindingSource>元件。  
+1. 建立衍生自類別<xref:System.Windows.Forms.Form>且包含<xref:System.Windows.Forms.DataGridView>控制項和<xref:System.Windows.Forms.BindingSource>元件。  
   
      下列程式碼範例提供基本的初始化，而且包含`Main`方法。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59127344"
     [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewDataValidation#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#02)]  
   
-2.  在您的表單類別定義處理資料庫連接的詳細資料中實作的方法。  
+2. 在您的表單類別定義處理資料庫連接的詳細資料中實作的方法。  
   
      此程式碼範例會使用`GetData`方法會傳回填入<xref:System.Data.DataTable>物件。 請確定您設定`connectionString`變數的值，適用於您的資料庫。  
   
@@ -54,12 +54,12 @@ ms.locfileid: "59127344"
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#30)]  
   
-3.  實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.BindingSource>和設定資料繫結。  
+3. 實作您的表單的處理常式<xref:System.Windows.Forms.Form.Load>初始化的事件<xref:System.Windows.Forms.DataGridView>和<xref:System.Windows.Forms.BindingSource>和設定資料繫結。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/CS/datavalidation.cs#10)]
      [!code-vb[System.Windows.Forms.DataGridViewDataValidation#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewDataValidation/VB/datavalidation.vb#10)]  
   
-4.  實作的處理常式<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CellValidating>和<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件。  
+4. 實作的處理常式<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CellValidating>和<xref:System.Windows.Forms.DataGridView.CellEndEdit>事件。  
   
      <xref:System.Windows.Forms.DataGridView.CellValidating>事件處理常式是在您判定是否在儲存格的值`CompanyName`是空的資料行。 如果驗證失敗的儲存格的值，設定<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>的屬性<xref:System.Windows.Forms.DataGridViewCellValidatingEventArgs?displayProperty=nameWithType>類別`true`。 這會導致<xref:System.Windows.Forms.DataGridView>以防止資料指標離開儲存格的控制項。 設定<xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A>說明的字串資料列上的屬性。 這會顯示錯誤圖示與包含的錯誤文字的工具提示。 在 <xref:System.Windows.Forms.DataGridView.CellEndEdit>事件處理常式中，設定<xref:System.Windows.Forms.DataGridViewRow.ErrorText%2A>為空字串的資料列上的屬性。 <xref:System.Windows.Forms.DataGridView.CellEndEdit>只儲存格結束編輯模式，它無法這麼做，如果它驗證失敗時，事件就會發生。  
   

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], providing credentials
 ms.assetid: db8cb478-aa43-478b-bf97-c6489ad7c7fd
-ms.openlocfilehash: dd9b53b50f76ec80232a5fb8624e2b1701f9760d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1677d44faf6901eb1eda93a9374636b7caa558a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140162"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346024"
 ---
 # <a name="how-to-create-a-custom-security-token-provider"></a>HOW TO：建立自訂安全性權杖提供者
 這個主題會說明如何以自訂安全性權杖提供者建立新的權杖型別，以及如何整合提供者和自訂安全性權杖管理員。  
@@ -26,22 +26,22 @@ ms.locfileid: "59140162"
   
 ### <a name="to-create-a-custom-security-token-provider"></a>建立自訂安全性權杖提供者  
   
-1.  定義衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別的新類別。  
+1. 定義衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別的新類別。  
   
-2.  實作 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法。 這個方法會負責建立和傳回安全性權杖的執行個體。 下列範例會建立名稱為 `MySecurityTokenProvider` 的類別，並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法以傳回 <xref:System.IdentityModel.Tokens.X509SecurityToken> 類別的執行個體。 類別建構函式需要 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。  
+2. 實作 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法。 這個方法會負責建立和傳回安全性權杖的執行個體。 下列範例會建立名稱為 `MySecurityTokenProvider` 的類別，並覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> 方法以傳回 <xref:System.IdentityModel.Tokens.X509SecurityToken> 類別的執行個體。 類別建構函式需要 <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> 類別的執行個體。  
   
      [!code-csharp[c_CustomTokenProvider#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#1)]
      [!code-vb[c_CustomTokenProvider#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#1)]  
   
 ### <a name="to-integrate-a-custom-security-token-provider-with-a-custom-security-token-manager"></a>整合自訂安全性權杖提供者和自訂安全性權杖管理員  
   
-1.  定義衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別的新類別。 (以下範例衍生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，而這個類別則衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別)。  
+1. 定義衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別的新類別。 (以下範例衍生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別，而這個類別則衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別)。  
   
-2.  如果尚未覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法，請覆寫之。  
+2. 如果尚未覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法，請覆寫之。  
   
      <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29>方法會負責傳回的執行個體<xref:System.IdentityModel.Selectors.SecurityTokenProvider>適用於類別<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>參數傳遞給方法的 WCF 安全性架構。 使用適當的安全性權杖參數呼叫方法時，請修改方法以傳回自訂安全性權杖提供者實作 (在之前的程序中建立此實作)。 如需有關安全性權杖管理員的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
-3.  將自訂邏輯新增至方法，讓方法可以根據 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 參數傳回自訂安全性權杖提供者。 下列範例會在符合權杖需求時，傳回自訂安全性權杖提供者。 這些需求包括 X.509 安全性權杖和訊息方向 (當權杖用於訊息輸出時)。 在其他情況下，程式碼會呼叫基底類別，以針對其他安全性權杖需求維護系統提供的行為。  
+3. 將自訂邏輯新增至方法，讓方法可以根據 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 參數傳回自訂安全性權杖提供者。 下列範例會在符合權杖需求時，傳回自訂安全性權杖提供者。 這些需求包括 X.509 安全性權杖和訊息方向 (當權杖用於訊息輸出時)。 在其他情況下，程式碼會呼叫基底類別，以針對其他安全性權杖需求維護系統提供的行為。  
   
  [!code-csharp[c_CustomTokenProvider#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtokenprovider/cs/source.cs#2)]
  [!code-vb[c_CustomTokenProvider#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtokenprovider/vb/source.vb#2)]  

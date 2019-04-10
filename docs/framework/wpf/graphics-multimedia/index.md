@@ -12,12 +12,12 @@ helpviewer_keywords:
 - graphics features [WPF]
 - transition effects [WPF]
 ms.assetid: 1817d9dc-3d6c-46cb-afc8-63b0bae35e37
-ms.openlocfilehash: 1416b07818ecaeb75e8389c053344b8a367ea69d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9ddc1a1060b7d70ee7a6c9050971709a433961a
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59190639"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427197"
 ---
 # <a name="graphics-and-multimedia"></a>圖形和多媒體
 <a name="introduction"></a>
@@ -55,7 +55,7 @@ ms.locfileid: "59190639"
 ### <a name="2-d-shapes"></a>2D 圖案  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供程式庫的常用向量繪製[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]圖形，例如矩形和橢圓形，如下圖所示。  
   
- ![橢圓形和矩形](./media/wpfintrofigure4.PNG "WPFIntroFigure4")  
+ ![圖表顯示橢圓形和矩形。](./media/index/two-deminsional-shapes-ellipses-rectangles.png)  
   
  這些內建 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 圖形不只是圖形︰它們也是可程式化元素，能實作許多最常見控制項的功能，包括鍵盤和滑鼠輸入。 下列範例示範如何處理<xref:System.Windows.UIElement.MouseUp>事件引發按一下<xref:System.Windows.Shapes.Ellipse>項目。  
   
@@ -89,21 +89,21 @@ End Class
   
  下圖顯示上述 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 標記和程式碼後置的輸出。  
   
- ![包含 "you clicked the ellipse&#33;" 文字的視窗](./media/wpfintrofigure12.png "WPFIntroFigure12")  
+ ![訊息方塊，指出 「 您已經按一下這個橢圓形 ！ 」](./media/index/messagebox-text-output.png)  
   
  如需詳細資訊，請參閱 [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)。 如需簡介範例，請參閱[圖形元素範例](https://go.microsoft.com/fwlink/?LinkID=160037)。  
   
 ### <a name="2-d-geometries"></a>2D 幾何  
  當 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 圖形不敷使用時，您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 來支援您自己建立的幾何和路徑。 下圖示範如何使用幾何來建立圖形，當做繪圖筆刷並裁剪其他 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 元素。  
   
- ![Path 的各種用法](./media/wpfintrofigure5.PNG "WPFIntroFigure5")  
+ ![螢幕擷取畫面顯示如何使用幾何來建立圖形。](./media/index/use-geometries-create-shapes.png)  
   
  如需詳細資訊，請參閱[幾何概觀](geometry-overview.md)。 如需簡介範例，請參閱[幾何範例](https://go.microsoft.com/fwlink/?LinkID=159989)。  
   
 ### <a name="2-d-effects"></a>2D 效果  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供的程式庫[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]類別，可用來建立各種不同的效果。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 的 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 轉譯功能可讓您繪製具有漸層的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素、點陣圖、繪圖和影片，以及使用旋轉、縮放和傾斜來操作。 下圖提供您可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 筆刷達到許多效果的範例。  
   
- ![不同筆刷的圖例](./media/wpfintrofigure6.PNG "WPFIntroFigure6")  
+ ![圖例中顯示不同的 WPF 筆刷和 [小畫家] 項目。](./media/index/brushes-paint-elements.png)  
   
  如需詳細資訊，請參閱 [WPF 筆刷概觀](wpf-brushes-overview.md)。 如需簡介範例，請參閱[筆刷範例](https://go.microsoft.com/fwlink/?LinkID=159973)。  
   
@@ -111,7 +111,8 @@ End Class
 ## <a name="3-d-rendering"></a>3D 轉譯  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 提供一組[!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)]整合的轉譯能力[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)]支援中的圖形[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]為了讓您建立更有趣的版面配置， [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]，和資料視覺效果。 另一方面，[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您將 [!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] 影像轉譯到 [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 圖形的表面上，如下圖所示範。  
   
- ![Visual3D 範例螢幕擷取畫面](./media/wpfintrofigure13.png "WPFIntroFigure13")  
+
+ ![示範以不同的紋理 3d 圖形的範例螢幕擷取畫面。](./media/index/visual-three-dimensional-shape.png)  
   
  如需詳細資訊，請參閱 [3D 圖形診斷](3-d-graphics-overview.md)。 如需簡介範例，請參閱 [3D 單色範例](https://go.microsoft.com/fwlink/?LinkID=159964)。  
   
@@ -119,7 +120,7 @@ End Class
 ## <a name="animation"></a>動畫  
  使用動畫讓控制項和元素放大、搖晃、旋轉和淡出，以及建立有趣的網頁切換及執行其他工作。 因為 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 可讓您以動畫顯示大部分屬性，您不只可以動畫顯示大部分 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 物件，也可以使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 以動畫顯示您所建立的自訂物件。  
   
- ![動畫效果立方體的影像](./media/wpfintrofigure7.png "WPFIntroFigure7")  
+ ![立方體動畫的螢幕擷取畫面。](./media/index/animate-custom-objects.png)  
   
  如需詳細資訊，請參閱 [動畫概觀](animation-overview.md)。 如需簡介範例，請參閱[動畫範例圖庫](https://go.microsoft.com/fwlink/?LinkID=159969)。  
   

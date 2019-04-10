@@ -2,19 +2,19 @@
 title: HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
 ms.date: 07/20/2015
 ms.assetid: 88b2b9f3-c82e-41f3-b1b4-26ede5973a02
-ms.openlocfilehash: 1249b5555c9ef7074410682ad9b26e5b003aea9c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: b226d981dd0cd61789e88ab06e602dd619f3f6c9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828990"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344217"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-visual-basic"></a>HOW TO：計算 CSV 文字檔案 (LINQ) (Visual Basic) 中的資料行值
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
   
 ### <a name="to-create-the-source-file"></a>建立來源檔案  
   
-1.  將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。  
+1. 將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -148,4 +148,4 @@ End Class
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

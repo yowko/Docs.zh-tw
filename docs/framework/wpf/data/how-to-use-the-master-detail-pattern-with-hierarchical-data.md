@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data binding [WPF], Master-Detail data paradigm
 - Master-Detail data paradigm
 ms.assetid: 11429b9e-058d-4084-bfb6-2cf209c8ddf7
-ms.openlocfilehash: 3a17d6cd5b723dcde4d8dc7059c9f416308f73db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0bbb24b07fdc1c362e2be43d69d189defbc27a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082655"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346180"
 ---
 # <a name="how-to-use-the-master-detail-pattern-with-hierarchical-data"></a>HOW TO：使用含階層式資料的主從式模式
 此範例示範如何實作主從式案例。  
@@ -27,9 +27,9 @@ ms.locfileid: "59082655"
   
  請注意，在此範例中的兩個事項如下：  
   
-1.  三個<xref:System.Windows.Controls.ListBox>控制項繫結至相同的來源。 您設定<xref:System.Windows.Data.Binding.Path%2A>屬性來指定您想要的資料層級的繫結<xref:System.Windows.Controls.ListBox>來顯示。  
+1. 三個<xref:System.Windows.Controls.ListBox>控制項繫結至相同的來源。 您設定<xref:System.Windows.Data.Binding.Path%2A>屬性來指定您想要的資料層級的繫結<xref:System.Windows.Controls.ListBox>來顯示。  
   
-2.  您必須設定<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>屬性，以`true`上<xref:System.Windows.Controls.ListBox>控制項，其中您追蹤選取範圍。 設定這個屬性可確保已選取的項目一律會設為<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果<xref:System.Windows.Controls.ListBox>取得其資料從<xref:System.Windows.Data.CollectionViewSource>，自動同步選取項目和貨幣。  
+2. 您必須設定<xref:System.Windows.Controls.Primitives.Selector.IsSynchronizedWithCurrentItem%2A>屬性，以`true`上<xref:System.Windows.Controls.ListBox>控制項，其中您追蹤選取範圍。 設定這個屬性可確保已選取的項目一律會設為<xref:System.Windows.Controls.ItemCollection.CurrentItem%2A>。 或者，如果<xref:System.Windows.Controls.ListBox>取得其資料從<xref:System.Windows.Data.CollectionViewSource>，自動同步選取項目和貨幣。  
   
  當您使用稍有不同的技巧，是[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]資料。 如需範例，請參閱[使用含階層式 XML 資料的主從式模式](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)。  
   

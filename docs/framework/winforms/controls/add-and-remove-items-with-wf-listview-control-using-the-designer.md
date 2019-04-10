@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], populating
 - ListView control [Windows Forms], adding list items
 ms.assetid: 217611ee-fd11-4d39-9a54-a37c3e781be1
-ms.openlocfilehash: 37e793104eb29c21e67b975a7caa372cc817e57f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6e08a7013242b0dbb433e288c4f8d788cb4e143b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143880"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343840"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms ListView 控制項新增和移除項目
 加入 Windows Form 中的項目中的程序<xref:System.Windows.Forms.ListView>控制主要包含指定的項目，並將屬性指派給它。 隨時都可以新增或移除清單項目。  
@@ -22,15 +22,15 @@ ms.locfileid: "59143880"
   
 ### <a name="to-add-or-remove-items-using-the-designer"></a>若要新增或移除項目使用設計工具  
   
-1.  選取 <xref:System.Windows.Forms.ListView> 控制項。  
+1. 選取 <xref:System.Windows.Forms.ListView> 控制項。  
   
-2.  在 [**屬性**] 視窗中，按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 下一步按鈕<xref:System.Windows.Forms.ListView.Items%2A>屬性。  
+2. 在 [**屬性**] 視窗中，按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 下一步按鈕<xref:System.Windows.Forms.ListView.Items%2A>屬性。  
   
      **ListViewItem 集合編輯器**隨即出現。  
   
-3.  若要加入的項目，按一下**新增** 按鈕。 您可以再設定屬性的新的項目，例如<xref:System.Windows.Forms.ListView.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>屬性。  
+3. 若要加入的項目，按一下**新增** 按鈕。 您可以再設定屬性的新的項目，例如<xref:System.Windows.Forms.ListView.Text%2A>和<xref:System.Windows.Forms.ListViewItem.ImageIndex%2A>屬性。  
   
-4.  若要移除的項目，請選取它，然後按一下**移除** 按鈕。  
+4. 若要移除的項目，請選取它，然後按一下**移除** 按鈕。  
   
 ## <a name="see-also"></a>另請參閱
 

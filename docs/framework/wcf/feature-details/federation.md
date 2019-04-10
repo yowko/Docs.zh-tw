@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: af3e5c4c33936e809438019f1a8af823ffc3e52b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
+ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59114025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59427301"
 ---
 # <a name="federation"></a>同盟
 此主題提供聯合安全性概念的簡短概觀。 它也說明對部署聯合的安全性架構的 Windows Communication Foundation (WCF) 支援。 示範聯合的範例應用程式，請參閱[聯合範例](../../../../docs/framework/wcf/samples/federation-sample.md)。  
@@ -33,9 +33,9 @@ ms.locfileid: "59114025"
 |安全性權杖服務 (STS)|將安全性權杖 (也就是根據其信任的辨識項建立判斷提示) 發行至信任它之一方的 Web 服務。 這就形成網域間信任代理服務的基礎。|  
   
 ### <a name="example-scenario"></a>範例案例  
- 下圖顯示聯合安全性的範例。  
+ 下圖顯示聯合安全性的範例：  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/typicalfederatedsecurityscenario.gif "TypicalFederatedSecurityScenario")  
+ ![此圖表顯示一般的聯合的安全性案例。](./media/federation/typical-federated-security-scenario.gif)  
   
  此案例包含兩個組織：A 和 B。 組織 B 中有某些使用者組織 A 中的發現有用的 Web 資源 （Web 服務）。  
   
@@ -90,12 +90,12 @@ ms.locfileid: "59114025"
 ## <a name="sample-implementation-using-wcf"></a>使用 WCF 的範例實作  
  下圖顯示使用 WCF 的原生支援聯合的安全性架構的範例實作。  
   
- ![WCF 中的同盟安全性](../../../../docs/framework/wcf/feature-details/media/federatedsecurityinwcf.gif "FederatedSecurityInWCF")  
+ ![此圖表顯示的範例同盟安全性實作。](./media/federation/federated-security-implementation.gif)  
   
 ### <a name="example-myservice"></a>範例 MyService  
  服務 `MyService` 會透過 `MyServiceEndpoint` 公開單一端點。 下圖顯示與端點關聯的位址、繫結與合約。  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/myservice.gif "MyService")  
+ ![此圖表顯示 MyServiceEndpoint 詳細資料。](./media/federation/myserviceendpoint-details.gif)  
   
  服務端點`MyServiceEndpoint`會使用[ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)並需要有效的安全性判斷提示標記語言 (SAML) 權杖搭配`accessAuthorized`STS B 所發出的宣告這是以宣告方式指定服務組態中。  
   
@@ -160,7 +160,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 #### <a name="sts-b"></a>STS B  
  下圖顯示 STS B。如同之前所述，安全性權杖服務 (STS) 也是 Web 服務，並且能夠有與其關聯的端點和原則等等。  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/msservicestsb.gif "MsServiceSTSB")  
+ ![此圖顯示安全性權杖服務 b。](./media/federation/myservice-security-token-service-b.gif)  
   
  STS B 會公開能夠用來要求安全性權杖的單一端點 (稱為 `STSEndpoint`)。 具體來說，STS B 會使用 `accessAuthorized` 宣告發行 SAML 權杖，您可以在 `MyService` 服務站台提交這個權杖以存取服務。 但是，STS B 需要使用者提交 STS A 發行的有效 SAML 權杖，其中包含 `userAuthenticated` 宣告。 在 STS 組態中會以宣告方式指定。  
   
@@ -284,7 +284,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
 ### <a name="client-at-organization-a"></a>組織 A 的用戶端  
  下圖顯示組織 A 的用戶端，以及關於進行 `MyService` 服務呼叫的步驟。 也會包含其他功能元件以提供完整性。  
   
- ![Federation](../../../../docs/framework/wcf/feature-details/media/federationclienta.gif "FederationClientA")  
+ ![圖表 showwing MyService 服務呼叫中的步驟。](./media/federation/federation-myservice-service-call-process.gif)  
   
 ## <a name="summary"></a>總結  
  聯合安全性清楚地分隔責任，並協助建置安全且可擴充的服務架構。 用於建置及部署分散式應用程式平台，WCF 會提供實作聯合的安全性的原生支援。  

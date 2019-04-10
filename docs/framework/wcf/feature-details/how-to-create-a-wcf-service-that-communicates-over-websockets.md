@@ -2,19 +2,19 @@
 title: HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
-ms.openlocfilehash: 28a200b3e531f524e246c3d2fa1961573ec4e014
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59346362"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>HOW TO：建立會透過 WebSockets 進行通訊的 WCF 服務
 WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫結，透過 WebSockets 進行通訊。  當 <xref:System.ServiceModel.NetHttpBinding> 判斷服務合約定義了回呼合約時，就會使用 WebSockets。 本主題說明如何實作會使用 <xref:System.ServiceModel.NetHttpBinding> 透過 WebSockets 進行通訊的 WCF 服務和用戶端。  
   
 ### <a name="define-the-service"></a>定義服務  
   
-1.  定義回呼合約  
+1. 定義回呼合約  
   
     ```csharp  
     [ServiceContract]  
@@ -27,7 +27,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
   
      本合約由用戶端應用程式實作以允許服務將訊息傳送回用戶端。  
   
-2.  定義服務合約，並指定 `IStockQuoteCallback` 介面做為回呼合約。  
+2. 定義服務合約，並指定 `IStockQuoteCallback` 介面做為回呼合約。  
   
     ```csharp  
     [ServiceContract(CallbackContract = typeof(IStockQuoteCallback))]  
@@ -38,7 +38,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
         }  
     ```  
   
-3.  實作服務合約。  
+3. 實作服務合約。  
   
     ```  
     public class StockQuoteService : IStockQuoteService  
@@ -61,7 +61,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
   
      服務作業 `StartSendingQuotes` 會實作成非同步呼叫。 我們使用 `OperationContext` 擷取回呼通道，如果通道已開啟，就會在回呼通道上進行非同步呼叫。  
   
-4.  設定服務  
+4. 設定服務  
   
     ```xml  
     <configuration>  
@@ -94,7 +94,7 @@ WCF 服務和用戶端可以使用 <xref:System.ServiceModel.NetHttpBinding> 繫
   
 ### <a name="define-the-client"></a>定義用戶端  
   
-1.  實作回呼合約。  
+1. 實作回呼合約。  
   
     ```csharp  
     private class CallbackHandler : StockQuoteServiceReference.IStockQuoteServiceCallback  

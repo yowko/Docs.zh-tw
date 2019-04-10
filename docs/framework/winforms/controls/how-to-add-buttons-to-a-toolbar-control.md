@@ -12,12 +12,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: 78a58a8d-1041-4e38-9219-4096fa6a5c5c
-ms.openlocfilehash: 1a8666124c09d27d9d2ef936d36e7739d473a996
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad4384f8cc2a1d0c15f8c7681e6e5d8bf75e4451
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085983"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343684"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control"></a>HOW TO：將按鈕新增至 ToolBar 控制項
 > [!NOTE]
@@ -29,9 +29,9 @@ ms.locfileid: "59085983"
   
 ### <a name="to-add-buttons-programmatically"></a>若要以程式設計方式加入按鈕  
   
-1.  在程序中，建立工具列按鈕加入至<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
+1. 在程序中，建立工具列按鈕加入至<xref:System.Windows.Forms.ToolBar.Buttons%2A?displayProperty=nameWithType>集合。  
   
-2.  藉由傳遞的按鈕索引，透過指定屬性設定為個別的按鈕<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性。  
+2. 藉由傳遞的按鈕索引，透過指定屬性設定為個別的按鈕<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性。  
   
      下列範例假設表單<xref:System.Windows.Forms.ToolBar>已經加入的控制項。  
   
