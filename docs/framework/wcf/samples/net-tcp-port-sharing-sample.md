@@ -2,12 +2,12 @@
 title: Net.TCP Port Sharing 範例
 ms.date: 03/30/2017
 ms.assetid: 03da5959-0574-4e91-8a53-05854b6c55dc
-ms.openlocfilehash: f70069754d712f6f3d70eb3ac3ffb4cc645c3f83
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8c2819bbf92310ad13067d1e07463717dbffafb9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59079613"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334909"
 ---
 # <a name="nettcp-port-sharing-sample"></a>Net.TCP Port Sharing 範例
 TCP/IP 通訊協定使用一個 16 位元的數字 (稱為連接埠) 來區分在同一部電腦上執行的多個網路應用程式連線。 如果應用程式正在接聽某個連接埠，則該連接埠的所有 TCP 流量就會流向該應用程式。 其他應用程式將無法同時接聽該連接埠。  
@@ -125,16 +125,16 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  如先前在簡介一節所述，啟用 NetTcp Port Sharing Service。  
+3. 如先前在簡介一節所述，啟用 NetTcp Port Sharing Service。  
   
-4.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+4. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-5.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。  
+5. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。 有關執行本範例的特定詳細資訊，已經包含在先前的「執行範例」一節中。  

@@ -2,12 +2,12 @@
 title: 工作階段和佇列
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
-ms.openlocfilehash: 38bc581d8264c0f226677e0c6f1bfd12b489bac8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 623077450157b0bf87b85a85309adc10511b32b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097209"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334870"
 ---
 # <a name="sessions-and-queues"></a>工作階段和佇列
 這個範例示範如何透過訊息佇列 (MSMQ) 傳輸，傳送和接收佇列通訊中的一組相關訊息。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。  
@@ -207,17 +207,17 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C#、 c + + 或 Visual Basic.NET 版本，請依照下列中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建置C#， C++，或 Visual Basic.NET 版本的解決方案，請依照下列中的指示[Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
  根據預設，傳輸安全性會透過 <xref:System.ServiceModel.NetMsmqBinding> 啟用。 有兩個 MSMQ 傳輸安全性相關屬性的那就是，<xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>並<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A>`.`根據預設，驗證模式設定為`Windows`和保護層級設定為`Sign`。 若要 MSMQ 提供驗證及簽署功能，MSMQ 必須是網域的一部分，而且必須安裝 MSMQ 的 Active Directory 整合選項。 如果您在不符合這些條件的電腦上執行這個範例，就會收到錯誤。  
   
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup-or-without-active-directory-integration"></a>若要在加入工作群組，或是沒有 Active Directory 整合的電腦上執行這個範例  
   
-1.  如果您的電腦不是網域的一部分，或是沒有安裝 Active Directory 整合，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下列範例組態所示。  
+1. 如果您的電腦不是網域的一部分，或是沒有安裝 Active Directory 整合，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下列範例組態所示。  
   
     ```xml  
     <system.serviceModel>  
@@ -264,7 +264,7 @@ Purchase Order: 7c86fef0-2306-4c51-80e6-bcabcc1a6e5e
       </system.serviceModel>  
     ```  
   
-2.  請務必先變更伺服器與用戶端上的組態，再執行範例。  
+2. 請務必先變更伺服器與用戶端上的組態，再執行範例。  
   
     > [!NOTE]
     >  將安全性模式設定為 `None`，相當於將 <xref:System.ServiceModel.MsmqTransportSecurity.MsmqAuthenticationMode%2A>、<xref:System.ServiceModel.MsmqTransportSecurity.MsmqProtectionLevel%2A> 和 `Message` 安全性設定為 `None`。  

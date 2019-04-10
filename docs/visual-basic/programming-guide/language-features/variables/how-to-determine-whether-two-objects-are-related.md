@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [Visual Basic], inheritance
 - object variables [Visual Basic], determining relation
 ms.assetid: da002e3f-6616-4bad-a229-f842d06652bb
-ms.openlocfilehash: c4ff7c8e616c9126eae11a23e001c219dcbc0907
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: f59e00d80d28fc4bf24874d25b5c12643649c834
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819199"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342093"
 ---
 # <a name="how-to-determine-whether-two-objects-are-related-visual-basic"></a>HOW TO：判斷兩個物件是否關聯 (Visual Basic)
 您可以比較來決定關聯性，如果有的話，建立的類別之間的兩個物件。 <xref:System.Type.IsInstanceOfType%2A>方法<xref:System.Type?displayProperty=nameWithType>類別會傳回`True`如果指定的類別繼承自目前的類別，或目前的類型是否支援指定的類別介面。  
   
 ### <a name="to-determine-if-one-object-inherits-from-another-objects-class-or-interface"></a>若要判斷一個物件是否繼承自另一個物件的類別或介面  
   
-1.  您認為在物件上可能是基底型別，會叫用<xref:System.Object.GetType%2A>方法。  
+1. 您認為在物件上可能是基底型別，會叫用<xref:System.Object.GetType%2A>方法。  
   
-2.  在 <xref:System.Type?displayProperty=nameWithType>所傳回的物件<xref:System.Object.GetType%2A>，叫用<xref:System.Type.IsInstanceOfType%2A>方法。  
+2. 在 <xref:System.Type?displayProperty=nameWithType>所傳回的物件<xref:System.Object.GetType%2A>，叫用<xref:System.Type.IsInstanceOfType%2A>方法。  
   
-3.  中的引數清單<xref:System.Type.IsInstanceOfType%2A>，指定您認為的物件可能是衍生型別。  
+3. 中的引數清單<xref:System.Type.IsInstanceOfType%2A>，指定您認為的物件可能是衍生型別。  
   
      <xref:System.Type.IsInstanceOfType%2A> 會傳回`True`如果其引數型別是繼承自<xref:System.Type?displayProperty=nameWithType>物件類型。  
   
@@ -52,7 +52,7 @@ End Class
 - <xref:System.Object.GetType%2A>
 - <xref:System.Type?displayProperty=nameWithType>
 - <xref:System.Type.IsInstanceOfType%2A>
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [如何：判斷兩個物件是否相同](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)
+- [HOW TO：判斷兩個物件是否相同](../../../../visual-basic/programming-guide/language-features/variables/how-to-determine-whether-two-objects-are-identical.md)

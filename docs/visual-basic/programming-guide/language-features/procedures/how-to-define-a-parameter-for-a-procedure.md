@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 01b150d70c07897f8217ed6958e3654aa28fdf51
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971789"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333830"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>HOW TO：將參數定義程序 (Visual Basic)
 A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣告程序的每個參數相同的方式，您宣告一個變數，指定其名稱和資料型別。 您也可以指定傳遞機制，以及參數是否為選擇性。  
@@ -22,17 +22,17 @@ A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣�
   
 ### <a name="to-define-a-procedure-parameter"></a>若要定義程序參數  
   
-1.  在程序宣告中，新增至程序的 [參數] 清單中，將其與其他參數逗點分隔的參數名稱。  
+1. 在程序宣告中，新增至程序的 [參數] 清單中，將其與其他參數逗點分隔的參數名稱。  
   
-2.  決定參數的資料型別。  
+2. 決定參數的資料型別。  
   
-3.  參數名稱後面加`As`子句來指定資料型別。  
+3. 參數名稱後面加`As`子句來指定資料型別。  
   
-4.  決定您所需參數的傳遞機制。 通常您為參數傳值方式傳遞，除非您想要能夠變更它的值，在呼叫程式碼中的程序。  
+4. 決定您所需參數的傳遞機制。 通常您為參數傳值方式傳遞，除非您想要能夠變更它的值，在呼叫程式碼中的程序。  
   
-5.  使用參數名稱前面加上[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)指定的傳遞機制。 如需詳細資訊，請參閱 <<c0> [ 差異之間傳遞的引數的值和傳址](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
+5. 使用參數名稱前面加上[ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)或是[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)指定的傳遞機制。 如需詳細資訊，請參閱 <<c0> [ 差異之間傳遞的引數的值和傳址](./differences-between-passing-an-argument-by-value-and-by-reference.md)。  
   
-6.  如果參數是選擇性的在之前的傳遞機制，與[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)並遵循參數資料類型，以等號 (`=`) 和預設值。  
+6. 如果參數是選擇性的在之前的傳遞機制，與[選擇性](../../../../visual-basic/language-reference/modifiers/optional.md)並遵循參數資料類型，以等號 (`=`) 和預設值。  
   
      下列範例會定義外框的`Sub`使用三個參數的程序。 前兩個所需，且選擇性第三個。 參數宣告會以逗號分隔的參數清單中。  
   
@@ -55,11 +55,11 @@ A*參數*可讓呼叫端的程式碼呼叫它時，將值傳遞至程序。 宣�
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [Sub 程序](./sub-procedures.md)
+- [子程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)
-- [如何：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)
+- [HOW TO：將引數傳遞至程序](./how-to-pass-arguments-to-a-procedure.md)
 - [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)
 - [遞迴程序](./recursive-procedures.md)
-- [程序多載化](./procedure-overloading.md)
+- [程序多載](./procedure-overloading.md)
 - [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)

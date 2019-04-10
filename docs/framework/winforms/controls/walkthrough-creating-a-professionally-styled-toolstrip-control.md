@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], walkthroughs
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
-ms.openlocfilehash: 22ec7b85973d606d329fe1c58f8cef7036fc1a8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336547"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>逐步解說：建立專業樣式的 ToolStrip 控制項
 您可以提供給您的應用程式<xref:System.Windows.Forms.ToolStrip>撰寫您自己的類別衍生自控制項專業外觀和行為<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型別。  
@@ -45,22 +45,22 @@ ms.locfileid: "59115787"
   
 #### <a name="to-create-the-control-library-project"></a>若要建立控制項程式庫專案  
   
-1.  建立新的 Windows 控制項程式庫專案，名為`StackViewLibrary`。  
+1. 建立新的 Windows 控制項程式庫專案，名為`StackViewLibrary`。  
   
-2.  在 [**方案總管] 中**，藉由刪除原始程式檔，視您選擇的語言而定，名為"UserControl1.cs 」 或 「 UserControl1.vb"，刪除專案的預設控制項。  
+2. 在 [**方案總管] 中**，藉由刪除原始程式檔，視您選擇的語言而定，名為"UserControl1.cs 」 或 「 UserControl1.vb"，刪除專案的預設控制項。  
   
      如需詳細資訊，請參閱[如何：移除，請刪除，並排除項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0ebzhwsk(v=vs.100))。  
   
-3.  加入新<xref:System.Windows.Forms.UserControl>項目**StackViewLibrary**專案。 提供新的原始程式檔的基底名稱`StackView`。  
+3. 加入新<xref:System.Windows.Forms.UserControl>項目**StackViewLibrary**專案。 提供新的原始程式檔的基底名稱`StackView`。  
   
 ## <a name="designing-the-stackview-control"></a>設計 StackView 控制項  
  `StackView`控制項是具有一個子系的複合控制項<xref:System.Windows.Forms.ToolStrip>控制項。 如需有關複合控制項的詳細資訊，請參閱[各種自訂控制項](varieties-of-custom-controls.md)。  
   
 #### <a name="to-design-the-stackview-control"></a>若要設計 StackView 控制項  
   
-1.  從**工具箱**，拖曳<xref:System.Windows.Forms.ToolStrip>控制項至設計介面。  
+1. 從**工具箱**，拖曳<xref:System.Windows.Forms.ToolStrip>控制項至設計介面。  
   
-2.  在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolStrip>根據下表的控制項的屬性。  
+2. 在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolStrip>根據下表的控制項的屬性。  
   
     |屬性|值|  
     |--------------|-----------|  
@@ -73,9 +73,9 @@ ms.locfileid: "59115787"
     |與邊框距離|`0, 7, 0, 0`|  
     |RenderMode|<xref:System.Windows.Forms.ToolStripRenderMode.Professional>|  
   
-3.  在 Windows Form 設計工具中，按一下<xref:System.Windows.Forms.ToolStrip>控制項的**新增**按鈕，然後新增<xref:System.Windows.Forms.ToolStripButton>到`stackStrip`控制項。  
+3. 在 Windows Form 設計工具中，按一下<xref:System.Windows.Forms.ToolStrip>控制項的**新增**按鈕，然後新增<xref:System.Windows.Forms.ToolStripButton>到`stackStrip`控制項。  
   
-4.  在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolStripButton>根據下表的控制項的屬性。  
+4. 在 **屬性**視窗中，將<xref:System.Windows.Forms.ToolStripButton>根據下表的控制項的屬性。  
   
     |屬性|值|  
     |--------------|-----------|  
@@ -91,7 +91,7 @@ ms.locfileid: "59115787"
     |文字|**郵件**|  
     |TextAlign|<xref:System.Drawing.ContentAlignment.MiddleLeft>|  
   
-5.  重複步驟 7 的另外三個<xref:System.Windows.Forms.ToolStripButton>控制項。  
+5. 重複步驟 7 的另外三個<xref:System.Windows.Forms.ToolStripButton>控制項。  
   
      控制項`calendarStackButton`， `contactsStackButton`，和`tasksStackButton`。 設定的值<xref:System.Windows.Forms.Control.Text%2A>屬性，以**行事曆**，**連絡人**，和**工作**分別。  
   
@@ -100,26 +100,26 @@ ms.locfileid: "59115787"
   
 #### <a name="to-handle-events"></a>若要處理事件  
   
-1.  在 Windows Form 設計工具中，選取 `StackView`控制項。  
+1. 在 Windows Form 設計工具中，選取 `StackView`控制項。  
   
-2.  在 [屬性] 視窗中按一下 [事件]。  
+2. 在 [屬性] 視窗中按一下 [事件]。  
   
-3.  按兩下 Load 事件，以產生`StackView_Load`事件處理常式。  
+3. 按兩下 Load 事件，以產生`StackView_Load`事件處理常式。  
   
-4.  在 `StackView_Load` 事件處理常式中，複製並貼入下列程式碼。  
+4. 在 `StackView_Load` 事件處理常式中，複製並貼入下列程式碼。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#3)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#3)]  
   
-5.  在 Windows Form 設計工具中，選取 `mailStackButton`控制項。  
+5. 在 Windows Form 設計工具中，選取 `mailStackButton`控制項。  
   
-6.  在 [屬性] 視窗中按一下 [事件]。  
+6. 在 [屬性] 視窗中按一下 [事件]。  
   
-7.  按兩下 Click 事件。  
+7. 按兩下 Click 事件。  
   
      Windows Form 設計工具產生`mailStackButton_Click`事件處理常式。  
   
-8.  重新命名`mailStackButton_Click`事件處理常式來`stackButton_Click`。  
+8. 重新命名`mailStackButton_Click`事件處理常式來`stackButton_Click`。  
   
      如需詳細資訊，請參閱 <<c0> [ 重新命名重構程式碼符號](/visualstudio/ide/reference/rename)。  
   
@@ -139,12 +139,12 @@ ms.locfileid: "59115787"
   
 #### <a name="to-define-icons"></a>若要定義圖示  
   
-1.  在程式碼編輯器中，插入下列程式碼插入`StackView`類別定義。 此程式碼會初始化的點陣圖<xref:System.Windows.Forms.ToolStripButton>圖示。  
+1. 在程式碼編輯器中，插入下列程式碼插入`StackView`類別定義。 此程式碼會初始化的點陣圖<xref:System.Windows.Forms.ToolStripButton>圖示。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#2)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#2)]  
   
-2.  將呼叫加入`InitializeImages`方法中的`StackView`類別建構函式。  
+2. 將呼叫加入`InitializeImages`方法中的`StackView`類別建構函式。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -154,14 +154,14 @@ ms.locfileid: "59115787"
   
 #### <a name="to-implement-a-custom-renderer"></a>若要實作自訂轉譯器  
   
-1.  插入下列程式碼插入`StackView`控制定義。  
+1. 插入下列程式碼插入`StackView`控制定義。  
   
      這是針對定義`StackRenderer`類別，它會覆寫<xref:System.Windows.Forms.ToolStripRenderer.RenderGrip>， <xref:System.Windows.Forms.ToolStripRenderer.RenderToolStripBorder>，和<xref:System.Windows.Forms.ToolStripRenderer.RenderButtonBackground>方法來產生自訂的外觀。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#10)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#10)]  
   
-2.  在 `StackView`控制項的建構函式，建立的新執行個體`StackRenderer`類別，將指派到這個執行個體`stackStrip`控制項的<xref:System.Windows.Forms.ToolStrip.Renderer%2A>屬性。  
+2. 在 `StackView`控制項的建構函式，建立的新執行個體`StackRenderer`類別，將指派到這個執行個體`stackStrip`控制項的<xref:System.Windows.Forms.ToolStrip.Renderer%2A>屬性。  
   
      [!code-csharp[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/CS/StackView.cs#5)]
      [!code-vb[System.Windows.Forms.ToolStrip.StackView#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ToolStrip.StackView/VB/StackView.vb#5)]  
@@ -171,9 +171,9 @@ ms.locfileid: "59115787"
   
 #### <a name="to-test-the-stackview-control"></a>若要測試 StackView 控制項  
   
-1.  按 F5 以建置專案並啟動**UserControl 測試容器**。  
+1. 按 F5 以建置專案並啟動**UserControl 測試容器**。  
   
-2.  將指標移的按鈕`StackView`控制項，然後再按一下按鈕，請參閱其選取狀態的外觀。  
+2. 將指標移的按鈕`StackView`控制項，然後再按一下按鈕，請參閱其選取狀態的外觀。  
   
 ## <a name="next-steps"></a>後續步驟  
  在本逐步解說中，您已建立可重複使用的自訂用戶端控制項專業外觀的 Office XP 控制項。 您可以使用<xref:System.Windows.Forms.ToolStrip>用於許多其他用途的控制項系列：  

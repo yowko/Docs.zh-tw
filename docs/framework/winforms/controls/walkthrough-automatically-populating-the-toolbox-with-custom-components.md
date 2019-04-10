@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Toolbox [Windows Forms], populating
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
-ms.openlocfilehash: a1d138bcdc2c4637cd6aa035360ff258d3fe7100
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338094"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>逐步解說：自動將自訂元件填入工具箱
 如果您的元件會定義目前開啟的方案中的專案，它們會自動顯示，在**工具箱**，您需要採取任何動作。 您可以手動填入**工具箱**以使用您自訂元件[選擇工具箱項目對話方塊 (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))，但**工具箱**考慮您的方案中的項目建置輸出具有所有下列特性：  
@@ -45,31 +45,31 @@ ms.locfileid: "59178785"
   
 #### <a name="to-create-the-project"></a>若要建立專案  
   
-1.  建立以 Windows 為基礎的應用程式專案，稱為`ToolboxExample`(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
+1. 建立以 Windows 為基礎的應用程式專案，稱為`ToolboxExample`(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
-2.  將新元件加入至專案。 稱為 `DemoComponent`。  
+2. 將新元件加入至專案。 稱為 `DemoComponent`。  
   
      如需詳細資訊，請參閱[如何：加入新的專案項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w0572c5b(v=vs.100))。  
   
-3.  建置專案。  
+3. 建置專案。  
   
-4.  從**工具**功能表上，按一下**選項**項目。 按一下**一般**下方**Windows Form 設計工具**項目，並確定**AutoToolboxPopulate**選項設定為**True**。  
+4. 從**工具**功能表上，按一下**選項**項目。 按一下**一般**下方**Windows Form 設計工具**項目，並確定**AutoToolboxPopulate**選項設定為**True**。  
   
 ## <a name="creating-an-instance-of-a-custom-component"></a>建立自訂元件的執行個體  
  下一個步驟是在表單上建立自訂元件的執行個體。 因為**工具箱**自動帳戶的新元件，這非常簡單，只要建立其他元件或控制項。  
   
 #### <a name="to-create-an-instance-of-a-custom-component"></a>若要建立自訂元件的執行個體  
   
-1.  開啟專案的表單**Form 設計工具**。  
+1. 開啟專案的表單**Form 設計工具**。  
   
-2.  在 **工具箱**，按一下 新索引標籤上，並呼叫**ToolboxExample 元件**。  
+2. 在 **工具箱**，按一下 新索引標籤上，並呼叫**ToolboxExample 元件**。  
   
      一旦您按一下  索引標籤，您會看到**DemoComponent**。  
   
     > [!NOTE]
     >  基於效能考量，自動填入的區域中的元件**工具箱**不會顯示自訂點陣圖，而<xref:System.Drawing.ToolboxBitmapAttribute>不支援。 若要顯示的圖示中的自訂元件**工具箱**，使用**選擇工具箱項目**載入您的元件 對話方塊。  
   
-3.  將您的元件拖曳到表單。  
+3. 將您的元件拖曳到表單。  
   
      建立並加入至元件的執行個體**元件匣**。  
   
@@ -78,15 +78,15 @@ ms.locfileid: "59178785"
   
 #### <a name="to-experiment-with-the-effect-on-the-toolbox-of-unloading-and-reloading-components"></a>嘗試卸載及重新載入元件的 [工具箱] 上的效果  
   
-1.  卸載方案中的專案。  
+1. 卸載方案中的專案。  
   
      如需 卸載專案的詳細資訊，請參閱[How to:卸載並重新載入專案](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/tt479x1t(v=vs.100))。 如果提示您儲存時，請選擇**是**。  
   
-2.  加入新**Windows 應用程式**專案加入方案。 開啟中的表單**設計工具**。  
+2. 加入新**Windows 應用程式**專案加入方案。 開啟中的表單**設計工具**。  
   
      **ToolboxExample 元件**現已從先前的專案 索引標籤不見了。  
   
-3.  重新載入`ToolboxExample`專案。  
+3. 重新載入`ToolboxExample`專案。  
   
      **ToolboxExample 元件**索引標籤現在隨即再度出現。  
   

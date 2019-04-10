@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrMissingMember_MemberNotFoundOnType2
 ms.assetid: 6300feb8-78ac-4dd0-9653-1d03e1f5bc20
-ms.openlocfilehash: 92ccf89f7a5333e2150c8c816ff847984ac2a012
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: fdaea9d7f0aee92852430ae3ad676bf13a3d9396
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58050591"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336963"
 ---
 # <a name="public-member-membername-on-type-typename-not-found"></a>Public 成員 '\<成員名稱 >' 在類型'\<類型名稱 >' 找不到
 找不到您嘗試存取的成員。 存取晚期繫結物件的非公用成員時，就會發生這個錯誤。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  如果成員存在，請確定它已宣告為 `Public`。  
+1. 如果成員存在，請確定它已宣告為 `Public`。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 571a676496683ba3251f13c41600bb017e1ced5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336690"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 函式
 可讓主機判斷哪個版本的 common language runtime (CLR) 會在程序中使用之前先明確初始化 CLR。  
@@ -66,11 +66,11 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
  在執行階段初始化時，會執行下列步驟：  
   
-1.  主機會呼叫[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或其中一個其他執行階段初始化函式。 或者，主應用程式無法初始化執行階段使用 COM 物件啟動。  
+1. 主機會呼叫[CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)或其中一個其他執行階段初始化函式。 或者，主應用程式無法初始化執行階段使用 COM 物件啟動。  
   
-2.  在執行階段呼叫所指定的函數`hostCallback`參數。  
+2. 在執行階段呼叫所指定的函數`hostCallback`參數。  
   
-3.  所指定的函數`hostCallback`接著會將下列呼叫順序：  
+3. 所指定的函數`hostCallback`接著會將下列呼叫順序：  
   
     -   所指定的函數`pBeginHostSetup`參數。  
   

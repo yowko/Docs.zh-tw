@@ -2,12 +2,12 @@
 title: 安全性驗證
 ms.date: 03/30/2017
 ms.assetid: 48dcd496-0c4f-48ce-8b9b-0e25b77ffa58
-ms.openlocfilehash: b6e97b7b8662a13628bd8b0b353e4d28c0c84a9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1ad52431d68af847d7c26a0a3bd42dbcb3ce51c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59202868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334649"
 ---
 # <a name="security-validation"></a>安全性驗證
 這個範例示範如何使用自訂行為驗證電腦上的服務，以確定服務符合特定條件。 在這個範例中，服務會經過驗證，其方式是自訂行為掃描服務上的每個端點，並檢查這些端點是否包含安全繫結項目。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。  
@@ -81,21 +81,21 @@ public void Validate(ServiceDescription serviceDescription,
   
 #### <a name="to-view-failed-endpoint-validation-exception-messages-in-the-event-viewer"></a>在事件檢視器中檢視失敗的端點驗證例外狀況訊息  
   
-1.  按一下 **開始**功能表，然後選取**執行...**.  
+1. 按一下 **開始**功能表，然後選取**執行...**.  
   
-2.  型別`eventvwr`，按一下  **確定**。  
+2. 型別`eventvwr`，按一下  **確定**。  
   
-3.  在 [事件檢視器] 視窗中，按一下**應用程式**。  
+3. 在 [事件檢視器] 視窗中，按一下**應用程式**。  
   
-4.  按兩下 [WebHost] 類別中的最近新增的 [System.ServiceModel 4.0.0.0] 事件**應用程式**視窗來檢視不安全端點訊息。  
+4. 按兩下 [WebHost] 類別中的最近新增的 [System.ServiceModel 4.0.0.0] 事件**應用程式**視窗來檢視不安全端點訊息。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

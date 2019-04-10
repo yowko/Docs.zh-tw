@@ -2,12 +2,12 @@
 title: SQL Server CLR 整合簡介
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: 2f65e8690aa52f0442b4bee3b98bb1ea86e064a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336807"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server CLR 整合簡介
 做為 Microsoft .NET Framework 核心的 Common Language Runtime (CLR)，提供了所有 .NET Framework 程式碼的執行環境。 CLR 中執行的程式碼稱為 Managed 程式碼。 CLR 提供程式執行所需的各種功能及服務，包括 just-in-time (JIT) 編譯、配置及管理記憶體、強制使用型別安全性、例外處理、執行緒管理及安全性。  
@@ -45,7 +45,7 @@ GO
   
  **SQL Server 線上叢書**  
   
-1.  [部署 CLR 資料庫物件](https://go.microsoft.com/fwlink/?LinkId=115232)  
+1. [部署 CLR 資料庫物件](https://go.microsoft.com/fwlink/?LinkId=115232)  
   
 ## <a name="clr-integration-security"></a>CLR 整合安全性  
  Microsoft SQL Server 與 Microsoft .NET Framework Common Language Runtime (CLR) 的整合安全性模型，可管理及保護在 SQL Server 內執行之不同類型 CLR 及非 CLR 物件的存取權。 這些物件可由 Transact-SQL 陳述式或在伺服器中執行的其他 CLR 物件呼叫。  

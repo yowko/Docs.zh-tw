@@ -2,12 +2,12 @@
 title: .NET Framework 4.5 中的外顯化原則活動
 ms.date: 03/30/2017
 ms.assetid: 92fd6f92-23a1-4adf-b96a-2754ea93ad3e
-ms.openlocfilehash: 2ec358dbe2ba2b60df707d1ce580bb88e4c4ba1b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 622b0f14281d5b068700d9e4fe03485aa1a60fcb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57706363"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338276"
 ---
 # <a name="externalized-policy-activity-in-net-framework-45"></a>.NET Framework 4.5 中的外顯化原則活動
 
@@ -56,8 +56,7 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 
 ## <a name="policy4-and-externalpolicy4"></a>Policy4 和 ExternalPolicy4
 
-[原則] 活動可讓您建立及執行 WF 4.5 工作流程中的.NET Framework 3.5 RuleSet。 
-  <xref:System.Workflow.Activities.Rules.RuleSet> 已序列化，內嵌於 Policy4 活動 XAML 定義中。 ExternalizedPolicy4 範例示範如何使用現有的外部 <xref:System.Workflow.Activities.Rules.RuleSet> (包含在 .rules 檔案中)。
+[原則] 活動可讓您建立及執行 WF 4.5 工作流程中的.NET Framework 3.5 RuleSet。 <xref:System.Workflow.Activities.Rules.RuleSet> 已序列化，內嵌於 Policy4 活動 XAML 定義中。 ExternalizedPolicy4 範例示範如何使用現有的外部 <xref:System.Workflow.Activities.Rules.RuleSet> (包含在 .rules 檔案中)。
 
 ## <a name="use-this-sample"></a>使用此範例
 
@@ -67,21 +66,21 @@ ExternalizedPolicy4 設計工具讓您不需要撰寫程式碼，即可設定活
 
 ### <a name="run-the-imperativecodeclientsample-application"></a>執行 ImperativeCodeClientSample 應用程式
 
-1.  使用 Visual Studio 中，開啟*Policy4sample.sln*方案檔。
+1. 使用 Visual Studio 中，開啟*Policy4sample.sln*方案檔。
 
-2.  在 **方案總管**，以滑鼠右鍵按一下**ImperativeCodeClientSample**專案，然後選取**設定為啟始專案**。
+2. 在 **方案總管**，以滑鼠右鍵按一下**ImperativeCodeClientSample**專案，然後選取**設定為啟始專案**。
 
-3.  若要執行專案時，請按**Ctrl**+**F5**。
+3. 若要執行專案時，請按**Ctrl**+**F5**。
 
 ### <a name="run-the-designerclientsample-application"></a>執行 DesignerClientSample 應用程式
 
-1.  使用 Visual Studio 中，開啟*Policy4sample.sln*方案檔。
+1. 使用 Visual Studio 中，開啟*Policy4sample.sln*方案檔。
 
-2.  在 **方案總管**，以滑鼠右鍵按一下**DesignerClientSample**專案，然後選取**設定為啟始專案**。
+2. 在 **方案總管**，以滑鼠右鍵按一下**DesignerClientSample**專案，然後選取**設定為啟始專案**。
 
-3.  按下**Ctrl**+**Shift**+**B**來編譯專案。
+3. 按下**Ctrl**+**Shift**+**B**來編譯專案。
 
-4.  按下**Ctrl**+**F5**執行專案。
+4. 按下**Ctrl**+**F5**執行專案。
 
 > [!IMPORTANT]
 > 這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。

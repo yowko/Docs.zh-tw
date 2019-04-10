@@ -5,25 +5,25 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
-ms.openlocfilehash: 0f750f2d23430691016fc2cf1e5e9d44d80da2a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204077"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342527"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>從查詢建立 DataTable (LINQ to DataSet)
 資料繫結 (Data Binding) 是 <xref:System.Data.DataTable> 物件的常見用法。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會採用查詢的結果並將資料複製到 <xref:System.Data.DataTable> 中，然後此物件便可用於資料繫結。 執行了資料作業之後，新的 <xref:System.Data.DataTable> 就會合併回來源 <xref:System.Data.DataTable> 中。  
   
  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會使用下列程序，從查詢中建立 <xref:System.Data.DataTable>：  
   
-1.  <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會從來源資料表 (實作 <xref:System.Data.DataTable> 介面的 <xref:System.Data.DataTable> 物件) 中複製 (Clone) <xref:System.Linq.IQueryable%601>。 <xref:System.Collections.IEnumerable> 來源通常源自於 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 運算式或方法查詢。  
+1. <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法會從來源資料表 (實作 <xref:System.Data.DataTable> 介面的 <xref:System.Data.DataTable> 物件) 中複製 (Clone) <xref:System.Linq.IQueryable%601>。 <xref:System.Collections.IEnumerable> 來源通常源自於 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 運算式或方法查詢。  
   
-2.  複製的 <xref:System.Data.DataTable> 結構描述是根據來源資料表中第一個列舉 <xref:System.Data.DataRow> 物件的資料行所建立，而且複製之資料表的名稱就是來源資料表的名稱並附加上 "query" 一字。  
+2. 複製的 <xref:System.Data.DataTable> 結構描述是根據來源資料表中第一個列舉 <xref:System.Data.DataRow> 物件的資料行所建立，而且複製之資料表的名稱就是來源資料表的名稱並附加上 "query" 一字。  
   
-3.  若為來源資料表中的每個資料列，資料列的內容會複製到新的 <xref:System.Data.DataRow> 物件中，然後該物件便插入複製的資料表中。 在複製作業中，<xref:System.Data.DataRow.RowState%2A> 和 <xref:System.Data.DataRow.RowError%2A> 屬性會保留下來。 如果來源中的 <xref:System.ArgumentException> 物件來自於不同的資料表，系統就會擲回 <xref:System.Data.DataRow>。  
+3. 若為來源資料表中的每個資料列，資料列的內容會複製到新的 <xref:System.Data.DataRow> 物件中，然後該物件便插入複製的資料表中。 在複製作業中，<xref:System.Data.DataRow.RowState%2A> 和 <xref:System.Data.DataRow.RowError%2A> 屬性會保留下來。 如果來源中的 <xref:System.ArgumentException> 物件來自於不同的資料表，系統就會擲回 <xref:System.Data.DataRow>。  
   
-4.  在輸入可查詢資料表中的所有 <xref:System.Data.DataTable> 物件都已經複製之後，就會傳回複製的 <xref:System.Data.DataRow>。 如果來源序列 (Sequence) 沒有包含任何 <xref:System.Data.DataRow> 物件，此方法就會傳回空的 <xref:System.Data.DataTable>。  
+4. 在輸入可查詢資料表中的所有 <xref:System.Data.DataTable> 物件都已經複製之後，就會傳回複製的 <xref:System.Data.DataRow>。 如果來源序列 (Sequence) 沒有包含任何 <xref:System.Data.DataRow> 物件，此方法就會傳回空的 <xref:System.Data.DataTable>。  
   
  請注意，呼叫 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> 方法將導致系統執行繫結至來源資料表的查詢。  
   

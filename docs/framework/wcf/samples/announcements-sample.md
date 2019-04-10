@@ -2,12 +2,12 @@
 title: 公告範例
 ms.date: 03/30/2017
 ms.assetid: 954a75e4-9a97-41d6-94fc-43765d4205a9
-ms.openlocfilehash: 7506dcc2b73ce2ee3437020c958f480fb521f4f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 895043976fd39ac0057c8dbc1c7daf0394393984
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094550"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333973"
 ---
 # <a name="announcements-sample"></a>公告範例
 此範例示範如何使用探索功能的公告功能。 公告功能可讓服務送出包含服務相關中繼資料的公告訊息。 當服務啟動時，預設會傳送一個 Hello 公告，而當服務關閉時，則會傳送一個 Bye 公告。 這些公告可以多點傳送，也可以點對點傳送。 這個範例包含兩個專案，也就是服務和用戶端。  
@@ -68,15 +68,15 @@ static void OnOfflineEvent(object sender, AnnouncementEventArgs e)
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  此範例使用 HTTP 端點，若要執行這個範例，適當的 URL Acl 必須加入，請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
+1. 此範例使用 HTTP 端點，若要執行這個範例，適當的 URL Acl 必須加入，請參閱[設定 HTTP 和 HTTPS](https://go.microsoft.com/fwlink/?LinkId=70353)如需詳細資訊。 以更高的權限執行下列命令應該就能加入適當的 ACL。 如果命令未正確執行，您可能要將 Domain 和 Username 替換成下列引數。 `netsh http add urlacl url=http://+:8000/ user=%DOMAIN%\%UserName%`  
   
-2.  建置方案。  
+2. 建置方案。  
   
-3.  執行 client.exe 應用程式。  
+3. 執行 client.exe 應用程式。  
   
-4.  執行 service.exe 應用程式。 請注意，用戶端會收到線上公告。  
+4. 執行 service.exe 應用程式。 請注意，用戶端會收到線上公告。  
   
-5.  關閉 service.exe 應用程式。 請注意，用戶端會收到離線公告。  
+5. 關閉 service.exe 應用程式。 請注意，用戶端會收到離線公告。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

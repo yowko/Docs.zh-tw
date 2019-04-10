@@ -1,16 +1,16 @@
 ---
-title: 操作說明︰啟用權杖重新執行偵測
+title: 如何：啟用權杖重新執行偵測
 ms.date: 03/30/2017
 ms.assetid: 5a9f5771-f5f6-4100-8501-406aa20d731a
 author: BrucePerlerMS
-ms.openlocfilehash: 373177924a0a2e03bd43237510c918694cd5a340
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: a357f153d61b6a8e1e105639bd68647dabdc26f8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47236000"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336521"
 ---
-# <a name="how-to-enable-token-replay-detection"></a>操作說明︰啟用權杖重新執行偵測
+# <a name="how-to-enable-token-replay-detection"></a>如何：啟用權杖重新執行偵測
 ## <a name="applies-to"></a>適用於  
   
 -   Microsoft® Windows® Identity Foundation (WIF)  
@@ -18,7 +18,7 @@ ms.locfileid: "47236000"
 -   ASP.NET® Web Forms  
   
 ## <a name="summary"></a>總結  
- 此操作說明提供了在使用 WIF 的 ASP.NET 應用程式中啟用權杖重新執行偵測的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式來確認已啟用權杖重新執行偵測。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 您可以從下列位置下載：[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849) (身分識別與存取工具)  
+ 此操作說明提供了在使用 WIF 的 ASP.NET 應用程式中啟用權杖重新執行偵測的詳細逐步程序。 還提供了一些指示，說明如何測試應用程式來確認已啟用權杖重新執行偵測。 這篇使用方法文章並沒有提供建立 Security Token Service (STS) 的詳細指示，而是使用識別和存取工具隨附的「開發 STS」。 「開發 STS」並不會執行實際的驗證，而只是用於測試用途。 您必須安裝識別和存取工具才能完成這篇使用方法文章。 它可以從下列位置下載：[身分識別和存取工具](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>內容  
   
@@ -54,17 +54,17 @@ ms.locfileid: "47236000"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
-1.  啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
+1. 啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
   
-2.  在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
+2. 在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
   
-3.  在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
+3. 在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
   
-4.  以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
+4. 以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
   
-5.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
+5. [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
   
-6.  將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和**\<identityConfiguration>** 項目後面的位置，如下所示：  
+6. 將下列 **\<tokenReplayDetection>** 項目加入至 *Web.config* 組態檔中緊接在 **\<system.identityModel>** 和**\<identityConfiguration>** 項目後面的位置，如下所示：  
   
     ```xml  
     <system.identityModel>  
@@ -77,8 +77,8 @@ ms.locfileid: "47236000"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-replay-detection"></a>測試啟用 WIF 的 ASP.NET 應用程式的重新執行偵測  
   
-1.  按 **F5** 鍵執行方案。 您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。  
+1. 按 **F5** 鍵執行方案。 您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。  
   
-2.  請按瀏覽器的**上一頁**按鈕。 您應該會看到 **Server Error in ‘/’ Application** 頁面以及下列描述：*ID1062: Replay has been detected for: Token: 'System.IdentityModel.Tokens.SamlSecurityToken'*，後面接著 *AssertionId* 和 *Issuer*。  
+2. 請按瀏覽器的**上一頁**按鈕。 您應該會看到 **'/' 應用程式中的伺服器錯誤**頁面描述如下：*ID1062:用於偵測重新執行：語彙基元：'System.IdentityModel.Tokens.SamlSecurityToken'*，後面接著*AssertionId*並*簽發者*。  
   
      因為在偵測到權杖重新執行時，會擲回 <xref:System.IdentityModel.Tokens.SecurityTokenReplayDetectedException> 類型的例外狀況，所以您會看到此錯誤頁面。 發生此錯誤的原因是您在權杖第一次出現時，嘗試重新傳送初始 POST 要求。 **上一頁**按鈕不會造成後續的伺服器要求發生這種行為。

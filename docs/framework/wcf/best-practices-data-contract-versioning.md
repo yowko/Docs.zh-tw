@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices [WCF], data contract versioning
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
-ms.openlocfilehash: 9f92e731132eb564b893e3d34ccd322fbcd66ea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59118998"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334922"
 ---
 # <a name="best-practices-data-contract-versioning"></a>最佳做法：資料合約版本控制
 本主題會列出最佳做法以建立可隨時間輕鬆改進的資料合約。 如需資料合約的詳細資訊，請參閱中的主題[Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)。  
@@ -50,21 +50,21 @@ ms.locfileid: "59118998"
   
  有些指導方針必須確實遵守，才能對預期收到舊版本之處傳送新版本的型別，或對預期收到新版本之處傳送舊的版本。 其他的指導方針並非絕對必要，但在此處會列出，因為它們可能會受到未來結構描述版本設定的影響。  
   
-1.  請勿嘗試依型別繼承對資料合約進行版本設定。 如果要建立較新版本，請變更現有型別上的資料合約或建立不相關的新型別。  
+1. 請勿嘗試依型別繼承對資料合約進行版本設定。 如果要建立較新版本，請變更現有型別上的資料合約或建立不相關的新型別。  
   
-2.  如果繼承沒有用來做為版本設定機制，並遵循特定規則，便允許搭配使用繼承和資料合約。 如果型別衍生自特定的基底型別，在未來版本中請勿讓它衍生自不同的基底型別 (除非它有相同的資料合約)。 這種情形有一個例外狀況：只有在不包含名稱與繼承中其他型別之任何可能版本中的其他成員相同的資料成員時，您才可以將型別插入資料合約類型和其基底型別之間的繼承中。 一般來說，在相同繼承階層之不同層級使用名稱相同的資料成員，會導致嚴重的版本設定問題，應加以避免。  
+2. 如果繼承沒有用來做為版本設定機制，並遵循特定規則，便允許搭配使用繼承和資料合約。 如果型別衍生自特定的基底型別，在未來版本中請勿讓它衍生自不同的基底型別 (除非它有相同的資料合約)。 這種情形有一個例外狀況：只有在不包含名稱與繼承中其他型別之任何可能版本中的其他成員相同的資料成員時，您才可以將型別插入資料合約類型和其基底型別之間的繼承中。 一般來說，在相同繼承階層之不同層級使用名稱相同的資料成員，會導致嚴重的版本設定問題，應加以避免。  
   
-3.  從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。 如需詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
+3. 從資料合約的第一個版本開始時，請永遠實作 <xref:System.Runtime.Serialization.IExtensibleDataObject> 以啟用往返。 如需詳細資訊，請參閱[向前相容資料合約](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)。 如果您已發行型別的一或多個版本，而沒有實作這個介面，請在型別的下一個版本中實作它。  
   
-4.  在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 如需有關命名的詳細資訊，請參閱 < [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
+4. 在較新的版本中，請勿變更資料合約名稱或命名空間。 如果變更做為資料合約基礎之型別的名稱或命名空間，請使用適當的機制以確定保留資料合約名稱和命名空間，例如 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> 的 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性。 如需有關命名的詳細資訊，請參閱 < [Data Contract Names](../../../docs/framework/wcf/feature-details/data-contract-names.md)。  
   
-5.  在較新的版本中，請勿變更任何資料成員的名稱。 如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性來保留現有的資料成員名稱。  
+5. 在較新的版本中，請勿變更任何資料成員的名稱。 如果變更做為資料成員基礎的欄位、屬性或事件的名稱，請使用 `Name` 的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性來保留現有的資料成員名稱。  
   
-6.  在較新的版本中，請勿變更做為資料成員基礎之任何欄位、屬性或事件的型別，讓該資料成員的結果資料合約改變。 請記住，如果是為了判斷預期資料合約的目的，介面型別等於 <xref:System.Object>。  
+6. 在較新的版本中，請勿變更做為資料成員基礎之任何欄位、屬性或事件的型別，讓該資料成員的結果資料合約改變。 請記住，如果是為了判斷預期資料合約的目的，介面型別等於 <xref:System.Object>。  
   
-7.  在較新的版本中，請勿藉由調整 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 屬性的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性，來變更現有資料成員的順序。  
+7. 在較新的版本中，請勿藉由調整 <xref:System.Runtime.Serialization.DataMemberAttribute.Order%2A> 屬性的 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性，來變更現有資料成員的順序。  
   
-8.  在較新的版本中，可以新增新的資料成員。 它們應永遠遵循下列規則：  
+8. 在較新的版本中，可以新增新的資料成員。 它們應永遠遵循下列規則：  
   
     1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 屬性應永遠保持為 `false` 的預設值。  
   

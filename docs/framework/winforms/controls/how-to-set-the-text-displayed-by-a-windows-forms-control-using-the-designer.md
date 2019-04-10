@@ -5,23 +5,23 @@ helpviewer_keywords:
 - controls [Windows Forms], setting caption
 - Windows Forms, setting the text displayed
 ms.assetid: 9d18e0e0-f17f-4074-837d-e67ceeeaa89d
-ms.openlocfilehash: 645ddedcb0de560737ee05db1375f09cfa2cd7ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0f567befb1e0c323dd16fffedec279ff836cbf8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59123836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337951"
 ---
 # <a name="how-to-set-the-text-displayed-by-a-windows-forms-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms 控制項所顯示的文字
 Windows Form 控制項通常會顯示一些文字相關控制項的主要功能。 比方說，<xref:System.Windows.Forms.Button>控制項通常會顯示標題，指出當按一下按鈕時，就會執行哪些動作。 針對所有控制項，您都可以使用 <xref:System.Windows.Forms.Control.Text%2A> 屬性來設定或傳回該文字。 您可以使用 <xref:System.Windows.Forms.Control.Font%2A> 屬性來變更字型。  
   
 ### <a name="to-set-the-text-and-font-with-the-designer"></a>若要設定的文字和字型與設計工具  
   
-1.  在 [屬性] 視窗中，設定<xref:System.Windows.Forms.Control.Text%2A>設為適當的字串控制項屬性。  
+1. 在 [屬性] 視窗中，設定<xref:System.Windows.Forms.Control.Text%2A>設為適當的字串控制項屬性。  
   
      若要建立加上底線的快速鍵，包括連字號 (&) 會成為快顯索引鍵的字母前面。  
   
-2.  在 [屬性] 視窗中，按一下 省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.Control.Font%2A>屬性。  
+2. 在 [屬性] 視窗中，按一下 省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁邊<xref:System.Windows.Forms.Control.Font%2A>屬性。  
   
      在標準的字型 對話方塊中，選取您想要的字型、 字型樣式、 大小、 作用 （例如刪除線或底線） 和指令碼。  
   

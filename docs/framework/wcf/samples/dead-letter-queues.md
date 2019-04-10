@@ -2,12 +2,12 @@
 title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
-ms.openlocfilehash: 2a6ed86b04cd110dcf71efb1a6b0560fc5d45467
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177927"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334090"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
 這個範例示範如何處理已傳遞失敗的訊息。 它根據[交易 MSMQ 繫結](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)範例。 這個範例會使用 `netMsmqBinding` 繫結。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。
@@ -310,9 +310,9 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
+2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。
 
     1.  開啟 Visual Studio 2012 中的 伺服器管理員。
 
@@ -324,13 +324,13 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
     5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。
 
-3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-4.  若要執行本範例中單一或跨電腦組態變更佇列名稱，並以完整的電腦名稱取代 localhost，並依照[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md).
+4. 若要執行本範例中單一或跨電腦組態變更佇列名稱，並以完整的電腦名稱取代 localhost，並依照[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md).
 
 ### <a name="to-run-the-sample-on-a-computer-joined-to-a-workgroup"></a>若要在加入至工作群組的電腦上執行範例
 
-1.  如果您的電腦不是網域的一部分，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下面的範例組態所示：
+1. 如果您的電腦不是網域的一部分，請將驗證模式和保護層級設定為 `None`，以關閉傳輸安全性，如下面的範例組態所示：
 
     ```xml
     <bindings>
@@ -344,7 +344,7 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
      請透過設定端點的 `bindingConfiguration` 屬性，確定端點與繫結相關聯。
 
-2.  請務必先變更 DeadLetterService、伺服器和用戶端上的組態，再執行範例。
+2. 請務必先變更 DeadLetterService、伺服器和用戶端上的組態，再執行範例。
 
     > [!NOTE]
     >  將 `security mode` 設定為 `None`，相當於將 `MsmqAuthenticationMode`、`MsmqProtectionLevel` 和 `Message` 安全性設定為 `None`。

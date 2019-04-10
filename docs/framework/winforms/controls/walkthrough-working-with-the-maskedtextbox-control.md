@@ -11,12 +11,12 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: ca505b062be8c60c1dd9b08fead4855eb1eb4cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103840"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342444"
 ---
 # <a name="walkthrough-working-with-the-maskedtextbox-control"></a>逐步解說：使用 MaskedTextBox 控制項
 這個逐步解說中所述的工作包括：  
@@ -31,15 +31,15 @@ ms.locfileid: "59103840"
   
 #### <a name="to-add-a-maskedtextbox-control-to-your-form"></a>將 MaskedTextBox 控制項新增至您的表單  
   
-1.  開啟您想要放置的表單<xref:System.Windows.Forms.MaskedTextBox>控制項。  
+1. 開啟您想要放置的表單<xref:System.Windows.Forms.MaskedTextBox>控制項。  
   
-2.  拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**至您的表單。  
+2. 拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**至您的表單。  
   
-3.  以滑鼠右鍵按一下控制項，然後選擇 **屬性**。 在 **屬性**視窗中，選取**遮罩**屬性，然後按一下 **...** （省略符號） 按鈕旁的屬性名稱。  
+3. 以滑鼠右鍵按一下控制項，然後選擇 **屬性**。 在 **屬性**視窗中，選取**遮罩**屬性，然後按一下 **...** （省略符號） 按鈕旁的屬性名稱。  
   
-4.  在 **輸入遮罩**對話方塊中，選取**簡短日期**加上遮罩，然後按一下 **確定**。  
+4. 在 **輸入遮罩**對話方塊中，選取**簡短日期**加上遮罩，然後按一下 **確定**。  
   
-5.  在 [**屬性**] 視窗中設定<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>屬性設`true`。 這個屬性會導致每次使用者嘗試輸入違反遮罩定義的字元時發出嗶的短嗶聲。  
+5. 在 [**屬性**] 視窗中設定<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>屬性設`true`。 這個屬性會導致每次使用者嘗試輸入違反遮罩定義的字元時發出嗶的短嗶聲。  
   
  如需摘要的遮罩屬性支援的字元，請參閱 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "59103840"
   
 #### <a name="add-a-balloon-tip-for-rejected-mask-input"></a>新增拒絕的遮罩輸入的汽球提示  
   
-1.  返回**工具箱**，並新增<xref:System.Windows.Forms.ToolTip>至您的表單。  
+1. 返回**工具箱**，並新增<xref:System.Windows.Forms.ToolTip>至您的表單。  
   
-2.  建立事件處理常式<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>引發的事件<xref:System.Windows.Forms.ToolTip>發生輸入的錯誤時。 5 秒，或直到使用者按一下它，仍會顯示汽球提示。  
+2. 建立事件處理常式<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>引發的事件<xref:System.Windows.Forms.ToolTip>發生輸入的錯誤時。 5 秒，或直到使用者按一下它，仍會顯示汽球提示。  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -82,7 +82,7 @@ ms.locfileid: "59103840"
   
 #### <a name="add-a-balloon-tip-for-invalid-data-types"></a>無效的資料類型建立汽球提示  
   
-1.  在您的表單<xref:System.Windows.Forms.Form.Load>事件處理常式，指派<xref:System.Type>物件，代表<xref:System.DateTime>輸入到<xref:System.Windows.Forms.MaskedTextBox>控制項的<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性：  
+1. 在您的表單<xref:System.Windows.Forms.Form.Load>事件處理常式，指派<xref:System.Type>物件，代表<xref:System.DateTime>輸入到<xref:System.Windows.Forms.MaskedTextBox>控制項的<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性：  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ ms.locfileid: "59103840"
     End Sub  
     ```  
   
-2.  新增 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 事件的事件處理常式：  
+2. 新增 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 事件的事件處理常式：  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  

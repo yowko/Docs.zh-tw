@@ -2,12 +2,12 @@
 title: HOW TO：撰寫 ServiceContractGenerator 的延伸模組
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
-ms.openlocfilehash: 104f65f76429701dbf02c1c7a5d737e50b080394
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59111588"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340616"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>HOW TO：撰寫 ServiceContractGenerator 的延伸模組
 本主題說明如何撰寫 <xref:System.ServiceModel.Description.ServiceContractGenerator> 的擴充。 您可以在作業行為上實作 <xref:System.ServiceModel.Description.IOperationContractGenerationExtension> 介面，或在合約行為上實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 介面來達到這個目的。 本主題說明如何在合約行為上實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension> 介面。  
@@ -16,7 +16,7 @@ ms.locfileid: "59111588"
   
 ### <a name="to-write-an-extension-for-the-servicecontractgenerator"></a>若要撰寫 ServiceContractGenerator 的擴充  
   
-1.  實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 若要修改產生的服務合約，請使用已傳入至 <xref:System.ServiceModel.Description.ServiceContractGenerationContext> 方法的 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 執行個體。  
+1. 實作 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 若要修改產生的服務合約，請使用已傳入至 <xref:System.ServiceModel.Description.ServiceContractGenerationContext> 方法的 <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 執行個體。  
   
     ```  
     public void GenerateContract(ServiceContractGenerationContext context)  
@@ -26,7 +26,7 @@ ms.locfileid: "59111588"
     }  
     ```  
   
-2.  在相同類別上實作 <xref:System.ServiceModel.Description.IWsdlImportExtension>。 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法可以處理特定的 WSDL 擴充 (在此情況下為 WSDL 附註)，方法是將程式碼產生擴充加入至下列匯入的 <xref:System.ServiceModel.Description.ContractDescription> 執行個體。  
+2. 在相同類別上實作 <xref:System.ServiceModel.Description.IWsdlImportExtension>。 <xref:System.ServiceModel.Description.IWsdlImportExtension.ImportContract%28System.ServiceModel.Description.WsdlImporter%2CSystem.ServiceModel.Description.WsdlContractConversionContext%29> 方法可以處理特定的 WSDL 擴充 (在此情況下為 WSDL 附註)，方法是將程式碼產生擴充加入至下列匯入的 <xref:System.ServiceModel.Description.ContractDescription> 執行個體。  
   
     ```  
     public void ImportContract(WsdlImporter importer, WsdlContractConversionContext context)  
@@ -60,7 +60,7 @@ ms.locfileid: "59111588"
             }  
     ```  
   
-3.  將 WSDL 匯入工具加入至您的用戶端組態。  
+3. 將 WSDL 匯入工具加入至您的用戶端組態。  
   
     ```xml  
     <metadata>  
@@ -70,7 +70,7 @@ ms.locfileid: "59111588"
     </metadata>  
     ```  
   
-4.  在用戶端程式碼中，建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。  
+4. 在用戶端程式碼中，建立 `MetadataExchangeClient` 並呼叫 `GetMetadata`。  
   
     ```  
     MetadataExchangeClient mexClient = new MetadataExchangeClient(metadataAddress);  
@@ -78,13 +78,13 @@ ms.locfileid: "59111588"
     MetadataSet metaDocs = mexClient.GetMetadata();  
     ```  
   
-5.  建立 `WsdlImporter` 並呼叫 `ImportAllContracts`。  
+5. 建立 `WsdlImporter` 並呼叫 `ImportAllContracts`。  
   
     ```  
     WsdlImporter importer = new WsdlImporter(metaDocs);            System.Collections.ObjectModel.Collection<ContractDescription> contracts = importer.ImportAllContracts();  
     ```  
   
-6.  為每個合約建立 `ServiceContractGenerator` 並呼叫 `GenerateServiceContractType`。  
+6. 為每個合約建立 `ServiceContractGenerator` 並呼叫 `GenerateServiceContractType`。  
   
     ```  
     ServiceContractGenerator generator = new ServiceContractGenerator();  
@@ -96,7 +96,7 @@ ms.locfileid: "59111588"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7.  <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 針對實作的特定合約上的每個合約行為自動呼叫<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 這個方法會接著修改傳入的 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>。 在這個範例中會加入註解。  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 針對實作的特定合約上的每個合約行為自動呼叫<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>。 這個方法會接著修改傳入的 <xref:System.ServiceModel.Description.ServiceContractGenerationContext>。 在這個範例中會加入註解。  
   
 ## <a name="see-also"></a>另請參閱
 

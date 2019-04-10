@@ -7,12 +7,12 @@ helpviewer_keywords:
 - inheritance [Visual Basic], walkthroughs
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
-ms.openlocfilehash: ee7258a78ad0a434bfad08eebd596a8b889e2304
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58826167"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334142"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件 (Visual Basic) 的繼承
 您可以衍生從 Visual Basic 類別`Public`中 COM 物件，即使在舊版的 Visual Basic 中建立的類別。 屬性和方法，從 COM 物件繼承的類別可以覆寫或多載，就如同屬性和任何其他基底類別的方法可以覆寫或多載。 當您有現有的類別程式庫，您不希望重新編譯時，適合使用 COM 物件的繼承。  
@@ -23,26 +23,26 @@ ms.locfileid: "58826167"
   
 ### <a name="to-build-the-com-object-that-is-used-in-this-walkthrough"></a>若要建立本逐步解說中使用的 COM 物件  
   
-1.  在 Visual Basic 6.0 中，開啟新的 ActiveX DLL 專案。 專案，命名為`Project1`建立。 它有一個名為類別`Class1`。  
+1. 在 Visual Basic 6.0 中，開啟新的 ActiveX DLL 專案。 專案，命名為`Project1`建立。 它有一個名為類別`Class1`。  
   
-2.  在**專案總管**，以滑鼠右鍵按一下**Project1**，然後按一下**Project1 屬性**。 **專案屬性**對話方塊隨即出現。  
+2. 在**專案總管**，以滑鼠右鍵按一下**Project1**，然後按一下**Project1 屬性**。 **專案屬性**對話方塊隨即出現。  
   
-3.  在上**一般**索引標籤**專案屬性**對話方塊方塊中，輸入變更專案名稱`ComObject1`中**專案名稱**欄位。  
+3. 在上**一般**索引標籤**專案屬性**對話方塊方塊中，輸入變更專案名稱`ComObject1`中**專案名稱**欄位。  
   
-4.  在**專案總管**，以滑鼠右鍵按一下`Class1`，然後按一下**屬性**。 **屬性**類別 視窗隨即顯示。  
+4. 在**專案總管**，以滑鼠右鍵按一下`Class1`，然後按一下**屬性**。 **屬性**類別 視窗隨即顯示。  
   
-5.  變更`Name`屬性設`MathFunctions`。  
+5. 變更`Name`屬性設`MathFunctions`。  
   
-6.  在**專案總管**，以滑鼠右鍵按一下`MathFunctions`，然後按一下**檢視程式碼**。 **程式碼編輯器**隨即出現。  
+6. 在**專案總管**，以滑鼠右鍵按一下`MathFunctions`，然後按一下**檢視程式碼**。 **程式碼編輯器**隨即出現。  
   
-7.  新增本機變數來保存屬性值：  
+7. 新增本機變數來保存屬性值：  
   
     ```  
     ' Local variable to hold property value  
     Private mvarProp1 As Integer  
     ```  
   
-8.  將屬性加入`Let`和屬性`Get`屬性程序：  
+8. 將屬性加入`Let`和屬性`Get`屬性程序：  
   
     ```  
     Public Property Let Prop1(ByVal vData As Integer)  
@@ -76,31 +76,31 @@ ms.locfileid: "58826167"
   
 #### <a name="to-use-a-com-object-with-visual-basic-2005-and-later-versions"></a>若要使用 Visual Basic 2005 和更新版本中的 COM 物件  
   
-1.  開啟新的 Visual Basic Windows 應用程式專案。  
+1. 開啟新的 Visual Basic Windows 應用程式專案。  
   
-2.  在 [專案] 功能表上，按一下 [新增參考]。  
+2. 在 [專案] 功能表上，按一下 [新增參考]。  
   
      [新增參考] 對話方塊隨即顯示。  
   
-3.  在上**COM**索引標籤上，按兩下`ComObject1`中**元件名稱**清單，然後按一下**確定**。  
+3. 在上**COM**索引標籤上，按兩下`ComObject1`中**元件名稱**清單，然後按一下**確定**。  
   
-4.  在 [專案]  功能表中，按一下 [加入新項目] 。  
+4. 在 [專案]  功能表中，按一下 [加入新項目] 。  
   
      隨即顯示 [ 新增項目] 對話方塊。  
   
-5.  在 **範本**窗格中，按一下**類別**。  
+5. 在 **範本**窗格中，按一下**類別**。  
   
      預設檔案名稱， `Class1.vb`，會出現在**名稱**欄位。 將此欄位變更為 MathClass.vb，然後按一下 **新增**。 這會建立名為類別`MathClass`，並顯示其程式碼。  
   
-6.  將下列程式碼加入至頂端`MathClass`從 COM 類別繼承。  
+6. 將下列程式碼加入至頂端`MathClass`從 COM 類別繼承。  
   
      [!code-vb[VbVbalrInterop#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#31)]  
   
-7.  多載基底類別的公用方法，藉由新增下列程式碼`MathClass`:  
+7. 多載基底類別的公用方法，藉由新增下列程式碼`MathClass`:  
   
      [!code-vb[VbVbalrInterop#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#32)]  
   
-8.  新增下列程式碼來擴充繼承的類別`MathClass`:  
+8. 新增下列程式碼來擴充繼承的類別`MathClass`:  
   
      [!code-vb[VbVbalrInterop#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#33)]  
   
@@ -108,13 +108,13 @@ ms.locfileid: "58826167"
   
 #### <a name="to-test-the-inherited-class"></a>若要測試繼承的類別  
   
-1.  將按鈕加入您的啟動表單，然後按兩下以檢視其程式碼。  
+1. 將按鈕加入您的啟動表單，然後按兩下以檢視其程式碼。  
   
-2.  在按鈕的`Click`事件處理常式的程序，新增下列程式碼，建立的執行個體`MathClass`呼叫多載的方法：  
+2. 在按鈕的`Click`事件處理常式的程序，新增下列程式碼，建立的執行個體`MathClass`呼叫多載的方法：  
   
      [!code-vb[VbVbalrInterop#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#34)]  
   
-3.  按 F5 執行專案。  
+3. 按 F5 執行專案。  
   
  當您按一下表單上的按鈕`AddNumbers`與第一次呼叫方法`Short`資料類型的數字和 Visual Basic 會選擇適當的方法基底類別。 第二次呼叫`AddNumbers`會導向至多載方法，從`MathClass`。 第三個呼叫呼叫`SubtractNumbers`擴充類別的方法。 設定基底類別中的屬性，並在顯示的值。  
   
@@ -132,5 +132,5 @@ ms.locfileid: "58826167"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)

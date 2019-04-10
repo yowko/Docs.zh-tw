@@ -2,12 +2,12 @@
 title: 匯出 WCF 擴充的自訂中繼資料
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5107e4d079a51ee94d59aa872c8a4c74f229ea8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201243"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334506"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>匯出 WCF 擴充的自訂中繼資料
 在 Windows Communication Foundation (WCF) 中，中繼資料匯出是描述服務端點，並將其投射至並行標準化表示法，用戶端可以用來了解如何使用服務的程序。 自訂中繼資料包含系統提供之中繼資料匯出工具所無法匯出的 XML 項目。 通常這包括使用者定義行為的自訂 WSDL 項目和繫結程序項目，以及有關繫結程序與合約功能和需求的原則判斷提示。  
@@ -19,9 +19,9 @@ ms.locfileid: "59201243"
   
  本章節內容：  
   
-1.  如何實作和使用 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 介面，該介面會在發行 WSDL 之前先對您公開 WSDL 產生的資料。  
+1. 如何實作和使用 <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 介面，該介面會在發行 WSDL 之前先對您公開 WSDL 產生的資料。  
   
-2.  如何實作和使用 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 介面，該介面會在匯出 WSDL 資料中的原則判斷提示之前先對您公開原則資料。  
+2. 如何實作和使用 <xref:System.ServiceModel.Description.IPolicyExportExtension?displayProperty=nameWithType> 介面，該介面會在匯出 WSDL 資料中的原則判斷提示之前先對您公開原則資料。  
   
  如需有關如何匯入自訂 WSDL 與原則判斷提示的詳細資訊，請參閱 <<c0> [ 匯入 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)。  
   

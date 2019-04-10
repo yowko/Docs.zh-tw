@@ -2,12 +2,12 @@
 title: Windows Communication Foundation 至訊息佇列
 ms.date: 03/30/2017
 ms.assetid: 78d0d0c9-648e-4d4a-8f0a-14d9cafeead9
-ms.openlocfilehash: 7761761a20fea765988b5d7fac678125e8c66b05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1551ab407049e871a9275d148b1c84dc2791ccad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136990"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343379"
 ---
 # <a name="windows-communication-foundation-to-message-queuing"></a>Windows Communication Foundation 至訊息佇列
 這個範例會示範 Windows Communication Foundation (WCF) 應用程式如何傳送訊息至訊息佇列 (MSMQ) 應用程式。 這個服務是自我裝載的主控台應用程式，可讓您觀察接收佇列訊息的服務。 服務與用戶端不需要在相同時間執行。
@@ -134,9 +134,9 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
 ### <a name="to-setup-build-and-run-the-sample"></a>若要設定、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。  
+2. 如果服務優先執行，它就會檢查以確定佇列存在。 如果佇列不存在，服務將建立一個佇列。 您可以先執行服務來建立佇列，也可以透過 MSMQ 佇列管理員建立佇列。 請依照下列步驟，在 Windows 2008 中建立佇列。  
   
     1.  開啟 Visual Studio 2012 中的 伺服器管理員。  
   
@@ -148,21 +148,21 @@ public partial class OrderProcessorClient : System.ServiceModel.ClientBase<IOrde
   
     5.  輸入`ServiceModelSamplesTransacted`做為新佇列的名稱。  
   
-3.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+3. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-4.  若要在單一電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
-1.  將語言特定資料夾下 \service\bin\ 資料夾中的服務程式檔複製到服務電腦中。  
+1. 將語言特定資料夾下 \service\bin\ 資料夾中的服務程式檔複製到服務電腦中。  
   
-2.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
+2. 將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端電腦。  
   
-3.  在 Client.exe.config 檔案中，變更用戶端端點位址以取代 "." 指定服務電腦名稱。  
+3. 在 Client.exe.config 檔案中，變更用戶端端點位址以取代 "." 指定服務電腦名稱。  
   
-4.  在服務電腦上，從命令提示字元啟動 Service.exe。  
+4. 在服務電腦上，從命令提示字元啟動 Service.exe。  
   
-5.  在用戶端電腦上，從命令提示字元啟動 Client.exe。  
+5. 在用戶端電腦上，從命令提示字元啟動 Client.exe。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

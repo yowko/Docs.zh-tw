@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Forms, content assignments
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
-ms.openlocfilehash: 781eaaabb7306018366450c013c227fe5a1fef78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b4efef869c96ddb4e58445e45ecad12b5658f9f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59108676"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343340"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>逐步解說：在設計階段指派 Windows Forms 的 WPF 內容
 本逐步解說示範如何選取要在表單上顯示的 Windows Presentation Foundation (WPF) 控制項類型。 您可以選取包含在專案中的任何 WPF 控制項類型。
@@ -49,50 +49,50 @@ ms.locfileid: "59108676"
   
 #### <a name="to-create-wpf-control-types"></a>建立 WPF 控制項類型  
   
-1.  將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
+1. 將新的 WPF <xref:System.Windows.Controls.UserControl> 專案加入方案。 使用控制項類型的預設名稱 `UserControl1.xaml`。 如需詳細資訊，請參閱[逐步解說：在設計階段建立 Windows Form 上的新 WPF 內容](walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md)。  
   
-2.  在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動設計介面上的項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
+2. 在 [設計] 檢視中，確定已選取 `UserControl1`。 如需詳細資訊，請參閱[如何：選取並移動設計介面上的項目](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514527(v=vs.100))。  
   
-3.  在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以`200`。  
+3. 在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以`200`。  
   
-4.  新增<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>若要控制<xref:System.Windows.Controls.UserControl>並將值<xref:System.Windows.Controls.TextBox.Text%2A>屬性設**裝載內容**。  
+4. 新增<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>若要控制<xref:System.Windows.Controls.UserControl>並將值<xref:System.Windows.Controls.TextBox.Text%2A>屬性設**裝載內容**。  
   
-5.  將第二個 WPF <xref:System.Windows.Controls.UserControl> 加入專案。 使用控制項類型的預設名稱 `UserControl2.xaml`。  
+5. 將第二個 WPF <xref:System.Windows.Controls.UserControl> 加入專案。 使用控制項類型的預設名稱 `UserControl2.xaml`。  
   
-6.  在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以`200`。  
+6. 在 **屬性**視窗中，設定的值<xref:System.Windows.FrameworkElement.Width%2A>並<xref:System.Windows.FrameworkElement.Height%2A>屬性，以`200`。  
   
-7.  新增<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>若要控制<xref:System.Windows.Controls.UserControl>並將值<xref:System.Windows.Controls.TextBox.Text%2A>屬性設**裝載的內容 2**。  
+7. 新增<xref:System.Windows.Controls.TextBox?displayProperty=nameWithType>若要控制<xref:System.Windows.Controls.UserControl>並將值<xref:System.Windows.Controls.TextBox.Text%2A>屬性設**裝載的內容 2**。  
   
  **請注意**一般情況下，您應該裝載更複雜的 WPF 內容。 <xref:System.Windows.Controls.TextBox?displayProperty=nameWithType> 控制項在此僅供說明用途使用。  
   
-1.  建置專案。  
+1. 建置專案。  
   
 ## <a name="selecting-wpf-controls"></a>選取 WPF 控制項  
  您可以對已裝載內容的 <xref:System.Windows.Forms.Integration.ElementHost> 控制項，指派不同的 WPF 內容。  
   
 #### <a name="to-select-wpf-controls"></a>選取 WPF 控制項  
   
-1.  在 Windows Form 設計工具中開啟 `Form1`。  
+1. 在 Windows Form 設計工具中開啟 `Form1`。  
   
-2.  在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`表單上。  
+2. 在 **工具箱**，按兩下`UserControl1`若要建立的執行個體`UserControl1`表單上。  
   
      `UserControl1` 的執行個體裝載於名為 `elementHost1` 的新 <xref:System.Windows.Forms.Integration.ElementHost> 控制項中。  
   
-3.  中的智慧標籤面板`elementHost1`，開啟**選擇裝載內容**下拉式清單。  
+3. 中的智慧標籤面板`elementHost1`，開啟**選擇裝載內容**下拉式清單。  
   
-4.  選取  **UserControl2**從下拉式清單方塊。  
+4. 選取  **UserControl2**從下拉式清單方塊。  
   
      `elementHost1` 控制項現在會裝載 `UserControl2` 類型的執行個體。  
   
-5.  在 [**屬性**] 視窗中，確認<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性設定為**UserControl2**。  
+5. 在 [**屬性**] 視窗中，確認<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性設定為**UserControl2**。  
   
-6.  從**工具箱**，請在**WPF 互通性**群組中，拖曳<xref:System.Windows.Forms.Integration.ElementHost>控制項拖曳至表單。  
+6. 從**工具箱**，請在**WPF 互通性**群組中，拖曳<xref:System.Windows.Forms.Integration.ElementHost>控制項拖曳至表單。  
   
      新控制項的預設名稱為 `elementHost2`。  
   
-7.  中的智慧標籤面板`elementHost2`，開啟**選擇裝載內容**下拉式清單。  
+7. 中的智慧標籤面板`elementHost2`，開啟**選擇裝載內容**下拉式清單。  
   
-8.  選取  **UserControl1**從下拉式清單。  
+8. 選取  **UserControl1**從下拉式清單。  
   
 9. `elementHost2` 控制項現在會裝載 `UserControl1` 類型的執行個體。  
   

@@ -2,12 +2,12 @@
 title: HOW TO：指定資料庫名稱
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
-ms.openlocfilehash: 1c694678dc3a60cf91dea62f2a17973b396e2b19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184518"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335273"
 ---
 # <a name="how-to-specify-database-names"></a>HOW TO：指定資料庫名稱
 在 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Attribute) 上使用 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Property)，可在連接未提供名稱時指定資料庫名稱。  
@@ -16,11 +16,11 @@ ms.locfileid: "59184518"
   
 ### <a name="to-specify-the-name-of-the-database"></a>若要指定資料庫的名稱  
   
-1.  將 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute) 加入至資料庫的類別宣告。  
+1. 將 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute) 加入至資料庫的類別宣告。  
   
-2.  將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute)。  
+2. 將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 加入至 <xref:System.Data.Linq.Mapping.DatabaseAttribute> 屬性 (Attribute)。  
   
-3.  將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 值設定為想要指定的名稱。  
+3. 將 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 值設定為想要指定的名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

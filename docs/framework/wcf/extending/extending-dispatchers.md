@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
-ms.openlocfilehash: df726d71880d135adb883f834acfa9839641eae3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59162720"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335026"
 ---
 # <a name="extending-dispatchers"></a>擴充發送器
 發送器負責從基礎通道提取傳入訊息，將訊息轉譯成應用程式程式碼中的方法叫用，然後將結果傳回給呼叫者。 發送器擴充可讓您修改這個處理。  您可以實作可檢查或修改訊息或參數之內容的訊息或參數偵測器。  您可以變更訊息路由傳送到作業的方式，或提供其他特定功能。  
@@ -76,13 +76,13 @@ ms.locfileid: "59162720"
   
  發送器擴充性的四個主要區域是由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 類別所公開：  
   
-1.  通道元件會使用 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的屬性以及由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> 屬性傳回之相關通道發送器的屬性，以自訂通道發送器如何接受及關閉通道。 這個分類包括 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> 屬性。  
+1. 通道元件會使用 <xref:System.ServiceModel.Dispatcher.DispatchRuntime> 的屬性以及由 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ChannelDispatcher%2A> 屬性傳回之相關通道發送器的屬性，以自訂通道發送器如何接受及關閉通道。 這個分類包括 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ChannelInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InputSessionShutdownHandlers%2A> 屬性。  
   
-2.  訊息元件會針對所處理的各個訊息進行自訂。 這個分類包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> 和 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> 屬性。  
+2. 訊息元件會針對所處理的各個訊息進行自訂。 這個分類包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.OperationSelector%2A>、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.Operations%2A> 和 <xref:System.ServiceModel.Dispatcher.ChannelDispatcher.ErrorHandlers%2A> 屬性。  
   
-3.  執行個體元件會自訂服務類型執行個體的建立、存留期和處置。 如需服務物件存留期的詳細資訊，請參閱 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性。 這個分類包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性。  
+3. 執行個體元件會自訂服務類型執行個體的建立、存留期和處置。 如需服務物件存留期的詳細資訊，請參閱 <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> 屬性。 這個分類包括 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceContextInitializers%2A> 和 <xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> 屬性。  
   
-4.  安全性相關的元件可以使用下列屬性：  
+4. 安全性相關的元件可以使用下列屬性：  
   
     -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> 表示稽核事件會寫入其中。  
   

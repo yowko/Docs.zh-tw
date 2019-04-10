@@ -6,26 +6,26 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
-ms.openlocfilehash: dc6f54719d4f30be00b7b85f0ab18c4cb02b0d7c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816404"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342865"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>HOW TO：決定物件變數參考 (Visual Basic) 的類型
 物件變數包含儲存在其他地方的資料指標。 在執行階段，可以變更該資料型別。 在任何時刻，您可以使用<xref:System.Type.GetTypeCode%2A>方法，以判斷目前的執行階段類型，或有[TypeOf 運算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)來找出是否有目前的執行階段類型是與指定的型別相容。  
   
 ### <a name="to-determine-the-exact-type-an-object-variable-currently-refers-to"></a>若要判斷的確切型別物件變數目前參考  
   
-1.  物件變數上呼叫<xref:System.Object.GetType%2A>方法來擷取<xref:System.Type?displayProperty=nameWithType>物件。  
+1. 物件變數上呼叫<xref:System.Object.GetType%2A>方法來擷取<xref:System.Type?displayProperty=nameWithType>物件。  
   
     ```  
     Dim myObject As Object  
     myObject.GetType()  
     ```  
   
-2.  在上<xref:System.Type?displayProperty=nameWithType>類別中，呼叫共用的方法<xref:System.Type.GetTypeCode%2A>擷取<xref:System.TypeCode>物件類型的列舉值。  
+2. 在上<xref:System.Type?displayProperty=nameWithType>類別中，呼叫共用的方法<xref:System.Type.GetTypeCode%2A>擷取<xref:System.TypeCode>物件類型的列舉值。  
   
     ```  
     Dim myObject As Object  
@@ -60,4 +60,4 @@ ms.locfileid: "58816404"
 - <xref:System.TypeCode>
 - [物件變數](../../../../visual-basic/programming-guide/language-features/variables/object-variables.md)
 - [物件變數值](../../../../visual-basic/programming-guide/language-features/variables/object-variable-values.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)

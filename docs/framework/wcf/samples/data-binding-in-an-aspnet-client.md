@@ -2,12 +2,12 @@
 title: ASP.NET 用戶端中的資料繫結
 ms.date: 03/30/2017
 ms.assetid: 68b49fa6-94e7-4d4c-a34e-902a2b3770b6
-ms.openlocfilehash: dde5ec9ac944b205051b2499c7aceac2e6d84b92
-ms.sourcegitcommit: 8c28ab17c26bf08abbd004cc37651985c68841b8
+ms.openlocfilehash: 07e03a4580795b3424f63cec8f93fea2039b6733
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48850233"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339407"
 ---
 # <a name="data-binding-in-an-aspnet-client"></a>ASP.NET 用戶端中的資料繫結
 此範例示範如何將 Web Form 應用程式中典型的 Windows Communication Foundation (WCF) 服務所傳回的資料繫結。  
@@ -23,11 +23,11 @@ ms.locfileid: "48850233"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  這個範例的用戶端是在程式開發 Web 伺服器中執行的網站。 若要啟動開發 Web 伺服器，請在命令提示字元中輸入下列： `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`。 然後瀏覽至`http://localhost:8000/client`。 如果要在多部電腦上執行這個範例，請使用伺服器的電腦名稱來取代用戶端的 Web.config 檔案中的 `localhost`的所有參照。  
+3. 這個範例的用戶端是在程式開發 Web 伺服器中執行的網站。 若要啟動開發 Web 伺服器，請在命令提示字元中輸入下列： `%SystemDrive%\Program Files\Common Files\Microsoft Shared\DevServer\9.0\WebDev.WebServer.EXE" /port:8000 /path:<WebFormsSamplePath>\CS\client /vpath:/client`。 然後瀏覽至`http://localhost:8000/client`。 如果要在多部電腦上執行這個範例，請使用伺服器的電腦名稱來取代用戶端的 Web.config 檔案中的 `localhost`的所有參照。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

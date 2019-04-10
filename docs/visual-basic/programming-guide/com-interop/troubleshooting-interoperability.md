@@ -16,12 +16,12 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: 197361020ad8c6a88a5fc8617b8e24f420799e14
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377160"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341188"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>疑難排解互通性 (Visual Basic)
 當您 COM 和 managed 程式碼之間的交互操作[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]，您可能會遇到一或多個下列常見的問題。  
@@ -42,9 +42,9 @@ ms.locfileid: "57377160"
   
  重新命名可能會造成兩個問題的 COM 物件的取用者。  
   
-1.  用戶端可能會不預期產生的方法名稱。  
+1. 用戶端可能會不預期產生的方法名稱。  
   
-2.  新的多載新增至類別或其基底類別時，可以變更產生的方法名稱在類別中公開為 COM 物件。 這可能會造成版本控制問題。  
+2. 新的多載新增至類別或其基底類別時，可以變更產生的方法名稱在類別中公開為 COM 物件。 這可能會造成版本控制問題。  
   
  若要解決這兩個問題，請為每一種方法唯一的名稱，而不是使用多載，當您開發即將公開為 COM 物件的物件。  
   
@@ -133,5 +133,5 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 - [Tlbimp.exe (類型程式庫匯入工具)](../../../framework/tools/tlbimp-exe-type-library-importer.md)
 - [Tlbexp.exe (類型程式庫匯出工具)](../../../framework/tools/tlbexp-exe-type-library-exporter.md)
 - [逐步解說：實作 COM 物件的繼承](../../../visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md)
-- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [全域組件快取](../../../framework/app-domains/gac.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - remotely surveying printer status [WPF]
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
-ms.openlocfilehash: 4ebcb2e4f85d30ea1ce24584c69def5b0d1297c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143542"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340785"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>HOW TO：從遠端調查印表機的狀態
 在任何時候，中型和大型公司都可能有多部印表機因為夾紙或紙張用完或一些其他問題狀況而無法運作。 一組豐富印表機屬性中公開的[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行印表機狀態的快速問卷調查。  
@@ -24,11 +24,11 @@ ms.locfileid: "59143542"
 ## <a name="example"></a>範例  
  建立這類公用程式的主要步驟如下所示。  
   
-1.  取得所有列印伺服器的清單。  
+1. 取得所有列印伺服器的清單。  
   
-2.  對伺服器執行迴圈，以查詢其列印佇列。  
+2. 對伺服器執行迴圈，以查詢其列印佇列。  
   
-3.  在伺服器迴圈的每次操作中，對所有伺服器的佇列執行迴圈，並讀取可能表示佇列目前不在運作中的每個屬性。  
+3. 在伺服器迴圈的每次操作中，對所有伺服器的佇列執行迴圈，並讀取可能表示佇列目前不在運作中的每個屬性。  
   
  下列程式碼是一系列的程式碼片段。 為了簡單起見，本範例假設有列印伺服器的 CRLF 分隔清單。 變數`fileOfPrintServers`是<xref:System.IO.StreamReader>這個檔案的物件。 由於每個伺服器名稱的那一行，呼叫的<xref:System.IO.StreamReader.ReadLine%2A>取得下一部伺服器的名稱，並將移<xref:System.IO.StreamReader>的下一行的開頭的資料指標。  
   

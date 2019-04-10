@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: 6d246c56af191189fa775be3248d3099d2aa2544
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336651"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>逐步解說：建立 Windows 架構的協助工具應用程式
 建立協助工具應用程式具有重要的商業含意， 許多政府對於市售軟體訂定有協助工具法規， 而擁有「Windows 憑證」標誌就表示符合有關協助工具的要求。 據估計光是美國便有約三千萬居民受到軟體協助工具的影響，而其中大部分是潛在客戶。  
@@ -158,7 +158,7 @@ ms.locfileid: "59203687"
   
 #### <a name="to-enable-high-contrast-mode-in-an-effective-way"></a>有效啟用高對比模式  
   
-1.  建立一個方法，將標籤的色彩設定為系統色彩。  
+1. 建立一個方法，將標籤的色彩設定為系統色彩。  
   
     ```  
     ' Visual Basic  
@@ -188,7 +188,7 @@ ms.locfileid: "59203687"
     }  
     ```  
   
-2.  在表單建構函式 (Visual Basic 中為 `Public Sub New()`，Visual C# 中為 `public class Form1`) 中呼叫 `SetColorScheme` 程序。 若要存取 Visual Basic 中的建構函式，您必須展開標示為 [Windows Forms 設計工具產生的程式碼] 的區域。  
+2. 在表單建構函式 (Visual Basic 中為 `Public Sub New()`，Visual C# 中為 `public class Form1`) 中呼叫 `SetColorScheme` 程序。 若要存取 Visual Basic 中的建構函式，您必須展開標示為 [Windows Forms 設計工具產生的程式碼] 的區域。  
   
     ```  
     ' Visual Basic   
@@ -206,7 +206,7 @@ ms.locfileid: "59203687"
     }  
     ```  
   
-3.  使用適當的簽章建立事件程序，以回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
+3. 使用適當的簽章建立事件程序，以回應 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> 事件。  
   
     ```  
     ' Visual Basic  
@@ -223,7 +223,7 @@ ms.locfileid: "59203687"
     }  
     ```  
   
-4.  呼叫 `InitializeComponents` 之後，在表單建構函式中新增程式碼，將事件程序與系統事件連結。 這個方法會呼叫 `SetColorScheme` 程序。  
+4. 呼叫 `InitializeComponents` 之後，在表單建構函式中新增程式碼，將事件程序與系統事件連結。 這個方法會呼叫 `SetColorScheme` 程序。  
   
     ```  
     ' Visual Basic  
@@ -246,7 +246,7 @@ ms.locfileid: "59203687"
     }  
     ```  
   
-5.  先將程式碼加入表單的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，再呼叫基底類別的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，以便在應用程式關閉時釋放事件。 若要存取 Visual Basic 中的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，您必須展開標示為 [Windows Form 設計工具產生的程式碼] 的區域。  
+5. 先將程式碼加入表單的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，再呼叫基底類別的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，以便在應用程式關閉時釋放事件。 若要存取 Visual Basic 中的 <xref:System.Windows.Forms.Control.Dispose%2A> 方法，您必須展開標示為 [Windows Form 設計工具產生的程式碼] 的區域。  
   
     > [!NOTE]
     >  系統事件程式碼會執行獨立於主應用程式的執行緒。 如果您沒有釋放該事件，即使關閉程式之後，連結至該事件的程式碼仍會繼續執行。  
@@ -281,38 +281,38 @@ ms.locfileid: "59203687"
     }  
     ```  
   
-6.  按 F5 執行應用程式。  
+6. 按 F5 執行應用程式。  
   
 ## <a name="conveying-important-information-by-means-other-than-sound"></a>透過音效以外的其他方式傳達重要資訊  
  在這個應用程式中，資訊不只以音效傳達。 如果您在應用程式中使用音效，應該也可以使用其他方式來提供資訊。  
   
 #### <a name="to-supply-information-by-some-other-means-than-sound"></a>透過音效以外的其他方式提供資訊  
   
-1.  使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例，請參閱[逐步解說：呼叫 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
+1. 使用 Windows 應用程式開發介面函式 FlashWindow 讓標題列閃爍。 如需如何呼叫 Windows API 函式的範例，請參閱[逐步解說：呼叫 Windows Api](~/docs/visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)。  
   
     > [!NOTE]
     >  使用者可以啟動 Windows 聲音感測服務，當系統音效透過電腦內建喇叭播放時，同時能使視窗閃爍。  
   
-2.  在非強制回應視窗中顯示重要資訊，讓使用者可以有所回應。  
+2. 在非強制回應視窗中顯示重要資訊，讓使用者可以有所回應。  
   
-3.  顯示取得鍵盤焦點的訊息方塊， 但是如果使用者可能會輸入資料，則應避免使用這個方法。  
+3. 顯示取得鍵盤焦點的訊息方塊， 但是如果使用者可能會輸入資料，則應避免使用這個方法。  
   
-4.  在工作列的狀態通知區域中顯示狀態標記。 如需詳細資訊，請參閱[如何：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
+4. 在工作列的狀態通知區域中顯示狀態標記。 如需詳細資訊，請參閱[如何：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列](../controls/app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
 ## <a name="testing-the-application"></a>測試應用程式  
  在部署應用程式之前，您應該測試已實作的協助工具功能。  
   
 #### <a name="to-test-accessibility-features"></a>測試協助工具功能  
   
-1.  若要測試鍵盤存取，請拔除滑鼠，然後只利用鍵盤逐一測試使用者介面中的每一項功能。 請確定所有工作都可以只使用鍵盤執行。  
+1. 若要測試鍵盤存取，請拔除滑鼠，然後只利用鍵盤逐一測試使用者介面中的每一項功能。 請確定所有工作都可以只使用鍵盤執行。  
   
-2.  若要測試是否支援高對比，請在 [控制台] 中選擇協助工具選項圖示。 按一下 [顯示] 索引標籤，然後選取 [使用高對比] 核取方塊。 巡覽所有使用者介面項目，確保色彩和字型變更均已正確反映。 同時確保已省略文字後的影像或圖樣。  
+2. 若要測試是否支援高對比，請在 [控制台] 中選擇協助工具選項圖示。 按一下 [顯示] 索引標籤，然後選取 [使用高對比] 核取方塊。 巡覽所有使用者介面項目，確保色彩和字型變更均已正確反映。 同時確保已省略文字後的影像或圖樣。  
   
     > [!NOTE]
     >  Windows NT 4 的 [控制台] 中並沒有協助工具選項圖示。 因此，這個變更 SystemInformation.HighContrast 設定的程序不適用於 Windows NT 4。  
   
-3.  另外還有其他工具可以測試應用程式的協助工具。  
+3. 另外還有其他工具可以測試應用程式的協助工具。  
   
-4.  若要測試鍵盤焦點的顯示，請執行放大鏡 (若要開啟 [放大鏡]，請按一下 [開始] 功能表，然後依序指向 [程式集]、[附屬應用程式] 和 [協助工具]，然後按一下 [放大鏡])。 同時使用鍵盤 Tab 鍵和滑鼠來巡覽使用者介面。 確保 [放大鏡] 正確追蹤所有巡覽。  
+4. 若要測試鍵盤焦點的顯示，請執行放大鏡 (若要開啟 [放大鏡]，請按一下 [開始] 功能表，然後依序指向 [程式集]、[附屬應用程式] 和 [協助工具]，然後按一下 [放大鏡])。 同時使用鍵盤 Tab 鍵和滑鼠來巡覽使用者介面。 確保 [放大鏡] 正確追蹤所有巡覽。  
   
-5.  若要測試螢幕項目的顯示，請執行 [檢查]，然後同時使用滑鼠和 TAB 鍵跳到每個項目。 針對 UI 中的每個物件，確保 [檢查] 視窗的 [名稱]、[狀態]、[角色]、[位置] 和 [值] 欄位所顯示的資訊，對使用者都是有意義的。
+5. 若要測試螢幕項目的顯示，請執行 [檢查]，然後同時使用滑鼠和 TAB 鍵跳到每個項目。 針對 UI 中的每個物件，確保 [檢查] 視窗的 [名稱]、[狀態]、[角色]、[位置] 和 [值] 欄位所顯示的資訊，對使用者都是有意義的。

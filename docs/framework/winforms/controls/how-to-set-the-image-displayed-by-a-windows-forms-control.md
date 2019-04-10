@@ -12,19 +12,19 @@ helpviewer_keywords:
 - images [Windows Forms], Windows Forms controls
 - examples [Windows Forms], controls
 ms.assetid: 9445af8f-4f62-48b0-a3f6-068058964b9f
-ms.openlocfilehash: 031ddcb3b852e75353fed7420735350e79f23df3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1de835bda5ac906837ac3fbd97b87f68f14d1953
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59085086"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333921"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control"></a>HOW TO：設定 Windows Forms 控制項所顯示的影像
 數個 Windows Form 控制項來顯示影像。 這些映像可以是用途的控制項，例如按鈕，表示磁碟片圖示的圖示**儲存**命令。 或者，圖示可以提供給控制項的外觀和行為，您想要的背景影像。  
   
 ### <a name="to-set-the-image-displayed-by-a-control"></a>若要設定控制項所顯示的影像  
   
-1.  將控制項的`Image`或是`BackgroundImage`型別的物件的屬性<xref:System.Drawing.Image>。 一般而言，您將會載入映像從檔案使用<xref:System.Drawing.Image.FromFile%2A>方法。  
+1. 將控制項的`Image`或是`BackgroundImage`型別的物件的屬性<xref:System.Drawing.Image>。 一般而言，您將會載入映像從檔案使用<xref:System.Drawing.Image.FromFile%2A>方法。  
   
      在下列程式碼範例中，將路徑設為映像的位置**My Pictures**資料夾。 執行 Windows 作業系統的大部分電腦都會包含此目錄。 這也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列程式碼範例需要您已有表單<xref:System.Windows.Forms.PictureBox>加入控制項。  
   

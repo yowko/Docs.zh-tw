@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], spanning
 - cells [Windows Forms], merging
 ms.assetid: a8a2fdd3-a848-48b0-a4cd-4e85ebded87e
-ms.openlocfilehash: 2b2a46bf53dd6ec9bc93a74cca37dffaaaf79751
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 02db78b07930676235e55e535fb24f6ff618d823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59193131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339017"
 ---
 # <a name="how-to-span-rows-and-columns-in-a-tablelayoutpanel-control"></a>HOW TO：擴展 TableLayoutPanel 控制項中的資料列和資料行
 中的控制項<xref:System.Windows.Forms.TableLayoutPanel>控制項可以跨越相鄰的資料列和資料行。  
@@ -25,15 +25,15 @@ ms.locfileid: "59193131"
   
 ### <a name="to-span-columns-and-rows"></a>若要擴展資料行和資料列  
   
-1.  從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
+1. 從 [工具箱] <xref:System.Windows.Forms.TableLayoutPanel>**將** 控制項拖曳至表單。  
   
-2.  拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**的左上方儲存格中<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
+2. 拖曳<xref:System.Windows.Forms.Button>控制項從**工具箱**的左上方儲存格中<xref:System.Windows.Forms.TableLayoutPanel>控制項。  
   
-3.  設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性設**2**。 請注意，<xref:System.Windows.Forms.Button>控制項跨越的第一個和第二個資料行。  
+3. 設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性設**2**。 請注意，<xref:System.Windows.Forms.Button>控制項跨越的第一個和第二個資料行。  
   
-4.  設定<xref:System.Windows.Forms.Button>控制項的**RowSpan**屬性設**2**。 請注意，<xref:System.Windows.Forms.Button>控制項跨越的第一個和第二個資料列。  
+4. 設定<xref:System.Windows.Forms.Button>控制項的**RowSpan**屬性設**2**。 請注意，<xref:System.Windows.Forms.Button>控制項跨越的第一個和第二個資料列。  
   
-5.  設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性設**1**。 請注意，<xref:System.Windows.Forms.Button>控制項將移至第一個資料行，而且跨越的第一個和第二個資料列。  
+5. 設定<xref:System.Windows.Forms.Button>控制項的**ColumnSpan**屬性設**1**。 請注意，<xref:System.Windows.Forms.Button>控制項將移至第一個資料行，而且跨越的第一個和第二個資料列。  
   
 ## <a name="see-also"></a>另請參閱
 

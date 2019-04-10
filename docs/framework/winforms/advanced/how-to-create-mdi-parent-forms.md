@@ -5,12 +5,12 @@ helpviewer_keywords:
 - parent forms
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
-ms.openlocfilehash: 120a7d45e01b0460f0c5e50896f58d026c4c3b9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216310"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338653"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>HOW TO：建立 MDI 父表單
 > [!IMPORTANT]
@@ -20,20 +20,20 @@ ms.locfileid: "59216310"
   
 ### <a name="to-create-an-mdi-parent-form-at-design-time"></a>在設計階段建立 MDI 父表單  
   
-1.  建立 Windows 應用程式專案。  
+1. 建立 Windows 應用程式專案。  
   
-2.  在 **屬性**視窗中，將<xref:System.Windows.Forms.Form.IsMdiContainer%2A>屬性設**true**。  
+2. 在 **屬性**視窗中，將<xref:System.Windows.Forms.Form.IsMdiContainer%2A>屬性設**true**。  
   
      如此即可將表單指定為子視窗的 MDI 容器。  
   
     > [!NOTE]
     >  當您設定 [屬性] 視窗中的屬性時，也可以視需要將 `WindowState` 屬性設定為 **Maximized**，這是因為當父表單最大化時，最容易操作 MDI 子視窗。 此外，請注意 MDI 父表單的邊緣會採用系統色彩 (在 Windows 系統控制台中設定)，而不是採用您使用 <xref:System.Windows.Forms.Control.BackColor%2A?displayProperty=nameWithType> 屬性所設定的背景色彩。  
   
-3.  從 [工具箱] 中，將 **MenuStrip** 控制項拖曳至表單。 建立一個最上層功能表項目，並將 **Text** 屬性設定為 **&File**，其中包含子功能表項目 **&New** 和 **&Close**。 另外再建立一個名為 **&Window** 的最上層功能表項目。  
+3. 從 [工具箱] 中，將 **MenuStrip** 控制項拖曳至表單。 建立一個最上層功能表項目，並將 **Text** 屬性設定為 **&File**，其中包含子功能表項目 **&New** 和 **&Close**。 另外再建立一個名為 **&Window** 的最上層功能表項目。  
   
      第一個功能表會在執行階段建立及隱藏功能表項目，第二個功能表則會追蹤開啟的 MDI 子視窗。 此時，您已經建立 MDI 父視窗。  
   
-4.  按 **F5** 執行應用程式。 如需建立 MDI 子視窗的 MDI 父表單內操作資訊，請參閱[How to:建立 MDI 子表單](how-to-create-mdi-child-forms.md)。  
+4. 按 **F5** 執行應用程式。 如需建立 MDI 子視窗的 MDI 父表單內操作資訊，請參閱[How to:建立 MDI 子表單](how-to-create-mdi-child-forms.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

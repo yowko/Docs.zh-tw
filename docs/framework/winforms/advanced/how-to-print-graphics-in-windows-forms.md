@@ -9,21 +9,21 @@ helpviewer_keywords:
 - graphics [Windows Forms], printing
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
-ms.openlocfilehash: ab2a230b7c6e303d712df058f450334b50c8a676
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59167202"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339095"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>HOW TO：列印 Windows Forms 中的圖形
 通常，您要列印您以 Windows 為基礎的應用程式中的圖形。 <xref:System.Drawing.Graphics>類別會提供物件繪製到螢幕或印表機等裝置的方法。  
   
 ### <a name="to-print-graphics"></a>若要列印的圖形  
   
-1.  新增<xref:System.Drawing.Printing.PrintDocument>元件至您的表單。  
+1. 新增<xref:System.Drawing.Printing.PrintDocument>元件至您的表單。  
   
-2.  在 <xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>屬性<xref:System.Drawing.Printing.PrintPageEventArgs>類別，以指示何種列印圖形上的印表機。  
+2. 在 <xref:System.Drawing.Printing.PrintDocument.PrintPage>事件處理常式，使用<xref:System.Drawing.Printing.PrintPageEventArgs.Graphics%2A>屬性<xref:System.Drawing.Printing.PrintPageEventArgs>類別，以指示何種列印圖形上的印表機。  
   
      下列程式碼範例顯示用來建立藍色的橢圓形的週框矩形內的事件處理常式。 矩形的下列位置和維度： 開始 100，150，使用為 250 的寬度和高度為 250。  
   

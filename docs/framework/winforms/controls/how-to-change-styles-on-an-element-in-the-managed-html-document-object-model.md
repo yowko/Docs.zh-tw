@@ -1,5 +1,5 @@
 ---
-title: HOW TO：變更 Managed 的 HTML 文件物件模型中的項目樣式
+title: HOW TO：變更受控 HTML 文件物件模型的項目樣式
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -7,14 +7,14 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: a1abfaeab735746edbf089d576dc6f56dc4a6eea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712769"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333661"
 ---
-# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>HOW TO：變更 Managed 的 HTML 文件物件模型中的項目樣式
+# <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>HOW TO：變更受控 HTML 文件物件模型的項目樣式
 
 您可以使用在 HTML 中的樣式，來控制文件和其項目的外觀。 <xref:System.Windows.Forms.HtmlDocument> 並<xref:System.Windows.Forms.HtmlElement>支援<xref:System.Windows.Forms.HtmlElement.Style%2A>採用下列格式的樣式字串屬性：
 
@@ -68,7 +68,7 @@ ms.locfileid: "57712769"
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
      [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
   
-7.  執行專案。 執行您的資料指標在第一個`DIV`觀察程式碼的效果。  
+7. 執行專案。 執行您的資料指標在第一個`DIV`觀察程式碼的效果。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例顯示的完整程式碼`StyleGenerator`類別，它會剖析現有的樣式值，支援加入、 變更和移除設定的樣式，並傳回新的樣式值，變更要求。  

@@ -2,12 +2,12 @@
 title: 使用 HTTP POST 的 AJAX 服務
 ms.date: 03/30/2017
 ms.assetid: 1ac80f20-ac1c-4ed1-9850-7e49569ff44e
-ms.openlocfilehash: df199b40a4a9ebb9a36cea7234b484273348cd9e
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 2bc1722056af4fc71f5f93d92ecd12accd99548f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343242"
 ---
 # <a name="ajax-service-using-http-post"></a>使用 HTTP POST 的 AJAX 服務
 這個範例會示範如何使用 Windows Communication Foundation (WCF) 建立[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Asynchronous JavaScript and XML (AJAX) 服務會使用 HTTP POST。 AJAX 是可從 Web 瀏覽器用戶端使用基本 JavaScript 程式碼存取的一種服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例; 兩個範例唯一的差別是使用 HTTP POST，而不是 HTTP GET。  
@@ -48,8 +48,8 @@ public interface ICalculator
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行的安裝指示[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行的安裝指示[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  中所述，建置方案 PostAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 中所述，建置方案 PostAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  瀏覽至`http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx`（不要在瀏覽器從專案目錄開啟 PostAjaxClientPage.aspx）。
+3. 瀏覽至`http://localhost/ServiceModelSamples/PostAjaxClientPage.aspx`（不要在瀏覽器從專案目錄開啟 PostAjaxClientPage.aspx）。

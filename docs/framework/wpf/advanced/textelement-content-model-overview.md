@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: ecb9441bc63eae41cfbbadf3bf81b0e5392bd0cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336183"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement 內容模型概觀
 本內容模型概觀描述支援的內容<xref:System.Windows.Documents.TextElement>。 <xref:System.Windows.Documents.Paragraph>類別是一種<xref:System.Windows.Documents.TextElement>。 內容模型描述哪些物件/元素可包含於其他物件/元素內。 本概觀摘要說明用於衍生自物件的內容模型<xref:System.Windows.Documents.TextElement>。 如需詳細資訊，請參閱 <<c0> [ 非固定格式文件概觀](flow-document-overview.md)。  
@@ -27,7 +27,7 @@ ms.locfileid: "59125116"
   
  從上圖中可以看出，允許的項目子系不一定取決於類別是否衍生自<xref:System.Windows.Documents.Block>類別或<xref:System.Windows.Documents.Inline>類別。 例如， <xref:System.Windows.Documents.Span> ( <xref:System.Windows.Documents.Inline>-衍生的類別) 只能有<xref:System.Windows.Documents.Inline>子項目，但<xref:System.Windows.Documents.Figure>(也<xref:System.Windows.Documents.Inline>-衍生的類別) 只能有<xref:System.Windows.Documents.Block>子項目。 因此，可快速判斷哪個元素可包含於其他元素中的圖表就很有用。 例如，讓我們使用圖表 」 來決定如何建構非固定格式內容的<xref:System.Windows.Controls.RichTextBox>。  
   
-1.  A<xref:System.Windows.Controls.RichTextBox>必須包含<xref:System.Windows.Documents.FlowDocument>因此必須包含<xref:System.Windows.Documents.Block>-衍生物件。 以下是上圖的對應區段。  
+1. A<xref:System.Windows.Controls.RichTextBox>必須包含<xref:System.Windows.Documents.FlowDocument>因此必須包含<xref:System.Windows.Documents.Block>-衍生物件。 以下是上圖的對應區段。  
   
      ![圖表：Richtextbox](./media/flow-ovw-schemawalkthrough1.png "Flow_Ovw_SchemaWalkThrough1")  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59125116"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough1)]  
   
-2.  根據圖表中，有幾個<xref:System.Windows.Documents.Block>選擇，包括的項目<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，和<xref:System.Windows.Documents.BlockUIContainer>（請參閱上圖中的區塊衍生類別）。 假設我們想<xref:System.Windows.Documents.Table>。 上圖中，根據<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>項目，其中包含<xref:System.Windows.Documents.TableCell>包含的項目<xref:System.Windows.Documents.Block>-衍生物件。 以下是對應的區段，如<xref:System.Windows.Documents.Table>取自上圖中。  
+2. 根據圖表中，有幾個<xref:System.Windows.Documents.Block>選擇，包括的項目<xref:System.Windows.Documents.Paragraph>， <xref:System.Windows.Documents.Section>， <xref:System.Windows.Documents.Table>， <xref:System.Windows.Documents.List>，和<xref:System.Windows.Documents.BlockUIContainer>（請參閱上圖中的區塊衍生類別）。 假設我們想<xref:System.Windows.Documents.Table>。 上圖中，根據<xref:System.Windows.Documents.Table>包含<xref:System.Windows.Documents.TableRowGroup>包含<xref:System.Windows.Documents.TableRow>項目，其中包含<xref:System.Windows.Documents.TableCell>包含的項目<xref:System.Windows.Documents.Block>-衍生物件。 以下是對應的區段，如<xref:System.Windows.Documents.Table>取自上圖中。  
   
      ![圖表：父&#47;資料表的子系結構描述](./media/flow-ovw-schemawalkthrough2.png "Flow_Ovw_SchemaWalkThrough2")  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59125116"
   
      [!code-xaml[FlowOvwSnippets_snip#SchemaWalkThrough2](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/MiscSnippets.xaml#schemawalkthrough2)]  
   
-3.  同樣地，一或多個<xref:System.Windows.Documents.Block>項目下方需要<xref:System.Windows.Documents.TableCell>。 為求簡便，我們在儲存格中放入一些文字。 我們可以使用執行此<xref:System.Windows.Documents.Paragraph>與<xref:System.Windows.Documents.Run>項目。 以下是顯示圖表的對應區段<xref:System.Windows.Documents.Paragraph>花費<xref:System.Windows.Documents.Inline>項目、 且<xref:System.Windows.Documents.Run>(<xref:System.Windows.Documents.Inline>項目) 只能接受純文字。  
+3. 同樣地，一或多個<xref:System.Windows.Documents.Block>項目下方需要<xref:System.Windows.Documents.TableCell>。 為求簡便，我們在儲存格中放入一些文字。 我們可以使用執行此<xref:System.Windows.Documents.Paragraph>與<xref:System.Windows.Documents.Run>項目。 以下是顯示圖表的對應區段<xref:System.Windows.Documents.Paragraph>花費<xref:System.Windows.Documents.Inline>項目、 且<xref:System.Windows.Documents.Run>(<xref:System.Windows.Documents.Inline>項目) 只能接受純文字。  
   
      ![圖表：父&#47;的段落子結構描述](./media/flow-ovw-schemawalkthrough3.png "Flow_Ovw_SchemaWalkThrough3")  
   

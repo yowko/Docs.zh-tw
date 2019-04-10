@@ -2,12 +2,12 @@
 title: ConfigurationCodeGenerator
 ms.date: 03/30/2017
 ms.assetid: 3913aae8-165f-4014-9262-7fe426f90cb2
-ms.openlocfilehash: 7625060cd0512bb7498a931d7b93a731e52c9f00
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 97197926db0b44f1ad36e2eba6ab6bec42eced33
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195185"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342007"
 ---
 # <a name="configurationcodegenerator"></a>ConfigurationCodeGenerator
 ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態系統的工具。 這將允許您的自訂通道使用者使用 .config 檔案設定通道，就像平常使用 `NetTcpBinding` 來設定系統提供的繫結 (例如 `TcpTransportBindingElement`) 或自訂繫結一般。  
@@ -16,13 +16,13 @@ ConfigurationCodeGenerator 是可供您用來公開自訂通道實作給組態�
   
 ### <a name="to-build-the-tool"></a>建置工具  
   
-1.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  建置方案時，會產生一個檔案：ConfigurationCodeGenerator.exe. 檔案 SampleRun.cmd 有一個示範如何使用此工具產生的類別的範例命令列[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
+2. 建置方案時，會產生一個檔案：ConfigurationCodeGenerator.exe. 檔案 SampleRun.cmd 有一個示範如何使用此工具產生的類別的範例命令列[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。  
   
 ### <a name="to-run-the-tool"></a>執行工具  
   
-1.  如果您同時有自訂 `BindingElement` 型別和自訂 `Binding` 型別，請在命令提示字元中輸入下列命令：  
+1. 如果您同時有自訂 `BindingElement` 型別和自訂 `Binding` 型別，請在命令提示字元中輸入下列命令：  
   
     ```  
     ConfigurationCodeGenerator.exe /be:YourCustomBindingElementTypeName /sb:YourCustomStdBindingTypeName /dll:TheAssemblyWhereTheseTypesAreDefined  

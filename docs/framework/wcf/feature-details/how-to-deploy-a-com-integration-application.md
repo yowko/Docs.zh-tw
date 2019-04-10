@@ -2,41 +2,41 @@
 title: HOW TO：部署 COM+ 整合應用程式
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
-ms.openlocfilehash: 281fe0fb93fffb84f85f19b42e8d90e86dc300c5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146727"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343372"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>HOW TO：部署 COM+ 整合應用程式
 撰寫好 COM+ 整合應用程式後，您可能會想要將它部署在其他機器上。 此主題描述如何將 COM+ 整合應用程式從一部機器移到另一部機器。  
   
 ### <a name="moving-a-com-hosted-integration-app"></a>移動 COM+ 主控的整合應用程式  
   
-1.  請確定兩台電腦上已安裝 WCF。  
+1. 請確定兩台電腦上已安裝 WCF。  
   
-2.  從機器 A 匯出應用程式。  
+2. 從機器 A 匯出應用程式。  
   
-3.  將應用程式匯入機器 B。  
+3. 將應用程式匯入機器 B。  
   
-4.  設定應用程式根目錄。 根據慣例，根目錄是 %PROGRAMFILES%/ComPlus Applications/{AppGUID}。  
+4. 設定應用程式根目錄。 根據慣例，根目錄是 %PROGRAMFILES%/ComPlus Applications/{AppGUID}。  
   
-5.  從機器 A 的應用程式根目錄，將 Application.config 和 Application.manifest 檔案複製到機器 B 的應用程式根目錄。  
+5. 從機器 A 的應用程式根目錄，將 Application.config 和 Application.manifest 檔案複製到機器 B 的應用程式根目錄。  
   
-6.  在機器 B 的 Application.config 檔案中編輯服務端點位址，以識別適當的機器。 例如，將 `http://machineA/MyService` 變更為 `http://machineB/MyService`。  
+6. 在機器 B 的 Application.config 檔案中編輯服務端點位址，以識別適當的機器。 例如，將 `http://machineA/MyService` 變更為 `http://machineB/MyService`。  
   
 ### <a name="moving-a-web-hosted-integration-application"></a>移動 Web 主控的整合應用程式  
   
-1.  請確定兩台電腦上已安裝 WCF。  
+1. 請確定兩台電腦上已安裝 WCF。  
   
-2.  從機器 A 匯出應用程式。  
+2. 從機器 A 匯出應用程式。  
   
-3.  將應用程式匯入機器 B。  
+3. 將應用程式匯入機器 B。  
   
-4.  在機器 B 上建立 IIS VRoot。  
+4. 在機器 B 上建立 IIS VRoot。  
   
-5.  從機器 A 的 VRoot，將 .svc 檔 (componentName.svc) 和 Web.config 檔複製到機器 B 上新建立的 VRoot。  
+5. 從機器 A 的 VRoot，將 .svc 檔 (componentName.svc) 和 Web.config 檔複製到機器 B 上新建立的 VRoot。  
   
 ## <a name="see-also"></a>另請參閱
 

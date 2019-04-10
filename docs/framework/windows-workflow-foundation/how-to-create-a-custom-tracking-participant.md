@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 1b612c7e-2381-4a7c-b07a-77030415f2a3
-ms.openlocfilehash: c4c6a8d17180ee00942c1bfd9ddc7bfa04bb962f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 64320a8f4799e79f54348e5381ed2d8ed49d496b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720952"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338172"
 ---
 # <a name="how-to-create-a-custom-tracking-participant"></a>HOW TO：建立自訂追蹤參與者
 工作流程追蹤會提供工作流程執行狀態的可見性。 工作流程執行階段會發出追蹤記錄，其中描述工作流程開發週期事件、活動開發週期事件、書籤繼續及錯誤。 這些追蹤記錄由追蹤參與者使用。 Windows Workflow Foundation (WF) 包含寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。 本教學課程步驟描述如何建立擷取 `WriteLine` 活動輸出的自訂追蹤參與者和追蹤設定檔，以便向使用者顯示這些項目。  
@@ -20,9 +20,9 @@ ms.locfileid: "57720952"
   
 ## <a name="to-create-the-custom-tracking-participant"></a>建立自訂追蹤參與者  
   
-1.  以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**類別**。 型別`StatusTrackingParticipant`成**名稱**方塊，然後按一下**新增**。  
+1. 以滑鼠右鍵按一下**NumberGuessWorkflowHost**中**方案總管**，然後選擇 **新增**，**類別**。 型別`StatusTrackingParticipant`成**名稱**方塊，然後按一下**新增**。  
   
-2.  將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
+2. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -34,7 +34,7 @@ ms.locfileid: "57720952"
     using System.IO;  
     ```  
   
-3.  修改 `StatusTrackingParticipant` 類別，使其繼承 `TrackingParticipant`。  
+3. 修改 `StatusTrackingParticipant` 類別，使其繼承 `TrackingParticipant`。  
   
     ```vb  
     Public Class StatusTrackingParticipant  
@@ -49,7 +49,7 @@ ms.locfileid: "57720952"
     }  
     ```  
   
-4.  加入下列 `Track` 方法覆寫。 追蹤記錄有多種不同型別。 我們對於 `WriteLine` 活動的輸出感興趣，該輸出包含在活動追蹤記錄中。 如果 `TrackingRecord` 是 `ActivityTrackingRecord` 活動的 `WriteLine`，則 `Text` 的 `WriteLine` 會附加在工作流程中以 `InstanceId` 命名的檔案裡。 在本教學課程中，該檔案儲存在主應用程式目前的資料夾中。  
+4. 加入下列 `Track` 方法覆寫。 追蹤記錄有多種不同型別。 我們對於 `WriteLine` 活動的輸出感興趣，該輸出包含在活動追蹤記錄中。 如果 `TrackingRecord` 是 `ActivityTrackingRecord` 活動的 `WriteLine`，則 `Text` 的 `WriteLine` 會附加在工作流程中以 `InstanceId` 命名的檔案裡。 在本教學課程中，該檔案儲存在主應用程式目前的資料夾中。  
   
     ```vb  
     Protected Overrides Sub Track(record As TrackingRecord, timeout As TimeSpan)  
@@ -96,9 +96,9 @@ ms.locfileid: "57720952"
   
 ## <a name="to-create-the-tracking-profile-and-register-the-tracking-participant"></a>建立追蹤設定檔並註冊追蹤參與者  
   
-1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管**，然後選擇 **檢視程式碼**。  
+1. 以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管**，然後選擇 **檢視程式碼**。  
   
-2.  將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
+2. 將下列 `using` (或 `Imports`) 陳述式加入至檔案最上方的其他 `using` (或 `Imports`) 陳述式。  
   
     ```vb  
     Imports System.Activities.Tracking  
@@ -108,7 +108,7 @@ ms.locfileid: "57720952"
     using System.Activities.Tracking;  
     ```  
   
-3.  將下列程式碼加入至 `ConfigureWorkflowApplication`，就在將 `StringWriter` 加入至工作流程擴充的程式碼之後、工作流程開發週期處理常式之前。  
+3. 將下列程式碼加入至 `ConfigureWorkflowApplication`，就在將 `StringWriter` 加入至工作流程擴充的程式碼之後、工作流程開發週期處理常式之前。  
   
     ```vb  
     'Add the custom tracking participant with a tracking profile  
@@ -217,9 +217,9 @@ ms.locfileid: "57720952"
   
 ## <a name="to-display-the-tracking-information"></a>顯示追蹤資訊  
   
-1.  以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管**，然後選擇 **檢視程式碼**。  
+1. 以滑鼠右鍵按一下**WorkflowHostForm**中**方案總管**，然後選擇 **檢視程式碼**。  
   
-2.  在 `InstanceId_SelectedIndexChanged` 處理常式中，將下列程式碼加入至清除狀態視窗的程式碼之後。  
+2. 在 `InstanceId_SelectedIndexChanged` 處理常式中，將下列程式碼加入至清除狀態視窗的程式碼之後。  
   
     ```vb  
     'If there is tracking data for this workflow, display it  
@@ -312,11 +312,11 @@ ms.locfileid: "57720952"
   
 ## <a name="to-build-and-run-the-application"></a>若要建置及執行應用程式  
   
-1.  按 Ctrl+Shift+B 建置應用程式。  
+1. 按 Ctrl+Shift+B 建置應用程式。  
   
-2.  按 Ctrl + F5 啟動應用程式。  
+2. 按 Ctrl + F5 啟動應用程式。  
   
-3.  選取的範圍猜測遊戲和要開始，然後按一下 工作流程的型別**新遊戲**。 輸入在猜測**猜測**方塊，然後按一下**移**提交猜測。 請注意，工作流程的狀態會顯示在狀態視窗中。 此輸出是從 `WriteLine` 活動擷取的。 切換至不同的工作流程中，選取其中一項從**工作流程執行個體識別碼**下拉式方塊，並請注意，也會移除目前的工作流程的狀態。 切換回上一個工作流程，注意其狀態已還原，類似下列範例。  
+3. 選取的範圍猜測遊戲和要開始，然後按一下 工作流程的型別**新遊戲**。 輸入在猜測**猜測**方塊，然後按一下**移**提交猜測。 請注意，工作流程的狀態會顯示在狀態視窗中。 此輸出是從 `WriteLine` 活動擷取的。 切換至不同的工作流程中，選取其中一項從**工作流程執行個體識別碼**下拉式方塊，並請注意，也會移除目前的工作流程的狀態。 切換回上一個工作流程，注意其狀態已還原，類似下列範例。  
   
     > [!NOTE]
     > 如果您切換的工作流程在啟用追蹤之前就已經啟動，就不會顯示任何狀態。 但是，如果您做其他猜測，會儲存這些猜測的狀態，因為現在已啟用追蹤。  
@@ -332,7 +332,7 @@ ms.locfileid: "57720952"
 
     請記下工作流程執行個體識別碼，並玩遊戲直到結束。
   
-4.  開啟 Windows 檔案總管並瀏覽至**NumberGuessWorkflowHost\bin\debug**資料夾 (或**bin\release**取決於您的專案設定)。 請注意，除了專案可執行檔外，還有些檔案具有 guid 檔案名稱。 在上一步驟完成的工作流程中，找出對應工作流程執行個體識別碼的檔案，並在 [記事本] 中開啟。 追蹤資訊包含如下的類似資訊。  
+4. 開啟 Windows 檔案總管並瀏覽至**NumberGuessWorkflowHost\bin\debug**資料夾 (或**bin\release**取決於您的專案設定)。 請注意，除了專案可執行檔外，還有些檔案具有 guid 檔案名稱。 在上一步驟完成的工作流程中，找出對應工作流程執行個體識別碼的檔案，並在 [記事本] 中開啟。 追蹤資訊包含如下的類似資訊。  
   
     ```output
     Please enter a number between 1 and 10

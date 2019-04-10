@@ -11,12 +11,12 @@ helpviewer_keywords:
 - overloaded operators [Visual Basic], calling
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
-ms.openlocfilehash: 46614ad43e7be72c8396f47ba7f5d02185f62827
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837087"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335481"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>HOW TO：呼叫運算子程序 (Visual Basic)
 您可以在運算式中使用運算子符號，以呼叫運算子程序。 轉換運算子，在您呼叫[CType 函式](../../../../visual-basic/language-reference/functions/ctype-function.md)將值從一種資料類型轉換到另一個。  
@@ -27,19 +27,19 @@ ms.locfileid: "58837087"
   
 ### <a name="to-call-an-operator-procedure"></a>若要呼叫運算子程序  
   
-1.  在運算式中使用運算子符號，以一般方式。  
+1. 在運算式中使用運算子符號，以一般方式。  
   
-2.  請確定資料類型的運算元是適用於運算子，且有正確的順序。  
+2. 請確定資料類型的運算元是適用於運算子，且有正確的順序。  
   
-3.  如預期般，運算子會提供給運算式的值。  
+3. 如預期般，運算子會提供給運算式的值。  
   
 ### <a name="to-call-a-conversion-operator-procedure"></a>若要呼叫的轉換運算子程序  
   
-1.  使用`CType`在運算式中。  
+1. 使用`CType`在運算式中。  
   
-2.  請確定資料類型的運算元會適當轉換，並以正確的順序。  
+2. 請確定資料類型的運算元會適當轉換，並以正確的順序。  
   
-3.  `CType` 呼叫轉換運算子程序，並傳回已轉換的值。  
+3. `CType` 呼叫轉換運算子程序，並傳回已轉換的值。  
   
 ## <a name="example"></a>範例  
  下列範例會建立兩個<xref:System.TimeSpan>、 將它們相加，並將結果儲存在第三個<xref:System.TimeSpan>結構。 <xref:System.TimeSpan>結構會定義數個標準運算子的多載的運算子程序。  
@@ -56,12 +56,12 @@ ms.locfileid: "58837087"
 ## <a name="see-also"></a>另請參閱
 
 - [運算子程序](./operator-procedures.md)
-- [如何：定義運算子](./how-to-define-an-operator.md)
-- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
-- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [HOW TO：定義運算子](./how-to-define-an-operator.md)
+- [HOW TO：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [HOW TO：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

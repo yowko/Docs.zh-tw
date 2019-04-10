@@ -2,12 +2,12 @@
 title: UDP 啟用
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
-ms.openlocfilehash: 21599990aff1209729a151b4c5a8829e305a1e90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59088596"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337652"
 ---
 # <a name="udp-activation"></a>UDP 啟用
 此樣本根據[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例。 它會擴充[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例，以支援使用 Windows Process Activation Service (WAS) 處理序啟動。  
@@ -75,13 +75,13 @@ ms.locfileid: "59088596"
   
 #### <a name="to-set-up-this-sample"></a>若要安裝這個範例  
   
-1.  使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
+1. 使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  在 Windows Vista 上建置專案。 進行編譯之後，也會在建置後階段中執行下列作業：  
+2. 在 Windows Vista 上建置專案。 進行編譯之後，也會在建置後階段中執行下列作業：  
   
     -   將 UDP 繫結安裝至「預設的網站」這個站台。  
   
@@ -89,13 +89,13 @@ ms.locfileid: "59088596"
   
     -   也會對此虛擬應用程式啟用 "net.udp" 通訊協定。  
   
-3.  啟動使用者介面應用程式 "WasNetActivator.exe"。 按一下 **安裝程式**索引標籤上，勾選下列核取方塊，然後按一下**安裝**安裝它們：  
+3. 啟動使用者介面應用程式 "WasNetActivator.exe"。 按一下 **安裝程式**索引標籤上，勾選下列核取方塊，然後按一下**安裝**安裝它們：  
   
     -   UDP 接聽程式配接器  
   
     -   UDP 通訊協定處理常式  
   
-4.  按一下 **啟用**的使用者介面應用程式"WasNetActivator.exe"的索引標籤。 按一下 **啟動**按鈕以啟動接聽程式配接器。 您現在可以準備執行程式。  
+4. 按一下 **啟用**的使用者介面應用程式"WasNetActivator.exe"的索引標籤。 按一下 **啟動**按鈕以啟動接聽程式配接器。 您現在可以準備執行程式。  
   
     > [!NOTE]
     >  完成這個範例時，必須執行 Cleanup.bat 以移除「預設的網站」的 net.udp 繫結。  
@@ -113,15 +113,15 @@ ms.locfileid: "59088596"
   
 -   請確定已正確安裝所有必要的部分。 下列步驟會顯示如何執行範例：  
   
-1.  請確定已啟動下列 Windows 服務：  
+1. 請確定已啟動下列 Windows 服務：  
   
     -   Windows Process Activation Service (WAS)。  
   
     -   Internet Information Services (IIS):W3SVC.  
   
-2.  接著啟動啟動程式：WasNetActivator.exe。 底下**啟用**索引標籤，唯一的通訊協定**UDP**，在下拉式清單中選取。 按一下 [**啟動**] 按鈕來開始啟動程式。  
+2. 接著啟動啟動程式：WasNetActivator.exe。 底下**啟用**索引標籤，唯一的通訊協定**UDP**，在下拉式清單中選取。 按一下 [**啟動**] 按鈕來開始啟動程式。  
   
-3.  一旦開始執行啟動程式，就可以從命令視窗中執行 Client.exe 以執行用戶端程式碼。 下列是範例輸出：  
+3. 一旦開始執行啟動程式，就可以從命令視窗中執行 Client.exe 以執行用戶端程式碼。 下列是範例輸出：  
   
     ```  
     Testing Udp Activation.  

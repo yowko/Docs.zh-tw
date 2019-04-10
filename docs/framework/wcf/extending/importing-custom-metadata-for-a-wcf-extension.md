@@ -2,12 +2,12 @@
 title: 匯入 WCF 擴充的自訂中繼資料
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
-ms.openlocfilehash: 021790a256448d9c81e7a53a2845edf839ff3534
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090065"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339966"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>匯入 WCF 擴充的自訂中繼資料
 在 Windows Communication Foundation (WCF) 中，中繼資料匯入是從它的中繼資料產生的服務或其元件部分的抽象表示法的程序。 比方說，可以匯入 WCF<xref:System.ServiceModel.Description.ServiceEndpoint>執行個體<xref:System.ServiceModel.Channels.Binding>執行個體或<xref:System.ServiceModel.Description.ContractDescription>服務的執行個體從 WSDL 文件。 若要匯入 WCF 服務中繼資料，請使用 實作<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象類別。 類型是衍生自<xref:System.ServiceModel.Description.MetadataImporter>類別實作支援匯入中繼資料格式，利用的 Ws-policy 匯入 WCF 中的邏輯。  
@@ -21,9 +21,9 @@ ms.locfileid: "59090065"
   
  本章節內容：  
   
-1.  如何實作並使用 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 介面，以便在產生描述與程式碼之前將 WSDL 資料公開至自訂匯入工具。 您可以透過此介面來檢查或修改使用特定中繼資料集合來執行的描述類型與程式碼編譯。  
+1. 如何實作並使用 <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> 介面，以便在產生描述與程式碼之前將 WSDL 資料公開至自訂匯入工具。 您可以透過此介面來檢查或修改使用特定中繼資料集合來執行的描述類型與程式碼編譯。  
   
-2.  如何實作並使用 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 介面，以便在產生描述物件之前將原則判斷提示公開到匯入工具。 您可以使用此介面來檢查或修改以下載原則為基礎的繫結或合約。  
+2. 如何實作並使用 <xref:System.ServiceModel.Description.IPolicyImportExtension?displayProperty=nameWithType> 介面，以便在產生描述物件之前將原則判斷提示公開到匯入工具。 您可以使用此介面來檢查或修改以下載原則為基礎的繫結或合約。  
   
  如需有關如何匯出自訂 WSDL 與原則判斷提示的詳細資訊，請參閱 <<c0> [ 匯出 WCF 延伸模組的自訂中繼資料](../../../../docs/framework/wcf/extending/exporting-custom-metadata-for-a-wcf-extension.md)。  
   

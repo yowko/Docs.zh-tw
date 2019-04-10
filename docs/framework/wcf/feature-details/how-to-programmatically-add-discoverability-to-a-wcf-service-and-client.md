@@ -2,29 +2,29 @@
 title: HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 821e45d41a1a91b6884a73abcbdf3ea04e938e25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224204"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336586"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>HOW TO：以程式設計方式將探索能力新增至 WCF 服務與用戶端
 本主題說明如何讓 Windows Communication Foundation (WCF) 服務可以探索。 它根據[自我裝載](https://go.microsoft.com/fwlink/?LinkId=145523)範例。  
   
 ### <a name="to-configure-the-existing-self-host-service-sample-for-discovery"></a>若要為探索設定現有的自我裝載服務範例  
   
-1.  開啟 Visual Studio 2012 中的自我裝載的解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
+1. 開啟 Visual Studio 2012 中的自我裝載的解決方案。 範例位於 TechnologySamples\Basic\Service\Hosting\SelfHost 目錄中。  
   
-2.  將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到下列錯誤訊息: 「 系統。 ServiceModel.Discovery.dll 或其中一個相依性需要較新版[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]高於指定的專案中...」如果您看到此訊息，以滑鼠右鍵按一下 [方案總管] 中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
+2. 將 `System.ServiceModel.Discovery.dll`的參考加入至服務專案。 您可能會看到下列錯誤訊息: 「 系統。 ServiceModel.Discovery.dll 或其中一個相依性需要較新版[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]高於指定的專案中...」如果您看到此訊息，以滑鼠右鍵按一下 [方案總管] 中的專案，然後選擇 **屬性**。 在 [**專案屬性**] 視窗中，請確定**目標 Framework**是[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。  
   
-3.  開啟 Service.cs 檔案，然後加入下列 `using` 陳述式。  
+3. 開啟 Service.cs 檔案，然後加入下列 `using` 陳述式。  
   
     ```csharp  
     using System.ServiceModel.Discovery;  
     ```  
   
-4.  在 `Main()` 陳述式的 `using` 方法中，將 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 執行個體加入至服務主機。  
+4. 在 `Main()` 陳述式的 `using` 方法中，將 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 執行個體加入至服務主機。  
   
     ```csharp  
     public static void Main()  
@@ -42,7 +42,7 @@ ms.locfileid: "59224204"
   
      <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 會指定所套用的服務成為可探索狀態。  
   
-5.  在加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 程式碼的後方直接將 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 加入至服務主機。  
+5. 在加入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 程式碼的後方直接將 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 加入至服務主機。  
   
     ```csharp  
     // Add ServiceDiscoveryBehavior  
@@ -56,15 +56,15 @@ ms.locfileid: "59224204"
   
 ### <a name="to-create-a-client-application-that-uses-discovery-to-call-the-service"></a>若要建立使用探索來呼叫服務的用戶端應用程式  
   
-1.  將新主控台應用程式加入至名為 `DiscoveryClientApp` 的方案。  
+1. 將新主控台應用程式加入至名為 `DiscoveryClientApp` 的方案。  
   
-2.  將參考加入`System.ServiceModel.dll`和 `System.ServiceModel.Discovery.dll`  
+2. 將參考加入`System.ServiceModel.dll`和 `System.ServiceModel.Discovery.dll`  
   
-3.  從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管**，選取**複製**，然後選取**DiscoveryClientApp**專案、 以滑鼠右鍵按一下，然後選取**貼上**。  
+3. 從現有的用戶端專案複製 GeneratedClient.cs 和 App.config 檔案並貼上至 DiscoveryClientApp 專案。 若要這樣做，請以滑鼠右鍵按一下中的檔案**方案總管**，選取**複製**，然後選取**DiscoveryClientApp**專案、 以滑鼠右鍵按一下，然後選取**貼上**。  
   
-4.  開啟 Program.cs。  
+4. 開啟 Program.cs。  
   
-5.  加入下列 `using` 陳述式。  
+5. 加入下列 `using` 陳述式。  
   
     ```csharp  
     using System.ServiceModel;  
@@ -72,7 +72,7 @@ ms.locfileid: "59224204"
     using Microsoft.ServiceModel.Samples;  
     ```  
   
-6.  將名為 `FindCalculatorServiceAddress()` 的靜態方法加入至 `Program` 類別。  
+6. 將名為 `FindCalculatorServiceAddress()` 的靜態方法加入至 `Program` 類別。  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -82,7 +82,7 @@ ms.locfileid: "59224204"
   
      這個方法會使用探索來搜尋 `CalculatorService` 服務。  
   
-7.  在 `FindCalculatorServiceAddress` 方法中，建立新的 <xref:System.ServiceModel.Discovery.DiscoveryClient> 執行個體，傳入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 至建構函式。  
+7. 在 `FindCalculatorServiceAddress` 方法中，建立新的 <xref:System.ServiceModel.Discovery.DiscoveryClient> 執行個體，傳入 <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> 至建構函式。  
   
     ```csharp  
     static EndpointAddress FindCalculatorServiceAddress()  
@@ -94,7 +94,7 @@ ms.locfileid: "59224204"
   
      這會告訴 WCF，<xref:System.ServiceModel.Discovery.DiscoveryClient>類別應該用來傳送及接收探索訊息的標準 UDP 探索端點。  
   
-8.  在下一行，呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法並指定包含要搜尋之服務合約的 <xref:System.ServiceModel.Discovery.FindCriteria> 執行個體。 在此情況下，指定 `ICalculator`。  
+8. 在下一行，呼叫 <xref:System.ServiceModel.Discovery.DiscoveryClient.Find%2A> 方法並指定包含要搜尋之服務合約的 <xref:System.ServiceModel.Discovery.FindCriteria> 執行個體。 在此情況下，指定 `ICalculator`。  
   
     ```csharp  
     // Find ICalculatorService endpoints              
@@ -190,11 +190,11 @@ ms.locfileid: "59224204"
   
 ### <a name="to-test-the-application"></a>若要測試應用程式  
   
-1.  開啟更高權限的命令提示字元，然後執行 Service.exe。  
+1. 開啟更高權限的命令提示字元，然後執行 Service.exe。  
   
-2.  開啟命令提示字元並執行 Discoveryclientapp.exe。  
+2. 開啟命令提示字元並執行 Discoveryclientapp.exe。  
   
-3.  service.exe 的輸出應該看起來如下所示。  
+3. service.exe 的輸出應該看起來如下所示。  
   
     ```Output  
     Received Add(100,15.99)  
@@ -207,7 +207,7 @@ ms.locfileid: "59224204"
     Return: 6.25390869293308  
     ```  
   
-4.  Discoveryclientapp.exe 的輸出應該看起來如下所示。  
+4. Discoveryclientapp.exe 的輸出應該看起來如下所示。  
   
     ```Output  
     Invoking CalculatorService at http://localhost:8000/ServiceModelSamples/service  

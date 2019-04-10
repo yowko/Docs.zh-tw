@@ -2,12 +2,12 @@
 title: SRMP
 ms.date: 03/30/2017
 ms.assetid: cf37078c-dcb4-45e0-acaf-2f196521b226
-ms.openlocfilehash: 108293a5f4607afb8c19dce65d53efdaf9e184b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 92a0bac3cf6ac6b57792419c913ec481ff0ee6c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59210460"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333388"
 ---
 # <a name="srmp"></a>SRMP
 這個範例示範如何使用訊息佇列 (MSMQ)，透過 HTTP 來執行交易佇列通訊。  
@@ -18,21 +18,21 @@ ms.locfileid: "59210460"
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-4.  執行範例前**新增/移除 Windows 元件**，請確認已安裝 MSMQ HTTP 支援。 安裝 HTTP 支援時，會自動安裝網際網路資訊服務 (IIS)，並在 IIS 中為 MSMQ 新增通訊協定支援。  
+4. 執行範例前**新增/移除 Windows 元件**，請確認已安裝 MSMQ HTTP 支援。 安裝 HTTP 支援時，會自動安裝網際網路資訊服務 (IIS)，並在 IIS 中為 MSMQ 新增通訊協定支援。  
   
-5.  如果您想要確定會在通訊時使用 HTTP，則可以讓 MSMQ 在固定模式中執行。 這可以確保任何訊息都無法使用非 HTTP 傳輸進到電腦上裝載的佇列中。  
+5. 如果您想要確定會在通訊時使用 HTTP，則可以讓 MSMQ 在固定模式中執行。 這可以確保任何訊息都無法使用非 HTTP 傳輸進到電腦上裝載的佇列中。  
   
-6.  選好要在固定模式中的 MSMQ 之後，電腦會要求重新啟動 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。  
+6. 選好要在固定模式中的 MSMQ 之後，電腦會要求重新啟動 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]。  
   
-7.  執行服務。  
+7. 執行服務。  
   
-8.  執行該用戶端。 確定您已將端點位址改為指向電腦名稱或 IP 位址，而非指向 localhost。 用戶端便會傳送訊息並結束。  
+8. 執行該用戶端。 確定您已將端點位址改為指向電腦名稱或 IP 位址，而非指向 localhost。 用戶端便會傳送訊息並結束。  
   
 ## <a name="requirements"></a>需求  
  若要執行這個範例，除了安裝 MSMQ 之外，還必須在服務及用戶端機器兩端都安裝 IIS。  

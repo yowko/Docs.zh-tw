@@ -7,12 +7,12 @@ helpviewer_keywords:
 - accessing embedded objects
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
-ms.openlocfilehash: 136073b3ef1c5463ff078efd7c173b7446f0ca48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59077910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342514"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern 和 Embedded 物件概觀
 > [!NOTE]
@@ -43,13 +43,13 @@ ms.locfileid: "59077910"
   
  如需周遊文字範圍的內容，則應在幕後執行一連串的步驟，才能成功執行 <xref:System.Windows.Automation.Text.TextPatternRange.Move%2A> 方法。  
   
-1.  文字範圍已正規化；也就是，文字範圍已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 端點摺疊為變質範圍，以致 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點變成多餘的。 需要此步驟，才能移除模稜兩可情況下，文字範圍跨越<xref:System.Windows.Automation.Text.TextUnit>界限： 比方說，`{The URL https://www.microsoft.com is embedded in text`其中"{"和"}"是文字範圍端點。  
+1. 文字範圍已正規化；也就是，文字範圍已在 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.Start> 端點摺疊為變質範圍，以致 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 端點變成多餘的。 需要此步驟，才能移除模稜兩可情況下，文字範圍跨越<xref:System.Windows.Automation.Text.TextUnit>界限： 比方說，`{The URL https://www.microsoft.com is embedded in text`其中"{"和"}"是文字範圍端點。  
   
-2.  結果產生的範圍會在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中向後移至所要求 <xref:System.Windows.Automation.Text.TextUnit> 界限的開頭。  
+2. 結果產生的範圍會在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中向後移至所要求 <xref:System.Windows.Automation.Text.TextUnit> 界限的開頭。  
   
-3.  範圍會在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中依所要求的 <xref:System.Windows.Automation.Text.TextUnit> 界限數目向前或向後移動。  
+3. 範圍會在 <xref:System.Windows.Automation.TextPattern.DocumentRange%2A> 中依所要求的 <xref:System.Windows.Automation.Text.TextUnit> 界限數目向前或向後移動。  
   
-4.  範圍會接著依一個要求的 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 界限移動 <xref:System.Windows.Automation.Text.TextUnit> 端點，從變質範圍狀態展開。  
+4. 範圍會接著依一個要求的 <xref:System.Windows.Automation.Text.TextPatternRangeEndpoint.End> 界限移動 <xref:System.Windows.Automation.Text.TextUnit> 端點，從變質範圍狀態展開。  
   
  ![範圍由 Move 和 expandtoenclosingunit 進行調整](../../../docs/framework/ui-automation/media/uia-textpattern-moveandexpand-examples.png "UIA_TextPattern_MoveAndExpand_Examples")  
 如何針對 Move() 和 ExpandToEnclosingUnit() 調整文字範圍的範例  

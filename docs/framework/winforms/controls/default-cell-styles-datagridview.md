@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 0e5664707d12fd45c73f3585d07660fc732965fb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333609"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
 <xref:System.Windows.Forms.DataGridView>控制項可讓您指定預設儲存格樣式和儲存格整個控制項、 特定的資料行、 資料列和資料行的標頭，以及替代資料列，以建立分類帳效果的資料格式。 設定整個控制項的預設樣式會覆寫預設資料行和替代的資料列的樣式設定。 此外，您在個別的資料列和資料格的程式碼中設定的樣式會覆寫預設樣式。  
@@ -28,11 +28,11 @@ ms.locfileid: "59179890"
   
 ### <a name="to-set-default-styles-for-all-cells-in-the-control"></a>若要設定控制項中的所有儲存格的預設樣式  
   
-1.  選取<xref:System.Windows.Forms.DataGridView>設計工具中的控制項。  
+1. 選取<xref:System.Windows.Forms.DataGridView>設計工具中的控制項。  
   
-2.  在 [**屬性**] 視窗中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
+2. 在 [**屬性**] 視窗中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>， <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>，或<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
   
-3.  藉由設定屬性，請使用定義的樣式**預覽**窗格，即可確認您的選擇。  
+3. 藉由設定屬性，請使用定義的樣式**預覽**窗格，即可確認您的選擇。  
   
 > [!NOTE]
 >  如果啟用視覺化樣式，資料列和資料行標頭 (除了<xref:System.Windows.Forms.DataGridView.TopLeftHeaderCell%2A>) 的樣式會自動由目前的佈景主題，覆寫<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>和<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>屬性值。  
@@ -41,23 +41,23 @@ ms.locfileid: "59179890"
   
 ### <a name="to-set-default-styles-for-cells-in-individual-columns"></a>若要設定個別資料行中的資料格的預設樣式  
   
-1.  以滑鼠右鍵按一下<xref:System.Windows.Forms.DataGridView>控制項在設計工具中，並選擇**編輯資料行**。  
+1. 以滑鼠右鍵按一下<xref:System.Windows.Forms.DataGridView>控制項在設計工具中，並選擇**編輯資料行**。  
   
-2.  選取的資料行**選取的資料行**清單。  
+2. 選取的資料行**選取的資料行**清單。  
   
-3.  在 **資料行屬性**方格中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
+3. 在 **資料行屬性**方格中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>屬性。 **CellStyle 產生器** 對話方塊隨即出現。  
   
-4.  藉由設定屬性，請使用定義的樣式**預覽**窗格，即可確認您的選擇。  
+4. 藉由設定屬性，請使用定義的樣式**預覽**窗格，即可確認您的選擇。  
   
 ### <a name="to-format-data-in-cells"></a>若要格式化的儲存格資料  
   
-1.  使用其中一個前述程序來顯示**CellStyle 產生器**對話方塊相關的預設儲存格樣式屬性。  
+1. 使用其中一個前述程序來顯示**CellStyle 產生器**對話方塊相關的預設儲存格樣式屬性。  
   
-2.  在  **CellStyle 產生器**對話方塊方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>屬性。 **格式字串** 對話方塊隨即出現。  
+2. 在  **CellStyle 產生器**對話方塊方塊中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>屬性。 **格式字串** 對話方塊隨即出現。  
   
-3.  選取格式類型，則修改的詳細資料的類型 （例如要顯示的小數位數），使用**範例**方塊，確認您的選擇。  
+3. 選取格式類型，則修改的詳細資料的類型 （例如要顯示的小數位數），使用**範例**方塊，確認您的選擇。  
   
-4.  如果您要繫結<xref:System.Windows.Forms.DataGridView>控制項的資料來源，可能會包含 null 值，填寫**Null 值**文字方塊。 這個值會顯示當儲存格的值等於 null 參考 (`Nothing`在 Visual Basic 中) 或<xref:System.DBNull.Value?displayProperty=nameWithType>。  
+4. 如果您要繫結<xref:System.Windows.Forms.DataGridView>控制項的資料來源，可能會包含 null 值，填寫**Null 值**文字方塊。 這個值會顯示當儲存格的值等於 null 參考 (`Nothing`在 Visual Basic 中) 或<xref:System.DBNull.Value?displayProperty=nameWithType>。  
   
 ## <a name="see-also"></a>另請參閱
 

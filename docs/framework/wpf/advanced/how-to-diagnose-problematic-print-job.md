@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: 3c21798527df15730a62c04422ecd9e57b74abe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211033"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338471"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>HOW TO：診斷問題列印工作
 網路系統管理經常處理使用者對於列印工作的相關抱怨 (不會列印或列印緩慢)。 一組豐富的列印工作中公開的屬性[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft.NET framework 提供一種方法來執行列印工作的快速遠端診斷。  
@@ -23,7 +23,7 @@ ms.locfileid: "59211033"
 ## <a name="example"></a>範例  
  建立這類公用程式的主要步驟如下所示。  
   
-1.  找出使用者所抱怨的列印工作。 使用者通常無法準確地找出來。 他們可能不知道印表機的列印伺服器名稱。 它們可能會描述在不同的術語印表機的位置，比用於設定其<xref:System.Printing.PrintQueue.Location%2A>屬性。 因此，最好能產生使用者目前已提交的工作清單。 如果有多項工作，使用者與列印系統管理員之間的通訊則可用來指出有問題的工作。 子步驟如下所示。  
+1. 找出使用者所抱怨的列印工作。 使用者通常無法準確地找出來。 他們可能不知道印表機的列印伺服器名稱。 它們可能會描述在不同的術語印表機的位置，比用於設定其<xref:System.Printing.PrintQueue.Location%2A>屬性。 因此，最好能產生使用者目前已提交的工作清單。 如果有多項工作，使用者與列印系統管理員之間的通訊則可用來指出有問題的工作。 子步驟如下所示。  
   
     1.  取得所有列印伺服器的清單。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "59211033"
   
     4.  在佇列迴圈的每次操作中，對其工作執行迴圈並蒐集有關抱怨使用者所提出工作的識別資訊。  
   
-2.  找出有問題的列印工作後，檢查相關屬性以了解問題所在。 例如，工作處於錯誤狀態，或者是為佇列提供服務的印表機在可列印工作之前離線？  
+2. 找出有問題的列印工作後，檢查相關屬性以了解問題所在。 例如，工作處於錯誤狀態，或者是為佇列提供服務的印表機在可列印工作之前離線？  
   
  下列程式碼是一系列的程式碼範例。 第一個程式碼範例包含列印佇列的迴圈執行。 (上面步驟 1c。)變數`myPrintQueues`是<xref:System.Printing.PrintQueueCollection>目前的列印伺服器物件。  
   

@@ -2,12 +2,12 @@
 title: 自訂繫結安全性
 ms.date: 03/30/2017
 ms.assetid: a6383dff-4308-46d2-bc6d-acd4e18b4b8d
-ms.openlocfilehash: 444e9fc1b9a1543ab22c112468929efa2621db03
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 1ff83d95dae06b787f8bc7ec8e1bf0f45c226532
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814415"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339446"
 ---
 # <a name="custom-binding-security"></a>自訂繫結安全性
 這個範例會示範如何使用自訂繫結來設定安全性。 它會顯示如何使用自訂繫結同時啟用訊息層級安全性和安全傳輸。 當在用戶端和服務之間傳輸訊息需要安全傳輸，且同時必須保護訊息層級上訊息的安全時，這是相當有用的。 系統提供的繫結不支援這個組態。
@@ -105,28 +105,28 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。
 
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。
 
 ### <a name="to-run-the-sample-on-the-same-computer"></a>若要在同一部電腦上執行範例
 
-1.  以系統管理員權限開啟 Visual Studio 視窗的開發人員命令提示字元並執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1. 以系統管理員權限開啟 Visual Studio 視窗的開發人員命令提示字元並執行範例安裝資料夾中的 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
     >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。  
   
-2.  從 \service\bin 啟動 Service.exe。  
+2. 從 \service\bin 啟動 Service.exe。  
   
-3.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
+3. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-computers"></a>若要跨電腦執行範例  
   
-1.  在服務電腦上：  
+1. 在服務電腦上：  
   
     1.  在服務電腦上建立名為 servicemodelsamples 的虛擬目錄。  
   
@@ -143,7 +143,7 @@ Equation(0 + 100 - 50 * 17.65 / 2 = 441.25)
 
     6.  從命令提示字元執行 Service.exe。
 
-2.  在用戶端電腦上：
+2. 在用戶端電腦上：
 
     1.  將用戶端程式檔案從 \client\bin\ 資料夾複製到用戶端電腦中。 同時複製 Cleanup.bat 檔。
 

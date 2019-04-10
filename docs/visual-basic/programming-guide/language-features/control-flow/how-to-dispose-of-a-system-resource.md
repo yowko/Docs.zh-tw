@@ -10,23 +10,23 @@ helpviewer_keywords:
 - Using statement [Visual Basic], Using...End Using
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
-ms.openlocfilehash: 2a399b92c66c8a88d10d661ff41aef58a82bbc2a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829911"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341903"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>HOW TO：處置系統資源 (Visual Basic)
 您可以使用`Using`區塊，以確保系統處置資源的程式碼結束該區塊時。 這非常有用，如果您使用的，會耗用大量記憶體，或其他元件也會想要使用的系統資源。  
   
 ### <a name="to-dispose-of-a-database-connection-when-your-code-is-finished-with-it"></a>若要結束您的程式碼時，在資料庫連接的處理  
   
-1.  請確定您包含適當[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)原始程式檔的開頭資料庫連接 (在此情況下， <xref:System.Data.SqlClient>)。  
+1. 請確定您包含適當[Imports 陳述式 （.NET 命名空間和類型）](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)原始程式檔的開頭資料庫連接 (在此情況下， <xref:System.Data.SqlClient>)。  
   
-2.  建立`Using`含有區塊`Using`和`End Using`陳述式。 在區塊內，將資料庫連接處理的程式碼。  
+2. 建立`Using`含有區塊`Using`和`End Using`陳述式。 在區塊內，將資料庫連接處理的程式碼。  
   
-3.  宣告連接並建立它的執行個體的一部分`Using`陳述式。  
+3. 宣告連接並建立它的執行個體的一部分`Using`陳述式。  
   
     ```  
     ' Insert the following line at the beginning of your source file.  

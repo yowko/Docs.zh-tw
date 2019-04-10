@@ -2,12 +2,12 @@
 title: EXCEPT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
-ms.openlocfilehash: 32c8c418056231e98696eb8f4e9cb372d6c5740c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 32b5148e43a38e5cf8dcce0ae16260d7a6b6a018
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089454"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341214"
 ---
 # <a name="except-entity-sql"></a>EXCEPT (Entity SQL)
 從 EXCEPT 運算元左側的查詢運算式傳回任何相異值集合，這些相異值是 EXCEPT 運算元右側的查詢運算式沒有傳回的。 所有運算式都必須具有與 `expression`相同的型別或是共同基底型別或衍生型別。  
@@ -38,9 +38,9 @@ expression EXCEPT expression
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 EXCEPT 運算子，從兩個查詢運算式傳回任何相異值的集合。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  
   
-1.  請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
+1. 請依照下列中的程序[How to:執行可傳回 StructuralType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-structuraltype-results.md)。  
   
-2.  將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
+2. 將下列查詢當成引數，傳遞至 `ExecuteStructuralTypeQuery` 方法：  
   
  [!code-csharp[DP EntityServices Concepts 2#EXCEPT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#except)]  
   

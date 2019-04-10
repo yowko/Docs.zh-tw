@@ -4,19 +4,19 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNamedArgumentOnParamArray
 ms.assetid: ba35fb86-329a-4ceb-864b-045c07661482
-ms.openlocfilehash: 0f26794a8a309b190e1fac9d8374a12b1f636c78
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.openlocfilehash: 155b42a104b30553e067aa4e0681ec565640bd5e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58041585"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340044"
 ---
 # <a name="named-arguments-cannot-match-paramarray-parameters"></a>具名引數與 ParamArray 參數不相符
 參數陣列必須以傳值方式傳遞。  
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  傳遞引數 `ByVal`，而不是透過命名引數。  
+1. 傳遞引數 `ByVal`，而不是透過命名引數。  
   
 ## <a name="see-also"></a>另請參閱
 

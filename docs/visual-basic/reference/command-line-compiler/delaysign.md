@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
-ms.openlocfilehash: ccf569aea1363d256728e122818b70284a9e250d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58830366"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334597"
 ---
 # <a name="-delaysign"></a>-delaysign
 指定將要完整簽署還是部分簽署組件。  
@@ -37,11 +37,11 @@ ms.locfileid: "58830366"
   
 ### <a name="to-set--delaysign-in-the-visual-studio-integrated-development-environment"></a>若要在 Visual Studio 整合式的開發環境中設定-delaysign  
   
-1.  在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。   
+1. 在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。   
   
-2.  按一下 [簽署]索引標籤。  
+2. 按一下 [簽署]索引標籤。  
   
-3.  在設定的值**僅延遲簽署** 方塊中。  
+3. 在設定的值**僅延遲簽署** 方塊中。  
   
 ## <a name="see-also"></a>另請參閱
 

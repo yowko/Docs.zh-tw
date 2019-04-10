@@ -1,32 +1,32 @@
 ---
-title: 傳輸:UDP
+title: 傳輸：UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
-ms.openlocfilehash: 59bcfc376c2fada5f94f462cecbf3d5363def48d
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332815"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334662"
 ---
-# <a name="transport-udp"></a>傳輸:UDP
+# <a name="transport-udp"></a>傳輸：UDP
 UDP 傳輸範例示範如何實作 UDP 單點傳播與多點傳送做為自訂的 Windows Communication Foundation (WCF) 傳輸。 此範例描述，以建立自訂傳輸在 WCF 中，使用通道架構並遵循 WCF 的最佳做法建議的程序。 建立自訂傳輸的步驟如下：  
   
-1.  決定哪一個通道[訊息交換模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） ChannelFactory 和 channellistener 所支援。 然後決定是否要支援這些介面的工作階段變化。  
+1. 決定哪一個通道[訊息交換模式](#MessageExchangePatterns)（IOutputChannel、 IInputChannel、 IDuplexChannel、 IRequestChannel 或 IReplyChannel） ChannelFactory 和 channellistener 所支援。 然後決定是否要支援這些介面的工作階段變化。  
   
-2.  建立支援「訊息交換模式」的通道處理站和接聽項。  
+2. 建立支援「訊息交換模式」的通道處理站和接聽項。  
   
-3.  確認已將所有網路特定例外狀況正規化為適當的 <xref:System.ServiceModel.CommunicationException> 衍生類別。  
+3. 確認已將所有網路特定例外狀況正規化為適當的 <xref:System.ServiceModel.CommunicationException> 衍生類別。  
   
-4.  新增[\<繫結 >](../../../../docs/framework/misc/binding.md)將自訂傳輸新增至通道堆疊的項目。 如需詳細資訊，請參閱 <<c0> [ 新增繫結項目](#AddingABindingElement)。  
+4. 新增[\<繫結 >](../../../../docs/framework/misc/binding.md)將自訂傳輸新增至通道堆疊的項目。 如需詳細資訊，請參閱 <<c0> [ 新增繫結項目](#AddingABindingElement)。  
   
-5.  新增繫結元素延伸區段，即可將新的繫結元素公開至組態系統。  
+5. 新增繫結元素延伸區段，即可將新的繫結元素公開至組態系統。  
   
-6.  新增中繼資料延伸，即可將功能傳達給其他端點。  
+6. 新增中繼資料延伸，即可將功能傳達給其他端點。  
   
-7.  新增繫結，此繫結會根據妥善定義的設定檔來預先設定繫結項目的堆疊。 如需詳細資訊，請參閱 <<c0> [ 加入標準繫結](#AddingAStandardBinding)。  
+7. 新增繫結，此繫結會根據妥善定義的設定檔來預先設定繫結項目的堆疊。 如需詳細資訊，請參閱 <<c0> [ 加入標準繫結](#AddingAStandardBinding)。  
   
-8.  新增繫結區段和繫結組態項目，即可將繫結公開至組態系統。 如需詳細資訊，請參閱 <<c0> [ 新增組態支援](#AddingConfigurationSupport)。  
+8. 新增繫結區段和繫結組態項目，即可將繫結公開至組態系統。 如需詳細資訊，請參閱 <<c0> [ 新增組態支援](#AddingConfigurationSupport)。  
   
 <a name="MessageExchangePatterns"></a>   
 ## <a name="message-exchange-patterns"></a>訊息交換模式  
@@ -185,9 +185,9 @@ if (soapBinding != null)
   
  當執行 Svcutil.exe 時，有兩個選項可以讓 Svcutil.exe 載入 WSDL 匯入延伸：  
   
-1.  Svcutil.exe 指向組態檔使用 /SvcutilConfig:\<檔案 >。  
+1. Svcutil.exe 指向組態檔使用 /SvcutilConfig:\<檔案 >。  
   
-2.  將組態區段新增至與 Svcutil.exe 位於相同目錄的 Svcutil.exe.config 中。  
+2. 將組態區段新增至與 Svcutil.exe 位於相同目錄的 Svcutil.exe.config 中。  
   
  `UdpBindingElementImporter` 型別會實作 `IWsdlImportExtension` 介面。 `ImportEndpoint` 方法會從 WSDL 連接埠匯入位址。  
   
@@ -247,9 +247,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
   
  然後從已註冊類別 (`IPolicyImporterExtension`) 實作 `UdpBindingElementImporter`。 在 `ImportPolicy()` 中，查看命名空間中的判斷提示，然後處理用來產生傳輸的判斷提示，並且檢查其是否使用多點傳送。 此外，從繫結判斷提示清單中移除匯入所處理的判斷提示。 同樣地，當執行 Svcutil.exe 時有兩個整合的選項：  
   
-1.  Svcutil.exe 指向組態檔使用 /SvcutilConfig:\<檔案 >。  
+1. Svcutil.exe 指向組態檔使用 /SvcutilConfig:\<檔案 >。  
   
-2.  將組態區段新增至與 Svcutil.exe 位於相同目錄的 Svcutil.exe.config 中。  
+2. 將組態區段新增至與 Svcutil.exe 位於相同目錄的 Svcutil.exe.config 中。  
   
 <a name="AddingAStandardBinding"></a>   
 ## <a name="adding-a-standard-binding"></a>新增標準繫結  
@@ -466,11 +466,11 @@ svcutil http://localhost:8000/udpsample/ /reference:UdpTranport\bin\UdpTransport
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+1. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-2.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+2. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-3.  請參閱前面的「UDP 測試服務和用戶端」一節。  
+3. 請參閱前面的「UDP 測試服務和用戶端」一節。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

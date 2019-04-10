@@ -20,19 +20,19 @@ helpviewer_keywords:
 - access keys [Windows Forms], Windows Forms
 - ALT key
 ms.assetid: 4faa0991-28ec-4eca-91db-51dc2cd6a7ac
-ms.openlocfilehash: fefd322afb938453ec1ea23e8ff6de9f9ae2a851
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e6c829553163359301bad2cd896fc43562ee8069
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141631"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334454"
 ---
 # <a name="how-to-create-access-keys-for-windows-forms-controls"></a>HOW TO：建立 Windows Forms 控制項的便捷鍵
 *便捷鍵*是功能表、 功能表項目，或按鈕等控制項的標籤文字中加上底線的字元。 使用存取金鑰，使用者可以 「 按一下 」 按鈕在組合中按 ALT 鍵，以預先定義的存取金鑰。 例如，如果按鈕會執行將表單，列印程序，因此其`Text`屬性設定為"Print"，將新增連字號，再以字母"P"會導致字母"P"中加上底線按鈕的文字在執行階段。 使用者可以執行命令與按鈕關聯，藉由按下 ALT + P。 您不能有無法接收焦點的控制項的便捷鍵。  
   
 ### <a name="to-create-an-access-key-for-a-control"></a>若要建立控制項的便捷鍵  
   
-1.  設定`Text`屬性設為字串，包含連字號 (&) 會快顯的字母前面。  
+1. 設定`Text`屬性設為字串，包含連字號 (&) 會快顯的字母前面。  
   
     ```vb  
     ' Set the letter "P" as an access key.  

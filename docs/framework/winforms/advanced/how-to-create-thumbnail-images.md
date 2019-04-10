@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: 79b6258e7e6d7f16cc7a1e32a0c99dfe0eaeaa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144010"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341487"
 ---
 # <a name="how-to-create-thumbnail-images"></a>HOW TO：建立縮圖影像
 縮圖的影像是影像的縮小版本。 您可以藉由呼叫建立縮圖影像<xref:System.Drawing.Image.GetThumbnailImage%2A>方法的<xref:System.Drawing.Image>物件。  
@@ -34,19 +34,19 @@ ms.locfileid: "59144010"
 ## <a name="compiling-the-code"></a>編譯程式碼  
  上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs> `e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。 若要執行此範例，請遵循下列步驟：  
   
-1.  新建 Windows Forms 應用程式  
+1. 新建 Windows Forms 應用程式  
   
-2.  將範例程式碼加入至表單。  
+2. 將範例程式碼加入至表單。  
   
-3.  建立表單的處理常式<xref:System.Windows.Forms.Control.Paint>事件  
+3. 建立表單的處理常式<xref:System.Windows.Forms.Control.Paint>事件  
   
-4.  在 <xref:System.Windows.Forms.Control.Paint>處理常式中，呼叫`GetThumbnail`方法並傳遞`e`如<xref:System.Windows.Forms.PaintEventArgs>。  
+4. 在 <xref:System.Windows.Forms.Control.Paint>處理常式中，呼叫`GetThumbnail`方法並傳遞`e`如<xref:System.Windows.Forms.PaintEventArgs>。  
   
-5.  尋找您想要的縮圖的影像檔。  
+5. 尋找您想要的縮圖的影像檔。  
   
-6.  在 `GetThumbnail`方法指定的路徑和檔案加入至映像的名稱。  
+6. 在 `GetThumbnail`方法指定的路徑和檔案加入至映像的名稱。  
   
-7.  按 F5 執行範例。  
+7. 按 F5 執行範例。  
   
      100 x 100 的縮圖影像會出現在表單上。  
   

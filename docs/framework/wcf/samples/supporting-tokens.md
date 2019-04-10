@@ -2,12 +2,12 @@
 title: 支援權杖
 ms.date: 03/30/2017
 ms.assetid: 65a8905d-92cc-4ab0-b6ed-1f710e40784e
-ms.openlocfilehash: aa2981d7b9c34061c3ffaed770d1521f5922d9d6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5f2b1500f54f8ade3c4924e3eb22cd022c6800c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824699"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334181"
 ---
 # <a name="supporting-tokens"></a>支援權杖
 這個支援權杖範例會示範如何將其他權杖加入至使用 WS-Security 的訊息。 範例除了使用者名稱安全性權杖之外，還會新增 X.509 二進位安全性權杖。 權杖會在 WS-Security 訊息標頭中從用戶端傳遞至服務，而且使用與 X.509 安全性權杖相關聯的私密金鑰簽署該訊息的一部分，以便向接收者證明持有 X.509 憑證。 在必須有多個宣告與訊息產生關聯才能驗證或授權傳送者的情況下，這將十分有幫助。 服務會實作定義要求-回覆通訊模式的合約。
@@ -414,40 +414,40 @@ iisreset
 
 ##### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例
 
-1.  確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
+1. 確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。
 
-2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
+2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。
 
-3.  若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
+3. 若要在單一或跨電腦的組態中執行本範例，請使用下列指示。
 
 ##### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例
 
-1.  從範例安裝資料夾內以系統管理員權限執行 Visual Studio 2012 命令提示字元執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
+1. 從範例安裝資料夾內以系統管理員權限執行 Visual Studio 2012 命令提示字元執行 Setup.bat。 這會安裝執行範例所需的所有憑證。
 
     > [!NOTE]
     >  Setup.bat 批次檔被設計來從 Visual Studio 2012 命令提示字元執行。 路徑環境變數設定在 Visual Studio 2012 命令提示字元會指向包含 Setup.bat 指令碼所需的可執行檔的目錄。 當您完成範例時，請務必執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
-2.  從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
+2. 從 \client\bin 啟動 Client.exe。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-3.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+3. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ##### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1.  在服務機器上建立目錄。 使用網際網路資訊服務 (IIS) 管理工具，為這個目錄建立名為 servicemodelsamples 的虛擬應用程式。  
+1. 在服務機器上建立目錄。 使用網際網路資訊服務 (IIS) 管理工具，為這個目錄建立名為 servicemodelsamples 的虛擬應用程式。  
   
-2.  將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務機器上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。 同時將 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 檔案複製到服務機器。  
+2. 將 \inetpub\wwwroot\servicemodelsamples 中的服務程式檔複製至服務機器上的虛擬目錄中。 確定複製 \bin 子目錄中的檔案。 同時將 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 檔案複製到服務機器。  
   
-3.  在用戶端機器上為用戶端二進位碼檔案建立一個目錄。  
+3. 在用戶端機器上為用戶端二進位碼檔案建立一個目錄。  
   
-4.  將用戶端程式檔複製到用戶端機器上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
+4. 將用戶端程式檔複製到用戶端機器上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5.  在伺服器上，執行`setup.bat service`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+5. 在伺服器上，執行`setup.bat service`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-6.  編輯 Web.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 做為機器的完整網域名稱相同。  
+6. 編輯 Web.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 做為機器的完整網域名稱相同。  
   
-7.  從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
+7. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
-8.  在用戶端，執行`setup.bat client`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
+8. 在用戶端，執行`setup.bat client`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
   
 9. 在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 若要這麼做，請使用伺服器的完整網域名稱取代 localhost。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - forms [Windows Forms], displaying images
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 4dc7b973-afb1-4276-8322-20825af96655
-ms.openlocfilehash: 5aa8ff1efa045d52382cc5c24a0cae1f0f1bb510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6bdf7c3df0ffd97dd88a4c442a8a73593a0447ee
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127136"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336378"
 ---
 # <a name="how-to-load-a-picture-using-the-designer-windows-forms"></a>HOW TO：使用設計工具 (Windows Form) 載入圖片
 使用 Windows Form<xref:System.Windows.Forms.PictureBox>控制項，您可以載入並設定表單上顯示一張圖片在設計階段<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，以有效的圖片。 下表顯示可接受的檔案類型。  
@@ -31,17 +31,17 @@ ms.locfileid: "59127136"
   
 ### <a name="to-display-a-picture-at-design-time"></a>若要在設計階段顯示的圖片  
   
-1.  繪製<xref:System.Windows.Forms.PictureBox>表單上的控制項。  
+1. 繪製<xref:System.Windows.Forms.PictureBox>表單上的控制項。  
   
-2.  在 屬性 視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，然後按一下省略符號按鈕，顯示**開啟** 對話方塊。  
+2. 在 屬性 視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性，然後按一下省略符號按鈕，顯示**開啟** 對話方塊。  
   
-3.  如果您要尋找特定檔案類型 （例如，.gif 檔案），選取 [在**類型的檔案**] 方塊中。  
+3. 如果您要尋找特定檔案類型 （例如，.gif 檔案），選取 [在**類型的檔案**] 方塊中。  
   
-4.  選取您想要顯示的檔案。  
+4. 選取您想要顯示的檔案。  
   
 ### <a name="to-clear-the-picture-at-design-time"></a>若要在設計階段清除圖片  
   
-1.  在 **屬性**視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性並以滑鼠右鍵按一下左邊的映像物件的名稱會出現的小型縮圖影像。 選擇**重設**。  
+1. 在 **屬性**視窗中，選取<xref:System.Windows.Forms.PictureBox.Image%2A>屬性並以滑鼠右鍵按一下左邊的映像物件的名稱會出現的小型縮圖影像。 選擇**重設**。  
   
 ## <a name="see-also"></a>另請參閱
 

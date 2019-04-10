@@ -2,12 +2,12 @@
 title: 使用複雜型別的 AJAX 服務範例
 ms.date: 03/30/2017
 ms.assetid: 88242b99-4811-4cbe-8201-52ddf48fb174
-ms.openlocfilehash: 54d8c90f8317b69195401eda64e8a482aaf8460a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cde7e48d0f0c44d68266d60399ac197d322a42cc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128501"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342215"
 ---
 # <a name="ajax-service-using-complex-types-sample"></a>使用複雜型別的 AJAX 服務範例
 此範例示範如何使用 Windows Communication Foundation (WCF) 來建立 ASP.NET Asynchronous JavaScript 與 XML (AJAX) 服務會建立複雜型別的執行個體，並將它們傳送服務和用戶端做為 JavaScript Object Notation (JSON) 之間。 您可以從 Web 瀏覽器用戶端使用 JavaScript 程式碼存取 AJAX 服務。 這個範例是根據[基本 AJAX 服務](../../../../docs/framework/wcf/samples/basic-ajax-service.md)範例。  
@@ -51,11 +51,11 @@ function onSuccess(mathResult){
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  中所述，建置方案 ComplexTypeAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 中所述，建置方案 ComplexTypeAjaxService.sln[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  瀏覽至`http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx`（不要在瀏覽器從專案目錄開啟 ComplexTypeClientPage.aspx）。  
+3. 瀏覽至`http://localhost/ServiceModelSamples/ComplexTypeClientPage.aspx`（不要在瀏覽器從專案目錄開啟 ComplexTypeClientPage.aspx）。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

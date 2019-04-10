@@ -13,12 +13,12 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: f9fb5a0d2a23d2ad23aa3886ce25edb999b50678
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335715"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows Form 和 WPF 互通性輸入架構
 互通性之間[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]需要這兩種技術都有適當的鍵盤輸入的處理。 本主題會說明這些技術的實作方式鍵盤和訊息處理，以達到在混合式應用程式中的平順互通性。  
@@ -57,13 +57,13 @@ ms.locfileid: "59160975"
 ### <a name="surrogate-windows-forms-message-loop"></a>Surrogate Windows Form 訊息迴圈  
  根據預設，<xref:System.Windows.Forms.Application?displayProperty=nameWithType>類別包含的主要訊息迴圈[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式。 交互操作，期間[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]迴圈不會處理訊息的訊息。 因此，必須重新產生此邏輯。 處理常式<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage?displayProperty=nameWithType>事件執行下列步驟：  
   
-1.  篩選訊息使用<xref:System.Windows.Forms.IMessageFilter>介面。  
+1. 篩選訊息使用<xref:System.Windows.Forms.IMessageFilter>介面。  
   
-2.  呼叫<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法。  
+2. 呼叫<xref:System.Windows.Forms.Control.PreProcessMessage%2A?displayProperty=nameWithType>方法。  
   
-3.  平移，並視需要分派訊息。  
+3. 平移，並視需要分派訊息。  
   
-4.  如果沒有任何其他控制項處理訊息，請將訊息傳遞至裝載的控制項。  
+4. 如果沒有任何其他控制項處理訊息，請將訊息傳遞至裝載的控制項。  
   
 ### <a name="ikeyboardinputsink-implementation"></a>IKeyboardInputSink 實作  
  代理訊息迴圈處理鍵盤管理。 因此，<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法是唯一<xref:System.Windows.Interop.IKeyboardInputSink>需要在實作的成員<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別。  
@@ -72,11 +72,11 @@ ms.locfileid: "59160975"
   
  <xref:System.Windows.Forms.Integration.WindowsFormsHost>實作<xref:System.Windows.Interop.IKeyboardInputSink.TabInto%2A?displayProperty=nameWithType>方法會執行下列步驟：  
   
-1.  找尋第一個或最後一個[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]所包含的控制項<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項，可以接收焦點。 控制項的選擇取決於周遊資訊。  
+1. 找尋第一個或最後一個[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]所包含的控制項<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項，可以接收焦點。 控制項的選擇取決於周遊資訊。  
   
-2.  將焦點設定至控制項，並傳回`true`。  
+2. 將焦點設定至控制項，並傳回`true`。  
   
-3.  如果沒有控制項可以接收焦點，則會傳回`false`。  
+3. 如果沒有控制項可以接收焦點，則會傳回`false`。  
   
 ### <a name="windowsformshost-registration"></a>WindowsFormsHost 註冊  
  當視窗的控制代碼<xref:System.Windows.Forms.Integration.WindowsFormsHost>建立控制項時，<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制呼叫註冊的訊息迴圈其目前狀態的內部靜態方法。  

@@ -2,12 +2,12 @@
 title: 自訂服務裝載
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: daa6645440a9988fc148757948d7d24615d5a9f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59127787"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340928"
 ---
 # <a name="custom-service-host"></a>自訂服務裝載
 這個範例會示範如何使用 <xref:System.ServiceModel.ServiceHost> 類別的自訂衍生，以變更服務的執行階段行為。 這個方法會提供可重複使用替代方案，以便透過常用方法來設定大量服務。 此範例也會示範如何使用 <xref:System.ServiceModel.Activation.ServiceHostFactory> 類別，以便在網際網路資訊服務 (IIS) 或 Windows Process Activation Service (WAS) 裝載環境中使用自訂 ServiceHost。  
@@ -158,21 +158,21 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 #### <a name="to-observe-the-effect-of-the-custom-host"></a>若要觀察自訂主機的作用  
   
-1.  開啟服務的 Web.config 檔，並觀察沒有組態已明確啟用服務的中繼資料。  
+1. 開啟服務的 Web.config 檔，並觀察沒有組態已明確啟用服務的中繼資料。  
   
-2.  開啟服務的.svc 檔，並觀察其@ServiceHost指示詞包含 Factory 屬性，指定自訂 ServiceHostFactory 名稱。  
+2. 開啟服務的.svc 檔，並觀察其@ServiceHost指示詞包含 Factory 屬性，指定自訂 ServiceHostFactory 名稱。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  在建立方案後，執行 Setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。  
+3. 在建立方案後，執行 Setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。  
   
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
-5.  若要移除 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式，請執行 Cleanup.bat。  
+5. 若要移除 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式，請執行 Cleanup.bat。  
   
 ## <a name="see-also"></a>另請參閱
 

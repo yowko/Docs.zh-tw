@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], MaskedTextBox control [Windows Forms]
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
-ms.openlocfilehash: 0350d6e690d54d6176ede3b858f75829326b7556
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59090598"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342228"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>HOW TO：將資料繫結至 MaskedTextBox 控制項
 您可以繫結至資料<xref:System.Windows.Forms.MaskedTextBox>控制一樣，您可以為任何其他的 Windows Form 控制項。 不過，如果您在資料庫中的資料格式不符遮罩定義所預期的格式，您必須重新格式化資料。 下列程序示範如何使用執行此動作<xref:System.Windows.Forms.Binding.Format>並<xref:System.Windows.Forms.Binding.Parse>事件的<xref:System.Windows.Forms.Binding>類別，以顯示不同的電話號碼和電話做為單一的可編輯欄位的延伸模組的資料庫欄位。  
@@ -24,15 +24,15 @@ ms.locfileid: "59090598"
   
 ### <a name="to-bind-data-to-a-maskedtextbox-control"></a>若要將資料繫結至 MaskedTextBox 控制項  
   
-1.  建立新的 Windows Form 專案。  
+1. 建立新的 Windows Form 專案。  
   
-2.  將兩個<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中; 它們的名稱`FirstName`和`LastName`。  
+2. 將兩個<xref:System.Windows.Forms.TextBox>控制項拖曳至表單中; 它們的名稱`FirstName`和`LastName`。  
   
-3.  拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項拖曳至表單，其命名為`PhoneMask`。  
+3. 拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項拖曳至表單，其命名為`PhoneMask`。  
   
-4.  設定<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>的屬性`PhoneMask`至`(000) 000-0000 x9999`。  
+4. 設定<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>的屬性`PhoneMask`至`(000) 000-0000 x9999`。  
   
-5.  新增下列命名空間匯入至表單。  
+5. 新增下列命名空間匯入至表單。  
   
     ```csharp  
     using System.Data.SqlClient;  
@@ -42,7 +42,7 @@ ms.locfileid: "59090598"
     Imports System.Data.SqlClient  
     ```  
   
-6.  以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。 將此程式碼置於表單類別中的任意位置。  
+6. 以滑鼠右鍵按一下表單，然後選擇 **檢視程式碼**。 將此程式碼置於表單類別中的任意位置。  
   
     ```csharp  
     Binding currentBinding, phoneBinding;  
@@ -136,7 +136,7 @@ ms.locfileid: "59090598"
     End Sub  
     ```  
   
-7.  新增事件處理常式<xref:System.Windows.Forms.Binding.Format>並<xref:System.Windows.Forms.Binding.Parse>來結合和分離事件`PhoneNumber`並`Extension`從繫結欄位<xref:System.Data.DataSet>。  
+7. 新增事件處理常式<xref:System.Windows.Forms.Binding.Format>並<xref:System.Windows.Forms.Binding.Parse>來結合和分離事件`PhoneNumber`並`Extension`從繫結欄位<xref:System.Data.DataSet>。  
   
     ```csharp  
     private void phoneBinding_Format(Object sender, ConvertEventArgs e)  
@@ -204,7 +204,7 @@ ms.locfileid: "59090598"
     End Sub  
     ```  
   
-8.  新增兩個<xref:System.Windows.Forms.Button>控制項加入表單。 它們的名稱`previousButton`和`nextButton`。 按兩下每個按鈕以新增<xref:System.Windows.Forms.Control.Click>事件處理常式，並填入的事件處理常式，如下列程式碼範例所示。  
+8. 新增兩個<xref:System.Windows.Forms.Button>控制項加入表單。 它們的名稱`previousButton`和`nextButton`。 按兩下每個按鈕以新增<xref:System.Windows.Forms.Control.Click>事件處理常式，並填入的事件處理常式，如下列程式碼範例所示。  
   
     ```csharp  
     private void previousButton_Click(object sender, EventArgs e)  

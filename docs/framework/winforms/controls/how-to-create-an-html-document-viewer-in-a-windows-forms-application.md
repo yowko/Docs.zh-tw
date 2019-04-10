@@ -9,24 +9,24 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 0eecefd961aed5408e7d02769056dc551e604b02
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340746"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>HOW TO：在 Windows Forms 應用程式中建立 HTML 文件檢視器
 您可以使用<xref:System.Windows.Forms.WebBrowser>控制項來顯示和列印 HTML 文件，而不需提供網際網路網頁瀏覽器的完整功能。 當您想要利用 HTML 格式化功能，但不是希望使用者載入任意的網頁可能包含不受信任的 Web 控制項或潛在的惡意指令碼時，這非常有用。 您可能想要限制的功能<xref:System.Windows.Forms.WebBrowser>以這種方式，例如，控制，使用它作為 HTML 電子郵件檢視器，或提供您的應用程式中 HTML 格式的說明。  
   
 ### <a name="to-create-an-html-document-viewer"></a>若要建立 HTML 文件檢視器  
   
-1.  設定<xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>屬性，以`false`若要避免<xref:System.Windows.Forms.WebBrowser>控制項開啟放到它上面的檔案。  
+1. 設定<xref:System.Windows.Forms.WebBrowser.AllowWebBrowserDrop%2A>屬性，以`false`若要避免<xref:System.Windows.Forms.WebBrowser>控制項開啟放到它上面的檔案。  
   
      [!code-csharp[WebBrowserMisc#20](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#20)]
      [!code-vb[WebBrowserMisc#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#20)]  
   
-2.  設定<xref:System.Windows.Forms.WebBrowser.Url%2A>屬性顯示的初始檔案的位置。  
+2. 設定<xref:System.Windows.Forms.WebBrowser.Url%2A>屬性顯示的初始檔案的位置。  
   
      [!code-csharp[WebBrowserMisc#21](~/samples/snippets/csharp/VS_Snippets_Winforms/WebBrowserMisc/CS/WebBrowserMisc.cs#21)]
      [!code-vb[WebBrowserMisc#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/WebBrowserMisc/vb/WebBrowserMisc.vb#21)]  

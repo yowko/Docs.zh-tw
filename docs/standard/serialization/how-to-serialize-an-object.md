@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將物件序列化
+title: HOW TO：序列化物件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - serializing objects
 - objects, serializing steps
 ms.assetid: a1207d05-32b2-4953-8582-959607991227
-ms.openlocfilehash: 0924d8038edf70cd493b94c165edda607fc0027b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ff00151d7aaba27faeee1c9d315cac0c8afc0b0d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54600644"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336313"
 ---
-# <a name="how-to-serialize-an-object"></a>HOW TO：將物件序列化
+# <a name="how-to-serialize-an-object"></a>HOW TO：序列化物件
 若要序列化物件，首先建立要序列化的物件，並設定其公用屬性與欄位。 若要執行這項作業，您必須判斷 XML 資料流儲存 (無論是資料流或檔案) 的傳輸格式。 例如，若 XML 資料流必須以永久形式儲存，請建立 <xref:System.IO.FileStream> 物件。  
   
 > [!NOTE]
@@ -23,11 +23,11 @@ ms.locfileid: "54600644"
   
 ### <a name="to-serialize-an-object"></a>序列化物件  
   
-1.  建立物件並設定其公用欄位與屬性。  
+1. 建立物件並設定其公用欄位與屬性。  
   
-2.  使用物件的型別，建構 <xref:System.Xml.Serialization.XmlSerializer>。 如需詳細資訊，請參閱 <xref:System.Xml.Serialization.XmlSerializer> 類別建構函式。  
+2. 使用物件的型別，建構 <xref:System.Xml.Serialization.XmlSerializer>。 如需詳細資訊，請參閱 <xref:System.Xml.Serialization.XmlSerializer> 類別建構函式。  
   
-3.  呼叫 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 方法，產生 XML 資料流或物件之公用屬性與欄位的檔案表示方式。 下列範例將建立檔案。  
+3. 呼叫 <xref:System.Xml.Serialization.XmlSerializer.Serialize%2A> 方法，產生 XML 資料流或物件之公用屬性與欄位的檔案表示方式。 下列範例將建立檔案。  
   
     ```vb  
     Dim myObject As MySerializableClass = New MySerializableClass()  
@@ -53,4 +53,4 @@ ms.locfileid: "54600644"
 ## <a name="see-also"></a>另請參閱
 
 - [XML 序列化簡介](../../../docs/standard/serialization/introducing-xml-serialization.md)
-- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [HOW TO：將物件還原序列化](../../../docs/standard/serialization/how-to-deserialize-an-object.md)

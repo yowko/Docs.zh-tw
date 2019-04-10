@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 66ddd85d4f841edf9cabf338fbb66a8e2dda491a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59075157"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342852"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>HOW TO：使用色彩矩陣轉換單一色彩
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供<xref:System.Drawing.Image>和<xref:System.Drawing.Bitmap>來儲存及操作影像的類別。 <xref:System.Drawing.Image> 和<xref:System.Drawing.Bitmap>物件會儲存每個像素的色彩為 32 位元數字：8 位元用於紅色、 綠色、 藍色和 alpha 的每個。 每四個元件是從 0 到 255，0 代表不含濃度，表示完整濃度 255 的數字。 Alpha 元件指定色彩的透明度：0 是完全透明的而且完全不透明 255。  
@@ -26,9 +26,9 @@ ms.locfileid: "59075157"
   
  例如，假設您想要開始色彩 （0.2，0.0、 0.4，1.0），並套用下列轉換：  
   
-1.  雙重紅色元件  
+1. 雙重紅色元件  
   
-2.  加上紅色、 綠色和藍色元件 0.2  
+2. 加上紅色、 綠色和藍色元件 0.2  
   
  下列矩陣乘法會依列出的順序執行成對的轉換。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59075157"
   
  下列範例中的程式碼會使用下列步驟執行的重新著色：  
   
-1.  初始化<xref:System.Drawing.Imaging.ColorMatrix>物件。  
+1. 初始化<xref:System.Drawing.Imaging.ColorMatrix>物件。  
   
-2.  建立<xref:System.Drawing.Imaging.ImageAttributes>物件，並傳遞<xref:System.Drawing.Imaging.ColorMatrix>物件<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>物件。  
+2. 建立<xref:System.Drawing.Imaging.ImageAttributes>物件，並傳遞<xref:System.Drawing.Imaging.ColorMatrix>物件<xref:System.Drawing.Imaging.ImageAttributes.SetColorMatrix%2A>方法<xref:System.Drawing.Imaging.ImageAttributes>物件。  
   
-3.  傳遞<xref:System.Drawing.Imaging.ImageAttributes>物件至<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>物件。  
+3. 傳遞<xref:System.Drawing.Imaging.ImageAttributes>物件至<xref:System.Drawing.Graphics.DrawImage%2A>方法<xref:System.Drawing.Graphics>物件。  
   
  [!code-csharp[System.Drawing.RecoloringImages#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.RecoloringImages/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.RecoloringImages#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.RecoloringImages/VB/Class1.vb#21)]  

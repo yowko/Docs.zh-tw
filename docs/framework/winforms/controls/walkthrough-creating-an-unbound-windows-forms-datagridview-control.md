@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 375ac3bd3a178cc059239cf84209ebbf5d6aca11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220574"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343464"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>逐步解說：建立未繫結的 Windows Forms DataGridView 控制項
 您可能經常想要顯示不是來自資料庫的表格式資料。 例如，您可能要顯示字串的二維陣列的內容。 <xref:System.Windows.Forms.DataGridView>類別提供簡單且高度可自訂的方式來顯示資料，而不繫結到資料來源。 本逐步解說示範如何填入<xref:System.Windows.Forms.DataGridView>控制和管理的新增和刪除 「 未繫結 」 模式中的資料列。 根據預設，使用者可以加入新的資料列。 若要避免資料列加入，將<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>屬性是`false`。  
@@ -27,19 +27,19 @@ ms.locfileid: "59220574"
   
 #### <a name="to-use-an-unbound-datagridview-control"></a>若要使用未繫結的 DataGridView 控制項  
   
-1.  建立衍生自類別<xref:System.Windows.Forms.Form>且包含下列變數宣告和`Main`方法。  
+1. 建立衍生自類別<xref:System.Windows.Forms.Form>且包含下列變數宣告和`Main`方法。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#01)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#01](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#01)]  
     [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#02)]
     [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#02](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#02)]  
   
-2.  實作`SetupLayout`表單的類別定義，若要設定表單的版面配置中的方法。  
+2. 實作`SetupLayout`表單的類別定義，若要設定表單的版面配置中的方法。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#20)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#20](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#20)]  
   
-3.  建立`SetupDataGridView`方法來設定<xref:System.Windows.Forms.DataGridView>資料行和屬性。  
+3. 建立`SetupDataGridView`方法來設定<xref:System.Windows.Forms.DataGridView>資料行和屬性。  
   
      這個方法會先加入<xref:System.Windows.Forms.DataGridView>控制項加入表單的<xref:System.Windows.Forms.Control.Controls%2A>集合。 接下來，使用設定要顯示的資料行數目<xref:System.Windows.Forms.DataGridView.ColumnCount%2A>屬性。 預設資料行行首的樣式設定藉由設定<xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A>， <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>，並<xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>的屬性<xref:System.Windows.Forms.DataGridViewCellStyle>所傳回<xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>屬性。  
   
@@ -48,14 +48,14 @@ ms.locfileid: "59220574"
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#30)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#30](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#30)]  
   
-4.  建立`PopulateDataGridView`方法，以將資料列加入<xref:System.Windows.Forms.DataGridView>控制項。  
+4. 建立`PopulateDataGridView`方法，以將資料列加入<xref:System.Windows.Forms.DataGridView>控制項。  
   
      每個資料列都代表一首歌以及其相關聯的資訊。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/CS/simpleunbound.cs#40)]
      [!code-vb[System.Windows.Forms.DataGridViewSimpleUnbound#40](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewSimpleUnbound/VB/simpleunbound.vb#40)]  
   
-5.  搭配就地公用程式方法，您可以附加事件處理常式。  
+5. 搭配就地公用程式方法，您可以附加事件處理常式。  
   
      將處理**新增**並**刪除**buttons<xref:System.Windows.Forms.Control.Click>事件、 表單的<xref:System.Windows.Forms.Form.Load>事件，而<xref:System.Windows.Forms.DataGridView>控制項的<xref:System.Windows.Forms.DataGridView.CellFormatting>事件。  
   

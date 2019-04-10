@@ -1,15 +1,15 @@
 ---
-title: HOW TO：可靠工作階段內交換訊息
+title: HOW TO：在可靠的工作階段內交換訊息
 ms.date: 03/30/2017
 ms.assetid: 87cd0e75-dd2c-44c1-8da0-7b494bbdeaea
-ms.openlocfilehash: 145224655d1ec76c9deb5afc3c1a8ec9a1975f4f
-ms.sourcegitcommit: af0a22a4eb11bbcd33baec49150d551955b50a16
+ms.openlocfilehash: aad4eae870e3ba603c56a28a620fe8bc0e31ceb6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56260682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342982"
 ---
-# <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：可靠工作階段內交換訊息
+# <a name="how-to-exchange-messages-within-a-reliable-session"></a>HOW TO：在可靠的工作階段內交換訊息
 
 本主題概要說明透過其中一個系統提供的繫結啟用可靠工作階段 (此繫結支援此類工作階段，但非預設) 所需的步驟。 啟用可靠工作階段，命令式程式碼或是宣告式組態檔。 若要啟用可靠工作階段，並規定訊息依照傳送的相同順序送達，此程序會使用用戶端和服務組態檔。
 
@@ -37,7 +37,7 @@ ms.locfileid: "56260682"
    <%@ServiceHost language=c# Service="CalculatorService" %>
    ```
 
-1.  地方*Service.svc* Internet Information Services (IIS) 虛擬目錄中的檔案。
+1. 地方*Service.svc* Internet Information Services (IIS) 虛擬目錄中的檔案。
 
 ### <a name="configure-the-client-with-a-wshttpbinding-to-use-a-reliable-session"></a>透過 WSHttpBinding 使用可靠工作階段設定的用戶端
 

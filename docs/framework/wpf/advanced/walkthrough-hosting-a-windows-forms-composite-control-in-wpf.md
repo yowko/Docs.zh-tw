@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Windows Forms control in WPF [WPF]
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
-ms.openlocfilehash: f9e0477b2c186ea9b23886f460caf965a5db0244
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174352"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337847"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>逐步解說：將 Windows Forms 複合控制項裝載在 WPF 中
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地重複使用至少其中某些程式碼中您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式而不從頭重寫程式。 最常見的案例是當您有現有的 Windows Form 控制項。 在某些情況下，您甚至可能無法存取這些控制項的原始程式碼。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的程序這類控制項裝載於[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 例如，您可以使用[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]適用於大部分的程式設計時裝載您特殊<xref:System.Windows.Forms.DataGridView>控制項。  
@@ -44,17 +44,17 @@ ms.locfileid: "59174352"
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
   
-1.  啟動[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，然後開啟**新的專案** 對話方塊。  
+1. 啟動[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，然後開啟**新的專案** 對話方塊。  
   
-2.  在 Window 分類中，選取**Windows Form 控制項程式庫**範本。  
+2. 在 Window 分類中，選取**Windows Form 控制項程式庫**範本。  
   
-3.  將新專案命名為 `MyControls`。  
+3. 將新專案命名為 `MyControls`。  
   
-4.  針對位置，指定方便命名的最上層資料夾，例如`WpfHostingWindowsFormsControl`。 稍後，您會將主應用程式放在此資料夾中。  
+4. 針對位置，指定方便命名的最上層資料夾，例如`WpfHostingWindowsFormsControl`。 稍後，您會將主應用程式放在此資料夾中。  
   
-5.  按一下 [確定] 建立專案。 預設專案會包含名為的單一控制項`UserControl1`。  
+5. 按一下 [確定] 建立專案。 預設專案會包含名為的單一控制項`UserControl1`。  
   
-6.  在 [方案總管] 中，重新命名`UserControl1`至`MyControl1`。  
+6. 在 [方案總管] 中，重新命名`UserControl1`至`MyControl1`。  
   
  您的專案應該有下列系統 DLL 的參考。 如果預設未包括所有這些 DLL，則請將它們新增至專案。  
   
@@ -112,19 +112,19 @@ ms.locfileid: "59174352"
 ### <a name="giving-the-assembly-a-strong-name-and-building-the-assembly"></a>提供組件的強式名稱以及建置組件
  所要參考這個組件[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式，它必須具有強式名稱。 若要建立強式名稱，請使用 Sn.exe 建立金鑰檔並將它新增至您的專案。
 
-1.  開啟 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 命令提示字元。 若要這樣做，請按一下**開始** 功能表，然後選取**所有程式 /microsoft Visual Studio 2010/Visual Studio 工具/Visual Studio 命令提示字元**。 這會使用自訂的環境變數來啟動主控台視窗。
+1. 開啟 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 命令提示字元。 若要這樣做，請按一下**開始** 功能表，然後選取**所有程式 /microsoft Visual Studio 2010/Visual Studio 工具/Visual Studio 命令提示字元**。 這會使用自訂的環境變數來啟動主控台視窗。
 
-2.  在命令提示字元中，使用`cd`命令來移至您的專案資料夾。
+2. 在命令提示字元中，使用`cd`命令來移至您的專案資料夾。
 
-3.  執行下列命令，以產生名為 MyControls.snk 的金鑰檔。
+3. 執行下列命令，以產生名為 MyControls.snk 的金鑰檔。
 
     ```
     Sn.exe -k MyControls.snk
     ```
 
-4.  若要在專案中包含的金鑰檔，以滑鼠右鍵按一下方案總管] 中的專案名稱，然後按一下 [**屬性**。 在 專案設計工具中，按一下**Signing**索引標籤上，選取**簽署組件**核取方塊，然後瀏覽至您的金鑰檔。
+4. 若要在專案中包含的金鑰檔，以滑鼠右鍵按一下方案總管] 中的專案名稱，然後按一下 [**屬性**。 在 專案設計工具中，按一下**Signing**索引標籤上，選取**簽署組件**核取方塊，然後瀏覽至您的金鑰檔。
 
-5.  建置方案。 組置將會產生名為 MyControls.dll 的 DLL。
+5. 建置方案。 組置將會產生名為 MyControls.dll 的 DLL。
 
 ## <a name="implementing-the-wpf-host-application"></a>實作 WPF 主應用程式
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]裝載應用程式會使用<xref:System.Windows.Forms.Integration.WindowsFormsHost>控制項來裝載`MyControl1`。 應用程式會處理`OnButtonClick`事件，以接收來自控制項的資料。 它也會有的選項按鈕，可讓您變更某些控制項的屬性，從集合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]應用程式。 下圖顯示已完成的應用程式。
@@ -136,25 +136,25 @@ ms.locfileid: "59174352"
 ### <a name="creating-the-project"></a>建立專案
  啟動專案：
 
-1.  開啟[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，然後選取**新的專案**。
+1. 開啟[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，然後選取**新的專案**。
 
-2.  在 Window 分類中，選取**WPF 應用程式**範本。
+2. 在 Window 分類中，選取**WPF 應用程式**範本。
 
-3.  將新專案命名為 `WpfHost`。
+3. 將新專案命名為 `WpfHost`。
 
-4.  針對位置，指定包含 MyControls 專案的相同最上層資料夾。
+4. 針對位置，指定包含 MyControls 專案的相同最上層資料夾。
 
-5.  按一下 [確定] 建立專案。
+5. 按一下 [確定] 建立專案。
 
  您也需要將參考加入至包含的 DLL`MyControl1`和其他組件。
 
-1.  以滑鼠右鍵按一下方案總管 中的專案名稱，然後選取**加入參考**。
+1. 以滑鼠右鍵按一下方案總管 中的專案名稱，然後選取**加入參考**。
 
-2.  按一下 **瀏覽**索引標籤，然後瀏覽至包含 MyControls.dll 的資料夾。 在此逐步解說中，這個資料夾是 MyControls\bin\Debug。
+2. 按一下 **瀏覽**索引標籤，然後瀏覽至包含 MyControls.dll 的資料夾。 在此逐步解說中，這個資料夾是 MyControls\bin\Debug。
 
-3.  選取 MyControls.dll，然後再按一下**確定**。
+3. 選取 MyControls.dll，然後再按一下**確定**。
 
-4.  加入名為 WindowsFormsIntegration.dll 之 WindowsFormsIntegration 組件的參考。
+4. 加入名為 WindowsFormsIntegration.dll 之 WindowsFormsIntegration 組件的參考。
 
 ### <a name="implementing-the-basic-layout"></a>實作基本版面配置
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]主應用程式的應用程式在 MainWindow.xaml 中實作。 此檔案包含[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]定義版面配置，並裝載在 Windows Form 控制項的標記。 應用程式分為三個區域：

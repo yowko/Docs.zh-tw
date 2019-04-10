@@ -15,12 +15,12 @@ helpviewer_keywords:
 - snaplines
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
-ms.openlocfilehash: 22225c97ec082022cb609e47d3cafcdcc052143d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333999"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>HOW TO：定位 Windows Forms 的控制項
 若要調整控制項的位置，使用 Windows Form 設計工具中，或指定<xref:System.Windows.Forms.Control.Location%2A>屬性。  
@@ -37,9 +37,9 @@ ms.locfileid: "59132791"
   
 ### <a name="to-position-a-control-using-the-properties-window"></a>若要將使用 [屬性] 視窗的控制項  
   
-1.  按一下您要放置的控制項。  
+1. 按一下您要放置的控制項。  
   
-2.  在 [**屬性**] 視窗中，型別值<xref:System.Windows.Forms.Control.Location%2A>屬性，以逗號分隔，其容器內控制項的位置。  
+2. 在 [**屬性**] 視窗中，型別值<xref:System.Windows.Forms.Control.Location%2A>屬性，以逗號分隔，其容器內控制項的位置。  
   
      第一個數字 (X) 是從容器; 左框線的距離第二個數字 (Y) 是從容器工作區，以像素表示上框線的距離。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59132791"
   
 ### <a name="to-position-a-control-programmatically"></a>若要以程式設計方式調整控制項的位置  
   
-1.  設定<xref:System.Windows.Forms.Control.Location%2A>屬性來控制<xref:System.Drawing.Point>。  
+1. 設定<xref:System.Windows.Forms.Control.Location%2A>屬性來控制<xref:System.Drawing.Point>。  
   
     ```vb  
     Button1.Location = New Point(100, 100)  
@@ -62,7 +62,7 @@ ms.locfileid: "59132791"
     button1->Location = Point(100, 100);  
     ```  
   
-2.  變更控制項的位置的 X 座標使用<xref:System.Windows.Forms.Control.Left%2A>子屬性。  
+2. 變更控制項的位置的 X 座標使用<xref:System.Windows.Forms.Control.Left%2A>子屬性。  
   
     ```vb  
     Button1.Left = 300  
@@ -78,7 +78,7 @@ ms.locfileid: "59132791"
   
 ### <a name="to-increment-a-controls-location-programmatically"></a>若要以程式設計方式遞增控制項的位置  
   
-1.  設定<xref:System.Windows.Forms.Control.Left%2A>遞增控制項的 X 座標的子屬性。  
+1. 設定<xref:System.Windows.Forms.Control.Left%2A>遞增控制項的 X 座標的子屬性。  
   
     ```vb  
     Button1.Left += 200  

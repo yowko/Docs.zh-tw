@@ -6,12 +6,12 @@ helpviewer_keywords:
 - animation [WPF], size changes with key frames
 - size changes [WPF], animating with key frames
 ms.assetid: 86bd2950-d4c9-4ec4-aa8d-7dc3ccadded4
-ms.openlocfilehash: a7adb16297f50e191628344d7e25d41f38a97861
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0629b6600444bd172af451fd7e970bff894d8047
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59180228"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342358"
 ---
 # <a name="how-to-animate-size-changes-by-using-key-frames"></a>HOW TO：使用主要畫面格建立大小變更的動畫
 這個範例示範如何使用主要畫面格建立大小變更的動畫。  
@@ -19,11 +19,11 @@ ms.locfileid: "59180228"
 ## <a name="example"></a>範例  
  下列範例會使用<xref:System.Windows.Media.Animation.SizeAnimationUsingKeyFrames>類別以動畫顯示<xref:System.Windows.Media.ArcSegment.Size%2A>屬性<xref:System.Windows.Media.ArcSegment>。 這個動畫會以下列方式使用三個主要畫面格：  
   
-1.  在動畫的前半秒，期間使用的執行個體<xref:System.Windows.Media.Animation.LinearSizeKeyFrame>類別來逐漸增加弧線的大小。線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearSizeKeyFrame>建立平滑的線性轉換值之間。  
+1. 在動畫的前半秒，期間使用的執行個體<xref:System.Windows.Media.Animation.LinearSizeKeyFrame>類別來逐漸增加弧線的大小。線性主要畫面格喜歡<xref:System.Windows.Media.Animation.LinearSizeKeyFrame>建立平滑的線性轉換值之間。  
   
-2.  在下一步結尾半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>類別來突然增加弧線的大小。特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>建立突然跳躍點之間的值，也就是，突然發生大小變更，而不是微量。  
+2. 在下一步結尾半秒，使用的執行個體<xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>類別來突然增加弧線的大小。特定主要畫面格喜歡<xref:System.Windows.Media.Animation.DiscreteSizeKeyFrame>建立突然跳躍點之間的值，也就是，突然發生大小變更，而不是微量。  
   
-3.  最後兩秒，透過使用的執行個體<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>類別來增加弧線的大小。曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A>屬性。 在此範例中，弧線的大小一開始會緩慢增加，然後在接近時間區段結尾時以指數方式增加。  
+3. 最後兩秒，透過使用的執行個體<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>類別來增加弧線的大小。曲線主要畫面格喜歡<xref:System.Windows.Media.Animation.SplineSizeKeyFrame>變數之間建立轉換的值根據<xref:System.Windows.Media.Animation.SplineSizeKeyFrame.KeySpline%2A>屬性。 在此範例中，弧線的大小一開始會緩慢增加，然後在接近時間區段結尾時以指數方式增加。  
   
  [!code-xaml[keyframes_snip#SizeAnimationUsingKeyFramesWholePage](~/samples/snippets/xaml/VS_Snippets_Wpf/keyframes_snip/XAML/SizeAnimationUsingKeyFramesExample.xaml#sizeanimationusingkeyframeswholepage)]  
   

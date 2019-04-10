@@ -1,5 +1,5 @@
 ---
-title: HOW TO：格式化 Windows Form DataGrid 控制項使用設計工具
+title: HOW TO：使用設計工具格式化 Windows Forms DataGrid 控制項
 ms.date: 03/30/2017
 helpviewer_keywords:
 - columns [Windows Forms], DataGrid controls
@@ -9,18 +9,17 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: 92939f1bdddaca1d743116a4ae4ee9da657abf19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333570"
 ---
-# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：格式化 Windows Form DataGrid 控制項使用設計工具
+# <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具格式化 Windows Forms DataGrid 控制項
 
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
+>  <xref:System.Windows.Forms.DataGridView> 控制項會取代 <xref:System.Windows.Forms.DataGrid> 控制項並加入其他功能，不過您也可以選擇保留 <xref:System.Windows.Forms.DataGrid> 控制項，以提供回溯相容性及未來使用。 如需詳細資訊，請參閱 [Windows Forms DataGridView 和 DataGrid 控制項之間的差異](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)。  
   
  將不同的色彩套用至各個部分<xref:System.Windows.Forms.DataGrid>控制項可以協助讓您更輕鬆地閱讀及解譯中的資訊。 色彩可以套用至資料列和資料行中。 資料列和資料行也可以隱藏或顯示您自行斟酌。  
   
@@ -41,9 +40,9 @@ ms.locfileid: "57725359"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>若要建立的預設樣式的 DataGrid 控制項  
   
-1.  選取 <xref:System.Windows.Forms.DataGrid> 控制項。  
+1. 選取 <xref:System.Windows.Forms.DataGrid> 控制項。  
   
-2.  在 **屬性**視窗中，設定下列屬性，適當地。  
+2. 在 **屬性**視窗中，設定下列屬性，適當地。  
   
     |屬性|描述|  
     |--------------|-----------------|  
@@ -78,21 +77,21 @@ ms.locfileid: "57725359"
 
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-at-design-time"></a>若要在設計階段設定資料表的資料表和資料行樣式
 
-1.  選取<xref:System.Windows.Forms.DataGrid>您表單上的控制項。
+1. 選取<xref:System.Windows.Forms.DataGrid>您表單上的控制項。
 
-2.  在 [**屬性**視窗中，選取<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性，然後按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton"))] 按鈕。
+2. 在 [**屬性**視窗中，選取<xref:System.Windows.Forms.DataGrid.TableStyles%2A>屬性，然後按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton"))] 按鈕。
 
-3.  在 [ **Styl 集合編輯器**] 對話方塊中，按一下**新增**若要將資料表樣式加入至集合。
+3. 在 [ **Styl 集合編輯器**] 對話方塊中，按一下**新增**若要將資料表樣式加入至集合。
 
      具有**Styl 集合編輯器**、 您可以新增和移除資料表樣式，設定顯示和配置屬性集對應名稱的表格樣式。
 
-4.  設定<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>每個資料表樣式的對應名稱的屬性。
+4. 設定<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>每個資料表樣式的對應名稱的屬性。
 
      對應名稱用來指定哪個資料表樣式應使用哪一個資料表。
 
-5.  在  **Styl 集合編輯器**，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")).
+5. 在  **Styl 集合編輯器**，選取<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>屬性，然後按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")).
 
-6.  在  **DataGridColumnStyle 集合編輯器**對話方塊方塊中，將資料行樣式新增至您所建立的表格樣式。
+6. 在  **DataGridColumnStyle 集合編輯器**對話方塊方塊中，將資料行樣式新增至您所建立的表格樣式。
 
      具有**DataGridColumnStyle 集合編輯器**、 您可以加入和移除資料行樣式，設定顯示和配置的屬性，以及設定對應的名稱和資料行的資料格式化的字串。
 
@@ -104,5 +103,5 @@ ms.locfileid: "57725359"
 - <xref:System.Windows.Forms.GridTableStylesCollection>
 - <xref:System.Windows.Forms.GridColumnStylesCollection>
 - <xref:System.Windows.Forms.DataGrid>
-- [如何：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
+- [HOW TO：刪除或隱藏 Windows Forms DataGrid 控制項中的資料行](how-to-delete-or-hide-columns-in-the-windows-forms-datagrid-control.md)
 - [DataGrid 控制項](datagrid-control-windows-forms.md)

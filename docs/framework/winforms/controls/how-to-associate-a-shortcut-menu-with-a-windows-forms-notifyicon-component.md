@@ -10,12 +10,12 @@ helpviewer_keywords:
 - NotifyIcon component [Windows Forms], associating shortcut menus
 - shortcut menus [Windows Forms], for background processes
 ms.assetid: d68f3926-08d3-4f7d-949f-1981b29cf188
-ms.openlocfilehash: 702a848631ce45c0efcb8eadfdf64074b454ac7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f2a086cc25eb6996b2643742a887bccf481916d6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59097986"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337054"
 ---
 # <a name="how-to-associate-a-shortcut-menu-with-a-windows-forms-notifyicon-component"></a>HOW TO：建立捷徑功能表與 Windows Forms NotifyIcon 元件的關聯
 > [!NOTE]
@@ -28,23 +28,23 @@ ms.locfileid: "59097986"
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-at-design-time"></a>若要使用 NotifyIcon 元件關聯的捷徑功能表，在設計階段  
   
-1.  新增<xref:System.Windows.Forms.NotifyIcon>元件至表單，以及設定重要的屬性，例如<xref:System.Windows.Forms.NotifyIcon.Icon%2A>和<xref:System.Windows.Forms.NotifyIcon.Visible%2A>屬性。  
+1. 新增<xref:System.Windows.Forms.NotifyIcon>元件至表單，以及設定重要的屬性，例如<xref:System.Windows.Forms.NotifyIcon.Icon%2A>和<xref:System.Windows.Forms.NotifyIcon.Visible%2A>屬性。  
   
      如需詳細資訊，請參閱[如何：新增應用程式圖示加入工作列使用 Windows Form NotifyIcon 元件](app-icons-to-the-taskbar-with-wf-notifyicon.md)。  
   
-2.  新增<xref:System.Windows.Forms.ContextMenu>元件至您的 Windows 表單。  
+2. 新增<xref:System.Windows.Forms.ContextMenu>元件至您的 Windows 表單。  
   
      加入功能表項目代表您想要在執行階段提供之命令的捷徑功能表。 這也是功能表增強功能加入這些功能表項目，例如存取金鑰的好時機。  
   
-3.  設定<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>屬性<xref:System.Windows.Forms.NotifyIcon>元件至您新增的捷徑功能表。  
+3. 設定<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>屬性<xref:System.Windows.Forms.NotifyIcon>元件至您新增的捷徑功能表。  
   
      設定這個屬性，按一下工作列上的圖示時，將會顯示快顯功能表。  
   
 ### <a name="to-associate-a-shortcut-menu-with-the-notifyicon-component-programmatically"></a>若要以程式設計方式使用 NotifyIcon 元件關聯的捷徑功能表  
   
-1.  建立的執行個體<xref:System.Windows.Forms.NotifyIcon>類別和<xref:System.Windows.Forms.ContextMenu>類別，且任何屬性設定所需的應用程式 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A>並<xref:System.Windows.Forms.NotifyIcon.Visible%2A>屬性<xref:System.Windows.Forms.NotifyIcon>元件，功能表項目<xref:System.Windows.Forms.ContextMenu>元件）。  
+1. 建立的執行個體<xref:System.Windows.Forms.NotifyIcon>類別和<xref:System.Windows.Forms.ContextMenu>類別，且任何屬性設定所需的應用程式 (<xref:System.Windows.Forms.NotifyIcon.Icon%2A>並<xref:System.Windows.Forms.NotifyIcon.Visible%2A>屬性<xref:System.Windows.Forms.NotifyIcon>元件，功能表項目<xref:System.Windows.Forms.ContextMenu>元件）。  
   
-2.  設定<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>屬性<xref:System.Windows.Forms.NotifyIcon>元件至您新增的捷徑功能表。  
+2. 設定<xref:System.Windows.Forms.NotifyIcon.ContextMenu%2A>屬性<xref:System.Windows.Forms.NotifyIcon>元件至您新增的捷徑功能表。  
   
      設定這個屬性，按一下工作列上的圖示時，將會顯示快顯功能表。  
   

@@ -2,19 +2,19 @@
 title: HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 243cfafc-9eaa-4354-a9df-d329f1d39913
-ms.openlocfilehash: efd8ebdcc12c2941753b6811028d73655167c2f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0083c49c344a45a977793254d8062f2a6aa155a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341266"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-visual-basic"></a>HOW TO：合併和比較字串集合 (LINQ) (Visual Basic)
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
   
-1.  將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
+1. 將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "58828962"
     Garcia, Debra  
     ```  
   
-2.  將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。 請注意兩個檔案有部分名稱相同。  
+2. 將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。 請注意兩個檔案有部分名稱相同。  
   
     ```  
     Liu, Jinghao  
@@ -168,4 +168,4 @@ End Class
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)

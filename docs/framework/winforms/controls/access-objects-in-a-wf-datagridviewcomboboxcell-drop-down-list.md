@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 221774895fa5867ad6ec870f7e293c9366e442f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59080783"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334272"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>HOW TO：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
 像是<xref:System.Windows.Forms.ComboBox>控制<xref:System.Windows.Forms.DataGridViewComboBoxColumn>和<xref:System.Windows.Forms.DataGridViewComboBoxCell>類型可讓您加入他們的下拉式清單中的任意物件。 利用此功能，您可以表示複雜的狀態，下拉式清單中，而不必將對應的物件儲存在個別的集合中。  
@@ -27,17 +27,17 @@ ms.locfileid: "59080783"
   
 ### <a name="to-add-business-objects-to-the-drop-down-list"></a>若要加入下拉式清單中的商務物件  
   
-1.  建立新<xref:System.Windows.Forms.DataGridViewComboBoxColumn>並填入其<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>集合。 或者，您可以設定資料行<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>的商務物件集合的屬性。 在此情況下，不過，您無法將 「 未指派 」 加入下拉式清單而不需建立對應的商務物件在集合中。  
+1. 建立新<xref:System.Windows.Forms.DataGridViewComboBoxColumn>並填入其<xref:System.Windows.Forms.DataGridViewComboBoxColumn.Items%2A>集合。 或者，您可以設定資料行<xref:System.Windows.Forms.DataGridViewComboBoxColumn.DataSource%2A>的商務物件集合的屬性。 在此情況下，不過，您無法將 「 未指派 」 加入下拉式清單而不需建立對應的商務物件在集合中。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#110)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#110](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#110)]  
   
-2.  設定 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 屬性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 表示要顯示在下拉式清單中的商務物件的屬性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 表示傳回的商務物件的參考的屬性。  
+2. 設定 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 和 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 屬性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.DisplayMember%2A> 表示要顯示在下拉式清單中的商務物件的屬性。 <xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A> 表示傳回的商務物件的參考的屬性。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#115)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#115](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#115)]  
   
-3.  請確定您的商務物件型別包含屬性，可傳回目前的執行個體的參考。 這個屬性必須與指派給的值命名為<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>上一個步驟。  
+3. 請確定您的商務物件型別包含屬性，可傳回目前的執行個體的參考。 這個屬性必須與指派給的值命名為<xref:System.Windows.Forms.DataGridViewComboBoxColumn.ValueMember%2A>上一個步驟。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#310)]
      [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#310](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#310)]  
@@ -54,11 +54,11 @@ ms.locfileid: "59080783"
   
  若要檢視此範例中的行為，請執行下列步驟：  
   
-1.  變更中的指派`Assigned To`藉由從下拉式清單中選取不同的值，或按下 CTRL + 0，在下拉式方塊儲存格的資料行。  
+1. 變更中的指派`Assigned To`藉由從下拉式清單中選取不同的值，或按下 CTRL + 0，在下拉式方塊儲存格的資料行。  
   
-2.  按一下 `Generate Report`來顯示目前的指派。 此示範中的變更`Assigned To`資料行便會自動更新`tasks`集合。  
+2. 按一下 `Generate Report`來顯示目前的指派。 此示範中的變更`Assigned To`資料行便會自動更新`tasks`集合。  
   
-3.  按一下 `Request Status`按鈕，以呼叫`RequestStatus`方法在目前的`Employee`物件，該資料列。 這會示範已成功擷取選取的物件。  
+3. 按一下 `Request Status`按鈕，以呼叫`RequestStatus`方法在目前的`Employee`物件，該資料列。 這會示範已成功擷取選取的物件。  
   
  [!code-csharp[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/CS/form1.cs#000)]
  [!code-vb[System.Windows.Forms.DataGridViewComboBoxObjectBinding#000](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewComboBoxObjectBinding/vb/form1.vb#000)]  

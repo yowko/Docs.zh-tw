@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 873b6120929c8c7cf67d53d8f793964361ae88b8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45964700"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341760"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>逐步解說：建立密碼編譯應用程式
 本逐步解說示範如何加密和解密內容。 程式碼範例是針對 Windows Form 應用程式所設計。 此應用程式不會示範真實世界案例，例如使用智慧卡。 相反地，它會示範加密和解密的基本概念。  
@@ -50,7 +50,7 @@ ms.locfileid: "45964700"
   
 -   <xref:System.IO> 和 <xref:System.Security.Cryptography> 命名空間的參考。  
   
-## <a name="creating-a-windows-forms-application"></a>建立 Windows Form 應用程式  
+## <a name="creating-a-windows-forms-application"></a>建立 Windows Forms 應用程式  
  在此逐步解說中的大部分程式碼範例，已設計為按鈕控制項的事件處理常式。 下表列出範例應用程式所需的控制項，及其必要名稱以符合程式碼範例。  
   
 |控制項|名稱|文字屬性 (如有需要)|  
@@ -88,15 +88,15 @@ ms.locfileid: "45964700"
   
  `EncryptFile` 方法會執行下列動作：  
   
-1.  建立 <xref:System.Security.Cryptography.RijndaelManaged> 對稱演算法來加密內容。  
+1. 建立 <xref:System.Security.Cryptography.RijndaelManaged> 對稱演算法來加密內容。  
   
-2.  建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來加密 <xref:System.Security.Cryptography.RijndaelManaged> 金鑰。  
+2. 建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來加密 <xref:System.Security.Cryptography.RijndaelManaged> 金鑰。  
   
-3.  使用 <xref:System.Security.Cryptography.CryptoStream> 物件以讀取及加密原始程式檔的 <xref:System.IO.FileStream> (以位元組區塊為單位) 成為加密檔案的目的地 <xref:System.IO.FileStream> 物件。  
+3. 使用 <xref:System.Security.Cryptography.CryptoStream> 物件以讀取及加密原始程式檔的 <xref:System.IO.FileStream> (以位元組區塊為單位) 成為加密檔案的目的地 <xref:System.IO.FileStream> 物件。  
   
-4.  判斷加密金鑰和 IV 的長度，並建立其長度值的位元組陣列。  
+4. 判斷加密金鑰和 IV 的長度，並建立其長度值的位元組陣列。  
   
-5.  將金鑰、IV 和其長度值寫入加密套件。  
+5. 將金鑰、IV 和其長度值寫入加密套件。  
   
  加密套件使用下列格式：  
   
@@ -127,15 +127,15 @@ ms.locfileid: "45964700"
   
  `Decrypt` 方法會執行下列動作：  
   
-1.  建立 <xref:System.Security.Cryptography.RijndaelManaged> 對稱演算法來解密內容。  
+1. 建立 <xref:System.Security.Cryptography.RijndaelManaged> 對稱演算法來解密內容。  
   
-2.  讀取加密套件的 <xref:System.IO.FileStream> 前八個位元組到位元組陣列，以取得加密金鑰和 IV 的長度。  
+2. 讀取加密套件的 <xref:System.IO.FileStream> 前八個位元組到位元組陣列，以取得加密金鑰和 IV 的長度。  
   
-3.  從加密套件將金鑰和 IV 擷取到位元組陣列。  
+3. 從加密套件將金鑰和 IV 擷取到位元組陣列。  
   
-4.  建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來解密 <xref:System.Security.Cryptography.RijndaelManaged> 金鑰。  
+4. 建立 <xref:System.Security.Cryptography.RSACryptoServiceProvider> 物件來解密 <xref:System.Security.Cryptography.RijndaelManaged> 金鑰。  
   
-5.  使用 <xref:System.Security.Cryptography.CryptoStream> 物件以讀取及解密 <xref:System.IO.FileStream> 加密套件的加密文字區段 (以位元組區域為單位 ) 到解密檔案的 <xref:System.IO.FileStream> 物件。 完成後，就會解密完成。  
+5. 使用 <xref:System.Security.Cryptography.CryptoStream> 物件以讀取及解密 <xref:System.IO.FileStream> 加密套件的加密文字區段 (以位元組區域為單位 ) 到解密檔案的 <xref:System.IO.FileStream> 物件。 完成後，就會解密完成。  
   
  加入下列程式碼做為 `Decrypt File` 按鈕的 `Click` 事件處理常式。  
   
@@ -182,34 +182,34 @@ ms.locfileid: "45964700"
   
 #### <a name="to-create-keys-encrypt-and-decrypt"></a>建立金鑰、加密和解密  
   
-1.  按一下 `Create Keys` 按鈕。 標籤會顯示金鑰名稱，並顯示它是完整金鑰組。  
+1. 按一下 `Create Keys` 按鈕。 標籤會顯示金鑰名稱，並顯示它是完整金鑰組。  
   
-2.  按一下 `Export Public Key` 按鈕。 請注意匯出公開金鑰參數時，不會變更目前的金鑰。  
+2. 按一下 `Export Public Key` 按鈕。 請注意匯出公開金鑰參數時，不會變更目前的金鑰。  
   
-3.  按一下 `Encrypt File` 按鈕，然後選取檔案。  
+3. 按一下 `Encrypt File` 按鈕，然後選取檔案。  
   
-4.  按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。  
+4. 按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。  
   
-5.  檢查剛才解密的檔案。  
+5. 檢查剛才解密的檔案。  
   
-6.  關閉應用程式，然後重新啟動，以便在下一個案例中測試擷取保存的金鑰容器。  
+6. 關閉應用程式，然後重新啟動，以便在下一個案例中測試擷取保存的金鑰容器。  
   
 #### <a name="to-encrypt-using-the-public-key"></a>使用公開金鑰加密  
   
-1.  按一下 `Import Public Key` 按鈕。 標籤會顯示金鑰名稱，並顯示它只是公開金鑰。  
+1. 按一下 `Import Public Key` 按鈕。 標籤會顯示金鑰名稱，並顯示它只是公開金鑰。  
   
-2.  按一下 `Encrypt File` 按鈕，然後選取檔案。  
+2. 按一下 `Encrypt File` 按鈕，然後選取檔案。  
   
-3.  按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會失敗，因為您必須擁有私密金鑰才能解密。  
+3. 按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會失敗，因為您必須擁有私密金鑰才能解密。  
   
  這個案例示範了只具有公用金鑰來為另一個人加密檔案。 通常那個人只會提供您公開金鑰，並且保留私密金鑰來進行解密。  
   
 #### <a name="to-decrypt-using-the-private-key"></a>使用私密金鑰解密  
   
-1.  按一下 `Get Private Key` 按鈕。 標籤會顯示金鑰名稱，並顯示它是否為完整金鑰組。  
+1. 按一下 `Get Private Key` 按鈕。 標籤會顯示金鑰名稱，並顯示它是否為完整金鑰組。  
   
-2.  按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會成功，因為您有完整金鑰組可以解密。  
+2. 按一下 `Decrypt File` 按鈕，然後選取剛才加密的檔案。 這將會成功，因為您有完整金鑰組可以解密。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [The signature is valid](../../../docs/standard/security/cryptographic-services.md)
+- [密碼編譯服務](../../../docs/standard/security/cryptographic-services.md)

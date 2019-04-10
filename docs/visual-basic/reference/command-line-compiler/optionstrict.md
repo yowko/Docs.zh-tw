@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: 5479c312ae7eb7a166803a6e1238806aae9bd656
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835657"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336079"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 會強制執行嚴格類型語意來限制隱含類型轉換。  
@@ -39,11 +39,11 @@ ms.locfileid: "58835657"
   
 ### <a name="to-set--optionstrict-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定-optionstrict  
   
-1.  在 **方案總管**中選取專案。 在 **專案**功能表上，按一下 **屬性。**   
+1. 在 **方案總管**中選取專案。 在 **專案**功能表上，按一下 **屬性。**   
   
-2.  按一下 [編譯] 索引標籤。  
+2. 按一下 [編譯] 索引標籤。  
   
-3.  修改中的值**Option Strict**  方塊中。  
+3. 修改中的值**Option Strict**  方塊中。  
   
 ### <a name="to-set--optionstrict-programmatically"></a>以程式設計方式設定-optionstrict  
   
@@ -65,5 +65,5 @@ vbc -optionstrict+ test.vb
 - [-nowarn](../../../visual-basic/reference/command-line-compiler/nowarn.md)
 - [-warnaserror (Visual Basic)](../../../visual-basic/reference/command-line-compiler/warnaserror.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [Option Strict 陳述式](../../../visual-basic/language-reference/statements/option-strict-statement.md)
+- [Long](../../../visual-basic/language-reference/statements/option-strict-statement.md)
 - [選項對話方塊、專案、Visual Basic 預設值](/visualstudio/ide/reference/visual-basic-defaults-projects-options-dialog-box)

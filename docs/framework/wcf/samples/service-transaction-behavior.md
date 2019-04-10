@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: c4082c7f8ebea54a9abf2f80c992dc871f8408ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183634"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339940"
 ---
 # <a name="service-transaction-behavior"></a>服務異動行為
 這個範例會示範如何使用用戶端協調的異動，以及設定 ServiceBehaviorAttribute 和 OperationBehaviorAttribute，以控制服務異動行為。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)，實作計算機服務，但經過擴充，來維護資料庫資料表和具狀態執行總數計算機作業中所執行作業的伺服器記錄檔。 對伺服器記錄資料表的持續性寫入會依用戶端協調的異動結果而定，如果用戶端異動沒有完成，Web 服務異動就會確保資料庫的更新並未經過認可。  
@@ -206,17 +206,17 @@ Creating new service instance...
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  確定您已安裝 SQL Server 2005 Express Edition 或 SQL Server 2005。 在服務的 App.config 檔案中，可能會設定資料庫 `connectionString`，或者可能將 appSettings 的 `usingSql` 值設定為 `false` 來停用資料庫互動。  
+1. 確定您已安裝 SQL Server 2005 Express Edition 或 SQL Server 2005。 在服務的 App.config 檔案中，可能會設定資料庫 `connectionString`，或者可能將 appSettings 的 `usingSql` 值設定為 `false` 來停用資料庫互動。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
  如果您是跨電腦執行範例，您必須設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以啟用網路交易流程，並使用 WsatConfig.exe 工具來啟用 Windows Communication Foundation (WCF) 交易的網路支援。  
   
 ### <a name="to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-to-support-running-the-sample-across-machines"></a>若要設定 Microsoft Distributed Transaction Coordinator (MSDTC) 以支援跨電腦執行範例  
   
-1.  在服務電腦上，設定 MSDTC 以允許傳入網路交易。  
+1. 在服務電腦上，設定 MSDTC 以允許傳入網路交易。  
   
     1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   
@@ -230,7 +230,7 @@ Creating new service instance...
   
     6.  按一下 [確定]  關閉對話方塊。  
   
-2.  在服務電腦和用戶端電腦上，設定 [Windows 防火牆] 將 Microsoft Distributed Transaction Coordinator (MSDTC) 加入預期應用程式清單中：  
+2. 在服務電腦和用戶端電腦上，設定 [Windows 防火牆] 將 Microsoft Distributed Transaction Coordinator (MSDTC) 加入預期應用程式清單中：  
   
     1.  從 [控制台] 執行 [Windows 防火牆] 應用程式。  
   
@@ -242,7 +242,7 @@ Creating new service instance...
   
     5.  按一下 [ **[確定]** 以關閉**新增程式**] 對話方塊中，然後按一下 [**確定**] 以關閉 [Windows 防火牆] 小程式。  
   
-3.  在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
+3. 在用戶端電腦上，設定 MSDTC 以允許傳出網路交易：  
   
     1.  從**開始** 功能表中，瀏覽至**控制台**，然後**系統管理工具**，然後**元件服務**。  
   

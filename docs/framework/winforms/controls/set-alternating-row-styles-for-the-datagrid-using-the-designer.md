@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: 52105a933efc8bccde8d01aa707ade0a2af6be96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59072932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335624"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
 表格式資料通常是 ledger 的格式，其中的替代資料列有不同的背景色彩呈現。 這種格式可讓使用者輕鬆地指出每個資料列中有哪些儲存格，特別是具有許多資料行的寬資料表。  
@@ -27,13 +27,13 @@ ms.locfileid: "59072932"
   
 ### <a name="define-styles-for-alternating-rows"></a>定義替代資料列的樣式  
   
-1.  選取<xref:System.Windows.Forms.DataGridView>設計工具中的控制項。  
+1. 選取<xref:System.Windows.Forms.DataGridView>設計工具中的控制項。  
   
-2.  在 [**屬性**] 視窗中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>屬性。  
+2. 在 [**屬性**] 視窗中，按一下省略符號按鈕 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>屬性。  
   
-3.  在 [ **CellStyle 產生器**] 對話方塊中，藉由設定屬性，定義樣式，並使用**預覽**窗格，即可確認您的選擇。 您指定的樣式會用於顯示在控制項中，從第二個的其他每個資料列。  
+3. 在 [ **CellStyle 產生器**] 對話方塊中，藉由設定屬性，定義樣式，並使用**預覽**窗格，即可確認您的選擇。 您指定的樣式會用於顯示在控制項中，從第二個的其他每個資料列。  
   
-4.  若要定義其餘的資料列的樣式，重複步驟 2 和 3 使用<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>屬性。  
+4. 若要定義其餘的資料列的樣式，重複步驟 2 和 3 使用<xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A>屬性。  
   
     > [!NOTE]
     >  資料格會顯示使用繼承自多個屬性的樣式。 如需有關樣式繼承的詳細資訊，請參閱[Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)。  

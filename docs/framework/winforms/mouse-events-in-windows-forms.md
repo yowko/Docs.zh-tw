@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 62309bb9965d1aa538e211dc66c44876671e0242
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59134975"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333674"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows Form 中的滑鼠事件
 當您處理滑鼠輸入時，您通常會要知道滑鼠指標的位置，以及滑鼠按鈕的狀態。 本主題提供如何從滑鼠事件取得此資訊的詳細說明，並說明在 Windows Form 控制項中引發滑鼠點按事件的順序。 如需清單和所有滑鼠事件的描述，請參閱 <<c0> [ 滑鼠輸入的運作方式在 Windows Form 中](how-mouse-input-works-in-windows-forms.md)。  另請參閱[事件處理常式概觀 (Windows Form)](event-handlers-overview-windows-forms.md)並[事件概觀 (Windows Form)](events-overview-windows-forms.md)。  
@@ -36,31 +36,31 @@ ms.locfileid: "59134975"
 ## <a name="standard-click-event-behavior"></a>標準點按事件行為  
  如果您想要以適當順序來處理滑鼠點按事件，您需要知道在 Windows Form 控制項中引發點按事件的順序。 除了下列清單中註明的個別控制項，當按下並放開滑鼠按鈕時 (不論哪一個滑鼠按鈕)，所有 Windows Form 控制項都是以相同順序引發點按事件。 以下是針對按一下滑鼠按鈕時，所引發的事件順序：  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 事件的引數。  
+1. <xref:System.Windows.Forms.Control.MouseDown> 事件的引數。  
   
-2.  <xref:System.Windows.Forms.Control.Click> 事件的引數。  
+2. <xref:System.Windows.Forms.Control.Click> 事件的引數。  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> 事件的引數。  
+3. <xref:System.Windows.Forms.Control.MouseClick> 事件的引數。  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> 事件的引數。  
+4. <xref:System.Windows.Forms.Control.MouseUp> 事件的引數。  
   
  以下是針對按兩下滑鼠按鈕時，所引發的事件順序：  
   
-1.  <xref:System.Windows.Forms.Control.MouseDown> 事件的引數。  
+1. <xref:System.Windows.Forms.Control.MouseDown> 事件的引數。  
   
-2.  <xref:System.Windows.Forms.Control.Click> 事件的引數。  
+2. <xref:System.Windows.Forms.Control.Click> 事件的引數。  
   
-3.  <xref:System.Windows.Forms.Control.MouseClick> 事件的引數。  
+3. <xref:System.Windows.Forms.Control.MouseClick> 事件的引數。  
   
-4.  <xref:System.Windows.Forms.Control.MouseUp> 事件的引數。  
+4. <xref:System.Windows.Forms.Control.MouseUp> 事件的引數。  
   
-5.  <xref:System.Windows.Forms.Control.MouseDown> 事件的引數。  
+5. <xref:System.Windows.Forms.Control.MouseDown> 事件的引數。  
   
-6.  <xref:System.Windows.Forms.Control.DoubleClick> 事件的引數。 (依據有問題的控制項是否將 <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> 樣式位元設為 `true`，這會有所不同。 如需有關如何設定 <xref:System.Windows.Forms.ControlStyles> 位元的詳細資訊，請參閱 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法。)  
+6. <xref:System.Windows.Forms.Control.DoubleClick> 事件的引數。 (依據有問題的控制項是否將 <xref:System.Windows.Forms.ControlStyles.StandardDoubleClick> 樣式位元設為 `true`，這會有所不同。 如需有關如何設定 <xref:System.Windows.Forms.ControlStyles> 位元的詳細資訊，請參閱 <xref:System.Windows.Forms.Control.SetStyle%2A> 方法。)  
   
-7.  <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件的引數。  
+7. <xref:System.Windows.Forms.Control.MouseDoubleClick> 事件的引數。  
   
-8.  <xref:System.Windows.Forms.Control.MouseUp> 事件的引數。  
+8. <xref:System.Windows.Forms.Control.MouseUp> 事件的引數。  
   
  程式碼範例，示範滑鼠的順序 click 事件，請參閱[How to:處理使用者輸入事件在 Windows Form 控制項](how-to-handle-user-input-events-in-windows-forms-controls.md)。  
   
@@ -122,21 +122,21 @@ ms.locfileid: "59134975"
 ### <a name="painting-behavior-of-toggle-controls"></a>切換控制項的繪製行為  
  切換控制項 (例如衍生自 <xref:System.Windows.Forms.ButtonBase> 類別的控制項) 與滑鼠點按事件搭配組合，具有下列特殊繪圖行為：  
   
-1.  使用者按下滑鼠按鈕。  
+1. 使用者按下滑鼠按鈕。  
   
-2.  控制項會以所按下的狀態繪製。  
+2. 控制項會以所按下的狀態繪製。  
   
-3.  便會引發 <xref:System.Windows.Forms.Control.MouseDown> 事件。  
+3. 便會引發 <xref:System.Windows.Forms.Control.MouseDown> 事件。  
   
-4.  使用者放開滑鼠按鈕。  
+4. 使用者放開滑鼠按鈕。  
   
-5.  控制項會以所引發的狀態繪製。  
+5. 控制項會以所引發的狀態繪製。  
   
-6.  便會引發 <xref:System.Windows.Forms.Control.Click> 事件。  
+6. 便會引發 <xref:System.Windows.Forms.Control.Click> 事件。  
   
-7.  便會引發 <xref:System.Windows.Forms.Control.MouseClick> 事件。  
+7. 便會引發 <xref:System.Windows.Forms.Control.MouseClick> 事件。  
   
-8.  便會引發 <xref:System.Windows.Forms.Control.MouseUp> 事件。  
+8. 便會引發 <xref:System.Windows.Forms.Control.MouseUp> 事件。  
   
     > [!NOTE]
     >  如果使用者在按下滑鼠按鈕的同時，將指標移出切換控制項 (例如在按下滑鼠按鈕的同時，將滑鼠從 <xref:System.Windows.Forms.Button> 控制項移開)，切換控制項將會以所引發的狀態繪製，而且只會發生 <xref:System.Windows.Forms.Control.MouseUp> 事件。 在此情況下，不會發生 <xref:System.Windows.Forms.Control.Click> 或 <xref:System.Windows.Forms.Control.MouseClick> 事件。  

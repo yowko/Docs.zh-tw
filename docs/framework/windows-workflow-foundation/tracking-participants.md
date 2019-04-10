@@ -2,12 +2,12 @@
 title: 追蹤參與者
 ms.date: 03/30/2017
 ms.assetid: f13e360c-eeb7-4a49-98a0-8f6a52d64f68
-ms.openlocfilehash: 334815c3c928790569846d02d87e9d1dbba889ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 6c42712300baa6d7e12b9a29d94c925caaad5141
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59138823"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340174"
 ---
 # <a name="tracking-participants"></a>追蹤參與者
 追蹤參與者是可讓工作流程開發人員存取 <xref:System.Activities.Tracking.InteropTrackingRecord.TrackingRecord%2A> 物件並加以處理的擴充點。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 包含寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件的標準追蹤參與者。 如果不符合需求，您也可以寫入自訂的追蹤參與者。  
@@ -81,13 +81,13 @@ ms.locfileid: "59138823"
   
 #### <a name="to-enable-viewing-the-tracking-records-in-event-viewer"></a>若要在事件檢視器中檢視追蹤記錄  
   
-1.  啟動事件檢視器 (EVENTVWR.EXE)  
+1. 啟動事件檢視器 (EVENTVWR.EXE)  
   
-2.  選取 **事件檢視器、 應用程式和服務記錄檔、 Microsoft、 Windows、 應用程式伺服器-應用程式**。  
+2. 選取 **事件檢視器、 應用程式和服務記錄檔、 Microsoft、 Windows、 應用程式伺服器-應用程式**。  
   
-3.  以滑鼠右鍵按一下，並確定**檢視、 顯示分析與偵錯記錄檔**已選取。 如果未選取該選項，請加以選取，使其旁邊出現核取記號。 這會顯示**分析**，**效能**，並**偵錯**記錄檔。  
+3. 以滑鼠右鍵按一下，並確定**檢視、 顯示分析與偵錯記錄檔**已選取。 如果未選取該選項，請加以選取，使其旁邊出現核取記號。 這會顯示**分析**，**效能**，並**偵錯**記錄檔。  
   
-4.  以滑鼠右鍵按一下**分析**記錄，然後選取**啟用記錄**。 記錄檔將位於 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 檔案。  
+4. 以滑鼠右鍵按一下**分析**記錄，然後選取**啟用記錄**。 記錄檔將位於 %SystemRoot%\System32\Winevt\Logs\Microsoft-Windows-Application Server-Applications%4Analytic.etl 檔案。  
   
 ## <a name="custom-tracking-participant"></a>自訂追蹤參與者  
  追蹤參與者 API 允許以使用者提供的追蹤者來擴充追蹤執行階段，可包含自訂邏輯以處理工作流程執行階段發出的追蹤記錄。 若要寫入自訂追蹤參與者，開發人員必須實作 `Track` 類別上的 <xref:System.Activities.Tracking.TrackingParticipant> 方法。 當工作流程執行階段發出追蹤記錄時，會呼叫此方法。  

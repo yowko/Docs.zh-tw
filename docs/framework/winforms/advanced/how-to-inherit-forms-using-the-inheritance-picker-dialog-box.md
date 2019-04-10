@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Inheritance Picker dialog box
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
-ms.openlocfilehash: 74dfd1bb2c47a8e377a2ed74934f742dff6cd64a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59212280"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342085"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>HOW TO：使用繼承選取器對話方塊繼承表單
 繼承表單或其他物件的最簡單方式是使用 [繼承選取器] 對話方塊。 您可以藉助它來利用在其他方案中已建立的程式碼或使用者介面 (UI)。  
@@ -23,23 +23,23 @@ ms.locfileid: "59212280"
   
 ### <a name="to-create-a-windows-form-inherited-from-an-existing-form-by-using-the-inheritance-picker"></a>使用繼承選取器建立繼承自現有表單的 Windows Form   
   
-1.  在 [專案] 功能表中，選擇 [新增 Windows Form]。  
+1. 在 [專案] 功能表中，選擇 [新增 Windows Form]。  
   
      [新增項目] 對話方塊隨即開啟。  
   
-2.  搜尋**繼承的表單**範本從 searchbox，或是按一下**Windows Forms**分類中，選取它，並將它在命名**名稱** 方塊中。 按一下 [新增] 按鈕繼續。  
+2. 搜尋**繼承的表單**範本從 searchbox，或是按一下**Windows Forms**分類中，選取它，並將它在命名**名稱** 方塊中。 按一下 [新增] 按鈕繼續。  
   
      [繼承選取器] 對話方塊隨即開啟。 如果目前的專案已包含表單，它們會顯示在 [繼承選取器] 對話方塊。  
   
-3.  若要自另一個組件中的表單繼承，按一下 [瀏覽] 按鈕。  
+3. 若要自另一個組件中的表單繼承，按一下 [瀏覽] 按鈕。  
   
-4.  在 [選取包含要繼承元件的檔案] 對話方塊中，巡覽至包含您想要的表單或模組的專案。  
+4. 在 [選取包含要繼承元件的檔案] 對話方塊中，巡覽至包含您想要的表單或模組的專案。  
   
-5.  按一下 .exe 或 .dll 檔案的名稱以選取它，然後按一下 [開啟] 按鈕。  
+5. 按一下 .exe 或 .dll 檔案的名稱以選取它，然後按一下 [開啟] 按鈕。  
   
      這會讓您返回 [繼承選取器] 對話方塊，其中會立即列出元件及它所在的專案。  
   
-6.  選取元件  
+6. 選取元件  
   
      在 [方案總管] 中，此元件已新增至您的專案。 如果它具有 UI，繼承表單一部分的控制項將會標示以圖像 (![螢幕擷取畫面的 Visual Basic 繼承符號](./media/how-to-inherit-forms-using-the-inheritance-picker-dialog-box/visual-basic-inheritance-glyph.gif))，並選取時，有框線，表示控制項具有的安全性層級superclass 表單。 對應至不同的安全性層級的行為會在下表中列出。  
   

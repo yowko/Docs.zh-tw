@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, extending
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
-ms.openlocfilehash: 6a168902b79bd27345c9d9e2371947cc9d64233c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59156490"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337834"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>HOW TO：為服務建立自訂授權管理員
 身分識別模型基礎結構在 Windows Communication Foundation (WCF) 支援可延伸的宣告型授權模型。 從語彙基元擷取的宣告可以選擇性地由自訂授權原則進行處理並放入 <xref:System.IdentityModel.Policy.AuthorizationContext>。 授權管理員會檢查 <xref:System.IdentityModel.Policy.AuthorizationContext> 中的宣告來做出授權決策。  
@@ -28,12 +28,12 @@ ms.locfileid: "59156490"
   
 ### <a name="to-create-a-custom-authorization-manager"></a>若要建立自訂授權管理員  
   
-1.  從 <xref:System.ServiceModel.ServiceAuthorizationManager> 類別衍生類別。  
+1. 從 <xref:System.ServiceModel.ServiceAuthorizationManager> 類別衍生類別。  
   
      [!code-csharp[c_CustomAuthMgr#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customauthmgr/cs/c_customauthmgr.cs#5)]
      [!code-vb[c_CustomAuthMgr#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customauthmgr/vb/c_customauthmgr.vb#5)]  
   
-2.  覆寫 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 方法。  
+2. 覆寫 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 方法。  
   
      使用傳遞至 <xref:System.ServiceModel.OperationContext> 方法的 <xref:System.ServiceModel.ServiceAuthorizationManager.CheckAccessCore%28System.ServiceModel.OperationContext%29> 來做出授權決策。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59156490"
   
 ### <a name="to-register-a-custom-authorization-manager-using-code"></a>若要使用程式碼來註冊自訂授權管理員  
   
-1.  建立自訂授權管理員的執行個體，然後將它指派給 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> 屬性。  
+1. 建立自訂授權管理員的執行個體，然後將它指派給 <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior.ServiceAuthorizationManager%2A> 屬性。  
   
      <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior> 可以透過使用 <xref:System.ServiceModel.ServiceHostBase.Authorization%2A> 屬性來存取。  
   
@@ -55,17 +55,17 @@ ms.locfileid: "59156490"
   
 ### <a name="to-register-a-custom-authorization-manager-using-configuration"></a>若要使用組態來註冊自訂授權管理員  
   
-1.  開啟服務的組態檔。  
+1. 開啟服務的組態檔。  
   
-2.  新增[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)要[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。  
+2. 新增[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)要[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)。  
   
      若要[ \<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)，新增`serviceAuthorizationManagerType`屬性，並將其值設定為代表自訂授權管理員的型別。  
   
-3.  新增繫結，以便保護用戶端與服務之間的通訊安全。  
+3. 新增繫結，以便保護用戶端與服務之間的通訊安全。  
   
      選定用在此通訊上的繫結會決定新增至 <xref:System.IdentityModel.Policy.AuthorizationContext> 的宣告，而自訂授權管理員會使用此宣告來做出授權決策。 如需系統提供繫結的詳細資訊，請參閱 < [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)。  
   
-4.  藉由新增關聯的服務端點的行為[\<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)項目和設定的值`behaviorConfiguration`屬性設為 name 屬性的值[\<行為>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)項目。  
+4. 藉由新增關聯的服務端點的行為[\<服務 >](../../../../docs/framework/configure-apps/file-schema/wcf/service.md)項目和設定的值`behaviorConfiguration`屬性設為 name 屬性的值[\<行為>](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)項目。  
   
      如需有關如何設定服務端點的詳細資訊，請參閱[How to:在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)。  
   

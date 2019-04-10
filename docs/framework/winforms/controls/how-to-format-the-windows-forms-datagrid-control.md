@@ -14,12 +14,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
-ms.openlocfilehash: a07fde63463d209e0006de9be677636f19fd93a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147897"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336118"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>HOW TO：格式化 Windows Forms DataGrid 控制項
 > [!NOTE]
@@ -33,7 +33,7 @@ ms.locfileid: "59147897"
   
 ### <a name="to-establish-a-default-style-for-the-datagrid-control"></a>若要建立的預設樣式的 DataGrid 控制項  
   
-1.  視需要設定下列屬性：  
+1. 視需要設定下列屬性：  
   
     |屬性|描述|  
     |--------------|-----------------|  
@@ -68,19 +68,19 @@ ms.locfileid: "59147897"
   
 ### <a name="to-set-the-table-and-column-style-of-a-data-table-programmatically"></a>以程式設計方式設定資料表的資料表和資料行樣式  
   
-1.  建立新的表格樣式，並設定其屬性。  
+1. 建立新的表格樣式，並設定其屬性。  
   
-2.  建立資料行樣式，並設定其屬性。  
+2. 建立資料行樣式，並設定其屬性。  
   
-3.  加入資料表樣式的資料行樣式集合中的資料行樣式。  
+3. 加入資料表樣式的資料行樣式集合中的資料行樣式。  
   
-4.  加入資料格的資料表樣式集合中的表格樣式。  
+4. 加入資料格的資料表樣式集合中的表格樣式。  
   
-5.  在下列範例中，建立新的執行個體<xref:System.Windows.Forms.DataGridTableStyle>並設定其<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>屬性。  
+5. 在下列範例中，建立新的執行個體<xref:System.Windows.Forms.DataGridTableStyle>並設定其<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>屬性。  
   
-6.  建立的新執行個體**GridColumnStyle**並設定其**MappingName** （和一些其他版面配置和顯示屬性）。  
+6. 建立的新執行個體**GridColumnStyle**並設定其**MappingName** （和一些其他版面配置和顯示屬性）。  
   
-7.  針對您想要建立每個資料行樣式重複步驟 2 到 6。  
+7. 針對您想要建立每個資料行樣式重複步驟 2 到 6。  
   
      下列範例說明如何<xref:System.Windows.Forms.DataGridTextBoxColumn>建立，因為資料行中顯示的名稱。 此外，您可以新增資料行樣式<xref:System.Windows.Forms.GridColumnStylesCollection>的表格樣式，而且您新增的表格樣式<xref:System.Windows.Forms.GridTableStylesCollection>資料格。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, properties
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
-ms.openlocfilehash: ee2449ff905bfdacaeeee4cc244db1ce50e00104
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e6aee5ea36c0315d5b01ae2734d17c9e7dab8e93
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824299"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341851"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>HOW TO：將值放在屬性 (Visual Basic)
 您將屬性名稱放在指派陳述式左邊值儲存在屬性中。  
@@ -22,27 +22,27 @@ ms.locfileid: "58824299"
   
 ### <a name="to-store-a-value-in-a-property"></a>若要儲存在屬性中的值  
   
-1.  使用指派陳述式左邊的屬性名稱。  
+1. 使用指派陳述式左邊的屬性名稱。  
   
      下列範例會設定值的 Visual Basic`TimeOfDay`屬性到中午，隱含地呼叫其`Set`程序。  
   
      [!code-vb[VbVbcnProcedures#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnProcedures/VB/Class1.vb#11)]  
   
-2.  如果此屬性會接受引數，請遵循使用括號來括住的引數清單的屬性名稱。 如果不有任何引數，您可以選擇性地省略括號。  
+2. 如果此屬性會接受引數，請遵循使用括號來括住的引數清單的屬性名稱。 如果不有任何引數，您可以選擇性地省略括號。  
   
-3.  以括弧括住，並以逗號分隔的引數清單括住的引數。 請確定您提供的引數的屬性會定義的對應參數的順序相同。  
+3. 以括弧括住，並以逗號分隔的引數清單括住的引數。 請確定您提供的引數的屬性會定義的對應參數的順序相同。  
   
-4.  指派陳述式右側所產生的值會儲存在屬性中。  
+4. 指派陳述式右側所產生的值會儲存在屬性中。  
   
 ## <a name="see-also"></a>另請參閱
 
 - <xref:Microsoft.VisualBasic.DateAndTime.TimeOfDay%2A>
 - [屬性程序](./property-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
-- [Property 陳述式](../../../../visual-basic/language-reference/statements/property-statement.md)
-- [在 Visual Basic 中屬性和變數之間的差異](./differences-between-properties-and-variables.md)
-- [如何：建立屬性](./how-to-create-a-property.md)
-- [如何：宣告混合的存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
-- [如何：呼叫屬性程序](./how-to-call-a-property-procedure.md)
-- [如何：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
-- [如何：取得屬性值](./how-to-get-a-value-from-a-property.md)
+- [Property Statement](../../../../visual-basic/language-reference/statements/property-statement.md)
+- [Visual Basic 中屬性和變數的差別](./differences-between-properties-and-variables.md)
+- [HOW TO：建立屬性](./how-to-create-a-property.md)
+- [HOW TO：宣告混合存取層級的屬性](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [HOW TO：呼叫屬性程序](./how-to-call-a-property-procedure.md)
+- [HOW TO：宣告，並在 Visual Basic 中呼叫預設屬性](./how-to-declare-and-call-a-default-property.md)
+- [HOW TO：取得屬性值](./how-to-get-a-value-from-a-property.md)

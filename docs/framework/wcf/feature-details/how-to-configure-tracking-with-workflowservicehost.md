@@ -2,19 +2,19 @@
 title: HOW TO：以 WorkflowServiceHost 設定追蹤
 ms.date: 03/30/2017
 ms.assetid: ed1485fe-7529-4351-bca3-8bb915260b17
-ms.openlocfilehash: dc6a89505c788183ed5d53df986c0f545c0d5533
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: e0631cdb47bc88f7f588f4dfe6c44ea3d44f4e60
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59226543"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336560"
 ---
 # <a name="how-to-configure-tracking-with-workflowservicehost"></a>HOW TO：以 WorkflowServiceHost 設定追蹤
 本主題說明如何設定裝載於 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] 之 <xref:System.ServiceModel.Activities.WorkflowServiceHost> 工作流程的追蹤。 此追蹤是透過 Web.config 檔案指定服務行為而設定的。  
   
 ### <a name="configure-tracking-in-configuration"></a>在組態中設定追蹤  
   
-1.  新增<xref:System.Activities.Tracking.EtwTrackingParticipant>使用 <`behavior`> 組態檔中，如下列範例所示的項目。  
+1. 新增<xref:System.Activities.Tracking.EtwTrackingParticipant>使用 <`behavior`> 組態檔中，如下列範例所示的項目。  
   
     ```xml  
     <behaviors>  
@@ -56,7 +56,7 @@ ms.locfileid: "59226543"
   
 ### <a name="configure-tracking-in-code"></a>在程式碼中設定追蹤  
   
-1.  您可以使用程式碼中的 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行為來加入 <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>，如下列範例所示。  
+1. 您可以使用程式碼中的 <xref:System.Activities.Tracking.EtwTrackingParticipant> 行為來加入 <xref:System.ServiceModel.Activities.Description.EtwTrackingBehavior>，如下列範例所示。  
   
     ```csharp  
     host.Description.Behaviors.Add(new EtwTrackingBehavior { ProfileName = "Sample Tracking Profile" });  

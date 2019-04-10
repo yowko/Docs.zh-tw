@@ -10,12 +10,12 @@ helpviewer_keywords:
 - insertion points [Windows Forms], TextBox controls
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
-ms.openlocfilehash: 1fa6e8a3642086f81d0a62502d801ec6ade9b3d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59110712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59341318"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>HOW TO：控制 Windows Forms TextBox 控制項的插入點
 當 Windows Forms<xref:System.Windows.Forms.TextBox>控制項第一次收到焦點時，文字方塊內的預設值插入至任何現有的文字的左邊。 使用者可以移動與鍵盤或滑鼠的插入點。 如果文字方塊將會遺失，並重新取得焦點，將會插入點，使用者最後放置的任一處它。  
@@ -24,9 +24,9 @@ ms.locfileid: "59110712"
   
 ### <a name="to-control-the-insertion-point-in-a-textbox-control"></a>若要控制 TextBox 控制項中的插入點  
   
-1.  將 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 屬性設定為適當值。 零將插入點左邊的第一個字元。  
+1. 將 <xref:System.Windows.Forms.TextBoxBase.SelectionStart%2A> 屬性設定為適當值。 零將插入點左邊的第一個字元。  
   
-2.  （選擇性）設定<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>屬性，以您想要選取的文字的長度。  
+2. （選擇性）設定<xref:System.Windows.Forms.TextBoxBase.SelectionLength%2A>屬性，以您想要選取的文字的長度。  
   
      下列程式碼一律會傳回為 0 的插入點。 `TextBox1_Enter`事件處理常式必須繫結至控制項; 如需詳細資訊，請參閱[建立 Windows Forms 中的事件處理常式](../creating-event-handlers-in-windows-forms.md)。  
   

@@ -2,23 +2,23 @@
 title: SQL Server 中的查詢通知
 ms.date: 03/30/2017
 ms.assetid: 0f0ba1a1-3180-4af8-87f7-c795dc8f8f55
-ms.openlocfilehash: 2a564ba1e06741523b9b3a005be86b13339889ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e31a733635cf56a9c5e539dfb1d71d7d7037175a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59203674"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336664"
 ---
 # <a name="query-notifications-in-sql-server"></a>SQL Server 中的查詢通知
 依據 Service Broker 基礎結構所建置的查詢通知可讓應用程式在資料變更時收到通知。 此功能對於從資料庫中提供資訊快取的應用程式 (如 Web 應用程式)，及需要在來源資料變更時收到通知的應用程式來說非常有用。  
   
  您可以使用 ADO.NET，以三種方式實作查詢通知：  
   
-1.  由公開伺服器端功能的 `SqlNotificationRequest` 類別所提供的低層級實作，它可讓您使用通知要求執行命令。  
+1. 由公開伺服器端功能的 `SqlNotificationRequest` 類別所提供的低層級實作，它可讓您使用通知要求執行命令。  
   
-2.  由在來源應用程式與 SQL Server 之間提供高層級抽象通知功能之 `SqlDependency` 類別所提供的高層級實作，可讓您使用相依性偵測伺服器中的變更。 在多數情況下，對於使用 .NET Framework Data Provider for SQL Server 的 Managed 用戶端應用程式而言，這是利用 SQL Server 通知功能最簡單且最有效的方式。  
+2. 由在來源應用程式與 SQL Server 之間提供高層級抽象通知功能之 `SqlDependency` 類別所提供的高層級實作，可讓您使用相依性偵測伺服器中的變更。 在多數情況下，對於使用 .NET Framework Data Provider for SQL Server 的 Managed 用戶端應用程式而言，這是利用 SQL Server 通知功能最簡單且最有效的方式。  
   
-3.  此外，使用 ASP.NET 2.0 或更新版本建置的 Web 應用程式可以使用 `SqlCacheDependency` Helper 類別 (Class)。  
+3. 此外，使用 ASP.NET 2.0 或更新版本建置的 Web 應用程式可以使用 `SqlCacheDependency` Helper 類別 (Class)。  
   
  查詢通知可用於需要重新整理顯示或快取，以回應基礎資料變更的應用程式中。 Microsoft SQL Server 可讓 .NET Framework 應用程式傳送命令至 SQL Server，並要求當執行相同命令而產生與最初擷取的不同結果集時，就產生通知。 伺服器中產生的通知會透過這些要稍後處理的佇列進行傳送。  
   

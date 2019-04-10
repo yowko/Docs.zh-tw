@@ -2,12 +2,12 @@
 title: 非同步程式設計
 description: 了解如何F#非同步程式設計透過語言層級的程式設計模型，而且容易使用自然語言來完成。
 ms.date: 06/20/2016
-ms.openlocfilehash: 18ba4873cd3dba6d9548a07c4487306d96adab61
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56980083"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343450"
 ---
 # <a name="async-programming-in-f"></a>在 F 中的非同步程式設計\#
 
@@ -57,7 +57,7 @@ printfn "%s" html
 
 如先前所述，非同步程式碼會是工作的要在需要明確地啟動另一個內容中完成規格。 以下是為了達成此目的的兩種主要方式：
 
-1.  `Async.RunSynchronously` 將另一個執行緒上啟動非同步工作流程，並等待其結果。
+1. `Async.RunSynchronously` 將另一個執行緒上啟動非同步工作流程，並等待其結果。
 
 ```fsharp
 open System
@@ -78,7 +78,7 @@ let fetchHtmlAsync url =
  printfn "%s" html
  ```
 
-2.  `Async.Start` 將會啟動非同步工作流程，另一個執行緒，並將**不**等待其結果。
+2. `Async.Start` 將會啟動非同步工作流程，另一個執行緒，並將**不**等待其結果。
 
 ```fsharp
 open System
@@ -184,9 +184,9 @@ for html in htmlList do
 
 相反地，F#非同步工作流程是較自然地取消。 取消是簡單的三步驟程序。
 
-1.  建立新的 `CancellationTokenSource`。
-2.  請將它傳遞到起始函式。
-3.  呼叫`Cancel`語彙基元。
+1. 建立新的 `CancellationTokenSource`。
+2. 請將它傳遞到起始函式。
+3. 呼叫`Cancel`語彙基元。
 
 範例：
 

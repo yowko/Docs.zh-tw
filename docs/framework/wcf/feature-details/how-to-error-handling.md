@@ -1,15 +1,15 @@
 ---
-title: HOW TO：錯誤處理
+title: 如何：錯誤處理
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
-ms.openlocfilehash: 7b173997eb53f8cf156ccb14083885a199dc8921
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33493594"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334987"
 ---
-# <a name="how-to-error-handling"></a>HOW TO：錯誤處理
+# <a name="how-to-error-handling"></a>如何：錯誤處理
 本主題概要說明建立使用錯誤處理的路由組態所需的基本步驟。 在此範例中，訊息會路由傳送至目的地端點。 如果訊息因為網路或通訊相關錯誤 (<xref:System.ServiceModel.CommunicationException>) 而無法傳遞，則會將訊息重新傳送至替代端點。  
   
 > [!NOTE]
@@ -22,7 +22,7 @@ ms.locfileid: "33493594"
   
 ### <a name="implement-error-handling"></a>實作錯誤處理  
   
-1.  藉由指定服務所公開的服務端點，建立基本路由服務組態。 下列範例定義會用於接收訊息的單一服務端點。 此外，也會定義用來傳送訊息的用戶端端點 deadDestination 和 realDestination。 deadDestination 端點包含的位址不會參考執行中的服務，而且會在傳送訊息至此端點時，用來模擬網路錯誤。  
+1. 藉由指定服務所公開的服務端點，建立基本路由服務組態。 下列範例定義會用於接收訊息的單一服務端點。 此外，也會定義用來傳送訊息的用戶端端點 deadDestination 和 realDestination。 deadDestination 端點包含的位址不會參考執行中的服務，而且會在傳送訊息至此端點時，用來模擬網路錯誤。  
   
     ```xml  
     <services>  
@@ -57,7 +57,7 @@ ms.locfileid: "33493594"
     </client>  
     ```  
   
-2.  定義用於傳送訊息至目的地端點的篩選條件。  在此範例中，MatchAll 篩選會用來比對路由服務收到的所有訊息。  
+2. 定義用於傳送訊息至目的地端點的篩選條件。  在此範例中，MatchAll 篩選會用來比對路由服務收到的所有訊息。  
   
     ```xml  
     <filters>  
@@ -66,7 +66,7 @@ ms.locfileid: "33493594"
     </filters>  
     ```  
   
-3.  定義備份端點清單，當傳送至主要目的端點期間發生網路或通訊錯誤時，訊息會傳送至此清單中包含的備份端點。 下列範例會定義包含一個端點的備份清單；不過，備份清單中可以指定多個端點。  
+3. 定義備份端點清單，當傳送至主要目的端點期間發生網路或通訊錯誤時，訊息會傳送至此清單中包含的備份端點。 下列範例會定義包含一個端點的備份清單；不過，備份清單中可以指定多個端點。  
   
      如果備份清單包含多個端點，當發生網路或通訊錯誤時，路由服務就會嘗試將訊息傳送至清單中的第一個端點。 如果傳送至此端點時發生網路或通訊錯誤，路由服務會嘗試將訊息傳送至清單中包含的下一個端點。 服務會繼續將訊息傳送至備份端點清單中的每一個端點，直到訊息傳送成功、所有備份端點都傳回網路或通訊相關錯誤，或是訊息已送出且端點傳回非網路、非通訊相關的錯誤為止。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "33493594"
     </backupLists>  
     ```  
   
-4.  定義篩選資料表，該資料表會將篩選與 deadDestination 端點和備份端點清單產生關聯。  路由服務會先嘗試將訊息傳送至與篩選相關的目的地端點。 由於 deadDestination 包含的位址不會參考執行中的服務，因此這樣會導致網路錯誤。 路由服務接著會嘗試將訊息傳送至 backupEndpointlist 中指定的端點。  
+4. 定義篩選資料表，該資料表會將篩選與 deadDestination 端點和備份端點清單產生關聯。  路由服務會先嘗試將訊息傳送至與篩選相關的目的地端點。 由於 deadDestination 包含的位址不會參考執行中的服務，因此這樣會導致網路錯誤。 路由服務接著會嘗試將訊息傳送至 backupEndpointlist 中指定的端點。  
   
     ```xml  
     <filterTables>  
@@ -92,7 +92,7 @@ ms.locfileid: "33493594"
           </filterTables>  
     ```  
   
-5.  若要針對包含在篩選資料表中的篩選評估傳入的訊息，您必須使用路由行為讓篩選資料表與服務端點產生關聯。  下列範例示範如何將"filterTable1"與服務端點。  
+5. 若要針對包含在篩選資料表中的篩選評估傳入的訊息，您必須使用路由行為讓篩選資料表與服務端點產生關聯。  下列範例示範如何將"filterTable1"與服務端點。  
   
     ```xml  
     <behaviors>  

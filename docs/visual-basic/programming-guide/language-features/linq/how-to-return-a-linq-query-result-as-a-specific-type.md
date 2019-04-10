@@ -9,12 +9,12 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 - query samples [Visual Basic]
 ms.assetid: 621bb10a-e5d7-44fb-a025-317964b19d92
-ms.openlocfilehash: ba6479852f7a78fb26743a04fd08adea07c1ffff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 5ccd71d93185f9478f6720419369df713d590c39
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835865"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334935"
 ---
 # <a name="how-to-return-a-linq-query-result-as-a-specific-type-visual-basic"></a>HOW TO：將 LINQ 查詢結果傳回成特定的類型 (Visual Basic)
 Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並執行查詢。 根據預設，LINQ 查詢會傳回非匿名型別物件的清單。 您也可以指定查詢傳回特定型別的清單，使用`Select`子句。  
@@ -27,45 +27,45 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
 ### <a name="to-create-a-connection-to-a-database"></a>若要建立資料庫的連接  
   
-1.  在 Visual Studio 中開啟**伺服器總管**/**資料庫總管**按一下**伺服器總管**/**資料庫檔案總管**上**檢視**功能表。  
+1. 在 Visual Studio 中開啟**伺服器總管**/**資料庫總管**按一下**伺服器總管**/**資料庫檔案總管**上**檢視**功能表。  
   
-2.  以滑鼠右鍵按一下**資料連接**中**伺服器總管**/**資料庫總管**，然後按一下**加入連接**。  
+2. 以滑鼠右鍵按一下**資料連接**中**伺服器總管**/**資料庫總管**，然後按一下**加入連接**。  
   
-3.  請指定有效的連接至 Northwind 範例資料庫。  
+3. 請指定有效的連接至 Northwind 範例資料庫。  
   
 ### <a name="to-add-a-project-that-contains-a-linq-to-sql-file"></a>若要將專案加入包含 LINQ to SQL 檔案  
   
-1.  在 Visual Studio 的 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]。 選取 Visual Basic **Windows Forms 應用程式**作為專案類型。  
+1. 在 Visual Studio 的 [檔案] 功能表上，指向 [新增]，然後按一下 [專案]。 選取 Visual Basic **Windows Forms 應用程式**作為專案類型。  
   
-2.  在 [專案]  功能表中，按一下 [加入新項目] 。 選取  **LINQ to SQL 類別**項目範本。  
+2. 在 [專案]  功能表中，按一下 [加入新項目] 。 選取  **LINQ to SQL 類別**項目範本。  
   
-3.  將檔案命名為 `northwind.dbml`。 按一下 [加入] 。 Northwind.dbml 檔案會開啟 物件關聯式設計工具 （O/R 設計工具）。  
+3. 將檔案命名為 `northwind.dbml`。 按一下 [加入] 。 Northwind.dbml 檔案會開啟 物件關聯式設計工具 （O/R 設計工具）。  
   
 ### <a name="to-add-tables-to-query-to-the-or-designer"></a>若要將資料表加入至查詢至 O/R 設計工具  
   
-1.  在 **伺服器總管**/**資料庫總管**，展開 Northwind 資料庫的連接。 依序展開**資料表**資料夾。  
+1. 在 **伺服器總管**/**資料庫總管**，展開 Northwind 資料庫的連接。 依序展開**資料表**資料夾。  
   
      如果您已關閉 O/R 設計工具，您可以按兩下您先前加入的 northwind.dbml 檔案重新開啟它。  
   
-2.  按一下 [客戶] 資料表，並將它拖曳至設計工具的左窗格。  
+2. 按一下 [客戶] 資料表，並將它拖曳至設計工具的左窗格。  
   
      設計工具建立新`Customer`物件，為您的專案。 您可以投影查詢結果當做`Customer`類型或為您建立的型別。 此範例會在稍後的程序中建立新的類型，並在投射查詢結果為該型別。  
   
-3.  儲存變更並關閉設計工具。  
+3. 儲存變更並關閉設計工具。  
   
-4.  儲存您的專案。  
+4. 儲存您的專案。  
   
 ### <a name="to-add-code-to-query-the-database-and-display-the-results"></a>加入程式碼來查詢資料庫，並顯示結果  
   
-1.  從**工具箱**，拖曳<xref:System.Windows.Forms.DataGridView>控制項拖曳到您的專案，Form1 的預設 Windows 表單。  
+1. 從**工具箱**，拖曳<xref:System.Windows.Forms.DataGridView>控制項拖曳到您的專案，Form1 的預設 Windows 表單。  
   
-2.  按兩下 Form1 以修改，在 Form1 類別。  
+2. 按兩下 Form1 以修改，在 Form1 類別。  
   
-3.  在後`End Class`陳述式，在 Form1 類別，新增下列程式碼，以建立`CustomerInfo`保存此範例的查詢結果的型別。  
+3. 在後`End Class`陳述式，在 Form1 類別，新增下列程式碼，以建立`CustomerInfo`保存此範例的查詢結果的型別。  
   
      [!code-vb[VbLINQToSQLHowTos#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#16)]  
   
-4.  當您將資料表加入 O/R 設計工具時，設計工具加入<xref:System.Data.Linq.DataContext>物件加入專案。 此物件包含的程式碼，您必須擁有存取這些資料表，以及存取個別的物件和每個資料表的集合。 <xref:System.Data.Linq.DataContext>物件您專案的名稱為根據的.dbml 檔案的名稱。 此專案而言<xref:System.Data.Linq.DataContext>物件會命名為`northwindDataContext`。  
+4. 當您將資料表加入 O/R 設計工具時，設計工具加入<xref:System.Data.Linq.DataContext>物件加入專案。 此物件包含的程式碼，您必須擁有存取這些資料表，以及存取個別的物件和每個資料表的集合。 <xref:System.Data.Linq.DataContext>物件您專案的名稱為根據的.dbml 檔案的名稱。 此專案而言<xref:System.Data.Linq.DataContext>物件會命名為`northwindDataContext`。  
   
      您可以建立的執行個體<xref:System.Data.Linq.DataContext>資料表指定 O/R 設計工具在您的程式碼和查詢。  
   
@@ -73,7 +73,7 @@ Language Integrated Query (LINQ) 可讓您輕鬆地存取資料庫的資訊並�
   
      [!code-vb[VbLINQToSQLHowTos#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQtoSQLHowTos/VB/Form8.vb#15)]  
   
-5.  按 F5 執行您的專案，並檢視結果。  
+5. 按 F5 執行您的專案，並檢視結果。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 - child forms
 ms.assetid: 164b69bb-2eca-4339-ada3-0679eb2c6dda
-ms.openlocfilehash: 83f94830eec1d82112719a48e8ea98e2503f4542
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 73f2004470d5d1da04199af75832cefd6348ce18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59124523"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342454"
 ---
 # <a name="how-to-create-mdi-child-forms"></a>HOW TO：建立 MDI 子表單
 MDI 子表單是不可或缺的元素[多重文件介面 (MDI) 應用程式](multiple-document-interface-mdi-applications.md)，如下列形式會使用者互動的中心。  
@@ -26,17 +26,17 @@ MDI 子表單是不可或缺的元素[多重文件介面 (MDI) 應用程式](mul
   
 ### <a name="to-create-mdi-child-forms"></a>建立 MDI 子表單  
   
-1.  建立新的 Windows Form 專案。 在**屬性 Windows**表單中，設定其<xref:System.Windows.Forms.Form.IsMdiContainer%2A>屬性設`true`，並將其`WindowsState`屬性設`Maximized`。  
+1. 建立新的 Windows Form 專案。 在**屬性 Windows**表單中，設定其<xref:System.Windows.Forms.Form.IsMdiContainer%2A>屬性設`true`，並將其`WindowsState`屬性設`Maximized`。  
   
      如此即可將表單指定為子視窗的 MDI 容器。  
   
-2.  將 <xref:System.Windows.Forms.MenuStrip> 控制項從 [`Toolbox`] 拖曳至表單。 設定其`Text`屬性，以**檔案**。  
+2. 將 <xref:System.Windows.Forms.MenuStrip> 控制項從 [`Toolbox`] 拖曳至表單。 設定其`Text`屬性，以**檔案**。  
   
-3.  按一下旁邊的省略符號 （...）**項目**屬性，然後按一下**新增**加入兩個子工具區域功能表項目。 設定`Text`屬性，這些項目的**新增**並**視窗**。  
+3. 按一下旁邊的省略符號 （...）**項目**屬性，然後按一下**新增**加入兩個子工具區域功能表項目。 設定`Text`屬性，這些項目的**新增**並**視窗**。  
   
-4.  在 [**方案總管] 中**，以滑鼠右鍵按一下專案，指向**新增**，然後選取**加入新項目**。  
+4. 在 [**方案總管] 中**，以滑鼠右鍵按一下專案，指向**新增**，然後選取**加入新項目**。  
   
-5.  在 **加入新項目**對話方塊方塊中，選取**Windows 表單**（在 Visual Basic 或 Visual C# 中） 或**Windows Forms 應用程式 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 從**範本**窗格。 在 **名稱**方塊中，將表單命名**Form2**。 按一下 **開啟**按鈕以新增至專案的表單。  
+5. 在 **加入新項目**對話方塊方塊中，選取**Windows 表單**（在 Visual Basic 或 Visual C# 中） 或**Windows Forms 應用程式 (.NET)** (在[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]) 從**範本**窗格。 在 **名稱**方塊中，將表單命名**Form2**。 按一下 **開啟**按鈕以新增至專案的表單。  
   
     > [!NOTE]
     >  您在這個步驟中所建立的 MDI 子表單是標準的 Windows Form。 因此，它具有 <xref:System.Windows.Forms.Form.Opacity%2A> 屬性，可讓您控制表單的透明度。 然而，<xref:System.Windows.Forms.Form.Opacity%2A> 屬性是專為最上層視窗而設計的。 請勿搭配 MDI 子表單使用這個屬性，這樣做可能會發生繪製問題。  
@@ -45,13 +45,13 @@ MDI 子表單是不可或缺的元素[多重文件介面 (MDI) 應用程式](mul
   
      **Windows Form 設計工具**隨即開啟，顯示**Form2**。  
   
-6.  從**工具箱**，拖曳**RichTextBox**控制項加入表單。  
+6. 從**工具箱**，拖曳**RichTextBox**控制項加入表單。  
   
-7.  在**屬性**視窗中，將`Anchor`屬性設**左上**而`Dock`屬性設**填滿**。  
+7. 在**屬性**視窗中，將`Anchor`屬性設**左上**而`Dock`屬性設**填滿**。  
   
      如此一來，<xref:System.Windows.Forms.RichTextBox> 控制項就會完全填滿 MDI 子表單區域，即使表單大小重新調整過亦可。  
   
-8.  按兩下**的新** 功能表項目，以建立<xref:System.Windows.Forms.Control.Click>為它的事件處理常式。  
+8. 按兩下**的新** 功能表項目，以建立<xref:System.Windows.Forms.Control.Click>為它的事件處理常式。  
   
 9. 插入程式碼如下所示來建立新的 MDI 子表單，當使用者按一下**新增**功能表項目。  
   

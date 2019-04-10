@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9fa6b9aa2b2c427c86da5204a446cc60eadd1bb7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201009"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333986"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 項目
 指定 Windows 識別不會流經非同步點，而不論目前執行緒上執行內容的流程設定為何。  
@@ -67,11 +67,11 @@ ms.locfileid: "59201009"
   
  您可以變更此預設行為，另外兩種方式：  
   
-1.  在每個執行緒為基礎的 managed 程式碼。  
+1. 在每個執行緒為基礎的 managed 程式碼。  
   
      您可以隱藏個別的執行緒上的流程，藉由修改<xref:System.Threading.ExecutionContext>並<xref:System.Security.SecurityContext>藉由設定<xref:System.Threading.ExecutionContext.SuppressFlow%2A?displayProperty=nameWithType>，<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A?displayProperty=nameWithType>或<xref:System.Security.SecurityContext.SuppressFlow%2A?displayProperty=nameWithType>方法。  
   
-2.  在呼叫 unmanaged 裝載介面載入 common language runtime (CLR)。  
+2. 在呼叫 unmanaged 裝載介面載入 common language runtime (CLR)。  
   
      如果 unmanaged 裝載介面 （而不是簡單的 managed 可執行檔） 用來載入 CLR，您可以呼叫中指定特殊旗標[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)函式。 若要啟用相容性模式，整個程序，將`flags`參數[CorBindToRuntimeEx 函式](../../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)STARTUP_LEGACY_IMPERSONATION 到。  
   

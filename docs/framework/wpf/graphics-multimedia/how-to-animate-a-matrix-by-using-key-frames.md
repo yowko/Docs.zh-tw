@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Matrix properties [WPF], animating with key frames
 - key frames [WPF], animating Matrix properties with
 ms.assetid: b851a4c7-ecb1-420e-9203-83e7afd037fd
-ms.openlocfilehash: 8cc94117cc26f44288835fd85c6ded429124d3c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff5320fa5b4441ae3e0f414b274ab9118b77ec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59107922"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336794"
 ---
 # <a name="how-to-animate-a-matrix-by-using-key-frames"></a>HOW TO：使用主要畫面格建立矩陣的動畫
 此範例示範如何建立動畫<xref:System.Windows.Media.MatrixTransform.Matrix%2A>屬性<xref:System.Windows.Media.MatrixTransform>使用主要畫面格。  
@@ -21,11 +21,11 @@ ms.locfileid: "59107922"
   
  這個動畫使用<xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>建立兩個主要畫面格類別，並會與其進行下列作業：  
   
-1.  以動畫顯示的第一個<xref:System.Windows.Media.Matrix>前 0.2 秒的期間。 範例會變更<xref:System.Windows.Media.Matrix.M11%2A>並<xref:System.Windows.Media.Matrix.M12%2A>的屬性<xref:System.Windows.Media.Matrix>。 這項變更會使按鈕自動縮放，並會扭曲。 此範例也會變更<xref:System.Windows.Media.Matrix.OffsetX%2A>和<xref:System.Windows.Media.Matrix.OffsetY%2A>屬性，讓按鈕變更位置。  
+1. 以動畫顯示的第一個<xref:System.Windows.Media.Matrix>前 0.2 秒的期間。 範例會變更<xref:System.Windows.Media.Matrix.M11%2A>並<xref:System.Windows.Media.Matrix.M12%2A>的屬性<xref:System.Windows.Media.Matrix>。 這項變更會使按鈕自動縮放，並會扭曲。 此範例也會變更<xref:System.Windows.Media.Matrix.OffsetX%2A>和<xref:System.Windows.Media.Matrix.OffsetY%2A>屬性，讓按鈕變更位置。  
   
-2.  以動畫顯示第二個<xref:System.Windows.Media.Matrix>1.0 秒時。 按鈕會移至另一個位置，而不會再扭曲或自動縮放 按鈕。  
+2. 以動畫顯示第二個<xref:System.Windows.Media.Matrix>1.0 秒時。 按鈕會移至另一個位置，而不會再扭曲或自動縮放 按鈕。  
   
-3.  無限期地重複動畫。  
+3. 無限期地重複動畫。  
   
 > [!NOTE]
 >  主要畫面衍生自<xref:System.Windows.Media.Animation.DiscreteMatrixKeyFrame>物件建立突然跳躍點之間的值，亦即動畫的移動會不穩定。  

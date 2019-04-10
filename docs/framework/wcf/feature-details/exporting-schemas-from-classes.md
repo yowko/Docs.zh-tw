@@ -8,12 +8,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: bb57b962-70c1-45a9-93d5-e721e340a13f
-ms.openlocfilehash: f69fb25df4ed2af79cc5ffa59f0969a1616d38ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: dcbccbea279796fdaec1227b7575cf39e47f9e4f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185414"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336872"
 ---
 # <a name="exporting-schemas-from-classes"></a>從類別匯出結構描述
 如果要從用於資料合約模型中的類別產生 XML 結構描述定義語言 (XSD)，請使用 <xref:System.Runtime.Serialization.XsdDataContractExporter> 類別。 這個主題將說明建立結構描述的程序。  
@@ -25,20 +25,20 @@ ms.locfileid: "59185414"
   
 #### <a name="to-export-schemas"></a>匯出結構描述  
   
-1.  建立 <xref:System.Runtime.Serialization.XsdDataContractExporter>的執行個體。  
+1. 建立 <xref:System.Runtime.Serialization.XsdDataContractExporter>的執行個體。  
   
-2.  選擇性。 在建構函式中傳遞 <xref:System.Xml.Schema.XmlSchemaSet> 。 在這種情況下，在結構描述匯出期間產生的結構描述會新增至這個 <xref:System.Xml.Schema.XmlSchemaSet> 執行個體，而不是從空白的 <xref:System.Xml.Schema.XmlSchemaSet>開始。  
+2. 選擇性。 在建構函式中傳遞 <xref:System.Xml.Schema.XmlSchemaSet> 。 在這種情況下，在結構描述匯出期間產生的結構描述會新增至這個 <xref:System.Xml.Schema.XmlSchemaSet> 執行個體，而不是從空白的 <xref:System.Xml.Schema.XmlSchemaSet>開始。  
   
-3.  選擇性。 呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 方法。 此方法會判斷是否可以匯出指定的類型。 此方法的多載和下一個步驟中的 `Export` 方法相同。  
+3. 選擇性。 呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.CanExport%2A> 方法。 此方法會判斷是否可以匯出指定的類型。 此方法的多載和下一個步驟中的 `Export` 方法相同。  
   
-4.  呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法。 有三種多載採用 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> 物件的 `Type` 或 <xref:System.Collections.Generic.List%601> 物件的 <xref:System.Reflection.Assembly> 。 在最後一種情況中，會匯出所有指定組件中的所有類型。  
+4. 呼叫其中一個 <xref:System.Runtime.Serialization.XsdDataContractExporter.Export%2A> 方法。 有三種多載採用 <xref:System.Type>、 <xref:System.Collections.Generic.List%601> 物件的 `Type` 或 <xref:System.Collections.Generic.List%601> 物件的 <xref:System.Reflection.Assembly> 。 在最後一種情況中，會匯出所有指定組件中的所有類型。  
   
      `Export` 方法的多個呼叫會造成將多個項目新增至相同的 `XmlSchemaSet`。 如果型別已經存在，便不會產生至 `XmlSchemaSet` 中。 因此，如果要建立 `Export` 類別的多個執行個體，會偏好在相同的 `XsdDataContractExporter` 上呼叫多次 `XsdDataContractExporter` 。 如此可避免產生重複的結構描述型別。  
   
     > [!NOTE]
     >  如果在匯出期間有失敗， `XmlSchemaSet` 將會處於不能預測的狀態。  
   
-5.  請透過 <xref:System.Xml.Schema.XmlSchemaSet> 屬性存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 。  
+5. 請透過 <xref:System.Xml.Schema.XmlSchemaSet> 屬性存取 <xref:System.Runtime.Serialization.XsdDataContractExporter.Schemas%2A> 。  
   
 ## <a name="export-options"></a>匯出選項  
  您可以將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 之 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設定為 <xref:System.Runtime.Serialization.ExportOptions> 類別的執行個體，以控制匯出處理程序的各方面。 特別是，您可以設定下列選項：  

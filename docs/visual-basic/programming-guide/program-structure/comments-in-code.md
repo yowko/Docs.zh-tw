@@ -14,12 +14,12 @@ helpviewer_keywords:
 - comments
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
-ms.openlocfilehash: a81aa6ac0716b94625c0ce7868730d55d062e3e4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343008"
 ---
 # <a name="comments-in-code-visual-basic"></a>程式碼中的註解 (Visual Basic)
 當您閱讀程式碼範例時，常會遇到註解符號 (`'`)。 這個符號會告知 Visual Basic 編譯器忽略它後面的文字或*註解*。 註解是為了閱讀者方便而加入至程式碼的簡短說明。  
@@ -54,7 +54,7 @@ ms.locfileid: "58814636"
   
 -   註解不可以跟隨在同一行的行接續序列之後。  
   
- 您可以新增或移除程式碼區塊的註解符號，選取一或多個行程式碼，然後選擇**註解**(![VisualBasicWinAppCodeEditorCommentButton](../../../visual-basic/programming-guide/program-structure/media/vacommentbutton.gif "vaCommentButton")) 和**取消註解**(![VisualStudioWinAppProjectUncommentButton](../../../visual-basic/programming-guide/program-structure/media/vauncommentbutton.gif "vaUncommentButton")) 按鈕**編輯**工具列。  
+ 您可以新增或移除程式碼區塊的註解符號，選取一或多個行程式碼，然後選擇**註解**(![在 Visual Studio 中的 [Visual Basic 註解] 按鈕](./media/comments-in-code/visual-basic-comment-button.gif)) 和**取消註解** (![Visual Studio 中的 Visual Basic 取消註解按鈕](./media/comments-in-code/visual-basic-uncomment-button.gif)) 按鈕**編輯**工具列。  
   
 > [!NOTE]
 >  您也可以藉由在文字前方置入 `REM` 關鍵字，將註解加入至您的程式碼中。 不過，`'`符號和**註解**/**取消註解**按鈕比較容易使用，而且需要較少的空間和記憶體。  
@@ -62,7 +62,7 @@ ms.locfileid: "58814636"
 ## <a name="see-also"></a>另請參閱
 
 - [基本技術-使用 XML 註解記錄程式碼](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [如何：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [HOW TO：建立 XML 文件](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML 註解標記](../../../visual-basic/language-reference/xmldoc/index.md)
 - [程式結構和程式碼慣例](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM 陳述式](../../../visual-basic/language-reference/statements/rem-statement.md)

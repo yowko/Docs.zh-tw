@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6038aff0-f92c-4e29-a618-d793410410d8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19ee0e3244d9a9bf7d7eddc9be4eb7c50b467cf5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c569407bac247e60075834e67fde9327ce6bc4a0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502620"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334623"
 ---
 # <a name="how-to-decrypt-xml-elements-with-symmetric-keys"></a>HOW TO：使用對稱金鑰解密 XML 元素
 您可以使用 <xref:System.Security.Cryptography.Xml> 命名空間中的類別來加密 XML 文件內的項目。  XML 加密可讓您儲存或傳輸機密的 XML，而不必擔心資料被輕易讀取。  這個程式碼範例會使用進階加密標準 (AES) 演算法 (也稱為 Rijndael)，來解密 XML 項目。  
@@ -33,24 +33,24 @@ ms.locfileid: "54502620"
   
 ### <a name="to-decrypt-an-xml-element-with-a-symmetric-key"></a>使用對稱金鑰解密 XML 項目  
   
-1.  具有使用中所述的技巧先前產生的金鑰加密 XML 項目[How to:使用對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
+1. 具有使用中所述的技巧先前產生的金鑰加密 XML 項目[How to:使用對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)。  
   
-2.  在包含加密 XML 的 <xref:System.Xml.XmlDocument> 物件中尋找 <`EncryptedData`> 項目 (由 XML 加密標準定義)，並建立新的 <xref:System.Xml.XmlElement> 物件來代表該項目。  
+2. 尋找 <`EncryptedData`> （由 XML 加密標準定義） 項目中的<xref:System.Xml.XmlDocument>物件，其中包含加密的 XML，並建立新<xref:System.Xml.XmlElement>物件來表示該項目。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#10)]
      [!code-vb[HowToEncryptXMLElementSymmetric#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#10)]  
   
-3.  從先前建立的 <xref:System.Xml.XmlElement> 物件載入原始的 XML 資料，以建立 <xref:System.Security.Cryptography.Xml.EncryptedData> 物件。  
+3. 從先前建立的 <xref:System.Xml.XmlElement> 物件載入原始的 XML 資料，以建立 <xref:System.Security.Cryptography.Xml.EncryptedData> 物件。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#11)]
      [!code-vb[HowToEncryptXMLElementSymmetric#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#11)]  
   
-4.  建立新 <xref:System.Security.Cryptography.Xml.EncryptedXml> 物件，並使用它來解密使用相同金鑰加密的 XML 資料。  
+4. 建立新 <xref:System.Security.Cryptography.Xml.EncryptedXml> 物件，並使用它來解密使用相同金鑰加密的 XML 資料。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#12)]
      [!code-vb[HowToEncryptXMLElementSymmetric#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#12)]  
   
-5.  將加密的項目取代為 XML 文件中剛解密的純文字項目。  
+5. 將加密的項目取代為 XML 文件中剛解密的純文字項目。  
   
      [!code-csharp[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/cs/sample.cs#13)]
      [!code-vb[HowToEncryptXMLElementSymmetric#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEncryptXMLElementSymmetric/vb/sample.vb#13)]  
@@ -84,4 +84,4 @@ ms.locfileid: "54502620"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Cryptography.Xml>
-- [如何：使用對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)
+- [HOW TO：使用對稱金鑰加密 XML 元素](../../../docs/standard/security/how-to-encrypt-xml-elements-with-symmetric-keys.md)

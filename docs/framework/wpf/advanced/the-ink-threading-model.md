@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ink collection plug-in
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
-ms.openlocfilehash: 8089c857d2406f8cfb357ba2efe188ad84605541
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377021"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335312"
 ---
 # <a name="the-ink-threading-model"></a>筆墨執行緒模型
 Tablet PC 上的好處之一是筆墨的，覺得有許多撰寫使用一般紙筆。  若要這麼做，tablet 畫筆會收集在更高的速率比滑鼠，並為使用者寫入會轉譯筆跡輸入的資料。  應用程式的使用者介面 (UI) 執行緒不足，無法用來收集畫筆資料和呈現筆墨，因為它可能會被封鎖。  若要解決，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]時使用者寫入筆跡，應用程式會使用兩個額外的執行緒。  
@@ -38,7 +38,7 @@ Tablet PC 上的好處之一是筆墨的，覺得有許多撰寫使用一般紙�
   
  ![繪製筆觸期間的執行緒模型。](./media/inkthreading-drawingink.png "InkThreading_DrawingInk")  
   
-1.  發生使用者繪製筆劃時的動作  
+1. 發生使用者繪製筆劃時的動作  
   
     1.  當使用者繪製筆劃時，手寫筆點有畫筆執行緒上。  手寫筆外掛程式，包括<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>，接受畫筆執行緒上的手寫筆點，並有機會修改它們之前<xref:System.Windows.Controls.InkCanvas>接收它們。  
   
@@ -46,7 +46,7 @@ Tablet PC 上的好處之一是筆墨的，覺得有許多撰寫使用一般紙�
   
     3.  <xref:System.Windows.Controls.InkCanvas>接收在 UI 執行緒上的手寫筆點。  
   
-2.  使用者結束筆劃後發生的動作  
+2. 使用者結束筆劃後發生的動作  
   
     1.  當使用者完成繪製的筆劃<xref:System.Windows.Controls.InkCanvas>會建立<xref:System.Windows.Ink.Stroke>物件，並將它加入至<xref:System.Windows.Controls.InkPresenter>，會以靜態方式呈現。  
   
@@ -61,13 +61,13 @@ Tablet PC 上的好處之一是筆墨的，覺得有許多撰寫使用一般紙�
   
  在上圖中，會發生下列行為：  
   
-1.  `StylusPlugin1` 修改 x 值和 y。  
+1. `StylusPlugin1` 修改 x 值和 y。  
   
-2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收已修改的手寫筆的點，並轉譯成動態呈現執行緒上。  
+2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer> 接收已修改的手寫筆的點，並轉譯成動態呈現執行緒上。  
   
-3.  `StylusPlugin2` 接收已修改的手寫筆的點，並進一步修改 x 值和 y。  
+3. `StylusPlugin2` 接收已修改的手寫筆的點，並進一步修改 x 值和 y。  
   
-4.  應用程式會收集手寫筆的點，並當使用者完成筆劃，靜態轉譯筆劃。  
+4. 應用程式會收集手寫筆的點，並當使用者完成筆劃，靜態轉譯筆劃。  
   
  假設`stylusPlugin1`限制的矩形的手寫筆的點和`stylusPlugin2`轉譯右邊的手寫筆點。  在前一個案例中，<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>接收限制的手寫筆的點，但未翻譯的手寫筆的點。  當使用者繪製筆劃時，筆劃轉譯的矩形界限內，但筆劃不會出現轉譯，直到使用者拿起畫筆。  
   
@@ -83,15 +83,15 @@ Tablet PC 上的好處之一是筆墨的，覺得有許多撰寫使用一般紙�
   
  ![筆跡執行緒圖表](./media/inkthreading-visualtree.png "InkThreading_VisualTree")  
   
-1.  使用者會開始筆劃。  
+1. 使用者會開始筆劃。  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>建立視覺化樹狀結構。  
   
-2.  使用者繪製筆劃。  
+2. 使用者繪製筆劃。  
   
     1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>建置視覺化樹狀結構。  
   
-3.  筆劃端點使用者。  
+3. 筆劃端點使用者。  
   
     1.  <xref:System.Windows.Controls.InkPresenter>將其視覺化樹狀結構中的筆劃。  
   

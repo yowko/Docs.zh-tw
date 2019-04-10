@@ -10,25 +10,25 @@ helpviewer_keywords:
 - issued tokens
 - SAML token
 ms.assetid: 930b6e34-9eab-4e95-826c-4e06659bb977
-ms.openlocfilehash: f1f7a15d1457390bf77f5e53c7fd657304725df6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 04517e5089f55c2d2b08a492439026d33ed9069d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218208"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339836"
 ---
 # <a name="saml-tokens-and-claims"></a>SAML 權杖與宣告
 安全性判斷提示標記語言 (SAML)*語彙基元*宣告的 XML 表示。 根據預設，會在聯合的安全性案例中，使用 Windows Communication Foundation (WCF) 的 SAML 權杖*發行的權杖*。  
   
  SAML 權杖包含一實體對另一實體所做出之宣告集合的陳述式。 例如，在聯合安全性案例中，陳述式是由系統中關於使用者的安全性權杖服務所表示。 安全性權杖服務會簽署 SAML 權杖，以表示權杖中所含陳述式的真實性。 除此之外，SAML 權杖會與 SAML 權杖使用者證實知悉的密碼編譯金鑰內容產生關聯。 這項證明能滿足信賴憑證者，證實該 SAML 權杖確實簽發至該使用者。 例如，在典型的案例中：  
   
-1.  用戶端向安全性權杖服務要求 SAML 權杖，藉由使用 Windows 認證，驗證至該安全性權杖服務。  
+1. 用戶端向安全性權杖服務要求 SAML 權杖，藉由使用 Windows 認證，驗證至該安全性權杖服務。  
   
-2.  安全性權杖服務簽發 SAML 權杖至用戶端。 SAML 權杖是以與安全性權杖服務相關的憑證進行簽署，並且包含針對目標服務加密的證明金鑰。  
+2. 安全性權杖服務簽發 SAML 權杖至用戶端。 SAML 權杖是以與安全性權杖服務相關的憑證進行簽署，並且包含針對目標服務加密的證明金鑰。  
   
-3.  用戶端也會收到一份*證明金鑰*。 用戶端接著會向應用程式服務的 SAML 權杖 (*信賴憑證者的合作對象*)，並以該證明金鑰簽署訊息。  
+3. 用戶端也會收到一份*證明金鑰*。 用戶端接著會向應用程式服務的 SAML 權杖 (*信賴憑證者的合作對象*)，並以該證明金鑰簽署訊息。  
   
-4.  SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。 使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。  
+4. SAML 權杖上的簽章會告訴信賴憑證者，這是由安全性權杖服務所簽發的權杖。 使用證明金鑰所建立的訊息簽章會告訴信賴憑證者，該權杖曾簽發至用戶端。  
   
 ## <a name="from-claims-to-samlattributes"></a>從宣告到 SamlAttributes  
  在 WCF 中，在 SAML 權杖中的陳述式會模型化為<xref:System.IdentityModel.Tokens.SamlAttribute>可以直接從填入的物件<xref:System.IdentityModel.Claims.Claim>所提供的物件<xref:System.IdentityModel.Claims.Claim>物件具有<xref:System.IdentityModel.Claims.Claim.Right%2A>屬性<xref:System.IdentityModel.Claims.Rights.PossessProperty%2A>而<xref:System.IdentityModel.Claims.Claim.Resource%2A>屬性屬於型別<xref:System.String>。 例如:   

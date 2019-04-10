@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2b5ba5c3-0c6c-48e9-9e46-54acaec443ba
-ms.openlocfilehash: 4a69cf01519ea21f61e0c142039e4d2fe9a3c0e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: db137eb84108c6adbbf04a380934bb6da6936d61
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191688"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343047"
 ---
 # <a name="walkthrough-creating-custom-client-and-service-credentials"></a>逐步解說：建立自訂用戶端與服務認證
 此主題顯示如何實作自訂用戶端和服務認證，以及如何使用來自應用程式碼的自訂認證。  
@@ -50,40 +50,40 @@ ms.locfileid: "59191688"
   
 #### <a name="to-implement-custom-client-credentials"></a>實作自訂用戶端認證  
   
-1.  定義衍生自 <xref:System.ServiceModel.Description.ClientCredentials> 類別的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.Description.ClientCredentials> 類別的新類別。  
   
-2.  選擇性。 為新的認證類型加入新方法或屬性。 如果您不需要新增新的認證類型，請略過這個步驟。 下列範例即是加入 `CreditCardNumber` 屬性。  
+2. 選擇性。 為新的認證類型加入新方法或屬性。 如果您不需要新增新的認證類型，請略過這個步驟。 下列範例即是加入 `CreditCardNumber` 屬性。  
   
-3.  覆寫 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自訂用戶端認證時，這個方法會自動呼叫 WCF 安全性基礎結構。 這個方法是負責建立和傳回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別實作的執行個體。  
+3. 覆寫 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自訂用戶端認證時，這個方法會自動呼叫 WCF 安全性基礎結構。 這個方法是負責建立和傳回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別實作的執行個體。  
   
     > [!IMPORTANT]
     >  請注意，覆寫 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法以建立自訂安全性權杖管理員是很重要的。 衍生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的安全性權杖管理員，必須傳回衍生自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 的自訂安全性權杖提供者，以建立實際的安全性權杖。 若未依照這個模式建立安全性權杖，應用程式在快取 <xref:System.ServiceModel.ChannelFactory> 物件時 (此乃 WCF 用戶端 Proxy 的預設行為) 可能會運作不正常，以致難免遭受提高權限攻擊。 自訂認證物件是快取為 <xref:System.ServiceModel.ChannelFactory> 的一部分。 不過，自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 則為每次叫用時所建立，因而只要將權仗建立邏輯置於 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 中，便能減緩安全性威脅。  
   
-4.  覆寫 <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 方法。  
+4. 覆寫 <xref:System.ServiceModel.Description.ClientCredentials.CloneCore%2A> 方法。  
   
      [!code-csharp[c_CustomCredentials#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#1)]
      [!code-vb[c_CustomCredentials#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#1)]  
   
 #### <a name="to-implement-a-custom-client-security-token-manager"></a>實作自訂用戶端安全性權杖管理員  
   
-1.  定義衍生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 的新類別。  
   
-2.  選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to:建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2. 選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to:建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
-3.  選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to:建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+3. 選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%28System.IdentityModel.Selectors.SecurityTokenRequirement%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%40%29> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to:建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
   
-4.  選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 如需有關自訂安全性權杖和自訂安全性權杖序列化程式的詳細資訊，請參閱[How to:建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4. 選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%2A>，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 如需有關自訂安全性權杖和自訂安全性權杖序列化程式的詳細資訊，請參閱[How to:建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
      [!code-csharp[c_CustomCredentials#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#2)]
      [!code-vb[c_CustomCredentials#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#2)]  
   
 #### <a name="to-use-a-custom-client-credentials-from-application-code"></a>使用來自應用程式碼的自訂用戶端認證  
   
-1.  建立所產生之用戶端的執行個體以代表服務介面，或建立 <xref:System.ServiceModel.ChannelFactory> 的執行個體指向想要通訊的服務。  
+1. 建立所產生之用戶端的執行個體以代表服務介面，或建立 <xref:System.ServiceModel.ChannelFactory> 的執行個體指向想要通訊的服務。  
   
-2.  從 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中移除系統提供的用戶端認證行為，您可以透過 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 屬性存取這個集合。  
+2. 從 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中移除系統提供的用戶端認證行為，您可以透過 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 屬性存取這個集合。  
   
-3.  建立自訂用戶端認證類別的新執行個體，並將其新增至 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中，您可以透過 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 屬性存取這個集合。  
+3. 建立自訂用戶端認證類別的新執行個體，並將其新增至 <xref:System.ServiceModel.Description.ServiceEndpoint.Behaviors%2A> 集合中，您可以透過 <xref:System.ServiceModel.ChannelFactory.Endpoint%2A> 屬性存取這個集合。  
   
      [!code-csharp[c_CustomCredentials#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#3)]
      [!code-vb[c_CustomCredentials#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/client/client.vb#3)]  
@@ -94,15 +94,15 @@ ms.locfileid: "59191688"
   
 #### <a name="creating-a-configuration-handler-for-custom-client-credentials"></a>建立自訂用戶端認證的組態處理常式  
   
-1.  定義衍生自 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.Configuration.ClientCredentialsElement> 的新類別。  
   
-2.  選擇性。 針對想要透過應用程式組態公開的所有其他組態參數新增屬性。 下列範例會新增一個名為 `CreditCardNumber` 的屬性。  
+2. 選擇性。 針對想要透過應用程式組態公開的所有其他組態參數新增屬性。 下列範例會新增一個名為 `CreditCardNumber` 的屬性。  
   
-3.  覆寫 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 屬性以傳回使用組態項目建立之自訂用戶端認證類別的型別。  
+3. 覆寫 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.BehaviorType%2A> 屬性以傳回使用組態項目建立之自訂用戶端認證類別的型別。  
   
-4.  覆寫 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> 方法。 這個方法會根據從組態檔載入的設定，負責建立和傳回自訂認證類別的執行個體。 請呼叫這個方法的基底 <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 方法，擷取已載入自訂用戶端認證執行個體之系統提供的認證設定。  
+4. 覆寫 <xref:System.ServiceModel.Configuration.BehaviorExtensionElement.CreateBehavior%2A> 方法。 這個方法會根據從組態檔載入的設定，負責建立和傳回自訂認證類別的執行個體。 請呼叫這個方法的基底 <xref:System.ServiceModel.Configuration.ClientCredentialsElement.ApplyConfiguration%28System.ServiceModel.Description.ClientCredentials%29> 方法，擷取已載入自訂用戶端認證執行個體之系統提供的認證設定。  
   
-5.  選擇性。 如果您在步驟 2 新增其他屬性，就需要覆寫 <xref:System.Configuration.ConfigurationElement.Properties%2A> 屬性以登錄組態架構的其他組態設定，才能加以辨認。 結合屬性與基底類別屬性，以便透過這個自訂用戶端認證組態項目設定系統提供的設定。  
+5. 選擇性。 如果您在步驟 2 新增其他屬性，就需要覆寫 <xref:System.Configuration.ConfigurationElement.Properties%2A> 屬性以登錄組態架構的其他組態設定，才能加以辨認。 結合屬性與基底類別屬性，以便透過這個自訂用戶端認證組態項目設定系統提供的設定。  
   
      [!code-csharp[c_CustomCredentials#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#7)]
      [!code-vb[c_CustomCredentials#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#7)]  
@@ -111,11 +111,11 @@ ms.locfileid: "59191688"
   
 #### <a name="to-register-and-use-a-custom-client-credentials-configuration-handler-in-the-application-configuration"></a>在應用程式組態中登錄和使用自訂用戶端認證組態處理常式  
   
-1.  加入 <`extensions`> 項目和 <`behaviorExtensions`> 組態檔的項目。  
+1. 加入 <`extensions`> 項目和 <`behaviorExtensions`> 組態檔的項目。  
   
-2.  加入 <`add`> 項目至 <`behaviorExtensions`> 項目並將`name`屬性設為適當的值。  
+2. 加入 <`add`> 項目至 <`behaviorExtensions`> 項目並將`name`屬性設為適當的值。  
   
-3.  將 `type` 屬性設定為完整型別名稱。 同時包含組件名稱和其他組件屬性。  
+3. 將 `type` 屬性設定為完整型別名稱。 同時包含組件名稱和其他組件屬性。  
   
     ```xml  
     <system.serviceModel>  
@@ -127,7 +127,7 @@ ms.locfileid: "59191688"
     <system.serviceModel>  
     ```  
   
-4.  註冊您的組態處理常式之後, 可以使用自訂認證項目內相同的組態檔，而不是系統提供 <`clientCredentials`> 項目。 您可以同時使用系統提供的屬性，以及新增至組態處理常式實作的任何新屬性。 下列程式碼範例會使用 `creditCardNumber` 屬性 (Attribute) 設定自訂屬性 (Property) 的值。  
+4. 註冊您的組態處理常式之後, 可以使用自訂認證項目內相同的組態檔，而不是系統提供 <`clientCredentials`> 項目。 您可以同時使用系統提供的屬性，以及新增至組態處理常式實作的任何新屬性。 下列程式碼範例會使用 `creditCardNumber` 屬性 (Attribute) 設定自訂屬性 (Property) 的值。  
   
     ```xml  
     <behaviors>  
@@ -141,37 +141,37 @@ ms.locfileid: "59191688"
   
 #### <a name="to-implement-custom-service-credentials"></a>實作自訂服務認證  
   
-1.  定義衍生自 <xref:System.ServiceModel.Description.ServiceCredentials> 的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.Description.ServiceCredentials> 的新類別。  
   
-2.  選擇性。 新增新的屬性以提供已新增之新認證值的 API。 如果您不需要新增新的認證值，請略過這個步驟。 下列程式碼範例會新增 `AdditionalCertificate` 屬性。  
+2. 選擇性。 新增新的屬性以提供已新增之新認證值的 API。 如果您不需要新增新的認證值，請略過這個步驟。 下列程式碼範例會新增 `AdditionalCertificate` 屬性。  
   
-3.  覆寫 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自訂用戶端認證時，這個方法會自動呼叫由 WCF 基礎結構。 這個方法是負責建立和傳回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別實作的執行個體 (在下一個程序中會描述)。  
+3. 覆寫 <xref:System.ServiceModel.Security.SecurityCredentialsManager.CreateSecurityTokenManager%2A> 方法。 使用自訂用戶端認證時，這個方法會自動呼叫由 WCF 基礎結構。 這個方法是負責建立和傳回 <xref:System.IdentityModel.Selectors.SecurityTokenManager> 類別實作的執行個體 (在下一個程序中會描述)。  
   
-4.  選擇性。 覆寫 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。 只有在將新屬性或內部欄位新增至自訂用戶端認證實作時才會需要這麼做。  
+4. 選擇性。 覆寫 <xref:System.ServiceModel.Description.ServiceCredentials.CloneCore%2A> 方法。 只有在將新屬性或內部欄位新增至自訂用戶端認證實作時才會需要這麼做。  
   
      [!code-csharp[c_CustomCredentials#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#4)]
      [!code-vb[c_CustomCredentials#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#4)]  
   
 #### <a name="to-implement-a-custom-service-security-token-manager"></a>實作自訂服務安全性權杖管理員  
   
-1.  定義衍生自 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 類別的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.Security.ServiceCredentialsSecurityTokenManager> 類別的新類別。  
   
-2.  選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to:建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+2. 選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenProvider%2A> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 方法。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to:建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
-3.  選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to:建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主題。  
+3. 選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenAuthenticator%2A> 實作，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to:建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)主題。  
   
-4.  選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 如需有關自訂安全性權杖和自訂安全性權杖序列化程式的詳細資訊，請參閱[How to:建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
+4. 選擇性。 如果必須建立自訂 <xref:System.IdentityModel.Selectors.SecurityTokenManager.CreateSecurityTokenSerializer%28System.IdentityModel.Selectors.SecurityTokenVersion%29>，請覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenSerializer> 方法。 如需有關自訂安全性權杖和自訂安全性權杖序列化程式的詳細資訊，請參閱[How to:建立自訂權杖](../../../../docs/framework/wcf/extending/how-to-create-a-custom-token.md)。  
   
      [!code-csharp[c_CustomCredentials#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#5)]
      [!code-vb[c_CustomCredentials#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#5)]  
   
 #### <a name="to-use-custom-service-credentials-from-application-code"></a>使用來自應用程式碼的自訂服務認證  
   
-1.  建立 <xref:System.ServiceModel.ServiceHost>的執行個體。  
+1. 建立 <xref:System.ServiceModel.ServiceHost>的執行個體。  
   
-2.  從 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合移除系統提供的服務認證行為。  
+2. 從 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合移除系統提供的服務認證行為。  
   
-3.  建立自訂服務認證類別的新執行個體，並將其新增至 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合。  
+3. 建立自訂服務認證類別的新執行個體，並將其新增至 <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> 集合。  
   
      [!code-csharp[c_CustomCredentials#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customcredentials/cs/source.cs#6)]
      [!code-vb[c_CustomCredentials#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customcredentials/vb/service/service.vb#6)]  

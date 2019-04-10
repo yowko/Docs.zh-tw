@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
-ms.openlocfilehash: ccbb979ae7cf67dd54eb80e1d30e74078960b43d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338068"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>逐步解說：簡單的物件模型和查詢 (Visual Basic)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
@@ -46,32 +46,32 @@ ms.locfileid: "59169100"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  按一下 [檔案] 功能表上的 [新增專案]。  
+1. 按一下 [檔案] 功能表上的 [新增專案]。  
   
-2.  在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual Basic**。  
+2. 在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual Basic**。  
   
-3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在 **名稱**方塊中，輸入**LinqConsoleApp**。  
+4. 在 **名稱**方塊中，輸入**LinqConsoleApp**。  
   
-5.  按一下 [確定] 。  
+5. 按一下 [確定] 。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中參考 (按一下**顯示所有檔案**中**方案總管 中**展開**參考**節點)，請將它加入中所述下列步驟。  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
+1. 在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
+2. 在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
-3.  此外，在**加入參考** 對話方塊中，按一下 **.NET**、 捲動至並按一下 System.Windows.Forms，，然後按一下**確定**。  
+3. 此外，在**加入參考** 對話方塊中，按一下 **.NET**、 捲動至並按一下 System.Windows.Forms，，然後按一下**確定**。  
   
      這個組件支援這個逐步解說中的訊息方塊，並加入至專案中。  
   
-4.  將下列指示詞加到 `Module1` 上方：  
+4. 將下列指示詞加到 `Module1` 上方：  
   
      [!code-vb[DLinqWalk1VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#1)]  
   
@@ -128,22 +128,22 @@ ms.locfileid: "59169100"
   
 #### <a name="to-execute-the-query"></a>查詢查詢  
   
-1.  將下列程式碼輸入或貼到 `Sub Main` 方法的結尾 (在查詢描述後面)：  
+1. 將下列程式碼輸入或貼到 `Sub Main` 方法的結尾 (在查詢描述後面)：  
   
      [!code-vb[DLinqWalk1AVB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#6)]  
   
-2.  按 F5，進行應用程式偵錯。  
+2. 按 F5，進行應用程式偵錯。  
   
     > [!NOTE]
     >  如果您的應用程式產生執行階段錯誤，請參閱疑難排解一節[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
   
      訊息方塊會顯示內含六位客戶的清單。 [主控台] 視窗會顯示產生的 SQL 程式碼。  
   
-3.  按一下 [確定] 來解除訊息方塊。  
+3. 按一下 [確定] 來解除訊息方塊。  
   
      應用程式隨即關閉。  
   
-4.  在 [檔案] 功能表上按一下 [全部儲存]。  
+4. 在 [檔案] 功能表上按一下 [全部儲存]。  
   
      如果繼續進行下一個逐步解說，則需要這個應用程式。  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - components [Windows Forms], troubleshooting
 - Windows Forms controls, debugging
 ms.assetid: e9c8c099-2271-4737-882f-50f336c7a55e
-ms.openlocfilehash: 988121bce1fd63c9560fb77fea6dedddd318c4ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3ae8a889bf69913d234e31804335ddb08560c30c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168060"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343411"
 ---
 # <a name="troubleshooting-control-and-component-authoring"></a>控制項和元件撰寫疑難排解
 本主題列出當開發元件和控制項時，會發生下列常見問題。 如需詳細資訊，請參閱[使用元件進行程式設計](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))。  
@@ -38,9 +38,9 @@ ms.locfileid: "59168060"
   
 #### <a name="to-add-a-control-to-the-toolbox"></a>將控制項新增至工具箱  
   
-1.  以滑鼠右鍵按一下 [工具箱]，然後從捷徑功能表選取 [選擇項目]。  
+1. 以滑鼠右鍵按一下 [工具箱]，然後從捷徑功能表選取 [選擇項目]。  
   
-2.  在 [選擇工具箱項目] 對話方塊中，新增元件：  
+2. 在 [選擇工具箱項目] 對話方塊中，新增元件：  
   
     -   如果您想要新增 .NET Framework 元件或控制項，請按一下 [.NET Framework 元件] 索引標籤。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "59168060"
   
     -   如果您想要新增 COM 元件或 ActiveX 控制項，請按一下 [COM 元件] 索引標籤。  
   
-3.  如果您的控制項列在對話方塊中，確認它已選取，然後按一下 [確定]。  
+3. 如果您的控制項列在對話方塊中，確認它已選取，然後按一下 [確定]。  
   
      控制項隨即新增至 [工具箱]。  
   
-4.  如果您的控制項未列在對話方塊中，請執行下列作業︰  
+4. 如果您的控制項未列在對話方塊中，請執行下列作業︰  
   
     1.  按一下 [瀏覽] 按鈕。  
   
@@ -73,15 +73,15 @@ ms.locfileid: "59168060"
   
 #### <a name="to-debug-a-control-or-component"></a>針對控制項或元件進行偵錯  
   
-1.  按一下 [建置] 功能表上的 [建置方案] 以建置解決方案。  
+1. 按一下 [建置] 功能表上的 [建置方案] 以建置解決方案。  
   
-2.  從 [檔案]功能表，選擇 [新增]，然後選擇 [新增專案]，以將測試專案新增至您的應用程式。  
+2. 從 [檔案]功能表，選擇 [新增]，然後選擇 [新增專案]，以將測試專案新增至您的應用程式。  
   
-3.  在 [加入新的專案] 對話方塊中，針對專案型別選擇 [Windows 應用程式]。  
+3. 在 [加入新的專案] 對話方塊中，針對專案型別選擇 [Windows 應用程式]。  
   
-4.  在 [方案總管] 中，以滑鼠右鍵按一下新專案的 [參考] 節點。 在捷徑功能表上，按一下 [加入參考]  以將參考新增至包含控制項或元件的專案。  
+4. 在 [方案總管] 中，以滑鼠右鍵按一下新專案的 [參考] 節點。 在捷徑功能表上，按一下 [加入參考]  以將參考新增至包含控制項或元件的專案。  
   
-5.  在測試專案中建立您的控制項或元件的執行個體。 如果您的元件位於 [工具箱]，您可以將它拖曳至設計工具介面，或者您可以程式設計方式建立執行個體，如下列程式碼範例所示。  
+5. 在測試專案中建立您的控制項或元件的執行個體。 如果您的元件位於 [工具箱]，您可以將它拖曳至設計工具介面，或者您可以程式設計方式建立執行個體，如下列程式碼範例所示。  
   
     ```vb  
     Dim Component1 As New MyNeatComponent()  

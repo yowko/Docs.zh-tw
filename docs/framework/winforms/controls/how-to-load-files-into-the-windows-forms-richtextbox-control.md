@@ -15,21 +15,21 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], opening files
 - RTF files [Windows Forms], displaying in RichTextBox control
 ms.assetid: c03451be-f285-4428-a71a-c41e002cc919
-ms.openlocfilehash: 0456190f160c555dcc8ce5553674eee2cb73db8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ffbce7401f068b3d0a7fee4fd8ba04c10cb6f6b7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59086776"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340850"
 ---
 # <a name="how-to-load-files-into-the-windows-forms-richtextbox-control"></a>HOW TO：將檔案載入 Windows Forms RichTextBox 控制項
 Windows Forms <xref:System.Windows.Forms.RichTextBox> 控制項可以顯示純文字、Unicode 純文字或 Rich Text 格式 (RTF) 檔案。 執行方式是呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法。 您也可以使用 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 方法從資料流載入資料。 如需詳細資訊，請參閱 <xref:System.Windows.Forms.RichTextBox.LoadFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29>。  
   
 ### <a name="to-load-a-file-into-the-richtextbox-control"></a>將檔案載入 RichTextBox 控制項  
   
-1.  決定要使用 <xref:System.Windows.Forms.OpenFileDialog> 元件開啟的檔案路徑。 如需概觀，請參閱[OpenFileDialog 元件概觀](openfiledialog-component-overview-windows-forms.md)。  
+1. 決定要使用 <xref:System.Windows.Forms.OpenFileDialog> 元件開啟的檔案路徑。 如需概觀，請參閱[OpenFileDialog 元件概觀](openfiledialog-component-overview-windows-forms.md)。  
   
-2.  呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 方法，指定要載入的檔案，也可指定檔案類型。 在下例中，要載入的檔案取自 <xref:System.Windows.Forms.OpenFileDialog> 元件的 <xref:System.Windows.Forms.FileDialog.FileName%2A> 屬性。 如果呼叫的方法以檔案名稱為其唯一引數，則檔案類型會假設為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
+2. 呼叫 <xref:System.Windows.Forms.RichTextBox.LoadFile%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 方法，指定要載入的檔案，也可指定檔案類型。 在下例中，要載入的檔案取自 <xref:System.Windows.Forms.OpenFileDialog> 元件的 <xref:System.Windows.Forms.FileDialog.FileName%2A> 屬性。 如果呼叫的方法以檔案名稱為其唯一引數，則檔案類型會假設為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
   
      在下例中，按一下按鈕即會顯示 <xref:System.Windows.Forms.OpenFileDialog> 元件。 所選檔案會隨即開啟，並顯示在 <xref:System.Windows.Forms.RichTextBox> 控制項中。 本例假設表單有`btnOpenFile`按鈕。  
   

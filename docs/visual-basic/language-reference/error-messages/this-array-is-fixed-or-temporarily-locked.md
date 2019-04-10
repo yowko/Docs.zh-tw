@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
-ms.openlocfilehash: f0b80e2be007ff44569365f37a2331f1ecd7a216
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58839401"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337964"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>此陣列為固定長度或暫時鎖定 (Visual Basic)
 此錯誤有下列可能的原因：  
@@ -22,11 +22,11 @@ ms.locfileid: "58839401"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  將原始陣列設為動態，而不是藉由宣告它與已修正`ReDim`（如果陣列宣告程序內），或藉由宣告但未指定的元素數目 （如果陣列在模組層級中宣告。  
+1. 將原始陣列設為動態，而不是藉由宣告它與已修正`ReDim`（如果陣列宣告程序內），或藉由宣告但未指定的元素數目 （如果陣列在模組層級中宣告。  
   
-2.  判斷您是否真的需要將項目，因為它是在模組中的所有程序內為可見。  
+2. 判斷您是否真的需要將項目，因為它是在模組中的所有程序內為可見。  
   
-3.  判斷功能正鎖住`Variant`並加以修正它。  
+3. 判斷功能正鎖住`Variant`並加以修正它。  
   
 ## <a name="see-also"></a>另請參閱
 

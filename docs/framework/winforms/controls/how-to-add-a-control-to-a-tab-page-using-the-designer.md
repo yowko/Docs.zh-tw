@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tab controls [Windows Forms], tab order
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
-ms.openlocfilehash: 609dfb93e2327ffd6013230cf5d54572e0f9b420
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59132702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340967"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>HOW TO：使用設計工具將控制項新增至索引標籤頁
 使用 Windows Form<xref:System.Windows.Forms.TabControl>是有組織的方式顯示其他控制項。 您可以使用這些指示來顯示索引標籤頁之主要組件上的圖片。 如需將圖示新增至索引標籤頁的標籤部分資訊，請參閱[How to:變更 Windows Form TabControl 的外觀](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)。  
@@ -23,9 +23,9 @@ ms.locfileid: "59132702"
   
 ### <a name="to-add-a-control-using-the-designer"></a>若要使用設計工具加入控制項  
   
-1.  使其出現在最上層，請按一下適當的索引標籤頁面。  
+1. 使其出現在最上層，請按一下適當的索引標籤頁面。  
   
-2.  繪製索引標籤頁上的控制項。  
+2. 繪製索引標籤頁上的控制項。  
   
 ## <a name="see-also"></a>另請參閱
 

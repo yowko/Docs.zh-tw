@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 885037f7-1c2b-4d7a-90d9-06b89be172f2
-ms.openlocfilehash: 5471e6d5610fd74a71a53624392d757f85304236
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 911c13b2a24c1906fe3da787460209f12296c993
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229858"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337119"
 ---
 # <a name="how-to-specify-a-service-binding-in-configuration"></a>HOW TO：在組態中指定服務繫結
 在此範例中會定義基本計算機服務的 `ICalculator` 合約，該服務會在 `CalculatorService` 類別中實作，然後會在 Web.config 檔案中設定其端點，其中會指定服務使用 <xref:System.ServiceModel.BasicHttpBinding>。 如需如何設定此服務，而非組態中使用程式碼的說明，請參閱[How to:在程式碼中指定的服務繫結](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)。  
@@ -23,12 +23,12 @@ ms.locfileid: "59229858"
   
 ### <a name="to-specify-the-basichttpbinding-to-use-to-configure-the-service"></a>指定用來設定服務的 BasicHttpBinding  
   
-1.  定義服務類型的服務合約。  
+1. 定義服務類型的服務合約。  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#1)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#1)]  
   
-2.  在服務類別中實作服務合約。  
+2. 在服務類別中實作服務合約。  
   
      [!code-csharp[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/csharp/VS_Snippets_CFX/c_howto_configureservicebinding/cs/source.cs#2)]
      [!code-vb[C_HowTo_ConfigureServiceBinding#2](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_howto_configureservicebinding/vb/source.vb#2)]  
@@ -36,7 +36,7 @@ ms.locfileid: "59229858"
     > [!NOTE]
     >  此服務的實作中不會指定位址或繫結資訊。 同時，您不需要撰寫可從組態檔擷取該資訊的程式碼。  
   
-3.  請建立 Web.config 檔，為使用 `CalculatorService` 的 <xref:System.ServiceModel.WSHttpBinding> 設定端點。  
+3. 請建立 Web.config 檔，為使用 `CalculatorService` 的 <xref:System.ServiceModel.WSHttpBinding> 設定端點。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -73,7 +73,7 @@ ms.locfileid: "59229858"
     </configuration>  
     ```  
   
-4.  請建立 Service.svc 檔，其中包含下列這行文字，並且將它放入 Internet Information Services (IIS) 虛擬目錄中。  
+4. 請建立 Service.svc 檔，其中包含下列這行文字，並且將它放入 Internet Information Services (IIS) 虛擬目錄中。  
   
     ```  
     <%@ServiceHost language=c# Service="CalculatorService" %>   
@@ -81,7 +81,7 @@ ms.locfileid: "59229858"
   
 ### <a name="to-modify-the-default-values-of-the-binding-properties"></a>若要修改繫結屬性的預設值  
   
-1.  若要修改其中的預設屬性值<xref:System.ServiceModel.WSHttpBinding>，建立新的繫結組態名稱-`<binding name="Binding1">`內[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目，並設定新值的屬性此繫結項目中的繫結。 例如，若要將預設的開啟和關閉逾時值從 1 分鐘變更為 2 分鐘，請將下列文字加入至組態檔。  
+1. 若要修改其中的預設屬性值<xref:System.ServiceModel.WSHttpBinding>，建立新的繫結組態名稱-`<binding name="Binding1">`內[ \<wsHttpBinding >](../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)項目，並設定新值的屬性此繫結項目中的繫結。 例如，若要將預設的開啟和關閉逾時值從 1 分鐘變更為 2 分鐘，請將下列文字加入至組態檔。  
   
     ```xml  
     <wsHttpBinding>  

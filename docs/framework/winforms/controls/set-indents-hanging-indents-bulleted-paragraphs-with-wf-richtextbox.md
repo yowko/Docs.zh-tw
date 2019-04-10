@@ -13,19 +13,19 @@ helpviewer_keywords:
 - RichTextBox control [Windows Forms], setting indents and bullets
 - text boxes [Windows Forms], bullets
 ms.assetid: abfb40e6-5642-4691-8ec1-9d9ae91688dc
-ms.openlocfilehash: 4cb9b351b5ed1ab9cd05be0763d967000791fb46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ef579923ac2b9ea9905a60000d93f6bfc90ed5b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342670"
 ---
 # <a name="how-to-set-indents-hanging-indents-and-bulleted-paragraphs-with-the-windows-forms-richtextbox-control"></a>HOW TO：使用 Windows Forms RichTextBox 控制項設定縮排、首行縮排和分項段落
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項有許多選項可以格式化所顯示的文字。 您可以選取的段落格式化為項目符號清單設定<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>屬性。 您也可以使用<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>， <xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>，和<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性來設定左和右邊緣的控制項和其他文字行的左邊的緣相對的段落的縮排。  
   
 ### <a name="to-format-a-paragraph-as-a-bulleted-list"></a>將段落格式化為項目符號清單  
   
-1.  將 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性設定為 `true`。  
+1. 將 <xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A> 屬性設定為 `true`。  
   
     ```vb  
     RichTextBox1.SelectionBullet = True  
@@ -41,11 +41,11 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項有許多選項可�
   
 ### <a name="to-indent-a-paragraph"></a>縮排段落  
   
-1.  設定<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>屬性設為整數，代表控制項左的緣與文字左邊的緣之間的像素的距離。  
+1. 設定<xref:System.Windows.Forms.RichTextBox.SelectionIndent%2A>屬性設為整數，代表控制項左的緣與文字左邊的緣之間的像素的距離。  
   
-2.  設定<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性設為整數，代表像素為單位的段落文字的第一行的左邊的緣和同段落中的接下來幾行的左邊的緣之間的距離。 值<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性只適用於在段落中第一行下方的已包裝的幾行。  
+2. 設定<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性設為整數，代表像素為單位的段落文字的第一行的左邊的緣和同段落中的接下來幾行的左邊的緣之間的距離。 值<xref:System.Windows.Forms.RichTextBox.SelectionHangingIndent%2A>屬性只適用於在段落中第一行下方的已包裝的幾行。  
   
-3.  設定<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>屬性設為整數，代表控制項右緣與文字右邊緣之間的像素的距離。  
+3. 設定<xref:System.Windows.Forms.RichTextBox.SelectionRightIndent%2A>屬性設為整數，代表控制項右緣與文字右邊緣之間的像素的距離。  
   
     ```vb  
     RichTextBox1.SelectionIndent = 8  

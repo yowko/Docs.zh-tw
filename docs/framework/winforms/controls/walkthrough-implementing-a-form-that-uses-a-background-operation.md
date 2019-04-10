@@ -15,12 +15,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: cb19dfb59ba36eea94f65005c2711ad58d098144
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716994"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343398"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>逐步解說：實作使用背景作業的表單
 如果您有會花費很長的時間才能完成，且不想您的使用者介面 (UI) 停止回應或 「 擱置 」，您可以使用<xref:System.ComponentModel.BackgroundWorker>類別，以另一個執行緒上執行作業。  
@@ -47,21 +47,21 @@ ms.locfileid: "57716994"
   
 #### <a name="to-create-a-form-that-uses-a-background-operation"></a>若要實作使用背景作業的表單  
   
-1.  建立以 Windows 為基礎的應用程式專案，稱為`BackgroundWorkerExample`(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
+1. 建立以 Windows 為基礎的應用程式專案，稱為`BackgroundWorkerExample`(**檔案** > **新增** > **專案** >  **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
-2.  在 [方案總管] 中，以滑鼠右鍵按一下 [Form1]，然後從捷徑功能表選取 [重新命名]。 將檔案名稱變更為 `FibonacciCalculator`。 當系統詢問您是否要重新命名程式碼元素 '`Form1`' 的所有參考時，按一下 [是]按鈕。  
+2. 在 [方案總管] 中，以滑鼠右鍵按一下 [Form1]，然後從捷徑功能表選取 [重新命名]。 將檔案名稱變更為 `FibonacciCalculator`。 當系統詢問您是否要重新命名程式碼元素 '`Form1`' 的所有參考時，按一下 [是]按鈕。  
   
-3.  拖曳<xref:System.Windows.Forms.NumericUpDown>控制項從**工具箱**拖曳至表單。 設定<xref:System.Windows.Forms.NumericUpDown.Minimum%2A>屬性，以`1`並<xref:System.Windows.Forms.NumericUpDown.Maximum%2A>屬性設`91`。  
+3. 拖曳<xref:System.Windows.Forms.NumericUpDown>控制項從**工具箱**拖曳至表單。 設定<xref:System.Windows.Forms.NumericUpDown.Minimum%2A>屬性，以`1`並<xref:System.Windows.Forms.NumericUpDown.Maximum%2A>屬性設`91`。  
   
-4.  新增兩個<xref:System.Windows.Forms.Button>控制項加入表單。  
+4. 新增兩個<xref:System.Windows.Forms.Button>控制項加入表單。  
   
-5.  重新命名第一個<xref:System.Windows.Forms.Button>控制`startAsyncButton`並設定<xref:System.Windows.Forms.Control.Text%2A>屬性設`Start Async`。 重新命名第二個<xref:System.Windows.Forms.Button>控制`cancelAsyncButton`，並將<xref:System.Windows.Forms.Control.Text%2A>屬性設`Cancel Async`。 設定其<xref:System.Windows.Forms.Control.Enabled%2A>屬性設`false`。  
+5. 重新命名第一個<xref:System.Windows.Forms.Button>控制`startAsyncButton`並設定<xref:System.Windows.Forms.Control.Text%2A>屬性設`Start Async`。 重新命名第二個<xref:System.Windows.Forms.Button>控制`cancelAsyncButton`，並將<xref:System.Windows.Forms.Control.Text%2A>屬性設`Cancel Async`。 設定其<xref:System.Windows.Forms.Control.Enabled%2A>屬性設`false`。  
   
-6.  這兩個建立的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。 如需詳細資訊，請參閱[如何：建立使用設計工具的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。  
+6. 這兩個建立的事件處理常式<xref:System.Windows.Forms.Button>控制項的<xref:System.Windows.Forms.Control.Click>事件。 如需詳細資訊，請參閱[如何：建立使用設計工具的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。  
   
-7.  拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至表單，並重新命名`resultLabel`。  
+7. 拖曳<xref:System.Windows.Forms.Label>控制項從**工具箱**拖曳至表單，並重新命名`resultLabel`。  
   
-8.  拖曳<xref:System.Windows.Forms.ProgressBar>控制項從**工具箱**拖曳至表單。  
+8. 拖曳<xref:System.Windows.Forms.ProgressBar>控制項從**工具箱**拖曳至表單。  
   
 ## <a name="creating-a-backgroundworker-in-your-form"></a>在您的表單中建立 BackgroundWorker  
  您可以建立<xref:System.ComponentModel.BackgroundWorker>非同步作業使用**Windows** **Form 設計工具**。  
@@ -75,15 +75,15 @@ ms.locfileid: "57716994"
   
 #### <a name="to-implement-asynchronous-event-handlers"></a>若要實作非同步事件處理常式  
   
-1.  在 [**屬性**] 視窗中，使用<xref:System.ComponentModel.BackgroundWorker>元件保持選取，按一下 [**事件**] 按鈕。 按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。 如需如何使用事件處理常式的詳細資訊，請參閱[How to:建立使用設計工具的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。  
+1. 在 [**屬性**] 視窗中，使用<xref:System.ComponentModel.BackgroundWorker>元件保持選取，按一下 [**事件**] 按鈕。 按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。 如需如何使用事件處理常式的詳細資訊，請參閱[How to:建立使用設計工具的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/zwwsdtbk(v=vs.100))。  
   
-2.  在表單中，建立名為 `ComputeFibonacci` 的新方法。 這個方法會執行實際的工作，並且會在背景執行。 此程式碼會示範 Fibonacci 演算法的遞迴實作，它非常沒有效率，對於較大的數字要耗費更長的時間才能完成。 它在這裡是針對說明目的使用，以示範會導致應用程式長時間延遲的作業。  
+2. 在表單中，建立名為 `ComputeFibonacci` 的新方法。 這個方法會執行實際的工作，並且會在背景執行。 此程式碼會示範 Fibonacci 演算法的遞迴實作，它非常沒有效率，對於較大的數字要耗費更長的時間才能完成。 它在這裡是針對說明目的使用，以示範會導致應用程式長時間延遲的作業。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#10)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#10)]
      [!code-vb[System.ComponentModel.BackgroundWorker#10](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#10)]  
   
-3.  在 <xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式，將呼叫加入`ComputeFibonacci`方法。 採取的第一個參數`ComputeFibonacci`從<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。 <xref:System.ComponentModel.BackgroundWorker>和<xref:System.ComponentModel.DoWorkEventArgs>參數將稍後用於進度報告與取消支援。 將指定的傳回值`ComputeFibonacci`要<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。 這個結果可供<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
+3. 在 <xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式，將呼叫加入`ComputeFibonacci`方法。 採取的第一個參數`ComputeFibonacci`從<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。 <xref:System.ComponentModel.BackgroundWorker>和<xref:System.ComponentModel.DoWorkEventArgs>參數將稍後用於進度報告與取消支援。 將指定的傳回值`ComputeFibonacci`要<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。 這個結果可供<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
   
     > [!NOTE]
     >  <xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式不會參考`backgroundWorker1`執行直接個體變數，因為這會結合此事件處理常式的特定執行個體<xref:System.ComponentModel.BackgroundWorker>。 相反地，參考<xref:System.ComponentModel.BackgroundWorker>，會引發這個事件從復原`sender`參數。 當表單裝載一個以上時，這點很重要<xref:System.ComponentModel.BackgroundWorker>。 務必也沒有任何使用者介面中操作物件您<xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式。 相反地，透過使用者介面通訊<xref:System.ComponentModel.BackgroundWorker>事件。  
@@ -92,13 +92,13 @@ ms.locfileid: "57716994"
      [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
      [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
-4.  在 `startAsyncButton`控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式，將會啟動非同步作業的程式碼。  
+4. 在 `startAsyncButton`控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式，將會啟動非同步作業的程式碼。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#13)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#13)]
      [!code-vb[System.ComponentModel.BackgroundWorker#13](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#13)]  
   
-5.  在 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式，指派的計算結果`resultLabel`控制項。  
+5. 在 <xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式，指派的計算結果`resultLabel`控制項。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#6)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#6](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#6)]
@@ -109,15 +109,15 @@ ms.locfileid: "57716994"
   
 #### <a name="to-implement-progress-reporting"></a>若要實作進度報告  
   
-1.  在 [屬性] 視窗中，選取 `backgroundWorker1`。 設定<xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A>並<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>屬性，以`true`。  
+1. 在 [屬性] 視窗中，選取 `backgroundWorker1`。 設定<xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A>並<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>屬性，以`true`。  
   
-2.  宣告 `FibonacciCalculator` 表單中的兩個變數。 這些項目會用來追蹤進度。  
+2. 宣告 `FibonacciCalculator` 表單中的兩個變數。 這些項目會用來追蹤進度。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#14)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
      [!code-vb[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]  
   
-3.  加入 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件的事件處理常式。 在 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件處理常式中，更新<xref:System.Windows.Forms.ProgressBar>具有<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>屬性<xref:System.ComponentModel.ProgressChangedEventArgs>參數。  
+3. 加入 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> 事件的事件處理常式。 在 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>事件處理常式中，更新<xref:System.Windows.Forms.ProgressBar>具有<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>屬性<xref:System.ComponentModel.ProgressChangedEventArgs>參數。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]
@@ -125,13 +125,13 @@ ms.locfileid: "57716994"
   
 #### <a name="to-implement-support-for-cancellation"></a>若要實作支援取消作業  
   
-1.  在 `cancelAsyncButton`控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式，加入程式碼，取消非同步作業。  
+1. 在 `cancelAsyncButton`控制項的<xref:System.Windows.Forms.Control.Click>事件處理常式，加入程式碼，取消非同步作業。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#4)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#4)]
      [!code-vb[System.ComponentModel.BackgroundWorker#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#4)]  
   
-2.  `ComputeFibonacci` 方法中的下列程式碼片段會報告進度和支援取消。  
+2. `ComputeFibonacci` 方法中的下列程式碼片段會報告進度和支援取消。  
   
      [!code-cpp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#11)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#11](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#11)]
@@ -166,9 +166,9 @@ ms.locfileid: "57716994"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>
-- [受控執行緒處理](../../../standard/threading/index.md)
+- [Managed 執行緒處理](../../../standard/threading/index.md)
 - [Managed 執行緒處理的最佳實施方針](../../../standard/threading/managed-threading-best-practices.md)
 - [事件架構非同步模式概觀](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
-- [如何：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
+- [HOW TO：實作使用背景作業的表單](how-to-implement-a-form-that-uses-a-background-operation.md)
 - [逐步解說：在背景執行作業](walkthrough-running-an-operation-in-the-background.md)
 - [BackgroundWorker 元件](backgroundworker-component.md)

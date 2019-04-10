@@ -10,21 +10,21 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding ListSubItems
 - subitems
 ms.assetid: e465f044-cde7-4fd9-a687-788a73a0f554
-ms.openlocfilehash: defa8aa736927c9076eb2410d6d914a8f7550d03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 318521cc1377be89ef54706d80c8b2990a6ba1b8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183712"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59339290"
 ---
 # <a name="how-to-display-subitems-in-columns-with-the-windows-forms-listview-control"></a>HOW TO：使用 Windows Forms ListView 控制項顯示資料行的子項目
 Windows Form<xref:System.Windows.Forms.ListView>控制項可以顯示額外的文字或詳細資料檢視中的每個項目的子項目。 第一欄會顯示項目文字，例如員工號碼。 第二、 第三和後續的資料行中顯示第一、 第二，以及後續的相關聯的子項目。  
   
 ### <a name="to-add-subitems-to-a-list-item"></a>若要將子項目加入至清單項目  
   
-1.  加入所需的任何資料行。 因為第一欄會顯示項目的<xref:System.Windows.Forms.ListView.Text%2A>屬性，您需要多個資料行多於可用的子項目。 如需有關如何加入資料行的詳細資訊，請參閱[How to:資料行以 Windows Form ListView 控制項中加入](how-to-add-columns-to-the-windows-forms-listview-control.md)。  
+1. 加入所需的任何資料行。 因為第一欄會顯示項目的<xref:System.Windows.Forms.ListView.Text%2A>屬性，您需要多個資料行多於可用的子項目。 如需有關如何加入資料行的詳細資訊，請參閱[How to:資料行以 Windows Form ListView 控制項中加入](how-to-add-columns-to-the-windows-forms-listview-control.md)。  
   
-2.  呼叫<xref:System.Windows.Forms.ListViewItem.ListViewSubItemCollection.Add%2A>方法所傳回的集合<xref:System.Windows.Forms.ListViewItem.SubItems%2A>項目的屬性。 下列程式碼範例會設定 employee name 和部門的清單項目。  
+2. 呼叫<xref:System.Windows.Forms.ListViewItem.ListViewSubItemCollection.Add%2A>方法所傳回的集合<xref:System.Windows.Forms.ListViewItem.SubItems%2A>項目的屬性。 下列程式碼範例會設定 employee name 和部門的清單項目。  
   
      [!code-csharp[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/CS/Class1.cs#61)]
      [!code-vb[System.Windows.Forms.ListViewLegacyTopics#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ListViewLegacyTopics/VB/Class1.vb#61)]  

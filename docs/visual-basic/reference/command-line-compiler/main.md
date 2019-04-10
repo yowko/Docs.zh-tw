@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /main compiler option [Visual Basic]
 - -main compiler option [Visual Basic]
 ms.assetid: 83fc339d-6652-415d-b205-b5133319b5b0
-ms.openlocfilehash: d1676cea520c42a40082e31cce9de9797b06e9ee
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: fd6240faf702ccb5e543bfd6a7779284f38d8850
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337236"
 ---
 # <a name="-main"></a>-main
 指定包含 `Sub Main` 程序的類別或模組。  
@@ -37,13 +37,13 @@ ms.locfileid: "58814038"
   
 ### <a name="to-set--main-in-the-visual-studio-integrated-development-environment"></a>若要設定-主要 Visual Studio 整合式的開發環境  
   
-1.  在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
+1. 在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
-2.  按一下 [應用程式]  索引標籤。  
+2. 按一下 [應用程式]  索引標籤。  
   
-3.  請確定**啟用應用程式架構**未核取核取方塊。  
+3. 請確定**啟用應用程式架構**未核取核取方塊。  
   
-4.  修改中的值**啟始物件** 方塊中。  
+4. 修改中的值**啟始物件** 方塊中。  
   
 ## <a name="example"></a>範例  
  下列程式碼會編譯`T2.vb`並`T3.vb`，並指定可`Sub Main`程序就會出現在`Test2`類別。  
@@ -57,4 +57,4 @@ vbc t2.vb t3.vb -main:Test2
 - [Visual Basic 命令列編譯器](../../../visual-basic/reference/command-line-compiler/index.md)
 - [-target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)
 - [編譯命令列範例](../../../visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md)
-- [在 Visual Basic 中的 main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic 中的 Main 程序](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

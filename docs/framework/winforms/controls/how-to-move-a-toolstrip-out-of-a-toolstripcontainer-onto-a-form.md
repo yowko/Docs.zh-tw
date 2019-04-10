@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], parenting to forms
 - Windows Forms, parenting ToolStrip controls
 ms.assetid: a1c94a7f-6fc5-4e4c-84cf-ff11dc573d33
-ms.openlocfilehash: 100e744e6e49fbf214488e9bbb796b5b6fb9591a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9106a69ea9f28442da6e3270f7cf5abb9374b62d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142359"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335260"
 ---
 # <a name="how-to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>HOW TO：將 ToolStrip 移出 ToolStripContainer 並移至表單上
 使用下列程序移動<xref:System.Windows.Forms.ToolStrip>共<xref:System.Windows.Forms.ToolStripContainer>拖曳至表單。  
@@ -20,15 +20,15 @@ ms.locfileid: "59142359"
   
 ### <a name="to-move-a-toolstrip-out-of-a-toolstripcontainer-onto-a-form"></a>若要移動 ToolStrip 從 toolstripcontainer 並移至表單  
   
-1.  選取 <xref:System.Windows.Forms.ToolStrip>。  
+1. 選取 <xref:System.Windows.Forms.ToolStrip>。  
   
-2.  剪下<xref:System.Windows.Forms.ToolStrip>藉由按下 CTRL + X，或以滑鼠右鍵按一下<xref:System.Windows.Forms.ToolStrip>，然後選擇**剪下**從內容功能表。  
+2. 剪下<xref:System.Windows.Forms.ToolStrip>藉由按下 CTRL + X，或以滑鼠右鍵按一下<xref:System.Windows.Forms.ToolStrip>，然後選擇**剪下**從內容功能表。  
   
-3.  選取的表單。  
+3. 選取的表單。  
   
-4.  貼上<xref:System.Windows.Forms.ToolStrip>藉由按下 CTRL + V，或選擇**貼上**從**編輯**功能表。  
+4. 貼上<xref:System.Windows.Forms.ToolStrip>藉由按下 CTRL + V，或選擇**貼上**從**編輯**功能表。  
   
-5.  設定<xref:System.Windows.Forms.ToolStrip.Dock%2A>的屬性<xref:System.Windows.Forms.ToolStrip>要**頂端**。  
+5. 設定<xref:System.Windows.Forms.ToolStrip.Dock%2A>的屬性<xref:System.Windows.Forms.ToolStrip>要**頂端**。  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -2,12 +2,12 @@
 title: HOW TO：序列化及還原序列化 JSON 資料
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
-ms.openlocfilehash: 6363a8e161969c188c5dd18c425ffd42969e9adc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106154"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336950"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>HOW TO：序列化和還原序列化 JSON 資料
 JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可以在用戶端瀏覽器與啟用 AJAX 的 Web 服務之間啟用快速的小量資料交換作業。  
@@ -23,7 +23,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
 ## <a name="to-define-the-data-contract-for-a-person-type"></a>若要定義 Person 類型的資料合約 
   
-1.  將 `Person` 附加到類別，並將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性附加到要序列化的成員中，以定義 <xref:System.Runtime.Serialization.DataMemberAttribute> 的資料合約。 如需有關資料合約的詳細資訊，請參閱[設計服務合約](../designing-service-contracts.md)。  
+1. 將 `Person` 附加到類別，並將 <xref:System.Runtime.Serialization.DataContractAttribute> 屬性附加到要序列化的成員中，以定義 <xref:System.Runtime.Serialization.DataMemberAttribute> 的資料合約。 如需有關資料合約的詳細資訊，請參閱[設計服務合約](../designing-service-contracts.md)。  
   
     ```csharp  
     [DataContract]  
@@ -39,7 +39,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
 ## <a name="to-serialize-an-instance-of-type-person-to-json"></a>若要將型別 Person 的執行個體序列化為 JSON  
   
-1.  建立 `Person` 型別的執行個體。  
+1. 建立 `Person` 型別的執行個體。  
   
     ```csharp  
     Person p = new Person();  
@@ -47,20 +47,20 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
     p.age = 42;  
     ```  
   
-2.  序列化`Person`要使用的記憶體資料流物件<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。  
+2. 序列化`Person`要使用的記憶體資料流物件<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>。  
   
     ```csharp  
     MemoryStream stream1 = new MemoryStream();  
     DataContractJsonSerializer ser = new DataContractJsonSerializer(typeof(Person));  
     ```  
   
-3.  使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法，將 JSON 資料寫入資料流。  
+3. 使用 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.WriteObject%2A> 方法，將 JSON 資料寫入資料流。  
   
     ```csharp  
     ser.WriteObject(stream1, p);  
     ```  
   
-4.  顯示 JSON 輸出。  
+4. 顯示 JSON 輸出。  
   
     ```csharp  
     stream1.Position = 0;  
@@ -71,14 +71,14 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
   
 ## <a name="to-deserialize-an-instance-of-type-person-from-json"></a>若要從 JSON 還原序列化型別 Person 的執行個體  
   
-1.  使用 `Person` 的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 方法，將 JSON 編碼的資料還原序列化為 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的新執行個體。  
+1. 使用 `Person` 的 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.ReadObject%2A> 方法，將 JSON 編碼的資料還原序列化為 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 的新執行個體。  
   
     ```csharp  
     stream1.Position = 0;  
     Person p2 = (Person)ser.ReadObject(stream1);  
     ```  
   
-2.  顯示結果。  
+2. 顯示結果。  
   
     ```csharp  
     Console.WriteLine($"Deserialized back, got name={p2.name}, age={p2.age}");  

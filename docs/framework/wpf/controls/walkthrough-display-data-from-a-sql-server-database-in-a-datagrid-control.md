@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫
+title: 逐步解說：在 DataGrid 控制項中顯示來自 SQL Server 資料庫的資料
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DataGrid [WPF], displaying data from SQL Server
 - controls [WPF], DataGrid
 ms.assetid: 6810b048-0a23-4f86-bfa5-97f92b3cfab4
-ms.openlocfilehash: 022be17c946529583694afc0fe1c61b832aa03e4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 274ec2e8ef16190da53061bb197bc3b1a1fadcf8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351317"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59336105"
 ---
 # <a name="walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control"></a>逐步解說：DataGrid 控制項中顯示資料從 SQL Server 資料庫
 
@@ -29,27 +29,27 @@ ms.locfileid: "57351317"
 
 ## <a name="create-entity-classes"></a>建立實體類別
 
-1.  在 Visual Basic 或 C# 中，建立新的 WPF 應用程式專案並將它命名`DataGridSQLExample`。
+1. 在 Visual Basic 或 C# 中，建立新的 WPF 應用程式專案並將它命名`DataGridSQLExample`。
 
-2.  在 [方案總管] 中，以滑鼠右鍵按一下您的專案，指向**新增**，然後選取**新項目**。
+2. 在 [方案總管] 中，以滑鼠右鍵按一下您的專案，指向**新增**，然後選取**新項目**。
 
      [加入新項目] 對話方塊隨即出現。
 
-3.  在 [已安裝的範本] 窗格中，選取**資料**，然後在範本清單中，選取**ADO.NET 實體資料模型**。
+3. 在 [已安裝的範本] 窗格中，選取**資料**，然後在範本清單中，選取**ADO.NET 實體資料模型**。
 
      ![ADO.NET 實體資料模型項目範本](../../wcf/feature-details/./media/ado-net-entity-data-model-item-template.png)
 
-4.  將檔案命名`AdventureWorksModel.edmx`，然後按一下 **新增**。
+4. 將檔案命名`AdventureWorksModel.edmx`，然後按一下 **新增**。
 
      [實體資料模型精靈] 隨即出現。
 
-5.  在 選擇模型內容 畫面中，選取**資料庫的 EF Designer** ，然後按一下**下一步**。
+5. 在 選擇模型內容 畫面中，選取**資料庫的 EF Designer** ，然後按一下**下一步**。
 
-6.  在 [選擇資料連接] 畫面中，提供您 AdventureWorksLT2008 資料庫的連接。 如需詳細資訊，請參閱 <<c0> [ 選擇您的資料連接對話方塊](https://go.microsoft.com/fwlink/?LinkId=160190)。
+6. 在 [選擇資料連接] 畫面中，提供您 AdventureWorksLT2008 資料庫的連接。 如需詳細資訊，請參閱 <<c0> [ 選擇您的資料連接對話方塊](https://go.microsoft.com/fwlink/?LinkId=160190)。
 
     請確定名稱是`AdventureWorksLT2008Entities`且**將實體連接設定儲存在 App.Config 中為** 核取方塊已選取，然後再按**下一步**。
 
-7.  在 [選擇您的資料庫物件] 畫面中，展開 [資料表] 節點，然後選取**產品**並**ProductCategory**資料表。
+7. 在 [選擇您的資料庫物件] 畫面中，展開 [資料表] 節點，然後選取**產品**並**ProductCategory**資料表。
 
      您可以產生實體類別，所有的資料表。不過，在此範例中您只能從擷取資料這兩個資料表。
 
@@ -63,19 +63,19 @@ ms.locfileid: "57351317"
 
 ## <a name="retrieve-and-present-the-data"></a>擷取，並將資料呈現
 
-1.  開啟 MainWindow.xaml 檔案。
+1. 開啟 MainWindow.xaml 檔案。
 
-2.  設定<xref:System.Windows.FrameworkElement.Width%2A>屬性上的<xref:System.Windows.Window>設為 450。
+2. 設定<xref:System.Windows.FrameworkElement.Width%2A>屬性上的<xref:System.Windows.Window>設為 450。
 
-3.  在 [XAML 編輯器] 中，新增下列<xref:System.Windows.Controls.DataGrid>標記之間`<Grid>`並`</Grid>`要新增的標籤<xref:System.Windows.Controls.DataGrid>名為`dataGrid1`。
+3. 在 [XAML 編輯器] 中，新增下列<xref:System.Windows.Controls.DataGrid>標記之間`<Grid>`並`</Grid>`要新增的標籤<xref:System.Windows.Controls.DataGrid>名為`dataGrid1`。
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#3](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#3)]
 
      ![視窗與 DataGrid](./media/datagrid-sql-ef-step6.png "DataGrid_SQL_EF_Step6")
 
-4.  選取 <xref:System.Windows.Window>。
+4. 選取 <xref:System.Windows.Window>。
 
-5.  使用 [屬性] 視窗或 [XAML 編輯器] 中，建立事件處理常式<xref:System.Windows.Window>名為`Window_Loaded`如<xref:System.Windows.FrameworkElement.Loaded>事件。 如需詳細資訊，請參閱[如何：建立簡單的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
+5. 使用 [屬性] 視窗或 [XAML 編輯器] 中，建立事件處理常式<xref:System.Windows.Window>名為`Window_Loaded`如<xref:System.Windows.FrameworkElement.Loaded>事件。 如需詳細資訊，請參閱[如何：建立簡單的事件處理常式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))。
 
      以下顯示 MainWindow.xaml 的 XAML。
 
@@ -84,14 +84,14 @@ ms.locfileid: "57351317"
 
      [!code-xaml[DataGrid_SQL_EF_Walkthrough#1](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml#1)]
 
-6.  開啟的程式碼後置檔案 （MainWindow.xaml.vb 或 MainWindow.xaml.cs） <xref:System.Windows.Window>。
+6. 開啟的程式碼後置檔案 （MainWindow.xaml.vb 或 MainWindow.xaml.cs） <xref:System.Windows.Window>。
 
-7.  加入下列程式碼，從聯結的資料表擷取特定的值，並設定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性<xref:System.Windows.Controls.DataGrid>查詢的結果。
+7. 加入下列程式碼，從聯結的資料表擷取特定的值，並設定<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>屬性<xref:System.Windows.Controls.DataGrid>查詢的結果。
 
      [!code-csharp[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/CS/MainWindow.xaml.cs#2)]
      [!code-vb[DataGrid_SQL_EF_Walkthrough#2](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_SQL_EF_Walkthrough/VB/MainWindow.xaml.vb#2)]
 
-8.  執行範例。
+8. 執行範例。
 
      您應該會看到<xref:System.Windows.Controls.DataGrid>顯示資料。
 

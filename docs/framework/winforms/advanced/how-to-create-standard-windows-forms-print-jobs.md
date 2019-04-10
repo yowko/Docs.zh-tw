@@ -10,21 +10,21 @@ helpviewer_keywords:
 - printing [Windows Forms], creating print jobs
 - printing [Visual Basic], in Windows applications
 ms.assetid: 03342b90-9cfe-40b2-838b-b479a13c5dea
-ms.openlocfilehash: 7ccebf128d533a0e0cf0a17e5702807371e1bea7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 816da93218e20f73f16c14769ed1a549dd3d8eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170972"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335403"
 ---
 # <a name="how-to-create-standard-windows-forms-print-jobs"></a>HOW TO：建立標準的 Windows Forms 列印工作
 是在 Windows Forms 中列印的基礎<xref:System.Drawing.Printing.PrintDocument>元件 — 更具體來說，<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件。 藉由撰寫程式碼來處理<xref:System.Drawing.Printing.PrintDocument.PrintPage>事件，您可以指定要列印的項目，以及如何列印它。  
   
 ### <a name="to-create-a-print-job"></a>若要建立列印工作  
   
-1.  新增<xref:System.Drawing.Printing.PrintDocument>元件至您的表單。  
+1. 新增<xref:System.Drawing.Printing.PrintDocument>元件至您的表單。  
   
-2.  撰寫程式碼來處理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
+2. 撰寫程式碼來處理 <xref:System.Drawing.Printing.PrintDocument.PrintPage> 事件。  
   
      您必須在您自己的列印邏輯的程式碼。 此外，您必須指定要列印的內容。  
   

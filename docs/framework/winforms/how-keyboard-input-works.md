@@ -6,12 +6,12 @@ helpviewer_keywords:
 - keyboards [Windows Forms], keyboard input
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
-ms.openlocfilehash: 4335798395a3b73dbcb2546a6fadac3d8efedb64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59204740"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342164"
 ---
 # <a name="how-keyboard-input-works"></a>鍵盤輸入的運作方式
 Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤輸入。 大部分的 Windows Forms 應用程式會藉由處理鍵盤事件來處理鍵盤輸入。 不過，您需要了解鍵盤訊息的運作方式，以便實作更進階的鍵盤輸入案例，例如在按鍵觸達控制項之前先行攔截。 本主題說明 Windows Forms 可辨識的按鍵資料類型，並提供鍵盤訊息的路由方式概觀。 如需鍵盤事件的相關資訊，請參閱[使用鍵盤事件](using-keyboard-events.md)。  
@@ -22,13 +22,13 @@ Windows Forms 會引發鍵盤事件以回應 Windows 訊息，進而處理鍵盤
 ## <a name="order-of-keyboard-events"></a>鍵盤事件的順序  
  如先前所列，控制項上可能發生有 3 鍵盤相關事件。 下列序列顯示事件的一般順序︰  
   
-1.  使用者按"a"鍵、 索引鍵會經過前置處理、 分派，並有<xref:System.Windows.Forms.Control.KeyDown>就會發生事件。  
+1. 使用者按"a"鍵、 索引鍵會經過前置處理、 分派，並有<xref:System.Windows.Forms.Control.KeyDown>就會發生事件。  
   
-2.  使用者按住"a"鍵、 索引鍵會經過前置處理、 分派，並有<xref:System.Windows.Forms.Control.KeyPress>就會發生事件。  
+2. 使用者按住"a"鍵、 索引鍵會經過前置處理、 分派，並有<xref:System.Windows.Forms.Control.KeyPress>就會發生事件。  
   
      當使用者按住一個按鍵時，此事件會發生很多次。  
   
-3.  使用者放開"a"鍵，此鍵會經過前置處理、 分派和<xref:System.Windows.Forms.Control.KeyUp>就會發生事件。  
+3. 使用者放開"a"鍵，此鍵會經過前置處理、 分派和<xref:System.Windows.Forms.Control.KeyUp>就會發生事件。  
   
 ## <a name="preprocessing-keys"></a>按鍵前置處理  
  如同其他訊息，在處理鍵盤訊息<xref:System.Windows.Forms.Control.WndProc%2A>表單或控制項的方法。 不過，在鍵盤之前處理訊息，<xref:System.Windows.Forms.Control.PreProcessMessage%2A>方法會呼叫可覆寫以處理特殊字元按鍵與實體索引鍵的一或多個方法。 您可以覆寫這些方法，以在控制項處理訊息之前，先偵測並篩選特定按鍵。 下表顯示正在執行的動作以及發生的相關方法 (依方法的發生順序顯示)。  

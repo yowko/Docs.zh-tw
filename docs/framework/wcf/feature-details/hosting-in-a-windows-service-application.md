@@ -2,12 +2,12 @@
 title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
-ms.openlocfilehash: 5cd5a8bd198fe4f2f8cc26a9937029b578eff2e4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335364"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
 Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特別適合那些必須駐留在長時間執行的可執行檔中，且不會顯示任何使用者介面形式的應用程式使用。 Windows 服務應用程式的處理序存留期是由服務控制管理員 (SCM) 負責管理，可讓您啟動、停止與暫停 Windows 服務應用程式。 您可以設定為啟動電腦，因此合適的裝載環境為 「 永遠開啟 」 應用程式時自動啟動 Windows 服務處理程序。 如需有關 Windows 服務應用程式的詳細資訊，請參閱 < [Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=89450)。  
@@ -24,9 +24,9 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
   
 ### <a name="to-host-wcf-inside-of-a-windows-service-application"></a>若要在 Windows 服務應用程式中裝載 WCF  
   
-1.  建立 Windows 服務應用程式。 您可以使用 <xref:System.ServiceProcess> 命名空間中的類別，以 Managed 程式碼來撰寫 Windows 服務應用程式。 此應用程式必須包含一個繼承自 <xref:System.ServiceProcess.ServiceBase> 的類別。  
+1. 建立 Windows 服務應用程式。 您可以使用 <xref:System.ServiceProcess> 命名空間中的類別，以 Managed 程式碼來撰寫 Windows 服務應用程式。 此應用程式必須包含一個繼承自 <xref:System.ServiceProcess.ServiceBase> 的類別。  
   
-2.  連結的 Windows 服務應用程式存留期的 WCF 服務的存留期間。 一般而言，您會想要成為作用中裝載的服務啟動時，請停止接聽訊息時停止，並關閉裝載處理序，當發生錯誤時的 WCF 服務主控的服務 Windows 服務應用程式中裝載的 WCF 服務。 執行下列工作即可達成這點：  
+2. 連結的 Windows 服務應用程式存留期的 WCF 服務的存留期間。 一般而言，您會想要成為作用中裝載的服務啟動時，請停止接聽訊息時停止，並關閉裝載處理序，當發生錯誤時的 WCF 服務主控的服務 Windows 服務應用程式中裝載的 WCF 服務。 執行下列工作即可達成這點：  
   
     -   覆寫 <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> 以開啟一或多個 <xref:System.ServiceModel.ServiceHost> 執行個體。 單一的 Windows 服務應用程式可以裝載多個 WCF 服務的啟動和停止做為群組。  
   

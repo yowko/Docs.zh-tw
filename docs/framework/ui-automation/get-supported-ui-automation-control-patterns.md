@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, getting control patterns
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
-ms.openlocfilehash: f55862722c6062c5353fc3b1ab8569d4759ac342
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 64c5bae738cee5249e6c2406a2f94667ecb2931f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157283"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337015"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>取得支援的 UI 自動化控制項模式
 > [!NOTE]
@@ -24,18 +24,18 @@ ms.locfileid: "59157283"
   
 ### <a name="obtain-all-control-patterns"></a>取得所有控制項模式  
   
-1.  取得您對其控制項模式有興趣的 <xref:System.Windows.Automation.AutomationElement>。  
+1. 取得您對其控制項模式有興趣的 <xref:System.Windows.Automation.AutomationElement>。  
   
-2.  呼叫 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> 以取得項目的所有控制項模式。  
+2. 呼叫 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A> 以取得項目的所有控制項模式。  
   
 > [!CAUTION]
 >  強烈建議用戶端不要使用 <xref:System.Windows.Automation.AutomationElement.GetSupportedPatterns%2A>。 可能會嚴重影響效能，因為這個方法會在內部針對每個現有的控制項模式呼叫 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>。 可能的話，用戶端應該針對感興趣的重要模式呼叫 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A>。  
   
 ### <a name="obtain-a-specific-control-pattern"></a>取得特定的控制項模式  
   
-1.  取得您對其控制項模式有興趣的 <xref:System.Windows.Automation.AutomationElement>。  
+1. 取得您對其控制項模式有興趣的 <xref:System.Windows.Automation.AutomationElement>。  
   
-2.  呼叫 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 以查詢特定模式。 這些方法很相似，但如果找不到模式，<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 會引發例外狀況，且 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 會傳回 `false`。  
+2. 呼叫 <xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 或 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 以查詢特定模式。 這些方法很相似，但如果找不到模式，<xref:System.Windows.Automation.AutomationElement.GetCurrentPattern%2A> 會引發例外狀況，且 <xref:System.Windows.Automation.AutomationElement.TryGetCurrentPattern%2A> 會傳回 `false`。  
   
 ## <a name="example"></a>範例  
  下列範例會擷取清單項目的 <xref:System.Windows.Automation.AutomationElement>，並從該項目取得 <xref:System.Windows.Automation.SelectionItemPattern>。  
