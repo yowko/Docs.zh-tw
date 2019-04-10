@@ -9,12 +9,12 @@ helpviewer_keywords:
 - properties [WPF], transformation
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
-ms.openlocfilehash: 0b55d2000b8a70bc42373cb976a84ff54ebc4245
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169568"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298327"
 ---
 # <a name="brush-transformation-overview"></a>筆刷轉換概觀
 Brush 類別提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transform%2A>和<xref:System.Windows.Media.Brush.RelativeTransform%2A>。 上述屬性可讓您旋轉、縮放、扭曲及平移筆刷的內容。 本主題說明這兩種屬性之間的差異並提供使用方式範例。  
@@ -29,15 +29,15 @@ Brush 類別提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transfor
   
  當您將轉換套用至筆刷的<xref:System.Windows.Media.Brush.RelativeTransform%2A>屬性，其輸出會對應到繪製區域之前，該轉換會套用到筆刷。 下列清單說明筆刷內容的處理和轉換順序。  
   
-1.  處理筆刷的內容。 針對<xref:System.Windows.Media.GradientBrush>，這表示決定漸層停駐區域。 針對<xref:System.Windows.Media.TileBrush>，則<xref:System.Windows.Media.TileBrush.Viewbox%2A>對應至<xref:System.Windows.Media.TileBrush.Viewport%2A>。 這會成為筆刷的輸出。  
+1. 處理筆刷的內容。 針對<xref:System.Windows.Media.GradientBrush>，這表示決定漸層停駐區域。 針對<xref:System.Windows.Media.TileBrush>，則<xref:System.Windows.Media.TileBrush.Viewbox%2A>對應至<xref:System.Windows.Media.TileBrush.Viewport%2A>。 這會成為筆刷的輸出。  
   
-2.  將筆刷的輸出投影至 1 x 1 轉換矩形。  
+2. 將筆刷的輸出投影至 1 x 1 轉換矩形。  
   
-3.  套用筆刷的<xref:System.Windows.Media.Brush.RelativeTransform%2A>，如果有的話。  
+3. 套用筆刷的<xref:System.Windows.Media.Brush.RelativeTransform%2A>，如果有的話。  
   
-4.  將轉換後的輸出投影至要繪製的區域。  
+4. 將轉換後的輸出投影至要繪製的區域。  
   
-5.  套用筆刷的<xref:System.Windows.Media.Transform>，如果有的話。  
+5. 套用筆刷的<xref:System.Windows.Media.Transform>，如果有的話。  
   
  因為<xref:System.Windows.Media.Brush.RelativeTransform%2A>套用時將筆刷的輸出會對應到 1x1 矩形，轉換中心點和位移的值似乎有相對關係。 比方說，如果您使用<xref:System.Windows.Media.RotateTransform>旋轉筆刷的輸出其中心點的 45 度，並會提供<xref:System.Windows.Media.RotateTransform><xref:System.Windows.Media.RotateTransform.CenterX%2A>為 0.5 和<xref:System.Windows.Media.RotateTransform.CenterY%2A>為 0.5。  
   
@@ -61,19 +61,19 @@ Brush 類別提供兩個轉換屬性：<xref:System.Windows.Media.Brush.Transfor
   
  請注意，影像會扭曲，即使筆刷<xref:System.Windows.Media.TileBrush.Stretch%2A>已設為<xref:System.Windows.Media.Stretch.UniformToFill>。 這是因為套用相對轉換後的筆刷<xref:System.Windows.Media.TileBrush.Viewbox%2A>對應至其<xref:System.Windows.Media.TileBrush.Viewport%2A>。 下列清單描述程序的每個步驟︰  
   
-1.  專案 筆刷的內容 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 到其基底的並排顯示 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 使用筆刷的<xref:System.Windows.Media.TileBrush.Stretch%2A>設定。  
+1. 專案 筆刷的內容 (<xref:System.Windows.Media.TileBrush.Viewbox%2A>) 到其基底的並排顯示 (<xref:System.Windows.Media.TileBrush.Viewport%2A>) 使用筆刷的<xref:System.Windows.Media.TileBrush.Stretch%2A>設定。  
   
      ![自動縮放 Viewbox 以符合檢視區](./media/graphicsmm-reltransform-2-viewbox-to-viewport.png "graphicsmm_reltransform_2_viewbox_to_viewport")  
   
-2.  將基底的並排顯示投影至 1 x 1 轉換矩形。  
+2. 將基底的並排顯示投影至 1 x 1 轉換矩形。  
   
      ![將檢視區對應至轉換矩形](./media/graphicsmm-reltransform-3-output-to-transform.png "graphicsmm_reltransform_3_output_to_transform")  
   
-3.  套用<xref:System.Windows.Media.RotateTransform>。  
+3. 套用<xref:System.Windows.Media.RotateTransform>。  
   
      ![套用相對轉換](./media/graphicsmm-reltransform-4-transform-rotate.png "graphicsmm_reltransform_4_transform_rotate")  
   
-4.  將轉換後基底的並排顯示投影至要繪製的區域。  
+4. 將轉換後基底的並排顯示投影至要繪製的區域。  
   
      ![將轉換後的筆刷投影至輸出區域](./media/graphicsmm-reltransform-5-transform-to-output.png "graphicsmm_reltransform_5_transform_to_output")  
   

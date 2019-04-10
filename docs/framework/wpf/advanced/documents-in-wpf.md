@@ -10,12 +10,12 @@ helpviewer_keywords:
 - documents [WPF], types of
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
-ms.openlocfilehash: 9f948b6723d73dac6104439dcd6a42dce573c438
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59169607"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313953"
 ---
 # <a name="documents-in-wpf"></a>WPF 中的文件
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供各種不同的文件的功能，可讓設計成更容易存取與讀取比在舊版中的高逼真度內容建立[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]。 除了增強功能和品質，[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 也針對文件顯示、封裝和安全性提供整合式服務。 本主題提供 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 文件類型和文件封裝的簡介。  
@@ -89,9 +89,9 @@ ms.locfileid: "59169607"
 #### <a name="packagedigitalsignatures"></a>PackageDigitalSignatures  
  為了安全性， <xref:System.IO.Packaging.PackageDigitalSignature> （「 數位簽章 」） 可以在封裝內的組件與相關聯。 A<xref:System.IO.Packaging.PackageDigitalSignature>納入 [509] 提供兩個功能：  
   
-1.  識別並驗證組件的建立者。  
+1. 識別並驗證組件的建立者。  
   
-2.  驗證組件未遭修改。  
+2. 驗證組件未遭修改。  
   
  數位簽章不會防止組件遭到修改，但如果組件有任何改變，對於數位簽章的驗證檢查就會失敗。 應用程式可以做出一些適當的回應，像是防止開啟組件，或通知使用者該組件已遭修改，因此並不安全。  
   
@@ -107,9 +107,9 @@ ms.locfileid: "59169607"
   
  封裝關聯性提供一個顯而易見的方法，來新增其他資訊，並將此資訊與個別組件或整個封裝產生關聯。 封裝關聯性可用於兩項主要功能：  
   
-1.  定義某個組件與另一個組件的相依性關聯性。  
+1. 定義某個組件與另一個組件的相依性關聯性。  
   
-2.  定義新增附註或組件之其他相關資料的資訊關聯性。  
+2. 定義新增附註或組件之其他相關資料的資訊關聯性。  
   
  A<xref:System.IO.Packaging.PackageRelationship>提供快速且顯而易見的方法，來定義相依性，並新增與封裝或整個封裝組件相關聯的其他資訊。  
   

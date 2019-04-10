@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 20c5ee3667bf57328a3b6dda6e55dce4ddbbec72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223973"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323241"
 ---
 # <a name="frequently-asked-questions"></a>常見問題集
 下列各節將解答實作 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 時可能會遇到的一些常見問題。  
@@ -156,11 +156,11 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  答： 在這種進階案例中，請採取下列步驟：  
   
-1.  在 .dbml 檔案中，藉由將 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 旗標變更為 `True`，以修改屬性。  
+1. 在 .dbml 檔案中，藉由將 <xref:System.Data.Linq.ITable.IsReadOnly%2A> 旗標變更為 `True`，以修改屬性。  
   
-2.  加入部分類別。 針對唯讀成員建立含參數的建構函式。  
+2. 加入部分類別。 針對唯讀成員建立含參數的建構函式。  
   
-3.  檢視預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
+3. 檢視預設 <xref:System.Data.Linq.Mapping.UpdateCheck> 值 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>)，判斷它是否為應用程式的正確值。  
   
     > [!CAUTION]
     >  如果您使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]在 Visual Studio 中，可能會覆寫您的變更。  

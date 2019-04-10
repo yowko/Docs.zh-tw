@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
-ms.openlocfilehash: dfff99969943a99d30f4e00b75fb5320bb3c9ad2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219599"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322832"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>逐步解說：在 Windows Forms 中裝載 WPF 複合控制項
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]程式碼，它可以更有效率地將現有[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式與[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]而不從頭重寫程式。 常見的案例是當您想要內嵌一個或多個控制項實作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]Windows Forms 應用程式內。 如需有關自訂 WPF 控制項的詳細資訊，請參閱 <<c0> [ 控制項自訂](../controls/control-customization.md)。  
@@ -40,17 +40,17 @@ ms.locfileid: "59219599"
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
   
-1.  啟動[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，然後開啟**新的專案** 對話方塊。  
+1. 啟動[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，然後開啟**新的專案** 對話方塊。  
   
-2.  在 Visual C# 和 Windows 分類中，選取**WPF 使用者控制項程式庫**範本。  
+2. 在 Visual C# 和 Windows 分類中，選取**WPF 使用者控制項程式庫**範本。  
   
-3.  將新專案命名為 `MyControls`。  
+3. 將新專案命名為 `MyControls`。  
   
-4.  針對位置，指定方便命名的最上層資料夾，例如`WindowsFormsHostingWpfControl`。 稍後，您會將主應用程式放在此資料夾中。  
+4. 針對位置，指定方便命名的最上層資料夾，例如`WindowsFormsHostingWpfControl`。 稍後，您會將主應用程式放在此資料夾中。  
   
-5.  按一下 [確定] 建立專案。 預設專案會包含名為的單一控制項`UserControl1`。  
+5. 按一下 [確定] 建立專案。 預設專案會包含名為的單一控制項`UserControl1`。  
   
-6.  在 [方案總管] 中，重新命名`UserControl1`至`MyControl1`。  
+6. 在 [方案總管] 中，重新命名`UserControl1`至`MyControl1`。  
   
  您的專案應該有下列系統 DLL 的參考。 如果預設未包括所有這些 DLL，則請將它們新增至專案。  
   
@@ -105,11 +105,11 @@ ms.locfileid: "59219599"
 ### <a name="implementing-the-code-behind-file"></a>實作程式碼後置檔案  
  程式碼後置檔案 MyControl1.xaml.cs 會實作三項重要工作：
   
-1.  處理使用者按一下其中一個按鈕時所發生的事件。  
+1. 處理使用者按一下其中一個按鈕時所發生的事件。  
   
-2.  擷取從資料<xref:System.Windows.Controls.TextBox>項目，並將它封裝在自訂事件引數物件。  
+2. 擷取從資料<xref:System.Windows.Controls.TextBox>項目，並將它封裝在自訂事件引數物件。  
   
-3.  引發自訂`OnButtonClick`事件，就會通知使用者已完成，並將資料傳遞回主應用程式的主應用程式。  
+3. 引發自訂`OnButtonClick`事件，就會通知使用者已完成，並將資料傳遞回主應用程式的主應用程式。  
   
  此控制項也會公開一些可讓您變更外觀的色彩和字型屬性。 不同於<xref:System.Windows.Forms.Integration.WindowsFormsHost>類別，用來裝載 Windows Form 控制項，這<xref:System.Windows.Forms.Integration.ElementHost>類別會公開控制項的<xref:System.Windows.Controls.Panel.Background%2A>只有屬性。 若要維護這個程式碼範例和中所討論的範例之間的相似度[逐步解說：裝載在 WPF 中的 Windows Forms 複合控制項](walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)，控制項會直接公開其餘屬性。  
   
@@ -189,25 +189,25 @@ namespace MyControls
 ### <a name="creating-the-project"></a>建立專案  
  啟動專案：  
   
-1.  啟動[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，然後開啟**新的專案** 對話方塊。  
+1. 啟動[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]，然後開啟**新的專案** 對話方塊。  
   
-2.  在 Visual C# 和 Windows 分類中，選取**Windows Forms 應用程式**範本。  
+2. 在 Visual C# 和 Windows 分類中，選取**Windows Forms 應用程式**範本。  
   
-3.  將新專案命名為 `WFHost`。  
+3. 將新專案命名為 `WFHost`。  
   
-4.  針對位置，指定包含 MyControls 專案的相同最上層資料夾。  
+4. 針對位置，指定包含 MyControls 專案的相同最上層資料夾。  
   
-5.  按一下 [確定] 建立專案。  
+5. 按一下 [確定] 建立專案。  
   
  您也需要將參考加入至包含的 DLL`MyControl1`和其他組件。  
   
-1.  以滑鼠右鍵按一下方案總管 中的專案名稱，然後選取**加入參考**。  
+1. 以滑鼠右鍵按一下方案總管 中的專案名稱，然後選取**加入參考**。  
   
-2.  按一下 **瀏覽**索引標籤，然後瀏覽至包含 MyControls.dll 的資料夾。 在此逐步解說中，這個資料夾是 MyControls\bin\Debug。  
+2. 按一下 **瀏覽**索引標籤，然後瀏覽至包含 MyControls.dll 的資料夾。 在此逐步解說中，這個資料夾是 MyControls\bin\Debug。  
   
-3.  選取 MyControls.dll，然後再按一下**確定**。  
+3. 選取 MyControls.dll，然後再按一下**確定**。  
   
-4.  加入下列組件的參考。  
+4. 加入下列組件的參考。  
   
     -   PresentationCore  
   
@@ -222,13 +222,13 @@ namespace MyControls
 ### <a name="implementing-the-user-interface-for-the-application"></a>實作應用程式的使用者介面  
  Windows Forms 應用程式的 UI 包含數個控制項，可與 WPF 複合控制項互動。  
   
-1.  在 Windows Forms 設計工具中，開啟 Form1。  
+1. 在 Windows Forms 設計工具中，開啟 Form1。  
   
-2.  放大表單，以容納控制項。  
+2. 放大表單，以容納控制項。  
   
-3.  在表單右上角，新增<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>控制項來保留[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。  
+3. 在表單右上角，新增<xref:System.Windows.Forms.Panel?displayProperty=nameWithType>控制項來保留[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。  
   
-4.  新增下列<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項加入表單。  
+4. 新增下列<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項加入表單。  
   
     |名稱|文字|  
     |----------|----------|  
@@ -240,7 +240,7 @@ namespace MyControls
     |groupBox6|字型粗細|  
     |groupBox7|來自控制項的資料|  
   
-5.  新增下列<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控制項新增至<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項。  
+5. 新增下列<xref:System.Windows.Forms.RadioButton?displayProperty=nameWithType>控制項新增至<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>控制項。  
   
     |GroupBox|名稱|文字|  
     |--------------|----------|----------|  
@@ -261,7 +261,7 @@ namespace MyControls
     |groupBox6|radioWeightOriginal|原始|  
     |groupBox6|radioWeightBold|粗體|  
   
-6.  新增下列<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最後一個控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項會顯示所傳回的資料[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。  
+6. 新增下列<xref:System.Windows.Forms.Label?displayProperty=nameWithType>到最後一個控制<xref:System.Windows.Forms.GroupBox?displayProperty=nameWithType>。 這些控制項會顯示所傳回的資料[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]複合控制項。  
   
     |GroupBox|名稱|文字|  
     |--------------|----------|----------|  
@@ -284,15 +284,15 @@ namespace MyControls
   
  `Form1_Load`前面的程式碼的方法會顯示一般的程序來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項：  
   
-1.  建立新<xref:System.Windows.Forms.Integration.ElementHost>物件。  
+1. 建立新<xref:System.Windows.Forms.Integration.ElementHost>物件。  
   
-2.  將控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>。  
+2. 將控制項的<xref:System.Windows.Forms.Control.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill?displayProperty=nameWithType>。  
   
-3.  新增<xref:System.Windows.Forms.Integration.ElementHost>若要控制<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.Controls%2A>集合。  
+3. 新增<xref:System.Windows.Forms.Integration.ElementHost>若要控制<xref:System.Windows.Forms.Panel>控制項的<xref:System.Windows.Forms.Control.Controls%2A>集合。  
   
-4.  建立的執行個體[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
+4. 建立的執行個體[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
   
-5.  藉由指定的控制項中裝載複合控制項在表單上的<xref:System.Windows.Forms.Integration.ElementHost>控制項的<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性。  
+5. 藉由指定的控制項中裝載複合控制項在表單上的<xref:System.Windows.Forms.Integration.ElementHost>控制項的<xref:System.Windows.Forms.Integration.ElementHost.Child%2A>屬性。  
   
  中的其餘兩行會`Form1_Load`方法附加至兩個控制項事件的處理常式：  
   

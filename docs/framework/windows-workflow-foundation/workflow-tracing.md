@@ -2,12 +2,12 @@
 title: 工作流程追蹤
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
-ms.openlocfilehash: 92497768e7e8d720cdcc7c8f2c7c04b4dfcc47b4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59224932"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321662"
 ---
 # <a name="workflow-tracing"></a>工作流程追蹤
 工作流程追蹤提供使用 .NET Framework 追蹤接聽程式擷取診斷資訊的方式。 如果偵測到應用程式的問題，可以啟用追蹤，等到問題解決再停用追蹤。 您可以運用兩種方式啟用工作流程的偵錯追蹤。 您可以使用事件追蹤檢視器加以設定，也可以使用 <xref:System.Diagnostics>，將追蹤事件傳送至檔案。  
@@ -15,13 +15,13 @@ ms.locfileid: "59224932"
 ## <a name="enabling-debug-tracing-in-etw"></a>啟用 ETW 中的偵錯追蹤  
  若要使用 ETW 啟用追蹤，請啟用事件檢視器中的偵錯通道：  
   
-1.  巡覽至事件檢視器中的分析與偵錯記錄檔。  
+1. 巡覽至事件檢視器中的分析與偵錯記錄檔。  
   
-2.  在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器-> 應用程式及服務記錄檔-> Microsoft-> Windows-> 應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**應用程式伺服器-應用程式**，然後選取**檢視]-> [顯示分析與偵錯記錄檔**。 以滑鼠右鍵按一下**偵錯**，然後選取**啟用記錄**。  
+2. 在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器-> 應用程式及服務記錄檔-> Microsoft-> Windows-> 應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**應用程式伺服器-應用程式**，然後選取**檢視]-> [顯示分析與偵錯記錄檔**。 以滑鼠右鍵按一下**偵錯**，然後選取**啟用記錄**。  
   
-3.  當工作流程執行偵錯並將追蹤發出至 ETW 偵錯頻道時，即可在事件檢視器中檢視這些追蹤。 瀏覽至**事件檢視器-> 應用程式及服務記錄檔]-> [Microsoft]-> [Windows]-> [應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**偵錯**，然後選取**重新整理**。  
+3. 當工作流程執行偵錯並將追蹤發出至 ETW 偵錯頻道時，即可在事件檢視器中檢視這些追蹤。 瀏覽至**事件檢視器-> 應用程式及服務記錄檔]-> [Microsoft]-> [Windows]-> [應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**偵錯**，然後選取**重新整理**。  
   
-4.  預設的分析追蹤緩衝區大小只有 4 KB；建議您將大小增加至 32 KB。 若要執行這項操作，請執行下列步驟。  
+4. 預設的分析追蹤緩衝區大小只有 4 KB；建議您將大小增加至 32 KB。 若要執行這項操作，請執行下列步驟。  
   
     1.  目前的 framework 目錄 (例如 C:\Windows\Microsoft.NET\Framework\v4.0.21203) 中執行下列命令： `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   

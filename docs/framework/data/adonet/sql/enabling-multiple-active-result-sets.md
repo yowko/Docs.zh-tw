@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
-ms.openlocfilehash: 9930b0081ef67ed006e399e3e5b44e88a47933c1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147546"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304398"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>啟用 Multiple Active Result Sets
 Multiple Active Result Set (MARS) 是與 SQL Server 搭配使用的功能，它允許在單一連接中執行多個批次作業。 啟用 MARS 以與 SQL Server 搭配使用時，使用的每個命令物件都會在連接中加入工作階段。  
@@ -102,11 +102,11 @@ string connectionString = "Data Source=MSSQL1;" +
   
  處理此案例有三個選項：  
   
-1.  在建立讀取器後啟動交易，使其不會成為交易的一部分。 然後每個更新會成為其自身的交易。  
+1. 在建立讀取器後啟動交易，使其不會成為交易的一部分。 然後每個更新會成為其自身的交易。  
   
-2.  在讀取器關閉後認可所有工作。 如此可能會發生大量批次的更新。  
+2. 在讀取器關閉後認可所有工作。 如此可能會發生大量批次的更新。  
   
-3.  請勿針對每個命令物件使用 MARS，而是使用 MARS 之前的單獨連接。  
+3. 請勿針對每個命令物件使用 MARS，而是使用 MARS 之前的單獨連接。  
   
 ### <a name="detecting-mars-support"></a>偵測 MARS 支援  
  應用程式可以藉由讀取 `SqlConnection.ServerVersion` 值來檢查 MARS 支援。 SQL Server 2005 和 SQL Server 2008 的主版本號碼應為分別為 9 和 10。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XAML browser applications [WPF]
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
-ms.openlocfilehash: a4fe68ca4c2d4a58ecf561d17111fdf6a68a9118
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171836"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314369"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>HOW TO：設定 Visual Studio 來偵錯 XAML 瀏覽器應用程式以呼叫 Web 服務
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] 網際網路區域集合的權限僅限於在部分信任安全性沙箱內執行。 此權限集合會限制只有 web 服務，是位在 Web 服務呼叫[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]應用程式的來源網站。 當[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]進行偵錯從 Visual Studio 2005，不過，它不是擁有相同來源網站上的 Web 服務的方法參考。 此會導致安全性例外狀況，當引發[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]嘗試呼叫 Web 服務。 不過，Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]專案可以設定為模擬擁有為其偵錯時所呼叫的 Web 服務相同的來源站台。 這可讓[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]來安全地呼叫 Web 服務，而不會造成安全性例外狀況。
@@ -21,15 +21,15 @@ ms.locfileid: "59171836"
 ## <a name="configuring-visual-studio"></a>設定 Visual Studio
  若要設定 Visual Studio 2005 偵錯[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]呼叫 Web 服務：
 
-1.  在方案總管 中選取專案之後，按一下 [專案]  功能表中 [屬性] 。
+1. 在方案總管 中選取專案之後，按一下 [專案]  功能表中 [屬性] 。
 
-2.  在 [**專案設計工具**，按一下**偵錯**] 索引標籤。
+2. 在 [**專案設計工具**，按一下**偵錯**] 索引標籤。
 
-3.  在 **起始動作**區段中，選取**啟動外部程式**並輸入下列命令：
+3. 在 **起始動作**區段中，選取**啟動外部程式**並輸入下列命令：
 
      `C:\WINDOWS\System32\PresentationHost.exe`
 
-4.  在 **啟動選項**區段中，輸入下列內容輸入**命令列引數**文字方塊：
+4. 在 **啟動選項**區段中，輸入下列內容輸入**命令列引數**文字方塊：
 
      `-debug`  *filename*
 
@@ -40,11 +40,11 @@ ms.locfileid: "59171836"
 > [!NOTE]
 >  這是由 Visual Studio 2005 所建立之解決方案的預設組態[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]專案範本。
 
-1.  在方案總管 中選取專案之後，按一下 [專案]  功能表中 [屬性] 。
+1. 在方案總管 中選取專案之後，按一下 [專案]  功能表中 [屬性] 。
 
-2.  在 [**專案設計工具**，按一下**偵錯**] 索引標籤。
+2. 在 [**專案設計工具**，按一下**偵錯**] 索引標籤。
 
-3.  在 **啟動選項**區段中，加入下列的命令列參數來**命令列引數**文字方塊：
+3. 在 **啟動選項**區段中，加入下列的命令列參數來**命令列引數**文字方塊：
 
      `-debugSecurityZoneURL`  *URL*
 

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
-ms.openlocfilehash: 98ca530da28591fec23a5036b421d02b393e83b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149301"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298886"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
 本主題定義詞彙，用來說明 XAML 語法的項目。 這些詞彙常用的本文件中，WPF 文件的其餘具體來說，並使用 XAML 或啟用 System.Xaml 層級的 XAML 語言支援的基本 XAML 概念的架構。 本主題會詳述主題所介紹的基本術語[XAML 概觀 (WPF)](xaml-overview-wpf.md)。  
@@ -99,11 +99,11 @@ ms.locfileid: "59149301"
   
  下列步驟，其中一個會填入的屬性值使用此處理順序：  
   
-1.  如果 XAML 處理器遇到大括號或物件項目衍生自<xref:System.Windows.Markup.MarkupExtension>、 然後參考的標記延伸模組會先評估而不是處理字串形式的值和標記延伸模組所傳回的物件做為值。 在許多情況下的標記延伸模組所傳回的物件會參考現有的物件或評估延後到執行階段，並不是新具現化的物件的運算式。  
+1. 如果 XAML 處理器遇到大括號或物件項目衍生自<xref:System.Windows.Markup.MarkupExtension>、 然後參考的標記延伸模組會先評估而不是處理字串形式的值和標記延伸模組所傳回的物件做為值。 在許多情況下的標記延伸模組所傳回的物件會參考現有的物件或評估延後到執行階段，並不是新具現化的物件的運算式。  
   
-2.  如果未宣告的屬性與屬性化<xref:System.ComponentModel.TypeConverter>，或實值型別，該屬性的宣告與屬性化<xref:System.ComponentModel.TypeConverter>、 屬性的字串值提交給型別轉換子，為轉換的輸入，並轉換子會傳回新的物件執行個體。  
+2. 如果未宣告的屬性與屬性化<xref:System.ComponentModel.TypeConverter>，或實值型別，該屬性的宣告與屬性化<xref:System.ComponentModel.TypeConverter>、 屬性的字串值提交給型別轉換子，為轉換的輸入，並轉換子會傳回新的物件執行個體。  
   
-3.  如果沒有任何<xref:System.ComponentModel.TypeConverter>，嘗試直接轉換成屬性型別。 此最後一個層級是在 XAML 語言基本類型或在列舉型別 （剖析器再存取相符的值） 中的具名常數的名稱檢查之間的剖析器原生值直接轉換。  
+3. 如果沒有任何<xref:System.ComponentModel.TypeConverter>，嘗試直接轉換成屬性型別。 此最後一個層級是在 XAML 語言基本類型或在列舉型別 （剖析器再存取相符的值） 中的具名常數的名稱檢查之間的剖析器原生值直接轉換。  
   
 #### <a name="enumeration-attribute-values"></a>列舉型別屬性值  
  列舉型別在 XAML 中的處理的本質 XAML 剖析器，以及藉由指定的其中一個列舉的具名常數的字串名稱應指定列舉的成員。  

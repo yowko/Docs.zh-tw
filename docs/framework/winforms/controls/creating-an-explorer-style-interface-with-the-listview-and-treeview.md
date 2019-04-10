@@ -13,12 +13,12 @@ helpviewer_keywords:
 - ListView control [Windows Forms], explorer style interface
 - ListView control [Windows Forms], explorer-style interface
 ms.assetid: 9e5e7721-19e2-4890-b273-a43589fe99ff
-ms.openlocfilehash: 21a3f7f687f72fe6e73b5d2420675634ff834d2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8192151aa7cd5eddd99d39adb485e460074fdb99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117984"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332114"
 ---
 # <a name="walkthrough-creating-an-explorer-style-interface-with-the-listview-and-treeview-controls-using-the-designer"></a>逐步解說：使用設計工具以 ListView 和 TreeView 控制項建立檔案總管風格的介面
 Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應用程式在短量。 常見的案例建立使用者介面 (UI) 與<xref:System.Windows.Forms.ListView>和<xref:System.Windows.Forms.TreeView>類似於 Windows 作業系統的 Windows 檔案總管功能的控制項。 Windows 檔案總管會顯示使用者的電腦上的檔案和資料夾的階層式結構。  
@@ -28,27 +28,27 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
 ### <a name="to-create-the-form-containing-a-listview-and-treeview-control"></a>若要建立包含 ListView 和 TreeView 控制項的表單  
   
-1.  在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
+1. 在 [檔案]  功能表中，指向 [新增] ，然後按一下 [專案] 。  
   
-2.  在 **新的專案**對話方塊方塊中，執行下列動作：  
+2. 在 **新的專案**對話方塊方塊中，執行下列動作：  
   
     1.  在類別，選擇**Visual Basic**或是**Visual C#**。  
   
     2.  在範本清單中，選擇**Windows Forms 應用程式**。  
   
-3.  按一下 [確定] 。 建立新的 Windows Forms 專案。  
+3. 按一下 [確定] 。 建立新的 Windows Forms 專案。  
   
-4.  新增<xref:System.Windows.Forms.SplitContainer>控制項至表單，並將其<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill>。  
+4. 新增<xref:System.Windows.Forms.SplitContainer>控制項至表單，並將其<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill>。  
   
-5.  新增<xref:System.Windows.Forms.ImageList>名為`imageList1`至表單，並使用 [屬性] 視窗，以新增兩個映像： 資料夾映像和文件影像，依此順序。  
+5. 新增<xref:System.Windows.Forms.ImageList>名為`imageList1`至表單，並使用 [屬性] 視窗，以新增兩個映像： 資料夾映像和文件影像，依此順序。  
   
-6.  新增<xref:System.Windows.Forms.TreeView>控制項，名為`treeview1`至表單，並將它的左邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`treeView1`執行下列動作：  
+6. 新增<xref:System.Windows.Forms.TreeView>控制項，名為`treeview1`至表單，並將它的左邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`treeView1`執行下列動作：  
   
     1.  將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
     2.  設定<xref:System.Windows.Forms.TreeView.ImageList%2A>屬性 `imagelist1.`  
   
-7.  新增<xref:System.Windows.Forms.ListView>控制項，名為`listView1`至表單，並將其放置在右邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`listview1`執行下列動作：  
+7. 新增<xref:System.Windows.Forms.ListView>控制項，名為`listView1`至表單，並將其放置在右邊<xref:System.Windows.Forms.SplitContainer>控制項。 在 [屬性] 視窗中`listview1`執行下列動作：  
   
     1.  將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
@@ -58,7 +58,7 @@ Visual Studio 的優點之一是時間的能夠建立專業的 Windows Forms 應
   
     4.  設定<xref:System.Windows.Forms.ListView.SmallImageList%2A>屬性 `imageList1.`  
   
-8.  實作程式碼來填入<xref:System.Windows.Forms.TreeView>節點與子節點。 新增下列程式碼`Form1`類別。  
+8. 實作程式碼來填入<xref:System.Windows.Forms.TreeView>節點與子節點。 新增下列程式碼`Form1`類別。  
   
      [!code-csharp[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/CS/Form1.cs#1)]
      [!code-vb[System.Windows.Forms.ExplorerStyleInterface#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.ExplorerStyleInterface/VB/Form1.vb#1)]  

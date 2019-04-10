@@ -2,12 +2,12 @@
 title: 虛擬目錄安裝指示
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
-ms.openlocfilehash: 7999a040dc14d75a34b75f320982dd3118eae670
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225582"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325341"
 ---
 # <a name="virtual-directory-setup-instructions"></a>虛擬目錄安裝指示
 Windows Communication Foundation (WCF) 範例的目的是共用一個通用的虛擬目錄，名為 servicemodelsamples 的會對應到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 資料夾。  
@@ -21,19 +21,19 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 #### <a name="to-create-a-virtual-directory-in-iis-70-or-75"></a>若要建立虛擬目錄在 IIS 7.0 或 7.5  
   
-1.  從**開始**功能表上，按一下**執行**，然後輸入**inetmgr**以開啟 Internet Information Services (IIS) MMC 嵌入式管理單元。  
+1. 從**開始**功能表上，按一下**執行**，然後輸入**inetmgr**以開啟 Internet Information Services (IIS) MMC 嵌入式管理單元。  
   
-2.  在左窗格中，展開電腦名稱的節點，然後展開**站台**節點。  
+2. 在左窗格中，展開電腦名稱的節點，然後展開**站台**節點。  
   
-3.  以滑鼠右鍵按一下**Default Web Site**，然後選取**新增應用程式**以開啟**新增應用程式視窗**。  
+3. 以滑鼠右鍵按一下**Default Web Site**，然後選取**新增應用程式**以開啟**新增應用程式視窗**。  
   
-4.  在視窗中，輸入`servicemodelsamples`做為您所建立的虛擬目錄的別名。  
+4. 在視窗中，輸入`servicemodelsamples`做為您所建立的虛擬目錄的別名。  
   
-5.  建立下列目錄：%SystemDrive%\inetpub\wwwroot\servicemodelsamples  
+5. 建立下列目錄：%SystemDrive%\inetpub\wwwroot\servicemodelsamples  
   
-6.  設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的實體路徑。  建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
+6. 設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的實體路徑。  建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
-7.  按一下 [確定] 。 隨即為 WCF 範例建立 Web 應用程式。  
+7. 按一下 [確定] 。 隨即為 WCF 範例建立 Web 應用程式。  
   
     > [!NOTE]
     >  這項工作必須執行一次，因為所有的 WCF 範例都使用相同的 servicemodelsamples Web 應用程式。  
@@ -45,44 +45,44 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 #### <a name="to-create-a-virtual-directory-in-iis-51-or-60"></a>在 IIS 5.1 或 6.0 中建立虛擬目錄  
   
-1.  開啟命令提示字元] 視窗並輸入`start inetmgr`以開啟 [Internet Information Services (IIS) MMC 嵌入式管理單元。  
+1. 開啟命令提示字元] 視窗並輸入`start inetmgr`以開啟 [Internet Information Services (IIS) MMC 嵌入式管理單元。  
   
-2.  在左窗格中，展開電腦名稱的節點，然後展開**網站**節點。  
+2. 在左窗格中，展開電腦名稱的節點，然後展開**網站**節點。  
   
-3.  以滑鼠右鍵按一下**Default Web Site** ，然後選取**新的虛擬目錄**以開啟 虛擬目錄建立精靈。  
+3. 以滑鼠右鍵按一下**Default Web Site** ，然後選取**新的虛擬目錄**以開啟 虛擬目錄建立精靈。  
   
-4.  在精靈中，輸入`servicemodelsamples`做為您所建立的虛擬目錄的別名。  
+4. 在精靈中，輸入`servicemodelsamples`做為您所建立的虛擬目錄的別名。  
   
-5.  設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的路徑。 建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
+5. 設定到 %SystemDrive%\inetpub\wwwroot\servicemodelsamples 的路徑。 建立時，大部分的 WCF 範例會將服務可執行檔複製到這個位置。  
   
-6.  按 [ **下一步**]。  
+6. 按 [ **下一步**]。  
   
-7.  預設會選取下列核取方塊：  
+7. 預設會選取下列核取方塊：  
   
     -   **讀取**  
   
     -   **執行指令碼 (如 ASP)**  
   
-8.  按一下 **下一步**，然後按一下**完成**以完成精靈。  
+8. 按一下 **下一步**，然後按一下**完成**以完成精靈。  
   
     > [!NOTE]
     >  此工作必須一次執行，因為所有的 WCF 範例都使用相同的 servicemodelsamples 虛擬目錄。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-70-or-75"></a>若要設定額外的虛擬目錄屬性，在 IIS 7.0 或 7.5  
   
-1.  按一下 servicemodelsamples 節點。 視窗的底部會有兩個檢視。 選取 **功能檢視**如果已選取。  
+1. 按一下 servicemodelsamples 節點。 視窗的底部會有兩個檢視。 選取 **功能檢視**如果已選取。  
   
-2.  按兩下項目**瀏覽目錄**。  
+2. 按兩下項目**瀏覽目錄**。  
   
-3.  在 [動作] 窗格中，選取**啟用**選項。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
+3. 在 [動作] 窗格中，選取**啟用**選項。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
   
  最後，您必須設定 servicemodelsamples 資料夾的安全性屬性，讓其他使用者能夠存取此資料夾。 如需詳細資訊，請參閱下方。  
   
 #### <a name="to-set-additional-virtual-directory-properties-in-iis-51-or-60"></a>若要在 IIS 5.1 或 6.0 中設定額外的虛擬目錄屬性  
   
-1.  以滑鼠右鍵按一下 servicemodelsamples 節點，然後按一下**屬性**。  
+1. 以滑鼠右鍵按一下 servicemodelsamples 節點，然後按一下**屬性**。  
   
-2.  預設會選取下列核取方塊：  
+2. 預設會選取下列核取方塊：  
   
     -   **讀取**  
   
@@ -90,25 +90,25 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
     -   **編製這個資源的索引**  
   
-3.  選取 **瀏覽目錄**核取方塊。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
+3. 選取 **瀏覽目錄**核取方塊。 這可讓您使用 Internet Explorer 存取目錄的目錄；如此將有助於偵錯服務。  
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-70-or-75"></a>若要在 IIS 7.0 或 7.5 中設定資料夾的安全性屬性  
   
-1.  巡覽至 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。  
+1. 巡覽至 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。  
   
-2.  以滑鼠右鍵按一下 servicemodelsamples 資料夾，然後按一下 **共用**或是**共用對象**。  
+2. 以滑鼠右鍵按一下 servicemodelsamples 資料夾，然後按一下 **共用**或是**共用對象**。  
   
-3.  按一下左邊的向下箭號**新增** 按鈕。  
+3. 按一下左邊的向下箭號**新增** 按鈕。  
   
-4.  選取 **尋找**項目。 **選取使用者或群組**視窗隨即開啟。  
+4. 選取 **尋找**項目。 **選取使用者或群組**視窗隨即開啟。  
   
-5.  按一下 [ **進階**]。  
+5. 按一下 [ **進階**]。  
   
-6.  按一下 **位置**。 **位置** 視窗隨即開啟。  
+6. 按一下 **位置**。 **位置** 視窗隨即開啟。  
   
-7.  選取使用的電腦項目。 請務必選取本機電腦，而非列出的任何網域或網路項目。 您已選取的電腦之後，請按一下**確定**。  
+7. 選取使用的電腦項目。 請務必選取本機電腦，而非列出的任何網域或網路項目。 您已選取的電腦之後，請按一下**確定**。  
   
-8.  按一下 **立即尋找**。 這會將與本機電腦相關聯的物件填入到搜尋結果中。  
+8. 按一下 **立即尋找**。 這會將與本機電腦相關聯的物件填入到搜尋結果中。  
   
 9. 尋找**IIS_IUSRS**中的項目**名稱 （相對分辨名稱）** 資料行。 選取該項目，然後按一下**確定**以關閉搜尋結果視窗。  
   
@@ -120,13 +120,13 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
 #### <a name="to-set-security-properties-of-the-folder-in-iis-51-or-60"></a>設定 IIS 5.1 或 6.0 中資料夾的安全性屬性  
   
-1.  巡覽至 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。  
+1. 巡覽至 %SystemDrive%\inetpub\wwwroot\servicemodelsamples。  
   
-2.  以滑鼠右鍵按一下**servicemodelsamples**資料夾，然後按一下**共用和安全性。**  
+2. 以滑鼠右鍵按一下**servicemodelsamples**資料夾，然後按一下**共用和安全性。**  
   
-3.  按一下 [ **安全性** ] 索引標籤。  
+3. 按一下 [ **安全性** ] 索引標籤。  
   
-4.  如果您在使用 IIS 6.0**群組或使用者名稱**方塊中，檢查是否**Internet Guest 帳戶**列。  
+4. 如果您在使用 IIS 6.0**群組或使用者名稱**方塊中，檢查是否**Internet Guest 帳戶**列。  
   
      如果未列出：  
   
@@ -162,7 +162,7 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
     16. 按一下 **檢查名稱**驗證新增。 如果有效，該名稱會是全部大寫字母並加上底線。  
   
-5.  IIS 6.0，也請檢查網路服務會列在**群組或使用者名稱** 方塊中。  
+5. IIS 6.0，也請檢查網路服務會列在**群組或使用者名稱** 方塊中。  
   
      如果未列示 NETWORK SERVICE：  
   
@@ -178,7 +178,7 @@ Windows Communication Foundation (WCF) 範例的目的是共用一個通用的�
   
     6.  按一下 [ **[確定]** 以關閉**選取使用者或群組**] 對話方塊。  
   
-6.  如果您使用 Windows XP SP2 搭配 IIS 5.1，請檢查，會將 Internet Guest 帳戶和 ASPNET 都列在**群組或使用者名稱** 方塊中。  
+6. 如果您使用 Windows XP SP2 搭配 IIS 5.1，請檢查，會將 Internet Guest 帳戶和 ASPNET 都列在**群組或使用者名稱** 方塊中。  
   
      請注意，ASPNET 使用者可能是內建的成員**使用者**安全性群組。 如果是的話，則**使用者**群組列於對話方塊中，您不需要將它做為個別的項目新增至允許的使用者清單。  
   

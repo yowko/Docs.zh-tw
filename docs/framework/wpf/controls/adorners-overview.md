@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
-ms.openlocfilehash: 88dc2a306108959b5627e502aaa67ef7db341417
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227687"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320466"
 ---
 # <a name="adorners-overview"></a>裝飾項概觀
 裝飾項是一種特殊型別的<xref:System.Windows.FrameworkElement>，用來提供視覺提示給使用者。 除了其他用法，裝飾項還可用來將功能控點加入項目，或提供控制項的狀態資訊。  
@@ -74,9 +74,9 @@ ms.locfileid: "59227687"
 ## <a name="adorning-a-single-uielement"></a>裝飾單一的 UIElement  
  裝飾項繫結至特定<xref:System.Windows.UIElement>，請遵循下列步驟：  
   
-1.  呼叫靜態方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>以取得<xref:System.Windows.Documents.AdornerLayer>物件<xref:System.Windows.UIElement>裝飾。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 始於指定的視覺化樹狀結構中向上<xref:System.Windows.UIElement>，並傳回第一個找到的裝飾項圖層。 (如果找不到任何裝飾項圖層，方法會傳回 null。)  
+1. 呼叫靜態方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>以取得<xref:System.Windows.Documents.AdornerLayer>物件<xref:System.Windows.UIElement>裝飾。 <xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A> 始於指定的視覺化樹狀結構中向上<xref:System.Windows.UIElement>，並傳回第一個找到的裝飾項圖層。 (如果找不到任何裝飾項圖層，方法會傳回 null。)  
   
-2.  呼叫<xref:System.Windows.Documents.AdornerLayer.Add%2A>裝飾項繫結至目標方法<xref:System.Windows.UIElement>。  
+2. 呼叫<xref:System.Windows.Documents.AdornerLayer.Add%2A>裝飾項繫結至目標方法<xref:System.Windows.UIElement>。  
   
  下列範例會將 SimpleCircleAdorner （如上所示） 來繫結<xref:System.Windows.Controls.TextBox>名為*myTextBox*。  
   
@@ -90,9 +90,9 @@ ms.locfileid: "59227687"
 ## <a name="adorning-the-children-of-a-panel"></a>裝飾 Panel 的子系  
  裝飾項繫結的項目子系<xref:System.Windows.Controls.Panel>，請遵循下列步驟：  
   
-1.  呼叫`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>來尋找要裝飾其子系的項目中的裝飾項層。  
+1. 呼叫`static`方法<xref:System.Windows.Documents.AdornerLayer.GetAdornerLayer%2A>來尋找要裝飾其子系的項目中的裝飾項層。  
   
-2.  列舉父項目並呼叫的子系<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法的裝飾項繫結至每個子項目。  
+2. 列舉父項目並呼叫的子系<xref:System.Windows.Documents.AdornerLayer.Add%2A>方法的裝飾項繫結至每個子項目。  
   
  下列範例會將 SimpleCircleAdorner （如上所示） 的項目子系繫結<xref:System.Windows.Controls.StackPanel>名為*myStackPanel*。  
   

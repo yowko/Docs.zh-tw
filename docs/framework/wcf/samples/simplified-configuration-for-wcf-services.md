@@ -2,12 +2,12 @@
 title: WCF 服務的簡化組態
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
-ms.openlocfilehash: 50693062b201c9cf2e0d87f796f3e935e1fd8e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59220717"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304255"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF 服務的簡化組態
 此範例示範如何實作與設定一般服務和用戶端使用 Windows Communication Foundation (WCF)。 這個範例是所有其他基本技術範例的基礎。  
@@ -57,11 +57,11 @@ ms.locfileid: "59220717"
   
 ### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  遵循下列步驟執行範例：  
+3. 遵循下列步驟執行範例：  
   
     1.  以滑鼠右鍵按一下**服務**專案，然後選取**設定為啟始專案**，然後按**Ctrl + F5**。  
   

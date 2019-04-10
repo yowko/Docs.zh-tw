@@ -10,12 +10,12 @@ helpviewer_keywords:
 - status bars [Windows Forms], adding panels
 - StatusBar control [Windows Forms], adding panels
 ms.assetid: 835e3902-288c-4c38-9d69-0696d8695009
-ms.openlocfilehash: 9adcbeb29ca7d3d9bad1ad9cdb6279d826af1f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d7a21ee686b0c6faa05f68f13eccc6a39d49164
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227791"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319855"
 ---
 # <a name="how-to-add-panels-to-a-statusbar-control"></a>HOW TO：將面板新增至 StatusBar 控制項
 > [!IMPORTANT]
@@ -25,7 +25,7 @@ ms.locfileid: "59227791"
   
 ### <a name="to-add-panels-to-a-status-bar"></a>若要將面板新增至狀態列  
   
-1.  在程序中，以建立狀態列面板新增至<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定屬性設定為個別的面板，您可以使用其索引傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性。  
+1. 在程序中，以建立狀態列面板新增至<xref:System.Windows.Forms.StatusBar.StatusBarPanelCollection>。 指定屬性設定為個別的面板，您可以使用其索引傳遞<xref:System.Windows.Forms.StatusBar.Panels%2A>屬性。  
   
      在下列程式碼範例中，將路徑設為圖示的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列範例需要表單<xref:System.Windows.Forms.StatusBar>已經加入的控制項。  
   

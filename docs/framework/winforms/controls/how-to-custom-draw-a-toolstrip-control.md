@@ -16,12 +16,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 94e7d7bd-a752-441c-b5b3-7acf98881163
-ms.openlocfilehash: 74092fdcd72c09670db53dc79d43d9d52f0dcf4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9b3d6b9391971d4c2d012345b96c2ed64d33a998
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59172182"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311041"
 ---
 # <a name="how-to-custom-draw-a-toolstrip-control"></a>HOW TO：自訂繪製 ToolStrip 控制項
 <xref:System.Windows.Forms.ToolStrip> 控制項具有下列相關聯轉譯 (繪製) 類別的項目：  
@@ -107,11 +107,11 @@ ms.locfileid: "59172182"
   
 ### <a name="to-change-the-rendering-for-all-toolstrip-controls-in-your-application"></a>變更您應用程式中的所有 ToolStrip 控制項轉譯  
   
-1.  使用 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 屬性來選擇提供的轉譯器之其中一種。  
+1. 使用 <xref:System.Windows.Forms.ToolStripManager.RenderMode%2A?displayProperty=nameWithType> 屬性來選擇提供的轉譯器之其中一種。  
   
-2.  使用 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 來指派自訂轉譯器。  
+2. 使用 <xref:System.Windows.Forms.ToolStripManager.Renderer%2A?displayProperty=nameWithType> 來指派自訂轉譯器。  
   
-3.  確保 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> 的預設值。  
+3. 確保 <xref:System.Windows.Forms.ToolStrip.RenderMode%2A?displayProperty=nameWithType> 設定為 <xref:System.Windows.Forms.ToolStripRenderMode.ManagerRenderMode> 的預設值。  
   
 ### <a name="to-turn-off-the-microsoft-office-colors-for-the-entire-application"></a>關閉整個應用程式的 Microsoft Office 色彩  
   

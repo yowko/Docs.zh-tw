@@ -2,12 +2,12 @@
 title: 本機通道
 ms.date: 03/30/2017
 ms.assetid: fa1917a4-f701-4e82-a439-14a16282c7cc
-ms.openlocfilehash: 731fcfde52a6b1277551f7d70f795c721fc99dd8
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: 1711909ada4756dd2723f62160eef0ad12c03174
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46002706"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333219"
 ---
 # <a name="local-channel"></a>本機通道
 本機通道是 Windows Communication Foundation (WCF) 的傳輸通道使用相同的應用程式定義域中的通訊。 這個通道在用戶端和服務於相同應用程式定義域中執行，而必須避免一般 WCF 通道堆疊的負荷 (序列化和還原序列化訊息) 時相當實用。  
@@ -18,17 +18,17 @@ ms.locfileid: "46002706"
 ## <a name="discussion"></a>討論  
  此範例包含二個專案檔：  
   
--   **LocalChannel**： 本機通道內目前的應用程式定義域的程式設計表示法。 在此專案中，傳送的元件會將訊息放入記憶體內部佇列，而接收元件則會取消訊息佇列並接收該訊息。  
+-   **LocalChannel**:本機通道在目前的應用程式定義域內以程式設計方式表示。 在此專案中，傳送的元件會將訊息放入記憶體內部佇列，而接收元件則會取消訊息佇列並接收該訊息。  
   
--   **ClientAndService**： 此專案裝載的主控台應用程式中的服務，然後再執行用戶端相同的應用程式定義域內呼叫的服務。  
+-   **ClientAndService**:此專案裝載的主控台應用程式中的服務，然後再執行用戶端相同的應用程式定義域內呼叫的服務。  
   
  本機通道的設計在於同時略過通道堆疊和序列化程序，以加快速度。 本機傳輸通道是使用佇列實作，以便將服務呼叫從用戶端傳輸至服務，以及將值傳回到用戶端。 這個範例不會序列化參數和傳回值，而會複製物件。  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  建置及執行 LocalChannel 方案。  
+1. 建置及執行 LocalChannel 方案。  
   
-2.  服務主機會啟動，而用戶端會使用本機通道呼叫服務。 主控台視窗隨即出現，並顯示服務呼叫的結果。  
+2. 服務主機會啟動，而用戶端會使用本機通道呼叫服務。 主控台視窗隨即出現，並顯示服務呼叫的結果。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

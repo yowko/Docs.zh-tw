@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
-ms.openlocfilehash: 08703209fd465f87e9dbc5e81a6ed90a4056324c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174131"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321028"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>HOW TO：使用使用者名稱與密碼來驗證
 
@@ -21,7 +21,7 @@ ms.locfileid: "59174131"
   
 ## <a name="to-configure-a-wcf-service-to-authenticate-using-windows-domain-username-and-password"></a>若要設定使用 Windows 網域使用者名稱和密碼進行驗證的 WCF 服務
   
-1.  請建立 <xref:System.ServiceModel.WSHttpBinding> 的執行個體，將繫結的安全性模式設定為 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>，將繫結的 `ClientCredentialType` 設定為 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>，然後將使用所設定之繫結的服務端點加入至服務主機，如下列程式碼所示：  
+1. 請建立 <xref:System.ServiceModel.WSHttpBinding> 的執行個體，將繫結的安全性模式設定為 <xref:System.ServiceModel.WSHttpSecurity.Message?displayProperty=nameWithType>，將繫結的 `ClientCredentialType` 設定為 <xref:System.ServiceModel.MessageCredentialType.UserName?displayProperty=nameWithType>，然後將使用所設定之繫結的服務端點加入至服務主機，如下列程式碼所示：  
   
     ```  
     // ...  
@@ -32,7 +32,7 @@ ms.locfileid: "59174131"
     // ...  
     ```  
   
-2.  指定伺服器憑證，用以加密透過網路傳送之使用者名及密碼的資訊。 這個程式碼應直接加在上面程式碼之後。 下列範例會使用已建立的憑證中的 setup.bat 檔案所[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)範例：  
+2. 指定伺服器憑證，用以加密透過網路傳送之使用者名及密碼的資訊。 這個程式碼應直接加在上面程式碼之後。 下列範例會使用已建立的憑證中的 setup.bat 檔案所[訊息安全性使用者名稱](../../../../docs/framework/wcf/samples/message-security-user-name.md)範例：  
   
     ```  
     // ...  
@@ -44,7 +44,7 @@ ms.locfileid: "59174131"
   
 ## <a name="to-call-the-service-passing-username-and-password"></a>若要呼叫服務傳遞使用者名稱和密碼  
   
-1.  用戶端應用程式必須提示使用者輸入其使用者名稱和密碼。 下列程式碼會要求使用者輸入使用者名稱和密碼。  
+1. 用戶端應用程式必須提示使用者輸入其使用者名稱和密碼。 下列程式碼會要求使用者輸入使用者名稱和密碼。  
   
     > [!WARNING]
     >  由於密碼會在輸入時顯示，這個程式碼不應在實際環境中使用。  
@@ -61,7 +61,7 @@ ms.locfileid: "59174131"
             }  
     ```  
   
-2.  指定用戶端的認證，以建立用戶端 Proxy 的執行個體，如下列程式碼所示：  
+2. 指定用戶端的認證，以建立用戶端 Proxy 的執行個體，如下列程式碼所示：  
   
     ```  
     string username;  

@@ -2,12 +2,12 @@
 title: 執行 Windows Communication Foundation 範例
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: 32925caccee08c27e023d7ffae992e38cb496868
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: b7a719aeeba2c14e79d790dfa5cbb4090d50009a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209212"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333141"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>執行 Windows Communication Foundation 範例
 可以在單一電腦或跨電腦組態中執行的 Windows Communication Foundation (WCF) 範例。 這些範例可依提供現狀直接執行於單一機器上。 在跨機器組態中，就需要修改範例的組態檔設定。 下列程序會說明如何在相同機器與跨機器組態中執行此範例。 請注意，透過網際網路資訊服務 (IIS) 裝載與自我裝載範例中的服務步驟會有所變化。 大部分的範例都是以 IIS 進行裝載；請參閱範例讀我資訊以決定其裝載方式。  
@@ -19,17 +19,17 @@ ms.locfileid: "59209212"
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  如果服務由 IIS 裝載，請確定您可以使用瀏覽器中輸入下列位址的服務： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+1. 如果服務由 IIS 裝載，請確定您可以使用瀏覽器中輸入下列位址的服務： `http://localhost/servicemodelsamples/service.svc`。 確認頁面應該會顯示在回應中。 如果未顯示 [確認] 頁面，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
-2.  如果服務是自我裝載，請從語言特定資料夾中的 \service\bin 執行 Service.exe。 服務活動會顯示在服務主控台視窗上。  
+2. 如果服務是自我裝載，請從語言特定資料夾中的 \service\bin 執行 Service.exe。 服務活動會顯示在服務主控台視窗上。  
   
-3.  從 \client\bin 執行 Client.exe\\，從語言特定資料夾之下。 用戶端活動會顯示在用戶端主控台視窗上。  
+3. 從 \client\bin 執行 Client.exe\\，從語言特定資料夾之下。 用戶端活動會顯示在用戶端主控台視窗上。  
   
-4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1.  如果服務是以 IIS 裝載：  
+1. 如果服務是以 IIS 裝載：  
   
     1.  在服務機器上，建立一個名稱為 ServiceModelSamples 的虛擬目錄。 批次檔 Setupvroot.bat 隨附[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)可用來建立磁碟目錄與虛擬目錄。  
   
@@ -47,21 +47,21 @@ ms.locfileid: "59209212"
   
     4.  從命令提示字元啟動 Service.exe。  
   
-2.  將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器中。  
+2. 將語言特定資料夾下 \client\bin\ 資料夾中的用戶端程式檔案複製到用戶端機器中。  
   
-3.  設定端點位址。  
+3. 設定端點位址。  
   
     1.  如果服務不是使用網域帳戶執行，請開啟用戶端組態檔，並將端點定義的位址值變更成符合服務的新位址。 以位址中的完整網域名稱取代 "localhost" 的任何參考。  
   
     2.  如果服務是使用網域帳戶執行，請針對服務執行 Svcutil.exe 以重新產生用戶端組態。 如需執行 Svcutil.exe 的詳細資訊，請參閱 <<c0> [ 建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。 使用產生的檔案，而不要使用範例中的組態檔。 產生的組態檔還有其他身分識別資訊，而且包含連接至服務端點需要的所有設定 (即使是預設的設定)。 如需身分識別資訊的詳細資訊，請參閱[服務身分識別和驗證](../../../../docs/framework/wcf/feature-details/service-identity-and-authentication.md)，並[\<身分識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)。  
   
-4.  在用戶端機器上，從命令提示字元啟動 Client.exe。  
+4. 在用戶端機器上，從命令提示字元啟動 Client.exe。  
   
 ### <a name="to-debug-a-service"></a>偵錯服務  
   
-1.  方案 （用戶端和服務） 使用的組建**建置**功能表或 CTRL + SHIFT + B。  
+1. 方案 （用戶端和服務） 使用的組建**建置**功能表或 CTRL + SHIFT + B。  
   
-2.  如果服務是以 IIS 裝載：  
+2. 如果服務是以 IIS 裝載：  
   
     1.  啟用服務使用瀏覽器輸入位址`http://localhost/servicemodelsamples/service.svc`。  
   
@@ -71,9 +71,9 @@ ms.locfileid: "59209212"
   
     4.  選取主機背景工作處理序 W3wp.exe 來進行偵錯 (在 Windows XP 中選取 ASPNet_wp.exe)。  
   
-3.  您現在可以在服務程式碼中設定中斷點，然後啟用發生例外狀況時的中斷點。  
+3. 您現在可以在服務程式碼中設定中斷點，然後啟用發生例外狀況時的中斷點。  
   
-4.  以滑鼠右鍵按一下 用戶端專案項目，然後選擇 **偵錯**，**開始新執行個體**。  
+4. 以滑鼠右鍵按一下 用戶端專案項目，然後選擇 **偵錯**，**開始新執行個體**。  
   
 ### <a name="to-clean-up-after-the-sample"></a>若要在使用範例之後進行清除  
   

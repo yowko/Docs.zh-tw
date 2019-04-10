@@ -12,19 +12,19 @@ helpviewer_keywords:
 - double-clicks
 - check boxes [Windows Forms], responding to events
 ms.assetid: c39f901e-8899-43b6-aa31-939cbf7089fb
-ms.openlocfilehash: 77f93dae2a91f282c6746c3fec3fb5f567cae2e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ce616f45ceaa3db117c6981d2987ac09bba7b3fb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59211981"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319894"
 ---
 # <a name="how-to-respond-to-windows-forms-checkbox-clicks"></a>HOW TO：回應 Windows Forms 核取方塊的按一下動作
 每當使用者按一下 Windows Form<xref:System.Windows.Forms.CheckBox>控制項，<xref:System.Windows.Forms.Control.Click>就會發生事件。 您可以編寫您的應用程式，以執行某些動作的核取方塊狀態而定。  
   
 ### <a name="to-respond-to-checkbox-clicks"></a>若要回應 CheckBox 按一下動作  
   
-1.  在 <xref:System.Windows.Forms.Control.Click>事件處理常式，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性來判斷控制項的狀態，並執行任何必要的動作。  
+1. 在 <xref:System.Windows.Forms.Control.Click>事件處理常式，使用<xref:System.Windows.Forms.CheckBox.Checked%2A>屬性來判斷控制項的狀態，並執行任何必要的動作。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  
@@ -80,7 +80,7 @@ ms.locfileid: "59211981"
   
 ### <a name="to-determine-a-course-of-action-when-a-check-box-is-clicked"></a>按一下來決定所要採取的動作時核取方塊  
   
-1.  若要查詢的值中使用 case 陳述式<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性來決定所要採取的動作。 當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性可能會傳回三個可能的值，代表要核取方塊，方塊未選取，或是第三個不定狀態顯示此方塊以呈現暗灰色無法使用，表示選項的外觀。  
+1. 若要查詢的值中使用 case 陳述式<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性來決定所要採取的動作。 當<xref:System.Windows.Forms.CheckBox.ThreeState%2A>屬性設定為`true`，則<xref:System.Windows.Forms.CheckBox.CheckState%2A>屬性可能會傳回三個可能的值，代表要核取方塊，方塊未選取，或是第三個不定狀態顯示此方塊以呈現暗灰色無法使用，表示選項的外觀。  
   
     ```vb  
     Private Sub CheckBox1_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles CheckBox1.Click  

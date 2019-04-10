@@ -2,19 +2,19 @@
 title: HOW TO：存取 WCF 服務使用單向和要求-回覆合約
 ms.date: 03/30/2017
 ms.assetid: 7e10d3a5-fcf4-4a4b-a8d6-92ee2c988b3b
-ms.openlocfilehash: 84b8f7c44c8124c1a150304dea0f08a0087752bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 119a63978f6c45aa940ff999249c654c7cf96d91
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217025"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309247"
 ---
 # <a name="how-to-access-wcf-services-with-one-way-and-request-reply-contracts"></a>HOW TO：存取 WCF 服務使用單向和要求-回覆合約
 下列程序說明如何存取 Windows Communication Foundation (WCF) 服務，定義單向合約與要求-回覆合約，並不使用雙工通訊模式。  
   
 ### <a name="to-define-the-service"></a>若要定義服務  
   
-1.  宣告服務合約。 對於單向作業，您必須在 `IsOneWay` 中將 `true` 設定為 <xref:System.ServiceModel.OperationContractAttribute>。 下列程式碼會宣告具有 `IOneWayCalculator`、`Add`、`Subtract` 和 `Multiply` 單向作業的 `Divide` 合約。 它也會定義名為 `SayHello` 的要求-回應作業。  
+1. 宣告服務合約。 對於單向作業，您必須在 `IsOneWay` 中將 `true` 設定為 <xref:System.ServiceModel.OperationContractAttribute>。 下列程式碼會宣告具有 `IOneWayCalculator`、`Add`、`Subtract` 和 `Multiply` 單向作業的 `Divide` 合約。 它也會定義名為 `SayHello` 的要求-回應作業。  
   
     ```csharp  
     [ServiceContract(Namespace = "http://Microsoft.ServiceModel.Samples")]  
@@ -33,7 +33,7 @@ ms.locfileid: "59217025"
     }  
     ```  
   
-2.  實作服務合約。 下例程式碼會實作 `IOnewayCalculator` 介面。  
+2. 實作服務合約。 下例程式碼會實作 `IOnewayCalculator` 介面。  
   
     ```csharp  
     [ServiceBehavior(ConcurrencyMode = ConcurrencyMode.Multiple, InstanceContextMode = InstanceContextMode.PerCall)]  
@@ -71,7 +71,7 @@ ms.locfileid: "59217025"
     }  
     ```  
   
-3.  在主控台應用程式中裝載服務。 下列程式碼會示範如何裝載服務。  
+3. 在主控台應用程式中裝載服務。 下列程式碼會示範如何裝載服務。  
   
     ```csharp  
     // Host the service within this EXE console application.  
@@ -109,7 +109,7 @@ ms.locfileid: "59217025"
   
 ### <a name="to-access-the-service"></a>若要存取服務  
   
-1.  執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用中繼資料交換端點位址來建立使用下列命令列的服務的用戶端類別：`Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生一組介面和類別，如下列範例程式碼所示。  
+1. 執行[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)使用中繼資料交換端點位址來建立使用下列命令列的服務的用戶端類別：`Svcutil http://localhost:8000/Service` [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)產生一組介面和類別，如下列範例程式碼所示。  
   
     ```csharp  
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "3.0.0.0")]  
@@ -196,7 +196,7 @@ ms.locfileid: "59217025"
   
      請注意，在 `IOneWayCalculator` 介面中單向服務作業的 <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> 屬性設定為 `true`，而且要求-回覆服務作業的此屬性設定為預設值 `false`。 同時也請注意 `OneWayCalculatorClient` 類別。 這就是用來呼叫服務的類別。  
   
-2.  建立用戶端物件。  
+2. 建立用戶端物件。  
   
     ```csharp  
     // Create a client  
@@ -205,7 +205,7 @@ ms.locfileid: "59217025"
     OneWayCalculatorClient client = new OneWayCalculatorClient(binding, epAddress);  
     ```  
   
-3.  呼叫服務作業。  
+3. 呼叫服務作業。  
   
     ```csharp  
     // Call the Add service operation.  
@@ -239,7 +239,7 @@ ms.locfileid: "59217025"
     Console.WriteLine("SayHello() returned: " + response);  
     ```  
   
-4.  關閉用戶端，以關閉連線並清除資源。  
+4. 關閉用戶端，以關閉連線並清除資源。  
   
     ```csharp  
     //Closing the client gracefully closes the connection and cleans up resources  

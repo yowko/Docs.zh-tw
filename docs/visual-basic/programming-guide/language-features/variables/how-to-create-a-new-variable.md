@@ -5,25 +5,25 @@ helpviewer_keywords:
 - Dim statement [Visual Basic]
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
-ms.openlocfilehash: 86236f7e6f4821cc45dfab80273d82b6f167fba8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58823281"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332582"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>HOW TO：建立新的變數 (Visual Basic)
 您建立的變數[Dim 陳述式](../../../../visual-basic/language-reference/statements/dim-statement.md)。  
   
 ### <a name="to-create-a-new-variable"></a>若要建立新變數  
   
-1.  宣告中的變數`Dim`陳述式。  
+1. 宣告中的變數`Dim`陳述式。  
   
     ```  
     Dim newCustomer  
     ```  
   
-2.  包含變數的特性的規格，例如[私人](../../../../visual-basic/language-reference/modifiers/private.md)，[靜態](../../../../visual-basic/language-reference/modifiers/static.md)， [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)，或[WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)。 如需詳細資訊，請參閱 <<c0> [ 宣告的項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)。  
+2. 包含變數的特性的規格，例如[私人](../../../../visual-basic/language-reference/modifiers/private.md)，[靜態](../../../../visual-basic/language-reference/modifiers/static.md)， [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)，或[WithEvents](../../../../visual-basic/language-reference/modifiers/withevents.md)。 如需詳細資訊，請參閱 <<c0> [ 宣告的項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)。  
   
     ```  
     Public Static newCustomer  
@@ -31,13 +31,13 @@ ms.locfileid: "58823281"
   
      您不需要`Dim`關鍵字，如果您在宣告中使用其他關鍵字。  
   
-3.  請依照與變數的名稱，它必須遵照 Visual Basic 規則和慣例規格。 如需詳細資訊，請參閱 <<c0> [ 宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
+3. 請依照與變數的名稱，它必須遵照 Visual Basic 規則和慣例規格。 如需詳細資訊，請參閱 <<c0> [ 宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)。  
   
     ```  
     Public Static newCustomer  
     ```  
   
-4.  在名稱後面加[做為](../../../../visual-basic/language-reference/statements/as-clause.md)子句來指定變數的資料類型。  
+4. 在名稱後面加[做為](../../../../visual-basic/language-reference/statements/as-clause.md)子句來指定變數的資料類型。  
   
     ```  
     Public Static newCustomer As Customer  
@@ -45,7 +45,7 @@ ms.locfileid: "58823281"
   
      如果您未指定的資料類型，它會使用預設值： `Object`。  
   
-5.  請遵循`As`子句以等號 (`=`) 並遵循等號，以變數的初始值。  
+5. 請遵循`As`子句以等號 (`=`) 並遵循等號，以變數的初始值。  
   
      Visual Basic 會指派給變數指定的值每次執行`Dim`陳述式。 如果您未指定一個初始值，Visual Basic 會指派變數的資料類型的預設初始值第一次進入包含的程式碼時`Dim`陳述式。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "58823281"
 
 - [變數](../../../../visual-basic/programming-guide/language-features/variables/index.md)
 - [變數宣告](../../../../visual-basic/programming-guide/language-features/variables/variable-declaration.md)
-- [宣告項目名稱](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
+- [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)
 - [宣告項目特性](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-characteristics.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [陳述式](../../../../visual-basic/language-reference/statements/index.md)

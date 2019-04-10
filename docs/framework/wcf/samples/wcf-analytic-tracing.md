@@ -2,12 +2,12 @@
 title: WCF 分析追蹤
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
-ms.openlocfilehash: 3c9f878a22c928daa9c7dbc142efb3958b1657c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59229169"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332309"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析追蹤
 這個範例會示範如何將您自己的追蹤事件加入至 Windows Communication Foundation (WCF) 寫入至 ETW 的分析追蹤的資料流[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]。 分析追蹤的用意在於輕鬆取得服務的可視性，而不必付出高效能的代價。 此範例示範如何使用<xref:System.Diagnostics.Eventing?displayProperty=nameWithType>Api 來與 WCF 服務整合的寫入事件。  
@@ -43,31 +43,31 @@ ms.locfileid: "59229169"
   
 #### <a name="to-use-this-sample"></a>若要使用這個範例  
   
-1.  使用 Visual Studio 2012，請開啟 WCFAnalyticTracingExtensibility.sln 方案檔案。  
+1. 使用 Visual Studio 2012，請開啟 WCFAnalyticTracingExtensibility.sln 方案檔案。  
   
-2.  若要建置此方案，請按 CTRL+SHIFT+B。  
+2. 若要建置此方案，請按 CTRL+SHIFT+B。  
   
-3.  若要執行此方案，請按下 CTRL+F5。  
+3. 若要執行此方案，請按下 CTRL+F5。  
   
      在網頁瀏覽器中，按一下**Calculator.svc**。 服務的 WSDL 文件 URI 應該會出現在瀏覽器中。 請複製該 URI。  
   
-4.  執行 WCF 測試用戶端 (WcfTestClient.exe)。  
+4. 執行 WCF 測試用戶端 (WcfTestClient.exe)。  
   
      WCF 測試用戶端 (WcfTestClient.exe) 位於`\<Visual Studio 2012 Install Dir>\Common7\IDE\WcfTestClient.exe`。 預設 Visual Studio 2012 的安裝目錄是`C:\Program Files\Microsoft Visual Studio 10.0`。  
   
-5.  在 WCF 測試用戶端，將服務新增所選取**檔案**，然後**加入服務**。  
+5. 在 WCF 測試用戶端，將服務新增所選取**檔案**，然後**加入服務**。  
   
      在輸入方塊中加入端點位址。  
   
-6.  按一下 **確定**以關閉對話方塊。  
+6. 按一下 **確定**以關閉對話方塊。  
   
      ICalculator 服務會在左窗格中加入**我的服務專案**。  
   
-7.  開啟 [事件檢視器] 應用程式。  
+7. 開啟 [事件檢視器] 應用程式。  
   
      之前叫用服務，啟動 [事件檢視器] 並確認事件記錄檔正在接聽從 WCF 服務所發出的追蹤事件。  
   
-8.  從**開始**功能表上，選取**系統管理工具**，然後**事件檢視器**。 啟用**分析**並**偵錯**記錄檔。  
+8. 從**開始**功能表上，選取**系統管理工具**，然後**事件檢視器**。 啟用**分析**並**偵錯**記錄檔。  
   
 9. 在樹狀檢視中 事件檢視器中，瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，然後**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**應用程式伺服器-應用程式**，選取**檢視**，然後**顯示分析與偵錯記錄檔**。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59229169"
   
 #### <a name="to-clean-up-optional"></a>若要清除 (選擇性)  
   
-1.  開啟**事件檢視器**。  
+1. 開啟**事件檢視器**。  
   
-2.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，然後**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**停用記錄**。  
+2. 瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**，然後**應用程式伺服器-應用程式**。 以滑鼠右鍵按一下**分析**，然後選取**停用記錄**。  
   
-3.  瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**，然後**分析**。 以滑鼠右鍵按一下**分析**，然後選取**清除記錄檔**。  
+3. 瀏覽至**事件檢視器**， **Applications and Services Logs**， **Microsoft**， **Windows**， **應用程式伺服器-應用程式**，然後**分析**。 以滑鼠右鍵按一下**分析**，然後選取**清除記錄檔**。  
   
-4.  按一下 **清除**可清除事件。  
+4. 按一下 **清除**可清除事件。  
   
 ## <a name="known-issue"></a>已知問題  
  沒有已知的問題**事件檢視器**其中可能無法為 ETW 事件解碼。 您可能會看到錯誤訊息，指出：「 事件識別碼的描述\<識別碼 > 找不到 Microsoft Windows 應用程式伺服器-應用程式的來源。 本機電腦可能並未安裝引發此事件的元件，或安裝已損毀。 您可以安裝或修復該元件在本機電腦上的。 」 如果您遇到這個錯誤，請選取**重新整理**從**動作**功能表。 接著，事件應該就會正確解碼。  

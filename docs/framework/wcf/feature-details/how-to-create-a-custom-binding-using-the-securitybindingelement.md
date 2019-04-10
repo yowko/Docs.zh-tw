@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
-ms.openlocfilehash: f25d590442e789f6e7197e6b4b33c817a4dc8d78
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175587"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316800"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>HOW TO：使用 SecurityBindingElement 建立自訂繫結
 Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可以設定，但不是能提供充分的彈性設定 WCF 支援的所有安全性選項時。 本主題示範如何直接從個別的繫結元素建立自訂繫結，並強調一些可在建立這類繫結時指定的安全設定。 如需建立自訂繫結的詳細資訊，請參閱[擴充繫結](../../../../docs/framework/wcf/extending/extending-bindings.md)。  
@@ -83,19 +83,19 @@ Windows Communication Foundation (WCF) 包含數個系統提供繫結，您可�
   
 #### <a name="to-create-a-custom-binding-that-uses-a-symmetricsecuritybindingelement"></a>若要建立使用 SymmetricSecurityBindingElement 的自訂繫結  
   
-1.  建立名稱為 <xref:System.ServiceModel.Channels.BindingElementCollection> 之 `outputBec` 類別的執行個體。  
+1. 建立名稱為 <xref:System.ServiceModel.Channels.BindingElementCollection> 之 `outputBec` 類別的執行個體。  
   
-2.  呼叫靜態方法 `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`，此方法會傳回 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>類別。  
+2. 呼叫靜態方法 `M:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement(true)`，此方法會傳回 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>類別。  
   
-3.  將 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 新增至集合 (`outputBec`)，方法是呼叫 `Add` 類別其 <xref:System.Collections.ObjectModel.Collection%601> 的 <xref:System.ServiceModel.Channels.BindingElement> 方法。  
+3. 將 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> 新增至集合 (`outputBec`)，方法是呼叫 `Add` 類別其 <xref:System.Collections.ObjectModel.Collection%601> 的 <xref:System.ServiceModel.Channels.BindingElement> 方法。  
   
-4.  建立 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 類別的執行個體，並將它新增至集合 (`outputBec`)。 這會指定繫結使用的編碼方式。  
+4. 建立 <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> 類別的執行個體，並將它新增至集合 (`outputBec`)。 這會指定繫結使用的編碼方式。  
   
-5.  建立 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，並將它新增至集合 (`outputBec`)。 這會指定繫結要使用 HTTP 傳輸。  
+5. 建立 <xref:System.ServiceModel.Channels.HttpTransportBindingElement>，並將它新增至集合 (`outputBec`)。 這會指定繫結要使用 HTTP 傳輸。  
   
-6.  建立新自訂繫結，方式是建立 <xref:System.ServiceModel.Channels.CustomBinding> 類別的執行個體，並將 `outputBec` 集合傳遞至建構函式。  
+6. 建立新自訂繫結，方式是建立 <xref:System.ServiceModel.Channels.CustomBinding> 類別的執行個體，並將 `outputBec` 集合傳遞至建構函式。  
   
-7.  產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。 其他兩項可透過使用標準繫結上的設定來控制。  
+7. 產生的自訂繫結會有許多與標準 <xref:System.ServiceModel.WSHttpBinding> 相同的特性。 它會指定訊息層級安全性和 Windows 認證，但停用安全工作階段，並要求指定超出範圍的認證，且不會加密簽章。 最後一項只能透過依照步驟 4 的方式設定 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.MessageProtectionOrder%2A> 屬性來控制，其他兩項可透過使用標準繫結上的設定來控制。 其他兩項可透過使用標準繫結上的設定來控制。  
   
 ## <a name="example"></a>範例  
   

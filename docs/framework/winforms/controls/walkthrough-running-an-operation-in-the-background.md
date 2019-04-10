@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
-ms.openlocfilehash: cb06aa6bfa960a493090b67c8baa4d7b3b46756a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149080"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308441"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>逐步解說：在背景執行作業
 如果您有要花費較長時間才能完成的作業，但您不想導致使用者介面發生延遲，就可以使用 <xref:System.ComponentModel.BackgroundWorker> 類別在另一個執行緒上執行該作業。  
@@ -30,33 +30,33 @@ ms.locfileid: "59149080"
   
 ### <a name="to-run-an-operation-in-the-background"></a>若要在背景執行作業  
   
-1.  與您在 Windows Form 設計工具中的表單，將兩個<xref:System.Windows.Forms.Button>控制項從**工具箱**到表單，並再把`Name`和<xref:System.Windows.Forms.Control.Text%2A>根據下表按鈕的屬性。  
+1. 與您在 Windows Form 設計工具中的表單，將兩個<xref:System.Windows.Forms.Button>控制項從**工具箱**到表單，並再把`Name`和<xref:System.Windows.Forms.Control.Text%2A>根據下表按鈕的屬性。  
   
     |按鈕|名稱|文字|  
     |------------|----------|----------|  
     |`button1`|`startBtn`|**啟動**|  
     |`button2`|`cancelBtn`|**取消**|  
   
-2.  開啟**工具箱**，按一下**元件**索引標籤，然後再拖曳<xref:System.ComponentModel.BackgroundWorker>元件拖曳至表單。  
+2. 開啟**工具箱**，按一下**元件**索引標籤，然後再拖曳<xref:System.ComponentModel.BackgroundWorker>元件拖曳至表單。  
   
      `backgroundWorker1`元件會出現在**元件匣**。  
   
-3.  在 [屬性]  視窗中，將 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> 屬性設定為 `true`。  
+3. 在 [屬性]  視窗中，將 <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> 屬性設定為 `true`。  
   
-4.  在 **屬性**視窗中，按一下**事件**按鈕，然後再連按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。  
+4. 在 **屬性**視窗中，按一下**事件**按鈕，然後再連按兩下<xref:System.ComponentModel.BackgroundWorker.DoWork>和<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件建立事件處理常式。  
   
-5.  插入您耗費時間的程式碼插入<xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式。  
+5. 插入您耗費時間的程式碼插入<xref:System.ComponentModel.BackgroundWorker.DoWork>事件處理常式。  
   
-6.  擷取作業所需的任何參數<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>參數。  
+6. 擷取作業所需的任何參數<xref:System.ComponentModel.DoWorkEventArgs.Argument%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>參數。  
   
-7.  若要計算的結果指派<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。  
+7. 若要計算的結果指派<xref:System.ComponentModel.DoWorkEventArgs.Result%2A>屬性<xref:System.ComponentModel.DoWorkEventArgs>。  
   
      這是將可供<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#2)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#2)]  
   
-8.  插入程式碼來擷取在您作業的結果<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
+8. 插入程式碼來擷取在您作業的結果<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted>事件處理常式。  
   
      [!code-csharp[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/CS/Form1.cs#3)]
      [!code-vb[System.ComponentModel.BackgroundWorker.Example#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker.Example/VB/Form1.vb#3)]  
@@ -90,7 +90,7 @@ ms.locfileid: "59149080"
 > [!NOTE]
 >  如果您按 F5 執行應用程式在偵錯工具，在引發例外狀況`TimeConsumingOperation`方法會攔截到並顯示偵錯工具。 當您執行偵錯工具中，外部應用程式時<xref:System.ComponentModel.BackgroundWorker>處理例外狀況，並快取中<xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A>屬性<xref:System.ComponentModel.RunWorkerCompletedEventArgs>。  
   
-1.  按一下 **開始**按鈕以執行非同步作業，，然後按一下**取消**按鈕以停止執行中的非同步作業。  
+1. 按一下 **開始**按鈕以執行非同步作業，，然後按一下**取消**按鈕以停止執行中的非同步作業。  
   
      每個作業的結果會顯示於 <xref:System.Windows.Forms.MessageBox>。  
   

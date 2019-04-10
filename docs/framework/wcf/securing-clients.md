@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
-ms.openlocfilehash: 42c87f7b427af775784f8bf1c49ecabde2572823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135774"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331802"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
 在 Windows Communication Foundation (WCF) 中，服務說明用戶端的安全性需求。 也就是說，服務會指定使用哪一個安全性模式，以及用戶端是否必須提供認證。 因此，保護用戶端安全的程序便十分簡單，只要使用從服務 (如果已發行) 取得的中繼資料並建立用戶端即可。 中繼資料指定如何設定用戶端。 如果服務要求用戶端提供認證，則您必須取得符合要求的認證。 本主題將進一步探討此程序。 如需建立安全服務的詳細資訊，請參閱[Securing Services](../../../docs/framework/wcf/securing-services.md)。  
@@ -33,9 +33,9 @@ ms.locfileid: "59135774"
 ## <a name="setting-a-client-credential"></a>設定用戶端認證  
  在用戶端上設定用戶端認證是由兩個步驟所組成：  
   
-1.  判斷*用戶端認證類型*服務要求。 這可以由兩個方法的其中之一完成。 首先，如果您有來自服務建立者的文件，文件中應指出服務需要的用戶端認證類型 (如果有的話)。 再者，如果您只有 Svcutil.exe 工具產生的組態檔，您可以檢查個別的繫結來判斷需要哪一種認證類型。  
+1. 判斷*用戶端認證類型*服務要求。 這可以由兩個方法的其中之一完成。 首先，如果您有來自服務建立者的文件，文件中應指出服務需要的用戶端認證類型 (如果有的話)。 再者，如果您只有 Svcutil.exe 工具產生的組態檔，您可以檢查個別的繫結來判斷需要哪一種認證類型。  
   
-2.  指定實際的用戶端認證。 實際的用戶端認證稱為*用戶端認證值*以區分它與類型。 例如，如果用戶端認證類型指定憑證，您必須提供由服務信任的憑證授權單位核發的 X.509 憑證。  
+2. 指定實際的用戶端認證。 實際的用戶端認證稱為*用戶端認證值*以區分它與類型。 例如，如果用戶端認證類型指定憑證，您必須提供由服務信任的憑證授權單位核發的 X.509 憑證。  
   
 ### <a name="determining-the-client-credential-type"></a>判斷用戶端認證類型  
  如果您有 Svcutil.exe 工具產生的檔案，請檢查組態[\<繫結 >](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)區段可決定哪些用戶端認證類型是必要項。 在該部分內有指定安全性需要的繫結項目。 具體來說，檢查\<安全性 > 的每個繫結項目。 該項目包括 `mode` 屬性，您可以將該屬性設定為三個可能值 (`Message`、`Transport` 或 `TransportWithMessageCredential`) 的其中之一。 屬性的值決定模式，而模式決定哪一個子項目是重要的。  

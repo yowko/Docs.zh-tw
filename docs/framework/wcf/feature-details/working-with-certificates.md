@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 3b7fa5d22283f6f69e1f13ecd32e34a6700f32c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59115696"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331711"
 ---
 # <a name="working-with-certificates"></a>使用憑證
 在針對 Windows Communication Foundation (WCF) 安全性設計程式時，通常會採用 X.509 數位憑證來驗證用戶端與伺服器、加密，以及數位簽署訊息。 本主題將簡要說明 X.509 數位憑證功能及如何在 WCF 中使用這些憑證，同時針對這些概念的進一步說明以及如何運用 WCF 與憑證來完成一般工作的主題說明提供連結。  
@@ -90,13 +90,13 @@ ms.locfileid: "59115696"
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>若要建置使用 New-selfsignedcertificate cmdlet 的信任鏈結  
   
-1.  建立暫時的根授權單位 （自我簽署） 憑證使用 New-selfsignedcertificate cmdlet。 將私密金鑰儲存到磁碟。  
+1. 建立暫時的根授權單位 （自我簽署） 憑證使用 New-selfsignedcertificate cmdlet。 將私密金鑰儲存到磁碟。  
   
-2.  使用新的憑證來發行另一個包含公開金鑰的憑證。  
+2. 使用新的憑證來發行另一個包含公開金鑰的憑證。  
   
-3.  將根授權憑證匯入 [受信任的根憑證授權單位] 存放區。  
+3. 將根授權憑證匯入 [受信任的根憑證授權單位] 存放區。  
   
-4.  如需逐步指示，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
+4. 如需逐步指示，請參閱[How to:用於建立暫時憑證，在開發期間](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)。  
   
 ## <a name="which-certificate-to-use"></a>該使用哪個憑證？  
  關於憑證常見的問題包括該使用哪些憑證以及為何使用這些憑證。 答案需視您是要針對用戶端或服務設計程式而定。 下列資訊將提供您一般性的指示，可能無法完全解答這些問題。  

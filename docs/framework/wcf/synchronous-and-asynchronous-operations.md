@@ -8,12 +8,12 @@ helpviewer_keywords:
 - service contracts [WCF], synchronous operations
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
-ms.openlocfilehash: 3db7d6b072c7803d96deb17b33a06af3d55aca12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59148950"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297703"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同步和非同步作業
 本主題討論實作和呼叫非同步服務作業。  
@@ -49,11 +49,11 @@ ms.locfileid: "59148950"
 ### <a name="implementing-an-asynchronous-service-operation"></a>實作非同步服務作業  
  您可以使用下列三個方法的其中一個來實作非同步服務作業：  
   
-1.  工作架構非同步模式  
+1. 工作架構非同步模式  
   
-2.  事件架構非同步模式  
+2. 事件架構非同步模式  
   
-3.  IAsyncResult 非同步模式  
+3. IAsyncResult 非同步模式  
   
 #### <a name="task-based-asynchronous-pattern"></a>以工作為基礎的非同步模式  
  工作架構非同步模式是實作非同步作業的慣用方式，因為這是最簡單且最直接的方式。 若要使用這個方法，只需實作服務作業並指定 Task\<T> 的傳回類型，其中 T 是由邏輯作業傳回的類型。 例如:   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 579da4b52a9a7c4c747a9ace390c04611207c94d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822904"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332322"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows Api (Visual Basic)
 Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您可以使用它們來執行工作時很難撰寫您自己的對等的程序。 比方說，Windows 會提供名為函式`FlashWindowEx`，可讓您的應用程式的標題列淺色與深色陰影之間。  
@@ -34,16 +34,16 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 #### <a name="to-declare-a-dll-procedure"></a>若要宣告的 DLL 程序  
   
-1.  決定您想要呼叫的函式加上引數，引數類型的名稱，並傳回值，以及名稱與 DLL 包含它的位置。  
+1. 決定您想要呼叫的函式加上引數，引數類型的名稱，並傳回值，以及名稱與 DLL 包含它的位置。  
   
     > [!NOTE]
     >  如需 Windows Api 的完整資訊，請參閱平台 SDK Windows API 中的 Win32 SDK 文件。 如需有關使用 Windows Api 的常數的詳細資訊，請檢查等平台 SDK 隨附的 Windows.h 的標頭檔。  
   
-2.  開啟新的 Windows 應用程式專案，依序按一下**的新**上**檔案**功能表，然後按一下**專案**。 [ **新增專案** ] 對話方塊隨即出現。  
+2. 開啟新的 Windows 應用程式專案，依序按一下**的新**上**檔案**功能表，然後按一下**專案**。 [ **新增專案** ] 對話方塊隨即出現。  
   
-3.  選取  **Windows 應用程式**從 Visual Basic 專案範本的清單。 新的專案會顯示。  
+3. 選取  **Windows 應用程式**從 Visual Basic 專案範本的清單。 新的專案會顯示。  
   
-4.  新增下列`Declare`函式至類別或您要使用 DLL 的模組：  
+4. 新增下列`Declare`函式至類別或您要使用 DLL 的模組：  
   
      [!code-vb[VbVbalrInterop#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#9)]  
   
@@ -71,38 +71,38 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 ###### <a name="to-declare-constants-for-windows-api-calls"></a>若要宣告常數的 Windows API 呼叫  
   
-1.  您要呼叫 Windows 函式，請參閱文件。 決定使用的常數名稱以及包含這些常數的數值的.h 檔案的名稱。  
+1. 您要呼叫 Windows 函式，請參閱文件。 決定使用的常數名稱以及包含這些常數的數值的.h 檔案的名稱。  
   
-2.  若要檢視標頭 (.h) 檔案的內容中使用文字編輯器，例如 [記事本]，並找出您正在使用的常數相關聯的值。 例如， `MessageBox` API 會使用常數`MB_ICONQUESTION`顯示訊息方塊中的問號。 定義`MB_ICONQUESTION`WinUser.h 中，而且會出現，如下所示：  
+2. 若要檢視標頭 (.h) 檔案的內容中使用文字編輯器，例如 [記事本]，並找出您正在使用的常數相關聯的值。 例如， `MessageBox` API 會使用常數`MB_ICONQUESTION`顯示訊息方塊中的問號。 定義`MB_ICONQUESTION`WinUser.h 中，而且會出現，如下所示：  
   
      `#define MB_ICONQUESTION             0x00000020L`  
   
-3.  新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如:   
+3. 新增對等項目`Const`至您的類別或模組，讓您的應用程式可使用這些常數的陳述式。 例如:   
   
      [!code-vb[VbVbalrInterop#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#11)]  
   
 ###### <a name="to-call-the-dll-procedure"></a>若要呼叫的 DLL 程序  
   
-1.  新增名為按鈕`Button1`啟動以您的專案，然後按兩下以檢視其程式碼。 會顯示為按鈕的事件處理常式。  
+1. 新增名為按鈕`Button1`啟動以您的專案，然後按兩下以檢視其程式碼。 會顯示為按鈕的事件處理常式。  
   
-2.  將程式碼加入`Click`加入呼叫程序，並提供適當的引數的按鈕事件處理常式：  
+2. 將程式碼加入`Click`加入呼叫程序，並提供適當的引數的按鈕事件處理常式：  
   
      [!code-vb[VbVbalrInterop#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#12)]  
   
-3.  按 F5 執行專案。 訊息方塊會顯示這兩 **[是]** 並**No**回應按鈕。 按一下其中一個。  
+3. 按 F5 執行專案。 訊息方塊會顯示這兩 **[是]** 並**No**回應按鈕。 按一下其中一個。  
   
 #### <a name="data-marshaling"></a>封送處理的資料  
  Visual Basic 會自動轉換參數和 Windows API 呼叫的傳回值的資料類型，但您可以使用`MarshalAs`屬性來明確地指定 API 的預期的 unmanaged 的資料類型。 如需有關 interop 封送處理的詳細資訊，請參閱[Interop 封送處理](../../../framework/interop/interop-marshaling.md)。  
   
 ###### <a name="to-use-declare-and-marshalas-in-an-api-call"></a>若要使用 Declare 與 MarshalAs API 呼叫  
   
-1.  決定您想要呼叫，再加上其引數，資料類型的函式的名稱，並傳回值。  
+1. 決定您想要呼叫，再加上其引數，資料類型的函式的名稱，並傳回值。  
   
-2.  若要簡化存取權`MarshalAs`屬性，請將`Imports`陳述式的類別或模組，如下列範例所示的程式碼：  
+2. 若要簡化存取權`MarshalAs`屬性，請將`Imports`陳述式的類別或模組，如下列範例所示的程式碼：  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-3.  將函式原型匯入的函式新增至類別或模組，您使用，並套用`MarshalAs`屬性至參數或傳回值。 在下列範例中，預期類型的 API 呼叫`void*`封送處理為`AsAny`:  
+3. 將函式原型匯入的函式新增至類別或模組，您使用，並套用`MarshalAs`屬性至參數或傳回值。 在下列範例中，預期類型的 API 呼叫`void*`封送處理為`AsAny`:  
   
      [!code-vb[VbVbalrInterop#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#14)]  
   
@@ -113,27 +113,27 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
   
 #### <a name="to-call-a-windows-api-using-the-dllimport-attribute"></a>若要呼叫 Windows API 使用 DllImport 屬性  
   
-1.  開啟新的 Windows 應用程式專案，依序按一下**的新**上**檔案**功能表，然後按一下**專案**。 [ **新增專案** ] 對話方塊隨即出現。  
+1. 開啟新的 Windows 應用程式專案，依序按一下**的新**上**檔案**功能表，然後按一下**專案**。 [ **新增專案** ] 對話方塊隨即出現。  
   
-2.  選取  **Windows 應用程式**從 Visual Basic 專案範本的清單。 新的專案會顯示。  
+2. 選取  **Windows 應用程式**從 Visual Basic 專案範本的清單。 新的專案會顯示。  
   
-3.  新增名為按鈕`Button2`的啟動表單。  
+3. 新增名為按鈕`Button2`的啟動表單。  
   
-4.  按兩下`Button2`開啟表單的程式碼檢視。  
+4. 按兩下`Button2`開啟表單的程式碼檢視。  
   
-5.  若要簡化存取權`DllImport`，新增`Imports`陳述式來啟動表單類別的程式碼頂端：  
+5. 若要簡化存取權`DllImport`，新增`Imports`陳述式來啟動表單類別的程式碼頂端：  
   
      [!code-vb[VbVbalrInterop#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#13)]  
   
-6.  宣告空函式前面`End Class`表單，和名稱的函式的陳述式`MoveFile`。  
+6. 宣告空函式前面`End Class`表單，和名稱的函式的陳述式`MoveFile`。  
   
-7.  適用於`Public`並`Shared`的函式宣告和設定參數的修飾詞`MoveFile`根據 Windows API 函式會使用的引數：  
+7. 適用於`Public`並`Shared`的函式宣告和設定參數的修飾詞`MoveFile`根據 Windows API 函式會使用的引數：  
   
      [!code-vb[VbVbalrInterop#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#16)]  
   
      您的函式可以使用任何有效的程序名稱;`DllImport`屬性會指定在 DLL 中的名稱。 它也會處理參數封送處理的互通性和 API 所使用的傳回值，因此您可以選擇 Visual Studio 的資料類型，它們類似於的資料類型。  
   
-8.  套用`DllImport`屬性為空白的函式。 第一個參數是包含您要呼叫的函式的 dll 的位置與名稱。 您不需要指定位於 Windows 系統目錄中檔案的路徑。 第二個參數是在 Windows API 中指定的函式名稱的具名引數。 在此範例中，`DllImport`屬性會強制執行呼叫`MoveFile`轉送至`MoveFileW`KERNEL32 中。DLL。 `MoveFileW`方法會將檔案複製從路徑`src`路徑`dst`。  
+8. 套用`DllImport`屬性為空白的函式。 第一個參數是包含您要呼叫的函式的 dll 的位置與名稱。 您不需要指定位於 Windows 系統目錄中檔案的路徑。 第二個參數是在 Windows API 中指定的函式名稱的具名引數。 在此範例中，`DllImport`屬性會強制執行呼叫`MoveFile`轉送至`MoveFileW`KERNEL32 中。DLL。 `MoveFileW`方法會將檔案複製從路徑`src`路徑`dst`。  
   
      [!code-vb[VbVbalrInterop#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#17)]  
   
@@ -151,8 +151,8 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [自動](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [在 Managed 程式碼中建立原型](../../../framework/interop/creating-prototypes-in-managed-code.md)

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
-ms.openlocfilehash: b0b189db8f51e0cccb6ee0516fc4cc53556ccf51
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174118"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310521"
 ---
 # <a name="batching-messages-in-a-transaction"></a>批次處理異動中的訊息
 佇列的應用程式會使用異動來確保訊息的正確性與可靠的傳遞。 不過，異動是昂貴的作業，而且可能大幅降低訊息的處理能力。 要改善訊息處理能力的其中一種方式，就是讓應用程式在單一異動內讀取和處理多個訊息。 效能與復原之間的取捨：隨著批次中訊息數目的增加，交易復原時所需的復原工作量也會增加。 務必注意的是，在交易和工作階段中批次處理訊息之間的差異。 A*工作階段*是一群相關的訊息會由單一應用程式處理，並以單一單位進行認可。 工作階段通常是在有一組相關訊息必須一併處理時使用。 這類工作的範例為線上購物網站。 *批次*來處理多個，不相關的訊息，以增加訊息輸送量。 如需有關工作階段的詳細資訊，請參閱[的工作階段中群組佇列訊息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)。 批次中的訊息同樣是由單一應用程式處理，並且以單一單位進行認可，但是批次中的訊息可能沒有任何關聯性。 將異動中的訊息批次處理是最佳的方法，而且不會改變應用程式執行的方式。  
@@ -31,11 +31,11 @@ ms.locfileid: "59174118"
 ## <a name="leaving-batching-mode"></a>離開批次處理模式  
  如果批次中的訊息造成異動中止，則會發生下列步驟：  
   
-1.  整個批次的訊息都會復原。  
+1. 整個批次的訊息都會復原。  
   
-2.  一次讀取一個訊息，直到已讀取的訊息數目超過最大批次大小的兩倍。  
+2. 一次讀取一個訊息，直到已讀取的訊息數目超過最大批次大小的兩倍。  
   
-3.  重新進入批次處理模式。  
+3. 重新進入批次處理模式。  
   
 ## <a name="choosing-the-batch-size"></a>選擇批次大小  
  批次大小視應用程式而定。 經驗判斷通常是達到應用程式最佳批次大小的最佳方式。 不過務必記得，選擇批次大小時，應根據應用程式的實際部署模型選擇大小。 例如，部署應用程式時，如果需要遠端電腦上 SQL 伺服器，而且需要擴展佇列和 SQL 伺服器的異動，則批次大小最好是經過執行此組態後再決定。  

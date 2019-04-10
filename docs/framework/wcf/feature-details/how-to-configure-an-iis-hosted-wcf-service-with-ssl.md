@@ -2,27 +2,27 @@
 title: HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
-ms.openlocfilehash: 336c3800fc033cc12bd9c3fe168ae219b72cab91
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214114"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326446"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>HOW TO：以 SSL 設定 IIS 裝載的 WCF 服務
 本主題說明如何設定 IIS 裝載的 WCF 服務以使用 HTTP 傳輸安全性。 HTTP 傳輸安全性必須使用 SSL 憑證才能註冊到 IIS。 如果您沒有 SSL 憑證，則可以使用 IIS 來產生測試憑證。 接下來，您必須將 SSL 繫結加入至網站，並設定網站的驗證屬性。 最後，您需要將 WCF 服務設定為使用 HTTPS。  
   
 ### <a name="creating-a-self-signed-certificate"></a>建立自我簽署憑證  
   
-1.  開啟網際網路資訊服務管理員 (inetmgr.exe)，並在左側樹狀檢視中選取您的電腦名稱。 在螢幕右側選取 [伺服器憑證]  
+1. 開啟網際網路資訊服務管理員 (inetmgr.exe)，並在左側樹狀檢視中選取您的電腦名稱。 在螢幕右側選取 [伺服器憑證]  
   
      ![IIS 管理員主畫面](../../../../docs/framework/wcf/feature-details/media/mg-inetmgrhome.jpg "mg_INetMgrHome")  
   
-2.  在 [伺服器憑證] 視窗中按一下**建立自我簽署憑證...** 連結。  
+2. 在 [伺服器憑證] 視窗中按一下**建立自我簽署憑證...** 連結。  
   
      ![建立自我&#45;簽署的憑證與 IIS](../../../../docs/framework/wcf/feature-details/media/mg-createselfsignedcert.jpg "mg_CreateSelfSignedCert")  
   
-3.  輸入的自我簽署憑證的易記名稱，然後按一下**確定**。  
+3. 輸入的自我簽署憑證的易記名稱，然後按一下**確定**。  
   
      ![建立本身&#45;簽署憑證 對話方塊](../../../../docs/framework/wcf/feature-details/media/mg-mycert.jpg "mg_MyCert")  
   
@@ -34,35 +34,35 @@ ms.locfileid: "59214114"
   
 ### <a name="add-ssl-binding"></a>加入 SSL 繫結  
   
-1.  仍在 Internet Information Services 管理員 中展開**站台**資料夾，然後**Default Web Site**螢幕左側樹狀檢視中的資料夾。  
+1. 仍在 Internet Information Services 管理員 中展開**站台**資料夾，然後**Default Web Site**螢幕左側樹狀檢視中的資料夾。  
   
-2.  按一下 **繫結...** 連結**動作**視窗的右上部分的一節。  
+2. 按一下 **繫結...** 連結**動作**視窗的右上部分的一節。  
   
      ![新增 SSL 繫結](../../../../docs/framework/wcf/feature-details/media/mg-addsslbinding.jpg "mg_AddSSLBinding")  
   
-3.  在 網站繫結 視窗中按一下**新增** 按鈕。  
+3. 在 網站繫結 視窗中按一下**新增** 按鈕。  
   
      ![站台繫結 對話方塊](../../../../docs/framework/wcf/feature-details/media/mg-sitebindingsdialog.jpg "mg_SiteBindingsDialog")  
   
-4.  在 [**新增網站繫結**] 對話方塊中，選取 https 的型別和剛才的自我簽署憑證的易記名稱建立。  
+4. 在 [**新增網站繫結**] 對話方塊中，選取 https 的型別和剛才的自我簽署憑證的易記名稱建立。  
   
      ![站台繫結範例](../../../../docs/framework/wcf/feature-details/media/mg-mycertbinding.jpg "mg_MyCertBinding")  
   
 ### <a name="configure-virtual-directory-for-ssl"></a>設定 SSL 的虛擬目錄  
   
-1.  仍舊在網際網路資訊服務管理員中，選取包含您的 WCF 安全服務的虛擬目錄。  
+1. 仍舊在網際網路資訊服務管理員中，選取包含您的 WCF 安全服務的虛擬目錄。  
   
-2.  在視窗的中央窗格中，選取**SSL 設定**的 IIS 區段中。  
+2. 在視窗的中央窗格中，選取**SSL 設定**的 IIS 區段中。  
   
      ![虛擬目錄的 SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-sslsettingsforvdir.jpg "mg_SSLSettingsForVDir")  
   
-3.  在 SSL 設定 窗格中，選取**需要 SSL**核取方塊，按一下 **套用**連結**動作**區段在右手邊的畫面。  
+3. 在 SSL 設定 窗格中，選取**需要 SSL**核取方塊，按一下 **套用**連結**動作**區段在右手邊的畫面。  
   
      ![虛擬目錄 SSL 設定](../../../../docs/framework/wcf/feature-details/media/mg-vdirsslsettings.JPG "mg_VDirSSLSettings")  
   
 ### <a name="configure-wcf-service-for-http-transport-security"></a>設定 HTTP 傳輸安全性的 WCF 服務  
   
-1.  在 WCF 服務的 web.config 中，將 HTTP 繫結設定為使用傳輸安全性，如下列 XML 所示。  
+1. 在 WCF 服務的 web.config 中，將 HTTP 繫結設定為使用傳輸安全性，如下列 XML 所示。  
   
     ```xml  
     <bindings>  
@@ -76,7 +76,7 @@ ms.locfileid: "59214114"
     </bindings>  
     ```  
   
-2.  指定您的服務和服務端點，如下列 XML 所示。  
+2. 指定您的服務和服務端點，如下列 XML 所示。  
   
     ```xml  
     <services>  

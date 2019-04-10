@@ -5,23 +5,23 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 89befaff-bb46-4290-8382-e67cdb0e3de9
-ms.openlocfilehash: bdcdce58d78a305493bd698cf4d849e640f14ce0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1445a95fc6360a7956048d2bae2d840f9c3f7a99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230989"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325692"
 ---
 # <a name="database-mirroring-in-sql-server"></a>在 SQL Server 中建立資料庫鏡像
 SQL Server 中的資料庫鏡像可讓您將 SQL Server 資料庫的複本或鏡像保存在待命伺服器上。 鏡像可確保永遠存在兩份分開的資料複本，這會提供高可用性及完整的資料重複性。 .NET Data Provider for SQL Server 提供對資料庫鏡像的隱含支援，這樣將其設定給 SQL Server 資料庫後，開發人員即無需採取任何動作或撰寫任何程式碼。 此外，<xref:System.Data.SqlClient.SqlConnection> 物件支援明確連接模式，可在 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> 中提供容錯移轉夥伴伺服器的名稱。  
   
  下列簡化的事件序列會針對目標鎖定設定為鏡像之資料庫的 <xref:System.Data.SqlClient.SqlConnection> 物件發生：  
   
-1.  用戶端應用程式成功連接至主體資料庫，伺服器再傳送回夥伴伺服器的名稱，稍後會在用戶端上快取該名稱。  
+1. 用戶端應用程式成功連接至主體資料庫，伺服器再傳送回夥伴伺服器的名稱，稍後會在用戶端上快取該名稱。  
   
-2.  如果包含主體資料庫的伺服器失敗或連接中斷，則會遺失連接及異動狀態。 用戶端應用程式會嘗試重新建立與主體資料庫的連接，但失敗。  
+2. 如果包含主體資料庫的伺服器失敗或連接中斷，則會遺失連接及異動狀態。 用戶端應用程式會嘗試重新建立與主體資料庫的連接，但失敗。  
   
-3.  然後，用戶端應用程式會透明地嘗試建立與夥伴伺服器上鏡像資料庫的連接。 如果成功，則連接會重新導向至稍後會變成新主體資料庫的鏡像資料庫。  
+3. 然後，用戶端應用程式會透明地嘗試建立與夥伴伺服器上鏡像資料庫的連接。 如果成功，則連接會重新導向至稍後會變成新主體資料庫的鏡像資料庫。  
   
 ## <a name="specifying-the-failover-partner-in-the-connection-string"></a>在連接字串中指定容錯移轉夥伴  
  如果您在連接字串 (Connection String) 中提供了容錯移轉夥伴伺服器的名稱，只要用戶端應用程式第一次連接時主體資料庫無法使用，用戶端就會透明地嘗試與容錯移轉夥伴連接。  

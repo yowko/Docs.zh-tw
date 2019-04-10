@@ -2,12 +2,12 @@
 title: 開始使用F#在 Visual Studio for Mac
 description: 了解如何使用F#使用 Visual Studio for mac。
 ms.date: 07/03/2018
-ms.openlocfilehash: e37600b2ca8f845ec1068a55ff1f9964d2527742
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604151"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331857"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>開始使用F#在 Visual Studio for Mac
 
@@ -19,7 +19,7 @@ F#和視覺效果F#工具支援在 Visual Studio for Mac IDE。 請確定您已[
 
 1. 在 **檔案**功能表上，指向**新的方案**。
 
-2.  在 [新增專案] 對話方塊中，有 2 個不同的範本，為主控台應用程式。  有一個 其他-> .NET Framework 為目標的.NET。  其他範本是在.NET Core]-> [以.NET Core 為目標的應用程式。  其中一個範本應可基於本文的目的。
+2. 在 [新增專案] 對話方塊中，有 2 個不同的範本，為主控台應用程式。  有一個 其他-> .NET Framework 為目標的.NET。  其他範本是在.NET Core]-> [以.NET Core 為目標的應用程式。  其中一個範本應可基於本文的目的。
 
 3. 在主控台應用程式，變更C#到F#如有需要。  選擇**下一步**按鈕以向前移動 ！  
 

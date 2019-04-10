@@ -9,12 +9,12 @@ helpviewer_keywords:
 - optionexplicit compiler option [Visual Basic]
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
-ms.openlocfilehash: 4aca6e9c20dbce7aa8a94067c96fcf44329a6fe4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58814870"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332387"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 如果變數未宣告在使用前，會導致編譯器報告錯誤。  
@@ -34,11 +34,11 @@ ms.locfileid: "58814870"
   
 ### <a name="to-set--optionexplicit-in-the-visual-studio-ide"></a>若要在 Visual Studio IDE 中設定-optionexplicit  
   
-1.  在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。   
+1. 在 **方案總管**中選取專案。 在 [專案] 功能表上，按一下 [屬性]。   
   
-2.  按一下 [編譯] 索引標籤。  
+2. 按一下 [編譯] 索引標籤。  
   
-3.  修改中的值**Option Explicit**  方塊中。  
+3. 修改中的值**Option Explicit**  方塊中。  
   
 ## <a name="example"></a>範例  
  下列程式碼會編譯時`-optionexplicit-`用。  

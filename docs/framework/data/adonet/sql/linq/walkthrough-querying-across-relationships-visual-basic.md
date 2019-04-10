@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: a7da43e3-769f-4e07-bcd6-552b8bde66f4
-ms.openlocfilehash: aa6be50e1cdb00acf79c9f9e2c49050ce7bf3b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: abd4941697639ec7bdda545b1ead8d57091e9e7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213346"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314655"
 ---
 # <a name="walkthrough-querying-across-relationships-visual-basic"></a>逐步解說：跨關聯性查詢 (Visual Basic)
 本逐步解說示範如何使用[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*關聯*表示在資料庫中的外部索引鍵關聯性。  
@@ -53,15 +53,15 @@ ms.locfileid: "59213346"
   
 #### <a name="to-access-order-objects-by-using-customer-objects"></a>若要使用 Customer 物件存取 Order 物件  
   
-1.  將下列程式碼輸入或貼到 `Sub Main` 方法，進而修改此方法：  
+1. 將下列程式碼輸入或貼到 `Sub Main` 方法，進而修改此方法：  
   
      [!code-vb[DLinqWalk2VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#3)]  
   
-2.  按 F5 對應用程式進行偵錯。  
+2. 按 F5 對應用程式進行偵錯。  
   
      訊息方塊中會出現兩個名稱，而主控台視窗則會顯示所產生的 SQL 程式碼。  
   
-3.  關閉訊息方塊以停止偵錯。  
+3. 關閉訊息方塊以停止偵錯。  
   
 ## <a name="creating-a-strongly-typed-view-of-your-database"></a>建立資料庫的強型別檢視  
  從資料庫的強型別檢視著手會容易許多。 透過建立強型別 <xref:System.Data.Linq.DataContext> 物件，您就不需要呼叫 <xref:System.Data.Linq.DataContext.GetTable%2A>。 當您使用強型別 <xref:System.Data.Linq.DataContext> 物件時，可以在所有查詢中使用強型別資料表。  
@@ -70,23 +70,23 @@ ms.locfileid: "59213346"
   
 #### <a name="to-strongly-type-the-datacontext-object"></a>若要建立強型別 DataContext 物件  
   
-1.  在 `Customer` 類別宣告之上加入下列程式碼。  
+1. 在 `Customer` 類別宣告之上加入下列程式碼。  
   
      [!code-vb[DLinqWalk2VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#4)]  
   
-2.  修改 `Sub Main` 以使用強型別 <xref:System.Data.Linq.DataContext>，如下所示：  
+2. 修改 `Sub Main` 以使用強型別 <xref:System.Data.Linq.DataContext>，如下所示：  
   
      [!code-vb[DLinqWalk2VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk2VB/vb/Module1.vb#5)]  
   
-3.  按 F5 對應用程式進行偵錯。  
+3. 按 F5 對應用程式進行偵錯。  
   
      主控台視窗輸出為：  
   
      `ID=WHITC`  
   
-4.  在 [主控台] 視窗中按 Enter 鍵，以關閉應用程式。  
+4. 在 [主控台] 視窗中按 Enter 鍵，以關閉應用程式。  
   
-5.  在 **檔案**功能表上，按一下**全部儲存**如果您想要儲存此應用程式。  
+5. 在 **檔案**功能表上，按一下**全部儲存**如果您想要儲存此應用程式。  
   
 ## <a name="next-steps"></a>後續步驟  
  下一個逐步解說 ([逐步解說：操作資料 (Visual Basic)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-manipulating-data-visual-basic.md)) 示範如何操作資料。 該逐步解說並不要求您儲存這系列中已完成的兩個逐步解說。  

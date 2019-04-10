@@ -16,12 +16,12 @@ helpviewer_keywords:
 - context menus [Windows Forms], examples
 - examples [Windows Forms], context menus
 ms.assetid: 426d1eaf-7fb8-4b0b-8a33-5e8721786ea4
-ms.openlocfilehash: e02a187edc1392f15fe98354bb2e5c43843e430c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: cf70a5cc426b6c6075d1deb11aa2685c39a065c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094459"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332179"
 ---
 # <a name="how-to-add-and-remove-menu-items-with-the-windows-forms-contextmenu-component"></a>HOW TO：使用 Windows Forms ContextMenu 元件新增和移除功能表項目
 說明如何新增和移除 Windows Form 中的捷徑功能表項目。  
@@ -35,7 +35,7 @@ ms.locfileid: "59094459"
   
 ### <a name="to-remove-items-from-a-shortcut-menu"></a>若要移除的快顯功能表中的項目  
   
-1.  使用<xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A>或是<xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A>方法<xref:System.Windows.Forms.Menu.MenuItems%2A>的集合<xref:System.Windows.Forms.ContextMenu>元件中移除特定的功能表項目。  
+1. 使用<xref:System.Windows.Forms.Menu.MenuItemCollection.Remove%2A>或是<xref:System.Windows.Forms.Menu.MenuItemCollection.RemoveAt%2A>方法<xref:System.Windows.Forms.Menu.MenuItems%2A>的集合<xref:System.Windows.Forms.ContextMenu>元件中移除特定的功能表項目。  
   
     ```vb  
     ' Removes the first item in the shortcut menu.  
@@ -60,7 +60,7 @@ ms.locfileid: "59094459"
   
      -或-  
   
-2.  使用`Clear`方法`MenuItems`的集合<xref:System.Windows.Forms.ContextMenu>元件，以移除 [] 功能表中的所有項目。  
+2. 使用`Clear`方法`MenuItems`的集合<xref:System.Windows.Forms.ContextMenu>元件，以移除 [] 功能表中的所有項目。  
   
     ```vb  
     ContextMenu1.MenuItems.Clear()  

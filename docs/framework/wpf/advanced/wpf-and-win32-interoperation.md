@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 72f05621c96f1b6938b67d19f862a8d28b6df352
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 71c454edc6a124f732f1e6b56e25c28671fa11b6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171884"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314408"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF 和 Win32 互通
 本主題概述如何交互操作 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 程式碼。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，則重複使用該程式碼的一部分可能會更有效率。  
@@ -58,15 +58,15 @@ ms.locfileid: "59171884"
 ## <a name="hosting-wpf-content-in-a-microsoft-win32-window"></a>將 WPF 內容裝載在 Microsoft Win32 視窗中  
  要裝載的索引鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗是<xref:System.Windows.Interop.HwndSource>類別。 這個類別會包裝 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗中的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容，以將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容併入 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中作為子視窗。 下列方法會將 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 合併在單一應用程式中。  
   
-1.  將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容 (內容根項目) 實作為 Managed 類別。 一般而言，類別繼承自一個類別可以包含多個子項目和/或做為根項目，例如<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.Controls.Page>。 在後續步驟中，這個類別指的是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別，而且類別的執行個體指的是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件。  
+1. 將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容 (內容根項目) 實作為 Managed 類別。 一般而言，類別繼承自一個類別可以包含多個子項目和/或做為根項目，例如<xref:System.Windows.Controls.DockPanel>或<xref:System.Windows.Controls.Page>。 在後續步驟中，這個類別指的是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別，而且類別的執行個體指的是 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件。  
   
-2.  以 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 實作 [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)] 應用程式。 如果您是使用現有 Unmanaged [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 應用程式開始進行，通常只要變更專案設定來包含 `/clr` 編譯器旗標，該應用程式就可以呼叫 Managed 程式碼 (本主題未描述支援 `/clr` 編譯所需項目的完整範圍)。  
+2. 以 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 實作 [!INCLUDE[TLA2#tla_cppcli](../../../../includes/tla2sharptla-cppcli-md.md)] 應用程式。 如果您是使用現有 Unmanaged [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] 應用程式開始進行，通常只要變更專案設定來包含 `/clr` 編譯器旗標，該應用程式就可以呼叫 Managed 程式碼 (本主題未描述支援 `/clr` 編譯所需項目的完整範圍)。  
   
-3.  將執行緒模型設為單一執行緒 Apartment (STA)。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用此執行緒模型。  
+3. 將執行緒模型設為單一執行緒 Apartment (STA)。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 使用此執行緒模型。  
   
-4.  處理視窗程序中的 WM_CREATE 通知。  
+4. 處理視窗程序中的 WM_CREATE 通知。  
   
-5.  在此處理常式 (或處理常式所呼叫的函式) 內，執行下列動作︰  
+5. 在此處理常式 (或處理常式所呼叫的函式) 內，執行下列動作︰  
   
     1.  建立新<xref:System.Windows.Interop.HwndSource>物件的父視窗 HWND 作為其`parent`參數。  
   
@@ -76,11 +76,11 @@ ms.locfileid: "59171884"
   
     4.  <xref:System.Windows.Interop.HwndSource>物件<xref:System.Windows.Interop.HwndSource.Handle%2A>屬性包含視窗控制代碼 (HWND)。 若要取得可用於應用程式 Unmanaged 部分的 HWND，請將 `Handle.ToPointer()` 轉型為 HWND。  
   
-6.  實作 Managed 類別，其中包含靜態欄位來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件的參考。 這個類別可讓您取得的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的物件，從您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式碼，但更重要的是它會防止您<xref:System.Windows.Interop.HwndSource>防止不小心收集到的記憶體回收。  
+6. 實作 Managed 類別，其中包含靜態欄位來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件的參考。 這個類別可讓您取得的參考[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容的物件，從您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]程式碼，但更重要的是它會防止您<xref:System.Windows.Interop.HwndSource>防止不小心收集到的記憶體回收。  
   
-7.  將處理常式附加到一或多個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件事件，以接收 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件的通知。  
+7. 將處理常式附加到一或多個 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件事件，以接收 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件的通知。  
   
-8.  使用儲存在靜態欄位中的參考來設定屬性及呼叫方法等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件通訊。  
+8. 使用儲存在靜態欄位中的參考來設定屬性及呼叫方法等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容物件通訊。  
   
 > [!NOTE]
 >  如果您產生不同的組件，然後參考它，則可以針對使用內容類別之預設部分類別的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的步驟一，執行部分或所有 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容類別定義。 雖然您通常會包含<xref:System.Windows.Application>編譯的物件[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]組件中，您未抵達用<xref:System.Windows.Application>交互操作的一部分，您只使用一或多個根類別，如[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]參考的檔案若要由應用程式，並參考其部分類別。 此程序的其餘部分基本上與上述類似。  
@@ -91,17 +91,17 @@ ms.locfileid: "59171884"
 ## <a name="hosting-a-microsoft-win32-window-in-wpf"></a>在 WPF 中裝載 Microsoft Win32 視窗  
  要裝載的索引鍵[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗內其他[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容<xref:System.Windows.Interop.HwndHost>類別。 此類別會將視窗包裝在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目中，而此項目可以新增至 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 項目樹狀結構。 <xref:System.Windows.Interop.HwndHost> 也支援[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，可讓您執行工作，例如處理程序所裝載之視窗的訊息。 基本程序如下：  
   
-1.  建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的項目樹狀結構 (可以透過程式碼或標記)。 在元素樹狀結構中尋找適當且允許點其中<xref:System.Windows.Interop.HwndHost>實作可以加入做為子項目。 在後續步驟中，這個項目稱為保留項目。  
+1. 建立 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 應用程式的項目樹狀結構 (可以透過程式碼或標記)。 在元素樹狀結構中尋找適當且允許點其中<xref:System.Windows.Interop.HwndHost>實作可以加入做為子項目。 在後續步驟中，這個項目稱為保留項目。  
   
-2.  衍生自<xref:System.Windows.Interop.HwndHost>來建立物件，持有您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]內容。  
+2. 衍生自<xref:System.Windows.Interop.HwndHost>來建立物件，持有您[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]內容。  
   
-3.  在該主機類別，覆寫<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。 傳回裝載之視窗的 HWND。 您可能想要將實際控制項包裝為所傳回視窗的子視窗；在主視窗中包裝控制項可提供簡單方式，讓 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容接收來自控制項的通知。 這項技術可協助修正與託管控制項界限的訊息處理相關的一些 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 問題。  
+3. 在該主機類別，覆寫<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。 傳回裝載之視窗的 HWND。 您可能想要將實際控制項包裝為所傳回視窗的子視窗；在主視窗中包裝控制項可提供簡單方式，讓 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容接收來自控制項的通知。 這項技術可協助修正與託管控制項界限的訊息處理相關的一些 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 問題。  
   
-4.  覆寫<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>和<xref:System.Windows.Interop.HwndHost.WndProc%2A>。 這裡的目的是處理裝載之內容的清除和移除參考，特別是您已建立未受管理物件的參考時。  
+4. 覆寫<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>和<xref:System.Windows.Interop.HwndHost.WndProc%2A>。 這裡的目的是處理裝載之內容的清除和移除參考，特別是您已建立未受管理物件的參考時。  
   
-5.  在程式碼後置檔案中，建立控制項裝載類別的執行個體，並將它設定為保留項目的子系。 通常您會使用事件處理常式，例如<xref:System.Windows.FrameworkElement.Loaded>，或使用部分類別建構函式。 但是，您也可以透過執行階段行為來新增交互操作內容。  
+5. 在程式碼後置檔案中，建立控制項裝載類別的執行個體，並將它設定為保留項目的子系。 通常您會使用事件處理常式，例如<xref:System.Windows.FrameworkElement.Loaded>，或使用部分類別建構函式。 但是，您也可以透過執行階段行為來新增交互操作內容。  
   
-6.  處理選取的視窗訊息，例如控制項通知。 有兩種方法。 兩者都提供訊息資料流的相同存取權，因此您的選擇大部分取決於程式設計便利性。  
+6. 處理選取的視窗訊息，例如控制項通知。 有兩種方法。 兩者都提供訊息資料流的相同存取權，因此您的選擇大部分取決於程式設計便利性。  
   
     -   實作訊息處理中的所有訊息 （不只是關機訊息） 的覆寫<xref:System.Windows.Interop.HwndHost>方法<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "59171884"
   
     -   您無法處理來自不在此程序使用的 windows 訊息<xref:System.Windows.Interop.HwndHost.WndProc%2A>。  
   
-7.  使用平台叫用來呼叫 Unmanaged `SendMessage` 函式，以與裝載的視窗通訊。  
+7. 使用平台叫用來呼叫 Unmanaged `SendMessage` 函式，以與裝載的視窗通訊。  
   
  遵循下列步驟會建立可使用滑鼠輸入的應用程式。 您可以為您裝載的視窗新增定位處理支援，藉由實作<xref:System.Windows.Interop.IKeyboardInputSink>介面。  
   

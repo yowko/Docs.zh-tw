@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Windows Forms controls, nonvisual
 - nonvisual controls [Windows Forms]
 ms.assetid: 52134d9c-cff6-4eed-8e2b-3d5eb3bd494e
-ms.openlocfilehash: 90166821181e6562d0bef3ff85f7e7a95c479be0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0768f811653543b3370310ccc0b59890273baf52
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330099"
 ---
 # <a name="how-to-add-controls-without-a-user-interface-to-windows-forms"></a>HOW TO：將沒有使用者介面的控制項新增至 Windows Forms
 非視覺控制項 （或元件） 提供您的應用程式的功能。 不像其他控制項，並不提供給使用者的使用者介面元件，並因此不需要在 Windows Form 設計工具介面上顯示。 當元件加入至表單時，Windows Form 設計工具會顯示可調整大小的紙匣底端的表單，其中會顯示所有元件。 控制項新增至元件匣之後, 您可以選取的元件，並設定其屬性，如同任何其他控制項在表單上。  
@@ -29,9 +29,9 @@ ms.locfileid: "59223689"
   
 ### <a name="to-add-a-component-to-a-windows-form"></a>若要將元件新增至 Windows 表單  
   
-1.  開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
+1. 開啟表單。 如需詳細資訊，請參閱[如何：在設計工具中顯示 Windows Form](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w5yd62ts(v=vs.100))。  
   
-2.  在 **工具箱**、 按一下元件，並將它拖曳至表單。  
+2. 在 **工具箱**、 按一下元件，並將它拖曳至表單。  
   
      您的元件會出現在元件匣中。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59223689"
   
 #### <a name="to-add-a-component-to-a-windows-form-programmatically"></a>若要以程式設計方式將元件新增至 Windows 表單  
   
-1.  建立的執行個體<xref:System.Windows.Forms.Timer>在程式碼中的類別。  
+1. 建立的執行個體<xref:System.Windows.Forms.Timer>在程式碼中的類別。  
   
-2.  設定`Interval`屬性來判斷計時器的刻度之間的時間。  
+2. 設定`Interval`屬性來判斷計時器的刻度之間的時間。  
   
-3.  設定其他任何必要屬性，為您的元件。  
+3. 設定其他任何必要屬性，為您的元件。  
   
      下列程式碼顯示如何建立<xref:System.Windows.Forms.Timer>具有其`Interval`屬性集。  
   

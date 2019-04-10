@@ -14,12 +14,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms]
 - data-bound controls [Windows Forms], DataGrid
 ms.assetid: 128cdb07-dfd3-4d60-9d6a-902847667c36
-ms.openlocfilehash: 80edd3718195fa3c47f7073136031cbddb13168b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 920a93894cc126f85bc6b618efbe6e9cedea4881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176679"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332569"
 ---
 # <a name="how-to-bind-the-windows-forms-datagrid-control-to-a-data-source"></a>HOW TO：將 Windows Forms DataGrid 控制項繫結至資料來源
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "59176679"
   
 ### <a name="to-data-bind-the-datagrid-control-programmatically"></a>若要進行資料繫結 DataGrid 控制項中以程式設計的方式  
   
-1.  撰寫程式碼以填入資料集。  
+1. 撰寫程式碼以填入資料集。  
   
      如果資料來源之資料集或資料集資料表為基礎的資料檢視，請將程式碼加入表單，以填入資料集。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59176679"
     dsCategories1->Merge(ws->GetCategories());  
     ```  
   
-2.  呼叫<xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法，並傳遞它的資料來源和資料成員。 如果您不需要明確地傳遞的資料成員，則傳遞空字串。  
+2. 呼叫<xref:System.Windows.Forms.DataGrid>控制項的<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法，並傳遞它的資料來源和資料成員。 如果您不需要明確地傳遞的資料成員，則傳遞空字串。  
   
     > [!NOTE]
     >  如果您第一次將方格繫結，您可以設定控制項的<xref:System.Windows.Forms.DataGrid.DataSource%2A>和<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。 不過，您無法重設這些屬性一旦有尚未設定。 因此，建議您一律使用<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>方法。  
@@ -101,7 +101,7 @@ ms.locfileid: "59176679"
     dataGrid1->SetDataBinding(dsCustomers1, "");  
     ```  
   
-3.  （選擇性）將適當的資料表樣式和資料行樣式加入方格中。 如果不有任何資料表樣式，您會看到資料表，但搭配最少的格式與可見的所有資料行。  
+3. （選擇性）將適當的資料表樣式和資料行樣式加入方格中。 如果不有任何資料表樣式，您會看到資料表，但搭配最少的格式與可見的所有資料行。  
   
 ## <a name="see-also"></a>另請參閱
 

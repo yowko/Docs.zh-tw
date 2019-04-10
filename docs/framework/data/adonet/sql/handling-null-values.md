@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
-ms.openlocfilehash: fe48c8a2a7df74b1a9e28b514ba9258d2aa23ae9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191462"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332140"
 ---
 # <a name="handling-null-values"></a>處理 Null 值
 當資料行中的值未知或遺失時，便會使用關聯式資料庫中的 Null 值。 Null 既不是空字串 (針對字元或 datetime 資料型別)，也不是零值 (針對數值資料型別)。 根據 ANSI SQL-92 規格的內容，對所有的資料型別而言，Null 必須都是相同的，以便可一致處理所有的 Null。 藉由實作 <xref:System.Data.SqlTypes> 介面，<xref:System.Data.SqlTypes.INullable> 命名空間可以提供 Null 語意。 <xref:System.Data.SqlTypes> 中的每個資料型別都具有自己的 `IsNull` 屬性及 `Null` 值，而該值可以指派給該資料型別的執行個體 (Instance)。  
@@ -87,15 +87,15 @@ WHERE TerritoryID IN (1, 2, 3)
   
  此外，下列規則可套用至 `DataRow.["columnName"]` Null 指派的執行個體：  
   
-1.  預設值*預設*值是`DbNull.Value`所有除了強型別 null 資料行適當的強型別 null 值。  
+1. 預設值*預設*值是`DbNull.Value`所有除了強型別 null 資料行適當的強型別 null 值。  
   
-2.  在序列化為 XML 檔案期間永遠不會寫出 Null 值 (如同在 xsi:nil 中)。  
+2. 在序列化為 XML 檔案期間永遠不會寫出 Null 值 (如同在 xsi:nil 中)。  
   
-3.  在序列化為 XML 時，永遠會寫出所有非 Null 值 (包括預設值)。 這與 XSD/XML 語意不同，在 XSD/XML 語意中 Null 值 (xsi:nil) 是明確的，而預設值是隱含的 (如果不存在於 XML 中，則驗證剖析器可以從相關聯的 XSD 結構描述中取得它)。 `DataTable` 的情況則相反：Null 值是隱含的，而預設值則是明確的。  
+3. 在序列化為 XML 時，永遠會寫出所有非 Null 值 (包括預設值)。 這與 XSD/XML 語意不同，在 XSD/XML 語意中 Null 值 (xsi:nil) 是明確的，而預設值是隱含的 (如果不存在於 XML 中，則驗證剖析器可以從相關聯的 XSD 結構描述中取得它)。 `DataTable` 的情況則相反：Null 值是隱含的，而預設值則是明確的。  
   
-4.  針對從 XML 輸入讀取之資料列的所有遺漏資料行值都會指派 NULL。 使用 <xref:System.Data.DataTable.NewRow%2A> 或類似方法建立的資料列會指派為 DataColumn 的預設值。  
+4. 針對從 XML 輸入讀取之資料列的所有遺漏資料行值都會指派 NULL。 使用 <xref:System.Data.DataTable.NewRow%2A> 或類似方法建立的資料列會指派為 DataColumn 的預設值。  
   
-5.  <xref:System.Data.DataRow.IsNull%2A> 方法會針對 `true` 和 `DbNull.Value` 傳回 `INullable.Null`。  
+5. <xref:System.Data.DataRow.IsNull%2A> 方法會針對 `true` 和 `DbNull.Value` 傳回 `INullable.Null`。  
   
 ## <a name="assigning-null-values"></a>指派 Null 值  
  任何 <xref:System.Data.SqlTypes> 執行個體的預設值都為 Null。  

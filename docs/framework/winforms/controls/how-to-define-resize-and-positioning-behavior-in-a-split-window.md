@@ -9,12 +9,12 @@ helpviewer_keywords:
 - splitter windows [Windows Forms], resizing
 - SplitContainer control [Windows Forms], resizing
 ms.assetid: 9bf73f36-ed2d-4a02-b15a-0770eff4fdfa
-ms.openlocfilehash: 4ed1d2a5230502bc598906da0db5164396986e66
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8cdcfdfaa135a92ed6a6e96d4a72de2c97f2493d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59217064"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328669"
 ---
 # <a name="how-to-define-resize-and-positioning-behavior-in-a-split-window"></a>HOW TO：定義分割視窗的調整大小和位置行為
 個面板<xref:System.Windows.Forms.SplitContainer>控制項讓他們也正在調整大小，並由使用者操作。 不過，可能會當您將想要以程式設計方式控制分隔器，其中的位置，而哪種程度移動。  
@@ -31,7 +31,7 @@ ms.locfileid: "59217064"
   
 ### <a name="to-define-splitcontainer-resize-behavior"></a>若要定義 SplitContainer 調整大小行為  
   
-1.  在程序，設定<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>屬性至所需的大小，以便達成 '貼齊' 起的分隔器行為。  
+1. 在程序，設定<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A>屬性至所需的大小，以便達成 '貼齊' 起的分隔器行為。  
   
      在下列的程式碼範例中，而表單內<xref:System.Windows.Forms.Form.Load>事件，在分隔器<xref:System.Windows.Forms.SplitContainer>控制項跳 10 個像素拖曳時設定。  
   

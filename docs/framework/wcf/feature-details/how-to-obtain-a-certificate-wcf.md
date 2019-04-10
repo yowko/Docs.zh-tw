@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], obtaining
 ms.assetid: d53762fd-15ea-42dc-b0ea-6a6597aa23f7
-ms.openlocfilehash: 03ee861f7eba8b2ecee6b4697c5b475eacf78c89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 21e9e0609ed63c4398f2df7ba718f8af17464b0a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59093900"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332478"
 ---
 # <a name="how-to-obtain-a-certificate-wcf"></a>HOW TO：取得憑證 (WCF)
 若要使用任何 Windows Communication Foundation (WCF) 的功能，使用 X.509 憑證，您必須先取得憑證。  
   
 ### <a name="to-obtain-an-x509-certificate"></a>取得 X.509 憑證  
   
-1.  選擇下列其中一項：  
+1. 選擇下列其中一項：  
   
     -   向憑證授權單位 (例如 VeriSign, Inc) 購買憑證。  
   

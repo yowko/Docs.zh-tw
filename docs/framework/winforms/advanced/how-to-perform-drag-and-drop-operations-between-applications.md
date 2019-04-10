@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - drag and drop [Windows Forms], between applications
 ms.assetid: fa347436-2b12-4dd6-8507-59d7241f6a06
-ms.openlocfilehash: f7fecf2f90c56e5ac10ea5929f1c23b25bf181bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9aac3a0efd6359c25a6972f0e0b52dd489ec31db
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59221752"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327525"
 ---
 # <a name="how-to-perform-drag-and-drop-operations-between-applications"></a>HOW TO：在應用程式之間執行拖放作業
 在應用程式之間執行拖放作業與在應用程式之內啟用這個動作並無不同，只要涉及的兩個應用程式根據 <xref:System.Windows.Forms.DragEventArgs.AllowedEffect%2A> 和 <xref:System.Windows.Forms.DragEventArgs.Effect%2A> 屬性之間建立的「合約」表現即可。  
@@ -18,21 +18,21 @@ ms.locfileid: "59221752"
   
 ### <a name="to-perform-a-drag-and-drop-procedure-between-applications"></a>執行應用程式之間的拖放程序  
   
-1.  新建 Windows Forms 應用程式  
+1. 新建 Windows Forms 應用程式  
   
-2.  新增 <xref:System.Windows.Forms.TextBox> 控制項至表單。  
+2. 新增 <xref:System.Windows.Forms.TextBox> 控制項至表單。  
   
-3.  設定 <xref:System.Windows.Forms.TextBox> 控制項以接收已卸除的資料。  
+3. 設定 <xref:System.Windows.Forms.TextBox> 控制項以接收已卸除的資料。  
   
      如需詳細資訊，請參閱[逐步解說：在 Windows Form 中執行拖放作業](walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md)。  
   
-4.  執行 Windows 架構應用程式，並與此同時執行 WordPad。  
+4. 執行 Windows 架構應用程式，並與此同時執行 WordPad。  
   
      WordPad 是由允許拖放作業之 Windows 所安裝的文字編輯器。 它是藉由按下存取**開始**按鈕、 選取**執行**，然後輸入`WordPad`的文字方塊**執行** 對話方塊中，然後按一下**確定**。  
   
-5.  一旦開啟 WordPad，請於其中輸入文字的字串。  
+5. 一旦開啟 WordPad，請於其中輸入文字的字串。  
   
-6.  使用滑鼠、選取文字，然後再將選取的文字拖曳到 Windows 架構應用程式中的 <xref:System.Windows.Forms.TextBox> 控制項。  
+6. 使用滑鼠、選取文字，然後再將選取的文字拖曳到 Windows 架構應用程式中的 <xref:System.Windows.Forms.TextBox> 控制項。  
   
      觀察當以滑鼠移過 <xref:System.Windows.Forms.TextBox> 控制項 (然後因此引發 <xref:System.Windows.Forms.Control.DragEnter> 事件)，游標會變更，且您可以卸除選取的文字 <xref:System.Windows.Forms.TextBox> 至控制項。  
   

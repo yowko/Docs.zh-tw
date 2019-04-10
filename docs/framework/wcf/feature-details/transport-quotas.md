@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 44bda0838689fcf8096017060be970f2291a86e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59174625"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299302"
 ---
 # <a name="transport-quotas"></a>傳輸配額
 傳輸配額是用來判斷連線何時過度使用資源的原則機制。 配額是硬性限制，一旦超出配額值，就會無法使用其他資源。 傳輸配額能夠防範惡意或無意間發生的阻絕服務攻擊。  
@@ -100,9 +100,9 @@ ms.locfileid: "59174625"
 |`ReceiveTimeout`|X|X|X|  
 |`SendTimeout`|X|X|X|  
   
-1.  `MaxBufferSize` 傳輸配額只適用於 `BasicHttp` 繫結。 `WSHttp` 繫結適用於不支援資料流傳輸模式的情況中。  
+1. `MaxBufferSize` 傳輸配額只適用於 `BasicHttp` 繫結。 `WSHttp` 繫結適用於不支援資料流傳輸模式的情況中。  
   
-2.  傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。  
+2. 傳輸配額 `MaxPendingConnections` 和 `MaxOutboundConnectionsPerEndpoint` 會結合為一個名為 `MaxConnections` 的傳輸配額。  
   
 ### <a name="controlling-transport-quotas-from-configuration"></a>從組態控制傳輸配額  
  應用程式組態可以像直接存取繫結上的屬性一樣，設定相同的傳輸配額。 在組態檔中，傳輸配額的名稱一律以小寫字母為開頭。 例如，繫結上的 `CloseTimeout` 屬性會對應至組態中的 `closeTimeout` 設定，而繫結上的 `MaxConnections` 屬性則會對應至組態中的 `maxConnections` 設定。  

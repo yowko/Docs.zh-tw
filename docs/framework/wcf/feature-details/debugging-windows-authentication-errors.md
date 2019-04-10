@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 45f4185df1c55ff40fce3e33fe5e0e497fa54654
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228249"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299445"
 ---
 # <a name="debugging-windows-authentication-errors"></a>偵錯 Windows 驗證錯誤
 當使用 Windows 驗證做為安全性機制時，安全性支援提供者介面 (SSPI) 便會處理安全性程序。 當安全性錯誤發生在 SSPI 層時，它們會顯示由 Windows Communication Foundation (WCF)。 本主題會提供可協助診斷這些錯誤的架構與問題集。  
@@ -25,11 +25,11 @@ ms.locfileid: "59228249"
 ## <a name="debugging-methodology"></a>偵錯方法  
  下面列出基本的方法：  
   
-1.  判斷您是否在使用 Windows 驗證。 如果您是使用其他任何配置，這個主題就不適用。  
+1. 判斷您是否在使用 Windows 驗證。 如果您是使用其他任何配置，這個主題就不適用。  
   
-2.  如果您不確定您使用 Windows 驗證，判斷您的 WCF 組態是否使用 Kerberos direct 或 Negotiate。  
+2. 如果您不確定您使用 Windows 驗證，判斷您的 WCF 組態是否使用 Kerberos direct 或 Negotiate。  
   
-3.  判斷出您的組態是使用 Kerberos 通訊協定或 NTLM 之後，您就能夠了解在正確環境中的錯誤訊息。  
+3. 判斷出您的組態是使用 Kerberos 通訊協定或 NTLM 之後，您就能夠了解在正確環境中的錯誤訊息。  
   
 ### <a name="availability-of-the-kerberos-protocol-and-ntlm"></a>Kerberos 通訊協定與 NTLM 的可用性  
  Kerberos SSP 需要網域控制站擔任 Kerberos 金鑰發佈中心 (KDC)。 唯有當用戶端與服務都使用網域識別時，才可以使用 Kerberos 通訊協定。 在其他帳戶組合中則是使用 NTLM，如下表摘要所示。  
@@ -81,15 +81,15 @@ ms.locfileid: "59228249"
   
  若要實作具有認證交涉的 Kerberos，請執行下列步驟：  
   
-1.  將 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 設定為 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 以實作委派。  
+1. 將 <xref:System.ServiceModel.Security.WindowsClientCredential.AllowedImpersonationLevel%2A> 設定為 <xref:System.Security.Principal.TokenImpersonationLevel.Delegation> 以實作委派。  
   
-2.  要求 SSPI 交涉：  
+2. 要求 SSPI 交涉：  
   
     1.  如果您是使用標準繫結，請將 `NegotiateServiceCredential` 屬性 (Property) 設定為 `true`。  
   
     2.  如果您是使用自訂繫結，請將 `AuthenticationMode` 項目的 `Security` 屬性 (Attribute) 設定為 `SspiNegotiated`。  
   
-3.  透過拒絕使用 NTLM 來要求 SSPI 交涉使用 Kerberos：  
+3. 透過拒絕使用 NTLM 來要求 SSPI 交涉使用 Kerberos：  
   
     1.  程式碼中使用下列陳述式執行這項操作： `ChannelFactory.Credentials.Windows.AllowNtlm = false`  
   

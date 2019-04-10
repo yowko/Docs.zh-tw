@@ -2,12 +2,12 @@
 title: 工作 3：建立工具箱與 PropertyGrid 窗格
 ms.date: 03/30/2017
 ms.assetid: 72c1546a-eed5-4f0f-a616-719a163414f4
-ms.openlocfilehash: a03a4204d6f112d8a94b48dd5a295dc4ff8354a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15e5b4ea08b6bc243484b6963c1c06f448bb985b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175041"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305999"
 ---
 # <a name="task-3-create-the-toolbox-and-propertygrid-panes"></a>工作 3：建立工具箱與 PropertyGrid 窗格
 在這個工作中，您將建立**工具箱**並**PropertyGrid**窗格並將其新增至重新裝載[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]。  
@@ -16,11 +16,11 @@ ms.locfileid: "59175041"
   
 ### <a name="to-create-the-toolbox-and-add-it-to-the-grid"></a>若要建立工具箱，並將它加入至方格  
   
-1.  開啟您依照所述的程序取得的 HostingApplication 專案[工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)。  
+1. 開啟您依照所述的程序取得的 HostingApplication 專案[工作 2:裝載工作流程設計工具](task-2-host-the-workflow-designer.md)。  
   
-2.  在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
+2. 在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
   
-3.  新增`GetToolboxControl`方法，以`MainWindow`建立的類別<xref:System.Activities.Presentation.Toolbox.ToolboxControl>，將新**工具箱**類別**工具箱**，並指派<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動類型轉換成該類別。  
+3. 新增`GetToolboxControl`方法，以`MainWindow`建立的類別<xref:System.Activities.Presentation.Toolbox.ToolboxControl>，將新**工具箱**類別**工具箱**，並指派<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動類型轉換成該類別。  
   
     ```csharp  
     private ToolboxControl GetToolboxControl()  
@@ -49,7 +49,7 @@ ms.locfileid: "59175041"
     }  
     ```  
   
-4.  新增私用`AddToolbox`方法，以`MainWindow`類別會將放**工具箱**左側的資料行在方格中。  
+4. 新增私用`AddToolbox`方法，以`MainWindow`類別會將放**工具箱**左側的資料行在方格中。  
   
     ```csharp  
     private void AddToolBox()  
@@ -60,7 +60,7 @@ ms.locfileid: "59175041"
     }  
     ```  
   
-5.  在 `AddToolBox` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。  
+5. 在 `AddToolBox` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。  
   
     ```csharp  
     public MainWindow()  
@@ -73,13 +73,13 @@ ms.locfileid: "59175041"
     }  
     ```  
   
-6.  按 F5 以建置及執行您的方案。 **工具箱**包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動應該會顯示。  
+6. 按 F5 以建置及執行您的方案。 **工具箱**包含<xref:System.Activities.Statements.Assign>和<xref:System.Activities.Statements.Sequence>活動應該會顯示。  
   
 ### <a name="to-create-the-propertygrid"></a>若要建立 PropertyGrid  
   
-1.  在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
+1. 在 **方案總管**窗格中，以滑鼠右鍵按一下 MainWindow.xaml 檔案，然後選取**檢視程式碼**。  
   
-2.  新增`AddPropertyInspector`方法，以`MainWindow`類別，以放置**PropertyGrid**中最右邊的資料行在方格窗格。  
+2. 新增`AddPropertyInspector`方法，以`MainWindow`類別，以放置**PropertyGrid**中最右邊的資料行在方格窗格。  
   
     ```csharp  
     private void AddPropertyInspector()  
@@ -89,7 +89,7 @@ ms.locfileid: "59175041"
     }  
     ```  
   
-3.  在 `AddPropertyInspector` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。  
+3. 在 `AddPropertyInspector` 類別建構函式中加入 `MainWindow()` 方法的呼叫，如下列程式碼所示。  
   
     ```csharp  
     public MainWindow()  
@@ -103,7 +103,7 @@ ms.locfileid: "59175041"
     }  
     ```  
   
-4.  按 F5 以建置及執行方案。 **工具箱**，工作流程設計畫布，並**PropertyGrid**窗格應會全部顯示，以及當您拖曳<xref:System.Activities.Statements.Assign>活動或<xref:System.Activities.Statements.Sequence>活動拖曳至設計畫布，屬性方格應該更新根據反白顯示的活動。  
+4. 按 F5 以建置及執行方案。 **工具箱**，工作流程設計畫布，並**PropertyGrid**窗格應會全部顯示，以及當您拖曳<xref:System.Activities.Statements.Assign>活動或<xref:System.Activities.Statements.Sequence>活動拖曳至設計畫布，屬性方格應該更新根據反白顯示的活動。  
   
 ## <a name="example"></a>範例  
  MainWindow.xaml.cs 檔案現在應該會包含下列程式碼。  

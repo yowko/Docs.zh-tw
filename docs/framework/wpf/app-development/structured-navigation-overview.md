@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 0544e3584e25e9f892a4df095a5c41f0f5352a17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59161508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320067"
 ---
 # <a name="structured-navigation-overview"></a>結構化巡覽概觀
 可由裝載的內容[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]，則<xref:System.Windows.Controls.Frame>，或<xref:System.Windows.Navigation.NavigationWindow>是可由組件識別的頁面所組成[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]和超連結巡覽至。 頁面的結構及其可被巡覽的方式，如超連結所定義，稱之為巡覽拓撲。 這種拓撲適合各種不同的應用程式類型，尤其是巡覽文件的應用程式。 針對這類應用程式，使用者可以從一頁巡覽到另一頁，頁面彼此間不需要了解。  
@@ -134,9 +134,9 @@ ms.locfileid: "59161508"
 ### <a name="returning-task-result-and-task-data-from-a-task-to-a-calling-page"></a>將工作的工作結果和工作資料傳回給呼叫端頁面  
  使用者用完呼叫的頁面時，如本例所示，按 [確定] 或 [取消] 按鈕，必須傳回呼叫的頁面。 因為呼叫端頁面使用了被呼叫頁面來收集使用者資料，所以呼叫端頁面需要兩種類型的資訊︰  
   
-1.  使用者是否取消了呼叫的頁面 (本例中為按下 [確定] 按鈕或 [取消] 按鈕)。 這可讓呼叫端頁面決定是否要處理呼叫端頁面收集的使用者資料。  
+1. 使用者是否取消了呼叫的頁面 (本例中為按下 [確定] 按鈕或 [取消] 按鈕)。 這可讓呼叫端頁面決定是否要處理呼叫端頁面收集的使用者資料。  
   
-2.  使用者提供的資料。  
+2. 使用者提供的資料。  
   
  要傳回資訊，請<xref:System.Windows.Navigation.PageFunction%601>實作<xref:System.Windows.Navigation.PageFunction%601.OnReturn%2A>方法。 下列程式碼示範如何呼叫它。  
   

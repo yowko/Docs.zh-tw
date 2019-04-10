@@ -2,12 +2,12 @@
 title: 永久性執行個體內容
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
-ms.openlocfilehash: 74b2d42900b032936734884ceb19472d70b56b43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160962"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59316930"
 ---
 # <a name="durable-instance-context"></a>永久性執行個體內容
 此範例示範如何自訂 Windows Communication Foundation (WCF) 執行階段，以啟用永久性執行個體內容。 它會使用 SQL Server 2005 做為備份存放區 (在此例中為 SQL Server 2005 Express)。 不過，也會提供存取自訂儲存機制的方法。  
@@ -23,9 +23,9 @@ ms.locfileid: "59160962"
   
  在前面的描述中，有兩個易辨的步驟可達到目標：  
   
-1.  變更在網路上傳送的訊息，以使用內容識別碼。  
+1. 變更在網路上傳送的訊息，以使用內容識別碼。  
   
-2.  變更服務本機行為，以實作自訂執行個體邏輯。  
+2. 變更服務本機行為，以實作自訂執行個體邏輯。  
   
  由於清單中的第一項會影響網路上的訊息，因此不應該將該項時做為自訂通道，並應該連結至通道層。 後一項只會影響服務本機行為，因此可藉由延伸數個服務擴充點來進行實作。 在接下來的章節中，將會討論這些延伸項目。  
   
@@ -442,11 +442,11 @@ Press ENTER to shut down client
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+2. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
 >  您必須執行 SQL Server 2005 或 SQL Express 2005，才能執行此範例。 如果正在執行 SQL Server 2005，則必須修改服務之連線字串的組態。 在多台電腦中執行時，只有伺服器電腦上需要 SQL Server。  

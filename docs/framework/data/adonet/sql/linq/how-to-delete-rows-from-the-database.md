@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 2144c99b-8055-4080-a5c6-1ea14335e2a3
-ms.openlocfilehash: 80340bcf25ec3299629af34f7fafe53877ad571c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 401d445e49e3712b8c59fa9bc9a2e53500a5db16
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213294"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331672"
 ---
 # <a name="how-to-delete-rows-from-the-database"></a>HOW TO：從資料庫刪除資料列
 您可以刪除資料列，在資料庫中的移除對應[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]從其資料表相關集合的物件。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會轉譯成適當的 SQL 變更`DELETE`命令。  
@@ -32,11 +32,11 @@ ms.locfileid: "59213294"
   
 ### <a name="to-delete-a-row-in-the-database"></a>若要從資料庫刪除資料列  
   
-1.  查詢資料庫，以找出要刪除的資料列。  
+1. 查詢資料庫，以找出要刪除的資料列。  
   
-2.  呼叫 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 方法。  
+2. 呼叫 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> 方法。  
   
-3.  將變更提交至資料庫。  
+3. 將變更提交至資料庫。  
   
 ## <a name="example"></a>範例  
  下列第一個程式碼範例會查詢資料庫中屬於訂單 #11000 的訂單明細、將這些訂單明細標示為刪除，然後將這些變更送出至資料庫。  

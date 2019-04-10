@@ -8,12 +8,12 @@ helpviewer_keywords:
 - signature confirmation
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
-ms.openlocfilehash: 78ad6a88d5c123272e1796f1a75e2bd226bfc8f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59176159"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315812"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>HOW TO：設定簽章確認
 *簽章確認*是訊息啟動器，以確保收到的回覆已產生來回應寄件者的原始訊息的機制。 簽章確認是定義在 WS-Security 1.1 規格中。 如果端點支援 WS-Security 1.0，您就無法使用簽章確認。  
@@ -22,29 +22,29 @@ ms.locfileid: "59176159"
   
 ### <a name="to-enable-signature-confirmation-in-code"></a>若要在程式碼中啟用簽章確認  
   
-1.  建立 <xref:System.ServiceModel.Channels.BindingElementCollection> 類別的執行個體。  
+1. 建立 <xref:System.ServiceModel.Channels.BindingElementCollection> 類別的執行個體。  
   
-2.  建立的執行個體<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>類別。  
+2. 建立的執行個體<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>類別。  
   
-3.  將 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> 設定為 `true`。  
+3. 將 <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement.RequireSignatureConfirmation%2A> 設定為 `true`。  
   
-4.  將安全性項目新增至繫結集合中。  
+4. 將安全性項目新增至繫結集合中。  
   
-5.  建立自訂繫結，如中所指定[How to:建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
+5. 建立自訂繫結，如中所指定[How to:建立自訂繫結使用 SecurityBindingElement](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)。  
   
 ### <a name="to-enable-signature-confirmation-in-configuration"></a>若要在組態中啟用簽章確認  
   
-1.  將 `<customBinding>` 項目新增至組態檔的 `<bindings>` 區段中。  
+1. 將 `<customBinding>` 項目新增至組態檔的 `<bindings>` 區段中。  
   
-2.  新增 `<binding>` 項目，並將名稱屬性設為適當值。  
+2. 新增 `<binding>` 項目，並將名稱屬性設為適當值。  
   
-3.  新增適當的編碼項目。 下列範例會新增 `<TextMessageEncoding>` 項目。  
+3. 新增適當的編碼項目。 下列範例會新增 `<TextMessageEncoding>` 項目。  
   
-4.  新增 `<security>` 子項目並將 `requireSignatureConfirmation` 屬性設定為 `true`。  
+4. 新增 `<security>` 子項目並將 `requireSignatureConfirmation` 屬性設定為 `true`。  
   
-5.  選擇性。 若要啟用簽章確認，啟動程序期間，新增[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子項目和組`equireSignatureConfirmation`屬性設定為`true`。  
+5. 選擇性。 若要啟用簽章確認，啟動程序期間，新增[ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子項目和組`equireSignatureConfirmation`屬性設定為`true`。  
   
-6.  新增適當的傳輸項目。 下列範例會將[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
+6. 新增適當的傳輸項目。 下列範例會將[ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   
     ```xml  
     <bindings>  

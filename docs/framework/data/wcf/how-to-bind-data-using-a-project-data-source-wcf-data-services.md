@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
-ms.openlocfilehash: 465585d93d7bb20208720dc360b2cf8e6bb5f0e4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f02c551c4382c9db03be2f4a0adbb9061fd4fe65
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540750"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332504"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>HOW TO：使用專案資料來源 (WCF Data Services) 的資料繫結
 
@@ -23,11 +23,11 @@ ms.locfileid: "54540750"
 
 ## <a name="use-a-project-data-source-in-a-wpf-window"></a>使用 WPF 視窗中的專案資料來源
 
-1.  在 Visual Studio 中，在 WPF 專案中，加入 Northwind 資料服務的參考。 如需詳細資訊，請參閱[＜How to：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
+1. 在 Visual Studio 中，在 WPF 專案中，加入 Northwind 資料服務的參考。 如需詳細資訊，請參閱[如何：加入資料服務參考](../../../../docs/framework/data/wcf/how-to-add-a-data-service-reference-wcf-data-services.md)。
 
-2.  在 [**資料來源**] 視窗中，展開`Customers`中的節點**NorthwindEntities**專案資料來源。
+2. 在 [**資料來源**] 視窗中，展開`Customers`中的節點**NorthwindEntities**專案資料來源。
 
-3.  按一下  **CustomerID**項目中，選取**ComboBox**從清單中，並將拖曳**CustomerID**項目從**客戶**節點設計工具。
+3. 按一下  **CustomerID**項目中，選取**ComboBox**從清單中，並將拖曳**CustomerID**項目從**客戶**節點設計工具。
 
      這會在視窗的 XAML 檔案中，建立下列物件項目：
 
@@ -37,7 +37,7 @@ ms.locfileid: "54540750"
 
     -   <xref:System.Windows.Controls.Label>。
 
-4.  拖曳**訂單**加入設計工具中的導覽屬性。
+4. 拖曳**訂單**加入設計工具中的導覽屬性。
 
      這會在視窗的 XAML 檔案中，建立下列其他物件項目：
 
@@ -45,18 +45,18 @@ ms.locfileid: "54540750"
 
     -   資料繫結 <xref:System.Windows.Controls.DataGrid> 控制項，名為 `ordersDataGrid`。
 
-5.  （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
+5. （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
 
-6.  開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：
+6. 開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsingWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersusingwpf)]
 
-7.  在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。
+7. 在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorderswpf2.xaml.cs#customersordersdefinitionwpf)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinitionWpf](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorderswpf2.xaml.vb#customersordersdefinitionwpf)]
 
-8.  在設計工具中選取視窗。
+8. 在設計工具中選取視窗。
 
     > [!NOTE]
     > 請確定您選取的是視窗本身，而不是選擇視窗的內容。 如果選取的視窗，則**名稱**頂端附近的文字方塊**屬性**視窗應該包含視窗的名稱。
@@ -76,9 +76,9 @@ ms.locfileid: "54540750"
 
 ## <a name="use-a-project-data-source-in-a-windows-form"></a>使用 Windows 表單中的專案資料來源
 
-1.  在 [**資料來源**] 視窗中，展開**客戶**節點中的**NorthwindEntities**專案資料來源。
+1. 在 [**資料來源**] 視窗中，展開**客戶**節點中的**NorthwindEntities**專案資料來源。
 
-2.  按一下  **CustomerID**項目中，選取**ComboBox**從清單中，並將拖曳**CustomerID**項目從**客戶**節點設計工具。
+2. 按一下  **CustomerID**項目中，選取**ComboBox**從清單中，並將拖曳**CustomerID**項目從**客戶**節點設計工具。
 
      這會在表單上建立下列控制項：
 
@@ -90,23 +90,23 @@ ms.locfileid: "54540750"
 
     -   <xref:System.Windows.Forms.Label>。
 
-3.  拖曳**訂單**導覽屬性到表單。
+3. 拖曳**訂單**導覽屬性到表單。
 
-4.  這會建立 `ordersBindingSource` 控制項，且控制項的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設為 `customersBindingSource` 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性設為 `Customers`。 表單上也會建立 `ordersDataGridView` 資料繫結控制項，並伴隨著標示適當的標籤控制項。
+4. 這會建立 `ordersBindingSource` 控制項，且控制項的 <xref:System.Windows.Forms.BindingSource.DataSource%2A> 屬性設為 `customersBindingSource` 和 <xref:System.Windows.Forms.BindingSource.DataMember%2A> 屬性設為 `Customers`。 表單上也會建立 `ordersDataGridView` 資料繫結控制項，並伴隨著標示適當的標籤控制項。
 
-5.  （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
+5. （選擇性）拖曳其他項目從**客戶**加入設計工具中的節點。
 
-6.  開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：
+6. 開啟表單的字碼頁並加入下列 `using` 陳述式 (在 Visual Basic 中為 `Imports`)：
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersusing)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersUsing](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersusing)]
 
-7.  在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。
+7. 在定義表單的部分類別中，加入下列可建立 <xref:System.Data.Objects.ObjectContext> 執行個體並定義 `customerID` 常數的程式碼。
 
      [!code-csharp[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/customerorders.cs#customersordersdefinition)]
      [!code-vb[Astoria Northwind Client#CustomersOrdersDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/customerorders.vb#customersordersdefinition)]
 
-8.  在表單設計工具中，按兩下表單。
+8. 在表單設計工具中，按兩下表單。
 
      這樣會開啟表單的字碼頁，並且建立用於處理表單之 `Load` 事件的方法。
 
@@ -119,5 +119,5 @@ ms.locfileid: "54540750"
 
 ## <a name="see-also"></a>另請參閱
 
-- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
-- [如何：將資料繫結至 Windows Presentation Foundation 項目](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)
+- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [HOW TO：將資料繫結至 Windows Presentation Foundation 項目](../../../../docs/framework/data/wcf/bind-data-to-wpf-elements-wcf-data-services.md)

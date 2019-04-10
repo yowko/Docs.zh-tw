@@ -10,21 +10,21 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: 5682b2f0183cbeb8bae377423bb76caa0fbaf7cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59223624"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324197"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>HOW TO：建立繪製的圖形物件
 您可以繪製線條與圖形之前，呈現文字，或顯示和管理映像[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]，您需要建立<xref:System.Drawing.Graphics>物件。 <xref:System.Drawing.Graphics>物件代表[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]繪圖介面，而是用來建立圖形影像物件。  
   
  使用圖形有兩個步驟：  
   
-1.  建立<xref:System.Drawing.Graphics>物件。  
+1. 建立<xref:System.Drawing.Graphics>物件。  
   
-2.  使用<xref:System.Drawing.Graphics>物件來繪製線條和形狀、 呈現文字，或顯示和操作的映像。  
+2. 使用<xref:System.Drawing.Graphics>物件來繪製線條和形狀、 呈現文字，或顯示和操作的映像。  
   
 ## <a name="creating-a-graphics-object"></a>建立圖形物件  
  圖形物件可由各種不同的方式。  
@@ -48,11 +48,11 @@ ms.locfileid: "59223624"
   
 #### <a name="to-obtain-a-reference-to-a-graphics-object-from-the-painteventargs-in-the-paint-event"></a>若要取得在繪製事件 PaintEventArgs 圖形物件的參考  
   
-1.  宣告<xref:System.Drawing.Graphics>物件。  
+1. 宣告<xref:System.Drawing.Graphics>物件。  
   
-2.  指派的變數來參考<xref:System.Drawing.Graphics>物件做為一部分傳遞<xref:System.Windows.Forms.PaintEventArgs>。  
+2. 指派的變數來參考<xref:System.Drawing.Graphics>物件做為一部分傳遞<xref:System.Windows.Forms.PaintEventArgs>。  
   
-3.  插入程式碼以繪製的表單或控制項。  
+3. 插入程式碼以繪製的表單或控制項。  
   
      下列範例示範如何參考<xref:System.Drawing.Graphics>物件從<xref:System.Windows.Forms.PaintEventArgs>在<xref:System.Windows.Forms.Control.Paint>事件：  
   

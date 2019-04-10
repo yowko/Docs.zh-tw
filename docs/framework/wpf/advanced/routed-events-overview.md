@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a8ebb0259c1b5f73a2e0329cd1767b0431ba63a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59171154"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330439"
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
 本主題說明 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 中路由事件的概念。 本主題會定義路由事件的術語、說明如何透過元素的樹狀結構路由傳送路由事件、摘要說明如何處理路由事件，以及介紹如何建立您自己的自訂路由事件。
@@ -204,17 +204,17 @@ ms.locfileid: "59171154"
   
  事件處理的順序如下：  
   
-1.  `PreviewMouseDown` （通道） 上的根項目。  
+1. `PreviewMouseDown` （通道） 上的根項目。  
   
-2.  `PreviewMouseDown` （通道） 在中繼元素 #1。  
+2. `PreviewMouseDown` （通道） 在中繼元素 #1。  
   
-3.  `PreviewMouseDown` （通道） 上來源元素 #2。  
+3. `PreviewMouseDown` （通道） 上來源元素 #2。  
   
-4.  `MouseDown` （事件反昇） 在來源元素 #2。  
+4. `MouseDown` （事件反昇） 在來源元素 #2。  
   
-5.  `MouseDown` （事件反昇） 在中繼元素 #1。  
+5. `MouseDown` （事件反昇） 在中繼元素 #1。  
   
-6.  `MouseDown` （事件反昇） 根項目上。  
+6. `MouseDown` （事件反昇） 根項目上。  
   
  路由事件處理常式委派提供對兩個物件的參考︰引發事件的物件，以及已叫用處理常式的物件。 已叫用處理常式的物件是 `sender` 參數所報告的物件。 第一次引發事件的物件由報告<xref:System.Windows.RoutedEventArgs.Source%2A>事件資料中的屬性。 路由的事件可以仍會引發並處理相同的物件，在此情況下`sender`和<xref:System.Windows.RoutedEventArgs.Source%2A>都相同 （這是步驟 3 和 4 在事件處理範例清單的情況）。  
   

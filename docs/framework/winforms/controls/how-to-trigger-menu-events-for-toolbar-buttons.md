@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], coding button click events
 - toolbars [Windows Forms], click event handlers
 ms.assetid: 98374f70-993d-4ca4-89fb-48fea6ce5b45
-ms.openlocfilehash: 5256185104f7d22514eac2db93856d7c58f51fb6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0f5afde1cc0be772baff373c84c82f81df284b9b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228343"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303982"
 ---
 # <a name="how-to-trigger-menu-events-for-toolbar-buttons"></a>HOW TO：觸發工具列按鈕的功能表事件
 > [!NOTE]
@@ -30,7 +30,7 @@ ms.locfileid: "59228343"
   
 ### <a name="to-handle-the-click-event-on-a-toolbar"></a>處理工具列上的 Click 事件  
   
-1.  在程序中，新增工具列按鈕以<xref:System.Windows.Forms.ToolBar>控制項。  
+1. 在程序中，新增工具列按鈕以<xref:System.Windows.Forms.ToolBar>控制項。  
   
     ```vb  
     Public Sub ToolBarConfig()  
@@ -70,7 +70,7 @@ ms.locfileid: "59228343"
        }  
     ```  
   
-2.  新增事件處理常式<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ButtonClick>事件。 使用案例切換陳述式和<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別，以判斷所按下工具列按鈕。 有鑑於此，會顯示適當的訊息方塊。  
+2. 新增事件處理常式<xref:System.Windows.Forms.ToolBar>控制項的<xref:System.Windows.Forms.ToolBar.ButtonClick>事件。 使用案例切換陳述式和<xref:System.Windows.Forms.ToolBarButtonClickEventArgs>類別，以判斷所按下工具列按鈕。 有鑑於此，會顯示適當的訊息方塊。  
   
     > [!NOTE]
     >  在此範例中，訊息方塊僅作為預留位置使用。 依需要新增要在按一下工具列按鈕時執行的其他程式碼。  

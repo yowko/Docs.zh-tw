@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36599
 ms.assetid: 17763dbe-f74f-4ccb-8086-cb7e45ec4d12
-ms.openlocfilehash: 344a813907483dcb0e9f531b54db68a88d77f3dc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a0b5633bb0efb3c67f73810552ef9a14ac3d0c70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842378"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331646"
 ---
 # <a name="range-variable-name-can-be-inferred-only-from-a-simple-or-qualified-name-with-no-arguments"></a>只能從不含引數的簡單或限定名稱來推斷範圍變數名稱
 LINQ 查詢中包含採用一或多個引數的程式設計項目。 編譯器無法推斷範圍變數，從該程式設計項目。  
@@ -21,7 +21,7 @@ LINQ 查詢中包含採用一或多個引數的程式設計項目。 編譯器�
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  提供明確的程式設計項目中，變數名稱，如下列程式碼所示：  
+1. 提供明確的程式設計項目中，變數名稱，如下列程式碼所示：  
   
 ```  
 Dim query = From var1 In collection1   

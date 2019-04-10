@@ -5,27 +5,27 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 82293d7f-471a-4549-8f19-0be890e7b074
-ms.openlocfilehash: a1b2627c8e9899a122f27dc652f8c91230fed0b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ecb8f7ef74f1f0625454eb2d6cebf9d282a5ece3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59225127"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327096"
 ---
 # <a name="how-to-specify-client-credential-values"></a>HOW TO：指定用戶端認證值
 使用 Windows Communication Foundation (WCF)，服務可以指定用戶端驗證服務的方式。 例如，服務可以規定用戶端必須出示憑證交付驗證。  
   
 ### <a name="to-determine-the-client-credential-type"></a>判斷用戶端認證類型  
   
-1.  從服務的中繼資料端點擷取中繼資料。 中繼資料通常包含兩個檔案：以您所選程式語言 (預設為 Visual C#) 撰寫的用戶端程式碼，還有 XML 組態檔。 擷取中繼資料的方法之一，是使用 Svcutil.exe 工具傳回用戶端程式碼和用戶端組態。 如需詳細資訊，請參閱 <<c0> [ 擷取的中繼資料](../../../docs/framework/wcf/feature-details/retrieving-metadata.md)並[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
+1. 從服務的中繼資料端點擷取中繼資料。 中繼資料通常包含兩個檔案：以您所選程式語言 (預設為 Visual C#) 撰寫的用戶端程式碼，還有 XML 組態檔。 擷取中繼資料的方法之一，是使用 Svcutil.exe 工具傳回用戶端程式碼和用戶端組態。 如需詳細資訊，請參閱 <<c0> [ 擷取的中繼資料](../../../docs/framework/wcf/feature-details/retrieving-metadata.md)並[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)。  
   
-2.  開啟 XML 組態檔。 如果您是使用 Svcutil.exe 工具，檔案的預設名稱即為 Output.config。  
+2. 開啟 XML 組態檔。 如果您是使用 Svcutil.exe 工具，檔案的預設名稱即為 Output.config。  
   
-3.  尋找**\<安全性 >** 項目**模式**屬性 (**< 安全性模式 =** `MessageOrTransport` **>** 其中`MessageOrTransport`設為其中一種安全性模式。  
+3. 尋找**\<安全性 >** 項目**模式**屬性 (**< 安全性模式 =** `MessageOrTransport` **>** 其中`MessageOrTransport`設為其中一種安全性模式。  
   
-4.  找出符合模式值的子項目。 例如，如果模式設定為**訊息**，尋找**\<訊息 >** 中所包含的項目**\<安全性 >** 項目。  
+4. 找出符合模式值的子項目。 例如，如果模式設定為**訊息**，尋找**\<訊息 >** 中所包含的項目**\<安全性 >** 項目。  
   
-5.  記下值指派給**clientCredentialType**屬性。 實際值取決於使用的模式是傳輸還是訊息。  
+5. 記下值指派給**clientCredentialType**屬性。 實際值取決於使用的模式是傳輸還是訊息。  
   
  下列 XML 程式碼所示為使用訊息安全性，且用戶端驗證時需要憑證的用戶端組態。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59225127"
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-code"></a>若要透過程式碼指定用戶端的用戶端認證值  
   
-1.  使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務產生程式碼和組態。  
+1. 使用[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)從服務產生程式碼和組態。  
   
-2.  建立 WCF 用戶端會使用產生的程式碼的執行個體。  
+2. 建立 WCF 用戶端會使用產生的程式碼的執行個體。  
   
-3.  在用戶端類別上，將 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 類別的 <xref:System.ServiceModel.ClientBase%601> 屬性設定為適當值。 這個範例會使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 類別的 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法，將屬性設定為 X.509 憑證。  
+3. 在用戶端類別上，將 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> 類別的 <xref:System.ServiceModel.ClientBase%601> 屬性設定為適當值。 這個範例會使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 類別的 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> 方法，將屬性設定為 X.509 憑證。  
   
      [!code-csharp[c_TcpService#4](../../../samples/snippets/csharp/VS_Snippets_CFX/c_tcpservice/cs/source.cs#4)]
      [!code-vb[c_TcpService#4](../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_tcpservice/vb/source.vb#4)]  
@@ -56,13 +56,13 @@ ms.locfileid: "59225127"
   
 #### <a name="to-specify-the-client-credential-value-on-the-client-in-configuration"></a>若要透過組態指定用戶端的用戶端認證值  
   
-1.  新增[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)項目[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目。  
+1. 新增[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)項目[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目。  
   
-2.  新增[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目。 請務必將必要的 `name` 屬性設定為適當值。  
+2. 新增[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目[\<行為 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目。 請務必將必要的 `name` 屬性設定為適當值。  
   
-3.  新增[ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)項目[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目。  
+3. 新增[ \<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-servicecredentials.md)項目[ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)項目。  
   
-4.  將下列屬性設為適當的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下列程式碼所示。 如需憑證的詳細資訊，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
+4. 將下列屬性設為適當的值：`storeLocation`、`storeName`、`x509FindType` 和 `findValue`，如下列程式碼所示。 如需憑證的詳細資訊，請參閱[使用憑證](../../../docs/framework/wcf/feature-details/working-with-certificates.md)。  
   
     ```xml  
     <behaviors>  
@@ -79,7 +79,7 @@ ms.locfileid: "59225127"
     </behaviors>  
     ```  
   
-5.  設定用戶端時，設定 `behaviorConfiguration` 項目的 `<endpoint>` 屬性來指定行為，如下列程式碼所示。 端點元素是子系[\<用戶端 >](../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目。 同時，將 `bindingConfiguration` 屬性設定為用戶端的繫結，以指定繫結組態的名稱。 如果您使用的是產生的組態檔，繫結名稱就會自動產生。 在這個範例中，名稱為 `"tcpBindingWithCredential"`。  
+5. 設定用戶端時，設定 `behaviorConfiguration` 項目的 `<endpoint>` 屬性來指定行為，如下列程式碼所示。 端點元素是子系[\<用戶端 >](../../../docs/framework/configure-apps/file-schema/wcf/client.md)項目。 同時，將 `bindingConfiguration` 屬性設定為用戶端的繫結，以指定繫結組態的名稱。 如果您使用的是產生的組態檔，繫結名稱就會自動產生。 在這個範例中，名稱為 `"tcpBindingWithCredential"`。  
   
     ```xml  
     <client>  

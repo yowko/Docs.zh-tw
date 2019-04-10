@@ -2,12 +2,12 @@
 title: 聯合範例
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
-ms.openlocfilehash: 5c71abc3308513be7b00d92254e92e814c3688dc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155203"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311457"
 ---
 # <a name="federation-sample"></a>聯合範例
 這個範例將示範聯合安全性。  
@@ -67,17 +67,17 @@ ms.locfileid: "59155203"
   
  在存取 `BuyBook` 作業時，事件的順序如下：  
   
-1.  用戶端使用 Windows 認證，向 HomeRealm STS 驗證。  
+1. 用戶端使用 Windows 認證，向 HomeRealm STS 驗證。  
   
-2.  HomeRealm STS 發行可用來向 BookStore STS 進行驗證的權杖。  
+2. HomeRealm STS 發行可用來向 BookStore STS 進行驗證的權杖。  
   
-3.  用戶端使用 HomeRealm STS 所發行的權杖，向 BookStore STS 驗證。  
+3. 用戶端使用 HomeRealm STS 所發行的權杖，向 BookStore STS 驗證。  
   
-4.  BookStore STS 發行可用來向 BookStore 服務進行驗證的權杖。  
+4. BookStore STS 發行可用來向 BookStore 服務進行驗證的權杖。  
   
-5.  用戶端使用 BookStore STS 所發行的權杖，向 BookStore 服務驗證。  
+5. 用戶端使用 BookStore STS 所發行的權杖，向 BookStore 服務驗證。  
   
-6.  用戶端會存取 `BuyBook` 作業。  
+6. 用戶端會存取 `BuyBook` 作業。  
   
  請參閱下列指示，以了解如何安裝和執行這個範例。  
   
@@ -86,18 +86,18 @@ ms.locfileid: "59155203"
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  開啟 SDK 命令視窗。 在範例的路徑中，執行 Setup.bat。 這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。  
+1. 開啟 SDK 命令視窗。 在範例的路徑中，執行 Setup.bat。 這會建立範例所需的虛擬目錄，並安裝具有適當權限的必要憑證。  
   
     > [!NOTE]
     >  Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上，您必須確定已安裝 IIS 6.0 管理相容性，因為安裝會使用 IIS 系統管理員指令碼。 在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上執行安裝指令碼時，需要系統管理員權限。  
   
-2.  在 Visual Studio 中開啟 FederationSample.sln，然後選取**建置方案**從**建置**功能表。 這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。 還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。  
+2. 在 Visual Studio 中開啟 FederationSample.sln，然後選取**建置方案**從**建置**功能表。 這會建置通用專案檔、Bookstore 服務、Bookstore STS、HomeRealm STS，然後將它們部署在 IIS 中。 還會建置 Bookstore 用戶端應用程式，並將可執行檔 BookStoreClient.exe 放置在 FederationSample\BookStoreClient\bin\Debug 資料夾中。  
   
-3.  按兩下 BookStoreClient.exe。 BookStoreClient 視窗隨即顯示。  
+3. 按兩下 BookStoreClient.exe。 BookStoreClient 視窗隨即顯示。  
   
-4.  您可以按一下 瀏覽書店中的書籍**瀏覽書籍**。  
+4. 您可以按一下 瀏覽書店中的書籍**瀏覽書籍**。  
   
-5.  若要購買特定書籍，請在選取清單中的活頁簿，然後按一下**購買書籍**。 應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
+5. 若要購買特定書籍，請在選取清單中的活頁簿，然後按一下**購買書籍**。 應用程式隨即啟動，然後會使用 Windows 驗證向 HomeRealm 安全性權杖服務進行驗證。  
   
      此範例已設定為允許使用者購買價值在 $15 (含) 以下的書籍。 嘗試購買價值超過 15 美元的書籍，會導致用戶端從「書店服務」(Book Store Service) 收到「拒絕存取」訊息。  
   
@@ -106,7 +106,7 @@ ms.locfileid: "59155203"
   
 #### <a name="to-clean-up"></a>若要清除  
   
-1.  執行 Cleanup.bat。 這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。  
+1. 執行 Cleanup.bat。 這會刪除安裝期間建立的虛擬目錄，也會移除安裝期間所安裝的憑證。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

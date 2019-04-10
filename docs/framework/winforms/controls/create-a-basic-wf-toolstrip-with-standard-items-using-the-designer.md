@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], adding items
 - ToolStrip control [Windows Forms], adding standard items
 ms.assetid: 028deb1a-acf8-4911-979a-ba8431cd9d82
-ms.openlocfilehash: 9f0224a9360d7ce31a85883902c9668b4a1158b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: df6fe22eef338732c14d6f1ff56f25e6d1aa8a2a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119284"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332166"
 ---
 # <a name="how-to-create-a-basic-windows-forms-toolstrip-with-standard-items-using-the-designer"></a>HOW TO：建立具有標準項目的使用設計工具的基本 Windows Form
 下列程序示範如何建立<xref:System.Windows.Forms.ToolStrip>並新增七個<xref:System.Windows.Forms.ToolStripButton>代表一般工作的控制項。  
@@ -22,11 +22,11 @@ ms.locfileid: "59119284"
   
 ### <a name="to-add-standard-items-in-the-designer"></a>若要加入至設計工具的標準項目  
   
-1.  建立<xref:System.Windows.Forms.ToolStrip>控制項。  
+1. 建立<xref:System.Windows.Forms.ToolStrip>控制項。  
   
-2.  中的右上角<xref:System.Windows.Forms.ToolStrip>，按一下 智慧工作箭號以顯示**ToolStrip 工作**窗格。  
+2. 中的右上角<xref:System.Windows.Forms.ToolStrip>，按一下 智慧工作箭號以顯示**ToolStrip 工作**窗格。  
   
-3.  在  **ToolStrip 工作**窗格中，選擇**插入標準項目**。  
+3. 在  **ToolStrip 工作**窗格中，選擇**插入標準項目**。  
   
 ## <a name="see-also"></a>另請參閱
 

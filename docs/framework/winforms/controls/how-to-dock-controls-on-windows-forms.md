@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Explorer-style applications [Windows Forms], creating
 - Windows Forms controls, filling client area
 ms.assetid: bc11f2e4-e90a-4830-b0e2-f43b6e2b8bec
-ms.openlocfilehash: 61ccad615eec81eb1aa77e6a99d48ef29ecb5be2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: d015dce7307bec092f6da1dc5ee31691a6baf1f0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231522"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317255"
 ---
 # <a name="how-to-dock-controls-on-windows-forms"></a>HOW TO：固定 Windows Forms 上的控制項
 您可以將控制項停駐在表單的邊緣，或讓它們填滿控制項的容器 （表單或容器控制項）。 比方說，Windows 檔案總管停駐於其<xref:System.Windows.Forms.TreeView>視窗的左側的控制項及其<xref:System.Windows.Forms.ListView>視窗右邊的控制項。 使用<xref:System.Windows.Forms.Control.Dock%2A>所有可見定義固定模式的 Windows Form 控制項的屬性。  
@@ -23,13 +23,13 @@ ms.locfileid: "59231522"
   
 ### <a name="to-dock-a-control"></a>若要停駐控制項  
   
-1.  選取您想要停駐的控制項。  
+1. 選取您想要停駐的控制項。  
   
-2.  在 [屬性] 視窗中，按一下右邊的箭號<xref:System.Windows.Forms.Control.Dock%2A>屬性。  
+2. 在 [屬性] 視窗中，按一下右邊的箭號<xref:System.Windows.Forms.Control.Dock%2A>屬性。  
   
      編輯器隨即出現，顯示一系列代表的邊緣和表單的中央的方塊。  
   
-3.  按一下按鈕，表示您想要的控制項停駐在表單的邊緣。 若要填滿控制項的表單或容器控制項的內容，請按一下 [中心] 方塊。 按一下  **（無）** 停用停駐。  
+3. 按一下按鈕，表示您想要的控制項停駐在表單的邊緣。 若要填滿控制項的表單或容器控制項的內容，請按一下 [中心] 方塊。 按一下  **（無）** 停用停駐。  
   
      控制會自動調整大小以填滿停駐的邊緣的邊界。  
   

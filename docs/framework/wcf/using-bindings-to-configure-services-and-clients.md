@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
-ms.openlocfilehash: 8080451d64f74629451c6ca66fb27d93c9f29ed8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209498"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323144"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>使用繫結來設定服務和用戶端
 繫結是指定連接端點所需要之通訊詳細資料的物件。 更明確的說，繫結包含藉由定義傳輸、網路格式 (訊息編碼) 的細節，用於建立用戶端或服務執行階段的組態資訊，以及用於個別端點或用戶端通道的通訊協定。 若要建立可運作的 Windows Communication Foundation (WCF) 服務，在服務中的每個端點都需要繫結。 本主題將說明什麼是繫結、如何定義繫結，以及如何為端點指定特定繫結。  
@@ -45,9 +45,9 @@ ms.locfileid: "59209498"
 ## <a name="using-bindings"></a>使用繫結  
  使用繫結牽涉到兩個基本步驟：  
   
-1.  選取或定義繫結。 最簡單的方法是選擇其中一個系統提供的繫結，並使用其預設值。 也可以選擇系統提供的繫結程序，並重設其屬性值以符合您的需求。 或者，您可以建立自訂繫結並依需要設定每個屬性。  
+1. 選取或定義繫結。 最簡單的方法是選擇其中一個系統提供的繫結，並使用其預設值。 也可以選擇系統提供的繫結程序，並重設其屬性值以符合您的需求。 或者，您可以建立自訂繫結並依需要設定每個屬性。  
   
-2.  請建立使用這個繫結的端點。  
+2. 請建立使用這個繫結的端點。  
   
 ## <a name="code-and-configuration"></a>程式碼和組態  
  您可以透過程式碼或組態來定義或設定繫結。 這兩種方法與所使用的繫結型別無關，例如，您是否使用系統提供的或 <xref:System.ServiceModel.Channels.CustomBinding> 繫結。 一般來說，使用程式碼可讓您在編譯時完全控制繫結的定義。 使用組態，相反地，可讓系統管理員或使用者的 WCF 服務或用戶端變更繫結的參數。 這種彈性通常是理想的因為沒有辦法預測特定機器需求和網路的 WCF 應用程式是部署到其中的狀況。 將繫結 (和位址) 資訊和程式碼分開可讓系統管理員變更繫結詳細資料，而不需要重新編譯或重新部署應用程式。 請注意，如果繫結是以程式碼定義的，它會覆寫組態檔中任何以組態為基礎所做的定義。 如需這些方法的範例，請參閱下列主題：  

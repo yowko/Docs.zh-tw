@@ -6,12 +6,12 @@ helpviewer_keywords:
 - documents [WPF], storage
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
-ms.openlocfilehash: 519d3aa218fca734a9159503b4107bdbcfc31652
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59215946"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295896"
 ---
 # <a name="document-serialization-and-storage"></a>文件序列化與儲存
 Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品質的文件。  增強的功能，可支援固定文件和非固定格式文件、 進階檢視控制項，結合功能強大的 2D 和 3D 圖形功能，可將新的層級的高品質和使用者經驗的.NET Framework 應用程式。  能夠彈性地管理記憶體中表示的文件是.NET Framework 的重要功能，並能夠有效率地儲存和載入文件從資料存放區是幾乎所有應用程式的需求。  將文件從記憶體內部表示轉換成外部資料存放區的程序，稱為序列化。  讀取資料存放區並重新建立原始記憶體內部執行個體的反向程序，則稱為還原序列化。  
@@ -65,11 +65,11 @@ Microsoft.NET Framework 會提供功能強大的環境來建立和顯示高品�
 ### <a name="creating-a-plug-in-serializer"></a>建立外掛程式序列化程式  
  外掛程式序列化程式和連結的序列化程式使用已公開的相同公用方法和事件，而且同樣都能設計成以同步或非同步方式運作。  若要建立外掛程式序列化程式，通常要遵循三個基本步驟：  
   
-1.  首先將序列化程式實作為連結的序列化程式並加以偵錯。  一開始就建立已編譯的序列化程式並將之直接連結到測試應用程式中，將可以完整存取中斷點和其他有助於進行測試的偵錯服務。  
+1. 首先將序列化程式實作為連結的序列化程式並加以偵錯。  一開始就建立已編譯的序列化程式並將之直接連結到測試應用程式中，將可以完整存取中斷點和其他有助於進行測試的偵錯服務。  
   
-2.  序列化程式經過完整測試之後，<xref:System.Windows.Documents.Serialization.ISerializerFactory>介面在新增至建立外掛程式。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>介面允許完整存取所有的.NET Framework 物件包括邏輯樹狀結構中，<xref:System.Windows.UIElement>物件， <xref:System.Windows.Documents.IDocumentPaginatorSource>，和<xref:System.Windows.Media.Visual>項目。  此外<xref:System.Windows.Documents.Serialization.ISerializerFactory>提供相同的同步和非同步方法和連結的序列化程式所使用的事件。  由於大型文件的輸出可能很費時，因此建議使用非同步作業，以維持與使用者的良好互動，並提供 [取消] 選項以防資料存放區發生問題。  
+2. 序列化程式經過完整測試之後，<xref:System.Windows.Documents.Serialization.ISerializerFactory>介面在新增至建立外掛程式。  <xref:System.Windows.Documents.Serialization.ISerializerFactory>介面允許完整存取所有的.NET Framework 物件包括邏輯樹狀結構中，<xref:System.Windows.UIElement>物件， <xref:System.Windows.Documents.IDocumentPaginatorSource>，和<xref:System.Windows.Media.Visual>項目。  此外<xref:System.Windows.Documents.Serialization.ISerializerFactory>提供相同的同步和非同步方法和連結的序列化程式所使用的事件。  由於大型文件的輸出可能很費時，因此建議使用非同步作業，以維持與使用者的良好互動，並提供 [取消] 選項以防資料存放區發生問題。  
   
-3.  建立外掛程式序列化程式之後，實作用於散發和安裝 (及解除安裝) 外掛程式的安裝指令碼 (請參閱上面的＜[安裝外掛程式序列化程式](#InstallingPluginSerializers)＞)。  
+3. 建立外掛程式序列化程式之後，實作用於散發和安裝 (及解除安裝) 外掛程式的安裝指令碼 (請參閱上面的＜[安裝外掛程式序列化程式](#InstallingPluginSerializers)＞)。  
   
 ## <a name="see-also"></a>另請參閱
 

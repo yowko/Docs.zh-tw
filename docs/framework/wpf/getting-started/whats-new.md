@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], what's new
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
-ms.openlocfilehash: 5e9194dc4dc8ef3246870dc1fd71fa53d3ad143f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325822"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF 4.5 版的新功能
 <a name="introduction"></a> 本主題包含全新和增強功能的詳細資訊[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]4.5 版。  
@@ -56,9 +56,9 @@ ms.locfileid: "59227479"
 <a name="VirtualizingPanel"></a>   
 ## <a name="new-features-for-the-virtualizingpanel"></a>VirtualizingPanel 的新功能  
   
-1.  您可以指定是否<xref:System.Windows.Controls.VirtualizingPanel>，這類<xref:System.Windows.Controls.VirtualizingStackPanel>，藉由顯示部分項目<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>附加屬性。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>設定為<xref:System.Windows.Controls.ScrollUnit.Item>，則<xref:System.Windows.Controls.VirtualizingPanel>只會顯示完全可見的項目。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>設定為<xref:System.Windows.Controls.ScrollUnit.Pixel>，則<xref:System.Windows.Controls.VirtualizingPanel>可顯示部分可見的項目。  
+1. 您可以指定是否<xref:System.Windows.Controls.VirtualizingPanel>，這類<xref:System.Windows.Controls.VirtualizingStackPanel>，藉由顯示部分項目<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>附加屬性。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>設定為<xref:System.Windows.Controls.ScrollUnit.Item>，則<xref:System.Windows.Controls.VirtualizingPanel>只會顯示完全可見的項目。 如果<xref:System.Windows.Controls.VirtualizingPanel.ScrollUnit%2A>設定為<xref:System.Windows.Controls.ScrollUnit.Pixel>，則<xref:System.Windows.Controls.VirtualizingPanel>可顯示部分可見的項目。  
   
-2.  您可以指定快取的大小，在檢視區前後時<xref:System.Windows.Controls.VirtualizingPanel>正在使用虛擬化<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A>附加屬性。  快取是不虛擬化項目之高於或低於檢視區的空間量。  使用快取以避免產生 UI 元素，因為它們捲動至檢視中可以改善效能。 填入快取的優先順序較低，讓應用程式在作業期間不會變成沒有回應。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType>屬性會決定所使用的度量單位<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>。  
+2. 您可以指定快取的大小，在檢視區前後時<xref:System.Windows.Controls.VirtualizingPanel>正在使用虛擬化<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A>附加屬性。  快取是不虛擬化項目之高於或低於檢視區的空間量。  使用快取以避免產生 UI 元素，因為它們捲動至檢視中可以改善效能。 填入快取的優先順序較低，讓應用程式在作業期間不會變成沒有回應。 <xref:System.Windows.Controls.VirtualizingPanel.CacheLengthUnit%2A?displayProperty=nameWithType>屬性會決定所使用的度量單位<xref:System.Windows.Controls.VirtualizingPanel.CacheLength%2A?displayProperty=nameWithType>。  
   
 <a name="static_properties"></a>   
 ## <a name="binding-to-static-properties"></a>繫結至靜態屬性  
@@ -86,11 +86,11 @@ ms.locfileid: "59227479"
 ## <a name="binding-to-types-that-implement-icustomtypeprovider"></a>繫結至實作 ICustomTypeProvider 的型別  
  WPF 支援資料繫結至物件，可實作<xref:System.Reflection.ICustomTypeProvider>，也稱為自訂型別。  您可以在下列情況下使用自訂型別。  
   
-1.  為<xref:System.Windows.PropertyPath>資料繫結中。 例如，<xref:System.Windows.Data.Binding.Path%2A>屬性<xref:System.Windows.Data.Binding>可以參考自訂類型的屬性。  
+1. 為<xref:System.Windows.PropertyPath>資料繫結中。 例如，<xref:System.Windows.Data.Binding.Path%2A>屬性<xref:System.Windows.Data.Binding>可以參考自訂類型的屬性。  
   
-2.  值為<xref:System.Windows.DataTemplate.DataType%2A>屬性。  
+2. 值為<xref:System.Windows.DataTemplate.DataType%2A>屬性。  
   
-3.  為決定自動產生的資料行中的型別<xref:System.Windows.Controls.DataGrid>。  
+3. 為決定自動產生的資料行中的型別<xref:System.Windows.Controls.DataGrid>。  
   
 <a name="binding_state"></a>   
 ## <a name="retrieving-data-binding-information-from-a-binding-expression"></a>從繫結運算式擷取資料繫結資訊  

@@ -2,12 +2,12 @@
 title: 高可用性、嚴重損壞修復的 SqlClient 支援
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 744b24f0a4826c52908141183875a8a7f8c22f2b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213788"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307588"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性、嚴重損壞修復的 SqlClient 支援
 本主題討論高可用性、嚴重損壞修復 (AlwaysOn 可用性群組) 的 SqlClient 支援 (在 [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] 中新增)。  AlwaysOn 可用性群組功能已新增至 SQL Server 2012。 如需 AlwaysOn 可用性群組的詳細資訊，請參閱 SQL Server 線上叢書 》。  
@@ -27,9 +27,9 @@ ms.locfileid: "59213788"
   
  您可以利用程式設計方式修改這些連接字串關鍵字：  
   
-1.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
+1. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.ApplicationIntent%2A>  
   
-2.  <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
+2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
 >  設定`MultiSubnetFailover`要`true`所以不需要[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]或更新版本。
@@ -59,9 +59,9 @@ ms.locfileid: "59213788"
   
  如果唯讀路由沒有作用，在下列情況下連接到次要複本位置會失敗：  
   
-1.  如果未將次要複本位置設定為接受連接。  
+1. 如果未將次要複本位置設定為接受連接。  
   
-2.  如果應用程式使用 `ApplicationIntent=ReadWrite` (討論如下)，且次要複本位置設定為唯讀存取。  
+2. 如果應用程式使用 `ApplicationIntent=ReadWrite` (討論如下)，且次要複本位置設定為唯讀存取。  
   
  <xref:System.Data.SqlClient.SqlDependency> 不支援在唯讀的次要複本上。  
   
@@ -86,11 +86,11 @@ ms.locfileid: "59213788"
 ## <a name="read-only-routing"></a>唯讀路由  
  唯讀路由功能可確保唯讀資料庫複本的可用性。 若要啟用唯讀路由：  
   
-1.  您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
+1. 您必須連接到 AlwaysOn 可用性群組的可用性群組接聽程式。  
   
-2.  `ApplicationIntent` 連接字串關鍵字必須設為 `ReadOnly`。  
+2. `ApplicationIntent` 連接字串關鍵字必須設為 `ReadOnly`。  
   
-3.  資料庫管理員必須設定可用性群組以啟用唯讀路由。  
+3. 資料庫管理員必須設定可用性群組以啟用唯讀路由。  
   
  使用唯讀路由的多個連接可能不會全數連接至同一個唯讀複本。 資料庫同步作業或伺服器路由組態中的變更可能會導致用戶端連接至不同的唯讀複本。 為確保所有唯讀要求能連接到同一個唯讀複本，請勿將可用性群組接聽程式傳送到 `Data Source` 連接字串關鍵字。 相反地，請指定唯讀執行個體的名稱。  
   

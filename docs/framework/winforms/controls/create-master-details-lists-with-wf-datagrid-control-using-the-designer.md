@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], master-details lists
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
-ms.openlocfilehash: 1d9e01ab1fbabeb7b20fb5d2449ca7bba5f1853a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125960"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332075"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms DataGrid 控制項建立主從式清單
 
@@ -27,26 +27,26 @@ ms.locfileid: "59125960"
   
 ### <a name="to-create-a-master-details-list-in-the-designer"></a>若要在設計工具中建立主版詳細資料清單  
   
-1.  新增兩個<xref:System.Windows.Forms.DataGrid>控制項加入表單。 如需詳細資訊，請參閱[如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 裡<xref:System.Windows.Forms.DataGrid>控制項不是處於**工具箱**預設。 如需詳細資訊，請參閱[如何：將項目加入至工具箱](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。  
+1. 新增兩個<xref:System.Windows.Forms.DataGrid>控制項加入表單。 如需詳細資訊，請參閱[如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)。 在 Visual Studio 2005 裡<xref:System.Windows.Forms.DataGrid>控制項不是處於**工具箱**預設。 如需詳細資訊，請參閱[如何：將項目加入至工具箱](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms165355(v=vs.100))。  
   
     > [!NOTE]
     >  下列步驟並不適用於 Visual Studio 2005，它會使用**Zdroje dat**設計階段資料繫結的視窗。 如需詳細資訊，請參閱 <<c0> [ 控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)和[How to:資料在 Windows Forms 應用程式中顯示相關](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))。  
   
-2.  將兩個或多個資料表，從**伺服器總管**至表單。  
+2. 將兩個或多個資料表，從**伺服器總管**至表單。  
   
-3.  從**資料**功能表上，選取**產生的資料集**。  
+3. 從**資料**功能表上，選取**產生的資料集**。  
   
-4.  設定使用 XML 設計工具的資料表之間的關聯性。 如需詳細資訊，請參閱 「 如何：建立 XML 結構描述與資料集中的一對多關聯性"MSDN 上。  
+4. 設定使用 XML 設計工具的資料表之間的關聯性。 如需詳細資訊，請參閱 「 如何：建立 XML 結構描述與資料集中的一對多關聯性"MSDN 上。  
   
-5.  儲存選取的關聯性**全部儲存**從**檔案**功能表。  
+5. 儲存選取的關聯性**全部儲存**從**檔案**功能表。  
   
-6.  設定<xref:System.Windows.Forms.DataGrid>控制您想要指定主版方格中，如下所示：  
+6. 設定<xref:System.Windows.Forms.DataGrid>控制您想要指定主版方格中，如下所示：  
   
     1.  選取 <xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。  
   
     2.  從下拉式清單中選取主要資料表中 （例如，「 客戶 」）<xref:System.Windows.Forms.DataGrid.DataMember%2A>屬性。  
   
-7.  設定<xref:System.Windows.Forms.DataGrid>控制您想要指定詳細資料方格中，如下所示：  
+7. 設定<xref:System.Windows.Forms.DataGrid>控制您想要指定詳細資料方格中，如下所示：  
   
     1.  選取 <xref:System.Data.DataSet>從下拉式清單中<xref:System.Windows.Forms.DataGrid.DataSource%2A>屬性。  
   

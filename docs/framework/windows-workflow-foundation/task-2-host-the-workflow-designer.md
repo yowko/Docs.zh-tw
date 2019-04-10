@@ -2,12 +2,12 @@
 title: 工作 2：裝載工作流程設計工具
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: 4129d53f73c590535dcbee576cea91e7ad3ff37f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59218702"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299263"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>工作 2：裝載工作流程設計工具
 本主題說明的程序裝載的執行個體[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]Windows Presentation Foundation (WPF) 應用程式中。  
@@ -16,19 +16,19 @@ ms.locfileid: "59218702"
   
 ### <a name="to-host-the-workflow-designer"></a>若要裝載工作流程設計工具  
   
-1.  開啟的 HostingApplication 專案中建立[工作 1:建立新的 Windows Presentation Foundation 應用程式](task-1-create-a-new-wpf-app.md)。  
+1. 開啟的 HostingApplication 專案中建立[工作 1:建立新的 Windows Presentation Foundation 應用程式](task-1-create-a-new-wpf-app.md)。  
   
-2.  將視窗調整至方便使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 的大小。 若要這樣做，請選取**MainWindow**在設計師中，按 F4 顯示**屬性**視窗中，然後在**配置**那里區段中，將**寬度**值為 600，**高度**350 的值。  
+2. 將視窗調整至方便使用 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] 的大小。 若要這樣做，請選取**MainWindow**在設計師中，按 F4 顯示**屬性**視窗中，然後在**配置**那里區段中，將**寬度**值為 600，**高度**350 的值。  
   
-3.  選取以設定資料格的名稱**格線**設計工具中的面板 (按一下 [] 內的方塊**MainWindow**) 和設定**名稱**頂端的屬性**屬性**為"grid1"視窗。  
+3. 選取以設定資料格的名稱**格線**設計工具中的面板 (按一下 [] 內的方塊**MainWindow**) 和設定**名稱**頂端的屬性**屬性**為"grid1"視窗。  
   
-4.  在 **屬性** 視窗中，按一下省略符號 (**...**) 旁`ColumnDefinitions`屬性可開啟**集合編輯器** 對話方塊。  
+4. 在 **屬性** 視窗中，按一下省略符號 (**...**) 旁`ColumnDefinitions`屬性可開啟**集合編輯器** 對話方塊。  
   
-5.  在 [**集合編輯器**] 對話方塊中，按一下**新增**按鈕三次，以插入版面配置中的三個資料行。 第一個資料行會包含**工具箱**，第二個資料行將裝載[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，以及第三個資料行用於屬性偵測器。  
+5. 在 [**集合編輯器**] 對話方塊中，按一下**新增**按鈕三次，以插入版面配置中的三個資料行。 第一個資料行會包含**工具箱**，第二個資料行將裝載[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]，以及第三個資料行用於屬性偵測器。  
   
-6.  設定`Width`屬性中間的資料行的值"4 *"。  
+6. 設定`Width`屬性中間的資料行的值"4 *"。  
   
-7.  按一下 [確定]  儲存變更。 以下的 XAML 已加入至您的 MainWindow.xaml 檔案：  
+7. 按一下 [確定]  儲存變更。 以下的 XAML 已加入至您的 MainWindow.xaml 檔案：  
   
     ```xml  
     <Grid Name="grid1">  
@@ -40,7 +40,7 @@ ms.locfileid: "59218702"
     </Grid>  
     ```  
   
-8.  在 **方案總管**，以滑鼠右鍵按一下 MainWindow.xaml，然後選取**檢視程式碼**。 遵循下列步驟修改程式碼：  
+8. 在 **方案總管**，以滑鼠右鍵按一下 MainWindow.xaml，然後選取**檢視程式碼**。 遵循下列步驟修改程式碼：  
   
     1.  加入下列命名空間：  
   

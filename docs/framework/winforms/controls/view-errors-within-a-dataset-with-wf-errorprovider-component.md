@@ -9,12 +9,12 @@ helpviewer_keywords:
 - error messages [Windows Forms], viewing in datasets
 - ErrorProvider component [Windows Forms], dataset errors
 ms.assetid: cbae023f-d651-4210-bdea-bcc5f037e321
-ms.openlocfilehash: 190b53a248a77f03dd5d8cb13cb59a439fa9960d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 15fbf4a3cebef1485f0c54ace36ab88f3d4289e7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59157621"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310443"
 ---
 # <a name="how-to-view-errors-within-a-dataset-with-the-windows-forms-errorprovider-component"></a>HOW TO：使用 Windows Forms ErrorProvider 元件檢視資料集錯誤
 您可以使用 Windows Form<xref:System.Windows.Forms.ErrorProvider>元件來檢視資料集或其他資料來源內的資料行錯誤。 針對<xref:System.Windows.Forms.ErrorProvider>元件，以在表單上顯示資料的錯誤不一定要直接控制項相關聯。 一旦它已繫結至資料來源，它可以顯示錯誤圖示旁邊繫結至相同的資料來源的任何控制項。  
@@ -24,7 +24,7 @@ ms.locfileid: "59157621"
   
 ### <a name="to-display-data-errors"></a>若要顯示資料錯誤  
   
-1.  將元件的繫結至資料表中的特定資料行。  
+1. 將元件的繫結至資料表中的特定資料行。  
   
     ```vb  
     ' Assumes existence of DataSet1, DataTable1  
@@ -40,7 +40,7 @@ ms.locfileid: "59157621"
     errorProvider1.DataMember = "Customers";  
     ```  
   
-2.  設定<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性到表單。  
+2. 設定<xref:System.Windows.Forms.ErrorProvider.ContainerControl%2A>屬性到表單。  
   
     ```vb  
     ErrorProvider1.ContainerControl = Me  
@@ -50,7 +50,7 @@ ms.locfileid: "59157621"
     errorProvider1.ContainerControl = this;  
     ```  
   
-3.  將目前記錄的位置，設定包含資料行發生錯誤的資料列。  
+3. 將目前記錄的位置，設定包含資料行發生錯誤的資料列。  
   
     ```vb  
     DataTable1.Rows(5).SetColumnError("Name", "Bad data in this row.")  

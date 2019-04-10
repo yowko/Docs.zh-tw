@@ -2,12 +2,12 @@
 title: 變數及引數追蹤
 ms.date: 03/30/2017
 ms.assetid: 8f3d9d30-d899-49aa-b7ce-a8d0d32c4ff0
-ms.openlocfilehash: ef2d6111d5c123ac6c684df09f03398340a5522c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7062e44a18cfd4b07cc63f4b490c08fbbfeeb8a3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231027"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300888"
 ---
 # <a name="variable-and-argument-tracking"></a>變數及引數追蹤
 追蹤工作流程的執行時，擷取資料通常很實用。 它可在存取追蹤記錄後期執行時，提供額外的內容。 在 [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] 中，您可以在使用追蹤的工作流程中的任何活動範圍內擷取任何可見的變數或引數。 追蹤設定檔讓擷取資料變得非常容易。  
@@ -40,11 +40,11 @@ ms.locfileid: "59231027"
 ## <a name="protecting-information-stored-within-variables-and-arguments"></a>保護變數和引數中所儲存的資訊  
  WF 執行階段預設會顯示所追蹤的變數或引數。 工作流程開發人員可以採取以下步驟，保護變數或引數不受存取：  
   
-1.  加密變數的值。  
+1. 加密變數的值。  
   
-2.  控制追蹤設定檔的撰寫，以防止擷取變數或引數。  
+2. 控制追蹤設定檔的撰寫，以防止擷取變數或引數。  
   
-3.  若為自訂追蹤參與者，請確定 WF 程式碼不會公開儲存在變數或引數中的機密資訊。  
+3. 若為自訂追蹤參與者，請確定 WF 程式碼不會公開儲存在變數或引數中的機密資訊。  
   
 ## <a name="see-also"></a>另請參閱
 

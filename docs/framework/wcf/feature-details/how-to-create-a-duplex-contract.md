@@ -7,45 +7,45 @@ dev_langs:
 helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
-ms.openlocfilehash: 002c94f2cb69e330e8d2796a9f93d977b10f53f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59078163"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59332127"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>HOW TO：建立雙面合約
 本主題說明的基本步驟可用來建立使用雙工 (雙向) 合約的方法。 雙工合約可供用戶端與伺服器彼此各自進行通訊，方便任何一方初始化對另一方的呼叫。 雙工合約是其中一個可用於 Windows Communication Foundation (WCF) 服務的三種訊息模式。 其他兩種訊息模式分別是單向和要求-回覆。 雙工合約是由用戶端和伺服器之間的兩個單向合約組成，而且不需要相互關聯方法呼叫。 當您的服務必須查詢用戶端以獲得更多資訊，或是明確地在用戶端上引發事件時，請使用這種合約。 如需建立雙工合約的用戶端應用程式的詳細資訊，請參閱[How to:使用雙工合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)。 如需實用範例，請參閱 <<c0> [ 雙工](../../../../docs/framework/wcf/samples/duplex.md)範例。  
   
 ### <a name="to-create-a-duplex-contract"></a>若要建立雙工合約  
   
-1.  建立可組成雙工合約伺服器端的介面。  
+1. 建立可組成雙工合約伺服器端的介面。  
   
-2.  將 <xref:System.ServiceModel.ServiceContractAttribute> 類別套用到介面。  
+2. 將 <xref:System.ServiceModel.ServiceContractAttribute> 類別套用到介面。  
   
      [!code-csharp[S_WS_DualHttp#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#3)]
      [!code-vb[S_WS_DualHttp#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#3)]  
   
-3.  在介面中宣告方法簽章。  
+3. 在介面中宣告方法簽章。  
   
-4.  將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用到每個必須是公用合約一部分的方法簽章上。  
+4. 將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用到每個必須是公用合約一部分的方法簽章上。  
   
-5.  建立可定義作業集合 (供服務在用戶端上加以叫用) 的回呼介面。  
+5. 建立可定義作業集合 (供服務在用戶端上加以叫用) 的回呼介面。  
   
      [!code-csharp[S_WS_DualHttp#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#4)]
      [!code-vb[S_WS_DualHttp#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#4)]  
   
-6.  在回呼介面中宣告方法簽章。  
+6. 在回呼介面中宣告方法簽章。  
   
-7.  將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用到每個必須是公用合約一部分的方法簽章上。  
+7. 將 <xref:System.ServiceModel.OperationContractAttribute> 類別套用到每個必須是公用合約一部分的方法簽章上。  
   
-8.  將主要介面中的 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> 屬性設為回呼介面的型別，以將兩個介面連接至雙工合約。  
+8. 將主要介面中的 <xref:System.ServiceModel.ServiceContractAttribute.CallbackContract%2A> 屬性設為回呼介面的型別，以將兩個介面連接至雙工合約。  
   
 ### <a name="to-call-methods-on-the-client"></a>若要在用戶端上呼叫方法  
   
-1.  在服務的主要合約實作中，宣告回呼介面的變數。  
+1. 在服務的主要合約實作中，宣告回呼介面的變數。  
   
-2.  將變數設為由 <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> 類別之 <xref:System.ServiceModel.OperationContext> 方法傳回的物件參考。  
+2. 將變數設為由 <xref:System.ServiceModel.OperationContext.GetCallbackChannel%2A> 類別之 <xref:System.ServiceModel.OperationContext> 方法傳回的物件參考。  
   
      [!code-csharp[S_WS_DualHttp#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#1)]
      [!code-vb[S_WS_DualHttp#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#1)]  
@@ -53,7 +53,7 @@ ms.locfileid: "59078163"
      [!code-csharp[S_WS_DualHttp#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ws_dualhttp/cs/service.cs#2)]
      [!code-vb[S_WS_DualHttp#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/s_ws_dualhttp/vb/service.vb#2)]  
   
-3.  呼叫回呼介面定義的方法。  
+3. 呼叫回呼介面定義的方法。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會示範雙工通訊。 服務合約包含可往前與往後的服務作業。 用戶端合約包含可報告自身位置的服務作業。  

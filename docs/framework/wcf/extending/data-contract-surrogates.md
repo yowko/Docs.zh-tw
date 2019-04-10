@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: 684ce075155d3da9bae3f7828e84d34399928875
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59158622"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315344"
 ---
 # <a name="data-contract-surrogates"></a>資料合約代理
 資料合約*surrogate*是建置在資料合約模型時的進階的功能。 這項功能是專為在使用者想要變更型別序列化、還原序列化或投射至中繼資料的方式時，用來自訂和替換型別所設計。 某些可能使用代理的情況包括：尚未指定型別的資料合約、欄位和屬性 (Property) 尚未以 <xref:System.Runtime.Serialization.DataMemberAttribute> 屬性 (Attribute) 標記，或是使用者希望動態建立結構描述變形時。  
@@ -84,7 +84,7 @@ ms.locfileid: "59158622"
  之前的範例會將 `InventorySurrogated` 型別的物件轉換回初始型別 `Inventory`。 在這個案例中，資料是從 `InventorySurrogated` 直接傳輸回 `Inventory` 中對應的欄位。 由於沒有資料管理，因此每個成員欄位都會包含與序列化之前相同的值。  
   
 ### <a name="getcustomdatatoexport-method"></a>GetCustomDataToExport 方法  
- 匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如：  
+ 匯出結構描述時，<xref:System.Runtime.Serialization.IDataContractSurrogate.GetCustomDataToExport%2A> 方法是選擇性的。 這個方法是用來將額外的資料或提示插入匯出的結構描述中。 額外的資料可在成員層級或型別層級插入。 例如:   
   
  [!code-csharp[C_IDataContractSurrogate#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#6)]  
   
@@ -141,15 +141,15 @@ ms.locfileid: "59158622"
   
 ##### <a name="to-implement-serialization-and-deserialization"></a>若要實作序列化和還原序列化  
   
-1.  為服務建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。 如需完整指示，請參閱 <<c0> [ 基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
+1. 為服務建立 <xref:System.ServiceModel.ServiceHost> 的執行個體。 如需完整指示，請參閱 <<c0> [ 基本 WCF 程式設計](../../../../docs/framework/wcf/basic-wcf-programming.md)。  
   
-2.  針對所指定服務主機的每一個 <xref:System.ServiceModel.Description.ServiceEndpoint>，尋找其 <xref:System.ServiceModel.Description.OperationDescription>。  
+2. 針對所指定服務主機的每一個 <xref:System.ServiceModel.Description.ServiceEndpoint>，尋找其 <xref:System.ServiceModel.Description.OperationDescription>。  
   
-3.  搜尋作業行為，判斷是否找到 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 的執行個體。  
+3. 搜尋作業行為，判斷是否找到 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 的執行個體。  
   
-4.  如果找到 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 請將其 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> 屬性設為代理的新執行個體。 如果未找到 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>，則建立新執行個體，並且將新行為的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> 成員設為代理的新執行個體。  
+4. 如果找到 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 請將其 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> 屬性設為代理的新執行個體。 如果未找到 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>，則建立新執行個體，並且將新行為的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractSurrogate%2A> 成員設為代理的新執行個體。  
   
-5.  最後，將這個新行為加入目前的作業行為中，如下列範例所示：  
+5. 最後，將這個新行為加入目前的作業行為中，如下列範例所示：  
   
      [!code-csharp[C_IDataContractSurrogate#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#8)]  
   
@@ -158,19 +158,19 @@ ms.locfileid: "59158622"
   
 ##### <a name="to-implement-a-surrogate-for-metadata-importation"></a>若要實作代理以匯入中繼資料  
   
-1.  使用 <xref:System.ServiceModel.Description.WsdlImporter> 類別匯入中繼資料。  
+1. 使用 <xref:System.ServiceModel.Description.WsdlImporter> 類別匯入中繼資料。  
   
-2.  使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法檢查是否已定義 <xref:System.Runtime.Serialization.XsdDataContractImporter>。  
+2. 使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法檢查是否已定義 <xref:System.Runtime.Serialization.XsdDataContractImporter>。  
   
-3.  如果 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法傳回 `false`，則建立新的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 並將其 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 屬性設為 <xref:System.Runtime.Serialization.ImportOptions> 類別的新執行個體。 否則使用 `out` 方法的 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 參數傳回的匯入工具。  
+3. 如果 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 方法傳回 `false`，則建立新的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 並將其 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> 屬性設為 <xref:System.Runtime.Serialization.ImportOptions> 類別的新執行個體。 否則使用 `out` 方法的 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 參數傳回的匯入工具。  
   
-4.  如果 <xref:System.Runtime.Serialization.XsdDataContractImporter> 未定義任何 <xref:System.Runtime.Serialization.ImportOptions>，則將屬性設為 <xref:System.Runtime.Serialization.ImportOptions> 類別的新執行個體。  
+4. 如果 <xref:System.Runtime.Serialization.XsdDataContractImporter> 未定義任何 <xref:System.Runtime.Serialization.ImportOptions>，則將屬性設為 <xref:System.Runtime.Serialization.ImportOptions> 類別的新執行個體。  
   
-5.  將 <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 之 <xref:System.Runtime.Serialization.ImportOptions> 的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設為代理的新執行個體。  
+5. 將 <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> 之 <xref:System.Runtime.Serialization.ImportOptions> 的 <xref:System.Runtime.Serialization.XsdDataContractImporter> 屬性設為代理的新執行個體。  
   
-6.  將 <xref:System.Runtime.Serialization.XsdDataContractImporter> 加入至 <xref:System.ServiceModel.Description.MetadataExporter.State%2A> (繼承自 <xref:System.ServiceModel.Description.WsdlImporter> 類別) 的 <xref:System.ServiceModel.Description.MetadataExporter> 屬性傳回的集合。  
+6. 將 <xref:System.Runtime.Serialization.XsdDataContractImporter> 加入至 <xref:System.ServiceModel.Description.MetadataExporter.State%2A> (繼承自 <xref:System.ServiceModel.Description.WsdlImporter> 類別) 的 <xref:System.ServiceModel.Description.MetadataExporter> 屬性傳回的集合。  
   
-7.  使用 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> 的 <xref:System.ServiceModel.Description.WsdlImporter> 方法匯入結構描述內的所有資料合約。 在進行最後的步驟時，程式碼會從呼叫至代理而載入的結構描述產生。  
+7. 使用 <xref:System.ServiceModel.Description.WsdlImporter.ImportAllContracts%2A> 的 <xref:System.ServiceModel.Description.WsdlImporter> 方法匯入結構描述內的所有資料合約。 在進行最後的步驟時，程式碼會從呼叫至代理而載入的結構描述產生。  
   
      [!code-csharp[C_IDataContractSurrogate#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#9)]  
   
@@ -179,15 +179,15 @@ ms.locfileid: "59158622"
   
 ##### <a name="to-use-a-surrogate-for-metadata-export"></a>若要使用代理進行中繼資料匯出  
   
-1.  建立新的 <xref:System.ServiceModel.Description.WsdlExporter>，或是使用傳遞至 `wsdlExporter` 方法的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 參數。  
+1. 建立新的 <xref:System.ServiceModel.Description.WsdlExporter>，或是使用傳遞至 `wsdlExporter` 方法的 <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> 參數。  
   
-2.  使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 函式檢查是否已定義 <xref:System.Runtime.Serialization.XsdDataContractExporter>。  
+2. 使用 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 函式檢查是否已定義 <xref:System.Runtime.Serialization.XsdDataContractExporter>。  
   
-3.  如果 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 傳回 `false`，則從 <xref:System.Runtime.Serialization.XsdDataContractExporter> 建立含有所產生 XML 結構描述的新 <xref:System.ServiceModel.Description.WsdlExporter>，並且將它加入至 <xref:System.ServiceModel.Description.MetadataExporter.State%2A> 的 <xref:System.ServiceModel.Description.WsdlExporter> 屬性傳回的集合。 否則使用 `out` 方法的 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 參數傳回的匯出工具。  
+3. 如果 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 傳回 `false`，則從 <xref:System.Runtime.Serialization.XsdDataContractExporter> 建立含有所產生 XML 結構描述的新 <xref:System.ServiceModel.Description.WsdlExporter>，並且將它加入至 <xref:System.ServiceModel.Description.MetadataExporter.State%2A> 的 <xref:System.ServiceModel.Description.WsdlExporter> 屬性傳回的集合。 否則使用 `out` 方法的 <xref:System.Collections.Generic.Dictionary%602.TryGetValue%2A> 參數傳回的匯出工具。  
   
-4.  如果 <xref:System.Runtime.Serialization.XsdDataContractExporter> 未定義任何 <xref:System.Runtime.Serialization.ExportOptions>，則將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 屬性設為 <xref:System.Runtime.Serialization.ExportOptions> 類別的新執行個體。  
+4. 如果 <xref:System.Runtime.Serialization.XsdDataContractExporter> 未定義任何 <xref:System.Runtime.Serialization.ExportOptions>，則將 <xref:System.Runtime.Serialization.XsdDataContractExporter.Options%2A> 屬性設為 <xref:System.Runtime.Serialization.ExportOptions> 類別的新執行個體。  
   
-5.  將 <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> 之 <xref:System.Runtime.Serialization.ExportOptions> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設為代理的新執行個體。 後續匯出中繼資料的步驟不需要任何改變。  
+5. 將 <xref:System.Runtime.Serialization.ExportOptions.DataContractSurrogate%2A> 之 <xref:System.Runtime.Serialization.ExportOptions> 的 <xref:System.Runtime.Serialization.XsdDataContractExporter> 屬性設為代理的新執行個體。 後續匯出中繼資料的步驟不需要任何改變。  
   
      [!code-csharp[C_IDataContractSurrogate#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#10)]  
   

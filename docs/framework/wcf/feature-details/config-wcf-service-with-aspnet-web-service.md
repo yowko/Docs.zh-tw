@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
-ms.openlocfilehash: 8955018124f4e60b0a7c74ad70210b4369676ef5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214698"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325185"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>HOW TO：將 WCF 服務設為與 ASP.NET Web 服務用戶端交互操作
 若要設定 Windows Communication Foundation (WCF) 服務端點是可與互通[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務用戶端，請使用<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>與您的服務端點的繫結類型的類型。  
@@ -21,23 +21,23 @@ ms.locfileid: "59214698"
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-code"></a>若要在程式碼中新增與 ASP.NET Web 服務用戶端相容的 WCF 端點  
   
-1.  建立新的 <xref:System.ServiceModel.BasicHttpBinding> 執行個體。  
+1. 建立新的 <xref:System.ServiceModel.BasicHttpBinding> 執行個體。  
   
-2.  設定繫結至 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> 的安全性模式，以選擇性啟用此服務端點繫結的傳輸安全性。 如需詳細資訊，請參閱[傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)。  
+2. 設定繫結至 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> 的安全性模式，以選擇性啟用此服務端點繫結的傳輸安全性。 如需詳細資訊，請參閱[傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)。  
   
-3.  使用您剛建立的繫結執行個體新增新的應用程式端點到您的服務主機中。 如需有關如何在程式碼中加入服務端點的詳細資訊，請參閱[How to:在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
+3. 使用您剛建立的繫結執行個體新增新的應用程式端點到您的服務主機中。 如需有關如何在程式碼中加入服務端點的詳細資訊，請參閱[How to:在程式碼中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-code.md)。  
   
-4.  啟用您的服務的 HTTP/GET 中繼資料端點。 如需詳細資訊，請參閱[How to:發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
+4. 啟用您的服務的 HTTP/GET 中繼資料端點。 如需詳細資訊，請參閱[How to:發行服務，使用程式碼的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)。  
   
 ### <a name="to-add-a-wcf-endpoint-that-is-compatible-with-aspnet-web-service-clients-in-a-configuration-file"></a>若要在組態檔中新增與 ASP.NET Web 服務用戶端相容的 WCF 端點  
   
-1.  建立新的 <xref:System.ServiceModel.BasicHttpBinding> 繫結組態。 如需詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+1. 建立新的 <xref:System.ServiceModel.BasicHttpBinding> 繫結組態。 如需詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
-2.  設定繫結至 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> 的安全性模式，以選擇性啟用此服務端點繫結組態的傳輸安全性。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)。  
+2. 設定繫結至 <xref:System.ServiceModel.BasicHttpSecurityMode.Transport> 的安全性模式，以選擇性啟用此服務端點繫結組態的傳輸安全性。 如需詳細資訊，請參閱 <<c0> [ 傳輸安全性](../../../../docs/framework/wcf/feature-details/transport-security.md)。  
   
-3.  使用您剛建立的繫結組態設定您的服務的新應用程式端點。 如需有關如何在組態檔中加入服務端點的詳細資訊，請參閱[How to:在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)。  
+3. 使用您剛建立的繫結組態設定您的服務的新應用程式端點。 如需有關如何在組態檔中加入服務端點的詳細資訊，請參閱[How to:在組態中建立服務端點](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-endpoint-in-configuration.md)。  
   
-4.  啟用您的服務的 HTTP/GET 中繼資料端點。 如需詳細資訊，請參閱[How to:發行服務，使用組態檔的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。  
+4. 啟用您的服務的 HTTP/GET 中繼資料端點。 如需詳細資訊，請參閱[How to:發行服務，使用組態檔的中繼資料](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例示範如何新增與相容的 WCF 端點[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web 服務用戶端程式碼中的，或是在組態檔中。  

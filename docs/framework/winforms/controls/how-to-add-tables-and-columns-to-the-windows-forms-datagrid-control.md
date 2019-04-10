@@ -10,12 +10,12 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 2fe661b9-aa06-49b9-a314-a0d3cbfdcb4d
-ms.openlocfilehash: 55a8d28d04dd05d4dba7ab2b1edbcfbcce97cecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: cc364f3609f8041378b0b03b8e1bc8f312fade18
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222038"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319907"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control"></a>HOW TO：將資料表和資料行新增至 Windows Forms DataGrid 控制項
 > [!NOTE]
@@ -25,12 +25,12 @@ ms.locfileid: "59222038"
   
 ### <a name="to-add-a-table-and-column-to-a-datagrid-programmatically"></a>若要以程式設計方式將資料表和資料行加入到資料格  
   
-1.  若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>資料集的控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
+1. 若要顯示資料表中的資料，您必須先繫結<xref:System.Windows.Forms.DataGrid>資料集的控制項。 如需詳細資訊，請參閱[如何：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)。  
   
     > [!CAUTION]
     >  時以程式設計方式指定資料行樣式，一定要建立**DataGridColumnStyle**物件，並將其新增至**GridColumnStylesCollection**物件，然後再加入**Styl**物件至**您**物件。 當您將加入空**Styl**物件加入至集合， **DataGridColumnStyle**自動為您產生的物件。 因此，將會擲回例外狀況如果您嘗試加入新**DataGridColumnStyle**物件具有重複**MappingName**值**GridColumnStylesCollection**物件。  
   
-2.  宣告新的表格樣式，並將它對應的名稱。  
+2. 宣告新的表格樣式，並將它對應的名稱。  
   
     ```vb  
     Dim ts1 As New DataGridTableStyle()  
@@ -47,7 +47,7 @@ ms.locfileid: "59222038"
     ts1->MappingName = S"Customers";  
     ```  
   
-3.  宣告新的資料行樣式，並設定其對應的名稱和其他屬性。  
+3. 宣告新的資料行樣式，並設定其對應的名稱和其他屬性。  
   
     ```vb  
     Dim myDataCol As New DataGridBoolColumn()  
@@ -67,7 +67,7 @@ ms.locfileid: "59222038"
     myDataCol->MappingName = "Current";  
     ```  
   
-4.  呼叫**新增**方法**GridColumnStylesCollection**將資料行加入資料表樣式的物件  
+4. 呼叫**新增**方法**GridColumnStylesCollection**將資料行加入資料表樣式的物件  
   
     ```vb  
     ts1.GridColumnStyles.Add(myDataCol)  
@@ -81,7 +81,7 @@ ms.locfileid: "59222038"
     ts1->GridColumnStyles->Add(myDataCol);  
     ```  
   
-5.  呼叫**新增**方法**您**將資料表樣式加入至資料格的物件。  
+5. 呼叫**新增**方法**您**將資料表樣式加入至資料格的物件。  
   
     ```vb  
     DataGrid1.TableStyles.Add(ts1)  

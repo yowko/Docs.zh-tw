@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - defining service contracts [WCF]
 ms.assetid: 036fae20-7c55-4002-b71d-ac4466e167a3
-ms.openlocfilehash: ccac3dd26ff03f235827c4bb3135dc2028f09032
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad7e713ac4cbbe5bf227f4ab93e8f88684dcb0d3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216405"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319673"
 ---
 # <a name="designing-and-implementing-services"></a>設計與實作服務
 本節將說明如何定義及實作 WCF 合約。 服務合約會指定端點與外界溝通的內容。 更具體來說，這是關於一組會組織到基本訊息交換模式 (MEP) 之特定訊息的聲明，而這些交換模式包括要求/回覆、單向和雙工。 如果服務合約為一組邏輯相關的訊息交換，則服務作業就是單一的訊息交換。 例如，`Hello` 作業一定會明確地接收一個訊息 (這樣呼叫端才能宣告歡迎畫面)，但卻不一定會傳回訊息 (需視作業的禮節而定)。  
@@ -38,13 +38,13 @@ ms.locfileid: "59216405"
   
  例如，採購單合約可能會有 `CreateOrder` 作業，該作業會接受訂單資訊輸入並傳回成功或失敗資訊 (包括訂單識別碼)。 它也可能會有 `GetOrderStatus` 作業，該作業會接受訂單識別碼並傳回訂單狀態資訊。 這類服務合約會指定：  
   
-1.  採購單合約由 `CreateOrder` 和 `GetOrderStatus` 作業組成。  
+1. 採購單合約由 `CreateOrder` 和 `GetOrderStatus` 作業組成。  
   
-2.  這些作業擁有指定的輸入訊息和輸出訊息。  
+2. 這些作業擁有指定的輸入訊息和輸出訊息。  
   
-3.  這些訊息可以包含的資料。  
+3. 這些訊息可以包含的資料。  
   
-4.  成功處理訊息時所需要之通訊基礎結構的分類聲明。 例如，這些詳細資訊包含在建立成功通訊時是否需要安全性及安全性的格式為何。  
+4. 成功處理訊息時所需要之通訊基礎結構的分類聲明。 例如，這些詳細資訊包含在建立成功通訊時是否需要安全性及安全性的格式為何。  
   
  若要傳達這類其他應用程式在許多平台 （包括非 Microsoft 平台） 上的資訊，XML 服務合約會公開以標準 XML 格式，例如[Web 服務描述語言](https://go.microsoft.com/fwlink/?LinkId=94952)(WSDL) 和[XML 結構描述](https://go.microsoft.com/fwlink/?LinkId=94953)(XSD)，其他項目。 大多數平台的開發人員都可以使用這項公開的合約資訊來建立可以和服務進行通訊的應用程式，除了因為他們了解規格語言，更因為這些語言已設計成可透過描述服務所支援的公開形式、格式和通訊協定來達到互通性。 如需有關 WCF 如何處理這類資訊的詳細資訊，請參閱[中繼資料](../../../docs/framework/wcf/feature-details/metadata.md)。  
   

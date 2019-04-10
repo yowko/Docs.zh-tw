@@ -15,12 +15,12 @@ helpviewer_keywords:
 - .rtf files [Windows Forms], saving in RichTextBox control
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
-ms.openlocfilehash: a646d9b04bbe824d093b106f5cfcb0f1703c6e21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59213528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318412"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>HOW TO：使用 Windows Forms RichTextBox 控制項儲存檔案
 Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在幾種格式之一中顯示的資訊：  
@@ -39,11 +39,11 @@ Windows Form<xref:System.Windows.Forms.RichTextBox>控制項可以撰寫會在�
   
 ### <a name="to-save-the-contents-of-the-control-to-a-file"></a>將控制項的內容儲存至檔案  
   
-1.  判斷要儲存之檔案的路徑。  
+1. 判斷要儲存之檔案的路徑。  
   
      若要在真實世界應用程式中這樣做，您通常會使用<xref:System.Windows.Forms.SaveFileDialog>元件。 如需概觀，請參閱[SaveFileDialog 元件概觀](savefiledialog-component-overview-windows-forms.md)。  
   
-2.  呼叫<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法的<xref:System.Windows.Forms.RichTextBox>控制項，指定要儲存的檔案和選擇性的檔案類型。 如果您呼叫具有某檔案名稱為其唯一引數的方法，該檔案會儲存為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
+2. 呼叫<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>方法的<xref:System.Windows.Forms.RichTextBox>控制項，指定要儲存的檔案和選擇性的檔案類型。 如果您呼叫具有某檔案名稱為其唯一引數的方法，該檔案會儲存為 RTF。 若要指定其他檔案類型，請呼叫以 <xref:System.Windows.Forms.RichTextBoxStreamType> 列舉值為其第二個引數的方法。  
   
      在下列範例中，將路徑設為 rtf 文字檔案的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列範例假設表單<xref:System.Windows.Forms.RichTextBox>已經加入的控制項。  
   

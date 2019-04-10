@@ -2,12 +2,12 @@
 title: 逐步解說：簡單的物件模型和查詢 (C#)
 ms.date: 03/30/2017
 ms.assetid: 419961cc-92d6-45f5-ae8a-d485bdde3a37
-ms.openlocfilehash: c84666bbf509a071e536faad1c3d647ff74d179a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: dc56f1e7886a1a1391d94b512ba5c91ca8c9092a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309455"
 ---
 # <a name="walkthrough-simple-object-model-and-query-c"></a>逐步解說：簡單的物件模型和查詢 (C#)
 這個逐步解說提供極為簡單的基本端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將建立的實體類別會構成 Northwind 範例資料庫中的 Customers 資料表。 接著，您會建立簡單查詢，以便列出位於倫敦的客戶。  
@@ -44,30 +44,30 @@ ms.locfileid: "59155125"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下**專案**。  
+1. 在 Visual Studio**檔案**功能表上，指向**新增**，然後按一下**專案**。  
   
-2.  在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual C#** 。  
+2. 在 [**專案類型**窗格**新增專案**] 對話方塊中，按一下**Visual C#** 。  
   
-3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在 **名稱**方塊中，輸入**LinqConsoleApp**。  
+4. 在 **名稱**方塊中，輸入**LinqConsoleApp**。  
   
-5.  在 **位置**方塊中，確認您要儲存專案檔。  
+5. 在 **位置**方塊中，確認您要儲存專案檔。  
   
-6.  按一下 [確定] 。  
+6. 按一下 [確定] 。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果 System.Data.Linq 未列為專案中參考 (展開**參考**中的節點**方案總管 中**)，請將它加入下列的步驟中所述。  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
+1. 在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
+2. 在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
-3.  在頂端新增下列指示詞**Program.cs**:  
+3. 在頂端新增下列指示詞**Program.cs**:  
   
      [!code-csharp[DLinqWalk1CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1CS/cs/Program.cs#1)]  
   
@@ -124,11 +124,11 @@ ms.locfileid: "59155125"
   
 #### <a name="to-execute-the-query"></a>查詢查詢  
   
-1.  在 `Main` 方法的尾端輸入或貼上下列程式碼 (在查詢描述之後)。  
+1. 在 `Main` 方法的尾端輸入或貼上下列程式碼 (在查詢描述之後)。  
   
      [!code-csharp[DLinqWalk1ACS#6](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk1ACS/cs/Program.cs#6)]  
   
-2.  按 F5，進行應用程式偵錯。  
+2. 按 F5，進行應用程式偵錯。  
   
     > [!NOTE]
     >  如果您的應用程式產生執行階段錯誤，請參閱疑難排解一節[依逐步解說學習](../../../../../../docs/framework/data/adonet/sql/linq/learning-by-walkthroughs.md)。  
@@ -147,7 +147,7 @@ ms.locfileid: "59155125"
   
      `ID=SEVES, City=London`  
   
-3.  在主控台視窗中按 Enter 鍵，以關閉應用程式。  
+3. 在主控台視窗中按 Enter 鍵，以關閉應用程式。  
   
 ## <a name="next-steps"></a>後續步驟  
  [逐步解說：跨關聯性查詢 (C#)](../../../../../../docs/framework/data/adonet/sql/linq/walkthrough-querying-across-relationships-csharp.md)主題會繼續本逐步解說結束的位置。 查詢跨關聯性的逐步解說將示範如何[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]可以查詢資料表，類似於跨*聯結*關聯式資料庫中。  

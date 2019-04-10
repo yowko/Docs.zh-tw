@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 18a78b7ecb5268463607508869e77fa163cbd06f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146441"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304515"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>HOW TO：使用 Windows Forms NotifyIcon 元件將應用程式圖示新增至工作列
 Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會顯示單一圖示在工作列的狀態通知區域中。 若要顯示多個圖示，狀態 區域中，您必須有多個<xref:System.Windows.Forms.NotifyIcon>您的表單上的元件。 若要設定控制項所顯示的圖示，使用<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 您也可以撰寫程式碼<xref:System.Windows.Forms.NotifyIcon.DoubleClick>事件處理常式，因此當使用者按兩下的圖示時，會有發生的情況。 例如，您可以進行使用者設定圖示所代表的背景處理序出現的對話方塊。  
@@ -28,11 +28,11 @@ Windows Form<xref:System.Windows.Forms.NotifyIcon>元件會顯示單一圖示在
   
 ### <a name="to-set-the-icon"></a>若要設定圖示  
   
-1.  指派值給<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 值必須是型別`System.Drawing.Icon`和從.ico 檔可以載入。 在程式碼，或按一下省略符號按鈕，您可以指定的圖示檔 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的屬性**屬性**視窗中，，然後選取 檔案中的**開啟**出現的對話方塊。  
+1. 指派值給<xref:System.Windows.Forms.NotifyIcon.Icon%2A>屬性。 值必須是型別`System.Drawing.Icon`和從.ico 檔可以載入。 在程式碼，或按一下省略符號按鈕，您可以指定的圖示檔 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 旁<xref:System.Windows.Forms.NotifyIcon.Icon%2A>中的屬性**屬性**視窗中，，然後選取 檔案中的**開啟**出現的對話方塊。  
   
-2.  將 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 屬性設定為 `true`。  
+2. 將 <xref:System.Windows.Forms.NotifyIcon.Visible%2A> 屬性設定為 `true`。  
   
-3.  設定<xref:System.Windows.Forms.NotifyIcon.Text%2A>屬性設為適當的工具提示字串。  
+3. 設定<xref:System.Windows.Forms.NotifyIcon.Text%2A>屬性設為適當的工具提示字串。  
   
      在下列程式碼範例中，將路徑設為圖示的位置**我的文件**資料夾。 因為您可以假設大部分執行 Windows 作業系統的電腦將會包含此資料夾，會使用此位置。 選擇此位置也可讓具有最少的系統存取層級的使用者安全地執行應用程式。 下列範例需要表單<xref:System.Windows.Forms.NotifyIcon>已經加入的控制項。 它也需要圖示檔名為`Icon.ico`。  
   

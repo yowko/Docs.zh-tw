@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
-ms.openlocfilehash: a3ac0f321a20624deea1fe382d04a8d4e1b6c510
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59135196"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331516"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>指定服務合約中的資料傳輸
 Windows Communication Foundation (WCF) 可以視為傳訊基礎結構。 服務作業可以接收訊息、處理訊息，並傳送訊息。 訊息會透過作業合約來加以描述。 例如，請參考下列合約。  
@@ -87,7 +87,7 @@ Public Interface IAirfareQuoteService
 End Interface  
 ```  
   
- 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎， <xref:System.Xml.Serialization.XmlSerializer>，您也可以使用來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如:   
+ 有時候，`DataContractSerializer` 並不足以序列化您的型別。 WCF 支援替代的序列化引擎， <xref:System.Xml.Serialization.XmlSerializer>，您也可以使用來序列化參數。 <xref:System.Xml.Serialization.XmlSerializer> 可讓您透過諸如 `XmlAttributeAttribute` 的屬性，針對最後的 XML 格式進行更複雜的控制。 若要切換為針對特定作業或整個服務使用 <xref:System.Xml.Serialization.XmlSerializer>，請將 <xref:System.ServiceModel.XmlSerializerFormatAttribute> 屬性套用到作業或服務。 例如：  
   
 ```csharp  
 [ServiceContract]  
@@ -566,11 +566,11 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
   
  前三個案例 (.NET 型別保留、物件圖形保留，與完整自訂 `XmlObjectSerializer` 式序列化) 皆需插入自訂序列化程式。 若要完成此項作業，請執行下列步驟：  
   
-1.  撰寫自己的行為 (衍生自 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>)。  
+1. 撰寫自己的行為 (衍生自 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior>)。  
   
-2.  覆寫兩個 `CreateSerializer` 方法來傳回自己的序列化程式 (可能是 <xref:System.Runtime.Serialization.NetDataContractSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer> 設為 `preserveObjectReferences` 的 `true`，或是自己的自訂 <xref:System.Runtime.Serialization.XmlObjectSerializer>)。  
+2. 覆寫兩個 `CreateSerializer` 方法來傳回自己的序列化程式 (可能是 <xref:System.Runtime.Serialization.NetDataContractSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer> 設為 `preserveObjectReferences` 的 `true`，或是自己的自訂 <xref:System.Runtime.Serialization.XmlObjectSerializer>)。  
   
-3.  在開啟服務主機或是建立用戶端通道之前，請移除現有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為並插入您在先前步驟所建立的自訂衍生類別。  
+3. 在開啟服務主機或是建立用戶端通道之前，請移除現有的 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> 行為並插入您在先前步驟所建立的自訂衍生類別。  
   
  如需有關進階的序列化概念的詳細資訊，請參閱 <<c0> [ 序列化和還原序列化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)。  
   

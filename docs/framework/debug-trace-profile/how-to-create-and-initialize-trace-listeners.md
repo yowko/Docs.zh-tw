@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21726de1-61ee-4fdc-9dd0-3be49324d066
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 58edf1c6f2dca5c2b269370139533f1f8da17813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 85cf8f32a3dbf283e75052548f5963e8a7da0ed2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59222714"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59321051"
 ---
 # <a name="how-to-create-and-initialize-trace-listeners"></a>HOW TO：建立和初始化追蹤接聽項
 <xref:System.Diagnostics.Debug?displayProperty=nameWithType> 和 <xref:System.Diagnostics.Trace?displayProperty=nameWithType> 類別會將訊息傳送給名稱為接聽程式的物件，以接收和處理這些訊息。 <xref:System.Diagnostics.DefaultTraceListener?displayProperty=nameWithType> 就是這類接聽程式之一，其會在啟用追蹤或偵錯時自動建立與初始化。 如果您要將 <xref:System.Diagnostics.Trace> 或 <xref:System.Diagnostics.Debug> 輸出導向任何其他來源，您必須建立和初始化其他的追蹤接聽程式。  
@@ -29,7 +29,7 @@ ms.locfileid: "59222714"
   
 ### <a name="to-create-and-use-a-trace-listener-by-using-a-configuration-file"></a>若要使用組態檔建立及使用追蹤接聽程式  
   
-1.  在應用程式組態檔中，宣告您的追蹤接聽程式。 如果您要建立的接聽程式需要任何其他物件，請一併將其宣告。 下列範例示範如何建立名稱為 `myListener` 的接聽程式，以進行文字檔 `TextWriterOutput.log` 的寫入作業。  
+1. 在應用程式組態檔中，宣告您的追蹤接聽程式。 如果您要建立的接聽程式需要任何其他物件，請一併將其宣告。 下列範例示範如何建立名稱為 `myListener` 的接聽程式，以進行文字檔 `TextWriterOutput.log` 的寫入作業。  
   
     ```xml  
     <configuration>  
@@ -44,7 +44,7 @@ ms.locfileid: "59222714"
     </configuration>  
     ```  
   
-2.  使用程式碼中的 <xref:System.Diagnostics.Trace> 類別，將訊息寫入追蹤接聽程式。  
+2. 使用程式碼中的 <xref:System.Diagnostics.Trace> 類別，將訊息寫入追蹤接聽程式。  
   
     ```vb  
     Trace.TraceInformation("Test message.")  

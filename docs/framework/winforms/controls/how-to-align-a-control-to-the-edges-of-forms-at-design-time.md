@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using designer
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
-ms.openlocfilehash: 8f74a6b56e99e016bfb27bbe1b271f6c71af8f87
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140890"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331856"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>HOW TO：在設計階段將控制項對齊表單邊緣
 您可以讓控制項對齊表單邊緣藉由設定<xref:System.Windows.Forms.Control.Dock%2A>。 這個屬性會指定您的控制項在表單中的位置。 可將 <xref:System.Windows.Forms.Control.Dock%2A> 屬性設為下列值：  
@@ -31,15 +31,15 @@ ms.locfileid: "59140890"
   
 ### <a name="to-set-the-dock-property-for-your-control-at-design-time"></a>若要在設計階段設定控制項的 Dock 屬性  
   
-1.  在 Windows Form 設計工具中，選取您的控制項。  
+1. 在 Windows Form 設計工具中，選取您的控制項。  
   
-2.  在 [**屬性**視窗中，按一下下拉式清單方塊的下的一步]<xref:System.Windows.Forms.Control.Dock%2A>屬性。  
+2. 在 [**屬性**視窗中，按一下下拉式清單方塊的下的一步]<xref:System.Windows.Forms.Control.Dock%2A>屬性。  
   
      代表六個可能的圖形化介面<xref:System.Windows.Forms.Control.Dock%2A>設定隨即出現。  
   
-3.  選擇適當的設定。  
+3. 選擇適當的設定。  
   
-4.  您的控制項現在會設定所指定的方式停駐。  
+4. 您的控制項現在會設定所指定的方式停駐。  
   
 ## <a name="see-also"></a>另請參閱
 

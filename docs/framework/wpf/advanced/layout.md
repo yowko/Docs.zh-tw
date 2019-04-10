@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: 7fc69ff0434a26dc196d24395bbd1e2f441008de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59231119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330489"
 ---
 # <a name="layout"></a>配置
 本主題描述 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 配置系統。 了解如何和何時進行版面配置計算對於在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中建立使用者介面十分重要。  
@@ -64,17 +64,17 @@ ms.locfileid: "59231119"
   
  每次的子系<xref:System.Windows.UIElement>變更位置時，它有可能觸發配置系統的新階段。 因此，請務必了解可叫用配置系統的事件，因為不必要的叫用可能會導致不良的應用程式效能。 下列描述在叫用配置系統時所發生的程序。  
   
-1.  子系<xref:System.Windows.UIElement>開始版面配置程序會先測量其核心屬性。  
+1. 子系<xref:System.Windows.UIElement>開始版面配置程序會先測量其核心屬性。  
   
-2.  調整大小屬性上定義<xref:System.Windows.FrameworkElement>都會經過評估，例如<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>。  
+2. 調整大小屬性上定義<xref:System.Windows.FrameworkElement>都會經過評估，例如<xref:System.Windows.FrameworkElement.Width%2A>， <xref:System.Windows.FrameworkElement.Height%2A>，和<xref:System.Windows.FrameworkElement.Margin%2A>。  
   
-3.  <xref:System.Windows.Controls.Panel>-套用的特定邏輯，例如<xref:System.Windows.Controls.Dock>方向或堆疊<xref:System.Windows.Controls.StackPanel.Orientation%2A>。  
+3. <xref:System.Windows.Controls.Panel>-套用的特定邏輯，例如<xref:System.Windows.Controls.Dock>方向或堆疊<xref:System.Windows.Controls.StackPanel.Orientation%2A>。  
   
-4.  測量所有子系之後，會排列內容。  
+4. 測量所有子系之後，會排列內容。  
   
-5.  <xref:System.Windows.Controls.Panel.Children%2A>集合會繪製在螢幕上。  
+5. <xref:System.Windows.Controls.Panel.Children%2A>集合會繪製在螢幕上。  
   
-6.  程序會再次叫用如果額外<xref:System.Windows.Controls.Panel.Children%2A>加入至集合，<xref:System.Windows.FrameworkElement.LayoutTransform%2A>套用，或<xref:System.Windows.UIElement.UpdateLayout%2A>呼叫方法。  
+6. 程序會再次叫用如果額外<xref:System.Windows.Controls.Panel.Children%2A>加入至集合，<xref:System.Windows.FrameworkElement.LayoutTransform%2A>套用，或<xref:System.Windows.UIElement.UpdateLayout%2A>呼叫方法。  
   
  下列各節會詳述定義此程序和其叫用方式。  
   
