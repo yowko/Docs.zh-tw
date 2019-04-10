@@ -6,21 +6,21 @@ helpviewer_keywords:
 - arrays [Visual Basic], assigning
 - arrays [Visual Basic], covariance
 ms.assetid: 1ae89ea5-f292-4282-bcfc-e9b06b37fbd5
-ms.openlocfilehash: 834dad07ec1f4116aca72a184ccffc664d0a42ed
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 78497de3a9aea55320639c55a151a1260a960159
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835280"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303085"
 ---
 # <a name="how-to-assign-one-array-to-another-array-visual-basic"></a>HOW TO：指派一個陣列至另一個陣列 (Visual Basic)
 因為陣列是物件，您可以像其他物件類型的指派陳述式中使用它們。 陣列變數會保留構成的陣列項目和的順位和長度的資訊，將資料指標，並指派複製只有此指標。  
   
 ### <a name="to-assign-one-array-to-another-array"></a>若要指派一個陣列至另一個陣列  
   
-1.  請確定兩個陣列具有相同陣序 （維度數目） 和相容的項目資料型別。  
+1. 請確定兩個陣列具有相同陣序 （維度數目） 和相容的項目資料型別。  
   
-2.  您可以使用標準的指派陳述式，將來源陣列指派給目的地陣列。 請勿遵循任一陣列名稱，加上括弧。  
+2. 您可以使用標準的指派陳述式，將來源陣列指派給目的地陣列。 請勿遵循任一陣列名稱，加上括弧。  
   
     ```  
     Dim formArray() As System.Windows.Forms.Form  
@@ -45,6 +45,6 @@ ms.locfileid: "58835280"
 ## <a name="see-also"></a>另請參閱
 
 - [陣列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)
-- [陣列的疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
+- [針對陣列進行疑難排解](../../../../visual-basic/programming-guide/language-features/arrays/troubleshooting-arrays.md)
 - [Enum 陳述式](../../../../visual-basic/language-reference/statements/enum-statement.md)
 - [陣列轉換](../../../../visual-basic/programming-guide/language-features/data-types/array-conversions.md)

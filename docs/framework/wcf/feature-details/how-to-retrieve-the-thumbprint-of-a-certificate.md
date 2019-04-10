@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - certificates [WCF], retrieving thumbprint
 ms.assetid: da3101aa-78cd-4c34-9652-d1f24777eeab
-ms.openlocfilehash: 751c75a69fb93e1ff0ba30dd3b2cfbcea0b94824
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 51debbbcfec2fd5b82460e1dd1d6ece8e77bfc13
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122560"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307752"
 ---
 # <a name="how-to-retrieve-the-thumbprint-of-a-certificate"></a>HOW TO：擷取憑證的指紋
 撰寫 Windows Communication Foundation (WCF) 應用程式所使用的 X.509 憑證進行驗證，時，通常必須指定在憑證中找到的宣告。 例如，當您在 <xref:System.Security.Cryptography.X509Certificates.X509FindType.FindByThumbprint> 方法中使用 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A> 列舉時，就必須提供指紋宣告。 尋找宣告值時，需要兩個步驟。 首先，開啟憑證的 Microsoft Management Console (MMC) 嵌入式管理單元 (請參閱 [How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。)接著，如此處所描述，尋找適當的憑證並複製其指紋 (或其他宣告值)。  
@@ -20,21 +20,21 @@ ms.locfileid: "59122560"
   
 ### <a name="to-retrieve-a-certificates-thumbprint"></a>若要擷取憑證的指紋  
   
-1.  開啟憑證的 Microsoft Management Console (MMC) 嵌入式管理單元 (請參閱 [How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。)  
+1. 開啟憑證的 Microsoft Management Console (MMC) 嵌入式管理單元 (請參閱 [How to:使用 MMC 嵌入式管理單元檢視憑證](../../../../docs/framework/wcf/feature-details/how-to-view-certificates-with-the-mmc-snap-in.md)。)  
   
-2.  在 [ **主控台根目錄** ] 視窗的左窗格中，按一下 [ **憑證 (本機電腦)**]。  
+2. 在 [ **主控台根目錄** ] 視窗的左窗格中，按一下 [ **憑證 (本機電腦)**]。  
   
-3.  按一下 [ **個人** ] 資料夾以展開。  
+3. 按一下 [ **個人** ] 資料夾以展開。  
   
-4.  按一下 [ **憑證** ] 資料夾以展開。  
+4. 按一下 [ **憑證** ] 資料夾以展開。  
   
-5.  在憑證清單中，請記下 [ **使用目的** ] 的標題。 尋找會將 [ **用戶端驗證** ] 列為使用目的之憑證。  
+5. 在憑證清單中，請記下 [ **使用目的** ] 的標題。 尋找會將 [ **用戶端驗證** ] 列為使用目的之憑證。  
   
-6.  按兩下憑證。  
+6. 按兩下憑證。  
   
-7.  在 [ **憑證** ] 對話方塊中，按一下 [ **詳細資料** ] 索引標籤。  
+7. 在 [ **憑證** ] 對話方塊中，按一下 [ **詳細資料** ] 索引標籤。  
   
-8.  捲動欄位清單，並按一下 [ **指紋**]。  
+8. 捲動欄位清單，並按一下 [ **指紋**]。  
   
 9. 複製方塊中的十六進位字元。 如果是針對 `X509FindType`在程式碼中使用此指紋，請移除十六進位數字之間的空格。 例如，在程式碼中應該將指紋 "a9 09 50 2d d8 2a e4 14 33 e6 f8 38 86 b0 0d 42 77 a3 2a 7b" 指定為 "a909502dd82ae41433e6f83886b00d4277a32a7b"。  
   

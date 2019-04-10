@@ -2,12 +2,12 @@
 title: 保存物件在 Visual Studio (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
-ms.openlocfilehash: 312545827702c2d01c50f2a92ace5a3b61494a33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58841572"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303345"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>逐步解說：保存物件在 Visual Studio (Visual Basic)
 雖然您可以在設計階段將物件的屬性設為預設值，但當物件終結時，於執行階段輸入的任何值都會遺失。 您可以使用序列化來保存執行個體之間的物件資料，藉此儲存值，並在下次將物件具現化時加以擷取。  
@@ -31,11 +31,11 @@ ms.locfileid: "58841572"
   
 ### <a name="to-create-the-loan-class"></a>若要建立 Loan 類別  
   
-1.  建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
+1. 建立新的類別庫專案，並將它命名為 "LoanClass"。 如需詳細資訊，請參閱[建立方案與專案](https://docs.microsoft.com/visualstudio/ide/creating-solutions-and-projects)。  
   
-2.  在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] 。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
+2. 在方案總管中，開啟 Class1 檔案的捷徑功能表，然後選擇 [重新命名] 。 將檔案重新命名為 `Loan`，然後按 ENTER。 重新命名檔案時，也會將類別重新命名為 `Loan`。  
   
-3.  將下列 Public 成員新增至類別：  
+3. 將下列 Public 成員新增至類別：  
   
     ```vb  
     Public Class Loan  
@@ -77,21 +77,21 @@ ms.locfileid: "58841572"
   
 ### <a name="to-create-a-test-application"></a>若要建立測試應用程式  
   
-1.  若要將 Windows Forms 應用程式專案新增至解決方案，請在 [檔案] 功能表上，選擇 [新增]、[新增專案]。  
+1. 若要將 Windows Forms 應用程式專案新增至解決方案，請在 [檔案] 功能表上，選擇 [新增]、[新增專案]。  
   
-2.  在 [新增專案] 對話方塊中，選擇 [Windows Forms 應用程式]，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定] 以關閉對話方塊。  
+2. 在 [新增專案] 對話方塊中，選擇 [Windows Forms 應用程式]，並輸入 `LoanApp` 作為專案名稱，然後按一下 [確定] 以關閉對話方塊。  
   
-3.  在方案總管中，選擇 LoanApp 專案。  
+3. 在方案總管中，選擇 LoanApp 專案。  
   
-4.  在 [專案] 功能表上，選擇 [設定為啟始專案]。  
+4. 在 [專案] 功能表上，選擇 [設定為啟始專案]。  
   
-5.  在 [專案]  功能表上，選擇 [加入參考] 。  
+5. 在 [專案]  功能表上，選擇 [加入參考] 。  
   
-6.  在 [新增參考] 對話方塊中，依序選擇 [專案] 索引標籤和 LoanClass 專案。  
+6. 在 [新增參考] 對話方塊中，依序選擇 [專案] 索引標籤和 LoanClass 專案。  
   
-7.  按一下 [確定]  關閉對話方塊。  
+7. 按一下 [確定]  關閉對話方塊。  
   
-8.  在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
+8. 在設計工具中，將四個 <xref:System.Windows.Forms.TextBox> 控制項加入表單。  
   
 9. 在程式碼編輯器中，加入下列程式碼：  
   
@@ -163,13 +163,13 @@ ms.locfileid: "58841572"
   
 ### <a name="to-deserialize-an-object"></a>還原序列化物件  
   
-1.  將常數新增至已序列化資料檔案名稱的類別。  
+1. 將常數新增至已序列化資料檔案名稱的類別。  
   
     ```vb  
     Const FileName As String = "..\..\SavedLoan.bin"  
     ```  
   
-2.  修改 `Form1_Load` 事件程序中的程式碼，如下所示：  
+2. 修改 `Form1_Load` 事件程序中的程式碼，如下所示：  
   
     ```vb  
     Private WithEvents TestLoan As New LoanClass.Loan(10000.0, 0.075, 36, "Neil Black")  

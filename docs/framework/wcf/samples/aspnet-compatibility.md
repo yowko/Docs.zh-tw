@@ -2,12 +2,12 @@
 title: ASP.NET 相容性
 ms.date: 03/30/2017
 ms.assetid: c8b51f1e-c096-4c42-ad99-0519887bbbc5
-ms.openlocfilehash: 521ab07d2a747927a7b26c38221f59de736990b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 01381dc579f5ae3eadd2f913a0e09d7d259794a1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112524"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304209"
 ---
 # <a name="aspnet-compatibility"></a>ASP.NET 相容性
 此範例示範如何啟用 ASP.NET 相容性模式在 Windows Communication Foundation (WCF)。 在 ASP.NET 相容性模式會充分參與 ASP.NET 應用程式管線和可執行的服務使用的 ASP.NET 功能，例如檔案 /URL 授權、 工作階段狀態和<xref:System.Web.HttpContext>類別。 <xref:System.Web.HttpContext>類別可讓您存取 cookie、 工作階段和其他 ASP.NET 功能。 這個模式會要求這些繫結使用 HTTP 傳輸，而且服務本身必須以 IIS 裝載。  
@@ -19,13 +19,13 @@ ms.locfileid: "59112524"
   
 這個範例需要 [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] 應用程式集區才能執行。 若要建立應用程式集區，或是修改預設的應用程式集區，請遵循下列步驟。  
 
-1.  開啟**控制台中**。  開啟**系統管理工具**下方的小程式**系統及安全性**標題。 開啟**Internet Information Services (IIS) 管理員**小程式。  
+1. 開啟**控制台中**。  開啟**系統管理工具**下方的小程式**系統及安全性**標題。 開啟**Internet Information Services (IIS) 管理員**小程式。  
 
-2.  展開在 treeview**連線**窗格。 選取 **應用程式集區**節點。  
+2. 展開在 treeview**連線**窗格。 選取 **應用程式集區**節點。  
 
-3.  若要設定要使用預設應用程式集區[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（其可能造成與現有的站台的不相容性問題），以滑鼠右鍵按一下**DefaultAppPool**清單項目，然後選取**基本設定...**. 設定 **.Net Framework 版本**提取-向下鍵即可 **.Net Framework v4.0.30128** （或更新版本）。  
+3. 若要設定要使用預設應用程式集區[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（其可能造成與現有的站台的不相容性問題），以滑鼠右鍵按一下**DefaultAppPool**清單項目，然後選取**基本設定...**. 設定 **.Net Framework 版本**提取-向下鍵即可 **.Net Framework v4.0.30128** （或更新版本）。  
 
-4.  若要建立新的應用程式集區使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保留其他應用程式相容性），以滑鼠右鍵按一下**應用程式集區**節點，然後選取**新增應用程式集區...**. 命名新的應用程式集區，並設定 **.Net Framework 版本**提取-向下鍵即可 **.Net Framework v4.0.30128** （或更新版本）。 下列執行設定步驟之後，請以滑鼠右鍵按一下**ServiceModelSamples**應用程式，然後選取**管理應用程式**，**進階設定...**. 設定**應用程式集區**新的應用程式集區。  
+4. 若要建立新的應用程式集區使用[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]（以保留其他應用程式相容性），以滑鼠右鍵按一下**應用程式集區**節點，然後選取**新增應用程式集區...**. 命名新的應用程式集區，並設定 **.Net Framework 版本**提取-向下鍵即可 **.Net Framework v4.0.30128** （或更新版本）。 下列執行設定步驟之後，請以滑鼠右鍵按一下**ServiceModelSamples**應用程式，然後選取**管理應用程式**，**進階設定...**. 設定**應用程式集區**新的應用程式集區。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  
@@ -119,13 +119,13 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  在建立方案後，執行 Setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。  
+3. 在建立方案後，執行 Setup.bat 以便在 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 中安裝 ServiceModelSamples 應用程式。 ServiceModelSamples 目錄現在應該會顯示為 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] 應用程式。  
   
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 ## <a name="see-also"></a>另請參閱
 

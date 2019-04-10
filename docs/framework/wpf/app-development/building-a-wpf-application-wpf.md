@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: 706999cb403ecf32f5dfe8443e00dd84efdebd23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59184479"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300953"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
 Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]可執行檔 (.exe)、 程式庫 (.dll) 或這兩種類型的組件的組合。 本主題介紹如何建置 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 應用程式，並說明建置流程中的主要步驟。  
@@ -57,11 +57,11 @@ Windows Presentation Foundation (WPF) 應用程式可以建置為[!INCLUDE[dnprd
   
  在此步驟期間，以 `Page` 組建項目表示的每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會發生下列活動：  
   
-1.  標記編譯器會剖析 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。  
+1. 標記編譯器會剖析 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案。  
   
-2.  建立該 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的編譯表示，並複製到 obj\Release 資料夾。  
+2. 建立該 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 的編譯表示，並複製到 obj\Release 資料夾。  
   
-3.  建立新部分類別的 CodeDOM 表示，並複製到 obj\Release 資料夾。  
+3. 建立新部分類別的 CodeDOM 表示，並複製到 obj\Release 資料夾。  
   
  此外，每個 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案會產生特定語言的程式碼檔。 例如，在 Visual Basic 專案中的 Page1.xaml 頁面，就會產生 Page1.g.vb;C# 專案中的 Page1.xaml 頁面，就會產生 Page1.g.cs。 檔案名稱中的 ".g" 表示檔案是產生的程式碼，其具有標記檔案最上層項目 (例如 `Page` 或 `Window`) 的部分類別宣告。 類別以宣告`partial`C# 中的修飾詞 (`Extends` Visual Basic 中) 表示類別在其他地方的另一個宣告，通常是在程式碼後置檔案 page1.xaml.cs。  
   

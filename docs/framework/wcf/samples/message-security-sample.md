@@ -2,12 +2,12 @@
 title: 訊息安全性範例
 ms.date: 03/30/2017
 ms.assetid: 82444166-6288-493a-85d4-85f43f134d19
-ms.openlocfilehash: a4835f8f276786aa87506bc2be2a2bba534f4166
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad579705fa30e9b5179f2de4b829bd7f4a5817c2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112472"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302955"
 ---
 # <a name="message-security-sample"></a>訊息安全性範例
 這個範例會示範如何實作一個使用 `basicHttpBinding` 和訊息安全性的應用程式。 此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。  
@@ -112,42 +112,42 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-and-build-the-sample"></a>若要設定和建置範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
 ### <a name="to-run-the-sample-on-the-same-machine"></a>若要在同一部機器上執行範例  
   
-1.  從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。  
+1. 從範例安裝資料夾執行 Setup.bat。 這會安裝執行範例所需的所有憑證。  
   
     > [!NOTE]
     >  Setup.bat 批次檔是設計用來從 Windows SDK 命令提示字元執行。 它要求 MSSDK 環境變數指向安裝 SDK 的目錄。 這個環境變數是自動在 Windows SDK 命令提示字元中設定。  
   
-2.  從 \service\bin 執行服務應用程式。  
+2. 從 \service\bin 執行服務應用程式。  
   
-3.  從 \client\bin 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
+3. 從 \client\bin 執行用戶端應用程式。 用戶端活動會顯示在用戶端主控台應用程式上。  
   
-4.  如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
+4. 如果用戶端和服務能夠進行通訊，請參閱[的 WCF 範例的疑難排解秘訣](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))。  
   
-5.  當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
+5. 當您完成範例時，請執行 Cleanup.bat 以移除憑證。 其他安全性範例使用相同的憑證。  
   
 ### <a name="to-run-the-sample-across-machines"></a>若要跨機器執行範例  
   
-1.  在服務機器上為服務二進位碼檔案建立一個目錄。  
+1. 在服務機器上為服務二進位碼檔案建立一個目錄。  
   
-2.  將服務程式檔複製到伺服器的服務目錄上。 同時，將 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 檔案複製到伺服器。  
+2. 將服務程式檔複製到伺服器的服務目錄上。 同時，將 Setup.bat、Cleanup.bat 和 ImportClientCert.bat 檔案複製到伺服器。  
   
-3.  在用戶端機器上為用戶端二進位碼檔案建立一個目錄。  
+3. 在用戶端機器上為用戶端二進位碼檔案建立一個目錄。  
   
-4.  將用戶端程式檔複製到用戶端機器上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
+4. 將用戶端程式檔複製到用戶端機器上的用戶端目錄。 同時，將 Setup.bat、Cleanup.bat 和 ImportServiceCert.bat 檔案複製到用戶端。  
   
-5.  在伺服器上執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
+5. 在伺服器上執行 `setup.bat service`。 執行`setup.bat`與`service`引數會建立具有機器完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-6.  編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。 也會變更指定完整機器名稱而不使用 localhost 基底位址的值`.`  
+6. 編輯 Service.exe.config 以反映新的憑證名稱 (在`findValue`屬性中[ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)項目) 做為機器的完整網域名稱相同。 也會變更指定完整機器名稱而不使用 localhost 基底位址的值`.`  
   
-7.  從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
+7. 從服務目錄中將 Service.cer 檔案複製至用戶端機器上的用戶端目錄。  
   
-8.  在用戶端上執行 `setup.bat client`。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
+8. 在用戶端上執行 `setup.bat client`。 使用 `setup.bat` 引數來執行 `client`，就會建立名稱為 client.com 的用戶端憑證，並且會將用戶端憑證匯出為名為 Client.cer 的檔案。  
   
 9. 在用戶端機器上的 Client.exe.config 檔案中，變更端點的位址值以符合服務的新位址。 您可以藉由使用伺服器的完整網域名稱取代 localhost，完成這個動作。 也會變更`findValue`的屬性[ \<defaultCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/defaultcertificate-element.md)為新的服務憑證名稱也就是伺服器的完整網域名稱。  
   

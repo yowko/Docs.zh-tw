@@ -2,12 +2,12 @@
 title: 移轉考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 359e373476398bb26f06eb86eb13296ab05d2705
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59089883"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310417"
 ---
 # <a name="migration-considerations-entity-framework"></a>移轉考量 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework 可以為現有應用程式提供幾項優勢， 其中一項最重要的優勢，就是使用概念模型將應用程式所使用的資料結構從資料來源中的結構描述分隔。 這樣能方便您以後對儲存體模型或資料來源本身進行變更，而不必對應用程式進行補償變更。 針對使用的優點的詳細資訊[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]，請參閱 < [Entity Framework 概觀](../../../../../docs/framework/data/adonet/ef/overview.md)並[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)。  
@@ -31,11 +31,11 @@ ms.locfileid: "59089883"
 > [!NOTE]
 >  當您使用 Entity Data Model 工具，從 Visual Studio 2008 開始，所有這些工作會自動執行。 如需詳細資訊，請參閱[如何：使用 Entity Data Model 精靈](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))。  
   
-1.  升級應用程式。  
+1. 升級應用程式。  
   
      使用舊版的 Visual Studio 所建立的專案和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]必須升級為使用 Visual Studio 2008 SP1 和[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]開頭為 3.5 版 SP1。  
   
-2.  定義模型與對應  
+2. 定義模型與對應  
   
      模型和對應檔案定義概念模型中的實體、資料來源中的結構 (例如資料表、預存程序和檢視表)，以及實體與資料來源結構間的對應。 如需詳細資訊，請參閱[如何：手動定義模型和對應檔](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399785(v=vs.100))。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "59089883"
     > [!NOTE]
     >  Entity Data Model Designer 可以用來重新命名概念模型中的實體，使其與現有物件相符。 如需詳細資訊，請參閱 < [Entity Data Model Designer](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc716685(v=vs.100))。  
   
-3.  定義連接字串 (Connection String)。  
+3. 定義連接字串 (Connection String)。  
   
      針對概念模型執行查詢時，[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會使用特殊格式化的連接字串。 此連接字串會封裝與模型和對應檔以及資料來源連接有關的資訊。 如需詳細資訊，請參閱[如何：定義連接字串](../../../../../docs/framework/data/adonet/ef/how-to-define-the-connection-string.md)。  
   
-4.  設定 Visual Studio 專案。  
+4. 設定 Visual Studio 專案。  
   
      若要參考[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]組件的模型和對應檔案必須新增至 Visual Studio 專案。 您可以將這些對應檔加入至專案，以確保它們與應用程式一起部署在連接字串中所指示的位置。 如需詳細資訊，請參閱[如何：手動設定 Entity Framework 專案](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))。  
   

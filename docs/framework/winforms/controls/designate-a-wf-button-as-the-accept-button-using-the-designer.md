@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as default
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
-ms.openlocfilehash: ae7efdce1384b0089b41da155981d1aebbaa55a9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e0eaa90c8450888ea325470db5d4adae555f8d82
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201503"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304164"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>HOW TO：使用設計工具將 Windows Forms 的按鈕指定為接受按鈕
 在任何 Windows 表單上，您可以指定<xref:System.Windows.Forms.Button>設為接受按鈕，也就是預設按鈕的控制項。 每當使用者按下 ENTER 鍵，不論哪一個表單上的其他控制項具有焦點按一下預設按鈕。 例外狀況是另一個按鈕具有焦點的控制項時，會被按一下的按鈕，並將焦點放在此情況下，-多行文字方塊中或自訂控制項的設陷 ENTER 鍵。  
@@ -22,9 +22,9 @@ ms.locfileid: "59201503"
   
 ### <a name="to-designate-the-accept-button"></a>若要指定為接受按鈕  
   
-1.  選取的按鈕所在的表單。  
+1. 選取的按鈕所在的表單。  
   
-2.  在 [**屬性**] 視窗中，將表單的<xref:System.Windows.Forms.Form.AcceptButton%2A>屬性設<xref:System.Windows.Forms.Button>控制項的名稱。  
+2. 在 [**屬性**] 視窗中，將表單的<xref:System.Windows.Forms.Form.AcceptButton%2A>屬性設<xref:System.Windows.Forms.Button>控制項的名稱。  
   
 ## <a name="see-also"></a>另請參閱
 

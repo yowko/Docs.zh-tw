@@ -9,12 +9,12 @@ helpviewer_keywords:
 - text [Windows Forms], drawing in a rectangle
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
-ms.openlocfilehash: ae6ceb2ca3e541be1d7dd3e5a61a6e52b27e93c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59152785"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301917"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>HOW TO：在矩形中繪製換行文字
 您也可以使用在矩形中繪製換行的文字<xref:System.Drawing.Graphics.DrawString%2A>方法的多載化<xref:System.Drawing.Graphics>類別<xref:System.Drawing.Rectangle>或<xref:System.Drawing.RectangleF>參數。 您也會使用<xref:System.Drawing.Brush>和<xref:System.Drawing.Font>。  
@@ -27,14 +27,14 @@ ms.locfileid: "59152785"
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>若要繪製被包圍的文字中使用 GDI + 的矩形  
   
-1.  使用<xref:System.Drawing.Graphics.DrawString%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>或是<xref:System.Drawing.RectangleF>，<xref:System.Drawing.Font>和<xref:System.Drawing.Brush>。  
+1. 使用<xref:System.Drawing.Graphics.DrawString%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>或是<xref:System.Drawing.RectangleF>，<xref:System.Drawing.Font>和<xref:System.Drawing.Brush>。  
   
      [!code-csharp[System.Drawing.AlignDrawnText#50](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#50)]
      [!code-vb[System.Drawing.AlignDrawnText#50](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#50)]  
   
 ### <a name="to-draw-wrapped-text-in-a-rectangle-with-gdi"></a>若要繪製被包圍的文字中使用 GDI 矩形  
   
-1.  使用<xref:System.Windows.Forms.TextFormatFlags>列舉值，以指定的文字應該以包裝<xref:System.Windows.Forms.TextRenderer.DrawText%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>，<xref:System.Drawing.Font>和<xref:System.Drawing.Color>。  
+1. 使用<xref:System.Windows.Forms.TextFormatFlags>列舉值，以指定的文字應該以包裝<xref:System.Windows.Forms.TextRenderer.DrawText%2A>多載方法，傳遞您想要的文字<xref:System.Drawing.Rectangle>，<xref:System.Drawing.Font>和<xref:System.Drawing.Color>。  
   
      [!code-csharp[System.Drawing.AlignDrawnText#60](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/CS/Form1.cs#60)]
      [!code-vb[System.Drawing.AlignDrawnText#60](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.AlignDrawnText/VB/Form1.vb#60)]  

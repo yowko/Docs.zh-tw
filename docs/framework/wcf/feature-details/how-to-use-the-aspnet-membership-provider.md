@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, authorization
 - WCF, security
 ms.assetid: 322c56e0-938f-4f19-a981-7b6530045b90
-ms.openlocfilehash: df86f87bfc2456d77e3c1ee209cb8b4c61f53b21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 8011b026e857dd6e5815ef7da00c1c33db8b5b4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140604"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310352"
 ---
 # <a name="how-to-use-the-aspnet-membership-provider"></a>HOW TO：使用 ASP.NET 成員資格提供者
 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 成員資格提供者是能夠讓 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 程式開發人員建立網站的功能，而網站可以讓使用者建立專屬的使用者名稱和密碼組合。 任何使用者都可以使用這個功能在網站上建立帳戶，並登入以擁有網站與其服務的獨佔存取權。 這與 Windows 安全性形成對比，因為 Windows 安全性需要使用者有 Windows 網域的帳戶。 相反的，任何使用者只要提供認證 (使用者名稱/密碼組合) 都可以使用該網站與其服務。  
@@ -27,13 +27,13 @@ ms.locfileid: "59140604"
   
 ### <a name="to-configure-the-membership-provider"></a>設定成員資格提供者  
   
-1.  在 Web.config 檔案中，在 <`system.web`> 項目，建立 <`membership`> 項目。  
+1. 在 Web.config 檔案中，在 <`system.web`> 項目，建立 <`membership`> 項目。  
   
-2.  在 `<membership>`<providers> 項目之下建立`<providers>` 項目。  
+2. 在 `<membership>`<providers> 項目之下建立`<providers>` 項目。  
   
-3.  為子系 <`providers`> 元素中，新增`<clear />`排清的提供者集合的項目。  
+3. 為子系 <`providers`> 元素中，新增`<clear />`排清的提供者集合的項目。  
   
-4.  底下`<clear />`項目，建立 <`add`> 項目具有下列屬性設定為適當的值： `name`， `type`， `connectionStringName`， `applicationName`， `enablePasswordRetrieval`， `enablePasswordReset`， `requiresQuestionAndAnswer``requiresUniqueEmail`，和`passwordFormat`。 `name` 屬性稍後會用來當做組態檔中的值。 下列範例將它設定為 `SqlMembershipProvider`。  
+4. 底下`<clear />`項目，建立 <`add`> 項目具有下列屬性設定為適當的值： `name`， `type`， `connectionStringName`， `applicationName`， `enablePasswordRetrieval`， `enablePasswordReset`， `requiresQuestionAndAnswer``requiresUniqueEmail`，和`passwordFormat`。 `name` 屬性稍後會用來當做組態檔中的值。 下列範例將它設定為 `SqlMembershipProvider`。  
   
      下列範例顯示其組態區段。  
   
@@ -58,13 +58,13 @@ ms.locfileid: "59140604"
   
 ### <a name="to-configure-service-security-to-accept-the-user-namepassword-combination"></a>若要設定安全性服務接受使用者名稱/密碼組合  
   
-1.  在組態檔底下[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目，新增[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目。  
+1. 在組態檔底下[ \<system.serviceModel >](../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel.md)項目，新增[\<繫結 >](../../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)項目。  
   
-2.  新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)來繫結區段。 如需建立 WCF 繫結元素的詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
+2. 新增[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)來繫結區段。 如需建立 WCF 繫結元素的詳細資訊，請參閱[How to:在組態中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)。  
   
-3.  將 `mode` 項目的 `<security>` 屬性設定為 `Message`。  
+3. 將 `mode` 項目的 `<security>` 屬性設定為 `Message`。  
   
-4.  設定`clientCredentialType`屬性的 <`message`> 項目`UserName`。 這會指定使用者名稱/密碼組將用來當做用戶端的認證。  
+4. 設定`clientCredentialType`屬性的 <`message`> 項目`UserName`。 這會指定使用者名稱/密碼組將用來當做用戶端的認證。  
   
      下列程式碼範例顯示繫結的組態程式碼。  
   
@@ -85,22 +85,22 @@ ms.locfileid: "59140604"
   
 ### <a name="to-configure-a-service-to-use-the-membership-provider"></a>設定服務以使用成員資格提供者  
   
-1.  做為子項`<system.serviceModel>`項目，新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目  
+1. 做為子項`<system.serviceModel>`項目，新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)項目  
   
-2.  新增[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至 <`behaviors`> 項目。  
+2. 新增[ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)至 <`behaviors`> 項目。  
   
-3.  新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ，並設定`name`屬性設為適當的值。  
+3. 新增[\<行為 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md) ，並設定`name`屬性設為適當的值。  
   
-4.  新增[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)至 <`behavior`> 項目。  
+4. 新增[ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)至 <`behavior`> 項目。  
   
-5.  新增[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)到`<serviceCredentials>`項目。  
+5. 新增[ \<userNameAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/usernameauthentication.md)到`<serviceCredentials>`項目。  
   
-6.  將 `userNamePasswordValidationMode` 屬性設定為 `MembershipProvider`。  
+6. 將 `userNamePasswordValidationMode` 屬性設定為 `MembershipProvider`。  
   
     > [!IMPORTANT]
     >  如果`userNamePasswordValidationMode`未設定值時，WCF 會使用 Windows 驗證，而不是[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]成員資格提供者。  
   
-7.  將 `membershipProviderName` 屬性設定為提供者的名稱 (在此主題的第一個程序中新增提供者時已指定)。 下列範例顯示目前的 `<serviceCredentials>` 片段。  
+7. 將 `membershipProviderName` 屬性設定為提供者的名稱 (在此主題的第一個程序中新增提供者時已指定)。 下列範例顯示目前的 `<serviceCredentials>` 片段。  
   
     ```xml  
     <behaviors>  

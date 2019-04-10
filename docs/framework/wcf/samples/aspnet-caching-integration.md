@@ -2,12 +2,12 @@
 title: ASP.NET 快取整合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
-ms.openlocfilehash: 376e188bcabbff1d87e7b45aa281e2a2b92a13b6
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47197444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309468"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET 快取整合
 這個範例示範如何使用 ASP.NET 輸出快取搭配 WCF WEB HTTP 程式設計模型。 本主題著重在 ASP.NET 輸出快取整合功能。  
@@ -34,31 +34,31 @@ ms.locfileid: "47197444"
 ## <a name="to-run-the-sample"></a>若要執行範例  
  此範例包含三個專案：  
   
--   **服務**： 包含 ASP.NET 中裝載之 WCF HTTP 服務的 Web 應用程式專案。  
+-   **服務**：Web 應用程式專案包含 ASP.NET 中裝載之 WCF HTTP 服務。  
   
--   **用戶端**： 呼叫服務的主控台應用程式專案。  
+-   **用戶端**:呼叫服務的主控台應用程式專案。  
   
--   **常見**： 包含用戶端和服務所使用之 Customer 類型的共用程式庫。  
+-   **常見**:共用程式庫，其中包含用戶端和服務所使用之 Customer 類型。  
   
  當用戶端主控台應用程式執行時，用戶端會對服務發出要求，然後將相關的資訊從回應寫入至主控台視窗。  
   
 #### <a name="to-run-the-sample"></a>若要執行範例  
   
-1.  開啟「ASP.NET 快取整合範例」的方案。  
+1. 開啟「ASP.NET 快取整合範例」的方案。  
   
-2.  按下 CTRL+SHIFT+B 以建置方案。  
+2. 按下 CTRL+SHIFT+B 以建置方案。  
   
-3.  如果**方案總管 中**視窗尚未開啟，請按 CTRL + W + S。  
+3. 如果**方案總管 中**視窗尚未開啟，請按 CTRL + W + S。  
   
-4.  從**方案總管**視窗中，以滑鼠右鍵按一下**服務**專案，然後選取**開始新執行個體**。 這樣會啟動裝載服務的 ASP.NET 程式開發伺服器。  
+4. 從**方案總管**視窗中，以滑鼠右鍵按一下**服務**專案，然後選取**開始新執行個體**。 這樣會啟動裝載服務的 ASP.NET 程式開發伺服器。  
   
-5.  從**方案總管**視窗中，以滑鼠右鍵按一下**用戶端**專案，然後選取**開始新執行個體**。  
+5. 從**方案總管**視窗中，以滑鼠右鍵按一下**用戶端**專案，然後選取**開始新執行個體**。  
   
-6.  用戶端主控台視窗隨即出現，並提供執行中服務的 URI，以及執行中服務之 HTML 說明頁的 URI。 您可以隨時在瀏覽器中輸入說明頁的 URI 來檢視 HTML 說明頁。  
+6. 用戶端主控台視窗隨即出現，並提供執行中服務的 URI，以及執行中服務之 HTML 說明頁的 URI。 您可以隨時在瀏覽器中輸入說明頁的 URI 來檢視 HTML 說明頁。  
   
-7.  當範例執行時，用戶端會寫入目前活動的狀態。  
+7. 當範例執行時，用戶端會寫入目前活動的狀態。  
   
-8.  按下任何按鍵可終止用戶端主控台應用程式。  
+8. 按下任何按鍵可終止用戶端主控台應用程式。  
   
 9. 按 SHIFT+F5 停止對服務偵錯。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 9657d9ec23b0e67625521ee595bc693eb7b992a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db9b3d31ba9657d26c1fb76ce4002afad949a881
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843119"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301161"
 ---
 # <a name="-platform-visual-basic"></a>-平台 (Visual Basic)
 指定通用語言執行平台 (CLR) 的哪個平台版本可以執行輸出檔。  
@@ -68,9 +68,9 @@ ms.locfileid: "58843119"
   
 ### <a name="to-set--platform-in-the-visual-studio-ide"></a>若要設定-Visual Studio IDE 中的平台  
   
-1.  在 **方案總管**，選擇專案，開啟**專案**功能表，然後再按一下**屬性**。  
+1. 在 **方案總管**，選擇專案，開啟**專案**功能表，然後再按一下**屬性**。  
   
-2.  在上**編譯**索引標籤上，選取或清除**偏好 32 位元**核取方塊，或者，在**目標 CPU**清單中，選擇一個值。  
+2. 在上**編譯**索引標籤上，選取或清除**偏好 32 位元**核取方塊，或者，在**目標 CPU**清單中，選擇一個值。  
   
      如需詳細資訊，請參閱 <<c0> [ 編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)。  
   

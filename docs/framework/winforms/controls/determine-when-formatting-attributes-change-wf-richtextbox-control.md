@@ -11,19 +11,19 @@ helpviewer_keywords:
 - text boxes [Windows Forms], determining font changes
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
-ms.openlocfilehash: e35ebb7c90be00a814d465af3546de2bcd11c5de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59183935"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308454"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>HOW TO：決定何時變更 Windows Forms RichTextBox 控制項的格式屬性
 Windows Form 的常見用法<xref:System.Windows.Forms.RichTextBox>控制項正在格式化文字的字型選項或段落樣式等屬性。 您的應用程式可能需要追蹤的文字格式設定用來顯示工具列，就像許多文書處理應用程式中的任何變更。  
   
 ### <a name="to-respond-to-changes-in-formatting-attributes"></a>若要回應的格式屬性變更  
   
-1.  在撰寫程式碼<xref:System.Windows.Forms.RichTextBox.SelectionChanged>事件處理常式來執行屬性的值而定的適當動作。 下列範例會變更的值而定的工具列按鈕的外觀<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>屬性。 當插入點移入控制項時，才會更新工具列按鈕。  
+1. 在撰寫程式碼<xref:System.Windows.Forms.RichTextBox.SelectionChanged>事件處理常式來執行屬性的值而定的適當動作。 下列範例會變更的值而定的工具列按鈕的外觀<xref:System.Windows.Forms.RichTextBox.SelectionBullet%2A>屬性。 當插入點移入控制項時，才會更新工具列按鈕。  
   
      下列範例假設使用的表單<xref:System.Windows.Forms.RichTextBox>控制項和<xref:System.Windows.Forms.ToolBar>控制項，其中包含工具列按鈕。 如需有關工具列和工具列按鈕的詳細資訊，請參閱[How to:將按鈕加入至 ToolBar 控制項](how-to-add-buttons-to-a-toolbar-control.md)。  
   

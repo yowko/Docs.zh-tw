@@ -5,12 +5,12 @@ helpviewer_keywords:
 - AddressOf operator [Visual Basic]
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
-ms.openlocfilehash: c2305cd18cfaaa67355dfb342f22e39d37ae0e79
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58818471"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305243"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>HOW TO：傳遞至另一個程序，在 Visual Basic 中的程序
 此範例示範如何使用委派傳遞至其他程序的程序。  
@@ -21,25 +21,25 @@ ms.locfileid: "58818471"
   
 ### <a name="create-the-delegate-and-matching-procedures"></a>建立委派和比對程序  
   
-1.  建立名為委派`MathOperator`。  
+1. 建立名為委派`MathOperator`。  
   
      [!code-vb[VbVbalrDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#1)]  
   
-2.  建立名為程序`AddNumbers`使用參數和傳回值，符合`MathOperator`，如此一來，簽章相符。  
+2. 建立名為程序`AddNumbers`使用參數和傳回值，符合`MathOperator`，如此一來，簽章相符。  
   
      [!code-vb[VbVbalrDelegates#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#2)]  
   
-3.  建立名為程序`SubtractNumbers`簽章符合`MathOperator`。  
+3. 建立名為程序`SubtractNumbers`簽章符合`MathOperator`。  
   
      [!code-vb[VbVbalrDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#3)]  
   
-4.  建立名為程序`DelegateTest`會做為參數的委派。  
+4. 建立名為程序`DelegateTest`會做為參數的委派。  
   
      此程序可接受的參考`AddNumbers`或是`SubtractNumbers`，因為它們的簽章相符`MathOperator`簽章。  
   
      [!code-vb[VbVbalrDelegates#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#4)]  
   
-5.  建立名為程序`Test`它會呼叫`DelegateTest`另一次使用的委派`AddNumbers`做為參數，並再次使用的委派`SubtractNumbers`做為參數。  
+5. 建立名為程序`Test`它會呼叫`DelegateTest`另一次使用的委派`AddNumbers`做為參數，並再次使用的委派`SubtractNumbers`做為參數。  
   
      [!code-vb[VbVbalrDelegates#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrDelegates/VB/Class1.vb#5)]  
   
@@ -50,4 +50,4 @@ ms.locfileid: "58818471"
 - [委派](../../../../visual-basic/programming-guide/language-features/delegates/index.md)
 - [AddressOf 運算子](../../../../visual-basic/language-reference/operators/addressof-operator.md)
 - [Delegate 陳述式](../../../../visual-basic/language-reference/statements/delegate-statement.md)
-- [如何：叫用委派方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [HOW TO：叫用委派方法](../../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

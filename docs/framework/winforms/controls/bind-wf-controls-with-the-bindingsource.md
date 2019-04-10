@@ -6,12 +6,12 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], binding controls
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
-ms.openlocfilehash: 4e6b85e1d1ca667f4ec189a7b2549667db24f10d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59074647"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304554"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>HOW TO：使用設計工具繫結 Windows Forms 控制項和 BindingSource 元件
 您已將控制項新增至您的表單，並判斷您的應用程式的使用者介面之後，您可以將控制項繫結到資料來源，以便在執行階段，使用者可以改變，並將儲存應用程式相關的資料。  
@@ -27,9 +27,9 @@ ms.locfileid: "59074647"
   
 ### <a name="to-bind-a-control-at-design-time"></a>將控制項繫結在設計階段  
   
-1.  拖曳<xref:System.Windows.Forms.TextBox>入表單的控制項。  
+1. 拖曳<xref:System.Windows.Forms.TextBox>入表單的控制項。  
   
-2.  在 **屬性**視窗：  
+2. 在 **屬性**視窗：  
   
     1.  依序展開 **(DataBindings)** 節點。  
   
@@ -39,17 +39,17 @@ ms.locfileid: "59074647"
   
          如果先前已設定資料來源的專案或表單，它會出現。  
   
-3.  按一下 [新增專案資料來源] 以連接至資料，並建立資料來源。  
+3. 按一下 [新增專案資料來源] 以連接至資料，並建立資料來源。  
   
-4.  在 [資料來源組態精靈] 歡迎頁面上，按 [下一步]。  
+4. 在 [資料來源組態精靈] 歡迎頁面上，按 [下一步]。  
   
-5.  在 **選擇資料來源類型**頁面上，選取**資料庫**。  
+5. 在 **選擇資料來源類型**頁面上，選取**資料庫**。  
   
-6.  在 **選擇資料連接**頁面上，從可用連線清單中選取資料連接。 如果您想要的資料連接不是可用的選取**新的連接**來建立新的資料連接。  
+6. 在 **選擇資料連接**頁面上，從可用連線清單中選取資料連接。 如果您想要的資料連接不是可用的選取**新的連接**來建立新的資料連接。  
   
-7.  選取  **是，將連接儲存為**應用程式組態檔中儲存的連接字串。  
+7. 選取  **是，將連接儲存為**應用程式組態檔中儲存的連接字串。  
   
-8.  選取要帶入應用程式中的資料庫物件。 在此情況下，選取您想要的資料表中的 欄位<xref:System.Windows.Forms.TextBox>來顯示。  
+8. 選取要帶入應用程式中的資料庫物件。 在此情況下，選取您想要的資料表中的 欄位<xref:System.Windows.Forms.TextBox>來顯示。  
   
 9. 您可以視需要更換預設資料集名稱。  
   

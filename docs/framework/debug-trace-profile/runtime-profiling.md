@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 036744362c414fe51c919b59c693d447c92a87c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59141384"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306387"
 ---
 # <a name="runtime-profiling"></a>執行階段分析
 分析是在任何開發或部署案例中蒐集效能資料的一種方法。 本節適用對象為想要蒐集應用程式效能資訊的開發人員和系統管理員。  
@@ -28,19 +28,19 @@ ms.locfileid: "59141384"
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>在 Windows Vista 和更新版本上執行 Perfmon.exe  
   
-1.  在命令提示字元處，輸入 **perfmon**。 [效能監視器]  主控台隨即出現。  
+1. 在命令提示字元處，輸入 **perfmon**。 [效能監視器]  主控台隨即出現。  
   
-2.  在 [監視工具]  資料夾中，按一下 [效能監視器] 。  
+2. 在 [監視工具]  資料夾中，按一下 [效能監視器] 。  
   
-3.  在 [效能監視器] 工具列中，按一下出現的 **加入** 圖示 (加號)。 如果未出現，請以滑鼠右鍵按一下監視器視窗，然後選取 [加入計數器]  選項。  
+3. 在 [效能監視器] 工具列中，按一下出現的 **加入** 圖示 (加號)。 如果未出現，請以滑鼠右鍵按一下監視器視窗，然後選取 [加入計數器]  選項。  
   
      這會開啟 [加入計數器]  對話方塊。 [可用的計數器]  清單方塊顯示可用的效能物件。 .NET Framework 應用程式有一些預先定義的物件，包括用於記憶體管理 (**.NET CLR 記憶體**)、互通性 (**.NET CLR Interop**)、例外狀況處理 (**.NET CLR 例外狀況**) 和多執行緒 (**.NET CLR LocksAndThreads**) 的物件。 每個效能物件都包含一些個別的效能計數器。 如需效能監視器中可用的效能計數器清單，請參閱 [Performance Counters](../../../docs/framework/debug-trace-profile/performance-counters.md)隨附之 .NET Framework 效能計數器中找到的資料。  
   
-4.  選取效能物件名稱旁的核取方塊，以檢視所支援的個別效能計數器清單。  
+4. 選取效能物件名稱旁的核取方塊，以檢視所支援的個別效能計數器清單。  
   
-5.  按一下您要檢視的效能計數器。  
+5. 按一下您要檢視的效能計數器。  
   
-6.  在 [所選取物件的例項] 清單方塊中，按一下 [\<所有例項>]，指定您要全域 (也就是針對整個系統) 監視 Common Language Runtime 的效能計數器。  
+6. 在 [所選取物件的例項] 清單方塊中，按一下 [\<所有例項>]，指定您要全域 (也就是針對整個系統) 監視 Common Language Runtime 的效能計數器。  
   
      -或-  
   

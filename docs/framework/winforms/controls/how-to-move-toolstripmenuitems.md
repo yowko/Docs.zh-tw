@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], arranging items
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
-ms.openlocfilehash: 70387a4c43b78f93a46f601eb35b7dca2083b01f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59168333"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308351"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>HOW TO：移動 ToolStripMenuItems
 在設計階段，您可以移動整個最上層的功能表與他們的功能表項目到不同位置<xref:System.Windows.Forms.MenuStrip>。 您也可以最上層的功能表間移動個別的功能表項目，或變更功能表中功能表項目的位置。  
@@ -26,47 +26,47 @@ ms.locfileid: "59168333"
   
 ### <a name="to-move-a-top-level-menu-and-its-menu-items-to-another-top-level-location"></a>若要將最上層的功能表和它的功能表項目移至另一個最上層的位置  
   
-1.  按一下並按住滑鼠左鍵，在您想要移動的功能表上。  
+1. 按一下並按住滑鼠左鍵，在您想要移動的功能表上。  
   
-2.  將插入點拖曳至想要的新位置之前的最上層功能表，然後放開滑鼠左的按鈕。  
+2. 將插入點拖曳至想要的新位置之前的最上層功能表，然後放開滑鼠左的按鈕。  
   
      選取的功能表往右移動插入點。  
   
 ### <a name="to-move-a-top-level-menu-and-its-menu-items-to-a-drop-down-location"></a>若要將最上層的功能表和它的功能表項目移至 下拉式清單位置  
   
-1.  以滑鼠左鍵按一下您想要移動並按下 CTRL + X，或以滑鼠右鍵按一下  功能表並選取  功能表**剪下**從捷徑功能表。  
+1. 以滑鼠左鍵按一下您想要移動並按下 CTRL + X，或以滑鼠右鍵按一下  功能表並選取  功能表**剪下**從捷徑功能表。  
   
-2.  在目的地最上層功能表中，以滑鼠左鍵按一下預定新位置上方的功能表項目及按下 CTRL + V，或以滑鼠右鍵按一下預定新位置上方的功能表項目並選取**貼上**從捷徑功能表。  
+2. 在目的地最上層功能表中，以滑鼠左鍵按一下預定新位置上方的功能表項目及按下 CTRL + V，或以滑鼠右鍵按一下預定新位置上方的功能表項目並選取**貼上**從捷徑功能表。  
   
      選取的功能表項目之後插入您剪下功能表。  
   
 ### <a name="to-move-a-menu-item-within-a-menu-using-the-items-collection-editor"></a>若要移動的功能表項目集合編輯器的使用中的功能表項目  
   
-1.  以滑鼠右鍵按一下含有您想要移動的功能表項目的功能表。  
+1. 以滑鼠右鍵按一下含有您想要移動的功能表項目的功能表。  
   
-2.  從捷徑功能表，選擇**編輯 DropDownItems**。  
+2. 從捷徑功能表，選擇**編輯 DropDownItems**。  
   
-3.  在 **項目集合編輯器**，以滑鼠左鍵按一下您想要移動的功能表項目。  
+3. 在 **項目集合編輯器**，以滑鼠左鍵按一下您想要移動的功能表項目。  
   
-4.  按一下向上和向下鍵移動的功能表中功能表項目。  
+4. 按一下向上和向下鍵移動的功能表中功能表項目。  
   
-5.  按一下 [確定] 。  
+5. 按一下 [確定] 。  
   
 ### <a name="to-move-a-menu-item-within-a-menu-using-the-keyboard"></a>若要移動使用鍵盤的功能表中功能表項目  
   
-1.  按住 ALT 鍵。  
+1. 按住 ALT 鍵。  
   
-2.  按一下並按住滑鼠左鍵您想要移動的功能表項目。  
+2. 按一下並按住滑鼠左鍵您想要移動的功能表項目。  
   
-3.  將功能表項目拖曳至新的位置，然後放開滑鼠左的按鈕。  
+3. 將功能表項目拖曳至新的位置，然後放開滑鼠左的按鈕。  
   
 ### <a name="to-move-a-menu-item-to-another-menu"></a>若要移至另一個功能表的功能表項目  
   
-1.  以滑鼠左鍵按一下您想要移動並按下 CTRL + X，或以滑鼠右鍵按一下功能表項目，然後選擇功能表項目**剪下**從捷徑功能表。  
+1. 以滑鼠左鍵按一下您想要移動並按下 CTRL + X，或以滑鼠右鍵按一下功能表項目，然後選擇功能表項目**剪下**從捷徑功能表。  
   
-2.  以滑鼠左鍵按一下的功能表中會包含您剪下功能表項目。  
+2. 以滑鼠左鍵按一下的功能表中會包含您剪下功能表項目。  
   
-3.  以滑鼠左鍵按一下預定新位置之前的功能表項目及按下 CTRL + V，或以滑鼠右鍵按一下預定新位置，然後選取之前的功能表項目**貼上**從捷徑功能表。  
+3. 以滑鼠左鍵按一下預定新位置之前的功能表項目及按下 CTRL + V，或以滑鼠右鍵按一下預定新位置，然後選取之前的功能表項目**貼上**從捷徑功能表。  
   
      選取的功能表項目之後插入您剪下功能表項目。  
   

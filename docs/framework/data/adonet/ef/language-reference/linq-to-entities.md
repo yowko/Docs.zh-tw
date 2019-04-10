@@ -2,25 +2,25 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 29980450bd75c6ba0992ad7fd3165f6f2d5f32bc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59129684"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304573"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities 提供了 Language-Integrated Query (LINQ) 支援，可讓開發人員使用 Visual Basic 或 Visual C# 針對 Entity Framework 概念模型撰寫查詢。 針對 Entity Framework 執行的查詢是以命令樹查詢來表示，每一個查詢都會針對物件內容來執行。 LINQ to Entities 會將 Language-Integrated Queries (LINQ) 查詢轉換成命令樹查詢、針對 Entity Framework 執行查詢，並傳回 Entity Framework 和 LINQ 都可以使用的物件。 下列是建立及執行 LINQ to Entities 查詢的程序：  
   
-1.  從 <xref:System.Data.Objects.ObjectQuery%601> 建構 <xref:System.Data.Objects.ObjectContext> 執行個體。  
+1. 從 <xref:System.Data.Objects.ObjectQuery%601> 建構 <xref:System.Data.Objects.ObjectContext> 執行個體。  
   
-2.  使用 <xref:System.Data.Objects.ObjectQuery%601> 執行個體，在 C# 或 Visual Basic 中撰寫 LINQ to Entities 查詢。  
+2. 使用 <xref:System.Data.Objects.ObjectQuery%601> 執行個體，在 C# 或 Visual Basic 中撰寫 LINQ to Entities 查詢。  
   
-3.  將 LINQ 標準查詢運算子和運算式轉換成命令樹。  
+3. 將 LINQ 標準查詢運算子和運算式轉換成命令樹。  
   
-4.  在命令樹中會針對資料來源查詢執行。 執行期間於資料來源上擲回的任何例外狀況都會直接傳遞給用戶端。  
+4. 在命令樹中會針對資料來源查詢執行。 執行期間於資料來源上擲回的任何例外狀況都會直接傳遞給用戶端。  
   
-5.  將查詢結果傳回用戶端。  
+5. 將查詢結果傳回用戶端。  
   
 ## <a name="constructing-an-objectquery-instance"></a>建構 ObjectQuery 執行個體  
  <xref:System.Data.Objects.ObjectQuery%601> 泛型類別表示傳回零個或多個具型別實體之集合的查詢。 物件查詢通常是從現有的物件內容所建構 (而不是手動建構)，而且一定會屬於該物件內容。 此內容提供了撰寫及執行查詢所需的連接和中繼資料 (Metadata) 資訊。 <xref:System.Data.Objects.ObjectQuery%601> 泛型類別會實作 <xref:System.Linq.IQueryable%601> 泛型介面，此介面的 builder 方法可累加建置 LINQ 查詢。 使用 C# `var` 關鍵字 (在 Visual Basic 中啟用區域型別推斷的話為 `Dim`)，您也可以讓編譯器推斷實體類型。  

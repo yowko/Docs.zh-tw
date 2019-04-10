@@ -6,12 +6,12 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], using the designer
 - multipane user interface
 ms.assetid: c3f9294d-a26c-4198-9242-f237f55f7573
-ms.openlocfilehash: 2b72d972d679a47213c0d5ed4270d2c623d713ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 9f3350e32c0fbff58678052d26be954d30d512a7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59082928"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301291"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms 建立多窗格使用者介面
 在下列程序中，您將建立類似於使用 Microsoft Outlook 中所使用的多窗格使用者介面**資料夾** 清單中，**訊息**窗格中，和**預覽**  窗格。 這種排列方式是主要透過停駐控制項的表單來達成的。  
@@ -27,17 +27,17 @@ ms.locfileid: "59082928"
   
 ### <a name="to-create-an-outlook-style-user-interface-at-design-time"></a>若要在設計階段建立的 Outlook 樣式使用者介面  
   
-1.  建立新的 Windows 應用程式專案 (**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
+1. 建立新的 Windows 應用程式專案 (**檔案** > **新增** > **專案** > **Visual C#** 或是**Visual Basic** > **傳統桌面** > **Windows Forms 應用程式**)。  
   
-2.  拖曳<xref:System.Windows.Forms.SplitContainer>控制項從**工具箱**至表單。 在 [屬性]  視窗中，將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+2. 拖曳<xref:System.Windows.Forms.SplitContainer>控制項從**工具箱**至表單。 在 [屬性]  視窗中，將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 屬性設定為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-3.  拖曳<xref:System.Windows.Forms.TreeView>控制項從**工具箱**左側面板的<xref:System.Windows.Forms.SplitContainer>控制項。 在 **屬性**視窗中，將<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Left>依序按一下左側面板中按一下向下箭號時所顯示的值編輯器。  
+3. 拖曳<xref:System.Windows.Forms.TreeView>控制項從**工具箱**左側面板的<xref:System.Windows.Forms.SplitContainer>控制項。 在 **屬性**視窗中，將<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Left>依序按一下左側面板中按一下向下箭號時所顯示的值編輯器。  
   
-4.  將另一個<xref:System.Windows.Forms.SplitContainer>控制項從**工具箱**; 將它放在右側面板中的<xref:System.Windows.Forms.SplitContainer>您加入至您的表單控制項。 在**屬性**視窗中，將<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill>並<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性設<xref:System.Windows.Forms.Orientation.Horizontal>。  
+4. 將另一個<xref:System.Windows.Forms.SplitContainer>控制項從**工具箱**; 將它放在右側面板中的<xref:System.Windows.Forms.SplitContainer>您加入至您的表單控制項。 在**屬性**視窗中，將<xref:System.Windows.Forms.SplitContainer.Dock%2A>屬性設<xref:System.Windows.Forms.DockStyle.Fill>並<xref:System.Windows.Forms.SplitContainer.Orientation%2A>屬性設<xref:System.Windows.Forms.Orientation.Horizontal>。  
   
-5.  拖曳<xref:System.Windows.Forms.ListView>控制項從**工具箱**上方面板，第二個<xref:System.Windows.Forms.SplitContainer>您加入至您的表單控制項。 將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 控制項的 <xref:System.Windows.Forms.ListView> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+5. 拖曳<xref:System.Windows.Forms.ListView>控制項從**工具箱**上方面板，第二個<xref:System.Windows.Forms.SplitContainer>您加入至您的表單控制項。 將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 控制項的 <xref:System.Windows.Forms.ListView> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
-6.  拖曳<xref:System.Windows.Forms.RichTextBox>控制項從**工具箱**第二個較低的面板<xref:System.Windows.Forms.SplitContainer>控制項。 將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。  
+6. 拖曳<xref:System.Windows.Forms.RichTextBox>控制項從**工具箱**第二個較低的面板<xref:System.Windows.Forms.SplitContainer>控制項。 將 <xref:System.Windows.Forms.SplitContainer.Dock%2A> 控制項的 <xref:System.Windows.Forms.RichTextBox> 屬性設為 <xref:System.Windows.Forms.DockStyle.Fill>。  
   
      此時，如果您按 F5 執行應用程式時，表單會顯示三個部分使用者介面，類似於 Microsoft Outlook。  
   

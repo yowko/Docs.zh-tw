@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
-ms.openlocfilehash: b8bcb16798284a09608ba6942226ef07c6859d4f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824192"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304905"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<類型名稱 >' 必須實作 '\<方法名稱 >' 的介面'\<介面名稱 >'
 類別或結構宣告實作介面，但不會實作該介面所定義的程序。 必須實作介面的每個成員。  
@@ -21,9 +21,9 @@ ms.locfileid: "58824192"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  宣告具有相同的名稱與簽章的介面中所定義的程序。 務必要包含在至少`End Function`或`End Sub`陳述式。  
+1. 宣告具有相同的名稱與簽章的介面中所定義的程序。 務必要包含在至少`End Function`或`End Sub`陳述式。  
   
-2.  新增`Implements`子句來結束`Function`或`Sub`陳述式。 例如:   
+2. 新增`Implements`子句來結束`Function`或`Sub`陳述式。 例如：  
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  

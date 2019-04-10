@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 14402bde39ec90d8ef17ed5ee07f9eefb8151939
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139603"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303488"
 ---
 # <a name="flow-document-overview"></a>非固定格式文件概觀
 非固定格式文件的設計是為最佳化檢視和可讀性。 非固定格式文件並不會設為某種預先定義的配置，而是會根據執行階段變數 (例如視窗大小、裝置解析度和選擇性的使用者喜好設定)，動態調整及自動重排其內容。 此外，非固定格式文件提供進階文件功能，例如編頁和資料行。 本主題提供非固定格式文件和建立方式的概觀。  
@@ -89,9 +89,9 @@ ms.locfileid: "59139603"
   
  針對非固定格式內容的目的，有兩個重要分類︰  
   
-1.  **區塊衍生類別**:也稱為 「 區塊內容的項目 」 或簡稱 「 區塊項目 」。 繼承自項目<xref:System.Windows.Documents.Block>可用來分組同一個父系下的項目，或將通用屬性套用至群組。  
+1. **區塊衍生類別**:也稱為 「 區塊內容的項目 」 或簡稱 「 區塊項目 」。 繼承自項目<xref:System.Windows.Documents.Block>可用來分組同一個父系下的項目，或將通用屬性套用至群組。  
   
-2.  **內嵌衍生類別**:也稱為 「 內嵌內容項目 」 或簡稱 「 內嵌項目 」。 繼承自項目<xref:System.Windows.Documents.Inline>都是包含在區塊項目或另一個內嵌項目。 內嵌項目通常用為轉譯到螢幕之內容的直接容器。 例如， <xref:System.Windows.Documents.Paragraph> （區塊項目） 可以包含<xref:System.Windows.Documents.Run>（內嵌項目），但<xref:System.Windows.Documents.Run>實際包含在螢幕呈現的文字。  
+2. **內嵌衍生類別**:也稱為 「 內嵌內容項目 」 或簡稱 「 內嵌項目 」。 繼承自項目<xref:System.Windows.Documents.Inline>都是包含在區塊項目或另一個內嵌項目。 內嵌項目通常用為轉譯到螢幕之內容的直接容器。 例如， <xref:System.Windows.Documents.Paragraph> （區塊項目） 可以包含<xref:System.Windows.Documents.Run>（內嵌項目），但<xref:System.Windows.Documents.Run>實際包含在螢幕呈現的文字。  
   
  以下簡短描述這兩種分類中的每個類別。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40057
 ms.assetid: 4ae3506e-2ebe-4ff3-995d-14ac60db5e9f
-ms.openlocfilehash: 554300f87dbfca351ebcd2d544051968e84880ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 105fa8da838938d13022c210c1f65cdafd251003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816798"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59308480"
 ---
 # <a name="namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname-doesnt-contain-any-public-member-or-cannot-be-found"></a>在專案層級 Imports' 中指定的命名空間或類型\<完整項目名稱 >' 不包含任何 public 成員，或是找不到
 在專案層級 Imports' 中指定的命名空間或類型\<完整項目名稱 >' 不包含任何 public 成員，或是找不到。 請確定命名空間或類型定義，而且包含至少一個 public 成員。 請確定別名名稱不包含其他別名。  
@@ -31,16 +31,16 @@ ms.locfileid: "58816798"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  開啟**專案設計工具**，並切換至**參考**頁面。  
+1. 開啟**專案設計工具**，並切換至**參考**頁面。  
   
-2.  在 **匯入命名空間**區段中，確認包含的項目是從您的專案存取。  
+2. 在 **匯入命名空間**區段中，確認包含的項目是從您的專案存取。  
   
-3.  請確認包含的項目會公開至少一個`Public`成員。  
+3. 請確認包含的項目會公開至少一個`Public`成員。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [專案設計工具、參考頁面 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [專案設計工具，參考頁 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
 - [Public](../../../visual-basic/language-reference/modifiers/public.md)
-- [在 Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
-- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [Visual Basic 中的命名空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)
+- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)

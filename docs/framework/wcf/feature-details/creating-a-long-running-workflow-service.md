@@ -2,12 +2,12 @@
 title: 建立長期執行的工作流程服務
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: 37d3accae017b6725eab5ebb3d7df6e1bc15a56a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59109651"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301343"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>建立長期執行的工作流程服務
 本主題會說明如何建立長時間執行的工作流程服務。 長時間執行的工作流程服務可能會執行一段很長的時間。 有時候，此工作流程可能會處於閒置狀態，等候其他某些資訊。 發生這種情況時，此工作流程會保存至 SQL 資料庫並從記憶體中移除。 當其他資訊可用時，此工作流程執行個體就會重新載入記憶體中並繼續執行。  在本案例中，您要實作非常簡化的訂購系統。  用戶端會將初始訊息傳送至工作流程服務，以便啟動訂單。 然後，服務會將訂單 ID 傳回給用戶端。 此時，工作流程服務會等候用戶端的其他訊息、進入閒置狀態並保存至 SQL Server 資料庫。  當用戶端傳送下一則訊息以訂購項目時，工作流程服務就會重新載入記憶體中，並且完成訂單處理作業。 在程式碼範例中，它會傳回一個字串，表示項目已經加入至訂單。 此程式碼範例並非採用此技術的實際應用程式，而是說明長時間執行工作流程服務的簡單範例。 本主題假設您知道如何建立 Visual Studio 2012 專案和方案。
@@ -15,33 +15,33 @@ ms.locfileid: "59109651"
 ## <a name="prerequisites"></a>必要條件
  您必須先安裝下列軟體，才能使用此逐步解說：
 
-1.  Microsoft SQL Server 2008
+1. Microsoft SQL Server 2008
 
-2.  Visual Studio 2012
+2. Visual Studio 2012
 
-3.  Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
+3. Microsoft  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]
 
-4.  您已熟悉 WCF 和 Visual Studio 2012，並了解如何建立專案/方案。
+4. 您已熟悉 WCF 和 Visual Studio 2012，並了解如何建立專案/方案。
 
 ### <a name="to-setup-the-sql-database"></a>若要設定 SQL 資料庫
 
-1.  為了保存工作流程服務執行個體，您必須已經安裝 Microsoft SQL Server 而且必須設定資料庫來儲存已保存的工作流程執行個體。 執行 Microsoft SQL Management Studio，即可**開始**按鈕，選取**所有程式**， **Microsoft SQL Server 2008**，和**Microsoft SQLManagement Studio**。
+1. 為了保存工作流程服務執行個體，您必須已經安裝 Microsoft SQL Server 而且必須設定資料庫來儲存已保存的工作流程執行個體。 執行 Microsoft SQL Management Studio，即可**開始**按鈕，選取**所有程式**， **Microsoft SQL Server 2008**，和**Microsoft SQLManagement Studio**。
 
-2.  按一下  **Connect**按鈕以登入 SQL Server 執行個體
+2. 按一下  **Connect**按鈕以登入 SQL Server 執行個體
 
-3.  以滑鼠右鍵按一下**資料庫**在樹狀結構檢視，然後選取**新的資料庫...** 若要建立新的資料庫稱為`SQLPersistenceStore`。
+3. 以滑鼠右鍵按一下**資料庫**在樹狀結構檢視，然後選取**新的資料庫...** 若要建立新的資料庫稱為`SQLPersistenceStore`。
 
-4.  執行 SqlWorkflowInstanceStoreSchema.sql 指令碼檔 (位於 SQLPersistenceStore 資料庫的 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 目錄中)，以便設定所需的資料庫結構描述。
+4. 執行 SqlWorkflowInstanceStoreSchema.sql 指令碼檔 (位於 SQLPersistenceStore 資料庫的 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 目錄中)，以便設定所需的資料庫結構描述。
 
-5.  執行 SqlWorkflowInstanceStoreLogic.sql 指令碼檔 (位於 SQLPersistenceStore 資料庫的 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 目錄中)，以便設定所需的資料庫邏輯。
+5. 執行 SqlWorkflowInstanceStoreLogic.sql 指令碼檔 (位於 SQLPersistenceStore 資料庫的 C:\Windows\Microsoft.NET\Framework\v4.0\SQL\en 目錄中)，以便設定所需的資料庫邏輯。
 
 ### <a name="to-create-the-web-hosted-workflow-service"></a>若要建立 Web 裝載的工作流程服務
 
-1.  建立空白的 Visual Studio 2012 解決方案，將其命名`OrderProcessing`。
+1. 建立空白的 Visual Studio 2012 解決方案，將其命名`OrderProcessing`。
 
-2.  將名為 `OrderService` 的新 WCF 工作流程服務應用程式專案加入至此方案。
+2. 將名為 `OrderService` 的新 WCF 工作流程服務應用程式專案加入至此方案。
 
-3.  在 專案屬性 對話方塊中，選取**Web**  索引標籤。
+3. 在 專案屬性 對話方塊中，選取**Web**  索引標籤。
 
     1.  底下**起始動作**選取**特定頁面**並指定`Service1.xamlx`。
 
@@ -56,16 +56,16 @@ ms.locfileid: "59109651"
 
          這兩個步驟會將工作流程服務專案設定為由 IIS 裝載。
 
-4.  開啟`Service1.xamlx`是否不已經開啟，並刪除現有**ReceiveRequest**並**SendResponse**活動。
+4. 開啟`Service1.xamlx`是否不已經開啟，並刪除現有**ReceiveRequest**並**SendResponse**活動。
 
-5.  選取 **循序服務**活動，然後按一下**變數**連結並新增下列圖所示的變數。 這樣做就會加入一些之後將用於工作流程服務的變數。
+5. 選取 **循序服務**活動，然後按一下**變數**連結並新增下列圖所示的變數。 這樣做就會加入一些之後將用於工作流程服務的變數。
 
     > [!NOTE]
     >  如果 CorrelationHandle 不是變數類型 下拉式清單中，選取**瀏覽型別**從下拉式清單。 輸入中的 CorrelationHandle**型別名稱**，從清單方塊中選取 CorrelationHandle，然後按一下**確定**。
 
      ![加入變數](./media/creating-a-long-running-workflow-service/add-variables-sequential-service-activity.gif "將變數加入至循序服務活動。")
 
-6.  將拖放**ReceiveAndSendReply**活動範本**循序服務**活動。 這組活動將會接收用戶端的訊息並傳回回覆。
+6. 將拖放**ReceiveAndSendReply**活動範本**循序服務**活動。 這組活動將會接收用戶端的訊息並傳回回覆。
 
     1.  選取 **接收**活動，然後設定屬性以在下圖中反白顯示。
 
@@ -95,7 +95,7 @@ ms.locfileid: "59109651"
 
          ![加入相互關聯初始設定式](./media/creating-a-long-running-workflow-service/add-correlationinitializers.png "新增相互關聯初始設定式。")
 
-7.  拖放另一個**ReceiveAndSendReply**活動至工作流程的結尾 (外部**順序**包含第一個**接收**並**SendReply**活動)。 這樣就會接收用戶端所傳送的第二則訊息並回應訊息。
+7. 拖放另一個**ReceiveAndSendReply**活動至工作流程的結尾 (外部**順序**包含第一個**接收**並**SendReply**活動)。 這樣就會接收用戶端所傳送的第二則訊息並回應訊息。
 
     1.  選取**順序**，其中包含新加入**接收**並**SendReply**活動，然後按一下**變數** 按鈕。 加入在下圖中反白顯示的變數：
 
@@ -131,7 +131,7 @@ ms.locfileid: "59109651"
 
              ![設定 SendReply 活動的資料繫結](./media/creating-a-long-running-workflow-service/set-property-for-sendreplytoadditem.gif "設定 SendReplyToAddItem 活動的屬性。")
 
-8.  開啟 web.config 檔案並新增下列項目\<行為 > 區段以啟用工作流程持續性。
+8. 開啟 web.config 檔案並新增下列項目\<行為 > 區段以啟用工作流程持續性。
 
     ```xml
     <sqlWorkflowInstanceStore connectionString="Data Source=your-machine\SQLExpress;Initial Catalog=SQLPersistenceStore;Integrated Security=True;Asynchronous Processing=True" instanceEncodingOption="None" instanceCompletionAction="DeleteAll" instanceLockedExceptionAction="BasicRetry" hostLockRenewalPeriod="00:00:30" runnableInstancesDetectionPeriod="00:00:02" />
@@ -145,17 +145,17 @@ ms.locfileid: "59109651"
 
 ### <a name="to-create-a-client-application-to-call-the-workflow-service"></a>若要建立用戶端應用程式來呼叫工作流程服務
 
-1.  將名為 `OrderClient` 的新主控台應用程式專案加入至方案。
+1. 將名為 `OrderClient` 的新主控台應用程式專案加入至方案。
 
-2.  將下列組件的參考加入至 `OrderClient` 專案。
+2. 將下列組件的參考加入至 `OrderClient` 專案。
 
     1.  System.ServiceModel.dll
 
     2.  System.ServiceModel.Activities.dll
 
-3.  將服務參考加入至工作流程服務並將 `OrderService` 指定為命名空間。
+3. 將服務參考加入至工作流程服務並將 `OrderService` 指定為命名空間。
 
-4.  在用戶端專案的 `Main()` 方法中，加入下列程式碼：
+4. 在用戶端專案的 `Main()` 方法中，加入下列程式碼：
 
     ```
     static void Main(string[] args)
@@ -182,17 +182,17 @@ ms.locfileid: "59109651"
     }
     ```
 
-5.  建置方案並執行 `OrderClient` 應用程式。 用戶端就會顯示下列文字：
+5. 建置方案並執行 `OrderClient` 應用程式。 用戶端就會顯示下列文字：
 
     ```Output
     Sending start messageWorkflow service is idle...Press [ENTER] to send an add item message to reactivate the workflow service...
     ```
 
-6.  若要確認已保存工作流程服務，啟動 移至 SQL Server Management Studio**開始**功能表上，選取**所有程式**， **Microsoft SQL Server 2008**， **SQL Server Management Studio**。
+6. 若要確認已保存工作流程服務，啟動 移至 SQL Server Management Studio**開始**功能表上，選取**所有程式**， **Microsoft SQL Server 2008**， **SQL Server Management Studio**。
 
     1.  在左側窗格中展開，請**資料庫**， **SQLPersistenceStore**，**檢視**，以滑鼠右鍵按一下  **System.Activities.DurableInstancing.Instances** ，然後選取**選取前 1000 個資料列**。 在 **結果**窗格可讓您確認您看到列出的至少一個執行個體。 如果執行時發生例外狀況，可能會有先前執行的其他執行個體。 您可以刪除現有的資料列，以滑鼠右鍵按一下**System.Activities.DurableInstancing.Instances** ，然後選取**編輯前 200 個資料列**、 按下**Execute**  按鈕，在 結果 窗格中選取所有資料列，並選取**刪除**。  若要確認顯示在資料庫中的執行個體就是應用程式所建立的執行個體，請先確認 Instances 檢視表是空的，然後再執行用戶端。 一旦用戶端執行之後，請重新執行查詢 (選取前 1000 個資料列) 並確認已經加入新的執行個體。
 
-7.  按下 Enter，將 add item 訊息傳送至工作流程服務。 用戶端就會顯示下列文字：
+7. 按下 Enter，將 add item 訊息傳送至工作流程服務。 用戶端就會顯示下列文字：
 
     ```Output
     Sending add item messageService returned: Item added to orderPress any key to continue . . .

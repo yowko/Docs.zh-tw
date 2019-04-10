@@ -2,12 +2,12 @@
 title: HOW TO：在重新裝載的設計工具中顯示驗證錯誤
 ms.date: 03/30/2017
 ms.assetid: 5aa8fb53-8f75-433b-bc06-7c7d33583d5d
-ms.openlocfilehash: 8f70b190042d167741bbadc4e1645756fe5b830d
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: a3d993f55bf130039905f1a6512a7ae104512432
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33512563"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310196"
 ---
 # <a name="how-to-display-validation-errors-in-a-rehosted-designer"></a>HOW TO：在重新裝載的設計工具中顯示驗證錯誤
 本主題描述如何擷取及發行 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] 中的驗證錯誤。 這提供確認重新裝載設計工具中工作流程是否有效的程序。  
@@ -16,7 +16,7 @@ ms.locfileid: "33512563"
   
 ### <a name="implement-the-ivalidationerrorservice-interface"></a>實作 IValidationErrorService 介面  
   
-1.  以下是將驗證錯誤寫出至偵錯記錄檔的簡單實作程式碼範例。  
+1. 以下是將驗證錯誤寫出至偵錯記錄檔的簡單實作程式碼範例。  
   
     ```  
     using System.Activities.Presentation.Validation;  
@@ -38,7 +38,7 @@ ms.locfileid: "33512563"
   
 ### <a name="publishing-to-the-editing-context"></a>發行至編輯內容  
   
-1.  以下用來發行至編輯內容的程式碼。  
+1. 以下用來發行至編輯內容的程式碼。  
   
     ```  
     wd.Context.Services.Publish<IValidationErrorService>(new DebugValidationErrorService());  

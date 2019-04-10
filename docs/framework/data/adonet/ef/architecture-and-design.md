@@ -2,12 +2,12 @@
 title: 架構與設計
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
-ms.openlocfilehash: 42d06fd04ae0459d23961a48ab5ccc0d55695ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59096133"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307570"
 ---
 # <a name="architecture-and-design"></a>架構與設計
 中的 SQL 產生模組[範例提供者](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)會實作成運算式樹狀架構表示的命令樹上的造訪者。 此產生作業是透過運算式樹狀結構，在單一行程中完成。  
@@ -252,13 +252,13 @@ private bool IsParentAJoin{get}
   
  造訪這些節點的作業會遵循下列模式：  
   
-1.  造訪關聯輸入並取得產生的 SqlSelectStatement。 關聯節點的輸入可能是下列其中一項：  
+1. 造訪關聯輸入並取得產生的 SqlSelectStatement。 關聯節點的輸入可能是下列其中一項：  
   
     -   關聯節點，包括範圍 (例如 DbScanExpression)。 造訪這類節點會傳回 SqlSelectStatement。  
   
     -   設定作業運算式 (例如 UNION ALL)。 其結果必須用括弧包裝並且放入新 SqlSelectStatement 的 FROM 子句中。  
   
-2.  檢查目前的節點是否能夠加入至輸入所產生的 SqlSelectStatement。 ＜將運算式組成 SQL 陳述式＞一節將詳細說明這點。 如果無法加入，則  
+2. 檢查目前的節點是否能夠加入至輸入所產生的 SqlSelectStatement。 ＜將運算式組成 SQL 陳述式＞一節將詳細說明這點。 如果無法加入，則  
   
     -   推出目前的 SqlSelectStatement 物件。  
   
@@ -266,13 +266,13 @@ private bool IsParentAJoin{get}
   
     -   將新物件放在堆疊的頂端。  
   
-3.  將輸入運算式繫結重新導向至輸入中的正確符號。 這項資訊會在 SqlSelectStatement 物件中維護。  
+3. 將輸入運算式繫結重新導向至輸入中的正確符號。 這項資訊會在 SqlSelectStatement 物件中維護。  
   
-4.  加入新的 SymbolTable 範圍。  
+4. 加入新的 SymbolTable 範圍。  
   
-5.  造訪運算式的非輸入部分 (例如投影和述詞)。  
+5. 造訪運算式的非輸入部分 (例如投影和述詞)。  
   
-6.  推出加入至全域堆疊的所有物件。  
+6. 推出加入至全域堆疊的所有物件。  
   
  DbSkipExpression 沒有 SQL 的直接對等項目。 就邏輯上來說，它會轉譯成：  
   
@@ -301,9 +301,9 @@ ORDER BY sk1, sk2, ...
   
  第二步，一次處理一個輸入。 針對每個輸入：  
   
-1.  造訪輸入。  
+1. 造訪輸入。  
   
-2.  透過叫用 ProcessJoinInputResult，後置處理造訪輸入的結果，而這個方法會在造訪聯結運算式的子系以及可能完成子系所產生的 SqlSelectStatement 之後負責維護符號表。 子系的結果可能是下列其中一項：  
+2. 透過叫用 ProcessJoinInputResult，後置處理造訪輸入的結果，而這個方法會在造訪聯結運算式的子系以及可能完成子系所產生的 SqlSelectStatement 之後負責維護符號表。 子系的結果可能是下列其中一項：  
   
     -   與即將加入父系之陳述式不同的 SqlSelectStatement。 在這種情況下，它可能必須透過加入預設資料行完成。 如果輸入是聯結，您就必須建立新的聯結符號。 否則，請建立一般符號。  
   

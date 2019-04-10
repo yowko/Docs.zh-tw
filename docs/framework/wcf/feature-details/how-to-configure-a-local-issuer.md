@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: cb4a2bcc6f62fac5d0dde82ab32ed6e04e8a9b7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306985"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>HOW TO：設定本機簽發者
 本主題會說明如何將用戶端設定成使用已發行權杖的本機簽發者。  
@@ -27,14 +27,14 @@ ms.locfileid: "59095551"
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>透過程式碼來設定本機簽發者  
   
-1.  建立類型的變數 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
+1. 建立類型的變數 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>  
   
-2.  將此變數設為從 <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> 類別的 `ClientCredentials` 屬性傳回的執行個體 (Instance)。 該執行個體會由用戶端 (繼承自 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>) 的 <xref:System.ServiceModel.ClientBase%601> 屬性，或是 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 的 <xref:System.ServiceModel.ChannelFactory> 屬性傳回：  
+2. 將此變數設為從 <xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A> 類別的 `ClientCredentials` 屬性傳回的執行個體 (Instance)。 該執行個體會由用戶端 (繼承自 <xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A>) 的 <xref:System.ServiceModel.ClientBase%601> 屬性，或是 <xref:System.ServiceModel.ChannelFactory.Credentials%2A> 的 <xref:System.ServiceModel.ChannelFactory> 屬性傳回：  
   
      [!code-csharp[c_CreateSTS#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#9)]
      [!code-vb[c_CreateSTS#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#9)]  
   
-3.  將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> 屬性設定為 <xref:System.ServiceModel.EndpointAddress> 的新執行個體，其本機簽發者位址會當做建構函式 (Constructor) 的引數。  
+3. 將 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerAddress%2A> 屬性設定為 <xref:System.ServiceModel.EndpointAddress> 的新執行個體，其本機簽發者位址會當做建構函式 (Constructor) 的引數。  
   
      [!code-csharp[c_CreateSTS#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#10)]
      [!code-vb[c_CreateSTS#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#10)]  
@@ -49,27 +49,27 @@ ms.locfileid: "59095551"
      [!code-csharp[c_CreateSTS#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#12)]
      [!code-vb[c_CreateSTS#12](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#12)]  
   
-4.  設定本機簽發者使用的繫結<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>屬性。  
+4. 設定本機簽發者使用的繫結<xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerBinding%2A>屬性。  
   
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5.  選擇性。 將本機簽發者的已設定端點行為新增到 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 屬性所傳回的集合，即可新增該行為。  
+5. 選擇性。 將本機簽發者的已設定端點行為新增到 <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> 屬性所傳回的集合，即可新增該行為。  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
   
 ### <a name="to-configure-the-local-issuer-in-configuration"></a>透過組態來設定本機簽發者  
   
-1.  建立[ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)的子系的項目[ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)是本身的子系的項目[ \<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)是端點行為中的項目。  
+1. 建立[ \<localIssuer >](../../../../docs/framework/configure-apps/file-schema/wcf/localissuer.md)的子系的項目[ \<issuedToken >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtoken.md)是本身的子系的項目[ \<clientCredentials>](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)是端點行為中的項目。  
   
-2.  將 `address` 屬性設定為將接受權杖要求之本機簽發者的位址。  
+2. 將 `address` 屬性設定為將接受權杖要求之本機簽發者的位址。  
   
-3.  將 `binding` 和 `bindingConfiguration` 屬性設定為會參考當與本機簽發者端點進行通訊時所使用之適當繫結的值。  
+3. 將 `binding` 和 `bindingConfiguration` 屬性設定為會參考當與本機簽發者端點進行通訊時所使用之適當繫結的值。  
   
-4.  選擇性。 設定[\<身分識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)的子系的項目 <`localIssuer`> 項目，並指定本機簽發者的身分識別資訊。  
+4. 選擇性。 設定[\<身分識別 >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)的子系的項目 <`localIssuer`> 項目，並指定本機簽發者的身分識別資訊。  
   
-5.  選擇性。 設定[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)的子系的項目 <`localIssuer`> 項目，並指定正確定址本機簽發者所需的其他標頭。  
+5. 選擇性。 設定[\<標頭 >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)的子系的項目 <`localIssuer`> 項目，並指定正確定址本機簽發者所需的其他標頭。  
   
 ## <a name="net-framework-security"></a>.NET Framework 安全性  
  請注意，如果已指定特定繫結的簽發者位址和繫結，這時使用該繫結的端點就不會使用該本機簽發者。 預期一定要使用該本機簽發者的用戶端應該要確定自己沒有使用這類繫結，否則它們就會修改繫結，進而使得簽發者位址成為 `null`。  

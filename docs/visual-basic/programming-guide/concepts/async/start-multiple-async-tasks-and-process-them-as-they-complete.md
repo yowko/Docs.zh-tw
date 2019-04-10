@@ -2,12 +2,12 @@
 title: 啟動多項非同步工作並處理完成 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 57ffb748-af40-4794-bedd-bdb7fea062de
-ms.openlocfilehash: 8af97658465aa8f82fe3cd01013282c767eb4ba8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: a9a41c354993e0d362c344d523d6c4c4b6f61f10
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58816924"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309650"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-visual-basic"></a>啟動多項非同步工作並處理完成 (Visual Basic)
 使用 <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType>，即可同時啟動多個工作，並在完成時逐一進行處理，而不是依啟動順序進行處理。  
@@ -20,19 +20,19 @@ ms.locfileid: "58816924"
 ## <a name="downloading-the-example"></a>下載範例  
  您可以從 [Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea) (非同步範例：微調應用程式) 下載完整 Windows Presentation Foundation (WPF) 專案，然後遵循下列步驟。  
   
-1.  解壓縮您下載的檔案，然後啟動 Visual Studio。  
+1. 解壓縮您下載的檔案，然後啟動 Visual Studio。  
   
-2.  在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
+2. 在功能表列上，依序選擇 [檔案] 、[開啟舊檔] 及 [專案/方案] 。  
   
-3.  在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
+3. 在 [**開啟專案**] 對話方塊中，開啟您解壓縮之範例程式碼的資料夾，然後再開啟 AsyncFineTuningVB 的方案 (.sln) 檔案。  
   
-4.  在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
+4. 在方案總管中，開啟 **ProcessTasksAsTheyFinish** 專案的捷徑功能表，然後選擇 [設定為啟始專案]。  
   
-5.  選擇 F5 鍵以執行專案。  
+5. 選擇 F5 鍵以執行專案。  
   
      選擇 CTRL+F5 鍵以執行專案，而不進行偵錯。  
   
-6.  執行專案數次，確認所下載的長度不一定會以相同的順序出現。  
+6. 執行專案數次，確認所下載的長度不一定會以相同的順序出現。  
   
  如果您不想要下載的專案，您可以檢閱本主題結尾的 MainWindow.xaml.vb 檔案。  
   

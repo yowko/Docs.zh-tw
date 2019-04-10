@@ -12,12 +12,12 @@ helpviewer_keywords:
 - drag-and-drop [WPF], events
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
-ms.openlocfilehash: 4fb80f749e203c5763f0aa56af4cbf066c7ffa37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139213"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301395"
 ---
 # <a name="drag-and-drop-overview"></a>拖放概觀
 本主題提供 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 應用程式中的拖放功能支援概觀。 拖放功能一般是指資料傳送的方法，這種方法需要使用滑鼠 (或其他一些指標裝置) 選取一或多個物件，將這些物件拖曳到 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 中一些想要的置放目標上，然後置放這些物件。  
@@ -181,11 +181,11 @@ ms.locfileid: "59139213"
   
  若要指定某個項目做為置放目標，您可以將其 <xref:System.Windows.UIElement.AllowDrop%2A> 屬性設定為 `true`。 接著會在項目上引發置放目標事件，以便您處理這些事件。 在拖放作業期間，置放目標上會發生以下一連串事件：  
   
-1.  <xref:System.Windows.DragDrop.DragEnter>  
+1. <xref:System.Windows.DragDrop.DragEnter>  
   
-2.  <xref:System.Windows.DragDrop.DragOver>  
+2. <xref:System.Windows.DragDrop.DragOver>  
   
-3.  <xref:System.Windows.DragDrop.DragLeave> 或 <xref:System.Windows.DragDrop.Drop>  
+3. <xref:System.Windows.DragDrop.DragLeave> 或 <xref:System.Windows.DragDrop.Drop>  
   
  <xref:System.Windows.DragDrop.DragEnter> 事件會在將資料拖曳到置放目標的界限內時發生。 您通常會處理這個事件來預覽拖放作業的效果 (如果適用於應用程式的話)。 請勿在 <xref:System.Windows.DragEventArgs.Effects%2A?displayProperty=nameWithType> 事件中設定 <xref:System.Windows.DragDrop.DragEnter> 屬性，因為它會在 <xref:System.Windows.DragDrop.DragOver> 事件中遭到覆寫。  
   

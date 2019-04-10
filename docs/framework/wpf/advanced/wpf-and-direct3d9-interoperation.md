@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WPF [WPF], creating Direct3D9 content
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
-ms.openlocfilehash: 04a668ea18177d2a174569f064d9102239dd5e7d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199319"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307726"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF 和 Direct3D9 互通
 您可以在 Windows Presentation Foundation (WPF) 應用程式中包含 Direct3D9 內容。 本主題描述如何建立 Direct3D9 內容，以便有效率地交互操作使用 WPF。  
@@ -112,13 +112,13 @@ ms.locfileid: "59199319"
   
  若要避免的效能負面影響，撰寫程式碼特別針對多重監視器案例。 下列清單顯示撰寫多重監視器的程式碼的方法之一。  
   
-1.  找到的點<xref:System.Windows.Interop.D3DImage>中使用的螢幕空間`Visual.ProjectToScreen`方法。  
+1. 找到的點<xref:System.Windows.Interop.D3DImage>中使用的螢幕空間`Visual.ProjectToScreen`方法。  
   
-2.  使用`MonitorFromPoint`GDI 方法來尋找顯示端點監視。  
+2. 使用`MonitorFromPoint`GDI 方法來尋找顯示端點監視。  
   
-3.  使用`IDirect3D9::GetAdapterMonitor`尋找哪些 Direct3D9 配接器監視的方法是在上。  
+3. 使用`IDirect3D9::GetAdapterMonitor`尋找哪些 Direct3D9 配接器監視的方法是在上。  
   
-4.  如果配接器不是具有背景緩衝區的配接器相同，新的監視器上建立新的背景緩衝區，並將它指派給<xref:System.Windows.Interop.D3DImage>背景緩衝區。  
+4. 如果配接器不是具有背景緩衝區的配接器相同，新的監視器上建立新的背景緩衝區，並將它指派給<xref:System.Windows.Interop.D3DImage>背景緩衝區。  
   
 > [!NOTE]
 >  如果<xref:System.Windows.Interop.D3DImage>information officer 監視器，效能可能會變慢的除了在 WDDM 的情況下，`IDirect3D9Ex`相同的介面卡上。 沒有任何方法可以提升效能，在此情況下。  

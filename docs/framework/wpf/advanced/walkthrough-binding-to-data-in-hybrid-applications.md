@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hybrid applications [WPF interoperability]
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
-ms.openlocfilehash: d497dfd5580f1d2741e0edafa86e9dd39ec374ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59191987"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300862"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>逐步解說：繫結至混合應用程式中的資料
 不論您使用繫結至控制項的資料來源是不可或缺的將基礎資料的存取權提供給使用者[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]或[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]。 本逐步解說示範如何在包含兩者的混合式應用程式使用資料繫結[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]和[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]控制項。  
@@ -49,23 +49,23 @@ ms.locfileid: "59191987"
   
 #### <a name="to-create-and-set-up-the-project"></a>建立並設定專案  
   
-1.  建立 WPF 應用程式專案，名為`WPFWithWFAndDatabinding`。  
+1. 建立 WPF 應用程式專案，名為`WPFWithWFAndDatabinding`。  
   
-2.  在 [方案總管] 中，加入下列組件的參考。  
+2. 在 [方案總管] 中，加入下列組件的參考。  
   
     -   WindowsFormsIntegration  
   
     -   System.Windows.Forms  
   
-3.  開啟 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
+3. 開啟 MainWindow.xaml 中的[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。  
   
-4.  在 <xref:System.Windows.Window>項目，新增下列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命名空間對應。  
+4. 在 <xref:System.Windows.Window>項目，新增下列[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]命名空間對應。  
   
     ```xaml  
     xmlns:wf="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"  
     ```  
   
-5.  命名的預設<xref:System.Windows.Controls.Grid>項目`mainGrid`藉由指派<xref:System.Windows.FrameworkElement.Name%2A>屬性。  
+5. 命名的預設<xref:System.Windows.Controls.Grid>項目`mainGrid`藉由指派<xref:System.Windows.FrameworkElement.Name%2A>屬性。  
   
      [!code-xaml[WPFWithWFAndDatabinding#8](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#8)]  
   
@@ -120,44 +120,44 @@ ms.locfileid: "59191987"
   
 #### <a name="to-add-the-data-source"></a>若要新增資料來源  
   
-1.  從**資料**功能表上，選取**加入新的資料來源**。  
+1. 從**資料**功能表上，選取**加入新的資料來源**。  
   
-2.  在 **資料來源組態精靈**，使用的資料集建立 Northwind 資料庫的連接。 如需詳細資訊，請參閱[如何：連接到資料庫中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))。  
+2. 在 **資料來源組態精靈**，使用的資料集建立 Northwind 資料庫的連接。 如需詳細資訊，請參閱[如何：連接到資料庫中的資料](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))。  
   
-3.  當提示您**資料來源組態精靈**，儲存連接字串，做為`NorthwindConnectionString`。  
+3. 當提示您**資料來源組態精靈**，儲存連接字串，做為`NorthwindConnectionString`。  
   
-4.  當系統提示您選擇您的資料庫物件時，選取`Customers`並`Orders`資料表，以及名稱產生的資料集`NorthwindDataSet`。  
+4. 當系統提示您選擇您的資料庫物件時，選取`Customers`並`Orders`資料表，以及名稱產生的資料集`NorthwindDataSet`。  
   
 ## <a name="binding-to-the-data-source"></a>繫結至資料來源  
  <xref:System.Windows.Forms.BindingSource?displayProperty=nameWithType>元件應用程式的資料來源提供統一的介面。 繫結至資料來源是在程式碼後置檔案中進行實作。  
   
 #### <a name="to-bind-to-the-data-source"></a>繫結至資料來源  
   
-1.  開啟程式碼後置檔案，命名為 MainWindow.xaml.vb 或 MainWindow.xaml.cs。  
+1. 開啟程式碼後置檔案，命名為 MainWindow.xaml.vb 或 MainWindow.xaml.cs。  
   
-2.  下列程式碼複製到`MainWindow`類別定義。  
+2. 下列程式碼複製到`MainWindow`類別定義。  
   
      此程式碼會宣告<xref:System.Windows.Forms.BindingSource>元件，並連接到資料庫的相關聯的協助程式類別。  
   
      [!code-csharp[WPFWithWFAndDatabinding#11](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#11)]
      [!code-vb[WPFWithWFAndDatabinding#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#11)]
 
-3.  將下列程式碼複製至建構函式。
+3. 將下列程式碼複製至建構函式。
 
      此程式碼會建立並初始化<xref:System.Windows.Forms.BindingSource>元件。
 
      [!code-csharp[WPFWithWFAndDatabinding#12](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml.cs#12)]
      [!code-vb[WPFWithWFAndDatabinding#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFWithWFAndDatabinding/VisualBasic/WPFWithWFAndDatabinding/Window1.xaml.vb#12)]
 
-4.  開啟 MainWindow.xaml。
+4. 開啟 MainWindow.xaml。
 
-5.  在 設計 檢視或 XAML 檢視中，選取 <xref:System.Windows.Window>項目。
+5. 在 設計 檢視或 XAML 檢視中，選取 <xref:System.Windows.Window>項目。
 
-6.  在 屬性 視窗中，按一下**事件** 索引標籤。
+6. 在 屬性 視窗中，按一下**事件** 索引標籤。
 
-7.  按兩下<xref:System.Windows.FrameworkElement.Loaded>事件。
+7. 按兩下<xref:System.Windows.FrameworkElement.Loaded>事件。
 
-8.  下列程式碼複製到<xref:System.Windows.FrameworkElement.Loaded>事件處理常式。
+8. 下列程式碼複製到<xref:System.Windows.FrameworkElement.Loaded>事件處理常式。
 
      此程式碼會指派<xref:System.Windows.Forms.BindingSource>元件做為資料內容並於其中填入`Customers`和`Orders`介面卡物件。
 

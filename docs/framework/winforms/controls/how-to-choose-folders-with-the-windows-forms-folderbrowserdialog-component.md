@@ -12,23 +12,23 @@ helpviewer_keywords:
 - folders [Windows Forms], choosing
 - directories [Windows Forms], selecting
 ms.assetid: 4593670e-7c7d-4661-b46b-4ffb63258adb
-ms.openlocfilehash: 2bff105d5c97a8b98d094a1ce3a4f033aa5971be
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 050af6d10faec3dd09998349dcf96e96ea0f9201
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59116073"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306180"
 ---
 # <a name="how-to-choose-folders-with-the-windows-forms-folderbrowserdialog-component"></a>HOW TO：使用 Windows Forms FolderBrowserDialog 元件選擇資料夾
 通常，在您建立的 Windows 應用程式內，必須提示使用者選取資料夾時，最常是在儲存一組檔案時。 Windows Form<xref:System.Windows.Forms.FolderBrowserDialog>元件可讓您輕鬆地完成這項工作。  
   
 ### <a name="to-choose-folders-with-the-folderbrowserdialog-component"></a>使用 FolderBrowserDialog 元件選擇資料夾  
   
-1.  在程序中，檢查<xref:System.Windows.Forms.FolderBrowserDialog>元件的<xref:System.Windows.Forms.Form.DialogResult%2A>屬性，請參閱  對話方塊中關閉的方式，並取得的值<xref:System.Windows.Forms.FolderBrowserDialog>元件的<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>屬性。  
+1. 在程序中，檢查<xref:System.Windows.Forms.FolderBrowserDialog>元件的<xref:System.Windows.Forms.Form.DialogResult%2A>屬性，請參閱  對話方塊中關閉的方式，並取得的值<xref:System.Windows.Forms.FolderBrowserDialog>元件的<xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A>屬性。  
   
-2.  如果您要設定最上層資料夾會出現在對話方塊中的樹狀檢視時，請設定<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>屬性，以採用的成員<xref:System.Environment.SpecialFolder>列舉型別。  
+2. 如果您要設定最上層資料夾會出現在對話方塊中的樹狀檢視時，請設定<xref:System.Windows.Forms.FolderBrowserDialog.RootFolder%2A>屬性，以採用的成員<xref:System.Environment.SpecialFolder>列舉型別。  
   
-3.  此外，您可以設定<xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>屬性，指定文字字串出現在資料夾瀏覽器樹狀檢視頂端。  
+3. 此外，您可以設定<xref:System.Windows.Forms.FolderBrowserDialog.Description%2A>屬性，指定文字字串出現在資料夾瀏覽器樹狀檢視頂端。  
   
      在下列範例中，<xref:System.Windows.Forms.FolderBrowserDialog>元件可用來選取資料夾，類似於當您在 Visual Studio 中建立專案並選取資料夾，將它儲存在系統提示。 在此範例中，資料夾名稱即會顯示在<xref:System.Windows.Forms.TextBox>表單上的控制項。 它是個不錯的主意，將位置放在可編輯的區域中，例如<xref:System.Windows.Forms.TextBox>控制項，以便使用者可以編輯其選取項目，如果發生錯誤或其他問題。 這個範例假設使用的表單<xref:System.Windows.Forms.FolderBrowserDialog>元件和<xref:System.Windows.Forms.TextBox>控制項。  
   

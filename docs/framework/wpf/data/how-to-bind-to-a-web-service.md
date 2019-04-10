@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web service binding [WPF]
 - data binding [WPF], Web service
 ms.assetid: 77e2d373-69ba-4cbd-b6f5-2c83c38fc98b
-ms.openlocfilehash: 66e91190e68d9610dd95d677edb276e117ec6abb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 2c3bc1f2142f07aba3df2da6c46117d3907443a5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59098569"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304983"
 ---
 # <a name="how-to-bind-to-a-web-service"></a>HOW TO：繫結至 Web 服務
 此範例示範如何繫結至 Web 服務方法呼叫所傳回的物件。  
@@ -24,13 +24,13 @@ ms.locfileid: "59098569"
   
  呼叫 Web 服務之前，您需要建立它的參考。 若要建立 Web 參考加入 MTPS 服務會使用[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]，請遵循下列步驟：  
   
-1.  開啟您的專案中[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]。  
+1. 開啟您的專案中[!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)]。  
   
-2.  從**專案**功能表上，按一下**加入 Web 參考**。  
+2. 從**專案**功能表上，按一下**加入 Web 參考**。  
   
-3.  在對話方塊中，將**URL**要[ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
+3. 在對話方塊中，將**URL**要[ http://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl ](https://services.msdn.microsoft.com/contentservices/contentservice.asmx?wsdl)。  
   
-4.  按下**移**，然後**將參考加入**。  
+4. 按下**移**，然後**將參考加入**。  
   
  接下來，您可以呼叫 Web 服務方法，並設定<xref:System.Windows.FrameworkElement.DataContext%2A>適當的控制項或視窗中傳回的物件。 **GetContent** MTPS 服務的方法，會參考**getContentRequest**物件。 因此，下列範例會先設定要求物件：  
   

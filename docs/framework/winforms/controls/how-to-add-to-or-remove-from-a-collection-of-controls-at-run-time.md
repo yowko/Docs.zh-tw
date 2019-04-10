@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 5c963976dd787b40c3e5c6180538051cfe419540
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59143139"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309442"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>HOW TO：在執行階段於控制項集合中新增或移除
 在應用程式開發的一般工作會將控制項加入和移除您的表單上的任何容器控制項的控制項 (例如<xref:System.Windows.Forms.Panel>或<xref:System.Windows.Forms.GroupBox>控制項或甚至是表單本身)。 在設計階段，可以將控制項直接拖曳至面板或群組方塊。 在執行階段，這些控制項會維護 `Controls` 集合，以便持續追蹤有哪些控制項置於其上。  
@@ -27,11 +27,11 @@ ms.locfileid: "59143139"
   
 ### <a name="to-add-a-control-to-a-collection-programmatically"></a>以程式設計方式將控制項新增至集合  
   
-1.  建立要新增之控制項的執行個體。  
+1. 建立要新增之控制項的執行個體。  
   
-2.  設定新控制項的屬性。  
+2. 設定新控制項的屬性。  
   
-3.  將控制項新增至父控制項的 `Controls` 集合。  
+3. 將控制項新增至父控制項的 `Controls` 集合。  
   
      下列程式碼範例示範如何建立的執行個體<xref:System.Windows.Forms.Button>控制項。 它需要表單<xref:System.Windows.Forms.Panel>控制項，建立按鈕的事件處理方法， `NewPanelButton_Click`，已經存在。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59143139"
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>以程式設計方式移除集合中的控制項  
   
-1.  移除事件的事件處理常式。 在 Visual Basic 中使用[RemoveHandler 陳述式](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)關鍵字，在視覺效果C#，使用[-= 運算子 (C#參考)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
+1. 移除事件的事件處理常式。 在 Visual Basic 中使用[RemoveHandler 陳述式](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)關鍵字，在視覺效果C#，使用[-= 運算子 (C#參考)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)。  
   
-2.  使用 `Remove` 方法，從面板的 `Controls` 集合中刪除所需控制項。  
+2. 使用 `Remove` 方法，從面板的 `Controls` 集合中刪除所需控制項。  
   
-3.  呼叫<xref:System.Windows.Forms.Control.Dispose%2A>方法，以釋放控制項所使用的所有資源。  
+3. 呼叫<xref:System.Windows.Forms.Control.Dispose%2A>方法，以釋放控制項所使用的所有資源。  
   
     ```vb  
     Public Sub RemoveControl()  

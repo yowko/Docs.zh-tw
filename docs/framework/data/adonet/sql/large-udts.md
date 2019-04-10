@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
-ms.openlocfilehash: 8b2f195b2cb4c365693dc0f250a577a93cf25eee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59181528"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303475"
 ---
 # <a name="large-udts"></a>大型 UDT
 使用者定義型別 (UDT) 可透過在 SQL Server 資料庫中儲存 Common Language Runtime (CLR) 物件，讓開發人員擴充伺服器的純量型別 (Scalar Type) 系統。 UDT 可以包含多個項目而且可以具有行為，這點與單一 SQL Server 系統資料型別所組成的傳統別名資料型別不同。  
@@ -24,7 +24,7 @@ ms.locfileid: "59181528"
   
  **SQL Server 線上叢書**  
   
-1.  [CLR 使用者定義類型](https://go.microsoft.com/fwlink/?LinkId=98366)  
+1. [CLR 使用者定義類型](https://go.microsoft.com/fwlink/?LinkId=98366)  
   
 ## <a name="retrieving-udt-schemas-using-getschema"></a>使用 GetSchema 來擷取 UDT 結構描述  
  <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 的 <xref:System.Data.SqlClient.SqlConnection> 方法會在 <xref:System.Data.DataTable> 中傳回資料庫結構描述資訊。 如需詳細資訊，請參閱 < [SQL Server 結構描述集合](../../../../../docs/framework/data/adonet/sql-server-schema-collections.md)。  

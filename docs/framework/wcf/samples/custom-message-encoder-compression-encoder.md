@@ -2,12 +2,12 @@
 title: 自訂訊息編碼器：壓縮編碼器
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: 9dd1e2eb25b2f400ba42b6cee75f8563c4d52c31
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140682"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310495"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>自訂訊息編碼器：壓縮編碼器
 此範例示範如何實作自訂編碼器，使用 Windows Communication Foundation (WCF) 平台。  
@@ -39,9 +39,9 @@ ms.locfileid: "59140682"
   
  如前所述，在自訂編碼器中會實作多個層級。 為了更清楚說明這些層級之間的關係，下列清單中會提供啟動服務的簡化事件順序：  
   
-1.  啟動伺服器。  
+1. 啟動伺服器。  
   
-2.  讀取組態資訊。  
+2. 讀取組態資訊。  
   
     1.  服務組態註冊自訂組態處理常式。  
   
@@ -51,11 +51,11 @@ ms.locfileid: "59140682"
   
     4.  自訂繫結項目會建立及傳回訊息編碼器處理站。  
   
-3.  收到訊息。  
+3. 收到訊息。  
   
-4.  訊息編碼器處理站傳回訊息編碼器，以在訊息中閱讀及寫出回應。  
+4. 訊息編碼器處理站傳回訊息編碼器，以在訊息中閱讀及寫出回應。  
   
-5.  編碼器層會實作為類別處理站。 只需要對自訂編碼器對大眾公開編碼器累別處理站。 建立 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 物件時，繫結項目會傳回處理站物件。 您可以在緩衝處理或資料流處理模式中操作訊息編碼器。 這個範例會同時示範緩衝處理模式和資料流處理模式。  
+5. 編碼器層會實作為類別處理站。 只需要對自訂編碼器對大眾公開編碼器累別處理站。 建立 <xref:System.ServiceModel.ServiceHost> 或 <xref:System.ServiceModel.ChannelFactory%601> 物件時，繫結項目會傳回處理站物件。 您可以在緩衝處理或資料流處理模式中操作訊息編碼器。 這個範例會同時示範緩衝處理模式和資料流處理模式。  
   
  在每個模式中，抽象 `ReadMessage` 類別上會伴隨 `WriteMessage` 和 `MessageEncoder` 方法。 主要的編碼工作都會透過這些方法進行。 此範例會包裝現有的文字和二進位訊息編碼器。 這樣可讓範例將訊息之網路表示的讀取和撰寫委派給內部編碼器，並讓壓縮編碼器可壓縮或解壓縮結果。 因為沒有任何管線的訊息編碼，這是在 WCF 中使用多個編碼器的唯一模型。 一旦解壓縮訊息，產生的訊息就會傳遞至堆疊上層，以供通道堆疊處理。 在壓縮期間，產生的已壓縮訊息會直接寫入提供的資料流。  
   
@@ -334,17 +334,17 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0：  
+1. 使用下列命令安裝 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0：  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  
     ```  
   
-2.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+2. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-3.  若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
+3. 若要建置方案時，請依照中的指示[建置 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/building-the-samples.md)。  
   
-4.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+4. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!IMPORTANT]
 >  這些範例可能已安裝在您的電腦上。 請先檢查下列 (預設) 目錄，然後再繼續。  

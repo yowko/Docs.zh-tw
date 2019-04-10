@@ -3,12 +3,12 @@ title: WSFederation 驗證模組概觀
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: 4b15952e2fdc050c5291bed6a58d2eecbf5ddbfd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: b13536acf71018eb21b6930d7542a9911add8261
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092460"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310248"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 驗證模組概觀
 Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-同盟驗證模組 (WS-FAM) 提供同盟驗證的支援。 本主題將協助您了解同盟驗證的運作方式以及如何使用它。  
@@ -18,26 +18,26 @@ Windows Identity Foundation (WIF) 內含可在 ASP.NET 應用程式中透過 WS-
   
  ![同盟驗證情節](../../../docs/framework/security/media/federatedauthentication.gif "FederatedAuthentication")  
   
-1.  Fabrikam 信任網域中的用戶端將某個要求傳送到 Contoso 信任網域中的信賴憑證者 (RP) 應用程式。  
+1. Fabrikam 信任網域中的用戶端將某個要求傳送到 Contoso 信任網域中的信賴憑證者 (RP) 應用程式。  
   
-2.  RP 將用戶端重新導向至 Contoso 信任網域中的 STS。 這個 STS 對該用戶端一無所知。  
+2. RP 將用戶端重新導向至 Contoso 信任網域中的 STS。 這個 STS 對該用戶端一無所知。  
   
-3.  Contoso STS 將用戶端重新導向至與 Contoso 信任網域具有信任關係的 Fabrikam 信任網域中的 STS。  
+3. Contoso STS 將用戶端重新導向至與 Contoso 信任網域具有信任關係的 Fabrikam 信任網域中的 STS。  
   
-4.  Fabrikam STS 驗證用戶端的身分識別，並簽發安全性權杖給 Contoso STS。  
+4. Fabrikam STS 驗證用戶端的身分識別，並簽發安全性權杖給 Contoso STS。  
   
-5.  Contoso STS 使用 Fabrikam 權杖來建立屬於其自身且可由 RP 使用的權杖，並將它傳送到 RP。  
+5. Contoso STS 使用 Fabrikam 權杖來建立屬於其自身且可由 RP 使用的權杖，並將它傳送到 RP。  
   
-6.  RP 從安全性權杖擷取用戶端的宣告，並進行授權決策。  
+6. RP 從安全性權杖擷取用戶端的宣告，並進行授權決策。  
   
 ### <a name="using-the-federated-authentication-module-with-aspnet"></a>搭配 ASP.NET 來使用同盟驗證模組  
  <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WS-FAM) 是 HTTP 模組，讓您新增的同盟的驗證[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]應用程式。 同盟驗證會將驗證邏輯交給 STS 處理，讓您可以專心地撰寫商務邏輯。  
   
  您可以設定 WS-FAM，以便指定非驗證要求將重新導向至其中的 STS。 WIF 可讓您使用兩種方式來驗證使用者：  
   
-1.  被動式重新導向：當未驗證的使用者嘗試存取受保護的資源，並想要只是重新導向至 STS 而不需要登入頁面時，這是正確的方法。 STS 會驗證使用者的身分識別，並簽發包含該使用者之適當宣告的安全性權杖。 這個選項會要求 WS-FAM 必須加入 HTTP 模組管線中。 您可以使用 Visual Studio 2012 的身分識別與存取工具 ，修改應用程式組態檔來使用 WS-FAM 以及建立與 STS 的同盟。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
+1. 被動式重新導向：當未驗證的使用者嘗試存取受保護的資源，並想要只是重新導向至 STS 而不需要登入頁面時，這是正確的方法。 STS 會驗證使用者的身分識別，並簽發包含該使用者之適當宣告的安全性權杖。 這個選項會要求 WS-FAM 必須加入 HTTP 模組管線中。 您可以使用 Visual Studio 2012 的身分識別與存取工具 ，修改應用程式組態檔來使用 WS-FAM 以及建立與 STS 的同盟。 如需詳細資訊，請參閱 [Visual Studio 2012 的身分識別與存取工具](../../../docs/framework/security/identity-and-access-tool-for-vs.md)。  
   
-2.  您可以針對 RP 應用程式的登入頁面，在程式碼後置中呼叫 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
+2. 您可以針對 RP 應用程式的登入頁面，在程式碼後置中呼叫 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.SignIn%2A?displayProperty=nameWithType> 方法或 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule.RedirectToIdentityProvider%2A> 方法。  
   
  在被動式重新導向中，所有通訊都是透過用戶端 (通常是瀏覽器) 的回應/重新導向來執行。 您可以將 WS-FAM 新增至應用程式的 HTTP 管線，它會在其中監看是否有未經驗證的使用者要求，並將使用者重新導向至您指定的 STS。  
   

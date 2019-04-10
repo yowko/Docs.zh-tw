@@ -3,12 +3,12 @@ title: 建置第一個宣告感知 WCF 服務
 ms.date: 03/30/2017
 ms.assetid: e0e6d091-9a97-4888-8f2c-cbcee42d90ee
 author: BrucePerlerMS
-ms.openlocfilehash: 82ce5441463989507872750eb025899b8f80adee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 13a17473388582e5fa72cd8d335b6a05204ea509
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144455"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306608"
 ---
 # <a name="building-my-first-claims-aware-wcf-service"></a>建置第一個宣告感知 WCF 服務
 ## <a name="applies-to"></a>適用於  
@@ -22,11 +22,11 @@ ms.locfileid: "59144455"
   
  ![此圖表顯示 WIF 基本宣告感知 WCF 服務元件。](./media/building-my-first-claims-aware-wcf-service/windows-identify-foundation-basic-claims-aware-windows-communication-foundation-service.gif)  
   
-1.  WCF 服務用戶端 (有時稱為代理程式) 會使用 WIF 傳送認證至 STS，在驗證成功之後，STS 隨即發行權杖給代理程式。  
+1. WCF 服務用戶端 (有時稱為代理程式) 會使用 WIF 傳送認證至 STS，在驗證成功之後，STS 隨即發行權杖給代理程式。  
   
-2.  代理程式隨即將 STS 發行的權杖傳送至 WCF 服務。  
+2. 代理程式隨即將 STS 發行的權杖傳送至 WCF 服務。  
   
-3.  宣告感知 WCF 服務設定為信任 STS 和它發行的權杖。 宣告感知 WCF 服務會使用 WIF 驗證和剖析權杖。 開發人員可以使用適當的 WIF API 和類型 (例如 **ClaimsPrincipal**) 來滿足應用程式的需求 (例如為它實作授權)。  
+3. 宣告感知 WCF 服務設定為信任 STS 和它發行的權杖。 宣告感知 WCF 服務會使用 WIF 驗證和剖析權杖。 開發人員可以使用適當的 WIF API 和類型 (例如 **ClaimsPrincipal**) 來滿足應用程式的需求 (例如為它實作授權)。  
   
  從 .NET 4.5 開始，WIF 是 .NET Framework 套件的一部分。 在架構中直接提供 WIF 類別可讓 .NET 中的宣告式身分識別的整合更加深入，讓您更容易使用宣告。 使用 WIF 4.5，您不必安裝任何超出範圍的元件就能開始開發宣告感知 Web 應用程式。 WIF 類別現在已廣泛存在於各種組件，主要的類別是 System.Security.Claims、System.IdentityModel 和 System.IdentityModel.Services。  
   

@@ -2,12 +2,12 @@
 title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
-ms.openlocfilehash: 07a7f28e08ed43672e94151cd9de88301069e1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304463"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.OracleBFile> 類別，可用來與 Oracle <xref:System.Data.OracleClient.OracleType.BFile> 資料型別搭配使用。  
@@ -26,9 +26,9 @@ Oracle 的 .NET Framework 資料提供者包括 <xref:System.Data.OracleClient.O
   
  每個非 NULL **OracleBFile**物件會定義基礎實體檔案的位置的兩個實體與關聯：  
   
-1.  Oracle DIRECTORY 物件 (檔案系統中目錄的資料庫別名) 及  
+1. Oracle DIRECTORY 物件 (檔案系統中目錄的資料庫別名) 及  
   
-2.  基礎實體檔案的檔名 (位於與 DIRECTORY 物件相關聯的目錄中)。  
+2. 基礎實體檔案的檔名 (位於與 DIRECTORY 物件相關聯的目錄中)。  
   
 ## <a name="example"></a>範例  
  下列 C# 範例示範如何建立**BFILE**在 Oracle 資料表中，然後再擷取它的形式**OracleBFile**物件。 此範例示範如何使用<xref:System.Data.OracleClient.OracleDataReader>物件和**OracleBFile** **搜尋**並**讀取**方法。 請注意，若要使用此範例中，您必須先建立名為"c:\\\bfiles"和 Oracle 伺服器上名為"MyFile.jpg"的檔案。  

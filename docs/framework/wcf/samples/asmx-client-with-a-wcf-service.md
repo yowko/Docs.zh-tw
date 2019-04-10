@@ -2,12 +2,12 @@
 title: 含 WCF 服務的 ASMX 用戶端
 ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
-ms.openlocfilehash: e8cf536d93337986882a0a5136194a3ad4a03b58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1eee814b17a7547bbbc07e17dd675c5f37860341
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59139551"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302227"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>含 WCF 服務的 ASMX 用戶端
 此範例示範如何建立使用 Windows Communication Foundation (WCF) 服務，並從非 WCF 用戶端，例如 ASMX 用戶端存取服務。  
@@ -131,11 +131,11 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>若要安裝、建置及執行範例  
   
-1.  請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
+1. 請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。  
   
-2.  若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
+2. 若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。  
   
-3.  若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
+3. 若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。  
   
 > [!NOTE]
 >  如需有關傳遞和傳回複雜資料類型請參閱：[資料繫結，在 Windows Forms 用戶端](../../../../docs/framework/wcf/samples/data-binding-in-a-windows-forms-client.md)， [Windows Presentation Foundation 用戶端中的資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-a-wpf-client.md)，和[ASP.NET 用戶端中的資料繫結](../../../../docs/framework/wcf/samples/data-binding-in-an-aspnet-client.md)  

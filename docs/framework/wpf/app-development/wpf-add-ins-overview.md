@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 36cfcaca5ae49c87916f6d7c769c878c4321247f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59091612"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304801"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF 增益集概觀
 <a name="Introduction"></a> .NET Framework 包含開發人員可用來建立支援增益集擴充性的應用程式增益集模型。 此增益集模型可讓您建立增益集，整合並擴充應用程式的功能。 在某些情況下，應用程式也需要顯示增益集所提供的使用者介面。本主題說明 WPF 擴大.NET Framework 增益集模型以啟用這些案例、 架構、 其優點，以及其限制背後的方式。  
@@ -73,7 +73,7 @@ ms.locfileid: "59091612"
 ## <a name="wpf-add-ins"></a>WPF 增益集  
  WPF 中，搭配.NET Framework 增益集模型，可讓您解決各種需要主應用程式顯示使用者介面增益集的案例。特別是，這些案例中討論的 wpf 使用下列兩種程式設計模型：  
   
-1.  **增益集傳回 UI**。 增益集傳回 UI 主應用程式透過方法呼叫，如合約所定義。 此案例用於下列情況︰  
+1. **增益集傳回 UI**。 增益集傳回 UI 主應用程式透過方法呼叫，如合約所定義。 此案例用於下列情況︰  
   
     -   UI 的增益集所傳回的外觀取決於資料，或已存在的條件只會在執行階段，例如動態產生的報告。  
   
@@ -81,7 +81,7 @@ ms.locfileid: "59091612"
   
     -   增益集主要執行主應用程式的服務，並將狀態回報給主應用程式 ui。  
   
-2.  **增益集為 UI**。 增益集為 UI 中，合約所定義。 此案例用於下列情況︰  
+2. **增益集為 UI**。 增益集為 UI 中，合約所定義。 此案例用於下列情況︰  
   
     -   增益集不提供顯示以外的服務，例如廣告。  
   
@@ -102,13 +102,13 @@ ms.locfileid: "59091612"
   
  WPF UI 型別不是可遠端處理。 若要解決此問題，WPF 會擴充.NET Framework 增益集模型可讓 WPF UI 增益集所建立要顯示從主應用程式。 這項支援由兩種類型的 WPF 所提供：<xref:System.AddIn.Contract.INativeHandleContract>介面和實作的兩個靜態方法<xref:System.AddIn.Pipeline.FrameworkElementAdapters>類別：<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。 概括而言，這些類型和方法的使用方式如下︰  
   
-1.  WPF 可讓您需要增益集所提供的使用者介面會直接或間接衍生自的類別<xref:System.Windows.FrameworkElement>，例如圖形、 控制項、 使用者控制項、 版面配置面板和頁面。  
+1. WPF 可讓您需要增益集所提供的使用者介面會直接或間接衍生自的類別<xref:System.Windows.FrameworkElement>，例如圖形、 控制項、 使用者控制項、 版面配置面板和頁面。  
   
-2.  只要合約宣告 UI，將增益集與主應用程式之間傳遞，它必須宣告為<xref:System.AddIn.Contract.INativeHandleContract>(不<xref:System.Windows.FrameworkElement>);<xref:System.AddIn.Contract.INativeHandleContract>是可以跨隔離界限傳遞增益集 UI 可從遠端表示。  
+2. 只要合約宣告 UI，將增益集與主應用程式之間傳遞，它必須宣告為<xref:System.AddIn.Contract.INativeHandleContract>(不<xref:System.Windows.FrameworkElement>);<xref:System.AddIn.Contract.INativeHandleContract>是可以跨隔離界限傳遞增益集 UI 可從遠端表示。  
   
-3.  從增益集的應用程式定義域中，在傳遞之前<xref:System.Windows.FrameworkElement>會封裝成<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
+3. 從增益集的應用程式定義域中，在傳遞之前<xref:System.Windows.FrameworkElement>會封裝成<xref:System.AddIn.Contract.INativeHandleContract>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>。  
   
-4.  傳遞至主應用程式的應用程式定義域之後,<xref:System.AddIn.Contract.INativeHandleContract>必須重新封裝為<xref:System.Windows.FrameworkElement>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。  
+4. 傳遞至主應用程式的應用程式定義域之後,<xref:System.AddIn.Contract.INativeHandleContract>必須重新封裝為<xref:System.Windows.FrameworkElement>藉由呼叫<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>。  
   
  如何<xref:System.AddIn.Contract.INativeHandleContract>， <xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>，和<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>使用取決於特定案例。 下列各節提供每個程式設計模型的詳細資料。  
   
@@ -116,17 +116,17 @@ ms.locfileid: "59091612"
 ## <a name="add-in-returns-a-user-interface"></a>增益集傳回使用者介面  
  增益集來傳回主應用程式的 UI，需要下列條件：  
   
-1.  主應用程式、 增益集和管線必須建立，由.NET Framework 所述[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文件。  
+1. 主應用程式、 增益集和管線必須建立，由.NET Framework 所述[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文件。  
   
-2.  合約必須實作<xref:System.AddIn.Contract.IContract>，返回 UI，合約必須宣告具有型別的傳回值的方法<xref:System.AddIn.Contract.INativeHandleContract>。  
+2. 合約必須實作<xref:System.AddIn.Contract.IContract>，返回 UI，合約必須宣告具有型別的傳回值的方法<xref:System.AddIn.Contract.INativeHandleContract>。  
   
-3.  UI 的增益集與主應用程式之間傳遞必須直接或間接衍生自<xref:System.Windows.FrameworkElement>。  
+3. UI 的增益集與主應用程式之間傳遞必須直接或間接衍生自<xref:System.Windows.FrameworkElement>。  
   
-4.  必須從轉換由增益集 UI<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。  
+4. 必須從轉換由增益集 UI<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。  
   
-5.  必須從轉換的 UI 中，會傳回<xref:System.AddIn.Contract.INativeHandleContract>至<xref:System.Windows.FrameworkElement>跨越隔離界限之後。  
+5. 必須從轉換的 UI 中，會傳回<xref:System.AddIn.Contract.INativeHandleContract>至<xref:System.Windows.FrameworkElement>跨越隔離界限之後。  
   
-6.  主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
+6. 主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
   
  如需示範如何實作傳回 UI 的增益集的範例，請參閱 <<c0> [ 建立增益集傳回 UI](how-to-create-an-add-in-that-returns-a-ui.md)。  
   
@@ -134,17 +134,17 @@ ms.locfileid: "59091612"
 ## <a name="add-in-is-a-user-interface"></a>增益集是使用者介面  
  當增益集 UI，需要下列條件：  
   
-1.  主應用程式、 增益集和管線必須建立，由.NET Framework 所述[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文件。  
+1. 主應用程式、 增益集和管線必須建立，由.NET Framework 所述[增益集和擴充性](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))文件。  
   
-2.  增益集的合約介面必須實作<xref:System.AddIn.Contract.INativeHandleContract>。  
+2. 增益集的合約介面必須實作<xref:System.AddIn.Contract.INativeHandleContract>。  
   
-3.  傳遞至主應用程式增益集必須直接或間接衍生自<xref:System.Windows.FrameworkElement>。  
+3. 傳遞至主應用程式增益集必須直接或間接衍生自<xref:System.Windows.FrameworkElement>。  
   
-4.  增益集必須從轉換<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。  
+4. 增益集必須從轉換<xref:System.Windows.FrameworkElement>至<xref:System.AddIn.Contract.INativeHandleContract>跨越隔離界限之前。  
   
-5.  增益集必須從轉換<xref:System.AddIn.Contract.INativeHandleContract>至<xref:System.Windows.FrameworkElement>跨越隔離界限之後。  
+5. 增益集必須從轉換<xref:System.AddIn.Contract.INativeHandleContract>至<xref:System.Windows.FrameworkElement>跨越隔離界限之後。  
   
-6.  主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
+6. 主應用程式會顯示傳回<xref:System.Windows.FrameworkElement>。  
   
  如需示範如何實作本身為 UI 的增益集的範例，請參閱 <<c0> [ 增益集也就是建立 UI](how-to-create-an-add-in-that-is-a-ui.md)。  
   
@@ -181,15 +181,15 @@ ms.locfileid: "59091612"
   
  下一步是執行下列步驟，將管線組件和增益集組件指定為 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 的 [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] 內容檔案︰  
   
-1.  以滑鼠右鍵按一下方案總管中每個管線資料夾，然後選擇 [加入至專案]，在專案中包含管線和增益集組件。  
+1. 以滑鼠右鍵按一下方案總管中每個管線資料夾，然後選擇 [加入至專案]，在專案中包含管線和增益集組件。  
   
-2.  從 [屬性] 視窗將每個管線組件和增益集組件的 [建置動作] 設定為 [內容]。  
+2. 從 [屬性] 視窗將每個管線組件和增益集組件的 [建置動作] 設定為 [內容]。  
   
  最後一個步驟，是設定應用程式資訊清單包含管線組件檔和增益集組件檔以供下載。 這些檔案應該位於 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 應用程式佔用的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 快取根資料夾的資料夾中。 執行下列作業可 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 達成設定：  
   
-1.  以滑鼠右鍵按一下 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案，再依序按一下 [屬性]、[發佈] 和 [應用程式檔案] 按鈕。  
+1. 以滑鼠右鍵按一下 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 專案，再依序按一下 [屬性]、[發佈] 和 [應用程式檔案] 按鈕。  
   
-2.  在 [應用程式檔案] 對話方塊中，將每個管線和增益集 DLL 的 [發行狀態] 設成 [Include (Auto)] (包含 (自動))，並將每個管線和增益集 DLL 的 [下載群組] 設成 [(必要項)]。  
+2. 在 [應用程式檔案] 對話方塊中，將每個管線和增益集 DLL 的 [發行狀態] 設成 [Include (Auto)] (包含 (自動))，並將每個管線和增益集 DLL 的 [下載群組] 設成 [(必要項)]。  
   
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>使用來自應用程式基底的管線和增益集  
  針對 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)]部署設定管線和增益集時，它們會下載到和 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 相同的 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 快取資料夾。 若要使用來自 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 的管線和增益集，[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] 程式碼必須從應用程式基底取得它們。 不同的類型和成員的.NET Framework 增益集模型使用管線和增益集提供特殊支援此案例中。 首先，會識別路徑<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>列舉值。 您使用此值與相關增益集成員的多載處理使用包含下列各項的管線︰  

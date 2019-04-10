@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF], attributes
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
-ms.openlocfilehash: 4e4c4891a905a5e4458ad5fc21a512c1dfe6f74e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59092912"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301850"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是屬性，內部[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]原始碼，開發人員提供當地語系化的規則和提示所提供。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊： 可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
@@ -19,13 +19,13 @@ ms.locfileid: "59092912"
 ## <a name="localization-comments"></a>當地語系化註解  
  如果標記應用程式作者具有 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 中特定項目的需求 (例如，文字長度、字型家族或字型大小的條件約束)，則可以透過 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 程式碼中的註解將這項資訊傳達給當地語系化人員。 將註解新增至原始程式碼的程序如下︰  
   
-1.  應用程式開發人員會將當地語系化註解新增至 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼。  
+1. 應用程式開發人員會將當地語系化註解新增至 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼。  
   
-2.  在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
+2. 在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
   
      `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
   
-3.  可以指派的值如下︰  
+3. 可以指派的值如下︰  
   
     -   **None** - 註解和屬性會保留在組件內，而且不會產生個別檔案。  
   
@@ -33,9 +33,9 @@ ms.locfileid: "59092912"
   
     -   **All** - 去除組件中的註解和屬性，並將它們放在個別 LocFile 中。  
   
-4.  從 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 擷取可當地語系化的資源時，[!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 當地語系化 API 會接受可當地語系化屬性。  
+4. 從 [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 擷取可當地語系化的資源時，[!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] 當地語系化 API 會接受可當地語系化屬性。  
   
-5.  稍後，只包含自由格式註解的當地語系化註解檔案會併入當地語系化程序。  
+5. 稍後，只包含自由格式註解的當地語系化註解檔案會併入當地語系化程序。  
   
  下列範例示範如何將當地語系化註解新增至 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 檔案。  
   

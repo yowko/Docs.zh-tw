@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36593
 ms.assetid: 6f1f5860-bf97-4885-9ebb-bc87d028095c
-ms.openlocfilehash: 7f74d56b47629ff76f9b935d26278ace8df4c353
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 121c0a95a3a6bb695d9c73347c733cba215a0de4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58842326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304151"
 ---
 # <a name="expression-of-type-type-is-not-queryable"></a>型別的運算式\<類型 > 不是可查詢
 型別的運算式\<類型 > 不是可供查詢。 請確定您未遺漏組件參考和/或命名空間匯入 LINQ 提供者。  
@@ -29,9 +29,9 @@ ms.locfileid: "58842326"
   
 ## <a name="to-correct-this-error"></a>更正這個錯誤  
   
-1.  新增`Import`陳述式<xref:System.Linq>， <xref:System.Data.Linq>，或<xref:System.Xml.Linq>程式碼檔案的命名空間。 您也可以匯入命名空間為您的專案使用**參考**頁面的 專案設計工具 (**我的專案**)。  
+1. 新增`Import`陳述式<xref:System.Linq>， <xref:System.Data.Linq>，或<xref:System.Xml.Linq>程式碼檔案的命名空間。 您也可以匯入命名空間為您的專案使用**參考**頁面的 專案設計工具 (**我的專案**)。  
   
-2.  請確定您已識別為您的查詢的來源是可查詢類型的類型。 也就是型別可實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。  
+2. 請確定您已識別為您的查詢的來源是可查詢類型的類型。 也就是型別可實作<xref:System.Collections.Generic.IEnumerable%601>或<xref:System.Linq.IQueryable%601>。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -43,4 +43,4 @@ ms.locfileid: "58842326"
 - [XML](../../../visual-basic/programming-guide/language-features/xml/index.md)
 - [參考和 Imports 陳述式](../../../visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md)
 - [Imports 陳述式 (.NET 命名空間和類型)](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)
-- [專案設計工具、參考頁面 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)
+- [專案設計工具，參考頁 (Visual Basic)](/visualstudio/ide/reference/references-page-project-designer-visual-basic)

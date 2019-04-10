@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 34049f113ce9da0ed1c4cc63fd53093a0775bbad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59208302"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306491"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>逐步解說：操作資料 (Visual Basic)
 本逐步解說針對加入、修改和刪除資料庫中的資料，提供基本的端對端 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 案例。 您將使用範例 Northwind 資料庫的複本來加入客戶、變更客戶名稱，以及刪除訂單。  
@@ -55,28 +55,28 @@ ms.locfileid: "59208302"
   
 #### <a name="to-create-a-linq-to-sql-solution"></a>若要建立 LINQ to SQL 方案  
   
-1.  在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案] 。  
+1. 在 Visual Studio 的 [檔案]  功能表上，按一下 [新增專案] 。  
   
-2.  在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual Basic**。  
+2. 在 [**專案類型**] 窗格中的**新增專案**] 對話方塊中，按一下 [ **Visual Basic**。  
   
-3.  按一下 [範本] 窗格中的 [主控台應用程式]。  
+3. 按一下 [範本] 窗格中的 [主控台應用程式]。  
   
-4.  在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
+4. 在 **名稱**方塊中，輸入**LinqDataManipulationApp**。  
   
-5.  按一下 [確定] 。  
+5. 按一下 [確定] 。  
   
 ## <a name="adding-linq-references-and-directives"></a>加入 LINQ 參考和指示詞  
  本逐步解說使用的組件，可能在您的專案中預設為不安裝。 如果`System.Data.Linq`未列為專案中參考 (按一下**顯示所有檔案**中**方案總管 中**展開**參考**節點)，請將它加入中所述下列步驟。  
   
 #### <a name="to-add-systemdatalinq"></a>若要加入 System.Data.Linq  
   
-1.  在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
+1. 在 **方案總管 中**，以滑鼠右鍵按一下**參考**，然後按一下 **加入參考**。  
   
-2.  在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
+2. 在 **加入參考** 對話方塊中，按一下 **.NET**按一下 System.Data.Linq 組件，然後按一下 **確定**。  
   
      組件隨即加入至專案。  
   
-3.  在程式碼編輯器中，新增下列指示詞上述**Module1**:  
+3. 在程式碼編輯器中，新增下列指示詞上述**Module1**:  
   
      [!code-vb[DLinqWalk3VB#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#1)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59208302"
   
 #### <a name="to-add-the-northwind-code-file-to-the-project"></a>若要將 Northwind 程式碼檔案加入至專案  
   
-1.  在 **專案**功能表上，按一下**加入現有項目**。  
+1. 在 **專案**功能表上，按一下**加入現有項目**。  
   
-2.  在 [**加入現有項目**] 對話方塊中，巡覽至 c:\linqtest2\northwind.vb，，，然後按一下**新增**。  
+2. 在 [**加入現有項目**] 對話方塊中，巡覽至 c:\linqtest2\northwind.vb，，，然後按一下**新增**。  
   
      northwind.vb file 隨即加入至專案。  
   
@@ -96,11 +96,11 @@ ms.locfileid: "59208302"
   
 #### <a name="to-set-up-and-test-the-database-connection"></a>若要設定和測試資料庫連接  
   
-1.  在 `Sub Main` 中輸入或貼上下列程式碼：  
+1. 在 `Sub Main` 中輸入或貼上下列程式碼：  
   
      [!code-vb[DLinqWalk3VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#2)]  
   
-2.  按 F5，立即測試應用程式。  
+2. 按 F5，立即測試應用程式。  
   
      A**主控台**視窗隨即開啟。  
   
@@ -113,11 +113,11 @@ ms.locfileid: "59208302"
   
 #### <a name="to-add-a-new-customer-entity-object"></a>若要加入新的 Customer 實體物件  
   
-1.  在 `Customer` 中的 `Console.ReadLine` 之前加入下列程式碼，以建立新的 `Sub Main`：  
+1. 在 `Customer` 中的 `Console.ReadLine` 之前加入下列程式碼，以建立新的 `Sub Main`：  
   
      [!code-vb[DLinqWalk3VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#3)]  
   
-2.  按 F5 對方案進行偵錯。  
+2. 按 F5 對方案進行偵錯。  
   
      主控台視窗中顯示的結果如下：  
   
@@ -129,7 +129,7 @@ ms.locfileid: "59208302"
   
      請注意，新的資料列不會出現在結果中。 新的資料尚未送出至資料庫。  
   
-3.  中按 Enter 鍵**主控台**視窗停止偵錯。  
+3. 中按 Enter 鍵**主控台**視窗停止偵錯。  
   
 ## <a name="updating-an-entity"></a>更新實體  
  在下列步驟中，您會擷取 `Customer` 物件，並修改它的其中一個屬性。  
@@ -156,15 +156,15 @@ ms.locfileid: "59208302"
   
 #### <a name="to-submit-changes-to-the-database"></a>若要將變更送出至資料庫  
   
-1.  將下列程式碼插入至 `Console.ReadLine` 的正上方：  
+1. 將下列程式碼插入至 `Console.ReadLine` 的正上方：  
   
      [!code-vb[DLinqWalk3VB#6](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#6)]  
   
-2.  將下列程式碼插入至 `SubmitChanges` 的後面，以顯示送出變更之前和之後的效果：  
+2. 將下列程式碼插入至 `SubmitChanges` 的後面，以顯示送出變更之前和之後的效果：  
   
      [!code-vb[DLinqWalk3VB#7](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#7)]  
   
-3.  按 F5 對方案進行偵錯。  
+3. 按 F5 對方案進行偵錯。  
   
      主控台視窗隨即出現如下內容：  
   
@@ -181,7 +181,7 @@ ms.locfileid: "59208302"
     Customer ID: RICAR  
     ```  
   
-4.  中按 Enter 鍵**主控台**視窗停止偵錯。  
+4. 中按 Enter 鍵**主控台**視窗停止偵錯。  
   
 > [!NOTE]
 >  送出變更以加入新的客戶之後，因為您無法再原樣加入同一位客戶，所以無法再原樣執行這個方案。 若要再執行一次這個方案，請變更要加入的客戶 ID 值。  

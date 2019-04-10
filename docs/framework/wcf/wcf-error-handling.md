@@ -2,21 +2,21 @@
 title: WCF 錯誤處理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
-ms.openlocfilehash: 4fad317d8cb696b29d9c8e4e4d8209abc28410f8
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47235357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306283"
 ---
 # <a name="wcf-error-handling"></a>WCF 錯誤處理
 WCF 應用程式遇到的錯誤屬於下列其中一個群組：  
   
-1.  通訊錯誤  
+1. 通訊錯誤  
   
-2.  Proxy/通道錯誤  
+2. Proxy/通道錯誤  
   
-3.  應用程式錯誤  
+3. 應用程式錯誤  
   
  當網路無法使用、用戶端使用不正確的位址，或者服務主機並未接聽傳入訊息時，就會發生通訊錯誤。 這種類型的錯誤會當做 <xref:System.ServiceModel.CommunicationException> 或 <xref:System.ServiceModel.CommunicationException> 衍生的類別傳回給用戶端。  
   
@@ -47,4 +47,4 @@ WCF 應用程式遇到的錯誤屬於下列其中一個群組：
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- 如需詳細資訊，請參閱<xref:System.ServiceModel.ServiceHost>。
+ 如需詳細資訊，請參閱 <xref:System.ServiceModel.ServiceHost>

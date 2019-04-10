@@ -6,23 +6,23 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning from
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
-ms.openlocfilehash: 293234346053034b544866b6a2eff84974d8a02b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58824555"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307882"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>HOW TO：傳回值，從程序 (Visual Basic)
 A`Function`程序傳回值給呼叫程式碼藉由執行`Return`陳述式或遇到`Exit Function`或`End Function`陳述式。  
   
 ### <a name="to-return-a-value-using-the-return-statement"></a>傳回值，使用 Return 的陳述式  
   
-1.  Put`Return`程序的工作完成的其中一點的陳述式。  
+1. Put`Return`程序的工作完成的其中一點的陳述式。  
   
-2.  請依照下列`Return`您想要傳回給呼叫程式碼會產生值的運算式的關鍵字。  
+2. 請依照下列`Return`您想要傳回給呼叫程式碼會產生值的運算式的關鍵字。  
   
-3.  同一個程序中可以有多個 `Return` 陳述式。  
+3. 同一個程序中可以有多個 `Return` 陳述式。  
   
      下列`Function`程序會計算直角三角形斜邊的最長的側邊，並將它傳回呼叫程式碼。  
   
@@ -34,24 +34,24 @@ A`Function`程序傳回值給呼叫程式碼藉由執行`Return`陳述式或遇�
   
 ### <a name="to-return-a-value-using-exit-function-or-end-function"></a>傳回值，使用 Exit 函式或結束函式  
   
-1.  在中的至少一個就地`Function`程序中，指派值至該程序的名稱。  
+1. 在中的至少一個就地`Function`程序中，指派值至該程序的名稱。  
   
-2.  當您執行`Exit Function`或`End Function`陳述式，Visual Basic 會傳回最近指派給此程序名稱的值。  
+2. 當您執行`Exit Function`或`End Function`陳述式，Visual Basic 會傳回最近指派給此程序名稱的值。  
   
-3.  同一個程序中可以有多個 `Exit Function` 陳述式，也可以混合 `Return` 和 `Exit Function` 陳述式。  
+3. 同一個程序中可以有多個 `Exit Function` 陳述式，也可以混合 `Return` 和 `Exit Function` 陳述式。  
   
-4.  您只能有一個`End Function`中的陳述式`Function`程序。  
+4. 您只能有一個`End Function`中的陳述式`Function`程序。  
   
      如需詳細資訊和範例，請參閱 「 傳回的值 」 中[Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [Sub 程序](./sub-procedures.md)
+- [子程序](./sub-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [運算子程序](./operator-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Return 陳述式](../../../../visual-basic/language-reference/statements/return-statement.md)
-- [如何：建立程序傳回值](./how-to-create-a-procedure-that-returns-a-value.md)
-- [如何：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)
+- [HOW TO：建立傳回值的程序](./how-to-create-a-procedure-that-returns-a-value.md)
+- [HOW TO：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)

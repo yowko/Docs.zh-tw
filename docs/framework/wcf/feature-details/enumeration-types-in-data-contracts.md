@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 236871ff5b8976bb9f8a27bce26195b1a84cf954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195874"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309637"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>資料合約中的列舉型別
 列舉可以在資料合約模型中表示。 本主題將逐步介紹幾個範例，說明程式設計模型。  
@@ -79,11 +79,11 @@ ms.locfileid: "59195874"
   
  下列步驟適用於傳送旗標的列舉值：  
   
-1.  請嘗試尋找對應至數值的列舉成員 (已套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 如果找到，請傳送只包含該成員的清單。  
+1. 請嘗試尋找對應至數值的列舉成員 (已套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 如果找到，請傳送只包含該成員的清單。  
   
-2.  請嘗試將數值中斷至某個總和，以具有對應至該總和之各部分的列舉成員 (每個都套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 傳送所有這些成員的清單。 請注意，*窮盡演算法*用來尋找此類總和，因此沒有此類總和位於，即使它存在於不保證。 如果要避免這個問題，請確保列舉成員的數值是二的次方。  
+2. 請嘗試將數值中斷至某個總和，以具有對應至該總和之各部分的列舉成員 (每個都套用 <xref:System.Runtime.Serialization.EnumMemberAttribute> 屬性)。 傳送所有這些成員的清單。 請注意，*窮盡演算法*用來尋找此類總和，因此沒有此類總和位於，即使它存在於不保證。 如果要避免這個問題，請確保列舉成員的數值是二的次方。  
   
-3.  如果上述兩個步驟失敗，且數值非零，請擲回 <xref:System.Runtime.Serialization.SerializationException>。 如果數值為零，則傳送空白清單。  
+3. 如果上述兩個步驟失敗，且數值非零，請擲回 <xref:System.Runtime.Serialization.SerializationException>。 如果數值為零，則傳送空白清單。  
   
 ### <a name="example"></a>範例  
  下面的列舉範例可用於旗標作業中。  

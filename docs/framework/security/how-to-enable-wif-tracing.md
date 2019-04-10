@@ -3,12 +3,12 @@ title: 如何：啟用 WIF 追蹤
 ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
-ms.openlocfilehash: ab59b0809008f212269e2c4b9745ccaec8c9af5d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605150"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310261"
 ---
 # <a name="how-to-enable-wif-tracing"></a>如何：啟用 WIF 追蹤
 ## <a name="applies-to"></a>適用於  
@@ -55,19 +55,19 @@ ms.locfileid: "54605150"
   
 #### <a name="to-create-a-simple-aspnet-application"></a>建立簡單的 ASP.NET 應用程式  
   
-1.  啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
+1. 啟動 Visual Studio，並依序按一下 [檔案]、[新增] 和 [專案]。  
   
-2.  在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
+2. 在 [新增專案] 視窗中，按一下 [ASP.NET Web Forms 應用程式]。  
   
-3.  在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
+3. 在 [名稱] 中，輸入 `TestApp`，然後按 [確定]。  
   
-4.  以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
+4. 以滑鼠右鍵按一下方案總管底下的 [TestApp] 專案，然後選取 [身分識別與存取]。  
   
-5.  [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
+5. [身分識別與存取] 視窗隨即出現。 在 [提供者] 底下，選取 [Test your application with the Local Development STS] (使用本機開發 STS 測試應用程式}，然後按一下 [套用]。  
   
-6.  建立新的資料夾中名為**記錄檔**根目錄中的**c:** 磁碟機，例如所示：**C:\logs**  
+6. 建立新的資料夾中名為**記錄檔**根目錄中的**c:** 磁碟機，例如所示：**C:\logs**  
   
-7.  將下列 **\<system.diagnostics>** 元素加入 *Web.config* 組態檔中緊接在 **\</configSections>** 結尾元素後面的位置，如下所示：  
+7. 將下列 **\<system.diagnostics>** 元素加入 *Web.config* 組態檔中緊接在 **\</configSections>** 結尾元素後面的位置，如下所示：  
   
     ```xml  
     <configuration>  
@@ -96,8 +96,8 @@ ms.locfileid: "54605150"
   
 #### <a name="to-test-your-wif-enabled-aspnet-application-for-successful-tracing"></a>測試啟用 WIF 的 ASP.NET 應用程式以成功追蹤  
   
-1.  按 **F5** 鍵執行方案。 您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。  
+1. 按 **F5** 鍵執行方案。 您應該會看到預設的 ASP.NET 首頁，並且會以使用者名稱 *Terry* (這是開發 STS 傳回的預設使用者) 自動進行驗證。  
   
-2.  關閉瀏覽器視窗，然後巡覽至 **C:\logs** 資料夾。 使用文字編輯器開啟 **C:\logs\WIF.xml** 檔案。  
+2. 關閉瀏覽器視窗，然後巡覽至 **C:\logs** 資料夾。 使用文字編輯器開啟 **C:\logs\WIF.xml** 檔案。  
   
-3.  檢查 **WIF.xml** 檔案，並確認其中包含開頭為 **\<E2ETraceEvent>** 的項目。 這些追蹤將包含 **\<TraceRecord>** 元素以及所追蹤之活動的描述，例如**正在驗證 SecurityToken**。
+3. 檢查 **WIF.xml** 檔案，並確認其中包含開頭為 **\<E2ETraceEvent>** 的項目。 這些追蹤將包含 **\<TraceRecord>** 元素以及所追蹤之活動的描述，例如**正在驗證 SecurityToken**。

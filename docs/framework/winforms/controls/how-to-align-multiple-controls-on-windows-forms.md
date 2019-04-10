@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: d07da72e238ef21237ca60e4d9b47240507948e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59209537"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307739"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>HOW TO：對齊 Windows Forms 上的多個控制項
 若要標準化您以 Windows 為基礎的應用程式的使用者介面 (UI) 的配置，您可以放置群組使用單一命令的控制項。  
@@ -22,11 +22,11 @@ ms.locfileid: "59209537"
   
 ### <a name="to-align-multiple-controls-on-a-form"></a>若要對齊表單上的多個控制項  
   
-1.  開啟包含您要放置在的控制項的表單**Windows Form 設計工具**。  
+1. 開啟包含您要放置在的控制項的表單**Windows Form 設計工具**。  
   
-2.  選取您想要對齊，讓您選取的第一個控制項的其他人應該對齊的主要控制項的控制項。  
+2. 選取您想要對齊，讓您選取的第一個控制項的其他人應該對齊的主要控制項的控制項。  
   
-3.  在 **格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。  
+3. 在 **格式**功能表上，指向**對齊**，然後按一下其中一個可用的七個選項。  
   
 ## <a name="see-also"></a>另請參閱
 

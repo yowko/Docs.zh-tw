@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b9b17c1457a920aa3e05f5fd839e6ffdc0c6fee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: eb5c05a88c12b5124c77b0d0a7f834b405dd289f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59144361"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304619"
 ---
 # <a name="corbindtoruntime-function"></a>CorBindToRuntime 函式
 可讓 unmanaged 主應用程式將 common language runtime (CLR) 載入程序。  
@@ -73,9 +73,9 @@ HRESULT CorBindToRuntime (
   
  您可以變更流程有兩種：  
   
-1.  藉由修改<xref:System.Threading.ExecutionContext>若要隱藏個別的執行緒上的流程的設定 (請參閱 < <xref:System.Threading.ExecutionContext.SuppressFlow%2A>， <xref:System.Security.SecurityContext.SuppressFlow%2A>，和<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A>方法)。  
+1. 藉由修改<xref:System.Threading.ExecutionContext>若要隱藏個別的執行緒上的流程的設定 (請參閱 < <xref:System.Threading.ExecutionContext.SuppressFlow%2A>， <xref:System.Security.SecurityContext.SuppressFlow%2A>，和<xref:System.Security.SecurityContext.SuppressFlowWindowsIdentity%2A>方法)。  
   
-2.  藉由處理程序的預設模式變更為 「 第 1 版相容性模式中，其中<xref:System.Security.Principal.WindowsIdentity>物件不會流經任何非同步點，無論<xref:System.Threading.ExecutionContext>目前執行緒上的設定。 您要如何變更預設的模式取決於您是使用 managed 可執行檔或未受管理的裝載介面載入 CLR:  
+2. 藉由處理程序的預設模式變更為 「 第 1 版相容性模式中，其中<xref:System.Security.Principal.WindowsIdentity>物件不會流經任何非同步點，無論<xref:System.Threading.ExecutionContext>目前執行緒上的設定。 您要如何變更預設的模式取決於您是使用 managed 可執行檔或未受管理的裝載介面載入 CLR:  
   
     1.  受管理的可執行檔，您必須設定`enabled`的屬性[ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)項目`true`。  
   

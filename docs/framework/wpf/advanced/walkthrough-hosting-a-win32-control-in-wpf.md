@@ -8,12 +8,12 @@ helpviewer_keywords:
 - hosting Win32 control in WPF [WPF]
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
-ms.openlocfilehash: 1ba060fcefb2d8be24d597c7b1ccb7a79d6d5ceb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59160689"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307700"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>逐步解說：將 Win32 控制項裝載在 WPF 中
 Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程式。 不過，當您已長期開發 Win32 程式碼中，它可能會重複使用至少一些更有效率的 WPF 應用程式中的程式碼而不是完全重寫程式。 WPF 提供簡單的機制，以裝載 Win32 視窗中，WPF 頁面上。  
@@ -35,25 +35,25 @@ Windows Presentation Foundation (WPF) 提供豐富的環境，以建立應用程
   
  基本裝載程序如下︰  
   
-1.  實作 WPF 頁面來裝載視窗。 一種技術是建立<xref:System.Windows.Controls.Border>項目來保留一段所裝載之視窗的頁面。  
+1. 實作 WPF 頁面來裝載視窗。 一種技術是建立<xref:System.Windows.Controls.Border>項目來保留一段所裝載之視窗的頁面。  
   
-2.  實作類別以裝載繼承自控制項<xref:System.Windows.Interop.HwndHost>。  
+2. 實作類別以裝載繼承自控制項<xref:System.Windows.Interop.HwndHost>。  
   
-3.  在該類別中，覆寫<xref:System.Windows.Interop.HwndHost>類別成員<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。  
+3. 在該類別中，覆寫<xref:System.Windows.Interop.HwndHost>類別成員<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>。  
   
-4.  裝載的視窗建立為包含 WPF 頁面的視窗的子系。 雖然傳統的 WPF 程式設計不需要明確地將使用它，在裝載頁面是具有的控制代碼 (HWND) 的視窗。 接收頁面 HWND 透過`hwndParent`參數<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>方法。 裝載的視窗應該建立為此 HWND 的子系。  
+4. 裝載的視窗建立為包含 WPF 頁面的視窗的子系。 雖然傳統的 WPF 程式設計不需要明確地將使用它，在裝載頁面是具有的控制代碼 (HWND) 的視窗。 接收頁面 HWND 透過`hwndParent`參數<xref:System.Windows.Interop.HwndHost.BuildWindowCore%2A>方法。 裝載的視窗應該建立為此 HWND 的子系。  
   
-5.  建立主視窗之後，即會傳回裝載之視窗的 HWND。 如果您想要裝載一或多個 Win32 控制項，您通常建立主視窗作為 HWND 的子系，並進行該主視窗的控制項子系。 在主視窗中包裝控制項可提供簡單的方法，讓您 WPF 頁面接收來自控制項，告知其處理跨 HWND 界限的一些特定的 Win32 問題與通知。  
+5. 建立主視窗之後，即會傳回裝載之視窗的 HWND。 如果您想要裝載一或多個 Win32 控制項，您通常建立主視窗作為 HWND 的子系，並進行該主視窗的控制項子系。 在主視窗中包裝控制項可提供簡單的方法，讓您 WPF 頁面接收來自控制項，告知其處理跨 HWND 界限的一些特定的 Win32 問題與通知。  
   
-6.  處理傳送至主視窗的已選取訊息，例如來自子控制項的通知。 執行這項作業的方法有兩種。  
+6. 處理傳送至主視窗的已選取訊息，例如來自子控制項的通知。 執行這項作業的方法有兩種。  
   
     -   如果您想要處理裝載類別中的訊息，覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法的<xref:System.Windows.Interop.HwndHost>類別。  
   
     -   如果您想要讓 WPF 處理的訊息，請處理<xref:System.Windows.Interop.HwndHost>類別<xref:System.Windows.Interop.HwndHost.MessageHook>中您的程式碼後置事件。 針對裝載的視窗接收到的每個訊息，都會發生此事件。 如果您選擇此選項時，您仍然必須覆寫<xref:System.Windows.Interop.HwndHost.WndProc%2A>，但您只需要最少的實作。  
   
-7.  覆寫<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>並<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法<xref:System.Windows.Interop.HwndHost>。 您必須覆寫這些方法才能滿足<xref:System.Windows.Interop.HwndHost>合約，但您可能只需要提供最簡單的實作。  
+7. 覆寫<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>並<xref:System.Windows.Interop.HwndHost.WndProc%2A>方法<xref:System.Windows.Interop.HwndHost>。 您必須覆寫這些方法才能滿足<xref:System.Windows.Interop.HwndHost>合約，但您可能只需要提供最簡單的實作。  
   
-8.  在程式碼後置檔案中，建立控制項裝載類別的執行個體，並讓它的子系<xref:System.Windows.Controls.Border>要裝載視窗的項目。  
+8. 在程式碼後置檔案中，建立控制項裝載類別的執行個體，並讓它的子系<xref:System.Windows.Controls.Border>要裝載視窗的項目。  
   
 9. 與裝載的視窗通訊傳送[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]訊息和來自其子視窗，例如控制項所傳送的通知處理訊息。  
   

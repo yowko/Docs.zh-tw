@@ -2,12 +2,12 @@
 title: 使用標準端點
 ms.date: 03/30/2017
 ms.assetid: ecd6a62f-9619-4778-a497-6f888087a9ea
-ms.openlocfilehash: 5502d42d6a576509c826e05c8781662d374fbff4
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: 4ef0714acad12db1414e34fbb476b4ae7d1d9fb2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584282"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304606"
 ---
 # <a name="usage-of-standard-endpoints"></a>使用標準端點
 
@@ -139,9 +139,9 @@ public class CustomEndpoint : ServiceEndpoint
 
 #### <a name="to-use-this-sample"></a>若要使用這個範例
 
-1.  使用 Visual Studio 2012，請開啟 [standardendpoints.sln] 檔案。
+1. 使用 Visual Studio 2012，請開啟 [standardendpoints.sln] 檔案。
 
-2.  讓多個專案啟動。
+2. 讓多個專案啟動。
 
     1.  在 **方案總管**，以滑鼠右鍵按一下 標準端點 方案，然後選取**屬性**。
 
@@ -153,7 +153,7 @@ public class CustomEndpoint : ServiceEndpoint
 
          這樣會指定 [用戶端] 專案在 [服務] 專案之後執行。
 
-3.  若要執行此方案，請按 F5。
+3. 若要執行此方案，請按 F5。
 
 > [!NOTE]
 > 如果這些步驟沒有作用，請確定，您的環境已正確設定，使用下列步驟：

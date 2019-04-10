@@ -8,12 +8,12 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 133190426229a10ed6f637293326c229e808bfdb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084020"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306185"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>HOW TO：使用設計工具將按鈕新增至 ToolBar 控制項
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "59084020"
   
 ### <a name="to-add-buttons-at-design-time"></a>若要在設計階段加入按鈕  
   
-1.  選取 <xref:System.Windows.Forms.ToolBar> 控制項。  
+1. 選取 <xref:System.Windows.Forms.ToolBar> 控制項。  
   
-2.  在 [**屬性**] 視窗中，按一下<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性，以選取它，然後按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**ToolBarButton 集合編輯器**。  
+2. 在 [**屬性**] 視窗中，按一下<xref:System.Windows.Forms.ToolBar.Buttons%2A>屬性，以選取它，然後按一下**省略符號**(![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**ToolBarButton 集合編輯器**。  
   
-3.  使用**新增**並**移除**按鈕來新增和移除按鈕等，從<xref:System.Windows.Forms.ToolBar>控制項。  
+3. 使用**新增**並**移除**按鈕來新增和移除按鈕等，從<xref:System.Windows.Forms.ToolBar>控制項。  
   
-4.  設定個別的按鈕中的屬性**屬性**出現在編輯器的右邊窗格中的視窗。 下表顯示一些要考慮的重要屬性。  
+4. 設定個別的按鈕中的屬性**屬性**出現在編輯器的右邊窗格中的視窗。 下表顯示一些要考慮的重要屬性。  
   
     |屬性|描述|  
     |--------------|-----------------|  
@@ -45,7 +45,7 @@ ms.locfileid: "59084020"
     |<xref:System.Windows.Forms.ToolBarButton.Text%2A>|按鈕所顯示的文字字串。|  
     |<xref:System.Windows.Forms.ToolBarButton.ToolTipText%2A>|會顯示為按鈕的工具提示文字。|  
   
-5.  按一下 **確定**關閉對話方塊並建立指定的面板。  
+5. 按一下 **確定**關閉對話方塊並建立指定的面板。  
   
 ## <a name="see-also"></a>另請參閱
 

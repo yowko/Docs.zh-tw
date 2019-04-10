@@ -10,12 +10,12 @@ helpviewer_keywords:
 - WSSecurityTokenSerializer class
 - SecurityToken class
 ms.assetid: 6d892973-1558-4115-a9e1-696777776125
-ms.openlocfilehash: 4f2f2d3a1d4263dfc068193f832369b0d82e69fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 9fae195247dea4cbd049f7157f04e87bb97d6f4d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59095655"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59304658"
 ---
 # <a name="how-to-create-a-custom-token"></a>HOW TO：建立自訂權杖
 本主題說明如何使用 <xref:System.IdentityModel.Tokens.SecurityToken> 類別來建立自訂安全性權杖，以及如何將它與自訂安全性權杖提供者和驗證器整合。 如需完整的程式碼範例，請參閱[自訂語彙基元](../../../../docs/framework/wcf/samples/custom-token.md)範例。  
@@ -35,9 +35,9 @@ ms.locfileid: "59095655"
   
 #### <a name="to-create-a-class-that-represents-credit-card-information-inside-client-credentials"></a>若要在用戶端認證內部建立代表信用卡資訊的類別  
   
-1.  為應用程式定義代表信用卡資訊的新類別。 下列範例將類別命名為 `CreditCardInfo`。  
+1. 為應用程式定義代表信用卡資訊的新類別。 下列範例將類別命名為 `CreditCardInfo`。  
   
-2.  將適當的屬性加入至類別，讓應用程式能夠設定自訂權杖所需的必要資訊。 在此範例中，類別具有三種屬性：`CardNumber`、`CardIssuer` 和 `ExpirationDate`。  
+2. 將適當的屬性加入至類別，讓應用程式能夠設定自訂權杖所需的必要資訊。 在此範例中，類別具有三種屬性：`CardNumber`、`CardIssuer` 和 `ExpirationDate`。  
   
      [!code-csharp[c_CustomToken#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#4)]
      [!code-vb[c_CustomToken#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#4)]  
@@ -46,13 +46,13 @@ ms.locfileid: "59095655"
   
 #### <a name="to-create-a-custom-security-token-class"></a>若要建立自訂安全性權杖類別  
   
-1.  定義衍生自 <xref:System.IdentityModel.Tokens.SecurityToken> 類別的新類別。 本範例會建立名為 `CreditCardToken` 的類別。  
+1. 定義衍生自 <xref:System.IdentityModel.Tokens.SecurityToken> 類別的新類別。 本範例會建立名為 `CreditCardToken` 的類別。  
   
-2.  覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 屬性。 這個屬性是用來取得安全性權杖的區域識別項，該識別項則是用來指向 SOAP 訊息內來自其他項目的安全性權杖 XML 表示法。 在此範例中，可以將權杖識別項當成建構函式參數傳遞給它，否則每次建立安全性權杖執行個體時，就會產生新的隨機權杖識別項。  
+2. 覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.Id%2A> 屬性。 這個屬性是用來取得安全性權杖的區域識別項，該識別項則是用來指向 SOAP 訊息內來自其他項目的安全性權杖 XML 表示法。 在此範例中，可以將權杖識別項當成建構函式參數傳遞給它，否則每次建立安全性權杖執行個體時，就會產生新的隨機權杖識別項。  
   
-3.  實作 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 屬性。 此屬性會傳回安全性權杖執行個體所代表的安全性金鑰集合。 WCF 可以使用這類金鑰來簽署或加密部分 SOAP 訊息。 在此範例中，信用卡安全性權杖無法包含任何安全性金鑰；因此，實作一律會傳回空的集合。  
+3. 實作 <xref:System.IdentityModel.Tokens.SecurityToken.SecurityKeys%2A> 屬性。 此屬性會傳回安全性權杖執行個體所代表的安全性金鑰集合。 WCF 可以使用這類金鑰來簽署或加密部分 SOAP 訊息。 在此範例中，信用卡安全性權杖無法包含任何安全性金鑰；因此，實作一律會傳回空的集合。  
   
-4.  覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 屬性。 這些屬性可由 WCF 決定安全性權杖執行個體的有效性。 在此範例中，信用卡安全性權杖只擁有一個到期日，因此 `ValidFrom` 屬性會傳回 <xref:System.DateTime>，這個值代表執行個體的建立日期與時間。  
+4. 覆寫 <xref:System.IdentityModel.Tokens.SecurityToken.ValidFrom%2A> 和 <xref:System.IdentityModel.Tokens.SecurityToken.ValidTo%2A> 屬性。 這些屬性可由 WCF 決定安全性權杖執行個體的有效性。 在此範例中，信用卡安全性權杖只擁有一個到期日，因此 `ValidFrom` 屬性會傳回 <xref:System.DateTime>，這個值代表執行個體的建立日期與時間。  
   
      [!code-csharp[c_CustomToken#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#1)]
      [!code-vb[c_CustomToken#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#1)]  
@@ -61,19 +61,19 @@ ms.locfileid: "59095655"
   
 #### <a name="to-create-a-custom-security-token-parameters-class"></a>若要建立自訂安全性權杖參數類別  
   
-1.  定義衍生自 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 類別的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters> 類別的新類別。  
   
-2.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> 方法。 複製類別中已定義的所有內部欄位 (如果有的話)。 此範例並未定義任何其他欄位。  
+2. 實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CloneCore%2A> 方法。 複製類別中已定義的所有內部欄位 (如果有的話)。 此範例並未定義任何其他欄位。  
   
-3.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來驗證服務的用戶端，則這個屬性會傳回 `true`。 在此範例中，信用卡安全性權杖可用來驗證服務的用戶端。  
+3. 實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientAuthentication%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來驗證服務的用戶端，則這個屬性會傳回 `true`。 在此範例中，信用卡安全性權杖可用來驗證服務的用戶端。  
   
-4.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來驗證用戶端服務，則這個屬性會傳回 `true`。 在此範例中，信用卡安全性權杖不可用來驗證用戶端服務。  
+4. 實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsServerAuthentication%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來驗證用戶端服務，則這個屬性會傳回 `true`。 在此範例中，信用卡安全性權杖不可用來驗證用戶端服務。  
   
-5.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來對應至 Windows 帳戶，則這個屬性會傳回 `true`。 因此，驗證結果會由 <xref:System.Security.Principal.WindowsIdentity> 類別執行個體來表示。 在此範例中，權杖無法對應至 Windows 帳戶。  
+5. 實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.SupportsClientWindowsIdentity%2A> 唯讀屬性。 如果此類別所代表的安全性權杖類型可用來對應至 Windows 帳戶，則這個屬性會傳回 `true`。 因此，驗證結果會由 <xref:System.Security.Principal.WindowsIdentity> 類別執行個體來表示。 在此範例中，權杖無法對應至 Windows 帳戶。  
   
-6.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。 如果需要此安全性權杖參數類別所代表的安全性權杖執行個體的參考，則 WCF 安全性架構會呼叫這個方法。 實際安全性權杖執行個體與可指定所要求之參考型別的 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> 會同時當成引數傳遞至此方法。 在此範例中，信用卡安全性權杖僅支援內部參考。 <xref:System.IdentityModel.Tokens.SecurityToken> 類別具有建立內部參考的功能，因此實作不需要其他程式碼。  
+6. 實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.CreateKeyIdentifierClause%28System.IdentityModel.Tokens.SecurityToken%2CSystem.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle%29> 方法。 如果需要此安全性權杖參數類別所代表的安全性權杖執行個體的參考，則 WCF 安全性架構會呼叫這個方法。 實際安全性權杖執行個體與可指定所要求之參考型別的 <xref:System.ServiceModel.Security.Tokens.SecurityTokenReferenceStyle> 會同時當成引數傳遞至此方法。 在此範例中，信用卡安全性權杖僅支援內部參考。 <xref:System.IdentityModel.Tokens.SecurityToken> 類別具有建立內部參考的功能，因此實作不需要其他程式碼。  
   
-7.  實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。 會呼叫這個方法，將安全性權杖參數類別執行個體轉換成的執行個體的 wcf<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>類別。 安全性權杖提供者會使用此結果來建立適當的安全性權杖執行個體。  
+7. 實作 <xref:System.ServiceModel.Security.Tokens.SecurityTokenParameters.InitializeSecurityTokenRequirement%28System.IdentityModel.Selectors.SecurityTokenRequirement%29> 方法。 會呼叫這個方法，將安全性權杖參數類別執行個體轉換成的執行個體的 wcf<xref:System.IdentityModel.Selectors.SecurityTokenRequirement>類別。 安全性權杖提供者會使用此結果來建立適當的安全性權杖執行個體。  
   
      [!code-csharp[c_CustomToken#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#2)]
      [!code-vb[c_CustomToken#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#2)]  
@@ -85,15 +85,15 @@ ms.locfileid: "59095655"
   
 #### <a name="to-create-a-custom-security-token-serializer"></a>若要建立自訂安全性權杖序列化程式  
   
-1.  定義衍生自 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> 類別的新類別。  
+1. 定義衍生自 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer> 類別的新類別。  
   
-2.  覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> 方法，這個方法需要靠 <xref:System.Xml.XmlReader> 讀取 XML 串流。 如果序列化程式實作可以根據目前指定的項目來還原序列化安全性權杖，則方法會傳回 `true`。 在此範例中，此方法會檢查 XML 讀取器目前的 XML 項目是否具備正確的項目名稱與命名空間。 如果不具備的話，它會呼叫此方法的基底類別實作來處理 XML 項目。  
+2. 覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanReadTokenCore%28System.Xml.XmlReader%29> 方法，這個方法需要靠 <xref:System.Xml.XmlReader> 讀取 XML 串流。 如果序列化程式實作可以根據目前指定的項目來還原序列化安全性權杖，則方法會傳回 `true`。 在此範例中，此方法會檢查 XML 讀取器目前的 XML 項目是否具備正確的項目名稱與命名空間。 如果不具備的話，它會呼叫此方法的基底類別實作來處理 XML 項目。  
   
-3.  覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> 方法。 此方法會讀取安全性權杖的 XML 內容，並且為權杖建構適當的記憶體內部表示法。 如果它無法辨識傳入之 XML 讀取器所在的 XML 項目，則會呼叫基底類別實作來處理系統提供的權杖類型。  
+3. 覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.ReadTokenCore%28System.Xml.XmlReader%2CSystem.IdentityModel.Selectors.SecurityTokenResolver%29> 方法。 此方法會讀取安全性權杖的 XML 內容，並且為權杖建構適當的記憶體內部表示法。 如果它無法辨識傳入之 XML 讀取器所在的 XML 項目，則會呼叫基底類別實作來處理系統提供的權杖類型。  
   
-4.  覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> 方法。 如果此方法可將記憶體內部的權杖表示法 (當成引數傳入) 轉換為 XML 表示法，則會傳回 `true`。 如果無法轉換，則會呼叫基底類別實作。  
+4. 覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.CanWriteTokenCore%28System.IdentityModel.Tokens.SecurityToken%29> 方法。 如果此方法可將記憶體內部的權杖表示法 (當成引數傳入) 轉換為 XML 表示法，則會傳回 `true`。 如果無法轉換，則會呼叫基底類別實作。  
   
-5.  覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> 方法。 此方法會將記憶體內部的安全性權杖表示法轉換為 XML 表示法。 如果無法轉換，則會呼叫基底類別實作。  
+5. 覆寫 <xref:System.ServiceModel.Security.WSSecurityTokenSerializer.WriteTokenCore%28System.Xml.XmlWriter%2CSystem.IdentityModel.Tokens.SecurityToken%29> 方法。 此方法會將記憶體內部的安全性權杖表示法轉換為 XML 表示法。 如果無法轉換，則會呼叫基底類別實作。  
   
      [!code-csharp[c_CustomToken#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#3)]
      [!code-vb[c_CustomToken#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#3)]  
@@ -102,14 +102,14 @@ ms.locfileid: "59095655"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-provider"></a>若要將自訂安全性權杖與安全性權杖提供者整合  
   
-1.  安全性權杖提供者會建立、修改 (視需要) 和傳回權杖的執行個體。 若要建立自訂安全性權杖的自訂提供者，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以傳回 `CreditCardToken` 的執行個體。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to:建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
+1. 安全性權杖提供者會建立、修改 (視需要) 和傳回權杖的執行個體。 若要建立自訂安全性權杖的自訂提供者，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenProvider> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%2A> 方法以傳回 `CreditCardToken` 的執行個體。 如需有關自訂安全性權杖提供者的詳細資訊，請參閱[How to:建立自訂安全性權杖提供者](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-provider.md)。  
   
      [!code-csharp[c_CustomToken#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#6)]
      [!code-vb[c_CustomToken#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#6)]  
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-authenticator"></a>若要將自訂安全性權杖與安全性權杖驗證器整合  
   
-1.  當安全性權杖從訊息中擷取出來時，安全性權杖驗證器會驗證其內容。 若要建立自訂安全性權杖的自訂驗證器，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to:建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
+1. 當安全性權杖從訊息中擷取出來時，安全性權杖驗證器會驗證其內容。 若要建立自訂安全性權杖的自訂驗證器，請建立繼承自 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator> 類別的類別。 下列範例會覆寫 <xref:System.IdentityModel.Selectors.SecurityTokenAuthenticator.ValidateTokenCore%2A> 方法。 如需有關自訂安全性權杖驗證器的詳細資訊，請參閱[How to:建立自訂安全性權杖驗證器](../../../../docs/framework/wcf/extending/how-to-create-a-custom-security-token-authenticator.md)。  
   
      [!code-csharp[c_CustomToken#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#7)]
      [!code-vb[c_CustomToken#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#7)]  
@@ -119,7 +119,7 @@ ms.locfileid: "59095655"
   
 #### <a name="to-integrate-the-custom-security-token-with-a-security-token-manager"></a>若要將自訂安全性權杖與安全性權杖管理員整合  
   
-1.  安全性權杖管理員會建立適當的權杖提供者、安全性驗證器，以及權杖序列化程式執行個體。 若要建立自訂的權杖管理員，請建立繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別的類別。 該類別的主要方法會使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 來建立適當的提供者與用戶端或服務認證。 如需有關自訂安全性權杖管理員的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1. 安全性權杖管理員會建立適當的權杖提供者、安全性驗證器，以及權杖序列化程式執行個體。 若要建立自訂的權杖管理員，請建立繼承自 <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> 類別的類別。 該類別的主要方法會使用 <xref:System.IdentityModel.Selectors.SecurityTokenRequirement> 來建立適當的提供者與用戶端或服務認證。 如需有關自訂安全性權杖管理員的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#8)]
      [!code-vb[c_CustomToken#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#8)]  
@@ -129,7 +129,7 @@ ms.locfileid: "59095655"
   
 #### <a name="to-integrate-the-custom-security-token-with-custom-client-and-service-credentials"></a>若要將自訂安全性權杖與自訂用戶端及服務認證整合  
   
-1.  您必須新增自訂的用戶端及服務認證才能提供應用程式的 API，以便指定自訂權杖資訊，而先前建立的自訂安全性權杖基礎結構會使用這項資訊來提供並驗證自訂安全性權杖內容。 下列範例會示範執行此作業的方法。 如需有關自訂用戶端和服務認證的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
+1. 您必須新增自訂的用戶端及服務認證才能提供應用程式的 API，以便指定自訂權杖資訊，而先前建立的自訂安全性權杖基礎結構會使用這項資訊來提供並驗證自訂安全性權杖內容。 下列範例會示範執行此作業的方法。 如需有關自訂用戶端和服務認證的詳細資訊，請參閱[逐步解說：建立自訂用戶端和服務認證](../../../../docs/framework/wcf/extending/walkthrough-creating-custom-client-and-service-credentials.md)。  
   
      [!code-csharp[c_CustomToken#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#10)]
      [!code-vb[c_CustomToken#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#10)]  
@@ -141,7 +141,7 @@ ms.locfileid: "59095655"
   
 #### <a name="to-integrate-the-custom-security-token-with-the-binding"></a>若要將自訂安全性權杖與繫結整合  
   
-1.  您必須在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上公開的其中一個權杖參數集合指定自訂安全性權杖參數類別。 下列範例會使用 `SignedEncrypted` 所傳回的集合。 程式碼會將信用卡自訂權杖新增至每個從服務用戶端傳送的訊息，並且自動簽署並加密其內容。  
+1. 您必須在 <xref:System.ServiceModel.Channels.SecurityBindingElement> 類別上公開的其中一個權杖參數集合指定自訂安全性權杖參數類別。 下列範例會使用 `SignedEncrypted` 所傳回的集合。 程式碼會將信用卡自訂權杖新增至每個從服務用戶端傳送的訊息，並且自動簽署並加密其內容。  
   
      [!code-csharp[c_CustomToken#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customtoken/cs/source.cs#13)]
      [!code-vb[c_CustomToken#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customtoken/vb/source.vb#13)]  

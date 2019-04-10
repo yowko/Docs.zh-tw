@@ -2,19 +2,19 @@
 title: HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 24c44f415eff8518bcd73696c5cd9302371ad0c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59177290"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303891"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>HOW TO：將 WCF 服務設為與 WSE 3.0 用戶端相互操作
 當 WCF 服務會設定為使用 August 2004 版本的 Ws-addressing 規格，Windows Communication Foundation (WCF) 服務將會與 Web Services Enhancements 3.0 for Microsoft.NET (WSE) 用戶端的連線層級相容性。  
   
 ### <a name="to-enable-a-wcf-service-to-interoperate-with-wse-30-clients"></a>讓 WCF 服務與 WSE 3.0 用戶端相互操作  
   
-1.  定義 WCF 服務的自訂繫結。  
+1. 定義 WCF 服務的自訂繫結。  
   
      若要指定使用 WS-Addressing August 2004 版本規格進行訊息編碼，這時必須要建立自訂繫結。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59177290"
         > [!NOTE]
         >  如果使用的是 SOAP 1.2，請將 `messageVersion` 屬性設為 <xref:System.ServiceModel.Channels.MessageVersion.Soap12WSAddressingAugust2004%2A>。  
   
-2.  指定服務使用自訂繫結。  
+2. 指定服務使用自訂繫結。  
   
     1.  設定`binding`的屬性[\<端點 >](../../../../docs/framework/configure-apps/file-schema/wcf/endpoint-element.md)項目`customBinding`。  
   

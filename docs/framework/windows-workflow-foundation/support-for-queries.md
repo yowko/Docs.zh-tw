@@ -2,27 +2,27 @@
 title: 支援查詢
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
-ms.openlocfilehash: 2314a111cb4c4b82cacd91b7638ef0c8eaba5c3c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711995"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307947"
 ---
 # <a name="support-for-queries"></a>支援查詢
 SQL 工作流程執行個體存放區會記錄存放區中一組已知的屬性。 使用者可以根據這些屬性查詢執行個體。 下列清單包含其中一些已知的屬性：  
   
--   **站台名稱。** 包含服務之網站的名稱。  
+-   **網站名稱：** 包含服務之網站的名稱。  
   
--   **相對的應用程式路徑。** 應用程式的路徑 (相對於網站)。  
+-   **相對應用程式路徑：** 應用程式的路徑 (相對於網站)。  
   
--   **相對服務路徑。** 服務的路徑 (相對於應用程式)。  
+-   **相對服務路徑：** 服務的路徑 (相對於應用程式)。  
   
--   **服務名稱。** 服務的名稱。  
+-   **服務名稱：** 服務的名稱。  
   
--   **服務命名空間。** 服務所使用之命名空間的名稱。  
+-   **服務命名空間：** 服務所使用之命名空間的名稱。  
   
--   **目前的電腦。**  
+-   **目前的電腦：**  
   
 -   **上次的電腦**。 工作流程服務執行個體上一次執行所在的電腦。  
   
@@ -39,21 +39,21 @@ SQL 工作流程執行個體存放區會記錄存放區中一組已知的屬性�
 ### <a name="the-instances-view"></a>Instances 檢視表  
  Instances 檢視表包含下列欄位：  
   
-1.  **ID**  
+1. **ID**  
   
-2.  **PendingTimer**  
+2. **PendingTimer**  
   
-3.  **CreationTime**  
+3. **CreationTime**  
   
-4.  **LastUpdatedTime**  
+4. **LastUpdatedTime**  
   
-5.  **ServiceDeploymentId**  
+5. **ServiceDeploymentId**  
   
-6.  **SuspensionExceptionName**  
+6. **SuspensionExceptionName**  
   
-7.  **SuspensionReason**  
+7. **SuspensionReason**  
   
-8.  **ActiveBookmarks**  
+8. **ActiveBookmarks**  
   
 9. **CurrentMachine**  
   
@@ -80,23 +80,23 @@ SQL 工作流程執行個體存放區會記錄存放區中一組已知的屬性�
 ### <a name="the-servicedeployments-view"></a>ServiceDeployments 檢視表  
  ServiceDeployments 檢視表包含下列欄位：  
   
-1.  **SiteName**  
+1. **SiteName**  
   
-2.  **RelativeServicePath**  
+2. **RelativeServicePath**  
   
-3.  **RelativeApplicationPath**  
+3. **RelativeApplicationPath**  
   
-4.  **ServiceName**  
+4. **ServiceName**  
   
-5.  **ServiceNamespace**  
+5. **ServiceNamespace**  
   
 ### <a name="the-instancepromotedproperties-view"></a>InstancePromotedProperties 檢視表  
  InstancePromotedProperties 檢視表包含下列欄位。 如需提升之屬性的詳細資訊，請參閱[存放區擴充性](store-extensibility.md)主題。  
   
-1.  **InstanceId**  
+1. **InstanceId**  
   
-2.  **EncodingOption**  
+2. **EncodingOption**  
   
-3.  **PromotionName**  
+3. **PromotionName**  
   
-4.  **Value #** (範圍中的欄位**Value1**要**Value64**)。
+4. **Value #** (範圍中的欄位**Value1**要**Value64**)。

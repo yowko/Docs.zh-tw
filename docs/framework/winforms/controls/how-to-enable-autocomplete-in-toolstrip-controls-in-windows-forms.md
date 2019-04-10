@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ToolStripComboBox class [Windows Forms], examples
 - ToolStrip control [Windows Forms], AutoComplete
 ms.assetid: fd66d085-1af1-45d4-930a-cde944da2e16
-ms.openlocfilehash: 48c1d24ce2e966f9c078593655da2bc9d84252c4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: d7919bf87444ef6c4a64ee236356e762da14853f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112108"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307895"
 ---
 # <a name="how-to-enable-autocomplete-in-toolstrip-controls-in-windows-forms"></a>HOW TO：啟用 Windows Form 中 ToolStrip 控制項的 AutoComplete
 下列程序結合<xref:System.Windows.Forms.ToolStripLabel>與<xref:System.Windows.Forms.ToolStripComboBox>可被拉顯示一份項目，例如最近瀏覽的網站。 如果使用者輸入的字元符合其中一個項目清單中的第一個字元，會立即顯示的項目。  
@@ -27,7 +27,7 @@ ms.locfileid: "59112108"
   
 ### <a name="to-enable-autocomplete-in-a-toolstrip-control"></a>若要啟用自動完成中的 ToolStrip 控制項  
   
-1.  建立<xref:System.Windows.Forms.ToolStrip>控制項，並將項目加入它。  
+1. 建立<xref:System.Windows.Forms.ToolStrip>控制項，並將項目加入它。  
   
     ```vb  
     ToolStrip1 = New System.Windows.Forms.ToolStrip  
@@ -41,7 +41,7 @@ ms.locfileid: "59112108"
         {toolStripLabel1, toolStripComboBox1});  
     ```  
   
-2.  設定<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>屬性的標籤和下拉式方塊<xref:System.Windows.Forms.ToolStripItemOverflow.Never>使清單一律可用，而不論表單的大小為何。  
+2. 設定<xref:System.Windows.Forms.ToolStripItem.Overflow%2A>屬性的標籤和下拉式方塊<xref:System.Windows.Forms.ToolStripItemOverflow.Never>使清單一律可用，而不論表單的大小為何。  
   
     ```vb  
     ToolStripLabel1.Overflow = _  
@@ -56,7 +56,7 @@ ms.locfileid: "59112108"
     toolStripComboBox1.Overflow = System.Windows.Forms.ToolStripItemOverflow.Never  
     ```  
   
-3.  將文字加入至項目集合的<xref:System.Windows.Forms.ToolStripComboBox>控制項。  
+3. 將文字加入至項目集合的<xref:System.Windows.Forms.ToolStripComboBox>控制項。  
   
     ```vb  
     ToolStripComboBox1.Items.AddRange(New Object() {"First Item", _  
@@ -67,7 +67,7 @@ ms.locfileid: "59112108"
     toolStripComboBox1.Items.AddRange(new object[] {"First item", "Second item", "Third item"});  
     ```  
   
-4.  設定<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>屬性的下拉式方塊<xref:System.Windows.Forms.AutoCompleteMode.Append>。  
+4. 設定<xref:System.Windows.Forms.ComboBox.AutoCompleteMode%2A>屬性的下拉式方塊<xref:System.Windows.Forms.AutoCompleteMode.Append>。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteMode = _  
@@ -78,7 +78,7 @@ ms.locfileid: "59112108"
     toolStripComboBox1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;  
     ```  
   
-5.  設定<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>屬性的下拉式方塊<xref:System.Windows.Forms.AutoCompleteSource.ListItems>。  
+5. 設定<xref:System.Windows.Forms.ComboBox.AutoCompleteSource%2A>屬性的下拉式方塊<xref:System.Windows.Forms.AutoCompleteSource.ListItems>。  
   
     ```vb  
     ToolStripComboBox1.AutoCompleteSource = _  

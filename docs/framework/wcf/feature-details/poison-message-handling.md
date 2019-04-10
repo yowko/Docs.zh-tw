@@ -2,12 +2,12 @@
 title: 有害訊息處理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
-ms.openlocfilehash: 704f1a837b7d70f401eaaf7d23847b08972cff50
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59146519"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305022"
 ---
 # <a name="poison-message-handling"></a>有害訊息處理
 A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 這種情形可能會在佇列架構的應用程式因為錯誤而無法處理訊息時發生。 為了符合可靠性的需求，佇列的應用程式會在交易中接收訊息。 若中止了接收佇列訊息的異動，則會讓訊息留在佇列中，而訊息將會在新的異動中重試。 如果造成異動中止的問題未予以更正，則接收的應用程式可能會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數的上限為止，因而形成有害訊息。  
@@ -66,17 +66,17 @@ A*有害訊息*是超過嘗試傳遞至應用程式的數目上限的訊息。 �
   
  應用程式可能需要以某種自動處理的方式將有害訊息移至有害訊息序列，讓服務能夠存取佇列中其餘的訊息。 唯一會使用錯誤處理常式機制接聽有害訊息例外狀況的情況，是在 <xref:System.ServiceModel.Configuration.MsmqBindingElementBase.ReceiveErrorHandling%2A> 設定設為 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 的時候。 Message Queuing 3.0 的有害訊息範例會示範這種行為。 以下將說明處理有害訊息時所採取的步驟，包括最佳做法：  
   
-1.  請確認您的有害設定能反映您應用程式的需求。 處理設定時，務必確實了解 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上訊息佇列功能之間的差異。  
+1. 請確認您的有害設定能反映您應用程式的需求。 處理設定時，務必確實了解 [!INCLUDE[wv](../../../../includes/wv-md.md)]、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 上訊息佇列功能之間的差異。  
   
-2.  如有需要，請實作 `IErrorHandler` 來處理有害訊息錯誤。 由於將 `ReceiveErrorHandling` 設為 `Fault` 時需要使用手動機制將有害訊息從佇列中移出，或更正外部相關的問題，因此通常的使用方式是在 `IErrorHandler` 設為 `ReceiveErrorHandling` 時實作 `Fault`，如下列程式碼中所示。  
+2. 如有需要，請實作 `IErrorHandler` 來處理有害訊息錯誤。 由於將 `ReceiveErrorHandling` 設為 `Fault` 時需要使用手動機制將有害訊息從佇列中移出，或更正外部相關的問題，因此通常的使用方式是在 `IErrorHandler` 設為 `ReceiveErrorHandling` 時實作 `Fault`，如下列程式碼中所示。  
   
      [!code-csharp[S_UE_MSMQ_Poison#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonerrorhandler.cs#2)]  
   
-3.  建立服務行為可使用的 `PoisonBehaviorAttribute`。 這個行為會在發送器上安裝 `IErrorHandler`。 請參閱以下程式碼範例。  
+3. 建立服務行為可使用的 `PoisonBehaviorAttribute`。 這個行為會在發送器上安裝 `IErrorHandler`。 請參閱以下程式碼範例。  
   
      [!code-csharp[S_UE_MSMQ_Poison#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/s_ue_msmq_poison/cs/poisonbehaviorattribute.cs#3)]  
   
-4.  確認您的服務已標註為有害行為屬性。  
+4. 確認您的服務已標註為有害行為屬性。  
 
  此外，如果 `ReceiveErrorHandling` 設為 `Fault`，則 `ServiceHost` 會在遇到有害訊息時發生錯誤。 您可以連結到發生錯誤的事件並關閉服務、採取矯正措施，然後重新啟動。 例如，可以標註傳播至 `LookupId` 的 <xref:System.ServiceModel.MsmqPoisonMessageException> 中的 `IErrorHandler`，當服務主機發生錯誤時，您就可以使用 `System.Messaging` API 接收來自佇列的訊息 (使用 `LookupId` 移除佇列中的訊息)，以及將訊息保存在某些外部儲存區或另一個佇列中。 然後您可以重新啟動 `ServiceHost` 並繼續進行正常處理。 [有害訊息處理 MSMQ 4.0 中](../../../../docs/framework/wcf/samples/poison-message-handling-in-msmq-4-0.md)示範此行為。  
   

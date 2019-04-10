@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 431879b8-a5f8-4947-ad1e-4768c726aca8
-ms.openlocfilehash: 7b1ff72295332be072d7c664a546ed6e4d998ac8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5bab8b5a19f33f8dcfcc5a5f5d882309a4b1cc99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59073828"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305269"
 ---
 # <a name="how-to-create-a-basic-rss-feed"></a>HOW TO：建立基本 RSS 摘要
 Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。 本主題討論如何建立可公開 RSS 新聞訂閱摘要的新聞訂閱服務。  
   
 ### <a name="to-create-a-basic-syndication-service"></a>若要建立基本新聞訂閱服務  
   
-1.  使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業都應該傳回 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 物件。  
+1. 使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。 每個公開為新聞訂閱摘要的作業都應該傳回 <xref:System.ServiceModel.Syndication.Rss20FeedFormatter> 物件。  
   
      [!code-csharp[htRssBasic#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#0)]
      [!code-vb[htRssBasic#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#0)]  
@@ -25,62 +25,62 @@ Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要�
     > [!NOTE]
     >  所有套用 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性的服務作業都會對應至 HTTP GET 要求。 若要將您的作業對應至不同的 HTTP 方法，請改用 <xref:System.ServiceModel.Web.WebInvokeAttribute>。 如需詳細資訊，請參閱[如何：建立基本 WCF Web HTTP 服務](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)。  
   
-2.  實作服務合約。  
+2. 實作服務合約。  
   
      [!code-csharp[htRssBasic#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#1)]
      [!code-vb[htRssBasic#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#1)]  
   
-3.  建立 <xref:System.ServiceModel.Syndication.SyndicationFeed> 物件並新增作者、分類和描述。  
+3. 建立 <xref:System.ServiceModel.Syndication.SyndicationFeed> 物件並新增作者、分類和描述。  
   
      [!code-csharp[htRssBasic#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#2)]
      [!code-vb[htRssBasic#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#2)]  
   
-4.  建立幾個 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。  
+4. 建立幾個 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。  
   
      [!code-csharp[htRssBasic#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#3)]
      [!code-vb[htRssBasic#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#3)]  
   
-5.  將 <xref:System.ServiceModel.Syndication.SyndicationItem> 加入至摘要。  
+5. 將 <xref:System.ServiceModel.Syndication.SyndicationItem> 加入至摘要。  
   
      [!code-csharp[htRssBasic#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#4)]
      [!code-vb[htRssBasic#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#4)]  
   
-6.  傳回摘要。  
+6. 傳回摘要。  
   
      [!code-csharp[htRssBasic#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#5)]
      [!code-vb[htRssBasic#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#5)]  
   
 ### <a name="to-host-a-service"></a>若要裝載服務  
   
-1.  建立 <xref:System.ServiceModel.Web.WebServiceHost> 物件。  
+1. 建立 <xref:System.ServiceModel.Web.WebServiceHost> 物件。  
   
      [!code-csharp[htRssBasic#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#6)]
      [!code-vb[htRssBasic#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#6)]  
   
-2.  開啟服務主機並等候使用者按下 ENTER。  
+2. 開啟服務主機並等候使用者按下 ENTER。  
   
      [!code-csharp[htRssBasic#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/program.cs#8)]
      [!code-vb[htRssBasic#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/program.vb#8)]  
   
 ### <a name="to-call-getblog-with-an-http-get"></a>若要使用 HTTP GET 呼叫 GetBlog()  
   
-1.  開啟 Internet Explorer 中，輸入下列 URL，然後按 ENTER: `http://localhost:8000/BlogService/GetBlog`。 URL 包含服務的基底位址 (`http://localhost:8000/BlogService`)，端點，並呼叫服務作業的相對位址。  
+1. 開啟 Internet Explorer 中，輸入下列 URL，然後按 ENTER: `http://localhost:8000/BlogService/GetBlog`。 URL 包含服務的基底位址 (`http://localhost:8000/BlogService`)，端點，並呼叫服務作業的相對位址。  
   
 ### <a name="to-call-getblog-from-code"></a>若要從程式碼呼叫 GetBlog()  
   
-1.  使用基底位址與您要呼叫的方法建立 <xref:System.Xml.XmlReader>。  
+1. 使用基底位址與您要呼叫的方法建立 <xref:System.Xml.XmlReader>。  
   
      [!code-csharp[htRssBasic#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#9)]
      [!code-vb[htRssBasic#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#9)]  
   
-2.  呼叫靜態 <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> 方法，傳入剛才建立的 <xref:System.Xml.XmlReader>。  
+2. 呼叫靜態 <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> 方法，傳入剛才建立的 <xref:System.Xml.XmlReader>。  
   
      [!code-csharp[htRssBasic#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#10)]
      [!code-vb[htRssBasic#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#10)]  
   
      這會叫用服務作業，並在新的 <xref:System.ServiceModel.Syndication.SyndicationFeed> 中填入服務作業所傳回的格式器。  
   
-3.  存取摘要物件。  
+3. 存取摘要物件。  
   
      [!code-csharp[htRssBasic#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htrssbasic/cs/snippets.cs#11)]
      [!code-vb[htRssBasic#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htrssbasic/vb/snippets.vb#11)]  

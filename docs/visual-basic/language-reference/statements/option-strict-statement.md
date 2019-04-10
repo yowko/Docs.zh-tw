@@ -11,12 +11,12 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
-ms.openlocfilehash: adfac0eebc0d50ed3c8c523c0442636b05901c18
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355125"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310183"
 ---
 # <a name="option-strict-statement"></a>Long
 會限制僅限於擴展轉換的隱含資料類型轉換，不允許晚期繫結，不允許隱含型別，會導致`Object`型別。  
@@ -71,7 +71,7 @@ Option Strict { On | Off }
   
 -   [\ 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/ = 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+-   [/= 運算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
 -   [Char 資料類型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
@@ -96,8 +96,8 @@ Option Strict { On | Off }
   
 |指定了資料類型？|指定了初始設定式？|範例|結果|  
 |---|---|---|---|  
-|否|否|`Dim qty`|如果 `Option Strict` 已關閉 (預設值)，此變數會設定為 `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
-|否|是|`Dim qty = 5`|如果 `Option Infer` 已開啟 (預設值)，此變數會採用初始設定式的資料類型。 請參閱[區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時期錯誤。|  
+|否|否|`Dim qty`|如果 `Option Strict` 已關閉 (預設值)，此變數會設定為 `Nothing`。<br /><br /> 如果 `Option Strict` 已開啟，就會發生編譯時間錯誤。|  
+|否|是|`Dim qty = 5`|如果 `Option Infer` 已開啟 (預設值)，此變數會採用初始設定式的資料類型。 請參閱[區域型別推斷](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)。<br /><br /> 如果 `Option Infer` 已關閉，且 `Option Strict` 也已關閉，此變數會採用 `Object` 的資料類型。<br /><br /> 如果 `Option Infer` 已關閉，但是 `Option Strict` 已開啟，就會發生編譯時間錯誤。|  
 |是|否|`Dim qty As Integer`|變數會初始化為資料類型的預設值。 如需詳細資訊，請參閱 < [Dim 陳述式](../../../visual-basic/language-reference/statements/dim-statement.md)。|  
 |是|是|`Dim qty  As Integer = 5`|如果初始設定式的資料類型無法轉換成指定的資料類型，就會發生編譯時期錯誤。|  
   
@@ -109,9 +109,9 @@ Option Strict { On | Off }
 ### <a name="to-set-option-strict-in-the-ide"></a>若要設定在 IDE 中的 Option Strict  
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   
-1.  在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
+1. 在方案總管中選取專案。 在 [專案] 功能表上，按一下 [屬性]。  
   
-2.  在 [**編譯**索引標籤上，在設定的值**Option Strict** ] 方塊中。  
+2. 在 [**編譯**索引標籤上，在設定的值**Option Strict** ] 方塊中。  
   
 ### <a name="conditions"></a> 在 IDE 中設定警告組態  
  當您使用[編譯的 Page，Project Designer (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)而不是`Option Strict`陳述式中，您可以額外控制產生錯誤的條件。 **警告組態**一節**編譯的頁面**已對應至三個條件會造成編譯時期錯誤設定時`Option Strict`上。 以下是這些設定：  
@@ -120,7 +120,7 @@ Option Strict { On | Off }
   
 -   **晚期繫結，執行階段時呼叫可能失敗**  
   
--   **隱含類型，假設是 Object**  
+-   **隱含類型，假設是物件**  
   
  當您將 [Option Strict] 設定為 [On] 時，這三個警告組態設定都會設定為 [錯誤]。 當您將 [Option Strict] 設定為 [Off] 時，所有三個設定都會設定為 [無]。  
   
@@ -153,12 +153,12 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>另請參閱
 
-- [擴展和縮小轉換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [隱含和明確轉換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [專案設計工具、編譯頁面 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
+- [專案設計工具、編譯頁 (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Option Explicit 陳述式](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [類型轉換函式](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [如何：存取物件的成員](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [Type Conversion Functions](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [HOW TO：存取物件的成員](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [XML 中內嵌的運算式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [寬鬆委派轉換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office 方案中的晚期繫結](/visualstudio/vsto/late-binding-in-office-solutions)

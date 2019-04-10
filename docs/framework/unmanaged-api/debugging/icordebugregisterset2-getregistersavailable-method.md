@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ee807ae17e4d53d3f6f3963f5a91df0a2dddd0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 1522d643a69c47eec03770a8f51756dd4250075a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59099868"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309416"
 ---
 # <a name="icordebugregisterset2getregistersavailable-method"></a>ICorDebugRegisterSet2::GetRegistersAvailable 方法
 取得位元組陣列，提供可用的暫存器的點陣圖。  
@@ -46,11 +46,11 @@ HRESULT GetRegistersAvailable (
 ## <a name="remarks"></a>備註  
  CorDebugRegister 列舉之值的指定不同的微處理器的暫存器。 每個值的較高的五位元是索引`availableRegChunks`的位元組陣列。 每個值的較低的三位元識別索引位元組中的位元位置。 指定`CorDebugRegister`值，指定特定的暫存器，用來遮罩中的暫存位置的判斷如下：  
   
-1.  擷取存取中的正確位元組所需的索引`availableRegChunks`陣列：  
+1. 擷取存取中的正確位元組所需的索引`availableRegChunks`陣列：  
   
      `CorDebugRegister` 值 >> 3  
   
-2.  擷取元零所在的最小顯著性的位元的位元位置內的索引的位元組：  
+2. 擷取元零所在的最小顯著性的位元的位元位置內的索引的位元組：  
   
      `CorDebugRegister` 值 & 7  
   

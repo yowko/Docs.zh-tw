@@ -16,12 +16,12 @@ helpviewer_keywords:
 - child tables row selection
 - current child position
 ms.assetid: c5fa2562-43a4-46fa-a604-52d8526a87bd
-ms.openlocfilehash: 514931b0d2da6a70d9a2206fb71ec85525ede978
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 891a9a4d092de35ceff2f5ceb6dbde77cf2ca2ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59149106"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59303137"
 ---
 # <a name="how-to-ensure-the-selected-row-in-a-child-table-remains-at-the-correct-position"></a>HOW TO：確認子資料表中選取的資料列保持在正確位置
 有時候當您使用 Windows Form 中的資料繫結時，您會在所謂父/子或主要/詳細資料檢視中顯示資料。 這是指來自相同來源的資料顯示在兩個控制項中的資料繫結案例。 在一個控制項中變更選取範圍會造成第二個控制項中顯示的資料也變更。 比方說，第一個控制項可能包含客戶清單，而第二個控制項包含與第一個控制項中所選取客戶相關的訂單清單。  
@@ -30,28 +30,28 @@ ms.locfileid: "59149106"
   
 ### <a name="to-cache-the-current-child-position"></a>快取目前的子系位置  
   
-1.  宣告整數變數來儲存子系清單位置，並宣告布林值變數來儲存是否要快取子系位置。  
+1. 宣告整數變數來儲存子系清單位置，並宣告布林值變數來儲存是否要快取子系位置。  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#4)]  
   
-2.  處理繫結 <xref:System.Windows.Forms.CurrencyManager> 的 <xref:System.Windows.Forms.CurrencyManager.ListChanged> 事件，並檢查 <xref:System.ComponentModel.ListChangedType.Reset> 的 <xref:System.ComponentModel.ListChangedType>。  
+2. 處理繫結 <xref:System.Windows.Forms.CurrencyManager> 的 <xref:System.Windows.Forms.CurrencyManager.ListChanged> 事件，並檢查 <xref:System.ComponentModel.ListChangedType.Reset> 的 <xref:System.ComponentModel.ListChangedType>。  
   
-3.  檢查 <xref:System.Windows.Forms.CurrencyManager> 的目前位置。 如果大於清單中的第一個項目 (通常為 0)，將它儲存到變數。  
+3. 檢查 <xref:System.Windows.Forms.CurrencyManager> 的目前位置。 如果大於清單中的第一個項目 (通常為 0)，將它儲存到變數。  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#2)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#2)]  
   
-4.  處理父貨幣管理員的父清單 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> 事件。 在處理常式中，設定布林值以表示不是快取案例。 如果發生 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>，父系的變更是清單位置變更，而不是項目值變更。  
+4. 處理父貨幣管理員的父清單 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged> 事件。 在處理常式中，設定布林值以表示不是快取案例。 如果發生 <xref:System.Windows.Forms.BindingManagerBase.CurrentChanged>，父系的變更是清單位置變更，而不是項目值變更。  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#5)]  
   
 ### <a name="to-reset-the-child-position"></a>重設子系位置  
   
-1.  處理子系繫結的 <xref:System.Windows.Forms.CurrencyManager> 的 <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> 事件。  
+1. 處理子系繫結的 <xref:System.Windows.Forms.CurrencyManager> 的 <xref:System.Windows.Forms.BindingManagerBase.PositionChanged> 事件。  
   
-2.  將子資料表位置重設為儲存在先前程序中的快取位置。  
+2. 將子資料表位置重設為儲存在先前程序中的快取位置。  
   
      [!code-csharp[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.CurrencyManagerReset#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.CurrencyManagerReset/VB/Form1.vb#3)]  
@@ -64,17 +64,17 @@ ms.locfileid: "59149106"
   
  若要測試程式碼範例，請執行下列步驟：  
   
-1.  執行範例。  
+1. 執行範例。  
   
-2.  確定已選取 [快取和重設位置] 核取方塊。  
+2. 確定已選取 [快取和重設位置] 核取方塊。  
   
-3.  按一下 [清除父欄位] 按鈕，使父資料表的欄位變更。 請注意，子資料表中的選取資料列不會變更。  
+3. 按一下 [清除父欄位] 按鈕，使父資料表的欄位變更。 請注意，子資料表中的選取資料列不會變更。  
   
-4.  關閉並重新執行此範例。 您要執行這項操作，因為重設行為只會在父資料列中的第一次變更時發生。  
+4. 關閉並重新執行此範例。 您要執行這項操作，因為重設行為只會在父資料列中的第一次變更時發生。  
   
-5.  清除 [快取和重設位置] 核取方塊。  
+5. 清除 [快取和重設位置] 核取方塊。  
   
-6.  按一下 [清除父欄位] 按鈕。 請注意，子資料表中的選取資料列會變更為第一個資料列。  
+6. 按一下 [清除父欄位] 按鈕。 請注意，子資料表中的選取資料列會變更為第一個資料列。  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
  這個範例需要：  

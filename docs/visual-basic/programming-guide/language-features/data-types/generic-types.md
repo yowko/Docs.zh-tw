@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 343c5c8e2625a1bd4279e0c97b7079482af0e8c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831420"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301226"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic 中的泛型類型 (Visual Basic)
 *「泛型類型」* (generic type) 是單一程式設計項目，適用於為各種資料類型執行相同的功能。 當您定義泛型類別或程序時，不需要為想要執行該功能的每種資料類型定義不同的版本。  
@@ -83,15 +83,15 @@ ms.locfileid: "58831420"
 ## <a name="advantages-of-generic-types"></a>泛型類型的優點  
  泛型類型是宣告數個不同程式設計項目的基礎，而這些項目各作用於特定資料類型。 泛型類型的替代項目是：  
   
-1.  作用於 `Object` 資料類型的單一類型。  
+1. 作用於 `Object` 資料類型的單一類型。  
   
-2.  類型的一組 *「類型專用」* (type-specific) 版本，每個版本都會分別進行編碼，並作用於一種特定資料類型 (例如 `String`)、 `Integer`或使用者定義的類型 (例如 `customer`)。  
+2. 類型的一組 *「類型專用」* (type-specific) 版本，每個版本都會分別進行編碼，並作用於一種特定資料類型 (例如 `String`)、 `Integer`或使用者定義的類型 (例如 `customer`)。  
   
  泛型類型優於這些替代項目的優點如下：  
   
 -   **類型安全。** 泛型類型會強制執行編譯階段類型檢查。 以 `Object` 為基礎的類型會接受任何資料類型，而且您必須撰寫程式碼來檢查是否可以接受輸入資料類型。 使用泛型類型，編譯器可以在執行階段之前捕捉類型不符。  
   
--   **效能。** 泛型類型不需要 *Box* 和 *Unbox* 資料，因為每種泛型類型都是一種資料類型特有的。 以 `Object` 為基礎的作業必須對輸入資料類型進行 Box 處理以將它們轉換成 `Object` ，並對要進行輸出的資料進行 Unbox 處理。 Box 和 Unbox 處理會降低效能。  
+-   **效能。** 泛型類型不需要 *Box* 和 *unBox* 資料，因為每種泛型類型都是一種資料類型特有的。 以 `Object` 為基礎的作業必須對輸入資料類型進行 Box 處理以將它們轉換成 `Object` ，並對要進行輸出的資料進行 Unbox 處理。 Box 和 Unbox 處理會降低效能。  
   
      以 `Object` 為基礎的類型也會進行晚期繫結，這表示在執行階段時存取其成員需要額外撰寫程式碼。 這也會降低效能。  
   
@@ -151,11 +151,11 @@ ms.locfileid: "58831420"
 - [資料類型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)
 - [類型字元](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
-- [在 Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [資料類型的疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [Visual Basic 中的類型轉換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
+- [資料類型疑難排解](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [資料類型](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object 資料類型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [共變數和反變數](../../concepts/covariance-contravariance/index.md)
 - [迭代器](../../../../visual-basic/programming-guide/concepts/iterators.md)

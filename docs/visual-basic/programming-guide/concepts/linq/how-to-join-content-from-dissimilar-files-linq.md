@@ -2,12 +2,12 @@
 title: HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 4183a27ead8f8570091bb369d75147af7aebd23b
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55827743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301109"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>HOW TO：將內容從不同的檔案 (LINQ) (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "55827743"
   
 ## <a name="to-create-the-data-files"></a>建立資料檔
   
-1.  將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 該檔案代表試算表資料。 第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。  
+1. 將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 該檔案代表試算表資料。 第 1 欄是學生的學號，第 2 欄到第 5 欄則是測驗分數。  
   
     ```  
     111, 97, 92, 81, 60  
@@ -32,7 +32,7 @@ ms.locfileid: "55827743"
     122, 94, 92, 91, 91  
     ```  
   
-2.  將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 該檔案代表內含學生姓氏、名字和學號的試算表。  
+2. 將下列各行複製到名為 names.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 該檔案代表內含學生姓氏、名字和學號的試算表。  
   
     ```  
     Omelchenko,Svetlana,111  
@@ -131,4 +131,4 @@ End Class
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ 和字串 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)
-- [LINQ 與檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
+- [LINQ 和檔案目錄 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-file-directories.md)
