@@ -11,45 +11,45 @@ helpviewer_keywords:
 - user input [Windows Forms], controlling
 - text [Windows Forms], controls for input
 ms.assetid: df60565e-5447-4110-92a6-be1f6ff5faa3
-ms.openlocfilehash: ca505b062be8c60c1dd9b08fead4855eb1eb4cd6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9a0edb44a95f5853edf711e0a1559e3b2e3b15
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59103840"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342444"
 ---
-# <a name="walkthrough-working-with-the-maskedtextbox-control"></a><span data-ttu-id="be8b2-102">逐步解說：使用 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="be8b2-102">Walkthrough: Working with the MaskedTextBox Control</span></span>
-<span data-ttu-id="be8b2-103">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="be8b2-103">Tasks illustrated in this walkthrough include:</span></span>  
+# <a name="walkthrough-working-with-the-maskedtextbox-control"></a><span data-ttu-id="d8eba-102">逐步解說：使用 MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="d8eba-102">Walkthrough: Working with the MaskedTextBox Control</span></span>
+<span data-ttu-id="d8eba-103">這個逐步解說中所述的工作包括：</span><span class="sxs-lookup"><span data-stu-id="d8eba-103">Tasks illustrated in this walkthrough include:</span></span>  
   
--   <span data-ttu-id="be8b2-104">初始化<xref:System.Windows.Forms.MaskedTextBox>控制項</span><span class="sxs-lookup"><span data-stu-id="be8b2-104">Initializing the <xref:System.Windows.Forms.MaskedTextBox> control</span></span>  
+-   <span data-ttu-id="d8eba-104">初始化<xref:System.Windows.Forms.MaskedTextBox>控制項</span><span class="sxs-lookup"><span data-stu-id="d8eba-104">Initializing the <xref:System.Windows.Forms.MaskedTextBox> control</span></span>  
   
--   <span data-ttu-id="be8b2-105">使用<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>來提醒使用者，當不符合一個字元，這是遮罩的事件處理常式</span><span class="sxs-lookup"><span data-stu-id="be8b2-105">Using the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event handler to alert the user when a character does not conform to the mask</span></span>  
+-   <span data-ttu-id="d8eba-105">使用<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>來提醒使用者，當不符合一個字元，這是遮罩的事件處理常式</span><span class="sxs-lookup"><span data-stu-id="d8eba-105">Using the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event handler to alert the user when a character does not conform to the mask</span></span>  
   
--   <span data-ttu-id="be8b2-106">指派的型別<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性和使用<xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>來提醒使用者，當他們嘗試認可的值不是有效類型的事件處理常式</span><span class="sxs-lookup"><span data-stu-id="be8b2-106">Assigning a type to the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property and using the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event handler to alert the user when the value they're attempting to commit is not valid for the type</span></span>  
+-   <span data-ttu-id="d8eba-106">指派的型別<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性和使用<xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted>來提醒使用者，當他們嘗試認可的值不是有效類型的事件處理常式</span><span class="sxs-lookup"><span data-stu-id="d8eba-106">Assigning a type to the <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property and using the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event handler to alert the user when the value they're attempting to commit is not valid for the type</span></span>  
   
-## <a name="creating-the-project-and-adding-a-control"></a><span data-ttu-id="be8b2-107">建立專案並加入控制項</span><span class="sxs-lookup"><span data-stu-id="be8b2-107">Creating the Project and Adding a Control</span></span>  
+## <a name="creating-the-project-and-adding-a-control"></a><span data-ttu-id="d8eba-107">建立專案並加入控制項</span><span class="sxs-lookup"><span data-stu-id="d8eba-107">Creating the Project and Adding a Control</span></span>  
   
-#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a><span data-ttu-id="be8b2-108">將 MaskedTextBox 控制項新增至您的表單</span><span class="sxs-lookup"><span data-stu-id="be8b2-108">To add a MaskedTextBox control to your form</span></span>  
+#### <a name="to-add-a-maskedtextbox-control-to-your-form"></a><span data-ttu-id="d8eba-108">將 MaskedTextBox 控制項新增至您的表單</span><span class="sxs-lookup"><span data-stu-id="d8eba-108">To add a MaskedTextBox control to your form</span></span>  
   
-1.  <span data-ttu-id="be8b2-109">開啟您想要放置的表單<xref:System.Windows.Forms.MaskedTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="be8b2-109">Open the form on which you want to place the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
+1. <span data-ttu-id="d8eba-109">開啟您想要放置的表單<xref:System.Windows.Forms.MaskedTextBox>控制項。</span><span class="sxs-lookup"><span data-stu-id="d8eba-109">Open the form on which you want to place the <xref:System.Windows.Forms.MaskedTextBox> control.</span></span>  
   
-2.  <span data-ttu-id="be8b2-110">拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**至您的表單。</span><span class="sxs-lookup"><span data-stu-id="be8b2-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control from the **Toolbox** to your form.</span></span>  
+2. <span data-ttu-id="d8eba-110">拖曳<xref:System.Windows.Forms.MaskedTextBox>控制項從**工具箱**至您的表單。</span><span class="sxs-lookup"><span data-stu-id="d8eba-110">Drag a <xref:System.Windows.Forms.MaskedTextBox> control from the **Toolbox** to your form.</span></span>  
   
-3.  <span data-ttu-id="be8b2-111">以滑鼠右鍵按一下控制項，然後選擇 **屬性**。</span><span class="sxs-lookup"><span data-stu-id="be8b2-111">Right-click the control and choose **Properties**.</span></span> <span data-ttu-id="be8b2-112">在 **屬性**視窗中，選取**遮罩**屬性，然後按一下 **...** （省略符號） 按鈕旁的屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="be8b2-112">In the **Properties** window, select the **Mask** property and click the **...** (ellipsis) button next to the property name.</span></span>  
+3. <span data-ttu-id="d8eba-111">以滑鼠右鍵按一下控制項，然後選擇 **屬性**。</span><span class="sxs-lookup"><span data-stu-id="d8eba-111">Right-click the control and choose **Properties**.</span></span> <span data-ttu-id="d8eba-112">在 **屬性**視窗中，選取**遮罩**屬性，然後按一下 **...** （省略符號） 按鈕旁的屬性名稱。</span><span class="sxs-lookup"><span data-stu-id="d8eba-112">In the **Properties** window, select the **Mask** property and click the **...** (ellipsis) button next to the property name.</span></span>  
   
-4.  <span data-ttu-id="be8b2-113">在 **輸入遮罩**對話方塊中，選取**簡短日期**加上遮罩，然後按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="be8b2-113">In the **Input Mask** dialog box, select the **Short Date** mask and click **OK**.</span></span>  
+4. <span data-ttu-id="d8eba-113">在 **輸入遮罩**對話方塊中，選取**簡短日期**加上遮罩，然後按一下 **確定**。</span><span class="sxs-lookup"><span data-stu-id="d8eba-113">In the **Input Mask** dialog box, select the **Short Date** mask and click **OK**.</span></span>  
   
-5.  <span data-ttu-id="be8b2-114">在 [**屬性**] 視窗中設定<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="be8b2-114">In the **Properties** window set the <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> property to `true`.</span></span> <span data-ttu-id="be8b2-115">這個屬性會導致每次使用者嘗試輸入違反遮罩定義的字元時發出嗶的短嗶聲。</span><span class="sxs-lookup"><span data-stu-id="be8b2-115">This property causes a short beep to sound every time the user attempts to input a character that violates the mask definition.</span></span>  
+5. <span data-ttu-id="d8eba-114">在 [**屬性**] 視窗中設定<xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A>屬性設`true`。</span><span class="sxs-lookup"><span data-stu-id="d8eba-114">In the **Properties** window set the <xref:System.Windows.Forms.MaskedTextBox.BeepOnError%2A> property to `true`.</span></span> <span data-ttu-id="d8eba-115">這個屬性會導致每次使用者嘗試輸入違反遮罩定義的字元時發出嗶的短嗶聲。</span><span class="sxs-lookup"><span data-stu-id="d8eba-115">This property causes a short beep to sound every time the user attempts to input a character that violates the mask definition.</span></span>  
   
- <span data-ttu-id="be8b2-116">如需摘要的遮罩屬性支援的字元，請參閱 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="be8b2-116">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
+ <span data-ttu-id="d8eba-116">如需摘要的遮罩屬性支援的字元，請參閱 < 備註 > 一節<xref:System.Windows.Forms.MaskedTextBox.Mask%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="d8eba-116">For a summary of the characters that the Mask property supports, see the Remarks section of the <xref:System.Windows.Forms.MaskedTextBox.Mask%2A> property.</span></span>  
   
-## <a name="alert-the-user-to-input-errors"></a><span data-ttu-id="be8b2-117">警示使用者輸入錯誤</span><span class="sxs-lookup"><span data-stu-id="be8b2-117">Alert the User to Input Errors</span></span>  
+## <a name="alert-the-user-to-input-errors"></a><span data-ttu-id="d8eba-117">警示使用者輸入錯誤</span><span class="sxs-lookup"><span data-stu-id="d8eba-117">Alert the User to Input Errors</span></span>  
   
-#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a><span data-ttu-id="be8b2-118">新增拒絕的遮罩輸入的汽球提示</span><span class="sxs-lookup"><span data-stu-id="be8b2-118">Add a balloon tip for rejected mask input</span></span>  
+#### <a name="add-a-balloon-tip-for-rejected-mask-input"></a><span data-ttu-id="d8eba-118">新增拒絕的遮罩輸入的汽球提示</span><span class="sxs-lookup"><span data-stu-id="d8eba-118">Add a balloon tip for rejected mask input</span></span>  
   
-1.  <span data-ttu-id="be8b2-119">返回**工具箱**，並新增<xref:System.Windows.Forms.ToolTip>至您的表單。</span><span class="sxs-lookup"><span data-stu-id="be8b2-119">Return to the **Toolbox** and add a <xref:System.Windows.Forms.ToolTip> to your form.</span></span>  
+1. <span data-ttu-id="d8eba-119">返回**工具箱**，並新增<xref:System.Windows.Forms.ToolTip>至您的表單。</span><span class="sxs-lookup"><span data-stu-id="d8eba-119">Return to the **Toolbox** and add a <xref:System.Windows.Forms.ToolTip> to your form.</span></span>  
   
-2.  <span data-ttu-id="be8b2-120">建立事件處理常式<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>引發的事件<xref:System.Windows.Forms.ToolTip>發生輸入的錯誤時。</span><span class="sxs-lookup"><span data-stu-id="be8b2-120">Create an event handler for the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event that raises the <xref:System.Windows.Forms.ToolTip> when an input error occurs.</span></span> <span data-ttu-id="be8b2-121">5 秒，或直到使用者按一下它，仍會顯示汽球提示。</span><span class="sxs-lookup"><span data-stu-id="be8b2-121">The balloon tip remains visible for five seconds, or until the user clicks it.</span></span>  
+2. <span data-ttu-id="d8eba-120">建立事件處理常式<xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected>引發的事件<xref:System.Windows.Forms.ToolTip>發生輸入的錯誤時。</span><span class="sxs-lookup"><span data-stu-id="d8eba-120">Create an event handler for the <xref:System.Windows.Forms.MaskedTextBox.MaskInputRejected> event that raises the <xref:System.Windows.Forms.ToolTip> when an input error occurs.</span></span> <span data-ttu-id="d8eba-121">5 秒，或直到使用者按一下它，仍會顯示汽球提示。</span><span class="sxs-lookup"><span data-stu-id="d8eba-121">The balloon tip remains visible for five seconds, or until the user clicks it.</span></span>  
   
     ```csharp  
     public void Form1_Load(Object sender, EventArgs e)   
@@ -78,11 +78,11 @@ ms.locfileid: "59103840"
     End Sub  
     ```  
   
-## <a name="alert-the-user-to-a-type-that-is-not-valid"></a><span data-ttu-id="be8b2-122">通知使用者有不是有效的類型</span><span class="sxs-lookup"><span data-stu-id="be8b2-122">Alert the User to a Type that Is Not Valid</span></span>  
+## <a name="alert-the-user-to-a-type-that-is-not-valid"></a><span data-ttu-id="d8eba-122">通知使用者有不是有效的類型</span><span class="sxs-lookup"><span data-stu-id="d8eba-122">Alert the User to a Type that Is Not Valid</span></span>  
   
-#### <a name="add-a-balloon-tip-for-invalid-data-types"></a><span data-ttu-id="be8b2-123">無效的資料類型建立汽球提示</span><span class="sxs-lookup"><span data-stu-id="be8b2-123">Add a balloon tip for invalid data types</span></span>  
+#### <a name="add-a-balloon-tip-for-invalid-data-types"></a><span data-ttu-id="d8eba-123">無效的資料類型建立汽球提示</span><span class="sxs-lookup"><span data-stu-id="d8eba-123">Add a balloon tip for invalid data types</span></span>  
   
-1.  <span data-ttu-id="be8b2-124">在您的表單<xref:System.Windows.Forms.Form.Load>事件處理常式，指派<xref:System.Type>物件，代表<xref:System.DateTime>輸入到<xref:System.Windows.Forms.MaskedTextBox>控制項的<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性：</span><span class="sxs-lookup"><span data-stu-id="be8b2-124">In your form's <xref:System.Windows.Forms.Form.Load> event handler, assign a <xref:System.Type> object representing the <xref:System.DateTime> type to the <xref:System.Windows.Forms.MaskedTextBox> control's <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property:</span></span>  
+1. <span data-ttu-id="d8eba-124">在您的表單<xref:System.Windows.Forms.Form.Load>事件處理常式，指派<xref:System.Type>物件，代表<xref:System.DateTime>輸入到<xref:System.Windows.Forms.MaskedTextBox>控制項的<xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A>屬性：</span><span class="sxs-lookup"><span data-stu-id="d8eba-124">In your form's <xref:System.Windows.Forms.Form.Load> event handler, assign a <xref:System.Type> object representing the <xref:System.DateTime> type to the <xref:System.Windows.Forms.MaskedTextBox> control's <xref:System.Windows.Forms.MaskedTextBox.ValidatingType%2A> property:</span></span>  
   
     ```csharp  
     private void Form1_Load(Object sender, EventArgs e)  
@@ -100,7 +100,7 @@ ms.locfileid: "59103840"
     End Sub  
     ```  
   
-2.  <span data-ttu-id="be8b2-125">新增 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 事件的事件處理常式：</span><span class="sxs-lookup"><span data-stu-id="be8b2-125">Add an event handler for the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event:</span></span>  
+2. <span data-ttu-id="d8eba-125">新增 <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> 事件的事件處理常式：</span><span class="sxs-lookup"><span data-stu-id="d8eba-125">Add an event handler for the <xref:System.Windows.Forms.MaskedTextBox.TypeValidationCompleted> event:</span></span>  
   
     ```csharp  
     public void maskedTextBox1_TypeValidationCompleted(object sender, TypeValidationEventArgs e)  
@@ -124,7 +124,7 @@ ms.locfileid: "59103840"
     End Sub  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="be8b2-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="be8b2-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d8eba-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d8eba-126">See also</span></span>
 
 - <xref:System.Windows.Forms.MaskedTextBox>
-- [<span data-ttu-id="be8b2-127">MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="be8b2-127">MaskedTextBox Control</span></span>](maskedtextbox-control-windows-forms.md)
+- [<span data-ttu-id="d8eba-127">MaskedTextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="d8eba-127">MaskedTextBox Control</span></span>](maskedtextbox-control-windows-forms.md)
