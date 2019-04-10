@@ -2,20 +2,20 @@
 title: 通道處理站
 ms.date: 03/30/2017
 ms.assetid: 09b53aa1-b13c-476c-a461-e82fcacd2a8b
-ms.openlocfilehash: 8e04dd762e0abad7796d90aff5615134ba22539c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 0bcaa739a51d168e18c809804b7da6948ab61e9d
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59119726"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315526"
 ---
-# <a name="channel-factory"></a><span data-ttu-id="063fb-102">通道處理站</span><span class="sxs-lookup"><span data-stu-id="063fb-102">Channel Factory</span></span>
-<span data-ttu-id="063fb-103">本範例示範用戶端應用程式如何使用 <xref:System.ServiceModel.ChannelFactory> 類別而非使用產生的用戶端來建立通道。</span><span class="sxs-lookup"><span data-stu-id="063fb-103">This sample demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span> <span data-ttu-id="063fb-104">此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。</span><span class="sxs-lookup"><span data-stu-id="063fb-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
+# <a name="channel-factory"></a><span data-ttu-id="710a2-102">通道處理站</span><span class="sxs-lookup"><span data-stu-id="710a2-102">Channel Factory</span></span>
+<span data-ttu-id="710a2-103">本範例示範用戶端應用程式如何使用 <xref:System.ServiceModel.ChannelFactory> 類別而非使用產生的用戶端來建立通道。</span><span class="sxs-lookup"><span data-stu-id="710a2-103">This sample demonstrates how a client application can create a channel with the <xref:System.ServiceModel.ChannelFactory> class instead of a generated client.</span></span> <span data-ttu-id="710a2-104">此樣本根據[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)以實作計算機服務。</span><span class="sxs-lookup"><span data-stu-id="710a2-104">This sample is based on the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) that implements a calculator service.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="063fb-105">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="063fb-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
+>  <span data-ttu-id="710a2-105">此範例的安裝程序與建置指示位於本主題的結尾。</span><span class="sxs-lookup"><span data-stu-id="710a2-105">The setup procedure and build instructions for this sample are located at the end of this topic.</span></span>  
   
- <span data-ttu-id="063fb-106">此範例使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立服務端點的通道。</span><span class="sxs-lookup"><span data-stu-id="063fb-106">This sample uses the <xref:System.ServiceModel.ChannelFactory%601> class to create a channel to a service endpoint.</span></span> <span data-ttu-id="063fb-107">一般而言，若要建立服務端點的通道您產生的用戶端型別[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)並建立產生之型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="063fb-107">Typically, to create a channel to a service endpoint you generate a client type with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) and create an instance of the generated type.</span></span> <span data-ttu-id="063fb-108">您也可以使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立通道，如此範例所示。</span><span class="sxs-lookup"><span data-stu-id="063fb-108">You can also create a channel by using the <xref:System.ServiceModel.ChannelFactory%601> class, as demonstrated in this sample.</span></span> <span data-ttu-id="063fb-109">下列範例程式碼所建立的服務是中的服務一模一樣[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="063fb-109">The service created by the following sample code is identical to the service in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
+ <span data-ttu-id="710a2-106">此範例使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立服務端點的通道。</span><span class="sxs-lookup"><span data-stu-id="710a2-106">This sample uses the <xref:System.ServiceModel.ChannelFactory%601> class to create a channel to a service endpoint.</span></span> <span data-ttu-id="710a2-107">一般而言，若要建立服務端點的通道您產生的用戶端型別[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)並建立產生之型別的執行個體。</span><span class="sxs-lookup"><span data-stu-id="710a2-107">Typically, to create a channel to a service endpoint you generate a client type with the [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) and create an instance of the generated type.</span></span> <span data-ttu-id="710a2-108">您也可以使用 <xref:System.ServiceModel.ChannelFactory%601> 類別來建立通道，如此範例所示。</span><span class="sxs-lookup"><span data-stu-id="710a2-108">You can also create a channel by using the <xref:System.ServiceModel.ChannelFactory%601> class, as demonstrated in this sample.</span></span> <span data-ttu-id="710a2-109">下列範例程式碼所建立的服務是中的服務一模一樣[開始使用](../../../../docs/framework/wcf/samples/getting-started-sample.md)。</span><span class="sxs-lookup"><span data-stu-id="710a2-109">The service created by the following sample code is identical to the service in the [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md).</span></span>  
   
 ```csharp  
 EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
@@ -26,9 +26,9 @@ ICalculator channel = factory.CreateChannel();
 ```  
   
 > [!IMPORTANT]
->  <span data-ttu-id="063fb-110">如果您是在跨電腦的情況中執行此範例，必須使用正在執行服務的電腦完整名稱來取代先前程式碼中的 "localhost"。</span><span class="sxs-lookup"><span data-stu-id="063fb-110">If you are running this sample in a cross-machine scenario, you must replace "localhost" in the preceding code with the fully-qualified name of the machine that is running the service.</span></span> <span data-ttu-id="063fb-111">此範例不會使用組態來設定端點位址，因此必須透過程式碼來完成。</span><span class="sxs-lookup"><span data-stu-id="063fb-111">This sample does not use configuration to set the endpoint address, so this must be done in code.</span></span>  
+>  <span data-ttu-id="710a2-110">如果您是在跨電腦的情況中執行此範例，必須使用正在執行服務的電腦完整名稱來取代先前程式碼中的 "localhost"。</span><span class="sxs-lookup"><span data-stu-id="710a2-110">If you are running this sample in a cross-machine scenario, you must replace "localhost" in the preceding code with the fully-qualified name of the machine that is running the service.</span></span> <span data-ttu-id="710a2-111">此範例不會使用組態來設定端點位址，因此必須透過程式碼來完成。</span><span class="sxs-lookup"><span data-stu-id="710a2-111">This sample does not use configuration to set the endpoint address, so this must be done in code.</span></span>  
   
- <span data-ttu-id="063fb-112">一旦建立了通道，即可透過叫用已產生用戶端的相同方式來叫用服務作業。</span><span class="sxs-lookup"><span data-stu-id="063fb-112">Once the channel is created, service operations can be invoked just as with a generated client.</span></span>  
+ <span data-ttu-id="710a2-112">一旦建立了通道，即可透過叫用已產生用戶端的相同方式來叫用服務作業。</span><span class="sxs-lookup"><span data-stu-id="710a2-112">Once the channel is created, service operations can be invoked just as with a generated client.</span></span>  
   
 ```csharp  
 // Call the Add service operation.  
@@ -38,14 +38,14 @@ double result = channel.Add(value1, value2);
 Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result);  
 ```  
   
- <span data-ttu-id="063fb-113">若要關閉通道，必須先將通道轉換為 <xref:System.ServiceModel.IClientChannel> 介面。</span><span class="sxs-lookup"><span data-stu-id="063fb-113">To close the channel, it must first be cast to an <xref:System.ServiceModel.IClientChannel> interface.</span></span> <span data-ttu-id="063fb-114">這是因為產生的通道會使用 `ICalculator` 介面在用戶端應用程式中宣告，且使用的方法與 `Add` 和 `Subtract` 類似，但和 `Close` 不同。</span><span class="sxs-lookup"><span data-stu-id="063fb-114">This is because the channel as generated is declared in the client application using the `ICalculator` interface, which has methods like `Add` and `Subtract` but not `Close`.</span></span> <span data-ttu-id="063fb-115">`Close` 方法源自 <xref:System.ServiceModel.ICommunicationObject> 介面。</span><span class="sxs-lookup"><span data-stu-id="063fb-115">The `Close` method originates on the <xref:System.ServiceModel.ICommunicationObject> interface.</span></span>  
+ <span data-ttu-id="710a2-113">若要關閉通道，必須先將通道轉換為 <xref:System.ServiceModel.IClientChannel> 介面。</span><span class="sxs-lookup"><span data-stu-id="710a2-113">To close the channel, it must first be cast to an <xref:System.ServiceModel.IClientChannel> interface.</span></span> <span data-ttu-id="710a2-114">這是因為產生的通道會使用 `ICalculator` 介面在用戶端應用程式中宣告，且使用的方法與 `Add` 和 `Subtract` 類似，但和 `Close` 不同。</span><span class="sxs-lookup"><span data-stu-id="710a2-114">This is because the channel as generated is declared in the client application using the `ICalculator` interface, which has methods like `Add` and `Subtract` but not `Close`.</span></span> <span data-ttu-id="710a2-115">`Close` 方法源自 <xref:System.ServiceModel.ICommunicationObject> 介面。</span><span class="sxs-lookup"><span data-stu-id="710a2-115">The `Close` method originates on the <xref:System.ServiceModel.ICommunicationObject> interface.</span></span>  
   
 ```csharp  
 // Close the channel.  
  ((IClientChannel)client).Close();  
 ```  
   
- <span data-ttu-id="063fb-116">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="063fb-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="063fb-117">在用戶端視窗中按 ENTER 鍵，關閉用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="063fb-117">Press ENTER in the client window to shut down the client application.</span></span>  
+ <span data-ttu-id="710a2-116">當您執行範例時，作業要求和回應會顯示在用戶端主控台視窗中。</span><span class="sxs-lookup"><span data-stu-id="710a2-116">When you run the sample, the operation requests and responses are displayed in the client console window.</span></span> <span data-ttu-id="710a2-117">在用戶端視窗中按 ENTER 鍵，關閉用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="710a2-117">Press ENTER in the client window to shut down the client application.</span></span>  
   
 ```  
 Add(100,15.99) = 115.99  
@@ -56,27 +56,27 @@ Divide(22,7) = 3.14285714285714
 Press <ENTER> to terminate client.  
 ```  
   
-### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="063fb-118">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="063fb-118">To set up, build, and run the sample</span></span>  
+### <a name="to-set-up-build-and-run-the-sample"></a><span data-ttu-id="710a2-118">若要安裝、建置及執行範例</span><span class="sxs-lookup"><span data-stu-id="710a2-118">To set up, build, and run the sample</span></span>  
   
-1.  <span data-ttu-id="063fb-119">請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="063fb-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
+1. <span data-ttu-id="710a2-119">請確定您已執行[Windows Communication Foundation 範例的單次安裝程序](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="710a2-119">Ensure that you have performed the [One-Time Setup Procedure for the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md).</span></span>  
   
-2.  <span data-ttu-id="063fb-120">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="063fb-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span> <span data-ttu-id="063fb-121">請注意，此範例不會啟用中繼資料發行。</span><span class="sxs-lookup"><span data-stu-id="063fb-121">Note that this sample does not enable metadata publishing.</span></span> <span data-ttu-id="063fb-122">您必須先為此範例啟用中繼資料發行，以重新產生用戶端類型。</span><span class="sxs-lookup"><span data-stu-id="063fb-122">You must first enable metadata publishing for this sample to regenerate the client type.</span></span>  
+2. <span data-ttu-id="710a2-120">若要建置方案的 C# 或 Visual Basic .NET 版本，請遵循 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)中的指示。</span><span class="sxs-lookup"><span data-stu-id="710a2-120">To build the C# or Visual Basic .NET edition of the solution, follow the instructions in [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md).</span></span> <span data-ttu-id="710a2-121">請注意，此範例不會啟用中繼資料發行。</span><span class="sxs-lookup"><span data-stu-id="710a2-121">Note that this sample does not enable metadata publishing.</span></span> <span data-ttu-id="710a2-122">您必須先為此範例啟用中繼資料發行，以重新產生用戶端類型。</span><span class="sxs-lookup"><span data-stu-id="710a2-122">You must first enable metadata publishing for this sample to regenerate the client type.</span></span>  
   
-3.  <span data-ttu-id="063fb-123">若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="063fb-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
+3. <span data-ttu-id="710a2-123">若要在單一或跨電腦組態中執行範例，請依照下列中的指示[執行 Windows Communication Foundation 範例](../../../../docs/framework/wcf/samples/running-the-samples.md)。</span><span class="sxs-lookup"><span data-stu-id="710a2-123">To run the sample in a single- or cross-machine configuration, follow the instructions in [Running the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/running-the-samples.md).</span></span>  
   
-### <a name="to-run-the-sample-cross-machine"></a><span data-ttu-id="063fb-124">若要執行跨電腦範例</span><span class="sxs-lookup"><span data-stu-id="063fb-124">To run the sample cross machine</span></span>  
+### <a name="to-run-the-sample-cross-machine"></a><span data-ttu-id="710a2-124">若要執行跨電腦範例</span><span class="sxs-lookup"><span data-stu-id="710a2-124">To run the sample cross machine</span></span>  
   
-1.  <span data-ttu-id="063fb-125">請使用正在執行服務的電腦完整名稱來取代下列程式碼中的 "localhost"。</span><span class="sxs-lookup"><span data-stu-id="063fb-125">Replace "localhost" in the following code with the fully-qualified name of the machine that is running the service.</span></span>  
+1. <span data-ttu-id="710a2-125">請使用正在執行服務的電腦完整名稱來取代下列程式碼中的 "localhost"。</span><span class="sxs-lookup"><span data-stu-id="710a2-125">Replace "localhost" in the following code with the fully-qualified name of the machine that is running the service.</span></span>  
   
     ```csharp  
     EndpointAddress address = new EndpointAddress("http://localhost/servicemodelsamples/service.svc");  
     ```  
   
 > [!IMPORTANT]
->  <span data-ttu-id="063fb-126">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="063fb-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="063fb-127">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="063fb-127">Check for the following (default) directory before continuing.</span></span>  
+>  <span data-ttu-id="710a2-126">這些範例可能已安裝在您的電腦上。</span><span class="sxs-lookup"><span data-stu-id="710a2-126">The samples may already be installed on your machine.</span></span> <span data-ttu-id="710a2-127">請先檢查下列 (預設) 目錄，然後再繼續。</span><span class="sxs-lookup"><span data-stu-id="710a2-127">Check for the following (default) directory before continuing.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples`  
 >   
->  <span data-ttu-id="063fb-128">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="063fb-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="063fb-129">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="063fb-129">This sample is located in the following directory.</span></span>  
+>  <span data-ttu-id="710a2-128">如果此目錄不存在，請移至[Windows Communication Foundation (WCF) 和.NET Framework 4 的 Windows Workflow Foundation (WF) 範例](https://go.microsoft.com/fwlink/?LinkId=150780)以下載所有 Windows Communication Foundation (WCF) 和[!INCLUDE[wf1](../../../../includes/wf1-md.md)]範例。</span><span class="sxs-lookup"><span data-stu-id="710a2-128">If this directory does not exist, go to [Windows Communication Foundation (WCF) and Windows Workflow Foundation (WF) Samples for .NET Framework 4](https://go.microsoft.com/fwlink/?LinkId=150780) to download all Windows Communication Foundation (WCF) and [!INCLUDE[wf1](../../../../includes/wf1-md.md)] samples.</span></span> <span data-ttu-id="710a2-129">此範例位於下列目錄。</span><span class="sxs-lookup"><span data-stu-id="710a2-129">This sample is located in the following directory.</span></span>  
 >   
 >  `<InstallDrive>:\WF_WCF_Samples\WCF\Basic\Client\ChannelFactory`  

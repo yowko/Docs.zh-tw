@@ -5,21 +5,21 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 - application settings [Windows Forms], between application sessions
 ms.assetid: 1a85911f-97b2-476c-930b-83379edd890c
-ms.openlocfilehash: 03a10e95362b1d49e4929c07ab6193f53898d34f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 95e613cb280813cd75d887d3cf147d7c897bc2e6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59142853"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59318883"
 ---
-# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="7729c-102">如何：變更應用程式工作階段之間的設定值</span><span class="sxs-lookup"><span data-stu-id="7729c-102">How To: Change the Value of a Setting Between Application Sessions</span></span>
-<span data-ttu-id="7729c-103">有些時候，您可能要變更設定，以編譯及部署應用程式之後的應用程式工作階段之間的值。</span><span class="sxs-lookup"><span data-stu-id="7729c-103">At times, you might want to change the value of a setting between application sessions after the application has been compiled and deployed.</span></span> <span data-ttu-id="7729c-104">例如，您可能要變更連接字串以指向正確的資料庫位置。</span><span class="sxs-lookup"><span data-stu-id="7729c-104">For example, you might want to change a connection string to point to the correct database location.</span></span> <span data-ttu-id="7729c-105">由於編譯及部署應用程式之後，都無法使用設計階段工具，您必須變更設定值，以手動方式在檔案中。</span><span class="sxs-lookup"><span data-stu-id="7729c-105">Since design-time tools are not available after the application has been compiled and deployed, you must change the setting value manually in the file.</span></span>  
+# <a name="how-to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="ae805-102">如何：變更應用程式工作階段之間的設定值</span><span class="sxs-lookup"><span data-stu-id="ae805-102">How To: Change the Value of a Setting Between Application Sessions</span></span>
+<span data-ttu-id="ae805-103">有些時候，您可能要變更設定，以編譯及部署應用程式之後的應用程式工作階段之間的值。</span><span class="sxs-lookup"><span data-stu-id="ae805-103">At times, you might want to change the value of a setting between application sessions after the application has been compiled and deployed.</span></span> <span data-ttu-id="ae805-104">例如，您可能要變更連接字串以指向正確的資料庫位置。</span><span class="sxs-lookup"><span data-stu-id="ae805-104">For example, you might want to change a connection string to point to the correct database location.</span></span> <span data-ttu-id="ae805-105">由於編譯及部署應用程式之後，都無法使用設計階段工具，您必須變更設定值，以手動方式在檔案中。</span><span class="sxs-lookup"><span data-stu-id="ae805-105">Since design-time tools are not available after the application has been compiled and deployed, you must change the setting value manually in the file.</span></span>  
   
-### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="7729c-106">若要變更應用程式工作階段之間的設定值</span><span class="sxs-lookup"><span data-stu-id="7729c-106">To Change the Value of a Setting Between Application Sessions</span></span>  
+### <a name="to-change-the-value-of-a-setting-between-application-sessions"></a><span data-ttu-id="ae805-106">若要變更應用程式工作階段之間的設定值</span><span class="sxs-lookup"><span data-stu-id="ae805-106">To Change the Value of a Setting Between Application Sessions</span></span>  
   
-1.  <span data-ttu-id="7729c-107">使用 Microsoft 記事本或一些其他文字編輯器或 XML 編輯器，開啟您的應用程式相關聯.config 檔案。</span><span class="sxs-lookup"><span data-stu-id="7729c-107">Using Microsoft Notepad or some other text or XML editor, open the .config file associated with your application.</span></span>  
+1. <span data-ttu-id="ae805-107">使用 Microsoft 記事本或一些其他文字編輯器或 XML 編輯器，開啟您的應用程式相關聯.config 檔案。</span><span class="sxs-lookup"><span data-stu-id="ae805-107">Using Microsoft Notepad or some other text or XML editor, open the .config file associated with your application.</span></span>  
   
-2.  <span data-ttu-id="7729c-108">找出您想要變更設定的項目。</span><span class="sxs-lookup"><span data-stu-id="7729c-108">Locate the entry for the setting you want to change.</span></span> <span data-ttu-id="7729c-109">它看起來應該類似下列的範例。</span><span class="sxs-lookup"><span data-stu-id="7729c-109">It should look similar to the example presented below.</span></span>  
+2. <span data-ttu-id="ae805-108">找出您想要變更設定的項目。</span><span class="sxs-lookup"><span data-stu-id="ae805-108">Locate the entry for the setting you want to change.</span></span> <span data-ttu-id="ae805-109">它看起來應該類似下列的範例。</span><span class="sxs-lookup"><span data-stu-id="ae805-109">It should look similar to the example presented below.</span></span>  
   
     ```xml  
     <setting name="Setting1" serializeAs="String" >  
@@ -27,9 +27,9 @@ ms.locfileid: "59142853"
     </setting>  
     ```  
   
-3.  <span data-ttu-id="7729c-110">輸入您設定的新值，然後儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="7729c-110">Type a new value for your setting and save the file.</span></span>  
+3. <span data-ttu-id="ae805-110">輸入您設定的新值，然後儲存檔案。</span><span class="sxs-lookup"><span data-stu-id="ae805-110">Type a new value for your setting and save the file.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7729c-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7729c-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="ae805-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ae805-111">See also</span></span>
 
-- [<span data-ttu-id="7729c-112">使用應用程式設定和使用者設定</span><span class="sxs-lookup"><span data-stu-id="7729c-112">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
-- [<span data-ttu-id="7729c-113">應用程式設定概觀</span><span class="sxs-lookup"><span data-stu-id="7729c-113">Application Settings Overview</span></span>](application-settings-overview.md)
+- [<span data-ttu-id="ae805-112">使用應用程式設定和使用者設定</span><span class="sxs-lookup"><span data-stu-id="ae805-112">Using Application Settings and User Settings</span></span>](using-application-settings-and-user-settings.md)
+- [<span data-ttu-id="ae805-113">應用程式設定概觀</span><span class="sxs-lookup"><span data-stu-id="ae805-113">Application Settings Overview</span></span>](application-settings-overview.md)
