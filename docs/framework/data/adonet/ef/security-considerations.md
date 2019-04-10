@@ -2,12 +2,12 @@
 title: 安全性考量 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 114da13e9939131f4799dc8a3565167f516eb697
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904137"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59161354"
 ---
 # <a name="security-considerations-entity-framework"></a>安全性考量 (Entity Framework)
 本主題將描述與開發、部署和執行 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式有關的安全性考量。 您也應該遵循建立安全 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 應用程式的建議事項。 如需詳細資訊，請參閱 <<c0> [ 安全性概觀](../../../../../docs/framework/data/adonet/security-overview.md)。  
@@ -46,7 +46,7 @@ ms.locfileid: "55904137"
   
 -   以動態方式建立連接時使用連接字串產生器 (Builder)。  
   
-     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。 這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。 如需詳細資訊，請參閱[＜How to：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 也使用適當的字串產生器類別，來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。 如需 ADO.NET 提供者的連接字串產生器資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
+     如果您必須在執行階段建構連接字串，請使用 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> 類別 (Class)。 這個字串產生器類別會透過驗證和逸出無效的輸入資訊，協助避免連接字串插入式攻擊。 如需詳細資訊，請參閱[如何：建置 Entitycollection 連接字串](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)。 也使用適當的字串產生器類別，來建構資料來源連接字串一部分[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]連接字串。 如需 ADO.NET 提供者的連接字串產生器資訊，請參閱[連接字串產生器](../../../../../docs/framework/data/adonet/connection-string-builders.md)。  
   
  如需詳細資訊，請參閱[保護連線資訊](../../../../../docs/framework/data/adonet/protecting-connection-information.md)。  
   
@@ -65,13 +65,13 @@ ms.locfileid: "55904137"
 #### <a name="run-applications-with-the-minimum-permissions"></a>使用最低權限來執行應用程式。  
  當您允許 Managed 應用程式以完全信任的權限執行時，[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 就不會限制應用程式對電腦的存取。 這樣做可能會讓應用程式存在安全性弱點，進而危害整個系統。 若要在 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 中使用程式碼存取安全性和其他安全性機制，您應該使用部分信任的權限以及讓應用程式正常運作所需的最低權限集合來執行應用程式。 下列程式碼存取權限是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式所需的最低權限：  
   
--   <xref:System.Security.Permissions.FileIOPermission>：<xref:System.Security.Permissions.FileIOPermissionAccess.Write> (用以開啟指定的中繼資料檔案) 或 <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> (用以搜尋中繼資料檔案的目錄)。  
+-   <xref:System.Security.Permissions.FileIOPermission>:<xref:System.Security.Permissions.FileIOPermissionAccess.Write>以開啟指定的中繼資料檔案或<xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>搜尋中繼資料檔案的目錄。  
   
--   <xref:System.Security.Permissions.ReflectionPermission>：<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (用以支援 LINQ to Entities 查詢)。  
+-   <xref:System.Security.Permissions.ReflectionPermission>:<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>用以支援 LINQ to Entities 查詢。  
   
--   <xref:System.Transactions.DistributedTransactionPermission>：<xref:System.Security.Permissions.PermissionState.Unrestricted> (用以在 <xref:System.Transactions><xref:System.Transactions.Transaction> 中登記)。  
+-   <xref:System.Transactions.DistributedTransactionPermission>:<xref:System.Security.Permissions.PermissionState.Unrestricted>登記<xref:System.Transactions><xref:System.Transactions.Transaction>。  
   
--   <xref:System.Security.Permissions.SecurityPermission>：<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (用以使用 <xref:System.Runtime.Serialization.ISerializable> 介面來序列化例外狀況 (Exception))。  
+-   <xref:System.Security.Permissions.SecurityPermission>:<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>來序列化例外狀況使用<xref:System.Runtime.Serialization.ISerializable>介面。  
   
 -   開啟資料庫連線，而這類執行命令，針對資料庫的權限<xref:System.Data.SqlClient.SqlClientPermission>SQL Server 資料庫。  
   
@@ -94,13 +94,13 @@ ms.locfileid: "55904137"
 #### <a name="prevent-sql-injection-attacks"></a>避免 SQL 插入式攻擊。  
  應用程式經常會接受外部輸入 (來自使用者或其他外部代理程式) 以及根據該項輸入執行動作。 任何直接或間接衍生自使用者或外部代理程式的輸入都可能會具有使用目標語言語法以便執行未授權動作的內容。 當目標語言是 [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] 等結構化查詢語言 (SQL) 時，這種操作方式就稱為 SQL 插入式攻擊。 惡意使用者可能會將命令直接插入查詢中，並且卸除資料庫資料表、導致阻斷服務攻擊，或以其他方式變更正在執行之作業的本質。  
   
--   [!INCLUDE[esql](../../../../../includes/esql-md.md)] 插入式攻擊：  
+-   [!INCLUDE[esql](../../../../../includes/esql-md.md)] 資料隱碼攻擊：  
   
      使用者可能會透過提供惡意輸入給查詢述詞 (Predicate) 和參數名稱所使用的值，在 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 中執行 SQL 插入式攻擊。 若要避免 SQL 插入式攻擊的風險，請勿結合使用者輸入與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 命令文字。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢會在可接受常值 (Literal) 的任何位置接受參數。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用[查詢產生器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))來安全地建構 Entity SQL。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢任何位置接受參數接受的常值。 您應該使用參數型查詢，而非直接將外部代理程式的常值插入查詢中。 您也應該考慮使用[查詢產生器方法](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))來安全地建構 Entity SQL。  
   
--   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 插入式攻擊：  
+-   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 資料隱碼攻擊：  
   
      雖然可以在 [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 中撰寫查詢，不過這項作業實際上是透過物件模型 API 執行的。 與 [!INCLUDE[esql](../../../../../includes/esql-md.md)] 查詢不同的是，[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 查詢並非使用字串操作或串連所撰寫，而且它們不會遭受傳統 SQL 插入式攻擊的威脅。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "55904137"
  雖然根目錄運算子 (`~`) 和 `DataDirectory` 替代字串解析而成的值應該在應用程式的執行階段期間維持不變，但是 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 不會限制主應用程式修改這些值。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>在部署之前確認路徑長度。  
- 部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之前，您應該確認根目錄運算子 (~) 和 `DataDirectory` 替代字串的值並未超過作業系統中路徑長度的限制。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者不會確定路徑長度是否在有效限制內。  
+ 部署 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 應用程式之前，您應該確認根目錄運算子 (~) 和 `DataDirectory` 替代字串的值並未超過作業系統中路徑長度的限制。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] 資料提供者不會確定路徑長度在有效限制內。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET 中繼資料的安全性考量  
  下列安全性考量會在產生和使用模型與對應檔時適用。  
@@ -162,6 +162,7 @@ ms.locfileid: "55904137"
  應用程式不應該接受來自未受信任來源之 <xref:System.Data.Metadata.Edm.MetadataWorkspace> 類別的執行個體 (Instance)。 您應該改為根據這類來源明確建構並填入工作區 (Workspace)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [設定 ADO.NET 應用程式的安全性](../../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [部署考量](../../../../../docs/framework/data/adonet/ef/deployment-considerations.md)
 - [移轉考量](../../../../../docs/framework/data/adonet/ef/migration-considerations.md)

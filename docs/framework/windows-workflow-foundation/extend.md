@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Workflow Foundation [WF], extending
 - extending [WF]
 ms.assetid: d6861f28-9c8c-4225-872d-9a80e2e59034
-ms.openlocfilehash: 3b85faed45c804b22933569483533651f1732d1f
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 8449c1f229ffb993036dbb909d6f4c98c47498af
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717514"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59160559"
 ---
 # <a name="extending-windows-workflow-foundation"></a>擴充 Windows Workflow Foundation
 下一節會說明如何使用自訂活動和 Visual Studio 2010 之外重新裝載的環境中的設計工具來擴充 Windows Workflow Foundation (WF)。
@@ -20,4 +20,5 @@ ms.locfileid: "57717514"
  [自訂工作流程設計經驗](customizing-the-workflow-design-experience.md)指出如何設計自訂活動及重新裝載的案例[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]大幅簡化在[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]。 開發和部署現在是更容易且更有彈性由於新的活動設計工具程式設計模型建置在 Windows Presentation Foundation (WPF)。
 
 ## <a name="see-also"></a>另請參閱
+
 - [Windows Workflow Foundation](index.md)

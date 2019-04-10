@@ -28,20 +28,19 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
-ms.openlocfilehash: ab9b36857e2508190a212844f3c6b53d777c0552
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.openlocfilehash: c3bd76c893c2055f94e321e9c888848d344efa15
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58466214"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59166929"
 ---
 # <a name="wpf-windows-overview"></a>WPF 視窗概觀
 使用者透過 windows 的 Windows Presentation Foundation (WPF) 獨立應用程式與互動。 視窗的主要用途是裝載內容，以視覺化方式檢視資料，並讓使用者可以與資料互動。 獨立[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式提供自己的視窗使用<xref:System.Windows.Window>類別。 本主題將介紹<xref:System.Windows.Window>再介紹建立和管理獨立應用程式中的 windows 的基本概念。  
   
 > [!NOTE]
 >  瀏覽器裝載[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]應用程式，包括[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]和鬆散[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]頁面，不會提供自己的視窗。 相反地，它們裝載於所提供的 windows [!INCLUDE[TLA#tla_iegeneric](../../../../includes/tlasharptla-iegeneric-md.md)]。 請參閱[WPF XAML 瀏覽器應用程式概觀](wpf-xaml-browser-applications-overview.md)。  
-  
-  
+
 <a name="TheWindowClass"></a>   
 ## <a name="the-window-class"></a>Window 類別  
  下圖說明視窗的組成部分：  
@@ -130,8 +129,7 @@ ms.locfileid: "58466214"
 <a name="WindowLifetime"></a>   
 ## <a name="window-lifetime"></a>視窗存留期  
  如同任何類別，視窗有存留期，會在它一開始具現化時開始，在那之後它會被開啟、啟動和停用，並最終關閉。  
-  
-  
+
 <a name="Opening_a_Window"></a>   
 ### <a name="opening-a-window"></a>開啟視窗  
  若要開啟視窗，您要先建立它的執行個體，如下列範例中示範。  
@@ -258,8 +256,7 @@ ms.locfileid: "58466214"
   
  [!code-csharp[WindowClosingSnippets](~/samples/snippets/csharp/VS_Snippets_Wpf/WindowClosingSnippets/CSharp/DataWindow.xaml.cs)]
  [!code-vb[WindowClosingSnippets](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WindowClosingSnippets/visualbasic/datawindow.xaml.vb)]  
- 
-  
+
  <xref:System.Windows.Window.Closing>傳遞事件處理常式<xref:System.ComponentModel.CancelEventArgs>，它會實作`Boolean`<xref:System.ComponentModel.CancelEventArgs.Cancel%2A>屬性，您將設定為`true`來防止關閉視窗。  
   
  如果<xref:System.Windows.Window.Closing>未處理，或已處理但未取消，則會關閉視窗。 只在視窗實際關閉之前， <xref:System.Windows.Window.Closed> ，就會引發。 此時無法防止視窗關閉。  
@@ -275,7 +272,7 @@ ms.locfileid: "58466214"
   
 -   主應用程式視窗已關閉並<xref:System.Windows.Application.ShutdownMode%2A>是<xref:System.Windows.ShutdownMode.OnMainWindowClose>。  
   
--   呼叫 <xref:System.Windows.Application.Shutdown%2A>。  
+-   <xref:System.Windows.Application.Shutdown%2A> 會呼叫。  
   
 > [!NOTE]
 >  在關閉之後就無法重新開啟視窗。  
@@ -296,7 +293,7 @@ ms.locfileid: "58466214"
   
  您也可以指定的初始位置<xref:System.Windows.Window>第一次出現時藉由設定<xref:System.Windows.Window.WindowStartupLocation%2A>具有下列其中一種屬性<xref:System.Windows.WindowStartupLocation>列舉值：  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (預設)  
+-   <xref:System.Windows.WindowStartupLocation.CenterOwner> (預設值)  
   
 -   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
@@ -328,13 +325,13 @@ ms.locfileid: "58466214"
   
  如果您想要視窗的高度與寬度，調整成視窗大小的大小的內容，您可以使用<xref:System.Windows.Window.SizeToContent%2A>屬性，它具有下列值：  
   
--   <xref:System.Windows.SizeToContent.Manual>. 無效果 (預設值)。  
+-   <xref:System.Windows.SizeToContent.Manual>。 無效果 (預設值)。  
   
--   <xref:System.Windows.SizeToContent.Width>. 調整成內容的寬度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
+-   <xref:System.Windows.SizeToContent.Width>。 調整成內容的寬度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
   
--   <xref:System.Windows.SizeToContent.Height>. 調整成內容的高度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容的高度。  
+-   <xref:System.Windows.SizeToContent.Height>。 調整成內容的高度，具有相同的效果設定兩者<xref:System.Windows.FrameworkElement.MinHeight%2A>和<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容的高度。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. 調整成內容的寬度和高度，設定兩者相同的效果<xref:System.Windows.FrameworkElement.MinHeight%2A>並<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容，以及設定這兩個高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
+-   <xref:System.Windows.SizeToContent.WidthAndHeight>。 調整成內容的寬度和高度，設定兩者相同的效果<xref:System.Windows.FrameworkElement.MinHeight%2A>並<xref:System.Windows.FrameworkElement.MaxHeight%2A>內容，以及設定這兩個高度<xref:System.Windows.FrameworkElement.MinWidth%2A>和<xref:System.Windows.FrameworkElement.MaxWidth%2A>內容的寬度。  
   
  下列範例顯示自動調整垂直和水平大小以符合其內容的視窗，第一次顯示時的樣子。  
   
@@ -384,7 +381,7 @@ ms.locfileid: "58466214"
   
  視窗的狀態可以透過設定來設定其<xref:System.Windows.Window.WindowState%2A>屬性，它可以有下列其中一種<xref:System.Windows.WindowState>列舉值：  
   
--   <xref:System.Windows.WindowState.Normal> (預設)  
+-   <xref:System.Windows.WindowState.Normal> (預設值)  
   
 -   <xref:System.Windows.WindowState.Maximized>  
   
@@ -401,8 +398,7 @@ ms.locfileid: "58466214"
  您可以新增視窗特定的內容，例如按鈕、標籤和文字方塊，來變更視窗工作區的外觀。 若要設定非工作區中，<xref:System.Windows.Window>提供數個屬性，其中包括<xref:System.Windows.Window.Icon%2A>來設定視窗的圖示和<xref:System.Windows.Window.Title%2A>以設定其標題。  
   
  您也可以藉由設定視窗的調整大小模式、視窗樣式，以及它是否顯示為桌面工作列上的按鈕，變更非工作區框線的外觀和行為。  
-  
-  
+
 <a name="Resize_Mode"></a>   
 ### <a name="resize-mode"></a>調整大小模式  
  取決於<xref:System.Windows.Window.WindowStyle%2A>屬性，您可以控制如何 （以及是否） 使用者可以調整視窗大小。 視窗樣式的選擇會影響是否使用者可以調整視窗大小是否拖曳其框線，使用滑鼠**最小化**，**最大化**，並**調整**按鈕會出現在非工作區中，而且如果它們出現時是否已啟用。  
@@ -413,7 +409,7 @@ ms.locfileid: "58466214"
   
 -   <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (預設)  
+-   <xref:System.Windows.ResizeMode.CanResize> (預設值)  
   
 -   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
@@ -431,7 +427,7 @@ ms.locfileid: "58466214"
   
 -   <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (預設)  
+-   <xref:System.Windows.WindowStyle.SingleBorderWindow> (預設值)  
   
 -   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
@@ -484,6 +480,7 @@ ms.locfileid: "58466214"
  對話方塊是經常用來從使用者收集資訊以完成一項功能的視窗。 例如，當使用者想要開啟檔案，**開啟檔案**程式的應用程式，以從使用者取得檔案名稱會顯示對話方塊。 如需詳細資訊，請參閱[對話方塊概觀](dialog-boxes-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.Window>
 - <xref:System.Windows.MessageBox>
 - <xref:System.Windows.Navigation.NavigationWindow>

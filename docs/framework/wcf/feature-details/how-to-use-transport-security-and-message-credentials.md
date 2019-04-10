@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - TransportWithMessageCredentials
 ms.assetid: 6cc35346-c37a-4859-b82b-946c0ba6e68f
-ms.openlocfilehash: 7af670210b39da93e9f3efb37a0bfddce84ed2a2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.openlocfilehash: ea57012f9c09394824b7dbf919930c22fc17bd3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54731864"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59186806"
 ---
 # <a name="how-to-use-transport-security-and-message-credentials"></a>HOW TO：使用傳輸安全性和訊息認證
 保護傳輸和訊息認證的服務會使用最佳的傳輸與訊息安全性模式在 Windows Communication Foundation (WCF)。 簡單地說，傳輸層安全性可提供完整性與機密性，而訊息層安全性則提供各種在嚴格的傳輸安全性機制中不可能提供的認證。 本主題將說明使用 <xref:System.ServiceModel.WSHttpBinding> 和 <xref:System.ServiceModel.NetTcpBinding> 繫結，以訊息認證來實作傳輸時的基本步驟。 如需有關如何設定安全性模式的詳細資訊，請參閱[How to:設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)。  
@@ -25,7 +25,7 @@ ms.locfileid: "54731864"
   
 ### <a name="to-use-the-wshttpbinding-with-a-certificate-for-transport-security-in-code"></a>若要使用 WSHttpBinding 搭配憑證來獲得傳輸安全性 (透過程式碼)  
   
-1.  請使用 HttpCfg.exe 工具，將 SSL 憑證繫結至電腦的連接埠。 如需詳細資訊，請參閱[＜How to：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
+1.  請使用 HttpCfg.exe 工具，將 SSL 憑證繫結至電腦的連接埠。 如需詳細資訊，請參閱[如何：使用 SSL 憑證設定連接埠](../../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)。  
   
 2.  建立 <xref:System.ServiceModel.WSHttpBinding> 類別的執行個體，並將 <xref:System.ServiceModel.WSHttpSecurity.Mode%2A> 屬性設定為 <xref:System.ServiceModel.SecurityMode.TransportWithMessageCredential>。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "54731864"
   
 #### <a name="to-use-the-nettcpbinding-with-windows-for-transport-security"></a>若要使用 NetTcpBinding 搭配 Windows 來獲得傳輸安全性  
   
-1.  新增[\<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)至繫結 區段中，  
+1.  新增[ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)至繫結 區段中，  
   
 2.  加入 <`binding`> 項目並將`name`屬性設為適當的值。  
   
@@ -161,6 +161,7 @@ ms.locfileid: "54731864"
     ```  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
-- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+
+- [HOW TO：設定安全性模式](../../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)
+- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
