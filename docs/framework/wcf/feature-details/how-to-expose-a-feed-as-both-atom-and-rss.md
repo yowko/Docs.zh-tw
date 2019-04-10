@@ -5,97 +5,97 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
-ms.openlocfilehash: 17494b00259839be3beb580a516ff017ec3de50e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228402"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59295883"
 ---
-# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a><span data-ttu-id="24ce2-102">HOW TO：將摘要同時公開為 Atom 和 RSS</span><span class="sxs-lookup"><span data-stu-id="24ce2-102">How to: Expose a Feed as Both Atom and RSS</span></span>
-<span data-ttu-id="24ce2-103">Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。</span><span class="sxs-lookup"><span data-stu-id="24ce2-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="24ce2-104">本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。</span><span class="sxs-lookup"><span data-stu-id="24ce2-104">This topic discusses how to create a syndication service that exposes a syndication feed using both Atom 1.0 and RSS 2.0.</span></span> <span data-ttu-id="24ce2-105">此服務會公開可傳回任何一種新聞訂閱格式的端點。</span><span class="sxs-lookup"><span data-stu-id="24ce2-105">This service exposes one endpoint that can return either syndication format.</span></span> <span data-ttu-id="24ce2-106">為了簡要說明，此範例中使用的服務為自我裝載。</span><span class="sxs-lookup"><span data-stu-id="24ce2-106">For simplicity the service used in this sample is self hosted.</span></span> <span data-ttu-id="24ce2-107">在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。</span><span class="sxs-lookup"><span data-stu-id="24ce2-107">In a production environment a service of this type would be hosted under IIS or WAS.</span></span> <span data-ttu-id="24ce2-108">如需有關不同的 WCF 裝載選項的詳細資訊，請參閱[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。</span><span class="sxs-lookup"><span data-stu-id="24ce2-108">For more information about the different WCF hosting options, see [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).</span></span>  
+# <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a><span data-ttu-id="034e0-102">HOW TO：將摘要同時公開為 Atom 和 RSS</span><span class="sxs-lookup"><span data-stu-id="034e0-102">How to: Expose a Feed as Both Atom and RSS</span></span>
+<span data-ttu-id="034e0-103">Windows Communication Foundation (WCF) 可讓您建立公開新聞訂閱摘要的服務。</span><span class="sxs-lookup"><span data-stu-id="034e0-103">Windows Communication Foundation (WCF) allows you to create a service that exposes a syndication feed.</span></span> <span data-ttu-id="034e0-104">本主題討論如何同時使用 Atom 1.0 和 RSS 2.0，建立可公開新聞訂閱摘要的新聞訂閱服務。</span><span class="sxs-lookup"><span data-stu-id="034e0-104">This topic discusses how to create a syndication service that exposes a syndication feed using both Atom 1.0 and RSS 2.0.</span></span> <span data-ttu-id="034e0-105">此服務會公開可傳回任何一種新聞訂閱格式的端點。</span><span class="sxs-lookup"><span data-stu-id="034e0-105">This service exposes one endpoint that can return either syndication format.</span></span> <span data-ttu-id="034e0-106">為了簡要說明，此範例中使用的服務為自我裝載。</span><span class="sxs-lookup"><span data-stu-id="034e0-106">For simplicity the service used in this sample is self hosted.</span></span> <span data-ttu-id="034e0-107">在實際執行環境中，此類型的服務會在 IIS 或 WAS 下裝載。</span><span class="sxs-lookup"><span data-stu-id="034e0-107">In a production environment a service of this type would be hosted under IIS or WAS.</span></span> <span data-ttu-id="034e0-108">如需有關不同的 WCF 裝載選項的詳細資訊，請參閱[Hosting](../../../../docs/framework/wcf/feature-details/hosting.md)。</span><span class="sxs-lookup"><span data-stu-id="034e0-108">For more information about the different WCF hosting options, see [Hosting](../../../../docs/framework/wcf/feature-details/hosting.md).</span></span>  
   
-### <a name="to-create-a-basic-syndication-service"></a><span data-ttu-id="24ce2-109">若要建立基本新聞訂閱服務</span><span class="sxs-lookup"><span data-stu-id="24ce2-109">To create a basic syndication service</span></span>  
+### <a name="to-create-a-basic-syndication-service"></a><span data-ttu-id="034e0-109">若要建立基本新聞訂閱服務</span><span class="sxs-lookup"><span data-stu-id="034e0-109">To create a basic syndication service</span></span>  
   
-1.  <span data-ttu-id="24ce2-110">使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。</span><span class="sxs-lookup"><span data-stu-id="24ce2-110">Define a service contract using an interface marked with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute.</span></span> <span data-ttu-id="24ce2-111">每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。</span><span class="sxs-lookup"><span data-stu-id="24ce2-111">Each operation that is exposed as a syndication feed returns a <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> object.</span></span> <span data-ttu-id="24ce2-112">請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。</span><span class="sxs-lookup"><span data-stu-id="24ce2-112">Note the parameters for the <xref:System.ServiceModel.Web.WebGetAttribute>.</span></span> `UriTemplate` <span data-ttu-id="24ce2-113">指定用來叫用此服務作業的 URL。</span><span class="sxs-lookup"><span data-stu-id="24ce2-113">specifies the URL used to invoke this service operation.</span></span> <span data-ttu-id="24ce2-114">此參數的字串包含常值和變數，以大括號 ({*格式*})。</span><span class="sxs-lookup"><span data-stu-id="24ce2-114">The string for this parameter contains literals and a variable in braces ({*format*}).</span></span> <span data-ttu-id="24ce2-115">此變數對應至服務作業的 `format` 參數。</span><span class="sxs-lookup"><span data-stu-id="24ce2-115">This variable corresponds to the service operation's `format` parameter.</span></span> <span data-ttu-id="24ce2-116">如需詳細資訊，請參閱<xref:System.UriTemplate>。</span><span class="sxs-lookup"><span data-stu-id="24ce2-116">For more information, see <xref:System.UriTemplate>.</span></span> `BodyStyle` <span data-ttu-id="24ce2-117">會影響此服務作業會傳送與接收訊息的寫入方式。</span><span class="sxs-lookup"><span data-stu-id="24ce2-117">affects how the messages that this service operation sends and receives are written.</span></span> <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> <span data-ttu-id="24ce2-118">指定此服務作業來回傳送的資料未包裝的基礎結構定義的 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="24ce2-118">specifies that the data sent to and from this service operation are not wrapped by infrastructure-defined XML elements.</span></span> <span data-ttu-id="24ce2-119">如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。</span><span class="sxs-lookup"><span data-stu-id="24ce2-119">For more information, see <xref:System.ServiceModel.Web.WebMessageBodyStyle>.</span></span>  
+1. <span data-ttu-id="034e0-110">使用以 <xref:System.ServiceModel.Web.WebGetAttribute> 屬性標記的介面來定義服務合約。</span><span class="sxs-lookup"><span data-stu-id="034e0-110">Define a service contract using an interface marked with the <xref:System.ServiceModel.Web.WebGetAttribute> attribute.</span></span> <span data-ttu-id="034e0-111">每個公開為新聞訂閱摘要的作業，都會傳回 <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> 物件。</span><span class="sxs-lookup"><span data-stu-id="034e0-111">Each operation that is exposed as a syndication feed returns a <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> object.</span></span> <span data-ttu-id="034e0-112">請注意 <xref:System.ServiceModel.Web.WebGetAttribute> 的參數。</span><span class="sxs-lookup"><span data-stu-id="034e0-112">Note the parameters for the <xref:System.ServiceModel.Web.WebGetAttribute>.</span></span> `UriTemplate` <span data-ttu-id="034e0-113">指定用來叫用此服務作業的 URL。</span><span class="sxs-lookup"><span data-stu-id="034e0-113">specifies the URL used to invoke this service operation.</span></span> <span data-ttu-id="034e0-114">此參數的字串包含常值和變數，以大括號 ({*格式*})。</span><span class="sxs-lookup"><span data-stu-id="034e0-114">The string for this parameter contains literals and a variable in braces ({*format*}).</span></span> <span data-ttu-id="034e0-115">此變數對應至服務作業的 `format` 參數。</span><span class="sxs-lookup"><span data-stu-id="034e0-115">This variable corresponds to the service operation's `format` parameter.</span></span> <span data-ttu-id="034e0-116">如需詳細資訊，請參閱<xref:System.UriTemplate>。</span><span class="sxs-lookup"><span data-stu-id="034e0-116">For more information, see <xref:System.UriTemplate>.</span></span> `BodyStyle` <span data-ttu-id="034e0-117">會影響此服務作業會傳送與接收訊息的寫入方式。</span><span class="sxs-lookup"><span data-stu-id="034e0-117">affects how the messages that this service operation sends and receives are written.</span></span> <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> <span data-ttu-id="034e0-118">指定此服務作業來回傳送的資料未包裝的基礎結構定義的 XML 項目。</span><span class="sxs-lookup"><span data-stu-id="034e0-118">specifies that the data sent to and from this service operation are not wrapped by infrastructure-defined XML elements.</span></span> <span data-ttu-id="034e0-119">如需詳細資訊，請參閱<xref:System.ServiceModel.Web.WebMessageBodyStyle>。</span><span class="sxs-lookup"><span data-stu-id="034e0-119">For more information, see <xref:System.ServiceModel.Web.WebMessageBodyStyle>.</span></span>  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  
   
     > [!NOTE]
-    >  <span data-ttu-id="24ce2-120">請使用 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 來指定此介面中由服務作業所傳回的型別。</span><span class="sxs-lookup"><span data-stu-id="24ce2-120">Use the <xref:System.ServiceModel.ServiceKnownTypeAttribute> to specify the types that are returned by the service operations in this interface.</span></span>  
+    >  <span data-ttu-id="034e0-120">請使用 <xref:System.ServiceModel.ServiceKnownTypeAttribute> 來指定此介面中由服務作業所傳回的型別。</span><span class="sxs-lookup"><span data-stu-id="034e0-120">Use the <xref:System.ServiceModel.ServiceKnownTypeAttribute> to specify the types that are returned by the service operations in this interface.</span></span>  
   
-2.  <span data-ttu-id="24ce2-121">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="24ce2-121">Implement the service contract.</span></span>  
+2. <span data-ttu-id="034e0-121">實作服務合約。</span><span class="sxs-lookup"><span data-stu-id="034e0-121">Implement the service contract.</span></span>  
   
      [!code-csharp[htAtomRss#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#1)]
      [!code-vb[htAtomRss#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#1)]  
   
-3.  <span data-ttu-id="24ce2-122">建立 <xref:System.ServiceModel.Syndication.SyndicationFeed> 物件並新增作者、分類和描述。</span><span class="sxs-lookup"><span data-stu-id="24ce2-122">Create a <xref:System.ServiceModel.Syndication.SyndicationFeed> object and add an author, category, and description.</span></span>  
+3. <span data-ttu-id="034e0-122">建立 <xref:System.ServiceModel.Syndication.SyndicationFeed> 物件並新增作者、分類和描述。</span><span class="sxs-lookup"><span data-stu-id="034e0-122">Create a <xref:System.ServiceModel.Syndication.SyndicationFeed> object and add an author, category, and description.</span></span>  
   
      [!code-csharp[htAtomRss#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#2)]
      [!code-vb[htAtomRss#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#2)]  
   
-4.  <span data-ttu-id="24ce2-123">建立幾個 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。</span><span class="sxs-lookup"><span data-stu-id="24ce2-123">Create several <xref:System.ServiceModel.Syndication.SyndicationItem> objects.</span></span>  
+4. <span data-ttu-id="034e0-123">建立幾個 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件。</span><span class="sxs-lookup"><span data-stu-id="034e0-123">Create several <xref:System.ServiceModel.Syndication.SyndicationItem> objects.</span></span>  
   
      [!code-csharp[htAtomRss#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#3)]
      [!code-vb[htAtomRss#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#3)]  
   
-5.  <span data-ttu-id="24ce2-124">新增 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件至摘要。</span><span class="sxs-lookup"><span data-stu-id="24ce2-124">Add the <xref:System.ServiceModel.Syndication.SyndicationItem> objects to the feed.</span></span>  
+5. <span data-ttu-id="034e0-124">新增 <xref:System.ServiceModel.Syndication.SyndicationItem> 物件至摘要。</span><span class="sxs-lookup"><span data-stu-id="034e0-124">Add the <xref:System.ServiceModel.Syndication.SyndicationItem> objects to the feed.</span></span>  
   
      [!code-csharp[htAtomRss#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#4)]
      [!code-vb[htAtomRss#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#4)]  
   
-6.  <span data-ttu-id="24ce2-125">使用格式參數來傳回要求的格式。</span><span class="sxs-lookup"><span data-stu-id="24ce2-125">Use the format parameter to return the requested format.</span></span>  
+6. <span data-ttu-id="034e0-125">使用格式參數來傳回要求的格式。</span><span class="sxs-lookup"><span data-stu-id="034e0-125">Use the format parameter to return the requested format.</span></span>  
   
      [!code-csharp[htAtomRss#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#5)]
      [!code-vb[htAtomRss#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#5)]  
   
-### <a name="to-host-the-service"></a><span data-ttu-id="24ce2-126">若要裝載服務</span><span class="sxs-lookup"><span data-stu-id="24ce2-126">To host the service</span></span>  
+### <a name="to-host-the-service"></a><span data-ttu-id="034e0-126">若要裝載服務</span><span class="sxs-lookup"><span data-stu-id="034e0-126">To host the service</span></span>  
   
-1.  <span data-ttu-id="24ce2-127">建立 <xref:System.ServiceModel.Web.WebServiceHost> 物件。</span><span class="sxs-lookup"><span data-stu-id="24ce2-127">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span> <span data-ttu-id="24ce2-128">除非在程式碼或組態中指定端點，否則 <xref:System.ServiceModel.Web.WebServiceHost> 類別會在服務的基底位址上自動加入端點。</span><span class="sxs-lookup"><span data-stu-id="24ce2-128">The <xref:System.ServiceModel.Web.WebServiceHost> class automatically adds an endpoint at the service's base address unless one is specified in code or configuration.</span></span> <span data-ttu-id="24ce2-129">在這個範例中，沒有指定端點，因此會公開預設端點。</span><span class="sxs-lookup"><span data-stu-id="24ce2-129">In this sample, no endpoints are specified so the default endpoint is exposed.</span></span>  
+1. <span data-ttu-id="034e0-127">建立 <xref:System.ServiceModel.Web.WebServiceHost> 物件。</span><span class="sxs-lookup"><span data-stu-id="034e0-127">Create a <xref:System.ServiceModel.Web.WebServiceHost> object.</span></span> <span data-ttu-id="034e0-128">除非在程式碼或組態中指定端點，否則 <xref:System.ServiceModel.Web.WebServiceHost> 類別會在服務的基底位址上自動加入端點。</span><span class="sxs-lookup"><span data-stu-id="034e0-128">The <xref:System.ServiceModel.Web.WebServiceHost> class automatically adds an endpoint at the service's base address unless one is specified in code or configuration.</span></span> <span data-ttu-id="034e0-129">在這個範例中，沒有指定端點，因此會公開預設端點。</span><span class="sxs-lookup"><span data-stu-id="034e0-129">In this sample, no endpoints are specified so the default endpoint is exposed.</span></span>  
   
      [!code-csharp[htAtomRss#6](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#6)]
      [!code-vb[htAtomRss#6](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#6)]  
   
-2.  <span data-ttu-id="24ce2-130">開啟服務主機、從服務載入摘要、顯示摘要，並等候使用者按下 ENTER。</span><span class="sxs-lookup"><span data-stu-id="24ce2-130">Open the service host, load the feed from the service, display the feed, and wait for the user to press ENTER.</span></span>  
+2. <span data-ttu-id="034e0-130">開啟服務主機、從服務載入摘要、顯示摘要，並等候使用者按下 ENTER。</span><span class="sxs-lookup"><span data-stu-id="034e0-130">Open the service host, load the feed from the service, display the feed, and wait for the user to press ENTER.</span></span>  
   
      [!code-csharp[htAtomRss#8](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#8)]
      [!code-vb[htAtomRss#8](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#8)]  
   
-### <a name="to-call-getblog-with-an-http-get"></a><span data-ttu-id="24ce2-131">若要使用 HTTP GET 呼叫 GetBlog</span><span class="sxs-lookup"><span data-stu-id="24ce2-131">To call GetBlog with an HTTP GET</span></span>  
+### <a name="to-call-getblog-with-an-http-get"></a><span data-ttu-id="034e0-131">若要使用 HTTP GET 呼叫 GetBlog</span><span class="sxs-lookup"><span data-stu-id="034e0-131">To call GetBlog with an HTTP GET</span></span>  
   
-1.  <span data-ttu-id="24ce2-132">開啟 Internet Explorer 中，輸入下列 URL，然後按 ENTER: `http://localhost:8000/BlogService/GetBlog`。</span><span class="sxs-lookup"><span data-stu-id="24ce2-132">Open Internet Explorer, type the following URL, and press ENTER: `http://localhost:8000/BlogService/GetBlog`.</span></span>
+1. <span data-ttu-id="034e0-132">開啟 Internet Explorer 中，輸入下列 URL，然後按 ENTER: `http://localhost:8000/BlogService/GetBlog`。</span><span class="sxs-lookup"><span data-stu-id="034e0-132">Open Internet Explorer, type the following URL, and press ENTER: `http://localhost:8000/BlogService/GetBlog`.</span></span>
   
-     <span data-ttu-id="24ce2-133">URL 包含服務的基底位址 (`http://localhost:8000/BlogService`)，端點，並呼叫服務作業的相對位址。</span><span class="sxs-lookup"><span data-stu-id="24ce2-133">The URL contains the base address of the service (`http://localhost:8000/BlogService`), the relative address of the endpoint, and the service operation to call.</span></span>  
+     <span data-ttu-id="034e0-133">URL 包含服務的基底位址 (`http://localhost:8000/BlogService`)，端點，並呼叫服務作業的相對位址。</span><span class="sxs-lookup"><span data-stu-id="034e0-133">The URL contains the base address of the service (`http://localhost:8000/BlogService`), the relative address of the endpoint, and the service operation to call.</span></span>  
   
-### <a name="to-call-getblog-from-code"></a><span data-ttu-id="24ce2-134">若要從程式碼呼叫 GetBlog()</span><span class="sxs-lookup"><span data-stu-id="24ce2-134">To call GetBlog() from code</span></span>  
+### <a name="to-call-getblog-from-code"></a><span data-ttu-id="034e0-134">若要從程式碼呼叫 GetBlog()</span><span class="sxs-lookup"><span data-stu-id="034e0-134">To call GetBlog() from code</span></span>  
   
-1.  <span data-ttu-id="24ce2-135">使用基底位址與您要呼叫的方法建立 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="24ce2-135">Create an <xref:System.Xml.XmlReader> with the base address and the method you are calling.</span></span>  
+1. <span data-ttu-id="034e0-135">使用基底位址與您要呼叫的方法建立 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="034e0-135">Create an <xref:System.Xml.XmlReader> with the base address and the method you are calling.</span></span>  
   
      [!code-csharp[htAtomRss#9](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#9)]
      [!code-vb[htAtomRss#9](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#9)]  
   
-2.  <span data-ttu-id="24ce2-136">呼叫靜態 <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> 方法，傳入剛才建立的 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="24ce2-136">Call the static <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> method, passing in the <xref:System.Xml.XmlReader> you just created.</span></span>  
+2. <span data-ttu-id="034e0-136">呼叫靜態 <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> 方法，傳入剛才建立的 <xref:System.Xml.XmlReader>。</span><span class="sxs-lookup"><span data-stu-id="034e0-136">Call the static <xref:System.ServiceModel.Syndication.SyndicationFeed.Load%28System.Xml.XmlReader%29> method, passing in the <xref:System.Xml.XmlReader> you just created.</span></span>  
   
      [!code-csharp[htAtomRss#10](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#10)]
      [!code-vb[htAtomRss#10](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#10)]  
   
-     <span data-ttu-id="24ce2-137">這會叫用服務作業，並在新的 <xref:System.ServiceModel.Syndication.SyndicationFeed> 中填入服務作業所傳回的格式器。</span><span class="sxs-lookup"><span data-stu-id="24ce2-137">This invokes the service operation and populates a new <xref:System.ServiceModel.Syndication.SyndicationFeed> with the formatter returned from the service operation.</span></span>  
+     <span data-ttu-id="034e0-137">這會叫用服務作業，並在新的 <xref:System.ServiceModel.Syndication.SyndicationFeed> 中填入服務作業所傳回的格式器。</span><span class="sxs-lookup"><span data-stu-id="034e0-137">This invokes the service operation and populates a new <xref:System.ServiceModel.Syndication.SyndicationFeed> with the formatter returned from the service operation.</span></span>  
   
-3.  <span data-ttu-id="24ce2-138">存取摘要物件。</span><span class="sxs-lookup"><span data-stu-id="24ce2-138">Access the feed object.</span></span>  
+3. <span data-ttu-id="034e0-138">存取摘要物件。</span><span class="sxs-lookup"><span data-stu-id="034e0-138">Access the feed object.</span></span>  
   
      [!code-csharp[htAtomRss#11](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/snippets.cs#11)]
      [!code-vb[htAtomRss#11](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/snippets.vb#11)]  
   
-## <a name="example"></a><span data-ttu-id="24ce2-139">範例</span><span class="sxs-lookup"><span data-stu-id="24ce2-139">Example</span></span>  
- <span data-ttu-id="24ce2-140">以下是這個範例的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="24ce2-140">The following is the full code listing for this example.</span></span>  
+## <a name="example"></a><span data-ttu-id="034e0-139">範例</span><span class="sxs-lookup"><span data-stu-id="034e0-139">Example</span></span>  
+ <span data-ttu-id="034e0-140">以下是這個範例的完整程式碼清單。</span><span class="sxs-lookup"><span data-stu-id="034e0-140">The following is the full code listing for this example.</span></span>  
   
  [!code-csharp[htAtomRss#12](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#12)]  
   
-## <a name="compiling-the-code"></a><span data-ttu-id="24ce2-141">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="24ce2-141">Compiling the Code</span></span>  
- <span data-ttu-id="24ce2-142">在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。</span><span class="sxs-lookup"><span data-stu-id="24ce2-142">When compiling the preceding code, reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
+## <a name="compiling-the-code"></a><span data-ttu-id="034e0-141">編譯程式碼</span><span class="sxs-lookup"><span data-stu-id="034e0-141">Compiling the Code</span></span>  
+ <span data-ttu-id="034e0-142">在編譯先前的程式碼時，請參考 System.ServiceModel.dll 和 System.ServiceModel.Web.dll。</span><span class="sxs-lookup"><span data-stu-id="034e0-142">When compiling the preceding code, reference System.ServiceModel.dll and System.ServiceModel.Web.dll.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="24ce2-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="24ce2-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="034e0-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="034e0-143">See also</span></span>
 
 - <xref:System.ServiceModel.WebHttpBinding>
 - <xref:System.ServiceModel.Web.WebGetAttribute>
