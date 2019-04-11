@@ -7,12 +7,12 @@ helpviewer_keywords:
 - deploying [WCF Data Services
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
-ms.openlocfilehash: a3eaea7218b3226fde43aa76bbafe602fc198947
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329319"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481375"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開發和部署 WCF 資料服務
 
@@ -53,17 +53,17 @@ ms.locfileid: "59329319"
 
      當您使用 Visual Studio 程式開發伺服器開發資料服務時，您應該注意下列限制：
 
-    -   只能在本機電腦上存取這個伺服器。
+    - 只能在本機電腦上存取這個伺服器。
 
-    -   此伺服器會接聽 `localhost` 和一個特定的連接埠 (而非連接埠 80)，此連接埠是用於 HTTP 訊息的預設連接埠。 如需詳細資訊，請參閱 [Visual Studio 中 ASP.NET Web 專案的 Web 伺服器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
+    - 此伺服器會接聽 `localhost` 和一個特定的連接埠 (而非連接埠 80)，此連接埠是用於 HTTP 訊息的預設連接埠。 如需詳細資訊，請參閱 [Visual Studio 中 ASP.NET Web 專案的 Web 伺服器](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))。
 
-    -   此伺服器會在目前使用者帳戶的內容中執行資料服務。 比方說，如果您正在以系統管理員層級的使用者身分，在 Visual Studio 程式開發伺服器中執行的資料服務會有系統管理員層級權限。 這可能會使資料服務能夠存取在部署到 IIS 伺服器時沒有存取權限的資源。
+    - 此伺服器會在目前使用者帳戶的內容中執行資料服務。 比方說，如果您正在以系統管理員層級的使用者身分，在 Visual Studio 程式開發伺服器中執行的資料服務會有系統管理員層級權限。 這可能會使資料服務能夠存取在部署到 IIS 伺服器時沒有存取權限的資源。
 
-    -   這個伺服器不包含 IIS 的額外功能，例如驗證。
+    - 這個伺服器不包含 IIS 的額外功能，例如驗證。
 
-    -   此伺服器無法處理區塊的 HTTP 資料流，這會傳送為 WCF Data Services 用戶端的預設值，從資料服務存取大型二進位資料時。 如需詳細資訊，請參閱 <<c0> [ 資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。
+    - 此伺服器無法處理區塊的 HTTP 資料流，這會傳送為 WCF Data Services 用戶端的預設值，從資料服務存取大型二進位資料時。 如需詳細資訊，請參閱 <<c0> [ 資料流處理提供者](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)。
 
-    -   此伺服器已處理期間的問題 (`.`) 字元，在 URL 中，即使此字元由 WCF Data Services 支援索引鍵值。
+    - 此伺服器已處理期間的問題 (`.`) 字元，在 URL 中，即使此字元由 WCF Data Services 支援索引鍵值。
 
     > [!TIP]
     > 雖然您可以使用 Visual Studio 程式開發伺服器來測試您的資料服務開發期間，您應該在部署到執行 IIS 的 Web 伺服器之後，再次測試它們。
@@ -76,44 +76,44 @@ ms.locfileid: "59329319"
 
 當您開發資料服務時，應該考慮下列事項：
 
--   如果您計劃驗證使用者或限制特定使用者存取，請決定您資料服務的安全性需求。 如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。
+- 如果您計劃驗證使用者或限制特定使用者存取，請決定您資料服務的安全性需求。 如需詳細資訊，請參閱 [Securing WCF Data Services](../../../../docs/framework/data/wcf/securing-wcf-data-services.md)。
 
--   透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。
+- 透過讓您檢查要求和回應訊息的內容對資料服務進行偵錯時，HTTP 檢查程式可能會很有幫助。 可以顯示原始封包的任何網路封包分析器可用於檢查資料服務的 HTTP 要求及其回應。
 
--   偵錯時的資料服務，您可能想要從資料服務取得錯誤的詳細資訊，在一般作業期間。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱文章[偵錯 WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以啟用追蹤，在 WCF 中，檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。
+- 偵錯時的資料服務，您可能想要從資料服務取得錯誤的詳細資訊，在一般作業期間。 您可以從資料服務取得其他錯誤資訊，方法是，將 <xref:System.Data.Services.DataServiceConfiguration.UseVerboseErrors%2A> 中的 <xref:System.Data.Services.DataServiceConfiguration> 屬性 (Property) 設為 `true` ，然後在資料服務類別上，將 <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A> 屬性 (Attribute) 的 <xref:System.ServiceModel.Description.ServiceDebugBehavior> 屬性 (Property) 設為 `true`。 如需詳細資訊，請參閱文章[偵錯 WCF Data Services](https://go.microsoft.com/fwlink/?LinkId=201868)。 您也可以啟用追蹤，在 WCF 中，檢視在 HTTP 訊息層引發的例外狀況。 如需詳細資訊，請參閱 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)。
 
--   資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但您也可以建立資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 如需兩種專案類型之間的差異資訊，請參閱[Web 應用程式專案與 Visual Studio 中的網站專案](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))。
+- 資料服務通常會開發為[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式專案，但您也可以建立資料服務當做[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Visual Studio 中的網站專案。 如需兩種專案類型之間的差異資訊，請參閱[Web 應用程式專案與 Visual Studio 中的網站專案](https://docs.microsoft.com/previous-versions/aspnet/dd547590(v=vs.110))。
 
--   當您使用，會在建立資料服務時**加入新項目**對話方塊中，在 Visual Studio 中，資料服務由[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]在 IIS 中。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 IIS 是資料服務的預設主機，因此支援其他裝載選項。 如需詳細資訊，請參閱 <<c0> [ 裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。
+- 當您使用，會在建立資料服務時**加入新項目**對話方塊中，在 Visual Studio 中，資料服務由[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]在 IIS 中。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 和 IIS 是資料服務的預設主機，因此支援其他裝載選項。 如需詳細資訊，請參閱 <<c0> [ 裝載資料服務](../../../../docs/framework/data/wcf/hosting-the-data-service-wcf-data-services.md)。
 
 ## <a name="deploy-wcf-data-services"></a>部署 WCF 資料服務
 
 WCF Data Services 提供選擇裝載資料服務之程序的彈性。 若要將資料服務部署到下列平台，您可以使用 Visual Studio:
 
--   **IIS 裝載的 Web 服務**
+- **IIS 裝載的 Web 服務**
 
-     將資料服務開發為 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 專案時，可以使用標準的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 部署程序部署至 IIS Web 伺服器。  Visual Studio 提供下列部署技術[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，這取決於類型的[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]裝載您要部署之資料服務的專案。
+    將資料服務開發為 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 專案時，可以使用標準的 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 部署程序部署至 IIS Web 伺服器。  Visual Studio 提供下列部署技術[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]，這取決於類型的[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]裝載您要部署之資料服務的專案。
 
-    -   **用於 ASP.NET Web 應用程式的部署技術**
+  - **用於 ASP.NET Web 應用程式的部署技術**
 
-        -   [HOW TO：在 Visual Studio 中建立 Web 部署套件](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
+    - [HOW TO：在 Visual Studio 中建立 Web 部署套件](https://docs.microsoft.com/previous-versions/aspnet/dd465323(v=vs.110))
 
-        -   [HOW TO：部署 Web 專案使用單鍵發行 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
+    - [HOW TO：部署 Web 專案使用單鍵發行 Visual Studio 中](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))
 
-    -   **用於 ASP.NET 網站的部署技術**
+  - **用於 ASP.NET 網站的部署技術**
 
-        -   [HOW TO：複製網站的檔案，以複製網站工具](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
+    - [HOW TO：複製網站的檔案，以複製網站工具](https://docs.microsoft.com/previous-versions/aspnet/c95809c0(v=vs.100))
 
-        -   [HOW TO：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
+    - [HOW TO：發行網站](https://docs.microsoft.com/previous-versions/aspnet/20yh9f1b(v=vs.100))
 
-        -   [逐步解說：使用 XCOPY 將 ASP.NET Web 應用程式部署](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
+    - [逐步解說：使用 XCOPY 將 ASP.NET Web 應用程式部署](https://docs.microsoft.com/previous-versions/aspnet/f735abw9(v=vs.100))
 
      如需有關的部署選項[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式，請參閱 <<c2> [ 的 Visual Studio 及 ASP.NET Web 部署概觀](https://docs.microsoft.com/previous-versions/aspnet/dd394698(v=vs.110))。
 
     > [!TIP]
     > 在您嘗試將資料服務部署到 IIS 之前，請確認您已經測試執行 IIS 之 Web 伺服器的部署。 如需詳細資訊，請參閱[如何：開發在 IIS 上執行的 WCF 資料服務](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)。
 
--   **Microsoft Azure**
+- **Microsoft Azure**
 
      您可以使用 Windows Azure Tools for Visual Studio，到 Windows Azure 部署的資料服務。 您可以下載 Windows Azure Tools for Visual Studio [Microsoft 下載中心](https://go.microsoft.com/fwlink/?LinkID=201848)。 如需將資料服務部署至 Windows Azure 的詳細資訊，請參閱文章[部署 Windows Azure 中的 OData 服務](https://go.microsoft.com/fwlink/?LinkId=201847)。
 
@@ -121,9 +121,9 @@ WCF Data Services 提供選擇裝載資料服務之程序的彈性。 若要將�
 
 部署資料服務時，應該考慮下列事項：
 
--   當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 Visual Studio 可以自動建立指令碼 （.sql 檔案），以在目的地資料庫中，執行這項操作，而且這些指令碼可以包含的 Web 部署套件中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式。 如需詳細資訊，請參閱[如何：部署 Web 應用程式專案的資料庫](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 針對[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]網站上，您可以藉由使用**Database Publishing Wizard** Visual Studio 中。 如需詳細資訊，請參閱 <<c0> [ 發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
+- 當您部署使用 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者存取 SQL Server 資料庫的資料服務時，可能也需要使用資料服務部署傳播資料結構、資料或兩者。 Visual Studio 可以自動建立指令碼 （.sql 檔案），以在目的地資料庫中，執行這項操作，而且這些指令碼可以包含的 Web 部署套件中[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]應用程式。 如需詳細資訊，請參閱[如何：部署 Web 應用程式專案的資料庫](https://docs.microsoft.com/previous-versions/dd465343(v=vs.100))。 針對[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]網站上，您可以藉由使用**Database Publishing Wizard** Visual Studio 中。 如需詳細資訊，請參閱 <<c0> [ 發行 SQL Database](https://docs.microsoft.com/previous-versions/aspnet/bb907585(v=vs.100))。
 
--   因為 WCF Data Services 包含基本的 WCF 實作，您可以使用 Windows Server AppFabric 監視資料服務部署至 Windows Server 上執行的 IIS。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱文章[使用 Windows Server AppFabric 追蹤 WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=202005)。
+- 因為 WCF Data Services 包含基本的 WCF 實作，您可以使用 Windows Server AppFabric 監視資料服務部署至 Windows Server 上執行的 IIS。 如需使用 Windows Server AppFabric 監視資料服務的詳細資訊，請參閱文章[使用 Windows Server AppFabric 追蹤 WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=202005)。
 
 ## <a name="see-also"></a>另請參閱
 
