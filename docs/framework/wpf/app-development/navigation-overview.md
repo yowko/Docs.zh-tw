@@ -24,12 +24,12 @@ helpviewer_keywords:
 - programmatic navigation [WPF]
 - hyperlinks [WPF]
 ms.assetid: 86ad2143-606a-4e34-bf7e-51a2594248b8
-ms.openlocfilehash: feccd6978d0a3cf8db60bbd505826433c93e3276
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: 826cfc0ea7f681e1f7cbe858008c24a4941f0e11
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227193"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335078"
 ---
 # <a name="navigation-overview"></a>巡覽概觀
 Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使用的瀏覽器樣式巡覽︰ 獨立應用程式和[!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。 封裝內容以供巡覽，來[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]提供<xref:System.Windows.Controls.Page>類別。 您可以從一個巡覽<xref:System.Windows.Controls.Page>到另一個以宣告方式，利用<xref:System.Windows.Documents.Hyperlink>，或以程式設計方式使用<xref:System.Windows.Navigation.NavigationService>。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 會使用日誌記憶曾經巡覽過從的頁面，並以利返回巡覽。  
@@ -353,13 +353,13 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  根據預設，每個文字<xref:System.Windows.Controls.Page>出現在**最近存取的頁面**份[!INCLUDE[TLA2#tla_ie](../../../../includes/tla2sharptla-ie-md.md)]會[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]如<xref:System.Windows.Controls.Page>。 在許多情況下，這對使用者都不是特別有意義。 幸運的是，您可以變更使用下列選項之一的文字︰  
   
-1.  附加`JournalEntry.Name`屬性值。  
+1. 附加`JournalEntry.Name`屬性值。  
   
-2.  `Page.Title`屬性值。  
+2. `Page.Title`屬性值。  
   
-3.  `Page.WindowTitle`屬性值與[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]目前<xref:System.Windows.Controls.Page>。  
+3. `Page.WindowTitle`屬性值與[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]目前<xref:System.Windows.Controls.Page>。  
   
-4.  目前 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 的 <xref:System.Windows.Controls.Page>。 (預設值)  
+4. 目前 [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 的 <xref:System.Windows.Controls.Page>。 (預設值)  
   
  選項列示順序符合尋找文字的優先順序。 例如，如果`JournalEntry.Name`時，就會忽略其他值。  
   
@@ -429,19 +429,19 @@ Windows Presentation Foundation (WPF) 支援兩種類型的應用程式可以使
   
  幸運的是，日誌記憶跨越的資料中提供支援<xref:System.Windows.Controls.Page>巡覽，包括控制項資料。 具體來說，每個日誌項目<xref:System.Windows.Controls.Page>做為相關聯的暫存容器<xref:System.Windows.Controls.Page>狀態。 下列步驟概述如何使用這項支援時<xref:System.Windows.Controls.Page>從巡覽至：  
   
-1.  目前的項目<xref:System.Windows.Controls.Page>新增至日誌。  
+1. 目前的項目<xref:System.Windows.Controls.Page>新增至日誌。  
   
-2.  狀態<xref:System.Windows.Controls.Page>會與該頁面上，新增至上一頁堆疊的日誌項目一起儲存。  
+2. 狀態<xref:System.Windows.Controls.Page>會與該頁面上，新增至上一頁堆疊的日誌項目一起儲存。  
   
-3.  新<xref:System.Windows.Controls.Page>巡覽。  
+3. 新<xref:System.Windows.Controls.Page>巡覽。  
   
  當頁面<xref:System.Windows.Controls.Page>是巡覽回使用筆記本中，進行下列步驟：  
   
-1.  <xref:System.Windows.Controls.Page>具現化 （上一頁堆疊的最上層日誌項目）。  
+1. <xref:System.Windows.Controls.Page>具現化 （上一頁堆疊的最上層日誌項目）。  
   
-2.  <xref:System.Windows.Controls.Page>就會重新整理的日誌項目一起儲存的狀態<xref:System.Windows.Controls.Page>。  
+2. <xref:System.Windows.Controls.Page>就會重新整理的日誌項目一起儲存的狀態<xref:System.Windows.Controls.Page>。  
   
-3.  <xref:System.Windows.Controls.Page>巡覽回。  
+3. <xref:System.Windows.Controls.Page>巡覽回。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 使用下列控制項上時，會自動使用這項支援<xref:System.Windows.Controls.Page>:  
   

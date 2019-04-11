@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 3396604d94b2b0fb3f4a178d3bb3a25b00ef91ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: HT
+ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59166643"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296104"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>逐步解說：將 WPF 內容裝載在 Win32 中
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供豐富的環境，以建立應用程式。 不過，如果您已長期開發 [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] 程式碼，將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 功能加入應用程式，可能會比重寫原始程式碼更有效率。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供簡單的機制，來裝載[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗。  
@@ -33,13 +33,13 @@ ms.locfileid: "59166643"
   
  要裝載的索引鍵[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]上的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 視窗是<xref:System.Windows.Interop.HwndSource>類別。 這個類別會包裝[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]中的內容[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]視窗中，使其併入您[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]做為子視窗。 下列方法會將 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 和 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 合併在單一應用程式中。  
   
-1.  實作您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容作為 managed 類別。  
+1. 實作您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容作為 managed 類別。  
   
-2.  以 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 實作 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 應用程式。 如果您是使用現有的應用程式和 Unmanaged [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 程式碼開始進行，通常只要變更專案設定來包含 `/clr` 編譯器旗標，該應用程式就可以呼叫 Managed 程式碼。  
+2. 以 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 實作 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] 應用程式。 如果您是使用現有的應用程式和 Unmanaged [!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)] 程式碼開始進行，通常只要變更專案設定來包含 `/clr` 編譯器旗標，該應用程式就可以呼叫 Managed 程式碼。  
   
-3.  將執行緒模型設為單一執行緒 Apartment (STA)。  
+3. 將執行緒模型設為單一執行緒 Apartment (STA)。  
   
-4.  處理[WM_CREATE](/windows/desktop/winmsg/wm-create)通知您的視窗程序和執行下列動作：  
+4. 處理[WM_CREATE](/windows/desktop/winmsg/wm-create)通知您的視窗程序和執行下列動作：  
   
     1.  以父視窗做為 <xref:System.Windows.Interop.HwndSource> 參數，建立新的 `parent` 物件。  
   
@@ -49,13 +49,13 @@ ms.locfileid: "59166643"
   
     4.  取得內容的 HWND。 <xref:System.Windows.Interop.HwndSource.Handle%2A> 物件的 <xref:System.Windows.Interop.HwndSource> 屬性包含視窗控制代碼 (HWND)。 若要取得可用於應用程式 Unmanaged 部分的 HWND，請將 `Handle.ToPointer()` 轉型為 HWND。  
   
-5.  實作 Managed 類別，其中包含靜態欄位來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的參考。 這個類別可讓您從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式碼取得 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 內容的參考。  
+5. 實作 Managed 類別，其中包含靜態欄位來保存 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容的參考。 這個類別可讓您從 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 程式碼取得 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 內容的參考。  
   
-6.  將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容指派至靜態欄位。  
+6. 將 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容指派至靜態欄位。  
   
-7.  接收通知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]處理常式附加至一或多個內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件。  
+7. 接收通知[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]處理常式附加至一或多個內容[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]事件。  
   
-8.  使用儲存在靜態欄位中的參考來設定屬性等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容通訊。  
+8. 使用儲存在靜態欄位中的參考來設定屬性等等，以與 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容通訊。  
   
 > [!NOTE]
 >  您也可以使用[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]來實作您[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]內容。 不過，您必須另外將它編譯成 [!INCLUDE[TLA#tla_dll](../../../../includes/tlasharptla-dll-md.md)]，並從 [!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)] 應用程式參考該 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]。 此程序的其餘部分與上述類似。
@@ -77,13 +77,13 @@ ms.locfileid: "59166643"
 ### <a name="the-basic-application"></a>基本應用程式
  主應用程式的起點是建立 Visual Studio 2005 範本。
 
-1.  開啟 Visual Studio 2005 中，然後選取**新的專案**從**檔案**功能表。
+1. 開啟 Visual Studio 2005 中，然後選取**新的專案**從**檔案**功能表。
 
-2.  選取  **Win32**從清單中[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]專案類型。 如果您的預設語言不是[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]，您會找到這些專案類型之下**其他語言**。
+2. 選取  **Win32**從清單中[!INCLUDE[TLA2#tla_visualcpp](../../../../includes/tla2sharptla-visualcpp-md.md)]專案類型。 如果您的預設語言不是[!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)]，您會找到這些專案類型之下**其他語言**。
 
-3.  選取  **Win32 專案**範本，將名稱指派至專案，然後按一下**確定**來啟動**Win32 應用程式精靈**。
+3. 選取  **Win32 專案**範本，將名稱指派至專案，然後按一下**確定**來啟動**Win32 應用程式精靈**。
 
-4.  接受精靈的預設設定，然後按**完成**啟動專案。
+4. 接受精靈的預設設定，然後按**完成**啟動專案。
 
  此範本會建立基本 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] 應用程式，包括：
 
@@ -97,13 +97,13 @@ ms.locfileid: "59166643"
 
  第一個是將專案編譯成 Managed 程式碼。 根據預設，專案會編譯成 Unmanaged 程式碼。 不過，因為 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 是以 Managed 程式碼實作，所以專案必須據以編譯。
 
-1.  中的專案名稱上按一下滑鼠右鍵**方案總管**，然後選取**屬性**從內容功能表來啟動**屬性頁** 對話方塊。
+1. 中的專案名稱上按一下滑鼠右鍵**方案總管**，然後選取**屬性**從內容功能表來啟動**屬性頁** 對話方塊。
 
-2.  選取 **組態屬性**從左窗格中的樹狀檢視。
+2. 選取 **組態屬性**從左窗格中的樹狀檢視。
 
-3.  選取  **Common Language Runtime**支援從**專案預設值**右窗格中的清單。
+3. 選取  **Common Language Runtime**支援從**專案預設值**右窗格中的清單。
 
-4.  選取  **Common Language Runtime 支援 (/ clr)** 從下拉式清單方塊。
+4. 選取  **Common Language Runtime 支援 (/ clr)** 從下拉式清單方塊。
 
 > [!NOTE]
 >  此編譯器旗標可讓您在應用程式中使用 Managed 程式碼，但 Unmanaged 程式碼還是會編譯成和之前一樣。

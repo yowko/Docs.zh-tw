@@ -1,5 +1,5 @@
 ---
-title: 逐步解說：使用 WindowsFormsHost 元素對應屬性
+title: 逐步解說：使用 WindowsFormsHost 項目對應屬性
 ms.date: 08/18/2018
 dev_langs:
 - csharp
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - mapping properties [WPF]
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
-ms.openlocfilehash: 86a7a8a937b9407690d7f1981b91857d1b44ded1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296520"
 ---
-# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>逐步解說：使用 WindowsFormsHost 元素對應屬性
+# <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>逐步解說：使用 WindowsFormsHost 項目對應屬性
 
 本逐步解說會示範如何使用<xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A>屬性來對應[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]屬性，以對應的屬性，在裝載[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項。
 
@@ -45,11 +45,11 @@ ms.locfileid: "57373877"
 
 ## <a name="create-and-set-up-the-project"></a>建立並設定專案
 
-1.  建立**WPF 應用程式**專案，命名為`PropertyMappingWithWfhSample`。
+1. 建立**WPF 應用程式**專案，命名為`PropertyMappingWithWfhSample`。
 
-2.  在 [**方案總管] 中**，加入名為 WindowsFormsIntegration.dll 之 WindowsFormsIntegration 組件的參考。
+2. 在 [**方案總管] 中**，加入名為 WindowsFormsIntegration.dll 之 WindowsFormsIntegration 組件的參考。
 
-3.  在 [**方案總管] 中**，新增 System.Drawing 和 System.Windows.Forms 組件的參考。
+3. 在 [**方案總管] 中**，新增 System.Drawing 和 System.Windows.Forms 組件的參考。
 
 ## <a name="defining-the-application-layout"></a>定義應用程式版面配置
 
@@ -57,15 +57,15 @@ ms.locfileid: "57373877"
 
 ### <a name="to-define-the-application-layout"></a>定義應用程式版面配置
 
-1.  中，開啟 Window1.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。
+1. 中，開啟 Window1.xaml [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]。
 
-2.  將現有的程式碼取代為下列程式碼。
+2. 將現有的程式碼取代為下列程式碼。
 
      [!code-xaml[PropertyMappingWithWfhSample#1](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml#1)]
 
-3.  在程式碼編輯器中，開啟 Window1.xaml.cs。
+3. 在程式碼編輯器中，開啟 Window1.xaml.cs。
 
-4.  在檔案頂端，匯入下列命名空間。
+4. 在檔案頂端，匯入下列命名空間。
 
      [!code-csharp[PropertyMappingWithWfhSample#20](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#20)]
      [!code-vb[PropertyMappingWithWfhSample#20](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#20)]
@@ -138,26 +138,26 @@ ms.locfileid: "57373877"
 
 ### <a name="to-initialize-your-property-mappings"></a>初始化屬性對應
 
-1.  將下列程式碼複製到的定義`Window1`類別。
+1. 將下列程式碼複製到的定義`Window1`類別。
 
      [!code-csharp[PropertyMappingWithWfhSample#11](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#11)]
      [!code-vb[PropertyMappingWithWfhSample#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#11)]
 
      `WindowLoaded`方法會處理<xref:System.Windows.FrameworkElement.Loaded>事件，並執行下列初始化。
 
-    -   會建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控制項。
+    -   建立[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]<xref:System.Windows.Forms.CheckBox>控制項。
 
     -   呼叫您稍早在本逐步解說中所定義的方法來設定屬性對應。
 
     -   將初始值指派給對應的屬性。
 
-2.  按 **F5** 鍵建置並執行應用程式。 按一下核取方塊，若要查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>對應。 當您按一下核取方塊時，版面配置會反轉其左右方向。
+2. 按 **F5** 鍵建置並執行應用程式。 按一下核取方塊，若要查看的效果<xref:System.Windows.FrameworkElement.FlowDirection%2A>對應。 當您按一下核取方塊時，版面配置會反轉其左右方向。
 
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.ElementHost.PropertyMap%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
 - [在 Visual Studio 中設計 XAML](/visualstudio/designers/designing-xaml-in-visual-studio)
-- [逐步解說：裝載在 WPF 中的 Windows Forms 控制項](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
+- [逐步解說：將 Windows Forms 控制項裝載在 WPF 中](walkthrough-hosting-a-windows-forms-control-in-wpf.md)
