@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: 3283ec1661138a636914d6b1ca5e7adb5d5d52d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: abae49e709fa2e77d641d991dd6e09cf82216732
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59175977"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517287"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>查詢資料服務 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 用戶端程式庫可讓您使用熟悉的 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 程式設計模式針對資料服務執行查詢，包括使用 Language Integrated Query (LINQ)。 用戶端程式庫會將查詢轉譯為 HTTP GET 要求訊息，該查詢在用戶端上已定義為 <xref:System.Data.Services.Client.DataServiceQuery%601> 類別的執行個體。 程式庫會接收回應訊息，並將它轉譯成用戶端資料服務類別的執行個體。 這些類別會由 <xref:System.Data.Services.Client.DataServiceContext> 所屬的 <xref:System.Data.Services.Client.DataServiceQuery%601> 追蹤。  
@@ -38,8 +38,8 @@ ms.locfileid: "59175977"
   
  下列查詢在執行時會傳回 Northwind 資料服務中的所有 `Customers` 實體：  
   
- [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getallcustomersspecific)]  
- [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getallcustomersspecific)]  
+ [!code-csharp[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getallcustomersspecific)]  
+ [!code-vb[Astoria Northwind Client#GetAllCustomersSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getallcustomersspecific)]  
   
  如需詳細資訊，請參閱[如何：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)。  
   
@@ -48,8 +48,8 @@ ms.locfileid: "59175977"
 ## <a name="linq-queries"></a>LINQ 查詢  
  因為<xref:System.Data.Services.Client.DataServiceQuery%601>類別會實作<xref:System.Linq.IQueryable%601>由 LINQ 定義的介面[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫是能夠將針對實體集資料的 LINQ 查詢轉換成表示查詢運算式，評估針對資料服務的 URI資源。 下列範例是 LINQ 查詢，其相當於以前的 <xref:System.Data.Services.Client.DataServiceQuery%601>，它會傳回運費成本超過 $30 的 `Orders`，並依運費成本排序結果：  
   
- [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionslinqspecific)]  
- [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionslinqspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionslinqspecific)]  
+ [!code-vb[Astoria Northwind Client#AddQueryOptionsLinqSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionslinqspecific)]  
   
  此 LINQ 查詢轉譯為下列查詢會針對以 Northwind 為基礎執行的 URI[快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)資料服務：  
   
@@ -63,15 +63,15 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
  如需詳細資訊，請參閱 < [LINQ 考量](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)。  
   
 ## <a name="adding-query-options"></a>加入查詢選項  
- 資料服務查詢支援 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供的所有查詢選項。 您可以呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將查詢選項附加至 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 傳回新<xref:System.Data.Services.Client.DataServiceQuery%601>就相當於原始查詢的執行個體但使用新的查詢選項集。 下列查詢在執行時會傳回 `Orders`，其係經由 `Freight` 值進行篩選並依 `OrderID` 遞減順序排序：  
+ 資料服務查詢支援 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 提供的所有查詢選項。 您可以呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法，將查詢選項附加至 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體。 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 會傳回新的 <xref:System.Data.Services.Client.DataServiceQuery%601> 執行個體，其相當於原始的查詢，但使用新的查詢選項集。 下列查詢在執行時會傳回 `Orders`，其係經由 `Freight` 值進行篩選並依 `OrderID` 遞減順序排序：  
   
- [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#addqueryoptionsspecific)]  
- [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#addqueryoptionsspecific)]  
+ [!code-csharp[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#addqueryoptionsspecific)]  
+ [!code-vb[Astoria Northwind Client#AddQueryOptionsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#addqueryoptionsspecific)]  
   
  您可以使用 `$orderby` 查詢選項根據單一屬性來排序及篩選查詢，如下列範例根據 `Orders` 屬性的值篩選及排序傳回的 `Freight` 物件：  
   
- [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#orderwithfilter)]
- [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#orderwithfilter)]  
+ [!code-csharp[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#orderwithfilter)]
+ [!code-vb[Astoria Northwind Client#OrderWithFilter](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#orderwithfilter)]  
   
  您可以連續呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601.AddQueryOption%2A> 方法來建構複雜的查詢運算式。 如需詳細資訊，請參閱[如何：將查詢選項加入至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)。  
   
@@ -84,32 +84,32 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
 ## <a name="client-versus-server-execution"></a>用戶端與伺服器執行的比較  
  用戶端會以兩個部分執行查詢。 如果可能，查詢中的運算式會先在用戶端上進行評估，然後產生 URI 架構的查詢，並將其傳送至資料服務，以便針對服務中的資料進行評估。 請考慮下列 LINQ 查詢：  
   
- [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#linqqueryclientevalspecific)]  
- [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#linqqueryclientevalspecific)]  
+ [!code-csharp[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#linqqueryclientevalspecific)]  
+ [!code-vb[Astoria Northwind Client#LinqQueryClientEvalSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#linqqueryclientevalspecific)]  
   
  在此範例中，運算式 `(basePrice – (basePrice * discount))` 會在用戶端上進行評估。 因此，傳送至資料服務的實際查詢 URI `http://localhost:12345/northwind.svc/Products()?$filter=(UnitPrice gt 90.00M) and substringof('bike',ProductName)` 在 filter 子句中，包含已經計算的十進位值 `90`。 篩選運算式的另一個部分 (包括子字串運算式)，則由資料服務評估。 在用戶端上評估的運算式會遵循 Common Language Runtime (CLR) 語意，而傳送到資料服務的運算式則會依賴 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 通訊協定的資料服務實作。 您也應該知道這個個別評估的案例可能會造成非預期的結果，例如，當用戶端和服務同時在不同的時區中執行以時間為基礎的評估時。  
   
 ## <a name="query-responses"></a>查詢回應  
  執行時，<xref:System.Data.Services.Client.DataServiceQuery%601> 會傳回要求之實體類型的 <xref:System.Collections.Generic.IEnumerable%601>。 此查詢結果可以轉型為 <xref:System.Data.Services.Client.QueryOperationResponse%601> 物件，如下列範例：  
   
- [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#getresponsespecific)]
- [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#getresponsespecific)]  
+ [!code-csharp[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#getresponsespecific)]
+ [!code-vb[Astoria Northwind Client#GetResponseSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#getresponsespecific)]  
   
  資料服務中代表實體的實體類型執行個體是透過稱為物件具體化的程序，在用戶端上建立的。 如需詳細資訊，請參閱 <<c0> [ 物件具體化](../../../../docs/framework/data/wcf/object-materialization-wcf-data-services.md)。 <xref:System.Data.Services.Client.QueryOperationResponse%601> 物件會實作 <xref:System.Collections.Generic.IEnumerable%601> 以提供查詢結果的存取權。  
   
  <xref:System.Data.Services.Client.QueryOperationResponse%601> 還有下列成員，可讓您存取有關查詢結果的其他資訊：  
   
--   <xref:System.Data.Services.Client.OperationResponse.Error%2A> -取得作業，所擲回的錯誤，如果有任何已發生。  
+-   <xref:System.Data.Services.Client.OperationResponse.Error%2A> - 取得作業擲回的錯誤 (若有發生錯誤的話)。  
   
--   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> -包含與查詢回應相關聯的 HTTP 回應標頭的集合。  
+-   <xref:System.Data.Services.Client.OperationResponse.Headers%2A> - 包含與查詢回應相關聯之 HTTP 回應標頭的集合。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> -取得原始<xref:System.Data.Services.Client.DataServiceQuery%601>產生<xref:System.Data.Services.Client.QueryOperationResponse%601>。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.Query%2A> - 取得產生 <xref:System.Data.Services.Client.DataServiceQuery%601> 的原始 <xref:System.Data.Services.Client.QueryOperationResponse%601>。  
   
--   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> -取得查詢回應的 HTTP 回應碼。  
+-   <xref:System.Data.Services.Client.OperationResponse.StatusCode%2A> - 取得查詢回應的 HTTP 回應碼。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> -取得在實體中的實體總數時，設定<xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A>上呼叫方法<xref:System.Data.Services.Client.DataServiceQuery%601>。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse%601.TotalCount%2A> - 在 <xref:System.Data.Services.Client.DataServiceQuery%601.IncludeTotalCount%2A> 上呼叫 <xref:System.Data.Services.Client.DataServiceQuery%601> 方法時，取得實體集中的實體總數。  
   
--   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> -傳回<xref:System.Data.Services.Client.DataServiceQueryContinuation>物件，包含結果的下一頁的 URI。  
+-   <xref:System.Data.Services.Client.QueryOperationResponse.GetContinuation%2A> - 傳回包含下一頁結果之 URI 的 <xref:System.Data.Services.Client.DataServiceQueryContinuation> 物件。  
   
  根據預設，[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]只會傳回查詢 URI 所明確選取的資料。 它還提供選項可讓您於必要時，從資料服務明確載入其他資料。 每次您從資料服務明確載入資料時，就會傳送一個要求至資料服務。 可以明確載入的資料包括相關實體、分頁的回應資料，以及二進位資料流。  
   
@@ -130,18 +130,18 @@ http://localhost:12345/Northwind.svc/Orders?Orderby=ShippedDate&?filter=Freight 
   
  [LINQ 考量](../../../../docs/framework/data/wcf/linq-considerations-wcf-data-services.md)  
   
- [HOW TO：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
+ [如何：執行資料服務查詢](../../../../docs/framework/data/wcf/how-to-execute-data-service-queries-wcf-data-services.md)  
   
- [HOW TO：將查詢選項新增至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
+ [如何：將查詢選項加入至資料服務查詢](../../../../docs/framework/data/wcf/how-to-add-query-options-to-a-data-service-query-wcf-data-services.md)  
   
- [HOW TO：判斷查詢傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
+ [如何：判斷查詢所傳回的實體數目](../../../../docs/framework/data/wcf/number-of-entities-returned-by-a-query-wcf.md)  
   
- [HOW TO：指定資料服務要求的用戶端認證](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
+ [如何：指定資料服務的用戶端認證要求](../../../../docs/framework/data/wcf/specify-client-creds-for-a-data-service-request-wcf.md)  
   
- [HOW TO：設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
+ [如何：設定用戶端要求中的標頭](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)  
   
- [HOW TO：投影查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
+ [如何：專案查詢結果](../../../../docs/framework/data/wcf/how-to-project-query-results-wcf-data-services.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
-ms.openlocfilehash: a917659092890c95dfd65ede358d9c4b5a0e62cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e5cd44ee7c3b2c2744e87ebf66973b637961893c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59117906"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517573"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>HOW TO：批次 (WCF Data Services) 中執行查詢
 使用[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]用戶端程式庫，您可以在單一批次執行一個以上的查詢，針對資料服務。 如需詳細資訊，請參閱 <<c0> [ 批次作業](../../../../docs/framework/data/wcf/batching-operations-wcf-data-services.md)。  
@@ -22,9 +22,9 @@ ms.locfileid: "59117906"
 ## <a name="example"></a>範例  
  下列範例顯示如何呼叫 <xref:System.Data.Services.Client.DataServiceContext.ExecuteBatch%2A> 方法，執行 <xref:System.Data.Services.Client.DataServiceRequest%601> 物件的陣列，其中包含從 Northwind 資料服務同時傳回 `Customers` 和 `Products` 物件的查詢。 在傳回的 <xref:System.Data.Services.Client.QueryOperationResponse%601>中，會列舉 <xref:System.Data.Services.Client.DataServiceResponse> 物件集合以及包含在每一個 <xref:System.Data.Services.Client.QueryOperationResponse%601> 中的物件集合。  
   
- [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria northwind client/cs/source.cs#batchquery)]
- [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria northwind client/vb/source.vb#batchquery)]  
+ [!code-csharp[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#batchquery)]
+ [!code-vb[Astoria Northwind Client#BatchQuery](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#batchquery)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

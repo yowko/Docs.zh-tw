@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: dc2fc5de591429d76210b1dacf69485bb3b11b2c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59189075"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517313"
 ---
 # <a name="feed-customization-wcf-data-services"></a>自訂摘要 (WCF 資料服務)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]將資料公開為摘要。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援資料摘要的 Atom 和 「 JavaScript 物件標記法 (JSON) 格式。 當您使用 Atom 摘要時，[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]提供標準的方法，用來序列化資料，例如實體和關聯性，為 XML 格式，可以包含在 HTTP 訊息的本文。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 定義包含在實體內的資料與 Atom 項目之間的預設實體屬性對應。 如需詳細資訊，請參閱[OData:Atom 格式](https://go.microsoft.com/fwlink/?LinkID=185794)。  
@@ -33,11 +33,11 @@ ms.locfileid: "59189075"
 ## <a name="customizing-feeds-with-the-entity-framework-provider"></a>使用 Entity Framework 提供者自訂摘要  
  搭配 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] 提供者使用的資料模型在 .edmx 檔案中以 XML 表示。 在這種情況下，定義自訂摘要的屬性會新增至 `EntityType` 和`Property` 項目，表示資料模型中的實體類型和屬性。 這些摘要的自訂屬性中未定義[ \[MC-CSDL\]:概念結構定義檔案格式](https://go.microsoft.com/fwlink/?LinkId=159072)，這是格式，[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]提供者用於定義資料模型。 因此，您必須在特定的結構描述命名空間中宣告摘要自訂屬性，定義為 `m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"`。 下列 XML 片段會顯示套用至 `Property` 實體類型之 `Products` 項目的摘要自訂屬性，定義 `ProductName`、`ReorderLevel` 和 `UnitsInStock` 屬性。  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/northwind.csdl#edmfeedattributes)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedAttributes](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/northwind.csdl#edmfeedattributes)]  
   
  這些屬性會針對 `Products` 實體集產生下列自訂資料摘要。 在自訂資料摘要中，`ProductName` 屬性 (property) 值會同時顯示在 `author` 項目中並做為 `ProductName` 屬性 (property) 項目，而 `UnitsInStock` 屬性 (property) 則會顯示在自訂項目中，它具有其唯一的命名空間和做為屬性 (attribute) 的 `ReorderLevel` 屬性 (property)：  
   
- [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
+ [!code-xml[Astoria Custom Feeds#EdmFeedResultProduct](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/edmfeedresult.xml#edmfeedresultproduct)]  
   
  如需詳細資訊，請參閱[如何：使用 Entity Framework 提供者自訂摘要](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)。  
   
@@ -49,12 +49,12 @@ ms.locfileid: "59189075"
   
 |屬性名稱|描述|  
 |--------------------|-----------------|  
-|`FC_ContentKind`|指示內容的類型。 以下關鍵字可定義新聞訂閱方式內容類型。<br /><br /> `text:` 屬性值在摘要中會顯示為文字。<br /><br /> `html:` 屬性值在摘要中會顯示為 HTML。<br /><br /> `xhtml:` 屬性值在摘要中會顯示為 XML 格式的 HTML。<br /><br /> 這些關鍵字相當於搭配反映提供者所使用之 <xref:System.Data.Services.Common.SyndicationTextContentKind> 列舉的值。<br /><br /> 使用 `FC_NsPrefix` 和 `FC_NsUri` 屬性時，將不支援此屬性。<br /><br /> 在您指定 `xhtml` 屬性的`FC_ContentKind` 值時，必須先確保屬性值會包含格式正確的 XML。 資料服務會傳回未執行任何轉換的值。 您還必須確保傳回之 XML 中的任何 XML 項目前置詞具備命名空間 URI 以及對應之摘要中所定義的前置詞。|  
+|`FC_ContentKind`|指示內容的類型。 以下關鍵字可定義新聞訂閱方式內容類型。<br /><br /> `text:` 屬性值會在摘要中顯示為文字。<br /><br /> `html:` 屬性值會在摘要中顯示為 HTML。<br /><br /> `xhtml:` 屬性值會在摘要中顯示為 XML 格式的 HTML。<br /><br /> 這些關鍵字相當於搭配反映提供者所使用之 <xref:System.Data.Services.Common.SyndicationTextContentKind> 列舉的值。<br /><br /> 使用 `FC_NsPrefix` 和 `FC_NsUri` 屬性時，將不支援此屬性。<br /><br /> 在您指定 `xhtml` 屬性的`FC_ContentKind` 值時，必須先確保屬性值會包含格式正確的 XML。 資料服務會傳回未執行任何轉換的值。 您還必須確保傳回之 XML 中的任何 XML 項目前置詞具備命名空間 URI 以及對應之摘要中所定義的前置詞。|  
 |`FC_KeepInContent`|指出參考的屬性值應包含在摘要的內容區段以及所對應的位置中。 有效值為 `true` 和 `false`。 若要使結果摘要與舊版的回溯相容[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]，指定其值為`true`藉此確定摘要的內容區段中包含的值。|  
 |`FC_NsPrefix`|非新聞訂閱方式對應中 XML 項目的命名空間前置詞。 這個屬性必須搭配 `FC_NsUri` 屬性使用，不能搭配 `FC_ContentKind` 屬性使用。|  
 |`FC_NsUri`|非新聞訂閱方式對應中 XML 項目的命名空間 URI。 這個屬性必須搭配 `FC_NsPrefix` 屬性使用，不能搭配 `FC_ContentKind` 屬性使用。|  
-|`FC_SourcePath`|此摘要對應規則套用的實體屬性路徑。 僅支援用於 `EntityType` 項目中的屬性。<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 屬性不能直接參考複雜型別。 針對複雜型別，您必須使用路徑運算式，其中的屬性名稱以反斜線 (`/`) 字元隔開。 例如，下列值允許實體類型`Person`包含整數屬性`Age`和複雜屬性<br /><br /> `Address`:<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 屬性不能設為包含空格或其他字元的值，這些在屬性名稱中不是有效字元。|  
-|`FC_TargetPath`|對應屬性之結果摘要的目標項目名稱。 這個項目可以是元素規格定義的項目或自訂項目。<br /><br /> 以下關鍵字是預先定義的新聞訂閱方式目標路徑值，指向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要中的特定位置。<br /><br /> `SyndicationAuthorEmail:` `atom:email` 項目的 `atom:author` 子項目。<br /><br /> `SyndicationAuthorName:` `atom:name` 項目的 `atom:author` 子項目。<br /><br /> `SyndicationAuthorUri:` `atom:uri` 項目的 `atom:author` 子項目。<br /><br /> `SyndicationContributorEmail:` `atom:email` 項目的 `atom:contributor` 子項目。<br /><br /> `SyndicationContributorName:` `atom:name` 項目的 `atom:contributor` 子項目。<br /><br /> `SyndicationContributorUri:` `atom:uri` 項目的 `atom:contributor` 子項目。<br /><br /> `SyndicationCustomProperty:` 自訂屬性項目。 對應至自訂項目時，目標必須是路徑運算式，其中巢狀項目以反斜線 (`/`) 隔開，而且屬性以連字號 (`@`) 指定。 下列範例中，字串 `UnitsInStock/@ReorderLevel` 將屬性值對應至名為 `ReorderLevel` 的屬性，位於根項目中名為 `UnitsInStock` 的子項目之上。<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 當目標是自訂項目名稱時，也必須指定 `FC_NsPrefix` 和 `FC_NsUri` 屬性。<br /><br /> `SyndicationPublished:` `atom:published` 項目。<br /><br /> `SyndicationRights:` `atom:rights` 項目。<br /><br /> `SyndicationSummary:` `atom:summary` 項目。<br /><br /> `SyndicationTitle:` `atom:title` 項目。<br /><br /> `SyndicationUpdated:` `atom:updated` 項目。<br /><br /> 這些關鍵字相當於搭配反映提供者所使用之 <xref:System.Data.Services.Common.SyndicationItemProperty> 列舉的值。|  
+|`FC_SourcePath`|此摘要對應規則套用的實體屬性路徑。 僅支援用於 `EntityType` 項目中的屬性。<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 屬性不能直接參考複雜型別。 針對複雜型別，您必須使用路徑運算式，其中的屬性名稱以反斜線 (`/`) 字元隔開。 例如，下列值允許實體類型`Person`包含整數屬性`Age`和複雜屬性<br /><br /> `Address`：<br /><br /> `Age`<br /><br /> `Address/Street`<br /><br /> <xref:System.Data.Services.Common.EntityPropertyMappingAttribute.SourcePath%2A> 屬性不能設為包含空格或其他字元的值，這些在屬性名稱中不是有效字元。|  
+|`FC_TargetPath`|對應屬性之結果摘要的目標項目名稱。 這個項目可以是元素規格定義的項目或自訂項目。<br /><br /> 以下關鍵字是預先定義的新聞訂閱方式目標路徑值，指向 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 摘要中的特定位置。<br /><br /> `SyndicationAuthorEmail:` `atom:email`子項目`atom:author`項目。<br /><br /> `SyndicationAuthorName:` `atom:name`子項目`atom:author`項目。<br /><br /> `SyndicationAuthorUri:` `atom:uri`子項目`atom:author`項目。<br /><br /> `SyndicationContributorEmail:` `atom:email`子項目`atom:contributor`項目。<br /><br /> `SyndicationContributorName:` `atom:name`子項目`atom:contributor`項目。<br /><br /> `SyndicationContributorUri:` `atom:uri`子項目`atom:contributor`項目。<br /><br /> `SyndicationCustomProperty:` 自訂屬性項目。 對應至自訂項目時，目標必須是路徑運算式，其中巢狀項目以反斜線 (`/`) 隔開，而且屬性以連字號 (`@`) 指定。 下列範例中，字串 `UnitsInStock/@ReorderLevel` 將屬性值對應至名為 `ReorderLevel` 的屬性，位於根項目中名為 `UnitsInStock` 的子項目之上。<br /><br /> `<Property Name="ReorderLevel" Type="Int16"               m:FC_TargetPath="UnitsInStock/@ReorderLevel"               m:FC_NsPrefix="Northwind"               m:FC_NsUri="http://schemas.examples.microsoft.com/dataservices"               m:FC_KeepInContent="false"               />`<br /><br /> 當目標是自訂項目名稱時，也必須指定 `FC_NsPrefix` 和 `FC_NsUri` 屬性。<br /><br /> `SyndicationPublished:` `atom:published`項目。<br /><br /> `SyndicationRights:` `atom:rights`項目。<br /><br /> `SyndicationSummary:` `atom:summary`項目。<br /><br /> `SyndicationTitle:` `atom:title`項目。<br /><br /> `SyndicationUpdated:` `atom:updated`項目。<br /><br /> 這些關鍵字相當於搭配反映提供者所使用之 <xref:System.Data.Services.Common.SyndicationItemProperty> 列舉的值。|  
   
 > [!NOTE]
 >  屬性名稱和值需區分大小寫。 屬性可套用至 `EntityType` 項目或一個或多個 `Property` 項目，但不能同時套用至兩者。  
@@ -65,12 +65,12 @@ ms.locfileid: "59189075"
 > [!NOTE]
 >  此範例中的資料模型主題中所定義[How to:建立資料服務，使用反映提供者](../../../../docs/framework/data/wcf/create-a-data-service-using-rp-wcf-data-services.md)。  
   
- [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria custom feeds/cs/orderitems.svc.cs#customorderfeed)]
- [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria custom feeds/vb/orderitems.svc.vb#customorderfeed)]  
+ [!code-csharp[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_custom_feeds/cs/orderitems.svc.cs#customorderfeed)]
+ [!code-vb[Astoria Custom Feeds#CustomOrderFeed](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_custom_feeds/vb/orderitems.svc.vb#customorderfeed)]  
   
  這些屬性會針對 `Orders` 實體集產生下列自訂資料摘要。 在此自訂摘要時，`OrderId`屬性值僅顯示於`title`項目`entry`並`Customer`屬性值會同時顯示於`author`項目並做為`Customer`屬性項目：  
   
- [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria custom feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
+ [!code-xml[Astoria Custom Feeds#IQueryableFeedResult](../../../../samples/snippets/xml/VS_Snippets_Misc/astoria_custom_feeds/xml/iqueryablefeedresult.xml#iqueryablefeedresult)]  
   
  如需詳細資訊，請參閱[如何：使用反映提供者自訂摘要](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-the-reflection-provider-wcf-data-services.md)。  
   
