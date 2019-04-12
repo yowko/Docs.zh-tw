@@ -8,12 +8,12 @@ helpviewer_keywords:
 - ComponentResourceKey markup extension [WPF]
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
-ms.openlocfilehash: 89459223108c0190a485b25193e44d379a1e1c19
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169750"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey 標記延伸
 定義和參考會從外部組件載入的資源索引鍵。 這可讓組件，而不是明確的資源字典的組件中，或在類別上指定目標類型的資源查閱。  
@@ -56,7 +56,7 @@ ms.locfileid: "57379025"
   
 -   從組件存取佈景主題資源，當您是重新範本化控制項，但想要使用來自控制項的佈景主題所提供的資源的屬性值。  
   
- 參考來自佈景主題的元件資源，通常建議您改用`{DynamicResource}`而非`{StaticResource}`。 這會顯示使用方式。 `{DynamicResource}` 建議，因為使用者可以變更佈景主題本身。 如果您想 支援佈景主題的控制項作者的意圖元件資源時，您應該啟用您的元件資源參考也是動態。  
+ 參考來自佈景主題的元件資源，通常建議您改用`{DynamicResource}`而非`{StaticResource}`。 這會顯示使用方式。 `{DynamicResource}` 建議，因為使用者可以變更佈景主題本身。 如果您想  懽搰 ╪ 支援佈景主題的控制項作者的意圖元件資源時，您應該啟用您的元件資源參考也是動態。  
   
  <xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>識別實際定義資源的目標組件中存在的類型。 A`ComponentResourceKey`可以定義和使用獨立於完全知道其中<xref:System.Windows.ComponentResourceKey.TypeInTargetAssembly%2A>已定義，但最後必須解決透過參考組件的型別。  
   
@@ -72,9 +72,10 @@ ms.locfileid: "57379025"
   
  在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]讀取器實作，這個標記延伸的處理由定義<xref:System.Windows.ComponentResourceKey>類別。  
   
- `ComponentResourceKey` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `ComponentResourceKey` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中的所有標記延伸都會在其屬性語法中使用 { 與 } 字元，這個慣例讓 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 處理器知道某個標記延伸必須處理這個屬性。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Windows.ComponentResourceKey>
 - <xref:System.Windows.Controls.ControlTemplate>
 - [控制項撰寫概觀](../controls/control-authoring-overview.md)
