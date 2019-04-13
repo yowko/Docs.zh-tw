@@ -2,12 +2,12 @@
 title: F#程式碼格式化方針
 description: 了解格式的指導方針F#程式碼。
 ms.date: 02/08/2019
-ms.openlocfilehash: 7cbd8e4dd1f58cd974a8a12fc8a8c9ee92c546b4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 0a72f96119181650837657afea6ca9d555ce9e5a
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093615"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553858"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#程式碼格式化方針
 
@@ -74,7 +74,7 @@ let ( !> ) x f = f x
 let (!>) x f = f x
 ```
 
-開始任何自訂運算子`*`，您必須定義，以避免編譯器模稜兩可的開頭加入泛空白字元。 因為這個緣故，建議您只需括住的所有運算子以單一空格字元定義。
+開始任何自訂運算子`*`和具有多個字元，您需要加入定義，以避免編譯器模稜兩可的開頭的空白字元。 因為這個緣故，我們建議您只需括住的所有運算子以單一空格字元定義。
 
 ### <a name="surround-function-parameter-arrows-with-white-space"></a>括住函式參數的箭號以空白字元
 
