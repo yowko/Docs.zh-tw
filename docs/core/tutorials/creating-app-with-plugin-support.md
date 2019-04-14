@@ -4,23 +4,23 @@ description: 了解如何建立支援外掛程式的 .NET Core 應用程式。
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/28/2019
-ms.openlocfilehash: 85ea06d56ed1c3312a010c5e575dd193c00b93e9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a9431ee28c7df21a8688f845be20e062eca21887
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363900"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076805"
 ---
 # <a name="create-a-net-core-application-with-plugins"></a>建立具有外掛程式的 .NET Core 應用程式
 
-此教學課程會示範如何：
+本教學課程會示範如何：
 
 - 建構專案以支援外掛程式。
 - 建立自訂 <xref:System.Runtime.Loader.AssemblyLoadContext> 以載入每個外掛程式。
 - 使用 `System.Runtime.Loader.AssemblyDependencyResolver` 類型以允許外掛程式具有相依性。
 - 撰寫只要複製組建成品即可輕鬆部署的外掛程式。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
 - 安裝 [.NET Core 3.0 Preview 2 SDK](https://www.microsoft.com/net/core) 或更新版本。
 
@@ -87,7 +87,7 @@ namespace AppWithPlugin
 
 ## <a name="create-the-plugin-interfaces"></a>建立外掛程式介面
 
-建置具有外掛程式之應用程式其下一步是定義外掛程式需要實作的介面。 建議您建立類別庫，其中包含您打算用來在應用程式與外掛程式之間通訊的任何類型。 此劃分可讓您以套件形式發佈外掛程式介面，而不必提供完整的應用程式。
+建置具有外掛程式之應用程式其下一步是定義外掛程式需要實作的介面。 建議您建立類別庫，其中包含您打算用來在應用程式與外掛程式之間通訊的任何類型。 這項劃分可讓您以套件形式發佈外掛程式介面，而不必提供完整的應用程式。
 
 在專案的根資料夾中，執行 `dotnet new classlib -o PluginBase`。 另外執行 `dotnet sln add PluginBase/PluginBase.csproj` 以將專案新增至方案檔。 刪除 `PluginBase/Class1.cs` 檔案，並在 `PluginBase` 資料夾中，使用下列介面定義來建立名為 `ICommand.cs` 的新檔案：
 
@@ -111,8 +111,6 @@ IEnumerable<ICommand> commands = pluginPaths.SelectMany(pluginPath =>
     return CreateCommands(pluginAssembly);
 }).ToList();
 ```
-
-
 
 然後以下列程式碼片段取代 `// Output the loaded commands` 註解：
 

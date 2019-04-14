@@ -4,12 +4,12 @@ description: 新增 .NET Core 和 ASP.NET Core 專案功能的 Microsoft WCF Web
 author: mlacouture
 ms.date: 04/19/2018
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 3566a92e05c03cc77e59a14e3b2521a1d6d0758a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3452a6a598e255dd9a32629d8ef0589b88f9c00f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245570"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59197070"
 ---
 # <a name="use-the-wcf-web-service-reference-provider-tool"></a>使用 WCF Web Service Reference Provider 工具
 
@@ -54,7 +54,6 @@ ms.locfileid: "53245570"
     
     3c. 按一下 [下一步] 按鈕以開啟 [資料類型選項] 和 [用戶端選項] 頁面。 或者，按一下 [完成] 按鈕以使用預設選項。
 
-
 4. [資料類型選項] 表單可讓您精簡所產生的服務參考組態設定：
 
 ![適用於 .NET Core 的 [Visual Studio 資料類型選項] 索引標籤](./media/wcf-web-service-reference-guide/wcfcs-DataTypesPage.png)
@@ -65,7 +64,6 @@ ms.locfileid: "53245570"
 根據專案相依性數目和其他系統效能因素，在載入類型資訊時可能會延遲。 除非取消核取 [重複使用參考組件中的類型] 核取方塊，否則會在載入期間停用 [完成] 按鈕。
 
 5. 完成時，請按一下 [完成]。
-
 
 顯示進度時，此工具會：
 

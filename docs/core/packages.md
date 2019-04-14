@@ -4,12 +4,12 @@ description: 了解套件、中繼套件和架構的術語。
 author: richlander
 ms.date: 06/20/2016
 ms.custom: seodec18
-ms.openlocfilehash: 25247972346fb181279414a762d73d2f3218f0e0
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: a03a4961b116b05468ac6c6ce5e648c07a77b7f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53168815"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59090494"
 ---
 # <a name="packages-metapackages-and-frameworks"></a>套件、中繼套件和架構
 
@@ -97,7 +97,6 @@ ms.locfileid: "53168815"
 架構和套件之間沒有雙向關聯性。 第一個部分要定義特定架構可用的 API，例如 `netstandard1.3`。 目標為 `netstandard1.3` (或 `netstandard1.0` 這類相容架構) 的套件會定義 `netstandard1.3` 可用的 API。 這乍聽之下像是循環定義，其實不然。 由於是「以套件為基礎」，因此架構的 API 定義也來自套件。 架構本身並不會定義任何 API。
 
 關聯性的第二個部分是資產的選取項目。 套件可以包含多個架構的資產。 參考一組套件及/或中繼套件時，需要依據架構來判斷應該選取哪些資產，例如 `net46` 或 `netstandard1.3`。 請務必選取正確的資產。 例如，`net46` 資產不太可能相容於 .NET Framework 4.0 或 .NET Core 1.0。
-
 
 您可以在下圖中看到此關聯性。 *API* 會以「架構」為目標，並加以定義。 「架構」可用來「選取資產」。 「資產」可提供 API。
 

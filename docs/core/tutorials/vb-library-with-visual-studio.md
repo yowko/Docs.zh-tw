@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 1fddbfd84164a95505cff1783e241ea9001231f5
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: f14e4ffbebfe0d7e01d548a6d4f2dc8924633682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362037"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59157296"
 ---
 # <a name="build-a-net-standard-library-with-visual-basic-and-the-net-core-sdk-in-visual-studio-2017"></a>在 Visual Studio 2017 中使用 Visual Basic 和 .NET Core SDK 建置 .NET Standard 程式庫
 
@@ -62,8 +62,6 @@ ms.locfileid: "54362037"
 1. 在功能表列中，選取 [組建]  >  [組建方案]。 專案應該會編譯而不會發生錯誤。
 
    ![輸出窗格顯示組建成功](./media/library-with-visual-studio/output-pane-successful-build.png)
-
-
 
 ## <a name="next-step"></a>後續步驟
 
