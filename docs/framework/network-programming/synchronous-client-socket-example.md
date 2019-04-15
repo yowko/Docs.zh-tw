@@ -9,15 +9,15 @@ helpviewer_keywords:
 - synchronous client sockets
 - sockets, synchronous client sockets
 ms.assetid: 2c7d5be7-2221-467c-a839-5744ec4d576d
-ms.openlocfilehash: 3d1e2c24cbbdcecd9daefab4312076099816ba70
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ef8669e9e78f65451ffb250283a1f14c89d61270
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596055"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59219742"
 ---
-# <a name="synchronous-client-socket-example"></a><span data-ttu-id="bcdcd-102">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="bcdcd-102">Synchronous Client Socket Example</span></span>
-<span data-ttu-id="bcdcd-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="bcdcd-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="bcdcd-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="bcdcd-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="bcdcd-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="bcdcd-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
+# <a name="synchronous-client-socket-example"></a><span data-ttu-id="bcaf7-102">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="bcaf7-102">Synchronous Client Socket Example</span></span>
+<span data-ttu-id="bcaf7-103">下列範例程式會建立連線到伺服器的用戶端。</span><span class="sxs-lookup"><span data-stu-id="bcaf7-103">The following example program creates a client that connects to a server.</span></span> <span data-ttu-id="bcaf7-104">伺服器已內建非同步通訊端，因此在伺服器傳回回應之前，會暫停執行用戶端應用程式。</span><span class="sxs-lookup"><span data-stu-id="bcaf7-104">The client is built with a synchronous socket, so execution of the client application is suspended until the server returns a response.</span></span> <span data-ttu-id="bcaf7-105">應用程式會將字串傳送到伺服器，然後在主控台上顯示伺服器所傳回的字串。</span><span class="sxs-lookup"><span data-stu-id="bcaf7-105">The application sends a string to the server and then displays the string returned by the server on the console.</span></span>  
   
 ```vb  
 Imports System  
@@ -135,7 +135,8 @@ public class SynchronousSocketClient {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="bcdcd-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bcdcd-106">See also</span></span>
-- [<span data-ttu-id="bcdcd-107">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="bcdcd-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
-- [<span data-ttu-id="bcdcd-108">使用同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="bcdcd-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
-- [<span data-ttu-id="bcdcd-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="bcdcd-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+## <a name="see-also"></a><span data-ttu-id="bcaf7-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bcaf7-106">See also</span></span>
+
+- [<span data-ttu-id="bcaf7-107">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="bcaf7-107">Synchronous Server Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-server-socket-example.md)
+- [<span data-ttu-id="bcaf7-108">使用同步用戶端通訊端</span><span class="sxs-lookup"><span data-stu-id="bcaf7-108">Using a Synchronous Client Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-client-socket.md)
+- [<span data-ttu-id="bcaf7-109">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="bcaf7-109">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)

@@ -8,51 +8,51 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 79d61e7e4096ab206e207a05553a68020bca6204
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324145"
 ---
-# <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="6fa8a-102">-nowarn (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="6fa8a-102">-nowarn (C# Compiler Options)</span></span>
-<span data-ttu-id="6fa8a-103">**-nowarn** 選項可讓您隱藏編譯器不顯示一或多個警告。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="6fa8a-104">請以逗點分隔多個警告編號。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-104">Separate multiple warning numbers with a comma.</span></span>  
+# <a name="-nowarn-c-compiler-options"></a><span data-ttu-id="6d1c5-102">-nowarn (C# 編譯器選項)</span><span class="sxs-lookup"><span data-stu-id="6d1c5-102">-nowarn (C# Compiler Options)</span></span>
+<span data-ttu-id="6d1c5-103">**-nowarn** 選項可讓您隱藏編譯器不顯示一或多個警告。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-103">The **-nowarn** option lets you suppress the compiler from displaying one or more warnings.</span></span> <span data-ttu-id="6d1c5-104">請以逗點分隔多個警告編號。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-104">Separate multiple warning numbers with a comma.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="6fa8a-105">語法</span><span class="sxs-lookup"><span data-stu-id="6fa8a-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6d1c5-105">語法</span><span class="sxs-lookup"><span data-stu-id="6d1c5-105">Syntax</span></span>  
   
 ```console  
 -nowarn:number1[,number2,...]  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="6fa8a-106">引數</span><span class="sxs-lookup"><span data-stu-id="6fa8a-106">Arguments</span></span>  
- <span data-ttu-id="6fa8a-107">`number1`、 `number2`</span><span class="sxs-lookup"><span data-stu-id="6fa8a-107">`number1`, `number2`</span></span>  
- <span data-ttu-id="6fa8a-108">您想要編譯器隱藏的警告編號。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-108">Warning number(s) that you want the compiler to suppress.</span></span>  
+## <a name="arguments"></a><span data-ttu-id="6d1c5-106">引數</span><span class="sxs-lookup"><span data-stu-id="6d1c5-106">Arguments</span></span>  
+ `number1`<span data-ttu-id="6d1c5-107">,</span><span class="sxs-lookup"><span data-stu-id="6d1c5-107">,</span></span> `number2`  
+ <span data-ttu-id="6d1c5-108">您想要編譯器隱藏的警告編號。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-108">Warning number(s) that you want the compiler to suppress.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="6fa8a-109">備註</span><span class="sxs-lookup"><span data-stu-id="6fa8a-109">Remarks</span></span>  
- <span data-ttu-id="6fa8a-110">您應該只要指定警告識別項的數值部分。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="6fa8a-111">例如，如果您想要隱藏 CS0028，您可以指定 `-nowarn:28`。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-111">For example, if you want to suppress CS0028, you could specify `-nowarn:28`.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6d1c5-109">備註</span><span class="sxs-lookup"><span data-stu-id="6d1c5-109">Remarks</span></span>  
+ <span data-ttu-id="6d1c5-110">您應該只要指定警告識別項的數值部分。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-110">You should only specify the numeric part of the warning identifier.</span></span> <span data-ttu-id="6d1c5-111">例如，如果您想要隱藏 CS0028，您可以指定 `-nowarn:28`。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-111">For example, if you want to suppress CS0028, you could specify `-nowarn:28`.</span></span>  
   
- <span data-ttu-id="6fa8a-112">編譯器會以無訊息方式略過傳遞給 `-nowarn` 的警告編號，它在舊版中有效但已自編譯器移除。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-112">The compiler will silently ignore warning numbers passed to `-nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="6fa8a-113">例如，CS0679 在 Visual Studio .NET 2002 的編譯器中有效，但後來已移除。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
+ <span data-ttu-id="6d1c5-112">編譯器會以無訊息方式略過傳遞給 `-nowarn` 的警告編號，它在舊版中有效但已自編譯器移除。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-112">The compiler will silently ignore warning numbers passed to `-nowarn` that were valid in previous releases, but that have been removed from the compiler.</span></span> <span data-ttu-id="6d1c5-113">例如，CS0679 在 Visual Studio .NET 2002 的編譯器中有效，但後來已移除。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-113">For example, CS0679 was valid in the compiler in Visual Studio .NET 2002 but was subsequently removed.</span></span>  
   
- <span data-ttu-id="6fa8a-114">`-nowarn` 選項無法隱藏下列警告︰</span><span class="sxs-lookup"><span data-stu-id="6fa8a-114">The following warnings cannot be suppressed by the `-nowarn` option:</span></span>  
+ <span data-ttu-id="6d1c5-114">`-nowarn` 選項無法隱藏下列警告︰</span><span class="sxs-lookup"><span data-stu-id="6d1c5-114">The following warnings cannot be suppressed by the `-nowarn` option:</span></span>  
   
--   <span data-ttu-id="6fa8a-115">編譯器警告 (層級 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="6fa8a-115">Compiler Warning (level 1) CS2002</span></span>  
+-   <span data-ttu-id="6d1c5-115">編譯器警告 (層級 1) CS2002</span><span class="sxs-lookup"><span data-stu-id="6d1c5-115">Compiler Warning (level 1) CS2002</span></span>  
   
--   <span data-ttu-id="6fa8a-116">編譯器警告 (層級 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="6fa8a-116">Compiler Warning (level 1) CS2023</span></span>  
+-   <span data-ttu-id="6d1c5-116">編譯器警告 (層級 1) CS2023</span><span class="sxs-lookup"><span data-stu-id="6d1c5-116">Compiler Warning (level 1) CS2023</span></span>  
   
--   <span data-ttu-id="6fa8a-117">編譯器警告 (層級 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="6fa8a-117">Compiler Warning (level 1) CS2029</span></span>  
+-   <span data-ttu-id="6d1c5-117">編譯器警告 (層級 1) CS2029</span><span class="sxs-lookup"><span data-stu-id="6d1c5-117">Compiler Warning (level 1) CS2029</span></span>  
   
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6fa8a-118">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6fa8a-118">To set this compiler option in the Visual Studio development environment</span></span>  
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a><span data-ttu-id="6d1c5-118">在 Visual Studio 開發環境中設定這個編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6d1c5-118">To set this compiler option in the Visual Studio development environment</span></span>  
   
-1.  <span data-ttu-id="6fa8a-119">開啟專案的 [屬性]  頁面。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="6fa8a-120">如需詳細資料，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
+1. <span data-ttu-id="6d1c5-119">開啟專案的 [屬性]  頁面。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-119">Open the **Properties** page for the project.</span></span> <span data-ttu-id="6d1c5-120">如需詳細資料，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-120">For details, see [Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp).</span></span>  
   
-2.  <span data-ttu-id="6fa8a-121">按一下 [建置] 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-121">Click the **Build** property page.</span></span>  
+2. <span data-ttu-id="6d1c5-121">按一下 [建置] 屬性頁面。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-121">Click the **Build** property page.</span></span>  
   
-3.  <span data-ttu-id="6fa8a-122">修改**隱藏警告**屬性。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-122">Modify the **Suppress Warnings** property.</span></span>  
+3. <span data-ttu-id="6d1c5-122">修改**隱藏警告**屬性。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-122">Modify the **Suppress Warnings** property.</span></span>  
   
- <span data-ttu-id="6fa8a-123">如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。</span><span class="sxs-lookup"><span data-stu-id="6fa8a-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
+ <span data-ttu-id="6d1c5-123">如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。</span><span class="sxs-lookup"><span data-stu-id="6d1c5-123">For information about how to set this compiler option programmatically, see <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6fa8a-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6fa8a-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6d1c5-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6d1c5-124">See also</span></span>
 
-- [<span data-ttu-id="6fa8a-125">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6fa8a-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
-- [<span data-ttu-id="6fa8a-126">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="6fa8a-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
-- [<span data-ttu-id="6fa8a-127">C# 編譯器錯誤</span><span class="sxs-lookup"><span data-stu-id="6fa8a-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)
+- [<span data-ttu-id="6d1c5-125">C# 編譯器選項</span><span class="sxs-lookup"><span data-stu-id="6d1c5-125">C# Compiler Options</span></span>](../../../csharp/language-reference/compiler-options/index.md)
+- [<span data-ttu-id="6d1c5-126">管理專案和方案屬性</span><span class="sxs-lookup"><span data-stu-id="6d1c5-126">Managing Project and Solution Properties</span></span>](/visualstudio/ide/managing-project-and-solution-properties)
+- [<span data-ttu-id="6d1c5-127">C# 編譯器錯誤</span><span class="sxs-lookup"><span data-stu-id="6d1c5-127">C# Compiler Errors</span></span>](../../../csharp/language-reference/compiler-messages/index.md)

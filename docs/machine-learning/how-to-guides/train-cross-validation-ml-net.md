@@ -3,25 +3,25 @@ title: 使用交叉驗證訓練機器學習模型 - ML.NET
 description: 探索如何使用具有 ML.NET 的交叉驗證訓練機器學習模型，讓模型的預測達到更高的正確性
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231314"
 ---
-# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="23750-103">使用交叉驗證訓練機器學習模型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="23750-103">Train a machine learning model using cross-validation - ML.NET</span></span>
+# <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a><span data-ttu-id="2dc21-103">使用交叉驗證訓練機器學習模型 - ML.NET</span><span class="sxs-lookup"><span data-stu-id="2dc21-103">Train a machine learning model using cross-validation - ML.NET</span></span>
 
 > [!NOTE]
-> <span data-ttu-id="23750-104">本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。</span><span class="sxs-lookup"><span data-stu-id="23750-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="23750-105">如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。</span><span class="sxs-lookup"><span data-stu-id="23750-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
+> <span data-ttu-id="2dc21-104">本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。</span><span class="sxs-lookup"><span data-stu-id="2dc21-104">This topic refers to ML.NET, which is currently in Preview, and material may be subject to change.</span></span> <span data-ttu-id="2dc21-105">如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。</span><span class="sxs-lookup"><span data-stu-id="2dc21-105">For more information, visit [the ML.NET introduction](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet).</span></span>
 
-<span data-ttu-id="23750-106">本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。</span><span class="sxs-lookup"><span data-stu-id="23750-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="23750-107">如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="23750-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
+<span data-ttu-id="2dc21-106">本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。</span><span class="sxs-lookup"><span data-stu-id="2dc21-106">This how-to and related sample are currently using **ML.NET version 0.10**.</span></span> <span data-ttu-id="2dc21-107">如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。</span><span class="sxs-lookup"><span data-stu-id="2dc21-107">For more information, see the release notes at the [dotnet/machinelearning GitHub repo](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes).</span></span>
 
-<span data-ttu-id="23750-108">[交叉驗證](https://en.wikipedia.org/wiki/Cross-validation_(statistics))對 ML 應用程式而言是相當實用的技術。</span><span class="sxs-lookup"><span data-stu-id="23750-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="23750-109">此技術有助於評估每回合模型品質的差異，也讓您不必擷取個別的測試集合來進行評估。</span><span class="sxs-lookup"><span data-stu-id="23750-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
+<span data-ttu-id="2dc21-108">[交叉驗證](https://en.wikipedia.org/wiki/Cross-validation_(statistics))對 ML 應用程式而言是相當實用的技術。</span><span class="sxs-lookup"><span data-stu-id="2dc21-108">[Cross-validation](https://en.wikipedia.org/wiki/Cross-validation_(statistics)) is a useful technique for ML applications.</span></span> <span data-ttu-id="2dc21-109">這項技術有助於評估每回合模型品質的差異，也讓您不必擷取個別的測試集合來進行評估。</span><span class="sxs-lookup"><span data-stu-id="2dc21-109">It helps estimate the variance of the model quality from one run to another and also eliminates the need to extract a separate test set for evaluation.</span></span>
 
-<span data-ttu-id="23750-110">ML.NET 會正確地自動套用功能 (只要所有前置處理都在一個學習管線)，然後使用「分層欄位」概念來確保相關範例不會分開。</span><span class="sxs-lookup"><span data-stu-id="23750-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
+<span data-ttu-id="2dc21-110">ML.NET 會正確地自動套用功能 (只要所有前置處理都在一個學習管線)，然後使用「分層欄位」概念來確保相關範例不會分開。</span><span class="sxs-lookup"><span data-stu-id="2dc21-110">ML.NET automatically applies featurization correctly (as long as all of the preprocessing resides in one learning pipeline) then use the 'stratification column' concept to make sure that related examples don't get separated.</span></span>
 
-<span data-ttu-id="23750-111">以下訓練範例對 Iris 資料集使用隨機化的 90/10 訓練測試分割，以及 5 次交叉驗證：</span><span class="sxs-lookup"><span data-stu-id="23750-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
+<span data-ttu-id="2dc21-111">以下訓練範例對 Iris 資料集使用隨機化的 90/10 訓練測試分割，以及 5 次交叉驗證：</span><span class="sxs-lookup"><span data-stu-id="2dc21-111">Here's a training example on an Iris dataset using randomized 90/10 train-test split, and a 5-fold cross-validation:</span></span>
 
 ```csharp
 // Create a new context for ML.NET operations. It can be used for exception tracking and logging, 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);
