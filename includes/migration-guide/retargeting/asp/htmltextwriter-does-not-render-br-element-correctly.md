@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 0ab6be6f2c6d8ebbe67051e4e3f967a325e654c8
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761007"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234394"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter 無法正確轉譯 `<br/>` 項目
 
@@ -16,4 +16,3 @@ ms.locfileid: "58761007"
 |版本|4.6|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.String)?displayProperty=nameWithType></li><li><xref:System.Web.UI.HtmlTextWriter.RenderBeginTag(System.Web.UI.HtmlTextWriterTag)?displayProperty=nameWithType></li></ul>|
-

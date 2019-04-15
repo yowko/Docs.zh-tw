@@ -26,12 +26,12 @@ helpviewer_keywords:
 - IPv6, addresses in
 - IPv6, disabling
 ms.assetid: 20a104ae-1649-4649-a005-531a5cf74c93
-ms.openlocfilehash: 2da6622fbb15e7214f928d2471d32283b87bb2f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 50df0e0710c1f722d4e769ad89b653f6a8d5e394
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54633848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59121949"
 ---
 # <a name="ipv6-addressing"></a>IPv6 定址
 網際網路通訊協定第 6 版 (IPv6) 的位址長度為 128 個位元長。 使用這類大型位址空間的其中一個原因是，將可用的位址細分到路由網域的階層，反映網際網路的拓撲。 另一個原因是，將連線裝置之網路網路介面卡 (或介面) 的位址對應至網路。 IPv6 特有的固有功能，是在其最低層級解析位址，即網路介面層級，且也擁有自動組態功能。  
@@ -52,7 +52,7 @@ ms.locfileid: "54633848"
   
  下例是具有 64 位元前置詞的位址。  
   
- `3FFE:FFFF:0:CD30:0:0:0:0/64`.  
+ `3FFE:FFFF:0:CD30:0:0:0:0/64`。  
   
  本例中的前置詞為 `3FFE:FFFF:0:CD30`。 位址也可以壓縮格式寫入，如 `3FFE:FFFF:0:CD30::/64`。  
   
@@ -73,5 +73,6 @@ ms.locfileid: "54633848"
  一般情況下，節點一律會有連結-本機位址。 它可能有網站-本機位址和一或多個全域位址。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [通訊端](../../../docs/framework/network-programming/sockets.md)

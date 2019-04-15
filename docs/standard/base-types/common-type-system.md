@@ -19,12 +19,12 @@ ms.assetid: 53c57c96-83e1-4ee3-9543-9ac832671a89
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: ff1ba3563249cda786a12894c5e4b37442ed9d21
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722658"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59096260"
 ---
 # <a name="common-type-system"></a>一般類型系統
 一般型別系統定義如何在 Common Language Runtime 中宣告、使用和管理型別，同時也是執行階段支援跨語言整合中很重要的一部分。 一般型別系統可執行下列功能：  
@@ -41,11 +41,11 @@ ms.locfileid: "54722658"
   
 -   [.NET 中的類型](#types_in_the_net_framework)  
   
--   [型別定義](#type_definitions)  
+-   [類型定義](#type_definitions)  
   
 -   [型別成員](#type_members)  
   
--   [類型成員的特性](#characteristics_of_type_members)  
+-   [型別成員的特性](#characteristics_of_type_members)  
   
 <a name="types_in_the_net_framework"></a>   
 ## <a name="types-in-net"></a>.NET 中的類型  
@@ -165,9 +165,7 @@ ms.locfileid: "54722658"
   
 > [!NOTE]
 >  在 C#、C++ 和 Visual Basic 中，並不需要對事件處理常式委派使用這些方法，因為這些語言都提供加入和移除事件處理常式的語法。  
-  
- 
-  
+
 <a name="type_definitions"></a>   
 ## <a name="type-definitions"></a>類型定義  
  型別定義包括下列：  
@@ -226,9 +224,7 @@ ms.locfileid: "54722658"
  型別可繼承其他型別的數值和行為。 一般型別系統不允許型別繼承一個以上的基底型別。  
   
  型別可實作任意數目的介面。 若要實作介面，型別必須實作該介面的所有虛擬成員。 虛擬方法可由衍生型別 (Derived Type) 實作，並且可以用靜態或動態方式叫用 (Invoke)。  
-  
-  
-  
+
 <a name="type_members"></a>   
 ## <a name="type-members"></a>型別成員  
  執行階段允許您定義能夠指定型別行為與狀態的型別成員。 型別成員包含下列：  
@@ -243,7 +239,7 @@ ms.locfileid: "54722658"
   
 -   [事件](#Events)  
   
--   [巢狀類型](#NestedTypes)  
+-   [巢狀型別](#NestedTypes)  
   
 <a name="Fields"></a>   
 ### <a name="fields"></a>欄位  
@@ -290,9 +286,7 @@ ms.locfileid: "54722658"
  巢狀型別是一種型別，它是某個其他型別的成員。 巢狀型別應該緊密地與其包含型別結合，且不能與一般用途的型別一樣實用。 當宣告的型別使用及建立巢狀型別的執行個體時，巢狀型別會很有用處，且不會在公用成員中公開此巢狀型別的使用。  
   
  巢狀型別對於一些開發人員來說可能會覺得混淆，所以除非有強制性的理由，否則不應該讓巢狀型別公開可見。 在設計完善的程式庫中，開發人員應極少使用巢狀型別來將物件執行個體化或宣告變數。  
-  
-  
-  
+
 <a name="characteristics_of_type_members"></a>   
 ## <a name="characteristics-of-type-members"></a>型別成員的特性  
  一般型別系統允許型別成員具有各種特性，但是所使用的語言並不需要支援所有特性。 下表將描述成員特性。  
@@ -325,5 +319,5 @@ ms.locfileid: "54722658"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET API 瀏覽器](/dotnet/api)
-- [通用語言執行平台](../../../docs/standard/clr.md)
+- [Common Language Runtime](../../../docs/standard/clr.md)
 - [.NET 中的類型轉換](../../../docs/standard/base-types/type-conversion.md)

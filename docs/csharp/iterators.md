@@ -3,12 +3,12 @@ title: 迭代器
 description: 了解如何使用內建 C# 迭代器，以及如何建立您自己的自訂迭代器方法。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: 37ed45fc563eacf0c6bf412dcfb28dbc6db2bb17
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58126041"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59155216"
 ---
 # <a name="iterators"></a>迭代器
 
@@ -21,9 +21,9 @@ ms.locfileid: "58126041"
 + 擴充 [LINQ](linq/index.md) 或其他程式庫。
 + 建立資料管線，其中的資料會透過迭代器方法有效率地流動。
 
-C# 語言會為上述兩個案例提供功能。 此文章將概述這些功能。
+C# 語言會為上述兩個案例提供功能。 本文將概述這些功能。
 
-此教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/samples/blob/master/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
+本教學課程有多個步驟。 在每個步驟之後，您可以執行應用程式並查看進度。 您也可以[檢視或下載完整的範例](https://github.com/dotnet/samples/blob/master/csharp/iterators)以了解此主題。 如需下載指示，請參閱[範例和教學課程](../samples-and-tutorials/index.md#viewing-and-downloading-samples)。
 
 ## <a name="iterating-with-foreach"></a>使用 foreach 逐一查看
 
@@ -105,7 +105,7 @@ public static IEnumerable<T> Sample(this IEnumerable<T> sourceSequence, int inte
 }
 ```
 
-迭代器方法有一個重要限制︰相同的方法中不能同時有 `return` 陳述式和 `yield return` 陳述式。 系統將不會編譯下列程式碼：
+迭代器方法有一項重要限制︰相同的方法中不能同時有 `return` 陳述式和 `yield return` 陳述式。 系統將不會編譯下列程式碼：
 
 ```csharp
 public IEnumerable<int> GetSingleDigitNumbers()
@@ -122,7 +122,7 @@ public IEnumerable<int> GetSingleDigitNumbers()
 }
 ```
 
-此限制通常不成問題。 您可以選擇在整個方法中使用 `yield return`，或是將原始方法分成多個方法，有些方法使用 `return`，而有些方法使用 `yield return`。
+這項限制通常不成問題。 您可以選擇在整個方法中使用 `yield return`，或是將原始方法分成多個方法，有些方法使用 `return`，而有些方法使用 `yield return`。
 
 您可以稍微修改最後一個方法，以在所有位置使用 `yield return`：
 
@@ -238,5 +238,3 @@ finally
 ```
 
 還好，您不需要記住上述所有詳細資料。 `foreach` 陳述式會為您處理上述所有細微差異。 編譯器會為上述任何建構產生正確的程式碼。 
-
-

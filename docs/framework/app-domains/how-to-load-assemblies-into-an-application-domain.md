@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將組件載入應用程式定義域
+title: 作法：將組件載入應用程式定義域
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 1432aa2d-bd83-4346-bf3b-a1b7920e2aa9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df3fa60c4fcacc84be36e49e40933d195a9e43e5
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 51c1ac87cf9111504ba99efa25f6fca2bb0b63df
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674928"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59188522"
 ---
-# <a name="how-to-load-assemblies-into-an-application-domain"></a>HOW TO：將組件載入應用程式定義域
+# <a name="how-to-load-assemblies-into-an-application-domain"></a>作法：將組件載入應用程式定義域
 有數種方式可以將組件載入應用程式定義域。 建議的方法是使用 <xref:System.Reflection.Assembly?displayProperty=nameWithType> 類別的 `static` (在 Visual Basic 中為 `Shared`) <xref:System.Reflection.Assembly.Load%2A> 方法。 其他可以載入組件的方式包括：  
   
 -   <xref:System.Reflection.Assembly> 類別的 <xref:System.Reflection.Assembly.LoadFrom%2A> 方法會載入已指定其檔案位置的組件。 使用這種方法載入組件會使用不同的載入內容。  
@@ -47,9 +47,10 @@ ms.locfileid: "55674928"
  [!code-vb[System.AppDomain.Load#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.appdomain.load/vb/source2.vb#2)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A>
 - [使用應用程式定義域設計程式](application-domains.md#programming-with-application-domains)
-- [反映](../../../docs/framework/reflection-and-codedom/reflection.md)
+- [反射](../../../docs/framework/reflection-and-codedom/reflection.md)
 - [使用應用程式定義域](../../../docs/framework/app-domains/use.md)
-- [如何：將組件載入到僅限反映的內容將組件載入到僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
+- [作法：將組件載入僅限反映的內容](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)
 - [應用程式定義域和組件](application-domains.md#application-domains-and-assemblies)

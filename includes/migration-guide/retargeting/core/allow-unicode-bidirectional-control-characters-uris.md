@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 888628a90f615943d155c6c28762a645e36699f0
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 3e9a1009167d8a765bc401d64a574bd123736ccd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760784"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233923"
 ---
 ### <a name="allow-unicode-bidirectional-control-characters-in-uris"></a>允許在 URI 中使用 Unicode 雙向控制字元
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760784"
 |版本|4.7.2|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Uri?displayProperty=nameWithType></li></ul>|
-

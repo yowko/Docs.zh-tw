@@ -15,12 +15,12 @@ helpviewer_keywords:
 - protocols, sockets
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
-ms.openlocfilehash: 468d8afc290d8e725deb13ba57dd990181ae4e19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54680490"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136041"
 ---
 # <a name="sockets"></a>通訊端
 <xref:System.Net.Sockets> 命名空間包含 Windows Sockets 介面的 Managed 實作。 <xref:System.Net> 命名空間中的所有其他網路存取類別都建立在此通訊端實作之上。  
@@ -30,6 +30,7 @@ ms.locfileid: "54680490"
  **Socket** 類別支援兩種基本的模式，同步和非同步。 在同步模式中，呼叫執行網路作業的函式 (例如 <xref:System.Net.Sockets.Socket.Send%2A> 和 <xref:System.Net.Sockets.Socket.Receive%2A>) 會等候作業完成，然後才將控制權傳回給呼叫端程式。 在非同步模式中，這些呼叫會立即傳回。  
   
 ## <a name="see-also"></a>另請參閱
-- [如何：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)
+
+- [作法：建立通訊端](../../../docs/framework/network-programming/how-to-create-a-socket.md)
 
 - [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)

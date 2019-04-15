@@ -10,12 +10,12 @@ helpviewer_keywords:
 - receiving data, pluggable protocols
 - protocols, pluggable
 ms.assetid: 9810c177-973e-43d7-823c-14960bd625ea
-ms.openlocfilehash: f840e042321b636443b6763e168abd144b05edae
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8e7c1d2943dcbfa8d9faa0b2e53bae57c767101
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54717450"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216479"
 ---
 # <a name="deriving-from-webrequest"></a>衍生自 WebRequest
 <xref:System.Net.WebRequest> 類別是抽象的基底類別，提供基本的方法和屬性以建立特定通訊協定要求，其符合 .NET Framework 插入式通訊協定模型的處理常式。 使用 **WebRequest** 類別的應用程式可以使用任何支援的通訊協定要求資料，不需要指定使用的通訊協定。  
@@ -89,6 +89,7 @@ ms.locfileid: "54717450"
  **GetResponse** 方法負責建立適當的 **WebResponse** 子代，以包含傳入的回應。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.WebRequest>
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.FileWebRequest>

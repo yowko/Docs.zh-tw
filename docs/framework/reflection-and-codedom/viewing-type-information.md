@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7e7303a9-4064-4738-b4e7-b75974ed70d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 267102198731054bd2ce050299627eecbd37a4a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2028bc8d9f160daef8afcdf881e1dfd514b4c94f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54692204"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59190391"
 ---
 # <a name="viewing-type-information"></a>檢視類型資訊
 <xref:System.Type?displayProperty=nameWithType> 類別是反映的核心。 Common Language Runtime 會在反映提出要求時，建立載入類型的**類型**。 您可以使用**類型**物件的方法、欄位、屬性和巢狀類別，找出有關該類型的所有資訊。  
@@ -75,6 +75,7 @@ ms.locfileid: "54692204"
  [!code-vb[Conceptual.Types.ViewInfo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.types.viewinfo/vb/source4.vb#4)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection.BindingFlags>
 - <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType>
 - <xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>

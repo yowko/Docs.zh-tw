@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c9fde24a4c3260cf5b9e265dfd03080c5cd1d04
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 384f8c7fa08b69c13d05edb3404787d428dad837
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760799"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233930"
 ---
 ### <a name="stack-traces-obtained-when-using-portable-pdbs-now-include-source-file-and-line-information-if-requested"></a>使用可攜式 PDB 時取得的堆疊追蹤，現已包含來源檔案與程式碼資訊 (若要求)
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760799"
 |版本|4.7.2|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Boolean)?displayProperty=nameWithType></li><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Boolean)?displayProperty=nameWithType><li><xref:System.Diagnostics.StackTrace.%23ctor(System.Exception,System.Int32,System.Boolean)?displayProperty=nameWithType></li></ul>|
-

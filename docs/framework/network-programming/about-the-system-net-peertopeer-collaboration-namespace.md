@@ -2,12 +2,12 @@
 title: 關於 System.Net.PeerToPeer.Collaboration 命名空間
 ms.date: 03/30/2017
 ms.assetid: b5d8c1c1-6844-4947-9759-c7f1b564bded
-ms.openlocfilehash: 5bb96e11cf51e7e5b37d895310fa9a113899f34c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a62b659472f6d05e61672fa603e8663d9946977e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54570848"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59127903"
 ---
 # <a name="about-the-systemnetpeertopeercollaboration-namespace"></a>關於 System.Net.PeerToPeer.Collaboration 命名空間
 <xref:System.Net.PeerToPeer.Collaboration> 命名空間提供使用對等共同作業基礎結構，可用來實作對等共同作業活動的類別和 API。  
@@ -40,4 +40,5 @@ ms.locfileid: "54570848"
  P2P 應用程式通常是：共同作業筆記記錄或白板的電話會議、無伺服器交談應用程式、互動式廣告以及線上遊戲工作階段。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.PeerToPeer.Collaboration>

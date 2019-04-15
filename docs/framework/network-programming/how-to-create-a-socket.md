@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立通訊端
+title: 作法：建立通訊端
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - Internet, sockets
 - sockets, creating
 ms.assetid: c64a049c-5981-43bc-a2dc-1851473589c7
-ms.openlocfilehash: e8f90d2a9e2f2e4bef8d1ab360bfe677bd2bf695
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0bbdab11201171bf8d730276c7f94cbc5317acdd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589697"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59101116"
 ---
-# <a name="how-to-create-a-socket"></a>HOW TO：建立通訊端
+# <a name="how-to-create-a-socket"></a>作法：建立通訊端
 在您使用通訊端與遠端裝置進行通訊之前，必須先使用通訊協定和網路位址資訊初始化通訊端。 <xref:System.Net.Sockets.Socket> 類別的建構函式所擁有的參數，可指定通訊端用來建立連線的位址家族、通訊端類型和通訊協定類型。  
   
 ## <a name="example"></a>範例  
@@ -61,5 +61,6 @@ Dim s as New Socket(AddressFamily.InterNetwork, _
  建立 **Socket** 之後，它可以初始化與遠端端點的連線或接收來自遠端裝置的連線。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用用戶端通訊端](../../../docs/framework/network-programming/using-client-sockets.md)
 - [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)

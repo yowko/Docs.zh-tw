@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 38c50244b1cee41bd95c232ac5d1691c59c55488
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 4eac93d5cfea19cb83c66cd3fe35c1b0703c0cc0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760800"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59233927"
 ---
 ### <a name="wpf-focusvisual-for-radiobutton-and-checkbox-now-displays-correctly-when-the-controls-have-no-content"></a>現在，當控制項沒有內容時，RadioButton 和 CheckBox 的 WPF 焦點視覺效果會正確顯示
 
@@ -15,4 +15,3 @@ ms.locfileid: "58760800"
 |範圍|Edge|
 |版本|4.7.2|
 |類型|正在重定目標|
-

@@ -1,6 +1,6 @@
 ---
 title: namespace 關鍵字 - C# 參考
-ms.custom: seodec18
+ms.custom: seoapril2019
 ms.date: 07/20/2015
 f1_keywords:
 - namespace_CSharpKeyword
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: b5c6b8081c188d5b184930222d54ad8f4b5d7a71
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242759"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59148755"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# 參考)
 
@@ -28,7 +28,7 @@ ms.locfileid: "53242759"
 
 - 另一個命名空間
 
-- [class](class.md)
+- [Class - 類別](class.md)
 
 - [interface](interface.md)
 
@@ -36,7 +36,7 @@ ms.locfileid: "53242759"
 
 - [enum](enum.md)
 
-- [delegate](delegate.md)
+- [Delegate - 委派](delegate.md)
 
 無論是否在 C# 來源檔案中明確宣告命名空間，編譯器都會加入預設的命名空間。 這個未命名的命名空間，有時候是指全域命名空間，會出現在每個檔案中。 全域命名空間中的任何識別項都可用於具名命名空間中。
 
@@ -60,7 +60,7 @@ ms.locfileid: "53242759"
 
 - [使用命名空間](../../programming-guide/namespaces/using-namespaces.md)
 
-- [如何：使用全域命名空間別名](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
+- [作法：使用全域命名空間別名](../../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -69,7 +69,8 @@ ms.locfileid: "53242759"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../language-reference/index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)
 - [命名空間關鍵字](namespace-keywords.md)
-- [using](using.md)
+- [using](using-directive.md)
+- [使用靜態](using-static.md)

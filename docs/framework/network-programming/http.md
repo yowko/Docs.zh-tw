@@ -13,12 +13,12 @@ helpviewer_keywords:
 - HTTP, about HTTP
 - HttpWebRequest class, sending and receiving data
 ms.assetid: 985fe5d8-eb71-4024-b361-41fbdc1618d8
-ms.openlocfilehash: c0c8bcca55dc54b2dd89be2e45dade4d09a67362
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: abbb02b7bd22c4b301c5565037f55aa1019fc3ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54574127"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170595"
 ---
 # <a name="http"></a>HTTP
 .NET Framework 可透過 <xref:System.Net.HttpWebRequest> 和 <xref:System.Net.HttpWebResponse> 類別，對於佔據所有網際網路流量絕大部分的 HTTP 通訊協定提供全面的支援。 這些類別衍生自 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse>，每當靜態方法 <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> 碰到以 "http" 或 "https" 開頭的 URI 時，預設會傳回這些類別。 在大部分情況下，**WebRequest** 和 **WebResponse** 類別提供了提出要求所需的一切功能，但是如果您需要存取以屬性方式公開的 HTTP 特定功能，則可以將這些類別轉型為 **HttpWebRequest** 或 **HttpWebResponse**。  
@@ -32,6 +32,7 @@ ms.locfileid: "54574127"
  應用程式藉由將 <xref:System.Net.WebException.Status%2A> 設為 <xref:System.Net.WebExceptionStatus> 來捕捉 <xref:System.Net.WebException>，以便接收 HTTP 通訊協定錯誤。 <xref:System.Net.WebException.Response%2A> 屬性包含伺服器所傳送的 **WebResponse**，並指出實際發生的 HTTP 錯誤。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [透過 Proxy 存取網際網路](../../../docs/framework/network-programming/accessing-the-internet-through-a-proxy.md)
 - [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
-- [如何：存取 HTTP 特定屬性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)
+- [作法：存取 HTTP 特定屬性](../../../docs/framework/network-programming/how-to-access-http-specific-properties.md)

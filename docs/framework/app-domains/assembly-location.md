@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 9f1f41a7-2954-49d3-a2c0-62b6ef4d40ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0b065fe488031329815f6ec38da9661fd19700d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c638531bd54f14c7e4b04a093deaec729db404ba
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529930"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59129632"
 ---
 # <a name="assembly-location"></a>組件位置
 組件的位置可判斷 Common Language Runtime 是否可以在參考時找到它，也可以判斷是否可以與其他組件共用組件。 您可以在下列位置中部署組件：  
@@ -30,6 +30,7 @@ ms.locfileid: "54529930"
      HTTP 伺服器上部署的組件必須具有強式名稱；您指向應用程式組態檔的程式碼基底區段中的組件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立組件](../../../docs/framework/app-domains/create-assemblies.md)
 - [全域組件快取](../../../docs/framework/app-domains/gac.md)
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)

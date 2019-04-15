@@ -2,12 +2,12 @@
 title: IPv6 自動設定
 ms.date: 03/30/2017
 ms.assetid: 581c1d21-1013-43a3-bf3e-2d9ead62b79c
-ms.openlocfilehash: 2184b02f6f4c8ba4e8a79279f212ffca2cb41959
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4dc7a148364c9f96a0f6c68c8af71f7668e797b6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726347"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59170057"
 ---
 # <a name="ipv6-auto-configuration"></a>IPv6 自動設定
 IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該可能插入 IPv6 網路，並且可以自動設定，不需要人為介入。  
@@ -25,5 +25,6 @@ IPv6 的一個重要目標是支援節點隨插即用。 亦即，節點應該�
  行動裝置的大量增加帶來了新的需求：裝置必須能夠在 IPv6 網際網路上任意變更位置，同時仍保有現有的連線。 為提供這項功能，要指派給行動節點一個隨時可以連線的主目錄位址。 當行動節點在主目錄時，它會連接到主目錄連結，並使用主目錄位址。 當行動節點離開主目錄時，主目錄代理程式 (通常是路由器)，會在行動節點和它通訊的節點之間轉送訊息。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [網際網路通訊協定第 6 版](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [通訊端](../../../docs/framework/network-programming/sockets.md)

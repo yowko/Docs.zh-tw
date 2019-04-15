@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 40a67826-e4df-4f59-a651-d9eb0fdc755d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 570cbd49fd8a8ea42d1c43ebe067a0d2d3f9dc27
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.openlocfilehash: 364d28d5df8e284445d825fbbeb963c54b7b9e27
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055231"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59176302"
 ---
 # <a name="how-to-determine-which-net-framework-versions-are-installed"></a>作法：判斷安裝的 .NET Framework 版本
 
@@ -37,7 +37,6 @@ ms.locfileid: "59055231"
 >
 > 如需版本的詳細資訊，請參閱 [.NET Framework 版本和相依性](versions-and-dependencies.md)。
 
-
 您可以存取登錄來取得電腦上安裝的 .NET Framework 版本清單。 您可以使用登錄編輯程式來檢視登錄，或使用程式碼來查詢登錄：
  
 - 尋找新版的 .NET Framework (4.5 和更新版本)： 
@@ -54,7 +53,6 @@ ms.locfileid: "59055231"
 - [使用程式碼查詢 Environment 類別](#clr_b)  
 
 如需偵測每一版 .NET Framework 已安裝更新的資訊，請參閱[如何：判斷已安裝的 .NET Framework 更新](how-to-determine-which-net-framework-updates-are-installed.md)。 
-  
 
 ## <a name="find-newer-net-framework-versions-45-and-later"></a>尋找新版的 .NET Framework (4.5 和更新版本)
 
@@ -171,7 +169,6 @@ ms.locfileid: "59055231"
 [!code-csharp[ListVersions](../../../samples/snippets/csharp/framework/migration-guide/versions-installed1.cs)]
 [!code-vb[ListVersions](../../../samples/snippets/visualbasic/framework/migration-guide/versions-installed1.vb)]
 
-
 ## <a name="find-clr-versions"></a>尋找 CLR 版本
   
 <a name="clr_a"></a> 
@@ -208,8 +205,6 @@ ms.locfileid: "59055231"
    - 針對次要版本識別項 (例如 4.0 版的 *0*)，請使用 <xref:System.Version.Minor%2A?displayProperty=nameWithType> 屬性。
 
    - 針對整個版本字串 (例如 *4.0.30319.18010*)，請使用 <xref:System.Version.ToString%2A?displayProperty=nameWithType> 方法。 這個方法會傳回單一值，其反映執行程式碼的執行階段版本。 它不會傳回組件版本或可能已安裝在電腦上的其他執行階段版本。
-
-
 
 下列範例使用 <xref:System.Environment.Version%2A?displayProperty=nameWithType> 屬性來擷取 CLR 版本資訊：
 

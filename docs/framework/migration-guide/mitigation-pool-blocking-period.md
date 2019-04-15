@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 92d2de20-79be-4df1-b182-144143a8866a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e4c90a75ebbb9e4bc6248aadd709be8b5285ecd6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: f97650099aed0be7e1983f759cd0f38fc568f857
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409116"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59082759"
 ---
 # <a name="mitigation-pool-blocking-period"></a>風險降低：集區封鎖期
 已移除 Azure SQL Database 連線的連線集區封鎖期。  
@@ -34,4 +34,5 @@ ms.locfileid: "58409116"
  將 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.PoolBlockingPeriod%2A> 屬性設為 <xref:System.Data.SqlClient.PoolBlockingPeriod.AlwaysBlock?displayProperty=nameWithType> 可以還原舊有行為。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段變更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6-2.md)

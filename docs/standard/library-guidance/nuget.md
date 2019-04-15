@@ -4,12 +4,12 @@ description: 針對 .NET 程式庫搭配 NuGet 進行封裝的最佳做法建議
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: a721c642dd92eb299eef3b62fc845afa99f81ddc
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: e08629adb8074fdfb73865d2dc156cbf6e46ab9c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204609"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59198175"
 ---
 # <a name="nuget"></a>NuGet
 
@@ -46,7 +46,7 @@ NuGet 套件相依性已詳述於[相依性](./dependencies.md)一文中。
 
 NuGet 套件能支援許多[中繼資料屬性](/nuget/reference/nuspec)。 下表包含 NuGet.org 上所有套件都應提供的核心中繼資料：
 
-| MSBuild 屬性名稱              | Nuspec 名稱              | 描述  |
+| MSBuild 屬性名稱              | Nuspec 名稱              | 說明  |
 | ---------------------------------- | ------------------------ | ------------ |
 | `PackageId`                        | `id`                       | 套件識別碼。 如果來自識別碼的前置詞符合[準則](/nuget/reference/id-prefix-reservation)，便可以對它進行保留。 |
 | `PackageVersion`                   | `version`                  | NuGet 套件版本。 如需詳細資訊，請參閱 [NuGet 套件版本](./versioning.md#nuget-package-version)。             |
@@ -119,7 +119,6 @@ NuGet.org 裝載自己的[符號伺服器存放庫](/nuget/create-packages/symbo
 > 符號套件 (`*.snupkg`) 提供開發人員良好的隨選偵錯體驗，不會讓主要套件大小過大，而對不想要偵錯 NuGet 套件的人在還原效能方面造成影響。
 >
 > 需要注意的是，他們必須在其 IDE 中尋找並設定 NuGet 符號伺服器 (只要設定一次)，才能取得符號檔。 Visual Studio 2019 計劃提供 NuGet.org 符號伺服器作為現成可用的選項之一。 
-
 
 >[!div class="step-by-step"]
 >[上一頁](strong-naming.md)

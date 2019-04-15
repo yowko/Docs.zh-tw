@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3e3f6780-6d90-4413-bad7-ba641220364d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cfe2be8784fd4baf6ce9e603da1c6e2388126b5a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 0ca01234bf7adaca1337053bbc2bbba0731be3cd
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409324"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59132020"
 ---
 # <a name="identifying-functions-in-dlls"></a>識別 DLL 中的函式
 DLL 函式的身分識別是由下列項目所組成：  
@@ -46,6 +46,7 @@ DLL 函式的身分識別是由下列項目所組成：
  如需 Windows API 的完整文件，請參閱 Platform SDK。 如需示範如何建構要與平台叫用搭配使用之 .NET 型宣告的範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 Unmanaged DLL 函式](../../../docs/framework/interop/consuming-unmanaged-dll-functions.md)
 - [指定進入點](../../../docs/framework/interop/specifying-an-entry-point.md)
 - [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)

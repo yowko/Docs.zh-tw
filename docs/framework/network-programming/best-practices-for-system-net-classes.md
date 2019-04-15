@@ -10,12 +10,12 @@ helpviewer_keywords:
 - best practices, data requests
 - receiving data, best practices
 ms.assetid: 716decc6-5952-47b7-9c5a-ba6fc5698684
-ms.openlocfilehash: 0ed97626d86b380565453191f7840c1d1a180dfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bb3ac545613da68d5f370fefbf94b674b70fe64
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54689074"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59200944"
 ---
 # <a name="best-practices-for-systemnet-classes"></a>System.Net 類別的最佳作法
 下列建議將協助您善加利用 <xref:System.Net> 中所含的類別：  
@@ -33,4 +33,5 @@ ms.locfileid: "54689074"
 -   存取需要認證的網站時，請使用 <xref:System.Net.CredentialCache> 類別建立認證的快取，而不是每個要求都提供它們。 **CredentialCache** 類別會搜尋快取，以透過要求找到要呈現的適當認證，讓您不需要負責根據 URL 來建立和呈現認證。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

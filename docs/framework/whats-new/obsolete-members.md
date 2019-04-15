@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0ee25062-4071-4d3c-a552-87a75d3ecd34
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2881af41828425914c7644d04e07918ac6b97f06
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 075396ae070be5312fa7afe29e8bdf5fa81a3817
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921334"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59185418"
 ---
 # <a name="obsolete-members-in-the-net-framework"></a>.NET Framework 中過時的成員
 
@@ -800,5 +800,6 @@ ms.locfileid: "58921334"
 |<xref:Microsoft.VisualBasic.MyServices.RegistryProxy?displayProperty=nameWithType>|<xref:Microsoft.VisualBasic.MyServices.RegistryProxy.DynData%2A>|`DynData` 登錄機碼僅適用於 Win9x，不再受到這個 .NET Framework 版本的支援。 請改用 `PerformanceData` 登錄機碼。 這個屬性將從未來的 Framework 版本中移除。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [類別庫中已淘汰的功能](whats-obsolete.md)
 - [已淘汰的類型](obsolete-types.md)

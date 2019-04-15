@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - accessibility domain [C#]
 ms.assetid: 8af779c1-275b-44be-a864-9edfbca71bcc
-ms.openlocfilehash: 241fe7714bfd3dd3fd37f7ac83a836f89b4951bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 529d256a553c4000c77bcd5096db1a4d943874ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605574"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59141748"
 ---
 # <a name="accessibility-domain-c-reference"></a>存取範圍定義域 (C# 參考)
 成員的存取範圍定義域指定可參考成員的程式區段。 如果成員巢狀在另一個類型內，則其存取範圍定義域是由成員的[存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)和立即包含類型的存取範圍定義域所決定。  
@@ -26,12 +26,13 @@ ms.locfileid: "54605574"
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
+
 - [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
 - [存取修飾詞](../../../csharp/language-reference/keywords/access-modifiers.md)
-- [存取範圍層級](../../../csharp/language-reference/keywords/accessibility-levels.md)
-- [使用存取範圍層級的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
+- [協助工具層級](../../../csharp/language-reference/keywords/accessibility-levels.md)
+- [使用協助工具層級的限制](../../../csharp/language-reference/keywords/restrictions-on-using-accessibility-levels.md)
 - [存取修飾詞](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)
 - [public](../../../csharp/language-reference/keywords/public.md)
 - [private](../../../csharp/language-reference/keywords/private.md)

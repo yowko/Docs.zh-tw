@@ -10,12 +10,12 @@ helpviewer_keywords:
 - content cache policies
 - expired content
 ms.assetid: 1a7e04ec-7872-41c2-96c6-52566dcb412b
-ms.openlocfilehash: fd0321debc4aeee782c782b7e31fb8518aae2e96
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 33043652e11beb374843d43c9683ff4b7928eb3d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740888"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59112797"
 ---
 # <a name="cache-policy"></a>快取原則
 快取原則所定義的規則用來判斷是否可以使用所要求資源的快取複本來滿足要求。 應用程式指定有效期限的用戶端快取需求，但有效的快取原則是由用戶端快取需求、伺服器內容到期需求和伺服器重新驗證需求所決定。 用戶端快取原則與伺服器需求的互動一律會導致最保守的快取原則，協助確保將最新內容傳回給用戶端應用程式。  
@@ -39,6 +39,7 @@ ms.locfileid: "54740888"
  如需示範如何建立和使用快取原則的程式碼範例，請參閱[設定網路應用程式的快取功能](../../../docs/framework/network-programming/configuring-caching-in-network-applications.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [網路應用程式的快取管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [以位置為基礎的快取原則](../../../docs/framework/network-programming/location-based-cache-policies.md)
 - [以時間為基礎的快取原則](../../../docs/framework/network-programming/time-based-cache-policies.md)

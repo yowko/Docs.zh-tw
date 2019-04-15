@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234413"
 ---
 ### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a>ETW 事件名稱不能只有 "Start" 或 "Stop" 尾碼不同
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761025"
 |範圍|Edge|
 |版本|4.6|
 |類型|正在重定目標|
-

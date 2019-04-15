@@ -2,12 +2,12 @@
 title: 3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 ms.date: 03/30/2017
 ms.assetid: 8bf0b428-5a21-4299-8d6e-bf8251fd978a
-ms.openlocfilehash: 40e041f17a07e17aad3d5f10f7920b0466e2b1b0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0105cc762696c54a65cd06b3ffcb5fb4c8530a41
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589554"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216713"
 ---
 # <a name="changes-to-ntlm-authentication-for-httpwebrequest-in-version-35-sp1"></a>3.5 SP1 版中 HttpWebRequest 之 NTLM 驗證的變更
 已在 .NET Framework 版本 3.5 SP1 和更新版本中進行安全性變更，這些變更會影響 <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Security.NegotiateStream> 以及 System.Net 命名空間中的相關類別處理整合式 Windows 驗證的方式。 這些變更可能會影響使用這些類別提出 Web 要求並接收回應的應用程式，而且其中使用根據 NTLM 的整合式 Windows 驗證。 這項變更可能會影響設定成使用整合式 Windows 驗證的網頁伺服器和用戶端應用程式。  
@@ -51,6 +51,7 @@ ms.locfileid: "54589554"
  較不安全的因應措施是停用迴圈檢查，如 <https://support.microsoft.com/kb/896861> 中所述。 這會停用反映攻擊的保護。 因此，最好只將這組替代名稱限制為預期電腦實際使用的替代名稱。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.AuthenticationManager.CustomTargetNameDictionary%2A?displayProperty=nameWithType>
 - <xref:System.Net.HttpRequestHeader?displayProperty=nameWithType>
 - <xref:System.Net.HttpWebRequest.Host%2A?displayProperty=nameWithType>

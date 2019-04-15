@@ -31,12 +31,12 @@ helpviewer_keywords:
 - ConnectionClosed enumeration member
 - SecureChannelFailure enumeration member
 ms.assetid: 657141cd-5cf5-4fdb-a4b2-4c040eba84b5
-ms.openlocfilehash: 4e3bcf279ae3de066d1d1306a574c76fc95b2840
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 26e2a25855485bdd19d30e8497d0f75b7d4432e0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599774"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59097157"
 ---
 # <a name="handling-errors"></a>處理錯誤
 <xref:System.Net.WebRequest> 和 <xref:System.Net.WebResponse> 類別會擲回兩個系統例外狀況 (例如 <xref:System.ArgumentException>) 和 Web 特定例外狀況 (這些是 <xref:System.Net.WebRequest.GetResponse%2A> 方法所擲回的 <xref:System.Net.WebException>)。  
@@ -58,7 +58,7 @@ ms.locfileid: "54599774"
 |SendFailure|無法將完整的要求傳送到遠端伺服器。|  
 |ServerProtocolViolation|伺服器回應不是有效的 HTTP 回應。|  
 |成功|沒有遇到任何錯誤。|  
-|等候逾時|在針對要求所設定的逾時內未收到任何回應。|  
+|逾時|在針對要求所設定的逾時內未收到任何回應。|  
 |TrustFailure|無法驗證伺服器憑證。|  
 |MessageLengthLimitExceeded|從伺服器傳送要求或接收回應時，收到超過指定限制的訊息。|  
 |擱置|內部非同步要求正在擱置中。|  
@@ -168,5 +168,6 @@ End Try
  擲回 **SocketException** 時，**SocketException** 類別會將 <xref:System.Net.Sockets.SocketException.ErrorCode%2A> 屬性設定為最後發生的作業系統通訊端錯誤。 如需通訊端錯誤碼的詳細資訊，請參閱 MSDN 中的 Winsock 2.0 API 錯誤碼文件。  
   
 ## <a name="see-also"></a>另請參閱
-- [例外狀況處理基本概念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
+
+- [例外狀況處理基礎觀念](../../../docs/standard/exceptions/exception-handling-fundamentals.md)
 - [要求資料](../../../docs/framework/network-programming/requesting-data.md)
