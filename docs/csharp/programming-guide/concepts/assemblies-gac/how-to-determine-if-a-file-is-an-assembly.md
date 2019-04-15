@@ -2,29 +2,29 @@
 title: 作法：判斷檔案是否為組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: ea5186bb-5bff-4dcb-bde9-d6ba4e2edd00
-ms.openlocfilehash: 474cc4622e9444cab8e9d611dd9481d5358e10f0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: e8026ab5fa44b7601e54b5e76ebf9eb434596a07
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340135"
 ---
 # <a name="how-to-determine-if-a-file-is-an-assembly-c"></a>作法：判斷檔案是否為組件 (C#)
 檔案只有受管理時才是組件，而且其中繼資料會包含組件項目。 如需組件和中繼資料的詳細資訊，請參閱[組件資訊清單](../../../../../docs/framework/app-domains/assembly-manifest.md)主題。  
   
 ### <a name="how-to-manually-determine-if-a-file-is-an-assembly"></a>如何以手動方式判斷檔案是否為組件  
   
-1.  啟動 [Ildasm.exe (IL 反組譯工具)](../../../../framework/tools/ildasm-exe-il-disassembler.md)。  
+1. 啟動 [Ildasm.exe (IL 反組譯工具)](../../../../framework/tools/ildasm-exe-il-disassembler.md)。  
   
-2.  載入要測試的檔案。  
+2. 載入要測試的檔案。  
   
-3.  如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱主題[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。  
+3. 如果 **ILDASM** 回報該檔案並非可攜式執行檔 (PE)，則檔案不是組件。 如需詳細資訊，請參閱主題[如何：檢視組件內容](../../../../framework/app-domains/how-to-view-assembly-contents.md)。  
   
 ### <a name="how-to-programmatically-determine-if-a-file-is-an-assembly"></a>如何以程式設計方式判斷檔案是否為組件  
   
-1.  呼叫 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，並傳遞您要測試之檔案的完整檔案路徑和名稱。  
+1. 呼叫 <xref:System.Reflection.AssemblyName.GetAssemblyName%2A> 方法，並傳遞您要測試之檔案的完整檔案路徑和名稱。  
   
-2.  如果擲回 <xref:System.BadImageFormatException> 例外狀況，則檔案不是組件。  
+2. 如果擲回 <xref:System.BadImageFormatException> 例外狀況，則檔案不是組件。  
   
 ## <a name="example"></a>範例  
  此範例會測試一個 DLL 以查看其是否為組件。  
@@ -69,5 +69,5 @@ class TestAssembly
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Reflection.AssemblyName>
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)
 - [.NET 中的組件](../../../../standard/assembly/index.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -keyfile compiler option [C#]
 - keyfile compiler option [C#]
 ms.assetid: 0815f9de-ace4-4e98-b4c6-13c55dea40c2
-ms.openlocfilehash: bd89a5fa58507528b2a70efde04ecd2a6f601b39
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3e11cbca004aedd7d4f992abf2f766de4f4f5935
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54605600"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59344646"
 ---
 # <a name="-keyfile-c-compiler-options"></a>-keyfile (C# 編譯器選項)
 指定包含密碼編譯金鑰的檔名。  
@@ -45,11 +45,11 @@ ms.locfileid: "54605600"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性]  頁面。  
+1. 開啟專案的 [屬性]  頁面。  
   
-2.  按一下 [簽署] 屬性頁。  
+2. 按一下 [簽署] 屬性頁。  
   
-3.  修改 [選擇強式名稱金鑰檔] 屬性。  
+3. 修改 [選擇強式名稱金鑰檔] 屬性。  
   
  您可以使用 <xref:VSLangProj.ProjectProperties.AssemblyOriginatorKeyFile%2A>，以程式設計方式存取這個編譯器選項。  
   

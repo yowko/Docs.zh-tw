@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d74ce896-717d-4871-8fd9-b070e2f53cb0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4153638e570bfdb7fe65e5c9cd285f56644fea3f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c2f28490203bcc4853bc6736ce7089f308bc275
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54683660"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338705"
 ---
 # <a name="rules-for-inferring-schema-node-types-and-structure"></a>推斷結構描述節點型別與結構的規則
 本主題說明結構描述推斷程序如何將 XML 文件中所發現的節點型別轉譯為 XML 結構描述定義語言 (XSD) 結構。  
@@ -18,21 +18,21 @@ ms.locfileid: "54683660"
 ## <a name="element-inference-rules"></a>項目推斷規則  
  本節將說明項目宣告的推斷規則。 有八種項目宣告的結構會進行推斷：  
   
-1.  簡單型別項目  
+1. 簡單型別項目  
   
-2.  空白項目  
+2. 空白項目  
   
-3.  具有屬性的空白項目  
+3. 具有屬性的空白項目  
   
-4.  具有屬性與簡單內容的項目  
+4. 具有屬性與簡單內容的項目  
   
-5.  具有項目子系序列的項目  
+5. 具有項目子系序列的項目  
   
-6.  具有項目子系與屬性序列的項目  
+6. 具有項目子系與屬性序列的項目  
   
-7.  具有項目子系選擇序列的項目  
+7. 具有項目子系選擇序列的項目  
   
-8.  具有項目子系與屬性選擇序列的項目  
+8. 具有項目子系與屬性選擇序列的項目  
   
 > [!NOTE]
 >  所有 `complexType` 宣告都會被推斷為匿名型別。 唯一會進行推斷的全域項目為根項目；其他項目都是區域項目。  
@@ -152,4 +152,4 @@ ms.locfileid: "54683660"
 - [XML 結構描述物件模型 (SOM)](../../../../docs/standard/data/xml/xml-schema-object-model-som.md)
 - [推斷 XML 結構描述](../../../../docs/standard/data/xml/inferring-an-xml-schema.md)
 - [從 XML 文件推斷結構描述](../../../../docs/standard/data/xml/inferring-schemas-from-xml-documents.md)
-- [推斷簡單類型的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)
+- [推斷簡單型別的規則](../../../../docs/standard/data/xml/rules-for-inferring-simple-types.md)

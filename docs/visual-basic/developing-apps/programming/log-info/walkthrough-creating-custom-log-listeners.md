@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: c38b6d227859a962c320a0fb2f059294ccacfcfb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831916"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342439"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>逐步解說：建立自訂的記錄檔接聽程式 (Visual Basic)
 本逐步解說示範如何建立自訂記錄檔接聽程式，並將它設定為接聽 `My.Application.Log` 物件的輸出。  
@@ -37,23 +37,23 @@ ms.locfileid: "58831916"
   
 #### <a name="to-strongly-name-the-log-listener-assembly"></a>若要建立強式名稱的記錄檔接聽程式組件  
   
-1.  在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。   
+1. 在 **方案總管**中選取專案。 在 [ **專案** ] 功能表上，選擇 [ **屬性**]。   
   
-2.  按一下 [簽署]索引標籤。  
+2. 按一下 [簽署]索引標籤。  
   
-3.  選取 [簽署組件]方塊。  
+3. 選取 [簽署組件]方塊。  
   
-4.  在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [\<新增…>]。  
+4. 在 [選擇強式名稱金鑰檔]下拉式清單中，選取 [\<新增…>]。  
   
      隨即開啟 [建立強式名稱金鑰]對話方塊。  
   
-5.  在 [金鑰檔案名稱]方塊中，提供金鑰檔名稱。  
+5. 在 [金鑰檔案名稱]方塊中，提供金鑰檔名稱。  
   
-6.  將密碼輸入 [輸入密碼] 和 [確認密碼] 方塊。  
+6. 將密碼輸入 [輸入密碼] 和 [確認密碼] 方塊。  
   
-7.  按一下 [確定]。  
+7. 按一下 [確定]。  
   
-8.  重建應用程式。  
+8. 重建應用程式。  
   
 ## <a name="adding-the-listener"></a>新增接聽程式  
  現在，組件已具有強式名稱，您必須決定接聽程式的強式名稱，以讓 `My.Application.Log` 使用您的記錄檔接聽程式。  
@@ -74,7 +74,7 @@ ms.locfileid: "58831916"
   
 #### <a name="to-add-the-listener-to-myapplicationlog"></a>若要將接聽程式新增至 My.Application.Log  
   
-1.  在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
   
      -或-  
   
@@ -86,17 +86,17 @@ ms.locfileid: "58831916"
   
     3.  按一下 [加入] 。  
   
-2.  在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。  
+2. 在 `<listeners>` 區段下，具有 `<source>` 屬性 "DefaultSource" 的 `name` 區段中找出 `<sources>` 區段。 `<sources>` 區段位於最上層 `<system.diagnostics>` 區段中的 `<configuration>` 區段內。  
   
-3.  將此項目新增至 `<listeners>` 區段：  
+3. 將此項目新增至 `<listeners>` 區段：  
   
     ```xml  
     <add name="SimpleLog" />  
     ```  
   
-4.  找出位於最上層 `<sharedListeners>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。  
+4. 找出位於最上層 `<sharedListeners>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。  
   
-5.  將此項目加入至該 `<sharedListeners>` 區段︰  
+5. 將此項目加入至該 `<sharedListeners>` 區段︰  
   
     ```xml  
     <add name="SimpleLog" type="SimpleLogStrongName" />  
@@ -108,6 +108,6 @@ ms.locfileid: "58831916"
 
 - <xref:Microsoft.VisualBasic.Logging.Log?displayProperty=nameWithType>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
-- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)

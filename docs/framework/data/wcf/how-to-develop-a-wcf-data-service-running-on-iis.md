@@ -1,5 +1,5 @@
 ---
-title: HOW TO：開發在 IIS 上執行的 WCF Data Service
+title: HOW TO：開發在 IIS 上執行的 WCF 資料服務
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,35 +9,35 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: af81e65dfd4661d62d7aa4a3e6075be312765cb7
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47201059"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59517816"
 ---
-# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>如何： 開發在 IIS 上執行的 WCF 資料服務
+# <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>HOW TO：開發在 IIS 上執行的 WCF 資料服務
 
 本主題說明如何使用 WCF Data Services 來建立資料服務由執行網際網路資訊服務 (IIS) 上的 ASP.NET Web 應用程式所裝載的 Northwind 範例資料庫為基礎。 如需如何建立 ASP.NET 程式開發伺服器執行的 ASP.NET Web 應用程式相同的 Northwind 資料服務的範例，請參閱 < [WCF Data Services 快速入門](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)。
 
 > [!NOTE]
-> 若要建立 Northwind 資料服務，您必須在本機電腦上安裝 Northwind 範例資料庫。 若要下載這個範例資料庫，請參閱下載頁面[範例資料庫的 SQL Server](https://go.microsoft.com/fwlink/?linkid=24758)。
+> 若要建立 Northwind 資料服務，您必須在本機電腦上安裝 Northwind 範例資料庫。 若要下載此範例資料庫，請參閱下載頁面： [SQL Server 的範例資料庫](https://go.microsoft.com/fwlink/?linkid=24758)。
 
  本主題示範如何使用 Entity Framework 提供者建立資料服務。 有其他資料服務提供者可以使用。 如需詳細資訊，請參閱 <<c0> [ 資料服務提供者](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)。
 
- 當您建立服務之後，您必須明確提供資料服務資源的存取權。 如需詳細資訊，請參閱 <<c0> [ 如何： 啟用資料服務的存取](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
+ 當您建立服務之後，您必須明確提供資料服務資源的存取權。 如需詳細資訊，請參閱[如何：啟用資料服務的存取權](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>建立在 IIS 執行的 ASP.NET web 應用程式
 
 1. 在 Visual Studio 中，在**檔案**功能表上，選取**新增** > **專案**。
 
-2. 在 **新的專案**對話方塊中，選取**已安裝**> [**Visual C#** 或**Visual Basic**] > **Web**類別。
+2. 在 **新的專案**對話方塊中，選取**已安裝**> [**Visual C#** 或**Visual Basic**] > **Web**類別目錄。
 
 3. 選取  **ASP.NET Web 應用程式**範本。
 
 1. 輸入`NorthwindService`做為專案的名稱。
 
-5. 按一下 [確定 **Deploying Office Solutions**]。
+5. 按一下 [確定] 。
 
 6. 在 **專案**功能表上，選取**NorthwindService 屬性**。
 
@@ -132,7 +132,7 @@ ms.locfileid: "47201059"
 
 5. 連接到資料庫的資料模型，執行下列步驟中，其中，然後按一下**下一步**:
 
-    -   如果您沒有已設定的資料庫連線，請按一下**新的連接**並建立新的連接。 如需詳細資訊，請參閱 <<c0> [ 如何： 建立連接至 SQL Server 資料庫](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
+    -   如果您沒有已設定的資料庫連線，請按一下**新的連接**並建立新的連接。 如需詳細資訊，請參閱[如何：建立連接至 SQL Server 資料庫](https://go.microsoft.com/fwlink/?LinkId=123631)。 此 SQL Server 執行個體必須已附加 Northwind 範例資料庫。
 
          \-或-
 
@@ -159,8 +159,8 @@ ms.locfileid: "47201059"
 
 4. 在資料服務的程式碼裡，於定義資料服務和型別的類別定義中，取代註解 `/* TODO: put your data source class name here */`，該型別是資料模型的實體容器，在這個案例中是 `NorthwindEntities`。 類別定義看起來應如下列：
 
-     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria quickstart service/cs/northwind.svc.cs#servicedefinition)]
-     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria quickstart service/vb/northwind.svc.vb#servicedefinition)]
+     [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
+     [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
 ## <a name="see-also"></a>另請參閱
 

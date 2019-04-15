@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /deterministic compiler option [C#]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 819e0c44d933b491091c05d1c28b30827ead85ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7c6d0c7128becb154955664cfdcf96d020de9369
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499840"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480660"
 ---
 # <a name="-deterministic"></a>-deterministic
 
-可讓編譯器產生相同輸入之編譯間的逐一位元組輸出相同的組件。 
+可讓編譯器產生相同輸入之編譯間的逐一位元組輸出相同的組件。
 
 ## <a name="syntax"></a>語法
 
@@ -37,22 +37,22 @@ ms.locfileid: "54499840"
 - 使用的編譯器精確版本和其參考的組件。
 - 目前的目錄路徑。
 - 以直接或間接方式明確地傳遞給編譯器之所有檔案的二進位內容，包含：
-    - 原始程式檔
-    - 參考的組件
-    - 參考的模組
-    - 資源
-    - 強式名稱金鑰檔
-    - @ 回應檔
-    - 分析器
-    - 規則集
-    - 分析器可能使用的其他檔案
+  - 原始程式檔
+  - 參考的組件
+  - 參考的模組
+  - 資源
+  - 強式名稱金鑰檔
+  - @ 回應檔
+  - 分析器
+  - 規則集
+  - 分析器可能使用的其他檔案
 - 目前文化特性 (Culture) (適用於用來產生診斷和例外狀況訊息的語言)。
 - 如果未指定編碼，則為預設編碼 (或目前字碼頁)。
 - 存在、不存在，以及編譯器搜尋路徑 (例如，透過 `/lib` 或 `/recurse` 指定) 上檔案的內容。
 - 在其上執行編譯器的 CLR 平台。
 - `%LIBPATH%` 的值，可能會影響分析器相依性載入。
 
-來源公開可用時，確定性編譯可以用於建立是否從信任的來源編譯二進位檔。 它也可以用於持續建置系統，確定是否需要執行與二進位檔變更相依的建置步驟。 
+來源公開可用時，確定性編譯可以用於建立是否從信任的來源編譯二進位檔。 它也可以用於持續建置系統，確定是否需要執行與二進位檔變更相依的建置步驟。
 
 ## <a name="see-also"></a>另請參閱
 

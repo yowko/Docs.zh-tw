@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -debug compiler option [C#]
 - /debug compiler option [C#]
 ms.assetid: e2b48c07-01bc-45cc-a52c-92e9085eb969
-ms.openlocfilehash: aa9e98e4ec805006c88188d1d19eb3e9781ad732
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4828e1cdd8b830f10b134b613bc96e69490091fe
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502961"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59338484"
 ---
 # <a name="-debug-c-compiler-options"></a>-debug (C# 編譯器選項)
 **-debug** 選項可讓編譯器產生偵錯資訊，並將它放在一或多個輸出檔案中。  
@@ -46,13 +46,13 @@ ms.locfileid: "54502961"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [建置] 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3.  按一下 [ **進階** ] 按鈕。  
+3. 按一下 [ **進階** ] 按鈕。  
   
-4.  修改 [偵錯資訊] 屬性。  
+4. 修改 [偵錯資訊] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DebugSymbols%2A>。  
   

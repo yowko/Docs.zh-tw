@@ -6,12 +6,12 @@ helpviewer_keywords:
 - serial ports [Visual Basic], dialing
 - My.Computer.Ports object
 ms.assetid: 3834db40-f431-45f1-b671-dc91787164b6
-ms.openlocfilehash: 98c35e3fc7e2ef5ab5ff06de751f05ab17e2662c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: db482af7750012d8805d4f834063a2c82224cf67
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829898"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337028"
 ---
 # <a name="how-to-dial-modems-attached-to-serial-ports-in-visual-basic"></a>作法：在 Visual Basic 中撥接與序列埠連接的數據機
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 撥接數據機。  
@@ -20,19 +20,19 @@ ms.locfileid: "58829898"
   
 ### <a name="to-dial-a-modem"></a>撥接數據機  
   
-1.  判斷要將數據機連接至哪一個序列埠。 此範例假設數據機是在 COM1。  
+1. 判斷要將數據機連接至哪一個序列埠。 此範例假設數據機是在 COM1。  
   
-2.  請使用 `My.Computer.Ports.OpenSerialPort` 方法取得連接埠的參考。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
+2. 請使用 `My.Computer.Ports.OpenSerialPort` 方法取得連接埠的參考。 如需詳細資訊，請參閱<xref:Microsoft.VisualBasic.Devices.Ports.OpenSerialPort%2A>。  
   
      `Using` 區塊允許應用程式即使產生例外狀況，也可關閉序列埠。 所有管理序列埠的程式碼都應該出現在此區塊或 `Try...Catch...Finally` 區塊內。  
   
      [!code-vb[VbVbalrMyComputer#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#28)]  
   
-3.  設定 `DtrEnable` 屬性，指出電腦已準備好接受從數據機傳入的傳輸。  
+3. 設定 `DtrEnable` 屬性，指出電腦已準備好接受從數據機傳入的傳輸。  
   
      [!code-vb[VbVbalrMyComputer#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#29)]  
   
-4.  利用 <xref:System.IO.Ports.SerialPort.Write%2A> 方法，透過序列埠將撥接命令與電話號碼傳送至數據機。  
+4. 利用 <xref:System.IO.Ports.SerialPort.Write%2A> 方法，透過序列埠將撥接命令與電話號碼傳送至數據機。  
   
      [!code-vb[VbVbalrMyComputer#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyComputer/VB/Class2.vb#30)]  
   
@@ -55,6 +55,6 @@ ms.locfileid: "58829898"
 
 - <xref:Microsoft.VisualBasic.Devices.Ports>
 - <xref:System.IO.Ports.SerialPort?displayProperty=nameWithType>
-- [如何：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
-- [如何：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
-- [如何：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)
+- [作法：將字串傳送至序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-send-strings-to-serial-ports.md)
+- [作法：接收來自序列埠的字串](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-receive-strings-from-serial-ports.md)
+- [作法：顯示可用的序列埠](../../../../visual-basic/developing-apps/programming/computer-resources/how-to-show-available-serial-ports.md)

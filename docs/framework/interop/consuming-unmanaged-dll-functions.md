@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: eca7606e-ebfb-4f47-b8d9-289903fdc045
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50bfcf5c27236ca704a24f49128becfbee716c21
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f2b2d5a935c2608b2315633538fc93dd62595558
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463081"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59340031"
 ---
 # <a name="consuming-unmanaged-dll-functions"></a>使用 Unmanaged DLL 函式
 平台叫用服務，可讓受控碼呼叫實作在動態連結程式庫 (DLL) 中的非受控函式，如 Windows API 中的函式。 它會找出並叫用匯出的函式，並且在需要的時候於交互操作界限之間封送處理其引數 (整數、 字串、 陣列、 結構和其他) 。  
@@ -29,15 +29,15 @@ ms.locfileid: "58463081"
   
 #### <a name="to-consume-exported-dll-functions"></a>使用匯出的 DLL 函式  
   
-1.  [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
+1. [識別 DLL 中的函式](../../../docs/framework/interop/identifying-functions-in-dlls.md)。  
   
      至少，您必須指定函式的名稱以及包含該函式之 DLL 的名稱。  
   
-2.  [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
+2. [建立類別以包裝 DLL 函式](../../../docs/framework/interop/creating-a-class-to-hold-dll-functions.md)。  
   
      您可以使用現有的類別、為每個 Unmanaged 函式建立個別的類別、或建立一個類別，其中包含一組相關的 Unmanaged 函式。  
   
-3.  [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
+3. [在 Managed 程式碼中建立原型](../../../docs/framework/interop/creating-prototypes-in-managed-code.md).  
   
      [Visual Basic] 搭配使用**宣告**陳述式與**函式**和 **Lib** 關鍵字。 在某些罕見的情況下，您可以搭配使用 **DllImportAttribute** 與**共用函式**關鍵字。 關於這種情況本節會於稍後加以說明。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "58463081"
   
      [C#] 使用 **DllImportAttribute** 來識別 DLL 和函式。 以**外部 "C"** 來標記包裝函式方法或函式。  
   
-4.  [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)。  
+4. [呼叫 DLL 函式](../../../docs/framework/interop/calling-a-dll-function.md)。  
   
      在您的 Managed 類別上呼叫方法，如同您呼叫任何其他 Managed 方法。 [傳遞結構](../../../docs/framework/interop/passing-structures.md)和[實作回呼函式](../../../docs/framework/interop/callback-functions.md)為特殊案例。  
   
@@ -58,20 +58,21 @@ ms.locfileid: "58463081"
   
  當平台叫用呼叫 Unmanaged 函式時，它會依序執行下列動作：  
   
-1.  找出包含該函式的 DLL。  
+1. 找出包含該函式的 DLL。  
   
-2.  將 DLL 載入到記憶體中。  
+2. 將 DLL 載入到記憶體中。  
   
-3.  在記憶體中找出函式的位址，並將其引數推送至堆疊中，視需要封送處理資料。  
+3. 在記憶體中找出函式的位址，並將其引數推送至堆疊中，視需要封送處理資料。  
   
     > [!NOTE]
     >  僅在首次呼叫函式時尋找和載入 DLL，且尋找記憶體中的函式位址。  
   
-4.  將控制項傳輸至 Unmanaged 函式。  
+4. 將控制項傳輸至 Unmanaged 函式。  
   
  平台叫用會擲回由 Unmanaged 函式產生的例外狀況給 Managed 呼叫端。
 
 ## <a name="see-also"></a>另請參閱
+
 - [與 Unmanaged 程式碼互通](../../../docs/framework/interop/index.md)
 - [平台叫用範例](../../../docs/framework/interop/platform-invoke-examples.md)
 - [Interop 封送處理](../../../docs/framework/interop/interop-marshaling.md)

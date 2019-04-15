@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: dd7604eb-9fa3-4b60-b2dd-b47739fa3148
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 83fe9180e222dd71c9d94810e4eedbac398acad4
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 2a2e34d0544c8105b539d36a4231c6efb4df0ee5
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836470"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337691"
 ---
 # <a name="applying-attributes"></a>套用屬性
 使用下列流程將屬性套用至程式碼的元素。  
   
-1.  定義新屬性，或從 .NET Framework 匯入屬性的命名空間以使用現有的屬性。  
+1. 定義新屬性，或從 .NET Framework 匯入屬性的命名空間以使用現有的屬性。  
   
-2.  將屬性放在緊接於程式碼元素前面，以套用屬性。  
+2. 將屬性放在緊接於程式碼元素前面，以套用屬性。  
   
      每個語言有其自己的屬性語法。 在 C++ 和 C# 中，屬性以方括弧括住，而且與元素之間以空白字元隔開，其中可包含分行符號。 在 Visual Basic 中，屬性以角括弧括住，而且必須在相同的邏輯行。如果想要分行符號，可以使用行接續字元。
   
-3.  指定屬性的位置參數和具名參數。  
+3. 指定屬性的位置參數和具名參數。  
   
      位置參數是必要的，而且必須位於任何具名參數前面。它們對應至屬性的其中一個建構函式的參數。 具名參數是選擇性，對應至屬性的讀寫屬性。 在 C++ 和 C# 中，指定每一個選擇性參數的 `name`=`value`，其中 `name` 是屬性的名稱。 在 Visual Basic 中，指定 `name`:=`value`。  
   

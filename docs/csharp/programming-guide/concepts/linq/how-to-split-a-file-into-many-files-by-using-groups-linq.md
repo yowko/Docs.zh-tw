@@ -1,20 +1,20 @@
 ---
-title: HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+title: 作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8179b91c-d778-4e57-884f-77fe5a8e4e40
-ms.openlocfilehash: bba3cf5e1e6d4aa7b88ddbb7f3454be511982f74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a78274a51bfec59147d97f88596a6ec60e40a997
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626043"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59337366"
 ---
-# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>HOW TO：使用群組將檔案分割成許多檔案 (LINQ) (C#)
+# <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-c"></a>作法：使用群組將檔案分割成許多檔案 (LINQ) (C#)
 此範例示範如何合併兩個檔案的內容，然後建立一組以新方法組織資料的新檔案。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
   
-1.  將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
+1. 將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "54626043"
     Garcia, Debra  
     ```  
   
-2.  將下列名稱複製到名為 names2.txt 的文字檔，並將它儲存至專案資料夾：請注意兩個檔案有部分名稱相同。  
+2. 將下列名稱複製到名為 names2.txt 的文字檔，並將它儲存至專案資料夾：請注意兩個檔案有部分名稱相同。  
   
     ```  
     Liu, Jinghao  

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dff5dca159b3e714a027bd2d2ebe86d2b414dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54626000"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59343567"
 ---
 # <a name="including-or-importing-xml-schemas"></a>併入或匯入 XML 結構描述
 XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />` 項目。 這些結構描述項目會參考其他 XML 結構描述，其可用於補充併入或匯入它們之結構描述的結構。 <xref:System.Xml.Schema.XmlSchemaImport>、<xref:System.Xml.Schema.XmlSchemaInclude> 及 <xref:System.Xml.Schema.XmlSchemaRedefine> 類別會對應至結構描述物件模型 (SOM) API 中的這些項目。  
@@ -26,15 +26,15 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
   
  程式碼範例使用下列步驟併入位址結構描述。  
   
-1.  將客戶結構描述及位址結構描述加入至新的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，然後對它們進行編譯。 讀取或編譯結構描述時遇到的任何結構描述驗證警告及錯誤，都會由 <xref:System.Xml.Schema.ValidationEventHandler> 委派處理。  
+1. 將客戶結構描述及位址結構描述加入至新的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，然後對它們進行編譯。 讀取或編譯結構描述時遇到的任何結構描述驗證警告及錯誤，都會由 <xref:System.Xml.Schema.ValidationEventHandler> 委派處理。  
   
-2.  透過重複處理 <xref:System.Xml.Schema.XmlSchema> 屬性，從 <xref:System.Xml.Schema.XmlSchemaSet> 中為客戶及位址結構描述擷取已編譯的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 物件。 因為已編譯結構描述，因此可存取後結構描述編譯資訊集 (PSCI) 屬性。  
+2. 透過重複處理 <xref:System.Xml.Schema.XmlSchema> 屬性，從 <xref:System.Xml.Schema.XmlSchemaSet> 中為客戶及位址結構描述擷取已編譯的 <xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> 物件。 因為已編譯結構描述，因此可存取後結構描述編譯資訊集 (PSCI) 屬性。  
   
-3.  建立 <xref:System.Xml.Schema.XmlSchemaImport> 物件、將 import 的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 屬性設為位址結構描述的命名空間、將 import 的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 屬性設為位址結構描述的 <xref:System.Xml.Schema.XmlSchema> 物件，並將 import 加入客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性中。  
+3. 建立 <xref:System.Xml.Schema.XmlSchemaImport> 物件、將 import 的 <xref:System.Xml.Schema.XmlSchemaImport.Namespace%2A> 屬性設為位址結構描述的命名空間、將 import 的 <xref:System.Xml.Schema.XmlSchemaExternal.Schema%2A> 屬性設為位址結構描述的 <xref:System.Xml.Schema.XmlSchema> 物件，並將 import 加入客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性中。  
   
-4.  使用 <xref:System.Xml.Schema.XmlSchema> 類別的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 及 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法，重新處理並編譯客戶結構描述之已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，並將其寫入主控台。  
+4. 使用 <xref:System.Xml.Schema.XmlSchema> 類別的 <xref:System.Xml.Schema.XmlSchemaSet.Reprocess%2A> 及 <xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> 方法，重新處理並編譯客戶結構描述之已修改的 <xref:System.Xml.Schema.XmlSchemaSet> 物件，並將其寫入主控台。  
   
-5.  最後，使用客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性，將匯入至客戶結構描述的所有結構描述遞迴寫入主控台。 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性對所有加入至結構描述的 include、import 或 redefine 提供存取權。  
+5. 最後，使用客戶結構描述的 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性，將匯入至客戶結構描述的所有結構描述遞迴寫入主控台。 <xref:System.Xml.Schema.XmlSchema.Includes%2A> 屬性對所有加入至結構描述的 include、import 或 redefine 提供存取權。  
   
  下列是完整程式碼範例及寫入主控台的客戶與位址結構描述。  
   
@@ -102,7 +102,7 @@ XML 結構描述可包含 `<xs:import />`, `<xs:include />` 及 `<xs:redefine />
 ## <a name="see-also"></a>另請參閱
 
 - [XML 結構描述物件模型概觀](../../../../docs/standard/data/xml/xml-schema-object-model-overview.md)
-- [讀取和寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
+- [讀取及寫入 XML 結構描述](../../../../docs/standard/data/xml/reading-and-writing-xml-schemas.md)
 - [建置 XML 結構描述](../../../../docs/standard/data/xml/building-xml-schemas.md)
 - [周遊 XML 結構描述](../../../../docs/standard/data/xml/traversing-xml-schemas.md)
 - [編輯 XML 結構描述](../../../../docs/standard/data/xml/editing-xml-schemas.md)

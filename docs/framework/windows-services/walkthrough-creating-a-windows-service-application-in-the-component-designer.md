@@ -1,6 +1,6 @@
 ---
 title: 教學課程：建立 Windows 服務應用程式
-ms.date: 03/14/2019
+ms.date: 03/27/2019
 dev_langs:
 - csharp
 - vb
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 786b9e28607cced0a15793415ff5fd470b559374
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
+ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262491"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59518028"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>教學課程：建立 Windows 服務應用程式
 
@@ -59,7 +59,6 @@ ms.locfileid: "58262491"
 
 3. 從 [檔案] 功能表中選取 [全部儲存]。
 
-
 ## <a name="add-features-to-the-service"></a>在服務中新增功能
 
 在本節中，您要將自訂事件記錄檔加入 Windows 服務中。 <xref:System.Diagnostics.EventLog> 元件是您可新增至 Windows 服務的元件類型範例。
@@ -74,21 +73,7 @@ ms.locfileid: "58262491"
 
 4. 定義自訂的事件記錄檔。 針對C#，編輯現有的 `MyNewService()` 建構函式；針對 Visual Basic，新增 `New()` 建構函式：
 
-   ```csharp
-   public MyNewService()
-   {
-        InitializeComponent();
-
-        eventLog1 = new EventLog();
-        if (!EventLog.SourceExists("MySource"))
-        {
-            EventLog.CreateEventSource("MySource", "MyNewLog");
-        }
-        eventLog1.Source = "MySource";
-        eventLog1.Log = "MyNewLog";
-    }
-   ```
-
+   [!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#2)]
    [!code-vb[VbRadconService#2](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#2)]
 
 5. 針對 <xref:System.Diagnostics?displayProperty=nameWithType> 命名空間，將 `using` 陳述式新增至 **MyNewService.cs** (如果它尚未存在)，或將 `Imports` 陳述式新增至 **MyNewService.vb**：
@@ -141,7 +126,6 @@ ms.locfileid: "58262491"
 
 2. 針對 <xref:System.Timers?displayProperty=nameWithType> 命名空間，將 `using` 陳述式新增至 **MyNewService.cs**，或將 `Imports` 陳述式新增至 **MyNewService.vb**：
 
-
    ```csharp
    using System.Timers;
    ```
@@ -149,7 +133,6 @@ ms.locfileid: "58262491"
    ```vb
    Imports System.Timers
    ```
-
 
 3. 在 `MyNewService` 類別中，新增 `OnTimer` 方法以處理 <xref:System.Timers.Timer.Elapsed?displayProperty=nameWithType> 事件：
 
@@ -185,10 +168,7 @@ ms.locfileid: "58262491"
 
 在 <xref:System.ServiceProcess.ServiceBase.OnStop%2A> 方法插入一行程式碼，以在服務停止時於事件記錄檔中新增項目：
 
-```csharp
-eventLog1.WriteEntry("In OnStop.");
-```
-
+[!code-csharp[VbRadconService#2](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#4)]
 [!code-vb[VbRadconService#4](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#4)]
 
 ### <a name="define-other-actions-for-the-service"></a>為服務定義其他動作
@@ -200,13 +180,11 @@ eventLog1.WriteEntry("In OnStop.");
 [!code-csharp[VbRadconService#5](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/MyNewService.cs#5)]
 [!code-vb[VbRadconService#5](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.vb#5)]
 
-
 ## <a name="set-service-status"></a>設定服務狀態
 
 服務將它們的狀態報告給[服務控制管理員](/windows/desktop/Services/service-control-manager)，讓使用者也可以知道服務是否運作正常。 根據預設，繼承自 <xref:System.ServiceProcess.ServiceBase>服務會報告一組有限狀態設定，其中包括 SERVICE_STOPPED, SERVICE_PAUSED, and SERVICE_RUNNING。 如果服務需要一些時間才能啟動，則報告 SERVICE_START_PENDING 狀態會有所幫助。 
 
 您也可以新增程式碼，呼叫 Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函式，以實作 SERVICE_START_PENDING 和 SERVICE_STOP_PENDING 狀態設定。
-
 
 ### <a name="implement-service-pending-status"></a>實作服務暫止狀態
 
@@ -269,6 +247,9 @@ eventLog1.WriteEntry("In OnStop.");
         Public dwWaitHint As Long
     End Structure
     ```
+
+    > [!NOTE]
+    > 服務控制管理員使用 [SERVICE_STATUS 結構](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成員，判斷等候 Windows 服務啟動或關閉需要多長時間。 如果您的 `OnStart` 和 `OnStop` 方法需長時間執行，則服務可以使用遞增的 `dwCheckPoint` 值再次呼叫 `SetServiceStatus` 以要求更多時間。
 
 3. 在 `MyNewService` 類別中，使用[平台叫用](../interop/consuming-unmanaged-dll-functions.md)宣告 [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 函式：
 
@@ -341,9 +322,6 @@ eventLog1.WriteEntry("In OnStop.");
     SetServiceStatus(Me.ServiceHandle, serviceStatus)    
     ```
 
-> [!NOTE]
-> 服務控制管理員使用 [SERVICE_STATUS 結構](/windows/desktop/api/winsvc/ns-winsvc-_service_status)的 `dwWaitHint` 和 `dwCheckpoint` 成員，判斷等候 Windows 服務啟動或關閉需要多長時間。 如果您的 `OnStart` 和 `OnStop` 方法需長時間執行，則服務可以使用遞增的 `dwCheckPoint` 值再次呼叫 `SetServiceStatus` 以要求更多時間。
-
 ## <a name="add-installers-to-the-service"></a>將安裝程式新增至服務
 
 您必須先安裝 Windows 服務向服務控制管理員登錄，才能執行此服務。 將安裝程式新增至專案，以處理登錄詳細資料。
@@ -396,24 +374,8 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 1. 選取 **Program.cs** 或 **MyNewService.Designer.vb**，然後從捷徑功能表選擇 [檢視程式碼]。 在 `Main` 方法中，變更程式碼以新增輸入參數，並將它傳遞至服務建構函式：
 
-   ```csharp
-   static void Main(string[] args)
-   {
-       ServiceBase[] ServicesToRun;
-       ServicesToRun = new ServiceBase[]
-       {
-           new MyNewService(args)
-       };
-       ServiceBase.Run(ServicesToRun);
-   }
-   ```
-
-   ```vb
-   Shared Sub Main(ByVal cmdArgs() As String)
-       Dim ServicesToRun() As System.ServiceProcess.ServiceBase = New System.ServiceProcess.ServiceBase() {New MyNewService(cmdArgs)}
-       System.ServiceProcess.ServiceBase.Run(ServicesToRun)
-   End Sub
-   ```
+   [!code-csharp[VbRadconService](../../../samples/snippets/csharp/VS_Snippets_VBCSharp/VbRadconService/CS/Program-add-parameter.cs?highlight=1,6)]
+   [!code-vb[VbRadconService](../../../samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbRadconService/VB/MyNewService.Designer-add-parameter.vb?highlight=1-2)]
 
 2. 在 **MyNewService.cs** 或 **MyNewService.vb** 中，變更 `MyNewService` 建構函式以處理輸入參數，如下所示：
 
@@ -494,7 +456,6 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
    一般而言，這個值包含 Windows 服務的可執行檔完整路徑。 使用者必須以引號括住路徑和每個個別參數，服務才能正確啟動。 使用者可以變更 **ImagePath** 登錄項目中的參數，以變更 Windows 服務的啟動參數。 不過，更好的方法是以程式設計方式變更此值，並以使用者方便的方式公開功能，例如使用管理或組態公用程式。
 
-
 ## <a name="build-the-service"></a>建置服務
 
 1. 在 [方案總管] 中，從 **MyNewService** 專案的捷徑功能表選擇 [屬性]。
@@ -561,7 +522,7 @@ Windows 服務可以接受命令列引數或啟動參數。 當您新增程式�
 
 如果您不再需要 Windows 服務應用程式，您可以移除它。 
 
-1. 以系統管理認證開啟 [Visual Studio 的開發人員命令提示字元]。
+1. 以系統管理認證開啟 **Visual Studio 的開發人員命令提示字元**。
 
 2. 在 [Visual Studio 開發人員命令提示字元] 視窗中，巡覽至包含專案輸出的資料夾。
 
