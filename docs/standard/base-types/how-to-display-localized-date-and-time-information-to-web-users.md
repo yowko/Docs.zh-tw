@@ -1,5 +1,5 @@
 ---
-title: HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
+title: 作法：對 Web 使用者顯示當地語系化的日期和時間資訊
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -15,51 +15,51 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d46b2634096cf71701458ca7ecb6f66a01ebffbe
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857654"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320154"
 ---
-# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>HOW TO：對 Web 使用者顯示當地語系化的日期和時間資訊
+# <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>作法：對 Web 使用者顯示當地語系化的日期和時間資訊
 由於網頁可在世界的任何一個角落顯示，負責剖析及格式化日期和時間值的作業在與使用者互動時，並不應該仰賴單一的預設格式 (這通常是網頁伺服器當地文化特性的格式)。 相反地，處理來自使用者之日期和時間字串輸入的 Web 表單，應該使用該使用者慣用的文化特性對字串進行剖析。 同樣地，日期和時間資料應該以符合使用者文化特性的格式向該使用者顯示。 本主題顯示如何執行此動作。  
   
 ## <a name="to-parse-date-and-time-strings-input-by-the-user"></a>剖析來自使用者的日期和時間字串  
   
-1.  判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果不要，請繼續進行步驟 6。  
+1. 判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果不要，請繼續進行步驟 6。  
   
-2.  如果由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，請擷取它的第一個元素。 第一個元素代表使用者預設或慣用的語言和地區。  
+2. 如果由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，請擷取它的第一個元素。 第一個元素代表使用者預設或慣用的語言和地區。  
   
-3.  藉由呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來將代表使用者慣用文化特性的 <xref:System.Globalization.CultureInfo> 物件具現化。  
+3. 藉由呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來將代表使用者慣用文化特性的 <xref:System.Globalization.CultureInfo> 物件具現化。  
   
-4.  呼叫 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 類型的 `TryParse` 或 `Parse` 方法來嘗試轉換。 搭配 `provider` 參數使用 `TryParse` 或 `Parse` 方法的多載，然後將下列任一項傳遞給它：  
+4. 呼叫 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 類型的 `TryParse` 或 `Parse` 方法來嘗試轉換。 搭配 `provider` 參數使用 `TryParse` 或 `Parse` 方法的多載，然後將下列任一項傳遞給它：  
   
     -   在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
   
     -   由步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件之 <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> 屬性所傳回的 <xref:System.Globalization.DateTimeFormatInfo> 物件。  
   
-5.  如果轉換失敗，請針對由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回之字串陣列中的每個剩餘元素，重複執行步驟 2 到 4。  
+5. 如果轉換失敗，請針對由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回之字串陣列中的每個剩餘元素，重複執行步驟 2 到 4。  
   
-6.  如果轉換仍然失敗，或由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列是空的，請使用不因文化特性而異的方式來剖析字串，這是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回。  
+6. 如果轉換仍然失敗，或由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列是空的，請使用不因文化特性而異的方式來剖析字串，這是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回。  
   
 ## <a name="to-parse-the-local-date-and-time-of-the-users-request"></a>剖析使用者要求的當地日期和時間  
   
-1.  新增 <xref:System.Web.UI.WebControls.HiddenField> 控制項至 Web 表單。  
+1. 新增 <xref:System.Web.UI.WebControls.HiddenField> 控制項至 Web 表單。  
   
-2.  透過將目前的日期和時間，以及當地時區針對國際標準時間 (UTC) 的時差寫入至 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 函式，來建立能處理 `Submit` 按鈕之 `onClick` 事件的 JavaScript 函式。 使用分隔符號 (例如分號) 來區分字串的兩個元件。  
+2. 透過將目前的日期和時間，以及當地時區針對國際標準時間 (UTC) 的時差寫入至 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 函式，來建立能處理 `Submit` 按鈕之 `onClick` 事件的 JavaScript 函式。 使用分隔符號 (例如分號) 來區分字串的兩個元件。  
   
-3.  使用 Web 表單的 <xref:System.Web.UI.Control.PreRender> 事件，來透過將指令碼的文字傳遞至 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>方法，把函式插入至 HTML 輸出資料流。  
+3. 使用 Web 表單的 <xref:System.Web.UI.Control.PreRender> 事件，來透過將指令碼的文字傳遞至 <xref:System.Web.UI.ClientScriptManager.RegisterClientScriptBlock%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Boolean%29?displayProperty=nameWithType>方法，把函式插入至 HTML 輸出資料流。  
   
-4.  藉由將 JavaScript 函式的名稱提供給 `Submit` 按鈕的 `OnClientClick` 屬性，來將事件處理常式連線至 `Submit` 按鈕的 `onClick` 事件。  
+4. 藉由將 JavaScript 函式的名稱提供給 `Submit` 按鈕的 `OnClientClick` 屬性，來將事件處理常式連線至 `Submit` 按鈕的 `onClick` 事件。  
   
-5.  針對 `Submit` 按鈕的 <xref:System.Web.UI.WebControls.Button.Click> 事件建立處理常式。  
+5. 針對 `Submit` 按鈕的 <xref:System.Web.UI.WebControls.Button.Click> 事件建立處理常式。  
   
-6.  在事件處理常式中，判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果未填入，請繼續進行步驟 14。  
+6. 在事件處理常式中，判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果未填入，請繼續進行步驟 14。  
   
-7.  如果由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，請擷取它的第一個元素。 第一個元素代表使用者預設或慣用的語言和地區。  
+7. 如果由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，請擷取它的第一個元素。 第一個元素代表使用者預設或慣用的語言和地區。  
   
-8.  藉由呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來將代表使用者慣用文化特性的 <xref:System.Globalization.CultureInfo> 物件具現化。  
+8. 藉由呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來將代表使用者慣用文化特性的 <xref:System.Globalization.CultureInfo> 物件具現化。  
   
 9. 將指派給 <xref:System.Web.UI.WebControls.HiddenField.Value%2A> 屬性的字串傳遞至 <xref:System.String.Split%2A> 方法，以將代表使用者當地日期和時間及使用者當地時區時差的字串，儲存在個別的陣列元素中。  
   

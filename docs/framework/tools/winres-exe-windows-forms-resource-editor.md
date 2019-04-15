@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: cb8bc835-9221-4888-af53-1a4f5fad6c48
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5b9cb36c3ab7096e048905e56136f0de62a65bdc
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1c9a14c2ea2d7d817aacca1fa25b04ac643f16bf
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221091"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296650"
 ---
 # <a name="winresexe-windows-resource-localization-editor"></a>Winres.exe (Windows 資源當地語系化編輯器)
 
@@ -35,11 +35,11 @@ winres /?
 
 ## <a name="arguments"></a>引數
 
-|引數|描述|
+|引數|說明|
 |--------------|-----------------|
 |`resourceFile`|要當地語系化的資源檔。 這個檔案必須是 Visual Studio 設計工具所產生的 Windows Form 表單 .resx 或 .resources 檔案。 Winres.exe 無法開啟泛型 .resx 或 .resources 檔案。|
 
-|選項|描述|
+|選項|說明|
 |------------|-----------------|
 |**/?**|顯示工具的命令語法和選項。|
 
@@ -106,9 +106,9 @@ Winres.exe 具有以下的特性和功能：
 
 ### <a name="to-localize-a-resx-or-resources-file-associated-with-a-form"></a>將與表單相關聯的 .resx 或 .resources 檔案當地語系化
 
-1.  在開發人員命令提示字元中輸入 `winres`，執行 Winres.exe。
+1. 在開發人員命令提示字元中輸入 `winres`，執行 Winres.exe。
 
-2.  若要開啟要當地語系化之表單的預設資源，請按一下 [檔案] 功能表上的 [開啟] 命令，並巡覽至檔案將它開啟。
+2. 若要開啟要當地語系化之表單的預設資源，請按一下 [檔案] 功能表上的 [開啟] 命令，並巡覽至檔案將它開啟。
 
      -或-
 
@@ -129,11 +129,11 @@ Winres.exe 具有以下的特性和功能：
     > [!NOTE]
     > 如果您要編輯之資源的所屬表單是繼承的表單，則包含繼承之表單的組件和包含衍生表單的組件都必須在全域組件快取 (GAC) 中註冊，或是必須與 WinRes.exe 位於相同的目錄中。 如需將 .NET Framework 元件安裝到 GAC 的詳細資訊，請參閱[全域組件快取](../../../docs/framework/app-domains/gac.md)。
 
-3.  選取表單上的控制項，並且變更這些控制項的 <xref:System.Windows.Forms.Control.Text%2A> 和其他屬性，以反映當地語系化的文化特性及其語言。 視需要移動或調整控制項大小，以容納當地語系化的文字。
+3. 選取表單上的控制項，並且變更這些控制項的 <xref:System.Windows.Forms.Control.Text%2A> 和其他屬性，以反映當地語系化的文化特性及其語言。 視需要移動或調整控制項大小，以容納當地語系化的文字。
 
-4.  若要儲存 .resx 或 .resources 檔案的當地語系化版本，請按一下**儲存**圖示或 [檔案] 功能表上的相同命令。 工具會顯示 [選取文化特性] 視窗。
+4. 若要儲存 .resx 或 .resources 檔案的當地語系化版本，請按一下**儲存**圖示或 [檔案] 功能表上的相同命令。 工具會顯示 [選取文化特性] 視窗。
 
-5.  選取適當的文化特性和檔案模式，然後按一下 [確定]。
+5. 選取適當的文化特性和檔案模式，然後按一下 [確定]。
 
    工具會使用執行階段所需的當地語系化資源檔命名規範來儲存檔案。 例如，如果您針對德國境內的德國人當地語系化 `TestApp.resources`，則工具會將檔案儲存為 `TestApp.de-DE.resources`。 如果您針對德國境內的德國人當地語系化 `TestApp.resx`，則工具會將檔案儲存為 `TestApp.de-DE.resx`。 如需資源命名慣例的詳細資訊，請參閱[封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)。 如需執行階段所使用之預先定義的文化特性名稱清單，請參閱 <xref:System.Globalization.CultureInfo> 類別。
 

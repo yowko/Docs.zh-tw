@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: daf9d9d5-84ac-4bd9-a864-27665ffd0f5c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f52b34e6fb99b52e5775482dec3c59ed6738b31
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: ff1bc6f0aa29742f61129ff9acb9980658f118a4
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920554"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59327863"
 ---
 # <a name="install-the-net-framework-for-developers"></a>安裝適用於開發人員的 .NET Framework
 
@@ -107,7 +107,7 @@ ms.locfileid: "58920554"
 
 Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請參閱[系統需求](~/docs/framework/get-started/system-requirements.md))，但是不支援 Itanium 架構的電腦。
 
-1.  開啟您要安裝之 .NET Framework 版本的下載頁面：
+1. 開啟您要安裝之 .NET Framework 版本的下載頁面：
 
     - .NET Framework 4.7.2 ([Web 安裝程式](https://go.microsoft.com/fwlink/?LinkId=863262)或[離線安裝程式](https://go.microsoft.com/fwlink/p/?LinkId=863265))
 
@@ -163,7 +163,7 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 > [!IMPORTANT]
 > 語言套件不包含執行應用程式所需的 .NET Framework 元件，因此您必須先執行 Web 或離線安裝程式，然後再安裝語言套件。 如果您已安裝語言套件，請將其解除安裝、安裝 .NET Framework，然後重新安裝語言套件。
 
-1.  開啟您已安裝之 .NET Framework 版本的語言套件下載頁面：
+1. 開啟您已安裝之 .NET Framework 版本的語言套件下載頁面：
 
     - [.NET Framework 4.7.2 語言套件](https://go.microsoft.com/fwlink/?LinkID=863258)
 
@@ -183,9 +183,9 @@ Web 和離線安裝程式都是針對 x86 和 x64 為主的電腦所設計 (請�
 
     - [.NET Framework 4.5 語言套件](https://go.microsoft.com/fwlink/p/?LinkId=245451)
 
-2.  在語言清單中，選擇您要下載的語言，並等候幾秒，讓頁面以該語言重新載入。
+2. 在語言清單中，選擇您要下載的語言，並等候幾秒，讓頁面以該語言重新載入。
 
-3.  選擇 [下載]。
+3. 選擇 [下載]。
 
 下表列出支援的語言。
 

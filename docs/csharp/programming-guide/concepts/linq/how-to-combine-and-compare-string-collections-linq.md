@@ -1,20 +1,20 @@
 ---
-title: HOW TO：合併和比較字串集合 (LINQ) (C#)
+title: 作法：合併和比較字串集合 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 9788973df42b91aa2da690c5bf1b0f6b4d41b127
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514773"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59323742"
 ---
-# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>HOW TO：合併和比較字串集合 (LINQ) (C#)
+# <a name="how-to-combine-and-compare-string-collections-linq-c"></a>作法：合併和比較字串集合 (LINQ) (C#)
 本例示範如何合併包含文字行的檔案，然後排序結果。 具體來說，它會示範如何在兩組文字行上執行簡單的串連、等位和交集。  
   
 ### <a name="to-set-up-the-project-and-the-text-files"></a>設定專案和文字檔案  
   
-1.  將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
+1. 將下列名稱複製到名為 names1.txt 的文字檔，並將它儲至專案資料夾：  
   
     ```  
     Bankov, Peter  
@@ -29,7 +29,7 @@ ms.locfileid: "54514773"
     Garcia, Debra  
     ```  
   
-2.  將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。 請注意兩個檔案有部分名稱相同。  
+2. 將下列名稱複製到名為 names2.txt 的文字檔，並將它儲至專案資料夾。 請注意兩個檔案有部分名稱相同。  
   
     ```  
     Liu, Jinghao  

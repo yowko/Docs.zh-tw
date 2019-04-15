@@ -6,19 +6,19 @@ helpviewer_keywords:
 - text files [Visual Basic], writing event information to a text file
 - events [Visual Basic], writing event information to a text file
 ms.assetid: 9ca7cc03-bf99-4933-9e5e-61ee28e9a6b4
-ms.openlocfilehash: ee5c7cbea09c6183b48fe1b0acd051d65bdd1875
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: e696ccb7327197c2f3a2468d30085dc6d390e034
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819030"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312707"
 ---
 # <a name="how-to-write-event-information-to-a-text-file-visual-basic"></a>作法：將事件資訊寫入至文字檔 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。 這個範例示範如何使用 `My.Application.Log.WriteEntry` 方法將追蹤資訊記錄到記錄檔。  
   
 ### <a name="to-add-and-configure-the-file-log-listener"></a>新增和設定檔案記錄檔接聽程式  
   
-1.  在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。  
+1. 在 方案總管 中，以滑鼠右鍵按一下 app.config 並選擇 [開啟]。  
   
      \-或-  
   
@@ -30,19 +30,19 @@ ms.locfileid: "58819030"
   
     3.  按一下 [加入] 。  
   
-2.  在應用程式組態檔中找出 `<listeners>` 區段。  
+2. 在應用程式組態檔中找出 `<listeners>` 區段。  
   
      您會找到名稱屬性為 "DefaultSource" 之 \<source> 區段 (位於最上層 \<configuration> 區段底下 \<system.diagnostics> 區段中) 中的 \<listeners> 區段。  
   
-3.  將此項目加入至該 `<listeners>` 區段︰  
+3. 將此項目加入至該 `<listeners>` 區段︰  
   
     ```xml  
     <add name="FileLogListener" />  
     ```  
   
-4.  找出巢狀於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<sharedListeners>` 區段。  
+4. 找出巢狀於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<sharedListeners>` 區段。  
   
-5.  將此項目加入至該 `<sharedListeners>` 區段︰  
+5. 將此項目加入至該 `<sharedListeners>` 區段︰  
   
     ```xml  
     <add name="FileLogListener"   
@@ -71,4 +71,4 @@ ms.locfileid: "58819030"
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteEntry%2A>
 - <xref:Microsoft.VisualBasic.Logging.Log.WriteException%2A>
 - [使用應用程式記錄檔](../../../../visual-basic/developing-apps/programming/log-info/working-with-application-logs.md)
-- [如何：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)
+- [作法：記錄例外狀況](../../../../visual-basic/developing-apps/programming/log-info/how-to-log-exceptions.md)

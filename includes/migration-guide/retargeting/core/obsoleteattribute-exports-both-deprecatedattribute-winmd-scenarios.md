@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e8c48c4b1031813ce62f576e5bf1f94c082dfe4b
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234641"
+---
 ### <a name="obsoleteattribute-exports-as-both-obsoleteattribute-and-deprecatedattribute-in-winmd-scenarios"></a>ObsoleteAttribute 會在 WinMD 案例中匯出為 ObsoleteAttribute 和 DeprecatedAttribute
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|Edge|
 |版本|4.5.1|
 |類型|正在重定目標|
-

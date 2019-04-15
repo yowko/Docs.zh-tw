@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /win32icon compiler option [C#]
 - -win32icon compiler option [C#]
 ms.assetid: 756d9b6d-ab07-41b7-ba58-5bd88f711138
-ms.openlocfilehash: e4558084357c8ce07004a8ed71aef586a707f1a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7bc7da8121ec1190908d9b94fc7c987f9888c020
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591743"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59317443"
 ---
 # <a name="-win32icon-c-compiler-options"></a>-win32icon (C# 編譯器選項)
 **-win32icon** 選項會在輸出檔案內插入一個 .ico 檔，讓輸出檔案在檔案總管中具有所需的外觀。  
@@ -35,11 +35,11 @@ ms.locfileid: "54591743"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [應用程式] 屬性頁。  
+2. 按一下 [應用程式] 屬性頁。  
   
-3.  修改**應用程式圖示**屬性。  
+3. 修改**應用程式圖示**屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ApplicationIcon%2A>。  
   

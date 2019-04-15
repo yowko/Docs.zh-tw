@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b662ca537bf33dc9702e99f279bd068f92de6664
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836444"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59320414"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 擴充物件
 擴充物件可用來擴充樣式表的功能。 <xref:System.Xml.Xsl.XsltArgumentList> 類別會維護擴充物件。  
@@ -32,11 +32,11 @@ ms.locfileid: "56836444"
   
 ### <a name="to-use-an-xslt-extension-object"></a>使用 XSLT 擴充物件  
   
-1.  使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件並加入擴充物件。  
+1. 使用 <xref:System.Xml.Xsl.XsltArgumentList> 方法，建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> 物件並加入擴充物件。  
   
-2.  從樣式表呼叫擴充物件。  
+2. 從樣式表呼叫擴充物件。  
   
-3.  將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
+3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 物件傳遞至 <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> 方法。  
   
 ## <a name="see-also"></a>另請參閱
 

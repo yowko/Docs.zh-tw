@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bc56a3437e16e5d2c9679847bf3a3035b9e34286
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234628"
+---
 ### <a name="apps-published-with-clickonce-that-use-a-sha-256-code-signing-certificate-may-fail-on-windows-2003"></a>透過 ClickOnce 發行的應用程式，這些應用程式使用可能會在 Windows 2003 上失敗的 SHA-256 程式碼簽署憑證
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|Edge|
 |版本|4.5|
 |類型|正在重定目標|
-

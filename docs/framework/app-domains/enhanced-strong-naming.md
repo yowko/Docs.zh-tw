@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 6cf17a82-62a1-4f6d-8d5a-d7d06dec2bb5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3a0b63e27a3eceb80d42d43eea321b0dc757ad69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5cbda9c160b99bf5648c670a67d39b245f031645
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688856"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319868"
 ---
 # <a name="enhanced-strong-naming"></a>進階強式命名
 強式名稱簽章是 .NET Framework 中的身分識別機制，用來識別組件。 它是公開金鑰數位簽章，通常用來驗證從建立者 (簽署者) 傳遞給收件者 (驗證者) 的資料完整性。 此簽章用來當作組件的唯一身分識別，並可確保對組件的參考不會模稜兩可。 組件在建置程序的一部分簽署，然後在載入時加以驗證。  
@@ -41,25 +41,25 @@ ms.locfileid: "54688856"
 ### <a name="signing-with-sha-2-without-key-migration"></a>使用 SHA-2 簽署，而不需要金鑰移轉  
  從命令提示字元視窗中執行下列命令簽署組件，而不移轉強式名稱簽章：  
   
-1.  (如有必要) 產生新的身分識別金鑰。  
+1. (如有必要) 產生新的身分識別金鑰。  
   
     ```  
     sn -k IdentityKey.snk  
     ```  
   
-2.  取得身分識別公開金鑰，並指定使用此金鑰簽署時，應該使用 SHA-2 演算法。  
+2. 取得身分識別公開金鑰，並指定使用此金鑰簽署時，應該使用 SHA-2 演算法。  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk sha256  
     ```  
   
-3.  使用身分識別公用金鑰檔案延遲簽署組件。  
+3. 使用身分識別公用金鑰檔案延遲簽署組件。  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-4.  使用完整身分識別金鑰組重新簽署組件。  
+4. 使用完整身分識別金鑰組重新簽署組件。  
   
     ```  
     sn -Ra MyAssembly.exe IdentityKey.snk  
@@ -68,26 +68,26 @@ ms.locfileid: "54688856"
 ### <a name="signing-with-sha-2-with-key-migration"></a>使用 SHA-2 簽署，並且進行金鑰移轉  
  從命令提示字元視窗中執行下列命令，使用移轉的強式名稱簽章來簽署組件。  
   
-1.  (如有必要) 產生身分識別與簽章金鑰組。  
+1. (如有必要) 產生身分識別與簽章金鑰組。  
   
     ```  
     sn -k IdentityKey.snk  
     sn -k SignatureKey.snk  
     ```  
   
-2.  取得簽章公開金鑰，並指定使用此金鑰簽署時，應該使用 SHA-2 演算法。  
+2. 取得簽章公開金鑰，並指定使用此金鑰簽署時，應該使用 SHA-2 演算法。  
   
     ```  
     sn -p SignatureKey.snk SignaturePubKey.snk sha256  
     ```  
   
-3.  取得身分識別公開金鑰，它決定產生副署的雜湊演算法。  
+3. 取得身分識別公開金鑰，它決定產生副署的雜湊演算法。  
   
     ```  
     sn -p IdentityKey.snk IdentityPubKey.snk  
     ```  
   
-4.  產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性的參數，然後將屬性附加至組件。  
+4. 產生 <xref:System.Reflection.AssemblySignatureKeyAttribute> 屬性的參數，然後將屬性附加至組件。  
   
     ```  
     sn -a IdentityPubKey.snk IdentityKey.snk SignaturePubKey.snk  
@@ -121,17 +121,18 @@ ms.locfileid: "54688856"
     )]
     ```
   
-5.  使用身分識別公用金鑰延遲簽署組件。  
+5. 使用身分識別公用金鑰延遲簽署組件。  
   
     ```  
     csc MyAssembly.cs /keyfile:IdentityPubKey.snk /delaySign+  
     ```  
   
-6.  使用簽章金鑰組完整簽署組件。  
+6. 使用簽章金鑰組完整簽署組件。  
   
     ```  
     sn -Ra MyAssembly.exe SignatureKey.snk  
     ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

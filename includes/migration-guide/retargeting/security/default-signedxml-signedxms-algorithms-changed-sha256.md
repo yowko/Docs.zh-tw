@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 12ba683655319e42368f9f2a6cf7bf70e1dbd77d
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: db076d6799e4de5b8610cf9c1aac79b5386a7229
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760208"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236413"
 ---
 ### <a name="default-signedxml-and-signedxms-algorithms-changed-to-sha256"></a>預設 SignedXML 和 SignedXMS 演算法變更為 SHA256
 
@@ -16,4 +16,3 @@ ms.locfileid: "58760208"
 |版本|4.7.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Security.Cryptography.Pkcs.CmsSigner?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.SignedXml?displayProperty=nameWithType></li><li><xref:System.Security.Cryptography.Xml.Reference?displayProperty=nameWithType></li></ul>|
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CopyFile method [Visual Basic], copying files in Visual Basic
 - I/O [Visual Basic], copying files
 ms.assetid: f205d2ad-bbe5-4d55-8a40-acda21aa82dd
-ms.openlocfilehash: 184742ef03343eaff644c0f3f803e2acec8854eb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 437a7058abd9ae167fcde15d4bddbe69bc64b7e0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58837100"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310768"
 ---
 # <a name="how-to-copy-files-with-a-specific-pattern-to-a-directory-in-visual-basic"></a>作法：在 Visual Basic 中將具有特定模式的檔案複製到目錄
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。  
@@ -23,15 +23,15 @@ ms.locfileid: "58837100"
   
 ### <a name="to-copy-files-with-a-specific-pattern-to-a-directory"></a>將具有特定模式的檔案複製至目錄  
   
-1.  使用 `GetFiles` 方法來傳回檔案清單。 這個範例會傳回所指定目錄中的所有 .rtf 檔案。  
+1. 使用 `GetFiles` 方法來傳回檔案清單。 這個範例會傳回所指定目錄中的所有 .rtf 檔案。  
   
      [!code-vb[VbFileIOMisc#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOMisc/VB/Class1.vb#36)]  
   
-2.  使用 `CopyFile` 方法來複製檔案。 這個範例會將檔案複製至名稱為 `testdirectory`的目錄中。  
+2. 使用 `CopyFile` 方法來複製檔案。 這個範例會將檔案複製至名稱為 `testdirectory`的目錄中。  
   
      [!code-vb[VbVbcnMyFileSystem#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#88)]  
   
-3.  使用 `For` 陳述式來關閉 `Next` 陳述式。  
+3. 使用 `For` 陳述式來關閉 `Next` 陳述式。  
   
      [!code-vb[VbVbcnMyFileSystem#89](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#89)]  
   
@@ -61,6 +61,6 @@ ms.locfileid: "58837100"
 
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%2A>
 - <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A>
-- [如何：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
+- [作法：尋找具有特定模式的子目錄](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-find-subdirectories-with-a-specific-pattern.md)
 - [疑難排解：讀取和寫入文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/troubleshooting-reading-from-and-writing-to-text-files.md)
-- [如何：取得目錄的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)
+- [作法：取得目錄中的檔案集合](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-get-the-collection-of-files-in-a-directory.md)

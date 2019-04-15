@@ -1,5 +1,5 @@
 ---
-title: HOW TO：實作支援事件架構非同步模式的元件
+title: 作法：實作支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: 8213d3d980edc9c37b5f50545edbcd8959616963
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54745463"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334285"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>HOW TO：實作支援事件架構非同步模式的元件
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
   
  本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，以確保此元件在任何應用程式模型下都能正常運作，包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
@@ -62,22 +62,22 @@ ms.locfileid: "54745463"
   
 #### <a name="to-define-asynchronous-events-for-clients-of-your-component"></a>為元件的用戶端定義非同步事件：  
   
-1.  在您檔案的頂端匯入 <xref:System.Threading?displayProperty=nameWithType> 和 <xref:System.Collections.Specialized?displayProperty=nameWithType> 命名空間。  
+1. 在您檔案的頂端匯入 <xref:System.Threading?displayProperty=nameWithType> 和 <xref:System.Collections.Specialized?displayProperty=nameWithType> 命名空間。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#11)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#11](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#11)]  
   
-2.  在 `PrimeNumberCalculator` 類別定義之前，宣告進度和完成事件的委派。  
+2. 在 `PrimeNumberCalculator` 類別定義之前，宣告進度和完成事件的委派。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#7)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#7](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#7)]  
   
-3.  在 `PrimeNumberCalculator` 類別定義中，宣告用來向用戶端回報進度和完成的事件。  
+3. 在 `PrimeNumberCalculator` 類別定義中，宣告用來向用戶端回報進度和完成的事件。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#8)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#8](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#8)]  
   
-4.  在 `PrimeNumberCalculator` 類別定義之後，衍生用來向 `CalculatePrimeCompleted`. 事件的用戶端事件處理常式回報每個計算結果的 `CalculatePrimeCompletedEventArgs` 類別。 除了 `AsyncCompletedEventArgs` 屬性之外，此類別還可讓用戶端判斷所測試的數字為何、是否為質數，以及如果該數字不是質數，第一個除數為何。  
+4. 在 `PrimeNumberCalculator` 類別定義之後，衍生用來向 `CalculatePrimeCompleted`. 事件的用戶端事件處理常式回報每個計算結果的 `CalculatePrimeCompletedEventArgs` 類別。 除了 `AsyncCompletedEventArgs` 屬性之外，此類別還可讓用戶端判斷所測試的數字為何、是否為質數，以及如果該數字不是質數，第一個除數為何。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#6)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#6](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#6)]  
@@ -103,7 +103,7 @@ ms.locfileid: "54745463"
   
 #### <a name="to-implement-your-components-internal-asynchronous-behavior"></a>實作元件的內部非同步行為：  
   
-1.  在 `PrimeNumberCalculator` 類別中宣告及建立 <xref:System.Threading.SendOrPostCallback> 委派。 在名為 `InitializeDelegates` 的公用程式方法中建立 <xref:System.Threading.SendOrPostCallback> 物件。  
+1. 在 `PrimeNumberCalculator` 類別中宣告及建立 <xref:System.Threading.SendOrPostCallback> 委派。 在名為 `InitializeDelegates` 的公用程式方法中建立 <xref:System.Threading.SendOrPostCallback> 物件。  
   
      您將需要兩個委派：一個用來向用戶端回報進度，另一個用來向用戶端回報完成。  
   
@@ -112,17 +112,17 @@ ms.locfileid: "54745463"
     [!code-csharp[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#20)]
     [!code-vb[System.ComponentModel.AsyncOperationManager#20](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#20)]  
   
-2.  在您元件的建構函式中呼叫 `InitializeDelegates` 方法。  
+2. 在您元件的建構函式中呼叫 `InitializeDelegates` 方法。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#21)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#21](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#21)]  
   
-3.  在處理要非同步執行之實際工作的 `PrimeNumberCalculator` 類別中宣告委派。 這個委派會包裝測試數字是否為質數的背景工作方法。 此委派會採用 <xref:System.ComponentModel.AsyncOperation> 參數，此參數將用來追蹤非同步作業的存留期。  
+3. 在處理要非同步執行之實際工作的 `PrimeNumberCalculator` 類別中宣告委派。 這個委派會包裝測試數字是否為質數的背景工作方法。 此委派會採用 <xref:System.ComponentModel.AsyncOperation> 參數，此參數將用來追蹤非同步作業的存留期。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#22)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#22](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#22)]  
   
-4.  建立一個用來管理擱置中非同步作業的集合。 用戶端需要一個可追蹤作業執行和完成狀態的方式，而此追蹤的執行方式是在用戶端對非同步方法發出呼叫時，要求用戶端傳遞唯一的權杖或工作識別碼。 `PrimeNumberCalculator` 元件必須將工作識別碼與其對應的引動過程建立關聯，來追蹤每個呼叫。 如果用戶端傳遞的工作識別碼不是唯一的，`PrimeNumberCalculator` 元件必須引發例外狀況。  
+4. 建立一個用來管理擱置中非同步作業的集合。 用戶端需要一個可追蹤作業執行和完成狀態的方式，而此追蹤的執行方式是在用戶端對非同步方法發出呼叫時，要求用戶端傳遞唯一的權杖或工作識別碼。 `PrimeNumberCalculator` 元件必須將工作識別碼與其對應的引動過程建立關聯，來追蹤每個呼叫。 如果用戶端傳遞的工作識別碼不是唯一的，`PrimeNumberCalculator` 元件必須引發例外狀況。  
   
      `PrimeNumberCalculator` 元件會使用一個名為 <xref:System.Collections.Specialized.HybridDictionary> 的特殊集合類別來追蹤工作識別碼。 在類別定義中，建立名為 `userTokenToLifetime` 的 <xref:System.Collections.Specialized.HybridDictionary>。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "54745463"
   
 #### <a name="to-raise-events-to-your-components-clients"></a>向元件的用戶端引發事件：  
   
-1.  實作可向用戶端進行回報的公用事件。 您將需要一個事件來回報進度，另一個事件來回報完成。  
+1. 實作可向用戶端進行回報的公用事件。 您將需要一個事件來回報進度，另一個事件來回報完成。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#24)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#24](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#24)]  
@@ -180,29 +180,29 @@ ms.locfileid: "54745463"
   
 #### <a name="to-execute-the-prime-number-calculation-asynchronously"></a>以非同步方式執行質數計算：  
   
-1.  實作 `TaskCanceled` 公用程式方法。 這會檢查指定之工作識別碼的工作存留期集合，如果找不到該工作識別碼，就會傳回 `true`。  
+1. 實作 `TaskCanceled` 公用程式方法。 這會檢查指定之工作識別碼的工作存留期集合，如果找不到該工作識別碼，就會傳回 `true`。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#32)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#32](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#32)]  
   
-2.  實作 `CalculateWorker` 方法。 此方法採用兩個參數：要測試的數字和 <xref:System.ComponentModel.AsyncOperation>。  
+2. 實作 `CalculateWorker` 方法。 此方法採用兩個參數：要測試的數字和 <xref:System.ComponentModel.AsyncOperation>。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#27)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#27](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#27)]  
   
-3.  實作 `BuildPrimeNumberList`。 此方法採用兩個參數：要測試的數字和 <xref:System.ComponentModel.AsyncOperation>。 它會使用 <xref:System.ComponentModel.AsyncOperation> 來回報進度和累加結果。 這可確保在應用程式模型的適當執行緒或內容上呼叫用戶端的事件處理常式。 當 `BuildPrimeNumberList` 找到質數時，它會以累加結果的方式，向 `ProgressChanged` 事件的用戶端事件處理常式回報此質數。 這需要一個衍生自 <xref:System.ComponentModel.ProgressChangedEventArgs> 的類別 (稱為 `CalculatePrimeProgressChangedEventArgs`)，此類別具有一個稱為 `LatestPrimeNumber` 的附加屬性。  
+3. 實作 `BuildPrimeNumberList`。 此方法採用兩個參數：要測試的數字和 <xref:System.ComponentModel.AsyncOperation>。 它會使用 <xref:System.ComponentModel.AsyncOperation> 來回報進度和累加結果。 這可確保在應用程式模型的適當執行緒或內容上呼叫用戶端的事件處理常式。 當 `BuildPrimeNumberList` 找到質數時，它會以累加結果的方式，向 `ProgressChanged` 事件的用戶端事件處理常式回報此質數。 這需要一個衍生自 <xref:System.ComponentModel.ProgressChangedEventArgs> 的類別 (稱為 `CalculatePrimeProgressChangedEventArgs`)，此類別具有一個稱為 `LatestPrimeNumber` 的附加屬性。  
   
      `BuildPrimeNumberList` 方法也會定期呼叫 `TaskCanceled` 方法，如果此方法傳回 `true`，就會結束。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#5)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#5)]  
   
-4.  實作 `IsPrime`。 此方法採用三個參數：已知的質數清單、要測試的數字，以及所找到之第一個除數的輸出參數。 在有質數清單的情況下，它會判斷測試數字是否為質數。  
+4. 實作 `IsPrime`。 此方法採用三個參數：已知的質數清單、要測試的數字，以及所找到之第一個除數的輸出參數。 在有質數清單的情況下，它會判斷測試數字是否為質數。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#28)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#28](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#28)]  
   
-5.  從 <xref:System.ComponentModel.ProgressChangedEventArgs>衍生 `CalculatePrimeProgressChangedEventArgs`。 此類別是向 `ProgressChanged` 事件的用戶端事件處理常式回報累加結果的必要類別。 它有一個稱為 `LatestPrimeNumber`的附加屬性。  
+5. 從 <xref:System.ComponentModel.ProgressChangedEventArgs>衍生 `CalculatePrimeProgressChangedEventArgs`。 此類別是向 `ProgressChanged` 事件的用戶端事件處理常式回報累加結果的必要類別。 它有一個稱為 `LatestPrimeNumber`的附加屬性。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#29)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#29](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#29)]  
@@ -223,12 +223,12 @@ ms.locfileid: "54745463"
   
 #### <a name="to-implement-start-and-cancel-functionality"></a>實作「開始」和「取消」功能：  
   
-1.  實作 `CalculatePrimeAsync` 方法。 請確定就代表目前擱置中工作的所有權杖而言，用戶端所提供的權杖 (工作識別碼) 是唯一的。 如果用戶端傳入的權杖不是唯一的，`CalculatePrimeAsync` 就會引發例外狀況。 否則，該權杖會新增至工作識別碼集合中。  
+1. 實作 `CalculatePrimeAsync` 方法。 請確定就代表目前擱置中工作的所有權杖而言，用戶端所提供的權杖 (工作識別碼) 是唯一的。 如果用戶端傳入的權杖不是唯一的，`CalculatePrimeAsync` 就會引發例外狀況。 否則，該權杖會新增至工作識別碼集合中。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#3)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#3)]  
   
-2.  實作 `CancelAsync` 方法。 如果 `taskId` 存在於權杖集合中，系統就會將它移除。 這可防止執行已取消但尚未開始的工作。 如果工作正在執行，當偵測到該工作識別碼已自存留期集合中移除時，`BuildPrimeNumberList` 方法就會結束。  
+2. 實作 `CancelAsync` 方法。 如果 `taskId` 存在於權杖集合中，系統就會將它移除。 這可防止執行已取消但尚未開始的工作。 如果工作正在執行，當偵測到該工作識別碼已自存留期集合中移除時，`BuildPrimeNumberList` 方法就會結束。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#4)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#4)]  
@@ -253,6 +253,6 @@ ms.locfileid: "54745463"
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [作法：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

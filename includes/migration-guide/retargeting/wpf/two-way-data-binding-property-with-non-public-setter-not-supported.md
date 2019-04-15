@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: a70aca33d0830f3b23ff985f17c469cb7c4ff35c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234649"
+---
 ### <a name="two-way-data-binding-to-a-property-with-a-non-public-setter-is-not-supported"></a>不支援具有非公用 setter 之屬性的雙向資料繫結
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Windows.Data.BindingMode.TwoWay?displayProperty=nameWithType></li></ul>|
-

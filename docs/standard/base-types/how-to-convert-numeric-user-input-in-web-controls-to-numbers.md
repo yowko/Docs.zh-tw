@@ -1,5 +1,5 @@
 ---
-title: HOW TO：將使用者輸入 Web 控制項的數值轉換成數字
+title: 作法：將使用者輸入 Web 控制項的數值轉換成數字
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -15,33 +15,33 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c66235d866bd7c276d049d9415015dd6f9aa9fb6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722357"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59296156"
 ---
-# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>HOW TO：將使用者輸入 Web 控制項的數值轉換成數字
+# <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>作法：將使用者輸入 Web 控制項的數值轉換成數字
 由於網頁可在世界上的任何角落顯示，所以，使用者可以幾乎不限數量的格式來將數值資料輸入至 <xref:System.Web.UI.WebControls.TextBox> 控制項。 因此，判斷網頁使用者的地區設定和文化特性就變得非常重要。 當您剖析使用者輸入時，可以接著套用使用者地區設定和文化特性所定義的格式設定慣例。  
   
 ### <a name="to-convert-numeric-input-from-a-web-textbox-control-to-a-number"></a>將來自 Web TextBox 控制項的數值輸入轉換為數字  
   
-1.  判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果不要，請繼續進行步驟 6。  
+1. 判斷是否已填入由 <xref:System.Web.HttpRequest.UserLanguages%2A?displayProperty=nameWithType> 屬性所傳回的字串陣列。 如果不要，請繼續進行步驟 6。  
   
-2.  如果由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，請擷取它的第一個元素。 第一個元素代表使用者預設或慣用的語言和地區。  
+2. 如果由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列已填入，請擷取它的第一個元素。 第一個元素代表使用者預設或慣用的語言和地區。  
   
-3.  藉由呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來將代表使用者慣用文化特性的 <xref:System.Globalization.CultureInfo> 物件具現化。  
+3. 藉由呼叫 <xref:System.Globalization.CultureInfo.%23ctor%28System.String%2CSystem.Boolean%29?displayProperty=nameWithType> 建構函式來將代表使用者慣用文化特性的 <xref:System.Globalization.CultureInfo> 物件具現化。  
   
-4.  針對您想要轉換使用者輸入的目標數值類型呼叫 `TryParse` 或 `Parse` 方法。 搭配 `provider` 參數使用 `TryParse` 或 `Parse` 方法的多載，然後將下列任一項傳遞給它：  
+4. 針對您想要轉換使用者輸入的目標數值類型呼叫 `TryParse` 或 `Parse` 方法。 搭配 `provider` 參數使用 `TryParse` 或 `Parse` 方法的多載，然後將下列任一項傳遞給它：  
   
     -   在步驟 3 中建立的 <xref:System.Globalization.CultureInfo> 物件。  
   
     -   由步驟 3 中所建立 <xref:System.Globalization.CultureInfo> 物件之 <xref:System.Globalization.CultureInfo.NumberFormat%2A> 屬性所傳回的 <xref:System.Globalization.NumberFormatInfo> 物件。  
   
-5.  如果轉換失敗，請針對由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回之字串陣列中的每個剩餘元素，重複執行步驟 2 到 4。  
+5. 如果轉換失敗，請針對由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回之字串陣列中的每個剩餘元素，重複執行步驟 2 到 4。  
   
-6.  如果轉換仍然失敗，或由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列是空的，請使用不因文化特性而異的方式來剖析字串，這是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回。  
+6. 如果轉換仍然失敗，或由 <xref:System.Web.HttpRequest.UserLanguages%2A> 屬性所傳回的字串陣列是空的，請使用不因文化特性而異的方式來剖析字串，這是由 <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> 屬性所傳回。  
   
 ## <a name="example"></a>範例  
  下列範例是 Web 表單的完整程式碼後置頁面，此表單會要求使用者在 <xref:System.Web.UI.WebControls.TextBox> 控制項中輸入數值，並將它轉換為數字。 然後將該數字加倍，並使用與原始輸入相同的格式規則來顯示。  

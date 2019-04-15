@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 8f4ee44e8432bae3537c6f064f564b9f044a7c33
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: a573a78109036b87201b53f72aa8dba6755e7a21
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761452"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236588"
 ---
 ### <a name="crash-in-selector-when-removing-an-item-from-a-custom-incc-collection"></a>從自訂 INCC 集合中移除項目時，選取器發生損毀
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761452"
 |範圍|次要|
 |版本|4.7|
 |類型|執行階段|
-

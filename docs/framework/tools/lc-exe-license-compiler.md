@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms, control licenses
 - licensed controls [Windows Forms]
 ms.assetid: 2de803b8-495e-4982-b209-19a72aba0460
-ms.openlocfilehash: 527a0bc6591dc4146ec94b2a46777d6ca533ec74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6c4432d94372ce10ee9ecdf6e441eda3318a20d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54601686"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298964"
 ---
 # <a name="lcexe-license-compiler"></a>Lc.exe (授權編譯器)
 授權編譯器可以讀取包含授權資訊的文字檔，並產生可內嵌於通用語言執行平台可執行檔的二進位檔案做為資源。  
@@ -52,19 +52,19 @@ ms.locfileid: "54601686"
   
 ## <a name="example"></a>範例  
   
-1.  如果您要使用名為 `HostApp.exe` 之應用程式中 `Samples.DLL` 所包含的授權控制項 `MyCompany.Samples.LicControl1`，可以建立包含下列程式碼的 `HostAppLic.txt`。  
+1. 如果您要使用名為 `HostApp.exe` 之應用程式中 `Samples.DLL` 所包含的授權控制項 `MyCompany.Samples.LicControl1`，可以建立包含下列程式碼的 `HostAppLic.txt`。  
   
     ```  
     MyCompany.Samples.LicControl1, Samples.DLL  
     ```  
   
-2.  使用下列命令建立這個稱為 `HostApp.exe.licenses` 的 .licenses 檔案。  
+2. 使用下列命令建立這個稱為 `HostApp.exe.licenses` 的 .licenses 檔案。  
   
     ```  
     lc /target:HostApp.exe /complist:hostapplic.txt /i:Samples.DLL /outdir:c:\bindir  
     ```  
   
-3.  建置包含 .licenses 檔案當做資源的 `HostApp.exe`。 如果您正在建置 C# 應用程式，可以使用下列命令來建置應用程式。  
+3. 建置包含 .licenses 檔案當做資源的 `HostApp.exe`。 如果您正在建置 C# 應用程式，可以使用下列命令來建置應用程式。  
   
     ```  
     csc /res:HostApp.exe.licenses /out:HostApp.exe *.cs  
@@ -93,6 +93,7 @@ lc @response.rsp
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [工具](../../../docs/framework/tools/index.md)
 - [Al.exe (組件連結器)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [命令提示字元](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

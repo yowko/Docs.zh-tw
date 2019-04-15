@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5688559bcadea309bb0ddb4b156f94540e7be624
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664326"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298418"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>驗證 DOM 中的 XML 文件
 依預設，<xref:System.Xml.XmlDocument> 類別不會根據 XML 結構描述定義語言 (XSD) 結構描述或文件類型定義 (DTD)，驗證文件物件模型 (DOM) 中的 XML；只會驗證 XML 的格式是否正確。  
@@ -29,15 +29,15 @@ ms.locfileid: "54664326"
 ### <a name="creating-an-xml-schema-validating-xmlreader"></a>建立 XML 結構描述驗證的 XmlReader  
  若要建立 XML 結構描述驗證的 <xref:System.Xml.XmlReader>，請遵循下列步驟。  
   
-1.  建構新的 <xref:System.Xml.XmlReaderSettings> 執行個體。  
+1. 建構新的 <xref:System.Xml.XmlReaderSettings> 執行個體。  
   
-2.  將 XML 結構描述加入至 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 執行個體的 <xref:System.Xml.XmlReaderSettings> 屬性。  
+2. 將 XML 結構描述加入至 <xref:System.Xml.XmlReaderSettings.Schemas%2A> 執行個體的 <xref:System.Xml.XmlReaderSettings> 屬性。  
   
-3.  指定 `Schema` 做為 <xref:System.Xml.XmlReaderSettings.ValidationType%2A>。  
+3. 指定 `Schema` 做為 <xref:System.Xml.XmlReaderSettings.ValidationType%2A>。  
   
-4.  選擇性地指定 <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> 及 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>，以處理驗證期間遇到的結構描述驗證錯誤及警告。  
+4. 選擇性地指定 <xref:System.Xml.XmlReaderSettings.ValidationFlags%2A> 及 <xref:System.Xml.XmlReaderSettings.ValidationEventHandler>，以處理驗證期間遇到的結構描述驗證錯誤及警告。  
   
-5.  最後，將 <xref:System.Xml.XmlReaderSettings> 物件傳遞至 <xref:System.Xml.XmlReader.Create%2A> 類別的 <xref:System.Xml.XmlReader> 方法，及傳遞至 XML 文件，建立結構描述驗證的 <xref:System.Xml.XmlReader>。  
+5. 最後，將 <xref:System.Xml.XmlReaderSettings> 物件傳遞至 <xref:System.Xml.XmlReader.Create%2A> 類別的 <xref:System.Xml.XmlReader> 方法，及傳遞至 XML 文件，建立結構描述驗證的 <xref:System.Xml.XmlReader>。  
   
 ### <a name="example"></a>範例  
  在下面的程式碼範例中，結構描述驗證的 <xref:System.Xml.XmlReader> 會驗證載入至 DOM 的 XML 資料。 對 XML 文件進行無效的修改，然後重新驗證該文件，會導致結構描述驗證錯誤。 最後，更正其中一個錯誤，然後對 XML 文件的一部分進行部分驗證。  

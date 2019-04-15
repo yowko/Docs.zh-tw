@@ -1,5 +1,5 @@
 ---
-title: HOW TO：為 Visual Studio 命令列設定環境變數
+title: 作法：為 Visual Studio 命令列設定環境變數
 ms.date: 09/29/2017
 f1_keywords:
 - cs.build.commandline
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - Visual C# compiler, enabling
 - compiling source code, from command line
 ms.assetid: 7ec09480-5612-4f6a-8d00-ad90ea9bca5d
-ms.openlocfilehash: ffc75a01230df078073f163c97a8c77229d3b2a1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c906a2274f57f5a89fb16198c8f6ed2e3a335e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590873"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322117"
 ---
-# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>HOW TO：為 Visual Studio 命令列設定環境變數
+# <a name="how-to-set-environment-variables-for-the-visual-studio-command-line"></a>作法：為 Visual Studio 命令列設定環境變數
 
 VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
 
@@ -33,11 +33,11 @@ VsDevCmd.bat 檔案可設定適當的環境變數，以啟用命令列組建。
   
 ### <a name="to-run-vsdevcmdbat"></a>執行 VsDevCmd.BAT  
   
-1.  從 [開始] 功能表中，開啟 [適用於 VS 2017 的開發人員命令提示字元]。  位置在 **Visual Studio 2017** 資料夾中。
+1. 從 [開始] 功能表中，開啟 [適用於 VS 2017 的開發人員命令提示字元]。  位置在 **Visual Studio 2017** 資料夾中。
   
-2.  根據您的安裝變更到 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 或是 \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 子目錄。  (目前的*版本*為 *2017*。 *供應項目*為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
+2. 根據您的安裝變更到 \Program Files\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 或是 \Program Files (x86)\Microsoft Visual Studio\\*Version*\\*Offering*\Common7\Tools 子目錄。  (目前的*版本*為 *2017*。 *供應項目*為 *Enterprise*、*Professional* 或 *Community* 中的其中一個。)
   
-3.  鍵入 **VsDevCmd**以執行 VsDevCmd.bat。  
+3. 鍵入 **VsDevCmd**以執行 VsDevCmd.bat。  
   
     > [!CAUTION]
     >  在不同的電腦上，VsDevCmd.bat 檔案可能也不同。 請勿使用另一部電腦的 VsDevCmd.bat 來取代遺失或損毀的 VsDevCmd.bat 檔案。 請重新執行安裝程式以取代遺失的檔案。  

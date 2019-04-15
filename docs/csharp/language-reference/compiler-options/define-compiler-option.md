@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /d compiler option [C#]
 - d compiler option [C#]
 ms.assetid: f17d7b4d-82d0-4133-8563-68cced1cac6e
-ms.openlocfilehash: 56028bcf3b843a4f6884e2d7cc7d409621adba34
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 46ceca3a84e8ffbe6d07886c1b93d062f3ccd2d1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54558811"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305256"
 ---
 # <a name="-define-c-compiler-options"></a>-define (C# 編譯器選項)
 **-define** 選項會將 `name` 定義為程式中所有原始程式碼檔的符號。  
@@ -28,7 +28,7 @@ ms.locfileid: "54558811"
 ```  
   
 ## <a name="arguments"></a>引數  
- `name`、 `name2`  
+ `name`, `name2`  
  您要定義的一或多個符號之名稱。  
   
 ## <a name="remarks"></a>備註  
@@ -51,9 +51,9 @@ ms.locfileid: "54558811"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  在 [建置] 索引標籤的 [條件式編譯的符號] 方塊中，輸入要定義的符號。 例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。  
+2. 在 [建置] 索引標籤的 [條件式編譯的符號] 方塊中，輸入要定義的符號。 例如，如果您想要使用下列程式碼範例，只要在文字方塊中鍵入 `xx` 即可。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.DefineConstants%2A>。  
   

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用事件屬性處理多個事件
+title: 作法：使用事件屬性處理多個事件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 30047cba-e2fd-41c6-b9ca-2ad7a49003db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 158313bcecc8e4bd89f358aecf92324c10789b43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8d68770fe60f4d9fb3d9982cf426376d54b229e
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592217"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330112"
 ---
-# <a name="how-to-handle-multiple-events-using-event-properties"></a>HOW TO：使用事件屬性處理多個事件
+# <a name="how-to-handle-multiple-events-using-event-properties"></a>作法：使用事件屬性處理多個事件
 為了要使用事件屬性，您會在引發事件的類別中定義事件屬性，然後在處理事件的類別中設定事件屬性的委派。 若要在類別中實作多個事件屬性，該類別內部必須儲存及維護為每個事件所定義的委派。 型的方法是實作以事件索引鍵編製索引的委派集合。  
   
  若要儲存每個事件的委派，您可以使用 <xref:System.ComponentModel.EventHandlerList> 類別，或實作您自己的集合。 集合類別必須提供方法，根據事件索引鍵來設定、存取和擷取事件處理常式委派。 例如，您可以使用 <xref:System.Collections.Hashtable> 類別，或是從 <xref:System.Collections.DictionaryBase> 類別衍生自訂類別。 委派集合的實作詳細資料不需要公開至類別之外。  
@@ -30,15 +30,15 @@ ms.locfileid: "54592217"
   
 ### <a name="to-handle-multiple-events-using-event-properties"></a>使用事件屬性處理多個事件  
   
-1.  定義在類別中引發事件的委派集合。  
+1. 定義在類別中引發事件的委派集合。  
   
-2.  定義每個事件的索引鍵。  
+2. 定義每個事件的索引鍵。  
   
-3.  在引發事件的類別中定義事件屬性。  
+3. 在引發事件的類別中定義事件屬性。  
   
-4.  使用委派集合實作事件屬性的 add 和 remove 存取子方法。  
+4. 使用委派集合實作事件屬性的 add 和 remove 存取子方法。  
   
-5.  使用公用事件屬性，在處理事件的類別中新增和移除事件處理常式委派。  
+5. 使用公用事件屬性，在處理事件的類別中新增和移除事件處理常式委派。  
   
 ## <a name="example"></a>範例  
  下列 C# 範例會使用 <xref:System.ComponentModel.EventHandlerList> 實作事件屬性 `MouseDown` 及 `MouseUp`，以儲存每個事件的委派。 事件屬性建構的關鍵字會以粗體顯示。  
@@ -55,4 +55,4 @@ ms.locfileid: "54592217"
 - <xref:System.ComponentModel.EventHandlerList?displayProperty=nameWithType>
 - [事件](../../../docs/standard/events/index.md)
 - <xref:System.Web.UI.Control.Events%2A>
-- [如何：宣告自訂事件以節省記憶體](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)
+- [作法：宣告自訂事件以節省記憶體](~/docs/visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)

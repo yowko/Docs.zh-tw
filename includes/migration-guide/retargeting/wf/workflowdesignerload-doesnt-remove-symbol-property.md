@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 19c613bf48479cb1e52531a4d6594db8ad89b8f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234675"
+---
 ### <a name="workflowdesignerload-doesnt-remove-symbol-property"></a>WorkflowDesigner.Load 不會移除符號屬性
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Activities.Presentation.WorkflowDesigner.Load?displayProperty=nameWithType></li></ul>|
-

@@ -1,5 +1,5 @@
 ---
-title: HOW TO：取消工作及其子系
+title: 作法：取消工作及其子系
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -10,23 +10,23 @@ helpviewer_keywords:
 ms.assetid: 08574301-8331-4719-ad50-9cf7f6ff3048
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed3129364d73d196b2e25b962b8c42325a144dfd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 08e5712db60fb09b48d6be9f35737c9a884d1ce8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54642827"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324470"
 ---
-# <a name="how-to-cancel-a-task-and-its-children"></a>HOW TO：取消工作及其子系
+# <a name="how-to-cancel-a-task-and-its-children"></a>作法：取消工作及其子系
 這些範例示範如何執行下列工作：  
   
-1.  建立和啟動可取消的工作。  
+1. 建立和啟動可取消的工作。  
   
-2.  將取消權杖傳送至您的使用者委派或工作執行個體 (選擇性)。  
+2. 將取消權杖傳送至您的使用者委派或工作執行個體 (選擇性)。  
   
-3.  注意並回應使用者委派中的取消要求。  
+3. 注意並回應使用者委派中的取消要求。  
   
-4.  注意已取消工作的呼叫端執行緒 (選擇性)。  
+4. 注意已取消工作的呼叫端執行緒 (選擇性)。  
   
  呼叫端執行緒不會強制結束工作；它只會通知已要求取消。 如果工作已在執行，則是由使用者委派來通知要求並適當回應。 如果在工作執行前要求取消，則永遠不會執行使用者委派，且工作物件會轉換成 Canceled 狀態。  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: c9d6111edcfeec6852f23cc0768833de32e61022
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235154"
+---
 ### <a name="error-codes-for-maxrequestlength-or-maxreceivedmessagesize-are-different"></a>maxRequestLength 或 maxReceivedMessageSize 的錯誤碼不同
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|Edge|
 |版本|4.5|
 |類型|執行階段|
-

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - target compiler options [C#], /target:library
 - /target compiler options [C#], /target:library
 ms.assetid: c5670e88-2126-47c1-8d1c-217923837d17
-ms.openlocfilehash: 0bdf8d95004ca11e3d6b9b27568f7310a802a28b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2e0935965e9225ab524290429803fe4c9ccc80c6
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54542440"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313641"
 ---
 # <a name="-targetlibrary-c-compiler-options"></a>-target:library (C# 編譯器選項)
 **-target:library** 選項可讓編譯器建立動態連結程式庫 (DLL)，而不是可執行檔 (EXE)。  
@@ -35,11 +35,11 @@ ms.locfileid: "54542440"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [應用程式] 屬性頁。  
+2. 按一下 [應用程式] 屬性頁。  
   
-3.  修改 [輸出類型] 屬性。  
+3. 修改 [輸出類型] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   

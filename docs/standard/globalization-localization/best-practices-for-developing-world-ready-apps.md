@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f08169c7-aad8-4ec3-9a21-9ebd3b89986c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a42a568e7c3f3a1a5c84d2ceae49c262f77d275d
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: d96e223b85178c7f2784a523e5609057d1432488
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442486"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59310534"
 ---
 # <a name="best-practices-for-developing-world-ready-applications"></a>開發世界性應用程式的最佳做法
 
@@ -71,7 +71,7 @@ ms.locfileid: "56442486"
 
 8. 使用 <xref:System.Resources.ResourceManager?displayProperty=nameWithType> 類別來根據文化特性擷取資源。
 
-9. 使用 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 建立 [Windows Forms] 對話方塊，如此就能使用 [Windows Forms 資源編輯器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) 將對話方塊當地語系化。 請不要以手動方式編碼 Windows Form 對話方塊。
+9. 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 建立 [Windows Forms] 對話方塊，如此就能使用 [Windows Forms 資源編輯器 (Winres.exe)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md) 將對話方塊當地語系化。 請不要以手動方式編碼 Windows Form 對話方塊。
 
 10. 進行專業當地語系化 (轉譯)。
 

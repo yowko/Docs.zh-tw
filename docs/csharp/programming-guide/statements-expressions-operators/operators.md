@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 7d0ceb0cddc49722d7122e4fde6149fe1ea86208
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545464"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59307453"
 ---
 # <a name="operators-c-programming-guide"></a>運算子 (C# 程式設計手冊)
 
@@ -63,7 +63,7 @@ ms.locfileid: "58545464"
 |----------------|-----------------|  
 |[+](../../../csharp/language-reference/operators/addition-operator.md)x|身分識別|  
 |[-](../../../csharp/language-reference/operators/subtraction-operator.md)x|否定|  
-|[\!](../../../csharp/language-reference/operators/logical-negation-operator.md)x|邏輯否定|  
+|[\!](../../../csharp/language-reference/operators/boolean-logical-operators.md#logical-negation-operator-)x|邏輯否定|  
 |[~](../../../csharp/language-reference/operators/bitwise-complement-operator.md)x|位元否定|  
 |[++](../../../csharp/language-reference/operators/arithmetic-operators.md#increment-operator-)x|前置遞增|  
 |[--](../../../csharp/language-reference/operators/arithmetic-operators.md#decrement-operator---)x|前置遞減|  
@@ -91,7 +91,7 @@ ms.locfileid: "58545464"
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左移|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右移|  
   
- **關係和型別運算子**  
+ **關係和類型運算子**  
   
 |運算式|說明|  
 |----------------|-----------------|  
@@ -107,7 +107,7 @@ ms.locfileid: "58545464"
 |運算式|說明|  
 |----------------|-----------------|  
 |x [==](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-) y|等於|  
-|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不相等|  
+|x [!=](../../../csharp/language-reference/operators/equality-operators.md#inequality-operator-) y|不等於|  
   
  **邏輯、條件和 Null 運算子**  
   
@@ -116,8 +116,8 @@ ms.locfileid: "58545464"
 |邏輯 AND|x [&](../../../csharp/language-reference/operators/and-operator.md) y|整數位元 AND、布林邏輯 AND|  
 |邏輯 XOR|x [^](../../../csharp/language-reference/operators/xor-operator.md) y|整數位元 XOR、布林邏輯 XOR|  
 |邏輯 OR|x [&#124;](../../../csharp/language-reference/operators/or-operator.md) y|整數位元 OR、布林邏輯 OR|  
-|條件式 AND|x [&&](../../../csharp/language-reference/operators/conditional-and-operator.md) y|只有在 x 為 true 時評估 y|  
-|條件式 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/conditional-or-operator.md) y|只有在 x 為 false 時評估 y|  
+|條件式 AND|x [&&](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-and-operator-) y|只有在 x 為 true 時評估 y|  
+|條件式 OR|x [&#124;&#124;](../../../csharp/language-reference/operators/boolean-logical-operators.md#conditional-logical-or-operator-) y|只有在 x 為 false 時評估 y|  
 |Null 聯合|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|如果 x 為 null 則判斷值為 y，否則判斷值為 x|  
 |條件式|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|如果 x 為 true 則判斷值為 y；如果 x 為 false 則判斷值為 z|  
   
@@ -177,5 +177,5 @@ a = (b = c);
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [陳述式、運算式和運算子](../../../csharp/programming-guide/statements-expressions-operators/index.md)

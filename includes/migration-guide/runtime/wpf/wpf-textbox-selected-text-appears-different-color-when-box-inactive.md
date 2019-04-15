@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 74ce1bbc9a887aee3a33eaf05084e8c2000967c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235387"
+---
 ### <a name="wpf-textbox-selected-text-appears-a-different-color-when-the-text-box-is-inactive"></a>WPF TextBox 選取文字在文字方塊非作用中時，會以不同的色彩來顯示
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Windows.Controls.TextBox?displayProperty=nameWithType></li></ul>|
-

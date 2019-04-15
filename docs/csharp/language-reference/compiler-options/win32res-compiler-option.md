@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -win32res compiler option [C#]
 - win32res compiler option [C#]
 ms.assetid: 3c33f750-6948-4c7e-a27e-bef98f77255b
-ms.openlocfilehash: 522d80ce6be277c048fa62cc1a7b077d8bb08bfe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4026fcbd7dc2ef29c1e7ee01a0f37b3ff471b187
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54544697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322370"
 ---
 # <a name="-win32res-c-compiler-options"></a>-win32res (C# 編譯器選項)
 **-win32res** 選項會將 Win32 資源插入至輸出檔案中。  
@@ -38,11 +38,11 @@ ms.locfileid: "54544697"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [應用程式] 屬性頁。  
+2. 按一下 [應用程式] 屬性頁。  
   
-3.  按一下 [資源檔] 按鈕，然後使用下拉式方塊選擇檔案。  
+3. 按一下 [資源檔] 按鈕，然後使用下拉式方塊選擇檔案。  
   
 ## <a name="example"></a>範例  
  編譯 `in.cs` 並附加 Win32 資源檔 `rf.res`，以產生 `in.exe`：  

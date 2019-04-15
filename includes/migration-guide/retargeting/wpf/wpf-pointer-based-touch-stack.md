@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3463b6c45952aab0023e40921739e84eb51ca001
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236380"
+---
 ### <a name="wpf-pointer-based-touch-stack"></a>WPF 指標式觸控堆疊
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|Edge|
 |版本|4.7|
 |類型|正在重定目標|
-

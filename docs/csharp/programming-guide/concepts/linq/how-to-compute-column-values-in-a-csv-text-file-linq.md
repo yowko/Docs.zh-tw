@@ -1,20 +1,20 @@
 ---
-title: HOW TO：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
+title: 作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 3a4bd410bc0d01e835132f7752970417be66941b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54585834"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309358"
 ---
-# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>HOW TO：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
+# <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>作法：計算 CSV 文字檔中的資料行值 (LINQ) (C#)
 本例示範如何在 .csv 檔案的資料行上執行彙總計算，例如總和、平均、最小值和最大值。 此處顯示的範例準則可以套用至其他類型的結構化文字。  
   
 ### <a name="to-create-the-source-file"></a>建立來源檔案  
   
-1.  將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。  
+1. 將下列各行複製到名為 scores.csv 的檔案中，然後將該檔案儲存至您的專案資料夾。 假設第一個資料行代表學號，後續的資料行代表四項測驗的分數。  
   
     ```  
     111, 97, 92, 81, 60  

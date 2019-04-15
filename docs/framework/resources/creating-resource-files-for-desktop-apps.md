@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6c5ad891-66a0-4e7a-adcf-f41863ba6d8d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e5ca80de113785904562ff1cef953de8a5a9460
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: c7ff34285220fd1e3c17503a8387104e91ec08b1
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56442135"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313654"
 ---
 # <a name="create-resource-files-for-net-apps"></a>建立 .NET 應用程式的資源檔
 
@@ -31,7 +31,7 @@ ms.locfileid: "56442135"
 
 - 以程式設計方式建立二進位資源檔 (.resources)。 您接著可以使用語言編譯器將檔案內嵌在應用程式可執行檔或應用程式程式庫中，或使用[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將它內嵌在附屬組件中。 如需詳細資訊，請參閱 [.resources 檔案中的資源](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)一節。
 
-- 使用 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 建立資源檔，並將它包含在您的專案中。 Visual Studio 提供可讓您新增、刪除和修改資源的資源編輯器。 在編譯時間，資源檔會自動轉換成二進位 .resources 檔案，並內嵌在應用程式組件或附屬組件中。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)一節。
+- 使用 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 建立資源檔，並將它包含在您的專案中。 Visual Studio 提供可讓您新增、刪除和修改資源的資源編輯器。 在編譯時間，資源檔會自動轉換成二進位 .resources 檔案，並內嵌在應用程式組件或附屬組件中。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)一節。
 
 <a name="TextFiles"></a>
 ## <a name="resources-in-text-files"></a>文字檔中的資源
@@ -172,7 +172,7 @@ csc greeting.cs -resource:GreetingResources.resources
 ```
 
 > [!IMPORTANT]
-> 因為 .resx 檔案必須包含具有預先定義格式的格式正確 XML，所以不建議手動使用 .resx 檔案，特別是 .resx 檔案包含字串以外的資源時。 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 改為提供一種透明的介面，來建立和操作 .resx 檔案。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)一節。 您也可以透過程式設計方式建立和操作 .resx 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](../../../docs/framework/resources/working-with-resx-files-programmatically.md)。
+> 因為 .resx 檔案必須包含具有預先定義格式的格式正確 XML，所以不建議手動使用 .resx 檔案，特別是 .resx 檔案包含字串以外的資源時。 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 改為提供一種透明的介面，來建立和操作 .resx 檔案。 如需詳細資訊，請參閱 [Visual Studio 中的資源檔](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#VSResFiles)一節。 您也可以透過程式設計方式建立和操作 .resx 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](../../../docs/framework/resources/working-with-resx-files-programmatically.md)。
 
 <a name="ResourcesFiles"></a>
 ## <a name="resources-in-resources-files"></a>.resources 檔案中的資源
@@ -198,7 +198,7 @@ csc greeting.cs -resource:GreetingResources.resources
 <a name="VSResFiles"></a>
 ## <a name="resource-files-in-visual-studio"></a>Visual Studio 中的資源檔
 
-當您將資源檔新增至 [Visual Studio](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 專案時，Visual Studio 會在專案目錄中建立 .resx 檔案。 Visual Studio 提供可讓您新增字串、影像和二進位物件的資源編輯器。 因為編輯器設計成只處理靜態資料，所以無法使用它們來儲存程式化物件；您必須以程式設計方式將物件資料寫入 .resx 檔案或 .resources 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](../../../docs/framework/resources/working-with-resx-files-programmatically.md)和 [.resources 檔案中的資源](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)章節。
+當您將資源檔新增至 [Visual Studio](https://visualstudio.microsoft.com/vs/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 專案時，Visual Studio 會在專案目錄中建立 .resx 檔案。 Visual Studio 提供可讓您新增字串、影像和二進位物件的資源編輯器。 因為編輯器設計成只處理靜態資料，所以無法使用它們來儲存程式化物件；您必須以程式設計方式將物件資料寫入 .resx 檔案或 .resources 檔案。 如需詳細資訊，請參閱[以程式設計方式使用 .resx 檔案](../../../docs/framework/resources/working-with-resx-files-programmatically.md)和 [.resources 檔案中的資源](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md#ResourcesFiles)章節。
 
 若您要新增當地語系化的資源，請提供它們與主要資源檔相同的根檔案名稱。 您也應在檔案名稱中指定它們的文化特性 (Culture)。 例如，如果您新增名為 Resources.resx 的資源檔，也可能會建立名為 Resources.en-US.resx 和 Resources.fr-FR.resx 的資源檔，來分別保留英文 (美國) 和法文 (法國) 文化特性的當地語系化資源。 您也應該指定應用程式的預設文化特性。 如果找不到特定文化特性的當地語系化資源，則這是使用其資源的文化特性。 若要指定預設文化特性，請在 Visual Studio 的方案總管中以滑鼠右鍵按一下專案名稱、指向 [應用程式]、按一下 [組件資訊]，然後在 [中性語言] 清單中選取適當語言/文化特性。
 

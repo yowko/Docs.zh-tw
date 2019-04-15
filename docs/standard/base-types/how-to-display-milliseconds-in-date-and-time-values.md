@@ -1,5 +1,5 @@
 ---
-title: HOW TO：在日期與時間值中顯示毫秒
+title: 作法：在日期與時間值中顯示毫秒
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -14,21 +14,21 @@ helpviewer_keywords:
 ms.assetid: ae1a0610-90b9-4877-8eb6-4e30bc5e00cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a3678c687817c4c93508d95c3d4b7453eadee32e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3950b7a8cf107fc06240f56e5f95eca4e6882251
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643763"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59314928"
 ---
-# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>HOW TO：在日期與時間值中顯示毫秒
+# <a name="how-to-display-milliseconds-in-date-and-time-values"></a>作法：在日期與時間值中顯示毫秒
 預設的日期和時間格式化方法 (例如 <xref:System.DateTime.ToString?displayProperty=nameWithType>) 包括時間值的小時、分鐘和秒，但不包括它的毫秒元件。 本主題說明如何將日期和時間的毫秒部分加入格式化的日期和時間字串。  
   
 ### <a name="to-display-the-millisecond-component-of-a-datetime-value"></a>顯示 DateTime 值的毫秒部分  
   
-1.  如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> 值。  
+1. 如果您要處理日期的字串表示法，請使用靜態 <xref:System.DateTime> 或 <xref:System.DateTimeOffset> 方法，將其轉換成 <xref:System.DateTime.Parse%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.Parse%28System.String%29?displayProperty=nameWithType> 值。  
   
-2.  若要擷取時間毫秒元件的字串表示，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%2A> 方法，並單獨傳遞 `fff` 或 `FFF` 自訂格式模式，或是連同其他自訂格式規範作為 `format` 參數一併傳遞。  
+2. 若要擷取時間毫秒元件的字串表示，請呼叫日期和時間值的 <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> 或 <xref:System.DateTimeOffset.ToString%2A> 方法，並單獨傳遞 `fff` 或 `FFF` 自訂格式模式，或是連同其他自訂格式規範作為 `format` 參數一併傳遞。  
   
 ## <a name="example"></a>範例  
  此範例會對主控台單獨顯示 <xref:System.DateTime> 和 <xref:System.DateTimeOffset> 值的毫秒元件，以及包含在較長的日期和時間字串中一併顯示。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b6014613-641c-4912-9e2f-83a99210a037
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 590fed6a2a4e59f438dc73057973aff4539cb1aa
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 83afabf58048620b3b9936560f2b3fdf1e2039d5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54589762"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59226933"
 ---
 # <a name="applying-interop-attributes"></a>套用 Interop 屬性
 <xref:System.Runtime.InteropServices> 命名空間提供了三種類別的 Interop 專屬屬性：一種是您在設計階段套用的屬性、一種是 COM Interop 工具和 API 在轉換過程中套用的屬性，還有一種是您或 COM Interop 套用的屬性。  
@@ -68,6 +68,7 @@ ms.locfileid: "54589762"
 |<xref:System.Runtime.InteropServices.TypeLibVarAttribute>|含有原來針對這個變數從 COM 類型程式庫匯入的 **VARFLAGS**。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Runtime.InteropServices>
 - [將 .NET Framework 元件公開給 COM](../../../docs/framework/interop/exposing-dotnet-components-to-com.md)
 - [屬性](../../../docs/standard/attributes/index.md)

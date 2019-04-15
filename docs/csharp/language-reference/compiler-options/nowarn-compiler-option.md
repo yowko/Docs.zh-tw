@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /nowarn compiler option [C#]
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
-ms.openlocfilehash: 79d61e7e4096ab206e207a05553a68020bca6204
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664820"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324145"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# 編譯器選項)
 **-nowarn** 選項可讓您隱藏編譯器不顯示一或多個警告。 請以逗點分隔多個警告編號。  
@@ -25,7 +25,7 @@ ms.locfileid: "54664820"
 ```  
   
 ## <a name="arguments"></a>引數  
- `number1`、 `number2`  
+ `number1`, `number2`  
  您想要編譯器隱藏的警告編號。  
   
 ## <a name="remarks"></a>備註  
@@ -43,11 +43,11 @@ ms.locfileid: "54664820"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性]  頁面。 如需詳細資料，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
+1. 開啟專案的 [屬性]  頁面。 如需詳細資料，請參閱[專案設計工具、建置頁 (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)。  
   
-2.  按一下 [建置] 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3.  修改**隱藏警告**屬性。  
+3. 修改**隱藏警告**屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.DelaySign%2A>。  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cf1a8169351e29c18d85303fb32d4394877448f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235393"
+---
 ### <a name="log-file-name-created-by-the-objectcontextcreatedatabase-method-has-changed-to-match-sql-server-specifications"></a>ObjectContext.CreateDatabase 方法所建立的記錄檔名稱已變更為符合 SQL Server 規格
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Data.Objects.ObjectContext.CreateDatabase?displayProperty=nameWithType></li></ul>|
-

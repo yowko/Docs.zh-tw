@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 6dd7f2a2f6dec306940650beee58104b20788bdb
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234906"
+---
 ### <a name="calls-to-claimsidentity-constructors"></a>呼叫 ClaimsIdentity 建構函式
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.6.2|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity)?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim})?displayProperty=nameWithType></li><li><xref:System.Security.Claims.ClaimsIdentity.%23ctor(System.Security.Principal.IIdentity,System.Collections.Generic.IEnumerable{System.Security.Claims.Claim},System.String,System.String,System.String)?displayProperty=nameWithType></li></ul>|
-

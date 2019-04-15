@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -lib compiler option [C#]
 - /lib compiler option [C#]
 ms.assetid: b0efcc88-e8aa-4df4-a00b-8bdef70b7673
-ms.openlocfilehash: f3ea4a323fa57a49499c4fa6dea43aa22c3475df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 49920a46f1d970c3f00025c3dc3eb384c937aa99
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54677871"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59319400"
 ---
 # <a name="-lib-c-compiler-options"></a>-lib (C# 編譯器選項)
 **-lib** 選項會使用 [-reference (C# 編譯器選項)](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) 選項，來指定參考的組件位置。  
@@ -34,13 +34,13 @@ ms.locfileid: "54677871"
 ## <a name="remarks"></a>備註  
  編譯器會以下列順序搜尋不完整的組件參考：  
   
-1.  目前的工作目錄。 這是叫用編譯器的起點目錄。  
+1. 目前的工作目錄。 這是叫用編譯器的起點目錄。  
   
-2.  通用語言執行平台系統目錄。  
+2. 通用語言執行平台系統目錄。  
   
-3.  **-lib** 所指定的目錄。  
+3. **-lib** 所指定的目錄。  
   
-4.  LIB 環境變數所指定的目錄。  
+4. LIB 環境變數所指定的目錄。  
   
  使用 **-reference** 來指定組件參考。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "54677871"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性頁]  對話方塊。  
+1. 開啟專案的 [屬性頁]  對話方塊。  
   
-2.  按一下 [參考路徑] 屬性頁。  
+2. 按一下 [參考路徑] 屬性頁。  
   
-3.  修改清單方塊的內容。  
+3. 修改清單方塊的內容。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.ReferencePath%2A>。  
   

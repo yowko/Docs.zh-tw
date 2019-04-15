@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: e12ba8eb53e6725ebc2e1d87edff3a6a3ce2116b
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 05116d80fcd6b75f366a2542ad2eadd5f434991c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "58467475"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236124"
 ---
 ### <a name="improved-wcf-chain-trust-certificate-validation-for-nettcp-certificate-authentication"></a>針對 Net.Tcp 憑證驗證改善的 WCF 鏈結信任憑證驗證
 
@@ -15,4 +15,3 @@ ms.locfileid: "58467475"
 |範圍|次要|
 |版本|4.7.2|
 |類型|執行階段|
-

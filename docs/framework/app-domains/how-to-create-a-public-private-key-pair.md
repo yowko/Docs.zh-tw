@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立公開/私密金鑰組
+title: 作法：建立公開/私密金鑰組
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 05026813-f3bd-4d7c-9e0b-fc588eb3d114
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce346bfe0c20e94673009adb0134fbaab62cf551
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 71eaaa85b8bd287c37f59116e75cf99b030d63ac
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54653910"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59297833"
 ---
-# <a name="how-to-create-a-public-private-key-pair"></a>HOW TO：建立公開/私密金鑰組
+# <a name="how-to-create-a-public-private-key-pair"></a>作法：建立公開/私密金鑰組
 
 若要使用強式名稱簽署組件，您必須擁有公開/私密金鑰組。 這個公用和私密的密碼編譯金鑰組將在編譯期間用來建立強式名稱的組件。 您可以使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 來建立金鑰組。 金鑰組檔案通常會有 .snk 副檔名。
 
@@ -33,7 +33,7 @@ ms.locfileid: "54653910"
 
 ## <a name="to-create-a-key-pair"></a>建立金鑰組
 
-1.  在命令提示字元中輸入下列命令：
+1. 在命令提示字元中輸入下列命令：
 
      **sn –k** \<*file name*>
 

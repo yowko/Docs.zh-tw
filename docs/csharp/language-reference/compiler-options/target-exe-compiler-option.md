@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /target compiler options [C#], /target:exe
 - -target compiler options [C#], /target:exe
 ms.assetid: bda5717d-1b91-4848-956b-fcf85c30e432
-ms.openlocfilehash: b9efa25870e11e0140cba2ad39c3bc4515056ce3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d34a25fd614a209761714e1f4eff3042ca240c0
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697877"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59331308"
 ---
 # <a name="-targetexe-c-compiler-options"></a>-target:exe (C# 編譯器選項)
 **-target:exe** 選項可讓編譯器建立可執行檔 (EXE)：主控台應用程式。  
@@ -37,11 +37,11 @@ ms.locfileid: "54697877"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [應用程式] 屬性頁。  
+2. 按一下 [應用程式] 屬性頁。  
   
-3.  修改 [輸出類型] 屬性。  
+3. 修改 [輸出類型] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.ProjectProperties3.OutputType%2A>。  
   

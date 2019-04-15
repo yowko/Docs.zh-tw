@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1fb973dcde1ca31a57fbc3022d3eb1c92a2a9d0f
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e6209df7d226d7e3acb938801d1fb77afbe1249b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45988084"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322403"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>樣式表參數和擴充物件的 XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> 類別包含可擴充樣式表語言轉換 (XSLT) 參數和 XSLT 擴充物件。 傳入 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法後，就可從樣式表叫用這些參數和擴充物件。  
@@ -50,11 +50,11 @@ ms.locfileid: "45988084"
   
 #### <a name="to-use-the-xslt-parameter-the-user-needs-to-do-the-following"></a>若要使用 XSLT 參數，使用者必須執行以下作業：  
   
-1.  使用 <xref:System.Xml.Xsl.XsltArgumentList> 來建立 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>，並加入物件。  
+1. 使用 <xref:System.Xml.Xsl.XsltArgumentList> 來建立 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A>，並加入物件。  
   
-2.  從樣式表呼叫參數。  
+2. 從樣式表呼叫參數。  
   
-3.  將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
+3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>範例  
  下列範例使用 <xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> 方法來建立參數，以保留計算的折扣日期。 折扣日期計算為從訂購日期起的 20 天。  
@@ -171,7 +171,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>輸出  
+### <a name="output"></a>Output  
   
 ```xml  
 <order>  
@@ -191,11 +191,11 @@ public class Sample
   
 #### <a name="to-use-the-xslt-extension-object-the-user-needs-to-do-the-following"></a>若要使用 XSLT 擴充物件，使用者必須執行以下作業：  
   
-1.  使用 <xref:System.Xml.Xsl.XsltArgumentList> 來建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>，並加入擴充物件。  
+1. 使用 <xref:System.Xml.Xsl.XsltArgumentList> 來建立 <xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A>，並加入擴充物件。  
   
-2.  從樣式表叫用擴充物件。  
+2. 從樣式表叫用擴充物件。  
   
-3.  將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
+3. 將 <xref:System.Xml.Xsl.XsltArgumentList> 傳遞至 <xref:System.Xml.Xsl.XslTransform.Transform%2A> 方法。  
   
 ### <a name="example"></a>範例  
  以下範例計算圓的圓周 (假設已經知道其半徑)。  
@@ -343,7 +343,7 @@ public class Sample
 </xsl:stylesheet>  
 ```  
   
-### <a name="output"></a>輸出  
+### <a name="output"></a>Output  
  `<circles xmlns:myObj="urn:myObj">`  
   
  `<circle>`  

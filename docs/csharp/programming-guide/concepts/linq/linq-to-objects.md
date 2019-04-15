@@ -2,12 +2,12 @@
 title: LINQ to Objects (C#)
 ms.date: 07/20/2015
 ms.assetid: c5c2c178-3529-4f6c-b3df-2d5267af7f22
-ms.openlocfilehash: 19dd15fdd7e818e0619647205f2369a55f3bc2b0
-ms.sourcegitcommit: 76a304c79a32aa13889ebcf4b9789a4542b48e3e
+ms.openlocfilehash: b82d21a7de4f596afb5e41487221498dd5ca9f98
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/13/2018
-ms.locfileid: "45528535"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59326628"
 ---
 # <a name="linq-to-objects-c"></a>LINQ to Objects (C#)
 詞彙 "LINQ to Objects" 是指直接搭配使用 LINQ 查詢與任何 <xref:System.Collections.IEnumerable> 或 <xref:System.Collections.Generic.IEnumerable%601> 集合，而不要使用中繼 LINQ 提供者或 API (例如 [LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md) 或 [LINQ to XML](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md))。 您可以使用 LINQ 查詢任何可列舉的集合，例如 <xref:System.Collections.Generic.List%601>、<xref:System.Array> 或 <xref:System.Collections.Generic.Dictionary%602>。 這類集合可以是使用者定義，或由 .NET Framework API 所傳回。  
@@ -16,11 +16,11 @@ ms.locfileid: "45528535"
   
  此外，LINQ 查詢還提供三種超越傳統 `foreach` 迴圈的主要優點：  
   
-1.  它們更加簡潔易懂 (尤其是在篩選多個條件時)。  
+1. 它們更加簡潔易懂 (尤其是在篩選多個條件時)。  
   
-2.  它們只要使用最少的應用程式程式碼，即可提供強大的篩選、排序及群組功能。  
+2. 它們只要使用最少的應用程式程式碼，即可提供強大的篩選、排序及群組功能。  
   
-3.  它們只需要一點修改，甚至不用修改，便可以移植到其他資料來源。  
+3. 它們只需要一點修改，甚至不用修改，便可以移植到其他資料來源。  
   
  一般來說，您要對資料執行的作業越複雜，就越能體會使用 LINQ 取代傳統反覆項目技術的好處。  
   
@@ -36,10 +36,10 @@ ms.locfileid: "45528535"
  [LINQ 和檔案目錄 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-file-directories.md)  
  說明如何使用 LINQ 與檔案系統互動。 此外也包含示範這些概念的主題連結。  
   
- [如何：使用 LINQ 查詢 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
+ [作法：使用 LINQ 查詢 ArrayList (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-query-an-arraylist-with-linq.md)  
  示範如何以 C# 查詢 ArrayList。  
   
- [如何：新增 LINQ 查詢的自訂方法 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
+ [作法：新增 LINQ 查詢的自訂方法 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-add-custom-methods-for-linq-queries.md)  
  說明如何透過將擴充方法加入至 <xref:System.Collections.Generic.IEnumerable%601> 介面，來延伸您可以用於 LINQ 查詢的方法組。  
   
  [Language-Integrated Query (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)  

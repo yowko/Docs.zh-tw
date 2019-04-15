@@ -3,12 +3,12 @@ title: 使用交叉驗證訓練機器學習模型 - ML.NET
 description: 探索如何使用具有 ML.NET 的交叉驗證訓練機器學習模型，讓模型的預測達到更高的正確性
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 7191d8bdbb9375dff6ccc7acb0aacab3cbef56a2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 9508835e613cf4f78d7f95a25cc98c3c3aade7ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676534"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59231314"
 ---
 # <a name="train-a-machine-learning-model-using-cross-validation---mlnet"></a>使用交叉驗證訓練機器學習模型 - ML.NET
 
@@ -17,7 +17,7 @@ ms.locfileid: "57676534"
 
 本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
-[交叉驗證](https://en.wikipedia.org/wiki/Cross-validation_(statistics))對 ML 應用程式而言是相當實用的技術。 此技術有助於評估每回合模型品質的差異，也讓您不必擷取個別的測試集合來進行評估。
+[交叉驗證](https://en.wikipedia.org/wiki/Cross-validation_(statistics))對 ML 應用程式而言是相當實用的技術。 這項技術有助於評估每回合模型品質的差異，也讓您不必擷取個別的測試集合來進行評估。
 
 ML.NET 會正確地自動套用功能 (只要所有前置處理都在一個學習管線)，然後使用「分層欄位」概念來確保相關範例不會分開。
 
@@ -46,7 +46,6 @@ var reader = mlContext.Data.CreateTextLoader(
     // First line of the file is a header, not a data row.
     hasHeader: true
 );
-
 
 // Read the data.
 var data = reader.Read(dataPath);

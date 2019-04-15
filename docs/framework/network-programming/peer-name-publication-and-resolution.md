@@ -2,12 +2,12 @@
 title: 對等名稱發佈和解析
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
-ms.openlocfilehash: 4ecdd6a4c6b52368ce8cdfe57288000631077b07
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682978"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309091"
 ---
 # <a name="peer-name-publication-and-resolution"></a>對等名稱發佈和解析
 
@@ -25,9 +25,9 @@ ms.locfileid: "54682978"
 
  在 PNRP 網路或雲端中尋找其他對等，是包含兩個階段的處理序：  
   
-1.  端點判斷  
+1. 端點判斷  
   
-2.  PNRP 識別碼解析  
+2. PNRP 識別碼解析  
   
  在端點判斷階段中，嘗試解析另一部電腦上服務之 PNRP 識別碼的對等會判斷該遠端對等的 IPv6 位址。  遠端對等是發行電腦或服務之 PNRP 識別碼的對等，或與之建立關聯的對等。  
   
@@ -48,4 +48,5 @@ ms.locfileid: "54682978"
  在 <xref:System.Net.PeerToPeer> 命名空間內，包含端點以及在其中進行通訊之 PNRP 雲端或網格的 <xref:System.Net.PeerToPeer.PeerName> 記錄間有多對多關聯性。 如果有重複或過時項目，或多個具有相同對等名稱的節點，則 PNRP 節點可以使用 <xref:System.Net.PeerToPeer.PeerNameResolver> 類別來取得目前資訊。 <xref:System.Net.PeerToPeer.PeerNameResolver> 方法使用單一對等名稱，來簡化一個對等到多個對等名稱記錄以及相同的一個對等到許多雲端的觀點。 這類似於使用關聯式資料表聯結所執行的查詢。 成功完成時，解析程式物件會傳回所指定對等名稱的 <xref:System.Net.PeerToPeer.PeerNameRecordCollection>。  例如，對等名稱發生在集合的所有對等名稱記錄中，並依雲端進行排序。 這些是對等名稱的執行個體，而 PNRP 應用程式可以要求其支援資料。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.PeerToPeer>

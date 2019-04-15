@@ -1,5 +1,5 @@
 ---
-title: HOW TO：參考以強式名稱命名的組件
+title: 作法：參考以強式名稱命名的組件
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: 4c6a406a-b5eb-44fa-b4ed-4e95bb95a813
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 520bce0dbc9f3e9ade9d9fbcb1529a5433b0d87c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 281cfa6507d293658e436a95a5ded0174154a13c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54596068"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59301018"
 ---
-# <a name="how-to-reference-a-strong-named-assembly"></a>HOW TO：參考以強式名稱命名的組件
+# <a name="how-to-reference-a-strong-named-assembly"></a>作法：參考以強式名稱命名的組件
 參考強式名稱組件中類型或資源的程序通常十分簡單。 您可以在編譯時間 (早期繫結) 或執行階段進行參考。  
   
  當您對編譯器指出您的組件明確參考另一個組件時，就會發生編譯時間參考。 當您使用編譯時間參考時，編譯器會自動取得目標強式名稱組件的公開金鑰，並將它放在所編譯組件的組件參考中。  
@@ -30,7 +30,7 @@ ms.locfileid: "54596068"
   
 ### <a name="to-make-a-compile-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的編譯時間參考  
   
-1.  在命令提示字元中輸入下列命令：  
+1. 在命令提示字元中輸入下列命令：  
   
      \<*編譯器命令*> **/reference:**\<組件名稱>  
   
@@ -44,7 +44,7 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
   
 ### <a name="to-make-a-run-time-reference-to-a-strong-named-assembly"></a>建立強式名稱組件的執行階段參考  
   
-1.  當您建立強式名稱組件的執行階段參考時 (例如，使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法)，必須使用所參考之強式名稱組件的顯示名稱。 顯示名稱的語法如下：  
+1. 當您建立強式名稱組件的執行階段參考時 (例如，使用 <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> 或 <xref:System.Reflection.Assembly.GetType%2A?displayProperty=nameWithType> 方法)，必須使用所參考之強式名稱組件的顯示名稱。 顯示名稱的語法如下：  
   
      \<組件名稱>**,** \<版本號碼>**,** \<文化特性>**,** \<公開金鑰權杖>  
   
@@ -71,4 +71,5 @@ csc /t:library myAssembly.cs /reference:myLibAssembly.dll
  **sn -tp \<** *公開金鑰檔* **>**  
   
 ## <a name="see-also"></a>另請參閱
+
 - [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

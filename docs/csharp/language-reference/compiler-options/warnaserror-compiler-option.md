@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -warnaserror compiler option [C#]
 - warnaserror compiler option [C#]
 ms.assetid: 04680ec3-08d6-4e2e-a274-38310e10e33c
-ms.openlocfilehash: b208f6e4e768e400af203117d185944be285cb72
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2ae555c2e049e687f508e62b5b46fd8a744e827f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54634606"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59329099"
 ---
 # <a name="-warnaserror-c-compiler-options"></a>-warnaserror (C# 編譯器選項)
 **-warnaserror+** 選項會將所有警告都視為錯誤  
@@ -35,11 +35,11 @@ ms.locfileid: "54634606"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [建置] 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3.  修改 [警告視為錯誤] 屬性。  
+3. 修改 [警告視為錯誤] 屬性。  
   
  若要以程式設計方式設定這個編譯器選項，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.TreatWarningsAsErrors>。  
   

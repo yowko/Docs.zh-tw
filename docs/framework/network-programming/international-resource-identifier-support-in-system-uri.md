@@ -2,12 +2,12 @@
 title: System.Uri 的國際資源識別項支援
 ms.date: 03/30/2017
 ms.assetid: b5e994c3-3535-4aff-8e1b-b69be22e9a22
-ms.openlocfilehash: 56d31b13b94b68719c355335a0598ab8b11d1ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 589c49859592cba55cb5110fe65fdc49e451f478
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651067"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230781"
 ---
 # <a name="international-resource-identifier-support-in-systemuri"></a>System.Uri 的國際資源識別項支援
 <xref:System.Uri?displayProperty=nameWithType> 類別已擴充加上國際資源識別碼 (IRI) 和國際化網域名稱 (IDN) 支援。 NET Framework 3.5、3.0 SP1 和 2.0 SP1 皆可使用這些增強功能。  
@@ -44,6 +44,7 @@ ms.locfileid: "54651067"
  建構第一個 <xref:System.Uri?displayProperty=nameWithType> 類別時，<xref:System.Configuration.IriParsingElement?displayProperty=nameWithType> 和 <xref:System.Configuration.IdnElement?displayProperty=nameWithType> 組態類別的組態設定會讀取一次。 該時間之後的組態設定變更會被忽略。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Configuration.IdnElement?displayProperty=nameWithType>
 - <xref:System.Configuration.IriParsingElement?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>

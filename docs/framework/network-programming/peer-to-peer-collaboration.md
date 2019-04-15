@@ -2,12 +2,12 @@
 title: 對等共同作業
 ms.date: 03/30/2017
 ms.assetid: b6216d88-bccb-4a59-9f1c-9f751708e811
-ms.openlocfilehash: 81900cac9bf3c4d2fb247c36f00d4aa8413944f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 91e9179fc426934e78a1e0223c9bffafe5efbef1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54590535"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59225296"
 ---
 # <a name="peer-to-peer-collaboration"></a>對等共同作業
 
@@ -40,5 +40,6 @@ ms.locfileid: "54590535"
  在 Active Directory 網域中，網域控制站使用 Kerberos 提供驗證服務。 在無伺服器對等環境中，對等必須提供自己的驗證。 針對對等網路，任何節點都可以作為 CA，因此不需要每個對等之受信任根存放區中的根憑證。 使用格式為 X.509 憑證的自我簽署憑證來提供驗證。 這些憑證是由每個對等所建立，而每個對等都會產生公開金鑰/私密金鑰配對，以及使用私密金鑰所簽署的憑證。 自我簽署憑證用來進行驗證，以及提供對等實體的相關資訊。 與 X.509 驗證類似，對等網路驗證依賴追蹤回信任公開金鑰的憑證鏈。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Net.PeerToPeer.Collaboration>
 - [關於 System.Net.PeerToPeer.Collaboration 命名空間](../../../docs/framework/network-programming/about-the-system-net-peertopeer-collaboration-namespace.md)

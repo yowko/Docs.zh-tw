@@ -16,12 +16,12 @@ helpviewer_keywords:
 - -alignment compiler option [C#]
 - section alignment [C#]
 ms.assetid: 15cf1c98-3798-4ced-9f08-60619308a073
-ms.openlocfilehash: 3437b0f90593eed2900829212866cf689ff54e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f3ce1bb864c4cb0b1c330de7d96649f9870231e8
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660173"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59328695"
 ---
 # <a name="-filealign-c-compiler-options"></a>-filealign (C# 編譯器選項)
 **-filealign** 選項可讓您指定輸出檔案中的區段大小。  
@@ -45,13 +45,13 @@ ms.locfileid: "54660173"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [建置] 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3.  按一下 [ **進階** ] 按鈕。  
+3. 按一下 [ **進階** ] 按鈕。  
   
-4.  修改 [檔案對齊] 屬性。  
+4. 修改 [檔案對齊] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.FileAlignment%2A>。  
   

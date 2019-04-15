@@ -1,20 +1,20 @@
 ---
-title: HOW TO：尋找兩個清單之間的集合差異 (LINQ) (C#)
+title: 作法：尋找兩個清單之間的集合差異 (LINQ) (C#)
 ms.date: 07/20/2015
 ms.assetid: 8e8945f0-4aba-439d-8d5d-c8d1eeef4e71
-ms.openlocfilehash: 13166aaeba50d8cca33861d5489d7839d3933099
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a00b3ea6bcab13bbb3af56027c4c49a9bb562c3f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712729"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306308"
 ---
-# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>HOW TO：尋找兩個清單之間的集合差異 (LINQ) (C#)
+# <a name="how-to-find-the-set-difference-between-two-lists-linq-c"></a>作法：尋找兩個清單之間的集合差異 (LINQ) (C#)
 此範例示範如何使用 LINQ 比較兩份字串清單，然後輸出在 names1.txt 但不在 names2.txt 中的字串行。  
   
 ### <a name="to-create-the-data-files"></a>建立資料檔  
   
-1.  將 names1.txt 和 names2.txt 複製到您的方案資料夾，如[如何：合併和比較字串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) 中所示。  
+1. 將 names1.txt 和 names2.txt 複製到您的方案資料夾，如[如何：合併和比較字串集合 (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-combine-and-compare-string-collections-linq.md) 中所示。  
   
 ## <a name="example"></a>範例  
   

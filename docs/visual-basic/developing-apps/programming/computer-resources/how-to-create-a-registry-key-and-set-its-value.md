@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 6d9790d37812ff0ed4ac76049b6949901f7b5c58
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58835449"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312604"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>作法：在 Visual Basic 中建立登錄機碼並設定其值
 `My.Computer.Registry` 物件的 `CreateSubKey` 方法可以用來建立登錄機碼。  
@@ -31,11 +31,11 @@ ms.locfileid: "58835449"
   
 #### <a name="to-create-a-registry-key-and-set-a-value-in-it"></a>建立登錄機碼並設定其值  
   
-1.  使用 `CreateSubkey` 方法，並指定要放置機碼和機碼名稱的 Hive。 這個範例會在 HKEY_CURRENT_USER 下建立 `MyTestKey` 登錄機碼。  
+1. 使用 `CreateSubkey` 方法，並指定要放置機碼和機碼名稱的 Hive。 這個範例會在 HKEY_CURRENT_USER 下建立 `MyTestKey` 登錄機碼。  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
-2.  使用 `SetValue` 方法來設定值。 這個範例會將字串值 "MyTestKeyValue" 設定為 "This is a test value"。  
+2. 使用 `SetValue` 方法來設定值。 這個範例會將字串值 "MyTestKeyValue" 設定為 "This is a test value"。  
   
      [!code-vb[VbResourceTasks#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#14)]  
   

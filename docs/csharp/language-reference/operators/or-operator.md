@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '| operator [C#]'
 - binary operator (|) [C#]
 ms.assetid: 82d6bb78-54c8-40bf-b679-531180ddaf70
-ms.openlocfilehash: 185ea3aabff4794ec08cca541773dbec3574ab4b
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 38f8e21dbd07868441e0c4fbb6074f9897905222
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333508"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59312874"
 ---
 # <a name="-operator-c-reference"></a>| 運算子 (C# 參考)
 
@@ -22,7 +22,7 @@ ms.locfileid: "54333508"
 
 ## <a name="remarks"></a>備註
 
-不同於[條件式 OR 運算子](conditional-or-operator.md) `||`，二元 `|` 運算子會評估兩個運算元，不論第一個運算元的值為何。
+不同於[條件式 OR 運算子](boolean-logical-operators.md#conditional-logical-or-operator-) `||`，二元 `|` 運算子會評估兩個運算元，不論第一個運算元的值為何。
 
 使用者定義型別可以多載 `|` 運算子 (請參閱 [operator](../keywords/operator.md))。
 
@@ -33,5 +33,5 @@ ms.locfileid: "54333508"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 運算子](index.md)

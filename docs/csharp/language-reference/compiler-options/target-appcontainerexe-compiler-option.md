@@ -2,12 +2,12 @@
 title: -target:appcontainerexe (C# 編譯器選項)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
-ms.openlocfilehash: 4f8c59d94b76dd0f3415846f7e682d62cc1771ff
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707605"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311067"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# 編譯器選項)
 如果您使用 **-target:appcontainerexe** 編譯器選項，編譯器會建立一個必須在應用程式容器中執行的 Windows 可執行檔 (.exe)。 這個選項相當於 [-target:winexe](../../../csharp/language-reference/compiler-options/target-winexe-compiler-option.md)，但是專為 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)] 應用程式所設計。  
@@ -27,9 +27,9 @@ ms.locfileid: "54707605"
   
 ### <a name="to-set-this-compiler-option-in-the-ide"></a>若要在 IDE 中設定這個編譯器選項  
   
-1.  在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
+1. 在方案總管中，開啟專案的捷徑功能表，然後選擇 [屬性]。  
   
-2.  在 [應用程式] 索引標籤上，選擇 [輸出類型] 清單中的 [Windows 市集應用程式]。  
+2. 在 [應用程式] 索引標籤上，選擇 [輸出類型] 清單中的 [Windows 市集應用程式]。  
   
      這個選項只適用於 [!INCLUDE[win8_appname_long](~/includes/win8-appname-long-md.md)]應用程式範本。  
   

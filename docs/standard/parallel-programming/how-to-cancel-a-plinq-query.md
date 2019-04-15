@@ -1,5 +1,5 @@
 ---
-title: HOW TO：取消 PLINQ 查詢
+title: 作法：取消 PLINQ 查詢
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 80b14640-edfa-4153-be1b-3e003d3e9c1a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae227ace44ad379b0020a8a7dbbab190fe7d14e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80dc5f72bac436d4935c1697347d588b1a302f86
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604297"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305334"
 ---
-# <a name="how-to-cancel-a-plinq-query"></a>HOW TO：取消 PLINQ 查詢
+# <a name="how-to-cancel-a-plinq-query"></a>作法：取消 PLINQ 查詢
 下列範例說明取消 PLINQ 查詢的兩種方式。 第一個範例示範如何取消大部分由資料周遊所組成的查詢。 第二個範例示範如何取消包含需要大量計算之使用者函式的查詢。  
   
 > [!NOTE]
@@ -34,9 +34,9 @@ ms.locfileid: "54604297"
   
  取消作業的一般指引如下：  
   
-1.  如果您執行使用者委派取消作業，您應該告知 PLINQ 有關外部 <xref:System.Threading.CancellationToken> 並擲回 <xref:System.OperationCanceledException> (externalCT)。  
+1. 如果您執行使用者委派取消作業，您應該告知 PLINQ 有關外部 <xref:System.Threading.CancellationToken> 並擲回 <xref:System.OperationCanceledException> (externalCT)。  
   
-2.  如果發生取消作業，並且未擲回任何例外狀況，則您應該處理 <xref:System.OperationCanceledException> 而不是 <xref:System.AggregateException>。  
+2. 如果發生取消作業，並且未擲回任何例外狀況，則您應該處理 <xref:System.OperationCanceledException> 而不是 <xref:System.AggregateException>。  
   
 ## <a name="example"></a>範例  
  下列範例示範當使用者程式碼中含有計算成本很高之函數時，應如何處理取消作業。  

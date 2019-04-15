@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 0f58759b02fb650c090267e13ec5de65c2c63d19
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704455"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59230560"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
 如果您的網站使用 Proxy 來提供網際網路存取，則您必須設定 Proxy 執行個體，使您的應用程式能夠與 Web Proxy 進行通訊。  
@@ -28,10 +28,11 @@ ms.locfileid: "54704455"
   
 -   [自動 Proxy 偵測](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [如何：啟用 WebRequest 以使用 Proxy 與網際網路通訊](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [作法：啟用 WebRequest 以使用 Proxy 與網際網路通訊](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [如何：覆寫全域 Proxy 的選取範圍](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [作法：覆寫全域 Proxy 的選取範圍](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用應用程式通訊協定](../../../docs/framework/network-programming/using-application-protocols.md)
 - [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)

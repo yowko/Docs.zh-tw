@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3c70382b0d74e830610d1cd7746fd14244b829a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654558"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330440"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework 和 Out-of-Band 發行版本
 
@@ -23,26 +23,26 @@ ms.locfileid: "58654558"
 ## <a name="how-oob-packages-are-distributed"></a>OOB 套件散發的方式
 核心通用語言執行平台 (CLR) 元件的 OOB 版本是透過 [NuGet](https://www.nuget.org/) 所提供，這是 .NET 的套件管理員。 NuGet 可讓您從 Visual Studio 的 [方案總管] 中，輕鬆地瀏覽程式庫並加入至 .NET Framework 專案。 從 Visual Studio 2012 開始，NuGet 隨附於所有 Visual Studio 版本。 若要查看是否已安裝 NuGet，請在 Visual Studio 的 [工具] 功能表上尋找 [NuGet 套件管理員]。 如果尚未安裝：
 
-1.  在 Visual Studio 功能表列上，選擇 [工具]、[擴充功能和更新] (在 Visual Studio 2010 中請選擇 [擴充管理員])。
+1. 在 Visual Studio 功能表列上，選擇 [工具]、[擴充功能和更新] (在 Visual Studio 2010 中請選擇 [擴充管理員])。
 
      [擴充功能和更新] 對話方塊隨即開啟。
 
-2.  選擇 [連線]、[NuGet 套件管理員]，然後選擇 [下載]。
+2. 選擇 [連線]、[NuGet 套件管理員]，然後選擇 [下載]。
 
-3.  下載完成後，請重新啟動 Visual Studio。
+3. 下載完成後，請重新啟動 Visual Studio。
 
  如需詳細的安裝指示，請參閱 NuGet 文件網站上的[安裝 NuGet](/nuget/install-nuget-client-tools) (英文)。 如需 NuGet 的詳細資訊，請參閱 [NuGet 文件](/nuget) (英文)。
 
 ## <a name="using-a-nuget-oob-package"></a>使用 NuGet OOB 套件
  安裝 NuGet 之後，您可以使用 Visual Studio 中的 [方案總管]，瀏覽並加入 NuGet 套件的參考：
 
-1.  開啟 Visual Studio 中專案的捷徑功能表，然後選擇 [管理 NuGet 套件]。 (這個選項也可以在 [專案] 功能表中取得)。
+1. 開啟 Visual Studio 中專案的捷徑功能表，然後選擇 [管理 NuGet 套件]。 (這個選項也可以在 [專案] 功能表中取得)。
 
-2.  在左窗格中，選擇 [連線]。
+2. 在左窗格中，選擇 [連線]。
 
-3.  如果您想要使用發行前套件，請在中間窗格的下拉式清單方塊中，選擇 [包含發行前版本]，而不要選擇 [僅限穩定版本]。
+3. 如果您想要使用發行前套件，請在中間窗格的下拉式清單方塊中，選擇 [包含發行前版本]，而不要選擇 [僅限穩定版本]。
 
-4.  在右窗格中，使用 [搜尋] 方塊尋找您要使用的套件。 某些 Microsoft 套件已獲得 Microsoft .NET Framework 標誌識別，而且所有套件都會將 Microsoft 識別為發行者。
+4. 在右窗格中，使用 [搜尋] 方塊尋找您要使用的套件。 某些 Microsoft 套件已獲得 Microsoft .NET Framework 標誌識別，而且所有套件都會將 Microsoft 識別為發行者。
 
  ![顯示 NuGet 封裝管理員的螢幕擷取畫面。](./media/the-net-framework-and-out-of-band-releases/nuget-package-manager-dialog.png)
 

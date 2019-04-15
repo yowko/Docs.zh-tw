@@ -2,12 +2,12 @@
 title: 建立來源 Office Open XML 文件 (C#)
 ms.date: 07/20/2015
 ms.assetid: 653c8cdb-73be-4dc2-927f-924cfb4ed9ed
-ms.openlocfilehash: 0fe5463ae95374542482f768eee2bc694e2c5dd1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 8b36d119eb2da7445649b8db1132b7deea2c684c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54635841"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322390"
 ---
 # <a name="creating-the-source-office-open-xml-document-c"></a>建立來源 Office Open XML 文件 (C#)
 這個主題顯示如何建立此教學課程中其他範例所使用的 Office Open XML WordprocessingML 文件。 如果您按照這些指示進行，您的輸出將會符合每個範例中提供的輸出。  
@@ -20,9 +20,9 @@ ms.locfileid: "54635841"
   
 #### <a name="to-create-the-wordprocessingml-document"></a>若要建立 WordprocessingML 文件  
   
-1.  建立新的 Microsoft Word 文件。  
+1. 建立新的 Microsoft Word 文件。  
   
-2.  將下列文字貼到新的文件中：  
+2. 將下列文字貼到新的文件中：  
   
     ```  
     Parsing WordprocessingML with LINQ to XML  
@@ -42,13 +42,13 @@ ms.locfileid: "54635841"
     Hello World  
     ```  
   
-3.  將第一行的格式設定為「標題 1」樣式。  
+3. 將第一行的格式設定為「標題 1」樣式。  
   
-4.  選取包含 C# 程式碼的行。 第一行開頭為 `using` 關鍵字。 最後一行是最後一個右邊的大括號。 利用 Courier 字型設定這幾行的格式。 以新樣式設定格式，然後將新樣式命名為 "Code"。  
+4. 選取包含 C# 程式碼的行。 第一行開頭為 `using` 關鍵字。 最後一行是最後一個右邊的大括號。 利用 Courier 字型設定這幾行的格式。 以新樣式設定格式，然後將新樣式命名為 "Code"。  
   
-5.  最後，選取包含輸出的整行，然後使用 `Code` 樣式設定其格式。  
+5. 最後，選取包含輸出的整行，然後使用 `Code` 樣式設定其格式。  
   
-6.  儲存文件，然後將其命名為 SampleDoc.docx。  
+6. 儲存文件，然後將其命名為 SampleDoc.docx。  
   
     > [!NOTE]
     >  如果您要使用 Microsoft Word 2003，在 [存檔類型] 下拉式清單中選取 [Word 2007 文件]。  

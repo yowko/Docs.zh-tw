@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 2278d82d5362fe217ca4bce02a052d4b440843c2
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236631"
+---
 ### <a name="aspnet-mvc-now-escapes-spaces-in-strings-passed-in-via-route-parameters"></a>ASP.NET MVC 現在會將透過路由參數傳入之字串中的空格逸出
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5.2|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Web.Mvc.RouteAttribute.%23ctor(System.String)?displayProperty=nameWithType></li></ul>|
-

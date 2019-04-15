@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 3aeb9735876953e9332997f6b8f2ca4df9234c06
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203385"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59322078"
 ---
 # <a name="polymorphism-c-programming-guide"></a>多型 (C# 程式設計手冊)
 多型通常是指物件導向程式設計的第三個重要部分，其重要性僅次於封裝和繼承。 多型在希臘文中表示「多種形狀」，可分成下列兩方面：  
@@ -22,9 +22,9 @@ ms.locfileid: "57203385"
   
  虛擬方法可讓您以一致的方式來使用相關物件群組。 例如，假設您有一個繪圖應用程式，可讓使用者在繪圖介面上建立各種圖形。 您不知道使用者將在編譯時期建立哪一種圖形。 但是，應用程式必須追蹤所建立的所有不同圖形類型，並且必須根據使用者滑鼠動作來更新圖形。 您可以使用多型，分兩個基本步驟來解決這個問題：  
   
-1.  建立類別階層架構，其中每個特定圖形類別都是衍生自一個通用基底類別。  
+1. 建立類別階層架構，其中每個特定圖形類別都是衍生自一個通用基底類別。  
   
-2.  使用虛擬方法，透過對基底類別方法發出單一呼叫，在任何衍生類別上叫用適當的方法。  
+2. 使用虛擬方法，透過對基底類別方法發出單一呼叫，在任何衍生類別上叫用適當的方法。  
   
  首先，建立稱為 `Shape` 的基底類別，以及 `Rectangle`、`Circle` 和 `Triangle` 等衍生類別。 將稱為 `Shape` 的虛擬方法提供給 `Draw` 類別，然後在每個衍生類別中覆寫此方法，以繪製該類別代表的特定圖形。 建立 `List<Shape>` 物件並加入 Circle、Triangle 和 Rectangle。 若要更新繪圖介面，請使用 [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 迴圈逐一查看清單，並在清單中的每個 `Shape` 物件上呼叫 `Draw` 方法。 即使清單中的每個物件都有 `Shape` 的宣告類型，會叫用的是執行階段類型 (每個衍生類別中之方法的覆寫版本)。  
   
@@ -54,8 +54,7 @@ ms.locfileid: "57203385"
  虛擬方法和屬性可讓衍生類別不需要使用方法的基底類別實作，即可擴充基底類別。 如需詳細資訊，請參閱[使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)。 介面是用來定義將其實作保留給衍生類別之一個方法或一組方法的另一種做法。 如需詳細資訊，請參閱[介面](../../../csharp/programming-guide/interfaces/index.md)。  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>使用新成員隱藏基底類別成員  
- 如果您想讓衍生成員使用與基底類別中成員相同的名稱，但不想讓該成員參與虛擬引動過程，則可以使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字。 
-  `new` 關鍵字會放置在要取代之類別成員的傳回類型前面。 下列程式碼提供一個範例：  
+ 如果您想讓衍生成員使用與基底類別中成員相同的名稱，但不想讓該成員參與虛擬引動過程，則可以使用 [new](../../../csharp/language-reference/keywords/new.md) 關鍵字。 `new` 關鍵字會放置在要取代之類別成員的傳回類型前面。 下列程式碼提供一個範例：  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   
@@ -90,15 +89,15 @@ ms.locfileid: "57203385"
   
 ## <a name="in-this-section"></a>本節內容  
   
--   [使用 Override 和 New 關鍵字進行版本控制](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+-   [使用 Override 和 New 關鍵字進行版本設定](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
 -   [了解使用 Override 和 New 關鍵字的時機](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [如何：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+-   [作法：覆寫 ToString 方法](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>另請參閱
 
-- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
 - [繼承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
 - [抽象和密封類別以及類別成員](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)
 - [方法](../../../csharp/programming-guide/classes-and-structs/methods.md)

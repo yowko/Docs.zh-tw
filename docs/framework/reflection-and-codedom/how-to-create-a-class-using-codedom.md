@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用 CodeDOM 建立類別
+title: 作法：使用 CodeDOM 建立類別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,27 +13,27 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 78c50b3813ebb0bb65955e411eb84e4cd9e0a001
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54581929"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333167"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>HOW TO：使用 CodeDOM 建立類別
+# <a name="how-to-create-a-class-using-codedom"></a>作法：使用 CodeDOM 建立類別
 下列程序示範如何建立及編譯 CodeDOM 圖表，其可產生包含兩個欄位、三種屬性、一種方法、一個建構函式和一個進入點的類別。  
   
-1.  建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。  
+1. 建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。  
   
      在此範例中，則產生的類別命名為 `Sample`，而產生的程式碼類別名為 `CodeDOMCreatedClass`，其位於 SampleCode 檔案中。  
   
-2.  在產生的類別中，初始化 CodeDOM 圖表並使用 CodeDOM 方法來定義所產生類別的成員、建構函式及進入點 (`Main` 方法)。  
+2. 在產生的類別中，初始化 CodeDOM 圖表並使用 CodeDOM 方法來定義所產生類別的成員、建構函式及進入點 (`Main` 方法)。  
   
      在此範例中，產生的類別有兩個欄位、 三個屬性、 建構函式、 方法和 `Main` 方法。  
   
-3.  在產生之類別中，建立特定語言的程式碼提供者並呼叫其 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 圖表產生程式碼的方法。  
+3. 在產生之類別中，建立特定語言的程式碼提供者並呼叫其 <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> 圖表產生程式碼的方法。  
   
-4.  編譯並執行應用程式產生的程式碼。  
+4. 編譯並執行應用程式產生的程式碼。  
   
      在此範例中，產生的程式碼是在名為 SampleCode 的檔案中。 編譯並執行此程式碼，請參閱範例輸出。  
   
@@ -87,12 +87,12 @@ ms.locfileid: "54581929"
   
 ### <a name="to-create-the-graph-and-generate-the-code"></a>建立圖形並產生程式碼  
   
-1.  將前面步驟建立的方法新增至步驟 1 定義的 `Main` 方法。  
+1. 將前面步驟建立的方法新增至步驟 1 定義的 `Main` 方法。  
   
      [!code-csharp[CodeDOM Class Sample#9](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#9)]
      [!code-vb[CodeDOM Class Sample#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#9)]  
   
-2.  編譯並執行產生的類別。  
+2. 編譯並執行產生的類別。  
   
 ## <a name="example"></a>範例  
  下列程式碼範例會顯示前幾個步驟的程式碼。  
@@ -119,5 +119,6 @@ The object:
 -   此程式碼範例需要設定 `FullTrust` 權限，才能順利執行。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用 CodeDOM](../../../docs/framework/reflection-and-codedom/using-the-codedom.md)
 - [從 CodeDOM 圖表產生和編譯原始程式碼](../../../docs/framework/reflection-and-codedom/generating-and-compiling-source-code-from-a-codedom-graph.md)

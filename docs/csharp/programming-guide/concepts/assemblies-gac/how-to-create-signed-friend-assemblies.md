@@ -2,21 +2,21 @@
 title: 作法：建立簽署的 Friend 組件 (C#)
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: 13b99cd1118071e7c403828260003c80b9417792
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354488"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59325198"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>作法：建立簽署的 Friend 組件 (C#)
 此範例示範如何搭配具有強式名稱的組件使用 friend 組件。 這兩個組件都必須具有強式名稱。 雖然此範例中的兩個組件使用相同的金鑰，但您可以針對這兩個組件使用不同的金鑰。  
   
 ### <a name="to-create-a-signed-assembly-and-a-friend-assembly"></a>建立簽署的組件和 friend 組件  
   
-1.  開啟命令提示字元。  
+1. 開啟命令提示字元。  
   
-2.  使用下列命令順序和強式名稱工具，產生金鑰檔並顯示其公開金鑰。 如需詳細資訊，請參閱 [Sn.exe (強式名稱工具)](../../../../framework/tools/sn-exe-strong-name-tool.md)。  
+2. 使用下列命令順序和強式名稱工具，產生金鑰檔並顯示其公開金鑰。 如需詳細資訊，請參閱 [Sn.exe (強式名稱工具)](../../../../framework/tools/sn-exe-strong-name-tool.md)。  
   
     1.  為此範例產生強式名稱金鑰，然後將它儲存在 FriendAssemblies.snk 檔案中：  
   
@@ -30,7 +30,7 @@ ms.locfileid: "57354488"
   
          `sn -tp FriendAssemblies.publickey`  
   
-3.  建立名為 `friend_signed_A` 並包含下列程式碼的 C# 檔案。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_signed_B 為 Friend 組件。  
+3. 建立名為 `friend_signed_A` 並包含下列程式碼的 C# 檔案。 程式碼會使用 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性宣告 friend_signed_B 為 Friend 組件。  
   
      強式名稱工具會在每次執行時產生新的公開金鑰。 因此，您必須將下列程式碼中的公開金鑰取代為剛產生的公開金鑰，如下列範例所示。  
   
@@ -51,13 +51,13 @@ ms.locfileid: "57354488"
     }  
     ```  
   
-4.  使用下列命令來編譯及簽署 friend_signed_A。  
+4. 使用下列命令來編譯及簽署 friend_signed_A。  
   
     ```csharp  
     csc /target:library /keyfile:FriendAssemblies.snk friend_signed_A.cs  
     ```  
   
-5.  建立名為 `friend_signed_B` 並包含下列程式碼的 C# 檔案。 因為 friend_signed_A 會將 friend_signed_B 指定為 friend 組件，所以 friend_signed_B 中的程式碼可以存取 friend_signed_A 中的 `internal` 類型和成員。 該檔案包含下列程式碼。  
+5. 建立名為 `friend_signed_B` 並包含下列程式碼的 C# 檔案。 因為 friend_signed_A 會將 friend_signed_B 指定為 friend 組件，所以 friend_signed_B 中的程式碼可以存取 friend_signed_A 中的 `internal` 類型和成員。 該檔案包含下列程式碼。  
   
     ```csharp  
     // friend_signed_B.cs  
@@ -73,7 +73,7 @@ ms.locfileid: "57354488"
     }  
     ```  
   
-6.  使用下列命令來編譯及簽署 friend_signed_B。  
+6. 使用下列命令來編譯及簽署 friend_signed_B。  
   
     ```csharp  
     csc /keyfile:FriendAssemblies.snk /r:friend_signed_A.dll /out:friend_signed_B.exe friend_signed_B.cs  
@@ -81,7 +81,7 @@ ms.locfileid: "57354488"
   
      編譯器所產生之組件的名稱必須符合傳遞至 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 屬性的 Friend 組件名稱。 您必須使用 `/out` 編譯器選項，明確指定輸出組件 (.exe 或 .dll) 的名稱。  如需詳細資訊，請參閱 [/out (C# 編譯器選項)](../../../../csharp/language-reference/compiler-options/out-compiler-option.md)。  
   
-7.  執行 friend_signed_B.exe 檔案。  
+7. 執行 friend_signed_B.exe 檔案。  
   
      此程式會列印字串 "Class1.Test"。  
   
@@ -93,8 +93,8 @@ ms.locfileid: "57354488"
 - <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute>
 - [.NET 中的組件](../../../../standard/assembly/index.md)
 - [Friend 組件](../../../../standard/assembly/friend-assemblies.md)
-- [如何：建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
+- [作法：建立未簽署的 Friend 組件 (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
 - [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (強式名稱工具)](../../../../framework/tools/sn-exe-strong-name-tool.md)
 - [建立和使用強式名稱的組件](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
-- [C# 程式設計指南](../../../../csharp/programming-guide/index.md)
+- [C# 程式設計手冊](../../../../csharp/programming-guide/index.md)

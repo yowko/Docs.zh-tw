@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 9c2ee4ba66deb7c3b33698963add2b8a7e70069f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235400"
+---
 ### <a name="intermittently-unable-to-scroll-to-bottom-item-in-itemscontrols-like-listbox-and-datagrid-when-using-custom-datatemplates"></a>使用自訂 DataTemplates 時，會斷斷續續無法捲動至 ItemsControls (例如 ListBox 和 DataGrid) 中的底部項目
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|次要|
 |版本|4.5|
 |類型|執行階段|
-

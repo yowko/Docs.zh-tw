@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 - writing to files [Visual Basic], in My Documents
 ms.assetid: 1c726124-781d-4976-9baa-ed46814ff3fe
-ms.openlocfilehash: 245e00402196ab2a8c5998e9515205bb6f37cce0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4f9eb4c9e0eb92712b5ea1a4feef24f2bb95d70b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58828403"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335455"
 ---
 # <a name="how-to-write-text-to-files-in-the-my-documents-directory-in-visual-basic"></a>作法：在 Visual Basic 中將文字寫入 [我的文件] 目錄中的檔案
 `My.Computer.FileSystem.SpecialDirectories` 物件可讓您存取特殊目錄，例如 [我的文件] 目錄。  
@@ -21,11 +21,11 @@ ms.locfileid: "58828403"
   
 #### <a name="to-write-new-text-files-in-the-my-documents-directory"></a>將新文字檔寫入 [我的文件] 目錄中  
   
-1.  使用 `My.Computer.FileSystem.SpecialDirectories.MyDocuments` 屬性，來提供路徑。  
+1. 使用 `My.Computer.FileSystem.SpecialDirectories.MyDocuments` 屬性，來提供路徑。  
   
      [!code-vb[VbFileIOWrite#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbFileIOWrite/VB/Class1.vb#1)]  
   
-2.  使用 `WriteAllText` 方法，將文字寫入指定的檔案。  
+2. 使用 `WriteAllText` 方法，將文字寫入指定的檔案。  
   
      [!code-vb[VbVbcnMyFileSystem#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#14)]  
   

@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 506218195417548880a9d8d10508a570a7769682
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234905"
+---
 ### <a name="long-path-support"></a>長路徑支援
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|次要|
 |版本|4.6.2|
 |類型|正在重定目標|
-

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 775ad4fb-914f-453c-98ef-ce1089b6f903
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cbb681567090cb26d20a31e8645c0b651bef9244
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: e0533265cc96ebf5601579f7fb25b8cbafae73e2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675948"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59305191"
 ---
 # <a name="assembly-versioning"></a>組件版本控制
 使用 Common Language Runtime 之組件的所有版本控制都是在組件層級進行的。 組件的特定版本和相依組件的版本是記錄在組件的資訊清單中。 Runtime 的預設版本原則為，除非被組態檔 (應用程式組態檔、發行者原則檔和電腦的系統管理員組態檔) 中的明確版本原則強制取代，否則應用程式只能搭配用來建置和測試它們的版本執行。  
@@ -25,13 +25,13 @@ ms.locfileid: "58675948"
   
  Runtime 會執行以下幾個步驟來解析組件繫結要求：  
   
-1.  檢查原始組件參考來判斷要繫結的組件版本。  
+1. 檢查原始組件參考來判斷要繫結的組件版本。  
   
-2.  檢查所有適用的組態檔來套用版本原則。  
+2. 檢查所有適用的組態檔來套用版本原則。  
   
-3.  從原始組件參考和組態檔中指定的任何重新導向判斷正確的組件，並且判斷應該繫結至呼叫之組件的版本。  
+3. 從原始組件參考和組態檔中指定的任何重新導向判斷正確的組件，並且判斷應該繫結至呼叫之組件的版本。  
   
-4.  檢查全域組件快取、組態檔中指定的程式碼基底，然後使用[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)中說明的探查規則檢查應用程式的目錄和子目錄。  
+4. 檢查全域組件快取、組態檔中指定的程式碼基底，然後使用[執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)中說明的探查規則檢查應用程式的目錄和子目錄。  
   
  下圖所示即為這些步驟：  
   
@@ -70,6 +70,7 @@ ms.locfileid: "58675948"
  資訊版本是使用自訂屬性 <xref:System.Reflection.AssemblyInformationalVersionAttribute?displayProperty=nameWithType> 表示。 如需資訊版本屬性的詳細資訊，請參閱[設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [執行階段如何找出組件](../../../docs/framework/deployment/how-the-runtime-locates-assemblies.md)
 - [設定應用程式](../../../docs/framework/configure-apps/index.md)
 - [設定組件屬性](../../../docs/framework/app-domains/set-assembly-attributes.md)

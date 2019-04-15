@@ -11,12 +11,12 @@ helpviewer_keywords:
 - res compiler option [C#]
 - resource compiler option [C#]
 ms.assetid: 5212666e-98ab-47e4-a497-b5545ab15c7f
-ms.openlocfilehash: 056207185f89aa219faf1b721598d372394e1061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ed9f4648ae632786ce860ce2c02637977f709c55
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54725697"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59302565"
 ---
 # <a name="-resource-c-compiler-options"></a>-resource (C# 編譯器選項)
 將指定的資源內嵌到輸出檔。  
@@ -50,13 +50,13 @@ ms.locfileid: "54725697"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  將資源檔新增至專案。  
+1. 將資源檔新增至專案。  
   
-2.  選取您想要內嵌在方案總管中的檔案。  
+2. 選取您想要內嵌在方案總管中的檔案。  
   
-3.  在 [屬性] 視窗中，選取檔案的 [建置動作]。  
+3. 在 [屬性] 視窗中，選取檔案的 [建置動作]。  
   
-4.  將 [建置動作] 設定為 [內嵌資源]。  
+4. 將 [建置動作] 設定為 [內嵌資源]。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.FileProperties2.BuildAction%2A>。  
   

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - output, network tracing
 - method invocations
 ms.assetid: e993b7c3-087f-45d8-9c02-9dded936d804
-ms.openlocfilehash: e212b2c77a8b0b016e03bfe08f350a0b86ba6ee1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 45ec7b83824777c594b966a38d2b7fcd4f63b596
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514695"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59221185"
 ---
 # <a name="network-tracing-in-the-net-framework"></a>以 .NET Framework 進行網路追蹤
 針對方法叫用及 Managed 應用程式所產生的網路流量，.NET Framework 中的網路追蹤能提供對這些相關資訊的存取。 若要為開發中的應用程式進行偵錯，以及分析已部署的應用程式，此功能會非常有用。 您可以自訂網路追蹤所提供的輸出，在程式開發時期和實際執行環境中支援不同的使用案例。  
@@ -36,7 +36,8 @@ ms.locfileid: "54514695"
 >  在應用程式中啟用網路追蹤時，這個成員會輸出追蹤資訊。 如需詳細資訊，請參閱＜網路追蹤＞。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [啟用網路追蹤](../../../docs/framework/network-programming/enabling-network-tracing.md)
-- [如何：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
+- [作法：設定網路追蹤](../../../docs/framework/network-programming/how-to-configure-network-tracing.md)
 - [解譯網路追蹤](../../../docs/framework/network-programming/interpreting-network-tracing.md)
-- [追蹤和檢測應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
+- [追蹤和稽核應用程式](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)

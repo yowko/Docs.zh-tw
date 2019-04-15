@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 02a3c1b5a9693535feeab56d9b0f7c9d360749ff
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235370"
+---
 ### <a name="pageloadcomplete-event-no-longer-causes-systemwebuiwebcontrolsentitydatasource-control-to-invoke-data-binding"></a>Page.LoadComplete 事件不再導致 System.Web.UI.WebControls.EntityDataSource 控制項叫用資料繫結
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|Edge|
 |版本|4.5|
 |類型|執行階段|
-

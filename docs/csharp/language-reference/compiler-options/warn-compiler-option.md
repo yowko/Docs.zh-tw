@@ -12,12 +12,12 @@ helpviewer_keywords:
 - w compiler option [C#]
 - warn compiler option [C#]
 ms.assetid: 5f80ff59-4991-4382-9f9a-77da18446e71
-ms.openlocfilehash: 5a4ecd1fbe5bb79a67d9df07d8f1a93830b03880
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17dd992edbec5ce444b53ed42b2b486282618672
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499865"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59315799"
 ---
 # <a name="-warn-c-compiler-options"></a>-warn (C# 編譯器選項)
 **-warn** 選項指定要針對編譯器顯示的警告層級。  
@@ -49,11 +49,11 @@ ms.locfileid: "54499865"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>在 Visual Studio 開發環境中設定這個編譯器選項  
   
-1.  開啟專案的 [屬性] 頁面。  
+1. 開啟專案的 [屬性] 頁面。  
   
-2.  按一下 [建置] 屬性頁面。  
+2. 按一下 [建置] 屬性頁面。  
   
-3.  修改 [警告層級] 屬性。  
+3. 修改 [警告層級] 屬性。  
   
  如需如何以程式設計方式設定這個編譯器選項的詳細資訊，請參閱 <xref:VSLangProj80.CSharpProjectConfigurationProperties3.WarningLevel%2A>。  
   

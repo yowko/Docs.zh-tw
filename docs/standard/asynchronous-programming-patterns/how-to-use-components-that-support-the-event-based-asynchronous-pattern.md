@@ -1,5 +1,5 @@
 ---
-title: HOW TO：使用支援事件架構非同步模式的元件
+title: 作法：使用支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
-ms.openlocfilehash: f7e7139aeebea4441f851f7ed28484ba293e9c3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543246"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330879"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>HOW TO：使用支援事件架構非同步模式的元件
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>作法：使用支援事件架構非同步模式的元件
 許多元件可讓您選擇以非同步方式執行其工作。 例如，<xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 元件可讓您「在背景」載入音效和影像，同時主執行緒會繼續執行而不中斷。  
   
  對支援[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)的類別使用非同步方法，就像處理其他任何事件一樣簡單，只要將事件處理常式附加到元件的 _MethodName_**Completed** 事件即可。 當您呼叫 _MethodName_**Async** 方法時，應用程式將會繼續執行而不中斷，直到引發 _MethodName_**Completed** 事件為止。 在事件處理常式中，您可以檢查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 參數來判斷非同步作業已成功完成或已取消。  
@@ -36,9 +36,9 @@ ms.locfileid: "54543246"
   
 ### <a name="to-enable-a-picturebox-control-to-asynchronously-load-an-image"></a>啟用 PictureBox 控制項以非同步方式載入影像  
   
-1.  建立表單中 <xref:System.Windows.Forms.PictureBox> 元件的執行個體。  
+1. 建立表單中 <xref:System.Windows.Forms.PictureBox> 元件的執行個體。  
   
-2.  將事件處理常式指派給 <xref:System.Windows.Forms.PictureBox.LoadCompleted>。  
+2. 將事件處理常式指派給 <xref:System.Windows.Forms.PictureBox.LoadCompleted>。  
   
      請檢查非同步下載期間是否發生任何任何錯誤。 您也可在此時檢查取消。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "54543246"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#5](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#5)]  
   
-3.  將稱為 `loadButton` 和 `cancelLoadButton` 的兩個按鈕加入至表單。 新增 <xref:System.Windows.Forms.Control.Click> 事件處理常式，以啟動和取消下載。  
+3. 將稱為 `loadButton` 和 `cancelLoadButton` 的兩個按鈕加入至表單。 新增 <xref:System.Windows.Forms.Control.Click> 事件處理常式，以啟動和取消下載。  
   
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#3](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#3)]  
@@ -56,11 +56,11 @@ ms.locfileid: "54543246"
      [!code-csharp[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.PictureBox.LoadAsync#4](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.PictureBox.LoadAsync/VB/Form1.vb#4)]  
   
-4.  執行應用程式。  
+4. 執行應用程式。  
   
      在進行影像下載時，您可以隨意移動表單、將它縮至最小以及最大化。  
   
 ## <a name="see-also"></a>另請參閱
 
-- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [作法：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

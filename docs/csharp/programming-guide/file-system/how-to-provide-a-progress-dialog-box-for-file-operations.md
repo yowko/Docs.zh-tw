@@ -1,16 +1,16 @@
 ---
-title: HOW TO：提供檔案作業的進度對話方塊 - C# 程式設計手冊
+title: 作法：提供檔案作業的進度對話方塊 - C# 程式設計手冊
 ms.custom: seodec18
 ms.date: 07/20/2015
 helpviewer_keywords:
 - progress dialog [C#]
 ms.assetid: 01b71fe7-8178-4dc8-aeb1-12053be7b51c
-ms.openlocfilehash: 462da68313fea19e5b89a9e2f5221f6659338e98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 882e4ea71331fe0513f3be71c371bbc0f714b44f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975039"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309533"
 ---
 # <a name="how-to-provide-a-progress-dialog-box-for-file-operations-c-programming-guide"></a>作法：提供檔案作業的進度對話方塊 (C# 程式設計手冊)
 如果您在 <xref:Microsoft.VisualBasic?displayProperty=nameWithType> 命名空間中使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.CopyFile%28System.String%2CSystem.String%2CMicrosoft.VisualBasic.FileIO.UIOption%29> 方法，則可以提供標準對話方塊，以在 Windows 中顯示檔案作業進度。  
@@ -19,13 +19,13 @@ ms.locfileid: "56975039"
   
 ### <a name="to-add-a-reference-in-visual-studio"></a>在 Visual Studio 中加入參考  
   
-1.  在功能表列上，選擇 **[專案]**、**[加入參考]**。  
+1. 在功能表列上，選擇 **[專案]**、**[加入參考]**。  
   
      [參考管理員] 對話方塊隨即顯示。  
   
-2.  在 [組件] 區域中，選擇 [Framework] (如果尚未選擇)。  
+2. 在 [組件] 區域中，選擇 [Framework] (如果尚未選擇)。  
   
-3.  在名稱清單中，選取 **[Microsoft.VisualBasic]** 核取方塊，然後選擇 **[確定]** 按鈕以關閉對話方塊。  
+3. 在名稱清單中，選取 **[Microsoft.VisualBasic]** 核取方塊，然後選擇 **[確定]** 按鈕以關閉對話方塊。  
   
 ## <a name="example"></a>範例  
  下列程式碼會將 `sourcePath` 指定的目錄複製到 `destinationPath` 指定的目錄。 此程式碼也會提供標準對話方塊，來顯示作業完成前的預估剩餘時間量。  
@@ -34,4 +34,4 @@ ms.locfileid: "56975039"
   
 ## <a name="see-also"></a>另請參閱
 
-- [檔案系統和登錄 (C# 程式設計指南)](../../../csharp/programming-guide/file-system/index.md)
+- [檔案系統和登錄 (C# 程式設計手冊)](../../../csharp/programming-guide/file-system/index.md)

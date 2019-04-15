@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: e5d81d791e1a2f1a2dbdafc787dec1227423883d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236628"
+---
 ### <a name="opt-in-break-to-revert-from-different-45-sql-generation-to-simpler-40-sql-generation"></a>選擇中斷以從不同的 4.5 SQL 產生還原為更簡單的 4.0 SQL 產生
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|透明|
 |版本|4.5.2|
 |類型|執行階段|
-

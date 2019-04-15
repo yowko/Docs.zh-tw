@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 38c35f3f6f2262d06409690d2326d9b982e1ec86
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235394"
+---
 ### <a name="managed-browser-hosting-controls-from-the-net-framework-11-and-20-are-blocked"></a>.NET Framework 1.1 和 2.0 的受控瀏覽器裝載控制項已封鎖
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|次要|
 |版本|4.5|
 |類型|執行階段|
-

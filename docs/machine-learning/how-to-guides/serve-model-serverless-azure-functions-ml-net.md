@@ -3,25 +3,25 @@ title: 將 ML.NET 模型部署至 Azure Functions
 description: 使用 Azure Functions 在網際網路上提供 ML.NET 情感分析機器學習模型以進行預測
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: db29e37660665b02ab93a07b37418f0c4c20a608
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788636"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59330632"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>操作說明：在 Azure Functions 中使用 ML.NET 模型
 
 此操作說明顯示如何在無伺服器環境 (例如 Azure Functions) 中透過網際網路使用預先建置的 ML.NET 機器學習模型進行個別預測。
 
 > [!NOTE]
-> 此主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) \(英文\)。
+> 本主題涉及 ML.NET，此功能目前為公開預覽版，因此内容可能會有變更。 如需詳細資訊，請瀏覽 [ML.NET 簡介](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet) (英文)。
 
 本操作說明與關聯的範例目前是使用 **ML.NET 0.10 版**。 如需詳細資訊，請參閱 [dotnet/machinelearning GitHub 存放庫](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes) \(英文\) 中的版本資訊。
 
-## <a name="prerequisites"></a>先決條件
+## <a name="prerequisites"></a>必要條件
 
-- 已安裝「.NET Core 跨平台開發」工作負載和「Azure 開發」的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)。 
+- 已安裝「.NET Core 跨平台開發」工作負載和「Azure 開發」的 [Visual Studio 2017 15.6 或更新版本](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)。 
 - [Azure Functions Tools](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - Powershell
 - 預先定型的模型。 
@@ -55,7 +55,7 @@ ms.locfileid: "57788636"
 
 1. 在 [新增 Azure 函式] 對話方塊中，選取 [Http 觸發程序]。 然後，選取 [確定] 按鈕。
 
-    *AnalyzeSentiment.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 `using` 陳述式新增至 *GitHubIssueData.cs* 頂端：
+    *AnalyzeSentiment.cs* 檔案隨即在程式碼編輯器中開啟。 將下列 `using` 陳述式新增至 *GitHubIssueData.cs* 最上方：
 
 ```csharp
 using System;

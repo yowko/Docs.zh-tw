@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting Visual Basic, event logs
 - troubleshooting event logs
 ms.assetid: ac6eb760-3d5d-461e-aedd-40599ee22e49
-ms.openlocfilehash: f1201262fd09145679a9f70cd742294d248fedb3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 12282df50bc42d2a153a9aa8db01f2654acd91ce
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58831692"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299523"
 ---
 # <a name="troubleshooting-log-listeners-visual-basic"></a>疑難排解：記錄檔接聽程式 (Visual Basic)
 您可以使用 `My.Application.Log` 和 `My.Log` 物件來記錄應用程式中發生之事件的相關資訊。  
@@ -24,15 +24,15 @@ ms.locfileid: "58831692"
   
 ### <a name="to-determine-the-log-listeners-for-the-log-object-in-code"></a>判斷程式碼中記錄檔物件的記錄檔接聽程式  
   
-1.  在程式碼檔案的開頭處匯入 <xref:System.Diagnostics> 命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
+1. 在程式碼檔案的開頭處匯入 <xref:System.Diagnostics> 命名空間。 如需詳細資訊，請參閱 [Imports 陳述式 (.NET 命名空間和類型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)。  
   
      [!code-vb[VbVbalrMyApplicationLog#13](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#13)]  
   
-2.  建立會傳回字串的函式，而該字串包含每個記錄檔接聽程式的資訊。  
+2. 建立會傳回字串的函式，而該字串包含每個記錄檔接聽程式的資訊。  
   
      [!code-vb[VbVbalrMyApplicationLog#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#14)]  
   
-3.  將記錄檔的追蹤接聽程式集合傳遞至 `GetListeners` 函式，並顯示傳回值。  
+3. 將記錄檔的追蹤接聽程式集合傳遞至 `GetListeners` 函式，並顯示傳回值。  
   
      [!code-vb[VbVbalrMyApplicationLog#19](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#19)]  
   

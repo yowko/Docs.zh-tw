@@ -1,5 +1,5 @@
 ---
-title: HOW TO：建立 COM 包裝函式
+title: 作法：建立 COM 包裝函式
 ms.date: 03/30/2017
 helpviewer_keywords:
 - COM,wrappers creating
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58b7ca910f8f8c751f03b25459bc83efb8086923
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54540971"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59324121"
 ---
-# <a name="how-to-create-com-wrappers"></a>HOW TO：建立 COM 包裝函式
+# <a name="how-to-create-com-wrappers"></a>作法：建立 COM 包裝函式
 
 您可以使用 Visual Studio 2005 功能或 .NET Framework 工具 Tlbimp.exe 和 Regasm.exe 來建立元件物件模型 (COM) 包裝函式。 這兩種方法會產生兩種類型的 COM 包裝函式：
 
@@ -28,13 +28,13 @@ ms.locfileid: "54540971"
 
 ### <a name="to-create-a-runtime-callable-wrapper-using-visual-studio"></a>使用 Visual Studio 建立執行階段可呼叫包裝函式
 
-1.  開啟 Managed 應用程式的專案。
+1. 開啟 Managed 應用程式的專案。
 
-2.  在 [專案] 功能表上，按一下 [顯示所有檔案]。
+2. 在 [專案] 功能表上，按一下 [顯示所有檔案]。
 
-3.  在 [專案] 功能表上，按一下 [新增參考]。
+3. 在 [專案] 功能表上，按一下 [新增參考]。
 
-4.  在 [新增參考] 對話方塊中，按一下 [COM] 索引標籤，選取您要使用的元件，然後按一下 [確定]。
+4. 在 [新增參考] 對話方塊中，按一下 [COM] 索引標籤，選取您要使用的元件，然後按一下 [確定]。
 
      在方案總管中，請注意，會將 COM 元件新增至專案中的 [參考] 資料夾。
 
@@ -53,15 +53,15 @@ ms.locfileid: "54540971"
   
 ### <a name="to-create-a-com-callable-wrapper-using-visual-studio"></a>使用 Visual Studio 建立 COM 可呼叫包裝函式  
   
-1.  針對您要在機器碼中執行的 Managed 類別，建立類別庫專案。 此類別必須具有預設的建構函式。  
+1. 針對您要在機器碼中執行的 Managed 類別，建立類別庫專案。 此類別必須具有預設的建構函式。  
   
      確認您在 AssemblyInfo 檔案中擁有組件的完整四部分版本號碼。 這個號碼對於在 Windows 登錄中維護版本控制是必要的。 如需版本號碼的詳細資訊，請參閱[組件版本控制](../../../docs/framework/app-domains/assembly-versioning.md)。  
   
-2.  在 [專案] 功能表上，按一下 [屬性]。  
+2. 在 [專案] 功能表上，按一下 [屬性]。  
   
-3.  按一下 [編譯] 索引標籤。  
+3. 按一下 [編譯] 索引標籤。  
   
-4.  選取 [註冊 COM Interop] 核取方塊。  
+4. 選取 [註冊 COM Interop] 核取方塊。  
   
  當您建置專案時，組件會自動註冊 COM Interop。 如果您是在 Visual Studio 2005 中建置原生應用程式，即可在 [專案] 功能表上按一下 [新增參考] 以使用組件。  
   

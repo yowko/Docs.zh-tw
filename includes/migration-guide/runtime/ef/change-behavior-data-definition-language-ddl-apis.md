@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1f06a185939c40274adad1ceac6990719069167a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235327"
+---
 ### <a name="change-in-behavior-in-data-definition-language-ddl-apis"></a>資料定義語言 (DDL) API 的行為變更
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|次要|
 |版本|4.5|
 |類型|執行階段|
-
