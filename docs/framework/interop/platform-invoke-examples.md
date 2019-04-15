@@ -15,23 +15,24 @@ helpviewer_keywords:
 ms.assetid: 15926806-f0b7-487e-93a6-4e9367ec689f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 612cd108e37d6f072bafed919c14532498352e4f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 37a864083fa7cfbea16614a94454571f31deed3a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628925"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59136704"
 ---
-# <a name="platform-invoke-examples"></a><span data-ttu-id="17dff-102">平台叫用範例</span><span class="sxs-lookup"><span data-stu-id="17dff-102">Platform Invoke Examples</span></span>
-<span data-ttu-id="17dff-103">下列範例示範如何在 User32.dll 中定義和呼叫 **MessageBox** 函式，並將簡單字串傳遞為引數。</span><span class="sxs-lookup"><span data-stu-id="17dff-103">The following examples demonstrate how to define and call the **MessageBox** function in User32.dll, passing a simple string as an argument.</span></span> <span data-ttu-id="17dff-104">在這些範例中，<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會設定為 **Auto**，讓目標平台決定字元寬度和字串封送處理。</span><span class="sxs-lookup"><span data-stu-id="17dff-104">In the examples, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field is set to **Auto** to let the target platform determine the character width and string marshaling.</span></span>  
+# <a name="platform-invoke-examples"></a><span data-ttu-id="20f9b-102">平台叫用範例</span><span class="sxs-lookup"><span data-stu-id="20f9b-102">Platform Invoke Examples</span></span>
+<span data-ttu-id="20f9b-103">下列範例示範如何在 User32.dll 中定義和呼叫 **MessageBox** 函式，並將簡單字串傳遞為引數。</span><span class="sxs-lookup"><span data-stu-id="20f9b-103">The following examples demonstrate how to define and call the **MessageBox** function in User32.dll, passing a simple string as an argument.</span></span> <span data-ttu-id="20f9b-104">在這些範例中，<xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> 欄位會設定為 **Auto**，讓目標平台決定字元寬度和字串封送處理。</span><span class="sxs-lookup"><span data-stu-id="20f9b-104">In the examples, the <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet?displayProperty=nameWithType> field is set to **Auto** to let the target platform determine the character width and string marshaling.</span></span>  
   
  [!code-cpp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/cpp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cpp/Example.cpp#1)] 
  [!code-csharp[Conceptual.Interop.PInvoke#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Conceptual.Interop.PInvoke/cs/Example1.cs#1)] 
  [!code-vb[Conceptual.Interop.PInvoke#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Conceptual.Interop.PInvoke/vb/Example1.vb#1)]  
   
- <span data-ttu-id="17dff-105">如需其他範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。</span><span class="sxs-lookup"><span data-stu-id="17dff-105">For additional examples, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
+ <span data-ttu-id="20f9b-105">如需其他範例，請參閱[使用平台叫用封送處理資料](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)。</span><span class="sxs-lookup"><span data-stu-id="20f9b-105">For additional examples, see [Marshaling Data with Platform Invoke](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md).</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="17dff-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="17dff-106">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="20f9b-106">另請參閱</span><span class="sxs-lookup"><span data-stu-id="20f9b-106">See also</span></span>
+
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
-- [<span data-ttu-id="17dff-107">在 Managed 程式碼中建立原型</span><span class="sxs-lookup"><span data-stu-id="17dff-107">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
-- [<span data-ttu-id="17dff-108">指定字元集</span><span class="sxs-lookup"><span data-stu-id="17dff-108">Specifying a Character Set</span></span>](../../../docs/framework/interop/specifying-a-character-set.md)
+- [<span data-ttu-id="20f9b-107">在 Managed 程式碼中建立原型</span><span class="sxs-lookup"><span data-stu-id="20f9b-107">Creating Prototypes in Managed Code</span></span>](../../../docs/framework/interop/creating-prototypes-in-managed-code.md)
+- [<span data-ttu-id="20f9b-108">指定字元集</span><span class="sxs-lookup"><span data-stu-id="20f9b-108">Specifying a Character Set</span></span>](../../../docs/framework/interop/specifying-a-character-set.md)

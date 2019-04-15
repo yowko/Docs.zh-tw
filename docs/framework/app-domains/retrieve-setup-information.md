@@ -12,30 +12,31 @@ helpviewer_keywords:
 ms.assetid: 5cdb12ae-1e37-4a62-8ec7-93d6dcc6e8d9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c5b43258b3ce501d1302c31a70f51341d3a84d4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 80c9fe6de0fca86497ffe84cd8dadf0eb8cef6c5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54588034"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59108949"
 ---
-# <a name="retrieving-setup-information-from-an-application-domain"></a><span data-ttu-id="3e685-102">從應用程式定義域擷取安裝資訊</span><span class="sxs-lookup"><span data-stu-id="3e685-102">Retrieving Setup Information from an Application Domain</span></span>
-<span data-ttu-id="3e685-103">每個應用程式定義域的執行個體都包含這兩個屬性及 <xref:System.AppDomainSetup> 資訊。</span><span class="sxs-lookup"><span data-stu-id="3e685-103">Each instance of an application domain consists of both properties and <xref:System.AppDomainSetup> information.</span></span> <span data-ttu-id="3e685-104">您可以從使用 <xref:System.AppDomain?displayProperty=nameWithType> 類別的應用程式定義域擷取安裝資訊。</span><span class="sxs-lookup"><span data-stu-id="3e685-104">You can retrieve setup information from an application domain using the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="3e685-105">這個類別提供數個成員，它們會擷取應用程式定義域的組態資訊。</span><span class="sxs-lookup"><span data-stu-id="3e685-105">This class provides several members that retrieve configuration information about an application domain.</span></span>  
+# <a name="retrieving-setup-information-from-an-application-domain"></a><span data-ttu-id="289c6-102">從應用程式定義域擷取安裝資訊</span><span class="sxs-lookup"><span data-stu-id="289c6-102">Retrieving Setup Information from an Application Domain</span></span>
+<span data-ttu-id="289c6-103">每個應用程式定義域的執行個體都包含這兩個屬性及 <xref:System.AppDomainSetup> 資訊。</span><span class="sxs-lookup"><span data-stu-id="289c6-103">Each instance of an application domain consists of both properties and <xref:System.AppDomainSetup> information.</span></span> <span data-ttu-id="289c6-104">您可以從使用 <xref:System.AppDomain?displayProperty=nameWithType> 類別的應用程式定義域擷取安裝資訊。</span><span class="sxs-lookup"><span data-stu-id="289c6-104">You can retrieve setup information from an application domain using the <xref:System.AppDomain?displayProperty=nameWithType> class.</span></span> <span data-ttu-id="289c6-105">這個類別提供數個成員，它們會擷取應用程式定義域的組態資訊。</span><span class="sxs-lookup"><span data-stu-id="289c6-105">This class provides several members that retrieve configuration information about an application domain.</span></span>  
   
- <span data-ttu-id="3e685-106">您也可以查詢應用程式定義域的 **AppDomainSetup** 物件，取得在建立時即已傳遞至定義域的安裝資訊。</span><span class="sxs-lookup"><span data-stu-id="3e685-106">You can also query the **AppDomainSetup** object for the application domain to obtain setup information that was passed to the domain when it was created.</span></span>  
+ <span data-ttu-id="289c6-106">您也可以查詢應用程式定義域的 **AppDomainSetup** 物件，取得在建立時即已傳遞至定義域的安裝資訊。</span><span class="sxs-lookup"><span data-stu-id="289c6-106">You can also query the **AppDomainSetup** object for the application domain to obtain setup information that was passed to the domain when it was created.</span></span>  
   
- <span data-ttu-id="3e685-107">下例會建立新的應用程式定義域，然後將數個成員值列印到主控台。</span><span class="sxs-lookup"><span data-stu-id="3e685-107">The following example creates a new application domain and then prints several member values to the console.</span></span>  
+ <span data-ttu-id="289c6-107">下例會建立新的應用程式定義域，然後將數個成員值列印到主控台。</span><span class="sxs-lookup"><span data-stu-id="289c6-107">The following example creates a new application domain and then prints several member values to the console.</span></span>  
   
  [!code-cpp[AppDomain_Setup#2](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source2.cpp#2)]
  [!code-csharp[AppDomain_Setup#2](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source2.cs#2)]
  [!code-vb[AppDomain_Setup#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source2.vb#2)]  
   
- <span data-ttu-id="3e685-108">然後，下列範例集會擷取應用程式定義域的安裝資訊。</span><span class="sxs-lookup"><span data-stu-id="3e685-108">The following example sets, and then retrieves, setup information for an application domain.</span></span> <span data-ttu-id="3e685-109">請注意，`AppDomain.SetupInformation.ApplicationBase` 取得組態資訊。</span><span class="sxs-lookup"><span data-stu-id="3e685-109">Note that `AppDomain.SetupInformation.ApplicationBase` gets the configuration information.</span></span>  
+ <span data-ttu-id="289c6-108">然後，下列範例集會擷取應用程式定義域的安裝資訊。</span><span class="sxs-lookup"><span data-stu-id="289c6-108">The following example sets, and then retrieves, setup information for an application domain.</span></span> <span data-ttu-id="289c6-109">請注意，`AppDomain.SetupInformation.ApplicationBase` 取得組態資訊。</span><span class="sxs-lookup"><span data-stu-id="289c6-109">Note that `AppDomain.SetupInformation.ApplicationBase` gets the configuration information.</span></span>  
   
  [!code-cpp[AppDomain_Setup#3](../../../samples/snippets/cpp/VS_Snippets_CLR/AppDomain_Setup/CPP/source3.cpp#3)]
  [!code-csharp[AppDomain_Setup#3](../../../samples/snippets/csharp/VS_Snippets_CLR/AppDomain_Setup/CS/source3.cs#3)]
  [!code-vb[AppDomain_Setup#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AppDomain_Setup/VB/source3.vb#3)]  
   
-## <a name="see-also"></a><span data-ttu-id="3e685-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3e685-110">See also</span></span>
-- [<span data-ttu-id="3e685-111">使用應用程式定義域設計程式</span><span class="sxs-lookup"><span data-stu-id="3e685-111">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)
-- [<span data-ttu-id="3e685-112">使用應用程式定義域</span><span class="sxs-lookup"><span data-stu-id="3e685-112">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)
+## <a name="see-also"></a><span data-ttu-id="289c6-110">另請參閱</span><span class="sxs-lookup"><span data-stu-id="289c6-110">See also</span></span>
+
+- [<span data-ttu-id="289c6-111">使用應用程式定義域設計程式</span><span class="sxs-lookup"><span data-stu-id="289c6-111">Programming with Application Domains</span></span>](application-domains.md#programming-with-application-domains)
+- [<span data-ttu-id="289c6-112">使用應用程式定義域</span><span class="sxs-lookup"><span data-stu-id="289c6-112">Using Application Domains</span></span>](../../../docs/framework/app-domains/use.md)

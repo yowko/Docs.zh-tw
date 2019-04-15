@@ -1,18 +1,17 @@
 ---
-ms.openlocfilehash: 9ad283af76085c228bedceb6db723a1d18b10210
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 71c81cf188fa4c2300661f10eb87e7ae00e031f6
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761025"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234413"
 ---
-### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a><span data-ttu-id="13879-101">ETW 事件名稱不能只有 "Start" 或 "Stop" 尾碼不同</span><span class="sxs-lookup"><span data-stu-id="13879-101">ETW event names cannot differ only by a "Start" or "Stop" suffix</span></span>
+### <a name="etw-event-names-cannot-differ-only-by-a-start-or-stop-suffix"></a><span data-ttu-id="80d92-101">ETW 事件名稱不能只有 "Start" 或 "Stop" 尾碼不同</span><span class="sxs-lookup"><span data-stu-id="80d92-101">ETW event names cannot differ only by a "Start" or "Stop" suffix</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="13879-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="13879-102">Details</span></span>|<span data-ttu-id="13879-103">在 .NET Framework 4.6 和 4.6.1 中，當兩個 Windows 事件追蹤 (ETW) 事件名稱的差異只在 &quot;Start&quot; 或 &quot;Stop&quot; 尾碼時 (例如當一個事件的名稱為 <code>LogUser</code> 而另一個事件的名稱為 <code>LogUserStart</code> 時)，執行階段會擲回 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="13879-103">In the .NET Framework 4.6 and 4.6.1, the runtime throws an <xref:System.ArgumentException> when two Event Tracing for Windows (ETW) event names differ only by a &quot;Start&quot; or &quot;Stop&quot; suffix (as when one event is named <code>LogUser</code> and another is named <code>LogUserStart</code>).</span></span> <span data-ttu-id="13879-104">在此情況下，執行階段無法建構事件來源，因此無法發出任何記錄。</span><span class="sxs-lookup"><span data-stu-id="13879-104">In this case, the runtime cannot construct the event source, which cannot emit any logging.</span></span>|
-|<span data-ttu-id="13879-105">建議</span><span class="sxs-lookup"><span data-stu-id="13879-105">Suggestion</span></span>|<span data-ttu-id="13879-106">若要避免這個例外狀況，請確定沒有兩個事件的名稱差異只在 &quot;Start&quot; 或 &quot;Stop&quot; 尾碼。從 .NET Framework 4.6.2 開始已移除這項需求；執行階段可以釐清差異只在於 &quot;Start&quot; 和 &quot;Stop&quot; 尾碼的事件名稱。</span><span class="sxs-lookup"><span data-stu-id="13879-106">To prevent the exception, ensure that no two event names differ only by a &quot;Start&quot; or &quot;Stop&quot; suffix.This requirement is removed starting with the .NET Framework 4.6.2; the runtime can disambiguate event names that differ only by the &quot;Start&quot; and &quot;Stop&quot; suffix.</span></span>|
-|<span data-ttu-id="13879-107">範圍</span><span class="sxs-lookup"><span data-stu-id="13879-107">Scope</span></span>|<span data-ttu-id="13879-108">Edge</span><span class="sxs-lookup"><span data-stu-id="13879-108">Edge</span></span>|
-|<span data-ttu-id="13879-109">版本</span><span class="sxs-lookup"><span data-stu-id="13879-109">Version</span></span>|<span data-ttu-id="13879-110">4.6</span><span class="sxs-lookup"><span data-stu-id="13879-110">4.6</span></span>|
-|<span data-ttu-id="13879-111">類型</span><span class="sxs-lookup"><span data-stu-id="13879-111">Type</span></span>|<span data-ttu-id="13879-112">正在重定目標</span><span class="sxs-lookup"><span data-stu-id="13879-112">Retargeting</span></span>|
-
+|<span data-ttu-id="80d92-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="80d92-102">Details</span></span>|<span data-ttu-id="80d92-103">在 .NET Framework 4.6 和 4.6.1 中，當兩個 Windows 事件追蹤 (ETW) 事件名稱的差異只在 &quot;Start&quot; 或 &quot;Stop&quot; 尾碼時 (例如當一個事件的名稱為 <code>LogUser</code> 而另一個事件的名稱為 <code>LogUserStart</code> 時)，執行階段會擲回 <xref:System.ArgumentException>。</span><span class="sxs-lookup"><span data-stu-id="80d92-103">In the .NET Framework 4.6 and 4.6.1, the runtime throws an <xref:System.ArgumentException> when two Event Tracing for Windows (ETW) event names differ only by a &quot;Start&quot; or &quot;Stop&quot; suffix (as when one event is named <code>LogUser</code> and another is named <code>LogUserStart</code>).</span></span> <span data-ttu-id="80d92-104">在此情況下，執行階段無法建構事件來源，因此無法發出任何記錄。</span><span class="sxs-lookup"><span data-stu-id="80d92-104">In this case, the runtime cannot construct the event source, which cannot emit any logging.</span></span>|
+|<span data-ttu-id="80d92-105">建議</span><span class="sxs-lookup"><span data-stu-id="80d92-105">Suggestion</span></span>|<span data-ttu-id="80d92-106">若要避免這個例外狀況，請確定沒有兩個事件的名稱差異只在 &quot;Start&quot; 或 &quot;Stop&quot; 尾碼。從 .NET Framework 4.6.2 開始已移除這項需求；執行階段可以釐清差異只在於 &quot;Start&quot; 和 &quot;Stop&quot; 尾碼的事件名稱。</span><span class="sxs-lookup"><span data-stu-id="80d92-106">To prevent the exception, ensure that no two event names differ only by a &quot;Start&quot; or &quot;Stop&quot; suffix.This requirement is removed starting with the .NET Framework 4.6.2; the runtime can disambiguate event names that differ only by the &quot;Start&quot; and &quot;Stop&quot; suffix.</span></span>|
+|<span data-ttu-id="80d92-107">範圍</span><span class="sxs-lookup"><span data-stu-id="80d92-107">Scope</span></span>|<span data-ttu-id="80d92-108">Edge</span><span class="sxs-lookup"><span data-stu-id="80d92-108">Edge</span></span>|
+|<span data-ttu-id="80d92-109">版本</span><span class="sxs-lookup"><span data-stu-id="80d92-109">Version</span></span>|<span data-ttu-id="80d92-110">4.6</span><span class="sxs-lookup"><span data-stu-id="80d92-110">4.6</span></span>|
+|<span data-ttu-id="80d92-111">類型</span><span class="sxs-lookup"><span data-stu-id="80d92-111">Type</span></span>|<span data-ttu-id="80d92-112">正在重定目標</span><span class="sxs-lookup"><span data-stu-id="80d92-112">Retargeting</span></span>|
