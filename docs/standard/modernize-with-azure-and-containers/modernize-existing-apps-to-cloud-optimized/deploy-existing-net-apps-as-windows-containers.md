@@ -4,12 +4,12 @@ description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/29/2018
-ms.openlocfilehash: 9d84924317e7c6e3dd4386f851ee902e2b5a7caf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ad0da9f7f0412c14b5362e3f631a7aa4af1f8260
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216661"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611246"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>將現有 .NET 應用程式部署為 Windows 容器
 
@@ -93,14 +93,14 @@ Docker 容器 (為了簡單起見，*容器*) 可以在 Linux 和 Windows 上的
 
 當您將映像名稱加入您的 Dockerfile 檔案時，您可以選取的作業系統和版本所使用的標記，如下列範例，說明.NET Framework 為基礎的 Windows 容器映像所示：
 
-> | **標記** | **系統和版本** |
+> | **Tag** | **系統和版本** |
 > |---|---|
 > | **microsoft/dotnet-framework:4.x-windowsservercore** | .NET framework 4.x 在 Windows Server Core |
 > | **microsoft/aspnet:4.x-windowsservercore** | .NET framework 4.x 與其他 ASP.NET 自訂，在 Windows Server Core |
 
 .NET Core （跨平台適用於 Linux 和 Windows），標記看起來會如下所示：
 
-> | **標記** | **系統和版本**
+> | **Tag** | **系統和版本**
 > |---|---|
 > | **microsoft/dotnet:2.0.0-runtime** | .NET core 2.0 執行階段僅限在 Linux 上 |
 > | **microsoft/dotnet:2.0.0-runtime-nanoserver** | .NET core 2.0 執行階段僅限 Windows Nano Server 上 |
@@ -125,15 +125,15 @@ Linux 容器，例如 Windows Server 容器會管理使用 Docker 引擎。 與 
 
 -   **Windows 容器文件**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/](https://docs.microsoft.com/virtualization/windowscontainers/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/>
 
 -   **Windows 容器基本概念**
 
-    [https://docs.microsoft.com/virtualization/windowscontainers/about/](https://docs.microsoft.com/virtualization/windowscontainers/about/)
+    <https://docs.microsoft.com/virtualization/windowscontainers/about/>
 
 -   **資訊圖︰Microsoft 和容器**
 
-    [https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf](https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf)
+    <https://info.microsoft.com/rs/157-GQE-382/images/Container%20infographic%201.4.17.pdf>
 
 ## <a name="the-container-ecosystem-in-azure"></a>在 Azure 中的容器生態系統
 

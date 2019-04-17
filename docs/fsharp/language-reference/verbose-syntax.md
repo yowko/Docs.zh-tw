@@ -2,12 +2,12 @@
 title: 詳細語法
 description: 了解的差異詳細資訊和輕量型語法，在F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 05b909d438e9844ad5adcb2a4087ce04f8999751
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: c770f2843276619cb2878198a537dcfb9c054b6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610888"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613781"
 ---
 # <a name="verbose-syntax"></a>詳細語法
 
@@ -33,6 +33,7 @@ ms.locfileid: "53610888"
 <expression1>
 <expression2>
 ```
+
 </td><td>
 
 ```fsharp
@@ -84,6 +85,7 @@ begin
     <expression2>;
 end
 ```
+
 </td>
 </tr>
 <tr><td>
@@ -244,7 +246,7 @@ type <union-name> =
     ...
     with
         <value-or-member-definitions>
-    end    
+    end
 ```
 
 </td>
@@ -255,6 +257,7 @@ type <union-name> =
 type <interface-name> =
     ...
 ```
+
 </td><td>
 
 ```fsharp

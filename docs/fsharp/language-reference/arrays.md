@@ -2,12 +2,12 @@
 title: 陣列
 description: 了解如何建立和使用中的陣列F#程式設計語言。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9670f2a61ed5c254493806501120552be9caecdf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 4a81a0994479ecd92b8556c4901fea23c3c0507b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614554"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610934"
 ---
 # <a name="arrays"></a>陣列
 
@@ -109,6 +109,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 ```
 [|5; 6; 7; 8; 9; 10; 11; 12; 13; 14|]
 ```
+
 [`Array.append`](https://msdn.microsoft.com/library/08836310-5036-4474-b9a2-2c73e2293911) 藉由結合兩個現有的陣列建立新的陣列。
 
 下列程式碼示範**Array.append**。
@@ -164,7 +165,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 
 [`Array.rev`](https://msdn.microsoft.com/library/1bbf822c-763b-4794-af21-97d2e48ef709) 藉由反轉現有陣列的順序來產生新的陣列。 下列程式碼示範`Array.rev`。
 
-[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]  
+[!code-fsharp[Main](../../../samples/snippets/fsharp/arrays/snippet18.fs)]
 
 上述程式碼的輸出如下所示。
 
@@ -205,7 +206,7 @@ Array of squares: [|0; 1; 4; 9; 16; 25; 36; 49; 64; 81|]
 在二維陣列 （矩陣） 中，您可以藉由指定範圍和使用萬用字元擷取子矩陣 (`*`) 字元來指定整個資料列或資料行。
 
 ```fsharp
-/ Get rows 1 to N from an NxM matrix (returns a matrix):
+// Get rows 1 to N from an NxM matrix (returns a matrix):
 matrix.[1.., *]
 
 // Get rows 1 to 3 from a matrix (returns a matrix):
@@ -239,7 +240,7 @@ type Matrix<'T>(N: int, M: int) =
         and set(a: int, b: int) (value:'T) = internalArray.[a, b] <- value
 
     member this.GetSlice(rowStart: int option, rowFinish : int option, colStart: int option, colFinish : int option) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
@@ -247,33 +248,33 @@ type Matrix<'T>(N: int, M: int) =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[rowStart..rowFinish, colStart..colFinish]
 
     member this.GetSlice(row: int, colStart: int option, colFinish: int option) =
-        let colStart = 
+        let colStart =
             match colStart with
             | Some(v) -> v
             | None -> 0
-        let colFinish = 
+        let colFinish =
             match colFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(1) - 1
         internalArray.[row, colStart..colFinish]
 
     member this.GetSlice(rowStart: int option, rowFinish: int option, col: int) =
-        let rowStart = 
+        let rowStart =
             match rowStart with
             | Some(v) -> v
             | None -> 0
-        let rowFinish = 
+        let rowFinish =
             match rowFinish with
             | Some(v) -> v
             | None -> internalArray.GetLength(0) - 1

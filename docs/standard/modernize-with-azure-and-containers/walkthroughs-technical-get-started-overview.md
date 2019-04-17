@@ -1,27 +1,27 @@
 ---
-title: 逐步解說和技術開始入門的概觀
+title: 逐步解說和技術入門概觀
 description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 |逐步解說和技術開始入門的概觀
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: e89f1e79eec16919b2e70952392b6f640433156b
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: 2202e2f972951e4074ed1941f0a0cfe352ab4b85
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846255"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612949"
 ---
-# <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術開始入門的概觀
+# <a name="walkthroughs-and-technical-get-started-overview"></a>逐步解說和技術入門概觀
 
 若要限制此電子書的大小，其他的技術文件和完整的逐步解說所提供的 GitHub 存放庫中。 線上系列這一章所述的逐步解說涵蓋 Windows 容器和部署至 Azure 為基礎的多個環境的逐步安裝程式。
 
-下列各節說明每個逐步解說是什麼相關高階的願景，其目標，提供所涉及的工作的圖表。 您可以取得自己的逐步解說中*eShopModernizing*在應用程式 GitHub 儲存機制的 wiki [ https://github.com/dotnet-architecture/eShopModernizing/wiki ](https://github.com/dotnet-architecture/eShopModernizing/wiki)。
+下列各節說明每個逐步解說是什麼相關高階的願景，其目標，提供所涉及的工作的圖表。 您可以取得自己的逐步解說中*eShopModernizing*在應用程式 GitHub 儲存機制的 wiki <https://github.com/dotnet-architecture/eShopModernizing/wiki>。
 
 ## <a name="technical-walkthrough-list"></a>技術逐步解說清單
 
 下列快速入門逐步解說提供一致且完整的範例應用程式，您可以隨即轉移藉由使用容器，和在 Azure 中使用多個部署選項然後移動的技術指導。
 
-每個下列逐步解說使用的新範例 eShopLegacy 和 eShopModernizing 應用程式，也就是在 GitHub 上的可用[ https://github.com/dotnet-architecture/eShopModernizing ](https://github.com/dotnet-architecture/eShopModernizing)。
+每個下列逐步解說使用的新範例 eShopLegacy 和 eShopModernizing 應用程式，可在 GitHub 上的<https://github.com/dotnet-architecture/eShopModernizing>。
 
 - **教學課程的 eShop 舊版應用程式 （如將現代化的應用程式基準）**
 
@@ -136,7 +136,7 @@ ms.locfileid: "57846255"
 
 ### <a name="technical-walkthrough-availability"></a>技術逐步解說可用性
 
-完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki: [https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki: <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>總覽
 
@@ -182,7 +182,7 @@ Azure 目前提供的 VM **Windows Server 2016 with Containers**。 您可以試
 
 探索 GitHub wiki 上的此更深入的內容：
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>逐步解說 4:將 Windows 容器型應用程式部署至 Azure Container Instances (ACI)
 
@@ -228,7 +228,7 @@ Azure Container Instances 可讓您輕鬆地建立及管理 Docker 容器，在 
 
 完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ### <a name="overview"></a>總覽
 
@@ -280,7 +280,7 @@ Azure Container Service 會特別針對 Azure 最佳化熱門開放原始碼工�
 
 ## <a name="next-steps"></a>後續步驟
 
-探索 GitHub wiki 上的此更深入的內容： [https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD))
+探索 GitHub wiki 上的此更深入的內容： <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
 
 ## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>逐步解說 6:部署到 Azure Service Fabric Windows 容器型應用程式
 
@@ -288,7 +288,7 @@ Azure Container Service 會特別針對 Azure 最佳化熱門開放原始碼工�
 
 完整的技術逐步解說位於 eShopModernizing GitHub 存放庫 wiki:
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 ### <a name="overview"></a>總覽
 
@@ -354,7 +354,7 @@ Service fabric，開發人員就可以開始思考實體和虛擬機器從進行
 
 探索 GitHub wiki 上的此更深入的內容：
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD))
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [上一頁](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

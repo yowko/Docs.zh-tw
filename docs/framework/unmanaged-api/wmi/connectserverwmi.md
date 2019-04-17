@@ -16,21 +16,22 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8786892d591a98ddcd7f51eddf86fdbcf50f2197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214867"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611532"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 函式
+
 在指定的電腦上建立從 DCOM 到 WMI 命名空間的連線。
 
 [!INCLUDE[internalonly-unmanaged](../../../../includes/internalonly-unmanaged.md)]
 
 ## <a name="syntax"></a>語法
 
-```
+```cpp
 HRESULT ConnectServerWmi (
    [in] BSTR               strNetworkResource,
    [in] BSTR               strUser,
@@ -40,10 +41,11 @@ HRESULT ConnectServerWmi (
    [in] BSTR               strAuthority,
    [in] IWbemContext*      pCtx,
    [out] IWbemServices**   ppNamespace,
-   [in] DWORD              impLevel, 
+   [in] DWORD              impLevel,
    [in] DWORD              authLevel
 );
 ```
+
 ## <a name="parameters"></a>參數
 
 `strNetworkResource`\
@@ -56,8 +58,8 @@ HRESULT ConnectServerWmi (
 [in]有效的指標`BSTR`其中包含的密碼。 A`null`指出目前的安全性內容。 空字串 ("") 表示有效的長度為零的密碼。
 
 `strLocale`\
-[in]有效的指標`BSTR`指出正確的地區設定的資訊擷取。 Microsoft 地區設定識別項、 字串的格式是 「 MS\_*xxx*"，其中*xxx*是十六進位格式表示的地區設定識別碼 (LCID) 的字串。 如果未指定無效的地區設定，則方法會傳回`WBEM_E_INVALID_PARAMETER`在 Windows 7，改為使用伺服器的預設地區設定是除外。 如果 ' null1，目前的地區設定使用。 
- 
+[in]有效的指標`BSTR`指出正確的地區設定的資訊擷取。 Microsoft 地區設定識別項、 字串的格式是 「 MS\_*xxx*"，其中*xxx*是十六進位格式表示的地區設定識別碼 (LCID) 的字串。 如果未指定無效的地區設定，則方法會傳回`WBEM_E_INVALID_PARAMETER`在 Windows 7，改為使用伺服器的預設地區設定是除外。 如果 ' null1，目前的地區設定使用。
+
 `lSecurityFlags`\
 [in]旗標傳遞至`ConnectServerWmi`方法。 零 (0) 這個參數的值會導致呼叫`ConnectServerWmi`建立連接到伺服器之後，才傳回。 這可能導致應用程式沒有回應無限期地如果伺服器將會中斷。 其他有效值為：
 
@@ -76,7 +78,7 @@ HRESULT ConnectServerWmi (
 | NTLMDOMAIN:*網域名稱* | 使用 NT LAN Manager 驗證，且此參數包含的 NTLM 網域名稱。 |
 
 `pCtx`\
-[in]一般而言，這個參數是`null`。 否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)所需的一或多個動態類別提供者的物件。 
+[in]一般而言，這個參數是`null`。 否則，它是指標[IWbemContext](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemcontext)所需的一或多個動態類別提供者的物件。
 
 `ppNamespace`\
 [out]當函式傳回時，收到的指標[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)物件繫結至指定的命名空間。 它會設定為指向`null`時卻發生錯誤。
@@ -112,8 +114,8 @@ HRESULT ConnectServerWmi (
 
  **標頭：** WMINet_Utils.idl
 
- **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 與效能計數器 (非受控 API 參考)](index.md)
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)

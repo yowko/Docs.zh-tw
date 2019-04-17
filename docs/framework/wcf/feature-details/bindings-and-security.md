@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: bdefc543e90db708ae6c8be29b69381d66235154
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59122144"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611899"
 ---
 # <a name="bindings-and-security"></a>繫結和安全性
 包含與 Windows Communication Foundation (WCF) 的系統提供繫結會提供程式 WCF 應用程式的快速方法。 除了一個例外狀況以外，所有繫結預設都會啟用安全性配置。 本主題將根據您的安全性需求，協助您選取正確的繫結。  
@@ -39,7 +39,7 @@ ms.locfileid: "59122144"
   
 -   Web Service Enhancements (WSE) 應用程式。  
   
--   基本設定檔中的 Web 服務互通性所定義 (WS-我) 規格 ([https://go.microsoft.com/fwlink/?LinkId=38955](https://go.microsoft.com/fwlink/?LinkId=38955))。  
+-   基本設定檔中的 Web 服務互通性所定義 (WS-我) 規格 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
   
 -   如 WS-I 中定義的 Basic Security Profile。  
   
@@ -205,8 +205,8 @@ ms.locfileid: "59122144"
 |類型|描述|  
 |----------|-----------------|  
 |None|指定用戶端不需要提出任何認證。 這會轉譯成匿名用戶端。|  
-|基本|基本驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證：基本和摘要式驗證，網址[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
-|摘要|摘要式驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證：基本和摘要式驗證，網址[ https://go.microsoft.com/fwlink/?LinkId=84023 ](https://go.microsoft.com/fwlink/?LinkId=84023)。|  
+|基本|基本驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證：基本和摘要式驗證，可在<https://go.microsoft.com/fwlink/?LinkId=84023>。|  
+|摘要|摘要式驗證。 如需詳細資訊，請參閱 RFC 2617 – HTTP 驗證：基本和摘要式驗證，可在<https://go.microsoft.com/fwlink/?LinkId=84023>。|  
 |NTLM|NT LAN Manager (NTLM) 驗證。|  
 |Windows|Windows 驗證。|  
 |憑證|使用憑證執行的驗證。|  
@@ -226,8 +226,8 @@ ms.locfileid: "59122144"
 ## <a name="see-also"></a>另請參閱
 
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [選取認證類型](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)
 - [自訂繫結的安全性功能](../../../../docs/framework/wcf/feature-details/security-capabilities-with-custom-bindings.md)
 - [安全性行為](../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

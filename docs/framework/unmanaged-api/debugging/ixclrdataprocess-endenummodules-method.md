@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 3b7050e92af6fc58b45837840b2796a5deac955c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: de30384b4c12c4fcac3eafe580484685f8a43fa4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375333"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611428"
 ---
 # <a name="ixclrdataprocessendenummodules-method"></a>IXCLRDataProcess::EndEnumModules 方法
 
@@ -29,7 +29,8 @@ ms.locfileid: "57375333"
 [!INCLUDE[debugging-api-recommended-note](../../../../includes/debugging-api-recommended-note.md)]
 
 ## <a name="syntax"></a>語法
-```
+
+```cpp
 HRESULT EndEnumModules(
     [in] CLRDATA_ENUM handle
 );
@@ -46,10 +47,8 @@ HRESULT EndEnumModules(
 
 ## <a name="requirements"></a>需求
 
-**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。   
-**標頭：** 無   
-**程式庫：** 無   
-**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
+**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。
+**標頭：** 無**程式庫：** 無 **.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]
 
 ## <a name="see-also"></a>另請參閱
 

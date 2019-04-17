@@ -12,15 +12,15 @@ helpviewer_keywords:
 - backing attached events with routed events [WPF]
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
-ms.openlocfilehash: 8f0b5109dd569791ca8f45dbe969b1c9e2f6407b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59140851"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613586"
 ---
 # <a name="attached-events-overview"></a>附加事件概觀
-[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 語言元件和呼叫的事件類型會定義*附加事件*。 附加事件的概念，讓您能新增特定事件的處理常式到任意項目，而不是實際定義或繼承事件的項目。 在此情況下，可能引發事件的物件和目的地處理執行個體都不會定義或以其他方式「擁有」事件。  
+[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] 定義語言元件和稱為「附加事件」的事件類型。 附加事件的概念，讓您能新增特定事件的處理常式到任意項目，而不是實際定義或繼承事件的項目。 在此情況下，可能引發事件的物件和目的地處理執行個體都不會定義或以其他方式「擁有」事件。  
 
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必要條件  
@@ -64,9 +64,9 @@ ms.locfileid: "59140851"
   
  模式如下所示︰  
   
--   一種方法**新增*EventName*處理常式**具有兩個參數。 第一個參數必須識別事件，並識別出的事件必須符合的名稱***EventName***在方法名稱。 第二個參數是要新增的處理常式。 這個方法必須是`public`和`static`，且沒有傳回值。  
+-   一種方法**新增*EventName*處理常式**具有兩個參數。 第一個參數是要加入事件處理常式的執行個體。 第二個參數是要加入事件處理常式。 這個方法必須是`public`和`static`，且沒有傳回值。  
   
--   一種方法**移除*EventName*處理常式**具有兩個參數。 第一個參數必須識別事件，並識別出的事件必須符合的名稱***EventName***在方法名稱。 第二個參數是要移除的處理常式。 這個方法必須是`public`和`static`，且沒有傳回值。  
+-   一種方法**移除*EventName*處理常式**具有兩個參數。 第一個參數是要移除的事件處理常式的執行個體。 第二個參數是要移除事件處理常式。 這個方法必須是`public`和`static`，且沒有傳回值。  
   
  **新增*EventName*處理常式**存取子方法可協助[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]時處理附加事件處理常式屬性宣告的項目。 **新增*EventName*處理常式**並**移除*EventName*處理常式**方法也可讓程式碼存取的事件處理常式存放區附加事件。  
   

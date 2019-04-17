@@ -54,8 +54,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  TAP 方法的呼叫端可能會透過同步等待產生的工作來阻止等待 TAP 方法完成，或是在非同步作業完成時執行其他 (接續) 程式碼。 接續程式碼 (Continuation Code) 的建立者可以控制執行程式碼的位置。 您可以明確建立接續程式碼、透過 <xref:System.Threading.Tasks.Task> 類別的方法建立 (例如 <xref:System.Threading.Tasks.Task.ContinueWith%2A>)，或使用建置於接續之上的語言支援以隱含方式建立 (例如 C# 中的 `await`、Visual Basic 中的 `Await`，或 F# 中的 `AwaitValue`)。  
   
 ## <a name="task-status"></a>工作狀態  
- 
-  <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。 
+ <xref:System.Threading.Tasks.Task> 類別會提供非同步作業的生命週期，而該週期是以 <xref:System.Threading.Tasks.TaskStatus> 列舉表示。 為了支援從 <xref:System.Threading.Tasks.Task> 和 <xref:System.Threading.Tasks.Task%601> 衍生的類型隱密案例，以及支援分隔建構與排程，<xref:System.Threading.Tasks.Task> 類別會公開 <xref:System.Threading.Tasks.Task.Start%2A> 方法。 由公用 <xref:System.Threading.Tasks.Task> 建構函式所建立的工作稱為「靜止工作」(Cold Task)，因為這類工作的生命週期是從非排程的 <xref:System.Threading.Tasks.TaskStatus.Created> 狀態開始，而且只有在這些執行個體上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 時才會排程。 
  
  所有其他工作都是從作用狀態開始其生命週期，也就是說，它們所代表的非同步作業已啟始，而且其工作狀態是 <xref:System.Threading.Tasks.TaskStatus.Created?displayProperty=nameWithType> 以外的列舉值。 從 TAP 方法傳回的所有工作都必須為啟用狀態。 **如果 TAP 方法在內部使用工作的建構函式將所要傳回的工作具現化，則 TAP 方法必須先在 <xref:System.Threading.Tasks.Task> 物件上呼叫 <xref:System.Threading.Tasks.Task.Start%2A>，再將它傳回。** TAP 方法的消費者可以安全地假設傳回的工作為作用中，並且不應嘗試在任何從 TAP 方法傳回的 <xref:System.Threading.Tasks.Task.Start%2A> 上呼叫 <xref:System.Threading.Tasks.Task>。 在作用中工作上呼叫 <xref:System.Threading.Tasks.Task.Start%2A> 會導致 <xref:System.InvalidOperationException> 例外狀況。  
   
@@ -65,8 +64,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  [!code-csharp[Conceptual.TAP#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.tap/cs/examples1.cs#1)]
  [!code-vb[Conceptual.TAP#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.tap/vb/examples1.vb#1)]  
   
- 非同步作業會監視取消要求的這個語彙基元。 如果收到取消要求，它可以選擇接受該要求和取消作業。 如果取消要求導致工作尚未完成就結束，則 TAP 方法會傳回以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態結束的工作，而且沒有可用的結果，也不會擲回例外狀況。  
-  <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態會視為工作的最後 (已完成) 狀態，並且包括 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 狀態。 因此，如果工作處於 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態，其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 屬性就會傳回 `true`。 當工作以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態完成時，工作中註冊的任何接續都會排程或執行，除非指定了像是 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled> 這類選項來選擇不接續。 任何藉由使用語言功能以非同步方式等候已取消之工作的程式碼都會繼續執行，但是會收到 <xref:System.OperationCanceledException> 或從其衍生的例外狀況。 透過 <xref:System.Threading.Tasks.Task.Wait%2A> 和 <xref:System.Threading.Tasks.Task.WaitAll%2A> 這類方法封鎖同步等候工作的程式碼也會繼續執行，但會產生例外狀況。  
+ 非同步作業會監視取消要求的這個語彙基元。 如果收到取消要求，它可以選擇接受該要求和取消作業。 如果取消要求導致工作尚未完成就結束，則 TAP 方法會傳回以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態結束的工作，而且沒有可用的結果，也不會擲回例外狀況。  <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態會視為工作的最後 (已完成) 狀態，並且包括 <xref:System.Threading.Tasks.TaskStatus.Faulted> 和 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 狀態。 因此，如果工作處於 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態，其 <xref:System.Threading.Tasks.Task.IsCompleted%2A> 屬性就會傳回 `true`。 當工作以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態完成時，工作中註冊的任何接續都會排程或執行，除非指定了像是 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnCanceled> 這類選項來選擇不接續。 任何藉由使用語言功能以非同步方式等候已取消之工作的程式碼都會繼續執行，但是會收到 <xref:System.OperationCanceledException> 或從其衍生的例外狀況。 透過 <xref:System.Threading.Tasks.Task.Wait%2A> 和 <xref:System.Threading.Tasks.Task.WaitAll%2A> 這類方法封鎖同步等候工作的程式碼也會繼續執行，但會產生例外狀況。  
   
  如果取消語彙基元在呼叫接受語彙基元的 TAP 方法之前就已要求取消，則 TAP 方法應傳回 <xref:System.Threading.Tasks.TaskStatus.Canceled> 工作。  不過，如果是在非同步作業執行時要求取消，則非同步作業不需要接受取消要求。  只有在作業因取消要求而結束時，傳回的工作才應該以 <xref:System.Threading.Tasks.TaskStatus.Canceled> 狀態結束。 如果已要求取消，但是仍然產生結果或例外狀況，則工作應以 <xref:System.Threading.Tasks.TaskStatus.RanToCompletion> 或 <xref:System.Threading.Tasks.TaskStatus.Faulted> 狀態結束。 
  
@@ -97,9 +95,7 @@ TAP 使用單一方法表示非同步作業的啟始和完成。 這與非同步
  如果 TAP 實作提供接受 `progress` 參數的多載，則必須允許 `null` 引數，而這種情況下就不會報告進度。 TAP 實作應對 <xref:System.Progress%601> 物件同步報告進度，如此可讓非同步方法快速提供進度，並且讓進度消費者判斷處理資訊的最佳方式和位置。 例如，進度執行個體可以選擇在擷取的同步處理內容上封送處理回呼並引發事件。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> 實作  
- 
-  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供單一 <xref:System.IProgress%601> 實作：<xref:System.Progress%601>。 
-  <xref:System.Progress%601> 類別的宣告方式如下：  
+ [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 提供單一 <xref:System.IProgress%601> 實作：<xref:System.Progress%601>。 <xref:System.Progress%601> 類別的宣告方式如下：  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  
@@ -120,9 +116,7 @@ Public Class Progress(Of T) : Inherits IProgress(Of T)
 End Class  
 ```  
   
- 
-  <xref:System.Progress%601> 執行個體會公開 <xref:System.Progress%601.ProgressChanged> 事件，該事件是在每次非同步作業報告進度更新時引發。 
-  <xref:System.Progress%601.ProgressChanged> 事件是在具現化 <xref:System.Threading.SynchronizationContext> 執行個體時所擷取的 <xref:System.Progress%601> 物件上引發。 如果沒有可用的同步處理內容，則會使用以執行緒集區為目標的預設內容。 處理常式可能會向這個事件註冊。 為了方便起見，您也可以對 <xref:System.Progress%601> 建構函式提供單一處理常式，該處理常式的行為就像是 <xref:System.Progress%601.ProgressChanged> 事件的事件處理常式。 進度更新會以非同步方式引發，以避免在事件處理常式執行時延遲非同步作業。 另一個 <xref:System.IProgress%601> 實作可以選擇套用不同的語意。  
+ <xref:System.Progress%601> 執行個體會公開 <xref:System.Progress%601.ProgressChanged> 事件，該事件是在每次非同步作業報告進度更新時引發。 <xref:System.Progress%601.ProgressChanged> 事件是在具現化 <xref:System.Threading.SynchronizationContext> 執行個體時所擷取的 <xref:System.Progress%601> 物件上引發。 如果沒有可用的同步處理內容，則會使用以執行緒集區為目標的預設內容。 處理常式可能會向這個事件註冊。 為了方便起見，您也可以對 <xref:System.Progress%601> 建構函式提供單一處理常式，該處理常式的行為就像是 <xref:System.Progress%601.ProgressChanged> 事件的事件處理常式。 進度更新會以非同步方式引發，以避免在事件處理常式執行時延遲非同步作業。 另一個 <xref:System.IProgress%601> 實作可以選擇套用不同的語意。  
   
 ## <a name="choosing-the-overloads-to-provide"></a>選擇要提供的多載  
  如果 TAP 實作同時使用了選擇性的 <xref:System.Threading.Tasks.TaskFactory.CancellationToken%2A> 和選擇性的 <xref:System.IProgress%601> 參數，則最多可能會需要四個多載：  

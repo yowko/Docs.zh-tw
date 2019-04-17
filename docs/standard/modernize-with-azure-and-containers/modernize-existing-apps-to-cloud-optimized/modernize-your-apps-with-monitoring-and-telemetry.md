@@ -1,17 +1,17 @@
 ---
-title: 現代化您的應用程式監視和遙測
+title: 使用監視和遙測將應用程式現代化
 description: 將現有的.NET 應用程式使用 Azure 雲端和 Windows 容器現代化 |現代化您的應用程式監視和遙測
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 7776edd91f73aa6ca74b82ae4d144635bb6c36a4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147472"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613872"
 ---
-# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>現代化您的應用程式監視和遙測
+# <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>使用監視和遙測將應用程式現代化
 
 當您在生產環境中執行應用程式時，務必您已深入了解如何執行您的應用程式。 它很高的層級嗎？ 使用者收到錯誤，或是為穩定且可靠的應用程式嗎？ 您需要豐富的效能監視、 功能強大警示與儀表板，以協助確保您的應用程式可用且如預期般執行。 您也需要能夠快速查看是否有問題、 判斷多少客戶會受到影響，以及執行根本原因分析，以找出並修正問題。
 
@@ -69,31 +69,31 @@ Azure 基礎結構記錄檔，與 Log Analytics，做為 Azure 服務，內嵌�
 
 -   **Microsoft Azure 中的監視概觀**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **什麼是 Application Insights？**
 
-[https://docs.microsoft.com/azure/application-insights/app-insights-overview](https://docs.microsoft.com/azure/application-insights/app-insights-overview)
+<https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
 -   **什麼是 Log Analytics？**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-overview](https://docs.microsoft.com/azure/log-analytics/log-analytics-overview)
+<https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **在 Log Analytics 中的容器監視解決方案**
+-   **Azure 監視器中的容器監視解決方案**
 
-[https://docs.microsoft.com/azure/log-analytics/log-analytics-containers](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)
+<https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
 -   **Azure 監視器概觀**
 
-[https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-overview-azure-monitor)
+<https://docs.microsoft.com/azure/azure-monitor/overview>
 
 -   **什麼是 Operations Management Suite (OMS)？**
 
-[https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview](https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview)
+<https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
 -   **監視 Service Fabric 與 OMS 中的 Windows Server 容器**
 
-[https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver](https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver)
+<https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 
 >[!div class="step-by-step"]
 >[上一頁](build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md)

@@ -4,12 +4,12 @@ description: 現代化現有的.NET 應用程式與 Azure 雲端和 Windows 容�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 2b987d43f476f261bfdbd1b2af6ca7f792178cf8
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 0f9ff19c8e346560960a09d3b7c52976c478f2f3
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55266620"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612871"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>撤銷並轉移現有的.NET 應用程式至 Azure IaaS （雲端基礎結構就緒）
 
@@ -85,27 +85,27 @@ Site Recovery 也會針對混合式環境的部分在內部部署和部分在 Az
 
 - **Azure Migrate Datasheet**
 
-    [https://aka.ms/azuremigration\_datasheet](https://aka.ms/azuremigration\_datasheet)
+    <https://aka.ms/azuremigration\_datasheet>
 
 - **Azure Migrate**
 
-    [https://aka.ms/azuremigrate](https://aka.ms/azuremigrate)
+    <https://aka.ms/azuremigrate>
 
 - **Azure 移轉中心**
 
-    [https://azure.microsoft.com/migration/](https://azure.microsoft.com/migration/)
+    <https://azure.microsoft.com/migration/>
 
 - **使用 Site Recovery 移轉至 Azure**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-to-azure>
 
 - **Azure Site Recovery 服務概觀**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-overview](https://docs.microsoft.com/azure/site-recovery/site-recovery-overview)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-overview>
 
 - **在 Azure Vm 的 AWS Vm 移轉**
 
-    [https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure](https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure)
+    <https://docs.microsoft.com/azure/site-recovery/site-recovery-migrate-aws-to-azure>
 
 >[!div class="step-by-step"]
 >[上一頁](index.md)

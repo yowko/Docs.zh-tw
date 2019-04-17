@@ -4,12 +4,12 @@ description: 將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8cadfc99a4c3d32e24d4a44e8cf4ce17a2ba7a07
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 600c47b6b0ccaf704c8e7b638c759e990acaaacf
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677548"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611415"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>將關聯式資料庫移轉至 azure
 
@@ -108,23 +108,23 @@ Azure SQL Database 提供下列優點：
 
 - **選擇雲端 SQL Server 選項：Azure SQL Database (PaaS) 或 Azure VM (IaaS) 上的 SQL Server**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas](https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-paas-vs-sql-server-iaas>
 
 - **取得雲端使用 Azure SQL DB 受控執行個體和資料庫移轉服務更快**
 
-    [https://channel9.msdn.com/Events/Build/2017/P4008](https://channel9.msdn.com/Events/Build/2017/P4008)
+    <https://channel9.msdn.com/Events/Build/2017/P4008>
 
 - **SQL Server 資料庫移轉至雲端 SQL Database**
 
-    [https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate](https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate)
+    <https://docs.microsoft.com/azure/sql-database/sql-database-cloud-migrate>
 
 - **Azure SQL Database**
 
-    [https://azure.microsoft.com/services/sql-database/?v=16.50](https://azure.microsoft.com/services/sql-database/?v=16.50)
+    <https://azure.microsoft.com/services/sql-database/?v=16.50>
 
 - **在虛擬機器上的 SQL Server**
 
-    [https://azure.microsoft.com/services/virtual-machines/sql-server/](https://azure.microsoft.com/services/virtual-machines/sql-server/)
+    <https://azure.microsoft.com/services/virtual-machines/sql-server/>
 
 > [!div class="step-by-step"]
 > [上一頁](lift-and-shift-existing-apps-azure-iaas.md)

@@ -4,12 +4,12 @@ description: 了解如何隨即轉移和現代化現有應用程式到 Azure 雲
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 8484bf554df2de47121b99272355181e3842517d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324691"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613092"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>將現有.NET 應用程式與 Azure 雲端和 Windows 容器現代化 （第 2 版）
 
@@ -91,7 +91,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 表 1-1 描述了選擇各項移轉或現代化方法的主要優點及理由。
 
-| **雲端基礎結構就緒** <br /> *原形移轉* | **雲端最佳化** <br /> *現代化* | **雲端原生** <br /> *現代化、 重建和重寫* |
+| **雲端基礎結構就緒** <br /> *隨即轉移* | **Cloud-Optimized** <br /> *現代化* | **Cloud-Native** <br /> *現代化、 重建和重寫* |
 |---|---|---|
 | **應用程式的計算目標** |
 | 在 Azure 中部署到 VM 的應用程式 | 龐大且單一的體系或部署至 Azure App Service、 Azure 容器執行個體 (ACI)、 Vm 與容器、 Azure Service Fabric 中或 AKS (Azure Kubernetes Service) 的多層式架構應用程式 | 在 Azure Kubernetes Service (AKS)、 Service Fabric 和/或無伺服器 Azure 函式為基礎的微服務的容器化微服務。 |
@@ -111,7 +111,7 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 
 圖 1-2 顯示了在三個雲端成熟度等級中，各自使用的主要技術及架構樣式：
 
-![將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術](./media/image1-2.png)
+![各個成熟度等級將現有 .NET Web 應用程式現代化時使用的主要技術](./media/image1-2.png)
 
 > **圖 1-2。** 將現有 .NET Web 應用程式現代化時，各個成熟度等級使用的主要技術
 
@@ -170,13 +170,13 @@ Microsoft 與列於 <https://www.microsoft.com>「商標」網頁的商標是 Mi
 ### <a name="additional-resources"></a>其他資源
 
 - **容器化 Docker 應用程式生命週期，Microsoft 平台和工具**（可下載的電子書） \
-  [https://aka.ms/dockerlifecycleebook](https://aka.ms/dockerlifecycleebook)
+  <https://aka.ms/dockerlifecycleebook>
 
 - **.NET 微服務：容器化.NET 應用程式架構**（可下載的電子書） \
-  [https://aka.ms/microservicesebook](https://aka.ms/microservicesebook)
+  <https://aka.ms/microservicesebook>
 
 - **架構現代化 web 應用程式使用 ASP.NET Core 和 Azure** （可下載的電子書） \
-  [https://aka.ms/webappebook](https://aka.ms/webappebook)
+  <https://aka.ms/webappebook>
 
 ## <a name="who-should-use-this-guide"></a>誰應該使用本指南
 
