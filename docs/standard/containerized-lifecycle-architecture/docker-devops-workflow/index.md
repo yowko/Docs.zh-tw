@@ -4,20 +4,20 @@ description: 與使用 Microsoft 工具的 Microsoft 平台和工具的 DevOps �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: a2fa1dddd68a54b7aab2ac44bf6109626689b36b
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
+ms.openlocfilehash: 80acd58d08900da8e79f6b7388da3b10f9e4e566
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663921"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672299"
 ---
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
 
-*Microsoft Visual Studio、 Azure DevOps 服務、 Team Foundation Server 和 Application Insights 提供完整的生態系統開發和 IT 作業，可讓您的小組管理專案和快速建置、 測試及部署工具容器化應用程式。*
+*Microsoft Visual Studio、 Azure DevOps 服務、 Team Foundation Server 和 Azure 監視器提供完整的生態系統的開發和 IT 作業，可讓您的小組的工具，可管理的專案，以及快速建置、 測試及部署容器化應用程式。*
 
 使用 Visual Studio 和 Azure DevOps 服務在雲端中，以及 Team Foundation Server 在內部開發團隊可以有效率地建置、 測試及發行目標的 Windows 或 Linux 的容器化應用程式。
 
-Microsoft 工具可以自動執行容器化應用程式的特定實作的管線，Docker、.NET Core 或任何其他平台的組合 — 從全域組建和持續整合 (CI) 及測試與 Azure DevOps 服務或小組Foundation Server，來持續部署 (CD) Docker 環境 （開發、 預備、 生產），並傳送給開發小組透過 Application Insights 服務的分析資訊。 每個程式碼認可都可以啟始建置 (CI)，並將服務自動部署至特定容器化環境 (CD)。
+Microsoft 工具可以自動執行容器化應用程式的特定實作的管線，Docker、.NET Core 或任何其他平台的組合 — 從全域組建和持續整合 (CI) 及測試與 Azure DevOps 服務或小組Foundation Server，來持續部署 (CD) 到 Docker 環境 （開發、 預備、 生產），並傳送給開發小組，透過 Azure 監視器服務的分析資訊。 每個程式碼認可都可以啟始建置 (CI)，並將服務自動部署至特定容器化環境 (CD)。
 
 開發人員和測試人員可以使用 Microsoft Azure 中的範本，以根據 Docker 輕鬆且快速地佈建類似生產環境的開發和測試環境。
 

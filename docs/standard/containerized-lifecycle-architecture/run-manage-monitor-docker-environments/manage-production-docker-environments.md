@@ -4,12 +4,12 @@ description: 了解管理容器為基礎的生產環境的關鍵要點。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: f3cf9bc281e94f342cecb1083d886daba03c019d
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836613"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672096"
 ---
 # <a name="manage-production-docker-environments"></a>管理生產 Docker 環境
 
@@ -30,7 +30,7 @@ Container Service 提供快速部署常用的開放原始碼容器叢集和協�
 | [適用於容器的 azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 的專用的 Kubernetes 管理工具 | Azure Kubernetes 服務 (AKS) |
 | [Kubernetes Web UI （儀表板）](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 的管理工具，可以監視及管理本機的 Kubernetes 叢集 | Azure Kubernetes Service (AKS)<br/>本機 Kubernetes |
 | [適用於 Service Fabric 的 azure 入口網站](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | 如需管理 Service Fabric 叢集，在 Azure 上、 在內部部署、 本機開發，以及其他雲端的線上和桌面版本 | Azure Service Fabric |
-| [容器監視 (Log Analytics)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的容器監視解決方案的管理 y。 可以管理 Kubernetes 叢集，透過[適用於容器的 Azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS 和其他項目。 |
+| [容器監視 （Azure 監視器）](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的容器監視解決方案的管理 y。 可以管理 Kubernetes 叢集，透過[適用於容器的 Azure 監視器](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS 和其他項目。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 

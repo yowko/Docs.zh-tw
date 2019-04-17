@@ -4,12 +4,12 @@ description: 了解 Microsoft 的供應項目，以支援 Docker 應用程式生
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 811ebd46c97b53176bf8bb9e47a366575e273efb
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 8536703a520434c0e393c5f46005c2ac02d5d849
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680188"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672260"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft 平台和容器化應用程式的工具簡介
 
@@ -17,7 +17,7 @@ ms.locfileid: "57680188"
 
 圖 3-1 顯示依工作類型分類的 Docker 應用程式生命週期中的主要部分，而工作類型是由多個小組 (應用程式開發、DevOps 基礎結構程序以及 IT 管理和作業) 所衍生。 通常，在企業中，負責每個區域之「人物代表」的設定檔會不同。 就是他們的技術。
 
-![Microsoft 的工具。 針對開發/設計的工作負載：Windows、 VS 和 VS Code 中，.NET Core，Azure Kubernetes Service 的 docker 引擎。 出貨建置/測試工作負載：Azure DevOps，Team Foundation Server，Docker CLI，Azure Kubernetes 服務。 執行/監視/管理工作負載：Application Insights，Azure 入口網站 Azure Kubernetes 服務，Service Fabric，其他協調器。](./media/image1.png)
+![Microsoft 的工具。 針對開發/設計的工作負載：Windows、 VS 和 VS Code 中，.NET Core，Azure Kubernetes Service 的 docker 引擎。 出貨建置/測試工作負載：Azure DevOps，Team Foundation Server，Docker CLI，Azure Kubernetes 服務。 執行/監視/管理工作負載：Azure 監視器中，Azure 入口網站 Azure Kubernetes 服務，Service Fabric 中，其他協調器。](./media/image1.png)
 
 **圖 3-1** 在 Microsoft 平台和工具的容器化 Docker 應用程式生命週期的主要支柱
 
@@ -51,7 +51,7 @@ ms.locfileid: "57680188"
 
   - **開放原始碼工具** 因為 AKS 會公開協調流程引擎的標準 API 端點，最熱門的工具會與 AKS 相容，並在大部分情況下，將現成 — 包括視覺化檢視、 監視，命令列工具，並甚至是未來可用的工具。
 
-  - **Application Insights**是 Azure soution 監視生產環境的每個角度。 您可以只將其 SDK 設定至您的服務，讓您可以從應用程式取得系統產生的記錄資料來監視生產 Docker 應用程式。
+  - **Azure 監視器**是 Azure 的解決方案，以監視您的生產環境的每個角度。 您可以只將其 SDK 設定至您的服務，讓您可以從應用程式取得系統產生的記錄資料來監視生產 Docker 應用程式。
 
 因此，Microsoft 會提供端對端容器化 Docker 應用程式生命週期的完整基礎。 不過，很*集合的產品和技術，讓您選擇性地選取，並整合現有工具和程序*。 廣泛方式的彈性以及功能深度的強度讓 Microsoft 十分適合進行容器化 Docker 應用程式開發。
 
