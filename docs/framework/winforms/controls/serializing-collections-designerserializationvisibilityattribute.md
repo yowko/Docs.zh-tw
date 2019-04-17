@@ -11,135 +11,139 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: 791b2ea1497b8b884d066894e925785fd1bb6f7d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: c113dcf814a252808ae3232751028947c26821ba
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59305204"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614138"
 ---
-# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a><span data-ttu-id="459d6-102">逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合</span><span class="sxs-lookup"><span data-stu-id="459d6-102">Walkthrough: Serializing Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>
-<span data-ttu-id="459d6-103">您的自訂控制項有時候會公開為屬性的集合。</span><span class="sxs-lookup"><span data-stu-id="459d6-103">Your custom controls will sometimes expose a collection as a property.</span></span> <span data-ttu-id="459d6-104">本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。</span><span class="sxs-lookup"><span data-stu-id="459d6-104">This walkthrough demonstrates how to use the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> class to control how a collection is serialized at design time.</span></span> <span data-ttu-id="459d6-105">套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保會序列化屬性。</span><span class="sxs-lookup"><span data-stu-id="459d6-105">Applying the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> value to your collection property ensures that the property will be serialized.</span></span>  
-  
- <span data-ttu-id="459d6-106">若要將此主題中的程式碼複製為單一清單，請參閱[如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))。</span><span class="sxs-lookup"><span data-stu-id="459d6-106">To copy the code in this topic as a single listing, see [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).</span></span>  
-  
+# <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a><span data-ttu-id="755b7-102">逐步解說：使用 DesignerSerializationVisibilityAttribute 序列化標準類型的集合</span><span class="sxs-lookup"><span data-stu-id="755b7-102">Walkthrough: Serializing Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>
+
+<span data-ttu-id="755b7-103">您的自訂控制項有時候會公開為屬性的集合。</span><span class="sxs-lookup"><span data-stu-id="755b7-103">Your custom controls will sometimes expose a collection as a property.</span></span> <span data-ttu-id="755b7-104">本逐步解說示範如何使用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>類別來控制如何在設計階段序列化集合。</span><span class="sxs-lookup"><span data-stu-id="755b7-104">This walkthrough demonstrates how to use the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> class to control how a collection is serialized at design time.</span></span> <span data-ttu-id="755b7-105">套用<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>集合屬性的值可確保會序列化屬性。</span><span class="sxs-lookup"><span data-stu-id="755b7-105">Applying the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> value to your collection property ensures that the property will be serialized.</span></span>
+
+ <span data-ttu-id="755b7-106">若要將此主題中的程式碼複製為單一清單，請參閱[如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))。</span><span class="sxs-lookup"><span data-stu-id="755b7-106">To copy the code in this topic as a single listing, see [How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120)).</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="459d6-107">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="459d6-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="459d6-108">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="459d6-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="459d6-109">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="459d6-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>  
-  
-## <a name="prerequisites"></a><span data-ttu-id="459d6-110">必要條件</span><span class="sxs-lookup"><span data-stu-id="459d6-110">Prerequisites</span></span>  
- <span data-ttu-id="459d6-111">若要完成這個逐步解說，您將需要：</span><span class="sxs-lookup"><span data-stu-id="459d6-111">In order to complete this walkthrough, you will need:</span></span>  
-  
--   <span data-ttu-id="459d6-112">若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。</span><span class="sxs-lookup"><span data-stu-id="459d6-112">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where Visual Studio is installed.</span></span>  
-  
-## <a name="creating-a-control-that-has-a-serializable-collection"></a><span data-ttu-id="459d6-113">建立控制項都有一個可序列化的集合</span><span class="sxs-lookup"><span data-stu-id="459d6-113">Creating a Control That Has a Serializable Collection</span></span>  
- <span data-ttu-id="459d6-114">第一個步驟是建立具有可序列化的集合，做為屬性的控制項。</span><span class="sxs-lookup"><span data-stu-id="459d6-114">The first step is to create a control that has a serializable collection as a property.</span></span> <span data-ttu-id="459d6-115">您可以編輯此集合使用的內容**集合編輯器**，您可以從存取**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="459d6-115">You can edit the contents of this collection using the **Collection Editor**, which you can access from the **Properties** window.</span></span>  
-  
-#### <a name="to-create-a-control-with-a-serializable-collection"></a><span data-ttu-id="459d6-116">若要建立具有可序列化集合的控制項</span><span class="sxs-lookup"><span data-stu-id="459d6-116">To create a control with a serializable collection</span></span>  
-  
-1. <span data-ttu-id="459d6-117">建立 Windows 控制項程式庫專案，稱為`SerializationDemoControlLib`。</span><span class="sxs-lookup"><span data-stu-id="459d6-117">Create a Windows Control Library project called `SerializationDemoControlLib`.</span></span> <span data-ttu-id="459d6-118">如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="459d6-118">For more information, see [Windows Control Library Template](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).</span></span>  
-  
-2. <span data-ttu-id="459d6-119">重新命名`UserControl1`至`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-119">Rename `UserControl1` to `SerializationDemoControl`.</span></span> <span data-ttu-id="459d6-120">如需詳細資訊，請參閱 <<c0> [ 重新命名重構程式碼符號](/visualstudio/ide/reference/rename)。</span><span class="sxs-lookup"><span data-stu-id="459d6-120">For more information, see [Rename a code symbol refactoring](/visualstudio/ide/reference/rename).</span></span>  
-  
-3. <span data-ttu-id="459d6-121">在 **屬性**視窗中，設定的值<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>屬性設`10`。</span><span class="sxs-lookup"><span data-stu-id="459d6-121">In the **Properties** window, set the value of the <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> property to `10`.</span></span>  
-  
-4. <span data-ttu-id="459d6-122">地方<xref:System.Windows.Forms.TextBox>控制在`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-122">Place a <xref:System.Windows.Forms.TextBox> control in the `SerializationDemoControl`.</span></span>  
-  
-5. <span data-ttu-id="459d6-123">選取 <xref:System.Windows.Forms.TextBox> 控制項。</span><span class="sxs-lookup"><span data-stu-id="459d6-123">Select the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="459d6-124">在 [**屬性**] 視窗中，設定下列屬性。</span><span class="sxs-lookup"><span data-stu-id="459d6-124">In the **Properties** window, set the following properties.</span></span>  
-  
-    |<span data-ttu-id="459d6-125">屬性</span><span class="sxs-lookup"><span data-stu-id="459d6-125">Property</span></span>|<span data-ttu-id="459d6-126">變更為</span><span class="sxs-lookup"><span data-stu-id="459d6-126">Change to</span></span>|  
-    |--------------|---------------|  
-    |**<span data-ttu-id="459d6-127">Multiline</span><span class="sxs-lookup"><span data-stu-id="459d6-127">Multiline</span></span>**|`true`|  
-    |**<span data-ttu-id="459d6-128">停駐</span><span class="sxs-lookup"><span data-stu-id="459d6-128">Dock</span></span>**|<xref:System.Windows.Forms.DockStyle.Fill>|  
-    |**<span data-ttu-id="459d6-129">ScrollBars</span><span class="sxs-lookup"><span data-stu-id="459d6-129">ScrollBars</span></span>**|<xref:System.Windows.Forms.ScrollBars.Vertical>|  
-    |**<span data-ttu-id="459d6-130">ReadOnly</span><span class="sxs-lookup"><span data-stu-id="459d6-130">ReadOnly</span></span>**|`true`|  
-  
-6. <span data-ttu-id="459d6-131">在 **程式碼編輯器**，宣告名為字串陣列欄位`stringsValue`在`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-131">In the **Code Editor**, declare a string array field named `stringsValue` in `SerializationDemoControl`.</span></span>  
-  
+> <span data-ttu-id="755b7-107">根據您目前使用的設定或版本，您所看到的對話方塊與功能表命令可能會與 [說明] 中描述的不同。</span><span class="sxs-lookup"><span data-stu-id="755b7-107">The dialog boxes and menu commands you see might differ from those described in Help depending on your active settings or edition.</span></span> <span data-ttu-id="755b7-108">若要變更設定，請從 [ **工具** ] 功能表中選取 [ **匯入和匯出設定** ]。</span><span class="sxs-lookup"><span data-stu-id="755b7-108">To change your settings, choose **Import and Export Settings** on the **Tools** menu.</span></span> <span data-ttu-id="755b7-109">如需詳細資訊，請參閱[將 Visual Studio IDE 個人化](/visualstudio/ide/personalizing-the-visual-studio-ide)。</span><span class="sxs-lookup"><span data-stu-id="755b7-109">For more information, see [Personalize the Visual Studio IDE](/visualstudio/ide/personalizing-the-visual-studio-ide).</span></span>
+
+## <a name="prerequisites"></a><span data-ttu-id="755b7-110">必要條件</span><span class="sxs-lookup"><span data-stu-id="755b7-110">Prerequisites</span></span>
+ <span data-ttu-id="755b7-111">若要完成這個逐步解說，您將需要：</span><span class="sxs-lookup"><span data-stu-id="755b7-111">In order to complete this walkthrough, you will need:</span></span>
+
+- <span data-ttu-id="755b7-112">若要能夠建立和安裝 Visual Studio 的電腦上執行 Windows Form 應用程式專案有足夠的權限。</span><span class="sxs-lookup"><span data-stu-id="755b7-112">Sufficient permissions to be able to create and run Windows Forms application projects on the computer where Visual Studio is installed.</span></span>
+
+## <a name="creating-a-control-that-has-a-serializable-collection"></a><span data-ttu-id="755b7-113">建立控制項都有一個可序列化的集合</span><span class="sxs-lookup"><span data-stu-id="755b7-113">Creating a Control That Has a Serializable Collection</span></span>
+ <span data-ttu-id="755b7-114">第一個步驟是建立具有可序列化的集合，做為屬性的控制項。</span><span class="sxs-lookup"><span data-stu-id="755b7-114">The first step is to create a control that has a serializable collection as a property.</span></span> <span data-ttu-id="755b7-115">您可以編輯此集合使用的內容**集合編輯器**，您可以從存取**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="755b7-115">You can edit the contents of this collection using the **Collection Editor**, which you can access from the **Properties** window.</span></span>
+
+### <a name="to-create-a-control-with-a-serializable-collection"></a><span data-ttu-id="755b7-116">若要建立具有可序列化集合的控制項</span><span class="sxs-lookup"><span data-stu-id="755b7-116">To create a control with a serializable collection</span></span>
+
+1. <span data-ttu-id="755b7-117">建立 Windows 控制項程式庫專案，稱為`SerializationDemoControlLib`。</span><span class="sxs-lookup"><span data-stu-id="755b7-117">Create a Windows Control Library project called `SerializationDemoControlLib`.</span></span> <span data-ttu-id="755b7-118">如需詳細資訊，請參閱 < [Windows 控制項程式庫範本](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))。</span><span class="sxs-lookup"><span data-stu-id="755b7-118">For more information, see [Windows Control Library Template](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100)).</span></span>
+
+2. <span data-ttu-id="755b7-119">重新命名`UserControl1`至`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-119">Rename `UserControl1` to `SerializationDemoControl`.</span></span> <span data-ttu-id="755b7-120">如需詳細資訊，請參閱 <<c0> [ 重新命名重構程式碼符號](/visualstudio/ide/reference/rename)。</span><span class="sxs-lookup"><span data-stu-id="755b7-120">For more information, see [Rename a code symbol refactoring](/visualstudio/ide/reference/rename).</span></span>
+
+3. <span data-ttu-id="755b7-121">在 **屬性**視窗中，設定的值<xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType>屬性設`10`。</span><span class="sxs-lookup"><span data-stu-id="755b7-121">In the **Properties** window, set the value of the <xref:System.Windows.Forms.Padding.All%2A?displayProperty=nameWithType> property to `10`.</span></span>
+
+4. <span data-ttu-id="755b7-122">地方<xref:System.Windows.Forms.TextBox>控制在`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-122">Place a <xref:System.Windows.Forms.TextBox> control in the `SerializationDemoControl`.</span></span>
+
+5. <span data-ttu-id="755b7-123">選取 <xref:System.Windows.Forms.TextBox> 控制項。</span><span class="sxs-lookup"><span data-stu-id="755b7-123">Select the <xref:System.Windows.Forms.TextBox> control.</span></span> <span data-ttu-id="755b7-124">在 [**屬性**] 視窗中，設定下列屬性。</span><span class="sxs-lookup"><span data-stu-id="755b7-124">In the **Properties** window, set the following properties.</span></span>
+
+    |<span data-ttu-id="755b7-125">屬性</span><span class="sxs-lookup"><span data-stu-id="755b7-125">Property</span></span>|<span data-ttu-id="755b7-126">變更為</span><span class="sxs-lookup"><span data-stu-id="755b7-126">Change to</span></span>|
+    |--------------|---------------|
+    |<span data-ttu-id="755b7-127">**多行**</span><span class="sxs-lookup"><span data-stu-id="755b7-127">**Multiline**</span></span>|`true`|
+    |<span data-ttu-id="755b7-128">**Dock**</span><span class="sxs-lookup"><span data-stu-id="755b7-128">**Dock**</span></span>|<xref:System.Windows.Forms.DockStyle.Fill>|
+    |<span data-ttu-id="755b7-129">[ScrollBars]</span><span class="sxs-lookup"><span data-stu-id="755b7-129">**ScrollBars**</span></span>|<xref:System.Windows.Forms.ScrollBars.Vertical>|
+    |<span data-ttu-id="755b7-130">**ReadOnly**</span><span class="sxs-lookup"><span data-stu-id="755b7-130">**ReadOnly**</span></span>|`true`|
+
+6. <span data-ttu-id="755b7-131">在 **程式碼編輯器**，宣告名為字串陣列欄位`stringsValue`在`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-131">In the **Code Editor**, declare a string array field named `stringsValue` in `SerializationDemoControl`.</span></span>
+
      [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#4)]
      [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#4)]
-     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]  
-  
-7. <span data-ttu-id="459d6-132">定義`Strings`屬性上的`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-132">Define the `Strings` property on the `SerializationDemoControl`.</span></span>  
-  
+     [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#4)]
+
+7. <span data-ttu-id="755b7-132">定義`Strings`屬性上的`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-132">Define the `Strings` property on the `SerializationDemoControl`.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="459d6-133"><xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>值用來啟用集合的序列化。</span><span class="sxs-lookup"><span data-stu-id="459d6-133">The <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> value is used to enable serialization of the collection.</span></span>  
-  
+> <span data-ttu-id="755b7-133"><xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>值用來啟用集合的序列化。</span><span class="sxs-lookup"><span data-stu-id="755b7-133">The <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content> value is used to enable serialization of the collection.</span></span>
+
  [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
  [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
- [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]  
-  
-1. <span data-ttu-id="459d6-134">按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。</span><span class="sxs-lookup"><span data-stu-id="459d6-134">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>  
-  
-2. <span data-ttu-id="459d6-135">尋找`Strings`中的屬性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 測試容器**。</span><span class="sxs-lookup"><span data-stu-id="459d6-135">Find the `Strings` property in the <xref:System.Windows.Forms.PropertyGrid> of the **UserControl Test Container**.</span></span> <span data-ttu-id="459d6-136">按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.</span><span class="sxs-lookup"><span data-stu-id="459d6-136">Click the `Strings` property, then click the ellipsis (![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **String Collection Editor**.</span></span>  
-  
-3. <span data-ttu-id="459d6-137">輸入中的數個字串**字串集合編輯器**。</span><span class="sxs-lookup"><span data-stu-id="459d6-137">Enter several strings in the **String Collection Editor**.</span></span> <span data-ttu-id="459d6-138">藉由按下 ENTER 鍵，每個字串的結尾分隔。</span><span class="sxs-lookup"><span data-stu-id="459d6-138">Separate them by pressing the ENTER key at the end of each string.</span></span> <span data-ttu-id="459d6-139">按一下 **確定**當您完成輸入字串。</span><span class="sxs-lookup"><span data-stu-id="459d6-139">Click **OK** when you are finished entering strings.</span></span>  
-  
+ [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
+
+1. <span data-ttu-id="755b7-134">按下 F5 鍵以建置專案，並且在 **UserControl 測試容器**中執行您的控制項。</span><span class="sxs-lookup"><span data-stu-id="755b7-134">Press F5 to build the project and run your control in the **UserControl Test Container**.</span></span>
+
+2. <span data-ttu-id="755b7-135">尋找`Strings`中的屬性<xref:System.Windows.Forms.PropertyGrid>的**UserControl 測試容器**。</span><span class="sxs-lookup"><span data-stu-id="755b7-135">Find the `Strings` property in the <xref:System.Windows.Forms.PropertyGrid> of the **UserControl Test Container**.</span></span> <span data-ttu-id="755b7-136">按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.</span><span class="sxs-lookup"><span data-stu-id="755b7-136">Click the `Strings` property, then click the ellipsis (![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **String Collection Editor**.</span></span>
+
+3. <span data-ttu-id="755b7-137">輸入中的數個字串**字串集合編輯器**。</span><span class="sxs-lookup"><span data-stu-id="755b7-137">Enter several strings in the **String Collection Editor**.</span></span> <span data-ttu-id="755b7-138">藉由按下 ENTER 鍵，每個字串的結尾分隔。</span><span class="sxs-lookup"><span data-stu-id="755b7-138">Separate them by pressing the ENTER key at the end of each string.</span></span> <span data-ttu-id="755b7-139">按一下 **確定**當您完成輸入字串。</span><span class="sxs-lookup"><span data-stu-id="755b7-139">Click **OK** when you are finished entering strings.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="459d6-140">您所輸入的字串會出現在<xref:System.Windows.Forms.TextBox>的`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-140">The strings you typed appear in the <xref:System.Windows.Forms.TextBox> of the `SerializationDemoControl`.</span></span>  
-  
-## <a name="serializing-a-collection-property"></a><span data-ttu-id="459d6-141">序列化集合屬性</span><span class="sxs-lookup"><span data-stu-id="459d6-141">Serializing a Collection Property</span></span>  
- <span data-ttu-id="459d6-142">若要測試您的控制項的序列化行為，您會將它放在表單上，並變更集合的內容**集合編輯器**。</span><span class="sxs-lookup"><span data-stu-id="459d6-142">To test the serialization behavior of your control, you will place it on a form and change the contents of the collection with the **Collection Editor**.</span></span> <span data-ttu-id="459d6-143">您可以看到序列化的集合的狀態，藉由查看特殊的設計工具檔案，其中**Windows Form 設計工具**會發出程式碼。</span><span class="sxs-lookup"><span data-stu-id="459d6-143">You can see the serialized collection state by looking at a special designer file, into which the **Windows Forms Designer** emits code.</span></span>  
-  
-#### <a name="to-serialize-a-collection"></a><span data-ttu-id="459d6-144">將序列化集合</span><span class="sxs-lookup"><span data-stu-id="459d6-144">To serialize a collection</span></span>  
-  
-1. <span data-ttu-id="459d6-145">將 Windows 應用程式專案加入方案。</span><span class="sxs-lookup"><span data-stu-id="459d6-145">Add a Windows Application project to the solution.</span></span> <span data-ttu-id="459d6-146">將專案命名為 `SerializationDemoControlTest`。</span><span class="sxs-lookup"><span data-stu-id="459d6-146">Name the project `SerializationDemoControlTest`.</span></span>  
-  
-2. <span data-ttu-id="459d6-147">在 **工具箱**，尋找名為  索引標籤**SerializationDemoControlLib 元件**。</span><span class="sxs-lookup"><span data-stu-id="459d6-147">In the **Toolbox**, find the tab named **SerializationDemoControlLib Components**.</span></span> <span data-ttu-id="459d6-148">在此索引標籤中，您會發現`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-148">In this tab, you will find the `SerializationDemoControl`.</span></span> <span data-ttu-id="459d6-149">如需詳細資訊，請參閱[逐步解說：自動將 [工具箱] 中的以自訂元件填入](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="459d6-149">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>  
-  
-3. <span data-ttu-id="459d6-150">位置`SerializationDemoControl`您的表單上。</span><span class="sxs-lookup"><span data-stu-id="459d6-150">Place a `SerializationDemoControl` on your form.</span></span>  
-  
-4. <span data-ttu-id="459d6-151">尋找`Strings`中的屬性**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="459d6-151">Find the `Strings` property in the **Properties** window.</span></span> <span data-ttu-id="459d6-152">按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.</span><span class="sxs-lookup"><span data-stu-id="459d6-152">Click the `Strings` property, then click the ellipsis (![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **String Collection Editor**.</span></span>  
-  
-5. <span data-ttu-id="459d6-153">輸入中的數個字串**字串集合編輯器**。</span><span class="sxs-lookup"><span data-stu-id="459d6-153">Type several strings in the **String Collection Editor**.</span></span> <span data-ttu-id="459d6-154">藉由按下 ENTER 鍵，每個字串的結尾分隔。</span><span class="sxs-lookup"><span data-stu-id="459d6-154">Separate them by pressing the ENTER key at the end of each string.</span></span> <span data-ttu-id="459d6-155">按一下 **確定**當您完成輸入字串。</span><span class="sxs-lookup"><span data-stu-id="459d6-155">Click **OK** when you are finished entering strings.</span></span>  
-  
+> <span data-ttu-id="755b7-140">您所輸入的字串會出現在<xref:System.Windows.Forms.TextBox>的`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-140">The strings you typed appear in the <xref:System.Windows.Forms.TextBox> of the `SerializationDemoControl`.</span></span>
+
+## <a name="serializing-a-collection-property"></a><span data-ttu-id="755b7-141">序列化集合屬性</span><span class="sxs-lookup"><span data-stu-id="755b7-141">Serializing a Collection Property</span></span>
+
+<span data-ttu-id="755b7-142">若要測試您的控制項的序列化行為，您會將它放在表單上，並變更集合的內容**集合編輯器**。</span><span class="sxs-lookup"><span data-stu-id="755b7-142">To test the serialization behavior of your control, you will place it on a form and change the contents of the collection with the **Collection Editor**.</span></span> <span data-ttu-id="755b7-143">您可以看到序列化的集合的狀態，藉由查看特殊的設計工具檔案，其中**Windows Form 設計工具**會發出程式碼。</span><span class="sxs-lookup"><span data-stu-id="755b7-143">You can see the serialized collection state by looking at a special designer file, into which the **Windows Forms Designer** emits code.</span></span>
+
+### <a name="to-serialize-a-collection"></a><span data-ttu-id="755b7-144">將序列化集合</span><span class="sxs-lookup"><span data-stu-id="755b7-144">To serialize a collection</span></span>
+
+1. <span data-ttu-id="755b7-145">將 Windows 應用程式專案加入方案。</span><span class="sxs-lookup"><span data-stu-id="755b7-145">Add a Windows Application project to the solution.</span></span> <span data-ttu-id="755b7-146">將專案命名為 `SerializationDemoControlTest`。</span><span class="sxs-lookup"><span data-stu-id="755b7-146">Name the project `SerializationDemoControlTest`.</span></span>
+
+2. <span data-ttu-id="755b7-147">在 **工具箱**，尋找名為  索引標籤**SerializationDemoControlLib 元件**。</span><span class="sxs-lookup"><span data-stu-id="755b7-147">In the **Toolbox**, find the tab named **SerializationDemoControlLib Components**.</span></span> <span data-ttu-id="755b7-148">在此索引標籤中，您會發現`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-148">In this tab, you will find the `SerializationDemoControl`.</span></span> <span data-ttu-id="755b7-149">如需詳細資訊，請參閱[逐步解說：自動將 [工具箱] 中的以自訂元件填入](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)。</span><span class="sxs-lookup"><span data-stu-id="755b7-149">For more information, see [Walkthrough: Automatically Populating the Toolbox with Custom Components](walkthrough-automatically-populating-the-toolbox-with-custom-components.md).</span></span>
+
+3. <span data-ttu-id="755b7-150">位置`SerializationDemoControl`您的表單上。</span><span class="sxs-lookup"><span data-stu-id="755b7-150">Place a `SerializationDemoControl` on your form.</span></span>
+
+4. <span data-ttu-id="755b7-151">尋找`Strings`中的屬性**屬性**視窗。</span><span class="sxs-lookup"><span data-stu-id="755b7-151">Find the `Strings` property in the **Properties** window.</span></span> <span data-ttu-id="755b7-152">按一下 `Strings`屬性，然後按一下省略符號 (![VisualStudioEllipsesButton 螢幕擷取畫面](../media/vbellipsesbutton.png "vbEllipsesButton")) 按鈕，即可開啟**字串集合編輯器**.</span><span class="sxs-lookup"><span data-stu-id="755b7-152">Click the `Strings` property, then click the ellipsis (![VisualStudioEllipsesButton screenshot](../media/vbellipsesbutton.png "vbEllipsesButton")) button to open the **String Collection Editor**.</span></span>
+
+5. <span data-ttu-id="755b7-153">輸入中的數個字串**字串集合編輯器**。</span><span class="sxs-lookup"><span data-stu-id="755b7-153">Type several strings in the **String Collection Editor**.</span></span> <span data-ttu-id="755b7-154">藉由按下 ENTER 鍵，每個字串的結尾分隔。</span><span class="sxs-lookup"><span data-stu-id="755b7-154">Separate them by pressing the ENTER key at the end of each string.</span></span> <span data-ttu-id="755b7-155">按一下 **確定**當您完成輸入字串。</span><span class="sxs-lookup"><span data-stu-id="755b7-155">Click **OK** when you are finished entering strings.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="459d6-156">您所輸入的字串會出現在<xref:System.Windows.Forms.TextBox>的`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="459d6-156">The strings you typed appear in the <xref:System.Windows.Forms.TextBox> of the `SerializationDemoControl`.</span></span>  
-  
-1. <span data-ttu-id="459d6-157">在方案總管中，按一下 [顯示所有檔案] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="459d6-157">In **Solution Explorer**, click the **Show All Files** button.</span></span>  
-  
-2. <span data-ttu-id="459d6-158">開啟**Form1**節點。</span><span class="sxs-lookup"><span data-stu-id="459d6-158">Open the **Form1** node.</span></span> <span data-ttu-id="459d6-159">這是檔案，呼叫的下方**Form1.Designer.cs**或是**Form1.Designer.vb**。</span><span class="sxs-lookup"><span data-stu-id="459d6-159">Beneath it is a file called **Form1.Designer.cs** or **Form1.Designer.vb**.</span></span> <span data-ttu-id="459d6-160">這是在其中的檔案**Windows Form 設計工具**會發出程式碼表示您的表單和其子控制項的設計階段狀態。</span><span class="sxs-lookup"><span data-stu-id="459d6-160">This is the file into which the **Windows Forms Designer** emits code representing the design-time state of your form and its child controls.</span></span> <span data-ttu-id="459d6-161">在 [程式碼編輯器] 中開啟此檔案。</span><span class="sxs-lookup"><span data-stu-id="459d6-161">Open this file in the **Code Editor**.</span></span>  
-  
-3. <span data-ttu-id="459d6-162">開啟區域稱為**Windows 表單設計工具產生的程式碼**並尋找 [標記] 區段**serializationDemoControl1**。</span><span class="sxs-lookup"><span data-stu-id="459d6-162">Open the region called **Windows Form Designer generated code** and find the section labeled **serializationDemoControl1**.</span></span> <span data-ttu-id="459d6-163">此標籤之下是代表您控制項的序列化的狀態的程式碼。</span><span class="sxs-lookup"><span data-stu-id="459d6-163">Beneath this label is the code representing the serialized state of your control.</span></span> <span data-ttu-id="459d6-164">您在步驟 5 輸入的字串會出現在指派至`Strings`屬性。</span><span class="sxs-lookup"><span data-stu-id="459d6-164">The strings you typed in step 5 appear in an assignment to the `Strings` property.</span></span> <span data-ttu-id="459d6-165">C# 和 Visual Basic 中的下列程式碼範例顯示程式碼類似於您將會看到您輸入字串"red"、 「 橙色 」 和 「 黃色 」。</span><span class="sxs-lookup"><span data-stu-id="459d6-165">The following code examples in C# and Visual Basic, show code similar to what you will see if you typed the strings "red", "orange", and "yellow".</span></span>  
-  
-    ```csharp  
-    this.serializationDemoControl1.Strings = new string[] {  
-            "red",  
-            "orange",  
-            "yellow"};  
-    ```  
-    
-    ```vb  
-    Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}  
+> <span data-ttu-id="755b7-156">您所輸入的字串會出現在<xref:System.Windows.Forms.TextBox>的`SerializationDemoControl`。</span><span class="sxs-lookup"><span data-stu-id="755b7-156">The strings you typed appear in the <xref:System.Windows.Forms.TextBox> of the `SerializationDemoControl`.</span></span>
+
+1. <span data-ttu-id="755b7-157">在方案總管中，按一下 [顯示所有檔案] 按鈕。</span><span class="sxs-lookup"><span data-stu-id="755b7-157">In **Solution Explorer**, click the **Show All Files** button.</span></span>
+
+2. <span data-ttu-id="755b7-158">開啟**Form1**節點。</span><span class="sxs-lookup"><span data-stu-id="755b7-158">Open the **Form1** node.</span></span> <span data-ttu-id="755b7-159">這是檔案，呼叫的下方**Form1.Designer.cs**或是**Form1.Designer.vb**。</span><span class="sxs-lookup"><span data-stu-id="755b7-159">Beneath it is a file called **Form1.Designer.cs** or **Form1.Designer.vb**.</span></span> <span data-ttu-id="755b7-160">這是在其中的檔案**Windows Form 設計工具**會發出程式碼表示您的表單和其子控制項的設計階段狀態。</span><span class="sxs-lookup"><span data-stu-id="755b7-160">This is the file into which the **Windows Forms Designer** emits code representing the design-time state of your form and its child controls.</span></span> <span data-ttu-id="755b7-161">在 [程式碼編輯器] 中開啟此檔案。</span><span class="sxs-lookup"><span data-stu-id="755b7-161">Open this file in the **Code Editor**.</span></span>
+
+3. <span data-ttu-id="755b7-162">開啟區域稱為**Windows 表單設計工具產生的程式碼**並尋找 [標記] 區段**serializationDemoControl1**。</span><span class="sxs-lookup"><span data-stu-id="755b7-162">Open the region called **Windows Form Designer generated code** and find the section labeled **serializationDemoControl1**.</span></span> <span data-ttu-id="755b7-163">此標籤之下是代表您控制項的序列化的狀態的程式碼。</span><span class="sxs-lookup"><span data-stu-id="755b7-163">Beneath this label is the code representing the serialized state of your control.</span></span> <span data-ttu-id="755b7-164">您在步驟 5 輸入的字串會出現在指派至`Strings`屬性。</span><span class="sxs-lookup"><span data-stu-id="755b7-164">The strings you typed in step 5 appear in an assignment to the `Strings` property.</span></span> <span data-ttu-id="755b7-165">C# 和 Visual Basic 中的下列程式碼範例顯示程式碼類似於您將會看到您輸入字串"red"、 「 橙色 」 和 「 黃色 」。</span><span class="sxs-lookup"><span data-stu-id="755b7-165">The following code examples in C# and Visual Basic, show code similar to what you will see if you typed the strings "red", "orange", and "yellow".</span></span>
+
+    ```csharp
+    this.serializationDemoControl1.Strings = new string[] {
+            "red",
+            "orange",
+            "yellow"};
     ```
-  
-4. <span data-ttu-id="459d6-166">在 **程式碼編輯器**，變更的值<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>上`Strings`屬性設<xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>。</span><span class="sxs-lookup"><span data-stu-id="459d6-166">In the **Code Editor**, change the value of the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> on the `Strings` property to <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.</span></span>  
-  
-    ```csharp  
-    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]  
-    ```  
-    ```vb  
-    <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _  
-    ```  
-  
-5. <span data-ttu-id="459d6-167">重建方案，然後重複步驟 3 和 4。</span><span class="sxs-lookup"><span data-stu-id="459d6-167">Rebuild the solution and repeat steps 3 and 4.</span></span>  
-  
+
+    ```vb
+    Me.serializationDemoControl1.Strings = New String() {"red", "orange", "yellow"}
+    ```
+
+4. <span data-ttu-id="755b7-166">在 **程式碼編輯器**，變更的值<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>上`Strings`屬性設<xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>。</span><span class="sxs-lookup"><span data-stu-id="755b7-166">In the **Code Editor**, change the value of the <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute> on the `Strings` property to <xref:System.ComponentModel.DesignerSerializationVisibility.Hidden>.</span></span>
+
+    ```csharp
+    [DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)]
+    ```
+
+    ```vb
+    <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)> _
+    ```
+
+5. <span data-ttu-id="755b7-167">重建方案，然後重複步驟 3 和 4。</span><span class="sxs-lookup"><span data-stu-id="755b7-167">Rebuild the solution and repeat steps 3 and 4.</span></span>
+
 > [!NOTE]
->  <span data-ttu-id="459d6-168">在此情況下， **Windows Form 設計工具**不發出的任何指派`Strings`屬性。</span><span class="sxs-lookup"><span data-stu-id="459d6-168">In this case, the **Windows Forms Designer** emits no assignment to the `Strings` property.</span></span>  
-  
-## <a name="next-steps"></a><span data-ttu-id="459d6-169">後續步驟</span><span class="sxs-lookup"><span data-stu-id="459d6-169">Next Steps</span></span>  
- <span data-ttu-id="459d6-170">一旦您知道如何序列化標準類型的集合，請考慮將您的自訂控制項更深入整合至設計階段環境。</span><span class="sxs-lookup"><span data-stu-id="459d6-170">Once you know how to serialize a collection of standard types, consider integrating your custom controls more deeply into the design-time environment.</span></span> <span data-ttu-id="459d6-171">下列主題說明如何增強您的自訂控制項的設計階段整合：</span><span class="sxs-lookup"><span data-stu-id="459d6-171">The following topics describe how to enhance the design-time integration of your custom controls:</span></span>  
-  
--   [<span data-ttu-id="459d6-172">設計階段架構</span><span class="sxs-lookup"><span data-stu-id="459d6-172">Design-Time Architecture</span></span>](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))  
-  
--   [<span data-ttu-id="459d6-173">Windows Form 控制項中的屬性</span><span class="sxs-lookup"><span data-stu-id="459d6-173">Attributes in Windows Forms Controls</span></span>](attributes-in-windows-forms-controls.md)  
-  
--   [<span data-ttu-id="459d6-174">設計工具序列化概觀</span><span class="sxs-lookup"><span data-stu-id="459d6-174">Designer Serialization Overview</span></span>](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))  
-  
--   [<span data-ttu-id="459d6-175">逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Forms 控制項</span><span class="sxs-lookup"><span data-stu-id="459d6-175">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>](creating-a-wf-control-design-time-features.md)  
-  
-## <a name="see-also"></a><span data-ttu-id="459d6-176">另請參閱</span><span class="sxs-lookup"><span data-stu-id="459d6-176">See also</span></span>
+> <span data-ttu-id="755b7-168">在此情況下， **Windows Form 設計工具**不發出的任何指派`Strings`屬性。</span><span class="sxs-lookup"><span data-stu-id="755b7-168">In this case, the **Windows Forms Designer** emits no assignment to the `Strings` property.</span></span>
+
+## <a name="next-steps"></a><span data-ttu-id="755b7-169">後續步驟</span><span class="sxs-lookup"><span data-stu-id="755b7-169">Next Steps</span></span>
+
+<span data-ttu-id="755b7-170">一旦您知道如何序列化標準類型的集合，請考慮將您的自訂控制項更深入整合至設計階段環境。</span><span class="sxs-lookup"><span data-stu-id="755b7-170">Once you know how to serialize a collection of standard types, consider integrating your custom controls more deeply into the design-time environment.</span></span> <span data-ttu-id="755b7-171">下列主題說明如何增強您的自訂控制項的設計階段整合：</span><span class="sxs-lookup"><span data-stu-id="755b7-171">The following topics describe how to enhance the design-time integration of your custom controls:</span></span>
+
+- <span data-ttu-id="755b7-172">[設計階段架構](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="755b7-172">[Design-Time Architecture](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/c5z9s1h4(v=vs.120))</span></span>
+
+- [<span data-ttu-id="755b7-173">Windows Forms 控制項中的屬性</span><span class="sxs-lookup"><span data-stu-id="755b7-173">Attributes in Windows Forms Controls</span></span>](attributes-in-windows-forms-controls.md)
+
+- <span data-ttu-id="755b7-174">[設計工具序列化概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="755b7-174">[Designer Serialization Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))</span></span>
+
+- [<span data-ttu-id="755b7-175">逐步解說：建立利用 Visual Studio 設計階段功能的 Windows Form 控制項</span><span class="sxs-lookup"><span data-stu-id="755b7-175">Walkthrough: Creating a Windows Forms Control That Takes Advantage of Visual Studio Design-Time Features</span></span>](creating-a-wf-control-design-time-features.md)
+
+## <a name="see-also"></a><span data-ttu-id="755b7-176">另請參閱</span><span class="sxs-lookup"><span data-stu-id="755b7-176">See also</span></span>
 
 - <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>
-- [<span data-ttu-id="459d6-177">設計工具序列化概觀</span><span class="sxs-lookup"><span data-stu-id="459d6-177">Designer Serialization Overview</span></span>](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))
-- [<span data-ttu-id="459d6-178">HOW TO：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合</span><span class="sxs-lookup"><span data-stu-id="459d6-178">How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute</span></span>](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))
-- [<span data-ttu-id="459d6-179">逐步解說：自動將自訂元件填入工具箱</span><span class="sxs-lookup"><span data-stu-id="459d6-179">Walkthrough: Automatically Populating the Toolbox with Custom Components</span></span>](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)
+- <span data-ttu-id="755b7-177">[設計工具序列化概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="755b7-177">[Designer Serialization Overview](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171834(v=vs.120))</span></span>
+- <span data-ttu-id="755b7-178">[如何：序列化標準類型使用 DesignerSerializationVisibilityAttribute 的集合](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))</span><span class="sxs-lookup"><span data-stu-id="755b7-178">[How to: Serialize Collections of Standard Types with the DesignerSerializationVisibilityAttribute](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))</span></span>
+- <span data-ttu-id="755b7-179">[逐步解說：自動填入 [工具箱] 中的以自訂元件](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)</span><span class="sxs-lookup"><span data-stu-id="755b7-179">[Walkthrough: Automatically Populating the Toolbox with Custom Components](walkthrough-automatically-populating-the-toolbox-with-custom-components.md)</span></span>
