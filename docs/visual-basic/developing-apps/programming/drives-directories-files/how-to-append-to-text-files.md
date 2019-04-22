@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中附加至文字檔
+title: HOW TO：在 Visual Basic 中附加至文字檔
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], appending to files
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - I/O [Visual Basic], WriteAllText method
 ms.assetid: bbbd7fb5-f169-41a9-b53f-520ea9613913
 ms.openlocfilehash: 83f34e9cb669e8d2e841b13875b5237626164dd9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819836"
 ---
-# <a name="how-to-append-to-text-files-in-visual-basic"></a>作法：在 Visual Basic 中附加至文字檔
+# <a name="how-to-append-to-text-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中附加至文字檔
 您可以使用 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法來附加至文字檔，方法是指定將 `append` 參數設定為 `True`。  
   
 ### <a name="to-append-to-a-text-file"></a>附加至文字檔  

@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中以 StreamWriter 將文字寫入檔案
+title: HOW TO：在 Visual Basic 中以 StreamWriter 將文字寫入檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - writing to files [Visual Basic], StreamWriter
 ms.assetid: 99762e57-ef46-4dcc-8959-a8f79c22f067
 ms.openlocfilehash: ca792106bdd341fa4be8f3554ce70cd7d3f22522
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816064"
 ---
-# <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>作法：在 Visual Basic 中以 StreamWriter 將文字寫入檔案
+# <a name="how-to-write-text-to-files-with-a-streamwriter-in-visual-basic"></a>HOW TO：在 Visual Basic 中以 StreamWriter 將文字寫入檔案
 此範例使用 `My.Computer.FileSystem.OpenTextFileWriter` 方法開啟 <xref:System.IO.StreamWriter> 物件，然後使用該物件搭配 <xref:System.IO.StreamWriter> 類別的 <xref:System.IO.TextWriter.WriteLine%2A> 方法，將字串寫入文字檔。  
   
 ## <a name="example"></a>範例  

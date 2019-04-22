@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中變更使用者設定
+title: HOW TO：在 Visual Basic 中變更使用者設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - user settings [Visual Basic], changing in Visual Basic
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
 ms.openlocfilehash: 05c95026d061918b38cf301209afefa9498e33bf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820967"
 ---
-# <a name="how-to-change-user-settings-in-visual-basic"></a>作法：在 Visual Basic 中變更使用者設定
+# <a name="how-to-change-user-settings-in-visual-basic"></a>HOW TO：在 Visual Basic 中變更使用者設定
 您可以將新值指派給 `My.Settings` 物件的設定屬性，來變更使用者設定。  
   
  `My.Settings` 物件會將每項設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設定的 [範圍] 可判斷屬性是否為唯讀：[應用程式] 範圍設定的屬性為唯讀，而 [使用者] 範圍設定的屬性為讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  

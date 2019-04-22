@@ -2,9 +2,15 @@
 title: 存取應用程式設定 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'My.Settings object [Visual Basic], application settings'
-  - 'examples [Visual Basic], application settings'
+- My.Settings object [Visual Basic], application settings
+- examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
+ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58822761"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>存取應用程式設定 (Visual Basic)
 本節包含描述可讓您完成的 `My.Settings` 物件和工作的主題。  

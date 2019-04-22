@@ -1,5 +1,5 @@
 ---
-title: 作法：保存 Visual Basic 中的使用者設定
+title: HOW TO：保存 Visual Basic 中的使用者設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - My.Settings object [Visual Basic], persisting user settings
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - user settings [Visual Basic], persisting
 ms.assetid: 0e5e6415-b6e2-4602-9be0-a65fa167d007
 ms.openlocfilehash: 35997db52a59aeaff5a2c404ea83b15639ea23a0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825177"
 ---
-# <a name="how-to-persist-user-settings-in-visual-basic"></a>作法：保存 Visual Basic 中的使用者設定
+# <a name="how-to-persist-user-settings-in-visual-basic"></a>HOW TO：保存 Visual Basic 中的使用者設定
 您可以使用 `My.Settings.Save` 方法來保存使用者設定的變更。  
   
  通常，應用程式設計成在關閉應用程式時，保存使用者設定的變更。 這是因為儲存變更可能需要幾秒鐘的時間，視幾個因素而定。  

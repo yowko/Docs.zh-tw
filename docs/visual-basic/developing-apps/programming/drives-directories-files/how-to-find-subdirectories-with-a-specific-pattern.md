@@ -1,18 +1,18 @@
 ---
-title: 作法：在 Visual Basic 中尋找具有特定模式的子目錄
+title: HOW TO：在 Visual Basic 中尋找具有特定模式的子目錄
 ms.date: 07/20/2015
 helpviewer_keywords:
 - pattern matching
 - folders, finding
 ms.assetid: c9265fd1-7483-4150-8b7f-ff642caa939d
 ms.openlocfilehash: 705fa6e40d0e6d18826966e3f10cfd31d9e7a6ff
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823398"
 ---
-# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>作法：在 Visual Basic 中尋找具有特定模式的子目錄
+# <a name="how-to-find-subdirectories-with-a-specific-pattern-in-visual-basic"></a>HOW TO：在 Visual Basic 中尋找具有特定模式的子目錄
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.GetDirectories%2A> 方法會傳回代表目錄中子目錄之路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。 如果您想要在搜尋中包括子目錄的內容，請將 `searchType` 參數設定為 `SearchOption.SearchAllSubDirectories`。  
   
  如果找不到符合指定模式的目錄，則會傳回空集合。  

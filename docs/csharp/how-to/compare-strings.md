@@ -1,15 +1,15 @@
 ---
-title: 作法：比較字串 - C# 指南
+title: HOW TO：比較字串 - C# 指南
 description: 了解如何比較和排序字串值，不論大小寫、不論文化特性特定的順序
 ms.date: 10/03/2018
 helpviewer_keywords:
 - strings [C#], comparison
 - comparing strings [C#]
 ms.openlocfilehash: bce234ca3a86f057ec35e1c53d22169ee29b7b94
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58759868"
 ---
 # <a name="how-to-compare-strings-in-c"></a>如何：在 C\# 比較字串

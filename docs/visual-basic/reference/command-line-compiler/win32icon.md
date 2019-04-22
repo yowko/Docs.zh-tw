@@ -7,10 +7,10 @@ helpviewer_keywords:
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821474"
 ---
 # <a name="-win32icon"></a>-win32icon
@@ -29,7 +29,7 @@ ms.locfileid: "58821474"
 |`filename`|要加入至輸出檔的.ico 檔案。 將檔案名稱括在引號 ("") 如果它包含空格。|  
   
 ## <a name="remarks"></a>備註  
- 您可以建立與 Microsoft Windows 資源編譯器 (RC) 的.ico 檔案。 資源編譯器會叫用，當您編譯 Visual c + + 程式;.ico 檔是從.rc 檔案建立。 `-win32icon`和`-win32resource`選項互斥。  
+ 您可以建立與 Microsoft Windows 資源編譯器 (RC) 的.ico 檔案。 資源編譯器會叫用，當您編譯視覺效果C++程式;.ico 檔是從.rc 檔案建立。 `-win32icon`和`-win32resource`選項互斥。  
   
  請參閱[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)參考[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔，或[-資源 (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)附加[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]資源檔。 請參閱[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md)匯入.res 檔案。  
   

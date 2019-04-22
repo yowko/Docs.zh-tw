@@ -3,10 +3,10 @@ title: 彙總作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 0f47e92c-5dd2-4007-baf4-c5fe5dc3b4a8
 ms.openlocfilehash: 72268e27fdf6d573279e98438fd884a076e0c8a3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817236"
 ---
 # <a name="aggregation-operations-visual-basic"></a>彙總作業 (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58817236"
   
  下圖顯示一系列數字之三個不同彙總作業的結果。 第一項作業會加總這些數字。 第二個作業會傳回序列中的最大值。  
   
- ![顯示圖例，LINQ 彙總作業。](./media/aggregation-operations/linq-aggregation-operations.png)  
+ ![顯示 LINQ 彙總作業的圖例。](./media/aggregation-operations/linq-aggregation-operations.png)  
   
  下節列出執行彙總作業的標準查詢運算子方法。  
   

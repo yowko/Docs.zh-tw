@@ -3,10 +3,10 @@ title: 設定作業 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 2b06e822-e030-438f-9db7-ee402bd3a706
 ms.openlocfilehash: 59ab09607462c762758e6a246ec218a92e01f5de
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825777"
 ---
 # <a name="set-operations-visual-basic"></a>設定作業 (Visual Basic)
@@ -28,7 +28,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ### <a name="distinct"></a>Distinct  
  下圖說明一連串字元的 <xref:System.Linq.Enumerable.Distinct%2A?displayProperty=nameWithType> 方法行為。 所傳回的序列包含輸入序列中的唯一項目。  
   
- ![圖形： 顯示 Distinct 的行為&#40;&#41;。](./media/set-operations/distinct-method-behavior.png)  
+ ![顯示 Distinct&#40;&#41; 之行為的圖形。](./media/set-operations/distinct-method-behavior.png)  
   
 ### <a name="except"></a>例外  
  下圖說明 <xref:System.Linq.Enumerable.Except%2A?displayProperty=nameWithType> 的行為。 所傳回的序列只包含第一個輸入序列中不在第二個輸入序列中的項目。  
@@ -42,7 +42,7 @@ LINQ 中的設定作業指的是產生結果集的查詢作業，而結果集是
 ### <a name="union"></a>聯集  
  下圖說明兩個字元序列的聯合作業。 所傳回的序列包含兩個輸入序列中的唯一項目。  
   
- ![顯示兩個序列的聯集圖形。](./media/set-operations/union-operation-two-sequences.png)    
+ ![顯示兩個序列聯集的圖形。](./media/set-operations/union-operation-two-sequences.png)    
 ## <a name="query-expression-syntax-example"></a>查詢運算式語法範例  
  下列範例會使用`Distinct`在 LINQ 查詢中傳回唯一的數字的整數清單的子句。  
   

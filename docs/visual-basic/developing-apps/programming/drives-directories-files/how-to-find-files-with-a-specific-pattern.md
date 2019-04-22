@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中尋找具有特定模式的檔案
+title: HOW TO：在 Visual Basic 中尋找具有特定模式的檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], finding
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
 ms.openlocfilehash: e4d40c4ad3a694b3f7e830604edf94d90cb4c395
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825322"
 ---
-# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>作法：在 Visual Basic 中尋找具有特定模式的檔案
+# <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>HOW TO：在 Visual Basic 中尋找具有特定模式的檔案
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.GetFiles%2A> 方法會傳回代表檔案路徑名稱的唯讀字串集合。 您可以使用 `wildCards` 參數指定特定模式。 如果您想要在搜尋中包含子目錄，請將 `searchType` 參數設定為 `SearchOption.SearchAllSubDirectories`。  
   
  如果找不到符合指定模式的檔案，會傳回空的集合。  

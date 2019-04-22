@@ -3,10 +3,10 @@ title: HOW TO：撰寫 LINQ to XML 座標軸方法 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b676f025-a24c-4076-8713-aa809b2b8ce0
 ms.openlocfilehash: f10ee90076a71aa44f480639d3bc460ea59044ea
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824165"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-visual-basic"></a>HOW TO：撰寫 LINQ to XML 座標軸方法 (Visual Basic)

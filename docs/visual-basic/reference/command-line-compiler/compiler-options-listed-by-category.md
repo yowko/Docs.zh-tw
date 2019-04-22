@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
 ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827363"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>依分類列出 Visual Basic 編譯器選項
@@ -72,7 +72,7 @@ Visual Basic 命令列編譯器提供從 Visual Studio 整合式的開發環境 
 |[-warnaserror](../../../visual-basic/reference/command-line-compiler/warnaserror.md)|將警告提升為錯誤。|  
 |`-ruleset:<file>`|指定停用特定診斷的規則集檔案。|  
   
-## <a name="help"></a>說明  
+## <a name="help"></a>Help  
   
 |選項|用途|  
 |---|---|  

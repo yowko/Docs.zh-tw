@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中讀取應用程式設定
+title: HOW TO：在 Visual Basic 中讀取應用程式設定
 ms.date: 07/20/2015
 helpviewer_keywords:
 - reading application settings
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - application settings [Visual Basic], reading
 ms.assetid: eb3428ef-115e-49a8-a878-e0613183fee0
 ms.openlocfilehash: e7d909563ca7e991a51c2f921b5248aa587a83d7
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58823580"
 ---
-# <a name="how-to-read-application-settings-in-visual-basic"></a>作法：在 Visual Basic 中讀取應用程式設定
+# <a name="how-to-read-application-settings-in-visual-basic"></a>HOW TO：在 Visual Basic 中讀取應用程式設定
 您可以藉由存取 `My.Settings` 物件上的設定屬性，來讀取使用者設定。  
   
  `My.Settings` 物件會將每個設定公開為屬性。 屬性名稱與設定名稱相同，而屬性類型與設定類型相同。 設定的 [範圍] 指出屬性是否為唯讀；[應用程式] 範圍設定的屬性為唯讀，而 [使用者] 範圍設定的屬性為讀寫。 如需詳細資訊，請參閱 [My.Settings 物件](../../../../visual-basic/language-reference/objects/my-settings-object.md)。  

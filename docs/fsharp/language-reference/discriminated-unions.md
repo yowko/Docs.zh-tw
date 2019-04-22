@@ -3,10 +3,10 @@ title: 已區分的聯集
 description: 了解如何使用F#差別聯集。
 ms.date: 05/16/2016
 ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821422"
 ---
 # <a name="discriminated-unions"></a>已區分的聯集
@@ -26,7 +26,7 @@ type [accessibility-modifier] type-name =
 
 ## <a name="remarks"></a>備註
 
-差別聯的集是以其他語言的聯集類型類似，但有一些差異。 做為與 c + + 中的等位型別或在 Visual Basic 中的變數類型的值中儲存的資料不被固定;它可以是多個相異選項的其中一個。 不同於其他語言的聯集，不過，每個可能的選項基於*寫的識別項*。 案例識別項是各種可能的可能是此類型的物件; 的值類型的名稱值是選擇性的。 如果值不存在，它就相當於列舉案例。 如果值存在，每個值可以是單一值的指定的類型或彙總相同或不同類型的多個欄位的 tuple。 您可以為個別欄位的名稱，但名稱是選擇性的即使在相同的情況下的其他欄位的名稱。
+差別聯的集是以其他語言的聯集類型類似，但有一些差異。 使用中的等位型別C++或 variant 型別在 Visual Basic 中，不固定值中儲存的資料;它可以是多個相異選項的其中一個。 不同於其他語言的聯集，不過，每個可能的選項基於*寫的識別項*。 案例識別項是各種可能的可能是此類型的物件; 的值類型的名稱值是選擇性的。 如果值不存在，它就相當於列舉案例。 如果值存在，每個值可以是單一值的指定的類型或彙總相同或不同類型的多個欄位的 tuple。 您可以為個別欄位的名稱，但名稱是選擇性的即使在相同的情況下的其他欄位的名稱。
 
 差別聯集的存取範圍預設為`public`。
 

@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中下載檔案
+title: HOW TO：在 Visual Basic 中下載檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - downloading Internet resources [Visual Basic], files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - files [Visual Basic], transferring
 ms.assetid: ac479f81-c0e2-4b99-af73-217f446b73da
 ms.openlocfilehash: bebb40a732415312742116b0b94743495049c477
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826640"
 ---
-# <a name="how-to-download-a-file-in-visual-basic"></a>作法：在 Visual Basic 中下載檔案
+# <a name="how-to-download-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中下載檔案
 <xref:Microsoft.VisualBasic.Devices.Network.DownloadFile%2A> 方法可以用來下載遠端檔案，並將它儲存到特定位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示下載進度，並允許使用者取消作業。 根據預設，不會覆寫具有相同名稱的現有檔案；如果您想要覆寫現有檔案，請將 `overwrite` 參數設定為 `True`。  
   
  以下條件可能會造成例外狀況：  

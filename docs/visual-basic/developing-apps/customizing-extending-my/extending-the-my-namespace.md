@@ -9,10 +9,10 @@ helpviewer_keywords:
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
 ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814146"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>擴充 Visual Basic 中的 My 命名空間
@@ -96,7 +96,7 @@ ms.locfileid: "58814146"
  這些指導方針不會排除類別庫的一般設計原則。 相反地，它們是最適合用於開發人員使用 Visual Basic 的建議和`My`命名空間。 建立類別庫的一般設計原則，請參閱 < [Framework 設計方針](../../../standard/design-guidelines/index.md)。  
   
 ## <a name="packaging"></a> 封裝和部署擴充功能  
- 您可以包含`My`命名空間延伸模組，Visual Studio 專案範本，或者您可以封裝您的擴充功能，並將其部署為 Visual Studio 項目範本。 當您封裝您`My`做為 Visual Studio 項目範本的命名空間延伸模組，您可以利用 Visual Basic 所提供的其他功能。 這些功能可讓您納入延伸模組，當專案參考特定組件，或是讓使用者明確地將您`My`使用的命名空間延伸模組**My 擴充**Visual Basic 的頁面專案設計工具。  
+ 您可以包含`My`命名空間延伸模組，Visual Studio 專案範本，或者您可以封裝您的擴充功能，並將其部署為 Visual Studio 項目範本。 當您封裝您`My`做為 Visual Studio 項目範本的命名空間延伸模組，您可以利用 Visual Basic 所提供的其他功能。 這些功能可讓您納入延伸模組，當專案參考特定組件，或是讓使用者明確地將您`My`使用的命名空間延伸模組**My 擴充**Visual basic 的頁面專案設計工具。  
   
  如需如何部署的詳細資訊`My`命名空間延伸模組，請參閱[封裝和部署自訂 My 擴充](../../../visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md)。  
   

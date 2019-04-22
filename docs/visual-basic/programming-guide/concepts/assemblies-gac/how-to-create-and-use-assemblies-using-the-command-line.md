@@ -3,10 +3,10 @@ title: HOW TO：建立和使用組件使用命令列 (Visual Basic)
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819394"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>HOW TO：建立和使用組件使用命令列 (Visual Basic)
@@ -105,7 +105,7 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2)
 vbc -target:library -out:MathLibrary.DLL Add.vb Mult.vb  
 ```  
   
- [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會指示編譯器輸出 DLL，而不是 EXE 檔案。 [-(Visual Basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項，後面接著檔案名稱用來指定 DLL 檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
+ [-目標 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/target.md)編譯器選項會指示編譯器輸出 DLL，而不是 EXE 檔案。 [-(Visual basic)](../../../../visual-basic/reference/command-line-compiler/out.md)編譯器選項，後面接著檔案名稱用來指定 DLL 檔案名稱。 否則，編譯器會使用第一個檔案 (`Add.vb`) 作為 DLL 的名稱。  
   
  若要建立可執行檔 `TestCode.exe`，請使用下列命令列：  
   

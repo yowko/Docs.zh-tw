@@ -2,9 +2,15 @@
 title: Visual Basic 中的程式設計
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'programming [Visual Basic], Visual Basic'
-  - programming
+- programming [Visual Basic], Visual Basic
+- programming
 ms.assetid: bc45a3de-ea36-46e6-a106-309a413d7804
+ms.openlocfilehash: 09bc9254c880d58ffed22971d3ff96ba341fdf83
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "58819055"
 ---
 # <a name="programming-in-visual-basic"></a>Visual Basic 中的程式設計
 本節將討論您可能想要在建立 Visual Basic 應用程式時深入了解的程式設計工作。  

@@ -1,18 +1,18 @@
 ---
-title: 作法：在 Visual Basic 中重新命名檔案
+title: HOW TO：在 Visual Basic 中重新命名檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - I/O [Visual Basic], renaming files
 - files [Visual Basic], renaming
 ms.assetid: 0ea7e0c8-2cb2-4bf5-a00d-7b6e3c08a3bc
 ms.openlocfilehash: b86797018e1471590fd4c89848921e696afbc819
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814143"
 ---
-# <a name="how-to-rename-a-file-in-visual-basic"></a>作法：在 Visual Basic 中重新命名檔案
+# <a name="how-to-rename-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中重新命名檔案
 您可以使用 `My.Computer.FileSystem` 物件的 `RenameFile` 方法，藉由提供目前的位置、檔案名稱和新的檔案名稱，來重新命名檔案。 這個方法無法用來移動檔案，請使用 `MoveFile` 方法來移動並重新命名檔案。  
   
 ### <a name="to-rename-a-file"></a>重新命名檔案  
