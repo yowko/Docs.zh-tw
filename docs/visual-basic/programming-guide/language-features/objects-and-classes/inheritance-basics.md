@@ -21,10 +21,10 @@ helpviewer_keywords:
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
 ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826570"
 ---
 # <a name="inheritance-basics-visual-basic"></a>繼承基本概念 (Visual Basic)
@@ -43,7 +43,7 @@ ms.locfileid: "58826570"
   
 -   `NotInheritable` 修飾詞，可讓程式設計人員使用類別作為基底類別。  
   
--   `MustInherit` 修飾詞，指定類別，適用於做為基底類別。 執行個體`MustInherit`類別不能直接建立; 他們只能建立衍生的類別為基底類別執行個體。 (其他程式設計語言，例如 c + + 和C#，使用詞彙*抽象類別*來說明這種類別。)  
+-   `MustInherit` 修飾詞，指定類別，適用於做為基底類別。 執行個體`MustInherit`類別不能直接建立; 他們只能建立衍生的類別為基底類別執行個體。 (其他程式設計語言，例如C++和C#，使用詞彙*抽象類別*來說明這種類別。)  
   
 ## <a name="overriding-properties-and-methods-in-derived-classes"></a>屬性和方法在衍生類別中的覆寫  
  根據預設，在衍生的類別會從其基底類別繼承屬性和方法。 如果繼承的屬性或方法的衍生類別中有不同的行為很*覆寫*。 也就是說，您可以定義新的實作方法的衍生類別中。 下列修飾詞是用來控制如何覆寫屬性及方法：  
