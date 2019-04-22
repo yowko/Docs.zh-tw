@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30685
 ms.assetid: 756add7a-23d5-4b4f-a48d-8297d6459c73
 ms.openlocfilehash: 4415608bcfca63b43b3d9ebf17ce622ccd418775
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820837"
 ---
-# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="9442b-102">'\<成員名稱 >' 模稜兩可，跨繼承介面\<介面名稱 1>.< >' 和'\<介面名稱 2&gt >'</span><span class="sxs-lookup"><span data-stu-id="9442b-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
-<span data-ttu-id="9442b-103">此介面會繼承自多個介面的兩個或多個具有相同名稱的成員。</span><span class="sxs-lookup"><span data-stu-id="9442b-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
+# <a name="membername-is-ambiguous-across-the-inherited-interfaces-interfacename1-and-interfacename2"></a><span data-ttu-id="683a3-102">'\<成員名稱 >' 模稜兩可，跨繼承介面\<介面名稱 1>.< >' 和'\<介面名稱 2&gt >'</span><span class="sxs-lookup"><span data-stu-id="683a3-102">'\<membername>' is ambiguous across the inherited interfaces '\<interfacename1>' and '\<interfacename2>'</span></span>
+<span data-ttu-id="683a3-103">此介面會繼承自多個介面的兩個或多個具有相同名稱的成員。</span><span class="sxs-lookup"><span data-stu-id="683a3-103">The interface inherits two or more members with the same name from multiple interfaces.</span></span>  
   
- <span data-ttu-id="9442b-104">**錯誤 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="9442b-104">**Error ID:** BC30685</span></span>  
+ <span data-ttu-id="683a3-104">**錯誤 ID:** BC30685</span><span class="sxs-lookup"><span data-stu-id="683a3-104">**Error ID:** BC30685</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="9442b-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="9442b-105">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="683a3-105">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="683a3-105">To correct this error</span></span>  
   
--   <span data-ttu-id="9442b-106">將值轉換成您想要使用的基底介面例如：</span><span class="sxs-lookup"><span data-stu-id="9442b-106">Cast the value to the base interface that you want to use; for example:</span></span>  
+-   <span data-ttu-id="683a3-106">將值轉換成您想要使用的基底介面例如：</span><span class="sxs-lookup"><span data-stu-id="683a3-106">Cast the value to the base interface that you want to use; for example:</span></span>  
   
     ```  
     Interface Left  
@@ -46,6 +46,6 @@ ms.locfileid: "58820837"
     End Module  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="9442b-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="9442b-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="683a3-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="683a3-107">See also</span></span>
 
-- [<span data-ttu-id="9442b-108">介面</span><span class="sxs-lookup"><span data-stu-id="9442b-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
+- [<span data-ttu-id="683a3-108">介面</span><span class="sxs-lookup"><span data-stu-id="683a3-108">Interfaces</span></span>](../../../visual-basic/programming-guide/language-features/interfaces/index.md)
