@@ -1,15 +1,15 @@
 ---
-title: HOW TO：建立 C + + 等位使用屬性 (Visual Basic)
+title: HOW TO：建立 C-C++聯集，使用屬性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829300"
 ---
-# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>HOW TO：建立 C/c + + 等位使用屬性 (Visual Basic)
+# <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>HOW TO：建立 C /C++聯集，使用屬性 (Visual Basic)
 您可以使用屬性，自訂如何在記憶體中配置結構。 例如，您可以使用 `StructLayout(LayoutKind.Explicit)` 和 `FieldOffset` 屬性，以 C/C++ 建立所謂的等位。  
   
 ## <a name="example"></a>範例  

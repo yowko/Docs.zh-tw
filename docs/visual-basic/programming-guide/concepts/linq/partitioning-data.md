@@ -3,10 +3,10 @@ title: 資料分割的資料 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 69c59379-b66e-422c-b324-5b5c07760ef7
 ms.openlocfilehash: 2da63a1f6b73c8592d6036a90fa374a0d4385f4c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839570"
 ---
 # <a name="partitioning-data-visual-basic"></a>資料分割的資料 (Visual Basic)
@@ -14,7 +14,7 @@ LINQ 中的分割是指將輸入序列分成兩個區段的作業，不用重新
   
  下圖顯示字元序列三種不同分割作業的結果。 第一項作業會傳回序列中的前三個項目。 第二項作業會略過前三個項目，傳回其餘項目。 第三個作業會略過序列中的前兩個項目，傳回接下來的三個元項目。  
   
- ![顯示圖例，三個 LINQ 分割作業。](./media/partitioning-data/linq-partitioning-operations.png)  
+ ![顯示三個 LINQ 分割作業的圖例。](./media/partitioning-data/linq-partitioning-operations.png)  
   
  分割序列的標準查詢運算子方法詳列於下一節。  
   

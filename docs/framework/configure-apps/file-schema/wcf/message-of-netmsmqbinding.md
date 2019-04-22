@@ -3,10 +3,10 @@ title: <message> 的 <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890562"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<message> of \<netMsmqBinding>
@@ -54,7 +54,7 @@ None
 
 |項目|描述|
 |-------------|-----------------|
-|[\<安全性 >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|定義繫結的安全性設定。|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|定義繫結的安全性設定。|
 
 ## <a name="see-also"></a>另請參閱
 
@@ -63,8 +63,8 @@ None
 - <xref:System.ServiceModel.NetMsmqSecurity.Message%2A>
 - <xref:System.ServiceModel.MessageSecurityOverMsmq>
 - [WCF 中的佇列](../../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
-- [確保服務與用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [繫結](../../../../../docs/framework/wcf/bindings.md)
 - [設定系統提供的繫結](../../../../../docs/framework/wcf/feature-details/configuring-system-provided-bindings.md)
-- [使用繫結來設定服務和用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結設定服務與用戶端](../../../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
 - [\<binding>](../../../../../docs/framework/misc/binding.md)

@@ -23,10 +23,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837308"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>依位置和名稱傳遞引數 (Visual Basic)
@@ -64,7 +64,7 @@ ms.locfileid: "58837308"
   
  在上述範例中，沒有額外的逗號是為了保留位置省略`age`引數，因為`birth`依名稱傳遞。  
   
-在 Visual Basic 15.5 之前的版本，當您在混合位置和名稱、 位置引數所提供引數必須放在第一次。 一旦您依名稱提供引數，任何剩餘的引數必須全部是依名稱傳遞。  例如，下列呼叫來`Display`方法會顯示編譯器錯誤[BC30241:具名引數必須是](../../../misc/bc30241.md)。
+在 Visual basic 15.5 之前的版本，當您在混合位置和名稱、 位置引數所提供引數必須放在第一次。 一旦您依名稱提供引數，任何剩餘的引數必須全部是依名稱傳遞。  例如，下列呼叫來`Display`方法會顯示編譯器錯誤[BC30241:具名引數必須是](../../../misc/bc30241.md)。
 
 [!code-vb[ByNameAndPosition](../../../../../samples/snippets/visualbasic/programming-guide/language-features/passing-named-arguments/module1.vb#6)] 
 

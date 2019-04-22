@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中刪除檔案
+title: HOW TO：在 Visual Basic 中刪除檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - Delete method [Visual Basic]
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - File object
 ms.assetid: 4b721769-3e45-4be7-b7fe-b08dc4141b44
 ms.openlocfilehash: 288c54fa854d753e9b8030463968137b32353b4e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828559"
 ---
-# <a name="how-to-delete-a-file-in-visual-basic"></a>作法：在 Visual Basic 中刪除檔案
+# <a name="how-to-delete-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中刪除檔案
 `My.Computer.FileSystem` 物件的 `DeleteFile` 方法可讓您刪除檔案。 提供的選項包括︰是否要將已刪除的檔案傳送至 [資源回收筒]、是否要求使用者確認應該刪除檔案，以及使用者取消該作業時該怎麼辦。  
   
 ### <a name="to-delete-a-text-file"></a>刪除文字檔  

@@ -1,17 +1,17 @@
 ---
-title: 作法：在 Visual Basic 中移動檔案
+title: HOW TO：在 Visual Basic 中移動檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], moving
 ms.assetid: 53a7457b-5815-41ad-b37d-28537c1fb77a
 ms.openlocfilehash: 0c909e3dfce1af17cc74ca526ba0409d5e9f93f8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843711"
 ---
-# <a name="how-to-move-a-file-in-visual-basic"></a>作法：在 Visual Basic 中移動檔案
+# <a name="how-to-move-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中移動檔案
 `My.Computer.FileSystem.MoveFile` 方法可以用來將檔案移至另一個資料夾。 如果目標結構不存在，則會予以建立。  
   
 ### <a name="to-move-a-file"></a>移動檔案  

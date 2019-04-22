@@ -7,10 +7,10 @@ helpviewer_keywords:
 - I/O [Visual Basic], functions
 ms.assetid: 6b0cbb88-6593-43b8-8a40-a61563bc0ce9
 ms.openlocfilehash: 13013ee3dd9ee024cd3375003ed23c5ae4d620bd
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836762"
 ---
 # <a name="input-and-output-summary-visual-basic"></a>輸入和輸出摘要 (Visual Basic)
@@ -27,7 +27,7 @@ Visual Basic 語言關鍵字和執行階段程式庫成員依用途組織，並�
 |管理檔案。|<xref:Microsoft.VisualBasic.FileSystem.Dir%2A>, <xref:Microsoft.VisualBasic.FileSystem.Kill%2A>, <xref:Microsoft.VisualBasic.FileSystem.Lock%2A>, <xref:Microsoft.VisualBasic.FileSystem.Unlock%2A>|  
 |從檔案讀取。|<xref:Microsoft.VisualBasic.FileSystem.FileGet%2A>, <xref:Microsoft.VisualBasic.FileSystem.FileGetObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Input%2A>, <xref:Microsoft.VisualBasic.FileSystem.InputString%2A>, <xref:Microsoft.VisualBasic.FileSystem.LineInput%2A>|  
 |傳回檔案的長度。|<xref:Microsoft.VisualBasic.FileSystem.FileLen%2A>|  
-|設定或取得檔案屬性。|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>, <xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
+|設定或取得檔案屬性。|<xref:Microsoft.VisualBasic.FileSystem.FileAttr%2A>、<xref:Microsoft.VisualBasic.FileSystem.GetAttr%2A>、<xref:Microsoft.VisualBasic.FileSystem.SetAttr%2A>|  
 |設定讀寫檔案中的位置。|<xref:Microsoft.VisualBasic.FileSystem.Seek%2A>|  
 |寫入檔案。|<xref:Microsoft.VisualBasic.FileSystem.FilePut%2A>, <xref:Microsoft.VisualBasic.FileSystem.FilePutObject%2A>, <xref:Microsoft.VisualBasic.FileSystem.Print%2A>, <xref:Microsoft.VisualBasic.FileSystem.Write%2A>, <xref:Microsoft.VisualBasic.FileSystem.WriteLine%2A>|  
   

@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中從文字檔讀取
+title: HOW TO：在 Visual Basic 中從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - extended characters [Visual Basic], reading
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 735fe9d7-0f7a-4185-ba02-f35e580ec4b8
 ms.openlocfilehash: 813928fbcf67f269d99d418ab16e202bd19f25fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836879"
 ---
-# <a name="how-to-read-from-text-files-in-visual-basic"></a>作法：在 Visual Basic 中從文字檔讀取
+# <a name="how-to-read-from-text-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中從文字檔讀取
 <xref:Microsoft.VisualBasic.MyServices.FileSystemProxy.ReadAllText%2A> 物件的 `My.Computer.FileSystem` 方法允許您從文字檔讀取。 如果檔案的內容是使用 ASCII 或 UTF-8 之類的編碼方式，則可以指定檔案編碼方式。  
   
  如果您是從含擴充字元的檔案讀取，您將需要指定檔案的編碼方式。  

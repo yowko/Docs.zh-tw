@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中上傳檔案
+title: HOW TO：在 Visual Basic 中上傳檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - networks, uploading files
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - My.Computer.Network.UploadFile method
 ms.assetid: a8b37924-c523-4fd3-b5ca-cb0074df29cd
 ms.openlocfilehash: 486351bc140a2bbf18bb8f85f761fc491f028bba
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840349"
 ---
-# <a name="how-to-upload-a-file-in-visual-basic"></a>作法：在 Visual Basic 中上傳檔案
+# <a name="how-to-upload-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中上傳檔案
 <xref:Microsoft.VisualBasic.Devices.Network.UploadFile%2A> 方法可以用於上傳檔案，並將其存放到遠端位置。 如果 `ShowUI` 參數設定為 `True`，則會顯示對話方塊以顯示上傳進度，並允許使用者取消作業。  
   
 ### <a name="to-upload-a-file"></a>上傳檔案  

@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中顯示可用的序列埠
+title: HOW TO：在 Visual Basic 中顯示可用的序列埠
 ms.date: 07/20/2015
 helpviewer_keywords:
 - serial ports, availability
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - ports, serial port availability
 ms.assetid: eaf2ee5a-8103-4e10-a205-ed1d4db120ba
 ms.openlocfilehash: 57b3a33fecb6128a10ce903fd26724de98acb8c1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834643"
 ---
-# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>作法：在 Visual Basic 中顯示可用的序列埠
+# <a name="how-to-show-available-serial-ports-in-visual-basic"></a>HOW TO：在 Visual Basic 中顯示可用的序列埠
 本主題描述如何在 Visual Basic 中使用 `My.Computer.Ports` 來顯示電腦的可用序列埠。  
   
  為了允許使用者選取所要使用的序列埠，序列埠的名稱放在 <xref:System.Windows.Forms.ListBox> 控制項中。  

@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中讀取登錄機碼的值
+title: HOW TO：在 Visual Basic 中讀取登錄機碼的值
 ms.date: 07/20/2015
 helpviewer_keywords:
 - registry keys [Visual Basic], determining if a value exists in
@@ -9,13 +9,13 @@ helpviewer_keywords:
 - registry [Visual Basic], reading
 ms.assetid: 775d0a57-68c9-464e-8949-9a39bd29cc64
 ms.openlocfilehash: bc71dd2e3a78454236b2f6f30c2d51aa596e5b8c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840181"
 ---
-# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>作法：在 Visual Basic 中讀取登錄機碼的值
+# <a name="how-to-read-a-value-from-a-registry-key-in-visual-basic"></a>HOW TO：在 Visual Basic 中讀取登錄機碼的值
 您可以使用 `My.Computer.Registry` 物件的 `GetValue` 方法來讀取 Windows 登錄中的值。  
   
  如果下列範例中的機碼 "Software\MyApp" 不存在，則會擲回例外狀況。 如果下列範例中的 `ValueName` (也就是 "Name") 不存在，則會傳回 `Nothing`。  

@@ -3,10 +3,10 @@ title: 進階查詢技術 (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 79be877c-fadc-4dfb-9f03-426082b13656
 ms.openlocfilehash: 609ac419eea5c320bb51bad2193d10ec63a2e651
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833686"
 ---
 # <a name="advanced-query-techniques-linq-to-xml-visual-basic"></a>進階查詢技術 (LINQ to XML) (Visual Basic)

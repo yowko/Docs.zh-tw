@@ -1,18 +1,18 @@
 ---
-title: 作法：在 Visual Basic 中建立檔案
+title: HOW TO：在 Visual Basic 中建立檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
 ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839414"
 ---
-# <a name="how-to-create-a-file-in-visual-basic"></a>作法：在 Visual Basic 中建立檔案
+# <a name="how-to-create-a-file-in-visual-basic"></a>HOW TO：在 Visual Basic 中建立檔案
 這個範例會在 <xref:System.IO.File> 類別中使用 <xref:System.IO.File.Create%2A> 方法，以在指定的路徑中建立空白文字檔。  
   
 ## <a name="example"></a>範例  

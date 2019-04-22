@@ -7,10 +7,10 @@ helpviewer_keywords:
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
 ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920684"
 ---
 # <a name="strings-c-programming-guide"></a>字串 (C# 程式設計手冊)
@@ -128,17 +128,17 @@ string s = String.Empty;
   
 |主題|說明|  
 |-----------|-----------------|  
-|[作法：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
-|[作法：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
-|[作法：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
-|[作法：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
-|[作法：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
-|[作法：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
-|[字串插補](../../language-reference/tokens/interpolated.md)|描述可提供方便語法以設定格式字串的字串內插補點功能。|
+|[如何：修改字串內容](../../how-to/modify-string-contents.md)|說明轉換字串及修改字串內容的技術。|  
+|[如何：比較字串](../../how-to/compare-strings.md)|示範如何執行字串的序數與文化特定比較。|  
+|[如何：串連多個字串](../../how-to/concatenate-multiple-strings.md)|示範如何將多個字串聯結成一個的各種方式。|
+|[如何：使用 String.Split 剖析字串](../../how-to/parse-strings-using-split.md)|包含說明如何使用 `String.Split` 方法剖析字串的程式碼範例。|  
+|[如何：搜尋字串](../../how-to/search-strings.md)|說明如何對字串中的特定文字或模式使用搜尋。|  
+|[如何：判斷字串是否代表數值](../../../csharp/programming-guide/strings/how-to-determine-whether-a-string-represents-a-numeric-value.md)|示範如何安全地剖析字串，以查看它是否有有效的數值。|  
+|[字串內插補點](../../language-reference/tokens/interpolated.md)|描述可提供方便語法以設定格式字串的字串內插補點功能。|
 |[基本字串作業](../../../../docs/standard/base-types/basic-string-operations.md)|提供使用 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 方法執行基本字串作業之主題的連結。|  
 |[剖析字串](../../../standard/base-types/parsing-strings.md)|描述如何將.NET 基底類型的字串表示轉換成對應類型的執行個體。|  
 |[在 .NET 中剖析日期和時間字串](../../../standard/base-types/parsing-datetime.md)|示範如何將 "01/24/2008" 這類字串轉換為 <xref:System.DateTime?displayProperty=nameWithType> 物件。|  
 |[比較字串](../../../../docs/standard/base-types/comparing.md)|包含如何比較字串的相關資訊，並提供以 C# 和 Visual Basic 撰寫的範例。|  
 |[使用 StringBuilder 類別](../../../standard/base-types/stringbuilder.md)|描述如何使用 <xref:System.Text.StringBuilder> 類別來建立及修改動態字串物件。|  
 |[LINQ 和字串](../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)|提供如何使用 LINQ 查詢來執行各種字串作業的相關資訊。|  
-|[C# 程式設計手冊](../../../csharp/programming-guide/index.md)|提供說明 C# 中程式設計建構的主題連結。|  
+|[C# 程式設計指南](../../../csharp/programming-guide/index.md)|提供說明 C# 中程式設計建構的主題連結。|  

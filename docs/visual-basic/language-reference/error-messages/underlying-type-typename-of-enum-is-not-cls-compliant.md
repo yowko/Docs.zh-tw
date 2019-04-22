@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC40032
 ms.assetid: 32bf1949-fd73-456c-a323-bf1ffe1320ed
 ms.openlocfilehash: 636fcc36e7bac52467998dc9c59f14ba1bedead3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831484"
 ---
 # <a name="underlying-type-typename-of-enum-is-not-cls-compliant"></a>基礎型別\<類型名稱 > 的列舉不符合 CLS 規範

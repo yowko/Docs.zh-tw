@@ -3,10 +3,10 @@ title: C# 6 的新功能 - C# 指南
 description: 了解 C# 第 6 版的新功能
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920671"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 的新功能
@@ -106,7 +106,7 @@ public class Student
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-確保左側只評估一次也可讓您使用包括方法呼叫在內的任何運算式，使用位置在以下項目左側： `?.`
+確保左側只評估一次也可讓您在 `?.` 的左側使用任何運算式，包括方法呼叫
 
 ## <a name="string-interpolation"></a>字串插補
 

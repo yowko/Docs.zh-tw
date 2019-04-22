@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中將文字寫入檔案
+title: HOW TO：在 Visual Basic 中將文字寫入檔案
 ms.date: 07/20/2015
 helpviewer_keywords:
 - files [Visual Basic], writing to
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 ms.openlocfilehash: f4d6c3ef5ba6d8aa286e1ae2bd8a944aacdad096
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828221"
 ---
-# <a name="how-to-write-text-to-files-in-visual-basic"></a>作法：在 Visual Basic 中將文字寫入檔案
+# <a name="how-to-write-text-to-files-in-visual-basic"></a>HOW TO：在 Visual Basic 中將文字寫入檔案
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> 方法可用來將文字寫入檔案。 如果指定的檔案不存在，則會建立該檔案。  
   
 ## <a name="procedure"></a>程序  
