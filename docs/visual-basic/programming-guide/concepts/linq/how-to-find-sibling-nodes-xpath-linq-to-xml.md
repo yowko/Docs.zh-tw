@@ -3,23 +3,23 @@ title: HOW TO：尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842105"
 ---
-# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="e12b7-102">HOW TO：尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="e12b7-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
-<span data-ttu-id="e12b7-103">您可能想要尋找具有特定名稱之節點的所有同層級。</span><span class="sxs-lookup"><span data-stu-id="e12b7-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="e12b7-104">如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="e12b7-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
+# <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a><span data-ttu-id="aeab8-102">HOW TO：尋找同層級節點 (XPATH-LINQ to XML) (Visual Basic)</span><span class="sxs-lookup"><span data-stu-id="aeab8-102">How to: Find Sibling Nodes (XPath-LINQ to XML) (Visual Basic)</span></span>
+<span data-ttu-id="aeab8-103">您可能想要尋找具有特定名稱之節點的所有同層級。</span><span class="sxs-lookup"><span data-stu-id="aeab8-103">You might want to find all siblings of a node that have a specific name.</span></span> <span data-ttu-id="aeab8-104">如果內容節點也有特定的名稱，所產生的集合可能包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="aeab8-104">The resulting collection might include the context node if the context node also has the specific name.</span></span>  
   
- <span data-ttu-id="e12b7-105">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="e12b7-105">The XPath expression is:</span></span>  
+ <span data-ttu-id="aeab8-105">XPath 運算式為：</span><span class="sxs-lookup"><span data-stu-id="aeab8-105">The XPath expression is:</span></span>  
   
  `../Book`  
   
-## <a name="example"></a><span data-ttu-id="e12b7-106">範例</span><span class="sxs-lookup"><span data-stu-id="e12b7-106">Example</span></span>  
- <span data-ttu-id="e12b7-107">此範例會先尋找 `Book` 項目，然後尋找名稱為 `Book` 的所有同層級項目。</span><span class="sxs-lookup"><span data-stu-id="e12b7-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="e12b7-108">所產生的集合包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="e12b7-108">The resulting collection includes the context node.</span></span>  
+## <a name="example"></a><span data-ttu-id="aeab8-106">範例</span><span class="sxs-lookup"><span data-stu-id="aeab8-106">Example</span></span>  
+ <span data-ttu-id="aeab8-107">此範例會先尋找 `Book` 項目，然後尋找名稱為 `Book` 的所有同層級項目。</span><span class="sxs-lookup"><span data-stu-id="aeab8-107">This example first finds a `Book` element, and then finds all sibling elements named `Book`.</span></span> <span data-ttu-id="aeab8-108">所產生的集合包含內容節點。</span><span class="sxs-lookup"><span data-stu-id="aeab8-108">The resulting collection includes the context node.</span></span>  
   
- <span data-ttu-id="e12b7-109">此範例使用下列 XML 文件：[XML 範例檔：書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="e12b7-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
+ <span data-ttu-id="aeab8-109">此範例使用下列 XML 文件：[XML 範例檔：書籍 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md)。</span><span class="sxs-lookup"><span data-stu-id="aeab8-109">This example uses the following XML document: [Sample XML File: Books (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-books-linq-to-xml.md).</span></span>  
   
 ```vb  
 Dim books As XDocument = XDocument.Load("Books.xml")  
@@ -42,7 +42,7 @@ For Each el As XElement In list1
 Next  
 ```  
   
- <span data-ttu-id="e12b7-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="e12b7-110">This example produces the following output:</span></span>  
+ <span data-ttu-id="aeab8-110">這個範例會產生下列輸出：</span><span class="sxs-lookup"><span data-stu-id="aeab8-110">This example produces the following output:</span></span>  
   
 ```  
 Results are identical  
@@ -67,6 +67,6 @@ Results are identical
 </Book>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="e12b7-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e12b7-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="aeab8-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="aeab8-111">See also</span></span>
 
-- [<span data-ttu-id="e12b7-112">LINQ to XML (Visual Basic) 的 XPath 使用者適用的</span><span class="sxs-lookup"><span data-stu-id="e12b7-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+- [<span data-ttu-id="aeab8-112">LINQ to XML (Visual Basic) 的 XPath 使用者適用的</span><span class="sxs-lookup"><span data-stu-id="aeab8-112">LINQ to XML for XPath Users (Visual Basic)</span></span>](../../../../visual-basic/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

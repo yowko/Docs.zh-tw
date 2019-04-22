@@ -8,30 +8,30 @@ helpviewer_keywords:
 - BC32008
 ms.assetid: dc6abba0-a9ad-450f-8899-87265bc84abc
 ms.openlocfilehash: c308805f5e73d740ff18a40d95b9cc2576ac95fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841238"
 ---
-# <a name="typename-is-a-delegate-type"></a><span data-ttu-id="23471-102">'\<類型名稱 >' 是委派型別</span><span class="sxs-lookup"><span data-stu-id="23471-102">'\<typename>' is a delegate type</span></span>
-<span data-ttu-id="23471-103">'\<類型名稱 >' 是委派型別。</span><span class="sxs-lookup"><span data-stu-id="23471-103">'\<typename>' is a delegate type.</span></span> <span data-ttu-id="23471-104">委派建構允許只使用單一 AddressOf 運算式做為引數清單。</span><span class="sxs-lookup"><span data-stu-id="23471-104">Delegate construction permits only a single AddressOf expression as an argument list.</span></span> <span data-ttu-id="23471-105">通常可以使用 AddressOf 運算式，而不是委派建構。</span><span class="sxs-lookup"><span data-stu-id="23471-105">Often an AddressOf expression can be used instead of a delegate construction.</span></span>  
+# <a name="typename-is-a-delegate-type"></a><span data-ttu-id="e8203-102">'\<類型名稱 >' 是委派型別</span><span class="sxs-lookup"><span data-stu-id="e8203-102">'\<typename>' is a delegate type</span></span>
+<span data-ttu-id="e8203-103">'\<類型名稱 >' 是委派型別。</span><span class="sxs-lookup"><span data-stu-id="e8203-103">'\<typename>' is a delegate type.</span></span> <span data-ttu-id="e8203-104">委派建構允許只使用單一 AddressOf 運算式做為引數清單。</span><span class="sxs-lookup"><span data-stu-id="e8203-104">Delegate construction permits only a single AddressOf expression as an argument list.</span></span> <span data-ttu-id="e8203-105">通常可以使用 AddressOf 運算式，而不是委派建構。</span><span class="sxs-lookup"><span data-stu-id="e8203-105">Often an AddressOf expression can be used instead of a delegate construction.</span></span>  
   
- <span data-ttu-id="23471-106">A`New`子句建立委派類別的執行個體提供無效的引數清單之委派建構函式。</span><span class="sxs-lookup"><span data-stu-id="23471-106">A `New` clause creating an instance of a delegate class supplies an invalid argument list to the delegate constructor.</span></span>  
+ <span data-ttu-id="e8203-106">A`New`子句建立委派類別的執行個體提供無效的引數清單之委派建構函式。</span><span class="sxs-lookup"><span data-stu-id="e8203-106">A `New` clause creating an instance of a delegate class supplies an invalid argument list to the delegate constructor.</span></span>  
   
- <span data-ttu-id="23471-107">您可以提供只會有一個`AddressOf`運算式建立新的委派執行個體時。</span><span class="sxs-lookup"><span data-stu-id="23471-107">You can supply only a single `AddressOf` expression when creating a new delegate instance.</span></span>  
+ <span data-ttu-id="e8203-107">您可以提供只會有一個`AddressOf`運算式建立新的委派執行個體時。</span><span class="sxs-lookup"><span data-stu-id="e8203-107">You can supply only a single `AddressOf` expression when creating a new delegate instance.</span></span>  
   
- <span data-ttu-id="23471-108">如果您沒有傳遞任何引數的委派建構函式，如果傳遞多個引數，或如果您傳遞單一引數，不是有效，此錯誤可能會造成`AddressOf`運算式。</span><span class="sxs-lookup"><span data-stu-id="23471-108">This error can result if you do not pass any arguments to the delegate constructor, if you pass more than one argument, or if you pass a single argument that is not a valid `AddressOf` expression.</span></span>  
+ <span data-ttu-id="e8203-108">如果您沒有傳遞任何引數的委派建構函式，如果傳遞多個引數，或如果您傳遞單一引數，不是有效，此錯誤可能會造成`AddressOf`運算式。</span><span class="sxs-lookup"><span data-stu-id="e8203-108">This error can result if you do not pass any arguments to the delegate constructor, if you pass more than one argument, or if you pass a single argument that is not a valid `AddressOf` expression.</span></span>  
   
- <span data-ttu-id="23471-109">**錯誤 ID:** BC32008</span><span class="sxs-lookup"><span data-stu-id="23471-109">**Error ID:** BC32008</span></span>  
+ <span data-ttu-id="e8203-109">**錯誤 ID:** BC32008</span><span class="sxs-lookup"><span data-stu-id="e8203-109">**Error ID:** BC32008</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="23471-110">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="23471-110">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="e8203-110">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="e8203-110">To correct this error</span></span>  
   
--   <span data-ttu-id="23471-111">使用單一`AddressOf`委派類別中的引數清單中的運算式`New`子句。</span><span class="sxs-lookup"><span data-stu-id="23471-111">Use a single `AddressOf` expression in the argument list for the delegate class in the `New` clause.</span></span>  
+-   <span data-ttu-id="e8203-111">使用單一`AddressOf`委派類別中的引數清單中的運算式`New`子句。</span><span class="sxs-lookup"><span data-stu-id="e8203-111">Use a single `AddressOf` expression in the argument list for the delegate class in the `New` clause.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="23471-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="23471-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e8203-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e8203-112">See also</span></span>
 
-- [<span data-ttu-id="23471-113">New 運算子</span><span class="sxs-lookup"><span data-stu-id="23471-113">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)
-- [<span data-ttu-id="23471-114">AddressOf 運算子</span><span class="sxs-lookup"><span data-stu-id="23471-114">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
-- [<span data-ttu-id="23471-115">委派</span><span class="sxs-lookup"><span data-stu-id="23471-115">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
-- [<span data-ttu-id="23471-116">如何：叫用委派方法</span><span class="sxs-lookup"><span data-stu-id="23471-116">How to: Invoke a Delegate Method</span></span>](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)
+- [<span data-ttu-id="e8203-113">New 運算子</span><span class="sxs-lookup"><span data-stu-id="e8203-113">New Operator</span></span>](../../../visual-basic/language-reference/operators/new-operator.md)
+- [<span data-ttu-id="e8203-114">AddressOf 運算子</span><span class="sxs-lookup"><span data-stu-id="e8203-114">AddressOf Operator</span></span>](../../../visual-basic/language-reference/operators/addressof-operator.md)
+- [<span data-ttu-id="e8203-115">委派</span><span class="sxs-lookup"><span data-stu-id="e8203-115">Delegates</span></span>](../../../visual-basic/programming-guide/language-features/delegates/index.md)
+- [<span data-ttu-id="e8203-116">如何：叫用委派方法</span><span class="sxs-lookup"><span data-stu-id="e8203-116">How to: Invoke a Delegate Method</span></span>](../../../visual-basic/programming-guide/language-features/delegates/how-to-invoke-a-delegate-method.md)

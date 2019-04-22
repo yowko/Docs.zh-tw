@@ -5,27 +5,27 @@ helpviewer_keywords:
 - My.Computer.Network object
 ms.assetid: 94ddbade-aff1-42f8-a6c8-88b78c28c0db
 ms.openlocfilehash: 4c79989f3bbae1bdb52e3eb0839503b330c6b8fc
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840298"
 ---
-# <a name="mycomputernetwork-object"></a><span data-ttu-id="b0388-102">My.Computer.Network 物件</span><span class="sxs-lookup"><span data-stu-id="b0388-102">My.Computer.Network Object</span></span>
-<span data-ttu-id="b0388-103">提供屬性、 事件和的電腦所連接之網路互動的方法。</span><span class="sxs-lookup"><span data-stu-id="b0388-103">Provides a property, event, and methods for interacting with the network to which the computer is connected.</span></span>  
+# <a name="mycomputernetwork-object"></a><span data-ttu-id="5e2bf-102">My.Computer.Network 物件</span><span class="sxs-lookup"><span data-stu-id="5e2bf-102">My.Computer.Network Object</span></span>
+<span data-ttu-id="5e2bf-103">提供屬性、 事件和的電腦所連接之網路互動的方法。</span><span class="sxs-lookup"><span data-stu-id="5e2bf-103">Provides a property, event, and methods for interacting with the network to which the computer is connected.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="b0388-104">備註</span><span class="sxs-lookup"><span data-stu-id="b0388-104">Remarks</span></span>  
- <span data-ttu-id="b0388-105">如需方法和 `My.Computer.Network` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Network>。</span><span class="sxs-lookup"><span data-stu-id="b0388-105">For information about the methods and properties of the `My.Computer.Network` object, see <xref:Microsoft.VisualBasic.Devices.Network>.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5e2bf-104">備註</span><span class="sxs-lookup"><span data-stu-id="5e2bf-104">Remarks</span></span>  
+ <span data-ttu-id="5e2bf-105">如需方法和 `My.Computer.Network` 物件屬性的資訊，請參閱 <xref:Microsoft.VisualBasic.Devices.Network>。</span><span class="sxs-lookup"><span data-stu-id="5e2bf-105">For information about the methods and properties of the `My.Computer.Network` object, see <xref:Microsoft.VisualBasic.Devices.Network>.</span></span>  
   
- <span data-ttu-id="b0388-106">如需詳細資訊，請參閱 <<c0> [ 正在執行網路作業](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="b0388-106">For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).</span></span>  
+ <span data-ttu-id="5e2bf-106">如需詳細資訊，請參閱 <<c0> [ 正在執行網路作業](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md)。</span><span class="sxs-lookup"><span data-stu-id="5e2bf-106">For more information, see [Performing Network Operations](../../../visual-basic/developing-apps/programming/computer-resources/performing-network-operations.md).</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b0388-107">需求</span><span class="sxs-lookup"><span data-stu-id="b0388-107">Requirements</span></span>  
- <span data-ttu-id="b0388-108">**命名空間︰** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="b0388-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType></span></span>  
+## <a name="requirements"></a><span data-ttu-id="5e2bf-107">需求</span><span class="sxs-lookup"><span data-stu-id="5e2bf-107">Requirements</span></span>  
+ <span data-ttu-id="5e2bf-108">**命名空間︰** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType></span><span class="sxs-lookup"><span data-stu-id="5e2bf-108">**Namespace:** <xref:Microsoft.VisualBasic.Devices?displayProperty=nameWithType></span></span>  
   
- <span data-ttu-id="b0388-109">**類別︰** <xref:Microsoft.VisualBasic.Devices.Network></span><span class="sxs-lookup"><span data-stu-id="b0388-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Network></span></span>  
+ <span data-ttu-id="5e2bf-109">**類別︰** <xref:Microsoft.VisualBasic.Devices.Network></span><span class="sxs-lookup"><span data-stu-id="5e2bf-109">**Class:** <xref:Microsoft.VisualBasic.Devices.Network></span></span>  
   
- <span data-ttu-id="b0388-110">**組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="b0388-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
+ <span data-ttu-id="5e2bf-110">**組件：** Visual Basic Runtime Library (位於 Microsoft.VisualBasic.dll)</span><span class="sxs-lookup"><span data-stu-id="5e2bf-110">**Assembly:** Visual Basic Runtime Library (in Microsoft.VisualBasic.dll)</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b0388-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b0388-111">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5e2bf-111">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5e2bf-111">See also</span></span>
 
-- [<span data-ttu-id="b0388-112">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="b0388-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
+- [<span data-ttu-id="5e2bf-112">My.Computer 物件</span><span class="sxs-lookup"><span data-stu-id="5e2bf-112">My.Computer Object</span></span>](../../../visual-basic/language-reference/objects/my-computer-object.md)
