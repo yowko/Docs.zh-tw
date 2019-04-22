@@ -7,10 +7,10 @@ helpviewer_keywords:
 - graphics [WPF], origins of Transforms
 ms.assetid: f4dbc29d-93c7-41cd-96d8-5cfd8624b470
 ms.openlocfilehash: 48b3b0df8dab8516873495a996074eae57ffe00f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082954"
 ---
 # <a name="how-to-specify-the-origin-of-a-transform-by-using-relative-values"></a>HOW TO：使用相對值指定轉換的原點
@@ -43,4 +43,4 @@ ms.locfileid: "59082954"
 
 - <xref:System.Windows.Media.Transform>
 - [轉換概觀](transforms-overview.md)
-- [HOW TO 主題](transformations-how-to-topics.md)
+- [HOW-TO 主題](transformations-how-to-topics.md)

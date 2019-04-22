@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
 ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146012"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>HOW TO：在重複循環期間累加動畫值
@@ -34,8 +34,8 @@ ms.locfileid: "59146012"
   
 ## <a name="see-also"></a>另請參閱
 
-- [將動畫輸出值加到動畫啟動值](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
+- [將動畫輸出值加入至動畫啟動值](how-to-add-an-animation-output-value-to-an-animation-starting-value.md)
 - [重複動畫](how-to-repeat-an-animation.md)
 - [動畫概觀](animation-overview.md)
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
-- [HOW TO 主題](animation-and-timing-how-to-topics.md)
+- [HOW-TO 主題](animation-and-timing-how-to-topics.md)

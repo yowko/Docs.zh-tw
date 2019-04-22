@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b00394d0b08e7e4a02b95437908dd65a51d0a042
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084605"
 ---
 # <a name="icorprofilercallbackmanagedtounmanagedtransition-method"></a>ICorProfilerCallback::ManagedToUnmanagedTransition 方法
@@ -43,7 +43,7 @@ HRESULT ManagedToUnmanagedTransition(
  [in]值為[COR_PRF_TRANSITION_REASON](../../../../docs/framework/unmanaged-api/profiling/cor-prf-transition-reason-enumeration.md)列舉，指出轉換是否發生因為呼叫 unmanaged 程式碼從 managed 程式碼，或因為由未受管理的一個呼叫 managed 函式傳回。  
   
 ## <a name="remarks"></a>備註  
- 如果值`reason`是 COR_PRF_TRANSITION_CALL，識別碼是，unmanaged 的函式，將永遠不會已編譯使用-just-in-time 編譯器函式。 Unmanaged 函式有與其相關聯，例如名稱及一些中繼資料的基本資訊。 如果 unmanaged 函式呼叫使用隱含的平台叫用 (PInvoke)，執行階段無法判斷呼叫的目的地，而`functionId`將會是 null。 如需有關隱含 PInvoke 的詳細資訊，請參閱 <<c0> [ 使用 c + + Interop (隱含 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)。  
+ 如果值`reason`是 COR_PRF_TRANSITION_CALL，識別碼是，unmanaged 的函式，將永遠不會已編譯使用-just-in-time 編譯器函式。 Unmanaged 函式有與其相關聯，例如名稱及一些中繼資料的基本資訊。 如果 unmanaged 函式呼叫使用隱含的平台叫用 (PInvoke)，執行階段無法判斷呼叫的目的地，而`functionId`將會是 null。 如需有關隱含 PInvoke 的詳細資訊，請參閱 <<c0> [ 使用C++Interop (隱含 PInvoke)](/cpp/dotnet/using-cpp-interop-implicit-pinvoke)。</c0>  
   
 ## <a name="requirements"></a>需求  
  **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。  
@@ -52,7 +52,7 @@ HRESULT ManagedToUnmanagedTransition(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

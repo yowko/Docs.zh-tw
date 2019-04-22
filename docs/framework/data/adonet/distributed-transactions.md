@@ -3,10 +3,10 @@ title: 分散式異動
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150198"
 ---
 # <a name="distributed-transactions"></a>分散式異動
@@ -39,7 +39,7 @@ ms.locfileid: "59150198"
 >  在交易上明確地登記連接之後，直到第一個交易完成之前，無法取消登記或在其他交易中登記它。  
   
 > [!CAUTION]
->  `EnlistTransaction` 如果連線已開始使用連接的交易，會擲回例外狀況<xref:System.Data.Common.DbConnection.BeginTransaction%2A>方法。 不過，如果異動是在資料來源上啟動的本機異動 (例如，使用 <xref:System.Data.SqlClient.SqlCommand>，明確執行 BEGIN TRANSACTION 陳述式)，則 `EnlistTransaction` 將復原本機異動，並按要求在現有的分散式異動中登記。 您不會收到復原本機異動的通知，而且必須管理所有非使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 啟動的本機異動。 如果您是將 .NET Framework Data Provider for SQL Server (`SqlClient`) 用於 SQL Server，則嘗試登記會擲回例外狀況。 將不會偵測到所有其他情況。  
+>  如果連接已使用連接的 `EnlistTransaction` 方法啟動異動，則 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 會擲回例外狀況。 不過，如果異動是在資料來源上啟動的本機異動 (例如，使用 <xref:System.Data.SqlClient.SqlCommand>，明確執行 BEGIN TRANSACTION 陳述式)，則 `EnlistTransaction` 將復原本機異動，並按要求在現有的分散式異動中登記。 您不會收到復原本機異動的通知，而且必須管理所有非使用 <xref:System.Data.Common.DbConnection.BeginTransaction%2A> 啟動的本機異動。 如果您是將 .NET Framework Data Provider for SQL Server (`SqlClient`) 用於 SQL Server，則嘗試登記會擲回例外狀況。 將不會偵測到所有其他情況。  
   
 ## <a name="promotable-transactions-in-sql-server"></a>SQL Server 中的可提升異動  
  SQL Server 支援可提升異動，在該異動中，本機輕量型異動可在必要時自動提升為分散式異動。 除非需要已加入的負荷，否則可提升交易不會叫用分散式交易的已加入負荷。 如需詳細資訊和程式碼範例，請參閱[System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)。  
@@ -51,4 +51,4 @@ ms.locfileid: "59150198"
 
 - [異動和並行存取](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)
 - [System.Transactions 與 SQL Server 整合](../../../../docs/framework/data/adonet/system-transactions-integration-with-sql-server.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

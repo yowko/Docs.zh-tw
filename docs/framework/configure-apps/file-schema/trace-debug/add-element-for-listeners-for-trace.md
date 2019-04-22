@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089563"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<新增 > 項目\<接聽程式 > 針對\<追蹤 >
@@ -39,9 +39,9 @@ ms.locfileid: "59089563"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**類型**|必要屬性。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
+|**type**|必要屬性。<br /><br /> 指定接聽程式的類型。 您必須使用符合在指定之需求的字串[指定完整的型別名稱](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)。|  
 |**initializeData**|選擇性屬性。<br /><br /> 指定的類別，建構函式傳遞的字串。|  
-|**名稱**|選擇性屬性。<br /><br /> 指定接聽程式的名稱。|  
+|**name**|選擇性屬性。<br /><br /> 指定接聽程式的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
   

@@ -4,12 +4,12 @@ description: .NET 微服務：容器化 .NET 應用程式的架構 | 了解相�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 72ed265284db9d112a0b1e3b966d206dd7f3d1cc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 376b4eca99ed60a54831aa37099108692d8bac6d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464888"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612156"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>使用 Web API 實作微服務應用程式層
 
@@ -112,10 +112,10 @@ public void ConfigureServices(IServiceCollection services)
 #### <a name="additional-resources"></a>其他資源
 
 - **Matthew King：使用 Scrutor 註冊服務** \
-  [https://www.mking.net/blog/registering-services-with-scrutor](https://www.mking.net/blog/registering-services-with-scrutor)
+  <https://www.mking.net/blog/registering-services-with-scrutor>
 
 - **Kristian Hellang：Scrutor.** GitHub 存放庫。 \
-  [https://github.com/khellang/Scrutor](https://github.com/khellang/Scrutor)
+  <https://github.com/khellang/Scrutor>
 
 #### <a name="use-autofac-as-an-ioc-container"></a>使用 Autofac 作為 IoC 容器
 
@@ -167,13 +167,13 @@ Autofac 也有功能可[掃描組件以及按命名慣例註冊類型](https://a
 #### <a name="additional-resources"></a>其他資源
 
 - **ASP.NET Core 中的相依性插入簡介** \
-  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection)
+  [https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection](/aspnet/core/fundamentals/dependency-injection)
 
 - **Autofac.** 正式文件。 \
-  [http://docs.autofac.org/en/latest/](http://docs.autofac.org/en/latest/)
+  <https://docs.autofac.org/en/latest/>
 
 - **比較 ASP.NET Core IoC 容器服務存留期與 Autofac IoC 容器執行個體範圍 - Cesar de la Torre。** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/01/26/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/)
+  <https://devblogs.microsoft.com/cesardelatorre/comparing-asp-net-core-ioc-service-life-times-and-autofac-ioc-instance-scopes/>
 
 ## <a name="implement-the-command-and-command-handler-patterns"></a>實作命令和命令處理常式模式
 
@@ -397,19 +397,19 @@ public class CreateOrderCommandHandler
 #### <a name="additional-resources"></a>其他資源
 
 - **Mark Seemann：應用程式在界限不是物件導向的** \
-  [https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/](https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/)
+  <https://blog.ploeh.dk/2011/05/31/AttheBoundaries,ApplicationsareNotObject-Oriented/>
 
 - **命令和事件** \
-  [http://cqrs.nu/Faq/commands-and-events](http://cqrs.nu/Faq/commands-and-events)
+  <http://cqrs.nu/Faq/commands-and-events>
 
 - **命令處理常式有何作用？** \
-  [http://cqrs.nu/Faq/command-handlers](http://cqrs.nu/Faq/command-handlers)
+  <http://cqrs.nu/Faq/command-handlers>
 
 - **Jimmy Bogard：網域命令模式 – 處理常式** \
-  [https://jimmybogard.com/domain-command-patterns-handlers/](https://jimmybogard.com/domain-command-patterns-handlers/)
+  <https://jimmybogard.com/domain-command-patterns-handlers/>
 
 - **Jimmy Bogard：網域命令模式 – 驗證** \
-  [https://jimmybogard.com/domain-command-patterns-validation/](https://jimmybogard.com/domain-command-patterns-validation/)
+  <https://jimmybogard.com/domain-command-patterns-validation/>
 
 ## <a name="the-command-process-pipeline-how-to-trigger-a-command-handler"></a>命令處理序管道：如何觸發命令處理常式
 
@@ -807,33 +807,33 @@ public class CreateOrderCommandValidator : AbstractValidator<CreateOrderCommand>
 ##### <a name="mediatr-jimmy-bogard"></a>MediatR (Jimmy Bogard)
 
 - **MediatR.** GitHub 存放庫。 \
-  [https://github.com/jbogard/MediatR](https://github.com/jbogard/MediatR)
+  <https://github.com/jbogard/MediatR>
 
 - **CQRS 搭配 MediatR 和 AutoMapper** \
-  [https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/](https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/)
+  <https://lostechies.com/jimmybogard/2015/05/05/cqrs-with-mediatr-and-automapper/>
 
 - **讓您的控制項瘦身：POST 和命令。** \
-  [https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/](https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/)
+  <https://lostechies.com/jimmybogard/2013/12/19/put-your-controllers-on-a-diet-posts-and-commands/>
 
 - **使用中繼程序管線處理跨領域關注** \
-  [https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/](https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/)
+  <https://lostechies.com/jimmybogard/2014/09/09/tackling-cross-cutting-concerns-with-a-mediator-pipeline/>
 
 - **CQRS 和 REST：完美搭配** \
-  [https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/](https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/)
+  <https://lostechies.com/jimmybogard/2016/06/01/cqrs-and-rest-the-perfect-match/>
 
 - **MediatR 管線範例** \
-  [https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/](https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/)
+  <https://lostechies.com/jimmybogard/2016/10/13/mediatr-pipeline-examples/>
 
 - **MediatR 和 ASP.NET Core 的垂直配量測試固件** \
-  [https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/](https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/)
+  <https://lostechies.com/jimmybogard/2016/10/24/vertical-slice-test-fixtures-for-mediatr-and-asp-net-core/>
 
 - **適用於已發行之 Microsoft 相依性插入的 MediatR 延伸模組** \
-  [https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/](https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/)
+  <https://lostechies.com/jimmybogard/2016/07/19/mediatr-extensions-for-microsoft-dependency-injection-released/>
 
 ##### <a name="fluent-validation"></a>Fluent 驗證
 
 - **Jeremy Skinner：FluentValidation.** GitHub 存放庫。 \
-  [https://github.com/JeremySkinner/FluentValidation](https://github.com/JeremySkinner/FluentValidation)
+  <https://github.com/JeremySkinner/FluentValidation>
 
 > [!div class="step-by-step"]
 > [上一頁](microservice-application-layer-web-api-design.md)

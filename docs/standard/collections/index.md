@@ -13,10 +13,10 @@ ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083829"
 ---
 # <a name="collections-and-data-structures"></a>集合和資料結構
@@ -50,7 +50,7 @@ ms.locfileid: "59083829"
   
 -   **一致的下限**  
   
-     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 <xref:System.Array> 預設有零的下限，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
+     集合的下限是其第一個元素的索引。 <xref:System.Collections> 命名空間中的所有索引集合下限皆為零，表示它們為 0 索引。 根據預設，<xref:System.Array> 下限為零，但使用 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> 建立 **Array** 類別的執行個體時，可以定義其他下限。  
   
 -   **從多個執行緒存取的同步處理** (僅限 <xref:System.Collections> 類別)。  
   

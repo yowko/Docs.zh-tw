@@ -4,12 +4,12 @@ description: 了解如何擷取現有的 .NET Framework 主控台應用程式並
 author: spboyer
 ms.date: 09/28/2016
 ms.assetid: 85cca1d5-c9a4-4eb2-93e6-4f878de07fd7
-ms.openlocfilehash: 481f62b21e223a13e06fe0cb68e4276968992aca
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: da3c814e2ae3ae646072deaf7aa932272160ce49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633838"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611493"
 ---
 # <a name="running-console-applications-in-windows-containers"></a>在 Windows 容器中執行主控台應用程式
 
@@ -25,16 +25,18 @@ ms.locfileid: "58633838"
 
 您必須先熟悉一些 Docker 術語，才能開始將應用程式移至容器的工作。
 
+> [!NOTE]
 > 「Docker 映像」是唯讀範本，為執行中容器定義環境，包括作業系統 (OS)、系統元件和應用程式。
 
-Docker 映像的一個重要特性是這些映像會從基礎映像組成。 每個新的映像會將一小組功能加入現有的映像。 
+Docker 映像的一個重要特性是這些映像會從基礎映像組成。 每個新的映像會將一小組功能加入現有的映像。
 
-> 「Docker 容器」是映像的執行中執行個體。 
+> [!NOTE]
+> 「Docker 容器」是映像的執行中執行個體。
 
 您可以在許多容器中執行相同的映像，來調整應用程式的規模。
 就概念而言，這類似於在多部主機中執行相同的應用程式。
 
-您可以閱讀 Docker 網站上的 [Docker Overview](https://docs.docker.com/engine/understanding-docker/)，以深入了解 Docker 架構。 
+您可以閱讀 Docker 網站上的 [Docker Overview](https://docs.docker.com/engine/understanding-docker/)，以深入了解 Docker 架構。
 
 只需要幾個步驟，就可以移動您的主控台應用程式。
 
@@ -43,6 +45,7 @@ Docker 映像的一個重要特性是這些映像會從基礎映像組成。 每
 1. [建置及執行 Docker 容器的程序](#creating-the-image)
 
 ## <a name="prerequisites"></a>必要條件
+
 Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-us/software-download/windows10/)或 [Windows Server 2016](https://www.microsoft.com/en-us/cloud-platform/windows-server) 的支援。
 
 > [!NOTE]
@@ -53,13 +56,14 @@ Windows 容器受到 [Windows 10 年度更新版](https://www.microsoft.com/en-u
 ![Windows 容器功能表選項的螢幕擷取畫面。](./media/console/windows-container-option.png)
 
 ## <a name="building-the-application"></a>建置應用程式
+
 主控台應用程式通常是透過安裝程式、FTP 或檔案共用部署來散發。 部署至容器時，這些資產必須加以編譯並暫存到建立 Docker 映像時可使用的位置。
 
 以下是範例應用程式：[ConsoleRandomAnswerGenerator](https://github.com/dotnet/samples/tree/master/framework/docker/ConsoleRandomAnswerGenerator)
 
 在 *build.ps1*<sup>[[source]](https://github.com/dotnet/samples/blob/master/framework/docker/ConsoleRandomAnswerGenerator/ConsoleRandomAnswerGenerator/build.ps1)</sup> 中，指令碼會使用 [MSBuild](/visualstudio/msbuild/msbuild) 來編譯應用程式，以完成建立資產的工作。 您可以將幾個參數傳遞至 MSBuild，以確定所需的資產。 像是要編譯的專案檔或方案名稱，輸出的位置，以及最後的組態 (發行或偵錯)。
 
-在 `Invoke-MSBuild` 的呼叫中，`OutputPath` 會設定為 **publish**，而 `Configuration` 會設定為 [發行]。 
+在 `Invoke-MSBuild` 的呼叫中，`OutputPath` 會設定為 **publish**，而 `Configuration` 會設定為 [發行]。
 
 ```powershell
 function Invoke-MSBuild ([string]$MSBuildPath, [string]$MSBuildParameters) {
@@ -72,14 +76,16 @@ Invoke-MSBuild -MSBuildPath "MSBuild.exe" -MSBuildParameters ".\ConsoleRandomAns
 ## <a name="creating-the-dockerfile"></a>建立 Dockerfile
 .NET Framework 主控台應用程式所使用的基礎映像為 `microsoft/windowsservercore`，會在 [Docker Hub](https://hub.docker.com/r/microsoft/windowsservercore/) 上公開提供。 基礎映像包含 Windows Server 2016 的最小安裝 .NET Framework 4.6.2，可作為 Windows 容器的基礎作業系統映像。
 
-```
+```Dockerfile
 FROM microsoft/windowsservercore
 ADD publish/ /
 ENTRYPOINT ConsoleRandomAnswerGenerator.exe
 ```
-Docerkfile 中的第一行會使用 [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) 指令來指定基礎映像。 接下來，檔案中的 [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) 會將應用程式資產從 **publish** 資料夾複製到容器的根資料夾；最後設定映像狀態的 [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint)，這是容器啟動時將執行的命令或應用程式。 
+
+Docerkfile 中的第一行會使用 [`FROM`](https://docs.docker.com/engine/reference/builder/#/from) 指令來指定基礎映像。 接下來，檔案中的 [`ADD`](https://docs.docker.com/engine/reference/builder/#/add) 會將應用程式資產從 **publish** 資料夾複製到容器的根資料夾；最後設定映像狀態的 [`ENTRYPOINT`](https://docs.docker.com/engine/reference/builder/#/entrypoint)，這是容器啟動時將執行的命令或應用程式。
 
 ## <a name="creating-the-image"></a>建立映像
+
 若要建立 Docker 映像，請將下列程式碼加入 *build.ps1* 指令碼。 執行指令碼時，會使用從 MSBuild 編譯的資產來建立 `console-random-answer-generator` 映像，如[建置應用程式](#building-the-application)一節中所定義。
 
 ```powershell
@@ -103,6 +109,7 @@ console-random-answer-generator   latest              8f7c807db1b5        8 seco
 ```
 
 ## <a name="running-the-container"></a>執行容器
+
 您可以從命令列使用 Docker 命令來啟動容器。
 
 ```
@@ -118,8 +125,8 @@ The answer to your question: 'Are you a square container?' is Concentrate and as
 如果您從 PowerShell 執行 `docker ps -a` 命令，您會看到容器仍然存在。
 
 ```
-CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS                          
-70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago      
+CONTAINER ID        IMAGE                             COMMAND                  CREATED             STATUS
+70c3d48f4343        console-random-answer-generator   "cmd /S /C ConsoleRan"   2 minutes ago       Exited (0) About a minute ago
 ```
 
 [狀態] 欄顯示在「約一分鐘前」，應用程式已完成並可以關閉。 如果執行此命令一百次，則會有一百個容器保持靜態且沒有可執行的工作。 在一開始的案例中，理想作業是執行工作並關閉或清除。 若要完成該工作流程，將 `--rm` 選項 `docker run` 加入命令會在收到 `Exited` 訊號時立即移除容器。
@@ -131,6 +138,7 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 執行命令並搭配此選項，然後檢視 `docker ps -a` 命令的輸出；請注意，容器識別碼 (`Environment.MachineName`) 不在清單中。
 
 ### <a name="running-the-container-using-powershell"></a>使用 PowerShell 執行容器
+
 在範例專案檔中，還有 *run.ps1*，此範例示範如何使用 PowerShell 來執行接受引數的應用程式。
 
 若要執行，請開啟 PowerShell 並使用下列命令：
@@ -140,4 +148,5 @@ docker run --rm console-random-answer-generator "Are you a square container?"
 ```
 
 ## <a name="summary"></a>總結
+
 只要加入 Dockerfile 並發行應用程式，您就可以容器化 .NET Framework 主控台應用程式，並立即利用執行多個執行個體、正常啟動和停止及更多 Windows Server 2016 功能，完全不需要對應用程式程式碼進行任何變更。

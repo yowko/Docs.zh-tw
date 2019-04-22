@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082486"
 ---
 # <a name="path-markup-syntax"></a>路徑標記語法
@@ -57,7 +57,7 @@ ms.locfileid: "59082486"
   
 |詞彙|描述|  
 |----------|-----------------|  
-|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>會使用<xref:System.Windows.Media.FillRule.EvenOdd>或<xref:System.Windows.Media.FillRule.Nonzero><xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0` 指定<xref:System.Windows.Media.FillRule.EvenOdd>填滿規則。<br />-   `F1` 指定<xref:System.Windows.Media.FillRule.Nonzero>填滿規則。<br /><br /> 如果您省略這個命令時，子路徑會使用預設行為，也就是<xref:System.Windows.Media.FillRule.EvenOdd>。 如果您指定此命令，您必須先放置它。|  
+|*fillRule*|<xref:System.Windows.Media.FillRule?displayProperty=nameWithType><br /><br /> 指定是否<xref:System.Windows.Media.StreamGeometry>會使用<xref:System.Windows.Media.FillRule.EvenOdd>或是<xref:System.Windows.Media.FillRule.Nonzero> <xref:System.Windows.Media.PathGeometry.FillRule%2A>。<br /><br /> -   `F0` 指定<xref:System.Windows.Media.FillRule.EvenOdd>填滿規則。<br />-   `F1` 指定<xref:System.Windows.Media.FillRule.Nonzero>填滿規則。<br /><br /> 如果您省略這個命令時，子路徑會使用預設行為，也就是<xref:System.Windows.Media.FillRule.EvenOdd>。 如果您指定此命令，您必須先放置它。|  
 |*figureDescription*|由移動命令、繪製命令以及選擇性的關閉命令所組成的圖表。<br /><br /> `moveCommand` `drawCommands`  `[` `closeCommand` `]`|  
 |*moveCommand*|指定圖表起點的移動命令。 請參閱[移動命令](#themovecommand)一節。|  
 |*drawCommands*|說明圖表內容的一或多個繪製命令。 請參閱[繪製命令](#drawcommands)一節。|  
@@ -123,7 +123,7 @@ ms.locfileid: "59082486"
 以大寫`V`指出`y`為絕對值; 小寫`v`表示`y`是位移至前一個點，或 (0，0) 如果不存在。  
     
 ### <a name="cubic-bezier-curve-command"></a>三次方貝茲曲線命令  
- 建立三次方貝茲曲線目前點和指定的結束點之間使用兩個指定的控制點 (`controlPoint`1 和`controlPoint`2)。 `C 100,200 200,400 300,200` 是有效曲線命令的範例。  
+ 建立三次方貝茲曲線目前點和指定的結束點之間使用兩個指定的控制點 (`controlPoint`1 和`controlPoint`2)。 `C 100,200 200,400 300,200` 為有效曲線命令的範例。  
   
 |語法|  
 |------------|  
@@ -136,7 +136,7 @@ ms.locfileid: "59082486"
 |`endPoint`|<xref:System.Windows.Point?displayProperty=nameWithType><br /><br /> 曲線要繪製到的點。|  
   
 ### <a name="quadratic-bezier-curve-command"></a>二次方貝茲曲線命令  
- 建立二次方的貝茲曲線，目前的點和指定的結束點之間使用指定的控制點 (`controlPoint`)。 `q 100,200 300,200` 是有效的二次方貝茲曲線命令的範例。  
+ 建立二次方的貝茲曲線，目前的點和指定的結束點之間使用指定的控制點 (`controlPoint`)。 `q 100,200 300,200` 為有效二次方貝茲曲線命令的範例。  
   
 |語法|  
 |------------|  
@@ -230,4 +230,4 @@ ms.locfileid: "59082486"
 - <xref:System.Windows.Media.PathFigureCollection>
 - [WPF 中圖案和基本繪圖概觀](shapes-and-basic-drawing-in-wpf-overview.md)
 - [幾何概觀](geometry-overview.md)
-- [HOW TO 主題](geometries-how-to-topics.md)
+- [HOW-TO 主題](geometries-how-to-topics.md)

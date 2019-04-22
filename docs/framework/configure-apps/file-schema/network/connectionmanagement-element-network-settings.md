@@ -1,5 +1,5 @@
 ---
-title: <connectionManagement> 項目 （網路設定）
+title: <connectionManagement> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125181"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 項目 （網路設定）
@@ -37,15 +37,15 @@ ms.locfileid: "59125181"
   
 ### <a name="child-elements"></a>子元素  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-connectionmanagement-network-settings.md)|將 IP 位址或 DNS 名稱加入連線管理清單中。|  
-|[清除](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單中。|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-connectionmanagement-network-settings.md)|清除連接管理清單中。|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-connectionmanagement-network-settings.md)|從連線管理清單中，移除 IP 位址或 DNS 名稱。|  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[system.net](../../../../../docs/framework/configure-apps/file-schema/network/system-net-element-network-settings.md)|包含會指定 .NET Framework 如何連接至網路的設定。|  
   

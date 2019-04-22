@@ -8,10 +8,10 @@ helpviewer_keywords:
 - attributes [Windows Forms], classes
 ms.assetid: 2c5640e9-6c6c-49d7-a5e4-a768f6be7853
 ms.openlocfilehash: 9dd4c2aabe1517b66d8e499de3cf2671bb94e0d6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213595"
 ---
 # <a name="attributes-in-windows-forms-controls"></a>Windows Form 控制項中的屬性
@@ -63,6 +63,6 @@ ms.locfileid: "59213595"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Attribute>
-- [HOW TO：在 Windows Forms 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
+- [如何：在 Windows Form 控制項中套用屬性](how-to-apply-attributes-in-windows-forms-controls.md)
 - [擴充設計階段支援](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/37899azc(v=vs.120))
-- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

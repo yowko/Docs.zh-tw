@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319920"
 ---
 # <a name="how-to-run-a-workflow"></a>HOW TO：執行工作流程
@@ -62,7 +62,7 @@ ms.locfileid: "59319920"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     這個所產生的裝載程式碼使用 <xref:System.Activities.WorkflowInvoker>。 <xref:System.Activities.WorkflowInvoker> 提供一個簡單的方法叫用工作流程，如同它一般方法呼叫，且只用於不使用持續性工作流程。 <xref:System.Activities.WorkflowApplication> 可執行包含生命週期事件、 執行控制、 書籤繼續以及持續性通知的工作流程提供更豐富的模型。 此範例會使用書籤且將 <xref:System.Activities.WorkflowApplication> 用於裝載工作流程。 將下列 `using` 或 **Imports** 陳述式加入至 **Program.cs** 或 **Module1.vb** 上層的現有 **using** 或 **Imports** 陳述式下方。
+     這個所產生的裝載程式碼使用 <xref:System.Activities.WorkflowInvoker>。 <xref:System.Activities.WorkflowInvoker> 提供一種簡單方法來叫用工作流程，如同方法呼叫一般，但只能用於不使用持續性的工作流程。 <xref:System.Activities.WorkflowApplication> 提供更豐富的模型，可執行包含生命週期事件通知、執行控制、書籤繼續以及持續性的工作流程。 此範例會使用書籤且將 <xref:System.Activities.WorkflowApplication> 用於裝載工作流程。 將下列 `using` 或 **Imports** 陳述式加入至 **Program.cs** 或 **Module1.vb** 上層的現有 **using** 或 **Imports** 陳述式下方。
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -99,7 +99,7 @@ ms.locfileid: "59319920"
      [!code-csharp[CFX_WF_GettingStarted#6](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_wf_gettingstarted/cs/program.cs#6)]
      [!code-vb[CFX_WF_GettingStarted#6](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/module1.vb#6)]
 
-     此字典包含具有 `MaxNumber`索引鍵的一個項目。 輸入字典中的索引鍵對應至工作流程根活動上的輸入引數。 `MaxNumber` 來決定隨機產生的號碼上限。
+     此字典包含具有 `MaxNumber`索引鍵的一個項目。 輸入字典中的索引鍵對應至工作流程根活動上的輸入引數。 工作流程會使用`MaxNumber` 來決定隨機產生的號碼上限。
 
 ### <a name="to-retrieve-output-arguments-of-a-workflow"></a>若要擷取工作流程的輸出引數
 
@@ -165,7 +165,7 @@ ms.locfileid: "59319920"
 - <xref:System.Activities.Bookmark>
 - [Windows Workflow Foundation 程式設計](programming.md)
 - [快速入門教學課程](getting-started-tutorial.md)
-- [HOW TO：建立工作流程](how-to-create-a-workflow.md)
-- [HOW TO：建立及執行長時間執行的工作流程](how-to-create-and-run-a-long-running-workflow.md)
-- [在工作流程中等待輸入](waiting-for-input-in-a-workflow.md)
+- [如何：建立工作流程](how-to-create-a-workflow.md)
+- [如何：建立及執行長時間執行的工作流程](how-to-create-and-run-a-long-running-workflow.md)
+- [等待工作流程中的輸入](waiting-for-input-in-a-workflow.md)
 - [裝載工作流程](hosting-workflows.md)

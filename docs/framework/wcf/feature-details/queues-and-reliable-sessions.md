@@ -3,10 +3,10 @@ title: 佇列和可靠的工作階段
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
 ms.openlocfilehash: 1fb7d7db36aa51c63789b6daf0ac3689c87ace5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196823"
 ---
 # <a name="queues-and-reliable-sessions"></a>佇列和可靠的工作階段
@@ -43,4 +43,4 @@ ms.locfileid: "59196823"
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
 - [可靠工作階段](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)
-- [可靠的工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)
+- [可靠工作階段概觀](../../../../docs/framework/wcf/feature-details/reliable-sessions-overview.md)

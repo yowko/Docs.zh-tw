@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185532"
 ---
 # <a name="hosting-services"></a>裝載服務
@@ -34,7 +34,7 @@ ms.locfileid: "59185532"
  請注意，IIS 裝載的服務只能使用 HTTP 傳輸。 它在 IIS 5.1 版的實作方式已經為 [!INCLUDE[wxp](../../../includes/wxp-md.md)]帶來一些限制。 在上提供 WCF 服務的 IIS 5.1 訊息式啟動[!INCLUDE[wxp](../../../includes/wxp-md.md)]封鎖其他所有自我裝載的 WCF 服務使用連接埠 80 來通訊的相同電腦上。 WCF 服務可以執行相同的 AppDomain/應用程式集區/背景工作處理序時由其他應用程式中[!INCLUDE[iis601](../../../includes/iis601-md.md)]上[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]。 但是因為 WCF 及[!INCLUDE[iis601](../../../includes/iis601-md.md)]兩者都使用核心模式 HTTP 堆疊 (HTTP.sys)，[!INCLUDE[iis601](../../../includes/iis601-md.md)]可以與其他不同於 IIS 5.1 的同一部電腦上執行的自我裝載 WCF 服務共用連接埠 80。  
   
 #### <a name="windows-process-activation-service-was"></a>Windows Process Activation Service (WAS)  
- Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上全新的處理序啟動機制 ( [!INCLUDE[wv](../../../includes/wv-md.md)]也提供此機制)。 它包含熟悉的 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 處理序模型 (應用程式集區和訊息處理序啟用) 和裝載功能 (例如，快速故障防護、健康狀態監控，與回收機制)，但是從啟用架構中移除對 HTTP 的相依性。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 使用 WAS，以完成透過 HTTP 的訊息型啟用。 WCF 的其他元件也可外掛至 WAS 以提供訊息型啟用，透過 WCF 支援其他通訊協定，例如 TCP、 MSMQ 及具名的管道。 如此便可讓使用通訊協定的應用程式使用 IIS 功能，例如處理序回收、快速故障防護，以及只提供給以 HTTP 為基礎的應用程式使用的常見組態系統等。  
+ Windows Process Activation Service (WAS) 是 [!INCLUDE[lserver](../../../includes/lserver-md.md)] 上全新的處理序啟動機制 ( [!INCLUDE[wv](../../../includes/wv-md.md)]也提供此機制)。 它包含熟悉的 [!INCLUDE[iis601](../../../includes/iis601-md.md)] 處理序模型 (應用程式集區和訊息處理序啟用) 和裝載功能 (例如，快速故障防護、健康狀態監控，與回收機制)，但是從啟用架構中移除對 HTTP 的相依性。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] 會使用 WAS，以完成透過 HTTP 的訊息啟用。 WCF 的其他元件也可外掛至 WAS 以提供訊息型啟用，透過 WCF 支援其他通訊協定，例如 TCP、 MSMQ 及具名的管道。 如此便可讓使用通訊協定的應用程式使用 IIS 功能，例如處理序回收、快速故障防護，以及只提供給以 HTTP 為基礎的應用程式使用的常見組態系統等。  
   
  這個裝載選項要求必須正確設定 WAS，但不要求您將任何裝載程式碼撰寫為應用程式的一部分。 如需有關如何設定 WAS 裝載，請參閱[How to:將 WCF 服務裝載於 WAS](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59185532"
 |-------------------------|----------------------|----------------------------------|  
 |Managed 應用程式 (「自我裝載」)|在開發期間使用的主控台應用程式。<br />-豐富型 WinForm 和[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]存取服務的用戶端應用程式。|富彈性。<br />簡單部署。<br />-不企業解決方案的服務。|  
 |Windows 服務 (之前稱為 NT 服務)|-長期執行的 WCF 服務 IIS 外部所裝載。|服務控制作業系統，在非訊息啟動的處理序存留期。<br />支援所有版本的 Windows。<br />安全的環境。|  
-|IIS 5.1 中， [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-執行 WCF 服務與並存[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]使用 HTTP 通訊協定在網際網路上的內容。|同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-僅限 HTTP。|  
+|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-執行 WCF 服務與並存[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]使用 HTTP 通訊協定在網際網路上的內容。|同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-僅限 HTTP。|  
 |Windows Process Activation Service (WAS)|-執行而不需要使用各種傳輸通訊協定在網際網路上安裝 IIS 的 WCF 服務。|不需要 IIS。<br />同處理序回收。<br />-閒置關機。<br />-處理序健全狀況監視。<br />-訊息型啟用。<br />-使用 HTTP、 TCP、 具名的管道和 MSMQ。|  
 |IIS 7.0|-執行 WCF 服務使用[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]內容。<br />-使用各種傳輸通訊協定在網際網路上執行的 WCF 服務。|-已優點。<br />-整合了[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]和 IIS 內容。|  
   
@@ -53,8 +53,8 @@ ms.locfileid: "59185532"
   
 |裝載環境|平台可用性|支援的傳輸|處理序和 AppDomain 回收|  
 |-------------------------|---------------------------|--------------------------|-------------------------------------|  
-|Managed 應用程式 (「自我裝載」)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]、 [!INCLUDE[wv](../../../includes/wv-md.md)]、<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|  
-|Windows 服務 (之前稱為 NT 服務)|[!INCLUDE[wxp](../../../includes/wxp-md.md)]、 [!INCLUDE[ws2003](../../../includes/ws2003-md.md)]、 [!INCLUDE[wv](../../../includes/wv-md.md)]、<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|  
+|Managed 應用程式 (「自我裝載」)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|  
+|Windows 服務 (之前稱為 NT 服務)|[!INCLUDE[wxp](../../../includes/wxp-md.md)], [!INCLUDE[ws2003](../../../includes/ws2003-md.md)], [!INCLUDE[wv](../../../includes/wv-md.md)],<br /><br /> [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|否|  
 |IIS 5.1|[!INCLUDE[wxp](../../../includes/wxp-md.md)]|HTTP|是|  
 |[!INCLUDE[iis601](../../../includes/iis601-md.md)]|[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]|HTTP|是|  
 |Windows Process Activation Service (WAS)|[!INCLUDE[wv](../../../includes/wv-md.md)], [!INCLUDE[lserver](../../../includes/lserver-md.md)]|HTTP、<br /><br /> net.tcp、<br /><br /> net.pipe、<br /><br /> net.msmq|是|  
@@ -65,8 +65,8 @@ ms.locfileid: "59185532"
 
 - [系統需求](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [基本程式設計週期](../../../docs/framework/wcf/basic-programming-lifecycle.md)
-- [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [HOW TO：在 IIS 中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [HOW TO：在 WAS 中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [HOW TO：在受控的 Windows 服務中裝載 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [HOW TO：在受控應用程式中裝載 WCF 服務](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [如何：裝載在 IIS 中的 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [如何：裝載在 WAS 中的 WCF 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [如何：將 WCF 服務裝載於 Managed 的 Windows 服務](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [如何：裝載 WCF 服務中的受管理的應用程式](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

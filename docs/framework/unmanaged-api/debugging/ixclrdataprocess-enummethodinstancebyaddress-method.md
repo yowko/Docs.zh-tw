@@ -16,10 +16,10 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: a51c709b0b331127b74d98c4dc42e2772fd7f2db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166435"
 ---
 # <a name="ixclrdataprocessenummethodinstancebyaddress-method"></a>IXCLRDataProcess::EnumMethodInstanceByAddress 方法
@@ -54,7 +54,7 @@ HRESULT EnumMethodInstanceByAddress(
 **平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。   
 **標頭：** None   
 **LIBRARY:** None   
-**.NET Framework 版本：** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
+**.NET framework 版本：**[!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]   
  
 ## <a name="see-also"></a>另請參閱
 

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5a23d21d0ed8c6a6a226d5e58eafb7bde65a4896
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161449"
 ---
 # <a name="icordebugblockingobjectenum-interface"></a>ICorDebugBlockingObjectEnum 介面
@@ -30,7 +30,7 @@ ms.locfileid: "59161449"
   
 |方法|描述|  
 |------------|-----------------|  
-|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|列舉的清單[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugblockingobjectenum-next-method.md)|列舉的清單[CorDebugBlockingObject](../../../../docs/framework/unmanaged-api/debugging/cordebugblockingobject-structure.md)結構。|  
   
 ## <a name="remarks"></a>備註  
  每個 `CorDebugBlockingObject` 結構各代表一個封鎖執行緒的物件。  
@@ -45,7 +45,7 @@ ms.locfileid: "59161449"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

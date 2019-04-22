@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], multiple versions
 ms.assetid: c7042de2-2422-4039-94e8-ac298896af69
 ms.openlocfilehash: 3cf75fc6221364704379eb23d308481c34e6c0d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316449"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters-visual-basic"></a>HOW TO：多載不定數目參數 (Visual Basic) 的程序
@@ -59,9 +59,9 @@ ms.locfileid: "59316449"
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [選擇性參數](./optional-parameters.md)
 - [參數陣列](./parameter-arrays.md)
-- [程序多載](./procedure-overloading.md)
-- [針對程序進行疑難排解](./troubleshooting-procedures.md)
-- [HOW TO：定義程序的多個版本](./how-to-define-multiple-versions-of-a-procedure.md)
-- [HOW TO：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
-- [HOW TO：多載使用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
-- [Overload Resolution](./overload-resolution.md)
+- [程序多載化](./procedure-overloading.md)
+- [程序的疑難排解](./troubleshooting-procedures.md)
+- [如何：定義多個版本的程序](./how-to-define-multiple-versions-of-a-procedure.md)
+- [如何：呼叫多載程序](./how-to-call-an-overloaded-procedure.md)
+- [如何：多載會採用選擇性參數的程序](./how-to-overload-a-procedure-that-takes-optional-parameters.md)
+- [多載解析](./overload-resolution.md)

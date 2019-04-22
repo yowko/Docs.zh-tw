@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fdd9c753-39df-48cd-9822-2781afe76200
 ms.openlocfilehash: 8d8bd85f65adfde5f239e1e2dd79d65517b745a8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166240"
 ---
 # <a name="sorting-and-filtering-data"></a>排序及篩選資料
@@ -30,13 +30,13 @@ ms.locfileid: "59166240"
     |DataViewRowState 選項|描述|  
     |------------------------------|-----------------|  
     |**CurrentRows**|**目前**所有的資料列版本**Unchanged**， **Added**，以及**Modified**資料列。 這是預設值。|  
-    |**Added**|**目前**所有的資料列版本**Added**資料列。|  
-    |**Deleted**|**原始**所有的資料列版本**Deleted**資料列。|  
+    |**加入**|**目前**所有的資料列版本**Added**資料列。|  
+    |**刪除**|**原始**所有的資料列版本**Deleted**資料列。|  
     |**ModifiedCurrent**|**目前**所有的資料列版本**Modified**資料列。|  
     |**ModifiedOriginal**|**原始**所有的資料列版本**Modified**資料列。|  
-    |**None**|無資料列。|  
+    |**無**|無資料列。|  
     |**OriginalRows**|**原始**的所有資料列版本**Unchanged**， **Modified**，以及**刪除**資料列。|  
-    |**Unchanged**|**目前**所有的資料列版本**Unchanged**資料列。|  
+    |**未變更**|**目前**所有的資料列版本**Unchanged**資料列。|  
   
  如需有關資料列狀態和資料列版本的詳細資訊，請參閱 <<c0> [ 資料列狀態和資料列版本](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)。  
   
@@ -63,4 +63,4 @@ DataView prodView = new DataView(prodDS.Tables["Products"],
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
 - [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

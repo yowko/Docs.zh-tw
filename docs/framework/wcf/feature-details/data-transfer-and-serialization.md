@@ -6,10 +6,10 @@ helpviewer_keywords:
 - data transfer [WCF]
 ms.assetid: 0f03c635-f3e7-4c5c-9463-3cb0135e221e
 ms.openlocfilehash: 1eefd82a149d0bc215ca441e92c7d737a744b1e0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088401"
 ---
 # <a name="data-transfer-and-serialization"></a>資料傳輸與序列化
@@ -37,7 +37,7 @@ ms.locfileid: "59088401"
  [篩選](../../../../docs/framework/wcf/feature-details/filtering.md)  
  說明可依據不同準則對訊息進行前置處理的篩選功能。  
   
- [大型資料與資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
+ [大型資料和資料流](../../../../docs/framework/wcf/feature-details/large-data-and-streaming.md)  
  說明如何傳送大型資料區塊，例如二進位檔。  
   
  [資料的安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)  
@@ -63,4 +63,4 @@ ms.locfileid: "59088401"
 ## <a name="see-also"></a>另請參閱
 
 - [最佳做法：資料合約版本控制](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md)
-- [服務版本控制](../../../../docs/framework/wcf/service-versioning.md)
+- [服務版本設定](../../../../docs/framework/wcf/service-versioning.md)

@@ -4,12 +4,12 @@ description: 了解開發 Docker 應用程式的工作流程詳細資料。 一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 3fb5c06f8ed58b45a3ee669931d8c3118b3dc314
+ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921087"
+ms.lasthandoff: 04/13/2019
+ms.locfileid: "59553871"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker 應用程式的開發工作流程
 
@@ -51,7 +51,7 @@ ms.locfileid: "58921087"
 
 開始前，請確定您已安裝 [Docker Community Edition (CE)](https://docs.docker.com/docker-for-windows/) for Windows，如下列指示所述：
 
-[Get started with Docker CE for Windows (開始使用適用於 Windows 的 Docker CE)](https://docs.docker.com/docker-for-windows/)
+[Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/) (開始使用 Docker CE for Windows)
 
 此外，您還需要安裝了 [.NET Core 跨平台開發] 工作負載的 Visual Studio 2017 15.7 版或更新版本，如圖 5-2 所示。
 
@@ -67,7 +67,7 @@ ms.locfileid: "58921087"
   [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - 寫入 Dockerfile](./media/image4.png)
 
@@ -193,26 +193,26 @@ Dockerfile 類似於批次指令碼。 類似於必須從命令列設定電腦�
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 以下逐行詳細說明：
 
-1.  以僅限執行階段的「小型」基底映像開始一個階段，並將它稱為**基底**以供參考。
-2.  在映像中建立 **/app** 目錄。
-3.  公開連接埠 **80**。
+1. 以僅限執行階段的「小型」基底映像開始一個階段，並將它稱為**基底**以供參考。
+2. 在映像中建立 **/app** 目錄。
+3. 公開連接埠 **80**。
 <!-- skip -->
-5.  以用於建置/發佈的「大型」映像開始一個新階段，並將它稱為**建置**以供參考。
-6.  在映像中建立目錄 **/src**。
-7.  最多 16 行，複製參考專案 **.csproj** 檔案，以便稍後能夠還原套件。
+5. 以用於建置/發佈的「大型」映像開始一個新階段，並將它稱為**建置**以供參考。
+6. 在映像中建立目錄 **/src**。
+7. 最多 16 行，複製參考專案 **.csproj** 檔案，以便稍後能夠還原套件。
 <!-- skip -->
 17. 還原 **Catalog.API** 專案和參考專案的套件。
 18. 將**方案所有樹狀目錄** (**.dockerignore** 檔案中所包含的檔案/目錄除外) 複製到映像的 **/src** 目錄。
@@ -524,7 +524,7 @@ docker-compose up 和 docker run 命令 (在 Visual Studio 中執行和偵錯容
 - **對本機 Docker 容器中的應用程式偵錯** \
   [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
 
-- **Steve Lasker 使用 Docker 組建、偵錯、部署 ASP.NET Core 應用程式。** 影片。 \
+- **Steve Lasker。使用 Docker 組建、偵錯、部署 ASP.NET Core 應用程式。** 影片。 \
   [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>使用 Visual Studio 開發容器時的簡化工作流程

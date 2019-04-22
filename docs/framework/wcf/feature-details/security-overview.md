@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f478c80d-792d-4e7a-96bd-a2ff0b6f65f9
 ms.openlocfilehash: 94f1284e864bc63c321e004ac4a20843b191711d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136951"
 ---
 # <a name="security-overview"></a>安全性概觀
@@ -100,17 +100,17 @@ Windows Communication Foundation (WCF) 是 SOAP 訊息為基礎分散式程式�
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [保護服務的安全](../../../../docs/framework/wcf/securing-services.md)
+- [保護服務安全](../../../../docs/framework/wcf/securing-services.md)
 - [常見的安全性案例](../../../../docs/framework/wcf/feature-details/common-security-scenarios.md)
 - [繫結和安全性](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)
-- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
 - [驗證](../../../../docs/framework/wcf/feature-details/authentication-in-wcf.md)
-- [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
-- [聯合與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
+- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [同盟與發行的權杖](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
 - [稽核](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)
-- [安全性指引與最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [使用組態檔設定服務](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
+- [安全性指引和最佳做法](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
+- [使用設定檔設定服務](../../../../docs/framework/wcf/configuring-services-using-configuration-files.md)
 - [系統提供的繫結](../../../../docs/framework/wcf/system-provided-bindings.md)
-- [端點建立概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
+- [建立端點概觀](../../../../docs/framework/wcf/endpoint-creation-overview.md)
 - [擴充安全性](../../../../docs/framework/wcf/extending/extending-security.md)
-- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

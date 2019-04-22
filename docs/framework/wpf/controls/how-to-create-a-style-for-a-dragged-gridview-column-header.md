@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 0b999645-0313-4b33-80b9-19ece08b5459
 ms.openlocfilehash: dbcdd38e0397b8e637aff962420a2959f33203df
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090091"
 ---
 # <a name="how-to-create-a-style-for-a-dragged-gridview-column-header"></a>HOW TO：為拖曳的 GridView 資料行標題建立樣式
@@ -36,6 +36,6 @@ ms.locfileid: "59090091"
 - <xref:System.Windows.Controls.GridViewColumnHeaderRole>
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
-- [HOW TO 主題](listview-how-to-topics.md)
+- [HOW-TO 主題](listview-how-to-topics.md)
 - [ListView 概觀](listview-overview.md)
 - [GridView 概觀](gridview-overview.md)

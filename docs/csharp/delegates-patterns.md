@@ -3,12 +3,12 @@ title: 委派的一般模式
 description: 了解在程式碼中使用委派，以避免元件之間強式結合的一般模式。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827016"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59095694"
 ---
 # <a name="common-patterns-for-delegates"></a>委派的一般模式
 
@@ -70,7 +70,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 使用核心架構中所定義的委派類型，可讓使用者輕鬆地使用委派。 您不需要定義新類型，而且使用您程式庫的開發人員不需要學習新的特殊委派類型。
 
-使用的介面最小也最具彈性︰若要建立新的輸出記錄器，您必須建立一種方法。 該方法可能是靜態方法或執行個體方法。 它可能會任何存取權。
+所使用的介面將會盡可能簡化並具有彈性：若要建立新的輸出記錄器，您必須建立一個方法。 該方法可能是靜態方法或執行個體方法。 它可能會任何存取權。
 
 ## <a name="formatting-output"></a>Formatting Output
 
@@ -98,7 +98,6 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 以下是檔案型記錄器︰
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 建立這個類別之後，即可將它具現化，而且它會將其 LogMessage 方法附加至記錄器元件︰
 

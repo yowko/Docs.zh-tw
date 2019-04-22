@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325055"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation 繫結概觀
@@ -32,15 +32,15 @@ ms.locfileid: "59325055"
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  繫結中的資訊可能很複雜，而有些設定也可能彼此不相容。 基於這個理由，WCF 會包含一組系統提供繫結。 這些繫結程序設計為滿足大多數應用程式需求。 下列類別則表示系統提供之繫結的一些範例：  
   
--   <xref:System.ServiceModel.BasicHttpBinding>:HTTP 通訊協定繫結適合用來連接到 Web 服務符合 WS-Basic Profile 規格 （例如，ASP.NET Web 服務為基礎服務）。  
+-   <xref:System.ServiceModel.BasicHttpBinding>：HTTP 通訊協定繫結適合用來連接到 Web 服務符合 WS-Basic Profile 規格 （例如，ASP.NET Web 服務為基礎服務）。  
   
--   <xref:System.ServiceModel.WSHttpBinding>:互通的繫結適合用來連接到端點符合 WS-* 通訊協定。  
+-   <xref:System.ServiceModel.WSHttpBinding>：互通的繫結適合用來連接到端點符合 WS-* 通訊協定。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>:使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]連接至同一部電腦上的其他 WCF 端點。  
+-   <xref:System.ServiceModel.NetNamedPipeBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]連接至同一部電腦上的其他 WCF 端點。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>:使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與其他 WCF 端點建立佇列的訊息連線。  
+-   <xref:System.ServiceModel.NetMsmqBinding>：使用[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]與其他 WCF 端點建立佇列的訊息連線。  
 
-- <xref:System.ServiceModel.NetTcpBinding>:這個繫結提供更高的效能比 HTTP 繫結，而且非常適用於區域網路。
+- <xref:System.ServiceModel.NetTcpBinding>：這個繫結提供更高的效能比 HTTP 繫結，而且非常適用於區域網路。
   
  如需完整清單，其中描述了，所有 WCF 提供的繫結，請參閱 < [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)。  
   
@@ -59,4 +59,4 @@ ms.locfileid: "59325055"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)
+- [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)

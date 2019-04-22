@@ -11,10 +11,10 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207951"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu 元件 (Windows Form)
@@ -27,7 +27,7 @@ ms.locfileid: "59207951"
  [ContextMenu 元件概觀](contextmenu-component-overview-windows-forms.md)  
  導入的一般概念`ContextMenu`元件，可讓使用者建立與所選物件相關聯的常用命令的功能表。  
   
- [HOW TO：使用 Windows Forms ContextMenu 元件新增和移除功能表項目](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [如何：新增和移除功能表項目，使用 Windows Form ContextMenu 元件](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  說明如何新增和移除 Windows Form 中的捷徑功能表項目。  
   
 ## <a name="reference"></a>參考資料  
@@ -35,7 +35,7 @@ ms.locfileid: "59207951"
  提供這個 <xref:System.Windows.Forms.ContextMenu> 類別及其成員的參考資訊。  
   
 ## <a name="related-sections"></a>相關章節  
- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)  
+ [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)  
  提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。  
   
 ## <a name="see-also"></a>另請參閱

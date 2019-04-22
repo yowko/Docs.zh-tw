@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318425"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>多層式架構應用程式中的資料擷取和 CUD 作業 (LINQ to SQL)
@@ -208,7 +208,7 @@ public void DeleteOrder(Order order)
 ```  
   
 ## <a name="updating-data"></a>更新資料  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在這些案例中牽涉到開放式並行存取支援更新：  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援在下列牽涉到開放式並行存取的案例中更新：  
   
 -   以時間戳記或 RowVersion 號碼為基礎的開放式並行存取。  
   
@@ -408,5 +408,5 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
   
 ## <a name="see-also"></a>另請參閱
 
-- [多層式架構和遠端應用程式以及 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [使用 LINQ to SQL 的多層式架構和遠端應用程式](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

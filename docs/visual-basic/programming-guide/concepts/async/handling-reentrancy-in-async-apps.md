@@ -3,10 +3,10 @@ title: 處理非同步應用程式 (Visual Basic) 中的重新進入
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324782"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>處理非同步應用程式 (Visual Basic) 中的重新進入
@@ -412,9 +412,9 @@ End Sub
 #### <a name="the-accessthewebasync-method"></a>AccessTheWebAsync 方法  
  此範例會將 `AccessTheWebAsync` 分為兩個方法。 第一種方法為 `AccessTheWebAsync`，可啟動群組的所有下載工作，並且設定 `pendingWork` 來控制顯示程序。 此方法會使用 Language Integrated Query (LINQ 查詢) 和 <xref:System.Linq.Enumerable.ToArray%2A> 來同時啟動所有下載工作。  
   
- `AccessTheWebAsync` 然後呼叫`FinishOneGroupAsync`等候每個下載完成，並顯示它的長度。  
+ `AccessTheWebAsync` 接著呼叫 `FinishOneGroupAsync` 來等候每個下載完成，並顯示它的長度。  
   
- `FinishOneGroupAsync` 傳回的工作，會指派給`pendingWork`在`AccessTheWebAsync`。 在工作完成前，該值會防止另一項作業中斷該工作。  
+ `FinishOneGroupAsync` 傳回工作，該工作指派給 `AccessTheWebAsync` 中的 `pendingWork`。 在工作完成前，該值會防止另一項作業中斷該工作。  
   
 ```vb  
 Private Async Function AccessTheWebAsync(grp As Char) As Task(Of Char)  

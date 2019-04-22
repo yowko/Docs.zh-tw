@@ -1,4 +1,12 @@
-### <a name="listlttgtforeach-can-throw-exception-when-modifying-list-item"></a>修改清單項目時，List&lt;T&gt;.ForEach 可能會擲回例外狀況
+---
+ms.openlocfilehash: 4e81087431091dfa4d5432d5ea5e2b665be2b130
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774314"
+---
+### <a name="listtforeach-can-throw-exception-when-modifying-list-item"></a>修改清單項目時，List\<T>.ForEach 可能會擲回例外狀況
 
 |   |   |
 |---|---|
@@ -8,4 +16,3 @@
 |版本|4.5|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Collections.Generic.List%601.ForEach(System.Action{%600})?displayProperty=nameWithType></li></ul>|
-

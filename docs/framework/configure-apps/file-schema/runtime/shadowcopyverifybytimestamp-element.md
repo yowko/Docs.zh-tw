@@ -8,18 +8,18 @@ ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216406"
 ---
-# <a name="shadowcopyverifybytimestamp-element"></a>\<Shadowcopyverifybytimestamp> > 項目
+# <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 項目
 指定陰影複製是否使用在 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] 引進的預設啟動行為，或是要還原成舊版 .NET Framework 的啟動行為。  
   
  \<組態 > 項目  
 \<執行階段 > 項目  
-\<Shadowcopyverifybytimestamp> > 項目  
+\<shadowCopyVerifyByTimestamp> 項目  
   
 ## <a name="syntax"></a>語法  
   

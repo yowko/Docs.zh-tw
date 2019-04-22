@@ -3,12 +3,12 @@ title: 開始使用語意分析
 description: 本教學課程概述如何使用 .NET Compiler SDK 來處理語意分析。
 ms.date: 02/06/2018
 ms.custom: mvc
-ms.openlocfilehash: dac733cba1d60a1bd24f5308717f4933cd620319
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 188104c3430b4ca32578cd35d3e161a6eb0e0e1a
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760049"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611740"
 ---
 # <a name="get-started-with-semantic-analysis"></a>開始使用語意分析
 
@@ -56,7 +56,7 @@ ms.locfileid: "58760049"
 
 [!code-csharp[Create the compilation](../../../../samples/csharp/roslyn-sdk/SemanticQuickStart/Program.cs#3 "Create the compilation for the semantic model")]
 
-<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> 方法會新增編譯參考。 <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> 方法會將組件載入為參考。 
+<xref:Microsoft.CodeAnalysis.CSharp.CSharpCompilation.AddReferences%2A?displayProperty=nameWithType> 方法會新增編譯參考。 <xref:Microsoft.CodeAnalysis.MetadataReference.CreateFromFile%2A?displayProperty=nameWithType> 方法會將組件載入為參考。
 
 ## <a name="querying-the-semantic-model"></a>查詢語意模型
 
@@ -159,4 +159,5 @@ Intern
 IsInterned
 Press any key to continue . . .
 ```
+
 您已使用 Semantic API 來尋找並顯示屬於此程式之符號的相關資訊。

@@ -3,10 +3,10 @@ title: 屬性架構對應
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223559"
 ---
 # <a name="attribute-based-mapping"></a>屬性架構對應
@@ -26,12 +26,12 @@ ms.locfileid: "59223559"
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
-|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|請參閱 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 使用，可以指定資料庫的名稱。|  
+|<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|String|請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A>|搭配其 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 屬性 (Property) 使用，可以指定資料庫的名稱。|  
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.DatabaseAttribute>。  
   
 ## <a name="tableattribute-attribute"></a>TableAttribute 屬性  
- 使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將此屬性會做為持續性的類別的類別。 下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 (Property)。  
+ 使用這個屬性可以指定某個類別，做為與資料庫資料表或檢視相關聯的實體類別。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將具有這個屬性的類別視為持續性類別。 下表說明 <xref:System.Data.Linq.Mapping.TableAttribute.Name%2A> 屬性 (Property)。  
   
 |屬性|類型|預設|描述|  
 |--------------|----------|-------------|-----------------|  
@@ -56,7 +56,7 @@ ms.locfileid: "59223559"
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsDiscriminator%2A>|Boolean|`false`|表示資料行含有 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 繼承階層架構 (Inheritance Hierarchy) 所需的鑑別子值。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A>|Boolean|`false`|表示這個類別成員是資料表的主索引鍵 (可能是唯一一個也可能是多個主索引鍵之一)。|  
 |<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>|Boolean|`false`|以資料庫時間戳記或版本號碼識別成員的資料行型別。|  
-|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`除非<xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A>是`true`成員|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。|  
+|<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A>|UpdateCheck|`Always`，除非成員的 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> 為 `true`|指定 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 如何進行開放式並行存取衝突的偵測。|  
   
  如需詳細資訊，請參閱<xref:System.Data.Linq.Mapping.ColumnAttribute>。  
   

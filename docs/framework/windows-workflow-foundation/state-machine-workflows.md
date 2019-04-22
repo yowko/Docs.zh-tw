@@ -3,10 +3,10 @@ title: 狀態機器工作流程
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222987"
 ---
 # <a name="state-machine-workflows"></a>狀態機器工作流程
@@ -102,8 +102,8 @@ ms.locfileid: "59222987"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)
+- [如何：建立狀態機器工作流程](how-to-create-a-state-machine-workflow.md)
 - [StateMachine 活動設計工具](/visualstudio/workflow-designer/statemachine-activity-designer)
-- [狀態活動設計工具](/visualstudio/workflow-designer/state-activity-designer)
+- [State 活動設計工具](/visualstudio/workflow-designer/state-activity-designer)
 - [FinalState 活動設計工具](/visualstudio/workflow-designer/finalstate-activity-designer)
-- [轉換活動設計工具](/visualstudio/workflow-designer/transition-activity-designer)
+- [Transition 活動設計工具](/visualstudio/workflow-designer/transition-activity-designer)

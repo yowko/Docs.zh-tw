@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data templates [WPF]
 ms.assetid: 0f4d9f8c-0230-4013-bd7b-e8e7fed01b4a
 ms.openlocfilehash: 98fff9ba84f386e93549fa94fe84f7b2b0fff5fd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097547"
 ---
 # <a name="data-templating-overview"></a>資料範本化概觀
@@ -196,7 +196,7 @@ WPF 資料範本化模型對於資料呈現方式的定義，具有相當大的�
 ## <a name="see-also"></a>另請參閱
 
 - [資料繫結](../advanced/optimizing-performance-data-binding.md)
-- [尋找 DataTemplate 產生的項目](how-to-find-datatemplate-generated-elements.md)
+- [尋找 DataTemplate 產生的元素](how-to-find-datatemplate-generated-elements.md)
 - [樣式設定和範本化](../controls/styling-and-templating.md)
 - [資料繫結概觀](data-binding-overview.md)
-- [GridView 資料行行首樣式和範本概觀](../controls/gridview-column-header-styles-and-templates-overview.md)
+- [GridView 資料行標頭樣式和範本概觀](../controls/gridview-column-header-styles-and-templates-overview.md)

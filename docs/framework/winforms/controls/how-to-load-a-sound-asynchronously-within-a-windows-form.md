@@ -10,10 +10,10 @@ helpviewer_keywords:
 - threading [Windows Forms], sounds
 ms.assetid: 3b6a9296-1d5e-4d52-a4ba-94366d6fe302
 ms.openlocfilehash: 1d710f1e6d3b208365d5b1eb2524fbeeaa673c2d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185753"
 ---
 # <a name="how-to-load-a-sound-asynchronously-within-a-windows-form"></a>HOW TO：在 Windows Forms 中以非同步方式載入音效
@@ -57,4 +57,4 @@ ms.locfileid: "59185753"
 - <xref:System.Media.SoundPlayer.LoadAsync%2A>
 - <xref:System.Media.SoundPlayer.LoadCompleted>
 - <xref:System.Media.SoundPlayer.Play%2A>
-- [HOW TO：播放 Windows Forms 的音效](how-to-play-a-sound-from-a-windows-form.md)
+- [如何：從 Windows Form 播放的音效](how-to-play-a-sound-from-a-windows-form.md)

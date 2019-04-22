@@ -11,10 +11,10 @@ helpviewer_keywords:
 - aligning [WPF]
 ms.assetid: 9c6a2009-9b86-4e40-8605-0a2664dc3973
 ms.openlocfilehash: 58af8848a6b8a5e4ded453831f5a7ef985548492
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209160"
 ---
 # <a name="alignment-margins-and-padding-overview"></a>對齊、邊界和填補概觀
@@ -55,7 +55,7 @@ ms.locfileid: "59209160"
 |<xref:System.Windows.HorizontalAlignment.Left>|子項目對齊父項目的已配置版面配置空間的左側。|  
 |<xref:System.Windows.HorizontalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
 |<xref:System.Windows.HorizontalAlignment.Right>|子項目對齊父項目的已配置版面配置空間的右側。|  
-|<xref:System.Windows.HorizontalAlignment.Stretch> (預設值)|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
+|<xref:System.Windows.HorizontalAlignment.Stretch> （預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
   
  下列範例示範如何套用<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>屬性設<xref:System.Windows.Controls.Button>項目。 為了更清楚說明各種不同的轉譯行為，會顯示每個屬性值。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59209160"
 |<xref:System.Windows.VerticalAlignment.Top>|子項目對齊父項目的已配置版面配置空間的頂端。|  
 |<xref:System.Windows.VerticalAlignment.Center>|子項目對齊父項目的已配置版面配置空間的中間。|  
 |<xref:System.Windows.VerticalAlignment.Bottom>|子項目對齊父項目的已配置版面配置空間的底部。|  
-|<xref:System.Windows.VerticalAlignment.Stretch> (預設值)|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
+|<xref:System.Windows.VerticalAlignment.Stretch> （預設值）|子項目會自動縮放以填滿父項目的已配置版面配置空間。 明確<xref:System.Windows.FrameworkElement.Width%2A>和<xref:System.Windows.FrameworkElement.Height%2A>的值會優先。|  
   
  下列範例示範如何套用<xref:System.Windows.FrameworkElement.VerticalAlignment%2A>屬性設<xref:System.Windows.Controls.Button>項目。 為了更清楚說明各種不同的轉譯行為，會顯示每個屬性值。 此範例中，以利<xref:System.Windows.Controls.Grid>具有可見格線的元素與父代，可用來更清楚說明每個屬性值的版面配置行為。  
   
@@ -147,5 +147,5 @@ ms.locfileid: "59209160"
 - <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>
 - <xref:System.Windows.FrameworkElement.Margin%2A>
 - [面板概觀](../controls/panels-overview.md)
-- [配置](layout.md)
+- [版面配置](layout.md)
 - [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)

@@ -8,10 +8,10 @@ ms.assetid: d4a80263-f3e0-4d81-9b61-f0cbeae3797b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 72e9e698e510153073515aa891f1ed3b4d7b9886
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081433"
 ---
 # <a name="strong-named-assemblies"></a>強式名稱的組件
@@ -45,6 +45,6 @@ ms.locfileid: "59081433"
 ## <a name="see-also"></a>另請參閱
 
 - [全域組件快取](../../../docs/framework/app-domains/gac.md)
-- [作法：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
+- [如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)
 - [Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)
 - [建立和使用強式名稱的組件](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)

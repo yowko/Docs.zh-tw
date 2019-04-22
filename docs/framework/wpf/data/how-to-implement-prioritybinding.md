@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207561"
 ---
 # <a name="how-to-implement-prioritybinding"></a>HOW TO：實作 PriorityBinding
@@ -48,4 +48,4 @@ ms.locfileid: "59207561"
 
 - <xref:System.Windows.Data.Binding.IsAsync%2A?displayProperty=nameWithType>
 - [資料繫結概觀](data-binding-overview.md)
-- [HOW TO 主題](data-binding-how-to-topics.md)
+- [HOW-TO 主題](data-binding-how-to-topics.md)

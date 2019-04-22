@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219417"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer 控制項概觀 (Windows Form)
@@ -46,8 +46,8 @@ Windows Form <xref:System.Windows.Forms.SplitContainer> 控制項可視為一個
 |<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> 屬性|決定在可移動的分隔器列的像素的左邊緣或上邊緣的距離。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> 屬性|決定的最短距離，單位為像素，使用者可以移動分隔器。|  
 |<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> 屬性|判斷粗細，單位為像素的分隔器。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> Event - 事件|發生於分隔器移動。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> Event - 事件|發生於分隔器移動。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> 事件|發生於分隔器移動。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> 事件|發生於分隔器移動。|  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -3,10 +3,10 @@ title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
 ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195744"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  要對它測試 `expression` 的型別。 此型別必須以命名空間限定。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果`expression`是型別 T，而 T 是基底類型或衍生的型別`type`; 如果`expression`在執行階段為 null; 否則即為`false`。  
+ 如果 `true` 為 T 型別，且 T 為基底類型或 `expression` 的衍生型別，則為 `type`；如果 `expression` 在執行階段為 null 則為 null ；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
  運算式`expression IS NOT OF (type)`並`expression IS NOT OF (ONLY type)`語法上等同於`NOT (expression IS OF (type))`和`NOT (expression IS OF (ONLY type))`分別。  

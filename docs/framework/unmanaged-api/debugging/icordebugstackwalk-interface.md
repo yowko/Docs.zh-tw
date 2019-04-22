@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e33e9be112a6a10f89b88005496ce2e63dff2d54
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080679"
 ---
 # <a name="icordebugstackwalk-interface"></a>ICorDebugStackWalk 介面
@@ -32,7 +32,7 @@ ms.locfileid: "59080679"
 |------------|-----------------|  
 |[GetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getcontext-method.md)|傳回目前的框架的內容`ICorDebugStackWalk`物件。|  
 |[SetContext 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-setcontext-method.md)|設定`ICorDebugStackWalk`有效的內容執行緒物件的目前內容。|  
-|[下一個方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|移動`ICorDebugStackWalk`下一個畫面格的物件。|  
+|[Next 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-next-method.md)|移動`ICorDebugStackWalk`下一個畫面格的物件。|  
 |[GetFrame 方法](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-getframe-method.md)|取得目前的框架中`ICorDebugStackWalk`物件。|  
   
 ## <a name="remarks"></a>備註  
@@ -47,7 +47,7 @@ ms.locfileid: "59080679"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

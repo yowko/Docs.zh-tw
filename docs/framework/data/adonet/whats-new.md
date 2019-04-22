@@ -3,10 +3,10 @@ title: ADO.NET 的新功能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
 ms.openlocfilehash: 90352d3e3d52430d515460cdcc9b6d177976c0b8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191440"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET 的新功能
@@ -41,7 +41,7 @@ ms.locfileid: "59191440"
   
 -   SqlClient 支援連接至 LocalDB 資料庫。 如需詳細資訊，請參閱 < [LocalDB 的 SqlClient 支援](../../../../docs/framework/data/adonet/sql/sqlclient-support-for-localdb.md)。  
   
--   `Type System Version=SQL Server 2012;` 這是新的值，要傳遞至`Type System Version`連接屬性。 `Type System Version=Latest;` 值現在已過時，並與 `Type System Version=SQL Server 2008;` 相等。 如需詳細資訊，請參閱<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
+-   `Type System Version=SQL Server 2012;` 是傳遞至 `Type System Version` 連接屬性的新值。 `Type System Version=Latest;` 值現在已過時，並與 `Type System Version=SQL Server 2008;` 相等。 如需詳細資訊，請參閱<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>。  
   
 -   SqlClient 提供額外的疏鬆資料行支援，這是在 SQL Server 2008 中新增的功能。 如果您的應用程式已存取使用疏鬆資料行之資料表中的資料，效能應該會有所提高。 <xref:System.Data.SqlClient.SqlDataReader.GetSchemaTable%2A> 的 IsColumnSet 資料行指出資料行是否為屬於資料行集的疏鬆資料行。 <xref:System.Data.SqlClient.SqlConnection.GetSchema%2A> 指出資料行是否為疏鬆資料行 (請參閱[SQL Server 結構描述集合](../../../../docs/framework/data/adonet/sql-server-schema-collections.md)如需詳細資訊)。 如需有關疏鬆資料行的詳細資訊，請參閱 <<c0> [ 使用疏鬆資料行](https://go.microsoft.com/fwlink/?LinkId=224244)。  
   
@@ -56,4 +56,4 @@ ms.locfileid: "59191440"
 - [ADO.NET 概觀](../../../../docs/framework/data/adonet/ado-net-overview.md)
 - [SQL Server 和 ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
 - [WCF Data Services 5.0 中最新消息](https://docs.microsoft.com/previous-versions/dotnet/wcf-data-services/ee373845(v=vs.103))
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

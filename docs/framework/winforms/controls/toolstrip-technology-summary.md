@@ -8,10 +8,10 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120950"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip 技術摘要
@@ -43,7 +43,7 @@ ms.locfileid: "59120950"
   
 -   合併使用 `ToolStripPanel` 的 `ToolStrip` 控制項。  
   
- `ToolStrip` 是可延伸的基底類別，如`MenuStrip`， `ContextMenuStrip`，和`StatusStrip`。 這些控制項是 <xref:System.Windows.Forms.ToolStripItem> 容器，它們繼承了一般行為和事件處理、擴充以便讓每個實作處理適合它的行為。 衍生自 <xref:System.Windows.Forms.ToolStripItem> 的控制項如下表所示。 基底 `ToolStrip` 類別處理繪製、 使用者輸入，以及這些控制項的拖放事件。  
+ `ToolStrip` 是 `MenuStrip`、`ContextMenuStrip` 和 `StatusStrip` 的可擴充基底類別。 這些控制項是 <xref:System.Windows.Forms.ToolStripItem> 容器，它們繼承了一般行為和事件處理、擴充以便讓每個實作處理適合它的行為。 衍生自 <xref:System.Windows.Forms.ToolStripItem> 的控制項如下表所示。 基底 `ToolStrip` 類別處理繪製、 使用者輸入，以及這些控制項的拖放事件。  
   
  `ToolStrip` 、 `MenuStrip` 、 `ContextMenuStrip` 和 `StatusStrip` 控制項取代先前的工具列、 功能表、捷徑功能表和狀態列控制項，雖然這些控制項是被保留來確保回溯相容性。  
   
@@ -99,10 +99,10 @@ ms.locfileid: "59120950"
  例如轉譯的詳細資訊，請參閱[How to:建立並設定自訂轉譯器，Windows 中的 ToolStrip 控制項 form](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)。  
   
 ## <a name="styles-and-themes"></a>樣式和主題  
- <xref:System.Windows.Forms.ToolStrip> 和相關聯的類別提供簡單的方法，來支援視覺化樣式，而且不需要覆寫的自訂外觀<xref:System.Windows.Forms.ToolStripItem.OnPaint%2A>每個項目的方法。 使用 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 和 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 屬性。  
+ <xref:System.Windows.Forms.ToolStrip> 以及關聯的類別可讓您輕鬆支援視覺化樣式和自訂外觀，而且不需要覆寫 <xref:System.Windows.Forms.ToolStripItem.OnPaint%2A> 方法的每個項目。 使用 <xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>、<xref:System.Windows.Forms.ToolStrip.RenderMode%2A> 和 <xref:System.Windows.Forms.ToolStrip.Renderer%2A> 屬性。  
   
 ## <a name="rafting-and-docking"></a>浮動定位和停駐  
- 您可以浮動定位、停駐或絕對定位 <xref:System.Windows.Forms.ToolStrip> 控制項。 <xref:System.Windows.Forms.ToolStrip> 項目會由配置<xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A>的容器。  
+ 您可以浮動定位、停駐或絕對定位 <xref:System.Windows.Forms.ToolStrip> 控制項。 <xref:System.Windows.Forms.ToolStrip> 項目由容器中的 <xref:System.Windows.Forms.ToolStrip.LayoutEngine%2A> 來配置版面。  
   
  *浮動定位*乃是工具列共用水平或垂直空間。 Windows Form 的 <xref:System.Windows.Forms.ToolStripContainer> 可以反過來有個面板，它可以在表單的左邊、 右邊、 上方和下方，並且用來定位和浮動定位 <xref:System.Windows.Forms.ToolStrip> 、 <xref:System.Windows.Forms.MenuStrip> 和 <xref:System.Windows.Forms.StatusStrip> 控制項。 如果您將多個 <xref:System.Windows.Forms.ToolStrip> 控制項放在左邊或右邊 <xref:System.Windows.Forms.ToolStripContainer>，它們會垂直堆疊。 如果您將它們放在頂端或底端 <xref:System.Windows.Forms.ToolStripContainer>，它們會水平堆疊。 您可以使用 <xref:System.Windows.Forms.ToolStripContainer> 的中央 <xref:System.Windows.Forms.ToolStripContentPanel>來定位在表單上的傳統控制項。  
   

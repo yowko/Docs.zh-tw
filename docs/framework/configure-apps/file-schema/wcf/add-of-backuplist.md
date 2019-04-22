@@ -3,10 +3,10 @@ title: <add> 的 <backupList>
 ms.date: 03/30/2017
 ms.assetid: bc5939fc-314a-4ea4-a533-c96958da7173
 ms.openlocfilehash: 03bf1bbb8156e4722d987e171d9034747ac6bb61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089532"
 ---
 # <a name="add-of-backuplist"></a>\<新增 > 的\<a d d >
@@ -49,7 +49,7 @@ ms.locfileid: "59089532"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<路由 >](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含一份您希望路由服務在無法找到主要端點時使用的端點。|  
+|[\<routing>](../../../../../docs/framework/configure-apps/file-schema/wcf/routing.md)|包含一份您希望路由服務在無法找到主要端點時使用的端點。|  
   
 ## <a name="see-also"></a>另請參閱
 

@@ -5,10 +5,10 @@ dev_langs:
 - vb
 ms.assetid: 99863e79-5b00-467e-a105-4ffa42de3ff7
 ms.openlocfilehash: 30e50ae171ec9733e222c55e98d1cfcfa535d4e9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201477"
 ---
 # <a name="filling-a-dataset-using-one-or-more-ref-cursors"></a>使用一個或多個 REF CURSOR 填入資料集
@@ -49,4 +49,4 @@ Private Sub Button1_Click(ByVal sender As Object, _
 ## <a name="see-also"></a>另請參閱
 
 - [Oracle REF CURSOR](../../../../docs/framework/data/adonet/oracle-ref-cursors.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

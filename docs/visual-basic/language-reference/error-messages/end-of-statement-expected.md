@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30205
 ms.assetid: 53c7f825-a737-4b76-a1fa-f67745b8bd40
 ms.openlocfilehash: 1ce5c793a09df34ac17e70e3253e98108bf76fb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321469"
 ---
 # <a name="end-of-statement-expected"></a>必須有陳述式結尾
@@ -29,5 +29,5 @@ ms.locfileid: "59321469"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：中斷和合併程式碼中的陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
+- [如何：在程式碼內中斷和合併陳述式](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)
 - [陳述式](../../../visual-basic/programming-guide/language-features/statements.md)

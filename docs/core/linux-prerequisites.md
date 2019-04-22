@@ -1,21 +1,21 @@
 ---
-title: Linux 上 .NET Core 的必要條件
+title: Linux 上 .NET Core 的先決條件
 description: 支援的 Linux 版本和 .NET Core 的相依性，以在 Linux 電腦上開發、部署和執行 .NET Core 應用程式。
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 29256259c66b909ad65691230bd652f38583184e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083882"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59084892"
 ---
-# <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的必要條件
+# <a name="prerequisites-for-net-core-on-linux"></a>Linux 上 .NET Core 的先決條件
 
-本文會說明在 Linux 開發 .NET Core 應用程式所需的相依性。 支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：
+此文章說明在 Linux 開發 .NET Core 應用程式所需的相依性。 支援的 Linux 發行版本/版本和跟隨的相依性，適用於在 Linux 開發 .NET Core 應用程式的兩種方式：
 
-* [使用命令列搭配您偏好的編輯器](tutorials/using-with-xplat-cli.md)
+* [搭配您慣用編輯器的命令列](tutorials/using-with-xplat-cli.md)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 > [!NOTE]
@@ -23,7 +23,7 @@ ms.locfileid: "55083882"
 
 ## <a name="supported-linux-versions"></a>支援的 Linux 版本
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 .NET Core 2.x 將 Linux 視為單一作業系統。 針對支援的 Linux 發行版本，會有單一的 Linux 組建 (按晶片架構)。 
 
@@ -44,7 +44,7 @@ ms.locfileid: "55083882"
 
 如需 .NET Core 2.1 和 .NET Core 2.2 支援的作業系統完整清單、發行版本與版本、不支援的 OS 版本，以及生命週期原則連結，請參閱 [.NET Core 2.1 支援的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.1/2.1-supported-os.md)和 [.NET Core 2.2 支援的 OS 版本](https://github.com/dotnet/core/blob/master/release-notes/2.2/2.2-supported-os.md)。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 如需下載連結和詳細資訊，請參閱 [.NET Core 1.1 下載](https://www.microsoft.com/net/download/dotnet-core/1.1)或 [.NET Core 1.0 下載](https://www.microsoft.com/net/download/dotnet-core/1.0)。
 
@@ -61,7 +61,7 @@ ms.locfileid: "55083882"
 
 如需 .NET Core 1.x 支援的作業系統完整清單、不支援的作業系統版本，以及週期原則連結，請參閱 [.NET Core 1.x 支援的作業系統版本](https://github.com/dotnet/core/blob/master/release-notes/1.0/1.0-supported-os.md)。
 
-# <a name="net-core-30-preview-1tabnetcore30"></a>[.NET Core 3.0 Preview 1](#tab/netcore30)
+# [<a name="net-core-30-preview-1"></a>.NET Core 3.0 Preview 1](#tab/netcore30)
 
 .NET Core 3.0 Preview 1 將 Linux 視為單一作業系統。 針對支援的 Linux 發行版本，會有單一的 Linux 組建 (按晶片架構)。 
 
@@ -86,8 +86,6 @@ Alpine Linux                  | 3.8+                  | x64、ARM64
 如需 .NET Core 3.0 支援的作業系統、發行版本與版本、不支援的 OS 版本，以及生命週期原則連結完整清單，請參閱 [.NET Core 3.0 Supported OS Versions](https://github.com/dotnet/core/blob/master/release-notes/3.0/3.0-supported-os.md) (.NET Core 3.0 支援的 OS 版本)。
 
 如需如何在 ARM64 上安裝 .NET Core 3.0 的詳細資訊，請參閱 [Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213) (在 Linux ARM64 上安裝 .NET Core 3.0)。
-
-
 
 ---
 

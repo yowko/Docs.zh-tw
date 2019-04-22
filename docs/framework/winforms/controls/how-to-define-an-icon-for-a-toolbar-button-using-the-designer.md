@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms], adding icons to buttons
 ms.assetid: d848f38e-67f2-49d4-8e88-01c845c06c02
 ms.openlocfilehash: 19d0b284238ed662b25627d6077c1ebe6ecc6e86
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323703"
 ---
 # <a name="how-to-define-an-icon-for-a-toolbar-button-using-the-designer"></a>HOW TO：使用設計工具定義工具列按鈕的圖示
@@ -44,6 +44,6 @@ ms.locfileid: "59323703"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.ToolBar>
-- [HOW TO：觸發工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
+- [如何：觸發程序的工具列按鈕的功能表事件](how-to-trigger-menu-events-for-toolbar-buttons.md)
 - [ToolBar 控制項](toolbar-control-windows-forms.md)
 - [ImageList 元件](imagelist-component-windows-forms.md)
