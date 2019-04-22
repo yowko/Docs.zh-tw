@@ -11,34 +11,34 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207951"
 ---
-# <a name="contextmenu-component-windows-forms"></a><span data-ttu-id="6387a-102">ContextMenu 元件 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="6387a-102">ContextMenu Component (Windows Forms)</span></span>
+# <a name="contextmenu-component-windows-forms"></a><span data-ttu-id="5c1b8-102">ContextMenu 元件 (Windows Form)</span><span class="sxs-lookup"><span data-stu-id="5c1b8-102">ContextMenu Component (Windows Forms)</span></span>
 > [!NOTE]
->  <span data-ttu-id="6387a-103">雖然`MenuStrip`並`ContextMenuStrip`取代及新增功能<xref:System.Windows.Forms.MainMenu>並<xref:System.Windows.Forms.ContextMenu>控制項的舊版本中，<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>會保留回溯相容性以及供未來使用，如果您選擇。</span><span class="sxs-lookup"><span data-stu-id="6387a-103">Although `MenuStrip` and `ContextMenuStrip` replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
+>  <span data-ttu-id="5c1b8-103">雖然`MenuStrip`並`ContextMenuStrip`取代及新增功能<xref:System.Windows.Forms.MainMenu>並<xref:System.Windows.Forms.ContextMenu>控制項的舊版本中，<xref:System.Windows.Forms.MainMenu>和<xref:System.Windows.Forms.ContextMenu>會保留回溯相容性以及供未來使用，如果您選擇。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-103">Although `MenuStrip` and `ContextMenuStrip` replace and add functionality to the <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> controls of previous versions, <xref:System.Windows.Forms.MainMenu> and <xref:System.Windows.Forms.ContextMenu> are retained for both backward compatibility and future use if you choose.</span></span>  
   
- <span data-ttu-id="6387a-104">Windows Form`ContextMenu`元件可用來為使用者提供與所選物件相關聯的常用命令的更容易存取的捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="6387a-104">The Windows Forms `ContextMenu` component is used to provide users with an easily accessible shortcut menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="6387a-105">快顯功能表中的項目通常是從主應用程式中其他地方出現的功能表項目的子集。</span><span class="sxs-lookup"><span data-stu-id="6387a-105">The items in a shortcut menu are frequently a subset of the items from main menus that appear elsewhere in the application.</span></span> <span data-ttu-id="6387a-106">快顯功能表通常都可以按一下滑鼠右鍵。</span><span class="sxs-lookup"><span data-stu-id="6387a-106">Shortcut menus are usually available by right-clicking the mouse.</span></span> <span data-ttu-id="6387a-107">在 Windows Forms 上與其相關聯的其他控制項項目。</span><span class="sxs-lookup"><span data-stu-id="6387a-107">On Windows Forms they are associated with other controls.</span></span>  
+ <span data-ttu-id="5c1b8-104">Windows Form`ContextMenu`元件可用來為使用者提供與所選物件相關聯的常用命令的更容易存取的捷徑功能表。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-104">The Windows Forms `ContextMenu` component is used to provide users with an easily accessible shortcut menu of frequently used commands that are associated with the selected object.</span></span> <span data-ttu-id="5c1b8-105">快顯功能表中的項目通常是從主應用程式中其他地方出現的功能表項目的子集。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-105">The items in a shortcut menu are frequently a subset of the items from main menus that appear elsewhere in the application.</span></span> <span data-ttu-id="5c1b8-106">快顯功能表通常都可以按一下滑鼠右鍵。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-106">Shortcut menus are usually available by right-clicking the mouse.</span></span> <span data-ttu-id="5c1b8-107">在 Windows Forms 上與其相關聯的其他控制項項目。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-107">On Windows Forms they are associated with other controls.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="6387a-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="6387a-108">In This Section</span></span>  
- [<span data-ttu-id="6387a-109">ContextMenu 元件概觀</span><span class="sxs-lookup"><span data-stu-id="6387a-109">ContextMenu Component Overview</span></span>](contextmenu-component-overview-windows-forms.md)  
- <span data-ttu-id="6387a-110">導入的一般概念`ContextMenu`元件，可讓使用者建立與所選物件相關聯的常用命令的功能表。</span><span class="sxs-lookup"><span data-stu-id="6387a-110">Introduces the general concepts of the `ContextMenu` component, which allows users to create menus of frequently used commands associated with a selected object.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="5c1b8-108">本節內容</span><span class="sxs-lookup"><span data-stu-id="5c1b8-108">In This Section</span></span>  
+ [<span data-ttu-id="5c1b8-109">ContextMenu 元件概觀</span><span class="sxs-lookup"><span data-stu-id="5c1b8-109">ContextMenu Component Overview</span></span>](contextmenu-component-overview-windows-forms.md)  
+ <span data-ttu-id="5c1b8-110">導入的一般概念`ContextMenu`元件，可讓使用者建立與所選物件相關聯的常用命令的功能表。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-110">Introduces the general concepts of the `ContextMenu` component, which allows users to create menus of frequently used commands associated with a selected object.</span></span>  
   
- [<span data-ttu-id="6387a-111">HOW TO：使用 Windows Forms ContextMenu 元件新增和移除功能表項目</span><span class="sxs-lookup"><span data-stu-id="6387a-111">How to: Add and Remove Menu Items with the Windows Forms ContextMenu Component</span></span>](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
- <span data-ttu-id="6387a-112">說明如何新增和移除 Windows Form 中的捷徑功能表項目。</span><span class="sxs-lookup"><span data-stu-id="6387a-112">Explains how to add and remove shortcut menu items in Windows Forms.</span></span>  
+ [<span data-ttu-id="5c1b8-111">如何：新增和移除功能表項目，使用 Windows Form ContextMenu 元件</span><span class="sxs-lookup"><span data-stu-id="5c1b8-111">How to: Add and Remove Menu Items with the Windows Forms ContextMenu Component</span></span>](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ <span data-ttu-id="5c1b8-112">說明如何新增和移除 Windows Form 中的捷徑功能表項目。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-112">Explains how to add and remove shortcut menu items in Windows Forms.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="6387a-113">參考資料</span><span class="sxs-lookup"><span data-stu-id="6387a-113">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="5c1b8-113">參考資料</span><span class="sxs-lookup"><span data-stu-id="5c1b8-113">Reference</span></span>  
  <xref:System.Windows.Forms.ContextMenu>  
- <span data-ttu-id="6387a-114">提供這個 <xref:System.Windows.Forms.ContextMenu> 類別及其成員的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="6387a-114">Provides reference information on the <xref:System.Windows.Forms.ContextMenu> class and its members.</span></span>  
+ <span data-ttu-id="5c1b8-114">提供這個 <xref:System.Windows.Forms.ContextMenu> 類別及其成員的參考資訊。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-114">Provides reference information on the <xref:System.Windows.Forms.ContextMenu> class and its members.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="6387a-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="6387a-115">Related Sections</span></span>  
- [<span data-ttu-id="6387a-116">在 Windows Form 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="6387a-116">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
- <span data-ttu-id="6387a-117">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="6387a-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="5c1b8-115">相關章節</span><span class="sxs-lookup"><span data-stu-id="5c1b8-115">Related Sections</span></span>  
+ [<span data-ttu-id="5c1b8-116">在 Windows Forms 上使用的控制項</span><span class="sxs-lookup"><span data-stu-id="5c1b8-116">Controls to Use on Windows Forms</span></span>](controls-to-use-on-windows-forms.md)  
+ <span data-ttu-id="5c1b8-117">提供 Windows Form 控制項的完整清單，以及其用法的資訊連結。</span><span class="sxs-lookup"><span data-stu-id="5c1b8-117">Provides a complete list of Windows Forms controls, with links to information on their use.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="6387a-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6387a-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5c1b8-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5c1b8-118">See also</span></span>
 
 - <xref:System.Windows.Forms.MenuStrip>
 - <xref:System.Windows.Forms.ContextMenuStrip>

@@ -8,22 +8,22 @@ helpviewer_keywords:
 - BC30029
 ms.assetid: 63afa1c6-2f93-4512-a2f0-372455979771
 ms.openlocfilehash: 0e9acf4b3e71295655c15ae9b1c80852c9aca8df
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835137"
 ---
-# <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="10ee6-102">衍生的類別無法引發基底類別事件</span><span class="sxs-lookup"><span data-stu-id="10ee6-102">Derived classes cannot raise base class events</span></span>
-<span data-ttu-id="10ee6-103">只能從其宣告的宣告空間，就可以引發事件。</span><span class="sxs-lookup"><span data-stu-id="10ee6-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="10ee6-104">因此，類別無法引發任何其他類別，即使其中從中衍生的事件。</span><span class="sxs-lookup"><span data-stu-id="10ee6-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  
+# <a name="derived-classes-cannot-raise-base-class-events"></a><span data-ttu-id="5babe-102">衍生的類別無法引發基底類別事件</span><span class="sxs-lookup"><span data-stu-id="5babe-102">Derived classes cannot raise base class events</span></span>
+<span data-ttu-id="5babe-103">只能從其宣告的宣告空間，就可以引發事件。</span><span class="sxs-lookup"><span data-stu-id="5babe-103">An event can be raised only from the declaration space in which it is declared.</span></span> <span data-ttu-id="5babe-104">因此，類別無法引發任何其他類別，即使其中從中衍生的事件。</span><span class="sxs-lookup"><span data-stu-id="5babe-104">Therefore, a class cannot raise events from any other class, even one from which it is derived.</span></span>  
   
- <span data-ttu-id="10ee6-105">**錯誤 ID:** BC30029</span><span class="sxs-lookup"><span data-stu-id="10ee6-105">**Error ID:** BC30029</span></span>  
+ <span data-ttu-id="5babe-105">**錯誤 ID:** BC30029</span><span class="sxs-lookup"><span data-stu-id="5babe-105">**Error ID:** BC30029</span></span>  
   
-## <a name="to-correct-this-error"></a><span data-ttu-id="10ee6-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="10ee6-106">To correct this error</span></span>  
+## <a name="to-correct-this-error"></a><span data-ttu-id="5babe-106">更正這個錯誤</span><span class="sxs-lookup"><span data-stu-id="5babe-106">To correct this error</span></span>  
   
--   <span data-ttu-id="10ee6-107">移動`Event`陳述式或`RaiseEvent`陳述式，使它們位於相同的類別。</span><span class="sxs-lookup"><span data-stu-id="10ee6-107">Move the `Event` statement or the `RaiseEvent` statement so they are in the same class.</span></span>  
+-   <span data-ttu-id="5babe-107">移動`Event`陳述式或`RaiseEvent`陳述式，使它們位於相同的類別。</span><span class="sxs-lookup"><span data-stu-id="5babe-107">Move the `Event` statement or the `RaiseEvent` statement so they are in the same class.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="10ee6-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="10ee6-108">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5babe-108">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5babe-108">See also</span></span>
 
-- [<span data-ttu-id="10ee6-109">Event 陳述式</span><span class="sxs-lookup"><span data-stu-id="10ee6-109">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
-- [<span data-ttu-id="10ee6-110">RaiseEvent 陳述式</span><span class="sxs-lookup"><span data-stu-id="10ee6-110">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)
+- [<span data-ttu-id="5babe-109">Event 陳述式</span><span class="sxs-lookup"><span data-stu-id="5babe-109">Event Statement</span></span>](../../../visual-basic/language-reference/statements/event-statement.md)
+- [<span data-ttu-id="5babe-110">RaiseEvent 陳述式</span><span class="sxs-lookup"><span data-stu-id="5babe-110">RaiseEvent Statement</span></span>](../../../visual-basic/language-reference/statements/raiseevent-statement.md)

@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 646c4e37a7fab503a26557f9fdfc926b1186b17b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216700"
 ---
-# <a name="corprfgcgenerationrange-structure"></a><span data-ttu-id="e3c8b-102">COR_PRF_GC_GENERATION_RANGE 結構</span><span class="sxs-lookup"><span data-stu-id="e3c8b-102">COR_PRF_GC_GENERATION_RANGE Structure</span></span>
-<span data-ttu-id="e3c8b-103">說明正在進行記憶體回收的記憶體範圍 (亦即區塊)。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-103">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  
+# <a name="corprfgcgenerationrange-structure"></a><span data-ttu-id="5a508-102">COR_PRF_GC_GENERATION_RANGE 結構</span><span class="sxs-lookup"><span data-stu-id="5a508-102">COR_PRF_GC_GENERATION_RANGE Structure</span></span>
+<span data-ttu-id="5a508-103">說明正在進行記憶體回收的記憶體範圍 (亦即區塊)。</span><span class="sxs-lookup"><span data-stu-id="5a508-103">Describes a range (that is, block) of memory that is undergoing garbage collection.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="e3c8b-104">語法</span><span class="sxs-lookup"><span data-stu-id="e3c8b-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="5a508-104">語法</span><span class="sxs-lookup"><span data-stu-id="5a508-104">Syntax</span></span>  
   
 ```  
 typedef struct COR_PRF_GC_GENERATION_RANGE {  
@@ -37,27 +37,27 @@ typedef struct COR_PRF_GC_GENERATION_RANGE {
 } COR_PRF_GC_GENERATION_RANGE;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="e3c8b-105">成員</span><span class="sxs-lookup"><span data-stu-id="e3c8b-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="5a508-105">成員</span><span class="sxs-lookup"><span data-stu-id="5a508-105">Members</span></span>  
   
-|<span data-ttu-id="e3c8b-106">成員</span><span class="sxs-lookup"><span data-stu-id="e3c8b-106">Member</span></span>|<span data-ttu-id="e3c8b-107">描述</span><span class="sxs-lookup"><span data-stu-id="e3c8b-107">Description</span></span>|  
+|<span data-ttu-id="5a508-106">成員</span><span class="sxs-lookup"><span data-stu-id="5a508-106">Member</span></span>|<span data-ttu-id="5a508-107">描述</span><span class="sxs-lookup"><span data-stu-id="5a508-107">Description</span></span>|  
 |------------|-----------------|  
-|`generation`|<span data-ttu-id="e3c8b-108">值為[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)所屬的列舉，指定要產生的記憶體區塊。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-108">A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.</span></span>|  
-|`rangeStart`|<span data-ttu-id="e3c8b-109">指定的記憶體區塊的開始位置的物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-109">The ID of an object that specifies the starting location of the block of memory.</span></span>|  
-|`rangeLength`|<span data-ttu-id="e3c8b-110">指定使用的記憶體區塊 （也就是在區塊內使用的記憶體數量） 部分的大小的整數指標。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-110">A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).</span></span>|  
-|`rangeLengthReserved`|<span data-ttu-id="e3c8b-111">為指定的記憶體區塊 （也就是保留給區塊的記憶體數量） 大小的整數指標。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-111">A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).</span></span>|  
+|`generation`|<span data-ttu-id="5a508-108">值為[COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md)所屬的列舉，指定要產生的記憶體區塊。</span><span class="sxs-lookup"><span data-stu-id="5a508-108">A value of the [COR_PRF_GC_GENERATION](../../../../docs/framework/unmanaged-api/profiling/cor-prf-gc-generation-enumeration.md) enumeration that specifies the generation to which the block of memory belongs.</span></span>|  
+|`rangeStart`|<span data-ttu-id="5a508-109">指定的記憶體區塊的開始位置的物件識別碼。</span><span class="sxs-lookup"><span data-stu-id="5a508-109">The ID of an object that specifies the starting location of the block of memory.</span></span>|  
+|`rangeLength`|<span data-ttu-id="5a508-110">指定使用的記憶體區塊 （也就是在區塊內使用的記憶體數量） 部分的大小的整數指標。</span><span class="sxs-lookup"><span data-stu-id="5a508-110">A pointer to an integer that specifies the size of the used portion of the memory block (that is, the amount of memory used within the block).</span></span>|  
+|`rangeLengthReserved`|<span data-ttu-id="5a508-111">為指定的記憶體區塊 （也就是保留給區塊的記憶體數量） 大小的整數指標。</span><span class="sxs-lookup"><span data-stu-id="5a508-111">A pointer to an integer that specifies the size of the memory block (that is, the amount of memory reserved for the block).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="e3c8b-112">備註</span><span class="sxs-lookup"><span data-stu-id="e3c8b-112">Remarks</span></span>  
- <span data-ttu-id="e3c8b-113">`rangeLength`保證是正確的值只有當[ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)或是[ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)，這兩個使用`COR_PRF_GC_GENERATION_RANGE`結構，從呼叫[ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)或[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-113">The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="5a508-112">備註</span><span class="sxs-lookup"><span data-stu-id="5a508-112">Remarks</span></span>  
+ <span data-ttu-id="5a508-113">`rangeLength`保證是正確的值只有當[ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md)或是[ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md)，這兩個使用`COR_PRF_GC_GENERATION_RANGE`結構，從呼叫[ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md)或[ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)方法。</span><span class="sxs-lookup"><span data-stu-id="5a508-113">The `rangeLength` value is guaranteed to be accurate only if [ICorProfilerInfo2::GetGenerationBounds](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getgenerationbounds-method.md) or [ICorProfilerInfo2::GetObjectGeneration](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getobjectgeneration-method.md), both of which use the `COR_PRF_GC_GENERATION_RANGE` structure, is called from the [ICorProfilerCallback2::GarbageCollectionStarted](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionstarted-method.md) or the [ICorProfilerCallback2::GarbageCollectionFinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md) method.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="e3c8b-114">需求</span><span class="sxs-lookup"><span data-stu-id="e3c8b-114">Requirements</span></span>  
- <span data-ttu-id="e3c8b-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e3c8b-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="5a508-114">需求</span><span class="sxs-lookup"><span data-stu-id="5a508-114">Requirements</span></span>  
+ <span data-ttu-id="5a508-115">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="5a508-115">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="e3c8b-116">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="e3c8b-116">**Header:** CorProf.idl</span></span>  
+ <span data-ttu-id="5a508-116">**標頭：** CorProf.idl</span><span class="sxs-lookup"><span data-stu-id="5a508-116">**Header:** CorProf.idl</span></span>  
   
- <span data-ttu-id="e3c8b-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e3c8b-117">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="5a508-117">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="5a508-117">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="e3c8b-118">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="e3c8b-118">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="5a508-118">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="5a508-118">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="e3c8b-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e3c8b-119">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5a508-119">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5a508-119">See also</span></span>
 
-- [<span data-ttu-id="e3c8b-120">分析結構</span><span class="sxs-lookup"><span data-stu-id="e3c8b-120">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
+- [<span data-ttu-id="5a508-120">分析結構</span><span class="sxs-lookup"><span data-stu-id="5a508-120">Profiling Structures</span></span>](../../../../docs/framework/unmanaged-api/profiling/profiling-structures.md)
