@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], DateTimePicker control
 ms.assetid: a8a48d68-e4b5-426e-9764-51230fc9acd2
 ms.openlocfilehash: cc4f0bdf7355cda61e6cb95f5e0b18c4f83aa62b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59081537"
 ---
 # <a name="how-to-set-and-return-dates-with-the-windows-forms-datetimepicker-control"></a>HOW TO：使用 Windows Forms DateTimePicker 控制項設定和傳回日期
@@ -75,4 +75,4 @@ ms.locfileid: "59081537"
 ## <a name="see-also"></a>另請參閱
 
 - [DateTimePicker 控制項](datetimepicker-control-windows-forms.md)
-- [HOW TO：使用 Windows Forms DateTimePicker 控制項顯示自訂格式的日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)
+- [如何：使用 Windows Form DateTimePicker 控制項的自訂格式來顯示日期](display-a-date-in-a-custom-format-with-wf-datetimepicker-control.md)

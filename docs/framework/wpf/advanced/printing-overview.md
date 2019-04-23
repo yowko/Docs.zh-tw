@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI print path [WPF]
 ms.assetid: 0de8ac41-9aa6-413d-a121-7aa6f41539b1
 ms.openlocfilehash: 2aeafa7065b587497fb6f3b23605c21dca291cd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59075856"
 ---
 # <a name="printing-overview"></a>列印概觀
@@ -29,7 +29,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
   
 <a name="introduction_to_XPS"></a>   
 ## <a name="about-xps"></a>關於 XPS  
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 電子文件格式、 多工緩衝檔案格式和頁面描述語言。 它是一種 Open Document 格式，使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 和其他業界標準，以建立跨平台的文件。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 簡化的數位文件會建立、 共用、 列印、 檢視，並封存程序。 如需詳細資訊[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]，請參閱 < [XPS 文件](/windows/desktop/printdocs/documents)。  
+ [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 是一種電子文件格式、多工緩衝檔案格式且為頁面描述語言。 它是一種 Open Document 格式，使用 [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]、[!INCLUDE[TLA#tla_opc](../../../../includes/tlasharptla-opc-md.md)] 和其他業界標準，以建立跨平台的文件。 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 簡化建立、共用、列印、檢視和封存數位文件的程序。 如需詳細資訊[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]，請參閱 < [XPS 文件](/windows/desktop/printdocs/documents)。  
   
  [以程式設計方式列印 XPS 檔](how-to-programmatically-print-xps-files.md)中示範數種使用 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 來列印以 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 為基礎之內容的技術。 在檢閱本主題所包含內容期間，您會發現參考這些範例相當有用。 (Unmanaged 程式碼開發人員應該會看到文件[MXDC_ESCAPE 函式](/windows/desktop/printdocs/mxdc-escape)。 Windows Form 開發人員必須使用[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]中<xref:System.Drawing.Printing>不支援完整的命名空間[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]列印路徑，但支援混合式 GDI-XPS 列印路徑。 請參閱下方的**列印路徑架構**)。  
   
@@ -53,7 +53,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
   
  基本列印的情況下，搭配使用者介面的單一進入點、組態和工作提交，可使用一個簡單又直覺式的 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]。 進階案例中，對於 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] 自訂 (或根本沒有 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)])、同步或非同步列印及批次列印功能，加入額外支援。 這兩個選項都提供完整或部分信任模式中的列印支援。  
   
- [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 擴充性的設計。 藉由使用擴充性架構，可以用模組化的方式加入功能至 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]。 擴充性功能包括：  
+ 搭配心裡的擴充性設計[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]。 藉由使用擴充性架構，可以用模組化的方式加入功能至 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)]。 擴充性功能包括：  
   
 -   列印結構描述。 會定期更新公用結構描述，並讓裝置功能可快速擴充。 (請參閱下方的 **PrintTicket 和 PrintCapabilities**)。  
   
@@ -69,7 +69,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
  ![螢幕擷取畫面顯示 XPS 列印系統。](./media/printing-overview/xml-paper-specification-print-system.png)  
   
 ### <a name="basic-xps-printing"></a>基本 XPS 列印  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定義基本和進階[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 對於不需廣泛的列印自訂或存取完整 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能集的應用程式，基本的列印支援可供使用。 基本列印支援由需要最少組態的列印對話方塊控制項公開，並具有類似 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 使用這個簡化的列印模型，許多 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能可供使用。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 定義基本和進階的 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]。 對於不需廣泛的列印自訂或存取完整 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能集的應用程式，基本的列印支援可供使用。 基本列印支援由需要最少組態的列印對話方塊控制項公開，並具有類似 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 的功能。 使用這個簡化的列印模型，許多 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 功能可供使用。  
   
 #### <a name="printdialog"></a>PrintDialog  
  <xref:System.Windows.Controls.PrintDialog?displayProperty=nameWithType> 控制項提供 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 組態的單一進入點和 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 工作提交。 如需如何具現化及使用控制項的相關資訊，請參閱[叫用列印對話方塊](how-to-invoke-a-print-dialog.md)。  
@@ -116,7 +116,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
 ## <a name="xpsdrv-driver-model"></a>XPSDrv 驅動程式模型  
  當列印至啟用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 的印表機或驅動程式時，藉由使用 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 做為原生列印多工緩衝處理格式，會改進[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 列印路徑多工緩衝處理器效率。 在文件多工緩衝處理之前，簡化多工緩衝處理程序就不需要產生中繼多工緩衝處理檔案，例如 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 資料檔。 透過較小的多工緩衝處理檔案大小，[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 列印路徑可以減少網路流量並改善列印效能。  
   
- [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 是表示為一系列的呼叫的應用程式輸出的封閉式的格式[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]來轉譯服務。 不同於 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]，當輸出至以  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 為基礎的印表機驅動程式 (XPSDrv) 時，[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 多工緩衝處理格式代表實際的文件，而不需要進一步的解譯。 驅動程式可以直接在格式中的資料上運作。 當您使用 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 檔案和以  [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 為基礎的列印驅動程式時，這項功能就不需要資料和色彩空間轉換。  
+ [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 是代表應用程式輸出的封閉式格式，做為一系列 [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 的呼叫來轉譯服務。 不同於 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)]，當輸出至以  [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 為基礎的印表機驅動程式 (XPSDrv) 時，[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 多工緩衝處理格式代表實際的文件，而不需要進一步的解譯。 驅動程式可以直接在格式中的資料上運作。 當您使用 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 檔案和以  [!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] 為基礎的列印驅動程式時，這項功能就不需要資料和色彩空間轉換。  
   
  當您使用以 [!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 印表機驅動程式 (XPSDrv) 為目標的[!INCLUDE[TLA2#tla_metro](../../../../includes/tla2sharptla-metro-md.md)] 文件時，相較於其 [!INCLUDE[TLA2#tla_emf](../../../../includes/tla2sharptla-emf-md.md)] 對等項目，這通常會減少多工緩衝處理檔案大小；不過，有例外狀況：  
   
@@ -143,7 +143,7 @@ Microsoft.NET Framework 中，使用 Windows Presentation Foundation (WPF) 應�
 - <xref:System.Printing.PrintCapabilities>
 - <xref:System.Printing.PrintServer>
 - <xref:System.Printing.PrintQueue>
-- [HOW TO 主題](printing-how-to-topics.md)
+- [HOW-TO 主題](printing-how-to-topics.md)
 - [WPF 中的文件](documents-in-wpf.md)
 - [XPS 文件](/windows/desktop/printdocs/documents)
 - [文件序列化與儲存](document-serialization-and-storage.md)

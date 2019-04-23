@@ -12,10 +12,10 @@ helpviewer_keywords:
 - checking spelling [WPF]
 ms.assetid: 6f953d2b-67e8-4012-84ce-53c0e958da47
 ms.openlocfilehash: 7381bafc349506d89058581e9ed62a4348a72865
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076844"
 ---
 # <a name="how-to-enable-spell-checking-in-a-text-editing-control"></a>HOW TO：在文字編輯控制項中啟用拼字檢查
@@ -29,6 +29,6 @@ ms.locfileid: "59076844"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用操作功能表的拼字檢查](how-to-use-spell-checking-with-a-context-menu.md)
+- [使用內容功能表的拼字檢查](how-to-use-spell-checking-with-a-context-menu.md)
 - [TextBox 概觀](textbox-overview.md)
 - [RichTextBox 概觀](richtextbox-overview.md)

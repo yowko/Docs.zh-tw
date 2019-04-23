@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Columns property [WPF]
 ms.assetid: 3f8884f4-7e1f-456b-be06-fbd3cf469bf3
 ms.openlocfilehash: d379d1a98bff614ff9e16cdd340bb69644988743
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078417"
 ---
 # <a name="how-to-manipulate-a-tables-columns-through-the-columns-property"></a>HOW TO：透過 Columns 屬性管理資料表的資料行
@@ -68,8 +68,8 @@ ms.locfileid: "59078417"
 ## <a name="see-also"></a>另請參閱
 
 - [資料表概觀](table-overview.md)
-- [使用 XAML 定義資料表](how-to-define-a-table-with-xaml.md)
-- [以程式設計方式建置資料表](how-to-build-a-table-programmatically.md)
-- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [使用 XAML 定義表格](how-to-define-a-table-with-xaml.md)
+- [以程式設計的方式建置資料表](how-to-build-a-table-programmatically.md)
+- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
 - [透過 Blocks 屬性管理 FlowDocument](how-to-manipulate-a-flowdocument-through-the-blocks-property.md)
-- [透過 RowGroups 屬性管理資料表的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)
+- [透過 RowGroups 屬性管理表格的資料列群組](how-to-manipulate-table-row-groups-through-the-rowgroups-property.md)

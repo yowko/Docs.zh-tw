@@ -8,10 +8,10 @@ helpviewer_keywords:
 - media [WPF], playback with animations
 ms.assetid: 8982b7b7-1c6c-4b24-8801-b328862975f5
 ms.openlocfilehash: 200f9d62c67a02088fe5a5789cdb41a04837d430
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079899"
 ---
 # <a name="how-to-play-media-with-animations"></a>HOW TO：以動畫播放媒體
@@ -30,7 +30,7 @@ ms.locfileid: "59079899"
 - <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>
 - <xref:System.Windows.Media.Animation.Storyboard>
 - <xref:System.Windows.Media.Animation.ParallelTimeline.SlipBehavior%2A>
-- [HOW TO 主題](audio-and-video-how-to-topics.md)
+- [HOW-TO 主題](audio-and-video-how-to-topics.md)
 - [分鏡腳本概觀](storyboards-overview.md)
 - [主要畫面格動畫概觀](key-frame-animations-overview.md)
 - [動畫概觀](animation-overview.md)

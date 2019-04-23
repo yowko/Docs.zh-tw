@@ -10,10 +10,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], mouse events using code
 ms.assetid: d9b12787-86f6-4022-8e0f-e12d312c4af2
 ms.openlocfilehash: 3ebe82fc18deba52fafe76da7ff85fb247446e46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59074946"
 ---
 # <a name="handling-user-input"></a>處理使用者輸入
@@ -65,7 +65,7 @@ ms.locfileid: "59074946"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 控制項中的事件](events-in-windows-forms-controls.md)
+- [Windows Forms 控制項中的事件](events-in-windows-forms-controls.md)
 - [定義事件](defining-an-event-in-windows-forms-controls.md)
 - [事件](../../../standard/events/index.md)
-- [Windows Form 中的使用者輸入](../user-input-in-windows-forms.md)
+- [Windows Forms 中的使用者輸入](../user-input-in-windows-forms.md)

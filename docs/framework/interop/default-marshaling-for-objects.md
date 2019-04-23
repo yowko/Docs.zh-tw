@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c2ef0284-b061-4e12-b6d3-6a502b9cc558
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 65b13d99873fe1027d0b316d1cf90e766799dbb1
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1b05d5c72491265b7617950550935e3c719421f3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409272"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59076156"
 ---
 # <a name="default-marshaling-for-objects"></a>物件的預設封送處理
 類型為 <xref:System.Object?displayProperty=nameWithType> 的參數和欄位可以向 Unmanaged 程式碼公開為下列類型之一：  
@@ -236,7 +236,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |不支援。|**VT_ARRAY**|  
 |不支援。|**VT_RECORD**|  
 |不支援。|**VT_CY**|  
-|不支援。|**VT_Variant**|  
+|不支援。|**VT_VARIANT**|  
   
  COM Variant 的值是透過呼叫 **IConvertible.To** *Type* 介面所決定；其中 **To** *Type* 是轉換常式，對應到從 **IConvertible.GetTypeCode** 傳回的類型。 例如，從 **IConvertible.GetTypeCode** 傳回 **TypeCode.Double** 的物件，會封送處理成 **VT_R8** 類型的 COM Variant。 您可以透過轉換為 **IConvertible** 介面及呼叫 <xref:System.IConvertible.ToDouble%2A> 方法，取得 Variant 的值 (儲存在 COM Variant 的 **dblVal** 欄位)。  
   
@@ -269,7 +269,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**VT_ARRAY** &#124; **VT_**\*|<xref:System.Array?displayProperty=nameWithType>|  
 |**VT_CY**|<xref:System.Decimal?displayProperty=nameWithType>|  
 |**VT_RECORD**|對應 Boxed 實值型別。|  
-|**VT_Variant**|不支援。|  
+|**VT_VARIANT**|不支援。|  
   
  從 COM 傳遞至 Managed 程式碼再回到 COM 的 Variant 類型，在呼叫期間可能不會保留相同的 Variant 類型。 當 **VT_DISPATCH** 類型的 Variant 從 COM 傳遞至 .NET Framework 時，請考慮會發生什麼情況。 在封送處理期間，Variant 會轉換成 <xref:System.Object?displayProperty=nameWithType>。 如果接著將**物件**傳送回 COM，它會封送處理回 **VT_UNKNOWN** 類型的 Variant。 當物件從 Managed 程式碼封送處理到 COM 時產生的 Variant，不保證和最初用來產生物件的 Variant 是同一類型。  
   
@@ -314,6 +314,7 @@ mo.SetVariant(new CurrencyWrapper(new Decimal(5.25)));
 |**Variant**  *v* **(VT_BYREF** *&#124;* **VT_)**|**Ref 物件**  *o*|只有當類型不變更時。|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
 - [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

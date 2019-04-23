@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409311"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59078464"
 ---
 # <a name="default-marshaling-for-strings"></a>字串的預設封送處理
 <xref:System.String?displayProperty=nameWithType> 和 <xref:System.Text.StringBuilder?displayProperty=nameWithType> 類別同時都有類似的封送處理行為。  
@@ -30,7 +30,7 @@ ms.locfileid: "58409311"
   
 -   [在結構中使用的字串](#cpcondefaultmarshalingforstringsanchor2)  
   
--   [固定長度的字串緩衝區](#cpcondefaultmarshalingforstringsanchor3)  
+-   [固定長度字串緩衝區](#cpcondefaultmarshalingforstringsanchor3)  
   
 <a name="cpcondefaultmarshalingforstringsanchor1"></a>
 
@@ -39,7 +39,7 @@ ms.locfileid: "58409311"
   
 |列舉類型|Unmanaged 格式的描述|  
 |----------------------|-------------------------------------|  
-|`UnmanagedType.BStr` (預設)|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|  
+|`UnmanagedType.BStr` (預設值)|具有前置長度和 Unicode 字元的 COM 樣式 `BSTR`。|  
 |`UnmanagedType.LPStr`|ANSI 字元之 Null 終端陣列的指標。|  
 |`UnmanagedType.LPWStr`|Unicode 字元之 Null 終端陣列的指標|  
   
@@ -264,6 +264,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - [預設的封送處理行為](default-marshaling-behavior.md)
 - [Blittable 和非 Blittable 類型](blittable-and-non-blittable-types.md)
 - [方向屬性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

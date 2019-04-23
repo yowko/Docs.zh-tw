@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076857"
 ---
 # <a name="apis-that-rely-on-reflection"></a>依賴反映的 API
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  若要成功執行，這個程式碼需要幾個中繼資料項目：  
   
--   `Browse` 您想要呼叫其方法之類型的中繼資料。  
+-   您要呼叫其方法之類型的 `Browse` 中繼資料。  
   
--   `Browse` 您想要呼叫之方法的中繼資料。  如果這是公用方法，加入包含類型的公用 `Browse` 中繼資料也會包含這個方法。  
+-   您要呼叫方法的 `Browse` 中繼資料。  如果這是公用方法，加入包含類型的公用 `Browse` 中繼資料也會包含這個方法。  
   
 -   您要呼叫之方法的動態中繼資料，如此一來，[!INCLUDE[net_native](../../../includes/net-native-md.md)] 工具鏈便不會移除反映引動過程委派。 如果方法遺漏動態中繼資料，呼叫 <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> 方法時會擲回下列例外狀況：  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` 陣列型別的中繼資料，才能動態具現化。  下列執行階段指示詞可動態具現化 `Class1[]`。  
+ 需要陣列類型的 `Browse` 中繼資料，才能動態具現化陣列。  下列執行階段指示詞可動態具現化 `Class1[]`。  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  

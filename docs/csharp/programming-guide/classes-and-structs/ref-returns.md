@@ -4,12 +4,12 @@ description: 了解如何定義和使用 ref 傳回值和 ref 區域變數值
 author: rpetrusha
 ms.author: ronpet
 ms.date: 04/04/2018
-ms.openlocfilehash: dd5094789114f7ad620dd681877318ad49b78997
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcac162f63438b6cbe54908383467d4b0f227c39
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54514410"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081827"
 ---
 # <a name="ref-returns-and-ref-locals"></a>ref 傳回值和 ref 區域變數
 
@@ -59,7 +59,6 @@ ref 傳回值是在已呼叫方法的範圍中，另一個變數的別名。 您
 - 如果您以「傳址」方式傳回它，就是將別名傳回至同一個變數。
 - 如果您以「傳址」方式將它傳遞到另一個方法，就是將參考傳遞至別名的變數。
 - 當您建立 [ref 區域變數](#ref-locals)別名時，就是對相同變數建立新的別名。
-
 
 ## <a name="ref-locals"></a>ref 區域變數
 

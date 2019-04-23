@@ -8,10 +8,10 @@ ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1696f9054d44a5f80a1f67cc38e315a8627d295
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078780"
 ---
 # <a name="enabling-jit-attach-debugging"></a>啟用 JIT 附加偵錯
@@ -21,7 +21,7 @@ JIT 附加偵錯是當您將偵錯工具附加至處理序發生錯誤時，所�
   
 -   未處理的例外狀況 (在原生和 Managed 程式碼中)。  
   
--   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或[RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107)函式 （Windows 7 系列）。  
+-   <xref:System.Environment.FailFast%2A?displayProperty=nameWithType> 方法或 [RaiseFailFastException](https://go.microsoft.com/fwlink/?LinkId=182107) 函式 (Windows 7 系列)。  
   
 -   執行階段嚴重錯誤。  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079406"
 ---
 # <a name="how-to-list-installed-decoders"></a>HOW TO：列出已安裝的解碼器
@@ -33,5 +33,5 @@ ms.locfileid: "59079406"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：列出已安裝的編碼器](how-to-list-installed-encoders.md)
+- [如何：列出已安裝的編碼器](how-to-list-installed-encoders.md)
 - [使用 Managed GDI+ 中的影像編碼器和解碼器](using-image-encoders-and-decoders-in-managed-gdi.md)

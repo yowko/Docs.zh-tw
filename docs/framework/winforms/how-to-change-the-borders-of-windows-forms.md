@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Windows Forms, changing the borders
 ms.assetid: b3d5fa56-80c6-4b10-b505-f9672307ed55
 ms.openlocfilehash: d2e5dd761b2422f6d7e92e7bb97dbdf425b8fedf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080107"
 ---
 # <a name="how-to-change-the-borders-of-windows-forms"></a>HOW TO：變更 Windows Forms 的框線
@@ -47,4 +47,4 @@ ms.locfileid: "59080107"
 
 - <xref:System.Windows.Forms.FormBorderStyle>
 - <xref:System.Windows.Forms.FormBorderStyle.FixedDialog>
-- [Windows Form 使用者入門](getting-started-with-windows-forms.md)
+- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)

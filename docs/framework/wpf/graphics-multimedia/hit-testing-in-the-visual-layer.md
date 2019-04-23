@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082174"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>視覺分層中的點擊測試
@@ -145,5 +145,5 @@ ms.locfileid: "59082174"
 - <xref:System.Windows.UIElement.IsHitTestVisible%2A>
 - [使用 DrawingVisuals 範例進行點擊測試](https://go.microsoft.com/fwlink/?LinkID=159994)
 - [點擊測試使用 Win32 交互操作範例](https://go.microsoft.com/fwlink/?LinkID=159995)
-- [對視覺物件中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)
-- [使用 Win32 主機容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)
+- [對 Visual 中的幾何進行點擊測試](how-to-hit-test-geometry-in-a-visual.md)
+- [使用 Win32 裝載容器進行點擊測試](how-to-hit-test-using-a-win32-host-container.md)

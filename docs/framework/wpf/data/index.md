@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077728"
 ---
 # <a name="data"></a>資料
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結會提供簡單且一致的方式呈現，並與資料互動的應用程式。 元素可以和各種資料來源的資料繫結，資料的型式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 XML。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也提供透過拖放作業的資料傳輸機制。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 資料繫結在資料的展示和互動上，提供應用程式簡單而一致的方式。 元素可以和各種資料來源的資料繫結，資料的型式可以是 [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 物件和 XML。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 也提供透過拖放作業傳輸資料的機制。  
   
 ## <a name="in-this-section"></a>本節內容  
  [資料繫結](data-binding-wpf.md)  
@@ -41,4 +41,4 @@ ms.locfileid: "59077728"
 ## <a name="see-also"></a>另請參閱
 
 - [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
-- [逐步解說：在 WPF 應用程式中快取應用程式資料](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)
+- [逐步解說：快取中的 WPF 應用程式的應用程式資料](../advanced/walkthrough-caching-application-data-in-a-wpf-application.md)

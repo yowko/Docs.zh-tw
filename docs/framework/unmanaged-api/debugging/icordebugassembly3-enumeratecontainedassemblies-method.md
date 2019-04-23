@@ -5,10 +5,10 @@ ms.assetid: 98f15b05-afad-4616-9e2a-1a9af31948b6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 54ccb52468a530280527252e0e0c43cc9edbb2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59080952"
 ---
 # <a name="icordebugassembly3enumeratecontainedassemblies-method"></a>ICorDebugAssembly3::EnumerateContainedAssemblies 方法
@@ -27,7 +27,7 @@ HRESULT EnumerateContainedAssemblies(
  [out]ICorDebugAssemblyEnum 介面物件，列舉值的位址指標。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果這個`ICorDebugAssembly3`物件是一個容器，否則`S_FALSE`，且列舉是空的。  
+ 如果這個 `S_OK` 物件是容器，則為 `ICorDebugAssembly3`；否則為 `S_FALSE` 且列舉是空的。  
   
 ## <a name="remarks"></a>備註  
  需要符號才能列舉所包含的組件。 如果不存在，則這個方法會傳回 `S_FALSE` 並且不會提供任何有效的列舉值。  
@@ -42,7 +42,7 @@ HRESULT EnumerateContainedAssemblies(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

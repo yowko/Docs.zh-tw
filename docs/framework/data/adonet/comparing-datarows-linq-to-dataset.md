@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 8fe0eadf-297b-487c-8d4b-7816753c2883
 ms.openlocfilehash: 2b45a4629474c394c8e49c41a7a98fc1181e124b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59077169"
 ---
 # <a name="comparing-datarows-linq-to-dataset"></a>比較 DataRow (LINQ to DataSet)
-[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定義許多設定運算子來比較來源項目，以便查看它們是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 提供下列設定運算子：  
+[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 定義了許多設定運算子，可比較來源項目以便查看它們是否相等。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 會提供下列設定運算子：  
   
 -   <xref:System.Linq.Enumerable.Distinct%2A>  
   

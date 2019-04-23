@@ -10,10 +10,10 @@ helpviewer_keywords:
 - message loops [WPF]
 ms.assetid: f440c23f-fa5d-4d5a-852f-ba61150e6405
 ms.openlocfilehash: 707e77ac69878c1c7fb8e975c1f90ad657228d1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079666"
 ---
 # <a name="troubleshooting-hybrid-applications"></a>混合應用程式疑難排解
@@ -21,7 +21,7 @@ ms.locfileid: "59079666"
 
 <a name="overlapping_controls"></a>   
 ## <a name="overlapping-controls"></a>重疊控制項  
- 控制項可能不會以您預期的方式重疊。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 每個控制項使用不同的 HWND。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 在頁面上的所有內容，會使用一個 HWND。 這個實作差異導致非預期的重疊行為。  
+ 控制項可能不會以您預期的方式重疊。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 會針對每個控制項使用不同的 HWND。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 會針對頁面上的所有內容使用一個 HWND。 這個實作差異導致非預期的重疊行為。  
   
  裝載於 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 上的 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項一律會顯示在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 內容上方。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "59079666"
   
 <a name="scaling"></a>   
 ## <a name="scaling"></a>縮放  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]有不同的調整模型。 某些 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 縮放比例轉換對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項深具意義，但其他則沒有。 例如，將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的縮放比例設為 0 是可行的，但如果您嘗試將同一個控制項的縮放比例調回非零的值，則控制項的大小會保持 0。 如需詳細資訊，請參閱 [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 和 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 具有不同的縮放比例模型。 某些 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 縮放比例轉換對 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項深具意義，但其他則沒有。 例如，將 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項的縮放比例設為 0 是可行的，但如果您嘗試將同一個控制項的縮放比例調回非零的值，則控制項的大小會保持 0。 如需詳細資訊，請參閱 [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)。  
   
 <a name="adapter"></a>   
 ## <a name="adapter"></a>配接器  
@@ -86,7 +86,7 @@ ms.locfileid: "59079666"
   
 <a name="enabling_visual_styles"></a>   
 ## <a name="enabling-visual-styles"></a>啟用視覺化樣式  
- [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式上[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]控制項可能不會啟用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法呼叫中的範本[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式。 雖然預設不會呼叫此方法，但如果您使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 來建立專案，您將會取得控制項的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式 (前提是可使用 Comctl32.dll 版本 6.0)。 您必須呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前執行緒上建立控制代碼。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
+ [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 控制項上的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式可能不會啟用。 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>方法呼叫中的範本[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]應用程式。 雖然預設不會呼叫此方法，但如果您使用 [!INCLUDE[TLA2#tla_visualstu](../../../../includes/tla2sharptla-visualstu-md.md)] 來建立專案，您將會取得控制項的 [!INCLUDE[TLA#tla_winxp](../../../../includes/tlasharptla-winxp-md.md)] 視覺化樣式 (前提是可使用 Comctl32.dll 版本 6.0)。 您必須呼叫<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>方法之前執行緒上建立控制代碼。 如需詳細資訊，請參閱[如何：啟用混合式應用程式中的視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)。  
   
 <a name="licensed_controls"></a>   
 ## <a name="licensed-controls"></a>授權的控制項  
@@ -117,9 +117,9 @@ ms.locfileid: "59079666"
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF 設計工具中的互通性](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb628658(v=vs.100))
-- [Windows Form 和 WPF 互通性輸入架構](windows-forms-and-wpf-interoperability-input-architecture.md)
-- [HOW TO：在混合應用程式中啟用視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)
-- [WindowsFormsHost 項目的配置考量](layout-considerations-for-the-windowsformshost-element.md)
-- [Windows Form 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
-- [Windows Form 設計工具的設計階段錯誤](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
+- [Windows Forms 和 WPF 互通性輸入架構](windows-forms-and-wpf-interoperability-input-architecture.md)
+- [如何：啟用混合式應用程式中的視覺化樣式](how-to-enable-visual-styles-in-a-hybrid-application.md)
+- [WindowsFormsHost 元素的配置考量](layout-considerations-for-the-windowsformshost-element.md)
+- [Windows Forms 和 WPF 屬性對應](windows-forms-and-wpf-property-mapping.md)
+- [Windows Forms 設計工具的設計階段錯誤](../../winforms/controls/design-time-errors-in-the-windows-forms-designer.md)
 - [移轉和互通性](migration-and-interoperability.md)

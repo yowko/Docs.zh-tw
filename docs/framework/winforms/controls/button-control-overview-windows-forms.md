@@ -8,10 +8,10 @@ helpviewer_keywords:
 - buttons [Windows Forms], about buttons
 ms.assetid: 255b291b-51a9-4a92-a1a4-2400cd82443f
 ms.openlocfilehash: 1ded871fdfab83407d8022ca0c4ce6b2c8a6c67c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076545"
 ---
 # <a name="button-control-overview-windows-forms"></a>Button 控制項概觀 (Windows Form)
@@ -24,8 +24,8 @@ Windows Form <xref:System.Windows.Forms.Button> 控制項可讓使用者按一�
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.Button>
-- [HOW TO：回應 Windows Forms 按鈕的按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
-- [選取 Windows Form Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
-- [HOW TO：使用設計工具將 Windows Forms 的按鈕指定為接受按鈕](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
-- [HOW TO：使用設計工具將 Windows Forms 的按鈕指定為取消按鈕](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
+- [如何：回應 Windows Form Button 按一下動作](how-to-respond-to-windows-forms-button-clicks.md)
+- [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
+- [如何：將 Windows Form 按鈕指定為接受按鈕使用設計工具](designate-a-wf-button-as-the-accept-button-using-the-designer.md)
+- [如何：將 Windows Form 按鈕指定為取消按鈕使用設計工具](designate-a-wf-button-as-the-cancel-button-using-the-designer.md)
 - [Button 控制項](button-control-windows-forms.md)

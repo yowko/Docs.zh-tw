@@ -10,10 +10,10 @@ helpviewer_keywords:
 - parts [WPF], RadioButton
 ms.assetid: 9acf93f7-dd2f-4010-8ce0-1edd81c52ae2
 ms.openlocfilehash: f11a8338c96d14c3c518713865061e4095ff23b1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078716"
 ---
 # <a name="radiobutton-styles-and-templates"></a>RadioButton 樣式和範本
@@ -33,8 +33,8 @@ ms.locfileid: "59078716"
 |已停用|CommonStates|已停用控制項。|  
 |已取得焦點|FocusStates|控制項已取得焦點。|  
 |未取得焦點|FocusStates|控制項未取得焦點。|  
-|已核取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 是`true`。|  
-|未選取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 是`false`。|  
+|已核取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `true`。|  
+|未選取|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> 為 `false`。|  
 |不定|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> 已`true`，並<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>是`null`。|  
 |驗證|ValidationStates|控制項使用<xref:System.Windows.Controls.Validation>類別和<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`false`。|  
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>附加的屬性是`true`已在控制項具有焦點。|  
