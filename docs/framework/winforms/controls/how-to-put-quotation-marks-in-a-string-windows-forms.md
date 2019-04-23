@@ -11,22 +11,22 @@ helpviewer_keywords:
 - quotation marks [Windows Forms], adding to strings in text boxes
 ms.assetid: 68bdc3f3-4177-4eab-99cd-cac17a82b515
 ms.openlocfilehash: 14180f0326b38872f5d1b112c3d9a87022fb79e9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328058"
 ---
-# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="8c60f-102">HOW TO：將引號放入字串中 (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="8c60f-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
-<span data-ttu-id="8c60f-103">您有時可能想要將引號 (" ") 放入文字字串中。</span><span class="sxs-lookup"><span data-stu-id="8c60f-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="8c60f-104">例如：</span><span class="sxs-lookup"><span data-stu-id="8c60f-104">For example:</span></span>  
+# <a name="how-to-put-quotation-marks-in-a-string-windows-forms"></a><span data-ttu-id="f3785-102">HOW TO：將引號放入字串中 (Windows Forms)</span><span class="sxs-lookup"><span data-stu-id="f3785-102">How to: Put Quotation Marks in a String (Windows Forms)</span></span>
+<span data-ttu-id="f3785-103">您有時可能想要將引號 (" ") 放入文字字串中。</span><span class="sxs-lookup"><span data-stu-id="f3785-103">Sometimes you might want to place quotation marks (" ") in a string of text.</span></span> <span data-ttu-id="f3785-104">例如: </span><span class="sxs-lookup"><span data-stu-id="f3785-104">For example:</span></span>  
   
- <span data-ttu-id="8c60f-105">She said, "You deserve a treat!"</span><span class="sxs-lookup"><span data-stu-id="8c60f-105">She said, "You deserve a treat!"</span></span>  
+ <span data-ttu-id="f3785-105">She said, "You deserve a treat!"</span><span class="sxs-lookup"><span data-stu-id="f3785-105">She said, "You deserve a treat!"</span></span>  
   
- <span data-ttu-id="8c60f-106">或者，您也可以使用<xref:Microsoft.VisualBasic.ControlChars.Quote>欄位做為常數。</span><span class="sxs-lookup"><span data-stu-id="8c60f-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
+ <span data-ttu-id="f3785-106">或者，您也可以使用<xref:Microsoft.VisualBasic.ControlChars.Quote>欄位做為常數。</span><span class="sxs-lookup"><span data-stu-id="f3785-106">As an alternative, you can also use the <xref:Microsoft.VisualBasic.ControlChars.Quote> field as a constant.</span></span>  
   
-### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="8c60f-107">將引號放入您的程式碼中的字串</span><span class="sxs-lookup"><span data-stu-id="8c60f-107">To place quotation marks in a string in your code</span></span>  
+### <a name="to-place-quotation-marks-in-a-string-in-your-code"></a><span data-ttu-id="f3785-107">將引號放入您的程式碼中的字串</span><span class="sxs-lookup"><span data-stu-id="f3785-107">To place quotation marks in a string in your code</span></span>  
   
-1. <span data-ttu-id="8c60f-108">在 Visual Basic 中，插入資料列中的兩個引號當作內嵌引號。</span><span class="sxs-lookup"><span data-stu-id="8c60f-108">In Visual Basic, insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="8c60f-109">在視覺效果C#並[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入逸出序列\\"當作內嵌的引號。</span><span class="sxs-lookup"><span data-stu-id="8c60f-109">In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="8c60f-110">例如，若要建立前置字串，請使用下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="8c60f-110">For example, to create the preceding string, use the following code.</span></span>  
+1. <span data-ttu-id="f3785-108">在 Visual Basic 中，插入資料列中的兩個引號當作內嵌引號。</span><span class="sxs-lookup"><span data-stu-id="f3785-108">In Visual Basic, insert two quotation marks in a row as an embedded quotation mark.</span></span> <span data-ttu-id="f3785-109">在視覺效果C#並[!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)]，插入逸出序列\\"當作內嵌的引號。</span><span class="sxs-lookup"><span data-stu-id="f3785-109">In Visual C# and [!INCLUDE[vcprvc](../../../../includes/vcprvc-md.md)], insert the escape sequence \\" as an embedded quotation mark.</span></span> <span data-ttu-id="f3785-110">例如，若要建立前置字串，請使用下列程式碼。</span><span class="sxs-lookup"><span data-stu-id="f3785-110">For example, to create the preceding string, use the following code.</span></span>  
   
     ```vb  
     Private Sub InsertQuote()  
@@ -48,9 +48,9 @@ ms.locfileid: "59328058"
        }  
     ```  
   
-     <span data-ttu-id="8c60f-111">-或-</span><span class="sxs-lookup"><span data-stu-id="8c60f-111">-or-</span></span>  
+     <span data-ttu-id="f3785-111">-或-</span><span class="sxs-lookup"><span data-stu-id="f3785-111">-or-</span></span>  
   
-2. <span data-ttu-id="8c60f-112">針對引號插入 ASCII 或 Unicode 字元。</span><span class="sxs-lookup"><span data-stu-id="8c60f-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="8c60f-113">在 Visual Basic 中，使用 ASCII 字元 (34)。</span><span class="sxs-lookup"><span data-stu-id="8c60f-113">In Visual Basic, use the ASCII character (34).</span></span> <span data-ttu-id="8c60f-114">在視覺效果C#，使用 Unicode 字元 (\u0022)。</span><span class="sxs-lookup"><span data-stu-id="8c60f-114">In Visual C#, use the Unicode character (\u0022).</span></span>  
+2. <span data-ttu-id="f3785-112">針對引號插入 ASCII 或 Unicode 字元。</span><span class="sxs-lookup"><span data-stu-id="f3785-112">Insert the ASCII or Unicode character for a quotation mark.</span></span> <span data-ttu-id="f3785-113">在 Visual Basic 中，使用 ASCII 字元 (34)。</span><span class="sxs-lookup"><span data-stu-id="f3785-113">In Visual Basic, use the ASCII character (34).</span></span> <span data-ttu-id="f3785-114">在視覺效果C#，使用 Unicode 字元 (\u0022)。</span><span class="sxs-lookup"><span data-stu-id="f3785-114">In Visual C#, use the Unicode character (\u0022).</span></span>  
   
     ```vb  
     Private Sub InsertAscii()  
@@ -65,11 +65,11 @@ ms.locfileid: "59328058"
     ```  
   
     > [!NOTE]
-    >  <span data-ttu-id="8c60f-115">在此範例中，您無法使用 \u0022，因為不能使用表明是基本字元集中字元的通用字元名稱。</span><span class="sxs-lookup"><span data-stu-id="8c60f-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="8c60f-116">否則，您會產生 c3851。</span><span class="sxs-lookup"><span data-stu-id="8c60f-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="8c60f-117">如需詳細資訊，請參閱[編譯器錯誤 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。</span><span class="sxs-lookup"><span data-stu-id="8c60f-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
+    >  <span data-ttu-id="f3785-115">在此範例中，您無法使用 \u0022，因為不能使用表明是基本字元集中字元的通用字元名稱。</span><span class="sxs-lookup"><span data-stu-id="f3785-115">In this example, you cannot use \u0022 because you cannot use a universal character name that designates a character in the basic character set.</span></span> <span data-ttu-id="f3785-116">否則，您會產生 c3851。</span><span class="sxs-lookup"><span data-stu-id="f3785-116">Otherwise, you produce C3851.</span></span> <span data-ttu-id="f3785-117">如需詳細資訊，請參閱[編譯器錯誤 C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851)。</span><span class="sxs-lookup"><span data-stu-id="f3785-117">For more information, see [Compiler Error C3851](/cpp/error-messages/compiler-errors-2/compiler-error-c3851).</span></span>  
   
-     <span data-ttu-id="8c60f-118">-或-</span><span class="sxs-lookup"><span data-stu-id="8c60f-118">-or-</span></span>  
+     <span data-ttu-id="f3785-118">-或-</span><span class="sxs-lookup"><span data-stu-id="f3785-118">-or-</span></span>  
   
-3. <span data-ttu-id="8c60f-119">您也可以定義字元的常數，並且在需要時使用它。</span><span class="sxs-lookup"><span data-stu-id="8c60f-119">You can also define a constant for the character, and use it where needed.</span></span>  
+3. <span data-ttu-id="f3785-119">您也可以定義字元的常數，並且在需要時使用它。</span><span class="sxs-lookup"><span data-stu-id="f3785-119">You can also define a constant for the character, and use it where needed.</span></span>  
   
     ```vb  
     Const quote As String = """"  
@@ -88,14 +88,14 @@ ms.locfileid: "59328058"
        const_cast<String^>(quote));  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="8c60f-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8c60f-120">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f3785-120">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f3785-120">See also</span></span>
 
 - <xref:System.Windows.Forms.TextBox>
 - <xref:Microsoft.VisualBasic.ControlChars.Quote>
-- [<span data-ttu-id="8c60f-121">TextBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="8c60f-121">TextBox Control Overview</span></span>](textbox-control-overview-windows-forms.md)
-- [<span data-ttu-id="8c60f-122">HOW TO：控制 Windows Forms TextBox 控制項的插入點</span><span class="sxs-lookup"><span data-stu-id="8c60f-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
-- [<span data-ttu-id="8c60f-123">HOW TO：使用 Windows Forms TextBox 控制項建立密碼文字方塊</span><span class="sxs-lookup"><span data-stu-id="8c60f-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
-- [<span data-ttu-id="8c60f-124">HOW TO：建立唯讀文字方塊</span><span class="sxs-lookup"><span data-stu-id="8c60f-124">How to: Create a Read-Only Text Box</span></span>](how-to-create-a-read-only-text-box-windows-forms.md)
-- [<span data-ttu-id="8c60f-125">HOW TO：選取 Windows Forms TextBox 控制項的文字</span><span class="sxs-lookup"><span data-stu-id="8c60f-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](how-to-select-text-in-the-windows-forms-textbox-control.md)
-- [<span data-ttu-id="8c60f-126">HOW TO：檢視 Windows Forms TextBox 控制項中的多行</span><span class="sxs-lookup"><span data-stu-id="8c60f-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
-- [<span data-ttu-id="8c60f-127">TextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="8c60f-127">TextBox Control</span></span>](textbox-control-windows-forms.md)
+- [<span data-ttu-id="f3785-121">TextBox 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="f3785-121">TextBox Control Overview</span></span>](textbox-control-overview-windows-forms.md)
+- [<span data-ttu-id="f3785-122">如何：控制 Windows Forms TextBox 控制項中的插入點</span><span class="sxs-lookup"><span data-stu-id="f3785-122">How to: Control the Insertion Point in a Windows Forms TextBox Control</span></span>](how-to-control-the-insertion-point-in-a-windows-forms-textbox-control.md)
+- [<span data-ttu-id="f3785-123">如何：使用 Windows Forms TextBox 控制項建立密碼文字方塊</span><span class="sxs-lookup"><span data-stu-id="f3785-123">How to: Create a Password Text Box with the Windows Forms TextBox Control</span></span>](how-to-create-a-password-text-box-with-the-windows-forms-textbox-control.md)
+- [<span data-ttu-id="f3785-124">如何：建立唯讀文字方塊</span><span class="sxs-lookup"><span data-stu-id="f3785-124">How to: Create a Read-Only Text Box</span></span>](how-to-create-a-read-only-text-box-windows-forms.md)
+- [<span data-ttu-id="f3785-125">如何：在 Windows Forms TextBox 控制項中選取文字</span><span class="sxs-lookup"><span data-stu-id="f3785-125">How to: Select Text in the Windows Forms TextBox Control</span></span>](how-to-select-text-in-the-windows-forms-textbox-control.md)
+- [<span data-ttu-id="f3785-126">如何：在 Windows Forms TextBox 控制項中檢視多行</span><span class="sxs-lookup"><span data-stu-id="f3785-126">How to: View Multiple Lines in the Windows Forms TextBox Control</span></span>](how-to-view-multiple-lines-in-the-windows-forms-textbox-control.md)
+- [<span data-ttu-id="f3785-127">TextBox 控制項</span><span class="sxs-lookup"><span data-stu-id="f3785-127">TextBox Control</span></span>](textbox-control-windows-forms.md)

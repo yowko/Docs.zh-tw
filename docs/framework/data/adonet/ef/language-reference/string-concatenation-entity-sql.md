@@ -3,38 +3,38 @@ title: + （字串串連）(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
 ms.openlocfilehash: 5f2c031218a9e533889c696bc592e73a27b51d06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329761"
 ---
-# <a name="-string-concatenation-entity-sql"></a><span data-ttu-id="2bf56-102">+ (字串串連) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="2bf56-102">+ (String Concatenation) (Entity SQL)</span></span>
-<span data-ttu-id="2bf56-103">串連兩個字串。</span><span class="sxs-lookup"><span data-stu-id="2bf56-103">Concatenates two strings.</span></span>  
+# <a name="-string-concatenation-entity-sql"></a><span data-ttu-id="f2067-102">+ (字串串連) (Entity SQL)</span><span class="sxs-lookup"><span data-stu-id="f2067-102">+ (String Concatenation) (Entity SQL)</span></span>
+<span data-ttu-id="f2067-103">串連兩個字串。</span><span class="sxs-lookup"><span data-stu-id="f2067-103">Concatenates two strings.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2bf56-104">語法</span><span class="sxs-lookup"><span data-stu-id="2bf56-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="f2067-104">語法</span><span class="sxs-lookup"><span data-stu-id="f2067-104">Syntax</span></span>  
   
 ```  
 expression + expression  
 ```  
   
-## <a name="arguments"></a><span data-ttu-id="2bf56-105">引數</span><span class="sxs-lookup"><span data-stu-id="2bf56-105">Arguments</span></span>  
+## <a name="arguments"></a><span data-ttu-id="f2067-105">引數</span><span class="sxs-lookup"><span data-stu-id="f2067-105">Arguments</span></span>  
  `expression`  
- <span data-ttu-id="2bf56-106">EDM.String 資料型別的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="2bf56-106">Any valid expression of the EDM.String data types.</span></span> <span data-ttu-id="2bf56-107">兩個運算式的資料型別必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料型別。</span><span class="sxs-lookup"><span data-stu-id="2bf56-107">Both expressions must be of the same data type, or one expression must be able to be implicitly converted to the data type of the other expression.</span></span>  
+ <span data-ttu-id="f2067-106">EDM.String 資料型別的任何有效運算式。</span><span class="sxs-lookup"><span data-stu-id="f2067-106">Any valid expression of the EDM.String data types.</span></span> <span data-ttu-id="f2067-107">兩個運算式的資料型別必須相同，或者其中一個運算式必須可以用隱含方式轉換為另一個運算式的資料型別。</span><span class="sxs-lookup"><span data-stu-id="f2067-107">Both expressions must be of the same data type, or one expression must be able to be implicitly converted to the data type of the other expression.</span></span>  
   
-## <a name="result-types"></a><span data-ttu-id="2bf56-108">結果型別</span><span class="sxs-lookup"><span data-stu-id="2bf56-108">Result Types</span></span>  
- <span data-ttu-id="2bf56-109">從兩個引數的隱含型別提升產生的資料型別。</span><span class="sxs-lookup"><span data-stu-id="2bf56-109">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="2bf56-110">如需有關隱含型別提升的詳細資訊，請參閱[型別系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="2bf56-110">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
+## <a name="result-types"></a><span data-ttu-id="f2067-108">結果型別</span><span class="sxs-lookup"><span data-stu-id="f2067-108">Result Types</span></span>  
+ <span data-ttu-id="f2067-109">從兩個引數的隱含型別提升產生的資料型別。</span><span class="sxs-lookup"><span data-stu-id="f2067-109">The data type that results from the implicit type promotion of the two arguments.</span></span> <span data-ttu-id="f2067-110">如需有關隱含型別提升的詳細資訊，請參閱[型別系統](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)。</span><span class="sxs-lookup"><span data-stu-id="f2067-110">For more information about implicit type promotion, see [Type System](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="2bf56-111">範例</span><span class="sxs-lookup"><span data-stu-id="2bf56-111">Example</span></span>  
- <span data-ttu-id="2bf56-112">下列 Entity SQL 查詢會使用 + 運算子來串連兩個字串。</span><span class="sxs-lookup"><span data-stu-id="2bf56-112">The following Entity SQL query uses the + operator to concatenates two strings.</span></span> <span data-ttu-id="2bf56-113">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="2bf56-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="2bf56-114">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="2bf56-114">To compile and run this query, follow these steps:</span></span>  
+## <a name="example"></a><span data-ttu-id="f2067-111">範例</span><span class="sxs-lookup"><span data-stu-id="f2067-111">Example</span></span>  
+ <span data-ttu-id="f2067-112">下列 Entity SQL 查詢會使用 + 運算子來串連兩個字串。</span><span class="sxs-lookup"><span data-stu-id="f2067-112">The following Entity SQL query uses the + operator to concatenates two strings.</span></span> <span data-ttu-id="f2067-113">此查詢是根據 AdventureWorks Sales Model。</span><span class="sxs-lookup"><span data-stu-id="f2067-113">The query is based on the AdventureWorks Sales Model.</span></span> <span data-ttu-id="f2067-114">若要編譯及執行此查詢，請遵循以下步驟：</span><span class="sxs-lookup"><span data-stu-id="f2067-114">To compile and run this query, follow these steps:</span></span>  
   
-1. <span data-ttu-id="2bf56-115">請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="2bf56-115">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
+1. <span data-ttu-id="f2067-115">請依照下列中的程序[How to:執行可傳回 PrimitiveType 結果的查詢](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md)。</span><span class="sxs-lookup"><span data-stu-id="f2067-115">Follow the procedure in [How to: Execute a Query that Returns PrimitiveType Results](../../../../../../docs/framework/data/adonet/ef/how-to-execute-a-query-that-returns-primitivetype-results.md).</span></span>  
   
-2. <span data-ttu-id="2bf56-116">將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="2bf56-116">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
+2. <span data-ttu-id="f2067-116">將下列查詢當成引數，傳遞至 `ExecutePrimitiveTypeQuery` 方法：</span><span class="sxs-lookup"><span data-stu-id="f2067-116">Pass the following query as an argument to the `ExecutePrimitiveTypeQuery` method:</span></span>  
   
  [!code-csharp[DP EntityServices Concepts 2#CONCAT](../../../../../../samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts 2/cs/entitysql.cs#concat)]  
   
-## <a name="see-also"></a><span data-ttu-id="2bf56-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2bf56-117">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="f2067-117">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f2067-117">See also</span></span>
 
-- [<span data-ttu-id="2bf56-118">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="2bf56-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
-- [<span data-ttu-id="2bf56-119">概念模型類型 (CSDL)</span><span class="sxs-lookup"><span data-stu-id="2bf56-119">Conceptual Model Types (CSDL)</span></span>](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)
+- [<span data-ttu-id="f2067-118">Entity SQL 參考</span><span class="sxs-lookup"><span data-stu-id="f2067-118">Entity SQL Reference</span></span>](../../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-reference.md)
+- [<span data-ttu-id="f2067-119">概念模型類型 (CSDL)</span><span class="sxs-lookup"><span data-stu-id="f2067-119">Conceptual Model Types (CSDL)</span></span>](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)
