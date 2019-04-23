@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
 ms.openlocfilehash: 65d26c0b9a41a6825108b73f822add4d91400055
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302526"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>HOW TO：在程式碼中建立服務端點
@@ -48,4 +48,4 @@ ms.locfileid: "59302526"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：在程式碼中指定服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [如何：在程式碼中指定的服務繫結](../../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)

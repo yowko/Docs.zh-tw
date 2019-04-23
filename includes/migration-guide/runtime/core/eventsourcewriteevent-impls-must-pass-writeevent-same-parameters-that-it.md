@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 47d0aa554d88726caca35fa6bebe4d863fdc0695
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235123"
+---
 ### <a name="eventsourcewriteevent-impls-must-pass-writeevent-the-same-parameters-that-it-received-plus-id"></a>EventSource.WriteEvent impl 必須將收到的相同參數傳遞給 WriteEvent (再加上識別碼)
 
 |   |   |
@@ -7,4 +15,3 @@
 |範圍|次要|
 |版本|4.5.1|
 |類型|執行階段|
-

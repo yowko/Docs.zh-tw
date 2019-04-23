@@ -3,10 +3,10 @@ title: 在 Windows 事件追蹤中追蹤事件
 ms.date: 03/30/2017
 ms.assetid: f812659b-0943-45ff-9430-4defa733182b
 ms.openlocfilehash: 129b82da068251d87bd9b0ca029b7e5a1c274936
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300641"
 ---
 # <a name="tracking-events-into-event-tracing-in-windows"></a>在 Windows 事件追蹤中追蹤事件
@@ -20,7 +20,7 @@ ms.locfileid: "59300641"
 |元件|描述|
 |---------------|-----------------|
 |追蹤執行階段|提供基礎結構以發出追蹤記錄。|
-|追蹤參與者|存取追蹤記錄。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 隨附追蹤參與者寫入追蹤記錄當做事件追蹤的 Windows (ETW) 事件。|
+|追蹤參與者|存取追蹤記錄。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] 隨附追蹤參與者，可將追蹤記錄當做 Windows 事件追蹤 (ETW) 事件撰寫。|
 |追蹤設定檔|篩選機制，可讓追蹤參與者訂閱從工作流程執行個體發出之追蹤記錄的子集。|
 
  下表詳細說明工作流程執行階段發出的追蹤記錄。

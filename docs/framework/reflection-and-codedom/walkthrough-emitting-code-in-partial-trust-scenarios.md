@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712570"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59299471"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>逐步解說：在部分信任情節中發出程式碼
 反映發出在完整或部分信任中使用相同的 API 集合，但在部分信任程式碼中，有些功能需要特殊權限。 此外，反映發出還有一項匿名裝載動態方法的功能，設計搭配部分信任使用並可供安全性透明組件使用。  
@@ -59,12 +59,12 @@ ms.locfileid: "54712570"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>建立部份信任的應用程式定義域  
   
-1.  建立權限集，以授與沙箱應用程式定義域中的組件。 在此情況下，會使用網際網路區域的權限集。  
+1. 建立權限集，以授與沙箱應用程式定義域中的組件。 在此情況下，會使用網際網路區域的權限集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  建立 <xref:System.AppDomainSetup> 物件來初始化具有應用程式路徑的應用程式定義域。  
+2. 建立 <xref:System.AppDomainSetup> 物件來初始化具有應用程式路徑的應用程式定義域。  
   
     > [!IMPORTANT]
     >  為簡單起見，此程式碼範例會使用目前的資料夾。 若要執行實際來自網際網路的程式碼，未受信任的程式碼請使用另外的資料夾，依[如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)中所述。  
@@ -72,7 +72,7 @@ ms.locfileid: "54712570"
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  建立應用程式定義域，指定應用程式定義域安裝資訊，以及在應用程式定義域中執行的所有組件授權集。  
+3. 建立應用程式定義域，指定應用程式定義域安裝資訊，以及在應用程式定義域中執行的所有組件授權集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ ms.locfileid: "54712570"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>建立加上 RMA 的部份信任應用程式定義域  
   
-1.  建立具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 旗標的新 <xref:System.Security.Permissions.ReflectionPermission> 物件，並使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 方法將權限新增至授權集。  
+1. 建立具有 <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>(RMA) 旗標的新 <xref:System.Security.Permissions.ReflectionPermission> 物件，並使用 <xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> 方法將權限新增至授權集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ ms.locfileid: "54712570"
     > [!NOTE]
     >  RMA 是匿名裝載動態方法的功能。 當一般的動態方法略過 JIT 可見度檢查時，發出的程式碼需要完全信任。  
   
-2.  建立應用程式定義域，指定應用程式定義域安裝資訊及授權集。  
+2. 建立應用程式定義域，指定應用程式定義域安裝資訊及授權集。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ ms.locfileid: "54712570"
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>在應用程式定義域中定義及執行方法  
   
-1.  定義衍生自 <xref:System.MarshalByRefObject> 的類別。 這可讓您在其他的應用程式定義域中建立類別的執行個體，以及跨應用程式定義域界限進行方法呼叫。 本例中的類別名為 `Worker`。  
+1. 定義衍生自 <xref:System.MarshalByRefObject> 的類別。 這可讓您在其他的應用程式定義域中建立類別的執行個體，以及跨應用程式定義域界限進行方法呼叫。 本例中的類別名為 `Worker`。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  定義公用方法，包含您想要執行的程式碼。 在此範例中，程式碼會發出簡單的動態方法、建立委派來執行方法，並叫用委派。  
+2. 定義公用方法，包含您想要執行的程式碼。 在此範例中，程式碼會發出簡單的動態方法、建立委派來執行方法，並叫用委派。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  在您的主程式中，取得組件的顯示名稱。 當您在沙箱應用程式定義域中建立 `Worker` 類別的執行個體時，會使用此名稱。  
+3. 在您的主程式中，取得組件的顯示名稱。 當您在沙箱應用程式定義域中建立 `Worker` 類別的執行個體時，會使用此名稱。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  在您的主程式中建立沙箱應用程式定義域，如本逐步解說的[第一項程序](#Setting_up)中所述。 因為 `SimpleEmitDemo` 方法只使用公用方法，所以您不必新增任何權限到 `Internet` 權限集。  
+4. 在您的主程式中建立沙箱應用程式定義域，如本逐步解說的[第一項程序](#Setting_up)中所述。 因為 `SimpleEmitDemo` 方法只使用公用方法，所以您不必新增任何權限到 `Internet` 權限集。  
   
-5.  在您的主程式中，在沙箱應用程式定義域中建立 `Worker` 類別的執行個體。  
+5. 在您的主程式中，在沙箱應用程式定義域中建立 `Worker` 類別的執行個體。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ ms.locfileid: "54712570"
     > [!NOTE]
     >  如果您在 Visual Studio 中使用此程式碼，則必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
-6.  新增程式碼以呼叫 `SimpleEmitDemo` 方法。 呼叫會跨應用程式定義域界限封送處理，而程式碼則在沙箱應用程式定義域中執行。  
+6. 新增程式碼以呼叫 `SimpleEmitDemo` 方法。 呼叫會跨應用程式定義域界限封送處理，而程式碼則在沙箱應用程式定義域中執行。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -212,5 +212,6 @@ ms.locfileid: "54712570"
 -   如果您在 Visual Studio 中建置此程式碼範例，則當您將它傳遞給 <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> 方法時，必須變更類別名稱以包含命名空間。 命名空間是專案的預設名稱。 例如，如果專案是 "PartialTrust"，則類別名稱必須是 "PartialTrust.Worker"。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [反映發出中的安全性問題](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
-- [如何：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)
+- [作法：在沙箱中執行部分信任的程式碼](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

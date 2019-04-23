@@ -6,10 +6,10 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231561"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>合併 Windows Form MenuStrip 控制項中的功能表項目
@@ -58,5 +58,5 @@ ms.locfileid: "59231561"
 - <xref:System.Windows.Forms.ToolStripManager>
 - <xref:System.Windows.Forms.MenuStrip>
 - [MenuStrip 控制項](menustrip-control-windows-forms.md)
-- [HOW TO：建立具有 MenuStrip 的 MDI 視窗清單](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
-- [HOW TO：設定 MDI 應用程式的自動功能表合併功能](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)
+- [如何：使用 MenuStrip 建立 MDI 視窗清單](how-to-create-an-mdi-window-list-with-menustrip-windows-forms.md)
+- [如何：設定 MDI 應用程式的自動功能表合併](how-to-set-up-automatic-menu-merging-for-mdi-applications.md)

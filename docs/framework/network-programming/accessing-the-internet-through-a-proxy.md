@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
 ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230560"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>透過 Proxy 存取網際網路
@@ -28,9 +28,9 @@ ms.locfileid: "59230560"
   
 -   [自動 Proxy 偵測](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [作法：啟用 WebRequest 以使用 Proxy 與網際網路通訊](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+-   [如何：啟用 WebRequest 以使用 Proxy 與網際網路通訊](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [作法：覆寫全域 Proxy 的選取範圍](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+-   [如何：覆寫全域 Proxy 的選取範圍](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>另請參閱
 

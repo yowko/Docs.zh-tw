@@ -3,10 +3,10 @@ title: 事件
 description: 了解如何F#事件可讓您在函式呼叫相關聯使用者的動作，也就是很重要的 GUI 程式設計。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226998"
 ---
 # <a name="events"></a>事件
@@ -176,7 +176,7 @@ Application.Run(appForm)
 
 - [成員](index.md)
 - [處理和引發事件](../../../../docs/standard/events/index.md)
-- [Lambda 運算式：`fun`關鍵字](../functions/lambda-expressions-the-fun-keyword.md)
+- [Lambda 運算式：`fun` 關鍵字](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event 模組](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;無法&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)
 - [Control.Event&#60;'Delegate'，引數&#62;類別](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27delegate%2c%27args%5d-class-%5bfsharp%5d)

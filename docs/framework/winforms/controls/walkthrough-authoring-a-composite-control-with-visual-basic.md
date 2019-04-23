@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299978"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>逐步解說：使用 Visual Basic 撰寫複合控制項
@@ -35,7 +35,7 @@ ms.locfileid: "59299978"
   
 2. 從 Visual Basic 專案的清單中，選取**Windows 控制項程式庫**專案範本中，輸入`ctlClockLib`中**名稱**方塊，然後再按一下**確定**。  
   
-     專案名稱，`ctlClockLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為`ctlClock`，您可以指定您`ctlClock`元件使用 `ctlClockLib.ctlClock.`  
+     專案名稱，`ctlClockLib`，預設也會指派給根命名空間。 根命名空間是用來限定組件中的元件名稱。 例如，如果兩個組件提供元件，名為 `ctlClock`，您可以使用 `ctlClockLib.ctlClock.` 指定您的 `ctlClock` 元件  
   
 3. 以滑鼠右鍵按一下 [方案總管] 中的 [UserControl1.vb]，然後按一下 [重新命名]。 將檔案名稱變更為 `ctlClock.vb`。 當系統詢問您是否要重新命名程式碼元素 "UserControl1" 的所有參考時，按一下 [是]按鈕。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "59299978"
     |屬性|變更為|  
     |--------------|---------------|  
     |**名稱**|`lblDisplay`|  
-    |**文字**|`(blank space)`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -245,9 +245,9 @@ ms.locfileid: "59299978"
     |屬性|設定|  
     |--------------|-------------|  
     |**名稱**|`lblAlarm`|  
-    |**文字**|**警示 ！**|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
-    |**Visible**|`False`|  
+    |**可見**|`False`|  
   
 ### <a name="adding-the-alarm-functionality"></a>新增警示功能  
  在先前的程序中，您新增屬性和控制項，在您的複合控制項中啟用警示功能。 在此程序中，您將會新增程式碼以比較目前時間與警示時間，如果它們相同，則讓警示發出聲響與閃爍。 藉由覆寫 `ctlClock` 的 `Timer1_Tick` 方法，並且將額外程式碼新增至其中，您就可以擴充 `ctlAlarmClock` 的功能，同時保留 `ctlClock` 的所有固有功能。  
@@ -358,7 +358,7 @@ ms.locfileid: "59299978"
   
     |控制項|屬性|值|  
     |-------------|--------------|-----------|  
-    |`label1`|**文字**|`(blank space)`|  
+    |`label1`|**Text**|`(blank space)`|  
     ||**名稱**|`lblTest`|  
     |`dateTimePicker1`|**名稱**|`dtpTest`|  
     ||**格式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
@@ -398,5 +398,5 @@ ms.locfileid: "59299978"
 ## <a name="see-also"></a>另請參閱
 
 - [各種自訂控制項](varieties-of-custom-controls.md)
-- [HOW TO：撰寫複合控制項](how-to-author-composite-controls.md)
-- [HOW TO：在 [選擇工具箱項目] 對話方塊中顯示控制項](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [如何：撰寫複合控制項](how-to-author-composite-controls.md)
+- [如何：顯示中的控制項選擇工具箱項目對話方塊](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

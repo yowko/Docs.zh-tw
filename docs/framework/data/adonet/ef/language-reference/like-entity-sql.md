@@ -3,10 +3,10 @@ title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59302253"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
@@ -32,7 +32,7 @@ match [NOT] LIKE pattern [ESCAPE escape]
  指定要否定 LIKE 的結果。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果`string`符合模式，否則`false`。  
+ 如果 `true` 符合此模式則為 `string`；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 使用 LIKE 運算子的運算式會評估大致與使用等號比較做為篩選準則的運算式相同的方式。 不過，[!INCLUDE[esql](../../../../../../includes/esql-md.md)]使用 LIKE 運算子的運算式可以包含常值和萬用字元。  

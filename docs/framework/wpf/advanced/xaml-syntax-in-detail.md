@@ -30,10 +30,10 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298886"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 語法詳細資料
@@ -316,8 +316,8 @@ ms.locfileid: "59298886"
 ## <a name="see-also"></a>另請參閱
 
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
-- [XAML 命名空間 (x:)語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
-- [WPF XAML 擴充功能](wpf-xaml-extensions.md)
+- [XAML 命名空間 （x:）語言功能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [WPF XAML 延伸](wpf-xaml-extensions.md)
 - [相依性屬性概觀](dependency-properties-overview.md)
 - [TypeConverter 和 XAML](typeconverters-and-xaml.md)
 - [WPF 的 XAML 和自訂類別](xaml-and-custom-classes-for-wpf.md)

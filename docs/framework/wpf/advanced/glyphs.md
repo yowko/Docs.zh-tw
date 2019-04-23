@@ -11,18 +11,18 @@ helpviewer_keywords:
 - glyphs [WPF]
 ms.assetid: d5d9274c-23b3-4859-8869-6e64403c9ca7
 ms.openlocfilehash: a887e83babd6126d298170c6aead45c5370c1916
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193144"
 ---
 # <a name="glyphs"></a>字符
 圖像 （glyph） 是字元，會繪製在螢幕上的低層級描述。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 提供客戶想要攔截和保存格式化之後的文字中的圖像 （glyph） 的直接存取。  
   
 ## <a name="in-this-section"></a>本節內容  
- [GlyphRun 物件和 Glyphs 項目簡介](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
-  [HOW TO：使用圖像繪製文字](draw-text-using-glyphs.md)  
+ [GlyphRun 物件和 Glyphs 元素簡介](introduction-to-the-glyphrun-object-and-glyphs-element.md)  
+  [如何：使用圖像繪製文字](draw-text-using-glyphs.md)  
   
 ## <a name="see-also"></a>另請參閱
 

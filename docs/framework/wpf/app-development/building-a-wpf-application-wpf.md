@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
 ms.openlocfilehash: d1aa402ec28fc22654d8f1513366c091215fa4d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300953"
 ---
 # <a name="building-a-wpf-application-wpf"></a>建置 WPF 應用程式 (WPF)
@@ -101,7 +101,7 @@ End Sub
   
 <a name="Pass_2_of_Markup_Compilation"></a>   
 ### <a name="markup-compilationpass-2"></a>標記編譯 - 第二階段  
- 並非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面都會在第一階段的標記編譯進行編譯。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 具有本機定義之類型參考 （參考相同專案中的其他地方的程式碼中定義的類型） 的檔案會豁免於這一次的編譯。 這是因為這些本機定義的類型只存在於來源中，而且尚未經過編譯。 為了判斷此情況，剖析器會使用牽涉到在標記檔案中尋找 `x:Name` 等項目的啟發方式。 找到這類執行個體之後，就會將標記檔案的編譯延後到程式碼檔編譯完成，在那之後，第二階段的標記編譯才會處理這些檔案。  
+ 並非所有 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 頁面都會在第一階段的標記編譯進行編譯。 已在本機定義類型參考 (相同專案中任何地方之程式碼中所定義的類型參考) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 檔案就不是在此時編譯。 這是因為這些本機定義的類型只存在於來源中，而且尚未經過編譯。 為了判斷此情況，剖析器會使用牽涉到在標記檔案中尋找 `x:Name` 等項目的啟發方式。 找到這類執行個體之後，就會將標記檔案的編譯延後到程式碼檔編譯完成，在那之後，第二階段的標記編譯才會處理這些檔案。  
   
 <a name="File_Classification"></a>   
 ### <a name="file-classification"></a>檔案分類  

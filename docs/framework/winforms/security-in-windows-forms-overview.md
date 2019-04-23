@@ -9,10 +9,10 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193704"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows Form 中的安全性概觀
@@ -20,7 +20,7 @@ ms.locfileid: "59193704"
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 引進一種稱為「程式碼存取安全性」的基礎結構，可讓您區分程式碼擁有的權限與使用者擁有的權限。 根據預設，來自網際網路及內部網路的程式碼，只能在所謂部分信任的環境中執行。 部分信任會使應用程式遵守一系列的限制，例如，限制應用程式不能存取本機硬碟，且無法執行 Unmanaged 程式碼等等。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 會依據程式碼的身分識別，控制可允許該程式碼存取的資源；例如，程式碼來自何處、是否有[強式名稱組件](../app-domains/strong-named-assemblies.md)、是否已簽署憑證等等。  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技術，可用來部署 Windows Form 應用程式，可協助讓您更輕鬆地開發應用程式，以更高權限執行在部分信任、 完全信任，或在部分信任中。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供功能，例如權限提升和受信任的應用程式部署，讓您的應用程式可以要求完全信任或提高權限本機使用者以負責方式。  
+ 您用來部署 Windows Form 應用程式的 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 技術，可協助您更輕鬆地開發可在部分信任、完全信任或提高權限的部分信任中執行的應用程式。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 提供「提高權限」和「受信任的應用程式部署」之類的功能，讓您的應用程式能夠以負責任的方式，向本機使用者要求完全信任或提高權限。  
   
 ## <a name="understanding-security-in-the-net-framework"></a>了解 .NET Framework 中的安全性  
  程式碼存取安全性可依據程式碼的來源，以及程式碼其他方面的身分識別，提供程式碼各種程度的信任等級。 如需 Common Language Runtime 用來判斷安全性原則的辨識項相關資訊，請參閱[辨識項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))。 它可以幫助保護電腦系統不受惡意程式碼的威脅，並幫助防止受信任的程式碼有意或無意地危及安全性。 程式碼存取安全性也讓您更充分掌控您的應用程式可以執行哪些動作，因為您可以只指定您要讓應用程式擁有的那些權限。 程式碼存取安全性會影響以 Common Language Runtime 為目標的所有 Managed 程式碼，即使該程式碼沒有進行單一程式碼存取安全性權限檢查也一樣。 如需 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 中安全性的詳細資訊，請參閱[重要的安全性概念](../../standard/security/key-security-concepts.md)和[程式碼存取安全性基本概念](../misc/code-access-security-basics.md)。  
@@ -62,9 +62,9 @@ ms.locfileid: "59193704"
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>使用適當的權限部署應用程式  
- 將 Windows Form 應用程式部署至用戶端電腦時，最常見的方法是使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，這個部署技術會描述應用程式必須執行的所有元件。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用 XML 檔案稱為資訊清單來描述組件和應用程式的檔案，並也您的應用程式所需權限。  
+ 將 Windows Form 應用程式部署至用戶端電腦時，最常見的方法是使用 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]，這個部署技術會描述應用程式必須執行的所有元件。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用稱為資訊清單的 XML 檔案來描述構成應用程式的組件和檔案，以及應用程式所需的權限。  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 有兩種技術要求用戶端電腦上的提高權限。 這兩種技術都需要使用 Authenticode 憑證。 該憑證有助於確保應用程式的使用者是來自受信任的來源。  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 有兩種技術可在用戶端電腦上要求提高權限。 這兩種技術都需要使用 Authenticode 憑證。 該憑證有助於確保應用程式的使用者是來自受信任的來源。  
   
  下表將描述這些技術。  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59193704"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 安全性](windows-forms-security.md)
+- [Windows Forms 安全性](windows-forms-security.md)
 - [程式碼存取安全性的基本概念](../misc/code-access-security-basics.md)
 - [ClickOnce 安全性和部署](/visualstudio/deployment/clickonce-security-and-deployment)
 - [受信任的應用程式部署概觀](/visualstudio/deployment/trusted-application-deployment-overview)

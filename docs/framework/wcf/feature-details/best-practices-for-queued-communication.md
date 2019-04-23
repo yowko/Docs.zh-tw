@@ -6,10 +6,10 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230092"
 ---
 # <a name="best-practices-for-queued-communication"></a>佇列通訊的最佳做法
@@ -29,7 +29,7 @@ ms.locfileid: "59230092"
  對於端對端可靠性，將 <xref:System.ServiceModel.MsmqBindingBase.ExactlyOnce%2A> 屬性設定為 `true` 以確保傳輸。 視您的需要將 <xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 屬性設定為 `true` 或 `false` (預設為 `true`)。 一般而言，<xref:System.ServiceModel.MsmqBindingBase.Durable%2A> 屬性設定為 `true` 以作為端對端可靠性的一部分。 危害是一種效能成本，但會使訊息成為永久性的訊息，因此佇列管理員中止時，不會遺失訊息。  
   
 ### <a name="use-of-transactions"></a>使用異動  
- 您必須使用異動來確保端對端的可靠性。 `ExactlyOnce` 保證只能夠確保訊息會傳遞至目標佇列。 若要確保收到訊息，請使用交易。 如果沒有使用交易，在服務中止時，您會遺失實際上正在傳遞給應用程式的訊息。  
+ 您必須使用異動來確保端對端的可靠性。 `ExactlyOnce` 保證只能夠確保訊息傳送到目標佇列。 若要確保收到訊息，請使用交易。 如果沒有使用交易，在服務中止時，您會遺失實際上正在傳遞給應用程式的訊息。  
   
 ### <a name="use-of-dead-letter-queues"></a>使用寄不出的信件佇列  
  寄不出的信件佇列確保在訊息無法傳遞至目標時通知您。 灺可以使用系統提供的寄不出的信件佇列，或自訂的寄不出的信件佇列。 一般而言，使用自訂的寄不出的信件佇列是最佳選擇，因為它可以讓您將寄不出的信件訊息從某個應用程式傳送到單一寄不出的信件佇列中。 否則，針對在系統上執行的所有應用程式產生的所有寄不出的信件訊息會傳遞到單一佇列。 然後每個應用程式必須搜尋整個寄不出的信件佇列，以尋找和該應用程式相關的寄不出的信件訊息。 有時使用自訂的寄不出的信件佇列不可行，例如在使用 MSMQ 3.0 時。  
@@ -41,7 +41,7 @@ ms.locfileid: "59230092"
 ### <a name="use-of-poison-message-handling"></a>使用有害訊息處理  
  有害訊息處理提供從失敗中復原的能力以處理訊息。  
   
- 使用有害訊息處理功能時，請確定 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 屬性已設定為適當的值。 設定為 <xref:System.ServiceModel.ReceiveErrorHandling.Drop> 表示資料遺失。 另一方面，當偵測到有害訊息時，將它設定為 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 會導致服務主機發生錯誤。 使用 MSMQ 3.0 時，<xref:System.ServiceModel.ReceiveErrorHandling.Fault> 是避免資料遺失與移走有害訊息的最佳選項。 使用 MSMQ 4.0 時，<xref:System.ServiceModel.ReceiveErrorHandling.Move> 是建議的處理方式。 <xref:System.ServiceModel.ReceiveErrorHandling.Move> 將有害的訊息移出佇列讓服務可以繼續處理新訊息。 然後有害訊息服務可以個別處理有害訊息。  
+ 使用有害訊息處理功能時，請確定 <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 屬性已設定為適當的值。 設定為 <xref:System.ServiceModel.ReceiveErrorHandling.Drop> 表示資料遺失。 另一方面，當偵測到有害訊息時，將它設定為 <xref:System.ServiceModel.ReceiveErrorHandling.Fault> 會導致服務主機發生錯誤。 使用 MSMQ 3.0 時，<xref:System.ServiceModel.ReceiveErrorHandling.Fault> 是避免資料遺失與移走有害訊息的最佳選項。 使用 MSMQ 4.0 時，<xref:System.ServiceModel.ReceiveErrorHandling.Move> 是建議的處理方式。 <xref:System.ServiceModel.ReceiveErrorHandling.Move> 會將有害訊息移出佇列，讓服務可以繼續處理新訊息。 然後有害訊息服務可以個別處理有害訊息。  
   
  如需詳細資訊，請參閱 <<c0> [ 有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)。  
   
@@ -84,13 +84,13 @@ ms.locfileid: "59230092"
 ## <a name="see-also"></a>另請參閱
 
 - [WCF 中的佇列](../../../../docs/framework/wcf/feature-details/queuing-in-wcf.md)
-- [HOW TO：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
-- [HOW TO：與 WCF 端點和訊息佇列應用程式交換訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
+- [如何：與 WCF 端點交換佇列訊息](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)
+- [如何：Exchange 與 WCF 端點的訊息和訊息佇列應用程式](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)
 - [在工作階段中群組佇列訊息](../../../../docs/framework/wcf/feature-details/grouping-queued-messages-in-a-session.md)
 - [批次處理異動中的訊息](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)
-- [使用寄不出的信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)
 - [Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異](../../../../docs/framework/wcf/feature-details/diff-in-queue-in-vista-server-2003-windows-xp.md)
-- [使用傳輸安全性來確保訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
+- [使用傳輸安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-transport-security.md)
 - [使用訊息安全性來保護訊息的安全](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)
-- [佇列訊息的疑難排解](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)
+- [為佇列訊息進行疑難排解](../../../../docs/framework/wcf/feature-details/troubleshooting-queued-messaging.md)

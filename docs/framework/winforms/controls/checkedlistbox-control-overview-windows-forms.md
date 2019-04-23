@@ -9,10 +9,10 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229052"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox 控制項概觀 (Windows Form)
@@ -26,5 +26,5 @@ Windows Forms<xref:System.Windows.Forms.CheckedListBox>控制項延伸<xref:Syst
 - <xref:System.Windows.Forms.CheckedListBox.Items%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [ListBox 控制項概觀](listbox-control-overview-windows-forms.md)
-- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)
-- [HOW TO：判斷 Windows Forms CheckedListBox 控制項中的已核取項目](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)
+- [如何：判斷 Windows Form CheckedListBox 控制項中選取的項目](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

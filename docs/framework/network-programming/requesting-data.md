@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, requesting data
 ms.assetid: df6f1e1d-6f2a-45dd-8141-4a85c3dafe1d
 ms.openlocfilehash: 4e93b9395e92ff4c1c153f53e0f40ff18c12416a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228506"
 ---
 # <a name="requesting-data"></a>要求資料
@@ -55,5 +55,5 @@ sr = New StreamReader(resp.GetResponseStream(), Encoding.ASCII)
 ## <a name="see-also"></a>另請參閱
 
 - [以 .NET Framework 進行網路程式設計](../../../docs/framework/network-programming/index.md)
-- [作法：要求網頁並擷取結果當作資料流](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
-- [作法：擷取符合 WebRequest 的通訊協定專屬 WebResponse](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)
+- [如何：要求網頁並擷取結果當作資料流](../../../docs/framework/network-programming/how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md)
+- [如何：擷取符合 WebRequest 的通訊協定特定 WebResponse](../../../docs/framework/network-programming/how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md)

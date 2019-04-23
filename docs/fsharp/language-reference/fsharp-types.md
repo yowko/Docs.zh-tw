@@ -3,10 +3,10 @@ title: F# 類型
 description: 了解中所使用的類型F#以及F#型別是名為和所述。
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193586"
 ---
 # <a name="f-types"></a>F# 類型
@@ -55,13 +55,13 @@ F#提供在心的功能性程式設計所設計的實用的集合型別。 使�
 |-----|-----------|
 |[基本類型](primitive-types.md)|描述之內建簡單型別，例如整數類資料類型、 布林值的型別和字元類型。|
 |[單位類型](unit-type.md)|描述`unit`類型、 類型，有一個值，也會指出由 （）; 相當於`void`在C#並`Nothing`Visual Basic 中。|
-|[Tuple](tuples.md)|描述的 tuple 型別，分組組、 三合一、 quadruples，等任何類型的相關聯的值所組成的型別。|
+|[元組](tuples.md)|描述的 tuple 型別，分組組、 三合一、 quadruples，等任何類型的相關聯的值所組成的型別。|
 |[選項](options.md)|描述選項類型，可能會有值，或可以是空的類型。|
 |[清單](lists.md)|描述清單，也就是已排序、 不可變的系列的項目所有相同的型別。|
 |[陣列](arrays.md)|描述陣列，且已排序集合的可變動的項目相同的型別，會佔用連續記憶體區塊，並有固定的大小。|
 |[序列](sequences.md)|描述序列類型、 表示邏輯的一連串的值;必要時，才需要計算個別的值。|
-|[資料錄](records.md)|描述記錄類型，而具名值的小型彙總。|
-|[已區分的聯集](discriminated-unions.md)|描述差別聯集類型，而類型，其值可以是任何一種可能型別的組。|
+|[記錄](records.md)|描述記錄類型，而具名值的小型彙總。|
+|[差別聯集](discriminated-unions.md)|描述差別聯集類型，而類型，其值可以是任何一種可能型別的組。|
 |[函式](functions/index.md)|描述函式值。|
 |[類別](classes.md)|描述類別類型，對應至.NET 參考類型的物件類型。 類別類型可以包含成員、 屬性、 實作的介面和基底型別。|
 |[結構](structures.md)|描述`struct`類型，對應至.NET 實值類型的物件類型。 `struct`類型通常代表小型的彙總的資料。|

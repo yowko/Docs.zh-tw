@@ -16,10 +16,10 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298901"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>追蹤和稽核應用程式
@@ -122,7 +122,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 |方法|Output|  
 |------------|------------|  
-|**判斷提示**|指定的文字；或者如果未指定，則為呼叫堆疊。 唯有在 **Assert** 陳述式中指定做為引數的條件是 **false** 時，才會寫入輸出。|  
+|**Assert**|指定的文字；或者如果未指定，則為呼叫堆疊。 唯有在 **Assert** 陳述式中指定做為引數的條件是 **false** 時，才會寫入輸出。|  
 |**失敗**|指定的文字；或者如果未指定，則為呼叫堆疊。|  
 |**Write**|指定的文字。|  
 |**WriteIf**|指定的文字 (如果符合在 **WriteIf** 陳述式中指定作為引數的條件)。|  
@@ -147,10 +147,10 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
 - <xref:System.Diagnostics.TraceSource>
 - [程式碼合約](../../../docs/framework/debug-trace-profile/code-contracts.md)
 - [C#、F# 和 Visual Basic 專案類型](/visualstudio/debugger/debugging-preparation-csharp-f-hash-and-visual-basic-project-types)
-- [HOW TO：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
-- [HOW TO：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
-- [HOW TO：建立、初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
-- [HOW TO：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
-- [HOW TO：使用 TraceSource 和含有追蹤接聽項的篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
+- [如何：將追蹤陳述式新增至應用程式程式碼](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [如何：使用追蹤和偵錯進行條件式編譯](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)
+- [如何：建立、 初始化和設定追蹤參數](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)
+- [如何：建立和初始化追蹤來源](../../../docs/framework/debug-trace-profile/how-to-create-and-initialize-trace-sources.md)
+- [如何：含有追蹤接聽項中使用 TraceSource 和篩選條件](../../../docs/framework/debug-trace-profile/how-to-use-tracesource-and-filters-with-trace-listeners.md)
 - [追蹤接聽項](../../../docs/framework/debug-trace-profile/trace-listeners.md)
 - [追蹤參數](../../../docs/framework/debug-trace-profile/trace-switches.md)

@@ -12,10 +12,10 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299863"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>HOW TO：從命令列建立 Windows Forms 應用程式
@@ -65,7 +65,7 @@ ms.locfileid: "59299863"
   
     -   如果您使用 Visual Basic 中，類型： `vbc form1.vb`  
   
-3. 在命令提示中，輸入： `Form1.exe`  
+3. 在命令提示字元中，輸入： `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>加入控制項和處理事件  
  先前的程序步驟示範只是如何建立可編譯和執行的基本 Windows Form。 下一個程序將會說明如何建立控制項並將其加入表單，以及處理控制項的事件。 如需您可以將它新增至 Windows Forms 控制項的相關資訊，請參閱 < [Windows Forms 控制項](./controls/index.md)。  
@@ -117,6 +117,6 @@ ms.locfileid: "59299863"
 
 - <xref:System.Windows.Forms.Form>
 - <xref:System.Windows.Forms.Control>
-- [變更 Windows Form 的外觀](changing-the-appearance-of-windows-forms.md)
+- [變更 Windows Forms 的外觀](changing-the-appearance-of-windows-forms.md)
 - [增強 Windows Forms 應用程式](./advanced/index.md)
-- [Windows Form 使用者入門](getting-started-with-windows-forms.md)
+- [Windows Forms 使用者入門](getting-started-with-windows-forms.md)

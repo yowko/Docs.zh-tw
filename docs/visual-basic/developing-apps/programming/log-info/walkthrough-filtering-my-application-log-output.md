@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829369"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59298392"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>逐步解說：篩選 My.Application.Log 輸出 (Visual Basic)
 本逐步解說示範如何變更 `My.Application.Log` 物件的預設記錄檔篩選，以控制哪些資訊會從 `Log` 物件傳遞至接聽程式，而哪些資訊會由接聽程式寫入。 由於組態資訊是儲存在應用程式的組態檔中，因此即使在建置應用程式之後，您仍可以變更記錄行為。  
@@ -21,17 +21,17 @@ ms.locfileid: "58829369"
   
 #### <a name="to-build-the-sample-application"></a>若要安裝範例應用程式  
   
-1.  開啟新的 Visual Basic Windows 應用程式專案。  
+1. 開啟新的 Visual Basic Windows 應用程式專案。  
   
-2.  加入名為 "Button1 to Form1" 的按鈕。  
+2. 加入名為 "Button1 to Form1" 的按鈕。  
   
-3.  在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件處理常式中新增下列程式碼：  
+3. 在 Button1 的 <xref:System.Windows.Forms.Control.Click> 事件處理常式中新增下列程式碼：  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  在偵錯工具中執行應用程式。  
+4. 在偵錯工具中執行應用程式。  
   
-5.  按下 **Button1**。  
+5. 按下 **Button1**。  
   
      應用程式會將下列資訊寫入應用程式的偵錯輸出與記錄檔中。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "58829369"
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  關閉應用程式。  
+6. 關閉應用程式。  
   
      如需如何檢視應用程式偵錯輸出視窗的資訊，請參閱[輸出視窗](/visualstudio/ide/reference/output-window)。 如需應用程式記錄檔位置的資訊，請參閱[逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "58829369"
 |`Critical`|`Critical`|  
 |`Error`|`Critical` 或 `Error`|  
 |`Warning`|`Critical`、 `Error`或 `Warning`|  
-|`Information`|`Critical`、`Error`、`Warning` 或 `Information`|  
+|`Information`|`Critical`、`Error`、`Warning`或 `Information`|  
 |`Verbose`|`Critical`、`Error`、`Warning`、`Information` 或 `Verbose`|  
 |`ActivityTracing`|`Start`、`Stop`、`Suspend`、`Resume` 或 `Transfer`|  
 |`All`|允許所有訊息。|  
@@ -71,7 +71,7 @@ ms.locfileid: "58829369"
   
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件  
   
-1.  在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。  
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選取 [開啟]。  
   
      -或-  
   
@@ -83,15 +83,15 @@ ms.locfileid: "58829369"
   
     3.  按一下 [加入]。  
   
-2.  找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。  
+2. 找出位於最上層 `<configuration>` 區段中 `<system.diagnostics>` 區段的 `<switches>` 區段。  
   
-3.  尋找可將 `DefaultSwitch` 新增至參數集合的項目。 該項目應該與下列項目類似：  
+3. 尋找可將 `DefaultSwitch` 新增至參數集合的項目。 該項目應該與下列項目類似：  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  將 `value` 屬性值變更為 "ActivityTracing"。  
+4. 將 `value` 屬性值變更為 "ActivityTracing"。  
   
-5.  App.config 檔案的內容應該類似下列 XML：  
+5. App.config 檔案的內容應該類似下列 XML：  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ ms.locfileid: "58829369"
     </configuration>  
     ```  
   
-6.  在偵錯工具中執行應用程式。  
+6. 在偵錯工具中執行應用程式。  
   
-7.  按下 **Button1**。  
+7. 按下 **Button1**。  
   
      應用程式會將下列資訊寫入應用程式的偵錯輸出與記錄檔中：  
   
@@ -130,7 +130,7 @@ ms.locfileid: "58829369"
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  關閉應用程式。  
+8. 關閉應用程式。  
   
 9. 將 `value` 屬性值變更回 "Information"。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "58829369"
   
 #### <a name="to-log-only-activity-tracing-events"></a>若只要記錄活動追蹤事件  
   
-1.  在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
+1. 在方案總管中，以滑鼠右鍵按一下 app.config，並選擇 [開啟]。  
   
      -或-  
   
@@ -158,11 +158,11 @@ ms.locfileid: "58829369"
   
     3.  按一下 [加入] 。  
   
-2.  在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。  
+2. 在方案總管中，以滑鼠右鍵按一下 app.config。 選擇 [開啟]。  
   
-3.  找出 `<listeners>` 區段，其位於具有 `name` 屬性 "DefaultSource" 之 `<source>` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<configuration>` 區段中的 `<system.diagnostics>` 區段下方。  
+3. 找出 `<listeners>` 區段，其位於具有 `name` 屬性 "DefaultSource" 之 `<source>` 區段中的 `<sources>` 區段下方。 `<sources>` 區段位於最上層 `<configuration>` 區段中的 `<system.diagnostics>` 區段下方。  
   
-4.  將此項目新增至 `<listeners>` 區段：  
+4. 將此項目新增至 `<listeners>` 區段：  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ ms.locfileid: "58829369"
     <add name="NewDefault"/>  
     ```  
   
-5.  找出位於最上層 `<sharedListeners>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。  
+5. 找出位於最上層 `<sharedListeners>` 區段中 `<system.diagnostics>` 區段的 `<configuration>` 區段。  
   
-6.  將此項目加入至該 `<sharedListeners>` 區段︰  
+6. 將此項目加入至該 `<sharedListeners>` 區段︰  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ ms.locfileid: "58829369"
   
      <xref:System.Diagnostics.EventTypeFilter> 篩選會採用 <xref:System.Diagnostics.SourceLevels> 列舉值之一作為其 `initializeData` 屬性。  
   
-7.  App.config 檔案的內容應該類似下列 XML：  
+7. App.config 檔案的內容應該類似下列 XML：  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ ms.locfileid: "58829369"
     </configuration>  
     ```  
   
-8.  在偵錯工具中執行應用程式。  
+8. 在偵錯工具中執行應用程式。  
   
 9. 按下 **Button1**。  
   
@@ -251,7 +251,7 @@ ms.locfileid: "58829369"
 
 - [逐步解說：判斷 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)
 - [逐步解說：變更 My.Application.Log 寫入資訊的位置](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-changing-where-my-application-log-writes-information.md)
-- [逐步解說：建立自訂的記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
-- [如何：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
+- [逐步解說：建立自訂記錄檔接聽程式](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-creating-custom-log-listeners.md)
+- [作法：寫入記錄檔訊息](../../../../visual-basic/developing-apps/programming/log-info/how-to-write-log-messages.md)
 - [追蹤參數](../../../../framework/debug-trace-profile/trace-switches.md)
 - [記錄來自應用程式的資訊](../../../../visual-basic/developing-apps/programming/log-info/index.md)

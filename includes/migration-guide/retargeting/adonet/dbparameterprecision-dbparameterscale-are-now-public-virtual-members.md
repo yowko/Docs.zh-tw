@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1721d32f8cdc9b6ea4b4732e38afa56a8a532600
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59234653"
+---
 ### <a name="dbparameterprecision-and-dbparameterscale-are-now-public-virtual-members"></a>DbParameter.Precision 和 DbParameter.Scale 現在是公用虛擬成員
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5.1|
 |類型|正在重定目標|
 |受影響的 API|<ul><li><xref:System.Data.Common.DbParameter.Precision?displayProperty=nameWithType></li><li><xref:System.Data.Common.DbParameter.Scale?displayProperty=nameWithType></li></ul>|
-

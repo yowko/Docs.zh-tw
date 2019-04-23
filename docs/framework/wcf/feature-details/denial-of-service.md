@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228873"
 ---
 # <a name="denial-of-service"></a>阻斷服務
@@ -28,13 +28,13 @@ ms.locfileid: "59228873"
   
  風險降低：使用下列屬性的<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>類別：  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>： 控制時間界限的最大數目`SecurityContextToken`伺服器會快取之後的 s`SPNego`或`SSL`交涉。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>：控制時間界限之 `SecurityContextToken` 的上限，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後快取的上限。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>： 控制的存留期`SecurityContextTokens`的下列伺服器問題`SPNego`或`SSL`交涉。 伺服器在這段時間內會快取 `SecurityContextToken`。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>：控制 `SecurityContextTokens` 的存留時間，而這是伺服器在 `SPNego` 或 `SSL` 交涉之後發出的存留時間。 伺服器在這段時間內會快取 `SecurityContextToken`。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>： 控制在伺服器上，但其任何應用程式訊息處理所建立的安全交談的最大數目。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>：控制在伺服器中建立的安全對話上限，但是不會針對這些對話處理應用程式訊息。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>： 控制服務讓安全對話保持運作而不會從交談的用戶端收到應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>：控制服務將安全對話保留在作用中，而不會從用戶端中接收該對話之應用程式訊息的時間上限。 這個配額會防止用戶端在服務中建立安全對話，由此服務會針對每個用戶端保留對話狀態，但不會使用這些對話。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding 或雙重自訂繫結需要用戶端驗證  
  根據預設，<xref:System.ServiceModel.WSDualHttpBinding> 已啟用安全性。 不過，如果透過將 <xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> 屬性設定為 <xref:System.ServiceModel.MessageCredentialType.None> 而停用用戶端驗證，則惡意使用者可能在第三個服務上導致阻絕服務攻擊。 可能是因為惡意用戶端可以導向至服務，並將訊息資料流傳送至第三個服務。  
@@ -82,9 +82,9 @@ ms.locfileid: "59228873"
 ## <a name="see-also"></a>另請參閱
 
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [竄改](../../../../docs/framework/wcf/feature-details/tampering.md)
 - [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228584"
 ---
 # <a name="importing-schema-to-generate-classes"></a>匯入結構描述以產生類別
@@ -52,7 +52,7 @@ ms.locfileid: "59228584"
   
  一般來說，公用型別是從結構描述產生的，其中包含私用欄位和相符的公用資料成員屬性。 如果要改為產生內部型別，請將 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 屬性設定為 `true`。  
   
- 下列範例示範結構描述轉換成內部類別時<xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A>屬性設定為 `true.`  
+ 下列範例會顯示當 <xref:System.Runtime.Serialization.ImportOptions.GenerateInternal%2A> 屬性設定為 `true.` 時，轉換成內部類別的結構描述。  
   
  [!code-csharp[c_SchemaImportExport#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_schemaimportexport/cs/source.cs#2)]
  [!code-vb[c_SchemaImportExport#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_schemaimportexport/vb/source.vb#2)]  

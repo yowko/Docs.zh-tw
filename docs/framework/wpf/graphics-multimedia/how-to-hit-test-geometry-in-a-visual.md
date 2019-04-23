@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Geometry objects [WPF], visual objects comprising
 ms.assetid: 8bf2643f-d7f9-4cb4-9ea6-5b893c23200d
 ms.openlocfilehash: 87b626e575d889447ef061d1ed62ef28efe5dfeb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227336"
 ---
 # <a name="how-to-hit-test-geometry-in-a-visual"></a>HOW TO：對視覺物件中的幾何進行點擊測試
@@ -38,4 +38,4 @@ ms.locfileid: "59227336"
 ## <a name="see-also"></a>另請參閱
 
 - [視覺分層中的點擊測試](hit-testing-in-the-visual-layer.md)
-- [使用幾何作為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)
+- [使用幾何做為參數進行點擊測試](how-to-hit-test-using-geometry-as-a-parameter.md)

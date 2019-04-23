@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8a7613ef-0df9-47c3-b8dc-47f42cb1fd8b
 ms.openlocfilehash: 53b6c809103a2a32d544b8317164a5fa3aa81596
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300550"
 ---
 # <a name="how-to-create-a-service-that-requires-sessions"></a>HOW TO：建立需要工作階段的服務
@@ -21,11 +21,11 @@ ms.locfileid: "59300550"
   
 2. 將 <xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 屬性設為下列其中一項，以修改宣告合約的 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType>：  
   
-    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> 如果必須在工作階段內執行合約。  
+    -   <xref:System.ServiceModel.SessionMode.Required?displayProperty=nameWithType> (如果必須在工作階段內執行合約的話)。  
   
-    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> 如果可以在工作階段內執行合約。  
+    -   <xref:System.ServiceModel.SessionMode.Allowed?displayProperty=nameWithType> (如果可以在工作階段內執行合約的話)。  
   
-    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> 如果在工作階段中，必須執行本合約。  
+    -   <xref:System.ServiceModel.SessionMode.NotAllowed?displayProperty=nameWithType> (如果不得在工作階段內執行合約的話)。  
   
 3. 將您的服務端點設定為使用支援工作階段的繫結。 下列組態範例說明可支援 WS<xref:System.ServiceModel.WSDualHttpBinding?displayProperty=nameWithType>ReliableMessaging 工作階段的 `-` 用法。  
   

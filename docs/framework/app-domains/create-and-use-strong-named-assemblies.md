@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59300693"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>建立和使用強式名稱的組件
 
@@ -34,17 +34,17 @@ ms.locfileid: "47198887"
 
 下列案例概述處理序如何使用強式名稱簽署組件，然後再使用該名稱參考該組件。
 
-1.  組件 A 是以下列方法之一，使用強式名稱所建立：
+1. 組件 A 是以下列方法之一，使用強式名稱所建立：
 
     -   使用支援建立強式名稱的開發環境，例如 Visual Studio。
 
     -   使用[強式名稱工具 (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) 建立密碼編譯金鑰組，並使用命令列編譯器或[組件連結器 (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) 將該金鑰組指派給組件。 Windows 軟體開發套件 (SDK) 提供 Sn.exe 和 Al.exe。
 
-2.  開發環境或工具會使用開發人員的私密金鑰簽署檔案雜湊，而該檔案中包含組件的資訊清單。 此數位簽章儲存在可攜式執行檔 (PE) 中，而該檔案包含組件 A 的 資訊清單。
+2. 開發環境或工具會使用開發人員的私密金鑰簽署檔案雜湊，而該檔案中包含組件的資訊清單。 此數位簽章儲存在可攜式執行檔 (PE) 中，而該檔案包含組件 A 的 資訊清單。
 
-3.  組件 B 是組件 A 的消費者。組件 B 的資訊清單參考區段包含代表組件 A 公開金鑰的語彙基元。 語彙基元是完整公開金鑰的一部分，會取代金鑰本身來節省空間。
+3. 組件 B 是組件 A 的消費者。組件 B 的資訊清單參考區段包含代表組件 A 公開金鑰的語彙基元。 語彙基元是完整公開金鑰的一部分，會取代金鑰本身來節省空間。
 
-4.  當組件放在全域組件快取時，Common Language Runtime 會驗證強式名稱簽草章。 Common Language Runtime 在執行階段以強式名稱繫結時，會比較儲存在組件 B 資訊清單的金鑰，以及用來產生組件 A 強式名稱的金鑰。若 .NET Framework 通過安全性檢查且繫結成功，組件 B 就能保證組件 A 的位元未被修改，而且確實來自組件 A 的開發人員。
+4. 當組件放在全域組件快取時，Common Language Runtime 會驗證強式名稱簽草章。 Common Language Runtime 在執行階段以強式名稱繫結時，會比較儲存在組件 B 資訊清單的金鑰，以及用來產生組件 A 強式名稱的金鑰。若 .NET Framework 通過安全性檢查且繫結成功，組件 B 就能保證組件 A 的位元未被修改，而且確實來自組件 A 的開發人員。
 
 > [!NOTE]
 > 此案例無法解決信任問題。 除了強式名稱之外，組件能夠包含完整的 Microsoft Authenticode 簽章。 Authenticode 簽章包含建立信任的憑證。 請務必注意，強式名稱不會要求程式碼以這種方式簽署。 強式名稱僅提供唯一身分識別。
@@ -67,13 +67,13 @@ ms.locfileid: "47198887"
 
 ## <a name="related-topics"></a>相關主題
 
-|標題|描述|
+|標題|說明|
 |-----------|-----------------|
-|[如何：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|描述如何建立簽署組件的密碼編譯金鑰組。|
-|[如何：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|描述如何建立強式名稱組件。|
+|[作法：建立公開/私密金鑰組](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|描述如何建立簽署組件的密碼編譯金鑰組。|
+|[作法：使用強式名稱簽署組件](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|描述如何建立強式名稱組件。|
 |[進階強式命名](../../../docs/framework/app-domains/enhanced-strong-naming.md)|描述 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 中強式名稱的改進項目。|
-|[如何：參考以強式名稱命名的組件](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|描述如何在編譯或執行階段期間，參考以強式名稱命名之組件中的類型或資源。|
-|[如何：停用強式名稱略過功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|描述如何停用會略過強式名稱簽章驗證的功能。 所有應用程式皆可停用此功能，也可以只停用特定應用程式中的此功能。|
+|[作法：參考以強式名稱命名的組件](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|描述如何在編譯或執行階段期間，參考以強式名稱命名之組件中的類型或資源。|
+|[作法：停用強式名稱略過功能](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|描述如何停用會略過強式名稱簽章驗證的功能。 所有應用程式皆可停用此功能，也可以只停用特定應用程式中的此功能。|
 |[建立組件](../../../docs/framework/app-domains/create-assemblies.md)|提供單一檔案和多檔案組件的概觀。|
 |[如何在 Visual Studio 中延遲簽署組件](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|說明如何在建立組件之後，使用強式名稱簽署組件。|
 |[Sn.exe (強式名稱工具)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)|描述 .NET Framework 中可協助使用強式名稱來建立組件的工具。 這個工具提供了金鑰管理、簽章產生和簽章驗證的選項。|

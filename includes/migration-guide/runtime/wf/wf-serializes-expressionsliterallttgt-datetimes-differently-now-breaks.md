@@ -1,4 +1,12 @@
-### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF 現在會以不同的方式來序列化 Expressions.Literal&lt;T&gt; DateTimes (中斷自訂 XAML 剖析器)
+---
+ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235340"
+---
+### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF 現在會以不同的方式來序列化 Expressions.Literal\<T> DateTimes (中斷自訂 XAML 剖析器)
 
 |   |   |
 |---|---|
@@ -7,4 +15,3 @@
 |範圍|Edge|
 |版本|4.5|
 |類型|執行階段|
-

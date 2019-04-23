@@ -10,10 +10,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
 ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301330"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>HOW TO：在設計階段設定 Windows Forms 的控制項工具提示
@@ -79,5 +79,5 @@ ms.locfileid: "59301330"
 ## <a name="see-also"></a>另請參閱
 
 - [ToolTip 元件概觀](tooltip-component-overview-windows-forms.md)
-- [HOW TO：變更 Windows Forms ToolTip 元件的延遲時間](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [如何：變更 Windows Form ToolTip 元件的延遲時間](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip 元件](tooltip-component-windows-forms.md)

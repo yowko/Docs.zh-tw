@@ -15,10 +15,10 @@ helpviewer_keywords:
 - namespaces [WPF]
 ms.assetid: 5c0854e3-7470-435d-9fe2-93eec9d3634e
 ms.openlocfilehash: c238bd3c014c07c541bed0c8f7bc12fc5a910f1b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301031"
 ---
 # <a name="xaml-namespaces-and-namespace-mapping-for-wpf-xaml"></a>WPF XAML 的 XAML 命名空間和命名空間對應
@@ -47,9 +47,9 @@ ms.locfileid: "59301031"
   
  語法會採用下列可能的具名語彙基元和值：  
   
- `clr-namespace:` CLR 命名空間宣告包含要做為項目公開 （expose） 的公用類型的組件內。  
+ `clr-namespace:` CLR 命名空間，其宣告位置是在包含要以項目形式公開之公用型別的組件中。  
   
- `assembly=` 包含部分或全部參考的組件[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]命名空間。 這個值通常只是組件的名稱，而不是路徑，亦不包含副檔名 (例如 .dll 或 .exe)。 您必須將該組件的路徑建立為專案檔中的專案參考，且專案檔中包含您要對應的 XAML。 為了加入版本控制和強式名稱簽署`assembly`所定義的值可以是字串<xref:System.Reflection.AssemblyName>，而不是簡單的字串名稱。  
+ `assembly=` 組件，其包含部分或全部參考的 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] 命名空間。 這個值通常只是組件的名稱，而不是路徑，亦不包含副檔名 (例如 .dll 或 .exe)。 您必須將該組件的路徑建立為專案檔中的專案參考，且專案檔中包含您要對應的 XAML。 為了加入版本控制和強式名稱簽署`assembly`所定義的值可以是字串<xref:System.Reflection.AssemblyName>，而不是簡單的字串名稱。  
   
  請注意，用來分隔 `clr-namespace` 語彙基元與其值的字元是冒號 (:)，而用來分隔 `assembly` 語彙基元與其值的字元是等號 (=)。 這兩個語彙基元之間要用的字元則是分號。 此外，不包含任何空白字元任何位置宣告中。  
   
@@ -99,7 +99,7 @@ End Namespace
 ```  
   
 ### <a name="mapping-to-current-assemblies"></a>對應至目前的組件  
- `assembly` 如果可以省略`clr-namespace`參考其定義會參考自訂類別的應用程式程式碼相同的組件。 或者，此案例的對等語法是指定 `assembly=`，且等號後面不用字串語彙基元。  
+ 如果參考的 `clr-namespace` 其定義組件位置與參考自訂類別的應用程式程式碼相同，您就可以省略 `assembly`。 或者，此案例的對等語法是指定 `assembly=`，且等號後面不用字串語彙基元。  
   
  如果自訂類別是在相同的組件中定義，就不能作為頁面的根項目。 部分類別不需要對應；如果您想要將部分類別作為 XAML 中的參考項目，則僅需要針對不屬於應用程式頁面之部分類別的類別，進行對應。  
   
@@ -112,9 +112,9 @@ End Namespace
 ## <a name="designer-namespaces-and-other-prefixes-from-xaml-templates"></a>設計工具命名空間和其他來自 XAML 範本的前置詞  
  如果您是使用 WPF XAML 的開發環境及/或設計工具，您可能會注意到 XAML 標記內含有其他已定義的 XAML 命名空間/前置詞。  
   
- [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用設計工具的命名空間，通常會對應至前置詞`d:`。 WPF 的較新專案範本可能會預先進行這個 XAML 命名空間的對應，以支援 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他設計環境之間的 XAML 交換。 這種 XAML 命名空間的設計用意是為了在設計工具中以 XAML 為基礎的 UI 之間來回時，永久保存設計狀態。 它也會用於 `d:IsDataSource` 這類功能，以啟用設計工具中的執行階段資料來源。  
+ [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 使用的設計工具命名空間，通常會對應至前置詞 `d:`。 WPF 的較新專案範本可能會預先進行這個 XAML 命名空間的對應，以支援 [!INCLUDE[wpfdesigner_current_long](../../../../includes/wpfdesigner-current-long-md.md)] 和其他設計環境之間的 XAML 交換。 這種 XAML 命名空間的設計用意是為了在設計工具中以 XAML 為基礎的 UI 之間來回時，永久保存設計狀態。 它也會用於 `d:IsDataSource` 這類功能，以啟用設計工具中的執行階段資料來源。  
   
- 另一個您可能會看到的對應前置詞是 `mc:`。 `mc:` 適用於標記相容性，並運用不一定是 XAML 特有的標記相容性模式。 標記相容性功能在某種程度來說，可以用來在架構之間或跨支援實作的其他界限交換 XAML、進行 XAML 結構描述內容之間的工作、在設計工具中的限制模式提供相容性等等。 如需標記相容性概念以及其如何關聯到 WPF 的詳細資訊，請參閱[標記相容性 (mc:)語言功能](markup-compatibility-mc-language-features.md)。  
+ 另一個您可能會看到的對應前置詞是 `mc:`。 `mc:` 適用於標記相容性，其可運用的標記相容性模式不一定為 XAML 特有。 標記相容性功能在某種程度來說，可以用來在架構之間或跨支援實作的其他界限交換 XAML、進行 XAML 結構描述內容之間的工作、在設計工具中的限制模式提供相容性等等。 如需標記相容性概念以及其如何關聯到 WPF 的詳細資訊，請參閱[標記相容性 (mc:)語言功能](markup-compatibility-mc-language-features.md)。  
   
 ## <a name="wpf-and-assembly-loading"></a>WPF 和組件載入  
  WPF 的 XAML 結構描述內容整合了 WPF 應用程式模型，它會使用 CLR 定義的概念<xref:System.AppDomain>。 下列序列說明 XAML 結構描述內容如何解譯如何載入組件，或尋找型別在執行的階段或設計階段，根據 WPF 使用<xref:System.AppDomain>以及其他因素。  

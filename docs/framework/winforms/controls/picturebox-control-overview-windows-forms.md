@@ -9,10 +9,10 @@ helpviewer_keywords:
 - image controls [Windows Forms], about image controls
 ms.assetid: e5befee7-dc29-4888-a7c4-3b177e394112
 ms.openlocfilehash: 54ae01789f972381304480c9faf28d084ac3f1db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227850"
 ---
 # <a name="picturebox-control-overview-windows-forms"></a>PictureBox 控制項概觀 (Windows Form)
@@ -24,7 +24,7 @@ Windows Form<xref:System.Windows.Forms.PictureBox>控制項用來顯示點陣圖
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.PictureBox>
-- [HOW TO：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)
-- [HOW TO：在執行階段修改圖片的大小或位置](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
-- [HOW TO：在執行階段設定圖片](how-to-set-pictures-at-run-time-windows-forms.md)
+- [如何：使用設計工具載入圖片](how-to-load-a-picture-using-the-designer-windows-forms.md)
+- [如何：在執行階段修改的大小或位置的圖片](how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms.md)
+- [如何：在執行階段設定圖案](how-to-set-pictures-at-run-time-windows-forms.md)
 - [PictureBox 控制項](picturebox-control-windows-forms.md)

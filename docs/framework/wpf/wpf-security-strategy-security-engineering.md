@@ -11,10 +11,10 @@ helpviewer_keywords:
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
 ms.openlocfilehash: 27258110a8852c00990d73cd9ca8685c3ead315d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300563"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF 安全性策略 – 安全性工程
@@ -75,7 +75,7 @@ ms.locfileid: "59300563"
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>測試技術  
- [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 使用不同的安全性測試技術，包括：  
+ [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 使用不同的安全性測試技術，包含：  
   
 -   **白箱測試**:測試人員檢視原始程式碼，並再建置入侵測試  
   
@@ -95,4 +95,4 @@ ms.locfileid: "59300563"
 - [WPF 部分信任安全性](wpf-partial-trust-security.md)
 - [WPF 安全性策略 – 平台安全性](wpf-security-strategy-platform-security.md)
 - [高可信度電腦運算](https://www.microsoft.com/mscorp/twc/default.mspx)
-- [.NET 的安全性](../../standard/security/index.md)
+- [在.NET 中的安全性](../../standard/security/index.md)

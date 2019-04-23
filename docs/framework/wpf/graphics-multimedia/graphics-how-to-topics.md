@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual effects [WPF]
 ms.assetid: 959cb1cc-d26c-4bbc-b637-251091987288
 ms.openlocfilehash: 3ddcb0b68e2b86393775c159a06f4c38dc7b6971
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230651"
 ---
 # <a name="graphics-how-to-topics"></a>圖形 HOW TO 主題
@@ -23,8 +23,8 @@ ms.locfileid: "59230651"
  [使用 PointAnimation 建立物件位置的動畫](how-to-animate-the-position-of-an-object-by-using-pointanimation.md)  
  [轉換點和向量](how-to-transform-points-and-vectors.md)  
  [將玻璃框架擴充至 WPF 應用程式中](extend-glass-frame-into-a-wpf-application.md)  
- [HOW TO：透過快取項目改善轉譯效能](how-to-improve-rendering-performance-by-caching-an-element.md)  
- [HOW TO：使用快取的項目作為筆刷](how-to-use-a-cached-element-as-a-brush.md)  
+ [如何：透過快取元素改善轉譯效能](how-to-improve-rendering-performance-by-caching-an-element.md)  
+ [如何：使用快取項目當做筆刷](how-to-use-a-cached-element-as-a-brush.md)  
   
 ## <a name="see-also"></a>另請參閱
 

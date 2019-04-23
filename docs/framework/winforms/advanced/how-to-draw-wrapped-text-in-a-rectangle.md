@@ -10,10 +10,10 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301917"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>HOW TO：在矩形中繪製換行文字
@@ -46,7 +46,7 @@ ms.locfileid: "59301917"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
+- [如何：使用 GDI 繪製文字](how-to-draw-text-with-gdi.md)
 - [使用字型和文字](using-fonts-and-text.md)
-- [HOW TO：建構字型家族和字型](how-to-construct-font-families-and-fonts.md)
-- [HOW TO：在指定的位置繪製文字](how-to-draw-text-at-a-specified-location.md)
+- [如何：建構字型系列和字型](how-to-construct-font-families-and-fonts.md)
+- [如何：在指定的位置繪製文字](how-to-draw-text-at-a-specified-location.md)

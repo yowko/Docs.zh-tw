@@ -3,10 +3,10 @@ title: 與 Enterprise Services 和 COM+ 交易的互通性
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301902"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>與 Enterprise Services 和 COM+ 交易的互通性
@@ -21,11 +21,11 @@ ms.locfileid: "59301902"
   
  <xref:System.Transactions.TransactionScope> 類別會提供可將 <xref:System.Transactions.EnterpriseServicesInteropOption> 接受為參數的建構函式。  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>顧名思義，表示沒有任何互通性之間<xref:System.EnterpriseServices>內容與交易範圍。 在使用 <xref:System.Transactions.TransactionScope> 建立了 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 之後，任何對 <xref:System.Transactions.Transaction.Current%2A> 所做的變更都不會反映在 COM+ 內容中。 同理，對 COM+ 內容中的交易所做的變更，也不會反映在 <xref:System.Transactions.Transaction.Current%2A> 中。 對於 <xref:System.Transactions> 來說，這種作業模式是最快速的，因為不需要額外的同步處理。 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 是所使用的預設值<xref:System.Transactions.TransactionScope>所有建構函式不接受<xref:System.Transactions.EnterpriseServicesInteropOption>做為參數。  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>顧名思義，表示沒有任何互通性之間<xref:System.EnterpriseServices>內容與交易範圍。 在使用 <xref:System.Transactions.TransactionScope> 建立了 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 之後，任何對 <xref:System.Transactions.Transaction.Current%2A> 所做的變更都不會反映在 COM+ 內容中。 同理，對 COM+ 內容中的交易所做的變更，也不會反映在 <xref:System.Transactions.Transaction.Current%2A> 中。 對於 <xref:System.Transactions> 來說，這種作業模式是最快速的，因為不需要額外的同步處理。 <xref:System.Transactions.EnterpriseServicesInteropOption.None> 預設會採用 <xref:System.Transactions.TransactionScope> 值，而且所有的建構函式也不接受 <xref:System.Transactions.EnterpriseServicesInteropOption> 做為參數。  
   
  如果您希望將 <xref:System.EnterpriseServices> 交易與您的環境交易結合，便需要使用 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 或 <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>。 這兩個值同時仰賴稱為服務的功能 (不包含元件)，因此在使用這些值的時候，您應該在 Windows XP Service Pack 2 或 Windows Server 2003 上執行。  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 指定的環境交易<xref:System.Transactions>和<xref:System.EnterpriseServices>永遠都是相同。 它最後會建立一個新的 <xref:System.EnterpriseServices> 交易式內容，並套用目前交易，讓 <xref:System.Transactions.TransactionScope> 成為該內容的目前交易。 這樣一來，<xref:System.Transactions.Transaction.Current%2A> 中的交易就會與 <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> 中的交易完全同步處理。 此值會對效能帶來負面影響，因為可能需要建立新的 COM+ 內容。  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 指定了 <xref:System.Transactions> 與 <xref:System.EnterpriseServices> 的環境交易一律相同。 它最後會建立一個新的 <xref:System.EnterpriseServices> 交易式內容，並套用目前交易，讓 <xref:System.Transactions.TransactionScope> 成為該內容的目前交易。 這樣一來，<xref:System.Transactions.Transaction.Current%2A> 中的交易就會與 <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> 中的交易完全同步處理。 此值會對效能帶來負面影響，因為可能需要建立新的 COM+ 內容。  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 指定了下列需求：  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59301902"
   
 3. 如果需要建立新的交易，則下列各項 <xref:System.Transactions.EnterpriseServicesInteropOption> 值將產生：  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>： 會建立與 COM + 內容相關聯的交易。  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>：會建立與 COM+ 內容相關聯的交易。  
   
     -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:<xref:System.Transactions>會建立交易。  
   

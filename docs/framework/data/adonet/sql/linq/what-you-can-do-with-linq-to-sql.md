@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231574"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL 的功能
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援所有需要的 SQL 開發人員的重要功能。 您可以查詢資訊，以及在資料表中插入、更新和刪除資訊。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援 SQL 開發人員需要的所有重要功能。 您可以查詢資訊，以及在資料表中插入、更新和刪除資訊。  
   
 ## <a name="selecting"></a>選取  
- 選取 (「*投影*」(Projection)) 的方式很簡單，只要以您自己的程式語言撰寫 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢，再執行該查詢來擷取結果即可。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將轉譯成 SQL 作業，您已熟悉所有必要的作業。 如需詳細資訊，請參閱 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
+ 選取 (「*投影*」(Projection)) 的方式很簡單，只要以您自己的程式語言撰寫 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] 查詢，再執行該查詢來擷取結果即可。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將所有必要的作業轉譯成熟悉的 SQL 作業。 如需詳細資訊，請參閱 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)。  
   
  在下列範例中，會擷取 London 客戶的公司名稱，並將它們顯示在主控台視窗中。  
   

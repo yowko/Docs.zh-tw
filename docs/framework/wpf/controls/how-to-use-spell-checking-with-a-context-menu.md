@@ -10,10 +10,10 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192975"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>HOW TO：使用操作功能表的拼字檢查
@@ -43,4 +43,4 @@ ms.locfileid: "59192975"
 - [TextBox 概觀](textbox-overview.md)
 - [RichTextBox 概觀](richtextbox-overview.md)
 - [在文字編輯控制項中啟用拼字檢查](how-to-enable-spell-checking-in-a-text-editing-control.md)
-- [在 TextBox 使用自訂操作功能表](how-to-use-a-custom-context-menu-with-a-textbox.md)
+- [在文字方塊使用自訂內容功能表](how-to-use-a-custom-context-menu-with-a-textbox.md)

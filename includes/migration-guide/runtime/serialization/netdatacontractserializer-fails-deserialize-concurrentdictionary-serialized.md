@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 380f662349a8dcd04e5bf445e1479d0a32d5861f
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59235174"
+---
 ### <a name="netdatacontractserializer-fails-to-deserialize-a-concurrentdictionary-serialized-with-a-different-net-version"></a>NetDataContractSerializer 無法將使用不同 .NET 版本序列化的 ConcurrentDictionary 還原序列化
 
 |   |   |
@@ -8,4 +16,3 @@
 |版本|4.5.1|
 |類型|執行階段|
 |受影響的 API|<ul><li><xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize(System.IO.Stream)?displayProperty=nameWithType></li></ul>|
-

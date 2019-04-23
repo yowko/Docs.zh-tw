@@ -6,14 +6,14 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301850"
 ---
 # <a name="localization-attributes-and-comments"></a>當地語系化屬性和註解
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是屬性，內部[!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)]原始碼，開發人員提供當地語系化的規則和提示所提供。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊： 可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解是 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] 原始程式碼內的屬性，並由開發人員提供以提供當地語系化的規則和提示。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 當地語系化註解包含兩組資訊︰可當地語系化屬性和自由格式當地語系化註解。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 當地語系化 API 使用可當地語系化屬性來指出要當地語系化的資源。 自由格式註解是應用程式作者想要包含的任何資訊。  
 
 <a name="Localizer_Comments_"></a>   
 ## <a name="localization-comments"></a>當地語系化註解  
@@ -23,7 +23,7 @@ ms.locfileid: "59301850"
   
 2. 在建置過程，您可以於 .proj 檔案中指定是否要保留組件中的自由格式當地語系化註解、去除註解的一部分，或去除所有註解。 去除的註解會放在不同的檔案中。 您可以使用 `LocalizationDirectivesToLocFile` 標記來指定選項，例如︰  
   
-     `<LocalizationDirectivesToLocFile>` *value* `</LocalizationDirectivesToLocFile>`  
+     `<LocalizationDirectivesToLocFile>` <值> `</LocalizationDirectivesToLocFile>`  
   
 3. 可以指派的值如下︰  
   
@@ -100,6 +100,6 @@ ms.locfileid: "59301850"
 ## <a name="see-also"></a>另請參閱
 
 - [WPF 的全球化](globalization-for-wpf.md)
-- [使用自動配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
-- [針對自動版面配置使用格線](how-to-use-a-grid-for-automatic-layout.md)
+- [使用自動版面配置建立按鈕](how-to-use-automatic-layout-to-create-a-button.md)
+- [針對自動版面配置使用方格](how-to-use-a-grid-for-automatic-layout.md)
 - [將應用程式當地語系化](how-to-localize-an-application.md)

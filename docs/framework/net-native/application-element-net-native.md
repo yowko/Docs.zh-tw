@@ -5,10 +5,10 @@ ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228298"
 ---
 # <a name="application-element-net-native"></a>\<應用程式 > 項目 (.NET Native)
@@ -60,21 +60,21 @@ ms.locfileid: "59228298"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<組件 >](../../../docs/framework/net-native/assembly-element-net-native.md)|將原則套用至特定組件中的所有類型。|  
-|[\<命名空間 >](../../../docs/framework/net-native/namespace-element-net-native.md)|將原則套用至特定命名空間中的所有類型。|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|將原則套用至特定組件中的所有類型。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|將原則套用至特定命名空間中的所有類型。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將原則套用至特定類型，例如類別或結構。|  
 |[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|將原則套用至建構的泛型類型。 例如，[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md) 項目可用來定義 `List<String>` 類型的原則。|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將原則套用至特定類型上的方法。|  
-|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|將原則套用至建構的泛型方法。|  
-|[\<屬性 >](../../../docs/framework/net-native/property-element-net-native.md)|將原則套用至特定類型上的屬性。|  
-|[\<欄位 >](../../../docs/framework/net-native/field-element-net-native.md)|將原則套用至特定類型上的欄位。|  
-|[\<事件 >](../../../docs/framework/net-native/event-element-net-native.md)|將原則套用至特定類型上的事件。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將原則套用至特定類型上的方法。|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|將原則套用至建構的泛型方法。|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|將原則套用至特定類型上的屬性。|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|將原則套用至特定類型上的欄位。|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|將原則套用至特定類型上的事件。|  
   
 ### <a name="parent-elements"></a>父項目  
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<指示詞 >](../../../docs/framework/net-native/directives-element-net-native.md)|執行階段指示詞檔案的根項目。|  
+|[\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md)|執行階段指示詞檔案的根項目。|  
   
 ## <a name="remarks"></a>備註  
  [\<Directives>](../../../docs/framework/net-native/directives-element-net-native.md) 元素可以包含零或一個 `<Application>` 元素。 不支援單一反映指示詞檔案中有多個 `<Application>` 元素。  
@@ -87,7 +87,7 @@ ms.locfileid: "59228298"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<Library> 項目](../../../docs/framework/net-native/library-element-net-native.md)
-- [\<Directives> 項目](../../../docs/framework/net-native/directives-element-net-native.md)
+- [\<文件庫 > 項目](../../../docs/framework/net-native/library-element-net-native.md)
+- [\<指示詞 > 項目](../../../docs/framework/net-native/directives-element-net-native.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193053"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows Form 中事件的順序
@@ -82,4 +82,4 @@ ms.locfileid: "59193053"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
