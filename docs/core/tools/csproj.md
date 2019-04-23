@@ -2,12 +2,12 @@
 title: 適用於 .NET Core 之 csproj 格式的新增項目
 description: 深入了解現有和 .NET Core csproj 檔案之間的差異
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517326"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611090"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>適用於 .NET Core 之 csproj 格式的新增項目
 
@@ -325,8 +325,10 @@ license-expression =  1*1(simple-expression / compound-expression / UNLICENSED)
 決定要置放所封裝之套件的輸出路徑。 預設為 `$(OutputPath)`。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+此布林值會指出在封裝專案時，套件是否應該建立額外的符號套件。 符號套件的格式由 `SymbolPackageFormat` 屬性控制。
 
-此布林值會指出在封裝專案時，套件是否應該建立額外的符號套件。 此套件的副檔名為 *.symbols.nupkg*，將連同 DLL 和其他輸出檔一起複製 PDB 檔案。
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+指定符號套件的格式。 如果是 "symbols.nupkg"，將使用包含 PDB、DLL 和其他輸出檔案的 *.symbols.nupkg* 副檔名建立舊版符號套件。 如果是 "snupkg"，將建立一個包含可攜式 PDB 的 snupkg 符號套件。 預設值為 "symbols.nupkg"。
 
 ### <a name="includesource"></a>IncludeSource
 

@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 12/31/2018
-ms.openlocfilehash: e9a69c61df574ea391622ebb709c14948c71014d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 086be4649f4e7e27ff98df6f26d08856683865c8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59341721"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611779"
 ---
 # <a name="whats-new-in-net-core-30-preview-2"></a>.NET Core 3.0 (Preview 2) 的新功能
 
@@ -31,9 +31,9 @@ ms.locfileid: "59341721"
 
 .NET Core 3.0 支援 C#8，並從 .NET Core 3.0 Preview 2 開始，支援這些新功能。 如需 C# 8.0 功能的詳細資訊，請參閱下列部落格文章：
 
-- [在 C# 8.0 中進一步運用模式](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
-- [開始試用 C# 8.0](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
-- [建置 C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
+- [Do more with patterns in C# 8.0](https://devblogs.microsoft.com/dotnet/do-more-with-patterns-in-c-8-0/)
+- [Take C# 8.0 for a spin](https://devblogs.microsoft.com/dotnet/take-c-8-0-for-a-spin/)
+- [Building C# 8.0](https://devblogs.microsoft.com/dotnet/building-c-8-0/)
 
 ### <a name="ranges-and-indices"></a>範圍和索引
 
@@ -63,7 +63,7 @@ async IAsyncEnumerable<int> GetBigResultsAsync()
 {
     await foreach (var result in GetResultsAsync())
     {
-        if (result > 20) yield return result; 
+        if (result > 20) yield return result;
     }
 }
 ```
@@ -166,20 +166,20 @@ static string Display(object o) => o switch
 
 ## <a name="build-copies-dependencies"></a>組建複本相依性
 
-`dotnet build` 現在會從 NuGet 快取將您應用程式的 NuGet 相依性複製到組建輸出資料夾。 先前，只有在進行 `dotnet publish` 的過程中，才會複製相依性。 
+`dotnet build` 現在會從 NuGet 快取將您應用程式的 NuGet 相依性複製到組建輸出資料夾。 先前，只有在進行 `dotnet publish` 的過程中，才會複製相依性。
 
 有些作業 (例如連結和 Razor 頁面發佈) 仍然需要發佈。
 
 ## <a name="local-dotnet-tools"></a>本機 dotnet 工具
 
->[!WARNING]
->在 .NET Core 3.0 Preview 1 與 .NET Core 3.0 Preview 2 之間，.NET Core 本機工具已發生變更。  如果您執行 `dotnet tool restore` 或 `dotnet tool install` 這類命令，嘗試 Preview 1 中的本機工具，則需要先刪除您的本機工具快取資料夾，然後本機工具才能在 Preview 2 中正常運作。 此資料夾位於：
+> [!WARNING]
+> 在 .NET Core 3.0 Preview 1 與 .NET Core 3.0 Preview 2 之間，.NET Core 本機工具已發生變更。  如果您執行 `dotnet tool restore` 或 `dotnet tool install` 這類命令，嘗試 Preview 1 中的本機工具，則需要先刪除您的本機工具快取資料夾，然後本機工具才能在 Preview 2 中正常運作。 此資料夾位於：
 >
->在 mac、Linux 上： `rm -r $HOME/.dotnet/toolResolverCache`
+> 在 mac、Linux 上：`rm -r $HOME/.dotnet/toolResolverCache`
 >
->在 Windows 上： `rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
+> 在 Windows 上：`rmdir /s %USERPROFILE%\.dotnet\toolResolverCache`
 >
->如果您沒有刪除此資料夾，則會收到錯誤。
+> 如果您沒有刪除此資料夾，則會收到錯誤。
 
 .NET Core 2.1 支援全域工具，.NET Core 3.0 現在則具有本機工具。 本機工具與全域工具類似，但與磁碟上的某個特定位置相關聯。 這可針對個別專案和個別存放庫提供工具。 所有安裝在本機的工具都不是全域可用的工具。 這些工具是以 NuGet 套件形式散發。
 
@@ -309,10 +309,12 @@ Visual Studio 2017 15.9 新增了[啟用 .NET Core 預覽](https://devblogs.micr
 
 Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-packaging-dot-net) \(機器翻譯\) 可讓您利用[獨立式](../deploying/index.md#self-contained-deployments-scd) .NET Core 應用程式建立 MSIX 套件。
 
->注意:.NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
-```xml
-<RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
-```
+> [!NOTE]
+> .NET Core 專案檔必須指定在 `<RuntimeIdentifiers>` 屬性中支援的執行階段：
+>
+> ```xml
+> <RuntimeIdentifiers>win-x86;win-x64</RuntimeIdentifiers>
+> ```
 
 ## <a name="fast-built-in-json-support"></a>快速的內建 JSON 支援
 
@@ -322,7 +324,7 @@ Visual Studio 2019 中提供的 [Windows 應用程式套件專案](https://docs.
 
 ### <a name="utf8jsonreader"></a>Utf8JsonReader
 
-`System.Text.Json.Utf8JsonReader` 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，其會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 **Json.NET** 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
+`System.Text.Json.Utf8JsonReader` 是一個高效能、低配置、只能順向讀取的 UTF-8 編碼 JSON 文字讀取器，會從 `ReadOnlySpan<byte>` 開始讀取。 `Utf8JsonReader` 是一個基礎的低階類型，可用來建置自訂剖析器和還原序列化程式。 使用新的 `Utf8JsonReader` 來讀取 JSON 承載會比使用來自 **Json.NET** 的讀取器快兩倍。 它會等到您需要將 JSON 權杖實現為 (UTF-16) 字串時，才進行配置。
 
 這個新 API 將包含下列元件：
 
@@ -379,7 +381,7 @@ public static void Utf8JsonReaderLoop(ReadOnlySpan<byte> dataUtf8)
 
 ### <a name="utf8jsonwriter"></a>Utf8JsonWriter
 
-`System.Text.Json.Utf8JsonWriter` 能提供高效能、非快取、僅轉接的方式，來從常見的 .NET 類型 (像是 `String`、`Int32` 和 `DateTime`) 撰寫 UTF-8 編碼的 JSON 文字。 如同讀取器，寫入器是一個基礎的低階類型，可用來組建自訂序列化程式。 使用新的 `Utf8JsonWriter` 撰寫 JSON 承載，其速度比從 **Json.NET** 使用寫入器還要快 30-80%，而且不會配置。
+`System.Text.Json.Utf8JsonWriter` 提供高效能、非快取、僅轉接方式，從常見的 .NET 類型 (像是 `String`、`Int32` 和 `DateTime`) 撰寫 UTF-8 編碼的 JSON 文字。 如同讀取器，寫入器是一個基礎的低階類型，可用來組建自訂序列化程式。 使用新的 `Utf8JsonWriter` 撰寫 JSON 承載，其速度比從 **Json.NET** 使用寫入器還要快 30-80%，而且不會配置。
 
 以下是 `Utf8JsonWriter` 的使用方式樣本，其可作為起點：
 
@@ -421,11 +423,11 @@ static int WriteJson(IBufferWriter<byte> output, long[] extraData)
 }
 ```
 
-`Utf8JsonWriter` 接受 `IBufferWriter<byte>` 作為輸出位置，以同步方式將 json 資料寫入其中，而且身為呼叫者的您需要提供具體實作。 平台目前不包含這個介面的實作。 如需 [ 的範例，請參閱 `IBufferWriter<byte>`https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35](https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35)
+`Utf8JsonWriter` 接受 `IBufferWriter<byte>` 作為輸出位置，以同步方式將 json 資料寫入其中，而且身為呼叫者的您需要提供具體實作。 平台目前不包含這個介面的實作。 如需 `IBufferWriter<byte>` 的範例，請參閱 <https://gist.github.com/ahsonkhan/c76a1cc4dc7107537c3fdc0079a68b35>。
 
 ### <a name="jsondocument"></a>JsonDocument
 
-`System.Text.Json.JsonDocument` 是建置在 `Utf8JsonReader` 之上。 `JsonDocument` 可讓您剖析 JSON 資料和組建唯讀文件物件模型 (DOM)，而您可以查詢此模型來支援隨機存取和列舉。 撰寫資料的 JSON 元素可以透過 `JsonElement` 類型來存取，而此類型被 `JsonDocument` 屬性公開為名為 `RootElement` 的屬性。 `JsonElement` 包含 JSON 陣列和物件列舉程式，以及將 JSON 文字轉換為一般.NET 類型的 API。 使用 `JsonDocument` 剖析一般 JSON 承載，並存取其所有成員，速度比 **Json.NET** 還要快 2-3 倍，而且極少配置合理大小 (亦即 < 1 MB) 的資料。
+`System.Text.Json.JsonDocument` 是組建在 `Utf8JsonReader` 之上。 `JsonDocument` 可讓您剖析 JSON 資料和組建唯讀文件物件模型 (DOM)，而您可以查詢此模型來支援隨機存取和列舉。 撰寫資料的 JSON 元素可以透過 `JsonElement` 類型來存取，而此類型被 `JsonDocument` 屬性公開為名為 `RootElement` 的屬性。 `JsonElement` 包含 JSON 陣列和物件列舉程式，以及將 JSON 文字轉換為一般.NET 類型的 API。 使用 `JsonDocument` 剖析一般 JSON 承載，並存取其所有成員，速度比 **Json.NET** 還要快 2-3 倍，而且極少配置合理大小 (亦即 < 1 MB) 的資料。
 
 以下是 `JsonDocument` 和 `JsonElement` 的使用方式樣本，其可作為起點：
 
@@ -466,7 +468,7 @@ static double ParseJson()
 
 這項新功能可以用於如下情節：
 
-* 需要動態外掛程式載入和卸載的外掛程式情節。 
+* 需要動態外掛程式載入和卸載的外掛程式情節。
 * 動態編譯、執行，然後清除程式碼。 適用於網站、指令碼引擎等等。
 * 載入組件進行內部檢查 (例如 ReflectionOnlyLoad)，但在許多情況下，[MetadataLoadContext](#type-metadataloadcontext) (已在 Preview 1 中發佈) 將會是更好的選項。
 
@@ -484,7 +486,7 @@ Windows 提供了豐富的原生 API，其採用的形式為一般 C API、COM �
 
 ## <a name="type-sequencereader"></a>類型：SequenceReader
 
-在 .NET Core 3.0 中已新增 `System.Buffers.SequenceReader`，這可用來作為 `ReadOnlySequence<T>` 的讀取器。 這可讓您以輕鬆、高效能、低配置的方式，剖析可跨多個支援緩衝區的 `System.IO.Pipelines` 資料。 
+在 .NET Core 3.0 中已新增 `System.Buffers.SequenceReader`，這可用來作為 `ReadOnlySequence<T>` 的讀取器。 這可讓您以輕鬆、高效能、低配置的方式，剖析可跨多個支援緩衝區的 `System.IO.Pipelines` 資料。
 
 下列範例將輸入 `Sequence` 分成以 `CR/LF` 分隔的有效行：
 
@@ -517,9 +519,9 @@ public static void ReadLines(ReadOnlySequence<byte> sequence)
 
 ## <a name="type-metadataloadcontext"></a>類型：MetadataLoadContext
 
-已新增 `MetadataLoadContext` 類型，可讓您讀取組件中繼資料，而不會影響到呼叫端的應用程式網域。 讀取組件 (包括為與目前執行階段環境不同的架構和平台建置的組件) 時，會將組件當作資料來讀取。 `MetadataLoadContext` 會與 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> (僅在 .NET Framework 中提供) 重疊。
+已新增 `MetadataLoadContext` 類型，可讓您讀取組件中繼資料，而不會影響到呼叫端的應用程式網域。 讀取組件 (包括為與目前執行階段環境不同的架構和平台建置的組件) 時，會將組件當作資料來讀取。 `MetadataLoadContext` 與 <xref:System.Reflection.Assembly.ReflectionOnlyLoad*> (只有在 .NET Framework 中才有提供) 重疊。
 
-`MetdataLoadContext` 於 [System.Reflection.MetadataLoadContext 套件](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext) \(英文\) 中提供。 這是一個 .NET Standard 2.0 套件。
+`MetdataLoadContext` 是 [System.Reflection.MetadataLoadContext 套件](https://www.nuget.org/packages/System.Reflection.MetadataLoadContext)中所提供的類型。 這是一個 .NET Standard 2.0 套件。
 
 `MetadataLoadContext` 公開 API 的方式與 <xref:System.Runtime.Loader.AssemblyLoadContext> 類型類似，但並非以該類型為基礎。 就像 <xref:System.Runtime.Loader.AssemblyLoadContext> 一樣，`MetadataLoadContext` 也可讓您載入已隔離之組件載入 Universe 內的組件。 `MetdataLoadContext` API 會傳回 <xref:System.Reflection.Assembly> 物件，以讓您使用熟悉的反映 API。 執行導向 API (例如 [MethodBase.Invoke](https://github.com/dotnet/corefx/blob/master/src/System.Reflection.MetadataLoadContext/src/System/Reflection/TypeLoading/Methods/RoMethod.cs#L127)) 不是允許使用的 API，將會擲回 InvalidOperationException。
 
@@ -663,7 +665,7 @@ namespace rsakeyprint
             {
                 byte[] keyBytes = File.ReadAllBytes(args[0]);
                 rsa.ImportRSAPrivateKey(keyBytes, out int bytesRead);
- 
+
                 Console.WriteLine($"Read {bytesRead} bytes, {keyBytes.Length-bytesRead} extra byte(s) in file.");
                 RSAParameters rsaParameters = rsa.ExportParameters(true);
                 Console.WriteLine(BitConverter.ToString(rsaParameters.D));
@@ -709,7 +711,7 @@ privateExponent:
 
 ## <a name="more-bcl-improvements"></a>更多 BCL 改進
 
-在 .NET Core 3.0 中，已將在 .NET Core 2.1 中導入的 `Span<T>`、`Memory<T>` 及相關類型最佳化。 範圍建構、配量、剖析及格式化等常見作業現在執行效能更佳。 
+在 .NET Core 3.0 中，已將在 .NET Core 2.1 中導入的 `Span<T>`、`Memory<T>` 及相關類型最佳化。 範圍建構、配量、剖析及格式化等常見作業現在執行效能更佳。
 
 此外，`String` 這類類型也有隱含的改進，使其在搭配 `Dictionary<TKey, TValue>` 及其他集合作為金鑰使用時更有效率。 您無須進行任何程式碼變更，即可享有這些改進的好處。
 
@@ -751,7 +753,7 @@ privateExponent:
 ```console
 sudo snap install dotnet-sdk --beta --classic
 ```
- 
+
 使用嵌入式管理單元套件安裝 .NET Core 時，預設 .NET Core 命令是 `dotnet-sdk.dotnet`，而非只是 `dotnet`。 命名空間命令的優點是，不會與您可能已全域安裝的 .NET Core 版本發生衝突。 可以使用下列方式，將這個命令的別名設為 `dotnet`：
 
 ```console

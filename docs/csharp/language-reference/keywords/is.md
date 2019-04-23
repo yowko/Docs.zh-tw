@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480829"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672455"
 ---
 # <a name="is-c-reference"></a>is (C# 參考)
 
@@ -144,7 +144,7 @@ ms.locfileid: "59480829"
  
 ### <a name="var" /> var 模式 </a>
 
-搭配 var 模式的模式比對針對非 Null 運算式一律會成功；如果 *expr* 是 `null`，則 `is` 運算式便會為 `false`。 *expr* 的非 Null 值一律會被指派至類型與 *expr* 的執行階段時間類型相同的本機變數。  它的語法為：
+`var` 模式是任何類型或值的全能模式。 *expr* 的值一律會被指派至類型與 *expr* 的編譯時間類型相同的區域變數。 `is` 運算式的結果一律是 `true`。 它的語法為：
 
 ```csharp 
    expr is var varname

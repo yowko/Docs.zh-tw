@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610804"
+---
 # <a name="contributing"></a>貢獻
 
 感謝您對參與 .NET 文件感興趣！
@@ -24,7 +32,7 @@
 
 您需要對 [Git 和 GitHub.com](https://guides.github.com/activities/hello-world/) 有基本了解。
 
-**步驟 1：** 若只進行小量變更，請略過此步驟。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
+**步驟 1：** 針對小型變更 (例如，如果您正在修正拼寫錯誤或立即開啟提取要求，以解決您在文件中找到的問題) 略過此步驟。 如果您有興趣撰寫新內容或徹底修訂現有的內容，請開立一個描述您所要執行動作的[問題](https://github.com/dotnet/docs/issues)。
 [docs] 資料夾中的內容會組織成目錄 (TOC) 中所反映的各個小節。 請定義主題在 TOC 中的位置。 取得您提案的意見反應。
 
 -或-

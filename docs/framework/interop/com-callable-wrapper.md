@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309481"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613248"
 ---
 # <a name="com-callable-wrapper"></a>COM 可呼叫包裝函式
 
@@ -64,7 +64,7 @@ CCW 會以與 COM 強制進行介面型互動一致的方式，向 COM 用戶端
 |---------------|-----------------|
 |(\_*classname*) 類別介面|由執行階段公開且未明確定義的介面，它會公開所有公用介面、方法、屬性和 Managed 物件上明確公開的欄位。|
 |**IConnectionPoint** 和 **IConnectionPointContainer**|來源為以委派為基礎之事件的物件介面 (註冊事件訂閱者用的介面)。|
-|**IDispatchEx**|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫呼叫。|
+|**IDispatchEx**|如果類別實作 **IExpando**，則為執行階段提供的介面。 **IDispatchEx** 介面是 **IDispatch** 介面的延伸模組，它不同於 **IDispatch**，可進行成員的列舉、新增、刪除和區分大小寫的呼叫。|
 |**IEnumVARIANT**|集合類型類別的介面，如果類別實作 **IEnumerable**，它會列舉集合中的物件。|
 
 ## <a name="introducing-the-class-interface"></a>類別介面簡介
@@ -182,7 +182,7 @@ public class LoanApp
 
 雙重介面可讓 COM 用戶端進行介面成員的早期和晚期繫結。 在設計階段和測試期間，您可能會發現將類別介面設為雙重很有用。 對於絕對不會修改的 Managed 類別 (和其基底類別)，此選項也是可以接受的。 在其他情況下，請避免將類別介面設定為雙重。
 
-自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 (**ClassInterfaceType.AutoDual**) 會在匯出的型別程式庫中提供類別介面的描述。 這類描述鼓勵晚期繫結的用戶端在執行階段快取 DispId。
+自動產生的雙重介面可能適合於少數情況，不過，通常它會造成與版本相關的複雜性。 例如，使用衍生類別之類別介面的 COM 用戶端，可能會因為對基底類別的變更而輕易地中斷。 當協力廠商提供基底類別時，類別介面的配置會超出您的控制。 此外，不同於僅分派介面，雙重介面 (**ClassInterfaceType.AutoDual**) 會在匯出的型別程式庫中提供類別介面的描述。 此類描述鼓勵晚期繫結的用戶端在編譯時間快取 DispId。
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>請確定所有 COM 事件通知都是晚期繫結的。
 

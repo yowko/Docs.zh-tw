@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427379"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672390"
 ---
 # <a name="-operator-c-reference"></a>?:運算子 (C# 參考)
 
@@ -42,6 +42,12 @@ a ? b : c ? d : e
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+一個方便您記住此運算子進行評估之方式的方法，就是透過詢問： 
+```
+is this condition true ? yes : no
+```
+運算子的 ? 部分 作為上一個陳述式的問號，後續則作為對這個問題的邏輯回答。
 
 下列範例示範條件運算子的用法：
 
@@ -84,9 +90,9 @@ condition ? ref consequent : ref alternative
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計手冊](../../programming-guide/index.md)
+- [C# 程式設計指南](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - [if-else 陳述式](../keywords/if-else.md)
 - [?. 和 ?[] 運算子](null-conditional-operators.md)
-- [?? 運算子](null-coalescing-operator.md)
+- [??運算子](null-coalescing-operator.md)
 - [ref 關鍵字](../keywords/ref.md)

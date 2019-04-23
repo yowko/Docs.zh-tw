@@ -4,12 +4,12 @@ description: 微服務必須設計為能夠承受暫時性的網路和相依性�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465811"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672351"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>微服務中的復原和高可用性
 
@@ -42,7 +42,7 @@ ms.locfileid: "58465811"
 
 在整合型伺服器應用程式中，您可以只將記錄寫入磁碟的檔案 (記錄檔)，再使用任何工具予以分析。 因為應用程式執行僅限於固定的伺服器或 VM，所以分析事件流程一般不會太複雜。 不過，在多項服務跨許多協調器叢集節點執行的分散式應用程式中，能夠讓分散式事件相互關聯是一項挑戰。
 
-微服務型應用程式不應該嘗試自行儲存事件或記錄檔的輸出資料流，甚至不應該嘗試管理事件路由至中央位置。 它應該是透明的，意即每個處理序都應該只將自己的事件資料流寫入標準輸出，隨後由其執行所在之執行環境基礎結構收集。 這些事件資料流路由器的範例之一是 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)，它會收集多個來源的事件資料流，並將它發佈至輸出系統。 這些包括開發環境或雲端系統的簡單標準輸出，例如 [Application Insights](https://azure.microsoft.com/services/application-insights/)、[OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (適用於內部部署應用程式) 和 [Azure 診斷](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics)。 也有良好的協力廠商記錄分析平台和工具，可以搜尋、警示、報告以及監視記錄，甚至是即時的，例如 [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)。
+微服務型應用程式不應該嘗試自行儲存事件或記錄檔的輸出資料流，甚至不應該嘗試管理事件路由至中央位置。 它應該是透明的，意即每個處理序都應該只將自己的事件資料流寫入標準輸出，隨後由其執行所在之執行環境基礎結構收集。 這些事件資料流路由器的範例之一是 [Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow)，它會收集多個來源的事件資料流，並將它發佈至輸出系統。 這些包括開發環境或雲端系統的簡單標準輸出，例如 [Azure 監視器](https://azure.microsoft.com/services/monitor//)和 [Azure 診斷](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview)。 也有良好的協力廠商記錄分析平台和工具，可以搜尋、警示、報告以及監視記錄，甚至是即時的，例如 [Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA)。
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>協調器管理健康狀態和診斷資訊
 
@@ -59,22 +59,22 @@ ms.locfileid: "58465811"
 ## <a name="additional-resources"></a>其他資源
 
 - **十二要素應用程式。XI.記錄檔：將記錄檔視為事件資料流** \
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - **Microsoft 診斷 EventFlow 程式庫** GitHub 存放庫 \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **什麼是 Azure 診斷** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **在 Azure 中將 Windows 電腦連線至 Log Analytics 服務** \
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **將 Windows 電腦連線到 Azure 監視器服務** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **記錄您的意義：使用語意記錄應用程式區塊** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 官方網站。 \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - Windows 事件追蹤 (ETW) **EventSource Class** API
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

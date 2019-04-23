@@ -3,12 +3,12 @@ title: C# 型別和變數 - C# 語言教學課程
 description: 了解如何在 C# 中定義類型和宣告變數
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: 552066ff8d17d49dc5cc0bbb60b05c9c3e5f8eda
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59481076"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672364"
 ---
 # <a name="types-and-variables"></a>型別與變數
 
@@ -18,31 +18,42 @@ C# 的實值型別可進一步細分為*簡單型別*、*列舉型別*、*結構
 
 以下提供 C# 的型別系統概觀。
 
-* 值類型
-  - 簡單型別
-    * 帶正負號的整數︰`sbyte`、`short`、`int`、 `long`
-    * 不帶正負號的整數︰`byte`、`ushort`、`uint`、 `ulong`
-    * Unicode 字元： `char`
-    * IEEE 浮點數：`float`、 `double`
-    * 高精確度十進位︰ `decimal`
-    * 布林值： `bool`
-  - 列舉型別
+* [實值型別][ValueTypes]
+  - [簡單型別][SimpleTypes]
+    * 帶正負號的整數︰`sbyte`、`short`、`int`、`long`
+    * 不帶正負號的整數︰`byte`、`ushort`、`uint`、`ulong`
+    * Unicode 字元：`char`
+    * IEEE 浮點數：`float`、`double`
+    * 高精確度十進位︰`decimal`
+    * 布林值：`bool`
+  - [列舉型別][EnumTypes]
     * 使用者定義型別，格式為 `enum E {...}`
-  - 結構型別
+  - [結構型別][StructTypes]
     * 使用者定義型別，格式為 `struct S {...}`
-  - 可為 Null 的實值型別
+  - [可為 Null 的實值型別][NullableTypes]
     * 含有 `null` 值的所有其他數值型別的擴充
-* 參考型別
-  - 類別型別
-    * 所有其他型別的 Ultimate 基底類別︰ `object`
-    * Unicode 字串： `string`
+* [參考型別][ReferenceTypes]
+  - [類別型別][ClassTypes]
+    * 所有其他型別的基底類別︰`object`
+    * Unicode 字串：`string`
     * 使用者定義型別，格式為 `class C {...}`
-  - 介面型別
+  - [介面型別][InterfaceTypes]
     * 使用者定義型別，格式為 `interface I {...}`
-  - 陣列型別
+  - [陣列型別][ArrayTypes]
     * 單一維度和多維度，例如 `int[]` 和 `int[,]`
-  - 委派型別
+  - [委派型別][DelegateTypes]
     * 使用者定義型別，格式為 `delegate int D(...)`
+
+[ValueTypes]: ../language-reference/keywords/value-types-table.md
+[SimpleTypes]: ../language-reference/keywords/value-types.md#simple-types
+[EnumTypes]: ../language-reference/keywords/enum.md
+[StructTypes]: ../language-reference/keywords/struct.md
+[NullableTypes]: ../programming-guide/nullable-types/index.md
+[ReferenceTypes]: ../language-reference/keywords/reference-types.md
+[ClassTypes]: ../language-reference/keywords/class.md
+[InterfaceTypes]: ../language-reference/keywords/interface.md
+[DelegateTypes]: ../language-reference/keywords/delegate.md
+[ArrayTypes]: ../programming-guide/arrays/index.md
 
 八種整數型別支援 8 位元、16 位元、32 位元和 64 位元的值 (帶正負號或不帶正負號)。
 
@@ -57,20 +68,20 @@ C# 中的字元和字串處理使用 Unicode 編碼方式。 `char` 型別代表
 以下摘要說明 C# 的數值型別。
 
 * 帶正負號的整數
-  - `sbyte`:8 位元，-128 到 127 之間
-  - `short`:16 位元，-32,768 到 32,767 之間
-  - `int`  :32 位元，-2,147,483,648 到 2,147,483,647 之間
-  - `long` :64 位元，-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之間
+  - `sbyte`：8 位元，-128 到 127 之間
+  - `short`：16 位元，-32,768 到 32,767 之間
+  - `int`：32 位元，-2,147,483,648 到 2,147,483,647 之間
+  - `long`：64 位元，-9,223,372,036,854,775,808 到 9,223,372,036,854,775,807 之間
 * 不帶正負號的整數
-  - `byte`   :8 位元，0 到 255 之間
-  - `ushort` :16 位元，0 到 65,535 之間
-  - `uint`   :32 位元，0 到 4,294,967,295 之間
-  - `ulong`  :64 位元，0 到 18,446,744,073,709,551,615 之間
+  - `byte`：8 位元，0 到 255 之間
+  - `ushort`：16 位元，0 到 65,535 之間
+  - `uint`：32 位元，0 到 4,294,967,295 之間
+  - `ulong`：64 位元，0 到 18,446,744,073,709,551,615 之間
 * 浮點
-  - `float`  :32 位元，1.5 × 10</sup>-45<sup> 到 3.4 × 10</sup>38</sup> 之間，7 位數精確度
-  - `double` :64 位元，5.0 × 10</sup>−324<sup> 到 1.7 × 10</sup>308</sup> 之間，15 位數精確度
+  - `float`：32 位元，1.5 × 10<sup>-45</sup> 到 3.4 × 10<sup>38</sup> 之間，7 位數精確度
+  - `double`：64 位元，5.0 × 10<sup>−324</sup> 到 1.7 × 10<sup>308</sup> 之間，15 位數精確度
 * Decimal
-  - `decimal` :128 位元，至少在 -7.9 × 10</sup>-28<sup> 到 7.9 × 10</sup>28</sup> 之間，至少 28 位數精確度
+  - `decimal`：128 位元，至少在 -7.9 × 10<sup>-28</sup> 到 7.9 × 10<sup>28</sup> 之間，至少 28 位數精確度
 
 C# 程式使用*型別宣告*來建立新型別。 型別宣告指定新型別的名稱成員。 可由使用者定義的五種 C# 型別類型︰類別型別、結構型別、介面型別、列舉型別及委派型別。
 
