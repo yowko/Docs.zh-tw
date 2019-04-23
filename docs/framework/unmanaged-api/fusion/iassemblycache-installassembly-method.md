@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7199fbc0c8760354269a50b647952729860c805b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155359"
 ---
-# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="69c62-102">IAssemblyCache::InstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="69c62-102">IAssemblyCache::InstallAssembly Method</span></span>
-<span data-ttu-id="69c62-103">指定的組件安裝在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="69c62-103">Installs the specified assembly in the global assembly cache.</span></span>  
+# <a name="iassemblycacheinstallassembly-method"></a><span data-ttu-id="03dd9-102">IAssemblyCache::InstallAssembly 方法</span><span class="sxs-lookup"><span data-stu-id="03dd9-102">IAssemblyCache::InstallAssembly Method</span></span>
+<span data-ttu-id="03dd9-103">指定的組件安裝在全域組件快取中。</span><span class="sxs-lookup"><span data-stu-id="03dd9-103">Installs the specified assembly in the global assembly cache.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="69c62-104">語法</span><span class="sxs-lookup"><span data-stu-id="69c62-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="03dd9-104">語法</span><span class="sxs-lookup"><span data-stu-id="03dd9-104">Syntax</span></span>  
   
 ```  
 HRESULT InstallAssembly (  
@@ -37,27 +37,27 @@ HRESULT InstallAssembly (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="69c62-105">參數</span><span class="sxs-lookup"><span data-stu-id="69c62-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="03dd9-105">參數</span><span class="sxs-lookup"><span data-stu-id="03dd9-105">Parameters</span></span>  
  `dwFlags`  
- <span data-ttu-id="69c62-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="69c62-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="69c62-107">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="69c62-107">The following values are supported:</span></span>  
+ <span data-ttu-id="03dd9-106">[in]支援下列值： 旗標。</span><span class="sxs-lookup"><span data-stu-id="03dd9-106">[in] Flags defined in Fusion.idl.</span></span> <span data-ttu-id="03dd9-107">支援下列值：</span><span class="sxs-lookup"><span data-stu-id="03dd9-107">The following values are supported:</span></span>  
   
--   <span data-ttu-id="69c62-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="69c62-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
+-   <span data-ttu-id="03dd9-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span><span class="sxs-lookup"><span data-stu-id="03dd9-108">IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)</span></span>  
   
--   <span data-ttu-id="69c62-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="69c62-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
+-   <span data-ttu-id="03dd9-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span><span class="sxs-lookup"><span data-stu-id="03dd9-109">IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)</span></span>  
   
  `pszManifestFilePath`  
- <span data-ttu-id="69c62-110">[in]若要安裝組件資訊清單的路徑。</span><span class="sxs-lookup"><span data-stu-id="69c62-110">[in] The path to the manifest for the assembly to install.</span></span>  
+ <span data-ttu-id="03dd9-110">[in]若要安裝組件資訊清單的路徑。</span><span class="sxs-lookup"><span data-stu-id="03dd9-110">[in] The path to the manifest for the assembly to install.</span></span>  
   
  `pRefData`  
- <span data-ttu-id="69c62-111">[in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)包含安裝的資料結構。</span><span class="sxs-lookup"><span data-stu-id="69c62-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
+ <span data-ttu-id="03dd9-111">[in]A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md)包含安裝的資料結構。</span><span class="sxs-lookup"><span data-stu-id="03dd9-111">[in] A [FUSION_INSTALL_REFERENCE](../../../../docs/framework/unmanaged-api/fusion/fusion-install-reference-structure.md) structure that contains data for the installation.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="69c62-112">需求</span><span class="sxs-lookup"><span data-stu-id="69c62-112">Requirements</span></span>  
- <span data-ttu-id="69c62-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="69c62-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="03dd9-112">需求</span><span class="sxs-lookup"><span data-stu-id="03dd9-112">Requirements</span></span>  
+ <span data-ttu-id="03dd9-113">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="03dd9-113">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="69c62-114">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="69c62-114">**Header:** Fusion.h</span></span>  
+ <span data-ttu-id="03dd9-114">**標頭：** Fusion.h</span><span class="sxs-lookup"><span data-stu-id="03dd9-114">**Header:** Fusion.h</span></span>  
   
- **<span data-ttu-id="69c62-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="69c62-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="03dd9-115">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="03dd9-115">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="69c62-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="69c62-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="03dd9-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="03dd9-116">See also</span></span>
 
-- [<span data-ttu-id="69c62-117">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="69c62-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)
+- [<span data-ttu-id="03dd9-117">IAssemblyCache 介面</span><span class="sxs-lookup"><span data-stu-id="03dd9-117">IAssemblyCache Interface</span></span>](../../../../docs/framework/unmanaged-api/fusion/iassemblycache-interface.md)

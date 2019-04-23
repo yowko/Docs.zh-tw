@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e948644e4f2d91b2f1e3e3627f7adbe204dee9d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155411"
 ---
-# <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="d8ced-102">IMetaDataImport::GetModuleRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="d8ced-102">IMetaDataImport::GetModuleRefProps Method</span></span>
-<span data-ttu-id="d8ced-103">取得指定中繼資料語彙基元所參考的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="d8ced-103">Gets the name of the module referenced by the specified metadata token.</span></span>  
+# <a name="imetadataimportgetmodulerefprops-method"></a><span data-ttu-id="443ea-102">IMetaDataImport::GetModuleRefProps 方法</span><span class="sxs-lookup"><span data-stu-id="443ea-102">IMetaDataImport::GetModuleRefProps Method</span></span>
+<span data-ttu-id="443ea-103">取得指定中繼資料語彙基元所參考的模組名稱。</span><span class="sxs-lookup"><span data-stu-id="443ea-103">Gets the name of the module referenced by the specified metadata token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d8ced-104">語法</span><span class="sxs-lookup"><span data-stu-id="d8ced-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="443ea-104">語法</span><span class="sxs-lookup"><span data-stu-id="443ea-104">Syntax</span></span>  
   
 ```  
 HRESULT GetModuleRefProps (  
@@ -38,29 +38,29 @@ HRESULT GetModuleRefProps (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d8ced-105">參數</span><span class="sxs-lookup"><span data-stu-id="d8ced-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="443ea-105">參數</span><span class="sxs-lookup"><span data-stu-id="443ea-105">Parameters</span></span>  
  `mur`  
- <span data-ttu-id="d8ced-106">[in]ModuleRef 中繼資料語彙基元所參考的模組，以取得中繼資料資訊。</span><span class="sxs-lookup"><span data-stu-id="d8ced-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span></span>  
+ <span data-ttu-id="443ea-106">[in]ModuleRef 中繼資料語彙基元所參考的模組，以取得中繼資料資訊。</span><span class="sxs-lookup"><span data-stu-id="443ea-106">[in] The ModuleRef metadata token that references the module to get metadata information for.</span></span>  
   
  `szName`  
- <span data-ttu-id="d8ced-107">[out]緩衝區來容納模組名稱。</span><span class="sxs-lookup"><span data-stu-id="d8ced-107">[out] A buffer to hold the module name.</span></span>  
+ <span data-ttu-id="443ea-107">[out]緩衝區來容納模組名稱。</span><span class="sxs-lookup"><span data-stu-id="443ea-107">[out] A buffer to hold the module name.</span></span>  
   
  `cchName`  
- <span data-ttu-id="d8ced-108">[in]要求的大小`szName`寬字元。</span><span class="sxs-lookup"><span data-stu-id="d8ced-108">[in] The requested size of `szName` in wide characters.</span></span>  
+ <span data-ttu-id="443ea-108">[in]要求的大小`szName`寬字元。</span><span class="sxs-lookup"><span data-stu-id="443ea-108">[in] The requested size of `szName` in wide characters.</span></span>  
   
  `pchName`  
- <span data-ttu-id="d8ced-109">[out]傳回的大小`szName`寬字元。</span><span class="sxs-lookup"><span data-stu-id="d8ced-109">[out] The returned size of `szName` in wide characters.</span></span>  
+ <span data-ttu-id="443ea-109">[out]傳回的大小`szName`寬字元。</span><span class="sxs-lookup"><span data-stu-id="443ea-109">[out] The returned size of `szName` in wide characters.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d8ced-110">需求</span><span class="sxs-lookup"><span data-stu-id="d8ced-110">Requirements</span></span>  
- <span data-ttu-id="d8ced-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d8ced-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="443ea-110">需求</span><span class="sxs-lookup"><span data-stu-id="443ea-110">Requirements</span></span>  
+ <span data-ttu-id="443ea-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="443ea-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d8ced-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="d8ced-112">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="443ea-112">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="443ea-112">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="d8ced-113">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="d8ced-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="443ea-113">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="443ea-113">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="d8ced-114">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d8ced-114">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="443ea-114">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="443ea-114">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d8ced-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d8ced-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="443ea-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="443ea-115">See also</span></span>
 
-- [<span data-ttu-id="d8ced-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="d8ced-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="d8ced-117">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="d8ced-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="443ea-116">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="443ea-116">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="443ea-117">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="443ea-117">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
