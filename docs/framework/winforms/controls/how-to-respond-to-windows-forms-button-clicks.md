@@ -16,22 +16,22 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110067"
 ---
-# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="ea3f1-102">HOW TO：回應 Windows Forms 按鈕的按一下動作</span><span class="sxs-lookup"><span data-stu-id="ea3f1-102">How to: Respond to Windows Forms Button Clicks</span></span>
-<span data-ttu-id="ea3f1-103">Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在按下按鈕時執行某些程式碼。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
+# <a name="how-to-respond-to-windows-forms-button-clicks"></a><span data-ttu-id="eb7c4-102">HOW TO：回應 Windows Forms 按鈕的按一下動作</span><span class="sxs-lookup"><span data-stu-id="eb7c4-102">How to: Respond to Windows Forms Button Clicks</span></span>
+<span data-ttu-id="eb7c4-103">Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在按下按鈕時執行某些程式碼。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-103">The most basic use of a Windows Forms <xref:System.Windows.Forms.Button> control is to run some code when the button is clicked.</span></span>  
   
- <span data-ttu-id="ea3f1-104">按一下 <xref:System.Windows.Forms.Button>控制項也會產生有多個其他事件，例如<xref:System.Windows.Forms.Control.MouseEnter>， <xref:System.Windows.Forms.Control.MouseDown>，和<xref:System.Windows.Forms.Control.MouseUp>事件。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="ea3f1-105">如果您想要將這些相關事件的事件處理常式的連接，請確定其動作不會發生衝突。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="ea3f1-106">比方說，如果按一下按鈕來清除文字方塊中輸入使用者的資訊，將滑鼠指標暫停按鈕應該不顯示工具提示，其中目前不存在的資訊。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
+ <span data-ttu-id="eb7c4-104">按一下 <xref:System.Windows.Forms.Button>控制項也會產生有多個其他事件，例如<xref:System.Windows.Forms.Control.MouseEnter>， <xref:System.Windows.Forms.Control.MouseDown>，和<xref:System.Windows.Forms.Control.MouseUp>事件。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-104">Clicking a <xref:System.Windows.Forms.Button> control also generates a number of other events, such as the <xref:System.Windows.Forms.Control.MouseEnter>, <xref:System.Windows.Forms.Control.MouseDown>, and <xref:System.Windows.Forms.Control.MouseUp> events.</span></span> <span data-ttu-id="eb7c4-105">如果您想要將這些相關事件的事件處理常式的連接，請確定其動作不會發生衝突。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-105">If you intend to attach event handlers for these related events, be sure that their actions do not conflict.</span></span> <span data-ttu-id="eb7c4-106">比方說，如果按一下按鈕來清除文字方塊中輸入使用者的資訊，將滑鼠指標暫停按鈕應該不顯示工具提示，其中目前不存在的資訊。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-106">For example, if clicking the button clears information that the user has typed in a text box, pausing the mouse pointer over the button should not display a tool tip with that now-nonexistent information.</span></span>  
   
- <span data-ttu-id="ea3f1-107">如果使用者試著按兩下<xref:System.Windows.Forms.Button>控制項，將會個別處理每按一下; 也就是說，控制項不支援按兩下事件。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
+ <span data-ttu-id="eb7c4-107">如果使用者試著按兩下<xref:System.Windows.Forms.Button>控制項，將會個別處理每按一下; 也就是說，控制項不支援按兩下事件。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-107">If the user attempts to double-click the <xref:System.Windows.Forms.Button> control, each click will be processed separately; that is, the control does not support the double-click event.</span></span>  
   
-### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="ea3f1-108">若要回應按下按鈕</span><span class="sxs-lookup"><span data-stu-id="ea3f1-108">To respond to a button click</span></span>  
+### <a name="to-respond-to-a-button-click"></a><span data-ttu-id="eb7c4-108">若要回應按下按鈕</span><span class="sxs-lookup"><span data-stu-id="eb7c4-108">To respond to a button click</span></span>  
   
--   <span data-ttu-id="ea3f1-109">在按鈕的`Click`<xref:System.EventHandler>撰寫程式碼來執行。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> `Button1_Click` <span data-ttu-id="ea3f1-110">必須繫結至控制項。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-110">must be bound to the control.</span></span> <span data-ttu-id="ea3f1-111">如需詳細資訊，請參閱[如何：在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="ea3f1-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
+-   <span data-ttu-id="eb7c4-109">在按鈕的`Click`<xref:System.EventHandler>撰寫程式碼來執行。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-109">In the button's `Click` <xref:System.EventHandler> write the code to run.</span></span> <span data-ttu-id="eb7c4-110">`Button1_Click` 必須繫結至控制項。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-110">`Button1_Click` must be bound to the control.</span></span> <span data-ttu-id="eb7c4-111">如需詳細資訊，請參閱[如何：在執行階段建立 Windows Forms 事件處理常式](../how-to-create-event-handlers-at-run-time-for-windows-forms.md)。</span><span class="sxs-lookup"><span data-stu-id="eb7c4-111">For more information, see [How to: Create Event Handlers at Run Time for Windows Forms](../how-to-create-event-handlers-at-run-time-for-windows-forms.md).</span></span>  
   
     ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
@@ -55,8 +55,8 @@ ms.locfileid: "59110067"
        }  
     ```  
   
-## <a name="see-also"></a><span data-ttu-id="ea3f1-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ea3f1-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="eb7c4-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="eb7c4-112">See also</span></span>
 
-- [<span data-ttu-id="ea3f1-113">Button 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="ea3f1-113">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
-- [<span data-ttu-id="ea3f1-114">選取 Windows Form Button 控制項的方法</span><span class="sxs-lookup"><span data-stu-id="ea3f1-114">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
-- [<span data-ttu-id="ea3f1-115">Button 控制項</span><span class="sxs-lookup"><span data-stu-id="ea3f1-115">Button Control</span></span>](button-control-windows-forms.md)
+- [<span data-ttu-id="eb7c4-113">Button 控制項概觀</span><span class="sxs-lookup"><span data-stu-id="eb7c4-113">Button Control Overview</span></span>](button-control-overview-windows-forms.md)
+- [<span data-ttu-id="eb7c4-114">選取 Windows Forms Button 控制項的方法</span><span class="sxs-lookup"><span data-stu-id="eb7c4-114">Ways to Select a Windows Forms Button Control</span></span>](ways-to-select-a-windows-forms-button-control.md)
+- [<span data-ttu-id="eb7c4-115">Button 控制項</span><span class="sxs-lookup"><span data-stu-id="eb7c4-115">Button Control</span></span>](button-control-windows-forms.md)

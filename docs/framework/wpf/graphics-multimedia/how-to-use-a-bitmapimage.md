@@ -9,21 +9,21 @@ helpviewer_keywords:
 - XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
 ms.openlocfilehash: fa5842040876754d5f0d358258f1eab7d09d79c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111575"
 ---
-# <a name="how-to-use-a-bitmapimage"></a><span data-ttu-id="f989f-102">HOW TO：使用 BitmapImage</span><span class="sxs-lookup"><span data-stu-id="f989f-102">How to: Use a BitmapImage</span></span>
-<span data-ttu-id="f989f-103">此範例示範如何使用<xref:System.Windows.Media.Imaging.BitmapImage>做為來源<xref:System.Windows.Controls.Image>控制中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="f989f-103">This example shows how to use a <xref:System.Windows.Media.Imaging.BitmapImage> as the source of an <xref:System.Windows.Controls.Image> control in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
+# <a name="how-to-use-a-bitmapimage"></a><span data-ttu-id="1a9bb-102">HOW TO：使用 BitmapImage</span><span class="sxs-lookup"><span data-stu-id="1a9bb-102">How to: Use a BitmapImage</span></span>
+<span data-ttu-id="1a9bb-103">此範例示範如何使用<xref:System.Windows.Media.Imaging.BitmapImage>做為來源<xref:System.Windows.Controls.Image>控制中[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="1a9bb-103">This example shows how to use a <xref:System.Windows.Media.Imaging.BitmapImage> as the source of an <xref:System.Windows.Controls.Image> control in [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)].</span></span>  
   
-## <a name="example"></a><span data-ttu-id="f989f-104">範例</span><span class="sxs-lookup"><span data-stu-id="f989f-104">Example</span></span>  
+## <a name="example"></a><span data-ttu-id="1a9bb-104">範例</span><span class="sxs-lookup"><span data-stu-id="1a9bb-104">Example</span></span>  
  [!code-xaml[ImageElementExample_snip#ImageSimpleExampleInlineMarkup](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml#imagesimpleexampleinlinemarkup)]  
   
  [!code-csharp[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/csharp/VS_Snippets_Wpf/ImageElementExample_snip/CSharp/ImageSimpleExample.xaml.cs#imagesimpleexampleinlinecode1)]
  [!code-vb[ImageElementExample_snip#ImageSimpleExampleInlineCode1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ImageElementExample_snip/VB/ImageSimpleExample.xaml.vb#imagesimpleexampleinlinecode1)]  
   
-## <a name="see-also"></a><span data-ttu-id="f989f-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="f989f-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1a9bb-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1a9bb-105">See also</span></span>
 
-- [<span data-ttu-id="f989f-106">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="f989f-106">Imaging Overview</span></span>](imaging-overview.md)
+- [<span data-ttu-id="1a9bb-106">影像處理概觀</span><span class="sxs-lookup"><span data-stu-id="1a9bb-106">Imaging Overview</span></span>](imaging-overview.md)

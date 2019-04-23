@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3f3351c13530b636cb6715c815b81ab4d9306f53
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115774"
 ---
-# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a><span data-ttu-id="8031c-102">ICorProfilerFunctionControl::SetILFunctionBody 方法</span><span class="sxs-lookup"><span data-stu-id="8031c-102">ICorProfilerFunctionControl::SetILFunctionBody Method</span></span>
-<span data-ttu-id="8031c-103">取代方法的 Common Intermediate Language (CIL) 主體。</span><span class="sxs-lookup"><span data-stu-id="8031c-103">Replaces the Common Intermediate Language (CIL) body of the method.</span></span>  
+# <a name="icorprofilerfunctioncontrolsetilfunctionbody-method"></a><span data-ttu-id="0a685-102">ICorProfilerFunctionControl::SetILFunctionBody 方法</span><span class="sxs-lookup"><span data-stu-id="0a685-102">ICorProfilerFunctionControl::SetILFunctionBody Method</span></span>
+<span data-ttu-id="0a685-103">取代方法的 Common Intermediate Language (CIL) 主體。</span><span class="sxs-lookup"><span data-stu-id="0a685-103">Replaces the Common Intermediate Language (CIL) body of the method.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="8031c-104">語法</span><span class="sxs-lookup"><span data-stu-id="8031c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0a685-104">語法</span><span class="sxs-lookup"><span data-stu-id="0a685-104">Syntax</span></span>  
   
 ```  
 HRESULT SetILFunctionBody(  
@@ -35,32 +35,32 @@ HRESULT SetILFunctionBody(
     [in, size_is(cbNewILMethodHeader)] LPCBYTE pbNewILMethodHeader);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="8031c-105">參數</span><span class="sxs-lookup"><span data-stu-id="8031c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0a685-105">參數</span><span class="sxs-lookup"><span data-stu-id="0a685-105">Parameters</span></span>  
  `cbNewILMethodHeader`  
- <span data-ttu-id="8031c-106">[in] 新 CIL 的大小總計，包括主體後面的標頭和任何結構。</span><span class="sxs-lookup"><span data-stu-id="8031c-106">[in] The total size of the new CIL, including the header and any structures that come after the body.</span></span>  
+ <span data-ttu-id="0a685-106">[in] 新 CIL 的大小總計，包括主體後面的標頭和任何結構。</span><span class="sxs-lookup"><span data-stu-id="0a685-106">[in] The total size of the new CIL, including the header and any structures that come after the body.</span></span>  
   
  `pbNewILMethodHeader`  
- <span data-ttu-id="8031c-107">[in] 新 CIL 標頭的指標。</span><span class="sxs-lookup"><span data-stu-id="8031c-107">[in] A pointer to the new CIL header.</span></span>  
+ <span data-ttu-id="0a685-107">[in] 新 CIL 標頭的指標。</span><span class="sxs-lookup"><span data-stu-id="0a685-107">[in] A pointer to the new CIL header.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="8031c-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="8031c-108">Return Value</span></span>  
- <span data-ttu-id="8031c-109">這個方法會傳回下列特定的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="8031c-109">This method returns the following specific HRESULTs.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0a685-108">傳回值</span><span class="sxs-lookup"><span data-stu-id="0a685-108">Return Value</span></span>  
+ <span data-ttu-id="0a685-109">這個方法會傳回下列特定的 HRESULT。</span><span class="sxs-lookup"><span data-stu-id="0a685-109">This method returns the following specific HRESULTs.</span></span>  
   
-|<span data-ttu-id="8031c-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="8031c-110">HRESULT</span></span>|<span data-ttu-id="8031c-111">描述</span><span class="sxs-lookup"><span data-stu-id="8031c-111">Description</span></span>|  
+|<span data-ttu-id="0a685-110">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0a685-110">HRESULT</span></span>|<span data-ttu-id="0a685-111">描述</span><span class="sxs-lookup"><span data-stu-id="0a685-111">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="8031c-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="8031c-112">S_OK</span></span>|<span data-ttu-id="8031c-113">取代成功。</span><span class="sxs-lookup"><span data-stu-id="8031c-113">The replacement was successful.</span></span>|  
+|<span data-ttu-id="0a685-112">S_OK</span><span class="sxs-lookup"><span data-stu-id="0a685-112">S_OK</span></span>|<span data-ttu-id="0a685-113">取代成功。</span><span class="sxs-lookup"><span data-stu-id="0a685-113">The replacement was successful.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="8031c-114">備註</span><span class="sxs-lookup"><span data-stu-id="8031c-114">Remarks</span></span>  
- <span data-ttu-id="8031c-115">不同於[icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法，`SetILFunctionBody`方法會管理新 CIL 主體所需的記憶體。</span><span class="sxs-lookup"><span data-stu-id="8031c-115">Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body.</span></span> <span data-ttu-id="8031c-116">這表示程式碼剖析工具所提供的 CIL 主體不需要使用[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)介面或配置特定範圍內。</span><span class="sxs-lookup"><span data-stu-id="8031c-116">This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range.</span></span> <span data-ttu-id="8031c-117">它可以配置於任何堆積上。</span><span class="sxs-lookup"><span data-stu-id="8031c-117">It can be allocated on any heap.</span></span> <span data-ttu-id="8031c-118">分析工具可以釋放用於其 CIL 主體之後, 的記憶體`SetILFunctionBody`傳回。</span><span class="sxs-lookup"><span data-stu-id="8031c-118">The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="0a685-114">備註</span><span class="sxs-lookup"><span data-stu-id="0a685-114">Remarks</span></span>  
+ <span data-ttu-id="0a685-115">不同於[icorprofilerinfo:: Setilfunctionbody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md)方法，`SetILFunctionBody`方法會管理新 CIL 主體所需的記憶體。</span><span class="sxs-lookup"><span data-stu-id="0a685-115">Unlike the [ICorProfilerInfo::SetILFunctionBody](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-setilfunctionbody-method.md) method, the `SetILFunctionBody` method manages the memory required for the new CIL body.</span></span> <span data-ttu-id="0a685-116">這表示程式碼剖析工具所提供的 CIL 主體不需要使用[IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md)介面或配置特定範圍內。</span><span class="sxs-lookup"><span data-stu-id="0a685-116">This means that the CIL body provided by the profiler does not have to be allocated by using the [IMethodMalloc](../../../../docs/framework/unmanaged-api/profiling/imethodmalloc-interface.md) interface or allocated within a particular range.</span></span> <span data-ttu-id="0a685-117">它可以配置於任何堆積上。</span><span class="sxs-lookup"><span data-stu-id="0a685-117">It can be allocated on any heap.</span></span> <span data-ttu-id="0a685-118">分析工具可以釋放用於其 CIL 主體之後, 的記憶體`SetILFunctionBody`傳回。</span><span class="sxs-lookup"><span data-stu-id="0a685-118">The profiler can free the memory used for its CIL body after `SetILFunctionBody` returns.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="8031c-119">需求</span><span class="sxs-lookup"><span data-stu-id="8031c-119">Requirements</span></span>  
- <span data-ttu-id="8031c-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="8031c-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0a685-119">需求</span><span class="sxs-lookup"><span data-stu-id="0a685-119">Requirements</span></span>  
+ <span data-ttu-id="0a685-120">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0a685-120">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="8031c-121">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="8031c-121">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="0a685-121">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="0a685-121">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="8031c-122">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="8031c-122">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="0a685-122">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="0a685-122">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="8031c-123">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="8031c-123">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="0a685-123">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0a685-123">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="8031c-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8031c-124">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0a685-124">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0a685-124">See also</span></span>
 
-- [<span data-ttu-id="8031c-125">ICorProfilerFunctionControl 介面</span><span class="sxs-lookup"><span data-stu-id="8031c-125">ICorProfilerFunctionControl Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
+- [<span data-ttu-id="0a685-125">ICorProfilerFunctionControl 介面</span><span class="sxs-lookup"><span data-stu-id="0a685-125">ICorProfilerFunctionControl Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-interface.md)
