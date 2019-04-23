@@ -18,47 +18,47 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 724db50285532c20132fbfd5262df26227db6742
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130022"
 ---
-# <a name="icordebugstackwalknext-method"></a><span data-ttu-id="1902c-102">ICorDebugStackWalk::Next 方法</span><span class="sxs-lookup"><span data-stu-id="1902c-102">ICorDebugStackWalk::Next Method</span></span>
-<span data-ttu-id="1902c-103">移動[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)下一個畫面格的物件。</span><span class="sxs-lookup"><span data-stu-id="1902c-103">Moves the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object to the next frame.</span></span>  
+# <a name="icordebugstackwalknext-method"></a><span data-ttu-id="c7e60-102">ICorDebugStackWalk::Next 方法</span><span class="sxs-lookup"><span data-stu-id="c7e60-102">ICorDebugStackWalk::Next Method</span></span>
+<span data-ttu-id="c7e60-103">移動[ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)下一個畫面格的物件。</span><span class="sxs-lookup"><span data-stu-id="c7e60-103">Moves the [ICorDebugStackWalk](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md) object to the next frame.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="1902c-104">語法</span><span class="sxs-lookup"><span data-stu-id="1902c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c7e60-104">語法</span><span class="sxs-lookup"><span data-stu-id="c7e60-104">Syntax</span></span>  
   
 ```  
 HRESULT Next();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="1902c-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="1902c-105">Return Value</span></span>  
- <span data-ttu-id="1902c-106">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="1902c-106">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="c7e60-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="c7e60-105">Return Value</span></span>  
+ <span data-ttu-id="c7e60-106">這個方法會傳回下列特定的 HRESULT，以及表示方法失敗的 HRESULT 錯誤。</span><span class="sxs-lookup"><span data-stu-id="c7e60-106">This method returns the following specific HRESULTs as well as HRESULT errors that indicate method failure.</span></span>  
   
-|<span data-ttu-id="1902c-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="1902c-107">HRESULT</span></span>|<span data-ttu-id="1902c-108">描述</span><span class="sxs-lookup"><span data-stu-id="1902c-108">Description</span></span>|  
+|<span data-ttu-id="c7e60-107">HRESULT</span><span class="sxs-lookup"><span data-stu-id="c7e60-107">HRESULT</span></span>|<span data-ttu-id="c7e60-108">描述</span><span class="sxs-lookup"><span data-stu-id="c7e60-108">Description</span></span>|  
 |-------------|-----------------|  
-|<span data-ttu-id="1902c-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="1902c-109">S_OK</span></span>|<span data-ttu-id="1902c-110">執行階段成功回溯至下一個畫面 （請參閱 < 備註 >）。</span><span class="sxs-lookup"><span data-stu-id="1902c-110">The runtime successfully unwound to the next frame (see Remarks).</span></span>|  
-|<span data-ttu-id="1902c-111">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="1902c-111">E_FAIL</span></span>|<span data-ttu-id="1902c-112">`ICorDebugStackWalk`物件不可以進階。</span><span class="sxs-lookup"><span data-stu-id="1902c-112">The `ICorDebugStackWalk` object could not be advanced.</span></span>|  
-|<span data-ttu-id="1902c-113">CORDBG_S_AT_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="1902c-113">CORDBG_S_AT_END_OF_STACK</span></span>|<span data-ttu-id="1902c-114">堆疊的結尾已到達此回溯的結果。</span><span class="sxs-lookup"><span data-stu-id="1902c-114">The end of the stack was reached as a result of this unwind.</span></span>|  
-|<span data-ttu-id="1902c-115">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="1902c-115">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="1902c-116">框架指標已經結尾的堆疊;因此，可以不存取任何其他的框架。</span><span class="sxs-lookup"><span data-stu-id="1902c-116">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
+|<span data-ttu-id="c7e60-109">S_OK</span><span class="sxs-lookup"><span data-stu-id="c7e60-109">S_OK</span></span>|<span data-ttu-id="c7e60-110">執行階段成功回溯至下一個畫面 （請參閱 < 備註 >）。</span><span class="sxs-lookup"><span data-stu-id="c7e60-110">The runtime successfully unwound to the next frame (see Remarks).</span></span>|  
+|<span data-ttu-id="c7e60-111">E_FAIL</span><span class="sxs-lookup"><span data-stu-id="c7e60-111">E_FAIL</span></span>|<span data-ttu-id="c7e60-112">`ICorDebugStackWalk`物件不可以進階。</span><span class="sxs-lookup"><span data-stu-id="c7e60-112">The `ICorDebugStackWalk` object could not be advanced.</span></span>|  
+|<span data-ttu-id="c7e60-113">CORDBG_S_AT_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="c7e60-113">CORDBG_S_AT_END_OF_STACK</span></span>|<span data-ttu-id="c7e60-114">堆疊的結尾已到達此回溯的結果。</span><span class="sxs-lookup"><span data-stu-id="c7e60-114">The end of the stack was reached as a result of this unwind.</span></span>|  
+|<span data-ttu-id="c7e60-115">CORDBG_E_PAST_END_OF_STACK</span><span class="sxs-lookup"><span data-stu-id="c7e60-115">CORDBG_E_PAST_END_OF_STACK</span></span>|<span data-ttu-id="c7e60-116">框架指標已經結尾的堆疊;因此，可以不存取任何其他的框架。</span><span class="sxs-lookup"><span data-stu-id="c7e60-116">The frame pointer is already at the end of the stack; therefore, no additional frames can be accessed.</span></span>|  
   
-## <a name="exceptions"></a><span data-ttu-id="1902c-117">例外狀況</span><span class="sxs-lookup"><span data-stu-id="1902c-117">Exceptions</span></span>  
+## <a name="exceptions"></a><span data-ttu-id="c7e60-117">例外狀況</span><span class="sxs-lookup"><span data-stu-id="c7e60-117">Exceptions</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="1902c-118">備註</span><span class="sxs-lookup"><span data-stu-id="1902c-118">Remarks</span></span>  
- <span data-ttu-id="1902c-119">`Next`方法的進展`ICorDebugStackWalk`物件至呼叫端的框架，只有當執行階段可以回溯目前的框架。</span><span class="sxs-lookup"><span data-stu-id="1902c-119">The `Next` method advances the `ICorDebugStackWalk` object to the calling frame only if the runtime can unwind the current frame.</span></span> <span data-ttu-id="1902c-120">否則，物件會前進至下一個框架執行階段可回溯。</span><span class="sxs-lookup"><span data-stu-id="1902c-120">Otherwise, the object advances to the next frame that the runtime is able to unwind.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c7e60-118">備註</span><span class="sxs-lookup"><span data-stu-id="c7e60-118">Remarks</span></span>  
+ <span data-ttu-id="c7e60-119">`Next`方法的進展`ICorDebugStackWalk`物件至呼叫端的框架，只有當執行階段可以回溯目前的框架。</span><span class="sxs-lookup"><span data-stu-id="c7e60-119">The `Next` method advances the `ICorDebugStackWalk` object to the calling frame only if the runtime can unwind the current frame.</span></span> <span data-ttu-id="c7e60-120">否則，物件會前進至下一個框架執行階段可回溯。</span><span class="sxs-lookup"><span data-stu-id="c7e60-120">Otherwise, the object advances to the next frame that the runtime is able to unwind.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="1902c-121">需求</span><span class="sxs-lookup"><span data-stu-id="1902c-121">Requirements</span></span>  
- <span data-ttu-id="1902c-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1902c-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c7e60-121">需求</span><span class="sxs-lookup"><span data-stu-id="c7e60-121">Requirements</span></span>  
+ <span data-ttu-id="c7e60-122">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c7e60-122">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="1902c-123">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="1902c-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="c7e60-123">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="c7e60-123">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="1902c-124">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="1902c-124">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="c7e60-124">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="c7e60-124">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="1902c-125">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="1902c-125">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ <span data-ttu-id="c7e60-125">**.NET framework 版本：**[!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c7e60-125">**.NET Framework Versions:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="1902c-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1902c-126">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c7e60-126">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c7e60-126">See also</span></span>
 
-- [<span data-ttu-id="1902c-127">ICorDebugStackWalk 介面</span><span class="sxs-lookup"><span data-stu-id="1902c-127">ICorDebugStackWalk Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
-- [<span data-ttu-id="1902c-128">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="1902c-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
-- [<span data-ttu-id="1902c-129">偵錯</span><span class="sxs-lookup"><span data-stu-id="1902c-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)
+- [<span data-ttu-id="c7e60-127">ICorDebugStackWalk 介面</span><span class="sxs-lookup"><span data-stu-id="c7e60-127">ICorDebugStackWalk Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugstackwalk-interface.md)
+- [<span data-ttu-id="c7e60-128">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="c7e60-128">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="c7e60-129">偵錯</span><span class="sxs-lookup"><span data-stu-id="c7e60-129">Debugging</span></span>](../../../../docs/framework/unmanaged-api/debugging/index.md)

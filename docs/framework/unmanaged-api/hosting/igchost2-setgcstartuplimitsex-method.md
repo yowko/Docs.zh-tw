@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: da5e90055a08227ea7cb7fa1b459fe6f5f3a81fc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127323"
 ---
-# <a name="igchost2setgcstartuplimitsex-method"></a><span data-ttu-id="33edd-102">IGCHost2::SetGCStartupLimitsEx 方法</span><span class="sxs-lookup"><span data-stu-id="33edd-102">IGCHost2::SetGCStartupLimitsEx Method</span></span>
-<span data-ttu-id="33edd-103">層代 0 設定區段的大小和大小上限。</span><span class="sxs-lookup"><span data-stu-id="33edd-103">Sets the segment size and the maximum size for generation 0.</span></span>  
+# <a name="igchost2setgcstartuplimitsex-method"></a><span data-ttu-id="7e3a4-102">IGCHost2::SetGCStartupLimitsEx 方法</span><span class="sxs-lookup"><span data-stu-id="7e3a4-102">IGCHost2::SetGCStartupLimitsEx Method</span></span>
+<span data-ttu-id="7e3a4-103">層代 0 設定區段的大小和大小上限。</span><span class="sxs-lookup"><span data-stu-id="7e3a4-103">Sets the segment size and the maximum size for generation 0.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="33edd-104">語法</span><span class="sxs-lookup"><span data-stu-id="33edd-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="7e3a4-104">語法</span><span class="sxs-lookup"><span data-stu-id="7e3a4-104">Syntax</span></span>  
   
 ```  
 HRESULT SetGCStartupLimitsEx (  
@@ -36,25 +36,25 @@ HRESULT SetGCStartupLimitsEx (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="33edd-105">參數</span><span class="sxs-lookup"><span data-stu-id="33edd-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="7e3a4-105">參數</span><span class="sxs-lookup"><span data-stu-id="7e3a4-105">Parameters</span></span>  
  `SegmentSize`  
- <span data-ttu-id="33edd-106">[in]記憶體回收系統所使用的區段大小。</span><span class="sxs-lookup"><span data-stu-id="33edd-106">[in] The size of the segment used by the garbage collection system.</span></span>  
+ <span data-ttu-id="7e3a4-106">[in]記憶體回收系統所使用的區段大小。</span><span class="sxs-lookup"><span data-stu-id="7e3a4-106">[in] The size of the segment used by the garbage collection system.</span></span>  
   
  `MaxGen0Size`  
- <span data-ttu-id="33edd-107">[in]層代 0 的大小上限。</span><span class="sxs-lookup"><span data-stu-id="33edd-107">[in] The maximum size for generation 0.</span></span>  
+ <span data-ttu-id="7e3a4-107">[in]層代 0 的大小上限。</span><span class="sxs-lookup"><span data-stu-id="7e3a4-107">[in] The maximum size for generation 0.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="33edd-108">備註</span><span class="sxs-lookup"><span data-stu-id="33edd-108">Remarks</span></span>  
- <span data-ttu-id="33edd-109">值，`SetGCStartupLimitsEx`只在主應用程式啟動之前，可以指定設定。</span><span class="sxs-lookup"><span data-stu-id="33edd-109">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="33edd-110">稍後無法變更這些值。</span><span class="sxs-lookup"><span data-stu-id="33edd-110">These values cannot be changed later.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="7e3a4-108">備註</span><span class="sxs-lookup"><span data-stu-id="7e3a4-108">Remarks</span></span>  
+ <span data-ttu-id="7e3a4-109">值，`SetGCStartupLimitsEx`只在主應用程式啟動之前，可以指定設定。</span><span class="sxs-lookup"><span data-stu-id="7e3a4-109">The values that `SetGCStartupLimitsEx` sets can be specified only before the host is started.</span></span> <span data-ttu-id="7e3a4-110">稍後無法變更這些值。</span><span class="sxs-lookup"><span data-stu-id="7e3a4-110">These values cannot be changed later.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="33edd-111">需求</span><span class="sxs-lookup"><span data-stu-id="33edd-111">Requirements</span></span>  
- <span data-ttu-id="33edd-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="33edd-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="7e3a4-111">需求</span><span class="sxs-lookup"><span data-stu-id="7e3a4-111">Requirements</span></span>  
+ <span data-ttu-id="7e3a4-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7e3a4-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="33edd-113">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="33edd-113">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="7e3a4-113">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="7e3a4-113">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="33edd-114">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="33edd-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="7e3a4-114">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="7e3a4-114">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="33edd-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="33edd-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]  
+ <span data-ttu-id="7e3a4-115">**.NET framework 版本：**[!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="7e3a4-115">**.NET Framework Versions:** [!INCLUDE[net_current_v45plus](../../../../includes/net-current-v45plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="33edd-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="33edd-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="7e3a4-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7e3a4-116">See also</span></span>
 
-- [<span data-ttu-id="33edd-117">IGCHost2 介面</span><span class="sxs-lookup"><span data-stu-id="33edd-117">IGCHost2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)
+- [<span data-ttu-id="7e3a4-117">IGCHost2 介面</span><span class="sxs-lookup"><span data-stu-id="7e3a4-117">IGCHost2 Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost2-interface.md)

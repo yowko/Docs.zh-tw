@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c561eb70f0e3d243984decfb39629601f8eeea37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125289"
 ---
-# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="852e7-102">ISymUnmanagedWriter::DefineLocalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="852e7-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
-<span data-ttu-id="852e7-103">在目前的語彙範圍中定義單一變數。</span><span class="sxs-lookup"><span data-stu-id="852e7-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="852e7-104">可以多次呼叫這個方法在範圍中有多個定義域的相同名稱的變數。</span><span class="sxs-lookup"><span data-stu-id="852e7-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="852e7-105">在此情況下，不過，值`startOffset`和`endOffset`參數不得重疊。</span><span class="sxs-lookup"><span data-stu-id="852e7-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
+# <a name="isymunmanagedwriterdefinelocalvariable-method"></a><span data-ttu-id="db533-102">ISymUnmanagedWriter::DefineLocalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="db533-102">ISymUnmanagedWriter::DefineLocalVariable Method</span></span>
+<span data-ttu-id="db533-103">在目前的語彙範圍中定義單一變數。</span><span class="sxs-lookup"><span data-stu-id="db533-103">Defines a single variable in the current lexical scope.</span></span> <span data-ttu-id="db533-104">可以多次呼叫這個方法在範圍中有多個定義域的相同名稱的變數。</span><span class="sxs-lookup"><span data-stu-id="db533-104">This method can be called multiple times for a variable of the same name that has multiple homes throughout a scope.</span></span> <span data-ttu-id="db533-105">在此情況下，不過，值`startOffset`和`endOffset`參數不得重疊。</span><span class="sxs-lookup"><span data-stu-id="db533-105">In this case, however, the values of the `startOffset` and `endOffset` parameters must not overlap.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="852e7-106">語法</span><span class="sxs-lookup"><span data-stu-id="852e7-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="db533-106">語法</span><span class="sxs-lookup"><span data-stu-id="db533-106">Syntax</span></span>  
   
 ```  
 HRESULT DefineLocalVariable(  
@@ -43,45 +43,45 @@ HRESULT DefineLocalVariable(
     [in] ULONG32      endOffset);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="852e7-107">參數</span><span class="sxs-lookup"><span data-stu-id="852e7-107">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="db533-107">參數</span><span class="sxs-lookup"><span data-stu-id="db533-107">Parameters</span></span>  
  `name`  
- <span data-ttu-id="852e7-108">[in]指標`WCHAR`定義本機變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="852e7-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
+ <span data-ttu-id="db533-108">[in]指標`WCHAR`定義本機變數的名稱。</span><span class="sxs-lookup"><span data-stu-id="db533-108">[in] A pointer to a `WCHAR` that defines the local variable name.</span></span>  
   
  `attributes`  
- <span data-ttu-id="852e7-109">[in]本機變數的屬性。</span><span class="sxs-lookup"><span data-stu-id="852e7-109">[in] The local variable attributes.</span></span>  
+ <span data-ttu-id="db533-109">[in]本機變數的屬性。</span><span class="sxs-lookup"><span data-stu-id="db533-109">[in] The local variable attributes.</span></span>  
   
  `cSig`  
- <span data-ttu-id="852e7-110">[in]A`ULONG32`表示的大小，以位元組為單位，`signature`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="852e7-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
+ <span data-ttu-id="db533-110">[in]A`ULONG32`表示的大小，以位元組為單位，`signature`緩衝區。</span><span class="sxs-lookup"><span data-stu-id="db533-110">[in] A `ULONG32` that indicates the size, in bytes, of the `signature` buffer.</span></span>  
   
  `signature`  
- <span data-ttu-id="852e7-111">[in]區域變數簽章。</span><span class="sxs-lookup"><span data-stu-id="852e7-111">[in] The local variable signature.</span></span>  
+ <span data-ttu-id="db533-111">[in]區域變數簽章。</span><span class="sxs-lookup"><span data-stu-id="db533-111">[in] The local variable signature.</span></span>  
   
  `addrKind`  
- <span data-ttu-id="852e7-112">[in]位址類型。</span><span class="sxs-lookup"><span data-stu-id="852e7-112">[in] The address type.</span></span>  
+ <span data-ttu-id="db533-112">[in]位址類型。</span><span class="sxs-lookup"><span data-stu-id="db533-112">[in] The address type.</span></span>  
   
  `addr1`  
- <span data-ttu-id="852e7-113">[in]參數規格的第一個位址。</span><span class="sxs-lookup"><span data-stu-id="852e7-113">[in] The first address for the parameter specification.</span></span>  
+ <span data-ttu-id="db533-113">[in]參數規格的第一個位址。</span><span class="sxs-lookup"><span data-stu-id="db533-113">[in] The first address for the parameter specification.</span></span>  
   
  `addr2`  
- <span data-ttu-id="852e7-114">[in]參數規格的第二個位址。</span><span class="sxs-lookup"><span data-stu-id="852e7-114">[in] The second address for the parameter specification.</span></span>  
+ <span data-ttu-id="db533-114">[in]參數規格的第二個位址。</span><span class="sxs-lookup"><span data-stu-id="db533-114">[in] The second address for the parameter specification.</span></span>  
   
  `addr3`  
- <span data-ttu-id="852e7-115">[in]參數規格的第三個位址。</span><span class="sxs-lookup"><span data-stu-id="852e7-115">[in] The third address for the parameter specification.</span></span>  
+ <span data-ttu-id="db533-115">[in]參數規格的第三個位址。</span><span class="sxs-lookup"><span data-stu-id="db533-115">[in] The third address for the parameter specification.</span></span>  
   
  `startOffset`  
- <span data-ttu-id="852e7-116">[in]變數的起始位移。</span><span class="sxs-lookup"><span data-stu-id="852e7-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="852e7-117">這是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="852e7-117">This parameter is optional.</span></span> <span data-ttu-id="852e7-118">如果是 0，會忽略這個參數，並在整個範圍定義的變數。</span><span class="sxs-lookup"><span data-stu-id="852e7-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="852e7-119">如果它是非零值時，變數會落在目前的範圍的位移。</span><span class="sxs-lookup"><span data-stu-id="852e7-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="db533-116">[in]變數的起始位移。</span><span class="sxs-lookup"><span data-stu-id="db533-116">[in] The start offset for the variable.</span></span> <span data-ttu-id="db533-117">這是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="db533-117">This parameter is optional.</span></span> <span data-ttu-id="db533-118">如果是 0，會忽略這個參數，並在整個範圍定義的變數。</span><span class="sxs-lookup"><span data-stu-id="db533-118">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="db533-119">如果它是非零值時，變數會落在目前的範圍的位移。</span><span class="sxs-lookup"><span data-stu-id="db533-119">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
  `endOffset`  
- <span data-ttu-id="852e7-120">[in]變數的結束位移。</span><span class="sxs-lookup"><span data-stu-id="852e7-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="852e7-121">這是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="852e7-121">This parameter is optional.</span></span> <span data-ttu-id="852e7-122">如果是 0，會忽略這個參數，並在整個範圍定義的變數。</span><span class="sxs-lookup"><span data-stu-id="852e7-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="852e7-123">如果它是非零值時，變數會落在目前的範圍的位移。</span><span class="sxs-lookup"><span data-stu-id="852e7-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
+ <span data-ttu-id="db533-120">[in]變數的結束位移。</span><span class="sxs-lookup"><span data-stu-id="db533-120">[in] The end offset for the variable.</span></span> <span data-ttu-id="db533-121">這是選擇性參數。</span><span class="sxs-lookup"><span data-stu-id="db533-121">This parameter is optional.</span></span> <span data-ttu-id="db533-122">如果是 0，會忽略這個參數，並在整個範圍定義的變數。</span><span class="sxs-lookup"><span data-stu-id="db533-122">If it is 0, this parameter is ignored and the variable is defined throughout the entire scope.</span></span> <span data-ttu-id="db533-123">如果它是非零值時，變數會落在目前的範圍的位移。</span><span class="sxs-lookup"><span data-stu-id="db533-123">If it is a nonzero value, the variable falls within the offsets of the current scope.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="852e7-124">傳回值</span><span class="sxs-lookup"><span data-stu-id="852e7-124">Return Value</span></span>  
- <span data-ttu-id="852e7-125">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="852e7-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="db533-124">傳回值</span><span class="sxs-lookup"><span data-stu-id="db533-124">Return Value</span></span>  
+ <span data-ttu-id="db533-125">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="db533-125">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="852e7-126">需求</span><span class="sxs-lookup"><span data-stu-id="852e7-126">Requirements</span></span>  
- <span data-ttu-id="852e7-127">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="852e7-127">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="db533-126">需求</span><span class="sxs-lookup"><span data-stu-id="db533-126">Requirements</span></span>  
+ <span data-ttu-id="db533-127">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="db533-127">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="852e7-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="852e7-128">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="db533-128">另請參閱</span><span class="sxs-lookup"><span data-stu-id="db533-128">See also</span></span>
 
-- [<span data-ttu-id="852e7-129">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="852e7-129">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
-- [<span data-ttu-id="852e7-130">DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="852e7-130">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
-- [<span data-ttu-id="852e7-131">DefineLocalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="852e7-131">DefineLocalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)
+- [<span data-ttu-id="db533-129">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="db533-129">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="db533-130">DefineGlobalVariable 方法</span><span class="sxs-lookup"><span data-stu-id="db533-130">DefineGlobalVariable Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-defineglobalvariable-method.md)
+- [<span data-ttu-id="db533-131">DefineLocalVariable2 方法</span><span class="sxs-lookup"><span data-stu-id="db533-131">DefineLocalVariable2 Method</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter2-definelocalvariable2-method.md)

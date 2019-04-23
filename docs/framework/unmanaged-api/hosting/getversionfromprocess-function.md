@@ -18,18 +18,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 452104939acf5de7bb151cba00d65fb6631c98d5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124081"
 ---
-# <a name="getversionfromprocess-function"></a><span data-ttu-id="c62b1-102">GetVersionFromProcess 函式</span><span class="sxs-lookup"><span data-stu-id="c62b1-102">GetVersionFromProcess Function</span></span>
-<span data-ttu-id="c62b1-103">取得 common language runtime (CLR) 與指定的處理序控制代碼相關聯的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="c62b1-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
+# <a name="getversionfromprocess-function"></a><span data-ttu-id="652e0-102">GetVersionFromProcess 函式</span><span class="sxs-lookup"><span data-stu-id="652e0-102">GetVersionFromProcess Function</span></span>
+<span data-ttu-id="652e0-103">取得 common language runtime (CLR) 與指定的處理序控制代碼相關聯的版本號碼。</span><span class="sxs-lookup"><span data-stu-id="652e0-103">Gets the version number of the common language runtime (CLR) that is associated with the specified process handle.</span></span>  
   
- <span data-ttu-id="c62b1-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="c62b1-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
+ <span data-ttu-id="652e0-104">此函式中的過時[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。</span><span class="sxs-lookup"><span data-stu-id="652e0-104">This function has been deprecated in the [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)].</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c62b1-105">語法</span><span class="sxs-lookup"><span data-stu-id="c62b1-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="652e0-105">語法</span><span class="sxs-lookup"><span data-stu-id="652e0-105">Syntax</span></span>  
   
 ```  
 HRESULT GetVersionFromProcess (  
@@ -40,40 +40,40 @@ HRESULT GetVersionFromProcess (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c62b1-106">參數</span><span class="sxs-lookup"><span data-stu-id="c62b1-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="652e0-106">參數</span><span class="sxs-lookup"><span data-stu-id="652e0-106">Parameters</span></span>  
  `hProcess`  
- <span data-ttu-id="c62b1-107">[in]處理序控制代碼。</span><span class="sxs-lookup"><span data-stu-id="c62b1-107">[in] A handle to a process.</span></span>  
+ <span data-ttu-id="652e0-107">[in]處理序控制代碼。</span><span class="sxs-lookup"><span data-stu-id="652e0-107">[in] A handle to a process.</span></span>  
   
  `pVersion`  
- <span data-ttu-id="c62b1-108">[out]這種緩衝區包含此方法成功完成時的版本號碼字串。</span><span class="sxs-lookup"><span data-stu-id="c62b1-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
+ <span data-ttu-id="652e0-108">[out]這種緩衝區包含此方法成功完成時的版本號碼字串。</span><span class="sxs-lookup"><span data-stu-id="652e0-108">[out] A buffer that contains the version number string upon successful completion of the method.</span></span>  
   
  `cchBuffer`  
- <span data-ttu-id="c62b1-109">[in]版本緩衝區的長度。</span><span class="sxs-lookup"><span data-stu-id="c62b1-109">[in] The length of the version buffer.</span></span>  
+ <span data-ttu-id="652e0-109">[in]版本緩衝區的長度。</span><span class="sxs-lookup"><span data-stu-id="652e0-109">[in] The length of the version buffer.</span></span>  
   
  `pdwLength`  
- <span data-ttu-id="c62b1-110">[out]版本號碼的字串長度的指標。</span><span class="sxs-lookup"><span data-stu-id="c62b1-110">[out] A pointer to the length of the version number string.</span></span>  
+ <span data-ttu-id="652e0-110">[out]版本號碼的字串長度的指標。</span><span class="sxs-lookup"><span data-stu-id="652e0-110">[out] A pointer to the length of the version number string.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="c62b1-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="c62b1-111">Return Value</span></span>  
- <span data-ttu-id="c62b1-112">中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="c62b1-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="652e0-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="652e0-111">Return Value</span></span>  
+ <span data-ttu-id="652e0-112">中所定義 WinError.h，除了下列的值，這個方法會傳回標準的元件物件模型 (COM) 錯誤代碼。</span><span class="sxs-lookup"><span data-stu-id="652e0-112">This method returns standard Component Object Model (COM) error codes, as defined in WinError.h, in addition to the following values.</span></span>  
   
-|<span data-ttu-id="c62b1-113">傳回碼</span><span class="sxs-lookup"><span data-stu-id="c62b1-113">Return code</span></span>|<span data-ttu-id="c62b1-114">描述</span><span class="sxs-lookup"><span data-stu-id="c62b1-114">Description</span></span>|  
+|<span data-ttu-id="652e0-113">傳回碼</span><span class="sxs-lookup"><span data-stu-id="652e0-113">Return code</span></span>|<span data-ttu-id="652e0-114">描述</span><span class="sxs-lookup"><span data-stu-id="652e0-114">Description</span></span>|  
 |-----------------|-----------------|  
-|<span data-ttu-id="c62b1-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="c62b1-115">S_OK</span></span>|<span data-ttu-id="c62b1-116">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="c62b1-116">The method completed successfully.</span></span>|  
-|<span data-ttu-id="c62b1-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="c62b1-117">E_INVALIDARG</span></span>|`pVersion` <span data-ttu-id="c62b1-118">為 null 及`cchBuffer`不是 null，或反之亦然。</span><span class="sxs-lookup"><span data-stu-id="c62b1-118">is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="c62b1-119">-或-</span><span class="sxs-lookup"><span data-stu-id="c62b1-119">-or-</span></span><br /><br /> `hProcess` <span data-ttu-id="c62b1-120">不是有效的控制代碼至處理序。</span><span class="sxs-lookup"><span data-stu-id="c62b1-120">is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="c62b1-121">-或-</span><span class="sxs-lookup"><span data-stu-id="c62b1-121">-or-</span></span><br /><br /> <span data-ttu-id="c62b1-122">無法載入 CLR。</span><span class="sxs-lookup"><span data-stu-id="c62b1-122">The CLR is not loaded.</span></span>|  
-|<span data-ttu-id="c62b1-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="c62b1-123">ERROR_INSUFFICIENT_BUFFER</span></span>|`cchBuffer` <span data-ttu-id="c62b1-124">為 null 或版本字串的長度大於或等於。</span><span class="sxs-lookup"><span data-stu-id="c62b1-124">is null or less than the length of the version string.</span></span>|  
-|<span data-ttu-id="c62b1-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="c62b1-125">E_NOTIMPL</span></span>|<span data-ttu-id="c62b1-126">這個方法並不適用於 Microsoft Windows 95、 Microsoft Windows 98 或 Microsoft Windows Millennium Edition 作業系統。</span><span class="sxs-lookup"><span data-stu-id="c62b1-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
+|<span data-ttu-id="652e0-115">S_OK</span><span class="sxs-lookup"><span data-stu-id="652e0-115">S_OK</span></span>|<span data-ttu-id="652e0-116">已成功完成命令。</span><span class="sxs-lookup"><span data-stu-id="652e0-116">The method completed successfully.</span></span>|  
+|<span data-ttu-id="652e0-117">E_INVALIDARG</span><span class="sxs-lookup"><span data-stu-id="652e0-117">E_INVALIDARG</span></span>|<span data-ttu-id="652e0-118">`pVersion` 為 null 及`cchBuffer`不是 null，或反之亦然。</span><span class="sxs-lookup"><span data-stu-id="652e0-118">`pVersion` is null and `cchBuffer` is not null, or vice versa.</span></span><br /><br /> <span data-ttu-id="652e0-119">-或-</span><span class="sxs-lookup"><span data-stu-id="652e0-119">-or-</span></span><br /><br /> <span data-ttu-id="652e0-120">`hProcess` 不是有效的控制代碼至處理序。</span><span class="sxs-lookup"><span data-stu-id="652e0-120">`hProcess` is not a valid handle to a process.</span></span><br /><br /> <span data-ttu-id="652e0-121">-或-</span><span class="sxs-lookup"><span data-stu-id="652e0-121">-or-</span></span><br /><br /> <span data-ttu-id="652e0-122">無法載入 CLR。</span><span class="sxs-lookup"><span data-stu-id="652e0-122">The CLR is not loaded.</span></span>|  
+|<span data-ttu-id="652e0-123">ERROR_INSUFFICIENT_BUFFER</span><span class="sxs-lookup"><span data-stu-id="652e0-123">ERROR_INSUFFICIENT_BUFFER</span></span>|<span data-ttu-id="652e0-124">`cchBuffer` 為 null 或版本字串的長度大於或等於。</span><span class="sxs-lookup"><span data-stu-id="652e0-124">`cchBuffer` is null or less than the length of the version string.</span></span>|  
+|<span data-ttu-id="652e0-125">E_NOTIMPL</span><span class="sxs-lookup"><span data-stu-id="652e0-125">E_NOTIMPL</span></span>|<span data-ttu-id="652e0-126">這個方法並不適用於 Microsoft Windows 95、 Microsoft Windows 98 或 Microsoft Windows Millennium Edition 作業系統。</span><span class="sxs-lookup"><span data-stu-id="652e0-126">This method is not available on the Microsoft Windows 95, Microsoft Windows 98, or Microsoft Windows Millennium Edition operating system.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="c62b1-127">需求</span><span class="sxs-lookup"><span data-stu-id="c62b1-127">Requirements</span></span>  
- <span data-ttu-id="c62b1-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c62b1-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="652e0-127">需求</span><span class="sxs-lookup"><span data-stu-id="652e0-127">Requirements</span></span>  
+ <span data-ttu-id="652e0-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="652e0-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c62b1-129">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c62b1-129">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="652e0-129">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="652e0-129">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="c62b1-130">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="c62b1-130">**Library:** MSCorEE.dll</span></span>  
+ <span data-ttu-id="652e0-130">**LIBRARY:** MSCorEE.dll</span><span class="sxs-lookup"><span data-stu-id="652e0-130">**Library:** MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="c62b1-131">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="c62b1-131">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="652e0-131">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="652e0-131">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c62b1-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c62b1-132">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="652e0-132">另請參閱</span><span class="sxs-lookup"><span data-stu-id="652e0-132">See also</span></span>
 
-- [<span data-ttu-id="c62b1-133">GetRequestedRuntimeInfo 函式</span><span class="sxs-lookup"><span data-stu-id="c62b1-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
-- [<span data-ttu-id="c62b1-134">GetRequestedRuntimeVersion 函式</span><span class="sxs-lookup"><span data-stu-id="c62b1-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
-- [<span data-ttu-id="c62b1-135">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="c62b1-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
+- [<span data-ttu-id="652e0-133">GetRequestedRuntimeInfo 函式</span><span class="sxs-lookup"><span data-stu-id="652e0-133">GetRequestedRuntimeInfo Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeinfo-function.md)
+- [<span data-ttu-id="652e0-134">GetRequestedRuntimeVersion 函式</span><span class="sxs-lookup"><span data-stu-id="652e0-134">GetRequestedRuntimeVersion Function</span></span>](../../../../docs/framework/unmanaged-api/hosting/getrequestedruntimeversion-function.md)
+- [<span data-ttu-id="652e0-135">已被取代的 CLR 裝載函式</span><span class="sxs-lookup"><span data-stu-id="652e0-135">Deprecated CLR Hosting Functions</span></span>](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md)
