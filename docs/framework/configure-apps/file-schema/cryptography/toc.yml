@@ -1,26 +1,19 @@
-items:
 - name: 密碼編譯設定結構描述
   href: index.md
   items:
-  - name: <cryptoClasses> 項目
-    href: cryptoclasses-element.md
-  - name: <cryptoClass> 項目
-    href: cryptoclass-element.md
-  - name: <cryptographySettings> 項目
-    href: cryptographysettings-element.md
-  - name: <cryptoNameMapping> 項目
-    href: cryptonamemapping-element.md
-  - name: 密碼編譯設定的 <mscorlib> 項目
-    href: mscorlib-element-for-cryptography-settings.md
-  - name: <nameEntry> 項目
-    href: nameentry-element.md
-  - name: <oidEntry> 項目
-    href: oidentry-element.md
-  - name: <oidMap> 項目
-    href: oidmap-element.md
-ms.openlocfilehash: 71237984ce59000cbef102480f7610f5a7b1bc43
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468571"
+    - name: <cryptoClasses> 項目
+      href: cryptoclasses-element.md
+    - name: <cryptoClass> 項目
+      href: cryptoclass-element.md
+    - name: <cryptographySettings> 項目
+      href: cryptographysettings-element.md
+    - name: <cryptoNameMapping> 項目
+      href: cryptonamemapping-element.md
+    - name: 密碼編譯設定的 <mscorlib> 項目
+      href: mscorlib-element-for-cryptography-settings.md
+    - name: <nameEntry> 項目
+      href: nameentry-element.md
+    - name: <oidEntry> 項目
+      href: oidentry-element.md
+    - name: <oidMap> 項目
+      href: oidmap-element.md

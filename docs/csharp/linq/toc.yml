@@ -1,48 +1,41 @@
-items:
 - name: Language Integrated Query (LINQ)
   href: index.md
   items:
-  - name: 查詢運算式基本概念
-    href: query-expression-basics.md
-  - name: C# 中的 LINQ
-    href: linq-in-csharp.md
-  - name: 在 C# 中撰寫 LINQ 查詢
-    href: write-linq-queries.md
-  - name: 查詢物件的集合
-    href: query-a-collection-of-objects.md
-  - name: 從方法傳回查詢
-    href: return-a-query-from-a-method.md
-  - name: 將查詢的結果儲存在記憶體中
-    href: store-the-results-of-a-query-in-memory.md
-  - name: 將查詢結果分組
-    href: group-query-results.md
-  - name: 建立巢狀群組
-    href: create-a-nested-group.md
-  - name: 在分組作業上執行子查詢
-    href: perform-a-subquery-on-a-grouping-operation.md
-  - name: 以相鄰索引鍵將結果分組
-    href: group-results-by-contiguous-keys.md
-  - name: 在執行階段動態指定述詞篩選
-    href: dynamically-specify-predicate-filters-at-runtime.md
-  - name: 執行內部聯結
-    href: perform-inner-joins.md
-  - name: 執行群組聯結
-    href: perform-grouped-joins.md
-  - name: 執行左方外部聯結
-    href: perform-left-outer-joins.md
-  - name: 排序 join 子句的結果
-    href: order-the-results-of-a-join-clause.md
-  - name: 使用複合索引鍵執行聯結
-    href: join-by-using-composite-keys.md
-  - name: 執行自訂的聯結作業
-    href: perform-custom-join-operations.md
-  - name: 處理查詢運算式中的 Null 值
-    href: handle-null-values-in-query-expressions.md
-  - name: 處理查詢運算式中的例外狀況
-    href: handle-exceptions-in-query-expressions.md
-ms.openlocfilehash: 1bc1fb625c7627abe63db2b69071df1ef1b7d11c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468154"
+    - name: 查詢運算式基本概念
+      href: query-expression-basics.md
+    - name: 'C# 中的 LINQ'
+      href: linq-in-csharp.md
+    - name: '在 C# 中撰寫 LINQ 查詢'
+      href: write-linq-queries.md
+    - name: 查詢物件的集合
+      href: query-a-collection-of-objects.md
+    - name: 從方法傳回查詢
+      href: return-a-query-from-a-method.md
+    - name: 將查詢的結果儲存在記憶體中
+      href: store-the-results-of-a-query-in-memory.md
+    - name: 將查詢結果分組
+      href: group-query-results.md
+    - name: 建立巢狀群組
+      href: create-a-nested-group.md
+    - name: 在分組作業上執行子查詢
+      href: perform-a-subquery-on-a-grouping-operation.md
+    - name: 以相鄰索引鍵將結果分組
+      href: group-results-by-contiguous-keys.md
+    - name: 在執行階段動態指定述詞篩選
+      href: dynamically-specify-predicate-filters-at-runtime.md
+    - name: 執行內部聯結
+      href: perform-inner-joins.md
+    - name: 執行群組聯結
+      href: perform-grouped-joins.md
+    - name: 執行左方外部聯結
+      href: perform-left-outer-joins.md
+    - name: 排序 join 子句的結果
+      href: order-the-results-of-a-join-clause.md
+    - name: 使用複合索引鍵執行聯結
+      href: join-by-using-composite-keys.md
+    - name: 執行自訂的聯結作業
+      href: perform-custom-join-operations.md
+    - name: 處理查詢運算式中的 Null 值
+      href: handle-null-values-in-query-expressions.md
+    - name: 處理查詢運算式中的例外狀況
+      href: handle-exceptions-in-query-expressions.md

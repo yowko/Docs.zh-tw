@@ -1,22 +1,15 @@
-items:
 - name: 互通性
   href: index.md
   items:
-  - name: 互通性概觀
-    href: interoperability-overview.md
-  - name: 作法：使用 Visual C# 功能存取 Office Interop 物件
-    href: how-to-access-office-onterop-objects.md
-  - name: 作法：在 COM Interop 程式設計中使用已編製索引的屬性
-    href: how-to-use-indexed-properties-in-com-interop-rogramming.md
-  - name: 作法：使用平台叫用播放 WAV 檔
-    href: how-to-use-platform-invoke-to-play-a-wave-file.md
-  - name: 逐步解說：Office 程式設計 (C# 與 Visual Basic)
-    href: walkthrough-office-programming.md
-  - name: 範例 COM 類別
-    href: example-com-class.md
-ms.openlocfilehash: 73e8696b89fa8ce212bc517f884f0ac615de09fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468295"
+    - name: 互通性概觀
+      href: interoperability-overview.md
+    - name: 'HOW TO：使用 Visual C# 功能存取 Office Interop 物件'
+      href: how-to-access-office-onterop-objects.md
+    - name: HOW TO：在 COM Interop 程式設計中使用已編製索引的屬性
+      href: how-to-use-indexed-properties-in-com-interop-rogramming.md
+    - name: HOW TO：使用平台叫用播放 WAV 檔
+      href: how-to-use-platform-invoke-to-play-a-wave-file.md
+    - name: '逐步解說：Office 程式設計 (C# 與 Visual Basic)'
+      href: walkthrough-office-programming.md
+    - name: 範例 COM 類別
+      href: example-com-class.md

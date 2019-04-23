@@ -1,28 +1,21 @@
-items:
 - name: 檔案系統和登錄
   href: index.md
   items:
-  - name: 作法：逐一查看樹狀目錄
-    href: how-to-iterate-through-a-directory-tree.md
-  - name: 作法：取得有關檔案、資料夾和磁碟機的資訊
-    href: how-to-get-information-about-files-folders-and-drives.md
-  - name: 作法：建立檔案或資料夾
-    href: how-to-create-a-file-or-folder.md
-  - name: 作法：複製、刪除和移動檔案和資料夾
-    href: how-to-copy-delete-and-move-files-and-folders.md
-  - name: 作法：提供檔案作業的進度對話方塊
-    href: how-to-provide-a-progress-dialog-box-for-file-operations.md
-  - name: 作法：寫入文字檔
-    href: how-to-write-to-a-text-file.md
-  - name: 作法：從文字檔讀取
-    href: how-to-read-from-a-text-file.md
-  - name: 作法：一次一行讀取文字檔 (Visual C#)
-    href: how-to-read-a-text-file-one-line-at-a-time.md
-  - name: 作法：在登錄中建立機碼 (Visual C#)
-    href: how-to-create-a-key-in-the-registry.md
-ms.openlocfilehash: 779f7fad6c2ba693a27f2657fc55c5db55ce00ed
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468213"
+    - name: HOW TO：逐一查看樹狀目錄
+      href: how-to-iterate-through-a-directory-tree.md
+    - name: HOW TO：取得有關檔案、資料夾和磁碟機的資訊
+      href: how-to-get-information-about-files-folders-and-drives.md
+    - name: HOW TO：建立檔案或資料夾
+      href: how-to-create-a-file-or-folder.md
+    - name: HOW TO：複製、刪除和移動檔案和資料夾
+      href: how-to-copy-delete-and-move-files-and-folders.md
+    - name: HOW TO：提供檔案作業的進度對話方塊
+      href: how-to-provide-a-progress-dialog-box-for-file-operations.md
+    - name: HOW TO：寫入文字檔
+      href: how-to-write-to-a-text-file.md
+    - name: HOW TO：從文字檔讀取
+      href: how-to-read-from-a-text-file.md
+    - name: 'HOW TO：一次一行讀取文字檔 (Visual C#)'
+      href: how-to-read-a-text-file-one-line-at-a-time.md
+    - name: 'HOW TO：在登錄中建立機碼 (Visual C#)'
+      href: how-to-create-a-key-in-the-registry.md

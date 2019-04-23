@@ -1,130 +1,123 @@
-items:
 - name: 偵錯、追蹤和程式碼剖析
   href: index.md
   items:
-  - name: 啟用 JIT 附加偵錯
-    href: enabling-jit-attach-debugging.md
-  - name: 使映像偵錯更容易
-    href: making-an-image-easier-to-debug.md
-  - name: 追蹤和稽核應用程式
-    href: tracing-and-instrumenting-applications.md
-    items:
-    - name: 程式碼合約
-      href: code-contracts.md
-    - name: 追蹤參數
-      href: trace-switches.md
-    - name: 作法：建立、初始化和設定追蹤參數
-      href: how-to-create-initialize-and-configure-trace-switches.md
-    - name: 追蹤接聽項
-      href: trace-listeners.md
-    - name: 作法：使用 TraceSource 和含有追蹤接聽項的篩選條件
-      href: how-to-use-tracesource-and-filters-with-trace-listeners.md
-    - name: 作法：建立和初始化追蹤接聽項
-      href: how-to-create-and-initialize-trace-listeners.md
-    - name: 作法：建立和初始化追蹤來源
-      href: how-to-create-and-initialize-trace-sources.md
-    - name: 作法：將追蹤陳述式新增至應用程式程式碼
-      href: how-to-add-trace-statements-to-application-code.md
-    - name: 作法：使用追蹤和偵錯進行條件式編譯
-      href: how-to-compile-conditionally-with-trace-and-debug.md
-  - name: 診斷 Managed 偵錯助理的錯誤
-    href: diagnosing-errors-with-managed-debugging-assistants.md
-    items:
-    - name: asynchronousThreadAbort
-      href: asynchronousthreadabort-mda.md
-    - name: bindingFailure
-      href: bindingfailure-mda.md
-    - name: callbackOnCollectedDelegate
-      href: callbackoncollecteddelegate-mda.md
-    - name: contextSwitchDeadlock
-      href: contextswitchdeadlock-mda.md
-    - name: dangerousThreadingAPI
-      href: dangerousthreadingapi-mda.md
-    - name: dateTimeInvalidLocalFormat
-      href: datetimeinvalidlocalformat-mda.md
-    - name: dirtyCastAndCallOnInterface
-      href: dirtycastandcalloninterface-mda.md
-    - name: disconnectedContext
-      href: disconnectedcontext-mda.md
-    - name: dllMainReturnsFalse
-      href: dllmainreturnsfalse-mda.md
-    - name: exceptionSwallowedOnCallFromCom
-      href: exceptionswallowedoncallfromcom-mda.md
-    - name: failedQI
-      href: failedqi-mda.md
-    - name: fatalExecutionEngineError
-      href: fatalexecutionengineerror-mda.md
-    - name: gcManagedToUnmanaged
-      href: gcmanagedtounmanaged-mda.md
-    - name: gcUnmanagedToManaged
-      href: gcunmanagedtomanaged-mda.md
-    - name: illegalPrepareConstrainedRegion
-      href: illegalprepareconstrainedregion-mda.md
-    - name: invalidApartmentStateChange
-      href: invalidapartmentstatechange-mda.md
-    - name: invalidCERCall
-      href: invalidcercall-mda.md
-    - name: invalidFunctionPointerInDelegate
-      href: invalidfunctionpointerindelegate-mda.md
-    - name: invalidGCHandleCookie
-      href: invalidgchandlecookie-mda.md
-    - name: invalidIUnknown
-      href: invalidiunknown-mda.md
-    - name: invalidMemberDeclaration
-      href: invalidmemberdeclaration-mda.md
-    - name: invalidOverlappedToPinvoke
-      href: invalidoverlappedtopinvoke-mda.md
-    - name: invalidVariant
-      href: invalidvariant-mda.md
-    - name: jitCompilationStart
-      href: jitcompilationstart-mda.md
-    - name: loaderLock
-      href: loaderlock-mda.md
-    - name: loadFromContext
-      href: loadfromcontext-mda.md
-    - name: marshalCleanupError
-      href: marshalcleanuperror-mda.md
-    - name: marshaling
-      href: marshaling-mda.md
-    - name: memberInfoCacheCreation
-      href: memberinfocachecreation-mda.md
-    - name: moduloObjectHashcode
-      href: moduloobjecthashcode-mda.md
-    - name: nonComVisibleBaseClass
-      href: noncomvisiblebaseclass-mda.md
-    - name: notMarshalable
-      href: notmarshalable-mda.md
-    - name: openGenericCERCall
-      href: opengenericcercall-mda.md
-    - name: overlappedFreeError
-      href: overlappedfreeerror-mda.md
-    - name: pInvokeLog
-      href: pinvokelog-mda.md
-    - name: pInvokeStackImbalance
-      href: pinvokestackimbalance-mda.md
-    - name: raceOnRCWCleanup
-      href: raceonrcwcleanup-mda.md
-    - name: reentrancy
-      href: reentrancy-mda.md
-    - name: releaseHandleFailed
-      href: releasehandlefailed-mda.md
-    - name: reportAvOnComRelease
-      href: reportavoncomrelease-mda.md
-    - name: streamWriterBufferedDataLost
-      href: streamwriterbuffereddatalost-mda.md
-    - name: virtualCERCall
-      href: virtualcercall-mda.md
-  - name: 使用偵錯工具顯示屬性增強偵錯功能
-    href: enhancing-debugging-with-the-debugger-display-attributes.md
-  - name: 執行階段分析
-    href: runtime-profiling.md
-  - name: 效能計數器
-    href: performance-counters.md
-  - name: 效能計數器與同處理序並存應用程式
-    href: performance-counters-and-in-process-side-by-side-applications.md
-ms.openlocfilehash: 2dd53aa163049b2a9e92e4fc7dcf67a1ffa0492a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468490"
+    - name: 啟用 JIT 附加偵錯
+      href: enabling-jit-attach-debugging.md
+    - name: 使映像偵錯更容易
+      href: making-an-image-easier-to-debug.md
+    - name: 追蹤和稽核應用程式
+      href: tracing-and-instrumenting-applications.md
+      items:
+        - name: 程式碼合約
+          href: code-contracts.md
+        - name: 追蹤參數
+          href: trace-switches.md
+        - name: HOW TO：建立、初始化和設定追蹤參數
+          href: how-to-create-initialize-and-configure-trace-switches.md
+        - name: 追蹤接聽項
+          href: trace-listeners.md
+        - name: HOW TO：使用 TraceSource 和含有追蹤接聽項的篩選條件
+          href: how-to-use-tracesource-and-filters-with-trace-listeners.md
+        - name: HOW TO：建立和初始化追蹤接聽項
+          href: how-to-create-and-initialize-trace-listeners.md
+        - name: HOW TO：建立和初始化追蹤來源
+          href: how-to-create-and-initialize-trace-sources.md
+        - name: HOW TO：將追蹤陳述式新增至應用程式程式碼
+          href: how-to-add-trace-statements-to-application-code.md
+        - name: HOW TO：使用追蹤和偵錯進行條件式編譯
+          href: how-to-compile-conditionally-with-trace-and-debug.md
+    - name: 診斷 Managed 偵錯助理的錯誤
+      href: diagnosing-errors-with-managed-debugging-assistants.md
+      items:
+        - name: asynchronousThreadAbort
+          href: asynchronousthreadabort-mda.md
+        - name: bindingFailure
+          href: bindingfailure-mda.md
+        - name: callbackOnCollectedDelegate
+          href: callbackoncollecteddelegate-mda.md
+        - name: contextSwitchDeadlock
+          href: contextswitchdeadlock-mda.md
+        - name: dangerousThreadingAPI
+          href: dangerousthreadingapi-mda.md
+        - name: dateTimeInvalidLocalFormat
+          href: datetimeinvalidlocalformat-mda.md
+        - name: dirtyCastAndCallOnInterface
+          href: dirtycastandcalloninterface-mda.md
+        - name: disconnectedContext
+          href: disconnectedcontext-mda.md
+        - name: dllMainReturnsFalse
+          href: dllmainreturnsfalse-mda.md
+        - name: exceptionSwallowedOnCallFromCom
+          href: exceptionswallowedoncallfromcom-mda.md
+        - name: failedQI
+          href: failedqi-mda.md
+        - name: fatalExecutionEngineError
+          href: fatalexecutionengineerror-mda.md
+        - name: gcManagedToUnmanaged
+          href: gcmanagedtounmanaged-mda.md
+        - name: gcUnmanagedToManaged
+          href: gcunmanagedtomanaged-mda.md
+        - name: illegalPrepareConstrainedRegion
+          href: illegalprepareconstrainedregion-mda.md
+        - name: invalidApartmentStateChange
+          href: invalidapartmentstatechange-mda.md
+        - name: invalidCERCall
+          href: invalidcercall-mda.md
+        - name: invalidFunctionPointerInDelegate
+          href: invalidfunctionpointerindelegate-mda.md
+        - name: invalidGCHandleCookie
+          href: invalidgchandlecookie-mda.md
+        - name: invalidIUnknown
+          href: invalidiunknown-mda.md
+        - name: invalidMemberDeclaration
+          href: invalidmemberdeclaration-mda.md
+        - name: invalidOverlappedToPinvoke
+          href: invalidoverlappedtopinvoke-mda.md
+        - name: invalidVariant
+          href: invalidvariant-mda.md
+        - name: jitCompilationStart
+          href: jitcompilationstart-mda.md
+        - name: loaderLock
+          href: loaderlock-mda.md
+        - name: loadFromContext
+          href: loadfromcontext-mda.md
+        - name: marshalCleanupError
+          href: marshalcleanuperror-mda.md
+        - name: marshaling
+          href: marshaling-mda.md
+        - name: memberInfoCacheCreation
+          href: memberinfocachecreation-mda.md
+        - name: moduloObjectHashcode
+          href: moduloobjecthashcode-mda.md
+        - name: nonComVisibleBaseClass
+          href: noncomvisiblebaseclass-mda.md
+        - name: notMarshalable
+          href: notmarshalable-mda.md
+        - name: openGenericCERCall
+          href: opengenericcercall-mda.md
+        - name: overlappedFreeError
+          href: overlappedfreeerror-mda.md
+        - name: pInvokeLog
+          href: pinvokelog-mda.md
+        - name: pInvokeStackImbalance
+          href: pinvokestackimbalance-mda.md
+        - name: raceOnRCWCleanup
+          href: raceonrcwcleanup-mda.md
+        - name: reentrancy
+          href: reentrancy-mda.md
+        - name: releaseHandleFailed
+          href: releasehandlefailed-mda.md
+        - name: reportAvOnComRelease
+          href: reportavoncomrelease-mda.md
+        - name: streamWriterBufferedDataLost
+          href: streamwriterbuffereddatalost-mda.md
+        - name: virtualCERCall
+          href: virtualcercall-mda.md
+    - name: 使用偵錯工具顯示屬性增強偵錯功能
+      href: enhancing-debugging-with-the-debugger-display-attributes.md
+    - name: 執行階段分析
+      href: runtime-profiling.md
+    - name: 效能計數器
+      href: performance-counters.md
+    - name: 效能計數器與同處理序並存應用程式
+      href: performance-counters-and-in-process-side-by-side-applications.md

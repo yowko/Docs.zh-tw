@@ -1,16 +1,9 @@
-items:
 - name: 介面
   href: index.md
   items:
-  - name: 明確介面實作
-    href: explicit-interface-implementation.md
-  - name: 作法：明確實作介面成員
-    href: how-to-explicitly-implement-interface-members.md
-  - name: 作法：明確實作兩個介面的成員
-    href: how-to-explicitly-implement-members-of-two-interfaces.md
-ms.openlocfilehash: e57ba8a9916b35c4bfdedba8f720615ea1eaf727
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468507"
+    - name: 明確介面實作
+      href: explicit-interface-implementation.md
+    - name: HOW TO：明確實作介面成員
+      href: how-to-explicitly-implement-interface-members.md
+    - name: HOW TO：明確實作兩個介面的成員
+      href: how-to-explicitly-implement-members-of-two-interfaces.md
