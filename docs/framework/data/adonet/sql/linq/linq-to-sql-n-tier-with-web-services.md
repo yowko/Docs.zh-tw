@@ -3,10 +3,10 @@ title: LINQ to SQL 多層式架構與 Web 服務
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107402"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>LINQ to SQL 多層式架構與 Web 服務
@@ -30,7 +30,7 @@ ms.locfileid: "59107402"
  插入資料時，展示層可建構新物件並將它傳送到中介層，或可以讓中介層根據其所提供的值建構物件。 一般來說，在 N-Tier 應用程式中擷取和插入資料，與在 2 層應用程式中的程序沒有太大差異。 如需詳細資訊，請參閱 <<c0> [ 查詢資料庫](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)並[制定和提交資料變更](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)。  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>追蹤變更以更新和刪除  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取，根據時間戳記 （也稱為 RowVersions） 和原始值。 如果資料庫資料表有時間戳記，則更新和刪除無論在中介層或展示層都不需要額外工作。 不過，如果必須使用原始值來進行開放式並行存取檢查，那麼展示層就必須負責追蹤這些值，並在更新時送回這些值。 這是因為對展示層上的實體所做的變更並不會在中介層上追蹤。 事實上，原始擷取實體的動作與最後更新它的動作，通常是由兩個完全不同的 <xref:System.Data.Linq.DataContext> 執行個體所執行。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援以時間戳記為基礎的開放式並行存取 (Optimistic Concurrency) (也稱為 RowVersions) 和以原始值為基礎的開放式並行存取。 如果資料庫資料表有時間戳記，則更新和刪除無論在中介層或展示層都不需要額外工作。 不過，如果必須使用原始值來進行開放式並行存取檢查，那麼展示層就必須負責追蹤這些值，並在更新時送回這些值。 這是因為對展示層上的實體所做的變更並不會在中介層上追蹤。 事實上，原始擷取實體的動作與最後更新它的動作，通常是由兩個完全不同的 <xref:System.Data.Linq.DataContext> 執行個體所執行。  
   
  展示層所做的變更愈多，追蹤這些變更並封裝送回中介層的工作就愈複雜。 溝通變更的機制如何實作，端視應用程式而定。 唯一的要求是，開放式並行存取檢查所需的這些原始值必須提供給 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]。  
   
@@ -38,5 +38,5 @@ ms.locfileid: "59107402"
   
 ## <a name="see-also"></a>另請參閱
 
-- [多層式架構和遠端應用程式以及 LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
+- [使用 LINQ to SQL 的多層式架構和遠端應用程式](../../../../../../docs/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql.md)
 - [LinqDataSource Web 伺服器控制項概觀](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))

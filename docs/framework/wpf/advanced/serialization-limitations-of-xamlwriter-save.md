@@ -7,10 +7,10 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113278"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save 的序列化限制
@@ -30,7 +30,7 @@ ms.locfileid: "59113278"
   
 <a name="Event_Handling_is_Not_Preserved"></a>   
 ## <a name="event-handling-is-not-preserved"></a>不會保留事件處理  
- 透過 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加入的事件處理常式均已序列化，不會保留它們。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 程式碼後置 （而不也不相關的 X:code 機制） 無法序列化執行階段程序邏輯。 由於序列化是獨立且受限於邏輯樹狀結構，所以，沒有任何功能可用來儲存事件處理常式。 因此，會從輸出 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中移除事件處理常式屬性 (屬性本身以及為處理常式命名的字串值)。  
+ 透過 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 加入的事件處理常式均已序列化，不會保留它們。 不具程式碼後置 (而且沒有相關的 x:Code 機制) 的 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]，無法序列化執行階段程序邏輯。 由於序列化是獨立且受限於邏輯樹狀結構，所以，沒有任何功能可用來儲存事件處理常式。 因此，會從輸出 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] 中移除事件處理常式屬性 (屬性本身以及為處理常式命名的字串值)。  
   
 <a name="Realistic_Scenarios_for_Use_of_XAMLWriter_Save"></a>   
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>使用 XAMLWriter.Save 的真實案例  

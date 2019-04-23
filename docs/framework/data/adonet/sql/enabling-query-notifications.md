@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a5333e19-8e55-4aa9-82dc-ca8745e516ed
 ms.openlocfilehash: a2227b33c7caacdd04c7bf50082bb0cfab7f3302
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113941"
 ---
 # <a name="enabling-query-notifications"></a>啟用查詢通知
@@ -30,7 +30,7 @@ ms.locfileid: "59113941"
   
  **SQL Server 文件**  
   
--   [為通知建立查詢](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
+-   [建立查詢通知](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms181122(v=sql.105))  
   
 -   [Service Broker 的安全性考量](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms166059(v=sql.90))  
   
@@ -46,7 +46,7 @@ ms.locfileid: "59113941"
   
 -   [Service Broker 開發人員資訊中心](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms166100(v=sql.105))  
   
--   [開發人員手冊 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
+-   [開發人員指南 (Service Broker)](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/bb522908(v=sql.105))  
   
 ## <a name="enabling-query-notifications-to-run-sample-code"></a>啟用查詢通知來執行範例程式碼  
  若要在啟用 Service Broker **AdventureWorks**資料庫使用 SQL Server Management Studio，請執行下列 TRANSACT-SQL 陳述式：  
@@ -79,7 +79,7 @@ CREATE SERVICE ContactChangeNotifications
 ### <a name="using-sqldependency"></a>使用 SqlDependency  
  若要使用 <xref:System.Data.SqlClient.SqlDependency>，所使用的 SQL Server 資料庫必須啟用 Service Broker，而且使用者必須有接收通知的使用權限。 Service Broker 物件 (如通知佇列) 是預先定義的。  
   
- 此外，<xref:System.Data.SqlClient.SqlDependency> 會自動啟動工作執行緒，以便在公佈到佇列時處理通知；它也會剖析 Service Broker 訊息，將資訊做為事件引數資料公開。 <xref:System.Data.SqlClient.SqlDependency> 必須藉由呼叫初始化`Start`方法來建立資料庫的相依性。 這是一種靜態方法，您僅需要在所要求之每個資料庫連接的應用程式初始化期間內，呼叫一次。 對於每個進行的相依性連接，`Stop` 方法應該在應用程式終止時呼叫。  
+ 此外，<xref:System.Data.SqlClient.SqlDependency> 會自動啟動工作執行緒，以便在公佈到佇列時處理通知；它也會剖析 Service Broker 訊息，將資訊做為事件引數資料公開。 <xref:System.Data.SqlClient.SqlDependency> 必須藉由呼叫 `Start` 方法來初始化，以便建立對資料庫的相依性。 這是一種靜態方法，您僅需要在所要求之每個資料庫連接的應用程式初始化期間內，呼叫一次。 對於每個進行的相依性連接，`Stop` 方法應該在應用程式終止時呼叫。  
   
 ### <a name="using-sqlnotificationrequest"></a>使用 SqlNotificationRequest  
  相反，<xref:System.Data.Sql.SqlNotificationRequest> 要求您自己實作整個接聽基礎結構。 此外，必須定義所有支援的 Service Broker 物件，如佇列、服務及佇列所支援的訊息類型。 如果應用程式要求特別通知訊息或通知行為，或者應用程式為較大 Service Broker 應用程式的一部分，則此手動方法非常有用。  
@@ -87,4 +87,4 @@ CREATE SERVICE ContactChangeNotifications
 ## <a name="see-also"></a>另請參閱
 
 - [SQL Server 中的查詢通知](../../../../../docs/framework/data/adonet/sql/query-notifications-in-sql-server.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

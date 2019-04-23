@@ -3,10 +3,10 @@ title: 通道處理站和快取
 ms.date: 03/30/2017
 ms.assetid: 954f030e-091c-4c0e-a7a2-10f9a6b1f529
 ms.openlocfilehash: 3914ba74337bd959558348c191a897c79a32da52
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106453"
 ---
 # <a name="channel-factory-and-caching"></a>通道處理站和快取
@@ -25,7 +25,7 @@ WCF 用戶端應用程式會使用 <xref:System.ServiceModel.ChannelFactory%601>
 > [!TIP]
 >  直接使用 <xref:System.ServiceModel.ChannelFactory%601> 類別時，您可以直接控制通道處理站的建立作業。  
   
- WCF 用戶端 proxy 產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)衍生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 定義靜態<xref:System.ServiceModel.ClientBase%601.CacheSetting%2A>定義通道處理站快取行為的屬性。 快取設定會針對特定類型來設定。 例如，設定`ClientBase<ITest>.CacheSettings`其中一個下面定義的值將會影響只有那些 proxy/ClientBase 型別的`ITest`。 第一個 Proxy/ClientBase 執行個體一經建立，特定 <xref:System.ServiceModel.ClientBase%601> 的快取設定就會是不可變的。  
+ WCF 用戶端 proxy 產生含有[ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)衍生自<xref:System.ServiceModel.ClientBase%601>。 <xref:System.ServiceModel.ClientBase%601> 會定義用於定義通道處理站快取行為的靜態 <xref:System.ServiceModel.ClientBase%601.CacheSetting%2A> 屬性。 快取設定會針對特定類型來設定。 例如，設定`ClientBase<ITest>.CacheSettings`其中一個下面定義的值將會影響只有那些 proxy/ClientBase 型別的`ITest`。 第一個 Proxy/ClientBase 執行個體一經建立，特定 <xref:System.ServiceModel.ClientBase%601> 的快取設定就會是不可變的。  
   
 ## <a name="specifying-caching-behavior"></a>指定快取行為  
  快取行為是藉由將 <xref:System.ServiceModel.ClientBase%601.CacheSetting> 屬性設定為下列其中一個值所指定。  
@@ -117,4 +117,4 @@ public partial class TestClient : System.ServiceModel.ClientBase, ITest {}
 - [建置用戶端](../../../../docs/framework/wcf/building-clients.md)
 - [用戶端](../../../../docs/framework/wcf/feature-details/clients.md)
 - [使用 WCF 用戶端存取服務](../../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [HOW TO：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [如何：使用 ChannelFactory](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)

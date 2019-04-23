@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
 ms.openlocfilehash: 85332bfdbb80e4c49bab1ff208228a88337fbb43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115241"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>HOW TO：隱藏 Windows Forms DataGridView 控制項的資料行標頭
@@ -37,4 +37,4 @@ ms.locfileid: "59115241"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A?displayProperty=nameWithType>
-- [Windows Form DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的基本資料行、資料列和儲存格功能](basic-column-row-and-cell-features-wf-datagridview-control.md)

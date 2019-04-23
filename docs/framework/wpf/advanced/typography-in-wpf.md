@@ -5,10 +5,10 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111406"
 ---
 # <a name="typography-in-wpf"></a>WPF 中的印刷樣式
@@ -16,7 +16,7 @@ ms.locfileid: "59111406"
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>提升文字的品質與效能  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 來轉譯，可增強文字的清晰度與可讀性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術開發[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]，改進了現有 Lcd （液晶顯示器），例如膝上型電腦螢幕、 Pocket PC 螢幕和平面監視器上文字的可讀性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 使用子像素轉譯，讓文字更高畫質它的真正樣貌來顯示來對齊像素的小數部分的字元。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改進是以 y 方向消除鋸齒，這會使文字字元中平滑曲線頂端和底部更平滑。 如需 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能的詳細資訊，請參閱 [ClearType 概觀](cleartype-overview.md)。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中的文字是使用 [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] 來轉譯，可增強文字的清晰度與可讀性。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 軟體技術是由 [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] 所開發，此技術改善了現有 LCD (液晶顯示器) 上的文字可讀性，例如膝上型電腦螢幕、Pocket PC 螢幕和平面監視器。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 使用子像素轉譯，讓文字可利用像素的小數部分來對齊字元，使用更高畫質來顯示它的真正樣貌。 額外的解析度可提高文字顯示細節的解析度，即使經過長時間也很容易閱讀。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 的另一項改進是以 y 方向消除鋸齒，這會使文字字元中平滑曲線頂端和底部更平滑。 如需 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 功能的詳細資訊，請參閱 [ClearType 概觀](cleartype-overview.md)。  
   
  ![套用 ClearType Y 方向消除鋸齒功能的文字](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 以 ClearType Y 方向消除鋸齒功能顯示的文字  
@@ -43,7 +43,7 @@ ms.locfileid: "59111406"
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>已增強的國際文字支援  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 藉由提供下列功能提供增強的國際文字支援：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 藉由提供下列功能來提供已增強的國際文字支援：  
   
 -   在所有書寫系統中，使用自動調整度量功能來自動調整行間距。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59111406"
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>已增強的字型支援  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 藉由提供下列功能提供增強的字型支援：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 藉由提供下列功能來提供已增強的字型支援：  
   
 -   適用於所有文字的 Unicode。 字型行為和選取不再需要字元集或字碼頁。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59111406"
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>新的文字應用程式開發介面 (API)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]的開發人員在他們的應用程式中包含文字時使用。 這些 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 可分為三個類別：  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 提供數個文字 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]，讓開發人員能夠在他們的應用程式中包含文字時使用。 這些 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] 可分為三個類別：  
   
 -   **版面配置和使用者介面**。 [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] 的一般文字控制項。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "59111406"
  在最高層級的功能中，文字[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]提供通用[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]這類控制<xref:System.Windows.Controls.Label>， <xref:System.Windows.Controls.TextBlock>，和<xref:System.Windows.Controls.TextBox>。 這些控制項提供應用程式內基本的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 元素，以及提供一種簡單方式來呈現文字並與之互動。 控制這類<xref:System.Windows.Controls.RichTextBox>和<xref:System.Windows.Controls.PasswordBox>啟用更進階或特製化的文字處理。 這類類別和<xref:System.Windows.Documents.TextRange>， <xref:System.Windows.Documents.TextSelection>，和<xref:System.Windows.Documents.TextPointer>可讓您更有用的文字操作。 這些[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]控制項提供屬性，例如<xref:System.Windows.Controls.Control.FontFamily%2A>， <xref:System.Windows.Controls.Control.FontSize%2A>，和<xref:System.Windows.Controls.Control.FontStyle%2A>，可讓您控制用來呈現文字的字型。  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>使用點陣圖效果、轉換和文字效果  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您使用的功能，例如點陣圖效果、 轉換和文字效果來建立視覺效果使用的文字。 下列範例示範套用至文字之延伸陰影效果的典型類型。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 可讓您藉由使用點陣圖效果、轉換和文字效果等功能，對文字建立具視覺效果的趣味用法。 下列範例示範套用至文字之延伸陰影效果的典型類型。  
   
  ![文字陰影濃淡&#61;0.25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   
@@ -156,5 +156,5 @@ ms.locfileid: "59111406"
 - [OpenType 字型功能](opentype-font-features.md)
 - [繪製格式化的文字](drawing-formatted-text.md)
 - [進階文字格式化](advanced-text-formatting.md)
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [Microsoft 印刷樣式](https://docs.microsoft.com/typography/)

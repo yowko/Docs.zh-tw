@@ -3,10 +3,10 @@ title: <clientCertificate> 的 <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
 ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107978"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate> of \<serviceCredentials>
@@ -39,7 +39,7 @@ ms.locfileid: "59107978"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<驗證 >](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|指定用戶端憑證的驗證選項。|  
+|[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|指定用戶端憑證的驗證選項。|  
 |[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|指定要使用的憑證。|  
   
 ### <a name="parent-elements"></a>父項目  
@@ -60,6 +60,6 @@ ms.locfileid: "59107978"
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [HOW TO：建立雙面合約](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [如何：建立雙工合約](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [使用憑證](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

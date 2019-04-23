@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110789"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL 物件模型
@@ -65,11 +65,11 @@ ms.locfileid: "59110789"
  如需詳細資訊，請參閱的關聯屬性 > 一節[屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)。  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL 方法和資料庫預存程序  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援預存程序和使用者定義函數。 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，好讓您可以存取它們以強型別的方式從用戶端程式碼，用戶端物件來對應這些資料庫定義的抽象概念。 方法簽章與資料庫中定義的程序和函式簽章十分相似。 您可以使用 IntelliSense 來探索這些方法。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援預存程序和使用者定義函式。 在  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，好讓您可以存取它們以強型別的方式從用戶端程式碼，用戶端物件來對應這些資料庫定義的抽象概念。 方法簽章與資料庫中定義的程序和函式簽章十分相似。 您可以使用 IntelliSense 來探索這些方法。  
   
  呼叫對應程序所傳回的結果集是強型別集合。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用將預存程序和函式對應至方法<xref:System.Data.Linq.Mapping.FunctionAttribute>和<xref:System.Data.Linq.Mapping.ParameterAttribute>屬性。 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 屬性可以區分表示預存程序的方法和表示使用者定義函式的方法。 如果此屬性設為 `false` (預設值)，則此方法表示預存程序。 如果設為 `true`，則此方法表示資料庫函式。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會使用 <xref:System.Data.Linq.Mapping.FunctionAttribute> 和 <xref:System.Data.Linq.Mapping.ParameterAttribute> 屬性，將預存程序和函式對應至方法。 <xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> 屬性可以區分表示預存程序的方法和表示使用者定義函式的方法。 如果此屬性設為 `false` (預設值)，則此方法表示預存程序。 如果設為 `true`，則此方法表示資料庫函式。  
   
 > [!NOTE]
 >  如果您使用 Visual Studio，您可以使用[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]來建立對應至預存程序和使用者定義函式的方法。  
@@ -82,5 +82,5 @@ ms.locfileid: "59110789"
   
 ## <a name="see-also"></a>另請參閱
 
-- [屬性架構對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
+- [以屬性為基礎的對應](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)

@@ -3,10 +3,10 @@ title: LINQ to Entities 查詢中的標準查詢運算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
 ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118140"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities 查詢中的標準查詢運算子
@@ -69,7 +69,7 @@ ms.locfileid: "59118140"
 ## <a name="type-methods"></a>型別方法  
  Entity Framework 的內容中支援處理型別轉換和測試的兩個 LINQ 方法。 這表示唯一支援的類型會對應到適當的 Entity Framework 類型的類型。 如需這些類型的清單，請參閱 <<c0> [ 概念模型型別 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)。 型別方法為 `Convert` 和 `OfType`。  
   
- `OfType` 支援實體類型。 `Convert` 支援概念模型基本型別。  也支援 C# `is` 和 `as` 方法。  
+ 實體類型支援 `OfType`。 概念模型基本型別支援 `Convert`。  也支援 C# `is` 和 `as` 方法。  
   
 ## <a name="paging-methods"></a>分頁方法  
  分頁作業從序列中傳回單一項目或多個項目。 支援的分頁方法為`First`， `FirstOrDefault`， `Single`， `SingleOrDefault`， `Skip`，和`Take`。  
@@ -78,5 +78,5 @@ ms.locfileid: "59118140"
   
 ## <a name="see-also"></a>另請參閱
 
-- [支援與不支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
+- [支援和不支援的 LINQ 方法 (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)
 - [標準查詢運算子概觀](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))

@@ -3,10 +3,10 @@ title: 竄改
 ms.date: 03/30/2017
 ms.assetid: 3bad93be-60bb-4f89-96ab-a1c3dc7c0fad
 ms.openlocfilehash: 7a4265c30a6713f9557de2b3d1e99c87b7dd3e58
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107883"
 ---
 # <a name="tampering"></a>竄改
@@ -22,8 +22,8 @@ ms.locfileid: "59107883"
 ## <a name="see-also"></a>另請參閱
 
 - [安全性考量](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)
-- [資訊洩露](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
+- [資訊洩漏](../../../../docs/framework/wcf/feature-details/information-disclosure.md)
 - [權限提高](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
-- [阻斷服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
+- [阻絕服務](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [不支援的案例](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
 - [重新執行攻擊](../../../../docs/framework/wcf/feature-details/replay-attacks.md)

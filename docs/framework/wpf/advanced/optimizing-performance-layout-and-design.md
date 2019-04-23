@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107064"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>最佳化效能：版面配置與設計
@@ -57,7 +57,7 @@ ms.locfileid: "59107064"
 ### <a name="build-your-tree-top-down"></a>由上而下建置您的樹狀結構  
  在邏輯樹狀結構節點新增或移除節點時，會對節點之父代及其所有子系引發屬性失效。 因此，應該一律遵循由上而下的建構模式，以避免在已驗證的節點上發生不必要的失效成本。 下表顯示之間建立由上而下和由下而上，其中樹狀結構有 150 層深一樹狀結構的執行速度差異<xref:System.Windows.Controls.TextBlock>和<xref:System.Windows.Controls.DockPanel>每個層級。  
   
-|**動作**|**樹狀結構建置 （毫秒）**|**轉譯 — 包括樹狀結構建置 （以毫秒為單位）**|  
+|**動作**|**樹狀結構建置 (毫秒)**|**轉譯 — 包括樹狀結構建置 (毫秒)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |由下而上|366|454|  
 |由上而下|11|96|  
@@ -77,7 +77,7 @@ ms.locfileid: "59107064"
 - [2D 圖形和影像處理](optimizing-performance-2d-graphics-and-imaging.md)
 - [物件行為](optimizing-performance-object-behavior.md)
 - [應用程式資源](optimizing-performance-application-resources.md)
-- [文字](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [資料繫結](optimizing-performance-data-binding.md)
 - [其他效能建議](optimizing-performance-other-recommendations.md)
-- [配置](layout.md)
+- [版面配置](layout.md)

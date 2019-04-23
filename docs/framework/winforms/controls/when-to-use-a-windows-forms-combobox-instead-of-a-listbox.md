@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ListCount property
 ms.assetid: 7bcaea58-1cfa-46db-9baf-b75a69d8f9ec
 ms.openlocfilehash: 8a2429049acf1a22edde8d132ece17da4e91f1db
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111419"
 ---
 # <a name="when-to-use-a-windows-forms-combobox-instead-of-a-listbox"></a>何時使用 Windows Form ComboBox 取代 ListBox
@@ -29,6 +29,6 @@ ms.locfileid: "59111419"
 
 - <xref:System.Windows.Forms.ComboBox>
 - <xref:System.Windows.Forms.ListBox>
-- [HOW TO：在 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項中新增和移除項目](add-and-remove-items-from-a-wf-combobox.md)
-- [HOW TO：排序 Windows Forms 的 ComboBox、ListBox 或 CheckedListBox 控制項內容](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
-- [用來列出選項的 Windows Form 控制項](windows-forms-controls-used-to-list-options.md)
+- [如何：新增和移除項目從 Windows Form 的 ComboBox、 ListBox 或 CheckedListBox 控制項](add-and-remove-items-from-a-wf-combobox.md)
+- [如何：排序內容的 Windows Forms 的 ComboBox、 ListBox 或 CheckedListBox 控制項](sort-the-contents-of-a-wf-combobox-listbox-or-checkedlistbox-control.md)
+- [用來列出選項的 Windows Forms 控制項](windows-forms-controls-used-to-list-options.md)

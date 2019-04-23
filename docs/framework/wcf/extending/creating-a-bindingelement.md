@@ -3,10 +3,10 @@ title: 建立 BindingElement
 ms.date: 03/30/2017
 ms.assetid: 01a35307-a41f-4ef6-a3db-322af40afc99
 ms.openlocfilehash: 600bf9b394078ffc1b1bc97390bd0de406d64338
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115163"
 ---
 # <a name="creating-a-bindingelement"></a>建立 BindingElement
@@ -22,9 +22,9 @@ ms.locfileid: "59115163"
   
  `ChunkingBindingElement` 會負責建立 `ChunkingChannelFactory` 和 `ChunkingChannelListener`。 它會覆寫 <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelFactory%2A> 和 <xref:System.ServiceModel.Channels.BindingElement.CanBuildChannelListener%2A> 實作，並檢查型別參數是否為 <xref:System.ServiceModel.Channels.IDuplexSessionChannel> (在我們的範例中，這是 `ChunkingChannel` 唯一支援的通道形狀)，以及繫結中的其他繫結項目是否支援這個通道形狀。  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 首先會檢查要求的通道圖案可以建置，然後取得要區塊處理的訊息動作清單。 然後它會建立新的 `ChunkingChannelFactory`，並將此處理站傳遞至內部通道處理站  (如果是要建立傳輸繫結項目，由於該項目是繫結堆疊中的最後一個項目，因此必須建立通道接聽程式或通道處理站)。  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelFactory%2A> 會先檢查是否能建置要求的通道形狀，接著會取得要分成區塊的訊息動作清單。 然後它會建立新的 `ChunkingChannelFactory`，並將此處理站傳遞至內部通道處理站  (如果是要建立傳輸繫結項目，由於該項目是繫結堆疊中的最後一個項目，因此必須建立通道接聽程式或通道處理站)。  
   
- <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 已建立的相似實作`ChunkingChannelListener`並將其傳遞內部通道接聽程式。  
+ <xref:System.ServiceModel.Channels.BindingElement.BuildChannelListener%2A> 擁有可建立 `ChunkingChannelListener` 並傳遞至內部通道接聽程式的相似實作。  
   
  另一個範例是使用傳輸通道，[傳輸：UDP](../../../../docs/framework/wcf/samples/transport-udp.md)範例提供下列覆寫。  
   
@@ -54,16 +54,16 @@ public IChannelListener<TChannel> BuildChannelListener<TChannel>(BindingContext 
   
  <xref:System.ServiceModel.Channels.BindingElement.Clone%2A> 應該會傳回這個繫結項目的全新複本。  在最佳做法中，我們建議繫結項目作者使用複製建構函式 (其呼叫基底複製建構函式) 來實作該複製品，然後複製在此類別中的任何其他欄位。  
   
- <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> – <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> Get 屬性會傳回繫結項目所代表的傳輸通訊協定的 URI 配置。 例如，<xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>而<xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>從其各自傳回"http"和"net.tcp"<xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A>屬性。  
+ <xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> –<xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A> get 屬性會傳回繫結項目所表示之傳輸通訊協定所適用的 URI 結構描述。 例如，<xref:System.ServiceModel.Channels.HttpTransportBindingElement?displayProperty=nameWithType>而<xref:System.ServiceModel.Channels.TcpTransportBindingElement?displayProperty=nameWithType>從其各自傳回"http"和"net.tcp"<xref:System.ServiceModel.Channels.TransportBindingElement.Scheme%2A>屬性。  
   
 #### <a name="encoding-binding-elements"></a>編碼繫結項目  
  若要建立新的編碼繫結項目，一開始要先擴充 <xref:System.ServiceModel.Channels.BindingElement> 類別，並實作 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement?displayProperty=nameWithType> 類別。 接下來，您必須至少實作 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A?displayProperty=nameWithType> 方法和 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A?displayProperty=nameWithType> 屬性。  
   
--   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>。 傳回這個繫結項目的全新複本。 在最佳做法中，我們建議繫結項目作者使用複製建構函式 (其呼叫基底複製建構函式) 來實作 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>，然後複製在此類別中的任何其他欄位。  
+-   <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>. 傳回這個繫結項目的全新複本。 在最佳做法中，我們建議繫結項目作者使用複製建構函式 (其呼叫基底複製建構函式) 來實作 <xref:System.ServiceModel.Channels.BindingElement.Clone%2A>，然後複製在此類別中的任何其他欄位。  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>。 傳回 <xref:System.ServiceModel.Channels.MessageEncoderFactory>，它會提供實作新編碼器 (應該會擴充 <xref:System.ServiceModel.Channels.MessageEncoder>) 之實際類別的控制代碼。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 與 <xref:System.ServiceModel.Channels.MessageEncoder>。  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.CreateMessageEncoderFactory%2A>. 傳回 <xref:System.ServiceModel.Channels.MessageEncoderFactory>，它會提供實作新編碼器 (應該會擴充 <xref:System.ServiceModel.Channels.MessageEncoder>) 之實際類別的控制代碼。 如需詳細資訊，請參閱 <xref:System.ServiceModel.Channels.MessageEncoderFactory> 與 <xref:System.ServiceModel.Channels.MessageEncoder>。  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>。 傳回這個編碼所使用的 <xref:System.ServiceModel.Channels.MessageVersion>，其代表正在使用的 SOAP 和 WS-Addressing 版本。  
+-   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement.MessageVersion%2A>. 傳回這個編碼所使用的 <xref:System.ServiceModel.Channels.MessageVersion>，其代表正在使用的 SOAP 和 WS-Addressing 版本。  
   
  如需以及使用者定義之編碼繫結項目之選擇性方法和屬性的完整清單，請參閱 <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>。  
   

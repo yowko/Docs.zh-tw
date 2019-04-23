@@ -5,10 +5,10 @@ ms.assetid: cbd49732-3615-49a5-a900-f96947cdc3e6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 40fef845a55412e5731ec08bd1e038d6b311694c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111653"
 ---
 # <a name="genericparameter-element-net-native"></a>\<GenericParameter > 項目 (.NET Native)
@@ -68,7 +68,7 @@ ms.locfileid: "59111653"
   
 |項目|描述|  
 |-------------|-----------------|  
-|[\<方法 >](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|將執行階段反映原則套用到建構函式或方法。|  
 |[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|將執行階段反映原則套用至特定類型，例如類別或結構。|  
   
 ## <a name="remarks"></a>備註  
@@ -88,7 +88,7 @@ ms.locfileid: "59111653"
   
 ## <a name="see-also"></a>另請參閱
 
-- [\<方法 > 項目](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)
 - [\<型別 > 項目](../../../docs/framework/net-native/type-element-net-native.md)
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)

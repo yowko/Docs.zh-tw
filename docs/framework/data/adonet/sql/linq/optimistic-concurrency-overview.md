@@ -3,14 +3,14 @@ title: 開放式並行存取：總覽
 ms.date: 03/30/2017
 ms.assetid: c2e38512-d0c8-4807-b30a-cb7e30338694
 ms.openlocfilehash: 8f3bd35cc1391339d99d5aa0a4021e29fa81756c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106544"
 ---
 # <a name="optimistic-concurrency-overview"></a>開放式並行存取：總覽
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取控制。 下表描述中的開放式並行存取的條款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件：  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援開放式並行存取 (Optimistic Concurrency) 控制。 下表描述中的開放式並行存取的條款[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]文件：  
   
 |詞彙|描述|  
 |-----------|-----------------|  
@@ -18,7 +18,7 @@ ms.locfileid: "59106544"
 |並行衝突|兩位以上的使用者同時嘗試將衝突值送出給資料列的一個或多個資料行的情況。|  
 |並行控制|用來解決並行衝突的技術。|  
 |開放式並行存取控制項|此種技術會先檢查資料列中的其他異動是否已變更值，才允許送出變更。<br /><br /> 與相反*封閉式並行控制*，後者會鎖定資料錄，避免並行存取衝突。<br /><br /> *開放式*因為認為干擾另一個可能的一筆交易的機會，因此則稱為控制項。|  
-|衝突的解決方式|透過再次查詢資料庫，然後調整差異，以重新整理衝突項目的處理流程。<br /><br /> 重新整理物件時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 變更 Tracker 會保留下列資料：<br /><br /> -原本從資料庫取得，並用於更新值 核取。<br />來自後續查詢-新資料庫值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 然後會判斷物件是否發生衝突 （亦即是否一或多個其成員值已變更）。 如果物件是在發生衝突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]接下來會判斷哪些成員為衝突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 發現的所有成員衝突都會加入至衝突清單中。|  
+|衝突的解決方式|透過再次查詢資料庫，然後調整差異，以重新整理衝突項目的處理流程。<br /><br /> 重新整理物件時，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 變更 Tracker 會保留下列資料：<br /><br /> -原本從資料庫取得，並用於更新值 核取。<br />來自後續查詢-新資料庫值。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 接著會判斷物件是否發生衝突 (也就是，它的其中一個或多個成員值是否變更)。 如果物件是在發生衝突，[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]接下來會判斷哪些成員為衝突。<br /><br /> [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 發現的所有成員衝突都會加入至衝突清單中。|  
   
  在 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]物件模型*開放式並行存取衝突*下列兩個條件都成立時，就會發生：  
   
@@ -90,4 +90,4 @@ ms.locfileid: "59106544"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [如何：管理變更衝突](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

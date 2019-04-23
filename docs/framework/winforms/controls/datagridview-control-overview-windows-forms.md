@@ -20,10 +20,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
 ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112875"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView 控制項概觀 (Windows Form)
@@ -66,16 +66,16 @@ ms.locfileid: "59112875"
  提供各種文件中的程式碼範例連結<xref:System.Windows.Forms.DataGridView>工作。 這些範例是以工作類型分類。  
   
 ## <a name="related-sections"></a>相關章節  
- [Windows Form DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 控制項中的資料行類型](column-types-in-the-windows-forms-datagridview-control.md)  
  討論 Windows Form 中的資料行類型<xref:System.Windows.Forms.DataGridView>用來顯示資訊，並允許使用者修改或新增資訊的控制項。  
   
- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)  
  提供主題描述如何以手動方式或從外部資料來源將資料填入控制項。  
   
- [自訂 Windows Form DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)  
+ [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)  
  提供主題描述自訂繪製 <xref:System.Windows.Forms.DataGridView> 儲存格和資料列，並建立衍生儲存格、資料行和資料列類型。  
   
- [Windows Form DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)  
+ [Windows Forms DataGridView 控制項中的效能微調](performance-tuning-in-the-windows-forms-datagridview-control.md)  
  提供主題描述處理大量資料時，如何有效率地使用控制項來避免發生效能問題。  
   
 ## <a name="see-also"></a>另請參閱
@@ -83,5 +83,5 @@ ms.locfileid: "59112875"
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.BindingSource>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
-- [Windows Form DataGridView 控制項的預設功能](default-functionality-in-the-windows-forms-datagridview-control.md)
-- [Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠控制](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項的預設功能](default-functionality-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的預設鍵盤和滑鼠處理](default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control.md)

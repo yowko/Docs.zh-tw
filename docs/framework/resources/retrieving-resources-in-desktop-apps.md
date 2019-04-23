@@ -20,15 +20,15 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6db8f5914a325a276872ff804f679f8b3e0745a0
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58653921"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59109794"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>擷取桌面應用程式中的資源
-當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如此文章稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
+當您在 .NET Framework 傳統型應用程式中使用當地語系化資源時，最好使用主要組件封裝預設或中性文化特性的資源，並針對應用程式支援的每個語言或文化特性，建立個別的附屬組件。 然後您可以使用下一節中所述的 <xref:System.Resources.ResourceManager> 類別，來存取具名資源。 如果您選擇不要將資源嵌入主要組件和附屬組件，您也可以直接存取二進位 .resources 檔，如本文稍後的 [從 .resources 檔擷取資源](#from_file) 一節中所述。  若要擷取 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] 應用程式中的資源，請參閱 Windows 開發人員中心的 [建立和擷取 Windows 市集應用程式中的資源](https://go.microsoft.com/fwlink/p/?LinkID=241674) 。  
   
 <a name="from_assembly"></a>   
 ## <a name="retrieving-resources-from-assemblies"></a>從組件擷取資源  
@@ -202,6 +202,7 @@ csc Example.cs
 ```  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Resources.ResourceManager>
 - [桌面應用程式中的資源](../../../docs/framework/resources/index.md)
 - [封裝和部署資源](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)

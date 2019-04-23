@@ -5,10 +5,10 @@ helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
 ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115982"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003 和 Windows XP 之間的佇列功能差異
@@ -19,7 +19,7 @@ ms.locfileid: "59115982"
   
  一般而言，所有共用佇列管理員的佇列應用程式都有單一整個系統之寄不出的信件佇列。 各個應用程式之寄不出的信件佇列都會允許佇列應用程式指定自己應用程式特定之寄不出的信件佇列，讓這些應用程式之間有更好的隔離。 與其他應用程式共用寄不出的信件佇列之應用程式必須瀏覽佇列，以尋找適用的訊息。 使用應用程式特定之寄不出的信件佇列，可以向應用程式保證其寄不出的信件佇列中所有訊息都適用。  
   
- [!INCLUDE[wv](../../../../includes/wv-md.md)] 提供應用程式特定之寄不出信件佇列。 應用程式特定之寄不出的信件佇列無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中使用，且應用程式必須使用整個系統之寄不出的信件佇列。  
+ [!INCLUDE[wv](../../../../includes/wv-md.md)] 提供應用程式特定之寄不出的信件佇列。 應用程式特定之寄不出的信件佇列無法在 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] 和 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 中使用，且應用程式必須使用整個系統之寄不出的信件佇列。  
   
 ## <a name="poison-message-handling"></a>有害訊息處理  
  有害訊息是超過嘗試傳遞至接收應用程式之次數上限的訊息。 當從異動式佇列讀取訊息的應用程式因錯誤無法立即處理訊息時，便會引起這種情況。 如果應用程式中止收到佇列訊息的交易，會將訊息傳回佇列。 然後應用程式會嘗試在新的異動中再次擷取訊息。 如果沒有更正造成錯誤的問題，接收應用程式會卡在接收及中止相同訊息的迴圈中，直到超過傳遞嘗試次數上限為止，而形成有害訊息。  
@@ -37,5 +37,5 @@ ms.locfileid: "59115982"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用寄不出的信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
+- [使用無效信件佇列來處理訊息傳輸失敗](../../../../docs/framework/wcf/feature-details/using-dead-letter-queues-to-handle-message-transfer-failures.md)
 - [有害訊息處理](../../../../docs/framework/wcf/feature-details/poison-message-handling.md)

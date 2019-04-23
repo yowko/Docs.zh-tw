@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110067"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>HOW TO：回應 Windows Forms 按鈕的按一下動作
@@ -58,5 +58,5 @@ Windows Form 的最基本用法<xref:System.Windows.Forms.Button>控制項是在
 ## <a name="see-also"></a>另請參閱
 
 - [Button 控制項概觀](button-control-overview-windows-forms.md)
-- [選取 Windows Form Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
+- [選取 Windows Forms Button 控制項的方法](ways-to-select-a-windows-forms-button-control.md)
 - [Button 控制項](button-control-windows-forms.md)

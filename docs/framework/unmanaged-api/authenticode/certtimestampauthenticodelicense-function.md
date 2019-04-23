@@ -11,10 +11,10 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111718"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 函式
@@ -44,7 +44,7 @@ HRESULT CertTimestampAuthenticodeLicense (
  時間戳記簽章實際上是 PKCS #7 SignedData 訊息，其內容是來自授權簽章的 SignatureValue 二進位格式。 基本上是將此當作授權的副署。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果函式成功。 否則會傳回錯誤碼。  
+ 如果函式成功，會傳回 `S_OK`。 否則會傳回錯誤碼。  
   
 ## <a name="see-also"></a>另請參閱
 

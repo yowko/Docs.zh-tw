@@ -10,10 +10,10 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107324"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;zier GDI + 中的曲線
@@ -43,5 +43,5 @@ ms.locfileid: "59107324"
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
 - [建構和繪製曲線](constructing-and-drawing-curves.md)
-- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
-- [HOW TO：建立畫筆](how-to-create-a-pen.md)
+- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [如何：建立畫筆](how-to-create-a-pen.md)

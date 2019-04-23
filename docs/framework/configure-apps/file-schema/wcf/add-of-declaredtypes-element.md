@@ -1,5 +1,5 @@
 ---
-title: <add> <declaredTypes>項目
+title: <add> 項目的 <declaredTypes>
 ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
 ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111510"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<新增 > 的\<a d d > 項目
@@ -78,6 +78,6 @@ ms.locfileid: "59111510"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Runtime.Serialization.DataContractSerializer>
-- [資料合約已知型別](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知類型](../../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [\<dataContractSerializer>](../../../../../docs/framework/configure-apps/file-schema/wcf/datacontractserializer-element.md)
-- [\<新增 > 的\<a d d >](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)
+- [\<add> of \<declaredTypes>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-declaredtypes-element.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - control types, UI Automation
 ms.assetid: 261dcc59-3a62-4e40-91dd-63ff9d2241c0
 ms.openlocfilehash: 54a2157d469acad6d20a44afe72432138894cfe8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59116099"
 ---
 # <a name="ui-automation-control-types"></a>UI 自動化控制項類型
@@ -65,4 +65,4 @@ ms.locfileid: "59116099"
   
 ## <a name="see-also"></a>另請參閱
 
-- [UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)
+- [使用者介面自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns.md)

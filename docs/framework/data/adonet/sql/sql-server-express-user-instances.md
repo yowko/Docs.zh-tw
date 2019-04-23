@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111146"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express 使用者執行個體
@@ -37,17 +37,17 @@ sp_configure 'user instances enabled','0'
  使用者執行個體的網路通訊協定必須為本機「具名管道」(Named Pipe)。 無法在 SQL Server 的遠端執行個體上啟動使用者執行個體，也不允許 SQL Server 登入。  
   
 ## <a name="connecting-to-a-user-instance"></a>連接至使用者執行個體  
- `User Instance`並`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>關鍵字允許<xref:System.Data.SqlClient.SqlConnection>連接到使用者執行個體。 使用者執行個體也受到<xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance`和`AttachDBFilename`屬性。  
+ `User Instance`並`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>關鍵字允許<xref:System.Data.SqlClient.SqlConnection>連接到使用者執行個體。 使用者執行個體也受到 <xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance` 和 `AttachDBFilename` 屬性的支援。  
   
  請注意下列所示的範例連接字串：  
   
 -   `Data Source` 關鍵字參考到產生使用者執行個體的 SQL Server Express 父執行個體。 預設執行個體是 \sqlexpress。  
   
--   `Integrated Security` 設定為`true`。 若要連接至使用者執行個體，必須使用「Windows 驗證」；SQL Server 登入則不受支援。  
+-   `Integrated Security` 設定為 `true`。 若要連接至使用者執行個體，必須使用「Windows 驗證」；SQL Server 登入則不受支援。  
   
 -   `User Instance` 會設定為 `true`，如此會叫用 (Invoke) 使用者執行個體  (預設值為 `false`)。  
   
--   `AttachDbFileName` 連接字串關鍵字是用以附加主要資料庫檔案 (.mdf)，其中必須包括完整的路徑名稱。 `AttachDbFileName` 也會對應至"extended 的 properties"和"initial file name"索引鍵<xref:System.Data.SqlClient.SqlConnection>連接字串。  
+-   `AttachDbFileName` 連接字串關鍵字是用以附加主要資料庫檔案 (.mdf)，其中必須包括完整的路徑名稱。 `AttachDbFileName` 也會對應至 <xref:System.Data.SqlClient.SqlConnection> 連接字串中的 "extended properties" 與 "initial file name" 索引鍵。  
   
 -   包含在垂直線符號中的 `|DataDirectory|` 替代字串參考到開啟連接之應用程式的資料目錄，且提供相關路徑，指出 .mdf 和 .ldf 資料庫以及記錄檔的位置。 如果想要在其他位置尋找這些檔案，則必須提供檔案的完整路徑。  
   
@@ -58,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  您也可以使用<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>和<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>屬性，以建立連接字串，在執行階段。  
+>  您也可以使用 <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> 和 <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> 屬性，在執行階段建立連接字串。  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>使用&#124;DataDirectory&#124;替代字串  
- `AttachDbFileName` 已擴充 ADO.NET 2.0 中引進`|DataDirectory|`（放在直線符號內） 替代字串。 `DataDirectory` 用於搭配`AttachDbFileName`表示資料檔案的相對路徑，讓開發人員可以建立資料來源，而不是相對路徑為基礎的連接字串指定所需的完整路徑。  
+ `AttachDbFileName` 在 ADO.NET 2.0 中已藉由引進 `|DataDirectory|` (放在垂直線符號內) 替代字串而擴充。 `DataDirectory` 可與 `AttachDbFileName` 搭配使用以表示資料檔案的相對路徑，開發人員因此能根據資料來源的相對路徑建立連接字串，而不需指定完整路徑。  
   
  `DataDirectory` 所指向的實體位置，是根據應用程式的類型而定。 在這個範例中，要附加的 Northwind.mdf 檔案是位於應用程式的 \app_data 資料夾中。  
   
@@ -77,7 +77,7 @@ Initial Catalog=Northwind;
  如果連接字串具有格式設定錯誤的替代字串，則會顯示 <xref:System.ArgumentException>。  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> 將替代字串解析為對本機電腦檔案系統的完整路徑。 因此，遠端伺服器、HTTP 和 UNC 路徑名稱並不受支援。 如果伺服器不位於本機電腦，則在開啟連接時會擲回例外狀況。  
+>  <xref:System.Data.SqlClient> 會根據本機電腦檔案系統，將替代字串解析為完整路徑。 因此，遠端伺服器、HTTP 和 UNC 路徑名稱並不受支援。 如果伺服器不位於本機電腦，則在開啟連接時會擲回例外狀況。  
   
  當 <xref:System.Data.SqlClient.SqlConnection> 開啟時，會從預設的 SQL Server Express 執行個體重新導向至在執行階段初始化，且在呼叫端帳戶下執行的執行個體。  
   
@@ -154,5 +154,5 @@ private static void OpenSqlConnection()
 
 - [SQL Server 和 ADO.NET](../../../../../docs/framework/data/adonet/sql/index.md)
 - [連接字串](../../../../../docs/framework/data/adonet/connection-strings.md)
-- [連接資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [連接至資料來源](../../../../../docs/framework/data/adonet/connecting-to-a-data-source.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

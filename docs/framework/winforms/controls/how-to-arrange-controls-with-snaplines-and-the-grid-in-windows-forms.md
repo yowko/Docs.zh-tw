@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: bb54bce5-880f-4a36-af68-8cf92058dc1c
 ms.openlocfilehash: 122c20e7c3e48eaa4b4986ce2cb45411dae00723
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115728"
 ---
 # <a name="how-to-arrange-controls-with-snaplines-and-the-grid-in-windows-forms"></a>HOW TO：使用 Windows Forms 中的對齊線和格線排列控制項
@@ -37,11 +37,11 @@ ms.locfileid: "59115728"
   
 ## <a name="see-also"></a>另請參閱
 
-- [選項對話方塊、Windows Form 設計工具、一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [Windows Form 控制項](index.md)
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
-- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Form 控制項](windows-forms-controls-by-function.md)
+- [選項對話方塊、 Windows Form 設計工具、 一般](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [Windows Forms 控制項](index.md)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)

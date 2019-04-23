@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: 5e65a6c3-5d6f-480d-beb8-b28f865f07e3
 ms.openlocfilehash: 3a82642c985b7ec1cee885cdda7b054adbe3dfee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115475"
 ---
 # <a name="windows-forms-controls-by-function"></a>依功能區分 Windows Form 控制項
@@ -86,5 +86,5 @@ Windows Form 提供控制項和執行數個函數的元件。 下表列出 Windo
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [使用 .NET Framework 開發自訂的 Windows Form 控制項](developing-custom-windows-forms-controls.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [使用 .NET Framework 開發自訂的 Windows Forms 控制項](developing-custom-windows-forms-controls.md)

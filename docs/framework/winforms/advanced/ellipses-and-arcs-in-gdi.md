@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing [Windows Forms], arcs
 ms.assetid: 34f35133-a835-4ca4-81f6-0dfedee8b683
 ms.openlocfilehash: 8bbc2eda6450128eac55576259880e83f07099ab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117452"
 ---
 # <a name="ellipses-and-arcs-in-gdi"></a>GDI+ 中的橢圓形和弧形
@@ -52,6 +52,6 @@ ms.locfileid: "59117452"
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - [線條、曲線和形狀](lines-curves-and-shapes.md)
-- [HOW TO：建立繪製的圖形物件](how-to-create-graphics-objects-for-drawing.md)
-- [HOW TO：建立畫筆](how-to-create-a-pen.md)
-- [HOW TO：繪製外框形狀](how-to-draw-an-outlined-shape.md)
+- [如何：建立繪圖的圖形物件](how-to-create-graphics-objects-for-drawing.md)
+- [如何：建立畫筆](how-to-create-a-pen.md)
+- [如何：繪製外框的形狀](how-to-draw-an-outlined-shape.md)

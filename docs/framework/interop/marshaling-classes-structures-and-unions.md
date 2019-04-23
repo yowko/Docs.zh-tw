@@ -21,10 +21,10 @@ ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113720"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>封送處理類別、結構和等位
@@ -200,7 +200,7 @@ union MYUNION2
   
  在 Managed 程式碼中，會定義等位為結構。 `MyUnion` 結構包含兩個做為其成員的實值類型：整數和雙精度浮點數。 設定 <xref:System.Runtime.InteropServices.StructLayoutAttribute> 屬性來控制每個資料成員的精確位置。 <xref:System.Runtime.InteropServices.FieldOffsetAttribute> 屬性會提供等位的 Unmanaged 表示中的欄位實體位置。 請注意這兩個成員具有相同的位移值，所以成員可以定義相同的記憶體。  
   
- `MyUnion2_1` 和 `MyUnion2_2` 分別包含實值型別 (整數) 和字串。 在 Managed 程式碼中，實值類型及參考類型不允許重疊。 此範例會使用方法多載化來讓呼叫端在呼叫相同 Unmanaged 函式時使用這兩種類型。 `MyUnion2_1` 配置則是明確的，且具有精確位移值。 相反地，`MyUnion2_2` 具有循序配置，因為對參考類型不允許明確的配置。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在該等位的 Unmanaged 表示中內嵌固定長度的字元陣列。  
+ `MyUnion2_1` 和 `MyUnion2_2` 分別包含實值類型 (整數) 和字串。 在 Managed 程式碼中，實值類型及參考類型不允許重疊。 此範例會使用方法多載化來讓呼叫端在呼叫相同 Unmanaged 函式時使用這兩種類型。 `MyUnion2_1` 配置則是明確的，且具有精確位移值。 相反地，`MyUnion2_2` 具有循序配置，因為對參考類型不允許明確的配置。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 屬性會將 <xref:System.Runtime.InteropServices.UnmanagedType> 列舉設定為 **ByValTStr**，這用來識別出現在該等位的 Unmanaged 表示中內嵌固定長度的字元陣列。  
   
  `LibWrap` 類別包含 `TestUnion` 和 `TestUnion2` 方法的原型。 `TestUnion2` 被多載，以宣告 `MyUnion2_1` 或 `MyUnion2_2` 做為參數。  
   
@@ -264,7 +264,7 @@ typedef struct _MYSTRSTRUCT2
 } MYSTRSTRUCT2;  
 ```  
   
- `MyStruct` 類別包含 ANSI 字元的字串物件。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位指定 ANSI 格式。 `MyUnsafeStruct`為包含 <xref:System.IntPtr> 類型的結構，而非字串。  
+ `MyStruct` 類別包含 ANSI 字元的字串物件。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> 欄位指定 ANSI 格式。 `MyUnsafeStruct` 為包含 <xref:System.IntPtr> 類型的結構，而非字串。  
   
  `LibWrap` 類別包含 `TestOutArrayOfStructs` 多載原型方法。 如果方法宣告指標做為參數，此類別會以 `unsafe` 關鍵字標記。 因為 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] 不能使用 Unsafe 程式碼，所以多載的方法、Unsafe 修飾詞和 `MyUnsafeStruct` 結構是不必要的。  
   

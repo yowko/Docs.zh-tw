@@ -3,23 +3,23 @@ title: 與資料庫通訊
 ms.date: 03/30/2017
 ms.assetid: 659d9817-bcaa-457f-9639-169394177274
 ms.openlocfilehash: d767bbe706b4fc9efb00031fddf8f6bd3369b485
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117140"
 ---
 # <a name="communicating-with-the-database"></a>與資料庫通訊
 本節中的主題說明有關如何與資料庫建立和維護通訊的一些基本層面。  
   
 ## <a name="in-this-section"></a>本節內容  
- [HOW TO：連接到資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
+ [如何：連接到資料庫](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)  
  說明如何使用 <xref:System.Data.Linq.DataContext> 類別連接到資料庫。  
   
- [HOW TO：直接執行 SQL 命令](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
+ [如何：直接執行 SQL 命令](../../../../../../docs/framework/data/adonet/sql/linq/how-to-directly-execute-sql-commands.md)  
  說明如何使用 <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> 傳送 SQL 語言命令。  
   
- [HOW TO：重複使用 ADO.NET 命令和 DataContext 之間的連接](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
+ [如何：重複使用 ADO.NET 命令和 DataContext 之間的連線](../../../../../../docs/framework/data/adonet/sql/linq/how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md)  
  提供相關範例，說明如何在 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 應用程式中使用現有的 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 連線。  
   
 ## <a name="see-also"></a>另請參閱

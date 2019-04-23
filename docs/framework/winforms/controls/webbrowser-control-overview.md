@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109431"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser 控制項概觀
@@ -27,13 +27,13 @@ ms.locfileid: "59109431"
 |名稱|描述|  
 |----------|-----------------|  
 |<xref:System.Windows.Forms.WebBrowser.Document%2A> 屬性|取得物件，提供目前 Web 網頁的 HTML 文件物件模型 (DOM) 的受管理的存取。|  
-|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> Event - 事件|網頁完成載入時，就會發生。|  
+|<xref:System.Windows.Forms.WebBrowser.DocumentCompleted> 事件|網頁完成載入時，就會發生。|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentText%2A> 屬性|取得或設定目前 Web 網頁內容的 HTML。|  
 |<xref:System.Windows.Forms.WebBrowser.DocumentTitle%2A> 屬性|取得目前 Web 網頁的標題。|  
 |<xref:System.Windows.Forms.WebBrowser.GoBack%2A> 方法|瀏覽至 歷程記錄中的上一頁。|  
 |<xref:System.Windows.Forms.WebBrowser.GoForward%2A> 方法|瀏覽至 歷程記錄的下一個頁面。|  
 |<xref:System.Windows.Forms.WebBrowser.Navigate%2A> 方法|瀏覽至指定的 URL。|  
-|<xref:System.Windows.Forms.WebBrowser.Navigating> Event - 事件|導覽開始，啟用要取消的動作之前發生。|  
+|<xref:System.Windows.Forms.WebBrowser.Navigating> 事件|導覽開始，啟用要取消的動作之前發生。|  
 |<xref:System.Windows.Forms.WebBrowser.ObjectForScripting%2A> 屬性|取得或設定指令碼的網頁可以用來與您的應用程式通訊的物件。|  
 |<xref:System.Windows.Forms.WebBrowser.Print%2A> 方法|列印目前的網頁。|  
 |<xref:System.Windows.Forms.WebBrowser.Refresh%2A> 方法|重新載入目前的網頁。|  
@@ -53,9 +53,9 @@ ms.locfileid: "59109431"
 - <xref:System.Windows.Forms.WebBrowserProgressChangedEventArgs>
 - <xref:System.Windows.Forms.WebBrowserReadyState>
 - <xref:System.Windows.Forms.WebBrowserRefreshOption>
-- [HOW TO：使用 WebBrowser 控制項巡覽至 URL](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [HOW TO：使用 WebBrowser 控制項列印](how-to-print-with-a-webbrowser-control.md)
-- [HOW TO：將網頁瀏覽器功能新增至 Windows Forms 應用程式](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [HOW TO：在 Windows Forms 應用程式中建立 HTML 文件檢視器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
-- [HOW TO：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊](implement-two-way-com-between-dhtml-and-client.md)
+- [如何：瀏覽至 URL，以使用 WebBrowser 控制項](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [如何：使用 WebBrowser 控制項列印](how-to-print-with-a-webbrowser-control.md)
+- [如何：將 Web 瀏覽器功能加入至 Windows Forms 應用程式](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [如何：建立 Windows Forms 應用程式中的 HTML 文件檢視器](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [如何：實作 DHTML 程式碼和用戶端應用程式程式碼之間的雙向通訊](implement-two-way-com-between-dhtml-and-client.md)
 - [WebBrowser 安全性](webbrowser-security.md)

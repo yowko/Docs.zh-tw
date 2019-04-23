@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112082"
 ---
 # <a name="configuring-message-logging"></a>設定訊息記錄
@@ -78,7 +78,7 @@ ms.locfileid: "59112082"
  記錄在這層的是要送到網路上傳輸或是在傳輸後而要進行編碼或解碼的訊息。 如果有定義篩選條件，就只會記錄符合篩選條件的訊息。 否則，便會記錄傳輸層級中的所有訊息。 所有的基礎結構訊息都會記錄在這層，其中包括可信賴傳訊訊息。 若是已進行資料流處理的訊息，則只記錄標頭。 此外，安全訊息會以加密形式記錄在此層級，除了使用 HTTPS 一類的安全傳輸的情況以外。  
   
 ### <a name="malformed-level"></a>格式錯誤層級  
- 格式不正確的訊息是處理的各個階段將會拒絕 WCF 堆疊的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義要以 CDATA 形式記錄訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
+ 格式不正確的訊息是處理的各個階段將會拒絕 WCF 堆疊的訊息。 格式錯誤訊息會依現狀加以記錄：也就是若有加密，便會以加密形式記錄，並包含不正確的 XML 和其他格式。 `maxSizeOfMessageToLog` 定義了要以 CDATA 形式記錄之訊息的大小。 根據預設，`maxSizeOfMessageToLog` 會等於 256 K。 如需有關這個屬性的詳細資訊，請參閱其他選項 > 一節。  
   
 ### <a name="other-options"></a>其他選項  
  除了記錄層級，使用者也可以指定下列選項：  

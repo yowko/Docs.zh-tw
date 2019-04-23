@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
 ms.openlocfilehash: 1e134d877c45af00e2a2fb7e7ef0882ffd7ddc48
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119115"
 ---
 # <a name="securing-wcf-data-services"></a>保護 WCF Data Services 的安全
@@ -112,5 +112,5 @@ OData 是以 HTTP 通訊協定為基礎。 在 HTTP 訊息中，根據資料服�
   
 ## <a name="see-also"></a>另請參閱
 
-- [定義 WCF 資料服務](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
-- [WCF 資料服務用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)
+- [定義 WCF Data Services](../../../../docs/framework/data/wcf/defining-wcf-data-services.md)
+- [WCF Data Services 用戶端程式庫](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)

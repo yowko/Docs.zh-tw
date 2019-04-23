@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d03b050e-2916-49a0-99ba-f19316e5c1b3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 726e82e3ce5f8d8924617ac7c7d38468ae279e71
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: 37b226cad9a34f1629d2972dacf8019adad54d7a
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093030"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59115371"
 ---
 # <a name="blittable-and-non-blittable-types"></a>Blittable 和非 Blittable 類型
 大部分的資料類型是 Managed 和 Unmanaged 記憶體中的常見呈現，而且 Interop 封送處理器不需要特殊處理。 這些類型稱為「Blittable 類型」，因為它們在 Managed 與 Unmanaged 程式碼之間傳遞時不需要進行轉換。  
@@ -74,4 +74,5 @@ ms.locfileid: "56093030"
  COM Interop 只能支援類別和物件類型。 如需 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C# 和 C++ 中的對應類型，請參閱[類別庫概觀](../../../docs/standard/class-library-overview.md)。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [預設的封送處理行為](../../../docs/framework/interop/default-marshaling-behavior.md)

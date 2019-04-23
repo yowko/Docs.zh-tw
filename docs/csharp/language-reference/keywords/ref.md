@@ -1,19 +1,19 @@
 ---
 title: ref 關鍵字 - C# 參考
 ms.custom: seodec18
-ms.date: 10/24/2018
+ms.date: 03/26/2019
 f1_keywords:
 - ref_CSharpKeyword
 - ref
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: dc19638dc3753132be01235466a98f87bdce4569
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54726646"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59116252"
 ---
 # <a name="ref-c-reference"></a>ref (C# 參考)
 
@@ -24,10 +24,9 @@ ms.locfileid: "54726646"
 - 在成員主體中，指出參考傳回值儲存在本機作為呼叫者想要修改的參考，或是一般而言，以參考存取另一個值的區域變數。 如需詳細資訊，請參閱 [ref 區域變數](#ref-locals)。
 - 在 `struct` 宣告中來宣告 `ref struct` 或 `ref readonly struct`。 如需詳細資訊，請參閱 [ref struct 型別](#ref-struct-types)。
 
-
 ## <a name="passing-an-argument-by-reference"></a>以傳參考方式傳遞引數
 
-用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 以傳參考方式傳遞的效果是已呼叫方法中引數的任何變更都會反映在呼叫方法中。 例如，如果呼叫者傳遞區域變數運算式或陣列元素存取運算式，而且已呼叫方法取代 ref 參數所參考的物件，則在傳回方法時，呼叫者的區域變數或陣列元素現在會參考新的物件。
+用於方法的參數清單時，`ref` 關鍵字指出以傳參考方式傳遞引數，而不是以傳值方式。 `ref` 關鍵字會使形式參數成為引數的別名，其必須為變數。 換句話說，參數上的任何作業都會在引數上進行。 例如，如果呼叫者傳遞區域變數運算式或陣列元素存取運算式，而且已呼叫方法取代 ref 參數所參考的物件，則在傳回方法時，呼叫者的區域變數或陣列元素現在會參考新的物件。
 
 > [!NOTE]
 > 請勿將參考傳遞的概念與參考類型的概念相混淆。 兩個概念並不相同。 方法參數可以由 `ref` 修改，而不論其是否為實值類型或參考類型。 當實值類型由參考傳遞時，沒有 boxing。  
@@ -138,7 +137,7 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 希望將類型 `ref struct` 保留為配置有堆疊的變數之目標，會讓編譯器強制對所有 `ref struct` 類型進行數項規則。
 
 - 您無法分隔 `ref struct`。 您不可為類型是 `object`、`dynamic` 或任何介面類型的變數，指派 `ref struct` 類型。
-- `ref struct` 型別無法實作介面。
+- `ref struct` 類型無法實作介面。
 - 您不可將 `ref struct` 宣告為類別或一般結構的成員。
 - 您不可在非同步方法中宣告類型為 `ref struct` 的區域變數。 但可以在傳回 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601> 或 `Task` 之類型別的同步方法中，宣告這些區域變數。
 - 您不可在迭代器中宣告 `ref struct` 區域變數。
@@ -161,5 +160,5 @@ ref readonly 區域變數是用來參考傳回值 (由特徵標記中有 `ref re
 - [傳遞參數](../../programming-guide/classes-and-structs/passing-parameters.md)
 - [方法參數](method-parameters.md)
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 關鍵字](index.md)

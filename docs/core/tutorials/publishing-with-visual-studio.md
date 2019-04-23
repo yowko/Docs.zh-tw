@@ -6,10 +6,10 @@ ms.author: wiwagn
 ms.date: 10/05/2017
 ms.custom: vs-dotnet, seodec18
 ms.openlocfilehash: 0322d44ca37ab8e7faa3188887069c2e04ec755b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110262"
 ---
 # <a name="publish-your-net-core-hello-world-application-with-visual-studio-2017"></a>使用 Visual Studio 2017 發佈您的 .NET Core Hello World 應用程式

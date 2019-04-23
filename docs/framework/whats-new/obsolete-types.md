@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1a8c6046d05dc706074a732d9ba2a9c1ec73c56f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b4b10ff681f7300412fd2f6a1e310989fcc3b31c
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58412340"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59114686"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework 中過時的類型
 <a name="introduction"></a> 本文中的表格列出 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 中過時的類型，並依組件分組。 使用下列連結查看每個組件中過時的型別和建議的替代方案。 因為這些型別已經過時，其所有成員也已經過時。 如需 .NET Framework 類別庫中其他過時成員的清單，請參閱[過時的成員](obsolete-members.md)。
 
--   [系統組件中的過時類型](#obsolete_types_in_system_assemblies)
+-   [系統組件中的過時型別](#obsolete_types_in_system_assemblies)
 
     -   [mscorlib.dll](#mscorlib)
 
@@ -56,7 +56,7 @@ ms.locfileid: "58412340"
 
     -   [WindowsBase.dll](#WindowsBase)
 
--   [Microsoft 組件中的過時類型](#obsolete_types_in_microsoft_assemblies)
+-   [Microsoft 組件中的過時型別](#obsolete_types_in_microsoft_assemblies)
 
     -   [IEHost.dll 和 IEExec.exe](#IEHost)
 
@@ -130,7 +130,7 @@ ms.locfileid: "58412340"
 |<xref:System.Runtime.InteropServices.UCOMITypeInfo?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeInfo?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.UCOMITypeLib?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.ITypeLib?displayProperty=nameWithType>。|
 |<xref:System.Runtime.InteropServices.VARDESC?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARDESC?displayProperty=nameWithType>。|
-|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType> 。|
+|<xref:System.Runtime.InteropServices.VARFLAGS?displayProperty=nameWithType>|請改用 <xref:System.Runtime.InteropServices.ComTypes.VARFLAGS?displayProperty=nameWithType>。|
 |<xref:System.Security.SecurityCriticalScope?displayProperty=nameWithType>|<xref:System.Security.SecurityCriticalScope> 僅用於 .NET 2.0 透明度相容性。|
 |<xref:System.Security.SecurityTreatAsSafeAttribute?displayProperty=nameWithType>|<xref:System.Security.SecurityTreatAsSafeAttribute> 僅用於 .NET 2.0 透明度相容性。 請改用 <xref:System.Security.SecuritySafeCriticalAttribute?displayProperty=nameWithType>。|
 |<xref:System.Security.Policy.FirstMatchCodeGroup?displayProperty=nameWithType>|這個型別已經過時，將在未來的 .NET Framework 發行版本中移除。|
@@ -153,8 +153,8 @@ ms.locfileid: "58412340"
 
 |類型|訊息|
 |----------|-------------|
-|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> 已被取代。|
-|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> 已被取代。|
+|<xref:System.Data.DataSysDescriptionAttribute?displayProperty=nameWithType>|<xref:System.Data.DataSysDescriptionAttribute> 已被淘汰。|
+|<xref:System.Data.PropertyAttributes?displayProperty=nameWithType>|<xref:System.Data.PropertyAttributes> 已被淘汰。|
 |<xref:System.Data.TypedDataSetGenerator?displayProperty=nameWithType>|<xref:System.Data.TypedDataSetGenerator> 類別將在未來的發行版本中移除。 請使用 System.Design.dll 中的 <xref:System.Data.Design.TypedDataSetGenerator?displayProperty=nameWithType>。|
 |<xref:System.Xml.XmlDataDocument?displayProperty=nameWithType>|<xref:System.Xml.XmlDataDocument> 類別將在未來的發行版本中移除。|
 
@@ -165,14 +165,14 @@ ms.locfileid: "58412340"
 
 |類型|訊息|
 |----------|-------------|
-|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> 已被取代。|
-|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> 已被取代。|
-|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> 已被取代。|
-|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> 已被取代。|
-|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> 已被取代。|
-|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> 已被取代。|
-|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> 已被取代。|
-|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> 已被取代。|
+|<xref:System.Data.OracleClient.OracleClientFactory?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleClientFactory> 已被淘汰。|
+|<xref:System.Data.OracleClient.OracleCommand?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommand> 已被淘汰。|
+|<xref:System.Data.OracleClient.OracleCommandBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleCommandBuilder> 已被淘汰。|
+|<xref:System.Data.OracleClient.OracleConnection?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnection> 已被淘汰。|
+|<xref:System.Data.OracleClient.OracleConnectionStringBuilder?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleConnectionStringBuilder> 已被淘汰。|
+|<xref:System.Data.OracleClient.OracleDataAdapter?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OracleDataAdapter> 已被淘汰。|
+|<xref:System.Data.OracleClient.OraclePermission?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermission> 已被淘汰。|
+|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType>|<xref:System.Data.OracleClient.OraclePermissionAttribute?displayProperty=nameWithType> 已被淘汰。|
 
  [回到頁首](#introduction)
 
@@ -494,9 +494,9 @@ ms.locfileid: "58412340"
 
 |類型|訊息|
 |----------|-------------|
-|在 <xref:System.Workflow.ComponentModel> 命名空間中除了 <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> 和 <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
-|在 <xref:System.Workflow.ComponentModel.Compiler> 命名空間中除了 <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> 和 <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
-|在 <xref:System.Workflow.ComponentModel.Design> 命名空間中除了 <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
+|在 <xref:System.Workflow.ComponentModel> 命名空間中的所有型別 (除了 <xref:System.Workflow.ComponentModel.GetValueOverride?displayProperty=nameWithType> 和 <xref:System.Workflow.ComponentModel.SetValueOverride?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
+|在 <xref:System.Workflow.ComponentModel.Compiler> 命名空間中的所有型別 (除了 <xref:System.Workflow.ComponentModel.Compiler.ValidationError?displayProperty=nameWithType> 和 <xref:System.Workflow.ComponentModel.Compiler.ValidationErrorCollection?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
+|在 <xref:System.Workflow.ComponentModel.Design> 命名空間中的所有型別 (除了 <xref:System.Workflow.ComponentModel.Design.ConnectorEventHandler>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializationManager?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityCodeDomSerializer?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |<xref:System.Workflow.ComponentModel.Serialization.ActivityMarkupSerializer?displayProperty=nameWithType>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
@@ -516,8 +516,8 @@ ms.locfileid: "58412340"
 |<xref:System.Activities.Tracking.InteropTrackingRecord>|在 .NET Framework 4.5 中首先被取代。<br /><br />Workflow Foundation 3.0 類型已被取代。 請改用 <xref:System.Activities>.\* 的 Workflow 4.0 類型。|
 |<xref:System.Workflow.Runtime> 命名空間中的所有型別。|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |<xref:System.Workflow.Runtime.Configuration> 命名空間中的所有型別。|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
-|在 <xref:System.Workflow.Runtime.DebugEngine> 命名空間中除了 <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
-|在 <xref:System.Workflow.Runtime.Hosting> 命名空間中除了 <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback> 之外的所有型別|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
+|在 <xref:System.Workflow.Runtime.DebugEngine> 命名空間中的所有型別 (除了 <xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
+|在 <xref:System.Workflow.Runtime.Hosting> 命名空間中的所有型別 (除了 <xref:System.Workflow.Runtime.Hosting.WorkflowCommitWorkBatchService.CommitWorkBatchCallback>|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 |<xref:System.Workflow.Runtime.Tracking> 命名空間中的所有型別。|在 .NET Framework 4.5 中首先被取代。<br /><br /> System.Workflow.\* 類型已被取代。 請改用 <xref:System.Activities>.\* 的新類型。|
 
  [回到頁首](#introduction)
@@ -578,7 +578,7 @@ ms.locfileid: "58412340"
 
 |類型|訊息|
 |----------|-------------|
-|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> 已被取代。 這個介面不再使用。|
+|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType>|<xref:System.Windows.Markup.IReceiveMarkupExtension?displayProperty=nameWithType> 已被淘汰。 這個介面不再使用。|
 
  [回到頁首](#introduction)
 
@@ -779,5 +779,6 @@ ms.locfileid: "58412340"
 |<xref:Microsoft.VisualC.NoSignSpecifiedModifier?displayProperty=nameWithType>|Microsoft.VisualC.dll 這個組件已經過時，其存在目的只是為了提供回溯相容性。|
 
 ## <a name="see-also"></a>另請參閱
+
 - [類別庫中已淘汰的功能](whats-obsolete.md)
-- [過時的成員](obsolete-members.md)
+- [已淘汰的成員](obsolete-members.md)

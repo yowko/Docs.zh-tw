@@ -7,10 +7,10 @@ helpviewer_keywords:
 - data grids [Windows Forms], columns
 ms.assetid: f0a0a9f1-8757-4bfd-891f-d7d12870dbed
 ms.openlocfilehash: a33cf4cd865921c04ef10c7fccf3a67c3d22de73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115670"
 ---
 # <a name="column-types-in-the-windows-forms-datagridview-control"></a>Windows Form DataGridView 控制項中的資料行類型
@@ -91,6 +91,6 @@ ms.locfileid: "59115670"
 - <xref:System.Windows.Forms.DataGridViewTextBoxColumn>
 - <xref:System.Windows.Forms.DataGridViewLinkColumn>
 - [DataGridView 控制項](datagridview-control-windows-forms.md)
-- [HOW TO：在 Windows Forms DataGridView 控制項的儲存格中顯示影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
-- [HOW TO：使用 Windows Forms DataGridView 控制項中的影像資料行](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
-- [自訂 Windows Form DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)
+- [如何：Windows Forms DataGridView 控制項的儲存格的顯示影像](how-to-display-images-in-cells-of-the-windows-forms-datagridview-control.md)
+- [如何：使用 Windows Form DataGridView 控制項中的影像資料行](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)
+- [自訂 Windows Forms DataGridView 控制項](customizing-the-windows-forms-datagridview-control.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 370c16d5-db7b-43e3-945b-ccaab35b739b
 ms.openlocfilehash: d1d52e048ee54ce967215ad134d5bcff2983103e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113616"
 ---
 # <a name="table-valued-parameters"></a>資料表值參數
@@ -276,6 +276,6 @@ insertCommand.ExecuteNonQuery()
 
 - [設定參數和參數資料類型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)
 - [命令和參數](../../../../../docs/framework/data/adonet/commands-and-parameters.md)
-- [DataAdapter 的參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
+- [DataAdapter 參數](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)
 - [ADO.NET 中的 SQL Server 資料作業](../../../../../docs/framework/data/adonet/sql/sql-server-data-operations.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

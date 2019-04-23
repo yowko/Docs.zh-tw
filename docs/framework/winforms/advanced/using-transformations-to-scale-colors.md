@@ -9,10 +9,10 @@ helpviewer_keywords:
 - colors [Windows Forms], scaling
 ms.assetid: df23c887-7fd6-4b15-ad94-e30b5bd4b849
 ms.openlocfilehash: 9c8f2392137d04f56096120cec64b60c42c47419
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107976"
 ---
 # <a name="using-transformations-to-scale-colors"></a>使用轉換調整色彩
@@ -67,5 +67,5 @@ ms.locfileid: "59107976"
 
 - <xref:System.Drawing.Imaging.ColorMatrix>
 - <xref:System.Drawing.Imaging.ImageAttributes>
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
-- [將影像重新著色](recoloring-images.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [為影像重新著色](recoloring-images.md)
