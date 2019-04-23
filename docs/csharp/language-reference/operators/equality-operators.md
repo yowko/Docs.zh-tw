@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 98b96f5b4c6d6ea70687a97c849e89573c67c37e
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545887"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59334155"
 ---
 # <a name="equality-operators-c-reference"></a>等號比較運算子 (C# 參考)
 
@@ -68,7 +68,7 @@ ms.locfileid: "58545887"
 
 ## <a name="operator-overloadability"></a>運算子是否可多載
 
-使用者定義型別可以[多載](../keywords/operator.md) `==` 和 `!=` 運算子。 如果某個型別多載這兩個運算子之一，它也必須多載另一個運算子。
+使用者定義類型可以[多載](../keywords/operator.md) `==` 和 `!=` 運算子。 如果某個型別多載這兩個運算子之一，它也必須多載另一個運算子。
 
 ## <a name="c-language-specification"></a>C# 語言規格
 
@@ -77,7 +77,7 @@ ms.locfileid: "58545887"
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../index.md)
-- [C# 程式設計指南](../../programming-guide/index.md)
+- [C# 程式設計手冊](../../programming-guide/index.md)
 - [C# 運算子](index.md)
 - <xref:System.IEquatable%601?displayProperty=nameWithType>
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 2c95b903ae03ea261674885262b24a33efa9e2db
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56973739"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333356"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>實作事件架構非同步模式
 如果您正在撰寫某項類別，其擁有的一些作業可能會造成明顯延遲，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)以賦予它非同步功能。  
@@ -75,7 +75,7 @@ ms.locfileid: "56973739"
   
  針對每個個別的 _MethodName_**Async** 方法簽章：  
   
-1.  在相同的類別中定義下列事件來作為方法︰  
+1. 在相同的類別中定義下列事件來作為方法︰  
   
     ```vb  
     Public Event MethodNameCompleted As MethodNameCompletedEventHandler  
@@ -85,7 +85,7 @@ ms.locfileid: "56973739"
     public event MethodNameCompletedEventHandler MethodNameCompleted;  
     ```  
   
-2.  定義下列委派和 <xref:System.ComponentModel.AsyncCompletedEventArgs>。 此外，這些項目可能會在類別本身之外來定義，但會在相同的命名空間中。  
+2. 定義下列委派和 <xref:System.ComponentModel.AsyncCompletedEventArgs>。 此外，這些項目可能會在類別本身之外來定義，但會在相同的命名空間中。  
   
     ```vb  
     Public Delegate Sub MethodNameCompletedEventHandler( _  
@@ -160,7 +160,7 @@ ms.locfileid: "56973739"
   
 -   將此事件命名如下︰  
   
-    -   `ProgressChanged`，如果類別具有多個非同步作業 (或預期會有成長，而會在未來的版本中包含多個非同步作業)。  
+    -   `ProgressChanged` ，如果類別具有多個非同步作業 (或預期會有成長，而會在未來的版本中包含多個非同步作業)；  
   
     -   _MethodName_**ProgressChanged**，如果類別具有單一非同步作業。  
   
@@ -205,9 +205,9 @@ ms.locfileid: "56973739"
   
  假設同步方法為 MethodName：  
   
--   MethodName 的 `out` 參數不應成為 _MethodName_**Async** 的一部分。 相反地，這些參數應該成為 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 MethodName 中的對等參數相同 (除非還有更適當的名稱)。  
+-   `out` 參數 (針對 *MethodName*) 不應成為 _MethodName_**Async** 的一部分。 相反地，這些參數應該成為 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 MethodName 中的對等參數相同 (除非還有更適當的名稱)。  
   
--   MethodName 的 `ref` 參數應該為 _MethodName_**Async** 的一部分，並且也必須是 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 MethodName 中的對等參數相同 (除非還有更適當的名稱)。  
+-   `ref` 參數 (針對 *MethodName*) 應該顯示為 _MethodName_**Async** 的一部分，並且也必須是 _MethodName_**CompletedEventArgs** 的一部分，其名稱會與 *MethodName* 中的對等參數相同 (除非還有更適當的名稱)。  
   
  例如，假設︰  
   
@@ -250,9 +250,9 @@ public class MethodNameCompletedEventArgs : System.ComponentModel.AsyncCompleted
 
 - <xref:System.ComponentModel.ProgressChangedEventArgs>
 - <xref:System.ComponentModel.AsyncCompletedEventArgs>
-- [如何：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
-- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
-- [如何：實作使用背景作業的表單](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
+- [作法：實作支援事件架構非同步模式的元件](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)
+- [作法：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [作法：實作使用背景作業的表單](../../../docs/framework/winforms/controls/how-to-implement-a-form-that-uses-a-background-operation.md)
 - [決定何時實作事件架構非同步模式](../../../docs/standard/asynchronous-programming-patterns/deciding-when-to-implement-the-event-based-asynchronous-pattern.md)
 - [實作事件架構非同步模式的最佳作法](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)
 - [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

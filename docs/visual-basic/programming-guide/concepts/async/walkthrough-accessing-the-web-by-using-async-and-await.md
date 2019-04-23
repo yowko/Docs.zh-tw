@@ -3,10 +3,10 @@ title: 逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335897"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>逐步解說：存取 Web 使用 Async 和 Await (Visual Basic)
@@ -22,9 +22,9 @@ ms.locfileid: "59335897"
   
 -   [建立 WPF 應用程式](#CreateWPFApp)  
   
--   [設計簡單的 WPF MainWindow 視窗](#MainWindow)  
+-   [設計簡單的 WPF MainWindow](#MainWindow)  
   
--   [若要加入參考](#AddRef)  
+-   [加入參考](#AddRef)  
   
 -   [若要加入必要的 Imports 陳述式](#ImportsState)  
   
@@ -137,13 +137,13 @@ ms.locfileid: "59335897"
   
 3. 同步方案的程式碼包含下列四種方法：  
   
-    -   `SumPageSizes`此 cmdlet 會取得網頁的 Url，從一份`SetUpURLList`，然後呼叫`GetURLContents`和`DisplayResults`來處理每個 URL。  
+    -   `SumPageSizes`，會從 `SetUpURLList` 取得網頁 URL 的清單，然後呼叫 `GetURLContents` 和 `DisplayResults` 以處理每個 URL。  
   
-    -   `SetUpURLList`會製作並傳回網址清單。  
+    -   `SetUpURLList`，會製作並傳回網址清單。  
   
-    -   `GetURLContents`會下載每個網站內容，並傳回內容做為位元組陣列。  
+    -   `GetURLContents`，會下載每個網站的內容，並傳回內容做為位元組陣列。  
   
-    -   `DisplayResults`其中顯示的位元組數目的位元組陣列中每個 URL。  
+    -   `DisplayResults`，會顯示每個 URL 的位元組陣列中的位元組數目。  
   
      複製下列四種方法，然後再貼入下`startButton_Click`MainWindow.xaml.vb 中的事件處理常式：  
   
@@ -263,7 +263,7 @@ ms.locfileid: "59335897"
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` 傳回<xref:System.Threading.Tasks.Task%601>。 在此情況下，工作傳回變數 `TResult` 具有類型 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。  
+2. `GetResponseAsync` 會傳回 <xref:System.Threading.Tasks.Task%601>。 在此情況下，工作傳回變數 `TResult` 具有類型 <xref:System.Net.WebResponse>。 工作承諾會在已下載要求的資料及工作執行完成之後，產生實際 `WebResponse` 物件。  
   
      若要擷取`WebResponse`值從工作，請套用[Await](../../../../visual-basic/language-reference/operators/await-operator.md)運算子來呼叫`GetResponseAsync`，如下列程式碼所示。  
   
@@ -679,7 +679,7 @@ End Class
 - [Await 運算子](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [使用 Async 和 Await 進行非同步程式設計 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
-- [非同步方法的傳回類型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
-- [以工作為基礎的非同步程式設計 (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847)
-- [HOW TO：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [HOW TO：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [非同步方法的傳回型別 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
+- [Task-based Asynchronous Programming (TAP)](https://go.microsoft.com/fwlink/?LinkId=204847) (以工作為基礎的非同步程式設計 (TAP))
+- [如何：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [如何：同時發出多個 Web 要求，使用 Async 和 Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

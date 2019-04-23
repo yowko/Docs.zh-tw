@@ -12,10 +12,10 @@ helpviewer_keywords:
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
 ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333310"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>逐步解說：在執行階段更新狀態列資訊
@@ -88,6 +88,6 @@ ms.locfileid: "59333310"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [HOW TO：將面板新增至 StatusBar 控制項](how-to-add-panels-to-a-statusbar-control.md)
-- [HOW TO：判斷在 Windows Forms StatusBar 控制項中按下了哪個面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [如何：將面板新增至 StatusBar 控制項](how-to-add-panels-to-a-statusbar-control.md)
+- [如何：判斷按下 Windows Forms StatusBar 控制項中的面板](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar 控制項概觀](statusbar-control-overview-windows-forms.md)

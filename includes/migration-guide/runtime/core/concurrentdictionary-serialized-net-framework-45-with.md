@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f9d7b8d22818245b96cafffe3732bdfe82ff69d8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235179"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803529"
 ---
 ### <a name="a-concurrentdictionary-serialized-in-net-framework-45-with-netdatacontractserializer-cannot-be-deserialized-by-net-framework-451-or-452"></a>在 .NET Framework 4.5 中利用 NetDataContractSerializer 序列化過的 ConcurrentDictionary，無法由 .NET Framework 4.5.1 或 4.5.2 還原序列化
 

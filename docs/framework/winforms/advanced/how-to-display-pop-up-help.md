@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Help [Windows Forms], adding to dialog boxes
 ms.assetid: 218aa81e-e87e-4d67-af05-11627bbdce3b
 ms.openlocfilehash: f805840ea3b1a8aef6a289dba064c468a4da0cb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331477"
 ---
 # <a name="how-to-display-pop-up-help"></a>HOW TO：顯示快顯說明
@@ -45,5 +45,5 @@ ms.locfileid: "59331477"
 ## <a name="see-also"></a>另請參閱
 
 - [使用工具提示來顯示控制項說明](control-help-using-tooltips.md)
-- [整合 Windows Form 中的使用者說明](integrating-user-help-in-windows-forms.md)
+- [整合 Windows Forms 中的使用者說明](integrating-user-help-in-windows-forms.md)
 - [Windows Forms](../index.md)

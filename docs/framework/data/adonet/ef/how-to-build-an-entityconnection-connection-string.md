@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5bd1a748-3df7-4d0a-a607-14f25e3175e9
 ms.openlocfilehash: 335c85d5234df4dd00d0ee65b2077996411081b3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335676"
 ---
 # <a name="how-to-build-an-entityconnection-connection-string"></a>HOW TO：建置 EntityCollection 連接字串
@@ -32,5 +32,5 @@ ms.locfileid: "59335676"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：搭配物件內容使用 Entitycollection](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
+- [如何：搭配物件內容使用 Entitycollection](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738461(v=vs.100))
 - [Entity Framework 的 EntityClient 提供者](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)

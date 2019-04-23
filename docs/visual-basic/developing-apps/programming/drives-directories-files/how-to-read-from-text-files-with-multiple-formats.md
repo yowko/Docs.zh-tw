@@ -1,5 +1,5 @@
 ---
-title: 作法：在 Visual Basic 中以多種格式從文字檔讀取
+title: HOW TO：在 Visual Basic 中以多種格式從文字檔讀取
 ms.date: 07/20/2015
 helpviewer_keywords:
 - TextFieldParser object, reading from a file
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - text files [Visual Basic], reading
 ms.assetid: 8d185eb2-79ca-42cd-95a7-d3ff44a5a0f8
 ms.openlocfilehash: 3ad34864e162f8f62fed3754bdbcd39c75f7b3f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334298"
 ---
-# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>作法：在 Visual Basic 中以多種格式從文字檔讀取
+# <a name="how-to-read-from-text-files-with-multiple-formats-in-visual-basic"></a>HOW TO：在 Visual Basic 中以多種格式從文字檔讀取
 <xref:Microsoft.VisualBasic.FileIO.TextFieldParser> 物件可讓您輕鬆有效率地剖析結構化文字檔，例如記錄檔。 您可以使用 `PeekChars` 方法來處理具有多種格式的檔案，以在剖析整個檔案時判斷每行格式。  
   
 ### <a name="to-parse-a-text-file-with-multiple-formats"></a>剖析具有多種格式的文字檔  
@@ -76,6 +76,6 @@ ms.locfileid: "59334298"
 - <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.EndOfData%2A>
 - <xref:Microsoft.VisualBasic.FileIO.TextFieldParser.TextFieldType%2A>
-- [作法：從逗號分隔文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
-- [作法：從固定寬度的文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
+- [如何：從逗號分隔文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-comma-delimited-text-files.md)
+- [如何：從固定寬度的文字檔讀取](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-from-fixed-width-text-files.md)
 - [使用 TextFieldParser 物件剖析文字檔](../../../../visual-basic/developing-apps/programming/drives-directories-files/parsing-text-files-with-the-textfieldparser-object.md)

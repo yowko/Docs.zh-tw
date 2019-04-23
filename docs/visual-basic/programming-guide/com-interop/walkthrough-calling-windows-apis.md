@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
 ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332322"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>逐步解說：呼叫 Windows Api (Visual Basic)
@@ -151,8 +151,8 @@ Windows Api 是屬於 Windows 作業系統的動態連結程式庫 (Dll)。 您�
 
 - <xref:System.Runtime.InteropServices.DllImportAttribute>
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [Declare Statement](../../../visual-basic/language-reference/statements/declare-statement.md)
-- [自動](../../../visual-basic/language-reference/modifiers/auto.md)
+- [Declare 陳述式](../../../visual-basic/language-reference/statements/declare-statement.md)
+- [Auto](../../../visual-basic/language-reference/modifiers/auto.md)
 - [Alias](../../../visual-basic/language-reference/statements/alias-clause.md)
 - [COM Interop](../../../visual-basic/programming-guide/com-interop/index.md)
 - [在 Managed 程式碼中建立原型](../../../framework/interop/creating-prototypes-in-managed-code.md)

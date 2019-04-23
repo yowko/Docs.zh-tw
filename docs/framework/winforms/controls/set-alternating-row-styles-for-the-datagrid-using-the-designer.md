@@ -9,10 +9,10 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
 ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335624"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式
@@ -41,8 +41,8 @@ ms.locfileid: "59335624"
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.Windows.Forms.DataGridView>
-- [Windows Form DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [Windows Form DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
-- [使用設計工具搭配 Windows Form DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)
-- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [Windows Forms DataGridView 控制項中的基本格式化和樣式設定](basic-formatting-and-styling-in-the-windows-forms-datagridview-control.md)
+- [使用設計工具搭配 Windows Forms DataGridView 控制項](using-the-designer-with-the-windows-forms-datagridview-control.md)
+- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

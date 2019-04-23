@@ -1,5 +1,5 @@
 ---
-title: 作法：使用 CodeDOM 建立類別
+title: HOW TO：使用 CodeDOM 建立類別
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -14,13 +14,13 @@ ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333167"
 ---
-# <a name="how-to-create-a-class-using-codedom"></a>作法：使用 CodeDOM 建立類別
+# <a name="how-to-create-a-class-using-codedom"></a>HOW TO：使用 CodeDOM 建立類別
 下列程序示範如何建立及編譯 CodeDOM 圖表，其可產生包含兩個欄位、三種屬性、一種方法、一個建構函式和一個進入點的類別。  
   
 1. 建立主控台應用程式，使用 CodeDOM 程式碼產生類別的原始程式碼。  

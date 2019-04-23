@@ -8,10 +8,10 @@ helpviewer_keywords:
 - derived classes [Visual Basic], COM reusability
 ms.assetid: f8e7263a-de13-48d1-b67c-ca1adf3544d9
 ms.openlocfilehash: 0b3977e73e3b2aa9e80e2dab08d15035283b8387
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334142"
 ---
 # <a name="walkthrough-implementing-inheritance-with-com-objects-visual-basic"></a>逐步解說：實作 COM 物件 (Visual Basic) 的繼承
@@ -132,5 +132,5 @@ ms.locfileid: "59334142"
 ## <a name="see-also"></a>另請參閱
 
 - [.NET Framework 應用程式中的 COM 互通性](../../../visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md)
-- [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)
+- [Inherits 陳述式](../../../visual-basic/language-reference/statements/inherits-statement.md)
 - [Short 資料類型](../../../visual-basic/language-reference/data-types/short-data-type.md)

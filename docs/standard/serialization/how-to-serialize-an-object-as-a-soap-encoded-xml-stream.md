@@ -10,10 +10,10 @@ helpviewer_keywords:
 - serialization, SOAP
 ms.assetid: af406e0a-fa3a-46dd-a7ba-c80731eba3a0
 ms.openlocfilehash: bfbdda0861a6f2867a2e7003dd7054129fd343b8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334519"
 ---
 # <a name="how-to-serialize-an-object-as-a-soap-encoded-xml-stream"></a>HOW TO：將物件序列化為 SOAP 編碼的 XML 資料流
@@ -73,8 +73,8 @@ XmlSerializer mySerializer = new XmlSerializer(myTypeMapping);
 ## <a name="see-also"></a>另請參閱
 
 - [XML 和 SOAP 序列化](../../../docs/standard/serialization/xml-and-soap-serialization.md)
-- [控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
+- [可控制編碼 SOAP 序列化的屬性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)
 - [以 XML Web 服務進行 XML 序列化](../../../docs/standard/serialization/xml-serialization-with-xml-web-services.md)
-- [HOW TO：序列化物件](../../../docs/standard/serialization/how-to-serialize-an-object.md)
-- [HOW TO：將物件還原序列化](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
-- [HOW TO：覆寫已編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)
+- [如何：將物件序列化](../../../docs/standard/serialization/how-to-serialize-an-object.md)
+- [如何：還原序列化物件](../../../docs/standard/serialization/how-to-deserialize-an-object.md)
+- [如何：覆寫編碼的 SOAP XML 序列化](../../../docs/standard/serialization/how-to-override-encoded-soap-xml-serialization.md)

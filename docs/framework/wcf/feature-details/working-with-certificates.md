@@ -8,10 +8,10 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331711"
 ---
 # <a name="working-with-certificates"></a>使用憑證
@@ -74,7 +74,7 @@ ms.locfileid: "59331711"
   
  您也可以使用組態來設定屬性。 下列項目可用來指定驗證模式：  
   
--   [\<驗證 >](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+-   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
 -   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
@@ -176,4 +176,4 @@ ms.locfileid: "59331711"
 - <xref:System.ServiceModel.Security>
 - <xref:System.ServiceModel>
 - <xref:System.Security.Cryptography.X509Certificates.X509FindType>
-- [確保服務與用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
+- [保護服務和用戶端的安全](../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)

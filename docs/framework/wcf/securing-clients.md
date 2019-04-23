@@ -5,10 +5,10 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331802"
 ---
 # <a name="securing-clients"></a>確保用戶端的安全
@@ -129,7 +129,7 @@ ms.locfileid: "59331802"
  如需有關如何設定用戶端憑證的詳細資訊，請參閱[How to:指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)。  
   
 > [!NOTE]
->  `ClientCredentialType` 則會忽略`SecurityMode`設為`"TransportWithMessageCredential",`如下列範例組態所示。  
+>  `ClientCredentialType` 設定為 `SecurityMode` 時，會忽略 `"TransportWithMessageCredential",`，如下列範例組態所示。  
   
 ```xml  
 <wsHttpBinding>  
@@ -152,9 +152,9 @@ ms.locfileid: "59331802"
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetEnabled%2A>
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpsGetUrl%2A>
 - [\<bindings>](../../../docs/framework/configure-apps/file-schema/wcf/bindings.md)
-- [組態編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
-- [保護服務的安全](../../../docs/framework/wcf/securing-services.md)
+- [設定編輯器工具 (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
+- [保護服務安全](../../../docs/framework/wcf/securing-services.md)
 - [使用 WCF 用戶端存取服務](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [HOW TO：指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [如何：指定用戶端認證值](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [ServiceModel 中繼資料公用程式工具 (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [HOW TO：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [如何：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

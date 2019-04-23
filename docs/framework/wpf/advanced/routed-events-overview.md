@@ -16,10 +16,10 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330439"
 ---
 # <a name="routed-events-overview"></a>路由事件概觀
@@ -195,7 +195,7 @@ ms.locfileid: "59330439"
 ## <a name="wpf-input-events"></a>WPF 輸入事件  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 平台中有一個路由事件的常用應用程式適用於輸入事件。 在 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 中，通道路由事件名稱前面依慣例會加上 "Preview" 這個字。 輸入事件通常會成對出現，其中一個是事件反昇事件，另一個則是通道事件。 例如，<xref:System.Windows.ContentElement.KeyDown>事件和<xref:System.Windows.ContentElement.PreviewKeyDown>事件擁有相同的簽章，前者是事件反昇輸入的事件和第二個通道輸入事件。 有時，輸入事件只會有事件反昇版本，或可能只有直接路由版本。 在文件中，路由事件主題會交互參考具備替代路由傳送策略的類似路由事件 (如果這類路由事件存在)，而受管理參考頁面中的章節會釐清每個路由事件的路由傳送策略。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 成對出現的輸入的事件所實作，讓輸入，例如按下滑鼠按鈕，從單一使用者動作將會引發該配對的這兩個路由的事件順序。 首先，引發通道事件，並周遊其路由。 接著，引發事件反昇事件，並周遊其路由。 兩個事件實際上會共用相同的事件資料執行個體，因為<xref:System.Windows.UIElement.RaiseEvent%2A>中實作的類別引發事件反昇事件的方法呼叫會接聽來自通道事件的事件資料，並重複新引發的事件中。 具有通道事件處理常式的接聽程式有機會優先將路由事件標示為已處理 (第一個是類別處理常式，然後是執行個體處理常式)。 如果將通道路由中的元素標示為已處理，則已經處理的事件資料就會針對事件反昇事件進行傳送，而且將不會叫用基於對等事件反昇輸入事件附加的一般處理常式。 表面上來看，就如同未曾引發過已處理的事件反昇事件。 這個處理行為非常適用於控制項複合，您可能想要讓您的最終控制項 (而不是它的複合組件) 報告所有以點擊測試為基礎的輸入事件或以焦點為基礎的輸入事件。 最後一個控制項元素更接近複合中的根元素，因此有機會優先對通道事件進行類別處理，而且，或許可利用更專屬於控制項的事件，做為支援控制項類別的程式碼一部分來「取代」該路由事件。  
+ 系統會實作成對出現的 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 輸入事件，讓來自輸入的單一使用者動作 (例如按下滑鼠按鈕) 將依序引發配對中的這兩個路由事件。 首先，引發通道事件，並周遊其路由。 接著，引發事件反昇事件，並周遊其路由。 兩個事件實際上會共用相同的事件資料執行個體，因為<xref:System.Windows.UIElement.RaiseEvent%2A>中實作的類別引發事件反昇事件的方法呼叫會接聽來自通道事件的事件資料，並重複新引發的事件中。 具有通道事件處理常式的接聽程式有機會優先將路由事件標示為已處理 (第一個是類別處理常式，然後是執行個體處理常式)。 如果將通道路由中的元素標示為已處理，則已經處理的事件資料就會針對事件反昇事件進行傳送，而且將不會叫用基於對等事件反昇輸入事件附加的一般處理常式。 表面上來看，就如同未曾引發過已處理的事件反昇事件。 這個處理行為非常適用於控制項複合，您可能想要讓您的最終控制項 (而不是它的複合組件) 報告所有以點擊測試為基礎的輸入事件或以焦點為基礎的輸入事件。 最後一個控制項元素更接近複合中的根元素，因此有機會優先對通道事件進行類別處理，而且，或許可利用更專屬於控制項的事件，做為支援控制項類別的程式碼一部分來「取代」該路由事件。  
   
  如需輸入事件處理如何運作的圖表說明，請考量下列輸入事件範例。 在下列樹狀結構圖中，`leaf element #2` 是 `PreviewMouseDown`，然後是 `MouseDown` 事件的來源。  
   
@@ -204,17 +204,17 @@ ms.locfileid: "59330439"
   
  事件處理的順序如下：  
   
-1. `PreviewMouseDown` （通道） 上的根項目。  
+1. 根元素上的 `PreviewMouseDown` (通道)。  
   
-2. `PreviewMouseDown` （通道） 在中繼元素 #1。  
+2. 中繼元素 #1 上的 `PreviewMouseDown` (通道)。  
   
-3. `PreviewMouseDown` （通道） 上來源元素 #2。  
+3. 來源元素 #2 上的 `PreviewMouseDown` (通道)。  
   
-4. `MouseDown` （事件反昇） 在來源元素 #2。  
+4. 來源元素 #2 上的 `MouseDown` (事件反昇)。  
   
-5. `MouseDown` （事件反昇） 在中繼元素 #1。  
+5. 中繼元素 #1 上的 `MouseDown` (事件反昇)。  
   
-6. `MouseDown` （事件反昇） 根項目上。  
+6. 根元素上的 `MouseDown` (事件反昇)。  
   
  路由事件處理常式委派提供對兩個物件的參考︰引發事件的物件，以及已叫用處理常式的物件。 已叫用處理常式的物件是 `sender` 參數所報告的物件。 第一次引發事件的物件由報告<xref:System.Windows.RoutedEventArgs.Source%2A>事件資料中的屬性。 路由的事件可以仍會引發並處理相同的物件，在此情況下`sender`和<xref:System.Windows.RoutedEventArgs.Source%2A>都相同 （這是步驟 3 和 4 在事件處理範例清單的情況）。  
   

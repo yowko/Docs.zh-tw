@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 8ee19f95-a9ef-4033-963b-d224dca207c4
 ms.openlocfilehash: 115c1df4bd49d5848d72c4cbd0242a49a12740c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335494"
 ---
 # <a name="how-to-create-a-procedure-that-returns-a-value-visual-basic"></a>HOW TO：建立程序傳回值 (Visual Basic)
@@ -39,10 +39,10 @@ ms.locfileid: "59335494"
 ## <a name="see-also"></a>另請參閱
 
 - [程序](./index.md)
-- [子程序](./sub-procedures.md)
+- [Sub 程序](./sub-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [運算子程序](./operator-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Function 陳述式](../../../../visual-basic/language-reference/statements/function-statement.md)
-- [HOW TO：傳回程序的值](./how-to-return-a-value-from-a-procedure.md)
-- [HOW TO：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)
+- [如何：從程序傳回值](./how-to-return-a-value-from-a-procedure.md)
+- [如何：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)

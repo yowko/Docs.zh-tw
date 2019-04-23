@@ -3,10 +3,10 @@ title: 在 Windows 服務應用程式中裝載
 ms.date: 03/30/2017
 ms.assetid: f4199998-27f3-4dd9-aee4-0a4addfa9f24
 ms.openlocfilehash: 8e50c39955f9ab72dfa1d52cbc37ab90f1ab0a8a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335364"
 ---
 # <a name="hosting-in-a-windows-service-application"></a>在 Windows 服務應用程式中裝載
@@ -39,8 +39,8 @@ Windows 服務 (之前稱為 Windows NT 服務) 所提供的處理序模型特�
 ## <a name="see-also"></a>另請參閱
 
 - <xref:System.ServiceProcess>
-- [逐步解說：在 元件設計工具中建立 Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=94875)
-- [HOW TO：在受控的 Windows 服務中裝載 WCF 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [逐步解說：在元件設計工具中建立 Windows 服務應用程式](https://go.microsoft.com/fwlink/?LinkId=94875)
+- [如何：將 WCF 服務裝載於 Managed 的 Windows 服務](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
 - [Windows 服務主機](../../../../docs/framework/wcf/samples/windows-service-host.md)
 - [服務應用程式的程式設計架構](https://go.microsoft.com/fwlink/?LinkId=94876)
 - [Windows Server AppFabric 裝載功能](https://go.microsoft.com/fwlink/?LinkId=201276)

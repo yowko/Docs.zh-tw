@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
 ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334038"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>逐步解說：在 Visual Basic 中的字串加密和解密
@@ -81,4 +81,4 @@ ms.locfileid: "59334038"
 - <xref:System.Security.Cryptography.DES>
 - <xref:System.Security.Cryptography.TripleDES>
 - <xref:System.Security.Cryptography.Rijndael>
-- [密碼編譯服務](../../../../standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../standard/security/cryptographic-services.md)

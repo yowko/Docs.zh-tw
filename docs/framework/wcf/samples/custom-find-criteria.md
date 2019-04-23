@@ -3,10 +3,10 @@ title: 自訂尋找準則
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332530"
 ---
 # <a name="custom-find-criteria"></a>自訂尋找準則
@@ -45,7 +45,7 @@ ms.locfileid: "59332530"
   
      這個自訂邏輯會通過服務所擁有之每個端點上的所有範圍。 如果有任何端點的範圍符合用戶端提供的任何範圍，探索服務會將該端點加入至傳回用戶端的回應中。  
   
-3. **CustomDiscoveryExtension.cs**:實作探索服務的最後一個步驟是將這項實作自訂探索服務至服務主機。 此處所使用的協助程式類別為 `CustomDiscoveryExtension` 類別。 此類別會擴充 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 類別。 使用者必須覆寫 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在此情況下，方法會傳回之前建立之自訂探索服務的執行個體。 `PublishedEndpoints` 已<xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，其中包含的所有應用程式端點新增至<xref:System.ServiceModel.ServiceHost>。 自訂探索服務使用這個端點填入其內部清單。 使用者也可以加入其他端點中繼資料。  
+3. **CustomDiscoveryExtension.cs**:實作探索服務的最後一個步驟是將這項實作自訂探索服務至服務主機。 此處所使用的協助程式類別為 `CustomDiscoveryExtension` 類別。 此類別會擴充 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> 類別。 使用者必須覆寫 <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> 方法。 在此情況下，方法會傳回之前建立之自訂探索服務的執行個體。 `PublishedEndpoints` 是 <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>，其中包含加入至 <xref:System.ServiceModel.ServiceHost> 的所有應用程式端點。 自訂探索服務使用這個端點填入其內部清單。 使用者也可以加入其他端點中繼資料。  
   
  最後，開啟 Program.cs。 請注意，<xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> 和 `CustomDiscoveryExtension` 都會加入至主機中。 一旦完成這個動作，而且主機所擁有的端點可用來接收探索訊息之後，應用程式就可以使用自訂探索服務。  
   

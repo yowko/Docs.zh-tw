@@ -3,10 +3,10 @@ title: 寄不出的信件佇列
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334090"
 ---
 # <a name="dead-letter-queues"></a>寄不出的信件佇列
@@ -24,15 +24,15 @@ ms.locfileid: "59334090"
 
  在 `NetMsmqBinding` 繫結中，會使用下列屬性來表示寄不出的信件佇列：
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 表示用戶端所需的寄不出信件佇列種類的屬性。 這個列舉具有下列值：
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> 屬性，用來表示用戶端所需之寄不出的信件佇列種類。 這個列舉具有下列值：
 
--   `None`:沒有寄不出信件佇列所需的用戶端。
+-   `None`：沒有寄不出信件佇列所需的用戶端。
 
--   `System`:系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
+-   `System`：系統寄不出信件佇列用來儲存無法傳遞的訊息。 電腦上執行的所有應用程式會共用系統之寄不出的信件佇列。
 
--   `Custom`:使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
+-   `Custom`：使用指定的自訂寄不出信件佇列<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>屬性用來儲存無法傳遞的訊息。 這項功能只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。 當應用程式必須使用自己的寄不出的信件佇列，而不與執行於同一台電腦的其他應用程式共用時，會使用這項功能。
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 表示要做為寄不出信件佇列的特定佇列的屬性。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 屬性，用來表示要當做寄不出的信件佇列使用的特定佇列。 這只能在 [!INCLUDE[wv](../../../../includes/wv-md.md)] 上使用。
 
  在這個範例中，用戶端會從異動範圍內傳送一批訊息至服務，並隨意為這些訊息指定很低的「存留時間」值 (約 2 秒)。 用戶端還會指定要使用的自訂寄不出的信件佇列，以便將過期的訊息加入。
 

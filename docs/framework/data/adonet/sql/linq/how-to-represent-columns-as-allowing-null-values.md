@@ -3,10 +3,10 @@ title: HOW TO：將資料行表示為可存放 Null 值的資料行
 ms.date: 03/30/2017
 ms.assetid: ebb71a37-1f4c-4fa7-b2d2-d903f13c4af1
 ms.openlocfilehash: ef8fa87963b91ef7140fbaefb657fc7904604b5b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331152"
 ---
 # <a name="how-to-represent-columns-as-allowing-null-values"></a>HOW TO：將資料行表示為可存放 Null 值的資料行
@@ -23,4 +23,4 @@ ms.locfileid: "59331152"
 ## <a name="see-also"></a>另請參閱
 
 - [LINQ to SQL 物件模型](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [HOW TO：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [如何：使用程式碼編輯器自訂實體類別](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)

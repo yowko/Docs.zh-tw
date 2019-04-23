@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335481"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>HOW TO：呼叫運算子程序 (Visual Basic)
@@ -56,12 +56,12 @@ ms.locfileid: "59335481"
 ## <a name="see-also"></a>另請參閱
 
 - [運算子程序](./operator-procedures.md)
-- [HOW TO：定義運算子](./how-to-define-an-operator.md)
-- [HOW TO：定義轉換運算子](./how-to-define-a-conversion-operator.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [如何：定義運算子](./how-to-define-an-operator.md)
+- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Widening](../../../../visual-basic/language-reference/modifiers/widening.md)
 - [Narrowing](../../../../visual-basic/language-reference/modifiers/narrowing.md)
 - [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [HOW TO：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [隱含和明確轉換](../../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
-- [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [擴展和縮小轉換](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)

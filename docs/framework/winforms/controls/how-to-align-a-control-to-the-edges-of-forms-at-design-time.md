@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Dock property [Windows Forms], aligning controls (using designer)
 ms.assetid: 51f08998-5e3b-4330-be58-a4edd0eb60f4
 ms.openlocfilehash: 8ca6fd64edbd73301fd298f42c3d4d97d021888a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331856"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms-at-design-time"></a>HOW TO：在設計階段將控制項對齊表單邊緣
@@ -45,11 +45,11 @@ ms.locfileid: "59331856"
 
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
-- [HOW TO：將控制項對齊表單邊緣](how-to-align-a-control-to-the-edges-of-forms.md)
-- [逐步解說：使用對齊線排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [HOW TO：錨定 Windows Forms 上的控制項](how-to-anchor-controls-on-windows-forms.md)
-- [HOW TO：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [HOW TO：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [逐步解說：使用 TableLayoutPanel 排列 Windows Forms 的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [逐步解說：使用 FlowLayoutPanel 排列 Windows Forms上的控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)
+- [如何：將控制項和表單邊緣對齊](how-to-align-a-control-to-the-edges-of-forms.md)
+- [逐步解說：使用對齊線的 Windows Form 上排列控制項](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [如何：在 Windows Forms 上控制項的錨定](how-to-anchor-controls-on-windows-forms.md)
+- [如何：錨定和停駐 TableLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [如何：錨定和停駐 FlowLayoutPanel 控制項中的子控制項](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [逐步解說：排列 Windows Form 使用 TableLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [逐步解說：排列 Windows Form 使用 FlowLayoutPanel 控制項](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)

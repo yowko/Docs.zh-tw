@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 83b5498ac6f585a8d2554377748836d88ce592d1
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970879"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335013"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -76,7 +76,7 @@ ms.locfileid: "56970879"
 
 為了更方便閱讀及支援特定開發人員案例 (例如使用編譯器)，已提供衍生成品。
 
-- [Markdown 中的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
+- [以 Markdown 撰寫的 API 清單](https://github.com/dotnet/standard/tree/master/docs/versions)
 - 以 [NuGet 套件](../core/packages.md)散發並由 [NETStandard.Library](https://www.nuget.org/packages/NETStandard.Library/) 中繼套件參考的參考組件。
 
 ### <a name="package-representation"></a>封裝表示
@@ -113,7 +113,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 ## <a name="net-standard-libraries-and-visual-studio"></a>.NET Standard 程式庫與 Visual Studio
 
-若要在 Visual Studio 中建置 .NET Standard 程式庫，請確定您已在 Windows 上安裝了 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 或是更新版本，或是已在 macOS 上安裝了 [Visual Studio for Mac 版本 7.1](https://visualstudio.microsoft.com/vs/visual-studio-mac/) 或更新版本。
+若要在 Visual Studio 中建置 .NET Standard 程式庫，請確定您已在 Windows 上安裝了 [Visual Studio 2017 版本 15.3](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017) 或是更新版本，或是已在 macOS 上安裝了 [Visual Studio for Mac 版本 7.1](https://visualstudio.microsoft.com/vs/mac/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link) 或更新版本。
 
 若在您專案中只需要使用 .NET Standard 2.0 程式庫，也可於 Visual Studio 2015 中執行。 但需要安裝 NuGet 用戶端 3.6 或更新版本。 您可從 [NuGet下載](https://www.nuget.org/downloads)頁面，下載 Visual Studio 2015 的 NuGet 用戶端。
 
@@ -142,7 +142,7 @@ NuGet 套件是以一個或多個[架構](frameworks.md)為目標。 .NET Standa
 
 [Microsoft.NETCore.Portable.Compatibility](https://www.nuget.org/packages/Microsoft.NETCore.Portable.Compatibility) NuGet 套件提供設定檔型 PCL 相容性。 參考包含設定檔型 PCL 的 NuGet 套件時需要此相依性。
 
-封裝成 `netstandard` 的設定檔型 PCL，會比一般封裝的設定檔型 PCL 更容易使用。 現有的使用者可以使用 `netstandard` 封裝。
+封裝成 `netstandard` 的設定檔型 PCL，會比一般封裝的設定檔型 PCL 更容易使用。 `netstandard` 套件是與現有的使用者相容。
 
 您會看到與 .NET Standard 相容的 PCL 設定檔集合：
 

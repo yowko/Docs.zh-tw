@@ -10,10 +10,10 @@ helpviewer_keywords:
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
 ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331074"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>HOW TO：讓 WCF 能夠存取 X.509 憑證
@@ -73,5 +73,5 @@ ms.locfileid: "59331074"
 ## <a name="see-also"></a>另請參閱
 
 - [FindPrivateKey](../../../../docs/framework/wcf/samples/findprivatekey.md)
-- [HOW TO：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [如何：擷取憑證的指紋](../../../../docs/framework/wcf/feature-details/how-to-retrieve-the-thumbprint-of-a-certificate.md)
 - [使用憑證](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

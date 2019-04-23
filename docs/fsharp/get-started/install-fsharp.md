@@ -3,10 +3,10 @@ title: 安裝F#
 description: 了解如何安裝F#根據您的環境。
 ms.date: 08/28/2018
 ms.openlocfilehash: 792c61c0522cd4d0c68a64572f2892ce33f71ea6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331971"
 ---
 # <a name="install-f"></a>安裝 F\#
@@ -31,7 +31,7 @@ F#根據預設，在已安裝[Visual Studio for Mac](https://visualstudio.micros
 
 您必須擁有[安裝 git](https://git-scm.com/download) ，可在您的路徑，請使用專案範本。 您可以確認它已正確安裝輸入`git --version`在命令提示字元並按下**Enter**。
 
-### [<a name="macos"></a>macOS](#tab/macos)
+### <a name="macostabmacos"></a>[macOS](#tab/macos)
 
 [Mono](https://www.mono-project.com)使用於[F#互動式](../tutorials/fsharp-interactive/index.md)支援。 在 macOS 上安裝 Mono 的最簡單方式是透過 Homebrew。 只要您的終端機中輸入下列：
 
@@ -41,7 +41,7 @@ brew install mono
 
 也會安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
 
-### [<a name="linux"></a>Linux](#tab/linux)
+### <a name="linuxtablinux"></a>[Linux](#tab/linux)
 
 [Mono](https://www.mono-project.com)使用於[F#互動式](../tutorials/fsharp-interactive/index.md)支援。 如果您是在 Debian 或 Ubuntu 上，您可以使用下列項目：
 
@@ -52,7 +52,7 @@ sudo apt-get install mono-complete fsharp
 
 也會安裝[.NET Core SDK](https://www.microsoft.com/net/download)。
 
-### [<a name="windows"></a>Windows](#tab/windows)
+### <a name="windowstabwindows"></a>[Windows](#tab/windows)
 
 安裝[Visual Studio 中使用F#支援](#install-f-with-visual-studio)。 這會安裝所有必要的元件，來撰寫、 編譯及執行F#程式碼。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333609"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的預設儲存格樣式和資料格式
@@ -67,7 +67,7 @@ ms.locfileid: "59333609"
 - <xref:System.Windows.Forms.DataGridView.RowsDefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A?displayProperty=nameWithType>
-- [Windows Form DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
-- [HOW TO：使用設計工具設定 Windows Forms DataGridView 控制項的替代資料列樣式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
-- [HOW TO：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [Windows Forms DataGridView 控制項中的儲存格樣式](cell-styles-in-the-windows-forms-datagridview-control.md)
+- [如何：設定為使用設計工具在 Windows Form DataGridView 控制項中替代資料列樣式](set-alternating-row-styles-for-the-datagrid-using-the-designer.md)
+- [如何：建立 Windows Forms 應用程式專案](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)

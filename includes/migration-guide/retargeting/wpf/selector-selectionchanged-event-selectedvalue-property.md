@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e6c93a1bc31c041f36fca3704bca32012a2b42ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236351"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803521"
 ---
 ### <a name="selector-selectionchanged-event-and-selectedvalue-property"></a>Selector 的 SelectionChanged 事件和 SelectedValue 屬性
 

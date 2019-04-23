@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30971
 ms.assetid: 75d2e8b5-2fdc-4623-8b32-cba805dab7db
 ms.openlocfilehash: 951f90a9209ff31896f4426ceb75f05b012897a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335143"
 ---
 # <a name="message-this-error-could-also-be-due-to-mixing-a-file-reference-with-a-project-reference-to-assembly-assemblyname"></a>\<訊息 > 這個錯誤也可能是因為混用了檔案參考和組件的專案參考 '\<組件名稱 >'
@@ -32,7 +32,7 @@ ms.locfileid: "59335143"
 ## <a name="see-also"></a>另請參閱
 
 - [管理專案中的參考](/visualstudio/ide/managing-references-in-a-project)
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [對已宣告項目的參考](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [管理專案和方案屬性](/visualstudio/ide/managing-project-and-solution-properties)
-- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)
+- [針對中斷參考進行疑難排解](/visualstudio/ide/troubleshooting-broken-references)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334597"
 ---
 # <a name="-delaysign"></a>-delaysign

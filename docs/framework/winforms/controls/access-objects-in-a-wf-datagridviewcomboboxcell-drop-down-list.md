@@ -10,10 +10,10 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
 ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334272"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>HOW TO：存取 Windows Forms DataGridViewComboBoxCell 下拉式清單中的物件
@@ -81,4 +81,4 @@ ms.locfileid: "59334272"
 - <xref:System.Windows.Forms.DataGridViewComboBoxCell.ValueMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewCell.Value%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.ComboBox>
-- [在 Windows Form DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)
+- [在 Windows Forms DataGridView 控制項中顯示資料](displaying-data-in-the-windows-forms-datagridview-control.md)

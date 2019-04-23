@@ -3,10 +3,10 @@ title: = (等號) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 948eb588-7080-4046-bb48-633b007393bf
 ms.openlocfilehash: d50ede1964f6d6b9025a7214efe90e878aa55a0c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333154"
 ---
 # <a name="-equals-entity-sql"></a>= (等號) (Entity SQL)
@@ -25,7 +25,7 @@ expression == expression
  任何有效的運算式。 兩個運算式都必須有可隱含轉換的資料型別。  
   
 ## <a name="result-types"></a>結果型別  
- `true` 如果左的運算式等於右運算式;否則， `false`。  
+ 如果左運算式等於右運算式則為`true` ；否則為 `false`。  
   
 ## <a name="remarks"></a>備註  
  == 運算子就相當於 =。  

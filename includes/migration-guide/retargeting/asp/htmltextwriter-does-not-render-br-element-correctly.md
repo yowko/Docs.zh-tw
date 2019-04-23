@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e600b8249096eecb13f63ea00343a771a8c12b60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234394"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803535"
 ---
 ### <a name="htmltextwriter-does-not-render-br-element-correctly"></a>HtmlTextWriter 無法正確轉譯 `<br/>` 項目
 

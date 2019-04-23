@@ -5,10 +5,10 @@ helpviewer_keywords:
 - service creation [WCF]
 ms.assetid: 7cf21bfe-23bd-46aa-8033-609f851dbf76
 ms.openlocfilehash: 6d9ea3b877e7c735cf789039b2a6956037372888
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330554"
 ---
 # <a name="basic-programming-lifecycle"></a>基本程式設計週期
@@ -33,4 +33,4 @@ Windows Communication Foundation (WCF) 可讓它們是否在相同的電腦上�
   
 ## <a name="see-also"></a>另請參閱
 
-- [實作服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)
+- [履行服務合約](../../../docs/framework/wcf/implementing-service-contracts.md)

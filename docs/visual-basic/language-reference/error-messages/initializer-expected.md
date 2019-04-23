@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30996
 ms.assetid: 6e183fe0-8888-43ed-a062-01571079455f
 ms.openlocfilehash: 0795fdc1c4b177e13979d7555cd7588217b8cb4c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334961"
 ---
 # <a name="initializer-expected"></a>必須是初始設定式
@@ -33,5 +33,5 @@ ms.locfileid: "59334961"
   
 ## <a name="see-also"></a>另請參閱
 
-- [物件初始設定式：具名和匿名型別](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
-- [HOW TO：使用物件初始設定式宣告物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)
+- [物件初始設定式：具名和匿名類型](../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)
+- [如何：使用物件初始設定式宣告物件](../../../visual-basic/programming-guide/language-features/objects-and-classes/how-to-declare-an-object-by-using-an-object-initializer.md)

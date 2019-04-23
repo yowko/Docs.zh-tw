@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335663"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>如何：使用 WIF 建置宣告感知 ASP.NET MVC Web 應用程式
@@ -218,4 +218,4 @@ ms.locfileid: "59335663"
   
 ## <a name="related-items"></a>相關項目:  
   
--   [如何：使用 WIF 建置宣告感知 ASP.NET Web Forms 應用程式](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [如何：建置宣告感知 ASP.NET Web Form 應用程式使用 WIF](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

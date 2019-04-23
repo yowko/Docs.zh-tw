@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334883"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  這是一個預留位置，表示可以使用多個 WHEN `Boolean_expression` THEN `result_expression` 子句。  
   
  THEN `result_expression`  
- 是在 `Boolean_expression` 評估為 `true`時傳回的運算式。 `result expression` 是任何有效運算式。  
+ 是在 `Boolean_expression` 評估為 `true`時傳回的運算式。 `result expression` 是任何有效的運算式。  
   
  ELSE `else_result_expression`  
- 這是沒有任何比較作業評估為 `true`時，所傳回的運算式。 如果省略這個引數，而且沒有比較作業評估為 `true`，CASE 便傳回 null。 `else_result_expression` 是任何有效運算式。 `else_result_expression` 和任何 `result_expression` 的資料型別都必須相同，或必須為隱含轉換。  
+ 這是沒有任何比較作業評估為 `true`時，所傳回的運算式。 如果省略這個引數，而且沒有比較作業評估為 `true`，CASE 便傳回 null。 `else_result_expression` 是任何有效的運算式。 `else_result_expression` 和任何 `result_expression` 的資料型別都必須相同，或必須為隱含轉換。  
   
  WHEN `Boolean_expression`  
- 這是使用搜尋的 CASE 格式時所評估的 `Boolean` 運算式。 `Boolean_expression` 任何有效`Boolean`運算式。  
+ 這是使用搜尋的 CASE 格式時所評估的 `Boolean` 運算式。 `Boolean_expression` 是任何有效的 `Boolean` 運算式。  
   
 ## <a name="return-value"></a>傳回值  
  從 `result_expression` 和選擇性 `else_result_expression`的型別集中，傳回優先順序最高的型別。  

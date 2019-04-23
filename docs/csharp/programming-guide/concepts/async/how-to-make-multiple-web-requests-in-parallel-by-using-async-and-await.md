@@ -1,15 +1,15 @@
 ---
-title: HOW TO：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
+title: 作法：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: c8f1c9a134af2139f3dd0d76614b1f719b4d453c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547640"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59335416"
 ---
-# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>HOW TO：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
+# <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>作法：使用 Async 和 Await，同時發出多個 Web 要求 (C#)
 在非同步方法中，工作會在建立後啟動。 由於在此方法中，必須等到工作完成後才能繼續處理，因此會將 [await](../../../../csharp/language-reference/keywords/await.md) 運算子套用至工作。 通常，工作會在建立後等候完成，如下列範例所示。  
   
 ```csharp  
@@ -43,7 +43,7 @@ var result = await myTask;
   
 ### <a name="to-set-up-the-project"></a>若要設定專案  
   
-1.  若要設定 WPF 應用程式，請完成下列步驟。 您可以在[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中，找到這些步驟的詳細指示。  
+1. 若要設定 WPF 應用程式，請完成下列步驟。 您可以在[逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md) 中，找到這些步驟的詳細指示。  
   
     -   建立 WPF 應用程式，其中包含一個文字方塊和一個按鈕。 將按鈕命名為 `startButton`，並將文字方塊命名為 `resultsTextBox`。  
   
@@ -53,9 +53,9 @@ var result = await myTask;
   
 ### <a name="to-add-the-code"></a>新增程式碼  
   
-1.  在設計視窗 MainWindow.xaml 中，按兩下此按鈕以在 MainWindow.xaml.cs 中建立 `startButton_Click` 事件處理常式。  
+1. 在設計視窗 MainWindow.xaml 中，按兩下此按鈕以在 MainWindow.xaml.cs 中建立 `startButton_Click` 事件處理常式。  
   
-2.  將下列程式碼複製並貼到 MainWindow.xaml.cs 中的 `startButton_Click` 主體。  
+2. 將下列程式碼複製並貼到 MainWindow.xaml.cs 中的 `startButton_Click` 主體。  
   
     ```csharp  
     resultsTextBox.Clear();  
@@ -65,7 +65,7 @@ var result = await myTask;
   
      此程式碼會呼叫非同步方法 `CreateMultipleTasksAsync` 來驅動應用程式。  
   
-3.  將下列支援方法新增至專案：  
+3. 將下列支援方法新增至專案：  
   
     -   `ProcessURLAsync` 使用 <xref:System.Net.Http.HttpClient> 方法，將網站內容下載為位元組陣列。 然後，支援方法 `ProcessURLAsync` 會顯示並傳回陣列的長度。  
   
@@ -93,7 +93,7 @@ var result = await myTask;
     }  
     ```  
   
-4.  最後，定義 `CreateMultipleTasksAsync` 方法以執行下列步驟。  
+4. 最後，定義 `CreateMultipleTasksAsync` 方法以執行下列步驟。  
   
     -   方法宣告 `HttpClient` 物件，需要存取 `ProcessURLAsync` 中的方法<xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A>。  
   
@@ -134,7 +134,7 @@ var result = await myTask;
     }  
     ```  
   
-5.  選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
+5. 選擇 F5 鍵以執行程式，然後選擇 [ **開始** ] 按鈕。  
   
      執行此程式幾次，確認這三個工作不一定會依相同順序完成，而且其完成順序不一定是建立和等候順序。  
   
@@ -228,4 +228,4 @@ namespace AsyncExample_MultipleTasks
 
 - [逐步解說：使用 Async 和 Await 存取 Web (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [使用 Async 和 Await 進行非同步程式設計 (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [如何：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
+- [作法：使用 Task.WhenAll 擴充非同步逐步解說的內容 (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)

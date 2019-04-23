@@ -7,10 +7,10 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332075"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>HOW TO：使用設計工具以 Windows Forms DataGrid 控制項建立主從式清單
@@ -56,5 +56,5 @@ ms.locfileid: "59332075"
 
 - [DataGrid 控制項](datagrid-control-windows-forms.md)
 - [DataGrid 控制項概觀](datagrid-control-overview-windows-forms.md)
-- [HOW TO：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
+- [如何：將 Windows Forms DataGrid 控制項繫結至資料來源](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)
 - [將控制項繫結至 Visual Studio 中的資料](/visualstudio/data-tools/bind-controls-to-data-in-visual-studio)

@@ -1,5 +1,5 @@
 ---
-title: 作法：實作支援事件架構非同步模式的元件
+title: HOW TO：實作支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
 ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334285"
 ---
-# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>作法：實作支援事件架構非同步模式的元件
+# <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>HOW TO：實作支援事件架構非同步模式的元件
 如果您正在撰寫的類別含有一些可能造成明顯延遲的作業，請考慮實作[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)，來為它提供非同步功能。  
   
  本逐步解說說明如何建立實作「事件架構非同步模式」的元件。 其實作方式是使用 <xref:System.ComponentModel?displayProperty=nameWithType> 命名空間中的協助程式類別，以確保此元件在任何應用程式模型下都能正常運作，包括 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、主控台應用程式及 Windows Forms 應用程式。 您也可以使用 <xref:System.Windows.Forms.PropertyGrid> 控制項和您自己的自訂設計工具來設計此元件。  
@@ -253,6 +253,6 @@ ms.locfileid: "59334285"
   
 ## <a name="see-also"></a>另請參閱
 
-- [作法：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)
 - [事件架構非同步模式 (EAP)](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-eap.md)

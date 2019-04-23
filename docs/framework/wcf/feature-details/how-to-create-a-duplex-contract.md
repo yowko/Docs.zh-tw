@@ -8,10 +8,10 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 500a75b6-998a-47d5-8e3b-24e3aba2a434
 ms.openlocfilehash: c00e5d8e50de89d3d4d346ccddc50282f24735b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332127"
 ---
 # <a name="how-to-create-a-duplex-contract"></a>HOW TO：建立雙面合約
@@ -71,8 +71,8 @@ ms.locfileid: "59332127"
 
 - <xref:System.ServiceModel.ServiceContractAttribute>
 - <xref:System.ServiceModel.OperationContractAttribute>
-- [HOW TO：使用雙面合約存取服務](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [雙工](../../../../docs/framework/wcf/samples/duplex.md)
+- [如何：Access Services 搭配雙工合約](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [雙面](../../../../docs/framework/wcf/samples/duplex.md)
 - [設計與實作服務](../../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [HOW TO：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
+- [如何：定義服務合約](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)
 - [工作階段](../../../../docs/framework/wcf/samples/session.md)

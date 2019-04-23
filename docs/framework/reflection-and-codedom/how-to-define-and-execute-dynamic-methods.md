@@ -11,31 +11,31 @@ helpviewer_keywords:
 ms.assetid: 07d08a99-62c5-4254-bce2-2a75e55a18ab
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f24d3e456285efe694e598aa3d435fc15341283
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 17bc7c417980c0850788f082ebb6e810fd0c53d9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333297"
 ---
 # <a name="how-to-define-and-execute-dynamic-methods"></a>作法：定義和執行動態方法
 下列程序顯示如何定義及執行簡單的動態方法及繫結至類別執行個體的動態方法。 如需動態方法的詳細資訊，請參閱 <xref:System.Reflection.Emit.DynamicMethod> 類別和[反映發出動態方法案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))。  
   
 ### <a name="to-define-and-execute-a-dynamic-method"></a>定義和執行動態方法  
   
-1.  宣告委派類型來執行方法。 請考慮使用泛型委派，將您需要宣告的委派類型數目降到最低。 下列程式碼會宣告兩個可用於 `SquareIt` 方法的委派類型，其中之一是泛型。  
+1. 宣告委派類型來執行方法。 請考慮使用泛型委派，將您需要宣告的委派類型數目降到最低。 下列程式碼會宣告兩個可用於 `SquareIt` 方法的委派類型，其中之一是泛型。  
   
      [!code-cpp[DynamicMethodHowTo#2](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#2)]
      [!code-csharp[DynamicMethodHowTo#2](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#2)]
      [!code-vb[DynamicMethodHowTo#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#2)]  
   
-2.  建立陣列，指定動態方法的參數類型。 在此範例中，唯一的參數是 `int` (Visual Basic 為 `Integer`)，所以陣列只有一個項目。  
+2. 建立陣列，指定動態方法的參數類型。 在此範例中，唯一的參數是 `int` (Visual Basic 為 `Integer`)，所以陣列只有一個項目。  
   
      [!code-cpp[DynamicMethodHowTo#3](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#3)]
      [!code-csharp[DynamicMethodHowTo#3](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#3)]
      [!code-vb[DynamicMethodHowTo#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#3)]  
   
-3.  建立 <xref:System.Reflection.Emit.DynamicMethod>。 本例中的方法名為 `SquareIt`。  
+3. 建立 <xref:System.Reflection.Emit.DynamicMethod>。 本例中的方法名為 `SquareIt`。  
   
     > [!NOTE]
     >  不需要提供動態方法名稱，它們無法依名稱叫用。 多個動態方法可有相同的名稱。 不過，名稱會出現在呼叫堆疊中，有利於偵錯。  
@@ -46,7 +46,7 @@ ms.locfileid: "56221052"
      [!code-csharp[DynamicMethodHowTo#4](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#4)]
      [!code-vb[DynamicMethodHowTo#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#4)]  
   
-4.  發出方法主體。 本例中使用 <xref:System.Reflection.Emit.ILGenerator> 物件發出 Microsoft 中繼語言 (MSIL)。 或者，您可使用 <xref:System.Reflection.Emit.DynamicILInfo> 物件結合 Unmanaged 程式碼產生器，發出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主體。  
+4. 發出方法主體。 本例中使用 <xref:System.Reflection.Emit.ILGenerator> 物件發出 Microsoft 中繼語言 (MSIL)。 或者，您可使用 <xref:System.Reflection.Emit.DynamicILInfo> 物件結合 Unmanaged 程式碼產生器，發出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主體。  
   
      本例中的 MSIL 是 `int`，會將引數載入到堆疊上，再將它轉換成 `long`，重複 `long` 再將兩個數字相乘。 這會將平方的結果留在堆疊上，而方法唯一要做的只有傳回。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "56221052"
      [!code-csharp[DynamicMethodHowTo#5](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#5)]
      [!code-vb[DynamicMethodHowTo#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#5)]  
   
-5.  呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，以建立表示動態方法之 (在步驟 1 中宣告) 委派的執行個體。 建立委派即會完成方法，而任何進一步變更方法的嘗試，例如新增更多的 MSIL，則予以忽略。 下列程式碼會使用泛型委派，建立並叫用委派。  
+5. 呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，以建立表示動態方法之 (在步驟 1 中宣告) 委派的執行個體。 建立委派即會完成方法，而任何進一步變更方法的嘗試，例如新增更多的 MSIL，則予以忽略。 下列程式碼會使用泛型委派，建立並叫用委派。  
   
      [!code-cpp[DynamicMethodHowTo#6](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#6)]
      [!code-csharp[DynamicMethodHowTo#6](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#6)]
@@ -62,25 +62,25 @@ ms.locfileid: "56221052"
   
 ### <a name="to-define-and-execute-a-dynamic-method-that-is-bound-to-an-object"></a>定義及執行繫結至物件的動態方法  
   
-1.  宣告委派類型來執行方法。 請考慮使用泛型委派，將您需要宣告的委派類型數目降到最低。 下列程式碼會宣告泛型委派類型，其可用於執行任何具有一個參數和傳回值的方法，如果委派繫結至物件，則可為具有兩個參數和傳回值的方法。  
+1. 宣告委派類型來執行方法。 請考慮使用泛型委派，將您需要宣告的委派類型數目降到最低。 下列程式碼會宣告泛型委派類型，其可用於執行任何具有一個參數和傳回值的方法，如果委派繫結至物件，則可為具有兩個參數和傳回值的方法。  
   
      [!code-cpp[DynamicMethodHowTo#12](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#12)]
      [!code-csharp[DynamicMethodHowTo#12](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#12)]
      [!code-vb[DynamicMethodHowTo#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#12)]  
   
-2.  建立陣列，指定動態方法的參數類型。 如果表示方法的委派繫結至物件，第一個參數就必須符合委派繫結的類型。 本例中有兩個參數，類型 `Example` 和類型 `int` (Visual Basic 為 `Integer`)。  
+2. 建立陣列，指定動態方法的參數類型。 如果表示方法的委派繫結至物件，第一個參數就必須符合委派繫結的類型。 本例中有兩個參數，類型 `Example` 和類型 `int` (Visual Basic 為 `Integer`)。  
   
      [!code-cpp[DynamicMethodHowTo#13](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#13)]
      [!code-csharp[DynamicMethodHowTo#13](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#13)]
      [!code-vb[DynamicMethodHowTo#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#13)]  
   
-3.  建立 <xref:System.Reflection.Emit.DynamicMethod>。 本例中的方法沒有名稱。 傳回值的類型指定為 `int` (Visual Basic 為 `Integer`)。 方法可以存取 `Example` 類別的私用和受保護成員。  
+3. 建立 <xref:System.Reflection.Emit.DynamicMethod>。 本例中的方法沒有名稱。 傳回值的類型指定為 `int` (Visual Basic 為 `Integer`)。 方法可以存取 `Example` 類別的私用和受保護成員。  
   
      [!code-cpp[DynamicMethodHowTo#14](../../../samples/snippets/cpp/VS_Snippets_CLR/DynamicMethodHowTo/cpp/source.cpp#14)]
      [!code-csharp[DynamicMethodHowTo#14](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#14)]
      [!code-vb[DynamicMethodHowTo#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#14)]  
   
-4.  發出方法主體。 本例中使用 <xref:System.Reflection.Emit.ILGenerator> 物件發出 Microsoft 中繼語言 (MSIL)。 或者，您可使用 <xref:System.Reflection.Emit.DynamicILInfo> 物件結合 Unmanaged 程式碼產生器，發出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主體。  
+4. 發出方法主體。 本例中使用 <xref:System.Reflection.Emit.ILGenerator> 物件發出 Microsoft 中繼語言 (MSIL)。 或者，您可使用 <xref:System.Reflection.Emit.DynamicILInfo> 物件結合 Unmanaged 程式碼產生器，發出 <xref:System.Reflection.Emit.DynamicMethod> 的方法主體。  
   
      本例中的 MSIL 是 `Example` 類別的執行個體，它會載入第一個引數，再使用它載入類型 `int` 的私用執行個體欄位值。 載入第二個引數，然後兩個數字相乘。 如果結果大於 `int`，則截斷值，捨棄最高有效位元。 方法傳回，附有堆疊上的傳回值。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "56221052"
      [!code-csharp[DynamicMethodHowTo#15](../../../samples/snippets/csharp/VS_Snippets_CLR/DynamicMethodHowTo/cs/source.cs#15)]
      [!code-vb[DynamicMethodHowTo#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/DynamicMethodHowTo/vb/source.vb#15)]  
   
-5.  呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 方法多載，以建立表示動態方法之 (步驟 1 所宣告的) 委派的執行個體。 建立委派即會完成方法，而任何進一步變更方法的嘗試，例如新增更多的 MSIL，則予以忽略。  
+5. 呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%28System.Type%2CSystem.Object%29> 方法多載，以建立表示動態方法之 (步驟 1 所宣告的) 委派的執行個體。 建立委派即會完成方法，而任何進一步變更方法的嘗試，例如新增更多的 MSIL，則予以忽略。  
   
     > [!NOTE]
     >  您可以多次呼叫 <xref:System.Reflection.Emit.DynamicMethod.CreateDelegate%2A> 方法，建立繫結至其他目標類型執行個體的委派。  
@@ -123,6 +123,7 @@ ms.locfileid: "56221052"
 -   在命令列使用 csc.exe、vbc.exe 或 cl.exe 編譯程式碼。 若要編譯 Visual Studio 中的程式碼，請將它放在主控台應用程式專案範本。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.Reflection.Emit.DynamicMethod>
 - [使用反映發出](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [反映發出動態方法案例](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/sfk2s47t(v=vs.100))

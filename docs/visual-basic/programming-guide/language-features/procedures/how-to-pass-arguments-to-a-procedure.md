@@ -12,10 +12,10 @@ helpviewer_keywords:
 - argument passing [Visual Basic], procedures
 ms.assetid: 08723588-3890-4ddc-8249-79e049e0f241
 ms.openlocfilehash: 012ad8e6229958575030ee820a3b0b79cc50facc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333901"
 ---
 # <a name="how-to-pass-arguments-to-a-procedure-visual-basic"></a>HOW TO：將引數傳遞至程序 (Visual Basic)
@@ -47,13 +47,13 @@ ms.locfileid: "59333901"
   
 ## <a name="see-also"></a>另請參閱
 
-- [子程序](./sub-procedures.md)
+- [Sub 程序](./sub-procedures.md)
 - [函式程序](./function-procedures.md)
 - [屬性程序](./property-procedures.md)
 - [運算子程序](./operator-procedures.md)
-- [HOW TO：定義程序的參數](./how-to-define-a-parameter-for-a-procedure.md)
+- [如何：如需程序來定義參數](./how-to-define-a-parameter-for-a-procedure.md)
 - [以傳值和傳址方式傳遞引數](./passing-arguments-by-value-and-by-reference.md)
 - [遞迴程序](./recursive-procedures.md)
-- [程序多載](./procedure-overloading.md)
+- [程序多載化](./procedure-overloading.md)
 - [物件和類別](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)
 - [物件導向程式設計 (Visual Basic)](../../concepts/object-oriented-programming.md)

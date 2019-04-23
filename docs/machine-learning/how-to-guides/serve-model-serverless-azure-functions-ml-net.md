@@ -4,10 +4,10 @@ description: 使用 Azure Functions 在網際網路上提供 ML.NET 情感分析
 ms.date: 03/08/2019
 ms.custom: mvc,how-to
 ms.openlocfilehash: 4681b37da64097dd8e537b4c956917277ecff96b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330632"
 ---
 # <a name="how-to-use-mlnet-model-in-azure-functions"></a>操作說明：在 Azure Functions 中使用 ML.NET 模型

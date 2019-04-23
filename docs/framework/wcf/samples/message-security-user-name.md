@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335318"
 ---
 # <a name="message-security-user-name"></a>訊息安全性使用者名稱
@@ -222,7 +222,7 @@ Press <ENTER> to terminate client.
   
 5. 在伺服器上，執行`setup.bat service`在開發人員命令提示字元適用於 Visual Studio 開啟系統管理員權限。 執行`setup.bat`與`service`引數會建立具有電腦完整網域名稱的服務憑證，並將服務憑證匯出為名為 Service.cer 的檔案。  
   
-6. 編輯 Web.config 以反映新的憑證中的名稱 （在 serviceCertificate 項目的 findValue 屬性） 也就是電腦的完整網域名稱相同`.`  
+6. 編輯 Web.config 以反映新的憑證名稱 (在 serviceCertificate 項目的 findValue 屬性中)，這個名稱與電腦的完整網域名稱相同`.`  
   
 7. 從服務目錄中將 Service.cer 檔案複製至用戶端電腦上的用戶端目錄。  
   

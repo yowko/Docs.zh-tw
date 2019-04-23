@@ -3,10 +3,10 @@ title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
 ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331269"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
@@ -29,7 +29,7 @@ value [ NOT ] IN expression
  傳回要測試是否有相符項目之集合的任何有效運算式。 所有運算式都必須具有與 `value`相同的型別或是共同基底型別或衍生型別。  
   
 ## <a name="return-value"></a>傳回值  
- `true` 如果在集合中，找到的值如果此值為 null 則為 null 或集合為 null;否則， `false`。 使用 NOT IN 會執行 IN 結果的否定運算。  
+ 如果在集合中找到值，就是 `true`。如果此值為 null 或集合為 null，就是 null，否則為 `false`。 使用 NOT IN 會執行 IN 結果的否定運算。  
   
 ## <a name="example"></a>範例  
  下列 Entity SQL 查詢會使用 IN 運算子來判斷某個值是否與集合中的任何值相符。 此查詢是根據 AdventureWorks Sales Model。 若要編譯及執行此查詢，請遵循以下步驟：  

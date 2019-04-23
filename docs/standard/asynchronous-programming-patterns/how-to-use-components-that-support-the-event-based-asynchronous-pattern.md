@@ -1,5 +1,5 @@
 ---
-title: 作法：使用支援事件架構非同步模式的元件
+title: HOW TO：使用支援事件架構非同步模式的元件
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -19,13 +19,13 @@ helpviewer_keywords:
 - AsyncCompletedEventArgs class
 ms.assetid: 35e9549c-1568-4768-ad07-17cc6dff11e1
 ms.openlocfilehash: 9ac98b5c576c065f8944714c72b492539e0d2f05
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330879"
 ---
-# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>作法：使用支援事件架構非同步模式的元件
+# <a name="how-to-use-components-that-support-the-event-based-asynchronous-pattern"></a>HOW TO：使用支援事件架構非同步模式的元件
 許多元件可讓您選擇以非同步方式執行其工作。 例如，<xref:System.Media.SoundPlayer> 和 <xref:System.Windows.Forms.PictureBox> 元件可讓您「在背景」載入音效和影像，同時主執行緒會繼續執行而不中斷。  
   
  對支援[事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)的類別使用非同步方法，就像處理其他任何事件一樣簡單，只要將事件處理常式附加到元件的 _MethodName_**Completed** 事件即可。 當您呼叫 _MethodName_**Async** 方法時，應用程式將會繼續執行而不中斷，直到引發 _MethodName_**Completed** 事件為止。 在事件處理常式中，您可以檢查 <xref:System.ComponentModel.AsyncCompletedEventArgs> 參數來判斷非同步作業已成功完成或已取消。  
@@ -62,5 +62,5 @@ ms.locfileid: "59330879"
   
 ## <a name="see-also"></a>另請參閱
 
-- [作法：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
+- [如何：在背景執行作業](../../../docs/framework/winforms/controls/how-to-run-an-operation-in-the-background.md)
 - [事件架構非同步模式概觀](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)

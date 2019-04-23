@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: d57cd5a9d41a7d2d93f03216d534f14831bcefe0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234898"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803537"
 ---
 ### <a name="changes-in-path-normalization"></a>路徑正規化的變更
 

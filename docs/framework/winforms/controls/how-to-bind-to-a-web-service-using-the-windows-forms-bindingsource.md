@@ -13,10 +13,10 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: ee261207-4573-4cb9-a8cb-5185037e0fba
 ms.openlocfilehash: 2f97a8c9b0d3f29ada108afaea92f39af3ac6b3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330996"
 ---
 # <a name="how-to-bind-to-a-web-service-using-the-windows-forms-bindingsource"></a>HOW TO：使用 Windows Forms BindingSource 繫結至 Web 服務
@@ -75,4 +75,4 @@ ms.locfileid: "59330996"
 ## <a name="see-also"></a>另請參閱
 
 - [BindingSource 元件](bindingsource-component.md)
-- [HOW TO：將 Windows Forms 控制項繫結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)

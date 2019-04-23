@@ -7,12 +7,12 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 1f15867c76a3498ac49df0bff6a7953f668b1a6f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58462886"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59333700"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ 查詢簡介 (C#)
 「查詢」是指從資料來源中擷取資料的運算式。 查詢通常以特定的查詢語言來表示。 針對各種資料來源類型開發不同的語言已有一段時間，例如用於關聯式資料庫的 SQL，以及用於 XML 的 XQuery。 因此，開發人員在過去必須針對所需支援的每種資料來源類型或資料格式，學習新的查詢語言。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供一致的模型來處理各種資料來源和格式的資料，從而簡化此情況。 在 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢中，您所處理的一定是物件。 您會使用相同的基本編碼模式，來查詢及轉換 XML 文件、SQL 資料庫、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] 資料集、.NET 集合，以及可使用 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 提供者的任何其他格式中的資料。  
@@ -20,11 +20,11 @@ ms.locfileid: "58462886"
 ## <a name="three-parts-of-a-query-operation"></a>查詢作業的三個部分  
  所有的 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 查詢作業都包含三個不同的動作：  
   
-1.  取得資料來源。  
+1. 取得資料來源。  
   
-2.  建立查詢。  
+2. 建立查詢。  
   
-3.  執行查詢。  
+3. 執行查詢。  
   
  下列範例示範查詢作業的三個部分在原始程式碼中的表示方式。 為了方便起見，此範例使用整數陣列作為資料來源；不過，相同的概念也適用於其他資料來源。 本主題的其他部分都會參考此範例。  
   
@@ -91,7 +91,7 @@ IQueryable<Customer> custQuery =
 ## <a name="see-also"></a>另請參閱
 
 - [開始使用 C# 中的 LINQ](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [逐步解說：在 C# 中撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
+- [逐步解說：用 C# 撰寫查詢](../../../../csharp/programming-guide/concepts/linq/walkthrough-writing-queries-linq.md)
 - [LINQ 查詢運算式](../../../../csharp/programming-guide/linq-query-expressions/index.md)
 - [foreach、in](../../../../csharp/language-reference/keywords/foreach-in.md)
 - [查詢關鍵字 (LINQ)](../../../../csharp/language-reference/keywords/query-keywords.md)

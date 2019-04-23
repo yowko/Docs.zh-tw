@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 60759e3d03137bb5983703cbf04719ba4946cb6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235309"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59803538"
 ---
 ### <a name="winrt-stream-adapters-no-long-call-flushasync-automatically-on-close"></a>WinRT 資料流配接器不會再於關閉時自動呼叫 FlushAsync
 

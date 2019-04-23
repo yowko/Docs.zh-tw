@@ -3,10 +3,10 @@ title: HOW TO：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331880"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>HOW TO：擴充非同步逐步解說使用 Task.WhenAll (Visual Basic)
@@ -75,7 +75,7 @@ ms.locfileid: "59331880"
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. 將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 傳回完成的工作集合中的所有工作都完成時的單一工作。  
+4. 將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
   
      在下列範例中，`Await` 運算式會等候 `WhenAll` 傳回的單一工作完成。 此運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。 將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59331880"
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. 接下來，將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 傳回完成的工作集合中的所有工作都完成時的單一工作。  
+4. 接下來，將 `Task.WhenAll` 套用至工作集合 `downloadTasks`。 `Task.WhenAll` 會傳回當工作集合中所有工作完成後才會完成的單一工作。  
   
      在下列範例中，`Await` 運算式會等候 `WhenAll` 傳回的單一工作完成。 完成時，`Await` 運算式會評估為整數陣列，其中每個整數都是所下載網站的長度。 將下列程式碼新增至 `SumPageSizesAsync`，就在您於上一個步驟中新增的程式碼之後。  
   

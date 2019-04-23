@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], calling
 ms.assetid: 259b49a3-a3c1-4254-ba8c-73cdc4127703
 ms.openlocfilehash: 6e3ce2a184ca5411a6a016929a16bf3d67e669ca
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335468"
 ---
 # <a name="how-to-call-a-procedure-that-does-not-return-a-value-visual-basic"></a>HOW TO：呼叫程序不會傳回值 (Visual Basic)
@@ -33,9 +33,9 @@ A`Sub`程序不會傳回呼叫程式碼的值。 明確呼叫它，以獨立的�
 - <xref:Microsoft.VisualBasic.Interaction.Shell%2A>
 - <xref:System.ArgumentException>
 - [程序](./index.md)
-- [子程序](./sub-procedures.md)
+- [Sub 程序](./sub-procedures.md)
 - [程序參數和引數](./procedure-parameters-and-arguments.md)
 - [Sub 陳述式](../../../../visual-basic/language-reference/statements/sub-statement.md)
-- [HOW TO：建立程序](./how-to-create-a-procedure.md)
-- [HOW TO：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)
-- [HOW TO：在 Visual Basic 中呼叫事件處理常式](./how-to-call-an-event-handler.md)
+- [如何：建立程序](./how-to-create-a-procedure.md)
+- [如何：呼叫傳回值的程序](./how-to-call-a-procedure-that-returns-a-value.md)
+- [如何：在 Visual Basic 中呼叫事件處理常式](./how-to-call-an-event-handler.md)

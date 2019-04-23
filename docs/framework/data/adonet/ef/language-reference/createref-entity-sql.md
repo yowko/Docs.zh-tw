@@ -3,10 +3,10 @@ title: CREATEREF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 489828cf-a335-4449-9360-b0d92eec5481
 ms.openlocfilehash: 6ae4712fb280418ad8cf17cd68a7bbcd9cf3b8a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335650"
 ---
 # <a name="createref-entity-sql"></a>CREATEREF (Entity SQL)
@@ -26,7 +26,7 @@ CreateRef(entityset_identifier, row_typed_expression)
  對應到實體類型的索引鍵屬性的資料列型別運算式。  
   
 ## <a name="remarks"></a>備註  
- `row_typed_expression` 必須為實體索引鍵的型別結構上相等。 換言之，它必須擁有與實體索引鍵相同的欄位數目和型別，而且順序相同。  
+ `row_typed_expression` 在結構上必須相當於實體的索引鍵型別。 換言之，它必須擁有與實體索引鍵相同的欄位數目和型別，而且順序相同。  
   
  在下面的範例中，Orders 和 BadOrders 兩者都是 Order 型別的實體集，而 Id 則相當於 Order 的單一索引鍵屬性。 此範例說明如何產生 BadOrders 中實體的產考。 請留意，此參考可能會懸空。  換言之，此參考可能無法實際識別特定的實體。 在這種情況下，對該參考的 `DEREF` 作業將會傳回 null。  
   

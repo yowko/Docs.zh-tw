@@ -3,17 +3,17 @@ title: WCF 及國際化網域名稱
 ms.date: 03/30/2017
 ms.assetid: c8a3e10a-8bc2-4a78-8d86-a562ba6e65fa
 ms.openlocfilehash: c53c22e388ec352b1275018c0b945c9608565084
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335377"
 ---
 # <a name="wcf-and-internationalized-domain-names"></a>WCF 及國際化網域名稱
 已加入支援，以允許具有國際化網域名稱 (IDN) 的 WCF 服務。 國際化網域名稱是包含非 ASCII 字元的網域名稱。 這項支援包括兩種能力，即裝載具有 IDN 名稱之 WCF 服務，以及裝載對具有 IDN 名稱之 Web 服務進行交談的 WCF 用戶端。  
   
 ## <a name="systemuri-and-idn"></a>System.Uri 和 IDN  
- <xref:System.Uri> 有兩個屬性<xref:System.Uri.Host%2A>和<xref:System.Uri.DnsSafeHost%2A>。 這些屬性包含 Unicode 或 Punycode 值，因 IDN 組態設定而異。  
+ <xref:System.Uri> 有兩個屬性：<xref:System.Uri.Host%2A> 和 <xref:System.Uri.DnsSafeHost%2A>。 這些屬性包含 Unicode 或 Punycode 值，因 IDN 組態設定而異。  
   
  使用下列 XML 以在應用程式組態檔中啟用 IDN  
   

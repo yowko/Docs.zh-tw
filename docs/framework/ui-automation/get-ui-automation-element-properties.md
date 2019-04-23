@@ -9,10 +9,10 @@ helpviewer_keywords:
 - UI Automation, retrieving properties of elements
 ms.assetid: 09576b1a-291f-435c-980e-dee32d899ae1
 ms.openlocfilehash: 93e0fba4288ba3231bfed45252bdaa78892d008c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330762"
 ---
 # <a name="get-ui-automation-element-properties"></a>取得 UI 自動化項目屬性
@@ -42,5 +42,5 @@ ms.locfileid: "59330762"
 ## <a name="see-also"></a>另請參閱
 
 - [用戶端的 UI 自動化屬性](../../../docs/framework/ui-automation/ui-automation-properties-for-clients.md)
-- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
 - [UI 自動化用戶端中的快取](../../../docs/framework/ui-automation/caching-in-ui-automation-clients.md)

@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330814"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET 範例與教學課程
@@ -19,7 +19,7 @@ ms.locfileid: "59330814"
 
 ### <a name="samples"></a>範例
 
-**[使用 dotnet test 的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**
+**[使用 DotNet 測試的 .NET Core 單元測試](../core/testing/unit-testing-with-dotnet-test.md)**
 
 此指南說明如何建立 ASP.NET Core Web 應用程式及相關聯的單元測試。 它會從建立簡單的 Web 服務應用程式開始，然後再新增測試。 它接著會建立更多測試，來引導新功能的實作。 [完整範例](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-using-dotnet-test) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
@@ -75,7 +75,7 @@ ms.locfileid: "59330814"
 
 此教學課程示範 Web 通訊、JSON 序列化，以及 C# 語言的物件導向功能。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-webapiclient) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
-**[處理 LINQ](../csharp/tutorials/working-with-linq.md)**
+**[使用 LINQ](../csharp/tutorials/working-with-linq.md)**
 
 此教學課程示範 LINQ 的許多功能及支援的語言項目。 [完整範例](https://github.com/dotnet/samples/tree/master/csharp/getting-started/console-linq) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
@@ -85,11 +85,11 @@ ms.locfileid: "59330814"
 
 **[使用 Visual Studio for Mac 在 macOS 上建置完整的 .NET Core 解決方案](../core/tutorials/using-on-mac-vs-full-solution.md)**
 
-此教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
+本教學課程會示範如何建置一個包含可重複使用之程式庫和單元測試的完整 .NET Core 解決方案。
 
 **[建立支援外掛程式的 .NET Core 應用程式](../core/tutorials/creating-app-with-plugin-support.md)**
 
-此教學課程會向您示範如何在支援外掛程式架構的 .NET Core 上建置簡單的應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
+本教學課程會向您示範如何在支援外掛程式架構的 .NET Core 上建置簡單的應用程式。 [完整範例](https://github.com/dotnet/samples/tree/master/core/extensions/AppWithPlugin) (英文) 可在 GitHub 上的 dotnet/samples 存放庫取得。
 
 ## <a name="deploying-to-containers"></a>部署至容器
 
