@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b2ba46c025c2d031f0526c6a9da5f6ab07023741
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208445"
 ---
-# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="05c0c-102">IMetaDataImport::EnumEvents 方法</span><span class="sxs-lookup"><span data-stu-id="05c0c-102">IMetaDataImport::EnumEvents Method</span></span>
-<span data-ttu-id="05c0c-103">列舉指定 TypeDef 語彙基元的事件定義語彙基元。</span><span class="sxs-lookup"><span data-stu-id="05c0c-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
+# <a name="imetadataimportenumevents-method"></a><span data-ttu-id="0b98f-102">IMetaDataImport::EnumEvents 方法</span><span class="sxs-lookup"><span data-stu-id="0b98f-102">IMetaDataImport::EnumEvents Method</span></span>
+<span data-ttu-id="0b98f-103">列舉指定 TypeDef 語彙基元的事件定義語彙基元。</span><span class="sxs-lookup"><span data-stu-id="0b98f-103">Enumerates event definition tokens for the specified TypeDef token.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="05c0c-104">語法</span><span class="sxs-lookup"><span data-stu-id="05c0c-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="0b98f-104">語法</span><span class="sxs-lookup"><span data-stu-id="0b98f-104">Syntax</span></span>  
   
 ```  
 HRESULT EnumEvents (   
@@ -39,39 +39,39 @@ HRESULT EnumEvents (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="05c0c-105">參數</span><span class="sxs-lookup"><span data-stu-id="05c0c-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="0b98f-105">參數</span><span class="sxs-lookup"><span data-stu-id="0b98f-105">Parameters</span></span>  
  `phEnum`  
- <span data-ttu-id="05c0c-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="05c0c-106">[in, out] A pointer to the enumerator.</span></span>  
+ <span data-ttu-id="0b98f-106">[in、 out]列舉值的指標。</span><span class="sxs-lookup"><span data-stu-id="0b98f-106">[in, out] A pointer to the enumerator.</span></span>  
   
  `td`  
- <span data-ttu-id="05c0c-107">[in]事件定義為要列舉的 TypeDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="05c0c-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
+ <span data-ttu-id="0b98f-107">[in]事件定義為要列舉的 TypeDef 語彙基元。</span><span class="sxs-lookup"><span data-stu-id="0b98f-107">[in] The TypeDef token whose event definitions are to be enumerated.</span></span>  
   
  `rEvents`  
- <span data-ttu-id="05c0c-108">[out]傳回的事件陣列。</span><span class="sxs-lookup"><span data-stu-id="05c0c-108">[out] The array of returned events.</span></span>  
+ <span data-ttu-id="0b98f-108">[out]傳回的事件陣列。</span><span class="sxs-lookup"><span data-stu-id="0b98f-108">[out] The array of returned events.</span></span>  
   
  `cMax`  
- <span data-ttu-id="05c0c-109">[in] `rEvents` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="05c0c-109">[in] The maximum size of the `rEvents` array.</span></span>  
+ <span data-ttu-id="0b98f-109">[in] `rEvents` 陣列的大小上限。</span><span class="sxs-lookup"><span data-stu-id="0b98f-109">[in] The maximum size of the `rEvents` array.</span></span>  
   
  `pcEvents`  
- <span data-ttu-id="05c0c-110">[out]事件中傳回的實際數目`rEvents`。</span><span class="sxs-lookup"><span data-stu-id="05c0c-110">[out] The actual number of events returned in `rEvents`.</span></span>  
+ <span data-ttu-id="0b98f-110">[out]事件中傳回的實際數目`rEvents`。</span><span class="sxs-lookup"><span data-stu-id="0b98f-110">[out] The actual number of events returned in `rEvents`.</span></span>  
   
-## <a name="return-value"></a><span data-ttu-id="05c0c-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="05c0c-111">Return Value</span></span>  
+## <a name="return-value"></a><span data-ttu-id="0b98f-111">傳回值</span><span class="sxs-lookup"><span data-stu-id="0b98f-111">Return Value</span></span>  
   
-|<span data-ttu-id="05c0c-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="05c0c-112">HRESULT</span></span>|<span data-ttu-id="05c0c-113">描述</span><span class="sxs-lookup"><span data-stu-id="05c0c-113">Description</span></span>|  
+|<span data-ttu-id="0b98f-112">HRESULT</span><span class="sxs-lookup"><span data-stu-id="0b98f-112">HRESULT</span></span>|<span data-ttu-id="0b98f-113">描述</span><span class="sxs-lookup"><span data-stu-id="0b98f-113">Description</span></span>|  
 |-------------|-----------------|  
-|`S_OK`|`EnumEvents` <span data-ttu-id="05c0c-114">已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="05c0c-114">returned successfully.</span></span>|  
-|`S_FALSE`|<span data-ttu-id="05c0c-115">沒有要列舉的事件。</span><span class="sxs-lookup"><span data-stu-id="05c0c-115">There are no events to enumerate.</span></span> <span data-ttu-id="05c0c-116">在此情況下，`pcEvents`為零。</span><span class="sxs-lookup"><span data-stu-id="05c0c-116">In that case, `pcEvents` is zero.</span></span>|  
+|`S_OK`|<span data-ttu-id="0b98f-114">`EnumEvents` 已成功傳回。</span><span class="sxs-lookup"><span data-stu-id="0b98f-114">`EnumEvents` returned successfully.</span></span>|  
+|`S_FALSE`|<span data-ttu-id="0b98f-115">沒有要列舉的事件。</span><span class="sxs-lookup"><span data-stu-id="0b98f-115">There are no events to enumerate.</span></span> <span data-ttu-id="0b98f-116">在此情況下，`pcEvents`為零。</span><span class="sxs-lookup"><span data-stu-id="0b98f-116">In that case, `pcEvents` is zero.</span></span>|  
   
-## <a name="requirements"></a><span data-ttu-id="05c0c-117">需求</span><span class="sxs-lookup"><span data-stu-id="05c0c-117">Requirements</span></span>  
- <span data-ttu-id="05c0c-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="05c0c-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="0b98f-117">需求</span><span class="sxs-lookup"><span data-stu-id="0b98f-117">Requirements</span></span>  
+ <span data-ttu-id="0b98f-118">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="0b98f-118">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="05c0c-119">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="05c0c-119">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="0b98f-119">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="0b98f-119">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="05c0c-120">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="05c0c-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="0b98f-120">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="0b98f-120">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="05c0c-121">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="05c0c-121">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="0b98f-121">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="0b98f-121">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="05c0c-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="05c0c-122">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="0b98f-122">另請參閱</span><span class="sxs-lookup"><span data-stu-id="0b98f-122">See also</span></span>
 
-- [<span data-ttu-id="05c0c-123">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="05c0c-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="05c0c-124">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="05c0c-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="0b98f-123">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="0b98f-123">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="0b98f-124">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="0b98f-124">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
