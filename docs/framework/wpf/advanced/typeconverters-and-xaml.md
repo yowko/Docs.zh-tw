@@ -5,10 +5,10 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164981"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverter 和 XAML
@@ -71,7 +71,7 @@ ms.locfileid: "59164981"
   
  下一個最重要的方法是<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>。 （比方說，如果它已儲存至 XAML 檔案），如果要應用程式轉換成標記呈現，<xref:System.ComponentModel.TypeConverter.ConvertTo%2A>負責產生標記表示法。 在此情況下，關係的 XAML 程式碼路徑時，您將傳遞`destinationType`的<xref:System.String>。  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 並<xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>會為服務查詢的功能時所使用的支援方法<xref:System.ComponentModel.TypeConverter>實作。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> 和 <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> 是服務查詢 <xref:System.ComponentModel.TypeConverter> 實作之功能時所使用的支援方法。 您必須實作這些方法來傳回轉換器對等轉換方法所支援類型特有案例的 `true` 。 基於 XAML，這通常表示 <xref:System.String> 類型。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>XAML 的文化特性資訊和類型轉換器  
  每個<xref:System.ComponentModel.TypeConverter>實作可以有它自己對於什麼可替代轉換的有效字串的解譯，也可以使用或忽略傳遞為參數的類型描述。 有一個關於文化特性和 XAML 類型轉換的重要考量。 XAML 完全支援使用可當地語系化的字串做為屬性值。 但不支援使用那個可當地語系化的字串做為具有特定文化特性需求的類型轉換器輸入，因為 XAML 屬性值的類型轉換器會使用 `en-US` 文化特性，來包含必然的固定語言剖析行為。 如需這項限制之設計考量的詳細資訊，請參閱 XAML 語言規格 ([\[MS-XAML\] (英文)](https://go.microsoft.com/fwlink/?LinkId=114525))。  

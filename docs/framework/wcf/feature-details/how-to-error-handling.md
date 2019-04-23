@@ -3,11 +3,11 @@ title: 如何：錯誤處理
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334987"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979390"
 ---
 # <a name="how-to-error-handling"></a>如何：錯誤處理
 本主題概要說明建立使用錯誤處理的路由組態所需的基本步驟。 在此範例中，訊息會路由傳送至目的地端點。 如果訊息因為網路或通訊相關錯誤 (<xref:System.ServiceModel.CommunicationException>) 而無法傳遞，則會將訊息重新傳送至替代端點。  

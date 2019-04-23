@@ -1,0 +1,76 @@
+- name: ML.NET 指南
+  href: index.yml
+- name: 總覽
+  expanded: true
+  items:
+    - name: 什麼是 ML.NET？
+      href: what-is-mldotnet.md
+    - name: 模型定型概念
+      href: basic-concepts-model-training-in-mldotnet.md
+- name: 教學課程
+  href: null
+  items:
+    - name: 總覽
+      href: tutorials/index.md
+    - name: 情感分析 (二元分類)
+      href: tutorials/sentiment-analysis.md
+    - name: 問題分類 (多元分類)
+      href: tutorials/github-issue-classification.md
+    - name: 價格預測 (迴歸)
+      href: tutorials/taxi-fare.md
+    - name: 鳶尾花 (叢集)
+      href: tutorials/iris-clustering.md
+    - name: 電影推薦 (建議)
+      href: tutorials/movie-recommmendation.md
+    - name: 影像分類 (遷移式學習)
+      href: tutorials/image-classification.md
+- name: 作法指南
+  items:
+    - name: 載入資料
+      href: how-to-guides/load-data-ml-net.md
+    - name: 準備資料
+      href: how-to-guides/index.md
+      items:
+        - name: 套用明確功能工程設計
+          href: how-to-guides/train-model-categorical-ml-net.md
+        - name: 套用材質功能工程設計
+          href: how-to-guides/train-model-textual-ml-net.md
+        - name: 使用正規器來預先處理資料
+          href: how-to-guides/normalizers-preprocess-data-ml-net.md
+    - name: 訓練、評估和說明模型
+      items:
+        - name: 使用交叉驗證將模型定型
+          href: how-to-guides/train-cross-validation-ml-net.md
+        - name: 檢查中繼管線資料值
+          href: how-to-guides/inspect-intermediate-data-ml-net.md
+        - name: 將迴歸模型定型
+          href: how-to-guides/train-regression-model-ml-net.md
+        - name: 使用 PFI 判斷模型功能重要性
+          href: how-to-guides/determine-global-feature-importance-in-model.md
+    - name: 使用已定型模型
+      items:
+        - name: 使用 PredictionEngine 一次進行一個預測
+          href: how-to-guides/single-predict-model-ml-net.md
+        - name: 讓已定型模型運作
+          href: how-to-guides/consuming-model-ml-net.md
+        - name: 提供模型 Azure Functions
+          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+        - name: 在 Web API 中提供模型
+          href: how-to-guides/serve-model-web-api-ml-net.md
+        - name: Infer.NET
+          items: null
+        - name: 使用 Infer.NET 進行機率性程式設計
+          href: how-to-guides/matchup-app-infer-net.md
+- name: 參考資料
+  items:
+    - name: 應用程式開發介面參考
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+- name: 資源
+  href: resources/index.md
+  items:
+    - name: 機器學習字彙
+      href: resources/glossary.md
+    - name: 機器學習工作
+      href: resources/tasks.md
+    - name: 資料轉換
+      href: resources/transforms.md

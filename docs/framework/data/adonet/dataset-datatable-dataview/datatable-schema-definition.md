@@ -3,10 +3,10 @@ title: DataTable 結構描述定義
 ms.date: 03/30/2017
 ms.assetid: efbcdda4-f5a9-421d-8be2-4c194c74552f
 ms.openlocfilehash: e8710e7d92558f525a6feaedf8d0635c5ce6e2c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163068"
 ---
 # <a name="datatable-schema-definition"></a>DataTable 結構描述定義
@@ -20,7 +20,7 @@ ms.locfileid: "59163068"
 >  <xref:System.Data.DataTable.CaseSensitive%2A>的屬性**DataTable**不會影響這個行為。 **CaseSensitive**屬性適用於資料中的資料表和影響排序、 搜尋、 篩選、 強制執行條件約束，並依此類推，但不是能參考資料行、 關聯和條件約束。  
   
 ## <a name="in-this-section"></a>本節內容  
- [將資料行加入至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
+ [將資料行新增至 DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/adding-columns-to-a-datatable.md)  
  描述如何定義的資料表使用的資料行**DataColumn**物件。  
   
  [建立運算式資料行](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-expression-columns.md)  
@@ -37,5 +37,5 @@ ms.locfileid: "59163068"
   
 ## <a name="see-also"></a>另請參閱
 
-- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 6c864c8e-6dd3-4a65-ace0-36879d9a9c42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0218f74f5aa66921104fd36c085aaed04c9b435
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 7bfc915287e579374c69636135c4b049184ef6ce
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219513"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59164784"
 ---
 # <a name="generating-and-compiling-source-code-from-a-codedom-graph"></a>從 CodeDOM 圖表產生和編譯原始程式碼
 <xref:System.CodeDom.Compiler> 命名空間提供的介面，可從 CodeDOM 物件圖形產生原始程式碼以及使用支援的編譯器管理編譯。 程式碼提供者可根據 CodeDOM 圖表以特定的程式設計語言產生原始程式碼。 衍生自 <xref:System.CodeDom.Compiler.CodeDomProvider> 的類別一般會針對提供者支援的語言，提供產生及編譯程式碼的方法。  
@@ -94,6 +94,7 @@ ms.locfileid: "56219513"
  .NET Framework 提供下列語言的程式碼編譯器和程式碼產生器：C#、Visual Basic、C++ 和 JScript。 實作特定語言的程式碼產生器和程式碼編譯器，即可擴充 CodeDOM 對其他語言的支援。  
   
 ## <a name="see-also"></a>另請參閱
+
 - <xref:System.CodeDom>
 - <xref:System.CodeDom.Compiler>
 - [動態原始程式碼的產生和編譯](../../../docs/framework/reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)

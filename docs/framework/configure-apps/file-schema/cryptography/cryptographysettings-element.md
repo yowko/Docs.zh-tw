@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <cryptographySettings> element
 ms.assetid: 6201b7da-bcb7-49f7-b9f5-ba1fe05573b9
 ms.openlocfilehash: ec3a5a73caa901a21e22dbec7500af9153e01ef4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164134"
 ---
 # <a name="cryptographysettings-element"></a>\<cryptographySettings > 項目
@@ -80,4 +80,4 @@ ms.locfileid: "59164134"
 
 - [組態檔結構描述](../../../../../docs/framework/configure-apps/file-schema/index.md)
 - [密碼編譯設定結構描述](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [密碼編譯服務](../../../../../docs/standard/security/cryptographic-services.md)
+- [The signature is valid](../../../../../docs/standard/security/cryptographic-services.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165174"
 ---
 # <a name="datatable-constraints"></a>DataTable 條件約束
@@ -27,7 +27,7 @@ ms.locfileid: "59165174"
 |**Cascade**|刪除或更新關聯資料列。|  
 |**SetNull**|相關資料列中設定的值**DBNull**。|  
 |**SetDefault**|將關聯資料列中的值設為預設值。|  
-|**None**|不對關聯資料列採取任何動作。 這是預設值。|  
+|**無**|不對關聯資料列採取任何動作。 這是預設值。|  
   
  A **ForeignKeyConstraint**可以限制，請變更，以及傳播，相關資料行。 根據設定的屬性**ForeignKeyConstraint**資料行，如果**EnforceConstraints**屬性**資料集**是**true**，在父資料列上執行特定作業時，會導致例外狀況。 例如，如果**DeleteRule**屬性**ForeignKeyConstraint**會**None**，無法刪除父資料列，如果有任何子資料列。  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |規則設定|描述|  
 |------------------|-----------------|  
 |**Cascade**|接受或拒絕子資料列的變更。|  
-|**None**|不對子資料列採取任何動作。 這是預設值。|  
+|**無**|不對子資料列採取任何動作。 這是預設值。|  
   
 ### <a name="example"></a>範例  
  下列範例會建立 <xref:System.Data.ForeignKeyConstraint>、設定其某些屬性 (包括 <xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A>)，並將它加入 <xref:System.Data.ConstraintCollection> 物件的 <xref:System.Data.DataTable>。  
@@ -100,4 +100,4 @@ custDS.Tables["Customers"].Constraints.Add(custUnique);
 - <xref:System.Data.UniqueConstraint>
 - [DataTable 結構描述定義](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatable-schema-definition.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -3,10 +3,10 @@ title: 提供者資訊清單規格
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169906"
 ---
 # <a name="provider-manifest-specification"></a>提供者資訊清單規格
@@ -68,7 +68,7 @@ ms.locfileid: "59169906"
 ### <a name="provider-manifest-token"></a>提供者資訊清單語彙基元  
  當開啟資料存放區連接時，提供者可以查詢資訊，以便傳回正確的資訊清單。 在離線案例中 (無法使用連接資訊或是無法連接至存放區)，可能就無法這樣做。 您可以使用 .ssdl 檔案中 `ProviderManifestToken` 項目的 `Schema` 屬性來識別資訊清單。 這個屬性沒有必要的格式。提供者會選擇識別資訊清單所需的最少資訊，而不必開啟存放區的連接。  
   
- 例如:   
+ 例如：  
   
 ```xml  
 <Schema Namespace="Northwind" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:edm="http://schemas.microsoft.com/ado/2006/04/edm/ssdl" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">  
@@ -266,7 +266,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|Boolean|否|False|如果此函式不需要參數，而且會在不使用任何參數的情況下呼叫，則為 True。|  
 |ParameterType<br /><br /> 語意|ParameterSemantics|否|AllowImplicit<br /><br /> 轉換|選擇查詢管線應該如何處理參數型別替代項目：<br /><br /> -   ExactMatchOnly<br />-   AllowImplicitPromotion<br />-   AllowImplicitConversion|  
   
- **Parameters 節點**  
+ **參數節點**  
   
  每個函式都具有一個或多個 Parameter 節點的集合。  
   

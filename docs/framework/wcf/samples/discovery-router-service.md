@@ -3,11 +3,11 @@ title: 探索路由器服務
 ms.date: 03/30/2017
 ms.assetid: 3d30af47-b24f-40e5-833a-24d77125c9e6
 ms.openlocfilehash: 166f6b9d1055e36f987e6b9a81fe69dc8bd548b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59318763"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980560"
 ---
 # <a name="discovery-router-service"></a>探索路由器服務
 此範例示範如何將探索訊息轉送到其他端點。  

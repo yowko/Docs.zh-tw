@@ -6,17 +6,17 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 5f3d391a-4afd-49ee-ad99-ceb737c0c8a8
 ms.openlocfilehash: d5652c1f52d7cee4921d0c6b50973b494458ecd2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170179"
 ---
 # <a name="printing-how-to-topics"></a>列印 HOW TO 主題
 在本節中的主題將示範如何使用列印和列印系統管理功能隨附[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]以及新[!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)]列印路徑。  
   
 ## <a name="in-this-section"></a>本節內容  
- [叫用 [列印] 對話方塊](how-to-invoke-a-print-dialog.md)  
+ [叫用列印對話方塊](how-to-invoke-a-print-dialog.md)  
  XAML 標記，以宣告的指示[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]列印對話方塊物件和使用程式碼來叫用的對話方塊，在 Windows Presentation Foundation (WPF) 應用程式中。  
   
  [複製印表機](how-to-clone-a-printer.md)  
@@ -25,7 +25,7 @@ ms.locfileid: "59170179"
  [診斷問題列印工作](how-to-diagnose-problematic-print-job.md)  
  使用診斷未列印的列印工作的列印佇列和列印工作的屬性的指示。  
   
- [得知每天此時可否列印列印工作](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
+ [得知列印工作是否可在此時列印](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)  
  若要以程式設計方式決定每天的哪些時段使用的列印佇列和列印工作的屬性的指示進行列印工作。  
   
  [列舉列印佇列的子集](how-to-enumerate-a-subset-of-print-queues.md)  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - configuration file schema
 ms.assetid: 2db21a57-5f64-426f-89df-fb0dc2d2def5
 ms.openlocfilehash: e4b54026c71e18e4011661c5cad2ca95dfcb733e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59329553"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979936"
 ---
 # <a name="configuration-editor-tool-svcconfigeditorexe"></a>組態編輯器工具 (SvcConfigEditor.exe)
 Windows Communication Foundation (WCF) 服務組態編輯器 (SvcConfigEditor.exe) 可讓系統管理員和開發人員使用圖形化使用者介面建立並修改 WCF 服務的組態設定。 有了這項工具，您可以管理 WCF 繫結、行為、服務及診斷的設定，而不用直接編輯 XML 組態檔。  

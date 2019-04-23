@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Slider control [WPF], creating with TickBar
 ms.assetid: 4fa694f2-a620-4b15-be78-5f4286f89361
 ms.openlocfilehash: 3b32bbedb5f654ce75e90a827eb0c4dba1d4d345
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164238"
 ---
 # <a name="how-to-customize-the-ticks-on-a-slider"></a>HOW TO：自訂滑桿上的刻度
@@ -29,4 +29,4 @@ ms.locfileid: "59164238"
 - <xref:System.Windows.Controls.Slider>
 - <xref:System.Windows.Controls.Primitives.TickBar>
 - <xref:System.Windows.Controls.Slider.TickPlacement%2A>
-- [HOW TO：將滑桿繫結的屬性值](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms788716(v=vs.90))
+- [如何：將滑桿繫結的屬性值](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms788716(v=vs.90))

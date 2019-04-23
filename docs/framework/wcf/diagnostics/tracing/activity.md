@@ -3,10 +3,10 @@ title: 活動
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
 ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170205"
 ---
 # <a name="activity"></a>活動
@@ -38,9 +38,9 @@ ms.locfileid: "59170205"
 ## <a name="defining-the-scope-of-an-activity"></a>定義活動範圍  
  活動係於設計階段定義，代表工作的邏輯單位。 發出的追蹤 (具有相同的活動識別項) 是直接相關的，因為它們隸屬於相同的活動。 由於活動可以跨越端點界限 (要求)，因此會定義兩個活動範圍。  
   
--   `Global` 每個應用程式的範圍。 在此範圍中，活動是由本身的 128 位元全域唯一活動識別項 (亦即 gAId) 所識別。 在端點之間傳播的識別項就是 gAid。  
+-   每個應用程式的 `Global` 範圍。 在此範圍中，活動是由本身的 128 位元全域唯一活動識別項 (亦即 gAId) 所識別。 在端點之間傳播的識別項就是 gAid。  
   
--   `Local` 每個端點的範圍。 在此範圍中，活動是由本身的 gAId，加上發出活動追蹤與處理序識別碼的追蹤來源名稱所識別。此三項一體構成了本地活動識別碼，亦即 lAId。 lAId 可用來定義活動的 (本地) 界限。  
+-   每個端點的 `Local` 範圍。 在此範圍中，活動是由本身的 gAId，加上發出活動追蹤與處理序識別碼的追蹤來源名稱所識別。此三項一體構成了本地活動識別碼，亦即 lAId。 lAId 可用來定義活動的 (本地) 界限。  
   
 ## <a name="trace-schema"></a>追蹤結構描述  
  您可以使用任何結構描述並跨各種 Microsoft 平台來發出追蹤。 "e2e"（代表 「 端對端 」） 是常用的結構描述。 這個結構描述包含 128 位元的識別項 (gAId)、追蹤來源名稱與處理序識別碼。 在 Managed 程式碼中，<xref:System.Diagnostics.XmlWriterTraceListener> 會在 E2E 結構描述中發出追蹤。  

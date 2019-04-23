@@ -3,10 +3,10 @@ title: Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
 ms.date: 03/30/2017
 ms.assetid: 8193027e-9db2-4af9-a072-27300cd24330
 ms.openlocfilehash: f634816b2459d2e0b6137e2e87fef907824af017
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163029"
 ---
 # <a name="microsofttransactionstransactionbridgeregistrationcoordinatorfaulted"></a>Microsoft.Transactions.TransactionBridge.RegistrationCoordinatorFaulted
@@ -21,5 +21,5 @@ WS-AT 通訊協定服務已從協調器接收到回應登錄訊息的錯誤。
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

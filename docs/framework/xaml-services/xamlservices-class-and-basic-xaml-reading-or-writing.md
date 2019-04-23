@@ -6,14 +6,14 @@ helpviewer_keywords:
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
 ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162257"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices 類別和基本 XAML 的讀取或寫入
-<xref:System.Xaml.XamlServices> 可用來解決不需要特定存取 XAML 節點資料流的 XAML 案例的.NET Framework XAML 服務所提供的類別或取自這些節點的 XAML 類型系統資訊。 <xref:System.Xaml.XamlServices> API 可摘述如下：`Load`或`Parse`來支援 XAML 載入路徑`Save`來支援 XAML 儲存路徑，和`Transform`來提供一種技術，結合載入路徑和儲存路徑。 `Transform` 可用來從某個 XAML 結構描述變更為另一個。 本主題摘要說明這些 API 分類，並說明特定方法多載之間的差異。  
+<xref:System.Xaml.XamlServices> 是 .NET Framework XAML 服務所提供的類別，可用來解決不需要特別存取 XAML 節點資料流，或取自這些節點之 XAML 類型系統資訊的 XAML 情節。 <xref:System.Xaml.XamlServices> API 可摘述如下： `Load` 或 `Parse` 支援 XAML 載入路徑、 `Save` 支援 XAML 儲存路徑，而 `Transform` 則提供結合載入路徑和儲存路徑的技術。 `Transform` 可從某個 XAML 結構描述變更為另一個 XAML 結構描述。 本主題摘要說明這些 API 分類，並說明特定方法多載之間的差異。  
   
 <a name="load"></a>   
 ## <a name="load"></a>Load  
@@ -23,7 +23,7 @@ ms.locfileid: "59162257"
   
  <xref:System.Xaml.XamlServices.Load%28System.IO.Stream%29> 具有類似的情節。 如果您要讓使用者選擇要載入的檔案，則這個多載可能會很有用，因為 <xref:System.IO.Stream> 經常是其他可存取檔案系統的 <xref:System.IO> API 的輸出。 或者，您也可以透過非同步下載或其他同樣能夠提供資料流的網路技術，來存取 XAML 來源。 (從資料流或使用者選取的來源載入可能會有安全性隱憂。 如需詳細資訊，請參閱 [XAML Security Considerations](xaml-security-considerations.md)。)  
   
- <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 和<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29>多載都需要的讀取器從舊版的.NET Framework 的格式。 若要使用這些多載，您應已建立讀取器執行個體，並使用其 `Create` API 載入相關格式 (文字或 XML) 的 XAML。 如果您已移動其他讀取器中的記錄指標，或使用這些讀取器執行其他作業，則不重要。 <xref:System.Xaml.XamlServices.Load%2A> 中的載入路徑邏輯一律會從根目錄往下處理整個 XAML 輸入。 這些多載的情節可能包括：  
+ <xref:System.Xaml.XamlServices.Load%28System.IO.TextReader%29> 和 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 多載都需要舊版 .NET Framework 的讀取器格式。 若要使用這些多載，您應已建立讀取器執行個體，並使用其 `Create` API 載入相關格式 (文字或 XML) 的 XAML。 如果您已移動其他讀取器中的記錄指標，或使用這些讀取器執行其他作業，則不重要。 <xref:System.Xaml.XamlServices.Load%2A> 中的載入路徑邏輯一律會從根目錄往下處理整個 XAML 輸入。 這些多載的情節可能包括：  
   
 -   設計可讓您從現有的 XML 特定文字編輯器，提供簡單 XAML 編輯功能的介面。  
   
@@ -43,10 +43,10 @@ ms.locfileid: "59162257"
   
 <a name="parse"></a>   
 ## <a name="parse"></a>Parse  
- <xref:System.Xaml.XamlServices.Parse%2A> 就像`Load`因為它是載入路徑 API 會從 XAML 輸入建立 XAML 節點資料流。 不過，在本例中，XAML 輸入會直接以字串的形式提供，其中包含要載入的所有 XAML。 <xref:System.Xaml.XamlServices.Parse%2A> 是應用程式案例比 framework 案例更適合的輕量型方法。 如需詳細資訊，請參閱<xref:System.Xaml.XamlServices.Parse%2A>。 <xref:System.Xaml.XamlServices.Parse%2A> 是只包裝<xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29>牽涉到的呼叫<xref:System.IO.StringReader>內部。  
+ <xref:System.Xaml.XamlServices.Parse%2A> 類似 `Load` ，因為它是一個會從 XAML 輸入建立 XAML 節點資料流的載入路徑 API。 不過，在本例中，XAML 輸入會直接以字串的形式提供，其中包含要載入的所有 XAML。 <xref:System.Xaml.XamlServices.Parse%2A> 是較適用於應用程式情節的輕量型方法，對架構情節而言較不適用。 如需詳細資訊，請參閱 <xref:System.Xaml.XamlServices.Parse%2A>。 <xref:System.Xaml.XamlServices.Parse%2A> 實際上只是內含 <xref:System.Xaml.XamlServices.Load%28System.Xml.XmlReader%29> 的包裝 <xref:System.IO.StringReader> 呼叫。  
   
 <a name="save"></a>   
-## <a name="save"></a>儲存  
+## <a name="save"></a>Save  
  <xref:System.Xaml.XamlServices.Save%2A> 有多種多載會實作儲存路徑。 所有 <xref:System.Xaml.XamlServices.Save%2A> 方法都會接受物件圖形做為輸入，然後產生資料流、檔案或 <xref:System.Xml.XmlWriter>/<xref:System.IO.TextWriter> 執行個體等形式的輸出。  
   
  輸入物件必須是某個物件表示的根物件。 這可以是商務物件的單一根物件、UI 情節中頁面之物件樹狀目錄的根目錄、設計工具中的工作編輯介面，或是其他適用於情節的根物件概念。  
@@ -57,7 +57,7 @@ ms.locfileid: "59162257"
   
 <a name="transform"></a>   
 ## <a name="transform"></a>資料轉換  
- <xref:System.Xaml.XamlServices.Transform%2A> 將轉換或載入路徑和儲存連結來轉換 XAML 做為單一作業的路徑。 <xref:System.Xaml.XamlReader> 和 <xref:System.Xaml.XamlWriter>則可能會使用不同的結構描述內容或支援類型系統，而影響產生之 XAML 的轉換方式。 這適用於各種轉換作業。  
+ <xref:System.Xaml.XamlServices.Transform%2A> 會藉由將載入路徑和儲存路徑連結成單一作業，來轉換 XAML。 <xref:System.Xaml.XamlReader> 和 <xref:System.Xaml.XamlWriter>則可能會使用不同的結構描述內容或支援類型系統，而影響產生之 XAML 的轉換方式。 這適用於各種轉換作業。  
   
  如果作業需要檢查 XAML 節點資料流中的每個節點，您通常不會使用 <xref:System.Xaml.XamlServices.Transform%2A>。 相反地，您需要定義自己的載入路徑-儲存路徑作業序列，並插入自己的邏輯。 請在其中一個路徑中，在您自己的節點迴圈周圍使用 XAML 讀取器/XAML 寫入器配對。 例如，使用 <xref:System.Xaml.XamlXmlReader> 載入初始 XAML，再以後續的 <xref:System.Xaml.XamlXmlReader.Read%2A> 呼叫逐步執行至各節點。 在 XAML 節點資料流層級上運作時，您現在可以調整個別節點 (類型、成員、其他節點) 以套用轉換，或讓節點保持原狀。 接著，您可以將節點繼續傳送至 `Write` 的相關 <xref:System.Xaml.XamlObjectWriter> API 並寫出物件。 如需詳細資訊，請參閱 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)。  
   
@@ -65,4 +65,4 @@ ms.locfileid: "59162257"
 
 - <xref:System.Xaml.XamlObjectWriter>
 - <xref:System.Xaml.XamlServices>
-- [XAML 服務](index.md)
+- [XAML Services](index.md)

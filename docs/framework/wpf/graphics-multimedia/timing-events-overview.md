@@ -9,10 +9,10 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167163"
 ---
 # <a name="timing-events-overview"></a>計時事件概觀
@@ -56,7 +56,7 @@ ms.locfileid: "59167163"
   
 |Event - 事件|觸發互動式作業|其他觸發程序|  
 |-----------|--------------------------------------|--------------------|  
-|**已完成**|跳至填滿|時鐘完成。|  
+|**Completed**|跳至填滿|時鐘完成。|  
 |**CurrentGlobalSpeedInvalidated**|暫停、繼續、搜尋、設定速率、跳至填滿、停止|時鐘反轉、加速、啟動或停止。|  
 |**CurrentStateInvalidated**|開始、跳至填滿、停止|時鐘啟動、停止或填滿。|  
 |**CurrentTimeInvalidated**|開始、搜尋、跳至填滿、停止|時鐘進行。|  

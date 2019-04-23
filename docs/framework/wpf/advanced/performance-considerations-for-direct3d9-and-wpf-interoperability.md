@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], performance
 ms.assetid: ea8baf91-12fe-4b44-ac4d-477110ab14dd
 ms.openlocfilehash: 1371fa901bebc503a0091f3229a8fd7e6ccc2c86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162629"
 ---
 # <a name="performance-considerations-for-direct3d9-and-wpf-interoperability"></a>Direct3D9 和 WPF 互通性的效能考量
@@ -63,5 +63,5 @@ ms.locfileid: "59162629"
 
 - <xref:System.Windows.Interop.D3DImage>
 - [WPF 和 Direct3D9 互通](wpf-and-direct3d9-interoperation.md)
-- [逐步解說：建立 Direct3D9 內容以裝載在 WPF 中](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
-- [逐步解說：將 Direct3D9 內容裝載在 WPF 中](walkthrough-hosting-direct3d9-content-in-wpf.md)
+- [逐步解說：建立裝載在 WPF 中的 Direct3D9 內容](walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md)
+- [逐步解說：在 WPF 中裝載 Direct3D9 內容](walkthrough-hosting-direct3d9-content-in-wpf.md)

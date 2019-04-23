@@ -5,10 +5,10 @@ helpviewer_keywords:
 - certificates [WCF], viewing with the MMC snap-in
 ms.assetid: 2b8782aa-ebb4-4ee7-974b-90299e356dc5
 ms.openlocfilehash: 69f79b64250ff46524e7b4720d13351774875a3f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59167501"
 ---
 # <a name="how-to-view-certificates-with-the-mmc-snap-in"></a>HOW TO：使用 MMC 嵌入式管理單元檢視憑證
@@ -80,5 +80,5 @@ ms.locfileid: "59167501"
 ## <a name="see-also"></a>另請參閱
 
 - [使用憑證](working-with-certificates.md)
-- [HOW TO：建立開發時要使用的暫時憑證](how-to-create-temporary-certificates-for-use-during-development.md)
-- [HOW TO：擷取憑證的指紋](how-to-retrieve-the-thumbprint-of-a-certificate.md)
+- [如何：建立開發時要使用的暫時憑證](how-to-create-temporary-certificates-for-use-during-development.md)
+- [如何：擷取憑證的指紋](how-to-retrieve-the-thumbprint-of-a-certificate.md)

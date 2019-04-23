@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165343"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource 元件架構
@@ -149,7 +149,7 @@ ms.locfileid: "59165343"
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
+-   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
@@ -174,7 +174,7 @@ ms.locfileid: "59165343"
 - <xref:System.Windows.Forms.BindingNavigator>
 - [BindingSource 元件概觀](bindingsource-component-overview.md)
 - [BindingNavigator 控制項](bindingnavigator-control-windows-forms.md)
-- [Windows Form 資料繫結](../windows-forms-data-binding.md)
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [HOW TO：將 Windows Forms 控制項繫結至類型](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [HOW TO：使用 BindingSource 反映 Windows Forms 控制項中的資料來源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [Windows Forms 資料繫結](../windows-forms-data-binding.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [如何：將 Windows Forms 控制項繫結至型別](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [如何：反映 Windows Form 控制項使用 BindingSource 中的資料來源更新](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

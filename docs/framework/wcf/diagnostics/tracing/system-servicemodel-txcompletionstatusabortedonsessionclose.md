@@ -3,10 +3,10 @@ title: System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
 ms.date: 03/30/2017
 ms.assetid: 7e142e9d-e81b-4309-974a-02e9cc064ea0
 ms.openlocfilehash: 7b1f6a2f4a344b566c76d0095942b84a8a4e76f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166500"
 ---
 # <a name="systemservicemodeltxcompletionstatusabortedonsessionclose"></a>System.ServiceModel.TxCompletionStatusAbortedOnSessionClose
@@ -21,5 +21,5 @@ ms.locfileid: "59166500"
 ## <a name="see-also"></a>另請參閱
 
 - [追蹤](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
-- [使用追蹤來疑難排解應用程式](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
+- [使用追蹤為應用程式進行疑難排解](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理與診斷](../../../../../docs/framework/wcf/diagnostics/index.md)

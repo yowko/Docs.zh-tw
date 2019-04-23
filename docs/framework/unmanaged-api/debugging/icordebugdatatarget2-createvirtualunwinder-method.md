@@ -5,10 +5,10 @@ ms.assetid: 354c8b4c-7d23-45c6-a7d7-3be4c2a5b772
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c8befed8bc810344b2a3344212a6a4a854300e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164654"
 ---
 # <a name="icordebugdatatarget2createvirtualunwinder-method"></a>ICorDebugDataTarget2::CreateVirtualUnwinder 方法
@@ -43,7 +43,7 @@ HRESULT CreateVirtualUnwinder(
  [out] ICorDebugVirtualUnwinder 介面物件的位址指標。  
   
 ## <a name="return-value"></a>傳回值  
- `S_OK` 如果成功。 其他任何 `HRESULT` 表示失敗。 任何失敗`HRESULT`mscordbi 收到的會視為嚴重錯誤，並造成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法，以傳回`CORDBG_E_DATA_TARGET_ERROR`。  
+ 如果成功，則為 `S_OK`。 其他任何 `HRESULT` 表示失敗。 任何失敗`HRESULT`mscordbi 收到的會視為嚴重錯誤，並造成[ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)方法，以傳回`CORDBG_E_DATA_TARGET_ERROR`。  
   
 ## <a name="remarks"></a>備註  
   
@@ -57,7 +57,7 @@ HRESULT CreateVirtualUnwinder(
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

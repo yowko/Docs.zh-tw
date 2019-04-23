@@ -10,10 +10,10 @@ helpviewer_keywords:
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
 ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169919"
 ---
 # <a name="as-c-reference"></a>as (C# 參考)
@@ -49,8 +49,8 @@ expression is type ? (type)expression : (type)null
 ## <a name="see-also"></a>另請參閱
 
 - [C# 參考](../../../csharp/language-reference/index.md)
-- [C# 程式設計手冊](../../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../../csharp/programming-guide/index.md)
 - [C# 關鍵字](../../../csharp/language-reference/keywords/index.md)
-- [是](../../../csharp/language-reference/keywords/is.md)
+- [is](../../../csharp/language-reference/keywords/is.md)
 - [?:運算子](../../../csharp/language-reference/operators/conditional-operator.md)
 - [運算子關鍵字](../../../csharp/language-reference/keywords/operator-keywords.md)

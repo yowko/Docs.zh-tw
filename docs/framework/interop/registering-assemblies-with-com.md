@@ -9,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: 87925795-a3ae-4833-b138-125413478551
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e5d6c063fedf14559b20d1de49c1855d0fe1304
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 834652318d4cb1cbcebe27a922d210ef87026ed5
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219317"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59169022"
 ---
 # <a name="registering-assemblies-with-com"></a>向 COM 註冊組件
 您可以執行稱為[組件註冊工具 (Regasm.exe)](../tools/regasm-exe-assembly-registration-tool.md) 的命令列工具，註冊或取消登錄與 COM 搭配使用的組件。 Regasm.exe 會將此類別的相關資訊新增至容器登錄，讓 COM 用戶端可以明確地使用 .NET Framework 類別。 <xref:System.Runtime.InteropServices.RegistrationServices> 類別提供對等功能。  
   
  必須先在 Windows 登錄中註冊 Managed 元件，才能從 COM 用戶端進行啟用。 下表顯示 Regasm.exe 通常會新增至 Windows 登錄的機碼 (000000 表示實際 GUID 值)。  
   
-|GUID|描述|登錄機碼|  
+|GUID|說明|登錄機碼|  
 |----------|-----------------|------------------|  
 |CLSID|類別識別碼|HKEY_CLASSES_ROOT\CLSID\\{000…000}|  
 |IID|介面識別碼|HKEY_CLASSES_ROOT\Interface\\{000…000}|  
@@ -44,7 +44,8 @@ ms.locfileid: "56219317"
  針對 `InprocServer32` 索引鍵，Mscoree.dll 的參考會取代傳統 COM 型別程式庫，以指出 Common Language Runtime 建立 Managed 物件。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [將 .NET Framework 元件公開給 COM](exposing-dotnet-components-to-com.md)
-- [如何：參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)
-- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100)) \(機器翻譯\)
+- [作法：參考 COM 的 .NET 類型](how-to-reference-net-types-from-com.md)
+- [呼叫 .NET 物件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/8hw8h46b(v=vs.100))
 - [部署供 COM 存取的應用程式](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/c2850st8(v=vs.100))

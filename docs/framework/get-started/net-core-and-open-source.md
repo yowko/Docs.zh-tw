@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: e6bd4655-ce37-4003-8462-468a6fe2c40f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3c48182ab5a864228fd1d2ccf32d714ebccf60a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5eeef28f9a1d81ffa6328bfa5f2a8ed5295b47aa
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54494557"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59163419"
 ---
 # <a name="net-core-and-open-source"></a>.NET 的核心和開放原始碼
 本主題概要說明什麼是 .NET Core，並說明如何尋找更多資訊。 若要尋找 .NET Core 主題的完整清單，請瀏覽 [.NET Core 指南](../../core/index.md)。
@@ -46,6 +46,7 @@ ms.locfileid: "54494557"
 -   [ASP.NET Core](https://github.com/aspnet/home)  
   
 ## <a name="see-also"></a>另請參閱
+
 - [.NET Core 首頁](https://www.microsoft.com/net/core)
 - [.NET Core 指南](../../core/index.md)
 - [ASP.NET Core 文件](/aspnet/core/)

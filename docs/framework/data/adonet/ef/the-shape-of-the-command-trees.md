@@ -2,12 +2,12 @@
 title: 命令樹的形狀
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378544"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980079"
 ---
 # <a name="the-shape-of-the-command-trees"></a>命令樹的形狀
 
@@ -25,8 +25,7 @@ SQL 產生模組負責根據給定輸入查詢命令樹運算式，產生後端�
 
 DBQueryCommandTree.Query 屬性是描述查詢邏輯之運算式樹狀架構的根。 DBQueryCommandTree.Parameters 屬性包含用於查詢的參數清單。 由 DbExpression 物件所組成的運算式。
 
-DbExpression 物件代表某些計算。 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供幾種運算式來撰寫查詢運算式，包括常數、變數、函式、建構函式，以及標準關係運算子 (如 Filter 和 Join)。 每一個 DbExpression 物件都有 ResultType 屬性，表示該運算式所產生之結果的型別。 這個型別會表示為 TypeUsage。
+DbExpression 物件代表某些計算。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 會提供幾種運算式來撰寫查詢運算式，包括常數、變數、函式、建構函式，以及標準關係運算子 (如 Filter 和 Join)。 每一個 DbExpression 物件都有 ResultType 屬性，表示該運算式所產生之結果的型別。 這個型別會表示為 TypeUsage。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>輸出查詢命令樹的形狀
 
@@ -38,7 +37,7 @@ DbExpression 物件代表某些計算。
 
 型別作業 (就像檢查給定運算式是否具有特定型別，或是根據型別篩選集合) 不會出現在輸出命令樹中。
 
-在輸出命令樹中，只有傳回布林值的運算式會用於投射，而且只適用於需要述詞 (如 filter 或 case 陳述式) 之運算式中的述詞。
+在輸出命令樹狀中，只有傳回布林值的運算式會用於投射，而且只適用於需要述詞 (如 filter 或 case 陳述式) 之運算式中的述詞。
 
 輸出查詢命令樹的根為 DbProjectExpression 物件。
 
@@ -86,9 +85,9 @@ DbNewInstanceExpression 只能發生在下列兩個案例中：
 
 - 當做 DbProjectExpression 的 Projection 屬性。  當依照這類情況使用時，要遵守下列限制：
 
-    - 結果型別必須是資料列型別。
+  - 結果型別必須是資料列型別。
 
-    - 它的每一個引數都是一個運算式，可產生具有基本型別的結果。 一般來說，每一個引數都是純量運算式，例如透過 DbVariableReferenceExpression 的 PropertyExpression、函式引動過程，或是透過 DbVariableReferenceExpression 或函式引動過程之 DbPropertyExpression 的算術運算。 但是，代表純量子查詢的運算式也可以出現在 DbNewInstanceExpression 的引數清單中。 代表純量子查詢運算式是代表傳回一個資料列和具有 DbElementExpression 物件根的基本類型的一個資料行的子查詢的運算式樹狀架構
+  - 它的每一個引數都是一個運算式，可產生具有基本型別的結果。 一般來說，每一個引數都是純量運算式，例如透過 DbVariableReferenceExpression 的 PropertyExpression、函式引動過程，或是透過 DbVariableReferenceExpression 或函式引動過程之 DbPropertyExpression 的算術運算。 但是，代表純量子查詢的運算式也可以出現在 DbNewInstanceExpression 的引數清單中。 代表純量子查詢運算式是代表傳回一個資料列和具有 DbElementExpression 物件根的基本類型的一個資料行的子查詢的運算式樹狀架構
 
 - 有了集合傳回型別，就可以定義當做引數提供之運算式的新集合。
 

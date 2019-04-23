@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166045"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>HOW TO：將 ActiveX 控制項新增至 Windows Forms
@@ -35,10 +35,10 @@ ms.locfileid: "59166045"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Form 控制項](index.md)
+- [Windows Forms 控制項](index.md)
 - [比較各種語言和程式庫的控制項與可以透過程式設計的物件](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
-- [HOW TO：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
-- [排列 Windows Form 上的控制項](arranging-controls-on-windows-forms.md)
-- [標記個別 Windows Form 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
-- [在 Windows Form 上使用的控制項](controls-to-use-on-windows-forms.md)
-- [依功能區分 Windows Form 控制項](windows-forms-controls-by-function.md)
+- [如何：將控制項新增至 Windows Forms](how-to-add-controls-to-windows-forms.md)
+- [排列 Windows Forms 上的控制項](arranging-controls-on-windows-forms.md)
+- [標記個別 Windows Forms 控制項並提供其捷徑](labeling-individual-windows-forms-controls-and-providing-shortcuts-to-them.md)
+- [在 Windows Forms 上使用的控制項](controls-to-use-on-windows-forms.md)
+- [依功能區分 Windows Forms 控制項](windows-forms-controls-by-function.md)
