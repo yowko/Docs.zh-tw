@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 ms.assetid: 0828c331-a438-4bdd-a4d6-3ef1e59e8795
 ms.openlocfilehash: 8b4eb7684e15ffd5b0b528771490ba66f3b7bb45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156516"
 ---
 # <a name="how-to-use-a-pen-to-draw-lines"></a>HOW TO：使用畫筆繪製線條
@@ -25,7 +25,7 @@ ms.locfileid: "59156516"
  [!code-vb[System.Drawing.UsingAPen#11](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingAPen/VB/Class1.vb#11)]  
   
 ## <a name="compiling-the-code"></a>編譯程式碼  
- 上述範例中專為搭配 Windows Form 使用，而且需要<xref:System.Windows.Forms.PaintEventArgs>`e`，這是參數的<xref:System.Windows.Forms.Control.Paint>事件處理常式。  
+ 上述範例是為了搭配 Windows Form 使用而設計，且其需要 <xref:System.Windows.Forms.PaintEventArgs>`e`，這是 <xref:System.Windows.Forms.Control.Paint> 事件處理常式的參數。  
   
 ## <a name="see-also"></a>另請參閱
 

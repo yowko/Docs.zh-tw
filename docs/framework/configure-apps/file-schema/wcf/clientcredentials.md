@@ -3,10 +3,10 @@ title: <clientCredentials>
 ms.date: 03/30/2017
 ms.assetid: 1e6eef0d-a34e-4d74-b0f7-f65d2181858d
 ms.openlocfilehash: ebe976df9af0c316e95a1e089412e57a575a6df1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157231"
 ---
 # <a name="clientcredentials"></a>\<clientCredentials>
@@ -73,4 +73,4 @@ ms.locfileid: "59157231"
 - <xref:System.ServiceModel.Configuration.ClientCredentialsElement>
 - <xref:System.ServiceModel.Description.ClientCredentials>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
-- [確保用戶端的安全](../../../../../docs/framework/wcf/securing-clients.md)
+- [保護用戶端安全](../../../../../docs/framework/wcf/securing-clients.md)

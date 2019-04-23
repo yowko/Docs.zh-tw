@@ -7,10 +7,10 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158739"
 ---
 # <a name="wcf-security-terminology"></a>WCF 安全性用語
@@ -183,6 +183,6 @@ ms.locfileid: "59158739"
   
 ## <a name="see-also"></a>另請參閱
 
-- [Windows Communication Foundation 的主要概念](../../../../docs/framework/wcf/fundamental-concepts.md)
+- [Windows Communication Foundation 的基本概念](../../../../docs/framework/wcf/fundamental-concepts.md)
 - [安全性概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)
-- [Windows Server AppFabric 的資訊安全模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric 的安全性模型](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

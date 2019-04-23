@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fd15f8a5-3b4c-46d0-a561-4559ab2a4705
 ms.openlocfilehash: dae044a9d7802e858f1f24dd4aa0f1de8f6cba7a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158947"
 ---
 # <a name="writing-dataset-contents-as-xml-data"></a>將資料集內容當做 XML 資料寫入
@@ -68,16 +68,16 @@ xmlSW.Close();
   
 |MappingType 值|描述|  
 |-----------------------|-----------------|  
-|**項目**|這是預設值。 資料行會寫為 XML 項目，其中 ColumnName 為項目名稱，並且資料行內容會寫為項目文字。 例如: <br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
+|**目**|這是預設值。 資料行會寫為 XML 項目，其中 ColumnName 為項目名稱，並且資料行內容會寫為項目文字。 例如: <br /><br /> `<ColumnName>Column Contents</ColumnName>`|  
 |**屬性**|資料行會寫為目前資料行 XML 項目的 XML 屬性，其中 ColumnName 是屬性名稱，且資料行內容會寫為屬性值。 例如：<br /><br /> `<RowElement ColumnName="Column Contents" />`|  
-|**SimpleContent**|資料行內容會寫為目前資料行 XML 項目中的文字。 例如: <br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> 請注意， **SimpleContent**無法設定資料行的資料表有**項目**資料行或巢狀的關聯。|  
+|**SimpleContent**|資料行內容會寫為目前資料行 XML 項目中的文字。 例如：<br /><br /> `<RowElement>Column Contents</RowElement>`<br /><br /> 請注意， **SimpleContent**無法設定資料行的資料表有**項目**資料行或巢狀的關聯。|  
 |**Hidden**|XML 輸出中不會寫入資料行。|  
   
 ## <a name="see-also"></a>另請參閱
 
-- [在資料集中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
+- [在 DataSet 中使用 XML](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)
 - [DiffGram](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/diffgrams.md)
 - [巢狀 DataRelation](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/nesting-datarelations.md)
-- [將資料集結構描述資訊當做 XSD 寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
+- [將資料集結構描述資訊當作 XSD 寫入](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/writing-dataset-schema-information-as-xsd.md)
 - [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

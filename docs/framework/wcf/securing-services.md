@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157666"
 ---
 # <a name="securing-services"></a>保護服務的安全
@@ -110,10 +110,10 @@ Windows Communication Foundation (WCF) 服務的安全性包含兩個主要需�
 - [設計服務合約](../../../docs/framework/wcf/designing-service-contracts.md)
 - [安全性](../../../docs/framework/wcf/feature-details/security.md)
 - [安全性概觀](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [HOW TO：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [HOW TO：使用 Windows 認證來確保服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [HOW TO：設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [HOW TO：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [HOW TO：在服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
-- [HOW TO：檢查資訊安全內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)
+- [如何：設定 ProtectionLevel 屬性](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [如何：使用 Windows 認證的服務安全](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [如何：設定安全性模式](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [如何：指定用戶端認證類型](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [如何：以 PrincipalPermissionAttribute 類別限制存取](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [如何：服務上模擬用戶端](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [如何：檢查安全性內容](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

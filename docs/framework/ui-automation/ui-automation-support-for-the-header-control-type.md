@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Header
 ms.assetid: d2e48891-2dbe-409e-8655-2f753908e29b
 ms.openlocfilehash: 8a7fe7fb8ec3e4b33ff4814859afe7d1d8de9c60
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160117"
 ---
 # <a name="ui-automation-support-for-the-header-control-type"></a>Header 控制項類型的 UI 自動化支援
@@ -46,7 +46,7 @@ ms.locfileid: "59160117"
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ClickablePointProperty>|請參閱備註。|如果有週框即受支援。 如果週框中沒有任何可點選的點，而且您執行的是特殊化點擊測試，則會覆寫並提供可點選的點。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsKeyboardFocusableProperty>|請參閱備註。|如果控制項可接收鍵盤焦點，就必定支援此屬性。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.NameProperty>|請參閱備註。|如果有一個以上的資料列標題或資料行標題，標題控制項就需要名稱。 如此可識別標題內的資訊。|  
-|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`。|標題控制項沒有靜態標籤。|  
+|<xref:System.Windows.Automation.AutomationElementIdentifiers.LabeledByProperty>|`Null`.|標題控制項沒有靜態標籤。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.ControlTypeProperty>|標頭|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.LocalizedControlTypeProperty>|「標題」|此值與所有 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 架構的值相同。|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.OrientationProperty>|水平|這個屬性值會公開標題控制項的位置，即表示它是資料列標題或資料行標題。|  
@@ -65,7 +65,7 @@ ms.locfileid: "59160117"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有標題控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElement.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElement.IsOffscreenProperty> 屬性變更事件。|必要|None|  

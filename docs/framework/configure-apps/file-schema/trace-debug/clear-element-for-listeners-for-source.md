@@ -8,10 +8,10 @@ helpviewer_keywords:
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158349"
 ---
 # <a name="clear-element-for-listeners-for-source"></a>\<清除 > 項目\<接聽程式 > 針對\<來源 >

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155651"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 函式
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in]A [REGKIND 列舉](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)控制型別程式庫的註冊方式的旗標。 其可能的值為：  
   
--   `REGKIND_DEFAULT`:使用預設註冊行為。  
+-   `REGKIND_DEFAULT`：使用預設註冊行為。  
   
--   `REGKIND_REGISTER`:註冊此型別程式庫。  
+-   `REGKIND_REGISTER`：註冊此型別程式庫。  
   
--   `REGKIND_NONE`:請勿註冊此型別程式庫。  
+-   `REGKIND_NONE`：請勿註冊此型別程式庫。  
   
  `pTlbResolver`  
  [in]實作的指標[ITypeLibResolver 介面](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)。  

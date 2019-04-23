@@ -13,10 +13,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 858dfe9b15422680a261fef9e22d8c89d9d7fe45
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155567"
 ---
 # <a name="cordebugcodeinvokepurpose-enumeration"></a>CorDebugCodeInvokePurpose 列舉
@@ -56,7 +56,7 @@ typedef enum CorDebugCodeInvokePurpose
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

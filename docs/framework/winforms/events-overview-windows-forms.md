@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
 ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157744"
 ---
 # <a name="events-overview-windows-forms"></a>事件概觀 (Windows Form)
@@ -45,5 +45,5 @@ ms.locfileid: "59157744"
   
 ## <a name="see-also"></a>另請參閱
 
-- [在 Windows Form 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
+- [在 Windows Forms 中建立事件處理常式](creating-event-handlers-in-windows-forms.md)
 - [事件處理常式概觀](event-handlers-overview-windows-forms.md)

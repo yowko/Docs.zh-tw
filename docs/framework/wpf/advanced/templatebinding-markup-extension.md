@@ -9,10 +9,10 @@ helpviewer_keywords:
 - TemplateBinding markup extensions [WPF]
 ms.assetid: 1d25bbfc-dbc2-499d-9f12-419d23d4ac6a
 ms.openlocfilehash: c004560a0b7ab367fbf4fbb48b0e8d8b63f3d8f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155996"
 ---
 # <a name="templatebinding-markup-extension"></a>TemplateBinding 標記延伸
@@ -34,7 +34,7 @@ ms.locfileid: "59155996"
   
 |||  
 |-|-|  
-|`propertyName`|<xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 在 setter 語法中所設定的屬性。|  
+|`propertyName`|在 setter 語法中設定之屬性的 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType>。|  
 |`sourceProperty`|存在於樣板化類型上的另一個相依性屬性，由其 <xref:System.Windows.DependencyProperty.Name%2A?displayProperty=nameWithType> 所指定。<br /><br /> -或-<br /><br /> 「穿插句點」的屬性名稱，由樣板化目標類型以外的不同類型所定義。 這實際上是一個 <xref:System.Windows.PropertyPath>。 請參閱[PropertyPath XAML 語法](propertypath-xaml-syntax.md)。|  
   
 ## <a name="remarks"></a>備註  
@@ -46,9 +46,9 @@ ms.locfileid: "59155996"
   
  屬性 (Attribute) 語法是最常搭配這個標記延伸來使用的語法。 `TemplateBinding` 識別項字串後所提供的字串語彙基元，是指派做為基礎 <xref:System.Windows.TemplateBindingExtension.Property%2A> 延伸類別的 <xref:System.Windows.TemplateBindingExtension> 值。  
   
- 物件項目語法雖然可行，但由於沒有實際的應用程式，所以這裡不加說明。 `TemplateBinding` 用來填滿 setter 內的值評估運算式，並使用物件元素語法`TemplateBinding`填滿`<Setter.Property>`屬性項目語法則太過繁瑣。  
+ 物件項目語法雖然可行，但由於沒有實際的應用程式，所以這裡不加說明。 `TemplateBinding` 是用來以評估後的運算式填滿 setter 內的值，而使用 `TemplateBinding` 的物件項目語法來填滿 `<Setter.Property>` 屬性項目語法則太過繁瑣。  
   
- `TemplateBinding` 也可以用於指定的詳細資訊的屬性使用方式<xref:System.Windows.TemplateBindingExtension.Property%2A>屬性做為屬性 = 值組：  
+ `TemplateBinding` 也可以用於會指定 <xref:System.Windows.TemplateBindingExtension.Property%2A> 屬性 (Property) 做為 property=value 配對組的詳細屬性 (Attribute) 使用方式中。  
   
 ```xml  
 <object property="{TemplateBinding Property=sourceProperty}" .../>  
@@ -58,7 +58,7 @@ ms.locfileid: "59155996"
   
  在  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] XAML 處理器實作中，這個標記延伸的處理由定義<xref:System.Windows.TemplateBindingExtension>類別。  
   
- `TemplateBinding` 是標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須處理這個屬性的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
+ `TemplateBinding` 是一種標記延伸。 如果必須將屬性 (Attribute) 值加上逸出符號，以免成為常值或處理常式名稱，而且這個動作必須更全面地實施 (而不是只對特定類型或屬性 (Property) 設定類型轉換子 (Type Converter))，則通常會實作標記延伸。 在 XAML 使用的所有標記延伸`{`和`}`字元在其屬性語法中，這是用 XAML 處理器會辨識為標記延伸必須處理這個屬性的慣例。 如需詳細資訊，請參閱[標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)。  
   
 ## <a name="see-also"></a>另請參閱
 
@@ -68,4 +68,4 @@ ms.locfileid: "59155996"
 - [XAML 概觀 (WPF)](xaml-overview-wpf.md)
 - [標記延伸和 WPF XAML](markup-extensions-and-wpf-xaml.md)
 - [RelativeSource 標記延伸](relativesource-markupextension.md)
-- [繫結標記延伸](binding-markup-extension.md)
+- [Binding 標記延伸](binding-markup-extension.md)

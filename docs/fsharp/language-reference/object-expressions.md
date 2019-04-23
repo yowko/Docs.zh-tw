@@ -3,10 +3,10 @@ title: 物件運算式
 description: 了解如何使用F#物件運算式，當您想要避免額外的程式碼和額外負荷才能建立新的具名型別。
 ms.date: 02/08/2019
 ms.openlocfilehash: 63f2c1d7128721b7b8c744e4cf02d73c2a8b4a07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157843"
 ---
 # <a name="object-expressions"></a>物件運算式

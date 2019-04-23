@@ -3,10 +3,10 @@ title: <serviceAuthorization> 項目
 ms.date: 03/30/2017
 ms.assetid: 18cddad5-ddcb-4839-a0ac-1d6f6ab783ca
 ms.openlocfilehash: 7099c5eca9cf28624153a705e4e16136628214a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157335"
 ---
 # <a name="serviceauthorization-element"></a>\<serviceAuthorization > 項目
@@ -101,6 +101,6 @@ ms.locfileid: "59157335"
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>
 - [安全性行為](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [授權存取服務作業](../../../../../docs/framework/wcf/samples/authorizing-access-to-service-operations.md)
-- [HOW TO：為服務建立自訂授權管理員](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
-- [HOW TO：使用 PrincipalPermissionAttribute 類別來限制存取](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [如何：建立自訂授權管理員服務](../../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [如何：以 PrincipalPermissionAttribute 類別限制存取](../../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
 - [授權原則](../../../../../docs/framework/wcf/samples/authorization-policy.md)

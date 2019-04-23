@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: eedf2fbd-f407-4f62-bb1a-c00eb001b1dd
 ms.openlocfilehash: 49a2665240f5f35e0d4937e55c39eccf04b1444d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157244"
 ---
 # <a name="method-based-query-syntax-examples-element-operators-linq-to-dataset"></a>以方法為基礎的查詢語法範例：項目運算子 (LINQ to DataSet)

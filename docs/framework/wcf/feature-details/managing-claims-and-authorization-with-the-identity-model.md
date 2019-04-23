@@ -9,10 +9,10 @@ helpviewer_keywords:
 - authorization [WCF], managing with the Identity Model
 ms.assetid: 099defbb-5d35-434e-9336-1a49b9ec7663
 ms.openlocfilehash: 568fb1c2a18cfde5b15b844754f4356af0a576a3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155086"
 ---
 # <a name="managing-claims-and-authorization-with-the-identity-model"></a>使用身分識別模型來管理宣告與授權
@@ -174,9 +174,9 @@ ms.locfileid: "59155086"
 - [宣告與權杖](../../../../docs/framework/wcf/feature-details/claims-and-tokens.md)
 - [宣告與拒絕資源的存取](../../../../docs/framework/wcf/feature-details/claims-and-denying-access-to-resources.md)
 - [宣告建立與資源值](../../../../docs/framework/wcf/feature-details/claim-creation-and-resource-values.md)
-- [HOW TO：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
-- [HOW TO：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [HOW TO：建立自訂授權原則](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
-- [HOW TO：為服務建立自訂授權管理員](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [如何：建立自訂宣告](../../../../docs/framework/wcf/extending/how-to-create-a-custom-claim.md)
+- [如何：比較宣告](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [如何：建立自訂授權原則](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-policy.md)
+- [如何：建立自訂授權管理員服務](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [安全性概觀](../../../../docs/framework/wcf/feature-details/security-overview.md)
-- [Authorization](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)
+- [授權](../../../../docs/framework/wcf/feature-details/authorization-in-wcf.md)

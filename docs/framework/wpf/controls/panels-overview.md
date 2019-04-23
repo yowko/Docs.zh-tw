@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157868"
 ---
 # <a name="panels-overview"></a>面板概觀
@@ -23,7 +23,7 @@ ms.locfileid: "59157868"
   
 -   [面板類別](#Panels_view_from_10000_feet)  
   
--   [面板項目中的一般成員](#Panels_declared_members)  
+-   [面板元素的一般成員](#Panels_declared_members)  
   
 -   [衍生的面板元素](#Panels_derived_elements)  
   
@@ -242,7 +242,7 @@ ms.locfileid: "59157868"
   
 <a name="Panels_global_localization"></a>   
 ## <a name="localizationglobalization-support"></a>當地語系化/全球化支援  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援多種功能，可協助建立可當地語系化[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援一些功能，能夠協助建立可當地語系化的 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。  
   
  所有面板皆原生支援<xref:System.Windows.FrameworkElement.FlowDirection%2A>屬性，可用來以動態方式自動重排內容取決於使用者的地區設定或語言設定。 如需詳細資訊，請參閱<xref:System.Windows.FrameworkElement.FlowDirection%2A>。  
   
@@ -256,7 +256,7 @@ ms.locfileid: "59157868"
 
 - [逐步解說：我的第一個 WPF 傳統型應用程式](../getting-started/walkthrough-my-first-wpf-desktop-application.md)
 - [WPF 版面配置庫範例](https://go.microsoft.com/fwlink/?LinkID=160054)
-- [配置](../advanced/layout.md)
+- [版面配置](../advanced/layout.md)
 - [WPF 控制項陳列庫範例](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [對齊、邊界和填補概觀](../advanced/alignment-margins-and-padding-overview.md)
 - [建立自訂的內容換行面板範例](https://go.microsoft.com/fwlink/?LinkID=159979)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155931"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>在用戶端應用程式中使用資料服務 (WCF 資料服務)
@@ -21,7 +21,7 @@ ms.locfileid: "59155931"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 有助於確保公開 （expose） 的服務之間的互通性[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要與取用應用程式[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]摘要。 應用程式存取和變更資料[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]為基礎的服務傳送要求訊息的特定 HTTP 動作和動作應該執行的實體資源定址的 uri。 當必須提供實體資料時，會在訊息本文中以特定編碼的裝載形式提供。  
   
 ### <a name="http-actions"></a>HTTP 動作  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 支援下列 HTTP 動作來執行建立、 讀取、 更新和刪除作業，在定址的資源代表的實體資料：  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 可支援下列 HTTP 動作，在定址資源代表的實體資料上，執行建立、讀取、更新，以及刪除作業：  
   
 -   **HTTP GET** -這是從瀏覽器存取資源時的預設動作。 要求訊息中不會提供任何承載，同時會以包含所要求之資料的承載傳回回應方法。  
   

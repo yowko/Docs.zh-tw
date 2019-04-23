@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d2af1b41f47a3906c0e573c104847aa3ff36cf8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59158427"
 ---
 # <a name="inheritsfrom-function"></a>InheritsFrom 函式
@@ -57,7 +57,7 @@ HRESULT InheritsFrom (
 |---------|---------|---------|
 | `WBEM_S_NO_ERROR` | 0 | 目前的物件繼承自`wszAncestor`。  |
 | `WBEM_S_FALSE` | 1 | 目前的物件不是繼承自`wszAncestor`。 |
-|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` 是`null`。 |
+|`WBEM_E_INVALID_PARAMETER` | 0x80041008 | `wszAncestor` 為 `null`。 |
   
 ## <a name="remarks"></a>備註
 
@@ -68,8 +68,8 @@ HRESULT InheritsFrom (
   
  **標頭：** WMINet_Utils.idl  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [WMI 與效能計數器 (非受控 API 參考)](index.md)
+- [WMI 和效能計數器 （Unmanaged API 參考）](index.md)
