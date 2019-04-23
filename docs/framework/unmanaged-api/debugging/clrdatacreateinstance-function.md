@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 73a4a8a2fc737bbf4b49ca859f0549ca7efd54a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089766"
 ---
-# <a name="clrdatacreateinstance-function"></a><span data-ttu-id="d0329-102">CLRDataCreateInstance 函式</span><span class="sxs-lookup"><span data-stu-id="d0329-102">CLRDataCreateInstance Function</span></span>
-<span data-ttu-id="d0329-103">建立指定的目標項目介面物件。</span><span class="sxs-lookup"><span data-stu-id="d0329-103">Creates an interface object for the specified target item.</span></span>  
+# <a name="clrdatacreateinstance-function"></a><span data-ttu-id="2c963-102">CLRDataCreateInstance 函式</span><span class="sxs-lookup"><span data-stu-id="2c963-102">CLRDataCreateInstance Function</span></span>
+<span data-ttu-id="2c963-103">建立指定的目標項目介面物件。</span><span class="sxs-lookup"><span data-stu-id="2c963-103">Creates an interface object for the specified target item.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="d0329-104">語法</span><span class="sxs-lookup"><span data-stu-id="d0329-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2c963-104">語法</span><span class="sxs-lookup"><span data-stu-id="2c963-104">Syntax</span></span>  
   
 ```  
 HRESULT CLRDataCreateInstance (  
@@ -37,28 +37,28 @@ HRESULT CLRDataCreateInstance (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="d0329-105">參數</span><span class="sxs-lookup"><span data-stu-id="d0329-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="2c963-105">參數</span><span class="sxs-lookup"><span data-stu-id="2c963-105">Parameters</span></span>  
  `iid`  
- <span data-ttu-id="d0329-106">[in]要具現化的介面識別項。</span><span class="sxs-lookup"><span data-stu-id="d0329-106">[in] The identifier of the interface to be instantiated.</span></span>  
+ <span data-ttu-id="2c963-106">[in]要具現化的介面識別項。</span><span class="sxs-lookup"><span data-stu-id="2c963-106">[in] The identifier of the interface to be instantiated.</span></span>  
   
  `target`  
- <span data-ttu-id="d0329-107">[in]使用者實作的指標[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)物件，表示要建立的介面物件的目標項目。</span><span class="sxs-lookup"><span data-stu-id="d0329-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
+ <span data-ttu-id="2c963-107">[in]使用者實作的指標[ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md)物件，表示要建立的介面物件的目標項目。</span><span class="sxs-lookup"><span data-stu-id="2c963-107">[in] A pointer to a user-implemented [ICLRDataTarget](../../../../docs/framework/unmanaged-api/debugging/iclrdatatarget-interface.md) object that represents the target item for which to create the interface object.</span></span>  
   
  `iface`  
- <span data-ttu-id="d0329-108">[out]傳回的介面物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="d0329-108">[out] A pointer to the address of the returned interface object.</span></span>  
+ <span data-ttu-id="2c963-108">[out]傳回的介面物件的位址指標。</span><span class="sxs-lookup"><span data-stu-id="2c963-108">[out] A pointer to the address of the returned interface object.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="d0329-109">備註</span><span class="sxs-lookup"><span data-stu-id="d0329-109">Remarks</span></span>  
- <span data-ttu-id="d0329-110">`ICLRDataTarget`物件藉由偵錯的應用程式的寫入器。</span><span class="sxs-lookup"><span data-stu-id="d0329-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="d0329-111">實作取決於所表示的目標項目類型。</span><span class="sxs-lookup"><span data-stu-id="d0329-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="d0329-112">目標項目可能是處理程序、 記憶體傾印、 遠端電腦，等等。</span><span class="sxs-lookup"><span data-stu-id="d0329-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2c963-109">備註</span><span class="sxs-lookup"><span data-stu-id="2c963-109">Remarks</span></span>  
+ <span data-ttu-id="2c963-110">`ICLRDataTarget`物件藉由偵錯的應用程式的寫入器。</span><span class="sxs-lookup"><span data-stu-id="2c963-110">The `ICLRDataTarget` object is implemented by the writer of the debugging application.</span></span> <span data-ttu-id="2c963-111">實作取決於所表示的目標項目類型。</span><span class="sxs-lookup"><span data-stu-id="2c963-111">The implementation depends on the type of target item being represented.</span></span> <span data-ttu-id="2c963-112">目標項目可能是處理程序、 記憶體傾印、 遠端電腦，等等。</span><span class="sxs-lookup"><span data-stu-id="2c963-112">The target item may be a process, memory dump, remote machine, and so on.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="d0329-113">需求</span><span class="sxs-lookup"><span data-stu-id="d0329-113">Requirements</span></span>  
- <span data-ttu-id="d0329-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d0329-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2c963-113">需求</span><span class="sxs-lookup"><span data-stu-id="2c963-113">Requirements</span></span>  
+ <span data-ttu-id="2c963-114">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2c963-114">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="d0329-115">**標頭：** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="d0329-115">**Header:** ClrData.idl</span></span>  
+ <span data-ttu-id="2c963-115">**標頭：** ClrData.idl</span><span class="sxs-lookup"><span data-stu-id="2c963-115">**Header:** ClrData.idl</span></span>  
   
- <span data-ttu-id="d0329-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d0329-116">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2c963-116">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2c963-116">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="d0329-117">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="d0329-117">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="2c963-117">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2c963-117">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="d0329-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d0329-118">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2c963-118">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2c963-118">See also</span></span>
 
-- [<span data-ttu-id="d0329-119">偵錯全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="d0329-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)
+- [<span data-ttu-id="2c963-119">偵錯全域靜態函式</span><span class="sxs-lookup"><span data-stu-id="2c963-119">Debugging Global Static Functions</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-global-static-functions.md)

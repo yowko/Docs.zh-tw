@@ -7,52 +7,52 @@ helpviewer_keywords:
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
 ms.openlocfilehash: 3ebfcaaf22ca632e5784dc1f01a351583e78e865
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59090702"
 ---
-# <a name="data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="65e8f-102">Windows Form DataGridView 控制項中的資料輸入</span><span class="sxs-lookup"><span data-stu-id="65e8f-102">Data Entry in the Windows Forms DataGridView Control</span></span>
-<span data-ttu-id="65e8f-103">`DataGridView`控制項提供數個功能，可讓您變更使用者如何新增或修改控制項中的資料。</span><span class="sxs-lookup"><span data-stu-id="65e8f-103">The `DataGridView` control provides several features that let you change how users add or modify data in the control.</span></span> <span data-ttu-id="65e8f-104">比方說，您可以使資料輸入更有效率地藉由提供預設值的新資料列和發生錯誤時警示使用者。</span><span class="sxs-lookup"><span data-stu-id="65e8f-104">For example, you can make data entry more efficient by providing default values for new rows and by alerting users when errors occur.</span></span>  
+# <a name="data-entry-in-the-windows-forms-datagridview-control"></a><span data-ttu-id="990b3-102">Windows Form DataGridView 控制項中的資料輸入</span><span class="sxs-lookup"><span data-stu-id="990b3-102">Data Entry in the Windows Forms DataGridView Control</span></span>
+<span data-ttu-id="990b3-103">`DataGridView`控制項提供數個功能，可讓您變更使用者如何新增或修改控制項中的資料。</span><span class="sxs-lookup"><span data-stu-id="990b3-103">The `DataGridView` control provides several features that let you change how users add or modify data in the control.</span></span> <span data-ttu-id="990b3-104">比方說，您可以使資料輸入更有效率地藉由提供預設值的新資料列和發生錯誤時警示使用者。</span><span class="sxs-lookup"><span data-stu-id="990b3-104">For example, you can make data entry more efficient by providing default values for new rows and by alerting users when errors occur.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="65e8f-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="65e8f-105">In This Section</span></span>  
- [<span data-ttu-id="65e8f-106">HOW TO：指定 Windows Forms DataGridView 控制項的編輯模式</span><span class="sxs-lookup"><span data-stu-id="65e8f-106">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="65e8f-107">描述如何變更使用者開始編輯儲存格的方式。</span><span class="sxs-lookup"><span data-stu-id="65e8f-107">Describes how to change the way users start editing cells.</span></span>  
+## <a name="in-this-section"></a><span data-ttu-id="990b3-105">本節內容</span><span class="sxs-lookup"><span data-stu-id="990b3-105">In This Section</span></span>  
+ [<span data-ttu-id="990b3-106">如何：Windows Form DataGridView 控制項中指定的編輯模式</span><span class="sxs-lookup"><span data-stu-id="990b3-106">How to: Specify the Edit Mode for the Windows Forms DataGridView Control</span></span>](how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="990b3-107">描述如何變更使用者開始編輯儲存格的方式。</span><span class="sxs-lookup"><span data-stu-id="990b3-107">Describes how to change the way users start editing cells.</span></span>  
   
- [<span data-ttu-id="65e8f-108">HOW TO：指定 Windows Form DataGridView 控制項的新資料列預設值</span><span class="sxs-lookup"><span data-stu-id="65e8f-108">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
- <span data-ttu-id="65e8f-109">描述如何儲存輸入資料的時間的新記錄的資料列，預先填入。</span><span class="sxs-lookup"><span data-stu-id="65e8f-109">Describes how to prepopulate the row for new records to save data-entry time.</span></span>  
+ [<span data-ttu-id="990b3-108">如何：指定 Windows Form DataGridView 控制項中的新資料列的預設值</span><span class="sxs-lookup"><span data-stu-id="990b3-108">How to: Specify Default Values for New Rows in the Windows Forms DataGridView Control</span></span>](specify-default-values-for-new-rows-in-the-datagrid.md)  
+ <span data-ttu-id="990b3-109">描述如何儲存輸入資料的時間的新記錄的資料列，預先填入。</span><span class="sxs-lookup"><span data-stu-id="990b3-109">Describes how to prepopulate the row for new records to save data-entry time.</span></span>  
   
- [<span data-ttu-id="65e8f-110">使用 Windows Form DataGridView 控制項中用於新增資料錄的資料列</span><span class="sxs-lookup"><span data-stu-id="65e8f-110">Using the Row for New Records in the Windows Forms DataGridView Control</span></span>](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="65e8f-111">描述在 詳細資料，包括資訊上隱藏它、 自訂其外觀，以及它與新記錄的資料列<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="65e8f-111">Describes the row for new records in detail, including information on hiding it, on customizing its appearance, and on how it relates to the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.</span></span>  
+ [<span data-ttu-id="990b3-110">使用 Windows Forms DataGridView 控制項中用於新增記錄的資料列</span><span class="sxs-lookup"><span data-stu-id="990b3-110">Using the Row for New Records in the Windows Forms DataGridView Control</span></span>](using-the-row-for-new-records-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="990b3-111">描述在 詳細資料，包括資訊上隱藏它、 自訂其外觀，以及它與新記錄的資料列<xref:System.Windows.Forms.DataGridView.Rows%2A>集合。</span><span class="sxs-lookup"><span data-stu-id="990b3-111">Describes the row for new records in detail, including information on hiding it, on customizing its appearance, and on how it relates to the <xref:System.Windows.Forms.DataGridView.Rows%2A> collection.</span></span>  
   
- [<span data-ttu-id="65e8f-112">逐步解說：驗證 Windows Forms DataGridView 控制項的資料</span><span class="sxs-lookup"><span data-stu-id="65e8f-112">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="65e8f-113">描述如何驗證使用者輸入，以避免資料輸入格式錯誤。</span><span class="sxs-lookup"><span data-stu-id="65e8f-113">Describes how to validate user input to prevent data-entry formatting errors.</span></span>  
+ [<span data-ttu-id="990b3-112">逐步解說：驗證 Windows Form DataGridView 控制項中的資料</span><span class="sxs-lookup"><span data-stu-id="990b3-112">Walkthrough: Validating Data in the Windows Forms DataGridView Control</span></span>](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="990b3-113">描述如何驗證使用者輸入，以避免資料輸入格式錯誤。</span><span class="sxs-lookup"><span data-stu-id="990b3-113">Describes how to validate user input to prevent data-entry formatting errors.</span></span>  
   
- [<span data-ttu-id="65e8f-114">逐步解說：處理 Windows Forms DataGridView 控制項在資料輸入期間發生的錯誤</span><span class="sxs-lookup"><span data-stu-id="65e8f-114">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
- <span data-ttu-id="65e8f-115">描述如何處理來自資料來源，當使用者嘗試認可新值的資料輸入錯誤。</span><span class="sxs-lookup"><span data-stu-id="65e8f-115">Describes how to handle data-entry errors that originate from the data source when the user attempts to commit a new value.</span></span>  
+ [<span data-ttu-id="990b3-114">逐步解說：處理 Windows Form DataGridView 控制項中的資料輸入期間所發生的錯誤</span><span class="sxs-lookup"><span data-stu-id="990b3-114">Walkthrough: Handling Errors that Occur During Data Entry in the Windows Forms DataGridView Control</span></span>](handling-errors-that-occur-during-data-entry-in-the-datagrid.md)  
+ <span data-ttu-id="990b3-115">描述如何處理來自資料來源，當使用者嘗試認可新值的資料輸入錯誤。</span><span class="sxs-lookup"><span data-stu-id="990b3-115">Describes how to handle data-entry errors that originate from the data source when the user attempts to commit a new value.</span></span>  
   
-## <a name="reference"></a><span data-ttu-id="65e8f-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="65e8f-116">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="990b3-116">參考資料</span><span class="sxs-lookup"><span data-stu-id="990b3-116">Reference</span></span>  
  <xref:System.Windows.Forms.DataGridView>  
- <span data-ttu-id="65e8f-117">提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="65e8f-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
+ <span data-ttu-id="990b3-117">提供 <xref:System.Windows.Forms.DataGridView> 控制項的參考文件。</span><span class="sxs-lookup"><span data-stu-id="990b3-117">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView> control.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>  
- <span data-ttu-id="65e8f-118">提供參考文件<xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="65e8f-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.EditMode%2A> property.</span></span>  
+ <span data-ttu-id="990b3-118">提供參考文件<xref:System.Windows.Forms.DataGridView.EditMode%2A>屬性。</span><span class="sxs-lookup"><span data-stu-id="990b3-118">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.EditMode%2A> property.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded?displayProperty=nameWithType>  
- <span data-ttu-id="65e8f-119">提供參考文件<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。</span><span class="sxs-lookup"><span data-stu-id="65e8f-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span>  
+ <span data-ttu-id="990b3-119">提供參考文件<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>事件。</span><span class="sxs-lookup"><span data-stu-id="990b3-119">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded> event.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.DataError?displayProperty=nameWithType>  
- <span data-ttu-id="65e8f-120">提供參考文件<xref:System.Windows.Forms.DataGridView.DataError>事件。</span><span class="sxs-lookup"><span data-stu-id="65e8f-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.DataError> event.</span></span>  
+ <span data-ttu-id="990b3-120">提供參考文件<xref:System.Windows.Forms.DataGridView.DataError>事件。</span><span class="sxs-lookup"><span data-stu-id="990b3-120">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.DataError> event.</span></span>  
   
  <xref:System.Windows.Forms.DataGridView.CellValidating?displayProperty=nameWithType>  
- <span data-ttu-id="65e8f-121">提供參考文件<xref:System.Windows.Forms.DataGridView.CellValidating>事件。</span><span class="sxs-lookup"><span data-stu-id="65e8f-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.CellValidating> event.</span></span>  
+ <span data-ttu-id="990b3-121">提供參考文件<xref:System.Windows.Forms.DataGridView.CellValidating>事件。</span><span class="sxs-lookup"><span data-stu-id="990b3-121">Provides reference documentation for the <xref:System.Windows.Forms.DataGridView.CellValidating> event.</span></span>  
   
-## <a name="related-sections"></a><span data-ttu-id="65e8f-122">相關章節</span><span class="sxs-lookup"><span data-stu-id="65e8f-122">Related Sections</span></span>  
- [<span data-ttu-id="65e8f-123">在 Windows Form DataGridView 控制項中顯示資料</span><span class="sxs-lookup"><span data-stu-id="65e8f-123">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)  
- <span data-ttu-id="65e8f-124">提供主題描述如何以手動方式或從外部資料來源填入資料控制項。</span><span class="sxs-lookup"><span data-stu-id="65e8f-124">Provides topics that describe how to populate the control with data either manually or from an external data source.</span></span>  
+## <a name="related-sections"></a><span data-ttu-id="990b3-122">相關章節</span><span class="sxs-lookup"><span data-stu-id="990b3-122">Related Sections</span></span>  
+ [<span data-ttu-id="990b3-123">在 Windows Forms DataGridView 控制項中顯示資料</span><span class="sxs-lookup"><span data-stu-id="990b3-123">Displaying Data in the Windows Forms DataGridView Control</span></span>](displaying-data-in-the-windows-forms-datagridview-control.md)  
+ <span data-ttu-id="990b3-124">提供主題描述如何以手動方式或從外部資料來源填入資料控制項。</span><span class="sxs-lookup"><span data-stu-id="990b3-124">Provides topics that describe how to populate the control with data either manually or from an external data source.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="65e8f-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="65e8f-125">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="990b3-125">另請參閱</span><span class="sxs-lookup"><span data-stu-id="990b3-125">See also</span></span>
 
-- [<span data-ttu-id="65e8f-126">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="65e8f-126">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
-- [<span data-ttu-id="65e8f-127">Windows Form DataGridView 控制項中的資料行類型</span><span class="sxs-lookup"><span data-stu-id="65e8f-127">Column Types in the Windows Forms DataGridView Control</span></span>](column-types-in-the-windows-forms-datagridview-control.md)
+- [<span data-ttu-id="990b3-126">DataGridView 控制項</span><span class="sxs-lookup"><span data-stu-id="990b3-126">DataGridView Control</span></span>](datagridview-control-windows-forms.md)
+- [<span data-ttu-id="990b3-127">Windows Forms DataGridView 控制項中的資料行類型</span><span class="sxs-lookup"><span data-stu-id="990b3-127">Column Types in the Windows Forms DataGridView Control</span></span>](column-types-in-the-windows-forms-datagridview-control.md)

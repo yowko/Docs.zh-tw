@@ -6,43 +6,43 @@ dev_langs:
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
 ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095083"
 ---
-# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="68059-102">傳回數值序列的平均值</span><span class="sxs-lookup"><span data-stu-id="68059-102">Return the Average Value From a Numeric Sequence</span></span>
-<span data-ttu-id="68059-103"><xref:System.Linq.Enumerable.Average%2A> 運算子會計算數值序列的平均值。</span><span class="sxs-lookup"><span data-stu-id="68059-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
+# <a name="return-the-average-value-from-a-numeric-sequence"></a><span data-ttu-id="39ac1-102">傳回數值序列的平均值</span><span class="sxs-lookup"><span data-stu-id="39ac1-102">Return the Average Value From a Numeric Sequence</span></span>
+<span data-ttu-id="39ac1-103"><xref:System.Linq.Enumerable.Average%2A> 運算子會計算數值序列的平均值。</span><span class="sxs-lookup"><span data-stu-id="39ac1-103">The <xref:System.Linq.Enumerable.Average%2A> operator computes the average of a sequence of numeric values.</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="68059-104">整數值 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 `Average` 轉譯會計算為整數，而不是雙精度浮點數 (Double)。</span><span class="sxs-lookup"><span data-stu-id="68059-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
+>  <span data-ttu-id="39ac1-104">整數值 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 的 `Average` 轉譯會計算為整數，而不是雙精度浮點數 (Double)。</span><span class="sxs-lookup"><span data-stu-id="39ac1-104">The [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] translation of `Average` of integer values is computed as an integer, not as a double.</span></span>  
   
-## <a name="example"></a><span data-ttu-id="68059-105">範例</span><span class="sxs-lookup"><span data-stu-id="68059-105">Example</span></span>  
- <span data-ttu-id="68059-106">下列範例會傳回 `Freight` 資料表中 `Orders` 值的平均值。</span><span class="sxs-lookup"><span data-stu-id="68059-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="39ac1-105">範例</span><span class="sxs-lookup"><span data-stu-id="39ac1-105">Example</span></span>  
+ <span data-ttu-id="39ac1-106">下列範例會傳回 `Freight` 資料表中 `Orders` 值的平均值。</span><span class="sxs-lookup"><span data-stu-id="39ac1-106">The following example returns the average of `Freight` values in the `Orders` table.</span></span>  
   
- <span data-ttu-id="68059-107">Northwind 範例資料庫的結果會是 `78.2442`。</span><span class="sxs-lookup"><span data-stu-id="68059-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
+ <span data-ttu-id="39ac1-107">Northwind 範例資料庫的結果會是 `78.2442`。</span><span class="sxs-lookup"><span data-stu-id="39ac1-107">Results from the sample Northwind database would be `78.2442`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#1)]
  [!code-vb[DLinqQueryExamples#1](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#1)]  
   
-## <a name="example"></a><span data-ttu-id="68059-108">範例</span><span class="sxs-lookup"><span data-stu-id="68059-108">Example</span></span>  
- <span data-ttu-id="68059-109">下列範例會傳回 `Products` 資料表中所有 `Products` 的單價平均值。</span><span class="sxs-lookup"><span data-stu-id="68059-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
+## <a name="example"></a><span data-ttu-id="39ac1-108">範例</span><span class="sxs-lookup"><span data-stu-id="39ac1-108">Example</span></span>  
+ <span data-ttu-id="39ac1-109">下列範例會傳回 `Products` 資料表中所有 `Products` 的單價平均值。</span><span class="sxs-lookup"><span data-stu-id="39ac1-109">The following example returns the average of the unit price of all `Products` in the `Products` table.</span></span>  
   
- <span data-ttu-id="68059-110">Northwind 範例資料庫的結果會是 `28.8663`。</span><span class="sxs-lookup"><span data-stu-id="68059-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
+ <span data-ttu-id="39ac1-110">Northwind 範例資料庫的結果會是 `28.8663`。</span><span class="sxs-lookup"><span data-stu-id="39ac1-110">Results from the sample Northwind database would be `28.8663`.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#2)]
  [!code-vb[DLinqQueryExamples#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#2)]  
   
-## <a name="example"></a><span data-ttu-id="68059-111">範例</span><span class="sxs-lookup"><span data-stu-id="68059-111">Example</span></span>  
- <span data-ttu-id="68059-112">下列範例使用 `Average` 運算子，尋找單價高於所屬分類之平均單價的 `Products`。</span><span class="sxs-lookup"><span data-stu-id="68059-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="68059-113">接著，這個範例會以群組顯示結果。</span><span class="sxs-lookup"><span data-stu-id="68059-113">The example then displays the results in groups.</span></span>  
+## <a name="example"></a><span data-ttu-id="39ac1-111">範例</span><span class="sxs-lookup"><span data-stu-id="39ac1-111">Example</span></span>  
+ <span data-ttu-id="39ac1-112">下列範例使用 `Average` 運算子，尋找單價高於所屬分類之平均單價的 `Products`。</span><span class="sxs-lookup"><span data-stu-id="39ac1-112">The following example uses the `Average` operator to find those `Products` whose unit price is higher than the average unit price of the category it belongs to.</span></span> <span data-ttu-id="39ac1-113">接著，這個範例會以群組顯示結果。</span><span class="sxs-lookup"><span data-stu-id="39ac1-113">The example then displays the results in groups.</span></span>  
   
- <span data-ttu-id="68059-114">請注意，因為傳回型別是匿名，所以這個範例需要在 C# 中使用 `var` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="68059-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
+ <span data-ttu-id="39ac1-114">請注意，因為傳回型別是匿名，所以這個範例需要在 C# 中使用 `var` 關鍵字。</span><span class="sxs-lookup"><span data-stu-id="39ac1-114">Note that this example requires the use of the `var` keyword in C#, because the return type is anonymous.</span></span>  
   
  [!code-csharp[DLinqQueryExamples#3](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#3)]
  [!code-vb[DLinqQueryExamples#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#3)]  
   
- <span data-ttu-id="68059-115">如果對 Northwind 範例資料庫執行這個查詢，則結果應該會與下列類似：</span><span class="sxs-lookup"><span data-stu-id="68059-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
+ <span data-ttu-id="39ac1-115">如果對 Northwind 範例資料庫執行這個查詢，則結果應該會與下列類似：</span><span class="sxs-lookup"><span data-stu-id="39ac1-115">If you run this query against the Northwind sample database, the results should resemble of the following:</span></span>  
   
  `1`  
   
@@ -114,6 +114,6 @@ ms.locfileid: "59095083"
   
  `Gravad lax`  
   
-## <a name="see-also"></a><span data-ttu-id="68059-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="68059-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="39ac1-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="39ac1-116">See also</span></span>
 
-- [<span data-ttu-id="68059-117">彙總查詢</span><span class="sxs-lookup"><span data-stu-id="68059-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)
+- [<span data-ttu-id="39ac1-117">彙總查詢</span><span class="sxs-lookup"><span data-stu-id="39ac1-117">Aggregate Queries</span></span>](../../../../../../docs/framework/data/adonet/sql/linq/aggregate-queries.md)

@@ -13,31 +13,31 @@ ms.assetid: 2f5d9e7c-ae51-4155-a435-54347aa1f091
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2399f72b6efcdf69d8ff4bb3bce541073063c750
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096585"
 ---
-# <a name="marshalcleanuperror-mda"></a><span data-ttu-id="6f032-102">marshalCleanupError MDA</span><span class="sxs-lookup"><span data-stu-id="6f032-102">marshalCleanupError MDA</span></span>
-<span data-ttu-id="6f032-103">如果通用語言執行平台 (CLR) 在嘗試清除用來封送處理本機與 Managed 程式碼界限間之資料類型的暫存結構和記憶體時，發生錯誤，就會啟用 `marshalCleanupError` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="6f032-103">The `marshalCleanupError` managed debugging assistant (MDA) is activated when the common language runtime (CLR) encounters an error while attempting to clean up temporary structures and memory used for marshaling data types between native and managed code boundaries.</span></span>  
+# <a name="marshalcleanuperror-mda"></a><span data-ttu-id="57ded-102">marshalCleanupError MDA</span><span class="sxs-lookup"><span data-stu-id="57ded-102">marshalCleanupError MDA</span></span>
+<span data-ttu-id="57ded-103">如果通用語言執行平台 (CLR) 在嘗試清除用來封送處理本機與 Managed 程式碼界限間之資料類型的暫存結構和記憶體時，發生錯誤，就會啟用 `marshalCleanupError` Managed 偵錯助理 (MDA)。</span><span class="sxs-lookup"><span data-stu-id="57ded-103">The `marshalCleanupError` managed debugging assistant (MDA) is activated when the common language runtime (CLR) encounters an error while attempting to clean up temporary structures and memory used for marshaling data types between native and managed code boundaries.</span></span>  
   
-## <a name="symptoms"></a><span data-ttu-id="6f032-104">徵兆</span><span class="sxs-lookup"><span data-stu-id="6f032-104">Symptoms</span></span>  
- <span data-ttu-id="6f032-105">進行本機與 Managed 程式碼轉換時發生記憶體流失、執行緒文化特性之類的執行階段狀態未還原，或是 <xref:System.Runtime.InteropServices.SafeHandle> 清除發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="6f032-105">A memory leak occurs when making native and managed code transitions, runtime state such as thread culture is not restored, or errors occur in <xref:System.Runtime.InteropServices.SafeHandle> cleanup.</span></span>  
+## <a name="symptoms"></a><span data-ttu-id="57ded-104">徵兆</span><span class="sxs-lookup"><span data-stu-id="57ded-104">Symptoms</span></span>  
+ <span data-ttu-id="57ded-105">進行本機與 Managed 程式碼轉換時發生記憶體流失、執行緒文化特性之類的執行階段狀態未還原，或是 <xref:System.Runtime.InteropServices.SafeHandle> 清除發生錯誤。</span><span class="sxs-lookup"><span data-stu-id="57ded-105">A memory leak occurs when making native and managed code transitions, runtime state such as thread culture is not restored, or errors occur in <xref:System.Runtime.InteropServices.SafeHandle> cleanup.</span></span>  
   
-## <a name="cause"></a><span data-ttu-id="6f032-106">原因</span><span class="sxs-lookup"><span data-stu-id="6f032-106">Cause</span></span>  
- <span data-ttu-id="6f032-107">清除暫存結構時，發生非預期的錯誤。</span><span class="sxs-lookup"><span data-stu-id="6f032-107">An unexpected error occurred while cleaning up temporary structures.</span></span>  
+## <a name="cause"></a><span data-ttu-id="57ded-106">原因</span><span class="sxs-lookup"><span data-stu-id="57ded-106">Cause</span></span>  
+ <span data-ttu-id="57ded-107">清除暫存結構時，發生非預期的錯誤。</span><span class="sxs-lookup"><span data-stu-id="57ded-107">An unexpected error occurred while cleaning up temporary structures.</span></span>  
   
-## <a name="resolution"></a><span data-ttu-id="6f032-108">解決方式</span><span class="sxs-lookup"><span data-stu-id="6f032-108">Resolution</span></span>  
- <span data-ttu-id="6f032-109">檢閱所有 <xref:System.Runtime.InteropServices.SafeHandle> 建構函式、完成項和自訂封送處理器實作是否有錯誤。</span><span class="sxs-lookup"><span data-stu-id="6f032-109">Review all <xref:System.Runtime.InteropServices.SafeHandle> destructor, finalizer, and custom marshaler implementations for errors.</span></span>  
+## <a name="resolution"></a><span data-ttu-id="57ded-108">解決方式</span><span class="sxs-lookup"><span data-stu-id="57ded-108">Resolution</span></span>  
+ <span data-ttu-id="57ded-109">檢閱所有 <xref:System.Runtime.InteropServices.SafeHandle> 建構函式、完成項和自訂封送處理器實作是否有錯誤。</span><span class="sxs-lookup"><span data-stu-id="57ded-109">Review all <xref:System.Runtime.InteropServices.SafeHandle> destructor, finalizer, and custom marshaler implementations for errors.</span></span>  
   
-## <a name="effect-on-the-runtime"></a><span data-ttu-id="6f032-110">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="6f032-110">Effect on the Runtime</span></span>  
- <span data-ttu-id="6f032-111">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="6f032-111">This MDA has no effect on the CLR.</span></span>  
+## <a name="effect-on-the-runtime"></a><span data-ttu-id="57ded-110">對執行階段的影響</span><span class="sxs-lookup"><span data-stu-id="57ded-110">Effect on the Runtime</span></span>  
+ <span data-ttu-id="57ded-111">此 MDA 對 CLR 沒有影響。</span><span class="sxs-lookup"><span data-stu-id="57ded-111">This MDA has no effect on the CLR.</span></span>  
   
-## <a name="output"></a><span data-ttu-id="6f032-112">Output</span><span class="sxs-lookup"><span data-stu-id="6f032-112">Output</span></span>  
- <span data-ttu-id="6f032-113">出現一則訊息，提報在清除期間失敗的作業。</span><span class="sxs-lookup"><span data-stu-id="6f032-113">A message reporting the operation that failed during cleanup.</span></span>  
+## <a name="output"></a><span data-ttu-id="57ded-112">Output</span><span class="sxs-lookup"><span data-stu-id="57ded-112">Output</span></span>  
+ <span data-ttu-id="57ded-113">出現一則訊息，提報在清除期間失敗的作業。</span><span class="sxs-lookup"><span data-stu-id="57ded-113">A message reporting the operation that failed during cleanup.</span></span>  
   
-## <a name="configuration"></a><span data-ttu-id="6f032-114">組態</span><span class="sxs-lookup"><span data-stu-id="6f032-114">Configuration</span></span>  
+## <a name="configuration"></a><span data-ttu-id="57ded-114">組態</span><span class="sxs-lookup"><span data-stu-id="57ded-114">Configuration</span></span>  
   
 ```xml  
 <mdaConfig>  
@@ -47,8 +47,8 @@ ms.locfileid: "59096585"
 </mdaConfig>  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="6f032-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f032-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="57ded-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="57ded-115">See also</span></span>
 
 - <xref:System.Runtime.InteropServices.MarshalAsAttribute>
-- [<span data-ttu-id="6f032-116">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="6f032-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
-- [<span data-ttu-id="6f032-117">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="6f032-117">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)
+- [<span data-ttu-id="57ded-116">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="57ded-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="57ded-117">Interop 封送處理</span><span class="sxs-lookup"><span data-stu-id="57ded-117">Interop Marshaling</span></span>](../../../docs/framework/interop/interop-marshaling.md)

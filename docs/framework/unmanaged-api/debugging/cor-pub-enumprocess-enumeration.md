@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 02ff60852a85d003deb68cae96a184ac8d61c65f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089402"
 ---
-# <a name="corpubenumprocess-enumeration"></a><span data-ttu-id="3ce60-102">COR_PUB_ENUMPROCESS 列舉</span><span class="sxs-lookup"><span data-stu-id="3ce60-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
-<span data-ttu-id="3ce60-103">識別所要列舉的類型。</span><span class="sxs-lookup"><span data-stu-id="3ce60-103">Identifies the type of process to be enumerated.</span></span>  
+# <a name="corpubenumprocess-enumeration"></a><span data-ttu-id="527f7-102">COR_PUB_ENUMPROCESS 列舉</span><span class="sxs-lookup"><span data-stu-id="527f7-102">COR_PUB_ENUMPROCESS Enumeration</span></span>
+<span data-ttu-id="527f7-103">識別所要列舉的類型。</span><span class="sxs-lookup"><span data-stu-id="527f7-103">Identifies the type of process to be enumerated.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="3ce60-104">語法</span><span class="sxs-lookup"><span data-stu-id="3ce60-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="527f7-104">語法</span><span class="sxs-lookup"><span data-stu-id="527f7-104">Syntax</span></span>  
   
 ```  
 typedef enum {  
@@ -34,24 +34,24 @@ typedef enum {
 } COR_PUB_ENUMPROCESS;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="3ce60-105">成員</span><span class="sxs-lookup"><span data-stu-id="3ce60-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="527f7-105">成員</span><span class="sxs-lookup"><span data-stu-id="527f7-105">Members</span></span>  
   
-|<span data-ttu-id="3ce60-106">成員名稱</span><span class="sxs-lookup"><span data-stu-id="3ce60-106">Member name</span></span>|<span data-ttu-id="3ce60-107">描述</span><span class="sxs-lookup"><span data-stu-id="3ce60-107">Description</span></span>|  
+|<span data-ttu-id="527f7-106">成員名稱</span><span class="sxs-lookup"><span data-stu-id="527f7-106">Member name</span></span>|<span data-ttu-id="527f7-107">描述</span><span class="sxs-lookup"><span data-stu-id="527f7-107">Description</span></span>|  
 |-----------------|-----------------|  
-|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="3ce60-108">受管理的程序。</span><span class="sxs-lookup"><span data-stu-id="3ce60-108">A managed process.</span></span>|  
+|`COR_PUB_MANAGEDONLY`|<span data-ttu-id="527f7-108">受管理的程序。</span><span class="sxs-lookup"><span data-stu-id="527f7-108">A managed process.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="3ce60-109">備註</span><span class="sxs-lookup"><span data-stu-id="3ce60-109">Remarks</span></span>  
- <span data-ttu-id="3ce60-110">目前版本的 unmanaged 偵錯 API 列舉只受管理的程序。</span><span class="sxs-lookup"><span data-stu-id="3ce60-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="527f7-109">備註</span><span class="sxs-lookup"><span data-stu-id="527f7-109">Remarks</span></span>  
+ <span data-ttu-id="527f7-110">目前版本的 unmanaged 偵錯 API 列舉只受管理的程序。</span><span class="sxs-lookup"><span data-stu-id="527f7-110">The current version of the unmanaged debugging API enumerates only managed processes.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="3ce60-111">需求</span><span class="sxs-lookup"><span data-stu-id="3ce60-111">Requirements</span></span>  
- <span data-ttu-id="3ce60-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="3ce60-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="527f7-111">需求</span><span class="sxs-lookup"><span data-stu-id="527f7-111">Requirements</span></span>  
+ <span data-ttu-id="527f7-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="527f7-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="3ce60-113">**標頭：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="3ce60-113">**Header:** CorPub.idl, CorPub.h</span></span>  
+ <span data-ttu-id="527f7-113">**標頭：** CorPub.idl CorPub.h</span><span class="sxs-lookup"><span data-stu-id="527f7-113">**Header:** CorPub.idl, CorPub.h</span></span>  
   
- <span data-ttu-id="3ce60-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="3ce60-114">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="527f7-114">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="527f7-114">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="3ce60-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="3ce60-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="527f7-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="527f7-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="3ce60-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3ce60-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="527f7-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="527f7-116">See also</span></span>
 
-- [<span data-ttu-id="3ce60-117">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="3ce60-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)
+- [<span data-ttu-id="527f7-117">偵錯列舉</span><span class="sxs-lookup"><span data-stu-id="527f7-117">Debugging Enumerations</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-enumerations.md)

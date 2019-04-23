@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5b4210bda7d41b190f1025b62132c5df896a2a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088388"
 ---
-# <a name="igchostsetvirtualmemlimit-method"></a><span data-ttu-id="ef04f-102">IGCHost::SetVirtualMemLimit 方法</span><span class="sxs-lookup"><span data-stu-id="ef04f-102">IGCHost::SetVirtualMemLimit Method</span></span>
-<span data-ttu-id="ef04f-103">設定執行階段的虛擬記憶體的大小上限。</span><span class="sxs-lookup"><span data-stu-id="ef04f-103">Sets the maximum size of the runtime's virtual memory.</span></span>  
+# <a name="igchostsetvirtualmemlimit-method"></a><span data-ttu-id="6f039-102">IGCHost::SetVirtualMemLimit 方法</span><span class="sxs-lookup"><span data-stu-id="6f039-102">IGCHost::SetVirtualMemLimit Method</span></span>
+<span data-ttu-id="6f039-103">設定執行階段的虛擬記憶體的大小上限。</span><span class="sxs-lookup"><span data-stu-id="6f039-103">Sets the maximum size of the runtime's virtual memory.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="ef04f-104">語法</span><span class="sxs-lookup"><span data-stu-id="ef04f-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="6f039-104">語法</span><span class="sxs-lookup"><span data-stu-id="6f039-104">Syntax</span></span>  
   
 ```  
 HRESULT SetVirtualMemLimit (  
@@ -35,22 +35,22 @@ HRESULT SetVirtualMemLimit (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="ef04f-105">參數</span><span class="sxs-lookup"><span data-stu-id="ef04f-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="6f039-105">參數</span><span class="sxs-lookup"><span data-stu-id="6f039-105">Parameters</span></span>  
  `sztMaxVirtualMemMB`  
- <span data-ttu-id="ef04f-106">[in]最大大小 （mb），執行階段的虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="ef04f-106">[in] The maximum size, in megabytes, of the runtime's virtual memory.</span></span>  
+ <span data-ttu-id="6f039-106">[in]最大大小 （mb），執行階段的虛擬記憶體。</span><span class="sxs-lookup"><span data-stu-id="6f039-106">[in] The maximum size, in megabytes, of the runtime's virtual memory.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="ef04f-107">備註</span><span class="sxs-lookup"><span data-stu-id="ef04f-107">Remarks</span></span>  
- <span data-ttu-id="ef04f-108">執行階段的虛擬記憶體大小上限可以動態變更。</span><span class="sxs-lookup"><span data-stu-id="ef04f-108">The maximum size of the runtime's virtual memory can be changed dynamically.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="6f039-107">備註</span><span class="sxs-lookup"><span data-stu-id="6f039-107">Remarks</span></span>  
+ <span data-ttu-id="6f039-108">執行階段的虛擬記憶體大小上限可以動態變更。</span><span class="sxs-lookup"><span data-stu-id="6f039-108">The maximum size of the runtime's virtual memory can be changed dynamically.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="ef04f-109">需求</span><span class="sxs-lookup"><span data-stu-id="ef04f-109">Requirements</span></span>  
- <span data-ttu-id="ef04f-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="ef04f-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="6f039-109">需求</span><span class="sxs-lookup"><span data-stu-id="6f039-109">Requirements</span></span>  
+ <span data-ttu-id="6f039-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="6f039-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="ef04f-111">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="ef04f-111">**Header:** GCHost.idl, GCHost.h</span></span>  
+ <span data-ttu-id="6f039-111">**標頭：** GCHost.idl GCHost.h</span><span class="sxs-lookup"><span data-stu-id="6f039-111">**Header:** GCHost.idl, GCHost.h</span></span>  
   
- <span data-ttu-id="ef04f-112">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="ef04f-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="6f039-112">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="6f039-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="ef04f-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="ef04f-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="6f039-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="6f039-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="ef04f-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="ef04f-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="6f039-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="6f039-114">See also</span></span>
 
-- [<span data-ttu-id="ef04f-115">IGCHost 介面</span><span class="sxs-lookup"><span data-stu-id="ef04f-115">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)
+- [<span data-ttu-id="6f039-115">IGCHost 介面</span><span class="sxs-lookup"><span data-stu-id="6f039-115">IGCHost Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/igchost-interface.md)

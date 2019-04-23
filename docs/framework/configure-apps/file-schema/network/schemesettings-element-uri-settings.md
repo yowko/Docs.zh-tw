@@ -1,68 +1,68 @@
 ---
-title: <schemeSettings> 項目 （Uri 設定）
+title: <schemeSettings> 項目 (URI 設定)
 ms.date: 03/30/2017
 ms.assetid: 0ae45c6e-8c4c-4c0d-8b9f-a93824648890
 ms.openlocfilehash: 8dc505d8a9de4e8939372af61b23652551c36530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59094226"
 ---
-# <a name="schemesettings-element-uri-settings"></a><span data-ttu-id="931c8-102">\<schemeSettings > 項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="931c8-102">\<schemeSettings> Element (Uri Settings)</span></span>
-<span data-ttu-id="931c8-103">指定如何針對特定配置剖析 <xref:System.Uri>。</span><span class="sxs-lookup"><span data-stu-id="931c8-103">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>  
+# <a name="schemesettings-element-uri-settings"></a><span data-ttu-id="a474f-102">\<schemeSettings > 項目 （Uri 設定）</span><span class="sxs-lookup"><span data-stu-id="a474f-102">\<schemeSettings> Element (Uri Settings)</span></span>
+<span data-ttu-id="a474f-103">指定如何針對特定配置剖析 <xref:System.Uri>。</span><span class="sxs-lookup"><span data-stu-id="a474f-103">Specifies how a <xref:System.Uri> will be parsed for specific schemes.</span></span>  
   
- <span data-ttu-id="931c8-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="931c8-104">\<configuration></span></span>  
-<span data-ttu-id="931c8-105">\<uri></span><span class="sxs-lookup"><span data-stu-id="931c8-105">\<uri></span></span>  
-<span data-ttu-id="931c8-106">\<schemeSettings></span><span class="sxs-lookup"><span data-stu-id="931c8-106">\<schemeSettings></span></span>  
+ <span data-ttu-id="a474f-104">\<configuration></span><span class="sxs-lookup"><span data-stu-id="a474f-104">\<configuration></span></span>  
+<span data-ttu-id="a474f-105">\<uri></span><span class="sxs-lookup"><span data-stu-id="a474f-105">\<uri></span></span>  
+<span data-ttu-id="a474f-106">\<schemeSettings></span><span class="sxs-lookup"><span data-stu-id="a474f-106">\<schemeSettings></span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="931c8-107">語法</span><span class="sxs-lookup"><span data-stu-id="931c8-107">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="a474f-107">語法</span><span class="sxs-lookup"><span data-stu-id="a474f-107">Syntax</span></span>  
   
 ```xml  
 <schemeSettings>   
 </schemeSettings>  
 ```  
   
-## <a name="attributes-and-elements"></a><span data-ttu-id="931c8-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="931c8-108">Attributes and Elements</span></span>  
- <span data-ttu-id="931c8-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="931c8-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
+## <a name="attributes-and-elements"></a><span data-ttu-id="a474f-108">屬性和項目</span><span class="sxs-lookup"><span data-stu-id="a474f-108">Attributes and Elements</span></span>  
+ <span data-ttu-id="a474f-109">下列各節描述屬性、子項目和父項目。</span><span class="sxs-lookup"><span data-stu-id="a474f-109">The following sections describe attributes, child elements, and parent elements.</span></span>  
   
-### <a name="attributes"></a><span data-ttu-id="931c8-110">屬性</span><span class="sxs-lookup"><span data-stu-id="931c8-110">Attributes</span></span>  
- <span data-ttu-id="931c8-111">None</span><span class="sxs-lookup"><span data-stu-id="931c8-111">None</span></span>  
+### <a name="attributes"></a><span data-ttu-id="a474f-110">屬性</span><span class="sxs-lookup"><span data-stu-id="a474f-110">Attributes</span></span>  
+ <span data-ttu-id="a474f-111">None</span><span class="sxs-lookup"><span data-stu-id="a474f-111">None</span></span>  
   
-### <a name="child-elements"></a><span data-ttu-id="931c8-112">子元素</span><span class="sxs-lookup"><span data-stu-id="931c8-112">Child Elements</span></span>  
+### <a name="child-elements"></a><span data-ttu-id="a474f-112">子元素</span><span class="sxs-lookup"><span data-stu-id="a474f-112">Child Elements</span></span>  
   
-|**<span data-ttu-id="931c8-113">項目</span><span class="sxs-lookup"><span data-stu-id="931c8-113">Element</span></span>**|**<span data-ttu-id="931c8-114">描述</span><span class="sxs-lookup"><span data-stu-id="931c8-114">Description</span></span>**|  
+|<span data-ttu-id="a474f-113">**目**</span><span class="sxs-lookup"><span data-stu-id="a474f-113">**Element**</span></span>|<span data-ttu-id="a474f-114">**描述**</span><span class="sxs-lookup"><span data-stu-id="a474f-114">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="931c8-115">add</span><span class="sxs-lookup"><span data-stu-id="931c8-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="931c8-116">新增為結構描述名稱的配置設定。</span><span class="sxs-lookup"><span data-stu-id="931c8-116">Adds a scheme setting for a scheme name.</span></span>|  
-|[<span data-ttu-id="931c8-117">清除</span><span class="sxs-lookup"><span data-stu-id="931c8-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="931c8-118">清除所有現有的配置設定。</span><span class="sxs-lookup"><span data-stu-id="931c8-118">Clears all existing scheme settings.</span></span>|  
-|[<span data-ttu-id="931c8-119">remove</span><span class="sxs-lookup"><span data-stu-id="931c8-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="931c8-120">移除結構描述設定的配置名稱。</span><span class="sxs-lookup"><span data-stu-id="931c8-120">Removes a scheme setting for a scheme name.</span></span>|  
+|[<span data-ttu-id="a474f-115">add</span><span class="sxs-lookup"><span data-stu-id="a474f-115">add</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="a474f-116">新增為結構描述名稱的配置設定。</span><span class="sxs-lookup"><span data-stu-id="a474f-116">Adds a scheme setting for a scheme name.</span></span>|  
+|[<span data-ttu-id="a474f-117">clear</span><span class="sxs-lookup"><span data-stu-id="a474f-117">clear</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="a474f-118">清除所有現有的配置設定。</span><span class="sxs-lookup"><span data-stu-id="a474f-118">Clears all existing scheme settings.</span></span>|  
+|[<span data-ttu-id="a474f-119">remove</span><span class="sxs-lookup"><span data-stu-id="a474f-119">remove</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-schemesettings-uri-settings.md)|<span data-ttu-id="a474f-120">移除結構描述設定的配置名稱。</span><span class="sxs-lookup"><span data-stu-id="a474f-120">Removes a scheme setting for a scheme name.</span></span>|  
   
-### <a name="parent-elements"></a><span data-ttu-id="931c8-121">父項目</span><span class="sxs-lookup"><span data-stu-id="931c8-121">Parent Elements</span></span>  
+### <a name="parent-elements"></a><span data-ttu-id="a474f-121">父項目</span><span class="sxs-lookup"><span data-stu-id="a474f-121">Parent Elements</span></span>  
   
-|**<span data-ttu-id="931c8-122">項目</span><span class="sxs-lookup"><span data-stu-id="931c8-122">Element</span></span>**|**<span data-ttu-id="931c8-123">描述</span><span class="sxs-lookup"><span data-stu-id="931c8-123">Description</span></span>**|  
+|<span data-ttu-id="a474f-122">**目**</span><span class="sxs-lookup"><span data-stu-id="a474f-122">**Element**</span></span>|<span data-ttu-id="a474f-123">**描述**</span><span class="sxs-lookup"><span data-stu-id="a474f-123">**Description**</span></span>|  
 |-----------------|---------------------|  
-|[<span data-ttu-id="931c8-124">uri</span><span class="sxs-lookup"><span data-stu-id="931c8-124">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="931c8-125">包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。</span><span class="sxs-lookup"><span data-stu-id="931c8-125">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
+|[<span data-ttu-id="a474f-124">uri</span><span class="sxs-lookup"><span data-stu-id="a474f-124">uri</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/uri-element-uri-settings.md)|<span data-ttu-id="a474f-125">包含指定.NET Framework 如何處理使用統一資源識別元 (Uri) 表示的 web 位址的設定。</span><span class="sxs-lookup"><span data-stu-id="a474f-125">Contains settings that specify how the .NET Framework handles web addresses expressed using uniform resource identifiers (URIs).</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="931c8-126">備註</span><span class="sxs-lookup"><span data-stu-id="931c8-126">Remarks</span></span>  
- <span data-ttu-id="931c8-127">根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，然後再執行路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="931c8-127">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="931c8-128">這被實作為安全性機制，抵禦攻擊，如下所示：</span><span class="sxs-lookup"><span data-stu-id="931c8-128">This was implemented as a security mechanism against attacks like the following:</span></span>  
+## <a name="remarks"></a><span data-ttu-id="a474f-126">備註</span><span class="sxs-lookup"><span data-stu-id="a474f-126">Remarks</span></span>  
+ <span data-ttu-id="a474f-127">根據預設，<xref:System.Uri?displayProperty=nameWithType>類別取消逸出百分比編碼路徑分隔符號，然後再執行路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="a474f-127">By default, the <xref:System.Uri?displayProperty=nameWithType> class un-escapes percent encoded path delimiters before executing path compression.</span></span> <span data-ttu-id="a474f-128">這被實作為安全性機制，抵禦攻擊，如下所示：</span><span class="sxs-lookup"><span data-stu-id="a474f-128">This was implemented as a security mechanism against attacks like the following:</span></span>  
   
  `http://www.contoso.com/..%2F..%2F/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="931c8-129">如果這個 URI 會傳遞到模組不會處理百分比編碼字元正確，可能會造成伺服器正在執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="931c8-129">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
+ <span data-ttu-id="a474f-129">如果這個 URI 會傳遞到模組不會處理百分比編碼字元正確，可能會造成伺服器正在執行下列命令：</span><span class="sxs-lookup"><span data-stu-id="a474f-129">If this URI gets passed down to modules not handling percent encoded characters correctly, it could result in the following command being executed by the server:</span></span>  
   
  `c:\Windows\System32\cmd.exe /c dir c:\`  
   
- <span data-ttu-id="931c8-130">基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="931c8-130">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="931c8-131">傳遞至以上惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式結果，在下列 URI:</span><span class="sxs-lookup"><span data-stu-id="931c8-131">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
+ <span data-ttu-id="a474f-130">基於這個理由，<xref:System.Uri?displayProperty=nameWithType>類別第一個取消逸出路徑分隔符號，然後再套用路徑壓縮。</span><span class="sxs-lookup"><span data-stu-id="a474f-130">For this reason, <xref:System.Uri?displayProperty=nameWithType> class first un-escapes path delimiters and then applies path compression.</span></span> <span data-ttu-id="a474f-131">傳遞至以上惡意 URL 的結果<xref:System.Uri?displayProperty=nameWithType>類別建構函式結果，在下列 URI:</span><span class="sxs-lookup"><span data-stu-id="a474f-131">The result of passing the malicious URL above to <xref:System.Uri?displayProperty=nameWithType> class constructor results in the following URI:</span></span>  
   
  `http://www.microsoft.com/Windows/System32/cmd.exe?/c+dir+c:\`  
   
- <span data-ttu-id="931c8-132">此預設行為可以修改為不取消逸出百分比編碼的路徑分隔符號使用 schemeSettings 組態選項的特定結構描述中。</span><span class="sxs-lookup"><span data-stu-id="931c8-132">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
+ <span data-ttu-id="a474f-132">此預設行為可以修改為不取消逸出百分比編碼的路徑分隔符號使用 schemeSettings 組態選項的特定結構描述中。</span><span class="sxs-lookup"><span data-stu-id="a474f-132">This default behavior can be modified to not un-escape percent encoded path delimiters using the schemeSettings configuration option for a specific scheme.</span></span>  
   
-## <a name="configuration-files"></a><span data-ttu-id="931c8-133">組態檔</span><span class="sxs-lookup"><span data-stu-id="931c8-133">Configuration Files</span></span>  
- <span data-ttu-id="931c8-134">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="931c8-134">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
+## <a name="configuration-files"></a><span data-ttu-id="a474f-133">組態檔</span><span class="sxs-lookup"><span data-stu-id="a474f-133">Configuration Files</span></span>  
+ <span data-ttu-id="a474f-134">此項目可以用於應用程式組態檔或電腦組態檔 (Machine.config)。</span><span class="sxs-lookup"><span data-stu-id="a474f-134">This element can be used in the application configuration file or the machine configuration file (Machine.config).</span></span>  
   
-## <a name="example"></a><span data-ttu-id="931c8-135">範例</span><span class="sxs-lookup"><span data-stu-id="931c8-135">Example</span></span>  
- <span data-ttu-id="931c8-136">下列範例顯示所使用的組態<xref:System.Uri>類別，以支援不逸出的 http 配置的百分比編碼的路徑分隔符號。</span><span class="sxs-lookup"><span data-stu-id="931c8-136">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
+## <a name="example"></a><span data-ttu-id="a474f-135">範例</span><span class="sxs-lookup"><span data-stu-id="a474f-135">Example</span></span>  
+ <span data-ttu-id="a474f-136">下列範例顯示所使用的組態<xref:System.Uri>類別，以支援不逸出的 http 配置的百分比編碼的路徑分隔符號。</span><span class="sxs-lookup"><span data-stu-id="a474f-136">The following example shows a configuration used by the <xref:System.Uri> class to support not escaping percent-encoded path delimiters for the http scheme.</span></span>  
   
 ```xml  
 <configuration>  
@@ -74,16 +74,16 @@ ms.locfileid: "59094226"
 </configuration>  
 ```  
   
-## <a name="element-information"></a><span data-ttu-id="931c8-137">項目資訊</span><span class="sxs-lookup"><span data-stu-id="931c8-137">Element Information</span></span>  
+## <a name="element-information"></a><span data-ttu-id="a474f-137">項目資訊</span><span class="sxs-lookup"><span data-stu-id="a474f-137">Element Information</span></span>  
   
 |||
 |-|-|  
-|<span data-ttu-id="931c8-138">命名空間</span><span class="sxs-lookup"><span data-stu-id="931c8-138">Namespace</span></span>|<span data-ttu-id="931c8-139">系統</span><span class="sxs-lookup"><span data-stu-id="931c8-139">System</span></span>|  
-|<span data-ttu-id="931c8-140">結構描述名稱</span><span class="sxs-lookup"><span data-stu-id="931c8-140">Schema Name</span></span>||  
-|<span data-ttu-id="931c8-141">驗證檔</span><span class="sxs-lookup"><span data-stu-id="931c8-141">Validation File</span></span>||  
-|<span data-ttu-id="931c8-142">可以是空白</span><span class="sxs-lookup"><span data-stu-id="931c8-142">Can be Empty</span></span>||  
+|<span data-ttu-id="a474f-138">命名空間</span><span class="sxs-lookup"><span data-stu-id="a474f-138">Namespace</span></span>|<span data-ttu-id="a474f-139">系統</span><span class="sxs-lookup"><span data-stu-id="a474f-139">System</span></span>|  
+|<span data-ttu-id="a474f-140">結構描述名稱</span><span class="sxs-lookup"><span data-stu-id="a474f-140">Schema Name</span></span>||  
+|<span data-ttu-id="a474f-141">驗證檔</span><span class="sxs-lookup"><span data-stu-id="a474f-141">Validation File</span></span>||  
+|<span data-ttu-id="a474f-142">可以是空白</span><span class="sxs-lookup"><span data-stu-id="a474f-142">Can be Empty</span></span>||  
   
-## <a name="see-also"></a><span data-ttu-id="931c8-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="931c8-143">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="a474f-143">另請參閱</span><span class="sxs-lookup"><span data-stu-id="a474f-143">See also</span></span>
 
 - <xref:System.Configuration.SchemeSettingElement?displayProperty=nameWithType>
 - <xref:System.Configuration.SchemeSettingElementCollection?displayProperty=nameWithType>
@@ -91,4 +91,4 @@ ms.locfileid: "59094226"
 - <xref:System.Configuration.UriSection.SchemeSettings%2A?displayProperty=nameWithType>
 - <xref:System.GenericUriParserOptions?displayProperty=nameWithType>
 - <xref:System.Uri?displayProperty=nameWithType>
-- [<span data-ttu-id="931c8-144">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="931c8-144">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)
+- [<span data-ttu-id="a474f-144">網路設定結構描述</span><span class="sxs-lookup"><span data-stu-id="a474f-144">Network Settings Schema</span></span>](../../../../../docs/framework/configure-apps/file-schema/network/index.md)

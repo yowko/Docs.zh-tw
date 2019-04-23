@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets, synchronous server sockets
 ms.assetid: 5916c764-879f-4716-99fb-1d21c6237f1c
 ms.openlocfilehash: 637301385562247ef9c3dee4d01da319c0cd4d37
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095435"
 ---
-# <a name="synchronous-server-socket-example"></a><span data-ttu-id="8da22-102">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="8da22-102">Synchronous Server Socket Example</span></span>
-<span data-ttu-id="8da22-103">下列範例程式會建立從用戶端接收連線要求的伺服器。</span><span class="sxs-lookup"><span data-stu-id="8da22-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="8da22-104">伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="8da22-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="8da22-105">應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。</span><span class="sxs-lookup"><span data-stu-id="8da22-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="8da22-106">用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。</span><span class="sxs-lookup"><span data-stu-id="8da22-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
+# <a name="synchronous-server-socket-example"></a><span data-ttu-id="42703-102">同步伺服器通訊端範例</span><span class="sxs-lookup"><span data-stu-id="42703-102">Synchronous Server Socket Example</span></span>
+<span data-ttu-id="42703-103">下列範例程式會建立從用戶端接收連線要求的伺服器。</span><span class="sxs-lookup"><span data-stu-id="42703-103">The following example program creates a server that receives connection requests from clients.</span></span> <span data-ttu-id="42703-104">伺服器已內建非同步通訊端，因此在其等候來自用戶端的連接時，會暫停執行伺服器應用程式。</span><span class="sxs-lookup"><span data-stu-id="42703-104">The server is built with a synchronous socket, so execution of the server application is suspended while it waits for a connection from a client.</span></span> <span data-ttu-id="42703-105">應用程式會從用戶端收到一個字串，在主控台中顯示字串，然後將字串回應回用戶端。</span><span class="sxs-lookup"><span data-stu-id="42703-105">The application receives a string from the client, displays the string on the console, and then echoes the string back to the client.</span></span> <span data-ttu-id="42703-106">用戶端的字串必須包含字串 "\<EOF>" 來表示訊息結束。</span><span class="sxs-lookup"><span data-stu-id="42703-106">The string from the client must contain the string "\<EOF>" to signal the end of the message.</span></span>  
   
 ```vb  
 Imports System  
@@ -155,8 +155,8 @@ public class SynchronousSocketListener {
 }  
 ```  
   
-## <a name="see-also"></a><span data-ttu-id="8da22-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="8da22-107">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="42703-107">另請參閱</span><span class="sxs-lookup"><span data-stu-id="42703-107">See also</span></span>
 
-- [<span data-ttu-id="8da22-108">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="8da22-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
-- [<span data-ttu-id="8da22-109">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="8da22-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
-- [<span data-ttu-id="8da22-110">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="8da22-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
+- [<span data-ttu-id="42703-108">同步用戶端通訊端範例</span><span class="sxs-lookup"><span data-stu-id="42703-108">Synchronous Client Socket Example</span></span>](../../../docs/framework/network-programming/synchronous-client-socket-example.md)
+- [<span data-ttu-id="42703-109">使用同步伺服器通訊端</span><span class="sxs-lookup"><span data-stu-id="42703-109">Using a Synchronous Server Socket</span></span>](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
+- [<span data-ttu-id="42703-110">通訊端程式碼範例</span><span class="sxs-lookup"><span data-stu-id="42703-110">Socket Code Examples</span></span>](../../../docs/framework/network-programming/socket-code-examples.md)
