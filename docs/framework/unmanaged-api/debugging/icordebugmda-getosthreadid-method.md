@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 51d29fed3d53611daa0042251ce09638399f7ed5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195796"
 ---
-# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="2990e-102">ICorDebugMDA::GetOSThreadId 方法</span><span class="sxs-lookup"><span data-stu-id="2990e-102">ICorDebugMDA::GetOSThreadId Method</span></span>
-<span data-ttu-id="2990e-103">取得所表示的 managed 偵錯助理 (MDA) 的作業系統 (OS) 執行緒識別碼[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)正在執行。</span><span class="sxs-lookup"><span data-stu-id="2990e-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
+# <a name="icordebugmdagetosthreadid-method"></a><span data-ttu-id="e0d58-102">ICorDebugMDA::GetOSThreadId 方法</span><span class="sxs-lookup"><span data-stu-id="e0d58-102">ICorDebugMDA::GetOSThreadId Method</span></span>
+<span data-ttu-id="e0d58-103">取得所表示的 managed 偵錯助理 (MDA) 的作業系統 (OS) 執行緒識別碼[ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)正在執行。</span><span class="sxs-lookup"><span data-stu-id="e0d58-103">Gets the operating system (OS) thread identifier upon which the managed debugging assistant (MDA) represented by [ICorDebugMDA](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md) is executing.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="2990e-104">語法</span><span class="sxs-lookup"><span data-stu-id="2990e-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="e0d58-104">語法</span><span class="sxs-lookup"><span data-stu-id="e0d58-104">Syntax</span></span>  
   
 ```  
 HRESULT GetOSThreadId (  
@@ -35,23 +35,23 @@ HRESULT GetOSThreadId (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="2990e-105">參數</span><span class="sxs-lookup"><span data-stu-id="2990e-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="e0d58-105">參數</span><span class="sxs-lookup"><span data-stu-id="e0d58-105">Parameters</span></span>  
  `pOsTid`  
- <span data-ttu-id="2990e-106">[out]OS 執行緒識別項指標。</span><span class="sxs-lookup"><span data-stu-id="2990e-106">[out] A pointer to the OS thread identifier.</span></span>  
+ <span data-ttu-id="e0d58-106">[out]OS 執行緒識別項指標。</span><span class="sxs-lookup"><span data-stu-id="e0d58-106">[out] A pointer to the OS thread identifier.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="2990e-107">備註</span><span class="sxs-lookup"><span data-stu-id="2990e-107">Remarks</span></span>  
- <span data-ttu-id="2990e-108">OS 執行緒代替 ICorDebugThread 中，以允許在原生執行緒或尚未輸入 managed 程式碼，managed 執行緒上，會引發 MDA 的情況。</span><span class="sxs-lookup"><span data-stu-id="2990e-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="e0d58-107">備註</span><span class="sxs-lookup"><span data-stu-id="e0d58-107">Remarks</span></span>  
+ <span data-ttu-id="e0d58-108">OS 執行緒代替 ICorDebugThread 中，以允許在原生執行緒或尚未輸入 managed 程式碼，managed 執行緒上，會引發 MDA 的情況。</span><span class="sxs-lookup"><span data-stu-id="e0d58-108">The OS thread is used instead of an ICorDebugThread to allow for situations in which an MDA is fired either on a native thread or on a managed thread that has not yet entered managed code.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="2990e-109">需求</span><span class="sxs-lookup"><span data-stu-id="2990e-109">Requirements</span></span>  
- <span data-ttu-id="2990e-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2990e-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="e0d58-109">需求</span><span class="sxs-lookup"><span data-stu-id="e0d58-109">Requirements</span></span>  
+ <span data-ttu-id="e0d58-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="e0d58-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="2990e-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="2990e-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="e0d58-111">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="e0d58-111">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="2990e-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2990e-112">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="e0d58-112">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="e0d58-112">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="2990e-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="2990e-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="e0d58-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="e0d58-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="2990e-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2990e-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="e0d58-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="e0d58-114">See also</span></span>
 
-- [<span data-ttu-id="2990e-115">ICorDebugMDA 介面</span><span class="sxs-lookup"><span data-stu-id="2990e-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
-- [<span data-ttu-id="2990e-116">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="2990e-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)
+- [<span data-ttu-id="e0d58-115">ICorDebugMDA 介面</span><span class="sxs-lookup"><span data-stu-id="e0d58-115">ICorDebugMDA Interface</span></span>](../../../../docs/framework/unmanaged-api/debugging/icordebugmda-interface.md)
+- [<span data-ttu-id="e0d58-116">診斷 Managed 偵錯助理的錯誤</span><span class="sxs-lookup"><span data-stu-id="e0d58-116">Diagnosing Errors with Managed Debugging Assistants</span></span>](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)

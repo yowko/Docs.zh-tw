@@ -18,16 +18,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfc94c2de1a14842cc017e5c4ef6023154c20f2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194028"
 ---
-# <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a><span data-ttu-id="21a71-102">IDebuggerThreadControl::StartBlockingForDebugger 方法</span><span class="sxs-lookup"><span data-stu-id="21a71-102">IDebuggerThreadControl::StartBlockingForDebugger Method</span></span>
-<span data-ttu-id="21a71-103">主應用程式的偵錯服務即將開始封鎖所有執行緒。</span><span class="sxs-lookup"><span data-stu-id="21a71-103">Notifies the host that the debugging services are about to start blocking all threads.</span></span>  
+# <a name="idebuggerthreadcontrolstartblockingfordebugger-method"></a><span data-ttu-id="c15ac-102">IDebuggerThreadControl::StartBlockingForDebugger 方法</span><span class="sxs-lookup"><span data-stu-id="c15ac-102">IDebuggerThreadControl::StartBlockingForDebugger Method</span></span>
+<span data-ttu-id="c15ac-103">主應用程式的偵錯服務即將開始封鎖所有執行緒。</span><span class="sxs-lookup"><span data-stu-id="c15ac-103">Notifies the host that the debugging services are about to start blocking all threads.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="21a71-104">語法</span><span class="sxs-lookup"><span data-stu-id="21a71-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c15ac-104">語法</span><span class="sxs-lookup"><span data-stu-id="c15ac-104">Syntax</span></span>  
   
 ```  
 HRESULT StartBlockingForDebugger (  
@@ -35,22 +35,22 @@ HRESULT StartBlockingForDebugger (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="21a71-105">參數</span><span class="sxs-lookup"><span data-stu-id="21a71-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c15ac-105">參數</span><span class="sxs-lookup"><span data-stu-id="c15ac-105">Parameters</span></span>  
  `dwUnused`  
- <span data-ttu-id="21a71-106">[in]Reserved for future use.</span><span class="sxs-lookup"><span data-stu-id="21a71-106">[in] Reserved for future use.</span></span>  
+ <span data-ttu-id="c15ac-106">[in]保留供日後使用。</span><span class="sxs-lookup"><span data-stu-id="c15ac-106">[in] Reserved for future use.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="21a71-107">備註</span><span class="sxs-lookup"><span data-stu-id="21a71-107">Remarks</span></span>  
- <span data-ttu-id="21a71-108">`StartBlockingForDebugger`無法在執行階段的執行緒上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="21a71-108">The `StartBlockingForDebugger` method could be called on a runtime thread.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="c15ac-107">備註</span><span class="sxs-lookup"><span data-stu-id="c15ac-107">Remarks</span></span>  
+ <span data-ttu-id="c15ac-108">`StartBlockingForDebugger`無法在執行階段的執行緒上呼叫方法。</span><span class="sxs-lookup"><span data-stu-id="c15ac-108">The `StartBlockingForDebugger` method could be called on a runtime thread.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="21a71-109">需求</span><span class="sxs-lookup"><span data-stu-id="21a71-109">Requirements</span></span>  
- <span data-ttu-id="21a71-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="21a71-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c15ac-109">需求</span><span class="sxs-lookup"><span data-stu-id="c15ac-109">Requirements</span></span>  
+ <span data-ttu-id="c15ac-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c15ac-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="21a71-111">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="21a71-111">**Header:** MSCorEE.h</span></span>  
+ <span data-ttu-id="c15ac-111">**標頭：** MSCorEE.h</span><span class="sxs-lookup"><span data-stu-id="c15ac-111">**Header:** MSCorEE.h</span></span>  
   
- <span data-ttu-id="21a71-112">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="21a71-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
+ <span data-ttu-id="c15ac-112">**LIBRARY:** 包含做為 MSCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c15ac-112">**Library:** Included as a resource in MSCorEE.dll</span></span>  
   
- **<span data-ttu-id="21a71-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="21a71-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="c15ac-113">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c15ac-113">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="21a71-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="21a71-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c15ac-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c15ac-114">See also</span></span>
 
-- [<span data-ttu-id="21a71-115">IDebuggerThreadControl 介面</span><span class="sxs-lookup"><span data-stu-id="21a71-115">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)
+- [<span data-ttu-id="c15ac-115">IDebuggerThreadControl 介面</span><span class="sxs-lookup"><span data-stu-id="c15ac-115">IDebuggerThreadControl Interface</span></span>](../../../../docs/framework/unmanaged-api/hosting/idebuggerthreadcontrol-interface.md)

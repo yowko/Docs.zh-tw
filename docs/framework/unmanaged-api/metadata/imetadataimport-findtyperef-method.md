@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: acc006894f05536ed76bac60b0fde9277a460813
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199020"
 ---
-# <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="c9ade-102">IMetaDataImport::FindTypeRef 方法</span><span class="sxs-lookup"><span data-stu-id="c9ade-102">IMetaDataImport::FindTypeRef Method</span></span>
-<span data-ttu-id="c9ade-103">取得 TypeRef 語彙基元的指標<xref:System.Type>，位於指定的範圍內且具有指定的名稱的參考。</span><span class="sxs-lookup"><span data-stu-id="c9ade-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  
+# <a name="imetadataimportfindtyperef-method"></a><span data-ttu-id="c39df-102">IMetaDataImport::FindTypeRef 方法</span><span class="sxs-lookup"><span data-stu-id="c39df-102">IMetaDataImport::FindTypeRef Method</span></span>
+<span data-ttu-id="c39df-103">取得 TypeRef 語彙基元的指標<xref:System.Type>，位於指定的範圍內且具有指定的名稱的參考。</span><span class="sxs-lookup"><span data-stu-id="c39df-103">Gets a pointer to the TypeRef token for the <xref:System.Type> reference that is in the specified scope and that has the specified name.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="c9ade-104">語法</span><span class="sxs-lookup"><span data-stu-id="c9ade-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="c39df-104">語法</span><span class="sxs-lookup"><span data-stu-id="c39df-104">Syntax</span></span>  
   
 ```  
 HRESULT FindTypeRef (  
@@ -37,26 +37,26 @@ HRESULT FindTypeRef (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="c9ade-105">參數</span><span class="sxs-lookup"><span data-stu-id="c9ade-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="c39df-105">參數</span><span class="sxs-lookup"><span data-stu-id="c39df-105">Parameters</span></span>  
  `tkResolutionScope`  
- <span data-ttu-id="c9ade-106">[in]ModuleRef、 一個 AssemblyRef 或 TypeRef 語彙基元，指定模組、 組件或類型，分別在型別參考的定義。</span><span class="sxs-lookup"><span data-stu-id="c9ade-106">[in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.</span></span>  
+ <span data-ttu-id="c39df-106">[in]ModuleRef、 一個 AssemblyRef 或 TypeRef 語彙基元，指定模組、 組件或類型，分別在型別參考的定義。</span><span class="sxs-lookup"><span data-stu-id="c39df-106">[in] A ModuleRef, AssemblyRef, or TypeRef token that specifies the module, assembly, or type, respectively, in which the type reference is defined.</span></span>  
   
  `szName`  
- <span data-ttu-id="c9ade-107">[in]要搜尋的類型參考名稱。</span><span class="sxs-lookup"><span data-stu-id="c9ade-107">[in] The name of the type reference to search for.</span></span>  
+ <span data-ttu-id="c39df-107">[in]要搜尋的類型參考名稱。</span><span class="sxs-lookup"><span data-stu-id="c39df-107">[in] The name of the type reference to search for.</span></span>  
   
  `ptr`  
- <span data-ttu-id="c9ade-108">[out]比對的 TypeRef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="c9ade-108">[out] A pointer to the matching TypeRef token.</span></span>  
+ <span data-ttu-id="c39df-108">[out]比對的 TypeRef 語彙基元指標。</span><span class="sxs-lookup"><span data-stu-id="c39df-108">[out] A pointer to the matching TypeRef token.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="c9ade-109">需求</span><span class="sxs-lookup"><span data-stu-id="c9ade-109">Requirements</span></span>  
- <span data-ttu-id="c9ade-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c9ade-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="c39df-109">需求</span><span class="sxs-lookup"><span data-stu-id="c39df-109">Requirements</span></span>  
+ <span data-ttu-id="c39df-110">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="c39df-110">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="c9ade-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c9ade-111">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="c39df-111">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="c39df-111">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="c9ade-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c9ade-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="c39df-112">**LIBRARY:** 包含做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="c39df-112">**Library:** Included as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="c9ade-113">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="c9ade-113">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="c39df-113">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="c39df-113">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="c9ade-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c9ade-114">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="c39df-114">另請參閱</span><span class="sxs-lookup"><span data-stu-id="c39df-114">See also</span></span>
 
-- [<span data-ttu-id="c9ade-115">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="c9ade-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
-- [<span data-ttu-id="c9ade-116">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="c9ade-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)
+- [<span data-ttu-id="c39df-115">IMetaDataImport 介面</span><span class="sxs-lookup"><span data-stu-id="c39df-115">IMetaDataImport Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)
+- [<span data-ttu-id="c39df-116">IMetaDataImport2 介面</span><span class="sxs-lookup"><span data-stu-id="c39df-116">IMetaDataImport2 Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/imetadataimport2-interface.md)

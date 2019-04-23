@@ -18,15 +18,15 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9218dd87b0794f3972365a4049cd8941e6671312
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193926"
 ---
-# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="172dd-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="172dd-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
-`GetMvid` <span data-ttu-id="172dd-103">已過時。</span><span class="sxs-lookup"><span data-stu-id="172dd-103">is obsolete.</span></span> <span data-ttu-id="172dd-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="172dd-104">Do not call this method.</span></span>  
+# <a name="icordebugeditandcontinuesnapshotgetmvid-method"></a><span data-ttu-id="5ceb8-102">ICorDebugEditAndContinueSnapshot::GetMvid 方法</span><span class="sxs-lookup"><span data-stu-id="5ceb8-102">ICorDebugEditAndContinueSnapshot::GetMvid Method</span></span>
+<span data-ttu-id="5ceb8-103">`GetMvid` 已經過時。</span><span class="sxs-lookup"><span data-stu-id="5ceb8-103">`GetMvid` is obsolete.</span></span> <span data-ttu-id="5ceb8-104">請勿呼叫這個方法。</span><span class="sxs-lookup"><span data-stu-id="5ceb8-104">Do not call this method.</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="172dd-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="172dd-105">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="5ceb8-105">另請參閱</span><span class="sxs-lookup"><span data-stu-id="5ceb8-105">See also</span></span>
 
-- [<span data-ttu-id="172dd-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="172dd-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="5ceb8-106">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="5ceb8-106">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

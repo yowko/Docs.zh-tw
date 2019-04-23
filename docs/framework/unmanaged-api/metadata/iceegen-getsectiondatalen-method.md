@@ -18,18 +18,18 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ca01f78cf46d4f7543b949c820eb6b1971687e23
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198708"
 ---
-# <a name="iceegengetsectiondatalen-method"></a><span data-ttu-id="141ae-102">ICeeGen::GetSectionDataLen 方法</span><span class="sxs-lookup"><span data-stu-id="141ae-102">ICeeGen::GetSectionDataLen Method</span></span>
-<span data-ttu-id="141ae-103">取得指定的區段長度。</span><span class="sxs-lookup"><span data-stu-id="141ae-103">Gets the length of the specified section.</span></span>  
+# <a name="iceegengetsectiondatalen-method"></a><span data-ttu-id="1ed36-102">ICeeGen::GetSectionDataLen 方法</span><span class="sxs-lookup"><span data-stu-id="1ed36-102">ICeeGen::GetSectionDataLen Method</span></span>
+<span data-ttu-id="1ed36-103">取得指定的區段長度。</span><span class="sxs-lookup"><span data-stu-id="1ed36-103">Gets the length of the specified section.</span></span>  
   
- <span data-ttu-id="141ae-104">這個方法已經過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="141ae-104">This method is obsolete and should not be used.</span></span>  
+ <span data-ttu-id="1ed36-104">這個方法已經過時，不應使用。</span><span class="sxs-lookup"><span data-stu-id="1ed36-104">This method is obsolete and should not be used.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="141ae-105">語法</span><span class="sxs-lookup"><span data-stu-id="141ae-105">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="1ed36-105">語法</span><span class="sxs-lookup"><span data-stu-id="1ed36-105">Syntax</span></span>  
   
 ```  
 HRESULT GetSectionDataLen (  
@@ -38,25 +38,25 @@ HRESULT GetSectionDataLen (
 );  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="141ae-106">參數</span><span class="sxs-lookup"><span data-stu-id="141ae-106">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="1ed36-106">參數</span><span class="sxs-lookup"><span data-stu-id="1ed36-106">Parameters</span></span>  
  `section`  
- <span data-ttu-id="141ae-107">[in][資料] 區段將擷取其長度的情況下。</span><span class="sxs-lookup"><span data-stu-id="141ae-107">[in] The data section whose length will be retrieved.</span></span>  
+ <span data-ttu-id="1ed36-107">[in][資料] 區段將擷取其長度的情況下。</span><span class="sxs-lookup"><span data-stu-id="1ed36-107">[in] The data section whose length will be retrieved.</span></span>  
   
  `dataLen`  
- <span data-ttu-id="141ae-108">[out]指定的區段傳回的長度。</span><span class="sxs-lookup"><span data-stu-id="141ae-108">[out] The returned length of the specified section.</span></span>  
+ <span data-ttu-id="1ed36-108">[out]指定的區段傳回的長度。</span><span class="sxs-lookup"><span data-stu-id="1ed36-108">[out] The returned length of the specified section.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="141ae-109">備註</span><span class="sxs-lookup"><span data-stu-id="141ae-109">Remarks</span></span>  
- <span data-ttu-id="141ae-110">呼叫`GetSectionDataLen`只有當您有未處理的其他方法的特殊區段需求。</span><span class="sxs-lookup"><span data-stu-id="141ae-110">Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="1ed36-109">備註</span><span class="sxs-lookup"><span data-stu-id="1ed36-109">Remarks</span></span>  
+ <span data-ttu-id="1ed36-110">呼叫`GetSectionDataLen`只有當您有未處理的其他方法的特殊區段需求。</span><span class="sxs-lookup"><span data-stu-id="1ed36-110">Call `GetSectionDataLen` only if you have special section requirements that are not handled by other methods.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="141ae-111">需求</span><span class="sxs-lookup"><span data-stu-id="141ae-111">Requirements</span></span>  
- <span data-ttu-id="141ae-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="141ae-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="1ed36-111">需求</span><span class="sxs-lookup"><span data-stu-id="1ed36-111">Requirements</span></span>  
+ <span data-ttu-id="1ed36-112">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="1ed36-112">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="141ae-113">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="141ae-113">**Header:** Cor.h</span></span>  
+ <span data-ttu-id="1ed36-113">**標頭：** Cor.h</span><span class="sxs-lookup"><span data-stu-id="1ed36-113">**Header:** Cor.h</span></span>  
   
- <span data-ttu-id="141ae-114">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="141ae-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
+ <span data-ttu-id="1ed36-114">**LIBRARY:** 做為 MsCorEE.dll 中的資源</span><span class="sxs-lookup"><span data-stu-id="1ed36-114">**Library:** Used as a resource in MsCorEE.dll</span></span>  
   
- **<span data-ttu-id="141ae-115">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="141ae-115">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="1ed36-115">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="1ed36-115">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="141ae-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="141ae-116">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="1ed36-116">另請參閱</span><span class="sxs-lookup"><span data-stu-id="1ed36-116">See also</span></span>
 
-- [<span data-ttu-id="141ae-117">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="141ae-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
+- [<span data-ttu-id="1ed36-117">ICeeGen 介面</span><span class="sxs-lookup"><span data-stu-id="1ed36-117">ICeeGen Interface</span></span>](../../../../docs/framework/unmanaged-api/metadata/iceegen-interface.md)
