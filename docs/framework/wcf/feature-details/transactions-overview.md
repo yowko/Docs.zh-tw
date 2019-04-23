@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, transactions
 ms.assetid: c7757854-1207-4019-8b31-552578b7d570
 ms.openlocfilehash: 42276a9b450b6f0664901747239195ab13f7c44d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223104"
 ---
 # <a name="windows-communication-foundation-transactions-overview"></a>Windows Communication Foundation 異動概觀
@@ -42,5 +42,5 @@ ms.locfileid: "59223104"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ServiceModel 交易屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
-- [啟用交易流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)
+- [ServiceModel 異動屬性](../../../../docs/framework/wcf/feature-details/servicemodel-transaction-attributes.md)
+- [啟用異動流程](../../../../docs/framework/wcf/feature-details/enabling-transaction-flow.md)

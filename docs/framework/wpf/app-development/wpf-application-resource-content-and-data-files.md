@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211917"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF 應用程式資源、內容和資料檔案
@@ -197,7 +197,7 @@ ms.locfileid: "59211917"
 ### <a name="configuring-site-of-origin-files"></a>設定來源網站檔  
  如果您的來源檔案的網站會在編譯時期為不存在或未知，您需要使用傳統的部署機制，確保所需的檔案可在執行階段，包括使用`XCopy`命令列程式或[!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- 如果您知道在編譯時期，您會想要找的來源站台，但仍想要避免產生明確相依性的檔案，您可以新增這些檔案[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]專案做為`None`項目。 如同內容檔案，您需要設定[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`屬性來指定來源網站檔會複製到相對於已建置的組件，是由指定的位置`Always`的值或`PreserveNewest`值。  
+ 如果您知道在編譯時期，您會想要找的來源站台，但仍想要避免產生明確相依性的檔案，您可以新增這些檔案[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]專案做為`None`項目。 如同內容檔案，您需要設定[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`屬性來指定來源網站檔會複製到相對於已建置的組件，是由指定的位置`Always`值或`PreserveNewest`值。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  

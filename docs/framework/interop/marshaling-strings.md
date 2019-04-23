@@ -13,19 +13,19 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218563"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59223026"
 ---
 # <a name="marshaling-strings"></a>封送處理字串
 平台叫用會複製字串參數，並視需要從 .NET Framework 格式 (Unicode) 轉換成 Unmanaged 格式 (ANSI)。 傳回函式時，因為 Managed 字串不可變，所以平台叫用不會將 Managed 字串從 Unmanaged 記憶體複製回 Managed 記憶體。  
   
  下表列出字串的封送處理選項，並描述其用法，以及提供對應 .NET Framework 範例的連結。  
   
-|String|描述|範例|  
+|String|說明|範例|  
 |------------|-----------------|------------|  
 |傳值。|將字串傳遞為 In 參數。|[MsgBox](msgbox-sample.md)|  
 |作為結果。|從 Unmanaged 程式碼傳回字串。|[字串](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e765dyyy(v=vs.100))|  
@@ -39,6 +39,7 @@ ms.locfileid: "56218563"
 |作為包含傳值字串的結構陣列。|建立包含字串的結構陣列，並以傳值方式傳遞該陣列。|[陣列](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>另請參閱
+
 - [使用平台叫用封送處理資料](marshaling-data-with-platform-invoke.md)
 - [封送處理類別、結構和等位](marshaling-classes-structures-and-unions.md)
 - [封送處理不同類型的陣列](marshaling-different-types-of-arrays.md)

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213411"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>HOW TO：設定畫筆顏色
@@ -36,6 +36,6 @@ ms.locfileid: "59213411"
 
 - <xref:System.Drawing.Pen>
 - [圖形程式設計入門](getting-started-with-graphics-programming.md)
-- [HOW TO：建立畫筆](how-to-create-a-pen.md)
+- [如何：建立畫筆](how-to-create-a-pen.md)
 - [使用畫筆繪製線條和形狀](using-a-pen-to-draw-lines-and-shapes.md)
 - [GDI+ 中的畫筆、線條和矩形](pens-lines-and-rectangles-in-gdi.md)

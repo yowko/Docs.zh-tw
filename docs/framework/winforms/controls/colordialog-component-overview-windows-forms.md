@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ColorDialog component [Windows Forms], about ColorDialog
 ms.assetid: 6dbdd8f0-f697-4728-bb09-7ea156f6d800
 ms.openlocfilehash: 284d42218fb4fbce873325b1e45c883d51eefab8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222350"
 ---
 # <a name="colordialog-component-overview-windows-forms"></a>ColorDialog 元件概觀 (Windows Form)
@@ -24,4 +24,4 @@ Windows Form<xref:System.Windows.Forms.ColorDialog>元件是預先設定的對�
 - <xref:System.Windows.Forms.ColorDialog>
 - [ColorDialog 元件](colordialog-component-windows-forms.md)
 - [對話方塊控制項和元件](dialog-box-controls-and-components-windows-forms.md)
-- [HOW TO：變更 Windows Forms ColorDialog 元件的外觀](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)
+- [如何：變更 Windows Form ColorDialog 元件的外觀](how-to-change-the-appearance-of-the-windows-forms-colordialog-component.md)

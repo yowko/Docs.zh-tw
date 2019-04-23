@@ -9,10 +9,10 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213138"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows Form 設計工具的設計階段錯誤
@@ -54,7 +54,7 @@ ms.locfileid: "59213138"
   
 ## <a name="see-also"></a>另請參閱
 
-- [設計階段開發疑難排解](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
-- [控制項和元件撰寫疑難排解](troubleshooting-control-and-component-authoring.md)
-- [在設計階段開發 Windows Form 控制項](developing-windows-forms-controls-at-design-time.md)
-- [Windows Form 設計工具錯誤訊息](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))
+- [疑難排解設計階段開發](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171843(v=vs.120))
+- [針對控制項和元件撰寫進行疑難排解](troubleshooting-control-and-component-authoring.md)
+- [在設計階段開發 Windows Forms 控制項](developing-windows-forms-controls-at-design-time.md)
+- [Windows Forms 設計工具錯誤訊息](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233640(v=vs.100))

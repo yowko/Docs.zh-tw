@@ -10,10 +10,10 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216466"
 ---
 # <a name="net-performance-tips"></a>.NET 效能秘訣
@@ -34,11 +34,11 @@ ms.locfileid: "59216466"
   
 -   [撰寫高效能 Managed 應用程式：入門](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [記憶體回收行程的基礎概念和效能提示](https://go.microsoft.com/fwlink/?LinkId=99296)  
+-   [Garbage Collector Basics and Performance Hints](https://go.microsoft.com/fwlink/?LinkId=99296) (記憶體回收行程基本概念和效能提示)  
   
--   [效能祕訣和訣竅，.NET 應用程式中](https://go.microsoft.com/fwlink/?LinkId=99297)  
+-   [Performance Tips and Tricks in .NET Applications](https://go.microsoft.com/fwlink/?LinkId=99297) (.NET 應用程式中的效能祕訣和訣竅)  
 
--   [Rico mariani 's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679)  
+-   [Rico Mariani's Performance Tidbits](https://go.microsoft.com/fwlink/?LinkId=115679) (Rico Mariani 的效能花絮)  
 
 -   [Vance Morrison 的部落格](https://blogs.msdn.microsoft.com/vancem/)
   
@@ -46,4 +46,4 @@ ms.locfileid: "59216466"
 
 - [效能](../../../docs/framework/performance/index.md)
 - [Visual Basic 程式設計手冊](../../visual-basic/programming-guide/index.md)
-- [C# 程式設計手冊](../../csharp/programming-guide/index.md)
+- [C# 程式設計指南](../../csharp/programming-guide/index.md)

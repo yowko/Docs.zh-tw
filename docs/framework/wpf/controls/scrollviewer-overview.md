@@ -10,10 +10,10 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], about ScrollViewer control
 ms.assetid: 94a13b94-cfdf-4b12-a1aa-90cb50c6e9b9
 ms.openlocfilehash: a3302d9c360b0918a1fce956af3e3aa14f29361b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212423"
 ---
 # <a name="scrollviewer-overview"></a>ScrollViewer 概觀
@@ -29,7 +29,7 @@ ms.locfileid: "59212423"
   
 <a name="scrollviewer_physical_vs_logical"></a>   
 ## <a name="physical-vs-logical-scrolling"></a>實體捲動與邏輯捲動的比較  
- 實體捲動可用來依預先決定的實體遞增值 (通常是以像素為單位宣告的值) 捲動內容。 邏輯捲動可用來捲動至邏輯樹狀結構中的下一個項目。 實體捲動是大多數的預設捲動行為<xref:System.Windows.Controls.Panel>項目。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 支援兩種類型的捲動。  
+ 實體捲動可用來依預先決定的實體遞增值 (通常是以像素為單位宣告的值) 捲動內容。 邏輯捲動可用來捲動至邏輯樹狀結構中的下一個項目。 實體捲動是大多數的預設捲動行為<xref:System.Windows.Controls.Panel>項目。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同時支援這兩種類型的捲動。  
   
 #### <a name="the-iscrollinfo-interface"></a>IScrollInfo 介面  
  <xref:System.Windows.Controls.Primitives.IScrollInfo>介面代表主要捲動區域內<xref:System.Windows.Controls.ScrollViewer>或衍生控制項。 介面會定義捲動屬性和方法，可由實作<xref:System.Windows.Controls.Panel>需要捲動邏輯單元，而不依實體遞增值的項目。 轉型別的執行個體<xref:System.Windows.Controls.Primitives.IScrollInfo>來衍生<xref:System.Windows.Controls.Panel>，然後使用其捲動方法提供實用的方式，捲動至下一個邏輯單元中的子集合，而不是像素遞增值。 根據預設，<xref:System.Windows.Controls.ScrollViewer>控制項支援依實體單位捲動。  
@@ -65,7 +65,7 @@ ms.locfileid: "59212423"
 - <xref:System.Windows.Controls.ScrollViewer>
 - <xref:System.Windows.Controls.Primitives.ScrollBar>
 - <xref:System.Windows.Controls.Primitives.IScrollInfo>
-- [HOW TO：建立捲動檢視器](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
+- [如何：建立捲動檢視器](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752352(v=vs.90))
 - [WPF 中的文件](../advanced/documents-in-wpf.md)
 - [ScrollBar 樣式和範本](scrollbar-styles-and-templates.md)
 - [控制項](../advanced/optimizing-performance-controls.md)

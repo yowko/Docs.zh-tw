@@ -6,10 +6,10 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222740"
 ---
 # <a name="ui-automation-providers-overview"></a>UI 自動化提供者概觀
@@ -41,10 +41,10 @@ ms.locfileid: "59222740"
  本節提供某些主要概念的簡短說明，讓您了解以便實作使用者介面自動化提供者。  
   
 ### <a name="elements"></a>項目  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目是項[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]，會顯示使用者介面自動化用戶端。 範例包含應用程式視窗、窗格、按鈕、工具提示、清單方塊和清單項目。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目是對使用者介面自動化用戶端顯示的 [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] 部分。 範例包含應用程式視窗、窗格、按鈕、工具提示、清單方塊和清單項目。  
   
 ### <a name="navigation"></a>巡覽  
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目都會公開至用戶端為[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]樹狀目錄中。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 從一個項目巡覽到另一個，以建構樹狀結構。 巡覽功能是由每個項目的提供者啟用，每個提供者各指向父代、同層級和子系。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目是以 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的形式公開至用戶端。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 會在項目之間巡覽以建構樹狀結構。 巡覽功能是由每個項目的提供者啟用，每個提供者各指向父代、同層級和子系。  
   
  如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構用戶端檢視的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59222740"
 ### <a name="frameworks"></a>架構  
  架構是一個元件，管理該畫面區域的子控制項、點擊測試和呈現。 例如， [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] 視窗，通常是指 HWND，可做為包含多個 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 項目 (例如功能表列、狀態列和按鈕) 的架構。  
   
- [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控制項，例如清單方塊和樹狀檢視會被視為架構，因為它們包含自己的程式碼，以呈現子項目和執行在其上的點擊測試。 相對地， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 清單方塊就不是架構，因為呈現和點擊測試是由其中包含的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 視窗所處理。  
+ [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] 容器控制項 (例如清單方塊和樹狀結構檢視) 都會被視為架構，因為他們都包含自己的程式碼，以呈現子項目並在其上執行點擊測試。 相對地， [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 清單方塊就不是架構，因為呈現和點擊測試是由其中包含的 [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] 視窗所處理。  
   
  應用程式中的 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 可由不同架構組成。 例如，HWND 應用程式視窗可能包含 [!INCLUDE[TLA#tla_dhtml](../../../includes/tlasharptla-dhtml-md.md)] ，會依序在 HWND 中包含下拉式方塊此類的元件。  
   

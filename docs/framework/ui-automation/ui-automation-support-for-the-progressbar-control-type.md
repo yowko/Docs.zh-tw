@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
 ms.openlocfilehash: 7a3347aa0fa272ea0b93ac2ad504943f37c65b2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217727"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>ProgressBar 控制項類型的 UI 自動化支援
@@ -59,7 +59,7 @@ ms.locfileid: "59217727"
 |<xref:System.Windows.Automation.Provider.IValueProvider>|視情況而定|以文字表示進度的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IValueProvider>。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.IsReadOnly%2A>|True|這個屬性的值一律為 True。|  
 |<xref:System.Windows.Automation.Provider.IValueProvider.Value%2A>|請參閱備註。|此屬性會公開進度列控制項的文字進度。|  
-|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|使用數值範圍的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>|  
+|<xref:System.Windows.Automation.Provider.IRangeValueProvider>|視情況而定|使用數值範圍的進度列控制項必須實作 <xref:System.Windows.Automation.Provider.IRangeValueProvider>。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Minimum%2A>|0.0|這個屬性的值是控制項可以設定的最小值。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.Maximum%2A>|100.0|這個屬性的值是控制項可以設定的最大值。|  
 |<xref:System.Windows.Automation.Provider.IRangeValueProvider.SmallChange%2A>|NaN|這個屬性不是必要項，因為進度列控制項是唯讀的。|  
@@ -69,7 +69,7 @@ ms.locfileid: "59217727"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有進度列控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> 屬性變更事件。|必要|None|  

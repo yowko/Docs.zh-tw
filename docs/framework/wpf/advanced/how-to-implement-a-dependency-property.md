@@ -9,10 +9,10 @@ helpviewer_keywords:
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
 ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223797"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>HOW TO：實作相依性屬性
@@ -35,4 +35,4 @@ ms.locfileid: "59223797"
 ## <a name="see-also"></a>另請參閱
 
 - [相依性屬性概觀](dependency-properties-overview.md)
-- [HOW TO 主題](properties-how-to-topics.md)
+- [HOW-TO 主題](properties-how-to-topics.md)

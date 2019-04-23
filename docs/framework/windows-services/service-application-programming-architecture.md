@@ -15,21 +15,21 @@ helpviewer_keywords:
 - Windows Service applications, states
 ms.assetid: 83230026-d068-4174-97ff-e264c896eb2f
 author: ghogen
-ms.openlocfilehash: 009d95089efdfb78680ca7e364093e5f2b65bc77
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 17e16cec34b381cdfe46e1066c3219a93c3780e3
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714876"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216387"
 ---
 # <a name="service-application-programming-architecture"></a>服務應用程式的程式設計架構
 Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> 類別的類別為基礎。 您會覆寫來自這個類別的方法，並定義適用於它們的功能以決定服務的行為方式。  
   
  以下是涉及服務建立的主要類別：  
   
--   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType>：您會在建立服務並定義程式碼以決定服務如何在此繼承類別中運作時，覆寫來自 <xref:System.ServiceProcess.ServiceBase> 類別的方法。  
+-   <xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> — 您會在建立服務並定義程式碼以決定服務如何在此繼承類別中運作時，覆寫來自 <xref:System.ServiceProcess.ServiceBase> 類別的方法。  
   
--   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType>：您會使用這些類別來安裝和解除安裝服務。  
+-   <xref:System.ServiceProcess.ServiceProcessInstaller?displayProperty=nameWithType> 和 <xref:System.ServiceProcess.ServiceInstaller?displayProperty=nameWithType> —您會使用這些類別來安裝和解除安裝服務。  
   
  此外，名為 <xref:System.ServiceProcess.ServiceController> 的類別可用來操作服務本身。 這個類別並未涉及服務的建立，但可用來啟動和停止服務、將命令傳遞到其中，以及傳回一連串的列舉。  
   
@@ -67,5 +67,6 @@ Windows 服務應用程式會以繼承自 <xref:System.ServiceProcess.ServiceBas
  您也可以使用名為 <xref:System.ServiceProcess.ServiceController> 的元件進行通訊，並控制現有服務的行為。  
   
 ## <a name="see-also"></a>另請參閱
+
 - [Windows 服務應用程式簡介](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
-- [如何：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)
+- [作法：建立 Windows 服務](../../../docs/framework/windows-services/how-to-create-windows-services.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211474"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation 繫結
@@ -21,7 +21,7 @@ ms.locfileid: "59211474"
  [系統提供的繫結](../../../docs/framework/wcf/system-provided-bindings.md)  
  包含與 WCF 繫結的清單。 這些繫結涵蓋了大部分的安全性與訊息模式需求。  
   
- [使用繫結來設定服務和用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
+ [使用繫結設定服務與用戶端](../../../docs/framework/wcf/using-bindings-to-configure-services-and-clients.md)  
  WCF 繫結包含用戶端必須用來連接至服務端點的重要資訊。  
   
  [設定服務的繫結](../../../docs/framework/wcf/configuring-bindings-for-wcf-services.md)  
@@ -31,7 +31,7 @@ ms.locfileid: "59211474"
  <xref:System.ServiceModel.Channels>  
   
 ## <a name="related-sections"></a>相關章節  
- [端點：位址、繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
+ [端點：位址、 繫結和合約](../../../docs/framework/wcf/feature-details/endpoints-addresses-bindings-and-contracts.md)  
   
  [繫結](../../../docs/framework/wcf/feature-details/bindings.md)  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211227"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>從識別快取擷取物件
@@ -30,7 +30,7 @@ ms.locfileid: "59211227"
   
  在這些一般格式中，`Function1`、`Function2` 和 `predicate` 的定義方式如下。  
   
- `Function1` 可以是下列其中一項：  
+ `Function1` 可以是下列任何項目：  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59211227"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` 可以是下列其中一項：  
+ `Function2` 可以是下列任何項目：  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59211227"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` 必須是物件的主索引鍵屬性設為常數值的運算式。 如果物件具有多個屬性所定義的主索引鍵，每個主索引鍵屬性都必須設定為常數值。 下面是 `predicate` 必須採用的格式範例：  
+ `predicate` 必須是物件之主索引鍵屬性設定為常數值的運算式。 如果物件具有多個屬性所定義的主索引鍵，每個主索引鍵屬性都必須設定為常數值。 下面是 `predicate` 必須採用的格式範例：  
   
 -   `c => c.PK == constant_value`  
   
@@ -67,6 +67,6 @@ ms.locfileid: "59211227"
 ## <a name="see-also"></a>另請參閱
 
 - [查詢概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)
-- [物件識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
 - [背景資訊](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [物件識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)
+- [物件身分識別](../../../../../../docs/framework/data/adonet/sql/linq/object-identity.md)

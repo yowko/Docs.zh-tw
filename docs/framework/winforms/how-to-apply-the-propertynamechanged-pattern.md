@@ -10,10 +10,10 @@ helpviewer_keywords:
 - PropertyNameChanged pattern [Windows Forms], applying
 ms.assetid: aa47ddf6-5223-40c4-833f-a78992194836
 ms.openlocfilehash: 36670eee6235277a7fe98770192df9ae05d3dd03
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213021"
 ---
 # <a name="how-to-apply-the-propertynamechanged-pattern"></a>HOW TO：套用 PropertyNameChanged 模式
@@ -30,6 +30,6 @@ ms.locfileid: "59213021"
   
 ## <a name="see-also"></a>另請參閱
 
-- [HOW TO：實作 INotifyPropertyChanged 介面](how-to-implement-the-inotifypropertychanged-interface.md)
-- [Windows Form 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
-- [Windows Form 資料繫結](windows-forms-data-binding.md)
+- [如何：實作 INotifyPropertyChanged 介面](how-to-implement-the-inotifypropertychanged-interface.md)
+- [Windows Forms 資料繫結中的變更告知](change-notification-in-windows-forms-data-binding.md)
+- [Windows Forms 資料繫結](windows-forms-data-binding.md)

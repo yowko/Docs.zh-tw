@@ -10,10 +10,10 @@ helpviewer_keywords:
 - classes [WPF], SystemFonts
 ms.assetid: 3f46a4ec-2225-408a-8123-8838a8f7057a
 ms.openlocfilehash: 5976bc0cb8b34e68d5e89dd70a608d7e52ded332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216778"
 ---
 # <a name="how-to-use-systemfonts"></a>HOW TO：使用 SystemFonts
@@ -42,7 +42,7 @@ ms.locfileid: "59216778"
 - [使用系統筆刷繪製區域](../graphics-multimedia/how-to-paint-an-area-with-a-system-brush.md)
 - [使用 SystemParameters](how-to-use-systemparameters.md)
 - [使用系統字型索引鍵](how-to-use-system-fonts-keys.md)
-- [HOW TO 主題](resources-how-to-topics.md)
+- [HOW-TO 主題](resources-how-to-topics.md)
 - [x:Static 標記延伸](../../xaml-services/x-static-markup-extension.md)
 - [XAML 資源](xaml-resources.md)
 - [DynamicResource 標記延伸](dynamicresource-markup-extension.md)

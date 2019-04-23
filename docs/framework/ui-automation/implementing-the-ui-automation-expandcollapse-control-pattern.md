@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
 ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211656"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>實作 UI 自動化 ExpandCollapse 控制項模式
@@ -32,7 +32,7 @@ ms.locfileid: "59211656"
   
 -   當控制項的 <xref:System.Windows.Automation.ExpandCollapseState> 設為 <xref:System.Windows.Automation.ExpandCollapseState.LeafNode>時，控制項的任何 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能目前非使用中，可以使用此控制項模式取得的唯一資訊是 <xref:System.Windows.Automation.ExpandCollapseState>。 如果後續新增任何子物件， <xref:System.Windows.Automation.ExpandCollapseState> 會變更且 <xref:System.Windows.Automation.ExpandCollapsePattern> 功能會啟動。  
   
--   <xref:System.Windows.Automation.ExpandCollapseState> 指的是僅限; 立即子物件的可見性它不是指所有子系物件的可見性。  
+-   <xref:System.Windows.Automation.ExpandCollapseState> 是指僅限直屬子物件的可見度，而非所有子系物件的可見度。  
   
 -   展開和摺疊功能是控制項專屬功能。 以下是此行為的範例：  
   
@@ -68,6 +68,6 @@ ms.locfileid: "59211656"
 - [UI 自動化控制項模式概觀](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [支援 UI 自動化提供者的控制項模式](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [用戶端的 UI 自動化控制項模式](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
-- [使用 TreeWalker 巡覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
+- [使用 TreeWalker 導覽 UI 自動化項目](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
 - [UI 自動化樹狀目錄概觀](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
-- [使用 UI 自動化中的快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)
+- [在 UI 自動化中使用快取](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

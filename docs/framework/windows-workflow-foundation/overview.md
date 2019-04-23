@@ -3,10 +3,10 @@ title: Windows Workflow 概觀
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
 ms.openlocfilehash: 57c394805d4aa07f8a137af259619bb1e65c43de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217597"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow 概觀
@@ -33,7 +33,7 @@ ms.locfileid: "59217597"
   
  ![顯示工作流程元件如何互動的圖表。](./media/overview/workflow-component-interatction.gif)  
   
- 在上圖中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 類別的 <xref:System.Activities.WorkflowInvoker> 方法是用於叫用幾個工作流程執行個體。 <xref:System.Activities.WorkflowInvoker> 用於不需要從主機; 管理的輕量工作流程需要從主機的管理工作流程 (例如<xref:System.Activities.Bookmark>繼續) 必須使用執行<xref:System.Activities.WorkflowApplication.Run%2A>改。 不一定要先等候一個工作流程完成，才能叫用另一個工作流程，執行階段引擎支援同時執行多個工作流程執行個體。  叫用的工作流程如下：  
+ 在上圖中，<xref:System.Activities.WorkflowInvoker.Invoke%2A> 類別的 <xref:System.Activities.WorkflowInvoker> 方法是用於叫用幾個工作流程執行個體。 <xref:System.Activities.WorkflowInvoker> 是用於不需要從主機管理的輕量工作流程，需要從主機 (例如 <xref:System.Activities.Bookmark> 繼續) 管理的工作流程則必須改用 <xref:System.Activities.WorkflowApplication.Run%2A> 來執行。 不一定要先等候一個工作流程完成，才能叫用另一個工作流程，執行階段引擎支援同時執行多個工作流程執行個體。  叫用的工作流程如下：  
   
 -   包含 <xref:System.Activities.Statements.Sequence> 子活動的 <xref:System.Activities.Statements.WriteLine> 活動。 父活動的 <xref:System.Activities.Variable> 會繫結至子活動的 <xref:System.Activities.InArgument>。 如需變數、 引數以及繫結的相關詳細資訊，請參閱 <<c0> [ 變數和引數](variables-and-arguments.md)。  
   
@@ -43,4 +43,4 @@ ms.locfileid: "59217597"
   
 ## <a name="see-also"></a>另請參閱
 
-- [BizTalk Server 2006 或 WF？ 選擇適合您專案的正確工作流程工具](https://go.microsoft.com/fwlink/?LinkId=154901)
+- [BizTalk Server 2006 或 WF？選擇適合您專案的正確工作流程工具](https://go.microsoft.com/fwlink/?LinkId=154901)

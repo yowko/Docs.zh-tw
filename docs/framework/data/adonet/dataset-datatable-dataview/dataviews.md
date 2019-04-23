@@ -3,10 +3,10 @@ title: DataView
 ms.date: 03/30/2017
 ms.assetid: 0fe5dfa2-c1cd-435f-90b6-b4dd2e3ef34b
 ms.openlocfilehash: aff4d6f648fa091130bfd9951f2a5001947b09a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215907"
 ---
 # <a name="dataviews"></a>DataView
@@ -22,7 +22,7 @@ ms.locfileid: "59215907"
  [建立 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/creating-a-dataview.md)  
  描述如何建立**DataView** for **DataTable**。  
   
- [排序及篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
+ [排序和篩選資料](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)  
  描述如何設定的屬性**DataView**符合特定篩選準則，傳回的資料列的子集，或以特定的排序順序傳回資料。  
   
  [DataRow 和 DataRowView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datarows-and-datarowviews.md)  
@@ -37,7 +37,7 @@ ms.locfileid: "59215907"
  [修改 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/modifying-dataviews.md)  
  描述如何修改的資料在基礎**DataTable**透過**DataView**，包括啟用或停用更新。  
   
- [處理 DataView 的事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
+ [處理 DataView 事件](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/handling-dataview-events.md)  
  描述如何使用**ListChanged**事件，以接收通知時的內容或順序**DataView**正在更新。  
   
  [管理 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/managing-dataviews.md)  
@@ -53,7 +53,7 @@ ms.locfileid: "59215907"
  [DataSet、DataTable 和 DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  描述**資料集**物件及如何使用它來管理應用程式資料。  
   
- [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
+ [DataTable](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)  
  描述**DataTable**物件，以及如何使用它來管理應用程式資料本身，或做為一部分**DataSet**。  
   
  [ADO.NET](../../../../../docs/framework/data/adonet/index.md)  
@@ -61,4 +61,4 @@ ms.locfileid: "59215907"
   
 ## <a name="see-also"></a>另請參閱
 
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4649663338efd0cc07b435991f90ba15843cc301
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496829"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59216337"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows 執行階段中繼資料匯出工具)
 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 中繼資料匯出工具 (Winmdexp.exe) 會將 .NET Framework 模組轉換為包含 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中繼資料的檔案。 雖然 .NET Framework 組件和 [!INCLUDE[wrt](../../../includes/wrt-md.md)]中繼資料檔案使用相同的實體格式，但是中繼資料資料表的內容有些差異，也就是說，.NET Framework 組件不會自動做為 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件使用。 將 .NET Framework 模組轉換為 [!INCLUDE[wrt](../../../includes/wrt-md.md)] 元件的程序稱為「匯出」。 在 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 和 [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] 中，產生的 Windows 中繼資料 (.winmd) 檔案同時包含中繼資料和實作。  
@@ -51,7 +51,8 @@ winmdexp [options] winmdmodule
  當您使用 C# 或 Visual Basic 撰寫 [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]應用程式或 [!INCLUDE[wrt](../../../includes/wrt-md.md)]元件時，.NET Framework 可提供支援，讓您透過 [!INCLUDE[wrt](../../../includes/wrt-md.md)]進行程式設計時更順暢。 這會在[適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)文章中討論。 在過程中，有些常用的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]類型會對應至 .NET Framework 類型。 Winmdexp.exe 會將這個過程反轉，並產生 API 介面來使用對應的 [!INCLUDE[wrt](../../../includes/wrt-md.md)]類型。 例如，建構自 <xref:System.Collections.Generic.IList%601> 介面的類型會對應到建構自 [!INCLUDE[wrt](../../../includes/wrt-md.md)][IVector\<T>](https://go.microsoft.com/fwlink/p/?LinkId=251132) 介面的類型。  
   
 ## <a name="see-also"></a>另請參閱
-- [Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
+
+- [適用於 Windows 市集應用程式和 Windows 執行階段的 .NET Framework 支援](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)
 - [在 C++ 和 Visual Basic 中建立 Windows 執行階段元件](https://go.microsoft.com/fwlink/p/?LinkID=238313)
 - [Winmdexp.exe 錯誤訊息](../../../docs/framework/tools/winmdexp-exe-error-messages.md)
 - [建置、部署及組態工具 (.NET Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd233108(v=vs.100))

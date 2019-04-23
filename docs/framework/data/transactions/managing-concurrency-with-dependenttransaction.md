@@ -3,10 +3,10 @@ title: 使用 DependentTransaction 管理並行存取
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216297"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>使用 DependentTransaction 管理並行存取
@@ -19,7 +19,7 @@ ms.locfileid: "59216297"
   
 -   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> 建立相依的交易封鎖父交易中，直到父交易時間的認可處理序，縮小，或直到<xref:System.Transactions.DependentTransaction.Complete%2A>上表示已完成的所有相依性呼叫。 當用戶端不想在完成相依交易之前即認可父交易時，這個參數就會非常有用。 如果父項比相依交易早一步完成工作，並在交易上呼叫 <xref:System.Transactions.CommittableTransaction.Commit%2A>，則會將認可處理序封鎖在某個狀態下。在此狀態下，您仍可以在交易上執行其他工作，並建立新的登記，直到所有相依項都呼叫 <xref:System.Transactions.DependentTransaction.Complete%2A> 為止。 一旦全部都完成各自的工作並呼叫 <xref:System.Transactions.DependentTransaction.Complete%2A>，就會馬上開始交易的認可處理序。  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>相反地，會建立相依的交易時，會自動中止<xref:System.Transactions.CommittableTransaction.Commit%2A>之前在父交易上呼叫<xref:System.Transactions.DependentTransaction.Complete%2A>呼叫。 在此情況下，所有在相依交易中完成的工作會保留一段交易存留期不變，而且沒人有機會認可其中一部分。  
+-   另一方面，如果在呼叫 <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete> 之前，先在父交易上呼叫了 <xref:System.Transactions.CommittableTransaction.Commit%2A>，則 <xref:System.Transactions.DependentTransaction.Complete%2A> 會建立能自動中止的相依交易。 在此情況下，所有在相依交易中完成的工作會保留一段交易存留期不變，而且沒人有機會認可其中一部分。  
   
  當您的應用程式完成了在相依交易上的工作，必須呼叫 <xref:System.Transactions.DependentTransaction.Complete%2A> 方法一次 (而且只能一次)；否則，會擲回 <xref:System.InvalidOperationException>。 在叫用這個呼叫後，您不應嘗試在交易上執行任何額外的工作，否則會擲回例外狀況。  
   
