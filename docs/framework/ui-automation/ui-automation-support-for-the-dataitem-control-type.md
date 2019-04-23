@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Data Item
 ms.assetid: 181708fd-2595-4c43-9abd-75811627d64c
 ms.openlocfilehash: 6263d7777becc1042cf477503c7f68af29fa7f4c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125207"
 ---
 # <a name="ui-automation-support-for-the-dataitem-control-type"></a>DataItem 控制項類型的 UI 自動化支援
@@ -27,7 +27,7 @@ ms.locfileid: "59125207"
 ## <a name="required-ui-automation-tree-structure"></a>必要的使用者介面自動化樹狀結構  
  下表描述與資料項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視，並說明各檢視中可包含的內容。 如需 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的詳細資訊，請參閱 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-內容檢視|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |DataItem<br /><br /> -而有所不同 (0 個以上; 可以結構化為階層)|DataItem<br /><br /> -而有所不同 (0 個以上; 可以結構化為階層)|  
   
@@ -76,7 +76,7 @@ ms.locfileid: "59125207"
 ## <a name="required-ui-automation-events"></a>必要的使用者介面自動化事件  
  下表列出所有資料項目控制項都必須支援的 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件。 如需事件的詳細資訊，請參閱 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] Event - 事件|支援|注意|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 事件|支援|注意|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.AutomationFocusChangedEvent>|必要項|None|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> 屬性變更事件。|必要|None|  
@@ -100,7 +100,7 @@ ms.locfileid: "59125207"
   
  與資料項目控制項相關之 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構的控制項檢視和內容檢視顯示如下。 每個自動化項目的控制項模式顯示在括號中。 Group "Contoso" 也是資料格主控制項資料格的一部分。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構-內容檢視|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 控制項檢視|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 樹狀結構 - 內容檢視|  
 |------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------|  
 |-群組"Contoso"（Table、 格線）<br />-DataItem"帳戶 Receivable.doc"（TableItem GridItem、 SelectionItem，叫用）<br />-映像的"Accounts Receivable.doc"<br />-編輯 「 名稱 」 （TableItem，GridItem，值"Accounts Receivable.doc"）<br />-編輯 「 修改日期 」 (TableItem，GridItem，值 「 8/25/2006年下午 3 點 29")<br />-編輯 「 大小 」 （GridItem，TableItem，值"11.0 KB）<br />-DataItem"帳戶 Payable.doc"（TableItem GridItem、 SelectionItem，叫用）<br />-   ...|-群組"Contoso"（Table、 格線）<br />-DataItem"帳戶 Receivable.doc"（TableItem GridItem、 SelectionItem，叫用）<br />-映像的"Accounts Receivable.doc"<br />-編輯 「 名稱 」 （TableItem，GridItem，值"Accounts Receivable.doc"）<br />-編輯 「 修改日期 」 (TableItem，GridItem，值 「 8/25/2006年下午 3 點 29")<br />-編輯 「 大小 」 （GridItem，TableItem，值"11.0 KB）<br />-DataItem"帳戶 Payable.doc"（TableItem GridItem、 SelectionItem，叫用）<br />-   …|  
   

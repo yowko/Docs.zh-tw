@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], documentation
 ms.assetid: 2aa18c85-a4fd-4bb9-986a-a8249e4f8e0e
 ms.openlocfilehash: a3d7ca994b185c39ac43cb6643098de602692842
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119596"
 ---
 # <a name="guide-to-the-documentation"></a>文件指南
@@ -64,6 +64,6 @@ ms.locfileid: "59119596"
 ## <a name="see-also"></a>另請參閱
 
 - [Windows Communication Foundation 範例](../../../docs/framework/wcf/samples/index.md)
-- [概觀說明](../../../docs/framework/wcf/conceptual-overview.md)
-- [方針及最佳作法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [概念性概觀](../../../docs/framework/wcf/conceptual-overview.md)
+- [方針及最佳做法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
 - [建置用戶端](../../../docs/framework/wcf/building-clients.md)

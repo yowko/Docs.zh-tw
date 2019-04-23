@@ -18,10 +18,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 813489a9-3efd-41b6-a33f-371d55397676
 ms.openlocfilehash: 32a2a99d5f71cb500dca467433f138a893d01e5b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119921"
 ---
 # <a name="using-an-asynchronous-server-socket"></a>使用非同步伺服器通訊端
@@ -272,5 +272,5 @@ public static void ReadCallback(IAsyncResult ar)
 
 - [使用同步伺服器通訊端](../../../docs/framework/network-programming/using-a-synchronous-server-socket.md)
 - [非同步伺服器通訊端範例](../../../docs/framework/network-programming/asynchronous-server-socket-example.md)
-- [執行緒](../../../docs/standard/threading/index.md)
+- [執行緒處理](../../../docs/standard/threading/index.md)
 - [透過通訊端接聽](../../../docs/framework/network-programming/listening-with-sockets.md)

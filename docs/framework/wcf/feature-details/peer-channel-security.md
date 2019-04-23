@@ -3,10 +3,10 @@ title: 對等通道安全性
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129450"
 ---
 # <a name="peer-channel-security"></a>對等通道安全性
@@ -35,6 +35,6 @@ ms.locfileid: "59129450"
   
 ## <a name="see-also"></a>另請參閱
 
-- [確保對等通道應用程式安全](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
+- [保護對等通道應用程式的安全](../../../../docs/framework/wcf/feature-details/securing-peer-channel-applications.md)
 - [對等通道概念](../../../../docs/framework/wcf/feature-details/peer-channel-concepts.md)
 - [建置對等通道應用程式](../../../../docs/framework/wcf/feature-details/building-a-peer-channel-application.md)

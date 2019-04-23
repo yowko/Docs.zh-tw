@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129586"
 ---
 # <a name="timing-behaviors-overview"></a>計時行為概觀
@@ -41,8 +41,8 @@ ms.locfileid: "59129586"
 |詞彙|描述|屬性||||  
 |----------|-----------------|----------------|-|-|-|  
 |簡單持續時間|時間軸正向輪播一次所需的時間長度。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
-|重複一次|時間長度所花費的時間軸正向播放和之後，<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性為 true 時，反向播放一次。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|作用期間|時間長度所花費的時間軸完成所指定的所有重複項目及其<xref:System.Windows.Media.Animation.RepeatBehavior>屬性。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>中， <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>中， <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|重複一次|時間長度所花費的時間軸正向播放和之後，<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>屬性為 true 時，反向播放一次。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
+|作用期間|時間長度所花費的時間軸完成所指定的所有重複項目及其<xref:System.Windows.Media.Animation.RepeatBehavior>屬性。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>、<xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration 屬性  
@@ -127,5 +127,5 @@ ms.locfileid: "59129586"
 - [動畫概觀](animation-overview.md)
 - [動畫和計時系統概觀](animation-and-timing-system-overview.md)
 - [計時事件概觀](timing-events-overview.md)
-- [HOW TO 主題](animation-and-timing-how-to-topics.md)
+- [HOW-TO 主題](animation-and-timing-how-to-topics.md)
 - [動畫計時行為範例](https://go.microsoft.com/fwlink/?LinkID=159970)

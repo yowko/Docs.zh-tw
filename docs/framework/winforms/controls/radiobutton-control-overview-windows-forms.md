@@ -10,10 +10,10 @@ helpviewer_keywords:
 - radio buttons [Windows Forms], about radio buttons
 ms.assetid: cd11f0c2-d098-4022-adf9-1455bc166a13
 ms.openlocfilehash: 1210658226d9bcacbf4904fdc90a9908c34f5b73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129112"
 ---
 # <a name="radiobutton-control-overview-windows-forms"></a>RadioButton 控制項概觀 (Windows Form)
@@ -30,7 +30,7 @@ Windows Form<xref:System.Windows.Forms.RadioButton>控制項呈現給使用者�
 - [Panel 控制項概觀](panel-control-overview-windows-forms.md)
 - [GroupBox 控制項概觀](groupbox-control-overview-windows-forms.md)
 - [CheckBox 控制項概觀](checkbox-control-overview-windows-forms.md)
-- [HOW TO：建立 Windows Forms 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)
-- [HOW TO：設定 Windows Forms 控制項所顯示的文字](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
-- [HOW TO：將 Windows Forms RadioButton 控制項分組成函式集](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
+- [如何：建立 Windows Form 控制項的便捷鍵](how-to-create-access-keys-for-windows-forms-controls.md)
+- [如何：設定所顯示之文字的 Windows Form 控制項](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [如何：群組 Windows Form RadioButton 控制項為一組的函式](how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set.md)
 - [RadioButton 控制項](radiobutton-control-windows-forms.md)

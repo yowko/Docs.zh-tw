@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1746527a2667676dfeab89e72874204460bcd33c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126668"
 ---
 # <a name="iclrgcmanagercollect-method"></a>ICLRGCManager::Collect 方法
@@ -60,11 +60,11 @@ HRESULT Collect (
   
  **LIBRARY:** 包含做為 MSCorEE.dll 中的資源  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 
-- [Automatic Memory Management](../../../../docs/standard/automatic-memory-management.md)
+- [自動管理記憶體](../../../../docs/standard/automatic-memory-management.md)
 - [記憶體回收](../../../../docs/standard/garbage-collection/index.md)
 - [ICLRControl 介面](../../../../docs/framework/unmanaged-api/hosting/iclrcontrol-interface.md)
 - [ICLRGCManager 介面](../../../../docs/framework/unmanaged-api/hosting/iclrgcmanager-interface.md)

@@ -3,10 +3,10 @@ title: 保護用戶端應用程式的安全
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119609"
 ---
 # <a name="secure-client-applications"></a>保護用戶端應用程式的安全
@@ -24,7 +24,7 @@ ms.locfileid: "59119609"
  [ASP.NET Web Pages 中驗證使用者輸入](https://docs.microsoft.com/previous-versions/aspnet/7kh55542(v=vs.100))  
  使用 ASP.NET 驗證控制項來驗證使用者輸入的概觀。  
   
- [Windows Form 中的使用者輸入](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
+ [Windows Forms 中的使用者輸入](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  針對在 Windows Forms 應用程式中驗證滑鼠及鍵盤輸入而提供連結及資訊。  
   
  [.NET Framework 規則運算式](../../../../docs/standard/base-types/regular-expressions.md)  
@@ -33,13 +33,13 @@ ms.locfileid: "59119609"
 ## <a name="windows-applications"></a>Windows 應用程式  
  以往通常會以完整的使用權限來執行 Windows 應用程式。 .NET Framework 提供的基礎結構可藉由程式碼存取安全性 (CAS)，限制在 Windows 應用程式中執行的程式碼。 不過，單靠 CAS 並不足以保護應用程式。  
   
- [Windows Form 安全性](../../../../docs/framework/winforms/windows-forms-security.md)  
+ [Windows Forms 安全性](../../../../docs/framework/winforms/windows-forms-security.md)  
  討論如何保護 Windows Forms 應用程式並提供相關主題的連結。  
   
- [Windows Form 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms 和 Unmanaged 應用程式](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  說明如何在 Windows Forms 應用程式中與 Unmanaged 應用程式互動。  
   
- [Windows Form 的 ClickOnce 部署](../../winforms/clickonce-deployment-for-windows-forms.md)  
+ [Windows Forms 的 ClickOnce 部署](../../winforms/clickonce-deployment-for-windows-forms.md)  
  說明如何在 Windows Forms 應用程式中使用 `ClickOnce` 部署，並討論安全性含意。  
   
 ## <a name="aspnet-and-xml-web-services"></a>ASP.NET 和 XML Web Service  
@@ -52,7 +52,7 @@ ms.locfileid: "59119609"
 |資源|描述|  
 |--------------|-----------------|  
 |[保護 ASP.NET 網站](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|討論如何保護 ASP.NET 應用程式。|  
-|[為使用 ASP.NET 建立的 XML Web Service 設定安全性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|討論如何實作 ASP.NET Web 服務的安全性。|  
+|[保護使用 ASP.NET 建立 XML Web Service](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|討論如何實作 ASP.NET Web 服務的安全性。|  
 |[指令碼攻擊概觀](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|說明如何防堵指令碼式攻擊，此類攻擊會嘗試在網頁中插入惡意的字元。|  
 |[Web 應用程式的基本安全性作法](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|一般安全性資訊以及進階討論區的連結。|  
   
@@ -70,5 +70,5 @@ ms.locfileid: "59119609"
 - [設定 ADO.NET 應用程式的安全性](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)
 - [資料存取策略的建議](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/8fxztkff(v=vs.90))
 - [設定應用程式的安全性](/visualstudio/ide/securing-applications)
-- [保護連接資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
-- [ADO.NET Managed 提供者和DataSet開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)
+- [保護連線資訊](../../../../docs/framework/data/adonet/protecting-connection-information.md)
+- [ADO.NET Managed 提供者和 DataSet 開發人員中心](https://go.microsoft.com/fwlink/?LinkId=217917)

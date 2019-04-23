@@ -3,10 +3,10 @@ title: 部分信任功能相容性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124562"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信任功能相容性
@@ -28,7 +28,7 @@ ms.locfileid: "59124562"
   
 -   使用 `[ServiceKnownType]` 屬性時，指定的方法必須是 `public`。  
   
--   `[MessageContract]` 類別和其成員可以是`public`。 如果 `[MessageContract]` 類別在應用程式組件中定義，它可以是 `internal` 且具有 `internal` 成員。  
+-   `[MessageContract]` 類別和其成員都可以是 `public`。 如果 `[MessageContract]` 類別在應用程式組件中定義，它可以是 `internal` 且具有 `internal` 成員。  
   
 ## <a name="system-provided-bindings"></a>系統提供的繫結  
  部分信任環境可充分支援 <xref:System.ServiceModel.BasicHttpBinding> 和 <xref:System.ServiceModel.WebHttpBinding> 。 <xref:System.ServiceModel.WSHttpBinding> 僅支援傳輸安全性模式。  
@@ -119,7 +119,7 @@ ms.locfileid: "59124562"
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims><xref:System.IdentityModel.Policy>， <xref:System.IdentityModel.Selectors>，和<xref:System.IdentityModel.Tokens>。  
+-   <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>和 <xref:System.IdentityModel.Tokens>。  
   
  下列為不支援的追蹤來源：  
   

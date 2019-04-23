@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130399"
 ---
 # <a name="expander-overview"></a>Expander 概觀
@@ -28,7 +28,7 @@ ms.locfileid: "59130399"
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>設定展開內容區域的方向  
- 您可以設定的內容區域<xref:System.Windows.Controls.Expander>展開其中一個四個方向的控制項 (<xref:System.Windows.Controls.ExpandDirection.Down>， <xref:System.Windows.Controls.ExpandDirection.Up>， <xref:System.Windows.Controls.ExpandDirection.Left>，或<xref:System.Windows.Controls.ExpandDirection.Right>) 使用<xref:System.Windows.Controls.ExpandDirection>屬性。 當內容區域摺疊，只<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和它的切換按鈕出現。 A<xref:System.Windows.Controls.Button>控制項顯示的方向性箭號來作為切換按鈕展開或摺疊內容區域。 展開時會<xref:System.Windows.Controls.Expander>嘗試在類似視窗的區域中顯示其所有內容。  
+ 您可以設定的內容區域<xref:System.Windows.Controls.Expander>展開其中一個四個方向的控制項 (<xref:System.Windows.Controls.ExpandDirection.Down>， <xref:System.Windows.Controls.ExpandDirection.Up>， <xref:System.Windows.Controls.ExpandDirection.Left>，或<xref:System.Windows.Controls.ExpandDirection.Right>) 使用<xref:System.Windows.Controls.ExpandDirection>屬性。 當內容區域摺疊時，只有<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>和它的切換按鈕出現。 A<xref:System.Windows.Controls.Button>控制項顯示的方向性箭號來作為切換按鈕展開或摺疊內容區域。 展開時會<xref:System.Windows.Controls.Expander>嘗試在類似視窗的區域中顯示其所有內容。  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>控制面板中展開器的大小  
@@ -62,4 +62,4 @@ ms.locfileid: "59130399"
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [HOW TO 主題](expander-how-to-topics.md)
+- [HOW-TO 主題](expander-how-to-topics.md)

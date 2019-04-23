@@ -3,10 +3,10 @@ title: JSON 和其他資料傳輸格式的支援
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
 ms.openlocfilehash: 9bf27a853fff42c098446067fa6f0db6bf4dbc4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128475"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>JSON 和其他資料傳輸格式的支援
@@ -16,7 +16,7 @@ JSON (JavaScript 物件標記法) 是一種有效率的資料編碼格式，可�
  [獨立 JSON 序列化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
  說明獨立 JSON 序列化  
   
- [HOW TO：序列化及還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
+ [如何：序列化和還原序列化 JSON 資料](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
  示範如何將 .NET 型別物件序列化為 JSON 編碼資料，然後透過 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> 將 JSON 格式的資料還原序列化為 .NET 型別執行個體。  
   
  [JSON 和 XML 之間的對應](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)  

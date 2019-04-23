@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ddc0429a6fa921e8e6ba3c55f3efe5373bea9576
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123769"
 ---
 # <a name="iclrmetadatalocator-interface"></a>ICLRMetadataLocator 介面
@@ -30,7 +30,7 @@ ms.locfileid: "59123769"
   
 |方法|描述|  
 |------------|-----------------|  
-|[GetMetaData 方法](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|從目標處理序中擷取映像的中繼的資料。|  
+|[GetMetadata 方法](../../../../docs/framework/unmanaged-api/debugging/iclrmetadatalocator-getmetadata-method.md)|從目標處理序中擷取映像的中繼的資料。|  
   
 ## <a name="remarks"></a>備註  
  API 用戶端 (也就是偵錯工具) 必須針對適合的特定目標處理序實作這個介面。 比方說，即時處理序的實作是不同的記憶體傾印。  
@@ -42,7 +42,7 @@ ms.locfileid: "59123769"
   
  **LIBRARY:** CorGuids.lib  
   
- **.NET Framework 版本：** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>另請參閱
 

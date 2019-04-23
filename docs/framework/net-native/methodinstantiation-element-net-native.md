@@ -5,10 +5,10 @@ ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121689"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > 項目 (.NET Native)
@@ -79,4 +79,4 @@ ms.locfileid: "59121689"
 - [執行階段指示詞 (rd.xml) 組態檔參考](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [執行階段指示詞項目](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [執行階段指示詞原則設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<方法 > 項目](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method> 項目](../../../docs/framework/net-native/method-element-net-native.md)

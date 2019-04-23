@@ -1,5 +1,5 @@
 ---
-title: <remove> AuthenticationModules （網路設定） 的項目
+title: authenticationModules 的 <remove> 項目 (網路設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/authenticationModules/remove
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125249"
 ---
 # <a name="remove-element-for-authenticationmodules-network-settings"></a>\<移除 > authenticationModules （網路設定） 的項目
@@ -40,14 +40,14 @@ ms.locfileid: "59125249"
   
 |**屬性**|**描述**|  
 |-------------------|---------------------|  
-|**類型**|若要移除的驗證模組的名稱。|  
+|**type**|若要移除的驗證模組的名稱。|  
   
 ### <a name="child-elements"></a>子元素  
  無。  
   
 ### <a name="parent-elements"></a>父項目  
   
-|**項目**|**描述**|  
+|**目**|**描述**|  
 |-----------------|---------------------|  
 |[authenticationModules](../../../../../docs/framework/configure-apps/file-schema/network/authenticationmodules-element-network-settings.md)|指定用來驗證網路要求的模組。|  
   

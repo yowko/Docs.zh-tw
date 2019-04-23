@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129931"
 ---
 # <a name="using-data-contracts"></a>使用資料合約
@@ -70,14 +70,14 @@ ms.locfileid: "59129931"
 
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - <xref:System.Runtime.Serialization.DataContractAttribute>
-- [可序列化的型別](../../../../docs/framework/wcf/feature-details/serializable-types.md)
+- [可序列化類型](../../../../docs/framework/wcf/feature-details/serializable-types.md)
 - [資料合約名稱](../../../../docs/framework/wcf/feature-details/data-contract-names.md)
 - [資料合約等價](../../../../docs/framework/wcf/feature-details/data-contract-equivalence.md)
 - [資料成員順序](../../../../docs/framework/wcf/feature-details/data-member-order.md)
-- [資料合約已知型別](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
+- [資料合約已知類型](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)
 - [向前相容資料合約](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)
 - [資料合約版本控制](../../../../docs/framework/wcf/feature-details/data-contract-versioning.md)
 - [版本相容序列化回呼](../../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)
 - [資料成員預設值](../../../../docs/framework/wcf/feature-details/data-member-default-values.md)
-- [資料合約序列化程式支援的型別](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
-- [HOW TO：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [資料合約序列化程式支援的類型](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)
+- [如何：建立類別或結構的基本資料合約](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

@@ -4,12 +4,12 @@ description: 使用 ASP.NET Core 和 Azure 架構現代化 Web 應用程式 | �
 author: ardalis
 ms.author: wiwagn
 ms.date: 01/30/2019
-ms.openlocfilehash: 3ab7de919ed98df1d3fcda02772ba66f9d6294ae
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 1d58f6ef590e798e52730d79e56b8c16830c1712
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978328"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59128384"
 ---
 # <a name="develop-aspnet-core-mvc-apps"></a>開發 ASP.NET Core MVC 應用程式
 
@@ -317,11 +317,11 @@ public async Task<IActionResult> Put(int id, [FromBody]Author author)
 >
 > - **區域**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/areas>
-> - **MSDN Magazine - Feature Slices for ASP.NET Core MVC (MSDN Magazine - ASP.NET Core MVC 的功能分區)**  
+> - **MSDN Magazine - ASP.NET Core MVC 的功能分區**  
 >   <https://msdn.microsoft.com/magazine/mt763233.aspx>
-> - **篩選**  
+> - **篩選條件**  
 >   <https://docs.microsoft.com/aspnet/core/mvc/controllers/filters>
-> - **MSDN - Real World ASP.NET Core MVC Filters (真實世界的 ASP.NET Core MVC 篩選條件)**  
+> - **MSDN - 真實世界的 ASP.NET Core MVC 篩選條件**  
 >   <https://msdn.microsoft.com/magazine/mt767699.aspx>
 
 ## <a name="security"></a>安全性
@@ -418,7 +418,7 @@ public void ConfigureServices(IServiceCollection services)
 
 ![TokenAuth](./media/image7-4.png)
 
-**圖 7-4**： Web API 的權杖型驗證
+**圖 7-4。** Web API 的權杖型驗證
 
 您可以使用像 [IdentityServer](https://github.com/IdentityServer) 這類開放原始碼工具，來建立自己的驗證服務、與 Azure AD 及 OAuth 整合，或實作服務。
 
@@ -426,20 +426,19 @@ public void ConfigureServices(IServiceCollection services)
 
 請特別小心加密、使用者成員資格或權杖產生系統的「自行」實作。 可供使用的商業及開放原始碼替代方案非常多，幾乎肯定會比自訂實作更安全。
 
-
 > ### <a name="references--security"></a>參考資料 - 安全性
 >
 > - **安全性文件概觀**  
 >   https://docs.microsoft.com/aspnet/core/security/
-> - **Enforcing SSL in an ASP.NET Core App** (在 ASP.NET Core 應用程式中強制執行 SSL)  
+> - **在 ASP.NET Core 應用程式中強制執行 SSL**  
 >   <https://docs.microsoft.com/aspnet/core/security/enforcing-ssl>
 > - **身分識別簡介**  
 >   <https://docs.microsoft.com/aspnet/core/security/authentication/identity>
 > - **授權簡介**  
 >   <https://docs.microsoft.com/aspnet/core/security/authorization/introduction>
-> - **Azure App Service 之 API Apps 的驗證和授權**  
+> - **Azure App Service 中適用於 API 應用程式的驗證和授權**  
 >   <https://docs.microsoft.com/azure/app-service-api/app-service-api-authentication>
-> - **Identity Server**  
+> - **身分識別伺服器**  
 >   <https://github.com/IdentityServer>
 
 ## <a name="client-communication"></a>用戶端通訊
@@ -502,7 +501,7 @@ public class Program
 >
 > - **ASP.NET Core SignalR**  
 >   <https://github.com/aspnet/SignalR>
-> - **WebSocket Manager**  
+> - **WebSocket 管理員**  
 >   https://github.com/radu-matei/websocket-manager
 
 ## <a name="domain-driven-design--should-you-apply-it"></a>領域驅動設計 - 是否應該套用？

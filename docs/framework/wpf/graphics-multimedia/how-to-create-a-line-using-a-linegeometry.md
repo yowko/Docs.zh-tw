@@ -8,10 +8,10 @@ helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
 ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59123054"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>HOW TO：使用 LineGeometry 建立線條
@@ -33,5 +33,5 @@ ms.locfileid: "59123054"
 ## <a name="see-also"></a>另請參閱
 
 - [幾何概觀](geometry-overview.md)
-- [建立複合圖形](how-to-create-a-composite-shape.md)
-- [使用 PathGeometry 建立圖形](how-to-create-a-shape-by-using-a-pathgeometry.md)
+- [建立複合圖案](how-to-create-a-composite-shape.md)
+- [使用 PathGeometry 建立圖案](how-to-create-a-shape-by-using-a-pathgeometry.md)

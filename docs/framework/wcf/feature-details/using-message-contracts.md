@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121975"
 ---
 # <a name="using-message-contracts"></a>使用訊息合約
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> 可讓您指定 WrapperName 和 WrapperNamespace 屬性，用來控制 SOAP 訊息本文中包裝函式元素的名稱。 預設情況下，訊息合約型別的名稱會用於包裝函式，而在訊息合約中定義的命名空間 `http://tempuri.org/` 會當做預設命名空間使用。  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性會被忽略，在訊息合約。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，請將其置於使用有問題之訊息合約的作業。  
+>  在訊息合約中會忽略 <xref:System.Runtime.Serialization.KnownTypeAttribute> 屬性。 如果需要 <xref:System.Runtime.Serialization.KnownTypeAttribute>，請將其置於使用有問題之訊息合約的作業。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>控制標頭和本文部分的名稱與命名空間  
  在訊息合約的 SOAP 表示法中，每個標頭和本文部分會對應至擁有名稱與命名空間的 XML 項目。  
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP 標頭屬性  
  SOAP 標準會定義下列可能存在於標頭的屬性：  
   
--   `Actor/Role` (`Actor` soap 1.1，`Role`在 SOAP 1.2)  
+-   `Actor/Role` (在 SOAP 1.1 中為 `Actor`，在 SOAP 1.2 中為 `Role`)  
   
 -   `MustUnderstand`  
   

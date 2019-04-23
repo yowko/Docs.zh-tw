@@ -11,10 +11,10 @@ helpviewer_keywords:
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
 ms.openlocfilehash: 540b6d422be5d5c0898f019592a755258145d14d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125017"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>HOW TO：建立線形漸層
@@ -80,4 +80,4 @@ ms.locfileid: "59125017"
 ## <a name="see-also"></a>另請參閱
 
 - [使用漸層筆刷填滿形狀](using-a-gradient-brush-to-fill-shapes.md)
-- [Windows Form 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)
+- [Windows Forms 中的圖形和繪圖](graphics-and-drawing-in-windows-forms.md)

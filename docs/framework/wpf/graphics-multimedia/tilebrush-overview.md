@@ -9,10 +9,10 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125293"
 ---
 # <a name="tilebrush-overview"></a>TileBrush 概觀
@@ -52,13 +52,13 @@ TileMode 為 Tile 之 TileBrush 的元件
 ## <a name="the-base-tile"></a>基底並排顯示  
  A<xref:System.Windows.Media.TileBrush>其內容投影基底的並排顯示。 <xref:System.Windows.Media.TileBrush.Stretch%2A>屬性會控制如何<xref:System.Windows.Media.TileBrush>內容會縮放以填滿基底的並排顯示。 <xref:System.Windows.Media.TileBrush.Stretch%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.Stretch>列舉型別：  
   
--   <xref:System.Windows.Media.Stretch.None>:筆刷的內容不會縮放以填滿並排顯示。  
+-   <xref:System.Windows.Media.Stretch.None>：筆刷的內容不會縮放以填滿並排顯示。  
   
--   <xref:System.Windows.Media.Stretch.Fill>:筆刷的內容會縮放以符合並排顯示。 因為內容的高度和寬度會分開縮放，所以可能不會保留內容的原始外觀比例。 也就是說，筆刷的內容可能會變形以完全填滿輸出並排顯示。  
+-   <xref:System.Windows.Media.Stretch.Fill>：筆刷的內容會縮放以符合並排顯示。 因為內容的高度和寬度會分開縮放，所以可能不會保留內容的原始外觀比例。 也就是說，筆刷的內容可能會變形以完全填滿輸出並排顯示。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>:筆刷的內容會縮放，以完全符合並排顯示。 這會維持內容的外觀比例。  
+-   <xref:System.Windows.Media.Stretch.Uniform>：筆刷的內容會縮放，以完全符合並排顯示。 這會維持內容的外觀比例。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>:筆刷的內容會縮放，讓它完全填滿輸出區域，同時維持原始外觀比例的內容。  
+-   <xref:System.Windows.Media.Stretch.UniformToFill>：筆刷的內容會縮放，讓它完全填滿輸出區域，同時維持原始外觀比例的內容。  
   
  下圖說明不同<xref:System.Windows.Media.TileBrush.Stretch%2A>設定。  
   
@@ -99,15 +99,15 @@ TileMode 為 Tile 之 TileBrush 的元件
 ### <a name="tiling-behavior"></a>並排顯示行為  
  A<xref:System.Windows.Media.TileBrush>其基底的並排顯示不完全填滿輸出區域和並排顯示模式以外時，會產生並排顯示的圖樣<xref:System.Windows.Media.TileMode.None>指定。 拼貼筆刷的並排顯示不完全填滿輸出區域中，當其<xref:System.Windows.Media.TileBrush.TileMode%2A>屬性指定是否應該重複來填滿輸出區域的基底的並排顯示而且若是如此，基底的並排顯示應重複。 <xref:System.Windows.Media.TileBrush.TileMode%2A>屬性可以接受下列值所定義<xref:System.Windows.Media.TileMode>列舉型別：  
   
--   <xref:System.Windows.Media.TileMode.None>:只有基底的並排顯示繪製。  
+-   <xref:System.Windows.Media.TileMode.None>：只有基底的並排顯示繪製。  
   
--   <xref:System.Windows.Media.TileMode.Tile>:繪製基底的並排顯示，並重複基底的並排顯示，因此一個圖格的右邊緣相鄰的左邊緣的 [下一步]，並同樣地上下填滿剩餘的區域。  
+-   <xref:System.Windows.Media.TileMode.Tile>：繪製基底的並排顯示，並重複基底的並排顯示，因此一個圖格的右邊緣相鄰的左邊緣的 [下一步]，並同樣地上下填滿剩餘的區域。  
   
--   <xref:System.Windows.Media.TileMode.FlipX>:相同<xref:System.Windows.Media.TileMode.Tile>，但是替代的資料行的圖格會以水平翻轉。  
+-   <xref:System.Windows.Media.TileMode.FlipX>：相同<xref:System.Windows.Media.TileMode.Tile>，但是替代的資料行的圖格會以水平翻轉。  
   
--   <xref:System.Windows.Media.TileMode.FlipY>:相同<xref:System.Windows.Media.TileMode.Tile>，但會以垂直方式翻轉磚的替代資料列。  
+-   <xref:System.Windows.Media.TileMode.FlipY>：相同<xref:System.Windows.Media.TileMode.Tile>，但會以垂直方式翻轉磚的替代資料列。  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>:結合 <xref:System.Windows.Media.TileMode.FlipX> 和 <xref:System.Windows.Media.TileMode.FlipY>。  
+-   <xref:System.Windows.Media.TileMode.FlipXY>：結合 <xref:System.Windows.Media.TileMode.FlipX> 和 <xref:System.Windows.Media.TileMode.FlipY>。  
   
  下列影像說明不同的並排顯示模式。  
   
@@ -127,7 +127,7 @@ TileMode 為 Tile 之 TileBrush 的元件
 - <xref:System.Windows.Media.VisualBrush>
 - <xref:System.Windows.Media.TileBrush>
 - [使用影像、繪圖和視覺效果繪製](painting-with-images-drawings-and-visuals.md)
-- [HOW TO 主題](brushes-how-to-topics.md)
+- [HOW-TO 主題](brushes-how-to-topics.md)
 - [Freezable 物件概觀](../advanced/freezable-objects-overview.md)
 - [ImageBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush 範例](https://go.microsoft.com/fwlink/?LinkID=160049)

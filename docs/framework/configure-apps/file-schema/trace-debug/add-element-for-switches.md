@@ -1,5 +1,5 @@
 ---
-title: <add> 項目 <switches>
+title: <switches> 的 <add> 項目
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/switches/add
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120090"
 ---
 # <a name="add-element-for-switches"></a>\<新增 > 項目\<參數 >
@@ -36,7 +36,7 @@ ms.locfileid: "59120090"
   
 |屬性|描述|  
 |---------------|-----------------|  
-|**名稱**|必要屬性。<br /><br /> 指定參數的名稱。 此屬性的值會對應到*displayName*傳遞至參數的建構函式的參數。|  
+|**name**|必要屬性。<br /><br /> 指定參數的名稱。 此屬性的值會對應到*displayName*傳遞至參數的建構函式的參數。|  
 |**value**|必要屬性。<br /><br /> 指定的交換器層級。|  
   
 ### <a name="child-elements"></a>子元素  

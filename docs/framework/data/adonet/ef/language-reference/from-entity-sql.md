@@ -3,10 +3,10 @@ title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
 ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119830"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
@@ -28,7 +28,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>FROM 子句項目  
- 每個 `FROM` 子句項目會參考 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢中的一個來源集合。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援下列類別的`FROM`子句項目： 簡單`FROM`子句項目、`JOIN FROM`子句項目，和`APPLY FROM`子句項目。 下列章節將更詳細說明這些 `FROM` 子句項目。  
+ 每個 `FROM` 子句項目會參考 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 查詢中的一個來源集合。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援下列 `FROM` 子句項目類別：簡單 `FROM` 子句項目、`JOIN FROM` 子句項目，以及 `APPLY FROM` 子句項目。 下列章節將更詳細說明這些 `FROM` 子句項目。  
   
 ### <a name="simple-from-clause-item"></a>簡單 FROM 子句項目  
  最簡單的 `FROM` 子句項目是可識別集合和別名的單一運算式。 運算式可以是實體集或子查詢，或是型別為集合的任何其他運算式。 以下是一個範例：  
@@ -46,7 +46,7 @@ LOB.Customers
  如果未指定別名，[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 會嘗試依據集合運算式產生別名。  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 子句項目  
- `JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、 內部聯結、 左方及右方外部聯結和完整外部聯結。 而支援這些聯結的方式與 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支援的類似。 跟 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 一樣，`FROM` 所包含的兩個 `JOIN` 子句項目必須互為獨立， 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。  
+ `JOIN FROM` 子句項目代表介於兩個 `FROM` 子句項目之間的聯結。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援交叉聯結、內部聯結、左右外部連結，以及完整外部連結。 而支援這些聯結的方式與 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 支援的類似。 跟 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 一樣，`FROM` 所包含的兩個 `JOIN` 子句項目必須互為獨立， 也就是不能相互關聯。 `CROSS APPLY` 或 `OUTER APPLY` 適用於這些案例。  
   
 #### <a name="cross-joins"></a>交叉聯結  
  `CROSS JOIN` 查詢運算式可產生兩個集合的笛卡兒乘積，如下列範例所示：  
@@ -80,7 +80,7 @@ LOB.Customers
 >  為了維持與 SQL-92 的相容性，在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] 中 OUTER 關鍵字是選擇性的。 因此，`LEFT JOIN`、`RIGHT JOIN` 和 `FULL JOIN` 是 `LEFT OUTER JOIN`、`RIGHT OUTER JOIN` 和 `FULL OUTER JOIN` 的同義字。  
   
 ### <a name="apply-clause-item"></a>APPLY Clause 子句項目  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 支援兩種類型的`APPLY`:`CROSS APPLY`和`OUTER APPLY`。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 可支援兩種 `APPLY`：`CROSS APPLY` 和 `OUTER APPLY`。  
   
  `CROSS APPLY` 會以評估右運算式產生之集合的項目來產生左集合的每個項目的唯一配對。 使用 `CROSS APPLY`，右運算式的作用相依於左項目，如下列關聯的集合範例所示：  
   
@@ -96,7 +96,7 @@ LOB.Customers
 >  不同於在 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]，在 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 不需要明確的無巢狀步驟。  
   
 > [!NOTE]
->  `CROSS` 並`OUTER APPLY`運算子中導入[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者，包括 SQL Server 版本早於[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]，不支援這些運算子，這些後端提供者無法執行這類查詢。  
+>  `CROSS` 已引入 `OUTER APPLY` 和 [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] 運算子。 在某些案例中，查詢管線可能產生含有 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子的 Transact-SQL。 因為有些後端提供者，包括 SQL Server 版本早於[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]，不支援這些運算子，這些後端提供者無法執行這類查詢。  
 >   
 >  下列一些典型的案例可能導致 `CROSS APPLY` 和 (或) `OUTER APPLY` 運算子出現在輸出查詢中：AnyElement 是在相互關聯的子查詢之上或是在導覽產生的集合之上；在 LINQ 查詢中使用的群組方法接受元素選擇器；在查詢中明確指定 `CROSS APPLY` 或 `OUTER APPLY`；在查詢中的 `DEREF` 建構是在 `REF` 建構之上。  
   
@@ -131,7 +131,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  `FROM` 子句在邏輯上會產生型別為 Row(c, d, e) 之資料列的多重集，其中 c、d 和 e 被假設為是 `C`、`D` 和 `c.Names` 的項目型別。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 導入了每個簡單的別名`FROM`子句範圍中的項目。 例如，下列 FROM 子句程式碼片段中引入範圍內的名稱是 c、d 和 e。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 在範圍中會為每個簡單 `FROM` 子句引入別名。 例如，下列 FROM 子句程式碼片段中引入範圍內的名稱是 c、d 和 e。  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  

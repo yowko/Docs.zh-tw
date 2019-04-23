@@ -5,10 +5,10 @@ helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
 ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127838"
 ---
 # <a name="controls-by-category"></a>按分類區隔控制項
@@ -140,7 +140,7 @@ Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為
 -   <xref:System.Windows.Controls.ToolTip>  
   
 ## <a name="documents"></a>文件  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含數個特殊的控制項，用於檢視文件。 這些控制項會根據目標使用者的情況，提供最佳的閱讀體驗。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含幾個專用於檢視文件的控制項。 這些控制項會根據目標使用者的情況，提供最佳的閱讀體驗。  
   
 -   <xref:System.Windows.Controls.DocumentViewer>  
   
@@ -162,7 +162,7 @@ Windows Presentation Foundation (WPF) 控制項可以以邏輯方式分組分為
 -   <xref:System.Windows.Controls.PasswordBox>  
   
 ## <a name="media"></a>媒體  
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含裝載音訊和視訊內容，以及 [轉碼器] 的整合的支援，最受歡迎的影像格式。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 包含裝載音訊和視訊內容的整合支援，以及大多數常見影像格式的「轉碼器」。  
   
 -   <xref:System.Windows.Controls.Image>  
   

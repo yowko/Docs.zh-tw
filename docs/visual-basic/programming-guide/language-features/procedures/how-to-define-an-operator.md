@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126109"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>HOW TO：定義運算子 (Visual Basic)
@@ -39,10 +39,10 @@ ms.locfileid: "59126109"
 ## <a name="see-also"></a>另請參閱
 
 - [運算子程序](./operator-procedures.md)
-- [HOW TO：定義轉換運算子](./how-to-define-a-conversion-operator.md)
-- [HOW TO：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
-- [HOW TO：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [如何：定義轉換運算子](./how-to-define-a-conversion-operator.md)
+- [如何：呼叫運算子程序](./how-to-call-an-operator-procedure.md)
+- [如何：使用定義運算子的類別](./how-to-use-a-class-that-defines-operators.md)
+- [Operator 陳述式](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure 陳述式](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [HOW TO：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [如何：宣告結構](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Mod 運算子](../../../../visual-basic/language-reference/operators/mod-operator.md)

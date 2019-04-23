@@ -8,12 +8,12 @@ helpviewer_keywords:
 - await keyword [C#]
 - await [C#]
 ms.assetid: 50725c24-ac76-4ca7-bca1-dd57642ffedb
-ms.openlocfilehash: 1afd763d41ac3ffd42409ff8d1b8823979ab0c08
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 91d76309fedb2a6f3d877a47f230fda74060107e
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713042"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59122885"
 ---
 # <a name="await-c-reference"></a>await (C# 參考)
 `await` 運算子會套用至非同步方法中的工作，以在執行方法中插入暫停點，直到等候的工作完成為止。 工作代表進行中的工作。  
@@ -68,6 +68,7 @@ TResult result = await AsyncMethodThatReturnsValueTaskTResult();
 上述範例使用 C# 7.1，可支援 [`async` `Main` 方法](../../programming-guide/main-and-command-args/index.md)。 由於較舊的 C# 版本不支援會傳回 <xref:System.Threading.Tasks.Task> 或 <xref:System.Threading.Tasks.Task%601> 的應用程式進入點，因此您無法將 `async` 修飾詞套用至 `Main` 方法並等候 `GetPageLengthsAsync` 方法呼叫。 在此情況下，您可以透過擷取 <xref:System.Threading.Tasks.Task%601.Result?displayProperty=nameWithType> 屬性的值，確保 `Main` 方法會等候非同步作業完成。 針對不傳回值的工作，您可以呼叫 <xref:System.Threading.Tasks.Task.Wait%2A?displayProperty=nameWithType> 方法。 如需有關選取語言版本的資訊，請參閱[選取 C# 語言版本](../configure-language-version.md)。
 
 ## <a name="see-also"></a>另請參閱
+
 - [使用 async 和 await 進行非同步程式設計](../../../csharp/programming-guide/concepts/async/index.md)
 - [逐步解說：使用 Async 和 Await 存取 Web](../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
 - [async](../../../csharp/language-reference/keywords/async.md)

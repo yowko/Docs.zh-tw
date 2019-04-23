@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127383"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 新聞訂閱物件模型對應到 Atom 和 RSS 的方式
@@ -399,8 +399,8 @@ ms.locfileid: "59127383"
   
 ## <a name="see-also"></a>另請參閱
 
-- [WCF 新聞訂閱概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
-- [新聞訂閱架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
-- [HOW TO：建立基本 RSS 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
-- [HOW TO：建立基本 Atom 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
-- [HOW TO：將摘要同時公開為 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)
+- [WCF 摘要整合概觀](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)
+- [摘要整合架構](../../../../docs/framework/wcf/feature-details/architecture-of-syndication.md)
+- [如何：建立基本 RSS 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-rss-feed.md)
+- [如何：建立基本 Atom 摘要](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-atom-feed.md)
+- [如何：公開 （expose) 的摘要為這兩個 Atom 和 RSS](../../../../docs/framework/wcf/feature-details/how-to-expose-a-feed-as-both-atom-and-rss.md)

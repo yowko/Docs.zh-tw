@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TextBox control [WPF], custom content menus
 ms.assetid: 842d3cd5-6fa0-4be4-8d90-6c7466213b1c
 ms.openlocfilehash: b0507c6fa37f0f51f9e12ebe5f908c39c25b50d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129411"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>HOW TO：在 TextBox 使用自訂操作功能表
@@ -37,6 +37,6 @@ ms.locfileid: "59129411"
   
 ## <a name="see-also"></a>另請參閱
 
-- [使用操作功能表的拼字檢查](how-to-use-spell-checking-with-a-context-menu.md)
+- [使用內容功能表的拼字檢查](how-to-use-spell-checking-with-a-context-menu.md)
 - [TextBox 概觀](textbox-overview.md)
 - [RichTextBox 概觀](richtextbox-overview.md)

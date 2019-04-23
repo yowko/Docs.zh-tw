@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: 48c95411d08aefc3ecb7d8a7041ac47d44e6b9ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127942"
 ---
 # <a name="standard-query-operator-translation"></a>標準查詢運算子轉譯
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 將標準查詢運算子轉譯為 SQL 命令。 資料庫的查詢處理器會決定執行語意的 SQL 轉譯。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會將標準查詢運算子轉譯為 SQL 命令。 資料庫的查詢處理器會決定執行語意的 SQL 轉譯。  
   
  標準查詢運算子中定義*序列*。 是一連串*排序*而且依賴序列的每個元素的參考識別。 如需詳細資訊，請參閱 <<c0> [ 標準查詢運算子概觀 (C#)](../../../../../csharp/programming-guide/concepts/linq/standard-query-operators-overview.md)或是[標準查詢運算子概觀 (Visual Basic)](../../../../../visual-basic/programming-guide/concepts/linq/standard-query-operators-overview.md)。</c0>  
   
@@ -24,7 +24,7 @@ ms.locfileid: "59127942"
 ## <a name="operator-support"></a>運算子支援  
   
 ### <a name="concat"></a>Concat  
- <xref:System.Linq.Enumerable.Concat%2A>方法在定義上適用於已排序的多重集，也就是說接收器的順序和引數的順序相同。 <xref:System.Linq.Enumerable.Concat%2A> 擔任`UNION ALL`原理的常見的順序。  
+ <xref:System.Linq.Enumerable.Concat%2A>方法在定義上適用於已排序的多重集，也就是說接收器的順序和引數的順序相同。 <xref:System.Linq.Enumerable.Concat%2A> 的運作原理，是對採用共通順序的多重集執行 `UNION ALL`。  
   
  最後一步就是在產生結果前於 SQL 中排序。 <xref:System.Linq.Enumerable.Concat%2A> 不會保留其引數的順序。 若要確保適當的排序，您必須明確排序 <xref:System.Linq.Enumerable.Concat%2A> 的結果。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59127942"
  <xref:System.Linq.Enumerable.Take%2A> 並<xref:System.Linq.Enumerable.Skip%2A>方法在定義只針對適用於*ordered set*。 未定義適用於未排序集合或多重集的語意 (Semantics)。  
   
 > [!NOTE]
->  <xref:System.Linq.Enumerable.Take%2A> 和<xref:System.Linq.Enumerable.Skip%2A>以往在 SQL Server 2000 的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+>  <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 SQL Server 2000 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
  由於在 SQL 中，排序的限制[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]嘗試將移至方法的結果，這些方法的引數的順序。 例如，請考量下列 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 查詢：  
   
@@ -71,20 +71,20 @@ ORDER BY [t0].[CustomerID]
   
 |運算子|基本原理|  
 |---------------|---------------|  
-|<xref:System.Linq.Enumerable.TakeWhile%2A>, <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查詢可用於多重集而非序列上。 `ORDER BY` 必須是最後一個子句套用到結果。 因此，這兩個方法不需要普遍受到轉譯。|  
+|<xref:System.Linq.Enumerable.TakeWhile%2A>、 <xref:System.Linq.Enumerable.SkipWhile%2A>|SQL 查詢可用於多重集而非序列上。 `ORDER BY` 必須是最後一個對結果套用的子句。 因此，這兩個方法不需要普遍受到轉譯。|  
 |<xref:System.Linq.Enumerable.Reverse%2A>|如果是未排序的集合，則要轉譯這個方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|  
-|<xref:System.Linq.Enumerable.Last%2A>, <xref:System.Linq.Enumerable.LastOrDefault%2A>|如果是未排序的集合，則要轉譯這些方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|  
-|<xref:System.Linq.Enumerable.ElementAt%2A>, <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查詢是用於多重集，而非可建立索引的序列上。|  
-|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> （以預設引數的多載）|一般而言，如果是任意 Tuple，就不能指定預設值。 在某些情況下，可以透過外部聯結 (Outer Join) 指定 Null 值給 Tuple。|  
+|<xref:System.Linq.Enumerable.Last%2A>、 <xref:System.Linq.Enumerable.LastOrDefault%2A>|如果是未排序的集合，則要轉譯這些方法是可行的，但 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 目前不會加以轉譯。|  
+|<xref:System.Linq.Enumerable.ElementAt%2A>、 <xref:System.Linq.Enumerable.ElementAtOrDefault%2A>|SQL 查詢是用於多重集，而非可建立索引的序列上。|  
+|<xref:System.Linq.Enumerable.DefaultIfEmpty%2A> (以預設引數多載)|一般而言，如果是任意 Tuple，就不能指定預設值。 在某些情況下，可以透過外部聯結 (Outer Join) 指定 Null 值給 Tuple。|  
   
 ## <a name="expression-translation"></a>運算式轉譯  
   
 ### <a name="null-semantics"></a>Null 語意  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會在 SQL 上的 null 比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 基於這個理由，語意會反映伺服器或連接設定所定義的 SQL 語意。 例如，兩個 null 值會視為不相等，在預設 SQL Server 設定 下，但您可以變更設定來變更語意。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 轉譯查詢時，不會考慮伺服器設定。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會對 SQL 加上 null 比較語意。 比較運算子會轉譯為語法上的 SQL 對等用法。 基於這個理由，語意會反映伺服器或連接設定所定義的 SQL 語意。 例如，兩個 null 值會視為不相等，在預設 SQL Server 設定 下，但您可以變更設定來變更語意。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 在轉譯查詢時不會考慮伺服器設定。  
   
  與常值 null 的比較會轉譯為適當的 SQL 版本 (`is null` 或 `is not null`)。  
   
- 定序 (Collation) 中的值 `null` 是由 SQL Server 所定義。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會變更定序。  
+ 定序 (Collation) 中的值 `null` 是由 SQL Server 所定義。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 不會變更這個定序。  
   
 ### <a name="aggregates"></a>彙總  
  標準查詢運算子彙總方法 <xref:System.Linq.Enumerable.Sum%2A> 會將空序列或只包含 null 的序列評估為零。 中[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]，SQL 的語意會保留不變，並<xref:System.Linq.Enumerable.Sum%2A>評估為`null`而不是零，將空序列或只包含 null 的序列。  
@@ -185,9 +185,9 @@ ORDER BY [t0].[CustomerID]
  下列 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 限制 (相較於 [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]) 會影響 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 支援。  
   
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 和 Outer Apply 運算子  
- 這些運算子不適用於 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試一連串重寫作業將其取代為適當的聯結。  
+ 這些運算子不適用於 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 會嘗試進行一連串重寫作業，以便將它們取代成適當的聯結 (Join)。  
   
- `Cross Apply` 和`Outer Apply`產生關聯性導覽。 會進行這類重寫的查詢集還沒整理出來。 因此，對於 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 而言，最基本可支援的查詢集就是與關聯性巡覽無關的查詢集。  
+ `Cross Apply` 和 `Outer Apply` 是為了關聯性 (Relationship) 巡覽而產生的。 會進行這類重寫的查詢集還沒整理出來。 因此，對於 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 而言，最基本可支援的查詢集就是與關聯性巡覽無關的查詢集。  
   
 ### <a name="text--ntext"></a>text / ntext  
  資料型別`text`  /  `ntext`不適用於某些查詢作業`varchar(max)`  /  `nvarchar(max)`，所支援的[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]。  
@@ -198,7 +198,7 @@ ORDER BY [t0].[CustomerID]
  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] （透過 SP4) 繫結器會有巢狀查詢觸發的某些特性。 無法妥善定義的 SQL 查詢集，就會觸發這些特性。 基於這個理由，您不能定義一組[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]查詢可能會導致 SQL Server 例外狀況。  
   
 ### <a name="skip-and-take-operators"></a>Skip 和 Take 運算子  
- <xref:System.Linq.Enumerable.Take%2A> 並<xref:System.Linq.Enumerable.Skip%2A>時會使用的查詢中有一些限制[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)]。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
+ <xref:System.Linq.Enumerable.Take%2A> 和 <xref:System.Linq.Enumerable.Skip%2A> 在用於對 [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] 進行的查詢中時會有一些限制。 如需詳細資訊，請參閱中的"Skip 和 Take 例外狀況在 SQL Server 2000"項目[疑難排解](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)。  
   
 ## <a name="object-materialization"></a>物件具體化  
  Materialization 作業會針對一個或多個 SQL 查詢傳回的資料列建立 CLR 物件。  
@@ -207,7 +207,7 @@ ORDER BY [t0].[CustomerID]
   
     -   建構函式  
   
-    -   `ToString` 投影中的方法  
+    -   投影中的 `ToString` 方法  
   
     -   投影中的型別轉換  
   

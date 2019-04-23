@@ -5,12 +5,12 @@ author: kendrahavens
 ms.author: kehavens
 ms.date: 10/18/2017
 ms.custom: seodec18
-ms.openlocfilehash: 9d842f26336d0ddf5375d49676523086bb632684
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 660b966c6d02353b855e5728094083042a561558
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239523"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59126083"
 ---
 # <a name="test-published-output-with-dotnet-vstest"></a>使用 dotnet vstest 測試已發行的輸出
 
@@ -37,6 +37,7 @@ dotnet vstest out/MyProject.Tests.dll
 > 注意:如果您的應用程式是以 `netcoreapp` 以外的架構為目標，您仍然能以架構旗標傳入目標架構，來執行 `dotnet vstest` 命令。 例如，`dotnet vstest <MyPublishedTests>.dll  --Framework:".NETFramework,Version=v4.6"`。 在 Visual Studio 2017 Update 5 中，系統會自動偵測所需架構。
 
 ## <a name="see-also"></a>另請參閱
-- [使用 dotnet test 及 xUnit 執行單元測試](unit-testing-with-dotnet-test.md)
-- [使用 dotnet test 和 NUnit 執行單元測試](unit-testing-with-nunit.md)
-- [使用 dotnet test 及 MSTest 執行單元測試](unit-testing-with-mstest.md)
+
+- [使用 dotnet test 與 xUnit 執行單元測試](unit-testing-with-dotnet-test.md)
+- [使用 dotnet test 與 NUnit 執行單元測試](unit-testing-with-nunit.md)
+- [使用 dotnet test 與 MSTest 執行單元測試](unit-testing-with-mstest.md)

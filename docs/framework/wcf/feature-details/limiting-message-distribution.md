@@ -3,10 +3,10 @@ title: 限制訊息散發
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130217"
 ---
 # <a name="limiting-message-distribution"></a>限制訊息散發
@@ -20,9 +20,9 @@ ms.locfileid: "59130217"
 -   如需程式碼片段和相關的資訊，請參閱[對等通道部落格](https://go.microsoft.com/fwlink/?LinkID=114531)。  
   
 ## <a name="message-propagation-filter"></a>訊息傳播篩選條件  
- `MessagePropagationFilter` 可以用於訊息流動，尤其是當訊息或其他特定案例的內容會決定傳播的自訂控制項。 篩選條件可以為通過節點的每個訊息進行傳播決策。 這對於節點所收到的訊息是在 mesh 中任何其他地方產生的，以及應用程式所建立的訊息來說，特別是如此。 篩選條件能夠同時存取訊息及其來源，因此可以根據完整可用的資訊來判斷是否要轉送或捨棄訊息。  
+ `MessagePropagationFilter` 可以用於訊息流動的自訂控制，特別是在訊息內容或其他特定案例會決定傳播的進行時。 篩選條件可以為通過節點的每個訊息進行傳播決策。 這對於節點所收到的訊息是在 mesh 中任何其他地方產生的，以及應用程式所建立的訊息來說，特別是如此。 篩選條件能夠同時存取訊息及其來源，因此可以根據完整可用的資訊來判斷是否要轉送或捨棄訊息。  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> 是抽象的基底類別，具有單一函式， <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>。 方法呼叫的第一個引數會傳入訊息的完整複本。 對該訊息所進行的任何變更，並不會影響到實際的訊息。 方法呼叫的最後一個引數會識別訊息的來源 (`PeerMessageOrigination.Local` 或 `PeerMessageOrigination.Remote`)。 這個方法的具體實作必須從 <xref:System.ServiceModel.PeerMessagePropagation> 列舉型別傳回常數，此常數表示要將訊息轉送至本機應用程式 (`Local`)、轉送至遠端用戶端 (`Remote`)，或者兩個都要 (`LocalAndRemote`) 或都不要 (`None`)。 您可以存取對應的 `PeerNode` 物件，並在 `PeerNode.MessagePropagationFilter` 屬性中指定衍生傳播篩選條件類別的執行個體，藉此套用這個篩選條件。 請確定您已在開啟對等通道前附加傳播篩選條件。  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> 是基底抽象類別，具有單一函式 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>。 方法呼叫的第一個引數會傳入訊息的完整複本。 對該訊息所進行的任何變更，並不會影響到實際的訊息。 方法呼叫的最後一個引數會識別訊息的來源 (`PeerMessageOrigination.Local` 或 `PeerMessageOrigination.Remote`)。 這個方法的具體實作必須從 <xref:System.ServiceModel.PeerMessagePropagation> 列舉型別傳回常數，此常數表示要將訊息轉送至本機應用程式 (`Local`)、轉送至遠端用戶端 (`Remote`)，或者兩個都要 (`LocalAndRemote`) 或都不要 (`None`)。 您可以存取對應的 `PeerNode` 物件，並在 `PeerNode.MessagePropagationFilter` 屬性中指定衍生傳播篩選條件類別的執行個體，藉此套用這個篩選條件。 請確定您已在開啟對等通道前附加傳播篩選條件。  
   
 -   如需程式碼片段和相關的資訊，請參閱[對等通道部落格](https://go.microsoft.com/fwlink/?LinkID=114532)。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59130217"
   
  這些問題的答案能夠協助您決定該使用躍點計數、訊息傳播篩選條件、本機篩選條件或直接連接。 請考慮下列一般方針：  
   
--   **對象**  
+-   **Who**  
   
     -   *個別節點*:本機篩選條件或直接連線。  
   
