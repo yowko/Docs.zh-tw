@@ -1,18 +1,11 @@
-items:
 - name: 泛型
   href: index.md
   items:
-  - name: .NET 中的泛型集合
-    href: collections.md
-  - name: 管理陣列和清單的泛型委派
-    href: delegates-for-manipulating-arrays-and-lists.md
-  - name: 泛型介面
-    href: interfaces.md
-  - name: 共變數和反變數
-    href: covariance-and-contravariance.md
-ms.openlocfilehash: 84f8686eb8c70ecc4b36a2335f673319bcc2dd4a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468256"
+    - name: .NET 中的泛型集合
+      href: collections.md
+    - name: 管理陣列和清單的泛型委派
+      href: delegates-for-manipulating-arrays-and-lists.md
+    - name: 泛型介面
+      href: interfaces.md
+    - name: 共變數和反變數
+      href: covariance-and-contravariance.md

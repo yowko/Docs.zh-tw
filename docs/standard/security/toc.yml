@@ -1,79 +1,72 @@
-items:
 - name: 安全性
   href: index.md
   items:
-  - name: 重要的安全性概念
-    href: key-security-concepts.md
-  - name: 以角色為基礎的安全性
-    href: role-based-security.md
-    items:
-    - name: Principal 和 Identity 物件
-      href: principal-and-identity-objects.md
-    - name: 作法：建立 WindowsPrincipal 物件
-      href: how-to-create-a-windowsprincipal-object.md
-    - name: 作法：建立 GenericPrincipal 和 GenericIdentity 物件
-      href: how-to-create-genericprincipal-and-genericidentity-objects.md
-    - name: 取代 Principal 物件
-      href: replacing-a-principal-object.md
-    - name: 模擬和還原
-      href: impersonating-and-reverting.md
-  - name: 密碼編譯模型
-    href: cryptography-model.md
-    items:
-    - name: 密碼編譯服務
-      href: cryptographic-services.md
-    - name: 產生加密和解密金鑰
-      href: generating-keys-for-encryption-and-decryption.md
-    - name: 作法：將對稱金鑰儲存在金鑰容器中
-      href: how-to-store-asymmetric-keys-in-a-key-container.md
-    - name: 加密資料
-      href: encrypting-data.md
-    - name: 解密資料
-      href: decrypting-data.md
-    - name: 密碼編譯簽章
-      href: cryptographic-signatures.md
-    - name: 使用雜湊程式碼確定資料完整性
-      href: ensuring-data-integrity-with-hash-codes.md
-    - name: 建立密碼編譯配置
-      href: creating-a-cryptographic-scheme.md
-    - name: 作法：使用對稱金鑰加密 XML 元素
-      href: how-to-encrypt-xml-elements-with-symmetric-keys.md
-    - name: 作法：使用對稱金鑰解密 XML 元素
-      href: how-to-decrypt-xml-elements-with-symmetric-keys.md
-    - name: 作法：使用非對稱金鑰加密 XML 元素
-      href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
-    - name: 作法：使用非對稱金鑰解密 XML 元素
-      href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
-    - name: 作法：使用 X.509 憑證加密 XML 元素
-      href: how-to-encrypt-xml-elements-with-x-509-certificates.md
-    - name: 作法：使用 X.509 憑證解密 XML 元素
-      href: how-to-decrypt-xml-elements-with-x-509-certificates.md
-    - name: 作法：使用數位簽章簽署 XML 文件
-      href: how-to-sign-xml-documents-with-digital-signatures.md
-    - name: 作法：驗證 XML 文件的數位簽章
-      href: how-to-verify-the-digital-signatures-of-xml-documents.md
-    - name: 作法：使用資料保護
-      href: how-to-use-data-protection.md
-    - name: 作法：存取硬體加密裝置
-      href: how-to-access-hardware-encryption-devices.md
-    - name: 逐步解說：建立密碼編譯應用程式
-      href: walkthrough-creating-a-cryptographic-application.md
-  - name: 安全程式碼撰寫方針
-    href: secure-coding-guidelines.md
-    items:
-    - name: 設定狀態資料的安全性
-      href: securing-state-data.md
-    - name: 安全性和使用者輸入
-      href: security-and-user-input.md
-    - name: 安全性和競爭情形
-      href: security-and-race-conditions.md
-    - name: 安全性和產生作業中的程式碼
-      href: security-and-on-the-fly-code-generation.md
-    - name: 使用填補進行 CBC 模式對稱解密的時間弱點
-      href: vulnerabilities-cbc-mode.md
-ms.openlocfilehash: bf0a409f88486c4fb5ca476ab5f96be6e1aa823d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468431"
+    - name: 重要的安全性概念
+      href: key-security-concepts.md
+    - name: 以角色為基礎的安全性
+      href: role-based-security.md
+      items:
+        - name: Principal 和 Identity 物件
+          href: principal-and-identity-objects.md
+        - name: HOW TO：建立 WindowsPrincipal 物件
+          href: how-to-create-a-windowsprincipal-object.md
+        - name: HOW TO：建立 GenericPrincipal 和 GenericIdentity 物件
+          href: how-to-create-genericprincipal-and-genericidentity-objects.md
+        - name: 取代 Principal 物件
+          href: replacing-a-principal-object.md
+        - name: 模擬和還原
+          href: impersonating-and-reverting.md
+    - name: 密碼編譯模型
+      href: cryptography-model.md
+      items:
+        - name: 密碼編譯服務
+          href: cryptographic-services.md
+        - name: 產生加密和解密金鑰
+          href: generating-keys-for-encryption-and-decryption.md
+        - name: HOW TO：將對稱金鑰儲存在金鑰容器中
+          href: how-to-store-asymmetric-keys-in-a-key-container.md
+        - name: 加密資料
+          href: encrypting-data.md
+        - name: 解密資料
+          href: decrypting-data.md
+        - name: 密碼編譯簽章
+          href: cryptographic-signatures.md
+        - name: 使用雜湊程式碼確定資料完整性
+          href: ensuring-data-integrity-with-hash-codes.md
+        - name: 建立密碼編譯配置
+          href: creating-a-cryptographic-scheme.md
+        - name: HOW TO：使用對稱金鑰加密 XML 元素
+          href: how-to-encrypt-xml-elements-with-symmetric-keys.md
+        - name: HOW TO：使用對稱金鑰解密 XML 元素
+          href: how-to-decrypt-xml-elements-with-symmetric-keys.md
+        - name: HOW TO：使用非對稱金鑰加密 XML 元素
+          href: how-to-encrypt-xml-elements-with-asymmetric-keys.md
+        - name: HOW TO：使用非對稱金鑰解密 XML 元素
+          href: how-to-decrypt-xml-elements-with-asymmetric-keys.md
+        - name: HOW TO：使用 X.509 憑證加密 XML 元素
+          href: how-to-encrypt-xml-elements-with-x-509-certificates.md
+        - name: HOW TO：使用 X.509 憑證解密 XML 元素
+          href: how-to-decrypt-xml-elements-with-x-509-certificates.md
+        - name: HOW TO：使用數位簽章簽署 XML 文件
+          href: how-to-sign-xml-documents-with-digital-signatures.md
+        - name: HOW TO：驗證 XML 文件的數位簽章
+          href: how-to-verify-the-digital-signatures-of-xml-documents.md
+        - name: HOW TO：使用資料保護
+          href: how-to-use-data-protection.md
+        - name: HOW TO：存取硬體加密裝置
+          href: how-to-access-hardware-encryption-devices.md
+        - name: 逐步解說：建立密碼編譯應用程式
+          href: walkthrough-creating-a-cryptographic-application.md
+    - name: 安全程式碼撰寫方針
+      href: secure-coding-guidelines.md
+      items:
+        - name: 設定狀態資料的安全性
+          href: securing-state-data.md
+        - name: 安全性和使用者輸入
+          href: security-and-user-input.md
+        - name: 安全性和競爭情形
+          href: security-and-race-conditions.md
+        - name: 安全性和產生作業中的程式碼
+          href: security-and-on-the-fly-code-generation.md
+        - name: 使用填補進行 CBC 模式對稱解密的時間弱點
+          href: vulnerabilities-cbc-mode.md

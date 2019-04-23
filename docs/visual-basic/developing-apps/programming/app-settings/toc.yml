@@ -1,18 +1,11 @@
-items:
 - name: Accessing Application Settings
   href: index.md
   items:
-  - name: 作法：建立使用者設定的屬性方格
-    href: how-to-create-property-grids-for-user-settings.md
-  - name: 作法：保存使用者設定
-    href: how-to-persist-user-settings.md
-  - name: 作法：變更使用者設定
-    href: how-to-change-user-settings.md
-  - name: 作法：讀取應用程式設定
-    href: how-to-read-application-settings.md
-ms.openlocfilehash: 1360983a14f27ca882a6d5323ee4620386352b99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468570"
+    - name: HOW TO：建立使用者設定的屬性方格
+      href: how-to-create-property-grids-for-user-settings.md
+    - name: HOW TO：保存使用者設定
+      href: how-to-persist-user-settings.md
+    - name: HOW TO：變更使用者設定
+      href: how-to-change-user-settings.md
+    - name: HOW TO：讀取應用程式設定
+      href: how-to-read-application-settings.md

@@ -1,20 +1,13 @@
-items:
 - name: Visual Basic 中的陣列
   href: index.md
   items:
-  - name: 陣列維度
-    href: array-dimensions.md
-  - name: 作法：初始化陣列變數
-    href: how-to-initialize-an-array-variable.md
-  - name: 作法：排序陣列
-    href: how-to-sort-an-array.md
-  - name: 作法：指派一個陣列至另一個陣列
-    href: how-to-assign-one-array-to-another-array.md
-  - name: 針對陣列進行疑難排解
-    href: troubleshooting-arrays.md
-ms.openlocfilehash: cec0bed9cd5de72b0b48d6e8392715bb792e0836
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468159"
+    - name: 陣列維度
+      href: array-dimensions.md
+    - name: HOW TO：初始化陣列變數
+      href: how-to-initialize-an-array-variable.md
+    - name: HOW TO：排序陣列
+      href: how-to-sort-an-array.md
+    - name: HOW TO：指派一個陣列至另一個陣列
+      href: how-to-assign-one-array-to-another-array.md
+    - name: 針對陣列進行疑難排解
+      href: troubleshooting-arrays.md

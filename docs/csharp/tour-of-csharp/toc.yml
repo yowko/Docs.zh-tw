@@ -1,32 +1,25 @@
-items:
-- name: C# 導覽
+- name: 'C# 導覽'
   href: index.md
   items:
-  - name: 程式結構
-    href: program-structure.md
-  - name: 類型與變數
-    href: types-and-variables.md
-  - name: 運算式
-    href: expressions.md
-  - name: 陳述式
-    href: statements.md
-  - name: 類別與物件
-    href: classes-and-objects.md
-  - name: 結構
-    href: structs.md
-  - name: 陣列
-    href: arrays.md
-  - name: 介面
-    href: interfaces.md
-  - name: 列舉
-    href: enums.md
-  - name: 委派
-    href: delegates.md
-  - name: 屬性
-    href: attributes.md
-ms.openlocfilehash: 9f1265c48bea8f76bd352eb95605187b1385cae5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468232"
+    - name: 程式結構
+      href: program-structure.md
+    - name: 類型與變數
+      href: types-and-variables.md
+    - name: 運算式
+      href: expressions.md
+    - name: 陳述式
+      href: statements.md
+    - name: 類別與物件
+      href: classes-and-objects.md
+    - name: 結構
+      href: structs.md
+    - name: 陣列
+      href: arrays.md
+    - name: 介面
+      href: interfaces.md
+    - name: 列舉
+      href: enums.md
+    - name: 委派
+      href: delegates.md
+    - name: 屬性
+      href: attributes.md

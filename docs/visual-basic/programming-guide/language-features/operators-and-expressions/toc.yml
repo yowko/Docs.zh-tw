@@ -1,32 +1,25 @@
-items:
 - name: 運算子和運算式
   href: index.md
   items:
-  - name: 使用運算子執行的一般工作
-    href: common-tasks-performed-with-visual-basic-operators.md
-  - name: 算術運算子
-    href: arithmetic-operators.md
-  - name: 比較運算子
-    href: comparison-operators.md
-  - name: 作法：測試兩個物件是否相同
-    href: how-to-test-whether-two-objects-are-the-same.md
-  - name: 作法：比對字串和模式
-    href: how-to-match-a-string-against-a-pattern.md
-  - name: 串連運算子
-    href: concatenation-operators.md
-  - name: 邏輯運算子和位元運算子
-    href: logical-and-bitwise-operators.md
-  - name: 有效的運算子組合
-    href: efficient-combination-of-operators.md
-  - name: 作法：計算數值
-    href: how-to-calculate-numeric-values.md
-  - name: 數值比較
-    href: value-comparisons.md
-  - name: 布林運算式
-    href: boolean-expressions.md
-ms.openlocfilehash: b16598c335031cf099e0549d491adfc204fc6d35
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468273"
+    - name: 使用運算子執行的一般工作
+      href: common-tasks-performed-with-visual-basic-operators.md
+    - name: 算術運算子
+      href: arithmetic-operators.md
+    - name: 比較運算子
+      href: comparison-operators.md
+    - name: HOW TO：測試兩個物件是否相同
+      href: how-to-test-whether-two-objects-are-the-same.md
+    - name: HOW TO：比對字串和模式
+      href: how-to-match-a-string-against-a-pattern.md
+    - name: 串連運算子
+      href: concatenation-operators.md
+    - name: 邏輯運算子和位元運算子
+      href: logical-and-bitwise-operators.md
+    - name: 有效的運算子組合
+      href: efficient-combination-of-operators.md
+    - name: HOW TO：計算數值
+      href: how-to-calculate-numeric-values.md
+    - name: 數值比較
+      href: value-comparisons.md
+    - name: 布林運算式
+      href: boolean-expressions.md

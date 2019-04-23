@@ -1,143 +1,136 @@
-items:
 - name: 平行程式設計
   href: index.md
   items:
-  - name: 工作平行程式庫 (TPL)
-    href: task-parallel-library-tpl.md
-    items:
-    - name: 資料平行處理原則
-      href: data-parallelism-task-parallel-library.md
+    - name: 工作平行程式庫 (TPL)
+      href: task-parallel-library-tpl.md
       items:
-      - name: 作法：撰寫簡單的 Parallel.For 迴圈
-        href: how-to-write-a-simple-parallel-for-loop.md
-      - name: 作法：撰寫簡單的 Parallel.ForEach 迴圈
-        href: how-to-write-a-simple-parallel-foreach-loop.md
-      - name: 作法：撰寫含有執行緒區域變數的 Parallel.For 迴圈
-        href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
-      - name: 作法：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈
-        href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
-      - name: 作法：取消 Parallel.For 或 ForEach 迴圈
-        href: how-to-cancel-a-parallel-for-or-foreach-loop.md
-      - name: 作法：處理平行迴圈中的例外狀況
-        href: how-to-handle-exceptions-in-parallel-loops.md
-      - name: 作法：加速小型迴圈主體
-        href: how-to-speed-up-small-loop-bodies.md
-      - name: 作法：使用平行類別逐一查看檔案目錄
-        href: how-to-iterate-file-directories-with-the-parallel-class.md
-    - name: 以工作為基礎的非同步程式設計
-      href: task-based-asynchronous-programming.md
+        - name: 資料平行處理原則
+          href: data-parallelism-task-parallel-library.md
+          items:
+            - name: HOW TO：撰寫簡單的 Parallel.For 迴圈
+              href: how-to-write-a-simple-parallel-for-loop.md
+            - name: HOW TO：撰寫簡單的 Parallel.ForEach 迴圈
+              href: how-to-write-a-simple-parallel-foreach-loop.md
+            - name: HOW TO：撰寫含有執行緒區域變數的 Parallel.For 迴圈
+              href: how-to-write-a-parallel-for-loop-with-thread-local-variables.md
+            - name: HOW TO：撰寫含有磁碟分割區域變數的 Parallel.ForEach 迴圈
+              href: how-to-write-a-parallel-foreach-loop-with-partition-local-variables.md
+            - name: HOW TO：取消 Parallel.For 或 ForEach 迴圈
+              href: how-to-cancel-a-parallel-for-or-foreach-loop.md
+            - name: HOW TO：處理平行迴圈中的例外狀況
+              href: how-to-handle-exceptions-in-parallel-loops.md
+            - name: HOW TO：加速小型迴圈主體
+              href: how-to-speed-up-small-loop-bodies.md
+            - name: HOW TO：使用平行類別逐一查看檔案目錄
+              href: how-to-iterate-file-directories-with-the-parallel-class.md
+        - name: 以工作為基礎的非同步程式設計
+          href: task-based-asynchronous-programming.md
+          items:
+            - name: 使用接續工作鏈結工作
+              href: chaining-tasks-by-using-continuation-tasks.md
+            - name: 附加與中斷連結的子工作
+              href: attached-and-detached-child-tasks.md
+            - name: 工作取消
+              href: task-cancellation.md
+            - name: 例外狀況處理
+              href: exception-handling-task-parallel-library.md
+            - name: HOW TO：使用 Parallel.Invoke 執行平行作業
+              href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
+            - name: HOW TO：從工作傳回值
+              href: how-to-return-a-value-from-a-task.md
+            - name: HOW TO：取消工作及其子系
+              href: how-to-cancel-a-task-and-its-children.md
+            - name: HOW TO：建立經過預先計算的工作
+              href: how-to-create-pre-computed-tasks.md
+            - name: HOW TO：使用平行工作周遊二進位樹狀目錄
+              href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
+            - name: HOW TO：解除包裝巢狀工作
+              href: how-to-unwrap-a-nested-task.md
+            - name: HOW TO：防止子工作附加到其父代
+              href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
+        - name: 資料流程
+          href: dataflow-task-parallel-library.md
+          items:
+            - name: HOW TO：對資料流程區塊寫入訊息和讀取訊息
+              href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
+            - name: HOW TO：實作產生者/取用者資料流程模式
+              href: how-to-implement-a-producer-consumer-dataflow-pattern.md
+            - name: HOW TO：在資料流程區塊收到資料時執行動作
+              href: how-to-perform-action-when-a-dataflow-block-receives-data.md
+            - name: 逐步解說：建立資料流程管線
+              href: walkthrough-creating-a-dataflow-pipeline.md
+            - name: HOW TO：取消連結資料流程區塊
+              href: how-to-unlink-dataflow-blocks.md
+            - name: 逐步解說：在 Windows Forms 應用程式中使用資料流程
+              href: walkthrough-using-dataflow-in-a-windows-forms-application.md
+            - name: HOW TO：取消資料流程區塊
+              href: how-to-cancel-a-dataflow-block.md
+            - name: 逐步解說：建立自訂資料流程區塊類型
+              href: walkthrough-creating-a-custom-dataflow-block-type.md
+            - name: HOW TO：使用 JoinBlock 從多個來源讀取資料
+              href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
+            - name: HOW TO：在資料流程區塊中指定平行處理原則程度
+              href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
+            - name: HOW TO：在資料流程區塊中指定工作排程器
+              href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
+            - name: 逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
+              href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
+        - name: 使用具有其他非同步模式的 TPL
+          href: using-tpl-with-other-asynchronous-patterns.md
+          items:
+            - name: TPL 和傳統 .NET Framework 非同步程式設計
+              href: tpl-and-traditional-async-programming.md
+            - name: HOW TO：將 EAP 模式包裝在工作中
+              href: how-to-wrap-eap-patterns-in-a-task.md
+        - name: 資料和工作平行處理原則中可能出現的錯誤
+          href: potential-pitfalls-in-data-and-task-parallelism.md
+    - name: 平行 LINQ (PLINQ)
+      href: parallel-linq-plinq.md
       items:
-      - name: 使用接續工作鏈結工作
-        href: chaining-tasks-by-using-continuation-tasks.md
-      - name: 附加與中斷連結的子工作
-        href: attached-and-detached-child-tasks.md
-      - name: 工作取消
-        href: task-cancellation.md
-      - name: 例外狀況處理
-        href: exception-handling-task-parallel-library.md
-      - name: 作法：使用 Parallel.Invoke 執行平行作業
-        href: how-to-use-parallel-invoke-to-execute-parallel-operations.md
-      - name: 作法：從工作傳回值
-        href: how-to-return-a-value-from-a-task.md
-      - name: 作法：取消工作及其子系
-        href: how-to-cancel-a-task-and-its-children.md
-      - name: 作法：建立經過預先計算的工作
-        href: how-to-create-pre-computed-tasks.md
-      - name: 作法：使用平行工作周遊二進位樹狀目錄
-        href: how-to-traverse-a-binary-tree-with-parallel-tasks.md
-      - name: 作法：解除包裝巢狀工作
-        href: how-to-unwrap-a-nested-task.md
-      - name: 作法：防止子工作附加到其父代
-        href: how-to-prevent-a-child-task-from-attaching-to-its-parent.md
-    - name: 資料流程
-      href: dataflow-task-parallel-library.md
+        - name: PLINQ 簡介
+          href: introduction-to-plinq.md
+        - name: 認識 PLINQ 中的加速
+          href: understanding-speedup-in-plinq.md
+        - name: PLINQ 中的順序保留
+          href: order-preservation-in-plinq.md
+        - name: PLINQ 中的合併選項
+          href: merge-options-in-plinq.md
+        - name: 使用 PLINQ 時可能出現的錯誤
+          href: potential-pitfalls-with-plinq.md
+        - name: HOW TO：建立並執行簡單的 PLINQ 查詢
+          href: how-to-create-and-execute-a-simple-plinq-query.md
+        - name: HOW TO：控制 PLINQ 查詢中的順序
+          href: how-to-control-ordering-in-a-plinq-query.md
+        - name: HOW TO：結合平行和循序 LINQ 查詢
+          href: how-to-combine-parallel-and-sequential-linq-queries.md
+        - name: HOW TO：處理 PLINQ 查詢中的例外狀況
+          href: how-to-handle-exceptions-in-a-plinq-query.md
+        - name: HOW TO：取消 PLINQ 查詢
+          href: how-to-cancel-a-plinq-query.md
+        - name: HOW TO：撰寫自訂 PLINQ 彙總函式
+          href: how-to-write-a-custom-plinq-aggregate-function.md
+        - name: HOW TO：在 PLINQ 中指定執行模式
+          href: how-to-specify-the-execution-mode-in-plinq.md
+        - name: HOW TO：在 PLINQ 中指定合併選項
+          href: how-to-specify-merge-options-in-plinq.md
+        - name: HOW TO：使用 PLINQ 逐一查看檔案目錄
+          href: how-to-iterate-file-directories-with-plinq.md
+        - name: HOW TO：測量 PLINQ 查詢效能
+          href: how-to-measure-plinq-query-performance.md
+        - name: PLINQ 資料範例
+          href: plinq-data-sample.md
+    - name: 適用於平行程式設計的資料結構
+      href: data-structures-for-parallel-programming.md
+    - name: 平行診斷工具
+      href: parallel-diagnostic-tools.md
+    - name: PLINQ 和 TPL 的自訂 Partitioner
+      href: custom-partitioners-for-plinq-and-tpl.md
       items:
-      - name: 作法：對資料流程區塊寫入訊息和讀取訊息
-        href: how-to-write-messages-to-and-read-messages-from-a-dataflow-block.md
-      - name: 作法：實作產生者/取用者資料流程模式
-        href: how-to-implement-a-producer-consumer-dataflow-pattern.md
-      - name: 作法：在資料流程區塊收到資料時執行動作
-        href: how-to-perform-action-when-a-dataflow-block-receives-data.md
-      - name: 逐步解說：建立資料流程管線
-        href: walkthrough-creating-a-dataflow-pipeline.md
-      - name: 作法：取消連結資料流程區塊
-        href: how-to-unlink-dataflow-blocks.md
-      - name: 逐步解說：在 Windows Forms 應用程式中使用資料流程
-        href: walkthrough-using-dataflow-in-a-windows-forms-application.md
-      - name: 作法：取消資料流程區塊
-        href: how-to-cancel-a-dataflow-block.md
-      - name: 逐步解說：建立自訂資料流程區塊類型
-        href: walkthrough-creating-a-custom-dataflow-block-type.md
-      - name: 作法：使用 JoinBlock 從多個來源讀取資料
-        href: how-to-use-joinblock-to-read-data-from-multiple-sources.md
-      - name: 作法：在資料流程區塊中指定平行處理原則程度
-        href: how-to-specify-the-degree-of-parallelism-in-a-dataflow-block.md
-      - name: 作法：在資料流程區塊中指定工作排程器
-        href: how-to-specify-a-task-scheduler-in-a-dataflow-block.md
-      - name: 逐步解說：使用 BatchBlock 和 BatchedJoinBlock 以改善效率
-        href: walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency.md
-    - name: 使用具有其他非同步模式的 TPL
-      href: using-tpl-with-other-asynchronous-patterns.md
-      items:
-      - name: TPL 和傳統 .NET Framework 非同步程式設計
-        href: tpl-and-traditional-async-programming.md
-      - name: 作法：將 EAP 模式包裝在工作中
-        href: how-to-wrap-eap-patterns-in-a-task.md
-    - name: 資料和工作平行處理原則中可能出現的錯誤
-      href: potential-pitfalls-in-data-and-task-parallelism.md
-  - name: 平行 LINQ (PLINQ)
-    href: parallel-linq-plinq.md
-    items:
-    - name: PLINQ 簡介
-      href: introduction-to-plinq.md
-    - name: 認識 PLINQ 中的加速
-      href: understanding-speedup-in-plinq.md
-    - name: PLINQ 中的順序保留
-      href: order-preservation-in-plinq.md
-    - name: PLINQ 中的合併選項
-      href: merge-options-in-plinq.md
-    - name: 使用 PLINQ 時可能出現的錯誤
-      href: potential-pitfalls-with-plinq.md
-    - name: 作法：建立並執行簡單的 PLINQ 查詢
-      href: how-to-create-and-execute-a-simple-plinq-query.md
-    - name: 作法：控制 PLINQ 查詢中的順序
-      href: how-to-control-ordering-in-a-plinq-query.md
-    - name: 作法：結合平行和循序 LINQ 查詢
-      href: how-to-combine-parallel-and-sequential-linq-queries.md
-    - name: 作法：處理 PLINQ 查詢中的例外狀況
-      href: how-to-handle-exceptions-in-a-plinq-query.md
-    - name: 作法：取消 PLINQ 查詢
-      href: how-to-cancel-a-plinq-query.md
-    - name: 作法：撰寫自訂 PLINQ 彙總函式
-      href: how-to-write-a-custom-plinq-aggregate-function.md
-    - name: 作法：在 PLINQ 中指定執行模式
-      href: how-to-specify-the-execution-mode-in-plinq.md
-    - name: 作法：在 PLINQ 中指定合併選項
-      href: how-to-specify-merge-options-in-plinq.md
-    - name: 作法：使用 PLINQ 逐一查看檔案目錄
-      href: how-to-iterate-file-directories-with-plinq.md
-    - name: 作法：測量 PLINQ 查詢效能
-      href: how-to-measure-plinq-query-performance.md
-    - name: PLINQ 資料範例
-      href: plinq-data-sample.md
-  - name: 適用於平行程式設計的資料結構
-    href: data-structures-for-parallel-programming.md
-  - name: 平行診斷工具
-    href: parallel-diagnostic-tools.md
-  - name: PLINQ 和 TPL 的自訂 Partitioner
-    href: custom-partitioners-for-plinq-and-tpl.md
-    items:
-    - name: 作法：實作動態分割
-      href: how-to-implement-dynamic-partitions.md
-    - name: 作法：為靜態分割實作 Partitioner
-      href: how-to-implement-a-partitioner-for-static-partitioning.md
-  - name: PLINQ 和 TPL 中的 Lambda 運算式
-    href: lambda-expressions-in-plinq-and-tpl.md
-  - name: 進一步閱讀
-    href: for-further-reading-parallel-programming.md
-ms.openlocfilehash: b4b7cd0e6e93175d223cbd076712fe3b9fe436f2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468474"
+        - name: HOW TO：實作動態分割
+          href: how-to-implement-dynamic-partitions.md
+        - name: HOW TO：為靜態分割實作 Partitioner
+          href: how-to-implement-a-partitioner-for-static-partitioning.md
+    - name: PLINQ 和 TPL 中的 Lambda 運算式
+      href: lambda-expressions-in-plinq-and-tpl.md
+    - name: 進一步閱讀
+      href: for-further-reading-parallel-programming.md

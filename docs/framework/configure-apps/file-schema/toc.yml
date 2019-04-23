@@ -1,66 +1,59 @@
-items:
 - name: 組態檔結構描述
   href: index.md
   items:
-  - name: <configuration> 項目
-    href: configuration-element.md
-  - name: <assemblyBinding> 項目
-    href: assemblybinding-element-for-configuration.md
-  - name: <linkedConfiguration> 項目
-    href: linkedconfiguration-element.md
-  - name: <configSections> 項目
-    href: configsections-element-for-configuration.md
-  - name: <configSections> 的 <clear> 項目
-    href: clear-element-for-configsections.md
-  - name: <configSections> 的 <remove> 項目
-    href: remove-element-for-configsections.md
-  - name: <sectionGroup> 項目
-    href: sectiongroup-element-for-configsections.md
-  - name: SingleTagSectionHandler 的自訂項目
-    href: custom-element-1.md
-  - name: NameValueSectionHandler 和 DictionarySectionHandler 的自訂項目
-    href: custom-element-2.md
-  - name: <add> 項目
-    href: add-element-for-custom-2.md
-  - name: NameValueSectionHandler 和 DictionarySectionHandler 的 <clear> 項目
-    href: clear-element-for-custom-2.md
-  - name: NameValueSectionHandler 和 DictionarySectionHandler 的 <remove> 項目
-    href: remove-element-for-custom-2.md
-  - name: <section> 元素
-    href: section-element.md
-  - name: 應用程式設定結構描述
-    href: appsettings/index.md
-  - name: 應用程式設定結構描述
-    href: application-settings-schema.md
-  - name: 編譯器和語言提供者設定結構描述
-    href: compiler/index.md
-  - name: 組態區段結構描述
-    href: configuration-sections-schema.md
-  - name: 密碼編譯設定結構描述
-    href: cryptography/index.md
-  - name: 網路設定結構描述
-    href: network/index.md
-  - name: 執行階段設定結構描述
-    href: runtime/index.md
-  - name: 啟動設定結構描述
-    href: startup/index.md
-  - name: 追蹤和偵錯設定結構描述
-    href: trace-debug/index.md
-  - name: Web 設定結構描述
-    href: web/index.md
-  - name: WCF 組態結構描述
-    href: wcf/index.md
-  - name: WCF 指示詞語法
-    href: wcf-directive/index.md
-  - name: WIF 組態結構描述
-    href: windows-identity-foundation/index.md
-  - name: Windows Form 組態區段
-    href: winforms/index.md
-  - name: Windows Workflow Foundation 組態結構描述
-    href: windows-workflow-foundation/index.md
-ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468142"
+    - name: <configuration> 項目
+      href: configuration-element.md
+    - name: <assemblyBinding> 項目
+      href: assemblybinding-element-for-configuration.md
+    - name: <linkedConfiguration> 項目
+      href: linkedconfiguration-element.md
+    - name: <configSections> 項目
+      href: configsections-element-for-configuration.md
+    - name: <configSections> 的 <clear> 項目
+      href: clear-element-for-configsections.md
+    - name: <configSections> 的 <remove> 項目
+      href: remove-element-for-configsections.md
+    - name: <sectionGroup> 項目
+      href: sectiongroup-element-for-configsections.md
+    - name: SingleTagSectionHandler 的自訂項目
+      href: custom-element-1.md
+    - name: NameValueSectionHandler 和 DictionarySectionHandler 的自訂項目
+      href: custom-element-2.md
+    - name: <add> 項目
+      href: add-element-for-custom-2.md
+    - name: NameValueSectionHandler 和 DictionarySectionHandler 的 <clear> 項目
+      href: clear-element-for-custom-2.md
+    - name: NameValueSectionHandler 和 DictionarySectionHandler 的 <remove> 項目
+      href: remove-element-for-custom-2.md
+    - name: <section> 元素
+      href: section-element.md
+    - name: 應用程式設定結構描述
+      href: appsettings/index.md
+    - name: 應用程式設定結構描述
+      href: application-settings-schema.md
+    - name: 編譯器和語言提供者設定結構描述
+      href: compiler/index.md
+    - name: 組態區段結構描述
+      href: configuration-sections-schema.md
+    - name: 密碼編譯設定結構描述
+      href: cryptography/index.md
+    - name: 網路設定結構描述
+      href: network/index.md
+    - name: 執行階段設定結構描述
+      href: runtime/index.md
+    - name: 啟動設定結構描述
+      href: startup/index.md
+    - name: 追蹤和偵錯設定結構描述
+      href: trace-debug/index.md
+    - name: Web 設定結構描述
+      href: web/index.md
+    - name: WCF 組態結構描述
+      href: wcf/index.md
+    - name: WCF 指示詞語法
+      href: wcf-directive/index.md
+    - name: WIF 組態結構描述
+      href: windows-identity-foundation/index.md
+    - name: Windows Form 組態區段
+      href: winforms/index.md
+    - name: Windows Workflow Foundation 組態結構描述
+      href: windows-workflow-foundation/index.md

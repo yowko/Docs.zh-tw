@@ -1,20 +1,13 @@
-items:
 - name: 事件
   href: index.md
   items:
-  - name: 逐步解說：宣告和引發事件
-    href: walkthrough-declaring-and-raising-events.md
-  - name: 逐步解說：處理事件
-    href: walkthrough-handling-events.md
-  - name: 作法：宣告自訂事件以避免封鎖
-    href: how-to-declare-custom-events-to-avoid-blocking.md
-  - name: 作法：宣告自訂事件以節省記憶體
-    href: how-to-declare-custom-events-to-conserve-memory.md
-  - name: 針對繼承事件處理常式進行疑難排解
-    href: troubleshooting-inherited-event-handlers.md
-ms.openlocfilehash: 1eff7e1b55252c30a97d9e25ee1d21891b770ec5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469660"
+    - name: 逐步解說：宣告和引發事件
+      href: walkthrough-declaring-and-raising-events.md
+    - name: 逐步解說：處理事件
+      href: walkthrough-handling-events.md
+    - name: HOW TO：宣告自訂事件以避免封鎖
+      href: how-to-declare-custom-events-to-avoid-blocking.md
+    - name: HOW TO：宣告自訂事件以節省記憶體
+      href: how-to-declare-custom-events-to-conserve-memory.md
+    - name: 針對繼承事件處理常式進行疑難排解
+      href: troubleshooting-inherited-event-handlers.md

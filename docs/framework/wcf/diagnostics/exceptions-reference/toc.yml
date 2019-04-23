@@ -1,58 +1,51 @@
-items:
 - name: 例外狀況參考
   href: index.md
   items:
-  - name: COM+ 整合
-    href: com-integration.md
-  - name: Configuration
-    href: configuration.md
-  - name: 核心通訊：通道架構
-    href: core-communications-channel-framework.md
-  - name: 核心通訊：連線架構
-    href: core-communications-connection-framework.md
-  - name: 核心通訊：HTTP/HTTPS 傳輸通道
-    href: core-communications-http-https-transport-channels.md
-  - name: 核心通訊：內部雙工傳輸通道
-    href: core-communications-internal-duplex-transport-channels.md
-  - name: 核心通訊：具名管道傳輸通道
-    href: core-communications-named-pipe-transport-channels.md
-  - name: 核心通訊：TCP 傳輸通道
-    href: core-communications-tcp-transport-channels.md
-  - name: 核心通訊：傳輸架構
-    href: core-communications-transport-framework.md
-  - name: 核心通訊：公用程式
-    href: core-communications-utilities.md
-  - name: 核心通訊：Webhost 支援
-    href: core-communications-webhost-support.md
-  - name: 裝載
-    href: hosting-exceptions.md
-  - name: IdentityModel
-    href: identitymodel-exceptions.md
-  - name: MSMQ 整合傳輸
-    href: msmq-integration-transport.md
-  - name: MSMQ 傳輸
-    href: msmq-transport.md
-  - name: 對等通道
-    href: peer-channel.md
-  - name: 可信賴傳訊
-    href: reliable-messaging.md
-  - name: 安全性例外狀況
-    href: security-exceptions.md
-  - name: 服務架構
-    href: service-framework.md
-  - name: 服務架構資料
-    href: service-framework-data.md
-  - name: 服務架構中繼資料
-    href: service-framework-metadata.md
-  - name: 交易
-    href: transaction-exceptions.md
-  - name: 異動格式器
-    href: transaction-formatter.md
-  - name: 工具
-    href: tools.md
-ms.openlocfilehash: e3ba9b5630ceaa9e4124fb4577759cfddb536951
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468180"
+    - name: COM+ 整合
+      href: com-integration.md
+    - name: Configuration
+      href: configuration.md
+    - name: 核心通訊：通道架構
+      href: core-communications-channel-framework.md
+    - name: 核心通訊：連線架構
+      href: core-communications-connection-framework.md
+    - name: 核心通訊：HTTP/HTTPS 傳輸通道
+      href: core-communications-http-https-transport-channels.md
+    - name: 核心通訊：內部雙工傳輸通道
+      href: core-communications-internal-duplex-transport-channels.md
+    - name: 核心通訊：具名管道傳輸通道
+      href: core-communications-named-pipe-transport-channels.md
+    - name: 核心通訊：TCP 傳輸通道
+      href: core-communications-tcp-transport-channels.md
+    - name: 核心通訊：傳輸架構
+      href: core-communications-transport-framework.md
+    - name: 核心通訊：公用程式
+      href: core-communications-utilities.md
+    - name: 核心通訊：Webhost 支援
+      href: core-communications-webhost-support.md
+    - name: 裝載
+      href: hosting-exceptions.md
+    - name: IdentityModel
+      href: identitymodel-exceptions.md
+    - name: MSMQ 整合傳輸
+      href: msmq-integration-transport.md
+    - name: MSMQ 傳輸
+      href: msmq-transport.md
+    - name: 對等通道
+      href: peer-channel.md
+    - name: 可信賴傳訊
+      href: reliable-messaging.md
+    - name: 安全性例外狀況
+      href: security-exceptions.md
+    - name: 服務架構
+      href: service-framework.md
+    - name: 服務架構資料
+      href: service-framework-data.md
+    - name: 服務架構中繼資料
+      href: service-framework-metadata.md
+    - name: 交易
+      href: transaction-exceptions.md
+    - name: 異動格式器
+      href: transaction-formatter.md
+    - name: 工具
+      href: tools.md

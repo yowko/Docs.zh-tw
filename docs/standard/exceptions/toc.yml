@@ -1,28 +1,21 @@
-items:
 - name: 例外狀況
   href: index.md
   items:
-  - name: Exception 類別和屬性
-    href: exception-class-and-properties.md
-  - name: 作法：使用 Try-Catch 區塊攔截例外狀況
-    href: how-to-use-the-try-catch-block-to-catch-exceptions.md
-  - name: 作法：使用 Catch 區塊中的特定例外狀況
-    href: how-to-use-specific-exceptions-in-a-catch-block.md
-  - name: 作法：明確擲回例外狀況
-    href: how-to-explicitly-throw-exceptions.md
-  - name: 作法：建立使用者定義的例外狀況
-    href: how-to-create-user-defined-exceptions.md
-  - name: 使用使用者篩選的例外狀況處理常式
-    href: using-user-filtered-exception-handlers.md
-  - name: 作法：使用 Finally 區塊
-    href: how-to-use-finally-blocks.md
-  - name: 處理 COM Interop 例外狀況
-    href: handling-com-interop-exceptions.md
-  - name: 例外狀況的最佳作法
-    href: best-practices-for-exceptions.md
-ms.openlocfilehash: 30a6abc9671ff2728792e74345be12fff7cfefbc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468459"
+    - name: Exception 類別和屬性
+      href: exception-class-and-properties.md
+    - name: HOW TO：使用 Try-Catch 區塊攔截例外狀況
+      href: how-to-use-the-try-catch-block-to-catch-exceptions.md
+    - name: HOW TO：使用 Catch 區塊中的特定例外狀況
+      href: how-to-use-specific-exceptions-in-a-catch-block.md
+    - name: HOW TO：明確擲回例外狀況
+      href: how-to-explicitly-throw-exceptions.md
+    - name: HOW TO：建立使用者定義的例外狀況
+      href: how-to-create-user-defined-exceptions.md
+    - name: 使用使用者篩選的例外狀況處理常式
+      href: using-user-filtered-exception-handlers.md
+    - name: HOW TO：使用 Finally 區塊
+      href: how-to-use-finally-blocks.md
+    - name: 處理 COM Interop 例外狀況
+      href: handling-com-interop-exceptions.md
+    - name: 例外狀況的最佳作法
+      href: best-practices-for-exceptions.md

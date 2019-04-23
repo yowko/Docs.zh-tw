@@ -1,24 +1,17 @@
-items:
 - name: 例外狀況和例外狀況處理
   href: index.md
   items:
-  - name: 使用例外狀況
-    href: using-exceptions.md
-  - name: 例外狀況處理
-    href: exception-handling.md
-  - name: 建立和擲回例外狀況
-    href: creating-and-throwing-exceptions.md
-  - name: 編譯器所產生的例外狀況
-    href: compiler-generated-exceptions.md
-  - name: 作法：使用 try-catch 處理例外狀況
-    href: how-to-handle-an-exception-using-try-catch.md
-  - name: 作法：使用 finally 執行清除程式碼
-    href: how-to-execute-cleanup-code-using-finally.md
-  - name: 作法：攔截非 CLS 例外狀況
-    href: how-to-catch-a-non-cls-exception.md
-ms.openlocfilehash: 391605df4d623451a4a1c830a48322c7a14eef7c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468164"
+    - name: 使用例外狀況
+      href: using-exceptions.md
+    - name: 例外狀況處理
+      href: exception-handling.md
+    - name: 建立和擲回例外狀況
+      href: creating-and-throwing-exceptions.md
+    - name: 編譯器所產生的例外狀況
+      href: compiler-generated-exceptions.md
+    - name: HOW TO：使用 try-catch 處理例外狀況
+      href: how-to-handle-an-exception-using-try-catch.md
+    - name: HOW TO：使用 finally 執行清除程式碼
+      href: how-to-execute-cleanup-code-using-finally.md
+    - name: HOW TO：攔截非 CLS 例外狀況
+      href: how-to-catch-a-non-cls-exception.md

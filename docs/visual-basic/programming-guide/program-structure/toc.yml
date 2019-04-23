@@ -1,16 +1,9 @@
-items:
 - name: 程式碼中的註解
   href: comments-in-code.md
   items:
-  - name: 使用 XML 加入程式碼註解
-    href: documenting-your-code-with-xml.md
-  - name: 處理 XML 檔案
-    href: processing-the-xml-file.md
-  - name: 作法：建立 XML 文件
-    href: how-to-create-xml-documentation.md
-ms.openlocfilehash: 9a5c821d3f3de1b47ab4be58835d2562a1228cf2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468506"
+    - name: 使用 XML 加入程式碼註解
+      href: documenting-your-code-with-xml.md
+    - name: 處理 XML 檔案
+      href: processing-the-xml-file.md
+    - name: HOW TO：建立 XML 文件
+      href: how-to-create-xml-documentation.md

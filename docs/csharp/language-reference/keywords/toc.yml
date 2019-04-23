@@ -1,336 +1,329 @@
-items:
-- name: C# 關鍵字
+- name: 'C# 關鍵字'
   href: index.md
   items:
-  - name: 型別
-    href: types.md
-    items:
-    - name: 實值類型
-      href: value-types.md
+    - name: 型別
+      href: types.md
       items:
-      - name: bool
-        href: bool.md
-      - name: byte
-        href: byte.md
-      - name: char
-        href: char.md
-      - name: decimal
-        href: decimal.md
-      - name: double
-        href: double.md
-      - name: enum
-        href: enum.md
-      - name: float
-        href: float.md
-      - name: int
-        href: int.md
-      - name: long
-        href: long.md
-      - name: sbyte
-        href: sbyte.md
-      - name: short
-        href: short.md
-      - name: struct
-        href: struct.md
-      - name: uint
-        href: uint.md
-      - name: ulong
-        href: ulong.md
-      - name: ushort
-        href: ushort.md
-    - name: 參考類型
-      href: reference-types.md
+        - name: 實值類型
+          href: value-types.md
+          items:
+            - name: bool
+              href: bool.md
+            - name: byte
+              href: byte.md
+            - name: char
+              href: char.md
+            - name: decimal
+              href: decimal.md
+            - name: double
+              href: double.md
+            - name: enum
+              href: enum.md
+            - name: float
+              href: float.md
+            - name: int
+              href: int.md
+            - name: long
+              href: long.md
+            - name: sbyte
+              href: sbyte.md
+            - name: short
+              href: short.md
+            - name: struct
+              href: struct.md
+            - name: uint
+              href: uint.md
+            - name: ulong
+              href: ulong.md
+            - name: ushort
+              href: ushort.md
+        - name: 參考類型
+          href: reference-types.md
+          items:
+            - name: Class - 類別
+              href: class.md
+            - name: Delegate - 委派
+              href: delegate.md
+            - name: 動態
+              href: dynamic.md
+            - name: interface
+              href: interface.md
+            - name: object
+              href: object.md
+            - name: 字串
+              href: string.md
+        - name: void
+          href: void.md
+        - name: var
+          href: var.md
+        - name: 類型的參考表
+          href: reference-tables-for-types.md
+          items:
+            - name: 內建類型表
+              href: built-in-types-table.md
+            - name: 整數型別表
+              href: integral-types-table.md
+            - name: 浮點數類型表
+              href: floating-point-types-table.md
+            - name: 實值型別表
+              href: value-types-table.md
+            - name: 預設值表
+              href: default-values-table.md
+            - name: 隱含數值轉換表
+              href: implicit-numeric-conversions-table.md
+            - name: 明確數值轉換表
+              href: explicit-numeric-conversions-table.md
+            - name: 格式化數值結果表
+              href: formatting-numeric-results-table.md
+    - name: 修飾詞
+      href: modifiers.md
       items:
-      - name: Class - 類別
-        href: class.md
-      - name: Delegate - 委派
-        href: delegate.md
-      - name: 動態
-        href: dynamic.md
-      - name: interface
-        href: interface.md
-      - name: object
-        href: object.md
-      - name: 字串
-        href: string.md
-    - name: void
-      href: void.md
-    - name: var
-      href: var.md
-    - name: 類型的參考表
-      href: reference-tables-for-types.md
+        - name: 存取修飾詞
+          href: access-modifiers.md
+          items:
+            - name: 協助工具層級
+              href: accessibility-levels.md
+            - name: 協助工具定義域
+              href: accessibility-domain.md
+            - name: 使用協助工具層級的限制
+              href: restrictions-on-using-accessibility-levels.md
+            - name: internal
+              href: internal.md
+            - name: private
+              href: private.md
+            - name: protected
+              href: protected.md
+            - name: public
+              href: public.md
+            - name: protected internal
+              href: protected-internal.md
+            - name: private protected
+              href: private-protected.md
+        - name: abstract
+          href: abstract.md
+        - name: async
+          href: async.md
+        - name: const
+          href: const.md
+        - name: Event - 事件
+          href: event.md
+        - name: extern
+          href: extern.md
+        - name: in (泛型修飾詞)
+          href: in-generic-modifier.md
+        - name: out (泛型修飾詞)
+          href: out-generic-modifier.md
+        - name: override
+          href: override.md
+        - name: readonly
+          href: readonly.md
+        - name: sealed
+          href: sealed.md
+        - name: 靜態
+          href: static.md
+        - name: unsafe
+          href: unsafe.md
+        - name: 虛擬
+          href: virtual.md
+        - name: volatile
+          href: volatile.md
+    - name: 陳述式關鍵字
+      href: statement-keywords.md
       items:
-      - name: 內建類型表
-        href: built-in-types-table.md
-      - name: 整數型別表
-        href: integral-types-table.md
-      - name: 浮點數類型表
-        href: floating-point-types-table.md
-      - name: 實值型別表
-        href: value-types-table.md
-      - name: 預設值表
-        href: default-values-table.md
-      - name: 隱含數值轉換表
-        href: implicit-numeric-conversions-table.md
-      - name: 明確數值轉換表
-        href: explicit-numeric-conversions-table.md
-      - name: 格式化數值結果表
-        href: formatting-numeric-results-table.md
-  - name: 修飾詞
-    href: modifiers.md
-    items:
-    - name: 存取修飾詞
-      href: access-modifiers.md
+        - name: 選取範圍陳述式
+          href: selection-statements.md
+          items:
+            - name: if-else
+              href: if-else.md
+            - name: switch
+              href: switch.md
+        - name: 反覆運算陳述式
+          href: iteration-statements.md
+          items:
+            - name: do
+              href: do.md
+            - name: for
+              href: for.md
+            - name: foreach、in
+              href: foreach-in.md
+            - name: while
+              href: while.md
+        - name: 跳躍陳述式
+          href: jump-statements.md
+          items:
+            - name: break
+              href: break.md
+            - name: continue
+              href: continue.md
+            - name: goto
+              href: goto.md
+            - name: return
+              href: return.md
+        - name: 例外狀況處理陳述式
+          href: exception-handling-statements.md
+          items:
+            - name: throw
+              href: throw.md
+            - name: try-catch
+              href: try-catch.md
+            - name: try-finally
+              href: try-finally.md
+            - name: try-catch-finally
+              href: try-catch-finally.md
+        - name: Checked 與 Unchecked
+          href: checked-and-unchecked.md
+          items:
+            - name: checked
+              href: checked.md
+            - name: unchecked
+              href: unchecked.md
+        - name: fixed 陳述式
+          href: fixed-statement.md
+        - name: lock 陳述式
+          href: lock-statement.md
+    - name: 方法參數
+      href: method-parameters.md
       items:
-      - name: 協助工具層級
-        href: accessibility-levels.md
-      - name: 協助工具定義域
-        href: accessibility-domain.md
-      - name: 使用協助工具層級的限制
-        href: restrictions-on-using-accessibility-levels.md
-      - name: internal
-        href: internal.md
-      - name: private
-        href: private.md
-      - name: protected
-        href: protected.md
-      - name: public
-        href: public.md
-      - name: protected internal
-        href: protected-internal.md
-      - name: private protected
-        href: private-protected.md
-    - name: abstract
-      href: abstract.md
-    - name: async
-      href: async.md
-    - name: const
-      href: const.md
-    - name: Event - 事件
-      href: event.md
-    - name: extern
-      href: extern.md
-    - name: in (泛型修飾詞)
-      href: in-generic-modifier.md
-    - name: out (泛型修飾詞)
-      href: out-generic-modifier.md
-    - name: override
-      href: override.md
-    - name: readonly
-      href: readonly.md
-    - name: sealed
-      href: sealed.md
-    - name: 靜態
-      href: static.md
-    - name: unsafe
-      href: unsafe.md
-    - name: 虛擬
-      href: virtual.md
-    - name: volatile
-      href: volatile.md
-  - name: 陳述式關鍵字
-    href: statement-keywords.md
-    items:
-    - name: 選取範圍陳述式
-      href: selection-statements.md
+        - name: params
+          href: params.md
+        - name: in (參數修飾詞)
+          href: in-parameter-modifier.md
+        - name: ref
+          href: ref.md
+        - name: out (參數修飾詞)
+          href: out-parameter-modifier.md
+    - name: 命名空間關鍵字
+      href: namespace-keywords.md
       items:
-      - name: if-else
-        href: if-else.md
-      - name: switch
-        href: switch.md
-    - name: 反覆運算陳述式
-      href: iteration-statements.md
+        - name: namespace
+          href: namespace.md
+        - name: using
+          href: using.md
+          items:
+            - name: using 指示詞
+              href: using-directive.md
+            - name: using static 指示詞
+              href: using-static.md
+            - name: using 陳述式
+              href: using-statement.md
+        - name: extern alias
+          href: extern-alias.md
+    - name: 運算子關鍵字
+      href: operator-keywords.md
       items:
-      - name: do
-        href: do.md
-      - name: for
-        href: for.md
-      - name: foreach、in
-        href: foreach-in.md
-      - name: while
-        href: while.md
-    - name: 跳躍陳述式
-      href: jump-statements.md
+        - name: as
+          href: as.md
+        - name: await
+          href: await.md
+        - name: 是
+          href: is.md
+        - name: new
+          href: new.md
+          items:
+            - name: new 運算子
+              href: new-operator.md
+            - name: new 修飾詞
+              href: new-modifier.md
+            - name: new 條件約束
+              href: new-constraint.md
+        - name: sizeof
+          href: sizeof.md
+        - name: typeof
+          href: typeof.md
+        - name: 'true'
+          href: true.md
+          items:
+            - name: true 運算子
+              href: true-false-operators.md
+            - name: true 常值
+              href: true-literal.md
+        - name: 'False'
+          href: false.md
+          items:
+            - name: false 運算子
+              href: true-false-operators.md
+            - name: false 常值
+              href: false-literal.md
+        - name: stackalloc
+          href: stackalloc.md
+        - name: nameof
+          href: nameof.md
+    - name: 轉換關鍵字
+      href: conversion-keywords.md
       items:
-      - name: break
-        href: break.md
-      - name: continue
-        href: continue.md
-      - name: goto
-        href: goto.md
-      - name: return
-        href: return.md
-    - name: 例外狀況處理陳述式
-      href: exception-handling-statements.md
+        - name: explicit
+          href: explicit.md
+        - name: implicit
+          href: implicit.md
+        - name: 運算子
+          href: operator.md
+    - name: 存取關鍵字
+      href: access-keywords.md
       items:
-      - name: throw
-        href: throw.md
-      - name: try-catch
-        href: try-catch.md
-      - name: try-finally
-        href: try-finally.md
-      - name: try-catch-finally
-        href: try-catch-finally.md
-    - name: Checked 與 Unchecked
-      href: checked-and-unchecked.md
+        - name: base
+          href: base.md
+        - name: this
+          href: this.md
+    - name: 常值關鍵字
+      href: literal-keywords.md
       items:
-      - name: checked
-        href: checked.md
-      - name: unchecked
-        href: unchecked.md
-    - name: fixed 陳述式
-      href: fixed-statement.md
-    - name: lock 陳述式
-      href: lock-statement.md
-  - name: 方法參數
-    href: method-parameters.md
-    items:
-    - name: params
-      href: params.md
-    - name: in (參數修飾詞)
-      href: in-parameter-modifier.md
-    - name: ref
-      href: ref.md
-    - name: out (參數修飾詞)
-      href: out-parameter-modifier.md
-  - name: 命名空間關鍵字
-    href: namespace-keywords.md
-    items:
-    - name: namespace
-      href: namespace.md
-    - name: using
-      href: using.md
+        - name: 'null'
+          href: null.md
+        - name: default
+          href: default.md
+    - name: 內容關鍵字
+      href: contextual-keywords.md
       items:
-      - name: using 指示詞
-        href: using-directive.md
-      - name: using static 指示詞
-        href: using-static.md
-      - name: using 陳述式
-        href: using-statement.md
-    - name: extern alias
-      href: extern-alias.md
-  - name: 運算子關鍵字
-    href: operator-keywords.md
-    items:
-    - name: as
-      href: as.md
-    - name: await
-      href: await.md
-    - name: 是
-      href: is.md
-    - name: new
-      href: new.md
+        - name: add
+          href: add.md
+        - name: get
+          href: get.md
+        - name: 全域
+          href: global.md
+        - name: partial (類型)
+          href: partial-type.md
+        - name: partial (方法)
+          href: partial-method.md
+        - name: remove
+          href: remove.md
+        - name: 設定
+          href: set.md
+        - name: when (篩選條件)
+          href: when.md
+        - name: where (泛型型別條件約束)
+          href: where-generic-type-constraint.md
+        - name: value
+          href: value.md
+        - name: yield
+          href: yield.md
+    - name: 查詢關鍵字
+      href: query-keywords.md
       items:
-      - name: new 運算子
-        href: new-operator.md
-      - name: new 修飾詞
-        href: new-modifier.md
-      - name: new 條件約束
-        href: new-constraint.md
-    - name: sizeof
-      href: sizeof.md
-    - name: typeof
-      href: typeof.md
-    - name: "true"
-      href: true.md
-      items:
-      - name: true 運算子
-        href: true-false-operators.md
-      - name: true 常值
-        href: true-literal.md
-    - name: "False"
-      href: false.md
-      items:
-      - name: false 運算子
-        href: true-false-operators.md
-      - name: false 常值
-        href: false-literal.md
-    - name: stackalloc
-      href: stackalloc.md
-    - name: nameof
-      href: nameof.md
-  - name: 轉換關鍵字
-    href: conversion-keywords.md
-    items:
-    - name: explicit
-      href: explicit.md
-    - name: implicit
-      href: implicit.md
-    - name: 運算子
-      href: operator.md
-  - name: 存取關鍵字
-    href: access-keywords.md
-    items:
-    - name: base
-      href: base.md
-    - name: this
-      href: this.md
-  - name: 常值關鍵字
-    href: literal-keywords.md
-    items:
-    - name: "null"
-      href: null.md
-    - name: default
-      href: default.md
-  - name: 內容關鍵字
-    href: contextual-keywords.md
-    items:
-    - name: add
-      href: add.md
-    - name: get
-      href: get.md
-    - name: 全域
-      href: global.md
-    - name: partial (類型)
-      href: partial-type.md
-    - name: partial (方法)
-      href: partial-method.md
-    - name: remove
-      href: remove.md
-    - name: 設定
-      href: set.md
-    - name: when (篩選條件)
-      href: when.md
-    - name: where (泛型型別條件約束)
-      href: where-generic-type-constraint.md
-    - name: value
-      href: value.md
-    - name: yield
-      href: yield.md
-  - name: 查詢關鍵字
-    href: query-keywords.md
-    items:
-    - name: from 子句
-      href: from-clause.md
-    - name: where 子句
-      href: where-clause.md
-    - name: select 子句
-      href: select-clause.md
-    - name: group 子句
-      href: group-clause.md
-    - name: into
-      href: into.md
-    - name: orderby 子句
-      href: orderby-clause.md
-    - name: join 子句
-      href: join-clause.md
-    - name: let 子句
-      href: let-clause.md
-    - name: ascending
-      href: ascending.md
-    - name: descending
-      href: descending.md
-    - name: 於
-      href: on.md
-    - name: equals
-      href: equals.md
-    - name: by
-      href: by.md
-    - name: 中的
-      href: in.md
-ms.openlocfilehash: a87c28c8c586d1169a98f3f71361d34eb8680d99
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468291"
+        - name: from 子句
+          href: from-clause.md
+        - name: where 子句
+          href: where-clause.md
+        - name: select 子句
+          href: select-clause.md
+        - name: group 子句
+          href: group-clause.md
+        - name: into
+          href: into.md
+        - name: orderby 子句
+          href: orderby-clause.md
+        - name: join 子句
+          href: join-clause.md
+        - name: let 子句
+          href: let-clause.md
+        - name: ascending
+          href: ascending.md
+        - name: descending
+          href: descending.md
+        - name: 於
+          href: on.md
+        - name: equals
+          href: equals.md
+        - name: by
+          href: by.md
+        - name: 中的
+          href: in.md

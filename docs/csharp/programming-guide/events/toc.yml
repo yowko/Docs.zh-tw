@@ -1,22 +1,15 @@
-items:
 - name: 事件
   href: index.md
   items:
-  - name: 作法：訂閱及取消訂閱事件
-    href: how-to-subscribe-to-and-unsubscribe-from-events.md
-  - name: 作法：發佈符合 .NET Framework 方針的事件
-    href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
-  - name: 作法：在衍生類別中引發基底類別事件
-    href: how-to-raise-base-class-events-in-derived-classes.md
-  - name: 作法：實作介面事件
-    href: how-to-implement-interface-events.md
-  - name: 作法：使用字典儲存事件執行個體
-    href: how-to-use-a-dictionary-to-store-event-instances.md
-  - name: 作法：實作自訂事件存取子
-    href: how-to-implement-custom-event-accessors.md
-ms.openlocfilehash: ad3adc4026915e1173dacd33dde9746cfb0adcdd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469647"
+    - name: HOW TO：訂閱及取消訂閱事件
+      href: how-to-subscribe-to-and-unsubscribe-from-events.md
+    - name: HOW TO：發佈符合 .NET Framework 方針的事件
+      href: how-to-publish-events-that-conform-to-net-framework-guidelines.md
+    - name: HOW TO：在衍生類別中引發基底類別事件
+      href: how-to-raise-base-class-events-in-derived-classes.md
+    - name: HOW TO：實作介面事件
+      href: how-to-implement-interface-events.md
+    - name: HOW TO：使用字典儲存事件執行個體
+      href: how-to-use-a-dictionary-to-store-event-instances.md
+    - name: HOW TO：實作自訂事件存取子
+      href: how-to-implement-custom-event-accessors.md

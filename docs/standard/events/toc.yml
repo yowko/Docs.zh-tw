@@ -1,25 +1,18 @@
-items:
 - name: 事件
   href: index.md
   items:
-  - name: 作法：引發和使用事件
-    href: how-to-raise-and-consume-events.md
-  - name: 作法：使用事件屬性處理多個事件
-    href: how-to-handle-multiple-events-using-event-properties.md
-  - name: 作法：使用 Web Forms 應用程式中的事件
-    href: how-to-consume-events-in-a-web-forms-application.md
-  - name: 觀察器設計模式
-    href: observer-design-pattern.md
-    items:
-    - name: 觀察器設計模式最佳作法
-      href: observer-design-pattern-best-practices.md
-    - name: 作法：實作提供者
-      href: how-to-implement-a-provider.md
-    - name: 作法：實作觀察者
-      href: how-to-implement-an-observer.md
-ms.openlocfilehash: 683b3ce9ecf53166bed8101c2ebcd0d4a43024b9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468153"
+    - name: HOW TO：引發和使用事件
+      href: how-to-raise-and-consume-events.md
+    - name: HOW TO：使用事件屬性處理多個事件
+      href: how-to-handle-multiple-events-using-event-properties.md
+    - name: HOW TO：使用 Web Forms 應用程式中的事件
+      href: how-to-consume-events-in-a-web-forms-application.md
+    - name: 觀察器設計模式
+      href: observer-design-pattern.md
+      items:
+        - name: 觀察器設計模式最佳作法
+          href: observer-design-pattern-best-practices.md
+        - name: HOW TO：實作提供者
+          href: how-to-implement-a-provider.md
+        - name: HOW TO：實作觀察者
+          href: how-to-implement-an-observer.md
