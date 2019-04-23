@@ -1,34 +1,27 @@
-items:
 - name: 程式設計概念
   href: index.md
   items:
-  - name: 組件和全域組件快取
-    href: assemblies-gac/
-  - name: 使用 async 和 await 進行非同步程式設計
-    href: async/
-  - name: 屬性
-    href: attributes/
-  - name: 呼叫端資訊
-    href: caller-information.md
-  - name: 集合
-    href: collections.md
-  - name: 共變數和反變數
-    href: covariance-contravariance/
-  - name: 運算式樹狀架構
-    href: expression-trees/
-  - name: 迭代器
-    href: iterators.md
-  - name: Language-Integrated Query (LINQ)
-    href: linq/
-  - name: 物件導向程式設計
-    href: object-oriented-programming.md
-  - name: 反射
-    href: reflection.md
-  - name: 序列化 (C#)
-    href: serialization/
-ms.openlocfilehash: 43357f3e4d438d96ba5778100585453792ed29c6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468530"
+    - name: 組件和全域組件快取
+      href: assemblies-gac/
+    - name: 使用 async 和 await 進行非同步程式設計
+      href: async/
+    - name: 屬性
+      href: attributes/
+    - name: 呼叫端資訊
+      href: caller-information.md
+    - name: 集合
+      href: collections.md
+    - name: 共變數和反變數
+      href: covariance-contravariance/
+    - name: 運算式樹狀架構
+      href: expression-trees/
+    - name: 迭代器
+      href: iterators.md
+    - name: Language-Integrated Query (LINQ)
+      href: linq/
+    - name: 物件導向程式設計
+      href: object-oriented-programming.md
+    - name: 反射
+      href: reflection.md
+    - name: '序列化 (C#)'
+      href: serialization/

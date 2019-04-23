@@ -2,11 +2,17 @@
 title: 以 .NET Framework 進行網路程式設計
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - Networking
-  - Internet
-  - 'Internet, .NET Framework Internet services'
-  - Network Resources
+- Networking
+- Internet
+- Internet, .NET Framework Internet services
+- Network Resources
 ms.assetid: 8d455610-67a0-4fa8-a62f-7747064a9256
+ms.openlocfilehash: 74084b8eef46f700733ad44e04cf8b3811456b85
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61642408"
 ---
 # <a name="network-programming-in-the-net-framework"></a>以 .NET Framework 進行網路程式設計
 Microsoft .NET Framework 提供有層次、可擴充和網際網路服務的 Managed 實作，可以迅速而簡易地整合到您的應用程式。 您的網路應用程式可以建置在可外掛式通訊協定上，以便自動利用新的網際網路通訊協定，或者也可以使用 Windows Socket 介面的 Managed 實作，以便搭配使用通訊端層級上的網路。  

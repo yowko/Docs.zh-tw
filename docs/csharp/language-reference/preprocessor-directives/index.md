@@ -1,12 +1,18 @@
 ---
-title: 'C# 前置處理器指示詞'
+title: C# 前置處理器指示詞
 ms.date: 07/20/2015
 f1_keywords:
-  - cs.preprocessor
+- cs.preprocessor
 helpviewer_keywords:
-  - 'preprocessor directives [C#]'
-  - 'keywords [C#], preprocessor directives'
+- preprocessor directives [C#]
+- keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
+ms.openlocfilehash: 54067777ed2e92eea263b17cce0d4cdf13ed731d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689316"
 ---
 # <a name="c-preprocessor-directives"></a>C# 前置處理器指示詞
 本節包含下列 C# 前置處理器指示詞的相關資訊：

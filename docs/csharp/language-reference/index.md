@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reference, C# language
 ms.assetid: 06de3167-c16c-4e1a-b3c5-c27841d4569a
 ms.openlocfilehash: 6862ae72b235653d4576915605f14c9e4de92bce
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61662188"
 ---
 # <a name="c-reference"></a>C# 參考
 本節提供有關 C# 關鍵字、運算子、特殊字元、前置處理器指示詞、編譯器選項以及編譯器錯誤和警告的參考資料。  

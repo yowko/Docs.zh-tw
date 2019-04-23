@@ -1,16 +1,9 @@
-items:
 - name: 索引子
   href: index.md
   items:
-  - name: 使用索引子
-    href: using-indexers.md
-  - name: 介面中的索引子
-    href: indexers-in-interfaces.md
-  - name: 屬性與索引子之間的比較
-    href: comparison-between-properties-and-indexers.md
-ms.openlocfilehash: 8f620f2864f6d4569bf4d999f437519551809067
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468265"
+    - name: 使用索引子
+      href: using-indexers.md
+    - name: 介面中的索引子
+      href: indexers-in-interfaces.md
+    - name: 屬性與索引子之間的比較
+      href: comparison-between-properties-and-indexers.md

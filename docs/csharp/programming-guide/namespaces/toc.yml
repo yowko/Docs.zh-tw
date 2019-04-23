@@ -1,16 +1,9 @@
-items:
 - name: 命名空間
   href: index.md
   items:
-  - name: 使用命名空間
-    href: using-namespaces.md
-  - name: 作法：使用全域命名空間別名
-    href: how-to-use-the-global-namespace-alias.md
-  - name: 作法：使用 My 命名空間
-    href: how-to-use-the-my-namespace.md
-ms.openlocfilehash: 289817c09457dd50111d9d7514d27802d337cb79
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468264"
+    - name: 使用命名空間
+      href: using-namespaces.md
+    - name: HOW TO：使用全域命名空間別名
+      href: how-to-use-the-global-namespace-alias.md
+    - name: HOW TO：使用 My 命名空間
+      href: how-to-use-the-my-namespace.md

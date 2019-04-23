@@ -3,18 +3,18 @@ title: 程式設計概念 (C#)
 ms.date: 07/20/2015
 ms.assetid: 3227afd5-4794-484b-b83b-0f1f94a0476b
 ms.openlocfilehash: bfe4046d6d54693867ebe5d8529a4744b9e69c3b
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56748241"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61702460"
 ---
 # <a name="programming-concepts-c"></a>程式設計概念 (C#)
 本節說明 C# 語言的程式設計概念。  
   
 ## <a name="in-this-section"></a>本節內容  
   
-|標題|描述|  
+|標題|說明|  
 |-----------|-----------------|  
 |[.NET 中的組件](../../../standard/assembly/index.md)|說明如何建立及使用組件。|  
 |[使用 Async 和 Await 進行非同步程式設計 (C#)](../../../csharp/programming-guide/concepts/async/index.md)|說明如何使用 C# 中的 [async](../../../csharp/language-reference/keywords/async.md) 和 [await](../../../csharp/language-reference/keywords/await.md) 關鍵字撰寫非同步解決方案。 其中包含逐步解說。|  

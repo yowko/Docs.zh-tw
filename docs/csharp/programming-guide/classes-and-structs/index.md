@@ -1,16 +1,22 @@
 ---
-title: '類別和結構 - C# 程式設計手冊'
+title: 類別和結構 - C# 程式設計手冊
 ms.custom: seodec18
-description: '說明類別和結構 (structs) 在 C# 中的用途。'
+description: 說明類別和結構 (structs) 在 C# 中的用途。
 ms.date: 01/17/2016
 helpviewer_keywords:
-  - 'structs [C#], about structs'
-  - 'classes [C#], overview'
-  - 'C# language, structs'
-  - 'C# language, objects'
-  - 'objects [C#]'
-  - 'C# language, classes'
+- structs [C#], about structs
+- classes [C#], overview
+- C# language, structs
+- C# language, objects
+- objects [C#]
+- C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
+ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646328"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>類別和結構 (C# 程式設計手冊)
 類別和結構是 .NET Framework 中一般型別系統的兩個基本建構。 每一個基本上都是封裝一組屬於相同邏輯單元之資料和行為的資料結構。 資料和行為是類別或結構的「成員」，它們包含類別或結構的方法、屬性和事件等，如本主題稍後所列。  

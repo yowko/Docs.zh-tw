@@ -10,11 +10,11 @@ ms.assetid: 028d0ce8-ebc2-4a88-a16f-17508f6d0bd6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e78da65eb8ef7db6dd01c1c1d3d313ac8946431a
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051191"
 ---
 # <a name="working-with-base-types-in-net"></a>在 .NET 中使用基底類型
 本節說明 .NET 基底類型作業，包括格式化、轉換和一般作業。  
@@ -29,7 +29,7 @@ ms.locfileid: "33567629"
  [操作字串](../../../docs/standard/base-types/manipulating-strings.md)  
  描述如何操作和格式化字串。  
   
- [Parsing Strings](../../../docs/standard/base-types/parsing-strings.md)  
+ [剖析字串](../../../docs/standard/base-types/parsing-strings.md)  
  描述如何將字串轉換成 .NET Framework 類型。  
   
 ## <a name="related-sections"></a>相關章節  

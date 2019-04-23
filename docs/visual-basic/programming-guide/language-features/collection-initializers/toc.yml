@@ -1,14 +1,7 @@
-items:
 - name: 集合初始設定式
   href: index.md
   items:
-  - name: 作法：建立集合初始設定式所使用的 Add 延伸模組
-    href: how-to-create-an-add-extension-method-used-by-a-collection-initializer.md
-  - name: 作法：建立集合初始設定式所使用的集合
-    href: how-to-create-a-collection-used-by-a-collection-initializer.md
-ms.openlocfilehash: e6ef5bd5495da0d695d70bc37ab4506c7c1f0f63
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468179"
+    - name: HOW TO：建立集合初始設定式所使用的 Add 延伸模組
+      href: how-to-create-an-add-extension-method-used-by-a-collection-initializer.md
+    - name: HOW TO：建立集合初始設定式所使用的集合
+      href: how-to-create-a-collection-used-by-a-collection-initializer.md

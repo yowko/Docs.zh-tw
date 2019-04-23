@@ -1,57 +1,50 @@
-items:
 - name: Visual Basic 中的字串
   href: index.md
   items:
-  - name: 字串簡介
-    href: introduction-to-strings.md
-    items:
-    - name: 字串基本概念
-      href: string-basics.md
-    - name: 字串操作方法的類型
-      href: types-of-string-manipulation-methods.md
-    - name: Nothing 和字串
-      href: nothing-and-strings.md
-    - name: 文化特性 (Culture) 如何影響字串
-      href: how-culture-affects-strings.md
-    - name: 插入字串
-      href: interpolated-strings.md
-    - name: 以零為起始與以一為起始的字串存取比較
-      href: zero-based-vs-one-based-string-access.md
-  - name: 作法：使用 StringBuilder 建立字串
-    href: how-to-create-strings-using-a-stringbuilder.md
-  - name: 作法：在字串內搜尋
-    href: how-to-search-within-a-string.md
-  - name: 在字串和其他資料類型之間進行轉換
-    href: converting-between-strings-and-other-data-types.md
-    items:
-    - name: 作法：將位元組陣列轉換為字串
-      href: how-to-convert-an-array-of-bytes-into-a-string.md
-    - name: 作法：將字串轉換為位元組陣列
-      href: how-to-convert-strings-into-an-array-of-bytes.md
-    - name: 作法：從字元值陣列建立字串
-      href: how-to-create-a-string-from-an-array-of-char-values.md
-    - name: 作法：將十六進位字串轉換為數字
-      href: how-to-convert-hexadecimal-strings-to-numbers.md
-    - name: 作法：將字串轉換為字元陣列
-      href: how-to-convert-a-string-to-an-array-of-characters.md
-    - name: 作法：存取字串中的字元
-      href: how-to-access-characters-in-strings.md
-  - name: 驗證字串
-    href: validating-strings.md
-    items:
-    - name: 作法：驗證檔案名稱和路徑
-      href: how-to-validate-file-names-and-paths.md
-    - name: 作法：驗證代表日期或時間的字串
-      href: how-to-validate-strings-that-represent-dates-or-times.md
-    - name: 將規則運算式與 MaskedTextBox 控制項搭配使用
-      href: using-regular-expressions-with-the-maskedtextbox-control.md
-    - name: 逐步解說：驗證密碼確實複雜
-      href: walkthrough-validating-that-passwords-are-complex.md
-  - name: 逐步解說：加密和解密字串
-    href: walkthrough-encrypting-and-decrypting-strings.md
-ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468415"
+    - name: 字串簡介
+      href: introduction-to-strings.md
+      items:
+        - name: 字串基本概念
+          href: string-basics.md
+        - name: 字串操作方法的類型
+          href: types-of-string-manipulation-methods.md
+        - name: Nothing 和字串
+          href: nothing-and-strings.md
+        - name: 文化特性 (Culture) 如何影響字串
+          href: how-culture-affects-strings.md
+        - name: 插入字串
+          href: interpolated-strings.md
+        - name: 以零為起始與以一為起始的字串存取比較
+          href: zero-based-vs-one-based-string-access.md
+    - name: HOW TO：使用 StringBuilder 建立字串
+      href: how-to-create-strings-using-a-stringbuilder.md
+    - name: HOW TO：在字串內搜尋
+      href: how-to-search-within-a-string.md
+    - name: 在字串和其他資料類型之間進行轉換
+      href: converting-between-strings-and-other-data-types.md
+      items:
+        - name: HOW TO：將位元組陣列轉換為字串
+          href: how-to-convert-an-array-of-bytes-into-a-string.md
+        - name: HOW TO：將字串轉換為位元組陣列
+          href: how-to-convert-strings-into-an-array-of-bytes.md
+        - name: HOW TO：從字元值陣列建立字串
+          href: how-to-create-a-string-from-an-array-of-char-values.md
+        - name: HOW TO：將十六進位字串轉換為數字
+          href: how-to-convert-hexadecimal-strings-to-numbers.md
+        - name: HOW TO：將字串轉換為字元陣列
+          href: how-to-convert-a-string-to-an-array-of-characters.md
+        - name: HOW TO：存取字串中的字元
+          href: how-to-access-characters-in-strings.md
+    - name: 驗證字串
+      href: validating-strings.md
+      items:
+        - name: HOW TO：驗證檔案名稱和路徑
+          href: how-to-validate-file-names-and-paths.md
+        - name: HOW TO：驗證代表日期或時間的字串
+          href: how-to-validate-strings-that-represent-dates-or-times.md
+        - name: 將規則運算式與 MaskedTextBox 控制項搭配使用
+          href: using-regular-expressions-with-the-maskedtextbox-control.md
+        - name: 逐步解說：驗證密碼確實複雜
+          href: walkthrough-validating-that-passwords-are-complex.md
+    - name: 逐步解說：加密和解密字串
+      href: walkthrough-encrypting-and-decrypting-strings.md

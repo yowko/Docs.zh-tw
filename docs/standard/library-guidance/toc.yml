@@ -1,30 +1,23 @@
-items:
 - name: 開放原始碼程式庫指導
   href: index.md
   items:
-  - name: 開始使用
-    href: get-started.md
-  - name: 跨平台目標設定
-    href: cross-platform-targeting.md
-  - name: 強式命名
-    href: strong-naming.md
-  - name: NuGet
-    href: nuget.md
-    items:
-    - name: 相依性
-      href: dependencies.md
-    - name: 來源連結
-      href: sourcelink.md
-    - name: 發佈
-      href: publish-nuget-package.md
-  - name: 版本控制
-    href: versioning.md
-    items:
-    - name: 重大變更
-      href: breaking-changes.md
-ms.openlocfilehash: eb2748f71480aee063efadd8291c76440347169b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468155"
+    - name: 開始使用
+      href: get-started.md
+    - name: 跨平台目標設定
+      href: cross-platform-targeting.md
+    - name: 強式命名
+      href: strong-naming.md
+    - name: NuGet
+      href: nuget.md
+      items:
+        - name: 相依性
+          href: dependencies.md
+        - name: 來源連結
+          href: sourcelink.md
+        - name: 發佈
+          href: publish-nuget-package.md
+    - name: 版本控制
+      href: versioning.md
+      items:
+        - name: 重大變更
+          href: breaking-changes.md

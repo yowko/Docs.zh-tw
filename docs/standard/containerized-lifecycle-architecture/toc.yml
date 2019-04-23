@@ -1,70 +1,63 @@
-items:
 - name: Microsoft 平台和工具的容器化 Docker 應用程式生命週期
   href: index.md
   items:
-  - name: 什麼是 Docker？
-    href: what-is-docker.md
-  - name: Docker 術語
-    href: docker-terminology.md
-  - name: Docker 容器、映像和登錄
-    href: docker-containers-images-and-registries.md
-  - name: 邁向以容器為基礎的新式應用程式
-    href: road-to-modern-applications-based-on-containers.md
-  - name: Docker 應用程式生命週期簡介
-    href: Docker-application-lifecycle/index.md
-    items:
-    - name: 作為 DevOps 共同作業基礎的容器
-      href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
-  - name: 容器化應用程式的 Microsoft 平台和工具簡介
-    href: Microsoft-platform-tools-containerized-apps/index.md
-  - name: 使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
-    href: design-develop-containerized-apps/index.md
-    items:
-    - name: 設計 Docker 應用程式
-      href: design-develop-containerized-apps/design-docker-applications.md
-    - name: 一般容器設計準則
-      href: design-develop-containerized-apps/common-container-design-principles.md
-    - name: 整合型應用程式
-      href: design-develop-containerized-apps/monolithic-applications.md
-    - name: Docker 應用程式中的狀態和資料
-      href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
-    - name: 服務導向應用程式
-      href: design-develop-containerized-apps/soa-applications.md
-    - name: 協調微服務和多容器應用程式的高延展性和可用性
-      href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
-    - name: 部署到 Azure Kubernetes Service (AKS)
-      href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
-    - name: Docker 應用程式的開發環境
-      href: design-develop-containerized-apps/docker-apps-development-environment.md
-    - name: Docker 應用程式的內部迴圈開發工作流程
-      href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
-    - name: Visual Studio Tools for Docker
-      href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
-    - name: 在 DockerFile 中使用 Windows PowerShell 命令來設定 Windows 容器 (以 Docker 標準為基礎)
-      href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
-    - name: 建置以 Linux 容器部署到 AKS/Kubernetes 協調器的 ASP.NET Core 2.0 應用程式
-      href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
-  - name: 使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
-    href: docker-devops-workflow/index.md
-    items:
-    - name: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
-      href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
-    - name: 在 Azure DevOps Services 中為容器上的 .NET Core 2.0 應用程式建立 CI/CD 管線並部署到 Kubernetes 叢集
-      href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
-  - name: 執行、管理和監視 Docker 生產環境
-    href: run-manage-monitor-docker-environments/index.md
-    items:
-    - name: 在生產環境中執行已撰寫和以微服務為基礎的應用程式
-      href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
-    - name: 管理生產 Docker 環境
-      href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
-    - name: 監視容器化應用程式服務
-      href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
-  - name: 金鑰附帶
-    href: key-takeaways/index.md
-ms.openlocfilehash: 8aa4e07d422ddf01e9dee971ee6071486dd0e1ff
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: zh-TW
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58468255"
+    - name: 什麼是 Docker？
+      href: what-is-docker.md
+    - name: Docker 術語
+      href: docker-terminology.md
+    - name: Docker 容器、映像和登錄
+      href: docker-containers-images-and-registries.md
+    - name: 邁向以容器為基礎的新式應用程式
+      href: road-to-modern-applications-based-on-containers.md
+    - name: Docker 應用程式生命週期簡介
+      href: Docker-application-lifecycle/index.md
+      items:
+        - name: 作為 DevOps 共同作業基礎的容器
+          href: Docker-application-lifecycle/containers-foundation-for-devops-collaboration.md
+    - name: 容器化應用程式的 Microsoft 平台和工具簡介
+      href: Microsoft-platform-tools-containerized-apps/index.md
+    - name: 使用 Docker 和 Microsoft Azure 設計和開發容器化應用程式
+      href: design-develop-containerized-apps/index.md
+      items:
+        - name: 設計 Docker 應用程式
+          href: design-develop-containerized-apps/design-docker-applications.md
+        - name: 一般容器設計準則
+          href: design-develop-containerized-apps/common-container-design-principles.md
+        - name: 整合型應用程式
+          href: design-develop-containerized-apps/monolithic-applications.md
+        - name: Docker 應用程式中的狀態和資料
+          href: design-develop-containerized-apps/state-and-data-in-docker-applications.md
+        - name: 服務導向應用程式
+          href: design-develop-containerized-apps/soa-applications.md
+        - name: 協調微服務和多容器應用程式的高延展性和可用性
+          href: design-develop-containerized-apps/orchestrate-high-scalability-availability.md
+        - name: 部署到 Azure Kubernetes Service (AKS)
+          href: design-develop-containerized-apps/deploy-azure-kubernetes-service.md
+        - name: Docker 應用程式的開發環境
+          href: design-develop-containerized-apps/docker-apps-development-environment.md
+        - name: Docker 應用程式的內部迴圈開發工作流程
+          href: design-develop-containerized-apps/docker-apps-inner-loop-workflow.md
+        - name: Visual Studio Tools for Docker
+          href: design-develop-containerized-apps/visual-studio-tools-for-docker.md
+        - name: 在 DockerFile 中使用 Windows PowerShell 命令來設定 Windows 容器 (以 Docker 標準為基礎)
+          href: design-develop-containerized-apps/set-up-windows-containers-with-powershell.md
+        - name: 建置以 Linux 容器部署到 AKS/Kubernetes 協調器的 ASP.NET Core 2.0 應用程式
+          href: design-develop-containerized-apps/build-aspnet-core-applications-linux-containers-aks-kubernetes.md
+    - name: 使用 Microsoft 工具的 Docker 應用程式 DevOps 工作流程
+      href: docker-devops-workflow/index.md
+      items:
+        - name: Docker 應用程式之外部迴圈 DevOps 工作流程中的步驟
+          href: docker-devops-workflow/docker-application-outer-loop-devops-workflow.md
+        - name: 在 Azure DevOps Services 中為容器上的 .NET Core 2.0 應用程式建立 CI/CD 管線並部署到 Kubernetes 叢集
+          href: docker-devops-workflow/create-ci-cd-pipelines-azure-devops-services-aspnetcore-kubernetes.md
+    - name: 執行、管理和監視 Docker 生產環境
+      href: run-manage-monitor-docker-environments/index.md
+      items:
+        - name: 在生產環境中執行已撰寫和以微服務為基礎的應用程式
+          href: run-manage-monitor-docker-environments/run-microservices-based-applications-in-production.md
+        - name: 管理生產 Docker 環境
+          href: run-manage-monitor-docker-environments/manage-production-docker-environments.md
+        - name: 監視容器化應用程式服務
+          href: run-manage-monitor-docker-environments/monitor-containerized-application-services.md
+    - name: 金鑰附帶
+      href: key-takeaways/index.md
