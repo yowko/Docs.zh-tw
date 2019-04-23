@@ -1,11 +1,18 @@
-### <a name="concurrentqueuelttgttrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a><span data-ttu-id="11b15-101">ConcurrentQueue&lt;T&gt;.TryPeek 可透過其 out 參數傳回錯誤的 Null</span><span class="sxs-lookup"><span data-stu-id="11b15-101">ConcurrentQueue&lt;T&gt;.TryPeek can return an erroneous null via its out parameter</span></span>
+---
+ms.openlocfilehash: a93fbbd787aa50f080337a6170cf8f56d0d24e31
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.translationtype: HT
+ms.contentlocale: zh-TW
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59236693"
+---
+### <a name="concurrentqueuettrypeek-can-return-an-erroneous-null-via-its-out-parameter"></a><span data-ttu-id="14192-101">ConcurrentQueue\<T>.TryPeek 可透過其 out 參數傳回錯誤的 Null</span><span class="sxs-lookup"><span data-stu-id="14192-101">ConcurrentQueue\<T>.TryPeek can return an erroneous null via its out parameter</span></span>
 
 |   |   |
 |---|---|
-|<span data-ttu-id="11b15-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="11b15-102">Details</span></span>|<span data-ttu-id="11b15-103">在某些多執行緒案例中，<xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> 可能會傳回 true，但以 Null 值 (而不是查看到的正確值) 填入 out 參數。</span><span class="sxs-lookup"><span data-stu-id="11b15-103">In some multi-threaded scenarios, <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> can return true, but populate the out parameter with a null value (instead of the correct, peeked value).</span></span>|
-|<span data-ttu-id="11b15-104">建議</span><span class="sxs-lookup"><span data-stu-id="11b15-104">Suggestion</span></span>|<span data-ttu-id="11b15-105">此問題在 .NET Framework 4.5.1 中已修正。</span><span class="sxs-lookup"><span data-stu-id="11b15-105">This issue is fixed in the .NET Framework 4.5.1.</span></span> <span data-ttu-id="11b15-106">升級至該 Framework 將會解決問題。</span><span class="sxs-lookup"><span data-stu-id="11b15-106">Upgrading to that Framework will solve the issue.</span></span>|
-|<span data-ttu-id="11b15-107">範圍</span><span class="sxs-lookup"><span data-stu-id="11b15-107">Scope</span></span>|<span data-ttu-id="11b15-108">主要</span><span class="sxs-lookup"><span data-stu-id="11b15-108">Major</span></span>|
-|<span data-ttu-id="11b15-109">版本</span><span class="sxs-lookup"><span data-stu-id="11b15-109">Version</span></span>|<span data-ttu-id="11b15-110">4.5</span><span class="sxs-lookup"><span data-stu-id="11b15-110">4.5</span></span>|
-|<span data-ttu-id="11b15-111">類型</span><span class="sxs-lookup"><span data-stu-id="11b15-111">Type</span></span>|<span data-ttu-id="11b15-112">執行階段</span><span class="sxs-lookup"><span data-stu-id="11b15-112">Runtime</span></span>|
-|<span data-ttu-id="11b15-113">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="11b15-113">Affected APIs</span></span>|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|
-
+|<span data-ttu-id="14192-102">詳細資料</span><span class="sxs-lookup"><span data-stu-id="14192-102">Details</span></span>|<span data-ttu-id="14192-103">在某些多執行緒案例中，<xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> 可能會傳回 true，但以 Null 值 (而不是查看到的正確值) 填入 out 參數。</span><span class="sxs-lookup"><span data-stu-id="14192-103">In some multi-threaded scenarios, <xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=name> can return true, but populate the out parameter with a null value (instead of the correct, peeked value).</span></span>|
+|<span data-ttu-id="14192-104">建議</span><span class="sxs-lookup"><span data-stu-id="14192-104">Suggestion</span></span>|<span data-ttu-id="14192-105">此問題在 .NET Framework 4.5.1 中已修正。</span><span class="sxs-lookup"><span data-stu-id="14192-105">This issue is fixed in the .NET Framework 4.5.1.</span></span> <span data-ttu-id="14192-106">升級至該 Framework 將會解決問題。</span><span class="sxs-lookup"><span data-stu-id="14192-106">Upgrading to that Framework will solve the issue.</span></span>|
+|<span data-ttu-id="14192-107">範圍</span><span class="sxs-lookup"><span data-stu-id="14192-107">Scope</span></span>|<span data-ttu-id="14192-108">主要</span><span class="sxs-lookup"><span data-stu-id="14192-108">Major</span></span>|
+|<span data-ttu-id="14192-109">版本</span><span class="sxs-lookup"><span data-stu-id="14192-109">Version</span></span>|<span data-ttu-id="14192-110">4.5</span><span class="sxs-lookup"><span data-stu-id="14192-110">4.5</span></span>|
+|<span data-ttu-id="14192-111">類型</span><span class="sxs-lookup"><span data-stu-id="14192-111">Type</span></span>|<span data-ttu-id="14192-112">執行階段</span><span class="sxs-lookup"><span data-stu-id="14192-112">Runtime</span></span>|
+|<span data-ttu-id="14192-113">受影響的 API</span><span class="sxs-lookup"><span data-stu-id="14192-113">Affected APIs</span></span>|<ul><li><xref:System.Collections.Concurrent.ConcurrentQueue%601.TryPeek(%600@)?displayProperty=nameWithType></li></ul>|

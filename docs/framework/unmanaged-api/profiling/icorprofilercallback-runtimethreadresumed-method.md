@@ -18,36 +18,36 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 810875d1b91265fe886ce3cd11970cad7fee122d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228857"
 ---
-# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="b3b92-102">ICorProfilerCallback::RuntimeThreadResumed 方法</span><span class="sxs-lookup"><span data-stu-id="b3b92-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
-<span data-ttu-id="b3b92-103">指定的執行緒已恢復在暫停之後會通知分析工具。</span><span class="sxs-lookup"><span data-stu-id="b3b92-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
+# <a name="icorprofilercallbackruntimethreadresumed-method"></a><span data-ttu-id="d7c8c-102">ICorProfilerCallback::RuntimeThreadResumed 方法</span><span class="sxs-lookup"><span data-stu-id="d7c8c-102">ICorProfilerCallback::RuntimeThreadResumed Method</span></span>
+<span data-ttu-id="d7c8c-103">指定的執行緒已恢復在暫停之後會通知分析工具。</span><span class="sxs-lookup"><span data-stu-id="d7c8c-103">Notifies the profiler that the specified thread has resumed after being suspended.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="b3b92-104">語法</span><span class="sxs-lookup"><span data-stu-id="b3b92-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="d7c8c-104">語法</span><span class="sxs-lookup"><span data-stu-id="d7c8c-104">Syntax</span></span>  
   
 ```  
 HRESULT RuntimeThreadResumed(  
     [in] ThreadID threadId);  
 ```  
   
-## <a name="parameters"></a><span data-ttu-id="b3b92-105">參數</span><span class="sxs-lookup"><span data-stu-id="b3b92-105">Parameters</span></span>  
+## <a name="parameters"></a><span data-ttu-id="d7c8c-105">參數</span><span class="sxs-lookup"><span data-stu-id="d7c8c-105">Parameters</span></span>  
  `threadId`  
- <span data-ttu-id="b3b92-106">[in]已繼續執行緒的識別碼。</span><span class="sxs-lookup"><span data-stu-id="b3b92-106">[in] The ID of the thread that has been resumed.</span></span>  
+ <span data-ttu-id="d7c8c-106">[in]已繼續執行緒的識別碼。</span><span class="sxs-lookup"><span data-stu-id="d7c8c-106">[in] The ID of the thread that has been resumed.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="b3b92-107">需求</span><span class="sxs-lookup"><span data-stu-id="b3b92-107">Requirements</span></span>  
- <span data-ttu-id="b3b92-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="b3b92-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="d7c8c-107">需求</span><span class="sxs-lookup"><span data-stu-id="d7c8c-107">Requirements</span></span>  
+ <span data-ttu-id="d7c8c-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="d7c8c-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="b3b92-109">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="b3b92-109">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="d7c8c-109">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="d7c8c-109">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="b3b92-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="b3b92-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="d7c8c-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="d7c8c-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="b3b92-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="b3b92-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ <span data-ttu-id="d7c8c-111">**.NET framework 版本：**[!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="d7c8c-111">**.NET Framework Versions:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="b3b92-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="b3b92-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="d7c8c-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="d7c8c-112">See also</span></span>
 
-- [<span data-ttu-id="b3b92-113">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="b3b92-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
-- [<span data-ttu-id="b3b92-114">RuntimeThreadSuspended 方法</span><span class="sxs-lookup"><span data-stu-id="b3b92-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)
+- [<span data-ttu-id="d7c8c-113">ICorProfilerCallback 介面</span><span class="sxs-lookup"><span data-stu-id="d7c8c-113">ICorProfilerCallback Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-interface.md)
+- [<span data-ttu-id="d7c8c-114">RuntimeThreadSuspended 方法</span><span class="sxs-lookup"><span data-stu-id="d7c8c-114">RuntimeThreadSuspended Method</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-runtimethreadsuspended-method.md)

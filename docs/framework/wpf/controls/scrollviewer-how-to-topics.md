@@ -8,26 +8,26 @@ helpviewer_keywords:
 - ScrollViewer control [WPF], how-to topics
 ms.assetid: 1e20804b-1d80-4b54-af41-76b3e10a6f89
 ms.openlocfilehash: fcb7809c1025997a0e78647c32590e1abee865ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229410"
 ---
-# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="bfc18-102">ScrollViewer HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="bfc18-102">ScrollViewer How-to Topics</span></span>
-<span data-ttu-id="bfc18-103">在本節中的主題將示範如何使用<xref:System.Windows.Controls.ScrollViewer>元素，來建立應用程式中的可捲動區域。</span><span class="sxs-lookup"><span data-stu-id="bfc18-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
+# <a name="scrollviewer-how-to-topics"></a><span data-ttu-id="3d1cb-102">ScrollViewer HOW TO 主題</span><span class="sxs-lookup"><span data-stu-id="3d1cb-102">ScrollViewer How-to Topics</span></span>
+<span data-ttu-id="3d1cb-103">在本節中的主題將示範如何使用<xref:System.Windows.Controls.ScrollViewer>元素，來建立應用程式中的可捲動區域。</span><span class="sxs-lookup"><span data-stu-id="3d1cb-103">The topics in this section demonstrate how to use the <xref:System.Windows.Controls.ScrollViewer> element to create scrollable regions in your applications.</span></span>  
   
-## <a name="in-this-section"></a><span data-ttu-id="bfc18-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="bfc18-104">In This Section</span></span>  
- [<span data-ttu-id="bfc18-105">處理 ScrollChanged 事件</span><span class="sxs-lookup"><span data-stu-id="bfc18-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
- [<span data-ttu-id="bfc18-106">使用 IScrollInfo 介面捲動內容</span><span class="sxs-lookup"><span data-stu-id="bfc18-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
- [<span data-ttu-id="bfc18-107">使用 ScrollViewer 的內容捲動方法</span><span class="sxs-lookup"><span data-stu-id="bfc18-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
+## <a name="in-this-section"></a><span data-ttu-id="3d1cb-104">本節內容</span><span class="sxs-lookup"><span data-stu-id="3d1cb-104">In This Section</span></span>  
+ [<span data-ttu-id="3d1cb-105">處理 ScrollChanged 事件</span><span class="sxs-lookup"><span data-stu-id="3d1cb-105">Handle the ScrollChanged Event</span></span>](how-to-handle-the-scrollchanged-event.md)  
+ [<span data-ttu-id="3d1cb-106">使用 IScrollInfo 介面捲動內容</span><span class="sxs-lookup"><span data-stu-id="3d1cb-106">Scroll Content by Using the IScrollInfo Interface</span></span>](how-to-scroll-content-by-using-the-iscrollinfo-interface.md)  
+ [<span data-ttu-id="3d1cb-107">使用 ScrollViewer 的內容捲動方法</span><span class="sxs-lookup"><span data-stu-id="3d1cb-107">Use the Content-Scrolling Methods of ScrollViewer</span></span>](how-to-use-the-content-scrolling-methods-of-scrollviewer.md)  
   
-## <a name="reference"></a><span data-ttu-id="bfc18-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="bfc18-108">Reference</span></span>  
+## <a name="reference"></a><span data-ttu-id="3d1cb-108">參考資料</span><span class="sxs-lookup"><span data-stu-id="3d1cb-108">Reference</span></span>  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  
   
  <xref:System.Windows.Controls.ScrollViewer>  
   
-## <a name="see-also"></a><span data-ttu-id="bfc18-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="bfc18-109">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="3d1cb-109">另請參閱</span><span class="sxs-lookup"><span data-stu-id="3d1cb-109">See also</span></span>
 
-- [<span data-ttu-id="bfc18-110">面板概觀</span><span class="sxs-lookup"><span data-stu-id="bfc18-110">Panels Overview</span></span>](panels-overview.md)
-- [<span data-ttu-id="bfc18-111">配置</span><span class="sxs-lookup"><span data-stu-id="bfc18-111">Layout</span></span>](../advanced/layout.md)
+- [<span data-ttu-id="3d1cb-110">面板概觀</span><span class="sxs-lookup"><span data-stu-id="3d1cb-110">Panels Overview</span></span>](panels-overview.md)
+- [<span data-ttu-id="3d1cb-111">版面配置</span><span class="sxs-lookup"><span data-stu-id="3d1cb-111">Layout</span></span>](../advanced/layout.md)
