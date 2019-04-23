@@ -17,16 +17,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 49784a0eba0458a7b9ddbcd58cbe1a187c3c779a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101184"
 ---
-# <a name="corattributetargets-enumeration"></a><span data-ttu-id="fda69-102">CorAttributeTargets 列舉</span><span class="sxs-lookup"><span data-stu-id="fda69-102">CorAttributeTargets Enumeration</span></span>
-<span data-ttu-id="fda69-103">指定有效套用屬性的應用程式項目。</span><span class="sxs-lookup"><span data-stu-id="fda69-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
+# <a name="corattributetargets-enumeration"></a><span data-ttu-id="2517d-102">CorAttributeTargets 列舉</span><span class="sxs-lookup"><span data-stu-id="2517d-102">CorAttributeTargets Enumeration</span></span>
+<span data-ttu-id="2517d-103">指定有效套用屬性的應用程式項目。</span><span class="sxs-lookup"><span data-stu-id="2517d-103">Specifies the application elements on which it is valid to apply an attribute.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="fda69-104">語法</span><span class="sxs-lookup"><span data-stu-id="fda69-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2517d-104">語法</span><span class="sxs-lookup"><span data-stu-id="2517d-104">Syntax</span></span>  
   
 ```  
 typedef enum CorAttributeTargets  
@@ -60,39 +60,39 @@ typedef enum CorAttributeTargets
 } CorAttributeTargets;  
 ```  
   
-## <a name="members"></a><span data-ttu-id="fda69-105">成員</span><span class="sxs-lookup"><span data-stu-id="fda69-105">Members</span></span>  
+## <a name="members"></a><span data-ttu-id="2517d-105">成員</span><span class="sxs-lookup"><span data-stu-id="2517d-105">Members</span></span>  
   
-|<span data-ttu-id="fda69-106">成員</span><span class="sxs-lookup"><span data-stu-id="fda69-106">Member</span></span>|<span data-ttu-id="fda69-107">描述</span><span class="sxs-lookup"><span data-stu-id="fda69-107">Description</span></span>|  
+|<span data-ttu-id="2517d-106">成員</span><span class="sxs-lookup"><span data-stu-id="2517d-106">Member</span></span>|<span data-ttu-id="2517d-107">描述</span><span class="sxs-lookup"><span data-stu-id="2517d-107">Description</span></span>|  
 |------------|-----------------|  
-|`catAssembly`|<span data-ttu-id="fda69-108">屬性可以套用至組件。</span><span class="sxs-lookup"><span data-stu-id="fda69-108">Attribute can be applied to an assembly.</span></span>|  
-|`catModule`|<span data-ttu-id="fda69-109">屬性可以套用至可攜式可執行檔 （.dll 或.exe） 模組。</span><span class="sxs-lookup"><span data-stu-id="fda69-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
-|`catClass`|<span data-ttu-id="fda69-110">屬性可以套用至類別。</span><span class="sxs-lookup"><span data-stu-id="fda69-110">Attribute can be applied to a class.</span></span>|  
-|`catStruct`|<span data-ttu-id="fda69-111">屬性可以套用至結構;也就是類型的值。</span><span class="sxs-lookup"><span data-stu-id="fda69-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
-|`catEnum`|<span data-ttu-id="fda69-112">屬性可以套用至列舉型別。</span><span class="sxs-lookup"><span data-stu-id="fda69-112">Attribute can be applied to an enumeration.</span></span>|  
-|`catConstructor`|<span data-ttu-id="fda69-113">屬性可以套用至建構函式。</span><span class="sxs-lookup"><span data-stu-id="fda69-113">Attribute can be applied to a constructor.</span></span>|  
-|`catMethod`|<span data-ttu-id="fda69-114">屬性可以套用至方法。</span><span class="sxs-lookup"><span data-stu-id="fda69-114">Attribute can be applied to a method.</span></span>|  
-|`catProperty`|<span data-ttu-id="fda69-115">屬性可以套用至屬性。</span><span class="sxs-lookup"><span data-stu-id="fda69-115">Attribute can be applied to a property.</span></span>|  
-|`catField`|<span data-ttu-id="fda69-116">屬性可以套用至欄位。</span><span class="sxs-lookup"><span data-stu-id="fda69-116">Attribute can be applied to a field.</span></span>|  
-|`catEvent`|<span data-ttu-id="fda69-117">屬性可以套用至事件。</span><span class="sxs-lookup"><span data-stu-id="fda69-117">Attribute can be applied to an event.</span></span>|  
-|`catInterface`|<span data-ttu-id="fda69-118">屬性可以套用至介面。</span><span class="sxs-lookup"><span data-stu-id="fda69-118">Attribute can be applied to an interface.</span></span>|  
-|`catParameter`|<span data-ttu-id="fda69-119">屬性可以套用至參數。</span><span class="sxs-lookup"><span data-stu-id="fda69-119">Attribute can be applied to a parameter.</span></span>|  
-|`catDelegate`|<span data-ttu-id="fda69-120">屬性可以套用至委派。</span><span class="sxs-lookup"><span data-stu-id="fda69-120">Attribute can be applied to a delegate.</span></span>|  
-|`catGenericParameter`|<span data-ttu-id="fda69-121">屬性可以套用至泛型參數。</span><span class="sxs-lookup"><span data-stu-id="fda69-121">Attribute can be applied to a generic parameter.</span></span>|  
-|`catAll`|<span data-ttu-id="fda69-122">屬性可以套用至任何應用程式項目。</span><span class="sxs-lookup"><span data-stu-id="fda69-122">Attribute can be applied to any application element.</span></span>|  
-|`catClassMembers`|<span data-ttu-id="fda69-123">屬性可以套用至類別的成員。</span><span class="sxs-lookup"><span data-stu-id="fda69-123">Attribute can be applied to a member of a class.</span></span>|  
+|`catAssembly`|<span data-ttu-id="2517d-108">屬性可以套用至組件。</span><span class="sxs-lookup"><span data-stu-id="2517d-108">Attribute can be applied to an assembly.</span></span>|  
+|`catModule`|<span data-ttu-id="2517d-109">屬性可以套用至可攜式可執行檔 （.dll 或.exe） 模組。</span><span class="sxs-lookup"><span data-stu-id="2517d-109">Attribute can be applied to a portable executable (.dll or .exe) module.</span></span>|  
+|`catClass`|<span data-ttu-id="2517d-110">屬性可以套用至類別。</span><span class="sxs-lookup"><span data-stu-id="2517d-110">Attribute can be applied to a class.</span></span>|  
+|`catStruct`|<span data-ttu-id="2517d-111">屬性可以套用至結構;也就是類型的值。</span><span class="sxs-lookup"><span data-stu-id="2517d-111">Attribute can be applied to a structure; that is, a value type.</span></span>|  
+|`catEnum`|<span data-ttu-id="2517d-112">屬性可以套用至列舉型別。</span><span class="sxs-lookup"><span data-stu-id="2517d-112">Attribute can be applied to an enumeration.</span></span>|  
+|`catConstructor`|<span data-ttu-id="2517d-113">屬性可以套用至建構函式。</span><span class="sxs-lookup"><span data-stu-id="2517d-113">Attribute can be applied to a constructor.</span></span>|  
+|`catMethod`|<span data-ttu-id="2517d-114">屬性可以套用至方法。</span><span class="sxs-lookup"><span data-stu-id="2517d-114">Attribute can be applied to a method.</span></span>|  
+|`catProperty`|<span data-ttu-id="2517d-115">屬性可以套用至屬性。</span><span class="sxs-lookup"><span data-stu-id="2517d-115">Attribute can be applied to a property.</span></span>|  
+|`catField`|<span data-ttu-id="2517d-116">屬性可以套用至欄位。</span><span class="sxs-lookup"><span data-stu-id="2517d-116">Attribute can be applied to a field.</span></span>|  
+|`catEvent`|<span data-ttu-id="2517d-117">屬性可以套用至事件。</span><span class="sxs-lookup"><span data-stu-id="2517d-117">Attribute can be applied to an event.</span></span>|  
+|`catInterface`|<span data-ttu-id="2517d-118">屬性可以套用至介面。</span><span class="sxs-lookup"><span data-stu-id="2517d-118">Attribute can be applied to an interface.</span></span>|  
+|`catParameter`|<span data-ttu-id="2517d-119">屬性可以套用至參數。</span><span class="sxs-lookup"><span data-stu-id="2517d-119">Attribute can be applied to a parameter.</span></span>|  
+|`catDelegate`|<span data-ttu-id="2517d-120">屬性可以套用至委派。</span><span class="sxs-lookup"><span data-stu-id="2517d-120">Attribute can be applied to a delegate.</span></span>|  
+|`catGenericParameter`|<span data-ttu-id="2517d-121">屬性可以套用至泛型參數。</span><span class="sxs-lookup"><span data-stu-id="2517d-121">Attribute can be applied to a generic parameter.</span></span>|  
+|`catAll`|<span data-ttu-id="2517d-122">屬性可以套用至任何應用程式項目。</span><span class="sxs-lookup"><span data-stu-id="2517d-122">Attribute can be applied to any application element.</span></span>|  
+|`catClassMembers`|<span data-ttu-id="2517d-123">屬性可以套用至類別的成員。</span><span class="sxs-lookup"><span data-stu-id="2517d-123">Attribute can be applied to a member of a class.</span></span>|  
   
-## <a name="remarks"></a><span data-ttu-id="fda69-124">備註</span><span class="sxs-lookup"><span data-stu-id="fda69-124">Remarks</span></span>  
- <span data-ttu-id="fda69-125">`CorAttributeTargets`列舉值可以結合位元的 OR 運算，若要取得慣用的組合。</span><span class="sxs-lookup"><span data-stu-id="fda69-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2517d-124">備註</span><span class="sxs-lookup"><span data-stu-id="2517d-124">Remarks</span></span>  
+ <span data-ttu-id="2517d-125">`CorAttributeTargets`列舉值可以結合位元的 OR 運算，若要取得慣用的組合。</span><span class="sxs-lookup"><span data-stu-id="2517d-125">The `CorAttributeTargets` enumeration values can be combined with a bitwise OR operation to get the preferred combination.</span></span>  
   
- <span data-ttu-id="fda69-126">`CorAttributeTargets`平行 managed<xref:System.AttributeTargets?displayProperty=nameWithType>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="fda69-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
+ <span data-ttu-id="2517d-126">`CorAttributeTargets`平行 managed<xref:System.AttributeTargets?displayProperty=nameWithType>列舉型別。</span><span class="sxs-lookup"><span data-stu-id="2517d-126">The `CorAttributeTargets` parallels the managed <xref:System.AttributeTargets?displayProperty=nameWithType> enumeration.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="fda69-127">需求</span><span class="sxs-lookup"><span data-stu-id="fda69-127">Requirements</span></span>  
- <span data-ttu-id="fda69-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="fda69-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2517d-127">需求</span><span class="sxs-lookup"><span data-stu-id="2517d-127">Requirements</span></span>  
+ <span data-ttu-id="2517d-128">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2517d-128">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="fda69-129">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="fda69-129">**Header:** CorHdr.h</span></span>  
+ <span data-ttu-id="2517d-129">**標頭：** CorHdr.h</span><span class="sxs-lookup"><span data-stu-id="2517d-129">**Header:** CorHdr.h</span></span>  
   
- **<span data-ttu-id="fda69-130">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="fda69-130">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="2517d-130">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="2517d-130">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="fda69-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="fda69-131">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2517d-131">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2517d-131">See also</span></span>
 
-- [<span data-ttu-id="fda69-132">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="fda69-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)
+- [<span data-ttu-id="2517d-132">中繼資料列舉</span><span class="sxs-lookup"><span data-stu-id="2517d-132">Metadata Enumerations</span></span>](../../../../docs/framework/unmanaged-api/metadata/metadata-enumerations.md)

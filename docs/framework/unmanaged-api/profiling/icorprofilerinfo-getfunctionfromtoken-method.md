@@ -18,16 +18,16 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f4fb2292154a2660a2db3f0b3962fcf2114e385
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099968"
 ---
-# <a name="icorprofilerinfogetfunctionfromtoken-method"></a><span data-ttu-id="7d105-102">ICorProfilerInfo::GetFunctionFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="7d105-102">ICorProfilerInfo::GetFunctionFromToken Method</span></span>
-<span data-ttu-id="7d105-103">取得函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="7d105-103">Gets the ID of a function.</span></span> <span data-ttu-id="7d105-104">這個方法是在.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="7d105-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="7d105-105">使用[ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="7d105-105">Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.</span></span>  
+# <a name="icorprofilerinfogetfunctionfromtoken-method"></a><span data-ttu-id="2073c-102">ICorProfilerInfo::GetFunctionFromToken 方法</span><span class="sxs-lookup"><span data-stu-id="2073c-102">ICorProfilerInfo::GetFunctionFromToken Method</span></span>
+<span data-ttu-id="2073c-103">取得函式的識別碼。</span><span class="sxs-lookup"><span data-stu-id="2073c-103">Gets the ID of a function.</span></span> <span data-ttu-id="2073c-104">這個方法是在.NET Framework 2.0 版中已過時。</span><span class="sxs-lookup"><span data-stu-id="2073c-104">This method is obsolete in the .NET Framework version 2.0.</span></span> <span data-ttu-id="2073c-105">使用[ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="2073c-105">Use the [ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-getfunctionfromtokenandtypeargs-method.md) method instead.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="7d105-106">語法</span><span class="sxs-lookup"><span data-stu-id="7d105-106">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="2073c-106">語法</span><span class="sxs-lookup"><span data-stu-id="2073c-106">Syntax</span></span>  
   
 ```  
 HRESULT GetFunctionFromToken(  
@@ -36,18 +36,18 @@ HRESULT GetFunctionFromToken(
     [out] FunctionID *pFunctionId);  
 ```  
   
-## <a name="remarks"></a><span data-ttu-id="7d105-107">備註</span><span class="sxs-lookup"><span data-stu-id="7d105-107">Remarks</span></span>  
- <span data-ttu-id="7d105-108">`GetFunctionFromToken`方法不適用於泛型函式或泛型型別中的函式; 它現在已過時。</span><span class="sxs-lookup"><span data-stu-id="7d105-108">The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete.</span></span> <span data-ttu-id="7d105-109">使用`ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`所有函式。</span><span class="sxs-lookup"><span data-stu-id="7d105-109">Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="2073c-107">備註</span><span class="sxs-lookup"><span data-stu-id="2073c-107">Remarks</span></span>  
+ <span data-ttu-id="2073c-108">`GetFunctionFromToken`方法不適用於泛型函式或泛型型別中的函式; 它現在已過時。</span><span class="sxs-lookup"><span data-stu-id="2073c-108">The `GetFunctionFromToken` method will not work for generic functions or functions in generic types; it is now obsolete.</span></span> <span data-ttu-id="2073c-109">使用`ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs`所有函式。</span><span class="sxs-lookup"><span data-stu-id="2073c-109">Use `ICorProfilerInfo2::GetFunctionFromTokenAndTypeArgs` for all functions.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7d105-110">需求</span><span class="sxs-lookup"><span data-stu-id="7d105-110">Requirements</span></span>  
- <span data-ttu-id="7d105-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7d105-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="2073c-110">需求</span><span class="sxs-lookup"><span data-stu-id="2073c-110">Requirements</span></span>  
+ <span data-ttu-id="2073c-111">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="2073c-111">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7d105-112">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="7d105-112">**Header:** CorProf.idl, CorProf.h</span></span>  
+ <span data-ttu-id="2073c-112">**標頭：** CorProf.idl, CorProf.h</span><span class="sxs-lookup"><span data-stu-id="2073c-112">**Header:** CorProf.idl, CorProf.h</span></span>  
   
- <span data-ttu-id="7d105-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7d105-113">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="2073c-113">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="2073c-113">**Library:** CorGuids.lib</span></span>  
   
- <span data-ttu-id="7d105-114">**.NET framework 版本：** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="7d105-114">**.NET Framework Versions:** 1.1, 1.0</span></span>  
+ <span data-ttu-id="2073c-114">**.NET framework 版本：** 1.1, 1.0</span><span class="sxs-lookup"><span data-stu-id="2073c-114">**.NET Framework Versions:** 1.1, 1.0</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7d105-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7d105-115">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="2073c-115">另請參閱</span><span class="sxs-lookup"><span data-stu-id="2073c-115">See also</span></span>
 
-- [<span data-ttu-id="7d105-116">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="7d105-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)
+- [<span data-ttu-id="2073c-116">ICorProfilerInfo 介面</span><span class="sxs-lookup"><span data-stu-id="2073c-116">ICorProfilerInfo Interface</span></span>](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-interface.md)

@@ -17,30 +17,30 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 407bcad0101fabd0c65b0d27c97ef47a93902f6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102384"
 ---
-# <a name="icordebugcontext-interface"></a><span data-ttu-id="7ee53-102">ICorDebugContext 介面</span><span class="sxs-lookup"><span data-stu-id="7ee53-102">ICorDebugContext Interface</span></span>
+# <a name="icordebugcontext-interface"></a><span data-ttu-id="399c4-102">ICorDebugContext 介面</span><span class="sxs-lookup"><span data-stu-id="399c4-102">ICorDebugContext Interface</span></span>
 
-<span data-ttu-id="7ee53-103">表示內容物件。</span><span class="sxs-lookup"><span data-stu-id="7ee53-103">Represents a context object.</span></span> <span data-ttu-id="7ee53-104">尚未實作這個介面。</span><span class="sxs-lookup"><span data-stu-id="7ee53-104">This interface has not been implemented yet.</span></span>  
+<span data-ttu-id="399c4-103">表示內容物件。</span><span class="sxs-lookup"><span data-stu-id="399c4-103">Represents a context object.</span></span> <span data-ttu-id="399c4-104">尚未實作這個介面。</span><span class="sxs-lookup"><span data-stu-id="399c4-104">This interface has not been implemented yet.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="7ee53-105">備註</span><span class="sxs-lookup"><span data-stu-id="7ee53-105">Remarks</span></span>  
+## <a name="remarks"></a><span data-ttu-id="399c4-105">備註</span><span class="sxs-lookup"><span data-stu-id="399c4-105">Remarks</span></span>  
   
 > [!NOTE]
->  <span data-ttu-id="7ee53-106">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="7ee53-106">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
+>  <span data-ttu-id="399c4-106">這個介面不支援跨電腦或跨處理序的遠端呼叫。</span><span class="sxs-lookup"><span data-stu-id="399c4-106">This interface does not support being called remotely, either cross-machine or cross-process.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="7ee53-107">需求</span><span class="sxs-lookup"><span data-stu-id="7ee53-107">Requirements</span></span>  
- <span data-ttu-id="7ee53-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="7ee53-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
+## <a name="requirements"></a><span data-ttu-id="399c4-107">需求</span><span class="sxs-lookup"><span data-stu-id="399c4-107">Requirements</span></span>  
+ <span data-ttu-id="399c4-108">**平台：** 請參閱[系統需求](../../../../docs/framework/get-started/system-requirements.md)。</span><span class="sxs-lookup"><span data-stu-id="399c4-108">**Platforms:** See [System Requirements](../../../../docs/framework/get-started/system-requirements.md).</span></span>  
   
- <span data-ttu-id="7ee53-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="7ee53-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
+ <span data-ttu-id="399c4-109">**標頭：** CorDebug.idl、CorDebug.h</span><span class="sxs-lookup"><span data-stu-id="399c4-109">**Header:** CorDebug.idl, CorDebug.h</span></span>  
   
- <span data-ttu-id="7ee53-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="7ee53-110">**Library:** CorGuids.lib</span></span>  
+ <span data-ttu-id="399c4-110">**LIBRARY:** CorGuids.lib</span><span class="sxs-lookup"><span data-stu-id="399c4-110">**Library:** CorGuids.lib</span></span>  
   
- **<span data-ttu-id="7ee53-111">.NET Framework 版本：</span><span class="sxs-lookup"><span data-stu-id="7ee53-111">.NET Framework Versions:</span></span>** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ <span data-ttu-id="399c4-111">**.NET framework 版本：**[!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span><span class="sxs-lookup"><span data-stu-id="399c4-111">**.NET Framework Versions:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="7ee53-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="7ee53-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="399c4-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="399c4-112">See also</span></span>
 
-- [<span data-ttu-id="7ee53-113">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="7ee53-113">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [<span data-ttu-id="399c4-113">偵錯介面</span><span class="sxs-lookup"><span data-stu-id="399c4-113">Debugging Interfaces</span></span>](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

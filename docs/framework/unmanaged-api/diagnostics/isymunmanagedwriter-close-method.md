@@ -18,30 +18,30 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4d3497d3167715d3e8a04f10a6687260949e4a36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: zh-TW
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59104698"
 ---
-# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="78bad-102">ISymUnmanagedWriter::Close 方法</span><span class="sxs-lookup"><span data-stu-id="78bad-102">ISymUnmanagedWriter::Close Method</span></span>
-<span data-ttu-id="78bad-103">關閉後認可符號存放區的符號的符號寫入器。</span><span class="sxs-lookup"><span data-stu-id="78bad-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
+# <a name="isymunmanagedwriterclose-method"></a><span data-ttu-id="281f1-102">ISymUnmanagedWriter::Close 方法</span><span class="sxs-lookup"><span data-stu-id="281f1-102">ISymUnmanagedWriter::Close Method</span></span>
+<span data-ttu-id="281f1-103">關閉後認可符號存放區的符號的符號寫入器。</span><span class="sxs-lookup"><span data-stu-id="281f1-103">Closes the symbol writer after committing the symbols to the symbol store.</span></span>  
   
-## <a name="syntax"></a><span data-ttu-id="78bad-104">語法</span><span class="sxs-lookup"><span data-stu-id="78bad-104">Syntax</span></span>  
+## <a name="syntax"></a><span data-ttu-id="281f1-104">語法</span><span class="sxs-lookup"><span data-stu-id="281f1-104">Syntax</span></span>  
   
 ```  
 HRESULT Close();  
 ```  
   
-## <a name="return-value"></a><span data-ttu-id="78bad-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="78bad-105">Return Value</span></span>  
- <span data-ttu-id="78bad-106">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="78bad-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
+## <a name="return-value"></a><span data-ttu-id="281f1-105">傳回值</span><span class="sxs-lookup"><span data-stu-id="281f1-105">Return Value</span></span>  
+ <span data-ttu-id="281f1-106">如果方法成功，則為 S_OK否則，E_FAIL 或一些其他的錯誤程式碼。</span><span class="sxs-lookup"><span data-stu-id="281f1-106">S_OK if the method succeeds; otherwise, E_FAIL or some other error code.</span></span>  
   
-## <a name="remarks"></a><span data-ttu-id="78bad-107">備註</span><span class="sxs-lookup"><span data-stu-id="78bad-107">Remarks</span></span>  
- <span data-ttu-id="78bad-108">此呼叫之後，符號寫入器會變成無效的進一步更新。</span><span class="sxs-lookup"><span data-stu-id="78bad-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="78bad-109">若要關閉的符號寫入器，而不需要認可符號，請使用[isymunmanagedwriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="78bad-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
+## <a name="remarks"></a><span data-ttu-id="281f1-107">備註</span><span class="sxs-lookup"><span data-stu-id="281f1-107">Remarks</span></span>  
+ <span data-ttu-id="281f1-108">此呼叫之後，符號寫入器會變成無效的進一步更新。</span><span class="sxs-lookup"><span data-stu-id="281f1-108">After this call, the symbol writer becomes invalid for further updates.</span></span> <span data-ttu-id="281f1-109">若要關閉的符號寫入器，而不需要認可符號，請使用[isymunmanagedwriter:: Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md)方法改為。</span><span class="sxs-lookup"><span data-stu-id="281f1-109">To close the symbol writer without committing the symbols, use the [ISymUnmanagedWriter::Abort](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-abort-method.md) method instead.</span></span>  
   
-## <a name="requirements"></a><span data-ttu-id="78bad-110">需求</span><span class="sxs-lookup"><span data-stu-id="78bad-110">Requirements</span></span>  
- <span data-ttu-id="78bad-111">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="78bad-111">**Header:** CorSym.idl, CorSym.h</span></span>  
+## <a name="requirements"></a><span data-ttu-id="281f1-110">需求</span><span class="sxs-lookup"><span data-stu-id="281f1-110">Requirements</span></span>  
+ <span data-ttu-id="281f1-111">**標頭：** 於 CorSym.idl CorSym.h</span><span class="sxs-lookup"><span data-stu-id="281f1-111">**Header:** CorSym.idl, CorSym.h</span></span>  
   
-## <a name="see-also"></a><span data-ttu-id="78bad-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="78bad-112">See also</span></span>
+## <a name="see-also"></a><span data-ttu-id="281f1-112">另請參閱</span><span class="sxs-lookup"><span data-stu-id="281f1-112">See also</span></span>
 
-- [<span data-ttu-id="78bad-113">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="78bad-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
+- [<span data-ttu-id="281f1-113">ISymUnmanagedWriter 介面</span><span class="sxs-lookup"><span data-stu-id="281f1-113">ISymUnmanagedWriter Interface</span></span>](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-interface.md)
